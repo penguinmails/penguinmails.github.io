@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](PENGUINMAILS_OVERVIEW.md) | [💰 **Business Strategy**](product_strategy.md) | [📊 **Market Analysis**](system_analysis.md)
+- [🏠 **Main Overview**](README.md) | [💰 **Business Strategy**](product_strategy.md) | [📊 **Market Analysis**](system_analysis.md)
 
 ---
 
