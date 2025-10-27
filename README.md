@@ -31,16 +31,13 @@ A unified platform that combines:
 - **Campaign Management**: Advanced sequencing, personalization, reply handling
 - **Multi-Tenant Control**: Scalable management for agencies and teams
 
-### ✅ Corrected Architecture (Updated October 28, 2025)
-**Latest System Architecture:**
+**System Architecture:**
 - **Frontend**: WordPress landing page (external) + Single Next.js application
 - **Database**: OLTP (NileDB for core data) + OLAP (Postgres for analytics) + PostHog (real-time events)
 - **Authentication**: NileDB auth with tenant isolation + enhanced staff access control
 - **Payments**: Stripe Connect Express accounts for B2B billing and revenue sharing
 - **Email Infrastructure**: MailU SMTP with API integration for deliverability
 - **Deployment**: Docker (development only) + Git branches for staging/production environments
-
-> **Note**: Architecture has been clarified and inconsistencies resolved. See [Documentation Conflicts Resolution](documentation-conflicts-resolution.md) for detailed changes.
 
 ---
 
@@ -188,32 +185,6 @@ Each document includes a status label:
 - [CAN-SPAM Act Guidelines](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business) - Email compliance
 - [GDPR Compliance Guide](https://gdpr.eu/) - European privacy regulations
 - [Email Deliverability Best Practices](https://www.sender.net/email-deliverability-guide/) - Industry standards
-
----
-
-## 📞 Support & Contact
-
-### Documentation Issues
-- Report broken links or outdated content via [GitHub Issues]
-- Request new documentation via the [Documentation Request Form]
-
-### Technical Support
-- Engineering issues: Contact [Engineering Lead]
-- Infrastructure problems: Contact [DevOps Team]
-- Security concerns: Contact [Security Team]
-
-### Business Questions
-- Product strategy: Contact [Product Owner]
-- Market analysis: Contact [Product Owner]
-- Financial metrics: Contact [Product Owner]
-
----
-
-## 📅 Last Updated
-**Date**: October 27, 2025  
-**Status**: ✅ Current  
-**Owner**: Product Owner  
-**Next Review**: November 27, 2025
 
 ---
 
