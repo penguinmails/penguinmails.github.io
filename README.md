@@ -1,6 +1,4 @@
-#  Welcome - Your Cold Email Infrastructure & Campaign Management Platform
-
-## Quick Start Guide
+# Quick Start Guide
 
 ---
 
