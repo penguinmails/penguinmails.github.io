@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](PENGUINMAILS_OVERVIEW.md) | [🛠️ **Infrastructure**](infrastructure_documentation.md) | [📋 **SOP Guidelines**](sop_guidelines.md)
+- [🏠 **Main Overview**](README.md) | [🛠️ **Infrastructure**](infrastructure_documentation.md) | [📋 **SOP Guidelines**](sop_guidelines.md)
 
 ---
 
