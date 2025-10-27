@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](PENGUINMAILS_OVERVIEW.md) | [🎯 **Product Strategy**](product_strategy.md) | [🛣️ **Roadmap**](roadmap.md)
+- [🏠 **Main Overview**](README.md) | [🎯 **Product Strategy**](product_strategy.md) | [🛣️ **Roadmap**](roadmap.md)
 
 ---
 
