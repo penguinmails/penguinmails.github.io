@@ -2,3 +2,10 @@ theme: minima
 title: 🐧 PenguinMails Documentation
 description: This documentation hub helps you understand, manage, and scale PenguinMails. Whether you’re making strategic decisions, designing user experiences, or coordinating technical development, find your path below.
 markdown: GFM
+minima:
+  nav_pages:
+    - roadmap.md
+    - architecture_overview.md
+    - database_schema_guide.md
+    - system_analysis.md
+    - security_documentation.md
