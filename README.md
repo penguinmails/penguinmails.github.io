@@ -1,10 +1,6 @@
-# 🐧 PenguinMails Documentation Hub
-
-> **Welcome to PenguinMails** - Your Cold Email Infrastructure & Campaign Management Platform
+#  Welcome - Your Cold Email Infrastructure & Campaign Management Platform
 
 ## Quick Start Guide
-
-This documentation hub helps you understand, manage, and scale PenguinMails. Whether you're making strategic decisions, designing user experiences, or coordinating technical development, find your path below.
 
 ---
 
