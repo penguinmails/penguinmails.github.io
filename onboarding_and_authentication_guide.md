@@ -802,12 +802,13 @@ const ProvisioningStatus = () => {
         </p>
       </div>
 
+      {/* Progress indicator when not completed */}
       {status !== 'completed' && (
         <div className="space-y-4">
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className="bg-indigo-600 h-2 rounded-full transition-all duration-500"
-              style={{ width: `${currentStep.progress}%` }}
+              style=&#123;`width: $&#123;currentStep.progress&#125;%`&#125;
             ></div>
           </div>
           
