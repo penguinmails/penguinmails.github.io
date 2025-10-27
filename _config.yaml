@@ -2,3 +2,6 @@ remote_theme: https://github.com/just-the-docs/just-the-docs
 title: 🐧 PenguinMails Documentation
 description: This documentation hub helps you understand, manage, and scale PenguinMails. Whether you’re making strategic decisions, designing user experiences, or coordinating technical development, find your path below.
 markdown: GFM
+aux_links:
+  "Repo on GitHub":
+    - "https://github.com/penguinmails/penguinmails.github.io"
