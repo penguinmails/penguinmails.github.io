@@ -15,9 +15,18 @@ This document provides detailed infrastructure diagrams and operational procedur
 ### Architecture Summary
 - **Multi-tenant SaaS**: Isolated tenant data with shared infrastructure
 - **Email Infrastructure**: VPS provisioning with SMTP management
-- **Database**: NileDB (PostgreSQL + authentication)
+- **Database**: NileDB (PostgreSQL + authentication) + Analytics (Postgres)
+- **Real-time Analytics**: PostHog for live tracking and user behavior
 - **Frontend**: Next.js dashboard and admin panel
 - **Landing Page**: WordPress-based marketing site
+
+**Technical Constraints:**
+- Database scaling requirements (1K → 10K → 100K+ tenants)
+- Performance requirements (< 2 second dashboard load time)
+- Multi-tenant security (zero data leakage between tenants)
+- Email deliverability challenges (< 5% bounce rate targets)
+
+**For detailed technical analysis covering database architecture, performance constraints, and scaling requirements, see the roadmap technical implementation details.**
 
 ---
 

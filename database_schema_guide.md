@@ -13,10 +13,19 @@
 This document provides a comprehensive guide to the PenguinMails database schema, including the updated analytics architecture using **Postgres + PostHog**. It covers multi-tenant data structures, analytics tables, job queue system, and operational procedures.
 
 ### Database Architecture
-- **Primary**: NileDB (PostgreSQL-based) for core application data
-- **Analytics**: Postgres with Drizzle ORM for tracking and aggregates
-- **Real-time**: PostHog for live analytics and behavioral tracking
-- **Development**: Docker containers for local development
+- **Primary**: NileDB (PostgreSQL-based) for core application data and OLTP operations
+- **Analytics**: Separate Postgres instance for OLAP analytics and business intelligence
+- **Real-time**: PostHog for live user behavior tracking and immediate insights
+- **Queue System**: Hybrid Redis + Postgres for job processing and state management
+- **Development**: Docker containers for local development and testing
+
+**Technical Constraints & Scaling:**
+- **Multi-tenant Performance**: RLS policies impact on query optimization
+- **Analytics Growth**: 100GB+ storage per year with full analytics retention
+- **Queue Scalability**: 1K+ jobs/hour sustained processing capacity
+- **Security**: Zero data leakage between tenants with row-level security
+
+**For detailed analysis of database constraints, performance requirements, and scaling considerations, see the roadmap technical implementation details.**
 
 ---
 
