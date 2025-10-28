@@ -91,31 +91,34 @@ This roadmap outlines the strategic priorities, feature development timeline, an
 - >80% feature adoption within first week
 - <1% critical system alerts
 
-### 🏗️ Technical Milestones
+### 🏗️ Technical Implementation Milestones
 
-#### Week 1-2: Foundation Setup
-- [ ] Development environment and CI/CD pipeline
-- [ ] Database schema and basic API structure
-- [ ] Authentication and authorization system
-- [ ] VPS provider integration testing
+#### Phase 1A: Authentication & Security Foundation (Weeks 1-2)
+- [ ] NileDB RLS policies implementation and testing
+- [ ] Email verification (magic links + 6-digit fallback)
+- [ ] User-company bridge table and tenant isolation
+- [ ] Staff cross-tenant access controls (7-tier RBAC)
 
-#### Week 3-4: Infrastructure Automation
-- [ ] VPS provisioning automation
-- [ ] SMTP server configuration scripts
-- [ ] DNS validation and monitoring system
-- [ ] Basic warm-up implementation
+#### Phase 1B: Basic Email Infrastructure (Weeks 3-4)
+- [ ] MailU SMTP API integration and authentication
+- [ ] Job queue system (Redis + Postgres tables hybrid)
+- [ ] Basic email sending with rate limiting
+- [ ] IP warmup foundation and reputation monitoring
 
-#### Week 5-6: User Management & Billing
-- [ ] Multi-tenant user management
-- [ ] Stripe payment integration
-- [ ] Subscription management system
-- [ ] Tenant isolation and security
+#### Phase 1C: Business Operations (Weeks 5-6)
+- [ ] Stripe Connect Express account creation
+- [ ] Team invitation system and role management
+- [ ] Subscription management and billing dashboard
+- [ ] Onboarding flow with Stripe integration
 
-#### Week 7-8: Dashboard & Analytics
-- [ ] Core dashboard development
-- [ ] Basic analytics and reporting
-- [ ] Alert system implementation
-- [ ] Beta testing and feedback collection
+#### Phase 1D: Dashboard & Analytics MVP (Weeks 7-8)
+- [ ] Core dashboard with tenant-aware features
+- [ ] PostHog real-time event tracking integration
+- [ ] Basic analytics and performance monitoring
+- [ ] Alert system for critical issues and deliverability
+
+**Detailed Technical Specifications & Code Examples:**
+See roadmap technical implementation details for complete database schemas, code samples, and success metrics.
 
 ### 📊 Success Criteria
 - [ ] 10-20 beta customers successfully onboarded
@@ -473,6 +476,67 @@ This roadmap outlines the strategic priorities, feature development timeline, an
 - **Market Position**: Top 3 cold email infrastructure platform
 - **Product Excellence**: 95%+ deliverability across all customers
 - **Team Growth**: 20+ team members across all functions
+
+---
+
+## 🔧 Technical Implementation Roadmap
+
+The following technical implementation details complement the high-level product roadmap above, providing specific engineering guidance for each phase.
+
+### Phase 1: Core Foundation (Q4 2025)
+**Technical Focus**: Authentication, security, and basic email infrastructure
+
+- **Multi-Tenant Security**: RLS policies, tenant isolation, user-company relationships
+- **Authentication System**: Email verification, session management, password recovery
+- **Database Architecture**: NileDB OLTP setup, basic job queue (Redis + Postgres)
+- **MailU Integration**: SMTP API integration, basic email sending
+- **Stripe Connect**: Express accounts setup, platform fee handling
+
+**Critical Path Items:**
+- Zero data leakage between tenants
+- Email verification completion before dashboard access
+- Successful email delivery for test campaigns
+
+### Phase 2: Business Operations (Q1 2026)
+**Technical Focus**: Payment processing and team collaboration
+
+- **Advanced Stripe Integration**: Subscription management, billing dashboard, webhooks
+- **Team Management**: Invitation system, role-based permissions, member onboarding
+- **Enhanced Job Queue**: Bulk operations, failure recovery, rate limiting
+- **Basic Analytics**: PostHog integration, real-time event tracking
+
+**Critical Path Items:**
+- Payment processing reliability (>99% success rate)
+- Team invitation acceptance (>70% rate)
+- Cross-tenant security maintenance
+
+### Phase 3: Advanced Operations (Q2 2026)
+**Technical Focus**: IP management, analytics, and deliverability optimization
+
+- **IP Infrastructure**: Warmup algorithms, reputation monitoring, rate limiting
+- **OLAP Analytics**: ETL pipeline, performance dashboards, reporting system
+- **Deliverability Tools**: Bounce processing, spam complaint handling, automated adjustments
+- **Advanced Security**: Audit logging, compliance features, GDPR support
+
+**Critical Path Items:**
+- IP warmup progression (<5% bounce rate)
+- Real-time analytics (<5 second latency)
+- Comprehensive monitoring and alerting
+
+### Phase 4: Enterprise Scale (Q3-Q4 2026)
+**Technical Focus**: Staff operations, performance optimization, and AI features
+
+- **Staff Platform**: Cross-tenant access, 7-tier RBAC, support tools
+- **Performance Scaling**: Database optimization, caching, queue scaling
+- **AI/ML Infrastructure**: Deliverability optimization, predictive analytics
+- **Enterprise Features**: SSO integration, advanced audit logging, custom SLAs
+
+**Critical Path Items:**
+- Staff operation efficiency (<2 hour resolution time)
+- System performance (<100ms query response)
+- AI optimization impact (20-30% deliverability improvement)
+
+For detailed technical specifications, success metrics, and implementation checklists for each phase, see the roadmap technical implementation details.
 
 ---
 

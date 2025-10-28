@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenguinMails Documentation Viewer</title>
+    
+    <!-- Marked.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+        }
+        
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-right: 1px solid #e9ecef;
+            padding: 2rem 0;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar h3 {
+            color: #495057;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0 1.5rem 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 1rem;
+        }
+        
+        .nav-item {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #495057;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .nav-item:hover {
+            background-color: #f8f9fa;
+            border-left-color: #667eea;
+            color: #667eea;
+        }
+        
+        .nav-item.active {
+            background-color: #f0f4ff;
+            border-left-color: #667eea;
+            color: #667eea;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            flex: 1;
+            padding: 2rem;
+            overflow-y: auto;
+        }
+        
+        .markdown-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        
+        .content-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .content-body {
+            padding: 2rem;
+            line-height: 1.7;
+        }
+        
+        /* Markdown styling */
+        .content-body h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-body h2 {
+            color: #34495e;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 0.5rem;
+        }
+        
+        .content-body h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .content-body h4 {
+            color: #5a6c7d;
+            font-size: 1.2rem;
+            margin: 1.25rem 0 0.5rem;
+        }
+        
+        .content-body p {
+            margin-bottom: 1rem;
+        }
+        
+        .content-body code {
+            background: #f1f2f6;
+            color: #e74c3c;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9em;
+        }
+        
+        .content-body pre {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .content-body pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        
+        .content-body blockquote {
+            border-left: 4px solid #3498db;
+            margin: 1.5rem 0;
+            padding: 0 1.5rem;
+            color: #666;
+            font-style: italic;
+            background: #f8f9fa;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .content-body table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .content-body th,
+        .content-body td {
+            border: 1px solid #e9ecef;
+            padding: 1rem;
+            text-align: left;
+        }
+        
+        .content-body th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+        }
+        
+        .content-body ul,
+        .content-body ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        .content-body li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .content-body a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .content-body a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* Custom link handling for markdown links */
+        .content-body a[href$=".md"] {
+            cursor: pointer;
+            position: relative;
+        }
+
+        .content-body a[href$=".md"]:after {
+            content: "📄";
+            font-size: 0.8em;
+            margin-left: 4px;
+            opacity: 0.7;
+        }
+        
+        .loading,
+        .error {
+            text-align: center;
+            padding: 4rem;
+            border-radius: 12px;
+            margin: 2rem;
+        }
+        
+        .loading {
+            color: #666;
+            font-style: italic;
+            background: #f8f9fa;
+        }
+        
+        .error {
+            color: #e74c3c;
+            background: #fdf2f2;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .search-box {
+            padding: 0 1.5rem 1rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: border-color 0.2s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                max-height: 200px;
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 PenguinMails Documentation</h1>
+    </div>
+    
+    <div class="container">
+        <nav class="sidebar">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search documentation..." id="searchInput">
+            </div>
+            
+            <h3>📋 Overview</h3>
+            <a href="#" class="nav-item active" data-file="README.md">Main Overview</a>
+
+            <h3>🗺️ User Journeys</h3>
+            <a href="#" class="nav-item" data-file="user_journeys.md">User Journeys Overview</a>
+            <a href="#" class="nav-item" data-file="user_journeys_authentication.md">Authentication</a>
+            <a href="#" class="nav-item" data-file="user_journeys_payment.md">Payment & Billing</a>
+            <a href="#" class="nav-item" data-file="user_journeys_organization.md">Organization</a>
+            <a href="#" class="nav-item" data-file="user_journeys_campaigns.md">Campaigns</a>
+            <a href="#" class="nav-item" data-file="user_journeys_ip_management.md">IP Management</a>
+            <a href="#" class="nav-item" data-file="user_journeys_staff.md">Staff Operations</a>
+            <a href="#" class="nav-item" data-file="user_journeys_onboarding.md">Onboarding</a>
+            <a href="#" class="nav-item" data-file="user_journeys_analytics.md">Analytics</a>
+            <a href="#" class="nav-item" data-file="user_journeys_emergency.md">Emergency</a>
+
+            <h3>🏗️ Architecture</h3>
+            <a href="#" class="nav-item" data-file="infrastructure_documentation.md">Infrastructure</a>
+            <a href="#" class="nav-item" data-file="database_schema_guide.md">Database Schema</a>
+            <a href="#" class="nav-item" data-file="analytics_architecture.md">Analytics</a>
+
+            <h3>🔒 Security</h3>
+            <a href="#" class="nav-item" data-file="security_documentation.md">Security & Compliance</a>
+
+            <h3>💳 Payment Integration</h3>
+            <a href="#" class="nav-item" data-file="stripe_onboarding_guide.md">Stripe Integration</a>
+
+            <h3>🌐 Infrastructure</h3>
+            <a href="#" class="nav-item" data-file="ip_management_guide.md">IP Management</a>
+
+            <h3>👤 User Management</h3>
+            <a href="#" class="nav-item" data-file="onboarding_and_authentication_guide.md">Authentication & Onboarding</a>
+
+            <h3>📊 Project Management</h3>
+            <a href="#" class="nav-item" data-file="roadmap.md">Product Roadmap</a>
+        </nav>
+        
+        <main class="main-content">
+            <div class="markdown-content">
+                <div class="content-header">
+                    <h2 id="content-title">Loading...</h2>
+                </div>
+                <div class="content-body" id="markdown-content">
+                    <div class="loading">📚 Loading documentation...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        class MarkdownViewer {
+            constructor() {
+                this.currentFile = 'README.md';
+                this.init();
+            }
+            
+            init() {
+                // Configure marked
+                marked.setOptions({
+                    highlight: (code, lang) => {
+                        if (lang && hljs.getLanguage(lang)) {
+                            try {
+                                return hljs.highlight(code, { language: lang }).value;
+                            } catch (err) {
+                                console.error(err);
+                            }
+                        }
+                        return hljs.highlightAuto(code).value;
+                    },
+                    langPrefix: 'hljs language-',
+                    breaks: true,
+                    gfm: true,
+                    headerIds: true,
+                    mangle: false
+                });
+                
+                // Setup navigation
+                this.setupNavigation();
+                this.setupSearch();
+                
+                // Load initial content
+                this.loadMarkdown(this.currentFile);
+            }
+            
+            setupNavigation() {
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const file = item.dataset.file;
+                        if (file) {
+                            this.loadMarkdown(file);
+                            this.setActiveNav(item);
+                        }
+                    });
+                });
+            }
+            
+            setupSearch() {
+                const searchInput = document.getElementById('searchInput');
+                searchInput.addEventListener('input', (e) => {
+                    this.filterNavigation(e.target.value);
+                });
+            }
+            
+            filterNavigation(searchTerm) {
+                const navItems = document.querySelectorAll('.nav-item');
+                const term = searchTerm.toLowerCase();
+                
+                navItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    const isVisible = text.includes(term);
+                    item.style.display = isVisible ? 'block' : 'none';
+                });
+            }
+            
+            setActiveNav(activeItem) {
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                activeItem.classList.add('active');
+            }
+            
+            async loadMarkdown(filePath) {
+                const contentElement = document.getElementById('markdown-content');
+                const titleElement = document.getElementById('content-title');
+
+                // Update title
+                const navItem = document.querySelector(`[data-file="${filePath}"]`);
+                titleElement.textContent = navItem ? navItem.textContent : filePath;
+
+                // Show loading
+                contentElement.innerHTML = '<div class="loading">📚 Loading documentation...</div>';
+
+                try {
+                    const response = await fetch(`${filePath}`);
+                    if (!response.ok) {
+                        throw new Error(`Failed to load ${filePath}: ${response.status}`);
+                    }
+
+                    const markdownText = await response.text();
+
+                    // Parse markdown to HTML
+                    const htmlContent = marked.parse(markdownText);
+
+                    // Update content
+                    contentElement.innerHTML = htmlContent;
+
+                    // Add click handlers for markdown links
+                    this.setupMarkdownLinks();
+
+                    // Scroll to top
+                    contentElement.scrollTop = 0;
+
+                    // Update current file
+                    this.currentFile = filePath;
+
+                } catch (error) {
+                    contentElement.innerHTML = `
+                        <div class="error">
+                            <h3>❌ Error Loading Documentation</h3>
+                            <p>Could not load: <strong>${filePath}</strong></p>
+                            <p>Error: ${error.message}</p>
+                            <p>Make sure the markdown files are in the same directory as this HTML file.</p>
+                        </div>
+                    `;
+                    console.error('Error loading markdown:', error);
+                }
+            }
+
+            setupMarkdownLinks() {
+                // Find all markdown links and make them clickable
+                const markdownLinks = document.querySelectorAll('.content-body a[href$=".md"]');
+                markdownLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const href = link.getAttribute('href');
+                        // Extract just the filename from the href
+                        const fileName = href.split('/').pop();
+                        this.loadMarkdown(fileName);
+                        // Update active nav if it exists
+                        const navItem = document.querySelector(`[data-file="${fileName}"]`);
+                        if (navItem) {
+                            this.setActiveNav(navItem);
+                        }
+                    });
+                });
+            }
+        }
+        
+        // Initialize the viewer when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            new MarkdownViewer();
+        });
+    </script>
+</body>
+</html>

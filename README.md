@@ -1,4 +1,8 @@
-# Quick Start Guide
+# 🐧 PenguinMails Documentation Hub
+
+> **Welcome to PenguinMails** - Your Cold Email Infrastructure & Campaign Management Platform
+
+## Quick Start Guide
 
 ---
 
@@ -7,8 +11,8 @@
 | Role | Quick Start Path | Primary Documents |
 |------|------------------|------------------|
 | **👤 Designer-Product Owner** | [Product Strategy](product_strategy.md) → [Value Proposition](value_proposition.md) → [Roadmap](roadmap.md) | Strategy, UX decisions, feature prioritization |
-| **🎨 Designers** | [Design Principles](design_principles.md) → [UI Library](ui_library.md) → [Component Library](component_library.md) | Visual standards, design system, user flows |
-| **⚙️ Engineers** | [Documentation Conflicts Resolution](documentation-conflicts-resolution.md) → [Architecture Overview](architecture_overview.md) → [Onboarding & Authentication Guide](onboarding_and_authentication_guide.md) → [Stripe Onboarding Guide](stripe_onboarding_guide.md) → [Analytics Architecture](analytics_architecture.md) → [Database Schema Guide](database_schema_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) | Architecture clarifications, technical specs, user authentication, payment integration, analytics implementation, database design, system architecture |
+| **🎨 Designers** | [Design System](design_system.md) → [UI Library](ui_library.md) → [Component Library](component_library.md) | Visual standards, design system, user flows |
+| **⚙️ Engineers** | [User Journeys](user_journeys.md) → [Onboarding & Authentication Guide](onboarding_and_authentication_guide.md) → [Stripe Onboarding Guide](stripe_onboarding_guide.md) → [Analytics Architecture](analytics_architecture.md) → [Database Schema Guide](database_schema_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) | User journey specifications, technical authentication flow, payment integration, analytics system design, database architecture, system infrastructure |
 | **📊 Operations** | [Onboarding Guide](onboarding_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) → [IP Management Guide](ip_management_guide.md) → [Security Documentation](security_documentation.md) | Team workflows, system management, IP infrastructure, security procedures |
 | **💼 Stakeholders** | [System Analysis](system_analysis.md) → [Product Strategy](product_strategy.md) → [Business Documentation Proposal](business_documentation_proposal.md) | Financial performance, business operations, documentation strategy |
 
@@ -31,13 +35,10 @@ A unified platform that combines:
 - **Campaign Management**: Advanced sequencing, personalization, reply handling
 - **Multi-Tenant Control**: Scalable management for agencies and teams
 
-**System Architecture:**
-- **Frontend**: WordPress landing page (external) + Single Next.js application
-- **Database**: OLTP (NileDB for core data) + OLAP (Postgres for analytics) + PostHog (real-time events)
-- **Authentication**: NileDB auth with tenant isolation + enhanced staff access control
-- **Payments**: Stripe Connect Express accounts for B2B billing and revenue sharing
-- **Email Infrastructure**: MailU SMTP with API integration for deliverability
-- **Deployment**: Docker (development only) + Git branches for staging/production environments
+**Documentation Organization:**
+- **Main User Journeys**: [user_journeys.md](user_journeys.md) - All domains with table of contents navigation
+- **Legacy References**: Individual journey documents maintained for backward compatibility
+- **Technical Implementation**: [Technical Constraints Analysis](technical_constraints_analysis.md) + [Implementation Roadmap](implementation_roadmap.md)
 
 ---
 
@@ -68,8 +69,12 @@ A unified platform that combines:
 | [Stripe Onboarding Guide](stripe_onboarding_guide.md) | Complete Stripe Connect integration and billing setup | Payment processing, user onboarding, billing management |
 | [Database Schema Guide](database_schema_guide.md) | Complete database structure and relationships | Development, data modeling, migrations |
 | [Documentation Conflicts Resolution](documentation-conflicts-resolution.md) | Architecture clarifications and conflict resolutions | Technical architecture updates, documentation consistency |
+| [User Journeys](user_journeys.md) | **MAIN USER JOURNEYS** - Comprehensive mapping organized by domain concerns (auth, payment, teams, campaigns, IP, staff, onboarding) | Product design, user experience planning, feature development |
+| [User Journeys Comprehensive](user_journeys_comprehensive.md) | Original success paths and main user flows (superseded by complete version) | Legacy reference, happy path documentation |
+| [User Journeys Edge Cases](user_journeys_edge_cases.md) | Detailed edge case scenarios (now integrated into complete version) | Legacy reference, detailed failure scenarios |
+| [Technical Constraints Analysis](technical_constraints_analysis.md) | Deep analysis of database architecture and implementation constraints | Technical planning, database design, performance optimization |
+| [Implementation Roadmap](implementation_roadmap.md) | Phased implementation strategy based on user journeys and technical constraints | Development planning, milestone tracking, resource allocation |
 | [Markdown Loading Guide](markdown-loading-guide.md) | Simple ways to publish documentation as web pages | Documentation deployment, static site generation, React integration |
-| [Business Documentation Proposal](business_documentation_proposal.md) | Business process documentation roadmap | Planning business operations, documentation strategy |
 
 ### 🔧 Operational Documents
 *Daily workflows, processes, and procedures*
@@ -102,17 +107,10 @@ A unified platform that combines:
 
 *Visual language and design standards*
 
-### Core Documents
-- [Design Principles](design_principles.md) - Core design philosophy and guidelines
-- [Design Tokens](design_tokens.md) - Colors, typography, spacing, and visual variables
-- [UI Library](ui_library.md) - Screen layouts and page templates
-- [Component Library](component_library.md) - Reusable UI components and states
-- [Interaction Patterns](interaction_patterns.md) - User flow patterns and behaviors
+### Design System Documentation
+- [Design System](design_system.md) - Core design philosophy, tokens, and components
 - [Accessibility Guidelines](accessibility_guidelines.md) - Inclusive design standards
-
-### Visual Identity
-- [Brand Guidelines](brand_guidelines.md) - Logo usage, color palette, typography
-- [Icon Library](icon_library.md) - Icon system and usage guidelines
+- [Interaction Patterns](interaction_patterns.md) - User flow patterns and behaviors
 
 ---
 
@@ -121,11 +119,11 @@ A unified platform that combines:
 ### For Product Planning
 1. Review [Product Strategy](product_strategy.md)
 2. Check [Roadmap](roadmap.md) for timeline
-3. Reference [Decision Log](decision_log.md) for context
-4. Link to relevant [User Personas](user_personas.md)
+3. Review [User Journeys](user_journeys.md) for detailed user flows
+4. Link to relevant user journey documentation
 
 ### For Design Work
-1. Start with [Design Principles](design_principles.md)
+1. Start with [Design System](design_system.md)
 2. Reference [Design Tokens](design_tokens.md) for consistency
 3. Use [Component Library](component_library.md) for implementation
 4. Review [User Personas](user_personas.md) for user needs
@@ -185,6 +183,30 @@ Each document includes a status label:
 - [CAN-SPAM Act Guidelines](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business) - Email compliance
 - [GDPR Compliance Guide](https://gdpr.eu/) - European privacy regulations
 - [Email Deliverability Best Practices](https://www.sender.net/email-deliverability-guide/) - Industry standards
+
+---
+
+## 📖 Local Documentation Viewing
+
+### Web-based Documentation Viewer
+
+The project includes an HTML-based documentation viewer (`index.html`) for easy local browsing:
+
+#### Quick Start
+```bash
+# Start local server from project root
+npx serve .
+
+# Open browser to http://localhost:3000/index.html
+```
+
+**Features**:
+- Full navigation sidebar with all documentation
+- Search functionality
+- Responsive design with modern UI
+- Syntax highlighting for code blocks
+
+**Note**: Requires a local web server due to CORS restrictions when loading markdown files. Use `npx serve .` or any static file server.
 
 ---
 
