@@ -329,7 +329,7 @@ Each information gap is addressed in the governance section by assigning ownersh
 
 By implementing this structure, PenguinMails will gain a coherent documentation system that supports decision-making, design integrity, technical reliability, and operational excellence. The central navigation ensures fast discovery, the business documents align strategy and execution, the technical references provide precision without jargon, and the operational runbooks embed quality into daily workflows. Together, these elements enable a scalable, maintainable knowledge base that grows with the product and the team.---
 
-## 🗺️ Documentation Hierarchy Diagram
+## Map Documentation Hierarchy Diagram
 
 The following diagram shows the complete documentation structure for PenguinMails, organized into logical categories that support different stakeholder needs:
 

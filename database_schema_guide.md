@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](README.md) | [🛠️ **Infrastructure**](infrastructure_documentation.md) | [📊 **Analytics Architecture**](analytics_architecture.md)
+- [🏠 **Main Overview**](README.md) | [Setup **Infrastructure**](infrastructure_documentation.md) | [📊 **Analytics Architecture**](analytics_architecture.md)
 
 ---
 

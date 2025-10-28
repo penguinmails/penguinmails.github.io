@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](README.md) | [🛠️ **Infrastructure**](infrastructure_documentation.md) | [📋 **SOP Guidelines**](sop_guidelines.md)
+- [🏠 **Main Overview**](README.md) | [Setup **Infrastructure**](infrastructure_documentation.md) | [Planned **SOP Guidelines**](sop_guidelines.md)
 
 ---
 

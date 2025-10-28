@@ -1,4 +1,4 @@
-# 🏢 Organization & Team Management Journey
+# Organization Organization & Team Management Journey
 
 > **Journey Flow:** `Company Setup → Team Invitation → Role Assignment → Active Collaboration`
 

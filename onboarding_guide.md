@@ -161,7 +161,7 @@ All team members agree to:
 - [Google Workspace](https://drive.google.com/penguinmails) - Document collaboration
 
 ### Key Documents
-- [📋 **SOP Guidelines**](sop_guidelines.md) - Standard operating procedures
+- [Planned **SOP Guidelines**](sop_guidelines.md) - Standard operating procedures
 - [🔧 **Technical Architecture**](architecture_overview.md) - System design
 - [🎯 **Product Strategy**](product_strategy.md) - Business objectives
 - [🛣️ **Development Roadmap**](roadmap.md) - Project timeline

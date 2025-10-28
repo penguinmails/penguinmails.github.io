@@ -1,4 +1,4 @@
-# 🆘 Emergency & Support Scenarios Journey
+# Emergency Emergency & Support Scenarios Journey
 
 > **Journey Flow:** `Issue Detection → Severity Assessment → Response Team → Communication → Resolution → Documentation`
 

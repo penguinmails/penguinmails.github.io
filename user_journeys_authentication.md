@@ -1,4 +1,4 @@
-# 🔐 Authentication & Access Control Journey
+# Authentication Authentication & Access Control Journey
 
 > **Journey Flow:** `Landing → Email Verification → Dashboard Access → Session Management`
 

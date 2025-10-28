@@ -4,7 +4,7 @@
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](README.md) | [🛠️ **Infrastructure**](infrastructure_documentation.md) | [🔒 **Security**](security_documentation.md)
+- [🏠 **Main Overview**](README.md) | [Setup **Infrastructure**](infrastructure_documentation.md) | [🔒 **Security**](security_documentation.md)
 
 ---
 

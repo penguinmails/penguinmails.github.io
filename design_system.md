@@ -1,4 +1,4 @@
-# 🎨 Design System
+# Design System
 
 > **Status**: Current | **Last Updated**: October 28, 2025
 
@@ -10,22 +10,22 @@ PenguinMails Design System establishes a cohesive visual language and interactio
 
 ## Core Principles
 
-### 🎯 **Consistency**
+### Consistency
 - Unified visual language across all user interfaces
 - Standardized components and patterns
 - Predictable user interactions and behaviors
 
-### 🚀 **Scalability**
+### Scalability
 - Modular component architecture
 - Flexible design tokens
 - Systematic approach to new feature development
 
-### 👥 **Accessibility**
+### Accessibility
 - WCAG 2.1 AA compliance standards
 - Inclusive design practices
 - Support for diverse user needs and abilities
 
-### 🎨 **Brand Expression**
+### Brand Expression
 - Professional and trustworthy aesthetic
 - Clear hierarchy and information architecture
 - Emotional connection through thoughtful design

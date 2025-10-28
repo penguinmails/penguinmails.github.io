@@ -16,11 +16,11 @@ This document articulates the specific customer problems PenguinMails solves and
 **"PenguinMails delivers 95%+ email deliverability and complete compliance automation, enabling agencies and B2B companies to scale their cold email outreach without technical complexity or regulatory risk."**
 
 ### Key Value Pillars
-1. **🚀 Deliverability Excellence**: Industry-leading deliverability through automated infrastructure optimization
-2. **⚖️ Compliance Automation**: Built-in GDPR, CAN-SPAM, and international compliance features
-3. **🤖 Infrastructure Automation**: Self-service setup and management of enterprise-grade email infrastructure
-4. **📊 Unified Management**: Single platform for infrastructure, campaigns, and analytics
-5. **🏢 Multi-Tenant Architecture**: Purpose-built for agencies and teams managing multiple clients/brands
+1. Deliverability Excellence: Industry-leading deliverability through automated infrastructure optimization
+2. Compliance Automation: Built-in GDPR, CAN-SPAM, and international compliance features
+3. Infrastructure Automation: Self-service setup and management of enterprise-grade email infrastructure
+4. Unified Management: Single platform for infrastructure, campaigns, and analytics
+5. Multi-Tenant Architecture: Purpose-built for agencies and teams managing multiple clients/brands
 
 ---
 

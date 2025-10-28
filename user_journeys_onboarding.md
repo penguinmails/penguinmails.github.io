@@ -1,4 +1,4 @@
-# 🛠️ Onboarding & Setup Journey
+# Setup Onboarding & Setup Journey
 
 > **Journey Flow:** `Email Verification → Company Setup → Team Invitation → Stripe Connect → IP Configuration → Dashboard Access`
 

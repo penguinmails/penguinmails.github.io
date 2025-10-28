@@ -1,4 +1,4 @@
-# 💰 Business Model
+# Financial Business Model
 
 > **Status**: Current | **Last Updated**: October 28, 2025
 
@@ -12,7 +12,7 @@ PenguinMails operates on a multi-sided platform business model with B2B SaaS sub
 
 ### Primary Revenue Streams
 
-#### **🏢 B2B SaaS Subscriptions (70% of revenue)**
+#### **Organization B2B SaaS Subscriptions (70% of revenue)**
 - **Subscription Tiers**: Starter ($XX), Professional ($XXX), Enterprise ($XXXX)
 - **Billing Cycle**: Monthly/annual with revenue share component
 - **Revenue Share Model**: $100 customer payment → $77 platform revenue + $23 agency margin

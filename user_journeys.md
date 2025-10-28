@@ -1,41 +1,41 @@
-# 🗺️ User Journeys - PenguinMails Platform
+# User Journeys - PenguinMails Platform
 
 > **Navigation Guide**: This overview document provides high-level user journey flows organized by domain concerns. For detailed journey specifications, refer to the individual journey documents linked below.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-### 🔐 [Authentication & Access Control](#authentication--access-control)
+### Authentication & Access Control
 `Landing → Email Verification → Dashboard Access → Session Management`
 
-### 💳 [Payment & Billing](#payment--billing)
+### Payment & Billing
 `Stripe Connect Setup → Payment Method → Subscription Activation → Billing Dashboard`
 
-### 🏢 [Organization & Team Management](#organization--team-management)
+### Organization & Team Management
 `Company Setup → Team Invitation → Role Assignment → Active Collaboration`
 
-### 📧 [Email Campaigns & Operations](#email-campaigns--operations)
+### Email Campaigns & Operations
 `Campaign Creation → Content Setup → Recipient List → IP Selection → Launch → Monitoring`
 
-### 🌐 [IP Management & Infrastructure](#ip-management--infrastructure)
+### IP Management & Infrastructure
 `IP Selection → Purchase → DNS Setup → Warmup → Full Capacity → Monitoring`
 
-### 👥 [Staff Operations & Support](#staff-operations--support)
+### Staff Operations & Support
 `Staff Login → Cross-Tenant Access → User Support → System Monitoring → Issue Resolution`
 
-### 🛠️ [Onboarding & Setup](#onboarding--setup)
+### Onboarding & Setup
 `Email Verification → Company Setup → Team Invitation → Stripe Connect → IP Configuration → Dashboard Access`
 
-### 📊 [Analytics & Monitoring](#analytics--monitoring)
+### Analytics & Monitoring
 `Dashboard Login → Performance Overview → Detailed Analytics → Insights Generation → Action Planning`
 
-### 🆘 [Emergency & Support Scenarios](#emergency--support-scenarios)
+### Emergency & Support Scenarios
 `Issue Detection → Severity Assessment → Response Team → Communication → Resolution → Documentation`
 
 ---
 
-## 🔐 Authentication & Access Control
+## Authentication & Access Control
 
 **Journey Flow:** `Landing → Email Verification → Dashboard Access → Session Management`
 
@@ -47,7 +47,7 @@
 
 ---
 
-## 💳 Payment & Billing
+## Payment & Billing
 
 **Journey Flow:** `Stripe Connect Setup → Payment Method → Subscription Activation → Billing Dashboard`
 
@@ -59,7 +59,7 @@
 
 ---
 
-## 🏢 Organization & Team Management
+## Organization & Team Management
 
 **Journey Flow:** `Company Setup → Team Invitation → Role Assignment → Active Collaboration`
 
@@ -71,7 +71,7 @@
 
 ---
 
-## 📧 Email Campaigns & Operations
+## Email Campaigns & Operations
 
 **Journey Flow:** `Campaign Creation → Content Setup → Recipient List → IP Selection → Launch → Monitoring`
 
@@ -83,7 +83,7 @@
 
 ---
 
-## 🌐 IP Management & Infrastructure
+## IP Management & Infrastructure
 
 **Journey Flow:** `IP Selection → Purchase → DNS Setup → Warmup → Full Capacity → Monitoring`
 
@@ -95,7 +95,7 @@
 
 ---
 
-## 👥 Staff Operations & Support
+## Staff Operations & Support
 
 **Journey Flow:** `Staff Login → Cross-Tenant Access → User Support → System Monitoring → Issue Resolution`
 
@@ -106,7 +106,7 @@
 
 ---
 
-## 🛠️ Onboarding & Setup
+## Onboarding & Setup
 
 **Journey Flow:** `Email Verification → Company Setup → Team Invitation → Stripe Connect → IP Configuration → Dashboard Access`
 
@@ -118,7 +118,7 @@
 
 ---
 
-## 📊 Analytics & Monitoring
+## Analytics & Monitoring
 
 **Journey Flow:** `Dashboard Login → Performance Overview → Detailed Analytics → Insights Generation → Action Planning`
 
@@ -130,7 +130,7 @@
 
 ---
 
-## 🆘 Emergency & Support Scenarios
+## Emergency & Support Scenarios
 
 **Journey Flow:** `Issue Detection → Severity Assessment → Response Team → Communication → Resolution → Documentation`
 
@@ -142,7 +142,7 @@
 
 ---
 
-## 📋 Journey Cross-Reference
+## Journey Cross-Reference
 
 | Domain | Journey Flow | Success Metrics |
 |--------|--------------|-----------------|
@@ -158,7 +158,7 @@
 
 ---
 
-## 🎯 Implementation Priority by Domain
+## Implementation Priority by Domain
 
 ### Critical Priority (Must Work Perfectly)
 1. **Authentication** - User access foundation

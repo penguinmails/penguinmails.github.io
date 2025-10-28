@@ -1,4 +1,4 @@
-# 📧 Email Campaigns & Operations Journey
+# Email Email Campaigns & Operations Journey
 
 > **Journey Flow:** `Campaign Creation → Content Setup → Recipient List → IP Selection → Launch → Monitoring`
 

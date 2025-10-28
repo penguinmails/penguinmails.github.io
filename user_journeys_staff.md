@@ -1,4 +1,4 @@
-# 👥 Staff Operations & Support Journey
+# Team Staff Operations & Support Journey
 
 > **Journey Flow:** `Staff Login → Cross-Tenant Access → User Support → System Monitoring → Issue Resolution`
 

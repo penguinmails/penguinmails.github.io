@@ -7,3 +7,5 @@ mermaid:
 aux_links:
   "Repo on GitHub":
     - "https://github.com/penguinmails/penguinmails.github.io"
+aux_links_new_tab: true
+enable_copy_code_button: true

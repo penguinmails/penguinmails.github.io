@@ -1,4 +1,4 @@
-# 🌐 IP Management & Infrastructure Journey
+# Infrastructure IP Management & Infrastructure Journey
 
 > **Journey Flow:** `IP Selection → Purchase → DNS Setup → Warmup → Full Capacity → Monitoring`
 

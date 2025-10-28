@@ -6,19 +6,19 @@
 
 ---
 
-## 🎯 Start Here by Role
+## Start Here by Role
 
 | Role | Quick Start Path | Primary Documents |
 |------|------------------|------------------|
-| **👤 Designer-Product Owner** | [Product Strategy](product_strategy.md) → [Value Proposition](value_proposition.md) → [Roadmap](roadmap.md) | Strategy, UX decisions, feature prioritization |
-| **🎨 Designers** | [Design System](design_system.md) → [UI Library](ui_library.md) → [Component Library](component_library.md) | Visual standards, design system, user flows |
-| **⚙️ Engineers** | [User Journeys](user_journeys.md) → [Onboarding & Authentication Guide](onboarding_and_authentication_guide.md) → [Stripe Onboarding Guide](stripe_onboarding_guide.md) → [Analytics Architecture](analytics_architecture.md) → [Database Schema Guide](database_schema_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) | User journey specifications, technical authentication flow, payment integration, analytics system design, database architecture, system infrastructure |
-| **📊 Operations** | [Onboarding Guide](onboarding_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) → [IP Management Guide](ip_management_guide.md) → [Security Documentation](security_documentation.md) | Team workflows, system management, IP infrastructure, security procedures |
-| **💼 Stakeholders** | [System Analysis](system_analysis.md) → [Product Strategy](product_strategy.md) → [Business Documentation Proposal](business_documentation_proposal.md) | Financial performance, business operations, documentation strategy |
+| Designer-Product Owner | [Product Strategy](product_strategy.md) → [Value Proposition](value_proposition.md) → [Roadmap](roadmap.md) | Strategy, UX decisions, feature prioritization |
+| Designers | [Design System](design_system.md) → [UI Library](ui_library.md) → [Component Library](component_library.md) | Visual standards, design system, user flows |
+| Engineers | [User Journeys](user_journeys.md) → [Onboarding & Authentication Guide](onboarding_and_authentication_guide.md) → [Stripe Onboarding Guide](stripe_onboarding_guide.md) → [Analytics Architecture](analytics_architecture.md) → [Database Schema Guide](database_schema_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) | User journey specifications, technical authentication flow, payment integration, analytics system design, database architecture, system infrastructure |
+| Operations | [Onboarding Guide](onboarding_guide.md) → [Infrastructure Documentation](infrastructure_documentation.md) → [IP Management Guide](ip_management_guide.md) → [Security Documentation](security_documentation.md) | Team workflows, system management, IP infrastructure, security procedures |
+| Stakeholders | [System Analysis](system_analysis.md) → [Product Strategy](product_strategy.md) → [Business Documentation Proposal](business_documentation_proposal.md) | Financial performance, business operations, documentation strategy |
 
 ---
 
-## 🏗️ What is PenguinMails?
+## What is PenguinMails?
 
 **PenguinMails** is a multi-tenant email infrastructure and campaign management platform designed to solve the biggest challenges in cold email outreach:
 
@@ -42,9 +42,9 @@ A unified platform that combines:
 
 ---
 
-## 🗂️ Documentation Categories
+## Documentation Categories
 
-### 📋 Business Documents
+### Business Documents
 *Strategic direction and market positioning*
 
 | Document | Purpose | When to Use |
@@ -55,7 +55,7 @@ A unified platform that combines:
 | [Roadmap](roadmap.md) | Feature priorities and timeline | Planning, stakeholder communication |
 | [Business Documentation Proposal](business_documentation_proposal.md) | Business process documentation roadmap | Planning business operations, documentation strategy |
 
-### ⚡ Technical Documents
+### Technical Documents
 *Architecture, development, and system specifications*
 
 | Document | Purpose | When to Use |
@@ -76,7 +76,7 @@ A unified platform that combines:
 | [Implementation Roadmap](implementation_roadmap.md) | Phased implementation strategy based on user journeys and technical constraints | Development planning, milestone tracking, resource allocation |
 | [Markdown Loading Guide](markdown-loading-guide.md) | Simple ways to publish documentation as web pages | Documentation deployment, static site generation, React integration |
 
-### 🔧 Operational Documents
+### Operational Documents
 *Daily workflows, processes, and procedures*
 
 | Document | Purpose | When to Use |
@@ -90,7 +90,7 @@ A unified platform that combines:
 | [QA Testing Protocols](qa_testing_protocols.md) | Quality assurance processes and procedures | Testing workflows, QA procedures |
 | [Compliance Procedures](compliance_procedures.md) | Regulatory compliance and legal procedures | Legal compliance, audit preparation |
 
-### 📊 Data & Analytics
+### Data & Analytics
 *Performance tracking and business intelligence*
 
 | Document | Purpose | When to Use |
@@ -103,7 +103,7 @@ A unified platform that combines:
 
 ---
 
-## 🎨 Design System
+## Design System
 
 *Visual language and design standards*
 
@@ -114,7 +114,7 @@ A unified platform that combines:
 
 ---
 
-## 🚀 Quick Actions
+## Quick Actions
 
 ### For Product Planning
 1. Review [Product Strategy](product_strategy.md)
@@ -147,7 +147,7 @@ A unified platform that combines:
 
 ---
 
-## 📖 How to Use This Documentation
+## How to Use This Documentation
 
 ### Navigation Principles
 - **Breadcrumbs**: Use the navigation path at the top of each document
@@ -157,10 +157,10 @@ A unified platform that combines:
 
 ### Document Status
 Each document includes a status label:
-- ✅ **Current**: Up-to-date and accurate
-- 🔄 **Under Review**: Being updated or revised
-- ⚠️ **Outdated**: Needs updating but still referenced
-- 📋 **Planned**: Document structure created, content in development
+- Current: Up-to-date and accurate
+- Under Review: Being updated or revised
+- Outdated: Needs updating but still referenced
+- Planned: Document structure created, content in development
 
 ### Contribution Guidelines
 - **Business Documents**: Contact [Product Owner] for updates
@@ -170,7 +170,7 @@ Each document includes a status label:
 
 ---
 
-## 🔗 External Resources
+## External Resources
 
 ### Platform Documentation
 - [Hostwind VPS Documentation](https://docs.hostwind.com) - VPS provisioning and management
@@ -186,18 +186,18 @@ Each document includes a status label:
 
 ---
 
-## 📖 Local Documentation Viewing
+## Local Documentation Viewing
 
 ### Web-based Documentation Viewer
 
-The project includes an HTML-based documentation viewer (`index.html`) for easy local browsing:
+The project includes an HTML-based documentation viewer (`page.html`) for easy local browsing:
 
 #### Quick Start
 ```bash
 # Start local server from project root
 npx serve .
 
-# Open browser to http://localhost:3000/index.html
+# Open browser to http://localhost:3000/page.html
 ```
 
 **Features**:

@@ -1,4 +1,4 @@
-# 📈 Metrics & KPIs
+# Metrics & KPIs
 
 > **Status**: Current | **Last Updated**: October 28, 2025
 
@@ -10,28 +10,28 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 ## Core Metric Categories
 
-### 🎯 **North Star Metric**
+### North Star Metric
 **Monthly Recurring Revenue (MRR)** - Primary measure of business health and growth
 
-### 📊 **Growth Metrics**
+### Growth Metrics
 - **Monthly Active Users (MAU)**
 - **Customer Acquisition Rate**
 - **Revenue Growth Rate**
 - **Market Share Growth**
 
-### 💰 **Financial Metrics**
+### Financial Metrics
 - **Customer Lifetime Value (LTV)**
 - **Customer Acquisition Cost (CAC)**
 - **Monthly Churn Rate**
 - **Gross Revenue Margin**
 
-### 🎨 **Product Metrics**
+### Product Metrics
 - **Feature Adoption Rate**
 - **Time to First Value**
 - **User Engagement Score**
 - **Product Qualified Leads (PQLs)**
 
-### 📧 **Email Performance Metrics**
+### Email Performance Metrics
 - **Deliverability Rate**
 - **Open Rate**
 - **Click-Through Rate (CTR)**

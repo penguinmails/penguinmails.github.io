@@ -61,7 +61,7 @@ The cold email infrastructure market represents a $XX billion opportunity, with 
 - **Buying Behavior**: Product-led growth, departmental champions
 - **Value Proposition**: Ease of use, automated compliance
 
-#### **🚀 High-Growth Startups (25% of TAM)**
+#### **In Progress High-Growth Startups (25% of TAM)**
 - **Profile**: <10 employees, <$1M revenue, rapid scaling
 - **Pain Points**: Limited technical resources, urgent deliverability needs
 - **Buying Behavior**: Self-serve, viral referrals

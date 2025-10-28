@@ -1,4 +1,4 @@
-# 💳 Payment & Billing Journey
+# Payment Payment & Billing Journey
 
 > **Journey Flow:** `Stripe Connect Setup → Payment Method → Subscription Activation → Billing Dashboard`
 

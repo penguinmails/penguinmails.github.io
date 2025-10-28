@@ -1,4 +1,4 @@
-# 👥 User Personas
+# User Personas
 
 > **Status**: Current | **Last Updated**: October 28, 2025
 
@@ -50,7 +50,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 
 ---
 
-### 🚀 **Startup Founder**
+### Startup Founder
 
 #### **Demographics**
 - **Name**: Marcus Rodriguez
@@ -90,7 +90,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 
 ---
 
-### 🏢 **Enterprise Sales Director**
+### Enterprise Sales Director
 
 #### **Demographics**
 - **Name**: Jennifer Walsh
@@ -132,7 +132,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 
 ## Secondary Personas
 
-### 📊 **Marketing Operations Manager**
+### Marketing Operations Manager
 
 #### **Demographics**
 - Mid-level marketing professional at mid-market company
@@ -140,7 +140,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 - Challenge: Balancing technical requirements with marketing goals
 - Buying Influence: Recommends tools, influences purchasing decisions
 
-### 🎨 **Freelance Consultant**
+### Freelance Consultant
 
 #### **Demographics**
 - Independent consultant serving small-to-medium businesses
@@ -148,7 +148,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 - Challenge: Cost-effective solutions that scale with client needs
 - Buying Influence: Personal purchase, client recommendations
 
-### 🔧 **Technical Operations Specialist**
+### Technical Operations Specialist
 
 #### **Demographics**
 - IT/DevOps professional at enterprise organizations
