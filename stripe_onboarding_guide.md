@@ -1,9 +1,8 @@
-# Stripe Onboarding and Billing Integration Guide
+---
+last_modified_date: "2025-10-27"
+---
 
-> **Status**: Completed Current  
-> **Last Updated**: October 27, 2025  
-> **Owner**: Engineering Lead  
-> **Version**: 1.0
+# Stripe Onboarding and Billing Integration Guide
 
 ## Overview
 

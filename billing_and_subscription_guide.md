@@ -1,6 +1,8 @@
-# **PenguinMails Billing and Subscription Guide**
+---
+last_modified_date: "2025-10-28"
+---
 
-> **Status**: Current | **Last Updated**: October 28, 2025
+# **PenguinMails Billing and Subscription Guide**
 
 ---
 
