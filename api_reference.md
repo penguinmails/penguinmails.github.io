@@ -34,25 +34,29 @@ https://api.penguinmails.com/v1
 
 ## Core Resources
 
-### Organizations
+### Organizations (Companies)
 
-#### List Organizations
+#### List Companies
 ```http
-GET /organizations
+GET /companies
 ```
 
 **Parameters:**
 - `page` (integer, optional): Page number for pagination
 - `per_page` (integer, optional): Items per page (max 100)
-- `status` (string, optional): Filter by status (active, suspended, trial)
+- `status` (string, optional): Filter by status (active, paused, suspended)
+- `workspace_name` (string, optional): Filter by workspace name
 
 **Response:**
 ```json
 {
   "data": [
     {
-      "id": "org_123456",
+      "id": 123,
+      "tenant_id": "uuid-tenant",
       "name": "Acme Corporation",
+      "workspace_name": "acme-corp",
+      "logo_url": "https://example.com/logo.png",
       "status": "active",
       "created_at": "2025-01-15T10:30:00Z",
       "updated_at": "2025-01-20T14:45:00Z"
@@ -61,37 +65,88 @@ GET /organizations
   "meta": {
     "page": 1,
     "per_page": 20,
-    "total": 150,
-    "total_pages": 8
+    "total": 5,
+    "total_pages": 1
   }
 }
 ```
 
-#### Create Organization
+#### Create Company
 ```http
-POST /organizations
+POST /companies
 ```
 
 **Request Body:**
 ```json
 {
   "name": "New Company Inc",
+  "workspace_name": "new-company",
   "industry": "technology",
-  "size": "51-200",
-  "timezone": "America/New_York"
+  "team_size": "51-200"
 }
 ```
 
-### Users
-
-#### List Users
+#### Get Company Details
 ```http
-GET /organizations/{org_id}/users
+GET /companies/{company_id}
 ```
 
-#### Invite User
+#### Update Company
 ```http
-POST /organizations/{org_id}/users
+PATCH /companies/{company_id}
+```
+
+**Request Body:**
+```json
+{
+  "name": "Updated Company Name",
+  "status": "active",
+  "logo_url": "https://example.com/new-logo.png"
+}
+```
+
+#### Switch Company Context
+```http
+POST /companies/{company_id}/switch
+```
+
+**Description:** Updates user's active company context for multi-company tenants.
+
+### Team Management
+
+#### List Team Members
+```http
+GET /companies/{company_id}/members
+```
+
+**Parameters:**
+- `role` (string, optional): Filter by role (owner, admin, member)
+- `status` (string, optional): Filter by status (active, pending, suspended)
+
+**Response:**
+```json
+{
+  "data": [
+    {
+      "user_id": "uuid-user",
+      "email": "john.doe@company.com",
+      "role": "admin",
+      "status": "active",
+      "joined_at": "2025-01-15T10:30:00Z",
+      "last_active": "2025-01-20T14:45:00Z"
+    }
+  ],
+  "meta": {
+    "total_members": 5,
+    "active_members": 4,
+    "pending_invites": 1
+  }
+}
+```
+
+#### Invite Team Member
+```http
+POST /companies/{company_id}/members
 ```
 
 **Request Body:**
@@ -99,15 +154,48 @@ POST /organizations/{org_id}/users
 {
   "email": "john.doe@company.com",
   "role": "admin",
+  "message": "Welcome to our team!",
   "send_invite": true
 }
+```
+
+#### Update Member Role
+```http
+PATCH /companies/{company_id}/members/{user_id}
+```
+
+**Request Body:**
+```json
+{
+  "role": "member",
+  "reason": "Role change for project reassignment"
+}
+```
+
+#### Remove Team Member
+```http
+DELETE /companies/{company_id}/members/{user_id}
+```
+
+**Request Body:**
+```json
+{
+  "transfer_assets": true,
+  "new_owner_id": "uuid-new-owner",
+  "reason": "Employee departure"
+}
+```
+
+#### Resend Invitation
+```http
+POST /companies/{company_id}/members/{user_id}/resend-invite
 ```
 
 ### Email Campaigns
 
 #### List Campaigns
 ```http
-GET /organizations/{org_id}/campaigns
+GET /companies/{company_id}/campaigns
 ```
 
 **Parameters:**
@@ -117,7 +205,7 @@ GET /organizations/{org_id}/campaigns
 
 #### Create Campaign
 ```http
-POST /organizations/{org_id}/campaigns
+POST /companies/{company_id}/campaigns
 ```
 
 **Request Body:**
@@ -148,7 +236,7 @@ POST /organizations/{org_id}/campaigns
 
 #### Send Test Email
 ```http
-POST /organizations/{org_id}/campaigns/{campaign_id}/test
+POST /companies/{company_id}/campaigns/{campaign_id}/test
 ```
 
 **Request Body:**
@@ -160,19 +248,19 @@ POST /organizations/{org_id}/campaigns/{campaign_id}/test
 
 #### Launch Campaign
 ```http
-POST /organizations/{org_id}/campaigns/{campaign_id}/launch
+POST /companies/{company_id}/campaigns/{campaign_id}/launch
 ```
 
 ### IP Management
 
 #### List IPs
 ```http
-GET /organizations/{org_id}/ips
+GET /companies/{company_id}/ips
 ```
 
 #### Provision New IP
 ```http
-POST /organizations/{org_id}/ips
+POST /companies/{company_id}/ips
 ```
 
 **Request Body:**
@@ -190,7 +278,7 @@ POST /organizations/{org_id}/ips
 
 #### Get IP Status
 ```http
-GET /organizations/{org_id}/ips/{ip_id}
+GET /companies/{company_id}/ips/{ip_id}
 ```
 
 **Response:**
@@ -216,7 +304,7 @@ GET /organizations/{org_id}/ips/{ip_id}
 
 #### Get Campaign Analytics
 ```http
-GET /organizations/{org_id}/campaigns/{campaign_id}/analytics
+GET /companies/{company_id}/campaigns/{campaign_id}/analytics
 ```
 
 **Parameters:**
@@ -256,7 +344,7 @@ GET /organizations/{org_id}/campaigns/{campaign_id}/analytics
 
 #### Get Organization Analytics
 ```http
-GET /organizations/{org_id}/analytics
+GET /companies/{company_id}/analytics
 ```
 
 **Parameters:**
@@ -267,7 +355,7 @@ GET /organizations/{org_id}/analytics
 
 #### Register Webhook
 ```http
-POST /organizations/{org_id}/webhooks
+POST /companies/{company_id}/webhooks
 ```
 
 **Request Body:**
@@ -282,12 +370,12 @@ POST /organizations/{org_id}/webhooks
 
 #### List Webhooks
 ```http
-GET /organizations/{org_id}/webhooks
+GET /companies/{company_id}/webhooks
 ```
 
 #### Delete Webhook
 ```http
-DELETE /organizations/{org_id}/webhooks/{webhook_id}
+DELETE /companies/{company_id}/webhooks/{webhook_id}
 ```
 
 ## Webhook Events
@@ -336,7 +424,7 @@ DELETE /organizations/{org_id}/webhooks/{webhook_id}
   "type": "https://api.penguinmails.com/errors/validation-error",
   "title": "Validation Error",
   "detail": "The request contains invalid parameters",
-  "instance": "/organizations/org_123/campaigns",
+  "instance": "/companies/company_123/campaigns",
   "errors": [
     {
       "field": "subject",
@@ -391,11 +479,11 @@ X-RateLimit-Retry-After: 60
     "has_prev": false
   },
   "links": {
-    "self": "https://api.penguinmails.com/v1/organizations?page=1",
-    "next": "https://api.penguinmails.com/v1/organizations?page=2",
+    "self": "https://api.penguinmails.com/v1/companies?page=1",
+    "next": "https://api.penguinmails.com/v1/companies?page=2",
     "prev": null,
-    "first": "https://api.penguinmails.com/v1/organizations?page=1",
-    "last": "https://api.penguinmails.com/v1/organizations?page=8"
+    "first": "https://api.penguinmails.com/v1/companies?page=1",
+    "last": "https://api.penguinmails.com/v1/companies?page=8"
   }
 }
 ```

@@ -44,11 +44,14 @@ sequenceDiagram
 ```
 
 #### Security Features
-- **Managed Authentication**: NileDB handles password hashing, token generation
-- **Session Management**: Redis-based session storage with expiration
-- **Multi-Factor Authentication**: Optional MFA for enhanced security
-- **Password Policies**: Enforced through NileDB configuration
-- **Account Lockout**: Automatic lockout after failed attempts
+- **Managed Authentication**: NileDB handles core authentication (users table)
+- **Session Management**: Fully handled by NileDB authentication system
+- **Email Verification**: ✅ IMPLEMENTED using Loop service + custom verification endpoint
+- **Password Reset**: Planned alongside email verification
+- **Multi-Factor Authentication**: Not implemented (planned under feature flag)
+- **Password Policies**: Configurable through tenant_policies table (not enforced)
+- **Account Lockout**: Not implemented - relies on password reset flow
+- **Failed Login Tracking**: No tracking implemented - users contact support
 
 #### Implementation Example
 ```javascript

@@ -80,7 +80,7 @@
   - Account status (active/suspended/locked)
   - Geographic/IP allowlist (enterprise feature)
   - Device fingerprinting for fraud detection
-- **Multi-Factor**: Optional 2FA code input (configurable per user)
+- **Multi-Factor**: Not implemented (planned under feature flag)
 
 #### 3. Dashboard Restoration
 - **Page**: Main dashboard (`/dashboard`)
@@ -114,9 +114,9 @@
    - **Prevention**: Complete email verification immediately after signup
 
 3. **Account Suspended/Locked**
-   - **Symptom**: "Account temporarily suspended" or "Too many failed attempts"
-   - **Solution**: Wait for automatic unlock (24h) or contact support
-   - **Prevention**: Avoid multiple failed login attempts
+    - **Symptom**: "Account temporarily suspended" (not implemented - users contact support)
+    - **Solution**: Contact support for account recovery - no automatic lockout exists
+    - **Prevention**: Use password reset flow for access recovery
 
 4. **Browser/Cookie Issues**
    - **Symptom**: Constant redirects or session loss
@@ -199,6 +199,7 @@
   - Phone verification (SMS code)
   - Document upload (ID, account statements)
   - Knowledge-based authentication
+  - **NileDB Invitation System**: For team member access recovery (available Q4 2025)
 - **Staff Review**: Manual verification for high-value accounts
 
 #### 4. Account Restoration
@@ -206,9 +207,36 @@
   - Password reset with temporary access
   - Account unlock with security monitoring
   - Data export for account migration
+  - **NileDB Invitation Resend**: For pending team invitations
   - Full account restoration
 - **Security Measures**: Enhanced monitoring post-recovery
 - **Communication**: Detailed incident report + prevention tips
+
+### NileDB Invitation System Integration (Q4 2025)
+**Journey Flow:** `Admin Invitation → User Acceptance → Account Activation`
+
+#### Invitation Creation
+```typescript
+// Admin sends invitation via NileDB
+const n = await nile.withContext({ tenantId: '0196...' });
+await n.tenants.invite('user@example.com', {
+  callbackUrl: `${process.env.APP_URL}/accept-invite`,
+  redirectUrl: process.env.APP_URL
+});
+```
+
+#### Invitation Acceptance
+- **Email Notification**: NileDB handles invitation delivery automatically
+- **Security**: Built-in token management and expiration
+- **Multi-Tenant**: Automatic tenant association
+- **Single-Use**: One-time acceptance tokens
+
+#### Benefits vs Current System
+- **Built-in Security**: Automatic token management and expiration
+- **Email Integration**: Native email delivery via NileDB
+- **Tenant Isolation**: Proper multi-tenant membership handling
+- **Audit Trail**: Comprehensive invitation logging
+- **Scalability**: No custom invitation table management needed
 
 ---
 
@@ -253,7 +281,7 @@
 
 ### Edge Cases & Recovery
 
-#### Password Recovery Flow
+#### Password Recovery Flow (NileDB Native)
 ```
 Dashboard Access Issue → "Forgot Password?" Link → Email Reset → Token Validation → New Password
 ```
@@ -281,27 +309,35 @@ Dashboard Access Issue → "Forgot Password?" Link → Email Reset → Token Val
    - **Validation**: Password strength requirements
    - **Completion**: All existing sessions invalidated
 
-#### Account Lockout Handling
+#### Account Lockout Handling (Roadmap: Q2 2026)
 ```
-Failed Login Attempts → Lockout Warning → Account Lock → Support Ticket → Manual Unlock
+Failed Login Attempts → Progressive Delays → Account Lockout → Support Recovery
 ```
 
-**Detailed Steps:**
-1. **Failed Attempts Tracking**:
-   - **Counter**: Increments on failed login (email + IP based)
-   - **Threshold**: 5 failed attempts within 15 minutes
-   - **Warning**: Shows after 3 failed attempts
+**Current Implementation:**
+1. **No Failed Attempts Tracking**:
+     - **Current State**: No tracking of failed login attempts implemented
+     - **User Experience**: Friendly message "contact support" for failed logins
+     - **Recovery**: Relies entirely on password reset flow
 
-2. **Account Lockout**:
-   - **Page**: Lockout screen with explanation
-   - **Elements**: "Contact Support" button + appeal form
-   - **Duration**: Automatic unlock after 24 hours
-   - **Communication**: Email notification of lockout
+2. **No Account Lockout**:
+     - **Page**: Standard login screen with error message
+     - **Elements**: Error message + "Forgot Password?" link
+     - **Duration**: No automatic lockout exists
+     - **Communication**: No email notifications for failed attempts
 
-3. **Support Resolution**:
-   - **Page**: Support ticket creation (`/support`)
-   - **Elements**: Incident description + identity verification
-   - **Process**: Manual review by staff → unlock approval
+3. **Future Implementation (Q2 2026)**:
+     - **Tracking**: Login attempts table with IP and user agent logging
+     - **Progressive Delays**: 1st attempt = 0s, 2nd = 5s, 3rd = 30s, 4th = 300s
+     - **Lockout**: After 5 failed attempts within 15 minutes
+     - **Duration**: Configurable (default 30 minutes)
+     - **Recovery**: Support-assisted unlock or password reset
+     - **Communication**: Email alerts for suspicious activity
+
+4. **Support Resolution**:
+     - **Page**: Support portal (`/support`)
+     - **Elements**: Incident description + identity verification
+     - **Process**: Manual staff assistance → account unlock or password reset
 
 #### Session Recovery
 ```
@@ -413,19 +449,25 @@ Concurrent Login Alert → Session Conflict Modal → Device Selection → Prima
 
 **Detailed Steps:**
 1. **Conflict Detection**:
-   - **Trigger**: Second simultaneous login detected
-   - **UI**: Modal overlay on both sessions
-   - **Options**: "Continue Here" or "Logout Other Device"
+    - **Trigger**: Second simultaneous login detected
+    - **UI**: Modal overlay on both sessions
+    - **Options**: "Continue Here" or "Logout Other Device"
 
 2. **Session Management**:
-   - **Selection**: User chooses primary device
-   - **Invalidation**: Other session tokens revoked
-   - **Persistence**: Primary session continues uninterrupted
+    - **Selection**: User chooses primary device
+    - **Invalidation**: Other session tokens revoked
+    - **Persistence**: Primary session continues uninterrupted
 
-3. **Security Logging**:
-   - **Audit**: All device information logged
-   - **Alert**: Unusual multi-device activity flagged
-   - **Policy**: Configurable concurrent session limits
+3. **Future Enhancements (Q2 2026)**:
+    - **Device Tracking**: Fingerprint devices for security monitoring
+    - **Geographic Alerts**: Notify of logins from unusual locations
+    - **Session Limits**: Configurable maximum concurrent sessions
+    - **Device Management**: Allow users to view/manage trusted devices
+
+4. **Security Logging**:
+    - **Audit**: All device information logged
+    - **Alert**: Unusual multi-device activity flagged
+    - **Policy**: Configurable concurrent session limits (roadmap feature)
 
 ### Advanced Edge Cases
 
@@ -450,28 +492,35 @@ SSO Provider Login → SAML/OAuth Flow → User Provisioning → Company Associa
    - **Company**: Automatic association with enterprise tenant
    - **Compliance**: Audit logging of all SSO events
 
-#### API Token Authentication
+#### API Token Authentication (Roadmap: Q2 2026)
 ```
 API Key Generation → Token Storage → Request Authentication → Rate Limiting → Access Logging
 ```
 
 **Detailed Steps:**
 1. **Token Creation**:
-   - **Page**: Developer settings (`/settings/api`)
-   - **Elements**: "Generate API Key" button + permissions selector
-   - **Security**: Key displayed once + secure storage required
+    - **Page**: Developer settings (`/settings/api`)
+    - **Elements**: "Generate API Key" button + permissions selector
+    - **Security**: Key displayed once + secure storage required
 
 2. **API Usage**:
-   - **Headers**: `Authorization: Bearer <token>` in requests
-   - **Validation**: Token authenticity + permissions check
-   - **Rate Limiting**: Per-token limits with burst allowances
+    - **Headers**: `Authorization: Bearer <token>` in requests
+    - **Validation**: Token authenticity + permissions check
+    - **Rate Limiting**: Per-token limits with burst allowances
 
-3. **Monitoring**:
-   - **Logging**: All API calls audited
-   - **Metrics**: Usage statistics per token
-   - **Alerts**: Unusual activity detection
+3. **Future Enhancements (Q2 2026)**:
+    - **MFA for API**: Optional 2FA requirement for API key generation
+    - **Audit Logging**: Comprehensive API usage tracking
+    - **Geographic Restrictions**: IP-based access controls
+    - **Token Rotation**: Automated key rotation policies
+
+4. **Monitoring**:
+    - **Logging**: All API calls audited (roadmap)
+    - **Metrics**: Usage statistics per token
+    - **Alerts**: Unusual activity detection
 
 ## Technical Implementation Links
 
 - **[Onboarding & Authentication Guide](onboarding_and_authentication_guide.md)** - Complete technical authentication flow with NileDB + Turnstile + Stripe Connect
+- **[Database Schema Guide](database_schema_guide.md)** - Multi-tenant authentication tables and RLS policies
 - **[Security Documentation](security_documentation.md)** - Security practices and compliance procedures

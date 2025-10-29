@@ -258,9 +258,9 @@ const postHogIntegration = {
 #### **NileDB Integration**
 ```typescript
 interface NileDBConfig {
+  projectId: string;
   apiKey: string;
-  databaseId: string;
-  workspace: string;
+  databaseUrl: string;
   tenantId?: string;
 }
 
@@ -268,29 +268,95 @@ const nileDBIntegration = {
   connection: {
     host: 'db.thenile.dev',
     port: 5432,
-    database: databaseId,
+    database: 'penguinmails',
     user: 'api_key',
     password: apiKey,
     ssl: true,
     application_name: 'penguinmails'
   },
+  authentication: {
+    // Core authentication managed by NileDB
+    signup: async (email: string, password: string, userData: any) => {
+      // NileDB handles user creation and authentication
+      const user = await nile.auth.signup({
+        email,
+        password,
+        data: {
+          ...userData,
+          email_verified: false,
+          onboarding_step: 'verify'
+        }
+      });
+      return user;
+    },
+    signin: async (email: string, password: string) => {
+      // Session management via NileDB
+      const { user, session } = await nile.auth.signin({
+        email,
+        password
+      });
+      return { user, session };
+    },
+    validateSession: async (token: string) => {
+      const user = await nile.auth.verifyToken(token);
+      return user;
+    }
+  },
   tenantIsolation: {
-    // Automatic tenant isolation using RLS
-    defaultTenant: () => `
-      SELECT set_config('app.current_tenant', '${tenantId}', false);
-    `,
+    // Row Level Security for multi-tenant data isolation
     tenantContext: (tenantId: string) => `
       SELECT nile.current_tenant('${tenantId}');
+    `,
+    userTenantCheck: (userId: string, tenantId: string) => `
+      SELECT EXISTS(
+        SELECT 1 FROM tenant_users
+        WHERE user_id = '${userId}' AND tenant_id = '${tenantId}'
+      );
+    `
+  },
+  profileManagement: {
+    // Application layer profile extensions
+    getUserWithProfile: (userId: string) => `
+      SELECT
+        u.*,
+        tu.roles,
+        up.theme, up.language, up.timezone,
+        up.email_notifications, up.push_notifications,
+        s.is_staff as isPenguinMailsStaff
+      FROM users u
+      LEFT JOIN tenant_users tu ON u.id = tu.user_id
+      LEFT JOIN user_preferences up ON u.id = up.user_id
+      LEFT JOIN staff_members s ON u.id = s.user_id
+      WHERE u.id = '${userId}';
+    `,
+    updatePreferences: (userId: string, preferences: any) => `
+      INSERT INTO user_preferences (user_id, tenant_id, theme, language, timezone,
+                                   email_notifications, push_notifications,
+                                   weekly_reports, marketing_emails, created_at, updated_at)
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+      ON CONFLICT (user_id, tenant_id) DO UPDATE SET
+        theme = EXCLUDED.theme,
+        language = EXCLUDED.language,
+        timezone = EXCLUDED.timezone,
+        email_notifications = EXCLUDED.email_notifications,
+        push_notifications = EXCLUDED.push_notifications,
+        weekly_reports = EXCLUDED.weekly_reports,
+        marketing_emails = EXCLUDED.marketing_emails,
+        updated_at = CURRENT_TIMESTAMP;
     `
   },
   multiTenancy: {
     createTenant: (tenantName: string, adminEmail: string) => `
-      INSERT INTO tenants (name, admin_email, created_at)
-      VALUES ('${tenantName}', '${adminEmail}', CURRENT_TIMESTAMP)
+      INSERT INTO tenants (name, domain, settings, status, created_at, updated_at)
+      VALUES ('${tenantName}', '${adminEmail.split('@')[1]}', '{}', 'active', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
       RETURNING id;
     `,
-    switchTenant: (tenantId: string) => `
-      SELECT nile.current_tenant('${tenantId}');
+    linkUserToTenant: (tenantId: string, userId: string, role: string) => `
+      INSERT INTO tenant_users (tenant_id, user_id, roles, email, created, updated)
+      VALUES ('${tenantId}', '${userId}', '["${role}"]', (SELECT email FROM users WHERE id = '${userId}'), CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+      ON CONFLICT (tenant_id, user_id) DO UPDATE SET
+        roles = EXCLUDED.roles,
+        updated = CURRENT_TIMESTAMP;
     `
   }
 };

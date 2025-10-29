@@ -13,7 +13,7 @@ last_modified_date: "2025-10-28"
 ## 0. Architecture Overview
 
 ### **Current Tech Stack**
-- **Authentication**: NileDB (PostgreSQL + built-in auth) with multi-tenant support
+- **Authentication**: NileDB manages core user authentication with custom profile extensions
 - **CAPTCHA**: Cloudflare Turnstile for bot protection
 - **Payments**: Stripe Connect for multi-tenant billing and revenue sharing
 - **Analytics**: PostgreSQL + PostHog for email analytics and user behavior tracking
@@ -127,7 +127,7 @@ export async function POST(req: NextRequest) {
 
     if (!secretKey) {
       return NextResponse.json(
-        { success: false, message: "Server configuration error" }, 
+        { success: false, message: "Server configuration error" },
         { status: 500 }
       );
     }
@@ -140,7 +140,7 @@ export async function POST(req: NextRequest) {
     if (!result.success) {
       console.warn("Turnstile verification failed:", result['error-codes']);
       return NextResponse.json(
-        { success: false, message: "CAPTCHA verification failed" }, 
+        { success: false, message: "CAPTCHA verification failed" },
         { status: 400 }
       );
     }
@@ -149,12 +149,22 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Turnstile verification error:", error);
     return NextResponse.json(
-      { success: false, message: "Internal server error" }, 
+      { success: false, message: "Internal server error" },
       { status: 500 }
     );
   }
 }
 ```
+
+### **Email Verification with Loop Service**
+
+**Current Implementation Status**: ✅ IMPLEMENTED using Loop service
+
+**Email Verification Flow:**
+1. User signs up through NileDB authentication
+2. Loop service sends verification email with magic link + fallback code
+3. Custom verification endpoint receives token/code and updates `email_verified` field in NileDB users table
+4. Account becomes active upon successful verification
 
 ### **NileDB Sign-Up API**
 
@@ -215,7 +225,7 @@ export async function POST(req: NextRequest) {
 
 async function sendVerificationEmail(email: string, userId: string) {
   const verificationToken = await generateJWT({ userId, email });
-  
+
   await fetch('https://api.loopex.com/send-transactional', {
     method: 'POST',
     headers: {
@@ -233,6 +243,22 @@ async function sendVerificationEmail(email: string, userId: string) {
     })
   });
 }
+
+### **Email Verification Status Tracking**
+
+**Current Status**: ✅ IMPLEMENTED using Loop service + custom verification endpoint
+
+**Implementation Details:**
+- **Email Service**: Loop handles all verification and password reset emails
+- **Verification Endpoint**: Custom API endpoint at `/api/auth/verify` receives verification requests
+- **Status Update**: Endpoint updates `email_verified` timestamp field in NileDB's `users` table
+- **Token Security**: Single-use JWT tokens with 30-minute expiration
+- **Fallback Support**: 6-digit code alternative for accessibility
+
+**Database Updates:**
+- `email_verified` field in `users` table set to verification timestamp
+- `tenant_users` table mirrors email verification status
+- Cross-schema queries combine data for complete user profiles
 ```
 
 ---

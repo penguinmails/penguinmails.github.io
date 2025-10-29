@@ -157,9 +157,9 @@ const roles: UserRole[] = [
 - **Recovery Process**: Secure MFA reset with identity verification
 
 ### **Session Management**
-- **Session Timeout**: 8 hours for standard users, 1 hour for admins
-- **Concurrent Sessions**: Maximum 5 active sessions per user
-- **Session Monitoring**: Real-time tracking of active sessions
+- **Session Management**: Fully handled by NileDB authentication system
+- **Application Layer**: `validateSession()` and `getCurrentUser()` functions validate sessions
+- **No Custom Tracking**: Application does not manage sessions or device tracking
 - **Force Logout**: Immediate termination capability for compromised accounts
 
 ## 5. **Network Security**
@@ -410,9 +410,10 @@ interface SecurityIncident {
 ```typescript
 interface SecurityMetrics {
   authentication: {
-    failedAttempts: number;
+    failedAttempts: number;  // Not currently tracked - users contact support
     suspiciousLogins: number;
-    mfaAdoption: number;
+    mfaAdoption: number;     // Planned but not implemented
+    accountLockouts: number; // Not implemented - relies on password reset
   };
   network: {
     blockedAttacks: number;

@@ -57,16 +57,17 @@ This roadmap outlines the strategic priorities, feature development timeline, an
 - >85% initial deliverability rate
 
 #### Multi-Tenant User Management
-**Priority**: 🔴 Critical  
-**Effort**: 6 weeks  
+**Priority**: 🔴 Critical
+**Effort**: 6 weeks
 **Dependencies**: Authentication system, database schema
 
 **Features**:
-- [ ] User registration and email verification
-- [ ] Tenant creation and management interface
-- [ ] Role-based access control (Admin, Member, Viewer)
+- [x] User registration and email verification (implemented via NileDB)
+- [x] Tenant creation and management interface
+- [x] Role-based access control via tenant_users.roles field (pending/active status tracking)
 - [ ] Subscription management and billing integration
 - [ ] Basic workspace organization
+- [x] User invitation system via tenant_users.roles field (pending invitations = empty roles array)
 
 **Success Metrics**:
 - <5 minutes account setup completion
@@ -226,14 +227,20 @@ See roadmap technical implementation details for complete database schemas, code
 ### Key Features
 
 #### Enterprise Security & Compliance
-**Priority**: 🔴 Critical  
-**Effort**: 5 weeks  
+**Priority**: 🔴 Critical
+**Effort**: 5 weeks
 **Dependencies**: Security audit, compliance framework
 
 **Features**:
 - [ ] Single Sign-On (SSO) integration (SAML, OAuth)
 - [ ] Advanced audit logging and compliance reporting
+- [ ] Login attempt tracking and account lockout protection
+- [ ] Device fingerprinting and session anomaly detection
+- [ ] Geographic login alerts and suspicious activity monitoring
+- [ ] MFA/2FA implementation (TOTP, SMS, backup codes)
+- [ ] Advanced session management and device tracking
 - [ ] Data residency and privacy controls
+- [x] PII anonymization and soft delete functions for GDPR compliance (implemented in database schema)
 - [ ] Role-based permissions with granular control
 - [ ] SOC 2 compliance preparation
 

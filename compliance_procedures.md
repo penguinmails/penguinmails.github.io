@@ -141,6 +141,13 @@ graph TD
 - **Legal Holds**: Suspension of deletion during legal proceedings
 - **Archival Procedures**: Secure long-term data storage when required
 
+### **User Data Deletion & PII Anonymization**
+- **Soft Delete Implementation**: Users marked as deleted rather than hard deleted
+- **PII Anonymization Function**: `anonymize_user()` function replaces personal data with generic values
+- **Data Ownership Transfer**: Critical business data transferred to 'system' user to prevent orphaned records
+- **GDPR Compliance**: Right to erasure fulfilled through anonymization while preserving business continuity
+- **Retention Period**: Soft-deleted users permanently removed after 365 days
+
 ## 7. **Incident Response Procedures**
 
 ### **Breach Notification Requirements**

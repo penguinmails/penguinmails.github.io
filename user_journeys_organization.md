@@ -1,4 +1,4 @@
-# Organization Organization & Team Management Journey
+# Organization & Team Management Journey
 
 > **Journey Flow:** `Company Setup → Team Invitation → Role Assignment → Active Collaboration`
 
@@ -12,6 +12,8 @@
   - Company name input field (required)
   - Industry dropdown selection
   - Team size range selector (1-10, 11-50, 51-200, 200+)
+  - Company workspace name (URL-friendly, unique identifier)
+  - Company logo URL (optional)
   - Company website URL (optional)
   - Company description textarea
 - **Validation**: Real-time company name uniqueness check
@@ -23,9 +25,9 @@
 - **Optional Team Invites**: Can add initial team members immediately or skip
 
 #### 3. Company Creation & Database Setup
-- **Backend Process**: Tenant record creation in NileDB
-- **Multi-tenant Setup**: RLS policies configured for new tenant
-- **Feature Provisioning**: Base plan features activated
+- **Backend Process**: Company record creation with tenant association
+- **Multi-tenant Setup**: RLS policies configured for company isolation
+- **Feature Provisioning**: Base plan features activated at tenant level
 - **Email Notification**: Company creation confirmation
 
 ---
@@ -75,6 +77,7 @@
 - **Columns**: Name, Email, Role, Join Date, Last Active, Status
 - **Actions**: Edit role, remove member, resend invitation (per member)
 - **Bulk Actions**: Select multiple members for batch operations
+- **Company Context**: All actions scoped to current company workspace
 
 #### 2. Role Management Interface
 - **Role Change Modal**:
@@ -82,13 +85,14 @@
   - New role dropdown (Member → Admin → Owner hierarchy)
   - Permission preview (what changes with role)
   - Confirmation with impact warning
-- **Security Logging**: All role changes audited
+  - Tenant-level role validation (roles managed at tenant level)
+- **Security Logging**: All role changes audited with tenant association
 
 #### 3. Team Activity Monitoring
-- **Activity Feed**: Recent team actions and changes
-- **Usage Analytics**: Per-member campaign activity
-- **Access Logs**: Login patterns and feature usage
-- **Alerts**: Inactive members, permission changes
+- **Activity Feed**: Recent team actions and changes within company
+- **Usage Analytics**: Per-member campaign activity scoped to company
+- **Access Logs**: Login patterns and feature usage by company
+- **Alerts**: Inactive members, permission changes, company-specific alerts
 
 ### Edge Cases & Recovery
 
@@ -348,19 +352,19 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 **Possible Causes & Solutions:**
 
 1. **Multi-Company Membership**
-   - **Symptom**: Seeing data from wrong company
-   - **Solution**: Use company switcher in top navigation
-   - **Context**: Users can belong to multiple companies
+    - **Symptom**: Seeing data from wrong company workspace
+    - **Solution**: Use company switcher in top navigation
+    - **Context**: Users belong to tenants and access all companies within that tenant
 
 2. **Session Issues**
-   - **Symptom**: Company context lost after login
-   - **Solution**: Log out and log back in, select correct company
-   - **Prevention**: Bookmark company-specific URLs
+    - **Symptom**: Company context lost after login
+    - **Solution**: Log out and log back in, select correct company workspace
+    - **Prevention**: Bookmark company-specific URLs
 
 3. **Permission Changes**
-   - **Symptom**: Lost access to company features
-   - **Solution**: Contact company admin to check your role
-   - **Check**: Team management shows your current permissions
+    - **Symptom**: Lost access to company features
+    - **Solution**: Contact tenant admin to check your role at tenant level
+    - **Check**: Team management shows your current permissions within the company
 
 ## Technical Implementation Links
 

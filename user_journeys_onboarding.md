@@ -2,11 +2,18 @@
 
 > **Journey Flow:** `Email Verification → Company Setup → Team Invitation → Stripe Connect → IP Configuration → Dashboard Access`
 
-**Overview:** Complete user onboarding process from email verification through full platform setup and activation.
+**Overview:** Complete user onboarding process from email verification through full platform setup and activation. Onboarding progress is tracked via tenant_users.roles field for better user experience and analytics.
+
+**Status Tracking via tenant_users.roles:**
+- **Empty roles array** (`roles: []` or `roles: null`) = pending invitation/onboarding not started
+- **Assigned roles** (`roles: ['user', 'admin']`) = active user, onboarding completed
+- **Role-based access control** determines feature availability and permissions
+- **Analytics integration** tracks onboarding completion rates and drop-off points via role assignments
 
 **Detailed Documentation:**
 - **[Normal, Edge, Initial & Emergency Scenarios](user_journeys_onboarding.md)** - Complete onboarding journey specifications
 - **[Technical Implementation](onboarding_and_authentication_guide.md)** - Complete user authentication and onboarding flow
+- **[Database Schema](database_schema_guide.md)** - Multi-tenant authentication and role-based access control
 
 **Documentation Organization:**
 - **Main User Journeys**: [user_journeys.md](user_journeys.md) - All domains with table of contents navigation
@@ -68,23 +75,29 @@
 
 #### **Onboarding Abandonment**
 - **Scenario**: User starts but doesn't complete onboarding within expected timeframe.
-- **System Response**: Automated detection after 24-48 hours of inactivity.
-- **Action**: Send recovery email with progress preservation link.
+- **System Response**: Automated detection after 24-48 hours of inactivity using tenant_users.roles status.
+- **Database Query**: Check tenant_users where roles is empty array for pending users.
+- **Action**: Send recovery email with progress preservation link including user_id and tenant_id.
 - **Page**: Onboarding Resume Page
+- **Database Check**: Verify user has empty roles array, indicating incomplete onboarding.
 - **Action**: Click 'Resume Onboarding' to pick up where they left off.
 - **Button**: 'Continue Setup'
 - **Action**: Provide completion support if needed.
 - **Page**: Support Chat Widget
+- **Database Tracking**: Log abandonment analytics via role assignment timestamps for product improvement.
 
 #### **Partial Completion Recovery**
 - **Scenario**: User encounters error or failure at a specific onboarding step.
-- **Action**: System detects step failure and displays error message.
+- **Database Check**: Query tenant_users.roles to verify user status and permissions.
+- **Action**: System detects step failure and displays error message with role-based context.
 - **Page**: Error Resolution Modal
+- **Database Update**: Log error details and timestamp in tenant_users record.
 - **Action**: Attempt automatic retry or provide manual instructions.
 - **Button**: 'Retry Step' or 'Manual Setup'
 - **Action**: Use alternative verification methods if primary fails.
 - **Page**: Alternative Setup Options
-- **Action**: Preserve progress and allow continuation from failed step.
+- **Database Persistence**: Update tenant_users.roles array when steps are successfully completed.
+- **Action**: Preserve progress and allow continuation from failed step based on current role assignments.
 
 #### **Browser/Technology Issues**
 - **Scenario**: Compatibility problems with browser, device, or network.
@@ -136,15 +149,20 @@
 
 #### **Data Loss During Setup**
 - **Scenario**: User data corrupted or lost during onboarding process.
-- **Action**: System detects data inconsistency and initiates recovery.
+- **Database Verification**: Check tenant_users.roles for user status and permissions.
+- **Action**: System detects data inconsistency and initiates recovery using role-based progress.
 - **Page**: Data Recovery Portal
+- **Database Recovery**: Restore access based on tenant_users.roles assignments.
 - **Action**: Re-enter information using recovery assistance tools.
 - **Button**: 'Start Recovery'
+- **Database Update**: Update tenant_users record with recovery timestamp.
 - **Action**: Verify recovered data integrity.
 - **Page**: Data Verification Dashboard
-- **Action**: Resume setup from last verified checkpoint.
-- **Status**: Setup completed with data integrity restored.
+- **Action**: Resume setup from last verified checkpoint based on assigned roles.
+- **Status**: Setup completed with data integrity restored and access preserved.
 
 ## Technical Implementation Links
 
 - **[Onboarding & Authentication Guide](onboarding_and_authentication_guide.md)** - Complete user authentication and onboarding flow
+- **[Database Schema Guide](database_schema_guide.md)** - tenant_users.roles for status tracking and role-based access control
+- **[API Reference](api_reference.md)** - NileDB tenant user management and role assignment endpoints

@@ -107,16 +107,16 @@ const stripeConnectStep: OnboardingStep = {
 
 ```typescript
 // API Endpoint: POST /api/stripe/connect
-export async function createStripeConnectAccount(companyId: string) {
+export async function createStripeConnectAccount(companyId: string, billingEmail?: string) {
   try {
-    // 1. Check if account already exists
+    // 1. Check if account already exists in tenant_config
     const existingAccount = await nile.db.query(
-      `SELECT stripe_account_id FROM company_stripe_accounts
-       WHERE company_id = $1 AND tenant_id = CURRENT_TENANT_ID()`,
-      [companyId]
+      `SELECT stripe_account_id FROM tenant_config
+       WHERE tenant_id = CURRENT_TENANT_ID()`,
+      []
     );
 
-    if (existingAccount.rows.length > 0) {
+    if (existingAccount.rows.length > 0 && existingAccount.rows[0].stripe_account_id) {
       return { accountId: existingAccount.rows[0].stripe_account_id };
     }
 
@@ -131,13 +131,11 @@ export async function createStripeConnectAccount(companyId: string) {
       },
     });
 
-    // 3. Store in database
+    // 3. Store in tenant_config (minimal state)
     await nile.db.query(
-      `INSERT INTO company_stripe_accounts (
-        company_id, tenant_id, stripe_account_id,
-        status, onboarding_completed, created_at
-      ) VALUES ($1, CURRENT_TENANT_ID(), $2, $3, $4, CURRENT_TIMESTAMP)`,
-      [companyId, account.id, 'pending', false]
+      `UPDATE tenant_config SET stripe_account_id = $1, updated_at = CURRENT_TIMESTAMP
+       WHERE tenant_id = CURRENT_TENANT_ID()`,
+      [account.id]
     );
 
     return { accountId: account.id };
@@ -171,43 +169,18 @@ export async function getStripeOnboardingLink(accountId: string) {
 
 ### 3. Database Schema
 
+**Minimal Schema Changes**: Add to existing `tenant_config` table
+
 ```sql
--- Company Stripe Accounts Table
-CREATE TABLE company_stripe_accounts (
-    id SERIAL PRIMARY KEY,
-    company_id INTEGER NOT NULL,
-    tenant_id UUID NOT NULL DEFAULT CURRENT_TENANT_ID(),
+-- Add to existing tenant_config table
+ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
 
-    -- Stripe Account Details
-    stripe_account_id VARCHAR(255) NOT NULL UNIQUE,
-    status VARCHAR(50) NOT NULL DEFAULT 'pending',
-    onboarding_completed BOOLEAN NOT NULL DEFAULT false,
-
-    -- Account Information
-    email VARCHAR(255),
-    country VARCHAR(2),
-    currency VARCHAR(3) DEFAULT 'USD',
-
-    -- Charges/Transfers Enabled
-    charges_enabled BOOLEAN NOT NULL DEFAULT false,
-    payouts_enabled BOOLEAN NOT NULL DEFAULT false,
-
-    -- Requirements
-    requirements JSONB,
-    future_requirements JSONB,
-
-    -- Audit Trail
-    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-    UNIQUE(company_id, tenant_id)
-);
-
--- Row Level Security
-ALTER TABLE company_stripe_accounts ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY company_stripe_accounts_tenant_isolation ON company_stripe_accounts
-    FOR ALL USING (tenant_id = CURRENT_TENANT_ID());
+-- Existing tables cover all other billing needs:
+-- - subscriptions: subscription management
+-- - payments: payment history and billing
+-- - plans: plan definitions and limits
+-- - subscription_addons: additional features
+-- - Usage calculated at runtime from campaigns, emails, companies tables
 ```
 
 ## Settings/Billing Integration
@@ -229,45 +202,23 @@ The current implementation shows plan information and links to Stripe portal/che
 
 ```typescript
 // API Endpoint: GET /api/stripe/connect/status
-export async function getStripeConnectStatus(companyId: string) {
+export async function getStripeConnectStatus() {
   try {
-    // Get stored account info
+    // Get stored account info from tenant_config
     const accountInfo = await nile.db.query(
-      `SELECT * FROM company_stripe_accounts
-       WHERE company_id = $1 AND tenant_id = CURRENT_TENANT_ID()`,
-      [companyId]
+      `SELECT stripe_account_id FROM tenant_config
+       WHERE tenant_id = CURRENT_TENANT_ID()`,
+      []
     );
 
-    if (accountInfo.rows.length === 0) {
+    if (!accountInfo.rows.length || !accountInfo.rows[0].stripe_account_id) {
       return { connected: false, status: 'not_connected' };
     }
 
-    const account = accountInfo.rows[0];
+    const stripeAccountId = accountInfo.rows[0].stripe_account_id;
 
-    // Fetch latest status from Stripe
-    const stripeAccount = await stripe.accounts.retrieve(account.stripe_account_id);
-
-    // Update local database with latest info
-    await nile.db.query(
-      `UPDATE company_stripe_accounts SET
-        status = $1,
-        onboarding_completed = $2,
-        charges_enabled = $3,
-        payouts_enabled = $4,
-        requirements = $5,
-        future_requirements = $6,
-        updated_at = CURRENT_TIMESTAMP
-       WHERE id = $7`,
-      [
-        stripeAccount.details_submitted ? 'complete' : 'pending',
-        stripeAccount.details_submitted,
-        stripeAccount.charges_enabled,
-        stripeAccount.payouts_enabled,
-        JSON.stringify(stripeAccount.requirements),
-        JSON.stringify(stripeAccount.future_requirements),
-        account.id
-      ]
-    );
+    // Fetch latest status from Stripe (no local storage of status)
+    const stripeAccount = await stripe.accounts.retrieve(stripeAccountId);
 
     return {
       connected: true,
@@ -382,58 +333,202 @@ export async function POST(request: NextRequest) {
 ```typescript
 async function handleAccountUpdated(account: Stripe.Account) {
   try {
-    // Update account status in database
-    await nile.db.query(
-      `UPDATE company_stripe_accounts SET
-        status = $1,
-        onboarding_completed = $2,
-        charges_enabled = $3,
-        payouts_enabled = $4,
-        requirements = $5,
-        future_requirements = $6,
-        updated_at = CURRENT_TIMESTAMP
-       WHERE stripe_account_id = $7`,
-      [
-        account.details_submitted ? 'complete' : 'pending',
-        account.details_submitted,
-        account.charges_enabled,
-        account.payouts_enabled,
-        JSON.stringify(account.requirements),
-        JSON.stringify(account.future_requirements),
-        account.id
-      ]
-    );
+    // Log account updates (no local status storage needed)
+    console.log(`Stripe account ${account.id} updated:`, {
+      details_submitted: account.details_submitted,
+      charges_enabled: account.charges_enabled,
+      payouts_enabled: account.payouts_enabled,
+      requirements: account.requirements
+    });
 
-    console.log(`Updated Stripe account ${account.id} status`);
+    // Status checks will fetch live data from Stripe when needed
   } catch (error) {
-    console.error('Failed to update account status:', error);
+    console.error('Failed to process account update:', error);
     throw error;
   }
 }
 
 async function handleCapabilityUpdated(capability: Stripe.Capability) {
   try {
-    const updates: Record<string, any> = {};
+    // Log capability changes (live status checked via API calls)
+    console.log(`Capability updated for account ${capability.account}:`, {
+      capability: capability.id,
+      status: capability.status
+    });
 
-    if (capability.id.includes('card_payments')) {
-      updates.charges_enabled = capability.status === 'active';
-    } else if (capability.id.includes('transfers')) {
-      updates.payouts_enabled = capability.status === 'active';
-    }
-
-    if (Object.keys(updates).length > 0) {
-      updates.updated_at = new Date();
-
-      await nile.db.query(
-        `UPDATE company_stripe_accounts SET ${Object.keys(updates).map((key, i) => `${key} = $${i + 2}`).join(', ')}, updated_at = CURRENT_TIMESTAMP
-         WHERE stripe_account_id = $1`,
-        [capability.account, ...Object.values(updates)]
-      );
-    }
+    // No local storage - status verified through live Stripe API calls
   } catch (error) {
-    console.error('Failed to update capability status:', error);
+    console.error('Failed to process capability update:', error);
     throw error;
   }
+}
+```
+
+## Trial Periods and Promotional Credits
+
+### Trial Period Implementation
+
+**Trial periods** - Use subscription status (no extra fields):
+
+```sql
+-- Extend subscription status enum to include trial
+-- Status values: 'active', 'past_due', 'canceled', 'unpaid', 'trial'
+```
+
+- **Trial plans** in `plans` table with `price_monthly = 0`
+- **Trial status** tracked via `subscriptions.status = 'trial'`
+- **Trial duration** calculated from `current_period_start/end`
+- **No additional fields needed** - reuse existing subscription period tracking
+
+### Promotional Credits Implementation
+
+**Promotional credits** - Simplified promo table:
+
+```sql
+-- Promotional codes table
+CREATE TABLE promo_codes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    code VARCHAR(50) UNIQUE NOT NULL,
+    discount_type VARCHAR(20) NOT NULL, -- 'percentage' or 'fixed_amount'
+    discount_value DECIMAL(10,2) NOT NULL, -- Percentage (0-100) or USD amount
+    max_uses INTEGER, -- NULL = unlimited
+    used_count INTEGER DEFAULT 0,
+    valid_from TIMESTAMP,
+    expires_at TIMESTAMP,
+    applicable_plans TEXT[], -- Array of plan slugs, NULL = all plans
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CHECK (discount_type IN ('percentage', 'fixed_amount')),
+    CHECK (discount_value > 0)
+);
+```
+
+**Promo application tracking**:
+- Apply promos during subscription creation/updates
+- Track usage in `promo_codes.used_count`
+- Store applied promo in `subscriptions` or `payments` if needed for history
+
+## Payment Processing Logic
+
+### 1. Payment Intent Creation with Platform Fees
+
+```typescript
+// Before Stripe payment requests:
+// Verify Stripe account exists and is capable
+export async function verifyStripeAccount() {
+  const status = await getStripeConnectStatus();
+  if (!status.connected || !status.chargesEnabled) {
+    throw new Error('Stripe account not connected or not capable of processing payments');
+  }
+  return status;
+}
+
+// Calculate platform fees for revenue sharing
+export async function calculatePlatformFees(amount: number, planType: string) {
+  // Platform fee logic based on plan and amount
+  const platformFeePercent = 0.05; // 5% platform fee
+  const platformFee = Math.round(amount * platformFeePercent);
+  return {
+    amount,
+    platformFee,
+    connectedAccountReceives: amount - platformFee
+  };
+}
+
+// Create payment intent with platform fees
+export async function createPaymentIntentWithFees(
+  amount: number,
+  planType: string,
+  customerId: string
+) {
+  // 1. Verify account capability
+  const accountStatus = await verifyStripeAccount();
+
+  // 2. Calculate fees
+  const feeCalculation = await calculatePlatformFees(amount, planType);
+
+  // 3. Get connected account ID
+  const accountInfo = await nile.db.query(
+    `SELECT stripe_account_id FROM tenant_config WHERE tenant_id = CURRENT_TENANT_ID()`,
+    []
+  );
+
+  if (!accountInfo.rows[0]?.stripe_account_id) {
+    throw new Error('No connected Stripe account found');
+  }
+
+  // 4. Create payment intent with application fee
+  const paymentIntent = await stripe.paymentIntents.create({
+    amount: feeCalculation.amount,
+    currency: 'usd',
+    customer: customerId,
+    application_fee_amount: feeCalculation.platformFee,
+    transfer_data: {
+      destination: accountInfo.rows[0].stripe_account_id,
+    },
+  });
+
+  return {
+    paymentIntent,
+    feeBreakdown: feeCalculation
+  };
+}
+```
+
+### 2. Usage Calculation Logic
+
+```typescript
+// lib/actions/billing/usage.ts
+export async function calculateCurrentUsage(companyId: string) {
+  // Current period usage against plans limits
+  const currentPeriod = await nile.db.query(`
+    SELECT
+      COUNT(c.id) as campaigns_count,
+      SUM(c.emails_sent) as total_emails_sent,
+      COUNT(DISTINCT c.target_audience_id) as audiences_used
+    FROM campaigns c
+    WHERE c.company_id = $1
+      AND c.created_at >= date_trunc('month', CURRENT_DATE)
+      AND c.tenant_id = CURRENT_TENANT_ID()
+  `, [companyId]);
+
+  return {
+    campaigns: currentPeriod.rows[0].campaigns_count,
+    emailsSent: currentPeriod.rows[0].total_emails_sent,
+    audiencesUsed: currentPeriod.rows[0].audiences_used
+  };
+}
+
+export async function calculateProjectedCosts(companyId: string, currentUsage: any) {
+  // Get current plan limits and pricing
+  const planInfo = await nile.db.query(`
+    SELECT p.* FROM plans p
+    JOIN subscriptions s ON s.plan_id = p.id
+    WHERE s.company_id = $1 AND s.status = 'active'
+    AND s.tenant_id = CURRENT_TENANT_ID()
+  `, [companyId]);
+
+  if (!planInfo.rows.length) return null;
+
+  const plan = planInfo.rows[0];
+  const projectedUsage = { ...currentUsage };
+
+  // Estimate remaining usage for month
+  const daysInMonth = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate();
+  const daysPassed = new Date().getDate();
+  const remainingDaysRatio = (daysInMonth - daysPassed) / daysInMonth;
+
+  // Calculate projected costs
+  const additionalEmails = Math.max(0, (projectedUsage.emailsSent / daysPassed * daysInMonth) - plan.emails_limit);
+  const additionalCampaigns = Math.max(0, (projectedUsage.campaigns / daysPassed * daysInMonth) - plan.campaigns_limit);
+
+  return {
+    projectedOverage: {
+      emails: additionalEmails,
+      campaigns: additionalCampaigns
+    },
+    estimatedCost: (additionalEmails * plan.overage_email_rate) + (additionalCampaigns * plan.overage_campaign_rate)
+  };
 }
 ```
 
@@ -660,17 +755,17 @@ NEXT_PUBLIC_STRIPE_CHECKOUT_URL=https://checkout.stripe.com/pay/test_...
 ## Implementation Order
 
 ### Phase 1: Basic Connect Setup
-1. Completed Database schema for Stripe accounts
-2. Completed API endpoints for account creation
-3. Completed Onboarding link generation
-4. Completed Basic webhook handling
-5. ⏳ Frontend integration in onboarding
+1. ✅ **Schema**: Add `stripe_account_id` to `tenant_config` table
+2. ⏳ **Connect API**: Account creation and onboarding links (`/api/stripe/connect`, `/api/stripe/connect/onboarding-link`)
+3. ⏳ **Status Endpoint**: Live verification function (`/api/stripe/connect/status`)
+4. ⏳ **Webhooks**: Event processing for account/capability updates (`/api/webhooks/stripe`)
+5. ⏳ **UI Integration**: Settings and onboarding components
 
 ### Phase 2: Enhanced Features
-1. ⏳ Status checking and UI updates
-2. ⏳ Error handling and retry logic
-3. ⏳ Testing and validation
-4. ⏳ Documentation and monitoring
+1. ⏳ **Payment Logic**: Platform fee calculation and payment processing
+2. ⏳ **Usage Calculation**: Runtime usage tracking from existing tables
+3. ⏳ **Error Handling**: Retry logic and user feedback
+4. ⏳ **Testing**: Integration and webhook testing
 
 ### Phase 3: Advanced Features
 1. ⏳ Multi-party payments
@@ -701,7 +796,7 @@ const link = await getStripeOnboardingLink(account.accountId);
 expect(link.url).toContain('stripe.com');
 
 // Test status checking
-const status = await getStripeConnectStatus(companyId);
+const status = await getStripeConnectStatus();
 expect(status.connected).toBe(true);
 ```
 
@@ -727,6 +822,33 @@ expect(status.connected).toBe(true);
 - Capability disablement
 - High error rates
 
+## Testing
+
+### Webhook Testing
+```bash
+# Use Stripe CLI for webhook testing
+stripe listen --forward-to localhost:3000/api/webhooks/stripe
+
+# Send test events
+stripe trigger account.updated
+stripe trigger capability.updated
+```
+
+### Integration Testing
+```typescript
+// Test account creation
+const account = await createStripeConnectAccount(companyId);
+expect(account.accountId).toBeDefined();
+
+// Test onboarding link
+const link = await getStripeOnboardingLink(account.accountId);
+expect(link.url).toContain('stripe.com');
+
+// Test status checking
+const status = await getStripeConnectStatus(companyId);
+expect(status.connected).toBe(true);
+```
+
 ## Related Documents
 
 - [Database Schema Guide](database_schema_guide.md) - Database structure and relationships
@@ -734,8 +856,101 @@ expect(status.connected).toBe(true);
 - [Security Documentation](security_documentation.md) - Authentication and security procedures
 - [Infrastructure Documentation](infrastructure_documentation.md) - System deployment and operations
 
+## Business Implications & Features
+
+### Business Benefits
+
+**Revenue Model Enhancement**:
+- **Platform Fees**: Automatic revenue sharing through Stripe Connect (configurable percentage or fixed fees)
+- **Subscription Management**: Full lifecycle management with trials, upgrades, downgrades
+- **Payment Processing**: Enterprise-grade security and compliance via Stripe
+- **Global Payments**: Support for international customers and multiple currencies
+
+**Customer Experience**:
+- **Seamless Onboarding**: Integrated billing setup in user onboarding flow
+- **Flexible Trials**: Trial plans as first-class citizens with automatic conversion
+- **Promotional System**: Percentage and fixed-amount discounts for marketing campaigns
+- **Usage Tracking**: Real-time usage monitoring against plan limits
+
+**Operational Benefits**:
+- **Automated Billing**: No manual invoice processing or payment chasing
+- **Financial Visibility**: Complete transaction history through Stripe Dashboard
+- **Risk Management**: Stripe handles fraud prevention and dispute resolution
+- **Compliance**: PCI DSS compliance and financial data security
+
+### Business Features
+
+**Subscription Management**:
+- **Trial Periods**: 14-day trials with automatic conversion to paid plans
+- **Plan Flexibility**: Monthly/yearly billing with mid-cycle upgrades
+- **Promotional Codes**: Marketing discounts and referral incentives
+- **Usage Monitoring**: Real-time alerts for approaching limits
+
+**Billing Operations**:
+- **Invoice Generation**: Automatic invoice creation and email delivery
+- **Payment Methods**: Secure tokenized storage with Stripe
+- **Failed Payment Recovery**: Automatic retry logic with grace periods
+- **Refunds & Disputes**: Complete dispute management through Stripe
+
+**Financial Reporting**:
+- **Revenue Analytics**: Real-time revenue tracking and forecasting
+- **Customer Metrics**: Churn analysis and lifetime value calculations
+- **Platform Fees**: Automated revenue sharing calculations
+- **Tax Compliance**: Automatic tax calculation and reporting
+
+## Technical Implications & Features
+
+### Technical Architecture
+
+**Database Schema (Minimal Changes)**:
+```sql
+-- Extend existing tables only
+ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
+-- Create promo_codes table for discount management
+-- Extend subscriptions.status enum to include 'trial'
+```
+
+**API Endpoints**:
+- `POST /api/stripe/connect` - Create Express account
+- `GET /api/stripe/connect/status` - Live verification endpoint
+- `GET /api/stripe/connect/onboarding-link` - Generate onboarding URL
+- `POST /api/webhooks/stripe` - Webhook handler for account updates
+
+**Integration Points**:
+- **Settings/Billing Page**: Stripe Connect status and management UI
+- **Onboarding Flow**: "Connect Stripe" step in user setup
+- **Payment Processing**: Platform fee calculation before Stripe calls
+- **Usage Tracking**: Runtime calculation against plan limits
+
+### Technical Features
+
+**Stripe Connect Integration**:
+- **Express Accounts**: Individual accounts for each tenant
+- **Onboarding Flow**: Hosted onboarding with document collection
+- **Status Verification**: Live capability checking (charges_enabled, payouts_enabled)
+- **Webhook Handling**: Real-time account and capability updates
+
+**Subscription Engine**:
+- **Trial Management**: Status-based trials using existing period fields
+- **Promo System**: Flexible percentage/fixed-amount discounts
+- **Proration Handling**: Stripe-managed proration calculations
+- **Change History**: Runtime history via payments table + Stripe API
+
+**Security & Compliance**:
+- **Webhook Verification**: Cryptographic signature validation
+- **Tenant Isolation**: RLS policies on all billing data
+- **PCI Compliance**: No local storage of payment method details
+- **Audit Logging**: Comprehensive transaction logging
+
 ## Conclusion
 
-This Stripe Connect integration provides a secure, scalable foundation for payment processing in PenguinMails. The OLTP-first architecture ensures financial data security while maintaining a smooth user experience through thoughtful onboarding and status management.
+This comprehensive Stripe Connect integration provides a complete billing and payments solution for PenguinMails. The OLTP-first architecture ensures financial data security through minimal schema changes while delivering enterprise-grade payment processing capabilities.
 
-The implementation follows Stripe's best practices for Connect applications and integrates seamlessly with the existing billing infrastructure documented in the OLTP Billing Infrastructure Implementation guide.
+The implementation follows Stripe's best practices for Connect applications and provides:
+
+- **Business Value**: Automated revenue sharing, subscription management, and global payment acceptance
+- **Technical Excellence**: Secure, scalable architecture with real-time status verification
+- **Operational Efficiency**: Automated billing workflows with minimal manual intervention
+- **Customer Experience**: Seamless onboarding with flexible trials and promotional systems
+
+The architecture leverages existing infrastructure while adding powerful financial capabilities, creating a foundation for sustainable business growth through Stripe's payment ecosystem.
