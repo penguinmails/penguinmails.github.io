@@ -1,3 +1,7 @@
+---
+last_modified_date: "2025-10-27"
+---
+
 # PenguinMails Documentation Structure: Navigation, Business, Technical, and Operations for a Designer–Product Owner Cofounder
 
 ## Executive Overview: What This Structure Enables
@@ -230,13 +234,13 @@ Consistency is essential for usability and trust. The following guidelines estab
 
 Naming conventions: Use Title Case for document titles. Prefer concise, descriptive names that reflect the content and purpose—for example, “Component Library” rather than “UI Components Index.” Avoid technical jargon in business documents; when technical terms are unavoidable, include definitions in the Product Glossary.
 
-Metadata: Every document must include a short summary, last updated date, owner, and status label (“current,” “under review,” “outdated”). Maintain a short change history with dates and owners to preserve context and accountability.
+Metadata: Every document must include YAML frontmatter with `last_modified_date` in ISO format (YYYY-MM-DD). The Just-the-Docs theme automatically displays this in the footer using the configured date format.
 
 Tone and readability: Keep language simple and direct. Use short paragraphs and define acronyms on first mention. Provide examples where they aid understanding and avoid long walls of text by using clear section headers.
 
 Visuals: Use labeled diagrams, flowcharts, and annotated screenshots with captions. Diagrams should be introduced with context and followed by analysis that explains their significance. For technical diagrams, minimize jargon and explain constraints in plain language.
 
-Versioning and change history: Minor changes update metadata and small content adjustments. Major changes introduce new sections, alter structures, or change processes. The document owner is responsible for updating status labels and ensuring downstream documents are reviewed if dependencies change.
+Versioning and change history: Minor changes update `last_modified_date` in frontmatter and small content adjustments. Major changes introduce new sections, alter structures, or change processes. The document owner is responsible for updating the frontmatter date and ensuring downstream documents are reviewed if dependencies change.
 
 Contributing: Use a standard template for new documents, with a required summary, owner, update cadence, and related documents. The contribution process includes a brief review by the owner and a link validation check.
 
@@ -247,13 +251,12 @@ Table 9. Content metadata schema
 | Field            | Required | Description                                              | Example                                         |
 |------------------|----------|----------------------------------------------------------|-------------------------------------------------|
 | Title            | Yes      | Document title in Title Case                             | Component Library                               |
-| Summary          | Yes      | 1–3 sentence overview of the document’s scope and value | Catalog of UI components with states and usage. |
+| Summary          | Yes      | 1–3 sentence overview of the document's scope and value | Catalog of UI components with states and usage. |
+| last_modified_date | Yes    | YAML frontmatter date in ISO format                     | 2025-10-27                                      |
 | Owner            | Yes      | Accountable individual or role                           | Design Lead                                     |
-| Last Updated     | Yes      | Date of most recent change                               | 2025-10-27                                      |
-| Status           | Yes      | current / under review / outdated                        | current                                         |
 | Update Cadence   | Yes      | Expected frequency of review                             | Monthly                                         |
 | Related Docs     | Yes      | Upstream and downstream cross-references                 | Design Principles; Interaction Patterns         |
-| Change History   | Yes      | Brief log of notable changes                             | 2025-10-27: Added pagination component          |
+| Change History   | Optional | Brief log of notable changes                             | 2025-10-27: Added pagination component          |
 
 ## Maintenance, Ownership, and Governance
 

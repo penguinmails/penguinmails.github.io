@@ -1,6 +1,6 @@
 # 🐧 PenguinMails Documentation Hub
 
-> **Welcome to PenguinMails** - Your Cold Email Infrastructure & Campaign Management Platform
+> **Welcome to PenguinMails!** - Your Cold Email Infrastructure & Campaign Management Platform
 
 ## Quick Start Guide
 
@@ -34,11 +34,6 @@ A unified platform that combines:
 - **Deliverability Optimization**: Warm-up algorithms, real-time monitoring, compliance automation
 - **Campaign Management**: Advanced sequencing, personalization, reply handling
 - **Multi-Tenant Control**: Scalable management for agencies and teams
-
-**Documentation Organization:**
-- **Main User Journeys**: [user_journeys.md](user_journeys.md) - All domains with table of contents navigation
-- **Legacy References**: Individual journey documents maintained for backward compatibility
-- **Technical Implementation**: [Technical Constraints Analysis](technical_constraints_analysis.md) + [Implementation Roadmap](implementation_roadmap.md)
 
 ---
 
