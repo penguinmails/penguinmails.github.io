@@ -1,3 +1,7 @@
+---
+last_modified_date: "2025-10-28"
+---
+
 # User Journeys - PenguinMails Platform
 
 > **Navigation Guide**: This overview document provides high-level user journey flows organized by domain concerns. For detailed journey specifications, refer to the individual journey documents linked below.
