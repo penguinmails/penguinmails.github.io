@@ -1,9 +1,8 @@
-# PenguinMails IP Management Guide
+---
+last_modified_date: "2025-10-27"
+---
 
-> **Status**: Completed Current  
-> **Last Updated**: October 27, 2025  
-> **Owner**: Operations Lead  
-> **Version**: 1.0
+# PenguinMails IP Management Guide
 
 ## 1. Introduction
 

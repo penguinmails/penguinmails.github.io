@@ -1,9 +1,14 @@
+---
+last_modified_date: "2025-10-28"
+---
+
 # PenguinMails User Onboarding and Authentication Flow
 
-> **Status**: Completed Current  
-> **Last Updated**: October 28, 2025  
-> **Owner**: Engineering Lead  
-> **Version**: 2.0 (Updated for NileDB + Stripe Connect + Turnstile)
+---
+last_modified_date: "2025-10-28"
+---
+
+# PenguinMails User Onboarding and Authentication Flow
 
 ## 0. Architecture Overview
 
