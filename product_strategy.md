@@ -1,12 +1,11 @@
+---
+last_modified_date: "2025-10-27"
+---
+
 # Product Strategy
 
 ## Document Summary
 This document defines PenguinMails' strategic direction, including objectives, target outcomes, constraints, and the rationale behind key product decisions. It serves as the foundation for roadmap prioritization and cross-functional alignment.
-
-**Status**: Completed Current  
-**Last Updated**: October 27, 2025  
-**Owner**: Product Owner  
-**Review Frequency**: Quarterly
 
 ---
 
