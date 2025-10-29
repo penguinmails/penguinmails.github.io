@@ -1,5 +1,8 @@
+---
+last_modified_date: "2025-10-27"
+---
+
 # Business Documentation Proposal
-*Last Updated: 2025-10-27 | Version: 1.0*
 
 ---
 
