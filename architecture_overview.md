@@ -1,12 +1,11 @@
+---
+last_modified_date: "2025-10-27"
+---
+
 # Architecture Overview
 
 ## Document Summary
 This document provides a comprehensive overview of PenguinMails' technical architecture, designed for both technical and non-technical stakeholders. It explains how the system works, why certain decisions were made, and what trade-offs were considered in building a scalable cold email infrastructure platform.
-
-**Status**: Completed Current  
-**Last Updated**: October 27, 2025  
-**Owner**: Engineering Lead  
-**Review Frequency**: Quarterly
 
 ---
 
