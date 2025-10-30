@@ -267,6 +267,19 @@ Personal data breach?
 
 ## Related Documents
 - [Security Documentation](security_documentation.md) - Security procedures and protocols
+---
+
+## Related Documents
+- [Security & Compliance Gaps Analysis](security_compliance_gaps_analysis.md) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
+- [Security Documentation](security_documentation.md) - Security procedures and protocols
+- [SOP Guidelines](sop_guidelines.md) - Standard operating procedures
+- [Data Privacy Policy](data_privacy_policy.md) - Customer-facing privacy information
+- [Incident Response Plan](incident_response_plan.md) - Detailed breach response procedures
+- [Vendor Management Policy](vendor_management_policy.md) - Third-party vendor compliance
+
+**Implementation Timeline**: Some compliance features are scheduled for 2026 based on infrastructure capacity and resource constraints.
+
+---
 - [SOP Guidelines](sop_guidelines.md) - Standard operating procedures
 - [Data Privacy Policy](data_privacy_policy.md) - Customer-facing privacy information
 - [Incident Response Plan](incident_response_plan.md) - Detailed breach response procedures

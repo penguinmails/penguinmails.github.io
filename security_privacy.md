@@ -517,6 +517,19 @@ interface RecoveryResponse {
 
 ---
 
+---
+
+## Related Documents
+- [Security Documentation](security_documentation.md) - Security procedures and protocols
+- [Security & Compliance Gaps Analysis](security_compliance_gaps_analysis.md) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
+- [Compliance Procedures](compliance_procedures.md) - Regulatory compliance workflows
+- [Infrastructure Documentation](infrastructure_documentation.md) - System architecture and deployment
+- [Incident Response Plan](incident_response_plan.md) - Detailed breach response procedures
+- [Data Privacy Policy](data_privacy_policy.md) - Customer-facing privacy information
+
+**Note**: Some privacy and security enhancements are scheduled for 2026 implementation based on infrastructure constraints and resource availability.
+
+---
 ## Related Documents
 - [Compliance Procedures](compliance_procedures.md) - Regulatory compliance workflows
 - [Infrastructure Documentation](infrastructure_documentation.md) - System architecture and deployment

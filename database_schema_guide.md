@@ -246,8 +246,10 @@ CREATE TABLE tenant_policies (
 
 ### Staff Management System
 
+#### **Current Implementation - Production Ready**
+
 ```sql
--- Staff roles with permissions (determines staff hierarchy)
+-- Staff roles with permissions (determines 4-tier staff hierarchy)
 CREATE TABLE staff_roles (
     id INTEGER PRIMARY KEY,
     name VARCHAR(50) UNIQUE,
@@ -270,6 +272,69 @@ CREATE TABLE permissions (
     description TEXT,
     category VARCHAR(50) DEFAULT 'general',
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+#### **Current Staff Hierarchy Implementation**
+
+**4-Tier Staff System** (Production Ready):
+- **super_admin** - Full system administration and tenant management
+- **admin** - High-level operational oversight and billing access
+- **support** - Customer support and tenant assistance
+- **qa** - Quality assurance and testing operations
+
+**Role Management Flow:**
+1. Users added to `staff_members` table with `role_id` reference
+2. Role permissions managed via `staff_role_permissions` junction table
+3. Granular access control through `permissions` lookup system
+
+#### **Planned Enhancements (Q4 2026 Roadmap)**
+
+```sql
+-- Staff access tracking (PLANNED FOR Q4 2026)
+CREATE TABLE staff_access_audit (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    staff_user_id UUID REFERENCES staff_members(user_id),
+    action_type VARCHAR(100) NOT NULL,
+    resource_type VARCHAR(50) NOT NULL,
+    resource_id UUID,
+    tenant_id UUID REFERENCES tenants(id),
+    ip_address INET,
+    user_agent TEXT,
+    success BOOLEAN DEFAULT TRUE,
+    details JSONB DEFAULT '{}',
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Staff permission changes audit (PLANNED FOR Q4 2026)
+CREATE TABLE staff_permission_changes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    staff_user_id UUID REFERENCES staff_members(user_id),
+    changed_by_user_id UUID REFERENCES users(id),
+    permission_id INTEGER REFERENCES permissions(id),
+    change_type VARCHAR(20) NOT NULL, -- 'grant', 'revoke', 'modify'
+    old_permissions JSONB,
+    new_permissions JSONB,
+    reason TEXT,
+    approved BOOLEAN DEFAULT FALSE,
+    approved_by UUID REFERENCES users(id),
+    approved_at TIMESTAMP WITH TIME ZONE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Temporary role elevations (PLANNED FOR Q4 2026)
+CREATE TABLE temporary_role_elevations (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    staff_user_id UUID REFERENCES staff_members(user_id),
+    elevated_by UUID REFERENCES users(id),
+    original_role_id INTEGER REFERENCES staff_roles(id),
+    elevated_role_id INTEGER REFERENCES staff_roles(id),
+    reason TEXT NOT NULL,
+    expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    status VARCHAR(20) DEFAULT 'active', -- 'active', 'expired', 'revoked'
+    auto_revoke BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    revoked_at TIMESTAMP WITH TIME ZONE
 );
 ```
 
@@ -795,7 +860,7 @@ CREATE TABLE email_replies (
 ### Aggregated Analytics
 
 ```sql
--- Daily aggregated metrics
+-- Daily aggregated metrics for admin panel
 CREATE TABLE daily_analytics (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     user_id UUID NOT NULL,
@@ -869,6 +934,127 @@ CREATE TABLE warmup_daily_stats (
     UNIQUE(mailbox_id, date)
 );
 ```
+
+#### **Support System Tables (2027 Roadmap)**
+
+```sql
+-- Comprehensive support ticket management (PLANNED FOR 2027)
+CREATE TABLE support_tickets (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ticket_number VARCHAR(20) UNIQUE NOT NULL,
+    tenant_id UUID REFERENCES tenants(id),
+    customer_email VARCHAR(255) NOT NULL,
+    customer_name TEXT,
+    subject VARCHAR(500) NOT NULL,
+    description TEXT NOT NULL,
+    category VARCHAR(100), -- 'technical', 'billing', 'feature_request', 'bug_report'
+    priority VARCHAR(20) DEFAULT 'medium', -- 'low', 'medium', 'high', 'critical'
+    status VARCHAR(30) DEFAULT 'open', -- 'open', 'in_progress', 'waiting_customer', 'resolved', 'closed'
+    assigned_to UUID REFERENCES users(id),
+    created_by UUID REFERENCES users(id),
+    first_response_at TIMESTAMP WITH TIME ZONE,
+    resolved_at TIMESTAMP WITH TIME ZONE,
+    customer_satisfaction INTEGER CHECK (customer_satisfaction BETWEEN 1 AND 5),
+    tags TEXT[] DEFAULT '{}',
+    metadata JSONB DEFAULT '{}',
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Support categories for routing (PLANNED FOR 2027)
+CREATE TABLE support_categories (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(100) NOT NULL UNIQUE,
+    description TEXT,
+    auto_assign_role VARCHAR(50), -- 'support', 'admin', 'super_admin'
+    sla_response_hours INTEGER DEFAULT 24,
+    sla_resolution_hours INTEGER DEFAULT 72,
+    is_active BOOLEAN DEFAULT TRUE,
+    sort_order INTEGER DEFAULT 0,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Support ticket communication history (PLANNED FOR 2027)
+CREATE TABLE support_ticket_messages (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ticket_id UUID REFERENCES support_tickets(id) ON DELETE CASCADE,
+    sender_type VARCHAR(20) NOT NULL, -- 'customer', 'staff', 'system'
+    sender_user_id UUID REFERENCES users(id),
+    sender_email VARCHAR(255),
+    content TEXT NOT NULL,
+    message_type VARCHAR(30) DEFAULT 'comment', -- 'comment', 'note', 'resolution', 'escalation'
+    is_internal BOOLEAN DEFAULT FALSE,
+    attachments JSONB DEFAULT '[]',
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- SLA tracking and breach alerts (PLANNED FOR 2027)
+CREATE TABLE support_sla_breaches (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ticket_id UUID REFERENCES support_tickets(id),
+    breach_type VARCHAR(50) NOT NULL, -- 'first_response', 'resolution'
+    sla_hours INTEGER NOT NULL,
+    breach_time TIMESTAMP WITH TIME ZONE NOT NULL,
+    severity VARCHAR(20) DEFAULT 'medium',
+    acknowledged BOOLEAN DEFAULT FALSE,
+    acknowledged_by UUID REFERENCES users(id),
+    acknowledged_at TIMESTAMP WITH TIME ZONE,
+    resolution_notes TEXT,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Staff assignment management (PLANNED FOR 2027)
+CREATE TABLE support_ticket_assignments (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    ticket_id UUID REFERENCES support_tickets(id),
+    assigned_to UUID REFERENCES users(id),
+    assigned_by UUID REFERENCES users(id),
+    assignment_type VARCHAR(30) DEFAULT 'manual', -- 'manual', 'auto_round_robin', 'auto_category'
+    workload_balance_score INTEGER DEFAULT 0,
+    assigned_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    unassigned_at TIMESTAMP WITH TIME ZONE,
+    is_active BOOLEAN DEFAULT TRUE
+);
+
+-- Support system analytics (PLANNED FOR 2027)
+CREATE TABLE support_analytics (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    date DATE NOT NULL,
+    total_tickets INTEGER DEFAULT 0,
+    open_tickets INTEGER DEFAULT 0,
+    resolved_tickets INTEGER DEFAULT 0,
+    first_response_avg_hours DECIMAL(8,2) DEFAULT 0,
+    resolution_avg_hours DECIMAL(8,2) DEFAULT 0,
+    customer_satisfaction_avg DECIMAL(3,2) DEFAULT 0,
+    sla_breach_count INTEGER DEFAULT 0,
+    category_breakdown JSONB DEFAULT '{}',
+    staff_performance JSONB DEFAULT '{}',
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    UNIQUE(date)
+);
+```
+
+**Support System Implementation Notes:**
+
+1. **Current Email-Based Support** (Production):
+   - Floating button on landing page → direct email to support team
+   - Help center integration via `DashboardHeader.tsx` dropdown
+   - Manual triage through support email workflow
+
+2. **Planned Ticket System Features** (2027):
+   - **Automated Routing**: Category-based ticket assignment to staff roles
+   - **SLA Management**: Response and resolution time tracking
+   - **Multi-channel Support**: Email, chat, phone integration via ticket system
+   - **Analytics Dashboard**: Support metrics and performance tracking
+   - **Knowledge Base Integration**: Auto-suggest articles for common issues
+
+3. **Integration Points**:
+   - Help center links remain available during transition
+   - Email support continues for simple inquiries
+   - Gradual migration to ticket-based workflow
+   - Backward compatibility maintained throughout transition
 
 ---
 
