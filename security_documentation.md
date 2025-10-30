@@ -174,6 +174,36 @@ app.get('/api/tenant/:tenantId/users',
 );
 ```
 
+## Row Level Security (RLS) Policies
+
+### Complete RLS Policy Matrix
+*For comprehensive RLS policy documentation and implementation details, see [Security & Compliance Gaps Analysis](security_compliance_gaps_analysis.md)*
+
+**Current Implementation:**
+- **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
+- **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets  
+- **Q85**: Cross-tenant access policies for staff need documentation (immediate action required)
+- **Q86**: RLS testing procedures planned as part of feature implementation
+
+### Staff Emergency Access Protocols
+
+#### Current Bypass Methods
+1. **Super Admin/Admin Privileges**
+   - Users with super_admin or admin roles can access tenant data
+   - All actions are logged for audit purposes
+   - No additional approval required beyond role assignment
+
+2. **Internal Dev Ticket Process**
+   - Staff can create internal tickets for temporary access
+   - Dev team creates time-limited access for specific tasks
+   - Full audit trail maintained for all temporary access
+
+#### Documentation Requirements (Q4 2025)
+- [ ] Formalize staff bypass procedures
+- [ ] Document cross-tenant access validation framework  
+- [ ] Create RLS testing procedures as part of feature rollout
+
+---
 ---
 
 ## Data Security
@@ -527,6 +557,18 @@ const securityLogger = {
   
   // Track suspicious activities
   trackSuspiciousActivity: async (req, activity) => {
+#### Enhanced Audit Logging (Q4 2025)
+*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Security & Compliance Gaps Analysis](security_compliance_gaps_analysis.md)*
+
+**Current Enhancements Planned:**
+- Multi-legislation compliance fields (GDPR, CCPA, PIPEDA, CASL)
+- Legal basis tracking for GDPR compliance
+- Cross-border transfer monitoring
+- Enhanced retention management
+
+**Note**: Some audit logging enhancements are scheduled for 2026 due to database storage constraints.
+
+---
     const suspicious = {
       ip: req.ip,
       userAgent: req.get('User-Agent'),
