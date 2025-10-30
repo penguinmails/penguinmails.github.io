@@ -15,4 +15,7 @@ enable_copy_code_button: true
 last_edit_timestamp: true
 last_edit_time_format: "%b %e %Y"
 gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: https://github.com/penguinmails/penguinmails.github.io
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
