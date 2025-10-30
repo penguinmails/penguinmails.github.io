@@ -80,6 +80,21 @@ Without proper IP management, even the best cold email copy and targeting will f
 
 ## 2. IP Types in PenguinMails
 
+### **2.1 Business Context for IP Management**
+
+#### Subscription-Based Infrastructure Model
+PenguinMails operates on a subscription-based model where infrastructure costs must align with customer plans while maintaining profitability and service quality. This creates unique challenges for IP management:
+
+- **Plan-Based Resource Allocation**: Different subscription tiers require different VPS specs and IP allocations
+- **Cost Control**: Must prevent infrastructure costs from exceeding subscription revenue
+- **Multi-Tenant Sharing**: Tenants share VPS instances but need isolated email reputation
+- **Scalability**: Support growing customer base without proportional cost increases
+
+#### IP Allocation Strategy
+- **Dedicated IPs**: Included in subscription plans, additional IPs available for purchase at $8/month
+- **Shared IPs**: Free for all plans, managed collectively with strict abuse prevention
+- **Resource Mapping**: Each subscription plan maps to specific infrastructure allocations
+
 ### **2.1 Dedicated IPs**
 
 ### **Definition**
@@ -106,14 +121,19 @@ This setup gives the user full control over the IP's reputation and is preferred
 
 ### **Included IP Count by Plan**
 
-Each plan includes a fixed number of dedicated IPs:
+Each plan includes a fixed number of dedicated IPs with corresponding VPS resource allocations:
 
-| Plan | Included Dedicated IPs |
-| --- | --- |
-| **Plan 1** | 1 IP |
-| **Plan 2** | 2 IPs |
-| **Plan 3** | 3 IPs |
-| **Plan 5** | 5 IPs |
+| Plan | Included Dedicated IPs | VPS Resources | Target Use Case |
+| --- | --- | --- | --- |
+| **Plan 1** | 1 IP | 2 vCPUs, 4GB RAM | Small agencies, individual consultants |
+| **Plan 2** | 2 IPs | 4 vCPUs, 8GB RAM | Growing agencies, small teams |
+| **Plan 3** | 3 IPs | 8 vCPUs, 16GB RAM | Medium agencies, multiple clients |
+| **Plan 5** | 5 IPs | 12 vCPUs, 32GB RAM | Large agencies, enterprise clients |
+
+**Resource Allocation Rules:**
+- Infrastructure costs must remain below 30% of subscription revenue
+- VPS resources scale with IP count and sending volume requirements
+- Automatic resource optimization based on actual usage patterns
 
 ---
 
@@ -618,10 +638,23 @@ The following measures are in place to detect, limit, and stop harmful sending a
 
 ## 7. Replacement & Migration Policy
 
-### 7.1 For Shared IPs
+### 7.1 Infrastructure Event Tracking
 
-> (We'll get perfect slowly and know how it goes after launch)
-> 
+#### Automated IP Lifecycle Management
+PenguinMails implements comprehensive infrastructure event tracking to manage IP lifecycle automatically:
+
+- **IP Purchase Tracking**: Full workflow from request to confirmation (target: <24 hours)
+- **Reputation Monitoring**: Real-time tracking with automated alerts and responses
+- **Migration Logging**: Complete audit trail of IP assignments, migrations, and decommissions
+- **Cost Integration**: Billing integration for infrastructure costs with pro-rated calculations
+
+#### Security Incident Response Procedures
+- **VPS Compromise Response**: Immediate isolation, forensic analysis, and infrastructure rebuild
+- **IP Reputation Crisis Recovery**: Emergency migration with reputation rebuilding protocols
+- **Customer Communication**: Transparent communication of infrastructure changes and impacts
+- **Grace Period Management**: Temporary service continuation during infrastructure transitions
+
+### 7.2 For Shared IPs
 
 ### **When an IP Is Flagged**
 
