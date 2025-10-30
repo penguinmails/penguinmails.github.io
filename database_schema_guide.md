@@ -479,6 +479,84 @@ vps_instances {
 }
 ```
 
+### Infrastructure Event Tracking Tables
+
+#### infrastructure_events
+```sql
+infrastructure_events {
+    uuid id PK ""
+    varchar(50) event_type  "ip_purchase, vps_provision, migration, compromise, reputation_change"
+    varchar(50) severity  "low, medium, high, critical"
+    jsonb event_data  "Detailed event information"
+    varchar(50) status  "detected, investigating, resolved, failed"
+    uuid related_ip_id FK "smtp_ip_addresses.id if IP-related"
+    uuid related_vps_id FK "vps_instances.id if VPS-related"
+    uuid related_domain_id FK "domains.id if domain-related"
+    timestamp detected_at  ""
+    timestamp resolved_at  ""
+    varchar(500) resolution_notes  ""
+    timestamp created_at  ""
+    timestamp updated_at  ""
+}
+```
+
+#### security_incidents
+```sql
+security_incidents {
+    uuid id PK ""
+    varchar(50) incident_type  "vps_compromise, ip_blacklist, reputation_crisis, abuse_detection"
+    varchar(50) severity  "low, medium, high, critical"
+    varchar(50) status  "active, investigating, contained, resolved, closed"
+    jsonb incident_details  "Technical details and findings"
+    jsonb impact_assessment  "Affected users, infrastructure, reputation"
+    uuid primary_ip_id FK "smtp_ip_addresses.id"
+    uuid primary_vps_id FK "vps_instances.id"
+    timestamp detected_at  ""
+    timestamp contained_at  ""
+    timestamp resolved_at  ""
+    varchar(1000) response_actions  "Steps taken to resolve"
+    varchar(500) lessons_learned  ""
+    timestamp created_at  ""
+    timestamp updated_at  ""
+}
+```
+
+#### cost_tracking
+```sql
+cost_tracking {
+    uuid id PK ""
+    varchar(50) cost_type  "vps_base, ip_secondary, bandwidth, monitoring"
+    decimal amount  "Cost amount"
+    varchar(3) currency  "USD"
+    varchar(50) billing_period  "monthly, daily, hourly"
+    uuid related_vps_id FK "vps_instances.id if VPS-related"
+    uuid related_ip_id FK "smtp_ip_addresses.id if IP-related"
+    uuid related_subscription_id FK "subscriptions.id if subscription-related"
+    timestamp incurred_at  ""
+    timestamp billed_at  ""
+    varchar(50) status  "pending, billed, disputed, refunded"
+    timestamp created_at  ""
+    timestamp updated_at  ""
+}
+```
+
+#### resource_allocations
+```sql
+resource_allocations {
+    uuid id PK ""
+    uuid subscription_id FK ""
+    varchar(50) resource_type  "vps_cpu, vps_ram, dedicated_ips, shared_ip_slots"
+    varchar(50) allocation_type  "included, extra, bonus"
+    decimal allocated_amount  "Amount allocated (IPs, GB RAM, vCPUs)"
+    decimal cost_basis  "Cost per unit for billing"
+    timestamp effective_from  ""
+    timestamp effective_until  ""
+    varchar(50) status  "active, expired, suspended"
+    timestamp created_at  ""
+    timestamp updated_at  ""
+}
+```
+
 ## Template Organization Tables
 
 ### folder & templates_folder
