@@ -62,7 +62,7 @@ interface InfrastructureConstraints {
     maxCPUCores: number;           // 16 CPU cores maximum
     maxMemory: number;             // 64GB RAM maximum
     storageType: 'SSD';            // SSD storage only
-    maxStorage: number;            // 2TB maximum storage
+    maxStorage: number;             // 2TB maximum storage
     networkBandwidth: string;      // 1Gbps network bandwidth
   };
 
@@ -74,10 +74,11 @@ interface InfrastructureConstraints {
   };
 
   networking: {
-    ipv4Addresses: number;         // Limited IPv4 addresses
+    ipv4Addresses: 'limited_pool'; // No traditional IP pools - secondary IPs only
     ipv6Support: boolean;          // IPv6 support available
     firewallRules: 'extensive';    // Flexible firewall configuration
     ddosProtection: 'basic';       // Basic DDoS protection included
+    ipAllocation: 'vps_dependent'; // IPs tied to specific VPS instances
   };
 
   monitoring: {
@@ -85,6 +86,13 @@ interface InfrastructureConstraints {
     advancedMetrics: boolean;      // Limited advanced metrics
     alertingCapabilities: 'basic'; // Basic alerting only
     logRetention: number;          // 30 days log retention
+  };
+
+  mailuIntegration: {
+    multiIPSupport: boolean;       // Container orchestration for multiple IPs
+    smtpLoadBalancing: boolean;    // Round-robin across secondary IPs
+    reputationIsolation: boolean;  // Per-IP reputation tracking required
+    costOptimization: 'shared_vps'; // Multiple IPs per VPS for efficiency
   };
 }
 ```
