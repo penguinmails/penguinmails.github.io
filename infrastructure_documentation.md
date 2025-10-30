@@ -532,9 +532,9 @@ const db = new NileDB({
 
 ### 4. Queue System (Redis)
 
-#### Queue Configuration
+#### Queue Configuration (Hybrid PostgreSQL + Redis)
 ```javascript
-// Redis Queue Setup
+// Redis Queue Setup (Fast Processing Layer)
 const queue = new Queue('emailQueue', {
   redis: {
     host: 'redis.penguinmails.com',
@@ -551,13 +551,172 @@ const queue = new Queue('emailQueue', {
     }
   }
 });
+
+// PostgreSQL Job Management (Durable State)
+const jobManager = new JobManager({
+  database: {
+    host: 'postgres.penguinmails.com',
+    port: 5432,
+    database: 'penguinmails',
+    user: 'job_user',
+    password: process.env.DB_PASSWORD
+  }
+});
 ```
 
-#### Queue Processing
-- **Priority Levels**: High, normal, low priority queues
-- **Retry Logic**: Automatic retry with exponential backoff
-- **Monitoring**: Queue depth and processing time metrics
-- **Worker Scaling**: Horizontal worker scaling based on load
+#### Hybrid Queue Architecture
+
+**A. Producer Pattern (Next.js API):**
+```javascript
+// API creates job in PostgreSQL
+const job = await db.jobs.create({
+  data: {
+    queue_name: 'email-sending',
+    payload: { campaign_id, lead_id, email_data },
+    priority: 100,
+    run_at: new Date()
+  }
+});
+
+// Optional: Immediate push to Redis for urgent jobs
+if (job.priority < 50) {
+  await redis.lpush('queue:email-sending:high', JSON.stringify({
+    id: job.id,
+    payload: job.payload,
+    priority: job.priority
+  }));
+}
+```
+
+**B. Queuer Process (Migration Service):**
+```javascript
+// Separate service that migrates PostgreSQL jobs to Redis
+class JobMigrator {
+  async migrateReadyJobs() {
+    const jobs = await db.jobs.findMany({
+      where: {
+        status: 'queued',
+        run_at: { lte: new Date() }
+      },
+      orderBy: [
+        { priority: 'asc' },
+        { created_at: 'asc' }
+      ],
+      take: 100 // Batch process
+    });
+
+    for (const job of jobs) {
+      const queueName = this.getQueueName(job);
+      const redisPayload = {
+        id: job.id,
+        queue_name: job.queue_name,
+        priority: job.priority,
+        payload: job.payload
+      };
+      
+      // Push to Redis with priority routing
+      await redis.lpush(queueName, JSON.stringify(redisPayload));
+      
+      // Update PostgreSQL status
+      await db.jobs.update({
+        where: { id: job.id },
+        data: { status: 'migrated_to_redis' }
+      });
+    }
+  }
+  
+  getQueueName(job) {
+    if (job.priority <= 50) return 'queue:email-sending:high';
+    if (job.priority <= 150) return 'queue:email-sending';
+    return 'queue:email-sending:low';
+  }
+}
+```
+
+**C. Consumer Pattern (Worker Servers):**
+```javascript
+// Worker server listens only to Redis
+class Worker {
+  constructor() {
+    this.redis = new Redis(process.env.REDIS_URL);
+  }
+  
+  async start() {
+    // Listen to all priority queues
+    const queues = [
+      'queue:email-sending:high',
+      'queue:email-sending',
+      'queue:email-sending:low'
+    ];
+    
+    while (true) {
+      try {
+        // Blocking pop with priority ordering
+        const result = await this.redis.brpop(queues, 0);
+        const [queueName, jobData] = result;
+        
+        await this.processJob(JSON.parse(jobData), queueName);
+      } catch (error) {
+        console.error('Worker error:', error);
+        await this.delay(1000);
+      }
+    }
+  }
+  
+  async processJob(jobData, queueName) {
+    const { id, payload, priority } = jobData;
+    
+    try {
+      // Update PostgreSQL status
+      await db.jobs.update({
+        where: { id },
+        data: {
+          status: 'running',
+          started_at: new Date(),
+          updated_at: new Date()
+        }
+      });
+      
+      // Update Redis hash for real-time tracking
+      await this.redis.hset(`job:${id}`, {
+        status: 'processing',
+        worker_id: process.env.WORKER_ID,
+        started_at: new Date().toISOString()
+      });
+      
+      // Execute the job
+      await this.executeEmailJob(payload);
+      
+      // Update completion status
+      await db.jobs.update({
+        where: { id },
+        data: {
+          status: 'completed',
+          completed_at: new Date(),
+          updated_at: new Date()
+        }
+      });
+      
+      await this.redis.hset(`job:${id}`, {
+        status: 'completed',
+        completed_at: new Date().toISOString()
+      });
+      
+    } catch (error) {
+      // Handle failure
+      await this.handleJobFailure(id, error);
+    }
+  }
+}
+```
+
+#### Queue Processing Benefits
+- **Performance**: Redis provides microsecond job retrieval vs millisecond PostgreSQL queries
+- **Reliability**: PostgreSQL ensures no job loss if workers or Redis crash
+- **Scalability**: Multiple worker servers can consume from same Redis queues
+- **Monitoring**: Redis provides real-time queue depth metrics
+- **Priority Queues**: Separate Redis lists for high/normal/low priority jobs
+- **Retry Logic**: Automatic retry with exponential backoff via Redis delayed jobs
 
 ---
 

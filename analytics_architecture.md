@@ -16,11 +16,13 @@ last_modified_date: "2025-10-27"
 This document outlines the updated analytics architecture for PenguinMails, reflecting our decision to use **Postgres + PostHog** instead of the originally proposed Convex OLAP approach. This hybrid architecture provides the perfect balance of cost-effectiveness, developer experience, and real-time analytics capabilities.
 
 ### Updated Architecture Summary
-- **Primary Database**: Postgres (NileDB for OLTP, PostHog for real-time analytics)
+- **Primary Database**: Postgres (NileDB for OLTP, OLAP for historical analytics)
+- **Queue System**: Hybrid Redis + PostgreSQL for job processing and state management
 - **Local Development**: Docker containers with Drizzle ORM
 - **Production**: Managed Postgres with PostHog integration
 - **Real-time Events**: PostHog for live analytics and behavioral tracking
-- **Historical Data**: Postgres tables for permanent data storage
+- **Historical Data**: Enhanced OLAP schema for comprehensive business intelligence
+- **Queue-Driven Analytics**: Redis-orchestrated analytics pipeline for reliable data flow
 
 ---
 
@@ -296,6 +298,248 @@ CREATE INDEX idx_daily_analytics_campaign ON daily_analytics(campaign_id);
 
 CREATE INDEX idx_warmup_interactions_mailbox ON warmup_interactions(mailbox_id);
 CREATE INDEX idx_warmup_interactions_date ON warmup_interactions(interaction_at::DATE);
+```
+
+### Enhanced OLAP Analytics Schema
+
+#### Business Intelligence Tables
+
+```sql
+-- Billing Analytics - Usage tracking per billing period
+CREATE TABLE billing_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+tenant_id TEXT NOT NULL,
+subscription_id TEXT,
+emails_sent INTEGER DEFAULT 0,
+mailboxes_used INTEGER DEFAULT 0,
+domains_used INTEGER DEFAULT 0,
+campaigns_used INTEGER DEFAULT 0,
+leads_used INTEGER DEFAULT 0,
+warmups_active INTEGER DEFAULT 0,
+period_start TIMESTAMP WITH TIME ZONE NOT NULL,
+period_end TIMESTAMP WITH TIME ZONE NOT NULL,
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Campaign Analytics - Campaign performance metrics
+CREATE TABLE campaign_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+campaign_id TEXT NOT NULL,
+company_id TEXT NOT NULL,
+sent INTEGER DEFAULT 0,                    -- Sum of all steps
+delivered INTEGER DEFAULT 0,               -- Sum of all steps
+opened_tracked INTEGER DEFAULT 0,          -- Sum of all steps
+clicked_tracked INTEGER DEFAULT 0,         -- Sum of all steps
+replied INTEGER DEFAULT 0,                 -- Sum of all steps
+bounced INTEGER DEFAULT 0,                 -- Sum of all steps
+unsubscribed INTEGER DEFAULT 0,            -- Sum of all steps
+spam_complaints INTEGER DEFAULT 0,         -- Sum of all steps
+status TEXT,
+completed_leads INTEGER DEFAULT 0,
+billing_id BIGINT REFERENCES billing_analytics(id),
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Mailbox Analytics - Individual mailbox performance
+CREATE TABLE mailbox_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+mailbox_id TEXT NOT NULL,
+company_id TEXT NOT NULL,
+sent INTEGER DEFAULT 0,
+delivered INTEGER DEFAULT 0,
+opened_tracked INTEGER DEFAULT 0,
+clicked_tracked INTEGER DEFAULT 0,
+replied INTEGER DEFAULT 0,
+bounced INTEGER DEFAULT 0,
+unsubscribed INTEGER DEFAULT 0,
+spam_complaints INTEGER DEFAULT 0,
+warmup_status TEXT,
+health_score INTEGER DEFAULT 0,
+current_volume INTEGER DEFAULT 0,
+billing_id BIGINT REFERENCES billing_analytics(id),
+campaign_status TEXT,
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Lead Analytics - Individual lead engagement
+CREATE TABLE lead_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+lead_id TEXT NOT NULL,
+campaign_id TEXT NOT NULL,
+sent INTEGER DEFAULT 0,                    -- Per campaign
+delivered INTEGER DEFAULT 0,
+opened_tracked INTEGER DEFAULT 0,
+clicked_tracked INTEGER DEFAULT 0,
+replied INTEGER DEFAULT 0,
+bounced INTEGER DEFAULT 0,
+unsubscribed INTEGER DEFAULT 0,
+spam_complaints INTEGER DEFAULT 0,
+status TEXT,
+billing_id BIGINT REFERENCES billing_analytics(id),
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Warmup Analytics - Email warmup progression
+CREATE TABLE warmup_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+mailbox_id TEXT NOT NULL,
+company_id TEXT NOT NULL,
+sent INTEGER DEFAULT 0,
+delivered INTEGER DEFAULT 0,
+opened_tracked INTEGER DEFAULT 0,
+clicked_tracked INTEGER DEFAULT 0,
+replied INTEGER DEFAULT 0,
+bounced INTEGER DEFAULT 0,
+unsubscribed INTEGER DEFAULT 0,
+spam_complaints INTEGER DEFAULT 0,
+health_score INTEGER DEFAULT 0,
+progress_percentage INTEGER DEFAULT 0,
+billing_id BIGINT REFERENCES billing_analytics(id),
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Sequence Step Analytics - Campaign step performance
+CREATE TABLE sequence_step_analytics (
+id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+step_id TEXT NOT NULL,
+campaign_id TEXT NOT NULL,
+company_id TEXT NOT NULL,
+sent INTEGER DEFAULT 0,
+delivered INTEGER DEFAULT 0,
+opened_tracked INTEGER DEFAULT 0,
+clicked_tracked INTEGER DEFAULT 0,
+replied INTEGER DEFAULT 0,
+bounced INTEGER DEFAULT 0,
+unsubscribed INTEGER DEFAULT 0,
+spam_complaints INTEGER DEFAULT 0,
+billing_id BIGINT REFERENCES billing_analytics(id),
+updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+#### Queue-Driven Analytics Pipeline
+
+```typescript
+// Analytics Data Pipeline with Redis Orchestration
+export class AnalyticsPipeline {
+private redis: Redis;
+private db: Database;
+
+constructor(redis: Redis, db: Database) {
+this.redis = redis;
+this.db = db;
+}
+
+async enqueueAnalyticsJob(type: 'daily_aggregate' | 'campaign_aggregate' | 'billing_calculate', data: any) {
+const job = {
+  type,
+  data,
+  timestamp: new Date().toISOString(),
+  priority: this.getJobPriority(type)
+};
+
+// Add to Redis queue for processing
+await this.redis.lpush(`queue:analytics:${type}`, JSON.stringify(job));
+
+// Update PostgreSQL job status
+await this.db.analytics_jobs.create({
+  data: {
+    job_type: type,
+    status: 'queued',
+    payload: data,
+    priority: job.priority,
+    queued_at: new Date()
+  }
+});
+}
+
+private getJobPriority(type: string): number {
+const priorities = {
+  'daily_aggregate': 50,      // High priority
+  'campaign_aggregate': 75,   // Medium priority
+  'billing_calculate': 100    // Low priority
+};
+return priorities[type] || 100;
+}
+
+async processAnalyticsJob(job: any) {
+const { type, data } = job;
+
+try {
+  switch (type) {
+    case 'daily_aggregate':
+      await this.processDailyAggregate(data);
+      break;
+    case 'campaign_aggregate':
+      await this.processCampaignAggregate(data);
+      break;
+    case 'billing_calculate':
+      await this.processBillingCalculate(data);
+      break;
+  }
+
+  // Update job status in PostgreSQL
+  await this.db.analytics_jobs.update({
+    where: { id: data.job_id },
+    data: {
+      status: 'completed',
+      processed_at: new Date()
+    }
+  });
+
+} catch (error) {
+  // Handle failure
+  await this.db.analytics_jobs.update({
+    where: { id: data.job_id },
+    data: {
+      status: 'failed',
+      error_message: error.message,
+      processed_at: new Date()
+    }
+  });
+  
+  throw error;
+}
+}
+
+private async processDailyAggregate(data: any) {
+// Aggregate metrics from raw email logs to OLAP tables
+const { date, tenant_id } = data;
+
+await this.db.transaction(async (tx) => {
+  // Get raw email data for the date
+  const emailMetrics = await tx.execute(sql`
+    SELECT
+      campaign_id,
+      mailbox_id,
+      COUNT(*) as sent,
+      COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
+      COUNT(CASE WHEN opened_at IS NOT NULL THEN 1 END) as opened_tracked,
+      COUNT(CASE WHEN clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
+      COUNT(CASE WHEN replied_at IS NOT NULL THEN 1 END) as replied,
+      COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced
+    FROM emails
+    WHERE DATE(sent_at) = ${date} AND tenant_id = ${tenant_id}
+    GROUP BY campaign_id, mailbox_id
+  `);
+
+  // Insert into campaign_analytics
+  for (const metric of emailMetrics) {
+    await tx.insert(campaignAnalytics).values({
+      campaign_id: metric.campaign_id,
+      company_id: metric.company_id,
+      sent: metric.sent,
+      delivered: metric.delivered,
+      opened_tracked: metric.opened_tracked,
+      clicked_tracked: metric.clicked_tracked,
+      replied: metric.replied,
+      bounced: metric.bounced,
+      updated_at: new Date()
+    });
+  }
+});
+}
+}
 ```
 
 ---

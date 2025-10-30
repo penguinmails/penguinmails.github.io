@@ -101,7 +101,7 @@ This roadmap outlines the strategic priorities, feature development timeline, an
 
 #### Phase 1B: Basic Email Infrastructure (Weeks 3-4)
 - [ ] MailU SMTP API integration and authentication
-- [ ] Job queue system (Redis + Postgres tables hybrid)
+- [MAIL-1A] API: Develop Campaign Scheduler to Enqueue Jobs into Redis
 - [ ] Basic email sending with rate limiting
 - [ ] IP warmup foundation and reputation monitoring
 

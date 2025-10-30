@@ -235,8 +235,9 @@ const scaleDeliverables = {
   ],
 
   analytics: [
-    'Comprehensive campaign analytics',
-    'User behavior tracking',
+    'OLAP analytics schema implementation',
+    'Queue-driven analytics pipeline',
+    'Business intelligence dashboards',
     'Revenue and ROI reporting',
     'Predictive analytics'
   ],

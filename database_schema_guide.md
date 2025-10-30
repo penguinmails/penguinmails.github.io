@@ -872,12 +872,298 @@ CREATE TABLE warmup_daily_stats (
 
 ---
 
-## Job Queue System
+## OLAP Analytics Schema (Business Intelligence)
 
-### Queue Management
+### Enhanced Analytics Architecture
+
+The OLAP schema provides comprehensive business intelligence capabilities for analytics, reporting, and billing. These tables are optimized for aggregations and historical analysis.
 
 ```sql
--- Job queues configuration
+-- Billing Analytics - Usage tracking per billing period
+CREATE TABLE billing_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    tenant_id TEXT NOT NULL,
+    subscription_id TEXT,
+    emails_sent INTEGER DEFAULT 0,
+    mailboxes_used INTEGER DEFAULT 0,
+    domains_used INTEGER DEFAULT 0,
+    campaigns_used INTEGER DEFAULT 0,
+    leads_used INTEGER DEFAULT 0,
+    warmups_active INTEGER DEFAULT 0,
+    period_start TIMESTAMP WITH TIME ZONE NOT NULL,
+    period_end TIMESTAMP WITH TIME ZONE NOT NULL,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Campaign Analytics - Campaign performance metrics
+CREATE TABLE campaign_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    campaign_id TEXT NOT NULL,
+    company_id TEXT NOT NULL,
+    sent INTEGER DEFAULT 0,                    -- Sum of all steps
+    delivered INTEGER DEFAULT 0,               -- Sum of all steps
+    opened_tracked INTEGER DEFAULT 0,          -- Sum of all steps
+    clicked_tracked INTEGER DEFAULT 0,         -- Sum of all steps
+    replied INTEGER DEFAULT 0,                 -- Sum of all steps
+    bounced INTEGER DEFAULT 0,                 -- Sum of all steps
+    unsubscribed INTEGER DEFAULT 0,            -- Sum of all steps
+    spam_complaints INTEGER DEFAULT 0,         -- Sum of all steps
+    status TEXT,
+    completed_leads INTEGER DEFAULT 0,
+    billing_id BIGINT REFERENCES billing_analytics(id),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Mailbox Analytics - Individual mailbox performance
+CREATE TABLE mailbox_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    mailbox_id TEXT NOT NULL,
+    company_id TEXT NOT NULL,
+    sent INTEGER DEFAULT 0,
+    delivered INTEGER DEFAULT 0,
+    opened_tracked INTEGER DEFAULT 0,
+    clicked_tracked INTEGER DEFAULT 0,
+    replied INTEGER DEFAULT 0,
+    bounced INTEGER DEFAULT 0,
+    unsubscribed INTEGER DEFAULT 0,
+    spam_complaints INTEGER DEFAULT 0,
+    warmup_status TEXT,
+    health_score INTEGER DEFAULT 0,
+    current_volume INTEGER DEFAULT 0,
+    billing_id BIGINT REFERENCES billing_analytics(id),
+    campaign_status TEXT,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Lead Analytics - Individual lead engagement
+CREATE TABLE lead_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    lead_id TEXT NOT NULL,
+    campaign_id TEXT NOT NULL,
+    sent INTEGER DEFAULT 0,                    -- Per campaign
+    delivered INTEGER DEFAULT 0,
+    opened_tracked INTEGER DEFAULT 0,
+    clicked_tracked INTEGER DEFAULT 0,
+    replied INTEGER DEFAULT 0,
+    bounced INTEGER DEFAULT 0,
+    unsubscribed INTEGER DEFAULT 0,
+    spam_complaints INTEGER DEFAULT 0,
+    status TEXT,
+    billing_id BIGINT REFERENCES billing_analytics(id),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Warmup Analytics - Email warmup progression
+CREATE TABLE warmup_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    mailbox_id TEXT NOT NULL,
+    company_id TEXT NOT NULL,
+    sent INTEGER DEFAULT 0,
+    delivered INTEGER DEFAULT 0,
+    opened_tracked INTEGER DEFAULT 0,
+    clicked_tracked INTEGER DEFAULT 0,
+    replied INTEGER DEFAULT 0,
+    bounced INTEGER DEFAULT 0,
+    unsubscribed INTEGER DEFAULT 0,
+    spam_complaints INTEGER DEFAULT 0,
+    health_score INTEGER DEFAULT 0,
+    progress_percentage INTEGER DEFAULT 0,
+    billing_id BIGINT REFERENCES billing_analytics(id),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Sequence Step Analytics - Campaign step performance
+CREATE TABLE sequence_step_analytics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    step_id TEXT NOT NULL,
+    campaign_id TEXT NOT NULL,
+    company_id TEXT NOT NULL,
+    sent INTEGER DEFAULT 0,
+    delivered INTEGER DEFAULT 0,
+    opened_tracked INTEGER DEFAULT 0,
+    clicked_tracked INTEGER DEFAULT 0,
+    replied INTEGER DEFAULT 0,
+    bounced INTEGER DEFAULT 0,
+    unsubscribed INTEGER DEFAULT 0,
+    spam_complaints INTEGER DEFAULT 0,
+    billing_id BIGINT REFERENCES billing_analytics(id),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Admin Audit Log - System administration tracking
+CREATE TABLE admin_audit_log (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    admin_user_id TEXT NOT NULL,
+    action TEXT NOT NULL,
+    resource_type TEXT NOT NULL,
+    resource_id TEXT NOT NULL,
+    tenant_id TEXT NOT NULL,
+    old_values JSONB,
+    new_values JSONB,
+    ip_address TEXT,
+    user_agent TEXT,
+    timestamp BIGINT,
+    notes TEXT,
+    metadata JSONB
+);
+
+-- Admin Sessions - Admin user session management
+CREATE TABLE admin_sessions (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    admin_user_id TEXT NOT NULL,
+    session_token TEXT NOT NULL,
+    ip_address TEXT,
+    user_agent TEXT,
+    started_at BIGINT,
+    last_activity BIGINT,
+    expires_at BIGINT,
+    is_active BOOLEAN DEFAULT TRUE,
+    device_info TEXT
+);
+
+-- Admin System Events - System-wide events and notifications
+CREATE TABLE admin_system_events (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    event_type TEXT NOT NULL,
+    severity TEXT NOT NULL,
+    message TEXT NOT NULL,
+    details JSONB,
+    admin_user_id TEXT,
+    tenant_id TEXT,
+    timestamp BIGINT,
+    resolved_at TIMESTAMP WITH TIME ZONE,
+    resolution TEXT
+);
+```
+
+### Analytics Indexes
+
+```sql
+-- Billing analytics indexes
+CREATE INDEX idx_billing_analytics_tenant_period ON billing_analytics(tenant_id, period_start, period_end);
+CREATE INDEX idx_billing_analytics_subscription ON billing_analytics(subscription_id);
+
+-- Campaign analytics indexes
+CREATE INDEX idx_campaign_analytics_campaign ON campaign_analytics(campaign_id);
+CREATE INDEX idx_campaign_analytics_company ON campaign_analytics(company_id);
+CREATE INDEX idx_campaign_analytics_status ON campaign_analytics(status);
+
+-- Mailbox analytics indexes
+CREATE INDEX idx_mailbox_analytics_mailbox ON mailbox_analytics(mailbox_id);
+CREATE INDEX idx_mailbox_analytics_company ON mailbox_analytics(company_id);
+CREATE INDEX idx_mailbox_analytics_warmup ON mailbox_analytics(warmup_status);
+
+-- Lead analytics indexes
+CREATE INDEX idx_lead_analytics_lead ON lead_analytics(lead_id);
+CREATE INDEX idx_lead_analytics_campaign ON lead_analytics(campaign_id);
+CREATE INDEX idx_lead_analytics_status ON lead_analytics(status);
+
+-- Warmup analytics indexes
+CREATE INDEX idx_warmup_analytics_mailbox ON warmup_analytics(mailbox_id);
+CREATE INDEX idx_warmup_analytics_company ON warmup_analytics(company_id);
+CREATE INDEX idx_warmup_analytics_health ON warmup_analytics(health_score);
+
+-- Sequence step analytics indexes
+CREATE INDEX idx_sequence_step_analytics_step ON sequence_step_analytics(step_id);
+CREATE INDEX idx_sequence_step_analytics_campaign ON sequence_step_analytics(campaign_id);
+CREATE INDEX idx_sequence_step_analytics_company ON sequence_step_analytics(company_id);
+
+-- Admin audit indexes
+CREATE INDEX idx_admin_audit_admin_user ON admin_audit_log(admin_user_id, creation_time DESC);
+CREATE INDEX idx_admin_audit_tenant ON admin_audit_log(tenant_id, creation_time DESC);
+CREATE INDEX idx_admin_audit_resource ON admin_audit_log(resource_type, resource_id);
+
+-- Admin session indexes
+CREATE INDEX idx_admin_sessions_user ON admin_sessions(admin_user_id, is_active);
+CREATE INDEX idx_admin_sessions_token ON admin_sessions(session_token);
+
+-- Admin system events indexes
+CREATE INDEX idx_admin_system_events_type ON admin_system_events(event_type, creation_time DESC);
+CREATE INDEX idx_admin_system_events_severity ON admin_system_events(severity, creation_time DESC);
+CREATE INDEX idx_admin_system_events_tenant ON admin_system_events(tenant_id, creation_time DESC);
+```
+
+### Analytics Relationships
+
+```sql
+-- Analytics relationships
+ALTER TABLE campaign_analytics
+ADD CONSTRAINT fk_campaign_analytics_billing
+FOREIGN KEY (billing_id) REFERENCES billing_analytics(id);
+
+ALTER TABLE mailbox_analytics
+ADD CONSTRAINT fk_mailbox_analytics_billing
+FOREIGN KEY (billing_id) REFERENCES billing_analytics(id);
+
+ALTER TABLE lead_analytics
+ADD CONSTRAINT fk_lead_analytics_billing
+FOREIGN KEY (billing_id) REFERENCES billing_analytics(id);
+
+ALTER TABLE warmup_analytics
+ADD CONSTRAINT fk_warmup_analytics_billing
+FOREIGN KEY (billing_id) REFERENCES billing_analytics(id);
+
+ALTER TABLE sequence_step_analytics
+ADD CONSTRAINT fk_sequence_step_analytics_billing
+FOREIGN KEY (billing_id) REFERENCES billing_analytics(id);
+```
+
+### OLAP Data Pipeline
+
+```typescript
+// Analytics Aggregation Pipeline
+export async function aggregateAnalytics(date: string) {
+  await db.transaction(async (tx) => {
+    // Aggregate campaign metrics from raw email logs
+    const campaignMetrics = await tx.execute(sql`
+      INSERT INTO campaign_analytics (
+        campaign_id, company_id, sent, delivered, opened_tracked,
+        clicked_tracked, replied, bounced, unsubscribed, spam_complaints
+      )
+      SELECT
+        e.campaign_id,
+        c.company_id,
+        COUNT(*) as sent,
+        COUNT(CASE WHEN e.status = 'delivered' THEN 1 END) as delivered,
+        COUNT(CASE WHEN e.opened_at IS NOT NULL THEN 1 END) as opened_tracked,
+        COUNT(CASE WHEN e.clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
+        COUNT(CASE WHEN e.replied_at IS NOT NULL THEN 1 END) as replied,
+        COUNT(CASE WHEN e.bounce_type IS NOT NULL THEN 1 END) as bounced,
+        COUNT(CASE WHEN e.unsubscribed_at IS NOT NULL THEN 1 END) as unsubscribed,
+        COUNT(CASE WHEN e.complaint_at IS NOT NULL THEN 1 END) as spam_complaints
+      FROM emails e
+      JOIN campaigns c ON e.campaign_id = c.id
+      WHERE DATE(e.sent_at) = ${date}
+      GROUP BY e.campaign_id, c.company_id
+      ON CONFLICT (campaign_id) DO UPDATE SET
+        sent = EXCLUDED.sent,
+        delivered = EXCLUDED.delivered,
+        opened_tracked = EXCLUDED.opened_tracked,
+        clicked_tracked = EXCLUDED.clicked_tracked,
+        replied = EXCLUDED.replied,
+        bounced = EXCLUDED.bounced,
+        unsubscribed = EXCLUDED.unsubscribed,
+        spam_complaints = EXCLUDED.spam_complaints,
+        updated_at = NOW();
+    `);
+  });
+}
+```
+
+---
+
+## Job Queue System (Hybrid PostgreSQL + Redis)
+
+### Updated Architecture - PostgreSQL + Redis Integration
+
+Our queue system implements a **hybrid PostgreSQL + Redis architecture** that combines the durability of PostgreSQL with the performance of Redis.
+
+#### PostgreSQL - Durable Record of Truth
+```sql
+-- Job queues configuration (PostgreSQL)
 CREATE TABLE job_queues (
     name VARCHAR(100) PRIMARY KEY,
     default_priority INTEGER DEFAULT 100,
@@ -885,7 +1171,7 @@ CREATE TABLE job_queues (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Jobs table
+-- Jobs table (PostgreSQL - Permanent State)
 CREATE TABLE jobs (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     queue_name VARCHAR(100) REFERENCES job_queues(name) ON DELETE CASCADE,
@@ -894,27 +1180,126 @@ CREATE TABLE jobs (
     payload JSONB NOT NULL,
     attempt_count INTEGER DEFAULT 0,
     max_attempts INTEGER DEFAULT 3,
-    run TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    started TIMESTAMP WITH TIME ZONE,
-    completed TIMESTAMP WITH TIME ZONE,
-    failed TIMESTAMP WITH TIME ZONE,
+    run_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    started_at TIMESTAMP WITH TIME ZONE,
+    completed_at TIMESTAMP WITH TIME ZONE,
+    failed_at TIMESTAMP WITH TIME ZONE,
     last_error_message TEXT,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
--- Job execution logs
+-- Job execution logs (PostgreSQL)
 CREATE TABLE job_logs (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     job_id UUID REFERENCES jobs(id) ON DELETE CASCADE,
     status VARCHAR(50) NOT NULL,
     log_message TEXT,
     attempt_number INTEGER NOT NULL,
-    started TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    finished TIMESTAMP WITH TIME ZONE,
+    started_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    finished_at TIMESTAMP WITH TIME ZONE,
     duration INTERVAL,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+```
+
+#### Redis - Fast Ephemeral Queue Processing
+
+**Redis Data Structures:**
+
+**A. Redis Lists (Primary Queues):**
+```redis
+# Queue naming convention
+queue:email-sending
+queue:analytics-processing
+queue:imap-sync
+
+# Producer operations (Next.js API + Queuer Process)
+LPUSH queue:email-sending '{"jobId":"uuid-123","payload":{...},"priority":100}'
+
+# Consumer operations (Worker Servers)
+BRPOP queue:email-sending 0  # Blocking pop with timeout
+```
+
+**B. Redis Hashes (Job Details):**
+```redis
+# Job metadata storage
+job:uuid-123 {
+  status: "processing",
+  payload: '{"tenant_id":"t1","campaign_id":"c1","payload":{...}}',
+  created_at: "2025-10-30T09:00:00Z",
+  started_at: "2025-10-30T09:01:00Z",
+  last_error: "",
+  attempt_count: "1",
+  queue_name: "email-sending",
+  worker_id: "worker-1"
+}
+```
+
+**C. Queue Migration Process ([MAIL-1A]):**
+
+The **Queuer Process** migrates ready jobs from PostgreSQL to Redis:
+
+```typescript
+// Queuer Service Implementation
+async function migrateQueuedJobs() {
+  const jobs = await db.jobs.findMany({
+    where: {
+      status: 'queued',
+      run_at: { lte: new Date() }
+    },
+    orderBy: [
+      { priority: 'asc' },
+      { created_at: 'asc' }
+    ]
+  });
+
+  for (const job of jobs) {
+    // Generate Redis-ready payload
+    const redisPayload = {
+      id: job.id,
+      queue_name: job.queue_name,
+      priority: job.priority,
+      payload: job.payload,
+      max_attempts: job.max_attempts,
+      created_at: job.created_at
+    };
+
+    // Push to appropriate Redis queue
+    await redis.lpush(`queue:${job.queue_name}`, JSON.stringify(redisPayload));
+
+    // Optional: Prevent duplicates with Redis Set
+    await redis.sadd(`recent_jobs:${job.queue_name}`, job.id);
+    await redis.expire(`recent_jobs:${job.queue_name}`, 3600); // 1 hour TTL
+  }
+}
+```
+
+#### Updated Job Processing Flow
+```
+PostgreSQL (Durable) ←→ Redis (Fast Processing)
+        ↓                    ↓
+   [Queuer Process]    [Worker Process]
+        ↓                    ↓
+PostgreSQL Jobs      Redis Lists + Hashes
+status: queued  ←→  status: processing/completed
+```
+
+#### Priority Queue Implementation
+```typescript
+// Separate queues by priority level
+const priorityQueues = {
+  high: 'queue:email-sending:high',    // priority 1-50
+  normal: 'queue:email-sending',       // priority 51-150
+  low: 'queue:email-sending:low'       // priority 151+
+};
+
+function routeToPriorityQueue(job) {
+  const { priority } = job;
+  if (priority <= 50) return priorityQueues.high;
+  if (priority <= 150) return priorityQueues.normal;
+  return priorityQueues.low;
+}
 ```
 
 ### System Notifications

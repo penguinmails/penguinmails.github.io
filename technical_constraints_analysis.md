@@ -245,6 +245,7 @@ interface PerformanceConstraints {
 
 ### **Caching Strategy Constraints**
 - **In-Memory Caching**: Redis for session and temporary data
+- **Queue Processing**: Redis for high-performance job queue operations
 - **CDN Integration**: Static asset delivery optimization
 - **Database Query Caching**: Query result caching with invalidation
 - **API Response Caching**: HTTP caching headers and CDN caching

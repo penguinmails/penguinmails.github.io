@@ -178,7 +178,16 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 - **Session Storage**: User sessions and authentication tokens
 - **Real-time Data**: Current campaign status, deliverability metrics
 - **Rate Limiting**: API rate limiting and abuse prevention
+- **Queue Processing**: Fast job queues for email processing and analytics aggregation
 - **Temporary Data**: Processing queues, temporary calculations
+
+### Hybrid Queue System (PostgreSQL + Redis)
+- **PostgreSQL**: Durable record of truth for job state and audit trail
+- **Redis**: Fast ephemeral queue processing for high-performance job execution
+- **Queuer Process**: Separate service that migrates ready jobs from PostgreSQL to Redis
+- **Worker Servers**: Horizontal scaling with Redis-based job consumption
+- **Priority Queues**: Separate queues for high/normal/low priority jobs
+- **Analytics Pipeline**: Queue-driven analytics aggregation with OLAP schema integration
 
 ### 4. External Service Integration
 
