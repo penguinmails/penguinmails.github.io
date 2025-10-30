@@ -17,7 +17,7 @@ This document provides detailed infrastructure diagrams and operational procedur
 
 ### Architecture Summary
 - **Multi-tenant SaaS**: Isolated tenant data with shared infrastructure
-- **Email Infrastructure**: VPS provisioning with SMTP management
+- **Email Infrastructure**: Hostwinds VPS provisioning with MailU SMTP orchestration and secondary IP management
 - **Database**: NileDB (PostgreSQL + authentication) + Analytics (Postgres)
 - **Real-time Analytics**: PostHog for live tracking and user behavior
 - **Frontend**: Next.js dashboard and admin panel
@@ -28,6 +28,8 @@ This document provides detailed infrastructure diagrams and operational procedur
 - Performance requirements (< 2 second dashboard load time)
 - Multi-tenant security (zero data leakage between tenants)
 - Email deliverability challenges (< 5% bounce rate targets)
+- Hostwinds infrastructure limits (no traditional IP pools, VPS resource constraints)
+- Subscription-based resource allocation (infrastructure costs must align with revenue)
 
 **For detailed technical analysis covering database architecture, performance constraints, and scaling requirements, see the roadmap technical implementation details.**
 
@@ -446,20 +448,34 @@ flowchart LR
 
 ## Infrastructure Components
 
-### 1. VPS Management (Hostwind)
+### 1. VPS Management (Hostwinds)
+
+#### Hostwinds Architecture Constraints
+- **No Traditional IP Pools**: Hostwinds does not offer traditional IP pools - IPs are acquired as secondary IPs assigned to specific VPS instances
+- **IP Allocation Tied to VPS**: Each IP purchase is independent with individual confirmation timelines and tied to VPS resource limits
+- **Geographic Constraints**: IP allocation considers VPS instance geographic location and resource availability
 
 #### Provisioning Process
-1. **Request Initiation**: API call to Hostwind API
-2. **Resource Allocation**: CPU, RAM, storage assignment
-3. **Configuration**: Operating system and base software installation
-4. **Network Setup**: IP assignment and security configuration
-5. **Monitoring**: Health checks and performance monitoring
+1. **Request Initiation**: API call to Hostwinds API for VPS creation
+2. **Resource Allocation**: CPU, RAM, storage assignment based on subscription tier requirements
+3. **Configuration**: Operating system, Docker, and base software installation
+4. **Network Setup**: Primary IP assignment, firewall configuration, and security groups
+5. **MailU Setup**: SMTP container orchestration and multi-IP configuration
+6. **Monitoring Integration**: Infrastructure health checks and performance monitoring
 
 #### Management Operations
-- **Scaling**: Vertical and horizontal scaling capabilities
-- **Monitoring**: CPU, memory, disk usage tracking
+- **Scaling**: Vertical scaling within Hostwinds limits, horizontal scaling through additional VPS instances
+- **IP Management**: Secondary IP acquisition, assignment, and reputation monitoring
+- **Resource Monitoring**: CPU, memory, disk usage with subscription-based thresholds
 - **Backups**: Automated daily backups with retention policies
-- **Security**: Firewall rules and access controls
+- **Security**: Firewall rules, access controls, and incident response procedures
+- **Cost Tracking**: Infrastructure cost monitoring against subscription revenue
+
+#### Subscription-Based Resource Allocation
+- **Tier Mapping**: Different subscription plans require different VPS specifications and IP allocations
+- **Cost Control**: Infrastructure costs must not exceed subscription revenue
+- **Grace Period Management**: Handle unpaid subscriptions without immediate service disruption
+- **Scalability**: Support growing customer base without proportional cost increases
 
 ### 2. SMTP Infrastructure (Mailu)
 
@@ -647,10 +663,13 @@ LOOP_API_KEY=${LOOP_API_KEY}
 - **Quarterly**: Infrastructure review, cost optimization, disaster recovery testing
 
 ### Emergency Procedures
-- **System Outage**: Activate incident response team, implement rollback
-- **Data Breach**: Immediate containment, user notification, forensics
-- **Performance Degradation**: Scale resources, optimize queries, cache tuning
-- **Security Incident**: Block affected systems, update security measures
+- **System Outage**: Activate incident response team, implement rollback, assess infrastructure impact
+- **Data Breach**: Immediate containment, user notification, forensics, infrastructure security review
+- **Performance Degradation**: Scale resources, optimize queries, cache tuning, infrastructure capacity review
+- **Security Incident**: Block affected systems, update security measures, infrastructure compromise assessment
+- **VPS Compromise**: Immediate isolation, IP reputation assessment, migration to clean infrastructure
+- **IP Reputation Crisis**: Emergency IP migration, reputation recovery procedures, customer communication
+- **Infrastructure Failure**: Backup system activation, failover procedures, service restoration protocols
 
 ---
 
