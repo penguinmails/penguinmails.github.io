@@ -417,10 +417,15 @@ updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
 
-#### Queue-Driven Analytics Pipeline
+#### Queue-Driven ETL Analytics Pipeline
+
+**ETL Scheduling Strategy:**
+- **Hourly Events**: Critical metrics, email processing events from SMTP/MailU
+- **Daily Batch**: Comprehensive analytics aggregation and OLAP updates
+- **Weekly/Monthly**: Billing calculations and historical reporting
 
 ```typescript
-// Analytics Data Pipeline with Redis Orchestration
+// ETL Analytics Pipeline with Queue Orchestration
 export class AnalyticsPipeline {
 private redis: Redis;
 private db: Database;
@@ -430,7 +435,30 @@ this.redis = redis;
 this.db = db;
 }
 
-async enqueueAnalyticsJob(type: 'daily_aggregate' | 'campaign_aggregate' | 'billing_calculate', data: any) {
+// Schedule ETL jobs for regular analytics updates
+async scheduleETLJobs() {
+  // Hourly job for critical metrics
+  await this.enqueueAnalyticsJob('hourly_metrics', {
+    timestamp: new Date().toISOString(),
+    priority: 25  // High priority for real-time data
+  });
+
+  // Daily comprehensive aggregation
+  await this.enqueueAnalyticsJob('daily_aggregate', {
+    date: new Date().toISOString().split('T')[0],
+    priority: 50
+  });
+
+  // Weekly billing calculations
+  await this.enqueueAnalyticsJob('billing_calculate', {
+    period_start: this.getWeekStart(),
+    period_end: new Date(),
+    priority: 100
+  });
+}
+
+// Enqueue analytics job to Redis queue
+async enqueueAnalyticsJob(type: 'hourly_metrics' | 'daily_aggregate' | 'campaign_aggregate' | 'billing_calculate', data: any) {
 const job = {
   type,
   data,
@@ -441,7 +469,7 @@ const job = {
 // Add to Redis queue for processing
 await this.redis.lpush(`queue:analytics:${type}`, JSON.stringify(job));
 
-// Update PostgreSQL job status
+// Update PostgreSQL job status for durability
 await this.db.analytics_jobs.create({
   data: {
     job_type: type,
@@ -455,11 +483,25 @@ await this.db.analytics_jobs.create({
 
 private getJobPriority(type: string): number {
 const priorities = {
-  'daily_aggregate': 50,      // High priority
-  'campaign_aggregate': 75,   // Medium priority
-  'billing_calculate': 100    // Low priority
+  'hourly_metrics': 25,        // Highest priority - real-time data
+  'daily_aggregate': 50,       // High priority - daily updates
+  'campaign_aggregate': 75,    // Medium priority
+  'billing_calculate': 100     // Low priority - batch processing
 };
 return priorities[type] || 100;
+}
+
+// SMTP/MailU Integration - Process email events for analytics
+async processSMTPEvent(eventType: 'email_sent' | 'email_delivered' | 'email_bounced', emailData: any) {
+  // Immediate queue job for real-time processing
+  await this.enqueueAnalyticsJob('hourly_metrics', {
+    event_type: eventType,
+    email_data: emailData,
+    processed_at: new Date().toISOString()
+  });
+
+  // Send to PostHog for real-time dashboards
+  await this.sendToPostHog(eventType, emailData);
 }
 
 async processAnalyticsJob(job: any) {
@@ -467,6 +509,9 @@ const { type, data } = job;
 
 try {
   switch (type) {
+    case 'hourly_metrics':
+      await this.processHourlyMetrics(data);
+      break;
     case 'daily_aggregate':
       await this.processDailyAggregate(data);
       break;
@@ -488,13 +533,14 @@ try {
   });
 
 } catch (error) {
-  // Handle failure
+  // Handle failure with retry logic
   await this.db.analytics_jobs.update({
     where: { id: data.job_id },
     data: {
       status: 'failed',
       error_message: error.message,
-      processed_at: new Date()
+      processed_at: new Date(),
+      attempt_count: (data.attempt_count || 0) + 1
     }
   });
   
@@ -502,42 +548,89 @@ try {
 }
 }
 
-private async processDailyAggregate(data: any) {
-// Aggregate metrics from raw email logs to OLAP tables
-const { date, tenant_id } = data;
+// Process hourly metrics from SMTP events
+private async processHourlyMetrics(data: any) {
+const { event_type, email_data } = data;
 
 await this.db.transaction(async (tx) => {
-  // Get raw email data for the date
-  const emailMetrics = await tx.execute(sql`
-    SELECT
-      campaign_id,
-      mailbox_id,
-      COUNT(*) as sent,
-      COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
-      COUNT(CASE WHEN opened_at IS NOT NULL THEN 1 END) as opened_tracked,
-      COUNT(CASE WHEN clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
-      COUNT(CASE WHEN replied_at IS NOT NULL THEN 1 END) as replied,
-      COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced
-    FROM emails
-    WHERE DATE(sent_at) = ${date} AND tenant_id = ${tenant_id}
-    GROUP BY campaign_id, mailbox_id
-  `);
-
-  // Insert into campaign_analytics
-  for (const metric of emailMetrics) {
-    await tx.insert(campaignAnalytics).values({
-      campaign_id: metric.campaign_id,
-      company_id: metric.company_id,
-      sent: metric.sent,
-      delivered: metric.delivered,
-      opened_tracked: metric.opened_tracked,
-      clicked_tracked: metric.clicked_tracked,
-      replied: metric.replied,
-      bounced: metric.bounced,
-      updated_at: new Date()
-    });
+  // Update real-time metrics based on SMTP events
+  switch (event_type) {
+    case 'email_sent':
+      await tx.execute(sql`
+        UPDATE daily_analytics
+        SET emails_sent = emails_sent + 1,
+            updated_at = NOW()
+        WHERE tenant_id = ${email_data.tenant_id}
+          AND campaign_id = ${email_data.campaign_id}
+          AND date = CURRENT_DATE
+      `);
+      break;
+      
+    case 'email_delivered':
+      await tx.execute(sql`
+        UPDATE daily_analytics
+        SET emails_delivered = COALESCE(emails_delivered, 0) + 1,
+            updated_at = NOW()
+        WHERE tenant_id = ${email_data.tenant_id}
+          AND campaign_id = ${email_data.campaign_id}
+          AND date = CURRENT_DATE
+      `);
+      break;
   }
 });
+}
+
+// Send events to PostHog for real-time dashboards
+private async sendToPostHog(eventType: string, emailData: any) {
+  // PostHog integration for immediate dashboards
+  await posthog.capture({
+    distinctId: emailData.userId,
+    event: eventType,
+    properties: {
+      campaign_id: emailData.campaignId,
+      mailbox_id: emailData.mailboxId,
+      tenant_id: emailData.tenantId,
+      timestamp: new Date().toISOString()
+    }
+  });
+}
+
+private async processDailyAggregate(data: any) {
+  // Comprehensive daily aggregation from OLTP to OLAP
+  const { date, tenant_id } = data;
+
+  await this.db.transaction(async (tx) => {
+    // Get raw email data for the date
+    const emailMetrics = await tx.execute(sql`
+      SELECT
+        campaign_id,
+        mailbox_id,
+        COUNT(*) as sent,
+        COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
+        COUNT(CASE WHEN opened_at IS NOT NULL THEN 1 END) as opened_tracked,
+        COUNT(CASE WHEN clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
+        COUNT(CASE WHEN replied_at IS NOT NULL THEN 1 END) as replied,
+        COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced
+      FROM emails
+      WHERE DATE(sent_at) = ${date} AND tenant_id = ${tenant_id}
+      GROUP BY campaign_id, mailbox_id
+    `);
+
+    // Insert into campaign_analytics
+    for (const metric of emailMetrics) {
+      await tx.insert(campaignAnalytics).values({
+        campaign_id: metric.campaign_id,
+        company_id: metric.company_id,
+        sent: metric.sent,
+        delivered: metric.delivered,
+        opened_tracked: metric.opened_tracked,
+        clicked_tracked: metric.clicked_tracked,
+        replied: metric.replied,
+        bounced: metric.bounced,
+        updated_at: new Date()
+      });
+    }
+  });
 }
 }
 ```

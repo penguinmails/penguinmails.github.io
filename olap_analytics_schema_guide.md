@@ -453,39 +453,84 @@ CREATE INDEX idx_admin_audit_timestamp ON admin_audit_log(timestamp);
 - **Technical Context**: ip_address, user_agent for security analysis
 - **Compliance**: timestamp, metadata for regulatory requirements
 
-### 8. Admin Sessions
+### 8. Admin System Events (Consolidated)
 
 ```sql
--- Admin Sessions - Admin user session management
-CREATE TABLE admin_sessions (
+-- Admin System Events - Unified admin activity and system monitoring
+CREATE TABLE admin_system_events (
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    admin_user_id TEXT NOT NULL,
-    session_token TEXT NOT NULL,
-    ip_address TEXT,
-    user_agent TEXT,
-    started_at BIGINT,
-    last_activity BIGINT,
-    expires_at BIGINT,
-    is_active BOOLEAN DEFAULT TRUE,
-    device_info TEXT
+    event_type TEXT NOT NULL,
+    severity TEXT NOT NULL,                    -- 'low', 'medium', 'high', 'critical'
+    message TEXT NOT NULL,
+    details JSONB,                            -- Flexible storage for event-specific data
+    admin_user_id TEXT,                       -- NULL for system events
+    tenant_id TEXT,                           -- NULL for system-wide events
+    timestamp BIGINT,
+    resolved_at TIMESTAMP WITH TIME ZONE,
+    resolution TEXT,
+    
+    -- Session-specific fields (stored in details JSONB)
+    session_token TEXT,                       -- For session events
+    ip_address TEXT,                          -- For session and audit events
+    user_agent TEXT,                          -- For session and audit events
+    device_info TEXT,                         -- For session events
+    started_at BIGINT,                        -- For session events
+    last_activity BIGINT,                     -- For session events
+    expires_at BIGINT,                        -- For session events
+    is_active BOOLEAN DEFAULT TRUE            -- For session events
 );
 
--- Indexes for admin sessions
-CREATE INDEX idx_admin_sessions_user ON admin_sessions(admin_user_id, is_active);
-CREATE INDEX idx_admin_sessions_token ON admin_sessions(session_token);
-CREATE INDEX idx_admin_sessions_active ON admin_sessions(is_active, last_activity);
-CREATE INDEX idx_admin_sessions_expires ON admin_sessions(expires_at);
+-- Indexes for consolidated admin system events
+CREATE INDEX idx_admin_system_events_type ON admin_system_events(event_type, creation_time DESC);
+CREATE INDEX idx_admin_system_events_severity ON admin_system_events(severity, creation_time DESC);
+CREATE INDEX idx_admin_system_events_tenant ON admin_system_events(tenant_id, creation_time DESC);
+CREATE INDEX idx_admin_system_events_admin_user ON admin_system_events(admin_user_id, creation_time DESC);
+CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_at) WHERE resolved_at IS NULL;
+CREATE INDEX idx_admin_system_events_session_token ON admin_system_events(session_token) WHERE session_token IS NOT NULL;
+CREATE INDEX idx_admin_system_events_active_sessions ON admin_system_events(admin_user_id, is_active) WHERE is_active = true;
+CREATE INDEX idx_admin_system_events_timestamp ON admin_system_events(timestamp);
 ```
 
-**Purpose**: Administrative session tracking for security monitoring and access control.
+**Purpose**: Unified administrative activity tracking including sessions, system events, and audit logs.
+
+**Event Types**:
+- **Session Events**: 'session_started', 'session_ended', 'session_extended', 'session_expired'
+- **System Events**: 'system_alert', 'performance_degradation', 'security_incident', 'maintenance'
+- **Audit Events**: 'user_action', 'configuration_change', 'data_access', 'permission_change'
 
 **Key Features**:
-- **Session Management**: session_token, started_at, expires_at, is_active
-- **Security Tracking**: ip_address, user_agent, device_info
-- **Activity Monitoring**: last_activity for timeout management
+- **Unified Storage**: Both session management and system monitoring in one table
+- **Flexible Details**: JSONB field stores event-specific metadata
+- **Session Tracking**: session_token, device_info, activity monitoring via details
+- **Security Context**: ip_address, user_agent for all admin activities
+- **Event Classification**: event_type and severity for prioritization and filtering
 
-### 9. Admin System Events
+**Example Usage**:
+```sql
+-- Session started event
+INSERT INTO admin_system_events (
+    event_type, severity, message, admin_user_id, tenant_id,
+    session_token, ip_address, user_agent, device_info,
+    started_at, expires_at, details
+) VALUES (
+    'session_started', 'low', 'Admin user logged in',
+    'admin_123', 'tenant_456', 'token_abc789', '192.168.1.100',
+    'Mozilla/5.0...', 'Chrome on Windows',
+    1234567890, 1234567890 + 28800,
+    '{"login_method": "password", "mfa_used": true}'
+);
+
+-- System alert event
+INSERT INTO admin_system_events (
+    event_type, severity, message, details
+) VALUES (
+    'system_alert', 'high', 'High CPU usage detected',
+    '{"cpu_usage": 95, "threshold": 80, "duration_minutes": 15, "affected_services": ["email_sending"]}'
+);
+```
+
+### 9. Admin Audit Log (Separate for Detailed Change Tracking)
 
 ```sql
 -- Admin System Events - System-wide events and notifications
