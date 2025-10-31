@@ -913,6 +913,374 @@ class RateLimiter {
 }
 ```
 
+## 10. **Support System Integration**
+
+### **Current Integration Points (Production)**
+
+#### **Dashboard Header Integration**
+**File**: `components/layout/components/DashboardHeader.tsx`
+**Status**: ✅ Production Ready
+
+```tsx
+// Current help center integration
+const HelpCenterIntegration = () => {
+  const helpLinks = [
+    {
+      name: 'Knowledge Base',
+      url: 'https://help.penguinmails.com/knowledge-base',
+      category: 'self-service',
+      icon: 'BookOpenIcon'
+    },
+    {
+      name: 'Support',
+      url: 'https://help.penguinmails.com/support',
+      category: 'contact',
+      icon: 'SupportIcon'
+    },
+    {
+      name: 'Video Tutorials',
+      url: 'https://help.penguinmails.com/video-tutorials',
+      category: 'learning',
+      icon: 'PlayIcon'
+    },
+    {
+      name: 'Glossary',
+      url: 'https://help.penguinmails.com/glossary',
+      category: 'reference',
+      icon: 'GlossaryIcon'
+    },
+    {
+      name: 'Our Services',
+      url: 'https://help.penguinmails.com/our-services',
+      category: 'information',
+      icon: 'ServiceIcon'
+    }
+  ];
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="sm" className="gap-2">
+          <HelpCircleIcon className="h-4 w-4" />
+          <span>Help</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-56">
+        <DropdownMenuLabel>Help & Support</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        {helpLinks.map((link) => (
+          <DropdownMenuItem key={link.name} asChild>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3"
+            >
+              <link.icon className="h-4 w-4 text-muted-foreground" />
+              <div className="flex flex-col">
+                <span className="font-medium">{link.name}</span>
+                <span className="text-xs text-muted-foreground capitalize">
+                  {link.category.replace('-', ' ')}
+                </span>
+              </div>
+            </a>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
+```
+
+#### **Support Email Integration**
+**File**: `components/support/SupportButton.tsx`
+**Status**: ✅ Production Ready
+
+```tsx
+// Current email-based support system
+const EmailSupportButton = () => {
+  const handleSupportClick = () => {
+    const userInfo = getCurrentUserInfo();
+    const tenantInfo = getCurrentTenantInfo();
+
+    const subject = encodeURIComponent(
+      `[Support] ${tenantInfo.name} - ${getSupportIssueType()}`
+    );
+
+    const body = encodeURIComponent(`
+Hi PenguinMails Support Team,
+
+I need assistance with:
+
+[Please describe your issue here]
+
+---
+Customer Information:
+- Company: ${tenantInfo.name}
+- User: ${userInfo.name} (${userInfo.email})
+- Plan: ${tenantInfo.plan || 'Unknown'}
+- Account Created: ${tenantInfo.created}
+- Last Login: ${userInfo.lastLogin}
+
+Technical Information:
+- Browser: ${navigator.userAgent}
+- URL: ${window.location.href}
+- Timestamp: ${new Date().toISOString()}
+- Version: ${process.env.NEXT_PUBLIC_APP_VERSION}
+
+Please include this information when responding.
+
+Best regards,
+${userInfo.name}
+    `);
+
+    // Create mailto link
+    const mailtoLink = `mailto:support@penguinmails.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+
+    // Track support button click
+    posthog.capture('support_button_click', {
+      source: 'floating_button',
+      user_id: userInfo.id,
+      tenant_id: tenantInfo.id
+    });
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      <Button
+        onClick={handleSupportClick}
+        className="h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 bg-primary hover:bg-primary/90"
+        size="lg"
+        aria-label="Contact Support"
+      >
+        <MessageCircleIcon className="h-6 w-6" />
+      </Button>
+
+      {/* Tooltip */}
+      <div className="absolute bottom-16 right-0 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
+          Contact Support
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+
+### **Planned Support System Enhancements (2027)**
+
+#### **Ticket System Integration**
+**Phase**: 2027 Q1
+**Strategy**: Gradual migration with dual-running period
+
+```typescript
+// Ticket system integration
+class TicketSystemIntegration {
+  async createSupportTicket(supportRequest: SupportRequest) {
+    // Create ticket in new system
+    const ticket = await this.ticketService.create({
+      subject: supportRequest.subject,
+      description: supportRequest.description,
+      customerEmail: supportRequest.email,
+      customerName: supportRequest.name,
+      priority: supportRequest.priority,
+      category: supportRequest.category,
+      metadata: {
+        source: 'website_form',
+        user_id: supportRequest.userId,
+        tenant_id: supportRequest.tenantId,
+        original_mailto_attempt: supportRequest.mailtoAttempted
+      }
+    });
+
+    // Send confirmation to customer
+    await this.sendTicketConfirmation(ticket);
+
+    // Notify support team
+    await this.notifySupportTeam(ticket);
+
+    // Update analytics
+    await this.trackTicketCreation(ticket);
+
+    return ticket;
+  }
+
+  async migrateEmailToTicket(emailData: any) {
+    const existingTicket = await this.findExistingTicket(emailData);
+
+    if (existingTicket) {
+      // Add email as message to existing ticket
+      return await this.addMessageToTicket(existingTicket.id, {
+        sender_type: 'customer',
+        content: emailData.body,
+        message_type: 'comment',
+        metadata: {
+          original_email_id: emailData.id,
+          subject: emailData.subject
+        }
+      });
+    } else {
+      // Create new ticket from email
+      return await this.createSupportTicket({
+        subject: emailData.subject,
+        description: emailData.body,
+        email: emailData.from,
+        name: emailData.fromName,
+        priority: this.determinePriority(emailData),
+        category: this.categorizeEmail(emailData),
+        userId: null, // Email-based tickets may not have user accounts
+        tenantId: null,
+        mailtoAttempted: true
+      });
+    }
+  }
+}
+```
+
+#### **Knowledge Base Integration**
+```typescript
+// Knowledge base auto-suggestion
+class KnowledgeBaseIntegration {
+  async suggestArticles(ticketContent: string, category?: string) {
+    const suggestions = await this.searchKnowledgeBase(ticketContent, {
+      limit: 3,
+      category: category,
+      relevance_threshold: 0.7
+    });
+
+    return suggestions.map(article => ({
+      title: article.title,
+      url: article.url,
+      snippet: article.snippet,
+      relevance_score: article.score,
+      auto_suggested: true
+    }));
+  }
+
+  async addSuggestionsToTicket(ticketId: string, suggestions: any[]) {
+    if (suggestions.length === 0) return;
+
+    await this.ticketService.addInternalNote(ticketId, {
+      content: `Auto-suggested knowledge base articles:\n\n${
+        suggestions.map(s => `- [${s.title}](${s.url}) - ${s.snippet}`).join('\n')
+      }`,
+      message_type: 'auto_suggestion',
+      metadata: {
+        suggestions: suggestions,
+        generated_at: new Date().toISOString()
+      }
+    });
+  }
+}
+```
+
+### **Support Analytics & Monitoring**
+
+#### **Support System Metrics**
+```typescript
+// Support analytics tracking
+class SupportAnalytics {
+  async trackSupportRequest(request: SupportRequest, response: any) {
+    const metrics = {
+      request_category: request.category,
+      request_priority: request.priority,
+      customer_tier: request.customerTier,
+      routing_channel: response.method || 'ticket',
+      resolution_time: response.resolutionTime,
+      customer_satisfaction: response.satisfaction,
+      deflected_to_kb: response.deflectedToKnowledgeBase,
+      escalated: response.escalated,
+      timestamp: new Date().toISOString()
+    };
+
+    // Store in analytics database
+    await this.storeSupportMetrics(metrics);
+
+    // Real-time dashboard updates
+    await this.updateRealTimeDashboard(metrics);
+
+    // Alert on SLA breaches
+    if (response.slaBreached) {
+      await this.triggerSLAAlert(metrics);
+    }
+  }
+
+  async generateSupportReport(dateRange: DateRange) {
+    return {
+      total_requests: await this.getTotalRequests(dateRange),
+      average_resolution_time: await this.getAverageResolutionTime(dateRange),
+      customer_satisfaction: await this.getCustomerSatisfaction(dateRange),
+      sla_compliance_rate: await this.getSLAComplianceRate(dateRange),
+      channel_breakdown: await this.getChannelBreakdown(dateRange),
+      category_breakdown: await this.getCategoryBreakdown(dateRange),
+      kb_deflection_rate: await this.getKBDeflectionRate(dateRange),
+      support_cost_per_ticket: await this.getSupportCost(dateRange)
+    };
+  }
+}
+```
+
+### **Migration Strategy**
+
+#### **Phase 1: Parallel Running (2027 Q1)**
+**Duration**: 4 weeks
+**Strategy**: Both email and ticket systems active
+
+```typescript
+// Dual system support
+class DualSupportSystem {
+  async routeSupportRequest(request: SupportRequest) {
+    // Determine routing based on request type and customer tier
+    const routingDecision = this.determineRouting(request);
+
+    switch (routingDecision.channel) {
+      case 'ticket':
+        return await this.createTicket(request);
+      case 'email':
+        return await this.sendEmailRequest(request);
+      case 'chat':
+        return await this.initiateChat(request);
+      default:
+        return await this.createTicket(request); // Default to tickets
+    }
+  }
+
+  private determineRouting(request: SupportRequest): RoutingDecision {
+    // Enterprise customers → tickets
+    if (request.customerTier === 'enterprise') {
+      return { channel: 'ticket', reason: 'enterprise_customer' };
+    }
+
+    // Complex technical issues → tickets
+    if (request.category === 'technical' && request.complexity === 'high') {
+      return { channel: 'ticket', reason: 'complex_technical_issue' };
+    }
+
+    // Simple questions → help center first
+    if (request.category === 'general' && request.complexity === 'low') {
+      return { channel: 'help_center_first', reason: 'simple_inquiry' };
+    }
+
+    // Default to tickets for tracking and analytics
+    return { channel: 'ticket', reason: 'default_routing' };
+  }
+}
+```
+
+#### **Phase 2: Ticket System Primary (2027 Q2)**
+**Duration**: 8 weeks
+**Strategy**: Tickets as primary, email as fallback
+
+#### **Phase 3: Full Migration (2027 Q3)**
+**Duration**: 12 weeks
+**Strategy**: Tickets only, email support deprecated
+
+### **Success Metrics**
+- **Current System (Email-Based)**: <24 hours response, 1,000+ emails/month manageable
+- **Future System (Ticket-Based)**: <4 hours first response, 10,000+ tickets/month capacity
+
 ---
 
 ## Related Documents
@@ -922,4 +1290,4 @@ class RateLimiter {
 - [Development Guidelines](development_guidelines.md) - Code standards and practices
 - [Environment & Release Management](environment_release.md) - Deployment processes
 
-**Keywords**: third-party integrations, API integrations, webhooks, OAuth, Mailgun, SendGrid, Stripe, PostHog, NileDB, rate limiting, error handling, monitoring
+**Keywords**: third-party integrations, API integrations, webhooks, OAuth, Mailgun, SendGrid, Stripe, PostHog, NileDB, rate limiting, error handling, monitoring, support system, ticket management, knowledge base, customer success
