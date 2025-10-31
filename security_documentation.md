@@ -686,6 +686,121 @@ const gdprCompliance = {
 
 ---
 
+## Database Security & Access Control
+
+### Primary Key Strategy for Security
+
+#### Traffic & Security Matrix Framework
+Our primary key selection follows a comprehensive framework balancing security and performance requirements:
+
+```
+                     SECURITY DANGER LEVELS
+TRAFFIC    |    LOW                    |   MEDIUM                  |   HIGH
+-----------|--------------------------|---------------------------|--------------------------
+CRITICAL   | BIGINT                   | BIGINT                    | UUID
+HIGH       | BIGINT                   | UUID                      | UUID
+MEDIUM     | BIGINT                   | UUID                      | UUID
+LOW        | INT                      | UUID                      | UUID
+
+Distribution Examples:
+- UUID (Security-focused): 75% of tables - User data, credentials, financial records
+- BIGINT (Analytics performance): 9% of tables - High-traffic analytics, logs
+- VARCHAR (External/Natural): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
+- Composite (Multi-tenant): 10% of tables - Tenant associations, junction tables
+```
+
+#### Security Danger Assessment
+- **HIGH Security (Always UUID)**: `users`, `staff_members`, `payments`, `subscriptions`, `tenant_users`
+- **MEDIUM Security (UUID Recommended)**: `campaigns`, `templates`, `email_accounts`, `content_objects`
+- **LOW Security (BIGINT Possible)**: `*_analytics` tables, `job_logs`, `content_access_log`
+
+#### Performance Impact Analysis
+- **UUID Performance**: 16 bytes vs 8 bytes for BIGINT, ~5-10% slower inserts, strong security benefits
+- **BIGINT Performance**: Optimal 8 bytes, faster lookups, no collision risks with proper sequences
+- **Migration Strategy**: Add new PK column alongside old, dual writing, backfill data, update references
+
+#### Current Implementation Status
+
+**✅ Perfectly Aligned Tables**
+- **OLTP Security Tables**: UUID (75% of tables)
+- **OLAP Analytics Tables**: BIGINT (9% of tables)
+- **External System Tables**: VARCHAR (6% of tables)
+- **Multi-tenant Junctions**: Composite (10% of tables)
+
+**🔍 Potential Optimization Candidates**
+
+##### LOW Security + LOW Traffic (Consider BIGINT)
+- `folders` - Internal organization only
+- `template_folders` - Junction table, internal
+- `template_tags` - Junction table, internal
+- `tags` - Internal tagging system
+
+##### MEDIUM Security + LOW Traffic (Keep UUID)
+- `user_preferences` - User data, keep secure
+- `tenant_config` - Configuration, maintain security
+- `feature_flags` - Operational control, keep secure
+
+### Network Traffic Security
+
+#### Traffic Assessment Matrix
+- **CRITICAL Traffic (>100K ops/hour)**: `content_objects`, `inbox_message_refs`, `email_opens`
+- **HIGH Traffic (10K-100K ops/hour)**: `campaigns`, `job_logs`, `content_access_log`
+- **MEDIUM Traffic (1K-10K ops/hour)**: `user_preferences`, `tenant_config`, `queue_health`
+
+#### Infrastructure Protection Measures
+- **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests/hour default)
+- **Traffic Filtering**: UFW firewall rules with specific IP restrictions for SSH access
+- **DDoS Protection**: Cloudflare integration for traffic analysis and mitigation
+- **VPN Access**: Mandatory VPN for infrastructure management and database access
+
+#### Security Event Monitoring
+```javascript
+// Security traffic monitoring
+const trafficSecurity = {
+  monitorTrafficPatterns: (req, res, next) => {
+    const clientIP = req.ip;
+    const userAgent = req.get('User-Agent');
+    const endpoint = req.path;
+
+    // Check for suspicious patterns
+    if (isSuspiciousTraffic(clientIP, userAgent, endpoint)) {
+      securityLogger.logEvent({
+        type: 'suspicious_traffic',
+        severity: 'medium',
+        details: { clientIP, userAgent, endpoint }
+      });
+    }
+
+    // Rate limiting check
+    const identifier = `${clientIP}:${req.user?.id || 'anonymous'}`;
+    const result = rateLimiter.check(identifier, 100, 3600);
+
+    if (!result.allowed) {
+      return res.status(429).json({ error: 'Rate limit exceeded' });
+    }
+
+    next();
+  }
+};
+```
+
+### Decision Tree for Security Implementation
+```
+Start: New Table/Endpoint Creation
+    ↓
+Does it handle user data, credentials, or financial info?
+    ├─ YES → UUID PK + Enhanced Security
+    └─ NO → Continue
+        ↓
+Expected traffic > 10K ops/hour?
+    ├─ YES → BIGINT PK + Traffic Optimization
+    └─ NO → Continue
+        ↓
+External system integration (Stripe, Hostwinds)?
+    ├─ YES → VARCHAR PK + Integration Security
+    └─ NO → UUID PK (Default Security)
+```
+
 ## Security Training & Awareness
 
 ### Team Security Practices

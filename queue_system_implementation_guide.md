@@ -1,7 +1,35 @@
-# Queue System Implementation Guide
+# Queue System Implementation Guide - Job Processing & Reliability
 
-## Document Summary
-This comprehensive guide provides detailed implementation instructions for PenguinMails' hybrid PostgreSQL + Redis queue system. It covers architecture patterns, code examples, deployment procedures, and best practices for building a reliable, scalable job processing system.
+## Overview
+
+The **Queue System** is PenguinMails' job processing and reliability layer designed for asynchronous operations, retry logic, and system reliability. This tier provides a hybrid PostgreSQL + Redis architecture combining durability with high-performance job processing.
+
+### 🎯 **Purpose & Characteristics**
+
+- **Primary Focus**: Job state management, retry logic, processing reliability
+- **Architecture**: Hybrid PostgreSQL + Redis for durability and performance
+- **Reliability**: Comprehensive logging, retry mechanisms, dead letter queues
+- **Scalability**: Redis for high-throughput operations, PostgreSQL for state tracking
+
+### ⚡ **Performance Strategy**
+
+- **Redis Lists**: Fast job queues for immediate processing
+- **PostgreSQL State**: Durable job tracking and audit trails
+- **Priority Queues**: Multiple priority levels for different job types
+- **Retry Logic**: Exponential backoff and comprehensive error handling
+
+### Key Features
+- **Asynchronous Processing**: Non-blocking email operations
+- **Retry Logic**: Automatic failure recovery with exponential backoff
+- **Monitoring**: Real-time queue health and job metrics
+- **Scalability**: Horizontal scaling through multiple worker instances
+- **Reliability**: Dead letter queues for failed jobs
+
+### Architecture Components
+- **PostgreSQL**: Durable job state management
+- **Redis**: High-performance job queues
+- **Workers**: Background job processors
+- **Monitoring**: Queue health and performance metrics
 
 ---
 
