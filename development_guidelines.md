@@ -254,10 +254,10 @@ function handleSubmit(email: string) {
 #### Query Optimization
 ```sql
 -- Good: Indexed query with selective columns
-SELECT id, email, created_at 
+SELECT id, email, created 
 FROM users 
-WHERE created_at > $1 
-ORDER BY created_at DESC 
+WHERE created > $1 
+ORDER BY created DESC 
 LIMIT 100;
 ```
 

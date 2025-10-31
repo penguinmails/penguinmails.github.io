@@ -133,7 +133,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
 
     // 3. Store in tenant_config (minimal state)
     await nile.db.query(
-      `UPDATE tenant_config SET stripe_account_id = $1, updated_at = CURRENT_TIMESTAMP
+      `UPDATE tenant_config SET stripe_account_id = $1, updated = CURRENT_TIMESTAMP
        WHERE tenant_id = CURRENT_TENANT_ID()`,
       [account.id]
     );
@@ -394,9 +394,9 @@ CREATE TABLE promo_codes (
     max_uses INTEGER, -- NULL = unlimited
     used_count INTEGER DEFAULT 0,
     valid_from TIMESTAMP,
-    expires_at TIMESTAMP,
+    expires TIMESTAMP,
     applicable_plans TEXT[], -- Array of plan slugs, NULL = all plans
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
     CHECK (discount_type IN ('percentage', 'fixed_amount')),
     CHECK (discount_value > 0)
@@ -488,7 +488,7 @@ export async function calculateCurrentUsage(companyId: string) {
       COUNT(DISTINCT c.target_audience_id) as audiences_used
     FROM campaigns c
     WHERE c.company_id = $1
-      AND c.created_at >= date_trunc('month', CURRENT_DATE)
+      AND c.created >= date_trunc('month', CURRENT_DATE)
       AND c.tenant_id = CURRENT_TENANT_ID()
   `, [companyId]);
 

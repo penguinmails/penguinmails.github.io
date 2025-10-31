@@ -340,7 +340,7 @@ export async function GET(req: NextRequest) {
 
     // Mark token as used
     await nile.db.query(
-      'UPDATE verification_tokens SET used = true, used_at = CURRENT_TIMESTAMP WHERE token = $1',
+      'UPDATE verification_tokens SET used = true, used = CURRENT_TIMESTAMP WHERE token = $1',
       [token]
     );
 
@@ -385,7 +385,7 @@ export async function POST(req: NextRequest) {
       FROM verification_tokens vt
       JOIN tenant_users tu ON tu.user_id = vt.user_id
       WHERE tu.email = $1 AND vt.code = $2 AND vt.used = false 
-        AND vt.expires_at > CURRENT_TIMESTAMP
+        AND vt.expires > CURRENT_TIMESTAMP
     `, [email, code]);
 
     if (verification.rows.length === 0) {
@@ -649,7 +649,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       payment_status = 'completed',
       onboarding_step = 'workspace',
       subscription_id = $1,
-      updated_at = CURRENT_TIMESTAMP
+      updated = CURRENT_TIMESTAMP
      WHERE id = $2`,
     [session.subscription, tenantId]
   );

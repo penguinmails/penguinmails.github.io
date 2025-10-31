@@ -144,7 +144,7 @@ Customer Information:
 - Company: ${tenantInfo.name}
 - User: ${userInfo.name} (${userInfo.email})
 - Plan: ${tenantInfo.plan || 'Unknown'}
-- Account Created: ${tenantInfo.createdAt}
+- Account Created: ${tenantInfo.created}
 - Last Login: ${userInfo.lastLogin}
 
 Technical Information:

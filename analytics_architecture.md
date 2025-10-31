@@ -153,10 +153,10 @@ CREATE TABLE email_opens (
     mailbox_id VARCHAR(255),
     user_id UUID NOT NULL,
     tenant_id UUID NOT NULL,
-    opened_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    opened TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     ip_address INET,
     user_agent TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Click tracking logs
@@ -168,10 +168,10 @@ CREATE TABLE email_clicks (
     user_id UUID NOT NULL,
     tenant_id UUID NOT NULL,
     clicked_url TEXT NOT NULL,
-    clicked_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    clicked TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     ip_address INET,
     user_agent TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Bounce tracking logs
@@ -184,8 +184,8 @@ CREATE TABLE email_bounces (
     tenant_id UUID NOT NULL,
     bounce_type VARCHAR(50) NOT NULL, -- 'hard', 'soft'
     bounce_reason TEXT,
-    bounced_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    bounced TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Reply tracking
@@ -196,9 +196,9 @@ CREATE TABLE email_replies (
     mailbox_id VARCHAR(255),
     user_id UUID NOT NULL,
     tenant_id UUID NOT NULL,
-    replied_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    replied TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     message_id VARCHAR(255),
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
 
@@ -240,8 +240,8 @@ CREATE TABLE daily_analytics (
              THEN ROUND((emails_replied::DECIMAL / emails_sent) * 100, 2)
              ELSE 0 END
     ) STORED,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     
     UNIQUE(user_id, tenant_id, campaign_id, mailbox_id, date)
 );
@@ -258,8 +258,8 @@ CREATE TABLE warmup_interactions (
     tenant_id UUID NOT NULL,
     interaction_type VARCHAR(50) NOT NULL, -- 'open', 'reply'
     partner_mailbox VARCHAR(255),
-    interaction_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    interaction TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Warmup daily stats
@@ -273,8 +273,8 @@ CREATE TABLE warmup_daily_stats (
     opens_received INTEGER DEFAULT 0,
     replies_received INTEGER DEFAULT 0,
     reputation_score INTEGER DEFAULT 0, -- 0-100
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     
     UNIQUE(mailbox_id, date)
 );
@@ -318,7 +318,7 @@ leads_used INTEGER DEFAULT 0,
 warmups_active INTEGER DEFAULT 0,
 period_start TIMESTAMP WITH TIME ZONE NOT NULL,
 period_end TIMESTAMP WITH TIME ZONE NOT NULL,
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Campaign Analytics - Campaign performance metrics
@@ -337,7 +337,7 @@ spam_complaints INTEGER DEFAULT 0,         -- Sum of all steps
 status TEXT,
 completed_leads INTEGER DEFAULT 0,
 billing_id BIGINT REFERENCES billing_analytics(id),
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Mailbox Analytics - Individual mailbox performance
@@ -358,7 +358,7 @@ health_score INTEGER DEFAULT 0,
 current_volume INTEGER DEFAULT 0,
 billing_id BIGINT REFERENCES billing_analytics(id),
 campaign_status TEXT,
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Lead Analytics - Individual lead engagement
@@ -376,7 +376,7 @@ unsubscribed INTEGER DEFAULT 0,
 spam_complaints INTEGER DEFAULT 0,
 status TEXT,
 billing_id BIGINT REFERENCES billing_analytics(id),
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Warmup Analytics - Email warmup progression
@@ -395,7 +395,7 @@ spam_complaints INTEGER DEFAULT 0,
 health_score INTEGER DEFAULT 0,
 progress_percentage INTEGER DEFAULT 0,
 billing_id BIGINT REFERENCES billing_analytics(id),
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Sequence Step Analytics - Campaign step performance
@@ -413,7 +413,7 @@ bounced INTEGER DEFAULT 0,
 unsubscribed INTEGER DEFAULT 0,
 spam_complaints INTEGER DEFAULT 0,
 billing_id BIGINT REFERENCES billing_analytics(id),
-updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
 
@@ -559,7 +559,7 @@ await this.db.transaction(async (tx) => {
       await tx.execute(sql`
         UPDATE daily_analytics
         SET emails_sent = emails_sent + 1,
-            updated_at = NOW()
+            updated = NOW()
         WHERE tenant_id = ${email_data.tenant_id}
           AND campaign_id = ${email_data.campaign_id}
           AND date = CURRENT_DATE
@@ -570,7 +570,7 @@ await this.db.transaction(async (tx) => {
       await tx.execute(sql`
         UPDATE daily_analytics
         SET emails_delivered = COALESCE(emails_delivered, 0) + 1,
-            updated_at = NOW()
+            updated = NOW()
         WHERE tenant_id = ${email_data.tenant_id}
           AND campaign_id = ${email_data.campaign_id}
           AND date = CURRENT_DATE
@@ -607,9 +607,9 @@ private async processDailyAggregate(data: any) {
         mailbox_id,
         COUNT(*) as sent,
         COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
-        COUNT(CASE WHEN opened_at IS NOT NULL THEN 1 END) as opened_tracked,
-        COUNT(CASE WHEN clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
-        COUNT(CASE WHEN replied_at IS NOT NULL THEN 1 END) as replied,
+        COUNT(CASE WHEN opened IS NOT NULL THEN 1 END) as opened_tracked,
+        COUNT(CASE WHEN clicked IS NOT NULL THEN 1 END) as clicked_tracked,
+        COUNT(CASE WHEN replied IS NOT NULL THEN 1 END) as replied,
         COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced
       FROM emails
       WHERE DATE(sent_at) = ${date} AND tenant_id = ${tenant_id}

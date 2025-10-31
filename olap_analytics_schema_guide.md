@@ -30,8 +30,8 @@ erDiagram
         int leadsUsed
         int warmupsActive
         timestamp period_start
-        timestamp period_end
-        date updatedAt
+        timestamp period_end,
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Campaign Performance Analytics
@@ -49,8 +49,8 @@ erDiagram
         int spamComplaints
         text status
         int completedLeads
-        bigint billingId FK
-        date updatedAt
+        billing_id BIGINT REFERENCES billing_analytics(id),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Mailbox Performance Analytics
@@ -70,8 +70,8 @@ erDiagram
         int healthScore
         int currentVolume
         bigint billingId FK
-        text campaignStatus
-        date updatedAt
+        campaign_status TEXT,
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Lead Engagement Analytics
@@ -88,8 +88,8 @@ erDiagram
         int unsubscribed
         int spamComplaints
         text status
-        bigint billingId FK
-        date updatedAt
+        billing_id BIGINT REFERENCES billing_analytics(id),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Warmup Progression Analytics
@@ -107,8 +107,8 @@ erDiagram
         int spamComplaints
         int healthScore
         int progressPercentage
-        bigint billingId FK
-        date updatedAt
+        billing_id BIGINT REFERENCES billing_analytics(id),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Sequence Step Analytics
@@ -125,8 +125,8 @@ erDiagram
         int bounced
         int unsubscribed
         int spamComplaints
-        bigint billingId FK
-        date updatedAt
+        billing_id BIGINT REFERENCES billing_analytics(id),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Administrative Analytics
@@ -209,7 +209,7 @@ CREATE TABLE billing_analytics (
     warmups_active INTEGER DEFAULT 0,
     period_start TIMESTAMP WITH TIME ZONE NOT NULL,
     period_end TIMESTAMP WITH TIME ZONE NOT NULL,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Unique constraint to prevent duplicate periods
@@ -248,7 +248,7 @@ CREATE TABLE campaign_analytics (
     status TEXT,
     completed_leads INTEGER DEFAULT 0,
     billing_id BIGINT REFERENCES billing_analytics(id),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Indexes for campaign analytics
@@ -287,7 +287,7 @@ CREATE TABLE mailbox_analytics (
     current_volume INTEGER DEFAULT 0,
     billing_id BIGINT REFERENCES billing_analytics(id),
     campaign_status TEXT,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Indexes for mailbox analytics
@@ -323,7 +323,7 @@ CREATE TABLE lead_analytics (
     spam_complaints INTEGER DEFAULT 0,
     status TEXT,
     billing_id BIGINT REFERENCES billing_analytics(id),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Indexes for lead analytics
@@ -359,7 +359,7 @@ CREATE TABLE warmup_analytics (
     health_score INTEGER DEFAULT 0,
     progress_percentage INTEGER DEFAULT 0,
     billing_id BIGINT REFERENCES billing_analytics(id),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Indexes for warmup analytics
@@ -395,7 +395,7 @@ CREATE TABLE sequence_step_analytics (
     unsubscribed INTEGER DEFAULT 0,
     spam_complaints INTEGER DEFAULT 0,
     billing_id BIGINT REFERENCES billing_analytics(id),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Indexes for sequence step analytics
@@ -467,7 +467,7 @@ CREATE TABLE admin_system_events (
     admin_user_id TEXT,                       -- NULL for system events
     tenant_id TEXT,                           -- NULL for system-wide events
     timestamp BIGINT,
-    resolved_at TIMESTAMP WITH TIME ZONE,
+    resolved TIMESTAMP WITH TIME ZONE,
     resolution TEXT,
     
     -- Session-specific fields (stored in details JSONB)
@@ -475,9 +475,9 @@ CREATE TABLE admin_system_events (
     ip_address TEXT,                          -- For session and audit events
     user_agent TEXT,                          -- For session and audit events
     device_info TEXT,                         -- For session events
-    started_at BIGINT,                        -- For session events
+    started BIGINT,                        -- For session events
     last_activity BIGINT,                     -- For session events
-    expires_at BIGINT,                        -- For session events
+    expires BIGINT,                        -- For session events
     is_active BOOLEAN DEFAULT TRUE            -- For session events
 );
 
@@ -486,7 +486,7 @@ CREATE INDEX idx_admin_system_events_type ON admin_system_events(event_type, cre
 CREATE INDEX idx_admin_system_events_severity ON admin_system_events(severity, creation_time DESC);
 CREATE INDEX idx_admin_system_events_tenant ON admin_system_events(tenant_id, creation_time DESC);
 CREATE INDEX idx_admin_system_events_admin_user ON admin_system_events(admin_user_id, creation_time DESC);
-CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_at) WHERE resolved_at IS NULL;
+CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_at) WHERE resolved IS NULL;
 CREATE INDEX idx_admin_system_events_session_token ON admin_system_events(session_token) WHERE session_token IS NOT NULL;
 CREATE INDEX idx_admin_system_events_active_sessions ON admin_system_events(admin_user_id, is_active) WHERE is_active = true;
 CREATE INDEX idx_admin_system_events_timestamp ON admin_system_events(timestamp);
@@ -544,7 +544,7 @@ CREATE TABLE admin_system_events (
     admin_user_id TEXT,
     tenant_id TEXT,
     timestamp BIGINT,
-    resolved_at TIMESTAMP WITH TIME ZONE,
+    resolved TIMESTAMP WITH TIME ZONE,
     resolution TEXT
 );
 
@@ -552,7 +552,7 @@ CREATE TABLE admin_system_events (
 CREATE INDEX idx_admin_system_events_type ON admin_system_events(event_type, creation_time DESC);
 CREATE INDEX idx_admin_system_events_severity ON admin_system_events(severity, creation_time DESC);
 CREATE INDEX idx_admin_system_events_tenant ON admin_system_events(tenant_id, creation_time DESC);
-CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_at) WHERE resolved_at IS NULL;
+CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_at) WHERE resolved IS NULL;
 CREATE INDEX idx_admin_system_events_timestamp ON admin_system_events(timestamp);
 ```
 
@@ -606,12 +606,12 @@ export class AnalyticsAggregator {
           SELECT 
             COUNT(*) as sent,
             COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
-            COUNT(CASE WHEN opened_at IS NOT NULL THEN 1 END) as opened_tracked,
-            COUNT(CASE WHEN clicked_at IS NOT NULL THEN 1 END) as clicked_tracked,
-            COUNT(CASE WHEN replied_at IS NOT NULL THEN 1 END) as replied,
+            COUNT(CASE WHEN opened IS NOT NULL THEN 1 END) as opened_tracked,
+            COUNT(CASE WHEN clicked IS NOT NULL THEN 1 END) as clicked_tracked,
+            COUNT(CASE WHEN replied IS NOT NULL THEN 1 END) as replied,
             COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced,
-            COUNT(CASE WHEN unsubscribed_at IS NOT NULL THEN 1 END) as unsubscribed,
-            COUNT(CASE WHEN complaint_at IS NOT NULL THEN 1 END) as spam_complaints
+            COUNT(CASE WHEN unsubscribed IS NOT NULL THEN 1 END) as unsubscribed,
+            COUNT(CASE WHEN complaint IS NOT NULL THEN 1 END) as spam_complaints
           FROM emails 
           WHERE campaign_id = ${campaignId} 
             AND sequence_step_id = ${step.id}
@@ -689,12 +689,12 @@ export class AnalyticsAggregator {
           COUNT(DISTINCT w.id) as warmups_active,
           COUNT(e.id) as emails_sent
         FROM tenants t
-        LEFT JOIN campaigns c ON t.id = c.tenant_id AND c.created_at BETWEEN ${periodStart} AND ${periodEnd}
-        LEFT JOIN email_accounts ea ON t.id = ea.tenant_id AND ea.created_at BETWEEN ${periodStart} AND ${periodEnd}
-        LEFT JOIN domains d ON t.id = d.tenant_id AND d.created_at BETWEEN ${periodStart} AND ${periodEnd}
+        LEFT JOIN campaigns c ON t.id = c.tenant_id AND c.created BETWEEN ${periodStart} AND ${periodEnd}
+        LEFT JOIN email_accounts ea ON t.id = ea.tenant_id AND ea.created BETWEEN ${periodStart} AND ${periodEnd}
+        LEFT JOIN domains d ON t.id = d.tenant_id AND d.created BETWEEN ${periodStart} AND ${periodEnd}
         LEFT JOIN leads l ON t.id = l.tenant_id AND l.imported BETWEEN ${periodStart} AND ${periodEnd}
         LEFT JOIN warmup_status w ON t.id = w.tenant_id AND w.status = 'active'
-        LEFT JOIN emails e ON t.id = e.tenant_id AND e.sent_at BETWEEN ${periodStart} AND ${periodEnd}
+        LEFT JOIN emails e ON t.id = e.tenant_id AND e.sent BETWEEN ${periodStart} AND ${periodEnd}
         WHERE t.id = ${tenantId}
         GROUP BY t.id
       `);
@@ -841,7 +841,7 @@ WITH campaign_performance AS (
     ca.updated_at
   FROM campaign_analytics ca
   WHERE ca.company_id = $1
-    AND ca.updated_at >= NOW() - INTERVAL '30 days'
+    AND ca.updated >= NOW() - INTERVAL '30 days'
 ),
 ranked_campaigns AS (
   SELECT 
@@ -920,7 +920,7 @@ WITH warmup_progress AS (
     ) as daily_progress_increase,
     wa.updated_at
   FROM warmup_analytics wa
-  WHERE wa.updated_at >= NOW() - INTERVAL '7 days'
+  WHERE wa.updated >= NOW() - INTERVAL '7 days'
 )
 SELECT 
   mailbox_id,
@@ -1003,7 +1003,7 @@ SELECT
   ROUND((ca.replied::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as reply_rate,
   ROUND((ca.bounced::DECIMAL / NULLIF(ca.sent, 0)) * 100, 2) as bounce_rate,
   -- Time-based metrics
-  EXTRACT(EPOCH FROM (c.completed_at - c.started_at))/3600 as campaign_duration_hours,
+  EXTRACT(EPOCH FROM (c.completed - c.started_at))/3600 as campaign_duration_hours,
   ca.updated_at
 FROM campaign_analytics ca
 JOIN campaigns c ON ca.campaign_id = c.id;
@@ -1056,10 +1056,10 @@ BEGIN
     -- Archive old analytics data
     INSERT INTO analytics_archive 
     SELECT * FROM campaign_analytics 
-    WHERE updated_at < cutoff_date;
+    WHERE updated < cutoff_date;
     
     DELETE FROM campaign_analytics 
-    WHERE updated_at < cutoff_date;
+    WHERE updated < cutoff_date;
     
     -- Refresh materialized views
     PERFORM refresh_campaign_performance();

@@ -367,7 +367,7 @@ CREATE TABLE staff_permission_changes (
     reason TEXT,                                 -- Why change was made
     approved BOOLEAN DEFAULT FALSE,              -- Whether approval required
     approved_by UUID REFERENCES users(id),       -- Who approved
-    approved_at TIMESTAMP WITH TIME ZONE,
+    approved TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -379,11 +379,11 @@ CREATE TABLE temporary_role_elevations (
     original_role_id INTEGER REFERENCES staff_roles(id),
     elevated_role_id INTEGER REFERENCES staff_roles(id),
     reason TEXT NOT NULL,                        -- Emergency justification
-    expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    expires TIMESTAMP WITH TIME ZONE NOT NULL,
     status VARCHAR(20) DEFAULT 'active',         -- 'active', 'expired', 'revoked'
     auto_revoke BOOLEAN DEFAULT TRUE,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    revoked_at TIMESTAMP WITH TIME ZONE
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    revoked TIMESTAMP WITH TIME ZONE
 );
 ```
 
@@ -569,8 +569,8 @@ CREATE TABLE support_tickets (
     status VARCHAR(30) DEFAULT 'open',           -- 'open', 'in_progress', 'waiting_customer', 'resolved', 'closed'
     assigned_to UUID REFERENCES users(id),
     created_by UUID REFERENCES users(id),
-    first_response_at TIMESTAMP WITH TIME ZONE,
-    resolved_at TIMESTAMP WITH TIME ZONE,
+    first_response TIMESTAMP WITH TIME ZONE,
+    resolved TIMESTAMP WITH TIME ZONE,
     customer_satisfaction INTEGER CHECK (customer_satisfaction BETWEEN 1 AND 5),
     tags TEXT[] DEFAULT '{}',
     metadata JSONB DEFAULT '{}',

@@ -125,8 +125,8 @@ erDiagram
         varchar name
         varchar domain
         jsonb settings
-        timestamp created_at
-        timestamp updated_at
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% User Management
@@ -136,17 +136,17 @@ erDiagram
         bigint tenant_id FK
         varchar email
         varchar password_hash
-        varchar role
-        timestamp created_at
-        timestamp updated_at
+        varchar role,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     TENANT_USERS {
         bigint id PK
         bigint tenant_id FK
         bigint user_id FK
-        varchar permission_level
-        timestamp joined_at
+        varchar permission_level,
+        joined TIMESTAMP WITH TIME ZONE
     }
 
     %% Staff Management
@@ -156,16 +156,16 @@ erDiagram
         varchar name
         varchar email
         varchar position
-        boolean is_active
-        timestamp created_at
+        boolean is_active,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     STAFF_ROLES {
         bigint id PK
         bigint tenant_id FK
         varchar role_name
-        jsonb permissions
-        timestamp created_at
+        jsonb permissions,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Infrastructure
@@ -175,8 +175,8 @@ erDiagram
         varchar instance_id
         varchar ip_address
         varchar status
-        jsonb configuration
-        timestamp created_at
+        jsonb configuration,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     SMTP_IP_ADDRESSES {
@@ -184,8 +184,8 @@ erDiagram
         bigint tenant_id FK
         varchar ip_address
         varchar status
-        integer reputation_score
-        timestamp created_at
+        integer reputation_score,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     DOMAINS {
@@ -193,8 +193,8 @@ erDiagram
         bigint tenant_id FK
         varchar domain_name
         varchar verification_status
-        jsonb dns_records
-        timestamp created_at
+        jsonb dns_records,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Email Management
@@ -203,8 +203,8 @@ erDiagram
         bigint tenant_id FK
         varchar email_address
         varchar password
-        varchar status
-        timestamp created_at
+        varchar status,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     TEMPLATES {
@@ -212,8 +212,8 @@ erDiagram
         bigint tenant_id FK
         varchar template_name
         text content
-        jsonb variables
-        timestamp created_at
+        jsonb variables,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     CAMPAIGNS {
@@ -221,16 +221,16 @@ erDiagram
         bigint tenant_id FK
         varchar campaign_name
         varchar status
-        jsonb configuration
-        timestamp created_at
+        jsonb configuration,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     LEADS {
         bigint id PK
         bigint tenant_id FK
-        varchar email
-        jsonb metadata
-        timestamp imported_at
+        varchar email,
+        jsonb metadata,
+        imported TIMESTAMP WITH TIME ZONE
     }
 
     %% Business Logic
@@ -238,17 +238,17 @@ erDiagram
         bigint id PK
         varchar plan_name
         decimal price
-        jsonb features
-        timestamp created_at
+        jsonb features,
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     SUBSCRIPTIONS {
         bigint id PK
         bigint tenant_id FK
         bigint plan_id FK
-        varchar status
-        timestamp started_at
-        timestamp expires_at
+        varchar status,
+        started TIMESTAMP WITH TIME ZONE,
+        expires TIMESTAMP WITH TIME ZONE
     }
 
     PAYMENTS {
@@ -256,8 +256,8 @@ erDiagram
         bigint tenant_id FK
         varchar stripe_payment_id
         decimal amount
-        varchar status
-        timestamp paid_at
+        varchar status,
+        paid TIMESTAMP WITH TIME ZONE
     }
 
     %% Relationships

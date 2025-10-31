@@ -342,7 +342,7 @@ const nileDBIntegration = {
         push_notifications = EXCLUDED.push_notifications,
         weekly_reports = EXCLUDED.weekly_reports,
         marketing_emails = EXCLUDED.marketing_emails,
-        updated_at = CURRENT_TIMESTAMP;
+        updated = CURRENT_TIMESTAMP;
     `
   },
   multiTenancy: {

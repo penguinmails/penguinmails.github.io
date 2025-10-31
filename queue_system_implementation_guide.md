@@ -77,13 +77,13 @@ CREATE TABLE jobs (
     payload JSONB NOT NULL,
     attempt_count INTEGER DEFAULT 0,
     max_attempts INTEGER DEFAULT 3,
-    run_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    started_at TIMESTAMP WITH TIME ZONE,
-    completed_at TIMESTAMP WITH TIME ZONE,
-    failed_at TIMESTAMP WITH TIME ZONE,
+    run TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    started TIMESTAMP WITH TIME ZONE,
+    completed TIMESTAMP WITH TIME ZONE,
+    failed TIMESTAMP WITH TIME ZONE,
     last_error_message TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Job execution logs (Audit Trail)
@@ -93,10 +93,10 @@ CREATE TABLE job_logs (
     status VARCHAR(50) NOT NULL,
     log_message TEXT,
     attempt_number INTEGER NOT NULL,
-    started_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    finished_at TIMESTAMP WITH TIME ZONE,
+    started TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    finished TIMESTAMP WITH TIME ZONE,
     duration INTERVAL,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Analytics jobs tracking (for OLAP pipeline)
@@ -106,10 +106,10 @@ CREATE TABLE analytics_jobs (
     status VARCHAR(50) DEFAULT 'queued',
     payload JSONB NOT NULL,
     priority INTEGER DEFAULT 100,
-    queued_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    processed_at TIMESTAMP WITH TIME ZONE,
+    queued TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    processed TIMESTAMP WITH TIME ZONE,
     error_message TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
 
@@ -558,7 +558,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         queue_name,
         payload,
         priority,
-        run_at: run_at ? new Date(run_at) : new Date(),
+        run_at: run ? new Date(run_at) : new Date(),
         max_attempts,
         status: 'queued'
       }
