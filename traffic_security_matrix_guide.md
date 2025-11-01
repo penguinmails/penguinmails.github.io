@@ -47,6 +47,8 @@ Distribution Examples:
 
 ### CRITICAL Traffic (>100K ops/hour)
 - **Content Operations**: `content_objects`, `email_opens`
+- **Message Processing**: `campaign_sequence_steps` (OLTP), `email_messages` (Content)
+- **Message Processing**: `campaign_sequence_steps` (OLTP), `content_inbox_message_refs` (Content)
 - **Message Processing**: `inbox_message_refs`, `email_clicks`
 - **Analytics**: OLAP tables during processing
 

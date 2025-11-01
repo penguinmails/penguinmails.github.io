@@ -172,8 +172,11 @@ export async function getStripeOnboardingLink(accountId: string) {
 **Minimal Schema Changes**: Add to existing `tenant_config` table
 
 ```sql
--- Add to existing tenant_config table
+-- Add to existing tenant_config table for tenant-level Stripe accounts
 ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
+
+-- Platform Stripe account stored in system_config (single row, key='stripe_account_id')
+-- This is separate from tenant customer accounts in tenant_config.stripe_customer_id
 
 -- Existing tables cover all other billing needs:
 -- - subscriptions: subscription management

@@ -21,12 +21,124 @@ The **Content Database** is PenguinMails' dedicated content storage system desig
 ---
 
 ## 📧 **Email Content Storage**
+## 📊 Message Analytics & Tracking
+### **email_messages** - Email Message Analytics & Traces
+```sql
+CREATE TABLE email_messages (
+    storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
+    tenant_id UUID NOT NULL,
+    email_account_id UUID,
+    campaign_id UUID REFERENCES campaigns(id), -- Cross-database reference
+    lead_id UUID REFERENCES leads(id), -- Cross-database reference
+    parent_message_id UUID REFERENCES email_messages(storage_key),
+    direction VARCHAR(20) CHECK (direction IN ('inbound', 'outbound')),
+    message_type VARCHAR(20) CHECK (message_type IN ('email', 'bounce', 'auto_reply')),
+    from_email VARCHAR(254),
+    to_email VARCHAR(254),
+    subject VARCHAR(500),
+    status VARCHAR(50) CHECK (status IN ('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'replied')),
+    processed TIMESTAMP WITH TIME ZONE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+**Key Features:**
+- **Storage Key**: Primary key that references email_content table
+- **Cross-Database References**: References to OLTP tables (campaigns, leads, email_accounts)
+- **Analytics Focus**: Message traces for campaign performance tracking
+- **Threading Support**: Self-reference for email conversation threads
+- **Message Classification**: Different types (email, bounce, auto_reply)
+- **Status Tracking**: Complete email lifecycle (queued → delivered → opened/replied)
+
+### **email_content** - Email Body Content (Enhanced from content_objects)
+
+```sql
+-- Enhanced email_content table with clearer structure
+CREATE TABLE email_content (
+    storage_key VARCHAR(500) PRIMARY KEY,
+    tenant_id UUID NOT NULL,
+    content_text TEXT,
+    content_html TEXT,
+    headers JSONB,
+    raw_size_bytes INTEGER,
+    compressed_size_bytes INTEGER,
+    content_hash VARCHAR(64),
+    compression_algorithm VARCHAR(20),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    expires TIMESTAMP WITH TIME ZONE,
+    archived TIMESTAMP WITH TIME ZONE,
+    retention_days INTEGER DEFAULT 2555, -- 7 years default
+    is_archived BOOLEAN DEFAULT FALSE,
+    last_accessed TIMESTAMP WITH TIME ZONE
+);
+```
+
+
+**Email Relationship Architecture:**
+```
+email_messages (metadata/analytics)
+    ↓ storage_key (FK)
+email_content (email body: text, html, headers) 
+    ↓ parent_storage_key (FK)
+attachments (binary files)
+```
+
+This creates a natural email hierarchy: message metadata → email content → attachments
+
+**Key Features:**
+- **Storage Key**: Matches `email_messages.storage_key` for cross-tier linking
+- **Dual Content**: Both plain text and HTML versions stored
+- **Headers Storage**: Complete email headers for compliance and debugging
+- **Size Tracking**: Both raw and compressed sizes for storage analysis
+- **Content Hash**: Optional deduplication support
+- **Retention Management**: Built-in expiration and archiving
+- **Compression**: Efficient storage with algorithm tracking
+### **content_inbox_message_refs** - Email Message Analytics & Traces
+
+```sql
+CREATE TABLE content_inbox_message_refs (
+    storage_key VARCHAR(500) PRIMARY KEY,
+    tenant_id UUID NOT NULL,
+    email_account_id UUID,
+    campaign_id UUID REFERENCES campaigns(id), -- Cross-database reference
+    lead_id UUID REFERENCES leads(id), -- Cross-database reference
+    parent_message_id UUID REFERENCES content_inbox_message_refs(storage_key),
+    direction VARCHAR(20) CHECK (direction IN ('inbound', 'outbound')),
+    message_type VARCHAR(20) CHECK (message_type IN ('email', 'bounce', 'auto_reply')),
+    from_email VARCHAR(254),
+    to_email VARCHAR(254),
+    subject VARCHAR(500),
+    status VARCHAR(50) CHECK (status IN ('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'replied')),
+    processed TIMESTAMP WITH TIME ZONE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
+**Key Features:**
+- **Storage Key**: Primary key for content database reference
+- **Cross-Database References**: References to OLTP tables (campaigns, leads, email_accounts)
+- **Analytics Focus**: Message traces for campaign performance tracking
+- **Threading Support**: Self-reference for email conversation threads
+- **Message Classification**: Different types (email, bounce, auto_reply)
+- **Status Tracking**: Complete email lifecycle (queued → delivered → opened/replied)
 
 ### **content_objects** - Full Email Content Storage
 
 ```sql
 CREATE TABLE content_objects (
     storage_key VARCHAR(500) PRIMARY KEY,
+**Email Relationship Architecture:**
+```
+content_inbox_message_refs (metadata/analytics)
+    ↓ storage_key (FK)
+content_objects (email body: text, html, headers) 
+    ↓ parent_storage_key (FK)
+attachments (binary files)
+```
+
+This creates a natural email hierarchy: message metadata → email content → attachments
     tenant_id UUID NOT NULL,
     content_text TEXT,
     content_html TEXT,
@@ -164,6 +276,20 @@ CREATE TABLE system_notifications (
     category VARCHAR(100) NOT NULL,
     title TEXT NOT NULL,
     message TEXT NOT NULL,
+-- Message analytics indexes
+CREATE INDEX idx_email_messages_tenant ON email_messages(tenant_id);
+CREATE INDEX idx_email_messages_campaign ON email_messages(campaign_id);
+CREATE INDEX idx_email_messages_status ON email_messages(status);
+CREATE INDEX idx_email_messages_created ON email_messages(created_at);
+CREATE INDEX idx_email_messages_email_account ON email_messages(email_account_id);
+CREATE INDEX idx_email_messages_parent ON email_messages(parent_message_id);
+
+-- Email content indexes
+CREATE INDEX idx_email_content_tenant ON email_content(tenant_id);
+CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expires IS NOT NULL;
+CREATE INDEX idx_email_content_archived ON email_content(is_archived, archived_at);
+CREATE INDEX idx_email_content_hash ON email_content(content_hash) WHERE content_hash IS NOT NULL;
+CREATE INDEX idx_email_content_created ON email_content(created_at);
     severity VARCHAR(20) CHECK (severity IN ('info', 'warning', 'error', 'critical')),
     source_type VARCHAR(50),
     source_id VARCHAR(255),
@@ -288,6 +414,13 @@ CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 CREATE INDEX idx_attachments_tenant ON attachments(parent_storage_key, created_at);
 CREATE INDEX idx_attachments_mime ON attachments(mime_type);
 CREATE INDEX idx_attachments_size ON attachments(size_bytes);
+-- Message analytics indexes
+CREATE INDEX idx_content_inbox_message_refs_tenant ON content_inbox_message_refs(tenant_id);
+CREATE INDEX idx_content_inbox_message_refs_campaign ON content_inbox_message_refs(campaign_id);
+CREATE INDEX idx_content_inbox_message_refs_status ON content_inbox_message_refs(status);
+CREATE INDEX idx_content_inbox_message_refs_created ON content_inbox_message_refs(created_at);
+CREATE INDEX idx_content_inbox_message_refs_email_account ON content_inbox_message_refs(email_account_id);
+CREATE INDEX idx_content_inbox_message_refs_parent ON content_inbox_message_refs(parent_message_id);
 CREATE INDEX idx_attachments_expires ON attachments(expires_at) WHERE expires IS NOT NULL;
 
 -- Transactional emails

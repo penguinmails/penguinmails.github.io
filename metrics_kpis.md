@@ -226,7 +226,12 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 #### High-Traffic Tables Heatmap
 | **Table Category** | **Table Name** | **Operations/Hour** | **Data Volume** | **User Impact** | **Traffic Level** |
+| **🔥 High OLTP** | `campaign_sequence_steps` | 50K-500K | High | High | 🟡 **HIGH** |
 |-------------------|----------------|-------------------|----------------|----------------|-----------------|
+| **🔥 Critical Content** | `email_messages` | 100K-1M | High | High | 🔴 **CRITICAL** |
+| **🔥 Critical Content** | `content_inbox_message_refs` | 100K-1M | High | High | 🔴 **CRITICAL** |
+| **🔥 High OLTP** | `campaign_sequence_steps` | 50K-500K | High | High | 🟡 **HIGH** |
+
 | **🔥 Critical OLTP** | `inbox_message_refs` | 100K-1M | High | High | 🔴 **CRITICAL** |
 | **🔥 High OLTP** | `campaigns` | 5K-50K | Medium | Medium | 🟡 **HIGH** |
 | **⚡ Content DB** | `content_objects` | 200K-2M | Very High | High | 🔴 **CRITICAL** |

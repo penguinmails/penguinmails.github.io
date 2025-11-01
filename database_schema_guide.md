@@ -45,11 +45,14 @@ graph TB
 ### **Tier 1: OLTP (Operational Database)**
 - **Purpose**: Fast transactional operations, real-time data, operational metadata
 - **Focus**: Lightweight queries, fast inserts, primary business logic
+- **Tables**: `campaign_sequence_steps`, `campaigns`, `users`, `tenants`, `companies`, `domains`, `email_accounts`, `leads`, `templates`
 - **Tables**: `inbox_message_refs`, `campaigns`, `users`, `tenants`, `companies`, `domains`, `email_accounts`, `leads`, `templates`
 - **Characteristics**: High write frequency, small records, indexed for speed
 
 ### **Tier 2: Content Database**  
 - **Purpose**: Heavy content storage, email bodies, attachments, large objects
+- **Tables**: `email_content`, `email_messages`, `attachments`, `transactional_emails`, `notifications`
+- **Tables**: `content_objects`, `content_inbox_message_refs`, `attachments`, `transactional_emails`, `notifications`
 - **Focus**: Content retention, attachment storage, full email archives
 - **Tables**: `content_objects`, `attachments`, `transactional_emails`, `notifications`
 - **Characteristics**: Large objects, content retention policies, efficient storage
@@ -68,6 +71,54 @@ graph TB
 
 ---
 
+### **Email Processing Flow**
+### **Email Processing Flow**
+```
+OLTP: campaign_sequence_steps (operational)
+    ↓
+Content Database: email_messages (analytics traces)
+    ↓
+Content Database: email_content (email bodies)
+    ↓
+Queue System: analytics processing
+    ↓
+OLAP Analytics: aggregated metrics
+### **Campaign Flow**
+```
+OLTP: campaigns → campaign_sequence_steps (operational)
+    ↓
+Content Database: email_messages (message analytics)
+    ↓
+Content Database: email_content (email content)
+    ↓
+Queue System: email sending jobs
+    ↓
+OLAP Analytics: campaign_analytics
+```
+```
+```
+OLTP: campaign_sequence_steps (operational)
+    ↓
+Content Database: content_inbox_message_refs (analytics traces)
+    ↓
+Content Database: content_objects (email bodies)
+    ↓
+Queue System: analytics processing
+    ↓
+OLAP Analytics: aggregated metrics
+### **Campaign Flow**
+```
+OLTP: campaigns → campaign_sequence_steps (operational)
+    ↓
+Content Database: content_inbox_message_refs (message analytics)
+    ↓
+Content Database: content_objects (email content)
+    ↓
+Queue System: email sending jobs
+    ↓
+OLAP Analytics: campaign_analytics
+```
+```
 ## 🔄 **Data Flow Architecture**
 
 ### **Email Processing Flow**
@@ -76,6 +127,25 @@ OLTP: inbox_message_refs (metadata)
     ↓
 Content Database: content_objects (email bodies)
     ↓
+#### **ID Fields**
+- **OLTP**: UUID primary keys for new tables, BIGSERIAL for existing legacy tables
+- **Content Database**: VARCHAR(500) storage keys, UUID for major entities
+- **OLAP Analytics**: BIGINT for OLAP tables, TEXT/UUID for cross-tier references
+- **Queue System**: UUID for job tracking, VARCHAR for queue names
+
+#### **Primary Key Strategy by Security & Traffic**
+| Traffic/Security | LOW Security | MEDIUM Security | HIGH Security |
+|------------------|--------------|-----------------|---------------|
+| **CRITICAL Traffic** (>100K ops/hr) | BIGINT | BIGINT | UUID |
+| **HIGH Traffic** (10K-100K ops/hr) | BIGINT | UUID | UUID |
+| **MEDIUM Traffic** (1K-10K ops/hr) | BIGINT | UUID | UUID |
+| **LOW Traffic** (<1K ops/hr) | INT | UUID | UUID |
+
+**Current Distribution:**
+- **UUID (Security-focused)**: 75% of tables - Protects sensitive data
+- **BIGINT (Analytics performance)**: 9% of tables - Optimizes high-traffic analytics
+- **VARCHAR (External/Natural)**: 6% of tables - Matches external system IDs
+- **Composite (Multi-tenant)**: 10% of tables - Handles tenant associations
 Queue System: analytics processing
     ↓
 OLAP Analytics: aggregated metrics
@@ -122,6 +192,9 @@ OLAP Analytics: infrastructure analytics
 - **`sent_at`** - Email send timestamp
 - **`started_at`** - Operation start time
 - **`completed_at`** - Operation completion time
+-- Example RLS policy
+CREATE POLICY tenant_isolation ON email_messages
+    FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
 
 #### **Field Type Guidelines**
 - **NileDB-Managed Tables**: Must follow NileDB type requirements
@@ -146,6 +219,9 @@ OLAP Analytics: infrastructure analytics
 - **Index Strategy**: Covering indexes for common queries, partial indexes for common WHERE clauses
 - **Partitioning**: Consider partitioning large operational tables by date or tenant
 - **Connection Pooling**: Aggressive connection pooling for high-throughput operations
+-- Example RLS policy
+CREATE POLICY tenant_isolation ON content_inbox_message_refs
+    FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
 
 ### **Content Database**
 - **Large Object Storage**: Efficient storage for email bodies and attachments

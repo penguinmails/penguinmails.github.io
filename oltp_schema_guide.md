@@ -201,38 +201,10 @@ CREATE TABLE template_tags (
 
 ---
 
-## 📧 **Email Message System (OLTP Metadata)**
+### 📧 **Campaign Execution System (OLTP Metadata)**
 
-### **Message Tracking & Orchestration**
-
-#### **inbox_message_refs** - Email Message Metadata
-```sql
-CREATE TABLE inbox_message_refs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    tenant_id UUID NOT NULL,
-    email_account_id UUID REFERENCES email_accounts(id),
-    campaign_id UUID, -- Nullable - not all messages are from campaigns
-    lead_id UUID REFERENCES leads(id),
-    parent_message_id UUID REFERENCES inbox_message_refs(id),
-    direction VARCHAR(20) CHECK (direction IN ('inbound', 'outbound')),
-    message_type VARCHAR(20) CHECK (message_type IN ('email', 'bounce', 'auto_reply')),
-    from_email VARCHAR(254),
-    to_email VARCHAR(254),
-    subject VARCHAR(500),
-    status VARCHAR(50) CHECK (status IN ('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'replied')),
-    processed TIMESTAMP WITH TIME ZONE,
-    content_storage_key VARCHAR(500),
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-```
-
-**Key Features:**
-- **Direction**: 'inbound' for replies, 'outbound' for campaign sends
-- **Message Types**: 'email', 'bounce', 'auto_reply' for different message categories
-- **Content Storage**: References Content Database via `content_storage_key`
-- **Threading**: `parent_message_id` for email thread support
-- **Status Progression**: queued → sent → delivered → [opened/replied/bounced]
+#### **campaign_sequence_steps** - Campaign Execution Orchestration
+*(Note: Email message analytics moved to Content Database as `email_messages` and `email_content`)*
 
 ---
 
@@ -492,6 +464,9 @@ CREATE TABLE system_config (
     updated_by UUID REFERENCES users(id),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+-- Platform Stripe account for receiving payments (separate from tenant customer accounts)
+-- This is stored in system_config with key='stripe_account_id' as a single row
 ```
 
 #### **feature_flags** - Feature Flag Management
@@ -572,7 +547,6 @@ CREATE TABLE tenant_policies (
 ### **Critical OLTP Indexes**
 ```sql
 -- Multi-tenant filtering
-CREATE INDEX idx_inbox_message_refs_tenant ON inbox_message_refs(tenant_id);
 CREATE INDEX idx_campaigns_tenant ON campaigns(tenant_id);
 CREATE INDEX idx_leads_tenant ON leads(tenant_id);
 CREATE INDEX idx_domains_tenant ON domains(tenant_id);
@@ -580,12 +554,6 @@ CREATE INDEX idx_email_accounts_tenant ON email_accounts(tenant_id);
 
 -- Campaign orchestration
 CREATE INDEX idx_campaign_sequence_steps_campaign_order ON campaign_sequence_steps(campaign_id, step_order);
-CREATE INDEX idx_inbox_message_refs_campaign ON inbox_message_refs(campaign_id);
-
--- Email processing
-CREATE INDEX idx_inbox_message_refs_status ON inbox_message_refs(status);
-CREATE INDEX idx_inbox_message_refs_email_account ON inbox_message_refs(email_account_id);
-CREATE INDEX idx_inbox_message_refs_created ON inbox_message_refs(created_at);
 
 -- User and tenant management
 CREATE INDEX idx_tenant_users_tenant ON tenant_users(tenant_id);
@@ -603,7 +571,6 @@ CREATE INDEX idx_domain_ip_assignments_domain ON domain_ip_assignments(domain_id
 ### **Row Level Security Implementation**
 ```sql
 -- Enable RLS on all multi-tenant tables
-ALTER TABLE inbox_message_refs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE campaigns ENABLE ROW LEVEL SECURITY;
 ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
 ALTER TABLE domains ENABLE ROW LEVEL SECURITY;
@@ -612,9 +579,6 @@ ALTER TABLE templates ENABLE ROW LEVEL SECURITY;
 ALTER TABLE companies ENABLE ROW LEVEL SECURITY;
 
 -- Tenant isolation policies
-CREATE POLICY inbox_message_refs_tenant_isolation ON inbox_message_refs
-    FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-
 CREATE POLICY campaigns_tenant_isolation ON campaigns
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
 

@@ -160,6 +160,25 @@ CREATE INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, 
 ### 2. Redis Queue Structure (Fast Processing)
 
 #### Queue Naming Convention
+const QueueNames = {
+  EMAIL_PROCESSING: 'queue:email:processing',
+  EMAIL_PROCESSING_HIGH: 'queue:email:processing:high',
+  EMAIL_PROCESSING_NORMAL: 'queue:email:processing',
+  EMAIL_PROCESSING_LOW: 'queue:email:processing:low',
+
+  EMAIL_SENDING: 'queue:email-sending',
+  EMAIL_SENDING_HIGH: 'queue:email-sending:high',
+  EMAIL_SENDING_NORMAL: 'queue:email-sending',
+  EMAIL_SENDING_LOW: 'queue:email-sending:low',
+
+  ANALYTICS_DAILY: 'queue:analytics:daily-aggregate',
+  ANALYTICS_CAMPAIGN: 'queue:analytics:campaign-aggregate',
+  ANALYTICS_BILLING: 'queue:analytics:billing-calculate',
+
+  WARMUP_PROCESSING: 'queue:warmup:process',
+  BOUNCE_PROCESSING: 'queue:bounce:process',
+  WEBHOOK_PROCESSING: 'queue:webhook:process'
+} as const;
 ```typescript
 const QueueNames = {
   EMAIL_SENDING: 'queue:email-sending',
@@ -377,6 +396,9 @@ export class EmailWorker {
 
     // Listen to all priority queues
     const queues = [
+      'queue:email:processing:high',
+      'queue:email:processing',
+      'queue:email:processing:low',
       'queue:email-sending:high',
       'queue:email-sending',
       'queue:email-sending:low',
@@ -433,7 +455,9 @@ export class EmailWorker {
       });
 
       // Execute the job based on queue type
-      if (queueName.includes('email-sending')) {
+      if (queueName.includes('email:processing')) {
+        await this.processIncomingEmail(payload);
+      } else if (queueName.includes('email-sending')) {
         await this.emailService.sendEmail(payload);
       } else if (queueName.includes('warmup')) {
         await this.processWarmupJob(payload);
@@ -518,6 +542,21 @@ export class EmailWorker {
           error: error.message,
           failed_at: new Date().toISOString()
         });
+  private async processIncomingEmail(payload: any) {
+    // Implementation for incoming email processing
+    // Creates email_messages and email_content entries
+    console.log('Processing incoming email:', payload);
+  }
+
+  private async processWarmupJob(payload: any) {
+    // Implementation for warmup processing
+    console.log('Processing warmup job:', payload);
+  }
+
+  private async processBounceJob(payload: any) {
+    // Implementation for bounce processing
+    console.log('Processing bounce job:', payload);
+  }
       }
 
       await this.logJobExecution(id, 'failed', error.message);
@@ -795,6 +834,9 @@ export class QueueHealthMonitor {
 
   private async checkQueueDepths() {
     const queues = [
+      'queue:email:processing:high',
+      'queue:email:processing',
+      'queue:email:processing:low',
       'queue:email-sending:high',
       'queue:email-sending',
       'queue:email-sending:low',
