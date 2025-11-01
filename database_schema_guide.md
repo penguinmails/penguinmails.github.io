@@ -184,14 +184,15 @@ OLAP Analytics: infrastructure analytics
 ### **Naming Conventions Across All Tiers**
 
 #### **Timestamp Fields**
-- **`created_at`** - Record creation time
-- **`updated_at`** - Record last update time
-- **`deleted_at`** - Soft deletion timestamp (nullable)
-- **`processed_at`** - Processing completion time
-- **`queued_at`** - Job queue timestamp
-- **`sent_at`** - Email send timestamp
-- **`started_at`** - Operation start time
-- **`completed_at`** - Operation completion time
+Following NileDB convention, timestamp fields use consistent naming without '_at' suffix:
+- **`created`** - Record creation time
+- **`updated`** - Record last update time
+- **`deleted`** - Soft deletion timestamp (nullable)
+- **`processed`** - Processing completion time
+- **`queued`** - Job queue timestamp
+- **`sent`** - Email send timestamp
+- **`started`** - Operation start time
+- **`completed`** - Operation completion time
 -- Example RLS policy
 CREATE POLICY tenant_isolation ON email_messages
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);

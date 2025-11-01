@@ -1,5 +1,31 @@
 # Queue System Schema Guide - Job Processing & Reliability
 
+## Table Naming Standards
+
+**Queue System Tier Naming Conventions:**
+- **Core Jobs**: `job_` prefix for job-related tables (`job_logs`, `job_metrics`, `job_audit`)
+- **Configuration**: `queue_` prefix for queue setup (`queue_alerts`, `queue_alert_history`)
+- **Worker Management**: `worker_` prefix for performance tracking (`worker_performance`)
+- **Queue Health**: `queue_` prefix for monitoring (`queue_health`)
+- **Job Types**: `job_[type]_details` suffix for specialized job tables (`job_email_sending_details`)
+- **Scheduling**: Singular for recurring jobs (`scheduled_jobs`)
+
+**Table Name Examples:**
+- `job_queues` - Queue configuration
+- `jobs` - Job state management (PostgreSQL)
+- `job_logs` - Job execution logs
+- `job_metrics` - Business performance analytics
+- `worker_performance` - Worker business metrics
+- `queue_health` - Queue business health status
+- `job_email_sending_details` - Email campaign sending job details
+- `job_analytics_details` - Analytics aggregation job details
+- `job_content_details` - Content archival job details
+- `job_audit` - Job audit trail
+- `dead_letter_jobs` - Failed jobs archive
+- `queue_alerts` - Queue health alerts configuration
+- `queue_alert_history` - Alert history
+- `scheduled_jobs` - Recurring job management
+
 ## Overview
 
 The **Queue System** is PenguinMails' job processing and reliability layer designed for asynchronous operations, retry logic, and system reliability. This tier provides a hybrid PostgreSQL + Redis architecture combining durability with high-performance job processing.
@@ -17,6 +43,39 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 - **PostgreSQL State**: Durable job tracking and audit trails
 - **Priority Queues**: Multiple priority levels for different job types
 - **Retry Logic**: Exponential backoff and comprehensive error handling
+
+### 🎯 **Priority System Enhancement**
+
+**CURRENT ISSUE**: Single priority field causes starvation - low priority jobs never get processed when high priority jobs keep coming.
+
+**SOLUTION - Dynamic Priority Bands:**
+- **Critical (1-25)**: System alerts, security events, immediate failures
+- **High (26-50)**: Time-sensitive operations, user-initiated actions
+- **Normal (51-150)**: Standard operations, batch processing
+- **Low (151-200)**: Background tasks, cleanup operations
+- **Background (201+)**: Archival, optimization, maintenance
+
+**STARVATION PREVENTION MECHANISMS:**
+- **Priority Aging**: Jobs gain +1 priority point every 10 minutes in queue
+- **Fair Queuing**: Round-robin processing across priority bands
+- **Dynamic Thresholds**: Priority bands adjust based on queue depth
+- **Starvation Detection**: Alert when jobs haven't been processed for 4+ hours
+
+**REDIS QUEUE STRUCTURE:**
+```
+queue:email-sending
+├── queue:email-sending:critical (1-25)
+├── queue:email-sending:high (26-50)
+├── queue:email-sending:normal (51-150)
+├── queue:email-sending:low (151-200)
+└── queue:email-sending:background (201+)
+```
+
+**IMPLEMENTATION TARGETS:**
+- **Processing Guarantee**: No job waits >4 hours in any non-empty queue
+- **Fair Distribution**: Each priority band gets proportional processing time
+- **Dynamic Adaptation**: Priority thresholds adjust based on system load
+- **Starvation Alerts**: Automatic detection and notification of blocked queues
 
 ---
 
@@ -251,7 +310,7 @@ $$ LANGUAGE plpgsql;
 
 ## 📊 **Job Monitoring & Analytics**
 
-### **job_metrics** - Performance Analytics
+### **job_metrics** - Business Performance Analytics
 
 ```sql
 CREATE TABLE job_metrics (
@@ -262,20 +321,21 @@ CREATE TABLE job_metrics (
     total_jobs INTEGER DEFAULT 0,
     completed_jobs INTEGER DEFAULT 0,
     failed_jobs INTEGER DEFAULT 0,
-    avg_duration_ms INTEGER DEFAULT 0,
-    p95_duration_ms INTEGER DEFAULT 0,
-    p99_duration_ms INTEGER DEFAULT 0,
     throughput_per_hour INTEGER DEFAULT 0,
     error_rate_percent DECIMAL(5,2) DEFAULT 0,
     retry_count INTEGER DEFAULT 0,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    
+
     UNIQUE(date, queue_name, job_type)
 );
+
+-- Performance metrics moved to PostHog:
+-- Track via PostHog events: 'job_duration', 'queue_throughput', 'worker_utilization'
+-- Properties: {duration_ms, queue_name, job_type, worker_id, tenant_id}
 ```
 
-### **worker_performance** - Worker Analytics
+### **worker_performance** - Worker Business Metrics
 
 ```sql
 CREATE TABLE worker_performance (
@@ -285,18 +345,21 @@ CREATE TABLE worker_performance (
     jobs_processed INTEGER DEFAULT 0,
     jobs_successful INTEGER DEFAULT 0,
     jobs_failed INTEGER DEFAULT 0,
-    avg_processing_time_ms INTEGER DEFAULT 0,
     uptime_minutes INTEGER DEFAULT 0,
     error_count INTEGER DEFAULT 0,
     last_heartbeat TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    
+
     UNIQUE(worker_id, date)
 );
+
+-- Technical performance metrics moved to PostHog:
+-- Track via PostHog events: 'worker_performance', 'job_processing_time'
+-- Properties: {worker_id, processing_time_ms, memory_usage_mb, queue_name, job_type}
 ```
 
-### **queue_health** - System Health Monitoring
+### **queue_health** - Queue Business Health Status
 
 ```sql
 CREATE TABLE queue_health (
@@ -307,12 +370,14 @@ CREATE TABLE queue_health (
     processing_jobs INTEGER DEFAULT 0,
     failed_jobs_24h INTEGER DEFAULT 0,
     oldest_pending_job_age_minutes INTEGER DEFAULT 0,
-    avg_processing_time_minutes INTEGER DEFAULT 0,
-    error_rate_percent DECIMAL(5,2) DEFAULT 0,
     health_status VARCHAR(20) CHECK (health_status IN ('healthy', 'degraded', 'critical')) DEFAULT 'healthy',
     alerts_generated INTEGER DEFAULT 0,
     metadata JSONB
 );
+
+-- Technical performance metrics moved to PostHog:
+-- Track via PostHog events: 'queue_performance', 'job_processing_metrics'
+-- Properties: {queue_name, processing_time_minutes, error_rate_percent, throughput_jobs_per_hour}
 ```
 
 ---
@@ -402,19 +467,361 @@ CREATE INDEX idx_queue_health_queue ON queue_health(queue_name, timestamp DESC);
 
 ## 🔐 **Security & Access Control**
 
-### **Job Access Policies**
+### **Queue System Connection Pooling Strategy**
 ```sql
--- Multi-tenant job isolation
+-- Queue system connection pool configuration
+CREATE TABLE queue_connection_pools (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    pool_type VARCHAR(30) CHECK (pool_type IN ('job_processing', 'job_monitoring', 'queue_management', 'worker_coordination')),
+    min_connections INTEGER DEFAULT 3,
+    max_connections INTEGER DEFAULT 25,
+    connection_timeout_seconds INTEGER DEFAULT 15,
+    idle_timeout_seconds INTEGER DEFAULT 300,
+    max_lifetime_seconds INTEGER DEFAULT 1800,
+    acquire_timeout_seconds INTEGER DEFAULT 30,
+    retry_on_failure BOOLEAN DEFAULT TRUE,
+    load_balance_mode VARCHAR(20) DEFAULT 'round_robin' CHECK (load_balance_mode IN ('round_robin', 'least_loaded', 'random')),
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+
+    UNIQUE(pool_type)
+);
+
+-- Queue pool sizing optimized for different workloads
+INSERT INTO queue_connection_pools (
+    pool_type, min_connections, max_connections,
+    connection_timeout_seconds, idle_timeout_seconds, load_balance_mode
+) VALUES
+('job_processing', 5, 40, 10, 180, 'least_loaded'),     -- High-throughput job processing
+('job_monitoring', 2, 15, 20, 300, 'round_robin'),      -- Monitoring and health checks
+('queue_management', 2, 10, 15, 600, 'round_robin'),    -- Queue administration
+('worker_coordination', 3, 20, 12, 240, 'least_loaded'); -- Worker communication
+
+-- Queue pool performance metrics
+CREATE TABLE queue_pool_metrics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    pool_type VARCHAR(30),
+    collected_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    active_connections INTEGER,
+    idle_connections INTEGER,
+    pending_acquires INTEGER,
+    jobs_processed_per_second DECIMAL(8,2),
+    queue_depth_avg INTEGER,
+    worker_utilization_percent DECIMAL(5,2),
+    redis_connection_latency_ms INTEGER,
+    job_processing_latency_ms INTEGER,
+    dead_letter_queue_size INTEGER,
+    starvation_events_count INTEGER DEFAULT 0
+);
+
+-- Queue pool auto-scaling function
+CREATE OR REPLACE FUNCTION autoscale_queue_pools()
+RETURNS void AS $$
+DECLARE
+    queue_load RECORD;
+    scaling_action TEXT;
+    current_max INTEGER;
+BEGIN
+    -- Analyze current queue load
+    SELECT
+        AVG(queue_depth_avg) as avg_depth,
+        AVG(worker_utilization_percent) as avg_utilization,
+        AVG(pending_acquires) as avg_pending
+    INTO queue_load
+    FROM queue_pool_metrics
+    WHERE collected_at >= NOW() - INTERVAL '10 minutes';
+
+    -- Scale based on load patterns
+    FOR queue_load IN
+        SELECT
+            pool_type,
+            AVG(queue_depth_avg) as avg_depth,
+            AVG(worker_utilization_percent) as avg_utilization,
+            AVG(pending_acquires) as avg_pending
+        FROM queue_pool_metrics
+        WHERE collected_at >= NOW() - INTERVAL '10 minutes'
+        GROUP BY pool_type
+    LOOP
+        scaling_action := 'no_change';
+        current_max := 0;
+
+        -- Get current max connections
+        SELECT max_connections INTO current_max
+        FROM queue_connection_pools
+        WHERE pool_type = queue_load.pool_type;
+
+        -- High load: increase connections
+        IF queue_load.avg_utilization > 85 OR queue_load.avg_pending > 10 THEN
+            UPDATE queue_connection_pools
+            SET max_connections = LEAST(current_max + 5, 60)
+            WHERE pool_type = queue_load.pool_type;
+            scaling_action := 'increased';
+
+        -- Low load: decrease connections
+        ELSIF queue_load.avg_utilization < 30 AND queue_load.avg_pending = 0 THEN
+            UPDATE queue_connection_pools
+            SET max_connections = GREATEST(current_max - 2, min_connections)
+            WHERE pool_type = queue_load.pool_type;
+            scaling_action := 'decreased';
+        END IF;
+
+        -- Log scaling actions
+        IF scaling_action != 'no_change' THEN
+            INSERT INTO queue_security_audit (
+                action, severity, metadata
+            ) VALUES (
+                'pool_autoscaling',
+                'info',
+                jsonb_build_object(
+                    'pool_type', queue_load.pool_type,
+                    'action', scaling_action,
+                    'avg_utilization', queue_load.avg_utilization,
+                    'avg_pending', queue_load.avg_pending,
+                    'new_max_connections', CASE
+                        WHEN scaling_action = 'increased' THEN LEAST(current_max + 5, 60)
+                        WHEN scaling_action = 'decreased' THEN GREATEST(current_max - 2, min_connections)
+                        ELSE current_max
+                    END,
+                    'scaling_time', NOW()
+                )
+            );
+        END IF;
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+### **Unified Security Policies for Queue System**
+```sql
+-- Enhanced multi-tenant job isolation with security controls
 CREATE POLICY jobs_tenant_isolation ON jobs
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
 
 CREATE POLICY job_logs_tenant_isolation ON job_logs
     FOR ALL USING (
         job_id IN (
-            SELECT id FROM jobs 
+            SELECT id FROM jobs
             WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
         )
     );
+
+-- Queue access control based on job types and user permissions
+CREATE POLICY queue_access_control ON job_queues
+    FOR ALL USING (
+        name IN (
+            SELECT queue_name FROM user_queue_permissions
+            WHERE user_id = current_setting('app.current_user_id')::uuid
+            AND permission_level IN ('read', 'write', 'admin')
+        )
+    );
+
+-- Job execution security - only authorized workers can update jobs
+CREATE POLICY job_execution_security ON jobs
+    FOR UPDATE USING (
+        status IN ('processing', 'completed', 'failed')
+        AND current_setting('app.worker_id') IS NOT NULL
+    );
+
+-- Prevent unauthorized job cancellation
+CREATE POLICY job_cancellation_policy ON jobs
+    FOR UPDATE USING (
+        status = 'cancelled'
+        AND (
+            user_id = current_setting('app.current_user_id')::uuid
+            OR EXISTS (
+                SELECT 1 FROM user_queue_permissions
+                WHERE user_id = current_setting('app.current_user_id')::uuid
+                AND queue_name = jobs.queue_name
+                AND permission_level = 'admin'
+            )
+        )
+    );
+```
+
+### **Queue System Security Tables**
+```sql
+-- User permissions for queue access
+CREATE TABLE user_queue_permissions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL,
+    queue_name VARCHAR(100) REFERENCES job_queues(name) ON DELETE CASCADE,
+    permission_level VARCHAR(20) CHECK (permission_level IN ('read', 'write', 'admin')),
+    granted_by UUID REFERENCES users(id),
+    granted_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    expires_at TIMESTAMP WITH TIME ZONE,
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+
+    UNIQUE(user_id, queue_name)
+);
+
+-- Queue security audit log
+CREATE TABLE queue_security_audit (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID,
+    tenant_id UUID,
+    queue_name VARCHAR(100),
+    job_id UUID,
+    action VARCHAR(50) NOT NULL CHECK (action IN (
+        'job_created', 'job_cancelled', 'queue_accessed', 'permission_granted',
+        'permission_revoked', 'security_violation', 'rate_limit_exceeded'
+    )),
+    severity VARCHAR(20) CHECK (severity IN ('low', 'medium', 'high', 'critical')),
+    ip_address INET,
+    user_agent TEXT,
+    success BOOLEAN DEFAULT TRUE,
+    failure_reason TEXT,
+    metadata JSONB,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Queue rate limiting
+CREATE TABLE queue_rate_limits (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tenant_id UUID,
+    queue_name VARCHAR(100),
+    user_id UUID,  -- NULL for tenant-wide limits
+    time_window_seconds INTEGER DEFAULT 3600,  -- 1 hour default
+    max_requests INTEGER NOT NULL,
+    current_count INTEGER DEFAULT 0,
+    window_start TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+
+    UNIQUE(tenant_id, queue_name, user_id, time_window_seconds)
+);
+
+-- Security monitoring indexes
+CREATE INDEX idx_queue_security_audit_tenant ON queue_security_audit(tenant_id, created DESC);
+CREATE INDEX idx_queue_security_audit_action ON queue_security_audit(action, created DESC);
+CREATE INDEX idx_queue_security_audit_user ON queue_security_audit(user_id, created DESC);
+CREATE INDEX idx_user_queue_permissions_user ON user_queue_permissions(user_id, is_active);
+CREATE INDEX idx_queue_rate_limits_check ON queue_rate_limits(tenant_id, queue_name, window_start DESC);
+```
+
+### **Queue Security Functions**
+```sql
+-- Rate limiting check function
+CREATE OR REPLACE FUNCTION check_queue_rate_limit(
+    p_tenant_id UUID,
+    p_queue_name VARCHAR(100),
+    p_user_id UUID DEFAULT NULL
+)
+RETURNS BOOLEAN AS $$
+DECLARE
+    rate_limit_record RECORD;
+    current_window_start TIMESTAMP;
+BEGIN
+    -- Calculate current window
+    current_window_start := date_trunc('hour', NOW());
+
+    -- Check user-specific limit first
+    IF p_user_id IS NOT NULL THEN
+        SELECT * INTO rate_limit_record
+        FROM queue_rate_limits
+        WHERE tenant_id = p_tenant_id
+        AND queue_name = p_queue_name
+        AND user_id = p_user_id
+        AND window_start >= current_window_start
+        AND is_active = true;
+
+        IF FOUND THEN
+            IF rate_limit_record.current_count >= rate_limit_record.max_requests THEN
+                -- Log rate limit violation
+                INSERT INTO queue_security_audit (
+                    user_id, tenant_id, queue_name, action, severity, success, failure_reason
+                ) VALUES (
+                    p_user_id, p_tenant_id, p_queue_name, 'rate_limit_exceeded',
+                    'medium', false, 'user_rate_limit_exceeded'
+                );
+                RETURN FALSE;
+            END IF;
+
+            -- Increment counter
+            UPDATE queue_rate_limits
+            SET current_count = current_count + 1
+            WHERE id = rate_limit_record.id;
+            RETURN TRUE;
+        END IF;
+    END IF;
+
+    -- Check tenant-wide limit
+    SELECT * INTO rate_limit_record
+    FROM queue_rate_limits
+    WHERE tenant_id = p_tenant_id
+    AND queue_name = p_queue_name
+    AND user_id IS NULL
+    AND window_start >= current_window_start
+    AND is_active = true;
+
+    IF FOUND THEN
+        IF rate_limit_record.current_count >= rate_limit_record.max_requests THEN
+            INSERT INTO queue_security_audit (
+                user_id, tenant_id, queue_name, action, severity, success, failure_reason
+            ) VALUES (
+                p_user_id, p_tenant_id, p_queue_name, 'rate_limit_exceeded',
+                'medium', false, 'tenant_rate_limit_exceeded'
+            );
+            RETURN FALSE;
+        END IF;
+
+        UPDATE queue_rate_limits
+        SET current_count = current_count + 1
+        WHERE id = rate_limit_record.id;
+        RETURN TRUE;
+    END IF;
+
+    -- No rate limit configured, allow request
+    RETURN TRUE;
+END;
+$$ LANGUAGE plpgsql;
+
+-- Queue access validation function
+CREATE OR REPLACE FUNCTION validate_queue_access(
+    p_user_id UUID,
+    p_queue_name VARCHAR(100),
+    p_required_permission VARCHAR(20) DEFAULT 'read'
+)
+RETURNS BOOLEAN AS $$
+DECLARE
+    permission_level VARCHAR(20);
+BEGIN
+    -- Check if user has required permission for queue
+    SELECT permission_level INTO permission_level
+    FROM user_queue_permissions
+    WHERE user_id = p_user_id
+    AND queue_name = p_queue_name
+    AND is_active = true
+    AND (expires_at IS NULL OR expires_at > NOW());
+
+    IF NOT FOUND THEN
+        -- Log access denied
+        INSERT INTO queue_security_audit (
+            user_id, queue_name, action, severity, success, failure_reason
+        ) VALUES (
+            p_user_id, p_queue_name, 'queue_accessed',
+            'medium', false, 'no_queue_permission'
+        );
+        RETURN FALSE;
+    END IF;
+
+    -- Check permission level hierarchy: admin > write > read
+    IF (p_required_permission = 'read' AND permission_level IN ('read', 'write', 'admin')) OR
+       (p_required_permission = 'write' AND permission_level IN ('write', 'admin')) OR
+       (p_required_permission = 'admin' AND permission_level = 'admin') THEN
+        RETURN TRUE;
+    END IF;
+
+    -- Insufficient permission level
+    INSERT INTO queue_security_audit (
+        user_id, queue_name, action, severity, success, failure_reason
+    ) VALUES (
+        p_user_id, p_queue_name, 'queue_accessed',
+        'medium', false, 'insufficient_permission_level'
+    );
+    RETURN FALSE;
+END;
+$$ LANGUAGE plpgsql;
 ```
 
 ### **Job Auditing**

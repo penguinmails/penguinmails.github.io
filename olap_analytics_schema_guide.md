@@ -1,5 +1,23 @@
 # OLAP Analytics Schema Guide
 
+## Table Naming Standards
+
+**OLAP Analytics Tier Naming Conventions:**
+- **Business Analytics**: `[entity]_analytics` suffix for core analytics tables (`campaign_analytics`, `billing_analytics`)
+- **Administrative**: `admin_` prefix for audit and system tables (`admin_audit_logs`, `admin_system_events`)
+- **System Events**: Singular for event tracking (`admin_system_events`)
+- **Audit Logs**: Plural for comprehensive logs (`admin_audit_logs`)
+
+**Table Name Examples:**
+- `billing_analytics` - Usage tracking per billing period (central hub)
+- `campaign_analytics` - Campaign performance metrics
+- `mailbox_analytics` - Individual mailbox performance
+- `lead_analytics` - Individual lead engagement
+- `warmup_analytics` - Email warmup progression
+- `sequence_step_analytics` - Campaign step performance
+- `admin_audit_logs` - Complete audit trail with performance tracking
+- `admin_system_events` - Unified admin activity and system monitoring
+
 ## Document Summary
 This comprehensive guide details the OLAP (Online Analytical Processing) schema for PenguinMails' business intelligence and analytics system. It provides complete table definitions, relationships, indexing strategies, and implementation patterns for comprehensive reporting and analytics capabilities.
 
@@ -416,10 +434,10 @@ CREATE INDEX idx_sequence_step_analytics_billing ON sequence_step_analytics(bill
 
 ## Administrative Analytics Tables
 
-### 7. Admin Audit Log
+### 7. Enhanced Admin Audit Log with Performance Tracking
 
 ```sql
--- Admin Audit Log - System administration tracking
+-- Enhanced Admin Audit Log - Complete audit trail with performance tracking
 CREATE TABLE admin_audit_log (
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -434,15 +452,35 @@ CREATE TABLE admin_audit_log (
     user_agent TEXT,
     timestamp BIGINT,
     notes TEXT,
-    metadata JSONB
+    metadata JSONB,
+    -- Performance tracking additions
+    query_duration_ms INTEGER,              -- How long the operation took
+    affected_rows INTEGER DEFAULT 0,        -- Number of rows affected
+    query_complexity_score INTEGER,         -- Complexity metric (0-100)
+    analytics_event_id TEXT,                -- Link to analytics events (optional)
+    performance_category VARCHAR(20) CHECK (performance_category IN ('fast', 'normal', 'slow', 'critical')),
+
+    -- Technical performance tracking moved to PostHog:
+    -- Track via PostHog events: 'db_query_performance', 'admin_action_timing'
+    -- Properties: {query_duration_ms, query_complexity_score, affected_rows, performance_category}
+    -- Enhanced compliance tracking
+    compliance_flags TEXT[],                -- GDPR, SOX, HIPAA flags
+    data_classification VARCHAR(20) CHECK (data_classification IN ('public', 'internal', 'confidential', 'restricted')),
+    retention_category VARCHAR(20) CHECK (retention_category IN ('short_term', 'medium_term', 'long_term', 'permanent'))
 );
 
--- Indexes for admin audit log
+-- Enhanced indexes for admin audit log with performance tracking
 CREATE INDEX idx_admin_audit_admin_user ON admin_audit_log(admin_user_id, creation_time DESC);
 CREATE INDEX idx_admin_audit_tenant ON admin_audit_log(tenant_id, creation_time DESC);
 CREATE INDEX idx_admin_audit_resource ON admin_audit_log(resource_type, resource_id);
 CREATE INDEX idx_admin_audit_action ON admin_audit_log(action, creation_time DESC);
 CREATE INDEX idx_admin_audit_timestamp ON admin_audit_log(timestamp);
+-- Performance monitoring indexes
+CREATE INDEX idx_admin_audit_performance ON admin_audit_log(performance_category, query_duration_ms DESC) WHERE query_duration_ms IS NOT NULL;
+CREATE INDEX idx_admin_audit_analytics ON admin_audit_log(analytics_event_id) WHERE analytics_event_id IS NOT NULL;
+CREATE INDEX idx_admin_audit_compliance ON admin_audit_log USING gin(compliance_flags) WHERE compliance_flags IS NOT NULL;
+CREATE INDEX idx_admin_audit_classification ON admin_audit_log(data_classification, retention_category);
+CREATE INDEX idx_admin_audit_complexity ON admin_audit_log(query_complexity_score DESC) WHERE query_complexity_score IS NOT NULL;
 ```
 
 **Purpose**: Comprehensive audit trail for administrative actions across all tenants.
@@ -1092,7 +1130,371 @@ $$ LANGUAGE plpgsql;
 
 ## Security and Compliance
 
-### 1. Row Level Security
+### **OLAP Connection Pooling Strategy**
+```sql
+-- OLAP analytics connection pool configuration
+CREATE TABLE analytics_connection_pools (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    pool_type VARCHAR(30) CHECK (pool_type IN ('dashboard_queries', 'report_generation', 'data_exports', 'ad_hoc_analytics')),
+    min_connections INTEGER DEFAULT 2,
+    max_connections INTEGER DEFAULT 12,
+    connection_timeout_seconds INTEGER DEFAULT 120,
+    idle_timeout_seconds INTEGER DEFAULT 1800,
+    max_lifetime_seconds INTEGER DEFAULT 7200,
+    acquire_timeout_seconds INTEGER DEFAULT 180,
+    query_timeout_seconds INTEGER DEFAULT 300,
+    memory_limit_mb INTEGER DEFAULT 512,
+    temp_space_limit_mb INTEGER DEFAULT 1024,
+    enable_parallel_queries BOOLEAN DEFAULT TRUE,
+    max_parallel_workers INTEGER DEFAULT 4,
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+
+    UNIQUE(pool_type)
+);
+
+-- Analytics pool sizing based on query complexity
+INSERT INTO analytics_connection_pools (
+    pool_type, min_connections, max_connections,
+    connection_timeout_seconds, query_timeout_seconds,
+    enable_parallel_queries, max_parallel_workers
+) VALUES
+('dashboard_queries', 3, 15, 60, 30, true, 2),      -- Fast dashboard queries
+('report_generation', 2, 8, 120, 600, true, 4),     -- Complex report generation
+('data_exports', 1, 5, 180, 1800, false, 1),        -- Large data exports
+('ad_hoc_analytics', 2, 10, 90, 300, true, 3);      -- Exploratory analytics
+
+-- Analytics pool performance metrics
+CREATE TABLE analytics_pool_metrics (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    pool_type VARCHAR(30),
+    collected_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    active_connections INTEGER,
+    idle_connections INTEGER,
+    pending_connections INTEGER,
+    active_queries INTEGER,
+    query_queue_depth INTEGER,
+    avg_query_duration_ms INTEGER,
+    max_query_duration_ms INTEGER,
+    total_queries_executed BIGINT,
+    cache_hit_rate DECIMAL(5,2),
+    memory_usage_mb INTEGER,
+    temp_space_usage_mb INTEGER,
+    parallel_workers_used_avg DECIMAL(3,1),
+    query_timeout_count INTEGER DEFAULT 0,
+    connection_timeout_count INTEGER DEFAULT 0
+);
+
+-- Analytics pool optimization function
+CREATE OR REPLACE FUNCTION optimize_analytics_pools()
+RETURNS void AS $$
+DECLARE
+    query_patterns RECORD;
+    pool_utilization RECORD;
+    optimization_needed BOOLEAN := FALSE;
+BEGIN
+    -- Analyze query patterns over last 24 hours
+    SELECT
+        AVG(avg_query_duration_ms) as avg_duration,
+        MAX(max_query_duration_ms) as max_duration,
+        AVG(active_queries) as avg_concurrent,
+        MAX(active_queries) as peak_concurrent,
+        SUM(query_timeout_count) as timeout_count,
+        AVG(cache_hit_rate) as avg_cache_hit
+    INTO query_patterns
+    FROM analytics_pool_metrics
+    WHERE collected_at >= NOW() - INTERVAL '24 hours';
+
+    -- Check pool utilization
+    SELECT
+        pool_type,
+        AVG(active_connections::DECIMAL / max_connections) * 100 as utilization_rate,
+        AVG(pending_connections) as avg_pending
+    INTO pool_utilization
+    FROM analytics_connection_pools cp
+    JOIN analytics_pool_metrics pm ON cp.pool_type = pm.pool_type
+    WHERE pm.collected_at >= NOW() - INTERVAL '1 hour'
+    GROUP BY pool_type, max_connections;
+
+    -- Optimize based on patterns
+    -- High concurrent load: increase connections for dashboard queries
+    IF query_patterns.avg_concurrent > 8 THEN
+        UPDATE analytics_connection_pools
+        SET max_connections = LEAST(max_connections + 3, 25)
+        WHERE pool_type = 'dashboard_queries';
+        optimization_needed := TRUE;
+    END IF;
+
+    -- Long-running reports: increase timeouts and workers
+    IF query_patterns.avg_duration > 60000 THEN -- > 1 minute
+        UPDATE analytics_connection_pools
+        SET query_timeout_seconds = LEAST(query_timeout_seconds + 300, 3600),
+            max_parallel_workers = LEAST(max_parallel_workers + 1, 8)
+        WHERE pool_type = 'report_generation';
+        optimization_needed := TRUE;
+    END IF;
+
+    -- High timeout rate: optimize query performance
+    IF query_patterns.timeout_count > 10 THEN
+        -- This would trigger query optimization recommendations
+        INSERT INTO analytics_access_audit (
+            query_type, table_accessed, success, failure_reason
+        ) VALUES (
+            'system_optimization', 'query_performance',
+            false, 'high_timeout_rate_detected'
+        );
+        optimization_needed := TRUE;
+    END IF;
+
+    -- Log optimization actions if any changes made
+    IF optimization_needed THEN
+        INSERT INTO admin_system_events (
+            event_type, severity, message, details
+        ) VALUES (
+            'pool_optimization',
+            'info',
+            'Analytics connection pools optimized based on query patterns',
+            jsonb_build_object(
+                'avg_query_duration_ms', query_patterns.avg_duration,
+                'peak_concurrent_queries', query_patterns.peak_concurrent,
+                'timeout_count_24h', query_patterns.timeout_count,
+                'cache_hit_rate', query_patterns.avg_cache_hit,
+                'optimization_timestamp', NOW()
+            )
+        );
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+### **Unified Security Policies for Analytics**
+```sql
+-- Enhanced RLS on all analytics tables
+ALTER TABLE billing_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE campaign_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE mailbox_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE lead_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE warmup_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE sequence_step_analytics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE admin_audit_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE admin_system_events ENABLE ROW LEVEL SECURITY;
+
+-- Cross-tier tenant isolation policies
+CREATE POLICY billing_analytics_tenant_isolation ON billing_analytics
+    FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::text);
+
+CREATE POLICY campaign_analytics_tenant_isolation ON campaign_analytics
+    FOR ALL USING (company_id IN (
+        SELECT id FROM companies
+        WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
+    ));
+
+CREATE POLICY mailbox_analytics_tenant_isolation ON mailbox_analytics
+    FOR ALL USING (company_id IN (
+        SELECT id FROM companies
+        WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
+    ));
+
+CREATE POLICY lead_analytics_tenant_isolation ON lead_analytics
+    FOR ALL USING (EXISTS (
+        SELECT 1 FROM campaign_analytics ca
+        WHERE ca.campaign_id = lead_analytics.campaign_id
+        AND ca.company_id IN (
+            SELECT id FROM companies
+            WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
+        )
+    ));
+
+CREATE POLICY warmup_analytics_tenant_isolation ON warmup_analytics
+    FOR ALL USING (company_id IN (
+        SELECT id FROM companies
+        WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
+    ));
+
+CREATE POLICY sequence_step_analytics_tenant_isolation ON sequence_step_analytics
+    FOR ALL USING (company_id IN (
+        SELECT id FROM companies
+        WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
+    ));
+
+-- Admin access control - only admin users can access audit logs
+CREATE POLICY admin_audit_logs_access ON admin_audit_logs
+    FOR ALL USING (
+        current_setting('app.user_role') = 'admin'
+        OR tenant_id = current_setting('app.current_tenant_id')::text
+    );
+
+CREATE POLICY admin_system_events_access ON admin_system_events
+    FOR ALL USING (
+        current_setting('app.user_role') = 'admin'
+        OR tenant_id = current_setting('app.current_tenant_id')::text
+    );
+```
+
+### **Analytics Security Tables**
+```sql
+-- Analytics access audit log
+CREATE TABLE analytics_access_audit (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    user_id TEXT,
+    tenant_id TEXT,
+    query_type VARCHAR(50) CHECK (query_type IN ('dashboard', 'report', 'export', 'api')),
+    table_accessed VARCHAR(100),
+    filters_applied JSONB,
+    rows_returned INTEGER,
+    query_duration_ms INTEGER,
+    ip_address TEXT,
+    user_agent TEXT,
+    success BOOLEAN DEFAULT TRUE,
+    failure_reason TEXT,
+    data_sensitivity VARCHAR(20) CHECK (data_sensitivity IN ('public', 'internal', 'confidential')),
+    compliance_check_passed BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Analytics rate limiting per tenant
+CREATE TABLE analytics_rate_limits (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    tenant_id TEXT NOT NULL,
+    query_type VARCHAR(50),
+    time_window_seconds INTEGER DEFAULT 3600,
+    max_queries INTEGER NOT NULL,
+    current_count INTEGER DEFAULT 0,
+    window_start TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+
+    UNIQUE(tenant_id, query_type, time_window_seconds)
+);
+
+-- Data export security controls
+CREATE TABLE analytics_export_controls (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    tenant_id TEXT NOT NULL,
+    export_type VARCHAR(50) CHECK (export_type IN ('csv', 'json', 'pdf', 'xlsx')),
+    max_rows INTEGER DEFAULT 10000,
+    requires_approval BOOLEAN DEFAULT FALSE,
+    auto_expires_hours INTEGER DEFAULT 24,
+    encryption_required BOOLEAN DEFAULT TRUE,
+    watermark_required BOOLEAN DEFAULT TRUE,
+    created_by TEXT,
+    is_active BOOLEAN DEFAULT TRUE,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Security monitoring indexes
+CREATE INDEX idx_analytics_access_tenant ON analytics_access_audit(tenant_id, created DESC);
+CREATE INDEX idx_analytics_access_user ON analytics_access_audit(user_id, created DESC);
+CREATE INDEX idx_analytics_rate_limits_tenant ON analytics_rate_limits(tenant_id, window_start DESC);
+```
+
+### **Analytics Security Functions**
+```sql
+-- Query access validation for analytics
+CREATE OR REPLACE FUNCTION validate_analytics_access(
+    p_tenant_id TEXT,
+    p_user_id TEXT,
+    p_query_type VARCHAR(50),
+    p_table_accessed VARCHAR(100)
+)
+RETURNS BOOLEAN AS $$
+DECLARE
+    rate_limit_record RECORD;
+    current_window TIMESTAMP;
+BEGIN
+    -- Calculate current rate limit window
+    current_window := date_trunc('hour', NOW());
+
+    -- Check rate limits for this tenant/query type
+    SELECT * INTO rate_limit_record
+    FROM analytics_rate_limits
+    WHERE tenant_id = p_tenant_id
+    AND (query_type = p_query_type OR query_type IS NULL)
+    AND window_start >= current_window
+    AND is_active = true
+    ORDER BY query_type NULLS LAST
+    LIMIT 1;
+
+    IF FOUND THEN
+        IF rate_limit_record.current_count >= rate_limit_record.max_queries THEN
+            -- Log rate limit violation
+            INSERT INTO analytics_access_audit (
+                user_id, tenant_id, query_type, table_accessed,
+                success, failure_reason, data_sensitivity
+            ) VALUES (
+                p_user_id, p_tenant_id, p_query_type, p_table_accessed,
+                false, 'rate_limit_exceeded', 'internal'
+            );
+            RETURN FALSE;
+        END IF;
+
+        -- Increment counter
+        UPDATE analytics_rate_limits
+        SET current_count = current_count + 1
+        WHERE id = rate_limit_record.id;
+    END IF;
+
+    -- Log successful access
+    INSERT INTO analytics_access_audit (
+        user_id, tenant_id, query_type, table_accessed,
+        success, data_sensitivity
+    ) VALUES (
+        p_user_id, p_tenant_id, p_query_type, p_table_accessed,
+        true, 'internal'
+    );
+
+    RETURN TRUE;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+-- Export approval workflow
+CREATE OR REPLACE FUNCTION request_analytics_export(
+    p_tenant_id TEXT,
+    p_user_id TEXT,
+    p_export_type VARCHAR(50),
+    p_row_count INTEGER
+)
+RETURNS UUID AS $$
+DECLARE
+    export_control RECORD;
+    export_request_id UUID := gen_random_uuid();
+BEGIN
+    -- Check export controls for this tenant
+    SELECT * INTO export_control
+    FROM analytics_export_controls
+    WHERE tenant_id = p_tenant_id
+    AND export_type = p_export_type
+    AND is_active = true;
+
+    IF NOT FOUND THEN
+        RAISE EXCEPTION 'Export type not allowed for this tenant';
+    END IF;
+
+    -- Check row limits
+    IF p_row_count > export_control.max_rows THEN
+        RAISE EXCEPTION 'Export exceeds maximum allowed rows (%)', export_control.max_rows;
+    END IF;
+
+    -- Log export request
+    INSERT INTO analytics_access_audit (
+        user_id, tenant_id, query_type, table_accessed,
+        filters_applied, rows_returned, data_sensitivity
+    ) VALUES (
+        p_user_id, p_tenant_id, 'export', 'multiple_tables',
+        jsonb_build_object('export_type', p_export_type, 'request_id', export_request_id),
+        p_row_count, 'confidential'
+    );
+
+    -- If approval required, create approval request (would integrate with notification system)
+    IF export_control.requires_approval THEN
+        -- This would trigger an approval workflow
+        NULL; -- Placeholder for approval workflow integration
+    END IF;
+
+    RETURN export_request_id;
+END;
+$$ LANGUAGE plpgsql;
+```
 
 ```sql
 -- Enable RLS on all analytics tables
