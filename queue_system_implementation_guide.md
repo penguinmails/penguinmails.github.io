@@ -543,9 +543,72 @@ export class EmailWorker {
           failed_at: new Date().toISOString()
         });
   private async processIncomingEmail(payload: any) {
-    // Implementation for incoming email processing
-    // Creates email_messages and email_content entries
-    console.log('Processing incoming email:', payload);
+    // Implementation for incoming email processing using new email system architecture
+    // Creates email_messages (analytics) and email_content (body) entries
+    const { tenant_id, email_account_id, direction, type, from, to, subject, body, headers, raw, messageId } = payload;
+    
+    try {
+      const storage_key = `email_${messageId}_${Date.now()}`;
+      
+      // 1. Create email_content (email body and metadata)
+      const contentObject = await this.db.email_content.create({
+        data: {
+          storage_key,
+          tenant_id: tenant_id,
+          content_text: body.plain || body.html,
+          content_html: body.html || convertToHtml(body.plain),
+          headers: headers,
+          raw_size_bytes: Buffer.byteLength(raw),
+          created: new Date(),
+          retention_days: 2555 // 7 years default
+        }
+      });
+
+      // 2. Create email_messages (analytics and metadata)
+      const messageRef = await this.db.email_messages.create({
+        data: {
+          storage_key,
+          tenant_id: tenant_id,
+          email_account_id: email_account_id,
+          direction: direction,
+          message_type: type || 'email',
+          from_email: from,
+          to_email: Array.isArray(to) ? to.join(',') : to,
+          subject: subject,
+          status: 'received',
+          processed: new Date()
+        }
+      });
+
+      // 3. Create attachments if present
+      if (payload.attachments && payload.attachments.length > 0) {
+        for (const attachment of payload.attachments) {
+          await this.db.attachments.create({
+            data: {
+              parent_storage_key: storage_key,
+              filename: attachment.filename,
+              mime_type: attachment.mime_type,
+              size_bytes: attachment.size,
+              content: attachment.content,
+              storage_disposition: attachment.disposition || 'attachment'
+            }
+          });
+        }
+      }
+
+      console.log('Successfully processed incoming email:', { storage_key, messageId: messageRef.storage_key });
+      
+      return {
+        success: true,
+        storage_key,
+        content_object_id: contentObject.storage_key,
+        message_ref_id: messageRef.storage_key
+      };
+      
+    } catch (error) {
+      console.error('Failed to process incoming email:', error);
+      throw new Error(`Email processing failed: ${error.message}`);
+    }
   }
 
   private async processWarmupJob(payload: any) {

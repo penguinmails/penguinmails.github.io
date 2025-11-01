@@ -481,5 +481,45 @@ This email system hierarchy creates a **clear, intuitive, and maintainable struc
 - **Backward Compatibility**: Old tables can be archived for rollback
 - **Validation Tools**: Comprehensive data integrity checks
 - **Performance Monitoring**: Built-in analytics and alerting
+---
+
+## 🔐 Primary Key Strategy Analysis - Schema Evolution Rationale
+
+### **PK Traffic & Security Matrix Strategy**
+
+The email system follows the established Primary Key strategy that balances security and performance:
+
+```
+                     SECURITY DANGER
+TRAFFIC    |    LOW    |   MEDIUM   |   HIGH
+-----------|-----------|------------|----------
+CRITICAL   |  BIGINT   |   BIGINT   |  UUID
+HIGH       |  BIGINT   |   UUID     |  UUID
+MEDIUM     |  BIGINT   |   UUID     |  UUID
+LOW        |   INT     |   UUID     |  UUID
+```
+
+### **Email System PK Distribution**
+
+Current email system PK strategy implementation:
+- **UUID (Security)**: 75% of tables - Perfect for security-sensitive message data
+- **BIGINT (Analytics)**: 9% of tables - Optimal for high-traffic analytics operations
+- **VARCHAR (External)**: 6% of tables - External system IDs (Stripe, Hostwinds)
+- **Composite (Multi-tenant)**: 10% of tables - Multi-tenant optimized structures
+
+### **Strategic Decisions Applied**
+
+1. **Email Message Analytics**: Uses storage_key VARCHAR(500) as composite identifier for content relationship tracking
+2. **Content Storage**: email_content.storage_key VARCHAR(500) enables content deduplication via content_hash
+3. **Cross-Database References**: All foreign keys use UUID for security consistency across OLTP and Content databases
+4. **Attachment Handling**: Uses UUID for unique attachment identification with parent_storage_key relationships
+
+### **Migration Strategy Benefits**
+
+- **Zero-Downtime Path**: Most legacy tables can be deprecated with superior replacements
+- **Minimal Data Migration**: Only warmup tables need transformation to enhanced structure
+- **Backward Compatibility**: Clear upgrade path with rollback procedures maintained
+
+**This PK strategy ensures the email system maintains architectural excellence while supporting enterprise-scale operations with optimal security and performance characteristics.**
 
 This structure transforms unclear technical jargon into intuitive, domain-specific names that make the email system architecture immediately understandable to any developer joining the project.

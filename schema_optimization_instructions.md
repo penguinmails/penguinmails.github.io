@@ -4,7 +4,7 @@
 
 **Objective**: Analyze current database schemas across all 4 tiers to identify inconsistencies, performance bottlenecks, and architectural issues that need to be addressed for production readiness.
 
-**Starting Point**: Use `schema_comparison_analysis.md` as the base document to understand the current state and previous decisions.
+**Starting Point**: Use `email_system_implementation.md` and `email_system_hierarchy_analysis.md` as the base documents to understand the current state and previous decisions.
 
 ---
 
@@ -209,8 +209,9 @@ Format: schema_optimization_plan.md
 
 ## 🚀 **STARTING POINT**
 
-Begin with `schema_comparison_analysis.md` to understand:
+Begin with `email_system_implementation.md` and `email_system_hierarchy_analysis.md` to understand:
 - Previous schema decisions and their rationale
+- Business impact and technical architecture decisions
 - Known issues that were identified but not addressed
 - Historical context for current schema state
 - Areas that may need re-evaluation
