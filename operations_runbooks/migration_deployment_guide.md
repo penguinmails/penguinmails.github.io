@@ -756,10 +756,10 @@ CREATE TABLE migration_events (
 - **[Backup & Recovery Procedures](backup_recovery_procedures.md)** - Emergency recovery integration
 
 ### **Technical References**
-- **[OLTP Schema Guide](../01_Schema_Reference/oltp_schema_guide.md)** - OLTP migration patterns
-- **[Content Database Schema Guide](../01_Schema_Reference/content_database_schema_guide.md)** - Content migration procedures
-- **[Queue System Schema Guide](../01_Schema_Reference/queue_system_schema_guide.md)** - Queue migration handling
-- **[OLAP Analytics Schema Guide](../01_Schema_Reference/olap_analytics_schema_guide.md)** - Analytics migration strategies
+- **[OLTP Schema Guide](../oltp_schema_guide.md)** - OLTP migration patterns
+- **[Content Database Schema Guide](../content_database_schema_guide.md)** - Content migration procedures
+- **[Queue System Schema Guide](../queue_system_schema_guide.md)** - Queue migration handling
+- **[OLAP Analytics Schema Guide](../olap_analytics_schema_guide.md)** - Analytics migration strategies
 
 ### **Development Guidelines**
 - **[Development Guidelines](../development_guidelines.md)** - Development migration standards

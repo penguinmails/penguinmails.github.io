@@ -299,7 +299,7 @@ CREATE POLICY tenant_isolation ON inbox_message_refs
 - [Queue System Implementation](queue_system_implementation_guide.md) - Queue-driven ETL
 
 ### **Schema & Security Documents**
-- [Primary Key Strategy Analysis](primary_key_strategy_analysis.md) - PK selection framework
+- [Schema Comparison Analysis](schema_comparison_analysis.md) - Complete PK selection framework and traffic/security matrix analysis
 - [Traffic & Security Matrix Guide](traffic_security_matrix_guide.md) - Security/performance matrix
 - [Schema Comparison Analysis](schema_comparison_analysis.md) - Migration strategy and decisions
 - [Revised Schema Analysis](revised_schema_analysis.md) - 4-tier architecture clarification

@@ -943,10 +943,10 @@ $$ LANGUAGE plpgsql;
 - **[Migration & Deployment Guide](migration_deployment_guide.md)** - Deployment procedures for new features
 
 ### **Technical References**
-- **[OLTP Schema Guide](../01_Schema_Reference/oltp_schema_guide.md)** - Core database structure
-- **[Content Database Schema Guide](../01_Schema_Reference/content_database_schema_guide.md)** - Content optimization features
-- **[Queue System Schema Guide](../01_Schema_Reference/queue_system_schema_guide.md)** - Background processing features
-- **[OLAP Analytics Schema Guide](../01_Schema_Reference/olap_analytics_schema_guide.md)** - Analytics implementation
+- **[OLTP Schema Guide](../oltp_schema_guide.md)** - Core database structure
+- **[Content Database Schema Guide](../content_database_schema_guide.md)** - Content optimization features
+- **[Queue System Schema Guide](../queue_system_schema_guide.md)** - Background processing features
+- **[OLAP Analytics Schema Guide](../olap_analytics_schema_guide.md)** - Analytics implementation
 
 ### **Development Process**
 - **[Development Guidelines](../development_guidelines.md)** - Development standards and procedures

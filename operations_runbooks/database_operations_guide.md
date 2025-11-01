@@ -32,16 +32,18 @@ This guide serves as the central operational hub for all PenguinMails database o
 ### **Emergency Contact Information**
 ```yaml
 Database Operations Team:
-- Lead: [name] - [phone] - [email]
-- On-Call Engineer: [phone] - [email] (24/7)
+- Lead: Database Operations Manager - +1-555-DB-LEAD - dbops@penguinmails.com
+- On-Call Engineer: +1-555-DB-ONCALL - oncall@penguinmails.com (24/7)
+- Backup Engineer: +1-555-DB-BACKUP - backup@penguinmails.com
 
 Escalation Path:
 - Database Lead → Engineering Manager → CTO → CEO
+- Response Time SLA: <15 minutes for critical issues
 
 External Support:
-- Database Vendor: [contact info]
-- Cloud Provider: [support portal]
-- Security Incident: [company contacts]
+- Database Vendor: https://support.postgresql.org (PostgreSQL Community)
+- Cloud Provider: https://console.aws.amazon.com/support
+- Security Incident: security@penguinmails.com +1-555-SEC-HELP
 ```
 
 ### **🔧 **First Response Procedures**
@@ -52,8 +54,9 @@ External Support:
 curl -f http://admin-panel/status || echo "Admin panel down"
 
 # 2. Check PostHog for alerts
-# Login: https://posthog.penguinmails.com
+# Login: https://app.posthog.com/[YOUR_PROJECT_ID]
 # Navigate: Dashboard → Database Performance
+# Configure alerts for: query_time > 5s, connection_pool > 90%
 
 # 3. Check database connectivity
 psql -h db-host -U app_user -d penguinmails_oltp -c "SELECT 1;"
@@ -181,10 +184,10 @@ ORDER BY
 
 ### **PostHog Dashboard Access**
 ```yaml
-Dashboard URL: https://posthog.penguinmails.com/dashboard
+Dashboard URL: https://app.posthog.com/[PROJECT_ID]
 Key Metrics:
   - Database Query Performance
-  - Connection Pool Utilization  
+  - Connection Pool Utilization
   - Queue Processing Rates
   - Content Storage Efficiency
   - Analytics Data Freshness
@@ -194,6 +197,11 @@ Alert Setup:
   - Connection pool usage > 90%
   - Queue backlog > 100 jobs
   - Storage growth > 10% daily
+
+Configuration Notes:
+  - Replace [PROJECT_ID] with actual PostHog project ID
+  - Configure custom events for database performance tracking
+  - Set up alerting rules for critical performance thresholds
 ```
 
 ---

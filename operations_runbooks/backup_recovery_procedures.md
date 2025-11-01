@@ -602,10 +602,10 @@ echo "Disaster recovery completed"
 - **[Incident Response Procedures](incident_response_procedures.md)** - Emergency response coordination
 
 ### **Technical References**
-- **[OLTP Schema Guide](../01_Schema_Reference/oltp_schema_guide.md)** - OLTP backup integration
-- **[Content Database Schema Guide](../01_Schema_Reference/content_database_schema_guide.md)** - Content backup procedures
-- **[Queue System Schema Guide](../01_Schema_Reference/queue_system_schema_guide.md)** - Queue recovery methods
-- **[OLAP Analytics Schema Guide](../01_Schema_Reference/olap_analytics_schema_guide.md)** - Analytics backup strategy
+- **[OLTP Schema Guide](../oltp_schema_guide.md)** - OLTP backup integration
+- **[Content Database Schema Guide](../content_database_schema_guide.md)** - Content backup procedures
+- **[Queue System Schema Guide](../queue_system_schema_guide.md)** - Queue recovery methods
+- **[OLAP Analytics Schema Guide](../olap_analytics_schema_guide.md)** - Analytics backup strategy
 
 ---
 
