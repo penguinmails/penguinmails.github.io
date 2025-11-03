@@ -19,3 +19,23 @@ gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: https://github.com/penguinmails/penguinmails.github.io
 gh_edit_branch: "main"
 gh_edit_view_mode: "tree"
+
+# Navigation settings for folder organization
+nav_enabled: true
+nav_sort: case_sensitive
+
+# Quick Access Links (Top of Sidebar)
+nav_external_links:
+  - title: "High-Level Architecture"
+    url: "docs/quick-access/high-level-architecture.md"
+  - title: "Compliance & Standards"
+    url: "docs/quick-access/compliance-regulatory-standards.md"
+  - title: "Key Performance Indicators"
+    url: "docs/quick-access/key-performance-indicators.md"
+  - title: "Roadmap & Priorities"
+    url: "docs/quick-access/roadmap-development-priorities.md"
+  - title: "Our Team Workflow"
+    url: "docs/quick-access/team-workflow.md"
+
+# Navigation error report
+nav_error_report: true
