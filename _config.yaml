@@ -26,3 +26,10 @@ nav_sort: case_sensitive
 
 # Navigation error report
 nav_error_report: true
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
