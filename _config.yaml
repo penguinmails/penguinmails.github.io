@@ -24,19 +24,31 @@ gh_edit_view_mode: "tree"
 nav_enabled: true
 nav_sort: case_sensitive
 
-# Navigation exclusion - only show docs/ folder navigation
-nav_exclude:
-  - "operations_runbooks/**"
-  - "technical_implementation/**"
-  - "temp_old_docs/**"
-  - "*.md"  # Exclude root-level markdown files
+# Only show docs/ folder navigation in sidebar
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      nav_exclude: true  # Exclude root-level pages
+
+  - scope:
+      path: "operations_runbooks"
+      type: "pages"
+    values:
+      nav_exclude: true  # Exclude operations runbooks
+
+  - scope:
+      path: "technical_implementation"
+      type: "pages"
+    values:
+      nav_exclude: true  # Exclude technical implementation
+
+  - scope:
+      path: "temp_old_docs"
+      type: "pages"
+    values:
+      nav_exclude: true  # Exclude temp old docs
 
 # Navigation error report
 nav_error_report: true
-
-defaults:
-  - scope:
-      path: "docs" # an empty string here means all files in the project
-      type: "pages"
-    values:
-      layout: "default"
