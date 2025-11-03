@@ -118,10 +118,93 @@ CREATE TABLE domains (
     dns_records JSONB,
     is_primary BOOLEAN DEFAULT FALSE,
     verified TIMESTAMP WITH TIME ZONE,
+    
+    -- DNS Operational Metadata (Added for DNS Storage Integration)
+    mailu_domain TEXT,                           -- Mailu's canonical hostname
+    dns_ttl_observed INTEGER,                    -- Observed DNS TTL in seconds
+    dns_last_verified_at TIMESTAMP WITH TIME ZONE, -- Last successful DNS verification
+    dns_verification_error TEXT,                 -- Human-friendly error messages
+    dns_verification_attempts INTEGER DEFAULT 0, -- Verification retry counter
+    
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
+
+#### **DNS Records JSON Structure** (dns_records JSONB)
+The `dns_records` JSONB field stores per-record DNS configuration with lifecycle management:
+
+```json
+{
+  "records": [
+    {
+      "record_type": "SPF",
+      "name": "@",
+      "value": "v=spf1 include:_spf.mailu.io include:_spf.sendgrid.net -all",
+      "ttl": 3600,
+      "verification_status": "verified",
+      "last_verified_at": "2025-10-20T14:32:00Z",
+      "verification_attempts": 1,
+      "verification_error": null,
+      "source": "ui"
+    },
+    {
+      "record_type": "DKIM",
+      "name": "default._domainkey",
+      "selector": "default",
+      "value": "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSI....",
+      "public_key": "MIGfMA0GCSqGSI....",
+      "managed_by": "platform",              -- "platform" or "mailu"
+      "secret_ref": "vault://mail/dkim/domain.com/default", -- Vault reference
+      "needs_deployment": false,             -- Flag for Mailu sync jobs
+      "ttl": 3600,
+      "verification_status": "verified",
+      "last_verified_at": "2025-10-20T14:32:00Z",
+      "verification_attempts": 1,
+      "verification_error": null,
+      "source": "platform"
+    },
+    {
+      "record_type": "DMARC",
+      "name": "_dmarc",
+      "value": "v=DMARC1; p=quarantine; rua=mailto:dmarc@domain.com",
+      "policy": "quarantine",
+      "ttl": 3600,
+      "verification_status": "verified",
+      "last_verified_at": "2025-10-20T14:32:00Z",
+      "verification_attempts": 1,
+      "verification_error": null,
+      "source": "ui"
+    },
+    {
+      "record_type": "MX",
+      "name": "@",
+      "value": "mail.penguinmails.io.",
+      "priority": 10,
+      "ttl": 3600,
+      "verification_status": "verified",
+      "last_verified_at": "2025-10-20T14:40:00Z",
+      "mx_hosts": ["203.0.113.5"],
+      "verification_attempts": 1,
+      "verification_error": null,
+      "source": "ui"
+    }
+  ]
+}
+```
+
+**DNS Record Field Meanings**:
+- `record_type`: DNS record type (SPF, DKIM, DMARC, MX, A, AAAA, CNAME)
+- `name`: DNS record name (@ for root, subdomain for others)
+- `value`: Expected DNS record value
+- `verification_status`: Current verification state (pending, verified, failed, error)
+- `last_verified_at`: Timestamp of last successful verification
+- `verification_attempts`: Number of verification attempts
+- `verification_error`: Error message from last failed verification
+- `managed_by`: Who manages the record ("platform" or "mailu")
+- `secret_ref`: Vault reference for DKIM private keys (platform-managed only)
+- `needs_deployment`: Flag for Mailu sync jobs to deploy DKIM keys
+- `source`: Source of record creation ("ui", "platform", "api")
 
 #### **email_accounts** - Email Account Configuration
 ```sql
@@ -468,196 +551,7 @@ CREATE TABLE permissions (
 
 ---
 
-## ⚙️ **System Configuration & Connection Pooling**
-
-### **Connection Pooling Strategy**
-```sql
--- Connection pool configuration table
-CREATE TABLE connection_pool_config (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    tier VARCHAR(20) CHECK (tier IN ('oltp', 'content', 'queue', 'olap')),
-    pool_name VARCHAR(50) NOT NULL,
-    min_connections INTEGER DEFAULT 2,
-    max_connections INTEGER DEFAULT 20,
-    connection_timeout_seconds INTEGER DEFAULT 30,
-    idle_timeout_seconds INTEGER DEFAULT 300,
-    max_lifetime_seconds INTEGER DEFAULT 3600,
-    acquire_timeout_seconds INTEGER DEFAULT 60,
-    leak_detection_threshold_seconds INTEGER DEFAULT 0,
-    validation_query TEXT DEFAULT 'SELECT 1',
-    is_active BOOLEAN DEFAULT TRUE,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-
-    UNIQUE(tier, pool_name)
-);
-
--- Connection pool metrics
-CREATE TABLE connection_pool_metrics (
-    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-    pool_config_id UUID REFERENCES connection_pool_config(id),
-    collected_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    active_connections INTEGER,
-    idle_connections INTEGER,
-    pending_acquires INTEGER,
-    total_connections_created BIGINT,
-    total_connections_destroyed BIGINT,
-    connection_wait_time_avg_ms INTEGER,
-    connection_usage_rate DECIMAL(5,2), -- Percentage of pool utilization
-    connection_errors_count INTEGER DEFAULT 0,
-    pool_exhaustion_events INTEGER DEFAULT 0
-);
-
--- Pool sizing recommendations by tier
-INSERT INTO connection_pool_config (tier, pool_name, min_connections, max_connections, connection_timeout_seconds, idle_timeout_seconds) VALUES
--- OLTP: High throughput, low latency
-('oltp', 'primary_pool', 5, 50, 30, 600),
-('oltp', 'read_replica_pool', 3, 30, 30, 600),
--- Content: Heavy content, longer queries
-('content', 'content_pool', 3, 25, 60, 900),
-('content', 'archival_pool', 1, 10, 120, 1800),
--- Queue: Fast operations, high concurrency
-('queue', 'queue_pool', 5, 40, 15, 300),
-('queue', 'worker_pool', 2, 20, 20, 300),
--- OLAP: Complex queries, variable load
-('olap', 'analytics_pool', 3, 15, 120, 1800),
-('olap', 'reporting_pool', 2, 25, 90, 1200);
-
--- Connection leak detection function
-CREATE OR REPLACE FUNCTION detect_connection_leaks()
-RETURNS void AS $$
-DECLARE
-    leak_threshold INTERVAL := INTERVAL '30 minutes';
-    long_running_connections RECORD;
-    pool_stats RECORD;
-BEGIN
-    -- Find connections that have been active too long
-    FOR long_running_connections IN
-        SELECT pid, usename, client_addr, query_start, state_change, query
-        FROM pg_stat_activity
-        WHERE state = 'active'
-        AND query_start < NOW() - leak_threshold
-        AND usename NOT IN ('postgres', 'pg_monitor')
-        AND query NOT LIKE '%pg_stat_activity%'
-    LOOP
-        -- Log potential connection leak
-        INSERT INTO system_notifications (
-            category, title, message, severity, metadata
-        ) VALUES (
-            'connection_pool',
-            'Potential Connection Leak Detected',
-            format('Connection PID %s has been active for %s minutes',
-                   long_running_connections.pid,
-                   EXTRACT(EPOCH FROM (NOW() - long_running_connections.query_start))/60),
-            'warning',
-            jsonb_build_object(
-                'pid', long_running_connections.pid,
-                'user', long_running_connections.usename,
-                'query_start', long_running_connections.query_start,
-                'query', left(long_running_connections.query, 200),
-                'detected_at', NOW()
-            )
-        );
-    END LOOP;
-
-    -- Check pool utilization
-    FOR pool_stats IN
-        SELECT
-            cpc.tier,
-            cpc.pool_name,
-            cpm.active_connections,
-            cpm.idle_connections,
-            cpm.pending_acquires,
-            ROUND(cpm.connection_usage_rate, 2) as usage_rate
-        FROM connection_pool_config cpc
-        JOIN connection_pool_metrics cpm ON cpc.id = cpm.pool_config_id
-        WHERE cpm.collected_at >= NOW() - INTERVAL '5 minutes'
-        ORDER BY cpm.collected_at DESC
-    LOOP
-        -- Alert on high utilization or pending acquires
-        IF pool_stats.usage_rate > 90 OR pool_stats.pending_acquires > 5 THEN
-            INSERT INTO system_notifications (
-                category, title, message, severity, metadata
-            ) VALUES (
-                'connection_pool',
-                'Connection Pool Under Pressure',
-                format('%s pool %s utilization: %s%%, pending: %s',
-                       pool_stats.tier, pool_stats.pool_name,
-                       pool_stats.usage_rate, pool_stats.pending_acquires),
-                CASE
-                    WHEN pool_stats.pending_acquires > 10 THEN 'critical'
-                    WHEN pool_stats.usage_rate > 95 THEN 'high'
-                    ELSE 'warning'
-                END,
-                jsonb_build_object(
-                    'tier', pool_stats.tier,
-                    'pool_name', pool_stats.pool_name,
-                    'usage_rate', pool_stats.usage_rate,
-                    'pending_acquires', pool_stats.pending_acquires,
-                    'alert_time', NOW()
-                )
-            );
-        END IF;
-    END LOOP;
-END;
-$$ LANGUAGE plpgsql;
-
--- Pool optimization function
-CREATE OR REPLACE FUNCTION optimize_connection_pools()
-RETURNS void AS $$
-DECLARE
-    workload_stats RECORD;
-    recommendation TEXT;
-BEGIN
-    -- Analyze recent workload patterns
-    SELECT
-        AVG(active_connections) as avg_active,
-        MAX(active_connections) as peak_active,
-        AVG(connection_wait_time_avg_ms) as avg_wait_time,
-        SUM(connection_errors_count) as total_errors,
-        AVG(connection_usage_rate) as avg_usage
-    INTO workload_stats
-    FROM connection_pool_metrics
-    WHERE collected_at >= NOW() - INTERVAL '24 hours';
-
-    -- Generate pool sizing recommendations
-    IF workload_stats.avg_usage > 80 THEN
-        recommendation := 'Consider increasing max_connections for higher utilization';
-    ELSIF workload_stats.avg_usage < 30 THEN
-        recommendation := 'Consider decreasing max_connections to reduce resource usage';
-    ELSIF workload_stats.avg_wait_time > 100 THEN
-        recommendation := 'Consider increasing max_connections to reduce wait times';
-    ELSIF workload_stats.total_errors > 10 THEN
-        recommendation := 'Investigate connection errors - may indicate network or authentication issues';
-    ELSE
-        recommendation := 'Connection pools are well-balanced';
-    END IF;
-
-    -- Log optimization recommendation
-    INSERT INTO system_notifications (
-        category, title, message, severity, metadata
-    ) VALUES (
-        'connection_pool',
-        'Pool Optimization Analysis',
-        format('24h analysis: avg usage %s%%, peak %s connections, avg wait %sms. %s',
-               ROUND(workload_stats.avg_usage, 1),
-               workload_stats.peak_active,
-               ROUND(workload_stats.avg_wait_time, 0),
-               recommendation),
-        'info',
-        jsonb_build_object(
-            'analysis_period_hours', 24,
-            'avg_usage_percent', workload_stats.avg_usage,
-            'peak_connections', workload_stats.peak_active,
-            'avg_wait_ms', workload_stats.avg_wait_time,
-            'total_errors', workload_stats.total_errors,
-            'recommendation', recommendation,
-            'analyzed_at', NOW()
-        )
-    );
-END;
-$$ LANGUAGE plpgsql;
-```
+## ⚙️ **System Configuration & Settings**
 
 ### **Configuration & Settings**
 
@@ -820,147 +714,42 @@ CREATE POLICY tenant_policies_isolation ON tenant_policies
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
 ```
 
-### **Security Event Logging**
-```sql
--- Security event logging for audit trails
-CREATE TABLE security_events (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    event_type VARCHAR(50) NOT NULL,
-    severity VARCHAR(20) CHECK (severity IN ('low', 'medium', 'high', 'critical')),
-    user_id UUID REFERENCES users(id),
-    tenant_id UUID REFERENCES tenants(id),
-    ip_address INET,
-    user_agent TEXT,
-    resource_type VARCHAR(50),
-    resource_id VARCHAR(255),
-    action_attempted VARCHAR(100),
-    success BOOLEAN DEFAULT FALSE,
-    failure_reason TEXT,
-    metadata JSONB,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
+---
 
--- Security monitoring indexes
-CREATE INDEX idx_security_events_tenant_created ON security_events(tenant_id, created DESC);
-CREATE INDEX idx_security_events_type_severity ON security_events(event_type, severity, created DESC);
-CREATE INDEX idx_security_events_ip ON security_events(ip_address, created DESC);
-```
+## 📈 **External Analytics Integration**
 
-### **Security Monitoring and Alerting**
-```sql
--- Security incident alerting function
-CREATE OR REPLACE FUNCTION alert_security_incident(
-    p_event_type VARCHAR(50),
-    p_severity VARCHAR(20),
-    p_description TEXT,
-    p_tenant_id UUID DEFAULT NULL,
-    p_user_id UUID DEFAULT NULL,
-    p_ip_address INET DEFAULT NULL
-)
-RETURNS void AS $$
-DECLARE
-    incident_count INTEGER;
-BEGIN
-    -- Count recent similar incidents (last hour)
-    SELECT COUNT(*) INTO incident_count
-    FROM security_events
-    WHERE event_type = p_event_type
-    AND tenant_id IS NOT DISTINCT FROM p_tenant_id
-    AND created > NOW() - INTERVAL '1 hour';
+### **Monitoring & Observability**
 
-    -- Log the security event
-    INSERT INTO security_events (
-        event_type, severity, user_id, tenant_id, ip_address,
-        action_attempted, success, failure_reason, metadata
-    ) VALUES (
-        p_event_type, p_severity, p_user_id, p_tenant_id, p_ip_address,
-        'security_incident', false, p_description,
-        jsonb_build_object(
-            'incident_count_last_hour', incident_count,
-            'alert_timestamp', NOW()
-        )
-    );
+The following infrastructure and monitoring concerns have been externalized to specialized analytics platforms for better observability and product insights:
 
-    -- Alert on high-severity or frequent incidents
-    IF p_severity IN ('high', 'critical') OR incident_count > 5 THEN
-        -- This would integrate with notification system
-        -- For now, just log escalated alert
-        INSERT INTO system_notifications (
-            category, title, message, severity, tenant_id, metadata
-        ) VALUES (
-            'security_incident',
-            CASE
-                WHEN p_severity = 'critical' THEN 'Critical Security Alert'
-                WHEN incident_count > 10 THEN 'Frequent Security Incidents'
-                ELSE 'Security Alert'
-            END,
-            format('Security incident detected: %s. Severity: %s, Count (last hour): %s',
-                   p_description, p_severity, incident_count + 1),
-            p_severity,
-            p_tenant_id,
-            jsonb_build_object(
-                'event_type', p_event_type,
-                'incident_count', incident_count + 1,
-                'alert_level', CASE
-                    WHEN p_severity = 'critical' THEN 'escalated'
-                    WHEN incident_count > 10 THEN 'frequent'
-                    ELSE 'standard'
-                END
-            )
-        );
-    END IF;
-END;
-$$ LANGUAGE plpgsql;
-```
+#### **Connection Pool Monitoring**
+- **External Events**: `connection_pool_metrics`, `pool_utilization`, `connection_leaks`
+- **Tracking**: Connection pool performance, utilization rates, leak detection
+- **Platform**: External analytics platform (PostHog, Segment, or similar)
+- **Benefits**: Better visualization of database performance trends, alerting capabilities
+
+#### **Security Event Monitoring**
+- **External Events**: `security_incidents`, `authentication_failures`, `suspicious_activity`
+- **Tracking**: Security events, audit trails, incident patterns
+- **Platform**: External analytics platform with security focus
+- **Benefits**: Centralized security analytics, threat detection, compliance reporting
+
+#### **Infrastructure Metrics**
+- **External Events**: `system_performance`, `error_rates`, `resource_utilization`
+- **Tracking**: Application performance, error rates, system health
+- **Platform**: Infrastructure monitoring platform
+- **Benefits**: Unified monitoring dashboard, proactive alerting
+
+> 📋 **See [External Analytics Integration Plan](external_analytics_integration_plan.md)** for detailed implementation strategies, event schemas, and platform migration guidelines.
 
 ---
 
 ## 📈 **Related Documentation**
 
-### **Documentation Synchronization Status**
-| Document | Last Updated | Sync Status | Notes |
-|----------|-------------|-------------|--------|
-| OLTP Schema Guide | Current | ✅ Synchronized | Core business logic tables, unified security, connection pooling |
-| Content Database Guide | Current | ✅ Synchronized | Enhanced lifecycle management, automated retention policies |
-| Queue System Guide | Current | ✅ Synchronized | Unified security policies, enhanced priority system |
-| OLAP Analytics Guide | Current | ✅ Synchronized | Cross-tier security, analytics access controls |
-| Database Schema Guide | Needs Update | 🔄 Pending | 4-tier architecture overview |
-| Implementation Checklist | Needs Update | 🔄 Pending | Schema optimization tracking |
-| Performance Dashboard | Needs Update | 🔄 Pending | Monitoring integration |
-
 ### **Cross-Document References**
 - **Table Naming Standards**: Now documented in each schema guide header
 - **Security Policies**: Unified across all tiers with consistent RLS implementation
-- **Connection Pooling**: Tier-specific strategies documented in each guide
 - **Performance Indexes**: Standardized approaches across all database tiers
+- **External Analytics**: PostHog integration for monitoring and security analytics
 
-### **Migration Documentation**
-```sql
--- Documentation synchronization tracking
-CREATE TABLE schema_documentation_status (
-    document_name VARCHAR(100) PRIMARY KEY,
-    last_updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    version VARCHAR(20),
-    sync_status VARCHAR(20) CHECK (sync_status IN ('synchronized', 'needs_update', 'outdated')),
-    changes_summary TEXT,
-    next_review_date DATE,
-    responsible_team VARCHAR(50),
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
-);
-
--- Insert current documentation status
-INSERT INTO schema_documentation_status (
-    document_name, version, sync_status, changes_summary, next_review_date, responsible_team
-) VALUES
-('OLTP Schema Guide', '2.1', 'synchronized',
- 'Added unified security policies, IP-based restrictions, connection pooling strategy, table naming standards', '2026-02-01', 'Platform Team'),
-('Content Database Schema Guide', '2.1', 'synchronized',
- 'Enhanced lifecycle management, automated retention policies, cross-tier security integration, storage optimization', '2026-02-01', 'Content Team'),
-('Queue System Schema Guide', '2.1', 'synchronized',
- 'Unified security policies, enhanced priority system, connection pooling optimization, queue access controls', '2026-02-01', 'Queue Team'),
-('OLAP Analytics Schema Guide', '2.1', 'synchronized',
- 'Cross-tier security policies, analytics access controls, connection pooling strategy, export security', '2026-02-01', 'Analytics Team');
-```
-
-**Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security, connection pooling
+**Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security
