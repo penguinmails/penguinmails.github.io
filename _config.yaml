@@ -33,6 +33,10 @@ defaults:
       nav_exclude: true  # Exclude root-level pages
 
   - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+
+  - scope:
       path: "operations_runbooks"
       type: "pages"
     values:
