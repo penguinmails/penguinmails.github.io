@@ -1,6 +1,6 @@
-# Revised Database Schema Analysis - Email Architecture Clarification
+# Database Schema Analysis Design - Email Architecture Clarification
 
-## Updated Understanding: 4-Tier Architecture
+## Design Understanding: 4-Tier Architecture
 
 Thank you for the clarification! After reviewing the proposed content database schema, I now understand this is actually a **significant architectural improvement** - evolving from 3-tier to **4-tier architecture** for better scalability and performance.
 
@@ -24,7 +24,7 @@ Thank you for the clarification! After reviewing the proposed content database s
 
 ---
 
-## 🎯 **Revised Analysis of Email Architecture**
+## 🎯 **Design Analysis of Email Architecture**
 
 ### ✅ **ARCHITECTURAL IMPROVEMENT - Not a Contradiction**
 
@@ -112,7 +112,7 @@ attachments {
 
 ---
 
-## 🔧 **Implementation Strategy**
+## 🔧 **Planning Strategy**
 
 ### Phase 1: Content Database Setup
 1. Create content database with `content_objects` and `attachments`
@@ -155,16 +155,16 @@ attachments {
 
 ---
 
-## 🎯 **Updated Recommendations**
+## 🎯 **Design Recommendations**
 
 ### ✅ **This is a Strong Architectural Improvement**
 
-1. **Proceed with Implementation** - This design addresses real performance concerns
+1. **Proceed with Design Implementation** - This design addresses real performance concerns
 2. **Create Migration Plan** - Detailed strategy for moving from `emails` to 4-tier
 3. **Update Documentation** - Reflect new 4-tier architecture in schema guides
 4. **Plan for Rollback** - Ensure migration can be reversed if needed
 
-### 🚨 **Implementation Considerations**
+### 🚀 **Design Implementation Considerations**
 
 1. **API Changes**: Applications need to fetch content via storage keys
 2. **Analytics Pipeline**: Update ETL to work with new architecture
@@ -191,7 +191,7 @@ The proposed `inbox_message_refs` + Content Database design is a **significant i
 
 ## 🎯 **Next Steps**
 
-1. **Review Content Database Implementation** - Detailed design for content storage
+1. **Review Content Database Design Implementation** - Detailed design for content storage
 2. **Plan Migration Strategy** - Step-by-step transition plan
 3. **Update Schema Documentation** - Reflect new 4-tier architecture
 4. **Implementation Planning** - Development timeline and resource allocation

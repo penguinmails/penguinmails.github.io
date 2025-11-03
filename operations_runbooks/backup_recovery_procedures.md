@@ -2,8 +2,8 @@
 
 ## Overview
 
-**Last Updated**: November 1, 2025  
-**Owner**: Database Operations Team  
+**Document Date**: November 1, 2025
+**Owner**: Database Operations Team
 **Criticality**: Critical  
 **Next Review**: December 1, 2025
 

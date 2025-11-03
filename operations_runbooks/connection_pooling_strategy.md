@@ -2,9 +2,9 @@
 
 ## Overview
 
-**Last Updated**: November 1, 2025  
-**Owner**: Database Operations Team  
-**Criticality**: Critical  
+**Document Date**: November 1, 2025
+**Owner**: Database Operations Team
+**Criticality**: Critical
 **Next Review**: December 1, 2025
 
 This guide defines the comprehensive connection pooling strategy for PenguinMails' 4-tier database architecture. It addresses critical production performance issues and prevents connection exhaustion.

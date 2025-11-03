@@ -1,13 +1,13 @@
 
-# Staff Operations & Support Implementation Guide
+# Staff Operations & Support Design Guide
 
-**Last Updated:** October 30, 2025  
-**Version:** 1.0  
-**Status:** Implementation Guide
+**Document Date:** October 30, 2025
+**Version:** 1.0
+**Status:** Design Guide
 
 ## Overview
 
-This guide provides comprehensive implementation details for PenguinMails' staff operations and support system, covering both current production features and planned roadmap enhancements.
+This guide provides comprehensive design specifications for PenguinMails' staff operations and support system, covering both current design features and planned roadmap enhancements.
 
 ### System Architecture Summary
 
@@ -27,13 +27,13 @@ This guide provides comprehensive implementation details for PenguinMails' staff
 
 ---
 
-## 🟢 Current Implementation - Production Ready
+## 🟢 Current Design Specification - Design Complete
 
 ### 1. Staff Management System
 
-#### Database Implementation
+#### Database Design
 
-**Core Tables (Already Implemented):**
+**Core Tables (Designed):**
 
 ```sql
 -- Staff roles with 4-tier hierarchy
@@ -70,7 +70,7 @@ CREATE TABLE staff_role_permissions (
 );
 ```
 
-#### Staff Hierarchy Implementation
+#### Staff Hierarchy Design
 
 **4-Tier Staff System:**
 
@@ -149,7 +149,7 @@ async function checkStaffPermission(userId: string, permissionName: string) {
 
 **File Location:** `components/layout/components/DashboardHeader.tsx`
 
-**Current Implementation:**
+**Current Design Implementation:**
 ```tsx
 const helpLinks = [
   {
@@ -201,7 +201,7 @@ const helpLinks = [
 
 #### Landing Page Support Button
 
-**Implementation:**
+**Design Implementation:**
 ```tsx
 // Floating support button on landing page
 const SupportButton = () => {
@@ -240,11 +240,11 @@ const SupportButton = () => {
 
 ### 3. Email-Based Support Workflow
 
-#### Current Support Process
+#### Support Process Design
 
 **Email Routing:** support@penguinmails.com
 
-**Process Flow:**
+**Process Flow Design:**
 1. **Customer Contact** via landing page button or help center
 2. **Manual Triage** by support team
 3. **Email Assignment** based on category/expertise
@@ -308,9 +308,9 @@ const supportTemplates = {
 
 ---
 
-## 🔄 In Progress - Help System Enhancement
+## 🔄 In Progress - Help System Enhancement Design
 
-### Current Help Center Integration
+### Help Center Integration Design
 
 **Help Center URL:** https://help.penguinmails.com/
 
@@ -319,25 +319,25 @@ const supportTemplates = {
 2. **Contextual Help** - "What's this?" tooltips for complex features
 3. **Onboarding Tour** - Interactive guide for new users
 
-### Implementation Status
+### Design Status
 
-✅ **Completed:**
+✅ **Design Complete:**
 - Help center URL integration
 - Dashboard dropdown menu
 - Floating support button
 
-🔄 **In Progress:**
+🔄 **Design In Progress:**
 - Contextual help tooltips
 - Search functionality within help center
 - Video tutorial integration
 
 ---
 
-## 📅 Planned Implementation - Q4 2026
+## 📅 Planned Design Implementation - Q4 2026
 
-### 1. Enhanced Staff Audit Logging
+### 1. Enhanced Staff Audit Logging Design
 
-#### Database Implementation
+#### Database Design
 
 ```sql
 -- Staff access tracking
@@ -387,7 +387,7 @@ CREATE TABLE temporary_role_elevations (
 );
 ```
 
-#### Implementation Code
+#### Design Implementation Code
 
 ```typescript
 // Audit logging service
@@ -469,9 +469,9 @@ export class StaffAuditService {
 }
 ```
 
-### 2. Compliance and Security Features
+### 2. Compliance and Security Features Design
 
-#### SOC 2/GDPR Audit Trail Implementation
+#### SOC 2/GDPR Audit Trail Design
 
 ```typescript
 // Comprehensive audit logging middleware
@@ -548,11 +548,11 @@ export class ComplianceReportingService {
 
 ---
 
-## 📅 Planned Implementation - 2027
+## 📅 Planned Design Implementation - 2027
 
-### 1. Full Support Ticket Management System
+### 1. Full Support Ticket Management System Design
 
-#### Database Architecture
+#### Database Architecture Design
 
 ```sql
 -- Core ticket system

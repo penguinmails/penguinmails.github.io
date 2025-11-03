@@ -13,9 +13,9 @@ last_modified_date: "2025-10-27"
 
 ## Overview
 
-This document outlines the updated analytics architecture for PenguinMails, reflecting our decision to use **Postgres + PostHog** instead of the originally proposed Convex OLAP approach. This hybrid architecture provides the perfect balance of cost-effectiveness, developer experience, and real-time analytics capabilities.
+This document outlines the analytics architecture design for PenguinMails, reflecting our decision to use **Postgres + PostHog** instead of the originally proposed Convex OLAP approach. This hybrid architecture provides the perfect balance of cost-effectiveness, developer experience, and real-time analytics capabilities.
 
-### Updated Architecture Summary
+### Architecture Design Summary
 - **Primary Database**: Postgres (NileDB for OLTP, OLAP for historical analytics)
 - **Queue System**: Hybrid Redis + PostgreSQL for job processing and state management
 - **Local Development**: Docker containers with Drizzle ORM
@@ -28,9 +28,9 @@ This document outlines the updated analytics architecture for PenguinMails, refl
 
 ## Architecture Evolution
 
-### Original vs Updated Approach
+### Original vs Design Approach
 
-| Component | Original Plan | Updated Plan |
+| Component | Original Plan | Design Plan |
 |-----------|---------------|--------------|
 | **Analytics DB** | Convex (OLAP) | Postgres (Drizzle ORM) |
 | **Real-time Events** | Not specified | PostHog |
@@ -40,7 +40,7 @@ This document outlines the updated analytics architecture for PenguinMails, refl
 | **Data Retention** | Permanent | Permanent |
 | **Query Complexity** | Simple | Complex aggregations supported |
 
-### Why We Changed the Architecture
+### Architecture Design Rationale
 
 #### Reasons for Switching from Convex:
 1. **Developer Familiarity**: Team has strong Postgres expertise
@@ -49,7 +49,7 @@ This document outlines the updated analytics architecture for PenguinMails, refl
 4. **Local Development**: Docker setup improves development experience
 5. **Ecosystem**: Larger Postgres ecosystem and tooling support
 
-#### Benefits of Postgres + PostHog:
+#### Benefits of Postgres + PostHog Design:
 1. **Real-time Analytics**: PostHog provides excellent real-time dashboards
 2. **Historical Tracking**: Postgres handles permanent data storage and complex queries
 3. **Familiar Stack**: Reduces learning curve and development time
@@ -1145,4 +1145,4 @@ export const emailOpens = pgTable('email_opens', {
 
 ---
 
-*This updated architecture provides a robust, scalable analytics foundation that leverages familiar technologies while delivering powerful real-time insights through PostHog integration.*
+*This designed architecture provides a robust, scalable analytics foundation that leverages familiar technologies while delivering powerful real-time insights through PostHog integration.*
