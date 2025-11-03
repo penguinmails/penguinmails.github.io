@@ -24,6 +24,13 @@ gh_edit_view_mode: "tree"
 nav_enabled: true
 nav_sort: case_sensitive
 
+# Navigation exclusion - only show docs/ folder navigation
+nav_exclude:
+  - "operations_runbooks/**"
+  - "technical_implementation/**"
+  - "temp_old_docs/**"
+  - "*.md"  # Exclude root-level markdown files
+
 # Navigation error report
 nav_error_report: true
 
