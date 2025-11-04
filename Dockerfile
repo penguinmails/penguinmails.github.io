@@ -4,9 +4,8 @@ FROM jekyll/jekyll:latest
 # Install required plugins for Just the Docs
 RUN gem install webrick jekyll-remote-theme jekyll-include-cache
 
-# Set working directory and copy files
+# Set working directory (files mounted via volume)
 WORKDIR /srv/jekyll
-COPY . .
 
 # Expose Jekyll development port
 EXPOSE 4000
