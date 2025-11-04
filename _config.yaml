@@ -1,8 +1,10 @@
 title: 🐧 PenguinMails Documentation
-description: This documentation hub helps you understand, manage, and scale PenguinMails. Whether you’re making strategic decisions, designing user experiences, or coordinating technical development, find your path below.
+description: This documentation hub helps you understand, manage, and scale PenguinMails. Whether you're making strategic decisions, designing user experiences, or coordinating technical development, find your path below.
 # Theme settings
 remote_theme: https://github.com/just-the-docs/just-the-docs
-markdown: GFM
+markdown: kramdown
+kramdown:
+  input: GFM
 mermaid:
   version: "11.12.1"
 # Header Bar
@@ -33,26 +35,15 @@ defaults:
       nav_exclude: true  # Exclude root-level pages
 
   - scope:
-      path: "docs" # an empty string here means all files in the project
-      type: "pages"
-
-  - scope:
-      path: "operations_runbooks"
+      path: "docs"
       type: "pages"
     values:
-      nav_exclude: true  # Exclude operations runbooks
-
-  - scope:
-      path: "technical_implementation"
-      type: "pages"
-    values:
-      nav_exclude: true  # Exclude technical implementation
-
-  - scope:
-      path: "temp_old_docs"
-      type: "pages"
-    values:
-      nav_exclude: true  # Exclude temp old docs
+      layout: default
 
 # Navigation error report
 nav_error_report: true
+# sass:
+#   quiet_deps: true # https://github.com/just-the-docs/just-the-docs/issues/1541
+#   silence_deprecations: ['import'] # https://github.com/just-the-docs/just-the-docs/issues/1607
+plugins:
+  - jekyll-remote-theme

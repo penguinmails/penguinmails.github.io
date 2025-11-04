@@ -204,6 +204,112 @@ Maintained by the PenguinMails Documentation Team
 
 ---
 
+## 🐳 Development Setup
+
+### Prerequisites
+- Docker installed
+- Git for repository management
+
+### Quick Start for Developers
+```bash
+# Clone the repository
+git clone https://github.com/penguinmails/penguinmails.github.io.git
+cd penguinmails.github.io
+
+# Start development server
+docker build -t penguinmails-docs .
+docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+```
+
+Site will be available at http://localhost:4000
+
+### Build Commands
+```bash
+# Build and run directly
+docker build -t penguinmails-docs .
+docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+
+# Build image only
+docker build -t penguinmails-docs .
+
+# Run existing image
+docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+```
+
+### Development Benefits
+1. **No Local Dependencies**: Pure Docker-based setup eliminates Ruby/bundler complexity
+2. **Consistent Environment**: Same environment across all development machines
+3. **GitHub Pages Compatibility**: Matches production deployment exactly
+4. **Live Reload**: Automatic page refresh on file changes
+5. **Performance Optimized**: Minimal Docker image with only required plugins
+
+## 🔧 Troubleshooting & Debugging
+
+### Common Issues & Solutions
+
+#### Theme Not Applied to Documentation Pages
+**Symptom**: `index.md` shows theme, but pages in `docs/` folder don't use the theme
+**Solution**: Add scope configuration to `_config.yaml`:
+```yaml
+defaults:
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: default
+```
+**Prevention**: Always check that scoped defaults are properly configured for subdirectories
+
+#### Remote Theme Not Loading
+**Symptom**: Site builds but shows plain text without styling
+**Solution**:
+1. Verify `remote_theme` is set correctly in `_config.yaml`
+2. Ensure `jekyll-remote-theme` plugin is included
+3. Check Docker build includes all required plugins
+4. Run `docker compose build --no-cache` to rebuild from scratch
+
+#### Navigation Not Working
+**Symptom**: Sidebar navigation missing or incorrect
+**Solution**:
+1. Confirm `nav_enabled: true` in `_config.yaml`
+2. Check page frontmatter includes proper `nav_order` and `parent:`
+3. Verify `nav_sort: case_sensitive` matches your needs
+4. Use `nav_exclude: true` for pages that shouldn't appear in navigation
+
+#### Build Errors
+**Symptom**: Jekyll build fails with plugin or dependency errors
+**Solution**:
+1. Check Dockerfile includes all required plugins
+2. Verify plugin versions are compatible
+3. Clear Docker cache: `docker system prune -a`
+4. Rebuild: `docker compose build --no-cache`
+
+#### Performance Issues
+**Symptom**: Site slow to load or build
+**Solution**:
+1. Enable Jekyll caching with `jekyll-include-cache` plugin
+2. Use `incremental: true` for faster rebuilds during development
+3. Minimize frontmatter complexity
+4. Optimize image sizes and formats
+
+### Debugging Steps
+
+1. **Check Build Logs**: Run `docker compose up` and examine full output
+2. **Verify Configuration**: Use `jekyll doctor` to check for config issues
+3. **Inspect Generated HTML**: Check `_site/` folder after build for correct theme application
+4. **Test Locally**: Use `jekyll serve --verbose` for detailed build process
+5. **Compare with GitHub Pages**: Ensure local setup matches production configuration
+
+### Tools for Debugging
+
+- **Browser DevTools**: Inspect CSS/JS loading and console errors
+- **Jekyll Doctor**: `jekyll doctor` for configuration validation
+- **Build with Verbose**: `jekyll build --verbose` for detailed build process
+- **Serve with Trace**: `jekyll serve --trace` for error stack traces
+- **Docker Logs**: `docker compose logs` for container-specific issues
+
+---
+
 *For the latest updates and detailed technical information, visit our [full documentation site](https://penguinmails.github.io).*
 
 **Happy documenting! 🎉**
