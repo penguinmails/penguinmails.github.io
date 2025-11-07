@@ -8,7 +8,7 @@ last_modified_date: "2025-10-28"
 
 ## Executive Summary
 
-This document defines the key user personas for PenguinMails, based on extensive user research, customer interviews, and market analysis. These personas guide product development, marketing messaging, and customer success strategies.
+This document defines the key user personas for PenguinMails, based on extensive user research, customer interviews, and market analysis aligned with the **email marketing market valued at USD 6.13 billion in 2024, projected to reach USD 24.19 billion by 2033**[^1] with a **16.48% CAGR**. These personas guide product development, marketing messaging, and customer success strategies targeting the **40% agency segment**, **30-35% startup segment**, and **15-20% freelancer segment** identified in our market research.
 
 ## Primary Personas
 
@@ -192,6 +192,12 @@ This document defines the key user personas for PenguinMails, based on extensive
 - **Annual Review**: Update personas based on market changes
 - **Continuous Validation**: Monitor user feedback and behavior patterns
 - **New Persona Identification**: Watch for emerging user segments
+
+---
+
+## References
+
+[^1]: https://straitsresearch.com/report/email-marketing-market
 
 ---
 
