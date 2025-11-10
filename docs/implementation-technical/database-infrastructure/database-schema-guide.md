@@ -1,292 +1,325 @@
-# Database Schema Guide - 4-Tier Architecture
+# Database Schema Guide – 5-Tier Architecture
 
-## Strategic Alignment
-**Strategic Alignment**: This comprehensive database schema guide supports our enterprise infrastructure framework by providing complete 4-tier database architecture, cross-tier integration patterns, and performance optimization strategies for the PenguinMails scalable data management platform.
+This guide defines the canonical database tiering for PenguinMails.
 
-**Technical Authority**: Our 4-tier database architecture integrates with enterprise database systems, analytics platforms, and infrastructure management tools featuring multi-tier security, cross-tier performance optimization, and unified data governance for comprehensive enterprise database excellence.
+We operate a 5-tier model:
 
-**Operational Excellence**: Backed by enterprise database systems with 99.9% uptime guarantees, automated cross-tier operations, and comprehensive monitoring across all database components with real-time performance tracking and alerting capabilities.
+1. OLTP Database (Operational Core)
+2. Content Database (Heavy Content Storage)
+3. OLAP Analytics Warehouse
+4. Queue / Jobs Store
+5. Notifications & System Events Database
 
-**User Journey Integration**: This database foundation is part of your complete user experience - connects to business logic operations, analytics processing, content management, and operational excellence for reliable data-driven operations.
+External logging/observability is an out-of-band component that complements these tiers.
 
----
-
-## Database Architecture Overview
-
-PenguinMails implements a **4-tier database architecture** designed for scalability, performance, and clear separation of concerns across different data processing needs.
-
-### 🏗️ **4-Tier Architecture**
-
-```mermaid
-graph TB
-    subgraph "Tier 1: OLTP Database"
-        OLTP[Primary Database<br/>Operational Data]
-    end
-    
-    subgraph "Tier 2: Content Database" 
-        CONTENT[Content Database<br/>Heavy Content & Attachments]
-    end
-    
-    subgraph "Tier 3: OLAP Analytics Database"
-        OLAP[Analytics Database<br/>Business Intelligence]
-    end
-    
-    subgraph "Tier 4: Queue System"
-        QUEUE[Queue System<br/>Job Processing]
-    end
-    
-    OLTP --> QUEUE
-    QUEUE --> OLAP
-    OLTP --> CONTENT
-    
-    style OLTP fill:#e1f5fe
-    style CONTENT fill:#f3e5f5  
-    style OLAP fill:#e8f5e8
-    style QUEUE fill:#fff3e0
-```
+For detailed per-tier guides, see:
+- [`oltp-schema-guide.md`](docs/implementation-technical/database-infrastructure/oltp-schema-guide.md:1)
+- [`content-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/content-database-schema-guide.md:1)
+- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1)
+- [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
+- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
 
 ---
 
-## 🎯 **Tier Overview & Purpose**
+## 1. OLTP – Operational Core
 
-### **Tier 1: OLTP (Operational Database)**
-- **Purpose**: Fast transactional operations, real-time data, operational metadata
-- **Focus**: Lightweight queries, fast inserts, primary business logic
-- **Tables**: `campaign_sequence_steps`, `campaigns`, `users`, `tenants`, `companies`, `domains`, `email_accounts`, `leads`, `templates`
-- **Tables**: `inbox_message_refs`, `campaigns`, `users`, `tenants`, `companies`, `domains`, `email_accounts`, `leads`, `templates`
-- **Characteristics**: High write frequency, small records, indexed for speed
+Purpose:
+- Primary system of record for:
+  - Tenants, users, organizations.
+  - Campaigns, leads, mailboxes, domains.
+  - Billing entities and subscriptions.
+  - Operational configurations.
+  - Optionally, queue/job metadata if co-located.
 
-### **Tier 2: Content Database**  
-- **Purpose**: Heavy content storage, email bodies, attachments, large objects
-- **Tables**: `email_content`, `email_messages`, `attachments`, `transactional_emails`, `notifications`
-- **Tables**: `content_objects`, `content_inbox_message_refs`, `attachments`, `transactional_emails`, `notifications`
-- **Tables**: `content_objects`, `attachments`, `transactional_emails`, `notifications`
-- **Focus**: Content retention, attachment storage, full email archives
-- **Characteristics**: Large objects, content retention policies, efficient storage
+Characteristics:
+- Strong consistency, transactional semantics.
+- Multi-tenant isolation via RLS and clear ownership.
+- Optimized for OLTP access patterns.
 
-### **Tier 3: OLAP Analytics Database**
-- **Purpose**: Business intelligence, aggregated metrics, reporting
-- **Focus**: Historical analysis, complex queries, data warehousing
-- **Tables**: `billing_analytics`, `campaign_analytics`, `mailbox_analytics`, `sequence_step_analytics`, `admin_audit_log`
-- **Characteristics**: Aggregated data, historical trends, optimized for analytics
+Key principles:
+- Store only what is required for correctness and core workflows.
+- No heavy content blobs.
+- No high-volume logs or analytics aggregates.
 
-### **Tier 4: Queue System**
-- **Purpose**: Job processing, reliability, async operations
-- **Focus**: Job state management, retry logic, processing reliability
-- **Tables**: `jobs`, `job_logs`, `job_queues`
-- **Characteristics**: State tracking, reliable processing, comprehensive logging
+Reference:
+- [`oltp-schema-guide.md`](docs/implementation-technical/database-infrastructure/oltp-schema-guide.md:1)
+- [`oltp-mermaid-er.md`](docs/implementation-technical/database-infrastructure/oltp-mermaid-er.md:1)
 
 ---
 
-### **Email Processing Flow**
-```
-OLTP: campaign_sequence_steps (operational)
-    ↓
-Content Database: email_messages (analytics traces)
-    ↓
-Content Database: email_content (email bodies)
-    ↓
-Queue System: analytics processing
-    ↓
-OLAP Analytics: aggregated metrics
-```
+## 2. Content Database – Heavy Content Storage
 
-### **Campaign Flow**
-```
-OLTP: campaigns → campaign_sequence_steps (operational)
-    ↓
-Content Database: email_messages (message analytics)
-    ↓
-Content Database: email_content (email content)
-    ↓
-Queue System: email sending jobs
-    ↓
-OLAP Analytics: campaign_analytics
-```
+Purpose:
+- Dedicated tier for:
+  - Email/message bodies (text + HTML).
+  - Attachments and large binary objects.
+  - Archival content.
 
-## 🔄 **Data Flow Architecture**
+Characteristics:
+- Opaque `storage_key` references from OLTP.
+- Optimized for storage efficiency, retention, compression/dedup.
 
-### **Email Processing Flow**
-```
-OLTP: inbox_message_refs (metadata) 
-    ↓
-Content Database: content_objects (email bodies)
-    ↓
-Queue System: analytics processing
-    ↓
-OLAP Analytics: aggregated metrics
-```
+Key principles:
+- No core business entities.
+- No generalized logging, metrics, or infra configuration tables.
+- No analytics aggregates as primary concern.
 
-### **Campaign Flow**
-```
-OLTP: campaigns → campaign_sequence_steps → inbox_message_refs
-    ↓
-Content Database: content_objects (email content)
-    ↓
-Queue System: email sending jobs
-    ↓
-OLAP Analytics: campaign_analytics
-```
+Core schema:
+- `content_objects`
+- `attachments`
 
-### **Infrastructure Flow**
-```
-OLTP: vps_instances → smtp_ip_addresses → domain_ip_assignments
-    ↓
-Queue System: infrastructure monitoring jobs
-    ↓
-OLAP Analytics: infrastructure analytics
-```
+Reference:
+- [`content-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/content-database-schema-guide.md:1)
+- [`content-mermaid-er.md`](docs/implementation-technical/database-infrastructure/content-mermaid-er.md:1)
+- [`content-database-analysis.md`](docs/implementation-technical/database-infrastructure/content-database-analysis.md:1)
 
 ---
 
-## 📋 **Schema Documentation Structure**
+## 3. OLAP Analytics Warehouse
 
-### **Primary Schema Guides**
-- **[📊 OLTP Schema Guide](oltp-schema-guide.md)** - Operational database schema
-- **[📄 Content Database Schema Guide](content-database-schema-guide.md)** - Heavy content storage
-- **[📈 OLAP Analytics Schema Guide](olap-analytics-schema-guide.md)** - Business intelligence
-- **[⚡ Queue System Implementation Guide](queue-system-implementation-guide.md)** - Job processing
+Purpose:
+- Durable, query-optimized analytics for:
+  - Billing/usage.
+  - Campaign and sequence performance.
+  - Mailbox/warmup health.
+  - Lead engagement.
+  - Compliance-relevant admin actions.
 
-### **Naming Conventions Across All Tiers**
+Characteristics:
+- Aggregation-focused.
+- Partitioned and indexed for reporting.
+- Feeds BI tools and customer-facing analytics.
 
-#### **Timestamp Fields**
-Following NileDB convention, timestamp fields use consistent naming without '_at' suffix:
-- **`created`** - Record creation time
-- **`updated`** - Record last update time
-- **`deleted`** - Soft deletion timestamp (nullable)
-- **`processed`** - Processing completion time
-- **`queued`** - Job queue timestamp
-- **`sent`** - Email send timestamp
-- **`started`** - Operation start time
-- **`completed`** - Operation completion time
+Key principles:
+- Only business-critical aggregates and compliance summaries.
+- No live notifications.
+- No operational system events.
+- No infra metrics, rate-limits, or raw logs.
+- No heavy blobs.
 
-#### **Field Type Guidelines**
-- **NileDB-Managed Tables**: Must follow NileDB type requirements
-  - `users`, `tenants`, `tenant_users`: Use ARRAY for roles field (critical for authentication)
-  - TEXT instead of VARCHAR for flexibility (NileDB requirement)
-  - **Note**: `tenant_users.roles` field is ARRAY type - this is mandatory for NileDB authentication and cannot be changed
-- **Application Tables**: Use appropriate PostgreSQL types
-- **Content Storage**: BYTEA for binary data, VARCHAR(500) for storage keys
+Canonical tables:
+- `billing_analytics`
+- `campaign_analytics`
+- `mailbox_analytics`
+- `lead_analytics`
+- `warmup_analytics`
+- `sequence_step_analytics`
+- `admin_audit_log` (compliance-focused only)
 
-#### **ID Fields**
-- **OLTP**: UUID primary keys for new tables, BIGSERIAL for existing legacy tables
-- **Content Database**: VARCHAR(500) storage keys, UUID for major entities
-- **OLAP Analytics**: BIGINT for OLAP tables, TEXT/UUID for cross-tier references
-- **Queue System**: UUID for job tracking, VARCHAR for queue names
-
-#### **Primary Key Strategy by Security & Traffic**
-| Traffic/Security | LOW Security | MEDIUM Security | HIGH Security |
-|------------------|--------------|-----------------|---------------|
-| **CRITICAL Traffic** (>100K ops/hr) | BIGINT | BIGINT | UUID |
-| **HIGH Traffic** (10K-100K ops/hr) | BIGINT | UUID | UUID |
-| **MEDIUM Traffic** (1K-10K ops/hr) | BIGINT | UUID | UUID |
-| **LOW Traffic** (<1K ops/hr) | INT | UUID | UUID |
-
-**Current Distribution:**
-- **UUID (Security-focused)**: 75% of tables - Protects sensitive data
-- **BIGINT (Analytics performance)**: 9% of tables - Optimizes high-traffic analytics
-- **VARCHAR (External/Natural)**: 6% of tables - Matches external system IDs
-- **Composite (Multi-tenant)**: 10% of tables - Handles tenant associations
+Reference:
+- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1)
+- [`olap-mermaid-er.md`](docs/implementation-technical/database-infrastructure/olap-mermaid-er.md:1)
 
 ---
 
-## 🚀 **Performance Optimization Strategy**
+## 4. Queue / Jobs Store
 
-### **OLTP Database**
-- **Denormalized Fields**: `tenant_id` on operational tables for fast filtering
-- **Index Strategy**: Covering indexes for common queries, partial indexes for common WHERE clauses
-- **Partitioning**: Consider partitioning large operational tables by date or tenant
-- **Connection Pooling**: Aggressive connection pooling for high-throughput operations
+Purpose:
+- Asynchronous workflow orchestration for:
+  - Email sending.
+  - Analytics aggregation.
+  - Imports/exports.
+  - Background maintenance.
 
-### **Content Database**
-- **Large Object Storage**: Efficient storage for email bodies and attachments
-- **Compression**: Text content compression for space efficiency
-- **Retention Policies**: Automatic cleanup based on business requirements
-- **Content Deduplication**: Optional content hashing for duplicate detection
+Characteristics:
+- Backed by:
+  - Redis + Postgres, or
+  - Dedicated Postgres tables.
+- Stores:
+  - Job metadata (type, payload refs, status, attempts, errors, timestamps).
 
-### **OLAP Analytics Database**
-- **Materialized Views**: Pre-computed aggregations for common queries
-- **Partitioning**: Time-based partitioning for large analytics tables
-- **Index Strategy**: Column-store optimizations for analytics workloads
-- **Data Archival**: Historical data archival for performance
+Key principles:
+- Operational; not a long-term analytics or logging store.
+- References:
+  - Payloads and entities via IDs/storage_keys rather than duplicating data.
+- Retention:
+  - Aggressively pruned; long-lived traces belong in external logging.
 
-### **Queue System**
-- **Redis Integration**: Hybrid PostgreSQL + Redis for performance
-- **Priority Queues**: Multiple priority levels for different job types
-- **Retry Logic**: Exponential backoff and dead letter queues
-- **Monitoring**: Comprehensive job tracking and alerting
-
----
-
-## 🔒 **Security & Multi-Tenancy**
-
-### **Row Level Security (RLS)**
-All operational tables implement RLS policies for tenant isolation:
-```sql
--- Example RLS policy
-CREATE POLICY tenant_isolation ON inbox_message_refs
-    FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-```
-
-### **Data Classification**
-- **OLTP**: Operational data, minimal PII, fast access requirements
-- **Content**: Full email content, attachments, high retention value
-- **Analytics**: Aggregated metrics, business intelligence, historical trends
-- **Queue**: Job metadata, processing logs, system state
-
-### **Backup Strategy**
-- **OLTP**: High-frequency backups, point-in-time recovery
-- **Content**: Long-term retention, media preservation
-- **OLAP**: Historical preservation, compliance requirements
-- **Queue**: Short-term retention, job state recovery
+Reference:
+- [`queue-system-implementation-guide.md`](docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md:1)
 
 ---
 
-## 🛠️ **Migration & Development Guidelines**
+## 5. Notifications & System Events Database
 
-### **Schema Changes Process**
-1. **Planning**: Evaluate which tier(s) are affected
-2. **Testing**: Test in all affected tiers simultaneously
-3. **Migration**: Apply changes tier by tier with dependency tracking
-4. **Verification**: Validate data consistency across tiers
-5. **Rollback**: Prepare rollback procedures for each tier
+Purpose:
+- Operational store for:
+  - In-app user/admin notifications.
+  - Curated admin/system events (incidents, important alerts).
 
-### **Development Best Practices**
-- **Tier-Aware Development**: Always consider which tier a table belongs to
-- **Cross-Tier References**: Use appropriate ID types for inter-tier relationships
-- **Performance Testing**: Test query performance in relevant tier context
-- **Documentation Updates**: Keep tier assignments updated in all documentation
+Characteristics:
+- Independent from OLAP.
+- Optimized for:
+  - Fast reads on login.
+  - Status updates (read/resolved/deleted).
+  - Bounded retention (short/mid-term).
 
-### **Naming Consistency**
-- **Use `_at` suffix**: All timestamp fields use standard suffixes
-- **Tier-Prefixed Documentation**: All schema docs clearly indicate tier
-- **Cross-References**: Document relationships between tiers clearly
-- **ID Type Consistency**: Use appropriate ID types for each tier's purpose
+Core tables:
+
+- `notifications`:
+  - User/admin visible notifications (in_app/email/push).
+  - Fields:
+    - id, user_id, tenant_id, type, title, message, channel
+    - is_read, created_at, read_at, expires_at, deleted_at
+  - Semantics:
+    - Source of truth for notification center UI.
+    - Retention via scheduled cleanup.
+
+- `admin_system_events`:
+  - Curated high-signal system/admin events.
+  - Fields:
+    - id, created_at, event_type, severity, description,
+      details, tenant_id, user_id, is_resolved, resolved_at, resolved_by
+  - Semantics:
+    - Backing store for system/incident dashboards.
+    - Not raw logs; mid-term history only.
+
+Key principles:
+- Do not place these in OLAP.
+- Use Redis only as:
+  - Cache and rate-limiter (never as primary store).
+- External logging:
+  - Holds raw/full-fidelity events and metrics.
+
+Reference:
+- [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
+- [`notifications-mermaid-er.md`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er.md:1)
 
 ---
 
-## 📚 **Related Documentation**
+## 6. External Logging, Analytics, and Observability (Out-of-Band)
 
-### **Architecture Guides**
-- [Analytics Architecture](analytics_architecture.md) - Overall analytics system design
-- [Infrastructure Documentation](infrastructure_documentation.md) - System infrastructure
-- [Queue System Implementation](queue_system_implementation_guide.md) - Queue-driven ETL
+Purpose:
+- Handle high-volume, detailed telemetry:
+  - Clickstream and product analytics.
+  - Job/queue traces.
+  - Infra logs and metrics.
+  - Detailed send/delivery events.
+  - Security/forensic logs.
 
-### **Schema & Security Documents**
-- [Primary Key Strategy](email_system_hierarchy_analysis.md) - Complete PK selection framework and traffic/security matrix analysis
-- [Traffic & Security Matrix Guide](traffic_security_matrix_guide.md) - Security/performance matrix
-- [Business Impact Analysis](email_system_implementation.md) - Migration strategy and architectural decisions
-- [Revised Schema Analysis](revised_schema_analysis.md) - 4-tier architecture clarification
-- [Remaining Concerns Analysis](remaining_concerns_analysis.md) - Legacy table migration
+Characteristics:
+- Implemented via:
+  - PostHog or equivalent.
+  - Centralized logging (ELK/Loki/etc).
+  - Metrics/tracing (Prometheus/OpenTelemetry/etc).
 
-### **Performance & Monitoring**
-- [Performance Dashboard](performance_dashboard.md) - System performance metrics
-- [Technical Constraints Analysis](technical_constraints_analysis.md) - Scaling considerations
+Key principles:
+- Primary sink for:
+  - Raw, high-volume event data.
+- Feeds:
+  - Aggregations into OLAP when explicitly required.
+- Not:
+  - Used as the primary UX state store.
+  - A replacement for OLTP/Notifications DB correctness.
 
-### **Business & Operations**
-- [Business Model](business_model.md) - Business context and requirements
-- [Security Documentation](security_documentation.md) - Security and compliance
+Reference:
+- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
 
 ---
 
-**Keywords**: 4-tier architecture, OLTP, content database, OLAP analytics, queue system, database schema, multi-tier design, performance optimization, data architecture
+## 7. Summary: 5-Tier Responsibilities
+
+- OLTP:
+  - Core entities and real-time workflows.
+- Content DB:
+  - Heavy bodies and attachments.
+- OLAP:
+  - Aggregated analytics and compliance summaries.
+- Queue / Jobs:
+  - Asynchronous execution orchestration.
+- Notifications DB:
+  - User/admin notifications and curated system events (operational view).
+- External Logging/Analytics:
+  - Telemetry, raw events, and observability; feeds OLAP when needed.
+
+When designing new features:
+- Use this guide plus per-tier docs to decide:
+  - Which tier owns the data.
+  - How it should be retained.
+  - How it flows into analytics/logging without polluting OLTP/OLAP.
+
+---
+
+## 8. Outage & Incident Handling with the 5 Tiers
+
+How the tiers behave under failures, and how we avoid abusing OLAP or logs for live state.
+
+1) OLTP outage
+
+- Impact:
+  - Core workflows degraded (auth, campaigns, writes).
+- Still available:
+  - Notifications DB (if separate) for previously written notifications/events.
+  - External logging for error/infra signals.
+  - OLAP (read-only) for historical analytics (not live truth).
+- Behavior:
+  - Jobs depending on OLTP back off and retry.
+  - On recovery, queues drain and derived data (OLAP, notifications) reconverge with OLTP.
+
+2) Content DB outage
+
+- Impact:
+  - Access to bodies/attachments limited.
+- Still available:
+  - OLTP metadata.
+  - Notifications DB for surfaced incidents.
+  - External logging shows related errors.
+- Behavior:
+  - Core metadata flows continue.
+  - Admin_system_events/notifications can highlight content issues without involving OLAP.
+
+3) OLAP outage
+
+- Impact:
+  - Analytics dashboards unavailable or stale.
+- Not impacted:
+  - OLTP operations.
+  - Notifications/incident visibility.
+  - Queue / Jobs execution.
+- Behavior:
+  - System continues to operate.
+  - This is why we keep OLAP out of live notification/system-event storage.
+
+4) Queue / Jobs outage
+
+- Impact:
+  - Delayed async processing (emails, aggregates, some notifications).
+- Still available:
+  - OLTP, Notifications DB, external logging.
+- Behavior:
+  - Jobs resume when restored.
+  - No OLAP write-dependence for correctness.
+
+5) Notifications DB outage
+
+- Impact:
+  - In-app notifications and curated admin events temporarily unavailable.
+- Still available:
+  - OLTP for core functions.
+  - External logging for raw signals.
+- Behavior:
+  - Critical events are still logged externally.
+  - On recovery:
+    - If needed, we can repopulate curated events from logs or compensations.
+- Isolation:
+  - Notifications DB issues do not impact OLTP/OLAP schema correctness.
+
+6) External logging outage
+
+- Impact:
+  - Reduced observability.
+- Still available:
+  - OLTP, Content, OLAP, Notifications, Jobs.
+- Behavior:
+  - Core correctness unaffected.
+  - Admin_system_events/notifications still record curated incidents.
+
+Overall:
+
+- Each tier has a clear blast radius.
+- Notifications DB + external logging:
+  - Provide runtime visibility and UX without abusing OLAP.
+- OLAP:
+  - Remains a lean analytical layer, safe to be non-critical in outages.
+
+Use this behavior model when designing failure handling and incident response flows across the stack.

@@ -179,6 +179,9 @@ Performance Indicators
 
 ### **Role-Based Access Control Analytics**
 
+- Staff roles follow a clearly defined, least-privilege hierarchy (for example: super_admin, admin, support, QA) mapped to explicit permission sets.
+- All staff operations that touch tenant data, billing, security configurations, or incident handling must be fully auditable (who, what, when, which tenant, which resource).
+
 #### **Permission Analytics**
 ```typescript
 interface AccessControlAnalytics {

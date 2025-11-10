@@ -16,7 +16,8 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 
 ### **Tier 2: Business Intelligence** (Intermediate Level)
 - [Business Strategy](strategy/overview.md) - Strategic vision and market positioning
-- [Market Analysis](market-analysis/overview.md) - Competitive intelligence and market sizing
+- [Competitive Intelligence](competitive-intelligence/overview.md) - Strategic positioning and competitor analysis
+- [Market Analysis](market-analysis/overview.md) - Market sizing and opportunity analysis
 - [Business Model](model/overview.md) - Revenue strategy and financial framework
 
 ### **Tier 3: Advanced Operations** (Expert Level)
@@ -36,6 +37,7 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 ### Strategic Context
 - **Market Positioning**: How PenguinMails fits in the cold email landscape
 - **Competitive Analysis**: Why choose PenguinMails over alternatives
+- **Competitive Intelligence**: Strategic positioning and competitor differentiation
 - **Business Model**: Revenue streams and value creation
 - **Growth Strategy**: Scaling and expansion approaches
 
@@ -50,6 +52,25 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 - **Custom Development**: Enterprise customization options
 - **Consulting Services**: Professional services and support
 - **Partnership Programs**: Integration and reseller opportunities
+
+## Competitive Intelligence Framework
+
+### [Overview](competitive-intelligence/overview.md)
+- Strategic competitive positioning and market differentiation
+- Comprehensive competitor analysis and weakness identification
+- Quantified competitive advantages and performance metrics
+- Implementation framework for competitive messaging
+
+### [Strategic Positioning](competitive-intelligence/strategic-positioning.md)
+- Core value proposition and market differentiation
+- Technical decision rationale and architecture advantages
+- Business model competitive advantages
+
+### [Competitor Analysis](competitive-intelligence/competitor-analysis.md)
+- Detailed analysis of Mailchimp/SendGrid limitations
+- Smartlead/Warmbox competitive positioning
+- CRM built-in tools comparison
+- Feature-by-feature competitive differentiation
 
 ## Value Proposition Deep Dive
 
@@ -83,6 +104,14 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 ### [Persona-Specific](user-personas/persona-specific/)
 - Targeted content for specific user types
 - Role-based guidance and workflows
+
+## Competitive Intelligence
+
+### [Overview](competitive-intelligence/overview.md)
+- Strategic competitive positioning and market differentiation
+- Comprehensive competitor analysis and weakness identification
+- Quantified competitive advantages and performance metrics
+- Implementation framework for competitive messaging
 
 ## Strategic Planning
 

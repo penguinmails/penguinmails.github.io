@@ -657,32 +657,30 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 
 ---
 
-## Cross-Reference Integration
+## Cross-Reference Integration (Canonical Alignment)
 
-### **Operations & Analytics**
-- [Operations Analytics Overview](./overview.md) - Main operations framework
-- [Organization Analytics](./organization-analytics-team-management.md) - Team and organization management
-- [Metrics & KPIs](../analytics-performance/metrics-kpis.md) - Comprehensive KPI framework
+### Operations & Analytics
+- [`docs/operations-analytics/overview.md`](docs/operations-analytics/overview.md:1) - Global operations analytics framework.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis.md`](docs/operations-analytics/analytics-performance/metrics-kpis.md:1) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management.md`](docs/operations-analytics/operations-management/organization-analytics-team-management.md:1) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/environment-release-management.md`](docs/operations-analytics/operations-management/environment-release-management.md:1) - Environment and release operations impact on billing and reliability.
 
-### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment
-- [Business Model](../business/model/overview.md) - Revenue model and unit economics
-- [Value Proposition](../business/value-proposition/overview.md) - Competitive differentiation
+### Business Strategy
+- [`docs/business/model/overview.md`](docs/business/model/overview.md:1) - Canonical business and revenue model.
+- [`docs/business/value-proposition/overview.md`](docs/business/value-proposition/overview.md:1) - Value proposition framing for pricing and packaging.
+- [`docs/business/strategy/overview.md`](docs/business/strategy/overview.md:1) - Strategic priorities that payment analytics must support.
 
-### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview.md) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System management
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide.md) - Analytics integrations
+### Technical Architecture
+- [`docs/technical/architecture/overview.md`](docs/technical/architecture/overview.md:1) - High-level system architecture.
+- [`docs/technical/architecture/detailed-technical/integration-guide.md`](docs/technical/architecture/detailed-technical/integration-guide.md:1) - Canonical integration patterns, including billing/Stripe.
+- [`docs/implementation-technical/development-guidelines/api-reference.md`](docs/implementation-technical/development-guidelines/api-reference.md:1) - API surface for billing, subscriptions, and webhooks.
 
-### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX optimization
+### Compliance & Security
+- [`docs/compliance-security/overview.md`](docs/compliance-security/overview.md:1) - Compliance posture.
+- [`docs/compliance-security/enterprise/security-framework.md`](docs/compliance-security/enterprise/security-framework.md:1) - Security controls relevant to financial data.
+- [`docs/compliance-security/international/data-privacy-policy.md`](docs/compliance-security/international/data-privacy-policy.md:1) - Data handling, retention, and privacy for billing records.
 
-### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview.md) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise/security-framework.md) - Security operations
-- [Data Privacy Policy](../compliance-security/international/data-privacy-policy.md) - Privacy compliance
+This section is authoritative; draft Stripe/billing guides under temp_old_docs are treated as non-canonical historical scaffolding.
 
 ---
 

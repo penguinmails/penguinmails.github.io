@@ -1,12 +1,21 @@
 ---
 title: "Inbox Rotation Overview"
 nav_order: 2
+nav_exclude: false
 description: "Smart inbox rotation to avoid detection and maximize deliverability"
 ---
 
 # Smart Inbox Rotation for Sustainable Deliverability
 
 ## Strategic Account Protection & Detection Avoidance
+
+> **📖 Getting Started?** See our [Features Overview](features-capabilities.md) for complete context and navigation.
+> **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
+> - **⭐ Beginner Path**: Basic inbox rotation for account protection
+> - **⭐⭐ Intermediate Path**: Advanced rotation strategies and optimization
+> - **⭐⭐⭐ Expert Path**: Technical implementation and enterprise features
+
+---
 
 **Most cold email campaigns fail because they trigger detection algorithms that flag automated sending patterns.** Inbox rotation is a strategic technique that automatically alternates between multiple email addresses, preventing email providers from identifying your campaigns as spam while maintaining high deliverability rates over time.
 
@@ -243,6 +252,22 @@ Ready to optimize your cold email outreach with smart inbox rotation?
 1. **[Warm-ups](../warm-ups/overview.md)** - Build reputation for each account in your rotation
 2. **[Unified Inbox](../unified-inbox/overview.md)** - Manage responses from all rotated accounts
 3. **[Analytics](../analytics/overview.md)** - Track performance across all accounts and rotation patterns
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Create accounts for rotation
+
+### **Implementation Resources**
+5. **[Getting Started](../implement/getting-started.md)** - Complete setup and integration
+
+### **Prerequisites**
+- **Multiple Email Accounts**: Have at least 2-3 email accounts ready for rotation
+- **Domain Configuration**: Ensure proper DNS setup for all domains
+- **Campaign Data**: Define target audience and campaign parameters
+- **Volume Planning**: Determine expected sending volumes
+
+### **Alternative Approaches**
+- **Single Account Strategy**: Use single account with lower volumes
+- **Manual Rotation**: Manual account switching (not recommended)
+- **Third-party Tools**: External rotation services
+- **Gradual Implementation**: Phase rotation into existing campaigns
 
 ### **Deep Dive Options**
 - **[Advanced Strategies](advanced-strategies/)** - Advanced rotation techniques and optimization

@@ -101,8 +101,10 @@ Any updates or process changes will be communicated in the channel.
 
 ## Related Documents
 - [Onboarding Guide](onboarding_guide.md) - Team member integration processes
-- [Security Documentation](security_documentation.md) - Security procedures and protocols
-- [Implementation Roadmap](implementation_roadmap.md) - Process improvement planning
+- [Security Framework](../enterprise/security-framework.md) - Enterprise security procedures and controls
+- [Security & Privacy Integration](../enterprise/security-privacy-integration.md) - Unified security and privacy practices
+- [Traffic Security Matrix](../enterprise/traffic-security-matrix.md) - Traffic and key selection security framework
+- [Implementation Roadmap](../enterprise/security-framework.md#implementation-roadmap) - Security process improvement planning
 - [Development Standards](../implementation-technical/development-guidelines/development-standards.md) - Code standards and development practices
 
 **Keywords**: standard operating procedure, team workflow, sprint management, communication protocols, task management, quality assurance, operational excellence

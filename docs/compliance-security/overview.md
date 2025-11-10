@@ -144,7 +144,9 @@ Global compliance and privacy frameworks:
 ## **Support & Resources**
 
 ### **Documentation**
-- [Security Documentation](../../temp_old_docs/security_documentation.md) - Complete security procedures
+- [Security Framework](enterprise/security-framework.md) - Comprehensive security architecture and controls
+- [Security & Privacy Integration](enterprise/security-privacy-integration.md) - Unified security and privacy model
+- [Traffic Security Matrix](enterprise/traffic-security-matrix.md) - Traffic and key selection security framework
 - [Compliance Procedures](detailed-compliance/compliance-procedures.md) - Implementation workflows
 - [Data Privacy Policy](international/data-privacy-policy.md) - Customer-facing privacy information
 

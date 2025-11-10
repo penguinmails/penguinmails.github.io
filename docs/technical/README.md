@@ -170,3 +170,84 @@ analytics.export_metrics(performance, destination='ga4')
 
 ---
 *Previous: [Business Context](../business/) | Next: [User Journeys](../user-journeys/) →*
+
+## Documentation Authoring Guidelines (For Contributors)
+
+Use these rules when adding or updating docs in this repository.
+
+### 1. Structure and Placement
+
+- Prefer small, purpose-specific files.
+- Use existing top-level sections:
+  - `docs/business/` for strategy, positioning, pricing, personas.
+  - `docs/core-features/` or feature-specific paths for product capabilities.
+  - `docs/user-journeys/` for end-to-end flows.
+  - `docs/implementation-technical/` and `docs/technical/` for implementation details.
+  - `docs/design/` for design system, components, accessibility.
+  - `docs/security/` for security, compliance, incident response.
+  - `docs/tasks/` for internal workflows/templates.
+- If new content duplicates an existing area, link to the source of truth instead of creating a parallel page.
+
+### 2. Progressive Disclosure Pattern
+
+Every substantial page should support layered reading:
+
+- Start with:
+  - 3–6 line executive summary: who this is for, what it enables.
+- Then:
+  - Beginner/⭐: high-level explanation and quick start.
+  - Intermediate/⭐⭐: detailed usage, options, examples.
+  - Expert/⭐⭐⭐: edge cases, internals, migration notes, SLAs, integration details.
+- Implementation:
+  - Use headings and short sections instead of collapsible UI; keep Markdown simple.
+  - Explicitly label complexity where helpful (e.g. “(⭐⭐ Advanced)” in headings).
+
+### 3. Cross-References and Single Source of Truth
+
+- Do:
+  - Link horizontally to related docs instead of copying content.
+  - Point to:
+    - Architecture details from feature docs.
+    - Implementations from strategy docs.
+    - User journeys from features and vice versa.
+- Don’t:
+  - Paste large repeated explanations (e.g. same API description on multiple pages).
+- Rule of thumb:
+  - If a block could drift out of sync in two places, centralize it and link.
+
+### 4. Audience and Tone
+
+- Primary audiences:
+  - Implementers (engineers, solution architects).
+  - Operators (SRE, DevOps, support).
+  - Decision-makers validating technical depth.
+- Writing style:
+  - Direct, precise, implementation-ready.
+  - Avoid marketing fluff; keep strategic context, but connect it to concrete behavior.
+  - Prefer examples, tables, and checklists over long prose.
+
+### 5. Quality, QA, and Observability Hooks
+
+When adding technical docs:
+
+- Include:
+  - Preconditions and assumptions.
+  - Failure modes and troubleshooting tips.
+  - Metrics or signals to watch (where relevant).
+  - Links to monitoring/QA docs if applicable.
+- Keep alignment with:
+  - Backup, recovery, and operations guides.
+  - Security and compliance docs for user data or infra changes.
+
+### 6. How to Propose New Docs
+
+- Before creating a new section:
+  - Check for an existing home using the rules above.
+  - Add:
+    - Front matter (`title`, `nav_order`, `parent` where needed).
+    - One-sentence purpose statement at top.
+  - Ensure:
+    - Internal links are relative and valid.
+    - New content fits progressive disclosure and cross-reference patterns.
+
+This section should be treated as the canonical contributor guide for technical and implementation documentation.

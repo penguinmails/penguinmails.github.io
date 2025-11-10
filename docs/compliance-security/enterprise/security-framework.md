@@ -535,6 +535,8 @@ app.use('/api/', async (req, res, next) => {
 
 ## Security Monitoring
 
+- All privileged staff roles (including super_admin, admin, support, and QA) operate under strict least-privilege policies, and every privileged action affecting tenant data, billing, authentication, or configuration MUST be logged with tenant context, resource identifiers, and sufficient metadata to satisfy SOC 2 and GDPR audit expectations.
+
 ### Logging & Auditing
 
 #### Security Event Logging

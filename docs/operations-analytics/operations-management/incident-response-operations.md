@@ -562,8 +562,8 @@ interface IncidentMetrics {
 ## Related Documents
 - [Infrastructure Operations Management](infrastructure-operations-management.md) - System architecture and deployment details
 - [Environment & Release Management](environment-release-management.md) - Deployment and rollback procedures
-- [Security Documentation](security_documentation.md) - Security incident handling
-- [Communication Guidelines](communication_guidelines.md) - Internal and external communication protocols
+- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security incident handling architecture and controls
+- [Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration.md) - Coordinated security and privacy response patterns
 - [QA Testing Protocols](qa_testing_protocols.md) - Testing and validation procedures
 
 **Keywords**: incident response, security incidents, disaster recovery, business continuity, communication protocols, post-mortem analysis, compliance requirements
