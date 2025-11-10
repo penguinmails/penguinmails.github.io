@@ -1,7 +1,5 @@
 ---
 title: "Inbox Rotation Overview"
-nav_order: 2
-nav_exclude: false
 description: "Smart inbox rotation to avoid detection and maximize deliverability"
 ---
 
@@ -9,7 +7,7 @@ description: "Smart inbox rotation to avoid detection and maximize deliverabilit
 
 ## Strategic Account Protection & Detection Avoidance
 
-> **📖 Getting Started?** See our [Features Overview](features-capabilities.md) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](../feature-overview.md) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 > - **⭐ Beginner Path**: Basic inbox rotation for account protection
 > - **⭐⭐ Intermediate Path**: Advanced rotation strategies and optimization

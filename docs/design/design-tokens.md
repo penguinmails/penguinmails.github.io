@@ -1,7 +1,5 @@
 ---
 title: Design Tokens
-nav_order: 19
-has_children: false
 description: "Complete design token specifications for PenguinMails"
 ---
 

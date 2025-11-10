@@ -680,7 +680,7 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 - [`docs/compliance-security/enterprise/security-framework.md`](docs/compliance-security/enterprise/security-framework.md:1) - Security controls relevant to financial data.
 - [`docs/compliance-security/international/data-privacy-policy.md`](docs/compliance-security/international/data-privacy-policy.md:1) - Data handling, retention, and privacy for billing records.
 
-This section is authoritative; draft Stripe/billing guides under temp_old_docs are treated as non-canonical historical scaffolding.
+This section is authoritative; legacy content references should be treated as non-canonical historical scaffolding.
 
 ---
 

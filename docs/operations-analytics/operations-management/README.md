@@ -1,6 +1,5 @@
 ---
 title: "Operations Management"
-nav_order: 38
 description: "Comprehensive operations management documentation for enterprise-grade platform operations"
 ---
 

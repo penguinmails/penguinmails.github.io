@@ -15,20 +15,20 @@ Welcome to the comprehensive documentation hub for PenguinMails - your enterpris
 
 Navigate through our organized sections using the sidebar:
 
-- **[🔍 What is PenguinMails](./docs/what-is-penguinmails/)** - Understanding the fundamentals
-- **[⚡ Features & Capabilities](./docs/features-capabilities/)** - Platform capabilities and features  
-- **[🎯 Goals & Competitive Edge](./docs/goals-competitive-edge/)** - Strategic advantages and positioning
-- **[🚀 Implementation & Getting Started](./docs/implementation-getting-started/)** - Setup and onboarding guides
-- **[📖 Resources & Support](./docs/resources-support/)** - Help, training, and support materials
+- **[🔍 What is PenguinMails](./docs/what-is-penguinmails.md)** - Understanding the fundamentals
+- **[⚡ Features & Capabilities](./docs/feature-overview.md)** - Platform capabilities and features
+- **[🎯 Goals & Competitive Edge](./docs/business/strategy/overview.md)** - Strategic advantages and positioning
+- **[🚀 Implementation & Getting Started](./docs/getting-started.md)** - Setup and onboarding guides
+- **[📖 Resources & Support](./docs/use-cases/README.md)** - Help, training, and support materials
 
 ## 🚀 Quick Access
 
 **Most Popular Documents:**
-- [High-Level Architecture](./docs/quick-access/high-level-architecture.md)
-- [Key Performance Indicators](./docs/quick-access/key-performance-indicators.md)
-- [Roadmap & Development Priorities](./docs/quick-access/roadmap-development-priorities.md)
-- [Team Workflow](./docs/quick-access/team-workflow.md)
-- [Compliance & Regulatory Standards](./docs/quick-access/compliance-regulatory-standards.md)
+- [High-Level Architecture](./docs/technical/architecture/overview.md)
+- [Key Performance Indicators](./docs/operations-analytics/analytics-performance/metrics-kpis.md)
+- [Roadmap & Development Priorities](./docs/business/strategy/overview.md)
+- [Team Workflow](./docs/implementation-technical/development-guidelines/contribution-guide.md)
+- [Compliance & Regulatory Standards](./docs/compliance-security/overview.md)
 
 ---
 

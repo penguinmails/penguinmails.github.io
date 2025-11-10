@@ -1,6 +1,5 @@
 ---
 title: "Email System Hierarchy Analysis"
-nav_order: 3
 description: "Optimized database structure and email system architecture"
 ---
 

@@ -1,7 +1,5 @@
 ---
 title: "Free Mailbox Creation"
-nav_order: 1
-nav_exclude: false
 description: "Create professional email accounts quickly and easily for your cold email campaigns"
 ---
 
@@ -9,7 +7,7 @@ description: "Create professional email accounts quickly and easily for your col
 
 ## Professional Email Infrastructure in Under 5 Minutes
 
-> **📖 Getting Started?** See our [Features Overview](features-capabilities.md) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](../feature-overview.md) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 > - **⭐ Beginner Path**: Quick account creation for immediate cold email use
 > - **⭐⭐ Intermediate Path**: Advanced configuration and domain management

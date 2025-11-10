@@ -1,6 +1,5 @@
 ---
 title: "Core Features"
-nav_order: 10
 description: "Detailed guides for PenguinMails core functionality with progressive complexity"
 ---
 

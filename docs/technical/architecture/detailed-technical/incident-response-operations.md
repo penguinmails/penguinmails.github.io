@@ -1,8 +1,5 @@
 ---
 title: "Incident Response and Operations Management"
-nav_order: 3.9
-parent: "Technical Architecture"
-grand_parent: "Technical Documentation"
 ---
 
 # Incident Response and Operations Management

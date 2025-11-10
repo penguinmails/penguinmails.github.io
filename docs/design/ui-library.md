@@ -1,7 +1,5 @@
 ---
 title: UI Library
-nav_order: 17
-has_children: false
 description: "Component usage guidelines and implementation patterns for PenguinMails"
 ---
 
@@ -356,7 +354,7 @@ interface CardProps {
 ## Feedback Components
 
 ### Alert Component
-```typescript
+```jsx
 type AlertVariant = 'info' | 'success' | 'warning' | 'error';
 
 interface AlertProps {
@@ -530,7 +528,7 @@ interface LoadingProps {
 ```
 
 ### Empty States
-```typescript
+```jsx
 interface EmptyStateProps {
   icon?: React.ComponentType;
   title: string;

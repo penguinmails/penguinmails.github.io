@@ -1,6 +1,5 @@
 ---
 title: "Infrastructure Operations Management"
-nav_order: 39
 description: "Comprehensive infrastructure operations management for enterprise-grade platform operations"
 ---
 

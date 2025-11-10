@@ -1,6 +1,6 @@
 # Content Database Architecture: Analysis, Gotchas, and Proposals
 
-This document analyzes the current Content DB design (as described in `temp_old_docs/content_database_schema_guide.md`) and provides a pragmatic, implementation-ready refinement that aligns with:
+This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure/content-database-schema-guide.md`) and provides a pragmatic, implementation-ready refinement that aligns with:
 
 - 4-tier architecture:
   - OLTP: operational entities and message metadata.
@@ -17,7 +17,7 @@ This is the canonical interpretation to use when reconciling legacy content DB d
 
 ## 1. Current Model (from legacy guide)
 
-Key constructs from `temp_old_docs/content_database_schema_guide.md`:
+Key constructs from `docs/implementation-technical/database-infrastructure/content-database-schema-guide.md`:
 
 - email_messages
   - Message-level metadata and traces, keyed by storage_key, referencing email_content.

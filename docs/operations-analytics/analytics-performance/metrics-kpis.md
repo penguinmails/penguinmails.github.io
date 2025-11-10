@@ -1,6 +1,8 @@
 ---
-last_modified_date: "2025-10-28"
 title: "Metrics & KPIs Framework"
+nav_order: 3
+nav_exclude: false
+last_modified_date: "2025-10-28"
 description: "Comprehensive metrics and KPIs framework for enterprise-grade performance monitoring, business intelligence, and strategic decision-making"
 ---
 

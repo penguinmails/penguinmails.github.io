@@ -1,7 +1,5 @@
 ---
 title: Accessibility Guidelines
-nav_order: 18
-has_children: false
 description: "WCAG 2.1 AA compliance and inclusive design standards for PenguinMails"
 ---
 

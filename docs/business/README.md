@@ -1,6 +1,5 @@
 ---
 title: "Business Context"
-nav_order: 20
 description: "Strategic and business-focused documentation for PenguinMails"
 ---
 

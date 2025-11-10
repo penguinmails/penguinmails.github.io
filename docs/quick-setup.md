@@ -1,6 +1,5 @@
 ---
 title: "Implementation & Quick Setup Guide"
-nav_order: 4
 description: "Get started in 5 minutes, achieve 95% inbox placement in 21 days with comprehensive implementation process"
 ---
 

@@ -1,7 +1,5 @@
-
 ---
 title: "Team Performance"
-nav_order: 37
 description: "Comprehensive team coordination frameworks and performance tracking systems"
 ---
 

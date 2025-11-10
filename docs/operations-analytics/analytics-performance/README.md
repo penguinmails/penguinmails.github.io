@@ -1,6 +1,5 @@
 ---
 title: "Analytics & Performance"
-nav_order: 36
 description: "Comprehensive analytics and performance monitoring frameworks for enterprise-grade business intelligence"
 ---
 

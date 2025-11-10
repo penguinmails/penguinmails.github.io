@@ -1,7 +1,5 @@
 ---
 title: Component Library
-nav_order: 16
-has_children: false
 description: "Complete catalog of reusable UI components for PenguinMails"
 ---
 
@@ -398,7 +396,7 @@ interface CardProps {
 ## Feedback Components
 
 ### Alert
-```typescript
+```jsx
 import { Alert } from '@/components/feedback/Alert';
 
 interface AlertProps {
@@ -637,7 +635,7 @@ interface SkeletonProps {
 ```
 
 ### EmptyState
-```typescript
+```jsx
 import { EmptyState } from '@/components/utilities/EmptyState';
 
 interface EmptyStateProps {

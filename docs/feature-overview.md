@@ -1,6 +1,5 @@
 ---
 title: "Features & Capabilities Overview"
-nav_order: 3
 description: "Navigate PenguinMails platform features and capabilities with comprehensive feature matrix and ROI analysis"
 ---
 

@@ -1,8 +1,5 @@
 ---
 title: "IP Management and Infrastructure Operations"
-nav_order: 3.12
-parent: "Technical Architecture"
-grand_parent: "Technical Documentation"
 ---
 
 # IP Management and Infrastructure Operations

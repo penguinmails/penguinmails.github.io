@@ -1,6 +1,5 @@
 ---
 title: "Analytics Overview"
-nav_order: 4
 description: "Transform cold email into a predictable revenue channel with AI-powered insights"
 ---
 
@@ -25,7 +24,7 @@ description: "Transform cold email into a predictable revenue channel with AI-po
 **👤 Ideal for Startup Founders** - Data-driven optimization to maximize limited marketing budget
 **👤 Enterprise-Ready** - Executive dashboards and compliance reporting for sales leadership
 
-**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](temp_old_docs/product_strategy.md#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy/overview.md#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ### **The PenguinMails Advantage**
 Unlike basic email analytics, our platform provides:
@@ -35,7 +34,7 @@ Unlike basic email analytics, our platform provides:
 - **Real-time Alerts** - Immediate notifications for performance issues
 - **Enterprise Reporting** - Professional dashboards for stakeholders
 
-**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](temp_old_docs/product_strategy.md#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy/overview.md#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ---
 

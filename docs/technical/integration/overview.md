@@ -1,6 +1,5 @@
 ---
 title: "Integration & API Overview"
-nav_order: 3
 description: "Complete API documentation and third-party integration guides for developers and integrators"
 ---
 

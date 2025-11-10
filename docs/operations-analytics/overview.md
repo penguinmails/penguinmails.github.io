@@ -1,7 +1,6 @@
 ---
 last_modified_date: "2025-10-28"
 title: "Operations & Analytics Overview"
-nav_order: 35
 description: "Comprehensive operations and analytics framework for enterprise-grade performance monitoring, team coordination, and business intelligence"
 ---
 

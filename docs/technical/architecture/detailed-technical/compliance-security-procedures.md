@@ -1,8 +1,5 @@
 ---
 title: "Compliance and Security Procedures"
-nav_order: 3.10
-parent: "Technical Architecture"
-grand_parent: "Technical Documentation"
 ---
 
 # Compliance and Security Procedures

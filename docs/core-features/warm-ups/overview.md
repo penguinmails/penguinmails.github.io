@@ -1,6 +1,5 @@
 ---
 title: "Email Warm-up Overview"
-nav_order: 1
 description: "Achieve 95%+ inbox placement with automated sender reputation building"
 ---
 
@@ -25,7 +24,7 @@ description: "Achieve 95%+ inbox placement with automated sender reputation buil
 **👤 Ideal for Startup Founders** - Build sender reputation without hiring email specialists
 **👤 Enterprise-Ready** - Automated compliance and audit trails for large teams
 
-**Strategic Reference**: See our detailed [Value Proposition Analysis](temp_old_docs/value_proposition.md#deliverability-excellence) for comprehensive ROI analysis and competitive positioning.
+**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition/overview.md#deliverability-excellence) for comprehensive ROI analysis and competitive positioning.
 
 ### **The Competitive Advantage**
 While competitors require manual warm-up management and offer no guarantees, PenguinMails delivers:
@@ -34,7 +33,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 - **Enterprise Security**: Compliance and audit trails for enterprise requirements
 - **Predictive Optimization**: AI-powered recommendations for maximum deliverability
 
-**See our [Value Proposition](temp_old_docs/value_proposition.md#deliverability-excellence) for detailed ROI analysis and competitive positioning.**
+**See our [Value Proposition](./docs/business/value-proposition/overview.md#deliverability-excellence) for detailed ROI analysis and competitive positioning.**
 
 ---
 

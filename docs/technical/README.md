@@ -1,6 +1,5 @@
 ---
 title: "Technical Implementation"
-nav_order: 30
 description: "Technical documentation and implementation guides for PenguinMails"
 ---
 
@@ -29,7 +28,7 @@ Technical documentation and implementation guides for PenguinMails.
 - Technology stack and infrastructure overview
 
 ### [Detailed Technical](architecture/detailed-technical/)
-- [High-Level Architecture](architecture/detailed-technical/high-level-architecture.md)
+- [High-Level Architecture](architecture/overview.md)
 - [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap.md)
 - [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide.md)
 

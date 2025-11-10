@@ -1,5 +1,7 @@
 ---
 title: "Business Strategy & Strategic Vision"
+nav_order: 4
+nav_exclude: false
 description: "PenguinMails strategic direction, market positioning, and long-term objectives for business leaders and stakeholders"
 ---
 

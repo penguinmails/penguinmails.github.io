@@ -208,8 +208,8 @@ This document is the canonical reference for avoiding concern-mixing in the OLAP
 ## 6. Recommended Integration Patterns (from legacy plans, normalized)
 
 This section consolidates the durable patterns from legacy docs
-(such as [`temp_old_docs/analytics_architecture.md`](temp_old_docs/analytics_architecture.md:1)
-and [`temp_old_docs/external_analytics_integration_plan.md`](temp_old_docs/external_analytics_integration_plan.md:1))
+(such as [`../technical/architecture/detailed-technical/analytics-architecture.md`](../technical/architecture/detailed-technical/analytics-architecture.md:1)
+and [`../technical/integration/overview.md`](../technical/integration/overview.md:1))
 into a concise, canonical form.
 
 ### 6.1 PostHog / Product Analytics Usage (Normalized)

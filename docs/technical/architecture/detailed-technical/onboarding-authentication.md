@@ -1,8 +1,5 @@
 ---
 title: "Onboarding and Authentication System Architecture"
-nav_order: 3.8
-parent: "Technical Architecture"
-grand_parent: "Technical Documentation"
 ---
 
 # Onboarding and Authentication System Architecture
@@ -1052,7 +1049,7 @@ export default function LoginPage() {
 
 ### **NileDB Login API**
 
-```typescript
+```jsx
 // app/api/auth/login/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";

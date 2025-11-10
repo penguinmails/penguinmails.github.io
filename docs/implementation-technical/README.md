@@ -1,6 +1,5 @@
 ---
 title: "Implementation & Technical Overview"
-nav_order: 25
 description: "Implementation & technical documentation with comprehensive technical specifications and development guidelines"
 ---
 

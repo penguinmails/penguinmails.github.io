@@ -1,6 +1,5 @@
 ---
 title: "Technical Operations Overview"
-nav_order: 2
 description: "Deployment, monitoring, and operational procedures for enterprise-grade reliability"
 ---
 

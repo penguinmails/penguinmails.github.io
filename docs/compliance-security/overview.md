@@ -1,4 +1,7 @@
 ---
+title: "Compliance & Security Overview"
+nav_order: 2
+nav_exclude: false
 last_modified_date: "2025-10-28"
 ---
 
@@ -120,8 +123,8 @@ Global compliance and privacy frameworks:
 - [Unified Inbox](../core-features/unified-inbox/overview.md) - Multi-tenant security isolation
 
 ### **Technical Implementation**
-- [Infrastructure Documentation](../../temp_old_docs/infrastructure_documentation.md) - Technical architecture
-- [Development Guidelines](../../temp_old_docs/development_guidelines.md) - Secure development practices
+- [Infrastructure Documentation](../technical/architecture/detailed-technical/infrastructure-operations.md) - Technical architecture
+- [Development Guidelines](../implementation-technical/development-guidelines/development-standards.md) - Secure development practices
 
 ---
 

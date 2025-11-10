@@ -1,6 +1,5 @@
 ---
 title: "Unified Inbox Overview"
-nav_order: 3
 description: "Manage all your cold email responses in one centralized inbox"
 ---
 

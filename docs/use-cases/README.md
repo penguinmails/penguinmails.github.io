@@ -1,6 +1,5 @@
 ---
 title: "Use Cases"
-nav_order: 60
 description: "Real-world examples and implementation scenarios for PenguinMails"
 ---
 

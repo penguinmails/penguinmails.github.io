@@ -1,9 +1,5 @@
-
 ---
 title: "Security and Infrastructure Documentation"
-nav_order: 3.11
-parent: "Technical Architecture"
-grand_parent: "Technical Documentation"
 ---
 
 # Security and Infrastructure Documentation

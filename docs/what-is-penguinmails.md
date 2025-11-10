@@ -1,6 +1,5 @@
 ---
 title: "Cold Email That Lands in Inboxes, Not Spam"
-nav_order: 1
 description: "The #1 Cold Email Infrastructure Platform delivering 95%+ inbox placement with automated compliance"
 ---
 
@@ -35,7 +34,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 **👤 Ideal for Startup Founders** - Scale from 1K to 100K+ monthly sends without hiring email specialists
 **👤 Enterprise-Ready** - Built for teams managing hundreds of sales reps simultaneously
 
-**Strategic Reference**: See our detailed [Value Proposition Analysis](temp_old_docs/value_proposition.md) for comprehensive ROI analysis and competitive positioning strategy.
+**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition/overview.md) for comprehensive ROI analysis and competitive positioning strategy.
 
 ## 📊 The ROI of Better Deliverability
 
@@ -106,7 +105,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
    - White-label solutions that enhance agency credibility
    - Scalable infrastructure that grows with agency needs
 
-**Strategic Reference**: For our complete 3-5 year vision and product strategy, see [Product Strategy](temp_old_docs/product_strategy.md) and [Business Model](temp_old_docs/business_model.md) for detailed revenue strategy.
+**Strategic Reference**: For our complete 3-5 year vision and product strategy, see [Product Strategy](./docs/business/strategy/overview.md) and [Business Model](./docs/business/model/overview.md) for detailed revenue strategy.
 
 ---
 
@@ -185,7 +184,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 **Business Impact**: 70-90% reduction in developer dependency, 80%+ faster infrastructure deployment
 
-**Strategic Reference**: For detailed problem analysis and competitive positioning, see our comprehensive [Value Proposition Analysis](temp_old_docs/value_proposition.md#customer-problems-solutions)
+**Strategic Reference**: For detailed problem analysis and competitive positioning, see our comprehensive [Value Proposition Analysis](./docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md)
 
 ---
 

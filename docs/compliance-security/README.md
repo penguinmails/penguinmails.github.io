@@ -1,6 +1,5 @@
 ---
 title: "Compliance & Security"
-nav_order: 50
 description: "Comprehensive compliance and security documentation for PenguinMails"
 ---
 

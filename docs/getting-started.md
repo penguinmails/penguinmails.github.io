@@ -1,6 +1,5 @@
 ---
 title: "Getting Started with PenguinMails"
-nav_order: 2
 description: "Quick introduction to PenguinMails cold email infrastructure"
 ---
 
@@ -53,9 +52,9 @@ Choose your entry point based on your experience level:
 
 This content is being migrated and enhanced from existing documentation to provide the most comprehensive and up-to-date information. Content sources include:
 
-- **old_docs/**: Current production-ready documentation structure
-- **temp_old_docs/**: Rich detailed content with 300% more comprehensive information
-- **Integration Strategy**: Structure from old_docs, depth from temp_old_docs
+- **Current docs/**: Current production-ready documentation structure
+- **Legacy archive**: Historical documentation reference (non-canonical)
+- **Integration Strategy**: Structure from current docs, refer to canonical sections for comprehensive information
 
 ---
 *Next: [Quick Setup Guide](quick-setup.md) →*

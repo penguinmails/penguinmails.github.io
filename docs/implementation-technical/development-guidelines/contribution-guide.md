@@ -1,3 +1,14 @@
+---
+title: "Contribution Guide"
+nav_order: 5
+nav_exclude: false
+---
+
+---
+title: "Contribution Guide - Complete Developer Onboarding & Collaboration"
+nav_order: 14
+nav_exclude: false
+---
 # Contribution Guide - Complete Developer Onboarding & Collaboration
 
 ## Strategic Alignment

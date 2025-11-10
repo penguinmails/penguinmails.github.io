@@ -1,7 +1,5 @@
 ---
 title: Design System
-nav_order: 15
-has_children: true
 description: "Complete design system framework for PenguinMails"
 ---
 

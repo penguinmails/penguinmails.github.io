@@ -184,7 +184,7 @@ app.get('/api/tenant/:tenantId/users',
 ## Row Level Security (RLS) Policies
 
 ### Complete RLS Policy Matrix
-*For comprehensive RLS policy documentation and implementation details, see [Security & Compliance Gaps Analysis](../../temp_old_docs/security_compliance_gaps_analysis.md)*
+*For comprehensive RLS policy documentation and implementation details, see [Security Framework](./security-framework.md)*
 
 **Current Implementation:**
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
@@ -566,7 +566,7 @@ const securityLogger = {
   // Track suspicious activities
   trackSuspiciousActivity: async (req, activity) => {
 #### Enhanced Audit Logging (Q4 2025)
-*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Security & Compliance Gaps Analysis](../../temp_old_docs/security_compliance_gaps_analysis.md)*
+*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Security Framework](./security-framework.md)*
 
 **Current Enhancements Planned:**
 - Multi-legislation compliance fields (GDPR, CCPA, PIPEDA, CASL)

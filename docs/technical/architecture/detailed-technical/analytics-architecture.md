@@ -1,6 +1,5 @@
 ---
 title: "Analytics Architecture"
-nav_order: 2
 description: "Comprehensive analytics system design and implementation guide"
 ---
 
