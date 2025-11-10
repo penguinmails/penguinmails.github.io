@@ -26,11 +26,22 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 ## What PenguinMails Does
 
 {: .highlight .pb-2 }
-> 💼 Business Impact & ROI
+> 💼 Business Leaders - Financial Analysis & Strategic Planning
 >
-> **Measure revenue impact and competitive advantages**
+> **Executive-level financial analysis, ROI planning, and infrastructure investment decisions**
+>
+> [🏢 Executive Summary](./docs/business/executive-summary){: .btn .btn-green}
+> [💰 ROI Calculator](./docs/business/roi-calculator){: .btn .btn-green}
+> [🏆 Competitive Analysis](./docs/business/competitive-analysis){: .btn .btn-blue}
+> [🏗️ Implementation Roadmap](./docs/business/implementation-roadmap){: .btn .btn-blue}
+> [📊 Cost Comparisons](./docs/business/cost-comparisons){: .btn .btn-outline}
+
+{: .note .pb-2 }
+> ### 🏢 Business Strategy & Analysis
+> **Detailed business planning and market analysis**
 >
 > [Business Strategy Overview](./docs/business/strategy/overview){: .btn .btn-blue}
+> [Executive Summary Template](./docs/business/executive-summary-template){: .btn .btn-blue}
 > [Financial Metrics & ROI](./docs/operations-analytics/operations-management/payment-analytics-financial-operations){: .btn .btn-blue}
 > [Market Analysis](./docs/business/market-analysis/overview){: .btn .btn-outline}
 
@@ -79,32 +90,32 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .warning }
 <details open>
-  <summary><strong>Q: I'm having trouble with email deliverability. What should I check?</strong></summary>
-  <p>A: Start with our [Deliverability Guide](./docs/operations-analytics/analytics-performance/metrics-kpis.md) to understand common issues. Check your SPF, DKIM, and DMARC records, and review our [Infrastructure Operations](./docs/operations-analytics/operations-management/infrastructure-operations-management.md) guide.</p>
+  <summary><strong>I'm having trouble with email deliverability. What should I check?</strong></summary>
+  <p>Start with our <a href="./docs/operations-analytics/analytics-performance/metrics-kpis.md">Deliverability Guide</a> to understand common issues. Check your SPF, DKIM, and DMARC records, and review our <a href="./docs/operations-analytics/operations-management/infrastructure-operations-management.md">Infrastructure Operations</a> guide.</p>
 </details>
 
 {: .warning }
 <details>
-  <summary><strong>Q: How do I set up my first email campaign?</strong></summary>
-  <p>A: Follow our [Getting Started Guide](./docs/getting-started.md) for step-by-step instructions. You'll need to configure your email infrastructure first, then create your campaign sequences.</p>
+  <summary><strong>How do I set up my first email campaign?</strong></summary>
+  <p>Follow our <a href="./docs/getting-started.md">Getting Started Guide</a> for step-by-step instructions. You'll need to configure your email infrastructure first, then create your campaign sequences.</p>
 </details>
 
 {: .warning }
 <details>
-  <summary><strong>Q: I'm getting authentication errors when trying to send emails. Help!</strong></summary>
-  <p>A: This is usually related to DNS configuration. Check our [Quick Setup Guide](./docs/quick-setup.md) for DNS troubleshooting steps, or review our [Authentication Guide](./docs/technical/architecture/detailed-technical/onboarding-authentication.md).</p>
+  <summary><strong>I'm getting authentication errors when trying to send emails. Help!</strong></summary>
+  <p>This is usually related to DNS configuration. Check our <a href="./docs/quick-setup.md">Quick Setup Guide</a> for DNS troubleshooting steps, or review our <a href="./docs/technical/architecture/detailed-technical/onboarding-authentication.html">Authentication Guide</a>.</p>
 </details>
 
 {: .warning }
 <details>
-  <summary><strong>Q: How do I connect my existing email provider?</strong></summary>
-  <p>A: We recommend using our automated VPS provisioning instead of existing providers for best deliverability. See [Infrastructure Setup](./docs/technical/architecture/overview.md) for detailed integration options.</p>
+  <summary><strong>How do I connect my existing email provider?</strong></summary>
+  <p>We recommend using our automated VPS provisioning instead of existing providers for best deliverability. See <a href="./docs/technical/architecture/overview.md">Infrastructure Setup</a> for detailed integration options.</p>
 </details>
 
 {: .warning }
 <details>
-  <summary><strong>Q: I need help with campaign optimization. Where should I start?</strong></summary>
-  <p>A: Review our [Metrics & KPIs Guide](./docs/operations-analytics/analytics-performance/metrics-kpis.md) to understand key metrics, then check [User Analytics](./docs/operations-analytics/analytics-performance/user-analytics.md) for campaign insights.</p>
+  <summary><strong>I need help with campaign optimization. Where should I start?</strong></summary>
+  <p>Review our <a href="./docs/operations-analytics/analytics-performance/metrics-kpis.md">Metrics & KPIs Guide</a> to understand key metrics, then check <a href="./docs/operations-analytics/analytics-performance/user-analytics.md">User Analytics</a> for campaign insights.</p>
 </details>
 
 ---

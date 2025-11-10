@@ -171,6 +171,66 @@ docker system prune -a && docker build -t penguinmails-docs .
 docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
 ```
 
+## 📝 Frontmatter Standards
+
+### Standard Format
+All documentation files must follow this frontmatter format:
+
+```yaml
+---
+title: "Descriptive Page Title"
+description: "Comprehensive description of page content and purpose"
+last_modified_date: "YYYY-MM-DD"
+---
+```
+
+### Navigation Files
+Only 5 main files are allowed to have sidebar navigation fields:
+
+- Business/Strategy: `docs/business/strategy/overview.md`
+- Technical/Architecture: `docs/technical/architecture/overview.md`
+- Compliance/Security: `docs/compliance-security/overview.md`
+- Core Features: `docs/core-features/README.md`
+- Implementation Technical: `docs/implementation-technical/README.md`
+
+**Sidebar Navigation Format:**
+```yaml
+---
+title: "Page Title"
+description: "Page description"
+nav_order: X
+nav_exclude: false
+last_modified_date: "2025-11-10"
+---
+```
+
+### Rules
+- Use `title`, `description`, and `last_modified_date` for all files
+- Use `nav_order` and `nav_exclude` only for the 5 main sidebar files
+- Field order: `title` → `description` → `nav_order` → `nav_exclude` → `last_modified_date`
+- Date format: YYYY-MM-DD
+
+### Quality Assurance
+- **Field Completeness**: Ensure all three fields are present in every documentation file
+- **Date Format**: Use ISO format (YYYY-MM-DD) for all dates
+- **Link Validation**: Test all navigation links after making structural changes
+- **Consistency Checks**: Verify internal document references when moving or renaming files
+
+### Impact and Benefits
+- **Navigation Improvements**: Fixed broken links and improved user experience
+- **Documentation Consistency**: Standardized structure across all 50+ files
+- **SEO Enhancement**: Better search indexing with complete metadata
+- **Developer Experience**: Consistent codebase enables automated tooling
+- **Maintenance Efficiency**: Standardized format simplifies future updates
+
+### Historical Improvements
+Previous frontmatter improvements addressed:
+- Fixed broken navigation links between documentation sections
+- Standardized field ordering across all files
+- Added missing title and description fields to 8+ files
+- Established consistent date formatting standards
+- Improved cross-reference validation and maintenance procedures
+
 ## 🤝 Contributing
 
 We welcome contributions to improve our documentation! Here's how you can help:
