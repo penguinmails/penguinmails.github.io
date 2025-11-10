@@ -7,29 +7,119 @@ has_toc: false
 description: "Welcome to PenguinMails - Enterprise Email Management Platform"
 ---
 
-# 🐧 Welcome to PenguinMails Documentation
+# 🐧 PenguinMails
+{: .d-none }
 
-Welcome to the comprehensive documentation hub for PenguinMails - your enterprise email management platform.
+<div class="highlight px-4 py-2" markdown="1">
+<b>Welcome to PenguinMails documentation.</b>
+PenguinMails handles your entire email operation - from VPS setup to campaign optimization - so you can focus on growing your business.
 
-## 📖 Documentation Structure
-
-Navigate through our organized sections using the sidebar:
-
-- **[🔍 What is PenguinMails](./docs/what-is-penguinmails.md)** - Understanding the fundamentals
-- **[⚡ Features & Capabilities](./docs/feature-overview.md)** - Platform capabilities and features
-- **[🎯 Goals & Competitive Edge](./docs/business/strategy/overview.md)** - Strategic advantages and positioning
-- **[🚀 Implementation & Getting Started](./docs/getting-started.md)** - Setup and onboarding guides
-- **[📖 Resources & Support](./docs/use-cases/README.md)** - Help, training, and support materials
-
-## 🚀 Quick Access
-
-**Most Popular Documents:**
-- [High-Level Architecture](./docs/technical/architecture/overview.md)
-- [Key Performance Indicators](./docs/operations-analytics/analytics-performance/metrics-kpis.md)
-- [Roadmap & Development Priorities](./docs/business/strategy/overview.md)
-- [Team Workflow](./docs/implementation-technical/development-guidelines/contribution-guide.md)
-- [Compliance & Regulatory Standards](./docs/compliance-security/overview.md)
+[What we offer](docs/what-is-penguinmails){: .btn .btn-blue .mr-4}
+[Buy a subscription](https://penguinmails.com/pricing/){: .btn .btn-green}
+</div>
 
 ---
 
-*For the complete documentation overview and contribution guidelines, see our [README.md](./README.md)*
+Welcome to our help center. PenguinMails is purpose-built for cold email success, focusing on **deliverability**, **compliance**, and **reputation management** - the three factors that determine whether your cold emails actually reach prospects.
+
+---
+## What PenguinMails Does
+
+{: .highlight .pb-2 }
+> 💼 Business Impact & ROI
+>
+> **Measure revenue impact and competitive advantages**
+>
+> [Business Strategy Overview](./docs/business/strategy/overview){: .btn .btn-blue}
+> [Financial Metrics & ROI](./docs/operations-analytics/operations-management/payment-analytics-financial-operations){: .btn .btn-blue}
+> [Market Analysis](./docs/business/market-analysis/overview){: .btn .btn-outline}
+
+{: .note .pb-2 }
+### 📈 Campaign Performance & Growth
+**Optimize campaigns and track customer behavior**
+
+[Metrics & KPIs Guide](./docs/operations-analytics/analytics-performance/metrics-kpis){: .btn .btn-purple}
+[User Analytics](./docs/operations-analytics/analytics-performance/user-analytics){: .btn .btn-purple}
+[Growth Analytics](./docs/operations-analytics/analytics-performance/growth-analytics-performance-metrics){: .btn .btn-outline}
+
+{: .highlight .pb-2 }
+> ### 🏗️ Automation & Infrastructure
+>
+> **Scale operations with automated email infrastructure**
+>
+> [High-Level Architecture](./docs/technical/architecture/overview){: .btn .btn-green}
+> [Quick Setup Guide](./docs/quick-setup){: .btn .btn-green}
+> [Operations Management](./docs/operations-analytics/operations-management/README){: .btn .btn-outline}
+
+{: .note .pb-2 }
+### 🔌 Integration & Development
+**Build custom solutions with our API and tools**
+
+[API Reference](./docs/implementation-technical/development-guidelines/api-reference){: .btn .btn-green}
+[Development Guidelines](./docs/implementation-technical/development-guidelines/README){: .btn .btn-green}
+[Technical Architecture](./docs/technical/architecture/detailed-technical/onboarding-authentication){: .btn .btn-outline}
+
+
+## 🚀 Getting Started
+
+### **New to PenguinMails?**
+{: .note }
+- [What is PenguinMails](./docs/what-is-penguinmails){: .btn .btn-green .mb-1}
+- [Getting Started Guide](./docs/getting-started){: .btn .btn-green .mb-1}
+- [Feature Overview](./docs/feature-overview){: .btn .btn-green}
+
+### **Need Implementation Help?**
+{: .important }
+- [Quick Setup Guide](./docs/quick-setup){: .btn .btn-purple .mb-1}
+- [Complete Documentation Index](./docs/use-cases/README){: .btn .btn-purple}
+
+---
+
+## ❓ Common Questions
+
+{: .warning }
+<details open>
+  <summary><strong>Q: I'm having trouble with email deliverability. What should I check?</strong></summary>
+  <p>A: Start with our [Deliverability Guide](./docs/operations-analytics/analytics-performance/metrics-kpis.md) to understand common issues. Check your SPF, DKIM, and DMARC records, and review our [Infrastructure Operations](./docs/operations-analytics/operations-management/infrastructure-operations-management.md) guide.</p>
+</details>
+
+{: .warning }
+<details>
+  <summary><strong>Q: How do I set up my first email campaign?</strong></summary>
+  <p>A: Follow our [Getting Started Guide](./docs/getting-started.md) for step-by-step instructions. You'll need to configure your email infrastructure first, then create your campaign sequences.</p>
+</details>
+
+{: .warning }
+<details>
+  <summary><strong>Q: I'm getting authentication errors when trying to send emails. Help!</strong></summary>
+  <p>A: This is usually related to DNS configuration. Check our [Quick Setup Guide](./docs/quick-setup.md) for DNS troubleshooting steps, or review our [Authentication Guide](./docs/technical/architecture/detailed-technical/onboarding-authentication.md).</p>
+</details>
+
+{: .warning }
+<details>
+  <summary><strong>Q: How do I connect my existing email provider?</strong></summary>
+  <p>A: We recommend using our automated VPS provisioning instead of existing providers for best deliverability. See [Infrastructure Setup](./docs/technical/architecture/overview.md) for detailed integration options.</p>
+</details>
+
+{: .warning }
+<details>
+  <summary><strong>Q: I need help with campaign optimization. Where should I start?</strong></summary>
+  <p>A: Review our [Metrics & KPIs Guide](./docs/operations-analytics/analytics-performance/metrics-kpis.md) to understand key metrics, then check [User Analytics](./docs/operations-analytics/analytics-performance/user-analytics.md) for campaign insights.</p>
+</details>
+
+---
+
+## 📞 Need More Help?
+
+{: .new }
+**Can't find what you're looking for?**
+
+- [Visit PenguinMails.com](https://penguinmails.com/){: .btn .btn-purple .mr-2}
+- [View Pricing](https://penguinmails.com/pricing/){: .btn .btn-blue .mr-2}
+- [Get Help](https://help.penguinmails.com/){: .btn .btn-outline}
+
+---
+
+---
+
+*For the complete documentation overview and contribution guidelines, see our [README](./README)*

@@ -11,4 +11,4 @@ WORKDIR /srv/jekyll
 EXPOSE 4000
 
 # Start Jekyll development server
-CMD ["jekyll", "serve", "--host", "0.0.0.0", "--watch", "--force_polling"]
+CMD ["jekyll", "serve", "--host", "0.0.0.0", "--watch", "--force_polling", "--incremental"]
