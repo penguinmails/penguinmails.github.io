@@ -1,6 +1,6 @@
 # Content Database Architecture: Analysis, Gotchas, and Proposals
 
-This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure/content-database-schema-guide.md`) and provides a pragmatic, implementation-ready refinement that aligns with:
+This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure/content-database-schema-guide`) and provides a pragmatic, implementation-ready refinement that aligns with:
 
 - 4-tier architecture:
   - OLTP: operational entities and message metadata.
@@ -9,7 +9,7 @@ This document analyzes the current Content DB design (as described in `docs/impl
   - Queue: pipelines and async processing.
 - Separation of concerns:
   - Content DB is NOT a logging, monitoring, or analytics sink.
-  - External analytics/logging handles telemetry (per [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)).
+  - External analytics/logging handles telemetry (per [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)).
 
 This is the canonical interpretation to use when reconciling legacy content DB docs.
 
@@ -17,7 +17,7 @@ This is the canonical interpretation to use when reconciling legacy content DB d
 
 ## 1. Current Model (from legacy guide)
 
-Key constructs from `docs/implementation-technical/database-infrastructure/content-database-schema-guide.md`:
+Key constructs from `docs/implementation-technical/database-infrastructure/content-database-schema-guide`:
 
 - email_messages
   - Message-level metadata and traces, keyed by storage_key, referencing email_content.
@@ -70,7 +70,7 @@ captures the core idea correctly: content_objects as body store; attachments ref
 
 ## 2. Gotchas in the Existing Content DB Design
 
-Summarized issues and risks based on `content_database_schema_guide.md`:
+Summarized issues and risks based on `content_database_schema_guide`:
 
 1) Overlap and confusion: email_content vs content_objects vs email_messages
 

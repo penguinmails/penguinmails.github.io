@@ -3,12 +3,12 @@
 This guide defines the canonical schema and responsibilities for the dedicated Notifications & System Events database.
 
 It consolidates and replaces:
-- [`notifications-architecture.md`](docs/implementation-technical/database-infrastructure/notifications-architecture.md:1)
-- [`transactional-emails-and-notifications.md`](docs/implementation-technical/database-infrastructure/transactional-emails-and-notifications.md:1)
+- [`notifications-architecture`](docs/implementation-technical/database-infrastructure/notifications-architecture:1)
+- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure/transactional-emails-and-notifications:1)
 
 Refer to:
-- [`database-schema-guide.md`](docs/implementation-technical/database-infrastructure/database-schema-guide.md:1) for the 5-tier overview.
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1) for logging/observability responsibilities.
+- [`database-schema-guide`](docs/implementation-technical/database-infrastructure/database-schema-guide:1) for the 5-tier overview.
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1) for logging/observability responsibilities.
 
 ---
 
@@ -281,7 +281,7 @@ To avoid scope creep:
 ## 8. Mermaid ER Diagram
 
 See:
-- [`notifications-mermaid-er.md`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er.md:1)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er:1)
 for the visual ER representation of this schema.
 
 ---

@@ -774,9 +774,9 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ---
 
 ## Related Documents
-- [UI Library](ui-library.md) - Component usage guidelines and patterns
-- [Design System](design-system.md) - Complete design system overview
-- [Design Tokens](design-tokens.md) - Design token specifications
-- [Accessibility Guidelines](accessibility-guidelines.md) - Inclusive design standards
+- [UI Library](((ui-library)) - Component usage guidelines and patterns
+- [Design System](((design-system)) - Complete design system overview
+- [Design Tokens](((design-tokens)) - Design token specifications
+- [Accessibility Guidelines](((accessibility-guidelines)) - Inclusive design standards
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications

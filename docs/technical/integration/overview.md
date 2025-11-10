@@ -13,7 +13,7 @@ description: "Complete API documentation and third-party integration guides for 
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
-**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features/) and [analytics tracking](../../core-features/analytics/overview.md) to provide seamless workflow automation that scales with your business.
+**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features/) and [analytics tracking](((../../core-features/analytics/overview)) to provide seamless workflow automation that scales with your business.
 
 PenguinMails provides a comprehensive integration ecosystem designed for developers, with **RESTful APIs, SDKs for major programming languages, webhook systems, and extensive third-party integrations**. Build custom solutions with confidence using our enterprise-grade API infrastructure.
 
@@ -848,8 +848,8 @@ class TestPenguinMailsAPI:
 ### **Developer Documentation**
 - **[API Reference](advanced-integrations/)** - Complete API documentation
 - **[SDK Documentation](development-resources/)** - Detailed SDK guides
-- **[Webhook Guide](advanced-integrations/webhook-guide.md)** - Webhook implementation guide
-- **[Testing Framework](development-resources/testing-framework.md)** - Testing tools and best practices
+- **[Webhook Guide](((advanced-integrations/webhook-guide))** - Webhook implementation guide
+- **[Testing Framework](((development-resources/testing-framework))** - Testing tools and best practices
 
 ### **Support & Community**
 - **Developer Support**: developer-support@penguinmails.com
@@ -868,4 +868,4 @@ class TestPenguinMailsAPI:
 *Our comprehensive integration ecosystem ensures that PenguinMails seamlessly fits into your existing technology stack while providing the flexibility to build custom solutions that drive your business forward.*
 
 ---
-*Previous: [Technical Operations Overview](../operations/overview.md) | Next: [Core Features Overview](../../core-features/) →*
+*Previous: [Technical Operations Overview](((../operations/overview)) | Next: [Core Features Overview](../../core-features/) →*

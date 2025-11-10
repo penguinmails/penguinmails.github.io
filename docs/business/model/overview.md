@@ -308,11 +308,12 @@ PenguinMails operates on a multi-sided platform business model with B2B SaaS sub
 
 ## Related Financial Documents
 
-- **[Business Strategy Overview](../strategy/overview.md)** - Strategic direction and market positioning
-- **[Market Analysis](../market-analysis/overview.md)** - Market intelligence and competitive analysis
-- **[Product Analytics](../analytics/overview.md)** - Data-driven financial optimization
-- **[Value Proposition Overview](../value-proposition/overview.md)** - Customer value and pricing rationale
-- **[Business Operations](../operations/overview.md)** - Operational procedures supporting financial objectives
+- **[Financial Analysis Benchmarks](./detailed-analysis/financial-analysis-benchmarks)** - Comprehensive infrastructure cost analysis and TCO models
+- **[Business Strategy Overview](../strategy/overview)** - Strategic direction and market positioning
+- **[Market Analysis](../market-analysis/overview)** - Market intelligence and competitive analysis
+- **[Product Analytics](../analytics/overview)** - Data-driven financial optimization
+- **[Value Proposition Overview](../value-proposition/overview)** - Customer value and pricing rationale
+- **[Business Operations](../operations/overview)** - Operational procedures supporting financial objectives
 
 ---
 
@@ -365,4 +366,4 @@ This business model and financial projections are supported by industry benchmar
 
 ---
 
-*Next: [Product Analytics Overview](../analytics/overview.md) →*
+*Next: [Product Analytics Overview](../analytics/overview) →*

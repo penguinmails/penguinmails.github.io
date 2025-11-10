@@ -399,4 +399,4 @@ This white-label business strategy is supported by market research, industry ana
 
 ---
 
-*Next: [Multi-tenant Business Models](multi-tenant-business-models.md) →*
+*Next: [Multi-tenant Business Models](((multi-tenant-business-models)) →*

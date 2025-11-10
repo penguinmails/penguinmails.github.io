@@ -17,8 +17,8 @@
 - Heavy content (email bodies, attachments).
 
 For those concerns:
-- Notifications & system events: see [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
-- External logging / observability: see [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
+- Notifications & system events: see [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
+- External logging / observability: see [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
 
 ---
 
@@ -236,7 +236,7 @@ The following are intentionally NOT present in OLAP (and must not be reintroduce
 
 - admin_system_events:
   - Live/operational system events are owned by the Notifications DB:
-    - See [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
+    - See [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
   - OLAP may later define aggregates, but no admin_system_events base table exists here.
 
 - notifications:
@@ -259,7 +259,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 ## 4. Relationships (High-Level)
 
 See ER diagram:
-- [`olap-mermaid-er.md`](docs/implementation-technical/database-infrastructure/olap-mermaid-er.md:1)
+- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure/olap-mermaid-er:1)
 
 Key relationships:
 
@@ -292,7 +292,7 @@ Apply RLS and access controls to all OLAP tables:
 - Restrict admin_audit_log to authorized roles and necessary scopes.
 
 Detailed security and logging strategy:
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
 
 ---
 

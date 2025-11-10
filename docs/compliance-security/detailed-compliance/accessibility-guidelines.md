@@ -402,9 +402,9 @@ export function Button({
 ---
 
 ## Related Documents
-- [Design System](../design/design-system.md) - Complete design system overview
-- [Design Tokens](../design/design-tokens.md) - Design token specifications
-- [Interaction Patterns](../design/design-system.md) - User interaction frameworks
-- [UI Library](../design/ui-library.md) - Component usage guidelines
+- [Design System](((../design/design-system)) - Complete design system overview
+- [Design Tokens](((../design/design-tokens)) - Design token specifications
+- [Interaction Patterns](((../design/design-system)) - User interaction frameworks
+- [UI Library](((../design/ui-library)) - Component usage guidelines
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y

@@ -1,7 +1,7 @@
 ---
-last_modified_date: "2025-10-28"
 title: "Operations & Analytics Overview"
 description: "Comprehensive operations and analytics framework for enterprise-grade performance monitoring, team coordination, and business intelligence"
+last_modified_date: "2025-10-28"
 ---
 
 # Operations & Analytics Framework
@@ -130,26 +130,26 @@ description: "Comprehensive operations and analytics framework for enterprise-gr
 ## Cross-Reference Integration
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment and objectives
-- [Market Analysis](../business/market-analysis/overview.md) - Market positioning and opportunities
-- [Value Proposition](../business/value-proposition/overview.md) - Competitive differentiation
-- [User Personas](../business/user-personas/overview.md) - Target audience analysis
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment and objectives
+- [Market Analysis](((../business/market-analysis/overview)) - Market positioning and opportunities
+- [Value Proposition](((../business/value-proposition/overview)) - Competitive differentiation
+- [User Personas](((../business/user-personas/overview)) - Target audience analysis
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview.md) - System design and infrastructure
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md) - Data pipeline and analytics systems
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System management and scaling
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide.md) - Third-party service integration
+- [Technical Architecture Overview](((../technical/architecture/overview)) - System design and infrastructure
+- [Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture)) - Data pipeline and analytics systems
+- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System management and scaling
+- [Integration Guide](((../technical/architecture/detailed-technical/integration-guide)) - Third-party service integration
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - Complete user experience flows
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation and setup
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX design and optimization
+- [User Journeys Overview](((../user-journeys/README)) - Complete user experience flows
+- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation and setup
+- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX design and optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview.md) - Regulatory compliance framework
-- [Security Framework](../compliance-security/enterprise/security-framework.md) - Security operations and monitoring
-- [Data Privacy Policy](../compliance-security/international/data-privacy-policy.md) - Privacy compliance and data handling
+- [Compliance Overview](((../compliance-security/overview)) - Regulatory compliance framework
+- [Security Framework](((../compliance-security/enterprise/security-framework)) - Security operations and monitoring
+- [Data Privacy Policy](((../compliance-security/international/data-privacy-policy)) - Privacy compliance and data handling
 
 ---
 

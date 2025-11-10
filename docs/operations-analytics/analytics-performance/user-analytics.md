@@ -1,7 +1,7 @@
 ---
-last_modified_date: "2025-10-28"
 title: "User Analytics Framework"
 description: "Comprehensive user behavior analysis framework for enterprise-grade performance monitoring, engagement tracking, and conversion optimization"
+last_modified_date: "2025-10-28"
 ---
 
 # User Analytics Framework
@@ -404,29 +404,29 @@ Campaign Performance
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](./overview.md) - Main operations framework
-- [Performance KPIs](./metrics-kpis.md) - Comprehensive KPI framework
-- [Product Analytics](./product-analytics.md) - Feature performance analysis
+- [Operations Analytics Overview](((./overview)) - Main operations framework
+- [Performance KPIs](((./metrics-kpis)) - Comprehensive KPI framework
+- [Product Analytics](((./product-analytics)) - Feature performance analysis
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment
-- [Market Analysis](../business/market-analysis/overview.md) - Market positioning
-- [User Personas](../business/user-personas/overview.md) - Target audience profiles
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment
+- [Market Analysis](((../business/market-analysis/overview)) - Market positioning
+- [User Personas](((../business/user-personas/overview)) - Target audience profiles
 
 ### **Technical Architecture**
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System monitoring
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide.md) - Analytics integrations
+- [Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture)) - Technical implementation
+- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System monitoring
+- [Integration Guide](((../technical/architecture/detailed-technical/integration-guide)) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX optimization
+- [User Journeys Overview](((../user-journeys/README)) - User flow documentation
+- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation
+- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview.md) - Regulatory compliance
-- [Data Privacy Policy](../compliance-security/international/data-privacy-policy.md) - Privacy compliance
-- [Security Framework](../compliance-security/enterprise/security-framework.md) - Security operations
+- [Compliance Overview](((../compliance-security/overview)) - Regulatory compliance
+- [Data Privacy Policy](((../compliance-security/international/data-privacy-policy)) - Privacy compliance
+- [Security Framework](((../compliance-security/enterprise/security-framework)) - Security operations
 
 ---
 
@@ -434,8 +434,8 @@ Campaign Performance
 
 Navigate to specific analytics areas:
 
-- **[Product Analytics](./product-analytics.md)** → Feature adoption and product performance
-- **[Metrics & KPIs](./metrics-kpis.md)** → Comprehensive KPI framework
+- **[Product Analytics](((./product-analytics))** → Feature adoption and product performance
+- **[Metrics & KPIs](((./metrics-kpis))** → Comprehensive KPI framework
 - **[Operations Management](../operations-management/)** → Operational procedures and workflows
 
 ---

@@ -46,55 +46,55 @@ Complete user journey documentation for all PenguinMails use cases.
 ### [Detailed Journeys](detailed-journeys/)
 Complete end-to-end journey documentation for all user types.
 
-1. [Onboarding Journey](detailed-journeys/onboarding-journey.md)
+1. [Onboarding Journey](detailed-journeys/onboarding-journey)
    - Account creation and verification
    - Initial configuration and setup
    - First campaign creation
    - Success validation
 
-2. [Campaign Journey](detailed-journeys/campaign-journey.md)
+2. [Campaign Journey](detailed-journeys/campaign-journey)
    - Campaign planning and strategy
    - Email list management
    - Template creation and testing
    - Launch and monitoring
 
-3. [Analytics Journey](detailed-journeys/analytics-journey.md)
+3. [Analytics Journey](detailed-journeys/analytics-journey)
    - Performance dashboard navigation
    - Metric interpretation and analysis
    - Report generation and sharing
    - Optimization based on insights
 
-4. [Authentication Journey](detailed-journeys/authentication-journey.md)
+4. [Authentication Journey](detailed-journeys/authentication-journey)
    - Account security setup
    - Two-factor authentication
    - Password management
    - Access control configuration
 
-5. [IP Management Journey](detailed-journeys/ip-management-journey.md)
+5. [IP Management Journey](detailed-journeys/ip-management-journey)
    - Domain addition and verification
    - DNS configuration
    - Reputation monitoring
    - Warm-up sequence management
 
-6. [Organization Journey](detailed-journeys/organization-journey.md)
+6. [Organization Journey](detailed-journeys/organization-journey)
    - Team member invitation
    - Role and permission assignment
    - Workspace configuration
    - Collaboration setup
 
-7. [Payment Journey](detailed-journeys/payment-journey.md)
+7. [Payment Journey](detailed-journeys/payment-journey)
    - Plan selection and upgrade
    - Payment method management
    - Billing cycle management
    - Invoice and receipt access
 
-8. [Staff Journey](detailed-journeys/staff-journey.md)
+8. [Staff Journey](detailed-journeys/staff-journey)
    - Staff onboarding process
    - Training and certification
    - Performance monitoring
    - Role evolution and growth
 
-9. [Emergency Journey](detailed-journeys/emergency-journey.md)
+9. [Emergency Journey](detailed-journeys/emergency-journey)
    - Crisis response procedures
    - System recovery protocols
    - Communication during outages

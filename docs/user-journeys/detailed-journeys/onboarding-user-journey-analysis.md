@@ -23,14 +23,14 @@
 - **Analytics integration** tracks onboarding completion rates and drop-off points via role assignments
 
 **Detailed Documentation:**
-- **[Normal, Edge, Initial & Emergency Scenarios](onboarding-user-journey-analysis.md)** - Complete onboarding journey specifications
-- **[Technical Implementation](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Complete user authentication and onboarding flow
-- **[Database Schema](../technical/architecture/detailed-technical/olap-analytics-schema.md)** - Multi-tenant authentication and role-based access control
+- **[Normal, Edge, Initial & Emergency Scenarios](onboarding-user-journey-analysis)** - Complete onboarding journey specifications
+- **[Technical Implementation](../technical/architecture/detailed-technical/onboarding-authentication)** - Complete user authentication and onboarding flow
+- **[Database Schema](../technical/architecture/detailed-technical/olap-analytics-schema)** - Multi-tenant authentication and role-based access control
 
 **Documentation Organization:**
-- **Main User Journeys**: [user-journeys.md](../README.md) - All domains with table of contents navigation
+- **Main User Journeys**: [user-journeys.md](../README) - All domains with table of contents navigation
 - **Legacy References**: Individual journey documents maintained for backward compatibility
-- **Technical Implementation**: [Technical Constraints Analysis](../technical/architecture/detailed-technical/technical-constraints-analysis.md) + [Implementation Roadmap](../technical/architecture/detailed-technical/implementation-roadmap.md)
+- **Technical Implementation**: [Technical Constraints Analysis](../technical/architecture/detailed-technical/technical-constraints-analysis) + [Implementation Roadmap](../technical/architecture/detailed-technical/implementation-roadmap)
 
 ---
 
@@ -175,15 +175,15 @@
 
 ## Technical Implementation Links
 
-- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Complete user authentication and onboarding flow
-- **[OLAP Analytics Schema](../technical/architecture/detailed-technical/olap-analytics-schema.md)** - tenant_users.roles for status tracking and role-based access control
-- **[API Reference](../technical/architecture/detailed-technical/email-system-implementation.md)** - NileDB tenant user management and role assignment endpoints
+- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication)** - Complete user authentication and onboarding flow
+- **[OLAP Analytics Schema](../technical/architecture/detailed-technical/olap-analytics-schema)** - tenant_users.roles for status tracking and role-based access control
+- **[API Reference](../technical/architecture/detailed-technical/email-system-implementation)** - NileDB tenant user management and role assignment endpoints
 
 ## Related Documents
-- [Customer Onboarding Journey Deep Dive](../customer-onboarding-journey-deep-dive.md) - Customer onboarding process
-- [Comprehensive Onboarding Guide](../comprehensive-onboarding-guide.md) - Team onboarding and working agreements
-- [User Interaction Patterns UX Design](../user-interaction-patterns-ux-design.md) - UX design patterns
-- [Technical Architecture](../technical/architecture/overview.md) - System design overview
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide.md) - API and integration specifications
+- [Customer Onboarding Journey Deep Dive](../customer-onboarding-journey-deep-dive) - Customer onboarding process
+- [Comprehensive Onboarding Guide](../comprehensive-onboarding-guide) - Team onboarding and working agreements
+- [User Interaction Patterns UX Design](../user-interaction-patterns-ux-design) - UX design patterns
+- [Technical Architecture](../technical/architecture/overview) - System design overview
+- [Integration Guide](../technical/architecture/detailed-technical/integration-guide) - API and integration specifications
 
 **Keywords**: user journey, onboarding analysis, role-based access control, multi-tenant architecture, user experience, database management, edge case handling

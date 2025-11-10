@@ -1,8 +1,9 @@
 ---
 title: "Compliance & Security Overview"
+description: "Comprehensive security and compliance framework for enterprise-grade data protection and regulatory adherence"
 nav_order: 2
 nav_exclude: false
-last_modified_date: "2025-10-28"
+last_modified_date: "2025-11-10"
 ---
 
 # Compliance & Security Overview
@@ -45,19 +46,19 @@ last_modified_date: "2025-10-28"
 
 ### **📋 Detailed Compliance Procedures**
 Start here for implementation-focused guidance:
-- [Compliance Procedures](detailed-compliance/compliance-procedures.md) - Regulatory workflows and procedures
-- [Accessibility Guidelines](detailed-compliance/accessibility-guidelines.md) - WCAG 2.1 AA compliance standards
-- [SOP Guidelines](detailed-compliance/sop-guidelines.md) - Standard operating procedures
+- [Compliance Procedures](((detailed-compliance/compliance-procedures)) - Regulatory workflows and procedures
+- [Accessibility Guidelines](((detailed-compliance/accessibility-guidelines)) - WCAG 2.1 AA compliance standards
+- [SOP Guidelines](((detailed-compliance/sop-guidelines)) - Standard operating procedures
 
 ### **🏢 Enterprise Security Framework**
 Advanced security architecture and implementation:
-- [Security Framework](enterprise/security-framework.md) - Comprehensive security architecture
-- [Security & Privacy Integration](enterprise/security-privacy-integration.md) - Unified security and privacy approach
-- [Traffic Security Matrix](enterprise/traffic-security-matrix.md) - Database security strategy framework
+- [Security Framework](((enterprise/security-framework)) - Comprehensive security architecture
+- [Security & Privacy Integration](((enterprise/security-privacy-integration)) - Unified security and privacy approach
+- [Traffic Security Matrix](((enterprise/traffic-security-matrix)) - Database security strategy framework
 
 ### **🌍 International Standards**
 Global compliance and privacy frameworks:
-- [Data Privacy Policy](international/data-privacy-policy.md) - Customer-facing privacy standards
+- [Data Privacy Policy](((international/data-privacy-policy)) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -115,16 +116,16 @@ Global compliance and privacy frameworks:
 ## **Integration Points**
 
 ### **Business Operations**
-- [Business Strategy](../business/strategy/overview.md) - Security alignment with business objectives
-- [Market Analysis](../business/market-analysis/overview.md) - Compliance as competitive advantage
+- [Business Strategy](((../business/strategy/overview)) - Security alignment with business objectives
+- [Market Analysis](((../business/market-analysis/overview)) - Compliance as competitive advantage
 
 ### **Core Features**
-- [Inbox Rotation](../core-features/inbox-rotation/overview.md) - Secure email infrastructure
-- [Unified Inbox](../core-features/unified-inbox/overview.md) - Multi-tenant security isolation
+- [Inbox Rotation](((../core-features/inbox-rotation/overview)) - Secure email infrastructure
+- [Unified Inbox](((../core-features/unified-inbox/overview)) - Multi-tenant security isolation
 
 ### **Technical Implementation**
-- [Infrastructure Documentation](../technical/architecture/detailed-technical/infrastructure-operations.md) - Technical architecture
-- [Development Guidelines](../implementation-technical/development-guidelines/development-standards.md) - Secure development practices
+- [Infrastructure Documentation](((../technical/architecture/detailed-technical/infrastructure-operations)) - Technical architecture
+- [Development Guidelines](((../implementation-technical/development-guidelines/development-standards)) - Secure development practices
 
 ---
 
@@ -147,11 +148,11 @@ Global compliance and privacy frameworks:
 ## **Support & Resources**
 
 ### **Documentation**
-- [Security Framework](enterprise/security-framework.md) - Comprehensive security architecture and controls
-- [Security & Privacy Integration](enterprise/security-privacy-integration.md) - Unified security and privacy model
-- [Traffic Security Matrix](enterprise/traffic-security-matrix.md) - Traffic and key selection security framework
-- [Compliance Procedures](detailed-compliance/compliance-procedures.md) - Implementation workflows
-- [Data Privacy Policy](international/data-privacy-policy.md) - Customer-facing privacy information
+- [Security Framework](((enterprise/security-framework)) - Comprehensive security architecture and controls
+- [Security & Privacy Integration](((enterprise/security-privacy-integration)) - Unified security and privacy model
+- [Traffic Security Matrix](((enterprise/traffic-security-matrix)) - Traffic and key selection security framework
+- [Compliance Procedures](((detailed-compliance/compliance-procedures)) - Implementation workflows
+- [Data Privacy Policy](((international/data-privacy-policy)) - Customer-facing privacy information
 
 ### **Training & Awareness**
 - **Security Training**: Regular training on OWASP Top 10 and secure development

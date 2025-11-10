@@ -10,18 +10,18 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 ## Progressive Complexity Framework
 
 ### **Tier 1: Strategic Overview** (Beginner Level)
-- [Value Proposition](value-proposition/overview.md) - Core value statements and customer problem-solving
-- [User Personas](user-personas/overview.md) - Customer profiles and needs analysis
+- [Value Proposition](value-proposition/overview) - Core value statements and customer problem-solving
+- [User Personas](user-personas/overview) - Customer profiles and needs analysis
 
 ### **Tier 2: Business Intelligence** (Intermediate Level)
-- [Business Strategy](strategy/overview.md) - Strategic vision and market positioning
-- [Competitive Intelligence](competitive-intelligence/overview.md) - Strategic positioning and competitor analysis
-- [Market Analysis](market-analysis/overview.md) - Market sizing and opportunity analysis
-- [Business Model](model/overview.md) - Revenue strategy and financial framework
+- [Business Strategy](strategy/overview) - Strategic vision and market positioning
+- [Competitive Intelligence](competitive-intelligence/overview) - Strategic positioning and competitor analysis
+- [Market Analysis](market-analysis/overview) - Market sizing and opportunity analysis
+- [Business Model](model/overview) - Revenue strategy and financial framework
 
 ### **Tier 3: Advanced Operations** (Expert Level)
-- [Product Analytics](analytics/overview.md) - Data-driven optimization and performance measurement
-- [Business Operations](operations/overview.md) - Comprehensive operational procedures and quality assurance
+- [Product Analytics](analytics/overview) - Data-driven optimization and performance measurement
+- [Business Operations](operations/overview) - Comprehensive operational procedures and quality assurance
 - [Advanced Business](advanced-business/) - Enterprise strategies and development business models
 
 ## Content Types
@@ -54,18 +54,18 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 
 ## Competitive Intelligence Framework
 
-### [Overview](competitive-intelligence/overview.md)
+### [Overview](competitive-intelligence/overview)
 - Strategic competitive positioning and market differentiation
 - Comprehensive competitor analysis and weakness identification
 - Quantified competitive advantages and performance metrics
 - Implementation framework for competitive messaging
 
-### [Strategic Positioning](competitive-intelligence/strategic-positioning.md)
+### [Strategic Positioning](competitive-intelligence/strategic-positioning)
 - Core value proposition and market differentiation
 - Technical decision rationale and architecture advantages
 - Business model competitive advantages
 
-### [Competitor Analysis](competitive-intelligence/competitor-analysis.md)
+### [Competitor Analysis](competitive-intelligence/competitor-analysis)
 - Detailed analysis of Mailchimp/SendGrid limitations
 - Smartlead/Warmbox competitive positioning
 - CRM built-in tools comparison
@@ -73,32 +73,32 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 
 ## Value Proposition Deep Dive
 
-### [Overview](value-proposition/overview.md)
+### [Overview](value-proposition/overview)
 - Why choose PenguinMails over alternatives
 - Core value propositions
 - Business benefits and ROI
 
 ### [Detailed Analysis](value-proposition/detailed-analysis/)
-- [Comprehensive Analysis](value-proposition/detailed-analysis/comprehensive-analysis.md) - Advanced value proposition analysis
-- [Market Positioning](value-proposition/detailed-analysis/market-positioning.md)
-- [Competitor Comparison](value-proposition/detailed-analysis/competitor-comparison.md)
-- [ROI Calculators](value-proposition/detailed-analysis/roi-calculators.md)
+- [Comprehensive Analysis](value-proposition/detailed-analysis/comprehensive-analysis) - Advanced value proposition analysis
+- [Market Positioning](value-proposition/detailed-analysis/market-positioning)
+- [Competitor Comparison](value-proposition/detailed-analysis/competitor-comparison)
+- [ROI Calculators](value-proposition/detailed-analysis/roi-calculators)
 
 ### [Enterprise Business](value-proposition/enterprise-business/)
-- [Enterprise Architecture](value-proposition/enterprise-business/enterprise-architecture.md)
-- [Scaling Strategies](value-proposition/enterprise-business/scaling-strategies.md)
-- [Business Transformation](value-proposition/enterprise-business/business-transformation.md)
+- [Enterprise Architecture](value-proposition/enterprise-business/enterprise-architecture)
+- [Scaling Strategies](value-proposition/enterprise-business/scaling-strategies)
+- [Business Transformation](value-proposition/enterprise-business/business-transformation)
 
 ## User Personas Framework
 
-### [Overview](user-personas/overview.md)
+### [Overview](user-personas/overview)
 - Who uses PenguinMails and their specific needs
 - Primary user types and segments
 
 ### [Detailed Profiles](user-personas/detailed-profiles/)
-- [Agency Owner Deep Dive](user-personas/detailed-profiles/agency-owner-deep-dive.md)
-- [Startup Founder Profile](user-personas/detailed-profiles/startup-founder-profile.md)
-- [Enterprise Team Analysis](user-personas/detailed-profiles/enterprise-team-analysis.md)
+- [Agency Owner Deep Dive](user-personas/detailed-profiles/agency-owner-deep-dive)
+- [Startup Founder Profile](user-personas/detailed-profiles/startup-founder-profile)
+- [Enterprise Team Analysis](user-personas/detailed-profiles/enterprise-team-analysis)
 
 ### [Persona-Specific](user-personas/persona-specific/)
 - Targeted content for specific user types
@@ -106,7 +106,7 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 
 ## Competitive Intelligence
 
-### [Overview](competitive-intelligence/overview.md)
+### [Overview](competitive-intelligence/overview)
 - Strategic competitive positioning and market differentiation
 - Comprehensive competitor analysis and weakness identification
 - Quantified competitive advantages and performance metrics
@@ -114,21 +114,21 @@ Strategic and business-focused documentation for PenguinMails, providing compreh
 
 ## Strategic Planning
 
-### [Overview](strategy/overview.md)
+### [Overview](strategy/overview)
 - Strategic context and business vision
 - Market analysis and positioning
 
 ### [Detailed Strategy](strategy/detailed-strategy/)
-- [Product Strategy](strategy/detailed-strategy/product-strategy.md)
-- [Market Analysis](strategy/detailed-strategy/market-analysis.md)
-- [Business Model](strategy/detailed-strategy/business-model.md)
+- [Product Strategy](strategy/detailed-strategy/product-strategy)
+- [Market Analysis](strategy/detailed-strategy/market-analysis)
+- [Business Model](strategy/detailed-strategy/business-model)
 
 ## Advanced Business Strategies
 
-- [White Label Strategies](advanced-business/white-label-strategies.md)
-- [Multi-tenant Business Models](advanced-business/multi-tenant-business-models.md)
-- [Enterprise Consulting](advanced-business/enterprise-consulting.md)
-- [Custom Business Solutions](advanced-business/custom-business-solutions.md)
+- [White Label Strategies](advanced-business/white-label-strategies)
+- [Multi-tenant Business Models](advanced-business/multi-tenant-business-models)
+- [Enterprise Consulting](advanced-business/enterprise-consulting)
+- [Custom Business Solutions](advanced-business/custom-business-solutions)
 
 ## Integration Points
 

@@ -360,4 +360,4 @@ This value proposition is supported by market research, industry studies, and cu
 [global-email-research]: https://www.maximizemarketresearch.com/market-report/global-email-marketing-market/31834/
 
 ---
-*Next: [User Personas Overview](user-personas/overview.md) →*
+*Next: [User Personas Overview](../user-personas/overview) →*

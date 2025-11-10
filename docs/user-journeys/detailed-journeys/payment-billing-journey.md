@@ -1,5 +1,5 @@
 ---
-last_modified_date: "2025-12-19"
+last_modified_date: "2025-11-10"
 ---
 
 # **Payment & Billing Journey**
@@ -16,16 +16,16 @@ last_modified_date: "2025-12-19"
 
 ---
 
-> **Framework Context**: This journey implements the progressive disclosure methodology outlined in [User Journey Framework](user-journey-framework.md#progressive-disclosure-framework)
+> **Framework Context**: This journey implements the progressive disclosure methodology outlined in [User Journey Framework](user-journey-framework#progressive-disclosure-framework)
 
 > **Journey Flow:** `Stripe Connect Setup → Payment Method → Subscription Activation → Billing Dashboard`
 > **Documentation Strategy:** Revenue model integration with progressive complexity levels
 
 > **Quick Navigation:**
-> - **[User Journey Framework](user-journey-framework.md)** - Complete progressive disclosure methodology
-> - **[Authentication Journey](authentication-journey.md)** - Pre-requisite user access
-> - **[Onboarding Journey](onboarding-journey.md)** - Setup and configuration requirements
-> - **[Campaign Operations Journey](campaign-operations-journey.md)** - Revenue-generating features
+> - **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
+> - **[Authentication Journey](((authentication-journey))** - Pre-requisite user access
+> - **[Onboarding Journey](((onboarding-journey))** - Setup and configuration requirements
+> - **[Campaign Operations Journey](((campaign-operations-journey))** - Revenue-generating features
 
 ---
 
@@ -385,9 +385,9 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
 
 ## Technical Implementation Links
 
-- **[Stripe Integration Implementation](../technical/architecture/detailed-technical/integration-guide.md)** - Complete Stripe Connect integration and billing setup
-- **[Business Model Integration](../business/model/overview.md)** - Business model alignment with billing features
-- **[Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md)** - Billing analytics and revenue tracking
-- **[Security & Privacy Framework](../compliance-security/enterprise/security-framework.md)** - Payment compliance and security procedures
+- **[Stripe Integration Implementation](((../technical/architecture/detailed-technical/integration-guide))** - Complete Stripe Connect integration and billing setup
+- **[Business Model Integration](((../business/model/overview))** - Business model alignment with billing features
+- **[Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture))** - Billing analytics and revenue tracking
+- **[Security & Privacy Framework](((../compliance-security/enterprise/security-framework))** - Payment compliance and security procedures
 
 **Keywords**: payment processing, billing management, Stripe Connect, revenue optimization, subscription management, enterprise billing

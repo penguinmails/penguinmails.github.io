@@ -13,11 +13,11 @@ We operate a 5-tier model:
 External logging/observability is an out-of-band component that complements these tiers.
 
 For detailed per-tier guides, see:
-- [`oltp-schema-guide.md`](docs/implementation-technical/database-infrastructure/oltp-schema-guide.md:1)
-- [`content-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/content-database-schema-guide.md:1)
-- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1)
-- [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1)
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure/content-database-schema-guide:1)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
 
 ---
 
@@ -42,8 +42,8 @@ Key principles:
 - No high-volume logs or analytics aggregates.
 
 Reference:
-- [`oltp-schema-guide.md`](docs/implementation-technical/database-infrastructure/oltp-schema-guide.md:1)
-- [`oltp-mermaid-er.md`](docs/implementation-technical/database-infrastructure/oltp-mermaid-er.md:1)
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1)
+- [`oltp-mermaid-er`](docs/implementation-technical/database-infrastructure/oltp-mermaid-er:1)
 
 ---
 
@@ -69,9 +69,9 @@ Core schema:
 - `attachments`
 
 Reference:
-- [`content-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/content-database-schema-guide.md:1)
-- [`content-mermaid-er.md`](docs/implementation-technical/database-infrastructure/content-mermaid-er.md:1)
-- [`content-database-analysis.md`](docs/implementation-technical/database-infrastructure/content-database-analysis.md:1)
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure/content-database-schema-guide:1)
+- [`content-mermaid-er`](docs/implementation-technical/database-infrastructure/content-mermaid-er:1)
+- [`content-database-analysis`](docs/implementation-technical/database-infrastructure/content-database-analysis:1)
 
 ---
 
@@ -107,8 +107,8 @@ Canonical tables:
 - `admin_audit_log` (compliance-focused only)
 
 Reference:
-- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1)
-- [`olap-mermaid-er.md`](docs/implementation-technical/database-infrastructure/olap-mermaid-er.md:1)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
+- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure/olap-mermaid-er:1)
 
 ---
 
@@ -136,7 +136,7 @@ Key principles:
   - Aggressively pruned; long-lived traces belong in external logging.
 
 Reference:
-- [`queue-system-implementation-guide.md`](docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md:1)
+- [`queue-system-implementation-guide`](docs/implementation-technical/database-infrastructure/queue-system-implementation-guide:1)
 
 ---
 
@@ -182,8 +182,8 @@ Key principles:
   - Holds raw/full-fidelity events and metrics.
 
 Reference:
-- [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
-- [`notifications-mermaid-er.md`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er.md:1)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er:1)
 
 ---
 
@@ -213,7 +213,7 @@ Key principles:
   - A replacement for OLTP/Notifications DB correctness.
 
 Reference:
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
 
 ---
 

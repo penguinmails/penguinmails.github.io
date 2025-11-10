@@ -1,13 +1,7 @@
 ---
-title: "Contribution Guide"
-nav_order: 5
-nav_exclude: false
----
-
----
 title: "Contribution Guide - Complete Developer Onboarding & Collaboration"
-nav_order: 14
-nav_exclude: false
+description: "Comprehensive developer onboarding, contribution standards, and collaboration guidelines for PenguinMails platform development"
+last_modified_date: "2025-11-10"
 ---
 # Contribution Guide - Complete Developer Onboarding & Collaboration
 
@@ -27,7 +21,7 @@ nav_exclude: false
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Getting Started**
-- `contribution-guide.md` (this document) - Main onboarding and contribution process
+- `contribution-guide` (this document) - Main onboarding and contribution process
 - Environment setup, first-time contributor guidance, and community overview
 
 ### 🏗️ **Level 2: Development Standards**
@@ -2289,15 +2283,15 @@ except ValidationError as e:
 Congratulations! You've created and sent your first campaign with PenguinMails. 
 
 ### Recommended Next Steps:
-1. **Explore Analytics**: Learn about [advanced analytics features](./analytics.md)
-2. **Set Up Webhooks**: Implement [real-time event tracking](./webhooks.md)
-3. **Optimize Performance**: Discover [AI optimization features](./ai-optimization.md)
-4. **Integrate with CRM**: Connect with your [existing tools](./integrations.md)
+1. **Explore Analytics**: Learn about [advanced analytics features](((./analytics))
+2. **Set Up Webhooks**: Implement [real-time event tracking](((./webhooks))
+3. **Optimize Performance**: Discover [AI optimization features](((./ai-optimization))
+4. **Integrate with CRM**: Connect with your [existing tools](((./integrations))
 
 ### Additional Resources:
-- [API Reference](./api-reference.md) - Complete API documentation
-- [SDK Documentation](./sdk-documentation.md) - Language-specific guides
-- [Best Practices Guide](./best-practices.md) - Production deployment tips
+- [API Reference](((./api-reference)) - Complete API documentation
+- [SDK Documentation](((./sdk-documentation)) - Language-specific guides
+- [Best Practices Guide](((./best-practices)) - Production deployment tips
 - [Community Forum](https://community.penguinmails.com) - Get help and share ideas
 ```
 

@@ -1,5 +1,7 @@
 ---
-last_modified_date: "2025-12-19"
+title: "Email Campaigns & Operations Journey"
+description: "Comprehensive user journey for email campaign creation, management, and optimization with progressive disclosure methodology"
+last_modified_date: "2025-11-10"
 ---
 
 # **Email Campaigns & Operations Journey**
@@ -16,16 +18,16 @@ last_modified_date: "2025-12-19"
 
 ---
 
-> **Framework Context**: This journey implements the progressive disclosure methodology outlined in [User Journey Framework](user-journey-framework.md#progressive-disclosure-framework)
+> **Framework Context**: This journey implements the progressive disclosure methodology outlined in [User Journey Framework](user-journey-framework#progressive-disclosure-framework)
 
 > **Journey Flow:** `Campaign Creation → Content Setup → Recipient List → IP Selection → Launch → Monitoring`
 > **Documentation Strategy:** Progressive complexity from basic email sending to enterprise campaign management
 
 > **Quick Navigation:**
-> - **[User Journey Framework](user-journey-framework.md)** - Complete progressive disclosure methodology
-> - **[Authentication Journey](authentication-journey.md)** - Pre-requisite user access
-> - **[Onboarding Journey](onboarding-journey.md)** - Setup and configuration requirements
-> - **[Payment & Billing Journey](payment-billing-journey.md)** - Billing and feature access
+> - **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
+> - **[Authentication Journey](((authentication-journey))** - Pre-requisite user access
+> - **[Onboarding Journey](((onboarding-journey))** - Setup and configuration requirements
+> - **[Payment & Billing Journey](((payment-billing-journey))** - Billing and feature access
 
 ---
 
@@ -329,10 +331,10 @@ last_modified_date: "2025-12-19"
 
 ## Technical Implementation Links
 
-- **[Email System Implementation](../technical/architecture/detailed-technical/email-system-implementation.md)** - Technical campaign management and infrastructure
-- **[IP Management Infrastructure](../technical/architecture/detailed-technical/ip-management-infrastructure-operations.md)** - Email deliverability and IP management
-- **[Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md)** - Campaign analytics and performance tracking
-- **[Business Model Integration](../business/model/overview.md)** - Campaign features aligned with revenue model
-- **[Success Metrics Framework](../core-features/analytics/overview.md)** - Campaign KPIs and measurement systems
+- **[Email System Implementation](((../technical/architecture/detailed-technical/email-system-implementation))** - Technical campaign management and infrastructure
+- **[IP Management Infrastructure](((../technical/architecture/detailed-technical/ip-management-infrastructure-operations))** - Email deliverability and IP management
+- **[Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture))** - Campaign analytics and performance tracking
+- **[Business Model Integration](((../business/model/overview))** - Campaign features aligned with revenue model
+- **[Success Metrics Framework](((../core-features/analytics/overview))** - Campaign KPIs and measurement systems
 
 **Keywords**: campaign operations, email marketing, deliverability, campaign management, ROI optimization, compliance, troubleshooting

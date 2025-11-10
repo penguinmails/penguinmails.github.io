@@ -184,7 +184,7 @@ app.get('/api/tenant/:tenantId/users',
 ## Row Level Security (RLS) Policies
 
 ### Complete RLS Policy Matrix
-*For comprehensive RLS policy documentation and implementation details, see [Security Framework](./security-framework.md)*
+*For comprehensive RLS policy documentation and implementation details, see [Security Framework](((./security-framework))*
 
 **Current Implementation:**
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
@@ -566,7 +566,7 @@ const securityLogger = {
   // Track suspicious activities
   trackSuspiciousActivity: async (req, activity) => {
 #### Enhanced Audit Logging (Q4 2025)
-*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Security Framework](./security-framework.md)*
+*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Security Framework](((./security-framework))*
 
 **Current Enhancements Planned:**
 - Multi-legislation compliance fields (GDPR, CCPA, PIPEDA, CASL)
@@ -740,7 +740,7 @@ const gdprCompliance = {
 *Security is everyone's responsibility. Report any security concerns immediately to the security team.*
 
 **Related Documents**
-- [Security & Privacy Integration](security-privacy-integration.md) - Unified security and privacy approach
-- [Traffic Security Matrix](traffic-security-matrix.md) - Database security strategy framework
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Regulatory compliance workflows
-- [Data Privacy Policy](../international/data-privacy-policy.md) - Customer-facing privacy information
+- [Security & Privacy Integration](((security-privacy-integration)) - Unified security and privacy approach
+- [Traffic Security Matrix](((traffic-security-matrix)) - Database security strategy framework
+- [Compliance Procedures](((../detailed-compliance/compliance-procedures)) - Regulatory compliance workflows
+- [Data Privacy Policy](((../international/data-privacy-policy)) - Customer-facing privacy information

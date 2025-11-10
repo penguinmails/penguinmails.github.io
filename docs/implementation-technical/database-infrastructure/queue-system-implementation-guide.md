@@ -1059,8 +1059,8 @@ For questions or support regarding the queue system implementation, contact the 
 ---
 
 **Related Documents:**
-- [Database Schema Guide](database_schema_guide.md) - Complete database schema with queue tables
-- [Infrastructure Documentation](infrastructure_documentation.md) - Infrastructure setup and deployment
-- [Analytics Architecture](analytics_architecture.md) - Analytics pipeline integration
+- [Database Schema Guide](((database_schema_guide)) - Complete database schema with queue tables
+- [Infrastructure Documentation](((infrastructure_documentation)) - Infrastructure setup and deployment
+- [Analytics Architecture](((analytics_architecture)) - Analytics pipeline integration
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring

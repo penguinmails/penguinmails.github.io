@@ -68,12 +68,12 @@ Operations management encompasses the day-to-day activities required to keep the
 - CI/CD pipeline integration
 
 ## Quick Links
-- [Infrastructure Operations Management](infrastructure-operations-management.md)
-- [Incident Response Operations](incident-response-operations.md)
-- [Environment & Release Management](environment-release-management.md)
+- [Infrastructure Operations Management](((infrastructure-operations-management))
+- [Incident Response Operations](((incident-response-operations))
+- [Environment & Release Management](((environment-release-management))
 
 ## Related Documentation
-- [Operations Analytics Overview](../overview.md) - Main operations analytics framework
+- [Operations Analytics Overview](((../overview)) - Main operations analytics framework
 - [Analytics Performance](../analytics-performance/) - Performance monitoring and analytics
 - [Team Performance](../team-performance/) - Team performance and sprint management
 - [Compliance & Security](../../compliance-security/) - Security and compliance frameworks

@@ -21,10 +21,10 @@ description: "Comprehensive infrastructure operations management for enterprise-
 This comprehensive guide serves as the central operational hub for all PenguinMails database and infrastructure operations. It provides immediate access to critical procedures, emergency response protocols, and cross-tier operational knowledge for enterprise-grade platform management.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Emergency Response**: All incident procedures follow [Critical Issue Identification](../quality-assurance/qa-testing-protocols.md#critical-issue-identification) with <4 hours response time targets
-- **QA-Integrated Daily Operations**: Routine maintenance follows [Ongoing Quality Assurance](../quality-assurance/qa-testing-protocols.md#ongoing-quality-assurance) with weekly quality checks
-- **Cross-Tier Coordination**: Unified procedures across OLTP, Content, Queue, and OLAP tiers with [Performance Monitoring Framework](../quality-assurance/qa-testing-protocols.md#-performance-monitoring-framework) integration
-- **Quality Knowledge Base**: Quick reference for database operations team with [Success Measurement Framework](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework) validation
+- **Quality-Assured Emergency Response**: All incident procedures follow [Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification) with <4 hours response time targets
+- **QA-Integrated Daily Operations**: Routine maintenance follows [Ongoing Quality Assurance](../quality-assurance/qa-testing-protocols#ongoing-quality-assurance) with weekly quality checks
+- **Cross-Tier Coordination**: Unified procedures across OLTP, Content, Queue, and OLAP tiers with [Performance Monitoring Framework](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework) integration
+- **Quality Knowledge Base**: Quick reference for database operations team with [Success Measurement Framework](../quality-assurance/qa-testing-protocols#-success-measurement-framework) validation
 
 ---
 
@@ -107,16 +107,16 @@ ORDER BY cpm.collected_at DESC;
 
 ### **Morning Health Check (9:00 AM)**
 ⭐ **Quick Check** (5 minutes)
-- [ ] **PostHog Dashboard Review** - Check database performance metrics with [QA Performance Monitoring](../quality-assurance/qa-testing-protocols.md#-performance-monitoring-framework)
-- [ ] **Connection Pool Status** - Verify pool health across all tiers with [QA Alert Integration](../quality-assurance/qa-testing-protocols.md#performance-issue-detection)
+- [ ] **PostHog Dashboard Review** - Check database performance metrics with [QA Performance Monitoring](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework)
+- [ ] **Connection Pool Status** - Verify pool health across all tiers with [QA Alert Integration](../quality-assurance/qa-testing-protocols#performance-issue-detection)
 
 ⭐⭐ **Standard Operations** (15 minutes)
-- [ ] **Backup Verification** - Confirm last successful backups for all databases with [QA Validation Checkpoints](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework)
-- [ ] **Error Log Review** - Check for new errors or warnings with [QA Issue Detection](../quality-assurance/qa-testing-protocols.md#-issue-detection--response)
+- [ ] **Backup Verification** - Confirm last successful backups for all databases with [QA Validation Checkpoints](../quality-assurance/qa-testing-protocols#-success-measurement-framework)
+- [ ] **Error Log Review** - Check for new errors or warnings with [QA Issue Detection](../quality-assurance/qa-testing-protocols#-issue-detection--response)
 
 ⭐⭐⭐ **Comprehensive Review** (30 minutes)
-- [ ] **Queue Health** - Verify queue processing rates and backlog with [QA Critical Issue Identification](../quality-assurance/qa-testing-protocols.md#critical-issue-identification)
-- [ ] **Storage Usage** - Check storage consumption and growth trends with [QA Continuous Improvement](../quality-assurance/qa-testing-protocols.md#-continuous-improvement-framework)
+- [ ] **Queue Health** - Verify queue processing rates and backlog with [QA Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification)
+- [ ] **Storage Usage** - Check storage consumption and growth trends with [QA Continuous Improvement](../quality-assurance/qa-testing-protocols#-continuous-improvement-framework)
 
 ---
 
@@ -166,25 +166,25 @@ ORDER BY cpm.collected_at DESC;
 
 ### **Midday Performance Review (1:00 PM)**
 ⭐ **Quick Analysis** (10 minutes)
-- [ ] **Query Performance** - Review slow queries with [QA Performance Analysis](../quality-assurance/qa-testing-protocols.md#-performance-monitoring-framework)
-- [ ] **Index Usage** - Check index effectiveness with [QA Validation Checkpoints](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework)
+- [ ] **Query Performance** - Review slow queries with [QA Performance Analysis](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework)
+- [ ] **Index Usage** - Check index effectiveness with [QA Validation Checkpoints](../quality-assurance/qa-testing-protocols#-success-measurement-framework)
 
 ⭐⭐ **Standard Review** (20 minutes)
-- [ ] **Resource Utilization** - Monitor CPU, memory, and disk usage with [QA Monitoring Integration](../quality-assurance/qa-testing-protocols.md#-performance-monitoring-framework)
+- [ ] **Resource Utilization** - Monitor CPU, memory, and disk usage with [QA Monitoring Integration](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework)
 
 ⭐⭐⭐ **Comprehensive Analysis** (30 minutes)
-- [ ] **Security Events** - Review security alerts with [QA Critical Issue Identification](../quality-assurance/qa-testing-protocols.md#critical-issue-identification)
+- [ ] **Security Events** - Review security alerts with [QA Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification)
 
 ### **End-of-Day Review (5:00 PM)**
 ⭐ **Basic Tasks** (10 minutes)
-- [ ] **Daily Reports** - Generate reports following [QA Success Measurement Framework](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework)
-- [ ] **Tomorrow's Preparation** - Prepare with [QA Continuous Improvement Framework](../quality-assurance/qa-testing-protocols.md#-continuous-improvement-framework)
+- [ ] **Daily Reports** - Generate reports following [QA Success Measurement Framework](../quality-assurance/qa-testing-protocols#-success-measurement-framework)
+- [ ] **Tomorrow's Preparation** - Prepare with [QA Continuous Improvement Framework](../quality-assurance/qa-testing-protocols#-continuous-improvement-framework)
 
 ⭐⭐ **Standard Operations** (20 minutes)
-- [ ] **Maintenance Tasks** - Complete scheduled activities with [QA Quality Assurance Process](../quality-assurance/qa-testing-protocols.md#-quality-assurance-process)
+- [ ] **Maintenance Tasks** - Complete scheduled activities with [QA Quality Assurance Process](../quality-assurance/qa-testing-protocols#-quality-assurance-process)
 
 ⭐⭐⭐ **Comprehensive Operations** (30 minutes)
-- [ ] **Alert Review** - Address alerts using [QA Issue Detection & Response](../quality-assurance/qa-testing-protocols.md#-issue-detection--response)
+- [ ] **Alert Review** - Address alerts using [QA Issue Detection & Response](../quality-assurance/qa-testing-protocols#-issue-detection--response)
 
 ---
 
@@ -433,9 +433,9 @@ External Support:
 
 ### **Operational Runbooks**
 - **[Database Infrastructure Management](../database-infrastructure/)** - Database procedures and infrastructure
-- **[Connection Pooling Strategy](../database-infrastructure/connection-pooling-strategy.md)** - Pool configuration and optimization
-- **[Backup & Recovery Procedures](../database-infrastructure/backup-recovery-procedures.md)** - Data protection and restoration
-- **[Quality Assurance Testing Protocols](../quality-assurance/qa-testing-protocols.md)** - Testing procedures and validation
+- **[Connection Pooling Strategy](((../database-infrastructure/connection-pooling-strategy))** - Pool configuration and optimization
+- **[Backup & Recovery Procedures](((../database-infrastructure/backup-recovery-procedures))** - Data protection and restoration
+- **[Quality Assurance Testing Protocols](((../quality-assurance/qa-testing-protocols))** - Testing procedures and validation
 
 ### **Technical References**
 - **[Architecture System](../architecture-system/)** - System architecture decisions
@@ -443,8 +443,8 @@ External Support:
 - **[Compliance & Security](../../compliance-security/)** - Security and compliance frameworks
 
 ### **Strategic Documentation**
-- **[Business Strategy Overview](../../business/strategy/overview.md)** - Strategic business alignment
-- **[Operations Analytics Overview](../overview.md)** - Main operations analytics framework
+- **[Business Strategy Overview](((../../business/strategy/overview))** - Strategic business alignment
+- **[Operations Analytics Overview](((../overview))** - Main operations analytics framework
 - **[Analytics Performance](../analytics-performance/)** - Performance monitoring and analytics
 
 ---

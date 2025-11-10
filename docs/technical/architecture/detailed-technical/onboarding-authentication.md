@@ -8,13 +8,13 @@ title: "Onboarding and Authentication System Architecture"
 
 This comprehensive guide covers PenguinMails' enterprise-grade onboarding and authentication system architecture, which provides secure, scalable, and user-friendly access to our email infrastructure platform. Our system implements multi-layered security with NileDB authentication, Cloudflare Turnstile CAPTCHA protection, and Stripe Connect payment processing to ensure a seamless yet secure user experience.
 
-**Strategic Alignment**: This technical feature supports our [market leadership positioning](docs/business/strategy/overview.md) by providing enterprise-grade security and user experience that differentiates us from competitors. The multi-tenant authentication architecture enables our [scalable business model](docs/business/model/overview.md) while maintaining the highest security standards that enterprise customers demand.
+**Strategic Alignment**: This technical feature supports our [market leadership positioning](((docs/business/strategy/overview)) by providing enterprise-grade security and user experience that differentiates us from competitors. The multi-tenant authentication architecture enables our [scalable business model](((docs/business/model/overview)) while maintaining the highest security standards that enterprise customers demand.
 
-**Technical Authority**: Our [comprehensive 4-tier database architecture](docs/technical/architecture/overview.md) integrates with NileDB authentication, providing tenant isolation and enterprise-grade security features. The system incorporates [progressive queue processing](docs/technical/architecture/detailed-technical/queue-system-implementation.md) for scalability and [OLAP analytics integration](docs/technical/architecture/detailed-technical/olap-analytics-schema.md) for user behavior tracking.
+**Technical Authority**: Our [comprehensive 4-tier database architecture](((docs/technical/architecture/overview)) integrates with NileDB authentication, providing tenant isolation and enterprise-grade security features. The system incorporates [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation)) for scalability and [OLAP analytics integration](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) for user behavior tracking.
 
-**Operational Excellence**: Backed by [99.9% uptime guarantees](docs/technical/architecture/detailed-technical/infrastructure-operations.md) with comprehensive monitoring systems, automated failover, and enterprise-grade security. The authentication system includes real-time health checks, predictive scaling, and intelligent error recovery mechanisms.
+**Operational Excellence**: Backed by [99.9% uptime guarantees](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with comprehensive monitoring systems, automated failover, and enterprise-grade security. The authentication system includes real-time health checks, predictive scaling, and intelligent error recovery mechanisms.
 
-**User Journey Integration**: This feature is part of your complete [user experience journey](docs/user-journeys/onboarding.md) - connecting seamlessly to [business strategy overview](docs/business/strategy/overview.md), [market analysis insights](docs/business/market-analysis/overview.md), and [value proposition delivery](docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md).
+**User Journey Integration**: This feature is part of your complete [user experience journey](((docs/user-journeys/onboarding)) - connecting seamlessly to [business strategy overview](((docs/business/strategy/overview)), [market analysis insights](((docs/business/market-analysis/overview)), and [value proposition delivery](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)).
 
 ---
 
@@ -30,7 +30,7 @@ Our authentication system leverages enterprise-grade components for maximum secu
 - **Analytics**: PostgreSQL + PostHog for email analytics and user behavior tracking with real-time insights
 - **Frontend**: Next.js with server-side rendering and API routes for optimal performance
 
-**Strategic Technology Integration**: This tech stack supports our [competitive positioning](docs/business/strategy/overview.md) by providing enterprise-grade security that rivals established players while offering superior user experience. The integration enables our [advanced analytics capabilities](docs/business/analytics/overview.md) for data-driven optimization and customer insights.
+**Strategic Technology Integration**: This tech stack supports our [competitive positioning](((docs/business/strategy/overview)) by providing enterprise-grade security that rivals established players while offering superior user experience. The integration enables our [advanced analytics capabilities](((docs/business/analytics/overview)) for data-driven optimization and customer insights.
 
 ### **Service Architecture**
 
@@ -41,7 +41,7 @@ Our distributed architecture ensures reliability and scalability:
 - **Payment Processing**: Stripe Connect Express accounts for each tenant with automated compliance
 - **Domain Management**: Custom domains with CNAME + SSL for tracking with automated provisioning
 
-**Enterprise Infrastructure**: Our system is deployed on [enterprise-grade infrastructure](docs/technical/architecture/detailed-technical/infrastructure-operations.md) with automatic scaling, load balancing, and disaster recovery capabilities. The architecture supports our [99.9% uptime SLA](docs/technical/architecture/detailed-technical/infrastructure-operations.md) through redundant systems and intelligent failover.
+**Enterprise Infrastructure**: Our system is deployed on [enterprise-grade infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with automatic scaling, load balancing, and disaster recovery capabilities. The architecture supports our [99.9% uptime SLA](((docs/technical/architecture/detailed-technical/infrastructure-operations)) through redundant systems and intelligent failover.
 
 ---
 
@@ -57,7 +57,7 @@ Our authentication system implements a sophisticated multi-step verification pro
 → **If authenticated but not email verified**: Show verification prompt
 → **If authenticated and verified**: Check onboarding status → proceed or show onboarding modal
 
-**Strategic User Experience**: This flow supports our [customer value proposition](docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md) by minimizing friction while maintaining security. The modal-based approach reduces page loads and provides a seamless experience that converts better than traditional multi-page flows.
+**Strategic User Experience**: This flow supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by minimizing friction while maintaining security. The modal-based approach reduces page loads and provides a seamless experience that converts better than traditional multi-page flows.
 
 ### **Onboarding Status Check**
 
@@ -74,7 +74,7 @@ interface OnboardingState {
 }
 ```
 
-**Technical Excellence**: This state management integrates with our [OLAP analytics system](docs/technical/architecture/detailed-technical/olap-analytics-schema.md) for real-time user journey optimization and conversion funnel analysis. The comprehensive tracking enables predictive analytics for user behavior and automated intervention for drop-off points.
+**Technical Excellence**: This state management integrates with our [OLAP analytics system](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) for real-time user journey optimization and conversion funnel analysis. The comprehensive tracking enables predictive analytics for user behavior and automated intervention for drop-off points.
 
 ---
 
@@ -98,7 +98,7 @@ Our signup process implements enterprise-grade security with user-friendly desig
 - Password: 12+ characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
 - CAPTCHA: Turnstile token verification required with server-side validation
 
-**Security Excellence**: These validation rules support our [enterprise security positioning](docs/compliance-security/overview.md) by implementing industry-standard security measures while maintaining user accessibility. The multi-layered validation prevents common attack vectors including SQL injection, credential stuffing, and automated account creation.
+**Security Excellence**: These validation rules support our [enterprise security positioning](((docs/compliance-security/overview)) by implementing industry-standard security measures while maintaining user accessibility. The multi-layered validation prevents common attack vectors including SQL injection, credential stuffing, and automated account creation.
 
 ### **Turnstile Integration**
 
@@ -185,7 +185,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](docs/business/strategy/overview.md) by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md) of respecting user privacy while maintaining security.
+**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](((docs/business/strategy/overview)) by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) of respecting user privacy while maintaining security.
 
 ### **Email Verification with Loop Service**
 
@@ -197,7 +197,7 @@ export async function POST(req: NextRequest) {
 3. Custom verification endpoint receives token/code and updates `email_verified` field in NileDB users table
 4. Account becomes active upon successful verification
 
-**Technical Integration**: This system integrates with our [progressive queue processing](docs/technical/architecture/detailed-technical/queue-system-implementation.md) to handle high-volume email sending during peak signup periods, ensuring reliable delivery and optimal user experience.
+**Technical Integration**: This system integrates with our [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation)) to handle high-volume email sending during peak signup periods, ensuring reliable delivery and optimal user experience.
 
 ### **NileDB Sign-Up API**
 
@@ -278,7 +278,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 }
 ```
 
-**Multi-Tenant Architecture**: This implementation showcases our [enterprise database architecture](docs/technical/architecture/overview.md) with proper tenant isolation, row-level security, and scalable multi-tenant design that supports our [business model growth](docs/business/model/overview.md).
+**Multi-Tenant Architecture**: This implementation showcases our [enterprise database architecture](((docs/technical/architecture/overview)) with proper tenant isolation, row-level security, and scalable multi-tenant design that supports our [business model growth](((docs/business/model/overview)).
 
 ### **Email Verification Status Tracking**
 
@@ -296,7 +296,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 - `tenant_users` table mirrors email verification status
 - Cross-schema queries combine data for complete user profiles
 
-**Operational Excellence**: This system includes [comprehensive monitoring](docs/technical/architecture/detailed-technical/infrastructure-operations.md) with real-time delivery tracking, automated retry mechanisms, and predictive failure detection to maintain our [99.9% uptime commitment](docs/technical/architecture/detailed-technical/infrastructure-operations.md).
+**Operational Excellence**: This system includes [comprehensive monitoring](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with real-time delivery tracking, automated retry mechanisms, and predictive failure detection to maintain our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations)).
 
 ---
 
@@ -334,7 +334,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 </div>
 ```
 
-**User Experience Excellence**: This email design supports our [customer value proposition](docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
+**User Experience Excellence**: This email design supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
 
 ### **Verification Endpoint**
 
@@ -455,7 +455,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](docs/compliance-security/accessibility.md) while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
+**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](((docs/compliance-security/accessibility)) while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
 
 ---
 
@@ -540,7 +540,7 @@ const OnboardingModal = () => {
 };
 ```
 
-**Strategic Business Integration**: This plan selection system supports our [tiered business model](docs/business/model/overview.md) by providing clear value differentiation and smooth upgrade paths. The modal-based approach reduces cognitive load and improves conversion rates through focused decision-making.
+**Strategic Business Integration**: This plan selection system supports our [tiered business model](((docs/business/model/overview)) by providing clear value differentiation and smooth upgrade paths. The modal-based approach reduces cognitive load and improves conversion rates through focused decision-making.
 
 ### **Stripe Checkout Integration**
 
@@ -708,7 +708,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 }
 ```
 
-**Financial System Integration**: This Stripe Connect integration supports our [revenue model](docs/business/model/overview.md) with automated payment processing, revenue sharing, and compliance with financial regulations. The webhook system ensures reliable payment state management and automatic account provisioning.
+**Financial System Integration**: This Stripe Connect integration supports our [revenue model](((docs/business/model/overview)) with automated payment processing, revenue sharing, and compliance with financial regulations. The webhook system ensures reliable payment state management and automatic account provisioning.
 
 ---
 
@@ -907,7 +907,7 @@ const ProvisioningStatus = () => {
 };
 ```
 
-**Infrastructure Provisioning**: This workspace creation system integrates with our [comprehensive infrastructure](docs/technical/architecture/detailed-technical/infrastructure-operations.md) to automatically provision email domains, configure DNS settings, and set up monitoring. The progressive status updates provide transparency and manage user expectations during the provisioning process.
+**Infrastructure Provisioning**: This workspace creation system integrates with our [comprehensive infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations)) to automatically provision email domains, configure DNS settings, and set up monitoring. The progressive status updates provide transparency and manage user expectations during the provisioning process.
 
 ---
 
@@ -1113,7 +1113,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Security and UX Excellence**: This login system supports our [enterprise security standards](docs/compliance-security/overview.md) while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
+**Security and UX Excellence**: This login system supports our [enterprise security standards](((docs/compliance-security/overview)) while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
 
 ---
 
@@ -1242,7 +1242,7 @@ export const useAuth = () => {
 };
 ```
 
-**Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](docs/technical/architecture/overview.md) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
+**Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](((docs/technical/architecture/overview)) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
 
 ---
 
@@ -1296,7 +1296,7 @@ env:
     secret: loop-api-key
 ```
 
-**Security Configuration**: This environment configuration supports our [enterprise security standards](docs/compliance-security/overview.md) by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](docs/technical/architecture/detailed-technical/infrastructure-operations.md) through proper environment separation and secret rotation capabilities.
+**Security Configuration**: This environment configuration supports our [enterprise security standards](((docs/compliance-security/overview)) by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](((docs/technical/architecture/detailed-technical/infrastructure-operations)) through proper environment separation and secret rotation capabilities.
 
 ---
 
@@ -1323,7 +1323,7 @@ env:
 - **Session timeout**: 30-day sessions with refresh capability and intelligent session extension
 - **CSRF protection**: Implement CSRF tokens for state-changing operations with automatic token validation
 
-**Enterprise Security Integration**: These security practices support our [competitive differentiation](docs/business/strategy/overview.md) by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](docs/business/market-analysis/overview.md).
+**Enterprise Security Integration**: These security practices support our [competitive differentiation](((docs/business/strategy/overview)) by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](((docs/business/market-analysis/overview)).
 
 ---
 
@@ -1357,28 +1357,28 @@ env:
 - **High contrast**: Support for high contrast mode with CSS custom properties
 - **CAPTCHA alternatives**: Audio challenges and text-based verification with multiple fallback options
 
-**User Experience Excellence**: This comprehensive error handling and accessibility system supports our [customer value proposition](docs/business/value-proposition/detailed-analysis/comprehensive-analysis.md) by providing inclusive, user-friendly experiences that exceed accessibility standards. The intelligent error recovery reduces support burden and improves user satisfaction.
+**User Experience Excellence**: This comprehensive error handling and accessibility system supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by providing inclusive, user-friendly experiences that exceed accessibility standards. The intelligent error recovery reduces support burden and improves user satisfaction.
 
 ---
 
 ## Related Documents
 
-- [Stripe Onboarding Guide](docs/technical/architecture/detailed-technical/integration-guide.md#stripe-connect) - Complete Stripe Connect integration
-- [IP Management Guide](docs/technical/architecture/detailed-technical/infrastructure-operations.md#ip-management) - Email infrastructure and deliverability
-- [Analytics Architecture](docs/technical/architecture/detailed-technical/analytics-architecture.md) - User behavior tracking and analytics
-- [Database Schema Guide](docs/technical/architecture/overview.md#database-architecture) - Multi-tenant database structure
-- [Security Documentation](docs/compliance-security/overview.md) - Authentication and security procedures
+- [Stripe Onboarding Guide](docs/technical/architecture/detailed-technical/integration-guide#stripe-connect) - Complete Stripe Connect integration
+- [IP Management Guide](docs/technical/architecture/detailed-technical/infrastructure-operations#ip-management) - Email infrastructure and deliverability
+- [Analytics Architecture](((docs/technical/architecture/detailed-technical/analytics-architecture)) - User behavior tracking and analytics
+- [Database Schema Guide](docs/technical/architecture/overview#database-architecture) - Multi-tenant database structure
+- [Security Documentation](((docs/compliance-security/overview)) - Authentication and security procedures
 
 ---
 
 ## Strategic Integration Summary
 
-This onboarding and authentication system represents a cornerstone of our technical architecture, supporting our [market leadership positioning](docs/business/strategy/overview.md) through enterprise-grade security and user experience. The system integrates seamlessly with our [comprehensive technical infrastructure](docs/technical/architecture/overview.md) to provide scalable, secure, and user-friendly access to our email platform.
+This onboarding and authentication system represents a cornerstone of our technical architecture, supporting our [market leadership positioning](((docs/business/strategy/overview)) through enterprise-grade security and user experience. The system integrates seamlessly with our [comprehensive technical infrastructure](((docs/technical/architecture/overview)) to provide scalable, secure, and user-friendly access to our email platform.
 
-**Business Impact**: The authentication system directly supports our [revenue model](docs/business/model/overview.md) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](docs/business/analytics/overview.md). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](docs/business/market-analysis/overview.md).
+**Business Impact**: The authentication system directly supports our [revenue model](((docs/business/model/overview)) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](((docs/business/analytics/overview)). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](((docs/business/market-analysis/overview)).
 
-**Technical Excellence**: The system showcases our [technical authority](docs/business/strategy/overview.md#technical-leadership) through modern security practices, scalable architecture, and comprehensive monitoring. The integration with our [progressive queue system](docs/technical/architecture/detailed-technical/queue-system-implementation.md) and [OLAP analytics](docs/technical/architecture/detailed-technical/olap-analytics-schema.md) demonstrates our commitment to technical excellence and data-driven optimization.
+**Technical Excellence**: The system showcases our [technical authority](docs/business/strategy/overview#technical-leadership) through modern security practices, scalable architecture, and comprehensive monitoring. The integration with our [progressive queue system](((docs/technical/architecture/detailed-technical/queue-system-implementation)) and [OLAP analytics](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) demonstrates our commitment to technical excellence and data-driven optimization.
 
-**Operational Reliability**: Backed by our [99.9% uptime commitment](docs/technical/architecture/detailed-technical/infrastructure-operations.md) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](docs/business/operations/overview.md) standards.
+**Operational Reliability**: Backed by our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations)) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](((docs/business/operations/overview)) standards.
 
-This implementation follows modern best practices for web authentication, payment processing, and user experience design, ensuring scalability and maintainability as the platform grows to support our [expansion strategy](docs/business/strategy/overview.md#growth-strategy).
+This implementation follows modern best practices for web authentication, payment processing, and user experience design, ensuring scalability and maintainability as the platform grows to support our [expansion strategy](docs/business/strategy/overview#growth-strategy).

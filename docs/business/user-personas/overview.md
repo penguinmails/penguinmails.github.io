@@ -1,4 +1,6 @@
 ---
+title: "User Personas"
+description: "Key user personas for PenguinMails based on extensive research, targeting agency owners, startup founders, and enterprise decision makers"
 last_modified_date: "2025-10-28"
 ---
 
@@ -202,7 +204,7 @@ This document defines the key user personas for PenguinMails, based on extensive
 ---
 
 ## Related Documents
-- [Value Proposition](value_proposition.md) - Customer value and competitive differentiation
-- [Market Analysis](market_analysis.md) - Market size and competitive landscape
-- [User Journeys](user_journeys.md) - Detailed user flow specifications
-- [Product Strategy](product_strategy.md) - Strategic alignment and objectives
+- [Value Proposition](((value_proposition)) - Customer value and competitive differentiation
+- [Market Analysis](((market_analysis)) - Market size and competitive landscape
+- [User Journeys](((user_journeys)) - Detailed user flow specifications
+- [Product Strategy](((product_strategy)) - Strategic alignment and objectives

@@ -16,11 +16,11 @@
 This guide provides comprehensive backup and recovery procedures for PenguinMails' 4-tier database architecture, ensuring business continuity and data protection with enterprise-grade standards.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Data Protection**: All procedures follow [Quality Assurance Standards](../quality-assurance/qa-testing-protocols.md#-quality-assurance-standards) with validation checkpoints
-- **Business Continuity**: Enable rapid recovery with [Performance Monitoring Framework](../quality-assurance/qa-testing-protocols.md#-performance-monitoring-framework) integration
-- **Compliance**: Meet regulatory requirements with [Quality Assurance Process](../quality-assurance/qa-testing-protocols.md#-quality-assurance-process) validation
-- **Testing**: Regular backup validation following [Success Measurement Framework](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework) with comprehensive testing protocols
-- **Disaster Recovery**: [Issue Detection & Response](../quality-assurance/qa-testing-protocols.md#-issue-detection--response) integrated recovery procedures
+- **Quality-Assured Data Protection**: All procedures follow [Quality Assurance Standards](../quality-assurance/qa-testing-protocols#-quality-assurance-standards) with validation checkpoints
+- **Business Continuity**: Enable rapid recovery with [Performance Monitoring Framework](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework) integration
+- **Compliance**: Meet regulatory requirements with [Quality Assurance Process](../quality-assurance/qa-testing-protocols#-quality-assurance-process) validation
+- **Testing**: Regular backup validation following [Success Measurement Framework](../quality-assurance/qa-testing-protocols#-success-measurement-framework) with comprehensive testing protocols
+- **Disaster Recovery**: [Issue Detection & Response](../quality-assurance/qa-testing-protocols#-issue-detection--response) integrated recovery procedures
 
 ⭐ **Quick Recovery** (5 minutes) - Emergency procedures and immediate response
 ⭐⭐ **Standard Operations** (15 minutes) - Daily backup monitoring and validation
@@ -41,7 +41,7 @@ This guide provides comprehensive backup and recovery procedures for PenguinMail
 
 ### **Recovery Objectives**
 ```yaml
-QA Framework Integration: All recovery objectives align with [Critical Issue Identification](../quality-assurance/qa-testing-protocols.md#critical-issue-identification) and [Performance Issue Detection](../quality-assurance/qa-testing-protocols.md#performance-issue-detection) standards.
+QA Framework Integration: All recovery objectives align with [Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification) and [Performance Issue Detection](../quality-assurance/qa-testing-protocols#performance-issue-detection) standards.
 
 Recovery Time Objectives (RTO):
   OLTP:     15 minutes (critical business operations) - QA Target: <4 hours response time
@@ -439,7 +439,7 @@ echo "Content database recovery completed"
 
 ### **Quality Assurance Integration**
 ⭐⭐ **Standard Validation** (15 minutes)
-**QA Framework Validation**: All backup testing follows [Quality Assurance Process](../quality-assurance/qa-testing-protocols.md#-quality-assurance-process) with comprehensive validation, performance monitoring, and [Success Measurement Framework](../quality-assurance/qa-testing-protocols.md#-success-measurement-framework) integration.
+**QA Framework Validation**: All backup testing follows [Quality Assurance Process](../quality-assurance/qa-testing-protocols#-quality-assurance-process) with comprehensive validation, performance monitoring, and [Success Measurement Framework](../quality-assurance/qa-testing-protocols#-success-measurement-framework) integration.
 
 ### **Automated Backup Validation with QA Framework**
 ⭐ **Quick Validation** (5 minutes)
@@ -452,7 +452,7 @@ S3_BUCKET="penguinmails-backups-us-east-1"
 
 echo "Starting backup validation for $BACKUP_DATE with QA framework integration"
 
-# QA Step 1: Pre-validation checklist following [Content Review Checklist](../quality-assurance/qa-testing-protocols.md#content-review-checklist)
+# QA Step 1: Pre-validation checklist following [Content Review Checklist](../quality-assurance/qa-testing-protocols#content-review-checklist)
 echo "QA Step 1: Pre-validation stakeholder review..."
 if [ -f "qa_backup_approval_$BACKUP_DATE" ]; then
     echo "✅ QA Validation: Stakeholder approval confirmed"
@@ -475,7 +475,7 @@ fi
 
 # QA Step 2: Technical accuracy validation
 echo "QA Step 2: Technical accuracy validation..."
-# Following [Technical Accuracy](../quality-assurance/qa-testing-protocols.md#technical-accuracy) standards
+# Following [Technical Accuracy](../quality-assurance/qa-testing-protocols#technical-accuracy) standards
 echo "✅ Backup integrity validation completed"
 echo "✅ Data consistency verification passed"
 echo "✅ Recovery point objective compliance confirmed"
@@ -624,19 +624,19 @@ echo "Disaster recovery completed"
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](../operations-management/infrastructure-operations-management.md)** - Central operational hub
-- **[Connection Pooling Strategy](./connection-pooling-strategy.md)** - Pool management during recovery
-- **[Quality Assurance Testing Protocols](../quality-assurance/qa-testing-protocols.md)** - Emergency response coordination
+- **[Infrastructure Operations Management](((../operations-management/infrastructure-operations-management))** - Central operational hub
+- **[Connection Pooling Strategy](((./connection-pooling-strategy))** - Pool management during recovery
+- **[Quality Assurance Testing Protocols](((../quality-assurance/qa-testing-protocols))** - Emergency response coordination
 
 ### **Technical References**
-- **[OLTP Schema Guide](./oltp-schema-guide.md)** - OLTP backup integration
-- **[Content Database Schema Guide](./content-database-schema-guide.md)** - Content backup procedures
-- **[Queue System Implementation Guide](./queue-system-implementation-guide.md)** - Queue recovery methods
-- **[OLAP Analytics Schema Guide](./olap-analytics-schema-guide.md)** - Analytics backup strategy
+- **[OLTP Schema Guide](((./oltp-schema-guide))** - OLTP backup integration
+- **[Content Database Schema Guide](((./content-database-schema-guide))** - Content backup procedures
+- **[Queue System Implementation Guide](((./queue-system-implementation-guide))** - Queue recovery methods
+- **[OLAP Analytics Schema Guide](((./olap-analytics-schema-guide))** - Analytics backup strategy
 
 ### **Strategic Documentation**
-- **[Operations Analytics Overview](../overview.md)** - Main operations analytics framework
-- **[Business Strategy Overview](../../business/strategy/overview.md)** - Strategic business alignment
+- **[Operations Analytics Overview](((../overview))** - Main operations analytics framework
+- **[Business Strategy Overview](((../../business/strategy/overview))** - Strategic business alignment
 - **[Compliance & Security](../../compliance-security/)** - Security and compliance frameworks
 
 ---

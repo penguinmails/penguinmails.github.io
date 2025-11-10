@@ -1004,10 +1004,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](../overview.md) - Strategic foundation and market positioning
-- [Email System Implementation](./email-system-implementation.md) - Email processing and queue integration
-- [Analytics Architecture](./analytics-architecture.md) - Business intelligence and job processing
-- [Campaign Management](../../campaigns/overview.md) - User experience and business operations
-- [Business Analytics](../../business/analytics/overview.md) - Revenue intelligence and optimization
+- [Architecture Overview](((../overview)) - Strategic foundation and market positioning
+- [Email System Implementation](((./email-system-implementation)) - Email processing and queue integration
+- [Analytics Architecture](((./analytics-architecture)) - Business intelligence and job processing
+- [Campaign Management](((../../campaigns/overview)) - User experience and business operations
+- [Business Analytics](((../../business/analytics/overview)) - Revenue intelligence and optimization
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, enterprise infrastructure, operational excellence, hybrid architecture

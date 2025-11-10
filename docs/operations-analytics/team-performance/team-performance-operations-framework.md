@@ -596,29 +596,29 @@ const supportTemplates = {
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](../overview.md) - Main operations framework
-- [Organization Analytics](../operations-management/organization-analytics-team-management.md) - Team and organization management
-- [Metrics & KPIs](../analytics-performance/metrics-kpis.md) - Comprehensive KPI framework
+- [Operations Analytics Overview](((../overview)) - Main operations framework
+- [Organization Analytics](((../operations-management/organization-analytics-team-management)) - Team and organization management
+- [Metrics & KPIs](((../analytics-performance/metrics-kpis)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment
-- [Business Model](../business/model/overview.md) - Revenue model and unit economics
-- [Value Proposition](../business/value-proposition/overview.md) - Competitive differentiation
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment
+- [Business Model](((../business/model/overview)) - Revenue model and unit economics
+- [Value Proposition](((../business/value-proposition/overview)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview.md) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System management
-- [Development Guidelines](../technical/development/development-guidelines.md) - Code standards and practices
+- [Technical Architecture Overview](((../technical/architecture/overview)) - System design
+- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System management
+- [Development Guidelines](((../technical/development/development-guidelines)) - Code standards and practices
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX optimization
+- [User Journeys Overview](((../user-journeys/README)) - User flow documentation
+- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation
+- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview.md) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise/security-framework.md) - Security operations
-- [QA Security Testing](../compliance-security/enterprise/security-framework.md#security-testing) - Security testing protocols
+- [Compliance Overview](((../compliance-security/overview)) - Regulatory compliance
+- [Security Framework](((../compliance-security/enterprise/security-framework)) - Security operations
+- [QA Security Testing](../compliance-security/enterprise/security-framework#security-testing) - Security testing protocols
 
 ---
 
@@ -646,9 +646,9 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](./qa-testing-protocols.md)** → Quality assurance procedures
-- **[Sprint Retrospectives](./sprint-retrospective-template.md)** → Agile development practices
-- **[Organization Analytics](../operations-management/organization-analytics-team-management.md)** → Team and organization management
+- **[QA Testing Protocols](((./qa-testing-protocols))** → Quality assurance procedures
+- **[Sprint Retrospectives](((./sprint-retrospective-template))** → Agile development practices
+- **[Organization Analytics](((../operations-management/organization-analytics-team-management))** → Team and organization management
 
 ---
 

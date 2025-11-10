@@ -1249,10 +1249,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](../overview.md) - Strategic foundation and market positioning
-- [Analytics Architecture](./analytics-architecture.md) - PostHog integration and business intelligence
-- [Queue System Implementation](./queue-system-implementation.md) - Job processing and reliability
-- [Campaign Management](../../campaigns/overview.md) - User experience and business operations
-- [Business Analytics](../../business/analytics/overview.md) - Revenue intelligence and optimization
+- [Architecture Overview](((../overview)) - Strategic foundation and market positioning
+- [Analytics Architecture](((./analytics-architecture)) - PostHog integration and business intelligence
+- [Queue System Implementation](((./queue-system-implementation)) - Job processing and reliability
+- [Campaign Management](((../../campaigns/overview)) - User experience and business operations
+- [Business Analytics](((../../business/analytics/overview)) - Revenue intelligence and optimization
 
 **Keywords**: OLAP, analytics, business intelligence, data warehousing, reporting, analytics schema, campaign analytics, billing analytics, administrative analytics, materialized views, performance optimization, enterprise security

@@ -406,10 +406,11 @@ This comprehensive value framework provides enterprise-grade value proposition d
 
 ## Related Value Documents
 
-- **[Value Proposition Overview](../overview.md)** - Strategic context and core value statements
-- **[Business Strategy Overview](../strategy/overview.md)** - Strategic alignment and market positioning
-- **[Business Model Overview](../model/overview.md)** - Financial framework and revenue impact
-- **[Product Analytics Overview](../analytics/overview.md)** - Performance measurement and optimization
+- **[Financial Analysis Benchmarks](../../business/model/detailed-analysis/financial-analysis-benchmarks)** - Infrastructure cost analysis and TCO models supporting ROI calculations
+- **[Value Proposition Overview](((../overview))** - Strategic context and core value statements
+- **[Business Strategy Overview](((../strategy/overview))** - Strategic alignment and market positioning
+- **[Business Model Overview](((../model/overview))** - Financial framework and revenue impact
+- **[Product Analytics Overview](((../analytics/overview))** - Performance measurement and optimization
 
 ---
 
@@ -482,4 +483,4 @@ This detailed value analysis is supported by extensive market research, customer
 [cognito-europe-analysis]: https://www.cognitivemarketresearch.com/regional-analysis/europe-email-marketing-software-market-report
 
 ---
-*Back to: [Value Proposition Overview](../overview.md) | Next: [Business Strategy Overview](../strategy/overview.md) →*
+*Back to: [Value Proposition Overview](../overview) | Next: [Business Strategy Overview](../strategy/overview) →*

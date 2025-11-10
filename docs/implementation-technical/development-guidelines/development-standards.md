@@ -16,7 +16,7 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Standards Overview**
-- `development-standards.md` (this document) - Main development standards with key practices and business impact
+- `development-standards` (this document) - Main development standards with key practices and business impact
 - High-level development decisions and quality standards
 
 ### 🏗️ **Level 2: Implementation Guidelines**
@@ -485,12 +485,12 @@ Types: feat, fix, docs, style, refactor, test, chore
 ---
 
 ## Related Documents
-- [API Reference](api_reference.md) - API usage and integration
-- [Architecture Overview](architecture_overview.md) - System design principles
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration.md) - Unified security and privacy practices
-- [Traffic Security Matrix](../../compliance-security/enterprise/traffic-security-matrix.md) - Keying and traffic classification guidance
-- [SOP Guidelines](../../compliance-security/detailed-compliance/sop-guidelines.md) - Operational procedures
+- [API Reference](((api_reference)) - API usage and integration
+- [Architecture Overview](((architecture_overview)) - System design principles
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security architecture and controls
+- [Security & Privacy Integration](((../../compliance-security/enterprise/security-privacy-integration)) - Unified security and privacy practices
+- [Traffic Security Matrix](((../../compliance-security/enterprise/traffic-security-matrix)) - Keying and traffic classification guidance
+- [SOP Guidelines](((../../compliance-security/detailed-compliance/sop-guidelines)) - Operational procedures
 
 ## Security Development Lifecycle
 
@@ -1167,10 +1167,10 @@ export class MobilePerformanceOptimizer {
 ## Resources and References
 
 ### Internal Documentation
-- [Security Measures & Privacy Policies](../security/security-privacy.md)
-- [Analytics Implementation](../analytics/phase-3c-implementation-complete.md)
-- [AI Personalization Engine](../ai/ai-personalization-engine.md)
-- [Mobile Experience Validation](../analytics/mobile-experience-validation.md)
+- [Security Measures & Privacy Policies](((../security/security-privacy))
+- [Analytics Implementation](((../analytics/phase-3c-implementation-complete))
+- [AI Personalization Engine](((../ai/ai-personalization-engine))
+- [Mobile Experience Validation](((../analytics/mobile-experience-validation))
 
 ### External Resources
 - [OWASP Security Guidelines](https://owasp.org/www-project-top-ten/)

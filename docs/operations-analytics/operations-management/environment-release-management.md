@@ -1,5 +1,7 @@
 ---
-last_modified_date: "2025-12-15"
+title: "Environment & Release Management"
+description: "Comprehensive operational procedures for production deployment, environment configuration, and release management processes"
+last_modified_date: "2025-11-10"
 ---
 
 # Environment & Release Management
@@ -709,10 +711,10 @@ interface QualityMetrics {
 ---
 
 ## Related Documents
-- [Infrastructure Operations Management](infrastructure-operations-management.md) - System architecture and deployment details
-- [Incident Response Operations](incident-response-operations.md) - Incident handling procedures
-- [Security Documentation](security_documentation.md) - Security procedures and protocols
-- [QA Testing Protocols](qa_testing_protocols.md) - Quality assurance procedures
-- [Development Guidelines](development_guidelines.md) - Code standards and development practices
+- [Infrastructure Operations Management](((infrastructure-operations-management)) - System architecture and deployment details
+- [Incident Response Operations](((incident-response-operations)) - Incident handling procedures
+- [Security Documentation](((security_documentation)) - Security procedures and protocols
+- [QA Testing Protocols](((qa_testing_protocols)) - Quality assurance procedures
+- [Development Guidelines](((development_guidelines)) - Code standards and development practices
 
 **Keywords**: deployment, release management, CI/CD, environment management, configuration management, monitoring, rollback procedures, change management, quality assurance

@@ -537,30 +537,30 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](./overview.md) - Main operations framework
-- [User Analytics](./user-analytics.md) - User behavior analysis
-- [Product Analytics](./product-analytics.md) - Feature performance analysis
-- [Metrics & KPIs](./metrics-kpis.md) - Comprehensive KPI framework
+- [Operations Analytics Overview](((./overview)) - Main operations framework
+- [User Analytics](((./user-analytics)) - User behavior analysis
+- [Product Analytics](((./product-analytics)) - Feature performance analysis
+- [Metrics & KPIs](((./metrics-kpis)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment
-- [Business Model](../business/model/overview.md) - Revenue model and unit economics
-- [Market Analysis](../business/market-analysis/overview.md) - Market positioning
-- [Value Proposition](../business/value-proposition/overview.md) - Competitive differentiation
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment
+- [Business Model](((../business/model/overview)) - Revenue model and unit economics
+- [Market Analysis](((../business/market-analysis/overview)) - Market positioning
+- [Value Proposition](((../business/value-proposition/overview)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview.md) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System management
+- [Technical Architecture Overview](((../technical/architecture/overview)) - System design
+- [Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture)) - Technical implementation
+- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System management
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX optimization
+- [User Journeys Overview](((../user-journeys/README)) - User flow documentation
+- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation
+- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
 
 ### **Operations Management**
-- [Organization Analytics](../operations-management/organization-analytics-team-management.md) - Team and organization management
-- [Team Performance](../team-performance/team-performance-operations-framework.md) - Team coordination and development
+- [Organization Analytics](((../operations-management/organization-analytics-team-management)) - Team and organization management
+- [Team Performance](((../team-performance/team-performance-operations-framework)) - Team coordination and development
 
 ---
 
@@ -568,10 +568,10 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 Navigate to specific growth and analytics areas:
 
-- **[User Analytics](./user-analytics.md)** → User behavior and engagement analysis
-- **[Product Analytics](./product-analytics.md)** → Feature performance and optimization
-- **[Metrics & KPIs](./metrics-kpis.md)** → Comprehensive KPI framework
-- **[Team Performance](../team-performance/team-performance-operations-framework.md)** → Team coordination and development
+- **[User Analytics](((./user-analytics))** → User behavior and engagement analysis
+- **[Product Analytics](((./product-analytics))** → Feature performance and optimization
+- **[Metrics & KPIs](((./metrics-kpis))** → Comprehensive KPI framework
+- **[Team Performance](((../team-performance/team-performance-operations-framework))** → Team coordination and development
 
 ---
 

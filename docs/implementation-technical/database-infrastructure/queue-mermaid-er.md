@@ -94,7 +94,7 @@ erDiagram
   %%
   %% - Raw traces, stack traces, provider responses, and metrics:
   %%   - Belong in the external logging/observability stack
-  %%     (see external-analytics-logging.md).
+  %%     (see external-analytics-logging).
   %%
   %% - OLAP must NOT query this tier directly as a primary analytics source.
   %%   - If analytics needed, create dedicated aggregates fed from jobs or events.

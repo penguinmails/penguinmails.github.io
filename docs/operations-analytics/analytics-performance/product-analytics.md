@@ -464,29 +464,29 @@ Recommendations
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](./overview.md) - Main operations framework
-- [User Analytics](./user-analytics.md) - User behavior analysis
-- [Performance KPIs](./metrics-kpis.md) - Comprehensive KPI framework
+- [Operations Analytics Overview](((./overview)) - Main operations framework
+- [User Analytics](((./user-analytics)) - User behavior analysis
+- [Performance KPIs](((./metrics-kpis)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic alignment
-- [Market Analysis](../business/market-analysis/overview.md) - Market positioning
-- [Value Proposition](../business/value-proposition/overview.md) - Competitive differentiation
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment
+- [Market Analysis](((../business/market-analysis/overview)) - Market positioning
+- [Value Proposition](((../business/value-proposition/overview)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview.md) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md) - Data pipeline
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations.md) - System management
+- [Technical Architecture Overview](((../technical/architecture/overview)) - System design
+- [Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture)) - Data pipeline
+- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System management
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README.md) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey.md) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design.md) - UX optimization
+- [User Journeys Overview](((../user-journeys/README)) - User flow documentation
+- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation
+- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
 
 ### **Team Performance**
 - [Team Performance Overview](../team-performance/) - Team coordination
-- [QA Testing Protocols](../team-performance/qa-testing-protocols.md) - Quality assurance procedures
-- [Sprint Retrospectives](../team-performance/sprint-retrospective-template.md) - Agile development
+- [QA Testing Protocols](((../team-performance/qa-testing-protocols)) - Quality assurance procedures
+- [Sprint Retrospectives](((../team-performance/sprint-retrospective-template)) - Agile development
 
 ---
 
@@ -494,8 +494,8 @@ Recommendations
 
 Navigate to specific product areas:
 
-- **[User Analytics](./user-analytics.md)** → User behavior and engagement analysis
-- **[Metrics & KPIs](./metrics-kpis.md)** → Comprehensive KPI framework
+- **[User Analytics](((./user-analytics))** → User behavior and engagement analysis
+- **[Metrics & KPIs](((./metrics-kpis))** → Comprehensive KPI framework
 - **[Team Performance](../team-performance/)** → Team coordination and development
 
 ---

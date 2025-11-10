@@ -11,10 +11,10 @@ description: "Comprehensive analytics system design and implementation guide"
 
 **Operational Excellence**: Backed by **intelligent monitoring systems** with automated data validation, real-time performance tracking, and comprehensive alerting that ensure 99.9% data accuracy and operational reliability.
 
-**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](../../core-features/analytics/overview.md) through [business intelligence insights](../overview.md) to [advanced optimization recommendations](.) - providing the data intelligence that powers your success.
+**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](((../../core-features/analytics/overview)) through [business intelligence insights](((../overview)) to [advanced optimization recommendations](.) - providing the data intelligence that powers your success.
 
 ## Quick Navigation
-- [🏠 **Main Overview**](../overview.md) | [Setup **Infrastructure**](../overview.md) | [🔒 **Security**](../overview.md)
+- [🏠 **Main Overview**](((../overview)) | [Setup **Infrastructure**](((../overview)) | [🔒 **Security**](((../overview))
 
 ---
 

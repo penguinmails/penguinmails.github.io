@@ -16,13 +16,13 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Strategic Overview**
-- `README.md` (this document) - Main database and infrastructure overview with key decisions and business impact
+- `README` (this document) - Main database and infrastructure overview with key decisions and business impact
 - High-level database architecture and infrastructure management principles
 
 ### 🗄️ **Level 2: Detailed Technical Specifications**
-- `oltp-schema-guide.md` - Complete OLTP database schema with multi-tenant design
-- `infrastructure-management.md` - Infrastructure operations and deployment procedures
-- `database-performance.md` - Performance optimization and monitoring strategies
+- `oltp-schema-guide` - Complete OLTP database schema with multi-tenant design
+- `infrastructure-management` - Infrastructure operations and deployment procedures
+- `database-performance` - Performance optimization and monitoring strategies
 
 ### 🔧 **Level 3: Enterprise Implementation**
 - Advanced configuration options and optimization strategies
@@ -136,16 +136,16 @@ This section follows the **Progressive Complexity Framework** with three distinc
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Architecture System](../architecture-system/README.md) - System architecture decisions
-- [Development Guidelines](../development-guidelines/README.md) - Development standards
-- [Quality Assurance](../quality-assurance/README.md) - Testing protocols and procedures
-- [Implementation Overview](../overview.md) - Strategic technical overview
+- [Architecture System](((../architecture-system/README)) - System architecture decisions
+- [Development Guidelines](((../development-guidelines/README)) - Development standards
+- [Quality Assurance](((../quality-assurance/README)) - Testing protocols and procedures
+- [Implementation Overview](((../overview)) - Strategic technical overview
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview.md) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README.md) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README.md) - Performance monitoring
+- [Business Strategy Overview](((../../business/strategy/overview)) - Strategic business alignment
+- [Operations Management](((../../operations-analytics/operations-management/README)) - Operational procedures
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security architecture
+- [Analytics Performance](((../../operations-analytics/analytics-performance/README)) - Performance monitoring
 
 ---
 

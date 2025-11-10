@@ -1,4 +1,6 @@
 ---
+title: "Security & Privacy Integration Framework"
+description: "Unified security and privacy framework ensuring comprehensive data protection and regulatory compliance across all system components"
 last_modified_date: "2025-10-28"
 ---
 
@@ -558,9 +560,9 @@ interface RecoveryResponse {
 **Note**: Some privacy and security enhancements are scheduled for 2026 implementation based on infrastructure constraints and resource availability.
 
 **Related Documents**
-- [Security Framework](security-framework.md) - Comprehensive security architecture
-- [Traffic Security Matrix](traffic-security-matrix.md) - Database security strategy framework
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Regulatory compliance workflows
-- [Data Privacy Policy](../international/data-privacy-policy.md) - Customer-facing privacy information
+- [Security Framework](((security-framework)) - Comprehensive security architecture
+- [Traffic Security Matrix](((traffic-security-matrix)) - Database security strategy framework
+- [Compliance Procedures](((../detailed-compliance/compliance-procedures)) - Regulatory compliance workflows
+- [Data Privacy Policy](((../international/data-privacy-policy)) - Customer-facing privacy information
 
 **Keywords**: security policies, privacy procedures, data protection, compliance, risk management, incident response, access control, encryption, GDPR, CCPA

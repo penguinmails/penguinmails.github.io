@@ -375,15 +375,15 @@ graph LR
 
 ## Related Operations Documents
 
-- **[Business Strategy Overview](../strategy/overview.md)** - Strategic context and operational alignment
-- **[Market Analysis](../market-analysis/overview.md)** - Market intelligence driving operational decisions
-- **[Business Model](../model/overview.md)** - Financial framework supporting operations
-- **[Product Analytics](../analytics/overview.md)** - Performance measurement and optimization
-- **[Value Proposition Overview](../value-proposition/overview.md)** - Customer value driving operations
+- **[Business Strategy Overview](../strategy/overview)** - Strategic context and operational alignment
+- **[Market Analysis](../market-analysis/overview)** - Market intelligence driving operational decisions
+- **[Business Model](../model/overview)** - Financial framework supporting operations
+- **[Product Analytics](../analytics/overview)** - Performance measurement and optimization
+- **[Value Proposition Overview](../value-proposition/overview)** - Customer value driving operations
 
 ---
 
 *This operations framework serves as the foundation for all operational decisions and process optimization. For operations questions or process improvements, please contact the Operations Team.*
 
 ---
-*Next: [Value Proposition Deep-Dive](../value-proposition/detailed-analysis/comprehensive-analysis.md) →*
+*Next: [Value Proposition Deep-Dive](../value-proposition/detailed-analysis/comprehensive-analysis) →*

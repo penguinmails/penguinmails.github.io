@@ -16,7 +16,7 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Strategic Overview**
-- `overview.md` (this document) - Main strategic overview with key metrics and architectural decisions
+- `overview` (this document) - Main strategic overview with key metrics and architectural decisions
 - High-level technical decisions and business impact analysis
 
 ### 🏗️ **Level 2: Detailed Technical Specifications**
@@ -135,16 +135,16 @@ This technical documentation integrates with:
 ## Related Documents
 
 ### 📚 **Technical Documentation**
-- [Business Strategy Overview](../business/strategy/overview.md) - Strategic business decisions
-- [Security Framework](../compliance-security/enterprise/security-framework.md) - Security architecture
-- [Analytics Performance](../operations-analytics/analytics-performance/README.md) - Performance monitoring
-- [Operations Management](../operations-analytics/operations-management/README.md) - Operational procedures
+- [Business Strategy Overview](((../business/strategy/overview)) - Strategic business decisions
+- [Security Framework](((../compliance-security/enterprise/security-framework)) - Security architecture
+- [Analytics Performance](((../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Operations Management](((../operations-analytics/operations-management/README)) - Operational procedures
 
 ### 🔧 **Implementation Guides**
-- [Architecture System](./architecture-system/README.md) - Detailed system architecture
-- [Development Guidelines](./development-guidelines/README.md) - Development standards
-- [Database Infrastructure](./database-infrastructure/README.md) - Database management
-- [Quality Assurance](./quality-assurance/README.md) - Testing protocols
+- [Architecture System](((./architecture-system/README)) - Detailed system architecture
+- [Development Guidelines](((./development-guidelines/README)) - Development standards
+- [Database Infrastructure](((./database-infrastructure/README)) - Database management
+- [Quality Assurance](((./quality-assurance/README)) - Testing protocols
 
 ---
 

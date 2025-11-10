@@ -3,6 +3,7 @@ title: "High-Level Architecture Overview"
 nav_order: 1
 nav_exclude: false
 description: "System design and technical overview for decision makers and technical teams"
+last_modified_date: "2025-11-10"
 ---
 
 # High-Level Architecture Overview
@@ -26,7 +27,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **4-Tier Database Architecture**: Sophisticated OLTP, Content, OLAP, and Queue system for optimal performance
 - **Email System Hierarchy**: Message-focused naming with natural email hierarchy (email_messages → email_content → attachments)
 
-**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](../quick-setup.md) through [campaign creation](../../core-features/) to [analytics and optimization](../../core-features/analytics/overview.md) - providing the reliable infrastructure that powers your success.
+**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](((../quick-setup)) through [campaign creation](../../core-features/) to [analytics and optimization](((../../core-features/analytics/overview)) - providing the reliable infrastructure that powers your success.
 
 ### Technology Stack Decisions
 **Frontend Technologies**
@@ -427,8 +428,8 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 Explore the technical foundations further:
 
-1. **[Technical Operations Overview](../operations/overview.md)** - Deployment, monitoring, and operational procedures
-2. **[Integration & API Overview](../integration/overview.md)** - API documentation and third-party integrations
+1. **[Technical Operations Overview](((../operations/overview))** - Deployment, monitoring, and operational procedures
+2. **[Integration & API Overview](((../integration/overview))** - API documentation and third-party integrations
 3. **[Detailed Technical Architecture](detailed-technical/)** - Deep dive into system design and implementation
 4. **[Enterprise Technical Architecture](enterprise-tech/)** - Enterprise-specific technical considerations
 

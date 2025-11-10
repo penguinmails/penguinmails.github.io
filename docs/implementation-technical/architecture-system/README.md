@@ -16,13 +16,13 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 🏢 **Level 1: Strategic Overview**
-- `README.md` (this document) - Main architectural overview with key decisions and business impact
+- `README` (this document) - Main architectural overview with key decisions and business impact
 - High-level system design principles and strategic architectural choices
 
 ### 🏗️ **Level 2: Detailed Technical Specifications**
-- `architecture-overview.md` - Complete system architecture with diagrams and component analysis
-- `email-system-implementation.md` - Email infrastructure architecture and implementation
-- `infrastructure-documentation.md` - Infrastructure management and deployment procedures
+- `architecture-overview` - Complete system architecture with diagrams and component analysis
+- `email-system-implementation` - Email infrastructure architecture and implementation
+- `infrastructure-documentation` - Infrastructure management and deployment procedures
 
 ### 🔧 **Level 3: Enterprise Implementation**
 - Advanced configuration options and system integration patterns
@@ -139,16 +139,16 @@ This architectural documentation integrates with:
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Implementation Overview](../overview.md) - Strategic technical overview
-- [Development Guidelines](../development-guidelines/README.md) - Coding standards and practices
-- [Database Infrastructure](../database-infrastructure/README.md) - Schema and performance optimization
-- [Quality Assurance](../quality-assurance/README.md) - Testing protocols and procedures
+- [Implementation Overview](((../overview)) - Strategic technical overview
+- [Development Guidelines](((../development-guidelines/README)) - Coding standards and practices
+- [Database Infrastructure](((../database-infrastructure/README)) - Schema and performance optimization
+- [Quality Assurance](((../quality-assurance/README)) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview.md) - Strategic business decisions
-- [Operations Management](../../operations-analytics/operations-management/README.md) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README.md) - Performance monitoring
+- [Business Strategy Overview](((../../business/strategy/overview)) - Strategic business decisions
+- [Operations Management](((../../operations-analytics/operations-management/README)) - Operational procedures
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security architecture
+- [Analytics Performance](((../../operations-analytics/analytics-performance/README)) - Performance monitoring
 
 ---
 

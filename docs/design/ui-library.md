@@ -704,9 +704,9 @@ export const Loading: Story = {
 ---
 
 ## Related Documents
-- [Component Library](component-library.md) - Reusable component catalog
-- [Design System](design-system.md) - Complete design system overview
-- [Design Tokens](design-tokens.md) - Design token specifications
-- [Accessibility Guidelines](accessibility-guidelines.md) - Inclusive design standards
+- [Component Library](((component-library)) - Reusable component catalog
+- [Design System](((design-system)) - Complete design system overview
+- [Design Tokens](((design-tokens)) - Design token specifications
+- [Accessibility Guidelines](((accessibility-guidelines)) - Inclusive design standards
 
 **Keywords**: UI library, component library, design system, reusable components, React components, component patterns, design tokens, accessibility

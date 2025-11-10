@@ -1,5 +1,5 @@
 ---
-last_modified_date: "2025-12-19"
+last_modified_date: "2025-11-10"
 ---
 
 # **User Journey Optimization & Progressive Disclosure Guide**
@@ -19,20 +19,20 @@ last_modified_date: "2025-12-19"
 > **Navigation Hub**: This is the framework overview for user journey documentation. Each specific user journey is detailed in individual files below.
 
 > **Quick Navigation:**
-> - **[Authentication Journey](authentication-journey.md)** - User access, verification, and session management
-> - **[Campaign Operations Journey](campaign-operations-journey.md)** - Email campaign creation, management, and optimization
-> - **[Onboarding Journey](onboarding-journey.md)** - Complete setup process from signup to platform access
-> - **[Payment & Billing Journey](payment-billing-journey.md)** - Stripe Connect integration and billing management
+> - **[Authentication Journey](((authentication-journey))** - User access, verification, and session management
+> - **[Campaign Operations Journey](((campaign-operations-journey))** - Email campaign creation, management, and optimization
+> - **[Onboarding Journey](((onboarding-journey))** - Complete setup process from signup to platform access
+> - **[Payment & Billing Journey](((payment-billing-journey))** - Stripe Connect integration and billing management
 
 ## Overview
 
 This guide implements progressive disclosure based on user personas, expertise levels, and workflow stages. It transforms the documentation from flat feature lists into a strategic, user-journey-optimized experience that guides users from immediate value delivery to advanced optimization.
 
 **Jump to Specific Journeys:**
-- **[Authentication & Access Control](authentication-journey.md)** - Complete user authentication workflows
-- **[Email Campaigns & Operations](campaign-operations-journey.md)** - End-to-end campaign management
-- **[Onboarding & Setup](onboarding-journey.md)** - User onboarding and platform initialization
-- **[Payment & Billing](payment-billing-journey.md)** - Payment processing and billing management
+- **[Authentication & Access Control](((authentication-journey))** - Complete user authentication workflows
+- **[Email Campaigns & Operations](((campaign-operations-journey))** - End-to-end campaign management
+- **[Onboarding & Setup](((onboarding-journey))** - User onboarding and platform initialization
+- **[Payment & Billing](((payment-billing-journey))** - Payment processing and billing management
 
 ---
 
@@ -66,17 +66,17 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 1: Quick Start Path (5 Minutes to First Send)**
 ```
 1. INSTANT SETUP
-   → [Free Mailbox Creation](../core-features/free-mailbox-creation/overview.md#5-minute-quick-setup)
+   → [Free Mailbox Creation](../core-features/free-mailbox-creation/overview#5-minute-quick-setup)
    → Outcome: Professional email account ready in 5 minutes
    → Value: "Start sending immediately without technical complexity"
 
 2. IMMEDIATE SUCCESS
-   → [Warm-ups](../core-features/warm-ups/overview.md#instant-automated-start)
+   → [Warm-ups](../core-features/warm-ups/overview#instant-automated-start)
    → Outcome: Automated reputation building begins instantly
    → Value: "90%+ inbox placement without manual management"
 
 3. FIRST CAMPAIGN
-   → [Campaign Operations Journey](campaign-operations-journey.md#campaign-creation)
+   → [Campaign Operations Journey](campaign-operations-journey#campaign-creation)
    → Outcome: Send first cold email within 30 minutes
    → Value: "See responses within hours, not weeks"
 ```
@@ -84,12 +84,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 2: Performance Optimization (Week 1-2)**
 ```
 4. RESPONSE MANAGEMENT
-   → [Authentication Journey](authentication-journey.md#dashboard-restoration)
+   → [Authentication Journey](authentication-journey#dashboard-restoration)
    → Outcome: All responses tracked in one place
    → Value: "Never miss a prospect response again"
 
 5. PERFORMANCE INSIGHTS
-   → [Campaign Operations Journey](campaign-operations-journey.md#campaign-launch--monitoring)
+   → [Campaign Operations Journey](campaign-operations-journey#campaign-launch--monitoring)
    → Outcome: Data-driven campaign improvement
    → Value: "Increase response rates by 150%+ within 30 days"
 ```
@@ -97,12 +97,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 3: Advanced Scaling (Month 1+)**
 ```
 6. VOLUME EXPANSION
-   → [Campaign Operations Journey](campaign-operations-journey.md#recipient-list-management)
+   → [Campaign Operations Journey](campaign-operations-journey#recipient-list-management)
    → Outcome: Scale to thousands of emails daily
    → Value: "Maintain deliverability while scaling volume"
 
 7. AUTOMATED OPTIMIZATION
-   → [Campaign Operations Journey](campaign-operations-journey.md#campaign-launch--monitoring)
+   → [Campaign Operations Journey](campaign-operations-journey#campaign-launch--monitoring)
    → Outcome: AI-driven campaign optimization
    → Value: "Continuous improvement without manual effort"
 ```
@@ -114,17 +114,17 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 1: Client Infrastructure (30 Minutes Setup)**
 ```
 1. AGENCY SETUP
-   → [Authentication Journey](authentication-journey.md#full-dashboard-access)
+   → [Authentication Journey](authentication-journey#full-dashboard-access)
    → Outcome: Multi-client workspace with data isolation
    → Value: "Manage unlimited clients with complete data security"
 
 2. CLIENT ONBOARDING
-   → [Onboarding Journey](onboarding-journey.md#dashboard-access)
+   → [Onboarding Journey](onboarding-journey#dashboard-access)
    → Outcome: Automated client account creation
    → Value: "Launch client campaigns within minutes, not days"
 
 3. WHITE-LABEL DEPLOYMENT
-   → [Payment Journey](payment-billing-journey.md#subscription-activation)
+   → [Payment Journey](payment-billing-journey#subscription-activation)
    → Outcome: Branded platform for client access
    → Value: "Deliver professional service under your brand"
 ```
@@ -132,12 +132,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 2: Operational Excellence (Week 1-2)**
 ```
 4. CLIENT REPORTING
-   → [Payment Journey](payment-billing-journey.md#billing-dashboard-access)
+   → [Payment Journey](payment-billing-journey#billing-dashboard-access)
    → Outcome: Professional client dashboards
    → Value: "Prove value with comprehensive performance reports"
 
 5. COMPLIANCE AUTOMATION
-   → [Onboarding Journey](onboarding-journey.md#infrastructure-setup)
+   → [Onboarding Journey](onboarding-journey#infrastructure-setup)
    → Outcome: Automated GDPR/CAN-SPAM compliance
    → Value: "Eliminate compliance risk across all clients"
 ```
@@ -145,12 +145,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 3: Enterprise Operations (Month 1+)**
 ```
 6. API INTEGRATION
-   → [Campaign Operations Journey](campaign-operations-journey.md#content-setup)
+   → [Campaign Operations Journey](campaign-operations-journey#content-setup)
    → Outcome: Custom integrations with existing tools
    → Value: "Seamless workflow integration for maximum efficiency"
 
 7. TEAM MANAGEMENT
-   → [Onboarding Journey](onboarding-journey.md#team-building)
+   → [Onboarding Journey](onboarding-journey#team-building)
    → Outcome: Role-based access and team coordination
    → Value: "Scale operations with controlled team access"
 ```
@@ -162,17 +162,17 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 1: Infrastructure Assessment (Quick Evaluation)**
 ```
 1. ARCHITECTURE OVERVIEW
-   → [Onboarding Journey](onboarding-journey.md#infrastructure-setup)
+   → [Onboarding Journey](onboarding-journey#infrastructure-setup)
    → Outcome: Understanding of system capabilities
    → Value: "Multi-tenant, enterprise-grade infrastructure"
 
 2. SECURITY & COMPLIANCE
-   → [Authentication Journey](authentication-journey.md#ongoing-session-management)
+   → [Authentication Journey](authentication-journey#ongoing-session-management)
    → Outcome: Security framework assessment
    → Value: "SOC 2, GDPR compliance built-in"
 
 3. PERFORMANCE METRICS
-   → [Payment Journey](payment-billing-journey.md#billing-dashboard-access)
+   → [Payment Journey](payment-billing-journey#billing-dashboard-access)
    → Outcome: SLA and performance guarantees
    → Value: "99.9% uptime, 95%+ deliverability guaranteed"
 ```
@@ -180,12 +180,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 2: Integration Planning (Week 1-2)**
 ```
 4. API EVALUATION
-   → [Campaign Operations Journey](campaign-operations-journey.md#content-setup)
+   → [Campaign Operations Journey](campaign-operations-journey#content-setup)
    → Outcome: Complete API documentation and capabilities
    → Value: "RESTful API, GraphQL, comprehensive SDK support"
 
 5. DEPLOYMENT STRATEGY
-   → [Onboarding Journey](onboarding-journey.md#infrastructure-setup)
+   → [Onboarding Journey](onboarding-journey#infrastructure-setup)
    → Outcome: Enterprise deployment approach
    → Value: "Scalable, enterprise-ready deployment"
 ```
@@ -193,12 +193,12 @@ This guide implements progressive disclosure based on user personas, expertise l
 #### **Layer 3: Custom Development (Month 1+)**
 ```
 6. CUSTOM INTEGRATIONS
-   → [Campaign Operations Journey](campaign-operations-journey.md#recipient-list-management)
+   → [Campaign Operations Journey](campaign-operations-journey#recipient-list-management)
    → Outcome: Custom workflow development
    → Value: "Tailored integrations for unique requirements"
 
 7. ENTERPRISE SUPPORT
-   → [Payment Journey](payment-billing-journey.md#enterprise-billing)
+   → [Payment Journey](payment-billing-journey#enterprise-billing)
    → Outcome: Dedicated enterprise support
    → Value: "White-glove support for mission-critical operations"
 ```
@@ -276,23 +276,23 @@ AUTHENTICATION → ONBOARDING → PAYMENT → CAMPAIGNS
 #### **Journey Cross-Reference Strategy**
 
 **After Authentication Journey:**
-- **Next**: [Onboarding Journey](onboarding-journey.md#step-1-email-verification) - Complete platform setup
-- **Also Consider**: [Payment Journey](payment-billing-journey.md#onboarding-payment-setup) - Configure billing
+- **Next**: [Onboarding Journey](onboarding-journey#step-1-email-verification) - Complete platform setup
+- **Also Consider**: [Payment Journey](payment-billing-journey#onboarding-payment-setup) - Configure billing
 - **Dependencies**: Authentication enables all other journeys
 
 **After Onboarding Journey:**
-- **Next**: [Campaign Operations Journey](campaign-operations-journey.md#campaign-creation) - Create first campaign
-- **Also Consider**: [Payment Journey](payment-billing-journey.md#subscription-activation) - Upgrade plan for features
+- **Next**: [Campaign Operations Journey](campaign-operations-journey#campaign-creation) - Create first campaign
+- **Also Consider**: [Payment Journey](payment-billing-journey#subscription-activation) - Upgrade plan for features
 - **Dependencies**: Onboarding enables campaign operations and billing access
 
 **After Payment Journey:**
-- **Next**: [Campaign Operations Journey](campaign-operations-journey.md#campaign-creation) - Start generating value
-- **Also Consider**: [Onboarding Journey](onboarding-journey.md#infrastructure-setup) - Configure email infrastructure
+- **Next**: [Campaign Operations Journey](campaign-operations-journey#campaign-creation) - Start generating value
+- **Also Consider**: [Onboarding Journey](onboarding-journey#infrastructure-setup) - Configure email infrastructure
 - **Dependencies**: Payment enables full feature access and infrastructure setup
 
 **After Campaign Operations Journey:**
-- **Next**: [Authentication Journey](authentication-journey.md#dashboard-restoration) - Monitor and manage
-- **Also Consider**: [Payment Journey](payment-billing-journey.md#usage-tracking--alerts) - Track billing and usage
+- **Next**: [Authentication Journey](authentication-journey#dashboard-restoration) - Monitor and manage
+- **Also Consider**: [Payment Journey](payment-billing-journey#usage-tracking--alerts) - Track billing and usage
 - **Dependencies**: Campaigns drive billing and require ongoing management
 
 ### **User Journey Flow Optimization**
@@ -300,22 +300,22 @@ AUTHENTICATION → ONBOARDING → PAYMENT → CAMPAIGNS
 #### **Natural Progression Patterns**
 
 **Sales Rep Journey:**
-1. **[Authentication Journey](authentication-journey.md#first-time-user-registration-flow)** → Access platform
-2. **[Onboarding Journey](onboarding-journey.md#step-1-email-verification)** → Quick setup
-3. **[Campaign Operations Journey](campaign-operations-journey.md#campaign-creation)** → Create first campaign
-4. **[Authentication Journey](authentication-journey.md#returning-user-login-flow)** → Ongoing management
+1. **[Authentication Journey](authentication-journey#first-time-user-registration-flow)** → Access platform
+2. **[Onboarding Journey](onboarding-journey#step-1-email-verification)** → Quick setup
+3. **[Campaign Operations Journey](campaign-operations-journey#campaign-creation)** → Create first campaign
+4. **[Authentication Journey](authentication-journey#returning-user-login-flow)** → Ongoing management
 
 **Agency Manager Journey:**
-1. **[Authentication Journey](authentication-journey.md#full-dashboard-access)** → Enterprise setup
-2. **[Onboarding Journey](onboarding-journey.md#team-building)** → Team management
-3. **[Payment Journey](payment-billing-journey.md#subscription-activation)** → Billing configuration
-4. **[Campaign Operations Journey](campaign-operations-journey.md#campaign-creation)** → Client campaigns
+1. **[Authentication Journey](authentication-journey#full-dashboard-access)** → Enterprise setup
+2. **[Onboarding Journey](onboarding-journey#team-building)** → Team management
+3. **[Payment Journey](payment-billing-journey#subscription-activation)** → Billing configuration
+4. **[Campaign Operations Journey](campaign-operations-journey#campaign-creation)** → Client campaigns
 
 **Technical Decision Maker Journey:**
-1. **[Onboarding Journey](onboarding-journey.md#infrastructure-setup)** → Technical assessment
-2. **[Authentication Journey](authentication-journey.md#ongoing-session-management)** → Security evaluation
-3. **[Payment Journey](payment-billing-journey.md#enterprise-billing)** → Enterprise billing
-4. **[Campaign Operations Journey](campaign-operations-journey.md#ip-selection--configuration)** → Infrastructure evaluation
+1. **[Onboarding Journey](onboarding-journey#infrastructure-setup)** → Technical assessment
+2. **[Authentication Journey](authentication-journey#ongoing-session-management)** → Security evaluation
+3. **[Payment Journey](payment-billing-journey#enterprise-billing)** → Enterprise billing
+4. **[Campaign Operations Journey](campaign-operations-journey#ip-selection--configuration)** → Infrastructure evaluation
 
 ### **Contextual Journey Navigation**
 
@@ -354,19 +354,19 @@ AUTHENTICATION → ONBOARDING → PAYMENT → CAMPAIGNS
 #### **Cross-Journey Issue Resolution**
 
 **Login Issues → Onboarding:**
-- If user can't log in, guide them back to [Onboarding Journey](onboarding-journey.md#step-1-email-verification)
+- If user can't log in, guide them back to [Onboarding Journey](onboarding-journey#step-1-email-verification)
 - Verify email and complete profile setup
 
 **Payment Issues → Onboarding:**
-- Payment failures often require completing [Onboarding Journey](onboarding-journey.md#step-4-payment-setup)
+- Payment failures often require completing [Onboarding Journey](onboarding-journey#step-4-payment-setup)
 - Business verification and account setup
 
 **Campaign Issues → Authentication:**
-- Campaign problems may stem from incomplete [Authentication Journey](authentication-journey.md#ongoing-session-management)
+- Campaign problems may stem from incomplete [Authentication Journey](authentication-journey#ongoing-session-management)
 - Verify proper user permissions and access
 
 **Onboarding Issues → Authentication:**
-- Onboarding problems require checking [Authentication Journey](authentication-journey.md#full-dashboard-access)
+- Onboarding problems require checking [Authentication Journey](authentication-journey#full-dashboard-access)
 - Ensure proper account setup and verification
 
 ---
@@ -553,15 +553,15 @@ TRACK:
 ---
 
 ## Related Documents
-- **[User Journey Navigation Guide](user-journey-navigation.md)** - High-level journey flows and navigation
-- **[Business Model Alignment](../business/model/overview.md)** - Revenue model and user segmentation
-- **[Market Analysis Impact](../business/market-analysis/overview.md)** - Customer segments and market positioning
-- **[Success Metrics Framework](../business/strategy/overview.md)** - KPI framework and measurement systems
+- **[User Journey Navigation Guide](((user-journey-navigation))** - High-level journey flows and navigation
+- **[Business Model Alignment](((../business/model/overview))** - Revenue model and user segmentation
+- **[Market Analysis Impact](((../business/market-analysis/overview))** - Customer segments and market positioning
+- **[Success Metrics Framework](((../business/strategy/overview))** - KPI framework and measurement systems
 - **[Progressive Disclosure Strategy](#)** - Content hierarchy and user experience design
-- **[Authentication Journey](authentication-journey.md)** - Complete authentication workflow specifications
-- **[Campaign Operations Journey](campaign-operations-journey.md)** - Complete campaign management specifications
-- **[Onboarding Journey](onboarding-journey.md)** - Complete onboarding process specifications
-- **[Payment & Billing Journey](payment-billing-journey.md)** - Complete billing and payment specifications
+- **[Authentication Journey](((authentication-journey))** - Complete authentication workflow specifications
+- **[Campaign Operations Journey](((campaign-operations-journey))** - Complete campaign management specifications
+- **[Onboarding Journey](((onboarding-journey))** - Complete onboarding process specifications
+- **[Payment & Billing Journey](((payment-billing-journey))** - Complete billing and payment specifications
 
 **Keywords**: user journey, progressive disclosure, persona-based content, cross-journey integration, mobile-first design, continuous optimization, user experience framework
 

@@ -604,16 +604,16 @@ sequenceDiagram
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Architecture System README](README.md) - Architectural overview and decisions
-- [Email System Implementation](./email-system-implementation.md) - Email infrastructure details
-- [Infrastructure Documentation](./infrastructure-documentation.md) - Infrastructure operations
-- [Development Guidelines](../development-guidelines/README.md) - Development standards
+- [Architecture System README](((README)) - Architectural overview and decisions
+- [Email System Implementation](((./email-system-implementation)) - Email infrastructure details
+- [Infrastructure Documentation](((./infrastructure-documentation)) - Infrastructure operations
+- [Development Guidelines](((../development-guidelines/README)) - Development standards
 
 ### 🔗 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview.md) - Strategic business alignment
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security architecture
-- [Operations Management](../../operations-analytics/operations-management/README.md) - Operational procedures
-- [Analytics Performance](../../operations-analytics/analytics-performance/README.md) - Performance monitoring
+- [Business Strategy Overview](((../../business/strategy/overview)) - Strategic business alignment
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security architecture
+- [Operations Management](((../../operations-analytics/operations-management/README)) - Operational procedures
+- [Analytics Performance](((../../operations-analytics/analytics-performance/README)) - Performance monitoring
 
 ---
 

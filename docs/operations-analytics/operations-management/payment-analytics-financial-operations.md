@@ -660,25 +660,25 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Operations & Analytics
-- [`docs/operations-analytics/overview.md`](docs/operations-analytics/overview.md:1) - Global operations analytics framework.
-- [`docs/operations-analytics/analytics-performance/metrics-kpis.md`](docs/operations-analytics/analytics-performance/metrics-kpis.md:1) - Core KPI definitions for revenue, churn, and billing performance.
-- [`docs/operations-analytics/operations-management/organization-analytics-team-management.md`](docs/operations-analytics/operations-management/organization-analytics-team-management.md:1) - Team and organization management analytics.
-- [`docs/operations-analytics/operations-management/environment-release-management.md`](docs/operations-analytics/operations-management/environment-release-management.md:1) - Environment and release operations impact on billing and reliability.
+- [`docs/operations-analytics/overview`](docs/operations-analytics/overview:1) - Global operations analytics framework.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance/metrics-kpis:1) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management/organization-analytics-team-management:1) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management/environment-release-management:1) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
-- [`docs/business/model/overview.md`](docs/business/model/overview.md:1) - Canonical business and revenue model.
-- [`docs/business/value-proposition/overview.md`](docs/business/value-proposition/overview.md:1) - Value proposition framing for pricing and packaging.
-- [`docs/business/strategy/overview.md`](docs/business/strategy/overview.md:1) - Strategic priorities that payment analytics must support.
+- [`docs/business/model/overview`](docs/business/model/overview:1) - Canonical business and revenue model.
+- [`docs/business/value-proposition/overview`](docs/business/value-proposition/overview:1) - Value proposition framing for pricing and packaging.
+- [`docs/business/strategy/overview`](docs/business/strategy/overview:1) - Strategic priorities that payment analytics must support.
 
 ### Technical Architecture
-- [`docs/technical/architecture/overview.md`](docs/technical/architecture/overview.md:1) - High-level system architecture.
-- [`docs/technical/architecture/detailed-technical/integration-guide.md`](docs/technical/architecture/detailed-technical/integration-guide.md:1) - Canonical integration patterns, including billing/Stripe.
-- [`docs/implementation-technical/development-guidelines/api-reference.md`](docs/implementation-technical/development-guidelines/api-reference.md:1) - API surface for billing, subscriptions, and webhooks.
+- [`docs/technical/architecture/overview`](docs/technical/architecture/overview:1) - High-level system architecture.
+- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical/integration-guide:1) - Canonical integration patterns, including billing/Stripe.
+- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines/api-reference:1) - API surface for billing, subscriptions, and webhooks.
 
 ### Compliance & Security
-- [`docs/compliance-security/overview.md`](docs/compliance-security/overview.md:1) - Compliance posture.
-- [`docs/compliance-security/enterprise/security-framework.md`](docs/compliance-security/enterprise/security-framework.md:1) - Security controls relevant to financial data.
-- [`docs/compliance-security/international/data-privacy-policy.md`](docs/compliance-security/international/data-privacy-policy.md:1) - Data handling, retention, and privacy for billing records.
+- [`docs/compliance-security/overview`](docs/compliance-security/overview:1) - Compliance posture.
+- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise/security-framework:1) - Security controls relevant to financial data.
+- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international/data-privacy-policy:1) - Data handling, retention, and privacy for billing records.
 
 This section is authoritative; legacy content references should be treated as non-canonical historical scaffolding.
 
@@ -688,8 +688,8 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](./organization-analytics-team-management.md)** → Team and organization management
-- **[Metrics & KPIs](../analytics-performance/metrics-kpis.md)** → Comprehensive KPI framework
+- **[Organization Analytics](((./organization-analytics-team-management))** → Team and organization management
+- **[Metrics & KPIs](((../analytics-performance/metrics-kpis))** → Comprehensive KPI framework
 - **[Team Performance](../team-performance/)** → Team coordination and development
 
 ---

@@ -418,17 +418,17 @@ description: "Comprehensive market analysis, competitive landscape, customer seg
 
 ### **Operational Excellence**: Backed by comprehensive market research and customer validation processes that ensure business decisions are driven by real market data and customer insights.
 
-### **User Journey Integration**: This market analysis informs our complete user journey from [customer persona development](../user-personas/overview.md) through [feature development](../../core-features/) to [success measurement](../analytics/overview.md) - providing the market intelligence foundation that drives customer success.
+### **User Journey Integration**: This market analysis informs our complete user journey from [customer persona development](../user-personas/overview) through [feature development](../../core-features/) to [success measurement](../analytics/overview) - providing the market intelligence foundation that drives customer success.
 
 ---
 
 ## Related Market Intelligence
 
-- **[Business Model Overview](../model/overview.md)** - Revenue model and financial projections
-- **[Business Strategy Overview](../strategy/overview.md)** - Strategic direction and competitive positioning  
-- **[User Personas Overview](../user-personas/overview.md)** - Detailed customer analysis and segmentation
-- **[Value Proposition Overview](../value-proposition/overview.md)** - Customer value and differentiation strategy
-- **[Business Operations](../operations/overview.md)** - Operational procedures supporting market strategy
+- **[Business Model Overview](../model/overview)** - Revenue model and financial projections
+- **[Business Strategy Overview](../strategy/overview)** - Strategic direction and competitive positioning
+- **[User Personas Overview](../user-personas/overview)** - Detailed customer analysis and segmentation
+- **[Value Proposition Overview](../value-proposition/overview)** - Customer value and differentiation strategy
+- **[Business Operations](../operations/overview)** - Operational procedures supporting market strategy
 
 ---
 
@@ -451,4 +451,4 @@ This market analysis is based on comprehensive research from leading industry so
 [^5]: https://www.businessresearchinsights.com/market-reports/email-deliverability-market-102810
 
 ---
-*Next: [User Personas Overview](../user-personas/overview.md) →*
+*Next: [User Personas Overview](../user-personas/overview) →*

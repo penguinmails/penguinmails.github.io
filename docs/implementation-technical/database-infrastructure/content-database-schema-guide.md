@@ -13,8 +13,8 @@ It is NOT:
 - A general logging/telemetry sink (see external analytics/logging)
 
 For analytics and logging responsibilities, refer to:
-- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1)
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
 
 ---
 
@@ -48,7 +48,7 @@ For analytics and logging responsibilities, refer to:
 - No generic log tables, connection pool metrics, or system alerts in Content DB.
 - High-volume logs, access tracking, and infra monitoring:
   - Go to external logging/product analytics/SIEM per:
-    - [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1).
+    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1).
 
 4) Focus on retention, compliance, and efficient storage
 
@@ -187,7 +187,7 @@ Content DB is not a log sink. The following apply:
   - Do not treat content_search_index as a primary Content DB responsibility.
 
 For patterns and responsibilities:
-- See [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1).
+- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1).
 
 ---
 
@@ -283,7 +283,7 @@ Use this guide as the forward-looking contract:
     - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
-- [`oltp-schema-guide.md`](docs/implementation-technical/database-infrastructure/oltp-schema-guide.md:1),
-- [`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1),
-- [`external-analytics-logging.md`](docs/implementation-technical/database-infrastructure/external-analytics-logging.md:1),
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1),
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1),
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1),
 provides the coherent context and blueprint for future implementation of the Content DB tier.

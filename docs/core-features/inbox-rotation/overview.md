@@ -1,13 +1,14 @@
 ---
 title: "Inbox Rotation Overview"
 description: "Smart inbox rotation to avoid detection and maximize deliverability"
+last_modified_date: "2025-11-10"
 ---
 
 # Smart Inbox Rotation for Sustainable Deliverability
 
 ## Strategic Account Protection & Detection Avoidance
 
-> **📖 Getting Started?** See our [Features Overview](../feature-overview.md) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](((../feature-overview)) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 > - **⭐ Beginner Path**: Basic inbox rotation for account protection
 > - **⭐⭐ Intermediate Path**: Advanced rotation strategies and optimization
@@ -247,13 +248,13 @@ description: "Smart inbox rotation to avoid detection and maximize deliverabilit
 Ready to optimize your cold email outreach with smart inbox rotation?
 
 ### **Related Features**
-1. **[Warm-ups](../warm-ups/overview.md)** - Build reputation for each account in your rotation
-2. **[Unified Inbox](../unified-inbox/overview.md)** - Manage responses from all rotated accounts
-3. **[Analytics](../analytics/overview.md)** - Track performance across all accounts and rotation patterns
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Create accounts for rotation
+1. **[Warm-ups](((../warm-ups/overview))** - Build reputation for each account in your rotation
+2. **[Unified Inbox](((../unified-inbox/overview))** - Manage responses from all rotated accounts
+3. **[Analytics](((../analytics/overview))** - Track performance across all accounts and rotation patterns
+4. **[Free Mailbox Creation](((../free-mailbox-creation/overview))** - Create accounts for rotation
 
 ### **Implementation Resources**
-5. **[Getting Started](../implement/getting-started.md)** - Complete setup and integration
+5. **[Getting Started](((../implement/getting-started))** - Complete setup and integration
 
 ### **Prerequisites**
 - **Multiple Email Accounts**: Have at least 2-3 email accounts ready for rotation

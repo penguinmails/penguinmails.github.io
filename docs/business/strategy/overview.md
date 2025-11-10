@@ -1,8 +1,9 @@
 ---
 title: "Business Strategy & Strategic Vision"
+description: "PenguinMails strategic direction, market positioning, and long-term objectives for business leaders and stakeholders"
 nav_order: 4
 nav_exclude: false
-description: "PenguinMails strategic direction, market positioning, and long-term objectives for business leaders and stakeholders"
+last_modified_date: "2025-11-10"
 ---
 
 # Business Strategy & Strategic Vision
@@ -409,19 +410,19 @@ These capabilities are implemented progressively:
 
 ## Related Strategic Documents
 
-- **[Value Proposition Overview](../value-proposition/overview.md)** - Core value statements and customer problem-solving
-- **[Market Analysis & Competitive Intelligence](../market-analysis/overview.md)** - Market size, competitive landscape, and opportunities
-- **[Business Model & Revenue Strategy](../model/overview.md)** - Revenue model, pricing strategy, and financial projections
-- **[KPI Framework & Success Metrics](../core-features/analytics/overview.md)** - Data-driven decision making and performance measurement
-- **[Analytics & Business Intelligence](../core-features/analytics/overview.md)** - Comprehensive analytics platform and KPI tracking
-- **[Business Operations](../operations/overview.md)** - Operational procedures and quality assurance
-- **[Implementation Roadmap](./roadmap.md)** - Detailed development timeline and resource allocation
+- **[Value Proposition Overview](../value-proposition/overview)** - Core value statements and customer problem-solving
+- **[Market Analysis & Competitive Intelligence](../market-analysis/overview)** - Market size, competitive landscape, and opportunities
+- **[Business Model & Revenue Strategy](../model/overview)** - Revenue model, pricing strategy, and financial projections
+- **[KPI Framework & Success Metrics](../core-features/analytics/overview)** - Data-driven decision making and performance measurement
+- **[Analytics & Business Intelligence](../core-features/analytics/overview)** - Comprehensive analytics platform and KPI tracking
+- **[Business Operations](../operations/overview)** - Operational procedures and quality assurance
+- **[Implementation Roadmap](./roadmap)** - Detailed development timeline and resource allocation
 
 ### **Supporting Documentation**
-- **[Customer Journey Analytics](../user-journeys/analytics-integration.md)** - User experience and analytics integration
-- **[Enterprise Performance Metrics](../operations/performance-metrics.md)** - Operational excellence and system performance
-- **[Strategic Implementation Guide](./implementation-guide.md)** - Step-by-step strategic execution
-- **[Risk Management Framework](./risk-management.md)** - Risk analysis and mitigation strategies
+- **[Customer Journey Analytics](../user-journeys/analytics-integration)** - User experience and analytics integration
+- **[Enterprise Performance Metrics](../operations/performance-metrics)** - Operational excellence and system performance
+- **[Strategic Implementation Guide](./implementation-guide)** - Step-by-step strategic execution
+- **[Risk Management Framework](./risk-management)** - Risk analysis and mitigation strategies
 
 ---
 
@@ -438,4 +439,4 @@ These capabilities are implemented progressively:
 
 ---
 
-*Next: [Market Analysis Overview](../market-analysis/overview.md) →*
+*Next: [Market Analysis Overview](../market-analysis/overview) →*

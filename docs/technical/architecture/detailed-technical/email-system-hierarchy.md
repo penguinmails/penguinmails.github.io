@@ -11,7 +11,7 @@ description: "Optimized database structure and email system architecture"
 
 **Operational Excellence**: Backed by **comprehensive performance optimization** with intelligent indexing, efficient content management, and automated monitoring that ensure 99.9% data integrity and optimal query performance.
 
-**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features/) through [analytics tracking](analytics-architecture.md) to [performance optimization](.) - providing the data architecture that powers your email infrastructure success.
+**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features/) through [analytics tracking](((analytics-architecture)) to [performance optimization](.) - providing the data architecture that powers your email infrastructure success.
 
 ---
 
@@ -536,9 +536,9 @@ This email system hierarchy creates a **clear, intuitive, and maintainable struc
 
 ### ✅ Next Steps
 Explore related technical documentation:
-1. **[Analytics Architecture](analytics-architecture.md)** - Real-time tracking and PostHog integration
-2. **[Database Architecture](../overview.md)** - 4-tier database structure overview
-3. **[Email Processing](../overview.md)** - Core email processing and deliverability
+1. **[Analytics Architecture](((analytics-architecture))** - Real-time tracking and PostHog integration
+2. **[Database Architecture](((../overview))** - 4-tier database structure overview
+3. **[Email Processing](((../overview))** - Core email processing and deliverability
 
 ---
 

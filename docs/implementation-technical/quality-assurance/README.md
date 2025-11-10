@@ -16,12 +16,12 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Strategic Overview**
-- `README.md` (this document) - Main QA overview with testing strategy and business impact
+- `README` (this document) - Main QA overview with testing strategy and business impact
 - High-level testing decisions and quality standards
 
 ### 🧪 **Level 2: Detailed Testing Protocols**
-- `qa-testing-protocols.md` - Complete testing procedures, bug management, and quality standards
-- `testing-standards.md` - Detailed test automation, performance, and security testing
+- `qa-testing-protocols` - Complete testing procedures, bug management, and quality standards
+- `testing-standards` - Detailed test automation, performance, and security testing
 
 ### 🔧 **Level 3: Enterprise Quality Assurance**
 - Advanced testing configurations and automation strategies
@@ -121,16 +121,16 @@ This section follows the **Progressive Complexity Framework** with three distinc
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Development Guidelines](../development-guidelines/README.md) - Development standards and practices
-- [Architecture System](../architecture-system/README.md) - System architecture decisions
-- [Database Infrastructure](../database-infrastructure/README.md) - Database and infrastructure management
-- [Implementation Overview](../overview.md) - Strategic technical overview
+- [Development Guidelines](((../development-guidelines/README)) - Development standards and practices
+- [Architecture System](((../architecture-system/README)) - System architecture decisions
+- [Database Infrastructure](((../database-infrastructure/README)) - Database and infrastructure management
+- [Implementation Overview](((../overview)) - Strategic technical overview
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview.md) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README.md) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README.md) - Performance monitoring
+- [Business Strategy Overview](((../../business/strategy/overview)) - Strategic business alignment
+- [Operations Management](((../../operations-analytics/operations-management/README)) - Operational procedures
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security architecture
+- [Analytics Performance](((../../operations-analytics/analytics-performance/README)) - Performance monitoring
 
 ---
 

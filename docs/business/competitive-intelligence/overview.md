@@ -214,16 +214,16 @@ DNS CONFIGURATION APPROACH:
 errors cause deliverability failures for 60% of cold email campaigns, while 
 our automated approach achieves 99.9% verification success rate.
 
-→ [See Technical Details](technical-implementation/dns-storage-integration-guide.md)
-→ [Competitive Advantage](competitive-analysis.md#dns-automation)"
+→ [See Technical Details](((technical-implementation/dns-storage-integration-guide))
+→ [Competitive Advantage](competitive-analysis#dns-automation)"
 
 VPS INFRASTRUCTURE:
 "We chose dedicated VPS over shared cloud infrastructure because cold email 
 deliverability requires IP reputation control that shared infrastructure 
 cannot provide.
 
-→ [See Architecture Details](../architecture/overview.md#infrastructure-layer)
-→ [Why Shared Infrastructure Fails](competitive-analysis.md#shared-infrastructure-limitations)"
+→ [See Architecture Details](../architecture/overview#infrastructure-layer)
+→ [Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure-limitations)"
 ```
 
 ### **"Why We Avoided..." Language Pattern**
@@ -236,14 +236,14 @@ problems when one user's poor sending practices damage IP reputation for
 everyone using that infrastructure.
 
 IMPACT: 35-50% lower deliverability rates compared to dedicated infrastructure
-→ [See Why Shared Infrastructure Fails](competitive-analysis.md#shared-infrastructure)"
+→ [See Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure)"
 
 MANUAL COMPLIANCE:
 "We avoided manual compliance processes because they don't scale and create 
 legal risk that could shut down campaigns or businesses.
 
 IMPACT: 90%+ reduction in compliance overhead through automation
-→ [See Compliance Automation Benefits](competitive-analysis.md#compliance-automation)"
+→ [See Compliance Automation Benefits](competitive-analysis#compliance-automation)"
 ```
 
 ---
@@ -261,7 +261,7 @@ Unlike general email marketing platforms that were adapted for cold email,
 PenguinMails was built from the ground up to solve the specific deliverability 
 challenges that make 73% of cold email campaigns fail.
 
-[See our competitive analysis](competitive-analysis.md) to understand why 
+[See our competitive analysis](competitive-analysis) to understand why
 purpose-built infrastructure delivers 95%+ inbox placement vs. industry 
 average of 60-70%.
 ```
@@ -280,8 +280,8 @@ factors that general email platforms don't address.
 • **Compliance-First Design**: Unlike platforms that add compliance as an afterthought
 • **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
-→ [See Complete Architecture](../architecture/overview.md)
-→ [Why These Decisions Matter](competitive-analysis.md#architecture-decisions)
+→ [See Complete Architecture](((../architecture/overview))
+→ [Why These Decisions Matter](competitive-analysis#architecture-decisions)
 ```
 
 ---
@@ -403,19 +403,19 @@ MEASUREMENT:
 ## Cross-References
 
 **Related Strategic Documentation**:
-- [Business Strategy Overview](../strategy/overview.md) - Strategic business decisions and market positioning
-- [Value Proposition Overview](../value-proposition/overview.md) - Core value propositions and customer benefits
-- [Market Analysis Overview](../market-analysis/overview.md) - Market opportunity and competitive landscape
-- [Business Model Overview](../model/overview.md) - Revenue models and competitive economics
+- [Business Strategy Overview](../strategy/overview) - Strategic business decisions and market positioning
+- [Value Proposition Overview](../value-proposition/overview) - Core value propositions and customer benefits
+- [Market Analysis Overview](../market-analysis/overview) - Market opportunity and competitive landscape
+- [Business Model Overview](../model/overview) - Revenue models and competitive economics
 
 **Technical Documentation**:
-- [Technical Architecture Overview](../architecture/overview.md) - Infrastructure decisions and competitive advantages
-- [Security Overview](../security/overview.md) - Security features and compliance automation
+- [Technical Architecture Overview](../architecture/overview) - Infrastructure decisions and competitive advantages
+- [Security Overview](../security/overview) - Security features and compliance automation
 
 **Feature Documentation**:
-- [Warm-ups Overview](../../core-features/warm-ups/overview.md) - Competitive differentiation in deliverability features
-- [Analytics Overview](../../core-features/analytics/overview.md) - Performance metrics vs. competitor limitations
-- [Inbox Rotation Overview](../../core-features/inbox-rotation/overview.md) - Advanced features not available in competitor platforms
+- [Warm-ups Overview](../../core-features/warm-ups/overview) - Competitive differentiation in deliverability features
+- [Analytics Overview](../../core-features/analytics/overview) - Performance metrics vs. competitor limitations
+- [Inbox Rotation Overview](../../core-features/inbox-rotation/overview) - Advanced features not available in competitor platforms
 
 ---
 

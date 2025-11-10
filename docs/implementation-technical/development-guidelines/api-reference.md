@@ -1,3 +1,9 @@
+---
+title: "API Reference - Complete Integration Guide"
+description: "Comprehensive API documentation with integration guides, authentication flows, and developer resources for PenguinMails platform"
+last_modified_date: "2025-11-10"
+---
+
 # API Reference - Complete Integration Guide
 
 ## Strategic Alignment
@@ -16,7 +22,7 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Quick Start & Authentication**
-- `api-reference.md` (this document) - Main API overview with authentication and quick start
+- `api-reference` (this document) - Main API overview with authentication and quick start
 - API key management, authentication flows, and basic integration examples
 
 ### 🔧 **Level 2: Comprehensive API Reference**
@@ -2007,10 +2013,10 @@ describe('PenguinMails API', () => {
 ## Support & Resources
 
 ### Documentation
-- [API Reference](../api-reference.md) - Complete API documentation
-- [Integration Examples](./integration-examples.md) - Real-world integration guides
-- [SDK Documentation](./sdk-documentation.md) - Language-specific SDK guides
-- [Webhook Guide](./webhook-guide.md) - Webhook implementation guide
+- [API Reference](((../api-reference)) - Complete API documentation
+- [Integration Examples](((./integration-examples)) - Real-world integration guides
+- [SDK Documentation](((./sdk-documentation)) - Language-specific SDK guides
+- [Webhook Guide](((./webhook-guide)) - Webhook implementation guide
 
 ### Community
 - [Developer Forum](https://community.penguinmails.com) - Get help from the community

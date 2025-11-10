@@ -1,7 +1,7 @@
 # Notifications & System Events ER Diagram (Mermaid)
 
 This diagram visualizes the dedicated Notifications & System Events database as defined in:
-- [`notifications-database-schema-guide.md`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide.md:1)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
 
 It is an operational tier:
 - Not OLAP.

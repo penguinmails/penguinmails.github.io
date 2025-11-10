@@ -1,7 +1,7 @@
 # OLAP Analytics ER Diagram (Mermaid)
 
 This diagram reflects the OLAP/analytics schema defined in
-[`olap-analytics-schema-guide.md`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md:1),
+[`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1),
 modeled as the analytics tier separate from OLTP, Content DB, Notifications DB, and external logging.
 
 ```mermaid
@@ -166,6 +166,6 @@ erDiagram
   %%   to OLTP entities, denormalized for warehouse flexibility (no cross-DB FKs).
   %% - Only core analytics fact tables and the compliance-scope admin_audit_log are modeled here.
   %% - Notifications and live admin/system events are stored in the dedicated Notifications DB
-  %%   (see notifications-database-schema-guide.md), not in OLAP.
+  %%   (see notifications-database-schema-guide), not in OLAP.
   %% - Raw logs, infra metrics, rate limits, and detailed telemetry belong to the external
-  %%   logging/observability stack (see external-analytics-logging.md).
+  %%   logging/observability stack (see external-analytics-logging).

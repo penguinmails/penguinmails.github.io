@@ -1,5 +1,7 @@
 ---
-last_modified_date: "2025-12-15"
+title: "Incident Response Operations"
+description: "Comprehensive incident response framework for security incidents, system outages, and operational disruptions with structured classification and recovery procedures"
+last_modified_date: "2025-11-10"
 ---
 
 # Incident Response Operations
@@ -560,10 +562,10 @@ interface IncidentMetrics {
 ---
 
 ## Related Documents
-- [Infrastructure Operations Management](infrastructure-operations-management.md) - System architecture and deployment details
-- [Environment & Release Management](environment-release-management.md) - Deployment and rollback procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework.md) - Security incident handling architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration.md) - Coordinated security and privacy response patterns
-- [QA Testing Protocols](qa_testing_protocols.md) - Testing and validation procedures
+- [Infrastructure Operations Management](((infrastructure-operations-management)) - System architecture and deployment details
+- [Environment & Release Management](((environment-release-management)) - Deployment and rollback procedures
+- [Security Framework](((../../compliance-security/enterprise/security-framework)) - Security incident handling architecture and controls
+- [Security & Privacy Integration](((../../compliance-security/enterprise/security-privacy-integration)) - Coordinated security and privacy response patterns
+- [QA Testing Protocols](((qa_testing_protocols)) - Testing and validation procedures
 
 **Keywords**: incident response, security incidents, disaster recovery, business continuity, communication protocols, post-mortem analysis, compliance requirements
