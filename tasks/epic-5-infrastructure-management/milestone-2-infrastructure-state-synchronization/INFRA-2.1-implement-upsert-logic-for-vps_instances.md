@@ -19,3 +19,9 @@ Create `/lib/services/infra.service.ts` (or appropriate services directory) with
 
 - Consider batching for large accounts.
 - Handle partial failures and log any problematic records for inspection.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (DB operations & upserts)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)

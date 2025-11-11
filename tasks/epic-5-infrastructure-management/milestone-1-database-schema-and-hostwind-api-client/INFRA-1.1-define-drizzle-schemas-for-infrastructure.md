@@ -20,3 +20,9 @@ In the `/lib/db/schema` directory, create schema files for `vps_instances` and `
 - Use Drizzle's schema helpers and types already used in the project.
 - Add provider ID fields such as `hostwinds_instance_id` and `hostwinds_ip_id`.
 - Add status fields (e.g., `status`, `ip_status`) and region/location fields.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (coding, linting, CI)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Quick Setup / Getting Started](../../docs/quick-setup.md)

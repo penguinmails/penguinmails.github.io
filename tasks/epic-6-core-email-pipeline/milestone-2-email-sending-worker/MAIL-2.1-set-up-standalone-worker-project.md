@@ -19,3 +19,9 @@ Create a new Node.js/TypeScript project in a `/worker` sub-directory of the repo
 
 - Share dependencies via the main `package.json` where appropriate.
 - Keep the worker lightweight; fewer web dependencies and more job-processing libraries.
+
+## Related documentation
+
+- [Operations: Infrastructure Operations Management (running workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (project layout & scripts)](../../docs/implementation-technical/development-guidelines/development-standards.md)

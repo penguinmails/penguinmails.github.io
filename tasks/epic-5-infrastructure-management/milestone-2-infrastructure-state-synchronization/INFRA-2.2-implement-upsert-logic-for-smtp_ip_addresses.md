@@ -19,3 +19,8 @@ Create `syncSmtpIps(ipArray)` in `/lib/services/infra.service.ts` that accepts I
 
 - You may need an additional Hostwind API call to fetch IPs per VPS.
 - Ensure IP uniqueness constraints (e.g., unique on provider IP ID or address + vps id).
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (DB operations & indexing)](../../docs/implementation-technical/development-guidelines/development-standards.md)

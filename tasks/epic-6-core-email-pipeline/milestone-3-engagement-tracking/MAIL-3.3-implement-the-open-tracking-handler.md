@@ -19,3 +19,8 @@ For requests to `/api/track/open`, the endpoint will: 1) Verify the JWT, 2) Push
 
 - Ensure the pixel response is cached appropriately to avoid browser issues.
 - Keep response payload minimal and fast.
+
+## Related documentation
+
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
+- [Development Standards (high-performance endpoints)](../../docs/implementation-technical/development-guidelines/development-standards.md)

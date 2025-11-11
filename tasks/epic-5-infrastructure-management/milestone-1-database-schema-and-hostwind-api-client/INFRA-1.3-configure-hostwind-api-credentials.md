@@ -18,3 +18,9 @@ Add `HOSTWIND_API_KEY` to the environment variable configuration and update `.en
 
 - Do not commit real API keys. Use project secret management for production.
 - Add documentation on how to add the key locally and in deployment.
+
+## Related documentation
+
+- [Development Standards (env & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
+- [Quick Setup / Getting Started](../../docs/quick-setup.md)

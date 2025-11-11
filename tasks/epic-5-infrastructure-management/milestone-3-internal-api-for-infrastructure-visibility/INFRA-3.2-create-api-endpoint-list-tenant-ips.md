@@ -20,3 +20,8 @@ Create a protected GET API route at `/api/infrastructure/ips/route.ts`. The endp
 
 - Make sure tenant scoping is enforced at the DB query layer.
 - Return only non-sensitive fields the frontend needs (e.g., ip address, status, assigned_domain).
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (API design & multi-tenant scoping)](../../docs/implementation-technical/development-guidelines/development-standards.md)

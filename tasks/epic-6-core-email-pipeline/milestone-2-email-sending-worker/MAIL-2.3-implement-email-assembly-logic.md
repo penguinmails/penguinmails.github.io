@@ -19,3 +19,8 @@ Create a function `assembleEmail(jobPayload)` that queries the database for the 
 
 - Sanitize values to avoid HTML injection.
 - Support simple templating (handle missing values gracefully).
+
+## Related documentation
+
+- [Development Standards (templating & sanitization)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)

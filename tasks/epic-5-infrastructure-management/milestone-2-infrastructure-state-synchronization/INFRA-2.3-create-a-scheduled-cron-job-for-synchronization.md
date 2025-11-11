@@ -19,3 +19,8 @@ Create a protected API route (e.g., `/api/cron/sync-infra/route.ts`) that extern
 
 - Keep the route idempotent and safe to run frequently.
 - Consider runtime limits of the hosting provider and split tasks if necessary.
+
+## Related documentation
+
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Development Standards (API routes & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)

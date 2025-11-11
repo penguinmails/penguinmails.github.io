@@ -19,3 +19,8 @@ For requests to `/api/track/click`, the endpoint will: 1) Verify the JWT, 2) Pus
 
 - Validate and sanitize the destination URL to avoid open redirect attacks.
 - Use short token lifetimes to reduce link misuse.
+
+## Related documentation
+
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
+- [Development Standards (redirect handling & security)](../../docs/implementation-technical/development-guidelines/development-standards.md)

@@ -19,3 +19,9 @@ Create `/lib/hostwind.ts` — a reusable TypeScript module that acts as a client
 
 - Prefer a small wrapper around `fetch` or the project's HTTP client.
 - Provide typed response interfaces for the parts used by other services.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (HTTP clients & error handling)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)

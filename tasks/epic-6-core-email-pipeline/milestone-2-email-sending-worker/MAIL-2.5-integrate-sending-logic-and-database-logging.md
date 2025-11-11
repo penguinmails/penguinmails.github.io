@@ -19,3 +19,8 @@ Combine the worker main loop, email assembly, and SMTP sending. After successful
 
 - Consider exponential backoff for retries and a max-attempts limit.
 - Log errors with enough context to debug without storing secrets.
+
+## Related documentation
+
+- [Development Standards (retries & logging)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management (worker monitoring)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)

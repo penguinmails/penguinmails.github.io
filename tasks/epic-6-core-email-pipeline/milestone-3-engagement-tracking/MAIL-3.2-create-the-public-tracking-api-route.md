@@ -18,3 +18,9 @@ Create a public, high-performance API route handler at `/app/api/track/[...slug]
 
 - Keep the handler minimal: validate token and enqueue job, avoid heavy DB work in the request path.
 - Return proper caching and CORS headers as needed.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
+- [Development Standards (API & edge handlers)](../../docs/implementation-technical/development-guidelines/development-standards.md)

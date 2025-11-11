@@ -18,3 +18,8 @@ In the `/worker` project, create a function that listens to the `queue:analytics
 
 - Keep this worker lightweight; focus on validating the queue integration.
 - Add a test harness or script to push sample events for local testing.
+
+## Related documentation
+
+- [Operations: Infrastructure Operations Management (queues & analytics)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Development Standards (worker patterns)](../../docs/implementation-technical/development-guidelines/development-standards.md)

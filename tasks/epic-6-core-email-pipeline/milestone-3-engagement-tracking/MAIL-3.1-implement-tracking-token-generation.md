@@ -19,3 +19,8 @@ When assembling an email in the worker (MAIL-2.3), generate a secure JWT for eac
 
 - Use short-lived tokens where possible to reduce misuse risk.
 - Ensure tokens are URL-safe and reasonably small.
+
+## Related documentation
+
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
+- [Development Standards (JWT & token handling)](../../docs/implementation-technical/development-guidelines/development-standards.md)

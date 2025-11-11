@@ -37,3 +37,13 @@ This epic provides the infrastructure visibility layer required by the platform'
 ---
 
 *For detailed ticket information, navigate to the individual milestone folders above.*
+
+## Related documentation
+
+Refer to the project-level documentation for implementation guidelines, architecture, and operations runbooks that apply to this epic:
+
+- [Technical Architecture — Overview](../docs/technical/architecture/overview.md)
+- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Security & Compliance Framework](../docs/compliance-security/enterprise/security-framework.md)
+- [Quick Setup / Getting Started](../docs/quick-setup.md)

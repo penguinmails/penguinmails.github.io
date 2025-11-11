@@ -32,3 +32,13 @@ This epic implements the core engine of PenguinMails: a decoupled, high-throughp
 ---
 
 *For detailed ticket information, open the milestone folders.*
+
+## Related documentation
+
+These docs contain project-level guidance and constraints relevant to implementation and operations for the email pipeline:
+
+- [Technical Architecture — Overview](../docs/technical/architecture/overview.md)
+- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure & Management](../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Quick Setup / Getting Started](../docs/quick-setup.md)
+- [Compliance & Security Framework](../docs/compliance-security/enterprise/security-framework.md)

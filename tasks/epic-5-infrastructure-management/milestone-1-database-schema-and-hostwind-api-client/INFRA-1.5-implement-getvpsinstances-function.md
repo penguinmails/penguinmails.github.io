@@ -19,3 +19,8 @@ Within the Hostwind client (`/lib/hostwind.ts`), implement `getVpsInstances()` t
 
 - Add unit tests or small integration test helpers if there is a test infra for API clients.
 - Consider rate limits and add basic retry/backoff if needed.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (HTTP clients, retries)](../../docs/implementation-technical/development-guidelines/development-standards.md)

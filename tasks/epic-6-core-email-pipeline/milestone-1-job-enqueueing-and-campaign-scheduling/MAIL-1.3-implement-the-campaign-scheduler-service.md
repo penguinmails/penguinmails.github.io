@@ -19,3 +19,9 @@ In `/lib/services/scheduler.service.ts`, create a function `enqueueDueCampaigns(
 
 - Consider batching and pagination for large data sets.
 - Add unit tests for scheduling logic (edge cases: DST, timezones, lead exclusions).
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (background jobs & services)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management (queues & workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)

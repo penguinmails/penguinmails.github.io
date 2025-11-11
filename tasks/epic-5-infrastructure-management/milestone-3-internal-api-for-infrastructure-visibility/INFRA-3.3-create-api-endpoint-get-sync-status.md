@@ -19,3 +19,8 @@ Create a protected GET API route at `/api/infrastructure/status/route.ts` which 
 
 - Keep the response strictly scoped to the data necessary for the UI.
 - Consider caching this value or limiting heavy queries.
+
+## Related documentation
+
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Development Standards (API design & caching)](../../docs/implementation-technical/development-guidelines/development-standards.md)

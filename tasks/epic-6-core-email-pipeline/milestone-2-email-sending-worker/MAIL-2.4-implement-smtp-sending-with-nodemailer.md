@@ -19,3 +19,9 @@ Install `nodemailer`. Create a function `sendEmail(emailObject, smtpSettings)` t
 
 - Use connection pooling when appropriate for throughput.
 - Store minimal logs for each send (messageId, status).
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (external integrations & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Quick Setup / Getting Started](../../docs/quick-setup.md)

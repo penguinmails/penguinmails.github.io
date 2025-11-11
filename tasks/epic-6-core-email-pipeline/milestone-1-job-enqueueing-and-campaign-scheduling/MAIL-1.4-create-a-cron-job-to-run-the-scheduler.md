@@ -20,3 +20,8 @@ Create a protected API route at `/api/cron/scheduler/route.ts`. This endpoint wi
 
 - The route must be idempotent and safe to run frequently.
 - Protect the route using the project's secret header pattern to avoid unauthorized triggers.
+
+## Related documentation
+
+- [Operations: Infrastructure Operations Management (scheduling)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Development Standards (API routes & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)

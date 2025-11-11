@@ -18,3 +18,8 @@ In `/lib/schemas`, create a `jobs.schemas.ts` file. Define and export a Zod sche
 
 - Keep the schema minimal and stable; avoid including large nested objects — include IDs and necessary small metadata only.
 - Add example payloads for unit tests.
+
+## Related documentation
+
+- [Development Standards (validation & schemas)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)

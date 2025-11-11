@@ -19,3 +19,8 @@ Create a schema to link domains and `smtp_ip_addresses`. Add the schema file `do
 
 - Ensure referential integrity to both `domains` (or equivalent) and `smtp_ip_addresses`.
 - Add indexes on `domain_id` and `smtp_ip_address_id` for fast lookups.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (DB design & indexing)](../../docs/implementation-technical/development-guidelines/development-standards.md)

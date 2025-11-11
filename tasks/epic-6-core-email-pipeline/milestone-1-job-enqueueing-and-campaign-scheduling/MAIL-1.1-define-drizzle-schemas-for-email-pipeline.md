@@ -19,3 +19,8 @@ Create/finalize the Drizzle schemas for `campaigns`, `leads`, `templates`, `emai
 
 - Ensure foreign keys and indexes are added for efficient lookups by `tenant_id`, `campaign_id`, and `lead_id`.
 - Reuse existing naming conventions used across the project.
+
+## Related documentation
+
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (DB design & migrations)](../../docs/implementation-technical/development-guidelines/development-standards.md)
