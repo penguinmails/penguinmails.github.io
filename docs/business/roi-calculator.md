@@ -214,6 +214,10 @@ Payback Period: _____ months
 **For strategic context:**
 - [🏢 Executive Summary](executive-summary:1) - Strategic findings and recommendations
 
+**For business monitoring:**
+- [📈 Success Metrics](success-metrics:1) - Business-focused KPI framework
+- [📊 Performance Dashboard](performance-dashboard:1) - Executive dashboard templates
+
 **For detailed analysis:**
 - [📊 Cost Comparisons](cost-comparisons:1) - Detailed TCO analysis
 - [🏗️ Implementation Roadmap](implementation-roadmap:1) - Resource planning and timeline

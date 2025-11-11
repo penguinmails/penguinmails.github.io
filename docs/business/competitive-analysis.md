@@ -239,6 +239,10 @@ For 100K email campaigns, provider selection affects deliverability significantl
 - [🏢 Executive Summary](executive-summary:1) - Strategic findings and recommendations
 - [💰 ROI Calculator](roi-calculator:1) - Cost-benefit analysis tool
 
+**For business monitoring:**
+- [📈 Success Metrics](success-metrics:1) - Business-focused KPI framework
+- [📊 Performance Dashboard](performance-dashboard:1) - Executive dashboard templates
+
 **For detailed analysis:**
 - [📊 Cost Comparisons](cost-comparisons:1) - Complete TCO analysis
 - [🏗️ Implementation Roadmap](implementation-roadmap:1) - Migration and implementation planning
