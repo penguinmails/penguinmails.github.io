@@ -45,6 +45,7 @@ Code quality is essential for maintaining a professional codebase. ESLint will h
 
 ## Related Documentation
 
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - **Primary reference** for ESLint configuration and code quality standards
 - [Team Workflow](../../docs/quick-access/team-workflow.md) - Code quality standards
 
 ## Dependencies

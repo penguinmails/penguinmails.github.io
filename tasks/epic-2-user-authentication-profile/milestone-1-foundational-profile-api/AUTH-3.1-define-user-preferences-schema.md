@@ -23,16 +23,20 @@ This schema will store these preferences and more, enabling personalized user ex
 1. ✅ A `user_preferences.ts` schema file is created in `/lib/db/schema`
 2. ✅ The schema correctly defines all columns and types:
    - `id` (UUID, primary key)
-   - `user_id` (UUID, foreign key to users.id, unique)
-   - `theme` (varchar, e.g., 'light', 'dark', 'system')
-   - `language` (varchar, e.g., 'en', 'es', 'fr')
-   - `timezone` (varchar, e.g., 'America/New_York')
-   - `notification_settings` (JSON or separate boolean columns)
-   - `created_at` (timestamp)
-   - `updated_at` (timestamp)
-3. ✅ A foreign key constraint `user_id` correctly references `users.id`
-4. ✅ A unique constraint ensures one-to-one relationship (one preference per user)
+   - `user_id` (UUID, foreign key to users.id)
+   - `theme` (VARCHAR(50), default 'light')
+   - `language` (VARCHAR(10), default 'en')
+   - `timezone` (VARCHAR(100), default 'UTC')
+   - `email_notifications` (BOOLEAN, default TRUE)
+   - `push_notifications` (BOOLEAN, default TRUE)
+   - `weekly_reports` (BOOLEAN, default FALSE)
+   - `marketing_emails` (BOOLEAN, default FALSE)
+   - `created` (TIMESTAMP WITH TIME ZONE, default NOW())
+   - `updated` (TIMESTAMP WITH TIME ZONE, default NOW())
+3. ✅ A foreign key constraint `user_id` correctly references `users.id` with `ON DELETE CASCADE`
+4. ✅ The schema matches the exact structure from the OLTP Schema Guide
 5. ✅ The schema is exported and can be imported in other files
+6. ✅ All field names and types match the OLTP guide (e.g., `created`/`updated`, not `created_at`/`updated_at`)
 
 ## Technical Details
 
@@ -40,31 +44,31 @@ This schema will store these preferences and more, enabling personalized user ex
 
 ```typescript
 // lib/db/schema/user_preferences.ts
-import { pgTable, uuid, varchar, timestamp, jsonb, boolean } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, varchar, timestamp, boolean } from 'drizzle-orm/pg-core';
 import { users } from './users';
 
 export const userPreferences = pgTable('user_preferences', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id')
     .notNull()
-    .unique()
     .references(() => users.id, { onDelete: 'cascade' }),
-  theme: varchar('theme', { length: 20 }).default('system'), // 'light', 'dark', 'system'
-  language: varchar('language', { length: 10 }).default('en'), // ISO 639-1 codes
-  timezone: varchar('timezone', { length: 50 }).default('UTC'),
+  theme: varchar('theme', { length: 50 }).default('light'),
+  language: varchar('language', { length: 10 }).default('en'),
+  timezone: varchar('timezone', { length: 100 }).default('UTC'),
   emailNotifications: boolean('email_notifications').default(true),
-  pushNotifications: boolean('push_notifications').default(false),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+  pushNotifications: boolean('push_notifications').default(true),
+  weeklyReports: boolean('weekly_reports').default(false),
+  marketingEmails: boolean('marketing_emails').default(false),
+  created: timestamp('created', { withTimezone: true }).defaultNow().notNull(),
+  updated: timestamp('updated', { withTimezone: true }).defaultNow().notNull(),
 });
 ```
 
-### Alternative: JSON Column for Flexible Settings
-
-```typescript
-// If you prefer a more flexible approach:
-notificationSettings: jsonb('notification_settings').default({}),
-```
+**Note:** Match the exact schema from the [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#user_preferences---user-preferences). The schema uses:
+- `created` and `updated` (not `created_at`/`updated_at`)
+- Separate boolean columns for notification preferences (not JSON)
+- VARCHAR types with specific lengths
+- No unique constraint on `user_id` (one-to-one relationship enforced at application level)
 
 ## Implementation Notes
 
@@ -78,6 +82,8 @@ notificationSettings: jsonb('notification_settings').default({}),
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Database schema patterns
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for user_preferences table structure and OLTP design patterns
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
 - [Features & Capabilities](../../docs/features-capabilities/index.md) - User preferences features
 
 ## Dependencies

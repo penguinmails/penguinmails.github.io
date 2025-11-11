@@ -101,6 +101,8 @@ export { redis };
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Cache layer
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - Queue system architecture (Redis integration)
+- [Queue System Implementation Guide](../../docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md) - Queue system design and Redis integration
 - [Connection Pooling Strategy](../../operations_runbooks/connection_pooling_strategy.md) - Connection management
 - [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide.md) - Redis monitoring
 

@@ -51,6 +51,7 @@ Consistent code formatting is crucial for team collaboration. Prettier automates
 
 ## Related Documentation
 
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - **Primary reference** for Prettier configuration and code formatting standards
 - [Team Workflow](../../docs/quick-access/team-workflow.md) - Code formatting standards
 
 ## Dependencies

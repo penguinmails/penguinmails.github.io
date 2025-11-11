@@ -88,6 +88,9 @@ export const db = drizzle(pool);
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Database architecture
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - OLTP database tier specifications
+- [Connection Pooling Strategy](../../docs/implementation-technical/database-infrastructure/connection-pooling-strategy.md) - Database connection management
 - [Database Operations Guide](../../operations_runbooks/database_operations_guide.md) - Database management
 
 ## Dependencies

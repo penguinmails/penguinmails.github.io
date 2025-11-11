@@ -74,6 +74,8 @@ main().catch((error) => {
 
 - [Database Operations Guide](../../operations_runbooks/database_operations_guide.md) - Migration procedures
 - [Migration & Deployment Guide](../../operations_runbooks/migration_deployment_guide.md) - Deployment workflows
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - OLTP tier specifications
 
 ## Dependencies
 

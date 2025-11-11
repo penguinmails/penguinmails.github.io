@@ -31,55 +31,86 @@ The [Team Workflow](../../docs/quick-access/team-workflow.md) document outlines 
 ### Core Tables Structure
 
 #### Users Table
+**Reference:** [OLTP Schema Guide - users table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#users---user-identity--profile)
+
 - `id` (UUID, primary key)
-- `email` (varchar, unique, not null)
-- `name` (varchar)
-- `created_at` (timestamp)
-- `updated_at` (timestamp)
+- `email` (TEXT, unique, not null)
+- `name` (TEXT)
+- `family_name` (TEXT, optional)
+- `given_name` (TEXT, optional)
+- `picture` (TEXT, optional)
+- `email_verified` (TIMESTAMP WITH TIME ZONE, optional)
+- `created` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `updated` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `deleted` (TIMESTAMP WITH TIME ZONE, soft delete support)
+
+**Note:** This table is NileDB-managed. Match the exact schema from the OLTP guide.
 
 #### Tenants Table
+**Reference:** [OLTP Schema Guide - tenants table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#tenants---tenant-organization)
+
 - `id` (UUID, primary key)
-- `name` (varchar, not null)
-- `slug` (varchar, unique)
-- `created_at` (timestamp)
-- `updated_at` (timestamp)
+- `name` (TEXT, not null)
+- `created` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `updated` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `deleted` (TIMESTAMP WITH TIME ZONE, soft delete support)
+- `compute_id` (UUID, optional, for infrastructure association)
+
+**Note:** This table is NileDB-managed. Match the exact schema from the OLTP guide.
 
 #### Tenant Users Table (Join Table)
-- `id` (UUID, primary key)
-- `tenant_id` (UUID, foreign key to tenants)
-- `user_id` (UUID, foreign key to users)
-- `role` (varchar) - supports: owner, admin, member, viewer
-- `created_at` (timestamp)
-- `updated_at` (timestamp)
-- Unique constraint on (tenant_id, user_id)
+**Reference:** [OLTP Schema Guide - tenant_users table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#tenant_users---multi-tenant-user-associations)
+
+- `tenant_id` (UUID, foreign key to tenants, part of primary key)
+- `user_id` (UUID, foreign key to users, part of primary key)
+- `roles` (TEXT[], array of roles) - **NileDB-managed ARRAY, mandatory for authentication**
+- `email` (TEXT, optional)
+- `created` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `updated` (TIMESTAMP WITH TIME ZONE, default NOW())
+- `deleted` (TIMESTAMP WITH TIME ZONE, soft delete support)
+- Composite PRIMARY KEY (tenant_id, user_id)
+
+**Note:** This table is NileDB-managed. The `roles` field is a TEXT array managed by NileDB for authentication.
 
 ### Schema File Structure
 
 ```typescript
 // lib/db/schema/users.ts
-import { pgTable, uuid, varchar, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, text, timestamp } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
   id: uuid('id').primaryKey().defaultRandom(),
-  email: varchar('email', { length: 255 }).notNull().unique(),
-  name: varchar('name', { length: 255 }),
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+  email: text('email').notNull().unique(),
+  name: text('name'),
+  familyName: text('family_name'),
+  givenName: text('given_name'),
+  picture: text('picture'),
+  emailVerified: timestamp('email_verified', { withTimezone: true }),
+  created: timestamp('created', { withTimezone: true }).defaultNow().notNull(),
+  updated: timestamp('updated', { withTimezone: true }).defaultNow().notNull(),
+  deleted: timestamp('deleted', { withTimezone: true }), // Soft delete support
 });
 ```
+
+**Note:** This table is NileDB-managed. Use TEXT type (not VARCHAR) and match field names exactly (`created`/`updated`, not `created_at`/`updated_at`). See the [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#users---user-identity--profile) for the complete schema.
 
 ## Implementation Notes
 
 - Use Drizzle's type-safe column definitions
 - Include proper indexes on foreign keys and frequently queried columns
 - Use UUIDs for primary keys (better for multi-tenant systems)
-- Include `created_at` and `updated_at` timestamps on all tables
+- Use TEXT type (not VARCHAR) for string fields to match OLTP schema guide
+- Use `created` and `updated` (not `created_at`/`updated_at`) to match OLTP naming conventions
+- Use `TIMESTAMP WITH TIME ZONE` for all timestamp fields
+- Include soft delete support via `deleted` timestamp field (for GDPR compliance)
 - Define relationships using Drizzle's relations API
-- Consider adding soft delete support (for GDPR compliance - future enhancement)
+- Match the exact schema from the OLTP Schema Guide - these tables are NileDB-managed
 
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for users, tenants, and tenant_users table structures
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
 - [Team Workflow](../../docs/quick-access/team-workflow.md) - Role-based access control
 - [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data protection requirements
 

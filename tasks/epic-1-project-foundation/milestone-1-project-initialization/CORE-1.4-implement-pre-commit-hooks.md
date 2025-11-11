@@ -54,6 +54,7 @@ Automated pre-commit hooks ensure code quality standards are enforced before cod
 
 ## Related Documentation
 
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - **Primary reference** for pre-commit hooks and code quality automation
 - [Team Workflow](../../docs/quick-access/team-workflow.md) - Development workflow standards
 
 ## Dependencies

@@ -183,6 +183,8 @@ export async function POST(request: NextRequest) {
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - **Primary reference** for API development standards and patterns
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - Companies table structure
 - [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Onboarding flow
 
 ## Dependencies

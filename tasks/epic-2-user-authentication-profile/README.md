@@ -29,6 +29,7 @@ This epic focuses on the "user" as an individual, distinct from their role withi
 This epic builds directly on **Epic 1: Project Foundation & Core Services** and implements user-facing features that align with:
 
 - **User Experience:** As outlined in the [Features & Capabilities](../docs/features-capabilities/index.md), PenguinMails provides a modern dashboard with customizable user preferences
+- **Database Architecture:** User preferences follow the [OLTP Schema Guide](../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) for the operational database tier
 - **Security & Compliance:** Profile management supports the security requirements from [Compliance & Regulatory Standards](../docs/quick-access/compliance-regulatory-standards.md), including data protection and user rights
 - **Multi-Tenant Architecture:** User profiles are isolated per tenant, supporting the multi-tenant architecture from [High-Level Architecture](../docs/quick-access/high-level-architecture.md)
 

@@ -103,6 +103,8 @@ The following routes should be publicly accessible:
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Security architecture
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - API authentication patterns and middleware best practices
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Security and authentication guidelines
 - [Team Workflow](../../docs/quick-access/team-workflow.md) - Authentication and authorization
 
 ## Dependencies

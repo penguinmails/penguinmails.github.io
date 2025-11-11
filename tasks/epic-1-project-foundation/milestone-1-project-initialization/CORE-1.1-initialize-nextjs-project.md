@@ -58,8 +58,10 @@ penguinmails/
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md)
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md)
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - System architecture
+- [Architecture System Overview](../../docs/implementation-technical/architecture-system/architecture-overview.md) - Technical architecture details
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Development guidelines
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Setup guides
 
 ## Dependencies
 

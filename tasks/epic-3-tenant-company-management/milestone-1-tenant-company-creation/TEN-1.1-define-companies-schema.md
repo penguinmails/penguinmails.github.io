@@ -22,12 +22,13 @@ The [Features & Capabilities](../../docs/features-capabilities/index.md) documen
 1. ✅ A `companies.ts` schema file is created in `/lib/db/schema`
 2. ✅ The schema correctly defines all columns, types, and constraints:
    - `id` (UUID, primary key)
-   - `tenant_id` (UUID, foreign key to tenants.id)
-   - `name` (varchar, not null)
-   - `workspace_name` (varchar, unique, for URL slug)
-   - `logo_url` (varchar, optional)
-   - `created_at` (timestamp)
-   - `updated_at` (timestamp)
+   - `tenant_id` (UUID, foreign key to tenants.id, ON DELETE CASCADE)
+   - `name` (VARCHAR(100), not null)
+   - `workspace_name` (VARCHAR(255), unique, for URL slug)
+   - `logo_url` (TEXT, optional)
+   - `status` (VARCHAR(20), default 'active')
+   - `created` (TIMESTAMP WITH TIME ZONE, default NOW())
+   - `updated` (TIMESTAMP WITH TIME ZONE, default NOW())
 3. ✅ A `tenant_id` foreign key correctly references `tenants.id`
 4. ✅ A unique constraint ensures `workspace_name` is unique across all companies
 5. ✅ The schema is exported and can be imported in other files
@@ -38,7 +39,7 @@ The [Features & Capabilities](../../docs/features-capabilities/index.md) documen
 
 ```typescript
 // lib/db/schema/companies.ts
-import { pgTable, uuid, varchar, timestamp } from 'drizzle-orm/pg-core';
+import { pgTable, uuid, varchar, text, timestamp } from 'drizzle-orm/pg-core';
 import { tenants } from './tenants';
 
 export const companies = pgTable('companies', {
@@ -46,15 +47,20 @@ export const companies = pgTable('companies', {
   tenantId: uuid('tenant_id')
     .notNull()
     .references(() => tenants.id, { onDelete: 'cascade' }),
-  name: varchar('name', { length: 255 }).notNull(),
-  workspaceName: varchar('workspace_name', { length: 100 })
-    .notNull()
+  name: varchar('name', { length: 100 }).notNull(),
+  workspaceName: varchar('workspace_name', { length: 255 })
     .unique(), // URL-friendly slug, unique across all companies
-  logoUrl: varchar('logo_url', { length: 500 }), // Optional logo URL
-  createdAt: timestamp('created_at').defaultNow().notNull(),
-  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+  logoUrl: text('logo_url'), // Optional logo URL (TEXT for flexibility)
+  status: varchar('status', { length: 20 }).default('active').notNull(),
+  created: timestamp('created', { withTimezone: true }).defaultNow().notNull(),
+  updated: timestamp('updated', { withTimezone: true }).defaultNow().notNull(),
 });
 ```
+
+**Note:** Match the exact schema from the [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#companies---tenant-workspaces). The schema uses:
+- `created` and `updated` (not `created_at`/`updated_at`)
+- `status` field with default 'active'
+- TEXT type for `logo_url` (not VARCHAR)
 
 ### Constraints
 
@@ -76,6 +82,8 @@ export const companies = pgTable('companies', {
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for companies table structure and OLTP design patterns
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
 - [Features & Capabilities](../../docs/features-capabilities/index.md) - Workspace management
 
 ## Dependencies

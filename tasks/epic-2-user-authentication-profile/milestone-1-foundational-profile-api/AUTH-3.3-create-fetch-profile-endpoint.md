@@ -151,6 +151,8 @@ export async function GET(request: NextRequest) {
 ## Related Documentation
 
 - [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - API patterns
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - **Primary reference** for API development standards and patterns
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Code quality and API development guidelines
 - [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - API development
 
 ## Dependencies

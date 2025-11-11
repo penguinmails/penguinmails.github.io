@@ -29,6 +29,7 @@ This epic is where the application truly becomes a multi-tenant SaaS platform. W
 This epic implements the core multi-tenant functionality that aligns with:
 
 - **Multi-Tenant Architecture:** As outlined in the [High-Level Architecture](../docs/quick-access/high-level-architecture.md), PenguinMails uses complete tenant isolation with row-level security
+- **Database Architecture:** Companies table follows the [OLTP Schema Guide](../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) for the operational database tier with proper tenant isolation
 - **Team Collaboration:** The [Team Workflow](../docs/quick-access/team-workflow.md) document outlines the 4-tier staff hierarchy and team management features
 - **Agency-Focused Features:** From [Features & Capabilities](../docs/features-capabilities/index.md), multi-client management and team collaboration are core features
 - **Implementation Roadmap:** This epic supports the Q4 2025 MVP Launch phase from [Roadmap & Development Priorities](../docs/quick-access/roadmap-development-priorities.md)
