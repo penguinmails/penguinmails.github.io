@@ -143,3 +143,4 @@ export async function GET(request: NextRequest) {
 - [ ] Test error handling for session retrieval failures
 - [ ] Test error handling for database query failures
 
+

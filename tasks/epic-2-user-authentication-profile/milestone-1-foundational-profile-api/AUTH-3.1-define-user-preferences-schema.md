@@ -94,3 +94,4 @@ notificationSettings: jsonb('notification_settings').default({}),
 - [ ] Check that default values are set appropriately
 - [ ] Verify cascade delete behavior (when user is deleted)
 
+

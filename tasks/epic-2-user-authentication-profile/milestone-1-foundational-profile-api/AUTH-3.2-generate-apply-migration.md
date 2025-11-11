@@ -84,3 +84,4 @@ The migration should include:
 - [ ] Test that the migration can be applied to a fresh database
 - [ ] Verify foreign key relationship works correctly
 
+

@@ -30,3 +30,4 @@ This milestone implements essential security features that align with:
 - **User Experience:** Password management from [Features & Capabilities](../../docs/features-capabilities/index.md)
 - **Session Management:** Secure session handling as outlined in [High-Level Architecture](../../docs/quick-access/high-level-architecture.md)
 
+

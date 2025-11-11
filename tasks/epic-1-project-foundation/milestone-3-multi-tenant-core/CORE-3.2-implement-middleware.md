@@ -120,3 +120,4 @@ The following routes should be publicly accessible:
 - [ ] Test middleware with expired session - verify 401 response
 - [ ] Verify middleware doesn't interfere with non-API routes
 
+

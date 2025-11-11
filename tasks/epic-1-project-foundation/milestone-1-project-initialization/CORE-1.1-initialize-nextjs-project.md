@@ -72,3 +72,4 @@ None - This is the first ticket.
 - [ ] Confirm Tailwind CSS styles are applied
 - [ ] Test that the development server restarts on file changes
 
+

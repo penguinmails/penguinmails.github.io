@@ -89,3 +89,4 @@ export const nile = new Nile({
 - [ ] Verify application fails gracefully with missing Nile configuration
 - [ ] Test Nile client initialization with invalid credentials (should handle errors)
 
+

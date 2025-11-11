@@ -126,3 +126,4 @@ export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 - [ ] Verify TypeScript types are correctly inferred
 - [ ] Test schema with all fields - should pass
 
+

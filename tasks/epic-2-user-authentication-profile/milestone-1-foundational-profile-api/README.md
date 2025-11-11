@@ -24,3 +24,4 @@
 - ✅ Users can update their profile information
 - ✅ Default preferences created when missing
 
+

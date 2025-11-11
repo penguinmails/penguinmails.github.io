@@ -91,3 +91,4 @@ main().catch((error) => {
 - [ ] Verify the script works with an empty database
 - [ ] Test that the script can apply multiple migrations in order
 
+

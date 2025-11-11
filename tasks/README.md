@@ -47,6 +47,38 @@ Build all backend services and API endpoints required for a user to manage their
 
 **Prerequisites:** Epic 1 must be fully completed
 
+### [Epic 3: Tenant & Company (Workspace) Management](./epic-3-tenant-company-management/)
+
+**Status:** Not Started  
+**Last Updated:** October 27, 2025
+
+Build the complete set of backend services and API endpoints for creating, managing, and interacting with Tenants and Companies (Workspaces). This epic establishes the core multi-tenancy logic, allowing users to create their own isolated environments, invite team members, and manage their workspaces.
+
+**Milestones:**
+1. **Tenant and Company Creation** (4 tickets)
+2. **Viewing and Managing Workspaces** (4 tickets)
+3. **Tenant User Management** (3 tickets)
+
+**Total Tickets:** 11
+
+**Prerequisites:** Epic 1 & 2 must be fully completed
+
+### [Epic 4: Billing, Plans, & Subscriptions](./epic-4-billing-plans-subscriptions/)
+
+**Status:** Not Started  
+**Last Updated:** October 27, 2025
+
+Integrate Stripe as our payment processor to manage the entire billing lifecycle. This includes defining subscription plans, allowing tenants to subscribe to a plan, handling payments, and reflecting the subscription status and features within our application.
+
+**Milestones:**
+1. **Plans and Subscriptions Schema Setup** (4 tickets)
+2. **Stripe Checkout Integration** (3 tickets)
+3. **Subscription State Synchronization with Webhooks** (4 tickets)
+
+**Total Tickets:** 11
+
+**Prerequisites:** Epic 1, 2, & 3 must be fully completed
+
 ## Ticket Naming Convention
 
 Tickets follow the format: `[EPIC-ID].[MILESTONE-ID].[TICKET-NUMBER]`
@@ -92,4 +124,3 @@ When working on tickets:
 ---
 
 *For questions about tasks or to propose new tickets, contact the Product Owner or Tech Lead.*
-

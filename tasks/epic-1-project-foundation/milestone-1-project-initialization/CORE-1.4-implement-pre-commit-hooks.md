@@ -70,3 +70,4 @@ Automated pre-commit hooks ensure code quality standards are enforced before cod
 - [ ] Test that the hook runs in a reasonable time (< 5 seconds for typical commits)
 - [ ] Verify the hook works for both new and modified files
 
+

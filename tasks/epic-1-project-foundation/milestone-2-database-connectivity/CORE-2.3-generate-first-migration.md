@@ -79,3 +79,4 @@ The migration should include:
 - [ ] Verify all tables, columns, and constraints are included
 - [ ] Test that running the script multiple times doesn't create duplicate migrations
 
+

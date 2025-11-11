@@ -65,3 +65,4 @@ Consistent code formatting is crucial for team collaboration. Prettier automates
 - [ ] Verify Prettier formats TypeScript, JavaScript, and JSON files
 - [ ] Confirm Prettier ignores files listed in `.prettierignore`
 
+

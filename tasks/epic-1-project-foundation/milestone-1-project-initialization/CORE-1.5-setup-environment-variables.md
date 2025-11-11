@@ -79,3 +79,4 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 - [ ] Verify environment variable validation provides clear error messages
 - [ ] Test that client-side variables (with `NEXT_PUBLIC_` prefix) are accessible in browser code
 
+
