@@ -34,6 +34,9 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 > [💰 ROI Calculator](./docs/business/roi-calculator){: .btn .btn-green}
 > [🏆 Competitive Analysis](./docs/business/competitive-analysis){: .btn .btn-blue}
 > [🏗️ Implementation Roadmap](./docs/business/implementation-roadmap){: .btn .btn-blue}
+> [📈 Success Metrics](./docs/business/success-metrics){: .btn .btn-blue}
+> [� Performance Dashboard](./docs/business/performance-dashboard){: .btn .btn-blue}
+> [📊 Performance Dashboard](./docs/business/performance-dashboard){: .btn .btn-blue}
 > [📊 Cost Comparisons](./docs/business/cost-comparisons){: .btn .btn-outline}
 
 {: .note .pb-2 }
