@@ -473,6 +473,7 @@ CREATE TABLE vps_instances (
     region VARCHAR(50),
     status VARCHAR(50) CHECK (status IN ('active', 'provisioning', 'scheduled_decommission', 'decommissioned')),
     monthly_cost DECIMAL(10,2),
+    approximate_cost DECIMAL(8,2), -- Business cost attribution for tenant cost analysis
     hostwinds_billing_day INTEGER,
     current_billing_period_start TIMESTAMP WITH TIME ZONE,
     current_billing_period_end TIMESTAMP WITH TIME ZONE,
@@ -482,6 +483,8 @@ CREATE TABLE vps_instances (
 );
 ```
 
+**Business Justification**: The `approximate_cost` field enables business leaders to track infrastructure costs per tenant for cost optimization and profitability analysis, supporting executive decision-making for resource allocation and pricing strategy.
+
 #### **smtp_ip_addresses** - SMTP IP Addresses
 ```sql
 CREATE TABLE smtp_ip_addresses (
@@ -490,6 +493,7 @@ CREATE TABLE smtp_ip_addresses (
     ip_address VARCHAR(45) NOT NULL,
     status VARCHAR(50) CHECK (status IN ('available', 'assigned', 'warming', 'warmed', 'degraded', 'burned', 'quarantined')),
     reputation_state VARCHAR(50) CHECK (reputation_state IN ('good', 'fair', 'poor', 'critical')),
+    approximate_cost DECIMAL(6,2), -- Email service cost per IP for business analysis
     last_reputation_check TIMESTAMP WITH TIME ZONE,
     assigned_count INTEGER DEFAULT 0,
     provider_blacklist_status JSONB,
@@ -497,6 +501,8 @@ CREATE TABLE smtp_ip_addresses (
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 ```
+
+**Business Justification**: The `approximate_cost` field supports deliverability cost analysis and email service ROI calculations, enabling business leaders to optimize IP allocation and understand the true cost of email deliverability solutions.
 
 #### **domain_ip_assignments** - Domain-to-IP Mappings
 ```sql

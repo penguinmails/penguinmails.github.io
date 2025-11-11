@@ -1,6 +1,6 @@
 # OLTP ER Diagram (Mermaid)
 
-This diagram reflects the current OLTP schema defined in [`docs/implementation-technical/database-infrastructure/oltp-schema-guide`](((docs/implementation-technical/database-infrastructure/oltp-schema-guide)).
+This diagram reflects the current OLTP schema defined in [`docs/implementation-technical/database-infrastructure/oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide).
 
 ```mermaid
 ---
@@ -252,6 +252,7 @@ erDiagram
     varchar(50) region
     varchar(50) status
     decimal monthly_cost
+    decimal approximate_cost "NEW: Business cost attribution"
     int hostwinds_billing_day
     timestamp current_billing_period_start
     timestamp current_billing_period_end
@@ -266,6 +267,7 @@ erDiagram
     varchar(45) ip_address
     varchar(50) status
     varchar(50) reputation_state
+    decimal approximate_cost "NEW: Email service cost per IP"
     timestamp last_reputation_check
     int assigned_count
     jsonb provider_blacklist_status

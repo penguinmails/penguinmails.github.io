@@ -19,7 +19,9 @@ last_modified_date: "2025-11-10"
 > - [Cost Comparisons](./cost-comparisons.md)
 > - [Provider Benchmarks](./provider-benchmarks.md)
 > - [Competitive Analysis](./competitive-analysis.md)
-> - [Performance Benchmarks](./performance-benchmarks.md)
+> - [Performance Overview](./performance-overview.md) - Executive performance benchmarks
+> - [Provider Performance Analysis](./performance-provider-analysis.md) - ESP-specific strategies
+> - [Performance Optimization](./performance-optimization.md) - Technical optimization techniques
 > - [ROI Calculator](./roi-calculator.md)
 > Use these as evidence-backed starting points and calibrate to your own baselines rather than treating them as arbitrary fixed guarantees.[^performance-dashboard-methodology]
 
@@ -465,7 +467,9 @@ last_modified_date: "2025-11-10"
 - [🏢 Executive Summary](executive-summary:1) - Strategic business justification
 
 **For performance optimization:**
-- [📋 Performance Benchmarks](performance-benchmarks:1) - Industry performance data
+- [📈 Performance Overview](performance-overview:1) - Executive performance benchmarks
+- [🏆 Provider Performance Analysis](performance-provider-analysis:1) - ESP-specific strategies
+- [⚙️ Performance Optimization](performance-optimization:1) - Technical optimization techniques
 - [🏆 Competitive Analysis](competitive-analysis:1) - Provider selection and comparison
 
 ---

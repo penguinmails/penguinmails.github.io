@@ -23,116 +23,110 @@ PenguinMails handles your entire email operation - from VPS setup to campaign op
 Welcome to our help center. PenguinMails is purpose-built for cold email success, focusing on **deliverability**, **compliance**, and **reputation management** - the three factors that determine whether your cold emails actually reach prospects.
 
 ---
-## What PenguinMails Does
 
-{: .highlight .pb-2 }
-> 💼 Business Leaders - Financial Analysis & Strategic Planning
->
-> **Executive-level financial analysis, ROI planning, and infrastructure investment decisions**
->
-> [🏢 Executive Summary](./docs/business/executive-summary){: .btn .btn-green}
-> [💰 ROI Calculator](./docs/business/roi-calculator){: .btn .btn-green}
-> [🏆 Competitive Analysis](./docs/business/competitive-analysis){: .btn .btn-blue}
-> [🏗️ Implementation Roadmap](./docs/business/implementation-roadmap){: .btn .btn-blue}
-> [📈 Success Metrics](./docs/business/success-metrics){: .btn .btn-blue}
-> [� Performance Dashboard](./docs/business/performance-dashboard){: .btn .btn-blue}
-> [📊 Performance Dashboard](./docs/business/performance-dashboard){: .btn .btn-blue}
-> [📊 Cost Comparisons](./docs/business/cost-comparisons){: .btn .btn-outline}
+## 🎯 Quick Start by Role
 
-{: .note .pb-2 }
-> ### 🏢 Business Strategy & Analysis
-> **Detailed business planning and market analysis**
->
-> [Business Strategy Overview](./docs/business/strategy/overview){: .btn .btn-blue}
-> [Executive Summary Template](./docs/business/executive-summary-template){: .btn .btn-blue}
-> [Financial Metrics & ROI](./docs/operations-analytics/operations-management/payment-analytics-financial-operations){: .btn .btn-blue}
-> [Market Analysis](./docs/business/market-analysis/overview){: .btn .btn-outline}
+### 💼 For Business Leaders (CFO/VP Level)
+**Executive-level financial analysis, ROI planning, and infrastructure investment decisions**
 
-{: .note .pb-2 }
-### 📈 Campaign Performance & Growth
-**Optimize campaigns and track customer behavior**
+<div class="highlight" markdown="1">
+![Cost Comparison](docs/assets/monthly-cost-comparison.png){: width="100%" }
 
-[Metrics & KPIs Guide](./docs/operations-analytics/analytics-performance/metrics-kpis){: .btn .btn-purple}
-[User Analytics](./docs/operations-analytics/analytics-performance/user-analytics){: .btn .btn-purple}
-[Growth Analytics](./docs/operations-analytics/analytics-performance/growth-analytics-performance-metrics){: .btn .btn-outline}
+**Why PenguinMails**: 3-7x cost savings vs self-hosted solutions
+</div>
 
-{: .highlight .pb-2 }
-> ### 🏗️ Automation & Infrastructure
->
-> **Scale operations with automated email infrastructure**
->
-> [High-Level Architecture](./docs/technical/architecture/overview){: .btn .btn-green}
-> [Quick Setup Guide](./docs/quick-setup){: .btn .btn-green}
-> [Operations Management](./docs/operations-analytics/operations-management/README){: .btn .btn-outline}
+<div class="btn-group-vertical" style="width: 100%;">
+- [🏢 Executive Summary](docs/business/executive-summary.md) - *15-minute strategic overview*
+- [💰 ROI Calculator](docs/business/roi-calculator.md) - *Interactive cost-benefit analysis*
+- [🏆 Competitive Analysis](docs/business/competitive-analysis.md) - *Provider selection matrix*
+- [📘 Procurement Guide](docs/business/procurement-guide.md) - *Enterprise evaluation pack*
+- [🛡️ Security & Compliance](docs/business/security-compliance.md) - *Risk assessment overview*
+- [🏗️ Implementation Roadmap](docs/business/implementation-roadmap.md) - *Executive timeline*
+- [📈 Success Metrics](docs/business/success-metrics.md) - *Business KPI framework*
+- [📊 Performance Dashboard](docs/business/performance-dashboard.md) - *Executive dashboard*
 
-{: .note .pb-2 }
-### 🔌 Integration & Development
-**Build custom solutions with our API and tools**
+**Industry-Specific Deep Dives:**
+- [🏥 Healthcare Business Case](docs/business/industry-business-cases/healthcare.md) - *HIPAA compliance & patient communications*
+- [🏛️ Financial Services Case](docs/business/industry-business-cases/financial-services.md) - *SOX compliance & banking security*
+- [🛒 E-commerce Business Case](docs/business/industry-business-cases/ecommerce.md) - *Customer retention & marketing automation*
+- [🏢 Agencies & Consulting](docs/business/industry-business-cases/agencies-consulting.md) - *Client confidentiality & multi-client management*
+- [🚀 SaaS Business Case](docs/business/industry-business-cases/saas.md) - *Customer lifecycle & product-led growth*
+</div>
 
-[API Reference](./docs/implementation-technical/development-guidelines/api-reference){: .btn .btn-green}
-[Development Guidelines](./docs/implementation-technical/development-guidelines/README){: .btn .btn-green}
-[Technical Architecture](./docs/technical/architecture/detailed-technical/onboarding-authentication){: .btn .btn-outline}
+### 🏗️ For Technical Teams (IT/DevOps)
+**Implementation guides, API reference, and technical architecture**
 
+<div class="btn-group-vertical" style="width: 100%;">
+- [🔧 Technical Infrastructure](docs/business/technical-infrastructure.md) - *Complete technical specs*
+- [⚖️ Compliance Framework](docs/business/compliance-framework.md) - *Technical compliance implementation*
+- [🏗️ Architecture Overview](docs/technical/architecture/overview.md) - *System architecture*
+- [🔌 API Reference](docs/implementation-technical/development-guidelines/api-reference) - *Developer documentation*
+- [📚 Quick Setup](docs/quick-setup.md) - *Implementation guide*
+</div>
 
-## 🚀 Getting Started
+### 📊 For Marketing & Operations
+**Campaign optimization, analytics, and performance monitoring**
 
-### **New to PenguinMails?**
-{: .note }
-- [What is PenguinMails](./docs/what-is-penguinmails){: .btn .btn-green .mb-1}
-- [Getting Started Guide](./docs/getting-started){: .btn .btn-green .mb-1}
-- [Feature Overview](./docs/feature-overview){: .btn .btn-green}
-
-### **Need Implementation Help?**
-{: .important }
-- [Quick Setup Guide](./docs/quick-setup){: .btn .btn-purple .mb-1}
-- [Complete Documentation Index](./docs/use-cases/README){: .btn .btn-purple}
+<div class="btn-group-vertical" style="width: 100%;">
+- [📈 Analytics & Performance](docs/operations-analytics/analytics-performance/README.md) - *Performance monitoring*
+- [👥 User Analytics](docs/operations-analytics/analytics-performance/user-analytics.md) - *Campaign insights*
+- [💹 Financial Operations](docs/operations-analytics/operations-management/payment-analytics-financial-operations.md) - *Revenue tracking*
+- [🏢 Operations Management](docs/operations-analytics/operations-management/README.md) - *Process optimization*
+</div>
 
 ---
 
-## ❓ Common Questions
+## 📊 Cost & ROI Overview
 
-{: .warning }
-<details open>
-  <summary><strong>I'm having trouble with email deliverability. What should I check?</strong></summary>
-  <p>Start with our <a href="./docs/operations-analytics/analytics-performance/metrics-kpis.md">Deliverability Guide</a> to understand common issues. Check your SPF, DKIM, and DMARC records, and review our <a href="./docs/operations-analytics/operations-management/infrastructure-operations-management.md">Infrastructure Operations</a> guide.</p>
-</details>
+<div class="grid" markdown="1">
 
-{: .warning }
-<details>
-  <summary><strong>How do I set up my first email campaign?</strong></summary>
-  <p>Follow our <a href="./docs/getting-started.md">Getting Started Guide</a> for step-by-step instructions. You'll need to configure your email infrastructure first, then create your campaign sequences.</p>
-</details>
+<div class="cell cell--4" markdown="1">
+![ESP Pricing](docs/assets/esp-pricing.png){: width="100%" }
 
-{: .warning }
-<details>
-  <summary><strong>I'm getting authentication errors when trying to send emails. Help!</strong></summary>
-  <p>This is usually related to DNS configuration. Check our <a href="./docs/quick-setup.md">Quick Setup Guide</a> for DNS troubleshooting steps, or review our <a href="./docs/technical/architecture/detailed-technical/onboarding-authentication.html">Authentication Guide</a>.</p>
-</details>
+**Cost Comparison**
+- 10K emails: $15-200/month vs $312-424 self-hosted
+- 100K emails: $350-1,000/month vs $830-1,250 self-hosted
+- 1M+ emails: $2,500-7,000/month vs $4,000-6,400+ self-hosted
+</div>
 
-{: .warning }
-<details>
-  <summary><strong>How do I connect my existing email provider?</strong></summary>
-  <p>We recommend using our automated VPS provisioning instead of existing providers for best deliverability. See <a href="./docs/technical/architecture/overview.md">Infrastructure Setup</a> for detailed integration options.</p>
-</details>
+<div class="cell cell--4" markdown="1">
+![TOC Comparison](docs/assets/toc-comparison.png){: width="100%" }
 
-{: .warning }
-<details>
-  <summary><strong>I need help with campaign optimization. Where should I start?</strong></summary>
-  <p>Review our <a href="./docs/operations-analytics/analytics-performance/metrics-kpis.md">Metrics & KPIs Guide</a> to understand key metrics, then check <a href="./docs/operations-analytics/analytics-performance/user-analytics.md">User Analytics</a> for campaign insights.</p>
-</details>
+**Total Cost of Ownership**
+- Managed ESPs: 60-80% reduction in operational overhead
+- ROI: 150-500% improvement over 3 years
+- Payback: 2-6 months for infrastructure optimization
+</div>
 
----
+<div class="cell cell--4" markdown="1">
+**Executive Benefits**
+- ✅ CFO-friendly ROI analysis
+- ✅ Procurement-ready documentation
+- ✅ Enterprise security compliance
+- ✅ 3-7x cost efficiency improvement
+- ✅ 95% deliverability rates
+- ✅ Complete audit trail
+</div>
 
-## 📞 Need More Help?
-
-{: .new }
-**Can't find what you're looking for?**
-
-- [Visit PenguinMails.com](https://penguinmails.com/){: .btn .btn-purple .mr-2}
-- [View Pricing](https://penguinmails.com/pricing/){: .btn .btn-blue .mr-2}
-- [Get Help](https://help.penguinmails.com/){: .btn .btn-outline}
+</div>
 
 ---
+
+## 📋 Executive Decision Framework
+
+### Quick Assessment: Do you need PenguinMails?
+
+<div class="highlight" markdown="1">
+**Answer these questions:**
+
+1. **Volume**: Do you send 10K+ emails per month?
+2. **Deliverability**: Are <85% of your emails reaching inboxes?
+3. **Compliance**: Do you need GDPR/CAN-SPAM compliance?
+4. **Cost**: Are you spending $500+ monthly on email infrastructure?
+5. **Resources**: Do you lack dedicated email infrastructure expertise?
+
+**If you answered "yes" to 2+ questions, PenguinMails can provide significant value.**
+</div>
 
 ---
 
