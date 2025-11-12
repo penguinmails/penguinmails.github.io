@@ -76,37 +76,79 @@ LEFT JOIN smtp_ip_addresses sia ON sia.vps_instance_id = vi.id
 LEFT JOIN payments py ON py.subscription_id = s.id
 ```
 
-#### 3.3 Deliverability Risk Management
+#### 3.3 Deliverability and IP Reputation Risk Management
 
-**Business Decision:** Prioritize deliverability monitoring for revenue protection
+**Business Decision:** Use pragmatic, explainable IP reputation monitoring grounded in three explicit sources of truth, with strict cost controls and honest positioning.
 
-**Business Rationale:**
-- **Revenue Impact**: $0.05 per bounce + $0.25 per spam complaint + potential customer churn
-- **Time Sensitivity**: Issues require <2 hour response time
-- **Predictive Value**: Early detection prevents escalation
-- **Customer Retention**: Proactive communication maintains trust
+**Three-Tier Reputation Model (High-Level):**
 
-**Deliverability Business Intelligence:**
+1. Paid Provider Reputation APIs (Official Snapshot Layer)
+   - When available (e.g., Gmail/Postmaster, Microsoft/O365 or vetted third-party APIs), these are treated as:
+     - The most authoritative external signal about IP/domain health.
+     - Accessed on a low-frequency cadence to control cost and avoid implying real-time guarantees.
+   - Governance:
+     - Snapshots only after an IP has meaningful history:
+       - At least 30 days of sending OR completion of a defined warmup program.
+     - Refresh no more than ~every 30 days per IP/pool (configurable), except:
+       - Explicit, budget-controlled exceptions for severe incidents.
+     - All results:
+       - Are cached with clear `snapshot_date` and “next eligible refresh” metadata.
+       - Are presented to users as: “Official provider reputation snapshot (point-in-time; confirm in provider console for latest status).”
+
+2. Internal Reputation Algorithm (PenguinMails Heuristic Layer)
+   - Inputs:
+     - Our own metrics only:
+       - Bounces, complaints, blocks.
+       - Volume anomalies and spikes.
+       - Engagement signals where available.
+       - Abuse indicators and policy violations.
+   - Cadence & Architecture:
+     - Runs as weekly batch jobs (e.g., Sundays / off-peak) on OLAP-friendly infrastructure.
+     - Explicitly NOT per-request or per-send computation on OLTP paths.
+   - Output:
+     - Produces internal tiers (e.g., Healthy / Watch / At Risk / Critical) for each IP/pool.
+   - Positioning:
+     - Clearly labeled in all docs and UIs as:
+       - “Internal PenguinMails reputation model — directional guidance, not a mailbox provider score.”
+     - Used to:
+       - Drive safe warmup, throttling, routing, and review workflows with human oversight.
+
+3. Operational & Roadmap Guardrails
+   - We DO NOT:
+     - Claim direct access to proprietary inbox provider internal scores.
+     - Promise real-time or continuous synchronization with Google/Microsoft reputation systems.
+     - Run unbounded, per-send paid reputation checks.
+   - We DO:
+     - Combine low-frequency official snapshots, internal heuristics, and event data to support:
+       - Revenue protection (RP-001, RP-003),
+       - Safer routing/warmup policies,
+       - Earlier identification of emerging risk.
+     - Maintain a roadmap-driven feedback loop:
+       - Historical official vs internal comparisons stored in OLAP.
+       - Calibration of internal models treated as an ongoing improvement track, not an MVP promise of 1:1 alignment.
+
+**Business Rationale (Updated):**
+- Aligns with realistic provider capabilities and budgets.
+- Prevents overpromising “magic” IP reputation insight we do not control.
+- Still enables:
+  - Early detection of risk.
+  - Structured, auditable remediation playbooks.
+  - Clear communication to executives about what is official vs modeled.
+
+**Deliverability & Reputation Business Intelligence (Illustrative):**
 ```sql
--- Revenue protection monitoring
-CREATE VIEW deliverability_business_impact AS
-SELECT 
-    company_id,
-    tracking_date,
-    emails_sent,
-    emails_bounced,
-    emails_spam,
-    -- Business cost impact
-    emails_bounced * 0.05 + emails_spam * 0.25 as estimated_revenue_loss,
-    -- Risk assessment
-    CASE 
-        WHEN bounce_rate > 0.10 THEN 'critical_action_required'
-        WHEN bounce_rate > 0.05 THEN 'monitoring_needed'
-        ELSE 'acceptable'
-    END as business_risk_level,
-    -- Optimization opportunity
-    bounce_rate * emails_sent * 0.05 as potential_savings
-FROM deliverability_daily_summary
+-- High-level example: combine internal heuristics with official snapshots (when present)
+SELECT
+  ip_address,
+  internal_reputation_tier,
+  official_provider_tier,
+  official_snapshot_date,
+  requires_review,
+  cooldown_active
+FROM ip_reputation_overview
+WHERE
+  internal_reputation_tier IN ('Watch', 'At Risk', 'Critical')
+  OR official_provider_tier IN ('Poor', 'Bad')
 ```
 
 ---

@@ -67,16 +67,30 @@ Unlike manual warm-up processes that often fail, our system uses proven delivera
 **Days 22+**: Achieve full sending capacity with 95%+ deliverability  
 
 **Smart Monitoring & Protection**
-- **Automatic Pause**: Stops sending if bounce rates exceed safe thresholds
-- **Complaint Protection**: Halts campaigns if spam complaints are detected
-- **Reputation Scoring**: Continuous monitoring of your sender score across all major providers
-- **Adaptive Timing**: AI-driven send time optimization for maximum engagement
+- **Automatic Safeguards**: Warm-up automatically slows or pauses if key health indicators (such as bounce or complaint levels) move outside safe ranges.
+- **Health-Based Progression**: Sending volume increases are guided by observed performance trends, not by fixed “one size fits all” schedules.
+- **Reputation Signals**:
+  - Combines internal performance data with selectively used external signals where commercially and technically appropriate.
+  - Uses these signals on a sensible cadence rather than relying on unrealistic “every second” checks.
+- **Transparent Behavior**: Customers see clear explanations of why warm-up behavior changes
+  (for example: “we are slowing down because recent performance indicates increased risk”).
 
-**Real-time Performance Dashboard**
-- **Warm-up Progress**: Visual tracking of reputation building milestones
-- **Sender Reputation**: Real-time scores from Gmail, Yahoo, Outlook, and others
-- **Deliverability Predictions**: AI-powered inbox placement forecasting
-- **Optimization Recommendations**: Automated suggestions for performance improvement
+For a deeper view of how reputation, cost, and monitoring are handled across the platform, see:
+- Strategic and technical framing in [`business-leaders-technical-framework.md`](docs/business/technical-implementation/business-leaders-technical-framework.md)
+- Implementation roadmap details in [`implementation-roadmap.md`](docs/business/implementation/implementation-roadmap.md)
+
+**Performance & Reputation Dashboard**
+- **Warm-up Progress**: Visual tracking of how accounts move through warm-up stages.
+- **Sender Health Overview**:
+  - Consolidated view of key health indicators used to guide warm-up.
+  - Designed to help teams understand when they are ready to scale, without overstating precision.
+- **Deliverability Insights**:
+  - Directional insights based on real performance data.
+  - Positioned as decision support, not as absolute guarantees.
+- **Optimization Recommendations**:
+  - Practical, easy-to-understand suggestions (adjust volume, timing, content, targeting)
+    to keep sender health strong and protect long-term deliverability.
+
 
 **Technical Authority**: Our warm-up algorithms integrate with comprehensive DNS optimization systems including automated SPF, DKIM, and DMARC configuration, ensuring optimal deliverability through enterprise-grade infrastructure automation.
 

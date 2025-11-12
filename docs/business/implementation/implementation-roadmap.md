@@ -293,9 +293,74 @@ Our implementation strategy follows a proven three-phase approach that minimizes
 ### Technical Requirements
 1. **Authentication**: SPF, DKIM, DMARC mandatory from MVP phase
 2. **IP Management**: Dedicated IPs above 50K volume
-3. **Monitoring**: Real-time deliverability monitoring
+3. **Monitoring**: Deliverability and performance monitoring appropriate to each phase
 4. **Backup**: Automated backup and disaster recovery
+5. **Executive Security (Nile + Loop Aligned)**:
+   - 2025 (MVP / Initial Rollout):
+     - Use NileDB as managed IdP for core authentication.
+     - Introduce Loop-based email OTP as the ONLY committed step-up mechanism for:
+       - Executive password reset confirmations,
+       - Executive role elevation / RBAC changes,
+       - High-sensitivity data exports,
+       - Security and alert policy changes.
+     - Treat Loop strictly as a delivery channel; all OTP validation and policy enforcement happen in the PenguinMails backend.
+     - Log all high-risk OTP flows (request, verification outcome, actor, scope; never the OTP secret) into the OLAP `admin_audit_log`.
+   - 2026+ (Demand-Driven Enhancements):
+     - Evaluate additional strong auth options (WebAuthn/FIDO2, TOTP, Nile-native advanced auth features, risk-based policies).
+     - Only commit these when required by enterprise customers or regulatory needs, keeping this roadmap aligned with actual guarantees.
 
+6. **Alerting, Revenue Risk Monitoring & Notification Architecture**:
+    - MVP (2025):
+      - Implement a queue-backed, RESTful notification and alert system (see [`BF-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:546)):
+        - Event ingestion from analytics and system events into a durable queue.
+        - Background workers to generate and dispatch notifications.
+        - REST endpoints for polling notifications in executive/admin UIs.
+        - Email + in-app/admin notification feed as primary channels.
+        - Basic severity levels, throttling, and digesting to prevent alert fatigue.
+      - Implement [`RP-001`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:1732) as:
+        - A consolidated, opinionated internal “Revenue Risk Overview” built on:
+          - PostHog business events and integrations delivered via [`BF-003`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:268),
+          - Internal BI views and OLAP aggregates,
+          - The queue-based alert/notification foundation from [`BF-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:546).
+        - Explicitly:
+          - NOT a replacement for provider dashboards (Hostwinds, NileDB, ESP consoles) or Stripe/finance systems.
+          - Positioned as directional internal decision-support.
+        - With executives (CFO/RevOps) during MVP expected to:
+          - Keep using native PostHog/ESP/infra dashboards and their own notifications for stricter real-time or infra-level alerting.
+      - Implement [`RP-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:2179) in MVP strictly as:
+        - A human-in-the-loop deliverability issue detection and response framework:
+          - Automated detection and classification of high-risk deliverability signals via OLAP + PostHog.
+          - Queue-backed alerts to internal ops/executive surfaces (reusing BF-005).
+          - Documented manual playbooks and admin panel workflows for triage and remediation.
+          - Issue resolution tracking (MTTA/MTTR) via OLAP and audit logs.
+        - With:
+          - No fully automated IP rotation, routing, or tenant messaging.
+          - All customer communication and remediation steps initiated by humans, logged via `admin_audit_log` where applicable.
+        - Existing 3rd-party ticketing/helpdesk remains the system of record for support; only light-touch linking/integration is in scope.
+      - No commitment to WebSockets, mobile push, embedded third-party consoles, or strict sub-second “real-time” guarantees in MVP.
+    - 2026+ (Scale / Enterprise Roadmap):
+      - Evaluate and, if justified:
+        - WebSocket/SSE-based live alert streams for executive dashboards.
+        - Expanded multi-channel delivery (SMS, mobile push, chat integrations).
+        - Deeper, governed embedding of PostHog/ESP/infra insights into the admin panel.
+        - Advanced correlation, noise reduction, and workflow integrations.
+      - Progressive RP-005 automation enhancements:
+        - Separate roadmap stories (e.g., RP-005A/B) for:
+          - Safe, semi-automated remediation flows requiring human approval (e.g., suggested IP/pool changes).
+          - Carefully scoped auto-actions under strict guardrails and rollback mechanisms.
+        - These require:
+          - Mature deliverability and infra analytics (1+ year of stable signals),
+          - Production-grade queue + OLAP foundations,
+          - PenguinMails-controlled SMTP for system/transactional mail as its own prior roadmap milestone.
+      - All built on top of the existing queue-based foundation rather than introducing a parallel, ad-hoc system.
+    - 2026+ (Support & Case Management Roadmap):
+      - Native PenguinMails ticketing/case management:
+        - Positioned as a late-2026+ initiative under its own epic.
+        - Not part of MVP or early growth phases.
+        - Must:
+          - Integrate with RP-001/RP-005 signals and audit/compliance layers,
+          - Provide full traceability of remediation actions,
+          - Only replace 3rd-party ticketing after feature parity and migration planning.
 ### Organizational Requirements
 1. **Executive Sponsorship**: CFO/VP level commitment
 2. **Technical Expertise**: Email infrastructure knowledge
@@ -307,6 +372,88 @@ Our implementation strategy follows a proven three-phase approach that minimizes
 2. **Contract Management**: Multi-year planning
 3. **Performance Monitoring**: Regular provider reviews
 4. **Escalation Procedures**: Clear issue resolution paths
+
+---
+ 
+## 📡 IP Reputation Management Roadmap (Honest, Cost-Aware)
+
+To align RP-003 and related messaging with financial and technical realities, PenguinMails adopts an explicitly constrained three-source IP reputation model:
+
+### 1. Paid Provider Reputation APIs (Official Snapshot Layer)
+
+- Scope:
+  - Gmail/Postmaster, Microsoft/O365, and vetted third-party reputation/blocklist APIs where commercially and contractually feasible.
+- Cadence & Constraints:
+  - No per-send or per-request paid lookups.
+  - Eligibility:
+    - Only after an IP has:
+      - At least 30 days of production traffic, or
+      - Completed a defined warmup program.
+  - Refresh:
+    - Default: no more than every 30 days per IP/pool.
+    - Exceptions:
+      - Limited, policy-gated manual triggers for severe incidents (suspected blacklisting, major revenue risk).
+  - Cost Controls:
+    - Centralized configuration for max calls/month and per-provider budget.
+    - Scheduled batch jobs; strict rate limiting; snapshot caching with `snapshot_date` and “next eligible refresh”.
+- Positioning:
+  - Always labeled as:
+    - “Official provider reputation snapshot (point-in-time; confirm in provider consoles for latest status).”
+  - Never marketed as:
+    - Real-time, continuous, unlimited, or per-tenant authoritative telemetry.
+
+### 2. Internal Reputation Algorithm (PenguinMails Heuristic Layer)
+
+- Inputs:
+  - Internal-only signals:
+    - Bounce/complaint rates, block events,
+    - Volume anomalies, spikes, and ramp behavior,
+    - Engagement where available,
+    - Abuse and policy violation indicators.
+- Execution:
+  - Weekly batch jobs (e.g., Sundays / off-peak).
+  - Runs on OLAP/analytics infrastructure to avoid OLTP impact.
+- Outputs:
+  - Tiered internal reputation per IP/pool (e.g., Healthy / Watch / At Risk / Critical).
+- Usage:
+  - Drives:
+    - Warmup progression recommendations,
+    - Throttling and volume caps,
+    - Pool reassignment suggestions,
+    - “Requires review” flags for operations.
+- Communication:
+  - Always labeled in docs, roadmap, and UI as:
+    - “Internal PenguinMails reputation model — directional guidance, not a mailbox provider score.”
+  - Explicitly NOT:
+    - A claim of matching Gmail/Microsoft internal scoring.
+
+### 3. Feedback Loop and Governance
+
+- Data:
+  - Historical official snapshots and internal scores logged in OLAP.
+- Cadence:
+  - Periodic reviews (e.g., quarterly) to:
+    - Compare internal vs official tiers,
+    - Adjust thresholds and heuristics.
+- Roadmap:
+  - Model calibration is:
+    - An iterative improvement track,
+    - Not an MVP guarantee of 1:1 alignment with provider systems.
+
+### 4. Honest Positioning Guardrails (Cross-Doc Commitment)
+
+Throughout this roadmap, GTM assets, and supporting documents:
+
+- Must NOT:
+  - Promise real-time IP reputation streaming from mailbox providers.
+  - Imply unlimited or opaque access to proprietary provider scoring.
+  - Suggest per-tenant authoritative IP reputation beyond what upstream systems expose.
+- Must:
+  - Present:
+    - Paid APIs as sparse, controlled snapshots.
+    - Internal algorithms as transparent, explainable heuristics.
+    - Combined use as:
+      - A pragmatic, cost-aware framework for routing, warmup, and revenue protection decisions with human oversight.
 
 ---
 

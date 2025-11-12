@@ -179,4 +179,66 @@ last_modified_date: "2025-12-19"
 
 ---
 
+## Implementation Boundary: Competitive Deliverability Benchmarking (RP-007 Alignment)
+
+To prevent accidental overpromising and to keep responsibilities clear, all “Competitive Deliverability Benchmarking” (including Story RP-007 in [`business-leaders-comprehensive-product-backlog.md`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:2494)) is governed by the following rules:
+
+1. Ownership
+
+- Primary:
+  - Marketing / Market Intelligence
+  - Revenue Operations
+  - Strategy / Executive Office
+- Supporting (advisory only):
+  - Product and Engineering, limited to:
+    - Exposing factual, already-implemented internal metrics and views (e.g., deliverability, reputation, infra health from RP-001, RP-003, BF-008),
+    - Reviewing external-facing claims for technical accuracy.
+- Explicitly NOT:
+  - A core engineering feature commitment to:
+    - Build an in-app “competitive benchmarking engine”,
+    - Provide automated competitor comparison dashboards,
+    - Maintain live industry-wide benchmarks inside the PenguinMails product.
+
+2. Data Sources and Methods
+
+- Allowed inputs:
+  - Public and third-party benchmark reports and studies,
+  - Customer-visible outcomes and validated case studies,
+  - Internal performance metrics (PostHog, OLAP views, provider dashboards, etc.) used internally by Marketing/Strategy.
+- Prohibited framings:
+  - Do NOT represent:
+    - Internal analytics tools (PostHog, Stripe, etc.),
+    - Provider consoles (e.g., ESP dashboards),
+  - As:
+    - A bundled “industry benchmark API” for customers,
+    - Evidence that PenguinMails sees or controls competitors’ data.
+
+3. Product and Documentation Guardrails
+
+- All documents and GTM assets that mention “competitive deliverability benchmarking” MUST:
+  - Frame it as:
+    - A Marketing/Strategy-led, periodically updated analysis,
+    - Based on curated internal + external evidence.
+  - Avoid implying:
+    - Real-time, continuous global deliverability visibility,
+    - Access to proprietary inbox/ESP scoring models,
+    - Any executive/admin UI that exposes authoritative industry-wide metrics, unless:
+      - A concrete, separate technical epic explicitly defines and delivers it.
+- Where RP-007 is referenced:
+  - Treat it as:
+    - P2, non-technical, GTM-focused work,
+    - Not a hard dependency for platform implementation.
+  - Link back to this boundary section as the canonical scope definition.
+
+4. When Engineering Participation IS Appropriate
+
+- Engineering MAY:
+  - Provide stable, documented internal signals (e.g., our own deliverability KPIs) for internal analysis by Marketing/Strategy.
+- Engineering MUST NOT:
+  - Implement or market:
+    - Automated ingestion of competitor-confidential data without explicit approved architecture,
+    - Hidden or implied access to third-party systems that terms-of-service or infrastructure do not support.
+
+This boundary ensures that RP-007 and related “competitive deliverability” narratives remain truthful, marketing-owned, and aligned with real technical capabilities, while protecting the product backlog from non-implementable expectations.
+
 *This detailed analysis provides comprehensive provider evaluation for thorough technical and procurement assessment.*

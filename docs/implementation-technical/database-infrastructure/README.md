@@ -35,11 +35,60 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ### 🏢 **Multi-Tenant Database Design**
 **Purpose**: Scalable, secure, and isolated tenant data management
+
 **Key Features**:
 - Complete tenant data isolation with shared efficient infrastructure
 - Row-level security (RLS) with NileDB-managed authentication
 - Four-tier architecture: OLTP, Content, Analytics, Queue
 - Performance optimization for multi-tenant queries
+
+### 💰 **NileDB Pricing & Cost Attribution (Clarification)**
+
+PenguinMails uses NileDB as a managed Postgres and authentication platform within a shared, multi-tenant architecture.
+
+Key NileDB pricing characteristics (refer to official source for updates):
+
+- Project-based pricing with included resources:
+  - Flat monthly subscription per project/tier (e.g. starter tier around $20/month)
+  - Fixed included storage (e.g. 50GB on entry tiers)
+  - Additional usage (such as storage beyond included limits) billed separately
+- Authoritative reference:
+  - Always consult the official pricing page for current terms:
+    - https://www.thenile.dev/pricing
+
+Implications for PenguinMails cost modeling:
+
+- Shared cluster model:
+  - All tenants share the underlying NileDB infrastructure; provider costs are incurred at the project/cluster level.
+- No per-tenant live DB metering:
+  - NileDB does not (in this documentation set) provide precise, per-tenant, real-time metered billing suitable for:
+    - 99.9% accurate tenant-level “database cost tracking”
+    - Direct tenant invoices computed solely from database metrics.
+- Internal approximation only:
+  - Any approximate_cost fields (e.g. on VPS instances or SMTP IPs) are:
+    - Internal modeling inputs owned by Finance & Operations.
+    - Derived from:
+      - NileDB invoices and published pricing.
+      - Storage and usage patterns at the cluster level.
+      - Heuristics for allocating shared costs across tenants.
+    - Not authoritative billing values.
+- Usage in dashboards:
+  - Internal admin/executive views may:
+    - Aggregate approximate_cost values to understand relative infra intensity or margin by tenant.
+  - These views MUST:
+    - Be restricted to PenguinMails internal roles.
+    - Clearly label values as:
+      - “Approximate / model-based”
+      - “Not a source of truth for customer invoicing”.
+- Customer-facing billing:
+  - Remains governed by PenguinMails’ own pricing plans and financial systems.
+  - Must NOT be represented as “NileDB-backed per-tenant database cost metering”.
+
+This clarification applies across all documentation where NileDB appears in the context of infrastructure or cost:
+- NileDB is modeled as:
+  - A shared, externally-priced managed database provider with clear public pricing.
+  - An input into PenguinMails’ internal cost allocation models.
+  - Not a per-tenant billing oracle or real-time cost tracking endpoint.
 
 ### 🏗️ **Database Tier Architecture**
 **Purpose**: Optimized data management across operational, analytical, and business intelligence layers

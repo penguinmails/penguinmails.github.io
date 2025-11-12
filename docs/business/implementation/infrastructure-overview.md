@@ -11,6 +11,104 @@ last_modified_date: "2025-12-19"
 **Strategic Value**: This overview provides essential infrastructure planning guidance, technical architecture decisions, and cost-performance analysis for technical leadership and procurement decisions.
 
 ---
+## 🧮 Internal Infrastructure Cost Model (Canonical Overview)
+
+This section provides the high-level, canonical explanation of how PenguinMails models infrastructure costs internally. It is the reference point for Finance, Operations, Product, Sales, and Customer Service when explaining “how infra costs work” without exposing misleading or low-level implementation details.
+
+### 1. Provider Roles
+
+- NileDB (Database & Auth Layer):
+  - Used as a shared managed Postgres/auth provider.
+  - Billed to PenguinMails at the platform/project level (flat tiers plus included storage and overages).
+  - No reliable per-tenant metering API for precise “database cost per customer”.
+  - Therefore:
+    - Database spend is treated as shared core infrastructure overhead.
+    - We do NOT offer or promise per-tenant database cost tracking sourced from NileDB.
+    - Any allocation of DB costs is an internal Finance exercise, not exposed as line-item tenant billing.
+
+- Hostwinds (VPS & Dedicated IP Infrastructure):
+  - Primary external provider for VPS instances and dedicated IPs used by PenguinMails.
+  - Serves as the concrete basis for internal infra cost approximations:
+    - VPS instances → vps_instances.approximate_cost
+    - Dedicated SMTP IPs → smtp_ip_addresses.approximate_cost
+
+### 2. Canonical Approximate Cost Rules
+
+These rules define how we approximate costs. They are:
+- Internal.
+- Configurable by Finance & Operations.
+- Designed for directional accuracy, not cent-level billing.
+
+- VPS Instances (vps_instances.approximate_cost):
+  - Meaning:
+    - Estimated monthly cost in USD for each VPS instance used to run tenant infrastructure (e.g. Mailu SMTP stack).
+  - Baseline Profile:
+    - Default target plan: Hostwinds Unmanaged Linux VPS 1 CPU / 2 GB / 50 GB / 2 TB at **$9.99/month** as the minimum viable instance for production SMTP workloads.
+    - The previously tested ~$4.99 tier is considered insufficient for stable Mailu under real workloads and should not be treated as the planning baseline.
+  - Source:
+    - Derived from the actual selected Hostwinds plan (and any upgrades), using official pricing (e.g. price list / billing cycle) normalized to a monthly equivalent.
+  - Governance:
+    - Set/updated on instance creation, resize/upgrade, or significant configuration change.
+    - Periodically reconciled (e.g. monthly) against Hostwinds invoices to detect drift.
+  - Usage:
+    - Internal unit economics and cost-per-tenant modeling.
+    - Detection of tenants whose infra requirements (upgraded plans) materially increase operating costs.
+    - Input to pricing and packaging decisions.
+    - Not directly surfaced as binding customer invoice items.
+
+- SMTP IP Addresses (smtp_ip_addresses.approximate_cost):
+  - Constraint:
+    - Hostwinds API does not expose a clean, standalone “price per IP” object.
+  - Internal baseline:
+    - Use **$4.99/month per dedicated IP** as the standard modeled cost based on observed Hostwinds behavior for dedicated IPs.
+  - Implementation:
+    - Treat $4.99 as a configurable constant (config table / env), owned by Finance & Operations.
+    - Permit overrides for:
+      - Special contracts or bundled pricing.
+      - Future empirical validation or provider pricing changes.
+  - Usage:
+    - Internal view of IP-related spend and efficiency.
+    - Supports deliverability, pool sizing, and allocation decisions.
+    - Not exposed as separate, authoritative charges to tenants.
+
+### 3. Scope, Cadence, and Ownership
+
+- Scope:
+  - All approximate_cost fields and dependent views:
+    - Are for internal PenguinMails use.
+    - Power admin-only dashboards and financial analytics.
+    - Support:
+      - Margin analysis.
+      - Pricing decisions.
+      - Detection of abnormal infra usage.
+- Cadence:
+  - Updated:
+    - On infra events (create/resize/assign).
+    - On a regular billing cycle cadence using Hostwinds invoices.
+- Ownership:
+  - Finance & Operations:
+    - Own the approximation methodology and constants (e.g. IP baseline, mapping from plans to VPS profiles).
+  - Engineering:
+    - Own implementation of fields, background jobs, and role-restricted visibility.
+  - Customer Service / Sales:
+    - Use this model for explanations, not for quoting raw infra as invoices.
+
+### 4. Communication Guidelines
+
+To keep messaging consistent and accurate:
+
+- Must NOT claim:
+  - “Real-time per-tenant database cost tracking from NileDB.”
+  - “Exact infra billing derived from internal approximate_cost fields.”
+- Should explain:
+  - “PenguinMails uses internal, provider-based cost models (primarily Hostwinds plus shared overhead like NileDB) to ensure sustainable pricing and healthy unit economics.”
+  - “Customer-facing invoices are produced by our billing system according to plans and agreements; internal cost models are for our own operations, not direct pass-through metering.”
+
+For SQL-level definitions, implementation details, and governance specifics, refer to:
+- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`](docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md)
+- Hostwinds Unmanaged Linux VPS reference pricing: [https://www.hostwinds.com/vps/unmanaged-linux](https://www.hostwinds.com/vps/unmanaged-linux)
+
+---
 
 ## 🏗️ Infrastructure Planning Framework
 
