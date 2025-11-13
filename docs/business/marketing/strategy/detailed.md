@@ -34,18 +34,13 @@ This document provides detailed marketing strategy framework with epic alignment
 - **Strategic Oversight:** CMO-level visibility into marketing performance and ROI
 - **Competitive Advantage:** Data-driven marketing strategies for market differentiation
 
-#### Implementation Roadmap for Epic 1
-**Phase 1A: Analytics Foundation (Months 1-2)**
-- Establish marketing analytics infrastructure
-- Implement real-time dashboard with executive visibility
-- Deploy cross-platform attribution system
-- Launch CMO decision support automation
+### Traceability and Alignment for Epic 1
 
-**Phase 1B: Customer Data Platform (Months 3-4)**
-- Deploy customer data platform integration
-- Implement unified customer profiles
-- Establish data governance framework
-- Launch customer intelligence capabilities
+- Upward context: `docs/business/marketing/strategy/overview.md`
+- Sideways context: `docs/business/marketing/executive/detailed.md`, `docs/business/marketing/operations/detailed.md`
+- Downward (technical implementation):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
 
 ### Epic 2: Campaign Performance (P0 - Must Have)
 
@@ -69,18 +64,13 @@ This document provides detailed marketing strategy framework with epic alignment
 - **Budget Optimization:** 20% improvement in marketing spend efficiency and ROI
 - **Strategic Alignment:** Campaign execution aligned with business objectives
 
-#### Implementation Roadmap for Epic 2
-**Phase 2A: Campaign Optimization Engine (Months 5-6)**
-- Deploy AI-powered campaign optimization platform
-- Implement automated bid management system
-- Launch multi-touch attribution modeling
-- Establish real-time performance tracking
+### Traceability and Alignment for Epic 2
 
-**Phase 2B: Creative and Channel Optimization (Months 7-8)**
-- Deploy creative performance optimization
-- Implement cross-channel coordination
-- Launch budget optimization recommendations
-- Establish performance benchmarking
+- Upward context: `docs/business/marketing/strategy/overview.md`
+- Sideways context: `docs/business/marketing/roi/detailed.md`, `docs/business/marketing/performance/summary.md`
+- Downward (technical implementation):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
 
 ### Epic 3: Customer Journey Optimization (P1 - Should Have)
 
@@ -104,18 +94,13 @@ This document provides detailed marketing strategy framework with epic alignment
 - **Retention Optimization:** 25% improvement in customer retention and lifetime value
 - **Journey Intelligence:** Data-driven customer journey optimization and personalization
 
-#### Implementation Roadmap for Epic 3
-**Phase 3A: Journey Mapping and Analytics (Months 9-10)**
-- Deploy real-time journey mapping platform
-- Implement touchpoint analytics system
-- Launch experience measurement framework
-- Establish journey optimization engine
+### Traceability and Alignment for Epic 3
 
-**Phase 3B: Personalization and Optimization (Months 11-12)**
-- Deploy personalization engine
-- Implement dynamic content optimization
-- Launch cross-channel consistency framework
-- Establish customer feedback integration
+- Upward context: `docs/business/marketing/journey/summary.md`
+- Sideways context: `docs/business/marketing/executive/detailed.md`, `docs/business/marketing/operations/detailed.md`
+- Downward (technical implementation):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-personalization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-automation-platform.md`
 
 ### Epic 4: Marketing Intelligence (P1 - Should Have)
 
@@ -139,64 +124,61 @@ This document provides detailed marketing strategy framework with epic alignment
 - **Risk Mitigation:** Proactive risk mitigation through intelligence and market analysis
 - **Decision Quality:** 40% improvement in strategic decision quality through intelligence
 
-#### Implementation Roadmap for Epic 4
-**Phase 4A: Competitive Intelligence Platform (Months 13-14)**
-- Deploy competitive intelligence platform
-- Implement market monitoring system
-- Launch trend analysis framework
-- Establish intelligence reporting automation
+### Traceability and Alignment for Epic 4
 
-**Phase 4B: Strategic Analytics and Insights (Months 15-16)**
-- Deploy predictive analytics engine
-- Implement strategic reporting framework
-- Launch opportunity identification system
-- Establish intelligence validation processes
+- Upward context: `docs/business/marketing/marketing-competitiveness-summary.md`
+- Sideways context: `docs/business/market-analysis/overview.md`
+- Downward (technical implementation):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
 
 ---
 
-## Strategic Implementation Framework
+## Strategic Implementation and Governance (Business-Focused)
 
-### CMO Strategic Oversight Framework
+This section defines how strategic initiatives are prioritized, sequenced, and governed at the business level. Detailed schemas, APIs, SLOs, and infrastructure decisions are defined exclusively in Level 4 technical documentation.
 
-#### Decision-Making Requirements
-- **Real-time Visibility:** CMO access to all marketing performance metrics and KPIs
-- **Strategic Analysis:** Monthly strategic review and optimization recommendations
-- **Budget Authority:** CMO approval for marketing investments and resource allocation
-- **Performance Accountability:** CMO accountability for marketing ROI and business impact
+### 1. Epic Prioritization and Phasing
 
-#### Strategic Reporting Requirements
-- **Executive Dashboard:** Real-time marketing performance and ROI tracking
-- **Strategic Analysis:** Monthly marketing performance and optimization reports
-- **Competitive Intelligence:** Quarterly competitive analysis and market positioning
-- **Innovation Pipeline:** Quarterly innovation progress and strategic opportunities
+- Align epic delivery with:
+  - Board-approved growth and profitability targets.
+  - CMO strategic themes from `docs/business/marketing/strategy/overview.md`.
+  - Financial guardrails defined in `docs/business/marketing/roi/detailed.md`.
+- Use 12–18 month rolling roadmap with:
+  - Clear epic ownership.
+  - Quarterly checkpoints for scope and value realization.
+  - Dependency visibility to Implementation and Operations stakeholders.
 
-### Marketing Director Operational Framework
+### 2. Governance and Decision Rights (Business Scope)
 
-#### Campaign Management Requirements
-- **Campaign Oversight:** Marketing Director oversight of all campaign performance and optimization
-- **Team Coordination:** Marketing Director coordination of marketing team activities and workflows
-- **Performance Tracking:** Marketing Director tracking of team performance and KPI achievement
-- **Strategic Execution:** Marketing Director execution of CMO strategic initiatives and priorities
+- CMO:
+  - Owns approval of epic priorities and funding envelopes.
+  - Sets non-functional expectations as business outcomes (e.g., reliability, data quality) without prescribing stack choices.
+- Marketing Directors:
+  - Translate epic intent into portfolio of initiatives and campaigns.
+  - Ensure initiatives remain aligned with Level 1 summaries and this Level 3 strategy.
+- Marketing Operations:
+  - Ensures processes, SLAs, and operating models can support epics at scale.
+  - Escalates structural gaps to implementation owners rather than dictating technical patterns.
 
-#### Operational Reporting Requirements
-- **Daily Performance:** Marketing Director daily campaign performance monitoring
-- **Weekly Optimization:** Marketing Director weekly optimization and improvement analysis
-- **Monthly Review:** Marketing Director monthly performance review and strategic alignment
-- **Quarterly Planning:** Marketing Director quarterly planning and strategic preparation
+### 3. Alignment with Technical Implementation (Pointers Only)
 
-### Marketing Operations Framework
+For each epic, detailed implementation is maintained in Level 4 technical specifications:
 
-#### Automation and Optimization Requirements
-- **Workflow Automation:** Marketing Operations optimization of all marketing workflows and processes
-- **Platform Integration:** Marketing Operations integration of marketing technology stack
-- **Performance Monitoring:** Marketing Operations monitoring of platform performance and optimization
-- **Efficiency Optimization:** Marketing Operations continuous improvement of marketing efficiency
+- Epic 1 (Foundation):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
+- Epic 2 (Campaign Performance):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
+- Epic 3 (Customer Journey Optimization):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-personalization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-automation-platform.md`
+- Epic 4 (Marketing Intelligence):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
 
-#### Operations Reporting Requirements
-- **Real-time Monitoring:** Marketing Operations real-time monitoring of all platform performance
-- **Daily Optimization:** Marketing Operations daily optimization and performance improvement
-- **Weekly Analysis:** Marketing Operations weekly analysis and efficiency improvement
-- **Monthly Planning:** Marketing Operations monthly planning and optimization strategy
+All low-level implementation guidance (APIs, data models, infrastructure) is out of scope for this Level 3 strategy document and must reside in the corresponding Level 4 technical docs.
 
 ---
 

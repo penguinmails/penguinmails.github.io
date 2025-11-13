@@ -41,16 +41,12 @@ This document provides detailed ROI analysis with scenarios, risk assessment, in
   - **Risk Mitigation:** Proactive risk identification preventing costly compliance issues
   - **Audit Efficiency:** 60% reduction in audit preparation time and costs
 
-**ROI Calculation with Confidence Intervals:**
-```
-Base Annual Value: $750K
-Annual Investment: $150K
-Net Annual Value: $600K
-Base ROI: 400% annually
-Confidence Level: 95%
-Lower Bound (90% confidence): 360% ROI
-Upper Bound (95% confidence): 440% ROI
-```
+**ROI Calculation with Confidence Intervals (Business View):**
+- Base annual value: $750K
+- Annual investment: $150K
+- Net annual value: $600K
+- Indicative annual ROI: ~400%
+- Confidence range used for governance, not as a technical guarantee
 
 #### Customer Data Platform ROI Analysis
 **Investment Structure:**
@@ -79,97 +75,58 @@ Upper Bound (95% confidence): 440% ROI
   - **Predictive Capabilities:** Customer behavior prediction and optimization
   - **Segmentation Precision:** Advanced customer segmentation and targeting
 
-**ROI Calculation:**
-```
-Base Annual Value: $400K
-Annual Investment: $75K
-Net Annual Value: $325K
-Base ROI: 433% annually
-Confidence Level: 90%
-```
+**ROI Calculation (Business View):**
+- Base annual value: $400K
+- Annual investment: $75K
+- Net annual value: $325K
+- Indicative annual ROI: ~430%
 
 ### Epic 2: Campaign Performance ROI
 
+This section quantifies business value from improved campaign performance without prescribing specific optimization engines or ML architectures.
+
 #### Campaign Optimization Investment Analysis
-**Investment Structure:**
-- **Initial Implementation:** $150K (AI optimization platform, machine learning models, integration)
-- **Annual Operational Cost:** $50K (platform licensing, model training, optimization maintenance)
+**Investment Structure (Illustrative):**
+- **Initial Implementation:** $150K
+- **Annual Operational Cost:** $50K
 - **3-Year Total Investment:** $300K
 
-**Annual Value Delivery Breakdown:**
-- **Performance Improvement:** $200K value from 35% campaign optimization
-  - **CPA Reduction:** 25% improvement in cost per acquisition efficiency
-  - **ROAS Enhancement:** 35% improvement in return on ad spend performance
-  - **Campaign Efficiency:** 40% improvement in overall campaign effectiveness
-  
-- **Creative Optimization:** $100K value from 25% creative performance improvement
-  - **Creative Testing:** Automated A/B testing reducing manual testing overhead
-  - **Performance Prediction:** AI-powered creative performance prediction
-  - **Engagement Enhancement:** 25% improvement in creative engagement metrics
-  
-- **Budget Optimization:** $150K value from 20% spend efficiency improvement
-  - **Dynamic Allocation:** Real-time budget optimization based on performance
-  - **Channel Efficiency:** 30% improvement in cross-channel budget efficiency
-  - **Waste Reduction:** 15% reduction in underperforming campaign spend
-  
-- **Testing Automation:** $75K value from automated A/B testing and optimization
-  - **Testing Speed:** 80% reduction in campaign testing and optimization time
-  - **Statistical Accuracy:** Automated statistical significance testing
-  - **Optimization Frequency:** Real-time optimization capabilities
+**Annual Value Drivers (Business-Level):**
+- **Performance Improvement:** Reduced cost per acquisition and improved ROAS
+- **Creative Effectiveness:** Higher engagement and conversion from better testing discipline
+- **Budget Efficiency:** Less waste on underperforming channels
+- **Process Efficiency:** Reduced manual effort to monitor and adjust campaigns
 
-**ROI Calculation with Risk Analysis:**
-```
-Base Annual Value: $525K
-Annual Investment: $50K
-Net Annual Value: $475K
-Base ROI: 950% annually
-Conservative Scenario (70% achievement): 665% ROI
-Optimistic Scenario (130% achievement): 1,235% ROI
-Confidence Level: 90%
-```
+These drivers roll up to an indicative annual value of ~$525K and an attractive ROI profile used for governance decisions. Precise technical mechanisms (e.g., optimization engines, experimentation platforms) are defined in:
+- `docs/implementation-technical/marketing/marketing-optimization-engine.md`
+- `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
 
 ### Epic 3: Customer Journey Optimization ROI
 
+This section evaluates the financial impact of systematically improving end-to-end journeys and personalization as a business capability.
+
 #### Journey Optimization Investment Analysis
-**Investment Structure:**
-- **Initial Implementation:** $120K (journey mapping platform, personalization engine, analytics)
-- **Annual Operational Cost:** $40K (platform maintenance, data processing, optimization)
+**Investment Structure (Illustrative):**
+- **Initial Implementation:** $120K
+- **Annual Operational Cost:** $40K
 - **3-Year Total Investment:** $240K
 
-**Annual Value Delivery Breakdown:**
-- **Conversion Improvement:** $150K value from 30% journey conversion improvement
-  - **Funnel Optimization:** 25% improvement in conversion funnel efficiency
-  - **Touchpoint Optimization:** 35% improvement in individual touchpoint performance
-  - **Friction Reduction:** Systematic friction reduction in conversion process
-  
-- **Personalization Impact:** $100K value from 40% personalization engagement improvement
-  - **Dynamic Content:** Real-time content personalization based on customer behavior
-  - **Experience Customization:** Personalized customer experience optimization
-  - **Engagement Enhancement:** 40% improvement in personalization engagement
-  
-- **Retention Enhancement:** $100K value from 25% customer retention improvement
-  - **Customer Satisfaction:** 35% improvement in customer satisfaction scores
-  - **Lifetime Value:** 25% improvement in customer lifetime value
-  - **Churn Reduction:** Proactive churn prevention and retention optimization
-  
-- **Experience Optimization:** $75K value from customer experience excellence
-  - **Consistency Improvement:** 95% consistency in customer experience
-  - **Quality Enhancement:** Systematic customer experience quality improvement
-  - **Performance Optimization:** End-to-end experience performance optimization
+**Annual Value Drivers (Business-Level):**
+- **Conversion Improvement:** Higher funnel conversion across key journeys
+- **Personalization Impact:** Increased engagement and relevance
+- **Retention Enhancement:** Reduced churn and higher lifetime value
+- **Experience Quality:** More consistent and reliable experiences across channels
 
-**ROI Calculation with Validation:**
-```
-Base Annual Value: $425K
-Annual Investment: $40K
-Net Annual Value: $385K
-Base ROI: 962% annually
-Validation Confidence: 80%
-Risk-Adjusted ROI: 770%
-```
+Indicative modeling supports a strong ROI (business-level), while specific engines, data flows, and runtime decisions are implemented in:
+- `docs/implementation-technical/marketing/marketing-personalization-engine.md`
+- `docs/implementation-technical/marketing/marketing-automation-platform.md`
+
+All formulas and amounts are directional tools for investment governance and must not be interpreted as technical SLAs or guarantees.
+
 
 ---
 
-## Risk-Adjusted ROI Analysis
+## Risk-Adjusted ROI Analysis (Business-Level)
 
 ### High Confidence Investments (85%+ Success Rate)
 
@@ -321,7 +278,7 @@ Net Risk-Adjusted Return: $85K annually
 
 ---
 
-## Financial Risk Assessment
+## Financial Risk Assessment (Business-Level)
 
 ### Risk Matrix Analysis
 
@@ -383,10 +340,9 @@ Net Risk-Adjusted Return: $85K annually
 ### Approval and Governance Framework
 
 #### Investment Approval Process
-- **CMO Approval:** Required for all Tier 1 investments exceeding $100K
-- **Finance Approval:** Required for all investments with ROI below 300%
-- **Executive Committee:** Required for total program investment exceeding $500K
-- **Board Notification:** Required for strategic investments exceeding $1M
+- **CMO Approval:** Required for Tier 1 investments above defined thresholds
+- **Finance Approval:** Required where modeled ROI is below target hurdle rates
+- **Executive Committee / Board:** Required for large strategic commitments as per governance policy
 
 #### Financial Governance and Monitoring
 - **Monthly Financial Review:** CMO monthly review of investment performance
@@ -396,9 +352,22 @@ Net Risk-Adjusted Return: $85K annually
 
 ---
 
-**Document Classification:** Level 3 - Financial Analysis  
-**Finance Approval:** Required for investment scenarios and risk assessment  
-**Investment Access:** CMO, Finance Directors, Investment Committees  
-**Review Cycle:** Quarterly ROI validation and investment optimization  
+**Document Classification:** Level 3 - Financial Analysis
+**Finance Approval:** Required for investment scenarios and risk assessment
+**Investment Access:** CMO, Finance Directors, Investment Committees
+**Review Cycle:** Quarterly ROI validation and investment optimization
+
+### Traceability
+
+- Upward context:
+  - `docs/business/marketing/roi/summary.md`
+  - `docs/business/marketing/strategy/overview.md`
+- Sideways context:
+  - `docs/business/marketing/executive/detailed.md`
+  - `docs/business/marketing/operations/detailed.md`
+- Downward (technical implementation references only):
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
+  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
 
 This detailed ROI analysis provides comprehensive financial validation for marketing technology investments, demonstrating strong business value delivery across multiple scenarios and risk-adjusted outcomes.
