@@ -15,14 +15,14 @@ last_modified_date: "2025-11-10"
 ## 📊 Executive Dashboard Overview
 
 > Note: The KPI ranges and thresholds in this dashboard are reference bands derived from the same underlying analyses used across the Business Leaders corpus:
-> - [Financial Analysis Benchmarks](./model/detailed-analysis/financial-analysis-benchmarks.md)
-> - [Cost Comparisons](./cost-comparisons.md)
-> - [Provider Benchmarks](./provider-benchmarks.md)
-> - [Competitive Analysis](./competitive-analysis.md)
-> - [Performance Overview](./performance-overview.md) - Executive performance benchmarks
-> - [Provider Performance Analysis](./performance-provider-analysis.md) - ESP-specific strategies
-> - [Performance Optimization](./performance-optimization.md) - Technical optimization techniques
-> - [ROI Calculator](./roi-calculator.md)
+> - [Financial Analysis Benchmarks](./model/detailed-analysis/financial-analysis-benchmarks)
+> - [Cost Comparisons](./cost-comparisons)
+> - [Provider Benchmarks](./provider-benchmarks)
+> - [Competitive Analysis](./competitive-analysis)
+> - [Performance Overview](./performance-overview) - Executive performance benchmarks
+> - [Provider Performance Analysis](./performance-provider-analysis) - ESP-specific strategies
+> - [Performance Optimization](./performance-optimization) - Technical optimization techniques
+> - [ROI Calculator](./roi-calculator)
 > Use these as evidence-backed starting points and calibrate to your own baselines rather than treating them as arbitrary fixed guarantees.[^performance-dashboard-methodology]
 
 ### Dashboard Purpose and Scope
@@ -478,6 +478,6 @@ last_modified_date: "2025-11-10"
 
 ---
 
-[^performance-dashboard-methodology]: Methodology and references: Dashboard targets (e.g., ROI bands, payback periods, deliverability and uptime thresholds, CPL/CPM guidance, pipeline uplift examples) are derived from the cost, pricing, and performance models documented in [Financial Analysis Benchmarks](./model/detailed-analysis/financial-analysis-benchmarks.md), [Cost Comparisons](./cost-comparisons.md), [Provider Benchmarks](./provider-benchmarks.md), [Competitive Analysis](./competitive-analysis.md), and [Performance Benchmarks](./performance-benchmarks.md), and are intended as instrumented monitoring thresholds. Organizations should compute their actual values using the [ROI Calculator](./roi-calculator.md) and their internal baselines.
+[^performance-dashboard-methodology]: Methodology and references: Dashboard targets (e.g., ROI bands, payback periods, deliverability and uptime thresholds, CPL/CPM guidance, pipeline uplift examples) are derived from the cost, pricing, and performance models documented in [Financial Analysis Benchmarks](./model/detailed-analysis/financial-analysis-benchmarks), [Cost Comparisons](./cost-comparisons), [Provider Benchmarks](./provider-benchmarks), [Competitive Analysis](./competitive-analysis), and [Performance Benchmarks](./performance-benchmarks), and are intended as instrumented monitoring thresholds. Organizations should compute their actual values using the [ROI Calculator](./roi-calculator) and their internal baselines.
 
 *This performance dashboard framework is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside success metrics and implementation roadmap for complete business performance monitoring and optimization.*

@@ -104,7 +104,7 @@ CREATE TABLE tenant_users (
 
 ### **Company & Workspace Management**
 
-#### **companies** - Tenant Workspaces
+#### **companies** - Tenant Workspaces (Marketing Access)
 ```sql
 CREATE TABLE companies (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -113,6 +113,9 @@ CREATE TABLE companies (
     workspace_name VARCHAR(255) UNIQUE,
     logo_url TEXT,
     status VARCHAR(20) DEFAULT 'active',
+    -- Marketing-accessible fields (no sensitive operational data)
+    industry VARCHAR(100), -- Optional enrichment field
+    company_size VARCHAR(50), -- Optional enrichment field (Small/Medium/Large)
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );

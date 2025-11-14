@@ -2,76 +2,77 @@
 
 ## Overview
 
-This document defines the technical implementation details for the marketing dashboard, including data sources, processing pipelines, and visualization components.
+This document defines the technical implementation for simple marketing dashboards using OLAP views and third-party visualization tools. Focus on basic data access and reporting rather than real-time streaming architecture.
 
 **Document Level:** Level 4 - Technical Implementation
 **Target Audience:** Dashboard Developers, Data Engineers
 
 ---
 
-## Real-Time Streaming Architecture
+## OLAP-Based Dashboard Architecture
 
 ### Data Sources Integration
 ```typescript
 interface MarketingDataSources {
-  advertising_platforms: {
-    google_ads: 'real_time_api_stream';
-    facebook_ads: 'webhook_notifications';
-    linkedin_ads: 'oauth2_integration';
+  database_views: {
+    client_data: 'companies_table_olap_view';
+    derived_metrics: 'marketing_metrics_view';
+    activity_data: 'usage_health_view';
   };
-  
-  analytics_platforms: {
-    google_analytics: 'real_time_data_api';
-    post_hog: 'event_streaming';
+
+  third_party_tools: {
+    google_data_studio: 'direct_database_connection';
+    tableau: 'scheduled_data_extracts';
+    power_bi: 'api_data_feeds';
   };
 }
 ```
 
-### Stream Processing Framework
-- **Apache Kafka**: Topics for marketing events, campaign metrics
-- **Apache Flink**: Real-time processing with 5-second window
-- **WebSocket Connections**: Live dashboard updates
-- **Pub/Sub Pattern**: Role-based topic subscriptions
+### Data Access Framework
+- **Database Views**: Pre-defined OLAP views with RBAC controls
+- **Scheduled Refreshes**: Monthly data updates for derived metrics
+- **Export APIs**: JSON/CSV endpoints for third-party tools
+- **Role-Based Access**: Marketing permissions for data views
 
 ### Performance SLOs
-- Event to dashboard latency: <5 seconds
-- Initial dashboard load: <3 seconds
-- Data freshness: <5 seconds
-- Real-time update frequency: Continuous
+- Dashboard data freshness: Monthly updates
+- Initial load: <10 seconds for simple charts
+- Data export: <30 seconds for standard reports
+- Concurrent users: Support 10-20 marketing team members
 
 ---
 
-## API Integration Framework
+## Data Export Framework
 
-### External Platform Integration
+### Third-Party Tool Integration
 ```typescript
-interface APIConfiguration {
+interface ExportConfiguration {
   authentication: {
-    google_ads: 'oauth2';
-    facebook_ads: 'access_token';
-    analytics: 'api_key_based';
+    database_views: 'marketing_role_credentials';
+    export_apis: 'api_key_based';
+    sftp_transfers: 'certificate_based';
   };
-  
+
   data_sync: {
-    real_time_webhooks: 'immediate_updates';
-    periodic_pulling: 'hourly_batches';
-    rate_limiting: 'api_quota_management';
+    scheduled_exports: 'monthly_batches';
+    on_demand_extracts: 'user_triggered';
+    incremental_updates: 'change_detection';
   };
 }
 ```
 
 ### Dashboard API Endpoints
 ```
-GET /api/v1/dashboard/metrics
-GET /api/v1/dashboard/charts/{chart_id}
-POST /api/v1/dashboard/filters
-GET /api/v1/dashboard/realtime/{tenant_id}
+GET /api/v1/marketing/clients
+GET /api/v1/marketing/metrics
+POST /api/v1/marketing/export
+GET /api/v1/marketing/health
 ```
 
-### Webhook Management
-- **Security**: HMAC signature verification, IP whitelisting
-- **Processing**: Schema validation, event parsing, data transformation
-- **Monitoring**: Delivery status tracking, error analysis
+### Data Export Management
+- **Security**: Marketing role authentication, audit logging
+- **Processing**: Data filtering, format conversion, compression
+- **Monitoring**: Export status tracking, error notifications
 
 ---
 
@@ -80,46 +81,46 @@ GET /api/v1/dashboard/realtime/{tenant_id}
 ### Chart Configuration
 ```typescript
 interface ChartTypes {
-  performance_charts: {
-    line_chart: 'time_series_analysis';
-    bar_chart: 'comparison_analysis';
-    heatmap: 'correlation_matrix';
+  basic_charts: {
+    bar_chart: 'metric_comparison';
+    line_chart: 'trend_analysis';
+    table: 'data_listing';
   };
-  
+
   business_charts: {
     gauge_chart: 'kpi_tracking';
-    funnel_chart: 'conversion_analysis';
+    simple_pie: 'category_breakdown';
   };
 }
 ```
 
 ### Interactive Features
-- **Drill-down Capabilities**: Multi-level hierarchy support
-- **Cross-filtering**: Synchronized chart filtering
-- **Real-time Updates**: WebSocket data streaming
-- **Export Functionality**: PDF, Excel, CSV formats
+- **Basic Filtering**: Date range and category filters
+- **Sorting**: Column-based data sorting
+- **Export Functionality**: CSV, Excel formats
+- **Print Support**: Basic report printing
 
 ---
 
 ## Data Processing Pipeline
 
 ### Aggregation Levels
-- **Real-time**: 5-second windows for impressions, clicks, spend
-- **Hourly**: Complex calculations for conversions, revenue, ROI
-- **Daily**: Attribution analysis and cohort studies
+- **Monthly**: Basic metric calculations from OLAP views
+- **On-demand**: User-triggered data exports and reports
+- **Scheduled**: Automated report generation and distribution
 
 ### Processing Components
 ```typescript
 interface ProcessingPipeline {
-  data_ingestion: {
-    validation: 'schema_validation';
-    deduplication: 'event_deduplication';
-    enrichment: 'customer_data_enrichment';
+  data_access: {
+    view_queries: 'olap_view_execution';
+    filtering: 'rbac_based_filtering';
+    formatting: 'export_format_conversion';
   };
-  
+
   calculation_engine: {
-    metric_calculation: 'stream_processing';
-    attribution_calculation: 'ml_powered_attribution';
+    basic_metrics: 'database_aggregations';
+    derived_scores: 'simple_rule_based_calculations';
   };
 }
 ```
@@ -138,19 +139,19 @@ interface ProcessingPipeline {
 interface UserRoles {
   cmo: {
     layout: 'executive_summary_focused';
-    metrics: ['roi', 'budget_utilization', 'strategic_kpis'];
+    metrics: ['subscription_metrics', 'sales_pipeline', 'basic_roi'];
     export_permissions: 'full_access';
   };
-  
+
   marketing_director: {
     layout: 'operational_focused';
-    metrics: ['campaign_performance', 'team_metrics'];
-    export_permissions: 'campaign_data_only';
+    metrics: ['client_health', 'lead_scoring', 'campaign_performance'];
+    export_permissions: 'marketing_data_only';
   };
-  
+
   marketing_analyst: {
     layout: 'analysis_focused';
-    metrics: ['detailed_analytics', 'attribution_data'];
+    metrics: ['client_data_views', 'derived_metrics', 'basic_reports'];
     export_permissions: 'full_data_access';
   };
 }

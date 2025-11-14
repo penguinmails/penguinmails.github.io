@@ -39,7 +39,7 @@ last_modified_date: "2025-12-19"
 - **Regulatory Preparedness**: Real-time compliance status for regulatory audits
 - **Business Continuity**: Minimized risk of operational disruption
 
-**Technical Implementation**: Complete automated monitoring system with TypeScript integration, real-time dashboards, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation.md)
+**Technical Implementation**: Complete automated monitoring system with TypeScript integration, real-time dashboards, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation)
 
 ---
 
@@ -222,7 +222,7 @@ last_modified_date: "2025-12-19"
 - [🛡️ Compliance Overview](compliance-overview:1) - Strategic compliance summary and risk assessment
 
 **For technical implementation:**
-- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation.md) - Complete TypeScript implementation
+- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation) - Complete TypeScript implementation
 
 **For risk management:**
 - [🚨 Incident Response](compliance-incident-response:1) - Risk management and incident response

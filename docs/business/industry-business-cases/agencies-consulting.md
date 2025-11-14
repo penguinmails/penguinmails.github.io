@@ -153,14 +153,14 @@ Agencies and consulting firms face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Agencies & Consulting Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../roi-calculator.md) - Professional services-specific ROI calculations
-- [📊 Cost Comparisons](../cost-comparisons.md) - Agencies & consulting cost analysis and benchmarks
-- [🏆 Competitive Analysis](../competitive-analysis.md) - Professional services provider comparison
+- [💰 ROI Calculator](../core/roi-calculator) - Professional services-specific ROI calculations
+- [📊 Cost Comparisons](../core/cost-comparisons) - Agencies & consulting cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core/competitive-analysis) - Professional services provider comparison
 
 **For Technical Validation (Level 3):**
-- [📋 Detailed Agencies & Consulting Analysis](agencies-consulting-detailed.md) - Complete professional services implementation deep dive
-- [📋 Compliance Framework](../compliance-framework.md) - Complete professional services compliance analysis
-- [🔒 Security Compliance Overview](../security-compliance.md) - Professional services security overview
+- [📋 Detailed Agencies & Consulting Analysis](agencies-consulting-detailed) - Complete professional services implementation deep dive
+- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete professional services compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - Professional services security overview
 
 ---
 

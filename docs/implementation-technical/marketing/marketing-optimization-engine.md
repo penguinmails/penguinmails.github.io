@@ -1,77 +1,54 @@
-# Marketing Optimization Engine: Technical Implementation
+# Marketing Optimization: Simple Rule-Based Implementation
 
 ## Overview
 
-This Level 4 document defines the technical architecture for the Marketing Optimization Engine responsible for:
-- Bidding and budget optimization
-- Channel and campaign mix optimization
-- Experimentation, scoring, and decision support
+This Level 4 document defines the technical approach for basic marketing optimization using simple rule-based calculations rather than complex ML models. Focus on straightforward optimization for B2B sales qualification.
 
 For business and strategic context see:
-- `docs/business/marketing/strategy/detailed.md`
+- `docs/business/marketing/strategy/overview.md`
 - `docs/business/marketing/performance/summary.md`
-- `docs/business/marketing/roi/detailed.md`
 
-This document is technical-only. ROI storytelling and executive narratives remain in Level 1–3 docs.
+This document is technical-only. Business narratives remain in Level 1–3 docs.
 
 ## Architecture
 
 ### Core Components
 
-1. Signal Ingestion Service
-   - Consumes metrics from:
-     - Email and messaging systems
-     - Ad platforms
-     - Web/app analytics
-     - CRM and conversion systems
-   - Normalizes into a unified performance schema.
-   - Writes to:
-     - Real-time stream for online models
-     - Analytical store for training and batch models
+1. Data Aggregation Service
+   - Collects basic metrics from:
+     - Subscription data
+     - Usage patterns
+     - Client activity indicators
+   - Calculates simple derived metrics
+   - Updates OLAP views monthly
 
-2. Feature Store
-   - Central store for engineered features:
-     - Campaign-level aggregates
-     - Audience and segment attributes
-     - Channel quality indicators
-     - Time-based and seasonality features
-   - Supports:
-     - Batch materialization
-     - Low-latency online reads for serving
+2. Rule Engine
+   - Simple rule-based calculations for:
+     - Lead scoring (based on subscription status + activity)
+     - Churn risk indicators (usage drops, inactivity)
+     - Lifecycle stage determination
+   - Configurable rule sets stored in database
 
-3. Model Training Pipeline
-   - Offline jobs for:
-     - Response/bid models
-     - Propensity and uplift models
-     - Channel allocation models
-   - Responsibilities:
-     - Data validation
-     - Training and hyperparameter tuning
-     - Evaluation and drift monitoring
-     - Model registration with metadata (version, metrics, lineage)
+3. Optimization Calculator
+   - Basic calculations for:
+     - Client health scoring
+     - Sales qualification priorities
+     - Campaign targeting recommendations
+   - Uses predefined formulas and thresholds
 
-4. Optimization & Policy Engine
-   - Combines:
-     - Model outputs
-     - Hard constraints (budgets, compliance, frequency caps)
-     - Business rules (priorities, targets)
-   - Produces:
-     - Recommended bids
-     - Budget reallocation suggestions
-     - Channel and campaign-level adjustments
+4. Reporting Service
+   - Generates monthly reports on:
+     - Client segmentation
+     - Sales pipeline metrics
+     - Basic performance indicators
+   - Exports data for third-party marketing tools
 
-5. Serving & API Layer
-   - Online inference for:
-     - Real-time bid/decision requests
-   - Batch optimization for:
-     - Daily/weekly allocation plans
-   - Exposes idempotent APIs to orchestration platforms.
-
-6. Observability & Governance
-   - Tracks:
-     - Model performance, drift, and reliability
-     - Decision logs for auditability
-     - Rollback and kill-switch mechanisms
+5. Configuration Management
+   - Simple configuration for:
+     - Scoring thresholds
+     - Rule parameters
+     - Report definitions
+   - Marketing team self-service updates
 
 ## Data Flows
 

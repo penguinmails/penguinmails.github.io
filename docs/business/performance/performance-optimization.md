@@ -58,7 +58,7 @@ last_modified_date: "2025-12-19"
 - **Role-Based**: Decision-maker specific value propositions
 - **Behavioral**: Recent activity and engagement-based content
 
-**Technical Implementation**: Complete A/B testing framework, personalization engine, and content optimization system with TypeScript implementation available in [Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation.md)
+**Technical Implementation**: Complete A/B testing framework, personalization engine, and content optimization system with TypeScript implementation available in [Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation)
 
 ---
 
@@ -266,7 +266,7 @@ last_modified_date: "2025-12-19"
 - [📈 Performance Overview](performance-overview:1) - Executive performance benchmarks and strategic goals
 
 **For technical implementation:**
-- [⚙️ Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation.md) - Complete TypeScript implementation
+- [⚙️ Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation) - Complete TypeScript implementation
 
 **For provider analysis:**
 - [🏆 Provider Performance Analysis](performance-provider-analysis:1) - ESP-specific optimization strategies

@@ -1,123 +1,112 @@
-# Marketing Automation Platform: Technical Implementation
+# Third-Party Marketing Automation Integration: Technical Implementation
 
 ## Overview
 
-This document defines the Level 4 technical architecture for the Marketing Automation Platform that executes business workflows defined in:
-- `docs/business/marketing/operations/detailed.md`
-- `docs/business/marketing/strategy/detailed.md`
-
-For strategic and ROI context see:
-- `docs/business/marketing/strategy/overview.md`
+This document defines the technical integration approach for third-party marketing automation tools that support B2B sales workflows defined in:
 - `docs/business/marketing/operations/summary.md`
-- `docs/business/marketing/roi/summary.md`
+- `docs/business/marketing/strategy/overview.md`
+
+Technical implementation focuses on secure data access and API integrations rather than custom platform development. Marketing automation capabilities are delivered through off-the-shelf tools with backbone data access.
 
 Business narratives and justification remain in Level 1–3 documents only.
 
-## Architecture
+## Integration Architecture
 
 ### Core Components
 
-1. Orchestration Engine
-   - Stateful workflow engine for:
-     - Campaign orchestration
-     - Lead nurturing flows
-     - Event-driven triggers
-   - Supports idempotent execution and replay.
+1. Data Export Service
+   - Scheduled export of marketing data from OLAP views to:
+     - CSV/JSON files for third-party tool import
+     - API endpoints for direct integration
+     - Secure SFTP for automated transfers
 
-2. Automation Rules Service
-   - Rules engine for:
-     - Segmentation criteria
-     - Eligibility checks
-     - Frequency caps
-     - Compliance constraints (e.g., opt-in status)
-   - Rules stored as versioned, auditable configurations.
+2. Third-Party Tool Connectors
+   - Pre-built integrations with leading marketing platforms:
+     - Email automation tools (Mailchimp, Constant Contact)
+     - CRM systems (HubSpot, Salesforce)
+     - Marketing automation suites (Marketo, Pardot)
+   - Standard OAuth/API key authentication
 
-3. Channel Connectors
-   - Pluggable adapters for:
-     - Email
-     - Webhooks
-     - In-app and push
-     - Paid media integrations
-   - All connectors use a standard async interface.
+3. Data Synchronization Layer
+   - One-way data flow from backbone to marketing tools:
+     - Client data from companies table
+     - Basic derived metrics
+     - Lead scoring indicators
+   - Change detection and incremental updates
 
-4. Event Ingestion Layer
-   - Accepts events from:
-     - Product applications
-     - Web tracking
-     - CRM and billing
-   - Normalizes to internal event schema and publishes to queue/stream.
+4. Access Control Layer
+   - Marketing role-based permissions for:
+     - Data export operations
+     - Tool configuration
+     - Integration management
+   - Audit trails for all data access
 
-5. Profile and State Cache
-   - Read-optimized cache for:
-     - Consent status
-     - Current segments
-     - Journey state
-     - Frequency counters
-
-6. Audit, Monitoring, and Admin APIs
-   - Full traceability for:
-     - Which flow executed
-     - Which message was sent
-     - Which decision path was followed
+5. Monitoring and Alerting
+   - Basic monitoring for:
+     - Export job status
+     - Data synchronization health
+     - Integration uptime
+   - Email alerts for marketing team
 
 ## Data Flows
 
-### 1. Event-Driven Automation
+### 1. Data Export Process
 
-1. External systems emit events to the ingestion API.
-2. Ingestion validates payload, normalizes fields, and publishes to internal bus.
-3. Orchestration subscribes to events and:
-   - Loads recipient profile and consent state.
-   - Evaluates rules via Automation Rules Service.
-   - Enqueues actions for downstream connectors or journey transitions.
+1. Marketing roles access OLAP views with RBAC controls
+2. Scheduled exports generate clean data files for third-party tools
+3. Data transferred via secure channels (HTTPS, SFTP)
+4. Third-party tools import data for campaign execution
 
-### 2. Scheduled and Batch Automation
+### 2. Synchronization Workflows
 
-- Cron / scheduler triggers:
-  - Daily/weekly workflows
-  - Re-engagement campaigns
-  - SLA or lifecycle checks
-- Scheduler queries:
-  - Data warehouse / analytics exports
-  - Segmentation views
-- Results are passed to orchestration for batched execution with guardrails:
-  - Rate limits
-  - Frequency caps
-  - Priority queues
+- Daily/weekly data refreshes:
+  - Client data updates from companies table
+  - Derived metrics recalculation
+  - Lead scoring updates
+- Marketing team configures:
+  - Export schedules
+  - Data mapping to tool fields
+  - Synchronization frequencies
+- Guardrails enforced:
+  - Data volume limits
+  - Export frequency caps
+  - Access logging
 
 ## Interfaces
 
-### Ingestion API (External)
+### Data Export APIs
 
-`POST /automation/events`
+`GET /marketing/export/clients`
 
-- Auth: service-to-service (mTLS or signed tokens)
-- Required fields (logical, not business narrative):
-  - `event_type`
-  - `occurred_at`
-  - `subject_id` (user/account)
-  - `attributes` (object)
+- Auth: Marketing role-based authentication
+- Returns: Filtered client data from companies table
+- Format: JSON/CSV for third-party tool import
 
-### Internal Automation APIs
+`GET /marketing/export/metrics`
 
-- `POST /internal/automation/trigger`
-  - For direct triggers from trusted services.
-- `POST /internal/automation/evaluate`
-  - Evaluates a rule set for a subject and returns:
-    - `allowed: boolean`
-    - `decisions: [...]`
-- `POST /internal/automation/enqueue`
-  - Enqueues messages or actions into processing queues.
+- Auth: Marketing role-based authentication
+- Returns: Basic derived metrics (activity, health scores)
+- Format: JSON for dashboard consumption
 
-### Channel Connector Contracts
+### Third-Party Integration APIs
 
-Each connector implements:
+- OAuth 2.0 flows for:
+  - Tool authentication
+  - Secure data sharing
+  - Permission management
+- Webhook endpoints for:
+  - Status updates from marketing tools
+  - Campaign performance feedback
+  - Error notifications
 
-- `send(message)`
-  - Input: normalized message envelope (recipient, template, metadata).
-  - Output: delivery attempt ID + status.
-- `status(delivery_id)`
-  - Returns provider status for reconciliation.
+### Configuration APIs
+
+- `POST /marketing/integrations/configure`
+  - Configure third-party tool connections
+  - Set data mapping and schedules
+- `GET /marketing/integrations/status`
+  - Monitor integration health
+  - View synchronization status
 
 ## Dependencies
 

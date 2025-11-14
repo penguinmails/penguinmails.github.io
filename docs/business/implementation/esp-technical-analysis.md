@@ -181,7 +181,7 @@ graph TD
 - **Cost Optimization**: Automated provider selection based on volume
 - **Quality Assurance**: Continuous performance monitoring and optimization
 
-**Technical Implementation**: Complete multi-provider architecture with TypeScript integration, automated routing, and performance monitoring available in [ESP Integration Implementation](../technical/architecture/detailed-technical/esp-integration-implementation.md)
+**Technical Implementation**: Complete multi-provider architecture with TypeScript integration, automated routing, and performance monitoring available in [ESP Integration Implementation](../technical/architecture/detailed-technical/esp-integration-implementation)
 
 ---
 
@@ -251,7 +251,7 @@ graph TD
 - [📈 Performance Overview](performance-overview:1) - Executive performance benchmarks and trends
 
 **For optimization techniques:**
-- [⚙️ ESP Integration Implementation](../technical/architecture/detailed-technical/esp-integration-implementation.md) - Complete TypeScript implementation
+- [⚙️ ESP Integration Implementation](../technical/architecture/detailed-technical/esp-integration-implementation) - Complete TypeScript implementation
 
 **For business context:**
 - [💰 ROI Calculator](roi-calculator:1) - Provider cost-benefit analysis

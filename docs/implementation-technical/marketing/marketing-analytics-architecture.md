@@ -1,12 +1,12 @@
-# Marketing Analytics Architecture: Real-Time Measurement Framework
+# Marketing Analytics Architecture: OLAP-Based Measurement Framework
 
 ## Overview
 
-This document defines the technical architecture for the marketing analytics platform: ingestion, processing, storage, attribution, and dashboard delivery for all marketing channels.
+This document defines the technical architecture for marketing analytics using backbone-aligned OLAP views with RBAC controls. Focus on simple, reliable access to client data from `companies` table plus basic derived metrics for marketing teams.
 
-**Document Level:** Level 4 - Technical Implementation  
-**Target Audience:** Data Engineers, Analytics Engineers, Solution Architects  
-**Scope:** Real-time events, cross-channel attribution, executive dashboards
+**Document Level:** Level 4 - Technical Implementation
+**Target Audience:** Data Engineers, Analytics Engineers, Solution Architects
+**Scope:** OLAP data access, basic attribution, simple dashboards
 
 Business context (no duplication, for traceability only):
 - Strategy and epics: `docs/business/marketing/strategy/detailed.md`
@@ -14,67 +14,70 @@ Business context (no duplication, for traceability only):
 
 ---
 
-## 1. Event and Data Model
+## 1. Data Access Model
 
-### 1.1 Core Event Schema
+### 1.1 Marketing Data Views
 
-All marketing data is normalized into a small set of event types:
+Marketing teams access data through pre-defined OLAP views with strict RBAC controls:
 
-- Campaign events (launch, optimize, terminate)
-- Customer journey events (stage changes, touchpoints, conversions)
-- Personalization events (triggered experiences)
+- Client data from `companies` table (required fields only)
+- Simple derived metrics: subscription status, usage activity, basic health indicators
+- Optional enrichment: industry/company size (when available, not guaranteed)
 
 Key properties:
-- tenant_id (multi-tenant isolation)
-- event_type (enum)
-- timestamp (UTC, ISO-8601)
-- source (channel / platform)
-- performance_metrics (impressions, clicks, conversions, cost, revenue)
-- metadata (extensible JSON, schema-validated)
+- tenant_id (multi-tenant isolation via Row Level Security)
+- client_id (references companies table)
+- subscription_status (active/inactive/pending)
+- activity_metrics (usage patterns, last activity date)
+- derived_insights (churn risk, lifecycle stage)
 
 Constraints:
-- Schemas versioned and enforced at ingestion
-- No PII beyond allowed fields; PII handling delegated to CDP and privacy layer
+- Access limited to marketing roles with specific permissions
+- No PII beyond what's in companies table; privacy compliance enforced
+- Monthly refresh cycle for derived metrics (not real-time)
 
-### 1.2 Identity and CDP Integration
+### 1.2 Identity and Access Control
 
-- Deterministic IDs (user_id, email, account_id) plus probabilistic matching.
-- Real-time sync with CDP (e.g. Segment/Posthog) using:
-  - Event-driven ingestion
-  - Schema validation and mapping
-  - Consent-aware attribute enrichment
+- Deterministic IDs limited to client records in companies table
+- Row Level Security (RLS) policies enforce marketing role access
+- Marketing views created with:
+  - Filtered data access (no sensitive operational fields)
+  - Aggregated metrics only (no individual transaction details)
+  - Monthly refresh cycle for derived calculations
 
 Result:
-- Unified profile graph powering attribution and personalization.
-- Strict GDPR/CCPA alignment (consent flags, right-to-be-forgotten routing).
+- Controlled data access for sales qualification and lead scoring
+- Compliance with privacy requirements and data minimization
+- Clear separation between operational and marketing data views
 
 ---
 
-## 2. Ingestion and Stream Processing
+## 2. Data Processing and Refresh
 
-### 2.1 Ingestion Layer
+### 2.1 Data Pipeline
 
-- Transport: Kafka (or equivalent) topics:
-  - marketing-events (all raw events)
-  - analytics-signals (aggregated metrics and anomalies)
+- Scheduled ETL processes:
+  - Monthly refresh of derived marketing metrics
+  - Access to OLAP views with pre-computed aggregations
+  - Simple threshold checks for health monitoring
 - Guarantees:
-  - At-least-once at transport; exactly-once at processing.
-  - 90+ days retention for replay and backfill.
+  - Consistent data across marketing views
+  - 30-day retention for trend analysis
 
-### 2.2 Stream Processing Layer
+### 2.2 Processing Layer
 
 Framework:
-- Apache Flink or similar for:
-  - Real-time validation, enrichment, normalization
-  - Per-tenant partitioning
-  - Sliding/tumbling windows for metrics
-- Latency SLO:
-  - <5s from event to derived metrics
+- Database materialized views and stored procedures for:
+  - Basic metric calculations (usage activity, subscription health)
+  - Simple lead scoring algorithms
+  - Churn risk indicators
+- Refresh SLO:
+  - Monthly updates for derived metrics
 
 Key responsibilities:
-- Compute real-time KPIs (CTR, CVR, ROAS, etc.)
-- Emit alerts to “analytics-alerts” stream when thresholds breached
-- Feed attribution engine with ordered touchpoint sequences
+- Compute basic KPIs (activity rates, conversion indicators)
+- Generate alerts for revenue-impacting events (failed payments, usage drops)
+- Provide data foundation for third-party marketing tools
 
 ---
 
@@ -82,65 +85,63 @@ Key responsibilities:
 
 ### 3.1 Storage Tiers
 
-- Raw store:
-  - Object storage (e.g. S3) for immutable, partitioned event logs
-- Operational analytics:
-  - Columnar / search engine (e.g. ClickHouse, Elasticsearch) for real-time queries
-- Serving DB:
-  - Relational store (e.g. Postgres) for aggregates and dashboard views
-- Warehouse:
-  - Snowflake/BigQuery/Redshift for historical modeling and BI
+- Primary OLTP database:
+  - Companies table with client data
+  - Subscription and usage tables for derived metrics
+- Marketing views layer:
+  - Pre-defined OLAP views with RBAC controls
+  - Materialized views for performance
+- Reporting layer:
+  - Simple aggregations for dashboard consumption
 
 Partitioning:
-- By tenant_id, date, and event_type
-- Ensures query isolation and cost visibility
+- By tenant_id for multi-tenant isolation
+- Monthly partitions for derived metrics
+- Ensures compliance and access control
 
 ---
 
-## 4. Attribution and Measurement Engine
+## 4. Attribution and Measurement
 
-### 4.1 Attribution Models
+### 4.1 Simple Attribution Models
 
-Supported models (configurable per tenant):
-- First-touch, last-touch, linear
-- Time-decay, position-based
-- Data-driven model (trained on historical conversions)
+Supported models (basic implementations):
+- First-touch attribution for lead source tracking
+- Simple conversion tracking from subscription data
+- Basic funnel analysis without complex ML models
 
 Implementation:
-- Offline training jobs compute weights for data-driven model
-- Online scorer:
-  - Maintains per-user touchpoint sequences
-  - Computes fractional credit at conversion time
-- SLO:
-  - Attribution updates visible in <30s post-conversion
+- Database queries for basic attribution calculations
+- Monthly aggregation of conversion paths
+- Simple rule-based credit assignment
 
-### 4.2 Cross-Device and Journey Stitching
+### 4.2 Data Access and Privacy
 
-- Deterministic stitching via auth IDs
-- Probabilistic stitching behind privacy-safe thresholds
-- Device graph maintained per tenant
-- GDPR/CCPA-compliant (configurable retention, opt-out respected)
+- Deterministic attribution using available client data
+- Privacy-compliant data handling with minimal retention
+- Clear audit trails for data access
+- GDPR/CCPA-compliant with data minimization principles
 
 ---
 
-## 5. Dashboard and API Integration
+## 5. Dashboard and Access Integration
 
-Dashboards are consumers of this architecture; all business-facing views are built on:
+Dashboards are simple consumers of OLAP views; business-facing views are built on:
 
-- Aggregated metrics tables and indices
-- Real-time APIs for:
-  - Campaign performance
-  - Journey analytics
-  - Attribution summaries
+- Pre-aggregated marketing views with RBAC controls
+- Monthly refreshed metrics for:
+  - Client health overview
+  - Sales pipeline status
+  - Basic conversion tracking
 
 Backlink:
-- Technical dashboard details: `docs/implementation-technical/marketing/marketing-dashboard-technical.md` (to be consolidated)
+- Technical dashboard details: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
 
 APIs:
-- REST/GraphQL endpoints with:
-  - Tenant-scoped authZ
-  - Role-based access for CMO/Directors/Analysts
-  - Pagination, filtering, and export for BI tools
+- Database view access with:
+  - Marketing role-based authorization
+  - Filtered data access (no sensitive operations data)
+  - Export capabilities for third-party marketing tools
 
 ---
 
@@ -185,3 +186,31 @@ This architecture is intentionally business-agnostic in content, but traceable:
   - See `docs/business/marketing/roi/detailed.md`
 
 All executive and ROI narratives live in business documentation; this file is strictly technical specification for implementing analytics capabilities required to support those outcomes.
+
+---
+
+## QA Automation Implementation Notes
+
+### Automated QA Rules Integration
+
+**Data Validation Layer:**
+- QA rules applied to marketing data exports
+- Automated checks during OLAP view queries
+- Compliance validation for third-party tool data
+
+**Alerting and Monitoring:**
+- Basic alerts for data quality issues
+- Monthly QA reports on data compliance
+- Integration with existing monitoring systems
+
+**Implementation Approach:**
+- Rules implemented as database constraints where possible
+- Third-party tool integration for content validation
+- Manual processes for complex QA requirements
+
+---
+
+**Business Context Links:**
+- QA Rules: `docs/business/marketing/qa-rules.md`
+- Quality Management: `docs/business/marketing/marketing-quality-management.md`
+- Brand Protection: `docs/business/marketing/marketing-brand-protection.md`

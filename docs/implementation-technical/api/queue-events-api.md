@@ -1,36 +1,33 @@
 ---
-title: "Queue & Events REST API Contract"
-description: "REST API contract for enqueueing business events and accessing notifications, aligned with PostHog and queue architecture."
-last_modified_date: "2025-11-10"
+title: "Queue & Events REST API Contract - System Operations"
+description: "REST API contract for system events, notifications, and operational tracking aligned with backbone constraints"
+last_modified_date: "2025-12-19"
 ---
 
-# Queue & Events REST API Contract
+# Queue & Events REST API Contract - System Operations
 
-Level: Implementation-Ready  
-Audience: Backend services, internal tools, (optionally) trusted frontend clients via gateway
+Level: System Operations Implementation
+Audience: Operations Teams, System Administrators, All Users, Implementation Teams
 
-This contract defines REST-only endpoints for:
+This contract defines REST endpoints for:
 
-- Emitting business/operational events into the queue/event pipeline.
-- Exposing a safe, RBAC-enforced notifications feed for executives/admins.
+- Processing system events for all operations
+- Exposing notification feeds for system monitoring
+- Supporting operational event tracking and analysis
 
 It aligns with:
 
-- `../analytics-integration/posthog-business-events-specification.md`
-- `../database-infrastructure/queue-system-implementation-guide.md`
-- `../database-infrastructure/notifications-mermaid-er.md`
-- Backlog stories:
-  - BF-003 (PostHog integration)
-  - BF-005 (queue-backed alerts)
-  - BF-006 (executive API layer)
-  - Revenue/Cost/Operations epics consuming alerts
+- [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification.md)
+- [System Architecture Overview](../architecture-system/architecture-overview.md)
+- [Executive API Contract](executive-api.md)
+- System operations requirements (monitoring, alerts, event tracking)
 
-All endpoints are:
+All endpoints focus on:
 
-- REST-only, JSON
-- Versioned: `/api/v1/...`
-- Authenticated & authorized
-- Transport-agnostic for underlying queue (no direct broker exposure)
+- System oversight through notification systems
+- Event tracking for all user types and operations
+- Real-time and batch processing within backbone technical constraints
+- Comprehensive system intelligence capabilities
 
 ---
 
@@ -38,56 +35,55 @@ All endpoints are:
 
 - `Authorization: Bearer <token>`
 - Event producers:
-  - Internal services or trusted backends with scopes like:
-    - `events:publish`
-    - `alerts:publish`
+  - System services with appropriate scopes:
+    - `system:publish`
+    - `system:alert`
+    - `business:event`
 - Notification consumers:
-  - Authenticated users with roles:
-    - Executive (C-level)
-    - Ops / Deliverability
-    - Support / Finance
-- All writes and sensitive reads are auditable.
+  - All user roles:
+    - `ROLE_EXECUTIVE_CEO`, `ROLE_EXECUTIVE_CFO`, `ROLE_EXECUTIVE_COO`, `ROLE_EXECUTIVE_CTO`
+    - `ROLE_OPS_MANAGER`, `ROLE_SUPPORT_MANAGER`, `ROLE_ANALYST`
+    - `ROLE_SYSTEM_ADMIN`, `ROLE_USER`
+- All access maintains audit trails for compliance
 
-Error model: use shared envelope from `../development-guidelines/api-reference.md`.
+Error model: System envelope per [Executive API](executive-api.md)
 
 ---
 
-## 2. Event Ingestion API
+## 2. Event Processing API
 
-These endpoints accept normalized events and enqueue them for processing and fan-out to PostHog, OLAP, alerts, etc.
+These endpoints process system events aligned with backbone capabilities.
 
-### 2.1 Publish Generic Business Event
+### 2.1 Publish System Event
 
-POST `/api/v1/internal/events`
+POST `/api/v1/events`
 
-Body (schema aligned with PostHog business events spec, simplified example):
+Body (aligned with system operations):
 
 ```json
 {
-  "type": "revenue_impact", 
-  "source": "delivery_service",
+  "type": "system_alert",
+  "source": "monitoring_system",
   "tenant_id": "tn_123",
-  "timestamp": "2025-11-10T12:00:00Z",
+  "timestamp": "2025-12-19T12:00:00Z",
   "payload": {
-    "impact_amount": -350.0,
-    "impact_type": "deliverability_drop",
-    "context": {
-      "bounce_rate": 0.08,
-      "previous_bounce_rate": 0.01
-    },
-    "severity": "high"
+    "impact": "moderate_increasing_risk",
+    "context": "deliverability_trend_analysis",
+    "impact_range": "2K-8K",
+    "priority": "medium",
+    "follow_up_required": true
   }
 }
 ```
 
 Behavior:
 
-- Validates `type` and `payload` against approved schemas:
-  - `revenue_impact`, `cost_optimization`, `operational_efficiency`,
-  - `strategic_decision`, `email_deliverability`, `resource_usage`, etc.
+- Validates `type` and `payload` against system schemas:
+  - `system_alert`, `business_event`, `operational_update`,
+  - `performance_metric`, `user_action`, etc.
 - On success:
-  - Enqueues into internal queue (e.g. `business_events`).
-  - Optionally forwards to PostHog asynchronously.
+  - Processes through system queue
+  - Generates appropriate notifications
 
 Response:
 
@@ -96,49 +92,49 @@ Response:
   "success": true,
   "data": {
     "event_id": "evt_abc123",
-    "queued": true
+    "processed": true,
+    "notification_generated": true
   }
 }
 ```
 
 Constraints:
 
-- Internal-only by default; not a public endpoint.
-- Rejects unknown `type` or malformed payloads with `VALIDATION_ERROR`.
+- Internal endpoint for all system operations
+- Standard validation for all user types
 
-### 2.2 Domain-Specific Event Endpoints (Optional Facades)
+### 2.2 Domain-Specific Events
 
-To simplify for producers, you MAY expose thin facades that map directly to canonical event schemas:
+System endpoints for different operation types:
 
-- POST `/api/v1/internal/events/revenue-impact`
-- POST `/api/v1/internal/events/cost-optimization`
-- POST `/api/v1/internal/events/deliverability`
-- POST `/api/v1/internal/events/resource-usage`
+- POST `/api/v1/events/system-alerts`
+- POST `/api/v1/events/business-metrics`
+- POST `/api/v1/events/operational-updates`
 
 Each:
 
-- Accepts a typed payload (see PostHog spec).
-- Validates & enqueues with correct internal routing keys.
-- Uses same success/error envelope.
+- Accepts domain-specific payload
+- Processes with appropriate routing
+- Uses standard response envelope
 
 ---
 
-## 3. Notification Feed API (Executive/Admin)
+## 3. Notification Feed API (All Users)
 
-Backed by notifications queue + OLTP/OLAP notifications tables.
+Notification system for all operations and users.
 
-### 3.1 List Notifications for Current User
+### 3.1 System Notifications for All Users
 
-GET `/api/v1/notifications?scope=exec&severity=critical,high&limit=50`
+GET `/api/v1/notifications?scope=system&priority=high,medium&limit=25`
 
-Query parameters:
+Query Parameters:
 
-- `scope` (optional):
-  - `exec` (default for executives)
-  - `ops`, `security`, etc. based on RBAC and product design.
-- `severity` (optional): comma-separated `critical|high|medium|low`
-- `status` (optional): `unread|read`
-- `limit` / `cursor` for pagination.
+- `scope` (required):
+  - `system` (default for all users)
+  - `operational`, `business`, `alerts`, etc.
+- `priority` (optional): `critical|high|medium|low`
+- `status` (optional): `unread|reviewed`
+- `timeframe` (optional): `daily|weekly|monthly`
 
 Response:
 
@@ -148,83 +144,91 @@ Response:
   "data": [
     {
       "id": "ntf_123",
-      "type": "revenue_risk",
-      "severity": "critical",
-      "title": "Bounce rate spike for key accounts",
-      "summary": "Bounce rate exceeded 7% for 3 strategic tenants.",
-      "created_at": "2025-11-10T12:05:00Z",
-      "read": false,
+      "type": "system_alert",
+      "priority": "high",
+      "title": "System Performance Alert",
+      "summary": "Deliverability trend requires review for Q1 planning",
+      "created_at": "2025-12-19T12:05:00Z",
+      "status": "pending_review",
       "actions": [
         {
-          "label": "View details",
-          "url": "/exec/revenue-protection?alert=ntf_123"
+          "label": "Review Details",
+          "url": "/system/oversight?alert=ntf_123"
         }
       ]
     }
   ],
   "meta": {
-    "next_cursor": null
+    "timeframe": "monthly",
+    "next_review_date": "2025-12-26T09:00:00Z"
   }
 }
 ```
 
 Rules:
 
-- Results filtered by user’s roles and data access:
-  - Executives see tenant-aggregated and platform-level alerts.
-  - Ops may see more detailed, infra-focused alerts.
-- Implementation reads from notifications store hydrated by queue workers.
+- System notifications focus on operational insights
+- All users see relevant system trends and alerts
+- Review cycles aligned with operational procedures
 
-### 3.2 Mark Notification as Read
+### 3.2 Mark Notification as Reviewed
 
-POST `/api/v1/notifications/{id}/read`
+POST `/api/v1/notifications/{id}/reviewed`
 
 Body (optional):
 
 ```json
 {
-  "read": true
+  "reviewed": true,
+  "notes": "System trend acknowledged for quarterly review"
 }
 ```
 
 Behavior:
 
-- Marks notification as read for current user.
-- Idempotent.
+- Marks notification as reviewed
+- Idempotent operation
+- Maintains audit trail
 
-### 3.3 Bulk Acknowledge
+### 3.3 Bulk Review
 
-POST `/api/v1/notifications/ack`
+POST `/api/v1/notifications/bulk-review`
 
 Body:
 
 ```json
 {
-  "ids": ["ntf_123", "ntf_456"]
+  "ids": ["ntf_123", "ntf_456"],
+  "action": "quarterly_review",
+  "context": "Q1 operational planning cycle"
 }
 ```
 
 Behavior:
 
-- Marks multiple notifications as read.
-- Enforces that user can only ack notifications they can see.
+- Marks notifications for quarterly review
+- Enforces role-based access controls
+- Maintains oversight audit trail
 
 ---
 
-## 4. Alert/Event Semantics
+## 4. Alert Semantics
 
-This API does NOT define the full event semantics; instead it binds to canonical specs:
+This API defines system alert semantics for all operations:
 
-- All `type` values and payload shapes must align with:
-  - `../analytics-integration/posthog-business-events-specification.md`
-- Queue topology, DLQ behavior, retries:
-  - See `../database-infrastructure/queue-system-implementation-guide.md`
+- Event types and payload shapes aligned with:
+  - [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification.md)
+- Processing with appropriate alert routing:
+  - Real-time alerts for critical issues
+  - Daily summaries for operational updates
+  - Weekly reviews for business metrics
+  - Monthly planning cycles
 
-This contract only guarantees:
+Contract guarantees:
 
-- Stable REST endpoints for producers and consumers.
-- Validation and enqueue semantics.
-- Mapping to internal processing/alerting pipelines.
+- Standard endpoints for all operations
+- Validation and processing aligned with backbone capabilities
+- System insights supporting operational decision making
 
 ---
 
@@ -232,40 +236,51 @@ This contract only guarantees:
 
 Standard envelope, with key codes:
 
-- `AUTHENTICATION_REQUIRED` (401)
-- `INSUFFICIENT_PERMISSIONS` (403)
-- `VALIDATION_ERROR` (400/422) for bad event schemas
-- `RESOURCE_NOT_FOUND` (404) for missing notification IDs
-- `INTERNAL_SERVER_ERROR` (500) for unexpected failures
+- `AUTHENTICATION_REQUIRED`
+- `ACCESS_DENIED`
+- `VALIDATION_ERROR` for event schemas
+- `RESOURCE_NOT_FOUND` for missing notification IDs
+- `PROCESS_REQUIRED` for manual review needed
+- `INTERNAL_SERVER_ERROR`
 
-No raw broker/PostHog errors are exposed; they are normalized.
+No raw system errors exposed - abstraction maintained.
 
 ---
 
-## 6. Security, Rate Limiting & Audit
+## 6. Security & Compliance
 
-- All endpoints require HTTPS.
-- Event ingestion:
-  - Rate limited per service/key to prevent abuse.
-  - Auth scopes restrict who can publish system-level events.
+- Endpoints require appropriate access for all user types
+- Event processing:
+  - Rate limiting aligned with system operations needs
+  - Access controls for all user roles
 - Notifications:
-  - RBAC ensures users only see data within permitted scopes.
-- Audit:
-  - Critical actions (e.g., publishing high-severity alerts, changing notification routing configs if added later) must be logged with request_id, actor, payload fingerprint.
+  - Role-based access for all system functions
+  - Audit trails for compliance and operations
 
 ---
 
-## 7. Relationship to Other APIs
+## 7. Relationship to Other Systems
 
-- Tenant SMTP API:
-  - Emits deliverability-related events → consumed here.
-- Central SMTP Operations API:
-  - Emits IP/pool/reputation events → routed via this API to alerts and analytics.
 - Executive API:
-  - Reads aggregated notifications and alert counts (not raw queue).
-- Core Product APIs:
-  - May emit events (e.g., campaign failures, high churn-risk signals) via this API for downstream processing.
+  - Reads notifications and system summaries
+- Backbone Operations:
+  - Event processing from backbone systems
+- System Intelligence:
+  - Event tracking for system monitoring and analysis
+- Business Systems:
+  - Data feeds business planning and competitive analysis
 
 This separation ensures:
-- Producers and consumers use stable REST contracts.
-- Queue and analytics internals remain encapsulated.
+
+- All users use appropriate system APIs
+- System intelligence supports operational insights for all user types
+- System oversight aligns with backbone technical capabilities
+- System value delivery focuses on operational intelligence for all operations
+
+---
+
+**Document Classification:** System Operations Implementation
+**Stakeholder Access:** All Users, Operations Teams, System Administrators, Business Users, Executive Teams
+**Implementation Access:** System Engineers, Operations Coordinators, All Development Teams
+
+This system API contract provides comprehensive notification capabilities while respecting backbone technical constraints and supporting all user types and operational needs.

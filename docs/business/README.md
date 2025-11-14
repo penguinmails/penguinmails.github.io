@@ -7,7 +7,7 @@ Welcome to the comprehensive Business Documentation Hub designed around progress
 ## 🏢 Progressive Disclosure Structure
 
 ### Level 1: Entry / Orientation
-**Primary Entry**: [`index.md`](index.md) → Business Leaders section
+**Primary Entry**: [`index.md`](index) → Business Leaders section
 
 Access core entry points designed for rapid orientation and executive-level decision making.
 
@@ -15,7 +15,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 **Directory**: [`core/`](core/) - Executive business case documents
 
 - **Executive Summary**: Comprehensive business overview (158 lines)
-- **Cost Comparisons**: Financial analysis with alternatives (≤200 lines)  
+- **Cost Comparisons**: Financial analysis with alternatives (≤200 lines)
 - **Competitive Analysis**: Market positioning (≤200 lines)
 - **ROI Calculator**: Financial modeling (≤200 lines)
 
@@ -28,7 +28,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 - **Users**: Finance teams, CFOs, business analysts
 - **Content**: 200-300 lines per document
 
-#### 🏢 Procurement & Compliance  
+#### 🏢 Procurement & Compliance
 - **Location**: [`procurement-compliance/`](procurement-compliance/)
 - **Focus**: Enterprise procurement, compliance frameworks, security
 - **Users**: Procurement, legal, compliance officers
@@ -62,29 +62,29 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 ### Fast-Track Decision Path (5-10 minutes)
 1. `index.md` → Business Leaders section
-2. `core/executive-summary.md`
+2. `core/executive-summary`
 3. Jump to specific areas:
-   - Financial: `core/roi-calculator.md` + `core/cost-comparisons.md`
-   - Market: `core/competitive-analysis.md`
-   - Enterprise: `procurement-compliance/procurement-guide.md`
+   - Financial: `core/roi-calculator` + `core/cost-comparisons`
+   - Market: `core/competitive-analysis`
+   - Enterprise: `procurement-compliance/procurement-guide`
 
 ### Formal Evaluation Pack
-- Bundle: `core/executive-summary.md` + `core/competitive-analysis.md` + `core/roi-calculator.md` + `core/cost-comparisons.md` + `procurement-compliance/procurement-guide.md`
+- Bundle: `core/executive-summary` + `core/competitive-analysis` + `core/roi-calculator` + `core/cost-comparisons` + `procurement-compliance/procurement-guide`
 
 ### Industry-Specific Evaluation
-- Start: `core/executive-summary.md`
-- Industry Deep Dive: `industry-business-cases/[industry].md`
-- Technical Validation: `implementation/implementation-requirements.md`
+- Start: `core/executive-summary`
+- Industry Deep Dive: `industry-business-cases/[industry]`
+- Technical Validation: `implementation/implementation-requirements`
 
 ## 📁 Directory Navigation Guide
 
 | User Type | Start Here | Go Deeper |
 |-----------|------------|-----------|
-| **C-Suite Executives** | [`core/executive-summary.md`](core/executive-summary.md) | [`procurement-compliance/`](procurement-compliance/) |
-| **Finance Teams** | [`core/roi-calculator.md`](core/roi-calculator.md) | [`financial-analysis/`](financial-analysis/) |
-| **IT Directors** | [`core/executive-summary.md`](core/executive-summary.md) | [`implementation/`](implementation/) |
-| **Procurement** | [`procurement-compliance/procurement-guide.md`](procurement-compliance/procurement-guide.md) | [`procurement-compliance/compliance-framework.md`](procurement-compliance/compliance-framework.md) |
-| **Operations** | [`performance/performance-dashboard.md`](performance/performance-dashboard.md) | [`performance/performance-benchmarks.md`](performance/performance-benchmarks.md) |
+| **C-Suite Executives** | [`core/executive-summary`](core/executive-summary) | [`procurement-compliance/`](procurement-compliance/) |
+| **Finance Teams** | [`core/roi-calculator`](core/roi-calculator) | [`financial-analysis/`](financial-analysis/) |
+| **IT Directors** | [`core/executive-summary`](core/executive-summary) | [`implementation/`](implementation/) |
+| **Procurement** | [`procurement-compliance/procurement-guide`](procurement-compliance/procurement-guide) | [`procurement-compliance/compliance-framework`](procurement-compliance/compliance-framework) |
+| **Operations** | [`performance/performance-dashboard`](performance/performance-dashboard) | [`performance/performance-benchmarks`](performance/performance-benchmarks) |
 
 ## 🎯 Content Organization Principles
 

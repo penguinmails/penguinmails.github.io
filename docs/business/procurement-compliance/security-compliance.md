@@ -148,19 +148,19 @@ Security and compliance features are integrated into the core platform:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Executive Decision Making (Level 2):**
-- [📊 Cost Analysis Overview](cost-analysis-overview.md) - Business case for security investment
-- [💰 ROI Calculator](roi-calculator.md) - Financial justification for security features
-- [🏆 Competitive Analysis](competitive-analysis.md) - Security capabilities vs. alternatives
-- [🏗️ Implementation Roadmap](implementation-roadmap.md) - Timeline and resource requirements
+- [📊 Cost Analysis Overview](../financial-analysis/cost-analysis-overview) - Business case for security investment
+- [💰 ROI Calculator](../core/roi-calculator) - Financial justification for security features
+- [🏆 Competitive Analysis](../core/competitive-analysis) - Security capabilities vs. alternatives
+- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Timeline and resource requirements
 
 **For Technical Validation (Level 3):**
-- [📋 Detailed Security Framework](security-compliance-detailed.md) - Complete technical security analysis
-- [📋 Compliance Framework](compliance-framework.md) - Complete regulatory analysis
-- [🛡️ Security Framework (Enterprise)](../compliance-security/enterprise/security-framework.md) - Technical security controls
+- [📋 Detailed Security Framework](security-compliance-detailed) - Complete technical security analysis
+- [📋 Compliance Framework](compliance-framework) - Complete regulatory analysis
+- [🛡️ Security Framework (Enterprise)](../compliance-security/enterprise/security-framework) - Technical security controls
 
 **For Procurement & Legal Review:**
-- [📋 Procurement Guide](procurement-guide.md) - Enterprise evaluation framework
-- [🔍 Industry-Specific Cases](industry-business-cases/) - Sector-specific requirements
+- [📋 Procurement Guide](procurement-guide) - Enterprise evaluation framework
+- [🔍 Industry-Specific Cases](../industry-business-cases/) - Sector-specific requirements
 
 ---
 

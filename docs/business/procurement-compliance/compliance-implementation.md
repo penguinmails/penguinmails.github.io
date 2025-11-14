@@ -38,7 +38,7 @@ last_modified_date: "2025-12-19"
 - Implement advanced reporting and analytics
 - Integrate with security monitoring systems
 
-**Technical Implementation Details**: Full TypeScript implementation, API integration, and monitoring setup available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation.md)
+**Technical Implementation Details**: Full TypeScript implementation, API integration, and monitoring setup available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation)
 
 ---
 
@@ -224,7 +224,7 @@ last_modified_date: "2025-12-19"
 - [🛡️ Compliance Overview](compliance-overview:1) - Strategic compliance summary
 
 **For technical implementation:**
-- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation.md) - Complete TypeScript implementation
+- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation) - Complete TypeScript implementation
 
 **For operational monitoring:**
 - [📊 Compliance Monitoring](compliance-monitoring:1) - Operational oversight

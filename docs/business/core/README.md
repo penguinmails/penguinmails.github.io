@@ -7,10 +7,10 @@ This directory contains the essential business documents that serve as the prima
 ## Progressive Disclosure Flow
 
 ### 📋 Entry Point Documents
-- [**Executive Summary**](./executive-summary.md) - Comprehensive business case overview (158 lines)
-- [**Cost Comparisons**](./cost-comparisons.md) - Financial comparison with alternatives (≤200 lines)
-- [**Competitive Analysis**](./competitive-analysis.md) - Market positioning and vendor comparison (≤200 lines)
-- [**ROI Calculator**](./roi-calculator.md) - Financial modeling and return calculations (≤200 lines)
+- [**Executive Summary**](./executive-summary) - Comprehensive business case overview (158 lines)
+- [**Cost Comparisons**](./cost-comparisons) - Financial comparison with alternatives (≤200 lines)
+- [**Competitive Analysis**](./competitive-analysis) - Market positioning and vendor comparison (≤200 lines)
+- [**ROI Calculator**](./roi-calculator) - Financial modeling and return calculations (≤200 lines)
 
 ### 🎯 Decision Path
 1. **Start with** `executive-summary.md` for complete business case overview

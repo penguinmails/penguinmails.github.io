@@ -38,76 +38,140 @@ This document provides an operations framework summary for marketing teams, focu
 
 ---
 
+## Marketing Team Roles and Responsibilities
+
+### Marketing Team Focus
+Marketing teams are primarily focused on B2B sales of subscription services to new tenants (clients). Technical implementation and complex customer support remain separate from marketing responsibilities. Marketing's value creation comes through three clear categories:
+
+- **Information Access:** Access to client data from `companies` table plus basic derived metrics for sales qualification
+- **Analysis:** Simple derived metrics for lead scoring, churn risk indicators, and lifecycle stage determination
+- **Marketing Actions:** Lead generation, sales enablement materials, and third-party automation tools for campaign execution
+
+### Marketing Team Information Requirements
+Marketing teams require access to three categories of information for effective B2B sales execution:
+
+**Information Access:**
+- Basic client data from `companies` table (required fields only)
+- Simple derived metrics: subscription status, usage patterns, basic activity indicators
+- Optional enrichment fields: industry, company size (when available, not guaranteed)
+
+**Analysis Capabilities:**
+- Lead scoring based on subscription status and usage patterns
+- Churn risk indicators (inactive periods, reduced usage)
+- Lifecycle stages derived from subscription + usage data
+- Basic reporting on client health and engagement
+
+**Marketing Actions Support:**
+- Third-party automation tools for email campaigns and lead nurturing
+- Sales enablement materials and competitive positioning content
+- Integration with CRM systems for pipeline tracking
+- Basic performance metrics for campaign effectiveness
+
+---
+
 ## Workflow Automation Excellence
 
 ### Marketing Workflow Automation Standards
-**Primary Objective:** Establish comprehensive workflow automation for all marketing processes
+**Primary Objective:** Establish practical workflow automation using third-party tools
 
 **Automation Categories:**
 
 **Campaign Management Automation:**
-- Campaign creation and launch automation workflows
-- Campaign performance monitoring and optimization automation
-- Cross-channel campaign coordination and attribution automation
-- Campaign budget optimization and reallocation automation
+- Third-party tool automation for campaign creation and launch
+- Basic performance monitoring using platform analytics
+- Cross-channel coordination through integrated marketing suites
+- Budget tracking and manual reallocation based on performance
 
 **Content Management Automation:**
-- Content creation and approval workflow automation
-- Content distribution and publishing automation
-- Content performance tracking and optimization automation
-- Brand compliance and quality assurance automation
+- Template-based content creation with approval workflows
+- Automated distribution through marketing platforms
+- Basic performance tracking in content tools
+- Quality assurance integration with QA rules
 
 **Lead Management Automation:**
-- Lead capture and qualification automation
-- Lead scoring and segmentation automation
-- Lead nurturing and conversion automation
-- Lead handoff and sales integration automation
+- Lead capture through CRM and marketing tool integrations
+- Basic lead scoring based on available data
+- Automated nurturing sequences in marketing platforms
+- Lead handoff processes using integrated workflows
 
 **Analytics and Reporting Automation:**
-- Marketing analytics data collection and processing automation
-- Performance reporting and dashboard automation
-- ROI calculation and attribution automation
-- Executive reporting and communication automation
+- Data collection through third-party tool integrations
+- Basic reporting dashboards from marketing platforms
+- Simple ROI calculations using platform metrics
+- Monthly reporting automation for key stakeholders
 
 ### Automation Performance Standards
 **Technical Performance Requirements:**
-- **Processing Speed:** <2 second latency for automation workflow execution
-- **Accuracy Rate:** >99% accuracy for automated marketing processes and decisions
-- **Uptime:** 99.9% uptime for all marketing automation platforms and workflows
-- **Scalability:** Support for 10,000+ concurrent marketing automation workflows
+- **Processing Speed:** Reliable performance within third-party tool constraints
+- **Accuracy Rate:** High accuracy for automated processes using platform validation
+- **Uptime:** Platform-dependent uptime based on selected third-party tools
+- **Scalability:** Support for current marketing team size and growth projections
 
 **Business Performance Standards:**
-- **Automation Coverage:** 80% of marketing processes automated within 18 months
-- **Error Reduction:** 90% reduction in manual errors and process inconsistencies
-- **Time Savings:** 70% reduction in manual marketing workflow time
-- **Quality Improvement:** 95% improvement in marketing process quality and consistency
+- **Automation Coverage:** Practical automation using available third-party tools
+- **Error Reduction:** Significant reduction in manual errors through tool validation
+- **Time Savings:** Measurable time savings from automated workflows
+- **Quality Improvement:** Consistent quality through template and tool usage
 
 ---
 
 ## Technology Integration Framework
 
 ### Marketing Technology Stack Integration
-**Primary Objective:** Establish seamless integration across all marketing technology platforms
+**Primary Objective:** Establish practical integration using third-party tools and available APIs
 
 **Integration Architecture:**
 
 **Core Platform Integration:**
-- Customer Relationship Management (CRM) integration with marketing automation
-- Marketing automation platform integration with analytics and reporting tools
-- Customer data platform integration with all marketing systems
-- Content management system integration with marketing automation
+- CRM integration with marketing automation tools
+- Marketing platform integration with basic analytics
+- Data access through OLAP views with RBAC controls
+- Content management through approved marketing platforms
 
 **Data Integration Requirements:**
-- **Real-time Data Sync:** <5 second latency for data synchronization across platforms
-- **Data Accuracy:** 99.5% data accuracy across all integrated marketing platforms
-- **Data Consistency:** Consistent data definitions and standards across all platforms
-- **Data Governance:** Automated data governance and compliance monitoring
+- **Practical Data Sync:** Monthly data synchronization cycles
+- **Data Accuracy:** High accuracy within available data constraints
+- **Data Consistency:** Consistent data access through controlled views
+- **Data Governance:** RBAC controls and audit logging for data access
 
 **API Integration Standards:**
-- **RESTful APIs:** Standard RESTful API integration for all marketing platforms
-- **GraphQL Support:** GraphQL support for efficient data querying and manipulation
-- **Rate Limiting:** Appropriate rate limiting and performance optimization for API calls
-- **Security Standards:** Enterprise-grade security for all API integrations
+- **RESTful APIs:** API integration for selected third-party tools
+- **Data Export:** CSV/JSON export capabilities for data transfer
+- **Rate Limiting:** Appropriate rate limiting based on platform constraints
+- **Security Standards:** Secure authentication for all tool integrations
+
+---
+
+## Third-Party Ticket System Integration Plan
+
+### Current State
+Marketing teams currently handle client inquiries informally through direct communication channels, creating inefficiencies in tracking, follow-up, and knowledge sharing.
+
+### Planned Integration
+A third-party ticket system will be integrated to provide:
+
+**Ticket Creation and Management:**
+- Standardized ticket creation for client inquiries during sales processes
+- Automated ticket routing to appropriate technical support teams
+- Ticket status tracking and resolution monitoring
+- Knowledge base integration for common issue resolution
+
+**Communication Protocols:**
+- Defined escalation paths for critical client issues
+- Automated notifications to marketing and technical teams
+- Client communication templates and response guidelines
+- Post-resolution follow-up procedures
+
+**Analytics and Reporting:**
+- Ticket volume and resolution time analytics
+- Common issue identification and trend analysis
+- Client satisfaction tracking and feedback collection
+- Performance metrics for support effectiveness
+
+### Implementation Timeline
+- **Phase 1 (Q1):** System selection and initial integration setup
+- **Phase 2 (Q2):** Marketing team training and process documentation
+- **Phase 3 (Q3-Q4):** Full operational rollout and optimization
 
 ---
 
@@ -115,16 +179,16 @@ This document provides an operations framework summary for marketing teams, focu
 
 ### Operations Success Metrics
 **Operational Performance KPIs:**
-- **Automation Efficiency:** 50% improvement in marketing automation efficiency
-- **Process Standardization:** 90% of marketing processes standardized and documented
-- **Technology Integration:** 100% integration across all marketing technology platforms
-- **Quality Assurance:** 90% reduction in marketing quality issues and errors
+- **Automation Efficiency:** Measurable improvement in workflow efficiency using third-party tools
+- **Process Standardization:** Standardized processes using approved templates and platforms
+- **Technology Integration:** Reliable integration with selected marketing technology stack
+- **Quality Assurance:** Significant reduction in quality issues through QA rules and templates
 
 **Business Impact Metrics:**
-- **Cost Reduction:** 30% reduction in marketing operations costs and overhead
-- **Time Savings:** 70% reduction in manual marketing workflow time
-- **Performance Improvement:** 35% improvement in overall marketing performance
-- **ROI Enhancement:** 25% improvement in marketing ROI and business impact
+- **Cost Efficiency:** Better cost management through third-party tool optimization
+- **Time Savings:** Practical time savings from automated workflows and templates
+- **Performance Improvement:** Steady improvement in marketing effectiveness metrics
+- **ROI Enhancement:** Positive ROI from implemented marketing initiatives
 
 ### Continuous Optimization Framework
 **Primary Objective:** Establish systematic optimization methodology for continuous improvement

@@ -7,18 +7,18 @@ This directory contains quick reference guides, executive templates, detailed me
 ## Progressive Disclosure Flow
 
 ### 📋 Reference Documents
-- [**Quick Reference: Cost-Benefit**](./quick-reference-cost-benefit.md) - Quick cost-benefit analysis guide (≤100 lines)
-- [**Quick Reference: Provider Selection**](./quick-reference-provider-selection.md) - Vendor selection checklist (≤100 lines)
-- [**Cost Tool Pricing**](./cost-tool-pricing.md) - Pricing tool and calculator guidance (≤200 lines)
-- [**Executive Summary Template**](./executive-summary-template.md) - Template for executive presentations (≤200 lines)
-- [**Detailed Methodology**](./detailed-methodology.md) - Comprehensive analysis methodology (≤300 lines)
+- [**Quick Reference: Cost-Benefit**](./quick-reference-cost-benefit) - Quick cost-benefit analysis guide (≤100 lines)
+- [**Quick Reference: Provider Selection**](./quick-reference-provider-selection) - Vendor selection checklist (≤100 lines)
+- [**Cost Tool Pricing**](./cost-tool-pricing) - Pricing tool and calculator guidance (≤200 lines)
+- [**Executive Summary Template**](./executive-summary-template) - Template for executive presentations (≤200 lines)
+- [**Detailed Methodology**](./detailed-methodology) - Comprehensive analysis methodology (≤300 lines)
 
 ### 🎯 Reference Usage Path
-1. **Quick Analysis**: Use `quick-reference-cost-benefit.md` for rapid assessments
-2. **Vendor Evaluation**: Reference `quick-reference-provider-selection.md` for vendor selection
-3. **Pricing Tools**: Use `cost-tool-pricing.md` for pricing analysis
-4. **Executive Preparation**: Template with `executive-summary-template.md`
-5. **Deep Analysis**: Comprehensive methodology in `detailed-methodology.md`
+1. **Quick Analysis**: Use `quick-reference-cost-benefit` for rapid assessments
+2. **Vendor Evaluation**: Reference `quick-reference-provider-selection` for vendor selection
+3. **Pricing Tools**: Use `cost-tool-pricing` for pricing analysis
+4. **Executive Preparation**: Template with `executive-summary-template`
+5. **Deep Analysis**: Comprehensive methodology in `detailed-methodology`
 
 ### 📋 Reference Characteristics
 - **Content Depth**: Concise reference materials (100-300 lines per document)

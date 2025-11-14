@@ -15,6 +15,7 @@ last_modified_date: "2025-12-19"
 ## 🏆 Provider Comparison Summary
 
 ### Email Service Provider (ESP) Cost Analysis by Volume
+![Cost Comparison](/docs/assets/esp-pricing.png){: width="100%" }
 
 #### 10,000 emails/month
 
@@ -156,16 +157,16 @@ For 100K email campaigns, provider selection affects deliverability:
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
-- [🏢 Executive Summary](executive-summary.md) - Strategic findings and recommendations
-- [💰 ROI Calculator](roi-calculator.md) - Cost-benefit analysis tool
+- [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
+- [💰 ROI Calculator](roi-calculator) - Cost-benefit analysis tool
 
 **For detailed analysis:**
-- [📊 Detailed Provider Comparison](competitive-analysis-detailed.md) - Complete vendor analysis with migration costs
-- [🏗️ Implementation Roadmap](implementation-roadmap.md) - Migration and implementation planning
+- [📊 Detailed Provider Comparison](../competitive-intelligence/competitive-analysis-detailed) - Complete vendor analysis with migration costs
+- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Migration and implementation planning
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](technical-infrastructure.md) - Technical specifications and setup
-- [📋 Performance Benchmarks](performance-benchmarks.md) - Industry performance data
+- [🔧 Technical Infrastructure](../implementation/technical-infrastructure) - Technical specifications and setup
+- [📋 Performance Benchmarks](../performance/performance-benchmarks) - Industry performance data
 
 ---
 

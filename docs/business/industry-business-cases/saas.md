@@ -185,14 +185,14 @@ SaaS companies face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For SaaS Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../roi-calculator.md) - SaaS-specific ROI calculations
-- [📊 Cost Comparisons](../cost-comparisons.md) - SaaS cost analysis and benchmarks
-- [🏆 Competitive Analysis](../competitive-analysis.md) - SaaS provider comparison
+- [💰 ROI Calculator](../core/roi-calculator) - SaaS-specific ROI calculations
+- [📊 Cost Comparisons](../core/cost-comparisons) - SaaS cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core/competitive-analysis) - SaaS provider comparison
 
 **For Technical Validation (Level 3):**
-- [📋 Detailed SaaS Analysis](saas-detailed.md) - Complete SaaS implementation and product-led growth deep dive
-- [📋 Compliance Framework](../compliance-framework.md) - Complete SaaS compliance analysis
-- [🔒 Security Compliance Overview](../security-compliance.md) - SaaS security overview
+- [📋 Detailed SaaS Analysis](saas-detailed) - Complete SaaS implementation and product-led growth deep dive
+- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete SaaS compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - SaaS security overview
 
 ---
 

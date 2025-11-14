@@ -141,16 +141,16 @@ Financial institutions face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../roi-calculator.md) - Financial services-specific ROI calculations
-- [📊 Cost Comparisons](../cost-comparisons.md) - Cost analysis and benchmarks
-- [🏆 Competitive Analysis](../competitive-analysis.md) - Provider comparison
+- [💰 ROI Calculator](../core/roi-calculator) - Financial services-specific ROI calculations
+- [📊 Cost Comparisons](../core/cost-comparisons) - Cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core/competitive-analysis) - Provider comparison
 
 **Technical Validation (Level 3):**
-- [📋 Compliance Framework](../compliance-framework.md) - Complete SOX and financial compliance analysis
-- [🔒 Security Compliance Overview](../security-compliance.md) - Financial services security overview
+- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete SOX and financial compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - Financial services security overview
 
 **For Risk and Compliance Review:**
-- [📋 Procurement Guide](../procurement-guide.md) - Enterprise evaluation framework
+- [📋 Procurement Guide](../procurement-compliance/procurement-guide) - Enterprise evaluation framework
 
 ---
 

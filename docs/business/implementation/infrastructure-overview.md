@@ -105,7 +105,7 @@ To keep messaging consistent and accurate:
   - “Customer-facing invoices are produced by our billing system according to plans and agreements; internal cost models are for our own operations, not direct pass-through metering.”
 
 For SQL-level definitions, implementation details, and governance specifics, refer to:
-- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`](docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md)
+- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide`](docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide)
 - Hostwinds Unmanaged Linux VPS reference pricing: [https://www.hostwinds.com/vps/unmanaged-linux](https://www.hostwinds.com/vps/unmanaged-linux)
 
 ---

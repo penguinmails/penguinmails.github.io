@@ -189,14 +189,14 @@ E-commerce and retail organizations face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For E-commerce Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../roi-calculator.md) - E-commerce-specific ROI calculations
-- [📊 Cost Comparisons](../cost-comparisons.md) - E-commerce cost analysis and benchmarks
-- [🏆 Competitive Analysis](../competitive-analysis.md) - E-commerce provider comparison
+- [💰 ROI Calculator](../core/roi-calculator) - E-commerce-specific ROI calculations
+- [📊 Cost Comparisons](../core/cost-comparisons) - E-commerce cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core/competitive-analysis) - E-commerce provider comparison
 
 **For Technical Validation (Level 3):**
-- [📋 Detailed E-commerce Analysis](ecommerce-detailed.md) - Complete e-commerce implementation and automation deep dive
-- [📋 Compliance Framework](../compliance-framework.md) - Complete e-commerce compliance analysis
-- [🔒 Security Compliance Overview](../security-compliance.md) - E-commerce security overview
+- [📋 Detailed E-commerce Analysis](ecommerce-detailed) - Complete e-commerce implementation and automation deep dive
+- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete e-commerce compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - E-commerce security overview
 
 ---
 

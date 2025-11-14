@@ -7,24 +7,24 @@ This directory contains comprehensive procurement guidance, compliance framework
 ## Progressive Disclosure Flow
 
 ### 📋 Procurement & Compliance Documents
-- [**Procurement Guide**](./procurement-guide.md) - Enterprise evaluation framework (≤200 lines)
-- [**Procurement Guide Detailed**](./procurement-guide-detailed.md) - Complete procurement process (265 lines) 
-- [**Compliance Overview**](./compliance-overview.md) - Executive compliance summary (≤200 lines)
-- [**Security Compliance**](./security-compliance.md) - Security and compliance summary (≤200 lines)
-- [**Security Compliance Detailed**](./security-compliance-detailed.md) - Technical security framework (96 lines)
-- [**Compliance Framework**](./compliance-framework.md) - Complete compliance analysis (≤300 lines)
-- [**Compliance Costs**](./compliance-costs.md) - Compliance investment analysis (≤300 lines)
-- [**Compliance Implementation**](./compliance-implementation.md) - Technical compliance systems (≤300 lines)
-- [**Compliance Incident Response**](./compliance-incident-response.md) - Incident management procedures (≤300 lines)
-- [**Compliance Monitoring**](./compliance-monitoring.md) - Ongoing compliance monitoring (≤300 lines)
+- [**Procurement Guide**](./procurement-guide) - Enterprise evaluation framework (≤200 lines)
+- [**Procurement Guide Detailed**](./procurement-guide-detailed) - Complete procurement process (265 lines)
+- [**Compliance Overview**](./compliance-overview) - Executive compliance summary (≤200 lines)
+- [**Security Compliance**](./security-compliance) - Security and compliance summary (≤200 lines)
+- [**Security Compliance Detailed**](./security-compliance-detailed) - Technical security framework (96 lines)
+- [**Compliance Framework**](./compliance-framework) - Complete compliance analysis (≤300 lines)
+- [**Compliance Costs**](./compliance-costs) - Compliance investment analysis (≤300 lines)
+- [**Compliance Implementation**](./compliance-implementation) - Technical compliance systems (≤300 lines)
+- [**Compliance Incident Response**](./compliance-incident-response) - Incident management procedures (≤300 lines)
+- [**Compliance Monitoring**](./compliance-monitoring) - Ongoing compliance monitoring (≤300 lines)
 
 ### 🎯 Enterprise Evaluation Path
-1. **Procurement Start**: Begin with `procurement-guide.md` for evaluation framework
-2. **Detailed Process**: Use `procurement-guide-detailed.md` for complete procurement procedures
-3. **Compliance Assessment**: Reference `compliance-overview.md` and `security-compliance.md`
-4. **Technical Validation**: Deep dive into `compliance-framework.md` and `security-compliance-detailed.md`
-5. **Implementation Planning**: Use `compliance-implementation.md` for technical setup
-6. **Ongoing Management**: Reference `compliance-monitoring.md` and `compliance-incident-response.md`
+1. **Procurement Start**: Begin with `procurement-guide` for evaluation framework
+2. **Detailed Process**: Use `procurement-guide-detailed` for complete procurement procedures
+3. **Compliance Assessment**: Reference `compliance-overview` and `security-compliance`
+4. **Technical Validation**: Deep dive into `compliance-framework` and `security-compliance-detailed`
+5. **Implementation Planning**: Use `compliance-implementation` for technical setup
+6. **Ongoing Management**: Reference `compliance-monitoring` and `compliance-incident-response`
 
 ### 🏢 Enterprise Characteristics
 - **Content Depth**: Enterprise-focused (200-300 lines per document)

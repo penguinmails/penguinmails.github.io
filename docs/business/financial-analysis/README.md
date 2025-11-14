@@ -7,18 +7,18 @@ This directory contains comprehensive financial analysis files that provide deep
 ## Progressive Disclosure Flow
 
 ### 📊 Deep Analysis Documents
-- [**Financial Analysis Benchmarks**](./financial-analysis-benchmarks.md) - Comprehensive industry benchmarks (≤300 lines)
-- [**ROI Calculator Detailed**](./roi-calculator-detailed.md) - Advanced financial modeling tools (≤300 lines)
-- [**Cost Analysis Overview**](./cost-analysis-overview.md) - Strategic cost breakdown analysis (≤200 lines)
-- [**Cost Implementation**](./cost-implementation.md) - Implementation cost management (≤300 lines)
-- [**Personnel Analysis**](./personnel-analysis.md) - Workforce impact and cost analysis (≤300 lines)
+- [**Financial Analysis Benchmarks**](./financial-analysis-benchmarks) - Comprehensive industry benchmarks (≤300 lines)
+- [**ROI Calculator Detailed**](./roi-calculator-detailed) - Advanced financial modeling tools (≤300 lines)
+- [**Cost Analysis Overview**](./cost-analysis-overview) - Strategic cost breakdown analysis (≤200 lines)
+- [**Cost Implementation**](./cost-implementation) - Implementation cost management (≤300 lines)
+- [**Personnel Analysis**](./personnel-analysis) - Workforce impact and cost analysis (≤300 lines)
 
 ### 🎯 Financial Analysis Path
-1. **Surface Level**: Start with `../core/roi-calculator.md` for basic ROI
+1. **Surface Level**: Start with `../core/roi-calculator` for basic ROI
 2. **Deep Dive**: Move here for comprehensive financial modeling
-3. **Advanced Analysis**: Use `financial-analysis-benchmarks.md` for industry comparisons
-4. **Implementation Costs**: Refer to `cost-implementation.md` for detailed cost planning
-5. **Personnel Impact**: Analyze workforce changes with `personnel-analysis.md`
+3. **Advanced Analysis**: Use `financial-analysis-benchmarks` for industry comparisons
+4. **Implementation Costs**: Refer to `cost-implementation` for detailed cost planning
+5. **Personnel Impact**: Analyze workforce changes with `personnel-analysis`
 
 ### 📈 Analysis Characteristics
 - **Content Depth**: Technical financial analysis (200-300 lines per document)

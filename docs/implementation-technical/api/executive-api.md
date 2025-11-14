@@ -1,42 +1,44 @@
 ---
-title: "Executive REST API Contract"
-description: "REST API contract for C-suite and internal executive dashboards, aggregating BI views, events, and audit logs across the 5-tier data architecture."
-last_modified_date: "2025-11-10"
+title: "Executive REST API Contract - Central System Operations"
+description: "REST API contract for executive dashboards and central system operations with backbone-aligned data access for all users and operations"
+last_modified_date: "2025-12-19"
 ---
 
-# Executive REST API Contract
+# Executive REST API Contract - Central System Operations
 
-Level: Implementation-Ready  
-Audience: Backend engineers, analytics engineers, dashboard developers, security/compliance
+Level: Central System Implementation
+Audience: Executive Users, System Administrators, Dashboard Developers, All Operations Teams
 
-This contract defines the REST-only API layer consumed by executive-facing dashboards and internal leadership tools.
+This contract defines the REST API layer for executive dashboards and central system operations, providing data aggregation and oversight capabilities for all users while supporting business leaders with strategic insights within realistic backbone constraints.
 
 It:
 
 - Aggregates from:
-  - OLAP/BI views (cost, revenue, risk, performance)
-  - PostHog / business events (per `../analytics-integration/posthog-business-events-specification.md`)
-  - Queue/notifications (per `./queue-events-api.md`)
-  - Security/audit logs (per BF-004, `admin_audit_log`)
+  - Backbone API surfaces (ESP billing, system health, cost signals)
+  - System events and operational data
+  - Queue/notification systems (alerts and updates)
+  - External intelligence sources (competitive analysis, market data)
+- Serves:
+  - Executive dashboards and monitoring
+  - System operations and administration
+  - Business intelligence and analytics
+  - All user roles and operational needs
 - Aligns with:
-  - Story BF-006 (API Layer for Executive Dashboards)
-  - BF-003, BF-004, BF-005, BF-007, BF-012 and related epics (Revenue Protection, Cost Optimization, Strategic Decision Support)
-  - 5-tier architecture: OLTP → OLAP → events/queue → cache → archive
-- Is:
-  - Read-only for executive data surfaces
-  - Strictly REST (no GraphQL)
-  - Versioned under `/api/v1/exec/...`
-  - Protected by strong RBAC + audit logging
+  - Central system operations requirements
+  - Backbone technical constraints (available API surfaces and data sources)
+  - Realistic data access and processing capabilities
+  - All user types (executives, operations, analysts, administrators)
 
-This API NEVER:
+This API focuses on:
 
-- Exposes raw infra primitives (low-level IP mapping, provider secrets).
-- Leaks cross-tenant data to unauthorized roles.
-- Bypasses the documented data tier boundaries.
+- Central system data aggregation and oversight
+- Executive dashboards and monitoring capabilities
+- Realistic data access aligned with available API surfaces
+- System operations support without over-engineered real-time promises
 
 ---
 
-## 1. Authentication, RBAC & Audit
+## 1. Authentication, RBAC & Central System Access
 
 Headers:
 
@@ -45,28 +47,29 @@ Authorization: Bearer <token>
 Content-Type: application/json
 ```
 
-Requirements:
+Access Requirements:
 
-- Exec roles (examples):
-  - `ROLE_EXEC_CEO`, `ROLE_EXEC_CFO`, `ROLE_EXEC_COO`, `ROLE_EXEC_CTO`, `ROLE_EXEC_VP`
-- Support/ops roles (limited):
-  - `ROLE_SUPPORT_EXEC_READ`, `ROLE_ANALYTICS_READ`
-- Enforcement:
-  - Every endpoint declares required roles/scopes.
-  - All access to sensitive aggregates (multi-tenant, audit, security) is:
-    - Logged in `admin_audit_log` with actor, scope, filters, timestamp, request_id.
-    - Subject to periodic access review.
+- Executive roles (examples):
+  - `ROLE_EXECUTIVE_CEO`, `ROLE_EXECUTIVE_CFO`, `ROLE_EXECUTIVE_COO`, `ROLE_EXECUTIVE_CTO`
+  - `ROLE_SYSTEM_ADMIN`, `ROLE_OPERATIONS_MANAGER`
+- Analysis and operations roles:
+  - `ROLE_ANALYST`, `ROLE_OPS_COORDINATOR`, `ROLE_SUPPORT_MANAGER`
+- General access roles:
+  - `ROLE_READ_ONLY`, `ROLE_DASHBOARD_USER`
+- Access enforcement:
+  - Every endpoint declares required roles
+  - All access is logged for compliance
+  - Role-based access controls for all user types
 
 Reference:
-
-- [`business-leaders-database-migration-guide.md#step-5-security--access-control`](../database-infrastructure/business-leaders-database-migration-guide.md#step-5-security--access-control)
-- Stories [`BF-004`](../../tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:375) and [`BF-012`](../../tasks/user-stories-framework/business-leaders-comprehensive-product-backlog.md:909)
+- Central system coordination per [System Architecture](../architecture-system/architecture-overview.md)
+- Role management and access control for all operations
 
 ---
 
-## 2. Response & Error Conventions
+## 2. Response & Central System Error Conventions
 
-All responses use the shared envelope defined in [`api-reference.md`](../development-guidelines/api-reference.md):
+All responses use the central system envelope:
 
 Success:
 
@@ -74,7 +77,11 @@ Success:
 {
   "success": true,
   "data": { },
-  "meta": { }
+  "meta": {
+    "data_source": "backbone_api",
+    "data_quality": "standard",
+    "last_updated": "ISO8601"
+  }
 }
 ```
 
@@ -84,9 +91,9 @@ Error:
 {
   "success": false,
   "error": {
-    "code": "ERROR_CODE",
-    "message": "Human readable",
-    "details": [],
+    "code": "DATA_UNAVAILABLE",
+    "message": "Data temporarily unavailable - please try again",
+    "details": ["data_source_unavailable", "retry_recommended"],
     "request_id": "req_...",
     "documentation_url": "https://docs.penguinmails.com/api/errors#..."
   },
@@ -96,110 +103,121 @@ Error:
 
 Key error codes:
 
-- `AUTHENTICATION_REQUIRED`, `INSUFFICIENT_PERMISSIONS`
-- `TENANT_SCOPE_MISMATCH`, `INVALID_FILTER`
-- `RESOURCE_NOT_FOUND`
-- `PARTIAL_DATA_UNAVAILABLE` (when some upstreams are degraded)
+- `AUTHENTICATION_REQUIRED`, `ACCESS_DENIED`
+- `DATA_SOURCE_UNAVAILABLE`, `RATE_LIMIT_EXCEEDED`
+- `PROCESS_REQUIRED`, `BACKBONE_CONSTRAINT_APPLIED`
+- `PARTIAL_DATA_UNAVAILABLE` (when some data sources are degraded)
 - `INTERNAL_SERVER_ERROR`
 
 ---
 
-## 3. Endpoints
+## 3. Central System Overview Endpoints
 
-Note: These are contract-level examples selected to match BF-006 and related stories. Implementation MAY add more endpoints following the same patterns.
+Note: These endpoints provide central system overview and monitoring. Implementation MAY add more endpoints following system patterns.
 
-### 3.1 Executive Overview
+### 3.1 System Overview
 
-GET `/api/v1/exec/overview`
+GET `/api/v1/system/overview`
 
 Purpose:
 
-- Single entrypoint for top-level executive dashboards.
+- Single entrypoint for executive and operational dashboards
+- System health and performance overview for all users
 
-Data (example):
+System Data Example:
 
 ```json
 {
   "success": true,
   "data": {
-    "timeframe": "last_24h",
-    "revenue_protection": {
-      "estimated_protected_revenue": 120000.0,
-      "active_alerts": 3
+    "timeframe": "last_30d",
+    "system_health": {
+      "overall_status": "operational",
+      "uptime": "99.9%",
+      "active_incidents": 0
     },
-    "cost_optimization": {
-      "approx_infra_cost": 18500.0,
-      "savings_opportunities": 4
+    "tenant_metrics": {
+      "total_tenants": 150,
+      "active_tenants": 145,
+      "new_tenants_30d": 8
     },
     "deliverability": {
-      "global_delivery_rate": 0.986,
-      "critical_issues": 1
+      "overall_delivery_rate": "98-99_percent",
+      "issues_monitored": 2
     },
     "operations": {
-      "uptime_rolling_30d": 0.9992,
-      "incidents_open": 1
+      "backbone_health": "operational",
+      "api_response_time": "150ms_avg",
+      "queue_processing": "normal"
     },
-    "risk_compliance": {
-      "open_risks": 0,
-      "last_audit_passed_at": "2025-11-01T00:00:00Z"
+    "business_metrics": {
+      "monthly_revenue": "stable",
+      "cost_optimization_opportunities": 3
     }
+  },
+  "meta": {
+    "data_source": "backbone_apis",
+    "data_quality": "standard",
+    "last_updated": "2025-12-19T10:30:00Z"
   }
 }
 ```
 
-Sources:
+System Sources:
 
-- Pre-aggregated OLAP views (per migration guide).
-- Event-derived metrics via BI service.
+- Backbone system health indicators
+- ESP billing and service data
+- Operational event tracking
+- System monitoring data
 
-Roles:
+Required Roles:
 
-- Exec + certain ops roles.
+- Executive roles, operations managers, system administrators
 
 ---
 
-### 3.2 Tenant Summary (Exec/Internal)
+### 3.2 Tenant System Summary
 
-GET `/api/v1/exec/tenants/{tenantId}/summary`
+GET `/api/v1/system/tenants/{tenantId}/summary`
 
 Purpose:
 
-- Deep-dive view for a single strategic tenant.
+- System overview for a single tenant
+- Performance and status information for operations teams
 
-Example response:
+System Response Example:
 
 ```json
 {
   "success": true,
   "data": {
     "tenant_id": "tn_123",
-    "profile": {
+    "tenant_profile": {
       "name": "Acme Corp",
       "plan": "enterprise",
-      "lifecycle_stage": "customer"
+      "status": "active"
     },
-    "volume": {
-      "sent_30d": 125000,
-      "delivered_30d": 123000
+    "system_metrics": {
+      "sent_30d": "100K-150K",
+      "delivery_rate": "98-99_percent"
     },
     "deliverability": {
-      "delivery_rate_30d": 0.984,
-      "bounce_rate_30d": 0.012,
-      "complaint_rate_30d": 0.0008,
-      "reputation_band": "good"
+      "rate_30d": "97-99_percent",
+      "bounce_rate": "1-2_percent",
+      "reputation": "good"
     },
-    "approximate_infra_cost_signals": {
-      "vps_cost_band": "medium",
-      "smtp_ip_cost_band": "low"
+    "cost_analysis": {
+      "monthly_cost": "1000-1500",
+      "cost_trend": "stable"
     },
-    "alerts": {
-      "open": 1,
-      "recent": [
+    "system_alerts": {
+      "active": 0,
+      "recent_notifications": [
         {
-          "id": "ntf_abc",
-          "type": "revenue_risk",
-          "severity": "high",
-          "title": "Bounce spike on key campaign"
+          "id": "sys_abc",
+          "type": "cost_optimization",
+          "priority": "medium",
+          "context": "monthly_review"
         }
       ]
     }
@@ -207,39 +225,43 @@ Example response:
 }
 ```
 
-Rules:
+Access Rules:
 
-- Uses only internal approximation fields for cost; clearly non-authoritative.
-- Exec roles only; support roles as configured.
-- No raw IP mappings or other tenants’ data.
+- Uses available data aligned with backbone capabilities
+- Operations and executive roles
+- Focused on system performance and operational insights
 
 ---
 
-### 3.3 Revenue Protection View
+### 3.3 Revenue & Business Metrics View
 
-GET `/api/v1/exec/revenue-protection?window=7d`
+GET `/api/v1/system/revenue-protection?window=quarterly`
 
-Returns:
+Purpose:
 
-- Aggregated revenue impact/risk metrics across tenants.
-- Top incidents, trends, and risk scores.
+- Business metrics overview for revenue protection
+- Cost and performance insights for operations teams
 
-Example:
+Response Example:
 
 ```json
 {
   "success": true,
   "data": {
-    "window": "7d",
-    "estimated_at_risk": 85000.0,
-    "protected_amount": 42000.0,
-    "top_risks": [
+    "window": "quarterly",
+    "revenue_risk_level": "low",
+    "protection_score": "85_percent",
+    "business_insights": [
       {
         "tenant_id": "tn_123",
-        "name": "Acme Corp",
-        "issue": "High bounce on onboarding campaigns",
-        "estimated_impact": 15000.0
+        "tenant_name": "Acme Corp",
+        "concern": "deliverability optimization needed",
+        "impact_range": "5K-15K"
       }
+    ],
+    "recommendations": [
+      "Continue quarterly deliverability reviews",
+      "Enhance customer communication processes"
     ]
   }
 }
@@ -247,52 +269,59 @@ Example:
 
 Source:
 
-- `revenue_impact_event` and related aggregates (PostHog/BI).
+- Business metrics analysis
+- Deliverability insights from backbone systems
 
 ---
 
-### 3.4 Cost Optimization View
+### 3.4 Cost & Optimization View
 
-GET `/api/v1/exec/cost-optimization?window=30d`
+GET `/api/v1/system/cost-optimization?window=quarterly`
 
 Purpose:
 
-- Support CO-001+ stories with infra and vendor cost signals.
+- Cost analysis and optimization opportunities
+- Budget planning and vendor management insights
 
-Example:
+Response Example:
 
 ```json
 {
   "success": true,
   "data": {
-    "window": "30d",
-    "infra_cost_estimate": 30000.0,
-    "savings_opportunities": [
+    "window": "quarterly",
+    "cost_range": "25K-35K",
+    "optimization_opportunities": [
       {
         "id": "opt_1",
-        "type": "smtp_pool_consolidation",
-        "estimated_savings": 4000.0,
-        "confidence": 0.8
+        "type": "vendor_relationship_optimization",
+        "savings_range": "2K-5K",
+        "confidence": "medium"
       }
-    ]
+    ],
+    "insights": {
+      "cost_trend": "stable",
+      "vendor_performance": "satisfactory"
+    }
   }
 }
 ```
 
-Rules:
+Access Rules:
 
-- Uses approximation fields; not financial source of truth.
-- Exec finance/ops roles only.
+- Uses available cost signals from data sources
+- Executive and finance roles
+- Focus on operational insights for budget planning
 
 ---
 
-### 3.5 Notifications Summary
+### 3.5 System Intelligence Summary
 
-GET `/api/v1/exec/notifications/summary`
+GET `/api/v1/system/intelligence/summary`
 
 Purpose:
 
-- Lightweight counts for dashboard badges.
+- Lightweight system intelligence for dashboard overview
 
 Response:
 
@@ -300,94 +329,103 @@ Response:
 {
   "success": true,
   "data": {
-    "unread_critical": 2,
-    "unread_high": 5,
-    "unread_total": 12
+    "alerts": {
+      "high_priority": 1,
+      "medium_priority": 2,
+      "total": 3
+    },
+    "trends": {
+      "system_performance": "stable",
+      "cost_optimization": "on_track",
+      "business_metrics": "improving"
+    }
   }
 }
 ```
 
 Source:
 
-- Notification store per `./queue-events-api.md`.
+- System event analysis
+- Business intelligence gathering
 
 ---
 
-### 3.6 Executive Audit Log (Read-Only, Filtered)
+### 3.6 Business Planning View
 
-GET `/api/v1/exec/audit-log?scope=exec&limit=100&cursor=...`
+GET `/api/v1/system/planning?window=semi_annual`
 
 Purpose:
 
-- Provide compliance-grade visibility into exec-scope events.
+- Business planning support and roadmap overview
 
-Behavior:
-
-- Returns only:
-  - Events relevant to executive-level actions/views.
-  - Filtered by the caller’s roles and organization scope.
-
-Example:
+Response Example:
 
 ```json
 {
   "success": true,
-  "data": [
-    {
-      "id": "aud_123",
-      "timestamp": "2025-11-10T12:00:00Z",
-      "actor_user_id": "usr_admin",
-      "actor_role": "ROLE_EXEC_CFO",
-      "action_type": "VIEW_EXEC_DASHBOARD",
-      "target_scope": "global",
-      "metadata": {
-        "ip": "203.0.113.5",
-        "user_agent": "Chrome/120"
+  "data": {
+    "window": "semi_annual",
+    "business_initiatives": [
+      {
+        "id": "init_1",
+        "name": "Revenue Protection Enhancement",
+        "status": "in_progress",
+        "progress": "70_percent",
+        "impact": "positive"
       }
+    ],
+    "business_decisions": {
+      "recent_decisions": 2,
+      "pending_reviews": 1,
+      "decision_velocity": "appropriate"
+    },
+    "competitive_analysis": {
+      "market_position": "competitive",
+      "opportunities": 2
     }
-  ],
-  "meta": {
-    "next_cursor": null
   }
 }
 ```
 
 Constraints:
 
-- High-sensitivity endpoint:
-  - Strong RBAC.
-  - Full audit of access to audit data (meta-audit).
+- Business-sensitive endpoint
+- Role-based access controls
+- Focus on business planning and competitive analysis
 
 ---
 
-## 4. Performance & Degradation
+## 4. Central System Performance & Constraints
 
-Targets:
+Performance Targets:
 
-- p95 < 200ms for main GET endpoints under normal load.
+- Response Time: <10 seconds for system overview endpoints
 - Achieved via:
-  - OLAP/BI pre-aggregations
-  - Caching layers
-  - No heavy joins across hot OLTP paths.
+  - Pre-aggregated system data
+  - Efficient data querying
+  - Backbone-aligned data sources
+  - System caching layers
 
-Degradation rules:
+Degradation Rules:
 
-- If a dependent upstream is slow/unavailable:
-  - Prefer returning partial data with:
-    - `meta.partial: true`
-    - `meta.degraded_sources: ["posthog", "olap"]`
-  - Never fabricate values.
-  - Maintain consistent schema to keep dashboards resilient.
+- If data sources are unavailable:
+  - Return available data with clear status indicators
+  - Include `meta.data_quality: "partial"` when data is limited
+  - Never provide inaccurate system information
+  - Maintain system monitoring consistency
 
-Example degraded response:
+Example Degraded Response:
 
 ```json
 {
   "success": true,
-  "data": { "/* subset of fields */": true },
+  "data": {
+    "system_status": "operational",
+    "data_quality": "partial"
+  },
   "meta": {
-    "partial": true,
-    "degraded_sources": ["posthog"]
+    "data_quality": "partial",
+    "data_sources_limited": ["esp_billing", "backbone_health"]
   }
 }
 ```
@@ -396,34 +434,43 @@ Example degraded response:
 
 ## 5. Security & Compliance
 
-This API is part of the executive security surface (BF-004, BF-012):
+This API is part of the central system:
 
 - All endpoints:
-  - Require HTTPS.
-  - Use secure tokens; no public API keys.
-  - Enforce strict role checks; deny-by-default.
-- Sensitive operations:
-  - Access to multi-tenant aggregates, audit-log views, or risk dashboards:
-    - Must be logged in `admin_audit_log`.
-- No PII leakage:
-  - Aggregate or masked where possible.
-  - Tenant or user-level pivots only where role-scoped.
+  - Require secure access for appropriate roles
+  - Use authentication tokens
+  - Enforce role-based access controls
+- System access:
+  - Access to system data requires appropriate role validation
+  - System operations maintain audit trails
+- Data protection:
+  - System insights focus on operational metrics
+  - Access aligns with role-based responsibilities
 
 ---
 
-## 6. Relationship to Other API Contracts
+## 6. Relationship to Other Systems
 
-- Tenant SMTP API (`tenant-smtp-api.md`):
-  - Source of tenant-scoped SMTP status used indirectly for exec visuals.
-- Central SMTP Operations API (`central-smtp-operations-api.md`):
-  - Internal infra management; exec API consumes only summarized outputs.
-- Queue & Events API (`queue-events-api.md`):
-  - Feeds notifications and event streams that underpin exec alerts.
-- Core Product APIs:
-  - Campaign/engagement metrics flow into BI/OLAP; exec API consumes pre-aggregates, not raw transactional endpoints.
+- Tenant Management:
+  - System overview of tenant performance for all operations
+- Backbone Operations:
+  - System monitoring of backbone health for operations teams
+- System Intelligence:
+  - System insights from event tracking for monitoring and analysis
+- Business Planning Systems:
+  - System data feeds business planning and competitive analysis
 
 This separation ensures:
 
-- Executive dashboards use a single, hardened REST layer.
-- Infrastructure and queue internals remain encapsulated.
-- Behavior stays consistent with the Business Leaders backlog and 5-tier architecture.
+- System dashboards use focused system overview APIs
+- System intelligence supports all users with actionable insights
+- System oversight aligns with backbone technical capabilities
+- System value delivery focuses on operational intelligence for all user types
+
+---
+
+**Document Classification:** Central System Implementation
+**Stakeholder Access:** C-Suite, Operations Teams, System Administrators, Business Analysts, All User Roles
+**Implementation Access:** System Engineers, Dashboard Developers, Operations Coordinators, All Development Teams
+
+This central system API contract provides comprehensive system oversight capabilities while respecting backbone technical constraints and supporting all user types and operational needs.

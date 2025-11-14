@@ -8,13 +8,13 @@ last_modified_date: "2025-11-10"
 
 ## Strategic Alignment
 
-**Strategic Alignment**: This comprehensive onboarding journey supports our [enterprise user activation strategy] by providing [seamless user setup and platform initialization], ensuring users achieve measurable value within their first 30 minutes while maintaining operational excellence and success across all user segments.
+**Strategic Alignment**: This onboarding journey supports our user activation strategy by providing practical user setup and platform initialization within realistic backbone constraints, ensuring users achieve value while maintaining operational simplicity.
 
-**Technical Authority**: Our [comprehensive onboarding infrastructure] integrates with [advanced user progress tracking systems] featuring [real-time status monitoring, automated intervention triggers, and role-based access control].
+**Technical Authority**: Our onboarding infrastructure integrates with basic user progress tracking using role-based access control and standard monitoring capabilities.
 
-**Operational Excellence**: Backed by [enterprise-grade customer success platforms] with [99.9% uptime guarantees, advanced monitoring systems, and automated escalation protocols].
+**Operational Excellence**: Supported by reliable system operations with standard monitoring and basic escalation procedures aligned with backbone capabilities.
 
-**User Journey Integration**: This journey is part of your complete [user activation experience] - connects to [authentication workflows, billing operations, campaign management, and ongoing user engagement optimization].
+**User Journey Integration**: This journey connects to authentication workflows, billing operations, campaign management, and user engagement using available system capabilities.
 
 ---
 
@@ -152,7 +152,7 @@ last_modified_date: "2025-11-10"
 - **Enterprise Infrastructure**: Complex IP management, enterprise compliance
 - **API Integration**: Programmatic infrastructure management
 - **Custom Infrastructure**: White-label infrastructure with custom DNS
-- **Advanced Optimization**: AI-powered deliverability optimization
+- **Advanced Optimization**: Standard deliverability optimization using available tools
 
 ### Step 6: Dashboard Access
 **⭐ Beginner Path:**

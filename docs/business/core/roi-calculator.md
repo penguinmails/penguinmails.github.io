@@ -30,6 +30,10 @@ last_modified_date: "2025-12-19"
 
 ## 📊 Cost Comparison Summary
 
+![Monthly Cost Comparison](/docs/assets/monthly-cost-comparison.png){: width="100%" }
+
+![Total Cost of Ownership Comparison](/docs/assets/toc-comparison.png){: width="100%" }
+
 ### Managed ESP vs Self-Hosted TCO Analysis
 
 | Volume Band | Managed ESP (Monthly) | Self-Hosted VPS (Monthly) | Annual Savings (Managed) |
@@ -144,16 +148,16 @@ Payback Period: _____ months
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
-- [🏢 Executive Summary](executive-summary.md) - Strategic findings and recommendations
+- [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
-- [📊 Detailed ROI Calculator](roi-calculator-detailed.md) - Complete cost-benefit analysis with detailed calculations
-- [🏗️ Implementation Roadmap](implementation-roadmap.md) - Resource planning and timeline
-- [🏆 Competitive Analysis](competitive-analysis.md) - Provider selection matrix
+- [📊 Detailed ROI Calculator](../financial-analysis/roi-calculator-detailed) - Complete cost-benefit analysis with detailed calculations
+- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Resource planning and timeline
+- [🏆 Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](technical-infrastructure.md) - Technical specifications
-- [📋 Performance Benchmarks](performance-benchmarks.md) - Industry data and metrics
+- [🔧 Technical Infrastructure](../implementation/technical-infrastructure) - Technical specifications
+- [📋 Performance Benchmarks](../performance/performance-benchmarks) - Industry data and metrics
 
 ---
 
