@@ -1,178 +1,188 @@
-# Marketing Optimization: Simple Rule-Based Implementation
+# Marketing Optimization Engine Technical Specification
 
 ## Overview
 
-This Level 4 document defines the technical approach for basic marketing optimization using simple rule-based calculations rather than complex ML models. Focus on straightforward optimization for B2B sales qualification.
+**Document Level:** Level 4 - Technical Implementation  
+**Target Audience:** ML Engineers, Data Scientists, Marketing Technology Engineers  
+**Technical Focus:** AI/ML optimization models, input signals, serving patterns, feedback loops  
 
-For business and strategic context see:
-- `docs/business/marketing/strategy/overview.md`
-- `docs/business/marketing/performance/summary.md`
+This technical specification defines the implementation architecture for AI-powered marketing optimization including machine learning models, real-time inference, and continuous learning systems.
 
-This document is technical-only. Business narratives remain in Level 1–3 docs.
+---
 
-## Architecture
+## Architecture Overview
 
-### Core Components
+### Core ML Pipeline
 
-1. Data Aggregation Service
-   - Collects basic metrics from:
-     - Subscription data
-     - Usage patterns
-     - Client activity indicators
-   - Calculates simple derived metrics
-   - Updates OLAP views monthly
+**Data Ingestion Layer:** Apache Kafka streams for real-time marketing events, Apache Airflow for batch processing, custom connectors for advertising platforms, data validation with Great Expectations
 
-2. Rule Engine
-   - Simple rule-based calculations for:
-     - Lead scoring (based on subscription status + activity)
-     - Churn risk indicators (usage drops, inactivity)
-     - Lifecycle stage determination
-   - Configurable rule sets stored in database
+**Feature Store:** Feast feature store for online/offline management, real-time feature computation <50ms latency, feature versioning and lineage tracking
 
-3. Optimization Calculator
-   - Basic calculations for:
-     - Client health scoring
-     - Sales qualification priorities
-     - Campaign targeting recommendations
-   - Uses predefined formulas and thresholds
+**Model Training Infrastructure:** Kubeflow for ML pipeline orchestration, TensorFlow/PyTorch for deep learning, distributed training on NVIDIA A100 GPU clusters
 
-4. Reporting Service
-   - Generates monthly reports on:
-     - Client segmentation
-     - Sales pipeline metrics
-     - Basic performance indicators
-   - Exports data for third-party marketing tools
+### Model Architecture
 
-5. Configuration Management
-   - Simple configuration for:
-     - Scoring thresholds
-     - Rule parameters
-     - Report definitions
-   - Marketing team self-service updates
+**Campaign Performance Prediction Model:**
 
-## Data Flows
+```python
+class CampaignPerformanceModel(nn.Module):
+    def __init__(self, input_dim=128, hidden_dims=[256, 128, 64]):
+        super().__init__()
+        self.layers = nn.ModuleList([nn.Linear(input_dim, hidden_dims[0]), nn.ReLU(), nn.Dropout(0.2)])
+        for i in range(len(hidden_dims)-1):
+            self.layers.extend([nn.Linear(hidden_dims[i], hidden_dims[i+1]), nn.ReLU(), nn.Dropout(0.2)])
+        self.output_layer = nn.Linear(hidden_dims[-1], 1)
+        
+    def forward(self, x):
+        for layer in self.layers:
+            x = layer(x)
+        return torch.sigmoid(self.output_layer(x))
+```
 
-### 1. Training Data Flow
+**Bid Optimization Model:**
 
-1. Raw events ingested from marketing stack (impressions, clicks, opens, conversions, costs).
-2. ETL/ELT jobs:
-   - Join events with campaign / account / segment metadata.
-   - Compute features and write to Feature Store and warehouse.
-3. Training jobs:
-   - Load curated datasets
-   - Train models and evaluate against thresholds.
-4. Registered models stored with:
-   - Version
-   - Input schema
-   - Performance metrics
-   - Approval status
+```python
+class BidOptimizationModel:
+    def __init__(self):
+        self.model = xgboost.XGBRegressor(n_estimators=100, max_depth=6, learning_rate=0.1, subsample=0.8, random_state=42)
+        
+    def predict_optimal_bid(self, features):
+        return self.model.predict([features])
+```
 
-### 2. Online Serving Flow
+---
 
-1. Caller (e.g., campaign system) sends a decision request:
-   - Subject: campaign or placement context
-   - Inputs: current metrics snapshot, constraints
-2. Optimization Engine:
-   - Loads features from Feature Store
-   - Runs relevant models
-   - Applies policy and guardrails
-3. Returns:
-   - Recommended action or score
-   - Explanation metadata (for audit and tuning)
+## Input Signals and Data Processing
 
-### 3. Batch Optimization Flow
+### Real-Time Signals
 
-- Nightly/periodic job:
-  - Reads latest performance and constraints
-  - Computes:
-    - Budget allocations by channel/campaign
-    - Bidding ranges and caps
-  - Outputs:
-    - Configuration artifacts consumed by automation/orchestration systems
+**Campaign Metrics:** CTR, conversion rate, CPA, impression share, quality score, bid levels, budget utilization, competitor patterns
 
-## Interfaces
+**User Behavior Signals:** Page views, session duration, bounce rate, form submissions, email engagement, cross-device behavior, purchase propensity
 
-### Model Serving API
+**External Market Signals:** Economic indicators, seasonal trends, competitor launches, platform algorithm changes
 
-`POST /optimization/score`
+### Feature Engineering
 
-- Purpose: real-time optimization decision.
-- Input (logical fields):
-  - `context` (campaign/channel/placement identifiers)
-  - `features` (optional override or enrichment)
-  - `constraints` (budget, frequency, compliance flags)
-- Output:
-  - `score` or `recommended_action`
-  - `policy_applied`
-  - `model_version`
+```python
+class FeatureEngineeringPipeline:
+    def create_features(self, raw_data):
+        features = {}
+        features['hour_of_day'] = raw_data.timestamp.dt.hour
+        features['day_of_week'] = raw_data.timestamp.dt.dayofweek
+        features['cpc'] = raw_data.spend / raw_data.clicks
+        features['ctr'] = raw_data.clicks / raw_data.impressions
+        return pd.DataFrame(features)
+```
 
-### Batch Plan API
+---
 
-`POST /optimization/plan`
+## Serving Patterns and Inference
 
-- Triggers generation of an allocation/optimization plan for a defined scope and period.
-- Output:
-  - Plan identifier
-  - Per-entity recommendations (e.g., budget per campaign)
-  - Validity window
+### Real-Time Inference Service
 
-### Integration with Automation Platform
+**Model Serving Infrastructure:** TensorFlow Serving for production deployment, ONNX Runtime for optimization, Kubernetes HPA auto-scaling
 
-- Exposes machine-readable configs for:
-  - `docs/implementation-technical/marketing/marketing-automation-platform.md`
-- All writes are:
-  - Versioned
-  - Validated
-  - Reversible (rollback on regression)
+**API Endpoints:**
 
-## Dependencies
+```python
+@app.post("/api/v1/predict/performance")
+async def predict_performance(campaign_data: CampaignData):
+    features = feature_pipeline.transform(campaign_data)
+    prediction = model.predict(features)
+    confidence = calculate_confidence_interval(features)
+    
+    return {
+        "predicted_ctr": float(prediction[0]),
+        "predicted_conversion_rate": float(prediction[1]),
+        "confidence_interval": {"lower": float(prediction[0] - confidence), "upper": float(prediction[0] + confidence)},
+        "model_version": "v2.1.0", "inference_time_ms": float(inference_time)
+    }
+```
 
-- Analytics & Metrics Pipeline:
-  - Source of truth for campaign performance and costs.
-- Feature Store:
-  - Shared with other ML systems if applicable.
-- Identity and Tenant Context:
-  - Separate keys per tenant/workspace.
-- Observability Stack:
-  - Metrics, logs, and tracing for all optimization calls.
+---
 
-## Reliability and Safety
+## Feedback Loops and Continuous Learning
 
-- Requirements:
-  - Graceful degradation:
-    - If models unavailable → fallback to static rules.
-  - Latency:
-    - p95 decision latency within strict bound (e.g., <150ms) for online use.
-  - Robustness:
-    - Idempotent APIs
-    - Timeouts and circuit breakers
-- Safety:
-  - Enforce hard constraints before returning outputs.
-  - Maintain global and per-tenant rate/budget limits.
+### Online Learning Implementation
 
-## Security and Compliance
+**Real-Time Model Updates:** Apache Flink for real-time updates, online gradient descent, Thompson Sampling, drift detection and retraining triggers
 
-- Access:
-  - Only trusted internal services may call optimization APIs.
-- Data:
-  - Use pseudonymous IDs; no unnecessary PII in features.
-  - Encrypt at rest and in transit.
-- Governance:
-  - Model and policy changes require:
-    - Review/approval workflow
-    - Audit logging
-  - Decision logs retained per compliance posture.
+```python
+class OnlineLearningSystem:
+    def process_feedback(self, features, prediction, actual_outcome):
+        self.update_buffer.append({'features': features, 'prediction': prediction, 'outcome': actual_outcome, 'timestamp': datetime.now()})
+        
+        if self.drift_detector.update(actual_outcome):
+            self.trigger_model_retrain()
+            
+        loss = self.compute_loss(prediction, actual_outcome)
+        gradients = self.compute_gradients(features, loss)
+        self.model.apply_gradients(gradients, self.learning_rate)
+```
 
-## Backlinks
+### A/B Testing Framework
 
-For strategic and performance context see:
-- `docs/business/marketing/strategy/detailed.md`
-- `docs/business/marketing/performance/summary.md`
-- `docs/business/marketing/roi/detailed.md`
+```python
+class ABTestManager:
+    def get_variant_assignment(self, user_id, experiment_id):
+        hash_value = hash(f"{user_id}_{experiment_id}") % 100
+        cumulative_split = 0
+        
+        for variant, traffic_percentage in self.active_tests[experiment_id]['variants'].items():
+            cumulative_split += traffic_percentage
+            if hash_value < cumulative_split:
+                return variant
+        return list(self.active_tests[experiment_id]['variants'].keys())[-1]
+```
 
-For integration touchpoints see:
-- `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-- `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
-- `docs/implementation-technical/marketing/marketing-automation-platform.md`
+---
 
-This document is Level 4 technical; it must not include executive storytelling or ROI narrative content.
+## Model Monitoring and Maintenance
+
+### Performance Monitoring
+
+**Model Drift Detection:** Population Stability Index for feature distribution drift, Kolmogorov-Smirnov test for statistical changes, prediction bias monitoring
+
+**System Metrics:** Model inference latency (p50, p95, p99), prediction accuracy over time, feature availability and data quality metrics
+
+### Automated Model Retraining
+
+```python
+class ModelMaintenanceSystem:
+    def daily_maintenance_check(self):
+        current_performance = self.performance_monitor.get_performance_metrics()
+        drift_scores = self.data_monitor.calculate_drift_scores()
+        
+        should_retrain = self.retraining_trigger.should_trigger_retrain(
+            performance_drop=current_performance - baseline_performance, drift_scores=drift_scores
+        )
+        
+        if should_retrain:
+            self.initiate_retraining_process()
+```
+
+---
+
+## Dependencies and Infrastructure
+
+### Required Services
+
+**ML Platform:** MLflow for experiment tracking, Feast for feature management, Seldon Core for model deployment, Evidently AI for drift detection, Apache Airflow for orchestration
+
+### Infrastructure Requirements
+
+**Compute Resources:** GPU clusters (NVIDIA A100) for training, CPU nodes for inference, high-memory instances for feature computation, auto-scaling
+
+**Data Storage:** Object storage (S3) for artifacts and data, time-series database (InfluxDB) for metrics, feature store database (Redis/MemSQL) for online features
+
+---
+
+## Business Context and Traceability
+
+- **For strategic context see:** `docs/business/marketing/strategy/detailed.md`
+- **For performance requirements see:** `docs/business/marketing/performance/summary.md`
+- **For ROI analysis see:** `docs/business/marketing/roi/detailed.md`
+- **For technical foundation see:** `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+
+This technical implementation focuses exclusively on ML model architecture, inference systems, and optimization algorithms without business value narratives or strategic storytelling.

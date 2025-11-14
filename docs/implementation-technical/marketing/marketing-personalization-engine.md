@@ -1,238 +1,200 @@
-# Marketing Personalization Engine: Technical Implementation
+# Marketing Personalization Engine Technical Specification
 
 ## Overview
 
-This Level 4 document defines the technical architecture for the Marketing Personalization Engine responsible for:
-- Real-time and batch personalization decisions
-- Audience and segment resolution
-- Content and offer selection
-- Journey-aware decisioning
+**Document Level:** Level 4 - Technical Implementation  
+**Target Audience:** Backend Engineers, ML Engineers, Personalization System Architects  
+**Technical Focus:** Segmentation, feature stores, real-time decisioning, content/offer APIs  
 
-For strategic and journey context see:
-- `docs/business/marketing/journey/summary.md`
-- `docs/business/marketing/strategy/detailed.md`
+This technical specification defines the implementation architecture for real-time marketing personalization including customer segmentation, feature management, and dynamic content delivery systems.
 
-For ROI context see:
-- `docs/business/marketing/roi/detailed.md`
+---
 
-This document is technical-only; it must not contain executive narratives or ROI storytelling.
+## Architecture Overview
 
-## Architecture
+### Core Personalization Pipeline
 
-### Core Components
+**Customer Data Platform (CDP):** Apache Kafka for real-time event streaming, Apache Spark for batch processing, Elasticsearch for customer indexing, data privacy controls with field-level encryption
 
-1. Profile Resolution Service
-   - Aggregates identifiers (email, device IDs, user IDs, account IDs).
-   - Resolves to a unified subject profile.
-   - Integrates with:
-     - Identity service
-     - Consent/preferences store
-     - Account and tenancy context.
+**Real-Time Feature Store:** Redis for low-latency serving (<10ms), Apache Cassandra for storage, Feast for feature management, feature versioning with automated rollbacks
 
-2. Segmentation and Eligibility Service
-   - Evaluates:
-     - Behavioral rules
-     - Demographic/firmographic criteria
-     - Lifecycle stages
-   - Outputs:
-     - Segment memberships
-     - Eligibility flags for experiences and offers
-   - Rules are:
-     - Versioned
-     - Auditable
-     - Evaluated in low-latency mode for online calls.
+**Decision Engine:** Drools rule engine for business logic, TensorFlow Serving for ML inference, Redis-based contextual bandit, A/B testing framework with traffic allocation
 
-3. Feature Store Integration
-   - Uses shared feature store for:
-     - Real-time behavioral signals
-     - Content interaction history
-     - Journey progress indicators
-     - Risk/compliance attributes as needed
-   - Supports:
-     - Batch feature computation
-     - Online feature lookup for decision APIs.
+### Segmentation Engine
 
-4. Decision Engine
-   - Core decisioning service that:
-     - Combines rules, models, and constraints
-     - Selects:
-       - Next-best-action
-       - Next-best-offer
-       - Variant/content template
-   - Enforces:
-     - Frequency caps
-     - Channel policies
-     - Consent and compliance constraints.
+```python
+class SegmentationEngine:
+    def create_dynamic_segment(self, segment_definition):
+        """Create real-time customer segment based on behavioral rules"""
+        es_query = self._build_segment_query(segment_definition['conditions'])
+        segment_customers = self.es_client.search(index='customer_profiles', body={'query': es_query, '_source': ['customer_id']})
+        
+        for customer in segment_customers['hits']['hits']:
+            customer_id = customer['_source']['customer_id']
+            self.redis_client.sadd(f"segment:{segment_definition['name']}", customer_id)
+            
+        return len(segment_customers['hits']['hits'])
+```
 
-5. Content and Offer Catalog Adapter
-   - Connects to:
-     - CMS
-     - Product catalog
-     - Offer libraries
-   - Retrieves candidates tagged with:
-     - Audience/segment
-     - Eligibility constraints
-     - Priority and fallback logic.
-   - Performs:
-     - Late binding of content into templates.
+---
 
-6. Real-Time and Batch Serving Layer
-   - Real-time:
-     - Synchronous APIs for in-app, web, and triggered journeys.
-   - Batch:
-     - Nightly or scheduled pre-computation of decisions for outbound campaigns.
+## Feature Store Implementation
 
-7. Telemetry & Audit
-   - Logs:
-     - Inputs (anonymized where appropriate)
-     - Decisions taken
-     - Model and rule versions
-   - Supports:
-     - Replay
-     - Debugging
-     - Compliance reviews.
+### Customer Feature Schema
 
-## Data Flows
+```python
+@dataclass
+class CustomerFeature:
+    customer_id: str
+    features: Dict[str, float]
+    timestamp: int
+    feature_type: str = 'customer'
+    
+class FeatureStore:
+    def get_customer_features(self, customer_id: str, feature_names: List[str]) -> Dict[str, float]:
+        """Retrieve customer features with sub-10ms latency"""
+        redis_key = f"customer_features:{customer_id}"
+        cached_features = self.redis_client.hmget(redis_key, *feature_names)
+        
+        features = {}
+        for i, feature_name in enumerate(feature_names):
+            value = cached_features[i]
+            features[feature_name] = float(value) if value is not None else 0.0
+        return features
+```
 
-### 1. Real-Time Decision Flow
+### Behavioral Feature Computation
 
-1. Channel or application calls personalization API with:
-   - Subject identifier(s)
-   - Context (page/screen, channel, placement)
-   - Optional hints (intent, scenario).
-2. Engine:
-   - Resolves profile.
-   - Loads segments and features.
-   - Filters content/offers using eligibility and consent.
-   - Evaluates decision policies and/or ML models.
-3. Returns:
-   - Selected content/offer ID(s)
-   - Metadata (e.g., experiment ID, variant ID)
-   - TTL or validity window.
+```python
+class BehavioralFeatureComputer:
+    def compute_engagement_features(self, customer_events: List[Dict]) -> Dict[str, float]:
+        """Compute customer engagement features from event stream"""
+        df = self.spark.createDataFrame(customer_events)
+        
+        engagement_features = df.agg(
+            F.sum(F.when(F.col('event_type') == 'page_view', 1).otherwise(0)).alias('page_views'),
+            F.sum(F.when(F.col('event_type') == 'email_open', 1).otherwise(0)).alias('email_opens'),
+            F.sum(F.when(F.col('event_type') == 'form_submit', 1).otherwise(0)).alias('form_submits')
+        ).collect()[0]
+        
+        engagement_score = (0.3 * (engagement_features['page_views'] / 100) + 0.2 * (engagement_features['email_opens'] / 20) + 0.2 * (engagement_features['form_submits'] / 5))
+        
+        return {
+            'engagement_score': min(engagement_score, 1.0),
+            'page_views_30d': engagement_features['page_views'],
+            'conversion_rate': engagement_features['form_submits'] / max(engagement_features['page_views'], 1)
+        }
+```
 
-### 2. Batch Decision Flow
+---
 
-1. Scheduler selects target population based on:
-   - Segments
-   - Lifecycle stages
-   - Campaign definitions.
-2. For each subject:
-   - Compute or fetch features.
-   - Run same decision engine as real-time, in batch mode.
-3. Persist decisions:
-   - For use by marketing automation workflows
-   - With clear validity and attribution markers.
+## Real-Time Decisioning System
 
-### 3. Feedback Loop
+### Contextual Bandit Implementation
 
-- Events (views, clicks, conversions, dismissals) are:
-  - Captured by tracking/analytics
-  - Joined with decision logs
-  - Used to:
-    - Update features
-    - Retrain models
-    - Refine rules and policies
+```python
+class ContextualBanditDecisionEngine:
+    def select_personalized_content(self, customer_id: str, content_context: Dict) -> Dict:
+        """Select optimal content using contextual bandit algorithm"""
+        customer_features = self._get_customer_features(customer_id)
+        available_content = content_context['available_items']
+        
+        scores = []
+        for content_item in available_content:
+            context_features = self._build_context_features(customer_features, content_item)
+            predicted_reward = self.models['content_recommendation'].predict([context_features])[0]
+            
+            if random.random() < 0.1:  # 10% exploration
+                exploration_bonus = random.uniform(0, 0.2)
+            else:
+                exploration_bonus = 0
+                
+            final_score = predicted_reward + exploration_bonus
+            scores.append((content_item, final_score))
+            
+        selected_content = max(scores, key=lambda x: x[1])[0]
+        return {
+            'selected_content': selected_content,
+            'confidence_score': max(scores, key=lambda x: x[1])[1],
+            'alternative_options': [item[0] for item in sorted(scores, key=lambda x: x[1], reverse=True)[1:4]]
+        }
+```
 
-Model training details may reuse the optimization/analytics pipelines defined in:
-- `docs/implementation-technical/marketing/marketing-optimization-engine.md`
-- `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+### Real-Time API Endpoints
 
-## Interfaces
+```python
+@app.post("/api/v1/personalize/content")
+async def personalize_content(request: PersonalizationRequest):
+    """Real-time content personalization endpoint"""
+    start_time = time.time()
+    
+    decision = contextual_bandit.select_personalized_content(
+        customer_id=request.customer_id,
+        content_context={'available_items': request.available_items}
+    )
+    
+    latency_ms = (time.time() - start_time) * 1000
+    
+    return {
+        'selected_item': decision['selected_content'],
+        'confidence_score': decision['confidence_score'],
+        'reasoning': 'Selected based on customer engagement patterns',
+        'latency_ms': latency_ms
+    }
+```
 
-### Real-Time Personalization API
+---
 
-`POST /personalization/decide`
+## Content and Offer APIs
 
-- Auth: internal or mTLS for trusted clients.
-- Input (logical schema):
-  - `subject`:
-    - `id`
-    - `tenant_id`
-  - `context`:
-    - `channel` (web, app, email, etc.)
-    - `placement` (slot identifier)
-    - `scenario` (e.g., onboarding, renewal)
-  - `constraints`:
-    - `max_variants`
-    - `require_consent` (boolean, default true)
-- Output:
-  - `decisions`: list of:
-    - `content_id` or `offer_id`
-    - `variant`
-    - `priority`
-    - `experiment` (if applicable)
-    - `ttl`
+### Content Management Integration
 
-### Batch Personalization API
+```python
+class ContentAPIClient:
+    def get_personalized_content(self, customer_segment: str, content_type: str, count: int = 10) -> List[Dict]:
+        """Retrieve content filtered by customer segment and type"""
+        response = requests.get(
+            f"{self.base_url}/api/v2/content/personalized",
+            headers=self.headers,
+            params={'segment': customer_segment, 'type': content_type, 'limit': count, 'include_metadata': True}
+        )
+        
+        if response.status_code == 200:
+            return response.json()['content_items']
+        else:
+            raise APIException(f"Content API error: {response.status_code}")
+```
 
-`POST /personalization/batch-plan`
+### Performance Monitoring
 
-- Triggers generation of decisions for a defined cohort.
-- Input:
-  - Segment identifier(s)
-  - Campaign/offer configuration reference
-- Output:
-  - Plan identifier
-  - Location of generated assignments for use by automation platform.
+```python
+class PersonalizationPerformanceMonitor:
+    def track_decision_metrics(self, decision_id: str, customer_id: str, latency_ms: float):
+        """Track real-time decision metrics"""
+        self.prometheus_client.histogram('personalization_decision_latency_ms', latency_ms)
+        self.prometheus_client.counter('personalization_decisions_total').inc()
+        
+    def track_conversion_metrics(self, customer_id: str, content_id: str, conversion_type: str, value: float = None):
+        """Track conversion metrics for personalization effectiveness"""
+        self.prometheus_client.counter('personalization_conversions_total').inc()
+        if value:
+            self.prometheus_client.histogram('personalization_conversion_value', value)
+```
 
-### Admin and Rules APIs
+---
 
-- Manage:
-  - Eligibility rules
-  - Ranking policies
-  - Segment definitions (or references to central segmentation)
-- Requirements:
-  - RBAC
-  - Version history
-  - Safe deployment with validation.
+## Dependencies and Infrastructure
 
-## Dependencies
+**Required Services:** Apache Kafka for streaming, Apache Spark for processing, Redis/Cassandra for storage, TensorFlow Serving for ML inference, Elasticsearch for search, Prometheus/Grafana for monitoring
 
-- Identity and Account services
-- Consent and Preferences service
-- Feature store and analytics pipeline
-- CMS / content store / product catalog
-- `marketing-automation-platform` for orchestration of actions
-- Central observability stack
+**Infrastructure:** Auto-scaling API servers (8-32 cores), GPU nodes for ML, high-memory instances (64GB+), Redis cluster, performance targets: <50ms decision latency, <10ms feature retrieval, 10,000+ decisions/second
 
-## Reliability and Performance
+---
 
-- Targets:
-  - p95 decision latency: <100–150ms for online calls
-  - High availability for decision endpoints
-- Techniques:
-  - In-memory caches for rules and catalogs
-  - Warmed feature lookups
-  - Circuit breakers and fallbacks:
-    - Fallback to default content when dependencies unavailable.
+## Business Context and Traceability
 
-## Security and Compliance
+- **For strategic context see:** `docs/business/marketing/strategy/detailed.md`
+- **For journey optimization see:** `docs/business/marketing/journey/summary.md`
+- **For technical foundation see:** `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
 
-- Data:
-  - Minimize PII in decision requests.
-  - Use hashed or surrogate identifiers where practical.
-  - Encryption in transit and at rest.
-- Access:
-  - Internal auth for all APIs.
-  - Fine-grained permissions for:
-    - Managing rules
-    - Accessing logs
-- Compliance:
-  - Enforce consent checks before any decision involving messaging or tracking.
-  - Support deletion/erasure requests propagating to profiles and logs where required.
-
-## Backlinks
-
-For strategic context see:
-- `docs/business/marketing/journey/summary.md`
-- `docs/business/marketing/strategy/detailed.md`
-
-For ROI context see:
-- `docs/business/marketing/roi/detailed.md`
-
-For technical integration references see:
-- `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-- `docs/implementation-technical/marketing/marketing-optimization-engine.md`
-- `docs/implementation-technical/marketing/marketing-automation-platform.md`
-
-This document is Level 4 technical and intentionally excludes executive storytelling and high-level business narratives.
+This technical implementation focuses exclusively on personalization system architecture and real-time decisioning algorithms without business value narratives.
