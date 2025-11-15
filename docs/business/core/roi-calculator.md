@@ -14,6 +14,31 @@ last_modified_date: "2025-12-19"
 
 ## 🎯 Quick ROI Assessment
 
+### Progressive Disclosure Flow
+```mermaid
+graph TD
+    A[Budget Decision] --> B{Volume Assessment}
+    B -->|10K/month| C[Postmark<br/>$15-200]
+    B -->|100K/month| D[Mailgun<br/>$80-150]
+    B -->|1M+/month| E[SendGrid Pro<br/>$500-1,000]
+
+    C --> F[Savings: $2,124-$3,468/year]
+    D --> G[Savings: $5,760-$12,840/year]
+    E --> H[Savings: $31,200-$57,600/year]
+
+    F --> I{Go Decision}
+    G --> I
+    H --> I
+
+    I -->|Yes| J[Implementation Roadmap]
+    I -->|More Info| K[Detailed Analysis]
+
+    style A fill:#fff3e0
+    style I fill:#e8f5e8
+    style J fill:#f3e5f5
+    style K fill:#f3e5f5
+```
+
 ### Current State vs. Optimized Infrastructure
 
 **Enter your current metrics below to calculate potential savings:**

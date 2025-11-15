@@ -6,7 +6,7 @@ This document establishes the comprehensive marketing executive reporting framew
 
 **Document Level:** Level 1 - Executive Reporting  
 **Target Audience:** C-level Executives, Marketing Directors, Business Strategy Leaders  
-**Strategic Focus:** Executive decision support and business performance communication
+**Strategic Focus:** Executive decision support and business performance insights
 
 ---
 

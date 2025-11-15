@@ -6,7 +6,7 @@ This document establishes the comprehensive marketing predictive analytics frame
 
 **Document Level:** Level 3 - Predictive Analytics  
 **Target Audience:** Marketing Analysts, Data Scientists, Business Intelligence Leaders  
-**Intelligence Focus:** Predictive modeling, forecasting, and proactive optimization
+**Intelligence Focus:** Predictive modeling, forecasting, and data-driven optimization
 
 ---
 

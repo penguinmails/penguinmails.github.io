@@ -267,7 +267,7 @@ See operations framework: `docs/business/marketing/operations/framework.md`
 ### Workflow Excellence Effectiveness
 - [ ] Marketing workflow optimization frameworks implemented with documented improvement procedures and success criteria
 - [ ] Quality standards established with comprehensive measurement criteria and validation procedures
-- [ ] Continuous improvement processes implemented with performance measurement and enhancement procedures
+- [ ] Continuous improvement frameworks implemented with performance measurement and excellence procedures
 - [ ] Workflow automation procedures documented with efficiency improvement and optimization criteria
 - [ ] Cross-domain workflow integration established with coordination procedures and collaborative success metrics
 
@@ -290,6 +290,6 @@ See operations framework: `docs/business/marketing/operations/framework.md`
 **Document Classification:** Level 3 - Business Process Excellence Analysis
 **Process Approval:** Required for marketing workflow excellence and optimization framework implementation
 **Implementation Access:** CMO, Marketing Directors, Operations Managers, Quality Assurance Teams
-**Review Cycle:** Monthly workflow validation and quarterly excellence framework enhancement
+**Review Cycle:** Monthly workflow validation and quarterly excellence framework review
 
 This comprehensive marketing workflow excellence framework ensures enterprise-ready operations with workflow optimization, quality standards, continuous improvement procedures, and automation excellence for optimized $1.2M annual marketing technology value delivery and 40% operational efficiency improvement.

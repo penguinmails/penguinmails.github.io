@@ -268,6 +268,6 @@ See marketing teams user stories: `tasks/user-stories-framework/marketing-teams-
 **Document Classification:** Level 3 - Business Training Analysis
 **Training Approval:** Required for marketing team onboarding and competency framework implementation
 **Implementation Access:** CMO, Marketing Directors, Training Managers, HR Leadership
-**Review Cycle:** Monthly onboarding validation and quarterly training framework enhancement
+**Review Cycle:** Monthly onboarding validation and quarterly training framework review
 
 This comprehensive marketing team onboarding framework ensures enterprise-ready team development with role-specific training paths, progressive disclosure integration, competency assessment frameworks, and technology adoption procedures for optimized $1.2M annual marketing technology value delivery and 40% team productivity improvement.
