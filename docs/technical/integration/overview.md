@@ -27,10 +27,10 @@ Enable **seamless integration** with existing business systems while providing t
 ### **RESTful API Design**
 
 **API Foundation**
-- **Base URL**: `https://api.penguinmails.com/v1/` (production/)) / `https://sandbox-api.penguinmails.com/v1/` (testing/))
+- **Base URL**: `https://api.penguinmails.com/v1/` (production/) / `https://sandbox-api.penguinmails.com/v1/` (testing/)
 - **Authentication**: JWT tokens, API keys, and OAuth 2.0 support
-- **Rate Limiting**: Tiered rate limits (1K to 1M requests/hour/)) with intelligent throttling
-- **Versioning**: URL-based versioning (v1, v2/)) with 6-month backward compatibility
+- **Rate Limiting**: Tiered rate limits (1K to 1M requests/hour) with intelligent throttling
+- **Versioning**: URL-based versioning (v1, v2/) with 6-month backward compatibility
 
 **Response Format Standardization**
 ```json

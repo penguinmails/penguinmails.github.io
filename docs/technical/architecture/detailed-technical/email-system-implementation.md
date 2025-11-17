@@ -459,10 +459,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](((../overview/))) - Strategic foundation and market positioning
-- [Analytics Architecture](((./analytics-architecture/))) - PostHog integration and business intelligence
-- [Email System Hierarchy](((./email-system-hierarchy/))) - Database structure and relationships
-- [Campaign Management](((../../campaigns/overview/))) - User experience and business operations
-- [Business Analytics](((../../business/analytics/overview/))) - Revenue intelligence and optimization
+- [Architecture Overview](../overview/) - Strategic foundation and market positioning
+- [Analytics Architecture](./analytics-architecture.md) - PostHog integration and business intelligence
+- [Email System Hierarchy](./email-system-hierarchy.md) - Database structure and relationships
+- [Campaign Management](../../core-features/analytics/overview/) - User experience and business operations
+- [Business Analytics](../../business/analytics/overview/) - Revenue intelligence and optimization
 
 **Keywords**: email_messages, email_content, email system hierarchy, message-focused naming, database architecture, queue integration, IMAP integration, content database, analytics, email processing, enterprise infrastructure, operational excellence
