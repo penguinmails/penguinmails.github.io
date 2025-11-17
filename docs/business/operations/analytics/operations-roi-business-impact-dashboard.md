@@ -356,11 +356,11 @@ The Operations ROI and Business Impact Dashboard provides comprehensive operatio
 **Review Cycle:** Quarterly ROI validation and strategic operations financial alignment assessment
 
 **Related ROI Documents:**
-- [Operations Analytics Framework](./framework) - Operations analytics context and strategic alignment
-- [Operations Executive Dashboard Framework](./executive-operations-dashboard-framework) - Executive operations context and ROI integration
-- [Operations Analytics Executive Dashboard](./operations-analytics-executive-dashboard) - Operations analytics with ROI tracking
-- [Operations Success Metrics Dashboard](./operations-success-metrics-dashboard) - Operations success tracking with ROI integration
-- [Cross-Domain Integration Dashboard](./cross-domain-integration-dashboard) - Cross-domain integration with ROI analytics
+- [Operations Analytics Framework](..md) - Operations analytics context and strategic alignment
+- [Operations Executive Dashboard Framework](..md) - Executive operations context and ROI integration
+- [Operations Analytics Executive Dashboard](..md) - Operations analytics with ROI tracking
+- [Operations Success Metrics Dashboard](..md) - Operations success tracking with ROI integration
+- [Cross-Domain Integration Dashboard](..md) - Cross-domain integration with ROI analytics
 
 **Next Steps:**
 

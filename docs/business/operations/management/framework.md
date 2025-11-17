@@ -316,11 +316,11 @@ The Operations Management Framework provides comprehensive daily operations mana
 **Review Cycle:** Quarterly operations management validation and annual operations optimization
 
 **Related Management Documents:**
-- [Operations Management Overview](../overview) - Operations management context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and management integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with management integration
-- [Daily Operations Procedures](./daily-operations-procedures) - Daily operations management and procedures
-- [SOC Management Protocols](./soc-management-protocols) - Security operations center management and protocols
+- [Operations Management Overview](...md) - Operations management context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and management integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with management integration
+- [Daily Operations Procedures](..md) - Daily operations management and procedures
+- [SOC Management Protocols](..md) - Security operations center management and protocols
 
 **Next Steps:**
 1. **Operations Assessment:** Conduct comprehensive assessment of current operations management capabilities and performance

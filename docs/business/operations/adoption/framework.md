@@ -313,12 +313,12 @@ The Operations Adoption Framework provides comprehensive security tool adoption 
 **Review Cycle:** Quarterly operations adoption review and annual operations adoption optimization
 
 **Related Adoption Documents:**
-- [Operations Adoption Overview](../overview) - Operations adoption context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and adoption integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with adoption integration
-- [Operations Management Framework](../management/framework) - Operations management with adoption coordination
-- [Security Tool Adoption Guide](./security-tool-adoption-guide) - Security tool adoption and user training
-- [Change Management Protocols](./change-management-protocols) - Change management and stakeholder engagement
+- [Operations Adoption Overview](...md) - Operations adoption context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and adoption integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with adoption integration
+- [Operations Management Framework](../management.md) - Operations management with adoption coordination
+- [Security Tool Adoption Guide](..md) - Security tool adoption and user training
+- [Change Management Protocols](..md) - Change management and stakeholder engagement
 
 **Next Steps:**
 1. **Adoption Assessment:** Conduct comprehensive assessment of current adoption capabilities, training, and change management

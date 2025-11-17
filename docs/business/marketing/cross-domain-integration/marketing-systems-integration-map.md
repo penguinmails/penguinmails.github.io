@@ -19,7 +19,7 @@ This document provides system integration maps with clear separation between MVP
 **MVP Focus:** Daily sync, basic APIs, manual processes
 **Post-MVP Focus:** Real-time integration, event streaming, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) integration capabilities. Level 3+ advanced integration features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) integration capabilities. Level 3+ advanced integration features are addressed in the roadmap section below.
 
 ---
 

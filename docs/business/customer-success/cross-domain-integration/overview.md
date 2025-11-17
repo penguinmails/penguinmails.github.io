@@ -731,11 +731,11 @@ Phase 6 Standardization Integration:
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework)
+- [Customer Success Framework](../strategy.md)
 - [Marketing Systems Integration Map](../marketing/cross-domain-integration/marketing-systems-integration-map
-- [Product Systems Integration Map](docs/business/product/cross-domain-integration/product-systems-integration-map)
-- [Finance Systems Integration Map](docs/business/finance/cross-domain-integration/finance-systems-integration-map)
-- [Operations Systems Integration Map](docs/business/operations/cross-domain-integration/operations-systems-integration-map)
+- [Product Systems Integration Map](docs/business/product/cross-domain-integration.md)
+- [Finance Systems Integration Map](docs/business/finance/cross-domain-integration.md)
+- [Operations Systems Integration Map](docs/business/operations/cross-domain-integration.md)
 
 *Updated with detailed integration guides and API specifications. Level 2 documentation expanded for Phase 4 cross-domain integration.*
 

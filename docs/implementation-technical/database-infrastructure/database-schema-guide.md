@@ -21,11 +21,11 @@ We operate a 5-tier model:
 External logging/observability is an out-of-band component that complements these tiers.
 
 For detailed per-tier guides, see:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1)
-- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure/content-database-schema-guide:1)
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
-- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -50,8 +50,8 @@ Key principles:
 - No high-volume logs or analytics aggregates.
 
 Reference:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1)
-- [`oltp-mermaid-er`](docs/implementation-technical/database-infrastructure/oltp-mermaid-er:1)
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`oltp-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -59,7 +59,7 @@ Reference:
 
 Purpose:
 - Dedicated tier for:
-  - Email/message bodies (text + HTML).
+  - Email.md).
   - Attachments and large binary objects.
   - Archival content.
 
@@ -77,9 +77,9 @@ Core schema:
 - `attachments`
 
 Reference:
-- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure/content-database-schema-guide:1)
-- [`content-mermaid-er`](docs/implementation-technical/database-infrastructure/content-mermaid-er:1)
-- [`content-database-analysis`](docs/implementation-technical/database-infrastructure/content-database-analysis:1)
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`content-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+- [`content-database-analysis`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -115,8 +115,8 @@ Canonical tables:
 - `admin_audit_log` (compliance-focused only)
 
 Reference:
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
-- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure/olap-mermaid-er:1)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -144,7 +144,7 @@ Key principles:
   - Aggressively pruned; long-lived traces belong in external logging.
 
 Reference:
-- [`queue-system-implementation-guide`](docs/implementation-technical/database-infrastructure/queue-system-implementation-guide:1)
+- [`queue-system-implementation-guide`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -153,19 +153,19 @@ Reference:
 Purpose:
 - Operational store for:
   - In-app user/admin notifications.
-  - Curated admin/system events (incidents, important alerts).
+  - Curated admin.md).
 
 Characteristics:
 - Independent from OLAP.
 - Optimized for:
   - Fast reads on login.
-  - Status updates (read/resolved/deleted).
-  - Bounded retention (short/mid-term).
+  - Status updates (read/resolved.md).
+  - Bounded retention (short.md).
 
 Core tables:
 
 - `notifications`:
-  - User/admin visible notifications (in_app/email/push).
+  - User/admin visible notifications (in_app/email.md).
   - Fields:
     - id, user_id, tenant_id, type, title, message, channel
     - is_read, created_at, read_at, expires_at, deleted_at
@@ -190,8 +190,8 @@ Key principles:
   - Holds raw/full-fidelity events and metrics.
 
 Reference:
-- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure/notifications-database-schema-guide:1)
-- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er:1)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -208,8 +208,8 @@ Purpose:
 Characteristics:
 - Implemented via:
   - PostHog or equivalent.
-  - Centralized logging (ELK/Loki/etc).
-  - Metrics/tracing (Prometheus/OpenTelemetry/etc).
+  - Centralized logging (ELK/Loki.md).
+  - Metrics/tracing (Prometheus/OpenTelemetry.md).
 
 Key principles:
 - Primary sink for:
@@ -221,7 +221,7 @@ Key principles:
   - A replacement for OLTP/Notifications DB correctness.
 
 Reference:
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -236,7 +236,7 @@ Reference:
 - Queue / Jobs:
   - Asynchronous execution orchestration.
 - Notifications DB:
-  - User/admin notifications and curated system events (operational view).
+  - User.md).
 - External Logging/Analytics:
   - Telemetry, raw events, and observability; feeds OLAP when needed.
 

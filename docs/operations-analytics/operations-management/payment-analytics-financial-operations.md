@@ -28,7 +28,7 @@ description: "Comprehensive payment analytics and financial operations for enter
 #### 1. **Onboarding Payment Setup**
 **Journey Flow:** `Onboarding Modal → Stripe Connect → Business Verification → Payment Method → Subscription Activation`
 
-##### Onboarding Trigger (`/onboarding` - Step 3)
+##### Onboarding Trigger (`.md)
 - **Context**: User reaches payment setup in onboarding flow
 - **Modal Elements**:
   - "Connect Payment Method" section header
@@ -43,11 +43,11 @@ description: "Comprehensive payment analytics and financial operations for enter
   - Company legal name and tax ID
   - Business address and phone
   - Bank account or debit card details
-  - Identity verification (SSN/EIN)
+  - Identity verification (SSN.md)
 - **Integration**: OAuth connection back to PenguinMails
 
 ##### Payment Method Addition
-- **Page**: Billing settings (`/billing/payment-methods`)
+- **Page**: Billing settings (`/billing.md)
 - **Form Elements**:
   - "Add Payment Method" button
   - Stripe Elements credit card form
@@ -56,7 +56,7 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Security**: PCI-compliant card tokenization
 
 ##### Subscription Activation
-- **Page**: Plan selection (`/billing/plans`)
+- **Page**: Plan selection (`/billing.md)
 - **Plan Options**: Freemium → Professional → Enterprise tiers
 - **Features**:
   - IP allocation limits
@@ -66,7 +66,7 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Activation**: Immediate access after payment confirmation
 
 ##### Billing Dashboard Access
-- **Page**: Main billing overview (`/billing`)
+- **Page**: Main billing overview (`.md)
 - **Dashboard Elements**:
   - Current plan and usage metrics
   - Next billing date and amount
@@ -86,7 +86,7 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Alert System**: 80% usage threshold notifications
 
 ##### Payment Method Management
-- **Page**: Payment methods settings (`/billing/payment-methods`)
+- **Page**: Payment methods settings (`/billing.md)
 - **Actions**:
   - Add/remove payment methods
   - Update billing addresses
@@ -94,7 +94,7 @@ description: "Comprehensive payment analytics and financial operations for enter
   - Failed payment retry attempts
 
 ##### Invoice & Receipt Access
-- **Page**: Billing history (`/billing/history`)
+- **Page**: Billing history (`/billing.md)
 - **Features**:
   - PDF invoice downloads
   - Detailed line items
@@ -173,7 +173,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
       },
     });
 
-    // 3. Store in tenant_config (minimal state)
+    /.md)
     await nile.db.query(
       `UPDATE tenant_config SET stripe_account_id = $1, updated = CURRENT_TIMESTAMP
        WHERE tenant_id = CURRENT_TENANT_ID()`,
@@ -247,7 +247,7 @@ export async function getStripeConnectStatus() {
 
     const stripeAccountId = accountInfo.rows[0].stripe_account_id;
 
-    // Fetch latest status from Stripe (no local storage of status)
+    /.md)
     const stripeAccount = await stripe.accounts.retrieve(stripeAccountId);
 
     return {
@@ -290,21 +290,21 @@ Handles account updates, capability changes, and other Stripe events for real-ti
 
 #### **Revenue Calculation Methods**
 ```typescript
-// Monthly Recurring Revenue (MRR)
+/.md)
 const calculateMRR = (subscriptions: Subscription[]) => {
   return subscriptions
     .filter(sub => sub.status === 'active')
     .reduce((total, sub) => {
-      return total + (sub.plan.price * (sub.billingCycle === 'annual' ? 1/12 : 1));
+      return total + (sub.plan.price * (sub.billingCycle === 'annual' ? 1.md));
     }, 0);
 };
 
-// Annual Recurring Revenue (ARR)
+/.md)
 const calculateARR = (mrr: number) => mrr * 12;
 
 // Net Revenue Retention
 const calculateNRR = (startingARR: number, endingARR: number, expansions: number) => {
-  return ((endingARR + expansions) / startingARR) * 100;
+  return ((endingARR + expansions) .md) * 100;
 };
 ```
 
@@ -364,7 +364,7 @@ const calculateBreakEven = (
   averageVariableCostPerUser: number
 ) => {
   const contributionMarginPerUser = averageRevenuePerUser - averageVariableCostPerUser;
-  return Math.ceil(fixedCosts / contributionMarginPerUser);
+  return Math.ceil(fixedCosts .md);
 };
 ```
 
@@ -412,7 +412,7 @@ const calculateCohortRetention = (cohortData: Map<string, number[]>) => {
 
   for (const [cohort, monthlyUsers] of cohortData) {
     const initialUsers = monthlyUsers[0];
-    const retention = monthlyUsers.map(users => (users / initialUsers) * 100);
+    const retention = monthlyUsers.map(users => (users .md) * 100);
     retentionRates.set(cohort, retention);
   }
 
@@ -506,7 +506,7 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
 
 **Upgrade Process:**
 1. **Plan Selection**:
-   - **Page**: Billing plans (`/billing/plans`)
+   - **Page**: Billing plans (`/billing.md)
    - **Comparison**: Feature matrix with current vs. new plan
    - **Cost Preview**: Prorated amount calculation
 
@@ -527,7 +527,7 @@ Charge Filed → Stripe Notification → Evidence Collection → Response Submis
    - **Dashboard**: Dispute status indicator
 
 2. **Evidence Collection**:
-   - **Portal**: Dispute management page (`/billing/disputes`)
+   - **Portal**: Dispute management page (`/billing.md)
    - **Required Documents**: Service agreements, email records, timestamps
    - **Time Limit**: 7 days to respond
 
@@ -588,7 +588,7 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 
 **Detailed Steps:**
 1. **Access Point**:
-   - **Page**: Billing dashboard (`/billing`)
+   - **Page**: Billing dashboard (`.md)
    - **Element**: "Add Payment Method" button or empty state prompt
 
 2. **Card Collection**:
@@ -660,25 +660,25 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Operations & Analytics
-- [`docs/operations-analytics/overview`](docs/operations-analytics/overview:1) - Global operations analytics framework.
-- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance/metrics-kpis:1) - Core KPI definitions for revenue, churn, and billing performance.
-- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management/organization-analytics-team-management:1) - Team and organization management analytics.
-- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management/environment-release-management:1) - Environment and release operations impact on billing and reliability.
+- [`docs/operations-analytics/overview`](docs/operations-analytics.md) - Global operations analytics framework.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance.md) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management.md) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management.md) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
-- [`docs/business/model/overview`](docs/business/model/overview:1) - Canonical business and revenue model.
-- [`docs/business/value-proposition/overview`](docs/business/value-proposition/overview:1) - Value proposition framing for pricing and packaging.
-- [`docs/business/strategy/overview`](docs/business/strategy/overview:1) - Strategic priorities that payment analytics must support.
+- [`docs/business/model/overview`](docs/business/model.md) - Canonical business and revenue model.
+- [`docs/business/value-proposition/overview`](docs/business/value-proposition.md) - Value proposition framing for pricing and packaging.
+- [`docs/business/strategy/overview`](docs/business/strategy.md) - Strategic priorities that payment analytics must support.
 
 ### Technical Architecture
-- [`docs/technical/architecture/overview`](docs/technical/architecture/overview:1) - High-level system architecture.
-- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical/integration-guide:1) - Canonical integration patterns, including billing/Stripe.
-- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines/api-reference:1) - API surface for billing, subscriptions, and webhooks.
+- [`docs/technical/architecture/overview`](docs/technical/architecture.md) - High-level system architecture.
+- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical.md) - Canonical integration patterns, including billing/Stripe.
+- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines.md) - API surface for billing, subscriptions, and webhooks.
 
 ### Compliance & Security
-- [`docs/compliance-security/overview`](docs/compliance-security/overview:1) - Compliance posture.
-- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise/security-framework:1) - Security controls relevant to financial data.
-- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international/data-privacy-policy:1) - Data handling, retention, and privacy for billing records.
+- [`docs/compliance-security/overview`](docs/compliance-security.md) - Compliance posture.
+- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise.md) - Security controls relevant to financial data.
+- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international.md) - Data handling, retention, and privacy for billing records.
 
 This section is authoritative; legacy content references should be treated as non-canonical historical scaffolding.
 
@@ -688,9 +688,9 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](./organization-analytics-team-management))** → Team and organization management
-- **[Metrics & KPIs](../analytics-performance/metrics-kpis))** → Comprehensive KPI framework
-- **[Team Performance](../team-performance/)** → Team coordination and development
+- **[Organization Analytics](..md))** → Team and organization management
+- **[Metrics & KPIs](../analytics-performance.md))** → Comprehensive KPI framework
+- **[Team Performance](../team-performance.md)** → Team coordination and development
 
 ---
 

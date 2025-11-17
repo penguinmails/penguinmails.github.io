@@ -96,8 +96,8 @@ This comprehensive competitive intelligence framework provides strategic positio
 ```
 COMPETITOR COMPARISON:
 • Industry Average: 60-70% inbox placement
-• Mailchimp/SendGrid: ~65% (shared infrastructure limitations)
-• Smartlead/Warmbox: ~70-75% (limited optimization)
+• Mailchimp.md)
+• Smartlead.md)
 • PenguinMails: 95%+ (purpose-built optimization)
 
 COMPETITIVE POSITIONING:
@@ -214,7 +214,7 @@ DNS CONFIGURATION APPROACH:
 errors cause deliverability failures for 60% of cold email campaigns, while 
 our automated approach achieves 99.9% verification success rate.
 
-→ [See Technical Details](../technical-implementation/dns-storage-integration-guide/)
+→ [See Technical Details](../technical-implementation/dns-storage-integration-guide.md)
 → [Competitive Advantage](competitive-analysis#dns-automation)"
 
 VPS INFRASTRUCTURE:
@@ -222,7 +222,7 @@ VPS INFRASTRUCTURE:
 deliverability requires IP reputation control that shared infrastructure 
 cannot provide.
 
-→ [See Architecture Details](../architecture/overview#infrastructure-layer)
+→ [See Architecture Details](../architecture.md)
 → [Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure-limitations)"
 ```
 
@@ -280,7 +280,7 @@ factors that general email platforms don't address.
 • **Compliance-First Design**: Unlike platforms that add compliance as an afterthought
 • **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
-→ [See Complete Architecture](../architecture/overview/)
+→ [See Complete Architecture](../architecture/overview.md)
 → [Why These Decisions Matter](competitive-analysis#architecture-decisions)
 ```
 
@@ -403,19 +403,19 @@ MEASUREMENT:
 ## Cross-References
 
 **Related Strategic Documentation**:
-- [Business Strategy Overview](../strategy/overview) - Strategic business decisions and market positioning
-- [Value Proposition Overview](../value-proposition/overview) - Core value propositions and customer benefits
-- [Market Analysis Overview](../market-analysis/overview) - Market opportunity and competitive landscape
-- [Business Model Overview](../model/overview) - Revenue models and competitive economics
+- [Business Strategy Overview](../strategy.md) - Strategic business decisions and market positioning
+- [Value Proposition Overview](../value-proposition.md) - Core value propositions and customer benefits
+- [Market Analysis Overview](../market-analysis.md) - Market opportunity and competitive landscape
+- [Business Model Overview](../model.md) - Revenue models and competitive economics
 
 **Technical Documentation**:
-- [Technical Architecture Overview](../architecture/overview) - Infrastructure decisions and competitive advantages
-- [Security Overview](../security/overview) - Security features and compliance automation
+- [Technical Architecture Overview](../architecture.md) - Infrastructure decisions and competitive advantages
+- [Security Overview](../security.md) - Security features and compliance automation
 
 **Feature Documentation**:
-- [Warm-ups Overview](../../core-features/warm-ups/overview) - Competitive differentiation in deliverability features
-- [Analytics Overview](../../core-features/analytics/overview) - Performance metrics vs. competitor limitations
-- [Inbox Rotation Overview](../../core-features/inbox-rotation/overview) - Advanced features not available in competitor platforms
+- [Warm-ups Overview](../../core-features/warm-ups.md) - Competitive differentiation in deliverability features
+- [Analytics Overview](../../core-features/analytics.md) - Performance metrics vs. competitor limitations
+- [Inbox Rotation Overview](../../core-features/inbox-rotation.md) - Advanced features not available in competitor platforms
 
 ---
 

@@ -28,7 +28,7 @@ This creates a natural email hierarchy that supports enterprise-scale email proc
 ### Email System Hierarchy
 ```
 📧 Complete Email Structure
-├── email_messages (Message Analytics/Metadata)
+├── email_messages (Message Analytics.md)
 │   ├── campaign_id, lead_id, direction, status
 │   ├── from_email, to_email, subject
 │   └── storage_key → email_content
@@ -55,7 +55,7 @@ OLTP Database (Operational):
 └── leads, templates (business data)
 
 Content Database (Analytical):
-├── email_messages (message analytics/traces) ⭐
+├── email_messages (message analytics.md) ⭐
 ├── email_content (email bodies, attachments)
 ├── transactional_emails, notifications
 └── content access and search indexes
@@ -109,7 +109,7 @@ SELECT
     m.direction,
     m.status,
     COUNT(*) as email_count,
-    AVG(c.raw_size_bytes / 1024.0) as avg_size_kb,
+    AVG(c.raw_size_bytes .md) as avg_size_kb,
     COUNT(a.*) as total_attachments
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
@@ -126,7 +126,7 @@ GROUP BY m.direction, m.status;
 ```
 1. Event Reception: IMAP/Cronjob/Endpoint → Queue Producer
 2. Queue Entry: Redis Queue with job classification  
-3. Handler Processing: Type-specific processing (inbound/bounce/autoreply)
+3. Handler Processing: Type-specific processing (inbound/bounce.md)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
 ```
@@ -154,7 +154,7 @@ async function handleIncomingEmail(emailData: any) {
   const storage_key = `email_${emailData.messageId}_${Date.now()}`;
   
   return await db.$transaction(async (tx) => {
-    // 1. Create email_content (email body)
+    /.md)
     const contentObject = await tx.email_content.create({
       data: {
         storage_key,
@@ -168,7 +168,7 @@ async function handleIncomingEmail(emailData: any) {
       }
     });
 
-    // 2. Create email_messages (analytics)
+    /.md)
     const messageRef = await tx.email_messages.create({
       data: {
         storage_key,
@@ -229,7 +229,7 @@ async function startIncomingWorker() {
   
   try {
     for await (let msg of client.fetch('1:*', { envelope: true, source: true })) {
-      // ✅ Add to queue (creates email_messages + email_content)
+      /.md)
       await addEmailToQueue({
         direction: 'inbound',
         messageId: msg.envelope.messageId,
@@ -270,8 +270,8 @@ ORDER BY date;
 -- Content storage analytics
 SELECT 
     DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 / 1024.0) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 / 1024.0) as total_mb_compressed,
+    SUM(c.raw_size_bytes / 1024.0 .md) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 .md) as total_mb_compressed,
     COUNT(*) as emails_processed
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
@@ -442,15 +442,15 @@ WHERE c.storage_key IS NULL;
 
 ### 📚 **Supporting Documentation**
 - [Architecture Overview](architecture-overview)) - System architecture and design decisions
-- [Infrastructure Documentation](./infrastructure-documentation)) - Infrastructure management
-- [Database Infrastructure](../database-infrastructure/README)) - Schema and performance optimization
-- [Quality Assurance](../quality-assurance/README)) - Testing protocols
+- [Infrastructure Documentation](..md)) - Infrastructure management
+- [Database Infrastructure](../database-infrastructure.md)) - Schema and performance optimization
+- [Quality Assurance](../quality-assurance.md)) - Testing protocols
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
 
 ---
 

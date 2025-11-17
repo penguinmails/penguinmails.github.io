@@ -22,12 +22,12 @@ Marketing teams access data through pre-defined OLAP views with strict RBAC cont
 
 - Client data from `companies` table (required fields only)
 - Simple derived metrics: subscription status, usage activity, basic health indicators
-- Optional enrichment: industry/company size (when available, not guaranteed)
+- Optional enrichment: industry.md)
 
 Key properties:
 - tenant_id (multi-tenant isolation via Row Level Security)
 - client_id (references companies table)
-- subscription_status (active/inactive/pending)
+- subscription_status (active/inactive.md)
 - activity_metrics (usage patterns, last activity date)
 - derived_insights (churn risk, lifecycle stage)
 

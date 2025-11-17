@@ -19,7 +19,7 @@ This document establishes the marketing performance dashboard framework with cle
 **MVP Focus:** Basic dashboard visibility, directional analytics, weekly reporting
 **Post-MVP Focus:** Real-time monitoring, AI analytics, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) dashboard capabilities. Level 3+ advanced analytics features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) dashboard capabilities. Level 3+ advanced analytics features are addressed in the roadmap section below.
 
 ---
 

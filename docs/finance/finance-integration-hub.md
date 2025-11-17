@@ -88,8 +88,8 @@ SELECT
     campaign_name,
     COUNT(DISTINCT customer_id) as customers_converted,
     SUM(revenue_amount) as total_revenue,
-    SUM(revenue_amount) / COUNT(DISTINCT customer_id) as avg_revenue_per_customer,
-    (SUM(revenue_amount) - SUM(campaign_cost)) / SUM(campaign_cost) * 100 as roi_percentage
+    SUM(revenue_amount) .md) as avg_revenue_per_customer,
+    (SUM(revenue_amount) - SUM(campaign_cost)) .md) * 100 as roi_percentage
 FROM financial_revenue_attribution 
 WHERE campaign_date >= CURRENT_DATE - INTERVAL '30 days'
 GROUP BY campaign_id, campaign_name
@@ -129,7 +129,7 @@ def calculate_marketing_roi(campaign_data):
         )
         
         # ROI calculation
-        roi_percentage = ((attributed_revenue - total_cost) / total_cost) * 100
+        roi_percentage = ((attributed_revenue - total_cost) .md) * 100
         
         # Additional metrics
         cac = total_cost / campaign['leads_generated']
@@ -140,7 +140,7 @@ def calculate_marketing_roi(campaign_data):
             'roi_percentage': round(roi_percentage, 2),
             'cac': round(cac, 2),
             'ltv': round(ltv, 2),
-            'ltv_cac_ratio': round(ltv / cac, 2) if cac > 0 else 0
+            'ltv_cac_ratio': round(ltv .md) if cac > 0 else 0
         })
     
     return results

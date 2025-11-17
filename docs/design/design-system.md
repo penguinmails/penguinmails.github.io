@@ -182,7 +182,7 @@ Following Phase 3B standards, all designs start mobile-first:
 ## Implementation Resources
 
 ### Design Assets
-- [Figma Design System Library](https://figma.com/design-system)
+- [Figma Design System Library](https://figma.com)
 - Component specifications and usage examples
 - Interactive prototype environments
 
@@ -194,8 +194,8 @@ Following Phase 3B standards, all designs start mobile-first:
 ---
 
 ## Related Documents
-- [Component Library](../component-library) - Reusable component catalog
-- [Accessibility Guidelines](../accessibility-guidelines) - WCAG compliance and inclusive design
-- [Design Tokens](../design-tokens) - Design token specifications
-- [UI Library](../ui-library) - Component usage guidelines and patterns
+- [Component Library](../component-library.md) - Reusable component catalog
+- [Accessibility Guidelines](../accessibility-guidelines.md) - WCAG compliance and inclusive design
+- [Design Tokens](../design-tokens.md) - Design token specifications
+- [UI Library](../ui-library.md) - Component usage guidelines and patterns
 ---

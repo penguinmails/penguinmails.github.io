@@ -86,7 +86,7 @@ class FeatureEngineeringPipeline:
 **API Endpoints:**
 
 ```python
-@app.post("/api/v1/predict/performance")
+@app.post("/api/v1/predict.md)
 async def predict_performance(campaign_data: CampaignData):
     features = feature_pipeline.transform(campaign_data)
     prediction = model.predict(features)
@@ -174,7 +174,7 @@ class ModelMaintenanceSystem:
 
 **Compute Resources:** GPU clusters (NVIDIA A100) for training, CPU nodes for inference, high-memory instances for feature computation, auto-scaling
 
-**Data Storage:** Object storage (S3) for artifacts and data, time-series database (InfluxDB) for metrics, feature store database (Redis/MemSQL) for online features
+**Data Storage:** Object storage (S3) for artifacts and data, time-series database (InfluxDB) for metrics, feature store database (Redis.md) for online features
 
 ---
 

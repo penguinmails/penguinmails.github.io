@@ -22,24 +22,24 @@ Comprehensive compliance and security documentation for PenguinMails.
 
 ## Quick Access
 
-### **📋 [Compliance & Security Overview](overview.md)**
+### **📋 [Compliance & Security Overview](overview)**
 Complete security and compliance framework overview with strategic positioning and key metrics.
 
-### **📋 [Detailed Compliance](detailed-compliance/)**
+### **📋 [Detailed Compliance](detailed-compliance.md)**
 Advanced compliance procedures and implementation guidance:
-- [Compliance Procedures](detailed-compliance/compliance-procedures.md) - Regulatory workflows and procedures
-- [Accessibility Guidelines](detailed-compliance/accessibility-guidelines.md) - WCAG 2.1 AA compliance standards
-- [SOP Guidelines](detailed-compliance/sop-guidelines.md) - Standard operating procedures
+- [Compliance Procedures](detailed-compliance.md) - Regulatory workflows and procedures
+- [Accessibility Guidelines](detailed-compliance.md) - WCAG 2.1 AA compliance standards
+- [SOP Guidelines](detailed-compliance.md) - Standard operating procedures
 
-### **🏢 [Enterprise Security](enterprise/)**
+### **🏢 [Enterprise Security](enterprise.md)**
 Advanced security architecture and implementation:
-- [Security Framework](enterprise/security-framework.md) - Comprehensive security architecture
-- [Security & Privacy Integration](enterprise/security-privacy-integration.md) - Unified security and privacy approach
-- [Traffic Security Matrix](enterprise/traffic-security-matrix.md) - Database security strategy framework
+- [Security Framework](enterprise.md) - Comprehensive security architecture
+- [Security & Privacy Integration](enterprise.md) - Unified security and privacy approach
+- [Traffic Security Matrix](enterprise.md) - Database security strategy framework
 
-### **🌍 [International Standards](international/)**
+### **🌍 [International Standards](international.md)**
 Global compliance and privacy frameworks:
-- [Data Privacy Policy](international/data-privacy-policy.md) - Customer-facing privacy standards
+- [Data Privacy Policy](international.md) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -169,10 +169,10 @@ Global compliance and privacy frameworks:
 
 ## Integration Points
 
-- **Core Features**: [Feature Documentation](../core-features/)
-- **Business Context**: [Business Documentation](../business/)
-- **Technical Implementation**: [Technical Documentation](../technical/)
-- **User Journeys**: [User Journey Documentation](../user-journeys/)
+- **Core Features**: [Feature Documentation](../core-features.md)
+- **Business Context**: [Business Documentation](../business.md)
+- **Technical Implementation**: [Technical Documentation](../technical.md)
+- **User Journeys**: [User Journey Documentation](../user-journeys.md)
 
 ---
 
@@ -215,5 +215,5 @@ Global compliance and privacy frameworks:
 
 *Security and privacy are fundamental to our service. This framework ensures we maintain the highest standards while supporting business growth and user trust.*
 
-*Previous: [User Journeys](../user-journeys/) | Next: [Archive](../archive/) →*
+*Previous: [User Journeys](../user-journeys.md) | Next: [Archive](../archive.md) →*
 ---

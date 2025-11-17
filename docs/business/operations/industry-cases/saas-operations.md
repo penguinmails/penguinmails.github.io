@@ -305,9 +305,9 @@ SaaS organizations present unique operational challenges requiring specialized a
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework)
-- [Operations Analytics Framework](../analytics/framework)
-- [SaaS Product Framework](../../product/industry-cases/saas-product)
+- [Operations Strategy Framework](../strategy.md)
+- [Operations Analytics Framework](../analytics.md)
+- [SaaS Product Framework](../../product/industry-cases.md)
 - [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map
 
 ---

@@ -357,11 +357,11 @@ The Operations Cross-Domain Integration Performance Dashboard provides comprehen
 **Review Cycle:** Quarterly integration validation and strategic operations alignment assessment
 
 **Related Integration Documents:**
-- [Operations Analytics Framework](./framework) - Operations analytics context and strategic alignment
-- [Operations Executive Dashboard Framework](./executive-operations-dashboard-framework) - Executive operations context and integration
-- [Operations Analytics Executive Dashboard](./operations-analytics-executive-dashboard) - Operations analytics with integration tracking
-- [Operations Success Metrics Dashboard](./operations-success-metrics-dashboard) - Operations success tracking with integration
-- [Operations ROI Business Impact Dashboard](./operations-roi-business-impact-dashboard) - ROI business impact with integration analytics
+- [Operations Analytics Framework](..md) - Operations analytics context and strategic alignment
+- [Operations Executive Dashboard Framework](..md) - Executive operations context and integration
+- [Operations Analytics Executive Dashboard](..md) - Operations analytics with integration tracking
+- [Operations Success Metrics Dashboard](..md) - Operations success tracking with integration
+- [Operations ROI Business Impact Dashboard](..md) - ROI business impact with integration analytics
 
 **Next Steps:**
 

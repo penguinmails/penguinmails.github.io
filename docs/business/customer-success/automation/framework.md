@@ -181,9 +181,9 @@ sms:
 #### 10.1 Technology Stack
 ```
 Core Platforms:
-├── Customer Success: Gainsight/Totango (Health + Workflows)
-├── Marketing Automation: Customer.io/Braze (Communications)
-├── Workflow Engine: Zapier/Tray.io/Zapier NLA (Cross-system)
+├── Customer Success: Gainsight.md)
+├── Marketing Automation: Customer.io.md)
+├── Workflow Engine: Zapier/Tray.io.md)
 ├── AI/ML: Custom models + OpenAI integration
 └── Data: Real-time sync via webhooks/APIs
 ```

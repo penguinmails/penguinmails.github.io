@@ -43,11 +43,11 @@ This technical specification defines the implementation architecture for marketi
 
 ### API Endpoints
 
-**Workflow Management:** `POST /api/v1/workflows` (Create), `GET /api/v1/workflows/{id}` (Retrieve), `PUT /api/v1/workflows/{id}` (Update), `DELETE /api/v1/workflows/{id}` (Delete), `POST /api/v1/workflows/{id}/execute` (Execute)
+**Workflow Management:** `POST /api/v1.md), `GET /api/v1/workflows.md), `PUT /api/v1/workflows.md), `DELETE /api/v1/workflows.md), `POST /api/v1/workflows/{id}.md)
 
-**Trigger Management:** `POST /api/v1/triggers` (Create), `GET /api/v1/triggers/{id}/status` (Status), `PUT /api/v1/triggers/{id}/toggle` (Toggle)
+**Trigger Management:** `POST /api/v1.md), `GET /api/v1/triggers/{id}.md), `PUT /api/v1/triggers/{id}.md)
 
-**Execution Monitoring:** `GET /api/v1/executions` (List), `GET /api/v1/executions/{id}` (Details), `POST /api/v1/executions/{id}/retry` (Retry)
+**Execution Monitoring:** `GET /api/v1.md), `GET /api/v1/executions.md), `POST /api/v1/executions/{id}.md)
 
 ### Integration Patterns
 

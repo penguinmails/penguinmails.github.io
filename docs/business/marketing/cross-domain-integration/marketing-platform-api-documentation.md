@@ -634,7 +634,7 @@ npm install @marketing-platform/sdk
 
 **Usage:**
 ```javascript
-const { MarketingPlatform } = require('@marketing-platform/sdk');
+const { MarketingPlatform } = require('@marketing-platform.md);
 
 const client = new MarketingPlatform({
   apiKey: 'pk_live_your_api_key',

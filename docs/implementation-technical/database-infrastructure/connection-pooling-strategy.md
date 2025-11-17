@@ -16,11 +16,11 @@
 This guide defines the comprehensive connection pooling strategy for PenguinMails' 4-tier database architecture. It addresses critical production performance issues and prevents connection exhaustion while enabling horizontal scaling.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Performance Optimization**: All configurations follow [QA Performance Monitoring Framework](../quality-assurance/qa-testing-protocols#-performance-monitoring-framework) with automated validation
-- **Resource Management**: Prevent connection exhaustion with [QA Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification) and monitoring
-- **Scalability**: Enable auto-scaling with [QA Continuous Improvement Framework](../quality-assurance/qa-testing-protocols#-continuous-improvement-framework) integration
-- **Monitoring**: Provide visibility with [QA Issue Detection & Response](../quality-assurance/qa-testing-protocols#-issue-detection--response) procedures
-- **Quality Assurance**: [Success Measurement Framework](../quality-assurance/qa-testing-protocols#-success-measurement-framework) validation for all pool configurations
+- **Quality-Assured Performance Optimization**: All configurations follow [QA Performance Monitoring Framework](../quality-assurance.md) with automated validation
+- **Resource Management**: Prevent connection exhaustion with [QA Critical Issue Identification](../quality-assurance.md) and monitoring
+- **Scalability**: Enable auto-scaling with [QA Continuous Improvement Framework](../quality-assurance.md) integration
+- **Monitoring**: Provide visibility with [QA Issue Detection & Response](../quality-assurance.md) procedures
+- **Quality Assurance**: [Success Measurement Framework](../quality-assurance.md) validation for all pool configurations
 
 ⭐ **Quick Configuration** (10 minutes) - Basic pooling setup and monitoring
 ⭐⭐ **Standard Implementation** (30 minutes) - Production-grade configuration with auto-scaling
@@ -319,7 +319,7 @@ AND (cpm.connection_usage_rate > 90 OR cpm.pending_acquires > 5)
 ORDER BY cpm.connection_usage_rate DESC;
 
 -- QA Integration: Comment explaining QA framework integration
-COMMENT ON VIEW connection_pool_diagnosis IS 'QA Framework Integration: Pool exhaustion diagnosis with quality assurance alerting and [Critical Issue Identification](../quality-assurance/qa-testing-protocols#critical-issue-identification) protocols';
+COMMENT ON VIEW connection_pool_diagnosis IS 'QA Framework Integration: Pool exhaustion diagnosis with quality assurance alerting and [Critical Issue Identification](../quality-assurance.md) protocols';
 ```
 
 ### **Performance Monitoring Integration**
@@ -392,21 +392,21 @@ PostHog Dashboard Integration:
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](../operations-management/infrastructure-operations-management))** - Central operational hub
-- **[Backup & Recovery Procedures](./backup-recovery-procedures))** - Data protection during incidents
-- **[Quality Assurance Testing Protocols](../quality-assurance/qa-testing-protocols))** - Performance monitoring procedures
+- **[Infrastructure Operations Management](../operations-management.md))** - Central operational hub
+- **[Backup & Recovery Procedures](..md))** - Data protection during incidents
+- **[Quality Assurance Testing Protocols](../quality-assurance.md))** - Performance monitoring procedures
 
 ### **Technical References**
-- **[OLTP Schema Guide](./oltp-schema-guide))** - OLTP pool integration
-- **[Content Database Schema Guide](./content-database-schema-guide))** - Content pool optimization
-- **[Queue System Implementation Guide](./queue-system-implementation-guide))** - Queue pool management
-- **[OLAP Analytics Schema Guide](./olap-analytics-schema-guide))** - Analytics pool configuration
+- **[OLTP Schema Guide](..md))** - OLTP pool integration
+- **[Content Database Schema Guide](..md))** - Content pool optimization
+- **[Queue System Implementation Guide](..md))** - Queue pool management
+- **[OLAP Analytics Schema Guide](..md))** - Analytics pool configuration
 
 ### **Strategic Documentation**
-- **[Database Infrastructure Management](./README))** - Main database infrastructure framework
-- **[Architecture System](../architecture-system/)** - System architecture decisions
-- **[Business Strategy Overview](../../business/strategy/overview))** - Strategic business alignment
-- **[Operations Analytics Overview](../../operations-analytics/overview))** - Main operations analytics framework
+- **[Database Infrastructure Management](..md))** - Main database infrastructure framework
+- **[Architecture System](../architecture-system.md)** - System architecture decisions
+- **[Business Strategy Overview](../../business/strategy.md))** - Strategic business alignment
+- **[Operations Analytics Overview](../../operations-analytics.md))** - Main operations analytics framework
 
 ---
 

@@ -353,11 +353,11 @@ The Operations Analytics Framework provides comprehensive operational performanc
 **Review Cycle:** Quarterly analytics validation and annual operations analytics optimization
 
 **Related Analytics Documents:**
-- [Operations Analytics Overview](../overview) - Operations analytics context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and analytics integration
-- [Operations Management Framework](../management/framework) - Operations management with analytics integration
-- [Performance Analytics Dashboard](./executive-dashboard-framework) - Executive analytics dashboard with real-time insights
-- [Compliance Analytics Framework](./compliance-analytics-framework) - Compliance tracking and automated monitoring
+- [Operations Analytics Overview](...md) - Operations analytics context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and analytics integration
+- [Operations Management Framework](../management.md) - Operations management with analytics integration
+- [Performance Analytics Dashboard](..md) - Executive analytics dashboard with real-time insights
+- [Compliance Analytics Framework](..md) - Compliance tracking and automated monitoring
 
 **Next Steps:**
 1. **Analytics Assessment:** Conduct comprehensive assessment of current analytics capabilities, data sources, and infrastructure

@@ -59,9 +59,9 @@ Feature Overview
 └── API: X users (↑X% adoption)
 
 Usage Patterns
-├── Most Used: [Feature] (X sessions/day)
+├── Most Used: [Feature] (X sessions.md)
 ├── Fastest Growing: [Feature] (+X% MoM)
-├── Highest Satisfaction: [Feature] (X/5 rating)
+├── Highest Satisfaction: [Feature] (X.md)
 └── Most Problematic: [Feature] (X% error rate)
 ```
 
@@ -165,13 +165,13 @@ const calculateStatisticalSignificance = (
   const controlMean = control.reduce((a, b) => a + b) / control.length;
   const treatmentMean = treatment.reduce((a, b) => a + b) / treatment.length;
 
-  // Simplified t-test calculation (in practice, use statistical library)
+  /.md)
   const pooledVariance = (
-    (control.reduce((sum, val) => sum + Math.pow(val - controlMean, 2), 0) / (control.length - 1)) +
-    (treatment.reduce((sum, val) => sum + Math.pow(val - treatmentMean, 2), 0) / (treatment.length - 1))
+    (control.reduce((sum, val) => sum + Math.pow(val - controlMean, 2), 0) .md)) +
+    (treatment.reduce((sum, val) => sum + Math.pow(val - treatmentMean, 2), 0) .md)
   ) / 2;
 
-  const standardError = Math.sqrt(pooledVariance * (1/control.length + 1/treatment.length));
+  const standardError = Math.sqrt(pooledVariance * (1/control.length + 1.md));
   const tStatistic = (treatmentMean - controlMean) / standardError;
 
   // Two-tailed test
@@ -305,9 +305,9 @@ interface Milestone {
 interface FeaturePrioritization {
   feature: string;
   rice: {
-    reach: number;          // Number of users affected (0-100)
-    impact: number;         // Business impact (0.25, 0.5, 1, 2, 3)
-    confidence: number;     // Confidence in estimates (20-100%)
+    reach: number;          /.md)
+    impact: number;         /.md)
+    confidence: number;     /.md)
     effort: number;         // Development effort in weeks
     score: number;          // RICE score
   };
@@ -319,7 +319,7 @@ interface FeaturePrioritization {
 // Calculate RICE score
 const calculateRICEScore = (feature: FeaturePrioritization): number => {
   const { reach, impact, confidence, effort } = feature.rice;
-  return (reach * impact * (confidence / 100)) / effort;
+  return (reach * impact * (confidence .md)) / effort;
 };
 ```
 
@@ -464,29 +464,29 @@ Recommendations
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](./overview) - Main operations framework
-- [User Analytics](./user-analytics) - User behavior analysis
-- [Performance KPIs](./metrics-kpis) - Comprehensive KPI framework
+- [Operations Analytics Overview](..md) - Main operations framework
+- [User Analytics](..md) - User behavior analysis
+- [Performance KPIs](..md) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview) - Strategic alignment
-- [Market Analysis](../business/market-analysis/overview) - Market positioning
-- [Value Proposition](../business/value-proposition/overview) - Competitive differentiation
+- [Business Strategy Overview](../business/strategy.md) - Strategic alignment
+- [Market Analysis](../business/market-analysis.md) - Market positioning
+- [Value Proposition](../business/value-proposition.md) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture) - Data pipeline
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations) - System management
+- [Technical Architecture Overview](../technical/architecture.md) - System design
+- [Analytics Architecture](../technical/architecture/detailed-technical.md) - Data pipeline
+- [Infrastructure Operations](../technical/architecture/detailed-technical.md) - System management
 
 ### **User Experience**
-- [User Journeys Overview](../user-experience-journeys/README) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys/onboarding-journey) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys/user-interaction-patterns-ux-design) - UX optimization
+- [User Journeys Overview](../user-experience-journeys.md) - User flow documentation
+- [Onboarding Journey](../user-experience-journeys/detailed-journeys.md) - User activation
+- [User Interaction Patterns](../user-experience-journeys/detailed-journeys.md) - UX optimization
 
 ### **Team Performance**
-- [Team Performance Overview](../team-performance/) - Team coordination
-- [QA Testing Protocols](../team-performance/qa-testing-protocols) - Quality assurance procedures
-- [Sprint Retrospectives](../team-performance/sprint-retrospective-template) - Agile development
+- [Team Performance Overview](../team-performance.md) - Team coordination
+- [QA Testing Protocols](../team-performance.md) - Quality assurance procedures
+- [Sprint Retrospectives](../team-performance.md) - Agile development
 
 ---
 
@@ -494,9 +494,9 @@ Recommendations
 
 Navigate to specific product areas:
 
-- **[User Analytics](./user-analytics)** → User behavior and engagement analysis
-- **[Metrics & KPIs](./metrics-kpis)** → Comprehensive KPI framework
-- **[Team Performance](../team-performance/)** → Team coordination and development
+- **[User Analytics](..md)** → User behavior and engagement analysis
+- **[Metrics & KPIs](..md)** → Comprehensive KPI framework
+- **[Team Performance](../team-performance.md)** → Team coordination and development
 
 ---
 

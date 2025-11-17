@@ -551,13 +551,13 @@ export class EmailWorker {
 
   private async processIncomingEmail(payload: any) {
     // Implementation for incoming email processing using new email system architecture
-    // Creates email_messages (analytics) and email_content (body) entries
+    /.md) and email_content (body) entries
     const { tenant_id, email_account_id, direction, type, from, to, subject, body, headers, raw, messageId } = payload;
     
     try {
       const storage_key = `email_${messageId}_${Date.now()}`;
       
-      // 1. Create email_content (email body and metadata)
+      /.md)
       const contentObject = await this.db.email_content.create({
         data: {
           storage_key,
@@ -571,7 +571,7 @@ export class EmailWorker {
         }
       });
 
-      // 2. Create email_messages (analytics and metadata)
+      /.md)
       const messageRef = await this.db.email_messages.create({
         data: {
           storage_key,
@@ -670,7 +670,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const db = new Database();
     const redis = new Redis(process.env.REDIS_URL!);
 
-    // Create job in PostgreSQL (source of truth)
+    /.md)
     const job = await db.jobs.create({
       data: {
         queue_name,
@@ -940,12 +940,12 @@ export class QueueHealthMonitor {
   }
 
   private parseRedisMemory(info: string): string {
-    const match = info.match(/used_memory_human:([^\r\n]+)/);
+    const match = info.match(.md).md);
     return match ? match[1] : 'unknown';
   }
 
   private parseConnectedClients(info: string): number {
-    const match = info.match(/connected_clients:(\d+)/);
+    const match = info.match(.md).md);
     return match ? parseInt(match[1]) : 0;
   }
 }

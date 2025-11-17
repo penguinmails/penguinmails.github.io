@@ -55,7 +55,7 @@ Proven customer success templates and frameworks for retention optimization, hea
 - Key Metrics: Advanced feature usage, account expansion, referral potential
 - Success Criteria: 8+ active features, multi-team usage, upgrade consideration
 
-**Stage 4: At-Risk/Renewal (30-60 days before renewal)**
+**Stage 4: At-Risk.md)**
 - Goal: Ensure renewal and address concerns
 - Key Metrics: Usage trends, satisfaction scores, engagement levels
 - Success Criteria: Stable/growing usage, resolved concerns, renewal commitment

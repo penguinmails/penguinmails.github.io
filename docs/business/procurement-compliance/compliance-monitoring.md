@@ -26,7 +26,7 @@ last_modified_date: "2025-12-19"
 ### Executive Monitoring Dashboard
 
 **Key Performance Indicators**:
-- **Authentication Success Rate**: >98% target (SPF/DKIM/DMARC compliance)
+- **Authentication Success Rate**: >98% target (SPF/DKIM.md)
 - **Consent Capture Rate**: >85% opt-in achievement
 - **Opt-Out Processing Time**: <24 hour average response time
 - **Data Subject Request Response**: <72 hour regulatory requirement compliance
@@ -39,7 +39,7 @@ last_modified_date: "2025-12-19"
 - **Regulatory Preparedness**: Real-time compliance status for regulatory audits
 - **Business Continuity**: Minimized risk of operational disruption
 
-**Technical Implementation**: Complete automated monitoring system with TypeScript integration, real-time dashboards, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation)
+**Technical Implementation**: Complete automated monitoring system with TypeScript integration, real-time dashboards, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical.md)
 
 ---
 
@@ -222,7 +222,7 @@ last_modified_date: "2025-12-19"
 - [🛡️ Compliance Overview](compliance-overview:1) - Strategic compliance summary and risk assessment
 
 **For technical implementation:**
-- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation) - Complete TypeScript implementation
+- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical.md) - Complete TypeScript implementation
 
 **For risk management:**
 - [🚨 Incident Response](compliance-incident-response:1) - Risk management and incident response

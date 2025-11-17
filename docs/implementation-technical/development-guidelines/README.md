@@ -202,16 +202,16 @@ These development guidelines integrate with:
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Architecture System](../architecture-system/README)) - System architecture decisions
-- [Database Infrastructure](../database-infrastructure/README)) - Database development standards
-- [Quality Assurance](../quality-assurance/README)) - Testing protocols and procedures
-- [Implementation Overview](../overview)) - Strategic technical overview
+- [Architecture System](../architecture-system.md)) - System architecture decisions
+- [Database Infrastructure](../database-infrastructure.md)) - Database development standards
+- [Quality Assurance](../quality-assurance.md)) - Testing protocols and procedures
+- [Implementation Overview](...md)) - Strategic technical overview
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
 
 ---
 

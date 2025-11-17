@@ -171,14 +171,14 @@ SELECT
     -- Business performance indicators
     CASE 
         WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0 
-        THEN ROUND((p.price_monthly::decimal / (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
+        THEN ROUND((p.price_monthly::decimal .md), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
         ELSE 0 
     END as gross_margin_ratio,
     
     -- Cost efficiency score (1-100)
     CASE 
         WHEN p.price_monthly > 0 AND (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0
-        THEN LEAST(100, GREATEST(0, ROUND((p.price_monthly - (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))) / p.price_monthly * 100, 2)))
+        THEN LEAST(100, GREATEST(0, ROUND((p.price_monthly - (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))) .md)
         ELSE 0 
     END as cost_efficiency_score,
     
@@ -261,7 +261,7 @@ SELECT
     -- Business efficiency metrics
     CASE 
         WHEN SUM(ba.emails_sent) > 0 
-        THEN ROUND((SUM(py.amount) + COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal / SUM(ba.emails_sent)::decimal, 4)
+        THEN ROUND((SUM(py.amount) + COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal .md)::decimal, 4)
         ELSE 0 
     END as cost_per_email_delivered,
     
@@ -276,7 +276,7 @@ SELECT
     -- Efficiency score (business KPIs)
     CASE 
         WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0 
-        THEN ROUND((COALESCE(SUM(py.amount), 0)::decimal / (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
+        THEN ROUND((COALESCE(SUM(py.amount), 0)::decimal .md), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
         ELSE 0 
     END as business_efficiency_ratio
     
@@ -540,7 +540,7 @@ This section provides canonical guidance for Finance, Operations, and Customer S
     - Not exposed as authoritative customer invoices.
 - **Cadence:**
   - Populate/refresh:
-    - On resource creation or plan change (VPS/IP).
+    - On resource creation or plan change (VPS.md).
     - On periodic reconciliation (e.g. monthly, aligned with Hostwinds billing cycle).
 - **Use Cases:**
   - Directional:
@@ -562,7 +562,7 @@ This section provides canonical guidance for Finance, Operations, and Customer S
   - “Internal approximate infrastructure cost modeling based on Hostwinds pricing and controlled assumptions, used to ensure sustainable pricing and healthy unit economics.”
 - When tenants or auditors ask:
   - Reference:
-    - Official customer invoices (Stripe/billing system) as the only binding documents.
+    - Official customer invoices (Stripe.md) as the only binding documents.
     - Internal models as tooling PenguinMails uses for responsible operations, not as direct pass-through billing meters.
 
 ---

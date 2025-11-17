@@ -194,12 +194,12 @@ describe('User Authentication', () => {
 
   it('should allow valid user login', async () => {
     // Test implementation
-    await page.goto('/login');
+    await page.goto('.md);
     await page.fill('[data-testid="email"]', 'user@example.com');
     await page.fill('[data-testid="password"]', 'password123');
     await page.click('[data-testid="login-button"]');
 
-    await expect(page).toHaveURL('/dashboard');
+    await expect(page).toHaveURL('.md);
   });
 
   it('should show error for invalid credentials', async () => {
@@ -596,29 +596,29 @@ const supportTemplates = {
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](../overview)) - Main operations framework
-- [Organization Analytics](../operations-management/organization-analytics-team-management)) - Team and organization management
-- [Metrics & KPIs](../analytics-performance/metrics-kpis)) - Comprehensive KPI framework
+- [Operations Analytics Overview](...md)) - Main operations framework
+- [Organization Analytics](../operations-management.md)) - Team and organization management
+- [Metrics & KPIs](../analytics-performance.md)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview)) - Strategic alignment
-- [Business Model](../business/model/overview)) - Revenue model and unit economics
-- [Value Proposition](../business/value-proposition/overview)) - Competitive differentiation
+- [Business Strategy Overview](../business/strategy.md)) - Strategic alignment
+- [Business Model](../business/model.md)) - Revenue model and unit economics
+- [Value Proposition](../business/value-proposition.md)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview)) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations)) - System management
-- [Development Guidelines](../technical/development/development-guidelines)) - Code standards and practices
+- [Technical Architecture Overview](../technical/architecture.md)) - System design
+- [Infrastructure Operations](../technical/architecture/detailed-technical.md)) - System management
+- [Development Guidelines](../technical/development.md)) - Code standards and practices
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
+- [User Journeys Overview](../user-journeys.md)) - User flow documentation
+- [Onboarding Journey](../user-journeys/detailed-journeys.md)) - User activation
+- [User Interaction Patterns](../user-journeys/detailed-journeys.md)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview)) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise/security-framework)) - Security operations
-- [QA Security Testing](../compliance-security/enterprise/security-framework#security-testing) - Security testing protocols
+- [Compliance Overview](../compliance-security.md)) - Regulatory compliance
+- [Security Framework](../compliance-security/enterprise.md)) - Security operations
+- [QA Security Testing](../compliance-security/enterprise.md) - Security testing protocols
 
 ---
 
@@ -646,9 +646,9 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](./qa-testing-protocols))** → Quality assurance procedures
-- **[Sprint Retrospectives](./sprint-retrospective-template))** → Agile development practices
-- **[Organization Analytics](../operations-management/organization-analytics-team-management))** → Team and organization management
+- **[QA Testing Protocols](..md))** → Quality assurance procedures
+- **[Sprint Retrospectives](..md))** → Agile development practices
+- **[Organization Analytics](../operations-management.md))** → Team and organization management
 
 ---
 

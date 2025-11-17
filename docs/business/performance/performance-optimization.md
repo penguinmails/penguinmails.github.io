@@ -58,7 +58,7 @@ last_modified_date: "2025-12-19"
 - **Role-Based**: Decision-maker specific value propositions
 - **Behavioral**: Recent activity and engagement-based content
 
-**Technical Implementation**: Complete A/B testing framework, personalization engine, and content optimization system with TypeScript implementation available in [Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation)
+**Technical Implementation**: Complete A/B testing framework, personalization engine, and content optimization system with TypeScript implementation available in [Performance Optimization Implementation](../technical/architecture/detailed-technical.md)
 
 ---
 
@@ -115,9 +115,9 @@ last_modified_date: "2025-12-19"
 
 **IP Warm-up Protocol**:
 - **Week 1**: 10-50 emails/day per IP
-- **Week 2**: 50-200 emails/day per IP (100% increase)
-- **Week 3**: 200-500 emails/day per IP (150% increase)
-- **Week 4**: 500-1000 emails/day per IP (100% increase)
+- **Week 2**: 50-200 emails.md)
+- **Week 3**: 200-500 emails.md)
+- **Week 4**: 500-1000 emails.md)
 - **Week 5+**: Target volume per IP
 
 ### Strategic Deliverability Monitoring
@@ -266,7 +266,7 @@ last_modified_date: "2025-12-19"
 - [📈 Performance Overview](performance-overview:1) - Executive performance benchmarks and strategic goals
 
 **For technical implementation:**
-- [⚙️ Performance Optimization Implementation](../technical/architecture/detailed-technical/performance-optimization-implementation) - Complete TypeScript implementation
+- [⚙️ Performance Optimization Implementation](../technical/architecture/detailed-technical.md) - Complete TypeScript implementation
 
 **For provider analysis:**
 - [🏆 Provider Performance Analysis](performance-provider-analysis:1) - ESP-specific optimization strategies

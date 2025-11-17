@@ -1,19 +1,19 @@
 ---
-title: "Queue / Jobs ER Diagram (Mermaid)"
-description: "Documentation for Queue / Jobs ER Diagram (Mermaid) - Queue Mermaid Er"
+title: "Queue .md)"
+description: "Documentation for Queue .md) - Queue Mermaid Er"
 last_modified_date: "2025-11-17"
 level: 2
 persona: "Documentation Users"
 ---
 
-# Queue / Jobs ER Diagram (Mermaid)
+# Queue .md)
 
 This diagram models the dedicated Queue / Jobs tier, aligned with the 5-tier architecture:
 
 - OLTP: core entities.
 - Content DB: heavy content.
 - OLAP: aggregates only.
-- Queue / Jobs: async orchestration (this file).
+- Queue .md).
 - Notifications DB: notifications + curated system events.
 - External logging: raw traces/telemetry.
 

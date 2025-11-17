@@ -522,20 +522,20 @@ Where:
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Business Model & Strategy
-- [Business Model Overview](../overview:1) - Canonical business and revenue model alignment
-- [Value Proposition Overview](../../value-proposition/overview:1) - Value proposition for cost optimization
-- [Market Analysis Overview](../../market-analysis/overview:1) - Market positioning for financial analysis
-- [Competitive Analysis Overview](../../competitive-analysis/overview:1) - Competitive landscape and cost positioning
+- [Business Model Overview](...md) - Canonical business and revenue model alignment
+- [Value Proposition Overview](../../value-proposition.md) - Value proposition for cost optimization
+- [Market Analysis Overview](../../market-analysis.md) - Market positioning for financial analysis
+- [Competitive Analysis Overview](../../competitive-analysis.md) - Competitive landscape and cost positioning
 
 ### Operations & Analytics
-- [Operations Management Overview](../../operations-analytics/operations-management/overview:1) - Operational cost management and analytics
-- [Payment Analytics & Financial Operations](../../operations-analytics/operations-management/payment-analytics-financial-operations:1) - Financial operations and billing management
-- [Infrastructure Operations Management](../../operations-analytics/operations-management/infrastructure-operations-management:1) - Database and infrastructure operational procedures
+- [Operations Management Overview](../../operations-analytics/operations-management.md) - Operational cost management and analytics
+- [Payment Analytics & Financial Operations](../../operations-analytics/operations-management.md) - Financial operations and billing management
+- [Infrastructure Operations Management](../../operations-analytics/operations-management.md) - Database and infrastructure operational procedures
 
 ### Technical Architecture
-- [Architecture Overview](../../technical/architecture/overview:1) - System architecture for financial planning
-- [Implementation Roadmap](../../technical/architecture/detailed-technical/implementation-roadmap:1) - Infrastructure implementation costs
-- [Integration Guide](../../technical/architecture/detailed-technical/integration-guide:1) - Cost implications of technical integrations
+- [Architecture Overview](../../technical/architecture.md) - System architecture for financial planning
+- [Implementation Roadmap](../../technical/architecture/detailed-technical.md) - Infrastructure implementation costs
+- [Integration Guide](../../technical/architecture/detailed-technical.md) - Cost implications of technical integrations
 
 ## References
 ---

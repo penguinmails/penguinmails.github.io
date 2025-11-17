@@ -16,7 +16,7 @@ It:
 - Aggregates from:
   - Backbone API surfaces (ESP billing, system health, cost signals)
   - System events and operational data
-  - Queue/notification systems (alerts and updates)
+  - Queue.md)
   - External intelligence sources (competitive analysis, market data)
 - Serves:
   - Executive dashboards and monitoring
@@ -62,7 +62,7 @@ Access Requirements:
   - Role-based access controls for all user types
 
 Reference:
-- Central system coordination per [System Architecture](../architecture-system/architecture-overview)
+- Central system coordination per [System Architecture](../architecture-system.md)
 - Role management and access control for all operations
 
 ---

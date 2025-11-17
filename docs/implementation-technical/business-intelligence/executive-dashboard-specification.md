@@ -106,8 +106,8 @@ graph TD
   - Overall deliverability rate (%)
   - Bounce rate (%)
   - Spam complaint rate (%)
-  - IP reputation status (Good/Fair/Poor/Critical)
-  - Domain reputation status (Good/Fair/Poor/Critical)
+  - IP reputation status (Good/Fair/Poor.md)
+  - Domain reputation status (Good/Fair/Poor.md)
 
 **Revenue Risk Assessment:**
 - **Calculation:** `(Bounce Rate × $0.05 + Spam Rate × $0.25) × Monthly Email Volume`

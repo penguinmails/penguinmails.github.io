@@ -144,8 +144,8 @@ Customer Success Automation enables scalable, efficient customer success deliver
 ---
 
 **Related Documentation:**
-- [Customer Success Operations Framework](../operations/framework)
-- [Customer Health Scoring](../analytics/health-scoring-framework)
+- [Customer Success Operations Framework](../operations.md)
+- [Customer Health Scoring](../analytics.md)
 - [Customer Retention Strategies](../retention/summary
 - [Cross-Domain Integration](../cross-domain-integration/overview
 

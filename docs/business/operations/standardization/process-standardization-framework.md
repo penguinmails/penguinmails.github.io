@@ -336,12 +336,12 @@ The Operations Process Standardization Framework provides comprehensive standard
 **Review Cycle:** Quarterly operations standardization review and annual operations standardization optimization
 
 **Related Standardization Documents:**
-- [Operations Standardization Overview](../overview) - Operations standardization context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and standardization integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with standardization integration
-- [Operations Management Framework](../management/framework) - Operations management with standardization coordination
-- [Enhanced Operations Automation Framework](./enhanced-automation-framework) - Enhanced automation with standardization integration
-- [Operations Excellence Standards Framework](./excellence-standards-framework) - Excellence standards with standardization coordination
+- [Operations Standardization Overview](...md) - Operations standardization context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and standardization integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with standardization integration
+- [Operations Management Framework](../management.md) - Operations management with standardization coordination
+- [Enhanced Operations Automation Framework](..md) - Enhanced automation with standardization integration
+- [Operations Excellence Standards Framework](..md) - Excellence standards with standardization coordination
 
 **Next Steps:**
 1. **Standardization Assessment:** Conduct comprehensive assessment of current standardization capabilities, processes, and standards

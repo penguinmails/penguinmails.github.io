@@ -24,16 +24,16 @@ Our platform supports your goal of market leadership through deliverability exce
 
 | Feature | Quick Start | Professional Setup | Enterprise Features | Primary Value |
 |---------|-------------|-------------------|-------------------|---------------|
-| **[Analytics](core-features/analytics/overview/)** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
-| **[Warm-ups](core-features/warm-ups/overview/)** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
-| **[Free Mailbox Creation](core-features/free-mailbox-creation/)** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
-| **[Unified Inbox](core-features/unified-inbox/overview/)** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
-| **[Inbox Rotation](core-features/inbox-rotation/overview/)** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
+| **[Analytics](core-features/analytics/overview.md)** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
+| **[Warm-ups](core-features/warm-ups/overview.md)** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
+| **[Free Mailbox Creation](core-features/free-mailbox-creation.md)** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
+| **[Unified Inbox](core-features/unified-inbox/overview.md)** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
+| **[Inbox Rotation](core-features/inbox-rotation/overview.md)** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
 
 ### **Use Case Alignment**
-- **New Users**: Start with [Free Mailbox Creation](core-features/free-mailbox-creation/) → [Warm-ups](core-features/warm-ups/overview/)
-- **Growing Teams**: Add [Analytics](core-features/analytics/overview/) → [Unified Inbox](core-features/unified-inbox/overview/)
-- **Enterprise Scale**: Implement [Inbox Rotation](core-features/inbox-rotation/overview/) with full analytics suite
+- **New Users**: Start with [Free Mailbox Creation](core-features/free-mailbox-creation.md) → [Warm-ups](core-features/warm-ups/overview.md)
+- **Growing Teams**: Add [Analytics](core-features/analytics/overview.md) → [Unified Inbox](core-features/unified-inbox/overview.md)
+- **Enterprise Scale**: Implement [Inbox Rotation](core-features/inbox-rotation/overview.md) with full analytics suite
 - **Agencies**: Full feature stack with white-label options for client management
 
 ---
@@ -43,13 +43,13 @@ Our platform supports your goal of market leadership through deliverability exce
 ### **🏗️ Foundation Features**
 Start here for basic infrastructure and setup:
 
-#### **[Email Warm-ups](core-features/warm-ups/overview/)** - *The #1 Success Factor*
+#### **[Email Warm-ups](core-features/warm-ups/overview.md)** - *The #1 Success Factor*
 - **⭐ Beginner**: 5-minute automated setup for immediate results
 - **⭐⭐ Intermediate**: Advanced progression algorithms and optimization
 - **⭐⭐⭐ Expert**: Enterprise compliance and predictive analytics
-- **Quick Start**: [Create accounts](core-features/free-mailbox-creation/) → [Warm-up](core-features/warm-ups/overview/) → Start campaigns
+- **Quick Start**: [Create accounts](core-features/free-mailbox-creation.md) → [Warm-up](core-features/warm-ups/overview.md) → Start campaigns
 
-#### **[Free Mailbox Creation](core-features/free-mailbox-creation/)** - *Professional Infrastructure*
+#### **[Free Mailbox Creation](core-features/free-mailbox-creation.md)** - *Professional Infrastructure*
 - **⭐ Beginner**: Instant professional email accounts
 - **⭐⭐ Intermediate**: Advanced domain and DNS management
 - **⭐⭐⭐ Expert**: Bulk creation and enterprise automation
@@ -58,13 +58,13 @@ Start here for basic infrastructure and setup:
 ### **📈 Growth & Optimization Features**
 Scale your campaigns with data-driven insights:
 
-#### **[Analytics](core-features/analytics/overview))** - *Data-Driven Optimization*
+#### **[Analytics](core-features/analytics.md))** - *Data-Driven Optimization*
 - **⭐ Beginner**: Essential metrics and performance tracking
 - **⭐⭐ Intermediate**: Advanced reporting and ROI analysis
 - **⭐⭐⭐ Expert**: AI-powered insights and predictive analytics
 - **Business Impact**: 150% response improvement through optimization
 
-#### **[Unified Inbox](core-features/unified-inbox/overview))** - *Response Management*
+#### **[Unified Inbox](core-features/unified-inbox.md))** - *Response Management*
 - **⭐ Beginner**: Centralized response monitoring
 - **⭐⭐ Intermediate**: Smart filtering and team collaboration
 - **⭐⭐⭐ Expert**: Enterprise integration and automation
@@ -73,7 +73,7 @@ Scale your campaigns with data-driven insights:
 ### **⚡ Scale & Advanced Features**
 For enterprise-level operations and maximum efficiency:
 
-#### **[Inbox Rotation](core-features/inbox-rotation/overview))** - *Sustainable Scaling*
+#### **[Inbox Rotation](core-features/inbox-rotation.md))** - *Sustainable Scaling*
 - **⭐ Beginner**: Basic account protection and rotation
 - **⭐⭐ Intermediate**: Smart algorithms and optimization
 - **⭐⭐⭐ Expert**: Enterprise-scale with ML optimization
@@ -86,11 +86,11 @@ For enterprise-level operations and maximum efficiency:
 ### **Recommended Implementation Sequences**
 
 **🚀 New User Journey:**
-1. **[Free Mailbox Creation](core-features/free-mailbox-creation))** - Establish professional email infrastructure
-2. **[Warm-ups](core-features/warm-ups/overview))** - Build sender reputation for 95%+ deliverability
-3. **[Analytics](core-features/analytics/overview))** - Track performance and optimize campaigns
-4. **[Unified Inbox](core-features/unified-inbox/overview))** - Manage responses efficiently
-5. **[Inbox Rotation](core-features/inbox-rotation/overview))** - Scale safely across multiple accounts
+1. **[Free Mailbox Creation](core-features.md))** - Establish professional email infrastructure
+2. **[Warm-ups](core-features/warm-ups.md))** - Build sender reputation for 95%+ deliverability
+3. **[Analytics](core-features/analytics.md))** - Track performance and optimize campaigns
+4. **[Unified Inbox](core-features/unified-inbox.md))** - Manage responses efficiently
+5. **[Inbox Rotation](core-features/inbox-rotation.md))** - Scale safely across multiple accounts
 
 **📈 Growth Stage Optimization:**
 - **Analytics + Warm-ups**: Continuous reputation optimization
@@ -156,18 +156,18 @@ Our feature set directly supports achieving market leadership through deliverabi
 ## 📋 Implementation Decision Matrix
 
 ### **Quick Start Path** *(1-2 days to full operation)*
-✅ **[Free Mailbox Creation](core-features/free-mailbox-creation))** - Get professional accounts
-✅ **[Warm-ups](core-features/warm-ups/overview))** - Build reputation automatically
-✅ **[Analytics](core-features/analytics/overview))** - Track your success
+✅ **[Free Mailbox Creation](core-features.md))** - Get professional accounts
+✅ **[Warm-ups](core-features/warm-ups.md))** - Build reputation automatically
+✅ **[Analytics](core-features/analytics.md))** - Track your success
 
 ### **Professional Path** *(1 week to optimized operation)*
 ✅ All Quick Start features
-✅ **[Unified Inbox](core-features/unified-inbox/overview))** - Never miss responses
+✅ **[Unified Inbox](core-features/unified-inbox.md))** - Never miss responses
 ✅ Advanced Analytics with ROI tracking
 
 ### **Enterprise Path** *(2 weeks to complete platform)*
 ✅ All Professional features
-✅ **[Inbox Rotation](core-features/inbox-rotation/overview))** - Scale across hundreds of accounts
+✅ **[Inbox Rotation](core-features/inbox-rotation.md))** - Scale across hundreds of accounts
 ✅ White-label agency features and compliance automation
 
 ---
@@ -175,7 +175,7 @@ Our feature set directly supports achieving market leadership through deliverabi
 ## 📊 Feature Performance Impact
 
 ### **ROI Calculator**
-**Cost of Poor Deliverability (10,000 Cold Emails/Month):**
+**Cost of Poor Deliverability (10,000 Cold Emails.md):**
 - **Before PenguinMails**: 60% deliverability = 6,000 successful deliveries
 - **With PenguinMails**: 95% deliverability = 9,500 successful deliveries
 - **Additional Responses**: 70+ additional responses (58% improvement)
@@ -214,14 +214,14 @@ Ready to dive deeper? Each feature includes:
 ## 📚 Related Documentation
 
 ### **Business Context**
-- **[Value Proposition](business/value-proposition/overview))** - Strategic positioning and ROI analysis
-- **[User Personas](business/user-personas/overview))** - Target audience analysis
-- **[Technical Architecture](technical/architecture/overview))** - System design and integration
+- **[Value Proposition](business/value-proposition.md))** - Strategic positioning and ROI analysis
+- **[User Personas](business/user-personas.md))** - Target audience analysis
+- **[Technical Architecture](technical/architecture.md))** - System design and integration
 
 ### **Technical Implementation**
 - **[Getting Started](getting-started))** - Complete onboarding process
 - **[Quick Setup](quick-setup))** - 5-minute rapid deployment
-- **[Compliance & Security](compliance-security/)** - Regulatory and security framework
+- **[Compliance & Security](compliance-security.md)** - Regulatory and security framework
 
 ---
 

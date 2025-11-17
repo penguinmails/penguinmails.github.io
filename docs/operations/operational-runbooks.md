@@ -49,7 +49,7 @@ persona: "Documentation Users"
 ## Emergency Procedures
 
 **System Failure Response**
-- **Immediate Assessment**: Classify failure severity (Critical/High/Medium/Low) using standardized criteria
+- **Immediate Assessment**: Classify failure severity (Critical/High/Medium.md) using standardized criteria
 - **Emergency Escalation**: Activate emergency response protocols within 5 minutes for critical failures
 - **Recovery Procedures**: Execute systematic recovery protocols with rollback capabilities
 

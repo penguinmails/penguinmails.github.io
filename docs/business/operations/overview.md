@@ -220,30 +220,30 @@ This framework provides business leaders with strategic oversight capabilities f
 ## Industry-Specific Operations Frameworks
 
 ### Healthcare Operations
-- **[Healthcare Operations Framework](./industry-cases/healthcare-operations)** - HIPAA compliance, patient safety, clinical workflow integration
+- **[Healthcare Operations Framework](./industry-cases.md)** - HIPAA compliance, patient safety, clinical workflow integration
 
 ### Financial Services Operations
-- **[Financial Services Operations Framework](./industry-cases/financial-services-operations)** - SOX compliance, PCI-DSS requirements, banking regulations
+- **[Financial Services Operations Framework](./industry-cases.md)** - SOX compliance, PCI-DSS requirements, banking regulations
 
 ### E-commerce Operations
-- **[E-commerce Operations Framework](./industry-cases/ecommerce-operations)** - Customer data security, payment processing, online retail compliance
+- **[E-commerce Operations Framework](./industry-cases.md)** - Customer data security, payment processing, online retail compliance
 
 ### Agencies & Consulting Operations
-- **[Agencies & Consulting Operations Framework](./industry-cases/agencies-consulting-operations)** - Client data security, project management, professional compliance
+- **[Agencies & Consulting Operations Framework](./industry-cases.md)** - Client data security, project management, professional compliance
 
 ### SaaS Operations
-- **[SaaS Operations Framework](./industry-cases/saas-operations)** - Multi-tenant security, SaaS compliance, cloud operations
+- **[SaaS Operations Framework](./industry-cases.md)** - Multi-tenant security, SaaS compliance, cloud operations
 
 ---
 
 ## Related Strategic Documents
 ## Related Strategic Documents
 
-- **[Business Strategy Overview](../strategy/overview)** - Strategic context and operational alignment
-- **[Market Analysis](../market-analysis/overview)** - Strategic market intelligence driving operational decisions
-- **[Business Model](../model/overview)** - Strategic financial framework supporting operations
-- **[Executive Analytics](../analytics/overview)** - Strategic performance measurement and optimization
-- **[Value Proposition Strategy](../value-proposition/overview)** - Strategic customer value driving operational oversight
+- **[Business Strategy Overview](../strategy.md)** - Strategic context and operational alignment
+- **[Market Analysis](../market-analysis.md)** - Strategic market intelligence driving operational decisions
+- **[Business Model](../model.md)** - Strategic financial framework supporting operations
+- **[Executive Analytics](../analytics.md)** - Strategic performance measurement and optimization
+- **[Value Proposition Strategy](../value-proposition.md)** - Strategic customer value driving operational oversight
 
 ---
 
@@ -251,5 +251,5 @@ This framework provides business leaders with strategic oversight capabilities f
 
 ---
 
-*Next: [Strategic Value Proposition Analysis](../value-proposition/detailed-analysis/comprehensive-analysis) →*
+*Next: [Strategic Value Proposition Analysis](../value-proposition/detailed-analysis.md) →*
 ---

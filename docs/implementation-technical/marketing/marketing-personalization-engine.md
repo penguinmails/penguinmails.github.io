@@ -77,12 +77,12 @@ class BehavioralFeatureComputer:
             F.sum(F.when(F.col('event_type') == 'form_submit', 1).otherwise(0)).alias('form_submits')
         ).collect()[0]
         
-        engagement_score = (0.3 * (engagement_features['page_views'] / 100) + 0.2 * (engagement_features['email_opens'] / 20) + 0.2 * (engagement_features['form_submits'] / 5))
+        engagement_score = (0.3 * (engagement_features['page_views'] .md) + 0.2 * (engagement_features['email_opens'] .md) + 0.2 * (engagement_features['form_submits'] .md)
         
         return {
             'engagement_score': min(engagement_score, 1.0),
             'page_views_30d': engagement_features['page_views'],
-            'conversion_rate': engagement_features['form_submits'] / max(engagement_features['page_views'], 1)
+            'conversion_rate': engagement_features['form_submits'] .md)
         }
 ```
 
@@ -123,7 +123,7 @@ class ContextualBanditDecisionEngine:
 ### Real-Time API Endpoints
 
 ```python
-@app.post("/api/v1/personalize/content")
+@app.post("/api/v1/personalize.md)
 async def personalize_content(request: PersonalizationRequest):
     """Real-time content personalization endpoint"""
     start_time = time.time()

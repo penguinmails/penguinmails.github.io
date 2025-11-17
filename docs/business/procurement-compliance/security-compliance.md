@@ -67,7 +67,7 @@ last_modified_date: "2025-12-19"
   - Access control and audit trails
   - Documentation for data processing activities
 
-#### CCPA/CPRA (California)
+#### CCPA.md)
 - **Business Requirement**: Consumer privacy rights and data transparency
 - **How PenguinMails Supports This**:
   - Configurable data handling to meet CCPA requirements
@@ -148,19 +148,19 @@ Security and compliance features are integrated into the core platform:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Executive Decision Making (Level 2):**
-- [📊 Cost Analysis Overview](../financial-analysis/cost-analysis-overview) - Business case for security investment
-- [💰 ROI Calculator](../core/roi-calculator) - Financial justification for security features
-- [🏆 Competitive Analysis](../core/competitive-analysis) - Security capabilities vs. alternatives
-- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Timeline and resource requirements
+- [📊 Cost Analysis Overview](../financial-analysis.md) - Business case for security investment
+- [💰 ROI Calculator](../core.md) - Financial justification for security features
+- [🏆 Competitive Analysis](../core.md) - Security capabilities vs. alternatives
+- [🏗️ Implementation Roadmap](../implementation.md) - Timeline and resource requirements
 
 **For Technical Validation (Level 3):**
 - [📋 Detailed Security Framework](security-compliance-detailed) - Complete technical security analysis
 - [📋 Compliance Framework](compliance-framework) - Complete regulatory analysis
-- [🛡️ Security Framework (Enterprise)](../compliance-security/enterprise/security-framework) - Technical security controls
+- [🛡️ Security Framework (Enterprise)](../compliance-security/enterprise.md) - Technical security controls
 
 **For Procurement & Legal Review:**
 - [📋 Procurement Guide](procurement-guide) - Enterprise evaluation framework
-- [🔍 Industry-Specific Cases](../industry-business-cases/) - Sector-specific requirements
+- [🔍 Industry-Specific Cases](../industry-business-cases.md) - Sector-specific requirements
 
 ---
 

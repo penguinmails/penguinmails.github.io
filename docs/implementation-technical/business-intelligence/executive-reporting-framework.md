@@ -69,7 +69,7 @@ Executive Reporting System
 **Executive Summary Section:**
 ```
 Business Health Status: [Excellent/Good/Monitor/Critical]
-Revenue at Risk: $X,XXX (vs. $X,XXX yesterday: +/-X%)
+Revenue at Risk: $X,XXX (vs. $X,XXX yesterday: +.md)
 Critical Actions Required: X items
 Optimization Opportunities: $X,XXX potential savings
 ```
@@ -178,7 +178,7 @@ graph TD
 
 **Business Performance Scorecard:**
 ```
-Weekly Business Health Score: 87/100 (vs. 84/100 last week)
+Weekly Business Health Score: 87/100 (vs. 84.md)
 ├── Revenue Protection: 92/100
 ├── Cost Optimization: 78/100  
 ├── Operational Efficiency: 89/100
@@ -293,7 +293,7 @@ class WeeklyPerformanceAnalyzer:
 **Strategic Business Performance Analysis:**
 ```
 Monthly Executive Summary:
-├── Overall Business Health: 87/100 (Target: >85)
+├── Overall Business Health: 87.md)
 ├── Month-over-Month Growth: +12% in key metrics
 ├── Strategic Initiative Success Rate: 78%
 └── ROI Achievement: 134% of target
@@ -333,7 +333,7 @@ Operational ROI by Initiative:
 Competitive Intelligence Summary:
 ├── Market Share Growth: +2.3% in target segments
 ├── Competitive Advantage Metrics: Leading in 7/10 categories
-├── Customer Satisfaction Score: 4.7/5.0 (vs. industry avg 4.2)
+├── Customer Satisfaction Score: 4.7.md)
 ├── Net Promoter Score: 68 (vs. industry avg 52)
 └── Brand Recognition: +15% in key demographics
 

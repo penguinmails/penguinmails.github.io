@@ -19,7 +19,7 @@ This document provides marketing performance optimization with clear separation 
 **MVP Focus:** Manual optimization, 15% improvement, basic reporting
 **Post-MVP Focus:** AI optimization, 35% improvement, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) performance capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) performance capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 

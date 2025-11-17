@@ -24,7 +24,7 @@ last_modified_date: "2025-12-19"
 - **Features**: Basic GDPR workflows, consent management
 
 **SME Mid-Tier**:
-- **Full GDPR Compliance Bundle**: $2,275/month (7 products)
+- **Full GDPR Compliance Bundle**: $2,275.md)
 - **Privacy Essentials Suite**: $3,680/month
 - **Features**: Complete GDPR toolkit, privacy rights automation
 
@@ -51,8 +51,8 @@ last_modified_date: "2025-12-19"
 - **Features**: Data mapping, DPIA assessments, vendor management
 
 **Mid-Market**:
-- **Average cost**: $22,000/year (~$1,833/month)
-- **Range**: $10,000–$137,000/year (varies by organization size)
+- **Average cost**: $22,000/year (~$1,833.md)
+- **Range**: $10,000–$137,000.md)
 
 **Email-Specific Features**:
 - Data mapping and flow visualization
@@ -70,7 +70,7 @@ last_modified_date: "2025-12-19"
 - **Features**: Basic GDPR/CCPA workflows
 
 **SME Mid-Tier**:
-- **Pricing**: $200–$500/month (mid-tier)
+- **Pricing**: $200–$500.md)
 - **Features**: DPA management, privacy policy generation, consent forms, vendor tracking
 
 **Mid-Market**:
@@ -96,11 +96,11 @@ last_modified_date: "2025-12-19"
 #### Cookiebot CMP – Website-Focused Consent Management
 
 **SME Entry Level**:
-- **Basic tier**: €7–€12/month (~$8–$15 USD)
+- **Basic tier**: €7–€12.md)
 - **Features**: Basic consent management, limited pages
 
 **SME Mid-Tier**:
-- **Professional tier**: €49–€200/month (~$55–$220 USD)
+- **Professional tier**: €49–€200.md)
 - **Features**: 50–350+ subpages, advanced consent options
 
 **Mid-Market**:
@@ -112,7 +112,7 @@ last_modified_date: "2025-12-19"
 - Customizable consent banners
 - GDPR/CCPA/LGPD compliance workflows
 
-**Key Assessment**: Usage-based (pageviews/tracked users); per-domain billing; 14-day free trial; best for multi-website publishers
+**Key Assessment**: Usage-based (pageviews.md); per-domain billing; 14-day free trial; best for multi-website publishers
 
 #### Enzuzo – Affordable Alternative Privacy Suite
 

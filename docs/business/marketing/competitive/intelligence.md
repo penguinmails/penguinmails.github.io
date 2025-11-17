@@ -19,7 +19,7 @@ This document defines competitive intelligence framework with clear separation b
 **MVP Focus:** Manual analysis, basic monitoring, quarterly reporting
 **Post-MVP Focus:** AI-powered intelligence, real-time monitoring, predictive analytics
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) competitive intelligence capabilities. Level 3+ advanced intelligence features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) competitive intelligence capabilities. Level 3+ advanced intelligence features are addressed in the roadmap section below.
 
 ---
 

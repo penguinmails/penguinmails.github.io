@@ -312,29 +312,29 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ### Elevation Scale
 ```css
 --shadow-none: none;
---shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
---shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
---shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
---shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
---shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
---shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
---shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+--shadow-xs: 0 1px 2px 0 rgb(0 0 0 .md);
+--shadow-sm: 0 1px 3px 0 rgb(0 0 0 .md), 0 1px 2px -1px rgb(0 0 0 .md);
+--shadow-md: 0 4px 6px -1px rgb(0 0 0 .md), 0 2px 4px -2px rgb(0 0 0 .md);
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 .md), 0 4px 6px -4px rgb(0 0 0 .md);
+--shadow-xl: 0 20px 25px -5px rgb(0 0 0 .md), 0 8px 10px -6px rgb(0 0 0 .md);
+--shadow-2xl: 0 25px 50px -12px rgb(0 0 0 .md);
+--shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 .md);
 ```
 
 ### Colored Shadows
 ```css
---shadow-primary-xs: 0 1px 2px 0 rgb(14 165 233 / 0.05);
---shadow-primary-sm: 0 1px 3px 0 rgb(14 165 233 / 0.1), 0 1px 2px -1px rgb(14 165 233 / 0.1);
---shadow-primary-md: 0 4px 6px -1px rgb(14 165 233 / 0.1), 0 2px 4px -2px rgb(14 165 233 / 0.1);
+--shadow-primary-xs: 0 1px 2px 0 rgb(14 165 233 .md);
+--shadow-primary-sm: 0 1px 3px 0 rgb(14 165 233 .md), 0 1px 2px -1px rgb(14 165 233 .md);
+--shadow-primary-md: 0 4px 6px -1px rgb(14 165 233 .md), 0 2px 4px -2px rgb(14 165 233 .md);
 
---shadow-success-xs: 0 1px 2px 0 rgb(34 197 94 / 0.05);
---shadow-success-sm: 0 1px 3px 0 rgb(34 197 94 / 0.1), 0 1px 2px -1px rgb(34 197 94 / 0.1);
+--shadow-success-xs: 0 1px 2px 0 rgb(34 197 94 .md);
+--shadow-success-sm: 0 1px 3px 0 rgb(34 197 94 .md), 0 1px 2px -1px rgb(34 197 94 .md);
 
---shadow-warning-xs: 0 1px 2px 0 rgb(245 158 11 / 0.05);
---shadow-warning-sm: 0 1px 3px 0 rgb(245 158 11 / 0.1), 0 1px 2px -1px rgb(245 158 11 / 0.1);
+--shadow-warning-xs: 0 1px 2px 0 rgb(245 158 11 .md);
+--shadow-warning-sm: 0 1px 3px 0 rgb(245 158 11 .md), 0 1px 2px -1px rgb(245 158 11 .md);
 
---shadow-error-xs: 0 1px 2px 0 rgb(239 68 68 / 0.05);
---shadow-error-sm: 0 1px 3px 0 rgb(239 68 68 / 0.1), 0 1px 2px -1px rgb(239 68 68 / 0.1);
+--shadow-error-xs: 0 1px 2px 0 rgb(239 68 68 .md);
+--shadow-error-sm: 0 1px 3px 0 rgb(239 68 68 .md), 0 1px 2px -1px rgb(239 68 68 .md);
 ```
 
 ## Animation Tokens
@@ -367,12 +367,12 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ### Responsive Breakpoints
 ```css
 --breakpoint-xs: 475px;          /* Extra small devices */
---breakpoint-sm: 640px;          /* Small devices (phones) */
---breakpoint-md: 768px;          /* Medium devices (tablets) */
---breakpoint-lg: 1024px;         /* Large devices (laptops) */
---breakpoint-xl: 1280px;         /* Extra large devices (desktops) */
---breakpoint-2xl: 1536px;        /* 2X large devices (large desktops) */
---breakpoint-3xl: 1920px;        /* 3X large devices (ultra-wide) */
+--breakpoint-sm: 640px;          .md) */
+--breakpoint-md: 768px;          .md) */
+--breakpoint-lg: 1024px;         .md) */
+--breakpoint-xl: 1280px;         .md) */
+--breakpoint-2xl: 1536px;        .md) */
+--breakpoint-3xl: 1920px;        .md) */
 ```
 
 ### Container Sizes
@@ -415,10 +415,10 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ---
 
 ## Related Documents
-- [Design System](../design-system) - Complete design system overview
-- [Component Library](../component-library) - Reusable component catalog
-- [Accessibility Guidelines](../accessibility-guidelines) - Inclusive design standards
-- [UI Library](../ui-library) - Component usage guidelines and patterns
+- [Design System](...md) - Complete design system overview
+- [Component Library](...md) - Reusable component catalog
+- [Accessibility Guidelines](...md) - Inclusive design standards
+- [UI Library](...md) - Component usage guidelines and patterns
 
 **Keywords**: design tokens, design system, color palette, typography, spacing, shadows, breakpoints, responsive design, accessibility
 ---

@@ -124,8 +124,8 @@ interface IncidentResponseTeam {
 ```
 
 ### Escalation Contacts
-- **Primary On-call**: Engineering Lead (24/7)
-- **Secondary On-call**: DevOps Engineer (24/7)
+- **Primary On-call**: Engineering Lead (24.md)
+- **Secondary On-call**: DevOps Engineer (24.md)
 - **Management**: CTO (Business hours), CEO (Critical incidents)
 - **External**: Security firm (Security incidents), Legal counsel (Legal issues)
 
@@ -564,8 +564,8 @@ interface IncidentMetrics {
 ## Related Documents
 - [Infrastructure Operations Management](infrastructure-operations-management)) - System architecture and deployment details
 - [Environment & Release Management](environment-release-management)) - Deployment and rollback procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security incident handling architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration)) - Coordinated security and privacy response patterns
+- [Security Framework](../../compliance-security/enterprise.md)) - Security incident handling architecture and controls
+- [Security & Privacy Integration](../../compliance-security/enterprise.md)) - Coordinated security and privacy response patterns
 - [QA Testing Protocols](qa_testing_protocols)) - Testing and validation procedures
 
 **Keywords**: incident response, security incidents, disaster recovery, business continuity, communication protocols, post-mortem analysis, compliance requirements

@@ -198,10 +198,10 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 | Provider | Log Retention Period | Activity Data Access | API Rate Limits | GDPR Compliance |
 |----------|---------------------|---------------------|-----------------|-----------------|
-| **SendGrid** | 7 days (Essentials) / 30 days (Pro) | Basic metrics | 1,000/hour | ✅ Full compliance |
-| **Mailgun** | 5 days (Foundation) / 30 days (Scale) | Detailed tracking | 2,000/hour | ✅ Full compliance |
+| **SendGrid** | 7 days (Essentials) .md) | Basic metrics | 1,000/hour | ✅ Full compliance |
+| **Mailgun** | 5 days (Foundation) .md) | Detailed tracking | 2,000/hour | ✅ Full compliance |
 | **Postmark** | Unlimited | Comprehensive data | 500/hour | ✅ Full compliance |
-| **Amazon SES** | Via SNS/S3 (customizable) | Full AWS integration | 14 requests/second | ✅ Full compliance |
+| **Amazon SES** | Via SNS.md) | Full AWS integration | 14 requests/second | ✅ Full compliance |
 
 ### Compliance Feature Matrix
 
@@ -219,14 +219,14 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 ### Use Case-Based Recommendations
 
-#### Budget-Conscious Startups (Under 100K/month)
+#### Budget-Conscious Startups (Under 100K.md)
 **Recommended**: Amazon SES Managed Dedicated IP
 - **Cost**: $25/month for 10K, $300/month for 100K
 - **CPM**: $1.58 (10K), $0.23 (100K)
 - **Value**: AWS's managed infrastructure handles IP warming
 - **Trade-offs**: Requires AWS knowledge, less customer support
 
-#### Small to Mid-Market Cold Email Ops (100K-300K/month)
+#### Small to Mid-Market Cold Email Ops (100K-300K.md)
 **Recommended**: Mailgun Foundation 100K
 - **Cost**: $750/month for 100K
 - **CPM**: $0.75 (including dedicated IP)
@@ -239,7 +239,7 @@ Cold email requires detailed engagement tracking and bounce management for compl
 - **Value**: AWS infrastructure with manual IP management
 - **Trade-offs**: Lower cost but requires more management
 
-#### High-Volume Enterprise Campaigns (500K+/month)
+#### High-Volume Enterprise Campaigns (500K+.md)
 **Recommended**: Amazon SES Managed Dedicated IP
 - **Cost**: $5,000/month for 1M
 - **CPM**: $0.095 (industry-leading efficiency)
@@ -247,7 +247,7 @@ Cold email requires detailed engagement tracking and bounce management for compl
 - **Trade-offs**: Requires AWS expertise, minimal support
 
 **Alternative**: SendGrid Pro 300K
-- **Cost**: $2,500/month base (requires 3-4 plans for 1M)
+- **Cost**: $2,500.md)
 - **CPM**: $0.25
 - **Value**: Traditional SaaS support and enterprise features
 - **Trade-offs**: Higher cost but full SaaS experience

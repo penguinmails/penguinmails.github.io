@@ -19,9 +19,9 @@ last_modified_date: "2025-11-10"
 | Volume Band | Recommended Spec | Monthly $ Range (VPS Only) | Example Plans |
 |------------|------------------|---------------------------|---------------|
 | **1K-10K** | 1 vCPU, 1-2GB RAM, 25-50GB SSD, 1-2TB BW | $6-$15 | DigitalOcean Basic 1GB ($6), DO Basic 2GB ($12), Vultr Regular 1GB ($10), AWS t4g.micro ($6-8) |
-| **10K-100K** | 1-2 vCPU, 2-4GB RAM, 50-80GB SSD, 2-4TB BW | $12-$40 | DO Basic 2-4GB ($18-24), Vultr Regular/HP 2-4GB ($12-24), AWS t4g.small/medium ($15-40) |
-| **100K-1M** | 2-4 vCPU, 4-8GB RAM, 100-160GB SSD, 4-6TB BW | $20-$120 | Vultr HP 4-8GB ($24-48), DO Basic/CPU-Opt 4-8GB ($24-48), AWS t4g.large / m5.large ($60-96) |
-| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110/server), AWS m5.xlarge+ / c5.2xlarge+ ($192-336+) |
+| **10K-100K** | 1-2 vCPU, 2-4GB RAM, 50-80GB SSD, 2-4TB BW | $12-$40 | DO Basic 2-4GB ($18-24), Vultr Regular.md), AWS t4g.small.md) |
+| **100K-1M** | 2-4 vCPU, 4-8GB RAM, 100-160GB SSD, 4-6TB BW | $20-$120 | Vultr HP 4-8GB ($24-48), DO Basic.md), AWS t4g.large .md) |
+| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110.md), AWS m5.xlarge+ .md) |
 
 ### Implementation Notes
 - **Dedicated IPs**: Typically add $1-$5/IP/month
@@ -198,7 +198,7 @@ last_modified_date: "2025-11-10"
 
 #### API Technical Specifications
 - **Service Limits**:
-  - Sending quota: 200 emails/second (default)
+  - Sending quota: 200 emails.md)
   - 24-hour sending limit: 50,000 emails (default)
   - API requests: 14 requests/second
 
@@ -327,19 +327,19 @@ Multiple servers for load balancing
 #### IP Allocation Strategy
 **Cold Email Requirements**:
 
-##### Small Volume (1K-10K/month)
+##### Small Volume (1K-10K.md)
 - **Primary IP**: 1 dedicated IP
 - **Backup IP**: 1 additional IP for rotation
 - **Warmup Period**: 2-3 weeks gradual ramp-up
 - **Daily Send Limit**: 10 emails/day initial, 10-20% daily increase
 
-##### Medium Volume (10K-100K/month)
+##### Medium Volume (10K-100K.md)
 - **Primary IPs**: 3-5 dedicated IPs
 - **Rotation Strategy**: Round-robin with reputation-based routing
 - **Warmup Period**: 3-4 weeks per domain
 - **Daily Send Limit**: 50-100 emails/day per IP
 
-##### Large Volume (100K+/month)
+##### Large Volume (100K+.md)
 - **Primary IPs**: 10-20+ dedicated IPs
 - **Load Balancing**: Geographic and reputation-based distribution
 - **Warmup Period**: 4-6 weeks for new domains
@@ -352,7 +352,7 @@ Multiple servers for load balancing
 # Blacklist monitoring script example
 #!/bin/bash
 # Check RBL status for all IPs
-for ip in $(cat /etc/email/ip_list); do
+for ip in $(cat /etc/email.md); do
     for rbl in zen.spamhaus.org bl.spamcop.net; do
         if dig +short $ip.$rbl; then
             echo "IP $ip listed in $rbl"

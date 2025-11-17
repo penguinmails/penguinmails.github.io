@@ -20,7 +20,7 @@ Welcome to the comprehensive Business Documentation Hub designed around progress
 Access core entry points designed for rapid orientation and executive-level decision making.
 
 ### Level 2: Executive Decision Making (Surface Reading)
-**Directory**: [`core/`](core/) - Executive business case documents
+**Directory**: [`core/`](core.md) - Executive business case documents
 
 - **Executive Summary**: Comprehensive business overview (158 lines)
 - **Cost Comparisons**: Financial analysis with alternatives (≤200 lines)
@@ -31,37 +31,37 @@ Access core entry points designed for rapid orientation and executive-level deci
 **Specialized directories for detailed validation:**
 
 #### 💰 Financial Analysis
-- **Location**: [`financial-analysis/`](financial-analysis/)
+- **Location**: [`financial-analysis/`](financial-analysis.md)
 - **Focus**: Deep financial modeling, benchmarking, cost analysis
 - **Users**: Finance teams, CFOs, business analysts
 - **Content**: 200-300 lines per document
 
 #### 🏢 Procurement & Compliance
-- **Location**: [`procurement-compliance/`](procurement-compliance/)
+- **Location**: [`procurement-compliance/`](procurement-compliance.md)
 - **Focus**: Enterprise procurement, compliance frameworks, security
 - **Users**: Procurement, legal, compliance officers
 - **Content**: 200-300 lines per document
 
 #### 🛠️ Implementation
-- **Location**: [`implementation/`](implementation/)
+- **Location**: [`implementation/`](implementation.md)
 - **Focus**: Technical deployment, project management, infrastructure
 - **Users**: IT directors, technical leads, project managers
 - **Content**: 200-300 lines per document
 
 #### 📊 Performance Analysis
-- **Location**: [`performance/`](performance/)
+- **Location**: [`performance/`](performance.md)
 - **Focus**: Metrics, optimization, benchmarking, dashboards
 - **Users**: Operations managers, performance analysts
 - **Content**: 200-300 lines per document
 
 #### 🏥 Industry-Specific Cases
-- **Location**: [`industry-business-cases/`](industry-business-cases/)
+- **Location**: [`industry-business-cases/`](industry-business-cases.md)
 - **Focus**: Vertical-specific analysis (healthcare, finance, e-commerce, etc.)
 - **Users**: Industry-specific decision makers
 - **Content**: 200 lines per industry document
 
 #### 📋 Reference Materials
-- **Location**: [`reference/`](reference/)
+- **Location**: [`reference/`](reference.md)
 - **Focus**: Templates, methodology, quick references
 - **Users**: All business users
 - **Content**: 100-300 lines per document
@@ -88,11 +88,11 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 | User Type | Start Here | Go Deeper |
 |-----------|------------|-----------|
-| **C-Suite Executives** | [`core/executive-summary`](core/executive-summary) | [`procurement-compliance/`](procurement-compliance/) |
-| **Finance Teams** | [`core/roi-calculator`](core/roi-calculator) | [`financial-analysis/`](financial-analysis/) |
-| **IT Directors** | [`core/executive-summary`](core/executive-summary) | [`implementation/`](implementation/) |
-| **Procurement** | [`procurement-compliance/procurement-guide`](procurement-compliance/procurement-guide) | [`procurement-compliance/compliance-framework`](procurement-compliance/compliance-framework) |
-| **Operations** | [`performance/performance-dashboard`](performance/performance-dashboard) | [`performance/performance-benchmarks`](performance/performance-benchmarks) |
+| **C-Suite Executives** | [`core/executive-summary`](core.md) | [`procurement-compliance/`](procurement-compliance.md) |
+| **Finance Teams** | [`core/roi-calculator`](core.md) | [`financial-analysis/`](financial-analysis.md) |
+| **IT Directors** | [`core/executive-summary`](core.md) | [`implementation/`](implementation.md) |
+| **Procurement** | [`procurement-compliance/procurement-guide`](procurement-compliance.md) | [`procurement-compliance/compliance-framework`](procurement-compliance.md) |
+| **Operations** | [`performance/performance-dashboard`](performance.md) | [`performance/performance-benchmarks`](performance.md) |
 
 ## 🎯 Content Organization Principles
 

@@ -9,10 +9,10 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Areas
 
-- [Architecture](architecture/) - System design and technical foundation
-- [Operations](operations/) - Operational procedures and monitoring
-- [Integration](integration/) - API and integration documentation
-- [Enterprise Technical](enterprise-technical/) - Comprehensive enterprise technical guides
+- [Architecture](architecture.md) - System design and technical foundation
+- [Operations](operations.md) - Operational procedures and monitoring
+- [Integration](integration.md) - API and integration documentation
+- [Enterprise Technical](enterprise-technical.md) - Comprehensive enterprise technical guides
 
 ## Complexity Levels
 
@@ -23,59 +23,59 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Architecture
 
-### [Overview](architecture/overview/)
+### [Overview](architecture/overview.md)
 - High-level system design and technical foundation
 - Technology stack and infrastructure overview
 
-### [Detailed Technical](architecture/detailed-technical/)
-- [High-Level Architecture](architecture/overview/)
-- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap/)
-- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide/)
+### [Detailed Technical](architecture/detailed-technical.md)
+- [High-Level Architecture](architecture/overview.md)
+- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap.md)
+- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide.md)
 
-### [Enterprise Tech](architecture/enterprise-tech/)
-- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling/)
-- [Custom Configurations](architecture/enterprise-tech/custom-configurations/)
-- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure/)
+### [Enterprise Tech](architecture/enterprise-tech.md)
+- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling.md)
+- [Custom Configurations](architecture/enterprise-tech/custom-configurations.md)
+- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure.md)
 
 ## Technical Operations
 
-### [Overview](operations/overview/)
+### [Overview](operations/overview.md)
 - Basic operations guide and system monitoring
 - Performance management and troubleshooting
 
-### [Enterprise Operations](operations/enterprise-operations/)
-- [Backup & Recovery](operations/enterprise-operations/backup-recovery/)
-- [Connection Pooling](operations/enterprise-operations/connection-pooling/)
-- [Performance Monitoring](operations/enterprise-operations/performance-monitoring/)
+### [Enterprise Operations](operations/enterprise-operations.md)
+- [Backup & Recovery](operations/enterprise-operations/backup-recovery.md)
+- [Connection Pooling](operations/enterprise-operations/connection-pooling.md)
+- [Performance Monitoring](operations/enterprise-operations/performance-monitoring.md)
 
-### [Advanced Operations](operations/advanced-operations/)
-- [Custom Monitoring](operations/advanced-operations/custom-monitoring/)
-- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting/)
-- [Performance Optimization](operations/advanced-operations/performance-optimization/)
+### [Advanced Operations](operations/advanced-operations.md)
+- [Custom Monitoring](operations/advanced-operations/custom-monitoring.md)
+- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting.md)
+- [Performance Optimization](operations/advanced-operations/performance-optimization.md)
 
 ## Integration & Development
 
-### [Overview](integration/overview/)
+### [Overview](integration/overview.md)
 - API and integration documentation overview
 - Getting started with integrations
 
-### [Advanced Integrations](integration/advanced-integrations/)
-- [API Reference](integration/advanced-integrations/api-reference/)
-- [Webhook Setup](integration/advanced-integrations/webhook-setup/)
-- [Custom Integrations](integration/advanced-integrations/custom-integrations/)
+### [Advanced Integrations](integration/advanced-integrations.md)
+- [API Reference](integration/advanced-integrations/api-reference.md)
+- [Webhook Setup](integration/advanced-integrations/webhook-setup.md)
+- [Custom Integrations](integration/advanced-integrations/custom-integrations.md)
 
-### [Development Resources](integration/development-resources/)
-- [API Development](integration/development-resources/api-development/)
-- [Plugin Development](integration/development-resources/plugin-development/)
-- [Custom Workflows](integration/development-resources/custom-workflows/)
-- [Advanced Automation](integration/development-resources/advanced-automation/)
+### [Development Resources](integration/development-resources.md)
+- [API Development](integration/development-resources/api-development.md)
+- [Plugin Development](integration/development-resources/plugin-development.md)
+- [Custom Workflows](integration/development-resources/custom-workflows.md)
+- [Advanced Automation](integration/development-resources/advanced-automation.md)
 
 ## Enterprise Technical
 
-- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide/)
-- [Custom Development](enterprise-technical/custom-development/)
-- [Platform Extensions](enterprise-technical/platform-extensions/)
-- [Technical Consulting](enterprise-technical/technical-consulting/)
+- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide.md)
+- [Custom Development](enterprise-technical/custom-development.md)
+- [Platform Extensions](enterprise-technical/platform-extensions.md)
+- [Technical Consulting](enterprise-technical/technical-consulting.md)
 
 ## Development Workflow
 
@@ -130,7 +130,7 @@ const campaign = await penguinmails.createCampaign({
 import penguinmails
 
 # Track campaign performance
-performance = penguinmails.analytics.getCampaignMetrics(/)
+performance = penguinmails.analytics.getCampaignMetrics(.md)
     campaign_id='campaign_123',
     date_range='last_30_days'
 )
@@ -168,7 +168,7 @@ analytics.export_metrics(performance, destination='ga4')
 - **Priority Support**: Dedicated technical support team
 
 ---
-*Previous: [Business Context](../business/) | Next: [User Journeys](../user-journeys/) →*
+*Previous: [Business Context](../business.md) | Next: [User Journeys](../user-journeys.md) →*
 
 ## Documentation Authoring Guidelines (For Contributors)
 

@@ -8,7 +8,7 @@ This document defines the basic marketing budget management framework for manual
 **Target Audience:** Marketing Finance Managers, Budget Directors, Financial Planning Teams
 **Financial Focus:** 10% marketing spend efficiency improvement and basic budget management
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) budget management capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) budget management capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 

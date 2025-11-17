@@ -3,18 +3,18 @@
 This guide defines the canonical Content Database schema for PenguinMails.
 
 The Content DB is a dedicated tier for heavy content storage:
-- Email and message bodies (text/HTML)
+- Email and message bodies (text.md)
 - Attachments and large binaries
 - Long-lived archives needed for legal/compliance
 
 It is NOT:
 - An analytics warehouse (OLAP covers that)
-- An operational store for campaigns/leads (OLTP covers that)
-- A general logging/telemetry sink (see external analytics/logging)
+- An operational store for campaigns.md)
+- A general logging/telemetry sink (see external analytics.md)
 
 For analytics and logging responsibilities, refer to:
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1)
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
 
 ---
 
@@ -48,15 +48,15 @@ For analytics and logging responsibilities, refer to:
 - No generic log tables, connection pool metrics, or system alerts in Content DB.
 - High-volume logs, access tracking, and infra monitoring:
   - Go to external logging/product analytics/SIEM per:
-    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1).
+    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md).
 
 4) Focus on retention, compliance, and efficient storage
 
 - Built-in support for:
   - Tenant isolation via tenant_id.
   - Expiration, archival, and lifecycle hints on content.
-- Heavy processing (compression/dedup/scans) is orchestrated by:
-  - Workers and services (JS/TS).
+- Heavy processing (compression/dedup.md) is orchestrated by:
+  - Workers and services (JS.md).
   - Minimal, focused SQL helpers where appropriate.
 
 ---
@@ -173,21 +173,21 @@ No cross-database FK:
 
 Content DB is not a log sink. The following apply:
 
-- Detailed access logs (who viewed/downloaded what, IPs, UAs, etc.):
+- Detailed access logs (who viewed.md):
   - Prefer:
     - External logging / SIEM / PostHog.
   - If a minimal subset is required for legal/audit:
     - Model a narrow, low-volume audit table either:
       - In OLAP (aggregated summaries), or
       - In a dedicated security DB.
-- Performance metrics (read/write latency, compression ratios, dedup stats):
+- Performance metrics (read.md):
   - Send to observability stack.
 - Search indexes:
-  - Use a dedicated search system (e.g., OpenSearch/Meilisearch) or an OLAP projection.
+  - Use a dedicated search system (e.g., OpenSearch.md) or an OLAP projection.
   - Do not treat content_search_index as a primary Content DB responsibility.
 
 For patterns and responsibilities:
-- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1).
+- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md).
 
 ---
 
@@ -195,7 +195,7 @@ For patterns and responsibilities:
 
 Several lifecycle and optimization flows were previously encoded entirely in SQL functions in legacy docs. Use this split instead:
 
-1) JS/TS application/worker layer (recommended responsibilities)
+1) JS/TS application.md)
 
 - Implement in services/workers:
   - Content ingestion:
@@ -210,12 +210,12 @@ Several lifecycle and optimization flows were previously encoded entirely in SQL
   - Virus and security scanning:
     - Integrate with scanning services.
   - Scheduling:
-    - Trigger lifecycle jobs (archive/delete) based on policies.
+    - Trigger lifecycle jobs (archive.md) based on policies.
 - Reason:
   - Easier to test, deploy, and iterate.
   - Keeps DB schema guide stable and provider-agnostic.
 
-2) SQL / database-level helpers (allowed, but focused)
+2) SQL .md)
 
 - Implement in SQL:
   - Small, deterministic helpers with clear interfaces, e.g.:
@@ -283,8 +283,8 @@ Use this guide as the forward-looking contract:
     - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure/oltp-schema-guide:1),
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1),
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1),
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md),
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md),
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 ---

@@ -356,10 +356,10 @@ The Operations Analytics Executive Dashboard provides comprehensive operational 
 **Review Cycle:** Quarterly analytics validation and strategic operations alignment assessment
 
 **Related Analytics Documents:**
-- [Operations Analytics Framework](./framework) - Operations analytics context and strategic alignment
-- [Operations Executive Dashboard Framework](./executive-operations-dashboard-framework) - Executive operations context and analytics integration
-- [Operations Success Metrics Dashboard](./operations-success-metrics-dashboard) - Operations success tracking with analytics integration
-- [Operations Cross-Domain Integration Dashboard](./cross-domain-integration-dashboard) - Cross-domain integration with analytics tracking
+- [Operations Analytics Framework](..md) - Operations analytics context and strategic alignment
+- [Operations Executive Dashboard Framework](..md) - Executive operations context and analytics integration
+- [Operations Success Metrics Dashboard](..md) - Operations success tracking with analytics integration
+- [Operations Cross-Domain Integration Dashboard](..md) - Cross-domain integration with analytics tracking
 
 **Next Steps:**
 

@@ -39,7 +39,7 @@ last_modified_date: "2025-12-19"
 - [ ] SOC 2 Type II certification
 - [ ] ISO 27001 certification
 - [ ] GDPR compliance (EU operations)
-- [ ] CCPA/CPRA compliance (California operations)
+- [ ] CCPA.md)
 - [ ] Industry-specific compliance (HIPAA, SOX, PCI DSS)
 
 ---

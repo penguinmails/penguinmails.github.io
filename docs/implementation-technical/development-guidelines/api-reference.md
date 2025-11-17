@@ -1,6 +1,6 @@
 ---
 title: "API Reference - Complete Integration Guide"
-description: "Lean, strategic API entrypoint plus links to dedicated REST API contracts (SMTP, Executive, Queue/Events, Core Platform) for the PenguinMails platform."
+description: "Lean, strategic API entrypoint plus links to dedicated REST API contracts (SMTP, Executive, Queue.md) for the PenguinMails platform."
 last_modified_date: "2025-11-10"
 ---
 
@@ -21,12 +21,12 @@ All endpoint-level details, SDK examples, language-specific integrations, and sc
 
 PenguinMails APIs are designed as a coherent, infrastructure-aware platform:
 
-- REST-only, HTTP/JSON contracts (no GraphQL) for official public and internal APIs.
+- REST-only, HTTP.md) for official public and internal APIs.
 - JS/TS-first orientation for SDKs and examples; other languages are supported via separate, focused docs.
 - Clear separation of:
   - Tenant-facing APIs (product, marketing, analytics consumption).
-  - Operational/administrative APIs (SMTP control, queue operations, observability).
-  - Executive/BI APIs (C-suite dashboards, multi-tenant rollups, financial and performance views).
+  - Operational.md).
+  - Executive.md).
 - Internally aligned with the five-tier data model (OLTP, OLAP, events, cache, archive) without leaking implementation details into public contracts.
 - Consistent security, RBAC, auditability, and compliance posture across all domains.
 
@@ -48,13 +48,13 @@ The API documentation follows a progressive disclosure model:
 Authoritative domain contracts:
 
 - Tenant SMTP API:
-  - [`tenant-smtp-api`](../api/tenant-smtp-api)
+  - [`tenant-smtp-api`](../api.md)
 - Central SMTP Operations API:
-  - [`central-smtp-operations-api`](../api/central-smtp-operations-api)
+  - [`central-smtp-operations-api`](../api.md)
 - Queue & Events API:
-  - [`queue-events-api`](../api/queue-events-api)
+  - [`queue-events-api`](../api.md)
 - Executive REST API (C-Suite Dashboards):
-  - [`executive-api`](../api/executive-api)
+  - [`executive-api`](../api.md)
 - Core Product / Marketing / Webhooks / SDKs:
   - Defined and maintained in their own dedicated specs (e.g. `core-product-api.md`, `webhooks-api.md`, `sdk-guides.md`) separate from this entrypoint.
 
@@ -145,7 +145,7 @@ Clients MUST:
 - Treat HTTP 429 as a first-class signal.
 - Implement basic, configurable retry/backoff for transient failures.
 
-Implementation code samples (e.g. retry handlers in JS/TS/Python) belong in:
+Implementation code samples (e.g. retry handlers in JS/TS.md) belong in:
 - SDK documentation.
 - Integration playbooks.
 - Not in this high-level reference.
@@ -160,7 +160,7 @@ Common, reusable error codes:
   - `AUTHENTICATION_REQUIRED` (401)
   - `INSUFFICIENT_PERMISSIONS` (403)
 - Validation:
-  - `VALIDATION_ERROR` (400/422)
+  - `VALIDATION_ERROR` (400.md)
   - `MISSING_REQUIRED_FIELD`
 - Rate Limits:
   - `RATE_LIMIT_EXCEEDED` (429)

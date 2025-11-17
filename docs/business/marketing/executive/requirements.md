@@ -19,7 +19,7 @@ This document establishes executive stakeholder requirements with clear separati
 **MVP Focus:** Basic reporting, 48-hour decisions, directional analytics
 **Post-MVP Focus:** Real-time monitoring, automated optimization, <5 second latency
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) executive requirements. Level 3+ advanced features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) executive requirements. Level 3+ advanced features are addressed in the roadmap section below.
 
 ---
 

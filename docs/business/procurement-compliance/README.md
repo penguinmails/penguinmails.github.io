@@ -15,16 +15,16 @@ This directory contains comprehensive procurement guidance, compliance framework
 ## Progressive Disclosure Flow
 
 ### 📋 Procurement & Compliance Documents
-- [**Procurement Guide**](./procurement-guide) - Enterprise evaluation framework (≤200 lines)
-- [**Procurement Guide Detailed**](./procurement-guide-detailed) - Complete procurement process (265 lines)
-- [**Compliance Overview**](./compliance-overview) - Executive compliance summary (≤200 lines)
-- [**Security Compliance**](./security-compliance) - Security and compliance summary (≤200 lines)
-- [**Security Compliance Detailed**](./security-compliance-detailed) - Technical security framework (96 lines)
-- [**Compliance Framework**](./compliance-framework) - Complete compliance analysis (≤300 lines)
-- [**Compliance Costs**](./compliance-costs) - Compliance investment analysis (≤300 lines)
-- [**Compliance Implementation**](./compliance-implementation) - Technical compliance systems (≤300 lines)
-- [**Compliance Incident Response**](./compliance-incident-response) - Incident management procedures (≤300 lines)
-- [**Compliance Monitoring**](./compliance-monitoring) - Ongoing compliance monitoring (≤300 lines)
+- [**Procurement Guide**](..md) - Enterprise evaluation framework (≤200 lines)
+- [**Procurement Guide Detailed**](..md) - Complete procurement process (265 lines)
+- [**Compliance Overview**](..md) - Executive compliance summary (≤200 lines)
+- [**Security Compliance**](..md) - Security and compliance summary (≤200 lines)
+- [**Security Compliance Detailed**](..md) - Technical security framework (96 lines)
+- [**Compliance Framework**](..md) - Complete compliance analysis (≤300 lines)
+- [**Compliance Costs**](..md) - Compliance investment analysis (≤300 lines)
+- [**Compliance Implementation**](..md) - Technical compliance systems (≤300 lines)
+- [**Compliance Incident Response**](..md) - Incident management procedures (≤300 lines)
+- [**Compliance Monitoring**](..md) - Ongoing compliance monitoring (≤300 lines)
 
 ### 🎯 Enterprise Evaluation Path
 1. **Procurement Start**: Begin with `procurement-guide` for evaluation framework
@@ -49,10 +49,10 @@ This directory contains comprehensive procurement guidance, compliance framework
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core/) - Executive business case for procurement justification
-- [Implementation Guide](../implementation/) - Technical implementation requirements
-- [Financial Analysis](../financial-analysis/) - Cost analysis for procurement planning
-- [Industry Business Cases](../industry-business-cases/) - Industry-specific compliance requirements
+- [Core Business Documents](../core.md) - Executive business case for procurement justification
+- [Implementation Guide](../implementation.md) - Technical implementation requirements
+- [Financial Analysis](../financial-analysis.md) - Cost analysis for procurement planning
+- [Industry Business Cases](../industry-business-cases.md) - Industry-specific compliance requirements
 
 ---
 

@@ -34,11 +34,11 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 **👤 Ideal for Startup Founders** - Scale from 1K to 100K+ monthly sends without hiring email specialists
 **👤 Enterprise-Ready** - Built for teams managing hundreds of sales reps simultaneously
 
-**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition/overview)) for comprehensive ROI analysis and competitive positioning strategy.
+**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition.md)) for comprehensive ROI analysis and competitive positioning strategy.
 
 ## 📊 The ROI of Better Deliverability
 
-**Cost of Poor Deliverability (10,000 Cold Emails/Month):**
+**Cost of Poor Deliverability (10,000 Cold Emails.md):**
 - **Before PenguinMails**: 60% deliverability = 6,000 successful deliveries
 - **With PenguinMails**: 95% deliverability = 9,500 successful deliveries
 - **Additional Responses**: 70+ additional responses (58% improvement)
@@ -50,7 +50,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 ## Market Validation & Business Impact
 
 ### Industry Recognition
-- **G2 Reviews**: 4.8/5.0 stars (120+ reviews)
+- **G2 Reviews**: 4.8.md)
 - **Capterra Rating**: 4.7/5.0 stars
 - **TrustRadius**: 9.2/10 "Great Value for Money"
 - **Featured in**: TechCrunch, Product Hunt, Marketing Technology Blog
@@ -105,7 +105,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
    - White-label solutions that enhance agency credibility
    - Scalable infrastructure that grows with agency needs
 
-**Strategic Reference**: For our complete 3-5 year vision and product strategy, see [Product Strategy](./docs/business/strategy/overview)) and [Business Model](./docs/business/model/overview)) for detailed revenue strategy.
+**Strategic Reference**: For our complete 3-5 year vision and product strategy, see [Product Strategy](./docs/business/strategy.md)) and [Business Model](./docs/business/model.md)) for detailed revenue strategy.
 
 ---
 
@@ -184,7 +184,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 **Business Impact**: 70-90% reduction in developer dependency, 80%+ faster infrastructure deployment
 
-**Strategic Reference**: For detailed problem analysis and competitive positioning, see our comprehensive [Value Proposition Analysis](./docs/business/value-proposition/detailed-analysis/comprehensive-analysis))
+**Strategic Reference**: For detailed problem analysis and competitive positioning, see our comprehensive [Value Proposition Analysis](./docs/business/value-proposition.md)
 
 ---
 
@@ -308,17 +308,17 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 
 ### **🎯 Getting Started**
 **Perfect for First-Time Users and Agency Owners**
-1. **[Free Mailbox Creation](docs/core-features/free-mailbox-creation/overview)** - Create professional email accounts (5 minutes)
-2. **[Warm-ups](docs/core-features/warm-ups/overview)** - Build sender reputation (21-day automated process)
+1. **[Free Mailbox Creation](docs/core-features/free-mailbox-creation.md)** - Create professional email accounts (5 minutes)
+2. **[Warm-ups](docs/core-features/warm-ups.md)** - Build sender reputation (21-day automated process)
 
 ### **⚡ Scaling Up**
 **Ideal for Startup Founders and Growing Teams**
-3. **[Inbox Rotation](docs/core-features/inbox-rotation/overview)** - Rotate between accounts to avoid detection
-4. **[Unified Inbox](docs/core-features/unified-inbox/overview)** - Manage all responses in one place
+3. **[Inbox Rotation](docs/core-features/inbox-rotation.md)** - Rotate between accounts to avoid detection
+4. **[Unified Inbox](docs/core-features/unified-inbox.md)** - Manage all responses in one place
 
 ### **📊 Enterprise & Advanced**
 **Designed for Sales Directors and Large Teams**
-5. **[Analytics](docs/core-features/analytics/overview)** - Advanced performance tracking and insights
+5. **[Analytics](docs/core-features/analytics.md)** - Advanced performance tracking and insights
 
 ### **🎯 Implementation Paths**
 **👤 Agency Owners**: Start with mailbox creation and warm-ups, then scale with inbox rotation
@@ -332,13 +332,13 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 ### **🏗️ Foundation Features**
 Start here for basic infrastructure and setup:
 
-#### **[Email Warm-ups](docs/core-features/warm-ups/overview)** - *The #1 Success Factor*
+#### **[Email Warm-ups](docs/core-features/warm-ups.md)** - *The #1 Success Factor*
 - **⭐ Beginner**: 5-minute automated setup for immediate results
 - **⭐⭐ Intermediate**: Advanced progression algorithms and optimization
 - **⭐⭐⭐ Expert**: Enterprise compliance and predictive analytics
 - **Quick Start**: Create accounts → Warm-up → Start campaigns
 
-#### **[Free Mailbox Creation](docs/core-features/free-mailbox-creation/overview)** - *Professional Infrastructure*
+#### **[Free Mailbox Creation](docs/core-features/free-mailbox-creation.md)** - *Professional Infrastructure*
 - **⭐ Beginner**: Instant professional email accounts
 - **⭐⭐ Intermediate**: Advanced domain and DNS management
 - **⭐⭐⭐ Expert**: Bulk creation and enterprise automation
@@ -347,13 +347,13 @@ Start here for basic infrastructure and setup:
 ### **📈 Growth & Optimization Features**
 Scale your campaigns with data-driven insights:
 
-#### **[Analytics](docs/core-features/analytics/overview)** - *Data-Driven Optimization*
+#### **[Analytics](docs/core-features/analytics.md)** - *Data-Driven Optimization*
 - **⭐ Beginner**: Essential metrics and performance tracking
 - **⭐⭐ Intermediate**: Advanced reporting and ROI analysis
 - **⭐⭐⭐ Expert**: AI-powered insights and predictive analytics
 - **Business Impact**: 150% response improvement through optimization
 
-#### **[Unified Inbox](docs/core-features/unified-inbox/overview)** - *Response Management*
+#### **[Unified Inbox](docs/core-features/unified-inbox.md)** - *Response Management*
 - **⭐ Beginner**: Centralized response monitoring
 - **⭐⭐ Intermediate**: Smart filtering and team collaboration
 - **⭐⭐⭐ Expert**: Enterprise integration and automation
@@ -362,7 +362,7 @@ Scale your campaigns with data-driven insights:
 ### **⚡ Scale & Advanced Features**
 For enterprise-level operations and maximum efficiency:
 
-#### **[Inbox Rotation](docs/core-features/inbox-rotation/overview)** - *Sustainable Scaling*
+#### **[Inbox Rotation](docs/core-features/inbox-rotation.md)** - *Sustainable Scaling*
 - **⭐ Beginner**: Basic account protection and rotation
 - **⭐⭐ Intermediate**: Smart algorithms and optimization
 - **⭐⭐⭐ Expert**: Enterprise-scale with ML optimization
@@ -379,12 +379,12 @@ Ready to transform your cold email outreach? PenguinMails offers:
 - **Expert Support** - Real humans who understand email deliverability
 - **Proven Results** - 95%+ deliverability guaranteed
 
-**[Start Your Free Trial](https://app.penguinmails.com/signup)** or **[Schedule a Demo](https://calendly.com/penguinmails/demo)**
+**[Start Your Free Trial](https://app.penguinmails.com.md)** or **[Schedule a Demo](https://calendly.com/penguinmails.md)**
 
 ---
 
 *PenguinMails is the email infrastructure platform that agencies and B2B companies trust to scale their cold outreach without technical complexity or compliance risk.*
 
 ---
-*Previous: [Quick Setup Guide](quick-setup)) | Next: [Core Features](core-features/) →*
+*Previous: [Quick Setup Guide](quick-setup)) | Next: [Core Features](core-features.md) →*
 ---

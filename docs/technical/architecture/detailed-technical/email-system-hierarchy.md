@@ -11,7 +11,7 @@ description: "Optimized database structure and email system architecture"
 
 **Operational Excellence**: Backed by **comprehensive performance optimization** with intelligent indexing, efficient content management, and automated monitoring that ensure 99.9% data integrity and optimal query performance.
 
-**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features/overview.md) through [analytics tracking](analytics-architecture.md) to [performance optimization](./infrastructure-operations.md) - providing the data architecture that powers your email infrastructure success.
+**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features.md) through [analytics tracking](analytics-architecture) to [performance optimization](..md) - providing the data architecture that powers your email infrastructure success.
 
 ---
 
@@ -20,7 +20,7 @@ description: "Optimized database structure and email system architecture"
 ### Email Hierarchy Architecture
 ```
 📧 Complete Email System
-├── email_messages (Message Analytics/Metadata)
+├── email_messages (Message Analytics.md)
 │   ├── campaign_id, lead_id, direction, status
 │   ├── from_email, to_email, subject
 │   └── storage_key → email_content
@@ -41,7 +41,7 @@ description: "Optimized database structure and email system architecture"
 
 #### email_messages - Message Analytics & Metadata
 ```sql
-CREATE TABLE email_messages (/)
+CREATE TABLE email_messages (.md)
     storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
     tenant_id UUID NOT NULL,
     email_account_id UUID,
@@ -62,7 +62,7 @@ CREATE TABLE email_messages (/)
 
 #### email_content - Email Body Content
 ```sql
-CREATE TABLE email_content (/)
+CREATE TABLE email_content (.md)
     storage_key VARCHAR(500) PRIMARY KEY,
     tenant_id UUID NOT NULL,
     content_text TEXT,
@@ -83,7 +83,7 @@ CREATE TABLE email_content (/)
 
 #### attachments - Email File Attachments (Existing)
 ```sql
-CREATE TABLE attachments (/)
+CREATE TABLE attachments (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     parent_storage_key VARCHAR(500) REFERENCES email_content(storage_key),
     filename VARCHAR(255) NOT NULL,
@@ -137,9 +137,9 @@ SELECT
     m.direction,
     m.status,
     COUNT(*) as email_count,
-    AVG(c.raw_size_bytes / 1024.0) as avg_size_kb,
+    AVG(c.raw_size_bytes .md) as avg_size_kb,
     COUNT(a.*) as total_attachments,
-    AVG(a.size_bytes / 1024.0) as avg_attachment_size_kb
+    AVG(a.size_bytes .md) as avg_attachment_size_kb
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
@@ -150,9 +150,9 @@ GROUP BY m.direction, m.status;
 SELECT 
     c.compression_algorithm,
     COUNT(*) as emails,
-    AVG(c.raw_size_bytes / 1024.0) as avg_original_size_kb,
-    AVG(c.compressed_size_bytes / 1024.0) as avg_compressed_size_kb,
-    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal / c.raw_size_bytes * 100) as avg_compression_ratio
+    AVG(c.raw_size_bytes .md) as avg_original_size_kb,
+    AVG(c.compressed_size_bytes .md) as avg_compressed_size_kb,
+    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal .md) as avg_compression_ratio
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
@@ -221,7 +221,7 @@ async function handleIncomingEmail(emailData: any) {
   const storage_key = `email_${emailData.messageId}_${Date.now()}`;
   
   return await db.$transaction(async (tx) => {
-    // 1. Create email_content (email body)
+    /.md)
     const contentObject = await tx.email_content.create({
       data: {
         storage_key,
@@ -235,7 +235,7 @@ async function handleIncomingEmail(emailData: any) {
       }
     });
 
-    // 2. Create email_messages (analytics)
+    /.md)
     const messageRef = await tx.email_messages.create({
       data: {
         storage_key,
@@ -363,12 +363,12 @@ GROUP BY c.compression_algorithm;
 ### Migration Steps
 ```sql
 -- Step 1: Create new tables with clear names
-CREATE TABLE email_messages (/)
+CREATE TABLE email_messages (.md)
     storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
     -- ... same structure as content_inbox_message_refs
 );
 
-CREATE TABLE email_content (/)
+CREATE TABLE email_content (.md)
     storage_key VARCHAR(500) PRIMARY KEY,
     -- ... same structure as content_objects
 );
@@ -437,10 +437,10 @@ ORDER BY date;
 -- Content storage analytics
 SELECT 
     DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 / 1024.0) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 / 1024.0) as total_mb_compressed,
+    SUM(c.raw_size_bytes / 1024.0 .md) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 .md) as total_mb_compressed,
     COUNT(*) as emails_processed,
-    AVG(c.raw_size_bytes / 1024.0) as avg_email_size_kb
+    AVG(c.raw_size_bytes .md) as avg_email_size_kb
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
@@ -458,7 +458,7 @@ AND created >= NOW() - INTERVAL '1 hour'
 HAVING COUNT(*) > 10000;
 
 -- Large email storage alert
-SELECT SUM(raw_size_bytes / 1024.0 / 1024.0) as total_mb 
+SELECT SUM(raw_size_bytes / 1024.0 .md) as total_mb 
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1 
@@ -536,9 +536,9 @@ This email system hierarchy creates a **clear, intuitive, and maintainable struc
 
 ### ✅ Next Steps
 Explore related technical documentation:
-1. **[Analytics Architecture](analytics-architecture.md)** - Real-time tracking and PostHog integration
-2. **[Database Architecture](../overview.md)** - 4-tier database structure overview
-3. **[Email Processing](../overview.md)** - Core email processing and deliverability
+1. **[Analytics Architecture](analytics-architecture)** - Real-time tracking and PostHog integration
+2. **[Database Architecture](...md)** - 4-tier database structure overview
+3. **[Email Processing](...md)** - Core email processing and deliverability
 
 ---
 

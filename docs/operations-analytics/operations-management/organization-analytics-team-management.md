@@ -28,7 +28,7 @@ description: "Comprehensive organization analytics and team management for enter
 #### 1. **Company Setup & Onboarding**
 **Journey Flow:** `Onboarding Modal → Company Details → Team Size → Initial Owner → Company Created`
 
-##### Company Information Collection (`/onboarding` - Step 1)
+##### Company Information Collection (`.md)
 - **Modal Elements**:
   - Company name input field (required)
   - Industry dropdown selection
@@ -54,7 +54,7 @@ description: "Comprehensive organization analytics and team management for enter
 #### 2. **Team Invitation & Onboarding**
 **Journey Flow:** `Team Dashboard → Invite Form → Email Sent → Recipient Journey → Team Integration`
 
-##### Invitation Initiation (`/team` or `/settings/team`)
+##### Invitation Initiation (`/team` or `/settings.md)
 - **Page Access**: Team management section in settings
 - **Permission Check**: Only Owner/Admin can send invites
 - **Invite Button**: Prominent "Invite Team Member" CTA
@@ -89,7 +89,7 @@ description: "Comprehensive organization analytics and team management for enter
 #### 3. **Ongoing Team Management**
 **Journey Flow:** `Team Dashboard → Member Actions → Permission Updates → Activity Monitoring`
 
-##### Team Dashboard Access (`/team`)
+##### Team Dashboard Access (`.md)
 - **Member List**: Table showing all team members with status
 - **Columns**: Name, Email, Role, Join Date, Last Active, Status
 - **Actions**: Edit role, remove member, resend invitation (per member)
@@ -174,7 +174,7 @@ Performance Indicators
 ├── Team Productivity Score: X/100
 ├── Onboarding Completion: X%
 ├── Access Security Score: X/100
-└── Team Satisfaction: X/5 (NPS)
+└── Team Satisfaction: X.md)
 ```
 
 ### **Role-Based Access Control Analytics**
@@ -333,7 +333,7 @@ Team Dashboard → Member Selection → Removal Confirmation → Asset Transfer 
 ```
 
 **Detailed Steps:**
-1. **Removal Initiation** (`/team`):
+1. **Removal Initiation** (`.md):
    - **Access**: Owner/Admin clicks "Remove" action on member row
    - **Confirmation Modal**: Warning about permanent action and data impact
    - **Asset Transfer Options**: Reassign campaigns, contacts, IPs to other members
@@ -575,34 +575,34 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](../overview)) - Main operations framework
-- [User Analytics](../analytics-performance/user-analytics)) - User behavior analysis
-- [Metrics & KPIs](../analytics-performance/metrics-kpis)) - Comprehensive KPI framework
+- [Operations Analytics Overview](...md)) - Main operations framework
+- [User Analytics](../analytics-performance.md)) - User behavior analysis
+- [Metrics & KPIs](../analytics-performance.md)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy/overview)) - Strategic alignment
-- [Market Analysis](../business/market-analysis/overview)) - Market positioning
-- [User Personas](../business/user-personas/overview)) - Target audience analysis
+- [Business Strategy Overview](../business/strategy.md)) - Strategic alignment
+- [Market Analysis](../business/market-analysis.md)) - Market positioning
+- [User Personas](../business/user-personas.md)) - Target audience analysis
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture/overview)) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations)) - System management
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide)) - Analytics integrations
+- [Technical Architecture Overview](../technical/architecture.md)) - System design
+- [Infrastructure Operations](../technical/architecture/detailed-technical.md)) - System management
+- [Integration Guide](../technical/architecture/detailed-technical.md)) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys/README)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys/onboarding-journey)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
+- [User Journeys Overview](../user-journeys.md)) - User flow documentation
+- [Onboarding Journey](../user-journeys/detailed-journeys.md)) - User activation
+- [User Interaction Patterns](../user-journeys/detailed-journeys.md)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security/overview)) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise/security-framework)) - Security operations
-- [Data Privacy Policy](../compliance-security/international/data-privacy-policy)) - Privacy compliance
+- [Compliance Overview](../compliance-security.md)) - Regulatory compliance
+- [Security Framework](../compliance-security/enterprise.md)) - Security operations
+- [Data Privacy Policy](../compliance-security/international.md)) - Privacy compliance
 
 ### **Team Performance**
-- [Team Performance Overview](../team-performance/) - Team coordination
-- [QA Testing Protocols](../team-performance/qa-testing-protocols)) - Quality assurance
-- [Sprint Retrospectives](../team-performance/sprint-retrospective-template)) - Agile development
+- [Team Performance Overview](../team-performance.md) - Team coordination
+- [QA Testing Protocols](../team-performance.md)) - Quality assurance
+- [Sprint Retrospectives](../team-performance.md)) - Agile development
 
 ---
 
@@ -610,9 +610,9 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 Navigate to specific organization and team areas:
 
-- **[Staff Operations](./staff-operations-implementation-guide))** → Operational staff coordination
-- **[QA Testing Protocols](../team-performance/qa-testing-protocols))** → Quality assurance procedures
-- **[Metrics & KPIs](../analytics-performance/metrics-kpis))** → Comprehensive KPI framework
+- **[Staff Operations](..md))** → Operational staff coordination
+- **[QA Testing Protocols](../team-performance.md))** → Quality assurance procedures
+- **[Metrics & KPIs](../analytics-performance.md))** → Comprehensive KPI framework
 
 ---
 

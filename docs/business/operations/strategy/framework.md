@@ -298,11 +298,11 @@ The Operations Strategy Framework provides comprehensive strategic operations pl
 **Review Cycle:** Quarterly strategic operations validation and annual operations strategy optimization
 
 **Related Strategic Documents:**
-- [Strategic Operations Overview](../overview) - Strategic operations context and alignment
-- [Operations Analytics Framework](../analytics/framework) - Strategic analytics and performance intelligence
-- [Operations Management Framework](../management/framework) - Strategic operations management and coordination
-- [Security Operations Framework](./security-strategy-framework) - Strategic security operations and threat management
-- [Risk Management Framework](./risk-management-framework) - Strategic risk management and mitigation
+- [Strategic Operations Overview](...md) - Strategic operations context and alignment
+- [Operations Analytics Framework](../analytics.md) - Strategic analytics and performance intelligence
+- [Operations Management Framework](../management.md) - Strategic operations management and coordination
+- [Security Operations Framework](..md) - Strategic security operations and threat management
+- [Risk Management Framework](..md) - Strategic risk management and mitigation
 
 **Next Steps:**
 1. **Strategic Operations Assessment:** Conduct comprehensive assessment of current operations strategy, capabilities, and performance

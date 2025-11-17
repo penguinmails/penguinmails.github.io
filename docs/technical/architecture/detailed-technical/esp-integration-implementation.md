@@ -43,7 +43,7 @@ class SendGridProvider {
   }
 
   async sendEmail(emailData: SendGridEmailData): Promise<SendGridAPIResponse> {
-    const response = await fetch(`${this.baseUrl}/mail/send`, {/)
+    const response = await fetch(`${this.baseUrl}/mail/send`, {.md)
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.apiKey}`,
@@ -59,7 +59,7 @@ class SendGridProvider {
   }
 
   async setupDomainAuthentication(domain: string): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/auth/domains`, {/)
+    const response = await fetch(`${this.baseUrl}/auth/domains`, {.md)
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.apiKey}`,
@@ -77,7 +77,7 @@ class SendGridProvider {
   }
 
   async getPerformanceMetrics(timeRange: string): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/stats?start_date=${timeRange}`, {/)
+    const response = await fetch(`${this.baseUrl}/stats?start_date=${timeRange}`, {.md)
       headers: {
         'Authorization': `Bearer ${this.apiKey}`
       }
@@ -127,7 +127,7 @@ class MailgunProvider {
     if (emailData.text) formData.append('text', emailData.text);
     if (emailData.html) formData.append('html', emailData.html);
 
-    const response = await fetch(`${this.baseUrl}/messages`, {/)
+    const response = await fetch(`${this.baseUrl}/messages`, {.md)
       method: 'POST',
       headers: {
         'Authorization': `Basic ${btoa(`api:${this.apiKey}`)}`
@@ -139,7 +139,7 @@ class MailgunProvider {
   }
 
   async getDeliverabilityData(): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/deliverability`, {/)
+    const response = await fetch(`${this.baseUrl}/deliverability`, {.md)
       headers: {
         'Authorization': `Basic ${btoa(`api:${this.apiKey}`)}`
       }

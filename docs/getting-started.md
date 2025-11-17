@@ -46,7 +46,7 @@ Choose your entry point based on your experience level:
 → [Features Overview](feature-overview))
 
 ### Deep Dive
-→ [Core Features Documentation](core-features/)
+→ [Core Features Documentation](core-features.md)
 
 ## Migration Note
 

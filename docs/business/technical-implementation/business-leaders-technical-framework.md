@@ -296,16 +296,16 @@ interface RevenueProtectionAlert {
 ## Progressive Disclosure Navigation
 
 ### Level 1: Strategic Overview
-- [Executive Summary](../core/executive-summary:1) - Strategic oversight framework for business leaders
-- [Success Metrics](../implementation/success-metrics:1) - Realistic KPIs for strategic oversight
+- [Executive Summary](../core.md) - Strategic oversight framework for business leaders
+- [Success Metrics](../implementation.md) - Realistic KPIs for strategic oversight
 
 ### Level 2: Strategic Analysis  
-- [Strategic Implementation Guide](../implementation/implementation-roadmap:1) - Realistic strategic implementation
-- [Financial Analysis](../financial-analysis/financial-analysis-benchmarks:1) - Strategic financial benchmarks
+- [Strategic Implementation Guide](../implementation.md) - Realistic strategic implementation
+- [Financial Analysis](../financial-analysis.md) - Strategic financial benchmarks
 
 ### Level 3: Technical Coordination
-- [Executive API Overview](../implementation-technical/api/executive-api:1) - Realistic data access capabilities
-- [PostHog Business Events](../implementation-technical/analytics-integration/posthog-business-events-specification:1) - Simplified event tracking
+- [Executive API Overview](../implementation-technical/api.md) - Realistic data access capabilities
+- [PostHog Business Events](../implementation-technical/analytics-integration.md) - Simplified event tracking
 
 ---
 

@@ -326,10 +326,10 @@ Agencies and consulting organizations operate on project-based business models r
 ---
 
 **Related Documentation:**
-- [Product Strategy Framework](../strategy/framework)
-- [Agencies & Consulting Marketing Framework](../../marketing/industry-cases/agencies-consulting-marketing)
-- [Agencies & Consulting Customer Success Framework](../../customer-success/industry-cases/agencies-consulting-cs)
-- [Product Cross-Domain Integration](../cross-domain-integration/customer-success-integration-map)
+- [Product Strategy Framework](../strategy.md)
+- [Agencies & Consulting Marketing Framework](../../marketing/industry-cases.md)
+- [Agencies & Consulting Customer Success Framework](../../customer-success/industry-cases.md)
+- [Product Cross-Domain Integration](../cross-domain-integration.md)
 
 ---
 *Level 3: Industry-specific product development implementation for agencies and consulting organizations*

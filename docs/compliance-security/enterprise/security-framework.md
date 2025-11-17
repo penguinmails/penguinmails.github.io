@@ -42,7 +42,7 @@ sequenceDiagram
     participant NileDB
     participant Redis
     
-    Client->>App: Login Request (email/password)
+    Client->>App: Login Request (email.md)
     App->>NileDB: Authenticate User
     NileDB->>App: Auth Token + User Data
     App->>Redis: Store Session
@@ -427,7 +427,7 @@ const emailWarmup = {
     const baseLimit = 10; // Start with 10 emails
     const maxLimit = Math.min(1000, daysActive * 50); // Scale up gradually
     
-    // Adjust based on reputation (0-100)
+    /.md)
     const reputationMultiplier = reputationScore / 100;
     
     return Math.floor(baseLimit * reputationMultiplier + maxLimit * (1 - reputationMultiplier));
@@ -478,7 +478,7 @@ const campaignQuery = nileDB('campaigns')
 // Input sanitization
 const sanitizeInput = (input) => {
   return input
-    .replace(/[<>'"]/g, '') // Remove dangerous characters
+    .replace(/[<>'"].md) // Remove dangerous characters
     .trim()
     .substring(0, 1000); // Limit length
 };
@@ -486,11 +486,11 @@ const sanitizeInput = (input) => {
 // Output encoding
 const escapeHTML = (unsafe) => {
   return unsafe
-    .replace(/&/g, "&")
-    .replace(/</g, "<")
-    .replace(/>/g, ">")
-    .replace(/"/g, """)
-    .replace(/'/g, "&#039;");
+    .replace(/&.md)
+    .replace(/<.md)
+    .replace(/>.md)
+    .replace(/".md)
+    .replace(/'.md);
 };
 ```
 
@@ -518,7 +518,7 @@ const rateLimiter = {
 };
 
 // Middleware usage
-app.use('/api/', async (req, res, next) => {
+app.use('/api.md) => {
   const identifier = `${req.ip}:${req.user?.id || 'anonymous'}`;
   const result = await rateLimiter.check(identifier, 100, 3600); // 100 requests per hour
   
@@ -656,7 +656,7 @@ const gdprCompliance = {
   // Right to be forgotten
   deleteUserData: async (userId, tenantId) => {
     await nileDB.transaction(async (trx) => {
-      // Delete user data in proper order (respect foreign keys)
+      /.md)
       await trx('user_sessions').where({ user_id: userId }).del();
       await trx('tenant_users').where({ user_id: userId, tenant_id: tenantId }).del();
       await trx('users').where({ id: userId }).del();
@@ -740,8 +740,8 @@ const gdprCompliance = {
 *Security is everyone's responsibility. Report any security concerns immediately to the security team.*
 
 **Related Documents**
-- [Security & Privacy Integration](./security-privacy-integration.md) - Unified security and privacy approach
-- [Traffic Security Matrix](./traffic-security-matrix.md) - Database security strategy framework
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Regulatory compliance workflows
-- [Data Privacy Policy](../international/data-privacy-policy.md) - Customer-facing privacy information
+- [Security & Privacy Integration](..md) - Unified security and privacy approach
+- [Traffic Security Matrix](..md) - Database security strategy framework
+- [Compliance Procedures](../detailed-compliance.md) - Regulatory compliance workflows
+- [Data Privacy Policy](../international.md) - Customer-facing privacy information
 ---

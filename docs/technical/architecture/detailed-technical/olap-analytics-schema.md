@@ -107,7 +107,7 @@ Performance Optimization Layer (Query Excellence):
 
 ```sql
 -- Billing Analytics - Usage tracking per billing period
-CREATE TABLE billing_analytics (/)
+CREATE TABLE billing_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     tenant_id TEXT NOT NULL,
     subscription_id TEXT,
@@ -147,7 +147,7 @@ CREATE INDEX idx_billing_analytics_period ON billing_analytics(period_start, per
 
 ```sql
 -- Campaign Analytics - Campaign performance metrics
-CREATE TABLE campaign_analytics (/)
+CREATE TABLE campaign_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     campaign_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -188,7 +188,7 @@ CREATE INDEX idx_campaign_analytics_billing ON campaign_analytics(billing_id);
 
 ```sql
 -- Mailbox Analytics - Individual mailbox performance
-CREATE TABLE mailbox_analytics (/)
+CREATE TABLE mailbox_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     mailbox_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -231,7 +231,7 @@ CREATE INDEX idx_mailbox_analytics_billing ON mailbox_analytics(billing_id);
 
 ```sql
 -- Lead Analytics - Individual lead engagement
-CREATE TABLE lead_analytics (/)
+CREATE TABLE lead_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     lead_id TEXT NOT NULL,
     campaign_id TEXT NOT NULL,
@@ -270,7 +270,7 @@ CREATE INDEX idx_lead_analytics_billing ON lead_analytics(billing_id);
 
 ```sql
 -- Warmup Analytics - Email warmup progression
-CREATE TABLE warmup_analytics (/)
+CREATE TABLE warmup_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     mailbox_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -311,7 +311,7 @@ CREATE INDEX idx_warmup_analytics_billing ON warmup_analytics(billing_id);
 
 ```sql
 -- Sequence Step Analytics - Campaign step performance
-CREATE TABLE sequence_step_analytics (/)
+CREATE TABLE sequence_step_analytics (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     step_id TEXT NOT NULL,
     campaign_id TEXT NOT NULL,
@@ -354,7 +354,7 @@ CREATE INDEX idx_sequence_step_analytics_billing ON sequence_step_analytics(bill
 
 ```sql
 -- Enhanced Admin Audit Log - Complete audit trail with performance tracking
-CREATE TABLE admin_audit_log (/)
+CREATE TABLE admin_audit_log (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     admin_user_id TEXT NOT NULL,
@@ -413,7 +413,7 @@ CREATE INDEX idx_admin_audit_complexity ON admin_audit_log(query_complexity_scor
 
 ```sql
 -- Admin System Events - Unified admin activity and system monitoring
-CREATE TABLE admin_system_events (/)
+CREATE TABLE admin_system_events (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     event_type TEXT NOT NULL,
@@ -497,7 +497,7 @@ export class AnalyticsAggregator {
 
       // Aggregate metrics from all steps
       for (const step of steps) {
-        const stepMetrics = await tx.execute(sql`/)
+        const stepMetrics = await tx.execute(sql`.md)
           SELECT 
             COUNT(*) as sent,
             COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
@@ -575,7 +575,7 @@ export class AnalyticsAggregator {
   async aggregateBillingAnalytics(tenantId: string, periodStart: Date, periodEnd: Date) {
     return await this.db.transaction(async (tx) => {
       // Get all usage metrics for the period
-      const usage = await tx.execute(sql`/)
+      const usage = await tx.execute(sql`.md)
         SELECT 
           COUNT(DISTINCT c.id) as campaigns_used,
           COUNT(DISTINCT ea.id) as mailboxes_used,
@@ -699,7 +699,7 @@ export class AnalyticsWorker extends JobProcessor {
     const { tenant_id, period_start, period_end } = data;
     
     try {
-      await this.aggregator.aggregateBillingAnalytics(/)
+      await this.aggregator.aggregateBillingAnalytics(.md)
         tenant_id, 
         new Date(period_start), 
         new Date(period_end)
@@ -726,7 +726,7 @@ export class AnalyticsWorker extends JobProcessor {
 
 ```sql
 -- Campaign performance summary with trends
-WITH campaign_performance AS (/)
+WITH campaign_performance AS (.md)
   SELECT 
     ca.campaign_id,
     ca.company_id,
@@ -736,17 +736,17 @@ WITH campaign_performance AS (/)
     ca.clicked_tracked,
     ca.replied,
     ca.bounced,
-    ROUND((ca.delivered::DECIMAL / NULLIF(ca.sent, 0)) * 100, 2) as delivery_rate,
-    ROUND((ca.opened_tracked::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as open_rate,
-    ROUND((ca.clicked_tracked::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as click_rate,
-    ROUND((ca.replied::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as reply_rate,
-    ROUND((ca.bounced::DECIMAL / NULLIF(ca.sent, 0)) * 100, 2) as bounce_rate,
+    ROUND((ca.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
+    ROUND((ca.opened_tracked::DECIMAL .md)) * 100, 2) as open_rate,
+    ROUND((ca.clicked_tracked::DECIMAL .md)) * 100, 2) as click_rate,
+    ROUND((ca.replied::DECIMAL .md)) * 100, 2) as reply_rate,
+    ROUND((ca.bounced::DECIMAL .md)) * 100, 2) as bounce_rate,
     ca.updated_at
   FROM campaign_analytics ca
   WHERE ca.company_id = $1
     AND ca.updated >= NOW() - INTERVAL '30 days'
 ),
-ranked_campaigns AS (/)
+ranked_campaigns AS (.md)
   SELECT 
     *,
     ROW_NUMBER() OVER (ORDER BY sent DESC) as rank_by_volume,
@@ -794,13 +794,13 @@ SELECT
   ba.leads_used,
   ba.warmups_active,
   -- Calculate usage efficiency metrics
-  ROUND(ba.emails_sent::DECIMAL / NULLIF(ba.mailboxes_used, 0), 2) as emails_per_mailbox,
-  ROUND(ba.emails_sent::DECIMAL / NULLIF(ba.campaigns_used, 0), 2) as emails_per_campaign,
+  ROUND(ba.emails_sent::DECIMAL .md), 2) as emails_per_mailbox,
+  ROUND(ba.emails_sent::DECIMAL .md), 2) as emails_per_campaign,
   -- Compare to previous month
   LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start) as prev_month_emails,
-  ROUND(/)
+  ROUND(.md)
     (ba.emails_sent - LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start))::DECIMAL 
-    / NULLIF(LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start), 0) * 100, 
+    .md) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start), 0) * 100, 
     2
   ) as month_over_month_growth
 FROM billing_analytics ba
@@ -816,7 +816,7 @@ ORDER BY ba.tenant_id, ba.period_start;
 
 ```sql
 -- Warmup progression analysis
-WITH warmup_progress AS (/)
+WITH warmup_progress AS (.md)
   SELECT 
     wa.mailbox_id,
     wa.company_id,
@@ -824,9 +824,9 @@ WITH warmup_progress AS (/)
     wa.progress_percentage,
     wa.sent,
     wa.delivered,
-    ROUND((wa.delivered::DECIMAL / NULLIF(wa.sent, 0)) * 100, 2) as delivery_rate,
+    ROUND((wa.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
     -- Calculate progression velocity
-    wa.progress_percentage - LAG(wa.progress_percentage) OVER (/)
+    wa.progress_percentage - LAG(wa.progress_percentage) OVER (.md)
       PARTITION BY wa.mailbox_id ORDER BY wa.updated_at
     ) as daily_progress_increase,
     wa.updated_at
@@ -916,11 +916,11 @@ SELECT
   ca.unsubscribed,
   ca.spam_complaints,
   -- Calculated rates
-  ROUND((ca.delivered::DECIMAL / NULLIF(ca.sent, 0)) * 100, 2) as delivery_rate,
-  ROUND((ca.opened_tracked::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as open_rate,
-  ROUND((ca.clicked_tracked::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as click_rate,
-  ROUND((ca.replied::DECIMAL / NULLIF(ca.delivered, 0)) * 100, 2) as reply_rate,
-  ROUND((ca.bounced::DECIMAL / NULLIF(ca.sent, 0)) * 100, 2) as bounce_rate,
+  ROUND((ca.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
+  ROUND((ca.opened_tracked::DECIMAL .md)) * 100, 2) as open_rate,
+  ROUND((ca.clicked_tracked::DECIMAL .md)) * 100, 2) as click_rate,
+  ROUND((ca.replied::DECIMAL .md)) * 100, 2) as reply_rate,
+  ROUND((ca.bounced::DECIMAL .md)) * 100, 2) as bounce_rate,
   -- Time-based metrics
   EXTRACT(EPOCH FROM (c.completed - c.started_at))/3600 as campaign_duration_hours,
   ca.updated_at
@@ -949,7 +949,7 @@ $$ LANGUAGE plpgsql;
 
 ```sql
 -- Partition billing_analytics by month
-CREATE TABLE billing_analytics_partitioned (/)
+CREATE TABLE billing_analytics_partitioned (.md)
     LIKE billing_analytics INCLUDING ALL
 ) PARTITION BY RANGE (period_start);
 
@@ -997,16 +997,16 @@ BEGIN
     ANALYZE billing_analytics;
     
     -- Log maintenance
-    INSERT INTO admin_system_events (/)
+    INSERT INTO admin_system_events (.md)
         event_type,
         severity,
         message,
         details
-    ) VALUES (/)
+    ) VALUES (.md)
         'analytics_maintenance',
         'low',
         'Analytics tables maintenance completed',
-        jsonb_build_object(/)
+        jsonb_build_object(.md)
             'cutoff_date', cutoff_date,
             'maintenance_time', NOW()
         )
@@ -1027,7 +1027,7 @@ $$ LANGUAGE plpgsql;
 
 ```sql
 -- OLAP analytics connection pool configuration
-CREATE TABLE analytics_connection_pools (/)
+CREATE TABLE analytics_connection_pools (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     pool_type VARCHAR(30) CHECK (pool_type IN ('dashboard_queries', 'report_generation', 'data_exports', 'ad_hoc_analytics')),
     min_connections INTEGER DEFAULT 2,
@@ -1048,7 +1048,7 @@ CREATE TABLE analytics_connection_pools (/)
 );
 
 -- Analytics pool sizing based on query complexity
-INSERT INTO analytics_connection_pools (/)
+INSERT INTO analytics_connection_pools (.md)
     pool_type, min_connections, max_connections,
     connection_timeout_seconds, query_timeout_seconds,
     enable_parallel_queries, max_parallel_workers
@@ -1081,20 +1081,20 @@ CREATE POLICY billing_analytics_tenant_isolation ON billing_analytics
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::text);
 
 CREATE POLICY campaign_analytics_tenant_isolation ON campaign_analytics
-    FOR ALL USING (company_id IN (/)
+    FOR ALL USING (company_id IN (.md)
         SELECT id FROM companies
         WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
     ));
 
 CREATE POLICY mailbox_analytics_tenant_isolation ON mailbox_analytics
-    FOR ALL USING (company_id IN (/)
+    FOR ALL USING (company_id IN (.md)
         SELECT id FROM companies
         WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
     ));
 
 -- Admin access control - only admin users can access audit logs
 CREATE POLICY admin_audit_logs_access ON admin_audit_logs
-    FOR ALL USING (/)
+    FOR ALL USING (.md)
         current_setting('app.user_role') = 'admin'
         OR tenant_id = current_setting('app.current_tenant_id')::text
     );
@@ -1108,7 +1108,7 @@ CREATE POLICY admin_audit_logs_access ON admin_audit_logs
 
 ```sql
 -- Analytics access audit log
-CREATE TABLE analytics_access_audit (/)
+CREATE TABLE analytics_access_audit (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     user_id TEXT,
     tenant_id TEXT,
@@ -1127,7 +1127,7 @@ CREATE TABLE analytics_access_audit (/)
 );
 
 -- Analytics rate limiting per tenant
-CREATE TABLE analytics_rate_limits (/)
+CREATE TABLE analytics_rate_limits (.md)
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     tenant_id TEXT NOT NULL,
     query_type VARCHAR(50),
@@ -1150,7 +1150,7 @@ CREATE TABLE analytics_rate_limits (/)
 
 ```sql
 -- Query access validation for analytics
-CREATE OR REPLACE FUNCTION validate_analytics_access(/)
+CREATE OR REPLACE FUNCTION validate_analytics_access(.md)
     p_tenant_id TEXT,
     p_user_id TEXT,
     p_query_type VARCHAR(50),
@@ -1177,10 +1177,10 @@ BEGIN
     IF FOUND THEN
         IF rate_limit_record.current_count >= rate_limit_record.max_queries THEN
             -- Log rate limit violation
-            INSERT INTO analytics_access_audit (/)
+            INSERT INTO analytics_access_audit (.md)
                 user_id, tenant_id, query_type, table_accessed,
                 success, failure_reason, data_sensitivity
-            ) VALUES (/)
+            ) VALUES (.md)
                 p_user_id, p_tenant_id, p_query_type, p_table_accessed,
                 false, 'rate_limit_exceeded', 'internal'
             );
@@ -1194,10 +1194,10 @@ BEGIN
     END IF;
 
     -- Log successful access
-    INSERT INTO analytics_access_audit (/)
+    INSERT INTO analytics_access_audit (.md)
         user_id, tenant_id, query_type, table_accessed,
         success, data_sensitivity
-    ) VALUES (/)
+    ) VALUES (.md)
         p_user_id, p_tenant_id, p_query_type, p_table_accessed,
         true, 'internal'
     );
@@ -1255,10 +1255,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](../overview.md) - Strategic foundation and market positioning
-- [Analytics Architecture](./analytics-architecture.md) - PostHog integration and business intelligence
-- [Queue System Implementation](./queue-system-implementation.md) - Job processing and reliability
-- [Campaign Management](../../campaigns/overview.md) - User experience and business operations
-- [Business Analytics](../../business/analytics/overview.md) - Revenue intelligence and optimization
+- [Architecture Overview](...md) - Strategic foundation and market positioning
+- [Analytics Architecture](..md) - PostHog integration and business intelligence
+- [Queue System Implementation](..md) - Job processing and reliability
+- [Campaign Management](../../campaigns.md) - User experience and business operations
+- [Business Analytics](../../business/analytics.md) - Revenue intelligence and optimization
 
 **Keywords**: OLAP, analytics, business intelligence, data warehousing, reporting, analytics schema, campaign analytics, billing analytics, administrative analytics, materialized views, performance optimization, enterprise security

@@ -16,7 +16,7 @@ This document provides development and operations teams with a clear understandi
 **Target Audience:** Engineering Teams, DevOps, Operations, Technical Leads, Product Engineers  
 **Purpose:** Technical planning, development timeline, operational preparedness, technical skill development
 
-**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap) for complete feature definitions.
+**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](...md) for complete feature definitions.
 
 ---
 
@@ -232,7 +232,7 @@ This document provides development and operations teams with a clear understandi
 
 **Team Composition**:
 - Backend Engineer (Infrastructure automation)
-- Frontend Engineer (React/TypeScript)
+- Frontend Engineer (React.md)
 - Database Engineer (PostgreSQL, RLS)
 - DevOps Engineer (Docker, monitoring)
 
@@ -246,7 +246,7 @@ This document provides development and operations teams with a clear understandi
 
 **Team Expansion Needed**:
 - +1 Full-stack Engineer (Campaign management)
-- +1 Integration Specialist (CRM/APIs)
+- +1 Integration Specialist (CRM.md)
 
 ### 🎯 Q2-Q3 2026 Skill Requirements
 **Advanced Skills Development**:
@@ -295,7 +295,7 @@ This document provides development and operations teams with a clear understandi
 
 ### 🏗️ Current Infrastructure (Q4 2025)
 **Production Environment**:
-- **Hosting**: VPS-based deployment (DigitalOcean/AWS)
+- **Hosting**: VPS-based deployment (DigitalOcean.md)
 - **Containerization**: Docker containers with orchestration
 - **Database**: PostgreSQL with Row Level Security
 - **Monitoring**: Basic application monitoring and logging
@@ -440,25 +440,25 @@ This document provides development and operations teams with a clear understandi
 ## Cross-Reference Integration
 
 ### Technical Architecture
-- **Feature Taxonomy**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap)
-- **Implementation Roadmap**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
-- **Technical Infrastructure**: [`Technical Infrastructure`](../implementation/technical-infrastructure.md)
+- **Feature Taxonomy**: [`Feature Taxonomy and Roadmap Framework`](...md)
+- **Implementation Roadmap**: [`Implementation Roadmap`](../implementation.md)
+- **Technical Infrastructure**: [`Technical Infrastructure`](../implementation.md)
 
 ### Operations & DevOps
-- **Success Metrics**: [`Success Metrics`](../implementation/success-metrics.md)
-- **ESP Technical Analysis**: [`ESP Technical Analysis`](../implementation/esp-technical-analysis.md)
-- **Infrastructure Overview**: [`Infrastructure Overview`](../implementation/infrastructure-overview.md)
+- **Success Metrics**: [`Success Metrics`](../implementation.md)
+- **ESP Technical Analysis**: [`ESP Technical Analysis`](../implementation.md)
+- **Infrastructure Overview**: [`Infrastructure Overview`](../implementation.md)
 
 ### Developer Resources
-- **Developer Framework**: [`Developer Analytics Framework`](../developer/analytics/framework)
-- **Process Automation**: [`Developer Process Automation`](../developer/process-automation/developer-standardization-framework.md)
-- **Cross-Domain Integration**: [`Developer Cross-Domain Integration`](../developer/cross-domain-integration/developer-marketing-integration-map.md)
+- **Developer Framework**: [`Developer Analytics Framework`](../developer/analytics.md)
+- **Process Automation**: [`Developer Process Automation`](../developer/process-automation.md)
+- **Cross-Domain Integration**: [`Developer Cross-Domain Integration`](../developer/cross-domain-integration.md)
 
 ---
 
 **Document Classification:** Level 2 - Technical Implementation View  
 **Review Cycle:** Monthly technical assessment and quarterly skill development review  
 **Stakeholder Access:** Engineering Teams, DevOps, Operations, Technical Leads  
-**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap)
+**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](...md)
 
 This developer and operations roadmap provides technical teams with clear implementation timelines, skill development paths, and operational responsibilities for strategic technical planning and team development.

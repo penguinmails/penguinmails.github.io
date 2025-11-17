@@ -195,7 +195,7 @@ To support strong, defensible market positioning, marketing leadership will main
   - A marketing and strategy responsibility.
   - Informed by internal telemetry where available.
   - Governed by the competitive intelligence framework documented in:
-    - [`competitive-analysis-detailed`](docs/business/competitive-intelligence/competitive-analysis-detailed:1)
+    - [`competitive-analysis-detailed`](docs/business/competitive-intelligence.md)
 
 ### Boundaries
 

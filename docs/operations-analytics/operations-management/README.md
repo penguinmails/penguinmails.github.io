@@ -73,10 +73,10 @@ Operations management encompasses the day-to-day activities required to keep the
 - [Environment & Release Management](environment-release-management))
 
 ## Related Documentation
-- [Operations Analytics Overview](../overview)) - Main operations analytics framework
-- [Analytics Performance](../analytics-performance/) - Performance monitoring and analytics
-- [Team Performance](../team-performance/) - Team performance and sprint management
-- [Compliance & Security](../../compliance-security/) - Security and compliance frameworks
+- [Operations Analytics Overview](...md)) - Main operations analytics framework
+- [Analytics Performance](../analytics-performance.md) - Performance monitoring and analytics
+- [Team Performance](../team-performance.md) - Team performance and sprint management
+- [Compliance & Security](../../compliance-security.md) - Security and compliance frameworks
 
 ---
 

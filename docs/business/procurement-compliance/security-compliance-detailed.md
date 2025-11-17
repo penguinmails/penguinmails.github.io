@@ -66,7 +66,7 @@ last_modified_date: "2025-12-19"
 
 ### Security Monitoring
 - **Real-time Metrics**: Authentication failures, suspicious patterns, data access, API violations, system usage, network anomalies
-- **Alert Thresholds**: Failed logins >5/15min, access >10x normal, data exports (immediate), performance >90%
+- **Alert Thresholds**: Failed logins >5.md), performance >90%
 - **SIEM Integration**: Application/system/network/database logs, correlation rules for failed logins, off-hours access, unusual transfers
 
 ### Incident Response Procedures

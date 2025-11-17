@@ -22,7 +22,7 @@ Proven financial templates and frameworks for ROI calculation, investment analys
 
 **ROI Calculation Formula**:
 ```
-ROI = ((Total Benefits - Total Costs) / Total Costs) × 100
+ROI = ((Total Benefits - Total Costs) .md) × 100
 
 Where:
 - Total Benefits = Revenue Impact + Time Savings Value + Risk Mitigation Value

@@ -255,8 +255,8 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 **Related Documentation:**
 - [Customer Journey Management Details](detailed)
-- [Customer Success Framework](../strategy/framework)
-- [Customer Health Scoring](../analytics/health-scoring-framework)
+- [Customer Success Framework](../strategy.md)
+- [Customer Health Scoring](../analytics.md)
 - [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---

@@ -190,7 +190,7 @@ last_modified_date: "2025-11-10"
 **Basic workflow for daily use:**
 1. **New Response Alert**: Receive notification of new response
 2. **Quick Scan**: Review the response content and context
-3. **Categorize**: Apply basic tags (Interested/Not Interested)
+3. **Categorize**: Apply basic tags (Interested.md)
 4. **Respond**: Reply directly or schedule follow-up
 
 ### **⭐⭐ Intermediate Path: Professional Process**
@@ -413,13 +413,13 @@ last_modified_date: "2025-11-10"
 Ready to manage all your cold email responses efficiently?
 
 ### **Related Features**
-1. **[Warm-ups](../warm-ups/overview/)** - Build sender reputation before sending cold emails
-2. **[Inbox Rotation](../inbox-rotation/overview/)** - Rotate between multiple email addresses
-3. **[Analytics](../analytics/overview/)** - Track response rates and performance metrics
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview/)** - Set up additional email accounts
+1. **[Warm-ups](../warm-ups/overview.md)** - Build sender reputation before sending cold emails
+2. **[Inbox Rotation](../inbox-rotation/overview.md)** - Rotate between multiple email addresses
+3. **[Analytics](../analytics/overview.md)** - Track response rates and performance metrics
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Set up additional email accounts
 
 ### **Implementation Resources**
-5. **[Implementation Guide](../getting-started/)** - Complete setup process
+5. **[Implementation Guide](../getting-started.md)** - Complete setup process
 
 ### **Prerequisites**
 - **Multiple Email Accounts**: Have cold email accounts connected to the platform
@@ -434,8 +434,8 @@ Ready to manage all your cold email responses efficiently?
 - **Manual Organization**: Manual organization and follow-up
 
 ### **Deep Dive Options**
-- **[Advanced Usage](advanced-usage/)** - Advanced features and optimization techniques
-- **[Technical Implementation](technical-implementation/)** - Detailed technical setup and configuration
+- **[Advanced Usage](advanced-usage.md)** - Advanced features and optimization techniques
+- **[Technical Implementation](technical-implementation.md)** - Detailed technical setup and configuration
 
 ### **Success Metrics**
 - **Week 1**: All accounts connected and responses visible

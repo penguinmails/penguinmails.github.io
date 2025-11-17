@@ -15,11 +15,11 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 ## Progressive Disclosure Flow
 
 ### 📊 Performance Documents
-- [**Performance Dashboard**](./performance-dashboard) - Executive performance overview (≤200 lines)
-- [**Performance Overview**](./performance-overview) - Strategic performance summary (≤200 lines)
-- [**Performance Optimization**](./performance-optimization) - Performance improvement strategies (≤300 lines)
-- [**Performance Benchmarks**](./performance-benchmarks) - Industry benchmarking analysis (≤300 lines)
-- [**Performance Provider Analysis**](./performance-provider-analysis) - ESP performance strategy (≤300 lines)
+- [**Performance Dashboard**](..md) - Executive performance overview (≤200 lines)
+- [**Performance Overview**](..md) - Strategic performance summary (≤200 lines)
+- [**Performance Optimization**](..md) - Performance improvement strategies (≤300 lines)
+- [**Performance Benchmarks**](..md) - Industry benchmarking analysis (≤300 lines)
+- [**Performance Provider Analysis**](..md) - ESP performance strategy (≤300 lines)
 
 ### 🎯 Performance Analysis Path
 1. **Executive View**: Start with `performance-dashboard` for KPI overview
@@ -43,10 +43,10 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core/) - Performance justification for business case
-- [Implementation Guide](../implementation/) - Performance-focused implementation
-- [Financial Analysis](../financial-analysis/) - Cost-performance relationships
-- [Procurement & Compliance](../procurement-compliance/) - Performance compliance requirements
+- [Core Business Documents](../core.md) - Performance justification for business case
+- [Implementation Guide](../implementation.md) - Performance-focused implementation
+- [Financial Analysis](../financial-analysis.md) - Cost-performance relationships
+- [Procurement & Compliance](../procurement-compliance.md) - Performance compliance requirements
 
 ---
 

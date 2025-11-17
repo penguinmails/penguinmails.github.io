@@ -19,7 +19,7 @@ This document provides customer journey optimization with clear separation betwe
 **MVP Focus:** Basic mapping, 15% improvement, manual analysis
 **Post-MVP Focus:** Real-time personalization, 30% improvement, ML analytics
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) customer journey capabilities. Level 3+ advanced personalization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) customer journey capabilities. Level 3+ advanced personalization features are addressed in the roadmap section below.
 
 ---
 

@@ -108,10 +108,10 @@ graph TD
 ### Strategic Cost-Benefit Analysis
 
 #### Strategic Implementation Costs
-- **Strategic Technology Stack**: $100-800/month (process-driven monitoring)
+- **Strategic Technology Stack**: $100-800.md)
 - **Strategic Legal Review**: $3,000-15,000 one-time (strategic consultation)
 - **Strategic Training**: $1,000-5,000 annually (strategic awareness)
-- **Strategic Monitoring**: $50-300/month (directional oversight)
+- **Strategic Monitoring**: $50-300.md)
 
 #### Strategic Risk Mitigation Value
 - **Strategic GDPR Fine Avoidance**: €20M+ strategic maximum strategic exposure
@@ -139,7 +139,7 @@ gauge
 ```
 
 #### Strategic Key Performance Indicators
-- **Strategic Email Authentication Rate**: 95%+ (Strategic SPF/Strategic DKIM/Strategic DMARC strategic oversight)
+- **Strategic Email Authentication Rate**: 95%+ (Strategic SPF/Strategic DKIM.md)
 - **Strategic Consent Capture Rate**: 80%+ strategic opt-in strategic rate strategic oversight
 - **Strategic Opt-Out Processing Time**: <48 strategic hours strategic average strategic oversight
 - **Strategic Data Subject Strategic Request Strategic Response**: <96 strategic hours strategic average strategic oversight
@@ -234,8 +234,8 @@ Strategic Quarterly Compliance Strategic Assessment:
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic decisions:**
-- [🏢 Executive Summary](../core/executive-summary:1) - Complete strategic analysis and oversight framework
-- [💰 ROI Calculator](../financial-analysis/roi-calculator-detailed:1) - Strategic cost-benefit analysis with compliance strategic considerations
+- [🏢 Executive Summary](../core.md) - Complete strategic analysis and oversight framework
+- [💰 ROI Calculator](../financial-analysis.md) - Strategic cost-benefit analysis with compliance strategic considerations
 
 **For implementation details:**
 - [📋 Compliance Implementation](compliance-implementation:1) - Strategic technical implementation within backbone strategic constraints
@@ -244,7 +244,7 @@ Strategic Quarterly Compliance Strategic Assessment:
 
 **For business context:**
 - [⚖️ Compliance Costs](compliance-costs:1) - Strategic detailed strategic pricing strategic analysis with strategic ROI strategic considerations
-- [🔧 Technical Infrastructure](../technical-implementation/business-leaders-technical-framework:1) - Strategic security strategic implementation within backbone strategic constraints
+- [🔧 Technical Infrastructure](../technical-implementation.md) - Strategic security strategic implementation within backbone strategic constraints
 
 ---
 

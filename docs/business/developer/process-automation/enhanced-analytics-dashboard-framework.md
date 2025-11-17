@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 6 - Process Automation and Standardization  
 **Target Audience**: Analytics Engineers, Dashboard Specialists, Developer Analytics Teams  
 **Business Impact Priority**: High - Advanced developer analytics and predictive insights responsibility  
-**Framework Integration**: [Developer Analytics Framework](../analytics/framework) | [Developer Operations Framework](../operations/framework) | [Developer Strategy Framework](../strategy/framework) | [Executive Analytics Framework](docs/business/executive-analytics/framework) | [Enhanced Analytics Framework](docs/business/enhanced-analytics/framework)
+**Framework Integration**: [Developer Analytics Framework](../analytics.md) | [Developer Operations Framework](../operations.md) | [Developer Strategy Framework](../strategy.md) | [Executive Analytics Framework](docs/business/executive-analytics.md) | [Enhanced Analytics Framework](docs/business/enhanced-analytics.md)
 
 ## Executive Summary
 
@@ -44,7 +44,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent analysis systems activation and optimization
 - Analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Enhanced Analytics Framework](docs/business/enhanced-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Enhanced Analytics Framework](docs/business/enhanced-analytics.md)
 
 #### Analytics Point 1.1.2: Predictive Insights Systems
 **Analytics Requirement**: Developer Predictive Insights Standards  
@@ -56,7 +56,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent recommendation systems activated and validated
 - Insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](docs/business/executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](docs/business/executive-analytics.md)
 
 #### Analytics Point 1.1.3: Developer Engagement Analytics
 **Analytics Requirement**: Developer Engagement Analytics Standards  
@@ -68,7 +68,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Participation and success pattern systems activation and optimization
 - Engagement analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Operations Framework](../operations/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 ### 1.2 Intelligence Excellence
 
@@ -82,7 +82,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Collaboration potential systems activation and optimization
 - Opportunity tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Intelligence Point 1.2.2: Developer Platform Scoring
 **Intelligence Requirement**: Developer Platform Scoring Standards  
@@ -94,7 +94,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent ranking systems activated and validated
 - Scoring validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Enhanced Analytics Framework](docs/business/enhanced-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Enhanced Analytics Framework](docs/business/enhanced-analytics.md)
 
 #### Intelligence Point 1.2.3: Success Probability Analytics
 **Intelligence Requirement**: Developer Success Probability Standards  
@@ -106,7 +106,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent forecasting systems activation and optimization
 - Probability analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](docs/business/executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](docs/business/executive-analytics.md)
 
 ---
 
@@ -124,7 +124,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Optimization intelligence systems activation and optimization
 - Performance analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Operations Framework](../operations/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 #### Performance Point 2.1.2: Optimization Intelligence Systems
 **Performance Requirement**: Developer Optimization Intelligence Standards  
@@ -136,7 +136,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Predictive capability systems activated and validated
 - Intelligence validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Performance Point 2.1.3: Real-time Developer Insights
 **Performance Requirement**: Developer Real-time Insights Standards  
@@ -148,7 +148,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent response capability systems activation and optimization
 - Insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Enhanced Analytics Framework](docs/business/enhanced-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Enhanced Analytics Framework](docs/business/enhanced-analytics.md)
 
 ### 2.2 Comprehensive Analytics Excellence
 
@@ -162,7 +162,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Intelligent optimization systems activation and optimization
 - Tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](docs/business/executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](docs/business/executive-analytics.md)
 
 #### Excellence Point 2.2.2: Optimization Guidance Systems
 **Excellence Requirement**: Developer Optimization Guidance Standards  
@@ -174,7 +174,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Advancement tracking systems activated and validated
 - Guidance validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Excellence Point 2.2.3: Advanced Predictive Modeling
 **Excellence Requirement**: Developer Advanced Predictive Standards  
@@ -186,7 +186,7 @@ The framework provides enterprise-grade developer analytics with 97% enhancement
 - Enhancement capability systems activation and optimization
 - Modeling validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Enhanced Analytics Framework](docs/business/enhanced-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Enhanced Analytics Framework](docs/business/enhanced-analytics.md)
 
 ---
 

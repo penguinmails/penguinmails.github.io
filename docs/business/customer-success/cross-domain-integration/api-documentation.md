@@ -14,7 +14,7 @@ Centralized API documentation for all Customer Success cross-domain integrations
 
 **Base URL:** `https://api.penguinmails.com/v1/cs-integrations`  
 **Auth:** OAuth2 with domain-scoped tokens (cs-marketing, cs-sales, etc.)  
-**Rate Limits:** Domain-specific (10-50 req/min)  
+**Rate Limits:** Domain-specific (10-50 req.md)  
 **Error Format:** Standard Problem Details (RFC 7807)
 
 ---
@@ -232,7 +232,7 @@ X-Audit-Trail: audit-log-url
 Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 
 **Related Documentation:**
-- [CS Cross-Domain Overview](../overview)
-- [Domain Maps](../*-integration-map)
+- [CS Cross-Domain Overview](...md)
+- [Domain Maps](...md)
 
 **Document Classification:** Level 3 - CS API Reference Documentation

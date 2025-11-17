@@ -159,7 +159,7 @@ last_modified_date: "2025-11-10"
 
 #### Volume Optimization Strategies
 
-##### Small Scale (1K-10K emails/month)
+##### Small Scale (1K-10K emails.md)
 **Optimization Focus**:
 - **High personalization** and manual customization
 - **Extended sequences** (7-12 touchpoints)
@@ -168,7 +168,7 @@ last_modified_date: "2025-11-10"
 
 **Expected ROI**: Highest per-email value, longest sales cycles
 
-##### Medium Scale (10K-50K emails/month)
+##### Medium Scale (10K-50K emails.md)
 **Optimization Focus**:
 - **Segmented personalization** by industry/role
 - **Moderate sequences** (5-8 touchpoints)
@@ -177,7 +177,7 @@ last_modified_date: "2025-11-10"
 
 **Expected ROI**: Balanced approach, moderate sales cycles
 
-##### Large Scale (50K+ emails/month)
+##### Large Scale (50K+ emails.md)
 **Optimization Focus**:
 - **Template-based personalization** (company name, role)
 - **Short sequences** (3-5 touchpoints)
@@ -426,9 +426,9 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@exa
 **IP Warming Protocol**:
 ```
 Week 1: 10-50 emails/day per IP
-Week 2: 50-200 emails/day per IP (100% increase)
-Week 3: 200-500 emails/day per IP (150% increase)
-Week 4: 500-1000 emails/day per IP (100% increase)
+Week 2: 50-200 emails.md)
+Week 3: 200-500 emails.md)
+Week 4: 500-1000 emails.md)
 Week 5+: Target volume per IP
 ```
 

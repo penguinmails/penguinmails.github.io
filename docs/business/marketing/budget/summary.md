@@ -19,7 +19,7 @@ This document provides budget optimization with clear separation between MVP sco
 **MVP Focus:** Manual tracking, 10% efficiency, basic reporting
 **Post-MVP Focus:** Real-time optimization, 25% efficiency, ML forecasting
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) budget optimization capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) budget optimization capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 

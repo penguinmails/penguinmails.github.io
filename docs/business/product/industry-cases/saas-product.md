@@ -67,7 +67,7 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 - **Growth Mechanics**: Built-in viral and growth mechanics for user acquisition
 
 **Key Metrics**:
-- Daily/Monthly Active Users (target: 40%+ DAU/MAU ratio)
+- Daily/Monthly Active Users (target: 40%+ DAU.md)
 - User retention rate (target: 80%+ 30-day user retention)
 - Conversion rate (target: 5-8% free-to-paid conversion rate)
 - Customer acquisition cost (target: <6 months payback period)
@@ -228,7 +228,7 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 - **Viral Coefficient**: Viral growth and referral success metrics
 
 ### User Engagement Metrics
-- **Daily/Monthly Active Users (DAU/MAU)**: User engagement and activity levels
+- **Daily/Monthly Active Users (DAU.md)**: User engagement and activity levels
 - **Feature Adoption**: Feature adoption rates and usage depth
 - **Session Metrics**: Session frequency, duration, and engagement quality
 - **User Satisfaction**: User satisfaction scores and feedback quality
@@ -302,10 +302,10 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 ---
 
 **Related Documentation:**
-- [Product Strategy Framework](../strategy/framework)
-- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing)
-- [SaaS Customer Success Framework](../../customer-success/industry-cases/saas-cs)
-- [Product Cross-Domain Integration](../cross-domain-integration/customer-success-integration-map)
+- [Product Strategy Framework](../strategy.md)
+- [SaaS Marketing Framework](../../marketing/industry-cases.md)
+- [SaaS Customer Success Framework](../../customer-success/industry-cases.md)
+- [Product Cross-Domain Integration](../cross-domain-integration.md)
 
 ---
 *Level 3: Industry-specific product development implementation for SaaS organizations*

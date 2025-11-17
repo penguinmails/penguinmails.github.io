@@ -256,8 +256,8 @@ Customer Success Operations provides the systematic approach to managing custome
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework)
-- [Customer Health Scoring](../analytics/health-scoring-framework)
+- [Customer Success Framework](../strategy.md)
+- [Customer Health Scoring](../analytics.md)
 - [Customer Retention Strategies](../retention/summary
 - [Cross-Domain Integration](../cross-domain-integration/overview
 

@@ -8,7 +8,7 @@ This document defines the basic customer journey framework for manual experience
 **Target Audience:** Customer Experience Directors, Marketing Managers, Journey Analysis Teams
 **Journey Focus:** 15% conversion improvement and basic customer experience tracking
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) journey capabilities. Level 3+ advanced personalization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) journey capabilities. Level 3+ advanced personalization features are addressed in the roadmap section below.
 
 ---
 

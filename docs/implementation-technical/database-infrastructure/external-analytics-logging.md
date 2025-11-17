@@ -24,7 +24,7 @@ The goal is to:
        - Customer-facing analytics dashboards.
        - Regulatory and enterprise audits.
 
-2. External Analytics / Product Analytics (e.g. PostHog)
+2. External Analytics .md)
    - Primary sink for:
      - High-volume clickstream events.
      - Feature usage and funnels.
@@ -35,7 +35,7 @@ The goal is to:
      - Flexible schema.
      - Tunable retention and sampling.
    - Feeds:
-     - Aggregated, stable metrics back into OLAP when/if needed (never raw event firehose).
+     - Aggregated, stable metrics back into OLAP when.md).
 
 3. Observability / Logging / Security Tooling
    - Includes APM, metrics, logs, SIEM, etc.
@@ -112,7 +112,7 @@ This section maps specific existing concepts out of the OLAP schema into externa
     - Tenant-wide configuration changes.
     - Billing and subscription modifications.
     - Data export requests/approvals affecting PII or contractual scope.
-    - Security-sensitive operations (impersonation, account lockdown, deletion/anonymization).
+    - Security-sensitive operations (impersonation, account lockdown, deletion.md).
 - External:
   - Log:
     - Low-risk admin actions, navigation, and routine reads.
@@ -150,7 +150,7 @@ These are infra/operational concerns.
 ### 3.4 `analytics_access_audit` and Export Controls
 
 - Detailed per-query/per-dashboard access logs:
-  - External system (SIEM/logging, potentially PostHog or a security pipeline).
+  - External system (SIEM.md).
 - OLAP:
   - Maintain a narrow, long-retention record of:
     - Sensitive-data access events.
@@ -194,7 +194,7 @@ When designing new tracking:
     - SLAs or contractual proof?
     - Regulatory or enterprise audits?
     - Promised customer-facing analytics?
-  - If yes → model an aggregate/state table in OLAP (or extend existing canonical OLAP tables) and/or store narrowly scoped records in `admin_audit_log` where explicitly compliance-relevant.
+  - If yes → model an aggregate.md) and/or store narrowly scoped records in `admin_audit_log` where explicitly compliance-relevant.
 - Else:
   - If it is behavioral, experimental, UX, or exploratory → send to product analytics (e.g. PostHog).
   - If it is infra/ops/telemetry → send to observability/logging.
@@ -208,11 +208,11 @@ This document is the canonical reference for avoiding concern-mixing in the OLAP
 ## 6. Recommended Integration Patterns (from legacy plans, normalized)
 
 This section consolidates the durable patterns from legacy docs
-(such as [`../technical/architecture/detailed-technical/analytics-architecture`](../technical/architecture/detailed-technical/analytics-architecture:1)
-and [`../technical/integration/overview`](../technical/integration/overview:1))
+(such as [`../technical/architecture/detailed-technical/analytics-architecture`](../technical/architecture/detailed-technical.md)
+and [`../technical/integration/overview`](../technical.md)
 into a concise, canonical form.
 
-### 6.1 PostHog / Product Analytics Usage (Normalized)
+### 6.1 PostHog .md)
 
 Use a thin abstraction to send high-volume behavioral and UX events to PostHog (or equivalent),
 keeping OLAP free of clickstream:
@@ -225,7 +225,7 @@ export const posthog = new PostHog(process.env.POSTHOG_API_KEY!, {
   host: process.env.POSTHOG_HOST || 'https://app.posthog.com',
 });
 
-// Example: email tracking events (external telemetry, not OLAP)
+/.md)
 export async function trackEmailOpened(props: {
   userId: string;
   tenantId: string;
@@ -249,7 +249,7 @@ export async function trackEmailOpened(props: {
 Key rules:
 - Do not mirror these raw events into OLAP.
 - Only derive aggregates into canonical OLAP tables if they are:
-  - Contractual (billing/SLAs),
+  - Contractual (billing.md),
   - Compliance-relevant,
   - Explicitly needed for durable analytics.
 

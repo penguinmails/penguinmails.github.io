@@ -8,7 +8,7 @@ This document defines the basic marketing performance framework for manual campa
 **Target Audience:** Performance Marketing Directors, Campaign Managers, Marketing Analysts
 **Performance Focus:** 15% campaign performance improvement and basic optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) performance capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) performance capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 

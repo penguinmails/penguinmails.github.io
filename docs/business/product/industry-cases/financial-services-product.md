@@ -311,10 +311,10 @@ Financial services organizations operate in a highly regulated environment requi
 ---
 
 **Related Documentation:**
-- [Product Strategy Framework](../strategy/framework)
-- [Financial Services Marketing Framework](../../marketing/industry-cases/financial-services-marketing)
-- [Financial Services Customer Success Framework](../../customer-success/industry-cases/financial-services-cs)
-- [Product Cross-Domain Integration](../cross-domain-integration/finance-integration-map)
+- [Product Strategy Framework](../strategy.md)
+- [Financial Services Marketing Framework](../../marketing/industry-cases.md)
+- [Financial Services Customer Success Framework](../../customer-success/industry-cases.md)
+- [Product Cross-Domain Integration](../cross-domain-integration.md)
 
 ---
 *Level 3: Industry-specific product development implementation for financial services organizations*

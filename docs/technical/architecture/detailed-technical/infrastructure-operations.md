@@ -653,7 +653,7 @@ const db = new NileDB({
 **Technical Authority**: Our hybrid architecture combines **Redis speed** with **PostgreSQL reliability**, providing **optimal performance** and **data safety** for **enterprise-scale operations**.
 
 ```javascript
-// Redis Queue Setup (Fast Processing Layer)
+/.md)
 const queue = new Queue('emailQueue', {
   redis: {
     host: 'redis.penguinmails.com',
@@ -671,7 +671,7 @@ const queue = new Queue('emailQueue', {
   }
 });
 
-// PostgreSQL Job Management (Durable State)
+/.md)
 const jobManager = new JobManager({
   database: {
     host: 'postgres.penguinmails.com',
@@ -1043,12 +1043,12 @@ This implementation represents a **comprehensive infrastructure advancement** th
 
 ## Related Documentation
 
-- [Architecture Overview](../overview) - Strategic foundation and market positioning
-- [Queue System Implementation](./queue-system-implementation) - Job processing and reliability
-- [Email System Implementation](./email-system-implementation) - Email processing and queue integration
-- [Analytics Architecture](./analytics-architecture) - PostHog integration and business intelligence
-- [OLAP Analytics Schema](./olap-analytics-schema) - Business intelligence and data warehousing
-- [Business Operations](../../business/operations/overview) - Operational procedures and quality assurance
-- [Security Documentation](../../compliance-security/overview) - Enterprise security and compliance
+- [Architecture Overview](...md) - Strategic foundation and market positioning
+- [Queue System Implementation](..md) - Job processing and reliability
+- [Email System Implementation](..md) - Email processing and queue integration
+- [Analytics Architecture](..md) - PostHog integration and business intelligence
+- [OLAP Analytics Schema](..md) - Business intelligence and data warehousing
+- [Business Operations](../../business/operations.md) - Operational procedures and quality assurance
+- [Security Documentation](../../compliance-security.md) - Enterprise security and compliance
 
 **Keywords**: infrastructure, operations, hostwinds, vps, smtp, mailu, nileDB, redis, queue system, deployment, monitoring, troubleshooting, maintenance, enterprise infrastructure, operational excellence

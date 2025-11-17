@@ -46,10 +46,10 @@ class SubjectLineOptimizer {
     
     for (let i = 0; i < variants.length - 1; i++) {
       for (let j = i + 1; j < variants.length; j++) {
-        const result = await this.runABTest(/)
+        const result = await this.runABTest(.md)
           variants[i], 
           variants[j], 
-          Math.floor(audienceSize / (variants.length - 1))
+          Math.floor(audienceSize .md)
         );
         testResults.push(result);
       }
@@ -60,7 +60,7 @@ class SubjectLineOptimizer {
 
   private async runABTest(variantA: string, variantB: string, sampleSize: number): Promise<ABTestResult> {
     // Calculate required sample size for statistical significance
-    const requiredSample = this.calculateSampleSize(/)
+    const requiredSample = this.calculateSampleSize(.md)
       this.baselineRate, 
       this.minDetectableEffect, 
       this.confidenceLevel
@@ -68,7 +68,7 @@ class SubjectLineOptimizer {
     
     const actualSample = Math.min(sampleSize, requiredSample);
     
-    // Simulate test execution (in real implementation, this would send actual emails)
+    /.md)
     const results = await this.executeTest(variantA, variantB, actualSample);
     
     return this.analyzeResults(results);
@@ -82,7 +82,7 @@ class SubjectLineOptimizer {
     const pooledP = baselineRate;
     const effectSize = minEffect;
     
-    const n = ((zAlpha + zBeta) ** 2 * 2 * pooledP * (1 - pooledP)) / (effectSize ** 2);
+    const n = ((zAlpha + zBeta) ** 2 * 2 * pooledP * (1 - pooledP)) .md);
     return Math.ceil(n);
   }
 
@@ -126,12 +126,12 @@ class SubjectLineOptimizer {
     // Calculate improvement
     const openRateA = variantA.metrics.openRate;
     const openRateB = variantB.metrics.openRate;
-    const improvement = ((openRateA - openRateB) / openRateB) * 100;
+    const improvement = ((openRateA - openRateB) .md) * 100;
     
-    // Determine winner (in real implementation, this would be more sophisticated)
+    /.md)
     const winner = openRateA > openRateB ? variantA.name : variantB.name;
     
-    // Calculate confidence (simplified)
+    /.md)
     const confidence = 0.95; // Would be calculated based on sample size and variance
     
     const recommendations: string[] = [];
@@ -211,7 +211,7 @@ class EmailPersonalizationEngine {
     const replacements: { [key: string]: string } = {
       '[COMPANY]': data.companyName,
       '[COMPANY\'S]': `${data.companyName}'s`,
-      '[COMPANY-NAME]': data.companyName.replace(/ /g, '-')
+      '[COMPANY-NAME]': data.companyName.replace(/ .md)
     };
     
     let result = email;
@@ -233,7 +233,7 @@ class EmailPersonalizationEngine {
     };
     
     const content = industryContent[data.industry] || 'business operations';
-    return email.replace(/\[INDUSTRY-CONTENT\]/g, content);
+    return email.replace(/\[INDUSTRY-CONTENT\].md);
   }
 
   private insertRoleSpecificContent(email: string, data: PersonalizationData): string {
@@ -247,7 +247,7 @@ class EmailPersonalizationEngine {
     };
     
     const content = roleContent[data.role] || 'business improvement';
-    return email.replace(/\[ROLE-VALUE\]/g, content);
+    return email.replace(/\[ROLE-VALUE\].md);
   }
 
   private insertPainPointContent(email: string, data: PersonalizationData): string {
@@ -261,25 +261,25 @@ class EmailPersonalizationEngine {
     };
     
     const content = painPointContent[data.painPoint] || 'operational challenges';
-    return email.replace(/\[PAIN-POINT\]/g, content);
+    return email.replace(/\[PAIN-POINT\].md);
   }
 
   private insertRecentActivity(email: string, data: PersonalizationData): string {
     if (!data.recentActivity) {
-      return email.replace(/\[RECENT-ACTIVITY\]/g, 'recent business activities');
+      return email.replace(/\[RECENT-ACTIVITY\].md);
     }
-    return email.replace(/\[RECENT-ACTIVITY\]/g, data.recentActivity);
+    return email.replace(/\[RECENT-ACTIVITY\].md);
   }
 
   private validatePersonalization(email: string): string {
     // Remove any unfilled placeholders
-    const placeholders = email.match(/\[.*?\]/g) || [];
+    const placeholders = email.match(/\[.*?\].md) || [];
     
     if (placeholders.length > 0) {
       console.warn('Unfilled personalization placeholders found:', placeholders);
     }
     
-    return email.replace(/\[.*?\]/g, '[Company]');
+    return email.replace(/\[.*?\].md);
   }
 }
 ```
@@ -374,7 +374,7 @@ class PerformanceAnalytics {
     };
     
     const provider = providerCosts[campaign.provider] || providerCosts.sendgrid;
-    return provider.base + (volume / 1000) * provider.perThousand;
+    return provider.base + (volume .md) * provider.perThousand;
   }
 
   private estimateRevenue(metrics: CampaignMetrics): number {

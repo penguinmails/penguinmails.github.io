@@ -17,8 +17,8 @@ This contract defines REST endpoints for:
 
 It aligns with:
 
-- [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification)
-- [System Architecture Overview](../architecture-system/architecture-overview)
+- [PostHog Business Events Specification](../analytics-integration.md)
+- [System Architecture Overview](../architecture-system.md)
 - [Executive API Contract](executive-api)
 - System operations requirements (monitoring, alerts, event tracking)
 
@@ -217,7 +217,7 @@ Behavior:
 This API defines system alert semantics for all operations:
 
 - Event types and payload shapes aligned with:
-  - [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification)
+  - [PostHog Business Events Specification](../analytics-integration.md)
 - Processing with appropriate alert routing:
   - Real-time alerts for critical issues
   - Daily summaries for operational updates

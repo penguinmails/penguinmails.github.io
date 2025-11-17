@@ -59,9 +59,9 @@ Feature Overview
 └── API: 180 users (↑25% adoption)
 
 Usage Patterns
-├── Most Used: Campaigns (8.2 sessions/day)
+├── Most Used: Campaigns (8.2 sessions.md)
 ├── Fastest Growing: Analytics (+18% MoM)
-├── Highest Satisfaction: Templates (4.7/5 rating)
+├── Highest Satisfaction: Templates (4.7.md)
 └── Most Problematic: API (12% error rate)
 ```
 
@@ -155,7 +155,7 @@ Our product-market fit analysis uses multi-dimensional evaluation in the context
 We calculate comprehensive fit scores using weighted metrics:
 - **Retention Rate** (30%): 85%+ indicates strong PMF (aligned with industry 5%[^2] churn rate)
 - **Referral Rate** (25%): NPS 50+ indicates willingness to recommend (enterprise standard)
-- **Usage Intensity** (25%): DAU/MAU 40%+ indicates deep engagement (feature adoption 70%+)
+- **Usage Intensity** (25%): DAU.md)
 - **Competitive Moat** (20%): Unique value proposition strength (multi-tenant, compliance automation)
 
 ---
@@ -240,7 +240,7 @@ Experiment Results
 ```
 
 #### **Strategic Business Intelligence**
-- **Product-Market Fit Score**: 72/100 (Strong)
+- **Product-Market Fit Score**: 72.md)
 - **Feature Satisfaction**: 4.3/5.0 average
 - **Roadmap Velocity**: 4 features launched per month
 - **Competitive Position**: Strong differentiation
@@ -299,11 +299,11 @@ Experiment Results
 
 ## Related Analytics Documents
 
-- **[Business Strategy Overview](../strategy/overview)** - Strategic context and objectives
-- **[Market Analysis](../market-analysis/overview)** - Market intelligence and positioning
-- **[Business Model](../model/overview)** - Financial framework and performance
-- **[Business Operations](../operations/overview)** - Operational procedures and quality assurance
-- **[Value Proposition Overview](../value-proposition/overview)** - Customer value and performance measurement
+- **[Business Strategy Overview](../strategy.md)** - Strategic context and objectives
+- **[Market Analysis](../market-analysis.md)** - Market intelligence and positioning
+- **[Business Model](../model.md)** - Financial framework and performance
+- **[Business Operations](../operations.md)** - Operational procedures and quality assurance
+- **[Value Proposition Overview](../value-proposition.md)** - Customer value and performance measurement
 
 ---
 
@@ -344,5 +344,5 @@ Experiment Results
 *This analytics framework serves as the foundation for all data-driven product decisions and optimization efforts. For analytics questions or performance analysis, please contact the Product Analytics Team.*
 
 ---
-*Next: [Business Operations Overview](../operations/overview)] →*
+*Next: [Business Operations Overview](../operations.md)] →*
 ---

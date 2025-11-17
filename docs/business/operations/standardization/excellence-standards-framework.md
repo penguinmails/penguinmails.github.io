@@ -356,12 +356,12 @@ The Operations Excellence Standards Framework provides comprehensive enterprise-
 **Review Cycle:** Quarterly operations excellence review and annual operations excellence optimization
 
 **Related Excellence Documents:**
-- [Operations Excellence Overview](../overview) - Operations excellence context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and excellence integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with excellence integration
-- [Operations Management Framework](../management/framework) - Operations management with excellence coordination
-- [Process Standardization Framework](../standardization/process-standardization-framework) - Process standardization with excellence integration
-- [Enhanced Automation Framework](../automation/enhanced-automation-framework) - Enhanced automation with excellence coordination
+- [Operations Excellence Overview](...md) - Operations excellence context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and excellence integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with excellence integration
+- [Operations Management Framework](../management.md) - Operations management with excellence coordination
+- [Process Standardization Framework](../standardization.md) - Process standardization with excellence integration
+- [Enhanced Automation Framework](../automation.md) - Enhanced automation with excellence coordination
 
 **Next Steps:**
 1. **Excellence Assessment:** Conduct comprehensive assessment of current excellence capabilities, standards, and processes

@@ -224,7 +224,7 @@ This document provides a comprehensive framework for developing industry-specifi
 - [ ] Policy and procedure development
 
 ### Week 3-4: Technical Implementation
-- [ ] Email authentication setup (SPF/DKIM/DMARC)
+- [ ] Email authentication setup (SPF/DKIM.md)
 - [ ] Access control implementation
 - [ ] Encryption and security controls
 - [ ] Monitoring and alerting configuration

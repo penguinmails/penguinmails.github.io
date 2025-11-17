@@ -109,9 +109,9 @@ Agencies and consulting firms face critical challenges in:
 
 | Risk | Probability | Impact | Mitigation Cost | Residual Risk |
 |------|------------|--------|-----------------|---------------|
-| Client Confidentiality Breach | Low-Medium | Very High ($100K-$1M+) | $15,000-$40,000/year | Very Low (5-10% of original) |
-| Cross-Client Data Contamination | Medium | High ($25K-$250K) | $8,000-$25,000/year | Very Low (5-15% of original) |
-| Unauthorized Access | Low-Medium | High ($50K-$500K) | $10,000-$30,000/year | Low (10-20% of original) |
+| Client Confidentiality Breach | Low-Medium | Very High ($100K-$1M+) | $15,000-$40,000.md) |
+| Cross-Client Data Contamination | Medium | High ($25K-$250K) | $8,000-$25,000.md) |
+| Unauthorized Access | Low-Medium | High ($50K-$500K) | $10,000-$30,000.md) |
 
 ---
 
@@ -153,14 +153,14 @@ Agencies and consulting firms face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Agencies & Consulting Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../core/roi-calculator) - Professional services-specific ROI calculations
-- [📊 Cost Comparisons](../core/cost-comparisons) - Agencies & consulting cost analysis and benchmarks
-- [🏆 Competitive Analysis](../core/competitive-analysis) - Professional services provider comparison
+- [💰 ROI Calculator](../core.md) - Professional services-specific ROI calculations
+- [📊 Cost Comparisons](../core.md) - Agencies & consulting cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core.md) - Professional services provider comparison
 
 **For Technical Validation (Level 3):**
 - [📋 Detailed Agencies & Consulting Analysis](agencies-consulting-detailed) - Complete professional services implementation deep dive
-- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete professional services compliance analysis
-- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - Professional services security overview
+- [📋 Compliance Framework](../procurement-compliance.md) - Complete professional services compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance.md) - Professional services security overview
 
 ---
 

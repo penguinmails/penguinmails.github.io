@@ -115,7 +115,7 @@ CREATE TABLE companies (
     status VARCHAR(20) DEFAULT 'active',
     -- Marketing-accessible fields (no sensitive operational data)
     industry VARCHAR(100), -- Optional enrichment field
-    company_size VARCHAR(50), -- Optional enrichment field (Small/Medium/Large)
+    company_size VARCHAR(50), -- Optional enrichment field (Small/Medium.md)
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -803,15 +803,15 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 ### 📚 **Supporting Documentation**
 - [Database Infrastructure README](README)) - Database and infrastructure overview
-- [Architecture System](../architecture-system/README)) - System architecture decisions
-- [Development Guidelines](../development-guidelines/README)) - Development standards
-- [Quality Assurance](../quality-assurance/README)) - Testing protocols and procedures
+- [Architecture System](../architecture-system.md)) - System architecture decisions
+- [Development Guidelines](../development-guidelines.md)) - Development standards
+- [Quality Assurance](../quality-assurance.md)) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
 
 ---
 

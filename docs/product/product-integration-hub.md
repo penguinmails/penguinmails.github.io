@@ -84,7 +84,7 @@ SELECT
     f.feature_name,
     f.release_date,
     COUNT(DISTINCT au.user_id) as active_users,
-    COUNT(DISTINCT au.user_id) * 100.0 / COUNT(DISTINCT u.user_id) as adoption_rate,
+    COUNT(DISTINCT au.user_id) * 100.0 .md) as adoption_rate,
     SUM(CASE WHEN au.usage_frequency >= 3 THEN 1 ELSE 0 END) as power_users,
     SUM(CASE WHEN s.deal_size > 0 THEN s.deal_size ELSE 0 END) as associated_revenue
 FROM features f

@@ -185,7 +185,7 @@ SELECT
   ft.campaign_id,
   COUNT(*) as attributed_customers,
   SUM(o.amount) as attributed_revenue,
-  SUM(o.amount) / COUNT(*) as avg_deal_size
+  SUM(o.amount) .md) as avg_deal_size
 FROM first_touch ft
 JOIN opportunities o ON o.contact_id = ft.contact_id
 WHERE o.is_closed_won = true
@@ -210,9 +210,9 @@ weighted_attribution AS (
   SELECT 
     ts.campaign_id,
     ts.touchpoint_type,
-    (1.0 / ts.total_touchpoints) as attribution_weight,
+    (1.0 .md) as attribution_weight,
     o.amount,
-    o.amount * (1.0 / ts.total_touchpoints) as weighted_revenue
+    o.amount * (1.0 .md) as weighted_revenue
   FROM touchpoint_sequence ts
   JOIN opportunities o ON o.contact_id = ts.contact_id
   WHERE o.is_closed_won = true
@@ -505,7 +505,7 @@ class FinanceMarketingIntegration {
     
     const totalCosts = campaignCosts + operationalCosts + opportunityCosts;
     const netRevenue = attributedRevenue - totalCosts;
-    const roi = ((netRevenue / totalCosts) * 100);
+    const roi = ((netRevenue .md) * 100);
     
     return {
       campaign_id: campaignId,

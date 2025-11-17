@@ -131,9 +131,9 @@ E-commerce and retail organizations face critical challenges in:
 
 | Risk | Probability | Impact | Mitigation Cost | Residual Risk |
 |------|------------|--------|-----------------|---------------|
-| PCI DSS Violation | Low-Medium | High ($5K-$500K) | $8,000-$25,000/year | Very Low (5-15% of original) |
-| GDPR/CCPA Non-compliance | Medium | Medium ($10K-$100K) | $5,000-$20,000/year | Low (10-20% of original) |
-| TCPA Violation | Medium | Medium ($500-$1,500 per violation) | $3,000-$12,000/year | Very Low (5-10% of original) |
+| PCI DSS Violation | Low-Medium | High ($5K-$500K) | $8,000-$25,000.md) |
+| GDPR.md) | $5,000-$20,000.md) |
+| TCPA Violation | Medium | Medium ($500-$1,500 per violation) | $3,000-$12,000.md) |
 
 ### Operational Risks
 
@@ -148,7 +148,7 @@ E-commerce and retail organizations face critical challenges in:
 ## E-commerce Implementation Roadmap
 
 ### Phase 1: Foundation (Weeks 1-4)
-- Implement email authentication (SPF/DKIM/DMARC)
+- Implement email authentication (SPF/DKIM.md)
 - Set up advanced deliverability monitoring
 - Configure encryption and security controls
 - Establish compliance monitoring for PCI/GDPR/CCPA
@@ -189,14 +189,14 @@ E-commerce and retail organizations face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For E-commerce Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../core/roi-calculator) - E-commerce-specific ROI calculations
-- [📊 Cost Comparisons](../core/cost-comparisons) - E-commerce cost analysis and benchmarks
-- [🏆 Competitive Analysis](../core/competitive-analysis) - E-commerce provider comparison
+- [💰 ROI Calculator](../core.md) - E-commerce-specific ROI calculations
+- [📊 Cost Comparisons](../core.md) - E-commerce cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core.md) - E-commerce provider comparison
 
 **For Technical Validation (Level 3):**
 - [📋 Detailed E-commerce Analysis](ecommerce-detailed) - Complete e-commerce implementation and automation deep dive
-- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete e-commerce compliance analysis
-- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - E-commerce security overview
+- [📋 Compliance Framework](../procurement-compliance.md) - Complete e-commerce compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance.md) - E-commerce security overview
 
 ---
 

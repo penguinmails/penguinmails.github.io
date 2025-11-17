@@ -71,7 +71,7 @@ Step-by-step implementation guide for systematic customer health optimization, r
 5. Update health optimization playbook with new learnings
 
 **Account Portfolio Health Dashboard**:
-- Total accounts by health score range (Healthy/Stable/At-Risk/Critical)
+- Total accounts by health score range (Healthy/Stable/At-Risk.md)
 - Week-over-week health score trend analysis
 - Intervention success rate tracking
 - Expansion opportunity pipeline status

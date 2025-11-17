@@ -399,31 +399,31 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 ## Cross-Reference Integration
 
 ### Operations & Analytics
-- [Operations Analytics Overview](./overview) - Main operations framework
-- [User Analytics](./user-analytics) - User behavior analysis
-- [Product Analytics](./product-analytics) - Feature performance analysis
+- [Operations Analytics Overview](..md) - Main operations framework
+- [User Analytics](..md) - User behavior analysis
+- [Product Analytics](..md) - Feature performance analysis
 
 ### Business Strategy
-- [Business Strategy Overview](../business/strategy/overview) - Strategic alignment
-- [Market Analysis](../business/market-analysis/overview) - Market positioning
-- [Business Model](../business/model/overview) - Revenue model and unit economics
-- [Value Proposition](../business/value-proposition/overview) - Competitive differentiation
+- [Business Strategy Overview](../business/strategy.md) - Strategic alignment
+- [Market Analysis](../business/market-analysis.md) - Market positioning
+- [Business Model](../business/model.md) - Revenue model and unit economics
+- [Value Proposition](../business/value-proposition.md) - Competitive differentiation
 
 ### Technical Architecture
-- [Technical Architecture Overview](../technical/architecture/overview) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations) - System management
-- [Integration Guide](../technical/architecture/detailed-technical/integration-guide) - Analytics integrations
+- [Technical Architecture Overview](../technical/architecture.md) - System design
+- [Analytics Architecture](../technical/architecture/detailed-technical.md) - Technical implementation
+- [Infrastructure Operations](../technical/architecture/detailed-technical.md) - System management
+- [Integration Guide](../technical/architecture/detailed-technical.md) - Analytics integrations
 
 ### User Experience
-- [User Journeys Overview](../user-experience-journeys/README) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys/onboarding-journey) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys/user-interaction-patterns-ux-design) - UX optimization
+- [User Journeys Overview](../user-experience-journeys.md) - User flow documentation
+- [Onboarding Journey](../user-experience-journeys/detailed-journeys.md) - User activation
+- [User Interaction Patterns](../user-experience-journeys/detailed-journeys.md) - UX optimization
 
 ### Compliance & Security
-- [Compliance Overview](../compliance-security/overview) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise/security-framework) - Security operations
-- [Data Privacy Policy](../compliance-security/international/data-privacy-policy) - Privacy compliance
+- [Compliance Overview](../compliance-security.md) - Regulatory compliance
+- [Security Framework](../compliance-security/enterprise.md) - Security operations
+- [Data Privacy Policy](../compliance-security/international.md) - Privacy compliance
 
 ---
 
@@ -431,9 +431,9 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 Navigate to specific analytics areas:
 
-- **[User Analytics](./user-analytics)** → User behavior and engagement analysis
-- **[Product Analytics](./product-analytics)** → Feature performance and optimization
-- **[Operations Management](../operations-management/README.md)** → Operational procedures and workflows
+- **[User Analytics](..md)** → User behavior and engagement analysis
+- **[Product Analytics](..md)** → Feature performance and optimization
+- **[Operations Management](../operations-management.md)** → Operational procedures and workflows
 
 ---
 

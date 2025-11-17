@@ -67,7 +67,7 @@ OLTP Database (Operational Excellence):
 └── leads, templates (business data)
 
 Content Database (Enterprise Analytics):
-├── email_messages (message analytics/traces) ⭐
+├── email_messages (message analytics.md) ⭐
 ├── email_content (email bodies, attachments)
 ├── transactional_emails, notifications
 └── content access and search indexes
@@ -95,7 +95,7 @@ Queue System (Job Processing):
 ```
 1. Event Reception: IMAP/Cronjob/Endpoint → Queue Producer
 2. Queue Entry: Redis Queue with job classification  
-3. Handler Processing: Type-specific processing (inbound/bounce/autoreply)
+3. Handler Processing: Type-specific processing (inbound/bounce.md)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
 ```
@@ -129,7 +129,7 @@ async function handleIncomingEmail(emailData: any) {
   const storage_key = `email_${emailData.messageId}_${Date.now()}`;
   
   return await db.$transaction(async (tx) => {
-    // 1. Create email_content (email body)
+    /.md)
     const contentObject = await tx.email_content.create({
       data: {
         storage_key,
@@ -143,7 +143,7 @@ async function handleIncomingEmail(emailData: any) {
       }
     });
 
-    // 2. Create email_messages (analytics)
+    /.md)
     const messageRef = await tx.email_messages.create({
       data: {
         storage_key,
@@ -207,7 +207,7 @@ async function startIncomingWorker() {
   
   try {
     for await (let msg of client.fetch('1:*', { envelope: true, source: true })) {
-      // ✅ Add to queue (creates email_messages + email_content)
+      /.md)
       await addEmailToQueue({
         direction: 'inbound',
         messageId: msg.envelope.messageId,
@@ -251,8 +251,8 @@ ORDER BY date;
 -- Content storage analytics
 SELECT 
     DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 / 1024.0) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 / 1024.0) as total_mb_compressed,
+    SUM(c.raw_size_bytes / 1024.0 .md) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 .md) as total_mb_compressed,
     COUNT(*) as emails_processed
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
@@ -326,7 +326,7 @@ SELECT
     m.direction,
     m.status,
     COUNT(*) as email_count,
-    AVG(c.raw_size_bytes / 1024.0) as avg_size_kb,
+    AVG(c.raw_size_bytes .md) as avg_size_kb,
     COUNT(a.*) as total_attachments
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
@@ -338,7 +338,7 @@ GROUP BY m.direction, m.status;
 SELECT 
     c.compression_algorithm,
     COUNT(*) as emails,
-    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal / c.raw_size_bytes * 100) as avg_compression_ratio
+    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal .md) as avg_compression_ratio
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
@@ -381,7 +381,7 @@ GROUP BY c.compression_algorithm;
 
 ```sql
 -- Step 1: Create new tables with clear names
-CREATE TABLE email_messages (/)
+CREATE TABLE email_messages (.md)
     storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
     tenant_id UUID NOT NULL,
     email_account_id UUID,
@@ -399,7 +399,7 @@ CREATE TABLE email_messages (/)
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
-CREATE TABLE email_content (/)
+CREATE TABLE email_content (.md)
     storage_key VARCHAR(500) PRIMARY KEY,
     tenant_id UUID NOT NULL,
     content_text TEXT,
@@ -467,10 +467,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](../overview.md) - Strategic foundation and market positioning
-- [Analytics Architecture](./analytics-architecture.md) - PostHog integration and business intelligence
-- [Email System Hierarchy](./email-system-hierarchy.md) - Database structure and relationships
-- [Campaign Management](../../core-features/analytics/overview.md) - User experience and business operations
-- [Business Analytics](../../business/analytics/overview.md) - Revenue intelligence and optimization
+- [Architecture Overview](...md) - Strategic foundation and market positioning
+- [Analytics Architecture](..md) - PostHog integration and business intelligence
+- [Email System Hierarchy](..md) - Database structure and relationships
+- [Campaign Management](../../core-features/analytics.md) - User experience and business operations
+- [Business Analytics](../../business/analytics.md) - Revenue intelligence and optimization
 
 **Keywords**: email_messages, email_content, email system hierarchy, message-focused naming, database architecture, queue integration, IMAP integration, content database, analytics, email processing, enterprise infrastructure, operational excellence

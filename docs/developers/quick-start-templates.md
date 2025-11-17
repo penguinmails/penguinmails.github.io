@@ -56,7 +56,7 @@ import os
 app = Flask(__name__)
 client = Client(api_key=os.getenv("PENGUINMAILS_API_KEY"))
 
-@app.route('/send-welcome', methods=['POST'])
+@app.route('.md)
 def send_welcome_email():
     """Send welcome email to new user"""
     data = request.json
@@ -96,7 +96,7 @@ const client = new PenguinMails({
 });
 
 // Send notification email
-app.post('/send-notification', async (req, res) => {
+app.post('.md) => {
   const { email, message, type } = req.body;
   
   try {
@@ -117,7 +117,7 @@ app.post('/send-notification', async (req, res) => {
 });
 
 // Campaign creation endpoint
-app.post('/create-campaign', async (req, res) => {
+app.post('.md) => {
   const { name, subject, templateId, segmentId } = req.body;
   
   try {
@@ -346,7 +346,7 @@ func main() {
         BaseURL: "https://api.penguinmails.com",
     })
 
-    http.HandleFunc("/send-email", func(w http.ResponseWriter, r *http.Request) {
+    http.HandleFunc(".md) {
         var req EmailRequest
         if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
             http.Error(w, err.Error(), 400)
@@ -370,7 +370,7 @@ func main() {
         })
     })
 
-    http.HandleFunc("/create-campaign", func(w http.ResponseWriter, r *http.Request) {
+    http.HandleFunc(".md) {
         var req CampaignRequest
         if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
             http.Error(w, err.Error(), 400)

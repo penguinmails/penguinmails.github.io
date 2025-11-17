@@ -313,12 +313,12 @@ The Operations Development Framework provides comprehensive security tool develo
 **Review Cycle:** Quarterly operations development validation and annual operations development optimization
 
 **Related Development Documents:**
-- [Operations Development Overview](../overview) - Operations development context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and development integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with development integration
-- [Operations Management Framework](../management/framework) - Operations management with development coordination
-- [Security Tool Development Guide](./security-tool-development-guide) - Security tool development and automation
-- [Monitoring System Development Guide](./monitoring-system-development-guide) - Monitoring system development and deployment
+- [Operations Development Overview](...md) - Operations development context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and development integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with development integration
+- [Operations Management Framework](../management.md) - Operations management with development coordination
+- [Security Tool Development Guide](..md) - Security tool development and automation
+- [Monitoring System Development Guide](..md) - Monitoring system development and deployment
 
 **Next Steps:**
 1. **Development Assessment:** Conduct comprehensive assessment of current development capabilities, tools, and processes

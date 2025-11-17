@@ -51,7 +51,7 @@ description: "Get started in 5 minutes, achieve 95% inbox placement in 21 days w
 **Outcome**: Complete platform access and professional infrastructure ready
 
 #### **Account Creation**
-- **Sign Up**: Visit [app.penguinmails.com](https://app.penguinmails.com) and create account
+- **Sign Up**: Visit [app.penguinmails.com](https:/.md) and create account
 - **Email Verification**: Click verification link sent to your email
 - **Company Profile**: Complete business information for compliance and personalization
 - **Initial Payment Method**: Add payment details for subscription activation
@@ -332,19 +332,19 @@ Our pricing is designed around **cold email sending volume** and **feature acces
 ### **Documentation**
 - **[Features & Capabilities](feature-overview))** - Explore all available features
 - **[Getting Started](getting-started))** - Complete platform introduction
-- **[Architecture Overview](technical/architecture/overview))** - Technical foundation
-- **[Key Performance Indicators](technical/architecture/overview))** - Success metrics
+- **[Architecture Overview](technical/architecture.md))** - Technical foundation
+- **[Key Performance Indicators](technical/architecture.md))** - Success metrics
 
 ### **Training Materials**
-- [Video Tutorials](https://help.penguinmails.com/video-tutorials) - Step-by-step video guides
-- [Knowledge Base](https://help.penguinmails.com/knowledge-base) - Self-service documentation
-- [Community Forum](https://help.penguinmails.com/community) - Peer support and discussions
-- [Best Practices Guide](https://help.penguinmails.com/best-practices) - Email deliverability tips
+- [Video Tutorials](https://help.penguinmails.com.md) - Step-by-step video guides
+- [Knowledge Base](https://help.penguinmails.com.md) - Self-service documentation
+- [Community Forum](https://help.penguinmails.com.md) - Peer support and discussions
+- [Best Practices Guide](https://help.penguinmails.com.md) - Email deliverability tips
 
 ---
 
-*Ready to get started? [Sign up for your free trial](https://app.penguinmails.com/signup) and begin transforming your cold email outreach today. Our team is here to ensure your success every step of the way.*
+*Ready to get started? [Sign up for your free trial](https://app.penguinmails.com.md) and begin transforming your cold email outreach today. Our team is here to ensure your success every step of the way.*
 
 ---
-*Previous: [Features Overview](feature-overview)) | Next: [Core Features](core-features/) →*
+*Previous: [Features Overview](feature-overview)) | Next: [Core Features](core-features.md) →*
 ---

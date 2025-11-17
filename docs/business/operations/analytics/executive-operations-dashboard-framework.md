@@ -316,12 +316,12 @@ The Operations Executive Dashboard Framework provides unified visibility into se
 **Review Cycle:** Quarterly dashboard validation and strategic operations alignment assessment
 
 **Related Operations Documents:**
-- [Operations Analytics Overview](../overview) - Operations analytics context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and dashboard integration
-- [Operations Management Framework](../management/framework) - Operations management with dashboard integration
-- [Operations Analytics Framework](./framework) - Operations analytics with dashboard framework integration
-- [Executive Operations Dashboard](./executive-operations-dashboard) - Executive operations dashboard with real-time insights
-- [Operations Success Metrics Dashboard](./operations-success-metrics-dashboard) - Operations success tracking and achievement monitoring
+- [Operations Analytics Overview](...md) - Operations analytics context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and dashboard integration
+- [Operations Management Framework](../management.md) - Operations management with dashboard integration
+- [Operations Analytics Framework](..md) - Operations analytics with dashboard framework integration
+- [Executive Operations Dashboard](..md) - Executive operations dashboard with real-time insights
+- [Operations Success Metrics Dashboard](..md) - Operations success tracking and achievement monitoring
 
 **Next Steps:**
 

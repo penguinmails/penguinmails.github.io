@@ -123,9 +123,9 @@ Healthcare organizations struggle with:
 
 | Risk | Probability | Impact | Mitigation Cost | Residual Risk |
 |------|------------|--------|-----------------|---------------|
-| HIPAA Violation | Medium | High ($100K-$5M fine) | $15,000-$30,000/year | Low (10-20% of original) |
-| Data Breach | Low-Medium | High ($1M-$10M) | $20,000-$40,000/year | Low (5-15% of original) |
-| Audit Failure | Medium | Medium ($25K-$100K) | $8,000-$15,000/year | Very Low (5-10% of original) |
+| HIPAA Violation | Medium | High ($100K-$5M fine) | $15,000-$30,000.md) |
+| Data Breach | Low-Medium | High ($1M-$10M) | $20,000-$40,000.md) |
+| Audit Failure | Medium | Medium ($25K-$100K) | $8,000-$15,000.md) |
 
 ### Operational Risks
 
@@ -181,17 +181,17 @@ Healthcare organizations struggle with:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Healthcare Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../core/roi-calculator) - Healthcare-specific ROI calculations
-- [📊 Cost Comparisons](../core/cost-comparisons) - Healthcare cost analysis and benchmarks
-- [🏆 Competitive Analysis](../core/competitive-analysis) - Healthcare provider comparison
+- [💰 ROI Calculator](../core.md) - Healthcare-specific ROI calculations
+- [📊 Cost Comparisons](../core.md) - Healthcare cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core.md) - Healthcare provider comparison
 
 **For Technical Validation (Level 3):**
 - [📋 Detailed Healthcare Analysis](healthcare-detailed) - Complete healthcare implementation and compliance deep dive
-- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete HIPAA compliance analysis
-- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - Healthcare security overview
+- [📋 Compliance Framework](../procurement-compliance.md) - Complete HIPAA compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance.md) - Healthcare security overview
 
 **For Compliance and Legal Review:**
-- [📋 Procurement Guide](../procurement-compliance/procurement-guide) - Enterprise healthcare evaluation framework
+- [📋 Procurement Guide](../procurement-compliance.md) - Enterprise healthcare evaluation framework
 
 ---
 

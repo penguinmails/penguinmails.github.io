@@ -125,9 +125,9 @@ SaaS companies face critical challenges in:
 
 | Risk | Probability | Impact | Mitigation Cost | Residual Risk |
 |------|------------|--------|-----------------|---------------|
-| Email System Outage | Low | High (revenue impact) | $15,000-$50,000/year | Very Low (5-10% of original) |
-| Deliverability Issues | Medium | Medium | $8,000-$25,000/year | Low (15-25% of original) |
-| Compliance Violation | Low | High ($50K-$500K) | $10,000-$30,000/year | Very Low (5-10% of original) |
+| Email System Outage | Low | High (revenue impact) | $15,000-$50,000.md) |
+| Deliverability Issues | Medium | Medium | $8,000-$25,000.md) |
+| Compliance Violation | Low | High ($50K-$500K) | $10,000-$30,000.md) |
 
 ### Customer Experience Risks
 
@@ -185,14 +185,14 @@ SaaS companies face critical challenges in:
 ## 🔗 Progressive Disclosure Navigation
 
 **For SaaS Executive Decision Making (Level 2):**
-- [💰 ROI Calculator](../core/roi-calculator) - SaaS-specific ROI calculations
-- [📊 Cost Comparisons](../core/cost-comparisons) - SaaS cost analysis and benchmarks
-- [🏆 Competitive Analysis](../core/competitive-analysis) - SaaS provider comparison
+- [💰 ROI Calculator](../core.md) - SaaS-specific ROI calculations
+- [📊 Cost Comparisons](../core.md) - SaaS cost analysis and benchmarks
+- [🏆 Competitive Analysis](../core.md) - SaaS provider comparison
 
 **For Technical Validation (Level 3):**
 - [📋 Detailed SaaS Analysis](saas-detailed) - Complete SaaS implementation and product-led growth deep dive
-- [📋 Compliance Framework](../procurement-compliance/compliance-framework) - Complete SaaS compliance analysis
-- [🔒 Security Compliance Overview](../procurement-compliance/security-compliance) - SaaS security overview
+- [📋 Compliance Framework](../procurement-compliance.md) - Complete SaaS compliance analysis
+- [🔒 Security Compliance Overview](../procurement-compliance.md) - SaaS security overview
 
 ---
 

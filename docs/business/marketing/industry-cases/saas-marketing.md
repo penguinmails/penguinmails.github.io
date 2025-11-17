@@ -19,7 +19,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 **MVP Focus:** Basic analytics, manual processes, 10% growth
 **Post-MVP Focus:** Advanced analytics, optimization, 15% growth
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) SaaS marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) SaaS marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 
@@ -361,10 +361,10 @@ MVP SaaS Marketing ROI Formula:
 ROI = (Customer Lifetime Value - Customer Acquisition Cost) / Customer Acquisition Cost × 100
 
 MVP Customer Lifetime Value Calculation:
-CLV = (Average Monthly Revenue per Customer) × (Gross Margin %) / (Monthly Churn Rate)
+CLV = (Average Monthly Revenue per Customer) × (Gross Margin %) .md)
 
 MVP Payback Period:
-Payback Period = Customer Acquisition Cost / (Monthly Revenue per Customer × Gross Margin %)
+Payback Period = Customer Acquisition Cost .md)
 ```
 
 **MVP Example ROI Calculation:**
@@ -378,7 +378,7 @@ Monthly Churn Rate: 7%
 Customer Lifetime Value = ($400 × 0.75) / 0.07 = $4,286
 Customer Acquisition Cost = $60,000 / 150 = $400
 ROI = ($4,286 - $400) / $400 × 100 = 972%
-Payback Period = $400 / ($400 × 0.75) = 1.33 months
+Payback Period = $400 .md) = 1.33 months
 ```
 
 ---

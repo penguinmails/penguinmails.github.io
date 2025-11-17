@@ -121,16 +121,16 @@ This section follows the **Progressive Complexity Framework** with three distinc
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Development Guidelines](../development-guidelines/README)) - Development standards and practices
-- [Architecture System](../architecture-system/README)) - System architecture decisions
-- [Database Infrastructure](../database-infrastructure/README)) - Database and infrastructure management
-- [Implementation Overview](../overview)) - Strategic technical overview
+- [Development Guidelines](../development-guidelines.md)) - Development standards and practices
+- [Architecture System](../architecture-system.md)) - System architecture decisions
+- [Database Infrastructure](../database-infrastructure.md)) - Database and infrastructure management
+- [Implementation Overview](...md)) - Strategic technical overview
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management/README)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
 
 ---
 

@@ -94,8 +94,8 @@ Potential Revenue Protection:
 - Payment issue prevention: $______/month
 - Total Monthly Protection: $______
 
-Annual ROI: (($______ × 12) / $______) × 100 = _______%
-Payback Period: $______ / ($______ / 12) = ______ months
+Annual ROI: (($______ × 12) .md) × 100 = _______%
+Payback Period: $______ / ($______ .md) = ______ months
 ```
 
 #### Cost Optimization Impact Assessment
@@ -110,8 +110,8 @@ Cost Optimization Benefits:
 - Compliance cost avoidance: $______/month
 - Total Monthly Savings: $______
 
-Annual ROI: (($______ × 12) / $______) × 100 = _______%
-Payback Period: $______ / ($______ / 12) = ______ months
+Annual ROI: (($______ × 12) .md) × 100 = _______%
+Payback Period: $______ / ($______ .md) = ______ months
 ```
 
 #### Strategic Decision Support Impact Assessment
@@ -126,8 +126,8 @@ Strategic Decision Value:
 - Executive transparency: $______/month
 - Total Monthly Value: $______
 
-Annual ROI: (($______ × 12) / $______) × 100 = _______%
-Payback Period: $______ / ($______ / 12) = ______ months
+Annual ROI: (($______ × 12) .md) × 100 = _______%
+Payback Period: $______ / ($______ .md) = ______ months
 ```
 
 ---

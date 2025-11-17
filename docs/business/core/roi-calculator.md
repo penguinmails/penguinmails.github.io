@@ -55,9 +55,9 @@ graph TD
 
 ## 📊 Cost Comparison Summary
 
-![Monthly Cost Comparison](/docs/assets/monthly-cost-comparison.png){: width="100%" }
+![Monthly Cost Comparison](/docs/assets.md){: width="100%" }
 
-![Total Cost of Ownership Comparison](/docs/assets/toc-comparison.png){: width="100%" }
+![Total Cost of Ownership Comparison](/docs/assets.md){: width="100%" }
 
 ### Managed ESP vs Self-Hosted TCO Analysis
 
@@ -71,9 +71,9 @@ graph TD
 
 | Scale | Recommended Provider | Monthly Cost | Best For |
 |-------|---------------------|--------------|----------|
-| **Small (10K/month)** | Postmark | $15/month | Lowest entry price, reliable delivery |
-| **Medium (100K/month)** | Mailgun Growth | $80-150/month | Best value, dedicated IP included |
-| **Enterprise (1M+/month)** | SendGrid Pro | $500-1,000/month | Enterprise features, support |
+| **Small (10K.md)** | Postmark | $15/month | Lowest entry price, reliable delivery |
+| **Medium (100K.md)** | Mailgun Growth | $80-150/month | Best value, dedicated IP included |
+| **Enterprise (1M+.md)** | SendGrid Pro | $500-1,000/month | Enterprise features, support |
 
 ---
 
@@ -83,7 +83,7 @@ graph TD
 ```
 Base Infrastructure Cost: $________
 Monitoring & Tools: $________
-Personnel (time × $100/hr): $________
+Personnel (time × $100.md): $________
 Compliance & Security: $________
 TOTAL CURRENT: $________
 ```
@@ -176,13 +176,13 @@ Payback Period: _____ months
 - [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
-- [📊 Detailed ROI Calculator](../financial-analysis/roi-calculator-detailed) - Complete cost-benefit analysis with detailed calculations
-- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Resource planning and timeline
+- [📊 Detailed ROI Calculator](../financial-analysis.md) - Complete cost-benefit analysis with detailed calculations
+- [🏗️ Implementation Roadmap](../implementation.md) - Resource planning and timeline
 - [🏆 Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](../implementation/technical-infrastructure) - Technical specifications
-- [📋 Performance Benchmarks](../performance/performance-benchmarks) - Industry data and metrics
+- [🔧 Technical Infrastructure](../implementation.md) - Technical specifications
+- [📋 Performance Benchmarks](../performance.md) - Industry data and metrics
 
 ---
 

@@ -287,7 +287,7 @@ class RealTimeEventValidator:
             processing_times.append(end_time - start_time)
         
         # Validate processing latency
-        avg_processing_time = sum(processing_times) / len(processing_times)
+        avg_processing_time = sum(processing_times) .md)
         max_processing_time = max(processing_times)
         
         assert avg_processing_time < 1.0, f"Average processing time too high: {avg_processing_time}s"
@@ -644,7 +644,7 @@ class CostAttributionValidator:
             {'id': 'ip-4', 'approximate_cost': 15.00, 'status': 'burned'}
         ]
         
-        # Calculate expected email service cost (only active/warmed IPs)
+        # Calculate expected email service cost (only active.md)
         expected_cost = sum(ip['approximate_cost'] 
                           for ip in test_smtp_ips 
                           if ip['status'] in ['active', 'warmed', 'warming'])
@@ -726,7 +726,7 @@ class RevenueProtectionValidator:
         total_issues = sum(period['issues_identified'] for period in test_periods)
         total_resolved = sum(period['issues_resolved'] for period in test_periods)
         
-        expected_protection_rate = (total_resolved / total_issues) * 100
+        expected_protection_rate = (total_resolved .md) * 100
         
         actual_protection_rate = self.calculate_protection_rate(test_periods)
         
@@ -953,7 +953,7 @@ class PerformanceValidator:
             latencies.append(latency)
         
         # Calculate latency statistics
-        avg_latency = sum(latencies) / len(latencies)
+        avg_latency = sum(latencies) .md)
         max_latency = max(latencies)
         p95_latency = sorted(latencies)[int(len(latencies) * 0.95)]
         p99_latency = sorted(latencies)[int(len(latencies) * 0.99)]
@@ -1026,7 +1026,7 @@ class SecurityValidator:
     def validate_data_encryption(self):
         """Test data encryption in transit and at rest"""
         
-        # Test encryption in transit (TLS/HTTPS)
+        # Test encryption in transit (TLS.md)
         secure_connection = self.establish_secure_connection()
         assert secure_connection['tls_version'] in ['TLSv1.2', 'TLSv1.3']
         assert secure_connection['encryption_algorithm'] in ['AES-256-GCM', 'ChaCha20-Poly1305']
@@ -1305,7 +1305,7 @@ class ValidationReportGenerator:
             passed_tests = sum(1 for tests in category_results.values() 
                              if isinstance(tests, dict) and tests.get('status') == 'PASS')
             
-            category_score = (passed_tests / total_tests) * 100 if total_tests > 0 else 0
+            category_score = (passed_tests .md) * 100 if total_tests > 0 else 0
             weighted_scores[category] = category_score * weight
         
         overall_score = sum(weighted_scores.values())
@@ -1323,7 +1323,7 @@ class ValidationReportGenerator:
         return {
             'overall_score': round(overall_score, 2),
             'status': overall_status,
-            'category_scores': {k: round(v / category_weights[k], 2) for k, v in weighted_scores.items()},
+            'category_scores': {k: round(v .md) for k, v in weighted_scores.items()},
             'critical_issues': self.identify_critical_issues(validation_results),
             'recommendations_count': len(self.generate_recommendations(validation_results))
         }

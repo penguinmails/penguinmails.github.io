@@ -663,9 +663,9 @@ class CampaignPerformanceCalculator {
     const conversionRateWeight = 0.3;
     const roasWeight = 0.4;
     
-    const normalizedCTR = Math.min(metrics.ctr / 0.05, 1); // Normalize to 5% CTR
-    const normalizedConversionRate = Math.min(metrics.conversionRate / 0.1, 1); // Normalize to 10% CVR
-    const normalizedROAS = Math.min(metrics.roas / 3, 1); // Normalize to 3:1 ROAS
+    const normalizedCTR = Math.min(metrics.ctr .md); // Normalize to 5% CTR
+    const normalizedConversionRate = Math.min(metrics.conversionRate .md); // Normalize to 10% CVR
+    const normalizedROAS = Math.min(metrics.roas .md); // Normalize to 3:1 ROAS
     
     return (normalizedCTR * ctrWeight + 
             normalizedConversionRate * conversionRateWeight + 

@@ -56,7 +56,7 @@ These development guidelines ensure consistent, maintainable, and scalable code 
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── common/         # Generic components (Button, Input, etc.)
+│   ├── common.md)
 │   ├── forms/          # Form-related components
 │   ├── layout/         # Layout components
 │   └── domain/         # Domain-specific components
@@ -167,17 +167,17 @@ const useUserStore = createStore((set) => ({
 // services/userService.ts
 export class UserService {
   async getUsers(params?: UserQuery): Promise<User[]> {
-    const response = await api.get('/users', { params });
+    const response = await api.get('.md);
     return response.data;
   }
 
   async createUser(userData: CreateUserRequest): Promise<User> {
-    const response = await api.post('/users', userData);
+    const response = await api.post('.md);
     return response.data;
   }
 
   async updateUser(id: string, updates: UpdateUserRequest): Promise<User> {
-    const response = await api.patch(`/users/${id}`, updates);
+    const response = await api.patch(`/users.md);
     return response.data;
   }
 }
@@ -217,7 +217,7 @@ describe('UserCard', () => {
   };
 
   it('renders user information', () => {
-    render(<UserCard user={mockUser} />);
+    render(<UserCard user={mockUser} .md);
     
     expect(screen.getByText('John Doe')).toBeInTheDocument();
     expect(screen.getByText('john@example.com')).toBeInTheDocument();
@@ -225,9 +225,9 @@ describe('UserCard', () => {
 
   it('calls onEdit when edit button is clicked', () => {
     const mockOnEdit = jest.fn();
-    render(<UserCard user={mockUser} onEdit={mockOnEdit} />);
+    render(<UserCard user={mockUser} onEdit={mockOnEdit} .md);
     
-    fireEvent.click(screen.getByRole('button', { name: /edit/i }));
+    fireEvent.click(screen.getByRole('button', { name: /edit.md));
     
     expect(mockOnEdit).toHaveBeenCalledWith(mockUser);
   });
@@ -487,10 +487,10 @@ Types: feat, fix, docs, style, refactor, test, chore
 ## Related Documents
 - [API Reference](api_reference)) - API usage and integration
 - [Architecture Overview](architecture_overview)) - System design principles
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration)) - Unified security and privacy practices
-- [Traffic Security Matrix](../../compliance-security/enterprise/traffic-security-matrix)) - Keying and traffic classification guidance
-- [SOP Guidelines](../../compliance-security/detailed-compliance/sop-guidelines)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture and controls
+- [Security & Privacy Integration](../../compliance-security/enterprise.md)) - Unified security and privacy practices
+- [Traffic Security Matrix](../../compliance-security/enterprise.md)) - Keying and traffic classification guidance
+- [SOP Guidelines](../../compliance-security/detailed-compliance.md)) - Operational procedures
 
 ## Security Development Lifecycle
 
@@ -757,7 +757,7 @@ def upgrade():
 
 ## DevOps and Deployment
 
-### CI/CD Pipeline (⭐⭐⭐)
+### CI.md)
 
 **GitHub Actions Workflow:**
 ```yaml
@@ -869,7 +869,7 @@ from app.services.database import DatabaseService
 from app.services.cache import CacheService
 
 def setup_health_checks(app: FastAPI):
-    @app.get("/health")
+    @app.get(".md)
     async def health_check():
         try:
             # Database connectivity
@@ -1132,7 +1132,7 @@ export class MobilePerformanceOptimizer {
     
     // Progressive Web App features
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
+      navigator.serviceWorker.register('.md);
     }
   }
 }
@@ -1167,22 +1167,22 @@ export class MobilePerformanceOptimizer {
 ## Resources and References
 
 ### Internal Documentation
-- [Security Measures & Privacy Policies](../security/security-privacy))
-- [Analytics Implementation](../analytics/phase-3c-implementation-complete))
-- [AI Personalization Engine](../ai/ai-personalization-engine))
-- [Mobile Experience Validation](../analytics/mobile-experience-validation))
+- [Security Measures & Privacy Policies](...md)
+- [Analytics Implementation](...md)
+- [AI Personalization Engine](...md)
+- [Mobile Experience Validation](...md)
 
 ### External Resources
-- [OWASP Security Guidelines](https://owasp.org/www-project-top-ten/)
-- [RESTful API Design Principles](https://restfulapi.net/)
-- [PostgreSQL Performance Tuning](https://wiki.postgresql.org/wiki/Performance_Optimization)
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
+- [OWASP Security Guidelines](https://owasp.org/www-project-top-ten.md)
+- [RESTful API Design Principles](https://restfulapi.net.md)
+- [PostgreSQL Performance Tuning](https://wiki.postgresql.org/wiki.md)
+- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices.md)
 
 ### Development Tools
-- [VS Code Extensions](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Python Testing Framework](https://docs.pytest.org/)
-- [JavaScript Testing Tools](https://jestjs.io/)
-- [API Documentation Tools](https://swagger.io/)
+- [VS Code Extensions](https://marketplace.visualstudio.com.md)
+- [Python Testing Framework](https://docs.pytest.org.md)
+- [JavaScript Testing Tools](https://jestjs.io.md)
+- [API Documentation Tools](https://swagger.io.md)
 
 ---
 

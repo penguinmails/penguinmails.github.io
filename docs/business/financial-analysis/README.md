@@ -15,11 +15,11 @@ This directory contains comprehensive financial analysis files that provide deep
 ## Progressive Disclosure Flow
 
 ### 📊 Deep Analysis Documents
-- [**Financial Analysis Benchmarks**](./financial-analysis-benchmarks) - Comprehensive industry benchmarks (≤300 lines)
-- [**ROI Calculator Detailed**](./roi-calculator-detailed) - Advanced financial modeling tools (≤300 lines)
-- [**Cost Analysis Overview**](./cost-analysis-overview) - Strategic cost breakdown analysis (≤200 lines)
-- [**Cost Implementation**](./cost-implementation) - Implementation cost management (≤300 lines)
-- [**Personnel Analysis**](./personnel-analysis) - Workforce impact and cost analysis (≤300 lines)
+- [**Financial Analysis Benchmarks**](..md) - Comprehensive industry benchmarks (≤300 lines)
+- [**ROI Calculator Detailed**](..md) - Advanced financial modeling tools (≤300 lines)
+- [**Cost Analysis Overview**](..md) - Strategic cost breakdown analysis (≤200 lines)
+- [**Cost Implementation**](..md) - Implementation cost management (≤300 lines)
+- [**Personnel Analysis**](..md) - Workforce impact and cost analysis (≤300 lines)
 
 ### 🎯 Financial Analysis Path
 1. **Surface Level**: Start with `../core/roi-calculator` for basic ROI
@@ -43,10 +43,10 @@ This directory contains comprehensive financial analysis files that provide deep
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core/) - Executive financial summaries
-- [Implementation Guide](../implementation/) - Technical cost implementation
-- [Procurement & Compliance](../procurement-compliance/) - Compliance cost analysis
-- [Performance Analysis](../performance/) - Cost-performance relationships
+- [Core Business Documents](../core.md) - Executive financial summaries
+- [Implementation Guide](../implementation.md) - Technical cost implementation
+- [Procurement & Compliance](../procurement-compliance.md) - Compliance cost analysis
+- [Performance Analysis](../performance.md) - Cost-performance relationships
 
 ---
 

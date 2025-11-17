@@ -23,7 +23,7 @@ This document serves as the central hub for all roadmap information, providing r
 ### 👑 Executive Team
 **Documents**:
 - [`Executive Roadmap`](executive-roadmap) - Strategic investment and business impact
-- [`Roadmap Considerations`](../roadmap-considerations) - Understanding our development approach
+- [`Roadmap Considerations`](...md) - Understanding our development approach
 
 **What You'll Find**:
 - Investment requirements and ROI projections
@@ -49,7 +49,7 @@ This document serves as the central hub for all roadmap information, providing r
 ### 💻 Developer & Operations Team
 **Documents**:
 - [`Developer & Operations Roadmap`](developer-operations-roadmap) - Technical implementation
-- [`Implementation Roadmap`](../implementation/implementation-roadmap) - Technical execution
+- [`Implementation Roadmap`](../implementation.md) - Technical execution
 
 **What You'll Find**:
 - Development timeline and technical requirements
@@ -170,24 +170,24 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🔗 Cross-Document Navigation
 
 ### Strategic Documents
-- [`Business Strategy Overview`](../strategy/overview.md) - Strategic planning framework
-- [`Value Proposition Overview`](../value-proposition/overview.md) - Customer value positioning
-- [`Market Analysis Overview`](../market-analysis/overview) - Market positioning and opportunity
+- [`Business Strategy Overview`](../strategy.md) - Strategic planning framework
+- [`Value Proposition Overview`](../value-proposition.md) - Customer value positioning
+- [`Market Analysis Overview`](../market-analysis.md) - Market positioning and opportunity
 
 ### Implementation Documents
-- [`Implementation Roadmap`](../implementation/implementation-roadmap) - Technical execution plan
-- [`Technical Infrastructure`](../implementation/technical-infrastructure) - Infrastructure planning
-- [`Success Metrics`](../implementation/success-metrics.md) - Success measurement framework
+- [`Implementation Roadmap`](../implementation.md) - Technical execution plan
+- [`Technical Infrastructure`](../implementation.md) - Infrastructure planning
+- [`Success Metrics`](../implementation.md) - Success measurement framework
 
 ### Analytics & Reporting
-- [`Executive Analytics Dashboard`](../product/analytics/executive-analytics-dashboard.md) - KPI tracking
-- [`Marketing Analytics Dashboard`](../marketing/analytics/enhanced-performance-dashboard.md) - Marketing metrics
-- [`ROI Calculator`](../reference/roi-calculator-detailed) - Financial planning tool
+- [`Executive Analytics Dashboard`](../product/analytics.md) - KPI tracking
+- [`Marketing Analytics Dashboard`](../marketing/analytics.md) - Marketing metrics
+- [`ROI Calculator`](../reference.md) - Financial planning tool
 
 ### Customer & Operations
-- [`Customer Success Framework`](../customer-success/strategy/overview.md) - Customer success planning
-- [`Operations Framework`](../operations/strategy/framework.md) - Operational planning
-- [`Competitive Analysis`](../core/competitive-analysis.md) - Competitive positioning
+- [`Customer Success Framework`](../customer-success/strategy.md) - Customer success planning
+- [`Operations Framework`](../operations/strategy.md) - Operational planning
+- [`Competitive Analysis`](../core.md) - Competitive positioning
 
 ---
 
@@ -242,25 +242,25 @@ This document serves as the central hub for all roadmap information, providing r
 ## 📞 Support & Escalation
 
 ### Documentation Issues
-- **Roadmap Philosophy**: [`Roadmap Considerations`](../roadmap-considerations)
-- **Implementation Questions**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
-- **Strategy Questions**: [`Strategy Overview`](../strategy/overview.md)
+- **Roadmap Philosophy**: [`Roadmap Considerations`](...md)
+- **Implementation Questions**: [`Implementation Roadmap`](../implementation.md)
+- **Strategy Questions**: [`Strategy Overview`](../strategy.md)
 
 ### Technical Questions
-- **Development Timeline**: [`Developer & Operations Roadmap`](developer-operations-roadmap.md)
-- **Infrastructure Planning**: [`Technical Infrastructure`](../implementation/technical-infrastructure.md)
-- **Integration Questions**: [`ESP Technical Analysis`](../implementation/esp-technical-analysis.md)
+- **Development Timeline**: [`Developer & Operations Roadmap`](developer-operations-roadmap)
+- **Infrastructure Planning**: [`Technical Infrastructure`](../implementation.md)
+- **Integration Questions**: [`ESP Technical Analysis`](../implementation.md)
 
 ### Business Questions
-- **Investment Planning**: [`Executive Roadmap`](executive-roadmap.md)
-- **Sales Positioning**: [`Marketing Roadmap`](marketing-roadmap.md)
-- **Customer Communication**: [`Customer Success Framework`](../customer-success/strategy/overview.md)
+- **Investment Planning**: [`Executive Roadmap`](executive-roadmap)
+- **Sales Positioning**: [`Marketing Roadmap`](marketing-roadmap)
+- **Customer Communication**: [`Customer Success Framework`](../customer-success/strategy.md)
 
 ---
 
 **Document Classification:** Level 1 - Central Navigation Hub  
 **Review Cycle:** Monthly roadmap updates and quarterly strategic review  
 **Stakeholder Access:** All teams with role-specific sections  
-**Roadmap Philosophy:** [`Roadmap Considerations`](../roadmap-considerations)
+**Roadmap Philosophy:** [`Roadmap Considerations`](...md)
 
 This roadmap index provides central navigation and quick reference for all roadmap information, enabling informed decision-making across all teams and roles.

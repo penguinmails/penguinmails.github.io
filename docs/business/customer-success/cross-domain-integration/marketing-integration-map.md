@@ -310,7 +310,7 @@ topics:
 ---
 
 **Related Documentation:**
-- [CS Cross-Domain Overview](../overview)
-- [Marketing Systems Map](../../../business/marketing/cross-domain-integration/marketing-systems-integration-map)
+- [CS Cross-Domain Overview](...md)
+- [Marketing Systems Map](../../../business/marketing/cross-domain-integration.md)
 
 **Document Classification:** Level 3 - CS-Marketing Integration Analysis

@@ -128,7 +128,7 @@ attachments {
 
 **Storage Optimization**:
 - ✅ Intelligent compression algorithms
-- ✅ Tiered storage (hot/warm/cold)
+- ✅ Tiered storage (hot/warm.md)
 - ✅ Automatic archiving and retention
 - ✅ Efficient binary attachment handling
 

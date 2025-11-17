@@ -25,7 +25,7 @@ last_modified_date: "2025-11-10"
 **👤 Ideal for Startup Founders** - Build sender reputation without hiring email specialists
 **👤 Enterprise-Ready** - Automated compliance and audit trails for large teams
 
-**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition/overview#deliverability-excellence) for comprehensive ROI analysis and competitive positioning.
+**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition.md) for comprehensive ROI analysis and competitive positioning.
 
 ### **The Competitive Advantage**
 While competitors require manual warm-up management and offer no guarantees, PenguinMails delivers:
@@ -34,7 +34,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 - **Enterprise Security**: Compliance and audit trails for enterprise requirements
 - **Predictive Optimization**: AI-powered recommendations for maximum deliverability
 
-**See our [Value Proposition](./docs/business/value-proposition/overview#deliverability-excellence) for detailed ROI analysis and competitive positioning.**
+**See our [Value Proposition](./docs/business/value-proposition.md) for detailed ROI analysis and competitive positioning.**
 
 ---
 
@@ -76,8 +76,8 @@ Unlike manual warm-up processes that often fail, our system uses proven delivera
   (for example: “we are slowing down because recent performance indicates increased risk”).
 
 For a deeper view of how reputation, cost, and monitoring are handled across the platform, see:
-- Strategic and technical framing in [`business-leaders-technical-framework.md`](docs/business/technical-implementation/business-leaders-technical-framework.md)
-- Implementation roadmap details in [`implementation-roadmap.md`](docs/business/implementation/implementation-roadmap.md)
+- Strategic and technical framing in [`business-leaders-technical-framework.md`](docs/business/technical-implementation.md)
+- Implementation roadmap details in [`implementation-roadmap.md`](docs/business/implementation.md)
 
 **Performance & Reputation Dashboard**
 - **Warm-up Progress**: Visual tracking of how accounts move through warm-up stages.
@@ -364,7 +364,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **⭐ Beginner Path: Critical Mistakes**
 **Major errors that destroy deliverability:**
-- **Sending Too Fast**: Starting with high volumes (100+ emails/day) immediately
+- **Sending Too Fast**: Starting with high volumes (100+ emails.md) immediately
 - **Poor Content Quality**: Sales-focused content during warm-up damages reputation
 - **Inconsistent Patterns**: Irregular sending patterns flag accounts as automated
 
@@ -488,13 +488,13 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 Ready to improve your cold email deliverability?
 
 ### **Related Features**
-1. **[Unified Inbox](../unified-inbox/overview/)** - Manage responses from your warmed-up accounts
-2. **[Inbox Rotation](../inbox-rotation/overview/)** - Rotate between multiple email addresses
-3. **[Analytics](../analytics/overview/)** - Track your warm-up progress and performance
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview/)** - Set up new email accounts for warm-up
+1. **[Unified Inbox](../unified-inbox/overview.md)** - Manage responses from your warmed-up accounts
+2. **[Inbox Rotation](../inbox-rotation/overview.md)** - Rotate between multiple email addresses
+3. **[Analytics](../analytics/overview.md)** - Track your warm-up progress and performance
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Set up new email accounts for warm-up
 
 ### **Implementation Resources**
-5. **[Getting Started](../getting-started/)** - Complete your cold email setup
+5. **[Getting Started](../getting-started.md)** - Complete your cold email setup
 
 ### **Prerequisites**
 - **Domain Access**: Ensure you have access to DNS management for your domain

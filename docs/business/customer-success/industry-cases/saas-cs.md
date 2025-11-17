@@ -164,7 +164,7 @@ SaaS organizations require specialized customer success approaches focused on su
 - Monthly health score trending positive
 - NPS ≥50
 
-### Renewal/Expansion Phase (180-365 days)
+### Renewal.md)
 **Objective**: Secure renewal and drive expansion revenue
 
 **Key Activities**:
@@ -256,8 +256,8 @@ SaaS organizations require specialized customer success approaches focused on su
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework)
-- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing)
+- [Customer Success Framework](../strategy.md)
+- [SaaS Marketing Framework](../../marketing/industry-cases.md)
 - [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---

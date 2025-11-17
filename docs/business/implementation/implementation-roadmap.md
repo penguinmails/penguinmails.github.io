@@ -41,12 +41,12 @@ Our strategic implementation framework emphasizes realistic scope management, di
   - Executive validation of encryption strategy
 
 - [ ] **Strategic ESP Selection**
-  - Executive evaluation of Postmark ($15/month) strategic fit
+  - Executive evaluation of Postmark ($15.md) strategic fit
   - Strategic oversight of account and billing setup
   - Executive guidance on sender domain strategy
 
 #### Strategic Monitoring & Compliance Framework
-- [ ] **Strategic Monitoring Intelligence** (Free/Free Tier)
+- [ ] **Strategic Monitoring Intelligence** (Free.md)
   - Executive oversight of email delivery tracking strategy
   - Strategic guidance on bounce/complaint monitoring
   - Executive establishment of performance baseline strategy
@@ -64,8 +64,8 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 #### Strategic Resource Framework
 - **Strategic Technical Leadership**: Executive oversight (20-30 hours strategic planning)
-- **Strategic Operations**: Executive guidance (8-12 hours/month strategic oversight)
-- **Strategic Infrastructure**: Executive budget oversight ($20-25/month strategic investment)
+- **Strategic Operations**: Executive guidance (8-12 hours.md)
+- **Strategic Infrastructure**: Executive budget oversight ($20-25.md)
 
 ---
 
@@ -76,20 +76,20 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 #### Strategic Scaling Intelligence
 - [ ] **Strategic ESP Enhancement**
-  - Executive evaluation of Mailgun Growth ($80-150/month) strategic alignment
+  - Executive evaluation of Mailgun Growth ($80-150.md) strategic alignment
   - Strategic oversight of dedicated IP strategy (if cold email focused)
   - Executive guidance on account scaling and feature optimization
 
 - [ ] **Strategic Infrastructure Enhancement**
-  - Executive oversight of DNS upgrade to Cloudflare Pro ($20/month)
-  - Strategic guidance on Backblaze B2 backup strategy ($6/TB/month)
+  - Executive oversight of DNS upgrade to Cloudflare Pro ($20.md)
+  - Strategic guidance on Backblaze B2 backup strategy ($6/TB.md)
   - Executive oversight of automation strategy implementation
 
 #### Strategic Analytics & Intelligence
 - [ ] **Strategic Monitoring Intelligence**
-  - Executive oversight of Datadog strategic monitoring ($400-600/month)
-  - Strategic guidance on GlockApps inbox testing strategy ($99/month)
-  - Executive oversight of email warmup automation strategy ($79-199/month)
+  - Executive oversight of Datadog strategic monitoring ($400-600.md)
+  - Strategic guidance on GlockApps inbox testing strategy ($99.md)
+  - Executive oversight of email warmup automation strategy ($79-199.md)
 
 - [ ] **Strategic Analytics Framework**
   - Executive oversight of campaign performance tracking strategy
@@ -115,9 +115,9 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 #### Strategic Growth Resource Framework
 - **Strategic Implementation**: Executive oversight (40-60 hours strategic planning)
-- **Strategic Operations**: Executive guidance (40-60 hours/month strategic oversight)
-- **Strategic SDR/Outreach**: Executive strategic alignment (Full-time strategic coordination)
-- **Strategic Infrastructure**: Executive investment oversight ($150-200/month strategic investment)
+- **Strategic Operations**: Executive guidance (40-60 hours.md)
+- **Strategic SDR.md)
+- **Strategic Infrastructure**: Executive investment oversight ($150-200.md)
 
 ---
 
@@ -128,20 +128,20 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 #### Strategic Enterprise Intelligence
 - [ ] **Strategic High-Volume ESP Framework**
-  - Executive evaluation of SendGrid Pro strategic alignment ($500-1,000/month)
+  - Executive evaluation of SendGrid Pro strategic alignment ($500-1,000.md)
   - Strategic oversight of multiple dedicated IP strategy (5-15 for 100K-1M)
   - Executive guidance on strategic load balancing and redundancy
 
 - [ ] **Strategic Enterprise Monitoring**
-  - Executive oversight of Datadog Enterprise strategic monitoring ($1,000+/month)
-  - Strategic guidance on GlockApps Enterprise strategic intelligence ($129+/month)
-  - Executive oversight of Validity Elements strategic reputation monitoring ($525/month)
+  - Executive oversight of Datadog Enterprise strategic monitoring ($1,000+.md)
+  - Strategic guidance on GlockApps Enterprise strategic intelligence ($129+.md)
+  - Executive oversight of Validity Elements strategic reputation monitoring ($525.md)
   - Strategic oversight of Gmail Postmaster Tools strategic integration (free)
 
 #### Strategic Compliance & Security Intelligence
 - [ ] **Strategic Enterprise Compliance**
   - Executive oversight of GDPR/CCPA strategic compliance automation
-  - Strategic guidance on enterprise email archiving strategy (ArcTitan: $4-8/user/month)
+  - Strategic guidance on enterprise email archiving strategy (ArcTitan: $4-8/user.md)
   - Executive oversight of strategic data protection officer consultation
 
 - [ ] **Strategic Security Intelligence**
@@ -170,9 +170,9 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 #### Strategic Scale Resource Framework
 - **Strategic Enterprise Implementation**: Executive oversight (100-150 hours strategic planning)
-- **Strategic Team Operations**: Executive coordination ($18,000-25,000/month strategic personnel)
-- **Strategic Infrastructure**: Executive investment oversight ($1,000-2,000/month strategic investment)
-- **Strategic Compliance & Security**: Executive oversight ($5,000-10,000/month strategic investment)
+- **Strategic Team Operations**: Executive coordination ($18,000-25,000.md)
+- **Strategic Infrastructure**: Executive investment oversight ($1,000-2,000.md)
+- **Strategic Compliance & Security**: Executive oversight ($5,000-10,000.md)
 
 ---
 
@@ -197,22 +197,22 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
 ### Strategic Team Structure Intelligence
 
-#### Strategic Foundation Team (10K emails/month strategic oversight)
+#### Strategic Foundation Team (10K emails.md)
 - **Strategic Marketing Coordinator** (0.3 FTE): $1,500-2,000/month strategic oversight
 - **Strategic Outreach Specialist** (0.5 FTE): $2,000-2,500/month strategic coordination
 - **Strategic Technical Leadership** (0.2 FTE contractor): $1,000/month strategic guidance
 
 **Strategic Monthly Personnel Investment**: $4,500-5,500 strategic oversight
 
-#### Strategic Growth Team (100K emails/month strategic oversight)
-- **Strategic SDR/Outreach Specialist** (1.0 FTE): $4,000-5,000/month strategic alignment
+#### Strategic Growth Team (100K emails.md)
+- **Strategic SDR.md): $4,000-5,000/month strategic alignment
 - **Strategic Email Marketing Specialist** (0.6 FTE): $2,500-3,500/month strategic coordination
 - **Strategic Marketing Operations Manager** (0.2 FTE): $1,000-1,500/month strategic guidance
 
 **Strategic Monthly Personnel Investment**: $7,500-10,000 strategic oversight
 
-#### Strategic Scale Team (500K+ emails/month strategic oversight)
-- **Strategic SDR/Outreach Specialist** (1.5 FTE): $6,000-7,500/month strategic coordination
+#### Strategic Scale Team (500K+ emails.md)
+- **Strategic SDR.md): $6,000-7,500/month strategic coordination
 - **Strategic Email Marketing Specialist** (1.0 FTE): $4,000-5,500/month strategic alignment
 - **Strategic Marketing Operations Manager** (0.8 FTE): $4,000-5,000/month strategic oversight
 - **Strategic Technical Email Specialist** (0.5 FTE): $2,500-3,500/month strategic guidance
@@ -299,7 +299,7 @@ Our strategic implementation framework emphasizes realistic scope management, di
 3. **Strategic Monitoring**: Deliverability and performance monitoring strategic oversight appropriate to each strategic phase
 4. **Strategic Backup**: Automated backup and disaster recovery strategic oversight
 5. **Strategic Executive Security (Nile + Loop Aligned)**:
-   - Strategic 2025 (Strategic Foundation / Strategic Initial Rollout):
+   - Strategic 2025 (Strategic Foundation .md):
      - Strategic use of NileDB as managed IdP for core authentication strategic oversight
      - Strategic introduction of Loop-based email OTP as strategic step-up mechanism for:
        - Executive password reset strategic confirmations,
@@ -309,7 +309,7 @@ Our strategic implementation framework emphasizes realistic scope management, di
      - Strategic treatment of Loop as delivery channel; all OTP validation and policy enforcement strategic oversight in PenguinMails backend
      - Strategic logging of all high-risk OTP flows (request, verification outcome, actor, scope; never the OTP secret) into strategic OLAP `admin_audit_log`
    - Strategic 2026+ (Strategic Demand-Driven Enhancements):
-     - Strategic evaluation of additional strong auth options (WebAuthn/FIDO2, TOTP, Nile-native advanced auth features, risk-based policies)
+     - Strategic evaluation of additional strong auth options (WebAuthn.md)
      - Strategic commitment only when required by enterprise customers or regulatory needs, strategic roadmap alignment
 6. **Strategic Alerting, Revenue Risk Monitoring & Strategic Notification Architecture**:
     - Strategic MVP (2025):
@@ -321,34 +321,34 @@ Our strategic implementation framework emphasizes realistic scope management, di
         - Strategic basic severity levels, throttling, and digesting to prevent strategic alert fatigue
       - Strategic implementation of [`RP-001`] as:
         - Strategic consolidated, opinionated internal "Revenue Risk Overview" built on:
-          - Strategic PostHog business events and integrations delivered via [`BF-003`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:268),
+          - Strategic PostHog business events and integrations delivered via [`BF-003`](tasks/user-stories-framework.md),
           - Strategic internal BI views and OLAP aggregates,
           - Strategic queue-based alert/notification foundation
         - Strategic explicit positioning:
           - NOT a replacement for provider dashboards (Hostwinds, NileDB, ESP consoles) or Stripe/finance systems
           - Positioned as directional internal strategic decision-support
-        - Strategic executives (CFO/RevOps) during MVP expected to:
+        - Strategic executives (CFO.md) during MVP expected to:
           - Strategic continued use of native PostHog/ESP/infra dashboards and their own notifications for stricter real-time or infra-level alerting
       - Strategic implementation of [`RP-005`] in MVP strictly as:
         - Strategic human-in-the-loop deliverability issue detection and response framework:
           - Strategic automated detection and classification of high-risk deliverability signals via OLAP + PostHog
-          - Strategic queue-backed alerts to internal ops/executive surfaces (reusing BF-005)
+          - Strategic queue-backed alerts to internal ops.md)
           - Strategic documented manual playbooks and admin panel workflows for strategic triage and remediation
-          - Strategic issue resolution tracking (MTTA/MTTR) via OLAP and audit logs
+          - Strategic issue resolution tracking (MTTA.md) via OLAP and audit logs
         - Strategic with:
           - No fully automated IP rotation, routing, or tenant messaging
           - All strategic customer communication and remediation steps initiated by humans, logged via `admin_audit_log` where applicable
         - Strategic existing 3rd-party ticketing/helpdesk remains the system of record for support; only light-touch linking/integration is in strategic scope
       - No strategic commitment to WebSockets, mobile push, embedded third-party consoles, or strict sub-second "real-time" guarantees in MVP
-    - Strategic 2026+ (Strategic Scale / Strategic Enterprise Roadmap):
+    - Strategic 2026+ (Strategic Scale .md):
       - Strategic evaluation and, if justified:
         - Strategic WebSocket/SSE-based live alert streams for strategic executive dashboards
         - Strategic expanded multi-channel delivery (SMS, mobile push, chat integrations)
         - Strategic deeper, governed embedding of PostHog/ESP/infra insights into the strategic admin panel
         - Strategic advanced correlation, noise reduction, and workflow integrations
       - Strategic progressive RP-005 automation enhancements:
-        - Strategic separate roadmap stories (e.g., RP-005A/B) for:
-          - Strategic safe, semi-automated remediation flows requiring strategic human approval (e.g., suggested IP/pool changes)
+        - Strategic separate roadmap stories (e.g., RP-005A.md) for:
+          - Strategic safe, semi-automated remediation flows requiring strategic human approval (e.g., suggested IP.md)
           - Strategic carefully scoped auto-actions under strict guardrails and rollback mechanisms
         - Strategic requirements:
           - Strategic mature deliverability and infra analytics (1+ year of stable signals),
@@ -413,10 +413,10 @@ To align RP-003 and related messaging with strategic financial and technical rea
     - Strategic engagement where available,
     - Strategic abuse and policy violation indicators
 - Strategic Execution:
-  - Strategic weekly batch jobs (e.g., Sundays / off-peak)
+  - Strategic weekly batch jobs (e.g., Sundays .md)
   - Strategic runs on OLAP/analytics infrastructure to avoid strategic OLTP impact
 - Strategic Outputs:
-  - Strategic tiered internal reputation per IP/pool (e.g., Healthy / Watch / At Risk / Critical)
+  - Strategic tiered internal reputation per IP/pool (e.g., Healthy / Watch / At Risk .md)
 - Strategic Usage:
   - Strategic drives:
     - Strategic warmup progression recommendations,

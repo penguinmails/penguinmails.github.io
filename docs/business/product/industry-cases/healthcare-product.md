@@ -304,10 +304,10 @@ Healthcare organizations present unique product development challenges requiring
 ---
 
 **Related Documentation:**
-- [Product Strategy Framework](../strategy/framework)
-- [Healthcare Marketing Framework](../../marketing/industry-cases/healthcare-marketing)
-- [Healthcare Customer Success Framework](../../customer-success/industry-cases/healthcare-cs)
-- [Product Cross-Domain Integration](../cross-domain-integration/marketing-integration-map)
+- [Product Strategy Framework](../strategy.md)
+- [Healthcare Marketing Framework](../../marketing/industry-cases.md)
+- [Healthcare Customer Success Framework](../../customer-success/industry-cases.md)
+- [Product Cross-Domain Integration](../cross-domain-integration.md)
 
 ---
 *Level 3: Industry-specific product development implementation for healthcare organizations*

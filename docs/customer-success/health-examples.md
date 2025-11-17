@@ -45,7 +45,7 @@ Proven customer health management examples demonstrating successful retention op
 ### Example 2: Mid-Market Account Upgrade Success
 
 **Account Profile**:
-- Current Plan: Professional tier ($2,400/year)
+- Current Plan: Professional tier ($2,400.md)
 - Health Score: 92 (Healthy)
 - Usage Pattern: Consistently at 85-90% of plan limits
 - Team Size: 8 active users across marketing and sales
@@ -64,7 +64,7 @@ Proven customer health management examples demonstrating successful retention op
 5. **Decision Support** (Week 5): Provided implementation timeline and migration plan
 
 **Outcome**:
-- Successful Upgrade: Professional → Enterprise ($7,200/year)
+- Successful Upgrade: Professional → Enterprise ($7,200.md)
 - Revenue Expansion: $4,800 additional annual revenue (200% increase)
 - Customer Satisfaction: NPS score increased from 8 to 10
 - Expansion Timeline: 35 days from initial conversation to upgrade completion

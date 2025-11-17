@@ -146,20 +146,20 @@ This guide is intentionally:
 ## 🔗 Progressive Disclosure Navigation
 
 **For Executive Decision Making (Level 2):**
-- [🏢 Executive Summary](../core/executive-summary) - Strategic findings and recommendations
-- [💰 ROI Calculator](../core/roi-calculator) - Financial justification and cost analysis
-- [🏆 Competitive Analysis](../core/competitive-analysis) - Provider selection and comparison
+- [🏢 Executive Summary](../core.md) - Strategic findings and recommendations
+- [💰 ROI Calculator](../core.md) - Financial justification and cost analysis
+- [🏆 Competitive Analysis](../core.md) - Provider selection and comparison
 - [🛡️ Security & Compliance](security-compliance) - Risk assessment and compliance overview
 
 **For Procurement & Legal Review (Level 3):**
 - [📋 Detailed Procurement Guide](procurement-guide-detailed) - Complete enterprise evaluation framework
 - [📋 Compliance Framework](compliance-framework) - Detailed regulatory analysis
-- [🏗️ Technical Infrastructure](../implementation/technical-infrastructure) - Technical specifications and requirements
+- [🏗️ Technical Infrastructure](../implementation.md) - Technical specifications and requirements
 
 **For Industry-Specific Evaluation:**
-- [🏥 Healthcare Business Case](../industry-business-cases/healthcare) - Healthcare-specific requirements
-- [🏛️ Financial Services Case](../industry-business-cases/financial-services) - Financial services compliance
-- [🚀 SaaS Business Case](../industry-business-cases/saas) - SaaS-specific considerations
+- [🏥 Healthcare Business Case](../industry-business-cases.md) - Healthcare-specific requirements
+- [🏛️ Financial Services Case](../industry-business-cases.md) - Financial services compliance
+- [🚀 SaaS Business Case](../industry-business-cases.md) - SaaS-specific considerations
 
 ---
 

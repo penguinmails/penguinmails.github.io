@@ -8,7 +8,7 @@ This document establishes the basic marketing analytics framework for directiona
 **Target Audience:** Marketing Analysts, Campaign Managers, Performance Teams
 **Analytics Focus:** Basic tracking, directional insights, and manual optimization processes
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) analytics capabilities. Level 3+ advanced analytics are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) analytics capabilities. Level 3+ advanced analytics are addressed in the roadmap section below.
 
 ---
 
@@ -153,7 +153,7 @@ class MarketingPerformanceTracker implements CampaignPerformanceTracker {
 
 ---
 
-*Advanced predictive analytics capabilities (AI/ML infrastructure, real-time prediction engines, automated optimization) are included in the Post-MVP Roadmap section above.*
+*Advanced predictive analytics capabilities (AI.md) are included in the Post-MVP Roadmap section above.*
 
 **Document Classification:** Level 2 - Basic Analytics Framework
 **Analytics Approval:** Required for basic analytics implementation and performance tracking

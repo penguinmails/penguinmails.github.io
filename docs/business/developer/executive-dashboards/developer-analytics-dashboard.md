@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 5 - Executive Dashboards and Analytics  
 **Target Audience**: Analytics Teams, Developer Leadership, Executive Analytics Management  
 **Business Impact Priority**: High - Real-time developer analytics and performance insights responsibility  
-**Framework Integration**: [Developer Analytics Framework](../analytics/framework) | [Developer Operations Framework](../operations/framework) | [Developer Strategy Framework](../strategy/framework) | [Developer Cross-Domain Integration Maps](../cross-domain-integration/) | [Executive Analytics Framework](../executive-analytics/framework
+**Framework Integration**: [Developer Analytics Framework](../analytics.md) | [Developer Operations Framework](../operations.md) | [Developer Strategy Framework](../strategy.md) | [Developer Cross-Domain Integration Maps](../cross-domain-integration.md) | [Executive Analytics Framework](../executive-analytics/framework
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Performance tracking systems activated and optimized
 - Analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](../executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](../executive-analytics.md)
 
 #### Analytics Point 1.1.2: Developer Performance Insights
 **Analytics Requirement**: Developer Performance Insight Standards  
@@ -54,7 +54,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Optimization guidance systems activated and validated
 - Performance insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Analytics Point 1.1.3: Developer Engagement Analytics
 **Analytics Requirement**: Developer Engagement Analytics Standards  
@@ -66,7 +66,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Participation and success metrics systems activated and optimized
 - Engagement analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Operations Framework](../operations/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 ### 1.2 Platform Analysis Excellence
 
@@ -80,7 +80,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Platform performance and optimization systems activated and optimized
 - Analysis dashboards validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](../executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](../executive-analytics.md)
 
 #### Analysis Point 1.2.2: API Usage Analytics
 **Analysis Requirement**: Developer API Usage Analytics Standards  
@@ -92,7 +92,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Integration patterns and success metrics systems activated and validated
 - API usage validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Cross-Domain Integration Maps](../cross-domain-integration/)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Cross-Domain Integration Maps](../cross-domain-integration.md)
 
 #### Analysis Point 1.2.3: Developer Success Tracking Dashboards
 **Analysis Requirement**: Developer Success Tracking Dashboard Standards  
@@ -104,7 +104,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Performance advancement monitoring systems activated and optimized
 - Success tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Operations Framework](../operations/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 ---
 
@@ -122,7 +122,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Performance achievement systems activated and optimized
 - Efficiency monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](../operations/framework.md) + [Developer Analytics Framework](../analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations.md) + [Developer Analytics Framework](../analytics.md)
 
 #### Monitoring Point 2.1.2: Optimization Analytics Dashboards
 **Monitoring Requirement**: Developer Optimization Analytics Standards  
@@ -134,7 +134,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Advancement tracking systems activated and validated
 - Optimization analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Monitoring Point 2.1.3: Developer Performance Analytics
 **Monitoring Requirement**: Developer Performance Analytics Standards  
@@ -146,7 +146,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Optimization intelligence systems activated and optimized
 - Performance analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](../executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](../executive-analytics.md)
 
 ### 2.2 Predictive Analytics Excellence
 
@@ -160,7 +160,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Achievement prediction systems activated and validated
 - Predictive insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Predictive Analytics](../executive-predictive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Predictive Analytics](../executive-predictive-analytics.md)
 
 #### Analytics Point 2.2.2: Engagement Analytics Dashboards
 **Analytics Requirement**: Developer Engagement Analytics Dashboard Standards  
@@ -172,7 +172,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Optimization opportunity systems activated and optimized
 - Engagement analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Operations Framework](../operations/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 #### Analytics Point 2.2.3: Integration Opportunity Tracking
 **Analytics Requirement**: Developer Integration Opportunity Standards  
@@ -184,7 +184,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Collaboration potential systems activated and validated
 - Opportunity tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Cross-Domain Integration Maps](../cross-domain-integration/)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Cross-Domain Integration Maps](../cross-domain-integration.md)
 
 ---
 
@@ -202,7 +202,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Performance ranking systems activated and optimized
 - Platform scoring validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Measurement Point 3.1.2: Success Probability Analytics
 **Measurement Requirement**: Developer Success Probability Standards  
@@ -214,7 +214,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Achievement forecasting systems activated and validated
 - Probability analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Predictive Analytics](../executive-predictive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Predictive Analytics](../executive-predictive-analytics.md)
 
 #### Measurement Point 3.1.3: Developer Performance Optimization Intelligence
 **Measurement Requirement**: Developer Performance Intelligence Standards  
@@ -226,7 +226,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Guidance systems activation and optimization
 - Performance intelligence validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 ### 3.2 Real-time Analytics Excellence
 
@@ -240,7 +240,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Response capability systems activated and optimized
 - Real-time insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](../executive-analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Executive Analytics Framework](../executive-analytics.md)
 
 #### Excellence Point 3.2.2: Comprehensive Analytics Tracking
 **Excellence Requirement**: Developer Comprehensive Analytics Standards  
@@ -252,7 +252,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Optimization across functions systems activated and optimized
 - Comprehensive tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Operations Framework](../operations/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 #### Excellence Point 3.2.3: Optimization Guidance Systems
 **Excellence Requirement**: Developer Optimization Guidance Standards  
@@ -264,7 +264,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Advancement tracking systems activated and validated
 - Guidance systems validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 ---
 

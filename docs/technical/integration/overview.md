@@ -13,7 +13,7 @@ description: "Complete API documentation and third-party integration guides for 
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
-**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features/) and [analytics tracking](../../core-features/analytics/overview/) to provide seamless workflow automation that scales with your business.
+**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features.md) and [analytics tracking](../../core-features/analytics/overview.md) to provide seamless workflow automation that scales with your business.
 
 PenguinMails provides a comprehensive integration ecosystem designed for developers, with **RESTful APIs, SDKs for major programming languages, webhook systems, and extensive third-party integrations**. Build custom solutions with confidence using our enterprise-grade API infrastructure.
 
@@ -27,10 +27,10 @@ Enable **seamless integration** with existing business systems while providing t
 ### **RESTful API Design**
 
 **API Foundation**
-- **Base URL**: `https://api.penguinmails.com/v1/` (production/) / `https://sandbox-api.penguinmails.com/v1/` (testing/)
+- **Base URL**: `https://api.penguinmails.com/v1/` (production.md) / `https://sandbox-api.penguinmails.com/v1/` (testing.md)
 - **Authentication**: JWT tokens, API keys, and OAuth 2.0 support
-- **Rate Limiting**: Tiered rate limits (1K to 1M requests/hour) with intelligent throttling
-- **Versioning**: URL-based versioning (v1, v2/) with 6-month backward compatibility
+- **Rate Limiting**: Tiered rate limits (1K to 1M requests.md) with intelligent throttling
+- **Versioning**: URL-based versioning (v1, v2.md) with 6-month backward compatibility
 
 **Response Format Standardization**
 ```json
@@ -311,7 +311,7 @@ import hmac
 import hashlib
 
 def verify_webhook_signature(payload: str, signature: str, secret: str) -> bool:
-    expected_signature = hmac.new(/)
+    expected_signature = hmac.new(.md)
         secret.encode('utf-8'),
         payload.encode('utf-8'),
         hashlib.sha256
@@ -351,7 +351,7 @@ campaign = client.campaigns.create(campaign_data)
 print(f"Campaign created: {campaign.id}")
 
 # Send email
-email = Email(/)
+email = Email(.md)
     to="user@example.com",
     subject="Hello!",
     content="<p>Welcome to PenguinMails!</p>"
@@ -372,7 +372,7 @@ from penguinmails.ai import AIOptimizer
 
 # AI-powered content optimization
 ai_optimizer = AIOptimizer(client)
-optimized_content = ai_optimizer.optimize_content(/)
+optimized_content = ai_optimizer.optimize_content(.md)
     content=campaign_data["content"],
     audience={
         "demographics": {"age_range": "25-45"},
@@ -381,7 +381,7 @@ optimized_content = ai_optimizer.optimize_content(/)
 )
 ```
 
-### **JavaScript/Node.js SDK (⭐⭐⭐)**
+### **JavaScript.md)**
 
 **Installation & Basic Usage**
 ```bash
@@ -439,7 +439,7 @@ function CampaignCreator() {
     }
   };
 
-  return (/)
+  return (.md)
     <form onSubmit={handleCreateCampaign}>
       {/* Campaign form fields */}
     </form>
@@ -447,7 +447,7 @@ function CampaignCreator() {
 }
 
 function App() {
-  return (/)
+  return (.md)
     <PenguinMailsProvider apiKey="pk_live_abc123def456">
       <CampaignCreator />
     </PenguinMailsProvider>
@@ -570,7 +570,7 @@ class HubSpotPenguinMailsIntegration:
         """Sync HubSpot contact to PenguinMails with AI enrichment."""
         try:
             # Get additional contact data
-            contact_data = self.hubspot.crm.contacts.basic_api.get_by_id(/)
+            contact_data = self.hubspot.crm.contacts.basic_api.get_by_id(.md)
                 contact_id=hubspot_contact.id,
                 properties=['email', 'firstname', 'lastname', 'company', 'lifecyclestage']
             )
@@ -654,7 +654,7 @@ class ShopifyPenguinMailsIntegration:
 **Zapier Webhook Handler**
 ```javascript
 const express = require('express');
-const { PenguinMails } = require('@penguinmails/sdk');
+const { PenguinMails } = require('@penguinmails.md);
 
 const app = express();
 const emailClient = new PenguinMails({
@@ -662,7 +662,7 @@ const emailClient = new PenguinMails({
 });
 
 // Handle Zapier webhook triggers
-app.post('/webhooks/zapier/trigger', async (req, res) => {
+app.post('/webhooks/zapier.md) => {
   try {
     const { trigger_type, data } = req.body;
     
@@ -742,7 +742,7 @@ X-RateLimit-Reset: 1701429600
 
 **Python Error Handling**
 ```python
-from penguinmails.exceptions import (/)
+from penguinmails.exceptions import (.md)
     PenguinMailsError,
     ValidationError,
     RateLimitError,
@@ -846,10 +846,10 @@ class TestPenguinMailsAPI:
 ## 📚 Additional Resources
 
 ### **Developer Documentation**
-- **[API Reference](advanced-integrations/)** - Complete API documentation
-- **[SDK Documentation](development-resources/)** - Detailed SDK guides
-- **[Webhook Guide](advanced-integrations/webhook-guide/)** - Webhook implementation guide
-- **[Testing Framework](development-resources/testing-framework/)** - Testing tools and best practices
+- **[API Reference](advanced-integrations.md)** - Complete API documentation
+- **[SDK Documentation](development-resources.md)** - Detailed SDK guides
+- **[Webhook Guide](advanced-integrations/webhook-guide.md)** - Webhook implementation guide
+- **[Testing Framework](development-resources/testing-framework.md)** - Testing tools and best practices
 
 ### **Support & Community**
 - **Developer Support**: developer-support@penguinmails.com
@@ -868,5 +868,5 @@ class TestPenguinMailsAPI:
 *Our comprehensive integration ecosystem ensures that PenguinMails seamlessly fits into your existing technology stack while providing the flexibility to build custom solutions that drive your business forward.*
 
 ---
-*Previous: [Technical Operations Overview](../operations/overview/) | Next: [Core Features Overview](../../core-features/) →*
+*Previous: [Technical Operations Overview](../operations/overview.md) | Next: [Core Features Overview](../../core-features.md) →*
 ---

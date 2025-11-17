@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 4 - Cross-Domain Integration  
 **Target Audience**: Developer Teams, Marketing Teams, Cross-Functional Leadership  
 **Business Impact Priority**: High - Marketing coordination and developer engagement optimization  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) | [Marketing Strategy Framework](docs/business/marketing/strategy/framework) | [Developer Operations Framework](docs/business/developer/operations/framework) | [Marketing Operations Framework](docs/business/marketing/operations/framework) | [Developer Analytics Framework](docs/business/developer/analytics/framework) | [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) | [Marketing Strategy Framework](docs/business/marketing/strategy.md) | [Developer Operations Framework](docs/business/developer/operations.md) | [Marketing Operations Framework](docs/business/marketing/operations.md) | [Developer Analytics Framework](docs/business/developer/analytics.md) | [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Developer engagement enhancement systems activated
 - Content planning validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Marketing Strategy Framework](docs/business/marketing/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Marketing Strategy Framework](docs/business/marketing/strategy.md)
 
 #### Integration Point 1.1.2: Developer Campaign Targeting
 **Integration Flow**: Marketing Analytics ↔ Developer Segmentation  
@@ -54,7 +54,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Engagement optimization systems activated
 - Targeting validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 #### Integration Point 1.1.3: Technical Value Proposition Development
 **Integration Flow**: Product Marketing ↔ Developer Value Communication  
@@ -66,7 +66,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Developer value communication optimization systems activated
 - Value proposition validation completed and verified
 
-**Business Framework Integration**: [Marketing Strategy Framework](docs/business/marketing/strategy/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Marketing Strategy Framework](docs/business/marketing/strategy.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 ### 1.2 Campaign Execution Coordination
 
@@ -80,7 +80,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Platform coordination enhancement systems activated
 - Execution validation completed and optimized
 
-**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 #### Integration Point 1.2.2: Technical Support Integration
 **Integration Flow**: Marketing Support ↔ Developer Support Systems  
@@ -92,7 +92,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Resource optimization systems activated
 - Support integration validation completed and verified
 
-**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations/framework.md) + [Developer Support Framework]
+**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations.md) + [Developer Support Framework]
 
 #### Integration Point 1.2.3: Developer Feedback Integration
 **Integration Flow**: Marketing Research ↔ Developer Analytics  
@@ -104,7 +104,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Campaign optimization systems activated
 - Feedback integration validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 ---
 
@@ -122,7 +122,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Technical excellence integration systems activated
 - Engagement planning validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Marketing Strategy Framework](docs/business/marketing/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Marketing Strategy Framework](docs/business/marketing/strategy.md)
 
 #### Integration Point 2.1.2: Platform Adoption Coordination
 **Integration Flow**: Marketing Adoption Programs ↔ Developer Platform Management  
@@ -134,7 +134,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Technical readiness optimization systems activated
 - Adoption coordination validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Marketing Operations Framework](docs/business/marketing/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Marketing Operations Framework](docs/business/marketing/operations.md)
 
 #### Integration Point 2.1.3: Success Measurement Integration
 **Integration Flow**: Marketing KPIs ↔ Developer Success Metrics  
@@ -146,7 +146,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Engagement quality enhancement systems activated
 - Measurement integration validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 ### 2.2 Engagement Excellence Protocols
 
@@ -160,7 +160,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Lifecycle enhancement systems activated
 - Journey optimization validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Marketing Operations Framework](docs/business/marketing/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Marketing Operations Framework](docs/business/marketing/operations.md)
 
 #### Integration Point 2.2.2: Technical Content Excellence
 **Integration Flow**: Content Marketing ↔ Technical Documentation  
@@ -172,7 +172,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Impact maximization systems activated
 - Content excellence validation completed and verified
 
-**Business Framework Integration**: [Marketing Strategy Framework](docs/business/marketing/strategy/framework) + [Developer Strategy Framework](docs/business/developer/strategy/framework)
+**Business Framework Integration**: [Marketing Strategy Framework](docs/business/marketing/strategy.md) + [Developer Strategy Framework](docs/business/developer/strategy.md)
 
 #### Integration Point 2.2.3: Platform Acceleration Coordination
 **Integration Flow**: Marketing Growth ↔ Developer Platform Enhancement  
@@ -184,7 +184,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Growth target optimization systems activated
 - Acceleration coordination validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Marketing Operations Framework](docs/business/marketing/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Marketing Operations Framework](docs/business/marketing/operations.md)
 
 ---
 
@@ -202,7 +202,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Seamless transition systems activated
 - Handoff validation completed and verified
 
-**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Marketing Operations Framework](docs/business/marketing/operations.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 #### Integration Point 3.1.2: Technical Readiness Assessment
 **Integration Flow**: Marketing Qualification ↔ Developer Platform Assessment  
@@ -214,7 +214,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Success probability optimization systems activated
 - Readiness assessment validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 #### Integration Point 3.1.3: Onboarding Success Tracking
 **Integration Flow**: Marketing Attribution ↔ Developer Success Metrics  
@@ -226,7 +226,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Success achievement optimization systems activated
 - Success tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 ### 3.2 Success Coordination Excellence
 
@@ -240,7 +240,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Technical support optimization systems activated
 - Success initiation validation completed and optimized
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Marketing Strategy Framework](docs/business/marketing/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Marketing Strategy Framework](docs/business/marketing/strategy.md)
 
 #### Integration Point 3.2.2: Platform Coordination Excellence
 **Integration Flow**: Marketing Excellence ↔ Developer Platform Excellence  
@@ -252,7 +252,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Performance optimization systems activated
 - Coordination excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Marketing Operations Framework](docs/business/marketing/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Marketing Operations Framework](docs/business/marketing/operations.md)
 
 ---
 
@@ -270,7 +270,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Value creation optimization systems activated
 - ROI measurement validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 #### Integration Point 4.1.2: Cross-Functional Performance Dashboard
 **Integration Flow**: Marketing KPIs ↔ Developer Success Metrics  
@@ -282,7 +282,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Holistic performance systems activated
 - Dashboard validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 #### Integration Point 4.1.3: Coordination Success Tracking
 **Integration Flow**: Marketing Effectiveness ↔ Developer Engagement Quality  
@@ -294,7 +294,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Excellence achievement systems activated
 - Success tracking validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Marketing Operations Framework](docs/business/marketing/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Marketing Operations Framework](docs/business/marketing/operations.md)
 
 ### 4.2 Continuous Improvement Integration
 
@@ -308,7 +308,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Mutual enhancement systems activated
 - Initiative validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Marketing Strategy Framework](docs/business/marketing/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Marketing Strategy Framework](docs/business/marketing/strategy.md)
 
 #### Integration Point 4.2.2: Platform Value Measurement
 **Integration Flow**: Marketing Value ↔ Developer Platform Value  
@@ -320,7 +320,7 @@ The Developer-Marketing Integration Map establishes comprehensive coordination p
 - Success measurement optimization systems activated
 - Value measurement validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Marketing Analytics Framework](docs/business/marketing/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Marketing Analytics Framework](docs/business/marketing/analytics.md)
 
 ---
 

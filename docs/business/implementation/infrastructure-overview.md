@@ -19,7 +19,7 @@ This section provides the high-level, canonical explanation of how PenguinMails 
 
 - NileDB (Database & Auth Layer):
   - Used as a shared managed Postgres/auth provider.
-  - Billed to PenguinMails at the platform/project level (flat tiers plus included storage and overages).
+  - Billed to PenguinMails at the platform.md).
   - No reliable per-tenant metering API for precise “database cost per customer”.
   - Therefore:
     - Database spend is treated as shared core infrastructure overhead.
@@ -46,7 +46,7 @@ These rules define how we approximate costs. They are:
     - Default target plan: Hostwinds Unmanaged Linux VPS 1 CPU / 2 GB / 50 GB / 2 TB at **$9.99/month** as the minimum viable instance for production SMTP workloads.
     - The previously tested ~$4.99 tier is considered insufficient for stable Mailu under real workloads and should not be treated as the planning baseline.
   - Source:
-    - Derived from the actual selected Hostwinds plan (and any upgrades), using official pricing (e.g. price list / billing cycle) normalized to a monthly equivalent.
+    - Derived from the actual selected Hostwinds plan (and any upgrades), using official pricing (e.g. price list .md) normalized to a monthly equivalent.
   - Governance:
     - Set/updated on instance creation, resize/upgrade, or significant configuration change.
     - Periodically reconciled (e.g. monthly) against Hostwinds invoices to detect drift.
@@ -62,7 +62,7 @@ These rules define how we approximate costs. They are:
   - Internal baseline:
     - Use **$4.99/month per dedicated IP** as the standard modeled cost based on observed Hostwinds behavior for dedicated IPs.
   - Implementation:
-    - Treat $4.99 as a configurable constant (config table / env), owned by Finance & Operations.
+    - Treat $4.99 as a configurable constant (config table .md), owned by Finance & Operations.
     - Permit overrides for:
       - Special contracts or bundled pricing.
       - Future empirical validation or provider pricing changes.
@@ -83,7 +83,7 @@ These rules define how we approximate costs. They are:
       - Detection of abnormal infra usage.
 - Cadence:
   - Updated:
-    - On infra events (create/resize/assign).
+    - On infra events (create/resize.md).
     - On a regular billing cycle cadence using Hostwinds invoices.
 - Ownership:
   - Finance & Operations:
@@ -105,8 +105,8 @@ To keep messaging consistent and accurate:
   - “Customer-facing invoices are produced by our billing system according to plans and agreements; internal cost models are for our own operations, not direct pass-through metering.”
 
 For SQL-level definitions, implementation details, and governance specifics, refer to:
-- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide`](docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide)
-- Hostwinds Unmanaged Linux VPS reference pricing: [https://www.hostwinds.com/vps/unmanaged-linux](https://www.hostwinds.com/vps/unmanaged-linux)
+- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide`](docs/implementation-technical/database-infrastructure.md)
+- Hostwinds Unmanaged Linux VPS reference pricing: [https://www.hostwinds.com/vps/unmanaged-linux](https://www.hostwinds.com/vps.md)
 
 ---
 
@@ -247,13 +247,13 @@ graph LR
 ### Architecture Decision Framework
 
 **Choose Self-Hosted When**:
-- **Volume**: 500K+ emails/month (cost optimization critical)
+- **Volume**: 500K+ emails.md)
 - **Technical Team**: Strong email infrastructure expertise
 - **Customization**: Need specific integrations or workflows
 - **Compliance**: Have dedicated compliance and legal resources
 
 **Choose Managed ESP When**:
-- **Volume**: Under 500K emails/month (cost efficiency less critical)
+- **Volume**: Under 500K emails.md)
 - **Technical Team**: Limited email infrastructure expertise
 - **Speed to Market**: Need rapid deployment and scaling
 - **Compliance**: Want built-in compliance tools and processes
@@ -283,10 +283,10 @@ graph LR
 
 | Infrastructure Type | Monthly Cost | Technical Overhead | Compliance Cost | Total TCO |
 |-------------------|-------------|-------------------|-----------------|-----------|
-| **Self-Hosted VPS** | $20-200 | High (40h/month) | $500-2,000 | $1,000-3,000 |
-| **Managed ESP (Mailgun)** | $300-1,500 | Low (5h/month) | $200-500 | $500-2,000 |
-| **Managed ESP (SendGrid)** | $400-2,000 | Low (5h/month) | $200-500 | $600-2,500 |
-| **AWS SES** | $100-800 | Medium (20h/month) | $500-1,500 | $800-2,500 |
+| **Self-Hosted VPS** | $20-200 | High (40h.md) | $500-2,000 | $1,000-3,000 |
+| **Managed ESP (Mailgun)** | $300-1,500 | Low (5h.md) | $200-500 | $500-2,000 |
+| **Managed ESP (SendGrid)** | $400-2,000 | Low (5h.md) | $200-500 | $600-2,500 |
+| **AWS SES** | $100-800 | Medium (20h.md) | $500-1,500 | $800-2,500 |
 
 **Optimization Strategies**:
 1. **Hybrid Approach**: Self-hosted for volume, ESP for deliverability

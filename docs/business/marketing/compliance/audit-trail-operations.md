@@ -19,7 +19,7 @@ This document establishes audit trail requirements with clear separation between
 **MVP Focus:** Weekly monitoring, manual processes, basic reporting
 **Post-MVP Focus:** Real-time analytics, ML detection, automated compliance
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) audit trail capabilities. Level 3+ advanced compliance features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) audit trail capabilities. Level 3+ advanced compliance features are addressed in the roadmap section below.
 
 ---
 

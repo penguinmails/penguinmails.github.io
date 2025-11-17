@@ -320,12 +320,12 @@ The Enhanced Operations Automation Framework provides comprehensive advanced ope
 **Review Cycle:** Quarterly operations automation review and annual operations automation optimization
 
 **Related Automation Documents:**
-- [Operations Automation Overview](../overview) - Operations automation context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and automation integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with automation integration
-- [Operations Development Framework](../development/framework) - Operations development with automation coordination
-- [Process Standardization Framework](../standardization/process-standardization-framework) - Process standardization with automation integration
-- [Operations Excellence Standards Framework](../standardization/excellence-standards-framework) - Excellence standards with automation coordination
+- [Operations Automation Overview](...md) - Operations automation context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and automation integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with automation integration
+- [Operations Development Framework](../development.md) - Operations development with automation coordination
+- [Process Standardization Framework](../standardization.md) - Process standardization with automation integration
+- [Operations Excellence Standards Framework](../standardization.md) - Excellence standards with automation coordination
 
 **Next Steps:**
 1. **Automation Assessment:** Conduct comprehensive assessment of current automation capabilities, tools, and processes

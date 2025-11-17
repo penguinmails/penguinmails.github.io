@@ -32,7 +32,7 @@ LOW        | INT                      | UUID                      | UUID
 Distribution Examples:
 - UUID (Security-focused): 75% of tables - User data, credentials, financial records
 - BIGINT (Analytics performance): 9% of tables - High-traffic analytics, logs
-- VARCHAR (External/Natural): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
+- VARCHAR (External.md): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
 - Composite (Multi-tenant): 10% of tables - Tenant associations, junction tables
 ```
 
@@ -59,23 +59,23 @@ Distribution Examples:
 
 ## Traffic Assessment
 
-### CRITICAL Traffic (>100K ops/hour)
+### CRITICAL Traffic (>100K ops.md)
 - **Content Operations**: `content_objects`, `email_opens`
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `email_messages` (Content)
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `content_inbox_message_refs` (Content)
 - **Message Processing**: `inbox_message_refs`, `email_clicks`
 - **Analytics**: OLAP tables during processing
 
-### HIGH Traffic (10K-100K ops/hour)
+### HIGH Traffic (10K-100K ops.md)
 - **Business Operations**: `campaigns`, `job_logs`
 - **Queue Processing**: `jobs`, `job_metrics`
 - **Content Access**: `content_access_log`
 
-### MEDIUM Traffic (1K-10K ops/hour)
+### MEDIUM Traffic (1K-10K ops.md)
 - **Configuration**: `user_preferences`, `tenant_config`
 - **Monitoring**: `queue_health`, `worker_performance`
 
-### LOW Traffic (<1K ops/hour)
+### LOW Traffic (<1K ops.md)
 - **Static Data**: `plans`, `permissions`, `staff_roles`
 - **Administrative**: `system_config`, `feature_flags`
 
@@ -241,12 +241,12 @@ Natural key available (name, external ID)?
 ## Security Traffic Matrix Integration
 
 ### Traffic Assessment Matrix
-- **CRITICAL Traffic (>100K ops/hour)**: `content_objects`, `inbox_message_refs`, `email_opens`
-- **HIGH Traffic (10K-100K ops/hour)**: `campaigns`, `job_logs`, `content_access_log`
-- **MEDIUM Traffic (1K-10K ops/hour)**: `user_preferences`, `tenant_config`, `queue_health`
+- **CRITICAL Traffic (>100K ops.md)**: `content_objects`, `inbox_message_refs`, `email_opens`
+- **HIGH Traffic (10K-100K ops.md)**: `campaigns`, `job_logs`, `content_access_log`
+- **MEDIUM Traffic (1K-10K ops.md)**: `user_preferences`, `tenant_config`, `queue_health`
 
 ### Infrastructure Protection Measures
-- **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests/hour default)
+- **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests.md)
 - **Traffic Filtering**: UFW firewall rules with specific IP restrictions for SSH access
 - **DDoS Protection**: Cloudflare integration for traffic analysis and mitigation
 - **VPN Access**: Mandatory VPN for infrastructure management and database access
@@ -291,7 +291,7 @@ The current primary key strategy demonstrates excellent architectural judgment a
 For future table creation, use this matrix to ensure consistent and appropriate primary key selection across the system.
 
 **Related Documents**
-- [Security Framework](./security-framework.md) - Comprehensive security architecture
-- [Security & Privacy Integration](./security-privacy-integration.md) - Unified security and privacy approach
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Regulatory compliance workflows
+- [Security Framework](..md) - Comprehensive security architecture
+- [Security & Privacy Integration](..md) - Unified security and privacy approach
+- [Compliance Procedures](../detailed-compliance.md) - Regulatory compliance workflows
 ---

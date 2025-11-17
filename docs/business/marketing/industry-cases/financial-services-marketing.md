@@ -33,7 +33,7 @@ This document provides specialized marketing guidance for financial services org
 
 ### Regulatory Requirements
 
-#### Securities Compliance (SEC/FINRA)
+#### Securities Compliance (SEC.md)
 ```
 Marketing Compliance Checklist:
 □ All investment recommendations include proper risk disclosures

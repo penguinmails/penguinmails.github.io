@@ -304,7 +304,7 @@ Professional Services KPIs:
   Project Delivery:
     - On-time delivery rate (>95%)
     - Scope adherence (>98%)
-    - Client satisfaction score (>4.5/5)
+    - Client satisfaction score (>4.5.md)
     - Project profitability margin
 
   Relationship Health:
@@ -397,10 +397,10 @@ SaaS KPIs Dashboard:
     - Gross Revenue Retention (GRR)
 
   Engagement Metrics:
-    - DAU/MAU ratio (>40%)
+    - DAU.md)
     - Feature adoption rate (>70%)
     - Time to first value (<24 hours)
-    - User satisfaction score (>4.0/5)
+    - User satisfaction score (>4.0.md)
 ```
 
 ### SaaS Customer Journey Template

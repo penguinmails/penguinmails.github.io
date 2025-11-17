@@ -160,7 +160,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 
 ### **Input Assistance**
 - **Field labels** clearly associated with inputs
-- **Input formats** clearly specified (e.g., "MM/DD/YYYY")
+- **Input formats** clearly specified (e.g., "MM/DD.md)
 - **Help text** available for complex fields
 - **Autocomplete** for repetitive inputs
 
@@ -402,10 +402,10 @@ export function Button({
 ---
 
 ## Related Documents
-- [Design System](../../design/design-system.md) - Complete design system overview
-- [Design Tokens](../../design/design-tokens.md) - Design token specifications
-- [Interaction Patterns](../../design/design-system.md) - User interaction frameworks
-- [UI Library](../../design/ui-library.md) - Component usage guidelines
+- [Design System](../../design.md) - Complete design system overview
+- [Design Tokens](../../design.md) - Design token specifications
+- [Interaction Patterns](../../design.md) - User interaction frameworks
+- [UI Library](../../design.md) - Component usage guidelines
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---

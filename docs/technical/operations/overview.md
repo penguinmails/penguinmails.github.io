@@ -13,7 +13,7 @@ description: "Deployment, monitoring, and operational procedures for enterprise-
 
 **Operational Excellence**: Backed by **enterprise-grade monitoring and alerting** with <15 minute incident response times, automated rollback procedures, and 24/7 operational oversight that ensures your campaigns are always protected.
 
-**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](../architecture/overview/) and [API integration](../integration/overview/) to provide seamless, worry-free campaign management.
+**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](../architecture/overview.md) and [API integration](../integration/overview.md) to provide seamless, worry-free campaign management.
 
 PenguinMails operates on a comprehensive technical operations framework designed for **99.9% uptime guarantee** with zero-downtime deployments, automated monitoring, and enterprise-grade disaster recovery capabilities.
 
@@ -301,5 +301,5 @@ Migration Types:
 *Technical Operations ensures that PenguinMails delivers enterprise-grade reliability, performance, and security. Our comprehensive operational framework guarantees 99.9% uptime while continuously optimizing for cost efficiency and customer satisfaction.*
 
 ---
-*Previous: [Technical Architecture Overview](../architecture/overview/) | Next: [Integration & API Overview](../integration/overview/) →*
+*Previous: [Technical Architecture Overview](../architecture/overview.md) | Next: [Integration & API Overview](../integration/overview.md) →*
 ---

@@ -129,26 +129,26 @@ last_modified_date: "2025-11-10"
 ## Strategic Integration Framework
 
 ### **Strategic Business Integration**
-- [Strategic Business Overview](../business/strategy/overview) - Strategic alignment and executive objectives
-- [Strategic Market Intelligence](../business/market-analysis/overview) - Strategic market positioning and opportunities
-- [Strategic Value Proposition](../business/value-proposition/overview) - Strategic competitive differentiation
-- [Strategic Leadership Framework](../business/user-personas/overview) - Strategic leadership analysis and guidance
+- [Strategic Business Overview](../business/strategy.md) - Strategic alignment and executive objectives
+- [Strategic Market Intelligence](../business/market-analysis.md) - Strategic market positioning and opportunities
+- [Strategic Value Proposition](../business/value-proposition.md) - Strategic competitive differentiation
+- [Strategic Leadership Framework](../business/user-personas.md) - Strategic leadership analysis and guidance
 
 ### **Strategic Technical Integration**
-- [Strategic Technical Overview](../technical/architecture/overview) - Strategic system design and planning
-- [Strategic Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture) - Strategic data planning and analytics systems
-- [Strategic Infrastructure Planning](../technical/architecture/detailed-technical/infrastructure-operations) - Strategic system management and planning
-- [Strategic Integration Planning](../technical/architecture/detailed-technical/integration-guide) - Strategic technology integration planning
+- [Strategic Technical Overview](../technical/architecture.md) - Strategic system design and planning
+- [Strategic Analytics Architecture](../technical/architecture/detailed-technical.md) - Strategic data planning and analytics systems
+- [Strategic Infrastructure Planning](../technical/architecture/detailed-technical.md) - Strategic system management and planning
+- [Strategic Integration Planning](../technical/architecture/detailed-technical.md) - Strategic technology integration planning
 
 ### **Strategic User Experience Integration**
-- [Strategic User Overview](../user-experience-journeys/README) - Strategic user experience flows and planning
-- [Strategic User Onboarding](../user-experience-journeys/detailed-journeys/onboarding-journey) - Strategic user activation and planning
-- [Strategic User Intelligence](../user-experience-journeys/detailed-journeys/user-interaction-patterns-ux-design) - Strategic UX optimization and planning
+- [Strategic User Overview](../user-experience-journeys.md) - Strategic user experience flows and planning
+- [Strategic User Onboarding](../user-experience-journeys/detailed-journeys.md) - Strategic user activation and planning
+- [Strategic User Intelligence](../user-experience-journeys/detailed-journeys.md) - Strategic UX optimization and planning
 
 ### **Strategic Compliance Integration**
-- [Strategic Compliance Overview](../compliance-security/overview) - Strategic regulatory compliance and planning
-- [Strategic Security Framework](../compliance-security/enterprise/security-framework) - Strategic security planning and monitoring
-- [Strategic Privacy Planning](../compliance-security/international/data-privacy-policy) - Strategic privacy compliance and planning
+- [Strategic Compliance Overview](../compliance-security.md) - Strategic regulatory compliance and planning
+- [Strategic Security Framework](../compliance-security/enterprise.md) - Strategic security planning and monitoring
+- [Strategic Privacy Planning](../compliance-security/international.md) - Strategic privacy compliance and planning
 
 ---
 
@@ -156,9 +156,9 @@ last_modified_date: "2025-11-10"
 
 Navigate to specific strategic analytics areas:
 
-- **[Strategic Performance Analytics](./analytics-performance/)** → Strategic analytics and performance intelligence
-- **[Strategic Operations Intelligence](./operations-management/)** → Strategic operational insights and planning
-- **[Strategic Team Intelligence](./team-performance/)** → Strategic team coordination and performance guidance
+- **[Strategic Performance Analytics](./analytics-performance.md)** → Strategic analytics and performance intelligence
+- **[Strategic Operations Intelligence](./operations-management.md)** → Strategic operational insights and planning
+- **[Strategic Team Intelligence](./team-performance.md)** → Strategic team coordination and performance guidance
 
 ---
 
@@ -166,9 +166,9 @@ Navigate to specific strategic analytics areas:
 
 Navigate to specific strategic analytics areas:
 
-- **[Strategic Performance Analytics](./analytics-performance/README.md)** → Strategic analytics and performance intelligence
-- **[Strategic Operations Intelligence](./operations-management/README.md)** → Strategic operational insights and planning
-- **[Strategic Team Intelligence](./team-performance/README.md)** → Strategic team coordination and performance guidance
+- **[Strategic Performance Analytics](./analytics-performance.md)** → Strategic analytics and performance intelligence
+- **[Strategic Operations Intelligence](./operations-management.md)** → Strategic operational insights and planning
+- **[Strategic Team Intelligence](./team-performance.md)** → Strategic team coordination and performance guidance
 
 ---
 

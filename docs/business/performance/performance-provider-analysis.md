@@ -81,7 +81,7 @@ last_modified_date: "2025-12-19"
 
 **Expected Performance Metrics**:
 - **Deliverability**: 85-92% with proper technical management
-- **Best Value**: At high volumes (100K+ emails/month)
+- **Best Value**: At high volumes (100K+ emails.md)
 - **Cost Advantage**: 50-80% cost savings vs managed ESPs
 
 ---

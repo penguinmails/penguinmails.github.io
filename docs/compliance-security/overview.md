@@ -46,19 +46,19 @@ last_modified_date: "2025-11-10"
 
 ### **📋 Detailed Compliance Procedures**
 Start here for implementation-focused guidance:
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Regulatory workflows and procedures
-- [Accessibility Guidelines](../detailed-compliance/accessibility-guidelines.md) - WCAG 2.1 AA compliance standards
-- [SOP Guidelines](../detailed-compliance/sop-guidelines.md) - Standard operating procedures
+- [Compliance Procedures](../detailed-compliance.md) - Regulatory workflows and procedures
+- [Accessibility Guidelines](../detailed-compliance.md) - WCAG 2.1 AA compliance standards
+- [SOP Guidelines](../detailed-compliance.md) - Standard operating procedures
 
 ### **🏢 Enterprise Security Framework**
 Advanced security architecture and implementation:
-- [Security Framework](../enterprise/security-framework.md) - Comprehensive security architecture
-- [Security & Privacy Integration](../enterprise/security-privacy-integration.md) - Unified security and privacy approach
-- [Traffic Security Matrix](../enterprise/traffic-security-matrix.md) - Database security strategy framework
+- [Security Framework](../enterprise.md) - Comprehensive security architecture
+- [Security & Privacy Integration](../enterprise.md) - Unified security and privacy approach
+- [Traffic Security Matrix](../enterprise.md) - Database security strategy framework
 
 ### **🌍 International Standards**
 Global compliance and privacy frameworks:
-- [Data Privacy Policy](../international/data-privacy-policy.md) - Customer-facing privacy standards
+- [Data Privacy Policy](../international.md) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -83,7 +83,7 @@ Global compliance and privacy frameworks:
 - **Content Protection**: Encrypted email delivery and storage
 
 ### **🚨 Incident Response**
-- **24/7 Monitoring**: Security Operations Center (SOC) coverage
+- **24.md) coverage
 - **Breach Response**: GDPR, CCPA, and CASL notification requirements
 - **Recovery Procedures**: Business continuity and disaster recovery
 
@@ -116,16 +116,16 @@ Global compliance and privacy frameworks:
 ## **Integration Points**
 
 ### **Business Operations**
-- [Business Strategy](../business/strategy/overview.md) - Security alignment with business objectives
-- [Market Analysis](../business/competitive-intelligence/overview.md) - Compliance as competitive advantage
+- [Business Strategy](../business/strategy.md) - Security alignment with business objectives
+- [Market Analysis](../business/competitive-intelligence.md) - Compliance as competitive advantage
 
 ### **Core Features**
-- [Inbox Rotation](../core-features/inbox-rotation/overview.md) - Secure email infrastructure
-- [Unified Inbox](../core-features/unified-inbox/overview.md) - Multi-tenant security isolation
+- [Inbox Rotation](../core-features/inbox-rotation.md) - Secure email infrastructure
+- [Unified Inbox](../core-features/unified-inbox.md) - Multi-tenant security isolation
 
 ### **Technical Implementation**
-- [Infrastructure Documentation](../technical/architecture/detailed-technical/infrastructure-operations.md) - Technical architecture
-- [Development Guidelines](../implementation-technical/development-guidelines/development-standards.md) - Secure development practices
+- [Infrastructure Documentation](../technical/architecture/detailed-technical.md) - Technical architecture
+- [Development Guidelines](../implementation-technical/development-guidelines.md) - Secure development practices
 
 ---
 
@@ -148,11 +148,11 @@ Global compliance and privacy frameworks:
 ## **Support & Resources**
 
 ### **Documentation**
-- [Security Framework](../enterprise/security-framework.md) - Comprehensive security architecture and controls
-- [Security & Privacy Integration](../enterprise/security-privacy-integration.md) - Unified security and privacy model
-- [Traffic Security Matrix](../enterprise/traffic-security-matrix.md) - Traffic and key selection security framework
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Implementation workflows
-- [Data Privacy Policy](../international/data-privacy-policy.md) - Customer-facing privacy information
+- [Security Framework](../enterprise.md) - Comprehensive security architecture and controls
+- [Security & Privacy Integration](../enterprise.md) - Unified security and privacy model
+- [Traffic Security Matrix](../enterprise.md) - Traffic and key selection security framework
+- [Compliance Procedures](../detailed-compliance.md) - Implementation workflows
+- [Data Privacy Policy](../international.md) - Customer-facing privacy information
 
 ### **Training & Awareness**
 - **Security Training**: Regular training on OWASP Top 10 and secure development

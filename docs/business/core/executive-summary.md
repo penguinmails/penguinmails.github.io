@@ -56,24 +56,24 @@ last_modified_date: "2025-12-19"
 
 #### Revenue Protection Investments
 **Focus**: Protecting existing revenue streams and preventing losses
-- **Email Monitoring Tools**: ESP deliverability monitoring ($50-300/month)
-- **Failed Payment Alerts**: Basic notification systems ($25-100/month)
-- **Usage Drop Detection**: Simple analytics tools for pattern recognition ($100-500/month)
-- **Customer Retention Tools**: Process-driven churn analysis and alerts ($200-800/month)
+- **Email Monitoring Tools**: ESP deliverability monitoring ($50-300.md)
+- **Failed Payment Alerts**: Basic notification systems ($25-100.md)
+- **Usage Drop Detection**: Simple analytics tools for pattern recognition ($100-500.md)
+- **Customer Retention Tools**: Process-driven churn analysis and alerts ($200-800.md)
 
 #### Cost Optimization Investments
 **Focus**: Monitoring and optimizing infrastructure costs
-- **Budget Tracking Systems**: Manual cost monitoring and reporting tools ($25-150/month)
-- **Vendor Performance Monitoring**: ESP reliability and cost-effectiveness tracking ($50-200/month)
-- **Resource Utilization Analytics**: Basic email volume and efficiency metrics ($100-400/month)
-- **Compliance Cost Management**: Regulatory compliance monitoring ($100-500/month)
+- **Budget Tracking Systems**: Manual cost monitoring and reporting tools ($25-150.md)
+- **Vendor Performance Monitoring**: ESP reliability and cost-effectiveness tracking ($50-200.md)
+- **Resource Utilization Analytics**: Basic email volume and efficiency metrics ($100-400.md)
+- **Compliance Cost Management**: Regulatory compliance monitoring ($100-500.md)
 
 #### Strategic Decision Support Investments
 **Focus**: Supporting long-term strategic planning and decision making
-- **Competitive Intelligence Tools**: External market analysis and benchmarking ($100-300/month)
-- **ROI Tracking Systems**: Process-driven investment analysis and reporting ($50-200/month)
-- **Strategic Planning Tools**: Resource allocation and investment planning support ($100-500/month)
-- **Executive Reporting**: Dashboard and presentation tools for stakeholder communication ($100-400/month)
+- **Competitive Intelligence Tools**: External market analysis and benchmarking ($100-300.md)
+- **ROI Tracking Systems**: Process-driven investment analysis and reporting ($50-200.md)
+- **Strategic Planning Tools**: Resource allocation and investment planning support ($100-500.md)
+- **Executive Reporting**: Dashboard and presentation tools for stakeholder communication ($100-400.md)
 
 ---
 
@@ -155,8 +155,8 @@ last_modified_date: "2025-12-19"
 - [⚖️ Compliance Overview](compliance-overview:1) - Regulatory oversight for business leaders
 
 **For technical coordination:**
-- [🔧 Business Leaders Technical Framework](technical-implementation/business-leaders-technical-framework:1) - Technical coordination guide
-- [📋 Executive API Overview](implementation-technical/api/executive-api:1) - Data access capabilities and constraints
+- [🔧 Business Leaders Technical Framework](technical-implementation.md) - Technical coordination guide
+- [📋 Executive API Overview](implementation-technical/api.md) - Data access capabilities and constraints
 
 ---
 

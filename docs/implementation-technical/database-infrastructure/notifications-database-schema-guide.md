@@ -3,12 +3,12 @@
 This guide defines the canonical schema and responsibilities for the dedicated Notifications & System Events database.
 
 It consolidates and replaces:
-- [`notifications-architecture`](docs/implementation-technical/database-infrastructure/notifications-architecture:1)
-- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure/transactional-emails-and-notifications:1)
+- [`notifications-architecture`](docs/implementation-technical/database-infrastructure.md)
+- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure.md)
 
 Refer to:
-- [`database-schema-guide`](docs/implementation-technical/database-infrastructure/database-schema-guide:1) for the 5-tier overview.
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1) for logging/observability responsibilities.
+- [`database-schema-guide`](docs/implementation-technical/database-infrastructure.md) for the 5-tier overview.
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md) for logging/observability responsibilities.
 
 ---
 
@@ -31,9 +31,9 @@ The Notifications DB provides:
 
 - Durable, query-optimized state for:
   - User/admin in-app notifications.
-  - Curated system/admin events (incidents, important alerts).
+  - Curated system.md).
 - Fast reads and simple status updates on login/admin dashboards.
-- Bounded retention (short/mid-term).
+- Bounded retention (short.md).
 - A clean separation from OLAP and raw logs.
 
 ---
@@ -65,7 +65,7 @@ The Notifications DB provides:
 
 ## 3. Notifications Schema
 
-Represents user/admin visible notifications (in-app, optionally backing email/push).
+Represents user/admin visible notifications (in-app, optionally backing email.md).
 
 ### 3.1 Table: notifications
 
@@ -74,7 +74,7 @@ CREATE TABLE notifications (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
     -- Scope
-    user_id UUID,                         -- Recipient user (nullable for tenant/global)
+    user_id UUID,                         -- Recipient user (nullable for tenant.md)
     tenant_id UUID NOT NULL,
 
     -- Semantics
@@ -127,10 +127,10 @@ Integration:
   - Triggered by domain events (e.g., campaign completed, quota nearing).
 - Delivery:
   - A notification can enqueue jobs:
-    - SEND_NOTIFICATION (email/push).
+    - SEND_NOTIFICATION (email.md).
 - Logging:
   - Notification send/interaction events:
-    - Go to external logging/analytics (not this DB) if needed.
+    - Go to external logging.md) if needed.
 
 ---
 
@@ -241,7 +241,7 @@ Key principles:
 
 Redis is used for:
 
-- Over-sending / anti-abuse (e.g. password reset attempts):
+- Over-sending .md):
   - Keys like:
     - `auth:password-reset:{email}:tries`
     - `auth:verification-email:{email}:tries`
@@ -281,7 +281,7 @@ To avoid scope creep:
 ## 8. Mermaid ER Diagram
 
 See:
-- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure/notifications-mermaid-er:1)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
 for the visual ER representation of this schema.
 
 ---

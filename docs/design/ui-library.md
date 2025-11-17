@@ -377,7 +377,7 @@ interface AlertProps {
   message="Your Stripe account setup is incomplete."
   action={{
     label: "Complete Setup",
-    onClick: () => navigate('/settings/billing')
+    onClick: () => navigate('/settings.md)
   }}
   dismissible
 />
@@ -411,7 +411,7 @@ toast.success({
   message: "Your campaign has been successfully created and scheduled.",
   action: {
     label: "View Campaign",
-    onClick: () => navigate(`/campaigns/${campaignId}`)
+    onClick: () => navigate(`/campaigns.md)
   }
 });
 ```
@@ -547,7 +547,7 @@ interface EmptyStateProps {
   description="Create your first email campaign to get started."
   action={{
     label: "Create Campaign",
-    onClick: () => navigate('/campaigns/new')
+    onClick: () => navigate('/campaigns.md)
   }}
 />
 ```
@@ -628,20 +628,20 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('renders with default props', () => {
-    render(<Button>Click me</Button>);
-    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
+    render(<Button>Click me<.md);
+    expect(screen.getByRole('button', { name: /click me.md)).toBeInTheDocument();
   });
 
   it('handles click events', () => {
     const handleClick = jest.fn();
-    render(<Button onClick={handleClick}>Click me</Button>);
+    render(<Button onClick={handleClick}>Click me<.md);
 
-    fireEvent.click(screen.getByRole('button', { name: /click me/i }));
+    fireEvent.click(screen.getByRole('button', { name: /click me.md));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('shows loading state', () => {
-    render(<Button loading>Submit</Button>);
+    render(<Button loading>Submit<.md);
     expect(screen.getByRole('button')).toBeDisabled();
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
@@ -704,10 +704,10 @@ export const Loading: Story = {
 ---
 
 ## Related Documents
-- [Component Library](../component-library) - Reusable component catalog
-- [Design System](../design-system) - Complete design system overview
-- [Design Tokens](../design-tokens) - Design token specifications
-- [Accessibility Guidelines](../accessibility-guidelines) - Inclusive design standards
+- [Component Library](...md) - Reusable component catalog
+- [Design System](...md) - Complete design system overview
+- [Design Tokens](...md) - Design token specifications
+- [Accessibility Guidelines](...md) - Inclusive design standards
 
 **Keywords**: UI library, component library, design system, reusable components, React components, component patterns, design tokens, accessibility
 ---

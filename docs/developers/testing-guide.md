@@ -97,7 +97,7 @@ async function performanceTest() {
 
 **Performance Testing Criteria**:
 - Response time targets (<200ms for 95% of requests)
-- Throughput requirements (1000+ requests/second)
+- Throughput requirements (1000+ requests.md)
 - Error rate thresholds (<1% under normal load)
 - Memory and resource utilization limits
 

@@ -15,10 +15,10 @@ This directory contains the essential business documents that serve as the prima
 ## Progressive Disclosure Flow
 
 ### 📋 Entry Point Documents
-- [**Executive Summary**](./executive-summary) - Comprehensive business case overview (158 lines)
-- [**Cost Comparisons**](./cost-comparisons) - Financial comparison with alternatives (≤200 lines)
-- [**Competitive Analysis**](./competitive-analysis) - Market positioning and vendor comparison (≤200 lines)
-- [**ROI Calculator**](./roi-calculator) - Financial modeling and return calculations (≤200 lines)
+- [**Executive Summary**](..md) - Comprehensive business case overview (158 lines)
+- [**Cost Comparisons**](..md) - Financial comparison with alternatives (≤200 lines)
+- [**Competitive Analysis**](..md) - Market positioning and vendor comparison (≤200 lines)
+- [**ROI Calculator**](..md) - Financial modeling and return calculations (≤200 lines)
 
 ### 🎯 Decision Path
 1. **Start with** `executive-summary.md` for complete business case overview
@@ -40,12 +40,12 @@ This directory contains the essential business documents that serve as the prima
 ---
 
 **Related Directories:**
-- [Industry Business Cases](../industry-business-cases/) - Vertical-specific analysis
-- [Implementation Guide](../implementation/) - Technical implementation details
-- [Procurement & Compliance](../procurement-compliance/) - Enterprise evaluation and compliance
-- [Performance Analysis](../performance/) - Metrics and optimization
-- [Financial Analysis](../financial-analysis/) - Deep financial modeling
-- [Reference Materials](../reference/) - Templates and methodology
+- [Industry Business Cases](../industry-business-cases.md) - Vertical-specific analysis
+- [Implementation Guide](../implementation.md) - Technical implementation details
+- [Procurement & Compliance](../procurement-compliance.md) - Enterprise evaluation and compliance
+- [Performance Analysis](../performance.md) - Metrics and optimization
+- [Financial Analysis](../financial-analysis.md) - Deep financial modeling
+- [Reference Materials](../reference.md) - Templates and methodology
 
 ---
 

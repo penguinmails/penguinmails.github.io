@@ -19,7 +19,7 @@ This document provides specialized marketing guidance for e-commerce organizatio
 **MVP Focus:** Basic segmentation, manual processes, weekly optimization
 **Post-MVP Focus:** Real-time personalization, ML analytics, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) e-commerce marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) e-commerce marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 

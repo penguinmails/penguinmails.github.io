@@ -565,7 +565,7 @@ class TestEmailDeliveryBug:
 
 #### Bug Fix Implementation
 ```python
-# app/services/email_service.py (FIXED VERSION)
+# app/services.md)
 class EmailService:
     def send_campaign(self, campaign_data):
         """Send email campaign with proper validation."""
@@ -774,7 +774,7 @@ from app.main import app
 
 @pytest.mark.asyncio
 async def test_optimization_api_integration():
-    async with AsyncClient(app=app, base_url="http://test") as client:
+    async with AsyncClient(app=app, base_url="http:/.md) as client:
         response = await client.post("/api/v1/ai/optimize-content", json={
             "content": {
                 "subject": "Product Update",
@@ -896,14 +896,14 @@ class EmailCampaignAnalytics(BaseModel):
         """Calculate delivery rate as percentage."""
         if self.sent_count == 0:
             return 0.0
-        return (self.delivered_count / self.sent_count) * 100
+        return (self.delivered_count .md) * 100
     
     @property
     def open_rate(self) -> float:
         """Calculate open rate as percentage of delivered emails."""
         if self.delivered_count == 0:
             return 0.0
-        return (self.opened_count / self.delivered_count) * 100
+        return (self.opened_count .md) * 100
     
     def to_dict(self, include_calculated: bool = True) -> Dict[str, Union[int, float, str]]:
         """Convert analytics to dictionary format.
@@ -935,7 +935,7 @@ class EmailCampaignAnalytics(BaseModel):
         return data
 ```
 
-### TypeScript/JavaScript Standards (⭐⭐⭐)
+### TypeScript.md)
 
 #### Interface and Type Definitions
 ```typescript
@@ -1342,7 +1342,7 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 };
 ```
 
-### CSS/Styling Standards (⭐⭐)
+### CSS.md)
 
 #### Design System Integration
 ```scss
@@ -1607,7 +1607,7 @@ class TestEmailService:
         assert all(result.status == EmailStatus.SENT for result in results)
         
         # Verify batch processing
-        expected_batches = (250 + 99) // 100  # 3 batches (100, 100, 50)
+        expected_batches = (250 + 99) /.md)
         assert self.mock_smtp_client.send_email_batch.call_count == expected_batches
 ```
 
@@ -1628,7 +1628,7 @@ from app.models.user import User
 async def test_client():
     """Create test client with test database."""
     # Setup test database
-    engine = create_engine("postgresql://test:test@localhost/test_db")
+    engine = create_engine("postgresql://test:test@localhost.md)
     TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     
     # Create tables
@@ -1645,7 +1645,7 @@ async def test_client():
     
     app.dependency_overrides[get_database] = get_test_database
     
-    async with AsyncClient(app=app, base_url="http://test") as client:
+    async with AsyncClient(app=app, base_url="http:/.md) as client:
         yield client
     
     # Cleanup
@@ -1661,7 +1661,7 @@ async def test_user(test_client):
         "last_name": "User"
     }
     
-    response = await test_client.post("/api/v1/auth/register", json=user_data)
+    response = await test_client.post("/api/v1/auth.md)
     assert response.status_code == 201
     
     # Login to get token
@@ -1804,7 +1804,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Campaign Workflow E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
     // Login before each test
-    await page.goto('/login');
+    await page.goto('.md);
     await page.fill('[data-testid="email"]', 'test@example.com');
     await page.fill('[data-testid="password"]', 'testpass123');
     await page.click('[data-testid="login-button"]');
@@ -1821,7 +1821,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
     // Fill campaign details
     await page.fill('[data-testid="campaign-name"]', 'E2E Test Campaign');
     await page.fill('[data-testid="campaign-subject"]', 'E2E Test Subject Line');
-    await page.fill('[data-testid="content-html"]', '<h1>E2E Test Campaign</h1><p>This is an end-to-end test.</p>');
+    await page.fill('[data-testid="content-html"]', '<h1>E2E Test Campaign</h1><p>This is an end-to-end test.<.md);
 
     // Add recipients
     await page.click('[data-testid="add-recipient"]');
@@ -1862,7 +1862,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
     // Fill basic campaign details
     await page.fill('[data-testid="campaign-name"]', 'AI Optimization Test');
     await page.fill('[data-testid="campaign-subject"]', 'Basic Subject Line');
-    await page.fill('[data-testid="content-html"]', '<h1>AI Test Content</h1><p>Basic content for optimization.</p>');
+    await page.fill('[data-testid="content-html"]', '<h1>AI Test Content</h1><p>Basic content for optimization.<.md);
 
     // Add recipient
     await page.click('[data-testid="add-recipient"]');
@@ -1887,12 +1887,12 @@ test.describe('Campaign Workflow E2E Tests', () => {
     const optimizedContent = await page.inputValue('[data-testid="content-html"]');
 
     expect(optimizedSubject).not.toBe('Basic Subject Line');
-    expect(optimizedContent).not.toBe('<h1>AI Test Content</h1><p>Basic content for optimization.</p>');
+    expect(optimizedContent).not.toBe('<h1>AI Test Content</h1><p>Basic content for optimization.<.md);
 
     // Verify optimization score display
     await expect(page.locator('[data-testid="optimization-score"]')).toBeVisible();
     const scoreText = await page.textContent('[data-testid="optimization-score"]');
-    expect(scoreText).toMatch(/\d+% improvement/);
+    expect(scoreText).toMatch(/\d+% improvement.md);
   });
 
   test('mobile responsive campaign creation', async ({ page }) => {
@@ -1910,7 +1910,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
     await page.fill('[data-testid="campaign-name-mobile"]', 'Mobile Test Campaign');
     await page.fill('[data-testid="campaign-subject-mobile"]', 'Mobile Test Subject');
     
-    // Test mobile content editor (should be simplified)
+    /.md)
     await page.fill('[data-testid="content-text-mobile"]', 'Mobile test content');
     
     // Add recipient on mobile
@@ -2102,14 +2102,14 @@ except AuthenticationError as e:
 This tutorial will walk you through your first steps with the PenguinMails API, covering authentication, campaign creation, and basic analytics.
 
 ## Prerequisites
-- API key from [Developer Dashboard](https://app.penguinmails.com/developers)
+- API key from [Developer Dashboard](https://app.penguinmails.com.md)
 - Basic knowledge of HTTP requests and JSON
 - Python 3.8+ or JavaScript/Node.js environment
 
 ## Step 1: Authentication
 
 ### Get Your API Key
-1. Log in to your [PenguinMails dashboard](https://app.penguinmails.com)
+1. Log in to your [PenguinMails dashboard](https:/.md)
 2. Navigate to **Settings** → **API Keys**
 3. Click **Create New API Key**
 4. Copy your API key for use in your application
@@ -2283,16 +2283,16 @@ except ValidationError as e:
 Congratulations! You've created and sent your first campaign with PenguinMails. 
 
 ### Recommended Next Steps:
-1. **Explore Analytics**: Learn about [advanced analytics features](./analytics))
-2. **Set Up Webhooks**: Implement [real-time event tracking](./webhooks))
-3. **Optimize Performance**: Discover [AI optimization features](./ai-optimization))
-4. **Integrate with CRM**: Connect with your [existing tools](./integrations))
+1. **Explore Analytics**: Learn about [advanced analytics features](..md)
+2. **Set Up Webhooks**: Implement [real-time event tracking](..md)
+3. **Optimize Performance**: Discover [AI optimization features](..md)
+4. **Integrate with CRM**: Connect with your [existing tools](..md)
 
 ### Additional Resources:
-- [API Reference](./api-reference)) - Complete API documentation
-- [SDK Documentation](./sdk-documentation)) - Language-specific guides
-- [Best Practices Guide](./best-practices)) - Production deployment tips
-- [Community Forum](https://community.penguinmails.com) - Get help and share ideas
+- [API Reference](..md)) - Complete API documentation
+- [SDK Documentation](..md)) - Language-specific guides
+- [Best Practices Guide](..md)) - Production deployment tips
+- [Community Forum](https:/.md) - Get help and share ideas
 ```
 
 ---

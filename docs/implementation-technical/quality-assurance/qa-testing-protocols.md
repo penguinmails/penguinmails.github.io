@@ -105,12 +105,12 @@ describe('User Authentication', () => {
 
   it('should allow valid user login', async () => {
     // Test implementation
-    await page.goto('/login');
+    await page.goto('.md);
     await page.fill('[data-testid="email"]', 'user@example.com');
     await page.fill('[data-testid="password"]', 'password123');
     await page.click('[data-testid="login-button"]');
 
-    await expect(page).toHaveURL('/dashboard');
+    await expect(page).toHaveURL('.md);
   });
 
   it('should show error for invalid credentials', async () => {
@@ -285,11 +285,11 @@ Severity × User Impact × Business Value
 ---
 
 ## Related Documents
-- [Development Standards](../development-guidelines/development-standards)) - Code standards and development practices
-- [SOP Guidelines](../../compliance-security/detailed-compliance/sop-guidelines)) - Standard operating procedures
-- [Security Documentation](../../compliance-security/README)) - Security testing protocols
-- [Infrastructure Documentation](../database-infrastructure/README)) - Testing environment setup
-- [Sprint Retrospective Template](../../operations-analytics/team-performance/sprint-retrospective-template)) - Testing feedback integration
+- [Development Standards](../development-guidelines.md)) - Code standards and development practices
+- [SOP Guidelines](../../compliance-security/detailed-compliance.md)) - Standard operating procedures
+- [Security Documentation](../../compliance-security.md)) - Security testing protocols
+- [Infrastructure Documentation](../database-infrastructure.md)) - Testing environment setup
+- [Sprint Retrospective Template](../../operations-analytics/team-performance.md)) - Testing feedback integration
 
 **Keywords**: quality assurance, testing protocols, automated testing, bug management, performance testing, security testing, accessibility testing, CI/CD integration, test automation, quality metrics
 ---

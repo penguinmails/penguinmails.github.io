@@ -11,10 +11,10 @@ description: "Comprehensive analytics system design and implementation guide"
 
 **Operational Excellence**: Backed by **intelligent monitoring systems** with automated data validation, real-time performance tracking, and comprehensive alerting that ensure 99.9% data accuracy and operational reliability.
 
-**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](../../core-features/analytics/overview.md) through [business intelligence insights](../overview.md) to [advanced optimization recommendations](./implementation-roadmap.md) - providing the data intelligence that powers your success.
+**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](../../core-features/analytics) through [business intelligence insights](../business/analytics/overview) to [advanced optimization recommendations](./implementation-roadmap) - providing the data intelligence that powers your success.
 
 ## Quick Navigation
-- [🏠 **Main Overview**](../overview.md) | [Setup **Infrastructure**](../overview.md) | [🔒 **Security**](../overview.md)
+- [🏠 **Main Overview**](../overview) | [Setup **Infrastructure**](../detailed-technical/infrastructure-operations) | [🔒 **Security**](../compliance-security/overview)
 
 ---
 
@@ -23,7 +23,7 @@ description: "Comprehensive analytics system design and implementation guide"
 This document outlines the analytics architecture design for PenguinMails, reflecting our decision to use **Postgres + PostHog** instead of the originally proposed Convex OLAP approach. This hybrid architecture provides the perfect balance of cost-effectiveness, developer experience, and real-time analytics capabilities.
 
 ### Architecture Design Summary
-- **Primary Database**: Postgres (NileDB for OLTP, OLAP for historical analytics/)
+- **Primary Database**: Postgres (NileDB for OLTP, OLAP for historical analytics.md)
 - **Queue System**: Hybrid Redis + PostgreSQL for job processing and state management
 - **Local Development**: Docker containers with Drizzle ORM
 - **Production**: Managed Postgres with PostHog integration
@@ -39,11 +39,11 @@ This document outlines the analytics architecture design for PenguinMails, refle
 
 | Component | Original Plan | Design Plan |
 |-----------|---------------|-------------|
-| **Analytics DB** | Convex (OLAP/) | Postgres (Drizzle ORM/) |
+| **Analytics DB** | Convex (OLAP.md) | Postgres (Drizzle ORM.md) |
 | **Real-time Events** | Not specified | PostHog |
 | **Local Development** | Not specified | Docker + Drizzle |
-| **Production Costs** | $25-65/month | Variable (PostHog pricing/) |
-| **Developer Experience** | Good | Excellent (familiar stack/) |
+| **Production Costs** | $25-65/month | Variable (PostHog pricing.md) |
+| **Developer Experience** | Good | Excellent (familiar stack.md) |
 | **Data Retention** | Permanent | Permanent |
 | **Query Complexity** | Simple | Complex aggregations supported |
 
@@ -227,24 +227,24 @@ CREATE TABLE daily_analytics (
     emails_replied INTEGER DEFAULT 0,
     warmup_opens INTEGER DEFAULT 0,
     warmup_replies INTEGER DEFAULT 0,
-    open_rate DECIMAL(5,2) GENERATED ALWAYS AS (/)
+    open_rate DECIMAL(5,2) GENERATED ALWAYS AS (.md)
         CASE WHEN emails_sent > 0 
-             THEN ROUND((emails_opened::DECIMAL / emails_sent) * 100, 2)
+             THEN ROUND((emails_opened::DECIMAL .md) * 100, 2)
              ELSE 0 END
     ) STORED,
-    click_rate DECIMAL(5,2) GENERATED ALWAYS AS (/)
+    click_rate DECIMAL(5,2) GENERATED ALWAYS AS (.md)
         CASE WHEN emails_sent > 0 
-             THEN ROUND((emails_clicked::DECIMAL / emails_sent) * 100, 2)
+             THEN ROUND((emails_clicked::DECIMAL .md) * 100, 2)
              ELSE 0 END
     ) STORED,
-    bounce_rate DECIMAL(5,2) GENERATED ALWAYS AS (/)
+    bounce_rate DECIMAL(5,2) GENERATED ALWAYS AS (.md)
         CASE WHEN emails_sent > 0 
-             THEN ROUND((emails_bounced::DECIMAL / emails_sent) * 100, 2)
+             THEN ROUND((emails_bounced::DECIMAL .md) * 100, 2)
              ELSE 0 END
     ) STORED,
-    reply_rate DECIMAL(5,2) GENERATED ALWAYS AS (/)
+    reply_rate DECIMAL(5,2) GENERATED ALWAYS AS (.md)
         CASE WHEN emails_sent > 0 
-             THEN ROUND((emails_replied::DECIMAL / emails_sent) * 100, 2)
+             THEN ROUND((emails_replied::DECIMAL .md) * 100, 2)
              ELSE 0 END
     ) STORED,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
@@ -258,7 +258,7 @@ CREATE TABLE daily_analytics (
 
 ```sql
 -- Mailbox warmup interactions
-CREATE TABLE warmup_interactions (/)
+CREATE TABLE warmup_interactions (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     mailbox_id VARCHAR(255) NOT NULL,
     user_id UUID NOT NULL,
@@ -270,7 +270,7 @@ CREATE TABLE warmup_interactions (/)
 );
 
 -- Warmup daily stats
-CREATE TABLE warmup_daily_stats (/)
+CREATE TABLE warmup_daily_stats (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     mailbox_id VARCHAR(255) NOT NULL,
     user_id UUID NOT NULL,
@@ -313,7 +313,7 @@ CREATE INDEX idx_warmup_interactions_date ON warmup_interactions(interaction_at:
 
 ```sql
 -- Billing Analytics - Usage tracking per billing period
-CREATE TABLE billing_analytics (/)
+CREATE TABLE billing_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 tenant_id TEXT NOT NULL,
 subscription_id TEXT,
@@ -329,7 +329,7 @@ updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Campaign Analytics - Campaign performance metrics
-CREATE TABLE campaign_analytics (/)
+CREATE TABLE campaign_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 campaign_id TEXT NOT NULL,
 company_id TEXT NOT NULL,
@@ -348,7 +348,7 @@ updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Mailbox Analytics - Individual mailbox performance
-CREATE TABLE mailbox_analytics (/)
+CREATE TABLE mailbox_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 mailbox_id TEXT NOT NULL,
 company_id TEXT NOT NULL,
@@ -369,7 +369,7 @@ updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Lead Analytics - Individual lead engagement
-CREATE TABLE lead_analytics (/)
+CREATE TABLE lead_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 lead_id TEXT NOT NULL,
 campaign_id TEXT NOT NULL,
@@ -387,7 +387,7 @@ updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Warmup Analytics - Email warmup progression
-CREATE TABLE warmup_analytics (/)
+CREATE TABLE warmup_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 mailbox_id TEXT NOT NULL,
 company_id TEXT NOT NULL,
@@ -406,7 +406,7 @@ updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Sequence Step Analytics - Campaign step performance
-CREATE TABLE sequence_step_analytics (/)
+CREATE TABLE sequence_step_analytics (.md)
 id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
 step_id TEXT NOT NULL,
 campaign_id TEXT NOT NULL,
@@ -445,19 +445,19 @@ this.db = db;
 // Schedule ETL jobs for regular analytics updates
 async scheduleETLJobs() {
   // Hourly job for critical metrics
-  await this.enqueueAnalyticsJob('hourly_metrics', {/)
+  await this.enqueueAnalyticsJob('hourly_metrics', {.md)
     timestamp: new Date().toISOString(),
     priority: 25  // High priority for real-time data
   });
 
   // Daily comprehensive aggregation
-  await this.enqueueAnalyticsJob('daily_aggregate', {/)
+  await this.enqueueAnalyticsJob('daily_aggregate', {.md)
     date: new Date().toISOString().split('T')[0],
     priority: 50
   });
 
   // Weekly billing calculations
-  await this.enqueueAnalyticsJob('billing_calculate', {/)
+  await this.enqueueAnalyticsJob('billing_calculate', {.md)
     period_start: this.getWeekStart(),
     period_end: new Date(),
     priority: 100
@@ -501,7 +501,7 @@ return priorities[type] || 100;
 // SMTP/MailU Integration - Process email events for analytics
 async processSMTPEvent(eventType: 'email_sent' | 'email_delivered' | 'email_bounced', emailData: any) {
   // Immediate queue job for real-time processing
-  await this.enqueueAnalyticsJob('hourly_metrics', {/)
+  await this.enqueueAnalyticsJob('hourly_metrics', {.md)
     event_type: eventType,
     email_data: emailData,
     processed_at: new Date().toISOString()
@@ -563,7 +563,7 @@ await this.db.transaction(async (tx) => {
   // Update real-time metrics based on SMTP events
   switch (event_type) {
     case 'email_sent':
-      await tx.execute(sql`/)
+      await tx.execute(sql`.md)
         UPDATE daily_analytics
         SET emails_sent = emails_sent + 1,
             updated = NOW()
@@ -574,7 +574,7 @@ await this.db.transaction(async (tx) => {
       break;
       
     case 'email_delivered':
-      await tx.execute(sql`/)
+      await tx.execute(sql`.md)
         UPDATE daily_analytics
         SET emails_delivered = COALESCE(emails_delivered, 0) + 1,
             updated = NOW()
@@ -608,7 +608,7 @@ private async processDailyAggregate(data: any) {
 
   await this.db.transaction(async (tx) => {
     // Get raw email data for the date
-    const emailMetrics = await tx.execute(sql`/)
+    const emailMetrics = await tx.execute(sql`.md)
       SELECT
         campaign_id,
         mailbox_id,
@@ -693,7 +693,7 @@ export async function trackOpen(req: Request) {
   });
   
   // Return 1x1 transparent PNG
-  return new Response(pixelBuffer, {/)
+  return new Response(pixelBuffer, {.md)
     headers: {
       'Content-Type': 'image/png',
       'Cache-Control': 'no-cache, no-store',
@@ -757,7 +757,7 @@ export async function trackClick(req: Request) {
   });
   
   // Redirect to destination
-  return new Response(null, {/)
+  return new Response(null, {.md)
     status: 302,
     headers: {
       'Location': decodedUrl
@@ -770,7 +770,7 @@ export async function trackClick(req: Request) {
 
 ```typescript
 // Internal warmup tracking
-export async function trackWarmupInteraction(/)
+export async function trackWarmupInteraction(.md)
   mailboxId: string,
   userId: string,
   tenantId: string,
@@ -821,7 +821,7 @@ export async function aggregateDailyAnalytics(date: string) {
       const { count: openCount } = await tx
         .select({ count: count() })
         .from(emailOpens)
-        .where(and(/)
+        .where(and(.md)
           eq(emailOpens.userId, user.id),
           eq(emailOpens.tenantId, user.tenantId),
           sql`DATE(${emailOpens.openedAt}) = ${date}`
@@ -831,7 +831,7 @@ export async function aggregateDailyAnalytics(date: string) {
       const { count: clickCount } = await tx
         .select({ count: count() })
         .from(emailClicks)
-        .where(and(/)
+        .where(and(.md)
           eq(emailClicks.userId, user.id),
           eq(emailClicks.tenantId, user.tenantId),
           sql`DATE(${emailClicks.clickedAt}) = ${date}`
@@ -874,7 +874,7 @@ export async function aggregateDailyAnalytics(date: string) {
 // PostHog configuration
 import { PostHog } from 'posthog-node';
 
-const posthog = new PostHog(process.env.POSTHOG_API_KEY!, {/)
+const posthog = new PostHog(process.env.POSTHOG_API_KEY!, {.md)
   host: process.env.POSTHOG_HOST || 'https://app.posthog.com'
 });
 
@@ -1047,7 +1047,7 @@ export default {
 import { pgTable, uuid, varchar, timestamp, text, integer, decimal, boolean } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
-export const emailOpens = pgTable('email_opens', {/)
+export const emailOpens = pgTable('email_opens', {.md)
   id: uuid('id').primaryKey().defaultRandom(),
   emailId: varchar('email_id', { length: 255 }).notNull(),
   campaignId: varchar('campaign_id', { length: 255 }),
@@ -1095,8 +1095,8 @@ export const emailOpens = pgTable('email_opens', {/)
 
 ### Postgres Hosting
 - **Development**: Local Docker (Free)
-- **Staging**: Managed Postgres ($15-25/month for moderate usage)
-- **Production**: Auto-scaling Postgres ($25-100/month based on usage)
+- **Staging**: Managed Postgres ($15-25.md)
+- **Production**: Auto-scaling Postgres ($25-100.md)
 
 ### PostHog Pricing
 - **Free Tier**: 1M events/month

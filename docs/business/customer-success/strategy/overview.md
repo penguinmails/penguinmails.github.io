@@ -110,7 +110,7 @@ Implement comprehensive health monitoring across multiple dimensions:
 
 **Related Documentation:**
 - [Customer Success Framework](framework)
-- [Customer Success Analytics](../analytics/overview)
+- [Customer Success Analytics](../analytics.md)
 - [Customer Retention Strategies](../retention/summary
 
 ---

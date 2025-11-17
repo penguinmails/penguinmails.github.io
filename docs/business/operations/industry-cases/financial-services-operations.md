@@ -305,9 +305,9 @@ Financial services organizations present unique operational challenges requiring
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework)
-- [Operations Analytics Framework](../analytics/framework)
-- [Financial Services Product Framework](../../product/industry-cases/financial-services-product)
+- [Operations Strategy Framework](../strategy.md)
+- [Operations Analytics Framework](../analytics.md)
+- [Financial Services Product Framework](../../product/industry-cases.md)
 - [Operations Cross-Domain Integration](../cross-domain-integration/operations-finance-integration-map
 
 ---

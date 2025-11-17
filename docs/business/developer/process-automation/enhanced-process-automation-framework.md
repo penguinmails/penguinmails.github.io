@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 6 - Process Automation and Standardization  
 **Target Audience**: Process Engineers, Automation Specialists, Developer Operations Teams  
 **Business Impact Priority**: High - Developer workflow automation and process optimization responsibility  
-**Framework Integration**: [Developer Automation Framework](../automation/framework) | [Developer Operations Framework](../operations/framework) | [Developer Analytics Framework](../analytics/framework) | [Developer Strategy Framework](../strategy/framework) | [Process Automation Framework](docs/business/process-automation/framework)
+**Framework Integration**: [Developer Automation Framework](../automation.md) | [Developer Operations Framework](../operations.md) | [Developer Analytics Framework](../analytics.md) | [Developer Strategy Framework](../strategy.md) | [Process Automation Framework](docs/business/process-automation.md)
 
 ## Executive Summary
 
@@ -44,7 +44,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated workflow systems activation and optimization
 - Workflow automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Process Automation Framework](docs/business/process-automation/framework)
+**Business Framework Integration**: [Developer Automation Framework](../automation.md) + [Process Automation Framework](docs/business/process-automation.md)
 
 #### Automation Point 1.1.2: Intelligent Process Monitoring
 **Automation Requirement**: Developer Intelligent Process Standards  
@@ -56,7 +56,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Predictive enhancement capabilities systems activated and validated
 - Process monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Developer Analytics Framework](../analytics/framework)
+**Business Framework Integration**: [Developer Operations Framework](../operations.md) + [Developer Analytics Framework](../analytics.md)
 
 #### Automation Point 1.1.3: Predictive Process Enhancement
 **Automation Requirement**: Developer Predictive Enhancement Standards  
@@ -68,7 +68,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated enhancement systems activation and optimization
 - Enhancement validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 ### 1.2 Optimization Excellence
 
@@ -82,7 +82,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement systems activation and optimization
 - Optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Developer Operations Framework](../operations/framework)
+**Business Framework Integration**: [Developer Automation Framework](../automation.md) + [Developer Operations Framework](../operations.md)
 
 #### Optimization Point 1.2.2: Intelligent Intervention Systems
 **Optimization Requirement**: Developer Intelligent Intervention Standards  
@@ -94,7 +94,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated response capabilities systems activated and validated
 - Intervention validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Strategy Framework](../strategy.md)
 
 #### Optimization Point 1.2.3: Predictive Platform Optimization
 **Optimization Requirement**: Developer Predictive Platform Standards  
@@ -106,7 +106,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated optimization systems activation and optimization
 - Platform optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Developer Analytics Framework](../analytics/framework)
+**Business Framework Integration**: [Developer Operations Framework](../operations.md) + [Developer Analytics Framework](../analytics.md)
 
 ---
 
@@ -124,7 +124,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Continuous optimization capabilities systems activation and optimization
 - Enhancement validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Developer Analytics Framework](../analytics/framework)
+**Business Framework Integration**: [Developer Automation Framework](../automation.md) + [Developer Analytics Framework](../analytics.md)
 
 #### Intelligence Point 2.1.2: Continuous Process Intelligence
 **Intelligence Requirement**: Developer Continuous Intelligence Standards  
@@ -136,7 +136,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Proactive enhancement systems activated and validated
 - Intelligence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Developer Analytics Framework](../analytics/framework)
+**Business Framework Integration**: [Developer Operations Framework](../operations.md) + [Developer Analytics Framework](../analytics.md)
 
 #### Intelligence Point 2.1.3: Automated Optimization Systems
 **Intelligence Requirement**: Developer Automated Optimization Standards  
@@ -148,7 +148,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement systems activation and optimization
 - Optimization systems validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Developer Strategy Framework](../strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](../automation.md) + [Developer Strategy Framework](../strategy.md)
 
 ### 2.2 Enhancement Excellence
 
@@ -162,7 +162,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent automation systems activation and optimization
 - Enhancement protocols validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Operations Framework](../operations/framework)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics.md) + [Developer Operations Framework](../operations.md)
 
 #### Enhancement Point 2.2.2: Developer Excellence Automation
 **Enhancement Requirement**: Developer Excellence Automation Standards  
@@ -174,7 +174,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement frameworks systems activated and validated
 - Excellence automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Developer Validation Framework](../validation/framework)
+**Business Framework Integration**: [Developer Automation Framework](../automation.md) + [Developer Validation Framework](../validation.md)
 
 #### Enhancement Point 2.2.3: Validation Frameworks
 **Enhancement Requirement**: Developer Validation Framework Standards  
@@ -186,7 +186,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Optimization validation systems activation and optimization
 - Validation frameworks validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Developer Analytics Framework](../analytics/framework)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy.md) + [Developer Analytics Framework](../analytics.md)
 
 ---
 

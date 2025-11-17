@@ -315,12 +315,12 @@ The Operations Validation Framework provides comprehensive security validation p
 **Review Cycle:** Quarterly operations validation review and annual operations validation optimization
 
 **Related Validation Documents:**
-- [Operations Validation Overview](../overview) - Operations validation context and strategic alignment
-- [Operations Strategy Framework](../strategy/framework) - Strategic operations context and validation integration
-- [Operations Analytics Framework](../analytics/framework) - Operations analytics with validation integration
-- [Operations Management Framework](../management/framework) - Operations management with validation coordination
-- [Security Validation Protocols](./security-validation-protocols) - Security validation and penetration testing
-- [Compliance Validation Procedures](./compliance-validation-procedures) - Compliance validation and audit procedures
+- [Operations Validation Overview](...md) - Operations validation context and strategic alignment
+- [Operations Strategy Framework](../strategy.md) - Strategic operations context and validation integration
+- [Operations Analytics Framework](../analytics.md) - Operations analytics with validation integration
+- [Operations Management Framework](../management.md) - Operations management with validation coordination
+- [Security Validation Protocols](..md) - Security validation and penetration testing
+- [Compliance Validation Procedures](..md) - Compliance validation and audit procedures
 
 **Next Steps:**
 1. **Validation Assessment:** Conduct comprehensive assessment of current validation capabilities, standards, and processes

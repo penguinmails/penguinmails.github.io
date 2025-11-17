@@ -15,11 +15,11 @@ This directory contains quick reference guides, executive templates, detailed me
 ## Progressive Disclosure Flow
 
 ### 📋 Reference Documents
-- [**Quick Reference: Cost-Benefit**](./quick-reference-cost-benefit) - Quick cost-benefit analysis guide (≤100 lines)
-- [**Quick Reference: Provider Selection**](./quick-reference-provider-selection) - Vendor selection checklist (≤100 lines)
-- [**Cost Tool Pricing**](./cost-tool-pricing) - Pricing tool and calculator guidance (≤200 lines)
-- [**Executive Summary Template**](./executive-summary-template) - Template for executive presentations (≤200 lines)
-- [**Detailed Methodology**](./detailed-methodology) - Comprehensive analysis methodology (≤300 lines)
+- [**Quick Reference: Cost-Benefit**](..md) - Quick cost-benefit analysis guide (≤100 lines)
+- [**Quick Reference: Provider Selection**](..md) - Vendor selection checklist (≤100 lines)
+- [**Cost Tool Pricing**](..md) - Pricing tool and calculator guidance (≤200 lines)
+- [**Executive Summary Template**](..md) - Template for executive presentations (≤200 lines)
+- [**Detailed Methodology**](..md) - Comprehensive analysis methodology (≤300 lines)
 
 ### 🎯 Reference Usage Path
 1. **Quick Analysis**: Use `quick-reference-cost-benefit` for rapid assessments
@@ -43,10 +43,10 @@ This directory contains quick reference guides, executive templates, detailed me
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core/) - Main business case documents
-- [Financial Analysis](../financial-analysis/) - Deep financial analysis
-- [Implementation Guide](../implementation/) - Implementation templates and guides
-- [Industry Business Cases](../industry-business-cases/) - Industry-specific reference materials
+- [Core Business Documents](../core.md) - Main business case documents
+- [Financial Analysis](../financial-analysis.md) - Deep financial analysis
+- [Implementation Guide](../implementation.md) - Implementation templates and guides
+- [Industry Business Cases](../industry-business-cases.md) - Industry-specific reference materials
 
 ---
 

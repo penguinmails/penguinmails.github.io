@@ -115,7 +115,7 @@ Monitoring Layer (Operational Excellence):
 
 ```sql
 -- Job queues configuration
-CREATE TABLE job_queues (/)
+CREATE TABLE job_queues (.md)
     name VARCHAR(100) PRIMARY KEY,
     default_priority INTEGER DEFAULT 100,
     is_active BOOLEAN DEFAULT TRUE,
@@ -123,7 +123,7 @@ CREATE TABLE job_queues (/)
 );
 
 -- Jobs table (Permanent State)
-CREATE TABLE jobs (/)
+CREATE TABLE jobs (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     queue_name VARCHAR(100) REFERENCES job_queues(name) ON DELETE CASCADE,
     status VARCHAR(50) DEFAULT 'queued',
@@ -141,7 +141,7 @@ CREATE TABLE jobs (/)
 );
 
 -- Job execution logs (Audit Trail)
-CREATE TABLE job_logs (/)
+CREATE TABLE job_logs (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     job_id UUID REFERENCES jobs(id) ON DELETE CASCADE,
     status VARCHAR(50) NOT NULL,
@@ -154,7 +154,7 @@ CREATE TABLE job_logs (/)
 );
 
 -- Analytics jobs tracking (for OLAP pipeline)
-CREATE TABLE analytics_jobs (/)
+CREATE TABLE analytics_jobs (.md)
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     job_type VARCHAR(100) NOT NULL,
     status VARCHAR(50) DEFAULT 'queued',
@@ -346,7 +346,7 @@ export class JobMigrator {
     await this.redis.lpush(queueName, JSON.stringify(redisPayload));
 
     // Initialize Redis hash for tracking
-    await this.redis.hset(`job:${job.id}`, {/)
+    await this.redis.hset(`job:${job.id}`, {.md)
       status: 'migrated',
       queued_at: new Date().toISOString(),
       attempt_count: job.attempt_count.toString()
@@ -465,7 +465,7 @@ export class EmailWorker {
       });
 
       // Update Redis hash for real-time tracking
-      await this.redis.hset(`job:${id}`, {/)
+      await this.redis.hset(`job:${id}`, {.md)
         status: 'processing',
         worker_id: this.workerId,
         started_at: new Date().toISOString()
@@ -494,7 +494,7 @@ export class EmailWorker {
         }
       });
 
-      await this.redis.hset(`job:${id}`, {/)
+      await this.redis.hset(`job:${id}`, {.md)
         status: 'completed',
         completed_at: new Date().toISOString()
       });
@@ -536,7 +536,7 @@ export class EmailWorker {
           }
         });
 
-        await this.redis.hset(`job:${id}`, {/)
+        await this.redis.hset(`job:${id}`, {.md)
           status: 'retry_scheduled',
           attempt_count: attempts.toString(),
           retry_delay: delay.toString()
@@ -554,7 +554,7 @@ export class EmailWorker {
           }
         });
 
-        await this.redis.hset(`job:${id}`, {/)
+        await this.redis.hset(`job:${id}`, {.md)
           status: 'failed',
           error: error.message,
           failed_at: new Date().toISOString()
@@ -571,13 +571,13 @@ export class EmailWorker {
 
   private async processIncomingEmail(payload: any) {
     // Implementation for incoming email processing using new email system architecture
-    // Creates email_messages (analytics) and email_content (body) entries
+    /.md) and email_content (body) entries
     const { tenant_id, email_account_id, direction, type, from, to, subject, body, headers, raw, messageId } = payload;
     
     try {
       const storage_key = `email_${messageId}_${Date.now()}`;
       
-      // 1. Create email_content (email body and metadata)
+      /.md)
       const contentObject = await this.db.email_content.create({
         data: {
           storage_key,
@@ -591,7 +591,7 @@ export class EmailWorker {
         }
       });
 
-      // 2. Create email_messages (analytics and metadata)
+      /.md)
       const messageRef = await this.db.email_messages.create({
         data: {
           storage_key,
@@ -840,12 +840,12 @@ export class QueueHealthMonitor {
   }
 
   private parseRedisMemory(info: string): string {
-    const match = info.match(/used_memory_human:([^\r\n]+)/);
+    const match = info.match(.md).md);
     return match ? match[1] : 'unknown';
   }
 
   private parseConnectedClients(info: string): number {
-    const match = info.match(/connected_clients:(\d+)/);
+    const match = info.match(.md).md);
     return match ? parseInt(match[1]) : 0;
   }
 }
@@ -941,7 +941,7 @@ export class DeadLetterHandler {
 - **Job Latency**: <100ms from creation to processing start
 - **System Reliability**: 99.5% job success rate with automatic retry
 - **Worker Scalability**: Horizontal scaling to 50+ concurrent workers
-- **Redis Performance**: <10ms queue operations (BRPOP/LPUSH)
+- **Redis Performance**: <10ms queue operations (BRPOP.md)
 - **PostgreSQL Integration**: 99.9% durable job state preservation
 - **Recovery Time**: <30 seconds for automatic worker failover
 - **Dead Letter Rate**: <0.1% of total jobs with full recovery capability
@@ -1012,10 +1012,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](../overview.md) - Strategic foundation and market positioning
-- [Email System Implementation](./email-system-implementation.md) - Email processing and queue integration
-- [Analytics Architecture](./analytics-architecture.md) - Business intelligence and job processing
-- [Campaign Management](../../campaigns/overview.md) - User experience and business operations
-- [Business Analytics](../../business/analytics/overview.md) - Revenue intelligence and optimization
+- [Architecture Overview](...md) - Strategic foundation and market positioning
+- [Email System Implementation](..md) - Email processing and queue integration
+- [Analytics Architecture](..md) - Business intelligence and job processing
+- [Campaign Management](../../campaigns.md) - User experience and business operations
+- [Business Analytics](../../business/analytics.md) - Revenue intelligence and optimization
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, enterprise infrastructure, operational excellence, hybrid architecture

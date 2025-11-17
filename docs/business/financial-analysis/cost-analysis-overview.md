@@ -67,22 +67,22 @@ graph TB
 #### Investment Tiers and Recommendations
 
 **Tier 1: Startups & Lean SMBs (Under 5K contacts)**
-- **Investment Range**: $39–$180/month ($468–$2,160 annually)
-- **Core Stack**: Basic GDPR platform (Osano Free/Enzuzo) + email verification
+- **Investment Range**: $39–$180.md)
+- **Core Stack**: Basic GDPR platform (Osano Free.md) + email verification
 - **Key Value**: Essential compliance foundation at minimal cost
 
 **Tier 2: Growing B2B Teams (5K–25K contacts)**
-- **Investment Range**: $400–$650/month ($4,800–$7,800 annually)
+- **Investment Range**: $400–$650.md)
 - **Core Stack**: Professional compliance platform + full email monitoring
 - **Key Value**: Complete automation with professional monitoring
 
 **Tier 3: Mid-Market Enterprise (25K–100K contacts)**
-- **Investment Range**: $1,200–$3,000/month ($15,000–$40,000 annually)
+- **Investment Range**: $1,200–$3,000.md)
 - **Core Stack**: Enterprise platform + dedicated resources
 - **Key Value**: Comprehensive framework with fractional DPO
 
 **Tier 4: Large Enterprise (100K+ contacts)**
-- **Investment Range**: $5,000–$10,000+/month ($60,000–$120,000+ annually)
+- **Investment Range**: $5,000–$10,000+.md)
 - **Core Stack**: Full enterprise suite + dedicated compliance team
 - **Key Value**: Complete enterprise compliance framework
 
@@ -115,7 +115,7 @@ graph LR
 ### Strategic ROI Examples
 
 **Example 1: Mid-Market B2B Company (25K contacts)**
-- **Investment**: $3,400/month ($40,800/year)
+- **Investment**: $3,400/month ($40,800.md)
 - **Risk Exposure**: 
   - GDPR: €20M potential penalty
   - CAN-SPAM: $500K+ cumulative exposure
@@ -123,7 +123,7 @@ graph LR
 - **Conservative ROI**: 100:1 to 1,000:1
 
 **Example 2: Startup (2K contacts)**
-- **Investment**: $100/month ($1,200/year)
+- **Investment**: $100/month ($1,200.md)
 - **Risk Exposure**: 
   - CCPA: $25K+ potential exposure
   - CAN-SPAM: $50K+ per violation
@@ -134,7 +134,7 @@ graph LR
 
 **Tier 1: Critical (Must-Have)**
 1. **CAN-SPAM compliance**: All US email marketing operations
-2. **SPF/DKIM/DMARC**: All sending domains (technical requirement)
+2. **SPF/DKIM.md)
 3. **Email archiving**: Legal and compliance retention
 4. **Basic consent management**: GDPR/CCPA minimum compliance
 

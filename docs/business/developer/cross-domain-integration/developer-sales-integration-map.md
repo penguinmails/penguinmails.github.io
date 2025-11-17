@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 4 - Cross-Domain Integration  
 **Target Audience**: Developer Teams, Sales Teams, Revenue Operations Leadership  
 **Business Impact Priority**: High - Sales coordination and developer revenue optimization  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) | [Sales Strategy Framework](docs/business/sales/strategy/framework) | [Developer Operations Framework](docs/business/developer/operations/framework) | [Sales Operations Framework](docs/business/sales/operations/framework) | [Developer Analytics Framework](docs/business/developer/analytics/framework) | [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) | [Sales Strategy Framework](docs/business/sales/strategy.md) | [Developer Operations Framework](docs/business/developer/operations.md) | [Sales Operations Framework](docs/business/sales/operations.md) | [Developer Analytics Framework](docs/business/developer/analytics.md) | [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Success probability optimization systems activated
 - Qualification integration validation completed and verified
 
-**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy/framework) + [Developer Strategy Framework](docs/business/developer/strategy/framework)
+**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy.md) + [Developer Strategy Framework](docs/business/developer/strategy.md)
 
 #### Integration Point 1.1.2: Developer Opportunity Assessment
 **Integration Flow**: Sales Pipeline ↔ Developer Success Analytics  
@@ -54,7 +54,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Success probability enhancement systems activated
 - Opportunity assessment validation completed and optimized
 
-**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics/framework) + [Developer Analytics Framework](docs/business/developer/analytics/framework)
+**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics.md) + [Developer Analytics Framework](docs/business/developer/analytics.md)
 
 #### Integration Point 1.1.3: Technical Value Communication
 **Integration Flow**: Sales Messaging ↔ Developer Value Proposition  
@@ -66,7 +66,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Consistency enhancement systems activated
 - Value communication validation completed and verified
 
-**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 ### 1.2 Revenue Optimization Coordination
 
@@ -80,7 +80,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Capability alignment systems activated
 - Revenue planning validation completed and optimized
 
-**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy/framework) + [Developer Strategy Framework](docs/business/developer/strategy/framework)
+**Business Framework Integration**: [Sales Strategy Framework](docs/business/sales/strategy.md) + [Developer Strategy Framework](docs/business/developer/strategy.md)
 
 #### Integration Point 1.2.2: Developer Platform Acceleration
 **Integration Flow**: Sales Growth Targets ↔ Developer Enhancement  
@@ -92,7 +92,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Growth objective optimization systems activated
 - Platform acceleration validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Sales Operations Framework](docs/business/sales/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Sales Operations Framework](docs/business/sales/operations.md)
 
 #### Integration Point 1.2.3: Revenue Generation Optimization
 **Integration Flow**: Sales Process ↔ Developer Success Enablement  
@@ -104,7 +104,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Process excellence systems activated
 - Revenue optimization validation completed and optimized
 
-**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 ---
 
@@ -122,7 +122,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Seamless onboarding systems activated
 - Transition validation completed and verified
 
-**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations/framework) + [Developer Operations Framework](docs/business/developer/operations/framework)
+**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations.md) + [Developer Operations Framework](docs/business/developer/operations.md)
 
 #### Integration Point 2.1.2: Technical Context Handoff
 **Integration Flow**: Sales Discovery ↔ Developer Requirements  
@@ -134,7 +134,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Requirements optimization systems activated
 - Context handoff validation completed and optimized
 
-**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations/framework) + [Developer Strategy Framework](docs/business/developer/strategy/framework)
+**Business Framework Integration**: [Sales Operations Framework](docs/business/sales/operations.md) + [Developer Strategy Framework](docs/business/developer/strategy.md)
 
 #### Integration Point 2.1.3: Success Probability Assessment
 **Integration Flow**: Sales Assessment ↔ Developer Success Metrics  
@@ -146,7 +146,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Success indicator optimization systems activated
 - Assessment validation completed and verified
 
-**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics/framework) + [Developer Analytics Framework](docs/business/developer/analytics/framework)
+**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics.md) + [Developer Analytics Framework](docs/business/developer/analytics.md)
 
 ### 2.2 Handoff Success Coordination
 
@@ -160,7 +160,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Technical support optimization systems activated
 - Success initiation validation completed and optimized
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Sales Strategy Framework](docs/business/sales/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Sales Strategy Framework](docs/business/sales/strategy.md)
 
 #### Integration Point 2.2.2: Platform Coordination Excellence
 **Integration Flow**: Sales Excellence ↔ Developer Platform Excellence  
@@ -172,7 +172,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Performance optimization systems activated
 - Coordination excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Sales Operations Framework](docs/business/sales/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Sales Operations Framework](docs/business/sales/operations.md)
 
 #### Integration Point 2.2.3: Revenue Opportunity Optimization
 **Integration Flow**: Sales Opportunity ↔ Developer Value Creation  
@@ -184,7 +184,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Sales potential maximization systems activated
 - Opportunity optimization validation completed and optimized
 
-**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics/framework) + [Developer Analytics Framework](docs/business/developer/analytics/framework)
+**Business Framework Integration**: [Sales Analytics Framework](docs/business/sales/analytics.md) + [Developer Analytics Framework](docs/business/developer/analytics.md)
 
 ---
 
@@ -202,7 +202,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Value creation optimization systems activated
 - Revenue analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 #### Integration Point 3.1.2: Platform Value Measurement
 **Integration Flow**: Sales ROI ↔ Developer Platform ROI  
@@ -214,7 +214,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Investment optimization systems activated
 - Value measurement validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 #### Integration Point 3.1.3: Revenue Growth Coordination
 **Integration Flow**: Sales Growth ↔ Developer Enhancement  
@@ -226,7 +226,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Enhancement optimization systems activated
 - Growth coordination validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Sales Strategy Framework](docs/business/sales/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Sales Strategy Framework](docs/business/sales/strategy.md)
 
 ### 3.2 Value Optimization Excellence
 
@@ -240,7 +240,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Enhancement optimization systems activated
 - Value enhancement validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Sales Operations Framework](docs/business/sales/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Sales Operations Framework](docs/business/sales/operations.md)
 
 #### Integration Point 3.2.2: Success Measurement Integration
 **Integration Flow**: Sales KPIs ↔ Developer Success Metrics  
@@ -252,7 +252,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Performance optimization systems activated
 - Measurement integration validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 #### Integration Point 3.2.3: Platform Revenue Optimization
 **Integration Flow**: Sales Optimization ↔ Developer Platform Optimization  
@@ -264,7 +264,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Effectiveness maximization systems activated
 - Revenue optimization validation completed and optimized
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Sales Strategy Framework](docs/business/sales/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Sales Strategy Framework](docs/business/sales/strategy.md)
 
 ---
 
@@ -282,7 +282,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Holistic revenue management systems activated
 - Dashboard validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 #### Integration Point 4.1.2: Developer Success Tracking
 **Integration Flow**: Sales Attribution ↔ Developer Platform Success  
@@ -294,7 +294,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Success achievement optimization systems activated
 - Success tracking validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework) + [Sales Analytics Framework](docs/business/sales/analytics/framework)
+**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics.md) + [Sales Analytics Framework](docs/business/sales/analytics.md)
 
 #### Integration Point 4.1.3: Revenue Coordination Success
 **Integration Flow**: Sales Effectiveness ↔ Developer Engagement Quality  
@@ -306,7 +306,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Excellence achievement systems activated
 - Coordination success validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Sales Operations Framework](docs/business/sales/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Sales Operations Framework](docs/business/sales/operations.md)
 
 ### 4.2 Continuous Optimization Integration
 
@@ -320,7 +320,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Revenue impact maximization systems activated
 - Optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework) + [Sales Strategy Framework](docs/business/sales/strategy/framework)
+**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy.md) + [Sales Strategy Framework](docs/business/sales/strategy.md)
 
 #### Integration Point 4.2.2: Platform Revenue Excellence
 **Integration Flow**: Sales Excellence ↔ Developer Platform Excellence  
@@ -332,7 +332,7 @@ The Developer-Sales Integration Map establishes comprehensive coordination proto
 - Performance optimization systems activated
 - Revenue excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework) + [Sales Operations Framework](docs/business/sales/operations/framework)
+**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations.md) + [Sales Operations Framework](docs/business/sales/operations.md)
 
 ---
 

@@ -15,7 +15,7 @@ last_modified_date: "2025-12-19"
 ## 🏆 Provider Comparison Summary
 
 ### Email Service Provider (ESP) Cost Analysis by Volume
-![Cost Comparison](/docs/assets/esp-pricing.png){: width="100%" }
+![Cost Comparison](/docs/assets.md){: width="100%" }
 
 #### 10,000 emails/month
 
@@ -48,19 +48,19 @@ last_modified_date: "2025-12-19"
 
 ## 🎯 Strategic Recommendations by Use Case
 
-### Budget-Conscious Startups (Under 100K/month)
+### Budget-Conscious Startups (Under 100K.md)
 **Recommended**: Amazon SES Managed Dedicated IP
 - **Cost**: $300/month for 100K emails
 - **Value Proposition**: AWS's managed infrastructure handles IP warming
 - **Pros**: Exceptional value, managed IP warming, AWS ecosystem integration
 
-### Small to Mid-Market Cold Email Ops (100K-300K/month)
+### Small to Mid-Market Cold Email Ops (100K-300K.md)
 **Recommended**: Mailgun Foundation 100K
 - **Cost**: $750/month for 100K emails  
 - **Value Proposition**: Included dedicated IP with competitive CPM
 - **Pros**: Dedicated IP included, solid deliverability features
 
-### High-Volume Enterprise Campaigns (500K+/month)
+### High-Volume Enterprise Campaigns (500K+.md)
 **Recommended**: Amazon SES Managed Dedicated IP
 - **Cost**: $5,000/month for 1M emails
 - **CPM**: $0.095 (industry-leading efficiency)
@@ -76,15 +76,15 @@ last_modified_date: "2025-12-19"
 |----------|------------------|-------------------|-------------------|
 | **SendGrid** | $40-50/IP/month | Pro plans include 1 IP | ✅ Full isolation |
 | **Mailgun** | Included at 100K+ tiers | Foundation+ plans | ✅ Full isolation |
-| **Postmark** | $10-20/IP/month | Not included (add-on) | ✅ Full isolation |
-| **Amazon SES** | $24.95/IP (Standard) | Not included | ✅ Full isolation |
+| **Postmark** | $10-20/IP.md) | ✅ Full isolation |
+| **Amazon SES** | $24.95.md) | Not included | ✅ Full isolation |
 
 ### Log Retention & Compliance
 
 | Provider | Log Retention | Best for Cold Email |
 |----------|---------------|-------------------|
-| **SendGrid** | 7 days (Essentials) / 30 days (Pro) | ✅ Pro plan recommended |
-| **Mailgun** | 5 days (Foundation) / 30 days (Scale) | ✅ Scale plan for retention |
+| **SendGrid** | 7 days (Essentials) .md) | ✅ Pro plan recommended |
+| **Mailgun** | 5 days (Foundation) .md) | ✅ Scale plan for retention |
 | **Postmark** | Unlimited | ✅ Best for comprehensive tracking |
 | **Amazon SES** | Via SNS/S3 integration | ⚠️ Custom implementation required |
 
@@ -93,7 +93,7 @@ last_modified_date: "2025-12-19"
 ## 💡 Cost Optimization Insights
 
 ### Sweet Spots for Cost Efficiency
-- **100K emails/month**: Best value across all providers (competitive pricing)
+- **100K emails.md)
 - **1M+ emails/month**: Amazon SES becomes dominant with $0.095 CPM
 - **10K emails/month**: Avoid due to high CPM rates across all providers
 
@@ -161,12 +161,12 @@ For 100K email campaigns, provider selection affects deliverability:
 - [💰 ROI Calculator](roi-calculator) - Cost-benefit analysis tool
 
 **For detailed analysis:**
-- [📊 Detailed Provider Comparison](../competitive-intelligence/competitive-analysis-detailed) - Complete vendor analysis with migration costs
-- [🏗️ Implementation Roadmap](../implementation/implementation-roadmap) - Migration and implementation planning
+- [📊 Detailed Provider Comparison](../competitive-intelligence.md) - Complete vendor analysis with migration costs
+- [🏗️ Implementation Roadmap](../implementation.md) - Migration and implementation planning
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](../implementation/technical-infrastructure) - Technical specifications and setup
-- [📋 Performance Benchmarks](../performance/performance-benchmarks) - Industry performance data
+- [🔧 Technical Infrastructure](../implementation.md) - Technical specifications and setup
+- [📋 Performance Benchmarks](../performance.md) - Industry performance data
 
 ---
 

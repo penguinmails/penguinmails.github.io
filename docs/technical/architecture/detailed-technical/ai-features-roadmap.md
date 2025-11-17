@@ -70,7 +70,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 
 ---
 
-## 2. Template Analyzer (⭐ / ⭐⭐)
+## 2. Template Analyzer (⭐ .md)
 
 A post-composition "Analyze" button that inspects the template before sending or saving.
 
@@ -82,7 +82,7 @@ A post-composition "Analyze" button that inspects the template before sending or
   - Suspicious formatting (ALL CAPS, deceptive subjects, misleading reply chains).
   - Domain & sender alignment (if data available from infrastructure).
 - Output:
-  - Clear score band (e.g. Low / Medium / High risk).
+  - Clear score band (e.g. Low / Medium .md).
   - Plain-language explanations.
   - Concrete, actionable suggestions:
     - "Reduce promotional buzzwords in the subject line."
@@ -91,7 +91,7 @@ A post-composition "Analyze" button that inspects the template before sending or
 ### 2.2 Structural & Content Quality
 
 - Checks:
-  - Missing basics: intro, value, CTA, unsubscribe/compliance footer (where required).
+  - Missing basics: intro, value, CTA, unsubscribe.md).
   - Overly long blocks vs. readability best practices.
   - Clarity of ask.
 - Output:
@@ -101,16 +101,16 @@ A post-composition "Analyze" button that inspects the template before sending or
 
 ### 2.3 Safety & Policy Alignment
 
-- Checks/flags (configurable):
+- Checks.md):
   - Misleading claims, unrealistic promises.
-  - Prohibited niches / wording (workspace policies).
+  - Prohibited niches .md).
 - Output:
   - Highlighted segments with “reason” tags.
   - Never auto-block; always present as recommendations unless org policy says otherwise.
 
 ---
 
-## 3. Inbox Assistance (⭐ / ⭐⭐)
+## 3. Inbox Assistance (⭐ .md)
 
 AI helpers in the unified inbox to reduce manual triage and reply drafting workload.
 
@@ -118,7 +118,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 
 - Per-thread summary:
   - What the lead is asking.
-  - Their interest level (low / medium / high).
+  - Their interest level (low / medium .md).
   - Any constraints mentioned (budget, timing, objections).
 - Usage:
   - Quick context at top of thread.
@@ -131,7 +131,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
   - Stage hints (evaluation, decision, post-sale).
   - Red flags (unsubscribe requests, complaints).
 - Integration:
-  - Can feed into CRM / pipeline as structured fields (future optional).
+  - Can feed into CRM .md).
 
 ### 3.3 Suggested Replies
 

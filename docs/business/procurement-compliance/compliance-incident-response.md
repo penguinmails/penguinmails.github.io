@@ -45,7 +45,7 @@ last_modified_date: "2025-12-19"
 - **Stakeholder Notification**: Inform executive leadership and key stakeholders
 - **Documentation**: Comprehensive record of all actions taken and decisions made
 
-**Technical Implementation**: Complete incident response system with TypeScript automation, team coordination, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation)
+**Technical Implementation**: Complete incident response system with TypeScript automation, team coordination, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical.md)
 
 ### Strategic Breach Notification Framework
 
@@ -213,7 +213,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 - [🛡️ Compliance Overview](compliance-overview:1) - Strategic compliance summary and risk assessment
 
 **For technical implementation:**
-- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical/email-compliance-implementation) - Complete TypeScript implementation
+- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical.md) - Complete TypeScript implementation
 
 **For operational monitoring:**
 - [📊 Compliance Monitoring](compliance-monitoring:1) - Operational oversight and monitoring

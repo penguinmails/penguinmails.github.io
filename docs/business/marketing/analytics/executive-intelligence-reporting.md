@@ -8,7 +8,7 @@ This document establishes basic executive marketing reporting capabilities with 
 **Target Audience:** CMO, Marketing Directors, Strategic Planning Teams, Marketing Analysts
 **Reporting Focus:** Basic insights, manual analysis, weekly reporting, and performance tracking
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core/MVP) reporting capabilities. Level 3+ advanced intelligence features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) reporting capabilities. Level 3+ advanced intelligence features are addressed in the roadmap section below.
 
 ---
 

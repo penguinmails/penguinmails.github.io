@@ -324,7 +324,7 @@ We comply with applicable privacy laws in other jurisdictions where we operate, 
 **Last Reviewed: October 28, 2025**
 
 **Related Documents**
-- [Compliance Procedures](../detailed-compliance/compliance-procedures.md) - Detailed compliance workflows
-- [Security Framework](../enterprise/security-framework.md) - Technical security implementation
-- [SOP Guidelines](../detailed-compliance/sop-guidelines.md) - Standard operating procedures
+- [Compliance Procedures](../detailed-compliance.md) - Detailed compliance workflows
+- [Security Framework](../enterprise.md) - Technical security implementation
+- [SOP Guidelines](../detailed-compliance.md) - Standard operating procedures
 ---

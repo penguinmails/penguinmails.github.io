@@ -139,16 +139,16 @@ This architectural documentation integrates with:
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Implementation Overview](../overview)) - Strategic technical overview
-- [Development Guidelines](../development-guidelines/README)) - Coding standards and practices
-- [Database Infrastructure](../database-infrastructure/README)) - Schema and performance optimization
-- [Quality Assurance](../quality-assurance/README)) - Testing protocols and procedures
+- [Implementation Overview](...md)) - Strategic technical overview
+- [Development Guidelines](../development-guidelines.md)) - Coding standards and practices
+- [Database Infrastructure](../database-infrastructure.md)) - Schema and performance optimization
+- [Quality Assurance](../quality-assurance.md)) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy/overview)) - Strategic business decisions
-- [Operations Management](../../operations-analytics/operations-management/README)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise/security-framework)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance/README)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy.md)) - Strategic business decisions
+- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
 
 ---
 

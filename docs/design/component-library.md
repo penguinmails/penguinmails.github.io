@@ -14,14 +14,14 @@ The Component Library is a comprehensive catalog of all reusable UI components a
 ### Component Organization
 ```
 📁 components/
-├── 📁 primitives/          # Base components (Button, Input, etc.)
-├── 📁 layout/             # Layout components (Grid, Container, etc.)
-├── 📁 navigation/         # Navigation components (NavBar, Breadcrumbs, etc.)
-├── 📁 forms/              # Form components (FormField, Select, etc.)
-├── 📁 data-display/       # Data display (Table, Card, Chart, etc.)
-├── 📁 feedback/           # Feedback components (Alert, Toast, Modal, etc.)
-├── 📁 overlays/           # Overlay components (Tooltip, Popover, etc.)
-└── 📁 utilities/          # Utility components (Loading, EmptyState, etc.)
+├── 📁 primitives.md)
+├── 📁 layout.md)
+├── 📁 navigation.md)
+├── 📁 forms.md)
+├── 📁 data-display.md)
+├── 📁 feedback.md)
+├── 📁 overlays.md)
+└── 📁 utilities.md)
 ```
 
 ### Component Maturity Levels
@@ -64,7 +64,7 @@ interface ButtonProps {
 
 **Design Specifications:**
 - Height: 32px (sm), 40px (md), 48px (lg)
-- Border radius: 6px (sm/md), 8px (lg)
+- Border radius: 6px (sm.md), 8px (lg)
 - Font weight: 500 (regular), 600 (bold for primary)
 - Focus ring: 2px solid primary color, 2px offset
 
@@ -420,7 +420,7 @@ interface AlertProps {
   message="Your Stripe account setup is incomplete. Complete setup to start accepting payments."
   action={{
     label: "Complete Setup",
-    onClick: () => navigate('/settings/billing')
+    onClick: () => navigate('/settings.md)
   }}
   dismissible
 />
@@ -458,7 +458,7 @@ const handleSave = async () => {
       message: "Your campaign has been saved successfully.",
       action: {
         label: "View Campaign",
-        onClick: () => navigate(`/campaigns/${campaignId}`)
+        onClick: () => navigate(`/campaigns.md)
       }
     });
   } catch (error) {
@@ -664,7 +664,7 @@ interface EmptyStateProps {
     label: "Create Campaign",
     variant: "primary",
     icon: PlusIcon,
-    onClick: () => navigate('/campaigns/new')
+    onClick: () => navigate('/campaigns.md)
   }}
   secondaryAction={{
     label: "Learn More",
@@ -774,10 +774,10 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ---
 
 ## Related Documents
-- [UI Library](../ui-library) - Component usage guidelines and patterns
-- [Design System](../design-system) - Complete design system overview
-- [Design Tokens](../design-tokens) - Design token specifications
-- [Accessibility Guidelines](../accessibility-guidelines) - Inclusive design standards
+- [UI Library](...md) - Component usage guidelines and patterns
+- [Design System](...md) - Complete design system overview
+- [Design Tokens](...md) - Design token specifications
+- [Accessibility Guidelines](...md) - Inclusive design standards
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications
 ---

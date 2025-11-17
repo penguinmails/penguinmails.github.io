@@ -15,14 +15,14 @@ This directory contains detailed implementation guidance, technical requirements
 ## Progressive Disclosure Flow
 
 ### 🛠️ Implementation Documents
-- [**Implementation Roadmap**](./implementation-roadmap) - Phased deployment plan (≤200 lines)
-- [**Implementation Summary**](./implementation-summary) - Executive implementation overview (≤200 lines)
-- [**Implementation Requirements**](./implementation-requirements) - Technical setup specifications (≤300 lines)
-- [**Infrastructure Overview**](./infrastructure-overview) - Strategic technical planning (≤200 lines)
-- [**Technical Infrastructure**](./technical-infrastructure) - Detailed technical architecture (≤300 lines)
-- [**ESP Technical Analysis**](./esp-technical-analysis) - ESP strategy assessment (≤300 lines)
-- [**Success Metrics**](./success-metrics) - Implementation KPIs and measurement (≤200 lines)
-- [**Visual Enhancement Strategy**](./visual-enhancement-strategy) - UI/UX implementation guidance (≤300 lines)
+- [**Implementation Roadmap**](..md) - Phased deployment plan (≤200 lines)
+- [**Implementation Summary**](..md) - Executive implementation overview (≤200 lines)
+- [**Implementation Requirements**](..md) - Technical setup specifications (≤300 lines)
+- [**Infrastructure Overview**](..md) - Strategic technical planning (≤200 lines)
+- [**Technical Infrastructure**](..md) - Detailed technical architecture (≤300 lines)
+- [**ESP Technical Analysis**](..md) - ESP strategy assessment (≤300 lines)
+- [**Success Metrics**](..md) - Implementation KPIs and measurement (≤200 lines)
+- [**Visual Enhancement Strategy**](..md) - UI.md)
 
 ### 🎯 Implementation Path
 1. **Executive Planning**: Start with `implementation-roadmap` for high-level plan
@@ -47,10 +47,10 @@ This directory contains detailed implementation guidance, technical requirements
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core/) - Executive approval for implementation
-- [Procurement & Compliance](../procurement-compliance/) - Enterprise procurement requirements
-- [Performance Analysis](../performance/) - Performance optimization during implementation
-- [Financial Analysis](../financial-analysis/) - Implementation cost analysis
+- [Core Business Documents](../core.md) - Executive approval for implementation
+- [Procurement & Compliance](../procurement-compliance.md) - Enterprise procurement requirements
+- [Performance Analysis](../performance.md) - Performance optimization during implementation
+- [Financial Analysis](../financial-analysis.md) - Implementation cost analysis
 
 ---
 

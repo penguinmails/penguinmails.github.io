@@ -305,9 +305,9 @@ Agency and consulting organizations present unique operational challenges requir
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework)
-- [Operations Analytics Framework](../analytics/framework)
-- [Agencies & Consulting Product Framework](../../product/industry-cases/agencies-consulting-product)
+- [Operations Strategy Framework](../strategy.md)
+- [Operations Analytics Framework](../analytics.md)
+- [Agencies & Consulting Product Framework](../../product/industry-cases.md)
 - [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map
 
 ---

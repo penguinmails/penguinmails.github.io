@@ -356,10 +356,10 @@ The Operations Success Metrics Tracking Dashboard provides comprehensive operati
 **Review Cycle:** Quarterly success validation and strategic operations alignment achievement assessment
 
 **Related Success Documents:**
-- [Operations Analytics Framework](./framework) - Operations analytics context and strategic alignment
-- [Operations Executive Dashboard Framework](./executive-operations-dashboard-framework) - Executive operations context and success integration
-- [Operations Analytics Executive Dashboard](./operations-analytics-executive-dashboard) - Operations analytics with success tracking integration
-- [Operations Cross-Domain Integration Dashboard](./cross-domain-integration-dashboard) - Cross-domain integration with success tracking
+- [Operations Analytics Framework](..md) - Operations analytics context and strategic alignment
+- [Operations Executive Dashboard Framework](..md) - Executive operations context and success integration
+- [Operations Analytics Executive Dashboard](..md) - Operations analytics with success tracking integration
+- [Operations Cross-Domain Integration Dashboard](..md) - Cross-domain integration with success tracking
 
 **Next Steps:**
 

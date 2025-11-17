@@ -109,9 +109,9 @@ access:
 ### Release Types
 ```typescript
 enum ReleaseType {
-  MAJOR = 'major',     // Breaking changes (X.0.0)
-  MINOR = 'minor',     // New features (x.X.0)
-  PATCH = 'patch',     // Bug fixes (x.x.X)
+  MAJOR = 'major',     /.md)
+  MINOR = 'minor',     /.md)
+  PATCH = 'patch',     /.md)
   HOTFIX = 'hotfix'    // Critical production fixes
 }
 
@@ -477,7 +477,7 @@ const alertRules: AlertRule[] = [
   {
     name: 'High Error Rate',
     description: 'API error rate above 5%',
-    condition: 'rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.05',
+    condition: 'rate(http_requests_total{status=~"5.."}[5m]) .md) > 0.05',
     severity: 'critical',
     channels: ['slack', 'email', 'sms'],
     cooldown: 5,

@@ -25,7 +25,7 @@ last_modified_date: "2025-11-17"
 **👤 Ideal for Startup Founders** - Data-driven optimization to maximize limited marketing budget
 **👤 Enterprise-Ready** - Executive dashboards and compliance reporting for sales leadership
 
-**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy/overview#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy.md) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ### **The PenguinMails Advantage**
 Unlike basic email analytics, our platform provides:
@@ -35,7 +35,7 @@ Unlike basic email analytics, our platform provides:
 - **Real-time Alerts** - Immediate notifications for performance issues
 - **Enterprise Reporting** - Professional dashboards for stakeholders
 
-**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy/overview#market-leadership) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy.md) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ---
 
@@ -445,19 +445,19 @@ Unlike basic email analytics, our platform provides:
 Ready to optimize your cold email campaigns with comprehensive analytics and KPI-driven insights?
 
 ### **Related Business Intelligence**
-1. **[Key Performance Indicators Framework](../business/kpi-framework/)** - Comprehensive business metrics and formulas
-2. **[Business Strategy & Roadmap](../business/strategy/overview/)** - Strategic implementation and development priorities
-3. **[Market Analysis & Competitive Intelligence](../business/market-analysis/overview/)** - Market insights and competitive positioning
+1. **[Key Performance Indicators Framework](../business/kpi-framework.md)** - Comprehensive business metrics and formulas
+2. **[Business Strategy & Roadmap](../business/strategy/overview.md)** - Strategic implementation and development priorities
+3. **[Market Analysis & Competitive Intelligence](../business/market-analysis/overview.md)** - Market insights and competitive positioning
 
 ### **Related Feature Documentation**
-1. **[Warm-ups](../warm-ups/overview/)** - Build reputation to improve deliverability metrics
-2. **[Unified Inbox](../unified-inbox/overview/)** - Track responses and conversations
-3. **[Inbox Rotation](../inbox-rotation/overview/)** - Optimize across multiple accounts
+1. **[Warm-ups](../warm-ups/overview.md)** - Build reputation to improve deliverability metrics
+2. **[Unified Inbox](../unified-inbox/overview.md)** - Track responses and conversations
+3. **[Inbox Rotation](../inbox-rotation/overview.md)** - Optimize across multiple accounts
 
 ### **Deep Dive Options**
-- **[Advanced Analytics](advanced-analytics/)** - Advanced analytics techniques and insights
-- **[KPI Dashboard Setup](../business/kpi-framework/dashboard-setup/)** - Detailed KPI configuration and implementation
-- **[Success Metrics & Targets](../business/kpi-framework/success-metrics/)** - Business performance tracking and optimization
+- **[Advanced Analytics](advanced-analytics.md)** - Advanced analytics techniques and insights
+- **[KPI Dashboard Setup](../business/kpi-framework/dashboard-setup.md)** - Detailed KPI configuration and implementation
+- **[Success Metrics & Targets](../business/kpi-framework/success-metrics.md)** - Business performance tracking and optimization
 
 ### **Success Metrics & Implementation**
 - **Week 1**: First campaign data visible in analytics dashboard, baseline KPIs established

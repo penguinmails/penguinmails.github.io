@@ -23,7 +23,7 @@ Strictly aligned with:
   - `../database-infrastructure/oltp-mermaid-er.md`
   - `../database-infrastructure/notifications-mermaid-er.md`
 - Executive security & audit requirements (BF-004)
-- Executive / BI needs (BF-003, BF-005, BF-006) via read-only consumption of these resources by the Executive API
+- Executive .md) via read-only consumption of these resources by the Executive API
 
 All endpoints are:
 
@@ -158,7 +158,7 @@ Assignments connect tenants (or internal sending units) to pools/IPs.
 
 GET `/api/v1/admin/smtp/assignments?tenantId=tn_123`
 
-Response shows internal view of how a tenant is mapped to pools/IPs (for ops, not tenant-facing).
+Response shows internal view of how a tenant is mapped to pools.md).
 
 ### 4.2 Set / Update Assignment
 
@@ -198,7 +198,7 @@ GET `/api/v1/admin/smtp/pools/reputation?window=7d`
 
 Used by:
 - Internal deliverability dashboards
-- Executive cost/reputation analytics (via Executive API aggregations)
+- Executive cost.md)
 
 ## 6. Error Handling
 

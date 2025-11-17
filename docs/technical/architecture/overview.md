@@ -27,7 +27,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **4-Tier Database Architecture**: Sophisticated OLTP, Content, OLAP, and Queue system for optimal performance
 - **Email System Hierarchy**: Message-focused naming with natural email hierarchy (email_messages → email_content → attachments)
 
-**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](../quick-setup/) through [campaign creation](../../core-features/) to [analytics and optimization](../../core-features/analytics/overview/) - providing the reliable infrastructure that powers your success.
+**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](../quick-setup.md) through [campaign creation](../../core-features.md) to [analytics and optimization](../../core-features/analytics/overview.md) - providing the reliable infrastructure that powers your success.
 
 ### Technology Stack Decisions
 **Frontend Technologies**
@@ -69,7 +69,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 **Advanced Database Architecture**
 **4-Tier Database Strategy**:
-- **Tier 1: OLTP (NileDB/PostgreSQL)**: Optimized for fast transactional operations with advanced indexing strategies
+- **Tier 1: OLTP (NileDB.md)**: Optimized for fast transactional operations with advanced indexing strategies
 - **Tier 2: Content Database**: Dedicated heavy content storage with compression algorithms and deduplication
 - **Tier 3: OLAP Analytics**: Business intelligence warehouse with ETL pipelines and real-time aggregation
 - **Tier 4: Queue System**: Hybrid PostgreSQL + Redis for durable job processing with automatic failover
@@ -159,7 +159,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 **Strategic Alignment**: Our sophisticated 4-tier database architecture directly supports market leadership goals by providing **enterprise-grade data management** that scales to handle millions of emails while maintaining optimal performance and 99.9% data integrity.
 
 **Tier 1: OLTP (Operational Database)**
-- **Primary Database (NileDB/PostgreSQL)**: Fast transactional operations and real-time data access
+- **Primary Database (NileDB.md)**: Fast transactional operations and real-time data access
 - **User Data**: Authentication, profiles, preferences with secure session management
 - **Tenant Data**: Multi-tenant isolation and configuration with row-level security
 - **Campaign Data**: Email campaigns, contacts, analytics for operational workflows
@@ -428,10 +428,10 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 Explore the technical foundations further:
 
-1. **[Technical Operations Overview](../operations/overview/)** - Deployment, monitoring, and operational procedures
-2. **[Integration & API Overview](../integration/overview/)** - API documentation and third-party integrations
-3. **[Detailed Technical Architecture](detailed-technical/)** - Deep dive into system design and implementation
-4. **[Enterprise Technical Architecture](enterprise-tech/)** - Enterprise-specific technical considerations
+1. **[Technical Operations Overview](../operations/overview.md)** - Deployment, monitoring, and operational procedures
+2. **[Integration & API Overview](../integration/overview.md)** - API documentation and third-party integrations
+3. **[Detailed Technical Architecture](detailed-technical.md)** - Deep dive into system design and implementation
+4. **[Enterprise Technical Architecture](enterprise-tech.md)** - Enterprise-specific technical considerations
 
 ---
 
