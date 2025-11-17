@@ -24,10 +24,10 @@ last_modified_date: "2025-11-10"
 > **Documentation Strategy:** Progressive setup complexity aligned with business model tiers
 
 > **Quick Navigation:**
-> - **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
-> - **[Authentication Journey](((authentication-journey))** - Pre-requisite user authentication
-> - **[Payment & Billing Journey](((payment-billing-journey))** - Billing and payment setup
-> - **[Campaign Operations Journey](((campaign-operations-journey))** - Post-onboarding campaign management
+> - **[User Journey Framework](user-journey-framework.md)** - Complete progressive disclosure methodology
+> - **[Authentication Journey](authentication-journey.md)** - Pre-requisite user authentication
+> - **[Payment & Billing Journey](payment-billing-journey.md)** - Billing and payment setup
+> - **[Campaign Operations Journey](campaign-operations-journey.md)** - Post-onboarding campaign management
 
 ---
 
@@ -392,10 +392,10 @@ last_modified_date: "2025-11-10"
 
 ## Technical Implementation Links
 
-- **[Onboarding & Authentication Guide](((../technical/architecture/detailed-technical/onboarding-authentication))** - Complete user authentication and onboarding flow
-- **[Database Schema Integration](((../technical/architecture/detailed-technical/olap-analytics-schema))** - tenant_users.roles for status tracking and role-based access control
-- **[Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture))** - Onboarding analytics and success tracking
-- **[Business Model Alignment](((../business/model/overview))** - Onboarding strategy aligned with revenue model
-- **[Success Metrics Framework](((../core-features/analytics/overview))** - Onboarding KPIs and measurement systems
+- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Complete user authentication and onboarding flow
+- **[Database Schema Integration](../technical/architecture/detailed-technical/olap-analytics-schema.md)** - tenant_users.roles for status tracking and role-based access control
+- **[Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md)** - Onboarding analytics and success tracking
+- **[Business Model Alignment](../business/model/overview.md)** - Onboarding strategy aligned with revenue model
+- **[Success Metrics Framework](../core-features/analytics/overview.md)** - Onboarding KPIs and measurement systems
 
 **Keywords**: onboarding, user activation, setup process, role-based access, progressive disclosure, customer success, emergency recovery
