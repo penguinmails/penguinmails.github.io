@@ -1,256 +1,118 @@
-# User Journeys Documentation - Business Leaders Focus
+# User Journeys Documentation
 
 ## Overview
 
-This directory contains user journey documentation with a focus on business leaders' strategic oversight and decision support within realistic technical constraints.
+This directory contains detailed user journey documentation covering the complete user experience across the PenguinMails platform, from initial onboarding through advanced operational workflows.
 
-**Business Leaders Focus:** Executive experiences for CFOs, VPs, and Budget Owners requiring strategic oversight and directional insights aligned with backbone technical capabilities.
-
----
-
-## Business Leaders User Journey Framework
-
-### Strategic Oversight Journeys
-
-#### Executive Strategic Dashboard Journey
-**Purpose:** Business leaders accessing strategic oversight dashboards with directional insights
-
-**Journey Steps:**
-1. **Strategic Login** - Business leader accesses strategic oversight portal
-2. **Strategic Overview** - Directional insights dashboard showing:
-   - Revenue protection directional indicators
-   - Approximate cost optimization signals
-   - Strategic planning progress indicators
-3. **Strategic Deep Dive** - Click-through to specific strategic analysis:
-   - Quarterly revenue protection trend analysis
-   - Approximate cost optimization opportunities
-   - Strategic decision outcome tracking
-4. **Strategic Planning** - Strategic planning support interfaces:
-   - Investment tracking with process-driven ROI analysis
-   - Competitive intelligence directional insights
-   - Strategic decision framework
-
-**Technical Constraints:**
-- Web-based interfaces using existing framework capabilities
-- Directional data from backbone API surfaces
-- Process-driven analysis aligned with available data sources
-- Simple navigation optimized for strategic oversight
-
-#### Strategic Review Journey
-**Purpose:** Monthly and quarterly strategic reviews for business leaders
-
-**Journey Steps:**
-1. **Strategic Review Scheduling** - Automated strategic review calendar integration
-2. **Strategic Data Preparation** - Process-driven data gathering from:
-   - ESP billing and service data
-   - Backbone system health indicators
-   - Strategic event tracking
-   - External competitive intelligence
-3. **Strategic Analysis** - Business leader guided through:
-   - Revenue protection directional analysis
-   - Cost optimization opportunity identification
-   - Strategic planning progress assessment
-4. **Strategic Decision Making** - Strategic recommendations and action planning
-
-#### Strategic Alert Journey
-**Purpose:** Process-driven strategic alert system for business leaders
-
-**Journey Steps:**
-1. **Strategic Alert Notification** - Business leaders receive strategic alerts through:
-   - Email notifications for high-priority strategic insights
-   - Dashboard badges for directional trends
-   - Monthly strategic summary reports
-2. **Strategic Alert Review** - Business leaders review strategic alerts:
-   - Directional revenue protection concerns
-   - Approximate cost optimization opportunities
-   - Strategic planning updates and competitive insights
-3. **Strategic Response** - Process-driven strategic response planning:
-   - Strategic investigation requirements
-   - Resource allocation decisions
-   - Strategic planning adjustments
-
-### Strategic Support Journeys
-
-#### Strategic Planning Journey
-**Purpose:** Long-term strategic planning support for business leaders
-
-**Journey Steps:**
-1. **Strategic Planning Initiation** - Business leaders begin strategic planning cycles
-2. **Strategic Intelligence Gathering** - Process-driven intelligence collection:
-   - External competitive analysis
-   - Strategic performance trending
-   - Investment tracking and optimization
-3. **Strategic Decision Framework** - Guided strategic decision-making:
-   - Investment prioritization framework
-   - Risk assessment and mitigation planning
-   - Strategic roadmap development
-4. **Strategic Implementation** - Strategic plan execution support:
-   - Milestone tracking and progress monitoring
-   - Strategic performance measurement
-   - Strategic adjustment and optimization
-
-#### Budget Planning Journey
-**Purpose:** Strategic budget planning and cost optimization for business leaders
-
-**Journey Steps:**
-1. **Budget Planning Initiation** - Business leaders begin budget planning cycles
-2. **Cost Analysis** - Approximate cost analysis using:
-   - ESP billing data and trends
-   - Infrastructure cost monitoring
-   - Vendor performance assessment
-3. **Optimization Planning** - Cost optimization opportunity identification:
-   - Process-driven vendor optimization recommendations
-   - Resource allocation optimization insights
-   - Strategic procurement planning
-4. **Budget Execution** - Strategic budget tracking and optimization:
-   - Monthly budget variance monitoring
-   - Quarterly strategic budget reviews
-   - Annual strategic budget optimization
+**Focus Areas:** User experience design, operational workflows, and customer journey optimization for the email marketing platform.
 
 ---
 
-## Strategic Journey Architecture
+## User Journey Categories
 
-### Web-Based Strategic Interfaces
+### Onboarding & Authentication Journeys
 
-#### Strategic Dashboard Design
-**Technology:** Responsive web interfaces using existing framework capabilities
-- **Strategic Navigation:** Simple, intuitive navigation optimized for executive use
-- **Strategic Data Visualization:** Directional charts and trend indicators
-- **Strategic Alert Integration:** Seamless integration with strategic alert systems
-- **Strategic Mobile Support:** Basic mobile-friendly interfaces for strategic oversight
+#### Customer Onboarding Journey
+- [Complete Onboarding Guide](detailed-journeys/comprehensive-onboarding-guide.md) - Step-by-step customer onboarding process
+- [Onboarding Journey](detailed-journeys/onboarding-journey.md) - Core onboarding user experience
+- [Customer Onboarding Deep Dive](detailed-journeys/customer-onboarding-journey-deep-dive.md) - Detailed analysis of onboarding experience
+- [Onboarding Analysis](detailed-journeys/onboarding-user-journey-analysis.md) - User research and optimization insights
 
-#### Strategic Intelligence Integration
-**Data Sources:** Backbone-aligned strategic intelligence
-- **ESP Integration:** Basic deliverability and cost data from ESP APIs
-- **Backbone Monitoring:** System health and performance indicators
-- **Process-Driven Analytics:** Simplified analytics for directional insights
-- **External Intelligence:** Competitive analysis and market data integration
+#### Authentication & Access
+- [Authentication Journey](detailed-journeys/authentication-journey.md) - User authentication and access management
 
-### Process-Driven Strategic Workflows
+### Operational Workflow Journeys
 
-#### Monthly Strategic Review Workflow
-```markdown
-1. Strategic Data Preparation (Automated)
-   → ESP billing data collection
-   → System health indicator gathering
-   → Strategic event analysis
+#### Campaign Management
+- [Campaign Operations Journey](detailed-journeys/campaign-operations-journey.md) - Email campaign creation and management workflows
 
-2. Strategic Analysis (Business Leader Guided)
-   → Revenue protection trend review
-   → Cost optimization opportunity assessment
-   → Strategic planning progress evaluation
+#### Payment & Billing
+- [Payment Billing Journey](detailed-journeys/payment-billing-journey.md) - Subscription management and billing workflows
 
-3. Strategic Decision Making (Business Leader Led)
-   → Strategic recommendations review
-   → Resource allocation decisions
-   → Strategic action planning
+### User Experience Design
 
-4. Strategic Follow-up (Process-Driven)
-   → Strategic task assignment
-   → Strategic milestone tracking
-   → Strategic performance monitoring
-```
-
-#### Quarterly Strategic Planning Workflow
-```markdown
-1. Strategic Intelligence Gathering (Comprehensive)
-   → External competitive analysis
-   → Strategic performance trending
-   → Investment tracking and ROI analysis
-
-2. Strategic Planning (Business Leader Led)
-   → Strategic goal setting
-   → Strategic roadmap development
-   → Strategic budget planning
-
-3. Strategic Implementation (Process-Driven)
-   → Strategic initiative tracking
-   → Strategic performance measurement
-   → Strategic adjustment and optimization
-
-4. Strategic Review (Business Leader Guided)
-   → Strategic outcome assessment
-   → Strategic learning and improvement
-   → Strategic planning for next cycle
-```
+#### Framework & Design
+- [User Journey Framework](detailed-journeys/user-journey-framework.md) - Overall user journey design methodology
+- [Navigation Patterns](detailed-journeys/user-journey-navigation.md) - Navigation design and user flow optimization
+- [Interaction Patterns & UX Design](detailed-journeys/user-interaction-patterns-ux-design.md) - UI/UX design principles and interaction design
 
 ---
 
-## Strategic Journey Implementation
+## Journey Architecture
 
-### Realistic Technical Constraints
+### User-Centered Design Approach
 
-#### Backbone-Aligned Data Access
-- **ESP Billing APIs:** Approximate cost signals and service performance data
-- **Backbone Monitoring:** System health and operational indicators
-- **Process Documentation:** Strategic planning and decision documentation
-- **External Intelligence:** Competitive analysis and market data sources
+#### Progressive Disclosure Implementation
+- Layered information architecture for complexity management
+- Context-sensitive help and guidance
+- Guided workflows for complex operations
 
-#### Process-Driven Strategic Analysis
-- **Manual Analysis:** Business leader-guided strategic analysis using available data
-- **Directional Insights:** High-level trends and patterns vs. precise real-time monitoring
-- **Strategic Reporting:** Monthly and quarterly strategic reporting cycles
-- **Strategic Decision Support:** Framework for strategic decision-making
+#### Cross-Platform Experience
+- Consistent experience across web and mobile interfaces
+- Responsive design for various screen sizes
+- Touch-optimized interactions for mobile users
 
-### Strategic Implementation Timeline
+### Journey Optimization Framework
 
-#### Phase 1: Strategic Foundation (Months 1-2)
-- Strategic dashboard basic implementation
-- Strategic alert system setup
-- Process-driven strategic workflow creation
-- Business leader training on strategic processes
+#### User Research Integration
+- Continuous user feedback collection and analysis
+- A/B testing for journey optimization
+- Performance metrics and success measurement
 
-#### Phase 2: Strategic Enhancement (Months 3-4)
-- Strategic intelligence integration enhancement
-- Strategic planning support tool development
-- Strategic decision tracking framework implementation
-- Strategic performance measurement system setup
-
-#### Phase 3: Strategic Optimization (Months 5-6)
-- Strategic workflow optimization
-- Strategic intelligence capability enhancement
-- Strategic planning process refinement
-- Strategic value delivery measurement
+#### Personalization Strategy
+- User role-based journey customization
+- Contextual content and feature recommendations
+- Adaptive interfaces based on user behavior
 
 ---
 
-## Strategic Journey Documentation
+## Implementation Guidelines
 
-### Strategic Journey Templates
-- [Strategic Dashboard Journey](detailed-journeys/strategic-dashboard-journey.md)
-- [Strategic Review Journey](detailed-journeys/strategic-review-journey.md)
-- [Strategic Planning Journey](detailed-journeys/strategic-planning-journey.md)
-- [Budget Planning Journey](detailed-journeys/budget-planning-journey.md)
+### Design Standards
 
-### Strategic Framework Documentation
-- [Strategic User Journey Framework](detailed-journeys/strategic-journey-framework.md)
-- [Strategic Navigation Patterns](detailed-journeys/strategic-navigation-patterns.md)
-- [Strategic Interaction Design](detailed-journeys/strategic-interaction-design.md)
+#### Usability Principles
+- Clear visual hierarchy and information architecture
+- Intuitive navigation and user flow design
+- Consistent interaction patterns across the platform
+
+#### Accessibility Requirements
+- WCAG 2.1 AA compliance for all user interfaces
+- Keyboard navigation support
+- Screen reader compatibility
+- Color contrast and visual accessibility standards
+
+### Performance Standards
+
+#### Load Time Requirements
+- Initial page load: <2 seconds
+- Interactive readiness: <3 seconds
+- Route transitions: <500ms
+
+#### User Experience Metrics
+- Task completion rate: >90%
+- User satisfaction score: >4.5/5
+- Support ticket reduction: >30% after optimization
 
 ---
 
 ## Progressive Disclosure Navigation
 
-### For Business Leaders (CFOs, VPs, Budget Owners)
-- [Executive Summary](../business/core/executive-summary:1) - Strategic oversight framework
-- [Success Metrics](../business/implementation/success-metrics:1) - Strategic KPIs and measurement
-- [ROI Calculator](../business/financial-analysis/roi-calculator-detailed:1) - Strategic investment analysis
+### For New Users
+- [Comprehensive Onboarding Guide](detailed-journeys/comprehensive-onboarding-guide.md) - Complete getting started experience
+- [User Journey Framework](detailed-journeys/user-journey-framework.md) - Understanding the overall platform experience
 
-### For Strategic Implementation Teams
-- [Business Leaders Technical Framework](../business/technical-implementation/business-leaders-technical-framework:1) - Strategic technical coordination
-- [Executive API Contract](../implementation-technical/api/executive-api:1) - Strategic data access
-- [Strategic Intelligence Integration](../implementation-technical/analytics-integration/posthog-business-events-specification:1) - Strategic event tracking
+### For Power Users
+- [Campaign Operations Journey](detailed-journeys/campaign-operations-journey.md) - Advanced campaign management workflows
+- [User Interaction Patterns](detailed-journeys/user-interaction-patterns-ux-design.md) - Advanced UI/UX techniques
 
-### For Strategic Operations
-- [Strategic Operations Overview](../business/operations/overview:1) - Strategic operational framework
-- [Implementation Roadmap](../business/implementation/implementation-roadmap:1) - Strategic implementation planning
-- [Strategic Decision Support](../business/strategy/overview:1) - Strategic planning support
+### For Operations Teams
+- [Payment Billing Journey](detailed-journeys/payment-billing-journey.md) - Subscription and billing management
+- [Authentication Journey](detailed-journeys/authentication-journey.md) - Access control and security workflows
 
 ---
 
-**Keywords**: business leaders journeys, strategic oversight, executive experience, directional insights, process-driven workflows, strategic planning, budget planning
+**Keywords**: user journeys, user experience, customer onboarding, campaign management, payment workflows, authentication, navigation design, interaction patterns, progressive disclosure
 
 ---
 
-*This user journey documentation is part of the comprehensive Progressive Disclosure Framework for Business Leaders. It provides practical guidance for strategic oversight while respecting backbone technical constraints and focusing on realistic business value delivery through directional insights and process-driven strategic support.*
+*This user journey documentation provides comprehensive guidance for optimizing the PenguinMails platform experience across all user types and interaction patterns.*

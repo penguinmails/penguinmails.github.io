@@ -8,6 +8,9 @@ last_modified_date: "2025-11-10"
 
 **For CFOs, VPs, and Budget Owners**: Strategic oversight and directional planning for infrastructure implementation
 
+**Scope Clarification**: This document describes implementation phases - **MVP Phase (2025)** focuses on basic infrastructure and directional analytics. **Post-MVP Phase (2026+)** includes advanced features like real-time monitoring, AI optimization, and enterprise capabilities.
+
+**Important**: Advanced features like WebSockets, AI-powered automation, and enterprise integrations are planned for Post-MVP implementation and are not part of the 2025 MVP scope.
 **Strategic Value**: This implementation framework provides executive oversight capabilities, strategic resource planning, and directional implementation guidance built on realistic backbone technical constraints.
 
 ---
