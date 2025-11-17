@@ -22,10 +22,10 @@ last_modified_date: "2025-11-10"
 > **Documentation Strategy:** Progressive disclosure from beginner to expert implementation
 
 > **Quick Navigation:**
-> - **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
-> - **[Onboarding Journey](((onboarding-journey))** - Follow-up user setup process
-> - **[Payment & Billing Journey](((payment-billing-journey))** - Billing and subscription management
-> - **[Campaign Operations Journey](((campaign-operations-journey))** - Email campaign management
+> - **[User Journey Framework](user-journey-framework.md)** - Complete progressive disclosure methodology
+> - **[Onboarding Journey](onboarding-journey.md)** - Follow-up user setup process
+> - **[Payment & Billing Journey](payment-billing-journey.md)** - Billing and subscription management
+> - **[Campaign Operations Journey](campaign-operations-journey.md)** - Email campaign management
 
 ---
 
@@ -207,7 +207,7 @@ last_modified_date: "2025-11-10"
 
 #### 4. Ongoing Session Management
 **⭐ Beginner Path:**
-- **Technical Details**: See [Onboarding & Authentication Guide](((../technical/architecture/detailed-technical/onboarding-authentication)) for details
+- **Technical Details**: See [Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md) for details
 - **User Experience**: Sessions persist across browser restarts and device switches
 - **Security**: Automatic logout after configurable inactivity period
 
@@ -319,10 +319,10 @@ last_modified_date: "2025-11-10"
 
 ## Technical Implementation Links
 
-- **[Onboarding & Authentication Guide](((../technical/architecture/detailed-technical/onboarding-authentication))** - Technical implementation with NileDB + Turnstile
-- **[Database Schema](((../technical/architecture/detailed-technical/olap-analytics-schema))** - Multi-tenant authentication tables and RLS policies
-- **[Security Framework](((../compliance-security/enterprise/security-framework))** - Security practices and compliance procedures
-- **[Business Model Integration](((../business/model/overview))** - Authentication features aligned with revenue model
-- **[Market Analysis Impact](((../business/market-analysis/overview))** - Customer segment authentication requirements
+- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Technical implementation with NileDB + Turnstile
+- **[Database Schema](../technical/architecture/detailed-technical/olap-analytics-schema.md)** - Multi-tenant authentication tables and RLS policies
+- **[Security Framework](../compliance-security/enterprise/security-framework.md)** - Security practices and compliance procedures
+- **[Business Model Integration](../business/model/overview.md)** - Authentication features aligned with revenue model
+- **[Market Analysis Impact](../business/market-analysis/overview.md)** - Customer segment authentication requirements
 
 **Keywords**: authentication, access control, security, user journey, multi-tenant, enterprise security, session management, troubleshooting
