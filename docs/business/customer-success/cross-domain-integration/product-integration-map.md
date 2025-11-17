@@ -294,8 +294,8 @@ topics:
 
 ---
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Product Systems Map](../../../product/cross-domain-integration/product-systems-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Product Systems Map](../../../business/product/cross-domain-integration/product-systems-integration-map)
 
 **Document Classification:** Level 3 - CS-Product Integration Analysis

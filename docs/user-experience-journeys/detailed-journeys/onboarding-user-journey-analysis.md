@@ -187,3 +187,4 @@
 - [Integration Guide](../technical/architecture/detailed-technical/integration-guide) - API and integration specifications
 
 **Keywords**: user journey, onboarding analysis, role-based access control, multi-tenant architecture, user experience, database management, edge case handling
+---

@@ -109,9 +109,9 @@ Implement comprehensive health monitoring across multiple dimensions:
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](framework.md)
-- [Customer Success Analytics](../analytics/overview.md)
-- [Customer Retention Strategies](../retention/summary.md)
+- [Customer Success Framework](framework)
+- [Customer Success Analytics](../analytics/overview)
+- [Customer Retention Strategies](../retention/summary
 
 ---
 *Level 1: Strategic overview for executive decision-making*

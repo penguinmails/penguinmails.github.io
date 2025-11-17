@@ -200,10 +200,10 @@ Relationship Health = (Stakeholder Relationships × 0.5) + (Advocacy Indicators 
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [Customer Journey Analytics](../journey/overview.md)
-- [Predictive Churn Analysis](predictive-churn-analysis.md)
-- [Customer Retention Strategies](../retention/summary.md)
+- [Customer Success Framework](../strategy/framework)
+- [Customer Journey Analytics](../journey/overview)
+- [Predictive Churn Analysis](predictive-churn-analysis)
+- [Customer Retention Strategies](../retention/summary)
 
 ---
 *Level 2: Analytics framework for customer health monitoring and proactive management*

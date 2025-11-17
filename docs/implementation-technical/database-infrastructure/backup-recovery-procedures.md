@@ -624,19 +624,19 @@ echo "Disaster recovery completed"
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](((../operations-management/infrastructure-operations-management))** - Central operational hub
-- **[Connection Pooling Strategy](((./connection-pooling-strategy))** - Pool management during recovery
-- **[Quality Assurance Testing Protocols](((../quality-assurance/qa-testing-protocols))** - Emergency response coordination
+- **[Infrastructure Operations Management](../operations-management/infrastructure-operations-management))** - Central operational hub
+- **[Connection Pooling Strategy](./connection-pooling-strategy))** - Pool management during recovery
+- **[Quality Assurance Testing Protocols](../quality-assurance/qa-testing-protocols))** - Emergency response coordination
 
 ### **Technical References**
-- **[OLTP Schema Guide](((./oltp-schema-guide))** - OLTP backup integration
-- **[Content Database Schema Guide](((./content-database-schema-guide))** - Content backup procedures
-- **[Queue System Implementation Guide](((./queue-system-implementation-guide))** - Queue recovery methods
-- **[OLAP Analytics Schema Guide](((./olap-analytics-schema-guide))** - Analytics backup strategy
+- **[OLTP Schema Guide](./oltp-schema-guide))** - OLTP backup integration
+- **[Content Database Schema Guide](./content-database-schema-guide))** - Content backup procedures
+- **[Queue System Implementation Guide](./queue-system-implementation-guide))** - Queue recovery methods
+- **[OLAP Analytics Schema Guide](./olap-analytics-schema-guide))** - Analytics backup strategy
 
 ### **Strategic Documentation**
-- **[Operations Analytics Overview](((../overview))** - Main operations analytics framework
-- **[Business Strategy Overview](((../../business/strategy/overview))** - Strategic business alignment
+- **[Operations Analytics Overview](../overview))** - Main operations analytics framework
+- **[Business Strategy Overview](../../business/strategy/overview))** - Strategic business alignment
 - **[Compliance & Security](../../compliance-security/)** - Security and compliance frameworks
 
 ---
@@ -654,3 +654,4 @@ echo "Disaster recovery completed"
 **Training Required**: All database operations and on-call engineers
 
 This comprehensive backup strategy ensures data protection and rapid recovery capabilities for all database tiers while meeting compliance requirements and minimizing business impact during incidents.
+---

@@ -295,8 +295,8 @@ topics:
 
 ---
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Operations Systems Map](../../../operations/cross-domain-integration/operations-systems-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Operations Systems Map '../../../operations/cross-domain-integration/operations-systems-integration-map
 
 **Document Classification:** Level 3 - CS-Operations Integration Analysis

@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 3 - Industry-Specific Implementation  
 **Target Audience**: Healthcare Developer Teams, Compliance Officers, Healthcare IT Leadership  
 **Business Impact Priority**: Critical - Healthcare compliance and developer platform responsibility  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) | [Healthcare Strategy Framework](docs/business/healthcare/strategy/framework.md) | [Developer Operations Framework](docs/business/developer/operations/framework.md) | [Healthcare Operations Framework](docs/business/healthcare/operations/framework.md) | [Developer Analytics Framework](docs/business/developer/analytics/framework.md) | [Healthcare Analytics Framework](docs/business/healthcare/analytics/framework.md)
+**Framework Integration**: [Developer Strategy Framework](../strategy/framework) | [Healthcare Strategy Framework](../strategy/framework) | [Developer Operations Framework](../operations/framework) | [Healthcare Operations Framework](../operations/framework) | [Developer Analytics Framework](../analytics/framework) | [Healthcare Analytics Framework](../analytics/framework
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Developer platform security standards activated and monitored
 - Compliance assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Healthcare Compliance Framework](docs/business/healthcare/compliance/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Healthcare Compliance Framework](../compliance/framework)
 
 #### Compliance Point 1.1.2: Healthcare Data Security Protocols
 **Compliance Requirement**: Healthcare Developer Data Protection Standards  
@@ -54,7 +54,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Developer platform security validation systems activated
 - Data protection compliance completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Healthcare Security Framework](docs/business/healthcare/security/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Healthcare Security Framework](../security/framework)
 
 #### Compliance Point 1.1.3: Healthcare Access Control
 **Compliance Requirement**: Healthcare Developer Access Management Compliance  
@@ -66,7 +66,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Audit trail systems activated for compliance monitoring
 - Access control compliance completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Access Framework](docs/business/healthcare/access/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Access Framework](../access/framework)
 
 ### 1.2 Healthcare Developer Standards
 
@@ -80,7 +80,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Regulatory compliance validation systems activated
 - Development standards compliance completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Healthcare Quality Framework](docs/business/healthcare/quality/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Healthcare Quality Framework](../quality/framework)
 
 #### Compliance Point 1.2.2: Patient Data Integration Compliance
 **Compliance Requirement**: Healthcare Developer Data Integration Standards  
@@ -92,7 +92,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Integration validation systems activated and monitored
 - Data integration compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](docs/business/developer/automation/framework.md) + [Healthcare Data Framework](docs/business/healthcare/data/framework.md)
+**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Healthcare Data Framework](../data/framework)
 
 #### Compliance Point 1.2.3: Healthcare Platform Compliance Validation
 **Compliance Requirement**: Healthcare Developer Platform Regulatory Compliance  
@@ -104,7 +104,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Validation monitoring systems activated and optimized
 - Platform compliance validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Validation Framework](docs/business/healthcare/validation/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Validation Framework](../validation/framework)
 
 ---
 
@@ -122,7 +122,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Regulatory compliance integration systems activated
 - Data architecture optimization completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Healthcare Data Strategy](docs/business/healthcare/data/strategy.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Healthcare Data Strategy](../data/strategy)
 
 #### Integration Point 2.1.2: Healthcare Platform Data Management
 **Integration Requirement**: Healthcare Developer Platform Data Optimization  
@@ -134,7 +134,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Processing optimization systems activated and monitored
 - Data management optimization completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Platform Management](docs/business/healthcare/platform/management.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Platform Management](../platform/management)
 
 #### Integration Point 2.1.3: Patient Data Security Integration
 **Integration Requirement**: Healthcare Developer Data Security Compliance  
@@ -146,7 +146,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Security compliance validation systems activated
 - Data security integration completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Security Integration](docs/business/healthcare/security/integration.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Security Integration](../security/integration)
 
 ### 2.2 Healthcare Platform Optimization
 
@@ -160,7 +160,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Regulatory compliance integration systems activated
 - Platform efficiency optimization completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](docs/business/developer/automation/framework.md) + [Healthcare Workflow Framework](docs/business/healthcare/workflow/framework.md)
+**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Healthcare Workflow Framework](../workflow/framework)
 
 #### Integration Point 2.2.2: Patient Data Analytics Integration
 **Integration Requirement**: Healthcare Developer Analytics Optimization  
@@ -172,7 +172,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Analytics optimization systems activated and monitored
 - Analytics integration compliance completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Analytics Framework](docs/business/healthcare/analytics/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Analytics Framework](../analytics/framework)
 
 #### Integration Point 2.2.3: Healthcare Platform Reliability
 **Integration Requirement**: Healthcare Developer Platform Reliability Standards  
@@ -184,7 +184,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Reliability monitoring systems activated and optimized
 - Platform reliability standards completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Reliability Framework](docs/business/healthcare/reliability/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Reliability Framework](../reliability/framework)
 
 ---
 
@@ -202,7 +202,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Encryption compliance validation systems activated
 - Data protection standards completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Healthcare Encryption Framework](docs/business/healthcare/encryption/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Healthcare Encryption Framework](../encryption/framework)
 
 #### Protection Point 3.1.2: Patient Data Privacy Compliance
 **Protection Requirement**: Healthcare Developer Privacy Standards  
@@ -214,7 +214,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Privacy compliance monitoring systems activated
 - Data privacy compliance completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Privacy Framework](docs/business/healthcare/privacy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Privacy Framework](../privacy/framework)
 
 #### Protection Point 3.1.3: Healthcare Data Breach Prevention
 **Protection Requirement**: Healthcare Developer Data Breach Protection  
@@ -226,7 +226,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Access control validation systems activated
 - Breach prevention compliance completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Healthcare Security Framework](docs/business/healthcare/security/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Healthcare Security Framework](../security/framework)
 
 ### 3.2 Compliance Automation
 
@@ -240,7 +240,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Validation automation systems activated and optimized
 - Compliance automation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](docs/business/developer/automation/framework.md) + [Healthcare Automation Framework](docs/business/healthcare/automation/framework.md)
+**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Healthcare Automation Framework](../automation/framework)
 
 #### Automation Point 3.2.2: Healthcare Audit Automation
 **Automation Requirement**: Healthcare Developer Audit Automation  
@@ -252,7 +252,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Reporting automation systems optimized and monitored
 - Audit automation compliance completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Audit Framework](docs/business/healthcare/audit/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Audit Framework](../audit/framework)
 
 #### Automation Point 3.2.3: Healthcare Monitoring Automation
 **Automation Requirement**: Healthcare Developer Monitoring Automation  
@@ -264,7 +264,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Security monitoring systems optimized and validated
 - Monitoring automation compliance completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Monitoring Framework](docs/business/healthcare/monitoring/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Monitoring Framework](../monitoring/framework)
 
 ---
 
@@ -282,7 +282,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Timely reporting systems activated and optimized
 - Compliance reporting accuracy completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Reporting Framework](docs/business/healthcare/reporting/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Reporting Framework](../reporting/framework)
 
 #### Reporting Point 4.1.2: Healthcare Platform Reporting
 **Reporting Requirement**: Healthcare Developer Platform Status Reporting  
@@ -294,7 +294,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Performance documentation systems activated and optimized
 - Platform reporting completion verified and validated
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Platform Reporting](docs/business/healthcare/platform/reporting.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Platform Reporting](../platform/reporting)
 
 #### Reporting Point 4.1.3: Healthcare Regulatory Validation
 **Reporting Requirement**: Healthcare Developer Regulatory Validation Reporting  
@@ -306,7 +306,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Validation reporting systems optimized and monitored
 - Regulatory validation completion verified and documented
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Healthcare Validation Reporting](docs/business/healthcare/validation/reporting.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Healthcare Validation Reporting](../validation/reporting)
 
 ### 4.2 Platform Coordination Excellence
 
@@ -320,7 +320,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Healthcare application optimization systems activated
 - Platform excellence standards completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Healthcare Excellence Framework](docs/business/healthcare/excellence/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Healthcare Excellence Framework](../excellence/framework)
 
 #### Coordination Point 4.2.2: Healthcare Coordination Success
 **Coordination Requirement**: Healthcare Developer Coordination Success  
@@ -332,7 +332,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Systems integration optimization systems activated
 - Coordination success completion verified and validated
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Healthcare Coordination Framework](docs/business/healthcare/coordination/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Healthcare Coordination Framework](../coordination/framework)
 
 #### Coordination Point 4.2.3: Healthcare Success Monitoring
 **Coordination Requirement**: Healthcare Developer Success Monitoring  
@@ -344,7 +344,7 @@ The Healthcare Developer Framework establishes comprehensive protocols for HIPAA
 - Compliance achievement systems optimized and validated
 - Success monitoring completion verified and documented
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Healthcare Success Framework](docs/business/healthcare/success/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Healthcare Success Framework](../success/framework)
 
 ---
 
@@ -431,3 +431,4 @@ This framework provides the foundation for healthcare developer excellence, ensu
 *Last Updated: November 16, 2025*  
 *Document Owner: Healthcare Developer Framework Team*  
 *Review Cycle: Monthly compliance validation and quarterly framework enhancement*
+---

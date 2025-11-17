@@ -1,3 +1,11 @@
+---
+title: "Implementation - Level 3: Technical Implementation and Deployment"
+description: "Documentation for Implementation - Level 3: Technical Implementation and Deployment - README"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Implementation - Level 3: Technical Implementation and Deployment
 
 **For IT Directors, Technical Leads, Project Managers, and Implementation Teams**

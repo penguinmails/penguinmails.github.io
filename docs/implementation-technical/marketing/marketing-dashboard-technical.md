@@ -208,3 +208,4 @@ interface UserRoles {
 - Performance Framework: `docs/business/marketing/performance/summary.md#optimization-targets`
 
 **Document Classification:** Level 4 - Technical Implementation
+---

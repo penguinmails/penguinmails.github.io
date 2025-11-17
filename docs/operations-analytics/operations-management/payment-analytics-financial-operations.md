@@ -688,10 +688,11 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](((./organization-analytics-team-management))** → Team and organization management
-- **[Metrics & KPIs](((../analytics-performance/metrics-kpis))** → Comprehensive KPI framework
+- **[Organization Analytics](./organization-analytics-team-management))** → Team and organization management
+- **[Metrics & KPIs](../analytics-performance/metrics-kpis))** → Comprehensive KPI framework
 - **[Team Performance](../team-performance/)** → Team coordination and development
 
 ---
 
 **Keywords**: payment analytics, financial operations, Stripe Connect, billing management, revenue tracking, cost analysis, subscription management, payment processing
+---

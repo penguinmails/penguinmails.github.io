@@ -433,9 +433,9 @@ External Support:
 
 ### **Operational Runbooks**
 - **[Database Infrastructure Management](../database-infrastructure/)** - Database procedures and infrastructure
-- **[Connection Pooling Strategy](((../database-infrastructure/connection-pooling-strategy))** - Pool configuration and optimization
-- **[Backup & Recovery Procedures](((../database-infrastructure/backup-recovery-procedures))** - Data protection and restoration
-- **[Quality Assurance Testing Protocols](((../quality-assurance/qa-testing-protocols))** - Testing procedures and validation
+- **[Connection Pooling Strategy](../database-infrastructure/connection-pooling-strategy))** - Pool configuration and optimization
+- **[Backup & Recovery Procedures](../database-infrastructure/backup-recovery-procedures))** - Data protection and restoration
+- **[Quality Assurance Testing Protocols](../quality-assurance/qa-testing-protocols))** - Testing procedures and validation
 
 ### **Technical References**
 - **[Architecture System](../architecture-system/)** - System architecture decisions
@@ -443,8 +443,8 @@ External Support:
 - **[Compliance & Security](../../compliance-security/)** - Security and compliance frameworks
 
 ### **Strategic Documentation**
-- **[Business Strategy Overview](((../../business/strategy/overview))** - Strategic business alignment
-- **[Operations Analytics Overview](((../overview))** - Main operations analytics framework
+- **[Business Strategy Overview](../../business/strategy/overview))** - Strategic business alignment
+- **[Operations Analytics Overview](../overview))** - Main operations analytics framework
 - **[Analytics Performance](../analytics-performance/)** - Performance monitoring and analytics
 
 ---
@@ -462,3 +462,4 @@ External Support:
 **Training Required**: All database operations team members
 
 This comprehensive infrastructure operations guide provides immediate operational value while serving as the central hub for all database operations procedures. Regular updates ensure accuracy and relevance for production database management.
+---

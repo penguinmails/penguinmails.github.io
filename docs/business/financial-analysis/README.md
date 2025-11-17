@@ -1,3 +1,11 @@
+---
+title: "Financial Analysis - Level 3: Deep Financial Modeling"
+description: "Documentation for Financial Analysis - Level 3: Deep Financial Modeling - README"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Financial Analysis - Level 3: Deep Financial Modeling
 
 **For Finance teams, CFOs, and business analysts** requiring detailed financial analysis and modeling

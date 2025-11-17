@@ -649,3 +649,4 @@ Week 5+: Target volume per IP
 [^26]: https://userjot.com/blog/postmark-pricing-in-2025
 [^27]: https://aws.amazon.com/ses/pricing/
 [^28]: https://mailbluster.com/blog/amazon-ses-pricing
+---

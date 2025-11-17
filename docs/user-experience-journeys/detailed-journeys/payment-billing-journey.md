@@ -391,3 +391,4 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
 - **[Security & Privacy Framework](../compliance-security/enterprise/security-framework.md)** - Payment compliance and security procedures
 
 **Keywords**: payment processing, billing management, Stripe Connect, revenue optimization, subscription management, enterprise billing
+---

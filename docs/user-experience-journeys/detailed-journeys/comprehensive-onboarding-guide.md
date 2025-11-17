@@ -17,7 +17,7 @@ last_modified_date: "2025-10-27"
 ---
 
 ## Quick Navigation
-- [🏠 **Main Overview**](((README)) | [🎯 **Product Strategy**](((../business/strategy/overview)) | [🛣️ **Roadmap**](((../technical/architecture/detailed-technical/implementation-roadmap))
+- [🏠 **Main Overview**](README/) | [🎯 **Product Strategy**](../business/strategy/overview/) | [🛣️ **Roadmap**](../technical/architecture/detailed-technical/implementation-roadmap/)
 
 ---
 
@@ -174,10 +174,10 @@ All team members agree to:
 - [Google Workspace](https://drive.google.com/penguinmails) - Document collaboration
 
 ### Key Documents
-- [SOP Guidelines](((../business/operations/overview)) - Standard operating procedures
-- [🔧 **Technical Architecture**](((../technical/architecture/overview)) - System design
-- [🎯 **Product Strategy**](((../business/strategy/overview)) - Business objectives
-- [🛣️ **Development Roadmap**](((../technical/architecture/detailed-technical/implementation-roadmap)) - Project timeline
+- [SOP Guidelines](../business/operations/overview/) - Standard operating procedures
+- [🔧 **Technical Architecture**](../technical/architecture/overview/) - System design
+- [🎯 **Product Strategy**](../business/strategy/overview/) - Business objectives
+- [🛣️ **Development Roadmap**](../technical/architecture/detailed-technical/implementation-roadmap/) - Project timeline
 
 ---
 
@@ -192,10 +192,11 @@ All team members agree to:
 ---
 
 ## Related Documents
-- [Customer Onboarding Journey Deep Dive](((../customer-onboarding-journey-deep-dive)) - Customer onboarding process
-- [Onboarding User Journey Analysis](((../onboarding-user-journey-analysis)) - Technical onboarding implementation
-- [User Interaction Patterns UX Design](((../user-interaction-patterns-ux-design)) - UX design patterns
-- [Technical Architecture](((../technical/architecture/overview)) - System design overview
-- [Business Strategy](((../business/strategy/overview)) - Business objectives and roadmap
+- [Customer Onboarding Journey Deep Dive](../customer-onboarding-journey-deep-dive.md) - Customer onboarding process
+- [Onboarding User Journey Analysis](../onboarding-user-journey-analysis.md) - Technical onboarding implementation
+- [User Interaction Patterns UX Design](../user-interaction-patterns-ux-design.md) - UX design patterns
+- [Technical Architecture](../technical/architecture/overview/) - System design overview
+- [Business Strategy](../business/strategy/overview/) - Business objectives and roadmap
 
 *Questions or suggestions for improving this onboarding guide? Update the document or contact the Product Owner.*
+---

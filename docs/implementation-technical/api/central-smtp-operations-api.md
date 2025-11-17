@@ -234,3 +234,4 @@ Additional constraints:
   - Never exposes raw IP assignment details.
 - Queue & Events API:
   - Emits events (e.g., `smtp.ip.reputation_changed`, `smtp.pool.updated`) for downstream analytics and alerts.
+---

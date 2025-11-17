@@ -1,3 +1,11 @@
+---
+title: "Operations System Health Journey (BF-008, OE-001, OE-002)"
+description: "Documentation for Operations System Health Journey (BF-008, OE-001, OE-002) - Ops System Health"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Operations System Health Journey (BF-008, OE-001, OE-002)
 
 Document Level: Implementation-Technical (UX Contract)  

@@ -22,24 +22,24 @@ Comprehensive compliance and security documentation for PenguinMails.
 
 ## Quick Access
 
-### **📋 [Compliance & Security Overview](((overview))**
+### **📋 [Compliance & Security Overview](overview.md)**
 Complete security and compliance framework overview with strategic positioning and key metrics.
 
 ### **📋 [Detailed Compliance](detailed-compliance/)**
 Advanced compliance procedures and implementation guidance:
-- [Compliance Procedures](((detailed-compliance/compliance-procedures)) - Regulatory workflows and procedures
-- [Accessibility Guidelines](((detailed-compliance/accessibility-guidelines)) - WCAG 2.1 AA compliance standards
-- [SOP Guidelines](((detailed-compliance/sop-guidelines)) - Standard operating procedures
+- [Compliance Procedures](detailed-compliance/compliance-procedures.md) - Regulatory workflows and procedures
+- [Accessibility Guidelines](detailed-compliance/accessibility-guidelines.md) - WCAG 2.1 AA compliance standards
+- [SOP Guidelines](detailed-compliance/sop-guidelines.md) - Standard operating procedures
 
 ### **🏢 [Enterprise Security](enterprise/)**
 Advanced security architecture and implementation:
-- [Security Framework](((enterprise/security-framework)) - Comprehensive security architecture
-- [Security & Privacy Integration](((enterprise/security-privacy-integration)) - Unified security and privacy approach
-- [Traffic Security Matrix](((enterprise/traffic-security-matrix)) - Database security strategy framework
+- [Security Framework](enterprise/security-framework.md) - Comprehensive security architecture
+- [Security & Privacy Integration](enterprise/security-privacy-integration.md) - Unified security and privacy approach
+- [Traffic Security Matrix](enterprise/traffic-security-matrix.md) - Database security strategy framework
 
 ### **🌍 [International Standards](international/)**
 Global compliance and privacy frameworks:
-- [Data Privacy Policy](((international/data-privacy-policy)) - Customer-facing privacy standards
+- [Data Privacy Policy](international/data-privacy-policy.md) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -216,3 +216,4 @@ Global compliance and privacy frameworks:
 *Security and privacy are fundamental to our service. This framework ensures we maintain the highest standards while supporting business growth and user trust.*
 
 *Previous: [User Journeys](../user-journeys/) | Next: [Archive](../archive/) →*
+---

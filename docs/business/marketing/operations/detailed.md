@@ -175,3 +175,4 @@ Marketing Operations tracks:
   - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
 
 This operations framework is intentionally business-focused, defining required capabilities, ownership, and outcomes while delegating detailed schemas, APIs, and infrastructure choices to Level 4 technical documentation.
+---

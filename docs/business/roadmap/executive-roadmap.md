@@ -16,7 +16,7 @@ This document provides executives with a clear view of feature delivery timeline
 **Target Audience:** C-Level Executives, VPs, Board Members, Investors  
 **Purpose:** Strategic feature planning, investment decisions, and business impact assessment
 
-**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md) for complete technical definitions.
+**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap) for complete technical definitions.
 
 ---
 
@@ -296,7 +296,7 @@ This document provides executives with a clear view of feature delivery timeline
 ## Cross-Reference Integration
 
 ### Executive Decision Support
-- **Financial Planning**: [`ROI Calculator`](../reference/roi-calculator-detailed.md)
+- **Financial Planning**: [`ROI Calculator`](../reference/roi-calculator-detailed)
 - **Market Analysis**: [`Market Analysis Overview`](../market-analysis/overview.md)
 - **Competitive Positioning**: [`Competitive Analysis`](../core/competitive-analysis.md)
 - **Resource Planning**: [`Technical Infrastructure`](../implementation/technical-infrastructure.md)
@@ -304,14 +304,14 @@ This document provides executives with a clear view of feature delivery timeline
 ### Strategic Framework
 - **Business Model**: [`Business Model Overview`](../model/overview.md)
 - **Value Proposition**: [`Value Proposition Overview`](../value-proposition/overview.md)
-- **Strategic Planning**: [`Strategy Overview`](overview.md)
+- **Strategic Planning**: [`Strategy Overview`](strategy/overview)
 - **Implementation Planning**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
 
 ---
 
 **Document Classification:** Level 1 - Strategic Executive View  
 **Review Cycle:** Quarterly roadmap assessment and annual strategic planning  
-**Stakeholder Access:** C-Level Executives, Board Members, Investors  
-**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md)
+**Stakeholder Access:** C-Level Executives, Board Members, Investors
+**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap)
 
 This executive roadmap provides strategic visibility into feature development timeline, investment requirements, and business impact for informed decision-making and stakeholder communication.

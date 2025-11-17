@@ -50,7 +50,7 @@ Enable **seamless integration** with existing business systems while providing t
 
 ### **Authentication & Authorization**
 
-**API Key Authentication (⭐⭐⭐/))**
+**API Key Authentication (⭐⭐⭐)**
 ```http
 Authorization: Bearer pk_live_abc123def456ghi789
 Content-Type: application/json
@@ -76,7 +76,7 @@ https://app.penguinmails.com/oauth/authorize?client_id=your_client_id&redirect_u
 
 ## 📊 Core API Endpoints
 
-### **Campaign Management API (⭐⭐⭐/))**
+### **Campaign Management API (⭐⭐⭐)**
 
 **Create Campaign**
 ```http
@@ -127,7 +127,7 @@ Content-Type: application/json
 }
 ```
 
-### **Email Sending API (⭐⭐⭐/))**
+### **Email Sending API (⭐⭐⭐)**
 
 **Single Email Send**
 ```http
@@ -168,7 +168,7 @@ Content-Type: application/json
 }
 ```
 
-### **Analytics & Reporting API (⭐⭐⭐/))**
+### **Analytics & Reporting API (⭐⭐⭐)**
 
 **Campaign Analytics**
 ```http
@@ -209,7 +209,7 @@ Authorization: Bearer {token}
 
 ## 🤖 AI & Machine Learning APIs
 
-### **AI Personalization Engine (⭐⭐⭐/))**
+### **AI Personalization Engine (⭐⭐⭐)**
 
 **Content Optimization**
 ```http
@@ -310,20 +310,20 @@ Content-Type: application/json
 import hmac
 import hashlib
 
-def verify_webhook_signature(payload: str, signature: str, secret: str/)) -> bool:
+def verify_webhook_signature(payload: str, signature: str, secret: str) -> bool:
     expected_signature = hmac.new(/)
-        secret.encode('utf-8'/)),
-        payload.encode('utf-8'/)),
+        secret.encode('utf-8'),
+        payload.encode('utf-8'),
         hashlib.sha256
-    ).hexdigest(/))
-    return hmac.compare_digest(f"sha256={expected_signature}", signature/))
+    ).hexdigest()
+    return hmac.compare_digest(f"sha256={expected_signature}", signature)
 ```
 
 ---
 
 ## 💻 SDK Libraries
 
-### **Python SDK (⭐⭐⭐/))**
+### **Python SDK (⭐⭐⭐)**
 
 **Installation & Basic Usage**
 ```bash
@@ -335,7 +335,7 @@ from penguinmails import PenguinMails
 from penguinmails.models import Campaign, Email
 
 # Initialize client
-client = PenguinMails(api_key="pk_live_abc123def456"/))
+client = PenguinMails(api_key="pk_live_abc123def456")
 
 # Create campaign with AI optimization
 campaign_data = {
@@ -347,8 +347,8 @@ campaign_data = {
     }
 }
 
-campaign = client.campaigns.create(campaign_data/))
-print(f"Campaign created: {campaign.id}"/))
+campaign = client.campaigns.create(campaign_data)
+print(f"Campaign created: {campaign.id}")
 
 # Send email
 email = Email(/)
@@ -357,13 +357,13 @@ email = Email(/)
     content="<p>Welcome to PenguinMails!</p>"
 )
 
-result = client.emails.send(email/))
-print(f"Email sent: {result.message_id}"/))
+result = client.emails.send(email)
+print(f"Email sent: {result.message_id}")
 
 # Get analytics with AI insights
-analytics = client.analytics.get_campaign_metrics(campaign.id/))
-print(f"Open rate: {analytics.open_rate}"/))
-print(f"AI optimization score: {analytics.ai_insights.optimization_score}"/))
+analytics = client.analytics.get_campaign_metrics(campaign.id)
+print(f"Open rate: {analytics.open_rate}")
+print(f"AI optimization score: {analytics.ai_insights.optimization_score}")
 ```
 
 **Advanced AI Features**
@@ -371,7 +371,7 @@ print(f"AI optimization score: {analytics.ai_insights.optimization_score}"/))
 from penguinmails.ai import AIOptimizer
 
 # AI-powered content optimization
-ai_optimizer = AIOptimizer(client/))
+ai_optimizer = AIOptimizer(client)
 optimized_content = ai_optimizer.optimize_content(/)
     content=campaign_data["content"],
     audience={
@@ -381,7 +381,7 @@ optimized_content = ai_optimizer.optimize_content(/)
 )
 ```
 
-### **JavaScript/Node.js SDK (⭐⭐⭐/))**
+### **JavaScript/Node.js SDK (⭐⭐⭐)**
 
 **Installation & Basic Usage**
 ```bash
@@ -392,12 +392,12 @@ npm install @penguinmails/sdk
 import { PenguinMails } from '@penguinmails/sdk';
 
 // Initialize client
-const client = new PenguinMails({/)
+const client = new PenguinMails({
   apiKey: 'pk_live_abc123def456'
 });
 
 // Create campaign
-const campaign = await client.campaigns.create({/)
+const campaign = await client.campaigns.create({
   name: 'Welcome Series',
   subject: 'Welcome to PenguinMails!',
   content: {
@@ -406,7 +406,7 @@ const campaign = await client.campaigns.create({/)
   }
 });
 
-console.log(`Campaign created: ${campaign.id}`/));
+console.log(`Campaign created: ${campaign.id}`);
 
 // Send email with tracking
 const email = {
@@ -419,23 +419,23 @@ const email = {
   }
 };
 
-const result = await client.emails.send(email/));
-console.log(`Email sent: ${result.message_id}`/));
+const result = await client.emails.send(email);
+console.log(`Email sent: ${result.message_id}`);
 ```
 
 **React Integration**
 ```jsx
 import { PenguinMailsProvider, usePenguinMails } from '@penguinmails/sdk-react';
 
-function CampaignCreator(/)) {
-  const { campaigns, createCampaign } = usePenguinMails(/));
+function CampaignCreator() {
+  const { campaigns, createCampaign } = usePenguinMails();
   
-  const handleCreateCampaign = async (campaignData/)) => {
+  const handleCreateCampaign = async (campaignData) => {
     try {
-      const campaign = await createCampaign(campaignData/));
-      console.log('Campaign created:', campaign/));
-    } catch (error/)) {
-      console.error('Failed to create campaign:', error/));
+      const campaign = await createCampaign(campaignData);
+      console.log('Campaign created:', campaign);
+    } catch (error) {
+      console.error('Failed to create campaign:', error);
     }
   };
 
@@ -446,7 +446,7 @@ function CampaignCreator(/)) {
   );
 }
 
-function App(/)) {
+function App() {
   return (/)
     <PenguinMailsProvider apiKey="pk_live_abc123def456">
       <CampaignCreator />
@@ -455,7 +455,7 @@ function App(/)) {
 }
 ```
 
-### **PHP SDK (⭐⭐/))**
+### **PHP SDK (⭐⭐)**
 
 **Installation & Usage**
 ```bash
@@ -468,7 +468,7 @@ use PenguinMails\Client;
 use PenguinMails\Models\Campaign;
 
 // Initialize client
-$client = new Client('pk_live_abc123def456'/));
+$client = new Client('pk_live_abc123def456');
 
 // Create campaign
 $campaignData = [
@@ -480,12 +480,12 @@ $campaignData = [
     ]
 ];
 
-$campaign = $client->campaigns(/))->create($campaignData/));
-echo "Campaign created: " . $campaign->getId(/)) . "\n";
+$campaign = $client->campaigns()->create($campaignData);
+echo "Campaign created: " . $campaign->getId() . "\n";
 ?>
 ```
 
-### **Ruby SDK (⭐⭐/))**
+### **Ruby SDK (⭐⭐)**
 
 **Installation & Usage**
 ```bash
@@ -496,7 +496,7 @@ gem install penguinmails-ruby
 require 'penguinmails'
 
 # Initialize client
-client = PenguinMails::Client.new(api_key: 'pk_live_abc123def456'/))
+client = PenguinMails::Client.new(api_key: 'pk_live_abc123def456')
 
 # Create campaign
 campaign_data = {
@@ -508,7 +508,7 @@ campaign_data = {
   }
 }
 
-campaign = client.campaigns.create(campaign_data/))
+campaign = client.campaigns.create(campaign_data)
 puts "Campaign created: #{campaign.id}"
 ```
 
@@ -516,7 +516,7 @@ puts "Campaign created: #{campaign.id}"
 
 ## 🔌 Third-Party Integrations
 
-### **CRM Integrations (⭐⭐/))**
+### **CRM Integrations (⭐⭐)**
 
 **Salesforce Integration**
 ```typescript
@@ -527,17 +527,17 @@ class SalesforcePenguinMailsIntegration {
   private emailClient: PenguinMails;
   private salesforce: jsforce.Connection;
 
-  constructor(emailApiKey: string, salesforceConfig: any/)) {
-    this.emailClient = new PenguinMails({ apiKey: emailApiKey }/));
-    this.salesforce = new jsforce.Connection(salesforceConfig/));
+  constructor(emailApiKey: string, salesforceConfig: any) {
+    this.emailClient = new PenguinMails({ apiKey: emailApiKey });
+    this.salesforce = new jsforce.Connection(salesforceConfig);
   }
 
-  async syncLeadToEmail(leadData: any/)): Promise<void> {
+  async syncLeadToEmail(leadData: any): Promise<void> {
     // Enrich lead data with AI insights
-    const enrichedData = await this.enrichLeadWithAI(leadData/));
+    const enrichedData = await this.enrichLeadWithAI(leadData);
     
     // Create contact in PenguinMails
-    const contact = await this.emailClient.contacts.create({/)
+    const contact = await this.emailClient.contacts.create({
       email: leadData.Email,
       first_name: leadData.FirstName,
       last_name: leadData.LastName,
@@ -547,11 +547,11 @@ class SalesforcePenguinMailsIntegration {
         lead_source: leadData.LeadSource,
         industry: leadData.Industry
       },
-      tags: ['salesforce_lead', leadData.LeadSource.toLowerCase(/))]
+      tags: ['salesforce_lead', leadData.LeadSource.toLowerCase()]
     });
 
     // Trigger appropriate email sequence
-    await this.triggerLeadSequence(contact.id, enrichedData/));
+    await this.triggerLeadSequence(contact.id, enrichedData);
   }
 }
 ```
@@ -562,11 +562,11 @@ from penguinmails import PenguinMails
 import hubspot
 
 class HubSpotPenguinMailsIntegration:
-    def __init__(self, penguinmails_api_key, hubspot_api_key/)):
-        self.email_client = PenguinMails(api_key=penguinmails_api_key/))
-        self.hubspot = hubspot.Client(access_token=hubspot_api_key/))
+    def __init__(self, penguinmails_api_key, hubspot_api_key):
+        self.email_client = PenguinMails(api_key=penguinmails_api_key)
+        self.hubspot = hubspot.Client(access_token=hubspot_api_key)
     
-    def sync_contact_to_email(self, hubspot_contact/)):
+    def sync_contact_to_email(self, hubspot_contact):
         """Sync HubSpot contact to PenguinMails with AI enrichment."""
         try:
             # Get additional contact data
@@ -576,20 +576,20 @@ class HubSpotPenguinMailsIntegration:
             )
             
             # AI-enrichment for better targeting
-            enriched_data = self.email_client.ai.analyze_contact({/)
-                'company': contact_data.properties.get('company', ''/)),
-                'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead'/))
+            enriched_data = self.email_client.ai.analyze_contact({
+                'company': contact_data.properties.get('company', ''),
+                'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead')
             })
             
             # Create contact in PenguinMails
-            contact = self.email_client.contacts.create({/)
+            contact = self.email_client.contacts.create({
                 'email': contact_data.properties['email'],
-                'first_name': contact_data.properties.get('firstname', ''/)),
-                'last_name': contact_data.properties.get('lastname', ''/)),
-                'company': contact_data.properties.get('company', ''/)),
+                'first_name': contact_data.properties.get('firstname', ''),
+                'last_name': contact_data.properties.get('lastname', ''),
+                'company': contact_data.properties.get('company', ''),
                 'custom_fields': {
                     'hubspot_contact_id': hubspot_contact.id,
-                    'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead'/)),
+                    'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead'),
                     'ai_enrichment': enriched_data
                 },
                 'tags': ['hubspot_sync', 'crm_integration']
@@ -598,11 +598,11 @@ class HubSpotPenguinMailsIntegration:
             return contact
             
         except Exception as e:
-            print(f"Integration error: {e}"/))
+            print(f"Integration error: {e}")
             raise
 ```
 
-### **E-commerce Platform Integrations (⭐⭐⭐/))**
+### **E-commerce Platform Integrations (⭐⭐⭐)**
 
 **Shopify Integration**
 ```python
@@ -610,11 +610,11 @@ import shopify
 from penguinmails import PenguinMails
 
 class ShopifyPenguinMailsIntegration:
-    def __init__(self, shopify_api_key, penguinmails_api_key/)):
-        self.shopify = shopify.ShopifyAPI(api_key=shopify_api_key/))
-        self.email_client = PenguinMails(api_key=penguinmails_api_key/))
+    def __init__(self, shopify_api_key, penguinmails_api_key):
+        self.shopify = shopify.ShopifyAPI(api_key=shopify_api_key)
+        self.email_client = PenguinMails(api_key=penguinmails_api_key)
     
-    def sync_customer_and_send_welcome(self, customer_data/)):
+    def sync_customer_and_send_welcome(self, customer_data):
         """Sync Shopify customer and send personalized welcome email."""
         try:
             # Create contact with purchase history
@@ -629,63 +629,63 @@ class ShopifyPenguinMailsIntegration:
                 'tags': ['shopify_customer', 'new_customer']
             }
             
-            contact = self.email_client.contacts.create(contact_data/))
+            contact = self.email_client.contacts.create(contact_data)
             
             # Send personalized welcome email
             email_data = {
                 'to': customer_data['email'],
                 'subject': f"Welcome {customer_data['first_name']}!",
                 'content': {
-                    'html': self.generate_welcome_html(customer_data/)),
-                    'text': self.generate_welcome_text(customer_data/))
+                    'html': self.generate_welcome_html(customer_data),
+                    'text': self.generate_welcome_text(customer_data)
                 }
             }
             
-            result = self.email_client.emails.send(email_data/))
+            result = self.email_client.emails.send(email_data)
             return result
             
         except Exception as e:
-            print(f"Integration error: {e}"/))
+            print(f"Integration error: {e}")
             raise
 ```
 
-### **Zapier Integration (⭐⭐/))**
+### **Zapier Integration (⭐⭐)**
 
 **Zapier Webhook Handler**
 ```javascript
-const express = require('express'/));
-const { PenguinMails } = require('@penguinmails/sdk'/));
+const express = require('express');
+const { PenguinMails } = require('@penguinmails/sdk');
 
-const app = express(/));
-const emailClient = new PenguinMails({/)
+const app = express();
+const emailClient = new PenguinMails({
   apiKey: process.env.PENGUINMAILS_API_KEY
 });
 
 // Handle Zapier webhook triggers
-app.post('/webhooks/zapier/trigger', async (req, res/)) => {
+app.post('/webhooks/zapier/trigger', async (req, res) => {
   try {
     const { trigger_type, data } = req.body;
     
-    switch (trigger_type/)) {
+    switch (trigger_type) {
       case 'new_subscriber':
-        await handleNewSubscriber(data/));
+        await handleNewSubscriber(data);
         break;
       case 'purchase_made':
-        await handlePurchaseMade(data/));
+        await handlePurchaseMade(data);
         break;
       default:
-        console.log('Unknown trigger type:', trigger_type/));
+        console.log('Unknown trigger type:', trigger_type);
     }
     
-    res.status(200/)).json({ success: true }/));
-  } catch (error/)) {
-    console.error('Zapier webhook error:', error/));
-    res.status(500/)).json({ error: error.message }/));
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error('Zapier webhook error:', error);
+    res.status(500).json({ error: error.message });
   }
 });
 
-async function handleNewSubscriber(subscriberData/)) {
-  const contact = await emailClient.contacts.create({/)
+async function handleNewSubscriber(subscriberData) {
+  const contact = await emailClient.contacts.create({
     email: subscriberData.email,
     first_name: subscriberData.first_name || '',
     custom_fields: {
@@ -696,7 +696,7 @@ async function handleNewSubscriber(subscriberData/)) {
   });
 
   // Trigger welcome sequence
-  await emailClient.campaigns.trigger_sequence(contact.id, 'welcome_series'/));
+  await emailClient.campaigns.trigger_sequence(contact.id, 'welcome_series');
 }
 ```
 
@@ -704,7 +704,7 @@ async function handleNewSubscriber(subscriberData/)) {
 
 ## 🔐 Rate Limiting & Error Handling
 
-### **Rate Limiting Tiers (⭐⭐⭐/))**
+### **Rate Limiting Tiers (⭐⭐⭐)**
 
 | Tier | Requests/Hour | Features | Cost |
 |------|---------------|----------|------|
@@ -720,7 +720,7 @@ X-RateLimit-Remaining: 999
 X-RateLimit-Reset: 1701429600
 ```
 
-### **Error Handling Best Practices (⭐⭐/))**
+### **Error Handling Best Practices (⭐⭐)**
 
 **Standard Error Response**
 ```json
@@ -749,24 +749,24 @@ from penguinmails.exceptions import (/)
     AuthenticationError
 )
 
-def send_campaign_with_retry(client, campaign_data, max_retries=3/)):
-    for attempt in range(max_retries/)):
+def send_campaign_with_retry(client, campaign_data, max_retries=3):
+    for attempt in range(max_retries):
         try:
-            return client.campaigns.create(campaign_data/))
+            return client.campaigns.create(campaign_data)
         
         except ValidationError as e:
-            print(f"Validation failed: {e.details}"/))
+            print(f"Validation failed: {e.details}")
             return None  # Don't retry validation errors
         
         except RateLimitError as e:
             if attempt == max_retries - 1:
                 raise
-            wait_time = e.retry_after or (2 ** attempt/))
-            print(f"Rate limited. Retrying in {wait_time} seconds..."/))
-            time.sleep(wait_time/))
+            wait_time = e.retry_after or (2 ** attempt)
+            print(f"Rate limited. Retrying in {wait_time} seconds...")
+            time.sleep(wait_time)
         
         except AuthenticationError as e:
-            print(f"Authentication failed: {e}"/))
+            print(f"Authentication failed: {e}")
             return None
 ```
 
@@ -785,14 +785,14 @@ def send_campaign_with_retry(client, campaign_data, max_retries=3/)):
 ### **Test Data Generator**
 ```python
 class PenguinMailsTestDataGenerator:
-    def __init__(self, client/)):
+    def __init__(self, client):
         self.client = client
     
-    def generate_test_campaigns(self, count=5/)):
+    def generate_test_campaigns(self, count=5):
         """Generate test campaigns for testing."""
         campaigns = []
         
-        for i in range(count/)):
+        for i in range(count):
             campaign_data = {
                 "name": f"Test Campaign {i+1}",
                 "subject": f"Test Subject {i+1}",
@@ -800,7 +800,7 @@ class PenguinMailsTestDataGenerator:
                     "html": f"<h1>Test Email {i+1}</h1><p>This is test content.</p>",
                     "text": f"Test Email {i+1} - This is test content."
                 },
-                "recipients": self.generate_test_recipients(50/)),
+                "recipients": self.generate_test_recipients(50),
                 "settings": {
                     "analytics_enabled": True,
                     "ai_optimization": True,
@@ -809,8 +809,8 @@ class PenguinMailsTestDataGenerator:
                 }
             }
             
-            campaign = self.client.campaigns.create(campaign_data/))
-            campaigns.append(campaign/))
+            campaign = self.client.campaigns.create(campaign_data)
+            campaigns.append(campaign)
         
         return campaigns
 ```
@@ -823,10 +823,10 @@ from penguinmails.exceptions import ValidationError
 
 class TestPenguinMailsAPI:
     @pytest.fixture
-    def client(self/)):
-        return PenguinMails(api_key="sk_test_abc123"/))
+    def client(self):
+        return PenguinMails(api_key="sk_test_abc123")
     
-    def test_campaign_creation(self, client/)):
+    def test_campaign_creation(self, client):
         campaign_data = {
             "name": "Test Campaign",
             "subject": "Test Subject",
@@ -834,7 +834,7 @@ class TestPenguinMailsAPI:
             "recipients": [{"email": "test@example.com"}]
         }
         
-        campaign = client.campaigns.create(campaign_data/))
+        campaign = client.campaigns.create(campaign_data)
         
         assert campaign.id is not None
         assert campaign.name == campaign_data["name"]
@@ -869,3 +869,4 @@ class TestPenguinMailsAPI:
 
 ---
 *Previous: [Technical Operations Overview](../operations/overview/) | Next: [Core Features Overview](../../core-features/) →*
+---

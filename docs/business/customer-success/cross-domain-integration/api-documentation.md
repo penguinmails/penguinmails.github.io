@@ -70,7 +70,7 @@ Response 200:
 }
 ```
 
-**Full Spec:** [marketing-integration-map.md#cs-marketing-apis](marketing-integration-map.md)
+**Full Spec:** [marketing-integration-map#cs-marketing-apis](marketing-integration-map)
 
 ---
 
@@ -104,7 +104,7 @@ Response 200:
 }
 ```
 
-**Full Spec:** [sales-integration-map.md#cs-sales-apis](sales-integration-map.md)
+**Full Spec:** [sales-integration-map#cs-sales-apis](sales-integration-map)
 
 ---
 
@@ -141,7 +141,7 @@ Response 201:
 }
 ```
 
-**Full Spec:** [product-integration-map.md#cs-product-apis](product-integration-map.md)
+**Full Spec:** [product-integration-map#cs-product-apis](product-integration-map)
 
 ---
 
@@ -169,7 +169,7 @@ Request:
 }
 ```
 
-**Full Spec:** [finance-integration-map.md#cs-finance-apis](finance-integration-map.md)
+**Full Spec:** [finance-integration-map#cs-finance-apis](finance-integration-map)
 
 ---
 
@@ -202,7 +202,7 @@ Response 200:
 }
 ```
 
-**Full Spec:** [operations-integration-map.md#cs-operations-apis](operations-integration-map.md)
+**Full Spec:** [operations-integration-map#cs-operations-apis](operations-integration-map)
 
 ---
 
@@ -231,8 +231,8 @@ X-Audit-Trail: audit-log-url
 
 Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Domain Maps](../*-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Domain Maps](../*-integration-map)
 
 **Document Classification:** Level 3 - CS API Reference Documentation

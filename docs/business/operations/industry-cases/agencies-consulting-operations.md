@@ -305,10 +305,10 @@ Agency and consulting organizations present unique operational challenges requir
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework.md)
-- [Operations Analytics Framework](../analytics/framework.md)
-- [Agencies & Consulting Product Framework](../../product/industry-cases/agencies-consulting-product.md)
-- [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map.md)
+- [Operations Strategy Framework](../strategy/framework)
+- [Operations Analytics Framework](../analytics/framework)
+- [Agencies & Consulting Product Framework](../../product/industry-cases/agencies-consulting-product)
+- [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map
 
 ---
 *Level 3: Industry-specific operational implementation for agencies and consulting organizations*

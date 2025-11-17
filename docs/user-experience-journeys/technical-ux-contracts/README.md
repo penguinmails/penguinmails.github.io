@@ -1,3 +1,11 @@
+---
+title: "Executive and Operations User Journeys (Canonical UX Contracts)"
+description: "Documentation for Executive and Operations User Journeys (Canonical UX Contracts) - README"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive and Operations User Journeys (Canonical UX Contracts)
 
 Document Level: Implementation-Technical (UX Contracts)  

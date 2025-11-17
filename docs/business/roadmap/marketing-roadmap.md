@@ -16,7 +16,7 @@ This document provides marketing and sales teams with a clear understanding of w
 **Target Audience:** Marketing Directors, Sales Teams, Customer Success, Content Marketers  
 **Purpose:** Feature promises, sales positioning, customer communication, and hype marketing
 
-**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md) for technical definitions.
+**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap) for technical definitions.
 
 ---
 
@@ -348,14 +348,14 @@ This document provides marketing and sales teams with a clear understanding of w
 ## Cross-Reference Integration
 
 ### Marketing Intelligence
-- **Market Analysis**: [`Market Analysis Overview`](../market-analysis/overview.md)
-- **Competitive Analysis**: [`Competitive Analysis`](../core/competitive-analysis.md)
-- **Value Proposition**: [`Value Proposition Overview`](../value-proposition/overview.md)
+- **Market Analysis**: [`Market Analysis Overview`](../market-analysis/overview)
+- **Competitive Analysis**: [`Competitive Analysis`](../core/competitive-analysis)
+- **Value Proposition**: [`Value Proposition Overview`](../value-proposition/overview)
 
 ### Customer Success
-- **Customer Success Framework**: [`Customer Success Strategy`](../customer-success/strategy/overview.md)
-- **Implementation Roadmap**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
-- **Success Metrics**: [`Success Metrics`](../implementation/success-metrics.md)
+- **Customer Success Framework**: [`Customer Success Strategy`](../customer-success/strategy/overview)
+- **Implementation Roadmap**: [`Implementation Roadmap`](../implementation/implementation-roadmap)
+- **Success Metrics**: [`Success Metrics`](../implementation/success-metrics
 
 ### Sales Enablement
 - **Executive Roadmap**: [`Executive Roadmap`](executive-roadmap.md) for ROI discussions
@@ -365,7 +365,7 @@ This document provides marketing and sales teams with a clear understanding of w
 
 **Document Classification:** Level 2 - Marketing Focus  
 **Review Cycle:** Monthly feature updates and quarterly marketing strategy review  
-**Stakeholder Access:** Marketing Teams, Sales, Customer Success, Content Marketing  
-**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md)
+**Stakeholder Access:** Marketing Teams, Sales, Customer Success, Content Marketing
+**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap
 
 This marketing roadmap enables confident sales conversations, effective hype marketing, and strategic customer communication aligned with actual development capabilities.

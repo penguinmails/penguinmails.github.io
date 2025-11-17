@@ -77,3 +77,4 @@ erDiagram
   %%   but does NOT act as the primary store for notifications/events.
   %%
   %% - External logging / observability holds raw, high-volume telemetry.
+---

@@ -1,3 +1,11 @@
+---
+title: "Queue / Jobs ER Diagram (Mermaid)"
+description: "Documentation for Queue / Jobs ER Diagram (Mermaid) - Queue Mermaid Er"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Queue / Jobs ER Diagram (Mermaid)
 
 This diagram models the dedicated Queue / Jobs tier, aligned with the 5-tier architecture:

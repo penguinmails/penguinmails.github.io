@@ -338,3 +338,4 @@ last_modified_date: "2025-11-10"
 - **[Success Metrics Framework](../core-features/analytics/overview.md)** - Campaign KPIs and measurement systems
 
 **Keywords**: campaign operations, email marketing, deliverability, campaign management, ROI optimization, compliance, troubleshooting
+---

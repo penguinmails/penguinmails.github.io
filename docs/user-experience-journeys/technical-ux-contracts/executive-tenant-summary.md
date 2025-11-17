@@ -1,3 +1,11 @@
+---
+title: "Executive Tenant Summary Journey (BF-002, BF-006, CO-001, RP-001)"
+description: "Documentation for Executive Tenant Summary Journey (BF-002, BF-006, CO-001, RP-001) - Executive Tenant Summary"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Tenant Summary Journey (BF-002, BF-006, CO-001, RP-001)
 
 Document Level: Implementation-Technical (UX Contract)  

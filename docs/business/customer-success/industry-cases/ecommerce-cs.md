@@ -268,10 +268,10 @@ E-commerce organizations operate at high scale with complex customer lifecycle m
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [E-commerce Marketing Framework](../../marketing/industry-cases/ecommerce-marketing.md)
-- [E-commerce Business Case](../../industry-business-cases/ecommerce.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Success Framework](../strategy/framework)
+- [E-commerce Marketing Framework](../../marketing/industry-cases/ecommerce-marketing)
+- [E-commerce Business Case](../../industry-business-cases/ecommerce)
+- [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---
 *Level 3: Industry-specific customer success implementation for e-commerce organizations*

@@ -254,10 +254,10 @@ Customer Onboarding represents the critical foundation period where new customer
 ---
 
 **Related Documentation:**
-- [Customer Onboarding Details](detailed.md)
-- [Customer Success Framework](../strategy/framework.md)
-- [Customer Journey Management](../journey/summary.md)
-- [Customer Health Scoring](../analytics/health-scoring-framework.md)
+- [Customer Onboarding Details](onboarding-detailed)
+- [Customer Success Framework](../strategy/framework)
+- [Customer Journey Management](../journey/summary)
+- [Customer Health Scoring](../analytics/health-scoring-framework)
 
 ---
 *Level 1: Executive summary for customer onboarding strategic planning and decision-making*

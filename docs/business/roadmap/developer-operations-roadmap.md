@@ -16,7 +16,7 @@ This document provides development and operations teams with a clear understandi
 **Target Audience:** Engineering Teams, DevOps, Operations, Technical Leads, Product Engineers  
 **Purpose:** Technical planning, development timeline, operational preparedness, technical skill development
 
-**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md) for complete feature definitions.
+**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap) for complete feature definitions.
 
 ---
 
@@ -440,7 +440,7 @@ This document provides development and operations teams with a clear understandi
 ## Cross-Reference Integration
 
 ### Technical Architecture
-- **Feature Taxonomy**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md)
+- **Feature Taxonomy**: [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap)
 - **Implementation Roadmap**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
 - **Technical Infrastructure**: [`Technical Infrastructure`](../implementation/technical-infrastructure.md)
 
@@ -450,7 +450,7 @@ This document provides development and operations teams with a clear understandi
 - **Infrastructure Overview**: [`Infrastructure Overview`](../implementation/infrastructure-overview.md)
 
 ### Developer Resources
-- **Developer Framework**: [`Developer Analytics Framework`](../developer/analytics/framework.md)
+- **Developer Framework**: [`Developer Analytics Framework`](../developer/analytics/framework)
 - **Process Automation**: [`Developer Process Automation`](../developer/process-automation/developer-standardization-framework.md)
 - **Cross-Domain Integration**: [`Developer Cross-Domain Integration`](../developer/cross-domain-integration/developer-marketing-integration-map.md)
 
@@ -459,6 +459,6 @@ This document provides development and operations teams with a clear understandi
 **Document Classification:** Level 2 - Technical Implementation View  
 **Review Cycle:** Monthly technical assessment and quarterly skill development review  
 **Stakeholder Access:** Engineering Teams, DevOps, Operations, Technical Leads  
-**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap.md)
+**Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](../feature-taxonomy-and-roadmap)
 
 This developer and operations roadmap provides technical teams with clear implementation timelines, skill development paths, and operational responsibilities for strategic technical planning and team development.

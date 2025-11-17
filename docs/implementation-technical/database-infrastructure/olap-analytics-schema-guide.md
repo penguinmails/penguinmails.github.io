@@ -1,3 +1,11 @@
+---
+title: "OLAP Analytics Schema Guide"
+description: "Documentation for OLAP Analytics Schema Guide - Olap Analytics Schema Guide"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # OLAP Analytics Schema Guide
 
 ## Strategic Alignment

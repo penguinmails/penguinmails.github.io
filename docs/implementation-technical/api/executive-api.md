@@ -62,7 +62,7 @@ Access Requirements:
   - Role-based access controls for all user types
 
 Reference:
-- Central system coordination per [System Architecture](../architecture-system/architecture-overview.md)
+- Central system coordination per [System Architecture](../architecture-system/architecture-overview)
 - Role management and access control for all operations
 
 ---
@@ -474,3 +474,4 @@ This separation ensures:
 **Implementation Access:** System Engineers, Dashboard Developers, Operations Coordinators, All Development Teams
 
 This central system API contract provides comprehensive system oversight capabilities while respecting backbone technical constraints and supporting all user types and operational needs.
+---

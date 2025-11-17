@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 5 - Executive Dashboards and Analytics  
 **Target Audience**: Finance Teams, Executive Leadership, Business Impact Management  
 **Business Impact Priority**: Critical - Developer ROI tracking and business impact responsibility  
-**Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) | [Developer Strategy Framework](docs/business/developer/strategy/framework.md) | [Developer Operations Framework](docs/business/developer/operations/framework.md) | [Executive ROI Framework](docs/business/executive-roi/framework.md) | [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Framework Integration**: [Developer Analytics Framework](../analytics/framework) | [Developer Strategy Framework](../strategy/framework) | [Developer Operations Framework](../operations/framework) | [Executive ROI Framework](../executive-roi/framework) | [Business Impact Analytics Framework](../business-impact-analytics/framework
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Productivity improvement and optimization systems activated and optimized
 - Efficiency tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### ROI Point 1.1.2: Cost Savings Measurement
 **ROI Requirement**: Developer Cost Savings Measurement Standards  
@@ -54,7 +54,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Efficiency gains and reduction systems activated and validated
 - Cost savings validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### ROI Point 1.1.3: Developer Lifetime Value Tracking
 **ROI Requirement**: Developer Lifetime Value Standards  
@@ -66,7 +66,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Long-term value creation and retention systems activated and optimized
 - Lifetime value validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 ### 1.2 Investment Analysis Excellence
 
@@ -80,7 +80,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Platform ROI and investment returns systems activated and optimized
 - Investment analysis validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### Analysis Point 1.2.2: Automation Efficiency Measurement
 **Analysis Requirement**: Developer Automation Efficiency Standards  
@@ -92,7 +92,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Automation ROI and efficiency gains systems activated and validated
 - Efficiency measurement validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### Analysis Point 1.2.3: Cost Reduction Tracking
 **Analysis Requirement**: Developer Cost Reduction Standards  
@@ -104,7 +104,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Efficiency improvement and savings systems activated and optimized
 - Cost reduction validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 ---
 
@@ -122,7 +122,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Value creation and achievement systems activated and optimized
 - Business value measurement validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### Measurement Point 2.1.2: ROI Calculation Frameworks
 **Measurement Requirement**: Developer ROI Calculation Standards  
@@ -134,7 +134,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Return on investment systems activated and validated
 - ROI calculation validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### Measurement Point 2.1.3: Developer Value Measurement
 **Measurement Requirement**: Developer Value Measurement Standards  
@@ -146,7 +146,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Value creation and delivery systems activated and optimized
 - Value measurement validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 ### 2.2 Cost Optimization Excellence
 
@@ -160,7 +160,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Efficiency gains and savings systems activated and validated
 - Optimization tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### Optimization Point 2.2.2: Platform ROI Tracking
 **Optimization Requirement**: Developer Platform ROI Standards  
@@ -172,7 +172,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Investment returns and value creation systems activated and optimized
 - ROI tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### Optimization Point 2.2.3: Developer Investment Analysis
 **Optimization Requirement**: Developer Investment Analysis Standards  
@@ -184,7 +184,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Investment performance and returns systems activated and validated
 - Investment analysis validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 ---
 
@@ -202,7 +202,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Value creation and business impact systems activated and optimized
 - Value quantification validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### Impact Point 3.1.2: Cost-Benefit Analysis
 **Impact Requirement**: Developer Cost-Benefit Standards  
@@ -214,7 +214,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Cost versus benefit systems activated and validated
 - Cost-benefit validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### Impact Point 3.1.3: Developer Performance ROI Measurement
 **Impact Requirement**: Developer Performance ROI Standards  
@@ -226,7 +226,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Performance impact and value creation systems activated and optimized
 - Performance ROI validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 ### 3.2 ROI Optimization Excellence
 
@@ -240,7 +240,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Efficiency improvements and optimization systems activated and validated
 - Efficiency measurement validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 #### Optimization Point 3.2.2: Cost Tracking Systems
 **Optimization Requirement**: Developer Cost Tracking Standards  
@@ -252,7 +252,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Costs and optimization opportunity systems activated and optimized
 - Cost tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive ROI Framework](docs/business/executive-roi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive ROI Framework](../executive-roi/framework)
 
 #### Optimization Point 3.2.3: Value Realization Tracking
 **Optimization Requirement**: Developer Value Realization Standards  
@@ -264,7 +264,7 @@ The Developer ROI Business Impact Dashboard establishes comprehensive protocols 
 - Value delivery and achievement systems activated and validated
 - Value realization validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Business Impact Analytics Framework](docs/business/business-impact-analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Business Impact Analytics Framework](../business-impact-analytics/framework)
 
 ---
 
@@ -354,3 +354,4 @@ This framework provides the foundation for developer ROI excellence, ensuring co
 *Last Updated: November 16, 2025*  
 *Document Owner: Developer ROI Business Impact Dashboard Team*  
 *Review Cycle: Monthly ROI validation and quarterly dashboard enhancement*
+---

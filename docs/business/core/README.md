@@ -1,3 +1,11 @@
+---
+title: "Core Business Documents - Level 2: Executive Decision Making"
+description: "Documentation for Core Business Documents - Level 2: Executive Decision Making - README"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Core Business Documents - Level 2: Executive Decision Making
 
 **For C-Suite executives, VPs, and Business Directors** focused on ROI, costs, and competitive analysis

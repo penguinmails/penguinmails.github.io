@@ -313,23 +313,23 @@ Our strategic implementation framework emphasizes realistic scope management, di
      - Strategic commitment only when required by enterprise customers or regulatory needs, strategic roadmap alignment
 6. **Strategic Alerting, Revenue Risk Monitoring & Strategic Notification Architecture**:
     - Strategic MVP (2025):
-      - Strategic implementation of queue-backed, RESTful notification and alert system (see [`BF-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:546)):
+      - Strategic implementation of queue-backed, RESTful notification and alert system:
         - Strategic event ingestion from analytics and system events into strategic durable queue
         - Strategic background workers to generate and dispatch notifications
         - Strategic REST endpoints for polling notifications in strategic executive/admin UIs
         - Strategic email + in-app/admin notification feed as primary channels
         - Strategic basic severity levels, throttling, and digesting to prevent strategic alert fatigue
-      - Strategic implementation of [`RP-001`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:1732) as:
+      - Strategic implementation of [`RP-001`] as:
         - Strategic consolidated, opinionated internal "Revenue Risk Overview" built on:
           - Strategic PostHog business events and integrations delivered via [`BF-003`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:268),
           - Strategic internal BI views and OLAP aggregates,
-          - Strategic queue-based alert/notification foundation from [`BF-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:546)
+          - Strategic queue-based alert/notification foundation
         - Strategic explicit positioning:
           - NOT a replacement for provider dashboards (Hostwinds, NileDB, ESP consoles) or Stripe/finance systems
           - Positioned as directional internal strategic decision-support
         - Strategic executives (CFO/RevOps) during MVP expected to:
           - Strategic continued use of native PostHog/ESP/infra dashboards and their own notifications for stricter real-time or infra-level alerting
-      - Strategic implementation of [`RP-005`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:2179) in MVP strictly as:
+      - Strategic implementation of [`RP-005`] in MVP strictly as:
         - Strategic human-in-the-loop deliverability issue detection and response framework:
           - Strategic automated detection and classification of high-risk deliverability signals via OLAP + PostHog
           - Strategic queue-backed alerts to internal ops/executive surfaces (reusing BF-005)
@@ -480,3 +480,4 @@ Throughout this strategic roadmap, GTM assets, and supporting strategic document
 ---
 
 *This strategic implementation framework is part of the comprehensive Progressive Disclosure Framework for Strategic Financial Documentation. Use alongside strategic executive summary and strategic competitive analysis for complete strategic planning.*
+---

@@ -298,8 +298,8 @@ topics:
 
 ---
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Marketing Systems Map](../../../marketing/cross-domain-integration/marketing-systems-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Sales Systems Map](../../../business/sales/cross-domain-integration/sales-systems-integration-map)
 
 **Document Classification:** Level 3 - CS-Sales Integration Analysis

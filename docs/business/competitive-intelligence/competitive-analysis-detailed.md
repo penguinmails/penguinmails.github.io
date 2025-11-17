@@ -181,7 +181,7 @@ last_modified_date: "2025-12-19"
 
 ## Implementation Boundary: Competitive Deliverability Benchmarking (RP-007 Alignment)
 
-To prevent accidental overpromising and to keep responsibilities clear, all "Competitive Deliverability Benchmarking" (including Story RP-007 in [`business-leaders-comprehensive-product-backlog`](tasks/user-stories-framework/business-leaders-comprehensive-product-backlog:2494)) is governed by the following rules:
+To prevent accidental overpromising and to keep responsibilities clear, all "Competitive Deliverability Benchmarking" (including Story RP-007) is governed by the following rules:
 
 1. Ownership
 
@@ -242,3 +242,4 @@ To prevent accidental overpromising and to keep responsibilities clear, all "Com
 This boundary ensures that RP-007 and related “competitive deliverability” narratives remain truthful, marketing-owned, and aligned with real technical capabilities, while protecting the product backlog from non-implementable expectations.
 
 *This detailed analysis provides comprehensive provider evaluation for thorough technical and procurement assessment.*
+---

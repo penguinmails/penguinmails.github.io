@@ -357,3 +357,4 @@ last_modified_date: "2025-11-10"
 [^23]: https://www.remoterocketship.com/country/europe/jobs/sdr/
 [^24]: https://www.payscale.com/research/NL/Job=Sales_Development_Representative_(SDR)/Salary/4bf7d9a1/Amsterdam
 [^25]: https://sdr-leader.com/2025/04/10/evolution-sdr-compensation-models-emea-2025-trends/
+---

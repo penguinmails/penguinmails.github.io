@@ -1,3 +1,11 @@
+---
+title: "Executive Revenue Protection Journey (RP-001, RP-004)"
+description: "Documentation for Executive Revenue Protection Journey (RP-001, RP-004) - Executive Revenue Protection"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Revenue Protection Journey (RP-001, RP-004)
 
 Document Level: Implementation-Technical (UX Contract)  

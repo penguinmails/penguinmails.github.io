@@ -330,10 +330,10 @@ Our pricing is designed around **cold email sending volume** and **feature acces
 ## � Additional Resources
 
 ### **Documentation**
-- **[Features & Capabilities](((feature-overview))** - Explore all available features
-- **[Getting Started](((getting-started))** - Complete platform introduction
-- **[Architecture Overview](((technical/architecture/overview))** - Technical foundation
-- **[Key Performance Indicators](((technical/architecture/overview))** - Success metrics
+- **[Features & Capabilities](feature-overview))** - Explore all available features
+- **[Getting Started](getting-started))** - Complete platform introduction
+- **[Architecture Overview](technical/architecture/overview))** - Technical foundation
+- **[Key Performance Indicators](technical/architecture/overview))** - Success metrics
 
 ### **Training Materials**
 - [Video Tutorials](https://help.penguinmails.com/video-tutorials) - Step-by-step video guides
@@ -346,4 +346,5 @@ Our pricing is designed around **cold email sending volume** and **feature acces
 *Ready to get started? [Sign up for your free trial](https://app.penguinmails.com/signup) and begin transforming your cold email outreach today. Our team is here to ensure your success every step of the way.*
 
 ---
-*Previous: [Features Overview](((feature-overview)) | Next: [Core Features](core-features/) →*
+*Previous: [Features Overview](feature-overview)) | Next: [Core Features](core-features/) →*
+---

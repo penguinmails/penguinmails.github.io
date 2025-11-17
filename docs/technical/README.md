@@ -9,10 +9,10 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Areas
 
-- [Architecture](architecture//)) - System design and technical foundation
-- [Operations](operations//)) - Operational procedures and monitoring
-- [Integration](integration//)) - API and integration documentation
-- [Enterprise Technical](enterprise-technical//)) - Comprehensive enterprise technical guides
+- [Architecture](architecture/) - System design and technical foundation
+- [Operations](operations/) - Operational procedures and monitoring
+- [Integration](integration/) - API and integration documentation
+- [Enterprise Technical](enterprise-technical/) - Comprehensive enterprise technical guides
 
 ## Complexity Levels
 
@@ -23,59 +23,59 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Architecture
 
-### [Overview](architecture/overview//))
+### [Overview](architecture/overview/)
 - High-level system design and technical foundation
 - Technology stack and infrastructure overview
 
-### [Detailed Technical](architecture/detailed-technical//))
-- [High-Level Architecture](architecture/overview//))
-- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap//))
-- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide//))
+### [Detailed Technical](architecture/detailed-technical/)
+- [High-Level Architecture](architecture/overview/)
+- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap/)
+- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide/)
 
-### [Enterprise Tech](architecture/enterprise-tech//))
-- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling//))
-- [Custom Configurations](architecture/enterprise-tech/custom-configurations//))
-- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure//))
+### [Enterprise Tech](architecture/enterprise-tech/)
+- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling/)
+- [Custom Configurations](architecture/enterprise-tech/custom-configurations/)
+- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure/)
 
 ## Technical Operations
 
-### [Overview](operations/overview//))
+### [Overview](operations/overview/)
 - Basic operations guide and system monitoring
 - Performance management and troubleshooting
 
-### [Enterprise Operations](operations/enterprise-operations//))
-- [Backup & Recovery](operations/enterprise-operations/backup-recovery//))
-- [Connection Pooling](operations/enterprise-operations/connection-pooling//))
-- [Performance Monitoring](operations/enterprise-operations/performance-monitoring//))
+### [Enterprise Operations](operations/enterprise-operations/)
+- [Backup & Recovery](operations/enterprise-operations/backup-recovery/)
+- [Connection Pooling](operations/enterprise-operations/connection-pooling/)
+- [Performance Monitoring](operations/enterprise-operations/performance-monitoring/)
 
-### [Advanced Operations](operations/advanced-operations//))
-- [Custom Monitoring](operations/advanced-operations/custom-monitoring//))
-- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting//))
-- [Performance Optimization](operations/advanced-operations/performance-optimization//))
+### [Advanced Operations](operations/advanced-operations/)
+- [Custom Monitoring](operations/advanced-operations/custom-monitoring/)
+- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting/)
+- [Performance Optimization](operations/advanced-operations/performance-optimization/)
 
 ## Integration & Development
 
-### [Overview](integration/overview//))
+### [Overview](integration/overview/)
 - API and integration documentation overview
 - Getting started with integrations
 
-### [Advanced Integrations](integration/advanced-integrations//))
-- [API Reference](integration/advanced-integrations/api-reference//))
-- [Webhook Setup](integration/advanced-integrations/webhook-setup//))
-- [Custom Integrations](integration/advanced-integrations/custom-integrations//))
+### [Advanced Integrations](integration/advanced-integrations/)
+- [API Reference](integration/advanced-integrations/api-reference/)
+- [Webhook Setup](integration/advanced-integrations/webhook-setup/)
+- [Custom Integrations](integration/advanced-integrations/custom-integrations/)
 
-### [Development Resources](integration/development-resources//))
-- [API Development](integration/development-resources/api-development//))
-- [Plugin Development](integration/development-resources/plugin-development//))
-- [Custom Workflows](integration/development-resources/custom-workflows//))
-- [Advanced Automation](integration/development-resources/advanced-automation//))
+### [Development Resources](integration/development-resources/)
+- [API Development](integration/development-resources/api-development/)
+- [Plugin Development](integration/development-resources/plugin-development/)
+- [Custom Workflows](integration/development-resources/custom-workflows/)
+- [Advanced Automation](integration/development-resources/advanced-automation/)
 
 ## Enterprise Technical
 
-- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide//))
-- [Custom Development](enterprise-technical/custom-development//))
-- [Platform Extensions](enterprise-technical/platform-extensions//))
-- [Technical Consulting](enterprise-technical/technical-consulting//))
+- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide/)
+- [Custom Development](enterprise-technical/custom-development/)
+- [Platform Extensions](enterprise-technical/platform-extensions/)
+- [Technical Consulting](enterprise-technical/technical-consulting/)
 
 ## Development Workflow
 
@@ -116,7 +116,7 @@ Technical documentation and implementation guides for PenguinMails.
 ### CRM Integration
 ```javascript
 // Example: Salesforce integration
-const campaign = await penguinmails.createCampaign({/)
+const campaign = await penguinmails.createCampaign({
   name: 'Q4 Sales Campaign',
   audience: salesforceLeads,
   template: salesTemplate,
@@ -136,7 +136,7 @@ performance = penguinmails.analytics.getCampaignMetrics(/)
 )
 
 # Export to Google Analytics
-analytics.export_metrics(performance, destination='ga4'/))
+analytics.export_metrics(performance, destination='ga4')
 ```
 
 ## Quality Assurance
@@ -168,9 +168,9 @@ analytics.export_metrics(performance, destination='ga4'/))
 - **Priority Support**: Dedicated technical support team
 
 ---
-*Previous: [Business Context](../business//)) | Next: [User Journeys](../user-journeys//)) →*
+*Previous: [Business Context](../business/) | Next: [User Journeys](../user-journeys/) →*
 
-## Documentation Authoring Guidelines (For Contributors/))
+## Documentation Authoring Guidelines (For Contributors)
 
 Use these rules when adding or updating docs in this repository.
 
@@ -199,7 +199,7 @@ Every substantial page should support layered reading:
   - Expert/⭐⭐⭐: edge cases, internals, migration notes, SLAs, integration details.
 - Implementation:
   - Use headings and short sections instead of collapsible UI; keep Markdown simple.
-  - Explicitly label complexity where helpful (e.g. “(⭐⭐ Advanced/))” in headings).
+  - Explicitly label complexity where helpful (e.g. “(⭐⭐ Advanced)” in headings).
 
 ### 3. Cross-References and Single Source of Truth
 
@@ -210,15 +210,15 @@ Every substantial page should support layered reading:
     - Implementations from strategy docs.
     - User journeys from features and vice versa.
 - Don’t:
-  - Paste large repeated explanations (e.g. same API description on multiple pages/)).
+  - Paste large repeated explanations (e.g. same API description on multiple pages).
 - Rule of thumb:
   - If a block could drift out of sync in two places, centralize it and link.
 
 ### 4. Audience and Tone
 
 - Primary audiences:
-  - Implementers (engineers, solution architects/)).
-  - Operators (SRE, DevOps, support/)).
+  - Implementers (engineers, solution architects).
+  - Operators (SRE, DevOps, support).
   - Decision-makers validating technical depth.
 - Writing style:
   - Direct, precise, implementation-ready.
@@ -232,7 +232,7 @@ When adding technical docs:
 - Include:
   - Preconditions and assumptions.
   - Failure modes and troubleshooting tips.
-  - Metrics or signals to watch (where relevant/)).
+  - Metrics or signals to watch (where relevant).
   - Links to monitoring/QA docs if applicable.
 - Keep alignment with:
   - Backup, recovery, and operations guides.
@@ -243,10 +243,11 @@ When adding technical docs:
 - Before creating a new section:
   - Check for an existing home using the rules above.
   - Add:
-    - Front matter (`title`, `nav_order`, `parent` where needed/)).
+    - Front matter (`title`, `nav_order`, `parent` where needed).
     - One-sentence purpose statement at top.
   - Ensure:
     - Internal links are relative and valid.
     - New content fits progressive disclosure and cross-reference patterns.
 
 This section should be treated as the canonical contributor guide for technical and implementation documentation.
+---

@@ -17,9 +17,9 @@ This contract defines REST endpoints for:
 
 It aligns with:
 
-- [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification.md)
-- [System Architecture Overview](../architecture-system/architecture-overview.md)
-- [Executive API Contract](executive-api.md)
+- [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification)
+- [System Architecture Overview](../architecture-system/architecture-overview)
+- [Executive API Contract](executive-api)
 - System operations requirements (monitoring, alerts, event tracking)
 
 All endpoints focus on:
@@ -46,7 +46,7 @@ All endpoints focus on:
     - `ROLE_SYSTEM_ADMIN`, `ROLE_USER`
 - All access maintains audit trails for compliance
 
-Error model: System envelope per [Executive API](executive-api.md)
+Error model: System envelope per [Executive API](executive-api)
 
 ---
 
@@ -217,7 +217,7 @@ Behavior:
 This API defines system alert semantics for all operations:
 
 - Event types and payload shapes aligned with:
-  - [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification.md)
+  - [PostHog Business Events Specification](../analytics-integration/posthog-business-events-specification)
 - Processing with appropriate alert routing:
   - Real-time alerts for critical issues
   - Daily summaries for operational updates
@@ -284,3 +284,4 @@ This separation ensures:
 **Implementation Access:** System Engineers, Operations Coordinators, All Development Teams
 
 This system API contract provides comprehensive notification capabilities while respecting backbone technical constraints and supporting all user types and operational needs.
+---

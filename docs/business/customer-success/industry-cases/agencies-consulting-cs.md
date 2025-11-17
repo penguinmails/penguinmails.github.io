@@ -256,9 +256,9 @@ Agencies and consulting firms operate in a relationship-driven, expertise-based 
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [Agencies & Consulting Marketing Framework](../../marketing/industry-cases/agencies-consulting-marketing.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Success Framework](../strategy/framework)
+- [Agencies & Consulting Marketing Framework](../../marketing/industry-cases/agencies-consulting-marketing)
+- [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---
 *Level 3: Industry-specific customer success implementation for agencies and consulting firms*

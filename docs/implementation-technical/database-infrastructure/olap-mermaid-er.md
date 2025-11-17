@@ -169,3 +169,4 @@ erDiagram
   %%   (see notifications-database-schema-guide), not in OLAP.
   %% - Raw logs, infra metrics, rate limits, and detailed telemetry belong to the external
   %%   logging/observability stack (see external-analytics-logging).
+---

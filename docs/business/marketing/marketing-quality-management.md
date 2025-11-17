@@ -14,7 +14,7 @@ This document defines the quality management framework for marketing teams, focu
 
 ### Automated Validation Framework
 
-The QA rules defined in `docs/business/marketing/qa-rules.md` are implemented through:
+The QA rules defined in [`qa-rules`](qa-rules) are implemented through:
 
 **Third-Party Tool Integration:**
 - Content creation tools with built-in compliance checking
@@ -147,8 +147,9 @@ The QA rules defined in `docs/business/marketing/qa-rules.md` are implemented th
 ---
 
 **References:**
-- Detailed QA Rules: `docs/business/marketing/qa-rules.md`
+- Detailed QA Rules: [`qa-rules`](qa-rules)
 - Brand Guidelines: (Reference to existing brand documentation)
 - Compliance Policies: (Reference to existing compliance frameworks)
 
 This quality management framework ensures consistent marketing quality and brand protection while working within realistic technical and resource constraints.
+---

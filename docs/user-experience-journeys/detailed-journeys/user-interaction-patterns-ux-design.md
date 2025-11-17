@@ -539,11 +539,12 @@ const handleError = (error: Error, context: string) => {
 ---
 
 ## Related Documents
-- [Customer Onboarding Journey Deep Dive](((../customer-onboarding-journey-deep-dive)) - Customer onboarding process
-- [Comprehensive Onboarding Guide](((../comprehensive-onboarding-guide)) - Team onboarding and working agreements
-- [Onboarding User Journey Analysis](((../onboarding-user-journey-analysis)) - Technical onboarding implementation
-- [Design System](((../design/overview)) - Complete design system overview
-- [Accessibility Guidelines](((../compliance-security/detailed-compliance/accessibility-guidelines)) - Inclusive design standards
-- [Component Library](((../design/component-library)) - Reusable component catalog
+- [Customer Onboarding Journey Deep Dive](../customer-onboarding-journey-deep-dive.md) - Customer onboarding process
+- [Comprehensive Onboarding Guide](../comprehensive-onboarding-guide.md) - Team onboarding and working agreements
+- [Onboarding User Journey Analysis](../onboarding-user-journey-analysis.md) - Technical onboarding implementation
+- [Design System](../design/overview/) - Complete design system overview
+- [Accessibility Guidelines](../compliance-security/detailed-compliance/accessibility-guidelines.md) - Inclusive design standards
+- [Component Library](../design/component-library.md) - Reusable component catalog
 
 **Keywords**: interaction patterns, user flows, navigation, form interactions, feedback patterns, CRUD operations, workflow management, mobile interactions, accessibility, animation
+---

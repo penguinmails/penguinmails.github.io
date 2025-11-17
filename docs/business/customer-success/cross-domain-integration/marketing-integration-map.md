@@ -309,8 +309,8 @@ topics:
 
 ---
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Marketing Systems Map](../../../marketing/cross-domain-integration/marketing-systems-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Marketing Systems Map](../../../business/marketing/cross-domain-integration/marketing-systems-integration-map)
 
 **Document Classification:** Level 3 - CS-Marketing Integration Analysis

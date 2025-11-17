@@ -338,3 +338,4 @@ This document provides a comprehensive framework for developing industry-specifi
 ---
 
 *This industry-specific business cases structure is part of the comprehensive Progressive Disclosure Framework for Business Leaders. It provides the framework for developing targeted business cases for specialized and regulated industries.*
+---

@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 5 - Executive Dashboards and Analytics  
 **Target Audience**: Executive Leadership, C-Level Executives, Developer Leadership  
 **Business Impact Priority**: Critical - Executive visibility and developer performance responsibility  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) | [Developer Analytics Framework](docs/business/developer/analytics/framework.md) | [Developer Operations Framework](docs/business/developer/operations/framework.md) | [Executive Dashboard Framework](docs/business/executive-dashboard/framework.md) | [Developer Cross-Domain Integration Maps](docs/business/developer/cross-domain-integration/)
+**Framework Integration**: [Developer Strategy Framework](../strategy/framework) | [Developer Analytics Framework](../analytics/framework) | [Developer Operations Framework](../operations/framework) | [Executive Dashboard Framework](../executive-dashboard/framework) | [Developer Cross-Domain Integration Maps](../cross-domain-integration/)
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform status and performance metrics systems activated and optimized
 - Dashboard validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Dashboard Framework](docs/business/executive-dashboard/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Dashboard Framework](../executive-dashboard/framework)
 
 #### Dashboard Point 1.1.2: Developer Platform Status Monitoring
 **Dashboard Requirement**: Executive Developer Platform Status Standards  
@@ -54,7 +54,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform health and performance systems activated and optimized
 - Status monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework.md) + [Developer Analytics Framework](../analytics/framework.md)
 
 #### Dashboard Point 1.1.3: Developer Cross-Functional Overview
 **Dashboard Requirement**: Executive Developer Cross-Functional Integration Standards  
@@ -66,7 +66,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Coordination metrics systems activated and optimized
 - Cross-functional validation completed and verified
 
-**Business Framework Integration**: [Developer Cross-Domain Integration Maps](docs/business/developer/cross-domain-integration/) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Cross-Domain Integration Maps](../cross-domain-integration/) + [Developer Analytics Framework](../analytics/framework.md)
 
 ### 1.2 Executive KPI Implementation
 
@@ -80,7 +80,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform achievement tracking systems activated and optimized
 - Success metrics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive KPI Framework](docs/business/executive-kpi/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive KPI Framework](../executive-kpi/framework)
 
 #### KPI Point 1.2.2: Developer Platform Efficiency KPIs
 **KPI Requirement**: Executive Developer Platform Efficiency Standards  
@@ -92,7 +92,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Performance achievement systems activated and validated
 - Efficiency KPIs validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework.md) + [Developer Analytics Framework](../analytics/framework.md)
 
 #### KPI Point 1.2.3: Developer Integration Success KPIs
 **KPI Requirement**: Executive Developer Integration Success Standards  
@@ -104,7 +104,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform integration tracking systems activated and optimized
 - Integration success validation completed and verified
 
-**Business Framework Integration**: [Developer Cross-Domain Integration Maps](docs/business/developer/cross-domain-integration/) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Cross-Domain Integration Maps](../cross-domain-integration/) + [Developer Analytics Framework](../analytics/framework.md)
 
 ---
 
@@ -122,7 +122,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Developer participation and success systems activated and optimized
 - Engagement analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Analytics Framework](docs/business/executive-analytics/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Framework](../executive-analytics/framework)
 
 #### Monitoring Point 2.1.2: Developer Platform Analysis Dashboards
 **Monitoring Requirement**: Executive Developer Platform Analysis Standards  
@@ -134,7 +134,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform performance and optimization systems activated and optimized
 - Analysis dashboards validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Dashboard Framework](docs/business/executive-dashboard/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Dashboard Framework](../executive-dashboard/framework)
 
 #### Monitoring Point 2.1.3: Developer Success Tracking
 **Monitoring Requirement**: Executive Developer Success Tracking Standards  
@@ -146,7 +146,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Performance advancement monitoring systems activated and optimized
 - Success tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Developer Operations Framework](docs/business/developer/operations/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Operations Framework](../operations/framework.md)
 
 ### 2.2 Platform Monitoring Excellence
 
@@ -160,7 +160,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Performance achievement systems activated and optimized
 - Efficiency monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework.md) + [Developer Analytics Framework](../analytics/framework.md)
 
 #### Monitoring Point 2.2.2: Developer Platform Optimization Analytics
 **Monitoring Requirement**: Executive Developer Optimization Analytics Standards  
@@ -172,7 +172,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Advancement tracking systems activated and validated
 - Optimization analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Developer Strategy Framework](docs/business/developer/strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Strategy Framework](../strategy/framework.md)
 
 #### Monitoring Point 2.2.3: Developer Performance Intelligence
 **Monitoring Requirement**: Executive Developer Performance Intelligence Standards  
@@ -184,7 +184,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Predictive analytics systems activated and optimized
 - Performance intelligence validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Analytics Intelligence](docs/business/executive-analytics-intelligence/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Analytics Intelligence](../executive-analytics-intelligence/framework)
 
 ---
 
@@ -202,7 +202,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Issue evaluation systems activated and optimized
 - Risk assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Executive Risk Framework](docs/business/executive-risk/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Executive Risk Framework](../executive-risk/framework)
 
 #### Risk Point 3.1.2: Developer Platform Risk Monitoring
 **Risk Requirement**: Executive Developer Platform Risk Standards  
@@ -214,7 +214,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Early warning systems activated and optimized
 - Risk monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework.md) + [Developer Analytics Framework](../analytics/framework.md)
 
 #### Risk Point 3.1.3: Developer Mitigation Success Tracking
 **Risk Requirement**: Executive Developer Mitigation Success Standards  
@@ -226,7 +226,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Issue prevention monitoring systems activated and optimized
 - Mitigation tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Developer Validation Framework](docs/business/developer/validation/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework.md) + [Developer Validation Framework](../validation/framework.md)
 
 ### 3.2 Executive Decision Support
 
@@ -240,7 +240,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Strategic insight systems activated and optimized
 - Decision support validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Decision Support Framework](docs/business/executive-decision-support/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Decision Support Framework](../executive-decision-support/framework)
 
 #### Support Point 3.2.2: Developer Platform Investment Analytics
 **Support Requirement**: Executive Developer Investment Analytics Standards  
@@ -252,7 +252,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Value optimization systems activated and validated
 - Investment analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Investment Analytics](docs/business/executive-investment-analytics/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Investment Analytics](../executive-investment-analytics/framework)
 
 #### Support Point 3.2.3: Developer Success Probability Analytics
 **Support Requirement**: Executive Developer Success Probability Standards  
@@ -264,7 +264,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Achievement forecasting systems activated and optimized
 - Probability analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Executive Predictive Analytics](docs/business/executive-predictive-analytics/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Executive Predictive Analytics](../executive-predictive-analytics/framework)
 
 ---
 
@@ -354,3 +354,4 @@ This framework provides the foundation for executive leadership excellence, ensu
 *Last Updated: November 16, 2025*  
 *Document Owner: Executive Developer Dashboard Framework Team*  
 *Review Cycle: Monthly dashboard validation and quarterly framework enhancement*
+---

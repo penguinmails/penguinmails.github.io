@@ -404,29 +404,29 @@ Campaign Performance
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](((./overview)) - Main operations framework
-- [Performance KPIs](((./metrics-kpis)) - Comprehensive KPI framework
-- [Product Analytics](((./product-analytics)) - Feature performance analysis
+- [Operations Analytics Overview](./overview) - Main operations framework
+- [Performance KPIs](./metrics-kpis) - Comprehensive KPI framework
+- [Product Analytics](./product-analytics) - Feature performance analysis
 
 ### **Business Strategy**
-- [Business Strategy Overview](((../business/strategy/overview)) - Strategic alignment
-- [Market Analysis](((../business/market-analysis/overview)) - Market positioning
-- [User Personas](((../business/user-personas/overview)) - Target audience profiles
+- [Business Strategy Overview](../business/strategy/overview) - Strategic alignment
+- [Market Analysis](../business/market-analysis/overview) - Market positioning
+- [User Personas](../business/user-personas/overview) - Target audience profiles
 
 ### **Technical Architecture**
-- [Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture)) - Technical implementation
-- [Infrastructure Operations](((../technical/architecture/detailed-technical/infrastructure-operations)) - System monitoring
-- [Integration Guide](((../technical/architecture/detailed-technical/integration-guide)) - Analytics integrations
+- [Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture) - Technical implementation
+- [Infrastructure Operations](../technical/architecture/detailed-technical/infrastructure-operations) - System monitoring
+- [Integration Guide](../technical/architecture/detailed-technical/integration-guide) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](((../user-journeys/README)) - User flow documentation
-- [Onboarding Journey](((../user-journeys/detailed-journeys/onboarding-journey)) - User activation
-- [User Interaction Patterns](((../user-journeys/detailed-journeys/user-interaction-patterns-ux-design)) - UX optimization
+- [User Journeys Overview](../user-experience-journeys/README) - User flow documentation
+- [Onboarding Journey](../user-experience-journeys/detailed-journeys/onboarding-journey) - User activation
+- [User Interaction Patterns](../user-experience-journeys/detailed-journeys/user-interaction-patterns-ux-design) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](((../compliance-security/overview)) - Regulatory compliance
-- [Data Privacy Policy](((../compliance-security/international/data-privacy-policy)) - Privacy compliance
-- [Security Framework](((../compliance-security/enterprise/security-framework)) - Security operations
+- [Compliance Overview](../compliance-security/overview) - Regulatory compliance
+- [Data Privacy Policy](../compliance-security/international/data-privacy-policy) - Privacy compliance
+- [Security Framework](../compliance-security/enterprise/security-framework) - Security operations
 
 ---
 
@@ -434,10 +434,11 @@ Campaign Performance
 
 Navigate to specific analytics areas:
 
-- **[Product Analytics](((./product-analytics))** → Feature adoption and product performance
-- **[Metrics & KPIs](((./metrics-kpis))** → Comprehensive KPI framework
-- **[Operations Management](../operations-management/)** → Operational procedures and workflows
+- **[Product Analytics](./product-analytics)** → Feature adoption and product performance
+- **[Metrics & KPIs](./metrics-kpis)** → Comprehensive KPI framework
+- **[Operations Management](../operations-management/README.md)** → Operational procedures and workflows
 
 ---
 
 **Keywords**: user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization
+---

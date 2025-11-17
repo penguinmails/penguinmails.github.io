@@ -19,11 +19,11 @@ last_modified_date: "2025-11-10"
 > **Navigation Guide**: This overview document provides high-level user journey flows organized by domain concerns. For detailed journey specifications, refer to the individual journey documents linked below.
 
 > **Quick Navigation:**
-> - **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
-> - **[Authentication Journey](((authentication-journey))** - User access and security workflows
-> - **[Campaign Operations Journey](((campaign-operations-journey))** - Email marketing and campaign management
-> - **[Onboarding Journey](((onboarding-journey))** - User setup and platform initialization
-> - **[Payment & Billing Journey](((payment-billing-journey))** - Revenue and subscription management
+> - **[User Journey Framework](user-journey-framework/)** - Complete progressive disclosure methodology
+> - **[Authentication Journey](authentication-journey/)** - User access and security workflows
+> - **[Campaign Operations Journey](campaign-operations-journey/)** - Email marketing and campaign management
+> - **[Onboarding Journey](onboarding-journey/)** - User setup and platform initialization
+> - **[Payment & Billing Journey](payment-billing-journey/)** - Revenue and subscription management
 
 ---
 
@@ -70,8 +70,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Advanced authentication, API access, and security protocols
 
 **Detailed Documentation:**
-- **[Authentication Journey](((authentication-journey))** - Complete authentication journey specifications
-- **[Onboarding & Authentication Guide](((../technical/architecture/detailed-technical/onboarding-authentication))** - Technical auth implementation details
+- **[Authentication Journey](authentication-journey/)** - Complete authentication journey specifications
+- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Technical auth implementation details
 
 ---
 
@@ -87,8 +87,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Enterprise billing, custom pricing, and financial integrations
 
 **Detailed Documentation:**
-- **[Payment & Billing Journey](((payment-billing-journey))** - Complete payment and billing journey specifications
-- **[Integration Guide](((../technical/architecture/detailed-technical/integration-guide))** - Stripe Connect integration and billing setup
+- **[Payment & Billing Journey](payment-billing-journey/)** - Complete payment and billing journey specifications
+- **[Integration Guide](../technical/architecture/detailed-technical/integration-guide.md)** - Stripe Connect integration and billing setup
 
 ---
 
@@ -105,7 +105,7 @@ last_modified_date: "2025-11-10"
 
 **Detailed Documentation:**
 - **[Onboarding Journey](onboarding-journey#step-3-team-building)** - Complete team management journey specifications
-- **[Database Schema Integration](((../technical/architecture/detailed-technical/olap-analytics-schema))** - Data models and relationships for team management
+- **[Database Schema Integration](../technical/architecture/detailed-technical/olap-analytics-schema.md)** - Data models and relationships for team management
 
 ---
 
@@ -121,8 +121,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Enterprise campaign management, API automation, and advanced analytics
 
 **Detailed Documentation:**
-- **[Campaign Operations Journey](((campaign-operations-journey))** - Complete campaign operations journey specifications
-- **[Email System Implementation](((../technical/architecture/detailed-technical/email-system-implementation))** - Campaign data models and relationships
+- **[Campaign Operations Journey](campaign-operations-journey/)** - Complete campaign operations journey specifications
+- **[Email System Implementation](../technical/architecture/detailed-technical/email-system-implementation.md)** - Campaign data models and relationships
 
 ---
 
@@ -138,7 +138,7 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Enterprise IP management, custom configurations, and compliance automation
 
 **Detailed Documentation:**
-- **[IP Management Infrastructure](((../technical/architecture/detailed-technical/ip-management-infrastructure-operations))** - Complete IP infrastructure and deliverability management
+- **[IP Management Infrastructure](../technical/architecture/detailed-technical/ip-management-infrastructure-operations.md)** - Complete IP infrastructure and deliverability management
 
 ---
 
@@ -154,7 +154,7 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Advanced monitoring, incident response, and platform optimization
 
 **Detailed Documentation:**
-- **[Operations Management](((../operations-analytics/operations-management/overview))** - Complete staff operations journey specifications
+- **[Operations Management](../operations-analytics/operations-management/overview.md)** - Complete staff operations journey specifications
 
 ---
 
@@ -170,8 +170,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Advanced configuration, integrations, and optimization
 
 **Detailed Documentation:**
-- **[Onboarding Journey](((onboarding-journey))** - Complete onboarding journey specifications
-- **[Onboarding & Authentication Guide](((../technical/architecture/detailed-technical/onboarding-authentication))** - Complete user authentication and onboarding flow
+- **[Onboarding Journey](onboarding-journey/)** - Complete onboarding journey specifications
+- **[Onboarding & Authentication Guide](../technical/architecture/detailed-technical/onboarding-authentication.md)** - Complete user authentication and onboarding flow
 
 ---
 
@@ -187,8 +187,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Custom analytics, API access, and business intelligence
 
 **Detailed Documentation:**
-- **[Analytics Overview](((../core-features/analytics/overview))** - Complete analytics journey specifications
-- **[Analytics Architecture](((../technical/architecture/detailed-technical/analytics-architecture))** - Analytics system design with comprehensive tracking
+- **[Analytics Overview](../core-features/analytics/overview.md)** - Complete analytics journey specifications
+- **[Analytics Architecture](../technical/architecture/detailed-technical/analytics-architecture.md)** - Analytics system design with comprehensive tracking
 
 ---
 
@@ -204,8 +204,8 @@ last_modified_date: "2025-11-10"
 - **Expert Path**: Emergency response, incident management, and recovery procedures
 
 **Detailed Documentation:**
-- **[Incident Response Operations](((../operations-analytics/operations-management/incident-response-operations))** - Complete emergency response journey specifications
-- **[Security Framework](((../compliance-security/enterprise/security-framework))** - Security practices and compliance procedures
+- **[Incident Response Operations](../operations-analytics/operations-management/incident-response-operations.md)** - Complete emergency response journey specifications
+- **[Security Framework](../compliance-security/enterprise/security-framework.md)** - Security practices and compliance procedures
 
 ---
 
@@ -288,10 +288,11 @@ This overview provides high-level journey flows for all PenguinMails user intera
 ---
 
 ## Related Documentation
-- **[User Journey Framework](((user-journey-framework))** - Complete progressive disclosure methodology
-- **[Business Model Alignment](((../business/model/overview))** - Revenue model and user segmentation
-- **[Market Analysis Impact](((../business/market-analysis/overview))** - Customer segments and market positioning
-- **[Success Metrics Framework](((../core-features/analytics/overview))** - KPI framework and measurement systems
-- **[Technical Architecture Overview](((../technical/architecture/overview))** - System design and technical implementation
+- **[User Journey Framework](user-journey-framework/)** - Complete progressive disclosure methodology
+- **[Business Model Alignment](../business/model/overview.md)** - Revenue model and user segmentation
+- **[Market Analysis Impact](../business/market-analysis/overview.md)** - Customer segments and market positioning
+- **[Success Metrics Framework](../core-features/analytics/overview.md)** - KPI framework and measurement systems
+- **[Technical Architecture Overview](../technical/architecture/overview.md)** - System design and technical implementation
 
 **Keywords**: user journey navigation, cross-journey integration, journey prioritization, business model alignment, progressive disclosure, user experience optimization
+---

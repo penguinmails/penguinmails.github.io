@@ -1,3 +1,11 @@
+---
+title: "Operational Runbooks"
+description: "Documentation for Operational Runbooks - Operational Runbooks"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Operational Runbooks
 
 ## Daily Operations Procedures

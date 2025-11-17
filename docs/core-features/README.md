@@ -83,3 +83,4 @@ Each feature is organized into progressive complexity levels:
 
 ---
 *Previous: [Quick Setup Guide](../quick-setup/) | Next: [Business Context](../business/) →*
+---

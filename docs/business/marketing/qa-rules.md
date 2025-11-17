@@ -163,3 +163,4 @@ qa_rules:
 ---
 
 **Implementation Priority:** These rules should be implemented as automated checks in the campaign creation and approval workflow to ensure consistent quality and compliance across all marketing activities.
+---

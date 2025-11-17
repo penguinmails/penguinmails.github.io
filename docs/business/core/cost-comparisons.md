@@ -322,3 +322,4 @@ Savings: $600-1,074/month ($7,200-12,888/year)
 [^37]: https://freerdps.com/blog/best-vps-for-email-server/
 [^38]: https://cloudsoft.io/blog/the-ultimate-guide-to-aws-t3-instances-pricing
 [^39]: https://wise.com/gb/blog/digital-ocean-pricing
+---

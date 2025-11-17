@@ -29,11 +29,12 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 ## Integration Points
 
-- [Operations Analytics Overview](((../overview)) - Main operations framework
-- [Technical Operations](((../technical/operations/overview)) - Technical team coordination
-- [Business Strategy](((../business/strategy/overview)) - Strategic alignment
-- [User Experience](((../user-journeys/README)) - UX team collaboration
+- [Operations Analytics Overview](../overview)) - Main operations framework
+- [Technical Operations](../technical/operations/overview)) - Technical team coordination
+- [Business Strategy](../business/strategy/overview)) - Strategic alignment
+- [User Experience](../user-journeys/README)) - UX team collaboration
 
 ---
 
 **Keywords**: team performance, sprint management, agile development, quality assurance, team coordination, professional development, performance metrics
+---

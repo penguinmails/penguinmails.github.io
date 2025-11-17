@@ -214,3 +214,4 @@ All executive and ROI narratives live in business documentation; this file is st
 - QA Rules: `docs/business/marketing/qa-rules.md`
 - Quality Management: `docs/business/marketing/marketing-quality-management.md`
 - Brand Protection: `docs/business/marketing/marketing-brand-protection.md`
+---

@@ -305,10 +305,10 @@ SaaS organizations present unique operational challenges requiring specialized a
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework.md)
-- [Operations Analytics Framework](../analytics/framework.md)
-- [SaaS Product Framework](../../product/industry-cases/saas-product.md)
-- [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map.md)
+- [Operations Strategy Framework](../strategy/framework)
+- [Operations Analytics Framework](../analytics/framework)
+- [SaaS Product Framework](../../product/industry-cases/saas-product)
+- [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map
 
 ---
 *Level 3: Industry-specific operational implementation for SaaS organizations*

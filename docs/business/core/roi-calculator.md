@@ -191,3 +191,4 @@ Payback Period: _____ months
 ---
 
 *This ROI calculator is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside executive summary and detailed analysis for complete financial planning.*
+---

@@ -1,3 +1,11 @@
+---
+title: "Executive Alerts and Notifications Journey (BF-005, EE-002)"
+description: "Documentation for Executive Alerts and Notifications Journey (BF-005, EE-002) - Executive Alerts Notifications"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Alerts and Notifications Journey (BF-005, EE-002)
 
 Document Level: Implementation-Technical (UX Contract)  

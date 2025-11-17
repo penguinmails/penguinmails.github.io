@@ -141,9 +141,9 @@ last_modified_date: "2025-11-10"
 - [Strategic Integration Planning](../technical/architecture/detailed-technical/integration-guide) - Strategic technology integration planning
 
 ### **Strategic User Experience Integration**
-- [Strategic User Overview](../user-journeys/README) - Strategic user experience flows and planning
-- [Strategic User Onboarding](../user-journeys/detailed-journeys/onboarding-journey) - Strategic user activation and planning
-- [Strategic User Intelligence](../user-journeys/detailed-journeys/user-interaction-patterns-ux-design) - Strategic UX optimization and planning
+- [Strategic User Overview](../user-experience-journeys/README) - Strategic user experience flows and planning
+- [Strategic User Onboarding](../user-experience-journeys/detailed-journeys/onboarding-journey) - Strategic user activation and planning
+- [Strategic User Intelligence](../user-experience-journeys/detailed-journeys/user-interaction-patterns-ux-design) - Strategic UX optimization and planning
 
 ### **Strategic Compliance Integration**
 - [Strategic Compliance Overview](../compliance-security/overview) - Strategic regulatory compliance and planning
@@ -162,4 +162,15 @@ Navigate to specific strategic analytics areas:
 
 ---
 
+## Strategic Analytics Integration
+
+Navigate to specific strategic analytics areas:
+
+- **[Strategic Performance Analytics](./analytics-performance/README.md)** → Strategic analytics and performance intelligence
+- **[Strategic Operations Intelligence](./operations-management/README.md)** → Strategic operational insights and planning
+- **[Strategic Team Intelligence](./team-performance/README.md)** → Strategic team coordination and performance guidance
+
+---
+
 **Keywords**: strategic analytics, strategic performance monitoring, strategic business intelligence, strategic KPI management, strategic operational excellence, strategic team performance, strategic quality assurance, strategic system monitoring
+---

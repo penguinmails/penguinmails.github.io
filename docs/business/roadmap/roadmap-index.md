@@ -21,9 +21,9 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🎯 Role-Based Roadmap Access
 
 ### 👑 Executive Team
-**Documents**: 
-- [`Executive Roadmap`](executive-roadmap.md) - Strategic investment and business impact
-- [`Roadmap Considerations`](../roadmap-considerations.md) - Understanding our development approach
+**Documents**:
+- [`Executive Roadmap`](executive-roadmap) - Strategic investment and business impact
+- [`Roadmap Considerations`](../roadmap-considerations) - Understanding our development approach
 
 **What You'll Find**:
 - Investment requirements and ROI projections
@@ -35,8 +35,8 @@ This document serves as the central hub for all roadmap information, providing r
 
 ### 📢 Marketing & Sales Team
 **Documents**:
-- [`Marketing Roadmap`](marketing-roadmap.md) - Feature promises and hype marketing
-- [`Executive Roadmap`](executive-roadmap.md) - ROI and business justification
+- [`Marketing Roadmap`](marketing-roadmap) - Feature promises and hype marketing
+- [`Executive Roadmap`](executive-roadmap) - ROI and business justification
 
 **What You'll Find**:
 - What features can be promised TODAY
@@ -48,8 +48,8 @@ This document serves as the central hub for all roadmap information, providing r
 
 ### 💻 Developer & Operations Team
 **Documents**:
-- [`Developer & Operations Roadmap`](developer-operations-roadmap.md) - Technical implementation
-- [`Implementation Roadmap`](../implementation/implementation-roadmap.md) - Technical execution
+- [`Developer & Operations Roadmap`](developer-operations-roadmap) - Technical implementation
+- [`Implementation Roadmap`](../implementation/implementation-roadmap) - Technical execution
 
 **What You'll Find**:
 - Development timeline and technical requirements
@@ -172,17 +172,17 @@ This document serves as the central hub for all roadmap information, providing r
 ### Strategic Documents
 - [`Business Strategy Overview`](../strategy/overview.md) - Strategic planning framework
 - [`Value Proposition Overview`](../value-proposition/overview.md) - Customer value positioning
-- [`Market Analysis Overview`](../market-analysis/overview.md) - Market positioning and opportunity
+- [`Market Analysis Overview`](../market-analysis/overview) - Market positioning and opportunity
 
 ### Implementation Documents
-- [`Implementation Roadmap`](../implementation/implementation-roadmap.md) - Technical execution plan
-- [`Technical Infrastructure`](../implementation/technical-infrastructure.md) - Infrastructure planning
+- [`Implementation Roadmap`](../implementation/implementation-roadmap) - Technical execution plan
+- [`Technical Infrastructure`](../implementation/technical-infrastructure) - Infrastructure planning
 - [`Success Metrics`](../implementation/success-metrics.md) - Success measurement framework
 
 ### Analytics & Reporting
 - [`Executive Analytics Dashboard`](../product/analytics/executive-analytics-dashboard.md) - KPI tracking
 - [`Marketing Analytics Dashboard`](../marketing/analytics/enhanced-performance-dashboard.md) - Marketing metrics
-- [`ROI Calculator`](../reference/roi-calculator-detailed.md) - Financial planning tool
+- [`ROI Calculator`](../reference/roi-calculator-detailed) - Financial planning tool
 
 ### Customer & Operations
 - [`Customer Success Framework`](../customer-success/strategy/overview.md) - Customer success planning
@@ -242,7 +242,7 @@ This document serves as the central hub for all roadmap information, providing r
 ## 📞 Support & Escalation
 
 ### Documentation Issues
-- **Roadmap Philosophy**: [`Roadmap Considerations`](../roadmap-considerations.md)
+- **Roadmap Philosophy**: [`Roadmap Considerations`](../roadmap-considerations)
 - **Implementation Questions**: [`Implementation Roadmap`](../implementation/implementation-roadmap.md)
 - **Strategy Questions**: [`Strategy Overview`](../strategy/overview.md)
 
@@ -261,6 +261,6 @@ This document serves as the central hub for all roadmap information, providing r
 **Document Classification:** Level 1 - Central Navigation Hub  
 **Review Cycle:** Monthly roadmap updates and quarterly strategic review  
 **Stakeholder Access:** All teams with role-specific sections  
-**Roadmap Philosophy:** [`Roadmap Considerations`](../roadmap-considerations.md)
+**Roadmap Philosophy:** [`Roadmap Considerations`](../roadmap-considerations)
 
 This roadmap index provides central navigation and quick reference for all roadmap information, enabling informed decision-making across all teams and roles.

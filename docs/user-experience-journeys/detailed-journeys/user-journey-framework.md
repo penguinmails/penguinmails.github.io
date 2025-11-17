@@ -29,10 +29,10 @@ last_modified_date: "2025-11-10"
 This guide implements progressive disclosure based on user personas, expertise levels, and workflow stages. It transforms the documentation from flat feature lists into a strategic, user-journey-optimized experience that guides users from immediate value delivery to advanced optimization.
 
 **Jump to Specific Journeys:**
-- **[Authentication & Access Control](((authentication-journey))** - Complete user authentication workflows
-- **[Email Campaigns & Operations](((campaign-operations-journey))** - End-to-end campaign management
-- **[Onboarding & Setup](((onboarding-journey))** - User onboarding and platform initialization
-- **[Payment & Billing](((payment-billing-journey))** - Payment processing and billing management
+- **[Authentication & Access Control](authentication-journey))** - Complete user authentication workflows
+- **[Email Campaigns & Operations](campaign-operations-journey))** - End-to-end campaign management
+- **[Onboarding & Setup](onboarding-journey))** - User onboarding and platform initialization
+- **[Payment & Billing](payment-billing-journey))** - Payment processing and billing management
 
 ---
 
@@ -568,3 +568,4 @@ TRACK:
 ---
 
 *This progressive disclosure framework transforms complex documentation into a user-journey-optimized experience that guides users from immediate value delivery to advanced optimization, regardless of their starting expertise level.*
+---

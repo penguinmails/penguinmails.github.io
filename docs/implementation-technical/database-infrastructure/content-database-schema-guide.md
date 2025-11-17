@@ -287,3 +287,4 @@ This schema guide, alongside:
 - [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide:1),
 - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure/external-analytics-logging:1),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
+---

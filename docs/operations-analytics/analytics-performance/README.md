@@ -30,11 +30,12 @@ This section provides comprehensive analytics and performance monitoring framewo
 
 ## Integration Points
 
-- [Operations Analytics Overview](((../overview)) - Main operations framework
-- [Business Strategy](((../business/strategy/overview)) - Strategic alignment
-- [Technical Architecture](((../technical/architecture/overview)) - System infrastructure
-- [User Journeys](((../user-journeys/README)) - User experience analytics
+- [Operations Analytics Overview](../overview)) - Main operations framework
+- [Business Strategy](../business/strategy/overview)) - Strategic alignment
+- [Technical Architecture](../technical/architecture/overview)) - System infrastructure
+- [User Journeys](../user-journeys/README)) - User experience analytics
 
 ---
 
 **Keywords**: analytics performance, user behavior, product analytics, KPI monitoring, business intelligence, predictive analytics
+---

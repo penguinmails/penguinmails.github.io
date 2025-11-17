@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 6 - Process Automation and Standardization  
 **Target Audience**: Standardization Engineers, Certification Specialists, Developer Standards Teams  
 **Business Impact Priority**: Critical - Enterprise-grade developer standards and certification responsibility  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) | [Developer Operations Framework](docs/business/developer/operations/framework.md) | [Developer Validation Framework](docs/business/developer/validation/framework.md) | [Developer Analytics Framework](docs/business/developer/analytics/framework.md) | [Standardization Framework](docs/business/standardization/framework.md)
+**Framework Integration**: [Developer Strategy Framework](../strategy/framework) | [Developer Operations Framework](../operations/framework) | [Developer Validation Framework](../validation/framework) | [Developer Analytics Framework](../analytics/framework) | [Standardization Framework](docs/business/standardization/framework)
 
 ## Executive Summary
 
@@ -44,7 +44,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Certification management systems activation and optimization
 - Standards validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Standardization Framework](docs/business/standardization/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Standardization Framework](docs/business/standardization/framework)
 
 #### Standards Point 1.1.2: Developer Certification Systems
 **Standards Requirement**: Developer Certification Standards  
@@ -56,7 +56,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Excellence recognition systems activated and validated
 - Certification validation completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Developer Analytics Framework](../analytics/framework)
 
 #### Standards Point 1.1.3: Developer Process Standardization
 **Standards Requirement**: Developer Process Standardization Standards  
@@ -68,7 +68,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Quality standards systems activation and optimization
 - Standardization validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Developer Strategy Framework](docs/business/developer/strategy/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Developer Strategy Framework](../strategy/framework)
 
 ### 1.2 Quality Assurance Excellence
 
@@ -82,7 +82,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation frameworks systems activation and optimization
 - Quality assurance validation completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Developer Operations Framework](docs/business/developer/operations/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Developer Operations Framework](../operations/framework)
 
 #### Assurance Point 1.2.2: Quality Standardization Systems
 **Assurance Requirement**: Developer Quality Standardization Standards  
@@ -94,7 +94,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Excellence systems activated and validated
 - Standardization validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Standardization Framework](docs/business/standardization/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Standardization Framework](docs/business/standardization/framework)
 
 #### Assurance Point 1.2.3: Excellence Validation Systems
 **Assurance Requirement**: Developer Excellence Validation Standards  
@@ -106,7 +106,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Measurement systems activation and optimization
 - Validation completion completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Developer Strategy Framework](docs/business/developer/strategy/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Developer Strategy Framework](../strategy/framework)
 
 ---
 
@@ -124,7 +124,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Compliance validation systems activation and optimization
 - Governance validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Standardization Framework](docs/business/standardization/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Standardization Framework](docs/business/standardization/framework)
 
 #### Governance Point 2.1.2: Compliance Automation Systems
 **Governance Requirement**: Developer Compliance Automation Standards  
@@ -136,7 +136,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation systems activated and validated
 - Automation validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Developer Validation Framework](docs/business/developer/validation/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Validation Framework](../validation/framework)
 
 #### Governance Point 2.1.3: Developer Excellence Frameworks
 **Governance Requirement**: Developer Excellence Framework Standards  
@@ -148,7 +148,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Recognition systems activation and optimization
 - Framework validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Standardization Framework](docs/business/standardization/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Standardization Framework](docs/business/standardization/framework)
 
 ### 2.2 Compliance Excellence
 
@@ -162,7 +162,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation systems activation and optimization
 - Validation completion completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Developer Analytics Framework](docs/business/developer/analytics/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Developer Analytics Framework](../analytics/framework)
 
 #### Excellence Point 2.2.2: Quality Standardization Excellence
 **Excellence Requirement**: Developer Quality Standardization Standards  
@@ -174,7 +174,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation systems activated and validated
 - Excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Standardization Framework](docs/business/standardization/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Standardization Framework](docs/business/standardization/framework)
 
 #### Excellence Point 2.2.3: Success Measurement Systems
 **Excellence Requirement**: Developer Success Measurement Standards  
@@ -186,7 +186,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation systems activation and optimization
 - Measurement validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Developer Strategy Framework](docs/business/developer/strategy/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Developer Strategy Framework](../strategy/framework)
 
 ---
 
@@ -278,3 +278,4 @@ This framework provides the foundation for developer standardization excellence,
 *Last Updated: November 16, 2025*  
 *Document Owner: Developer Standardization Framework Team*  
 *Review Cycle: Monthly standardization validation and quarterly framework enhancement*
+---

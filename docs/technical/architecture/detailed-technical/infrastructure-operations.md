@@ -1,3 +1,11 @@
+---
+title: "Infrastructure Operations Guide"
+description: "Documentation for Infrastructure Operations Guide - Infrastructure Operations"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Infrastructure Operations Guide
 
 **Architecture Foundation**: Enterprise-grade infrastructure for mission-critical email operations  
@@ -29,32 +37,32 @@ Our infrastructure implements a **comprehensive multi-tenant architecture** that
 
 ```
 🏗️ Enterprise Infrastructure Architecture
-├── Frontend Layer (User Experience/))
-│   ├── WordPress Landing Page (Marketing & Sales/))
-│   ├── Next.js Dashboard (Customer Operations/))
-│   └── Next.js Admin Panel (System Administration/))
+├── Frontend Layer (User Experience)
+│   ├── WordPress Landing Page (Marketing & Sales)
+│   ├── Next.js Dashboard (Customer Operations)
+│   └── Next.js Admin Panel (System Administration)
 │
-├── API Layer (Application Gateway/))
-│   ├── Central API Gateway (Request Routing/))
-│   ├── Redis Queue System (Job Processing/))
-│   └── Authentication & Security (Multi-tenant/))
+├── API Layer (Application Gateway)
+│   ├── Central API Gateway (Request Routing)
+│   ├── Redis Queue System (Job Processing)
+│   └── Authentication & Security (Multi-tenant)
 │
-├── Application Layer (Business Logic/))
-│   ├── NileDB Authentication (Multi-tenant Security/))
-│   ├── Tenant Management (Enterprise Isolation/))
-│   ├── Billing Engine (Subscription Management/))
-│   └── Email Service (Campaign Processing/))
+├── Application Layer (Business Logic)
+│   ├── NileDB Authentication (Multi-tenant Security)
+│   ├── Tenant Management (Enterprise Isolation)
+│   ├── Billing Engine (Subscription Management)
+│   └── Email Service (Campaign Processing)
 │
-├── Infrastructure Layer (Enterprise Operations/))
-│   ├── Hostwinds VPS (Scalable Computing/))
-│   ├── MailU SMTP (Email Delivery/))
-│   ├── Domain Manager (DNS & IP Management/))
-│   └── Email Warm-up Engine (Reputation Building/))
+├── Infrastructure Layer (Enterprise Operations)
+│   ├── Hostwinds VPS (Scalable Computing)
+│   ├── MailU SMTP (Email Delivery)
+│   ├── Domain Manager (DNS & IP Management)
+│   └── Email Warm-up Engine (Reputation Building)
 │
-└── External Services (Third-party Integration/))
-    ├── Stripe Payments (Financial Processing/))
-    ├── Loop Emails (Transactional Email/))
-    └── DNS Provider (Domain Management/))
+└── External Services (Third-party Integration)
+    ├── Stripe Payments (Financial Processing)
+    ├── Loop Emails (Transactional Email)
+    └── DNS Provider (Domain Management)
 ```
 
 ### System Architecture Integration
@@ -65,31 +73,31 @@ Our infrastructure implements a **comprehensive multi-tenant architecture** that
 Overall System Architecture:
 
 Frontend Layer:
-├── WordPress Landing Page (Conversion optimization/))
-├── Next.js Dashboard (Real-time user interface/))
-└── Next.js Admin Panel (Administrative control/))
+├── WordPress Landing Page (Conversion optimization)
+├── Next.js Dashboard (Real-time user interface)
+└── Next.js Admin Panel (Administrative control)
 
 API Layer:
-├── Central API Gateway (Request routing & load balancing/))
-├── Redis Queue System (High-performance job processing/))
-└── Authentication & Security (Multi-tenant data isolation/))
+├── Central API Gateway (Request routing & load balancing)
+├── Redis Queue System (High-performance job processing)
+└── Authentication & Security (Multi-tenant data isolation)
 
 Application Core:
-├── NileDB Authentication (Enterprise multi-tenancy/))
-├── Tenant Management (Customer isolation/))
-├── Billing Engine (Subscription & revenue processing/))
-└── Email Service (Campaign orchestration & delivery/))
+├── NileDB Authentication (Enterprise multi-tenancy)
+├── Tenant Management (Customer isolation)
+├── Billing Engine (Subscription & revenue processing)
+└── Email Service (Campaign orchestration & delivery)
 
 Infrastructure Foundation:
-├── Hostwinds VPS (Scalable cloud infrastructure/))
-├── MailU SMTP (Enterprise email delivery/))
-├── Domain Manager (DNS & IP reputation management/))
-└── Email Warm-up Engine (Deliverability optimization/))
+├── Hostwinds VPS (Scalable cloud infrastructure)
+├── MailU SMTP (Enterprise email delivery)
+├── Domain Manager (DNS & IP reputation management)
+└── Email Warm-up Engine (Deliverability optimization)
 
 External Integration:
-├── Stripe Payments (Financial processing & compliance/))
-├── Loop Emails (Transactional email delivery/))
-└── DNS Provider (Domain verification & management/))
+├── Stripe Payments (Financial processing & compliance)
+├── Loop Emails (Transactional email delivery)
+└── DNS Provider (Domain verification & management)
 ```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant infrastructure**, **automatic failover**, and **comprehensive monitoring** that ensures **reliable operations** for all customers.
@@ -190,8 +198,8 @@ erDiagram
         varchar name
         varchar domain
         jsonb settings
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
-        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% User Management
@@ -202,8 +210,8 @@ erDiagram
         varchar email
         varchar password_hash
         varchar role,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
-        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     TENANT_USERS {
@@ -222,7 +230,8 @@ erDiagram
         varchar email
         varchar position
         boolean is_active,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     STAFF_ROLES {
@@ -230,7 +239,8 @@ erDiagram
         bigint tenant_id FK
         varchar role_name
         jsonb permissions,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Infrastructure
@@ -241,7 +251,8 @@ erDiagram
         varchar ip_address
         varchar status
         jsonb configuration,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     SMTP_IP_ADDRESSES {
@@ -250,7 +261,8 @@ erDiagram
         varchar ip_address
         varchar status
         integer reputation_score,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     DOMAINS {
@@ -259,7 +271,7 @@ erDiagram
         varchar domain_name
         varchar verification_status
         jsonb dns_records,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     %% Email Management
@@ -269,7 +281,7 @@ erDiagram
         varchar email_address
         varchar password
         varchar status,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     TEMPLATES {
@@ -278,7 +290,7 @@ erDiagram
         varchar template_name
         text content
         jsonb variables,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     CAMPAIGNS {
@@ -287,7 +299,8 @@ erDiagram
         varchar campaign_name
         varchar status
         jsonb configuration,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     LEADS {
@@ -304,7 +317,8 @@ erDiagram
         varchar plan_name
         decimal price
         jsonb features,
-        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
+        created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+        updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     }
 
     SUBSCRIPTIONS {
@@ -517,7 +531,7 @@ flowchart LR
 
 ## Infrastructure Components
 
-### 1. VPS Management (Hostwinds/))
+### 1. VPS Management (Hostwinds)
 
 **Technical Authority**: Our Hostwinds VPS management provides **enterprise-grade cloud infrastructure** with **scalable computing resources** and **comprehensive monitoring** that ensures **reliable operations** for **mission-critical email services**.
 
@@ -561,7 +575,7 @@ flowchart LR
 - **Grace Period Management**: Handle unpaid subscriptions without immediate service disruption
 - **Scalability**: Support growing customer base without proportional cost increases
 
-### 2. SMTP Infrastructure (MailU/))
+### 2. SMTP Infrastructure (MailU)
 
 **Technical Authority**: Our MailU SMTP infrastructure provides **enterprise-grade email delivery** with **advanced security**, **reliability features**, and **comprehensive monitoring** that ensures **optimal deliverability** and **reputation management**.
 
@@ -601,7 +615,7 @@ mailu_1_7:
 - **Anti-virus**: Virus scanning for incoming/outgoing emails with security monitoring
 - **Relay Control**: SMTP relay permissions and restrictions with access control
 
-### 3. Database Layer (NileDB/))
+### 3. Database Layer (NileDB)
 
 **Strategic Alignment**: Our NileDB integration provides **enterprise-grade multi-tenancy** with **advanced security** and **performance optimization** that supports our **scalability** and **compliance requirements**.
 
@@ -611,7 +625,7 @@ mailu_1_7:
 
 ```javascript
 // Database Connection Example
-const db = new NileDB({/)
+const db = new NileDB({
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   user: process.env.DB_USER,
@@ -630,17 +644,17 @@ const db = new NileDB({/)
 - **Connection Pooling**: Optimized database connection management with monitoring
 - **Query Optimization**: Indexed queries for multi-tenant performance
 
-### 4. Queue System (Redis/))
+### 4. Queue System (Redis)
 
 **Operational Excellence**: Our hybrid queue system provides **high-performance job processing** with **enterprise reliability** and **comprehensive monitoring** that ensures **reliable operations** for **mission-critical email delivery**.
 
-#### Queue Configuration (Hybrid PostgreSQL + Redis/))
+#### Queue Configuration (Hybrid PostgreSQL + Redis)
 
 **Technical Authority**: Our hybrid architecture combines **Redis speed** with **PostgreSQL reliability**, providing **optimal performance** and **data safety** for **enterprise-scale operations**.
 
 ```javascript
-// Redis Queue Setup (Fast Processing Layer/))
-const queue = new Queue('emailQueue', {/)
+// Redis Queue Setup (Fast Processing Layer)
+const queue = new Queue('emailQueue', {
   redis: {
     host: 'redis.penguinmails.com',
     port: 6379,
@@ -657,8 +671,8 @@ const queue = new Queue('emailQueue', {/)
   }
 });
 
-// PostgreSQL Job Management (Durable State/))
-const jobManager = new JobManager({/)
+// PostgreSQL Job Management (Durable State)
+const jobManager = new JobManager({
   database: {
     host: 'postgres.penguinmails.com',
     port: 5432,
@@ -673,21 +687,21 @@ const jobManager = new JobManager({/)
 
 **User Journey Integration**: Our hybrid architecture ensures **seamless job processing** from **creation** through **execution** to **completion**, providing **reliable operations** for **optimal user experience**.
 
-**A. Producer Pattern (Next.js API/)):**
+**A. Producer Pattern (Next.js API):**
 ```javascript
 // API creates job in PostgreSQL
-const job = await db.jobs.create({/)
+const job = await db.jobs.create({
   data: {
     queue_name: 'email-sending',
     payload: { campaign_id, lead_id, email_data },
     priority: 100,
-    run_at: new Date(/))
+    run_at: new Date()
   }
 });
 
 // Optional: Immediate push to Redis for urgent jobs
-if (job.priority < 50/)) {
-  await redis.lpush('queue:email-sending:high', JSON.stringify({/)
+if (job.priority < 50) {
+  await redis.lpush('queue:email-sending:high', JSON.stringify({
     id: job.id,
     payload: job.payload,
     priority: job.priority
@@ -695,15 +709,15 @@ if (job.priority < 50/)) {
 }
 ```
 
-**B. Queuer Process (Migration Service/)):**
+**B. Queuer Process (Migration Service):**
 ```javascript
 // Separate service that migrates PostgreSQL jobs to Redis
 class JobMigrator {
-  async migrateReadyJobs(/)) {
-    const jobs = await db.jobs.findMany({/)
+  async migrateReadyJobs() {
+    const jobs = await db.jobs.findMany({
       where: {
         status: 'queued',
-        run_at: { lte: new Date(/)) }
+        run_at: { lte: new Date() }
       },
       orderBy: [
         { priority: 'asc' },
@@ -712,8 +726,8 @@ class JobMigrator {
       take: 100 // Batch process
     });
 
-    for (const job of jobs/)) {
-      const queueName = this.getQueueName(job/));
+    for (const job of jobs) {
+      const queueName = this.getQueueName(job);
       const redisPayload = {
         id: job.id,
         queue_name: job.queue_name,
@@ -722,33 +736,33 @@ class JobMigrator {
       };
       
       // Push to Redis with priority routing
-      await redis.lpush(queueName, JSON.stringify(redisPayload/)));
-      
+      await redis.lpush(queueName, JSON.stringify(redisPayload));
+
       // Update PostgreSQL status
-      await db.jobs.update({/)
+      await db.jobs.update({
         where: { id: job.id },
         data: { status: 'migrated_to_redis' }
       });
     }
   }
-  
-  getQueueName(job/)) {
-    if (job.priority <= 50/)) return 'queue:email-sending:high';
-    if (job.priority <= 150/)) return 'queue:email-sending';
+
+  getQueueName(job) {
+    if (job.priority <= 50) return 'queue:email-sending:high';
+    if (job.priority <= 150) return 'queue:email-sending';
     return 'queue:email-sending:low';
   }
 }
 ```
 
-**C. Consumer Pattern (Worker Servers/)):**
+**C. Consumer Pattern (Worker Servers):**
 ```javascript
 // Worker server listens only to Redis
 class Worker {
-  constructor(/)) {
-    this.redis = new Redis(process.env.REDIS_URL/));
+  constructor() {
+    this.redis = new Redis(process.env.REDIS_URL);
   }
-  
-  async start(/)) {
+
+  async start() {
     // Listen to all priority queues
     const queues = [
       'queue:email-sending:high',
@@ -756,62 +770,62 @@ class Worker {
       'queue:email-sending:low'
     ];
     
-    while (true/)) {
+    while (true) {
       try {
         // Blocking pop with priority ordering
-        const result = await this.redis.brpop(queues, 0/));
+        const result = await this.redis.brpop(queues, 0);
         const [queueName, jobData] = result;
-        
-        await this.processJob(JSON.parse(jobData/)), queueName);
-      } catch (error/)) {
-        console.error('Worker error:', error/));
-        await this.delay(1000/));
+
+        await this.processJob(JSON.parse(jobData), queueName);
+      } catch (error) {
+        console.error('Worker error:', error);
+        await this.delay(1000);
       }
     }
   }
-  
-  async processJob(jobData, queueName/)) {
+
+  async processJob(jobData, queueName) {
     const { id, payload, priority } = jobData;
     
     try {
       // Update PostgreSQL status
-      await db.jobs.update({/)
+      await db.jobs.update({
         where: { id },
         data: {
           status: 'running',
-          started_at: new Date(/)),
-          updated_at: new Date(/))
+          started_at: new Date(),
+          updated_at: new Date()
         }
       });
       
       // Update Redis hash for real-time tracking
-      await this.redis.hset(`job:${id}`, {/)
+      await this.redis.hset(`job:${id}`, {
         status: 'processing',
         worker_id: process.env.WORKER_ID,
-        started_at: new Date(/)).toISOString(/))
+        started_at: new Date().toISOString()
       });
       
       // Execute the job
-      await this.executeEmailJob(payload/));
+      await this.executeEmailJob(payload);
       
       // Update completion status
-      await db.jobs.update({/)
+      await db.jobs.update({
         where: { id },
         data: {
           status: 'completed',
-          completed_at: new Date(/)),
-          updated_at: new Date(/))
+          completed_at: new Date(),
+          updated_at: new Date()
         }
       });
-      
-      await this.redis.hset(`job:${id}`, {/)
+
+      await this.redis.hset(`job:${id}`, {
         status: 'completed',
-        completed_at: new Date(/)).toISOString(/))
+        completed_at: new Date().toISOString()
       });
-      
-    } catch (error/)) {
+
+    } catch (error) {
       // Handle failure
-      await this.handleJobFailure(id, error/));
+      await this.handleJobFailure(id, error);
     }
   }
 }
@@ -972,12 +986,12 @@ LOOP_API_KEY=${LOOP_API_KEY}
 **Market Leadership**: Our technical constraints approach ensures **innovative solutions** to **infrastructure challenges** while maintaining **operational excellence** and **customer satisfaction**.
 
 **Key Technical Constraints & Solutions**:
-- **Database scaling requirements** (1K → 10K → 100K+ tenants/)): Implemented with NileDB multi-tenancy and horizontal scaling
-- **Performance requirements** (< 2 second dashboard load time/)): Achieved through Redis caching and CDN optimization
-- **Multi-tenant security** (zero data leakage between tenants/)): Ensured through Row Level Security and schema isolation
-- **Email deliverability challenges** (< 5% bounce rate targets/)): Managed through reputation monitoring and warm-up automation
-- **Hostwinds infrastructure limits** (no traditional IP pools, VPS resource constraints/)): Addressed through strategic IP acquisition and resource optimization
-- **Subscription-based resource allocation** (infrastructure costs must align with revenue/)): Implemented with automated cost monitoring and scaling controls
+- **Database scaling requirements** (1K → 10K → 100K+ tenants): Implemented with NileDB multi-tenancy and horizontal scaling
+- **Performance requirements** (< 2 second dashboard load time): Achieved through Redis caching and CDN optimization
+- **Multi-tenant security** (zero data leakage between tenants): Ensured through Row Level Security and schema isolation
+- **Email deliverability challenges** (< 5% bounce rate targets): Managed through reputation monitoring and warm-up automation
+- **Hostwinds infrastructure limits** (no traditional IP pools, VPS resource constraints): Addressed through strategic IP acquisition and resource optimization
+- **Subscription-based resource allocation** (infrastructure costs must align with revenue): Implemented with automated cost monitoring and scaling controls
 
 **For detailed technical analysis covering database architecture, performance constraints, and scaling requirements, see our technical implementation roadmap and advanced architecture documentation.**
 
@@ -1029,12 +1043,12 @@ This implementation represents a **comprehensive infrastructure advancement** th
 
 ## Related Documentation
 
-- [Architecture Overview](((../overview/))) - Strategic foundation and market positioning
-- [Queue System Implementation](((./queue-system-implementation/))) - Job processing and reliability
-- [Email System Implementation](((./email-system-implementation/))) - Email processing and queue integration
-- [Analytics Architecture](((./analytics-architecture/))) - PostHog integration and business intelligence
-- [OLAP Analytics Schema](((./olap-analytics-schema/))) - Business intelligence and data warehousing
-- [Business Operations](((../../business/operations/overview/))) - Operational procedures and quality assurance
-- [Security Documentation](((../../compliance-security/overview/))) - Enterprise security and compliance
+- [Architecture Overview](../overview) - Strategic foundation and market positioning
+- [Queue System Implementation](./queue-system-implementation) - Job processing and reliability
+- [Email System Implementation](./email-system-implementation) - Email processing and queue integration
+- [Analytics Architecture](./analytics-architecture) - PostHog integration and business intelligence
+- [OLAP Analytics Schema](./olap-analytics-schema) - Business intelligence and data warehousing
+- [Business Operations](../../business/operations/overview) - Operational procedures and quality assurance
+- [Security Documentation](../../compliance-security/overview) - Enterprise security and compliance
 
 **Keywords**: infrastructure, operations, hostwinds, vps, smtp, mailu, nileDB, redis, queue system, deployment, monitoring, troubleshooting, maintenance, enterprise infrastructure, operational excellence

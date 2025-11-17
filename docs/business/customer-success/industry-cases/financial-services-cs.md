@@ -281,10 +281,10 @@ Financial services organizations operate in a highly regulated environment requi
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [Financial Services Marketing Framework](../../marketing/industry-cases/financial-services-marketing.md)
-- [Financial Services Business Case](../../industry-business-cases/financial-services.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Success Framework](../strategy/framework)
+- [Financial Services Marketing Framework](../../marketing/industry-cases/financial-services-marketing)
+- [Financial Services Business Case](../../industry-business-cases/financial-services)
+- [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---
 *Level 3: Industry-specific customer success implementation for financial services organizations*

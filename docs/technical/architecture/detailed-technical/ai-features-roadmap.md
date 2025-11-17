@@ -1,9 +1,9 @@
 ---
-title: "AI Features Roadmap & Integration (Proposal/))"
+title: "AI Features Roadmap & Integration (Proposal)"
 description: "Concrete, product-ready AI utilities for templates, spam analysis, and inbox assistance, plus future exploration paths."
 ---
 
-# AI Features Roadmap & Integration (Proposal/))
+# AI Features Roadmap & Integration (Proposal)
 
 This document defines grounded AI features for PenguinMails and how they integrate into the product and technical architecture. It replaces previous "Phase 4x" style drafts with a clear, realistic plan.
 
@@ -15,7 +15,7 @@ We follow the progressive disclosure model:
 
 ---
 
-## 1. Template Composer AI Utilities (⭐/))
+## 1. Template Composer AI Utilities (⭐)
 
 AI helpers available directly in the template editor. Scope is focused, reversible, and user-controlled.
 
@@ -27,7 +27,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
   - AI proposes an alternative phrasing that keeps:
     - Intent
     - Offer
-    - Constraints (no lies, no exaggerated claims/))
+    - Constraints (no lies, no exaggerated claims)
 - Guardrails:
   - No invented case studies or metrics.
   - No aggressive or obviously spammy language.
@@ -37,9 +37,9 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 
 - Action: "Expand"
 - Behavior:
-  - Take a short prompt (e.g. bullets, rough draft/)).
+  - Take a short prompt (e.g. bullets, rough draft).
   - Generate a fuller email variant:
-    - Clear structure (intro → value → proof → CTA/)).
+    - Clear structure (intro → value → proof → CTA).
     - Compatible with deliverability and compliance constraints.
 - Guardrails:
   - Avoid “wall of text”.
@@ -60,7 +60,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 - Action: "Apply custom instructions"
 - Behavior:
   - Workspace-level or user-level style profile:
-    - Tone (formal, friendly, direct/))
+    - Tone (formal, friendly, direct)
     - Length preferences
     - Persona/vertical preferences
   - All rewrite/expand/simplify calls use this profile as context.
@@ -70,7 +70,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 
 ---
 
-## 2. Template Analyzer (⭐ / ⭐⭐/))
+## 2. Template Analyzer (⭐ / ⭐⭐)
 
 A post-composition "Analyze" button that inspects the template before sending or saving.
 
@@ -79,10 +79,10 @@ A post-composition "Analyze" button that inspects the template before sending or
 - Checks:
   - Overuse of spam-trigger terms / phrases.
   - Excessive links, images, tracking elements.
-  - Suspicious formatting (ALL CAPS, deceptive subjects, misleading reply chains/)).
-  - Domain & sender alignment (if data available from infrastructure/)).
+  - Suspicious formatting (ALL CAPS, deceptive subjects, misleading reply chains).
+  - Domain & sender alignment (if data available from infrastructure).
 - Output:
-  - Clear score band (e.g. Low / Medium / High risk/)).
+  - Clear score band (e.g. Low / Medium / High risk).
   - Plain-language explanations.
   - Concrete, actionable suggestions:
     - "Reduce promotional buzzwords in the subject line."
@@ -91,7 +91,7 @@ A post-composition "Analyze" button that inspects the template before sending or
 ### 2.2 Structural & Content Quality
 
 - Checks:
-  - Missing basics: intro, value, CTA, unsubscribe/compliance footer (where required/)).
+  - Missing basics: intro, value, CTA, unsubscribe/compliance footer (where required).
   - Overly long blocks vs. readability best practices.
   - Clarity of ask.
 - Output:
@@ -101,16 +101,16 @@ A post-composition "Analyze" button that inspects the template before sending or
 
 ### 2.3 Safety & Policy Alignment
 
-- Checks/flags (configurable/)):
+- Checks/flags (configurable):
   - Misleading claims, unrealistic promises.
-  - Prohibited niches / wording (workspace policies/)).
+  - Prohibited niches / wording (workspace policies).
 - Output:
   - Highlighted segments with “reason” tags.
   - Never auto-block; always present as recommendations unless org policy says otherwise.
 
 ---
 
-## 3. Inbox Assistance (⭐ / ⭐⭐/))
+## 3. Inbox Assistance (⭐ / ⭐⭐)
 
 AI helpers in the unified inbox to reduce manual triage and reply drafting workload.
 
@@ -118,8 +118,8 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 
 - Per-thread summary:
   - What the lead is asking.
-  - Their interest level (low / medium / high/)).
-  - Any constraints mentioned (budget, timing, objections/)).
+  - Their interest level (low / medium / high).
+  - Any constraints mentioned (budget, timing, objections).
 - Usage:
   - Quick context at top of thread.
   - Non-destructive — does not alter messages.
@@ -127,11 +127,11 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 ### 3.2 Signal Extraction
 
 - Extracted signals:
-  - Intent (demo request, pricing question, not interested, referral, etc./)).
-  - Stage hints (evaluation, decision, post-sale/)).
-  - Red flags (unsubscribe requests, complaints/)).
+  - Intent (demo request, pricing question, not interested, referral, etc.).
+  - Stage hints (evaluation, decision, post-sale).
+  - Red flags (unsubscribe requests, complaints).
 - Integration:
-  - Can feed into CRM / pipeline as structured fields (future optional/)).
+  - Can feed into CRM / pipeline as structured fields (future optional).
 
 ### 3.3 Suggested Replies
 
@@ -147,7 +147,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 
 ---
 
-## 4. Future Exploration (Clearly Marked as Experimental/)) (⭐⭐⭐/))
+## 4. Future Exploration (Clearly Marked as Experimental) (⭐⭐⭐)
 
 These ideas come from the earlier AI artifacts but are intentionally de-scoped to “explore”:
 
@@ -167,19 +167,19 @@ All of these:
 
 ---
 
-## 5. Technical Integration Pointers (⭐⭐⭐ summary/))
+## 5. Technical Integration Pointers (⭐⭐⭐ summary)
 
 Implementation details should live in detailed architecture docs, but core patterns are:
 
 - Inputs:
   - Template contents
-  - Historical send outcomes (deliverability, engagement/))
+  - Historical send outcomes (deliverability, engagement)
   - Inbox replies and thread metadata
   - Workspace configuration & style rules
 - Services:
-  - AI API gateway (to internal or external models/))
-  - Policy & safety layer (filters, constraints/))
-  - Logging + observability (what was suggested, what was accepted/))
+  - AI API gateway (to internal or external models)
+  - Policy & safety layer (filters, constraints)
+  - Logging + observability (what was suggested, what was accepted)
 - UX Integration:
   - Non-intrusive buttons:
     - "Rewrite", "Expand", "Simplify", "Analyze", "Summarize", "Suggest reply"
@@ -196,3 +196,4 @@ This document is the canonical AI feature proposal to drive:
 It intentionally:
 - Focuses on realistic utilities.
 - Treats more speculative orchestration ideas strictly as future exploration, not commitments.
+---

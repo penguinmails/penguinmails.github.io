@@ -302,10 +302,10 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 ---
 
 **Related Documentation:**
-- [Product Strategy Framework](../strategy/framework.md)
-- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing.md)
-- [SaaS Customer Success Framework](../../customer-success/industry-cases/saas-cs.md)
-- [Product Cross-Domain Integration](../cross-domain-integration/customer-success-integration-map.md)
+- [Product Strategy Framework](../strategy/framework)
+- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing)
+- [SaaS Customer Success Framework](../../customer-success/industry-cases/saas-cs)
+- [Product Cross-Domain Integration](../cross-domain-integration/customer-success-integration-map)
 
 ---
 *Level 3: Industry-specific product development implementation for SaaS organizations*

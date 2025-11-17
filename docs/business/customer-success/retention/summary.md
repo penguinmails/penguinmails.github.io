@@ -186,10 +186,10 @@ Customer retention represents the foundation of sustainable business growth, pro
 ---
 
 **Related Documentation:**
-- [Customer Retention Details](detailed.md)
-- [Expansion Strategies](expansion-strategies.md)
-- [Customer Health Scoring](../analytics/health-scoring-framework.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Retention Details](retention-detailed)
+- [Expansion Strategies](expansion-strategies)
+- [Customer Health Scoring](../analytics/health-scoring-framework)
+- [Cross-Domain Integration](../cross-domain-integration/overview)
 
 ---
 *Level 1: Executive summary for strategic retention decision-making*

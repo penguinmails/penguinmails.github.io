@@ -256,10 +256,10 @@ Healthcare organizations present unique customer success challenges requiring sp
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [Healthcare Marketing Framework](../../marketing/industry-cases/healthcare-marketing.md)
-- [Healthcare Business Case](../../industry-business-cases/healthcare.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Success Framework](../strategy/framework)
+- [Healthcare Marketing Framework](../../marketing/industry-cases/healthcare-marketing)
+- [Healthcare Business Case](../../industry-business-cases/healthcare)
+- [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---
 *Level 3: Industry-specific customer success implementation for healthcare organizations*

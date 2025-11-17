@@ -179,11 +179,12 @@ Urgency × Impact
 ---
 
 ## Related Documents
-- [Onboarding User Journey Analysis](((../onboarding-user-journey-analysis)) - Detailed user onboarding flows
-- [Comprehensive Onboarding Guide](((../comprehensive-onboarding-guide)) - Team onboarding and working agreements
-- [User Interaction Patterns UX Design](((../user-interaction-patterns-ux-design)) - User experience and interaction design patterns
-- [Onboarding & Authentication Guide](((../../technical/architecture/detailed-technical/onboarding-authentication)) - Technical implementation details
-- [Stripe Onboarding Guide](((stripe_onboarding_guide)) - Payment setup processes
-- [Billing and Subscription Guide](((billing_and_subscription_guide)) - Subscription management processes
+- [Onboarding User Journey Analysis](../onboarding-user-journey-analysis.md) - Detailed user onboarding flows
+- [Comprehensive Onboarding Guide](../comprehensive-onboarding-guide.md) - Team onboarding and working agreements
+- [User Interaction Patterns UX Design](../user-interaction-patterns-ux-design.md) - User experience and interaction design patterns
+- [Onboarding & Authentication Guide](../../technical/architecture/detailed-technical/onboarding-authentication.md) - Technical implementation details
+- [Stripe Onboarding Guide](stripe_onboarding_guide.md) - Payment setup processes
+- [Billing and Subscription Guide](billing_and_subscription_guide.md) - Subscription management processes
 
 **Keywords**: customer onboarding, user activation, setup process, customer success, onboarding automation, customer journey
+---

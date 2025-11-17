@@ -220,19 +220,19 @@ This framework provides business leaders with strategic oversight capabilities f
 ## Industry-Specific Operations Frameworks
 
 ### Healthcare Operations
-- **[Healthcare Operations Framework](./industry-cases/healthcare-operations.md)** - HIPAA compliance, patient safety, clinical workflow integration
+- **[Healthcare Operations Framework](./industry-cases/healthcare-operations)** - HIPAA compliance, patient safety, clinical workflow integration
 
 ### Financial Services Operations
-- **[Financial Services Operations Framework](./industry-cases/financial-services-operations.md)** - SOX compliance, PCI-DSS requirements, banking regulations
+- **[Financial Services Operations Framework](./industry-cases/financial-services-operations)** - SOX compliance, PCI-DSS requirements, banking regulations
 
 ### E-commerce Operations
-- **[E-commerce Operations Framework](./industry-cases/ecommerce-operations.md)** - Customer data security, payment processing, online retail compliance
+- **[E-commerce Operations Framework](./industry-cases/ecommerce-operations)** - Customer data security, payment processing, online retail compliance
 
 ### Agencies & Consulting Operations
-- **[Agencies & Consulting Operations Framework](./industry-cases/agencies-consulting-operations.md)** - Client data security, project management, professional compliance
+- **[Agencies & Consulting Operations Framework](./industry-cases/agencies-consulting-operations)** - Client data security, project management, professional compliance
 
 ### SaaS Operations
-- **[SaaS Operations Framework](./industry-cases/saas-operations.md)** - Multi-tenant security, SaaS compliance, cloud operations
+- **[SaaS Operations Framework](./industry-cases/saas-operations)** - Multi-tenant security, SaaS compliance, cloud operations
 
 ---
 
@@ -252,3 +252,4 @@ This framework provides business leaders with strategic oversight capabilities f
 ---
 
 *Next: [Strategic Value Proposition Analysis](../value-proposition/detailed-analysis/comprehensive-analysis) →*
+---

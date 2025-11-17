@@ -256,9 +256,9 @@ SaaS organizations require specialized customer success approaches focused on su
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Customer Success Framework](../strategy/framework)
+- [SaaS Marketing Framework](../../marketing/industry-cases/saas-marketing)
+- [Cross-Domain Integration](../cross-domain-integration/overview
 
 ---
 *Level 3: Industry-specific customer success implementation for SaaS organizations*

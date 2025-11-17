@@ -305,10 +305,10 @@ E-commerce organizations present unique operational challenges requiring special
 ---
 
 **Related Documentation:**
-- [Operations Strategy Framework](../strategy/framework.md)
-- [Operations Analytics Framework](../analytics/framework.md)
-- [E-commerce Product Framework](../../product/industry-cases/ecommerce-product.md)
-- [Operations Cross-Domain Integration](../cross-domain-integration/operations-marketing-integration-map.md)
+- [Operations Strategy Framework](../strategy/framework)
+- [Operations Analytics Framework](../analytics/framework)
+- [E-commerce Product Framework](../../product/industry-cases/ecommerce-product)
+- [Operations Cross-Domain Integration](../cross-domain-integration/operations-marketing-integration-map
 
 ---
 *Level 3: Industry-specific operational implementation for e-commerce organizations*

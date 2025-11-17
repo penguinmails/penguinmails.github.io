@@ -75,7 +75,7 @@ Migration Types:
 
 **Email-Specific Monitoring**
 - **Deliverability Tracking**: Real-time inbox placement monitoring across all providers
-- **Reputation Scoring**: Continuous tracking of sender scores (Gmail, Yahoo, Outlook/))
+- **Reputation Scoring**: Continuous tracking of sender scores (Gmail, Yahoo, Outlook)
 - **Bounce Management**: Automatic bounce handling and list cleanup
 - **Complaint Processing**: Spam complaint monitoring with automated response
 
@@ -113,10 +113,10 @@ Migration Types:
 
 **Backup & Recovery Strategy**
 - **4-Tier Backup Architecture**: 
-  - **Tier 1**: Real-time transaction log backup (RTO: 15 minutes/))
-  - **Tier 2**: Daily full database backup (RTO: 1 hour/))
-  - **Tier 3**: Weekly incremental backup (RTO: 4 hours/))
-  - **Tier 4**: Monthly archive backup (RTO: 24 hours/))
+  - **Tier 1**: Real-time transaction log backup (RTO: 15 minutes)
+  - **Tier 2**: Daily full database backup (RTO: 1 hour)
+  - **Tier 3**: Weekly incremental backup (RTO: 4 hours)
+  - **Tier 4**: Monthly archive backup (RTO: 24 hours)
 
 **Business Continuity Procedures**
 - **Incident Response Plan**: Structured approach to incident detection, response, and recovery
@@ -238,8 +238,8 @@ Migration Types:
 
 ### **System Reliability Metrics**
 - **Uptime**: 99.9% availability target with detailed SLA reporting
-- **MTTR (Mean Time To Resolution/))**: <4 hours for critical issues
-- **MTBF (Mean Time Between Failures/))**: Proactive prevention through monitoring
+- **MTTR (Mean Time To Resolution)**: <4 hours for critical issues
+- **MTBF (Mean Time Between Failures)**: Proactive prevention through monitoring
 - **Error Rates**: <0.1% error rate for all system components
 
 ### **Performance Metrics**
@@ -302,3 +302,4 @@ Migration Types:
 
 ---
 *Previous: [Technical Architecture Overview](../architecture/overview/) | Next: [Integration & API Overview](../integration/overview/) →*
+---

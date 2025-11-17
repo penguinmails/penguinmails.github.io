@@ -1,3 +1,11 @@
+---
+title: "Executive Security & RBAC Journey (BF-004, BF-012)"
+description: "Documentation for Executive Security & RBAC Journey (BF-004, BF-012) - Security Exec Auth Rbac"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Security & RBAC Journey (BF-004, BF-012)
 
 Document Level: Implementation-Technical (UX Contract)  

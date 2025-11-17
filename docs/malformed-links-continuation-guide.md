@@ -1,3 +1,11 @@
+---
+title: "Malformed Links Continuation Guide"
+description: "Documentation for Malformed Links Continuation Guide - Malformed Links Continuation Guide"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Malformed Links Continuation Guide
 
 ## Current Status
@@ -13,7 +21,7 @@
 
 ## Pattern to Fix
 
-**Malformed syntax**: `[Link Text](((relative/path))`  
+**Malformed syntax**: `[Link Text](relative/path))`  
 **Correct syntax**: `[Link Text](../relative/path/)`
 
 ## Priority Order for Completion

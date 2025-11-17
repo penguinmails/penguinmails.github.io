@@ -1,3 +1,11 @@
+---
+title: "Finance Integration Hub"
+description: "Documentation for Finance Integration Hub - Finance Integration Hub"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Finance Integration Hub
 
 ## Comprehensive Financial Stack Integration

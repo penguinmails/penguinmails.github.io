@@ -399,3 +399,4 @@ last_modified_date: "2025-11-10"
 - **[Success Metrics Framework](../core-features/analytics/overview.md)** - Onboarding KPIs and measurement systems
 
 **Keywords**: onboarding, user activation, setup process, role-based access, progressive disclosure, customer success, emergency recovery
+---

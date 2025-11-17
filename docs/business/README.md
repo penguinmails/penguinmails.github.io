@@ -1,3 +1,11 @@
+---
+title: "Business Documentation Hub - Progressive Disclosure Framework"
+description: "Documentation for Business Documentation Hub - Progressive Disclosure Framework - README"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Business Documentation Hub - Progressive Disclosure Framework
 
 **For Business Leaders, Executives, and Decision Makers**

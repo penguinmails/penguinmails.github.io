@@ -322,3 +322,4 @@ This analysis should be used to:
 - Align content DB docs with the same principles applied to OLAP:
   - Keep it lean.
   - Model durable state, not noisy telemetry.
+---

@@ -1,3 +1,11 @@
+---
+title: "Executive Overview Journey (BF-002, BF-006)"
+description: "Documentation for Executive Overview Journey (BF-002, BF-006) - Executive Exec Overview"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Overview Journey (BF-002, BF-006)
 
 Document Level: Implementation-Technical (UX Contract)  

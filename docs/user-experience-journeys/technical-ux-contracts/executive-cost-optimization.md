@@ -1,3 +1,11 @@
+---
+title: "Executive Cost Optimization Journey (CO-001, CO-002, CO-006)"
+description: "Documentation for Executive Cost Optimization Journey (CO-001, CO-002, CO-006) - Executive Cost Optimization"
+last_modified_date: "2025-11-17"
+level: 2
+persona: "Documentation Users"
+---
+
 # Executive Cost Optimization Journey (CO-001, CO-002, CO-006)
 
 Document Level: Implementation-Technical (UX Contract)  

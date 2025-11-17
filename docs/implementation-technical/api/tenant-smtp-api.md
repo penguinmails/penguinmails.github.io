@@ -161,3 +161,4 @@ Uses the shared standard from `../development-guidelines/api-reference.md`:
   - Enforce strict tenant scoping.
   - Log access to sensitive configuration views when required by compliance.
 - No direct mutation endpoints for IP/infra here; those live in Central SMTP Operations API.
+---

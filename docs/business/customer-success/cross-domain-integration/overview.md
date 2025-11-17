@@ -731,11 +731,11 @@ Phase 6 Standardization Integration:
 ---
 
 **Related Documentation:**
-- [Customer Success Framework](../strategy/framework.md)
-- [Marketing Systems Integration Map](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/business/marketing/cross-domain-integration/marketing-systems-integration-map.md[`marketing-systems-integration-map.md`](docs/business/marketing/cross-domain-integration/marketing-systems-integration-map.md))
-- [Product Systems Integration Map]([`product-systems-integration-map.md`](docs/business/product/cross-domain-integration/product-systems-integration-map.md))
-- [Finance Systems Integration Map]([`finance-systems-integration-map.md`](docs/business/finance/cross-domain-integration/finance-systems-integration-map.md))
-- [Operations Systems Integration Map]([`operations-systems-integration-map.md`](docs/business/operations/cross-domain-integration/operations-systems-integration-map.md))
+- [Customer Success Framework](../strategy/framework)
+- [Marketing Systems Integration Map](../marketing/cross-domain-integration/marketing-systems-integration-map
+- [Product Systems Integration Map](docs/business/product/cross-domain-integration/product-systems-integration-map)
+- [Finance Systems Integration Map](docs/business/finance/cross-domain-integration/finance-systems-integration-map)
+- [Operations Systems Integration Map](docs/business/operations/cross-domain-integration/operations-systems-integration-map)
 
 *Updated with detailed integration guides and API specifications. Level 2 documentation expanded for Phase 4 cross-domain integration.*
 

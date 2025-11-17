@@ -295,8 +295,8 @@ topics:
 
 ---
 
-**Related Documentation:**  
-- [CS Cross-Domain Overview](../overview.md)  
-- [Finance Systems Map](../../../finance/cross-domain-integration/finance-systems-integration-map.md)
+**Related Documentation:**
+- [CS Cross-Domain Overview](../overview)
+- [Finance Systems Map](../../../business/finance/cross-domain-integration/finance-systems-integration-map)
 
 **Document Classification:** Level 3 - CS-Finance Integration Analysis

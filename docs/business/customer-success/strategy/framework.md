@@ -223,10 +223,10 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 ---
 
 **Related Documentation:**
-- [Strategy Overview](overview.md)
-- [Customer Success Analytics](../analytics/overview.md)
-- [Customer Retention Strategies](../retention/summary.md)
-- [Cross-Domain Integration](../cross-domain-integration/overview.md)
+- [Strategy Overview](overview)
+- [Customer Success Analytics](../analytics/overview)
+- [Customer Retention Strategies](../retention/summary)
+- [Cross-Domain Integration](../cross-domain-integration/overview)
 
 ---
 *Level 2: Operational framework for customer success implementation*

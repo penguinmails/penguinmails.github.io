@@ -48,13 +48,13 @@ The API documentation follows a progressive disclosure model:
 Authoritative domain contracts:
 
 - Tenant SMTP API:
-  - [`tenant-smtp-api.md`](../api/tenant-smtp-api.md)
+  - [`tenant-smtp-api`](../api/tenant-smtp-api)
 - Central SMTP Operations API:
-  - [`central-smtp-operations-api.md`](../api/central-smtp-operations-api.md)
+  - [`central-smtp-operations-api`](../api/central-smtp-operations-api)
 - Queue & Events API:
-  - [`queue-events-api.md`](../api/queue-events-api.md)
+  - [`queue-events-api`](../api/queue-events-api)
 - Executive REST API (C-Suite Dashboards):
-  - [`executive-api.md`](../api/executive-api.md)
+  - [`executive-api`](../api/executive-api)
 - Core Product / Marketing / Webhooks / SDKs:
   - Defined and maintained in their own dedicated specs (e.g. `core-product-api.md`, `webhooks-api.md`, `sdk-guides.md`) separate from this entrypoint.
 
@@ -258,3 +258,4 @@ For domain-specific best practices:
   - Keep this entrypoint free of large code samples to maintain clarity and durability.
 
 This structure ensures `api-reference.md` remains a concise, maintainable entrypoint aligned with the REST-only, JS/TS-first, progressive documentation strategy.
+---

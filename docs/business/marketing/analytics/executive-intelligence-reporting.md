@@ -253,10 +253,10 @@ This document establishes basic executive marketing reporting capabilities with 
 ### Cross-Framework Integration Requirements
 
 **Enhanced Dashboard Integration:**
-See enhanced dashboard framework: `docs/business/marketing/analytics/enhanced-performance-dashboard.md`
+See enhanced dashboard framework: [`enhanced-performance-dashboard`](enhanced-performance-dashboard)
 
 **Executive Reporting Integration:**
-See executive reporting framework: `docs/business/marketing/analytics/executive-reporting-framework.md`
+See executive reporting framework: [`executive-reporting-framework`](executive-reporting-framework)
 
 **Intelligence Architecture:**
 - **Progressive Enhancement:** Intelligence enhancement of existing reporting without operational disruption
@@ -318,3 +318,4 @@ See executive reporting framework: `docs/business/marketing/analytics/executive-
 **Review Cycle:** Monthly intelligence validation and quarterly strategic framework review
 
 This comprehensive executive intelligence framework ensures basic strategic intelligence with directional analytics, weekly competitive monitoring, manual reporting, and basic cross-domain integration for optimized strategic decision-making and competitive advantage in $300K annual marketing technology value delivery.
+---

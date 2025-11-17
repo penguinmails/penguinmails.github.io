@@ -13,7 +13,7 @@ has_children: false
 **Level**: Level 3 - Industry-Specific Implementation  
 **Target Audience**: Financial Services Developer Teams, Compliance Officers, Financial IT Leadership  
 **Business Impact Priority**: Critical - Financial compliance and developer platform responsibility  
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) | [Financial Services Strategy Framework](docs/business/financial-services/strategy/framework.md) | [Developer Operations Framework](docs/business/developer/operations/framework.md) | [Financial Services Operations Framework](docs/business/financial-services/operations/framework.md) | [Developer Analytics Framework](docs/business/developer/analytics/framework.md) | [Financial Services Analytics Framework](docs/business/financial-services/analytics/framework.md)
+**Framework Integration**: [Developer Strategy Framework](../strategy/framework.md) | [Financial Services Strategy Framework](docs/business/financial-services/strategy/framework.md) | [Developer Operations Framework](../operations/framework.md) | [Financial Services Operations Framework](docs/business/financial-services/operations/framework.md) | [Developer Analytics Framework](../analytics/framework.md) | [Financial Services Analytics Framework](docs/business/financial-services/analytics/framework.md)
 
 ## Executive Summary
 
@@ -42,7 +42,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Developer platform security standards activated and monitored
 - Compliance assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Financial Services Compliance Framework](docs/business/financial-services/compliance/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Financial Services Compliance Framework](../compliance/framework)
 
 #### Compliance Point 1.1.2: Financial Data Security Protocols
 **Compliance Requirement**: Financial Services Developer Data Protection Standards  
@@ -54,7 +54,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Developer platform security validation systems activated
 - Data protection compliance completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Financial Services Security Framework](docs/business/financial-services/security/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Financial Services Security Framework](../security/framework)
 
 #### Compliance Point 1.1.3: Financial Access Control
 **Compliance Requirement**: Financial Services Developer Access Management Compliance  
@@ -66,7 +66,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Audit trail systems activated for compliance monitoring
 - Access control compliance completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Access Framework](docs/business/financial-services/access/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Access Framework](../access/framework)
 
 ### 1.2 Financial Developer Standards
 
@@ -80,7 +80,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Financial compliance validation systems activated
 - Development standards compliance completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Financial Services Quality Framework](docs/business/financial-services/quality/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Financial Services Quality Framework](../quality/framework)
 
 #### Compliance Point 1.2.2: Financial Data Integration Compliance
 **Compliance Requirement**: Financial Services Developer Data Integration Standards  
@@ -92,7 +92,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Integration validation systems activated and monitored
 - Data integration compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](docs/business/developer/automation/framework.md) + [Financial Services Data Framework](docs/business/financial-services/data/framework.md)
+**Business Framework Integration**: [Developer Automation Framework](../automation/framework) + [Financial Services Data Framework](../data/framework)
 
 #### Compliance Point 1.2.3: Financial Platform Compliance Validation
 **Compliance Requirement**: Financial Services Developer Platform Regulatory Compliance  
@@ -104,7 +104,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Validation monitoring systems activated and optimized
 - Platform compliance validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Validation Framework](docs/business/financial-services/validation/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Validation Framework](../validation/framework)
 
 ---
 
@@ -122,7 +122,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Developer platform security standards activated and monitored
 - PCI-DSS assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Financial Services PCI-DSS Framework](docs/business/financial-services/pci-dss/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Financial Services PCI-DSS Framework](../pci-dss/framework)
 
 #### Security Point 2.1.2: Financial Payment Security
 **Security Requirement**: Financial Services Developer Payment Data Protection  
@@ -134,7 +134,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Developer platform security validation systems activated
 - Payment security compliance completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Financial Services Payment Security Framework](docs/business/financial-services/payment-security/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Financial Services Payment Security Framework](../payment-security/framework)
 
 #### Security Point 2.1.3: Financial Transaction Security
 **Security Requirement**: Financial Services Developer Transaction Security Compliance  
@@ -146,7 +146,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Payment processing security systems activated
 - Transaction security compliance completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Transaction Security](docs/business/financial-services/transaction-security/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Transaction Security](../transaction-security/framework)
 
 ### 2.2 Financial Platform Security
 
@@ -160,7 +160,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Financial application security systems activated
 - Platform security standards completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Platform Security](docs/business/financial-services/platform-security/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Platform Security](../platform-security/framework)
 
 #### Security Point 2.2.2: Financial Data Encryption
 **Security Requirement**: Financial Services Developer Data Encryption Standards  
@@ -172,7 +172,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Data encryption compliance systems activated and monitored
 - Data encryption standards completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Financial Services Data Encryption](docs/business/financial-services/data-encryption/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Financial Services Data Encryption](../data-encryption/framework)
 
 #### Security Point 2.2.3: Financial Security Monitoring
 **Security Requirement**: Financial Services Developer Security Monitoring Compliance  
@@ -184,7 +184,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Response systems activated and optimized
 - Security monitoring compliance completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Security Monitoring](docs/business/financial-services/security-monitoring/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Security Monitoring](../security-monitoring/framework)
 
 ---
 
@@ -202,7 +202,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Developer platform governance standards activated and monitored
 - Banking regulation assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Financial Services Banking Regulation Framework](docs/business/financial-services/banking-regulation/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Financial Services Banking Regulation Framework](../banking-regulation/framework)
 
 #### Compliance Point 3.1.2: Financial Regulatory Adherence
 **Compliance Requirement**: Financial Services Developer Regulatory Adherence Standards  
@@ -214,7 +214,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Regulatory compliance validation systems activated
 - Adherence compliance completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Regulatory Adherence](docs/business/financial-services/regulatory-adherence/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Regulatory Adherence](../regulatory-adherence/framework)
 
 #### Compliance Point 3.1.3: Banking Compliance Monitoring
 **Compliance Requirement**: Financial Services Developer Banking Compliance Monitoring  
@@ -226,7 +226,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Regulatory monitoring systems optimized and validated
 - Banking compliance monitoring completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Banking Compliance Monitoring](docs/business/financial-services/banking-compliance-monitoring/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Banking Compliance Monitoring](../banking-compliance-monitoring/framework)
 
 ### 3.2 Financial Developer Monitoring
 
@@ -240,7 +240,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Compliance monitoring systems activated and optimized
 - Platform monitoring completion verified and documented
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Platform Monitoring](docs/business/financial-services/platform-monitoring/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Platform Monitoring](../platform-monitoring/framework)
 
 #### Monitoring Point 3.2.2: Financial Developer Performance Monitoring
 **Monitoring Requirement**: Financial Services Developer Performance Monitoring Standards  
@@ -252,7 +252,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Compliance monitoring systems activated and validated
 - Performance monitoring completion verified and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Developer Performance Monitoring](docs/business/financial-services/developer-performance-monitoring/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Developer Performance Monitoring](../developer-performance-monitoring/framework)
 
 #### Monitoring Point 3.2.3: Financial Risk Monitoring
 **Monitoring Requirement**: Financial Services Developer Risk Monitoring Standards  
@@ -264,7 +264,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Mitigation systems optimized and validated
 - Risk monitoring completion verified and documented
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Risk Monitoring](docs/business/financial-services/risk-monitoring/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Risk Monitoring](../risk-monitoring/framework)
 
 ---
 
@@ -282,7 +282,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Timely reporting systems activated and optimized
 - Compliance reporting accuracy completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Compliance Reporting](docs/business/financial-services/compliance-reporting/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Compliance Reporting](../compliance-reporting/framework)
 
 #### Reporting Point 4.1.2: Financial Platform Reporting
 **Reporting Requirement**: Financial Services Developer Platform Status Reporting  
@@ -294,7 +294,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Performance documentation systems activated and optimized
 - Platform reporting completion verified and validated
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Platform Reporting](docs/business/financial-services/platform-reporting/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Platform Reporting](../platform-reporting/framework)
 
 #### Reporting Point 4.1.3: Financial Regulatory Validation
 **Reporting Requirement**: Financial Services Developer Regulatory Validation Reporting  
@@ -306,7 +306,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Validation reporting systems optimized and monitored
 - Regulatory validation completion verified and documented
 
-**Business Framework Integration**: [Developer Validation Framework](docs/business/developer/validation/framework.md) + [Financial Services Regulatory Validation Reporting](docs/business/financial-services/regulatory-validation-reporting/framework.md)
+**Business Framework Integration**: [Developer Validation Framework](../validation/framework) + [Financial Services Regulatory Validation Reporting](../regulatory-validation-reporting/framework)
 
 ### 4.2 Platform Coordination Excellence
 
@@ -320,7 +320,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Financial application optimization systems activated
 - Platform excellence standards completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy/framework.md) + [Financial Services Excellence Framework](docs/business/financial-services/excellence/framework.md)
+**Business Framework Integration**: [Developer Strategy Framework](../strategy/framework) + [Financial Services Excellence Framework](../excellence/framework)
 
 #### Coordination Point 4.2.2: Financial Coordination Success
 **Coordination Requirement**: Financial Services Developer Coordination Success  
@@ -332,7 +332,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Systems integration optimization systems activated
 - Coordination success completion verified and validated
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations/framework.md) + [Financial Services Coordination Framework](docs/business/financial-services/coordination/framework.md)
+**Business Framework Integration**: [Developer Operations Framework](../operations/framework) + [Financial Services Coordination Framework](../coordination/framework)
 
 #### Coordination Point 4.2.3: Financial Success Monitoring
 **Coordination Requirement**: Financial Services Developer Success Monitoring  
@@ -344,7 +344,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Compliance achievement systems optimized and validated
 - Success monitoring completion verified and documented
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics/framework.md) + [Financial Services Success Framework](docs/business/financial-services/success/framework.md)
+**Business Framework Integration**: [Developer Analytics Framework](../analytics/framework) + [Financial Services Success Framework](../success/framework)
 
 ---
 
@@ -431,3 +431,4 @@ This framework provides the foundation for financial services developer excellen
 *Last Updated: November 16, 2025*  
 *Document Owner: Financial Services Developer Framework Team*  
 *Review Cycle: Monthly compliance validation and quarterly framework enhancement*
+---

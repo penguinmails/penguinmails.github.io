@@ -208,3 +208,4 @@ This document defines the key user personas for PenguinMails, based on extensive
 - [Market Analysis](../market-analysis/overview/) - Market size and competitive landscape
 - [User Journeys](../user-journeys/overview/) - Detailed user flow specifications
 - [Product Strategy](../product/strategy/overview/) - Strategic alignment and objectives
+---
