@@ -488,13 +488,13 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 Ready to improve your cold email deliverability?
 
 ### **Related Features**
-1. **[Unified Inbox](((../unified-inbox/overview))** - Manage responses from your warmed-up accounts
-2. **[Inbox Rotation](((../inbox-rotation/overview))** - Rotate between multiple email addresses
-3. **[Analytics](((../analytics/overview))** - Track your warm-up progress and performance
-4. **[Free Mailbox Creation](((free-mailbox-creation))** - Set up new email accounts for warm-up
+1. **[Unified Inbox](../unified-inbox/overview/)** - Manage responses from your warmed-up accounts
+2. **[Inbox Rotation](../inbox-rotation/overview/)** - Rotate between multiple email addresses
+3. **[Analytics](../analytics/overview/)** - Track your warm-up progress and performance
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview/)** - Set up new email accounts for warm-up
 
 ### **Implementation Resources**
-5. **[Getting Started](((../implement/getting-started))** - Complete your cold email setup
+5. **[Getting Started](../getting-started/)** - Complete your cold email setup
 
 ### **Prerequisites**
 - **Domain Access**: Ensure you have access to DNS management for your domain

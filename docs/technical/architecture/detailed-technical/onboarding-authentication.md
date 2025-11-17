@@ -8,13 +8,13 @@ title: "Onboarding and Authentication System Architecture"
 
 This comprehensive guide covers PenguinMails' enterprise-grade onboarding and authentication system architecture, which provides secure, scalable, and user-friendly access to our email infrastructure platform. Our system implements multi-layered security with NileDB authentication, Cloudflare Turnstile CAPTCHA protection, and Stripe Connect payment processing to ensure a seamless yet secure user experience.
 
-**Strategic Alignment**: This technical feature supports our [market leadership positioning](((docs/business/strategy/overview)) by providing enterprise-grade security and user experience that differentiates us from competitors. The multi-tenant authentication architecture enables our [scalable business model](((docs/business/model/overview)) while maintaining the highest security standards that enterprise customers demand.
+**Strategic Alignment**: This technical feature supports our [market leadership positioning](((docs/business/strategy/overview/))) by providing enterprise-grade security and user experience that differentiates us from competitors. The multi-tenant authentication architecture enables our [scalable business model](((docs/business/model/overview/))) while maintaining the highest security standards that enterprise customers demand.
 
-**Technical Authority**: Our [comprehensive 4-tier database architecture](((docs/technical/architecture/overview)) integrates with NileDB authentication, providing tenant isolation and enterprise-grade security features. The system incorporates [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation)) for scalability and [OLAP analytics integration](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) for user behavior tracking.
+**Technical Authority**: Our [comprehensive 4-tier database architecture](((docs/technical/architecture/overview/))) integrates with NileDB authentication, providing tenant isolation and enterprise-grade security features. The system incorporates [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation/))) for scalability and [OLAP analytics integration](((docs/technical/architecture/detailed-technical/olap-analytics-schema/))) for user behavior tracking.
 
-**Operational Excellence**: Backed by [99.9% uptime guarantees](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with comprehensive monitoring systems, automated failover, and enterprise-grade security. The authentication system includes real-time health checks, predictive scaling, and intelligent error recovery mechanisms.
+**Operational Excellence**: Backed by [99.9% uptime guarantees](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) with comprehensive monitoring systems, automated failover, and enterprise-grade security. The authentication system includes real-time health checks, predictive scaling, and intelligent error recovery mechanisms.
 
-**User Journey Integration**: This feature is part of your complete [user experience journey](((docs/user-journeys/onboarding)) - connecting seamlessly to [business strategy overview](((docs/business/strategy/overview)), [market analysis insights](((docs/business/market-analysis/overview)), and [value proposition delivery](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)).
+**User Journey Integration**: This feature is part of your complete [user experience journey](((docs/user-journeys/onboarding/))) - connecting seamlessly to [business strategy overview](((docs/business/strategy/overview/))), [market analysis insights](((docs/business/market-analysis/overview/))), and [value proposition delivery](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis/))).
 
 ---
 
@@ -30,18 +30,18 @@ Our authentication system leverages enterprise-grade components for maximum secu
 - **Analytics**: PostgreSQL + PostHog for email analytics and user behavior tracking with real-time insights
 - **Frontend**: Next.js with server-side rendering and API routes for optimal performance
 
-**Strategic Technology Integration**: This tech stack supports our [competitive positioning](((docs/business/strategy/overview)) by providing enterprise-grade security that rivals established players while offering superior user experience. The integration enables our [advanced analytics capabilities](((docs/business/analytics/overview)) for data-driven optimization and customer insights.
+**Strategic Technology Integration**: This tech stack supports our [competitive positioning](((docs/business/strategy/overview/))) by providing enterprise-grade security that rivals established players while offering superior user experience. The integration enables our [advanced analytics capabilities](((docs/business/analytics/overview/))) for data-driven optimization and customer insights.
 
 ### **Service Architecture**
 
 Our distributed architecture ensures reliability and scalability:
 
-- **Main App**: `app.penguinmails.com` (Next.js dashboard) with global CDN distribution
+- **Main App**: `app.penguinmails.com` (Next.js dashboard/)) with global CDN distribution
 - **Auth Integration**: NileDB authentication with tenant isolation and row-level security
 - **Payment Processing**: Stripe Connect Express accounts for each tenant with automated compliance
 - **Domain Management**: Custom domains with CNAME + SSL for tracking with automated provisioning
 
-**Enterprise Infrastructure**: Our system is deployed on [enterprise-grade infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with automatic scaling, load balancing, and disaster recovery capabilities. The architecture supports our [99.9% uptime SLA](((docs/technical/architecture/detailed-technical/infrastructure-operations)) through redundant systems and intelligent failover.
+**Enterprise Infrastructure**: Our system is deployed on [enterprise-grade infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) with automatic scaling, load balancing, and disaster recovery capabilities. The architecture supports our [99.9% uptime SLA](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) through redundant systems and intelligent failover.
 
 ---
 
@@ -53,11 +53,11 @@ Our authentication system implements a sophisticated multi-step verification pro
 
 **User opens** `app.penguinmails.com`
 
-→ **If not authenticated**: Redirect to signup/login modal (not separate page)
+→ **If not authenticated**: Redirect to signup/login modal (not separate page/))
 → **If authenticated but not email verified**: Show verification prompt
 → **If authenticated and verified**: Check onboarding status → proceed or show onboarding modal
 
-**Strategic User Experience**: This flow supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by minimizing friction while maintaining security. The modal-based approach reduces page loads and provides a seamless experience that converts better than traditional multi-page flows.
+**Strategic User Experience**: This flow supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis/))) by minimizing friction while maintaining security. The modal-based approach reduces page loads and provides a seamless experience that converts better than traditional multi-page flows.
 
 ### **Onboarding Status Check**
 
@@ -74,7 +74,7 @@ interface OnboardingState {
 }
 ```
 
-**Technical Excellence**: This state management integrates with our [OLAP analytics system](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) for real-time user journey optimization and conversion funnel analysis. The comprehensive tracking enables predictive analytics for user behavior and automated intervention for drop-off points.
+**Technical Excellence**: This state management integrates with our [OLAP analytics system](((docs/technical/architecture/detailed-technical/olap-analytics-schema/))) for real-time user journey optimization and conversion funnel analysis. The comprehensive tracking enables predictive analytics for user behavior and automated intervention for drop-off points.
 
 ---
 
@@ -90,7 +90,7 @@ Our signup process implements enterprise-grade security with user-friendly desig
 3. Email address
 4. Password
 5. Confirm password
-6. **Turnstile CAPTCHA** (with fallback for accessibility)
+6. **Turnstile CAPTCHA** (with fallback for accessibility/))
 7. Terms & Privacy checkbox
 
 **Enhanced Validation Rules:**
@@ -98,7 +98,7 @@ Our signup process implements enterprise-grade security with user-friendly desig
 - Password: 12+ characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
 - CAPTCHA: Turnstile token verification required with server-side validation
 
-**Security Excellence**: These validation rules support our [enterprise security positioning](((docs/compliance-security/overview)) by implementing industry-standard security measures while maintaining user accessibility. The multi-layered validation prevents common attack vectors including SQL injection, credential stuffing, and automated account creation.
+**Security Excellence**: These validation rules support our [enterprise security positioning](((docs/compliance-security/overview/))) by implementing industry-standard security measures while maintaining user accessibility. The multi-layered validation prevents common attack vectors including SQL injection, credential stuffing, and automated account creation.
 
 ### **Turnstile Integration**
 
@@ -107,15 +107,15 @@ Our signup process implements enterprise-grade security with user-friendly desig
 import { Turnstile } from "next-turnstile";
 import { verifyTurnstileToken } from "@/utils/turnstile";
 
-const SignUpForm = () => {
-  const [captchaToken, setCaptchaToken] = useState("");
+const SignUpForm = (/)) => {
+  const [captchaToken, setCaptchaToken] = useState(""/));
   
-  const handleSubmit = async (formData) => {
+  const handleSubmit = async (formData/)) => {
     // Verify Turnstile token first
-    await verifyTurnstileToken(captchaToken);
+    await verifyTurnstileToken(captchaToken/));
     
     // Then proceed with NileDB signup
-    await signup({
+    await signup({/)
       email: formData.email,
       password: formData.password,
       firstName: formData.firstName,
@@ -128,14 +128,14 @@ const SignUpForm = () => {
     });
   };
 
-  return (
+  return (/)
     <form onSubmit={handleSubmit}>
       {/* Form fields */}
       <Turnstile
         siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-        onVerify={(token) => setCaptchaToken(token)}
-        onError={() => setCaptchaToken("")}
-        onTimeout={() => setCaptchaToken("")}
+        onVerify={(token/)) => setCaptchaToken(token/))}
+        onError={(/)) => setCaptchaToken(""/))}
+        onTimeout={(/)) => setCaptchaToken(""/))}
       />
     </form>
   );
@@ -149,35 +149,35 @@ const SignUpForm = () => {
 import { NextRequest, NextResponse } from "next/server";
 import { validateTurnstileToken } from "next-turnstile";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest/)) {
   try {
-    const { token } = await req.json();
+    const { token } = await req.json(/));
     const secretKey = process.env.TURNSTILE_SECRET_KEY;
 
-    if (!secretKey) {
-      return NextResponse.json(
+    if (!secretKey/)) {
+      return NextResponse.json(/)
         { success: false, message: "Server configuration error" },
         { status: 500 }
       );
     }
 
-    const result = await validateTurnstileToken({
+    const result = await validateTurnstileToken({/)
       token,
       secretKey,
     });
 
-    if (!result.success) {
-      console.warn("Turnstile verification failed:", result['error-codes']);
-      return NextResponse.json(
+    if (!result.success/)) {
+      console.warn("Turnstile verification failed:", result['error-codes']/));
+      return NextResponse.json(/)
         { success: false, message: "CAPTCHA verification failed" },
         { status: 400 }
       );
     }
 
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error("Turnstile verification error:", error);
-    return NextResponse.json(
+    return NextResponse.json({ success: true }/));
+  } catch (error/)) {
+    console.error("Turnstile verification error:", error/));
+    return NextResponse.json(/)
       { success: false, message: "Internal server error" },
       { status: 500 }
     );
@@ -185,7 +185,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](((docs/business/strategy/overview)) by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) of respecting user privacy while maintaining security.
+**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](((docs/business/strategy/overview/))) by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis/))) of respecting user privacy while maintaining security.
 
 ### **Email Verification with Loop Service**
 
@@ -197,7 +197,7 @@ export async function POST(req: NextRequest) {
 3. Custom verification endpoint receives token/code and updates `email_verified` field in NileDB users table
 4. Account becomes active upon successful verification
 
-**Technical Integration**: This system integrates with our [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation)) to handle high-volume email sending during peak signup periods, ensuring reliable delivery and optimal user experience.
+**Technical Integration**: This system integrates with our [progressive queue processing](((docs/technical/architecture/detailed-technical/queue-system-implementation/))) to handle high-volume email sending during peak signup periods, ensuring reliable delivery and optimal user experience.
 
 ### **NileDB Sign-Up API**
 
@@ -206,12 +206,12 @@ export async function POST(req: NextRequest) {
 import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest/)) {
   try {
-    const { email, password, firstName, lastName } = await req.json();
+    const { email, password, firstName, lastName } = await req.json(/));
 
     // Create tenant user account
-    const user = await nile.auth.signup({
+    const user = await nile.auth.signup({/)
       email,
       password,
       data: {
@@ -219,58 +219,58 @@ export async function POST(req: NextRequest) {
         last_name: lastName,
         email_verified: false,
         onboarding_step: 'verify',
-        created_at: new Date()
+        created_at: new Date(/))
       }
     });
 
     // Create tenant record
-    const tenant = await nile.db.query(`
-      INSERT INTO tenants (email, name, status, created_at)
-      VALUES ($1, $2, 'active', CURRENT_TIMESTAMP)
+    const tenant = await nile.db.query(`/)
+      INSERT INTO tenants (email, name, status, created_at/))
+      VALUES ($1, $2, 'active', CURRENT_TIMESTAMP/))
       RETURNING id
     `, [email, `${firstName} ${lastName}'s Workspace`]);
 
     // Link user to tenant
-    await nile.db.query(`
+    await nile.db.query(`/)
       UPDATE tenant_users 
       SET tenant_id = $1, role = 'owner'
       WHERE user_id = $2
     `, [tenant.rows[0].id, user.id]);
 
     // Send verification email via Loop
-    await sendVerificationEmail(user.email, user.id);
+    await sendVerificationEmail(user.email, user.id/));
 
-    return NextResponse.json({
+    return NextResponse.json({/)
       success: true,
       userId: user.id,
       tenantId: tenant.rows[0].id,
       message: "Account created. Please verify your email."
     });
 
-  } catch (error) {
-    console.error("Signup error:", error);
-    return NextResponse.json(
+  } catch (error/)) {
+    console.error("Signup error:", error/));
+    return NextResponse.json(/)
       { success: false, message: "Failed to create account" },
       { status: 400 }
     );
   }
 }
 
-async function sendVerificationEmail(email: string, userId: string) {
-  const verificationToken = await generateJWT({ userId, email });
+async function sendVerificationEmail(email: string, userId: string/)) {
+  const verificationToken = await generateJWT({ userId, email }/));
 
-  await fetch('https://api.loopex.com/send-transactional', {
+  await fetch('https://api.loopex.com/send-transactional', {/)
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${process.env.LOOP_API_KEY}`,
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({
+    body: JSON.stringify({/)
       transactional_id: process.env.LOOP_VERIFICATION_TRANSACTIONAL_ID,
       to: email,
       data: {
         verification_link: `https://app.penguinmails.com/verify?token=${verificationToken}`,
-        first_name: email.split('@')[0],
+        first_name: email.split('@'/))[0],
         expires_in: '30 minutes'
       }
     })
@@ -278,7 +278,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 }
 ```
 
-**Multi-Tenant Architecture**: This implementation showcases our [enterprise database architecture](((docs/technical/architecture/overview)) with proper tenant isolation, row-level security, and scalable multi-tenant design that supports our [business model growth](((docs/business/model/overview)).
+**Multi-Tenant Architecture**: This implementation showcases our [enterprise database architecture](((docs/technical/architecture/overview/))) with proper tenant isolation, row-level security, and scalable multi-tenant design that supports our [business model growth](((docs/business/model/overview/))).
 
 ### **Email Verification Status Tracking**
 
@@ -296,7 +296,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 - `tenant_users` table mirrors email verification status
 - Cross-schema queries combine data for complete user profiles
 
-**Operational Excellence**: This system includes [comprehensive monitoring](((docs/technical/architecture/detailed-technical/infrastructure-operations)) with real-time delivery tracking, automated retry mechanisms, and predictive failure detection to maintain our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations)).
+**Operational Excellence**: This system includes [comprehensive monitoring](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) with real-time delivery tracking, automated retry mechanisms, and predictive failure detection to maintain our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations/))).
 
 ---
 
@@ -334,7 +334,7 @@ async function sendVerificationEmail(email: string, userId: string) {
 </div>
 ```
 
-**User Experience Excellence**: This email design supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
+**User Experience Excellence**: This email design supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis/))) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
 
 ### **Verification Endpoint**
 
@@ -344,54 +344,54 @@ import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";
 import jwt from "jsonwebtoken";
 
-export async function GET(req: NextRequest) {
+export async function GET(req: NextRequest/)) {
   try {
-    const { searchParams } = new URL(req.url);
-    const token = searchParams.get('token');
-    const next = searchParams.get('next') || '/dashboard/onboarding';
+    const { searchParams } = new URL(req.url/));
+    const token = searchParams.get('token'/));
+    const next = searchParams.get('next'/)) || '/dashboard/onboarding';
 
-    if (!token) {
-      return NextResponse.redirect('/verify?error=no-token');
+    if (!token/)) {
+      return NextResponse.redirect('/verify?error=no-token'/));
     }
 
     // Verify JWT token
-    const decoded = jwt.verify(token, process.env.JWT_SECRET!) as {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET!/)) as {
       userId: string;
       email: string;
     };
 
     // Check if token was already used
-    const usedToken = await nile.db.query(
+    const usedToken = await nile.db.query(/)
       'SELECT id FROM verification_tokens WHERE token = $1 AND used = true',
       [token]
     );
 
-    if (usedToken.rows.length > 0) {
+    if (usedToken.rows.length > 0/)) {
       // Token already used - redirect to dashboard
-      return NextResponse.redirect(next);
+      return NextResponse.redirect(next/));
     }
 
     // Mark email as verified
-    await nile.db.query(
+    await nile.db.query(/)
       'UPDATE tenant_users SET email_verified = true WHERE user_id = $1',
       [decoded.userId]
     );
 
     // Mark token as used
-    await nile.db.query(
+    await nile.db.query(/)
       'UPDATE verification_tokens SET used = true, used = CURRENT_TIMESTAMP WHERE token = $1',
       [token]
     );
 
     // Create session
-    const session = await nile.auth.signin({
+    const session = await nile.auth.signin({/)
       email: decoded.email,
       callbackUrl: next
     });
 
     // Set session cookie
-    const response = NextResponse.redirect(next);
-    response.cookies.set('session', session.session_token, {
+    const response = NextResponse.redirect(next/));
+    response.cookies.set('session', session.session_token, {/)
       httpOnly: true,
       secure: true,
       sameSite: 'lax',
@@ -400,9 +400,9 @@ export async function GET(req: NextRequest) {
 
     return response;
 
-  } catch (error) {
-    console.error("Verification error:", error);
-    return NextResponse.redirect('/verify?error=invalid-token');
+  } catch (error/)) {
+    console.error("Verification error:", error/));
+    return NextResponse.redirect('/verify?error=invalid-token'/));
   }
 }
 ```
@@ -414,12 +414,12 @@ export async function GET(req: NextRequest) {
 import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest/)) {
   try {
-    const { email, code } = await req.json();
+    const { email, code } = await req.json(/));
 
     // Verify the code
-    const verification = await nile.db.query(`
+    const verification = await nile.db.query(`/)
       SELECT vt.token, tu.user_id, tu.email_verified
       FROM verification_tokens vt
       JOIN tenant_users tu ON tu.user_id = vt.user_id
@@ -427,8 +427,8 @@ export async function POST(req: NextRequest) {
         AND vt.expires > CURRENT_TIMESTAMP
     `, [email, code]);
 
-    if (verification.rows.length === 0) {
-      return NextResponse.json(
+    if (verification.rows.length === 0/)) {
+      return NextResponse.json(/)
         { success: false, message: "Invalid or expired code" },
         { status: 400 }
       );
@@ -437,17 +437,17 @@ export async function POST(req: NextRequest) {
     const { token, user_id } = verification.rows[0];
 
     // Use the same flow as magic link verification
-    const response = NextResponse.json({ success: true });
+    const response = NextResponse.json({ success: true }/));
     
-    // Mark email verified and create session (similar to magic link flow)
-    await nile.db.query('UPDATE tenant_users SET email_verified = true WHERE user_id = $1', [user_id]);
-    await nile.db.query('UPDATE verification_tokens SET used = true WHERE token = $1', [token]);
+    // Mark email verified and create session (similar to magic link flow/))
+    await nile.db.query('UPDATE tenant_users SET email_verified = true WHERE user_id = $1', [user_id]/));
+    await nile.db.query('UPDATE verification_tokens SET used = true WHERE token = $1', [token]/));
 
     return response;
 
-  } catch (error) {
-    console.error("Code verification error:", error);
-    return NextResponse.json(
+  } catch (error/)) {
+    console.error("Code verification error:", error/));
+    return NextResponse.json(/)
       { success: false, message: "Verification failed" },
       { status: 500 }
     );
@@ -455,7 +455,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](((docs/compliance-security/accessibility)) while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
+**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](((docs/compliance-security/accessibility/))) while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
 
 ---
 
@@ -470,9 +470,9 @@ After email verification, users see the onboarding modal starting with plan sele
 import { useState } from "react";
 import { nile } from "@/lib/niledb/client";
 
-const OnboardingModal = () => {
-  const [currentStep, setCurrentStep] = useState('plan');
-  const [plan, setPlan] = useState(null);
+const OnboardingModal = (/)) => {
+  const [currentStep, setCurrentStep] = useState('plan'/));
+  const [plan, setPlan] = useState(null/));
 
   const plans = [
     {
@@ -498,40 +498,40 @@ const OnboardingModal = () => {
     }
   ];
 
-  const handlePlanSelect = async (selectedPlan) => {
-    setPlan(selectedPlan);
-    setCurrentStep('payment');
+  const handlePlanSelect = async (selectedPlan/)) => {
+    setPlan(selectedPlan/));
+    setCurrentStep('payment'/));
 
     // Create Stripe Checkout Session
-    const response = await fetch('/api/stripe/create-checkout', {
+    const response = await fetch('/api/stripe/create-checkout', {/)
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+      body: JSON.stringify({/)
         priceId: selectedPlan.stripePriceId,
-        tenantId: await getCurrentTenantId()
+        tenantId: await getCurrentTenantId(/))
       })
     });
 
-    const { url } = await response.json();
+    const { url } = await response.json(/));
     window.location.href = url;
   };
 
-  return (
+  return (/)
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-        {currentStep === 'plan' && (
+        {currentStep === 'plan' && (/)
           <PlanSelection 
             plans={plans}
             onSelect={handlePlanSelect}
           />
         )}
-        {currentStep === 'payment' && (
+        {currentStep === 'payment' && (/)
           <PaymentProcessing />
         )}
-        {currentStep === 'workspace' && (
+        {currentStep === 'workspace' && (/)
           <WorkspaceSetup />
         )}
-        {currentStep === 'provision' && (
+        {currentStep === 'provision' && (/)
           <ProvisioningStatus />
         )}
       </div>
@@ -540,7 +540,7 @@ const OnboardingModal = () => {
 };
 ```
 
-**Strategic Business Integration**: This plan selection system supports our [tiered business model](((docs/business/model/overview)) by providing clear value differentiation and smooth upgrade paths. The modal-based approach reduces cognitive load and improves conversion rates through focused decision-making.
+**Strategic Business Integration**: This plan selection system supports our [tiered business model](((docs/business/model/overview/))) by providing clear value differentiation and smooth upgrade paths. The modal-based approach reduces cognitive load and improves conversion rates through focused decision-making.
 
 ### **Stripe Checkout Integration**
 
@@ -550,26 +550,26 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { nile } from "@/lib/niledb/client";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!/));
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest/)) {
   try {
-    const { priceId, tenantId } = await req.json();
+    const { priceId, tenantId } = await req.json(/));
 
     // Get user's email from NileDB
-    const user = await nile.auth.getUser();
-    if (!user) {
-      return NextResponse.json(
+    const user = await nile.auth.getUser(/));
+    if (!user/)) {
+      return NextResponse.json(/)
         { error: 'User not authenticated' },
         { status: 401 }
       );
     }
 
     // Create or retrieve Stripe Connect account
-    const stripeAccount = await createOrGetStripeAccount(tenantId, user.email);
+    const stripeAccount = await createOrGetStripeAccount(tenantId, user.email/));
 
     // Create Checkout Session
-    const session = await stripe.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({/)
       mode: 'subscription',
       payment_method_types: ['card'],
       line_items: [
@@ -594,31 +594,31 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    return NextResponse.json({ url: session.url });
+    return NextResponse.json({ url: session.url }/));
 
-  } catch (error) {
-    console.error("Checkout creation error:", error);
-    return NextResponse.json(
+  } catch (error/)) {
+    console.error("Checkout creation error:", error/));
+    return NextResponse.json(/)
       { error: 'Failed to create checkout session' },
       { status: 500 }
     );
   }
 }
 
-async function createOrGetStripeAccount(tenantId: string, email: string) {
+async function createOrGetStripeAccount(tenantId: string, email: string/)) {
   // Check if Connect account already exists
-  const existingAccount = await nile.db.query(
+  const existingAccount = await nile.db.query(/)
     'SELECT stripe_account_id FROM company_stripe_accounts WHERE tenant_id = $1',
     [tenantId]
   );
 
-  if (existingAccount.rows.length > 0) {
+  if (existingAccount.rows.length > 0/)) {
     // Retrieve existing account
-    return await stripe.accounts.retrieve(existingAccount.rows[0].stripe_account_id);
+    return await stripe.accounts.retrieve(existingAccount.rows[0].stripe_account_id/));
   }
 
   // Create new Connect Express account
-  const account = await stripe.accounts.create({
+  const account = await stripe.accounts.create({/)
     type: 'express',
     country: 'US',
     email: email,
@@ -629,10 +629,10 @@ async function createOrGetStripeAccount(tenantId: string, email: string) {
   });
 
   // Store in database
-  await nile.db.query(
-    `INSERT INTO company_stripe_accounts (
+  await nile.db.query(/)
+    `INSERT INTO company_stripe_accounts (/)
       tenant_id, stripe_account_id, status, created_at
-    ) VALUES ($1, $2, 'pending', CURRENT_TIMESTAMP)`,
+    ) VALUES ($1, $2, 'pending', CURRENT_TIMESTAMP/))`,
     [tenantId, account.id]
   );
 
@@ -648,46 +648,46 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 import { nile } from "@/lib/niledb/client";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!/));
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
 
-export async function POST(req: NextRequest) {
-  const body = await req.text();
-  const sig = req.headers.get('stripe-signature')!;
+export async function POST(req: NextRequest/)) {
+  const body = await req.text(/));
+  const sig = req.headers.get('stripe-signature'/))!;
 
   let event: Stripe.Event;
 
   try {
-    event = stripe.webhooks.constructEvent(body, sig, webhookSecret);
-  } catch (err) {
-    console.error('Webhook signature verification failed:', err);
-    return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
+    event = stripe.webhooks.constructEvent(body, sig, webhookSecret/));
+  } catch (err/)) {
+    console.error('Webhook signature verification failed:', err/));
+    return NextResponse.json({ error: 'Invalid signature' }, { status: 400 }/));
   }
 
-  switch (event.type) {
+  switch (event.type/)) {
     case 'checkout.session.completed':
-      await handleCheckoutCompleted(event.data.object as Stripe.Checkout.Session);
+      await handleCheckoutCompleted(event.data.object as Stripe.Checkout.Session/));
       break;
     case 'invoice.payment_succeeded':
-      await handlePaymentSucceeded(event.data.object as Stripe.Invoice);
+      await handlePaymentSucceeded(event.data.object as Stripe.Invoice/));
       break;
     case 'customer.subscription.created':
-      await handleSubscriptionCreated(event.data.object as Stripe.Subscription);
+      await handleSubscriptionCreated(event.data.object as Stripe.Subscription/));
       break;
     default:
-      console.log(`Unhandled event type: ${event.type}`);
+      console.log(`Unhandled event type: ${event.type}`/));
   }
 
-  return NextResponse.json({ received: true });
+  return NextResponse.json({ received: true }/));
 }
 
-async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
+async function handleCheckoutCompleted(session: Stripe.Checkout.Session/)) {
   const tenantId = session.metadata?.tenant_id;
   
-  if (!tenantId) return;
+  if (!tenantId/)) return;
 
   // Update tenant's payment status
-  await nile.db.query(
+  await nile.db.query(/)
     `UPDATE tenants SET 
       payment_status = 'completed',
       onboarding_step = 'workspace',
@@ -698,17 +698,17 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   );
 
   // Create workspace record
-  await nile.db.query(
-    `INSERT INTO workspaces (
+  await nile.db.query(/)
+    `INSERT INTO workspaces (/)
       tenant_id, name, slug, status, created_at
-    ) VALUES ($1, 'My Workspace', $2, 'active', CURRENT_TIMESTAMP)
-     ON CONFLICT (tenant_id) DO NOTHING`,
-    [tenantId, `workspace-${tenantId.slice(0, 8)}`]
+    ) VALUES ($1, 'My Workspace', $2, 'active', CURRENT_TIMESTAMP/))
+     ON CONFLICT (tenant_id/)) DO NOTHING`,
+    [tenantId, `workspace-${tenantId.slice(0, 8/))}`]
   );
 }
 ```
 
-**Financial System Integration**: This Stripe Connect integration supports our [revenue model](((docs/business/model/overview)) with automated payment processing, revenue sharing, and compliance with financial regulations. The webhook system ensures reliable payment state management and automatic account provisioning.
+**Financial System Integration**: This Stripe Connect integration supports our [revenue model](((docs/business/model/overview/))) with automated payment processing, revenue sharing, and compliance with financial regulations. The webhook system ensures reliable payment state management and automatic account provisioning.
 
 ---
 
@@ -720,43 +720,43 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
 // components/onboarding/WorkspaceSetup.tsx
 import { useState } from "react";
 
-const WorkspaceSetup = () => {
-  const [workspaceName, setWorkspaceName] = useState("My Email Workspace");
-  const [slug, setSlug] = useState("");
-  const [isCreating, setIsCreating] = useState(false);
+const WorkspaceSetup = (/)) => {
+  const [workspaceName, setWorkspaceName] = useState("My Email Workspace"/));
+  const [slug, setSlug] = useState(""/));
+  const [isCreating, setIsCreating] = useState(false/));
 
-  const generateSlug = (name: string) => {
+  const generateSlug = (name: string/)) => {
     return name
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)/g, '');
+      .toLowerCase(/))
+      .replace(/[^a-z0-9]+/g, '-'/))
+      .replace(/(^-|-$/))/g, '');
   };
 
-  const handleCreate = async () => {
-    setIsCreating(true);
+  const handleCreate = async (/)) => {
+    setIsCreating(true/));
     
     try {
-      const response = await fetch('/api/workspaces/create', {
+      const response = await fetch('/api/workspaces/create', {/)
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+        body: JSON.stringify({/)
           name: workspaceName,
-          slug: slug || generateSlug(workspaceName)
+          slug: slug || generateSlug(workspaceName/))
         })
       });
 
-      if (response.ok) {
+      if (response.ok/)) {
         // Move to provisioning step
         window.location.href = '/dashboard/onboarding?step=provision';
       }
-    } catch (error) {
-      console.error("Workspace creation failed:", error);
+    } catch (error/)) {
+      console.error("Workspace creation failed:", error/));
     } finally {
-      setIsCreating(false);
+      setIsCreating(false/));
     }
   };
 
-  return (
+  return (/)
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-4">Name your workspace</h2>
@@ -768,10 +768,10 @@ const WorkspaceSetup = () => {
             <input
               type="text"
               value={workspaceName}
-              onChange={(e) => {
-                setWorkspaceName(e.target.value);
-                if (!slug) {
-                  setSlug(generateSlug(e.target.value));
+              onChange={(e/)) => {
+                setWorkspaceName(e.target.value/));
+                if (!slug/)) {
+                  setSlug(generateSlug(e.target.value/)));
                 }
               }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md"
@@ -781,7 +781,7 @@ const WorkspaceSetup = () => {
           
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Workspace URL (optional)
+              Workspace URL (optional/))
             </label>
             <div className="flex">
               <span className="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
@@ -790,7 +790,7 @@ const WorkspaceSetup = () => {
               <input
                 type="text"
                 value={slug}
-                onChange={(e) => setSlug(e.target.value)}
+                onChange={(e/)) => setSlug(e.target.value/))}
                 className="flex-1 px-3 py-2 border border-gray-300 rounded-r-md"
                 placeholder="my-workspace"
               />
@@ -801,7 +801,7 @@ const WorkspaceSetup = () => {
 
       <button
         onClick={handleCreate}
-        disabled={isCreating || !workspaceName.trim()}
+        disabled={isCreating || !workspaceName.trim(/))}
         className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 disabled:opacity-50"
       >
         {isCreating ? 'Creating workspace...' : 'Create workspace'}
@@ -817,33 +817,33 @@ const WorkspaceSetup = () => {
 // components/onboarding/ProvisioningStatus.tsx
 import { useEffect, useState } from "react";
 
-const ProvisioningStatus = () => {
-  const [status, setStatus] = useState('queued');
-  const [progress, setProgress] = useState(0);
+const ProvisioningStatus = (/)) => {
+  const [status, setStatus] = useState('queued'/));
+  const [progress, setProgress] = useState(0/));
 
-  useEffect(() => {
-    const checkStatus = async () => {
+  useEffect((/)) => {
+    const checkStatus = async (/)) => {
       try {
-        const response = await fetch('/api/provisioning/status');
-        const data = await response.json();
+        const response = await fetch('/api/provisioning/status'/));
+        const data = await response.json(/));
         
-        setStatus(data.status);
-        setProgress(data.progress);
+        setStatus(data.status/));
+        setProgress(data.progress/));
         
-        if (data.status === 'completed') {
+        if (data.status === 'completed'/)) {
           // Close modal and redirect to dashboard
           window.location.href = '/dashboard';
         }
-      } catch (error) {
-        console.error("Status check failed:", error);
+      } catch (error/)) {
+        console.error("Status check failed:", error/));
       }
     };
 
     // Check immediately, then every 5 seconds
-    checkStatus();
-    const interval = setInterval(checkStatus, 5000);
+    checkStatus(/));
+    const interval = setInterval(checkStatus, 5000/));
 
-    return () => clearInterval(interval);
+    return (/)) => clearInterval(interval/));
   }, []);
 
   const statusSteps = [
@@ -854,14 +854,14 @@ const ProvisioningStatus = () => {
     { key: 'completed', label: 'Ready to use', progress: 100 }
   ];
 
-  const currentStep = statusSteps.find(step => step.key === status) || statusSteps[0];
+  const currentStep = statusSteps.find(step => step.key === status/)) || statusSteps[0];
 
-  return (
+  return (/)
     <div className="text-center space-y-6">
       <div className="w-16 h-16 mx-auto">
-        {status === 'completed' ? (
+        {status === 'completed' ? (/)
           <CheckCircle className="w-full h-full text-green-500" />
-        ) : (
+        ) : (/)
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-indigo-600"></div>
         )}
       </div>
@@ -879,7 +879,7 @@ const ProvisioningStatus = () => {
       </div>
 
       {/* Progress indicator when not completed */}
-      {status !== 'completed' && (
+      {status !== 'completed' && (/)
         <div className="space-y-4">
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
@@ -894,9 +894,9 @@ const ProvisioningStatus = () => {
         </div>
       )}
 
-      {status === 'completed' && (
+      {status === 'completed' && (/)
         <button
-          onClick={() => window.location.href = '/dashboard'}
+          onClick={(/)) => window.location.href = '/dashboard'}
           className="bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700"
         >
           Go to Dashboard
@@ -907,7 +907,7 @@ const ProvisioningStatus = () => {
 };
 ```
 
-**Infrastructure Provisioning**: This workspace creation system integrates with our [comprehensive infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations)) to automatically provision email domains, configure DNS settings, and set up monitoring. The progressive status updates provide transparency and manage user expectations during the provisioning process.
+**Infrastructure Provisioning**: This workspace creation system integrates with our [comprehensive infrastructure](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) to automatically provision email domains, configure DNS settings, and set up monitoring. The progressive status updates provide transparency and manage user expectations during the provisioning process.
 
 ---
 
@@ -923,39 +923,39 @@ import { useAuth } from "@/context/AuthContext";
 import { Turnstile } from "next-turnstile";
 import { verifyTurnstileToken } from "@/utils/turnstile";
 
-export default function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState("");
+export default function LoginPage(/)) {
+  const [email, setEmail] = useState(""/));
+  const [password, setPassword] = useState(""/));
+  const [error, setError] = useState(null/));
+  const [isLoading, setIsLoading] = useState(false/));
+  const [captchaToken, setCaptchaToken] = useState(""/));
 
-  const router = useRouter();
-  const { login } = useAuth();
+  const router = useRouter(/));
+  const { login } = useAuth(/));
 
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setIsLoading(true);
+  const handleLogin = async (e: React.FormEvent/)) => {
+    e.preventDefault(/));
+    setError(null/));
+    setIsLoading(true/));
 
     try {
       // Verify Turnstile token first
-      await verifyTurnstileToken(captchaToken);
+      await verifyTurnstileToken(captchaToken/));
 
       // Then proceed with NileDB login
-      await login(email, password);
-      router.push("/dashboard");
+      await login(email, password/));
+      router.push("/dashboard"/));
 
-    } catch (err) {
-      console.error("Login failed:", err);
-      setError(err.message || "Login failed. Please try again.");
+    } catch (err/)) {
+      console.error("Login failed:", err/));
+      setError(err.message || "Login failed. Please try again."/));
     } finally {
-      setIsLoading(false);
-      setCaptchaToken(""); // Reset CAPTCHA token
+      setIsLoading(false/));
+      setCaptchaToken(""/)); // Reset CAPTCHA token
     }
   };
 
-  return (
+  return (/)
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
@@ -977,7 +977,7 @@ export default function LoginPage() {
                 autoComplete="email"
                 required
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e/)) => setEmail(e.target.value/))}
                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your email"
               />
@@ -994,7 +994,7 @@ export default function LoginPage() {
                 autoComplete="current-password"
                 required
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e/)) => setPassword(e.target.value/))}
                 className="mt-1 appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Enter your password"
               />
@@ -1003,23 +1003,23 @@ export default function LoginPage() {
 
           {/* Turnstile CAPTCHA */}
           <div className="flex justify-center">
-            {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ? (
+            {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ? (/)
               <Turnstile
                 siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                onVerify={(token) => setCaptchaToken(token)}
-                onError={() => setCaptchaToken("")}
-                onTimeout={() => setCaptchaToken("")}
+                onVerify={(token/)) => setCaptchaToken(token/))}
+                onError={(/)) => setCaptchaToken(""/))}
+                onTimeout={(/)) => setCaptchaToken(""/))}
                 theme="light"
                 size="normal"
               />
-            ) : (
+            ) : (/)
               <p className="text-sm text-red-600">
                 CAPTCHA not configured. Please contact support.
               </p>
             )}
           </div>
 
-          {error && (
+          {error && (/)
             <div className="rounded-md bg-red-50 p-4">
               <div className="text-sm text-red-700">{error}</div>
             </div>
@@ -1054,38 +1054,38 @@ export default function LoginPage() {
 import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";
 
-export async function POST(req: NextRequest) {
+export async function POST(req: NextRequest/)) {
   try {
-    const { email, password } = await req.json();
+    const { email, password } = await req.json(/));
 
     // Authenticate with NileDB
-    const { user, session } = await nile.auth.signin({
+    const { user, session } = await nile.auth.signin({/)
       email,
       password
     });
 
-    if (!user) {
-      return NextResponse.json(
+    if (!user/)) {
+      return NextResponse.json(/)
         { error: "Invalid email or password" },
         { status: 401 }
       );
     }
 
     // Check if email is verified
-    const userData = await nile.db.query(
+    const userData = await nile.db.query(/)
       'SELECT email_verified, onboarding_step FROM tenant_users WHERE user_id = $1',
       [user.id]
     );
 
-    if (userData.rows.length === 0 || !userData.rows[0].email_verified) {
-      return NextResponse.json(
+    if (userData.rows.length === 0 || !userData.rows[0].email_verified/)) {
+      return NextResponse.json(/)
         { error: "Please verify your email address first" },
         { status: 403 }
       );
     }
 
     // Create session cookie
-    const response = NextResponse.json({
+    const response = NextResponse.json({/)
       success: true,
       user: {
         id: user.id,
@@ -1094,7 +1094,7 @@ export async function POST(req: NextRequest) {
       }
     });
 
-    response.cookies.set('session', session.session_token, {
+    response.cookies.set('session', session.session_token, {/)
       httpOnly: true,
       secure: true,
       sameSite: 'lax',
@@ -1103,9 +1103,9 @@ export async function POST(req: NextRequest) {
 
     return response;
 
-  } catch (error) {
-    console.error("Login error:", error);
-    return NextResponse.json(
+  } catch (error/)) {
+    console.error("Login error:", error/));
+    return NextResponse.json(/)
       { error: "Login failed" },
       { status: 500 }
     );
@@ -1113,7 +1113,7 @@ export async function POST(req: NextRequest) {
 }
 ```
 
-**Security and UX Excellence**: This login system supports our [enterprise security standards](((docs/compliance-security/overview)) while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
+**Security and UX Excellence**: This login system supports our [enterprise security standards](((docs/compliance-security/overview/))) while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
 
 ---
 
@@ -1139,87 +1139,87 @@ interface User {
 interface AuthContextType {
   user: User | null;
   tenant: any | null;
-  login: (email: string, password: string) => Promise<void>;
-  signup: (email: string, password: string, userData: any) => Promise<void>;
-  logout: () => Promise<void>;
+  login: (email: string, password: string/)) => Promise<void>;
+  signup: (email: string, password: string, userData: any/)) => Promise<void>;
+  logout: (/)) => Promise<void>;
   loading: boolean;
 }
 
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const AuthContext = createContext<AuthContextType | undefined>(undefined/));
 
-export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<User | null>(null);
-  const [tenant, setTenant] = useState(null);
-  const [loading, setLoading] = useState(true);
+export function AuthProvider({ children }: { children: React.ReactNode }/)) {
+  const [user, setUser] = useState<User | null>(null/));
+  const [tenant, setTenant] = useState(null/));
+  const [loading, setLoading] = useState(true/));
 
-  useEffect(() => {
-    checkAuth();
+  useEffect((/)) => {
+    checkAuth(/));
   }, []);
 
-  const checkAuth = async () => {
+  const checkAuth = async (/)) => {
     try {
-      const response = await fetch('/api/auth/me');
-      if (response.ok) {
-        const data = await response.json();
-        setUser(data.user);
-        setTenant(data.tenant);
+      const response = await fetch('/api/auth/me'/));
+      if (response.ok/)) {
+        const data = await response.json(/));
+        setUser(data.user/));
+        setTenant(data.tenant/));
       }
-    } catch (error) {
-      console.error("Auth check failed:", error);
+    } catch (error/)) {
+      console.error("Auth check failed:", error/));
     } finally {
-      setLoading(false);
+      setLoading(false/));
     }
   };
 
-  const login = async (email: string, password: string) => {
-    const response = await fetch('/api/auth/login', {
+  const login = async (email: string, password: string/)) => {
+    const response = await fetch('/api/auth/login', {/)
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
+      body: JSON.stringify({ email, password }/))
     });
 
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.error || 'Login failed');
+    if (!response.ok/)) {
+      const error = await response.json(/));
+      throw new Error(error.error || 'Login failed'/));
     }
 
-    const data = await response.json();
-    setUser(data.user);
+    const data = await response.json(/));
+    setUser(data.user/));
     
     // Fetch tenant data
-    await fetchTenantData();
+    await fetchTenantData(/));
   };
 
-  const fetchTenantData = async () => {
-    const response = await fetch('/api/tenant/me');
-    if (response.ok) {
-      setTenant(await response.json());
+  const fetchTenantData = async (/)) => {
+    const response = await fetch('/api/tenant/me'/));
+    if (response.ok/)) {
+      setTenant(await response.json(/)));
     }
   };
 
-  const signup = async (email: string, password: string, userData: any) => {
-    const response = await fetch('/api/auth/signup', {
+  const signup = async (email: string, password: string, userData: any/)) => {
+    const response = await fetch('/api/auth/signup', {/)
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password, ...userData })
+      body: JSON.stringify({ email, password, ...userData }/))
     });
 
-    if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.message || 'Signup failed');
+    if (!response.ok/)) {
+      const error = await response.json(/));
+      throw new Error(error.message || 'Signup failed'/));
     }
 
-    const data = await response.json();
-    setUser(data.user);
+    const data = await response.json(/));
+    setUser(data.user/));
   };
 
-  const logout = async () => {
-    await fetch('/api/auth/logout', { method: 'POST' });
-    setUser(null);
-    setTenant(null);
+  const logout = async (/)) => {
+    await fetch('/api/auth/logout', { method: 'POST' }/));
+    setUser(null/));
+    setTenant(null/));
   };
 
-  return (
+  return (/)
     <AuthContext.Provider value={{
       user,
       tenant,
@@ -1233,16 +1233,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+export const useAuth = (/)) => {
+  const context = useContext(AuthContext/));
+  if (context === undefined/)) {
+    throw new Error('useAuth must be used within an AuthProvider'/));
   }
   return context;
 };
 ```
 
-**Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](((docs/technical/architecture/overview)) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
+**Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](((docs/technical/architecture/overview/))) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
 
 ---
 
@@ -1296,7 +1296,7 @@ env:
     secret: loop-api-key
 ```
 
-**Security Configuration**: This environment configuration supports our [enterprise security standards](((docs/compliance-security/overview)) by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](((docs/technical/architecture/detailed-technical/infrastructure-operations)) through proper environment separation and secret rotation capabilities.
+**Security Configuration**: This environment configuration supports our [enterprise security standards](((docs/compliance-security/overview/))) by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) through proper environment separation and secret rotation capabilities.
 
 ---
 
@@ -1323,7 +1323,7 @@ env:
 - **Session timeout**: 30-day sessions with refresh capability and intelligent session extension
 - **CSRF protection**: Implement CSRF tokens for state-changing operations with automatic token validation
 
-**Enterprise Security Integration**: These security practices support our [competitive differentiation](((docs/business/strategy/overview)) by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](((docs/business/market-analysis/overview)).
+**Enterprise Security Integration**: These security practices support our [competitive differentiation](((docs/business/strategy/overview/))) by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](((docs/business/market-analysis/overview/))).
 
 ---
 
@@ -1357,28 +1357,28 @@ env:
 - **High contrast**: Support for high contrast mode with CSS custom properties
 - **CAPTCHA alternatives**: Audio challenges and text-based verification with multiple fallback options
 
-**User Experience Excellence**: This comprehensive error handling and accessibility system supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis)) by providing inclusive, user-friendly experiences that exceed accessibility standards. The intelligent error recovery reduces support burden and improves user satisfaction.
+**User Experience Excellence**: This comprehensive error handling and accessibility system supports our [customer value proposition](((docs/business/value-proposition/detailed-analysis/comprehensive-analysis/))) by providing inclusive, user-friendly experiences that exceed accessibility standards. The intelligent error recovery reduces support burden and improves user satisfaction.
 
 ---
 
 ## Related Documents
 
-- [Stripe Onboarding Guide](docs/technical/architecture/detailed-technical/integration-guide#stripe-connect) - Complete Stripe Connect integration
-- [IP Management Guide](docs/technical/architecture/detailed-technical/infrastructure-operations#ip-management) - Email infrastructure and deliverability
-- [Analytics Architecture](((docs/technical/architecture/detailed-technical/analytics-architecture)) - User behavior tracking and analytics
-- [Database Schema Guide](docs/technical/architecture/overview#database-architecture) - Multi-tenant database structure
-- [Security Documentation](((docs/compliance-security/overview)) - Authentication and security procedures
+- [Stripe Onboarding Guide](docs/technical/architecture/detailed-technical/integration-guide#stripe-connect/)) - Complete Stripe Connect integration
+- [IP Management Guide](docs/technical/architecture/detailed-technical/infrastructure-operations#ip-management/)) - Email infrastructure and deliverability
+- [Analytics Architecture](((docs/technical/architecture/detailed-technical/analytics-architecture/))) - User behavior tracking and analytics
+- [Database Schema Guide](docs/technical/architecture/overview#database-architecture/)) - Multi-tenant database structure
+- [Security Documentation](((docs/compliance-security/overview/))) - Authentication and security procedures
 
 ---
 
 ## Strategic Integration Summary
 
-This onboarding and authentication system represents a cornerstone of our technical architecture, supporting our [market leadership positioning](((docs/business/strategy/overview)) through enterprise-grade security and user experience. The system integrates seamlessly with our [comprehensive technical infrastructure](((docs/technical/architecture/overview)) to provide scalable, secure, and user-friendly access to our email platform.
+This onboarding and authentication system represents a cornerstone of our technical architecture, supporting our [market leadership positioning](((docs/business/strategy/overview/))) through enterprise-grade security and user experience. The system integrates seamlessly with our [comprehensive technical infrastructure](((docs/technical/architecture/overview/))) to provide scalable, secure, and user-friendly access to our email platform.
 
-**Business Impact**: The authentication system directly supports our [revenue model](((docs/business/model/overview)) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](((docs/business/analytics/overview)). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](((docs/business/market-analysis/overview)).
+**Business Impact**: The authentication system directly supports our [revenue model](((docs/business/model/overview/))) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](((docs/business/analytics/overview/))). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](((docs/business/market-analysis/overview/))).
 
-**Technical Excellence**: The system showcases our [technical authority](docs/business/strategy/overview#technical-leadership) through modern security practices, scalable architecture, and comprehensive monitoring. The integration with our [progressive queue system](((docs/technical/architecture/detailed-technical/queue-system-implementation)) and [OLAP analytics](((docs/technical/architecture/detailed-technical/olap-analytics-schema)) demonstrates our commitment to technical excellence and data-driven optimization.
+**Technical Excellence**: The system showcases our [technical authority](docs/business/strategy/overview#technical-leadership/)) through modern security practices, scalable architecture, and comprehensive monitoring. The integration with our [progressive queue system](((docs/technical/architecture/detailed-technical/queue-system-implementation/))) and [OLAP analytics](((docs/technical/architecture/detailed-technical/olap-analytics-schema/))) demonstrates our commitment to technical excellence and data-driven optimization.
 
-**Operational Reliability**: Backed by our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations)) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](((docs/business/operations/overview)) standards.
+**Operational Reliability**: Backed by our [99.9% uptime commitment](((docs/technical/architecture/detailed-technical/infrastructure-operations/))) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](((docs/business/operations/overview/))) standards.
 
-This implementation follows modern best practices for web authentication, payment processing, and user experience design, ensuring scalability and maintainability as the platform grows to support our [expansion strategy](docs/business/strategy/overview#growth-strategy).
+This implementation follows modern best practices for web authentication, payment processing, and user experience design, ensuring scalability and maintainability as the platform grows to support our [expansion strategy](docs/business/strategy/overview#growth-strategy/)).

@@ -8,7 +8,7 @@ last_modified_date: "2025-11-10"
 
 ## Professional Email Infrastructure in Under 5 Minutes
 
-> **📖 Getting Started?** See our [Features Overview](((../feature-overview)) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](../feature-overview/) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 > - **⭐ Beginner Path**: Quick account creation for immediate cold email use
 > - **⭐⭐ Intermediate Path**: Advanced configuration and domain management
@@ -614,13 +614,13 @@ last_modified_date: "2025-11-10"
 Ready to create professional email accounts for your cold email campaigns?
 
 ### **Related Features**
-1. **[Warm-ups](((../warm-ups/overview))** - Build reputation for your newly created accounts
-2. **[Inbox Rotation](((../inbox-rotation/overview))** - Implement smart rotation across multiple accounts
-3. **[Unified Inbox](((../unified-inbox/overview))** - Manage responses from all your accounts
-4. **[Analytics](((../analytics/overview))** - Track performance across all your email accounts
+1. **[Warm-ups](../warm-ups/overview/)** - Build reputation for your newly created accounts
+2. **[Inbox Rotation](../inbox-rotation/overview/)** - Implement smart rotation across multiple accounts
+3. **[Unified Inbox](../unified-inbox/overview/)** - Manage responses from all your accounts
+4. **[Analytics](../analytics/overview/)** - Track performance across all your email accounts
 
 ### **Implementation Resources**
-5. **[Getting Started](((../implement/getting-started))** - Complete your cold email setup
+5. **[Getting Started](../getting-started/)** - Complete your cold email setup
 
 ### **Prerequisites**
 - **Business Information**: Have business name and contact details ready

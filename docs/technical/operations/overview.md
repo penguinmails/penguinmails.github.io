@@ -13,7 +13,7 @@ description: "Deployment, monitoring, and operational procedures for enterprise-
 
 **Operational Excellence**: Backed by **enterprise-grade monitoring and alerting** with <15 minute incident response times, automated rollback procedures, and 24/7 operational oversight that ensures your campaigns are always protected.
 
-**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](((../architecture/overview)) and [API integration](((../integration/overview)) to provide seamless, worry-free campaign management.
+**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](../architecture/overview/) and [API integration](../integration/overview/) to provide seamless, worry-free campaign management.
 
 PenguinMails operates on a comprehensive technical operations framework designed for **99.9% uptime guarantee** with zero-downtime deployments, automated monitoring, and enterprise-grade disaster recovery capabilities.
 
@@ -75,7 +75,7 @@ Migration Types:
 
 **Email-Specific Monitoring**
 - **Deliverability Tracking**: Real-time inbox placement monitoring across all providers
-- **Reputation Scoring**: Continuous tracking of sender scores (Gmail, Yahoo, Outlook)
+- **Reputation Scoring**: Continuous tracking of sender scores (Gmail, Yahoo, Outlook/))
 - **Bounce Management**: Automatic bounce handling and list cleanup
 - **Complaint Processing**: Spam complaint monitoring with automated response
 
@@ -113,10 +113,10 @@ Migration Types:
 
 **Backup & Recovery Strategy**
 - **4-Tier Backup Architecture**: 
-  - **Tier 1**: Real-time transaction log backup (RTO: 15 minutes)
-  - **Tier 2**: Daily full database backup (RTO: 1 hour)
-  - **Tier 3**: Weekly incremental backup (RTO: 4 hours)
-  - **Tier 4**: Monthly archive backup (RTO: 24 hours)
+  - **Tier 1**: Real-time transaction log backup (RTO: 15 minutes/))
+  - **Tier 2**: Daily full database backup (RTO: 1 hour/))
+  - **Tier 3**: Weekly incremental backup (RTO: 4 hours/))
+  - **Tier 4**: Monthly archive backup (RTO: 24 hours/))
 
 **Business Continuity Procedures**
 - **Incident Response Plan**: Structured approach to incident detection, response, and recovery
@@ -238,8 +238,8 @@ Migration Types:
 
 ### **System Reliability Metrics**
 - **Uptime**: 99.9% availability target with detailed SLA reporting
-- **MTTR (Mean Time To Resolution)**: <4 hours for critical issues
-- **MTBF (Mean Time Between Failures)**: Proactive prevention through monitoring
+- **MTTR (Mean Time To Resolution/))**: <4 hours for critical issues
+- **MTBF (Mean Time Between Failures/))**: Proactive prevention through monitoring
 - **Error Rates**: <0.1% error rate for all system components
 
 ### **Performance Metrics**
@@ -301,4 +301,4 @@ Migration Types:
 *Technical Operations ensures that PenguinMails delivers enterprise-grade reliability, performance, and security. Our comprehensive operational framework guarantees 99.9% uptime while continuously optimizing for cost efficiency and customer satisfaction.*
 
 ---
-*Previous: [Technical Architecture Overview](((../architecture/overview)) | Next: [Integration & API Overview](((../integration/overview)) →*
+*Previous: [Technical Architecture Overview](../architecture/overview/) | Next: [Integration & API Overview](../integration/overview/) →*

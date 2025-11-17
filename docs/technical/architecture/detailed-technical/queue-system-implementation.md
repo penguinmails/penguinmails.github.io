@@ -30,7 +30,7 @@ Our queue system implements a **dual-layer architecture** that combines the **du
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Next.js API   │    │   Queuer Proc   │    │  Worker Server  │
-│   (Producer)    │    │   (Migrator)    │    │   (Consumer)    │
+│   (Producer/))    │    │   (Migrator/))    │    │   (Consumer/))    │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          │ Insert Job            │                       │
@@ -38,7 +38,7 @@ Our queue system implements a **dual-layer architecture** that combines the **du
 ┌─────────────────┐              │                       │
 │  PostgreSQL     │              │                       │
 │  Jobs Table     │              │                       │
-│  (Durable)      │              │                       │
+│  (Durable/))      │              │                       │
 └─────────────────┘              │                       │
          │                       │ Query Ready Jobs     │
          │                       ↓                       │
@@ -52,14 +52,14 @@ Our queue system implements a **dual-layer architecture** that combines the **du
                                  ↓
                         ┌─────────────────┐
                         │   Redis List    │
-                        │   (Fast Queue)  │
+                        │   (Fast Queue/))  │
                         └─────────────────┘
                                  │
                                  │ BRPOP
                                  ↓
                         ┌─────────────────┐
                         │   Worker Proc   │
-                        │   (Consumer)    │
+                        │   (Consumer/))    │
                         └─────────────────┘
 ```
 
@@ -68,29 +68,29 @@ Our queue system implements a **dual-layer architecture** that combines the **du
 **Strategic Foundation**: This hybrid approach positions us to handle **enterprise-scale job processing** while maintaining the **reliability** and **monitoring capabilities** needed for our **operational excellence** framework.
 
 ```
-PostgreSQL Layer (Durable State Management):
-├── jobs (job state and audit trail) ⭐
-├── job_queues (queue configuration)
-├── job_logs (execution audit trail)
-└── analytics_jobs (OLAP pipeline integration)
+PostgreSQL Layer (Durable State Management/)):
+├── jobs (job state and audit trail/)) ⭐
+├── job_queues (queue configuration/))
+├── job_logs (execution audit trail/))
+└── analytics_jobs (OLAP pipeline integration/))
 
-Redis Layer (High-Performance Processing):
-├── queue:email-sending:high (priority processing)
-├── queue:email-sending (normal processing)
-├── queue:email-sending:low (batch processing)
-├── queue:analytics:daily-aggregate (business intelligence)
-└── queue:warmup:process (inbox warming automation)
+Redis Layer (High-Performance Processing/)):
+├── queue:email-sending:high (priority processing/))
+├── queue:email-sending (normal processing/))
+├── queue:email-sending:low (batch processing/))
+├── queue:analytics:daily-aggregate (business intelligence/))
+└── queue:warmup:process (inbox warming automation/))
 
-Worker Layer (Horizontal Scaling):
-├── EmailWorker (campaign and processing)
-├── AnalyticsWorker (business intelligence)
-├── WarmupWorker (inbox warming)
-└── MonitoringWorker (system health)
+Worker Layer (Horizontal Scaling/)):
+├── EmailWorker (campaign and processing/))
+├── AnalyticsWorker (business intelligence/))
+├── WarmupWorker (inbox warming/))
+└── MonitoringWorker (system health/))
 
-Monitoring Layer (Operational Excellence):
-├── QueueHealthMonitor (real-time system health)
-├── DeadLetterHandler (failed job recovery)
-└── PerformanceMetrics (SLA tracking)
+Monitoring Layer (Operational Excellence/)):
+├── QueueHealthMonitor (real-time system health/))
+├── DeadLetterHandler (failed job recovery/))
+└── PerformanceMetrics (SLA tracking/))
 ```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **dual-layer processing**, **automatic failover**, and **comprehensive monitoring** systems that detect and resolve issues before they impact customers.
@@ -99,7 +99,7 @@ Monitoring Layer (Operational Excellence):
 
 ## Implementation Components
 
-### 1. PostgreSQL Job Management (Durable State)
+### 1. PostgreSQL Job Management (Durable State/))
 
 **Strategic Value**: This durable foundation ensures **zero job loss** during system maintenance, upgrades, or failures, supporting our **operational reliability** commitments to enterprise customers.
 
@@ -107,55 +107,55 @@ Monitoring Layer (Operational Excellence):
 
 ```sql
 -- Job queues configuration
-CREATE TABLE job_queues (
-    name VARCHAR(100) PRIMARY KEY,
+CREATE TABLE job_queues (/)
+    name VARCHAR(100/)) PRIMARY KEY,
     default_priority INTEGER DEFAULT 100,
     is_active BOOLEAN DEFAULT TRUE,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 
--- Jobs table (Permanent State)
-CREATE TABLE jobs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    queue_name VARCHAR(100) REFERENCES job_queues(name) ON DELETE CASCADE,
-    status VARCHAR(50) DEFAULT 'queued',
+-- Jobs table (Permanent State/))
+CREATE TABLE jobs (/)
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(/)),
+    queue_name VARCHAR(100/)) REFERENCES job_queues(name/)) ON DELETE CASCADE,
+    status VARCHAR(50/)) DEFAULT 'queued',
     priority INTEGER DEFAULT 100,
     payload JSONB NOT NULL,
     attempt_count INTEGER DEFAULT 0,
     max_attempts INTEGER DEFAULT 3,
-    run_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    run_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
     started TIMESTAMP WITH TIME ZONE,
     completed TIMESTAMP WITH TIME ZONE,
     failed TIMESTAMP WITH TIME ZONE,
     last_error_message TEXT,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 
--- Job execution logs (Audit Trail)
-CREATE TABLE job_logs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    job_id UUID REFERENCES jobs(id) ON DELETE CASCADE,
-    status VARCHAR(50) NOT NULL,
+-- Job execution logs (Audit Trail/))
+CREATE TABLE job_logs (/)
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(/)),
+    job_id UUID REFERENCES jobs(id/)) ON DELETE CASCADE,
+    status VARCHAR(50/)) NOT NULL,
     log_message TEXT,
     attempt_number INTEGER NOT NULL,
-    started TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    started TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
     finished TIMESTAMP WITH TIME ZONE,
     duration INTERVAL,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 
--- Analytics jobs tracking (for OLAP pipeline)
-CREATE TABLE analytics_jobs (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    job_type VARCHAR(100) NOT NULL,
-    status VARCHAR(50) DEFAULT 'queued',
+-- Analytics jobs tracking (for OLAP pipeline/))
+CREATE TABLE analytics_jobs (/)
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(/)),
+    job_type VARCHAR(100/)) NOT NULL,
+    status VARCHAR(50/)) DEFAULT 'queued',
     payload JSONB NOT NULL,
     priority INTEGER DEFAULT 100,
-    queued TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    queued TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
     processed TIMESTAMP WITH TIME ZONE,
     error_message TEXT,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 ```
 
@@ -165,20 +165,20 @@ CREATE TABLE analytics_jobs (
 
 ```sql
 -- Queuer process optimization
-CREATE INDEX idx_jobs_queuer ON jobs(status, run_at, priority, created_at) 
+CREATE INDEX idx_jobs_queuer ON jobs(status, run_at, priority, created_at/)) 
 WHERE status = 'queued';
 
 -- Queue-specific migration
-CREATE INDEX idx_jobs_queue_migration ON jobs(queue_name, status, run_at, priority)
+CREATE INDEX idx_jobs_queue_migration ON jobs(queue_name, status, run_at, priority/))
 WHERE status = 'queued';
 
 -- Audit and analytics
-CREATE INDEX idx_jobs_status_timestamps ON jobs(status, updated_at, queue_name);
-CREATE INDEX idx_job_logs_worker ON job_logs(job_id, attempt_number, finished_at);
-CREATE INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_at);
+CREATE INDEX idx_jobs_status_timestamps ON jobs(status, updated_at, queue_name/));
+CREATE INDEX idx_job_logs_worker ON job_logs(job_id, attempt_number, finished_at/));
+CREATE INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_at/));
 ```
 
-### 2. Redis Queue Structure (Fast Processing)
+### 2. Redis Queue Structure (Fast Processing/))
 
 **User Journey Integration**: This high-performance layer ensures **seamless real-time processing** from **job creation** to **completion**, providing **instant feedback** for all email operations and **campaign execution**.
 
@@ -205,7 +205,7 @@ const QueueNames = {
 
 #### Redis Data Structures
 
-**A. Lists (Primary Job Queues)**
+**A. Lists (Primary Job Queues/))**
 ```typescript
 // Job payload structure in Redis lists
 interface RedisJobPayload {
@@ -234,7 +234,7 @@ const exampleJob = {
 };
 ```
 
-**B. Hashes (Job Metadata)**
+**B. Hashes (Job Metadata/))**
 ```typescript
 // Redis hash for real-time job tracking
 interface JobMetadata {
@@ -269,36 +269,36 @@ export class JobMigrator {
   private batchSize = 100;
   private migrationInterval = 5000; // 5 seconds
 
-  constructor(redis: Redis, db: Database) {
+  constructor(redis: Redis, db: Database/)) {
     this.redis = redis;
     this.db = db;
   }
 
-  async start() {
+  async start(/)) {
     this.isRunning = true;
-    console.log('Job migrator started');
+    console.log('Job migrator started'/));
     
-    while (this.isRunning) {
+    while (this.isRunning/)) {
       try {
-        await this.migrateReadyJobs();
-        await this.delay(this.migrationInterval);
-      } catch (error) {
-        console.error('Job migration error:', error);
-        await this.delay(10000); // Wait 10 seconds on error
+        await this.migrateReadyJobs(/));
+        await this.delay(this.migrationInterval/));
+      } catch (error/)) {
+        console.error('Job migration error:', error/));
+        await this.delay(10000/)); // Wait 10 seconds on error
       }
     }
   }
 
-  stop() {
+  stop(/)) {
     this.isRunning = false;
-    console.log('Job migrator stopped');
+    console.log('Job migrator stopped'/));
   }
 
-  private async migrateReadyJobs() {
-    const jobs = await this.db.jobs.findMany({
+  private async migrateReadyJobs(/)) {
+    const jobs = await this.db.jobs.findMany({/)
       where: {
         status: 'queued',
-        run_at: { lte: new Date() }
+        run_at: { lte: new Date(/)) }
       },
       orderBy: [
         { priority: 'asc' },
@@ -307,23 +307,23 @@ export class JobMigrator {
       take: this.batchSize
     });
 
-    if (jobs.length === 0) {
+    if (jobs.length === 0/)) {
       return;
     }
 
-    console.log(`Migrating ${jobs.length} jobs to Redis`);
+    console.log(`Migrating ${jobs.length} jobs to Redis`/));
 
-    for (const job of jobs) {
+    for (const job of jobs/)) {
       try {
-        await this.migrateJob(job);
-      } catch (error) {
-        console.error(`Failed to migrate job ${job.id}:`, error);
+        await this.migrateJob(job/));
+      } catch (error/)) {
+        console.error(`Failed to migrate job ${job.id}:`, error/));
       }
     }
   }
 
-  private async migrateJob(job: any) {
-    const queueName = this.getQueueName(job);
+  private async migrateJob(job: any/)) {
+    const queueName = this.getQueueName(job/));
     const redisPayload = {
       id: job.id,
       queue_name: job.queue_name,
@@ -335,40 +335,40 @@ export class JobMigrator {
     };
 
     // Push to Redis queue
-    await this.redis.lpush(queueName, JSON.stringify(redisPayload));
+    await this.redis.lpush(queueName, JSON.stringify(redisPayload/)));
 
     // Initialize Redis hash for tracking
-    await this.redis.hset(`job:${job.id}`, {
+    await this.redis.hset(`job:${job.id}`, {/)
       status: 'migrated',
-      queued_at: new Date().toISOString(),
-      attempt_count: job.attempt_count.toString()
+      queued_at: new Date(/)).toISOString(/)),
+      attempt_count: job.attempt_count.toString(/))
     });
 
     // Update PostgreSQL status
-    await this.db.jobs.update({
+    await this.db.jobs.update({/)
       where: { id: job.id },
       data: { 
         status: 'migrated_to_redis',
-        updated_at: new Date()
+        updated_at: new Date(/))
       }
     });
 
     // Prevent duplicates with Redis Set
-    await this.redis.sadd(`recent_jobs:${job.queue_name}`, job.id);
-    await this.redis.expire(`recent_jobs:${job.queue_name}`, 3600); // 1 hour TTL
+    await this.redis.sadd(`recent_jobs:${job.queue_name}`, job.id/));
+    await this.redis.expire(`recent_jobs:${job.queue_name}`, 3600/)); // 1 hour TTL
   }
 
-  private getQueueName(job: any): string {
+  private getQueueName(job: any/)): string {
     const { priority, queue_name } = job;
     
     // Priority-based routing
-    if (priority <= 50) return `${queue_name}:high`;
-    if (priority <= 150) return queue_name;
+    if (priority <= 50/)) return `${queue_name}:high`;
+    if (priority <= 150/)) return queue_name;
     return `${queue_name}:low`;
   }
 
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  private delay(ms: number/)): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms/)));
   }
 }
 ```
@@ -392,16 +392,16 @@ export class EmailWorker {
   private workerId: string;
   private isRunning = false;
 
-  constructor(redis: Redis, db: Database, emailService: EmailService) {
+  constructor(redis: Redis, db: Database, emailService: EmailService/)) {
     this.redis = redis;
     this.db = db;
     this.emailService = emailService;
-    this.workerId = `worker-${process.env.WORKER_ID || Math.random().toString(36).substr(2, 9)}`;
+    this.workerId = `worker-${process.env.WORKER_ID || Math.random(/)).toString(36/)).substr(2, 9/))}`;
   }
 
-  async start() {
+  async start(/)) {
     this.isRunning = true;
-    console.log(`Worker ${this.workerId} started`);
+    console.log(`Worker ${this.workerId} started`/));
 
     // Listen to all priority queues
     const queues = [
@@ -415,176 +415,176 @@ export class EmailWorker {
       'queue:bounce:process'
     ];
 
-    while (this.isRunning) {
+    while (this.isRunning/)) {
       try {
         // Blocking pop with priority ordering
-        const result = await this.redis.brpop(queues, 0);
+        const result = await this.redis.brpop(queues, 0/));
         
-        if (!result) {
+        if (!result/)) {
           continue;
         }
 
         const [queueName, jobData] = result;
-        const job = JSON.parse(jobData);
+        const job = JSON.parse(jobData/));
 
-        await this.processJob(job, queueName);
-      } catch (error) {
-        console.error(`Worker ${this.workerId} error:`, error);
-        await this.delay(1000);
+        await this.processJob(job, queueName/));
+      } catch (error/)) {
+        console.error(`Worker ${this.workerId} error:`, error/));
+        await this.delay(1000/));
       }
     }
   }
 
-  stop() {
+  stop(/)) {
     this.isRunning = false;
-    console.log(`Worker ${this.workerId} stopped`);
+    console.log(`Worker ${this.workerId} stopped`/));
   }
 
-  private async processJob(job: any, queueName: string) {
+  private async processJob(job: any, queueName: string/)) {
     const { id, payload } = job;
     
     try {
-      console.log(`Processing job ${id} from ${queueName}`);
+      console.log(`Processing job ${id} from ${queueName}`/));
 
       // Update PostgreSQL status
-      await this.db.jobs.update({
+      await this.db.jobs.update({/)
         where: { id },
         data: { 
           status: 'running',
-          started_at: new Date(),
-          updated_at: new Date()
+          started_at: new Date(/)),
+          updated_at: new Date(/))
         }
       });
 
       // Update Redis hash for real-time tracking
-      await this.redis.hset(`job:${id}`, {
+      await this.redis.hset(`job:${id}`, {/)
         status: 'processing',
         worker_id: this.workerId,
-        started_at: new Date().toISOString()
+        started_at: new Date(/)).toISOString(/))
       });
 
       // Execute the job based on queue type
-      if (queueName.includes('email:processing')) {
-        await this.processIncomingEmail(payload);
-      } else if (queueName.includes('email-sending')) {
-        await this.emailService.sendEmail(payload);
-      } else if (queueName.includes('warmup')) {
-        await this.processWarmupJob(payload);
-      } else if (queueName.includes('bounce')) {
-        await this.processBounceJob(payload);
+      if (queueName.includes('email:processing'/))) {
+        await this.processIncomingEmail(payload/));
+      } else if (queueName.includes('email-sending'/))) {
+        await this.emailService.sendEmail(payload/));
+      } else if (queueName.includes('warmup'/))) {
+        await this.processWarmupJob(payload/));
+      } else if (queueName.includes('bounce'/))) {
+        await this.processBounceJob(payload/));
       } else {
-        throw new Error(`Unknown queue type: ${queueName}`);
+        throw new Error(`Unknown queue type: ${queueName}`/));
       }
 
       // Update completion status
-      await this.db.jobs.update({
+      await this.db.jobs.update({/)
         where: { id },
         data: { 
           status: 'completed',
-          completed_at: new Date(),
-          updated_at: new Date()
+          completed_at: new Date(/)),
+          updated_at: new Date(/))
         }
       });
 
-      await this.redis.hset(`job:${id}`, {
+      await this.redis.hset(`job:${id}`, {/)
         status: 'completed',
-        completed_at: new Date().toISOString()
+        completed_at: new Date(/)).toISOString(/))
       });
 
       // Log successful execution
-      await this.logJobExecution(id, 'success', null);
+      await this.logJobExecution(id, 'success', null/));
 
-      console.log(`Job ${id} completed successfully`);
+      console.log(`Job ${id} completed successfully`/));
 
-    } catch (error) {
-      await this.handleJobFailure(id, error);
+    } catch (error/)) {
+      await this.handleJobFailure(id, error/));
     }
   }
 
-  private async handleJobFailure(job: any, error: Error) {
+  private async handleJobFailure(job: any, error: Error/)) {
     const { id, max_attempts, attempt_count = 0 } = job;
     
     try {
       const attempts = attempt_count + 1;
       
-      if (attempts < max_attempts) {
+      if (attempts < max_attempts/)) {
         // Schedule retry with exponential backoff
-        const delay = Math.pow(2, attempts) * 1000; // 2s, 4s, 8s, etc.
+        const delay = Math.pow(2, attempts/)) * 1000; // 2s, 4s, 8s, etc.
         
-        await this.delay(delay);
+        await this.delay(delay/));
         
         // Re-queue the job
-        await this.redis.lpush('queue:email-sending', JSON.stringify({
+        await this.redis.lpush('queue:email-sending', JSON.stringify({/)
           ...job,
           attempt_count: attempts
         }));
 
         // Update PostgreSQL
-        await this.db.jobs.update({
+        await this.db.jobs.update({/)
           where: { id },
           data: { 
             attempt_count: attempts,
-            updated_at: new Date()
+            updated_at: new Date(/))
           }
         });
 
-        await this.redis.hset(`job:${id}`, {
+        await this.redis.hset(`job:${id}`, {/)
           status: 'retry_scheduled',
-          attempt_count: attempts.toString(),
-          retry_delay: delay.toString()
+          attempt_count: attempts.toString(/)),
+          retry_delay: delay.toString(/))
         });
 
       } else {
         // Max attempts reached - mark as failed
-        await this.db.jobs.update({
+        await this.db.jobs.update({/)
           where: { id },
           data: { 
             status: 'failed',
-            failed_at: new Date(),
+            failed_at: new Date(/)),
             last_error_message: error.message,
-            updated_at: new Date()
+            updated_at: new Date(/))
           }
         });
 
-        await this.redis.hset(`job:${id}`, {
+        await this.redis.hset(`job:${id}`, {/)
           status: 'failed',
           error: error.message,
-          failed_at: new Date().toISOString()
+          failed_at: new Date(/)).toISOString(/))
         });
       }
 
-      await this.logJobExecution(id, 'failed', error.message);
-      console.error(`Job ${id} failed:`, error.message);
+      await this.logJobExecution(id, 'failed', error.message/));
+      console.error(`Job ${id} failed:`, error.message/));
 
-    } catch (logError) {
-      console.error(`Failed to log job failure for ${id}:`, logError);
+    } catch (logError/)) {
+      console.error(`Failed to log job failure for ${id}:`, logError/));
     }
   }
 
-  private async processIncomingEmail(payload: any) {
+  private async processIncomingEmail(payload: any/)) {
     // Implementation for incoming email processing using new email system architecture
-    // Creates email_messages (analytics) and email_content (body) entries
+    // Creates email_messages (analytics/)) and email_content (body/)) entries
     const { tenant_id, email_account_id, direction, type, from, to, subject, body, headers, raw, messageId } = payload;
     
     try {
-      const storage_key = `email_${messageId}_${Date.now()}`;
+      const storage_key = `email_${messageId}_${Date.now(/))}`;
       
-      // 1. Create email_content (email body and metadata)
-      const contentObject = await this.db.email_content.create({
+      // 1. Create email_content (email body and metadata/))
+      const contentObject = await this.db.email_content.create({/)
         data: {
           storage_key,
           tenant_id: tenant_id,
           content_text: body.plain || body.html,
-          content_html: body.html || convertToHtml(body.plain),
+          content_html: body.html || convertToHtml(body.plain/)),
           headers: headers,
-          raw_size_bytes: Buffer.byteLength(raw),
-          created: new Date(),
+          raw_size_bytes: Buffer.byteLength(raw/)),
+          created: new Date(/)),
           retention_days: 2555 // 7 years default
         }
       });
 
-      // 2. Create email_messages (analytics and metadata)
-      const messageRef = await this.db.email_messages.create({
+      // 2. Create email_messages (analytics and metadata/))
+      const messageRef = await this.db.email_messages.create({/)
         data: {
           storage_key,
           tenant_id: tenant_id,
@@ -592,17 +592,17 @@ export class EmailWorker {
           direction: direction,
           message_type: type || 'email',
           from_email: from,
-          to_email: Array.isArray(to) ? to.join(',') : to,
+          to_email: Array.isArray(to/)) ? to.join(','/)) : to,
           subject: subject,
           status: 'received',
-          processed: new Date()
+          processed: new Date(/))
         }
       });
 
       // 3. Create attachments if present
-      if (payload.attachments && payload.attachments.length > 0) {
-        for (const attachment of payload.attachments) {
-          await this.db.attachments.create({
+      if (payload.attachments && payload.attachments.length > 0/)) {
+        for (const attachment of payload.attachments/)) {
+          await this.db.attachments.create({/)
             data: {
               parent_storage_key: storage_key,
               filename: attachment.filename,
@@ -615,7 +615,7 @@ export class EmailWorker {
         }
       }
 
-      console.log('Successfully processed incoming email:', { storage_key, messageId: messageRef.storage_key });
+      console.log('Successfully processed incoming email:', { storage_key, messageId: messageRef.storage_key }/));
       
       return {
         success: true,
@@ -624,40 +624,40 @@ export class EmailWorker {
         message_ref_id: messageRef.storage_key
       };
       
-    } catch (error) {
-      console.error('Failed to process incoming email:', error);
-      throw new Error(`Email processing failed: ${error.message}`);
+    } catch (error/)) {
+      console.error('Failed to process incoming email:', error/));
+      throw new Error(`Email processing failed: ${error.message}`/));
     }
   }
 
-  private async logJobExecution(jobId: string, status: string, errorMessage: string | null) {
+  private async logJobExecution(jobId: string, status: string, errorMessage: string | null/)) {
     try {
-      await this.db.jobLogs.create({
+      await this.db.jobLogs.create({/)
         data: {
           job_id: jobId,
           status,
           log_message: errorMessage,
           attempt_number: 1, // This would be dynamic in real implementation
-          finished_at: new Date()
+          finished_at: new Date(/))
         }
       });
-    } catch (error) {
-      console.error('Failed to log job execution:', error);
+    } catch (error/)) {
+      console.error('Failed to log job execution:', error/));
     }
   }
 
-  private async processWarmupJob(payload: any) {
+  private async processWarmupJob(payload: any/)) {
     // Implementation for warmup processing
-    console.log('Processing warmup job:', payload);
+    console.log('Processing warmup job:', payload/));
   }
 
-  private async processBounceJob(payload: any) {
+  private async processBounceJob(payload: any/)) {
     // Implementation for bounce processing  
-    console.log('Processing bounce job:', payload);
+    console.log('Processing bounce job:', payload/));
   }
 
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  private delay(ms: number/)): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms/)));
   }
 }
 ```
@@ -739,35 +739,35 @@ export class QueueHealthMonitor {
   private redis: Redis;
   private db: Database;
 
-  constructor(redis: Redis, db: Database) {
+  constructor(redis: Redis, db: Database/)) {
     this.redis = redis;
     this.db = db;
   }
 
-  async getQueueHealth() {
+  async getQueueHealth(/)) {
     const health = {
-      timestamp: new Date().toISOString(),
-      redis: await this.checkRedisHealth(),
-      queues: await this.checkQueueDepths(),
-      workers: await this.checkWorkerStatus(),
-      jobs: await this.checkJobStats()
+      timestamp: new Date(/)).toISOString(/)),
+      redis: await this.checkRedisHealth(/)),
+      queues: await this.checkQueueDepths(/)),
+      workers: await this.checkWorkerStatus(/)),
+      jobs: await this.checkJobStats(/))
     };
 
     return health;
   }
 
-  private async checkRedisHealth() {
+  private async checkRedisHealth(/)) {
     try {
-      const pong = await this.redis.ping();
-      const info = await this.redis.info();
+      const pong = await this.redis.ping(/));
+      const info = await this.redis.info(/));
       
       return {
         status: 'healthy',
         ping: pong,
-        memory_used: this.parseRedisMemory(info),
-        connected_clients: this.parseConnectedClients(info)
+        memory_used: this.parseRedisMemory(info/)),
+        connected_clients: this.parseConnectedClients(info/))
       };
-    } catch (error) {
+    } catch (error/)) {
       return {
         status: 'unhealthy',
         error: error.message
@@ -775,7 +775,7 @@ export class QueueHealthMonitor {
     }
   }
 
-  private async checkQueueDepths() {
+  private async checkQueueDepths(/)) {
     const queues = [
       'queue:email:processing:high',
       'queue:email:processing',
@@ -789,11 +789,11 @@ export class QueueHealthMonitor {
 
     const depths = {};
     
-    for (const queue of queues) {
+    for (const queue of queues/)) {
       try {
-        const length = await this.redis.llen(queue);
+        const length = await this.redis.llen(queue/));
         depths[queue] = length;
-      } catch (error) {
+      } catch (error/)) {
         depths[queue] = { error: error.message };
       }
     }
@@ -801,44 +801,44 @@ export class QueueHealthMonitor {
     return depths;
   }
 
-  private async checkWorkerStatus() {
+  private async checkWorkerStatus(/)) {
     // Get all job hashes to see which workers are active
-    const jobKeys = await this.redis.keys('job:*');
-    const workers = new Set();
+    const jobKeys = await this.redis.keys('job:*'/));
+    const workers = new Set(/));
     
-    for (const key of jobKeys.slice(0, 100)) { // Check first 100 jobs
-      const workerId = await this.redis.hget(key, 'worker_id');
-      if (workerId) {
-        workers.add(workerId);
+    for (const key of jobKeys.slice(0, 100/))) { // Check first 100 jobs
+      const workerId = await this.redis.hget(key, 'worker_id'/));
+      if (workerId/)) {
+        workers.add(workerId/));
       }
     }
 
     return {
       active_workers: workers.size,
-      worker_ids: Array.from(workers)
+      worker_ids: Array.from(workers/))
     };
   }
 
-  private async checkJobStats() {
-    const stats = await this.db.jobs.groupBy({
+  private async checkJobStats(/)) {
+    const stats = await this.db.jobs.groupBy({/)
       by: ['status'],
       _count: { status: true }
     });
 
-    return stats.reduce((acc, stat) => {
+    return stats.reduce((acc, stat/)) => {
       acc[stat.status] = stat._count.status;
       return acc;
     }, {});
   }
 
-  private parseRedisMemory(info: string): string {
-    const match = info.match(/used_memory_human:([^\r\n]+)/);
+  private parseRedisMemory(info: string/)): string {
+    const match = info.match(/used_memory_human:([^\r\n]+/))/);
     return match ? match[1] : 'unknown';
   }
 
-  private parseConnectedClients(info: string): number {
-    const match = info.match(/connected_clients:(\d+)/);
-    return match ? parseInt(match[1]) : 0;
+  private parseConnectedClients(info: string/)): number {
+    const match = info.match(/connected_clients:(\d+/))/);
+    return match ? parseInt(match[1]/)) : 0;
   }
 }
 ```
@@ -858,28 +858,28 @@ export class DeadLetterHandler {
   private redis: Redis;
   private db: Database;
 
-  constructor(redis: Redis, db: Database) {
+  constructor(redis: Redis, db: Database/)) {
     this.redis = redis;
     this.db = db;
   }
 
-  async moveFailedJobsToDeadLetter() {
-    const failedJobs = await this.db.jobs.findMany({
+  async moveFailedJobsToDeadLetter(/)) {
+    const failedJobs = await this.db.jobs.findMany({/)
       where: {
         status: 'failed',
         updated_at: {
-          gte: new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours
+          gte: new Date(Date.now(/)) - 24 * 60 * 60 * 1000) // Last 24 hours
         }
       }
     });
 
-    for (const job of failedJobs) {
+    for (const job of failedJobs/)) {
       // Check if already in dead letter queue
-      const exists = await this.redis.exists(`deadletter:${job.id}`);
-      if (exists) continue;
+      const exists = await this.redis.exists(`deadletter:${job.id}`/));
+      if (exists/)) continue;
 
       // Move to dead letter queue
-      await this.redis.lpush('deadletter:queue', JSON.stringify({
+      await this.redis.lpush('deadletter:queue', JSON.stringify({/)
         id: job.id,
         queue_name: job.queue_name,
         payload: job.payload,
@@ -889,32 +889,32 @@ export class DeadLetterHandler {
       }));
 
       // Mark as moved to dead letter
-      await this.redis.set(`deadletter:${job.id}`, 'moved', 'EX', 604800); // 7 days
+      await this.redis.set(`deadletter:${job.id}`, 'moved', 'EX', 604800/)); // 7 days
     }
   }
 
-  async replayDeadLetterJob(jobId: string) {
-    const jobData = await this.redis.lpop('deadletter:queue');
-    if (!jobData) {
-      throw new Error('No jobs in dead letter queue');
+  async replayDeadLetterJob(jobId: string/)) {
+    const jobData = await this.redis.lpop('deadletter:queue'/));
+    if (!jobData/)) {
+      throw new Error('No jobs in dead letter queue'/));
     }
 
-    const job = JSON.parse(jobData);
+    const job = JSON.parse(jobData/));
     
     // Reset job in PostgreSQL
-    await this.db.jobs.update({
+    await this.db.jobs.update({/)
       where: { id: jobId },
       data: {
         status: 'queued',
         attempt_count: 0,
         last_error_message: null,
         failed_at: null,
-        updated_at: new Date()
+        updated_at: new Date(/))
       }
     });
 
     // Add back to appropriate queue
-    await this.redis.lpush(job.queue_name, JSON.stringify(job));
+    await this.redis.lpush(job.queue_name, JSON.stringify(job/)));
     
     return { success: true, job_id: jobId };
   }
@@ -933,7 +933,7 @@ export class DeadLetterHandler {
 - **Job Latency**: <100ms from creation to processing start
 - **System Reliability**: 99.5% job success rate with automatic retry
 - **Worker Scalability**: Horizontal scaling to 50+ concurrent workers
-- **Redis Performance**: <10ms queue operations (BRPOP/LPUSH)
+- **Redis Performance**: <10ms queue operations (BRPOP/LPUSH/))
 - **PostgreSQL Integration**: 99.9% durable job state preservation
 - **Recovery Time**: <30 seconds for automatic worker failover
 - **Dead Letter Rate**: <0.1% of total jobs with full recovery capability
@@ -1004,10 +1004,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](((../overview)) - Strategic foundation and market positioning
-- [Email System Implementation](((./email-system-implementation)) - Email processing and queue integration
-- [Analytics Architecture](((./analytics-architecture)) - Business intelligence and job processing
-- [Campaign Management](((../../campaigns/overview)) - User experience and business operations
-- [Business Analytics](((../../business/analytics/overview)) - Revenue intelligence and optimization
+- [Architecture Overview](((../overview/))) - Strategic foundation and market positioning
+- [Email System Implementation](((./email-system-implementation/))) - Email processing and queue integration
+- [Analytics Architecture](((./analytics-architecture/))) - Business intelligence and job processing
+- [Campaign Management](((../../campaigns/overview/))) - User experience and business operations
+- [Business Analytics](((../../business/analytics/overview/))) - Revenue intelligence and optimization
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, enterprise infrastructure, operational excellence, hybrid architecture

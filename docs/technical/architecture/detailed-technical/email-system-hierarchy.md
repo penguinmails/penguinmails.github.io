@@ -7,11 +7,11 @@ description: "Optimized database structure and email system architecture"
 
 **Strategic Alignment**: PenguinMails' email system hierarchy directly supports our market leadership goals by providing **intuitive database architecture** that enables developers to quickly understand and maintain the email system, accelerating development velocity and ensuring enterprise-grade reliability.
 
-**Technical Authority**: Our architecture implements **message-focused naming with natural email hierarchy** (email_messages → email_content → attachments) that transforms unclear technical jargon into domain-specific names, establishing technical credibility and reducing onboarding time for new developers.
+**Technical Authority**: Our architecture implements **message-focused naming with natural email hierarchy** (email_messages → email_content → attachments/)) that transforms unclear technical jargon into domain-specific names, establishing technical credibility and reducing onboarding time for new developers.
 
 **Operational Excellence**: Backed by **comprehensive performance optimization** with intelligent indexing, efficient content management, and automated monitoring that ensure 99.9% data integrity and optimal query performance.
 
-**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features/) through [analytics tracking](((analytics-architecture)) to [performance optimization](.) - providing the data architecture that powers your email infrastructure success.
+**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features//)) through [analytics tracking](((analytics-architecture/))) to [performance optimization](./)) - providing the data architecture that powers your email infrastructure success.
 
 ---
 
@@ -20,20 +20,20 @@ description: "Optimized database structure and email system architecture"
 ### Email Hierarchy Architecture
 ```
 📧 Complete Email System
-├── email_messages (Message Analytics/Metadata)
+├── email_messages (Message Analytics/Metadata/))
 │   ├── campaign_id, lead_id, direction, status
 │   ├── from_email, to_email, subject
 │   └── storage_key → email_content
 │
-├── email_content (Email Body Content)
+├── email_content (Email Body Content/))
 │   ├── content_text, content_html, headers
 │   ├── raw_size_bytes, compression_algorithm
 │   └── storage_key ← email_messages
 │       └── parent_storage_key → attachments
 │
-└── attachments (Email Files)
+└── attachments (Email Files/))
     ├── filename, mime_type, size_bytes
-    ├── content BYTEA (binary data)
+    ├── content BYTEA (binary data/))
     └── parent_storage_key ← email_content
 ```
 
@@ -41,38 +41,38 @@ description: "Optimized database structure and email system architecture"
 
 #### email_messages - Message Analytics & Metadata
 ```sql
-CREATE TABLE email_messages (
-    storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
+CREATE TABLE email_messages (/)
+    storage_key VARCHAR(500/)) PRIMARY KEY REFERENCES email_content(storage_key/)),
     tenant_id UUID NOT NULL,
     email_account_id UUID,
-    campaign_id UUID REFERENCES campaigns(id), -- Cross-database reference
-    lead_id UUID REFERENCES leads(id), -- Cross-database reference
-    parent_message_id UUID REFERENCES email_messages(storage_key),
-    direction VARCHAR(20) CHECK (direction IN ('inbound', 'outbound')),
-    message_type VARCHAR(20) CHECK (message_type IN ('email', 'bounce', 'auto_reply')),
-    from_email VARCHAR(254),
-    to_email VARCHAR(254),
-    subject VARCHAR(500),
-    status VARCHAR(50) CHECK (status IN ('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'replied')),
+    campaign_id UUID REFERENCES campaigns(id/)), -- Cross-database reference
+    lead_id UUID REFERENCES leads(id/)), -- Cross-database reference
+    parent_message_id UUID REFERENCES email_messages(storage_key/)),
+    direction VARCHAR(20/)) CHECK (direction IN ('inbound', 'outbound'/))),
+    message_type VARCHAR(20/)) CHECK (message_type IN ('email', 'bounce', 'auto_reply'/))),
+    from_email VARCHAR(254/)),
+    to_email VARCHAR(254/)),
+    subject VARCHAR(500/)),
+    status VARCHAR(50/)) CHECK (status IN ('queued', 'sent', 'delivered', 'bounced', 'failed', 'opened', 'replied'/))),
     processed TIMESTAMP WITH TIME ZONE,
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
-    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 ```
 
 #### email_content - Email Body Content
 ```sql
-CREATE TABLE email_content (
-    storage_key VARCHAR(500) PRIMARY KEY,
+CREATE TABLE email_content (/)
+    storage_key VARCHAR(500/)) PRIMARY KEY,
     tenant_id UUID NOT NULL,
     content_text TEXT,
     content_html TEXT,
     headers JSONB,
     raw_size_bytes INTEGER,
     compressed_size_bytes INTEGER,
-    content_hash VARCHAR(64),
-    compression_algorithm VARCHAR(20),
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    content_hash VARCHAR(64/)),
+    compression_algorithm VARCHAR(20/)),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/)),
     expires TIMESTAMP WITH TIME ZONE,
     archived TIMESTAMP WITH TIME ZONE,
     retention_days INTEGER DEFAULT 2555, -- 7 years default
@@ -81,20 +81,20 @@ CREATE TABLE email_content (
 );
 ```
 
-#### attachments - Email File Attachments (Existing)
+#### attachments - Email File Attachments (Existing/))
 ```sql
-CREATE TABLE attachments (
-    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    parent_storage_key VARCHAR(500) REFERENCES email_content(storage_key),
-    filename VARCHAR(255) NOT NULL,
-    original_filename VARCHAR(255),
-    mime_type VARCHAR(100) NOT NULL,
+CREATE TABLE attachments (/)
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(/)),
+    parent_storage_key VARCHAR(500/)) REFERENCES email_content(storage_key/)),
+    filename VARCHAR(255/)) NOT NULL,
+    original_filename VARCHAR(255/)),
+    mime_type VARCHAR(100/)) NOT NULL,
     size_bytes INTEGER NOT NULL,
     content BYTEA NOT NULL,
-    storage_disposition VARCHAR(50) CHECK (storage_disposition IN ('inline', 'attachment')),
-    content_hash VARCHAR(64),
-    compression_algorithm VARCHAR(20),
-    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+    storage_disposition VARCHAR(50/)) CHECK (storage_disposition IN ('inline', 'attachment'/))),
+    content_hash VARCHAR(64/)),
+    compression_algorithm VARCHAR(20/)),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(/))
 );
 ```
 
@@ -106,7 +106,7 @@ CREATE TABLE attachments (
 ```sql
 -- Clear purpose for each table
 email_messages:    "This table tracks email message analytics and metadata"
-email_content:     "This table stores the actual email content (body, headers)"
+email_content:     "This table stores the actual email content (body, headers/))"
 attachments:       "This table stores email file attachments"
 ```
 
@@ -136,10 +136,10 @@ WHERE m.tenant_id = $1;
 SELECT 
     m.direction,
     m.status,
-    COUNT(*) as email_count,
-    AVG(c.raw_size_bytes / 1024.0) as avg_size_kb,
-    COUNT(a.*) as total_attachments,
-    AVG(a.size_bytes / 1024.0) as avg_attachment_size_kb
+    COUNT(*/)) as email_count,
+    AVG(c.raw_size_bytes / 1024.0/)) as avg_size_kb,
+    COUNT(a.*/)) as total_attachments,
+    AVG(a.size_bytes / 1024.0/)) as avg_attachment_size_kb
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
@@ -149,10 +149,10 @@ GROUP BY m.direction, m.status;
 -- Content compression analysis
 SELECT 
     c.compression_algorithm,
-    COUNT(*) as emails,
-    AVG(c.raw_size_bytes / 1024.0) as avg_original_size_kb,
-    AVG(c.compressed_size_bytes / 1024.0) as avg_compressed_size_kb,
-    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal / c.raw_size_bytes * 100) as avg_compression_ratio
+    COUNT(*/)) as emails,
+    AVG(c.raw_size_bytes / 1024.0/)) as avg_original_size_kb,
+    AVG(c.compressed_size_bytes / 1024.0/)) as avg_compressed_size_kb,
+    AVG((c.raw_size_bytes - c.compressed_size_bytes/))::decimal / c.raw_size_bytes * 100) as avg_compression_ratio
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
@@ -167,9 +167,9 @@ GROUP BY c.compression_algorithm;
 ### Cross-Database References
 ```sql
 -- OLTP to Content Database references
-email_messages.campaign_id → campaigns.id (OLTP)
-email_messages.lead_id → leads.id (OLTP)
-email_messages.email_account_id → email_accounts.id (OLTP)
+email_messages.campaign_id → campaigns.id (OLTP/))
+email_messages.lead_id → leads.id (OLTP/))
+email_messages.email_account_id → email_accounts.id (OLTP/))
 
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
@@ -193,14 +193,14 @@ SELECT
     c.headers,
     c.raw_size_bytes,
     c.compressed_size_bytes,
-    COUNT(a.id) as attachment_count,
-    SUM(a.size_bytes) as total_attachments_size,
-    STRING_AGG(a.filename, ', ') as attachment_files
+    COUNT(a.id/)) as attachment_count,
+    SUM(a.size_bytes/)) as total_attachments_size,
+    STRING_AGG(a.filename, ', '/)) as attachment_files
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1
-AND m.created >= NOW() - INTERVAL '30 days'
+AND m.created >= NOW(/)) - INTERVAL '30 days'
 GROUP BY 
     m.storage_key, m.direction, m.message_type, m.from_email, 
     m.to_email, m.subject, m.status, m.created,
@@ -217,26 +217,26 @@ LIMIT 100;
 ### Email Processing Workflow
 ```typescript
 // Queue handler for creating complete email hierarchy
-async function handleIncomingEmail(emailData: any) {
-  const storage_key = `email_${emailData.messageId}_${Date.now()}`;
+async function handleIncomingEmail(emailData: any/)) {
+  const storage_key = `email_${emailData.messageId}_${Date.now(/))}`;
   
-  return await db.$transaction(async (tx) => {
-    // 1. Create email_content (email body)
-    const contentObject = await tx.email_content.create({
+  return await db.$transaction(async (tx/)) => {
+    // 1. Create email_content (email body/))
+    const contentObject = await tx.email_content.create({/)
       data: {
         storage_key,
         tenant_id: emailData.tenant_id,
         content_text: emailData.body.plain || emailData.body.html,
-        content_html: emailData.body.html || convertToHtml(emailData.body.plain),
+        content_html: emailData.body.html || convertToHtml(emailData.body.plain/)),
         headers: emailData.headers,
-        raw_size_bytes: Buffer.byteLength(emailData.raw),
-        created: new Date(),
+        raw_size_bytes: Buffer.byteLength(emailData.raw/)),
+        created: new Date(/)),
         retention_days: 2555
       }
     });
 
-    // 2. Create email_messages (analytics)
-    const messageRef = await tx.email_messages.create({
+    // 2. Create email_messages (analytics/))
+    const messageRef = await tx.email_messages.create({/)
       data: {
         storage_key,
         tenant_id: emailData.tenant_id,
@@ -244,18 +244,18 @@ async function handleIncomingEmail(emailData: any) {
         direction: emailData.direction,
         message_type: emailData.type || 'email',
         from_email: emailData.from,
-        to_email: emailData.to.join(','),
+        to_email: emailData.to.join(','/)),
         subject: emailData.subject,
         status: 'received',
-        processed: new Date()
+        processed: new Date(/))
       }
     });
 
     // 3. Create attachments if present
     const attachmentRefs = [];
-    if (emailData.attachments && emailData.attachments.length > 0) {
-      for (const attachment of emailData.attachments) {
-        const attachmentRef = await tx.attachments.create({
+    if (emailData.attachments && emailData.attachments.length > 0/)) {
+      for (const attachment of emailData.attachments/)) {
+        const attachmentRef = await tx.attachments.create({/)
           data: {
             parent_storage_key: storage_key,
             filename: attachment.filename,
@@ -265,12 +265,12 @@ async function handleIncomingEmail(emailData: any) {
             storage_disposition: attachment.disposition || 'attachment'
           }
         });
-        attachmentRefs.push(attachmentRef);
+        attachmentRefs.push(attachmentRef/));
       }
     }
 
     // 4. Trigger analytics job
-    await tx.analytics_jobs.create({
+    await tx.analytics_jobs.create({/)
       data: {
         job_type: 'email_analytics_update',
         payload: {
@@ -302,27 +302,27 @@ async function handleIncomingEmail(emailData: any) {
 ### Indexing Strategy
 ```sql
 -- Message analytics indexes
-CREATE INDEX idx_email_messages_tenant ON email_messages(tenant_id);
-CREATE INDEX idx_email_messages_campaign ON email_messages(campaign_id);
-CREATE INDEX idx_email_messages_lead ON email_messages(lead_id);
-CREATE INDEX idx_email_messages_status ON email_messages(status);
-CREATE INDEX idx_email_messages_created ON email_messages(created_at);
-CREATE INDEX idx_email_messages_direction ON email_messages(direction);
+CREATE INDEX idx_email_messages_tenant ON email_messages(tenant_id/));
+CREATE INDEX idx_email_messages_campaign ON email_messages(campaign_id/));
+CREATE INDEX idx_email_messages_lead ON email_messages(lead_id/));
+CREATE INDEX idx_email_messages_status ON email_messages(status/));
+CREATE INDEX idx_email_messages_created ON email_messages(created_at/));
+CREATE INDEX idx_email_messages_direction ON email_messages(direction/));
 
 -- Email content indexes
-CREATE INDEX idx_email_content_tenant ON email_content(tenant_id);
-CREATE INDEX idx_email_content_hash ON email_content(content_hash) WHERE content_hash IS NOT NULL;
-CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expires_at IS NOT NULL;
-CREATE INDEX idx_email_content_archived ON email_content(is_archived, archived_at);
+CREATE INDEX idx_email_content_tenant ON email_content(tenant_id/));
+CREATE INDEX idx_email_content_hash ON email_content(content_hash/)) WHERE content_hash IS NOT NULL;
+CREATE INDEX idx_email_content_expires ON email_content(expires_at/)) WHERE expires_at IS NOT NULL;
+CREATE INDEX idx_email_content_archived ON email_content(is_archived, archived_at/));
 
 -- Attachment indexes
-CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
-CREATE INDEX idx_attachments_mime ON attachments(mime_type);
-CREATE INDEX idx_attachments_size ON attachments(size_bytes);
+CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key/));
+CREATE INDEX idx_attachments_mime ON attachments(mime_type/));
+CREATE INDEX idx_attachments_size ON attachments(size_bytes/));
 
 -- Composite indexes for common queries
-CREATE INDEX idx_email_messages_campaign_status ON email_messages(campaign_id, status);
-CREATE INDEX idx_email_messages_lead_created ON email_messages(lead_id, created_at);
+CREATE INDEX idx_email_messages_campaign_status ON email_messages(campaign_id, status/));
+CREATE INDEX idx_email_messages_lead_created ON email_messages(lead_id, created_at/));
 ```
 
 ### Query Optimization Examples
@@ -333,26 +333,26 @@ SELECT
     m.subject,
     m.status,
     c.raw_size_bytes,
-    COUNT(a.*) as attachment_count
+    COUNT(a.*/)) as attachment_count
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.campaign_id = $1
 AND m.tenant_id = $2
-AND m.created >= NOW() - INTERVAL '30 days'
+AND m.created >= NOW(/)) - INTERVAL '30 days'
 ORDER BY m.created DESC;
 
 -- Optimized content storage analysis
 EXPLAIN ANALYZE
 SELECT 
     c.compression_algorithm,
-    COUNT(*) as email_count,
-    SUM(c.raw_size_bytes) as total_size,
-    SUM(c.compressed_size_bytes) as total_compressed_size
+    COUNT(*/)) as email_count,
+    SUM(c.raw_size_bytes/)) as total_size,
+    SUM(c.compressed_size_bytes/)) as total_compressed_size
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
-AND m.created >= NOW() - INTERVAL '7 days'
+AND m.created >= NOW(/)) - INTERVAL '7 days'
 GROUP BY c.compression_algorithm;
 ```
 
@@ -363,13 +363,13 @@ GROUP BY c.compression_algorithm;
 ### Migration Steps
 ```sql
 -- Step 1: Create new tables with clear names
-CREATE TABLE email_messages (
-    storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
+CREATE TABLE email_messages (/)
+    storage_key VARCHAR(500/)) PRIMARY KEY REFERENCES email_content(storage_key/)),
     -- ... same structure as content_inbox_message_refs
 );
 
-CREATE TABLE email_content (
-    storage_key VARCHAR(500) PRIMARY KEY,
+CREATE TABLE email_content (/)
+    storage_key VARCHAR(500/)) PRIMARY KEY,
     -- ... same structure as content_objects
 );
 
@@ -393,23 +393,23 @@ ALTER TABLE content_objects RENAME TO content_objects_archived;
 -- Verify migration integrity
 SELECT 
     'Total migrated email_messages' as check_type,
-    COUNT(*) as count
+    COUNT(*/)) as count
 FROM email_messages
 UNION ALL
 SELECT 
     'Total migrated email_content' as check_type,
-    COUNT(*) as count
+    COUNT(*/)) as count
 FROM email_content
 UNION ALL
 SELECT 
     'Messages with content' as check_type,
-    COUNT(*) as count
+    COUNT(*/)) as count
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 UNION ALL
 SELECT 
     'Orphaned messages' as check_type,
-    COUNT(*) as count
+    COUNT(*/)) as count
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
@@ -423,47 +423,47 @@ WHERE c.storage_key IS NULL;
 ```sql
 -- Email volume tracking
 SELECT 
-    DATE_TRUNC('day', m.created) as date,
-    COUNT(*) as total_emails,
-    COUNT(*) FILTER (WHERE m.direction = 'inbound') as inbound_emails,
-    COUNT(*) FILTER (WHERE m.direction = 'outbound') as outbound_emails,
-    COUNT(*) FILTER (WHERE m.status = 'delivered') as delivered_emails
+    DATE_TRUNC('day', m.created/)) as date,
+    COUNT(*/)) as total_emails,
+    COUNT(*/)) FILTER (WHERE m.direction = 'inbound'/)) as inbound_emails,
+    COUNT(*/)) FILTER (WHERE m.direction = 'outbound'/)) as outbound_emails,
+    COUNT(*/)) FILTER (WHERE m.status = 'delivered'/)) as delivered_emails
 FROM email_messages m
 WHERE m.tenant_id = $1
-AND m.created >= NOW() - INTERVAL '30 days'
-GROUP BY DATE_TRUNC('day', m.created)
+AND m.created >= NOW(/)) - INTERVAL '30 days'
+GROUP BY DATE_TRUNC('day', m.created/))
 ORDER BY date;
 
 -- Content storage analytics
 SELECT 
-    DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 / 1024.0) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 / 1024.0) as total_mb_compressed,
-    COUNT(*) as emails_processed,
-    AVG(c.raw_size_bytes / 1024.0) as avg_email_size_kb
+    DATE_TRUNC('day', c.created/)) as date,
+    SUM(c.raw_size_bytes / 1024.0 / 1024.0/)) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 / 1024.0/)) as total_mb_compressed,
+    COUNT(*/)) as emails_processed,
+    AVG(c.raw_size_bytes / 1024.0/)) as avg_email_size_kb
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
-AND m.created >= NOW() - INTERVAL '30 days'
-GROUP BY DATE_TRUNC('day', c.created)
+AND m.created >= NOW(/)) - INTERVAL '30 days'
+GROUP BY DATE_TRUNC('day', c.created/))
 ORDER BY date;
 ```
 
 ### Alerting Thresholds
 ```sql
 -- High email volume alert
-SELECT COUNT(*) FROM email_messages 
+SELECT COUNT(*/)) FROM email_messages 
 WHERE tenant_id = $1 
-AND created >= NOW() - INTERVAL '1 hour'
-HAVING COUNT(*) > 10000;
+AND created >= NOW(/)) - INTERVAL '1 hour'
+HAVING COUNT(*/)) > 10000;
 
 -- Large email storage alert
-SELECT SUM(raw_size_bytes / 1024.0 / 1024.0) as total_mb 
+SELECT SUM(raw_size_bytes / 1024.0 / 1024.0/)) as total_mb 
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1 
-AND c.created >= NOW() - INTERVAL '1 day'
-HAVING SUM(raw_size_bytes) > 1024 * 1024 * 100; -- 100MB
+AND c.created >= NOW(/)) - INTERVAL '1 day'
+HAVING SUM(raw_size_bytes/)) > 1024 * 1024 * 100; -- 100MB
 ```
 
 ---
@@ -487,15 +487,15 @@ LOW        |   INT     |   UUID     |  UUID
 ### **Email System PK Distribution**
 
 Current email system PK strategy implementation:
-- **UUID (Security)**: 75% of tables - Perfect for security-sensitive message data
-- **BIGINT (Analytics)**: 9% of tables - Optimal for high-traffic analytics operations
-- **VARCHAR (External)**: 6% of tables - External system IDs (Stripe, Hostwinds)
-- **Composite (Multi-tenant)**: 10% of tables - Multi-tenant optimized structures
+- **UUID (Security/))**: 75% of tables - Perfect for security-sensitive message data
+- **BIGINT (Analytics/))**: 9% of tables - Optimal for high-traffic analytics operations
+- **VARCHAR (External/))**: 6% of tables - External system IDs (Stripe, Hostwinds/))
+- **Composite (Multi-tenant/))**: 10% of tables - Multi-tenant optimized structures
 
 ### **Strategic Decisions Applied**
 
-1. **Email Message Analytics**: Uses storage_key VARCHAR(500) as composite identifier for content relationship tracking
-2. **Content Storage**: email_content.storage_key VARCHAR(500) enables content deduplication via content_hash
+1. **Email Message Analytics**: Uses storage_key VARCHAR(500/)) as composite identifier for content relationship tracking
+2. **Content Storage**: email_content.storage_key VARCHAR(500/)) enables content deduplication via content_hash
 3. **Cross-Database References**: All foreign keys use UUID for security consistency across OLTP and Content databases
 4. **Attachment Handling**: Uses UUID for unique attachment identification with parent_storage_key relationships
 
@@ -517,7 +517,7 @@ This email system hierarchy creates a **clear, intuitive, and maintainable struc
 
 ### ✅ Table Responsibilities
 - **email_messages** = Message analytics and metadata  
-- **email_content** = Email body content (text, html, headers)  
+- **email_content** = Email body content (text, html, headers/))  
 - **attachments** = Email files and binary content  
 
 ### ✅ Key Benefits
@@ -536,9 +536,9 @@ This email system hierarchy creates a **clear, intuitive, and maintainable struc
 
 ### ✅ Next Steps
 Explore related technical documentation:
-1. **[Analytics Architecture](((analytics-architecture))** - Real-time tracking and PostHog integration
-2. **[Database Architecture](((../overview))** - 4-tier database structure overview
-3. **[Email Processing](((../overview))** - Core email processing and deliverability
+1. **[Analytics Architecture](((analytics-architecture/)))** - Real-time tracking and PostHog integration
+2. **[Database Architecture](((../overview/)))** - 4-tier database structure overview
+3. **[Email Processing](((../overview/)))** - Core email processing and deliverability
 
 ---
 

@@ -413,13 +413,13 @@ last_modified_date: "2025-11-10"
 Ready to manage all your cold email responses efficiently?
 
 ### **Related Features**
-1. **[Warm-ups](((../warm-ups/overview))** - Build sender reputation before sending cold emails
-2. **[Inbox Rotation](((../inbox-rotation/overview))** - Rotate between multiple email addresses
-3. **[Analytics](((../analytics/overview))** - Track response rates and performance metrics
-4. **[Free Mailbox Creation](((../free-mailbox-creation/overview))** - Set up additional email accounts
+1. **[Warm-ups](../warm-ups/overview/)** - Build sender reputation before sending cold emails
+2. **[Inbox Rotation](../inbox-rotation/overview/)** - Rotate between multiple email addresses
+3. **[Analytics](../analytics/overview/)** - Track response rates and performance metrics
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview/)** - Set up additional email accounts
 
 ### **Implementation Resources**
-5. **[Implementation Guide](((../implement/getting-started))** - Complete setup process
+5. **[Implementation Guide](../getting-started/)** - Complete setup process
 
 ### **Prerequisites**
 - **Multiple Email Accounts**: Have cold email accounts connected to the platform

@@ -8,7 +8,7 @@ last_modified_date: "2025-12-19"
 
 **For Technical Teams**: TypeScript implementation details for email compliance systems and data subject rights
 
-**Business Context**: This technical implementation supports the [Compliance Overview](compliance-overview:1) strategic requirements for GDPR, CCPA, and CAN-SPAM compliance.
+**Business Context**: This technical implementation supports the [Compliance Overview](compliance-overview:1/)) strategic requirements for GDPR, CCPA, and CAN-SPAM compliance.
 
 ---
 
@@ -31,17 +31,17 @@ interface DataProcessingRecord {
 }
 
 class ComplianceDataProcessor {
-  private generateUniqueId(): string {
-    return `dpr_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private generateUniqueId(/)): string {
+    return `dpr_${Date.now(/))}_${Math.random(/)).toString(36/)).substr(2, 9/))}`;
   }
 
-  createProcessingRecord(
+  createProcessingRecord(/)
     purpose: string,
     categories: string[],
     subjects: string[]
   ): DataProcessingRecord {
     return {
-      recordId: this.generateUniqueId(),
+      recordId: this.generateUniqueId(/)),
       processingPurpose: purpose,
       dataCategories: categories,
       dataSubjects: subjects,
@@ -49,8 +49,8 @@ class ComplianceDataProcessor {
       retentionPeriod: '24_months',
       securityMeasures: ['encryption', 'access_controls', 'audit_logs'],
       internationalTransfers: ['email_provider_data_center'],
-      createdDate: new Date(),
-      lastReviewed: new Date()
+      createdDate: new Date(/)),
+      lastReviewed: new Date(/))
     };
   }
 }
@@ -73,49 +73,49 @@ interface PersonalData {
 }
 
 class DataRightsHandler {
-  private async verifyIdentity(email: string, verificationData: any): Promise<boolean> {
+  private async verifyIdentity(email: string, verificationData: any/)): Promise<boolean> {
     // Implement identity verification logic
     return true;
   }
 
-  private async collectPersonalData(email: string): Promise<PersonalData> {
+  private async collectPersonalData(email: string/)): Promise<PersonalData> {
     // Collect data from all systems
     return {
-      emailData: await this.getEmailPreferences(email),
-      accountData: await this.getAccountInformation(email),
-      activityData: await this.getUserActivity(email),
-      preferencesData: await this.getCommunicationPreferences(email)
+      emailData: await this.getEmailPreferences(email/)),
+      accountData: await this.getAccountInformation(email/)),
+      activityData: await this.getUserActivity(email/)),
+      preferencesData: await this.getCommunicationPreferences(email/))
     };
   }
 
-  private async encryptData(data: PersonalData): Promise<string> {
+  private async encryptData(data: PersonalData/)): Promise<string> {
     // Implement encryption logic
-    return JSON.stringify(data);
+    return JSON.stringify(data/));
   }
 
-  async handleDataAccessRequest(request: DataAccessRequest): Promise<any> {
+  async handleDataAccessRequest(request: DataAccessRequest/)): Promise<any> {
     // Verify requestor identity
-    if (!await this.verifyIdentity(request.email, request.verificationData)) {
+    if (!await this.verifyIdentity(request.email, request.verificationData/))) {
       return { error: "Identity verification failed" };
     }
 
     // Collect personal data from all systems
-    const personalData = await this.collectPersonalData(request.email);
+    const personalData = await this.collectPersonalData(request.email/));
 
     // Compile in readable format
-    const compiledData = this.compilePersonalData(personalData);
+    const compiledData = this.compilePersonalData(personalData/));
 
     // Encrypt and secure delivery
-    const encryptedData = await this.encryptData(compiledData);
-    await this.sendSecureEmail(request.email, encryptedData);
+    const encryptedData = await this.encryptData(compiledData/));
+    await this.sendSecureEmail(request.email, encryptedData/));
 
     // Log the request for audit trail
-    this.logDataAccessRequest(request, "completed");
+    this.logDataAccessRequest(request, "completed"/));
 
     return { status: "Data provided securely" };
   }
 
-  private compilePersonalData(data: PersonalData): any {
+  private compilePersonalData(data: PersonalData/)): any {
     // Organize data in readable format
     return {
       email_preferences: data.emailData,
@@ -125,13 +125,13 @@ class DataRightsHandler {
     };
   }
 
-  private async sendSecureEmail(email: string, encryptedData: string): Promise<void> {
+  private async sendSecureEmail(email: string, encryptedData: string/)): Promise<void> {
     // Implementation for secure email delivery
   }
 
-  private logDataAccessRequest(request: DataAccessRequest, status: string): void {
+  private logDataAccessRequest(request: DataAccessRequest, status: string/)): void {
     // Log for audit compliance
-    console.log(`Data access request: ${request.email} - ${status}`);
+    console.log(`Data access request: ${request.email} - ${status}`/));
   }
 }
 ```
@@ -140,24 +140,24 @@ class DataRightsHandler {
 
 ```typescript
 class DataDeletionHandler {
-  private async verifyDeletionBasis(reason: string, legalBasis: string): Promise<boolean> {
+  private async verifyDeletionBasis(reason: string, legalBasis: string/)): Promise<boolean> {
     // Verify legal basis for deletion
     return true;
   }
 
-  private async deletePersonalData(system: string, email: string): Promise<any> {
+  private async deletePersonalData(system: string, email: string/)): Promise<any> {
     // Delete personal data from specific system
     return { success: true, system };
   }
 
-  private async verifyDeletionCompletion(email: string, systems: string[]): Promise<boolean> {
+  private async verifyDeletionCompletion(email: string, systems: string[]/)): Promise<boolean> {
     // Verify complete deletion
     return true;
   }
 
-  async handleDeletionRequest(request: DataAccessRequest): Promise<any> {
+  async handleDeletionRequest(request: DataAccessRequest/)): Promise<any> {
     // Verify legal basis for deletion
-    if (!await this.verifyDeletionBasis(request.email, request.verificationData.reason)) {
+    if (!await this.verifyDeletionBasis(request.email, request.verificationData.reason/))) {
       return { error: "Deletion not permitted under law" };
     }
 
@@ -172,20 +172,20 @@ class DataDeletionHandler {
 
     // Systematic deletion
     const deletionResults: any = {};
-    for (const system of systems) {
+    for (const system of systems/)) {
       try {
-        const result = await this.deletePersonalData(system, request.email);
+        const result = await this.deletePersonalData(system, request.email/));
         deletionResults[system] = result;
-      } catch (error) {
+      } catch (error/)) {
         deletionResults[system] = `Error: ${error}`;
       }
     }
 
     // Verify deletion
-    const verificationResult = await this.verifyDeletionCompletion(request.email, systems);
+    const verificationResult = await this.verifyDeletionCompletion(request.email, systems/));
 
     // Log for compliance
-    this.logDeletionRequest(request, deletionResults, verificationResult);
+    this.logDeletionRequest(request, deletionResults, verificationResult/));
 
     return {
       status: "Deletion completed",
@@ -194,7 +194,7 @@ class DataDeletionHandler {
     };
   }
 
-  private logDeletionRequest(request: any, results: any, verification: boolean): void {
+  private logDeletionRequest(request: any, results: any, verification: boolean/)): void {
     // Log for audit compliance
   }
 }
@@ -225,32 +225,32 @@ interface ComplianceResult {
 class ComplianceMonitor {
   private checks: { [key: string]: any } = {};
 
-  constructor() {
+  constructor(/)) {
     this.checks = {
-      emailAuth: new EmailAuthMonitor(),
-      consentTracking: new ConsentMonitor(),
-      optOutProcessing: new OptOutMonitor(),
-      dataRights: new DataRightsMonitor(),
-      securityMonitoring: new SecurityMonitor()
+      emailAuth: new EmailAuthMonitor(/)),
+      consentTracking: new ConsentMonitor(/)),
+      optOutProcessing: new OptOutMonitor(/)),
+      dataRights: new DataRightsMonitor(/)),
+      securityMonitoring: new SecurityMonitor(/))
     };
   }
 
-  async runComplianceChecks(): Promise<ComplianceResult> {
+  async runComplianceChecks(/)): Promise<ComplianceResult> {
     const results: ComplianceResult = {};
     
-    for (const [checkName, monitor] of Object.entries(this.checks)) {
+    for (const [checkName, monitor] of Object.entries(this.checks/))) {
       try {
-        const result = await monitor.checkCompliance();
+        const result = await monitor.checkCompliance(/));
         results[checkName] = {
           status: result.isCompliant ? 'pass' : 'fail',
           details: result.details,
-          lastChecked: new Date()
+          lastChecked: new Date(/))
         };
-      } catch (error) {
+      } catch (error/)) {
         results[checkName] = {
           status: 'error',
           error: error.message,
-          lastChecked: new Date()
+          lastChecked: new Date(/))
         };
       }
     }
@@ -260,35 +260,35 @@ class ComplianceMonitor {
 }
 
 class EmailAuthMonitor {
-  async checkCompliance(): Promise<{ isCompliant: boolean; details: any }> {
+  async checkCompliance(/)): Promise<{ isCompliant: boolean; details: any }> {
     // Check SPF, DKIM, DMARC status
     return { isCompliant: true, details: { spf: 'pass', dkim: 'pass', dmarc: 'pass' } };
   }
 }
 
 class ConsentMonitor {
-  async checkCompliance(): Promise<{ isCompliant: boolean; details: any }> {
+  async checkCompliance(/)): Promise<{ isCompliant: boolean; details: any }> {
     // Check consent tracking status
     return { isCompliant: true, details: { active_consents: 95 } };
   }
 }
 
 class OptOutMonitor {
-  async checkCompliance(): Promise<{ isCompliant: boolean; details: any }> {
+  async checkCompliance(/)): Promise<{ isCompliant: boolean; details: any }> {
     // Check opt-out processing times
     return { isCompliant: true, details: { avg_processing_time: '4 hours' } };
   }
 }
 
 class DataRightsMonitor {
-  async checkCompliance(): Promise<{ isCompliant: boolean; details: any }> {
+  async checkCompliance(/)): Promise<{ isCompliant: boolean; details: any }> {
     // Check data subject request processing
     return { isCompliant: true, details: { pending_requests: 2, avg_response_time: '48 hours' } };
   }
 }
 
 class SecurityMonitor {
-  async checkCompliance(): Promise<{ isCompliant: boolean; details: any }> {
+  async checkCompliance(/)): Promise<{ isCompliant: boolean; details: any }> {
     // Check security incidents
     return { isCompliant: true, details: { incidents: 0, status: 'secure' } };
   }
@@ -320,37 +320,37 @@ class RegulatoryChangeManager {
 
   private implementationPlans: RegulatoryChange[] = [];
 
-  async monitorRegulatoryChanges(): Promise<RegulatoryChange[]> {
+  async monitorRegulatoryChanges(/)): Promise<RegulatoryChange[]> {
     const changes: RegulatoryChange[] = [];
     
-    for (const source of this.regulatorySources) {
-      const newChanges = await this.checkForUpdates(source);
-      if (newChanges.length > 0) {
-        changes.push(...newChanges);
+    for (const source of this.regulatorySources/)) {
+      const newChanges = await this.checkForUpdates(source/));
+      if (newChanges.length > 0/)) {
+        changes.push(...newChanges/));
       }
     }
 
-    for (const change of changes) {
-      const impactAssessment = this.assessImpact(change);
-      if (impactAssessment.requiresAction) {
-        this.createImplementationPlan(change, impactAssessment);
+    for (const change of changes/)) {
+      const impactAssessment = this.assessImpact(change/));
+      if (impactAssessment.requiresAction/)) {
+        this.createImplementationPlan(change, impactAssessment/));
       }
     }
 
     return changes;
   }
 
-  private async checkForUpdates(source: string): Promise<RegulatoryChange[]> {
+  private async checkForUpdates(source: string/)): Promise<RegulatoryChange[]> {
     // Check for regulatory updates
     return [];
   }
 
-  private assessImpact(change: any): any {
+  private assessImpact(change: any/)): any {
     // Assess business impact
     return { requiresAction: true, impactLevel: 'medium' };
   }
 
-  private createImplementationPlan(change: any, assessment: any): void {
+  private createImplementationPlan(change: any, assessment: any/)): void {
     const plan: RegulatoryChange = {
       change: change.description,
       impactLevel: assessment.impactLevel,
@@ -360,7 +360,7 @@ class RegulatoryChangeManager {
       testingSteps: assessment.testingSteps
     };
     
-    this.implementationPlans.push(plan);
+    this.implementationPlans.push(plan/));
   }
 }
 ```
@@ -383,12 +383,12 @@ class ComplianceTraining {
   private role: string;
   private trainingModules: TrainingModule[] = [];
 
-  constructor(role: string) {
+  constructor(role: string/)) {
     this.role = role;
-    this.trainingModules = this.getRoleSpecificModules();
+    this.trainingModules = this.getRoleSpecificModules(/));
   }
 
-  private getRoleSpecificModules(): TrainingModule[] {
+  private getRoleSpecificModules(/)): TrainingModule[] {
     const moduleMap: { [key: string]: TrainingModule[] } = {
       executive: [
         { module: "regulatory_overview", description: "High-level regulatory landscape", duration: 60, required: true },
@@ -419,13 +419,13 @@ class ComplianceTraining {
     return moduleMap[this.role] || [];
   }
 
-  getTrainingProgress(): any {
+  getTrainingProgress(/)): any {
     // Return training completion status
     return {
       role: this.role,
       totalModules: this.trainingModules.length,
       completedModules: 0,
-      requiredModules: this.trainingModules.filter(m => m.required).length,
+      requiredModules: this.trainingModules.filter(m => m.required/)).length,
       progress: 0
     };
   }
@@ -437,9 +437,9 @@ class ComplianceTraining {
 ## 📊 Business Links and Rationale
 
 **Related Business Documentation**:
-- [Compliance Overview](compliance-overview:1) - Executive regulatory requirements and risk assessment
-- [Cost Analysis Overview](cost-analysis-overview:1) - Strategic compliance investment analysis
-- [ROI Calculator](roi-calculator:1) - Compliance cost-benefit modeling
+- [Compliance Overview](compliance-overview:1/)) - Executive regulatory requirements and risk assessment
+- [Cost Analysis Overview](cost-analysis-overview:1/)) - Strategic compliance investment analysis
+- [ROI Calculator](roi-calculator:1/)) - Compliance cost-benefit modeling
 
 **Business Value**:
 - **Risk Mitigation**: Prevents €20M GDPR fines and $50K+ CAN-SPAM violations

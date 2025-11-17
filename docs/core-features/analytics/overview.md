@@ -445,19 +445,19 @@ Unlike basic email analytics, our platform provides:
 Ready to optimize your cold email campaigns with comprehensive analytics and KPI-driven insights?
 
 ### **Related Business Intelligence**
-1. **[Key Performance Indicators Framework](((../business/kpi-framework))** - Comprehensive business metrics and formulas
-2. **[Business Strategy & Roadmap](((../business/strategy/overview))** - Strategic implementation and development priorities
-3. **[Market Analysis & Competitive Intelligence](((../business/market-analysis/overview))** - Market insights and competitive positioning
+1. **[Key Performance Indicators Framework](../business/kpi-framework/)** - Comprehensive business metrics and formulas
+2. **[Business Strategy & Roadmap](../business/strategy/overview/)** - Strategic implementation and development priorities
+3. **[Market Analysis & Competitive Intelligence](../business/market-analysis/overview/)** - Market insights and competitive positioning
 
 ### **Related Feature Documentation**
-1. **[Warm-ups](((../warm-ups/overview))** - Build reputation to improve deliverability metrics
-2. **[Unified Inbox](((../unified-inbox/overview))** - Track responses and conversations
-3. **[Inbox Rotation](((../inbox-rotation/overview))** - Optimize across multiple accounts
+1. **[Warm-ups](../warm-ups/overview/)** - Build reputation to improve deliverability metrics
+2. **[Unified Inbox](../unified-inbox/overview/)** - Track responses and conversations
+3. **[Inbox Rotation](../inbox-rotation/overview/)** - Optimize across multiple accounts
 
 ### **Deep Dive Options**
 - **[Advanced Analytics](advanced-analytics/)** - Advanced analytics techniques and insights
-- **[KPI Dashboard Setup](((../business/kpi-framework/dashboard-setup))** - Detailed KPI configuration and implementation
-- **[Success Metrics & Targets](((../business/kpi-framework/success-metrics))** - Business performance tracking and optimization
+- **[KPI Dashboard Setup](../business/kpi-framework/dashboard-setup/)** - Detailed KPI configuration and implementation
+- **[Success Metrics & Targets](../business/kpi-framework/success-metrics/)** - Business performance tracking and optimization
 
 ### **Success Metrics & Implementation**
 - **Week 1**: First campaign data visible in analytics dashboard, baseline KPIs established
