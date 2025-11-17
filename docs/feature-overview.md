@@ -24,16 +24,16 @@ Our platform supports your goal of market leadership through deliverability exce
 
 | Feature | Quick Start | Professional Setup | Enterprise Features | Primary Value |
 |---------|-------------|-------------------|-------------------|---------------|
-| **[Analytics](((core-features/analytics/overview))** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
-| **[Warm-ups](((core-features/warm-ups/overview))** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
-| **[Free Mailbox Creation](((core-features/free-mailbox-creation))** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
-| **[Unified Inbox](((core-features/unified-inbox/overview))** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
-| **[Inbox Rotation](((core-features/inbox-rotation/overview))** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
+| **[Analytics](core-features/analytics/overview/)** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
+| **[Warm-ups](core-features/warm-ups/overview/)** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
+| **[Free Mailbox Creation](core-features/free-mailbox-creation/)** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
+| **[Unified Inbox](core-features/unified-inbox/overview/)** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
+| **[Inbox Rotation](core-features/inbox-rotation/overview/)** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
 
 ### **Use Case Alignment**
-- **New Users**: Start with [Free Mailbox Creation](((core-features/free-mailbox-creation)) → [Warm-ups](((core-features/warm-ups/overview))
-- **Growing Teams**: Add [Analytics](((core-features/analytics/overview)) → [Unified Inbox](((core-features/unified-inbox/overview))
-- **Enterprise Scale**: Implement [Inbox Rotation](((core-features/inbox-rotation/overview)) with full analytics suite
+- **New Users**: Start with [Free Mailbox Creation](core-features/free-mailbox-creation/) → [Warm-ups](core-features/warm-ups/overview/)
+- **Growing Teams**: Add [Analytics](core-features/analytics/overview/) → [Unified Inbox](core-features/unified-inbox/overview/)
+- **Enterprise Scale**: Implement [Inbox Rotation](core-features/inbox-rotation/overview/) with full analytics suite
 - **Agencies**: Full feature stack with white-label options for client management
 
 ---
@@ -43,13 +43,13 @@ Our platform supports your goal of market leadership through deliverability exce
 ### **🏗️ Foundation Features**
 Start here for basic infrastructure and setup:
 
-#### **[Email Warm-ups](((core-features/warm-ups/overview))** - *The #1 Success Factor*
+#### **[Email Warm-ups](core-features/warm-ups/overview/)** - *The #1 Success Factor*
 - **⭐ Beginner**: 5-minute automated setup for immediate results
 - **⭐⭐ Intermediate**: Advanced progression algorithms and optimization
 - **⭐⭐⭐ Expert**: Enterprise compliance and predictive analytics
-- **Quick Start**: [Create accounts](((core-features/free-mailbox-creation)) → [Warm-up](((core-features/warm-ups/overview)) → Start campaigns
+- **Quick Start**: [Create accounts](core-features/free-mailbox-creation/) → [Warm-up](core-features/warm-ups/overview/) → Start campaigns
 
-#### **[Free Mailbox Creation](((core-features/free-mailbox-creation))** - *Professional Infrastructure*
+#### **[Free Mailbox Creation](core-features/free-mailbox-creation/)** - *Professional Infrastructure*
 - **⭐ Beginner**: Instant professional email accounts
 - **⭐⭐ Intermediate**: Advanced domain and DNS management
 - **⭐⭐⭐ Expert**: Bulk creation and enterprise automation

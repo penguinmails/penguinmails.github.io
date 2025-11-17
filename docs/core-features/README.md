@@ -48,31 +48,31 @@ Each feature is organized into progressive complexity levels:
 ## Feature Deep Dives
 
 ### Warm-ups
-- [Overview](((warm-ups/overview)) - Basic warm-up concepts
+- [Overview](warm-ups/overview/) - Basic warm-up concepts
 - [Deep Dive](warm-ups/deep-dive/) - Advanced warming strategies
-  - [Reputation Optimization](((warm-ups/deep-dive/reputation-optimization))
-  - [Algorithm Details](((warm-ups/deep-dive/algorithm-details))
-  - [Performance Tuning](((warm-ups/deep-dive/performance-tuning))
+  - [Reputation Optimization](warm-ups/deep-dive/reputation-optimization/)
+  - [Algorithm Details](warm-ups/deep-dive/algorithm-details/)
+  - [Performance Tuning](warm-ups/deep-dive/performance-tuning/)
 - [Technical Implementation](warm-ups/technical-implementation/) - Technical setup
 
 ### Inbox Rotation
-- [Overview](((inbox-rotation/overview)) - Basic rotation concepts
+- [Overview](inbox-rotation/overview/) - Basic rotation concepts
 - [Advanced Strategies](inbox-rotation/advanced-strategies/) - Advanced rotation
 - [Technical Implementation](inbox-rotation/technical-implementation/) - Technical setup
 
 ### Unified Inbox
-- [Overview](((unified-inbox/overview)) - Basic inbox concepts
+- [Overview](unified-inbox/overview/) - Basic inbox concepts
 - [Advanced Usage](unified-inbox/advanced-usage/) - Advanced features
 - [Technical Implementation](unified-inbox/technical-implementation/) - Technical setup
 
 ### Analytics
-- [Overview](((analytics/overview)) - Basic analytics concepts
+- [Overview](analytics/overview/) - Basic analytics concepts
 - [Advanced Analytics](analytics/advanced-analytics/) - Advanced analytics
-  - [User Journeys Analytics](((analytics/advanced-analytics/user-journeys-analytics))
-  - [ROI Tracking](((analytics/advanced-analytics/roi-tracking))
-  - [Predictive Insights](((analytics/advanced-analytics/predictive-insights))
+  - [User Journeys Analytics](analytics/advanced-analytics/user-journeys-analytics/)
+  - [ROI Tracking](analytics/advanced-analytics/roi-tracking/)
+  - [Predictive Insights](analytics/advanced-analytics/predictive-insights/)
 - [Technical Implementation](analytics/technical-implementation/) - Technical setup
-  - [Data Integration](((analytics/technical-implementation/data-integration))
+  - [Data Integration](analytics/technical-implementation/data-integration/)
 
 ## Integration with Other Areas
 
@@ -82,4 +82,4 @@ Each feature is organized into progressive complexity levels:
 - **Compliance & Security**: [Compliance Documentation](../compliance-security/)
 
 ---
-*Previous: [Quick Setup Guide](((../quick-setup)) | Next: [Business Context](../business/) →*
+*Previous: [Quick Setup Guide](../quick-setup/) | Next: [Business Context](../business/) →*

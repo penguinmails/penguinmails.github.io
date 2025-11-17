@@ -214,7 +214,7 @@ DNS CONFIGURATION APPROACH:
 errors cause deliverability failures for 60% of cold email campaigns, while 
 our automated approach achieves 99.9% verification success rate.
 
-→ [See Technical Details](((technical-implementation/dns-storage-integration-guide))
+→ [See Technical Details](../technical-implementation/dns-storage-integration-guide/)
 → [Competitive Advantage](competitive-analysis#dns-automation)"
 
 VPS INFRASTRUCTURE:
@@ -280,7 +280,7 @@ factors that general email platforms don't address.
 • **Compliance-First Design**: Unlike platforms that add compliance as an afterthought
 • **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
-→ [See Complete Architecture](((../architecture/overview))
+→ [See Complete Architecture](../architecture/overview/)
 → [Why These Decisions Matter](competitive-analysis#architecture-decisions)
 ```
 

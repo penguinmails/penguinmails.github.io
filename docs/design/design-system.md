@@ -194,7 +194,7 @@ Following Phase 3B standards, all designs start mobile-first:
 ---
 
 ## Related Documents
-- [Component Library](((component-library)) - Reusable component catalog
-- [Accessibility Guidelines](((accessibility-guidelines)) - WCAG compliance and inclusive design
-- [Design Tokens](((design-tokens)) - Design token specifications
-- [UI Library](((ui-library)) - Component usage guidelines and patterns
+- [Component Library](../component-library/) - Reusable component catalog
+- [Accessibility Guidelines](../accessibility-guidelines/) - WCAG compliance and inclusive design
+- [Design Tokens](../design-tokens/) - Design token specifications
+- [UI Library](../ui-library/) - Component usage guidelines and patterns
