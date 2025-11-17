@@ -91,7 +91,7 @@ This document serves as the central hub for all roadmap information, providing r
 |------------------|-------------|----------|
 | **Advanced Analytics** | Enhanced KPI tracking, predictive modeling, cross-channel integration | Q2-Q3 2026 |
 | **Workflow Automation** | Marketing automation, intelligent recommendations, team collaboration | Q2-Q3 2026 |
-| **AI Optimization** | ML-based optimization, predictive analytics, intelligent automation | Q4 2026 |
+| **AI Optimization** | ML-based optimization, predictive analytics, intelligent automation | 2027+ roadmap consideration |
 | **Enterprise Features** | SSO, advanced security, real-time monitoring, enterprise integrations | Q4 2026-Q1 2027 |
 
 ### 🔮 Future Vision (2027+)

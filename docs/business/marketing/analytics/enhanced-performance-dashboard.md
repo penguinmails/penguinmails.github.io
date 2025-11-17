@@ -35,7 +35,20 @@ This document establishes the marketing performance dashboard framework with cle
 - Real-time monitoring and automated alerts
 - Machine learning for campaign optimization
 - Advanced attribution modeling
-- Mobile-first dashboard experience
+
+### Post-MVP Roadmap (2026+)
+**Future Enhancements:**
+- AI-powered predictive analytics and optimization
+- Real-time monitoring and automated alerts
+- Machine learning for campaign optimization
+- Advanced attribution modeling
+
+### Future Roadmap (2027+)
+**Mobile and Advanced Features:**
+- Mobile-first dashboard experience (2027+ roadmap consideration)
+- Native mobile applications (2027+ roadmap consideration)
+- Mobile push notifications (2027+ roadmap consideration)
+- Advanced mobile optimization (2027+ roadmap consideration)
 
 ---
 
@@ -205,11 +218,11 @@ This document establishes the marketing performance dashboard framework with cle
 - Predictive performance modeling
 - Advanced attribution modeling
 
-**Q4 2026 - Mobile-First Experience:**
-- Mobile-optimized dashboard
-- Native mobile applications
-- Mobile push notifications
-- Offline functionality
+**Q1-Q4 2027 - Mobile-First Experience:**
+- Mobile-optimized dashboard (2027+ roadmap consideration)
+- Native mobile applications (2027+ roadmap consideration)
+- Mobile push notifications (2027+ roadmap consideration)
+- Offline functionality (2027+ roadmap consideration)
 
 ---
 

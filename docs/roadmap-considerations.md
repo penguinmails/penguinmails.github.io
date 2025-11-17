@@ -28,10 +28,10 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 **Timeline**: Q2 2026 onwards
 **Philosophy**: "Build sophisticated features on proven foundation"
 
-- **AI-Powered Optimization**: Machine learning for campaign optimization
-- **Real-Time Monitoring**: Live performance tracking and alerts
-- **Advanced Analytics**: Predictive modeling and forecasting
-- **Enterprise Features**: SSO, advanced security, compliance automation
+- **Real-Time Monitoring**: Live performance tracking and alerts (Q4 2026-Q1 2027)
+- **Enterprise Features**: SSO, advanced security, compliance automation (Q4 2026-Q1 2027)
+- **Future Roadmap Considerations**: AI-powered optimization planned for 2027+
+- **Future Roadmap Considerations**: Advanced predictive analytics planned for 2027+
 
 ## Timeline Reality Check
 
@@ -54,17 +54,19 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ## What We Won't Promise (And Why)
 
-### Real-Time AI Optimization (Q4 2026+)
-**Why Not Earlier?**: 
+### Advanced AI Optimization (2027+)
+**Why Not Earlier?**:
 - Requires significant data and machine learning infrastructure
 - Small team can't build sophisticated AI while maintaining core features
 - Market validation needed before major AI investment
+- Limited ROI for small team on advanced AI development
 
-### Mobile-First Experience (Q4 2026+)
+### Mobile-First Experience (2027+ roadmap consideration)
 **Why Not Earlier?**:
 - Desktop-first approach ensures reliable core functionality
 - Mobile optimization requires significant UX investment
 - Desktop users are primary target market initially
+- Limited executive user base justifies mobile-first approach
 
 ### Enterprise Integration (Q4 2026+)
 **Why Not Earlier?**:

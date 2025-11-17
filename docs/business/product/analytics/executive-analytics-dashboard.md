@@ -14,8 +14,8 @@ This document establishes the executive analytics dashboard for directional KPI 
 
 **Document Level:** Level 2 - Analytics Dashboard Framework  
 **Target Audience:** Product Directors, Product Managers, Product Analytics Teams  
-**MVP Analytics Focus:** Basic KPI visibility, directional insights, manual reporting  
-**Post-MVP Analytics Focus:** Advanced analytics, predictive modeling, AI-powered optimization
+**MVP Analytics Focus:** Basic KPI visibility, directional insights, manual reporting
+**Future Roadmap (2027+):** Advanced analytics, predictive modeling, AI-powered optimization
 
 ---
 
@@ -29,7 +29,7 @@ This document establishes the executive analytics dashboard for directional KPI 
 - Export capabilities for external tools
 - Basic dashboard with key product metrics
 
-### Post-MVP Roadmap (2026+)
+### Future Roadmap (2027+)
 **Future Enhancements:**
 - Advanced predictive analytics and modeling
 - AI-powered optimization recommendations
@@ -263,10 +263,10 @@ This document establishes the executive analytics dashboard for directional KPI 
 - **Advanced Correlation Analysis:** Complex cross-domain correlation insights
 
 ### Implementation Timeline
-- **Q1 2026:** Enhanced analytics platform with improved data processing
-- **Q2 2026:** Basic predictive modeling implementation
-- **Q3 2026:** Advanced analytics dashboard with AI recommendations
-- **Q4 2026:** Full predictive analytics platform with real-time capabilities
+- **Q1 2027:** Enhanced analytics platform with improved data processing
+- **Q2 2027:** Basic predictive modeling implementation
+- **Q3 2027:** Advanced analytics dashboard with AI recommendations
+- **Q4 2027:** Full predictive analytics platform with real-time capabilities
 
 ---
 
