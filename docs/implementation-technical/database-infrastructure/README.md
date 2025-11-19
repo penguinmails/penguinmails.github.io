@@ -23,6 +23,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ### 📋 **Level 1: Strategic Overview**
 
+- `5-tier-database-architecture-guide.md` - Comprehensive backend developer guide for the 5-tier database architecture
 - `README` (this document) - Main database and infrastructure overview with key decisions and business impact
 - High-level database architecture and infrastructure management principles
 
