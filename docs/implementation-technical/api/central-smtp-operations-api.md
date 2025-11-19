@@ -23,7 +23,7 @@ Strictly aligned with:
   - `../database-infrastructure/queue-system-implementation-guide.md`
   - `../database-infrastructure/business-leaders-database-migration-guide.md`
   - `../database-infrastructure/oltp-mermaid-er.md`
-  - `../database-infrastructure/notifications-mermaid-er.md`
+  - `../database-infrastructure/notifications-database/mermaid-er.md`
 - Executive security & audit requirements (BF-004)
 - Executive via read-only consumption of these resources by the Executive API
 

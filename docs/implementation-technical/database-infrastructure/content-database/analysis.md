@@ -1,11 +1,14 @@
 ---
+title: "Content Database Architecture: Analysis and Proposals"
+description: "Content Database Architecture: Analysis, Gotchas, and Proposals"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
+
 # Content Database Architecture: Analysis, Gotchas, and Proposals
 
-This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure) and provides a pragmatic, implementation-ready refinement that aligns with:
+This document analyzes the current Content DB design (as described in the content-database schema guide) and provides a pragmatic, implementation-ready refinement that aligns with:
 
 - 4-tier architecture:
   - OLTP: operational entities and message metadata.
@@ -14,7 +17,7 @@ This document analyzes the current Content DB design (as described in `docs/impl
   - Queue: pipelines and async processing.
 - Separation of concerns:
   - Content DB is NOT a logging, monitoring, or analytics sink.
-  - External analytics/logging handles telemetry (per [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)).
+  - External analytics/logging handles telemetry per the external analytics logging documentation.
 
 This is the canonical interpretation to use when reconciling legacy content DB docs.
 
@@ -22,7 +25,7 @@ This is the canonical interpretation to use when reconciling legacy content DB d
 
 ## 1. Current Model (from legacy guide)
 
-Key constructs from `docs/implementation-technical/database-infrastructure/content-database-schema-guide`:
+Key constructs from the content-database schema guide:
 
 - email_messages
   - Message-level metadata and traces, keyed by storage_key, referencing email_content.
@@ -67,7 +70,7 @@ attachments {
 
 %% Relationships
 content_objects ||--o{ attachments : "can have"
-```markdown
+```
 
 captures the core idea correctly: content_objects as body store; attachments referencing via parent_storage_key.
 
@@ -75,7 +78,7 @@ captures the core idea correctly: content_objects as body store; attachments ref
 
 ## 2. Gotchas in the Existing Content DB Design
 
-Summarized issues and risks based on `content_database_schema_guide`:
+Summarized issues and risks based on the content_database_schema_guide:
 
 1) Overlap and confusion: email_content vs content_objects vs email_messages
 
@@ -118,7 +121,7 @@ Summarized issues and risks based on `content_database_schema_guide`:
     - High-volume logs.
     - Monitoring and security analytics.
 - Risk:
-  - Recreates the “logs in the primary DB” anti-pattern we just removed from OLAP.
+  - Recreates the "logs in the primary DB" anti-pattern we just removed from OLAP.
   - Bloats Content DB; mixes infra concerns with storage.
 - Principle:
   - Detailed logging / monitoring → external analytics/logging stack.
@@ -150,7 +153,7 @@ Summarized issues and risks based on `content_database_schema_guide`:
     - Are really operational/infra constructs.
     - Overlap with admin_system_events and external logging responsibilities.
 - Risk:
-  - Multi-place definitions for “alerts.”
+  - Multi-place definitions for "alerts."
 - Principle:
   - If you need durable alert summaries:
     - Use admin_system_events (OLAP) or a dedicated ops DB, not Content DB.
@@ -190,7 +193,7 @@ CREATE TABLE content_objects (
 
 CREATE INDEX idx_content_objects_tenant ON content_objects(tenant_id);
 CREATE INDEX idx_content_objects_expires ON content_objects(expires_at) WHERE expires_at IS NOT NULL;
-```markdown
+```
 
 Key points:
 - Single canonical body store.
@@ -216,11 +219,11 @@ CREATE TABLE attachments (
 );
 
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
-```markdown
+```
 
 Key points:
 - No analytics/metrics here.
-- Only what’s needed to fetch and render files.
+- Only what's needed to fetch and render files.
 
 B. Relationship to OLTP
 
@@ -254,7 +257,7 @@ C. What to drop or externalize (relative to legacy guide)
 
 ## 4. Concrete Gotchas and How to Handle Them
 
-1) “Matches content_storage_key from Primary DB”
+1) "Matches content_storage_key from Primary DB"
 
 - Gotcha:
   - Implies FK from content_objects.storage_key to an OLTP table.
@@ -264,7 +267,7 @@ C. What to drop or externalize (relative to legacy guide)
     - One-way reference: OLTP row has content_storage_key; Content DB trusts it.
     - Background validation job (in app) to detect orphaned content.
 
-2) “Email message analytics” inside Content DB
+2) "Email message analytics" inside Content DB
 
 - Gotcha:
   - email_messages described as analytics/traces in Content DB.
@@ -327,4 +330,5 @@ This analysis should be used to:
 - Align content DB docs with the same principles applied to OLAP:
   - Keep it lean.
   - Model durable state, not noisy telemetry.
+
 ---

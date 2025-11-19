@@ -67,7 +67,7 @@ CREATE TABLE billing_analytics (
 
 CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
     ON billing_analytics(tenant_id, period_start, period_end);
-```markdown
+```
 
 Purpose:
 - Aggregated usage per tenant per period.
@@ -93,7 +93,7 @@ CREATE TABLE campaign_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```markdown
+```
 
 Purpose:
 - Aggregated per-campaign performance for reporting and optimization.
@@ -120,7 +120,7 @@ CREATE TABLE mailbox_analytics (
     campaign_status TEXT,
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```markdown
+```
 
 Purpose:
 - Mailbox-level deliverability, health, and warmup analytics.
@@ -144,7 +144,7 @@ CREATE TABLE lead_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```markdown
+```
 
 Purpose:
 - Per-lead engagement summaries to support scoring and segmentation.
@@ -169,7 +169,7 @@ CREATE TABLE warmup_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```markdown
+```
 
 Purpose:
 - Warmup performance and reputation metrics.
@@ -193,7 +193,7 @@ CREATE TABLE sequence_step_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```markdown
+```
 
 Purpose:
 - Step-level performance to support optimization and A/B testing.
@@ -222,7 +222,7 @@ CREATE TABLE admin_audit_log (
     data_classification VARCHAR(20),
     retention_category VARCHAR(20)
 );
-```markdown
+```
 
 Purpose:
 - OLAP-resident, compliance-scope audit log for high-risk actions:
@@ -270,7 +270,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 ## 4. Relationships (High-Level)
 
 See ER diagram:
-- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure)
+- [`mermaid-er.md`](mermaid-er.md)
 
 Key relationships:
 
@@ -321,7 +321,7 @@ If future needs arise (not implemented now), consider:
 These would be:
 - Derived from the Notifications DB (`admin_system_events`) and/or external logs.
 - Implemented as clearly named aggregate tables/views.
-- Still respecting OLAP’s “aggregated and lean” constraints.
+- Still respecting OLAP's "aggregated and lean" constraints.
 
 Currently:
 - No such OLAP tables are defined.

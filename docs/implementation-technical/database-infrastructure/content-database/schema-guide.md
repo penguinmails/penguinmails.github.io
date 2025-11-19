@@ -24,8 +24,8 @@ It is NOT:
 
 For analytics and logging responsibilities, refer to:
 
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure)
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
+- [OLAP Analytics Schema Guide](README.md) - Analytics and aggregation responsibilities
+- [External Analytics Logging](README.md) - Logging and telemetry responsibilities
 
 ---
 
@@ -58,8 +58,7 @@ For analytics and logging responsibilities, refer to:
 
 - No generic log tables, connection pool metrics, or system alerts in Content DB.
 - High-volume logs, access tracking, and infra monitoring:
-  - Go to external logging/product analytics/SIEM per:
-    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure).
+  - Go to external logging/product analytics/SIEM per the external analytics logging documentation.
 
 1) Focus on retention, compliance, and efficient storage
 
@@ -112,7 +111,7 @@ CREATE INDEX idx_content_objects_expires
 CREATE INDEX idx_content_objects_hash
     ON content_objects(content_hash)
     WHERE content_hash IS NOT NULL;
-```markdown
+```
 
 Notes:
 - storage_key:
@@ -143,7 +142,7 @@ CREATE TABLE attachments (
 
 CREATE INDEX idx_attachments_parent
     ON attachments(parent_storage_key);
-```markdown
+```
 
 Notes:
 - attachments are strictly scoped to content_objects.
@@ -198,7 +197,7 @@ Content DB is not a log sink. The following apply:
   - Do not treat content_search_index as a primary Content DB responsibility.
 
 For patterns and responsibilities:
-- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure).
+- See [External Analytics Logging](README.md).
 
 ---
 
@@ -208,7 +207,7 @@ Several lifecycle and optimization flows were previously encoded entirely in SQL
 
 1) JS/TS application)
 
-- Implement in services/workers:
+Implement in services/workers:
   - Content ingestion:
     - Generate storage_key.
     - Write to content_objects and attachments.
@@ -228,7 +227,7 @@ Several lifecycle and optimization flows were previously encoded entirely in SQL
 
 2) SQL )
 
-- Implement in SQL:
+Implement in SQL:
   - Small, deterministic helpers with clear interfaces, e.g.:
     - Mark content as archived by storage_key.
     - Select candidates for expiration based on expires_at.
@@ -261,7 +260,7 @@ BEGIN
     RETURN v_count;
 END;
 $$ LANGUAGE plpgsql;
-```markdown
+```
 
 JS/TS worker would:
 - Call this helper in batches.
@@ -294,8 +293,8 @@ Use this guide as the forward-looking contract:
     - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure),
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure),
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure),
+- [OLTP Schema Guide](README.md),
+- [OLAP Analytics Schema Guide](README.md),
+- [External Analytics Logging](README.md),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 ---

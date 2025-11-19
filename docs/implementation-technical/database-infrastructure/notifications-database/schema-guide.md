@@ -108,12 +108,12 @@ CREATE INDEX idx_notifications_user_tenant_created
 CREATE INDEX idx_notifications_unread
     ON notifications(user_id, tenant_id, is_read, created_at DESC)
     WHERE is_read = false;
-```markdown
+```
 
 Semantics:
 
 - Source of truth for:
-  - “What notifications should this user/admin see?”
+  - "What notifications should this user/admin see?"
 - Operations:
   - On login:
     - Fetch recent notifications (filter by unread, tenant_id, user_id).
@@ -180,7 +180,7 @@ CREATE INDEX idx_admin_system_events_tenant
 
 CREATE INDEX idx_admin_system_events_severity
     ON admin_system_events(severity, created_at DESC);
-```markdown
+```
 
 Semantics:
 
@@ -292,7 +292,7 @@ To avoid scope creep:
 ## 8. Mermaid ER Diagram
 
 See:
-- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure)
+- [`mermaid-er.md`](mermaid-er.md)
 for the visual ER representation of this schema.
 
 ---

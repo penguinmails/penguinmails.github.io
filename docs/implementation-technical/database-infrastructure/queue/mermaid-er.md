@@ -1,9 +1,13 @@
 ---
 title: "Queue Database Entity Relationship Diagram"
-description: "Documentation for Queue Database Entity Relationship Diagram - Mermaid ER Diagram"
+description: "Queue Database Entity Relationship Diagram - Database Schema Visualization"
 last_modified_date: "2025-11-19"
 level: "2"
-persona: "Documentation Users"
+persona: "Database Architects"
+related_docs:
+  - "[Main Guide](main.md) - Complete overview"
+  - "[Architecture](architecture.md) - System design principles"
+  - "[Database Schema](database-schema.md) - Schema details"
 ---
 
 # Queue Database Entity Relationship Diagram
@@ -26,7 +30,7 @@ The Queue tier:
 - Is **NOT**:
   - An analytics warehouse.
   - A permanent log store.
-  - A place for heavy payloads or PII-rich blobs.
+  - A place for heavy payloads
 
 ## Entity Overview
 
@@ -142,3 +146,4 @@ erDiagram
 
   job_queues ||--o{ jobs : "queue contains jobs"
   jobs       ||--o{ job_logs : "job has logs"
+```
