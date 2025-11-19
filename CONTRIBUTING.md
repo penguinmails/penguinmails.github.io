@@ -9,7 +9,6 @@ We welcome contributions to improve our documentation! This guide provides detai
 - Docker installed on your system
 - Git for version control
 - Modern web browser for testing
-- Node.js and npm (for markdown linting)
 
 ### Local Development Setup
 
@@ -45,15 +44,8 @@ docker system prune -a && docker build -t penguinmails-docs .
 # Live reload development
 docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
 
-# Debug markdown lint issues
-npx markdownlint-cli2 "docs/**/*.md" "user-journeys/**/*.md" "tasks/**/*.md" "index.md" "README.md" --config .markdownlint.json
-
-# Run automated lint fixes
-python fix_md001.py
-python fix_md022.py
-python fix_md036.py
-python fix_md041.py
-python fix_md047.py
+# Debug markdown lint issues using Docker-based markdownlint
+docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
 
 ## Content Standards
@@ -75,6 +67,7 @@ python fix_md047.py
 - Follow existing markdown formatting
 - Use customer-focused language throughout
 - Maintain business value emphasis in technical content
+- Use targeted surgical edits for linting fixes (see development approach below)
 
 ## Frontmatter Standards
 
@@ -151,18 +144,30 @@ Fixes #123
 
 ## Markdown Linting
 
-### Automated Quality Checks
+### Docker-Based Linting Approach
 
-Our repository uses automated markdown linting to maintain consistency:
+Our repository uses a Docker-based markdown linting approach for consistency and ease of setup:
+
+- **Containerized**: Uses `peterdavehello/markdownlint:latest` Docker image
+- **Consistent Environment**: Same linting results across all development environments
+- **No Dependencies**: Eliminates need for Node.js/npm installation
+- **CI/CD Ready**: Easily integrated into continuous integration pipelines
+- **Latest Version**: Uses the most recent markdownlint version for best compatibility
+
+### Linting Command
 
 ```bash
-# Check all markdown files
-npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
-
-# Auto-fix common issues
-python complete_md022_automation.py
-python complete_md036_automation.py
+# Check focused markdown files (avoids noise from other directories)
+docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
+
+### Development Approach
+
+Our repository emphasizes targeted surgical edits over bulk automation:
+
+- **Lint Check**: Run Docker-based linting to identify specific issues
+- **Surgical Fixes**: Use targeted search/replace edits to fix individual problems
+- **Historical Reference**: Legacy automation scripts are archived in `.roo/legacy-archive/development-automation/`
 
 ### Common Issues and Solutions
 
@@ -201,7 +206,7 @@ python complete_md036_automation.py
 
 1. **Local Testing**: Verify changes render correctly in local development server
 2. **Link Validation**: Ensure all internal and external links work properly
-3. **Linting Compliance**: Run markdown linting to catch formatting issues
+3. **Linting Compliance**: Run Docker-based markdown linting to catch formatting issues
 4. **Content Review**: Verify business value and technical accuracy are maintained
 
 ### Quality Standards
