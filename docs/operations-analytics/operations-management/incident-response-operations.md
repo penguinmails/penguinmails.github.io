@@ -9,6 +9,7 @@ last_modified_date: "2025-11-10"
 ---
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This incident response framework supports our enterprise operational strategy by providing comprehensive incident management capabilities that ensure rapid response and minimal downtime.
 
 **Technical Authority**: Our incident response integrates with enterprise-grade monitoring systems featuring automated alerting, structured incident classification, and comprehensive post-mortem analysis.
@@ -26,6 +27,7 @@ This Incident Response Operations Plan (IRP) establishes procedures for detectin
 ## Incident Classification
 
 ### Severity Levels
+
 ```typescript
 enum IncidentSeverity {
   SEVERITY_1 = 'SEV-1',  // Critical - Immediate response required
@@ -67,7 +69,7 @@ interface Incident {
   tags: string[];
   timeline: IncidentEvent[];
 }
-```
+```markdown
 
 ### Incident Categories
 - **Security Incidents**: Unauthorized access, data breaches, malware
@@ -121,11 +123,11 @@ interface IncidentResponseTeam {
     ];
   };
 }
-```
+```markdown
 
 ### Escalation Contacts
-- **Primary On-call**: Engineering Lead (24.md)
-- **Secondary On-call**: DevOps Engineer (24.md)
+- **Primary On-call**: Engineering Lead (24)
+- **Secondary On-call**: DevOps Engineer (24)
 - **Management**: CTO (Business hours), CEO (Critical incidents)
 - **External**: Security firm (Security incidents), Legal counsel (Legal issues)
 
@@ -161,7 +163,7 @@ interface MonitoringConfig {
     ];
   };
 }
-```
+```markdown
 
 ### Initial Assessment Process
 1. **Alert Triage**: Automated alerts routed to on-call engineer
@@ -193,7 +195,7 @@ interface ImpactAssessment {
     resourceUtilization: number;  // Additional resources required
   };
 }
-```
+```markdown
 
 ## Response Procedures
 
@@ -247,7 +249,7 @@ const containmentPlaybooks = {
     'Implement data recovery'
   ]
 };
-```
+```markdown
 
 ### Investigation Phase
 1. **Evidence Collection**: Preserve logs, screenshots, and system state
@@ -292,7 +294,7 @@ interface RecoveryProcess {
     ];
   };
 }
-```
+```markdown
 
 ## Communication Procedures
 
@@ -313,7 +315,7 @@ interface InternalCommunication {
     content: ['Incident status', 'Expected resolution time', 'Business impact'];
   };
 }
-```
+```markdown
 
 ### External Communication
 ```typescript
@@ -350,7 +352,7 @@ interface ExternalCommunication {
     content: ['Prepared statements', 'Background information'];
   };
 }
-```
+```markdown
 
 ### Status Page Management
 - **Real-time Updates**: Automated status updates based on monitoring
@@ -391,7 +393,7 @@ interface IncidentClosure {
     ];
   };
 }
-```
+```markdown
 
 ### Post-Mortem Process
 ```typescript
@@ -424,7 +426,7 @@ interface PostMortemAction {
   status: 'pending' | 'in_progress' | 'completed';
   followUp: string; // How success will be measured
 }
-```
+```markdown
 
 ### Continuous Improvement
 - **Lessons Learned**: Document and share incident insights
@@ -466,7 +468,7 @@ interface BreachNotification {
     contractual: 'Notify customers per contract terms';
   };
 }
-```
+```markdown
 
 ### Evidence Preservation
 - **Chain of Custody**: Document all evidence handling procedures
@@ -506,7 +508,7 @@ interface IncidentTesting {
     participants: 'All response team members';
   };
 }
-```
+```markdown
 
 ### Plan Maintenance
 - **Annual Review**: Complete plan review and updates
@@ -537,7 +539,7 @@ interface IncidentMetrics {
     resolutionSatisfaction: number; // Internal satisfaction score
   };
 }
-```
+```markdown
 
 ### Reporting Requirements
 - **Monthly Reports**: Incident summary and trend analysis
@@ -564,8 +566,8 @@ interface IncidentMetrics {
 ## Related Documents
 - [Infrastructure Operations Management](infrastructure-operations-management)) - System architecture and deployment details
 - [Environment & Release Management](environment-release-management)) - Deployment and rollback procedures
-- [Security Framework](../../compliance-security/enterprise.md)) - Security incident handling architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise.md)) - Coordinated security and privacy response patterns
+- [Security Framework](../../compliance-security/enterprise)) - Security incident handling architecture and controls
+- [Security & Privacy Integration](../../compliance-security/enterprise)) - Coordinated security and privacy response patterns
 - [QA Testing Protocols](qa_testing_protocols)) - Testing and validation procedures
 
 **Keywords**: incident response, security incidents, disaster recovery, business continuity, communication protocols, post-mortem analysis, compliance requirements

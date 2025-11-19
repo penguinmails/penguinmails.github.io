@@ -11,7 +11,8 @@ In a new `/lib/schemas/tenant.schemas.ts` file, define and export a Zod schema (
 
 ## Context
 
-Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Zod schemas are used throughout the application for:
+Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Zod schemas are used throughout the application for:
+
 - **API Request Validation:** Validating incoming request data
 - **Type Safety:** Ensuring data matches expected types
 - **Security:** Preventing invalid or malicious data from entering the system
@@ -57,12 +58,14 @@ export type CreateTenantInput = z.infer<typeof createTenantSchema>;
 ### Validation Rules
 
 **Tenant Name:**
+
 - Required field
 - Minimum 1 character (after trimming)
 - Maximum 100 characters
 - Trimmed to remove leading/trailing whitespace
 
 **Company Name:**
+
 - Required field
 - Minimum 1 character (after trimming)
 - Maximum 255 characters
@@ -71,6 +74,7 @@ export type CreateTenantInput = z.infer<typeof createTenantSchema>;
 ### Future Enhancements
 
 Consider adding:
+
 - Character restrictions (e.g., no special characters for tenant name)
 - Workspace name validation (URL-friendly format)
 - Reserved name checking (future enhancement)
@@ -86,8 +90,8 @@ Consider adding:
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Validation patterns
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data validation requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Validation patterns
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data validation requirements
 
 ## Dependencies
 
@@ -103,5 +107,3 @@ Consider adding:
 - [ ] Verify TypeScript types are correctly inferred
 - [ ] Test schema with missing fields - should fail
 - [ ] Test schema with non-string values - should fail
-
-

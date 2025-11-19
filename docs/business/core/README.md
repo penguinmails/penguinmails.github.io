@@ -15,12 +15,14 @@ This directory contains the essential business documents that serve as the prima
 ## Progressive Disclosure Flow
 
 ### 📋 Entry Point Documents
-- [**Executive Summary**](..md) - Comprehensive business case overview (158 lines)
-- [**Cost Comparisons**](..md) - Financial comparison with alternatives (≤200 lines)
-- [**Competitive Analysis**](..md) - Market positioning and vendor comparison (≤200 lines)
-- [**ROI Calculator**](..md) - Financial modeling and return calculations (≤200 lines)
+
+- [**Executive Summary**](.) - Comprehensive business case overview (158 lines)
+- [**Cost Comparisons**](.) - Financial comparison with alternatives (≤200 lines)
+- [**Competitive Analysis**](.) - Market positioning and vendor comparison (≤200 lines)
+- [**ROI Calculator**](.) - Financial modeling and return calculations (≤200 lines)
 
 ### 🎯 Decision Path
+
 1. **Start with** `executive-summary.md` for complete business case overview
 2. **Jump to** specific areas of interest:
    - Financial Justification: `cost-comparisons.md` + `roi-calculator.md`
@@ -32,6 +34,7 @@ This directory contains the essential business documents that serve as the prima
    - **Performance Analysis**: Navigate to `../performance/`
 
 ### 📊 Document Characteristics
+
 - **Content Depth**: Executive-focused (≤200 lines per document)
 - **Tone**: Strategic business justification
 - **Target Audience**: Decision makers with budget authority
@@ -40,12 +43,13 @@ This directory contains the essential business documents that serve as the prima
 ---
 
 **Related Directories:**
-- [Industry Business Cases](../industry-business-cases.md) - Vertical-specific analysis
-- [Implementation Guide](../implementation.md) - Technical implementation details
-- [Procurement & Compliance](../procurement-compliance.md) - Enterprise evaluation and compliance
-- [Performance Analysis](../performance.md) - Metrics and optimization
-- [Financial Analysis](../financial-analysis.md) - Deep financial modeling
-- [Reference Materials](../reference.md) - Templates and methodology
+
+- [Industry Business Cases](/docs/business/industry-business-cases) - Vertical-specific analysis
+- [Implementation Guide](/docs/business/implementation) - Technical implementation details
+- [Procurement & Compliance](/docs/business/procurement-compliance) - Enterprise evaluation and compliance
+- [Performance Analysis](/docs/business/performance) - Metrics and optimization
+- [Financial Analysis](/docs/business/financial-analysis) - Deep financial modeling
+- [Reference Materials](/docs/business/reference/README) - Templates and methodology
 
 ---
 

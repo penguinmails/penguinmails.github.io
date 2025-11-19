@@ -13,30 +13,35 @@ This document outlines the key user journeys for investors and venture capitalis
 ### **Investor Categories**
 
 #### **Seed/Series A Investors**
+
 - Focus on early-stage growth potential
 - Assess market opportunity and competitive positioning
 - Evaluate founding team and execution capability
 - Consider product-market fit and scalability
 
 #### **Growth Investors**
+
 - Focus on proven business model and growth trajectory
 - Assess market expansion and competitive advantages
 - Evaluate operational efficiency and scaling capability
 - Consider exit strategy and return potential
 
 #### **Strategic Investors**
+
 - Corporate venture arms and strategic partners
 - Focus on strategic alignment and market synergies
 - Assess technology differentiation and IP portfolio
 - Consider ecosystem integration and partnerships
 
 #### **Due Diligence Teams**
+
 - Financial analysts and investment researchers
 - Focus on detailed financial and operational analysis
 - Assess risk factors and mitigation strategies
 - Evaluate management team and organizational capability
 
 ### **Common Information Needs**
+
 - Market opportunity analysis and sizing
 - Financial performance and projections
 - Competitive positioning and advantages
@@ -51,6 +56,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ### **Journey 1: Initial Investment Discovery**
 
 #### **Market Research Phase**
+
 1. **Industry Analysis**
    - Research email deliverability and marketing automation market
    - Analyze market size, growth trends, and opportunity
@@ -64,6 +70,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Review team background and company history
 
 #### **Preliminary Assessment**
+
 1. **Market Opportunity Evaluation**
    - Assess total addressable market (TAM) and growth potential
    - Evaluate competitive dynamics and barriers to entry
@@ -81,6 +88,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ### **Journey 2: Due Diligence Process**
 
 #### **Financial Analysis**
+
 1. **Historical Performance Review**
    - Review financial statements and performance metrics
    - Analyze revenue growth, margins, and profitability
@@ -94,6 +102,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Consider scenario planning and stress testing
 
 #### **Market & Competitive Analysis**
+
 1. **Competitive Positioning**
    - Analyze direct and indirect competitors
    - Assess competitive advantages and differentiation
@@ -107,6 +116,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Evaluate customer feedback and product-market fit
 
 #### **Technology & IP Assessment**
+
 1. **Technology Platform**
    - Assess technical architecture and scalability
    - Review development roadmap and innovation capability
@@ -120,6 +130,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Consider IP litigation risk and protection
 
 #### **Team & Organizational Assessment**
+
 1. **Management Evaluation**
    - Assess founding team background and experience
    - Evaluate leadership capability and track record
@@ -137,6 +148,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ### **Journey 3: Investment Decision Process**
 
 #### **Investment Committee Review**
+
 1. **Investment Thesis Development**
    - Synthesize findings from due diligence process
    - Develop investment thesis and value creation strategy
@@ -150,6 +162,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Evaluate exit strategy and return potential
 
 #### **Final Evaluation & Decision**
+
 1. **Risk Assessment**
    - Analyze key risk factors and mitigation strategies
    - Consider market, competitive, and execution risks
@@ -167,6 +180,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ### **Journey 4: Post-Investment Involvement**
 
 #### **Portfolio Company Support**
+
 1. **Strategic Guidance**
    - Provide strategic advice and industry insights
    - Assist with business development and partnerships
@@ -180,6 +194,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Help with technology and product development
 
 #### **Ongoing Monitoring & Reporting**
+
 1. **Performance Monitoring**
    - Review quarterly performance and metrics
    - Assess progress against business plan and milestones
@@ -197,6 +212,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ## Investor Context
 
 ### **Key Pain Points**
+
 - Limited access to detailed company information and data
 - Difficulty in assessing technology differentiation and competitive advantages
 - Challenge in evaluating customer traction and product-market fit
@@ -204,6 +220,7 @@ This document outlines the key user journeys for investors and venture capitalis
 - Uncertainty about market timing and competitive threats
 
 ### **Success Metrics**
+
 - **Investment Quality**: High-quality investment opportunities with strong fundamentals
 - **Due Diligence Efficiency**: Streamlined due diligence process with comprehensive information
 - **Risk Assessment**: Thorough risk identification and mitigation strategies
@@ -215,6 +232,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ## Information Access & Security
 
 ### **Information Sharing Protocols**
+
 1. **Public Information Access**
    - Company website and marketing materials
    - Press releases and public announcements
@@ -228,6 +246,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Strategic plans and competitive analysis
 
 ### **Data Room Management**
+
 1. **Secure Document Sharing**
    - Centralized, secure data room access
    - Controlled access to confidential information
@@ -245,6 +264,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ## Communication & Engagement
 
 ### **Stakeholder Communication**
+
 1. **Regular Updates**
    - Quarterly business reviews and performance updates
    - Annual strategic planning and goal setting
@@ -258,6 +278,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Exit strategy planning and execution
 
 ### **Professional Development**
+
 1. **Industry Engagement**
    - Industry conference participation and speaking
    - Thought leadership and content creation
@@ -275,6 +296,7 @@ This document outlines the key user journeys for investors and venture capitalis
 ## Common Investor Workflows
 
 ### **Investment Process Timeline**
+
 1. **Weeks 1-2: Initial Discovery**
    - Market research and company identification
    - Preliminary assessment and qualification
@@ -294,6 +316,7 @@ This document outlines the key user journeys for investors and venture capitalis
    - Post-investment planning and onboarding
 
 ### **Ongoing Portfolio Management**
+
 1. **Monthly Activities**
    - Performance monitoring and metric review
    - Strategic guidance and support provision
@@ -314,11 +337,12 @@ This document outlines the key user journeys for investors and venture capitalis
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`press-media-journeys.md`](press-media-journeys.md)
-- [`competitor-analysis-journeys.md`](competitor-analysis-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`press-media-journeys.md`](press-media-journeys)
+- [`competitor-analysis-journeys.md`](competitor-analysis-journeys)
 
 ---
 

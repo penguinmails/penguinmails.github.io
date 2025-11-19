@@ -19,25 +19,32 @@ description: "Comprehensive team performance, QA testing, and staff operations f
 ## Sprint Retrospective & Team Improvement
 
 ### **Purpose**
+
 This framework provides a structured approach for conducting effective sprint retrospectives, continuously improving team processes, celebrating successes, and identifying actionable improvements for future sprints.
 
 ### **Retrospective Overview**
 
 #### **When**: End of each sprint (Friday afternoon)
+
 #### **Duration**: 60 minutes
+
 #### **Attendees**: Development team, Product Owner, occasional stakeholders
+
 #### **Facilitator**: Rotates weekly among team members
+
 #### **Format**: Structured discussion with time-boxed sections
 
 ### **Preparation (Pre-Retrospective)**
 
 #### **Data Collection**
+
 - **Sprint Metrics**: Velocity, burndown chart, completion rate
 - **Quality Metrics**: Bug count, test coverage, deployment frequency
 - **Team Feedback**: Anonymous input collected via shared document
 - **Stakeholder Feedback**: Product Owner input on deliverables
 
 #### **Pre-Work Assignments**
+
 - **Team Members**: Review completed work and personal experiences
 - **Product Owner**: Prepare feedback on sprint outcomes
 - **Facilitator**: Review sprint data and prepare agenda
@@ -45,36 +52,42 @@ This framework provides a structured approach for conducting effective sprint re
 ### **Retrospective Structure**
 
 #### **Opening (5 minutes)**
+
 - **Welcome**: Facilitator welcomes team and reviews agenda
 - **Ground Rules**: Quick reminder of respectful communication
 - **Sprint Summary**: Product Owner provides high-level sprint overview
 - **Success Acknowledgment**: Recognize team achievements
 
 #### **Data Review (10 minutes)**
+
 - **Sprint Metrics**: Velocity, story points completed, burndown trends
 - **Quality Metrics**: Bug rates, test coverage, technical debt
 - **Process Metrics**: Meeting attendance, blocker resolution time
 - **Discussion**: Initial reactions to quantitative data
 
 #### **What Went Well (15 minutes)**
+
 - **Individual Reflections**: Each person shares 1-2 positive experiences
 - **Category Grouping**: Facilitator groups similar themes
 - **Discussion**: Explore why things went well and how to sustain successes
 - **Action Items**: Identify ways to build on positive momentum
 
 #### **What Could Be Improved (15 minutes)**
+
 - **Individual Reflections**: Each person shares 1-2 improvement opportunities
 - **Category Grouping**: Group into themes (process, communication, technical)
 - **Root Cause Analysis**: Dig deeper into underlying causes
 - **Prioritization**: Identify most impactful improvement areas
 
 #### **Action Planning (10 minutes)**
+
 - **Action Item Creation**: Convert improvements into specific, actionable items
 - **Owner Assignment**: Assign responsible team members for each action
 - **Timeline Setting**: Define when actions should be implemented
 - **Success Metrics**: Define how success will be measured
 
 #### **Closing (5 minutes)**
+
 - **Commitment Review**: Team confirms commitment to action items
 - **Next Sprint Preview**: Product Owner shares upcoming priorities
 - **Appreciation**: Round of appreciation for team contributions
@@ -83,17 +96,20 @@ This framework provides a structured approach for conducting effective sprint re
 ### **Retrospective Techniques**
 
 #### **Keep, Stop, Start**
+
 - **Keep**: What should we continue doing?
 - **Stop**: What should we stop doing?
 - **Start**: What should we start doing?
 
 #### **Sailboat Retrospective**
+
 - **Wind in Sails**: What helped us move forward?
 - **Anchors**: What held us back?
 - **Rocks**: What dangers should we avoid?
 - **Islands**: What opportunities lie ahead?
 
 #### **Starfish Retrospective**
+
 - **Keep Doing**: What worked well and should continue?
 - **Stop Doing**: What should we eliminate?
 - **Start Doing**: What new practices should we adopt?
@@ -107,6 +123,7 @@ This framework provides a structured approach for conducting effective sprint re
 ### **Testing Framework**
 
 #### **Testing Types**
+
 - **Unit Testing**: Individual component and function validation
 - **Integration Testing**: Component interaction and API endpoint testing
 - **End-to-End Testing**: Complete user journey validation
@@ -116,6 +133,7 @@ This framework provides a structured approach for conducting effective sprint re
 - **Cross-browser Testing**: Compatibility across different browsers and devices
 
 #### **Testing Tools**
+
 - **Jest**: Unit testing framework
 - **Cypress**: End-to-end testing
 - **Playwright**: Cross-browser automation
@@ -126,24 +144,28 @@ This framework provides a structured approach for conducting effective sprint re
 ### **Testing Lifecycle**
 
 #### **Pre-Development Testing**
+
 - **Requirement Review**: Validate acceptance criteria clarity
 - **Test Case Design**: Create comprehensive test scenarios
 - **Test Data Preparation**: Set up realistic test environments
 - **Automation Planning**: Identify automation opportunities
 
 #### **Development Phase Testing**
+
 - **Continuous Integration**: Automated testing on every commit
 - **Code Review**: Peer testing during pull request reviews
 - **Unit Test Coverage**: Maintain 80%+ code coverage minimum
 - **Static Analysis**: Automated code quality checks
 
 #### **Pre-Release Testing**
+
 - **Regression Testing**: Ensure existing functionality remains intact
 - **Integration Testing**: Validate component interactions
 - **User Acceptance Testing**: Stakeholder validation of features
 - **Performance Testing**: Load testing under expected conditions
 
 #### **Post-Release Testing**
+
 - **Production Monitoring**: Real-time error tracking and alerting
 - **Beta Testing**: Limited user group validation
 - **A/B Testing**: Feature comparison and optimization
@@ -152,6 +174,7 @@ This framework provides a structured approach for conducting effective sprint re
 ### **Test Case Management**
 
 #### **Test Case Structure**
+
 ```markdown
 **Test Case ID**: QA-001
 **Title**: User Registration Flow
@@ -167,7 +190,7 @@ This framework provides a structured approach for conducting effective sprint re
 **Actual Result**: [Pass/Fail with details]
 **Environment**: [Browser, OS, Device]
 **Test Data**: [Sample user details]
-```
+```markdown
 
 #### **Test Case Categories**
 - **Smoke Tests**: Critical path validation (15-20 tests)
@@ -194,12 +217,12 @@ describe('User Authentication', () => {
 
   it('should allow valid user login', async () => {
     // Test implementation
-    await page.goto('.md);
+    await page.goto(');
     await page.fill('[data-testid="email"]', 'user@example.com');
     await page.fill('[data-testid="password"]', 'password123');
     await page.click('[data-testid="login-button"]');
 
-    await expect(page).toHaveURL('.md);
+    await expect(page).toHaveURL(');
   });
 
   it('should show error for invalid credentials', async () => {
@@ -211,7 +234,7 @@ describe('User Authentication', () => {
     await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
   });
 });
-```
+```markdown
 
 ### **Performance Testing**
 
@@ -264,7 +287,7 @@ describe('User Authentication', () => {
 ### **System Architecture**
 
 #### **Current Design Implementation**
-```
+```markdown
 ┌─────────────────────────────────────────────────────────────┐
 │                    STAFF OPERATIONS SYSTEM                  │
 ├─────────────────────────────────────────────────────────────┤
@@ -276,7 +299,7 @@ describe('User Authentication', () => {
 │  • Staff Member Management                    • Ticket     │
 │                                               • System     │
 └─────────────────────────────────────────────────────────────┘
-```
+```markdown
 
 ### **Staff Management System**
 
@@ -314,7 +337,7 @@ CREATE TABLE staff_role_permissions (
     permission_id INTEGER REFERENCES permissions(id),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ### **Staff Hierarchy Design**
 
@@ -352,11 +375,11 @@ async function addStaffMember(userId: string, roleName: string, notes?: string) 
   const role = await db.staff_roles.findUnique({
     where: { name: roleName }
   });
-  
+
   if (!role) {
     throw new Error(`Role '${roleName}' not found`);
   }
-  
+
   return await db.staff_members.create({
     data: {
       user_id: userId,
@@ -382,12 +405,12 @@ async function checkStaffPermission(userId: string, permissionName: string) {
       }
     }
   });
-  
+
   return staffMember?.staff_roles?.staff_role_permissions?.some(
     permission => permission.permissions.name === permissionName
   ) || false;
 }
-```
+```markdown
 
 ### **Help System Integration**
 
@@ -439,7 +462,7 @@ const helpLinks = [
     ))}
   </DropdownMenuContent>
 </DropdownMenu>
-```
+```markdown
 
 #### **Landing Page Support Button**
 ```tsx
@@ -449,17 +472,17 @@ const SupportButton = () => {
     const subject = encodeURIComponent('PenguinMails Support Request');
     const body = encodeURIComponent(`
       Hi PenguinMails Support Team,
-      
+
       I need assistance with:
-      
+
       [Please describe your issue here]
-      
+
       ---
       Browser: ${navigator.userAgent}
       URL: ${window.location.href}
       Timestamp: ${new Date().toISOString()}
     `);
-    
+
     window.location.href = `mailto:support@penguinmails.com?subject=${subject}&body=${body}`;
   };
 
@@ -476,7 +499,7 @@ const SupportButton = () => {
     </div>
   );
 };
-```
+```markdown
 
 ### **Email-Based Support Workflow**
 
@@ -498,51 +521,51 @@ const supportTemplates = {
     subject: 'Welcome to PenguinMails Support',
     template: `
       Hi {{customerName}},
-      
+
       Thank you for contacting PenguinMails support. We've received your inquiry and will respond within 24 hours.
-      
+
       Your ticket reference: {{ticketNumber}}
-      
+
       Best regards,
       The PenguinMails Support Team
     `
   },
-  
+
   technical: {
     subject: 'Technical Support - {{ticketNumber}}',
     template: `
       Hi {{customerName}},
-      
+
       Thank you for your patience. Regarding your technical issue:
-      
+
       {{issueDescription}}
-      
+
       {{resolutionSteps}}
-      
+
       If you have any questions, please reply to this email.
-      
+
       Best regards,
       {{agentName}}
       PenguinMails Technical Support
     `
   },
-  
+
   billing: {
     subject: 'Billing Support - {{ticketNumber}}',
     template: `
       Hi {{customerName}},
-      
+
       Thank you for contacting us about billing.
-      
+
       {{billingResponse}}
-      
+
       Best regards,
       {{agentName}}
       PenguinMails Billing Support
     `
   }
 };
-```
+```markdown
 
 ---
 
@@ -596,29 +619,29 @@ const supportTemplates = {
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](...md)) - Main operations framework
-- [Organization Analytics](../operations-management.md)) - Team and organization management
-- [Metrics & KPIs](../analytics-performance.md)) - Comprehensive KPI framework
+- [Operations Analytics Overview](..)) - Main operations framework
+- [Organization Analytics](/docs/operations-analytics/operations-management)) - Team and organization management
+- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy.md)) - Strategic alignment
-- [Business Model](../business/model.md)) - Revenue model and unit economics
-- [Value Proposition](../business/value-proposition.md)) - Competitive differentiation
+- [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
+- [Business Model](/docs/business/model/overview)) - Revenue model and unit economics
+- [Value Proposition](/docs/business/value-proposition/overview)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture.md)) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical.md)) - System management
-- [Development Guidelines](../technical/development.md)) - Code standards and practices
+- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+- [Development Guidelines](../technical/development)) - Code standards and practices
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys.md)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys.md)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys.md)) - UX optimization
+- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security.md)) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise.md)) - Security operations
-- [QA Security Testing](../compliance-security/enterprise.md) - Security testing protocols
+- [Compliance Overview](/docs/compliance-security)) - Regulatory compliance
+- [Security Framework](/docs/compliance-security/enterprise)) - Security operations
+- [QA Security Testing](/docs/compliance-security/enterprise) - Security testing protocols
 
 ---
 
@@ -646,9 +669,9 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](..md))** → Quality assurance procedures
-- **[Sprint Retrospectives](..md))** → Agile development practices
-- **[Organization Analytics](../operations-management.md))** → Team and organization management
+- **[QA Testing Protocols](.))** → Quality assurance procedures
+- **[Sprint Retrospectives](.))** → Agile development practices
+- **[Organization Analytics](/docs/operations-analytics/operations-management))** → Team and organization management
 
 ---
 

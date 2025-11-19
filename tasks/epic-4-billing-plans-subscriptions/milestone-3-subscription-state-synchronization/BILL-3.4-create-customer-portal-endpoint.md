@@ -11,7 +11,7 @@ Create a protected POST API route at `/api/subscriptions/portal/route.ts`. This 
 
 ## Context
 
-Customer portal access enables self-service subscription management. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need to manage their subscriptions. This endpoint provides access to Stripe's hosted customer portal where users can update payment methods, view invoices, and manage subscriptions.
+Customer portal access enables self-service subscription management. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need to manage their subscriptions. This endpoint provides access to Stripe's hosted customer portal where users can update payment methods, view invoices, and manage subscriptions.
 
 ## Acceptance Criteria
 
@@ -96,6 +96,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "url": "https://billing.stripe.com/p/session/xxxxx"
@@ -103,6 +104,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (404):**
+
 ```json
 {
   "error": "No Stripe customer found for this tenant"
@@ -120,7 +122,7 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Subscription management
+- [Features & Capabilities](../../docs/features-capabilities/index) - Subscription management
 - [Stripe Customer Portal Documentation](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal) - Official Stripe docs
 
 ## Dependencies
@@ -138,4 +140,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify return URL is set correctly
 - [ ] Test error handling for Stripe API failures
 - [ ] Verify portal URL is valid and accessible
-

@@ -11,7 +11,7 @@ Create a system for managing environment variables securely. This includes a tem
 
 ## Context
 
-Environment variables are essential for configuration management across different environments (development, staging, production). According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails integrates with multiple services that require configuration:
+Environment variables are essential for configuration management across different environments (development, staging, production). According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails integrates with multiple services that require configuration:
 
 - **Database:** PostgreSQL connection strings
 - **Authentication:** NileDB configuration (NILE_URL, NILE_DATABASE_ID)
@@ -64,8 +64,8 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - External service integrations
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Environment setup
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - External service integrations
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Environment setup
 
 ## Dependencies
 
@@ -78,5 +78,3 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 - [ ] Test that the application fails to start if required variables are missing
 - [ ] Verify environment variable validation provides clear error messages
 - [ ] Test that client-side variables (with `NEXT_PUBLIC_` prefix) are accessible in browser code
-
-

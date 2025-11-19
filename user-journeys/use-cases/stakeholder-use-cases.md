@@ -13,15 +13,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 1: Investment Due Diligence**
 
 #### **Primary Actor**: Potential Investor (VC, PE, Strategic Investor)
+
 #### **Goal**: Conduct thorough evaluation of investment opportunity
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Investment interest has been established
 - NDA and confidentiality agreements are in place
 - Data room access has been granted
 - Company executives are available for meetings
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Information Gathering**
    - Investor requests access to comprehensive data room
    - System provides organized access to financial, operational, and strategic information
@@ -42,13 +45,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Legal documentation and closing process is managed
    - Post-investment strategy and value creation plan is developed
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Insufficient Information**: Data gaps require additional investigation
 - **Market Concerns**: Market analysis reveals concerns requiring mitigation
 - **Competitive Threats**: Competitive analysis identifies significant threats
 - **Team Concerns**: Management team evaluation reveals gaps or concerns
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Comprehensive, organized information access is provided
 - Executive team availability and responsiveness meets investor needs
 - Customer references validate market opportunity and execution capability
@@ -59,15 +64,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 2: Portfolio Company Monitoring**
 
 #### **Primary Actor**: Existing Investor
+
 #### **Goal**: Monitor portfolio company performance and provide strategic support
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Investment has been completed and legal agreements are in place
 - Board seat or observer rights have been established
 - Regular reporting cadence has been agreed upon
 - Strategic support capabilities are available
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Performance Monitoring**
    - Quarterly business reviews are conducted with management team
    - Financial performance, operational metrics, and strategic progress are reviewed
@@ -89,13 +97,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Technology and product development optimization
    - Organizational development and scaling support
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Performance Challenges**: Underperformance requires intervention and support
 - **Market Disruption**: Market changes require strategic pivot or adaptation
 - **Competitive Pressure**: Increased competition requires defensive or offensive strategies
 - **Opportunity Recognition**: New opportunities require additional investment or resources
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Regular, comprehensive performance monitoring is maintained
 - Strategic value and support is delivered to portfolio company
 - Investment thesis validation and value creation progress is demonstrated
@@ -108,15 +118,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 3: News and Announcement Coverage**
 
 #### **Primary Actor**: Technology Journalist, Business Press, Industry Publication
+
 #### **Goal**: Create accurate, compelling coverage of company news and announcements
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - News announcement or company development has occurred
 - Press kit and supporting materials are prepared
 - Company spokespersons and subject matter experts are available
 - Review and approval process for quotes and information is established
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Story Development**
    - Journalist receives press release and media kit
    - Initial research and background information gathering
@@ -138,13 +151,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Publication and distribution through appropriate channels
    - Follow-up coverage and ongoing relationship maintenance
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Technical Complexity**: Complex technology requires additional expert interviews
 - **Confidentiality Issues**: Sensitive information requires careful handling
 - **Competitive Sensitivity**: Competitive information requires strategic disclosure
 - **Correction Requests**: Errors or inaccuracies require correction and clarification
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Accurate, well-researched coverage is published
 - Company messaging and positioning is effectively communicated
 - Technical claims and business information are verified and validated
@@ -155,15 +170,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 4: Thought Leadership and Industry Analysis**
 
 #### **Primary Actor**: Industry Analyst, Technology Journalist, Trade Publication
+
 #### **Goal**: Provide expert analysis and thought leadership on industry trends and technology developments
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Company has established expertise and thought leadership position
 - Subject matter experts are available for analysis and commentary
 - Historical data and trend analysis is accessible
 - Industry relationships and credibility are established
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Expert Commentary**
    - Journalist or analyst requests expert commentary on industry developments
    - Company experts provide insights on technology trends and market evolution
@@ -185,13 +203,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Speaking opportunities and industry conference invitations increase
    - Ongoing relationships with analysts and journalists are strengthened
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Controversial Topics**: Industry disputes require careful positioning and analysis
 - **Competitive Claims**: Competitive technology claims require technical validation
 - **Market Predictions**: Future predictions require careful qualification and support
 - **Data Sensitivity**: Customer data and proprietary insights require protection
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Expert analysis establishes company thought leadership position
 - Industry trends and technology developments are accurately represented
 - Content generates meaningful industry discussion and engagement
@@ -204,15 +224,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 5: Competitive Intelligence Gathering**
 
 #### **Primary Actor**: Competitive Intelligence Team, Product Management, Strategy Team
+
 #### **Goal**: Understand competitive positioning and market dynamics
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Competitive analysis objectives and scope are defined
 - Public information sources and research methods are established
 - Legal and ethical guidelines for competitive intelligence are followed
 - Analysis framework and evaluation criteria are developed
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Public Information Analysis**
    - Company website, product documentation, and marketing materials are analyzed
    - Pricing and service tier information is collected and compared
@@ -234,13 +257,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Strategic positioning and defensive capabilities are assessed
    - Competitive response strategies are developed
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Information Gaps**: Limited public information requires alternative research methods
 - **Rapid Changes**: Fast-changing market requires frequent analysis updates
 - **New Entrants**: Emerging competitors require new analysis frameworks
 - **Market Disruption**: Disruptive changes require strategic reassessment
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Comprehensive competitive landscape understanding is achieved
 - Competitive advantages and threats are clearly identified
 - Strategic recommendations are developed and implemented
@@ -251,15 +276,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 6: Market Positioning and Differentiation**
 
 #### **Primary Actor**: Marketing Team, Product Management, Business Development
+
 #### **Goal**: Develop and communicate competitive differentiation and market positioning
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Competitive analysis has been completed
 - Unique value propositions and differentiators are identified
 - Target market segments and customer needs are defined
 - Messaging and positioning framework is developed
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Differentiation Strategy**
    - Unique capabilities and competitive advantages are identified
    - Customer value propositions are developed and tested
@@ -281,13 +309,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Positioning strategies are refined and updated
    - Market leadership and thought leadership are maintained
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Competitive Response**: Competitors copy or counter differentiation strategies
 - **Market Evolution**: Market changes require positioning strategy adaptation
 - **Customer Shifts**: Customer preferences and needs evolution require repositioning
 - **Technology Disruption**: New technologies require strategy and positioning updates
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Clear, compelling competitive differentiation is established
 - Market positioning resonates with target customers
 - Competitive advantages are effectively communicated
@@ -300,15 +330,18 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ### **Use Case 7: Investor and Stakeholder Demonstrations**
 
 #### **Primary Actor**: Company Executives, Product Team, Sales Engineering
+
 #### **Goal**: Demonstrate platform capabilities and business value to stakeholders
 
-#### **Preconditions**:
+#### **Preconditions**
+
 - Demo environment and scenarios are prepared
 - Key stakeholders and their interests are identified
 - Demo objectives and key messages are defined
 - Technical setup and backup plans are established
 
-#### **Main Success Scenario**:
+#### **Main Success Scenario**
+
 1. **Demo Preparation**
    - Stakeholder type and specific interests are analyzed
    - Demo content and scenarios are customized for audience
@@ -330,13 +363,15 @@ This document outlines comprehensive use cases for External Stakeholders who int
    - Stakeholder feedback collection and incorporation
    - Demo effectiveness analysis and improvement
 
-#### **Alternative Scenarios**:
+#### **Alternative Scenarios**
+
 - **Technical Issues**: Demo environment or platform issues require quick resolution
 - **Audience Questions**: Unexpected questions require expert knowledge and response
 - **Competitive Comparisons**: Direct competitive comparisons require careful handling
 - **Time Constraints**: Limited time requires focused demo prioritization
 
-#### **Success Criteria**:
+#### **Success Criteria**
+
 - Professional, compelling demo experience is delivered
 - Stakeholder engagement and interest is generated
 - Key business value propositions are effectively communicated
@@ -347,24 +382,28 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ## Success Metrics and KPIs
 
 ### **Investor Relations Metrics**
+
 - Due diligence completion time and information satisfaction
 - Investment decision conversion rates and timeline
 - Portfolio company performance and value creation
 - Investor satisfaction and ongoing engagement levels
 
 ### **Media Relations Metrics**
+
 - Media coverage quantity and quality metrics
 - Journalist and analyst relationship strength
 - Thought leadership recognition and influence
 - Press release and announcement impact
 
 ### **Competitive Intelligence Metrics**
+
 - Competitive analysis completeness and accuracy
 - Strategic recommendation implementation success
 - Market positioning effectiveness and differentiation
 - Competitive response success and market share maintenance
 
 ### **Stakeholder Engagement Metrics**
+
 - Stakeholder satisfaction and engagement scores
 - Demo effectiveness and conversion rates
 - Relationship building and long-term engagement
@@ -375,24 +414,28 @@ This document outlines comprehensive use cases for External Stakeholders who int
 ## Best Practices for Stakeholder Use Cases
 
 ### **Information Management**
+
 - Organize and maintain comprehensive stakeholder information
 - Ensure accuracy and currency of all shared information
 - Protect confidential and sensitive information appropriately
 - Provide stakeholders with relevant, valuable information access
 
 ### **Relationship Building**
+
 - Focus on long-term relationship building rather than transactional interactions
 - Provide consistent, professional stakeholder experiences
 - Follow up promptly on commitments and requests
 - Continuously improve stakeholder engagement based on feedback
 
 ### **Strategic Alignment**
+
 - Align stakeholder interactions with business strategy and objectives
 - Balance transparency with competitive advantage protection
 - Consider stakeholder needs alongside business priorities
 - Use stakeholder insights to inform business decisions
 
 ### **Operational Excellence**
+
 - Maintain professional standards in all stakeholder interactions
 - Ensure reliable, consistent information delivery
 - Provide appropriate technical and business expertise
@@ -400,11 +443,12 @@ This document outlines comprehensive use cases for External Stakeholders who int
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`external-stakeholders/investor-journeys.md`](../external-stakeholders/investor-journeys.md)
-- [`external-stakeholders/press-media-journeys.md`](../external-stakeholders/press-media-journeys.md)
-- [`external-stakeholders/competitor-analysis-journeys.md`](../external-stakeholders/competitor-analysis-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`external-stakeholders/investor-journeys.md`](../external-stakeholders/investor-journeys)
+- [`external-stakeholders/press-media-journeys.md`](../external-stakeholders/press-media-journeys)
+- [`external-stakeholders/competitor-analysis-journeys.md`](../external-stakeholders/competitor-analysis-journeys)
 
 ---
 

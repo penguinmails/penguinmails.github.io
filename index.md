@@ -8,13 +8,14 @@ description: "Welcome to PenguinMails - Enterprise Email Management Platform"
 ---
 
 # 🐧 PenguinMails
+
 {: .d-none }
 
 {: .highlight .px-4 .py-2 }
 **Welcome to PenguinMails documentation.**
 PenguinMails handles your entire email operation - from VPS setup to campaign optimization - so you can focus on growing your business.
 
-[What we offer](docs/what-is-penguinmails){: .btn .btn-blue .mr-4}
+[What we offer](/docs/what-is-penguinmails){: .btn .btn-blue .mr-4}
 [Buy a subscription](https://penguinmails.com/pricing/){: .btn .btn-green}
 
 ---
@@ -26,13 +27,15 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 ## 🎯 Quick Start by Role
 
 ### 💼 For Business Leaders (CFO/VP Level)
-**Executive-level financial analysis, ROI planning, and infrastructure investment decisions**
+
+## Executive-level financial analysis, ROI planning, and infrastructure investment decisions
 
 {: .highlight }
 
 **Why PenguinMails**: 3-7x cost savings vs self-hosted solutions
 
 {: .highlight .btn-group-vertical }
+
 - [🏢 Executive Summary](docs/business/core/executive-summary) - *15-minute strategic overview*
 - [💰 ROI Calculator](docs/business/core/roi-calculator) - *Interactive cost-benefit analysis*
 - [🏆 Competitive Analysis](docs/business/core/competitive-analysis) - *Provider selection matrix*
@@ -43,6 +46,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 - [📊 Performance Dashboard](docs/business/performance/performance-dashboard) - *Executive dashboard*
 
 **Industry-Specific Deep Dives:**
+
 - [🏥 Healthcare Business Case](docs/business/industry-business-cases/healthcare) - *HIPAA compliance & patient communications*
 - [🏛️ Financial Services Case](docs/business/industry-business-cases/financial-services) - *SOX compliance & banking security*
 - [🛒 E-commerce Business Case](docs/business/industry-business-cases/ecommerce) - *Customer retention & marketing automation*
@@ -50,9 +54,11 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 - [🚀 SaaS Business Case](docs/business/industry-business-cases/saas) - *Customer lifecycle & product-led growth*
 
 ### 🏗️ For Technical Teams (IT/DevOps)
-**Implementation guides, API reference, and technical architecture**
+
+## Implementation guides, API reference, and technical architecture
 
 {: .highlight .btn-group-vertical }
+
 - [🔧 Technical Infrastructure](docs/business/technical-infrastructure) - *Complete technical specs*
 - [⚖️ Compliance Framework](docs/business/compliance-framework) - *Technical compliance implementation*
 - [🏗️ Architecture Overview](docs/technical/architecture/overview) - *System architecture*
@@ -60,9 +66,11 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 - [📚 Quick Setup](docs/quick-setup) - *Implementation guide*
 
 ### 📊 For Marketing & Operations
-**Campaign optimization, analytics, and performance monitoring**
+
+## Campaign optimization, analytics, and performance monitoring
 
 {: .highlight .btn-group-vertical }
+
 - [📈 Analytics & Performance](docs/operations-analytics/analytics-performance/README) - *Performance monitoring*
 - [👥 User Analytics](docs/operations-analytics/analytics-performance/user-analytics) - *Campaign insights*
 - [💹 Financial Operations](docs/operations-analytics/operations-management/payment-analytics-financial-operations) - *Revenue tracking*
@@ -72,7 +80,8 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ## 📊 Cost & ROI Overview
 
-**Executive Benefits**
+## Executive Benefits
+
 - ✅ CFO-friendly ROI analysis
 - ✅ Procurement-ready documentation
 - ✅ Enterprise security compliance

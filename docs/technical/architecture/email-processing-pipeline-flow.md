@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: Our asynchronous processing architecture with queue-based workflows ensures 99.9% email delivery success while providing real-time campaign monitoring and analytics.
 
-**User Journey Integration**: This processing flow connects your [campaign creation](../core-features.md) through [queue management](../implementation-technical/database-infrastructure/queue-system-implementation-guide.md) to [analytics tracking](../core-features/analytics/overview.md).
+**User Journey Integration**: This processing flow connects your [campaign creation](../core-features) through [queue management](../implementation-technical/database-infrastructure/queue-system-implementation-guide) to [analytics tracking](../core-features/analytics/overview).
 
 ---
 
@@ -32,16 +32,16 @@ sequenceDiagram
     participant MailU as MailU Stack
     participant DB as Database
     participant Analytics as Analytics Engine
-    
+
     Client->>API: Create Campaign Request
     API->>Auth: Validate User Token
     Auth-->>API: User Validated
     API->>DB: Store Campaign Definition
     DB-->>API: Campaign Created (ID: 123)
-    
+
     API->>Queue: Queue Email Jobs
     Queue-->>API: Jobs Queued (1000 emails)
-    
+
     loop Processing Queue
         Queue->>SMTP: Process Next Job
         SMTP->>MailU: Send Email
@@ -50,13 +50,13 @@ sequenceDiagram
         SMTP->>DB: Update Email Status
         SMTP->>Analytics: Log Event
     end
-    
+
     Analytics->>DB: Aggregate Analytics Data
     DB-->>API: Campaign Analytics Ready
     API-->>Client: Campaign Status Update
-    
+
     Note over Client,Analytics: Real-time updates through WebSocket
-```
+```markdown
 
 ## Processing Pipeline Stages
 

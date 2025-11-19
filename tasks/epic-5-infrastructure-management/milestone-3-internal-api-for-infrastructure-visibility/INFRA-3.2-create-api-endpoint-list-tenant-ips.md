@@ -23,5 +23,5 @@ Create a protected GET API route at `/api/infrastructure/ips/route.ts`. The endp
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (API design & multi-tenant scoping)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (API design & multi-tenant scoping)](../../docs/implementation-technical/development-guidelines/development-standards)

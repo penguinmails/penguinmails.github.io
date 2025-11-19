@@ -22,6 +22,6 @@ Create a new Node.js/TypeScript project in a `/worker` sub-directory of the repo
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management (running workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (project layout & scripts)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management (running workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (project layout & scripts)](../../docs/implementation-technical/development-guidelines/development-standards)

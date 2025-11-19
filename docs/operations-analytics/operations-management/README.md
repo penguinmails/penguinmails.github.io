@@ -8,6 +8,7 @@ description: "Comprehensive operations management documentation for enterprise-g
 This section provides comprehensive operations management documentation for the PenguinMails platform, supporting our enterprise operational strategy with 99.9% uptime guarantees and advanced monitoring systems.
 
 ## Strategic Alignment
+
 **Strategic Alignment**: Operations management supports our enterprise operational strategy by providing comprehensive infrastructure management capabilities that ensure 99.9% uptime and enterprise-grade performance.
 
 **Technical Authority**: Our operations management integrates with enterprise-grade monitoring systems featuring automated alerting, structured incident classification, and comprehensive deployment pipelines.
@@ -23,6 +24,7 @@ Operations management encompasses the day-to-day activities required to keep the
 ## Key Areas
 
 ### Infrastructure Operations Management
+
 **Strategic Alignment**: Infrastructure operations management supports our enterprise operational strategy by providing comprehensive system architecture and deployment capabilities that ensure 99.9% uptime and enterprise-grade performance.
 
 **Technical Authority**: Our infrastructure integrates with enterprise-grade monitoring systems featuring multi-tenant database schemas, automated deployment pipelines, and comprehensive architecture diagrams.
@@ -38,6 +40,7 @@ Operations management encompasses the day-to-day activities required to keep the
 - Automated deployment pipelines
 
 ### Incident Response Operations
+
 **Strategic Alignment**: Incident response operations support our enterprise operational strategy by providing comprehensive incident management capabilities that ensure rapid response and minimal downtime.
 
 **Technical Authority**: Our incident response integrates with enterprise-grade monitoring systems featuring automated alerting, structured incident classification, and comprehensive post-mortem analysis.
@@ -53,6 +56,7 @@ Operations management encompasses the day-to-day activities required to keep the
 - Structured communication protocols
 
 ### Environment & Release Management
+
 **Strategic Alignment**: Environment and release management supports our enterprise operational strategy by providing comprehensive deployment and environment management capabilities that ensure reliable, secure software delivery.
 
 **Technical Authority**: Our release management integrates with enterprise-grade CI/CD systems featuring automated testing gates, comprehensive monitoring, and sophisticated rollback procedures.
@@ -68,15 +72,17 @@ Operations management encompasses the day-to-day activities required to keep the
 - CI/CD pipeline integration
 
 ## Quick Links
+
 - [Infrastructure Operations Management](infrastructure-operations-management))
 - [Incident Response Operations](incident-response-operations))
 - [Environment & Release Management](environment-release-management))
 
 ## Related Documentation
-- [Operations Analytics Overview](...md)) - Main operations analytics framework
-- [Analytics Performance](../analytics-performance.md) - Performance monitoring and analytics
-- [Team Performance](../team-performance.md) - Team performance and sprint management
-- [Compliance & Security](../../compliance-security.md) - Security and compliance frameworks
+
+- [Operations Analytics Overview](..)) - Main operations analytics framework
+- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring and analytics
+- [Team Performance](/docs/operations-analytics/team-performance) - Team performance and sprint management
+- [Compliance & Security](../../compliance-security) - Security and compliance frameworks
 
 ---
 

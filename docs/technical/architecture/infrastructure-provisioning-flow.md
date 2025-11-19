@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: The automated provisioning system integrates with Hostwind VPS, DNS providers, and MailU SMTP to deliver complete infrastructure setup in under 30 minutes with zero manual intervention.
 
-**User Journey Integration**: This provisioning flow enables your complete [infrastructure setup](...md) and [email warm-up process](../core-features/warm-ups/overview.md) with automated configuration management.
+**User Journey Integration**: This provisioning flow enables your complete [infrastructure setup](..) and [email warm-up process](../core-features/warm-ups/overview) with automated configuration management.
 
 ---
 
@@ -27,19 +27,19 @@ flowchart TD
     %% Trigger
     START[User Requests<br/>Infrastructure Setup] --> AUTH[Authentication Check]
     AUTH --> TENANT[Tenant Validation]
-    
+
     %% Provisioning Steps
     TENANT --> VPS[Provision VPS<br/>Hostwind API]
     VPS --> VPS_CONFIG[Configure VPS<br/>Docker + Base Software]
-    
+
     VPS_CONFIG --> SMTP[Setup SMTP Server<br/>MailU Stack]
     SMTP --> DNS[Configure DNS<br/>SPF/DKIM/DMARC]
     DNS --> SSL[Provision SSL<br/>Certificate Management]
-    
+
     %% Monitoring
     SSL --> MONITOR[Setup Monitoring<br/>Health Checks]
     MONITOR --> WARMUP[Start Warm-up Process<br/>Email Warm-up Engine]
-    
+
     %% Database Updates
     VPS_CONFIG --> DB[(Database Update)]
     SMTP --> DB
@@ -47,28 +47,28 @@ flowchart TD
     SSL --> DB
     MONITOR --> DB
     WARMUP --> DB
-    
+
     %% Completion
     DB --> READY[Infrastructure Ready]
     READY --> NOTIFY[Notify User]
-    
+
     %% Error Handling
     VPS -.->|Error| ROLLBACK[Rollback Provisioning]
     SMTP -.->|Error| ROLLBACK
     DNS -.->|Error| ROLLBACK
     ROLLBACK --> CLEANUP[Cleanup Resources]
     CLEANUP --> ERROR[Error Notification]
-    
+
     classDef process fill:#e1f5fe
     classDef storage fill:#f3e5f5
     classDef monitoring fill:#e8f5e9
     classDef error fill:#ffebee
-    
+
     class AUTH,TENANT,VPS,VPS_CONFIG,SMTP,DNS,SSL,MONITOR,WARMUP process
     class DB storage
     class MONITOR monitoring
     class ROLLBACK,CLEANUP,ERROR error
-```
+```markdown
 
 ## Provisioning Process Stages
 

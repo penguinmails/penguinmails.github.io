@@ -35,7 +35,7 @@ class ComplianceDataProcessor {
     return `dpr_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  createProcessingRecord(.md)
+  createProcessingRecord()
     purpose: string,
     categories: string[],
     subjects: string[]
@@ -54,7 +54,7 @@ class ComplianceDataProcessor {
     };
   }
 }
-```
+```markdown
 
 ### Data Access Request Handler
 
@@ -134,7 +134,7 @@ class DataRightsHandler {
     console.log(`Data access request: ${request.email} - ${status}`);
   }
 }
-```
+```markdown
 
 ### Data Deletion Request Handler
 
@@ -198,7 +198,7 @@ class DataDeletionHandler {
     // Log for audit compliance
   }
 }
-```
+```markdown
 
 ---
 
@@ -237,7 +237,7 @@ class ComplianceMonitor {
 
   async runComplianceChecks(): Promise<ComplianceResult> {
     const results: ComplianceResult = {};
-    
+
     for (const [checkName, monitor] of Object.entries(this.checks)) {
       try {
         const result = await monitor.checkCompliance();
@@ -254,7 +254,7 @@ class ComplianceMonitor {
         };
       }
     }
-    
+
     return results;
   }
 }
@@ -293,7 +293,7 @@ class SecurityMonitor {
     return { isCompliant: true, details: { incidents: 0, status: 'secure' } };
   }
 }
-```
+```markdown
 
 ---
 
@@ -322,7 +322,7 @@ class RegulatoryChangeManager {
 
   async monitorRegulatoryChanges(): Promise<RegulatoryChange[]> {
     const changes: RegulatoryChange[] = [];
-    
+
     for (const source of this.regulatorySources) {
       const newChanges = await this.checkForUpdates(source);
       if (newChanges.length > 0) {
@@ -359,11 +359,11 @@ class RegulatoryChangeManager {
       owner: assessment.owner,
       testingSteps: assessment.testingSteps
     };
-    
+
     this.implementationPlans.push(plan);
   }
 }
-```
+```markdown
 
 ---
 
@@ -430,7 +430,7 @@ class ComplianceTraining {
     };
   }
 }
-```
+```markdown
 
 ---
 

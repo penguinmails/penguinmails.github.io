@@ -22,5 +22,5 @@ Create a protected GET API route at `/api/infrastructure/status/route.ts` which 
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Development Standards (API design & caching)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Development Standards (API design & caching)](../../docs/implementation-technical/development-guidelines/development-standards)

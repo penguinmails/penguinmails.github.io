@@ -22,6 +22,6 @@ Create `/lib/hostwind.ts` — a reusable TypeScript module that acts as a client
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (HTTP clients & error handling)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (HTTP clients & error handling)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management)

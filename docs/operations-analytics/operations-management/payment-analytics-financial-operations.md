@@ -19,6 +19,7 @@ description: "Comprehensive payment analytics and financial operations for enter
 ## Payment & Billing Journey
 
 ### **Journey Flow**
+
 `Stripe Connect Setup → Payment Method → Subscription Activation → Billing Dashboard`
 
 **Overview:** Payment and billing operations with Stripe Connect integration, subscription management, and financial analytics.
@@ -26,9 +27,11 @@ description: "Comprehensive payment analytics and financial operations for enter
 ### **Normal Payment Flow**
 
 #### 1. **Onboarding Payment Setup**
+
 **Journey Flow:** `Onboarding Modal → Stripe Connect → Business Verification → Payment Method → Subscription Activation`
 
-##### Onboarding Trigger (`.md)
+##### Onboarding Trigger (`)
+
 - **Context**: User reaches payment setup in onboarding flow
 - **Modal Elements**:
   - "Connect Payment Method" section header
@@ -38,16 +41,18 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **User Action**: Clicking "Setup Payments" button
 
 ##### Stripe Connect Express Setup
+
 - **Page**: Stripe-hosted onboarding flow (external redirect)
 - **Business Verification**:
   - Company legal name and tax ID
   - Business address and phone
   - Bank account or debit card details
-  - Identity verification (SSN.md)
+  - Identity verification (SSN)
 - **Integration**: OAuth connection back to PenguinMails
 
 ##### Payment Method Addition
-- **Page**: Billing settings (`/billing.md)
+
+- **Page**: Billing settings (`/billing)
 - **Form Elements**:
   - "Add Payment Method" button
   - Stripe Elements credit card form
@@ -56,7 +61,8 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Security**: PCI-compliant card tokenization
 
 ##### Subscription Activation
-- **Page**: Plan selection (`/billing.md)
+
+- **Page**: Plan selection (`/billing)
 - **Plan Options**: Freemium → Professional → Enterprise tiers
 - **Features**:
   - IP allocation limits
@@ -66,7 +72,8 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Activation**: Immediate access after payment confirmation
 
 ##### Billing Dashboard Access
-- **Page**: Main billing overview (`.md)
+
+- **Page**: Main billing overview (`)
 - **Dashboard Elements**:
   - Current plan and usage metrics
   - Next billing date and amount
@@ -75,9 +82,11 @@ description: "Comprehensive payment analytics and financial operations for enter
   - Plan upgrade/downgrade options
 
 #### 2. **Ongoing Billing Management**
+
 **Journey Flow:** `Billing Dashboard → Usage Monitoring → Payment Updates → Plan Changes → Invoice Handling`
 
 ##### Usage Tracking & Alerts
+
 - **Dashboard Widgets**:
   - Email volume progress bars
   - IP reputation scores
@@ -86,7 +95,8 @@ description: "Comprehensive payment analytics and financial operations for enter
 - **Alert System**: 80% usage threshold notifications
 
 ##### Payment Method Management
-- **Page**: Payment methods settings (`/billing.md)
+
+- **Page**: Payment methods settings (`/billing)
 - **Actions**:
   - Add/remove payment methods
   - Update billing addresses
@@ -94,7 +104,8 @@ description: "Comprehensive payment analytics and financial operations for enter
   - Failed payment retry attempts
 
 ##### Invoice & Receipt Access
-- **Page**: Billing history (`/billing.md)
+
+- **Page**: Billing history (`/billing)
 - **Features**:
   - PDF invoice downloads
   - Detailed line items
@@ -113,33 +124,42 @@ This guide describes the complete Stripe Connect onboarding and billing integrat
 #### **User Flow Architecture**
 
 ##### 1. **User Signup and Authentication**
+
 **Entry Point**: `/signup`
+
 - User signs up using NileDB authentication
 - Creates tenant user account automatically
 - Redirects to dashboard on successful signup
 
 **Key Components**:
+
 - `app/signup/` - Signup pages
 - `lib/niledb/auth.ts` - NileDB authentication utilities
 - `components/auth/` - Authentication components
 
 ##### 2. **Dashboard Entry**
+
 **Entry Point**: `/dashboard`
+
 - User lands in main dashboard after signup
 - Same user account available in admin panel as tenant user
 - Sidebar includes "Setup Guide" link to onboarding
 
 **Key Components**:
+
 - `components/layout/DashboardSidebar.tsx` - Navigation with onboarding link
 - `app/dashboard/` - Dashboard pages
 
 ##### 3. **Onboarding Experience**
+
 **Entry Point**: `/dashboard/onboarding`
+
 - Multi-step onboarding flow for new users
 - Includes billing setup as one of the steps
 - Uses context-based state management
 
 ##### 4. **Stripe Connect Setup Step**
+
 **New Onboarding Step**: "Connect Payment Processor"
 
 This step should be added to the onboarding flow with strategic positioning and enterprise-grade security.
@@ -147,6 +167,7 @@ This step should be added to the onboarding flow with strategic positioning and 
 #### **Stripe Connect Integration**
 
 ##### 1. **Account Creation Flow**
+
 ```typescript
 // API Endpoint: POST /api/stripe/connect
 export async function createStripeConnectAccount(companyId: string, billingEmail?: string) {
@@ -173,7 +194,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
       },
     });
 
-    /.md)
+    /)
     await nile.db.query(
       `UPDATE tenant_config SET stripe_account_id = $1, updated = CURRENT_TIMESTAMP
        WHERE tenant_id = CURRENT_TENANT_ID()`,
@@ -186,7 +207,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
     throw error;
   }
 }
-```
+```markdown
 
 ##### 2. **Onboarding Link Generation**
 ```typescript
@@ -206,7 +227,7 @@ export async function getStripeOnboardingLink(accountId: string) {
     throw error;
   }
 }
-```
+```markdown
 
 #### **Database Schema**
 
@@ -225,7 +246,7 @@ ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
 -- - plans: plan definitions and limits
 -- - subscription_addons: additional features
 -- - Usage calculated at runtime from campaigns, emails, companies tables
-```
+```markdown
 
 #### **Settings/Billing Integration**
 
@@ -247,7 +268,7 @@ export async function getStripeConnectStatus() {
 
     const stripeAccountId = accountInfo.rows[0].stripe_account_id;
 
-    /.md)
+    /)
     const stripeAccount = await stripe.accounts.retrieve(stripeAccountId);
 
     return {
@@ -262,7 +283,7 @@ export async function getStripeConnectStatus() {
     throw error;
   }
 }
-```
+```markdown
 
 #### **Webhook Integration**
 
@@ -290,23 +311,23 @@ Handles account updates, capability changes, and other Stripe events for real-ti
 
 #### **Revenue Calculation Methods**
 ```typescript
-/.md)
+/)
 const calculateMRR = (subscriptions: Subscription[]) => {
   return subscriptions
     .filter(sub => sub.status === 'active')
     .reduce((total, sub) => {
-      return total + (sub.plan.price * (sub.billingCycle === 'annual' ? 1.md));
+      return total + (sub.plan.price * (sub.billingCycle === 'annual' ? 1));
     }, 0);
 };
 
-/.md)
+/)
 const calculateARR = (mrr: number) => mrr * 12;
 
 // Net Revenue Retention
 const calculateNRR = (startingARR: number, endingARR: number, expansions: number) => {
-  return ((endingARR + expansions) .md) * 100;
+  return ((endingARR + expansions) ) * 100;
 };
-```
+```markdown
 
 #### **Key Revenue KPIs**
 - **MRR Growth Rate**: Month-over-month subscription revenue growth
@@ -346,7 +367,7 @@ const costBreakdown: CostBreakdown = {
   operations: 0.07,
   legal: 0.03
 };
-```
+```markdown
 
 ### **Profitability Metrics**
 
@@ -364,9 +385,9 @@ const calculateBreakEven = (
   averageVariableCostPerUser: number
 ) => {
   const contributionMarginPerUser = averageRevenuePerUser - averageVariableCostPerUser;
-  return Math.ceil(fixedCosts .md);
+  return Math.ceil(fixedCosts );
 };
-```
+```markdown
 
 ### **Cash Flow Management**
 
@@ -394,7 +415,7 @@ interface CashFlowProjection {
   netCashFlow: number;
   endingCash: number;
 }
-```
+```markdown
 
 ### **Churn and Retention Analysis**
 
@@ -412,7 +433,7 @@ const calculateCohortRetention = (cohortData: Map<string, number[]>) => {
 
   for (const [cohort, monthlyUsers] of cohortData) {
     const initialUsers = monthlyUsers[0];
-    const retention = monthlyUsers.map(users => (users .md) * 100);
+    const retention = monthlyUsers.map(users => (users ) * 100);
     retentionRates.set(cohort, retention);
   }
 
@@ -428,22 +449,22 @@ const calculateLTV = (
   const monthlyChurn = churnRate / 100;
   return (averageRevenuePerUser * grossMargin) / monthlyChurn;
 };
-```
+```markdown
 
 ### **Financial Dashboard**
 
 #### **Executive Summary**
-```
+```markdown
 Financial Overview
 ├── MRR: $[X] (↑X% MoM)
 ├── ARR: $[X] (↑X% YoY)
 ├── Net Revenue Retention: X%
 ├── Gross Margin: X%
 └── Cash Runway: X months
-```
+```markdown
 
 #### **Revenue Analytics**
-```
+```markdown
 Revenue Breakdown
 ├── Subscriptions: X% of total
 ├── Add-ons: X% of total
@@ -455,10 +476,10 @@ Growth Trends
 ├── Expansion Revenue: $X this month
 ├── Churned Revenue: $X this month
 └── Net New MRR: $X this month
-```
+```markdown
 
 #### **Cost Analysis**
-```
+```markdown
 Cost Structure
 ├── Personnel: X% of total
 ├── Infrastructure: X% of total
@@ -470,7 +491,7 @@ Cost Trends
 ├── Burn Rate: $X per month
 ├── CAC: $X per customer
 └── CAC Payback: X months
-```
+```markdown
 
 ---
 
@@ -479,9 +500,9 @@ Cost Trends
 ### **Payment Operations Recovery**
 
 #### **Failed Payment Handling**
-```
+```markdown
 Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace Period → Account Actions
-```
+```markdown
 
 **Detailed Process:**
 1. **Payment Failure Detection**:
@@ -500,13 +521,13 @@ Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace P
    - **Recovery Page**: Dedicated payment recovery portal
 
 #### **Plan Changes & Proration**
-```
+```markdown
 Current Plan → Change Request → Confirmation → Prorated Billing → Feature Updates → New Cycle
-```
+```markdown
 
 **Upgrade Process:**
 1. **Plan Selection**:
-   - **Page**: Billing plans (`/billing.md)
+   - **Page**: Billing plans (`/billing)
    - **Comparison**: Feature matrix with current vs. new plan
    - **Cost Preview**: Prorated amount calculation
 
@@ -516,9 +537,9 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
    - **Billing**: Prorated charges applied to current cycle
 
 #### **Chargeback & Dispute Management**
-```
+```markdown
 Charge Filed → Stripe Notification → Evidence Collection → Response Submission → Resolution
-```
+```markdown
 
 **Detailed Process:**
 1. **Dispute Detection**:
@@ -527,16 +548,16 @@ Charge Filed → Stripe Notification → Evidence Collection → Response Submis
    - **Dashboard**: Dispute status indicator
 
 2. **Evidence Collection**:
-   - **Portal**: Dispute management page (`/billing.md)
+   - **Portal**: Dispute management page (`/billing)
    - **Required Documents**: Service agreements, email records, timestamps
    - **Time Limit**: 7 days to respond
 
 ### **Emergency Scenarios**
 
 #### **Stripe Service Outage**
-```
+```markdown
 Payment Processing Down → Graceful Degradation → Alternative Handling → Service Restoration
-```
+```markdown
 
 **System Response:**
 1. **Detection**: Stripe API monitoring alerts
@@ -545,9 +566,9 @@ Payment Processing Down → Graceful Degradation → Alternative Handling → Se
 4. **Alternative Options**: Manual invoice generation, delayed billing
 
 #### **Revenue Share Disputes**
-```
+```markdown
 Fee Calculation Error → Investigation → Evidence Review → Adjustment → Reconciliation
-```
+```markdown
 
 **Resolution Process:**
 1. **Detection**: User reports incorrect fees or calculations
@@ -560,9 +581,9 @@ Fee Calculation Error → Investigation → Evidence Review → Adjustment → R
 ## Initial Setup Scenarios
 
 ### **First-Time Stripe Connect Setup**
-```
+```markdown
 Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verification → Success
-```
+```markdown
 
 **Detailed Steps:**
 1. **Onboarding Context**:
@@ -582,13 +603,13 @@ Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verifica
    - **Feature Unlock**: Billing features activated
 
 ### **Payment Method Addition**
-```
+```markdown
 Billing Settings → Add Method → Card Form → 3DS Verification → Confirmation → Default Set
-```
+```markdown
 
 **Detailed Steps:**
 1. **Access Point**:
-   - **Page**: Billing dashboard (`.md)
+   - **Page**: Billing dashboard (`)
    - **Element**: "Add Payment Method" button or empty state prompt
 
 2. **Card Collection**:
@@ -660,25 +681,25 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Operations & Analytics
-- [`docs/operations-analytics/overview`](docs/operations-analytics.md) - Global operations analytics framework.
-- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance.md) - Core KPI definitions for revenue, churn, and billing performance.
-- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management.md) - Team and organization management analytics.
-- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management.md) - Environment and release operations impact on billing and reliability.
+- [`docs/operations-analytics/overview`](docs/operations-analytics) - Global operations analytics framework.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
-- [`docs/business/model/overview`](docs/business/model.md) - Canonical business and revenue model.
-- [`docs/business/value-proposition/overview`](docs/business/value-proposition.md) - Value proposition framing for pricing and packaging.
-- [`docs/business/strategy/overview`](docs/business/strategy.md) - Strategic priorities that payment analytics must support.
+- [`docs/business/model/overview`](docs/business/model) - Canonical business and revenue model.
+- [`docs/business/value-proposition/overview`](docs/business/value-proposition) - Value proposition framing for pricing and packaging.
+- [`docs/business/strategy/overview`](docs/business/strategy) - Strategic priorities that payment analytics must support.
 
 ### Technical Architecture
-- [`docs/technical/architecture/overview`](docs/technical/architecture.md) - High-level system architecture.
-- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical.md) - Canonical integration patterns, including billing/Stripe.
-- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines.md) - API surface for billing, subscriptions, and webhooks.
+- [`docs/technical/architecture/overview`](docs/technical/architecture) - High-level system architecture.
+- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical) - Canonical integration patterns, including billing/Stripe.
+- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines) - API surface for billing, subscriptions, and webhooks.
 
 ### Compliance & Security
-- [`docs/compliance-security/overview`](docs/compliance-security.md) - Compliance posture.
-- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise.md) - Security controls relevant to financial data.
-- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international.md) - Data handling, retention, and privacy for billing records.
+- [`docs/compliance-security/overview`](docs/compliance-security) - Compliance posture.
+- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise) - Security controls relevant to financial data.
+- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international) - Data handling, retention, and privacy for billing records.
 
 This section is authoritative; legacy content references should be treated as non-canonical historical scaffolding.
 
@@ -688,9 +709,9 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](..md))** → Team and organization management
-- **[Metrics & KPIs](../analytics-performance.md))** → Comprehensive KPI framework
-- **[Team Performance](../team-performance.md)** → Team coordination and development
+- **[Organization Analytics](.))** → Team and organization management
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
+- **[Team Performance](/docs/operations-analytics/team-performance)** → Team coordination and development
 
 ---
 

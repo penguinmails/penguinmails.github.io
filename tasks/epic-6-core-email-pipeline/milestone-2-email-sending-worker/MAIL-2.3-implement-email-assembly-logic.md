@@ -22,5 +22,5 @@ Create a function `assembleEmail(jobPayload)` that queries the database for the 
 
 ## Related documentation
 
-- [Development Standards (templating & sanitization)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (templating & sanitization)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)

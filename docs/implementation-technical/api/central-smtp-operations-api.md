@@ -6,7 +6,7 @@ last_modified_date: "2025-11-10"
 
 # Central SMTP Operations REST API Contract
 
-Level: Implementation-Ready  
+Level: Implementation-Ready
 Audience: Platform team, SRE, internal tools (NOT tenant-facing)
 
 This contract defines REST-only endpoints for PenguinMails internal operations to manage shared SMTP infrastructure. It is the authoritative interface for:
@@ -23,7 +23,7 @@ Strictly aligned with:
   - `../database-infrastructure/oltp-mermaid-er.md`
   - `../database-infrastructure/notifications-mermaid-er.md`
 - Executive security & audit requirements (BF-004)
-- Executive .md) via read-only consumption of these resources by the Executive API
+- Executive ) via read-only consumption of these resources by the Executive API
 
 All endpoints are:
 
@@ -44,6 +44,7 @@ All endpoints are:
   - Follow maker-checker flows for high-risk changes (e.g., IP reassignment, pool policy changes).
 
 Reference:
+
 - `business-leaders-database-migration-guide.md#step-5-security--access-control`
 - BF-004 executive security and audit story.
 
@@ -79,13 +80,13 @@ Response:
     }
   ]
 }
-```
+```markdown
 
 ### 2.2 Get Single IP
 
 GET `/api/v1/admin/smtp/ips/{ipId}`
 
-Response includes detailed reputation and assignment information suitable for ops tools.  
+Response includes detailed reputation and assignment information suitable for ops tools.
 RLS: internal only; never exposed to tenants.
 
 ### 2.3 Update IP Metadata (Restricted)
@@ -127,7 +128,7 @@ Response:
     }
   ]
 }
-```
+```markdown
 
 ### 3.2 Get Pool Details
 
@@ -158,7 +159,7 @@ Assignments connect tenants (or internal sending units) to pools/IPs.
 
 GET `/api/v1/admin/smtp/assignments?tenantId=tn_123`
 
-Response shows internal view of how a tenant is mapped to pools.md).
+Response shows internal view of how a tenant is mapped to pools).
 
 ### 4.2 Set / Update Assignment
 
@@ -173,7 +174,7 @@ Body (example):
   "mode": "primary",
   "notes": "Manual override due to dedicated pool saturation"
 }
-```
+```markdown
 
 Constraints:
 
@@ -198,7 +199,7 @@ GET `/api/v1/admin/smtp/pools/reputation?window=7d`
 
 Used by:
 - Internal deliverability dashboards
-- Executive cost.md)
+- Executive cost)
 
 ## 6. Error Handling
 

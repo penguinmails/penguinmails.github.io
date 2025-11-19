@@ -1,4 +1,4 @@
-# 🐧 PenguinMails Documentation
+# PenguinMails Documentation
 
 [![Documentation Status](https://img.shields.io/badge/Documentation-Active-brightgreen.svg)](https://penguinmails.github.io)
 [![Built with Just the Docs](https://img.shields.io/badge/Built%20with-Just%20the%20Docs-blue.svg)](https://pmarsceill.github.io/just-the-docs/)
@@ -8,22 +8,12 @@
 > **Complete enterprise email management platform documentation**  
 > A comprehensive guide covering architecture, implementation, operations, and best practices for PenguinMails.
 
-## 📋 Table of Contents
-
-- [About](#about)
-- [Features](#features)
-- [Quick Start](#quick-start)
-- [Documentation Structure](#documentation-structure)
-- [Development Setup](#development-setup)
-- [Contributing](#contributing)
-- [Support](#support)
-- [License](#license)
-
-## 🎯 About
+## About
 
 PenguinMails is an enterprise email management platform designed to streamline communication workflows, enhance team collaboration, and provide robust email infrastructure for growing organizations.
 
 This repository contains the complete documentation for PenguinMails, including:
+
 - Technical architecture and implementation guides
 - Business strategy and competitive analysis
 - Operations runbooks and best practices
@@ -31,93 +21,94 @@ This repository contains the complete documentation for PenguinMails, including:
 
 **Documentation Live Site:** [https://penguinmails.github.io](https://penguinmails.github.io)
 
-## ⚡ Features
+## Features
 
-### 📚 **Comprehensive Documentation**
+### **Comprehensive Documentation**
+
 - **Strategic Guides** - Business model, market analysis, and competitive positioning
 - **Technical Documentation** - Architecture, API reference, and implementation guides
 - **Operations Manual** - Deployment, monitoring, and maintenance procedures
 - **User Resources** - Getting started guides, tutorials, and support materials
 
-### 🚀 **Developer Experience**
+### **Developer Experience**
+
 - **Live Documentation** - Hosted on GitHub Pages with automatic deployment
 - **Interactive Navigation** - Search, breadcrumbs, and intuitive sidebar structure
 - **Mobile Responsive** - Optimized for all devices and screen sizes
 - **Progressive Disclosure** - Information organized from basic to advanced concepts
 
-### 🛠️ **Modern Technology Stack**
+### **Modern Technology Stack**
+
 - **Jekyll** - Static site generator for fast, reliable documentation
 - **Just the Docs** - Professional documentation theme
 - **Docker** - Containerized development environment
 - **GitHub Pages** - Reliable hosting with custom domain support
 
-## 🚀 Quick Start
+## Quick Start
 
 ### For End Users
+
 Visit our **[live documentation site](https://penguinmails.github.io)** and navigate through the sidebar to find:
+
 - [What is PenguinMails](./docs/what-is-penguinmails/) - Platform overview
 - [Features & Capabilities](./docs/features-capabilities/) - Feature details
 - [Getting Started](./docs/implementation-getting-started/) - Setup guide
 
 ### For Contributors
-```bash
-# Clone the repository
-git clone https://github.com/penguinmails/penguinmails.github.io.git
-cd penguinmails.github.io
 
-# Start local development server
-docker build -t penguinmails-docs .
-docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
-```
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
 
-Visit http://localhost:4000 to view the documentation locally.
+- Local development setup with Docker
+- Content standards and guidelines
+- Git workflow and contribution process
+- Markdown linting and quality checks
 
-## 📁 Documentation Structure
+## Documentation Structure
 
-```
+```txt
 docs/
-├── what-is-penguinmails.md                    # 🧭 What is PenguinMails
-├── features-capabilities.md                   # 🧭 Platform capabilities
-├── goals-competitive-edge.md                  # 🧭 Strategic advantages
-├── plan/                                      # 📋 Strategic planning
+├── what-is-penguinmails.md                    # What is PenguinMails
+├── features-capabilities.md                   # Platform capabilities
+├── goals-competitive-edge.md                  # Strategic advantages
+├── plan/                                      # Strategic planning
 │   ├── high-level-architecture.md             # System architecture
 │   ├── key-performance-indicators.md          # Performance metrics
 │   └── roadmap-development-priorities.md      # Development roadmap
-├── implement/                                  # 🛠️ Technical implementation
+├── implement/                                  # Technical implementation
 │   ├── getting-started.md                     # Onboarding guide
 │   ├── backup-recovery.md                     # Data protection procedures
 │   ├── database-operations.md                 # Database management
 │   ├── deployment.md                          # Deployment processes
 │   ├── performance-monitoring.md              # System monitoring
 │   └── connection-pooling.md                  # Resource management
-├── operate/                                    # ⚙️ Ongoing operations
+├── operate/                                    # Ongoing operations
 │   ├── compliance-standards.md                # Regulatory compliance
 │   ├── team-workflow.md                       # Team processes
 │   └── resources-support.md                   # Support resources
-├── design/                                     # 🎨 Design system
+├── design/                                     # Design system
 │   ├── design-system.md                       # Core design philosophy
 │   ├── ui-library.md                          # UI components
 │   ├── component-library.md                   # Component specs
 │   └── user-personas.md                       # User research
-├── security/                                   # 🔒 Security & compliance
+├── security/                                   # Security & compliance
 │   ├── overview.md                            # Security practices
 │   ├── incident-response.md                   # Crisis management
 │   └── procedures.md                          # Security procedures
-├── analytics/                                  # 📊 Business intelligence
+├── analytics/                                  # Business intelligence
 │   ├── financial.md                           # Financial metrics
 │   ├── user-behavior.md                       # Usage analytics
 │   ├── growth.md                              # Growth metrics
 │   └── product-performance.md                 # Feature performance
-├── development/                                # 💻 Development guides
+├── development/                                # Development guides
 │   ├── style-guide.md                         # Code conventions
 │   ├── faq-gotchas.md                         # Common issues
 │   └── best-practices.md                      # Development guidelines
-├── tasks/                                      # 📝 Project management
+├── tasks/                                      # Project management
 │   └── project-management.md                  # Sprint planning
-└── finance-business-model.md                   # 💰 Business model
+└── finance-business-model.md                   # Business model
 ```
 
-### 📖 Key Documentation Sections
+### Key Documentation Sections
 
 | Section | Description | Audience |
 |---------|-------------|----------|
@@ -131,164 +122,53 @@ docs/
 | [Analytics](./docs/analytics/) | Business intelligence and metrics | Product & Business Teams |
 | [Development](./docs/development/) | Code standards and best practices | Developers & Engineering Teams |
 
-## 🛠️ Development Setup
+## Contributing
 
-### Prerequisites
-- Docker installed on your system
-- Git for version control
-- Modern web browser for testing
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
 
-### Local Development
+### Quick Contribution Process
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/penguinmails/penguinmails.github.io.git
-   cd penguinmails.github.io
-   ```
-
-2. **Build and run the documentation:**
-   ```bash
-   # Build Docker image
-   docker build -t penguinmails-docs .
-   
-   # Start development server
-   docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
-   ```
-
-3. **View the documentation:**
-   Open [http://localhost:4000](http://localhost:4000) in your browser
-
-### Development Commands
-
-```bash
-# Build documentation only
-docker build -t penguinmails-docs .
-
-# Clean rebuild (remove cache)
-docker system prune -a && docker build -t penguinmails-docs .
-
-# Live reload development
-docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
-```
-
-## 📝 Frontmatter Standards
-
-### Standard Format
-All documentation files must follow this frontmatter format:
-
-```yaml
----
-title: "Descriptive Page Title"
-description: "Comprehensive description of page content and purpose"
-last_modified_date: "YYYY-MM-DD"
----
-```
-
-### Navigation Files
-Only 5 main files are allowed to have sidebar navigation fields:
-
-- Business/Strategy: `docs/business/strategy/overview.md`
-- Technical/Architecture: `docs/technical/architecture/overview.md`
-- Compliance/Security: `docs/compliance-security/overview.md`
-- Core Features: `docs/core-features/README.md`
-- Implementation Technical: `docs/implementation-technical/README.md`
-
-**Sidebar Navigation Format:**
-```yaml
----
-title: "Page Title"
-description: "Page description"
-nav_order: X
-nav_exclude: false
-last_modified_date: "2025-11-10"
----
-```
-
-### Rules
-- Use `title`, `description`, and `last_modified_date` for all files
-- Use `nav_order` and `nav_exclude` only for the 5 main sidebar files
-- Field order: `title` → `description` → `nav_order` → `nav_exclude` → `last_modified_date`
-- Date format: YYYY-MM-DD
-
-### Quality Assurance
-- **Field Completeness**: Ensure all three fields are present in every documentation file
-- **Date Format**: Use ISO format (YYYY-MM-DD) for all dates
-- **Link Validation**: Test all navigation links after making structural changes
-- **Consistency Checks**: Verify internal document references when moving or renaming files
-
-### Impact and Benefits
-- **Navigation Improvements**: Fixed broken links and improved user experience
-- **Documentation Consistency**: Standardized structure across all 50+ files
-- **SEO Enhancement**: Better search indexing with complete metadata
-- **Developer Experience**: Consistent codebase enables automated tooling
-- **Maintenance Efficiency**: Standardized format simplifies future updates
-
-### Historical Improvements
-Previous frontmatter improvements addressed:
-- Fixed broken navigation links between documentation sections
-- Standardized field ordering across all files
-- Added missing title and description fields to 8+ files
-- Established consistent date formatting standards
-- Improved cross-reference validation and maintenance procedures
-
-## 🤝 Contributing
-
-We welcome contributions to improve our documentation! Here's how you can help:
-
-### Ways to Contribute
-- **Fix typos or improve clarity**
-- **Add missing documentation sections**
-- **Update outdated information**
-- **Improve navigation and structure**
-- **Add examples or use cases**
-
-### Contribution Guidelines
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** using the Docker setup above
+4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards
+
 - Keep language clear and accessible
 - Include practical examples when relevant
 - Update related sections when making changes
 - Test all links and navigation
 - Follow existing markdown formatting
+- Maintain customer-focused language throughout
 
-### Commit Message Format
-```
-docs: add installation troubleshooting guide
-
-- Added common Docker setup issues and solutions
-- Included Windows-specific troubleshooting steps  
-- Updated development setup section
-
-Fixes #123
-```
-
-## 📞 Support
+## Support
 
 ### Getting Help
+
 - **Documentation Issues:** Check the main sections first
 - **Technical Questions:** Review [Resources & Support](./docs/resources-support/)
 - **Contributing Help:** See [Contributing Guidelines](#contributing) above
 
 ### Reporting Problems
+
 - **Documentation Issues:** [Open an issue](https://github.com/penguinmails/penguinmails.github.io/issues)
 - **Content Requests:** Submit a pull request with your suggestions
 - **Bug Reports:** Include steps to reproduce and expected behavior
 
 ### Resources
+
 - **Live Documentation:** [https://penguinmails.github.io](https://penguinmails.github.io)
 - **Repository:** [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
 - **Issues:** [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
 
-## 📊 Documentation Quality & Coverage
+## Documentation Quality & Coverage
 
 Our documentation represents a comprehensive transformation delivering enterprise-grade content with exceptional quality standards:
 
 ### **Content Excellence**
+
 | Metric | Value | Impact |
 |--------|-------|--------|
 | **Documentation Coverage** | 93+ files | Complete platform documentation |
@@ -299,6 +179,7 @@ Our documentation represents a comprehensive transformation delivering enterpris
 | **Cross-Reference Integration** | 245+ links | Seamless navigation experience |
 
 ### **Documentation Organization**
+
 - **Foundation** - What is PenguinMails, getting started, feature overview
 - **Core Features** - Detailed capability documentation with business context
 - **Business Strategy** - Value proposition, market positioning, ROI analysis
@@ -309,13 +190,14 @@ Our documentation represents a comprehensive transformation delivering enterpris
 - **Use Cases** - Real-world implementation examples
 
 ### **Quality Standards Achieved**
+
 ✅ **Customer-Focused Language** - All content transformed to be customer-facing
 ✅ **Strategic Enhancement** - Business value integrated throughout technical content
 ✅ **Progressive Disclosure** - Information revealed based on complexity level
 ✅ **Enterprise Standards** - Documentation meets enterprise customer requirements
 ✅ **Complete Integration** - Seamless cross-references and navigation flow
 
-## 📊 Project Statistics
+## Project Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -324,9 +206,10 @@ Our documentation represents a comprehensive transformation delivering enterpris
 | Last Updated | December 2024 |
 | Total Issues | [View on GitHub](https://github.com/penguinmails/penguinmails.github.io/issues) |
 
-## 🏆 Acknowledgments
+## Acknowledgments
 
 Built with modern web technologies and best practices:
+
 - **[Just the Docs](https://pmarsceill.github.io/just-the-docs/)** - Professional Jekyll theme
 - **[Jekyll](https://jekyllrb.com/)** - Static site generator
 - **[GitHub Pages](https://pages.github.com/)** - Reliable hosting platform

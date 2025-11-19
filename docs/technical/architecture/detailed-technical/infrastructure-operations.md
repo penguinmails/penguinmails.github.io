@@ -8,9 +8,9 @@ persona: "Documentation Users"
 
 # Infrastructure Operations Guide
 
-**Architecture Foundation**: Enterprise-grade infrastructure for mission-critical email operations  
-**Complexity Level**: Expert - Advanced Infrastructure Architecture & Operations  
-**Target Audience**: DevOps Engineers, System Administrators, Infrastructure Architects  
+**Architecture Foundation**: Enterprise-grade infrastructure for mission-critical email operations
+**Complexity Level**: Expert - Advanced Infrastructure Architecture & Operations
+**Target Audience**: DevOps Engineers, System Administrators, Infrastructure Architects
 **Last Updated**: 2025-11-01
 
 ## Executive Overview
@@ -35,7 +35,7 @@ This infrastructure is part of your **complete email operations experience** - c
 
 Our infrastructure implements a **comprehensive multi-tenant architecture** that combines **enterprise scalability** with **operational reliability**, creating an infrastructure foundation that handles **mission-critical email operations** with **reliable performance** and **advanced monitoring**.
 
-```
+```markdown
 🏗️ Enterprise Infrastructure Architecture
 ├── Frontend Layer (User Experience)
 │   ├── WordPress Landing Page (Marketing & Sales)
@@ -63,13 +63,13 @@ Our infrastructure implements a **comprehensive multi-tenant architecture** that
     ├── Stripe Payments (Financial Processing)
     ├── Loop Emails (Transactional Email)
     └── DNS Provider (Domain Management)
-```
+```markdown
 
 ### System Architecture Integration
 
 **Strategic Foundation**: This infrastructure architecture positions us to handle **enterprise-scale operations** while maintaining the **reliability** and **security** needed for our **operational excellence** framework.
 
-```
+```markdown
 Overall System Architecture:
 
 Frontend Layer:
@@ -98,7 +98,7 @@ External Integration:
 ├── Stripe Payments (Financial processing & compliance)
 ├── Loop Emails (Transactional email delivery)
 └── DNS Provider (Domain verification & management)
-```
+```markdown
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant infrastructure**, **automatic failover**, and **comprehensive monitoring** that ensures **reliable operations** for all customers.
 
@@ -152,23 +152,23 @@ graph TB
     WP --> API
     DASH --> API
     ADMIN --> API
-    
+
     API --> AUTH
     API --> TENANT
     API --> BILL
     API --> EMAIL
-    
+
     EMAIL --> QUEUE
     QUEUE --> SMTP
     EMAIL --> WARMUP
-    
+
     SMTP --> HOST
     DOMAIN --> HOST
     WARMUP --> HOST
-    
+
     BILL --> STRIPE
     AUTH --> LOOP
-    
+
     DOMAIN --> DNS
 
     %% Styling
@@ -183,7 +183,7 @@ graph TB
     class AUTH,TENANT,BILL,EMAIL app
     class HOST,SMTP,DOMAIN,WARMUP infra
     class STRIPE,LOOP,DNS external
-```
+```markdown
 
 ### Multi-Tenant Database Schema
 
@@ -355,7 +355,7 @@ erDiagram
     TENANTS ||--o{ SUBSCRIPTIONS : has
     PLANS ||--o{ SUBSCRIPTIONS : defines
     SUBSCRIPTIONS ||--o{ PAYMENTS : generates
-```
+```markdown
 
 ### Email Infrastructure Flow
 
@@ -412,20 +412,20 @@ flowchart TB
     SELECT --> UPLOAD
     UPLOAD --> QUEUE_ENGINE
     SCHEDULE --> QUEUE_ENGINE
-    
+
     QUEUE_ENGINE --> PRIORITY
     PRIORITY --> SMTP_POOL
     SMTP_POOL --> ROUND_ROBIN
     ROUND_ROBIN --> AUTH_SMTP
-    
+
     AUTH_SMTP --> SEND_EMAIL
     SEND_EMAIL --> TRACK_OPEN
     SEND_EMAIL --> TRACK_CLICK
-    
+
     WARMUP_QUEUE --> SMTP_POOL
     REPUTATION --> HEALTH_CHECK
     VOLUME_CONTROL --> PRIORITY
-    
+
     SEND_EMAIL --> BOUNCE
     SEND_EMAIL --> COMPLAINT
     BOUNCE --> BLACKLIST
@@ -445,7 +445,7 @@ flowchart TB
     class AUTH_SMTP,SEND_EMAIL,TRACK_OPEN,TRACK_CLICK sending
     class WARMUP_QUEUE,REPUTATION,VOLUME_CONTROL warmup
     class BOUNCE,COMPLAINT,BLACKLIST feedback
-```
+```markdown
 
 ### Deployment Pipeline
 
@@ -496,17 +496,17 @@ flowchart LR
     GITHUB --> BUILD
     BUILD --> TEST
     TEST --> DEV_DB
-    
+
     TEST --> STAGING_DEPLOY
     STAGING_DEPLOY --> STAGING_TEST
     STAGING_TEST --> STAGING_DB
     STAGING_TEST --> QA_TEST
-    
+
     QA_TEST --> MIGRATION_SCRIPT
     MIGRATION_SCRIPT --> BACKUP
     BACKUP --> VALIDATE
     VALIDATE --> PROD_DEPLOY
-    
+
     PROD_DEPLOY --> PROD_MONITOR
     PROD_MONITOR --> PROD_DB
 
@@ -525,7 +525,7 @@ flowchart LR
     class PROD_DEPLOY,PROD_MONITOR,PROD_DB prod
     class MIGRATION_SCRIPT,BACKUP,VALIDATE migration
     class GITHUB,BUILD,TEST,DEPLOY cicd
-```
+```markdown
 
 ---
 
@@ -603,7 +603,7 @@ mailu_1_7:
   tls_enabled: true
   dkim_selector: mailu
   default_language: en
-```
+```markdown
 
 #### SMTP Features Excellence
 
@@ -633,7 +633,7 @@ const db = new NileDB({
   port: 5432,
   ssl: process.env.NODE_ENV === 'production'
 });
-```
+```markdown
 
 #### Multi-Tenant Data Isolation Excellence
 
@@ -653,7 +653,7 @@ const db = new NileDB({
 **Technical Authority**: Our hybrid architecture combines **Redis speed** with **PostgreSQL reliability**, providing **optimal performance** and **data safety** for **enterprise-scale operations**.
 
 ```javascript
-/.md)
+/)
 const queue = new Queue('emailQueue', {
   redis: {
     host: 'redis.penguinmails.com',
@@ -671,7 +671,7 @@ const queue = new Queue('emailQueue', {
   }
 });
 
-/.md)
+/)
 const jobManager = new JobManager({
   database: {
     host: 'postgres.penguinmails.com',
@@ -681,7 +681,7 @@ const jobManager = new JobManager({
     password: process.env.DB_PASSWORD
   }
 });
-```
+```markdown
 
 #### Hybrid Queue Architecture Excellence
 
@@ -707,7 +707,7 @@ if (job.priority < 50) {
     priority: job.priority
   }));
 }
-```
+```markdown
 
 **B. Queuer Process (Migration Service):**
 ```javascript
@@ -734,7 +734,7 @@ class JobMigrator {
         priority: job.priority,
         payload: job.payload
       };
-      
+
       // Push to Redis with priority routing
       await redis.lpush(queueName, JSON.stringify(redisPayload));
 
@@ -752,7 +752,7 @@ class JobMigrator {
     return 'queue:email-sending:low';
   }
 }
-```
+```markdown
 
 **C. Consumer Pattern (Worker Servers):**
 ```javascript
@@ -769,7 +769,7 @@ class Worker {
       'queue:email-sending',
       'queue:email-sending:low'
     ];
-    
+
     while (true) {
       try {
         // Blocking pop with priority ordering
@@ -786,7 +786,7 @@ class Worker {
 
   async processJob(jobData, queueName) {
     const { id, payload, priority } = jobData;
-    
+
     try {
       // Update PostgreSQL status
       await db.jobs.update({
@@ -797,17 +797,17 @@ class Worker {
           updated_at: new Date()
         }
       });
-      
+
       // Update Redis hash for real-time tracking
       await this.redis.hset(`job:${id}`, {
         status: 'processing',
         worker_id: process.env.WORKER_ID,
         started_at: new Date().toISOString()
       });
-      
+
       // Execute the job
       await this.executeEmailJob(payload);
-      
+
       // Update completion status
       await db.jobs.update({
         where: { id },
@@ -829,7 +829,7 @@ class Worker {
     }
   }
 }
-```
+```markdown
 
 #### Queue Processing Benefits Excellence
 
@@ -862,12 +862,12 @@ services:
       POSTGRES_PASSWORD: dev_password
     ports:
       - "5432:5432"
-  
+
   redis:
     image: redis:6-alpine
     ports:
       - "6379:6379"
-  
+
   app:
     build: .
     ports:
@@ -878,7 +878,7 @@ services:
     depends_on:
       - database
       - redis
-```
+```markdown
 
 ### Production Environment Variables
 
@@ -893,7 +893,7 @@ HOSTWIND_API_KEY=${HOSTWIND_API_KEY}
 STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
 STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
 LOOP_API_KEY=${LOOP_API_KEY}
-```
+```markdown
 
 ---
 
@@ -1043,12 +1043,12 @@ This implementation represents a **comprehensive infrastructure advancement** th
 
 ## Related Documentation
 
-- [Architecture Overview](...md) - Strategic foundation and market positioning
-- [Queue System Implementation](..md) - Job processing and reliability
-- [Email System Implementation](..md) - Email processing and queue integration
-- [Analytics Architecture](..md) - PostHog integration and business intelligence
-- [OLAP Analytics Schema](..md) - Business intelligence and data warehousing
-- [Business Operations](../../business/operations.md) - Operational procedures and quality assurance
-- [Security Documentation](../../compliance-security.md) - Enterprise security and compliance
+- [Architecture Overview](..) - Strategic foundation and market positioning
+- [Queue System Implementation](.) - Job processing and reliability
+- [Email System Implementation](.) - Email processing and queue integration
+- [Analytics Architecture](.) - PostHog integration and business intelligence
+- [OLAP Analytics Schema](.) - Business intelligence and data warehousing
+- [Business Operations](../../business/operations) - Operational procedures and quality assurance
+- [Security Documentation](../../compliance-security) - Enterprise security and compliance
 
 **Keywords**: infrastructure, operations, hostwinds, vps, smtp, mailu, nileDB, redis, queue system, deployment, monitoring, troubleshooting, maintenance, enterprise infrastructure, operational excellence

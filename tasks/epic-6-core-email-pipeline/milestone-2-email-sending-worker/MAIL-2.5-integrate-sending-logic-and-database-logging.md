@@ -22,5 +22,5 @@ Combine the worker main loop, email assembly, and SMTP sending. After successful
 
 ## Related documentation
 
-- [Development Standards (retries & logging)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Operations: Infrastructure Operations Management (worker monitoring)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Development Standards (retries & logging)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure Operations Management (worker monitoring)](../../docs/operations-analytics/operations-management/infrastructure-operations-management)

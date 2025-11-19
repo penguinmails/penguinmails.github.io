@@ -22,5 +22,5 @@ Create a protected API route (e.g., `/api/cron/sync-infra/route.ts`) that extern
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Development Standards (API routes & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Development Standards (API routes & secrets)](../../docs/implementation-technical/development-guidelines/development-standards)

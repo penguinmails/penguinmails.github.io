@@ -11,25 +11,33 @@ This document establishes a systematic, simplified approach to creating user sto
 ## Core Principles
 
 ### **1. User Type First**
+
 Every user story must clearly identify which user type it serves:
+
 - **Internal Platform Users**: Administrative and operational workflows
 - **External Stakeholders**: Public-facing credibility and assessment workflows  
 - **Real External Users**: Customer business operation workflows
 
 ### **2. Business Value Focus**
+
 Every story must articulate clear business value:
+
 - What business outcome does this enable?
 - How does this improve efficiency, revenue, or user satisfaction?
 - What measurable impact will this have?
 
 ### **3. Progressive Disclosure**
+
 Stories should be structured to reveal information progressively:
+
 - **Minimum Viable**: What must work for basic functionality?
 - **Enhanced**: What improves the experience?
 - **Advanced**: What provides power user capabilities?
 
 ### **4. Implementation Clarity**
+
 Stories must be clear enough for implementation:
+
 - Specific functionality requirements
 - Clear acceptance criteria
 - Measurable success metrics
@@ -39,7 +47,7 @@ Stories must be clear enough for implementation:
 
 ## Standard User Story Template
 
-```
+```markdown
 As a [USER TYPE - SPECIFIC ROLE], 
 I want [SPECIFIC FUNCTIONALITY], 
 so that [CLEAR BUSINESS VALUE/RESULT].
@@ -97,7 +105,7 @@ DEFINITION OF DONE:
 
 ### **Internal Platform Users Template**
 
-```
+```markdown
 As an [Internal Role - Admin/Operations/Developer/etc], 
 I want [Platform Management/Operational Function], 
 so that [Operational Efficiency/Business Process Improvement].
@@ -120,7 +128,7 @@ FOCUS AREAS:
 
 ### **External Stakeholders Template**
 
-```
+```markdown
 As a [Stakeholder Type - Investor/Press/Competitor/Analyst], 
 I want [Information/Assessment Capability], 
 so that I can [Evaluation/Due Diligence/Market Analysis].
@@ -143,7 +151,7 @@ FOCUS AREAS:
 
 ### **Real External Users Template**
 
-```
+```markdown
 As a [Customer Role - Agency Owner/Consultant/Business Owner/Enterprise Team], 
 I want [Business Function/Capability], 
 so that I can [Achieve Business Objective/Improve Results].
@@ -169,26 +177,31 @@ FOCUS AREAS:
 ## Story Creation Process
 
 ### **Step 1: User Type Identification**
+
 1. **Who is this story for?** (Internal/External Stakeholder/Customer)
 2. **What specific role within that user type?** (Be specific)
 3. **What journey phase does this support?** (Onboarding/Daily/Advanced/Problem/Growth)
 
 ### **Step 2: Business Value Definition**
+
 1. **What business problem does this solve?**
 2. **How does this improve efficiency, revenue, or satisfaction?**
 3. **What measurable impact will this have?**
 
 ### **Step 3: Functionality Specification**
+
 1. **What is the specific functionality required?**
 2. **What are the must-have vs nice-to-have features?**
 3. **What are the performance and quality requirements?**
 
 ### **Step 4: Acceptance Criteria Development**
+
 1. **How will we know this is working correctly?**
 2. **What are the specific, testable requirements?**
 3. **What edge cases and error scenarios need to be handled?**
 
 ### **Step 5: Dependencies and Constraints**
+
 1. **What technical dependencies exist?**
 2. **What business or compliance constraints apply?**
 3. **What timeline or resource constraints must be considered?**
@@ -200,24 +213,28 @@ FOCUS AREAS:
 ### **Priority Levels**
 
 #### **CRITICAL**
+
 - **Definition**: Essential for MVP or core business operations
 - **User Types**: Primarily Real External Users (customers)
 - **Timeline**: Must be delivered in current sprint/iteration
 - **Examples**: Core email sending, basic authentication, fundamental admin functions
 
 #### **HIGH**
+
 - **Definition**: Important for good user experience or operational efficiency
 - **User Types**: All user types, emphasis on customer and internal users
 - **Timeline**: Should be delivered within 2-4 sprints
 - **Examples**: Enhanced reporting, user management improvements, basic integrations
 
 #### **MEDIUM**
+
 - **Definition**: Valuable for power users or operational optimization
 - **User Types**: Internal users and advanced customer users
 - **Timeline**: Planned for future sprints based on capacity
 - **Examples**: Advanced analytics, workflow automation, enhanced integrations
 
 #### **LOW**
+
 - **Definition**: Nice-to-have features or edge case handling
 - **User Types**: Primarily power users and internal optimization
 - **Timeline**: Backlog for future consideration
@@ -240,24 +257,28 @@ FOCUS AREAS:
 ## Validation Checklist
 
 ### **Before Story Creation**
+
 - [ ] User type clearly identified
 - [ ] Business value articulated
 - [ ] User need validated with actual users or stakeholders
 - [ ] Story fits within current scope boundaries (2025-2027 focus)
 
 ### **During Story Development**
+
 - [ ] Acceptance criteria are specific and testable
 - [ ] Dependencies and constraints identified
 - [ ] Story points estimated using team standard
 - [ ] Technical feasibility validated
 
 ### **Before Story Review**
+
 - [ ] Story follows standard template format
 - [ ] All template sections completed
 - [ ] Cross-references to user journey documentation
 - [ ] Dependencies mapped to other stories
 
 ### **Story Approval Requirements**
+
 - [ ] Product team approval for business value
 - [ ] Design team approval for user experience
 - [ ] Engineering team approval for technical feasibility
@@ -268,18 +289,21 @@ FOCUS AREAS:
 ## Story Maintenance
 
 ### **Regular Reviews**
+
 - **Weekly**: Story backlog grooming and priority adjustments
 - **Sprint Planning**: Story refinement and estimation validation
 - **Monthly**: User story effectiveness review and methodology improvements
 - **Quarterly**: User type classification and template updates
 
 ### **Quality Assurance**
+
 - **Completion Criteria**: All acceptance criteria met and verified
 - **User Testing**: Stories validated with actual users where possible
 - **Performance Impact**: Stories reviewed for performance implications
 - **Documentation**: Stories properly linked to user journey documentation
 
 ### **Continuous Improvement**
+
 - **Template Refinement**: Improve templates based on team feedback
 - **Process Optimization**: Streamline story creation and validation process
 - **Tool Integration**: Integrate story creation with project management tools
@@ -290,18 +314,21 @@ FOCUS AREAS:
 ## Integration with Existing Workflows
 
 ### **Product Development**
+
 - Stories feed directly into product backlog
 - Prioritization aligns with product roadmap
 - Acceptance criteria become testing requirements
 - Dependencies inform technical architecture decisions
 
 ### **Design Process**
+
 - Stories inform UX research and design decisions
 - User type classification guides design patterns
 - Progressive disclosure requirements influence UI/UX design
 - Business value focus drives design priorities
 
 ### **Engineering Implementation**
+
 - Stories provide implementation requirements
 - Dependencies inform technical planning
 - Acceptance criteria become test specifications

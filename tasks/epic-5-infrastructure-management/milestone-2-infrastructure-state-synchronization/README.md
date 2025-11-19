@@ -2,7 +2,7 @@
 
 **Goal:** Create an automated background process that regularly fetches Hostwind infrastructure state and updates the local database.
 
-### Tickets
+## Tickets
 
 - INFRA-2.1 Implement "Upsert" Logic for vps_instances
 - INFRA-2.2 Implement "Upsert" Logic for smtp_ip_addresses

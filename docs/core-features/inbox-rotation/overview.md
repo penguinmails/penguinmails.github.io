@@ -8,8 +8,9 @@ last_modified_date: "2025-11-10"
 
 ## Strategic Account Protection & Detection Avoidance
 
-> **📖 Getting Started?** See our [Features Overview](../feature-overview.md) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](../feature-overview) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
+>
 > - **⭐ Beginner Path**: Basic inbox rotation for account protection
 > - **⭐⭐ Intermediate Path**: Advanced rotation strategies and optimization
 > - **⭐⭐⭐ Expert Path**: Technical implementation and enterprise features
@@ -22,20 +23,24 @@ last_modified_date: "2025-11-10"
 
 **Our Solution**: Intelligent rotation algorithms that mimic natural human sending patterns while distributing risk across multiple accounts, maintaining 95%+ deliverability rates even at scale.
 
-**👤 Perfect for Agency Owners** - Scale client campaigns across multiple domains without detection risk  
-**👤 Ideal for Startup Founders** - Protect reputation while scaling from hundreds to thousands of sends  
-**👤 Enterprise-Ready** - Advanced algorithms with comprehensive compliance and audit trails  
+**👤 Perfect for Agency Owners** - Scale client campaigns across multiple domains without detection risk
+**👤 Ideal for Startup Founders** - Protect reputation while scaling from hundreds to thousands of sends
+**👤 Enterprise-Ready** - Advanced algorithms with comprehensive compliance and audit trails
 
 ## Why Inbox Rotation Matters
 
 ### **⭐ Beginner Path: Basic Protection**
+
 **Simple reasons to use rotation:**
+
 - **Avoid Detection Patterns**: Email providers detect automated sending from single addresses
 - **Account Protection**: Spread risk across multiple email addresses
 - **Maintain Reputation**: Protect your sender reputation by avoiding flags
 
 ### **⭐⭐ Intermediate Path: Strategic Benefits**
+
 **Professional advantages:**
+
 - **Distribute Risk**: Spreading sending across multiple addresses means:
   - If one account gets flagged, others continue functioning
   - Each email address maintains its individual reputation
@@ -49,7 +54,9 @@ last_modified_date: "2025-11-10"
   - Better long-term campaign performance
 
 ### **⭐⭐⭐ Expert Path: Technical Advantages**
+
 **Enterprise-grade benefits:**
+
 - **Detection Algorithm Evasion**: Advanced algorithms that stay ahead of email provider detection
 - **Performance Optimization**: Real-time optimization based on account performance data
 - **Scalability Architecture**: Support for thousands of accounts and millions of sends
@@ -58,13 +65,17 @@ last_modified_date: "2025-11-10"
 ## How Our Inbox Rotation Works
 
 ### **⭐ Beginner Path: Simple Setup**
+
 **Basic rotation for immediate protection:**
+
 - **Frequency-Based Rotation**: Automatically switch between email addresses
 - **Volume Limits**: Set daily limits for each account to avoid flags
 - **Basic Monitoring**: Track account health and performance
 
 ### **⭐⭐ Intermediate Path: Smart Rotation**
+
 **Advanced rotation features:**
+
 - **Smart Rotation Algorithm**: Our system uses intelligent algorithms to determine optimal rotation patterns:
   - **Frequency-Based Rotation**: Adjusts rotation based on your sending volume
   - **Time-Based Scheduling**: Spaces out emails from each address
@@ -78,15 +89,18 @@ last_modified_date: "2025-11-10"
   - **Custom Rules**: Apply your specific rotation preferences and restrictions
 
 ### **⭐⭐⭐ Expert Path: Advanced Intelligence**
+
 **Enterprise-grade rotation system:**
 
-**Real-time Monitoring**
+## Real-time Monitoring
+
 - **Account Health Scoring**: Continuously monitors each email account's reputation
 - **Performance Analytics**: Tracks deliverability and response rates by account
 - **Risk Assessment**: Identifies accounts at risk of being flagged
 - **Optimization Suggestions**: Recommends rotation adjustments for better results
 
-**Technical Architecture**
+## Technical Architecture
+
 - **Machine Learning Algorithms**: AI-powered optimization for maximum deliverability
 - **Queue System Integration**: Intelligent scheduling with performance-based prioritization
 - **Failover Systems**: Automated failover to maintain service continuity
@@ -101,26 +115,31 @@ last_modified_date: "2025-11-10"
 ## Key Features
 
 ### **⭐ Beginner Path: Essential Features**
+
 **Core rotation capabilities:**
+
 - **Rotation Frequency**: Configure how often to switch between email addresses
 - **Volume Limits**: Set daily/weekly limits for each account
 - **Basic Account Management**: Simple account addition and removal
 
 ### **⭐⭐ Intermediate Path: Professional Features**
 
-**Flexible Rotation Settings**
+## Flexible Rotation Settings
+
 - **Sequence Management**: Create custom sending sequences with multiple accounts
 - **Break Periods**: Schedule rest periods for accounts to recover reputation
 - **Performance Ranking**: Rank accounts by performance and prioritize accordingly
 - **Risk Assessment**: Monitor accounts for signs of reputation issues
 
-**Intelligent Account Management**
+## Intelligent Account Management
+
 - **Auto-Creation**: Automatically create new email accounts when needed
 - **Warm-up Integration**: Seamlessly incorporate new accounts into rotation
 - **Custom Rules**: Apply your specific rotation preferences and restrictions
 - **Account Health Monitoring**: Continuous monitoring of account status
 
-**Advanced Scheduling**
+## Advanced Scheduling
+
 - **Time-Based Rules**: Send emails at optimal times for each account
 - **Geographic Rotation**: Consider target audience time zones
 - **Business Day Optimization**: Focus on sending during business hours
@@ -128,19 +147,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐⭐ Expert Path: Enterprise Features**
 
-**Analytics and Insights**
+## Analytics and Insights
+
 - **Account Performance Tracking**: Compare performance across all accounts
 - **Rotation Effectiveness**: Measure how rotation impacts deliverability
 - **ROI Analysis**: Calculate return on investment for different rotation strategies
 - **Optimization Recommendations**: Get AI-powered suggestions for improvement
 
-**Enterprise Management**
+## Enterprise Management
+
 - **Multi-tenant Support**: Manage rotation across hundreds of client accounts
 - **Custom Algorithms**: Industry-specific rotation patterns and optimizations
 - **API Integration**: Full RESTful API for custom automation and integration
 - **White-label Support**: Custom branding and reporting for agency clients
 
-**Advanced Intelligence**
+## Advanced Intelligence
+
 - **Predictive Analytics**: AI-powered predictions of account performance
 - **Behavioral Learning**: Algorithms that learn from your specific sending patterns
 - **Competitive Intelligence**: Analysis of market trends and optimal strategies
@@ -149,7 +171,9 @@ last_modified_date: "2025-11-10"
 ## Setting Up Inbox Rotation
 
 ### **⭐ Beginner Path: Quick Setup (10 Minutes)**
+
 **Basic rotation configuration:**
+
 1. **Email Account Creation**: Create multiple email addresses for rotation
 2. **Domain Verification**: Verify domains and set up DNS records
 3. **Basic Configuration**: Set up simple rotation rules and limits
@@ -157,19 +181,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Intermediate Path: Professional Setup**
 
-**Step 1: Account Preparation**
+## Step 1: Account Preparation
+
 1. **Email Account Creation**: Create multiple email addresses for rotation
 2. **Domain Verification**: Verify domains and set up DNS records
 3. **Warm-up Process**: Warm up each account before including in rotation
 4. **Initial Testing**: Test deliverability for each account individually
 
-**Step 2: Rotation Configuration**
+## Step 2: Rotation Configuration
+
 - **Rotation Rules**: Set up rotation frequency and volume limits
 - **Priority Settings**: Define which accounts to prioritize
 - **Fallback Accounts**: Configure backup accounts for emergencies
 - **Scheduling Preferences**: Set up optimal sending schedules
 
-**Step 3: Campaign Integration**
+## Step 3: Campaign Integration
+
 - **Contact List Preparation**: Organize contacts for rotation sending
 - **Template Assignment**: Link email templates to specific rotation rules
 - **Sequence Setup**: Create multi-touch sequences across accounts
@@ -177,19 +204,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Expert Path: Enterprise Setup**
 
-**Advanced Account Management**
+## Advanced Account Management
+
 - **Bulk Account Creation**: Automated creation of dozens or hundreds of accounts
 - **Domain Portfolio Management**: Manage multiple domains with sophisticated strategies
 - **IP Address Distribution**: Geographic and provider-specific IP distribution
 - **Advanced DNS Configuration**: Enterprise-grade DNS setup and monitoring
 
-**Enterprise Integration**
+## Enterprise Integration
+
 - **API-Driven Setup**: Complete automation through RESTful APIs
 - **CRM Integration**: Seamless integration with existing CRM systems
 - **Marketing Automation**: Integration with marketing automation platforms
 - **Custom Workflows**: Tailored workflows for specific business requirements
 
-**Advanced Configuration**
+## Advanced Configuration
+
 - **Machine Learning Optimization**: AI-powered optimization based on historical data
 - **Competitive Analysis**: Integration of competitive intelligence into rotation decisions
 - **Regulatory Compliance**: Automated compliance with international regulations
@@ -198,26 +228,31 @@ last_modified_date: "2025-11-10"
 ## Performance Monitoring
 
 ### **⭐ Beginner Path: Basic Monitoring**
+
 **Essential metrics to track:**
+
 - **Deliverability Rate**: Percentage of emails landing in inbox vs spam
 - **Response Rates**: Monitor response quality and quantity by account
 - **Bounce Rates**: Keep track of hard and soft bounces across accounts
 
 ### **⭐⭐ Intermediate Path: Professional Analytics**
 
-**Account Health Indicators**
+## Account Health Indicators
+
 - **Sender Score**: Monitor reputation scores for each account
 - **Spam Complaint Rate**: Track complaint rates by account
 - **Blacklist Status**: Check if accounts appear on any blacklists
 - **Provider Feedback**: Monitor feedback from Gmail, Yahoo, etc.
 
-**Optimization Strategies**
+## Optimization Strategies
+
 - **A/B Testing**: Test different rotation frequencies and patterns
 - **Performance Comparison**: Compare accounts and identify top performers
 - **Timing Optimization**: Optimize send times based on account performance
 - **Content Variation**: Test different content approaches across accounts
 
-**Comprehensive Metrics**
+## Comprehensive Metrics
+
 - **Response Quality Analysis**: Analyze the quality of responses received
 - **Conversion Tracking**: Track conversions from rotation campaigns
 - **Cost Analysis**: Calculate cost per successful email across accounts
@@ -225,19 +260,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Expert Path: Advanced Analytics**
 
-**Predictive Analytics**
+## Predictive Analytics
+
 - **Performance Forecasting**: Predict future account performance
 - **Risk Prediction**: Early warning systems for potential issues
 - **Optimization Recommendations**: AI-powered optimization suggestions
 - **Market Intelligence**: Analysis of market trends and opportunities
 
-**Enterprise Reporting**
+## Enterprise Reporting
+
 - **Executive Dashboards**: High-level strategic insights for leadership
 - **Client Reporting**: Comprehensive reporting for agency clients
 - **Compliance Reporting**: Automated compliance reporting for regulatory requirements
 - **Custom Analytics**: Custom analytics solutions for specific business needs
 
-**Advanced Intelligence**
+## Advanced Intelligence
+
 - **Behavioral Analysis**: Deep analysis of prospect behavior patterns
 - **Competitive Intelligence**: Analysis of competitor rotation strategies
 - **Market Segmentation**: Advanced market segmentation and optimization
@@ -248,31 +286,37 @@ last_modified_date: "2025-11-10"
 Ready to optimize your cold email outreach with smart inbox rotation?
 
 ### **Related Features**
-1. **[Warm-ups](../warm-ups/overview.md)** - Build reputation for each account in your rotation
-2. **[Unified Inbox](../unified-inbox/overview.md)** - Manage responses from all rotated accounts
-3. **[Analytics](../analytics/overview.md)** - Track performance across all accounts and rotation patterns
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Create accounts for rotation
+
+1. **[Warm-ups](../warm-ups/overview)** - Build reputation for each account in your rotation
+2. **[Unified Inbox](../unified-inbox/overview)** - Manage responses from all rotated accounts
+3. **[Analytics](../analytics/overview)** - Track performance across all accounts and rotation patterns
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview)** - Create accounts for rotation
 
 ### **Implementation Resources**
-5. **[Getting Started](../getting-started.md)** - Complete setup and integration
+
+1. **[Getting Started](../getting-started)** - Complete setup and integration
 
 ### **Prerequisites**
+
 - **Multiple Email Accounts**: Have at least 2-3 email accounts ready for rotation
 - **Domain Configuration**: Ensure proper DNS setup for all domains
 - **Campaign Data**: Define target audience and campaign parameters
 - **Volume Planning**: Determine expected sending volumes
 
 ### **Alternative Approaches**
+
 - **Single Account Strategy**: Use single account with lower volumes
 - **Manual Rotation**: Manual account switching (not recommended)
 - **Third-party Tools**: External rotation services
 - **Gradual Implementation**: Phase rotation into existing campaigns
 
 ### **Deep Dive Options**
-- **[Advanced Strategies](advanced-strategies.md)** - Advanced rotation techniques and optimization
-- **[Technical Implementation](technical-implementation.md)** - Detailed technical setup and configuration
+
+- **[Advanced Strategies](advanced-strategies)** - Advanced rotation techniques and optimization
+- **[Technical Implementation](technical-implementation)** - Detailed technical setup and configuration
 
 ### **Success Metrics**
+
 - **Week 1**: Rotation system operational with 2-3 accounts
 - **Week 2**: Performance baseline established across accounts
 - **Week 4**: 25% improvement in deliverability rates
@@ -280,4 +324,5 @@ Ready to optimize your cold email outreach with smart inbox rotation?
 
 ---
 *Smart inbox rotation is essential for sustainable cold email success. Our automated system takes the complexity out of account management while maximizing your deliverability and response rates.*
+
 ---

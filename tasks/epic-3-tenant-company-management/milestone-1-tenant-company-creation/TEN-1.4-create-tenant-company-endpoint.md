@@ -11,12 +11,13 @@ Create a protected POST API route at `/api/tenants/route.ts`. This endpoint will
 
 ## Context
 
-This endpoint is the critical first step in user onboarding. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), users need to create their workspace after signing up. This endpoint enables:
+This endpoint is the critical first step in user onboarding. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), users need to create their workspace after signing up. This endpoint enables:
+
 - **Tenant Creation:** Creating an isolated environment in NileDB
 - **Company Creation:** Creating the first workspace within that tenant
 - **Onboarding Flow:** Completing the initial setup process
 
-The [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) emphasizes that each tenant gets complete data isolation, which begins with this endpoint.
+The [High-Level Architecture](../../docs/quick-access/high-level-architecture) emphasizes that each tenant gets complete data isolation, which begins with this endpoint.
 
 ## Acceptance Criteria
 
@@ -142,6 +143,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (201):**
+
 ```json
 {
   "tenant": {
@@ -157,6 +159,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "error": "Validation failed",
@@ -182,10 +185,10 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
-- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - **Primary reference** for API development standards and patterns
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - Companies table structure
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Onboarding flow
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Multi-tenant architecture
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference) - **Primary reference** for API development standards and patterns
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - Companies table structure
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Onboarding flow
 
 ## Dependencies
 
@@ -207,4 +210,3 @@ export async function POST(request: NextRequest) {
 - [ ] Test error handling for NileDB failures
 - [ ] Test error handling for database failures
 - [ ] Verify response includes both tenant and company information
-

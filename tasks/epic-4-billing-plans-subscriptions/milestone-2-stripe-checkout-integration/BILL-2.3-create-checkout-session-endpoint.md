@@ -11,7 +11,7 @@ Create a protected POST API route at `/api/subscriptions/checkout/route.ts`. Thi
 
 ## Context
 
-Checkout session creation is the first step in the subscription flow. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), users need to subscribe to plans through Stripe Checkout. This endpoint initiates the secure payment process.
+Checkout session creation is the first step in the subscription flow. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), users need to subscribe to plans through Stripe Checkout. This endpoint initiates the secure payment process.
 
 ## Acceptance Criteria
 
@@ -145,6 +145,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "sessionId": "cs_test_xxxxx",
@@ -153,6 +154,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (404):**
+
 ```json
 {
   "error": "Plan not found"
@@ -171,8 +173,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Subscription setup
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Payment processing
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Subscription setup
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Payment processing
 
 ## Dependencies
 
@@ -190,4 +192,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify metadata includes tenant_id and user_id
 - [ ] Test error handling for Stripe API failures
 - [ ] Verify customer is created if doesn't exist
-

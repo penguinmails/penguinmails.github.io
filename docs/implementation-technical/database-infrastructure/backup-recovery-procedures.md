@@ -1,6 +1,7 @@
 # Backup & Recovery Procedures
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This backup and recovery guide supports our enterprise infrastructure framework by providing comprehensive data protection and disaster recovery procedures for the PenguinMails multi-tenant platform with 99.9% uptime guarantees.
 
 **Technical Authority**: Our backup architecture integrates with enterprise-grade systems featuring cross-region replication, automated validation, and comprehensive recovery procedures across OLTP, content, queue, and analytics database tiers.
@@ -16,11 +17,12 @@
 This guide provides comprehensive backup and recovery procedures for PenguinMails' 4-tier database architecture, ensuring business continuity and data protection with enterprise-grade standards.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Data Protection**: All procedures follow [Quality Assurance Standards](../quality-assurance.md) with validation checkpoints
-- **Business Continuity**: Enable rapid recovery with [Performance Monitoring Framework](../quality-assurance.md) integration
-- **Compliance**: Meet regulatory requirements with [Quality Assurance Process](../quality-assurance.md) validation
-- **Testing**: Regular backup validation following [Success Measurement Framework](../quality-assurance.md) with comprehensive testing protocols
-- **Disaster Recovery**: [Issue Detection & Response](../quality-assurance.md) integrated recovery procedures
+
+- **Quality-Assured Data Protection**: All procedures follow [Quality Assurance Standards](/docs/business/quality-assurance) with validation checkpoints
+- **Business Continuity**: Enable rapid recovery with [Performance Monitoring Framework](/docs/business/quality-assurance) integration
+- **Compliance**: Meet regulatory requirements with [Quality Assurance Process](/docs/business/quality-assurance) validation
+- **Testing**: Regular backup validation following [Success Measurement Framework](/docs/business/quality-assurance) with comprehensive testing protocols
+- **Disaster Recovery**: [Issue Detection & Response](/docs/business/quality-assurance) integrated recovery procedures
 
 ⭐ **Quick Recovery** (5 minutes) - Emergency procedures and immediate response
 ⭐⭐ **Standard Operations** (15 minutes) - Daily backup monitoring and validation
@@ -40,8 +42,9 @@ This guide provides comprehensive backup and recovery procedures for PenguinMail
 | **OLAP** | Full + Snapshot | Daily full, weekly snapshot | 365 days | Primary + Analytics archive |
 
 ### **Recovery Objectives**
+
 ```yaml
-QA Framework Integration: All recovery objectives align with [Critical Issue Identification](../quality-assurance.md) and [Performance Issue Detection](../quality-assurance.md) standards.
+QA Framework Integration: All recovery objectives align with [Critical Issue Identification](/docs/business/quality-assurance) and [Performance Issue Detection](/docs/business/quality-assurance) standards.
 
 Recovery Time Objectives (RTO):
   OLTP:     15 minutes (critical business operations) - QA Target: <4 hours response time
@@ -54,7 +57,7 @@ Recovery Point Objectives (RPO):
   Content:  1 hour (acceptable for email content) - QA Validation: Weekly quality checks
   Queue:    0 minutes (transaction log replay) - QA Validation: Continuous validation
   OLAP:     24 hours (analytics data acceptable loss) - QA Validation: Monthly comprehensive review
-```
+```markdown
 
 ---
 
@@ -69,7 +72,7 @@ Recovery Point Objectives (RPO):
 set -e
 
 DB_NAME="penguinmails_oltp"
-BACKUP_DIR="/backups/oltp.md)"
+BACKUP_DIR="/backups/oltp)"
 S3_BUCKET="penguinmails-backups-us-east-1"
 RETENTION_DAYS=90
 
@@ -85,7 +88,7 @@ pg_dump \
   --format=custom \
   --compress=6 \
   --verbose \
-  --file="$BACKUP_DIR.md).dump" \
+  --file="$BACKUP_DIR).dump" \
   "$DB_NAME"
 
 # Create backup metadata
@@ -94,7 +97,7 @@ cat > "$BACKUP_DIR/backup_info.json" << EOF
   "database": "$DB_NAME",
   "backup_type": "full",
   "timestamp": "$(date -Iseconds)",
-  "backup_size_bytes": "$(stat -f%z "$BACKUP_DIR"/oltp_full_*.dump 2>/dev/null || stat -c%s "$BACKUP_DIR".md)",
+  "backup_size_bytes": "$(stat -f%z "$BACKUP_DIR"/oltp_full_*.dump 2>/dev/null || stat -c%s "$BACKUP_DIR")",
   "retention_days": $RETENTION_DAYS,
   "compressed": true,
   "format": "custom"
@@ -102,12 +105,12 @@ cat > "$BACKUP_DIR/backup_info.json" << EOF
 EOF
 
 # Upload to S3 with encryption
-aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/oltp.md)/" \
+aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/oltp)/" \
   --server-side-encryption AES256 \
   --storage-class STANDARD_IA
 
 echo "OLTP backup completed successfully"
-```
+```markdown
 
 ### **Hourly Incremental Backup**
 ⭐⭐ **Standard Operations** (5 minutes)
@@ -118,7 +121,7 @@ echo "OLTP backup completed successfully"
 set -e
 
 DB_NAME="penguinmails_oltp"
-WAL_ARCHIVE_DIR="/backups/oltp/wal_archive.md)"
+WAL_ARCHIVE_DIR="/backups/oltp/wal_archive)"
 S3_BUCKET="penguinmails-backups-us-east-1"
 
 # Create WAL archive directory
@@ -129,11 +132,11 @@ mkdir -p "$WAL_ARCHIVE_DIR"
 find /var/lib/postgresql/wal_archive -name "*.wal" -mmin +55 -exec cp {} "$WAL_ARCHIVE_DIR"/ \;
 
 # Upload WAL files to S3
-aws s3 sync "$WAL_ARCHIVE_DIR" "s3://$S3_BUCKET/oltp/wal_archive.md)/" \
+aws s3 sync "$WAL_ARCHIVE_DIR" "s3://$S3_BUCKET/oltp/wal_archive)/" \
   --server-side-encryption AES256
 
 echo "WAL archive completed: $(date)"
-```
+```markdown
 
 ---
 
@@ -148,7 +151,7 @@ echo "WAL archive completed: $(date)"
 set -e
 
 DB_NAME="penguinmails_content"
-BACKUP_DIR="/backups/content.md)"
+BACKUP_DIR="/backups/content)"
 S3_BUCKET="penguinmails-backups-us-east-1"
 
 echo "Starting Content database backup with compression optimization"
@@ -162,7 +165,7 @@ pg_dump \
   --no-owner \
   --no-privileges \
   --exclude-table-data="content_objects" \
-  --file="$BACKUP_DIR.md).dump" \
+  --file="$BACKUP_DIR).dump" \
   "$DB_NAME"
 
 # Backup content objects separately with maximum compression
@@ -173,7 +176,7 @@ pg_dump \
   --compress=9 \
   --data-only \
   --table=content_objects \
-  --file="$BACKUP_DIR.md).dump" \
+  --file="$BACKUP_DIR).dump" \
   "$DB_NAME"
 
 # Create backup summary
@@ -182,19 +185,19 @@ Content Database Backup Summary
 ===============================
 Date: $(date)
 Database: $DB_NAME
-Metadata backup: $(ls -lh $BACKUP_DIR.md)
-Objects backup: $(ls -lh $BACKUP_DIR.md)
+Metadata backup: $(ls -lh $BACKUP_DIR)
+Objects backup: $(ls -lh $BACKUP_DIR)
 Total size: $(du -sh $BACKUP_DIR | cut -f1)
 Compression ratio: Optimized for storage efficiency
 EOF
 
 # Upload to S3 with lifecycle policy
-aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/content.md)/" \
+aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/content)/" \
   --server-side-encryption AES256 \
   --storage-class GLACIER
 
 echo "Content backup completed with compression optimization"
-```
+```markdown
 
 ---
 
@@ -210,7 +213,7 @@ set -e
 
 DB_NAME="penguinmails_queue"
 WAL_DIR="/var/lib/postgresql/queue_wal"
-BACKUP_DIR="/backups/queue/wal.md)"
+BACKUP_DIR="/backups/queue/wal)"
 S3_BUCKET="penguinmails-backups-us-east-1"
 
 echo "Starting Queue system WAL backup"
@@ -228,16 +231,16 @@ cat > "$BACKUP_DIR/queue_backup_info.json" << EOF
   "backup_type": "wal_archive",
   "timestamp": "$(date -Iseconds)",
   "wal_files_count": $(find "$BACKUP_DIR" -name "*.wal" | wc -l),
-  "total_wal_size_bytes": $(find "$BACKUP_DIR" -name "*.wal" -exec stat -f%z {} + 2>/dev.md)
+  "total_wal_size_bytes": $(find "$BACKUP_DIR" -name "*.wal" -exec stat -f%z {} + 2>/dev)
 }
 EOF
 
 # Upload WAL files to S3
-aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/queue/wal.md)/" \
+aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/queue/wal)/" \
   --server-side-encryption AES256
 
 echo "Queue WAL backup completed"
-```
+```markdown
 
 ---
 
@@ -252,7 +255,7 @@ echo "Queue WAL backup completed"
 set -e
 
 DB_NAME="penguinmails_olap"
-BACKUP_DIR="/backups/olap.md)"
+BACKUP_DIR="/backups/olap)"
 S3_BUCKET="penguinmails-backups-us-east-1"
 
 echo "Starting OLAP Analytics backup with snapshot"
@@ -264,7 +267,7 @@ pg_dump \
   --format=custom \
   --compress=6 \
   --exclude-table-data="admin_audit_log" \
-  --file="$BACKUP_DIR.md).dump" \
+  --file="$BACKUP_DIR).dump" \
   "$DB_NAME"
 
 # Backup materialized views definitions (not data)
@@ -274,7 +277,7 @@ pg_dump \
   --schema-only \
   --data-only \
   --table=analytics.* \
-  --file="$BACKUP_DIR.md).sql" \
+  --file="$BACKUP_DIR).sql" \
   "$DB_NAME"
 
 # Create analytics backup report
@@ -283,19 +286,19 @@ OLAP Analytics Backup Report
 ===========================
 Date: $(date)
 Database: $DB_NAME
-Main backup: $(ls -lh $BACKUP_DIR.md)
-Materialized views: $(ls -lh $BACKUP_DIR.md)
+Main backup: $(ls -lh $BACKUP_DIR)
+Materialized views: $(ls -lh $BACKUP_DIR)
 Data freshness: Analytics data reflects OLTP as of $(date)
 Snapshot strategy: Weekly snapshots for long-term retention
 EOF
 
 # Upload to S3
-aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/olap.md)/" \
+aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/olap)/" \
   --server-side-encryption AES256 \
   --storage-class STANDARD_IA
 
 echo "OLAP analytics backup completed"
-```
+```markdown
 
 ---
 
@@ -331,7 +334,7 @@ mkdir -p "$RECOVERY_DIR"
 aws s3 sync "s3://$S3_BUCKET/oltp/$BACKUP_DATE/" "$RECOVERY_DIR/"
 
 # Find the full backup file
-FULL_BACKUP_FILE=$(ls "$RECOVERY_DIR".md)
+FULL_BACKUP_FILE=$(ls "$RECOVERY_DIR")
 
 # Stop PostgreSQL service
 sudo systemctl stop postgresql-oltp
@@ -372,7 +375,7 @@ psql -h localhost -U postgres -d "$DB_NAME" -c "SELECT COUNT(*) as table_count F
 
 echo "OLTP recovery completed successfully"
 echo "Recovery point: $RECOVERY_TARGET_TIME"
-```
+```markdown
 
 ### **Content Database Recovery**
 ⭐ **Emergency Recovery** (20-30 minutes)
@@ -409,7 +412,7 @@ sudo -u postgres dropdb "$DB_NAME"
 sudo -u postgres createdb "$DB_NAME"
 
 # Restore metadata backup
-METADATA_BACKUP=$(ls "$RECOVERY_DIR".md)
+METADATA_BACKUP=$(ls "$RECOVERY_DIR")
 pg_restore \
   --host=localhost \
   --username=postgres \
@@ -418,7 +421,7 @@ pg_restore \
   "$METADATA_BACKUP"
 
 # Restore content objects backup
-OBJECTS_BACKUP=$(ls "$RECOVERY_DIR".md)
+OBJECTS_BACKUP=$(ls "$RECOVERY_DIR")
 pg_restore \
   --host=localhost \
   --username=postgres \
@@ -431,7 +434,7 @@ pg_restore \
 sudo systemctl start postgresql-content
 
 echo "Content database recovery completed"
-```
+```markdown
 
 ---
 
@@ -439,7 +442,7 @@ echo "Content database recovery completed"
 
 ### **Quality Assurance Integration**
 ⭐⭐ **Standard Validation** (15 minutes)
-**QA Framework Validation**: All backup testing follows [Quality Assurance Process](../quality-assurance.md) with comprehensive validation, performance monitoring, and [Success Measurement Framework](../quality-assurance.md) integration.
+**QA Framework Validation**: All backup testing follows [Quality Assurance Process](/docs/business/quality-assurance) with comprehensive validation, performance monitoring, and [Success Measurement Framework](/docs/business/quality-assurance) integration.
 
 ### **Automated Backup Validation with QA Framework**
 ⭐ **Quick Validation** (5 minutes)
@@ -452,7 +455,7 @@ S3_BUCKET="penguinmails-backups-us-east-1"
 
 echo "Starting backup validation for $BACKUP_DATE with QA framework integration"
 
-# QA Step 1: Pre-validation checklist following [Content Review Checklist](../quality-assurance.md)
+# QA Step 1: Pre-validation checklist following [Content Review Checklist](/docs/business/quality-assurance)
 echo "QA Step 1: Pre-validation stakeholder review..."
 if [ -f "qa_backup_approval_$BACKUP_DATE" ]; then
     echo "✅ QA Validation: Stakeholder approval confirmed"
@@ -465,7 +468,7 @@ fi
 echo "Validating OLTP backup..."
 aws s3 sync "s3://$S3_BUCKET/oltp/$BACKUP_DATE/" "/tmp/validate_oltp/" --quiet
 
-OLTP_BACKUP=$(ls /tmp/validate_oltp.md)
+OLTP_BACKUP=$(ls /tmp/validate_oltp)
 if pg_restore --list "$OLTP_BACKUP" > /dev/null 2>&1; then
     echo "✅ OLTP backup validation passed"
 else
@@ -475,7 +478,7 @@ fi
 
 # QA Step 2: Technical accuracy validation
 echo "QA Step 2: Technical accuracy validation..."
-# Following [Technical Accuracy](../quality-assurance.md) standards
+# Following [Technical Accuracy](/docs/business/quality-assurance) standards
 echo "✅ Backup integrity validation completed"
 echo "✅ Data consistency verification passed"
 echo "✅ Recovery point objective compliance confirmed"
@@ -484,7 +487,7 @@ echo "✅ Recovery point objective compliance confirmed"
 echo "Validating Content backup..."
 aws s3 sync "s3://$S3_BUCKET/content/$BACKUP_DATE/" "/tmp/validate_content/" --quiet
 
-CONTENT_BACKUP=$(ls /tmp/validate_content.md)
+CONTENT_BACKUP=$(ls /tmp/validate_content)
 if pg_restore --list "$CONTENT_BACKUP" > /dev/null 2>&1; then
     echo "✅ Content backup validation passed"
 else
@@ -493,15 +496,15 @@ else
 fi
 
 # Calculate backup sizes
-OLTP_SIZE=$(du -sh /tmp.md)
-CONTENT_SIZE=$(du -sh /tmp.md)
+OLTP_SIZE=$(du -sh /tmp)
+CONTENT_SIZE=$(du -sh /tmp)
 
 echo "Backup sizes validated:"
 echo "  OLTP: $OLTP_SIZE"
 echo "  Content: $CONTENT_SIZE"
 
 echo "Backup validation completed successfully with QA framework integration"
-```
+```markdown
 
 ### **Recovery Testing (Monthly)**
 ⭐⭐⭐ **Enterprise Testing** (30 minutes)
@@ -546,7 +549,7 @@ $$ LANGUAGE plpgsql;
 
 -- Execute recovery tests
 SELECT * FROM test_recovery_procedures();
-```
+```markdown
 
 ---
 
@@ -570,7 +573,7 @@ Secondary Region: us-west-2
 Recovery Locations:
   Primary: us-east-1 (RTO: 15 minutes)
   Secondary: us-west-2 (RTO: 2 hours)
-```
+```markdown
 
 ### **Disaster Recovery Runbook**
 ⭐ **Emergency Response** (30-60 minutes)
@@ -617,27 +620,27 @@ echo "Step 6: Resume normal operations"
 # Switch traffic to recovered databases
 
 echo "Disaster recovery completed"
-```
+```markdown
 
 ---
 
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](../operations-management.md))** - Central operational hub
-- **[Connection Pooling Strategy](..md))** - Pool management during recovery
-- **[Quality Assurance Testing Protocols](../quality-assurance.md))** - Emergency response coordination
+- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management))** - Central operational hub
+- **[Connection Pooling Strategy](.))** - Pool management during recovery
+- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Emergency response coordination
 
 ### **Technical References**
-- **[OLTP Schema Guide](..md))** - OLTP backup integration
-- **[Content Database Schema Guide](..md))** - Content backup procedures
-- **[Queue System Implementation Guide](..md))** - Queue recovery methods
-- **[OLAP Analytics Schema Guide](..md))** - Analytics backup strategy
+- **[OLTP Schema Guide](.))** - OLTP backup integration
+- **[Content Database Schema Guide](.))** - Content backup procedures
+- **[Queue System Implementation Guide](.))** - Queue recovery methods
+- **[OLAP Analytics Schema Guide](.))** - Analytics backup strategy
 
 ### **Strategic Documentation**
-- **[Operations Analytics Overview](...md))** - Main operations analytics framework
-- **[Business Strategy Overview](../../business/strategy.md))** - Strategic business alignment
-- **[Compliance & Security](../../compliance-security.md)** - Security and compliance frameworks
+- **[Operations Analytics Overview](..))** - Main operations analytics framework
+- **[Business Strategy Overview](../../business/strategy))** - Strategic business alignment
+- **[Compliance & Security](../../compliance-security)** - Security and compliance frameworks
 
 ---
 
@@ -648,9 +651,9 @@ echo "Disaster recovery completed"
 | 2025-11-01 | Initial version - Comprehensive backup strategy | Database Ops Team |
 | [Next Review] | [Monthly backup validation and quarterly recovery testing] | Database Ops Team |
 
-**Document Classification**: Critical Operations  
-**Review Cycle**: Monthly validation, quarterly testing  
-**Compliance Requirements**: GDPR, SOX data retention policies  
+**Document Classification**: Critical Operations
+**Review Cycle**: Monthly validation, quarterly testing
+**Compliance Requirements**: GDPR, SOX data retention policies
 **Training Required**: All database operations and on-call engineers
 
 This comprehensive backup strategy ensures data protection and rapid recovery capabilities for all database tiers while meeting compliance requirements and minimizing business impact during incidents.

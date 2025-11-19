@@ -33,6 +33,7 @@ last_modified_date: "2025-12-19"
 ### 2025 Regulatory Changes Impact
 
 **Critical New Requirements**:
+
 - **PCI DSS v4.0**: DMARC compliance mandatory March 2025
 - **Gmail/Outlook**: 5,000+ daily emails require SPF/DKIM/DMARC
 - **EU AI Act**: Additional compliance for AI-powered email tools
@@ -51,38 +52,38 @@ graph TB
     A --> C[Growing SMB<br/>5K-25K contacts<br/>$400-650/month]
     A --> D[Mid-Market<br/>25K-100K contacts<br/>$1,200-3,000/month]
     A --> E[Enterprise<br/>100K+ contacts<br/>$5,000-10,000+/month]
-    
+
     B --> F[Essential Compliance<br/>Basic GDPR/CCPA]
     C --> G[Professional Stack<br/>Full automation]
     H --> H[Enterprise Framework<br/>Advanced analytics]
     I --> I[Dedicated Resources<br/>Full compliance team]
-    
+
     style A fill:#e1f5fe
     style B fill:#c8e6c9
     style C fill:#fff3e0
     style D fill:#f3e5f5
     style E fill:#ffcdd2
-```
+```markdown
 
 #### Investment Tiers and Recommendations
 
 **Tier 1: Startups & Lean SMBs (Under 5K contacts)**
-- **Investment Range**: $39–$180.md)
-- **Core Stack**: Basic GDPR platform (Osano Free.md) + email verification
+- **Investment Range**: $39–$180)
+- **Core Stack**: Basic GDPR platform (Osano Free) + email verification
 - **Key Value**: Essential compliance foundation at minimal cost
 
 **Tier 2: Growing B2B Teams (5K–25K contacts)**
-- **Investment Range**: $400–$650.md)
+- **Investment Range**: $400–$650)
 - **Core Stack**: Professional compliance platform + full email monitoring
 - **Key Value**: Complete automation with professional monitoring
 
 **Tier 3: Mid-Market Enterprise (25K–100K contacts)**
-- **Investment Range**: $1,200–$3,000.md)
+- **Investment Range**: $1,200–$3,000)
 - **Core Stack**: Enterprise platform + dedicated resources
 - **Key Value**: Comprehensive framework with fractional DPO
 
 **Tier 4: Large Enterprise (100K+ contacts)**
-- **Investment Range**: $5,000–$10,000+.md)
+- **Investment Range**: $5,000–$10,000+)
 - **Core Stack**: Full enterprise suite + dedicated compliance team
 - **Key Value**: Complete enterprise compliance framework
 
@@ -96,35 +97,35 @@ graph TB
 graph LR
     A[Compliance Investment] --> B[Risk Mitigation Value]
     B --> C[ROI Multiple]
-    
+
     A --> D[CAN-SPAM<br/>$500/month]
     A --> E[GDPR Platform<br/>$2K-20K/month]
     A --> F[Enterprise Suite<br/>$5K-10K/month]
-    
+
     D --> G[Avoid $50K+ per violation<br/>100:1 ROI]
     E --> H[Avoid €20M penalty<br/>100:1 to 10,000:1 ROI]
     F --> H2[Business Continuity<br/>Infinite ROI]
-    
+
     style D fill:#c8e6c9
     style E fill:#fff3e0
     style F fill:#ffcdd2
     style G fill:#4caf50
     style H fill:#4caf50
-```
+```markdown
 
 ### Strategic ROI Examples
 
 **Example 1: Mid-Market B2B Company (25K contacts)**
-- **Investment**: $3,400/month ($40,800.md)
-- **Risk Exposure**: 
+- **Investment**: $3,400/month ($40,800)
+- **Risk Exposure**:
   - GDPR: €20M potential penalty
   - CAN-SPAM: $500K+ cumulative exposure
   - Payment processing: $1M+ business continuity risk
 - **Conservative ROI**: 100:1 to 1,000:1
 
 **Example 2: Startup (2K contacts)**
-- **Investment**: $100/month ($1,200.md)
-- **Risk Exposure**: 
+- **Investment**: $100/month ($1,200)
+- **Risk Exposure**:
   - CCPA: $25K+ potential exposure
   - CAN-SPAM: $50K+ per violation
   - Email delivery failure: Operational risk
@@ -134,7 +135,7 @@ graph LR
 
 **Tier 1: Critical (Must-Have)**
 1. **CAN-SPAM compliance**: All US email marketing operations
-2. **SPF/DKIM.md)
+2. **SPF/DKIM)
 3. **Email archiving**: Legal and compliance retention
 4. **Basic consent management**: GDPR/CCPA minimum compliance
 

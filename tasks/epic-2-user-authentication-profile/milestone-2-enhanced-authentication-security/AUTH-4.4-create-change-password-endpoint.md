@@ -11,7 +11,7 @@ Create a protected POST API route for an already authenticated user to change th
 
 ## Context
 
-Password change functionality allows authenticated users to update their password without going through the reset flow. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need self-service account management. This endpoint enables users to proactively change their passwords for security purposes.
+Password change functionality allows authenticated users to update their password without going through the reset flow. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need self-service account management. This endpoint enables users to proactively change their passwords for security purposes.
 
 ## Acceptance Criteria
 
@@ -121,6 +121,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -129,6 +130,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (403) - Incorrect Current Password:**
+
 ```json
 {
   "error": "Current password is incorrect"
@@ -136,6 +138,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400) - Validation Error:**
+
 ```json
 {
   "error": "Validation failed",
@@ -161,8 +164,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Password security requirements
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Account security features
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Password security requirements
+- [Features & Capabilities](../../docs/features-capabilities/index) - Account security features
 
 ## Dependencies
 
@@ -182,5 +185,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify old password no longer works after change
 - [ ] Verify user session persists after password change
 - [ ] Test error handling for NileDB failures
-
-

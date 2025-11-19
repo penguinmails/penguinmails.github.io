@@ -8,9 +8,9 @@ persona: "Documentation Users"
 
 # Email System Implementation Guide
 
-**Architecture Foundation**: Message-focused table structure with natural email hierarchy  
-**Complexity Level**: Expert - Advanced Technical Implementation  
-**Target Audience**: Senior Engineers, DevOps, Database Architects  
+**Architecture Foundation**: Message-focused table structure with natural email hierarchy
+**Complexity Level**: Expert - Advanced Technical Implementation
+**Target Audience**: Senior Engineers, DevOps, Database Architects
 **Last Updated**: 2025-11-01
 
 ## Executive Overview
@@ -35,7 +35,7 @@ This implementation is part of your **complete email management experience** - c
 
 Our email system implements a **natural email hierarchy** that mirrors how email actually works in the real world:
 
-```
+```markdown
 📧 Email System Hierarchy
 ├── email_messages (Message Analytics & Metadata)
 │   ├── campaign_id, lead_id, direction, status
@@ -52,13 +52,13 @@ Our email system implements a **natural email hierarchy** that mirrors how email
     ├── filename, mime_type, size_bytes
     ├── content BYTEA (binary data)
     └── parent_storage_key ← email_content
-```
+```markdown
 
 ### Database Tier Integration
 
 **Strategic Foundation**: This 4-tier separation positions us to handle **enterprise-scale email operations** while maintaining the **flexibility** needed for our **progressive disclosure framework**.
 
-```
+```markdown
 OLTP Database (Operational Excellence):
 ├── campaigns (campaign definitions)
 ├── campaign_sequence_steps (execution orchestration) ⭐
@@ -67,7 +67,7 @@ OLTP Database (Operational Excellence):
 └── leads, templates (business data)
 
 Content Database (Enterprise Analytics):
-├── email_messages (message analytics.md) ⭐
+├── email_messages (message analytics) ⭐
 ├── email_content (email bodies, attachments)
 ├── transactional_emails, notifications
 └── content access and search indexes
@@ -80,7 +80,7 @@ OLAP Analytics (Business Intelligence):
 Queue System (Job Processing):
 ├── jobs, job_logs, job_queues
 └── analytics_jobs (for ETL pipeline)
-```
+```markdown
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant data storage**, **queue-based processing**, and **real-time monitoring** systems that detect and resolve issues before they impact users.
 
@@ -92,13 +92,13 @@ Queue System (Job Processing):
 
 **User Journey Integration**: This flow ensures every email is tracked from **reception** to **analytics** to **user dashboard**, providing complete visibility into your email operations.
 
-```
+```markdown
 1. Event Reception: IMAP/Cronjob/Endpoint → Queue Producer
-2. Queue Entry: Redis Queue with job classification  
-3. Handler Processing: Type-specific processing (inbound/bounce.md)
+2. Queue Entry: Redis Queue with job classification
+3. Handler Processing: Type-specific processing (inbound/bounce)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
-```
+```markdown
 
 ### Cross-Database Relationships
 
@@ -111,7 +111,7 @@ email_messages.email_account_id → email_accounts.id (OLTP)
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
 email_content.storage_key → attachments.parent_storage_key
-```
+```markdown
 
 **Technical Authority**: These relationships ensure **data integrity** across our **enterprise infrastructure** while providing the **performance optimization** needed for **high-volume operations**.
 
@@ -127,9 +127,9 @@ email_content.storage_key → attachments.parent_storage_key
 // Queue handler for creating complete email hierarchy
 async function handleIncomingEmail(emailData: any) {
   const storage_key = `email_${emailData.messageId}_${Date.now()}`;
-  
+
   return await db.$transaction(async (tx) => {
-    /.md)
+    /)
     const contentObject = await tx.email_content.create({
       data: {
         storage_key,
@@ -143,7 +143,7 @@ async function handleIncomingEmail(emailData: any) {
       }
     });
 
-    /.md)
+    /)
     const messageRef = await tx.email_messages.create({
       data: {
         storage_key,
@@ -186,7 +186,7 @@ async function handleIncomingEmail(emailData: any) {
     };
   });
 }
-```
+```markdown
 
 ### IMAP Integration Ready
 
@@ -204,10 +204,10 @@ async function startIncomingWorker() {
 
   await client.connect();
   const lock = await client.getMailboxLock('INBOX');
-  
+
   try {
     for await (let msg of client.fetch('1:*', { envelope: true, source: true })) {
-      /.md)
+      /)
       await addEmailToQueue({
         direction: 'inbound',
         messageId: msg.envelope.messageId,
@@ -224,7 +224,7 @@ async function startIncomingWorker() {
   }
   await client.logout();
 }
-```
+```markdown
 
 ---
 
@@ -236,7 +236,7 @@ async function startIncomingWorker() {
 
 ```sql
 -- Email volume tracking
-SELECT 
+SELECT
     DATE_TRUNC('day', m.created) as date,
     COUNT(*) as total_emails,
     COUNT(*) FILTER (WHERE m.direction = 'inbound') as inbound_emails,
@@ -249,10 +249,10 @@ GROUP BY DATE_TRUNC('day', m.created)
 ORDER BY date;
 
 -- Content storage analytics
-SELECT 
+SELECT
     DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 .md) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 .md) as total_mb_compressed,
+    SUM(c.raw_size_bytes / 1024.0 ) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 ) as total_mb_compressed,
     COUNT(*) as emails_processed
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
@@ -260,7 +260,7 @@ WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE_TRUNC('day', c.created)
 ORDER BY date;
-```
+```markdown
 
 ### Indexing Strategy
 
@@ -282,7 +282,7 @@ CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expire
 -- Attachment indexes
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 CREATE INDEX idx_attachments_mime ON attachments(mime_type);
-```
+```markdown
 
 ---
 
@@ -297,7 +297,7 @@ CREATE INDEX idx_attachments_mime ON attachments(mime_type);
 email_messages:    "This table tracks email message analytics and metadata"
 email_content:     "This table stores the actual email content (body, headers)"
 attachments:       "This table stores email file attachments"
-```
+```markdown
 
 ### 2. **Natural Database Relationships**
 
@@ -314,7 +314,7 @@ FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1;
-```
+```markdown
 
 ### 3. **Rich Analytics Capabilities**
 
@@ -322,11 +322,11 @@ WHERE m.tenant_id = $1;
 
 ```sql
 -- Email size and attachment analysis
-SELECT 
+SELECT
     m.direction,
     m.status,
     COUNT(*) as email_count,
-    AVG(c.raw_size_bytes .md) as avg_size_kb,
+    AVG(c.raw_size_bytes ) as avg_size_kb,
     COUNT(a.*) as total_attachments
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
@@ -335,15 +335,15 @@ WHERE m.tenant_id = $1
 GROUP BY m.direction, m.status;
 
 -- Content compression analysis
-SELECT 
+SELECT
     c.compression_algorithm,
     COUNT(*) as emails,
-    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal .md) as avg_compression_ratio
+    AVG((c.raw_size_bytes - c.compressed_size_bytes)::decimal ) as avg_compression_ratio
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
 GROUP BY c.compression_algorithm;
-```
+```markdown
 
 ---
 
@@ -381,7 +381,7 @@ GROUP BY c.compression_algorithm;
 
 ```sql
 -- Step 1: Create new tables with clear names
-CREATE TABLE email_messages (.md)
+CREATE TABLE email_messages ()
     storage_key VARCHAR(500) PRIMARY KEY REFERENCES email_content(storage_key),
     tenant_id UUID NOT NULL,
     email_account_id UUID,
@@ -399,7 +399,7 @@ CREATE TABLE email_messages (.md)
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
-CREATE TABLE email_content (.md)
+CREATE TABLE email_content ()
     storage_key VARCHAR(500) PRIMARY KEY,
     tenant_id UUID NOT NULL,
     content_text TEXT,
@@ -413,7 +413,7 @@ CREATE TABLE email_content (.md)
     expires TIMESTAMP WITH TIME ZONE,
     retention_days INTEGER DEFAULT 2555
 );
-```
+```markdown
 
 ### Data Validation
 
@@ -421,29 +421,29 @@ CREATE TABLE email_content (.md)
 
 ```sql
 -- Verify migration integrity
-SELECT 
+SELECT
     'Total migrated email_messages' as check_type,
     COUNT(*) as count
 FROM email_messages
 UNION ALL
-SELECT 
+SELECT
     'Total migrated email_content' as check_type,
     COUNT(*) as count
 FROM email_content
 UNION ALL
-SELECT 
+SELECT
     'Messages with content' as check_type,
     COUNT(*) as count
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 UNION ALL
-SELECT 
+SELECT
     'Orphaned messages' as check_type,
     COUNT(*) as count
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
-```
+```markdown
 
 ---
 
@@ -467,10 +467,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](...md) - Strategic foundation and market positioning
-- [Analytics Architecture](..md) - PostHog integration and business intelligence
-- [Email System Hierarchy](..md) - Database structure and relationships
-- [Campaign Management](../../core-features/analytics.md) - User experience and business operations
-- [Business Analytics](../../business/analytics.md) - Revenue intelligence and optimization
+- [Architecture Overview](..) - Strategic foundation and market positioning
+- [Analytics Architecture](.) - PostHog integration and business intelligence
+- [Email System Hierarchy](.) - Database structure and relationships
+- [Campaign Management](../../core-features/analytics) - User experience and business operations
+- [Business Analytics](../../business/analytics) - Revenue intelligence and optimization
 
 **Keywords**: email_messages, email_content, email system hierarchy, message-focused naming, database architecture, queue integration, IMAP integration, content database, analytics, email processing, enterprise infrastructure, operational excellence

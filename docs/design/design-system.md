@@ -12,12 +12,15 @@ The PenguinMails Design System provides a comprehensive framework for consistent
 ## Design Principles
 
 ### Core Philosophy
+
 Our design system is built on three foundational principles:
+
 - **User-Centric**: Every design decision is validated through Phase 3C analytics data showing user behavior patterns
 - **Scalable**: Designed to support growth from $100 to $77 revenue model across different user segments
 - **Inclusive**: WCAG 2.1 AA compliant, ensuring accessibility for all users
 
 ### Design Tokens
+
 Our design tokens establish the foundation for consistent visual communication:
 
 ```css
@@ -44,7 +47,7 @@ Our design tokens establish the foundation for consistent visual communication:
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
 }
-```
+```markdown
 
 ## Color Palette
 
@@ -87,7 +90,7 @@ We use a 8px-based spacing system for consistent alignment:
   gap: var(--spacing-md);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-```
+```markdown
 
 ### Spacing Scale
 - **xs**: 4px (0.25rem) - Small gaps, tight layouts
@@ -194,8 +197,8 @@ Following Phase 3B standards, all designs start mobile-first:
 ---
 
 ## Related Documents
-- [Component Library](../component-library.md) - Reusable component catalog
-- [Accessibility Guidelines](../accessibility-guidelines.md) - WCAG compliance and inclusive design
-- [Design Tokens](../design-tokens.md) - Design token specifications
-- [UI Library](../ui-library.md) - Component usage guidelines and patterns
+- [Component Library](/docs/design/component-library) - Reusable component catalog
+- [Accessibility Guidelines](/docs/design/accessibility-guidelines) - WCAG compliance and inclusive design
+- [Design Tokens](/docs/design/design-tokens) - Design token specifications
+- [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
 ---

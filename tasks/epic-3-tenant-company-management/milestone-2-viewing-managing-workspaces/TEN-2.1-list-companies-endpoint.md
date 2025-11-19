@@ -11,7 +11,7 @@ Create a protected GET API route at `/api/companies/route.ts`. This endpoint wil
 
 ## Context
 
-Listing companies is essential for workspace management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), tenant isolation is critical—users should only see companies within their tenant. This endpoint enables users to view all their workspaces while maintaining complete data isolation.
+Listing companies is essential for workspace management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), tenant isolation is critical—users should only see companies within their tenant. This endpoint enables users to view all their workspaces while maintaining complete data isolation.
 
 ## Acceptance Criteria
 
@@ -90,6 +90,7 @@ export async function GET(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "companies": [
@@ -107,6 +108,7 @@ export async function GET(request: NextRequest) {
 ```
 
 **Empty Response (200):**
+
 ```json
 {
   "companies": [],
@@ -126,8 +128,8 @@ export async function GET(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Tenant isolation
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Workspace management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Tenant isolation
+- [Features & Capabilities](../../docs/features-capabilities/index) - Workspace management
 
 ## Dependencies
 
@@ -146,5 +148,3 @@ export async function GET(request: NextRequest) {
 - [ ] Verify tenantId from session is used (not from request)
 - [ ] Test error handling for database failures
 - [ ] Verify response format matches expected structure
-
-

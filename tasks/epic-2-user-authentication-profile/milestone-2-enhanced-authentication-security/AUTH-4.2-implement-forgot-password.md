@@ -11,7 +11,7 @@ Create a public POST API route at `/api/auth/forgot-password/route.ts`. This end
 
 ## Context
 
-Password reset functionality is essential for user account recovery. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need self-service account management capabilities. This endpoint enables users to recover their accounts without requiring support intervention.
+Password reset functionality is essential for user account recovery. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need self-service account management capabilities. This endpoint enables users to recover their accounts without requiring support intervention.
 
 Security best practices require that the endpoint doesn't reveal whether an email exists in the system (to prevent user enumeration attacks).
 
@@ -82,6 +82,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -90,6 +91,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "error": "Validation failed",
@@ -114,8 +116,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Security best practices
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - User account management
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Security best practices
+- [Features & Capabilities](../../docs/features-capabilities/index) - User account management
 
 ## Dependencies
 
@@ -132,5 +134,3 @@ export async function POST(request: NextRequest) {
 - [ ] Test that password reset email is sent (if email exists)
 - [ ] Test error handling for NileDB failures
 - [ ] Consider adding rate limiting tests (future enhancement)
-
-

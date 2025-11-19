@@ -21,5 +21,5 @@ In the `/worker` project, create a function that listens to the `queue:analytics
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management (queues & analytics)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Development Standards (worker patterns)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management (queues & analytics)](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Development Standards (worker patterns)](../../docs/implementation-technical/development-guidelines/development-standards)

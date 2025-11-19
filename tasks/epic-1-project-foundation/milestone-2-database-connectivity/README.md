@@ -4,12 +4,12 @@
 
 ## Tickets
 
-- [CORE-2.1](./CORE-2.1-install-configure-drizzle.md) - Install and Configure Drizzle ORM
-- [CORE-2.2](./CORE-2.2-define-initial-schemas.md) - Define Initial Drizzle Schemas
-- [CORE-2.3](./CORE-2.3-generate-first-migration.md) - Generate First Database Migration
-- [CORE-2.4](./CORE-2.4-implement-migration-script.md) - Implement Migration Application Script
-- [CORE-5.1](./CORE-5.1-install-zod-define-schemas.md) - Install Zod and Define Core Schemas
-- [CORE-5.2](./CORE-5.2-create-test-validation-endpoint.md) - Create a Test API Endpoint for Zod Validation
+- [CORE-2.1](./CORE-2.1-install-configure-drizzle) - Install and Configure Drizzle ORM
+- [CORE-2.2](./CORE-2.2-define-initial-schemas) - Define Initial Drizzle Schemas
+- [CORE-2.3](./CORE-2.3-generate-first-migration) - Generate First Database Migration
+- [CORE-2.4](./CORE-2.4-implement-migration-script) - Implement Migration Application Script
+- [CORE-5.1](./CORE-5.1-install-zod-define-schemas) - Install Zod and Define Core Schemas
+- [CORE-5.2](./CORE-5.2-create-test-validation-endpoint) - Create a Test API Endpoint for Zod Validation
 
 ## Dependencies
 
@@ -23,5 +23,3 @@
 - ✅ Migration system working
 - ✅ Zod validation schemas created
 - ✅ Test endpoint validates data correctly
-
-

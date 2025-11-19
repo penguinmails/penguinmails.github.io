@@ -15,13 +15,15 @@ This directory contains quick reference guides, executive templates, detailed me
 ## Progressive Disclosure Flow
 
 ### 📋 Reference Documents
-- [**Quick Reference: Cost-Benefit**](..md) - Quick cost-benefit analysis guide (≤100 lines)
-- [**Quick Reference: Provider Selection**](..md) - Vendor selection checklist (≤100 lines)
-- [**Cost Tool Pricing**](..md) - Pricing tool and calculator guidance (≤200 lines)
-- [**Executive Summary Template**](..md) - Template for executive presentations (≤200 lines)
-- [**Detailed Methodology**](..md) - Comprehensive analysis methodology (≤300 lines)
+
+- [**Quick Reference: Cost-Benefit**](.) - Quick cost-benefit analysis guide (≤100 lines)
+- [**Quick Reference: Provider Selection**](.) - Vendor selection checklist (≤100 lines)
+- [**Cost Tool Pricing**](.) - Pricing tool and calculator guidance (≤200 lines)
+- [**Executive Summary Template**](.) - Template for executive presentations (≤200 lines)
+- [**Detailed Methodology**](.) - Comprehensive analysis methodology (≤300 lines)
 
 ### 🎯 Reference Usage Path
+
 1. **Quick Analysis**: Use `quick-reference-cost-benefit` for rapid assessments
 2. **Vendor Evaluation**: Reference `quick-reference-provider-selection` for vendor selection
 3. **Pricing Tools**: Use `cost-tool-pricing` for pricing analysis
@@ -29,12 +31,14 @@ This directory contains quick reference guides, executive templates, detailed me
 5. **Deep Analysis**: Comprehensive methodology in `detailed-methodology`
 
 ### 📋 Reference Characteristics
+
 - **Content Depth**: Concise reference materials (100-300 lines per document)
 - **Tone**: Practical guidance and templates
 - **Target Audience**: All business users requiring quick access to key information
 - **Progression**: Quick reference → detailed methodology → implementation
 
 ### 🔧 Reference Types
+
 - **Quick References**: Fast access to key information and checklists
 - **Templates**: Standardized formats for executive presentations and analysis
 - **Methodology**: Detailed analysis frameworks and best practices
@@ -43,10 +47,11 @@ This directory contains quick reference guides, executive templates, detailed me
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core.md) - Main business case documents
-- [Financial Analysis](../financial-analysis.md) - Deep financial analysis
-- [Implementation Guide](../implementation.md) - Implementation templates and guides
-- [Industry Business Cases](../industry-business-cases.md) - Industry-specific reference materials
+
+- [Core Business Documents](../core) - Main business case documents
+- [Financial Analysis](/docs/business/financial-analysis) - Deep financial analysis
+- [Implementation Guide](/docs/business/implementation) - Implementation templates and guides
+- [Industry Business Cases](/docs/business/industry-business-cases) - Industry-specific reference materials
 
 ---
 

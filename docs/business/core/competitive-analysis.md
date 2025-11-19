@@ -15,7 +15,8 @@ last_modified_date: "2025-12-19"
 ## 🏆 Provider Comparison Summary
 
 ### Email Service Provider (ESP) Cost Analysis by Volume
-![Cost Comparison](/docs/assets.md){: width="100%" }
+
+![Cost Comparison](/docs/assets){: width="100%" }
 
 #### 10,000 emails/month
 
@@ -48,20 +49,26 @@ last_modified_date: "2025-12-19"
 
 ## 🎯 Strategic Recommendations by Use Case
 
-### Budget-Conscious Startups (Under 100K.md)
+### Budget-Conscious Startups (Under 100K)
+
 **Recommended**: Amazon SES Managed Dedicated IP
+
 - **Cost**: $300/month for 100K emails
 - **Value Proposition**: AWS's managed infrastructure handles IP warming
 - **Pros**: Exceptional value, managed IP warming, AWS ecosystem integration
 
-### Small to Mid-Market Cold Email Ops (100K-300K.md)
+### Small to Mid-Market Cold Email Ops (100K-300K)
+
 **Recommended**: Mailgun Foundation 100K
-- **Cost**: $750/month for 100K emails  
+
+- **Cost**: $750/month for 100K emails
 - **Value Proposition**: Included dedicated IP with competitive CPM
 - **Pros**: Dedicated IP included, solid deliverability features
 
-### High-Volume Enterprise Campaigns (500K+.md)
+### High-Volume Enterprise Campaigns (500K+)
+
 **Recommended**: Amazon SES Managed Dedicated IP
+
 - **Cost**: $5,000/month for 1M emails
 - **CPM**: $0.095 (industry-leading efficiency)
 - **Value Proposition**: Unbeatable rates at scale
@@ -76,15 +83,15 @@ last_modified_date: "2025-12-19"
 |----------|------------------|-------------------|-------------------|
 | **SendGrid** | $40-50/IP/month | Pro plans include 1 IP | ✅ Full isolation |
 | **Mailgun** | Included at 100K+ tiers | Foundation+ plans | ✅ Full isolation |
-| **Postmark** | $10-20/IP.md) | ✅ Full isolation |
-| **Amazon SES** | $24.95.md) | Not included | ✅ Full isolation |
+| **Postmark** | $10-20/IP | Not included | ✅ Full isolation |
+| **Amazon SES** | $24.95 | Not included | ✅ Full isolation |
 
 ### Log Retention & Compliance
 
 | Provider | Log Retention | Best for Cold Email |
 |----------|---------------|-------------------|
-| **SendGrid** | 7 days (Essentials) .md) | ✅ Pro plan recommended |
-| **Mailgun** | 5 days (Foundation) .md) | ✅ Scale plan for retention |
+| **SendGrid** | 7 days (Essentials) | ✅ Pro plan recommended |
+| **Mailgun** | 5 days (Foundation) | ✅ Scale plan for retention |
 | **Postmark** | Unlimited | ✅ Best for comprehensive tracking |
 | **Amazon SES** | Via SNS/S3 integration | ⚠️ Custom implementation required |
 
@@ -93,7 +100,8 @@ last_modified_date: "2025-12-19"
 ## 💡 Cost Optimization Insights
 
 ### Sweet Spots for Cost Efficiency
-- **100K emails.md)
+
+- **100K emails/month**: SendGrid Essentials offers best CPM at $0.35
 - **1M+ emails/month**: Amazon SES becomes dominant with $0.095 CPM
 - **10K emails/month**: Avoid due to high CPM rates across all providers
 
@@ -110,25 +118,29 @@ last_modified_date: "2025-12-19"
 
 ## 🎯 Decision Framework
 
-### Choose SendGrid Pro When:
+### Choose SendGrid Pro When
+
 - ✅ Need traditional SaaS support structure
 - ✅ Want comprehensive marketing features
 - ✅ Require 30-day log retention
 - ✅ Have 300K+ email volume
 
-### Choose Mailgun When:
+### Choose Mailgun When
+
 - ✅ Cold email is primary use case
 - ✅ Need included dedicated IP
 - ✅ Want detailed deliverability features
 - ✅ Balance cost with features
 
-### Choose Postmark When:
+### Choose Postmark When
+
 - ✅ Transactional email focus
 - ✅ Need unlimited log retention
 - ✅ Premium deliverability required
 - ✅ Budget allows for premium pricing
 
-### Choose Amazon SES When:
+### Choose Amazon SES When
+
 - ✅ Volume exceeds 500K/month
 - ✅ AWS ecosystem integration needed
 - ✅ Cost optimization is priority
@@ -147,9 +159,11 @@ last_modified_date: "2025-12-19"
 | **Agencies** | 27.2%-35.7% | 5.8%-8.5% | SendGrid Pro, Postmark |
 
 ### Deliverability Impact Model
+
 For 100K email campaigns, provider selection affects deliverability:
+
 - **Premium ESPs (SendGrid Pro, Postmark)**: 90-95% deliverability
-- **Mid-Tier ESPs (Mailgun)**: 85-92% deliverability  
+- **Mid-Tier ESPs (Mailgun)**: 85-92% deliverability
 - **Cost-Optimized (Amazon SES)**: 80-90% deliverability
 
 ---
@@ -157,16 +171,19 @@ For 100K email campaigns, provider selection affects deliverability:
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
+
 - [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
 - [💰 ROI Calculator](roi-calculator) - Cost-benefit analysis tool
 
 **For detailed analysis:**
-- [📊 Detailed Provider Comparison](../competitive-intelligence.md) - Complete vendor analysis with migration costs
-- [🏗️ Implementation Roadmap](../implementation.md) - Migration and implementation planning
+
+- [📊 Detailed Provider Comparison](/docs/business/competitive-intelligence/overview) - Complete vendor analysis with migration costs
+- [🏗️ Implementation Roadmap](/docs/business/implementation) - Migration and implementation planning
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](../implementation.md) - Technical specifications and setup
-- [📋 Performance Benchmarks](../performance.md) - Industry performance data
+
+- [🔧 Technical Infrastructure](/docs/business/implementation) - Technical specifications and setup
+- [📋 Performance Benchmarks](/docs/business/performance) - Industry performance data
 
 ---
 

@@ -6,6 +6,7 @@ description: "Comprehensive infrastructure operations management for enterprise-
 # Infrastructure Operations Management
 
 ## Strategic Alignment
+
 **Strategic Alignment**: Infrastructure operations management supports our enterprise operational strategy by providing comprehensive system architecture and deployment capabilities that ensure 99.9% uptime and enterprise-grade performance.
 
 **Technical Authority**: Our infrastructure integrates with enterprise-grade monitoring systems featuring multi-tenant database schemas, automated deployment pipelines, and comprehensive architecture diagrams.
@@ -21,10 +22,11 @@ description: "Comprehensive infrastructure operations management for enterprise-
 This comprehensive guide serves as the central operational hub for all PenguinMails database and infrastructure operations. It provides immediate access to critical procedures, emergency response protocols, and cross-tier operational knowledge for enterprise-grade platform management.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Emergency Response**: All incident procedures follow [Critical Issue Identification](../quality-assurance.md) with <4 hours response time targets
-- **QA-Integrated Daily Operations**: Routine maintenance follows [Ongoing Quality Assurance](../quality-assurance.md) with weekly quality checks
-- **Cross-Tier Coordination**: Unified procedures across OLTP, Content, Queue, and OLAP tiers with [Performance Monitoring Framework](../quality-assurance.md) integration
-- **Quality Knowledge Base**: Quick reference for database operations team with [Success Measurement Framework](../quality-assurance.md) validation
+
+- **Quality-Assured Emergency Response**: All incident procedures follow [Critical Issue Identification](/docs/business/quality-assurance) with <4 hours response time targets
+- **QA-Integrated Daily Operations**: Routine maintenance follows [Ongoing Quality Assurance](/docs/business/quality-assurance) with weekly quality checks
+- **Cross-Tier Coordination**: Unified procedures across OLTP, Content, Queue, and OLAP tiers with [Performance Monitoring Framework](/docs/business/quality-assurance) integration
+- **Quality Knowledge Base**: Quick reference for database operations team with [Success Measurement Framework](/docs/business/quality-assurance) validation
 
 ---
 
@@ -41,10 +43,11 @@ This comprehensive guide serves as the central operational hub for all PenguinMa
 | **Security Breach** | < 5 minutes | Contain → Investigate → Document → Notify stakeholders | Security Team → Legal |
 
 ### **Emergency Contact Information**
+
 ```yaml
 Database Operations Team:
 - Lead: Database Operations Manager - +1-555-DB-LEAD - dbops@penguinmails.com
-- On-Call Engineer: +1-555-DB-ONCALL - oncall@penguinmails.com (24.md)
+- On-Call Engineer: +1-555-DB-ONCALL - oncall@penguinmails.com (24)
 - Backup Engineer: +1-555-DB-BACKUP - backup@penguinmails.com
 
 Escalation Path:
@@ -52,10 +55,10 @@ Escalation Path:
 - Response Time SLA: <15 minutes for critical issues
 
 External Support:
-- Database Vendor: https:/.md)
+- Database Vendor: https:/)
 - Cloud Provider: https://console.aws.amazon.com/support
 - Security Incident: security@penguinmails.com +1-555-SEC-HELP
-```
+```markdown
 
 ### **🔧 **First Response Procedures**
 
@@ -74,32 +77,32 @@ psql -h db-host -U app_user -d penguinmails_oltp -c "SELECT 1;"
 
 # 4. Check connection pools
 # OLTP: Primary (5-50 connections)
-# Content: Content (3-25 connections)  
+# Content: Content (3-25 connections)
 # Queue: Queue (5-40 connections)
 # OLAP: Analytics (3-15 connections)
 
 # 5. Execute failover if needed
 # See: backup_recovery_procedures.md
-```
+```markdown
 
 #### 2. Performance Degradation
 ```sql
 -- Check active queries
-SELECT pid, usename, client_addr, state, query_start, 
+SELECT pid, usename, client_addr, state, query_start,
        EXTRACT(EPOCH FROM (now() - query_start)) as duration_seconds,
        left(query, 100) as query_preview
-FROM pg_stat_activity 
-WHERE state = 'active' 
+FROM pg_stat_activity
+WHERE state = 'active'
 ORDER BY query_start;
 
 -- Check connection pool metrics
-SELECT tier, pool_name, active_connections, idle_connections, 
+SELECT tier, pool_name, active_connections, idle_connections,
        connection_usage_rate, pending_acquires
 FROM connection_pool_metrics cpm
 JOIN connection_pool_config cpc ON cpm.pool_config_id = cpc.id
 WHERE cpm.collected_at >= NOW() - INTERVAL '5 minutes'
 ORDER BY cpm.collected_at DESC;
-```
+```markdown
 
 ---
 
@@ -107,16 +110,16 @@ ORDER BY cpm.collected_at DESC;
 
 ### **Morning Health Check (9:00 AM)**
 ⭐ **Quick Check** (5 minutes)
-- [ ] **PostHog Dashboard Review** - Check database performance metrics with [QA Performance Monitoring](../quality-assurance.md)
-- [ ] **Connection Pool Status** - Verify pool health across all tiers with [QA Alert Integration](../quality-assurance.md)
+- [ ] **PostHog Dashboard Review** - Check database performance metrics with [QA Performance Monitoring](/docs/business/quality-assurance)
+- [ ] **Connection Pool Status** - Verify pool health across all tiers with [QA Alert Integration](/docs/business/quality-assurance)
 
 ⭐⭐ **Standard Operations** (15 minutes)
-- [ ] **Backup Verification** - Confirm last successful backups for all databases with [QA Validation Checkpoints](../quality-assurance.md)
-- [ ] **Error Log Review** - Check for new errors or warnings with [QA Issue Detection](../quality-assurance.md)
+- [ ] **Backup Verification** - Confirm last successful backups for all databases with [QA Validation Checkpoints](/docs/business/quality-assurance)
+- [ ] **Error Log Review** - Check for new errors or warnings with [QA Issue Detection](/docs/business/quality-assurance)
 
 ⭐⭐⭐ **Comprehensive Review** (30 minutes)
-- [ ] **Queue Health** - Verify queue processing rates and backlog with [QA Critical Issue Identification](../quality-assurance.md)
-- [ ] **Storage Usage** - Check storage consumption and growth trends with [QA Continuous Improvement](../quality-assurance.md)
+- [ ] **Queue Health** - Verify queue processing rates and backlog with [QA Critical Issue Identification](/docs/business/quality-assurance)
+- [ ] **Storage Usage** - Check storage consumption and growth trends with [QA Continuous Improvement](/docs/business/quality-assurance)
 
 ---
 
@@ -159,32 +162,32 @@ ORDER BY cpm.collected_at DESC;
 #### **Scalability Achievements**
 - **Concurrent Users**: 10x increase (10K+ users)
 - **Data Growth**: 10x increase (100GB+ monthly)
-- **Queue Throughput**: 4x increase (2000.md)
+- **Queue Throughput**: 4x increase (2000)
 - **Storage Efficiency**: 60% compression achieved
 
 **Historical Context**: These benchmarks serve as baseline targets for ongoing operational excellence and capacity planning.
 
 ### **Midday Performance Review (1:00 PM)**
 ⭐ **Quick Analysis** (10 minutes)
-- [ ] **Query Performance** - Review slow queries with [QA Performance Analysis](../quality-assurance.md)
-- [ ] **Index Usage** - Check index effectiveness with [QA Validation Checkpoints](../quality-assurance.md)
+- [ ] **Query Performance** - Review slow queries with [QA Performance Analysis](/docs/business/quality-assurance)
+- [ ] **Index Usage** - Check index effectiveness with [QA Validation Checkpoints](/docs/business/quality-assurance)
 
 ⭐⭐ **Standard Review** (20 minutes)
-- [ ] **Resource Utilization** - Monitor CPU, memory, and disk usage with [QA Monitoring Integration](../quality-assurance.md)
+- [ ] **Resource Utilization** - Monitor CPU, memory, and disk usage with [QA Monitoring Integration](/docs/business/quality-assurance)
 
 ⭐⭐⭐ **Comprehensive Analysis** (30 minutes)
-- [ ] **Security Events** - Review security alerts with [QA Critical Issue Identification](../quality-assurance.md)
+- [ ] **Security Events** - Review security alerts with [QA Critical Issue Identification](/docs/business/quality-assurance)
 
 ### **End-of-Day Review (5:00 PM)**
 ⭐ **Basic Tasks** (10 minutes)
-- [ ] **Daily Reports** - Generate reports following [QA Success Measurement Framework](../quality-assurance.md)
-- [ ] **Tomorrow's Preparation** - Prepare with [QA Continuous Improvement Framework](../quality-assurance.md)
+- [ ] **Daily Reports** - Generate reports following [QA Success Measurement Framework](/docs/business/quality-assurance)
+- [ ] **Tomorrow's Preparation** - Prepare with [QA Continuous Improvement Framework](/docs/business/quality-assurance)
 
 ⭐⭐ **Standard Operations** (20 minutes)
-- [ ] **Maintenance Tasks** - Complete scheduled activities with [QA Quality Assurance Process](../quality-assurance.md)
+- [ ] **Maintenance Tasks** - Complete scheduled activities with [QA Quality Assurance Process](/docs/business/quality-assurance)
 
 ⭐⭐⭐ **Comprehensive Operations** (30 minutes)
-- [ ] **Alert Review** - Address alerts using [QA Issue Detection & Response](../quality-assurance.md)
+- [ ] **Alert Review** - Address alerts using [QA Issue Detection & Response](/docs/business/quality-assurance)
 
 ---
 
@@ -195,7 +198,7 @@ ORDER BY cpm.collected_at DESC;
 #### **Connection Pool Management**
 ```sql
 -- Check OLTP pool status
-SELECT 
+SELECT
     pool_name,
     min_connections,
     max_connections,
@@ -205,9 +208,9 @@ SELECT
     pending_acquires
 FROM connection_pool_config cpc
 JOIN connection_pool_metrics cpm ON cpc.id = cpm.pool_config_id
-WHERE cpc.tier = 'oltp' 
+WHERE cpc.tier = 'oltp'
 AND cpm.collected_at >= NOW() - INTERVAL '5 minutes';
-```
+```markdown
 
 **Performance Targets:**
 - **Query Response Time**: <200ms for 95th percentile
@@ -220,17 +223,17 @@ AND cpm.collected_at >= NOW() - INTERVAL '5 minutes';
 #### **Content Lifecycle Operations**
 ```sql
 -- Check content retention status
-SELECT 
+SELECT
     DATE(created) as content_date,
     COUNT(*) as total_messages,
     AVG(LENGTH(content)) as avg_content_size,
     MIN(created) as earliest,
     MAX(created) as latest
-FROM email_messages 
+FROM email_messages
 WHERE created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE(created)
 ORDER BY content_date DESC;
-```
+```markdown
 
 **Performance Targets:**
 - **Content Retrieval**: <1s for email content access
@@ -243,24 +246,24 @@ ORDER BY content_date DESC;
 #### **Queue Health Monitoring**
 ```sql
 -- Check queue performance by priority
-SELECT 
+SELECT
     priority,
     COUNT(*) as job_count,
     AVG(EXTRACT(EPOCH FROM (completed - created))) as avg_processing_time_seconds,
     MIN(created) as oldest_job
-FROM jobs 
+FROM jobs
 WHERE status = 'completed'
 AND created >= NOW() - INTERVAL '1 hour'
 GROUP BY priority
-ORDER BY 
-    CASE priority 
-        WHEN 'critical' THEN 1 
-        WHEN 'high' THEN 2 
-        WHEN 'normal' THEN 3 
-        WHEN 'low' THEN 4 
-        ELSE 5 
+ORDER BY
+    CASE priority
+        WHEN 'critical' THEN 1
+        WHEN 'high' THEN 2
+        WHEN 'normal' THEN 3
+        WHEN 'low' THEN 4
+        ELSE 5
     END;
-```
+```markdown
 
 **Performance Targets:**
 - **Queue Processing**: <20s average processing time
@@ -300,7 +303,7 @@ Configuration Notes:
   - Replace [PROJECT_ID] with actual PostHog project ID
   - Configure custom events for database performance tracking
   - Set up alerting rules for critical performance thresholds
-```
+```markdown
 
 ---
 
@@ -323,7 +326,7 @@ Level 1 - Database Operations Team:
   - Response: Immediate
 
 Level 2 - Engineering Management:
-  - Primary: Engineering Manager  
+  - Primary: Engineering Manager
   - Secondary: Senior Engineer
   - Response: Within 30 minutes
 
@@ -336,7 +339,7 @@ External Support:
   - Database Vendor Support: [portal-url]
   - Cloud Provider Support: [portal-url]
   - Security Team: [contact-info]
-```
+```markdown
 
 ---
 
@@ -432,20 +435,20 @@ External Support:
 ## 📋 **Related Documentation**
 
 ### **Operational Runbooks**
-- **[Database Infrastructure Management](../database-infrastructure.md)** - Database procedures and infrastructure
-- **[Connection Pooling Strategy](../database-infrastructure.md))** - Pool configuration and optimization
-- **[Backup & Recovery Procedures](../database-infrastructure.md))** - Data protection and restoration
-- **[Quality Assurance Testing Protocols](../quality-assurance.md))** - Testing procedures and validation
+- **[Database Infrastructure Management](../database-infrastructure)** - Database procedures and infrastructure
+- **[Connection Pooling Strategy](../database-infrastructure))** - Pool configuration and optimization
+- **[Backup & Recovery Procedures](../database-infrastructure))** - Data protection and restoration
+- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Testing procedures and validation
 
 ### **Technical References**
-- **[Architecture System](../architecture-system.md)** - System architecture decisions
-- **[Development Guidelines](../development-guidelines.md)** - Development standards
-- **[Compliance & Security](../../compliance-security.md)** - Security and compliance frameworks
+- **[Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)** - System architecture decisions
+- **[Development Guidelines](/docs/implementation-technical/development-guidelines)** - Development standards
+- **[Compliance & Security](../../compliance-security)** - Security and compliance frameworks
 
 ### **Strategic Documentation**
-- **[Business Strategy Overview](../../business/strategy.md))** - Strategic business alignment
-- **[Operations Analytics Overview](...md))** - Main operations analytics framework
-- **[Analytics Performance](../analytics-performance.md)** - Performance monitoring and analytics
+- **[Business Strategy Overview](../../business/strategy))** - Strategic business alignment
+- **[Operations Analytics Overview](..))** - Main operations analytics framework
+- **[Analytics Performance](/docs/operations-analytics/analytics-performance)** - Performance monitoring and analytics
 
 ---
 
@@ -456,9 +459,9 @@ External Support:
 | 2025-11-01 | Initial version - Comprehensive infrastructure operations management | Database Ops Team |
 | [Next Review] | [Scheduled monthly review] | Database Ops Team |
 
-**Document Classification**: Operational Runbook  
-**Review Cycle**: Monthly  
-**Last Tested**: [To be scheduled]  
+**Document Classification**: Operational Runbook
+**Review Cycle**: Monthly
+**Last Tested**: [To be scheduled]
 **Training Required**: All database operations team members
 
 This comprehensive infrastructure operations guide provides immediate operational value while serving as the central hub for all database operations procedures. Regular updates ensure accuracy and relevance for production database management.

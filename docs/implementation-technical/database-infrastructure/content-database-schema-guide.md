@@ -3,18 +3,21 @@
 This guide defines the canonical Content Database schema for PenguinMails.
 
 The Content DB is a dedicated tier for heavy content storage:
-- Email and message bodies (text.md)
+
+- Email and message bodies (text)
 - Attachments and large binaries
 - Long-lived archives needed for legal/compliance
 
 It is NOT:
+
 - An analytics warehouse (OLAP covers that)
-- An operational store for campaigns.md)
-- A general logging/telemetry sink (see external analytics.md)
+- An operational store for campaigns)
+- A general logging/telemetry sink (see external analytics)
 
 For analytics and logging responsibilities, refer to:
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
+
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
 
 ---
 
@@ -34,7 +37,7 @@ For analytics and logging responsibilities, refer to:
 - Queue:
   - Owns jobs and pipelines that move/transform data between tiers.
 
-2) No cross-database foreign keys
+1) No cross-database foreign keys
 
 - No physical FK constraints from Content DB to OLTP/OLAP.
 - Linking contract:
@@ -43,20 +46,20 @@ For analytics and logging responsibilities, refer to:
 - Validation:
   - Enforced by application and workers, not by cross-DB constraints.
 
-3) Keep Content DB free of noisy logs and infra metrics
+1) Keep Content DB free of noisy logs and infra metrics
 
 - No generic log tables, connection pool metrics, or system alerts in Content DB.
 - High-volume logs, access tracking, and infra monitoring:
   - Go to external logging/product analytics/SIEM per:
-    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md).
+    - [`external-analytics-logging`](docs/implementation-technical/database-infrastructure).
 
-4) Focus on retention, compliance, and efficient storage
+1) Focus on retention, compliance, and efficient storage
 
 - Built-in support for:
   - Tenant isolation via tenant_id.
   - Expiration, archival, and lifecycle hints on content.
-- Heavy processing (compression/dedup.md) is orchestrated by:
-  - Workers and services (JS.md).
+- Heavy processing (compression/dedup) is orchestrated by:
+  - Workers and services (JS).
   - Minimal, focused SQL helpers where appropriate.
 
 ---
@@ -101,7 +104,7 @@ CREATE INDEX idx_content_objects_expires
 CREATE INDEX idx_content_objects_hash
     ON content_objects(content_hash)
     WHERE content_hash IS NOT NULL;
-```
+```markdown
 
 Notes:
 - storage_key:
@@ -132,7 +135,7 @@ CREATE TABLE attachments (
 
 CREATE INDEX idx_attachments_parent
     ON attachments(parent_storage_key);
-```
+```markdown
 
 Notes:
 - attachments are strictly scoped to content_objects.
@@ -173,21 +176,21 @@ No cross-database FK:
 
 Content DB is not a log sink. The following apply:
 
-- Detailed access logs (who viewed.md):
+- Detailed access logs (who viewed):
   - Prefer:
     - External logging / SIEM / PostHog.
   - If a minimal subset is required for legal/audit:
     - Model a narrow, low-volume audit table either:
       - In OLAP (aggregated summaries), or
       - In a dedicated security DB.
-- Performance metrics (read.md):
+- Performance metrics (read):
   - Send to observability stack.
 - Search indexes:
-  - Use a dedicated search system (e.g., OpenSearch.md) or an OLAP projection.
+  - Use a dedicated search system (e.g., OpenSearch) or an OLAP projection.
   - Do not treat content_search_index as a primary Content DB responsibility.
 
 For patterns and responsibilities:
-- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md).
+- See [`external-analytics-logging`](docs/implementation-technical/database-infrastructure).
 
 ---
 
@@ -195,7 +198,7 @@ For patterns and responsibilities:
 
 Several lifecycle and optimization flows were previously encoded entirely in SQL functions in legacy docs. Use this split instead:
 
-1) JS/TS application.md)
+1) JS/TS application)
 
 - Implement in services/workers:
   - Content ingestion:
@@ -210,12 +213,12 @@ Several lifecycle and optimization flows were previously encoded entirely in SQL
   - Virus and security scanning:
     - Integrate with scanning services.
   - Scheduling:
-    - Trigger lifecycle jobs (archive.md) based on policies.
+    - Trigger lifecycle jobs (archive) based on policies.
 - Reason:
   - Easier to test, deploy, and iterate.
   - Keeps DB schema guide stable and provider-agnostic.
 
-2) SQL .md)
+2) SQL )
 
 - Implement in SQL:
   - Small, deterministic helpers with clear interfaces, e.g.:
@@ -250,7 +253,7 @@ BEGIN
     RETURN v_count;
 END;
 $$ LANGUAGE plpgsql;
-```
+```markdown
 
 JS/TS worker would:
 - Call this helper in batches.
@@ -283,8 +286,8 @@ Use this guide as the forward-looking contract:
     - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md),
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md),
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md),
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure),
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure),
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 ---

@@ -30,18 +30,21 @@ last_modified_date: "2025-12-19"
 #### SendGrid Enterprise Strategy
 
 **Strategic Advantages**:
+
 - Advanced IP management and warming protocols
 - Comprehensive analytics and reporting capabilities
 - Enterprise-grade support and service level agreements
 - Strong reputation with major Internet Service Providers (Gmail, Outlook)
 
 **Business Application**:
+
 - **Best For**: Enterprise campaigns requiring dedicated IP management
 - **Cost Profile**: Premium pricing for comprehensive features
 - **Support Quality**: 24/7 enterprise support with dedicated account management
 - **Integration Complexity**: Moderate - requires technical expertise for optimization
 
 **Performance Characteristics**:
+
 - **Deliverability**: 92-95% for well-managed campaigns
 - **Open Rate Impact**: 5-10% above industry average
 - **Scalability**: Excellent for high-volume enterprise operations
@@ -49,18 +52,21 @@ last_modified_date: "2025-12-19"
 #### Mailgun Cold Email Optimization
 
 **Strategic Advantages**:
+
 - Cold email specific features and optimization tools
 - Built-in deliverability monitoring dashboard
 - Advanced list management and hygiene capabilities
 - Competitive pricing with comprehensive feature set
 
 **Business Application**:
+
 - **Best For**: High-volume cold email campaigns
 - **Cost Profile**: Mid-range pricing with cold email optimization
 - **Support Quality**: Good support with cold email expertise
 - **Integration Complexity**: Low to moderate - designed for email marketing
 
 **Performance Characteristics**:
+
 - **Deliverability**: 88-93% for cold email campaigns
 - **Open Rate Impact**: Equal to or above industry average
 - **Reply Rate Impact**: 10-15% above industry average (cold email focus)
@@ -68,18 +74,21 @@ last_modified_date: "2025-12-19"
 #### Postmark Transactional Excellence
 
 **Strategic Advantages**:
+
 - Highest deliverability rates for transactional email
 - Superior reputation management and monitoring
 - Comprehensive bounce and complaint handling
 - Premium support and reliability standards
 
 **Business Application**:
+
 - **Best For**: Transactional emails, welcome sequences, confirmations
 - **Cost Profile**: Premium pricing for transactional focus
 - **Support Quality**: Excellent technical support
 - **Integration Complexity**: Low - designed for transactional use
 
 **Performance Characteristics**:
+
 - **Deliverability**: 94-97% (excellent for transactional)
 - **Reliability**: 99.99% uptime SLA
 - **Cost Consideration**: May not be cost-effective for cold email volumes
@@ -87,18 +96,21 @@ last_modified_date: "2025-12-19"
 #### Amazon SES Cost Optimization
 
 **Strategic Advantages**:
+
 - Most cost-effective solution at scale
 - Seamless AWS ecosystem integration
 - Flexible configuration and customization options
 - High volume sending capability
 
 **Business Application**:
+
 - **Best For**: High-volume, cost-conscious operations
 - **Cost Profile**: Lowest per-email cost at scale
 - **Support Quality**: Community-based support, limited direct assistance
 - **Integration Complexity**: High - requires significant technical expertise
 
 **Performance Characteristics**:
+
 - **Deliverability**: 85-92% with proper technical management
 - **Cost Advantage**: 50-80% cost savings vs managed ESPs
 - **Scalability**: Excellent for high-volume operations
@@ -116,18 +128,18 @@ graph TD
     B -->|10K-50K/month| D[Mailgun<br/>Balance cost/feature]
     B -->|50K-100K/month| E[SendGrid<br/>Enterprise features]
     B -->|100K+/month| F[SES<br/>Cost optimization]
-    
+
     C --> G[High Personalization<br/>Relationship Focus]
     D --> H[Balanced Approach<br/>Volume + Quality]
     E --> I[Enterprise Scale<br/>Advanced Features]
     F --> J[Maximum Scale<br/>Cost Efficiency]
-    
+
     style A fill:#e1f5fe
     style C fill:#c8e6c9
     style D fill:#fff3e0
     style E fill:#f3e5f5
     style F fill:#ffcdd2
-```
+```markdown
 
 ### Strategic Selection Matrix
 
@@ -181,7 +193,7 @@ graph TD
 - **Cost Optimization**: Automated provider selection based on volume
 - **Quality Assurance**: Continuous performance monitoring and optimization
 
-**Technical Implementation**: Complete multi-provider architecture with TypeScript integration, automated routing, and performance monitoring available in [ESP Integration Implementation](../technical/architecture/detailed-technical.md)
+**Technical Implementation**: Complete multi-provider architecture with TypeScript integration, automated routing, and performance monitoring available in [ESP Integration Implementation](/docs/technical/architecture/detailed-technical)
 
 ---
 
@@ -251,7 +263,7 @@ graph TD
 - [📈 Performance Overview](performance-overview:1) - Executive performance benchmarks and trends
 
 **For optimization techniques:**
-- [⚙️ ESP Integration Implementation](../technical/architecture/detailed-technical.md) - Complete TypeScript implementation
+- [⚙️ ESP Integration Implementation](/docs/technical/architecture/detailed-technical) - Complete TypeScript implementation
 
 **For business context:**
 - [💰 ROI Calculator](roi-calculator:1) - Provider cost-benefit analysis

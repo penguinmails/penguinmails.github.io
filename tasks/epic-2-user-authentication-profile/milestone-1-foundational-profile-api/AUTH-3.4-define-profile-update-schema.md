@@ -11,7 +11,8 @@ In the `/lib/schemas` directory, create a new `user.schemas.ts` file. Define and
 
 ## Context
 
-Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Zod schemas are used throughout the application for:
+Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Zod schemas are used throughout the application for:
+
 - **API Request Validation:** Validating incoming request data
 - **Type Safety:** Ensuring data matches expected types
 - **Security:** Preventing invalid or malicious data from entering the system
@@ -73,26 +74,31 @@ export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 ### Validation Rules
 
 **Name Fields:**
+
 - Optional
 - If provided, must be non-empty strings
 - Reasonable length limits
 
 **Theme:**
+
 - Optional
 - Must be one of: 'light', 'dark', 'system'
 - Enum validation
 
 **Language:**
+
 - Optional
 - Should be ISO 639-1 code (2 letters)
 - Consider adding allowed values list (future enhancement)
 
 **Timezone:**
+
 - Optional
 - Should be valid IANA timezone
 - Consider adding validation for valid timezone (future enhancement)
 
 **Notification Settings:**
+
 - Optional
 - Boolean values
 
@@ -107,8 +113,8 @@ export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Validation patterns
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data validation requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Validation patterns
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data validation requirements
 
 ## Dependencies
 
@@ -125,5 +131,3 @@ export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 - [ ] Test schema with invalid language code - should fail
 - [ ] Verify TypeScript types are correctly inferred
 - [ ] Test schema with all fields - should pass
-
-

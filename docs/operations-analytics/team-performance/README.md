@@ -10,12 +10,14 @@ This section provides comprehensive team coordination frameworks, performance tr
 ## Available Team Performance Areas
 
 ### **Core Team Frameworks**
+
 - **Sprint Management**: Agile development, sprint planning, and retrospective frameworks
 - **Performance Metrics**: Team productivity, effectiveness, and quality measurements
 - **Quality Control**: Code quality, testing procedures, and review processes
 - **Professional Development**: Skills development, training, and growth frameworks
 
 ### **Advanced Team Coordination**
+
 - **Team Analytics**: Performance tracking and trend analysis
 - **Sprint Retrospectives**: Continuous improvement and process optimization
 - **Quality Assurance**: Testing protocols and quality frameworks
@@ -29,10 +31,10 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 ## Integration Points
 
-- [Operations Analytics Overview](...md)) - Main operations framework
-- [Technical Operations](../technical/operations.md)) - Technical team coordination
-- [Business Strategy](../business/strategy.md)) - Strategic alignment
-- [User Experience](../user-journeys.md)) - UX team collaboration
+- [Operations Analytics Overview](..)) - Main operations framework
+- [Technical Operations](../technical/operations)) - Technical team coordination
+- [Business Strategy](/docs/business/strategy/overview)) - Strategic alignment
+- [User Experience](/docs/user-journeys)) - UX team collaboration
 
 ---
 

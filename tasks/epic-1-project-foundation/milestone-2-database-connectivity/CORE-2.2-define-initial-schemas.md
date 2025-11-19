@@ -11,11 +11,12 @@ Create the schema definition files in a `/lib/db/schema` directory. Define the `
 
 ## Context
 
-According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails uses a **multi-tenant architecture** with:
+According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails uses a **multi-tenant architecture** with:
+
 - **Data Isolation:** Each tenant has dedicated database schemas with row-level security
 - **Tenant Management:** Core tables include users, tenants, and tenant_users for multi-tenancy
 
-The [Team Workflow](../../docs/quick-access/team-workflow.md) document outlines the staff hierarchy system that these schemas will support.
+The [Team Workflow](../../docs/quick-access/team-workflow) document outlines the staff hierarchy system that these schemas will support.
 
 ## Acceptance Criteria
 
@@ -31,6 +32,7 @@ The [Team Workflow](../../docs/quick-access/team-workflow.md) document outlines 
 ### Core Tables Structure
 
 #### Users Table
+
 **Reference:** [OLTP Schema Guide - users table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#users---user-identity--profile)
 
 - `id` (UUID, primary key)
@@ -47,6 +49,7 @@ The [Team Workflow](../../docs/quick-access/team-workflow.md) document outlines 
 **Note:** This table is NileDB-managed. Match the exact schema from the OLTP guide.
 
 #### Tenants Table
+
 **Reference:** [OLTP Schema Guide - tenants table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#tenants---tenant-organization)
 
 - `id` (UUID, primary key)
@@ -59,6 +62,7 @@ The [Team Workflow](../../docs/quick-access/team-workflow.md) document outlines 
 **Note:** This table is NileDB-managed. Match the exact schema from the OLTP guide.
 
 #### Tenant Users Table (Join Table)
+
 **Reference:** [OLTP Schema Guide - tenant_users table](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#tenant_users---multi-tenant-user-associations)
 
 - `tenant_id` (UUID, foreign key to tenants, part of primary key)
@@ -108,11 +112,11 @@ export const users = pgTable('users', {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for users, tenants, and tenant_users table structures
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Role-based access control
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data protection requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Multi-tenant architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - **Primary reference** for users, tenants, and tenant_users table structures
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - 5-tier database architecture overview
+- [Team Workflow](../../docs/quick-access/team-workflow) - Role-based access control
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data protection requirements
 
 ## Dependencies
 
@@ -125,5 +129,3 @@ export const users = pgTable('users', {
 - [ ] Verify column types match ERD specifications
 - [ ] Check that foreign key relationships are properly defined
 - [ ] Validate that indexes are created for performance-critical columns
-
-

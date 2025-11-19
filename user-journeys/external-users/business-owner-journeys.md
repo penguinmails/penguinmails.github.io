@@ -13,30 +13,35 @@ This document outlines the key user journeys for business owners who use Penguin
 ### **Business Owner Categories**
 
 #### **SaaS Founders**
+
 - Focus on customer acquisition and user onboarding
 - Need to optimize trial-to-paid conversion rates
 - Require sophisticated segmentation and personalization
 - Track product usage and customer lifecycle metrics
 
 #### **E-commerce Owners**
+
 - Focus on customer retention and re-engagement
 - Need to drive repeat purchases and increase average order value
 - Require inventory integration and product-focused campaigns
 - Track e-commerce metrics and conversion funnels
 
 #### **Service Business Owners**
+
 - Focus on lead generation and appointment setting
 - Need to build trust and demonstrate expertise
 - Require referral programs and relationship nurturing
 - Track lead quality and conversion to clients
 
 #### **B2B Company Owners**
+
 - Focus on sales outreach and pipeline development
 - Need to generate qualified leads and opportunities
 - Require sales enablement and nurture sequences
 - Track sales metrics and revenue attribution
 
 ### **Common Business Needs**
+
 - Simple, reliable solutions that deliver results
 - Focus on business outcomes rather than technical features
 - Time-efficient workflows with minimal complexity
@@ -51,6 +56,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ### **Journey 1: Business Setup & Initial Strategy**
 
 #### **Business Assessment**
+
 1. **Current State Analysis**
    - Assess current email marketing efforts and results
    - Identify business goals and revenue objectives
@@ -64,6 +70,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Establish budget and resource allocation
 
 #### **Platform Setup**
+
 1. **Account Configuration**
    - Set up business email domain and authentication
    - Configure business branding and visual identity
@@ -81,6 +88,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ### **Journey 2: Customer Acquisition & Lead Generation**
 
 #### **Lead Generation Campaigns**
+
 1. **Prospect Outreach**
    - Design lead generation campaigns and sequences
    - Create compelling content and offers for prospects
@@ -94,6 +102,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Convert leads to sales opportunities
 
 #### **Marketing Integration**
+
 1. **Multi-Channel Coordination**
    - Integrate email with social media and content marketing
    - Coordinate email campaigns with advertising efforts
@@ -111,6 +120,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ### **Journey 3: Customer Engagement & Retention**
 
 #### **Customer Onboarding**
+
 1. **Welcome Sequences**
    - Create engaging welcome email series
    - Introduce new customers to products/services
@@ -124,6 +134,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Monitor customer success and satisfaction
 
 #### **Retention Campaigns**
+
 1. **Customer Engagement**
    - Develop ongoing engagement campaigns
    - Provide regular value and education
@@ -141,6 +152,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ### **Journey 4: Business Growth & Optimization**
 
 #### **Performance Analysis**
+
 1. **ROI Tracking**
    - Track email marketing ROI and business impact
    - Analyze revenue attribution from email campaigns
@@ -154,6 +166,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Improve deliverability and engagement rates
 
 #### **Business Scaling**
+
 1. **Process Automation**
    - Automate routine email marketing tasks
    - Implement workflows for customer lifecycle
@@ -171,6 +184,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ## Business Owner Context
 
 ### **Key Pain Points**
+
 - Limited time and technical expertise for complex email marketing
 - Difficulty measuring ROI and business impact
 - Balancing email marketing with other business priorities
@@ -178,6 +192,7 @@ This document outlines the key user journeys for business owners who use Penguin
 - Managing email marketing as business grows and evolves
 
 ### **Success Metrics**
+
 - **Business Growth**: Increased revenue and customer acquisition
 - **Customer Engagement**: Higher engagement and retention rates
 - **Operational Efficiency**: Streamlined email marketing processes
@@ -189,6 +204,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ## Common Business Owner Workflows
 
 ### **Monthly Strategic Review**
+
 1. **Performance Analysis**
    - Review monthly email marketing performance
    - Analyze ROI and business impact metrics
@@ -202,6 +218,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Adjust strategies based on business goals
 
 ### **Weekly Campaign Management**
+
 1. **Campaign Planning**
    - Plan weekly email campaigns and content
    - Coordinate with content creation and design
@@ -215,6 +232,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Generate reports for team and stakeholders
 
 ### **Quarterly Business Planning**
+
 1. **Strategic Review**
    - Assess quarterly email marketing performance
    - Review business goals and email marketing alignment
@@ -232,6 +250,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ## Business Integration & Automation
 
 ### **CRM Integration**
+
 1. **Customer Data Sync**
    - Integrate email marketing with CRM system
    - Sync customer data and engagement history
@@ -245,6 +264,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Coordinate marketing and sales efforts
 
 ### **E-commerce Integration**
+
 1. **Product Marketing**
    - Integrate product catalogs with email campaigns
    - Send personalized product recommendations
@@ -262,6 +282,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ## Business Growth Strategies
 
 ### **Customer Acquisition**
+
 1. **Lead Generation**
    - Develop systematic lead generation processes
    - Create valuable content and lead magnets
@@ -275,6 +296,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Reward customers for successful referrals
 
 ### **Customer Retention**
+
 1. **Engagement Programs**
    - Develop ongoing customer engagement strategies
    - Provide consistent value and education
@@ -292,6 +314,7 @@ This document outlines the key user journeys for business owners who use Penguin
 ## Best Practices for Business Owners
 
 ### **Strategic Focus**
+
 1. **Business Alignment**
    - Align email marketing with business objectives
    - Focus on activities that drive business results
@@ -305,6 +328,7 @@ This document outlines the key user journeys for business owners who use Penguin
    - Build systems that support business growth
 
 ### **Customer-Centric Approach**
+
 1. **Value Delivery**
    - Focus on providing value to customers
    - Understand customer needs and preferences
@@ -319,11 +343,12 @@ This document outlines the key user journeys for business owners who use Penguin
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`agency-owner-journeys.md`](agency-owner-journeys.md)
-- [`freelancer-journeys.md`](freelancer-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`agency-owner-journeys.md`](agency-owner-journeys)
+- [`freelancer-journeys.md`](freelancer-journeys)
 
 ---
 

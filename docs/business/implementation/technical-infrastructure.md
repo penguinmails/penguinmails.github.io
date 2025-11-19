@@ -19,20 +19,22 @@ last_modified_date: "2025-11-10"
 | Volume Band | Recommended Spec | Monthly $ Range (VPS Only) | Example Plans |
 |------------|------------------|---------------------------|---------------|
 | **1K-10K** | 1 vCPU, 1-2GB RAM, 25-50GB SSD, 1-2TB BW | $6-$15 | DigitalOcean Basic 1GB ($6), DO Basic 2GB ($12), Vultr Regular 1GB ($10), AWS t4g.micro ($6-8) |
-| **10K-100K** | 1-2 vCPU, 2-4GB RAM, 50-80GB SSD, 2-4TB BW | $12-$40 | DO Basic 2-4GB ($18-24), Vultr Regular.md), AWS t4g.small.md) |
-| **100K-1M** | 2-4 vCPU, 4-8GB RAM, 100-160GB SSD, 4-6TB BW | $20-$120 | Vultr HP 4-8GB ($24-48), DO Basic.md), AWS t4g.large .md) |
-| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110.md), AWS m5.xlarge+ .md) |
+| **10K-100K** | 1-2 vCPU, 2-4GB RAM, 50-80GB SSD, 2-4TB BW | $12-$40 | DO Basic 2-4GB ($18-24), Vultr Regular), AWS t4g.small) |
+| **100K-1M** | 2-4 vCPU, 4-8GB RAM, 100-160GB SSD, 4-6TB BW | $20-$120 | Vultr HP 4-8GB ($24-48), DO Basic), AWS t4g.large ) |
+| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110), AWS m5.xlarge+ ) |
 
 ### Implementation Notes
+
 - **Dedicated IPs**: Typically add $1-$5/IP/month
 - **Real-world deployments**:
   - 3-5 IPs at 10K-100K emails/month
-  - 5-15 IPs at 100K-1M emails/month  
+  - 5-15 IPs at 100K-1M emails/month
   - 50-100+ IPs for 1M+ monthly volumes
 
 ### VPS Provider Technical Analysis
 
 #### DigitalOcean Technical Specifications
+
 **Recommended Plans for Email Infrastructure**:
 
 | Plan | vCPU | RAM | Storage | Bandwidth | Monthly Cost | Email Capacity |
@@ -44,6 +46,7 @@ last_modified_date: "2025-11-10"
 | **CPU-Optimized 8GB** | 4 | 8GB | 160GB SSD | 6TB | $96 | 100K-300K emails/month |
 
 **Technical Features**:
+
 - SSD storage with high IOPS
 - Global data centers (12 locations)
 - Built-in monitoring and alerting
@@ -51,6 +54,7 @@ last_modified_date: "2025-11-10"
 - One-click email server deployments
 
 #### Vultr Technical Specifications
+
 **Recommended Plans for Email Infrastructure**:
 
 | Plan | vCPU | RAM | Storage | Bandwidth | Monthly Cost | Email Capacity |
@@ -62,6 +66,7 @@ last_modified_date: "2025-11-10"
 | **High Performance 8GB** | 4 | 8GB | 160GB SSD | 4TB | $110 | 100K-300K emails/month |
 
 **Technical Features**:
+
 - High-frequency CPU options
 - Global edge locations (30+ data centers)
 - Built-in DDoS protection
@@ -69,6 +74,7 @@ last_modified_date: "2025-11-10"
 - Advanced networking features
 
 #### AWS EC2 Technical Specifications
+
 **Recommended Instances for Email Infrastructure**:
 
 | Instance | vCPU | RAM | Storage | Network | Monthly Cost | Email Capacity |
@@ -80,6 +86,7 @@ last_modified_date: "2025-11-10"
 | **m5.large** | 2 | 8GB | EBS Only | Medium | $96-120 | 100K-300K emails/month |
 
 **Technical Features**:
+
 - ARM-based Graviton2 processors (t4g series)
 - Elastic Block Store (EBS) for persistent storage
 - CloudWatch monitoring and logging
@@ -93,6 +100,7 @@ last_modified_date: "2025-11-10"
 ### SendGrid Technical Architecture
 
 #### API Technical Specifications
+
 - **API Rate Limits**:
   - Web API: 1,000 requests/hour per API key
   - Web API v3: 100 requests/5 minutes per API key
@@ -110,6 +118,7 @@ last_modified_date: "2025-11-10"
   - Delivery Webhook: Delivery status updates
 
 #### Authentication & Security
+
 - **SPF/DKIM Support**: Automatic setup and management
 - **DMARC**: Basic reporting and alignment checking
 - **IP Whitelisting**: Enterprise feature for security
@@ -117,6 +126,7 @@ last_modified_date: "2025-11-10"
 - **API Key Management**: Granular permission control
 
 #### Deliverability Technical Features
+
 - **IP Warmup**: Automated warmup protocols
 - **Reputation Monitoring**: Real-time sender score tracking
 - **Blacklist Monitoring**: Proactive RBL checking
@@ -126,6 +136,7 @@ last_modified_date: "2025-11-10"
 ### Mailgun Technical Architecture
 
 #### API Technical Specifications
+
 - **API Rate Limits**:
   - API calls: 2,000 requests/hour per user
   - Email sending: 2,000 requests/hour per user
@@ -143,6 +154,7 @@ last_modified_date: "2025-11-10"
   - Email parsing and forwarding
 
 #### Technical Features
+
 - **Deliverability Tools**:
   - Advanced bounce classification
   - Spam complaint monitoring
@@ -156,6 +168,7 @@ last_modified_date: "2025-11-10"
   - Time-based scheduling and optimization
 
 #### Cold Email Optimization
+
 - **Dedicated IP Management**: Automatic IP rotation and warmup
 - **List Hygiene**: Built-in bounce handling and validation
 - **Compliance Tools**: CAN-SPAM and GDPR compliance features
@@ -164,6 +177,7 @@ last_modified_date: "2025-11-10"
 ### Postmark Technical Architecture
 
 #### API Technical Specifications
+
 - **API Rate Limits**:
   - 500 requests per minute per token
   - Burst allowance: 10 requests per second
@@ -176,6 +190,7 @@ last_modified_date: "2025-11-10"
   - Transactional: No monthly limits
 
 #### Transactional Email Focus
+
 - **Message Handling**:
   - Unlimited email volume for transactional
   - 10,000 messages per API call limit
@@ -189,6 +204,7 @@ last_modified_date: "2025-11-10"
   - Comprehensive delivery analytics
 
 #### Security & Compliance
+
 - **Data Protection**: SOC 2 Type II certified
 - **Encryption**: TLS 1.2+ for data in transit
 - **Compliance**: GDPR, CCPA, and CAN-SPAM compliant
@@ -197,8 +213,9 @@ last_modified_date: "2025-11-10"
 ### Amazon SES Technical Architecture
 
 #### API Technical Specifications
+
 - **Service Limits**:
-  - Sending quota: 200 emails.md)
+  - Sending quota: 200 emails)
   - 24-hour sending limit: 50,000 emails (default)
   - API requests: 14 requests/second
 
@@ -209,6 +226,7 @@ last_modified_date: "2025-11-10"
   - CloudWatch Logs integration
 
 #### Technical Integration
+
 - **AWS Ecosystem**:
   - CloudWatch for monitoring and logging
   - SNS for event notifications
@@ -222,6 +240,7 @@ last_modified_date: "2025-11-10"
   - Bounce and complaint handling
 
 #### Advanced Features
+
 - **Identity Management**:
   - Easy domain verification process
   - Automatic SPF/DKIM/DMARC setup
@@ -241,44 +260,46 @@ last_modified_date: "2025-11-10"
 ### Server Configuration Requirements
 
 #### Minimum Server Specifications
+
 **For Self-Hosted Email Infrastructure**:
 
 ##### 1K-10K emails/month
-```
+
+```markdown
 CPU: 1 vCPU (2.0+ GHz)
 RAM: 1-2GB
 Storage: 25-50GB SSD
 Bandwidth: 1-2TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```
+```markdown
 
 ##### 10K-100K emails/month
-```
+```markdown
 CPU: 1-2 vCPUs (2.4+ GHz)
 RAM: 2-4GB
 Storage: 50-80GB SSD
 Bandwidth: 2-4TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```
+```markdown
 
 ##### 100K-1M emails/month
-```
+```markdown
 CPU: 2-4 vCPUs (3.0+ GHz)
 RAM: 4-8GB
 Storage: 100-160GB SSD
 Bandwidth: 4-6TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```
+```markdown
 
 ##### 1M+ emails/month
-```
+```markdown
 CPU: 4-8+ vCPUs (3.2+ GHz)
 RAM: 8-16GB+ SSD
 Storage: 160-320GB+ SSD
 Bandwidth: 6-8TB+ SSD
 OS: Ubuntu 20.04+ LTS or CentOS 8+
 Multiple servers for load balancing
-```
+```markdown
 
 #### Software Stack Requirements
 
@@ -306,40 +327,40 @@ Multiple servers for load balancing
 # POP3: 110, 995 (SSL)
 # Webmail: 80, 443
 # SSH: 22 (restricted access)
-```
+```markdown
 
 ##### DNS Configuration Requirements
 - **SPF Record**: Required for all sending domains
-  ```
+  ```markdown
   v=spf1 include:_spf.google.com include:sendgrid.net ~all
-  ```
+  ```markdown
 - **DKIM Record**: Required for deliverability
-  ```
+  ```markdown
   default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
-  ```
+  ```markdown
 - **DMARC Record**: Recommended for policy enforcement
-  ```
+  ```markdown
   _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc@example.com"
-  ```
+  ```markdown
 
 ### IP Management and Reputation
 
 #### IP Allocation Strategy
 **Cold Email Requirements**:
 
-##### Small Volume (1K-10K.md)
+##### Small Volume (1K-10K)
 - **Primary IP**: 1 dedicated IP
 - **Backup IP**: 1 additional IP for rotation
 - **Warmup Period**: 2-3 weeks gradual ramp-up
 - **Daily Send Limit**: 10 emails/day initial, 10-20% daily increase
 
-##### Medium Volume (10K-100K.md)
+##### Medium Volume (10K-100K)
 - **Primary IPs**: 3-5 dedicated IPs
 - **Rotation Strategy**: Round-robin with reputation-based routing
 - **Warmup Period**: 3-4 weeks per domain
 - **Daily Send Limit**: 50-100 emails/day per IP
 
-##### Large Volume (100K+.md)
+##### Large Volume (100K+)
 - **Primary IPs**: 10-20+ dedicated IPs
 - **Load Balancing**: Geographic and reputation-based distribution
 - **Warmup Period**: 4-6 weeks for new domains
@@ -352,14 +373,14 @@ Multiple servers for load balancing
 # Blacklist monitoring script example
 #!/bin/bash
 # Check RBL status for all IPs
-for ip in $(cat /etc/email.md); do
+for ip in $(cat /etc/email); do
     for rbl in zen.spamhaus.org bl.spamcop.net; do
         if dig +short $ip.$rbl; then
             echo "IP $ip listed in $rbl"
         fi
     done
 done
-```
+```markdown
 
 ##### Deliverability Monitoring
 - **Open Rate Tracking**: ESP APIs for engagement data
@@ -398,7 +419,7 @@ rsync -av /var/mail/ $BACKUP_DIR/mailboxes/
 
 # Upload to cloud storage
 aws s3 sync $BACKUP_DIR s3://email-backups/$DATE/
-```
+```markdown
 
 #### Disaster Recovery Plan
 1. **Primary Server Failure**: Automatic failover to backup server
@@ -423,7 +444,7 @@ minimal_backoff_time = 300s
 maximal_backoff_time = 3600s
 default_process_limit = 50
 default_destination_concurrency_limit = 5
-```
+```markdown
 
 #### System-Level Optimizations
 ```bash
@@ -434,7 +455,7 @@ net.core.netdev_max_backlog = 3000
 net.ipv4.tcp_max_syn_backlog = 1024
 net.core.rmem_max = 16777216
 net.core.wmem_max = 16777216
-```
+```markdown
 
 #### Database Optimization
 ```sql
@@ -442,7 +463,7 @@ net.core.wmem_max = 16777216
 SET GLOBAL innodb_buffer_pool_size = 2147483648; -- 2GB
 SET GLOBAL query_cache_size = 134217728; -- 128MB
 SET GLOBAL max_connections = 200;
-```
+```markdown
 
 ### Email Queue Management
 
@@ -459,7 +480,7 @@ postqueue -f
 
 # Remove specific messages
 postsuper -d MESSAGE_ID
-```
+```markdown
 
 #### Performance Metrics
 - **Queue Size**: <100 messages for healthy system
@@ -489,7 +510,7 @@ for i in {1..1000}; do
     ) &
 done
 wait
-```
+```markdown
 
 #### Capacity Planning Guidelines
 - **Email Server**: 1,000 emails/minute per CPU core
@@ -525,22 +546,22 @@ wait
 
 ## References
 
-[^1]: DigitalOcean Pricing - Droplets. https://www.digitalocean.com/pricing/droplets  
-[^2]: AWS EC2 On-Demand Pricing. https://aws.amazon.com/ec2/pricing/on-demand/  
-[^3]: Vultr VPS Pricing. https://www.vultr.com/pricing/  
-[^4]: VPSBenchmarks DigitalOcean Comparison. https://www.vpsbenchmarks.com/compare/docean  
-[^5]: Spendflo DigitalOcean Pricing Guide. https://www.spendflo.com/blog/digitalocean-pricing-guide  
-[^6]: VPSBenchmarks Vultr Comparison. https://www.vpsbenchmarks.com/compare/vultr  
-[^7]: FreeRDPS Best VPS for Email Server. https://freerdps.com/blog/best-vps-for-email-server/  
-[^8]: NOPS EC2 Pricing Analysis. https://www.nops.io/blog/ec2-pricing-how-much-does-aws-ec2-really-cost/  
-[^9]: SSDNodes VPS Hosting Comparison. https://www.ssdnodes.com/blog/digitalocean-vs-linode-vs-vultr/  
-[^10]: FreeRDPS Email Server VPS Guide. https://freerdps.com/blog/best-vps-for-email-server/  
-[^110]: Cloudflare DNS Pricing. https://www.cloudflare.com/plans/  
-[^111]: GlockApps Pricing. https://glockapps.com/pricing/  
-[^112]: Datadog Pricing. https://www.datadoghq.com/pricing/  
-[^113]: Backblaze B2 Cloud Storage Pricing. https://www.backblaze.com/cloud-storage/pricing  
-[^114]: AWS SES Pricing. https://aws.amazon.com/ses/pricing/  
-[^115]: SendGrid Pricing. https://sendgrid.com/pricing/  
-[^116]: Mailgun Pricing. https://www.mailgun.com/pricing  
+[^1]: DigitalOcean Pricing - Droplets. https://www.digitalocean.com/pricing/droplets
+[^2]: AWS EC2 On-Demand Pricing. https://aws.amazon.com/ec2/pricing/on-demand/
+[^3]: Vultr VPS Pricing. https://www.vultr.com/pricing/
+[^4]: VPSBenchmarks DigitalOcean Comparison. https://www.vpsbenchmarks.com/compare/docean
+[^5]: Spendflo DigitalOcean Pricing Guide. https://www.spendflo.com/blog/digitalocean-pricing-guide
+[^6]: VPSBenchmarks Vultr Comparison. https://www.vpsbenchmarks.com/compare/vultr
+[^7]: FreeRDPS Best VPS for Email Server. https://freerdps.com/blog/best-vps-for-email-server/
+[^8]: NOPS EC2 Pricing Analysis. https://www.nops.io/blog/ec2-pricing-how-much-does-aws-ec2-really-cost/
+[^9]: SSDNodes VPS Hosting Comparison. https://www.ssdnodes.com/blog/digitalocean-vs-linode-vs-vultr/
+[^10]: FreeRDPS Email Server VPS Guide. https://freerdps.com/blog/best-vps-for-email-server/
+[^110]: Cloudflare DNS Pricing. https://www.cloudflare.com/plans/
+[^111]: GlockApps Pricing. https://glockapps.com/pricing/
+[^112]: Datadog Pricing. https://www.datadoghq.com/pricing/
+[^113]: Backblaze B2 Cloud Storage Pricing. https://www.backblaze.com/cloud-storage/pricing
+[^114]: AWS SES Pricing. https://aws.amazon.com/ses/pricing/
+[^115]: SendGrid Pricing. https://sendgrid.com/pricing/
+[^116]: Mailgun Pricing. https://www.mailgun.com/pricing
 [^117]: Postmark Pricing. https://postmarkapp.com/pricing
 ---

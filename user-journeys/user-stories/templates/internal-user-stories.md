@@ -10,7 +10,7 @@ This document provides standardized templates and examples for creating user sto
 
 ## Standard Internal User Story Template
 
-```
+```markdown
 As an [INTERNAL ROLE - Platform Admin/Operations/Developer/etc], 
 I want [PLATFORM MANAGEMENT/OPERATIONAL FUNCTION], 
 so that [OPERATIONAL EFFICIENCY/BUSINESS PROCESS IMPROVEMENT].
@@ -62,7 +62,7 @@ DEFINITION OF DONE:
 - [ ] Documentation updated
 - [ ] Acceptance criteria verified
 - [ ] User story validated with stakeholders
-```
+```markdown
 
 ---
 
@@ -70,7 +70,7 @@ DEFINITION OF DONE:
 
 ### **Example 1: User Management**
 
-```
+```markdown
 As a Platform Administrator,
 I want to manage user permissions and access levels across all platform features,
 so that I can ensure appropriate access control and security compliance.
@@ -122,11 +122,11 @@ DEFINITION OF DONE:
 - [ ] Security and audit controls validated
 - [ ] Integration with identity management system completed
 - [ ] Documentation and training materials created
-```
+```markdown
 
 ### **Example 2: System Configuration**
 
-```
+```markdown
 As a Platform Administrator,
 I want to configure platform-wide settings and policies,
 so that I can ensure consistent platform behavior and compliance across all users.
@@ -177,7 +177,7 @@ DEFINITION OF DONE:
 - [ ] Configuration validation rules implemented
 - [ ] Notification system integrated
 - [ ] Documentation completed
-```
+```markdown
 
 ---
 
@@ -185,7 +185,7 @@ DEFINITION OF DONE:
 
 ### **Example 3: Monitoring & Alerting**
 
-```
+```markdown
 As an Operations Staff Member,
 I want to receive intelligent alerts for system issues and anomalies,
 so that I can proactively address problems before they impact users.
@@ -237,7 +237,7 @@ DEFINITION OF DONE:
 - [ ] Integration with ticketing system completed
 - [ ] Escalation procedures tested and validated
 - [ ] Documentation and training completed
-```
+```markdown
 
 ---
 
@@ -245,7 +245,7 @@ DEFINITION OF DONE:
 
 ### **Example 4: Development Tools**
 
-```
+```markdown
 As a Developer,
 I want to access comprehensive API documentation and testing tools,
 so that I can efficiently integrate with platform APIs and build robust integrations.
@@ -297,7 +297,7 @@ DEFINITION OF DONE:
 - [ ] Sandbox environment configured and secured
 - [ ] Automated documentation generation working
 - [ ] Developer feedback incorporated and refined
-```
+```markdown
 
 ---
 
@@ -328,10 +328,10 @@ DEFINITION OF DONE:
 ---
 
 **Related Documents**
-- [`../methodology.md`](../methodology.md)
-- [`../user-types-classification.md`](../user-types-classification.md)
-- [`stakeholder-stories.md`](stakeholder-stories.md)
-- [`customer-stories.md`](customer-stories.md)
+- [`../methodology.md`](../methodology)
+- [`../user-types-classification.md`](../user-types-classification)
+- [`stakeholder-stories.md`](stakeholder-stories)
+- [`customer-stories.md`](customer-stories)
 
 ---
 

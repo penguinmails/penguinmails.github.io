@@ -1,6 +1,7 @@
 # Queue System Implementation Guide - Job Processing & Reliability
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This queue system implementation guide supports our enterprise infrastructure framework by providing comprehensive job processing capabilities, reliability systems, and performance optimization strategies for the PenguinMails asynchronous operations and monitoring platform.
 
 **Technical Authority**: Our queue system architecture integrates with enterprise messaging platforms, monitoring systems, and worker frameworks featuring hybrid PostgreSQL + Redis design, automated failover capabilities, and horizontal scaling for comprehensive job processing excellence.
@@ -30,6 +31,7 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 - **Retry Logic**: Exponential backoff and comprehensive error handling
 
 ### Key Features
+
 - **Asynchronous Processing**: Non-blocking email operations
 - **Retry Logic**: Automatic failure recovery with exponential backoff
 - **Monitoring**: Real-time queue health and job metrics
@@ -37,6 +39,7 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 - **Reliability**: Dead letter queues for failed jobs
 
 ### Architecture Components
+
 - **PostgreSQL**: Durable job state management
 - **Redis**: High-performance job queues
 - **Workers**: Background job processors
@@ -47,6 +50,7 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 ## Overview
 
 ### Hybrid Architecture Benefits
+
 - **PostgreSQL**: Durable record of truth with comprehensive audit trail
 - **Redis**: High-performance job processing with millisecond latency
 - **Queuer Process**: Automated migration from PostgreSQL to Redis
@@ -55,7 +59,7 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 
 ### System Architecture
 
-```
+```markdown
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Next.js API   │    │   Queuer Proc   │    │  Worker Server  │
 │   (Producer)    │    │   (Migrator)    │    │   (Consumer)    │
@@ -89,7 +93,7 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
                         │   Worker Proc   │
                         │   (Consumer)    │
                         └─────────────────┘
-```
+```markdown
 
 ---
 
@@ -150,12 +154,12 @@ CREATE TABLE analytics_jobs (
     error_message TEXT,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### Performance Indexes
 ```sql
 -- Queuer process optimization
-CREATE INDEX idx_jobs_queuer ON jobs(status, run_at, priority, created_at) 
+CREATE INDEX idx_jobs_queuer ON jobs(status, run_at, priority, created_at)
 WHERE status = 'queued';
 
 -- Queue-specific migration
@@ -166,7 +170,7 @@ WHERE status = 'queued';
 CREATE INDEX idx_jobs_status_timestamps ON jobs(status, updated_at, queue_name);
 CREATE INDEX idx_job_logs_worker ON job_logs(job_id, attempt_number, finished_at);
 CREATE INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_at);
-```
+```markdown
 
 ### 2. Redis Queue Structure (Fast Processing)
 
@@ -191,7 +195,7 @@ const QueueNames = {
   BOUNCE_PROCESSING: 'queue:bounce:process',
   WEBHOOK_PROCESSING: 'queue:webhook:process'
 } as const;
-```
+```markdown
 
 #### Redis Data Structures
 
@@ -215,14 +219,14 @@ const exampleJob = {
   priority: 75,
   payload: {
     campaign_id: "uuid-campaign",
-    lead_id: "uuid-lead", 
+    lead_id: "uuid-lead",
     email_data: { /* email content */ }
   },
   created_at: "2025-10-30T09:00:00Z",
   attempt_count: 0,
   max_attempts: 3
 };
-```
+```markdown
 
 **B. Hashes (Job Metadata)**
 ```typescript
@@ -243,7 +247,7 @@ interface JobMetadata {
 // worker_id: "worker-1"
 // started_at: "2025-10-30T09:01:00Z"
 // attempt_count: "1"
-```
+```markdown
 
 ### 3. Queuer Process Implementation
 
@@ -268,7 +272,7 @@ export class JobMigrator {
   async start() {
     this.isRunning = true;
     console.log('Job migrator started');
-    
+
     while (this.isRunning) {
       try {
         await this.migrateReadyJobs();
@@ -338,7 +342,7 @@ export class JobMigrator {
     // Update PostgreSQL status
     await this.db.jobs.update({
       where: { id: job.id },
-      data: { 
+      data: {
         status: 'migrated_to_redis',
         updated_at: new Date()
       }
@@ -351,7 +355,7 @@ export class JobMigrator {
 
   private getQueueName(job: any): string {
     const { priority, queue_name } = job;
-    
+
     // Priority-based routing
     if (priority <= 50) return `${queue_name}:high`;
     if (priority <= 150) return queue_name;
@@ -362,7 +366,7 @@ export class JobMigrator {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
-```
+```markdown
 
 ### 4. Worker Server Implementation
 
@@ -407,7 +411,7 @@ export class EmailWorker {
       try {
         // Blocking pop with priority ordering
         const result = await this.redis.brpop(queues, 0);
-        
+
         if (!result) {
           continue;
         }
@@ -430,14 +434,14 @@ export class EmailWorker {
 
   private async processJob(job: any, queueName: string) {
     const { id, payload } = job;
-    
+
     try {
       console.log(`Processing job ${id} from ${queueName}`);
 
       // Update PostgreSQL status
       await this.db.jobs.update({
         where: { id },
-        data: { 
+        data: {
           status: 'running',
           started_at: new Date(),
           updated_at: new Date()
@@ -467,7 +471,7 @@ export class EmailWorker {
       // Update completion status
       await this.db.jobs.update({
         where: { id },
-        data: { 
+        data: {
           status: 'completed',
           completed_at: new Date(),
           updated_at: new Date()
@@ -491,16 +495,16 @@ export class EmailWorker {
 
   private async handleJobFailure(job: any, error: Error) {
     const { id, max_attempts, attempt_count = 0 } = job;
-    
+
     try {
       const attempts = attempt_count + 1;
-      
+
       if (attempts < max_attempts) {
         // Schedule retry with exponential backoff
         const delay = Math.pow(2, attempts) * 1000; // 2s, 4s, 8s, etc.
-        
+
         await this.delay(delay);
-        
+
         // Re-queue the job
         await this.redis.lpush('queue:email-sending', JSON.stringify({
           ...job,
@@ -510,7 +514,7 @@ export class EmailWorker {
         // Update PostgreSQL
         await this.db.jobs.update({
           where: { id },
-          data: { 
+          data: {
             attempt_count: attempts,
             updated_at: new Date()
           }
@@ -526,7 +530,7 @@ export class EmailWorker {
         // Max attempts reached - mark as failed
         await this.db.jobs.update({
           where: { id },
-          data: { 
+          data: {
             status: 'failed',
             failed_at: new Date(),
             last_error_message: error.message,
@@ -551,13 +555,13 @@ export class EmailWorker {
 
   private async processIncomingEmail(payload: any) {
     // Implementation for incoming email processing using new email system architecture
-    /.md) and email_content (body) entries
+    /) and email_content (body) entries
     const { tenant_id, email_account_id, direction, type, from, to, subject, body, headers, raw, messageId } = payload;
-    
+
     try {
       const storage_key = `email_${messageId}_${Date.now()}`;
-      
-      /.md)
+
+      /)
       const contentObject = await this.db.email_content.create({
         data: {
           storage_key,
@@ -571,7 +575,7 @@ export class EmailWorker {
         }
       });
 
-      /.md)
+      /)
       const messageRef = await this.db.email_messages.create({
         data: {
           storage_key,
@@ -604,14 +608,14 @@ export class EmailWorker {
       }
 
       console.log('Successfully processed incoming email:', { storage_key, messageId: messageRef.storage_key });
-      
+
       return {
         success: true,
         storage_key,
         content_object_id: contentObject.storage_key,
         message_ref_id: messageRef.storage_key
       };
-      
+
     } catch (error) {
       console.error('Failed to process incoming email:', error);
       throw new Error(`Email processing failed: ${error.message}`);
@@ -648,7 +652,7 @@ export class EmailWorker {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
-```
+```markdown
 
 ### 5. Job Creation and Management
 
@@ -670,7 +674,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const db = new Database();
     const redis = new Redis(process.env.REDIS_URL!);
 
-    /.md)
+    /)
     const job = await db.jobs.create({
       data: {
         queue_name,
@@ -695,7 +699,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       };
 
       await redis.lpush(`${queue_name}:high`, JSON.stringify(redisPayload));
-      
+
       // Update status to migrated
       await db.jobs.update({
         where: { id: job.id },
@@ -717,7 +721,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ error: 'Failed to create job' });
   }
 }
-```
+```markdown
 
 #### Job Status Tracking
 ```typescript
@@ -773,7 +777,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ error: 'Failed to get job status' });
   }
 }
-```
+```markdown
 
 ---
 
@@ -799,7 +803,7 @@ services:
       retries: 5
 
   queuer:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.queuer
     environment:
@@ -833,7 +837,7 @@ services:
 
 volumes:
   redis_data:
-```
+```markdown
 
 ### Monitoring and Health Checks
 
@@ -868,7 +872,7 @@ export class QueueHealthMonitor {
     try {
       const pong = await this.redis.ping();
       const info = await this.redis.info();
-      
+
       return {
         status: 'healthy',
         ping: pong,
@@ -896,7 +900,7 @@ export class QueueHealthMonitor {
     ];
 
     const depths = {};
-    
+
     for (const queue of queues) {
       try {
         const length = await this.redis.llen(queue);
@@ -913,7 +917,7 @@ export class QueueHealthMonitor {
     // Get all job hashes to see which workers are active
     const jobKeys = await this.redis.keys('job:*');
     const workers = new Set();
-    
+
     for (const key of jobKeys.slice(0, 100)) { // Check first 100 jobs
       const workerId = await this.redis.hget(key, 'worker_id');
       if (workerId) {
@@ -940,16 +944,16 @@ export class QueueHealthMonitor {
   }
 
   private parseRedisMemory(info: string): string {
-    const match = info.match(.md).md);
+    const match = info.match());
     return match ? match[1] : 'unknown';
   }
 
   private parseConnectedClients(info: string): number {
-    const match = info.match(.md).md);
+    const match = info.match());
     return match ? parseInt(match[1]) : 0;
   }
 }
-```
+```markdown
 
 ### Error Handling and Recovery
 
@@ -1005,7 +1009,7 @@ export class DeadLetterHandler {
     }
 
     const job = JSON.parse(jobData);
-    
+
     // Reset job in PostgreSQL
     await this.db.jobs.update({
       where: { id: jobId },
@@ -1020,11 +1024,11 @@ export class DeadLetterHandler {
 
     // Add back to appropriate queue
     await this.redis.lpush(job.queue_name, JSON.stringify(job));
-    
+
     return { success: true, job_id: jobId };
   }
 }
-```
+```markdown
 
 ---
 

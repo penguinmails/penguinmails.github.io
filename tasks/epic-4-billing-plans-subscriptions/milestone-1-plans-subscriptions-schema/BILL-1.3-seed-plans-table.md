@@ -11,7 +11,8 @@ Create a simple seed script to populate the `plans` table with the initial subsc
 
 ## Context
 
-Initial plan data is essential for the pricing page and subscription creation. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), PenguinMails offers:
+Initial plan data is essential for the pricing page and subscription creation. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), PenguinMails offers:
+
 - **Starter Plan:** $99/month
 - **Professional Plan:** $299/month
 - **Enterprise Plan:** Custom pricing
@@ -128,8 +129,8 @@ seedPlans()
 
 ## Related Documentation
 
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Subscription tiers
-- [Goals & Competitive Edge](../../docs/goals-competitive-edge/index.md) - Pricing strategy
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Subscription tiers
+- [Goals & Competitive Edge](../../docs/goals-competitive-edge/index) - Pricing strategy
 
 ## Dependencies
 
@@ -146,4 +147,3 @@ seedPlans()
 - [ ] Run script multiple times - verify idempotency
 - [ ] Test with missing environment variables - verify error handling
 - [ ] Verify prices match documentation
-

@@ -8,20 +8,22 @@ persona: "Documentation Users"
 
 # Performance Analysis - Level 3: Metrics and Optimization
 
-**For Operations managers, Performance analysts, and Optimization teams**
+## For Operations managers, Performance analysts, and Optimization teams
 
 This directory contains comprehensive performance analysis, benchmarking, optimization strategies, and operational dashboards needed for monitoring, measuring, and improving PenguinMails performance.
 
 ## Progressive Disclosure Flow
 
 ### 📊 Performance Documents
-- [**Performance Dashboard**](..md) - Executive performance overview (≤200 lines)
-- [**Performance Overview**](..md) - Strategic performance summary (≤200 lines)
-- [**Performance Optimization**](..md) - Performance improvement strategies (≤300 lines)
-- [**Performance Benchmarks**](..md) - Industry benchmarking analysis (≤300 lines)
-- [**Performance Provider Analysis**](..md) - ESP performance strategy (≤300 lines)
+
+- [**Performance Dashboard**](.) - Executive performance overview (≤200 lines)
+- [**Performance Overview**](.) - Strategic performance summary (≤200 lines)
+- [**Performance Optimization**](.) - Performance improvement strategies (≤300 lines)
+- [**Performance Benchmarks**](.) - Industry benchmarking analysis (≤300 lines)
+- [**Performance Provider Analysis**](.) - ESP performance strategy (≤300 lines)
 
 ### 🎯 Performance Analysis Path
+
 1. **Executive View**: Start with `performance-dashboard` for KPI overview
 2. **Strategic Analysis**: Use `performance-overview` for strategic performance assessment
 3. **Optimization Focus**: Reference `performance-optimization` for improvement strategies
@@ -29,12 +31,14 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 5. **Provider Strategy**: Deep dive into `performance-provider-analysis` for ESP optimization
 
 ### 📈 Performance Characteristics
+
 - **Content Depth**: Performance analysis and optimization (200-300 lines per document)
 - **Tone**: Operational excellence and optimization guidance
 - **Target Audience**: Operations managers, performance analysts, optimization teams
 - **Progression**: Dashboard overview → strategic analysis → optimization strategies
 
 ### 🔧 Performance Focus Areas
+
 - **Deliverability**: Inbox placement, sender reputation, authentication
 - **Response Times**: API performance, processing speeds, throughput
 - **Scalability**: Volume handling, capacity planning, growth accommodation
@@ -43,10 +47,11 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 ---
 
 **Related Directories:**
-- [Core Business Documents](../core.md) - Performance justification for business case
-- [Implementation Guide](../implementation.md) - Performance-focused implementation
-- [Financial Analysis](../financial-analysis.md) - Cost-performance relationships
-- [Procurement & Compliance](../procurement-compliance.md) - Performance compliance requirements
+
+- [Core Business Documents](../core) - Performance justification for business case
+- [Implementation Guide](/docs/business/implementation) - Performance-focused implementation
+- [Financial Analysis](/docs/business/financial-analysis) - Cost-performance relationships
+- [Procurement & Compliance](/docs/business/procurement-compliance) - Performance compliance requirements
 
 ---
 

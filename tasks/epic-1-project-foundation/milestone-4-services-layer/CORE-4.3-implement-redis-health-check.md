@@ -11,7 +11,8 @@ Create a temporary API route (`/api/test/health/redis`) that uses the Redis clie
 
 ## Context
 
-Health check endpoints are essential for monitoring and debugging. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), system health monitoring is critical for:
+Health check endpoints are essential for monitoring and debugging. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), system health monitoring is critical for:
+
 - **Uptime Target:** 99.9% availability
 - **Performance Monitoring:** Real-time system health checks
 - **Infrastructure Health:** Verify all services are operational
@@ -66,6 +67,7 @@ export async function GET() {
 ### Expected Response Formats
 
 **Success Response (200):**
+
 ```json
 {
   "status": "ok",
@@ -76,6 +78,7 @@ export async function GET() {
 ```
 
 **Error Response (503):**
+
 ```json
 {
   "status": "error",
@@ -96,8 +99,8 @@ export async function GET() {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Health monitoring
-- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide.md) - Health checks
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Health monitoring
+- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide) - Health checks
 
 ## Dependencies
 
@@ -113,5 +116,3 @@ export async function GET() {
 - [ ] Verify error messages are clear and helpful
 - [ ] Test endpoint response time (should be < 100ms)
 - [ ] Verify endpoint works in different environments (dev, staging, prod)
-
-

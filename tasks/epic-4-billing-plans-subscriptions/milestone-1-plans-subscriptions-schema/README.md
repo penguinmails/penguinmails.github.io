@@ -4,10 +4,10 @@
 
 ## Tickets
 
-- [BILL-1.1](./BILL-1.1-define-billing-schemas.md) - Define Drizzle Schemas for Billing
-- [BILL-1.2](./BILL-1.2-generate-apply-billing-migrations.md) - Generate and Apply Billing Migrations
-- [BILL-1.3](./BILL-1.3-seed-plans-table.md) - Seed the plans Table
-- [BILL-1.4](./BILL-1.4-list-plans-endpoint.md) - Create API Endpoint to List Plans (GET /api/plans)
+- [BILL-1.1](./BILL-1.1-define-billing-schemas) - Define Drizzle Schemas for Billing
+- [BILL-1.2](./BILL-1.2-generate-apply-billing-migrations) - Generate and Apply Billing Migrations
+- [BILL-1.3](./BILL-1.3-seed-plans-table) - Seed the plans Table
+- [BILL-1.4](./BILL-1.4-list-plans-endpoint) - Create API Endpoint to List Plans (GET /api/plans)
 
 ## Dependencies
 
@@ -26,5 +26,4 @@
 
 ## Context
 
-This milestone establishes the billing data foundation. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), PenguinMails offers multiple subscription tiers (Starter, Professional, Enterprise) that need to be stored and managed in the database.
-
+This milestone establishes the billing data foundation. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), PenguinMails offers multiple subscription tiers (Starter, Professional, Enterprise) that need to be stored and managed in the database.

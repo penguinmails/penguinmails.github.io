@@ -11,11 +11,12 @@ In the `/lib/db/schema` directory, create a new file for the `companies` table. 
 
 ## Context
 
-Companies (Workspaces) are the primary organizational unit within a tenant. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails uses:
+Companies (Workspaces) are the primary organizational unit within a tenant. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails uses:
+
 - **Multi-tenant architecture** with complete data isolation
 - **Workspace management** for organizing resources
 
-The [Features & Capabilities](../../docs/features-capabilities/index.md) document outlines agency-focused features where companies represent client workspaces that agencies manage.
+The [Features & Capabilities](../../docs/features-capabilities/index) document outlines agency-focused features where companies represent client workspaces that agencies manage.
 
 ## Acceptance Criteria
 
@@ -58,6 +59,7 @@ export const companies = pgTable('companies', {
 ```
 
 **Note:** Match the exact schema from the [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#companies---tenant-workspaces). The schema uses:
+
 - `created` and `updated` (not `created_at`/`updated_at`)
 - `status` field with default 'active'
 - TEXT type for `logo_url` (not VARCHAR)
@@ -81,10 +83,10 @@ export const companies = pgTable('companies', {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for companies table structure and OLTP design patterns
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Workspace management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Multi-tenant architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - **Primary reference** for companies table structure and OLTP design patterns
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - 5-tier database architecture overview
+- [Features & Capabilities](../../docs/features-capabilities/index) - Workspace management
 
 ## Dependencies
 
@@ -100,5 +102,3 @@ export const companies = pgTable('companies', {
 - [ ] Check that required fields are marked as not null
 - [ ] Verify cascade delete behavior (when tenant is deleted)
 - [ ] Test that optional fields (logo_url) can be null
-
-

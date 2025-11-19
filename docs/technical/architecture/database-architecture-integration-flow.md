@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: The multi-tier separation between operational, content, and analytics data enables both high-performance transactional operations and comprehensive business intelligence reporting.
 
-**User Journey Integration**: This database architecture supports your complete email infrastructure experience from [user management](../technical/architecture/detailed-technical.md) through [campaign operations](../core-features.md) to [analytics reporting](../core-features/analytics/overview.md).
+**User Journey Integration**: This database architecture supports your complete email infrastructure experience from [user management](/docs/technical/architecture/detailed-technical) through [campaign operations](../core-features) to [analytics reporting](../core-features/analytics/overview).
 
 ---
 
@@ -29,45 +29,45 @@ graph LR
         OLTP[Operational Data<br/>Users, Campaigns, Contacts]
         OLTP_QUEUE[Queue State<br/>Job Status, Progress]
     end
-    
-    %% Content Layer  
+
+    %% Content Layer
     subgraph "Content Database"
         CONTENT[Email Content<br/>Bodies, Attachments]
         CONTENT_INDEX[Search Index<br/>Full-text Search]
     end
-    
+
     %% Analytics Layer
     subgraph "OLAP Analytics"
         ANALYTICS[Aggregated Data<br/>Performance Metrics]
         REPORTS[Business Reports<br/>ROI, Engagement]
     end
-    
+
     %% Data Flow
     OLTP -->|Real-time| CONTENT
     OLTP -->|Daily ETL| ANALYTICS
     CONTENT -->|Search| CONTENT_INDEX
     ANALYTICS -->|Generate| REPORTS
-    
+
     %% Queue Processing
     OLTP_QUEUE -->|Process Jobs| CONTENT
     OLTP_QUEUE -->|Log Events| ANALYTICS
-    
+
     %% Query Patterns
     API[API Gateway] -->|User Operations| OLTP
     API -->|Content Retrieval| CONTENT
     API -->|Analytics Queries| ANALYTICS
     API -->|Search| CONTENT_INDEX
-    
+
     classDef oltp fill:#e3f2fd
     classDef content fill:#fce4ec
     classDef analytics fill:#e8f5e9
     classDef api fill:#fff3e0
-    
+
     class OLTP,OLTP_QUEUE oltp
     class CONTENT,CONTENT_INDEX content
     class ANALYTICS,REPORTS analytics
     class API api
-```
+```markdown
 
 ## Database Tier Architecture
 
@@ -91,7 +91,7 @@ graph LR
 
 ### **Tier 4: Queue System (Job Processing)**
 - **Hybrid Architecture**: PostgreSQL for durable state + Redis for fast processing
-- **Job Classification**: Priority queues (high/normal.md) with automatic scaling
+- **Job Classification**: Priority queues (high/normal) with automatic scaling
 - **Event Logging**: Complete audit trail for all email processing events
 
 ## Data Flow Integration

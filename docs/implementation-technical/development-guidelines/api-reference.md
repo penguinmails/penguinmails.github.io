@@ -1,6 +1,6 @@
 ---
 title: "API Reference - Complete Integration Guide"
-description: "Lean, strategic API entrypoint plus links to dedicated REST API contracts (SMTP, Executive, Queue.md) for the PenguinMails platform."
+description: "Lean, strategic API entrypoint plus links to dedicated REST API contracts (SMTP, Executive, Queue) for the PenguinMails platform."
 last_modified_date: "2025-11-10"
 ---
 
@@ -9,6 +9,7 @@ last_modified_date: "2025-11-10"
 This document is the top-level navigation and standards guide for all PenguinMails APIs.
 
 Use this file to understand:
+
 - Strategic alignment and API surface ownership.
 - Global authentication, REST/payload conventions, rate limiting, errors, and versioning.
 - Where to find concrete REST contracts for each domain.
@@ -21,12 +22,12 @@ All endpoint-level details, SDK examples, language-specific integrations, and sc
 
 PenguinMails APIs are designed as a coherent, infrastructure-aware platform:
 
-- REST-only, HTTP.md) for official public and internal APIs.
+- REST-only, HTTP) for official public and internal APIs.
 - JS/TS-first orientation for SDKs and examples; other languages are supported via separate, focused docs.
 - Clear separation of:
   - Tenant-facing APIs (product, marketing, analytics consumption).
-  - Operational.md).
-  - Executive.md).
+  - Operational).
+  - Executive).
 - Internally aligned with the five-tier data model (OLTP, OLAP, events, cache, archive) without leaking implementation details into public contracts.
 - Consistent security, RBAC, auditability, and compliance posture across all domains.
 
@@ -48,13 +49,13 @@ The API documentation follows a progressive disclosure model:
 Authoritative domain contracts:
 
 - Tenant SMTP API:
-  - [`tenant-smtp-api`](../api.md)
+  - [`tenant-smtp-api`](../api)
 - Central SMTP Operations API:
-  - [`central-smtp-operations-api`](../api.md)
+  - [`central-smtp-operations-api`](../api)
 - Queue & Events API:
-  - [`queue-events-api`](../api.md)
+  - [`queue-events-api`](../api)
 - Executive REST API (C-Suite Dashboards):
-  - [`executive-api`](../api.md)
+  - [`executive-api`](../api)
 - Core Product / Marketing / Webhooks / SDKs:
   - Defined and maintained in their own dedicated specs (e.g. `core-product-api.md`, `webhooks-api.md`, `sdk-guides.md`) separate from this entrypoint.
 
@@ -77,6 +78,7 @@ Supported patterns (per product area):
 - Internal tokens for platform, observability, and administrative services.
 
 This document defines expectations; concrete auth flows (issuance, rotation, SSO, etc.) live in:
+
 - Security and identity implementation docs.
 - Each domain's focused API contract where relevant.
 
@@ -98,7 +100,7 @@ Successful responses:
   "data": {},
   "meta": {}
 }
-```
+```markdown
 
 Error responses:
 
@@ -114,7 +116,7 @@ Error responses:
   },
   "timestamp": "ISO8601"
 }
-```
+```markdown
 
 Additional requirements:
 
@@ -145,7 +147,7 @@ Clients MUST:
 - Treat HTTP 429 as a first-class signal.
 - Implement basic, configurable retry/backoff for transient failures.
 
-Implementation code samples (e.g. retry handlers in JS/TS.md) belong in:
+Implementation code samples (e.g. retry handlers in JS/TS) belong in:
 - SDK documentation.
 - Integration playbooks.
 - Not in this high-level reference.
@@ -160,7 +162,7 @@ Common, reusable error codes:
   - `AUTHENTICATION_REQUIRED` (401)
   - `INSUFFICIENT_PERMISSIONS` (403)
 - Validation:
-  - `VALIDATION_ERROR` (400.md)
+  - `VALIDATION_ERROR` (400)
   - `MISSING_REQUIRED_FIELD`
 - Rate Limits:
   - `RATE_LIMIT_EXCEEDED` (429)

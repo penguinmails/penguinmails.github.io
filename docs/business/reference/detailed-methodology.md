@@ -17,6 +17,7 @@ last_modified_date: "2025-11-10"
 ### Research Scope and Objectives
 
 #### Primary Research Questions
+
 1. **Cost Efficiency**: What are the true total costs of email infrastructure across deployment models?
 2. **Operational Overhead**: How much operational time is required for different email infrastructure approaches?
 3. **Provider Comparison**: Which email service providers offer the best value at different volume scales?
@@ -24,7 +25,9 @@ last_modified_date: "2025-11-10"
 5. **Compliance Requirements**: What are the regulatory costs and requirements for email operations?
 
 #### Research Methodology Framework
+
 **Mixed-Methods Approach**:
+
 - **Quantitative Analysis**: Pricing data, performance metrics, cost modeling
 - **Qualitative Research**: Industry expert interviews, case study analysis
 - **Comparative Analysis**: Cross-provider comparison, deployment model analysis
@@ -33,6 +36,7 @@ last_modified_date: "2025-11-10"
 ### Data Collection Framework
 
 #### Primary Data Sources
+
 1. **Provider Pricing Data** (Direct Research)
    - Official pricing pages and API documentation
    - Sales team consultations and custom quotes
@@ -52,6 +56,7 @@ last_modified_date: "2025-11-10"
    - Compliance and legal professionals
 
 #### Data Validation Process
+
 1. **Cross-Reference Verification**: Multiple sources for each data point
 2. **Temporal Validation**: Data recency verification (2024-2025 focus)
 3. **Contextual Analysis**: Understanding market conditions and pricing changes
@@ -62,8 +67,10 @@ last_modified_date: "2025-11-10"
 ## 📊 VPS Provider Analysis Methodology
 
 ### Research Scope Definition
+
 **Target Providers**: DigitalOcean, AWS EC2, Vultr (primary focus)
-**Analysis Parameters**: 
+**Analysis Parameters**:
+
 - Email-capable server specifications
 - Cost per month for different performance tiers
 - Bandwidth and storage requirements for email workloads
@@ -72,44 +79,54 @@ last_modified_date: "2025-11-10"
 ### Data Collection Process
 
 #### DigitalOcean Analysis
+
 **Data Sources**:
-- Official pricing page: https://www.digitalocean.com/pricing/droplets
+
+- Official pricing page: <https://www.digitalocean.com/pricing/droplets>
 - API documentation for automated pricing extraction
 - Community forums for real-world usage feedback
 - Benchmark studies from third-party VPS comparison sites
 
 **Methodology**:
+
 1. **Plan Mapping**: Map CPU/RAM/storage combinations to email volume estimates
 2. **Cost Analysis**: Calculate cost per email for different volume tiers
 3. **Feature Evaluation**: Assess email-specific features and limitations
 4. **Performance Validation**: Cross-reference with VPS benchmark studies
 
 **Validation Sources**:
+
 - VPSBenchmarks.com comparison data
 - Spendflo pricing analysis
 - Community feedback analysis
 
 #### AWS EC2 Analysis
+
 **Data Sources**:
+
 - AWS pricing calculator and on-demand pricing
 - EC2 instance type specifications
 - CloudWatch monitoring costs
 - Additional AWS service costs (EBS, bandwidth)
 
 **Methodology**:
+
 1. **Instance Mapping**: Match EC2 instances to email server requirements
 2. **Cost Modeling**: Include all AWS service costs for complete infrastructure
 3. **Regional Analysis**: Cost variations across AWS regions
 4. **Reserved Instance Analysis**: Long-term cost optimization potential
 
 #### Vultr Analysis
+
 **Data Sources**:
+
 - Vultr pricing and plan comparison
 - Performance specifications
 - Data center location analysis
 - Community reviews and performance tests
 
 **Methodology**:
+
 1. **Plan Evaluation**: High Performance vs Regular Performance tiers
 2. **Regional Cost Analysis**: Geographic pricing variations
 3. **Feature Assessment**: Email-specific optimizations and tools
@@ -118,8 +135,10 @@ last_modified_date: "2025-11-10"
 ### Analytical Framework
 
 #### Volume-to-Specification Mapping
+
 **Methodology for Converting Email Volume to Server Requirements**:
-```
+
+```markdown
 Email Volume → Resource Requirements
 Base Calculation:
 - 1,000 emails/day = 30,000 emails/month
@@ -132,7 +151,7 @@ Scaling Factors:
 - RAM: 1GB per 25,000-50,000 monthly emails
 - Storage: 1GB per 100,000 monthly emails (for 90-day log retention)
 - Bandwidth: 2TB per 1M monthly emails (conservative estimate)
-```
+```markdown
 
 #### Cost-Performance Analysis
 **Framework for Evaluating Value**:
@@ -203,7 +222,7 @@ Scaling Factors:
 
 #### Total Cost of Ownership Model
 **Components**:
-```
+```markdown
 TCO = Base Monthly Cost + Variable Usage Costs + Additional Services + Labor Costs
 
 Where:
@@ -211,17 +230,17 @@ Where:
 - Variable Usage Costs: Overage charges, additional features
 - Additional Services: Dedicated IPs, premium support, compliance tools
 - Labor Costs: Operational overhead at $100/hour industry standard
-```
+```markdown
 
 #### CPM (Cost Per Thousand) Calculation
 **Methodology**:
-```
+```markdown
 CPM = (Total Monthly Cost ÷ Monthly Email Volume) × 1,000
 
 Example:
 - SendGrid Essentials 100K: $350/month for 100,000 emails
 - CPM = ($350 ÷ 100,000) × 1,000 = $3.50
-```
+```markdown
 
 #### Value Analysis Framework
 **Evaluation Criteria**:
@@ -241,7 +260,7 @@ Example:
 4. **Geographic Considerations**: Regional deliverability variations
 
 **Modeling Framework**:
-```
+```markdown
 Deliverability Rate = Base Provider Rate × IP Management Factor × Volume Factor × List Quality Factor
 
 Where:
@@ -249,7 +268,7 @@ Where:
 - IP Management Factor: 1.0 (shared) to 1.15 (dedicated)
 - Volume Factor: 1.0 (low volume) to 0.85 (high volume)
 - List Quality Factor: 0.7 (poor) to 1.1 (excellent)
-```
+```markdown
 
 ---
 
@@ -304,13 +323,13 @@ Where:
 
 #### FTE Calculation Model
 **Methodology**:
-```
+```markdown
 FTE = (Total Weekly Hours ÷ 40 hours) × (Required Quality Level ÷ 1.0)
 
 Where:
 - Total Weekly Hours = Sum of function-specific hours
 - Required Quality Level = 1.0 (standard) to 1.5 (high-touch)
-```
+```markdown
 
 #### Team Composition Optimization
 **Framework**:
@@ -372,14 +391,14 @@ Where:
 
 #### Risk Assessment Model
 **Framework**:
-```
+```markdown
 Compliance Risk Score = (Penalty Exposure × Probability of Violation) - Prevention Investment
 
 Where:
 - Penalty Exposure = Maximum penalty for violation
 - Probability of Violation = Based on operations complexity and compliance maturity
 - Prevention Investment = Tools, training, and process costs
-```
+```markdown
 
 #### Cost-Benefit Analysis
 **Components**:
@@ -522,20 +541,20 @@ Where:
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Business Model & Strategy
-- [Business Model Overview](...md) - Canonical business and revenue model alignment
-- [Value Proposition Overview](../../value-proposition.md) - Value proposition for cost optimization
-- [Market Analysis Overview](../../market-analysis.md) - Market positioning for financial analysis
-- [Competitive Analysis Overview](../../competitive-analysis.md) - Competitive landscape and cost positioning
+- [Business Model Overview](..) - Canonical business and revenue model alignment
+- [Value Proposition Overview](../../value-proposition) - Value proposition for cost optimization
+- [Market Analysis Overview](../../market-analysis) - Market positioning for financial analysis
+- [Competitive Analysis Overview](../../competitive-analysis) - Competitive landscape and cost positioning
 
 ### Operations & Analytics
-- [Operations Management Overview](../../operations-analytics/operations-management.md) - Operational cost management and analytics
-- [Payment Analytics & Financial Operations](../../operations-analytics/operations-management.md) - Financial operations and billing management
-- [Infrastructure Operations Management](../../operations-analytics/operations-management.md) - Database and infrastructure operational procedures
+- [Operations Management Overview](../../operations-analytics/operations-management) - Operational cost management and analytics
+- [Payment Analytics & Financial Operations](../../operations-analytics/operations-management) - Financial operations and billing management
+- [Infrastructure Operations Management](../../operations-analytics/operations-management) - Database and infrastructure operational procedures
 
 ### Technical Architecture
-- [Architecture Overview](../../technical/architecture.md) - System architecture for financial planning
-- [Implementation Roadmap](../../technical/architecture/detailed-technical.md) - Infrastructure implementation costs
-- [Integration Guide](../../technical/architecture/detailed-technical.md) - Cost implications of technical integrations
+- [Architecture Overview](../../technical/architecture) - System architecture for financial planning
+- [Implementation Roadmap](../../technical/architecture/detailed-technical) - Infrastructure implementation costs
+- [Integration Guide](../../technical/architecture/detailed-technical) - Cost implications of technical integrations
 
 ## References
 ---

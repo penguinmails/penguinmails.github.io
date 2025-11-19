@@ -13,24 +13,28 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ### **Competitor Categories**
 
 #### **Direct Competitors**
+
 - Similar email deliverability and marketing automation platforms
 - Target overlapping customer segments and use cases
 - Offer comparable feature sets and functionality
 - Compete for same customers and market opportunities
 
 #### **Indirect Competitors**
+
 - Alternative solutions for email marketing and customer engagement
 - Broader marketing automation and CRM platforms
 - New entrants and emerging technologies
 - Adjacent market players with overlapping capabilities
 
 #### **Potential Competitors**
+
 - Companies that could enter the market with similar offerings
 - Technology companies with related capabilities
 - Large platforms that could add email deliverability features
 - Venture-backed startups in adjacent markets
 
 ### **Common Analysis Needs**
+
 - Product feature comparison and differentiation analysis
 - Pricing strategy and value proposition assessment
 - Customer segment targeting and market positioning
@@ -45,6 +49,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ### **Journey 1: Market Landscape Analysis**
 
 #### **Market Structure Assessment**
+
 1. **Competitive Positioning**
    - Identify key market players and their positioning
    - Analyze market segmentation and customer targeting
@@ -58,6 +63,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Review regulatory and compliance factors
 
 #### **Customer Segment Analysis**
+
 1. **Target Customer Identification**
    - Analyze customer segment targeting and messaging
    - Assess customer acquisition strategies and channels
@@ -75,6 +81,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ### **Journey 2: Product & Technology Analysis**
 
 #### **Product Feature Comparison**
+
 1. **Feature Set Analysis**
    - Compare core features and functionality
    - Assess user experience and interface design
@@ -88,6 +95,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Review patent portfolio and intellectual property
 
 #### **Competitive Advantage Analysis**
+
 1. **Differentiation Factors**
    - Identify unique features and capabilities
    - Assess technology moats and barriers to entry
@@ -105,6 +113,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ### **Journey 3: Strategic Positioning Assessment**
 
 #### **Business Model Analysis**
+
 1. **Revenue Model Evaluation**
    - Analyze pricing strategies and revenue streams
    - Assess customer lifetime value and unit economics
@@ -118,6 +127,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Evaluate vendor relationships and supply chain
 
 #### **Market Strategy Analysis**
+
 1. **Go-to-Market Assessment**
    - Analyze sales and marketing strategies
    - Assess customer acquisition and retention approaches
@@ -135,6 +145,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ### **Journey 4: Strategic Planning & Decision Making**
 
 #### **Competitive Strategy Development**
+
 1. **Strategic Options Analysis**
    - Identify potential strategic responses
    - Assess competitive threats and opportunities
@@ -148,6 +159,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Evaluate strategic partnership opportunities
 
 #### **Market Entry & Defense Strategies**
+
 1. **Market Entry Strategies**
    - Assess opportunities for market entry
    - Analyze competitive barriers and challenges
@@ -165,6 +177,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ## Competitive Intelligence Context
 
 ### **Key Pain Points**
+
 - Limited access to detailed competitive information
 - Difficulty in assessing true competitive advantages
 - Challenge in predicting competitive responses
@@ -172,6 +185,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 - Balancing competitive intelligence with ethical boundaries
 
 ### **Success Metrics**
+
 - **Market Understanding**: Comprehensive understanding of competitive landscape
 - **Strategic Clarity**: Clear strategic direction based on competitive analysis
 - **Competitive Advantage**: Sustained competitive advantages and differentiation
@@ -183,6 +197,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ## Ethical Competitive Intelligence
 
 ### **Information Gathering Boundaries**
+
 1. **Public Information Sources**
    - Company websites and marketing materials
    - Public financial disclosures and earnings calls
@@ -196,6 +211,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - User reviews and social media feedback
 
 ### **Research Ethics & Compliance**
+
 1. **Legal & Ethical Standards**
    - Respect intellectual property and confidentiality
    - Avoid industrial espionage and unethical practices
@@ -213,6 +229,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ## Common Competitive Analysis Workflows
 
 ### **Quarterly Competitive Assessment**
+
 1. **Market Intelligence Gathering**
    - Review competitive announcements and product updates
    - Analyze financial performance and market trends
@@ -226,6 +243,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Update strategic plans and responses
 
 ### **Annual Strategic Review**
+
 1. **Comprehensive Market Analysis**
    - Conduct thorough competitive landscape review
    - Analyze market trends and future outlook
@@ -239,6 +257,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Define competitive objectives and metrics
 
 ### **Continuous Monitoring**
+
 1. **Daily Intelligence**
    - Monitor competitive communications and announcements
    - Track social media and public sentiment
@@ -256,6 +275,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
 ## Strategic Implications & Recommendations
 
 ### **Competitive Response Framework**
+
 1. **Threat Assessment**
    - Assess severity and immediacy of competitive threats
    - Analyze potential impact on market position
@@ -269,6 +289,7 @@ This document outlines the key user journeys for competitors who analyze Penguin
    - Plan implementation and execution
 
 ### **Strategic Positioning**
+
 1. **Market Differentiation**
    - Maintain and strengthen competitive advantages
    - Develop new differentiation capabilities
@@ -283,11 +304,12 @@ This document outlines the key user journeys for competitors who analyze Penguin
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`investor-journeys.md`](investor-journeys.md)
-- [`press-media-journeys.md`](press-media-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`investor-journeys.md`](investor-journeys)
+- [`press-media-journeys.md`](press-media-journeys)
 
 ---
 

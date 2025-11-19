@@ -1,5 +1,16 @@
 {
   "MD025": {
     "front_matter_title": ""
-  }
+  },
+  "MD041": {
+    "front_matter_title": "^\\s*title\\s*[:=]"
+  },
+  "MD013": false,
+  "MD036": {
+    "punctuation": ".,;:!?"
+  },
+  "MD060": false,
+  "MD003": false,
+  "MD024": false,
+  "MD033": false
 }

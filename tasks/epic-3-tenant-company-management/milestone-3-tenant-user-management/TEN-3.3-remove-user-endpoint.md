@@ -11,7 +11,7 @@ Create a protected DELETE API route at `/api/tenants/users/[userId]/route.ts`. T
 
 ## Context
 
-Removing users from tenants is essential for team management. According to the [Team Workflow](../../docs/quick-access/team-workflow.md), team membership management is a core feature. This endpoint enables users to remove team members while maintaining security by preventing self-removal.
+Removing users from tenants is essential for team management. According to the [Team Workflow](../../docs/quick-access/team-workflow), team membership management is a core feature. This endpoint enables users to remove team members while maintaining security by preventing self-removal.
 
 ## Acceptance Criteria
 
@@ -100,6 +100,7 @@ export async function DELETE(
 No response body (204 No Content)
 
 **Error Response (403) - Self Removal:**
+
 ```json
 {
   "error": "You cannot remove yourself from the tenant"
@@ -107,6 +108,7 @@ No response body (204 No Content)
 ```
 
 **Error Response (404) - User Not Found:**
+
 ```json
 {
   "error": "User not found or not a member of this tenant"
@@ -127,8 +129,8 @@ No response body (204 No Content)
 
 ## Related Documentation
 
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Team management
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Team collaboration
+- [Team Workflow](../../docs/quick-access/team-workflow) - Team management
+- [Features & Capabilities](../../docs/features-capabilities/index) - Team collaboration
 
 ## Dependencies
 
@@ -147,5 +149,3 @@ No response body (204 No Content)
 - [ ] Test error handling for NileDB failures
 - [ ] Verify tenantId from session is used (not from request)
 - [ ] Verify response is 204 No Content (no body)
-
-

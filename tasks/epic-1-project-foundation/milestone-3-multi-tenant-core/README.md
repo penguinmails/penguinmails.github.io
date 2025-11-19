@@ -4,11 +4,11 @@
 
 ## Tickets
 
-- [CORE-3.1](./CORE-3.1-install-configure-niledb.md) - Install and Configure NileDB Server SDK
-- [CORE-3.2](./CORE-3.2-implement-middleware.md) - Implement Next.js Middleware for Route Protection
-- [CORE-3.3](./CORE-3.3-create-signup-endpoint.md) - Create Public API Endpoint for User Signup
-- [CORE-3.4](./CORE-3.4-create-login-endpoint.md) - Create Public API Endpoint for User Login
-- [CORE-3.5](./CORE-3.5-create-protected-endpoint.md) - Create a Protected Endpoint to Verify User Context
+- [CORE-3.1](./CORE-3.1-install-configure-niledb) - Install and Configure NileDB Server SDK
+- [CORE-3.2](./CORE-3.2-implement-middleware) - Implement Next.js Middleware for Route Protection
+- [CORE-3.3](./CORE-3.3-create-signup-endpoint) - Create Public API Endpoint for User Signup
+- [CORE-3.4](./CORE-3.4-create-login-endpoint) - Create Public API Endpoint for User Login
+- [CORE-3.5](./CORE-3.5-create-protected-endpoint) - Create a Protected Endpoint to Verify User Context
 
 ## Dependencies
 
@@ -27,8 +27,7 @@
 ## Context
 
 This milestone implements the authentication and authorization foundation that supports:
-- **Multi-tenant isolation** as outlined in the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md)
-- **4-tier staff hierarchy** (super_admin, admin, support, qa) from [Team Workflow](../../docs/quick-access/team-workflow.md)
-- **Security & compliance** requirements from [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md)
 
-
+- **Multi-tenant isolation** as outlined in the [High-Level Architecture](../../docs/quick-access/high-level-architecture)
+- **4-tier staff hierarchy** (super_admin, admin, support, qa) from [Team Workflow](../../docs/quick-access/team-workflow)
+- **Security & compliance** requirements from [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards)

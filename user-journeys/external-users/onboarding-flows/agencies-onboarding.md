@@ -13,6 +13,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ### **Phase 1: Account Setup & Configuration**
 
 #### **Initial Account Creation (Day 1)**
+
 1. **Account Registration**
    - Sign up for PenguinMails agency account
    - Complete business profile and verification
@@ -26,6 +27,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - Establish agency policies and default configurations
 
 #### **Multi-Client Architecture Setup (Day 1-2)**
+
 1. **Client Management Structure**
    - Set up client account hierarchy and permissions
    - Configure client branding templates and assets
@@ -43,6 +45,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ### **Phase 2: Technical Setup & Integration**
 
 #### **Domain & Authentication Setup (Day 2-3)**
+
 1. **Sending Domain Configuration**
    - Configure primary agency sending domains
    - Set up SPF, DKIM, and DMARC authentication
@@ -56,6 +59,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - Monitor deliverability across all client domains
 
 #### **Integration Configuration (Day 3-4)**
+
 1. **CRM Integration**
    - Connect agency CRM systems to PenguinMails
    - Configure lead tracking and attribution
@@ -73,6 +77,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ### **Phase 3: First Client Setup**
 
 #### **Client Onboarding Process (Day 4-5)**
+
 1. **Client Discovery**
    - Conduct initial client assessment and discovery
    - Understand client's business goals and requirements
@@ -86,6 +91,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - Set up client-specific analytics and reporting
 
 #### **Campaign Planning & Setup (Day 5-7)**
+
 1. **Strategy Development**
    - Develop comprehensive email marketing strategy for client
    - Plan campaign sequences and automation workflows
@@ -103,6 +109,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ### **Phase 4: Platform Training & Education**
 
 #### **Agency Team Training (Week 2)**
+
 1. **Platform Mastery**
    - Comprehensive training on all PenguinMails features
    - Best practices for multi-client management
@@ -116,6 +123,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - ROI measurement and business impact analysis
 
 #### **Best Practices Development**
+
 1. **Agency Standards**
    - Develop agency-specific best practices
    - Create standard operating procedures
@@ -133,6 +141,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ### **Phase 5: First Campaign Launch & Optimization**
 
 #### **Pilot Campaign Execution (Week 2-3)**
+
 1. **Campaign Launch**
    - Launch first client email campaigns
    - Monitor deliverability and engagement metrics
@@ -146,6 +155,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - Plan next phase campaigns and improvements
 
 #### **Client Success & Reporting**
+
 1. **Client Communication**
    - Provide regular updates to clients on performance
    - Share insights and optimization recommendations
@@ -163,18 +173,21 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ## Agency Onboarding Success Metrics
 
 ### **Onboarding Completion**
+
 - Account setup completed within 7 days
 - First client successfully onboarded within 2 weeks
 - First campaign launched within 3 weeks
 - Team training completed within 1 month
 
 ### **Early Performance Indicators**
+
 - Email deliverability rates above 95%
 - Client engagement rates meeting industry standards
 - Agency team productivity and efficiency gains
 - Client satisfaction scores above 4.5/5
 
 ### **30-Day Success Targets**
+
 - Agency generating revenue from email marketing services
 - Multiple client campaigns successfully launched
 - Strong email deliverability across all client domains
@@ -185,18 +198,21 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ## Agency Onboarding Resources
 
 ### **Documentation & Training**
+
 - Comprehensive onboarding checklist and timeline
 - Video tutorials and training materials
 - Best practice guides for multi-client management
 - Templates for client onboarding and campaigns
 
 ### **Support & Assistance**
+
 - Dedicated onboarding specialist and support
 - Weekly check-ins during first month
 - Priority access to technical support
 - Agency-specific feature requests and feedback
 
 ### **Community & Networking**
+
 - Access to agency partner community
 - Monthly agency best practices webinars
 - Case studies and success story sharing
@@ -207,6 +223,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ## Common Agency Onboarding Challenges
 
 ### **Technical Challenges**
+
 1. **Domain Authentication**
    - DNS configuration complexity
    - Multiple domain management
@@ -220,6 +237,7 @@ This document outlines the comprehensive onboarding journey for marketing agency
    - Billing and subscription management
 
 ### **Business Challenges**
+
 1. **Client Education**
    - Helping clients understand email marketing
    - Setting realistic expectations
@@ -237,18 +255,21 @@ This document outlines the comprehensive onboarding journey for marketing agency
 ## Agency Onboarding Best Practices
 
 ### **Preparation Phase**
+
 - Complete thorough preparation before account creation
 - Gather all necessary client and agency information
 - Plan technical integration and setup timeline
 - Prepare team for training and onboarding process
 
 ### **Implementation Phase**
+
 - Follow structured onboarding timeline and checklist
 - Test all integrations and functionality thoroughly
 - Maintain regular communication with support team
 - Document processes and procedures for future reference
 
 ### **Success Phase**
+
 - Monitor early performance metrics closely
 - Provide excellent client communication and support
 - Continuously optimize and improve processes
@@ -256,11 +277,12 @@ This document outlines the comprehensive onboarding journey for marketing agency
 
 ---
 
-**Related Documents**
-- [`agency-owner-journeys.md`](../agency-owner-journeys.md)
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`freelancer-onboarding.md`](freelancer-onboarding.md)
-- [`business-owner-onboarding.md`](business-owner-onboarding.md)
+### Related Documents
+
+- [`agency-owner-journeys.md`](../agency-owner-journeys)
+- [`user-types-classification.md`](../user-types-classification)
+- [`freelancer-onboarding.md`](freelancer-onboarding)
+- [`business-owner-onboarding.md`](business-owner-onboarding)
 
 ---
 

@@ -70,6 +70,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Formats
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -83,6 +84,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "success": false,
@@ -110,8 +112,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - API architecture
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - API development
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - API architecture
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - API development
 
 ## Dependencies
 
@@ -128,5 +130,3 @@ export async function POST(request: NextRequest) {
 - [ ] Send a POST request with no body - verify appropriate error response
 - [ ] Test with various edge cases (empty strings, null values, etc.)
 - [ ] Verify error messages are clear and helpful
-
-

@@ -4,7 +4,7 @@ This directory contains all development tasks, tickets, and epics for the Pengui
 
 ## Structure
 
-```
+```txt
 tasks/
 ├── README.md (this file)
 └── epic-1-project-foundation/
@@ -25,6 +25,7 @@ tasks/
 Establish a complete, secure, and scalable foundation for the PenguinMails application. This epic involves initializing the project, configuring all core technologies (Next.js, Drizzle, NileDB, Redis), and establishing the essential patterns for authentication, database interaction, and data validation.
 
 **Milestones:**
+
 1. **Project Initialization & Code Quality** (5 tickets)
 2. **Database Connectivity & Data Integrity** (6 tickets)
 3. **The Secure, Multi-Tenant Core** (5 tickets)
@@ -40,6 +41,7 @@ Establish a complete, secure, and scalable foundation for the PenguinMails appli
 Build all backend services and API endpoints required for a user to manage their personal identity within the PenguinMails application. This includes handling the complete authentication lifecycle, managing profile information, and configuring personal preferences.
 
 **Milestones:**
+
 1. **Foundational User Profile API** (5 tickets)
 2. **Enhanced Authentication and Security** (4 tickets)
 
@@ -55,6 +57,7 @@ Build all backend services and API endpoints required for a user to manage their
 Build the complete set of backend services and API endpoints for creating, managing, and interacting with Tenants and Companies (Workspaces). This epic establishes the core multi-tenancy logic, allowing users to create their own isolated environments, invite team members, and manage their workspaces.
 
 **Milestones:**
+
 1. **Tenant and Company Creation** (4 tickets)
 2. **Viewing and Managing Workspaces** (4 tickets)
 3. **Tenant User Management** (3 tickets)
@@ -71,6 +74,7 @@ Build the complete set of backend services and API endpoints for creating, manag
 Integrate Stripe as our payment processor to manage the entire billing lifecycle. This includes defining subscription plans, allowing tenants to subscribe to a plan, handling payments, and reflecting the subscription status and features within our application.
 
 **Milestones:**
+
 1. **Plans and Subscriptions Schema Setup** (4 tickets)
 2. **Stripe Checkout Integration** (3 tickets)
 3. **Subscription State Synchronization with Webhooks** (4 tickets)
@@ -88,6 +92,7 @@ Example: `CORE-1.1` = Epic 1, Milestone 1, Ticket 1
 ## Ticket Status
 
 Each ticket includes:
+
 - **Ticket ID** - Unique identifier
 - **Priority** - Critical, High, Medium, Low
 - **Status** - Not Started, In Progress, In Review, Completed, Blocked
@@ -107,13 +112,14 @@ Each ticket includes:
 
 ## Related Documentation
 
-- [Roadmap & Development Priorities](../docs/quick-access/roadmap-development-priorities.md) - Overall project roadmap
-- [High-Level Architecture](../docs/quick-access/high-level-architecture.md) - System architecture
-- [Team Workflow](../docs/quick-access/team-workflow.md) - Development processes
+- [Roadmap & Development Priorities](../docs/quick-access/roadmap-development-priorities) - Overall project roadmap
+- [High-Level Architecture](../docs/quick-access/high-level-architecture) - System architecture
+- [Team Workflow](../docs/quick-access/team-workflow) - Development processes
 
 ## Contributing
 
 When working on tickets:
+
 1. Read the ticket thoroughly before starting
 2. Check dependencies are completed
 3. Follow the acceptance criteria

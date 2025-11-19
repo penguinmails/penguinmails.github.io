@@ -11,7 +11,8 @@ Create a `middleware.ts` file at the root of the project. Use the Nile SDK to ch
 
 ## Context
 
-Middleware is essential for implementing authentication and authorization at the application level. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails requires:
+Middleware is essential for implementing authentication and authorization at the application level. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails requires:
+
 - **Route Protection:** Secure API endpoints
 - **Session Management:** Valid user sessions
 - **Multi-tenant Context:** Tenant identification from sessions
@@ -86,6 +87,7 @@ export const config = {
 ### Public Routes
 
 The following routes should be publicly accessible:
+
 - `/api/auth/signup`
 - `/api/auth/login`
 - `/api/test/validation` (if needed for testing)
@@ -102,10 +104,10 @@ The following routes should be publicly accessible:
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Security architecture
-- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - API authentication patterns and middleware best practices
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Security and authentication guidelines
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Authentication and authorization
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Security architecture
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference) - API authentication patterns and middleware best practices
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards) - Security and authentication guidelines
+- [Team Workflow](../../docs/quick-access/team-workflow) - Authentication and authorization
 
 ## Dependencies
 
@@ -121,5 +123,3 @@ The following routes should be publicly accessible:
 - [ ] Test middleware with invalid session cookie - verify 401 response
 - [ ] Test middleware with expired session - verify 401 response
 - [ ] Verify middleware doesn't interfere with non-API routes
-
-

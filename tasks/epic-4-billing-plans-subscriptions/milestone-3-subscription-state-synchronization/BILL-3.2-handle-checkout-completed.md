@@ -11,7 +11,7 @@ Within the webhook, add logic to handle the `checkout.session.completed` event. 
 
 ## Context
 
-Subscription creation is triggered when a user completes checkout. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), webhook events keep the system synchronized with Stripe. This handler creates the subscription record in our database when payment is successful.
+Subscription creation is triggered when a user completes checkout. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), webhook events keep the system synchronized with Stripe. This handler creates the subscription record in our database when payment is successful.
 
 ## Acceptance Criteria
 
@@ -140,7 +140,7 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Webhook processing
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Webhook processing
 - [Stripe Webhooks Documentation](https://stripe.com/docs/webhooks) - Official Stripe docs
 
 ## Dependencies
@@ -159,4 +159,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify status matches Stripe subscription status
 - [ ] Test error handling for Stripe API failures
 - [ ] Use Stripe CLI to send test events
-

@@ -10,7 +10,7 @@ This document provides standardized templates and examples for creating user sto
 
 ## Standard Customer User Story Template
 
-```
+```markdown
 As a [CUSTOMER ROLE - Agency Owner/Consultant/Business Owner/Enterprise Team], 
 I want [BUSINESS FUNCTION/CAPABILITY], 
 so that I can [ACHIEVE BUSINESS OBJECTIVE/IMPROVE RESULTS].
@@ -59,7 +59,7 @@ DEFINITION OF DONE:
 - [ ] Integration with customer systems validated
 - [ ] Customer satisfaction and success metrics met
 - [ ] Documentation and training provided to customer
-```
+```markdown
 
 ---
 
@@ -67,7 +67,7 @@ DEFINITION OF DONE:
 
 ### **Example 1: Multi-Client Campaign Management**
 
-```
+```markdown
 As a marketing agency owner,
 I want to manage multiple client email campaigns with client-specific branding and reporting,
 so that I can deliver professional results to each client while efficiently scaling my business.
@@ -119,11 +119,11 @@ DEFINITION OF DONE:
 - [ ] Performance tested with large client loads
 - [ ] Client satisfaction testing completed
 - [ ] Agency staff training and documentation completed
-```
+```markdown
 
 ### **Example 2: Deliverability Optimization**
 
-```
+```markdown
 As a marketing agency owner,
 I want to optimize email deliverability across different client domains and industries,
 so that I can ensure high inbox placement and campaign success for all my clients.
@@ -175,7 +175,7 @@ DEFINITION OF DONE:
 - [ ] Monitoring and alerting system validated
 - [ ] Client testing completed with improved deliverability
 - [ ] Documentation and best practices guide created
-```
+```markdown
 
 ---
 
@@ -183,7 +183,7 @@ DEFINITION OF DONE:
 
 ### **Example 3: Customer Acquisition Campaign**
 
-```
+```markdown
 As a B2B business owner,
 I want to create automated lead generation campaigns that nurture prospects into customers,
 so that I can grow my business efficiently without requiring a large sales team.
@@ -235,11 +235,11 @@ DEFINITION OF DONE:
 - [ ] CRM integration validated with lead flow
 - [ ] Business owner training completed
 - [ ] ROI tracking and reporting system working
-```
+```markdown
 
 ### **Example 4: Customer Retention Program**
 
-```
+```markdown
 As an e-commerce business owner,
 I want to create automated customer retention campaigns that increase repeat purchases,
 so that I can maximize customer lifetime value and reduce customer acquisition costs.
@@ -291,7 +291,7 @@ DEFINITION OF DONE:
 - [ ] Customer segmentation and targeting validated
 - [ ] Business owner usability testing completed
 - [ ] ROI measurement and reporting implemented
-```
+```markdown
 
 ---
 
@@ -299,7 +299,7 @@ DEFINITION OF DONE:
 
 ### **Example 5: Client Reporting Dashboard**
 
-```
+```markdown
 As a freelance email marketing consultant,
 I want to create professional client reports that showcase campaign performance and ROI,
 so that I can demonstrate value to clients and secure repeat business.
@@ -351,7 +351,7 @@ DEFINITION OF DONE:
 - [ ] Client testing completed with positive feedback
 - [ ] Consultant training and documentation provided
 - [ ] Professional presentation standards met
-```
+```markdown
 
 ---
 
@@ -359,7 +359,7 @@ DEFINITION OF DONE:
 
 ### **Example 6: Enterprise Campaign Management**
 
-```
+```markdown
 As an enterprise marketing operations manager,
 I want to coordinate enterprise-wide email campaigns across multiple departments and brands,
 so that I can maintain brand consistency while enabling department-level campaign execution.
@@ -411,7 +411,7 @@ DEFINITION OF DONE:
 - [ ] Approval workflows tested with real enterprise approval processes
 - [ ] Cross-department coordination validated
 - [ ] Enterprise security and compliance requirements met
-```
+```markdown
 
 ---
 
@@ -441,10 +441,10 @@ DEFINITION OF DONE:
 ---
 
 **Related Documents**
-- [`../methodology.md`](../methodology.md)
-- [`../user-types-classification.md`](../user-types-classification.md)
-- [`internal-user-stories.md`](internal-user-stories.md)
-- [`stakeholder-stories.md`](stakeholder-stories.md)
+- [`../methodology.md`](../methodology)
+- [`../user-types-classification.md`](../user-types-classification)
+- [`internal-user-stories.md`](internal-user-stories)
+- [`stakeholder-stories.md`](stakeholder-stories)
 
 ---
 

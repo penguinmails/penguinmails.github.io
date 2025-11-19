@@ -1,23 +1,24 @@
 ---
-title: "Queue .md)"
-description: "Documentation for Queue .md) - Queue Mermaid Er"
+title: "Queue )"
+description: "Documentation for Queue ) - Queue Mermaid Er"
 last_modified_date: "2025-11-17"
 level: 2
 persona: "Documentation Users"
 ---
 
-# Queue .md)
+# Queue )
 
 This diagram models the dedicated Queue / Jobs tier, aligned with the 5-tier architecture:
 
 - OLTP: core entities.
 - Content DB: heavy content.
 - OLAP: aggregates only.
-- Queue .md).
+- Queue ).
 - Notifications DB: notifications + curated system events.
 - External logging: raw traces/telemetry.
 
 The Queue tier:
+
 - Coordinates work.
 - Stores minimal operational state.
 - Is NOT:

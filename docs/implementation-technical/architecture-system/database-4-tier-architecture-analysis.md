@@ -1,6 +1,7 @@
 # Database Architecture Overview - Enterprise 4-Tier Design
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This architecture design supports our enterprise email infrastructure strategy by providing a scalable 4-tier database solution that handles 10,000+ concurrent email operations with zero performance degradation.
 
 **Technical Authority**: Our email system integrates with PostgreSQL databases featuring advanced indexing, connection pooling, and horizontal scaling capabilities for enterprise-grade reliability.
@@ -18,6 +19,7 @@ This represents a **strategic architectural evolution** from 3-tier to **4-tier 
 ## When to Apply 4-Tier Architecture
 
 **Apply this architecture when:**
+
 - Email operations exceed 10,000 concurrent users
 - Query performance degrades below sub-50ms response times
 - Content storage requirements exceed 1TB with heavy attachments
@@ -27,23 +29,27 @@ This represents a **strategic architectural evolution** from 3-tier to **4-tier 
 ## 🏗️ **4-Tier Architecture Design**
 
 ### Tier 1: OLTP (Primary Database)
-**Purpose**: Fast transactional operations and lightweight metadata  
-**Tables**: `inbox_message_refs`, `campaigns`, `users`, `tenants`  
+
+**Purpose**: Fast transactional operations and lightweight metadata
+**Tables**: `inbox_message_refs`, `campaigns`, `users`, `tenants`
 **Performance Target**: Sub-10ms query response times for email operations
 
-### Tier 2: Content Database  
-**Purpose**: Heavy content storage, attachments, and full email bodies  
-**Tables**: `content_objects`, `attachments`, `transactional_emails`, `notifications`  
+### Tier 2: Content Database
+
+**Purpose**: Heavy content storage, attachments, and full email bodies
+**Tables**: `content_objects`, `attachments`, `transactional_emails`, `notifications`
 **Storage Capacity**: Unlimited with intelligent archiving and retention policies
 
 ### Tier 3: OLAP Analytics
-**Purpose**: Aggregated metrics and business intelligence  
-**Tables**: `campaign_analytics`, `mailbox_analytics`, `sequence_step_analytics`  
+
+**Purpose**: Aggregated metrics and business intelligence
+**Tables**: `campaign_analytics`, `mailbox_analytics`, `sequence_step_analytics`
 **Processing**: Real-time aggregation with 5-minute refresh intervals
 
 ### Tier 4: Queue System
-**Purpose**: Job processing, reliability, and async operations  
-**Tables**: `jobs`, `job_logs`  
+
+**Purpose**: Job processing, reliability, and async operations
+**Tables**: `jobs`, `job_logs`
 **Throughput**: 1M+ jobs per hour with automatic scaling
 
 ---
@@ -52,21 +58,22 @@ This represents a **strategic architectural evolution** from 3-tier to **4-tier 
 
 ### ✅ **ARCHITECTURAL EXCELLENCE - Performance Optimization**
 
-**Previous Understanding**: Unified `emails` table causing performance bottlenecks  
+**Previous Understanding**: Unified `emails` table causing performance bottlenecks
 **Correct Understanding**: Strategic separation of metadata from content for optimal performance
 
-#### Legacy System (3-tier):
-```
+#### Legacy System (3-tier)
+
+```markdown
 OLTP: emails (heavy content + metadata) → Queue → OLAP: analytics
-```
+```markdown
 **Issues**: Slow queries, index bloat, connection pool exhaustion
 
 #### Optimized System (4-tier):
-```
-OLTP: inbox_message_refs (metadata only) 
-    ↘ Content DB: content_objects (heavy content) 
+```markdown
+OLTP: inbox_message_refs (metadata only)
+    ↘ Content DB: content_objects (heavy content)
     ↘ Queue → OLAP: analytics
-```
+```markdown
 **Benefits**: 60-80% faster queries, efficient indexing, scalable architecture
 
 ### 📊 **Content Storage Architecture**
@@ -76,7 +83,7 @@ OLTP: inbox_message_refs (metadata only)
 inbox_message_refs {
     uuid id PK
     uuid tenant_id FK
-    uuid email_account_id FK  
+    uuid email_account_id FK
     uuid campaign_id FK (nullable)
     uuid lead_id FK (nullable)
     uuid parent_message_id FK
@@ -91,7 +98,7 @@ inbox_message_refs {
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 }
-```
+```markdown
 
 **Performance Benefits**:
 - ✅ 90% smaller table size
@@ -105,7 +112,7 @@ content_objects {
     varchar(500) storage_key PK "Links to inbox_message_refs.content_storage_key"
     uuid tenant_id FK
     text content_text "Plain text version"
-    text content_html "HTML version"  
+    text content_html "HTML version"
     jsonb headers "Full email headers"
     integer raw_size_bytes
     compression_type varchar(20) "gzip, none"
@@ -124,11 +131,11 @@ attachments {
     varchar(50) storage_disposition
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 }
-```
+```markdown
 
 **Storage Optimization**:
 - ✅ Intelligent compression algorithms
-- ✅ Tiered storage (hot/warm.md)
+- ✅ Tiered storage (hot/warm)
 - ✅ Automatic archiving and retention
 - ✅ Efficient binary attachment handling
 
@@ -185,7 +192,7 @@ attachments {
 
 ### 🎯 **Performance Improvements**
 - **OLTP Queries**: 60-80% faster due to lightweight design
-- **Index Efficiency**: 90% smaller indexes, better cache utilization  
+- **Index Efficiency**: 90% smaller indexes, better cache utilization
 - **Write Performance**: 70% reduced write overhead for email operations
 - **Concurrent Users**: Support 10x more concurrent users
 
@@ -265,7 +272,7 @@ attachments {
 
 ## 📋 **Conclusion**
 
-**Architecture Assessment**: **ENTERPRISE-GRADE EXCELLENCE**  
+**Architecture Assessment**: **ENTERPRISE-GRADE EXCELLENCE**
 **Performance Impact**: **SIGNIFICANT IMPROVEMENT** across all operational metrics
 
 The 4-tier architecture design represents **architectural excellence** that will:

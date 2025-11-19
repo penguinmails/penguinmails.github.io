@@ -11,7 +11,8 @@ Create a protected GET API route at `GET /api/users/me/route.ts`. This route wil
 
 ## Context
 
-This endpoint serves as a test to verify that authentication and multi-tenant context extraction are working correctly. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), protected endpoints must:
+This endpoint serves as a test to verify that authentication and multi-tenant context extraction are working correctly. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), protected endpoints must:
+
 - **Verify authentication** - Ensure user is logged in
 - **Extract user context** - Get user ID from session
 - **Extract tenant context** - Get tenant ID from session (for multi-tenant isolation)
@@ -93,6 +94,7 @@ export async function GET(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "userId": "uuid-here",
@@ -103,6 +105,7 @@ export async function GET(request: NextRequest) {
 ```
 
 **Error Response (401):**
+
 ```json
 {
   "error": "Unauthorized"
@@ -121,8 +124,8 @@ export async function GET(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant context
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - User context and roles
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Multi-tenant context
+- [Team Workflow](../../docs/quick-access/team-workflow) - User context and roles
 
 ## Dependencies
 
@@ -142,5 +145,3 @@ export async function GET(request: NextRequest) {
 - [ ] Verify sensitive data (passwords) is not returned
 - [ ] Test error handling for session retrieval failures
 - [ ] Test error handling for database query failures
-
-

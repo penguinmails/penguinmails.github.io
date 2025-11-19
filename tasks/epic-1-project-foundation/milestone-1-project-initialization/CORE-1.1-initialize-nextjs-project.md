@@ -11,7 +11,8 @@ Create a new Next.js 15 project using `create-next-app`. Configure it with TypeS
 
 ## Context
 
-This ticket establishes the core framework for PenguinMails. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), the frontend is built with:
+This ticket establishes the core framework for PenguinMails. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), the frontend is built with:
+
 - **React.js** with TypeScript
 - **Tailwind CSS** for styling
 - **Next.js App Router** for routing and server-side rendering
@@ -36,7 +37,7 @@ This ticket establishes the core framework for PenguinMails. According to the [H
 
 ### Project Structure
 
-```
+```txt
 penguinmails/
 ├── app/
 │   ├── layout.tsx
@@ -58,10 +59,10 @@ penguinmails/
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - System architecture
-- [Architecture System Overview](../../docs/implementation-technical/architecture-system/architecture-overview.md) - Technical architecture details
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Development guidelines
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Setup guides
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - System architecture
+- [Architecture System Overview](../../docs/implementation-technical/architecture-system/architecture-overview) - Technical architecture details
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards) - Development guidelines
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Setup guides
 
 ## Dependencies
 
@@ -73,5 +74,3 @@ None - This is the first ticket.
 - [ ] Verify TypeScript compilation works without errors
 - [ ] Confirm Tailwind CSS styles are applied
 - [ ] Test that the development server restarts on file changes
-
-

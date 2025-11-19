@@ -15,19 +15,21 @@ Proven financial templates and frameworks for ROI calculation, investment analys
 ### Monthly ROI Analysis Template
 
 **ROI Calculation Components (Weighted)**:
+
 - Investment Costs (40%): Development, implementation, and ongoing operational costs
 - Revenue Impact (35%): Direct revenue increases and cost savings attributed to investment
 - Time Savings (15%): Employee productivity gains and process efficiency improvements
 - Risk Mitigation (10%): Reduced operational risks and compliance improvements
 
 **ROI Calculation Formula**:
-```
-ROI = ((Total Benefits - Total Costs) .md) × 100
+
+```markdown
+ROI = ((Total Benefits - Total Costs) ) × 100
 
 Where:
 - Total Benefits = Revenue Impact + Time Savings Value + Risk Mitigation Value
 - Total Costs = Initial Investment + Ongoing Operational Costs
-```
+```markdown
 
 **ROI Analysis Timeframes**:
 - **Quarterly**: Quick ROI assessments for tactical decisions
@@ -122,7 +124,7 @@ Where:
 ### Budget Planning Template
 
 **Annual Budget Structure**:
-```
+```markdown
 Total Budget = Revenue Projections - Target Profit Margin
 
 Allocation by Category:
@@ -132,7 +134,7 @@ Allocation by Category:
 - Marketing (10%): Advertising, content, events, partnerships
 - Innovation (5%): R&D, pilot projects, emerging technologies
 - Contingency (5%): Emergency fund, unexpected opportunities
-```
+```markdown
 
 **Budget Tracking Process**:
 1. **Monthly Monitoring**: Track actual vs. planned spending by category

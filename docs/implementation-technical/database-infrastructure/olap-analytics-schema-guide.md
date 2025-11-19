@@ -13,20 +13,23 @@ persona: "Documentation Users"
 **Strategic Alignment**: The OLAP analytics schema exists exclusively to power durable, business-critical analytics for PenguinMails. It is not used for live product state, notifications, or infrastructure logging.
 
 **Scope**:
+
 - Aggregated metrics for campaigns, mailboxes, leads, warmups.
 - Billing and usage analytics.
 - Compliance-relevant audit summaries.
 - Long-term trend and BI queries.
 
 **Out of Scope**:
+
 - User-facing notifications.
 - Live system events/incidents.
 - Raw logs, infra metrics, rate limits, or queue/job internals.
 - Heavy content (email bodies, attachments).
 
 For those concerns:
-- Notifications & system events: see [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- External logging / observability: see [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
+
+- Notifications & system events: see [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+- External logging / observability: see [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
 
 ---
 
@@ -64,7 +67,7 @@ CREATE TABLE billing_analytics (
 
 CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
     ON billing_analytics(tenant_id, period_start, period_end);
-```
+```markdown
 
 Purpose:
 - Aggregated usage per tenant per period.
@@ -90,7 +93,7 @@ CREATE TABLE campaign_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```
+```markdown
 
 Purpose:
 - Aggregated per-campaign performance for reporting and optimization.
@@ -117,7 +120,7 @@ CREATE TABLE mailbox_analytics (
     campaign_status TEXT,
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```
+```markdown
 
 Purpose:
 - Mailbox-level deliverability, health, and warmup analytics.
@@ -141,7 +144,7 @@ CREATE TABLE lead_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```
+```markdown
 
 Purpose:
 - Per-lead engagement summaries to support scoring and segmentation.
@@ -166,7 +169,7 @@ CREATE TABLE warmup_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```
+```markdown
 
 Purpose:
 - Warmup performance and reputation metrics.
@@ -190,7 +193,7 @@ CREATE TABLE sequence_step_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-```
+```markdown
 
 Purpose:
 - Step-level performance to support optimization and A/B testing.
@@ -219,7 +222,7 @@ CREATE TABLE admin_audit_log (
     data_classification VARCHAR(20),
     retention_category VARCHAR(20)
 );
-```
+```markdown
 
 Purpose:
 - OLAP-resident, compliance-scope audit log for high-risk actions:
@@ -244,7 +247,7 @@ The following are intentionally NOT present in OLAP (and must not be reintroduce
 
 - admin_system_events:
   - Live/operational system events are owned by the Notifications DB:
-    - See [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+    - See [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
   - OLAP may later define aggregates, but no admin_system_events base table exists here.
 
 - notifications:
@@ -267,7 +270,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 ## 4. Relationships (High-Level)
 
 See ER diagram:
-- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure)
 
 Key relationships:
 
@@ -300,11 +303,11 @@ Apply RLS and access controls to all OLAP tables:
 - Restrict admin_audit_log to authorized roles and necessary scopes.
 
 Detailed security and logging strategy:
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
 
 ---
 
-## 6. Roadmap (Admin.md)
+## 6. Roadmap (Admin)
 
 We explicitly defer any OLAP-specific modeling of admin/system events.
 

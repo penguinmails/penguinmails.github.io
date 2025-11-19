@@ -43,7 +43,7 @@ class SendGridProvider {
   }
 
   async sendEmail(emailData: SendGridEmailData): Promise<SendGridAPIResponse> {
-    const response = await fetch(`${this.baseUrl}/mail/send`, {.md)
+    const response = await fetch(`${this.baseUrl}/mail/send`, {)
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.apiKey}`,
@@ -59,7 +59,7 @@ class SendGridProvider {
   }
 
   async setupDomainAuthentication(domain: string): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/auth/domains`, {.md)
+    const response = await fetch(`${this.baseUrl}/auth/domains`, {)
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.apiKey}`,
@@ -77,7 +77,7 @@ class SendGridProvider {
   }
 
   async getPerformanceMetrics(timeRange: string): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/stats?start_date=${timeRange}`, {.md)
+    const response = await fetch(`${this.baseUrl}/stats?start_date=${timeRange}`, {)
       headers: {
         'Authorization': `Bearer ${this.apiKey}`
       }
@@ -86,7 +86,7 @@ class SendGridProvider {
     return response.json();
   }
 }
-```
+```markdown
 
 ### Mailgun API Integration
 
@@ -127,7 +127,7 @@ class MailgunProvider {
     if (emailData.text) formData.append('text', emailData.text);
     if (emailData.html) formData.append('html', emailData.html);
 
-    const response = await fetch(`${this.baseUrl}/messages`, {.md)
+    const response = await fetch(`${this.baseUrl}/messages`, {)
       method: 'POST',
       headers: {
         'Authorization': `Basic ${btoa(`api:${this.apiKey}`)}`
@@ -139,7 +139,7 @@ class MailgunProvider {
   }
 
   async getDeliverabilityData(): Promise<any> {
-    const response = await fetch(`${this.baseUrl}/deliverability`, {.md)
+    const response = await fetch(`${this.baseUrl}/deliverability`, {)
       headers: {
         'Authorization': `Basic ${btoa(`api:${this.apiKey}`)}`
       }
@@ -153,7 +153,7 @@ class MailgunProvider {
     return { success: true };
   }
 }
-```
+```markdown
 
 ### Amazon SES Integration
 
@@ -206,7 +206,7 @@ class SESProvider {
     };
   }
 }
-```
+```markdown
 
 ---
 
@@ -264,7 +264,7 @@ class MultiProviderManager {
 
   async executeWithFailover(campaign: EmailCampaign, emailData: any): Promise<any> {
     const primaryProvider = this.routeCampaign(campaign);
-    
+
     try {
       return await primaryProvider.sendEmail(emailData);
     } catch (error) {
@@ -283,7 +283,7 @@ class MultiProviderManager {
     return this.providers.sendgrid;
   }
 }
-```
+```markdown
 
 ### Performance Analytics Dashboard
 
@@ -306,7 +306,7 @@ class ESPAnalyticsDashboard {
 
   async collectMetrics(timeRange: string = '24h'): Promise<{ [provider: string]: PerformanceMetrics }> {
     const metrics: { [provider: string]: PerformanceMetrics } = {};
-    
+
     for (const [providerName, provider] of Object.entries(this.providers)) {
       try {
         const rawMetrics = await provider.getPerformanceMetrics(timeRange);
@@ -316,7 +316,7 @@ class ESPAnalyticsDashboard {
         metrics[providerName] = this.getDefaultMetrics();
       }
     }
-    
+
     return metrics;
   }
 
@@ -385,7 +385,7 @@ class ESPAnalyticsDashboard {
     return insights;
   }
 }
-```
+```markdown
 
 ---
 

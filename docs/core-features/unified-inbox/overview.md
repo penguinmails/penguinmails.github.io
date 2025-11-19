@@ -14,20 +14,24 @@ last_modified_date: "2025-11-10"
 
 **Our Solution**: A centralized command center that consolidates all cold email responses with AI-powered organization, real-time notifications, and automated follow-up management, ensuring **zero missed opportunities** and faster response times.
 
-**👤 Perfect for Agency Owners** - Manage client responses across multiple campaigns without losing track  
-**👤 Ideal for Startup Founders** - Centralize response management as you scale outreach efforts  
-**👤 Enterprise-Ready** - Team collaboration tools with comprehensive audit trails and performance tracking  
+**👤 Perfect for Agency Owners** - Manage client responses across multiple campaigns without losing track
+**👤 Ideal for Startup Founders** - Centralize response management as you scale outreach efforts
+**👤 Enterprise-Ready** - Team collaboration tools with comprehensive audit trails and performance tracking
 
 ## Why You Need a Unified Inbox
 
 ### **⭐ Beginner Path: Basic Problem Solving**
+
 **Simple problems to address:**
+
 - **Scattered Responses**: Responses get lost across multiple email accounts
 - **Missed Opportunities**: Important responses get buried or forgotten
 - **Time Wasted**: Checking multiple email accounts wastes valuable time
 
 ### **⭐⭐ Intermediate Path: Professional Benefits**
+
 **Enhanced productivity through centralized management:**
+
 - **Centralized Response Management**: When conducting cold email campaigns across multiple email addresses, responses can scatter across different inboxes, email clients, and platforms. This leads to:
   - Missed opportunities from prospects who replied
   - Delayed responses that hurt your conversion rates
@@ -41,7 +45,9 @@ last_modified_date: "2025-11-10"
   - Prioritize high-value responses automatically
 
 ### **⭐⭐ Expert Path: Strategic Advantages**
+
 **Enterprise-grade capabilities:**
+
 - **Advanced Organization**: AI-powered response categorization and prioritization
 - **Comprehensive Integration**: Seamless integration with existing business tools
 - **Performance Optimization**: Data-driven response optimization strategies
@@ -50,13 +56,17 @@ last_modified_date: "2025-11-10"
 ## How Our Unified Inbox Works
 
 ### **⭐ Beginner Path: Simple Setup**
+
 **Basic integration for immediate results:**
+
 - **Automatic Synchronization**: All your cold email accounts sync in real-time
 - **Basic Organization**: Simple categorization and response tracking
 - **Email Integration**: Works with Gmail, Outlook, Yahoo, and custom domains
 
 ### **⭐⭐ Intermediate Path: Smart Features**
+
 **Advanced organization and filtering:**
+
 - **Intelligent Organization**:
   - **Conversation Threading**: Group related emails and responses together
   - **Smart Categorization**: Automatically label responses by interest level
@@ -70,15 +80,18 @@ last_modified_date: "2025-11-10"
   - **Time-based Views**: See responses by day, week, or month
 
 ### **⭐⭐ Expert Path: Advanced Intelligence**
+
 **Enterprise-grade features:**
 
-**Technical Architecture**
-- **Multi-Account Integration**: 
+## Technical Architecture
+
+- **Multi-Account Integration**:
   - **Universal Access**: Access responses from any device or location
   - **Secure Connection**: Encrypted connections to all your email providers
   - **Comprehensive Coverage**: Works with Gmail, Outlook, Yahoo, and custom domains
 
-**Database Integration**
+## Database Integration
+
 - **Real-time Synchronization**: Comprehensive database architecture with real-time synchronization
 - **Intelligent Conversation Threading**: Advanced conversation management and organization
 - **Enterprise-grade Data Processing**: Cross all OLTP and OLAP systems ensuring immediate response visibility
@@ -90,26 +103,31 @@ last_modified_date: "2025-11-10"
 ## Key Features
 
 ### **⭐ Beginner Path: Essential Features**
+
 **Core functionality for immediate value:**
+
 - **Real-time Response Monitoring**: Get alerted immediately when prospects respond
 - **Basic Organization**: Simple categorization and response tracking
 - **Mobile Access**: Check responses on-the-go
 
 ### **⭐⭐ Intermediate Path: Professional Features**
 
-**Conversation Management**
+## Conversation Management
+
 - **Thread History**: See the complete conversation chain with each prospect
 - **Response Templates**: Save and reuse successful response templates
 - **Quick Actions**: Mark as read, reply, forward, or archive with one click
 - **Bulk Actions**: Manage multiple responses simultaneously
 
-**Follow-up Automation**
+## Follow-up Automation
+
 - **Smart Reminders**: Automatic reminders for scheduled follow-ups
 - **Sequence Tracking**: See where each prospect is in your follow-up sequence
 - **Missed Response Alerts**: Get notified when prospects don't reply within expected timeframes
 - **Personalization Tracking**: See which email variations generated responses
 
-**Performance Analytics**
+## Performance Analytics
+
 - **Response Rate Tracking**: Monitor response rates by email account and campaign
 - **Response Quality Analysis**: Track which types of responses you're receiving
 - **Time-to-Response Metrics**: Measure how quickly prospects respond to your outreach
@@ -117,19 +135,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Expert Path: Enterprise Features**
 
-**Advanced Team Collaboration**
+## Advanced Team Collaboration
+
 - **Team Assignment**: Assign responses to specific team members
 - **Shared Templates**: Create and share response templates across teams
 - **Activity Tracking**: Monitor team member activity and response handling
 - **Performance Metrics**: Compare team member response rates and quality
 
-**Integration Capabilities**
+## Integration Capabilities
+
 - **CRM Synchronization**: Push qualified responses to your CRM system
 - **Calendar Integration**: Book meetings directly from response emails
 - **Task Management**: Create tasks and reminders based on responses
 - **Email Marketing**: Segment responders for future email campaigns
 
-**Advanced Analytics**
+## Advanced Analytics
+
 - **Predictive Response Analysis**: AI-powered analysis of response patterns
 - **Customer Journey Mapping**: Complete prospect-to-customer tracking
 - **ROI Attribution**: Track revenue attribution from cold email responses
@@ -138,7 +159,9 @@ last_modified_date: "2025-11-10"
 ## Setting Up Your Unified Inbox
 
 ### **⭐ Beginner Path: Quick Setup (5 Minutes)**
+
 **Essential setup for immediate results:**
+
 1. **Add Email Accounts**: Connect all your cold email accounts
 2. **Configure Notifications**: Set up alerts for new responses
 3. **Basic Organization**: Set up simple labels and categories
@@ -146,19 +169,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Intermediate Path: Professional Setup**
 
-**Step 1: Account Connection**
+## Step 1: Account Connection
+
 1. **Add Email Accounts**: Connect all your cold email accounts
 2. **Verify Connections**: Complete authentication for each provider
 3. **Test Synchronization**: Ensure all accounts are properly connected
 4. **Configure Notifications**: Set up alerts for new responses
 
-**Step 2: Organization Setup**
+## Step 2: Organization Setup
+
 - **Create Custom Labels**: Set up labels that match your workflow
 - **Define Priority Rules**: Configure which responses to highlight
 - **Set Up Auto-tagging**: Enable automatic categorization of responses
 - **Configure Filters**: Create rules to organize responses automatically
 
-**Step 3: Workflow Optimization**
+## Step 3: Workflow Optimization
+
 - **Response Templates**: Create templates for common response types
 - **Follow-up Sequences**: Set up automated follow-up reminder systems
 - **Reporting Setup**: Configure performance tracking and analytics
@@ -166,19 +192,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Expert Path: Enterprise Setup**
 
-**Advanced Configuration**
+## Advanced Configuration
+
 - **Multi-tenant Setup**: Configure unified inbox for multiple companies or clients
 - **Advanced Permissions**: Set up role-based access and security controls
 - **Custom Integrations**: Configure advanced integrations with existing tools
 - **Enterprise Compliance**: Ensure compliance with regulatory requirements
 
-**Automation Setup**
+## Automation Setup
+
 - **AI-Powered Organization**: Configure intelligent response categorization
 - **Advanced Workflows**: Set up complex automated workflows
 - **Custom API Integration**: Build custom integrations using RESTful API
 - **Webhook Configuration**: Set up real-time notifications for external systems
 
-**Performance Optimization**
+## Performance Optimization
+
 - **Advanced Analytics**: Configure comprehensive performance tracking
 - **Predictive Insights**: Set up AI-powered response prediction
 - **Custom Reporting**: Create branded reports for stakeholders
@@ -187,27 +216,32 @@ last_modified_date: "2025-11-10"
 ## Response Management Workflow
 
 ### **⭐ Beginner Path: Simple Process**
+
 **Basic workflow for daily use:**
+
 1. **New Response Alert**: Receive notification of new response
 2. **Quick Scan**: Review the response content and context
-3. **Categorize**: Apply basic tags (Interested.md)
+3. **Categorize**: Apply basic tags (Interested)
 4. **Respond**: Reply directly or schedule follow-up
 
 ### **⭐⭐ Intermediate Path: Professional Process**
 
-**Step 1: Response Review**
+## Step 1: Response Review
+
 1. **New Response Alert**: Receive notification of new response
 2. **Quick Scan**: Review the response content and context
 3. **Initial Categorization**: Apply interest level and response type tags
 4. **Priority Assessment**: Determine follow-up urgency
 
-**Step 2: Action Taking**
+## Step 2: Action Taking
+
 1. **Immediate Response**: Reply directly if the prospect is interested
 2. **Template Response**: Use pre-written templates for common scenarios
 3. **Follow-up Scheduling**: Set reminders for future follow-up actions
 4. **Lead Qualification**: Move qualified leads to your CRM
 
-**Step 3: Follow-up Management**
+## Step 3: Follow-up Management
+
 1. **Sequence Tracking**: Monitor where each prospect is in your pipeline
 2. **Scheduled Actions**: Set up reminders for future touchpoints
 3. **Performance Analysis**: Track conversion rates and response quality
@@ -215,19 +249,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Expert Path: Advanced Process**
 
-**Enterprise Workflow Management**
+## Enterprise Workflow Management
+
 - **Multi-team Coordination**: Coordinate responses across multiple teams and departments
 - **Client Management**: Manage responses for multiple clients or campaigns
 - **Advanced Qualification**: Use AI-powered lead scoring and qualification
 - **Strategic Follow-up**: Implement strategic follow-up sequences based on prospect value
 
-**Advanced Automation**
+## Advanced Automation
+
 - **Intelligent Routing**: Automatically route responses to appropriate team members
 - **Predictive Responses**: AI-powered response recommendations
 - **Automated Qualification**: Automatically qualify prospects based on response patterns
 - **Dynamic Workflows**: Adapt workflows based on response context and quality
 
-**Performance Optimization**
+## Performance Optimization
+
 - **Continuous Optimization**: Use AI to continuously optimize response processes
 - **Predictive Analytics**: Predict optimal response strategies
 - **Competitive Analysis**: Analyze competitor response strategies
@@ -238,7 +275,9 @@ last_modified_date: "2025-11-10"
 ## Advanced Features
 
 ### **⭐ Beginner Path: Smart Auto-responses**
+
 **Basic automation features:**
+
 - **Out of Office Detection**: Automatically identify and handle OOO responses
 - **Basic Auto-tagging**: Automatically categorize responses
 
@@ -247,13 +286,15 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Intermediate Path: Professional Automation**
 
-**Smart Auto-responses**
+## Smart Auto-responses
+
 - **Out of Office Detection**: Automatically identify and handle OOO responses
 - **Bounce Management**: Track and manage email bounces
 - **Unsubscribe Handling**: Automatic processing of unsubscribe requests
 - **Complaint Tracking**: Monitor and address spam complaints
 
-**Integration Capabilities**
+## Integration Capabilities
+
 - **CRM Synchronization**: Push qualified responses to your CRM system
 - **Calendar Integration**: Book meetings directly from response emails
 - **Task Management**: Create tasks and reminders based on responses
@@ -266,19 +307,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐⭐ Expert Path: Enterprise Features**
 
-**Advanced Team Collaboration**
+## Advanced Team Collaboration
+
 - **Team Assignment**: Assign responses to specific team members
 - **Shared Templates**: Create and share response templates across teams
 - **Activity Tracking**: Monitor team member activity and response handling
 - **Performance Metrics**: Compare team member response rates and quality
 
-**Advanced Intelligence**
+## Advanced Intelligence
+
 - **Predictive Response Analysis**: AI-powered analysis of response patterns
 - **Sentiment Analysis**: Analyze prospect sentiment from responses
 - **Intent Detection**: Detect prospect buying intent from response content
 - **Optimal Response Timing**: AI-powered optimal response timing recommendations
 
-**Enterprise Integration**
+## Enterprise Integration
+
 - **Custom API Development**: Build custom integrations using RESTful API
 - **Enterprise SSO**: Single sign-on integration with enterprise systems
 - **Compliance Management**: Automated compliance with regulatory requirements
@@ -291,7 +335,9 @@ last_modified_date: "2025-11-10"
 ## Best Practices
 
 ### **⭐ Beginner Path: Essential Habits**
+
 **Daily practices for success:**
+
 - **Daily Reviews**: Check your unified inbox daily for new responses
 - **Quick Responses**: Respond to interested prospects within 2 hours
 - **Professional Tone**: Maintain professional communication standards
@@ -301,19 +347,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Intermediate Path: Professional Practices**
 
-**Response Speed**
+## Response Speed
+
 - **Quick Responses**: Respond to interested prospects within 2 hours
 - **Consistent Follow-up**: Maintain regular follow-up schedules
 - **Personal Touch**: Use personalization in all responses
 - **Professional Tone**: Maintain professional communication standards
 
-**Organization**
+## Organization
+
 - **Daily Reviews**: Check your unified inbox daily for new responses
 - **Regular Cleanup**: Archive old responses and maintain organized labels
 - **Priority Focus**: Focus on high-interest prospects first
 - **Template Usage**: Use templates efficiently while maintaining personalization
 
-**Performance Optimization**
+## Performance Optimization
+
 - **A/B Testing**: Test different response approaches
 - **Response Analysis**: Analyze what types of responses you're receiving
 - **Rate Monitoring**: Track response rates and improve over time
@@ -326,19 +375,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐⭐ Expert Path: Enterprise Excellence**
 
-**Advanced Response Strategy**
+## Advanced Response Strategy
+
 - **Predictive Response Planning**: Plan responses based on AI predictions
 - **Customer Journey Optimization**: Optimize responses based on customer journey stage
 - **Competitive Response Analysis**: Analyze competitor response strategies
 - **Market Intelligence**: Use response data for market intelligence
 
-**Enterprise Process Excellence**
+## Enterprise Process Excellence
+
 - **Process Automation**: Automate response processes for efficiency
 - **Quality Assurance**: Implement quality assurance for response consistency
 - **Training Programs**: Develop training programs for response excellence
 - **Continuous Improvement**: Use data-driven continuous improvement
 
-**Strategic Integration**
+## Strategic Integration
+
 - **Sales Alignment**: Align response management with sales strategies
 - **Marketing Integration**: Integrate response insights with marketing strategies
 - **Product Feedback**: Use response insights for product development
@@ -351,7 +403,9 @@ last_modified_date: "2025-11-10"
 ## Troubleshooting
 
 ### **⭐ Beginner Path: Common Issues**
+
 **Quick fixes for typical problems:**
+
 - **Sync Issues**: Refresh authentication for email accounts
 - **Missing Responses**: Verify responses aren't going to spam folders
 - **Performance Issues**: Refresh the page and check internet connection
@@ -361,19 +415,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐ Intermediate Path: Professional Solutions**
 
-**Sync Issues**
+## Sync Issues
+
 - **Account Reconnection**: Refresh authentication for email accounts
 - **API Limits**: Check if you've exceeded email provider API limits
 - **Connection Errors**: Verify internet connection and try again
 - **Provider Issues**: Check if email provider is experiencing outages
 
-**Missing Responses**
+## Missing Responses
+
 - **Spam Check**: Verify responses aren't going to spam folders
 - **Account Verification**: Ensure all email accounts are properly connected
 - **Filter Review**: Check if filters are hiding certain responses
 - **Provider Settings**: Review email provider spam and filter settings
 
-**Performance Issues**
+## Performance Issues
+
 - **Loading Speed**: Refresh the page and check internet connection
 - **Mobile Access**: Use mobile app for better performance on mobile
 - **Browser Cache**: Clear browser cache and try again
@@ -386,19 +443,22 @@ last_modified_date: "2025-11-10"
 
 ### **⭐⭐⭐ Expert Path: Enterprise Solutions**
 
-**Advanced Issue Resolution**
+## Advanced Issue Resolution
+
 - **Enterprise Authentication**: Resolve authentication issues for enterprise accounts
 - **Multi-tenant Problems**: Troubleshoot issues across multiple client accounts
 - **Compliance Issues**: Resolve compliance and regulatory issues
 - **Integration Problems**: Debug complex integration issues
 
-**Enterprise Recovery**
+## Enterprise Recovery
+
 - **Data Recovery**: Recover lost response data
 - **Account Recovery**: Recover compromised or failed accounts
 - **System Recovery**: Restore unified inbox functionality after system issues
 - **Process Recovery**: Restore response management processes
 
-**Strategic Problem Solving**
+## Strategic Problem Solving
+
 - **Root Cause Analysis**: Conduct thorough root cause analysis
 - **Process Optimization**: Optimize response management processes
 - **Technology Innovation**: Develop innovative solutions to recurring problems
@@ -413,31 +473,37 @@ last_modified_date: "2025-11-10"
 Ready to manage all your cold email responses efficiently?
 
 ### **Related Features**
-1. **[Warm-ups](../warm-ups/overview.md)** - Build sender reputation before sending cold emails
-2. **[Inbox Rotation](../inbox-rotation/overview.md)** - Rotate between multiple email addresses
-3. **[Analytics](../analytics/overview.md)** - Track response rates and performance metrics
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview.md)** - Set up additional email accounts
+
+1. **[Warm-ups](../warm-ups/overview)** - Build sender reputation before sending cold emails
+2. **[Inbox Rotation](../inbox-rotation/overview)** - Rotate between multiple email addresses
+3. **[Analytics](../analytics/overview)** - Track response rates and performance metrics
+4. **[Free Mailbox Creation](../free-mailbox-creation/overview)** - Set up additional email accounts
 
 ### **Implementation Resources**
-5. **[Implementation Guide](../getting-started.md)** - Complete setup process
+
+1. **[Implementation Guide](../getting-started)** - Complete setup process
 
 ### **Prerequisites**
+
 - **Multiple Email Accounts**: Have cold email accounts connected to the platform
 - **Response Data**: Ensure responses are being generated from campaigns
 - **Notification Setup**: Configure email and mobile notifications
 - **Team Access**: Set up team member access if managing collaboratively
 
 ### **Alternative Approaches**
+
 - **Email Client Management**: Use email clients for response management
 - **Spreadsheet Tracking**: Track responses manually in spreadsheets
 - **Separate Tools**: Use separate tools for each email account
 - **Manual Organization**: Manual organization and follow-up
 
 ### **Deep Dive Options**
-- **[Advanced Usage](advanced-usage.md)** - Advanced features and optimization techniques
-- **[Technical Implementation](technical-implementation.md)** - Detailed technical setup and configuration
+
+- **[Advanced Usage](advanced-usage)** - Advanced features and optimization techniques
+- **[Technical Implementation](technical-implementation)** - Detailed technical setup and configuration
 
 ### **Success Metrics**
+
 - **Week 1**: All accounts connected and responses visible
 - **Week 2**: Response organization and tagging system operational
 - **Week 4**: 50% faster response time achieved
@@ -445,4 +511,5 @@ Ready to manage all your cold email responses efficiently?
 
 ---
 *The Unified Inbox is the command center for your cold email outreach, giving you complete visibility and control over all prospect interactions.*
+
 ---

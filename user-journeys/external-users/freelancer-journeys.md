@@ -13,30 +13,35 @@ This document outlines the key user journeys for freelance consultants who use P
 ### **Consultant Categories**
 
 #### **Independent Marketing Consultants**
+
 - Solo practitioners serving multiple clients
 - Focus on email marketing strategy and optimization
 - Provide comprehensive marketing services
 - Require cost-effective solutions with professional capabilities
 
 #### **Sales Development Consultants**
+
 - Specialized in outreach and prospecting campaigns
 - Focus on B2B lead generation and sales enablement
 - Track ROI and conversion metrics closely
 - Need precise targeting and personalization
 
 #### **Business Development Consultants**
+
 - Focus on partnership and relationship building
 - Use email for networking and business development
 - Track relationship development and engagement
 - Require professional branding and credibility
 
 #### **Multi-Industry Consultants**
+
 - Work across multiple industries and use cases
 - Adapt strategies for different client needs
 - Maintain expertise across diverse market segments
 - Require flexible, scalable solutions
 
 ### **Common Business Needs**
+
 - Cost-effective solutions for small-scale operations
 - Professional branding and client presentation
 - Client reporting and analytics capabilities
@@ -51,6 +56,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ### **Journey 1: Business Setup & Client Acquisition**
 
 #### **Professional Setup**
+
 1. **Personal Branding**
    - Establish professional consultant brand and identity
    - Create consistent visual branding and messaging
@@ -64,6 +70,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Set up client communication and project management tools
 
 #### **Client Acquisition**
+
 1. **Prospect Development**
    - Identify potential clients through networking and referrals
    - Develop compelling service proposals and packages
@@ -81,6 +88,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ### **Journey 2: Client Project Management**
 
 #### **Strategy Development**
+
 1. **Client Assessment**
    - Understand client's business goals and target market
    - Analyze current email marketing setup and challenges
@@ -94,6 +102,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Establish success metrics and KPIs
 
 #### **Implementation & Execution**
+
 1. **Campaign Setup**
    - Configure client's email marketing infrastructure
    - Create templates and campaign assets
@@ -111,6 +120,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ### **Journey 3: Client Relationship Management**
 
 #### **Communication & Reporting**
+
 1. **Regular Communication**
    - Maintain consistent communication with clients
    - Provide regular updates on campaign performance
@@ -124,6 +134,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Schedule regular strategy review meetings
 
 #### **Value Delivery**
+
 1. **Strategic Consultation**
    - Advise clients on email marketing best practices
    - Recommend new campaigns and optimization strategies
@@ -141,6 +152,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ### **Journey 4: Business Growth & Scaling**
 
 #### **Service Development**
+
 1. **Offer Expansion**
    - Develop new service offerings and packages
    - Create specialized expertise in specific industries
@@ -154,6 +166,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Develop scalable systems and processes
 
 #### **Business Development**
+
 1. **Client Growth**
    - Expand services to existing clients
    - Seek referrals from satisfied clients
@@ -171,6 +184,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ## Freelancer Context
 
 ### **Key Pain Points**
+
 - Managing multiple client projects with limited time
 - Demonstrating professional expertise and credibility
 - Balancing cost-effectiveness with professional results
@@ -178,6 +192,7 @@ This document outlines the key user journeys for freelance consultants who use P
 - Building sustainable, long-term client relationships
 
 ### **Success Metrics**
+
 - **Client Satisfaction**: High client retention and satisfaction
 - **Project Success**: Successful campaign outcomes and ROI
 - **Business Growth**: Increased revenue and client base
@@ -189,6 +204,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ## Common Freelancer Workflows
 
 ### **Daily Operations**
+
 1. **Client Communication**
    - Respond to client questions and requests
    - Review and approve campaign content
@@ -202,6 +218,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Generate performance reports
 
 ### **Weekly Business Development**
+
 1. **Prospect Outreach**
    - Follow up with potential clients
    - Conduct discovery calls and consultations
@@ -215,6 +232,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Update project timelines and priorities
 
 ### **Monthly Strategic Review**
+
 1. **Performance Analysis**
    - Review monthly performance across all clients
    - Analyze ROI and business impact
@@ -232,6 +250,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ## Professional Standards & Best Practices
 
 ### **Client Management**
+
 1. **Communication Standards**
    - Maintain professional, responsive communication
    - Set clear expectations and deliverables
@@ -245,6 +264,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Provide actionable insights and recommendations
 
 ### **Business Operations**
+
 1. **Financial Management**
    - Maintain accurate time tracking and billing
    - Manage cash flow and payment collection
@@ -262,6 +282,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ## Technology & Tools Integration
 
 ### **Essential Freelancer Tools**
+
 1. **Project Management**
    - Client communication and project tracking
    - Time tracking and billing automation
@@ -275,6 +296,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Professional presentation and visualization tools
 
 ### **Automation & Efficiency**
+
 1. **Workflow Automation**
    - Automated client reporting and communications
    - Campaign setup and management automation
@@ -292,6 +314,7 @@ This document outlines the key user journeys for freelance consultants who use P
 ## Freelancer Growth Strategies
 
 ### **Service Specialization**
+
 1. **Industry Expertise**
    - Develop deep expertise in specific industries
    - Create specialized service packages
@@ -305,6 +328,7 @@ This document outlines the key user journeys for freelance consultants who use P
    - Use technology to improve efficiency and results
 
 ### **Business Scaling**
+
 1. **Systems Development**
    - Create repeatable processes and systems
    - Develop standard operating procedures
@@ -319,11 +343,12 @@ This document outlines the key user journeys for freelance consultants who use P
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`agency-owner-journeys.md`](agency-owner-journeys.md)
-- [`business-owner-journeys.md`](business-owner-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`agency-owner-journeys.md`](agency-owner-journeys)
+- [`business-owner-journeys.md`](business-owner-journeys)
 
 ---
 

@@ -22,5 +22,5 @@ When assembling an email in the worker (MAIL-2.3), generate a secure JWT for eac
 
 ## Related documentation
 
-- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
-- [Development Standards (JWT & token handling)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework)
+- [Development Standards (JWT & token handling)](../../docs/implementation-technical/development-guidelines/development-standards)

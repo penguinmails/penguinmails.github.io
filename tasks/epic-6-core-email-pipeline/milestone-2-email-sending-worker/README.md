@@ -1,8 +1,8 @@
-Milestone 2 — The Email Sending Worker
+# Milestone 2 — The Email Sending Worker
 
 **Goal:** Build the consumer side: a standalone worker process that pulls jobs from Redis and performs email sending, assembling content and logging results.
 
-### Tickets
+## Tickets
 
 - MAIL-2.1 Set Up Standalone Worker Project
 - MAIL-2.2 Implement the Worker's Main Loop

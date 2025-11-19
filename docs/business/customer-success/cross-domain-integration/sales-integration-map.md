@@ -12,8 +12,8 @@ persona: "Customer Success Teams"
 
 This document provides comprehensive system integration maps showing data flows between Customer Success systems and Sales domains, enabling seamless revenue growth coordination across organizational boundaries.
 
-**Document Level:** Level 3 - Cross-Domain Integration Analysis  
-**Target Audience:** CS Managers, Sales Leaders, Expansion Teams, Renewal Specialists  
+**Document Level:** Level 3 - Cross-Domain Integration Analysis
+**Target Audience:** CS Managers, Sales Leaders, Expansion Teams, Renewal Specialists
 **Integration Focus:** Handoff optimization, expansion opportunity development, renewal strategy alignment
 
 ---
@@ -22,10 +22,10 @@ This document provides comprehensive system integration maps showing data flows 
 
 Customer Success integrates with Sales through well-defined data flows and API interfaces:
 
-- **Handoff Management:** Structured sales-to-CS transitions  
-- **Expansion Pipeline:** Joint opportunity identification and qualification  
-- **Renewal Coordination:** Risk-assessed renewal strategies  
-- **Executive Alignment:** Shared relationship intelligence  
+- **Handoff Management:** Structured sales-to-CS transitions
+- **Expansion Pipeline:** Joint opportunity identification and qualification
+- **Renewal Coordination:** Risk-assessed renewal strategies
+- **Executive Alignment:** Shared relationship intelligence
 
 **Integration Value:** $1.8M annual value through expansion revenue and renewal protection.
 
@@ -35,7 +35,7 @@ Customer Success integrates with Sales through well-defined data flows and API i
 
 ### Core Integration Framework
 
-```
+```markdown
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   CUSTOMER      │◄──►│   INTEGRATION   │◄──►│     SALES       │
 │   SUCCESS       │    │     LAYER       │    │    SYSTEMS      │
@@ -45,15 +45,15 @@ Customer Success integrates with Sales through well-defined data flows and API i
 │ • Renewal Risk  │    │ • Event Stream  │    │ • Opportunity   │
 │ • Relationship  │    │ • Auth/RBAC     │    │ • Forecasting   │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```
+```markdown
 
 ### Integration Principles
 
-- **Seamless Transitions:** Zero-knowledge-loss handoffs  
-- **Shared Pipeline Visibility:** Real-time opportunity collaboration  
-- **Risk-Informed Renewals:** Health-correlated renewal predictions  
-- **Executive Sync:** Unified relationship management  
-- **Resilience:** Idempotent operations, conflict resolution  
+- **Seamless Transitions:** Zero-knowledge-loss handoffs
+- **Shared Pipeline Visibility:** Real-time opportunity collaboration
+- **Risk-Informed Renewals:** Health-correlated renewal predictions
+- **Executive Sync:** Unified relationship management
+- **Resilience:** Idempotent operations, conflict resolution
 
 ---
 
@@ -63,19 +63,19 @@ Customer Success integrates with Sales through well-defined data flows and API i
 
 Structured knowledge transfer ensuring continuity from sales to success ownership.
 
-**Primary Systems:**  
-- CRM Handoff Workflows, Knowledge Repositories  
-- CS Onboarding Automation, Success Planning  
+**Primary Systems:**
+- CRM Handoff Workflows, Knowledge Repositories
+- CS Onboarding Automation, Success Planning
 
 ### Data Flow Architecture
 
-```
+```markdown
 Sales Close Data ──┐
                     ├──► Handoff Package ──► CS Onboarding
 Relationship Intel ─┘                        │
                                              ▼
 Success Baseline ◄─── Validation ──► Pipeline Update
-```
+```markdown
 
 ### Key Integration Points
 
@@ -89,7 +89,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
     "baseline_metrics": "day_zero_health"
   }
 }
-```
+```markdown
 
 **2. Knowledge Transfer Automation**
 ```json
@@ -101,12 +101,12 @@ Success Baseline ◄─── Validation ──► Pipeline Update
     "expansion_potential": "white_space_analysis"
   }
 }
-```
+```markdown
 
 ### CS-Sales Handoff APIs
 
 **Handoff Completion API:**
-```
+```markdown
 POST /api/v1/cs-sales/handoff/complete/{deal_id}
 - Accepts handoff package
 - Initiates success plan
@@ -116,14 +116,14 @@ GET /api/v1/cs-sales/handoff/status/{customer_id}
 - Transition completeness
 - Knowledge gaps identification
 - Success plan alignment
-```
+```markdown
 
 ### Integration Benefits
 
-- **Transition Success:** 98% handoff completion rate  
-- **Time-to-Value:** 40% faster onboarding velocity  
-- **Relationship Continuity:** Zero executive relationship drops  
-- **Baseline Accuracy:** 95% KPI alignment precision  
+- **Transition Success:** 98% handoff completion rate
+- **Time-to-Value:** 40% faster onboarding velocity
+- **Relationship Continuity:** Zero executive relationship drops
+- **Baseline Accuracy:** 95% KPI alignment precision
 
 ---
 
@@ -133,19 +133,19 @@ GET /api/v1/cs-sales/handoff/status/{customer_id}
 
 Joint pipeline development from CS success signals to sales-qualified expansions.
 
-**Primary Systems:**  
-- CS Expansion Engine, Usage Analytics  
-- Sales Opportunity Management, Qualification Scoring  
+**Primary Systems:**
+- CS Expansion Engine, Usage Analytics
+- Sales Opportunity Management, Qualification Scoring
 
 ### Data Flow Architecture
 
-```
+```markdown
 Success Signals ──┐
                    ├──► Opportunity Signals ──► Sales Pipeline
 Usage Patterns ────┘                           │
                                               ▼
 Deal Progression ◄─── Qualification ──► CS Support
-```
+```markdown
 
 ### Key Integration Points
 
@@ -159,7 +159,7 @@ Deal Progression ◄─── Qualification ──► CS Support
     "timing_alignment": "renewal_window_optimization"
   }
 }
-```
+```markdown
 
 **2. Joint Qualification**
 ```json
@@ -171,12 +171,12 @@ Deal Progression ◄─── Qualification ──► CS Support
     "executive_engagement": "sponsor_briefing_materials"
   }
 }
-```
+```markdown
 
 ### CS-Expansion APIs
 
 **Opportunity API:**
-```
+```markdown
 GET /api/v1/cs-sales/expansion/{customer_id}
 - Readiness assessment scoring
 - Value realization evidence
@@ -186,14 +186,14 @@ POST /api/v1/cs-sales/qualified/{opportunity_id}
 - Sales-qualified confirmation
 - CS support commitment
 - Pipeline progression trigger
-```
+```markdown
 
 ### Benefits
 
-- **Pipeline Quality:** 75% sales-qualified rate  
-- **Win Rate Uplift:** 55% expansion close rate  
-- **Speed-to-Deal:** 60% faster qualification cycle  
-- **Revenue Acceleration:** $1.8M annual expansion  
+- **Pipeline Quality:** 75% sales-qualified rate
+- **Win Rate Uplift:** 55% expansion close rate
+- **Speed-to-Deal:** 60% faster qualification cycle
+- **Revenue Acceleration:** $1.8M annual expansion
 
 ---
 
@@ -203,19 +203,19 @@ POST /api/v1/cs-sales/qualified/{opportunity_id}
 
 Health-correlated renewal strategies with shared risk assessment.
 
-**Primary Systems:**  
-- CS Renewal Risk Engine, Contract Intelligence  
-- Sales Forecasting, Negotiation Playbooks  
+**Primary Systems:**
+- CS Renewal Risk Engine, Contract Intelligence
+- Sales Forecasting, Negotiation Playbooks
 
 ### Data Flow Architecture
 
-```
+```markdown
 Health Trends ──┐
                  ├──► Renewal Risk ──► Strategy Development
 Contract Data ──┘                      │
                                        ▼
 Negotiation Support ◄─── Close Data ──► CS Update
-```
+```markdown
 
 ### Key Integration Points
 
@@ -229,7 +229,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
     "competitive_threats": "market_position_monitoring"
   }
 }
-```
+```markdown
 
 **2. Strategy Development**
 ```json
@@ -241,12 +241,12 @@ Negotiation Support ◄─── Close Data ──► CS Update
     "expansion_bundling": "renewal_plus_opportunities"
   }
 }
-```
+```markdown
 
 ### CS-Renewal APIs
 
 **Risk API:**
-```
+```markdown
 GET /api/v1/cs-sales/renewal/risk/{contract_id}
 - Probability-weighted forecasting
 - Strategy recommendations
@@ -256,14 +256,14 @@ POST /api/v1/cs-sales/renewal/close/{contract_id}
 - Renewal confirmation processing
 - Success plan updates
 - Expansion pipeline seeding
-```
+```markdown
 
 ### Benefits
 
-- **Renewal Rates:** 97% achievement rate  
-- **ARPU Growth:** 25% renewal expansion  
-- **Forecast Accuracy:** 92% precision  
-- **Risk Mitigation:** 80% early issue detection  
+- **Renewal Rates:** 97% achievement rate
+- **ARPU Growth:** 25% renewal expansion
+- **Forecast Accuracy:** 92% precision
+- **Risk Mitigation:** 80% early issue detection
 
 ---
 
@@ -276,7 +276,7 @@ cs_sales_gateway:
   auth: "oauth2_sales_cs_scoped"
   rate_limits: "opportunity_concurrent_5"
   monitoring: "pipeline_health_metrics"
-```
+```markdown
 
 ### Event Streaming
 
@@ -285,21 +285,21 @@ topics:
   handoff_complete: "cs_sales_transitions"
   expansion_qualified: "opportunity_development"
   renewal_risk_change: "contract_health_events"
-```
+```markdown
 
 ---
 
 ## Success Metrics
 
-- **Handoff Completion:** 98% within SLA  
-- **Expansion SQL:** 75% sales-qualified  
-- **Renewal Forecast:** 92% accuracy  
-- **Revenue Impact:** $1.8M protected/grown  
+- **Handoff Completion:** 98% within SLA
+- **Expansion SQL:** 75% sales-qualified
+- **Renewal Forecast:** 92% accuracy
+- **Revenue Impact:** $1.8M protected/grown
 
 ---
 
 **Related Documentation:**
-- [CS Cross-Domain Overview](...md)
-- [Sales Systems Map](../../../business/sales/cross-domain-integration.md)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [Sales Systems Map](/docs/business/sales/cross-domain-integration)
 
 **Document Classification:** Level 3 - CS-Sales Integration Analysis

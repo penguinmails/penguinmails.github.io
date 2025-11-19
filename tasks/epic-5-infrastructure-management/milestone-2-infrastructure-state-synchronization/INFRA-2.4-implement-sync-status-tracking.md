@@ -22,5 +22,5 @@ Enhance the cron job to record execution status in `system_config` with a key li
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Development Standards (system config & monitoring)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Development Standards (system config & monitoring)](../../docs/implementation-technical/development-guidelines/development-standards)

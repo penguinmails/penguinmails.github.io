@@ -19,6 +19,7 @@ last_modified_date: "2025-10-28"
 ## Analytics & Monitoring Journey
 
 ### **Journey Flow**
+
 `Dashboard Login → Performance Overview → Detailed Analytics → Insights Generation → Action Planning`
 
 **Overview:** Platform analytics and monitoring with real-time tracking, historical analysis, and business intelligence.
@@ -26,6 +27,7 @@ last_modified_date: "2025-10-28"
 ### **Normal Analytics Access**
 
 #### 1. **Dashboard Login**
+
 - **Action**: Navigate to the analytics dashboard
 - **Page**: Platform Dashboard
 - **Action**: Click on 'Analytics' or 'Reports' section
@@ -34,6 +36,7 @@ last_modified_date: "2025-10-28"
 - **Action**: Review key performance indicators (KPIs)
 
 #### 2. **Real-Time Monitoring**
+
 - **Action**: Access live event tracking via PostHog integration
 - **Page**: Real-Time Monitoring
 - **Action**: Monitor campaign performance metrics in real-time
@@ -42,6 +45,7 @@ last_modified_date: "2025-10-28"
 - **Page**: User Engagement Analytics
 
 #### 3. **Historical Analysis**
+
 - **Action**: Switch to historical reporting mode
 - **Page**: Historical Analytics
 - **Action**: Query OLAP database for detailed reporting
@@ -52,6 +56,7 @@ last_modified_date: "2025-10-28"
 - **Page**: Comparative Analysis Tool
 
 #### 4. **Business Intelligence**
+
 - **Action**: Navigate to business intelligence section
 - **Page**: BI Dashboard
 - **Action**: Track ROI metrics and conversion rates
@@ -62,6 +67,7 @@ last_modified_date: "2025-10-28"
 - **Button**: 'Generate Insights Report'
 
 #### 5. **Insights Generation**
+
 - **Action**: Use AI-powered insights engine
 - **Page**: Insights Generator
 - **Action**: Analyze patterns and anomalies
@@ -70,6 +76,7 @@ last_modified_date: "2025-10-28"
 - **Page**: Insights Feed
 
 #### 6. **Action Planning**
+
 - **Action**: Review insights and create action plans
 - **Page**: Action Planning Dashboard
 - **Action**: Assign tasks based on analytics findings
@@ -82,6 +89,7 @@ last_modified_date: "2025-10-28"
 ## Email Campaign Operations Journey
 
 ### **Journey Flow**
+
 `Campaign Creation → Content Setup → Recipient List → IP Selection → Launch → Monitoring`
 
 **Strategic Alignment**: This campaign operations framework supports our enterprise operational strategy by providing comprehensive email marketing automation and performance tracking that drives strategic business outcomes and competitive market positioning.
@@ -95,9 +103,11 @@ last_modified_date: "2025-10-28"
 ### **Normal Campaign Creation & Launch Flow**
 
 #### 1. **Campaign Setup & Content Creation**
+
 **Journey Flow:** `Dashboard → New Campaign → Template Selection → Content Editor → Personalization → Validation`
 
-##### Campaign Initiation (`.md)
+##### Campaign Initiation (`)
+
 - **Page Access**: Main campaigns dashboard or "Create Campaign" CTA
 - **Campaign Types**: One-time, recurring, A/B test, drip sequence
 - **Form Elements**:
@@ -106,7 +116,8 @@ last_modified_date: "2025-10-28"
   - Goal selection (awareness, engagement, conversion)
   - "Continue" button to next step
 
-##### Template Selection (`/campaigns/new.md)
+##### Template Selection (`/campaigns/new)
+
 - **Template Categories**: Welcome, newsletter, promotional, re-engagement
 - **Template Options**:
   - Pre-built templates with customization
@@ -115,7 +126,8 @@ last_modified_date: "2025-10-28"
 - **Preview**: Live preview of selected template
 - **Actions**: "Use This Template" or "Customize"
 
-##### Content Editor (`/campaigns/new.md)
+##### Content Editor (`/campaigns/new)
+
 - **Editor Features**:
   - Drag-and-drop email builder
   - HTML/text mode toggle
@@ -127,13 +139,15 @@ last_modified_date: "2025-10-28"
   - Email body with formatting toolbar
   - Footer with unsubscribe link
 
-##### Personalization Setup (`/campaigns/new.md)
+##### Personalization Setup (`/campaigns/new)
+
 - **Merge Tags**: Contact name, company, custom fields
 - **Dynamic Content**: Conditional blocks based on recipient data
 - **Sender Settings**: From name, from email, reply-to address
 - **Validation**: Required personalization fields check
 
-##### Testing & Validation (`/campaigns/new.md)
+##### Testing & Validation (`/campaigns/new)
+
 - **Test Options**:
   - Send test email to yourself
   - Send to team members
@@ -146,9 +160,11 @@ last_modified_date: "2025-10-28"
   - Unsubscribe link presence
 
 #### 2. **Recipient List Management**
+
 **Journey Flow:** `Contact Database → List Creation → Import/Upload → Validation → Segmentation → Hygiene`
 
-##### List Creation (`/contacts.md)
+##### List Creation (`/contacts)
+
 - **List Types**: Static lists, dynamic segments, suppression lists
 - **List Properties**:
   - Name and description
@@ -156,7 +172,8 @@ last_modified_date: "2025-10-28"
   - Sharing permissions (team visibility)
 - **Actions**: "Create List" button
 
-##### Contact Import (`/contacts.md)
+##### Contact Import (`/contacts)
+
 - **Import Methods**:
   - CSV upload with drag-and-drop
   - Copy-paste from spreadsheet
@@ -167,7 +184,8 @@ last_modified_date: "2025-10-28"
   - Supported formats: CSV, XLSX, TXT
   - Size limits: 1M contacts per import
 
-##### Data Validation & Mapping (`/contacts/import.md)
+##### Data Validation & Mapping (`/contacts/import)
+
 - **Field Mapping**:
   - Automatic column detection
   - Manual field assignment
@@ -179,7 +197,8 @@ last_modified_date: "2025-10-28"
   - Domain validation
   - Required field checks
 
-##### List Segmentation (`/contacts.md)
+##### List Segmentation (`/contacts)
+
 - **Segmentation Options**:
   - Tag-based filtering
   - Behavior-based segments (opened, clicked, purchased)
@@ -190,7 +209,8 @@ last_modified_date: "2025-10-28"
   - Dynamic segments that update automatically
   - Exclusion segments for suppression
 
-##### List Hygiene (`/contacts.md)
+##### List Hygiene (`/contacts)
+
 - **Hygiene Checks**:
   - Bounce rate analysis
   - Spam complaint monitoring
@@ -203,9 +223,11 @@ last_modified_date: "2025-10-28"
   - Re-engagement campaigns
 
 #### 3. **Campaign Launch & IP Management**
+
 **Journey Flow:** `Campaign Ready → IP Selection → Schedule Setup → Launch Confirmation → Send Initiation`
 
-##### IP Selection (`/campaigns/new.md)
+##### IP Selection (`/campaigns/new)
+
 - **IP Options**:
   - Shared IPs (cost-effective, variable reputation)
   - Dedicated IPs (premium, controlled reputation)
@@ -216,7 +238,8 @@ last_modified_date: "2025-10-28"
   - Bounce/complaint rates
   - Geographic distribution
 
-##### Send Scheduling (`/campaigns/new.md)
+##### Send Scheduling (`/campaigns/new)
+
 - **Scheduling Options**:
   - Send immediately
   - Schedule for specific date/time
@@ -227,7 +250,8 @@ last_modified_date: "2025-10-28"
   - Batch sending
   - Recipient timezone consideration
 
-##### Launch Confirmation (`/campaigns/new.md)
+##### Launch Confirmation (`/campaigns/new)
+
 - **Pre-Launch Checklist**:
   - Content validation complete
   - List hygiene checked
@@ -239,7 +263,8 @@ last_modified_date: "2025-10-28"
   - Cost calculation
   - Performance predictions
 
-##### Send Initiation & Monitoring (`/campaigns.md)
+##### Send Initiation & Monitoring (`/campaigns)
+
 - **Launch Process**:
   - Queue placement confirmation
   - Real-time send progress
@@ -258,6 +283,7 @@ last_modified_date: "2025-10-28"
 ### **Campaign Performance Metrics**
 
 #### **Email Performance KPIs**
+
 - **Deliverability Rate**: >98% target
 - **Inbox Placement Rate**: >95% target
 - **Bounce Rate**: <2% target
@@ -268,6 +294,7 @@ last_modified_date: "2025-10-28"
 - **Unsubscribe Rate**: List health indicator
 
 #### **Engagement Analytics**
+
 ```typescript
 interface CampaignEngagement {
   campaignId: string;
@@ -293,10 +320,10 @@ interface CampaignEngagement {
     byTimeOfDay: Record<string, EngagementMetrics>;
   };
 }
-```
+```markdown
 
 #### **Campaign Analytics Dashboard**
-```
+```markdown
 Campaign Performance
 ├── Total Sent: X emails
 ├── Delivery Rate: X% (Target: >98%)
@@ -309,7 +336,7 @@ Engagement Trends
 ├── Top Performing: [Campaign] (X% open rate)
 ├── Best Time: X:XX AM/PM
 └── Device Breakdown: X% mobile, X% desktop
-```
+```markdown
 
 ### **User Journey Analytics**
 
@@ -336,7 +363,7 @@ interface JourneyAnalytics {
     conversionValue: number;
   };
 }
-```
+```markdown
 
 #### **Behavioral Analysis**
 - **User Flow Visualization**: Complete journey mapping
@@ -390,9 +417,9 @@ interface JourneyAnalytics {
 ### **Campaign Operations Recovery**
 
 #### **Campaign Launch Failures**
-```
+```markdown
 Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis → Recovery Options → Relaunch
-```
+```markdown
 
 **Failure Types & Recovery:**
 1. **SMTP Connection Issues**:
@@ -416,9 +443,9 @@ Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis 
    - **Prevention**: Pre-launch list hygiene checks
 
 #### **Large-Scale Campaign Management**
-```
+```markdown
 Bulk Operations → Progress Tracking → Partial Failures → Selective Retry → Completion Reconciliation
-```
+```markdown
 
 **Bulk Processing Strategies:**
 1. **Batch Segmentation**:
@@ -437,9 +464,9 @@ Bulk Operations → Progress Tracking → Partial Failures → Selective Retry �
    - **Load Balancing**: Distribution across multiple SMTP servers
 
 #### **Content & Compliance Issues**
-```
+```markdown
 Pre-Launch Check → Spam Detection → Content Review → Approval Workflow → Launch Authorization
-```
+```markdown
 
 **Content Validation Process:**
 1. **Automated Spam Checking**:
@@ -490,9 +517,9 @@ Pre-Launch Check → Spam Detection → Content Review → Approval Workflow →
 - **Page**: Monitoring Activation
 
 ### **First Campaign Creation**
-```
+```markdown
 Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Setup → Test Send → Launch Success
-```
+```markdown
 
 **Detailed New User Flow:**
 1. **Discovery & Access**:
@@ -519,9 +546,9 @@ Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Set
    - **Follow-up**: Automated performance email after completion
 
 ### **IP Selection & Warmup Setup**
-```
+```markdown
 IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configuration → Activation Monitoring
-```
+```markdown
 
 **IP Decision Process:**
 1. **IP Portfolio Review**:
@@ -571,9 +598,9 @@ IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configurat
 - **Page**: Performance Recovery Dashboard
 
 ### **Deliverability Crisis Response**
-```
+```markdown
 High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → Recovery Actions → Relaunch
-```
+```markdown
 
 **Crisis Management:**
 1. **Automatic Detection**:
@@ -592,9 +619,9 @@ High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → 
    - **Re-engagement Strategy**: Clean list re-engagement campaigns
 
 ### **SMTP Infrastructure Failure**
-```
+```markdown
 SMTP Connection Failure → Automatic Failover → Backup Server Activation → Status Updates → Service Restoration
-```
+```markdown
 
 **Infrastructure Resilience:**
 1. **Failure Detection**:
@@ -710,36 +737,36 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](..md) - Main operations framework
-- [User Analytics](..md) - User behavior analysis
-- [Product Analytics](..md) - Feature performance analysis
-- [Metrics & KPIs](..md) - Comprehensive KPI framework
+- [Operations Analytics Overview](.) - Main operations framework
+- [User Analytics](.) - User behavior analysis
+- [Product Analytics](.) - Feature performance analysis
+- [Metrics & KPIs](.) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy.md) - Strategic alignment
-- [Market Analysis](../business/market-analysis.md) - Market positioning
-- [Value Proposition](../business/value-proposition.md) - Competitive differentiation
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
+- [Market Analysis](/docs/business/market-analysis/overview) - Market positioning
+- [Value Proposition](/docs/business/value-proposition/overview) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture.md) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical.md) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical.md) - System management
-- [Integration Guide](../technical/architecture/detailed-technical.md) - Analytics integrations
+- [Technical Architecture Overview](/docs/technical/architecture/overview) - System design
+- [Analytics Architecture](/docs/technical/architecture/detailed-technical) - Technical implementation
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System management
+- [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](../user-experience-journeys.md) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys.md) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys.md) - UX optimization
+- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- [Onboarding Journey](../user-experience-journeys/detailed-journeys) - User activation
+- [User Interaction Patterns](../user-experience-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security.md) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise.md) - Security operations
-- [Data Privacy Policy](../compliance-security/international.md) - Privacy compliance
+- [Compliance Overview](/docs/compliance-security) - Regulatory compliance
+- [Security Framework](/docs/compliance-security/enterprise) - Security operations
+- [Data Privacy Policy](/docs/compliance-security/international) - Privacy compliance
 
 ### **Operations Management**
-- [Operations Management](../operations-management.md) - Operational procedures
-- [Staff Operations](../operations-management.md) - Team coordination
-- [QA Protocols](../team-performance.md) - Quality assurance
+- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Staff Operations](/docs/operations-analytics/operations-management) - Team coordination
+- [QA Protocols](/docs/operations-analytics/team-performance) - Quality assurance
 
 ---
 
@@ -747,10 +774,10 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 
 Navigate to specific analytics and campaign areas:
 
-- **[User Analytics](..md)** → User behavior and engagement analysis
-- **[Product Analytics](..md)** → Feature performance and optimization
-- **[Metrics & KPIs](..md)** → Comprehensive KPI framework
-- **[Operations Management](../operations-management.md)** → Operational procedures and workflows
+- **[User Analytics](.)** → User behavior and engagement analysis
+- **[Product Analytics](.)** → Feature performance and optimization
+- **[Metrics & KPIs](.)** → Comprehensive KPI framework
+- **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
 
 ---
 

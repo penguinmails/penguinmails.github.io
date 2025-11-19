@@ -28,6 +28,7 @@ last_modified_date: "2025-12-19"
 ### Security Assessment Checklist
 
 #### Data Protection Requirements
+
 - [ ] Data encryption in transit (TLS 1.3 minimum)
 - [ ] Data encryption at rest (AES-256 or equivalent)
 - [ ] Multi-factor authentication support
@@ -36,10 +37,11 @@ last_modified_date: "2025-12-19"
 - [ ] Secure API authentication methods
 
 #### Compliance Certifications
+
 - [ ] SOC 2 Type II certification
 - [ ] ISO 27001 certification
 - [ ] GDPR compliance (EU operations)
-- [ ] CCPA.md)
+- [ ] CCPA)
 - [ ] Industry-specific compliance (HIPAA, SOX, PCI DSS)
 
 ---
@@ -49,7 +51,8 @@ last_modified_date: "2025-12-19"
 ### Total Cost of Ownership (TCO) Model
 
 #### Direct Costs
-```
+
+```markdown
 Monthly Service Fees:
 - Base subscription: $X/month
 - Email volume charges: $Y per 1K emails
@@ -65,10 +68,10 @@ Ongoing Operational Costs:
 - Support fees: $X/month
 - Monitoring tools: $Y/month
 - Compliance reporting: $Z/month
-```
+```markdown
 
 #### Indirect Costs
-```
+```markdown
 Internal Resources:
 - IT administration time: X hours/month
 - Compliance oversight: Y hours/month
@@ -79,16 +82,16 @@ Risk Mitigation:
 - Security incident prevention: $X
 - Compliance violation avoidance: $Y
 - System downtime costs: $Z
-```
+```markdown
 
 ### ROI Calculation Framework
-```
+```markdown
 Implementation Investment: $X
 Annual Operational Savings: $Y
 Revenue Impact (if applicable): $Z
 Break-even Period: X months
 3-Year ROI: Y%
-```
+```markdown
 
 ---
 
@@ -109,7 +112,7 @@ Break-even Period: X months
 ### Performance and Scalability Requirements
 
 #### Volume Handling
-```
+```markdown
 Minimum Requirements:
 - 100K emails/hour sustained
 - 1M emails/day peak capacity
@@ -121,10 +124,10 @@ Scalability Expectations:
 - Geographic load distribution
 - Performance monitoring and alerting
 - Capacity planning support
-```
+```markdown
 
 #### Reliability Standards
-```
+```markdown
 Uptime Requirements:
 - 99.9% minimum uptime SLA
 - 24/7 monitoring and support
@@ -136,7 +139,7 @@ Disaster Recovery:
 - RTO: Maximum 4 hours to full recovery
 - Geographic redundancy
 - Regular backup and recovery testing
-```
+```markdown
 
 ---
 
@@ -145,7 +148,7 @@ Disaster Recovery:
 ### Service Level Agreements (SLA)
 
 #### Uptime and Performance
-```
+```markdown
 Uptime Guarantee:
 - 99.9% monthly uptime commitment
 - Credit schedule for violations
@@ -157,10 +160,10 @@ Performance Standards:
 - API response times under 2 seconds
 - Support response times by priority level
 - System capacity guarantees
-```
+```markdown
 
 #### Support and Maintenance
-```
+```markdown
 Support Tiers:
 P1 (Critical): 1 hour response, 4 hour resolution
 P2 (High): 4 hour response, 24 hour resolution
@@ -171,12 +174,12 @@ Maintenance Windows:
 - Scheduled: Weekly 4-hour maintenance window
 - Emergency: As needed with 2-hour notice
 - Annual maintenance budget: X hours included
-```
+```markdown
 
 ### Data and Security Terms
 
 #### Data Ownership and Control
-```
+```markdown
 Data Ownership:
 - Customer retains all rights to their data
 - Vendor data processing limited to service delivery
@@ -188,10 +191,10 @@ Data Security:
 - Access control and monitoring obligations
 - Incident notification procedures (24-48 hours)
 - Regular security assessments and reporting
-```
+```markdown
 
 #### Compliance and Audit Rights
-```
+```markdown
 Audit Rights:
 - Annual audit rights for security practices
 - Compliance verification opportunities
@@ -203,12 +206,12 @@ Regulatory Compliance:
 - Data protection impact assessments
 - Privacy policy and terms of service alignment
 - Regulatory change adaptation procedures
-```
+```markdown
 
 ### Commercial Terms
 
 #### Pricing and Billing
-```
+```markdown
 Pricing Structure:
 - Transparent pricing model
 - Volume-based tier pricing
@@ -220,15 +223,15 @@ Billing Terms:
 - Usage-based billing with detailed reporting
 - Prorated billing for mid-cycle changes
 - Dispute resolution procedures
-```
+```markdown
 
 #### Contract Duration and Renewal
-```
+```markdown
 Initial Term: 12-36 months
 Renewal Options: Automatic with 90-day notice
 Early Termination: 60-day notice with pro-rata adjustment
 Price Protection: Lock-in pricing for contract term
-```
+```markdown
 
 ---
 

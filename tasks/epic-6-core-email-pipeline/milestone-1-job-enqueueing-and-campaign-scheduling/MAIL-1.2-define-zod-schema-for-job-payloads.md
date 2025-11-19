@@ -21,5 +21,5 @@ In `/lib/schemas`, create a `jobs.schemas.ts` file. Define and export a Zod sche
 
 ## Related documentation
 
-- [Development Standards (validation & schemas)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (validation & schemas)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)

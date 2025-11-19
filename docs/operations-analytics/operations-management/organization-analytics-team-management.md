@@ -19,6 +19,7 @@ description: "Comprehensive organization analytics and team management for enter
 ## Organization & Team Management Journey
 
 ### **Journey Flow**
+
 `Company Setup → Team Invitation → Role Assignment → Active Collaboration`
 
 **Overview:** Organization and team management with multi-tenant architecture, role-based access control, and collaborative workflows.
@@ -26,9 +27,11 @@ description: "Comprehensive organization analytics and team management for enter
 ### **Normal Team Operations**
 
 #### 1. **Company Setup & Onboarding**
+
 **Journey Flow:** `Onboarding Modal → Company Details → Team Size → Initial Owner → Company Created`
 
-##### Company Information Collection (`.md)
+##### Company Information Collection (`)
+
 - **Modal Elements**:
   - Company name input field (required)
   - Industry dropdown selection
@@ -41,25 +44,30 @@ description: "Comprehensive organization analytics and team management for enter
 - **Progress**: Step indicator shows 1 of 4 completed
 
 ##### Initial Team Configuration
+
 - **Owner Assignment**: Current user automatically becomes Owner
 - **Team Size Confirmation**: Affects plan recommendations and feature limits
 - **Optional Team Invites**: Can add initial team members immediately or skip
 
 ##### Company Creation & Database Setup
+
 - **Backend Process**: Company record creation with tenant association
 - **Multi-tenant Setup**: RLS policies configured for company isolation
 - **Feature Provisioning**: Base plan features activated at tenant level
 - **Email Notification**: Company creation confirmation
 
 #### 2. **Team Invitation & Onboarding**
+
 **Journey Flow:** `Team Dashboard → Invite Form → Email Sent → Recipient Journey → Team Integration`
 
-##### Invitation Initiation (`/team` or `/settings.md)
+##### Invitation Initiation (`/team` or `/settings)
+
 - **Page Access**: Team management section in settings
 - **Permission Check**: Only Owner/Admin can send invites
 - **Invite Button**: Prominent "Invite Team Member" CTA
 
 ##### Invitation Form
+
 - **Form Elements**:
   - Email address input (required)
   - Role selection dropdown (Member, Admin, Owner)
@@ -69,11 +77,13 @@ description: "Comprehensive organization analytics and team management for enter
 - **Bulk Invites**: Option to upload CSV for multiple invites
 
 ##### Invitation Email & Token Generation
+
 - **Email Content**: Personalized invite with company branding
 - **Security Token**: Time-limited invitation link (7 days expiration)
 - **Tracking**: Invitation status monitoring (sent, viewed, accepted, expired)
 
 ##### Recipient Invitation Journey
+
 - **Email Reception**: Invitation email with clear subject line
 - **Link Click**: Directs to invitation acceptance page
 - **Account Check**: System checks if email already has an account
@@ -81,15 +91,18 @@ description: "Comprehensive organization analytics and team management for enter
 - **Existing User Flow**: Adds company association if account exists
 
 ##### Invitation Acceptance & Role Assignment
+
 - **Acceptance Page**: Clean confirmation screen
 - **Role Confirmation**: Shows assigned role and permissions
 - **Company Integration**: User added to company tenant
 - **Welcome Email**: Confirmation of team membership
 
 #### 3. **Ongoing Team Management**
+
 **Journey Flow:** `Team Dashboard → Member Actions → Permission Updates → Activity Monitoring`
 
-##### Team Dashboard Access (`.md)
+##### Team Dashboard Access (`)
+
 - **Member List**: Table showing all team members with status
 - **Columns**: Name, Email, Role, Join Date, Last Active, Status
 - **Actions**: Edit role, remove member, resend invitation (per member)
@@ -97,6 +110,7 @@ description: "Comprehensive organization analytics and team management for enter
 - **Company Context**: All actions scoped to current company workspace
 
 ##### Role Management Interface
+
 - **Role Change Modal**:
   - Current role display
   - New role dropdown (Member → Admin → Owner hierarchy)
@@ -106,6 +120,7 @@ description: "Comprehensive organization analytics and team management for enter
 - **Security Logging**: All role changes audited with tenant association
 
 ##### Team Activity Monitoring
+
 - **Activity Feed**: Recent team actions and changes within company
 - **Usage Analytics**: Per-member campaign activity scoped to company
 - **Access Logs**: Login patterns and feature usage by company
@@ -118,6 +133,7 @@ description: "Comprehensive organization analytics and team management for enter
 ### **Team Performance Metrics**
 
 #### **Team Engagement Analytics**
+
 ```typescript
 interface TeamEngagement {
   companyId: string;
@@ -145,7 +161,7 @@ interface TeamEngagement {
     mentorshipPairs: number;
   };
 }
-```
+```markdown
 
 #### **Organization Health KPIs**
 - **Team Utilization Rate**: Active members / total invited
@@ -157,7 +173,7 @@ interface TeamEngagement {
 - **Multi-tenant Performance**: Cross-company data isolation metrics
 
 #### **Team Analytics Dashboard**
-```
+```markdown
 Team Overview
 ├── Total Members: X (Active: X, Pending: X)
 ├── Role Distribution: X Owners, X Admins, X Members
@@ -174,8 +190,8 @@ Performance Indicators
 ├── Team Productivity Score: X/100
 ├── Onboarding Completion: X%
 ├── Access Security Score: X/100
-└── Team Satisfaction: X.md)
-```
+└── Team Satisfaction: X)
+```markdown
 
 ### **Role-Based Access Control Analytics**
 
@@ -207,7 +223,7 @@ interface AccessControlAnalytics {
     roleChangeFrequency: number;
   };
 }
-```
+```markdown
 
 #### **Security & Compliance Metrics**
 - **Access Violation Rate**: Unauthorized access attempts
@@ -242,7 +258,7 @@ interface TenantAnalytics {
     availability: number;
   };
 }
-```
+```markdown
 
 #### **Scalability & Performance**
 - **Tenant Scalability**: Performance under varying loads
@@ -281,7 +297,7 @@ interface TeamPerformancePrediction {
     historicalTrend: number[];
   };
 }
-```
+```markdown
 
 #### **Organizational Intelligence**
 - **Team Composition Analysis**: Optimal role distributions
@@ -311,7 +327,7 @@ interface RoleBasedJourney {
     leadershipIndex: number;
   };
 }
-```
+```markdown
 
 #### **Organizational Culture Metrics**
 - **Team Communication Patterns**: Internal vs external collaboration
@@ -328,12 +344,12 @@ interface RoleBasedJourney {
 ### **Team Management Recovery**
 
 #### **Team Member Removal Process**
-```
+```markdown
 Team Dashboard → Member Selection → Removal Confirmation → Asset Transfer → Access Termination → Notifications
-```
+```markdown
 
 **Detailed Steps:**
-1. **Removal Initiation** (`.md):
+1. **Removal Initiation** (`):
    - **Access**: Owner/Admin clicks "Remove" action on member row
    - **Confirmation Modal**: Warning about permanent action and data impact
    - **Asset Transfer Options**: Reassign campaigns, contacts, IPs to other members
@@ -356,9 +372,9 @@ Team Dashboard → Member Selection → Removal Confirmation → Asset Transfer 
    - **Audit Logging**: Complete record of removal and asset transfers
 
 #### **Role Escalation & Changes**
-```
+```markdown
 Role Change Request → Permission Impact Review → Security Approval → Access Update → Team Notification
-```
+```markdown
 
 **Detailed Steps:**
 1. **Role Change Request**:
@@ -377,9 +393,9 @@ Role Change Request → Permission Impact Review → Security Approval → Acces
    - **Cache Clearing**: Session caches refreshed for immediate effect
 
 #### **Owner Role Transfer**
-```
+```markdown
 Owner Departure → Successor Selection → Transfer Confirmation → New Owner Setup → Team Notification
-```
+```markdown
 
 **Detailed Steps:**
 1. **Transfer Initiation**:
@@ -402,9 +418,9 @@ Owner Departure → Successor Selection → Transfer Confirmation → New Owner 
 ## Initial Setup Scenarios
 
 ### **Company Creation & Setup**
-```
+```markdown
 Onboarding Start → Company Form → Industry/Type Selection → Team Size Config → Owner Setup → Database Creation
-```
+```markdown
 
 **Detailed Steps:**
 1. **Onboarding Context**:
@@ -429,9 +445,9 @@ Onboarding Start → Company Form → Industry/Type Selection → Team Size Conf
    - **Account Creation**: Company tenant created in database
 
 ### **First Team Member Invitation**
-```
+```markdown
 Post-Company Creation → Team Tab Access → Invite Modal → Email Config → Send → Recipient Flow
-```
+```markdown
 
 **Detailed Steps:**
 1. **Team Management Discovery**:
@@ -454,9 +470,9 @@ Post-Company Creation → Team Tab Access → Invite Modal → Email Config → 
 ## Emergency Scenarios
 
 ### **Critical Admin Protection**
-```
+```markdown
 Last Admin Removal Attempt → System Block → Alternative Assignment → Permission Preservation
-```
+```markdown
 
 **Safety Mechanisms:**
 1. **Detection Logic**:
@@ -475,9 +491,9 @@ Last Admin Removal Attempt → System Block → Alternative Assignment → Permi
    - **Support Contact**: Link to help for complex situations
 
 ### **Lost Administrative Access Recovery**
-```
+```markdown
 Admin Access Loss → Support Ticket → Identity Verification → Staff Intervention → Access Restoration
-```
+```markdown
 
 **Recovery Process:**
 1. **Issue Identification**:
@@ -575,34 +591,34 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](...md)) - Main operations framework
-- [User Analytics](../analytics-performance.md)) - User behavior analysis
-- [Metrics & KPIs](../analytics-performance.md)) - Comprehensive KPI framework
+- [Operations Analytics Overview](..)) - Main operations framework
+- [User Analytics](/docs/operations-analytics/analytics-performance)) - User behavior analysis
+- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy.md)) - Strategic alignment
-- [Market Analysis](../business/market-analysis.md)) - Market positioning
-- [User Personas](../business/user-personas.md)) - Target audience analysis
+- [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
+- [Market Analysis](/docs/business/market-analysis/overview)) - Market positioning
+- [User Personas](../business/user-personas)) - Target audience analysis
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture.md)) - System design
-- [Infrastructure Operations](../technical/architecture/detailed-technical.md)) - System management
-- [Integration Guide](../technical/architecture/detailed-technical.md)) - Analytics integrations
+- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+- [Integration Guide](/docs/technical/architecture/detailed-technical)) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys.md)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys.md)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys.md)) - UX optimization
+- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security.md)) - Regulatory compliance
-- [Security Framework](../compliance-security/enterprise.md)) - Security operations
-- [Data Privacy Policy](../compliance-security/international.md)) - Privacy compliance
+- [Compliance Overview](/docs/compliance-security)) - Regulatory compliance
+- [Security Framework](/docs/compliance-security/enterprise)) - Security operations
+- [Data Privacy Policy](/docs/compliance-security/international)) - Privacy compliance
 
 ### **Team Performance**
-- [Team Performance Overview](../team-performance.md) - Team coordination
-- [QA Testing Protocols](../team-performance.md)) - Quality assurance
-- [Sprint Retrospectives](../team-performance.md)) - Agile development
+- [Team Performance Overview](/docs/operations-analytics/team-performance) - Team coordination
+- [QA Testing Protocols](/docs/operations-analytics/team-performance)) - Quality assurance
+- [Sprint Retrospectives](/docs/operations-analytics/team-performance)) - Agile development
 
 ---
 
@@ -610,9 +626,9 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 Navigate to specific organization and team areas:
 
-- **[Staff Operations](..md))** → Operational staff coordination
-- **[QA Testing Protocols](../team-performance.md))** → Quality assurance procedures
-- **[Metrics & KPIs](../analytics-performance.md))** → Comprehensive KPI framework
+- **[Staff Operations](.))** → Operational staff coordination
+- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
 
 ---
 

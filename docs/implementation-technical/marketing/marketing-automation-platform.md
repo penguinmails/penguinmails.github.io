@@ -39,15 +39,15 @@ This technical specification defines the implementation architecture for marketi
   "nodes": [{"id": "string", "type": "action|condition|delay", "config": {}}],
   "errorHandling": {"retryPolicy": "exponential|linear|none", "maxRetries": "number"}
 }
-```
+```markdown
 
 ### API Endpoints
 
-**Workflow Management:** `POST /api/v1.md), `GET /api/v1/workflows.md), `PUT /api/v1/workflows.md), `DELETE /api/v1/workflows.md), `POST /api/v1/workflows/{id}.md)
+**Workflow Management:** `POST /api/v1), `GET /api/v1/workflows), `PUT /api/v1/workflows), `DELETE /api/v1/workflows), `POST /api/v1/workflows/{id})
 
-**Trigger Management:** `POST /api/v1.md), `GET /api/v1/triggers/{id}.md), `PUT /api/v1/triggers/{id}.md)
+**Trigger Management:** `POST /api/v1), `GET /api/v1/triggers/{id}), `PUT /api/v1/triggers/{id})
 
-**Execution Monitoring:** `GET /api/v1.md), `GET /api/v1/executions.md), `POST /api/v1/executions/{id}.md)
+**Execution Monitoring:** `GET /api/v1), `GET /api/v1/executions), `POST /api/v1/executions/{id})
 
 ### Integration Patterns
 
@@ -58,7 +58,7 @@ const emailIntegration = {
   endpoints: { sendEmail: '/v3/mail/send', createList: '/v3/lists' },
   auth: 'apiKey|bearer', rateLimits: { requestsPerMinute: 600, burstLimit: 1000 }
 };
-```
+```markdown
 
 **CRM Integration:**
 ```javascript
@@ -68,7 +68,7 @@ const crmIntegration = {
   conflictResolution: 'last-write-wins|source-priority',
   dataMapping: { contactFields: {}, activityTypes: {} }
 };
-```
+```markdown
 
 ---
 

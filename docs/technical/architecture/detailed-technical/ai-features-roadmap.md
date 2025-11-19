@@ -70,7 +70,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 
 ---
 
-## 2. Template Analyzer (⭐ .md)
+## 2. Template Analyzer (⭐ )
 
 A post-composition "Analyze" button that inspects the template before sending or saving.
 
@@ -82,7 +82,7 @@ A post-composition "Analyze" button that inspects the template before sending or
   - Suspicious formatting (ALL CAPS, deceptive subjects, misleading reply chains).
   - Domain & sender alignment (if data available from infrastructure).
 - Output:
-  - Clear score band (e.g. Low / Medium .md).
+  - Clear score band (e.g. Low / Medium ).
   - Plain-language explanations.
   - Concrete, actionable suggestions:
     - "Reduce promotional buzzwords in the subject line."
@@ -91,7 +91,7 @@ A post-composition "Analyze" button that inspects the template before sending or
 ### 2.2 Structural & Content Quality
 
 - Checks:
-  - Missing basics: intro, value, CTA, unsubscribe.md).
+  - Missing basics: intro, value, CTA, unsubscribe).
   - Overly long blocks vs. readability best practices.
   - Clarity of ask.
 - Output:
@@ -101,16 +101,16 @@ A post-composition "Analyze" button that inspects the template before sending or
 
 ### 2.3 Safety & Policy Alignment
 
-- Checks.md):
+- Checks):
   - Misleading claims, unrealistic promises.
-  - Prohibited niches .md).
+  - Prohibited niches ).
 - Output:
   - Highlighted segments with “reason” tags.
   - Never auto-block; always present as recommendations unless org policy says otherwise.
 
 ---
 
-## 3. Inbox Assistance (⭐ .md)
+## 3. Inbox Assistance (⭐ )
 
 AI helpers in the unified inbox to reduce manual triage and reply drafting workload.
 
@@ -118,7 +118,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 
 - Per-thread summary:
   - What the lead is asking.
-  - Their interest level (low / medium .md).
+  - Their interest level (low / medium ).
   - Any constraints mentioned (budget, timing, objections).
 - Usage:
   - Quick context at top of thread.
@@ -131,7 +131,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
   - Stage hints (evaluation, decision, post-sale).
   - Red flags (unsubscribe requests, complaints).
 - Integration:
-  - Can feed into CRM .md).
+  - Can feed into CRM ).
 
 ### 3.3 Suggested Replies
 
@@ -159,6 +159,7 @@ These ideas come from the earlier AI artifacts but are intentionally de-scoped t
   - Coordinated suggestions across dashboard, docs, and inbox while strictly respecting privacy and compliance.
 
 All of these:
+
 - Must pass through:
   - Privacy review
   - Compliance/legal review
@@ -189,11 +190,14 @@ Implementation details should live in detailed architecture docs, but core patte
   - Versioned prompts & configs so behavior is auditable.
 
 This document is the canonical AI feature proposal to drive:
+
 - Product design
 - Technical architecture deep dives
 - Roadmap alignment
 
 It intentionally:
+
 - Focuses on realistic utilities.
 - Treats more speculative orchestration ideas strictly as future exploration, not commitments.
+
 ---

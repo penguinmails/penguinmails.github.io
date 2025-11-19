@@ -19,7 +19,7 @@ This document provides system integration maps with clear separation between MVP
 **MVP Focus:** Daily sync, basic APIs, manual processes
 **Post-MVP Focus:** Real-time integration, event streaming, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) integration capabilities. Level 3+ advanced integration features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core) integration capabilities. Level 3+ advanced integration features are addressed in the roadmap section below.
 
 ---
 
@@ -28,7 +28,7 @@ This document provides system integration maps with clear separation between MVP
 Marketing systems integrate with 4 primary business domains through basic data flows and simple API interfaces:
 
 - **Sales Domain Integration:** Basic lead management, manual attribution, weekly reporting
-- **Product Domain Integration:** Basic feature adoption, customer feedback, launch coordination  
+- **Product Domain Integration:** Basic feature adoption, customer feedback, launch coordination
 - **Customer Success Domain Integration:** Basic customer health monitoring, retention strategies, expansion opportunities
 - **Finance Domain Integration:** Basic budget tracking, ROI measurement, cost optimization
 
@@ -40,7 +40,7 @@ Marketing systems integrate with 4 primary business domains through basic data f
 
 ### MVP Core Integration Framework
 
-```
+```markdown
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   MARKETING     │◄──►│   INTEGRATION   │◄──►│  OTHER BUSINESS │
 │    SYSTEMS      │    │     LAYER       │    │    DOMAINS      │
@@ -50,7 +50,7 @@ Marketing systems integrate with 4 primary business domains through basic data f
 │ • Campaigns     │    │ • CSV Export    │    │ • Customer Suc. │
 │ • Basic Personalization│ • Manual Auth │    │ • Finance       │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```
+```markdown
 
 ### MVP Integration Principles
 
@@ -75,13 +75,13 @@ Marketing systems integrate with sales processes to enable basic lead management
 
 ### MVP Data Flow Architecture
 
-```
+```markdown
 Marketing Campaigns ──┐
                       ├──► Lead Capture ──► CRM Integration ──► Sales Process
 Email Engagement ──┘                       │
                                            ▼
 Marketing Analytics ◄─── Attribution Data ◄─── Sales Outcomes
-```
+```markdown
 
 ### MVP Key Integration Points
 
@@ -96,7 +96,7 @@ Marketing Analytics ◄─── Attribution Data ◄─── Sales Outcomes
     "follow_up_automation": "basic_workflow"
   }
 }
-```
+```markdown
 
 **2. Basic Campaign Attribution Integration**
 ```json
@@ -109,7 +109,7 @@ Marketing Analytics ◄─── Attribution Data ◄─── Sales Outcomes
     "sales_coordination": "shared_reports"
   }
 }
-```
+```markdown
 
 **3. Basic Sales-Marketing Alignment**
 ```json
@@ -121,12 +121,12 @@ Marketing Analytics ◄─── Attribution Data ◄─── Sales Outcomes
     "performance_feedback": "basic_reporting"
   }
 }
-```
+```markdown
 
 ### MVP Sales Integration APIs
 
 **Basic Lead Management API:**
-```
+```markdown
 POST /api/v1/integrations/sales/leads
 - Captures marketing-qualified leads
 - Syncs to CRM daily
@@ -136,15 +136,15 @@ GET /api/v1/integrations/sales/attribution/{campaign_id}
 - Returns basic campaign attribution data
 - Includes weekly revenue impact metrics
 - Supports basic attribution models
-```
+```markdown
 
 **Basic Performance Tracking API:**
-```
+```markdown
 GET /api/v1/integrations/sales/performance
 - Basic sales pipeline influenced by marketing
 - Campaign ROI and attribution metrics
 - Lead quality and conversion tracking
-```
+```markdown
 
 ### MVP Sales Integration Benefits
 
@@ -168,13 +168,13 @@ Marketing systems integrate with product processes to support basic feature adop
 
 ### MVP Data Flow Architecture
 
-```
+```markdown
 Product Usage Data ──┐
                      ├──► Analytics Integration ──► Marketing Insights
 Customer Feedback ──┘                      │
                                            ▼
 Marketing Campaigns ◄─── Product Messaging ◄─── Launch Coordination
-```
+```markdown
 
 ### MVP Key Integration Points
 
@@ -188,7 +188,7 @@ Marketing Campaigns ◄─── Product Messaging ◄─── Launch Coordinat
     "expansion_signals": "basic_feature_upgrade_opportunities"
   }
 }
-```
+```markdown
 
 **2. Basic Customer Feedback Integration**
 ```json
@@ -200,7 +200,7 @@ Marketing Campaigns ◄─── Product Messaging ◄─── Launch Coordinat
     "success_stories": "basic_case_study_development"
   }
 }
-```
+```markdown
 
 **3. Basic Launch Coordination**
 ```json
@@ -212,12 +212,12 @@ Marketing Campaigns ◄─── Product Messaging ◄─── Launch Coordinat
     "success_metrics": "basic_adoption_tracking"
   }
 }
-```
+```markdown
 
 ### MVP Product Integration APIs
 
 **Basic Analytics Integration API:**
-```
+```markdown
 GET /api/v1/integrations/product/analytics/{tenant_id}
 - Basic feature usage and adoption metrics
 - Customer success indicators
@@ -227,15 +227,15 @@ POST /api/v1/integrations/product/feedback
 - Submits customer feedback for product teams
 - Tracks basic feature request prioritization
 - Links feedback to marketing campaigns
-```
+```markdown
 
 **Basic Launch Coordination API:**
-```
+```markdown
 POST /api/v1/integrations/product/launches
 - Coordinates basic product launch campaigns
 - Aligns messaging and timing
 - Tracks basic adoption success metrics
-```
+```markdown
 
 ### MVP Product Integration Benefits
 
@@ -259,13 +259,13 @@ Marketing systems integrate with customer success processes to monitor basic cus
 
 ### MVP Data Flow Architecture
 
-```
+```markdown
 Customer Usage Data ──┐
                      ├──► Health Scoring ──► Success Indicators
 Support Interactions ─┘                      │
                                            ▼
 Retention Campaigns ◄─── Success Automation ◄─── Expansion Opportunities
-```
+```markdown
 
 ### MVP Key Integration Points
 
@@ -279,7 +279,7 @@ Retention Campaigns ◄─── Success Automation ◄─── Expansion Oppor
     "feature_adoption": "basic_core_feature_usage"
   }
 }
-```
+```markdown
 
 **2. Basic Retention Strategy Implementation**
 ```json
@@ -291,7 +291,7 @@ Retention Campaigns ◄─── Success Automation ◄─── Expansion Oppor
     "win_back_campaigns": "basic_re_engagement_sequences"
   }
 }
-```
+```markdown
 
 **3. Basic Expansion Opportunity Identification**
 ```json
@@ -303,12 +303,12 @@ Retention Campaigns ◄─── Success Automation ◄─── Expansion Oppor
     "cross_sell_opportunities": "basic_adjacent_solution_needs"
   }
 }
-```
+```markdown
 
 ### MVP Customer Success Integration APIs
 
 **Basic Health Monitoring API:**
-```
+```markdown
 GET /api/v1/integrations/success/health/{tenant_id}
 - Basic customer health score and trending
 - Risk indicators and early warning signs
@@ -318,15 +318,15 @@ POST /api/v1/integrations/success/interventions
 - Triggers basic retention campaigns
 - Escalates high-risk customers to success team
 - Tracks basic intervention effectiveness
-```
+```markdown
 
 **Basic Expansion Identification API:**
-```
+```markdown
 GET /api/v1/integrations/success/expansion/{tenant_id}
 - Basic upgrade and expansion opportunity indicators
 - Success story generation for upselling
 - Basic cross-sell recommendation engine
-```
+```markdown
 
 ### MVP Customer Success Integration Benefits
 
@@ -350,13 +350,13 @@ Marketing systems integrate with finance processes to enable basic budget tracki
 
 ### MVP Data Flow Architecture
 
-```
+```markdown
 Marketing Spend ──┐
                   ├──► Budget Tracking ──► Financial Analytics
 Campaign Performance─┘                      │
                                            ▼
 ROI Reporting ◄─── Cost Optimization ◄─── Finance Integration
-```
+```markdown
 
 ### MVP Key Integration Points
 
@@ -370,7 +370,7 @@ ROI Reporting ◄─── Cost Optimization ◄─── Finance Integration
     "variance_analysis": "budget_vs_actual"
   }
 }
-```
+```markdown
 
 **2. Basic ROI Measurement and Analytics**
 ```json
@@ -382,7 +382,7 @@ ROI Reporting ◄─── Cost Optimization ◄─── Finance Integration
     "efficiency_metrics": "basic_cost_per_acquisition"
   }
 }
-```
+```markdown
 
 **3. Basic Cost Optimization**
 ```json
@@ -394,12 +394,12 @@ ROI Reporting ◄─── Cost Optimization ◄─── Finance Integration
     "savings_identification": "basic_opportunity_detection"
   }
 }
-```
+```markdown
 
 ### MVP Finance Integration APIs
 
 **Basic Budget Management API:**
-```
+```markdown
 GET /api/v1/integrations/finance/budget/{period}
 - Basic budget consumption and variance analysis
 - Forecast vs. actual performance
@@ -409,15 +409,15 @@ POST /api/v1/integrations/finance/spend
 - Records basic marketing expenditure
 - Categorizes spend by campaign/channel
 - Tracks basic vendor payments and contracts
-```
+```markdown
 
 **Basic ROI Analytics API:**
-```
+```markdown
 GET /api/v1/integrations/finance/roi/{campaign_id}
 - Basic campaign ROI and profitability metrics
 - Basic attribution model results
 - Cost per acquisition and customer lifetime value
-```
+```markdown
 
 ### MVP Finance Integration Benefits
 
@@ -440,17 +440,17 @@ api_gateway:
     - basic_oauth: "Basic OAuth 2.0 with API keys"
     - basic_rbac: "Basic role-based access control"
     - audit: "Basic audit logging"
-  
+
   rate_limiting:
     - domain_specific: "Basic limits per integration"
     - burst_protection: "Basic spike protection"
     - quota_management: "Basic usage tracking"
-  
+
   monitoring:
     - performance: "Basic API response time monitoring"
     - reliability: "Basic uptime and error rate tracking"
     - security: "Basic threat detection"
-```
+```markdown
 
 ### MVP Data Synchronization
 
@@ -459,12 +459,12 @@ data_sync:
   sync_frequency:
     daily: ["customer_health", "sales_leads", "campaign_performance"]
     weekly: ["financial_reports", "roi_analytics", "forecasting"]
-  
+
   conflict_resolution:
     strategy: "basic_last_write_wins_with_audit_trail"
     reconciliation: "basic_discrepancy_detection"
     escalation: "manual_intervention_for_critical_conflicts"
-```
+```markdown
 
 ---
 
@@ -477,16 +477,16 @@ security_framework:
   authentication:
     basic_auth: "Basic authentication with API keys"
     session_management: "Basic session handling with timeout"
-  
+
   authorization:
     basic_rbac: "Basic role-based access control by domain"
     permission_inheritance: "Basic hierarchical permission structure"
-  
+
   data_protection:
     encryption_at_rest: "Basic encryption for sensitive data"
     encryption_in_transit: "TLS for all API communications"
     pii_handling: "Basic handling for personally identifiable information"
-```
+```markdown
 
 ### MVP Compliance and Audit
 
@@ -496,12 +496,12 @@ compliance_framework:
     retention_policies: "Basic domain-specific data retention rules"
     deletion_procedures: "Manual data deletion workflows"
     consent_management: "Basic customer consent tracking"
-  
+
   audit_requirements:
     access_logging: "Basic access and modification logging"
     compliance_reporting: "Manual compliance report generation"
     data_lineage: "Basic data flow tracking"
-```
+```markdown
 
 ---
 

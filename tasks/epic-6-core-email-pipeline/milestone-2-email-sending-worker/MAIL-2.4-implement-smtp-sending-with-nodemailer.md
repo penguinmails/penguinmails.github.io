@@ -22,6 +22,6 @@ Install `nodemailer`. Create a function `sendEmail(emailObject, smtpSettings)` t
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (external integrations & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Quick Setup / Getting Started](../../docs/quick-setup.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (external integrations & secrets)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Quick Setup / Getting Started](../../docs/quick-setup)

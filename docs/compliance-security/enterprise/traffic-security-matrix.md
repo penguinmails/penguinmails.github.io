@@ -20,7 +20,7 @@ This guide provides the framework for selecting appropriate Primary Key types ba
 
 ## Framework Matrix
 
-```
+```markdown
                     SECURITY DANGER LEVELS
 TRAFFIC    |    LOW                    |   MEDIUM                  |   HIGH
 -----------|--------------------------|---------------------------|--------------------------
@@ -32,9 +32,9 @@ LOW        | INT                      | UUID                      | UUID
 Distribution Examples:
 - UUID (Security-focused): 75% of tables - User data, credentials, financial records
 - BIGINT (Analytics performance): 9% of tables - High-traffic analytics, logs
-- VARCHAR (External.md): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
+- VARCHAR (External): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
 - Composite (Multi-tenant): 10% of tables - Tenant associations, junction tables
-```
+```markdown
 
 ## Security Danger Assessment
 
@@ -59,23 +59,23 @@ Distribution Examples:
 
 ## Traffic Assessment
 
-### CRITICAL Traffic (>100K ops.md)
+### CRITICAL Traffic (>100K ops)
 - **Content Operations**: `content_objects`, `email_opens`
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `email_messages` (Content)
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `content_inbox_message_refs` (Content)
 - **Message Processing**: `inbox_message_refs`, `email_clicks`
 - **Analytics**: OLAP tables during processing
 
-### HIGH Traffic (10K-100K ops.md)
+### HIGH Traffic (10K-100K ops)
 - **Business Operations**: `campaigns`, `job_logs`
 - **Queue Processing**: `jobs`, `job_metrics`
 - **Content Access**: `content_access_log`
 
-### MEDIUM Traffic (1K-10K ops.md)
+### MEDIUM Traffic (1K-10K ops)
 - **Configuration**: `user_preferences`, `tenant_config`
 - **Monitoring**: `queue_health`, `worker_performance`
 
-### LOW Traffic (<1K ops.md)
+### LOW Traffic (<1K ops)
 - **Static Data**: `plans`, `permissions`, `staff_roles`
 - **Administrative**: `system_config`, `feature_flags`
 
@@ -87,7 +87,7 @@ Distribution Examples:
 CREATE TABLE users (id UUID PRIMARY KEY, ...);
 CREATE TABLE tenants (id UUID PRIMARY KEY, ...);
 CREATE TABLE tenant_users (...); -- Composite key
-```
+```markdown
 
 ### 2. External System Integration (VARCHAR)
 ```sql
@@ -95,21 +95,21 @@ CREATE TABLE tenant_users (...); -- Composite key
 CREATE TABLE subscriptions (id VARCHAR(255) PRIMARY KEY, ...);
 CREATE TABLE vps_instances (hostwinds_instance_id VARCHAR(255), ...);
 CREATE TABLE payments (stripe_payment_intent_id VARCHAR(255), ...);
-```
+```markdown
 
 ### 3. Natural Keys (VARCHAR)
 ```sql
 -- Use appropriate VARCHAR length for natural keys
 CREATE TABLE job_queues (name VARCHAR(100) PRIMARY KEY, ...);
 CREATE TABLE content_objects (storage_key VARCHAR(500) PRIMARY KEY, ...);
-```
+```markdown
 
 ### 4. Performance Optimization (BIGINT)
 ```sql
 -- Use BIGINT for high-traffic, low-security analytics
 CREATE TABLE campaign_analytics (id BIGINT PRIMARY KEY, ...);
 CREATE TABLE admin_audit_log (id BIGINT PRIMARY KEY, ...);
-```
+```markdown
 
 ### 5. Security Protection (UUID)
 ```sql
@@ -117,7 +117,7 @@ CREATE TABLE admin_audit_log (id BIGINT PRIMARY KEY, ...);
 CREATE TABLE companies (id UUID PRIMARY KEY, ...);
 CREATE TABLE leads (id UUID PRIMARY KEY, ...);
 CREATE TABLE transactional_emails (id UUID PRIMARY KEY, ...);
-```
+```markdown
 
 ## Migration Considerations
 
@@ -149,7 +149,7 @@ ALTER TABLE low_security_table ADD CONSTRAINT uk_id_uuid UNIQUE (id_uuid);
 ALTER TABLE low_security_table DROP CONSTRAINT pk_old_id CASCADE;
 ALTER TABLE low_security_table ADD CONSTRAINT pk_id_uuid PRIMARY KEY (id_uuid);
 ALTER TABLE low_security_table DROP COLUMN id_old;
-```
+```markdown
 
 ## Performance Impact Analysis
 
@@ -193,7 +193,7 @@ ALTER TABLE low_security_table DROP COLUMN id_old;
 
 ## Decision Tree for New Tables
 
-```
+```markdown
 Start: New Table Creation
     ↓
 Does table contain user data, credentials, or financial info?
@@ -215,7 +215,7 @@ Is this an analytics/aggregation table?
 Natural key available (name, external ID)?
     ├─ YES → VARCHAR (Natural Key)
     └─ NO → UUID (Default)
-```
+```markdown
 
 ## Current Implementation Status
 
@@ -241,12 +241,12 @@ Natural key available (name, external ID)?
 ## Security Traffic Matrix Integration
 
 ### Traffic Assessment Matrix
-- **CRITICAL Traffic (>100K ops.md)**: `content_objects`, `inbox_message_refs`, `email_opens`
-- **HIGH Traffic (10K-100K ops.md)**: `campaigns`, `job_logs`, `content_access_log`
-- **MEDIUM Traffic (1K-10K ops.md)**: `user_preferences`, `tenant_config`, `queue_health`
+- **CRITICAL Traffic (>100K ops)**: `content_objects`, `inbox_message_refs`, `email_opens`
+- **HIGH Traffic (10K-100K ops)**: `campaigns`, `job_logs`, `content_access_log`
+- **MEDIUM Traffic (1K-10K ops)**: `user_preferences`, `tenant_config`, `queue_health`
 
 ### Infrastructure Protection Measures
-- **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests.md)
+- **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests)
 - **Traffic Filtering**: UFW firewall rules with specific IP restrictions for SSH access
 - **DDoS Protection**: Cloudflare integration for traffic analysis and mitigation
 - **VPN Access**: Mandatory VPN for infrastructure management and database access
@@ -280,7 +280,7 @@ const trafficSecurity = {
     next();
   }
 };
-```
+```markdown
 
 ---
 
@@ -291,7 +291,7 @@ The current primary key strategy demonstrates excellent architectural judgment a
 For future table creation, use this matrix to ensure consistent and appropriate primary key selection across the system.
 
 **Related Documents**
-- [Security Framework](..md) - Comprehensive security architecture
-- [Security & Privacy Integration](..md) - Unified security and privacy approach
-- [Compliance Procedures](../detailed-compliance.md) - Regulatory compliance workflows
+- [Security Framework](.) - Comprehensive security architecture
+- [Security & Privacy Integration](.) - Unified security and privacy approach
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
 ---

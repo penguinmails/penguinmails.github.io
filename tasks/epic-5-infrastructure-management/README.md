@@ -7,12 +7,15 @@
 ## Overview
 
 ### Objective
+
 To build backend services that communicate with the Hostwind API to monitor VPS and IP state. This epic focuses on visibility: creating a secure API client, database schemas and migrations, a scheduled sync job to maintain a local representation of infrastructure, and tenant-aware internal APIs to surface the data.
 
 ### Description
+
 Establish a reliable connection to Hostwind to fetch VPS and IP metadata on a recurring basis. This epic emphasizes read/visibility (no provisioning/deprovisioning). Deliverables include database schemas, a Hostwind client, a synchronization service and cron route, and tenant-aware internal API endpoints for the frontend and operations tooling.
 
 ### Prerequisites
+
 - Epic 1 completed (Next.js app, Drizzle ORM, environment variables configured)
 - A Hostwind account with API access and a generated API key
 - At least one VPS manually provisioned in Hostwind for initial test data
@@ -42,8 +45,8 @@ This epic provides the infrastructure visibility layer required by the platform'
 
 Refer to the project-level documentation for implementation guidelines, architecture, and operations runbooks that apply to this epic:
 
-- [Technical Architecture — Overview](../docs/technical/architecture/overview.md)
-- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Operations: Infrastructure Operations Management](../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Security & Compliance Framework](../docs/compliance-security/enterprise/security-framework.md)
-- [Quick Setup / Getting Started](../docs/quick-setup.md)
+- [Technical Architecture — Overview](../docs/technical/architecture/overview)
+- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure Operations Management](../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Security & Compliance Framework](../docs/compliance-security/enterprise/security-framework)
+- [Quick Setup / Getting Started](../docs/quick-setup)

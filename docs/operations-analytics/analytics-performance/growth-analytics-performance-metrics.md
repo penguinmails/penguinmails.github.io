@@ -19,6 +19,7 @@ description: "Comprehensive growth analytics and performance metrics for enterpr
 ## Growth Metrics Framework
 
 ### **Purpose**
+
 This framework establishes comprehensive metrics and methodologies for tracking PenguinMails growth across user acquisition, market expansion, revenue scaling, and sustainable development. It provides frameworks for measuring growth efficiency, predicting future performance, and optimizing growth strategies.
 
 ---
@@ -26,12 +27,14 @@ This framework establishes comprehensive metrics and methodologies for tracking 
 ## Acquisition Metrics
 
 ### **Top-of-Funnel Metrics**
+
 - **Website Visitors**: Total unique visitors to marketing pages
 - **Marketing Qualified Leads (MQLs)**: Prospects showing buying intent
 - **Sales Qualified Leads (SQLs)**: Leads ready for sales engagement
 - **Trial Signups**: Users who start free trial or demo
 
 ### **Conversion Metrics**
+
 ```typescript
 interface ConversionFunnel {
   visitors: number;
@@ -50,13 +53,13 @@ interface ConversionFunnel {
 // Calculate conversion rates
 const calculateConversionRates = (funnel: ConversionFunnel) => {
   return {
-    signupRate: (funnel.signups .md) * 100,
-    activationRate: (funnel.activations .md) * 100,
-    conversionRate: (funnel.conversions .md) * 100,
-    overallRate: (funnel.conversions .md) * 100
+    signupRate: (funnel.signups ) * 100,
+    activationRate: (funnel.activations ) * 100,
+    conversionRate: (funnel.conversions ) * 100,
+    overallRate: (funnel.conversions ) * 100
   };
 };
-```
+```markdown
 
 ### **Channel Performance**
 - **Cost Per Acquisition (CPA)**: Marketing spend divided by new customers
@@ -97,12 +100,12 @@ const trackFeatureAdoption = (feature: string, userBase: User[]) => {
     feature,
     totalUsers: userBase.length,
     activeUsers: activeUsers.length,
-    adoptionRate: (activeUsers.length .md) * 100,
+    adoptionRate: (activeUsers.length ) * 100,
     averageTimeToAdopt: calculateAverageTimeToAdopt(activeUsers, feature),
     averageUsage: calculateAverageUsage(activeUsers, feature)
   };
 };
-```
+```markdown
 
 ### **Account Expansion**
 - **Upsell Rate**: Percentage of customers upgrading plans
@@ -135,12 +138,12 @@ interface GeographicMetrics {
 const calculateMarketPenetration = (metrics: GeographicMetrics) => {
   return {
     ...metrics,
-    penetrationRate: (metrics.users .md) * 100,
+    penetrationRate: (metrics.users ) * 100,
     revenuePerUser: metrics.revenue / metrics.users,
     growthEfficiency: metrics.growthRate / metrics.penetrationRate
   };
 };
-```
+```markdown
 
 ### **Vertical Expansion**
 - **Industry Distribution**: User base across different industries
@@ -187,11 +190,11 @@ const calculateGrowthAccounting = (accounting: GrowthAccounting) => {
       organicGrowth,
       expansionGrowth,
       totalGrowth,
-      growthRate: (totalGrowth .md) * 100
+      growthRate: (totalGrowth ) * 100
     }
   };
 };
-```
+```markdown
 
 ### **Efficiency Ratios**
 - **Blended CAC Payback**: Time to recover acquisition costs across all channels
@@ -250,7 +253,7 @@ const projectGrowth = (model: GrowthModel): GrowthProjection => {
     confidence: calculateProjectionConfidence(model)
   };
 };
-```
+```markdown
 
 ### **Leading Indicators**
 - **Trial-to-Paid Conversion Trends**: Early signal of acquisition quality
@@ -291,15 +294,15 @@ const evaluateContentPerformance = (content: ContentMetrics) => {
   return {
     ...content,
     performance: {
-      engagementRate: (content.engagements .md) * 100,
-      conversionRate: (content.conversions .md) * 100,
+      engagementRate: (content.engagements ) * 100,
+      conversionRate: (content.conversions ) * 100,
       costPerEngagement: content.cost / content.engagements,
       costPerConversion: content.cost / content.conversions,
       roi: (content.conversions * 50) / content.cost // Assuming $50 avg deal size
     }
   };
 };
-```
+```markdown
 
 ### **Paid Advertising Optimization**
 - **Cost Per Click (CPC)**: Average cost for ad clicks
@@ -371,7 +374,7 @@ const optimizeResourceAllocation = (
     expectedOutcomes: projectAllocationOutcomes(recommendedAllocation, growthGoals)
   };
 };
-```
+```markdown
 
 ### **Growth Scaling Strategy**
 - **Phased Expansion**: Gradual market and capability expansion
@@ -384,7 +387,7 @@ const optimizeResourceAllocation = (
 ## Growth Analytics Dashboard
 
 ### **Growth Dashboard**
-```
+```markdown
 Growth Overview
 ├── Total Users: X (↑X% MoM)
 ├── Monthly Revenue: $X (↑X% MoM)
@@ -402,10 +405,10 @@ Expansion Metrics
 ├── Expansion Revenue: $X
 ├── Upsell Rate: X%
 └── Cross-sell Rate: X%
-```
+```markdown
 
 ### **Channel Performance Dashboard**
-```
+```markdown
 Channel Overview
 ├── Organic Search: X users ($X CAC)
 ├── Paid Search: X users ($X CAC)
@@ -418,10 +421,10 @@ Channel Efficiency
 ├── Most Efficient: [Channel] ($X CAC)
 ├── Highest Volume: [Channel] (X users)
 └── Best ROI: [Channel] (X:1 ratio)
-```
+```markdown
 
 ### **Predictive Analytics Dashboard**
-```
+```markdown
 Growth Projections
 ├── Next Month Users: X (±X%)
 ├── Next Quarter Revenue: $X (±X%)
@@ -433,7 +436,7 @@ Risk Indicators
 ├── Market Saturation: X%
 ├── Competitive Pressure: High/Medium/Low
 └── Economic Impact: Positive/Neutral/Negative
-```
+```markdown
 
 ---
 
@@ -461,7 +464,7 @@ const analyzeCohorts = (cohorts: CohortMetrics[]) => {
     retentionCurve: generateRetentionCurve(cohort.retention)
   }));
 };
-```
+```markdown
 
 ### **Attribution Modeling**
 ```typescript
@@ -486,13 +489,13 @@ const calculateAttribution = (model: AttributionModel) => {
     firstTouch: { [model.touchpoints[0].channel]: totalValue },
     lastTouch: { [model.touchpoints[touchpointCount - 1].channel]: totalValue },
     linear: model.touchpoints.reduce((acc, touchpoint) => {
-      acc[touchpoint.channel] = (acc[touchpoint.channel] || 0) + (totalValue .md);
+      acc[touchpoint.channel] = (acc[touchpoint.channel] || 0) + (totalValue );
       return acc;
     }, {}),
     timeDecay: calculateTimeDecayAttribution(model.touchpoints, totalValue)
   };
 };
-```
+```markdown
 
 ### **Growth Experimentation**
 ```typescript
@@ -515,7 +518,7 @@ interface GrowthExperiment {
 // Analyze growth experiment results
 const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
   const { controlRate, treatmentRate } = experiment.results;
-  const lift = ((treatmentRate - controlRate) .md) * 100;
+  const lift = ((treatmentRate - controlRate) ) * 100;
   const confidence = calculateStatisticalSignificance(
     experiment.sampleSize,
     controlRate,
@@ -530,37 +533,37 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
     recommendation: lift > 0 && confidence >= 95 ? 'Implement' : 'Keep control'
   };
 };
-```
+```markdown
 
 ---
 
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](..md)) - Main operations framework
-- [User Analytics](..md)) - User behavior analysis
-- [Product Analytics](..md)) - Feature performance analysis
-- [Metrics & KPIs](..md)) - Comprehensive KPI framework
+- [Operations Analytics Overview](.)) - Main operations framework
+- [User Analytics](.)) - User behavior analysis
+- [Product Analytics](.)) - Feature performance analysis
+- [Metrics & KPIs](.)) - Comprehensive KPI framework
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy.md)) - Strategic alignment
-- [Business Model](../business/model.md)) - Revenue model and unit economics
-- [Market Analysis](../business/market-analysis.md)) - Market positioning
-- [Value Proposition](../business/value-proposition.md)) - Competitive differentiation
+- [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
+- [Business Model](/docs/business/model/overview)) - Revenue model and unit economics
+- [Market Analysis](/docs/business/market-analysis/overview)) - Market positioning
+- [Value Proposition](/docs/business/value-proposition/overview)) - Competitive differentiation
 
 ### **Technical Architecture**
-- [Technical Architecture Overview](../technical/architecture.md)) - System design
-- [Analytics Architecture](../technical/architecture/detailed-technical.md)) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical.md)) - System management
+- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Analytics Architecture](/docs/technical/architecture/detailed-technical)) - Technical implementation
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
 
 ### **User Experience**
-- [User Journeys Overview](../user-journeys.md)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys.md)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys.md)) - UX optimization
+- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
 
 ### **Operations Management**
-- [Organization Analytics](../operations-management.md)) - Team and organization management
-- [Team Performance](../team-performance.md)) - Team coordination and development
+- [Organization Analytics](/docs/operations-analytics/operations-management)) - Team and organization management
+- [Team Performance](/docs/operations-analytics/team-performance)) - Team coordination and development
 
 ---
 
@@ -568,10 +571,10 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 Navigate to specific growth and analytics areas:
 
-- **[User Analytics](..md))** → User behavior and engagement analysis
-- **[Product Analytics](..md))** → Feature performance and optimization
-- **[Metrics & KPIs](..md))** → Comprehensive KPI framework
-- **[Team Performance](../team-performance.md))** → Team coordination and development
+- **[User Analytics](.))** → User behavior and engagement analysis
+- **[Product Analytics](.))** → Feature performance and optimization
+- **[Metrics & KPIs](.))** → Comprehensive KPI framework
+- **[Team Performance](/docs/operations-analytics/team-performance))** → Team coordination and development
 
 ---
 

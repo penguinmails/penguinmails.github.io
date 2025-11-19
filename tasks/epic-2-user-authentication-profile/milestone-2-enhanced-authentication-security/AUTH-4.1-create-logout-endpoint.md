@@ -11,7 +11,8 @@ Create a protected POST API route at `/api/auth/logout/route.ts`. This endpoint 
 
 ## Context
 
-Session management is critical for security. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails uses:
+Session management is critical for security. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails uses:
+
 - **Session Management:** JWT-based session management via NileDB
 - **Security:** Proper session invalidation prevents unauthorized access
 
@@ -73,6 +74,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -81,6 +83,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (401):**
+
 ```json
 {
   "error": "Unauthorized"
@@ -98,8 +101,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Session management
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Security requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Session management
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Security requirements
 
 ## Dependencies
 
@@ -117,5 +120,3 @@ export async function POST(request: NextRequest) {
 - [ ] Test that user can log in again after logout
 - [ ] Test error handling for NileDB failures
 - [ ] Verify logout works with multiple concurrent sessions (if applicable)
-
-

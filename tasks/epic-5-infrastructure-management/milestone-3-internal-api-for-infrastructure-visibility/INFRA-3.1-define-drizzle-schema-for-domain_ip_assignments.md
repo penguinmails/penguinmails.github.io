@@ -22,5 +22,5 @@ Create a schema to link domains and `smtp_ip_addresses`. Add the schema file `do
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (DB design & indexing)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (DB design & indexing)](../../docs/implementation-technical/development-guidelines/development-standards)

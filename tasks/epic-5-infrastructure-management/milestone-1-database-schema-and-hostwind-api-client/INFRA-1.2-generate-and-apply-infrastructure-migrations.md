@@ -21,5 +21,5 @@ Use the Drizzle Kit CLI to generate a new migration that adds `vps_instances` an
 
 ## Related documentation
 
-- [Development Standards (migrations & DB conventions)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
+- [Development Standards (migrations & DB conventions)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)

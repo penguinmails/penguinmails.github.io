@@ -11,7 +11,7 @@ Create a public POST API route at `/api/auth/reset-password/route.ts`. This endp
 
 ## Context
 
-Password reset completion is the second step in the password recovery flow. According to the [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md), secure password management is essential for data protection. This endpoint allows users to complete the password reset process initiated in AUTH-4.2.
+Password reset completion is the second step in the password recovery flow. According to the [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards), secure password management is essential for data protection. This endpoint allows users to complete the password reset process initiated in AUTH-4.2.
 
 ## Acceptance Criteria
 
@@ -89,6 +89,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "success": true,
@@ -97,6 +98,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400) - Invalid Token:**
+
 ```json
 {
   "error": "Invalid or expired reset token"
@@ -104,6 +106,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400) - Validation Error:**
+
 ```json
 {
   "error": "Validation failed",
@@ -129,8 +132,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Password security requirements
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Account security features
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Password security requirements
+- [Features & Capabilities](../../docs/features-capabilities/index) - Account security features
 
 ## Dependencies
 
@@ -149,5 +152,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify user can log in with new password after reset
 - [ ] Test error handling for NileDB failures
 - [ ] Test that old password no longer works after reset
-
-

@@ -11,7 +11,7 @@ Create a public GET API route at `/api/plans/route.ts`. This endpoint will query
 
 ## Context
 
-Listing plans is essential for the pricing page. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need to see available subscription options. This endpoint enables the frontend to display pricing information without requiring authentication.
+Listing plans is essential for the pricing page. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need to see available subscription options. This endpoint enables the frontend to display pricing information without requiring authentication.
 
 ## Acceptance Criteria
 
@@ -69,6 +69,7 @@ export async function GET() {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "plans": [
@@ -102,8 +103,8 @@ export async function GET() {
 
 ## Related Documentation
 
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Pricing features
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Subscription tiers
+- [Features & Capabilities](../../docs/features-capabilities/index) - Pricing features
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Subscription tiers
 
 ## Dependencies
 
@@ -120,4 +121,3 @@ export async function GET() {
 - [ ] Verify response includes all relevant plan information
 - [ ] Test error handling for database failures
 - [ ] Verify response format matches expected structure
-

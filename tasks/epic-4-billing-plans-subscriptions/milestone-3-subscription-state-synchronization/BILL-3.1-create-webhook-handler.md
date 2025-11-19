@@ -11,7 +11,7 @@ Create a public POST API route at `/api/webhooks/stripe/route.ts`. This endpoint
 
 ## Context
 
-Webhook handling is essential for keeping subscription state synchronized with Stripe. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), reliable event processing is critical for maintaining accurate billing state. This endpoint receives all Stripe billing events.
+Webhook handling is essential for keeping subscription state synchronized with Stripe. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), reliable event processing is critical for maintaining accurate billing state. This endpoint receives all Stripe billing events.
 
 ## Acceptance Criteria
 
@@ -134,7 +134,7 @@ export const dynamic = 'force-dynamic';
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Webhook processing
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Webhook processing
 - [Stripe Webhooks Documentation](https://stripe.com/docs/webhooks) - Official Stripe docs
 
 ## Dependencies
@@ -151,4 +151,3 @@ export const dynamic = 'force-dynamic';
 - [ ] Verify raw body is accessible for signature verification
 - [ ] Test error handling for malformed requests
 - [ ] Verify webhook can receive events from Stripe (use Stripe CLI for testing)
-

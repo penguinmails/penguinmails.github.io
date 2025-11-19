@@ -4,9 +4,9 @@
 
 ## Tickets
 
-- [TEN-3.1](./TEN-3.1-list-tenant-members-endpoint.md) - Create API Endpoint to List Tenant Members (GET /api/tenants/users)
-- [TEN-3.2](./TEN-3.2-invite-user-endpoint.md) - Create API Endpoint to Invite a User (POST /api/tenants/invites)
-- [TEN-3.3](./TEN-3.3-remove-user-endpoint.md) - Create API Endpoint to Remove a User (DELETE /api/tenants/users/{userId})
+- [TEN-3.1](./TEN-3.1-list-tenant-members-endpoint) - Create API Endpoint to List Tenant Members (GET /api/tenants/users)
+- [TEN-3.2](./TEN-3.2-invite-user-endpoint) - Create API Endpoint to Invite a User (POST /api/tenants/invites)
+- [TEN-3.3](./TEN-3.3-remove-user-endpoint) - Create API Endpoint to Remove a User (DELETE /api/tenants/users/{userId})
 
 ## Dependencies
 
@@ -24,6 +24,4 @@
 
 ## Context
 
-This milestone implements team collaboration features. According to the [Team Workflow](../../docs/quick-access/team-workflow.md), PenguinMails uses a 4-tier staff hierarchy and team management. This milestone enables the tenant-level user management that supports team collaboration.
-
-
+This milestone implements team collaboration features. According to the [Team Workflow](../../docs/quick-access/team-workflow), PenguinMails uses a 4-tier staff hierarchy and team management. This milestone enables the tenant-level user management that supports team collaboration.

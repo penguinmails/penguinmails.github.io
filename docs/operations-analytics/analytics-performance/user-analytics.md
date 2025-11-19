@@ -19,6 +19,7 @@ last_modified_date: "2025-10-28"
 ## Enterprise Analytics Architecture
 
 ### **Data Collection Layer**
+
 - **PostHog Integration**: Event tracking and user journey analysis
 - **Frontend Tracking**: Page views, clicks, form interactions
 - **Backend Tracking**: API usage, feature utilization, performance metrics
@@ -26,6 +27,7 @@ last_modified_date: "2025-10-28"
 - **Integration Tracking**: Third-party service usage and errors
 
 ### **Data Processing Pipeline**
+
 ```typescript
 interface AnalyticsEvent {
   event: string;
@@ -49,7 +51,7 @@ interface UserProfile {
   };
   events: AnalyticsEvent[];
 }
-```
+```markdown
 
 ### **Analytics Database Design**
 ```sql
@@ -75,7 +77,7 @@ CREATE TABLE user_properties (
     total_sessions INTEGER DEFAULT 0,
     total_events INTEGER DEFAULT 0
 );
-```
+```markdown
 
 ---
 
@@ -114,21 +116,21 @@ interface ConversionFunnel {
     conversionRate: number;   // paying / firstCampaign
   };
 }
-```
+```markdown
 
 ---
 
 ## User Journey Analysis
 
 ### **Onboarding Funnel**
-```
+```markdown
 Visitor → Signup → Email Verification → Company Setup
     ↓         ↓            ↓              ↓
   100%     15-20%        85-90%         70-80%
     ↓         ↓            ↓              ↓
 Team Setup → Stripe → IP Config → First Campaign
   90-95%   80-85%    75-80%       60-70%
-```
+```markdown
 
 ### **Critical Path Analysis**
 - **Drop-off Points**: Identify where users abandon the onboarding flow
@@ -156,7 +158,7 @@ graph TD
     L --> M[Abandonment]
     M --> N[Recovery Email]
     N --> E
-```
+```markdown
 
 ---
 
@@ -182,7 +184,7 @@ interface UserCohort {
   };
   lifecycle: 'trial' | 'active' | 'churned' | 'dormant';
 }
-```
+```markdown
 
 ### **Feature Usage Patterns**
 - **High-Value Features**: Campaigns, templates, analytics
@@ -217,7 +219,7 @@ interface ExperimentVariant {
   conversionRate: number;
   sampleSize: number;
 }
-```
+```markdown
 
 ### **Key Test Categories**
 - **Onboarding Optimization**: Signup flow and user activation
@@ -249,12 +251,12 @@ const calculateCohortRetention = (
       user.lastActive >= new Date(cohort.acquisitionDate.getTime() + month * 30 * 24 * 60 * 60 * 1000)
     ).length;
 
-    retention.push((activeUsers .md) * 100);
+    retention.push((activeUsers ) * 100);
   }
 
   return retention;
 };
-```
+```markdown
 
 ### **Churn Prediction**
 - **Early Warning Signals**: Decreased login frequency, feature usage decline
@@ -326,7 +328,7 @@ interface CohortAnalysis {
     byCompanySize: Record<string, CohortMetrics>;
   };
 }
-```
+```markdown
 
 ---
 
@@ -355,7 +357,7 @@ interface CohortAnalysis {
 ## Reporting and Dashboards
 
 ### **Executive Dashboard**
-```
+```markdown
 User Overview
 ├── Total Users: X (↑X% MoM)
 ├── Active Users: X (↑X% MoM)
@@ -367,10 +369,10 @@ Engagement Metrics
 ├── Pages per Session: X
 ├── Feature Adoption: X%
 └── Support Tickets: X per user
-```
+```markdown
 
 ### **Product Dashboard**
-```
+```markdown
 Feature Usage
 ├── Campaign Creation: X users
 ├── Template Usage: X users
@@ -382,10 +384,10 @@ User Flows
 ├── Time to First Campaign: X days
 ├── Power User Rate: X%
 └── Feature Discovery Rate: X%
-```
+```markdown
 
 ### **Marketing Dashboard**
-```
+```markdown
 Acquisition Funnel
 ├── Visitors: X
 ├── Signups: X (X% conversion)
@@ -397,36 +399,36 @@ Campaign Performance
 ├── Click Rates: X%
 ├── Conversion Rates: X%
 └── ROI: X%
-```
+```markdown
 
 ---
 
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
-- [Operations Analytics Overview](..md) - Main operations framework
-- [Performance KPIs](..md) - Comprehensive KPI framework
-- [Product Analytics](..md) - Feature performance analysis
+- [Operations Analytics Overview](.) - Main operations framework
+- [Performance KPIs](.) - Comprehensive KPI framework
+- [Product Analytics](.) - Feature performance analysis
 
 ### **Business Strategy**
-- [Business Strategy Overview](../business/strategy.md) - Strategic alignment
-- [Market Analysis](../business/market-analysis.md) - Market positioning
-- [User Personas](../business/user-personas.md) - Target audience profiles
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
+- [Market Analysis](/docs/business/market-analysis/overview) - Market positioning
+- [User Personas](../business/user-personas) - Target audience profiles
 
 ### **Technical Architecture**
-- [Analytics Architecture](../technical/architecture/detailed-technical.md) - Technical implementation
-- [Infrastructure Operations](../technical/architecture/detailed-technical.md) - System monitoring
-- [Integration Guide](../technical/architecture/detailed-technical.md) - Analytics integrations
+- [Analytics Architecture](/docs/technical/architecture/detailed-technical) - Technical implementation
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System monitoring
+- [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
-- [User Journeys Overview](../user-experience-journeys.md) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys.md) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys.md) - UX optimization
+- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- [Onboarding Journey](../user-experience-journeys/detailed-journeys) - User activation
+- [User Interaction Patterns](../user-experience-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](../compliance-security.md) - Regulatory compliance
-- [Data Privacy Policy](../compliance-security/international.md) - Privacy compliance
-- [Security Framework](../compliance-security/enterprise.md) - Security operations
+- [Compliance Overview](/docs/compliance-security) - Regulatory compliance
+- [Data Privacy Policy](/docs/compliance-security/international) - Privacy compliance
+- [Security Framework](/docs/compliance-security/enterprise) - Security operations
 
 ---
 
@@ -434,9 +436,9 @@ Campaign Performance
 
 Navigate to specific analytics areas:
 
-- **[Product Analytics](..md)** → Feature adoption and product performance
-- **[Metrics & KPIs](..md)** → Comprehensive KPI framework
-- **[Operations Management](../operations-management.md)** → Operational procedures and workflows
+- **[Product Analytics](.)** → Feature adoption and product performance
+- **[Metrics & KPIs](.)** → Comprehensive KPI framework
+- **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
 
 ---
 

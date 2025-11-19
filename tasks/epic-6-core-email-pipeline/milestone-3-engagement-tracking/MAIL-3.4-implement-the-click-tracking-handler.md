@@ -22,5 +22,5 @@ For requests to `/api/track/click`, the endpoint will: 1) Verify the JWT, 2) Pus
 
 ## Related documentation
 
-- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
-- [Development Standards (redirect handling & security)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework)
+- [Development Standards (redirect handling & security)](../../docs/implementation-technical/development-guidelines/development-standards)

@@ -16,7 +16,7 @@ It:
 - Aggregates from:
   - Backbone API surfaces (ESP billing, system health, cost signals)
   - System events and operational data
-  - Queue.md)
+  - Queue
   - External intelligence sources (competitive analysis, market data)
 - Serves:
   - Executive dashboards and monitoring
@@ -45,7 +45,7 @@ Headers:
 ```http
 Authorization: Bearer <token>
 Content-Type: application/json
-```
+```markdown
 
 Access Requirements:
 
@@ -62,7 +62,7 @@ Access Requirements:
   - Role-based access controls for all user types
 
 Reference:
-- Central system coordination per [System Architecture](../architecture-system.md)
+- Central system coordination per [System Architecture](/docs/implementation-technical/architecture-system/architecture-overview)
 - Role management and access control for all operations
 
 ---
@@ -83,7 +83,7 @@ Success:
     "last_updated": "ISO8601"
   }
 }
-```
+```markdown
 
 Error:
 
@@ -99,7 +99,7 @@ Error:
   },
   "timestamp": "ISO8601"
 }
-```
+```markdown
 
 Key error codes:
 
@@ -161,7 +161,7 @@ System Data Example:
     "last_updated": "2025-12-19T10:30:00Z"
   }
 }
-```
+```markdown
 
 System Sources:
 
@@ -223,7 +223,7 @@ System Response Example:
     }
   }
 }
-```
+```markdown
 
 Access Rules:
 
@@ -265,7 +265,7 @@ Response Example:
     ]
   }
 }
-```
+```markdown
 
 Source:
 
@@ -305,7 +305,7 @@ Response Example:
     }
   }
 }
-```
+```markdown
 
 Access Rules:
 
@@ -341,7 +341,7 @@ Response:
     }
   }
 }
-```
+```markdown
 
 Source:
 
@@ -385,7 +385,7 @@ Response Example:
     }
   }
 }
-```
+```markdown
 
 Constraints:
 
@@ -428,7 +428,7 @@ Example Degraded Response:
     "data_sources_limited": ["esp_billing", "backbone_health"]
   }
 }
-```
+```markdown
 
 ---
 

@@ -11,7 +11,8 @@ Create a protected GET API route at `/api/users/me/route.ts`. This endpoint will
 
 ## Context
 
-This endpoint extends the basic user context endpoint from Epic 1 (CORE-3.5) to include user preferences. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need to access their profile information to:
+This endpoint extends the basic user context endpoint from Epic 1 (CORE-3.5) to include user preferences. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need to access their profile information to:
+
 - View their account details
 - See their current preferences
 - Understand their account settings
@@ -106,6 +107,7 @@ export async function GET(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "id": "user-uuid",
@@ -124,6 +126,7 @@ export async function GET(request: NextRequest) {
 ```
 
 **With Default Preferences (if no preferences row exists):**
+
 ```json
 {
   "id": "user-uuid",
@@ -150,10 +153,10 @@ export async function GET(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - API patterns
-- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - **Primary reference** for API development standards and patterns
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Code quality and API development guidelines
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - API development
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - API patterns
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference) - **Primary reference** for API development standards and patterns
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards) - Code quality and API development guidelines
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - API development
 
 ## Dependencies
 
@@ -172,5 +175,3 @@ export async function GET(request: NextRequest) {
 - [ ] Test error handling for database failures
 - [ ] Verify response format matches expected structure
 - [ ] Test with different user accounts to verify data isolation
-
-

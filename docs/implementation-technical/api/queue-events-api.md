@@ -17,9 +17,9 @@ This contract defines REST endpoints for:
 
 It aligns with:
 
-- [PostHog Business Events Specification](../analytics-integration.md)
-- [System Architecture Overview](../architecture-system.md)
-- [Executive API Contract](executive-api)
+- [PostHog Business Events Specification](/docs/implementation-technical/analytics-integration/posthog-business-events-specification)
+- [System Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview)
+- [Executive API Contract](/docs/implementation-technical/api/executive-api)
 - System operations requirements (monitoring, alerts, event tracking)
 
 All endpoints focus on:
@@ -74,7 +74,7 @@ Body (aligned with system operations):
     "follow_up_required": true
   }
 }
-```
+```markdown
 
 Behavior:
 
@@ -96,7 +96,7 @@ Response:
     "notification_generated": true
   }
 }
-```
+```markdown
 
 Constraints:
 
@@ -163,7 +163,7 @@ Response:
     "next_review_date": "2025-12-26T09:00:00Z"
   }
 }
-```
+```markdown
 
 Rules:
 
@@ -182,7 +182,7 @@ Body (optional):
   "reviewed": true,
   "notes": "System trend acknowledged for quarterly review"
 }
-```
+```markdown
 
 Behavior:
 
@@ -202,7 +202,7 @@ Body:
   "action": "quarterly_review",
   "context": "Q1 operational planning cycle"
 }
-```
+```markdown
 
 Behavior:
 
@@ -217,7 +217,7 @@ Behavior:
 This API defines system alert semantics for all operations:
 
 - Event types and payload shapes aligned with:
-  - [PostHog Business Events Specification](../analytics-integration.md)
+  - [PostHog Business Events Specification](/docs/implementation-technical/analytics-integration/posthog-business-events-specification)
 - Processing with appropriate alert routing:
   - Real-time alerts for critical issues
   - Daily summaries for operational updates

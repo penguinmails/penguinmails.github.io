@@ -27,6 +27,7 @@ This document outlines regulatory compliance procedures for PenguinMails, ensuri
 ## 2. **Regulatory Framework**
 
 ### **Primary Regulations**
+
 - **GDPR**: European General Data Protection Regulation
 - **CAN-SPAM**: US Controlling the Assault of Non-Solicited Pornography and Marketing Act
 - **CCPA**: California Consumer Privacy Act
@@ -34,12 +35,14 @@ This document outlines regulatory compliance procedures for PenguinMails, ensuri
 - **PIPEDA**: Personal Information Protection and Electronic Documents Act
 
 ### **Email-Specific Regulations**
+
 - **TCPA**: Telephone Consumer Protection Act (SMS compliance)
 - **CTIA**: Cellular Telecommunications Industry Association guidelines
 - **Email Sender & Provider Coalition**: Industry best practices
 - **Google & Yahoo Sender Requirements**: Major ISP policies
 
 ### **Data Protection Standards**
+
 - **ISO 27001**: Information security management systems
 - **SOC 2**: Service Organization Control standards
 - **PCI DSS**: Payment Card Industry Data Security Standard
@@ -50,6 +53,7 @@ This document outlines regulatory compliance procedures for PenguinMails, ensuri
 ### **GDPR Compliance Procedures**
 
 #### **Data Subject Rights**
+
 - **Right to Access**: Provide data copies within 30 days
 - **Right to Rectification**: Correct inaccurate personal data
 - **Right to Erasure**: Delete personal data ("right to be forgotten")
@@ -58,6 +62,7 @@ This document outlines regulatory compliance procedures for PenguinMails, ensuri
 - **Right to Object**: Object to processing based on legitimate interests
 
 #### **GDPR Workflow**
+
 ```mermaid
 graph TD
     A[DSR Received] --> B{Request Type}
@@ -70,7 +75,7 @@ graph TD
     F --> G[Process within 30 days]
     G --> H[Document Response]
     H --> I[Update Records]
-```
+```markdown
 
 ### **CCPA Compliance Procedures**
 
@@ -184,7 +189,7 @@ graph TD
     I --> J[Send Notifications]
     J --> K[Document Incident]
     K --> L[Post-Incident Review]
-```
+```markdown
 
 ### **Breach Response Team**
 - **Incident Commander**: Overall coordination and decision making
@@ -260,33 +265,33 @@ graph TD
 ## 12. **Decision Trees**
 
 ### **Data Processing Decision Tree**
-```
+```markdown
 Processing personal data?
 ├── Yes → Privacy impact assessment required
 │   ├── High risk? → DPIA mandatory
 │   └── Low risk? → Basic assessment
 └── No → Standard data handling procedures
-```
+```markdown
 
 ### **Breach Notification Decision Tree**
-```
+```markdown
 Personal data breach?
 ├── Yes → Assess severity and impact
 │   ├── High risk to individuals? → Notify within 72 hours
 │   └── Low risk? → Document for 72-hour assessment
 └── No → Document incident without notification
-```
+```markdown
 
 ---
 
 ## Related Documents
-- [Security & Compliance Gaps Analysis](../../enterprise.md) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
-- [Security Framework](../../enterprise.md) - Security procedures and protocols
-- [SOP Guidelines](..md) - Standard operating procedures
-- [Data Privacy Policy](../../international.md) - Customer-facing privacy information
-- [Security Documentation](../../enterprise.md) - Security procedures and protocols
-- [Incident Response Plan](../../../../operations-analytics/operations-management.md) - Detailed breach response procedures
-- [Vendor Management Policy](../../international.md) - Third-party vendor compliance
+- [Security & Compliance Gaps Analysis](../../enterprise) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
+- [Security Framework](../../enterprise) - Security procedures and protocols
+- [SOP Guidelines](.) - Standard operating procedures
+- [Data Privacy Policy](../../international) - Customer-facing privacy information
+- [Security Documentation](../../enterprise) - Security procedures and protocols
+- [Incident Response Plan](../../../../operations-analytics/operations-management) - Detailed breach response procedures
+- [Vendor Management Policy](../../international) - Third-party vendor compliance
 
 **Implementation Timeline**: Some compliance features are scheduled for 2026 based on infrastructure capacity and resource constraints.
 

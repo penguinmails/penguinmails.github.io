@@ -8,9 +8,9 @@ persona: "Documentation Users"
 
 # OLAP Analytics Schema Guide
 
-**Architecture Foundation**: Business intelligence and analytics system for enterprise decision-making  
-**Complexity Level**: Expert - Advanced Data Warehousing & Analytics Architecture  
-**Target Audience**: Data Engineers, Analytics Teams, Business Intelligence Developers  
+**Architecture Foundation**: Business intelligence and analytics system for enterprise decision-making
+**Complexity Level**: Expert - Advanced Data Warehousing & Analytics Architecture
+**Target Audience**: Data Engineers, Analytics Teams, Business Intelligence Developers
 **Last Updated**: 2025-11-01
 
 ## Executive Overview
@@ -35,7 +35,7 @@ This implementation is part of your **complete business intelligence experience*
 
 Our OLAP schema implements a **comprehensive analytics architecture** that combines **real-time processing** with **historical analysis**, creating an enterprise-grade business intelligence platform that handles **mission-critical decision support** with **reliable aggregation** and **advanced security**.
 
-```
+```markdown
 📊 Analytics Schema Architecture
 ├── Business Analytics (Core Intelligence)
 │   ├── billing_analytics (usage tracking per period)
@@ -59,7 +59,7 @@ Our OLAP schema implements a **comprehensive analytics architecture** that combi
     ├── row_level_security (tenant isolation)
     ├── data_classification (privacy protection)
     └── audit_logging (regulatory compliance)
-```
+```markdown
 
 ### Database Tier Integration
 
@@ -91,7 +91,7 @@ Performance Optimization Layer (Query Excellence):
 ├── Data partitioning (scalable storage)
 ├── Connection pooling (resource efficiency)
 └── Parallel processing (high-performance analytics)
-```
+```markdown
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant analytics processing**, **automatic failover**, and **comprehensive monitoring** systems that ensure **reliable business intelligence** for all customers.
 
@@ -107,7 +107,7 @@ Performance Optimization Layer (Query Excellence):
 
 ```sql
 -- Billing Analytics - Usage tracking per billing period
-CREATE TABLE billing_analytics (.md)
+CREATE TABLE billing_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     tenant_id TEXT NOT NULL,
     subscription_id TEXT,
@@ -123,14 +123,14 @@ CREATE TABLE billing_analytics (.md)
 );
 
 -- Unique constraint to prevent duplicate periods
-CREATE UNIQUE INDEX idx_billing_analytics_tenant_period 
+CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
 ON billing_analytics(tenant_id, period_start, period_end);
 
 -- Indexes for common queries
 CREATE INDEX idx_billing_analytics_tenant ON billing_analytics(tenant_id);
 CREATE INDEX idx_billing_analytics_subscription ON billing_analytics(subscription_id);
 CREATE INDEX idx_billing_analytics_period ON billing_analytics(period_start, period_end);
-```
+```markdown
 
 **User Journey Integration**: This table provides **real-time usage visibility** that connects to **billing dashboards**, **customer success tools**, and **revenue optimization** to support your **complete business intelligence** experience.
 
@@ -147,7 +147,7 @@ CREATE INDEX idx_billing_analytics_period ON billing_analytics(period_start, per
 
 ```sql
 -- Campaign Analytics - Campaign performance metrics
-CREATE TABLE campaign_analytics (.md)
+CREATE TABLE campaign_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     campaign_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -170,7 +170,7 @@ CREATE INDEX idx_campaign_analytics_campaign ON campaign_analytics(campaign_id);
 CREATE INDEX idx_campaign_analytics_company ON campaign_analytics(company_id);
 CREATE INDEX idx_campaign_analytics_status ON campaign_analytics(status);
 CREATE INDEX idx_campaign_analytics_billing ON campaign_analytics(billing_id);
-```
+```markdown
 
 **Business Intelligence**: This analytics provide **actionable insights** into **campaign effectiveness**, **conversion optimization**, and **audience engagement** that drive **better marketing outcomes** and **revenue growth**.
 
@@ -188,7 +188,7 @@ CREATE INDEX idx_campaign_analytics_billing ON campaign_analytics(billing_id);
 
 ```sql
 -- Mailbox Analytics - Individual mailbox performance
-CREATE TABLE mailbox_analytics (.md)
+CREATE TABLE mailbox_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     mailbox_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -214,7 +214,7 @@ CREATE INDEX idx_mailbox_analytics_company ON mailbox_analytics(company_id);
 CREATE INDEX idx_mailbox_analytics_warmup ON mailbox_analytics(warmup_status);
 CREATE INDEX idx_mailbox_analytics_health ON mailbox_analytics(health_score);
 CREATE INDEX idx_mailbox_analytics_billing ON mailbox_analytics(billing_id);
-```
+```markdown
 
 **Strategic Alignment**: This analytics support our **deliverability excellence** by providing **real-time visibility** into **mailbox health**, **warmup progression**, and **reputation metrics** that ensure **consistent email delivery**.
 
@@ -231,7 +231,7 @@ CREATE INDEX idx_mailbox_analytics_billing ON mailbox_analytics(billing_id);
 
 ```sql
 -- Lead Analytics - Individual lead engagement
-CREATE TABLE lead_analytics (.md)
+CREATE TABLE lead_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     lead_id TEXT NOT NULL,
     campaign_id TEXT NOT NULL,
@@ -253,7 +253,7 @@ CREATE INDEX idx_lead_analytics_lead ON lead_analytics(lead_id);
 CREATE INDEX idx_lead_analytics_campaign ON lead_analytics(campaign_id);
 CREATE INDEX idx_lead_analytics_status ON lead_analytics(status);
 CREATE INDEX idx_lead_analytics_billing ON lead_analytics(billing_id);
-```
+```markdown
 
 **Business Value**: This analytics enable **precision targeting** and **conversion optimization** by providing **granular insights** into **customer behavior**, **engagement patterns**, and **response likelihood**.
 
@@ -270,7 +270,7 @@ CREATE INDEX idx_lead_analytics_billing ON lead_analytics(billing_id);
 
 ```sql
 -- Warmup Analytics - Email warmup progression
-CREATE TABLE warmup_analytics (.md)
+CREATE TABLE warmup_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     mailbox_id TEXT NOT NULL,
     company_id TEXT NOT NULL,
@@ -294,7 +294,7 @@ CREATE INDEX idx_warmup_analytics_company ON warmup_analytics(company_id);
 CREATE INDEX idx_warmup_analytics_health ON warmup_analytics(health_score);
 CREATE INDEX idx_warmup_analytics_progress ON warmup_analytics(progress_percentage);
 CREATE INDEX idx_warmup_analytics_billing ON warmup_analytics(billing_id);
-```
+```markdown
 
 **Strategic Foundation**: This analytics support our **deliverability excellence** by providing **progressive reputation building** insights that ensure **long-term email success** and **customer satisfaction**.
 
@@ -311,7 +311,7 @@ CREATE INDEX idx_warmup_analytics_billing ON warmup_analytics(billing_id);
 
 ```sql
 -- Sequence Step Analytics - Campaign step performance
-CREATE TABLE sequence_step_analytics (.md)
+CREATE TABLE sequence_step_analytics ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     step_id TEXT NOT NULL,
     campaign_id TEXT NOT NULL,
@@ -333,7 +333,7 @@ CREATE INDEX idx_sequence_step_analytics_step ON sequence_step_analytics(step_id
 CREATE INDEX idx_sequence_step_analytics_campaign ON sequence_step_analytics(campaign_id);
 CREATE INDEX idx_sequence_step_analytics_company ON sequence_step_analytics(company_id);
 CREATE INDEX idx_sequence_step_analytics_billing ON sequence_step_analytics(billing_id);
-```
+```markdown
 
 **Business Intelligence**: This analytics provide **actionable insights** into **sequence effectiveness**, **step optimization opportunities**, and **conversion drivers** that support **data-driven campaign improvement**.
 
@@ -354,7 +354,7 @@ CREATE INDEX idx_sequence_step_analytics_billing ON sequence_step_analytics(bill
 
 ```sql
 -- Enhanced Admin Audit Log - Complete audit trail with performance tracking
-CREATE TABLE admin_audit_log (.md)
+CREATE TABLE admin_audit_log ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     admin_user_id TEXT NOT NULL,
@@ -394,7 +394,7 @@ CREATE INDEX idx_admin_audit_analytics ON admin_audit_log(analytics_event_id) WH
 CREATE INDEX idx_admin_audit_compliance ON admin_audit_log USING gin(compliance_flags) WHERE compliance_flags IS NOT NULL;
 CREATE INDEX idx_admin_audit_classification ON admin_audit_log(data_classification, retention_category);
 CREATE INDEX idx_admin_audit_complexity ON admin_audit_log(query_complexity_score DESC) WHERE query_complexity_score IS NOT NULL;
-```
+```markdown
 
 **Strategic Value**: This comprehensive audit system ensures **complete compliance** with **enterprise security requirements** while providing **performance optimization** insights for **operational excellence**.
 
@@ -413,7 +413,7 @@ CREATE INDEX idx_admin_audit_complexity ON admin_audit_log(query_complexity_scor
 
 ```sql
 -- Admin System Events - Unified admin activity and system monitoring
-CREATE TABLE admin_system_events (.md)
+CREATE TABLE admin_system_events ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     creation_time TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     event_type TEXT NOT NULL,
@@ -425,7 +425,7 @@ CREATE TABLE admin_system_events (.md)
     timestamp BIGINT,
     resolved TIMESTAMP WITH TIME ZONE,
     resolution TEXT,
-    
+
     -- Session-specific fields (stored in details JSONB)
     session_token TEXT,                       -- For session events
     ip_address TEXT,                          -- For session and audit events
@@ -446,7 +446,7 @@ CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_
 CREATE INDEX idx_admin_system_events_session_token ON admin_system_events(session_token) WHERE session_token IS NOT NULL;
 CREATE INDEX idx_admin_system_events_active_sessions ON admin_system_events(admin_user_id, is_active) WHERE is_active = true;
 CREATE INDEX idx_admin_system_events_timestamp ON admin_system_events(timestamp);
-```
+```markdown
 
 **Operational Excellence**: This unified monitoring system provides **real-time visibility** into **system health**, **user activity**, and **security events** to maintain our **99.9% uptime commitment**.
 
@@ -497,8 +497,8 @@ export class AnalyticsAggregator {
 
       // Aggregate metrics from all steps
       for (const step of steps) {
-        const stepMetrics = await tx.execute(sql`.md)
-          SELECT 
+        const stepMetrics = await tx.execute(sql`)
+          SELECT
             COUNT(*) as sent,
             COUNT(CASE WHEN status = 'delivered' THEN 1 END) as delivered,
             COUNT(CASE WHEN opened IS NOT NULL THEN 1 END) as opened_tracked,
@@ -507,8 +507,8 @@ export class AnalyticsAggregator {
             COUNT(CASE WHEN bounce_type IS NOT NULL THEN 1 END) as bounced,
             COUNT(CASE WHEN unsubscribed IS NOT NULL THEN 1 END) as unsubscribed,
             COUNT(CASE WHEN complaint IS NOT NULL THEN 1 END) as spam_complaints
-          FROM emails 
-          WHERE campaign_id = ${campaignId} 
+          FROM emails
+          WHERE campaign_id = ${campaignId}
             AND sequence_step_id = ${step.id}
             AND DATE(sent_at) = ${date}
         `);
@@ -575,8 +575,8 @@ export class AnalyticsAggregator {
   async aggregateBillingAnalytics(tenantId: string, periodStart: Date, periodEnd: Date) {
     return await this.db.transaction(async (tx) => {
       // Get all usage metrics for the period
-      const usage = await tx.execute(sql`.md)
-        SELECT 
+      const usage = await tx.execute(sql`)
+        SELECT
           COUNT(DISTINCT c.id) as campaigns_used,
           COUNT(DISTINCT ea.id) as mailboxes_used,
           COUNT(DISTINCT d.id) as domains_used,
@@ -628,7 +628,7 @@ export class AnalyticsAggregator {
     });
   }
 }
-```
+```markdown
 
 ### 2. Queue-Driven Analytics Processing
 
@@ -651,7 +651,7 @@ export class AnalyticsWorker extends JobProcessor {
 
   async processDailyAggregate(data: any) {
     const { date, tenant_id } = data;
-    
+
     try {
       // Get all campaigns for this tenant on this date
       const campaigns = await this.db.campaigns.findMany({
@@ -684,11 +684,11 @@ export class AnalyticsWorker extends JobProcessor {
 
   async processCampaignAggregate(data: any) {
     const { campaign_id, date } = data;
-    
+
     try {
       await this.aggregator.aggregateCampaignAnalytics(campaign_id, date);
       console.log(`Campaign analytics aggregated for ${campaign_id}`);
-      
+
     } catch (error) {
       console.error('Campaign aggregate failed:', error);
       throw error;
@@ -697,22 +697,22 @@ export class AnalyticsWorker extends JobProcessor {
 
   async processBillingCalculate(data: any) {
     const { tenant_id, period_start, period_end } = data;
-    
+
     try {
-      await this.aggregator.aggregateBillingAnalytics(.md)
-        tenant_id, 
-        new Date(period_start), 
+      await this.aggregator.aggregateBillingAnalytics()
+        tenant_id,
+        new Date(period_start),
         new Date(period_end)
       );
       console.log(`Billing analytics calculated for ${tenant_id}`);
-      
+
     } catch (error) {
       console.error('Billing calculate failed:', error);
       throw error;
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -726,8 +726,8 @@ export class AnalyticsWorker extends JobProcessor {
 
 ```sql
 -- Campaign performance summary with trends
-WITH campaign_performance AS (.md)
-  SELECT 
+WITH campaign_performance AS ()
+  SELECT
     ca.campaign_id,
     ca.company_id,
     ca.sent,
@@ -736,25 +736,25 @@ WITH campaign_performance AS (.md)
     ca.clicked_tracked,
     ca.replied,
     ca.bounced,
-    ROUND((ca.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
-    ROUND((ca.opened_tracked::DECIMAL .md)) * 100, 2) as open_rate,
-    ROUND((ca.clicked_tracked::DECIMAL .md)) * 100, 2) as click_rate,
-    ROUND((ca.replied::DECIMAL .md)) * 100, 2) as reply_rate,
-    ROUND((ca.bounced::DECIMAL .md)) * 100, 2) as bounce_rate,
+    ROUND((ca.delivered::DECIMAL )) * 100, 2) as delivery_rate,
+    ROUND((ca.opened_tracked::DECIMAL )) * 100, 2) as open_rate,
+    ROUND((ca.clicked_tracked::DECIMAL )) * 100, 2) as click_rate,
+    ROUND((ca.replied::DECIMAL )) * 100, 2) as reply_rate,
+    ROUND((ca.bounced::DECIMAL )) * 100, 2) as bounce_rate,
     ca.updated_at
   FROM campaign_analytics ca
   WHERE ca.company_id = $1
     AND ca.updated >= NOW() - INTERVAL '30 days'
 ),
-ranked_campaigns AS (.md)
-  SELECT 
+ranked_campaigns AS ()
+  SELECT
     *,
     ROW_NUMBER() OVER (ORDER BY sent DESC) as rank_by_volume,
     ROW_NUMBER() OVER (ORDER BY open_rate DESC) as rank_by_open_rate,
     ROW_NUMBER() OVER (ORDER BY reply_rate DESC) as rank_by_reply_rate
   FROM campaign_performance
 )
-SELECT 
+SELECT
   campaign_id,
   sent,
   delivered,
@@ -773,7 +773,7 @@ SELECT
   updated_at
 FROM ranked_campaigns
 ORDER BY sent DESC;
-```
+```markdown
 
 ### 2. Tenant Usage Analytics
 
@@ -783,7 +783,7 @@ ORDER BY sent DESC;
 
 ```sql
 -- Monthly usage summary across all tenants
-SELECT 
+SELECT
   ba.tenant_id,
   ba.period_start,
   ba.period_end,
@@ -794,19 +794,19 @@ SELECT
   ba.leads_used,
   ba.warmups_active,
   -- Calculate usage efficiency metrics
-  ROUND(ba.emails_sent::DECIMAL .md), 2) as emails_per_mailbox,
-  ROUND(ba.emails_sent::DECIMAL .md), 2) as emails_per_campaign,
+  ROUND(ba.emails_sent::DECIMAL ), 2) as emails_per_mailbox,
+  ROUND(ba.emails_sent::DECIMAL ), 2) as emails_per_campaign,
   -- Compare to previous month
   LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start) as prev_month_emails,
-  ROUND(.md)
-    (ba.emails_sent - LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start))::DECIMAL 
-    .md) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start), 0) * 100, 
+  ROUND()
+    (ba.emails_sent - LAG(ba.emails_sent) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start))::DECIMAL
+    ) OVER (PARTITION BY ba.tenant_id ORDER BY ba.period_start), 0) * 100,
     2
   ) as month_over_month_growth
 FROM billing_analytics ba
 WHERE ba.period_start >= NOW() - INTERVAL '3 months'
 ORDER BY ba.tenant_id, ba.period_start;
-```
+```markdown
 
 ### 3. Warmup Performance Analytics
 
@@ -816,24 +816,24 @@ ORDER BY ba.tenant_id, ba.period_start;
 
 ```sql
 -- Warmup progression analysis
-WITH warmup_progress AS (.md)
-  SELECT 
+WITH warmup_progress AS ()
+  SELECT
     wa.mailbox_id,
     wa.company_id,
     wa.health_score,
     wa.progress_percentage,
     wa.sent,
     wa.delivered,
-    ROUND((wa.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
+    ROUND((wa.delivered::DECIMAL )) * 100, 2) as delivery_rate,
     -- Calculate progression velocity
-    wa.progress_percentage - LAG(wa.progress_percentage) OVER (.md)
+    wa.progress_percentage - LAG(wa.progress_percentage) OVER ()
       PARTITION BY wa.mailbox_id ORDER BY wa.updated_at
     ) as daily_progress_increase,
     wa.updated_at
   FROM warmup_analytics wa
   WHERE wa.updated >= NOW() - INTERVAL '7 days'
 )
-SELECT 
+SELECT
   mailbox_id,
   company_id,
   AVG(health_score) as avg_health_score,
@@ -842,7 +842,7 @@ SELECT
   AVG(daily_progress_increase) as avg_daily_progress,
   COUNT(*) as tracking_days,
   -- Categorize warmup performance
-  CASE 
+  CASE
     WHEN AVG(health_score) >= 80 THEN 'Excellent'
     WHEN AVG(health_score) >= 60 THEN 'Good'
     WHEN AVG(health_score) >= 40 THEN 'Fair'
@@ -852,7 +852,7 @@ FROM warmup_progress
 GROUP BY mailbox_id, company_id
 HAVING COUNT(*) >= 3  -- At least 3 days of tracking
 ORDER BY avg_health_score DESC, avg_progress DESC;
-```
+```markdown
 
 ### 4. Administrative Activity Analysis
 
@@ -862,7 +862,7 @@ ORDER BY avg_health_score DESC, avg_progress DESC;
 
 ```sql
 -- Admin activity summary for compliance
-SELECT 
+SELECT
   aal.admin_user_id,
   aal.action,
   aal.resource_type,
@@ -873,21 +873,21 @@ SELECT
   COUNT(DISTINCT aal.ip_address) as unique_ips,
   -- Time-based analysis
   EXTRACT(HOUR FROM aal.creation_time) as hour_of_day,
-  CASE 
+  CASE
     WHEN EXTRACT(HOUR FROM aal.creation_time) BETWEEN 9 AND 17 THEN 'Business Hours'
     WHEN EXTRACT(HOUR FROM aal.creation_time) BETWEEN 18 AND 22 THEN 'After Hours'
     ELSE 'Night Time'
   END as time_category
 FROM admin_audit_log aal
 WHERE aal.creation_time >= NOW() - INTERVAL '30 days'
-GROUP BY 
+GROUP BY
   aal.admin_user_id,
   aal.action,
   aal.resource_type,
   aal.creation_time::DATE,
   EXTRACT(HOUR FROM aal.creation_time)
 ORDER BY action_count DESC, activity_date DESC;
-```
+```markdown
 
 ---
 
@@ -902,7 +902,7 @@ ORDER BY action_count DESC, activity_date DESC;
 ```sql
 -- Campaign performance materialized view
 CREATE MATERIALIZED VIEW campaign_performance_summary AS
-SELECT 
+SELECT
   ca.campaign_id,
   ca.company_id,
   c.name as campaign_name,
@@ -916,11 +916,11 @@ SELECT
   ca.unsubscribed,
   ca.spam_complaints,
   -- Calculated rates
-  ROUND((ca.delivered::DECIMAL .md)) * 100, 2) as delivery_rate,
-  ROUND((ca.opened_tracked::DECIMAL .md)) * 100, 2) as open_rate,
-  ROUND((ca.clicked_tracked::DECIMAL .md)) * 100, 2) as click_rate,
-  ROUND((ca.replied::DECIMAL .md)) * 100, 2) as reply_rate,
-  ROUND((ca.bounced::DECIMAL .md)) * 100, 2) as bounce_rate,
+  ROUND((ca.delivered::DECIMAL )) * 100, 2) as delivery_rate,
+  ROUND((ca.opened_tracked::DECIMAL )) * 100, 2) as open_rate,
+  ROUND((ca.clicked_tracked::DECIMAL )) * 100, 2) as click_rate,
+  ROUND((ca.replied::DECIMAL )) * 100, 2) as reply_rate,
+  ROUND((ca.bounced::DECIMAL )) * 100, 2) as bounce_rate,
   -- Time-based metrics
   EXTRACT(EPOCH FROM (c.completed - c.started_at))/3600 as campaign_duration_hours,
   ca.updated_at
@@ -939,7 +939,7 @@ BEGIN
   REFRESH MATERIALIZED VIEW CONCURRENTLY campaign_performance_summary;
 END;
 $$ LANGUAGE plpgsql;
-```
+```markdown
 
 ### 2. Partitioning Strategy for Large Tables
 
@@ -949,7 +949,7 @@ $$ LANGUAGE plpgsql;
 
 ```sql
 -- Partition billing_analytics by month
-CREATE TABLE billing_analytics_partitioned (.md)
+CREATE TABLE billing_analytics_partitioned ()
     LIKE billing_analytics INCLUDING ALL
 ) PARTITION BY RANGE (period_start);
 
@@ -965,7 +965,7 @@ FOR VALUES FROM ('2025-02-01') TO ('2025-03-01');
 -- Indexes on partition tables
 CREATE INDEX idx_billing_analytics_2025_01_tenant ON billing_analytics_2025_01(tenant_id);
 CREATE INDEX idx_billing_analytics_2025_02_tenant ON billing_analytics_2025_02(tenant_id);
-```
+```markdown
 
 ### 3. Automated Maintenance
 
@@ -981,39 +981,39 @@ DECLARE
     cutoff_date DATE := CURRENT_DATE - INTERVAL '2 years';
 BEGIN
     -- Archive old analytics data
-    INSERT INTO analytics_archive 
-    SELECT * FROM campaign_analytics 
+    INSERT INTO analytics_archive
+    SELECT * FROM campaign_analytics
     WHERE updated < cutoff_date;
-    
-    DELETE FROM campaign_analytics 
+
+    DELETE FROM campaign_analytics
     WHERE updated < cutoff_date;
-    
+
     -- Refresh materialized views
     PERFORM refresh_campaign_performance();
-    
+
     -- Update table statistics
     ANALYZE campaign_analytics;
     ANALYZE mailbox_analytics;
     ANALYZE billing_analytics;
-    
+
     -- Log maintenance
-    INSERT INTO admin_system_events (.md)
+    INSERT INTO admin_system_events ()
         event_type,
         severity,
         message,
         details
-    ) VALUES (.md)
+    ) VALUES ()
         'analytics_maintenance',
         'low',
         'Analytics tables maintenance completed',
-        jsonb_build_object(.md)
+        jsonb_build_object()
             'cutoff_date', cutoff_date,
             'maintenance_time', NOW()
         )
     );
 END;
 $$ LANGUAGE plpgsql;
-```
+```markdown
 
 ---
 
@@ -1027,7 +1027,7 @@ $$ LANGUAGE plpgsql;
 
 ```sql
 -- OLAP analytics connection pool configuration
-CREATE TABLE analytics_connection_pools (.md)
+CREATE TABLE analytics_connection_pools ()
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     pool_type VARCHAR(30) CHECK (pool_type IN ('dashboard_queries', 'report_generation', 'data_exports', 'ad_hoc_analytics')),
     min_connections INTEGER DEFAULT 2,
@@ -1048,7 +1048,7 @@ CREATE TABLE analytics_connection_pools (.md)
 );
 
 -- Analytics pool sizing based on query complexity
-INSERT INTO analytics_connection_pools (.md)
+INSERT INTO analytics_connection_pools ()
     pool_type, min_connections, max_connections,
     connection_timeout_seconds, query_timeout_seconds,
     enable_parallel_queries, max_parallel_workers
@@ -1057,7 +1057,7 @@ INSERT INTO analytics_connection_pools (.md)
 ('report_generation', 2, 8, 120, 600, true, 4),     -- Complex report generation
 ('data_exports', 1, 5, 180, 1800, false, 1),        -- Large data exports
 ('ad_hoc_analytics', 2, 10, 90, 300, true, 3);      -- Exploratory analytics
-```
+```markdown
 
 ### Unified Security Policies for Analytics
 
@@ -1081,24 +1081,24 @@ CREATE POLICY billing_analytics_tenant_isolation ON billing_analytics
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::text);
 
 CREATE POLICY campaign_analytics_tenant_isolation ON campaign_analytics
-    FOR ALL USING (company_id IN (.md)
+    FOR ALL USING (company_id IN ()
         SELECT id FROM companies
         WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
     ));
 
 CREATE POLICY mailbox_analytics_tenant_isolation ON mailbox_analytics
-    FOR ALL USING (company_id IN (.md)
+    FOR ALL USING (company_id IN ()
         SELECT id FROM companies
         WHERE tenant_id = current_setting('app.current_tenant_id')::uuid
     ));
 
 -- Admin access control - only admin users can access audit logs
 CREATE POLICY admin_audit_logs_access ON admin_audit_logs
-    FOR ALL USING (.md)
+    FOR ALL USING ()
         current_setting('app.user_role') = 'admin'
         OR tenant_id = current_setting('app.current_tenant_id')::text
     );
-```
+```markdown
 
 ### Analytics Security Tables
 
@@ -1108,7 +1108,7 @@ CREATE POLICY admin_audit_logs_access ON admin_audit_logs
 
 ```sql
 -- Analytics access audit log
-CREATE TABLE analytics_access_audit (.md)
+CREATE TABLE analytics_access_audit ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     user_id TEXT,
     tenant_id TEXT,
@@ -1127,7 +1127,7 @@ CREATE TABLE analytics_access_audit (.md)
 );
 
 -- Analytics rate limiting per tenant
-CREATE TABLE analytics_rate_limits (.md)
+CREATE TABLE analytics_rate_limits ()
     id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     tenant_id TEXT NOT NULL,
     query_type VARCHAR(50),
@@ -1140,7 +1140,7 @@ CREATE TABLE analytics_rate_limits (.md)
 
     UNIQUE(tenant_id, query_type, time_window_seconds)
 );
-```
+```markdown
 
 ### Analytics Security Functions
 
@@ -1150,7 +1150,7 @@ CREATE TABLE analytics_rate_limits (.md)
 
 ```sql
 -- Query access validation for analytics
-CREATE OR REPLACE FUNCTION validate_analytics_access(.md)
+CREATE OR REPLACE FUNCTION validate_analytics_access()
     p_tenant_id TEXT,
     p_user_id TEXT,
     p_query_type VARCHAR(50),
@@ -1177,10 +1177,10 @@ BEGIN
     IF FOUND THEN
         IF rate_limit_record.current_count >= rate_limit_record.max_queries THEN
             -- Log rate limit violation
-            INSERT INTO analytics_access_audit (.md)
+            INSERT INTO analytics_access_audit ()
                 user_id, tenant_id, query_type, table_accessed,
                 success, failure_reason, data_sensitivity
-            ) VALUES (.md)
+            ) VALUES ()
                 p_user_id, p_tenant_id, p_query_type, p_table_accessed,
                 false, 'rate_limit_exceeded', 'internal'
             );
@@ -1194,10 +1194,10 @@ BEGIN
     END IF;
 
     -- Log successful access
-    INSERT INTO analytics_access_audit (.md)
+    INSERT INTO analytics_access_audit ()
         user_id, tenant_id, query_type, table_accessed,
         success, data_sensitivity
-    ) VALUES (.md)
+    ) VALUES ()
         p_user_id, p_tenant_id, p_query_type, p_table_accessed,
         true, 'internal'
     );
@@ -1205,7 +1205,7 @@ BEGIN
     RETURN TRUE;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-```
+```markdown
 
 ---
 
@@ -1255,10 +1255,10 @@ This implementation represents a **significant architectural advancement** that 
 
 ## Related Documentation
 
-- [Architecture Overview](...md) - Strategic foundation and market positioning
-- [Analytics Architecture](..md) - PostHog integration and business intelligence
-- [Queue System Implementation](..md) - Job processing and reliability
-- [Campaign Management](../../campaigns.md) - User experience and business operations
-- [Business Analytics](../../business/analytics.md) - Revenue intelligence and optimization
+- [Architecture Overview](..) - Strategic foundation and market positioning
+- [Analytics Architecture](.) - PostHog integration and business intelligence
+- [Queue System Implementation](.) - Job processing and reliability
+- [Campaign Management](../../campaigns) - User experience and business operations
+- [Business Analytics](../../business/analytics) - Revenue intelligence and optimization
 
 **Keywords**: OLAP, analytics, business intelligence, data warehousing, reporting, analytics schema, campaign analytics, billing analytics, administrative analytics, materialized views, performance optimization, enterprise security

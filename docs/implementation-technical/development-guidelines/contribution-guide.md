@@ -6,7 +6,10 @@ last_modified_date: "2025-11-10"
 # Contribution Guide - Complete Developer Onboarding & Collaboration
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This contribution guide supports our enterprise infrastructure framework by providing comprehensive development collaboration, contribution standards, and community engagement for the PenguinMails platform.
+
+**Documentation Development**: For documentation contribution guidelines, please refer to our **[CONTRIBUTING.md](../../CONTRIBUTING.md)** guide which covers local development setup, content standards, and markdown linting procedures.
 
 **Technical Authority**: Our contribution guidelines integrate with enterprise development workflows, code review systems, and collaboration platforms featuring automated testing protocols, security standards, and comprehensive developer experience.
 
@@ -21,14 +24,17 @@ last_modified_date: "2025-11-10"
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Getting Started**
+
 - `contribution-guide` (this document) - Main onboarding and contribution process
 - Environment setup, first-time contributor guidance, and community overview
 
 ### 🏗️ **Level 2: Development Standards**
+
 - Code contribution process, code review standards, and collaboration guidelines
 - Testing requirements, documentation standards, and quality assurance
 
 ### 🚀 **Level 3: Advanced Contribution**
+
 - Enterprise development workflows, security protocols, and performance standards
 - Community governance, recognition programs, and long-term contribution strategies
 
@@ -41,8 +47,9 @@ This section follows the **Progressive Complexity Framework** with three distinc
 Thank you for your interest in contributing to PenguinMails! We're excited to have you join our community of developers working to revolutionize email marketing through AI-powered analytics and personalization.
 
 **What You Can Contribute:**
+
 - 🐛 Bug fixes and improvements
-- ✨ New features and enhancements  
+- ✨ New features and enhancements
 - 📚 Documentation improvements
 - 🧪 Test coverage additions
 - 🎨 UI/UX improvements
@@ -53,6 +60,7 @@ Thank you for your interest in contributing to PenguinMails! We're excited to ha
 ### First-Time Contributor Setup (⭐⭐)
 
 #### 1. Fork and Clone the Repository
+
 ```bash
 # Fork the repository on GitHub, then clone your fork
 git clone https://github.com/your-username/penguinmails.git
@@ -68,7 +76,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install development dependencies
 pip install -r requirements/dev.txt
 npm install  # For JavaScript/TypeScript components
-```
+```markdown
 
 #### 2. Environment Configuration
 ```bash
@@ -82,7 +90,7 @@ SECRET_KEY=your-development-secret-key
 EMAIL_API_KEY=your-email-service-api-key
 AI_API_ENDPOINT=http://localhost:8000/api/v1
 ANALYTICS_ENDPOINT=http://localhost:8080/analytics
-```
+```markdown
 
 #### 3. Database Setup
 ```bash
@@ -97,7 +105,7 @@ python manage.py loaddata development_data.json
 
 # Create superuser for admin access
 python manage.py createsuperuser
-```
+```markdown
 
 #### 4. Verify Installation
 ```bash
@@ -111,7 +119,7 @@ python manage.py test
 black .
 flake8 .
 eslint .
-```
+```markdown
 
 ### Development Environment Tools (⭐⭐)
 
@@ -134,7 +142,7 @@ eslint .
     "**/.pytest_cache": true
   }
 }
-```
+```markdown
 
 **Required Extensions:**
 - Python
@@ -154,11 +162,11 @@ pre-commit install
 # Install additional development tools
 pip install bandit safety pytest-cov factory_boy
 npm install -g @typescript-eslint/cli prettier
-```
+```markdown
 
 ### Understanding the Project Structure (⭐⭐)
 
-```
+```markdown
 penguinmails/
 ├── app/                          # Main application code
 │   ├── api/                      # REST API endpoints
@@ -183,7 +191,7 @@ penguinmails/
 │   ├── dev.txt                   # Development dependencies
 │   └── prod.txt                  # Production dependencies
 └── docker/                       # Docker configuration
-```
+```markdown
 
 ---
 
@@ -207,7 +215,7 @@ git checkout -b fix/bug-description
 # fix/email-delivery-issue
 # docs/update-api-reference
 # test/improve-test-coverage
-```
+```markdown
 
 #### 2. Make Changes
 Follow our coding standards and make incremental commits:
@@ -226,7 +234,7 @@ Closes #123"
 
 # Push to your fork
 git push origin feature/your-feature-name
-```
+```markdown
 
 #### 3. Create Pull Request
 
@@ -261,7 +269,7 @@ Add screenshots to help explain your changes.
 
 ## Additional Notes
 Any additional information or context.
-```
+```markdown
 
 ### Contribution Types (⭐⭐⭐)
 
@@ -273,18 +281,18 @@ def send_email_bug_fix(self, email_data):
     """Fixed: Email sending failing with empty recipients list."""
     if not email_data.get('recipients'):
         raise ValidationError("Recipients list cannot be empty")
-    
+
     # Original buggy code:
     # recipients = email_data['recipients']  # Would throw KeyError
-    
+
     # Fixed code:
     recipients = email_data.get('recipients', [])
     if not recipients:
         raise ValidationError("Recipients list cannot be empty")
-    
+
     # Continue with email sending logic
     return self.process_email_batch(recipients, email_data)
-```
+```markdown
 
 #### Feature Additions
 ```typescript
@@ -295,14 +303,14 @@ export class AIAnalyticsService {
     historicalData: CampaignHistory[]
   ): Promise<PredictiveInsights> {
     const model = await this.loadMLModel('campaign-performance-predictor');
-    
+
     const insights = await model.predict({
       campaignId,
       historicalMetrics: this.aggregateHistoricalData(historicalData),
       marketConditions: await this.getMarketConditions(),
       seasonalTrends: await this.getSeasonalTrends()
     });
-    
+
     return {
       predictedOpenRate: insights.openRate,
       predictedClickRate: insights.clickRate,
@@ -312,7 +320,7 @@ export class AIAnalyticsService {
     };
   }
 }
-```
+```markdown
 
 #### Documentation Improvements
 ```markdown
@@ -334,7 +342,7 @@ Retrieve comprehensive analytics for a specific email campaign including AI-powe
 ```bash
 curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?period=7d&include_predictions=true" \
   -H "Authorization: Bearer {your_api_key}"
-```
+```markdown
 
 **Example Response:**
 ```json
@@ -355,8 +363,8 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
     ]
   }
 }
-```
-```
+```markdown
+```markdown
 
 ### Code Review Process (⭐⭐⭐)
 
@@ -406,7 +414,7 @@ pytest --cov=app --cov-report=html
 # Check for common issues
 git diff --stat
 git log --oneline -5
-```
+```markdown
 
 **Peer Review Guidelines:**
 - Reviewers should understand the problem being solved
@@ -463,9 +471,9 @@ A clear and concise description of what actually happened.
 If applicable, add screenshots to help explain your problem.
 
 ## Error Logs
-```
+```markdown
 Paste relevant error messages or stack traces here
-```
+```markdown
 
 ## Additional Context
 Add any other context about the problem here.
@@ -475,7 +483,7 @@ Add any other context about the problem here.
 - [ ] High (major functionality broken)
 - [ ] Medium (functionality impaired)
 - [ ] Low (minor inconvenience)
-```
+```markdown
 
 ### Bug Triage Process (⭐⭐)
 
@@ -501,7 +509,7 @@ graph TD
     J --> K[Merge & Deploy]
     K --> L[Close Issue]
     L --> M[Update Documentation]
-```
+```markdown
 
 ### Bug Fix Guidelines (⭐⭐⭐)
 
@@ -517,15 +525,15 @@ def analyze_bug_root_cause(bug_report):
         'tests_to_create': [],
         'fix_strategy': None
     }
-    
+
     # 1. Reproduce the issue in isolated environment
     # 2. Identify the exact failure point
     # 3. Trace the execution flow
     # 4. Determine the root cause
     # 5. Design minimal fix
-    
+
     return analysis
-```
+```markdown
 
 #### Test-First Bug Fixing
 ```python
@@ -535,10 +543,10 @@ from app.services.email_service import EmailService
 
 class TestEmailDeliveryBug:
     """Test case reproducing the reported bug."""
-    
+
     def setup_method(self):
         self.email_service = EmailService()
-    
+
     def test_empty_recipients_list_raises_validation_error(self):
         """Bug: Empty recipients list should raise ValidationError."""
         with pytest.raises(ValidationError) as exc_info:
@@ -547,10 +555,10 @@ class TestEmailDeliveryBug:
                 'content': 'Test Content',
                 'recipients': []  # Empty list
             })
-        
+
         assert 'recipients' in str(exc_info.value).lower()
         assert 'cannot be empty' in str(exc_info.value).lower()
-    
+
     def test_none_recipients_raises_validation_error(self):
         """Bug: None recipients should raise ValidationError."""
         with pytest.raises(ValidationError) as exc_info:
@@ -559,13 +567,13 @@ class TestEmailDeliveryBug:
                 'content': 'Test Content',
                 'recipients': None
             })
-        
+
         assert 'recipients' in str(exc_info.value).lower()
-```
+```markdown
 
 #### Bug Fix Implementation
 ```python
-# app/services.md)
+# app/services)
 class EmailService:
     def send_campaign(self, campaign_data):
         """Send email campaign with proper validation."""
@@ -573,21 +581,21 @@ class EmailService:
         recipients = campaign_data.get('recipients')
         if not recipients:
             raise ValidationError("Recipients list cannot be empty")
-        
+
         if not isinstance(recipients, list):
             raise ValidationError("Recipients must be a list")
-        
+
         if len(recipients) == 0:
             raise ValidationError("Recipients list cannot be empty")
-        
+
         # Additional validation
         for recipient in recipients:
             if not isinstance(recipient, dict) or 'email' not in recipient:
                 raise ValidationError("Each recipient must have an email address")
-        
+
         # Process campaign
         return self._process_campaign(campaign_data, recipients)
-```
+```markdown
 
 ---
 
@@ -644,7 +652,7 @@ If applicable, provide mockups or examples of the feature.
 
 ## Additional Context
 Any additional information about the feature request.
-```
+```markdown
 
 ### Feature Development Workflow (⭐⭐⭐)
 
@@ -663,7 +671,7 @@ graph TD
     I --> J[Design & Implementation]
     J --> K[Testing & Review]
     K --> L[Release]
-```
+```markdown
 
 #### 2. Implementation Standards
 
@@ -678,7 +686,7 @@ git checkout -b feature/mobile-app-integration
 git commit -m "feat(ai): add email subject line optimization algorithm"
 git commit -m "test(ai): add unit tests for optimization model"
 git commit -m "docs: update API documentation for AI features"
-```
+```markdown
 
 **Feature Documentation:**
 ```markdown
@@ -720,7 +728,7 @@ This feature adds AI-powered email content optimization to improve campaign perf
 1. **Beta**: Enable for select enterprise customers
 2. **General Availability**: Release to all customers
 3. **Enhancement**: Add advanced features based on usage data
-```
+```markdown
 
 #### 3. Feature Testing Requirements
 
@@ -734,7 +742,7 @@ from app.ai.optimizer import EmailOptimizer
 class TestEmailOptimizer:
     def setup_method(self):
         self.optimizer = EmailOptimizer()
-    
+
     def test_optimize_subject_line_improvement(self):
         """Test that optimization improves subject line performance."""
         original_subject = "New product launch"
@@ -742,28 +750,28 @@ class TestEmailOptimizer:
             original_subject,
             target_audience="tech_professionals"
         )
-        
+
         # Verify optimization made meaningful changes
         assert optimized_subject != original_subject
         assert len(optimized_subject) <= 100  # Character limit
-        
+
         # Mock AI model prediction
         with patch.object(self.optimizer, '_predict_improvement') as mock_predict:
             mock_predict.return_value = 0.15
             improvement = self.optimizer._predict_improvement(optimized_subject)
             assert improvement > 0
-    
+
     def test_optimization_score_calculation(self):
         """Test optimization score calculation."""
         content = {
             'subject': 'Welcome to our platform!',
             'html': '<h1>Welcome!</h1><p>Get started today.</p>'
         }
-        
+
         score = self.optimizer.calculate_optimization_score(content)
         assert 0 <= score <= 1
         assert isinstance(score, float)
-```
+```markdown
 
 **Integration Testing:**
 ```python
@@ -774,7 +782,7 @@ from app.main import app
 
 @pytest.mark.asyncio
 async def test_optimization_api_integration():
-    async with AsyncClient(app=app, base_url="http:/.md) as client:
+    async with AsyncClient(app=app, base_url="http:/) as client:
         response = await client.post("/api/v1/ai/optimize-content", json={
             "content": {
                 "subject": "Product Update",
@@ -782,13 +790,13 @@ async def test_optimization_api_integration():
             },
             "audience": {"demographics": {"age_range": "25-45"}}
         })
-        
+
         assert response.status_code == 200
         data = response.json()
         assert "optimized_content" in data
         assert "improvement_score" in data
         assert "recommendations" in data
-```
+```markdown
 
 ---
 
@@ -806,23 +814,23 @@ def calculate_email_delivery_score(
     historical_performance: Optional[dict] = None
 ) -> EmailDeliveryScore:
     """Calculate comprehensive email delivery score using multiple metrics.
-    
+
     This function analyzes recipient engagement patterns, content quality,
     technical deliverability factors, and historical performance to provide
     a weighted delivery score.
-    
+
     Args:
         recipient_engagement: Historical engagement rate (0.0-1.0)
         content_quality: AI-evaluated content score (0.0-1.0)
         technical_score: Technical deliverability score (0.0-1.0)
         historical_performance: Optional historical metrics for trend analysis
-        
+
     Returns:
         EmailDeliveryScore: Comprehensive delivery score with confidence interval
-        
+
     Raises:
         ValueError: If any score is outside valid range (0.0-1.0)
-        
+
     Example:
         >>> score = calculate_email_delivery_score(0.85, 0.92, 0.88)
         >>> print(score.overall_score)
@@ -836,27 +844,27 @@ def calculate_email_delivery_score(
     ]:
         if not isinstance(value, (int, float)) or not (0.0 <= value <= 1.0):
             raise ValueError(f"{name} must be a float between 0.0 and 1.0")
-    
+
     # Calculate weighted score with confidence based on data quality
     weights = {
         'engagement': 0.4,
         'quality': 0.35,
         'technical': 0.25
     }
-    
+
     base_score = (
         recipient_engagement * weights['engagement'] +
         content_quality * weights['quality'] +
         technical_score * weights['technical']
     )
-    
+
     # Adjust confidence based on historical data availability
     confidence = 0.7  # Base confidence
     if historical_performance:
         confidence += 0.2  # Increase confidence with historical data
         if len(historical_performance.get('campaigns', [])) > 10:
             confidence += 0.1  # More confidence with more data
-    
+
     return EmailDeliveryScore(
         overall_score=round(base_score, 3),
         confidence=min(confidence, 1.0),
@@ -871,7 +879,7 @@ def calculate_email_delivery_score(
 def calc(x, y, z):
     s = x * 0.4 + y * 0.35 + z * 0.25
     return EmailDeliveryScore(overall_score=s, confidence=0.7)
-```
+```markdown
 
 #### Documentation Standards
 ```python
@@ -881,7 +889,7 @@ from pydantic import BaseModel
 
 class EmailCampaignAnalytics(BaseModel):
     """Analytics data for email campaign performance."""
-    
+
     campaign_id: str
     sent_count: int
     delivered_count: int
@@ -890,27 +898,27 @@ class EmailCampaignAnalytics(BaseModel):
     bounced_count: int
     complained_count: int
     created_at: datetime
-    
+
     @property
     def delivery_rate(self) -> float:
         """Calculate delivery rate as percentage."""
         if self.sent_count == 0:
             return 0.0
-        return (self.delivered_count .md) * 100
-    
+        return (self.delivered_count ) * 100
+
     @property
     def open_rate(self) -> float:
         """Calculate open rate as percentage of delivered emails."""
         if self.delivered_count == 0:
             return 0.0
-        return (self.opened_count .md) * 100
-    
+        return (self.opened_count ) * 100
+
     def to_dict(self, include_calculated: bool = True) -> Dict[str, Union[int, float, str]]:
         """Convert analytics to dictionary format.
-        
+
         Args:
             include_calculated: Whether to include calculated rates
-            
+
         Returns:
             Dictionary representation of analytics data
         """
@@ -924,18 +932,18 @@ class EmailCampaignAnalytics(BaseModel):
             'complained_count': self.complained_count,
             'created_at': self.created_at.isoformat()
         }
-        
+
         if include_calculated:
             data.update({
                 'delivery_rate': self.delivery_rate,
                 'open_rate': self.open_rate,
                 'click_rate': self.click_rate
             })
-        
-        return data
-```
 
-### TypeScript.md)
+        return data
+```markdown
+
+### TypeScript)
 
 #### Interface and Type Definitions
 ```typescript
@@ -997,7 +1005,7 @@ export class CampaignService {
     try {
       // Validate request data
       this.validateCampaignRequest(request);
-      
+
       // Track campaign creation event
       await this.analyticsService.trackEvent('campaign_creation_started', {
         userId: request.recipients[0]?.email, // Simplified for example
@@ -1033,7 +1041,7 @@ export class CampaignService {
         error: error.message,
         requestType: 'create_campaign'
       });
-      
+
       throw new CampaignCreationError(
         'Failed to create campaign',
         { originalError: error }
@@ -1092,7 +1100,7 @@ export class ValidationError extends Error {
     this.name = 'ValidationError';
   }
 }
-```
+```markdown
 
 #### Component Development Standards
 ```tsx
@@ -1139,8 +1147,8 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
   // Derived values
   const canSave = useMemo(() => {
-    return formData.name.trim() && 
-           formData.subject.trim() && 
+    return formData.name.trim() &&
+           formData.subject.trim() &&
            formData.content.html.trim() &&
            formData.recipients.length > 0 &&
            Object.keys(errors).length === 0;
@@ -1173,9 +1181,9 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
   const handleAIOptimization = useCallback(async () => {
     if (!formData.content.html.trim()) {
-      setErrors(prev => ({ 
-        ...prev, 
-        content: 'Content is required for AI optimization' 
+      setErrors(prev => ({
+        ...prev,
+        content: 'Content is required for AI optimization'
       }));
       return;
     }
@@ -1203,9 +1211,9 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
       });
     } catch (error) {
       trackError('ai_optimization_failed', error);
-      setErrors(prev => ({ 
-        ...prev, 
-        ai_optimization: 'AI optimization failed. Please try again.' 
+      setErrors(prev => ({
+        ...prev,
+        ai_optimization: 'AI optimization failed. Please try again.'
       }));
     } finally {
       setIsOptimizing(false);
@@ -1222,7 +1230,7 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     }
 
     try {
-      const campaign = campaignId 
+      const campaign = campaignId
         ? await updateCampaign(campaignId, formData)
         : await createCampaign(formData);
 
@@ -1340,9 +1348,9 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     </div>
   );
 };
-```
+```markdown
 
-### CSS.md)
+### CSS)
 
 #### Design System Integration
 ```scss
@@ -1356,7 +1364,7 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
   max-width: 1200px;
   margin: 0 auto;
   padding: spacing(xl);
-  
+
   .editor-header {
     display: flex;
     justify-content: space-between;
@@ -1364,30 +1372,30 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     margin-bottom: spacing(xl);
     padding-bottom: spacing(md);
     border-bottom: 1px solid $color-border-subtle;
-    
+
     h2 {
       @include text-heading-lg;
       color: $color-text-primary;
       margin: 0;
     }
-    
+
     .editor-actions {
       display: flex;
       gap: spacing(sm);
     }
   }
-  
+
   .editor-content {
     display: grid;
     gap: spacing(xl);
-    
+
     section {
       background: $color-surface;
       border-radius: $border-radius-lg;
       padding: spacing(lg);
       box-shadow: $elevation-1;
       border: 1px solid $color-border-light;
-      
+
       h3 {
         @include text-heading-md;
         color: $color-text-primary;
@@ -1397,10 +1405,10 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
       }
     }
   }
-  
+
   .form-group {
     margin-bottom: spacing(md);
-    
+
     label {
       @include text-body-sm;
       font-weight: $font-weight-medium;
@@ -1408,36 +1416,36 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
       display: block;
       margin-bottom: spacing(xs);
     }
-    
+
     input, textarea {
       @include input-base;
       width: 100%;
-      
+
       &:focus {
         @include input-focus;
       }
-      
+
       &.error {
         @include input-error;
       }
     }
-    
+
     .error-message {
       @include text-caption;
       color: $color-error;
       margin-top: spacing(xs);
     }
   }
-  
+
   .ai-optimization-section {
     display: flex;
     align-items: center;
     gap: spacing(sm);
     margin-top: spacing(md);
-    
+
     button {
       @include button-secondary;
-      
+
       &:disabled {
         @include button-disabled;
       }
@@ -1449,15 +1457,15 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 @include mobile {
   .campaign-editor {
     padding: spacing(md);
-    
+
     .editor-header {
       flex-direction: column;
       gap: spacing(md);
       align-items: stretch;
-      
+
       .editor-actions {
         justify-content: stretch;
-        
+
         button {
           flex: 1;
         }
@@ -1465,7 +1473,7 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -1501,7 +1509,7 @@ tests/
 │   ├── user_profiles.json         # User profile data
 │   └── analytics_data.json        # Analytics test data
 └── conftest.py                   # Pytest configuration
-```
+```markdown
 
 #### Unit Testing Standards (⭐⭐⭐)
 ```python
@@ -1515,21 +1523,21 @@ from app.exceptions import EmailDeliveryError, ValidationError
 
 class TestEmailService:
     """Comprehensive unit tests for EmailService."""
-    
+
     def setup_method(self):
         """Set up test fixtures before each test method."""
         self.mock_smtp_client = Mock()
         self.mock_template_service = Mock()
         self.mock_analytics_service = Mock()
         self.mock_database = Mock()
-        
+
         self.email_service = EmailService(
             smtp_client=self.mock_smtp_client,
             template_service=self.mock_template_service,
             analytics_service=self.mock_analytics_service,
             database=self.mock_database
         )
-    
+
     def test_send_email_success(self):
         """Test successful email sending."""
         # Arrange
@@ -1539,30 +1547,30 @@ class TestEmailService:
             'content': {'html': '<p>Test content</p>', 'text': 'Test content'},
             'from': {'name': 'Test Sender', 'email': 'sender@example.com'}
         }
-        
+
         expected_message_id = 'msg_123456'
         self.mock_smtp_client.send_email.return_value = {
             'message_id': expected_message_id,
             'status': 'sent'
         }
-        
+
         # Act
         result = self.email_service.send_email(email_data)
-        
+
         # Assert
         assert result.message_id == expected_message_id
         assert result.status == EmailStatus.SENT
         assert result.sent_at is not None
-        
+
         # Verify method calls
         self.mock_smtp_client.send_email.assert_called_once()
         self.mock_analytics_service.track_delivery.assert_called_once()
-        
+
         # Verify analytics tracking data
         delivery_call = self.mock_analytics_service.track_delivery.call_args
         assert delivery_call[1]['email'] == email_data['to']
         assert delivery_call[1]['message_id'] == expected_message_id
-    
+
     def test_send_email_invalid_recipient(self):
         """Test email sending with invalid recipient email."""
         # Arrange
@@ -1571,17 +1579,17 @@ class TestEmailService:
             'subject': 'Test Subject',
             'content': {'html': '<p>Test</p>', 'text': 'Test'}
         }
-        
+
         # Act & Assert
         with pytest.raises(ValidationError) as exc_info:
             self.email_service.send_email(email_data)
-        
+
         assert 'invalid email' in str(exc_info.value).lower()
-        
+
         # Verify no external services were called
         self.mock_smtp_client.send_email.assert_not_called()
         self.mock_analytics_service.track_delivery.assert_not_called()
-    
+
     def test_send_bulk_emails_batch_processing(self):
         """Test bulk email sending with proper batch processing."""
         # Arrange
@@ -1589,27 +1597,27 @@ class TestEmailService:
             {'email': f'user{i}@example.com', 'name': f'User {i}'}
             for i in range(250)  # Test with more than default batch size
         ]
-        
+
         email_data = {
             'subject': 'Bulk Test Email',
             'content': {'html': '<p>Bulk content</p>', 'text': 'Bulk content'}
         }
-        
+
         self.mock_smtp_client.send_email_batch.return_value = [
             {'message_id': f'msg_{i}', 'status': 'sent'} for i in range(250)
         ]
-        
+
         # Act
         results = self.email_service.send_bulk_emails(recipients, email_data)
-        
+
         # Assert
         assert len(results) == 250
         assert all(result.status == EmailStatus.SENT for result in results)
-        
+
         # Verify batch processing
-        expected_batches = (250 + 99) /.md)
+        expected_batches = (250 + 99) /)
         assert self.mock_smtp_client.send_email_batch.call_count == expected_batches
-```
+```markdown
 
 #### Integration Testing Standards (⭐⭐)
 ```python
@@ -1628,13 +1636,13 @@ from app.models.user import User
 async def test_client():
     """Create test client with test database."""
     # Setup test database
-    engine = create_engine("postgresql://test:test@localhost.md)
+    engine = create_engine("postgresql://test:test@localhost)
     TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-    
+
     # Create tables
     from app.database.models import Base
     Base.metadata.create_all(bind=engine)
-    
+
     # Override database dependency
     def get_test_database():
         try:
@@ -1642,12 +1650,12 @@ async def test_client():
             yield db
         finally:
             db.close()
-    
+
     app.dependency_overrides[get_database] = get_test_database
-    
-    async with AsyncClient(app=app, base_url="http:/.md) as client:
+
+    async with AsyncClient(app=app, base_url="http:/) as client:
         yield client
-    
+
     # Cleanup
     Base.metadata.drop_all(bind=engine)
 
@@ -1660,23 +1668,23 @@ async def test_user(test_client):
         "first_name": "Test",
         "last_name": "User"
     }
-    
-    response = await test_client.post("/api/v1/auth.md)
+
+    response = await test_client.post("/api/v1/auth)
     assert response.status_code == 201
-    
+
     # Login to get token
     login_response = await test_client.post("/api/v1/auth/login", json={
         "email": user_data["email"],
         "password": user_data["password"]
     })
-    
+
     token = login_response.json()["data"]["access_token"]
     return {"token": token, "user_id": login_response.json()["data"]["user"]["id"]}
 
 @pytest.mark.asyncio
 class TestCampaignAPI:
     """Integration tests for Campaign API endpoints."""
-    
+
     async def test_create_campaign_success(self, test_client, test_user):
         """Test successful campaign creation."""
         campaign_data = {
@@ -1699,18 +1707,18 @@ class TestCampaignAPI:
                 "ai_optimization": False
             }
         }
-        
+
         headers = {"Authorization": f"Bearer {test_user['token']}"}
-        
+
         response = await test_client.post(
             "/api/v1/campaigns",
             json=campaign_data,
             headers=headers
         )
-        
+
         assert response.status_code == 201
         data = response.json()
-        
+
         assert data["success"] is True
         assert "data" in data
         assert data["data"]["name"] == campaign_data["name"]
@@ -1718,11 +1726,11 @@ class TestCampaignAPI:
         assert data["data"]["status"] == "draft"
         assert "id" in data["data"]
         assert "created_at" in data["data"]
-        
+
         # Verify campaign metrics are initialized
         assert "metrics" in data["data"]
         assert data["data"]["metrics"]["sent"] == 0
-    
+
     async def test_create_campaign_duplicate_name(self, test_client, test_user):
         """Test campaign creation with duplicate name."""
         campaign_data = {
@@ -1731,9 +1739,9 @@ class TestCampaignAPI:
             "content": {"html": "<p>Test</p>", "text": "Test"},
             "recipients": [{"email": "test@example.com"}]
         }
-        
+
         headers = {"Authorization": f"Bearer {test_user['token']}"}
-        
+
         # Create first campaign
         response1 = await test_client.post(
             "/api/v1/campaigns",
@@ -1741,7 +1749,7 @@ class TestCampaignAPI:
             headers=headers
         )
         assert response1.status_code == 201
-        
+
         # Try to create second campaign with same name
         response2 = await test_client.post(
             "/api/v1/campaigns",
@@ -1750,12 +1758,12 @@ class TestCampaignAPI:
         )
         assert response2.status_code == 409
         assert "duplicate" in response2.json()["error"]["message"].lower()
-    
+
     async def test_list_campaigns_pagination(self, test_client, test_user):
         """Test campaign listing with pagination."""
         # Create multiple campaigns
         headers = {"Authorization": f"Bearer {test_user['token']}"}
-        
+
         campaigns_to_create = 5
         for i in range(campaigns_to_create):
             campaign_data = {
@@ -1764,37 +1772,37 @@ class TestCampaignAPI:
                 "content": {"html": f"<p>Campaign {i+1}</p>", "text": f"Campaign {i+1}"},
                 "recipients": [{"email": f"test{i+1}@example.com"}]
             }
-            
+
             await test_client.post(
                 "/api/v1/campaigns",
                 json=campaign_data,
                 headers=headers
             )
-        
+
         # Test pagination
         response = await test_client.get(
             "/api/v1/campaigns?page=1&per_page=3",
             headers=headers
         )
-        
+
         assert response.status_code == 200
         data = response.json()
-        
+
         assert len(data["data"]) == 3
         assert data["meta"]["pagination"]["page"] == 1
         assert data["meta"]["pagination"]["per_page"] == 3
         assert data["meta"]["pagination"]["total"] == 5
-        
+
         # Test second page
         response2 = await test_client.get(
             "/api/v1/campaigns?page=2&per_page=3",
             headers=headers
         )
-        
+
         data2 = response2.json()
         assert len(data2["data"]) == 2  # Remaining campaigns
         assert data2["meta"]["pagination"]["page"] == 2
-```
+```markdown
 
 #### End-to-End Testing Standards (⭐⭐)
 ```typescript
@@ -1804,11 +1812,11 @@ import { test, expect } from '@playwright/test';
 test.describe('Campaign Workflow E2E Tests', () => {
   test.beforeEach(async ({ page }) => {
     // Login before each test
-    await page.goto('.md);
+    await page.goto(');
     await page.fill('[data-testid="email"]', 'test@example.com');
     await page.fill('[data-testid="password"]', 'testpass123');
     await page.click('[data-testid="login-button"]');
-    
+
     // Wait for dashboard to load
     await expect(page.locator('[data-testid="dashboard-header"]')).toBeVisible();
   });
@@ -1821,7 +1829,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
     // Fill campaign details
     await page.fill('[data-testid="campaign-name"]', 'E2E Test Campaign');
     await page.fill('[data-testid="campaign-subject"]', 'E2E Test Subject Line');
-    await page.fill('[data-testid="content-html"]', '<h1>E2E Test Campaign</h1><p>This is an end-to-end test.<.md);
+    await page.fill('[data-testid="content-html"]', '<h1>E2E Test Campaign</h1><p>This is an end-to-end test.<);
 
     // Add recipients
     await page.click('[data-testid="add-recipient"]');
@@ -1839,7 +1847,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
 
     // Verify campaign was created
     await expect(page.locator('[data-testid="success-message"]')).toContainText('Campaign created successfully');
-    
+
     // Navigate to campaign list
     await page.click('[data-testid="campaigns-nav"]');
     await expect(page.locator('[data-testid="campaign-list"]')).toBeVisible();
@@ -1862,7 +1870,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
     // Fill basic campaign details
     await page.fill('[data-testid="campaign-name"]', 'AI Optimization Test');
     await page.fill('[data-testid="campaign-subject"]', 'Basic Subject Line');
-    await page.fill('[data-testid="content-html"]', '<h1>AI Test Content</h1><p>Basic content for optimization.<.md);
+    await page.fill('[data-testid="content-html"]', '<h1>AI Test Content</h1><p>Basic content for optimization.<);
 
     // Add recipient
     await page.click('[data-testid="add-recipient"]');
@@ -1887,45 +1895,45 @@ test.describe('Campaign Workflow E2E Tests', () => {
     const optimizedContent = await page.inputValue('[data-testid="content-html"]');
 
     expect(optimizedSubject).not.toBe('Basic Subject Line');
-    expect(optimizedContent).not.toBe('<h1>AI Test Content</h1><p>Basic content for optimization.<.md);
+    expect(optimizedContent).not.toBe('<h1>AI Test Content</h1><p>Basic content for optimization.<);
 
     // Verify optimization score display
     await expect(page.locator('[data-testid="optimization-score"]')).toBeVisible();
     const scoreText = await page.textContent('[data-testid="optimization-score"]');
-    expect(scoreText).toMatch(/\d+% improvement.md);
+    expect(scoreText).toMatch(/\d+% improvement);
   });
 
   test('mobile responsive campaign creation', async ({ page }) => {
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    
+
     // Navigate to campaign creation
     await page.click('[data-testid="mobile-menu"]');
     await page.click('[data-testid="create-campaign-mobile"]');
-    
+
     // Verify mobile editor layout
     await expect(page.locator('[data-testid="mobile-editor"]')).toBeVisible();
-    
+
     // Test mobile form interaction
     await page.fill('[data-testid="campaign-name-mobile"]', 'Mobile Test Campaign');
     await page.fill('[data-testid="campaign-subject-mobile"]', 'Mobile Test Subject');
-    
-    /.md)
+
+    /)
     await page.fill('[data-testid="content-text-mobile"]', 'Mobile test content');
-    
+
     // Add recipient on mobile
     await page.click('[data-testid="add-recipient-mobile"]');
     await page.fill('[data-testid="recipient-email-mobile"]', 'mobile-test@example.com');
     await page.click('[data-testid="save-recipient-mobile"]');
-    
+
     // Save campaign on mobile
     await page.click('[data-testid="save-campaign-mobile"]');
-    
+
     // Verify success on mobile
     await expect(page.locator('[data-testid="mobile-success"]')).toContainText('Campaign created');
   });
 });
-```
+```markdown
 
 ---
 
@@ -1983,8 +1991,8 @@ print(f"Campaign created with ID: {campaign.id}")
 # ❌ Bad: Incomplete, missing context, no explanation
 client = PenguinMails("key")
 c = client.campaigns.create({"name": "test"})
-```
-```
+```markdown
+```markdown
 
 ### API Documentation
 ```markdown
@@ -2022,7 +2030,7 @@ Creates a new email campaign for sending to recipients.
     "track_clicks": "boolean (default: true)"
   }
 }
-```
+```markdown
 
 **Response**:
 ```json
@@ -2039,7 +2047,7 @@ Creates a new email campaign for sending to recipients.
     }
   }
 }
-```
+```markdown
 
 **Error Responses**:
 - `400 Bad Request`: Invalid request data
@@ -2065,7 +2073,7 @@ campaign_data = {
             "personalization": {"name": "John"}
         },
         {
-            "email": "customer2@example.com", 
+            "email": "customer2@example.com",
             "personalization": {"name": "Jane"}
         }
     ],
@@ -2084,7 +2092,7 @@ except ValidationError as e:
     print(f"Validation error: {e}")
 except AuthenticationError as e:
     print(f"Authentication error: {e}")
-```
+```markdown
 
 **Best Practices**:
 1. **Use descriptive names**: "Welcome Email Series" vs "Campaign 1"
@@ -2092,7 +2100,7 @@ except AuthenticationError as e:
 3. **Always include both HTML and text versions** for accessibility
 4. **Test with small recipient lists first** before sending to large audiences
 5. **Enable AI optimization** for better performance (when available)
-```
+```markdown
 
 ### Tutorial Documentation (⭐⭐)
 ```markdown
@@ -2102,14 +2110,14 @@ except AuthenticationError as e:
 This tutorial will walk you through your first steps with the PenguinMails API, covering authentication, campaign creation, and basic analytics.
 
 ## Prerequisites
-- API key from [Developer Dashboard](https://app.penguinmails.com.md)
+- API key from [Developer Dashboard](https://app.penguinmails.com)
 - Basic knowledge of HTTP requests and JSON
 - Python 3.8+ or JavaScript/Node.js environment
 
 ## Step 1: Authentication
 
 ### Get Your API Key
-1. Log in to your [PenguinMails dashboard](https:/.md)
+1. Log in to your [PenguinMails dashboard](https:/)
 2. Navigate to **Settings** → **API Keys**
 3. Click **Create New API Key**
 4. Copy your API key for use in your application
@@ -2128,7 +2136,7 @@ if response.status_code == 200:
     print("✅ API connection successful!")
 else:
     print(f"❌ Connection failed: {response.status_code}")
-```
+```markdown
 
 ## Step 2: Create Your First Campaign
 
@@ -2165,7 +2173,7 @@ campaign_data = {
 # Create campaign
 campaign = client.campaigns.create(campaign_data)
 print(f"Campaign created: {campaign.id}")
-```
+```markdown
 
 ### Understanding Campaign States
 - **draft**: Campaign created but not sent
@@ -2185,7 +2193,7 @@ print(f"Sending started: {send_result.status}")
 # Check campaign status
 status = client.campaigns.get_status(campaign.id)
 print(f"Current status: {status}")
-```
+```markdown
 
 ### Monitor Performance
 ```python
@@ -2196,7 +2204,7 @@ print(f"Emails sent: {analytics.sent}")
 print(f"Delivery rate: {analytics.delivery_rate:.2%}")
 print(f"Open rate: {analytics.open_rate:.2%}")
 print(f"Click rate: {analytics.click_rate:.2%}")
-```
+```markdown
 
 ## Step 4: Advanced Features
 
@@ -2210,7 +2218,7 @@ campaign = client.campaigns.create(campaign_data)
 
 # AI will automatically optimize content based on your audience
 print(f"AI optimization score: {campaign.ai_optimization.improvement_score:.2%}")
-```
+```markdown
 
 ### Personalization
 ```python
@@ -2226,7 +2234,7 @@ recipients = [
         }
     },
     {
-        "email": "sarah@example.com", 
+        "email": "sarah@example.com",
         "personalization": {
             "name": "Sarah",
             "company": "Design Co",
@@ -2239,10 +2247,10 @@ recipients = [
 # Use personalization tokens in content
 content = {
     "html": """<h1>Hello {{name}}!</h1>
-               <p>We noticed you recently purchased a {{recent_purchase}} 
+               <p>We noticed you recently purchased a {{recent_purchase}}
                from {{company}}. Here's something special for you!</p>"""
 }
-```
+```markdown
 
 ## Troubleshooting
 
@@ -2254,10 +2262,10 @@ content = {
 if response.status_code == 401:
     print("Check your API key is correct and active")
 
-# 403: Insufficient permissions  
+# 403: Insufficient permissions
 if response.status_code == 403:
     print("Your API key doesn't have permission for this action")
-```
+```markdown
 
 #### Rate Limiting
 ```python
@@ -2266,7 +2274,7 @@ if response.status_code == 429:
     print("You've exceeded the rate limit. Wait before retrying.")
     retry_after = int(response.headers.get('Retry-After', 60))
     time.sleep(retry_after)
-```
+```markdown
 
 #### Validation Errors
 ```python
@@ -2276,24 +2284,24 @@ try:
 except ValidationError as e:
     print(f"Validation error: {e.details}")
     # Check the details for specific field issues
-```
+```markdown
 
 ## Next Steps
 
-Congratulations! You've created and sent your first campaign with PenguinMails. 
+Congratulations! You've created and sent your first campaign with PenguinMails.
 
 ### Recommended Next Steps:
-1. **Explore Analytics**: Learn about [advanced analytics features](..md)
-2. **Set Up Webhooks**: Implement [real-time event tracking](..md)
-3. **Optimize Performance**: Discover [AI optimization features](..md)
-4. **Integrate with CRM**: Connect with your [existing tools](..md)
+1. **Explore Analytics**: Learn about [advanced analytics features](.)
+2. **Set Up Webhooks**: Implement [real-time event tracking](.)
+3. **Optimize Performance**: Discover [AI optimization features](.)
+4. **Integrate with CRM**: Connect with your [existing tools](.)
 
 ### Additional Resources:
-- [API Reference](..md)) - Complete API documentation
-- [SDK Documentation](..md)) - Language-specific guides
-- [Best Practices Guide](..md)) - Production deployment tips
-- [Community Forum](https:/.md) - Get help and share ideas
-```
+- [API Reference](.)) - Complete API documentation
+- [SDK Documentation](.)) - Language-specific guides
+- [Best Practices Guide](.)) - Production deployment tips
+- [Community Forum](https:/) - Get help and share ideas
+```markdown
 
 ---
 
@@ -2397,7 +2405,7 @@ For corporate contributors, additional agreements may be required for large cont
 def optimized_function():
     # Your implementation here
     pass
-```
+```markdown
 
 #### Documentation Attribution
 ```markdown

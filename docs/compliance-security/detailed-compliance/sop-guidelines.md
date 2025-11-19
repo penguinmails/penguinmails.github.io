@@ -1,6 +1,7 @@
 # Compliance Excellence Framework
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This compliance excellence framework supports our enterprise security and quality standards by providing comprehensive compliance procedures, operational excellence processes, and quality assurance systems for PenguinMails customer success and regulatory compliance.
 
 **Technical Authority**: Our compliance framework integrates with enterprise security systems, automated compliance monitoring, and quality assurance protocols featuring modern security practices, regulatory compliance tracking, and customer-focused operational excellence.
@@ -18,12 +19,14 @@ This framework defines our standard processes for quality assurance, security co
 It ensures all operational procedures follow consistent standards to improve customer satisfaction, service reliability, and delivery excellence.
 
 ## 2. **Tools & Platform**
+
 * **Jira** – Task creation, sprint planning, progress tracking
 * **Discord** – Team communication, quick discussions, and daily updates
 * **Google Docs/Sheets** – Documentation, PRDs, and research outputs
 * **GitHub** – Code collaboration and version control
 
 ## 3. **Communication Rules**
+
 * All work-related discussions happen in Discord using defined channels.
 * Avoid direct messages for project-related issues, keep discussions transparent.
 * Tag teammates directly when a response is required.
@@ -35,7 +38,8 @@ It ensures all operational procedures follow consistent standards to improve cus
 
 All tasks must include a clear title, description, acceptance criteria, labels, and assignee.
 
-### Status Workflow:
+### Status Workflow
+
 * **Backlog** – Idea or future task.
 * **Selected for Development** – Approved for the current sprint.
 * **In Progress** – Developer actively working on it.
@@ -47,34 +51,40 @@ All tasks must include a clear title, description, acceptance criteria, labels, 
 
 Each sprint runs for 1–2 weeks, depending on scope.
 
-### Phases:
+### Phases
+
 * **Planning**: Define sprint goals and prioritize tasks.
 * **Execution**: Developers update Jira daily and communicate blockers.
 * **Demo**: Product Owner and stakeholders review completed tasks.
 * **Retrospective**: Discuss what went well and how to improve in the next sprint.
 
-### Completion Rule:
+### Completion Rule
+
 A task is considered done only if it meets acceptance criteria and has been verified by the Product Owner.
 
 ## 6. **Developers Responsibilities**
+
 * Update progress daily in Jira.
 * Report blockers early through Discord or directly in Jira.
 * Keep PRs small and link them to relevant Jira tasks.
 * Write short documentation for implemented features.
 
 ## 7. **Product Owner Responsibilities**
+
 * Ensure backlog is groomed and prioritized before each sprint.
 * Follow up on blockers and task progress.
 * Maintain alignment between product goals and technical execution.
 * Review, test, and validate completed work.
 
 ## 8. **Code & Infrastructure**
+
 * All environments (staging, production) must have clear documentation.
 * Infrastructure scripts must be version-controlled in GitHub.
 * Access permissions and credentials should be approved before use.
 * Use secure practices when managing configuration or deployment keys.
 
 ## 9. **Compliance & Security**
+
 * Follow security best practices for all integrations and APIs.
 * Use secure credentials and enable 2FA on all project accounts.
 * Do not share confidential or client data outside official channels.
@@ -100,12 +110,13 @@ Any updates or process changes will be communicated in the channel.
 ---
 
 ## Related Documents
-- [Onboarding Guide](../../user-experience-journeys/detailed-journeys.md) - Team member integration processes
-- [Security Framework](../../enterprise.md) - Enterprise security procedures and controls
-- [Security & Privacy Integration](../../enterprise.md) - Unified security and privacy practices
-- [Traffic Security Matrix](../../enterprise.md) - Traffic and key selection security framework
-- [Implementation Roadmap](../../enterprise.md) - Security process improvement planning
-- [Development Standards](../../implementation-technical/development-guidelines.md) - Code standards and development practices
+
+* [Onboarding Guide](../../user-experience-journeys/detailed-journeys) - Team member integration processes
+* [Security Framework](../../enterprise) - Enterprise security procedures and controls
+* [Security & Privacy Integration](../../enterprise) - Unified security and privacy practices
+* [Traffic Security Matrix](../../enterprise) - Traffic and key selection security framework
+* [Implementation Roadmap](../../enterprise) - Security process improvement planning
+* [Development Standards](../../implementation-technical/development-guidelines) - Code standards and development practices
 
 **Keywords**: standard operating procedure, team workflow, sprint management, communication protocols, task management, quality assurance, operational excellence
 ---

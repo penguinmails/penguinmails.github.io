@@ -9,49 +9,56 @@ description: "Comprehensive frameworks for measuring product performance, featur
 
 This guide provides enterprise-grade frameworks for measuring and optimizing product performance, feature adoption, user engagement, and product-market fit. It establishes comprehensive metrics and methodologies to drive data-informed product decisions and continuous improvement, supporting our strategic objective of delivering 99.9% uptime and industry-leading deliverability rates in the **email marketing market valued at USD 6.13 billion in 2024, projected to reach USD 24.19 billion by 2033**[^1] growing at **15.3%[^6] CAGR**.
 
-### **Strategic Alignment**: This analytics framework supports our market leadership positioning by providing comprehensive performance measurement systems that enable data-driven optimization and competitive advantage.
+### **Strategic Alignment**: This analytics framework supports our market leadership positioning by providing comprehensive performance measurement systems that enable data-driven optimization and competitive advantage
 
-### **Technical Authority**: Our analytics platform integrates real-time performance monitoring with predictive modeling systems, featuring automated analysis and intelligent recommendation engines.
+### **Technical Authority**: Our analytics platform integrates real-time performance monitoring with predictive modeling systems, featuring automated analysis and intelligent recommendation engines
 
-### **Operational Excellence**: Backed by enterprise-grade analytics infrastructure that ensures 99.9% uptime and real-time performance optimization.
+### **Operational Excellence**: Backed by enterprise-grade analytics infrastructure that ensures 99.9% uptime and real-time performance optimization
 
-### **User Journey Integration**: This analytics framework is part of your complete product optimization journey - connecting performance measurement to user experience enhancement and business outcomes.
+### **User Journey Integration**: This analytics framework is part of your complete product optimization journey - connecting performance measurement to user experience enhancement and business outcomes
 
 ---
 
 ## Feature Usage Analytics
 
 ### **Core Feature Metrics**
+
 - **Feature Adoption Rate**: Percentage of users using specific features
 - **Feature Engagement Score**: Depth and frequency of feature usage
 - **Time to Feature Adoption**: Days from user signup to first feature use
 - **Feature Retention Rate**: Percentage of users continuing to use features
 
 ### **Usage Segmentation Framework**
+
 Our analytics system categorizes users into behavioral segments to optimize product development and customer success:
 
 #### **Power Users (15% of base)**
+
 - **Criteria**: 50+ sessions, 8+ features, 85+ engagement score
 - **Characteristics**: High retention (95%), strong upgrade rates (40%)
 - **Value**: Feature feedback, case studies, beta testing
 
 #### **Regular Users (40% of base)**
+
 - **Criteria**: 20+ sessions, 4+ features, 60+ engagement score
 - **Characteristics**: Good retention (85%), moderate upgrade rates (20%)
 - **Value**: Feature adoption optimization, user journey improvements
 
 #### **Casual Users (30% of base)**
+
 - **Criteria**: 5+ sessions, 2+ features, 30+ engagement score
 - **Characteristics**: Variable retention (60%), low upgrade rates (5%)
 - **Value**: Onboarding optimization, value demonstration
 
 #### **Non-Users (15% of base)**
+
 - **Criteria**: <5 sessions, 1 feature, 0 engagement score
 - **Characteristics**: High churn risk (90%), minimal value extraction
 - **Value**: Product-market fit validation, experience optimization
 
 ### **Feature Performance Dashboard**
-```
+
+```markdown
 Feature Overview
 ├── Campaigns: 450 users (↑15% adoption)
 ├── Templates: 380 users (↑12% adoption)
@@ -59,11 +66,11 @@ Feature Overview
 └── API: 180 users (↑25% adoption)
 
 Usage Patterns
-├── Most Used: Campaigns (8.2 sessions.md)
+├── Most Used: Campaigns (8.2 sessions)
 ├── Fastest Growing: Analytics (+18% MoM)
-├── Highest Satisfaction: Templates (4.7.md)
+├── Highest Satisfaction: Templates (4.7)
 └── Most Problematic: API (12% error rate)
-```
+```markdown
 
 ---
 
@@ -155,7 +162,7 @@ Our product-market fit analysis uses multi-dimensional evaluation in the context
 We calculate comprehensive fit scores using weighted metrics:
 - **Retention Rate** (30%): 85%+ indicates strong PMF (aligned with industry 5%[^2] churn rate)
 - **Referral Rate** (25%): NPS 50+ indicates willingness to recommend (enterprise standard)
-- **Usage Intensity** (25%): DAU.md)
+- **Usage Intensity** (25%): DAU
 - **Competitive Moat** (20%): Unique value proposition strength (multi-tenant, compliance automation)
 
 ---
@@ -219,7 +226,7 @@ Our systematic optimization approach ensures continuous improvement:
 Our comprehensive reporting system provides strategic insights:
 
 #### **Product Overview Metrics**
-```
+```markdown
 Product Performance
 ├── Active Features: 12 of 15 total
 ├── Feature Adoption: 68% average
@@ -237,10 +244,10 @@ Experiment Results
 ├── Completed: 12 this month
 ├── Success Rate: 75%
 └── Average Impact: +12% improvement
-```
+```markdown
 
 #### **Strategic Business Intelligence**
-- **Product-Market Fit Score**: 72.md)
+- **Product-Market Fit Score**: 72)
 - **Feature Satisfaction**: 4.3/5.0 average
 - **Roadmap Velocity**: 4 features launched per month
 - **Competitive Position**: Strong differentiation
@@ -299,11 +306,11 @@ Experiment Results
 
 ## Related Analytics Documents
 
-- **[Business Strategy Overview](../strategy.md)** - Strategic context and objectives
-- **[Market Analysis](../market-analysis.md)** - Market intelligence and positioning
-- **[Business Model](../model.md)** - Financial framework and performance
-- **[Business Operations](../operations.md)** - Operational procedures and quality assurance
-- **[Value Proposition Overview](../value-proposition.md)** - Customer value and performance measurement
+- **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic context and objectives
+- **[Market Analysis](/docs/business/market-analysis/overview)** - Market intelligence and positioning
+- **[Business Model](/docs/business/model/overview)** - Financial framework and performance
+- **[Business Operations](/docs/business/operations/strategy/framework)** - Operational procedures and quality assurance
+- **[Value Proposition Overview](/docs/business/value-proposition/overview)** - Customer value and performance measurement
 
 ---
 
@@ -344,5 +351,5 @@ Experiment Results
 *This analytics framework serves as the foundation for all data-driven product decisions and optimization efforts. For analytics questions or performance analysis, please contact the Product Analytics Team.*
 
 ---
-*Next: [Business Operations Overview](../operations.md)] →*
+*Next: [Business Operations Overview](/docs/business/operations/strategy/framework)] →*
 ---

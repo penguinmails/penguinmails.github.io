@@ -6,13 +6,13 @@ last_modified_date: "2025-11-10"
 
 # Tenant SMTP REST API Contract
 
-Level: Implementation-Ready  
+Level: Implementation-Ready
 Audience: Backend engineers, integrators, internal tools
 
 This contract defines REST-only endpoints that expose each tenant's SMTP configuration and high-level email performance signals, aligned with:
 
 - Multi-tenant isolation and RLS
-- Business Leaders backlog (BF-006, revenue.md)
+- Business Leaders backlog (BF-006, revenue)
 - Database and infra docs:
   - `../database-infrastructure/oltp-schema-guide.md`
   - `../database-infrastructure/business-leaders-database-migration-guide.md`
@@ -32,7 +32,7 @@ All endpoints are:
   - A privileged internal/admin role with cross-tenant permissions.
 - Authorization:
   - Tenant users: can access only their own tenant’s SMTP resources.
-  - Internal roles (support.md): require explicit scopes (e.g. `smtp:read`, `tenant:read`) and are fully audited.
+  - Internal roles (support): require explicit scopes (e.g. `smtp:read`, `tenant:read`) and are fully audited.
 
 ## 2. Endpoints
 
@@ -68,7 +68,7 @@ Response (example):
     }
   }
 }
-```
+```markdown
 
 Rules:
 
@@ -95,11 +95,11 @@ Summarized operational health for the tenant’s sending.
     }
   }
 }
-```
+```markdown
 
 Source:
 
-- Aggregations built from logs/events (OLAP.md).
+- Aggregations built from logs/events (OLAP).
 - No raw provider internals exposed.
 
 ### 2.3 Get Tenant SMTP Metrics (Aggregated)
@@ -135,7 +135,7 @@ Response (example):
     ]
   }
 }
-```
+```markdown
 
 Constraints:
 

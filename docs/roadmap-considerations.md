@@ -15,11 +15,12 @@ This document explains the key considerations and philosophy behind our roadmap 
 ## Our Development Philosophy
 
 ### Progressive Enhancement
+
 We follow a **progressive enhancement** approach, building from solid foundations to advanced capabilities:
 
-```
+```markdown
 Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → Level 4: Enterprise → Level 5: Future
-```
+```markdown
 
 ### What This Means for You
 
@@ -184,8 +185,8 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ---
 
-**Document Purpose**: Help stakeholders understand roadmap philosophy and realistic expectations  
-**Review Cycle**: Quarterly assessment of market feedback and development priorities  
+**Document Purpose**: Help stakeholders understand roadmap philosophy and realistic expectations
+**Review Cycle**: Quarterly assessment of market feedback and development priorities
 **Investment Authority**: C-Level approval for each growth phase investment
 
 This document provides transparency into our development approach, helping all stakeholders understand why we build features in this order and what realistic expectations should be for each timeline.

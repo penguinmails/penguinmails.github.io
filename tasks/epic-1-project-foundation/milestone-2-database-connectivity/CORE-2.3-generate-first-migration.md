@@ -38,7 +38,7 @@ Database migrations are essential for version control of database schema changes
 
 ### Migration File Location
 
-```
+```txt
 /migrations
   └── 0000_initial_schema.sql
 ```
@@ -46,6 +46,7 @@ Database migrations are essential for version control of database schema changes
 ### Expected Migration Content
 
 The migration should include:
+
 - CREATE TABLE statements with all columns
 - PRIMARY KEY constraints
 - FOREIGN KEY constraints
@@ -63,10 +64,10 @@ The migration should include:
 
 ## Related Documentation
 
-- [Database Operations Guide](../../operations_runbooks/database_operations_guide.md) - Migration procedures
-- [Migration & Deployment Guide](../../operations_runbooks/migration_deployment_guide.md) - Deployment workflows
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - OLTP tier specifications
+- [Database Operations Guide](../../operations_runbooks/database_operations_guide) - Migration procedures
+- [Migration & Deployment Guide](../../operations_runbooks/migration_deployment_guide) - Deployment workflows
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - 5-tier database architecture
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - OLTP tier specifications
 
 ## Dependencies
 
@@ -80,5 +81,3 @@ The migration should include:
 - [ ] Check that the SQL syntax is correct
 - [ ] Verify all tables, columns, and constraints are included
 - [ ] Test that running the script multiple times doesn't create duplicate migrations
-
-

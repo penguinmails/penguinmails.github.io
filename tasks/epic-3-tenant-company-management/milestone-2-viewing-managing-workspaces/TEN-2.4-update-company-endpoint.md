@@ -11,7 +11,7 @@ Create a protected PATCH API route at `/api/companies/[companyId]/route.ts`. Thi
 
 ## Context
 
-Company updates are essential for workspace management. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need to manage their workspace settings. This endpoint enables users to update company information while maintaining tenant isolation and security.
+Company updates are essential for workspace management. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need to manage their workspace settings. This endpoint enables users to update company information while maintaining tenant isolation and security.
 
 ## Acceptance Criteria
 
@@ -121,6 +121,7 @@ export async function PATCH(
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "id": "company-uuid",
@@ -134,6 +135,7 @@ export async function PATCH(
 ```
 
 **Error Response (404):**
+
 ```json
 {
   "error": "Company not found"
@@ -141,6 +143,7 @@ export async function PATCH(
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "error": "Validation failed",
@@ -166,8 +169,8 @@ export async function PATCH(
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Tenant isolation
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Workspace management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Tenant isolation
+- [Features & Capabilities](../../docs/features-capabilities/index) - Workspace management
 
 ## Dependencies
 
@@ -188,5 +191,3 @@ export async function PATCH(
 - [ ] Verify workspaceName cannot be updated (security)
 - [ ] Test error handling for database failures
 - [ ] Verify updatedAt timestamp is updated correctly
-
-

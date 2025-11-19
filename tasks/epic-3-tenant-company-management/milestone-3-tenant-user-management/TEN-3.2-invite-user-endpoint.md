@@ -11,7 +11,7 @@ Create a protected POST API route at `/api/tenants/invites/route.ts`. The endpoi
 
 ## Context
 
-User invitations are essential for team collaboration. According to the [Team Workflow](../../docs/quick-access/team-workflow.md), PenguinMails supports team management with role-based access control. This endpoint enables users to invite team members to their tenant/workspace.
+User invitations are essential for team collaboration. According to the [Team Workflow](../../docs/quick-access/team-workflow), PenguinMails supports team management with role-based access control. This endpoint enables users to invite team members to their tenant/workspace.
 
 ## Acceptance Criteria
 
@@ -114,6 +114,7 @@ export async function POST(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (201):**
+
 ```json
 {
   "success": true,
@@ -127,6 +128,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "error": "Validation failed",
@@ -140,6 +142,7 @@ export async function POST(request: NextRequest) {
 ```
 
 **Error Response (409):**
+
 ```json
 {
   "error": "User is already a member or has a pending invitation"
@@ -159,8 +162,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Team management and roles
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Team collaboration
+- [Team Workflow](../../docs/quick-access/team-workflow) - Team management and roles
+- [Features & Capabilities](../../docs/features-capabilities/index) - Team collaboration
 
 ## Dependencies
 
@@ -179,5 +182,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify invitation email is sent (if testable)
 - [ ] Test error handling for NileDB failures
 - [ ] Verify tenantId from session is used (not from request)
-
-

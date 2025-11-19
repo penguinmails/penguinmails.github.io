@@ -13,11 +13,12 @@ description: "Complete API documentation and third-party integration guides for 
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
-**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features.md) and [analytics tracking](../../core-features/analytics/overview.md) to provide seamless workflow automation that scales with your business.
+**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features) and [analytics tracking](../../core-features/analytics/overview) to provide seamless workflow automation that scales with your business.
 
 PenguinMails provides a comprehensive integration ecosystem designed for developers, with **RESTful APIs, SDKs for major programming languages, webhook systems, and extensive third-party integrations**. Build custom solutions with confidence using our enterprise-grade API infrastructure.
 
 ### **Integration Mission**
+
 Enable **seamless integration** with existing business systems while providing the flexibility to build custom solutions, ensuring that cold email becomes an integrated part of your business workflow rather than a separate tool.
 
 ---
@@ -26,13 +27,15 @@ Enable **seamless integration** with existing business systems while providing t
 
 ### **RESTful API Design**
 
-**API Foundation**
-- **Base URL**: `https://api.penguinmails.com/v1/` (production.md) / `https://sandbox-api.penguinmails.com/v1/` (testing.md)
-- **Authentication**: JWT tokens, API keys, and OAuth 2.0 support
-- **Rate Limiting**: Tiered rate limits (1K to 1M requests.md) with intelligent throttling
-- **Versioning**: URL-based versioning (v1, v2.md) with 6-month backward compatibility
+## API Foundation
 
-**Response Format Standardization**
+- **Base URL**: `https://api.penguinmails.com/v1/` (production) / `https://sandbox-api.penguinmails.com/v1/` (testing)
+- **Authentication**: JWT tokens, API keys, and OAuth 2.0 support
+- **Rate Limiting**: Tiered rate limits (1K to 1M requests) with intelligent throttling
+- **Versioning**: URL-based versioning (v1, v2) with 6-month backward compatibility
+
+## Response Format Standardization
+
 ```json
 {
   "success": true,
@@ -46,7 +49,7 @@ Enable **seamless integration** with existing business systems while providing t
     "timestamp": "2025-12-01T09:00:00Z"
   }
 }
-```
+```markdown
 
 ### **Authentication & Authorization**
 
@@ -54,7 +57,7 @@ Enable **seamless integration** with existing business systems while providing t
 ```http
 Authorization: Bearer pk_live_abc123def456ghi789
 Content-Type: application/json
-```
+```markdown
 
 **JWT Token Authentication**
 ```http
@@ -65,12 +68,12 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "secure_password"
 }
-```
+```markdown
 
 **OAuth 2.0 Integration**
 ```http
 https://app.penguinmails.com/oauth/authorize?client_id=your_client_id&redirect_uri=your_callback_url&response_type=code&scope=read write
-```
+```markdown
 
 ---
 
@@ -108,7 +111,7 @@ Content-Type: application/json
     "track_clicks": true
   }
 }
-```
+```markdown
 
 **AI-Powered Optimization Response**
 ```json
@@ -125,7 +128,7 @@ Content-Type: application/json
     }
   }
 }
-```
+```markdown
 
 ### **Email Sending API (⭐⭐⭐)**
 
@@ -147,7 +150,7 @@ Content-Type: application/json
     "track_clicks": true
   }
 }
-```
+```markdown
 
 **Bulk Email Send**
 ```http
@@ -166,7 +169,7 @@ Content-Type: application/json
   "batch_size": 100,
   "delay_between_batches": 5
 }
-```
+```markdown
 
 ### **Analytics & Reporting API (⭐⭐⭐)**
 
@@ -174,7 +177,7 @@ Content-Type: application/json
 ```http
 GET /api/v1/analytics/campaigns/{campaign_id}?period=7d
 Authorization: Bearer {token}
-```
+```markdown
 
 **Advanced Analytics Response**
 ```json
@@ -203,7 +206,7 @@ Authorization: Bearer {token}
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -230,7 +233,7 @@ Content-Type: application/json
   },
   "optimization_goals": ["open_rate", "click_rate", "revenue"]
 }
-```
+```markdown
 
 **AI Response with Optimization**
 ```json
@@ -252,7 +255,7 @@ Content-Type: application/json
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -281,7 +284,7 @@ Content-Type: application/json
   ],
   "secret": "your-webhook-secret"
 }
-```
+```markdown
 
 **Webhook Payload Format**
 ```json
@@ -303,7 +306,7 @@ Content-Type: application/json
     }
   }
 }
-```
+```markdown
 
 **Signature Verification**
 ```python
@@ -311,13 +314,13 @@ import hmac
 import hashlib
 
 def verify_webhook_signature(payload: str, signature: str, secret: str) -> bool:
-    expected_signature = hmac.new(.md)
+    expected_signature = hmac.new()
         secret.encode('utf-8'),
         payload.encode('utf-8'),
         hashlib.sha256
     ).hexdigest()
     return hmac.compare_digest(f"sha256={expected_signature}", signature)
-```
+```markdown
 
 ---
 
@@ -328,7 +331,7 @@ def verify_webhook_signature(payload: str, signature: str, secret: str) -> bool:
 **Installation & Basic Usage**
 ```bash
 pip install penguinmails-python
-```
+```markdown
 
 ```python
 from penguinmails import PenguinMails
@@ -351,7 +354,7 @@ campaign = client.campaigns.create(campaign_data)
 print(f"Campaign created: {campaign.id}")
 
 # Send email
-email = Email(.md)
+email = Email()
     to="user@example.com",
     subject="Hello!",
     content="<p>Welcome to PenguinMails!</p>"
@@ -364,7 +367,7 @@ print(f"Email sent: {result.message_id}")
 analytics = client.analytics.get_campaign_metrics(campaign.id)
 print(f"Open rate: {analytics.open_rate}")
 print(f"AI optimization score: {analytics.ai_insights.optimization_score}")
-```
+```markdown
 
 **Advanced AI Features**
 ```python
@@ -372,21 +375,21 @@ from penguinmails.ai import AIOptimizer
 
 # AI-powered content optimization
 ai_optimizer = AIOptimizer(client)
-optimized_content = ai_optimizer.optimize_content(.md)
+optimized_content = ai_optimizer.optimize_content()
     content=campaign_data["content"],
     audience={
         "demographics": {"age_range": "25-45"},
         "interests": ["technology", "shopping"]
     }
 )
-```
+```markdown
 
-### **JavaScript.md)**
+### **JavaScript)**
 
 **Installation & Basic Usage**
 ```bash
 npm install @penguinmails/sdk
-```
+```markdown
 
 ```javascript
 import { PenguinMails } from '@penguinmails/sdk';
@@ -421,7 +424,7 @@ const email = {
 
 const result = await client.emails.send(email);
 console.log(`Email sent: ${result.message_id}`);
-```
+```markdown
 
 **React Integration**
 ```jsx
@@ -429,7 +432,7 @@ import { PenguinMailsProvider, usePenguinMails } from '@penguinmails/sdk-react';
 
 function CampaignCreator() {
   const { campaigns, createCampaign } = usePenguinMails();
-  
+
   const handleCreateCampaign = async (campaignData) => {
     try {
       const campaign = await createCampaign(campaignData);
@@ -439,7 +442,7 @@ function CampaignCreator() {
     }
   };
 
-  return (.md)
+  return ()
     <form onSubmit={handleCreateCampaign}>
       {/* Campaign form fields */}
     </form>
@@ -447,20 +450,20 @@ function CampaignCreator() {
 }
 
 function App() {
-  return (.md)
+  return ()
     <PenguinMailsProvider apiKey="pk_live_abc123def456">
       <CampaignCreator />
     </PenguinMailsProvider>
   );
 }
-```
+```markdown
 
 ### **PHP SDK (⭐⭐)**
 
 **Installation & Usage**
 ```bash
 composer require penguinmails/php-sdk
-```
+```markdown
 
 ```php
 <?php
@@ -483,14 +486,14 @@ $campaignData = [
 $campaign = $client->campaigns()->create($campaignData);
 echo "Campaign created: " . $campaign->getId() . "\n";
 ?>
-```
+```markdown
 
 ### **Ruby SDK (⭐⭐)**
 
 **Installation & Usage**
 ```bash
 gem install penguinmails-ruby
-```
+```markdown
 
 ```ruby
 require 'penguinmails'
@@ -510,7 +513,7 @@ campaign_data = {
 
 campaign = client.campaigns.create(campaign_data)
 puts "Campaign created: #{campaign.id}"
-```
+```markdown
 
 ---
 
@@ -535,7 +538,7 @@ class SalesforcePenguinMailsIntegration {
   async syncLeadToEmail(leadData: any): Promise<void> {
     // Enrich lead data with AI insights
     const enrichedData = await this.enrichLeadWithAI(leadData);
-    
+
     // Create contact in PenguinMails
     const contact = await this.emailClient.contacts.create({
       email: leadData.Email,
@@ -554,7 +557,7 @@ class SalesforcePenguinMailsIntegration {
     await this.triggerLeadSequence(contact.id, enrichedData);
   }
 }
-```
+```markdown
 
 **HubSpot Integration**
 ```python
@@ -565,22 +568,22 @@ class HubSpotPenguinMailsIntegration:
     def __init__(self, penguinmails_api_key, hubspot_api_key):
         self.email_client = PenguinMails(api_key=penguinmails_api_key)
         self.hubspot = hubspot.Client(access_token=hubspot_api_key)
-    
+
     def sync_contact_to_email(self, hubspot_contact):
         """Sync HubSpot contact to PenguinMails with AI enrichment."""
         try:
             # Get additional contact data
-            contact_data = self.hubspot.crm.contacts.basic_api.get_by_id(.md)
+            contact_data = self.hubspot.crm.contacts.basic_api.get_by_id()
                 contact_id=hubspot_contact.id,
                 properties=['email', 'firstname', 'lastname', 'company', 'lifecyclestage']
             )
-            
+
             # AI-enrichment for better targeting
             enriched_data = self.email_client.ai.analyze_contact({
                 'company': contact_data.properties.get('company', ''),
                 'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead')
             })
-            
+
             # Create contact in PenguinMails
             contact = self.email_client.contacts.create({
                 'email': contact_data.properties['email'],
@@ -594,13 +597,13 @@ class HubSpotPenguinMailsIntegration:
                 },
                 'tags': ['hubspot_sync', 'crm_integration']
             })
-            
+
             return contact
-            
+
         except Exception as e:
             print(f"Integration error: {e}")
             raise
-```
+```markdown
 
 ### **E-commerce Platform Integrations (⭐⭐⭐)**
 
@@ -613,7 +616,7 @@ class ShopifyPenguinMailsIntegration:
     def __init__(self, shopify_api_key, penguinmails_api_key):
         self.shopify = shopify.ShopifyAPI(api_key=shopify_api_key)
         self.email_client = PenguinMails(api_key=penguinmails_api_key)
-    
+
     def sync_customer_and_send_welcome(self, customer_data):
         """Sync Shopify customer and send personalized welcome email."""
         try:
@@ -628,9 +631,9 @@ class ShopifyPenguinMailsIntegration:
                 },
                 'tags': ['shopify_customer', 'new_customer']
             }
-            
+
             contact = self.email_client.contacts.create(contact_data)
-            
+
             # Send personalized welcome email
             email_data = {
                 'to': customer_data['email'],
@@ -640,21 +643,21 @@ class ShopifyPenguinMailsIntegration:
                     'text': self.generate_welcome_text(customer_data)
                 }
             }
-            
+
             result = self.email_client.emails.send(email_data)
             return result
-            
+
         except Exception as e:
             print(f"Integration error: {e}")
             raise
-```
+```markdown
 
 ### **Zapier Integration (⭐⭐)**
 
 **Zapier Webhook Handler**
 ```javascript
 const express = require('express');
-const { PenguinMails } = require('@penguinmails.md);
+const { PenguinMails } = require('@penguinmails);
 
 const app = express();
 const emailClient = new PenguinMails({
@@ -662,10 +665,10 @@ const emailClient = new PenguinMails({
 });
 
 // Handle Zapier webhook triggers
-app.post('/webhooks/zapier.md) => {
+app.post('/webhooks/zapier) => {
   try {
     const { trigger_type, data } = req.body;
-    
+
     switch (trigger_type) {
       case 'new_subscriber':
         await handleNewSubscriber(data);
@@ -676,7 +679,7 @@ app.post('/webhooks/zapier.md) => {
       default:
         console.log('Unknown trigger type:', trigger_type);
     }
-    
+
     res.status(200).json({ success: true });
   } catch (error) {
     console.error('Zapier webhook error:', error);
@@ -698,7 +701,7 @@ async function handleNewSubscriber(subscriberData) {
   // Trigger welcome sequence
   await emailClient.campaigns.trigger_sequence(contact.id, 'welcome_series');
 }
-```
+```markdown
 
 ---
 
@@ -714,11 +717,11 @@ async function handleNewSubscriber(subscriberData) {
 | **Enterprise** | 1,000,000 | Unlimited features, priority support, custom integrations | $299/month |
 
 **Rate Limit Headers**
-```
+```markdown
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 999
 X-RateLimit-Reset: 1701429600
-```
+```markdown
 
 ### **Error Handling Best Practices (⭐⭐)**
 
@@ -738,11 +741,11 @@ X-RateLimit-Reset: 1701429600
     "request_id": "req_abc123"
   }
 }
-```
+```markdown
 
 **Python Error Handling**
 ```python
-from penguinmails.exceptions import (.md)
+from penguinmails.exceptions import ()
     PenguinMailsError,
     ValidationError,
     RateLimitError,
@@ -753,22 +756,22 @@ def send_campaign_with_retry(client, campaign_data, max_retries=3):
     for attempt in range(max_retries):
         try:
             return client.campaigns.create(campaign_data)
-        
+
         except ValidationError as e:
             print(f"Validation failed: {e.details}")
             return None  # Don't retry validation errors
-        
+
         except RateLimitError as e:
             if attempt == max_retries - 1:
                 raise
             wait_time = e.retry_after or (2 ** attempt)
             print(f"Rate limited. Retrying in {wait_time} seconds...")
             time.sleep(wait_time)
-        
+
         except AuthenticationError as e:
             print(f"Authentication failed: {e}")
             return None
-```
+```markdown
 
 ---
 
@@ -787,11 +790,11 @@ def send_campaign_with_retry(client, campaign_data, max_retries=3):
 class PenguinMailsTestDataGenerator:
     def __init__(self, client):
         self.client = client
-    
+
     def generate_test_campaigns(self, count=5):
         """Generate test campaigns for testing."""
         campaigns = []
-        
+
         for i in range(count):
             campaign_data = {
                 "name": f"Test Campaign {i+1}",
@@ -808,12 +811,12 @@ class PenguinMailsTestDataGenerator:
                     "track_clicks": True
                 }
             }
-            
+
             campaign = self.client.campaigns.create(campaign_data)
             campaigns.append(campaign)
-        
+
         return campaigns
-```
+```markdown
 
 ### **API Testing Framework**
 ```python
@@ -825,7 +828,7 @@ class TestPenguinMailsAPI:
     @pytest.fixture
     def client(self):
         return PenguinMails(api_key="sk_test_abc123")
-    
+
     def test_campaign_creation(self, client):
         campaign_data = {
             "name": "Test Campaign",
@@ -833,23 +836,23 @@ class TestPenguinMailsAPI:
             "content": {"html": "<h1>Test</h1>", "text": "Test"},
             "recipients": [{"email": "test@example.com"}]
         }
-        
+
         campaign = client.campaigns.create(campaign_data)
-        
+
         assert campaign.id is not None
         assert campaign.name == campaign_data["name"]
         assert campaign.status == "draft"
-```
+```markdown
 
 ---
 
 ## 📚 Additional Resources
 
 ### **Developer Documentation**
-- **[API Reference](advanced-integrations.md)** - Complete API documentation
-- **[SDK Documentation](development-resources.md)** - Detailed SDK guides
-- **[Webhook Guide](advanced-integrations/webhook-guide.md)** - Webhook implementation guide
-- **[Testing Framework](development-resources/testing-framework.md)** - Testing tools and best practices
+- **[API Reference](advanced-integrations)** - Complete API documentation
+- **[SDK Documentation](development-resources)** - Detailed SDK guides
+- **[Webhook Guide](advanced-integrations/webhook-guide)** - Webhook implementation guide
+- **[Testing Framework](development-resources/testing-framework)** - Testing tools and best practices
 
 ### **Support & Community**
 - **Developer Support**: developer-support@penguinmails.com
@@ -868,5 +871,5 @@ class TestPenguinMailsAPI:
 *Our comprehensive integration ecosystem ensures that PenguinMails seamlessly fits into your existing technology stack while providing the flexibility to build custom solutions that drive your business forward.*
 
 ---
-*Previous: [Technical Operations Overview](../operations/overview.md) | Next: [Core Features Overview](../../core-features.md) →*
+*Previous: [Technical Operations Overview](../operations/overview) | Next: [Core Features Overview](../../core-features) →*
 ---

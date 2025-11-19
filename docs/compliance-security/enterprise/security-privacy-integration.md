@@ -27,6 +27,7 @@ This document outlines PenguinMails' comprehensive security and privacy framewor
 ## 2. **Security Framework**
 
 ### **Core Security Principles**
+
 - **Defense in Depth**: Multiple layers of security controls
 - **Least Privilege**: Minimum access necessary for operations
 - **Zero Trust**: Continuous verification of all access requests
@@ -34,6 +35,7 @@ This document outlines PenguinMails' comprehensive security and privacy framewor
 - **Incident Response**: Rapid detection and remediation of security events
 
 ### **Security Organization**
+
 - **Chief Information Security Officer (CISO)**: Oversees security strategy
 - **Security Operations Center (SOC)**: 24/7 monitoring and response
 - **Security Engineering Team**: Implements security controls
@@ -43,12 +45,13 @@ This document outlines PenguinMails' comprehensive security and privacy framewor
 ## 3. **Data Protection Architecture**
 
 ### **Data Classification**
+
 ```typescript
 enum DataClassification {
   PUBLIC = 'public',           // No restrictions
   INTERNAL = 'internal',       // Company confidential
   CONFIDENTIAL = 'confidential', // Customer data, business sensitive
-  RESTRICTED = 'restricted'    /.md)
+  RESTRICTED = 'restricted'    /)
 }
 
 interface DataAsset {
@@ -61,7 +64,7 @@ interface DataAsset {
   encryption: boolean;
   accessControls: AccessControl[];
 }
-```
+```markdown
 
 ### **Encryption Standards**
 - **Data at Rest**: AES-256 encryption for all stored data
@@ -107,7 +110,7 @@ const retentionPolicies: RetentionPolicy[] = [
     auditRequired: true
   }
 ];
-```
+```markdown
 
 ## 4. **Access Control Systems**
 
@@ -162,7 +165,7 @@ const roles: UserRole[] = [
     sessionTimeout: 480
   }
 ];
-```
+```markdown
 
 ### **Multi-Factor Authentication (MFA)**
 - **Required for**: Administrative accounts, privileged access
@@ -236,7 +239,7 @@ const securityRequirements: SecurityRequirement[] = [
     severity: 'critical'
   }
 ];
-```
+```markdown
 
 ### **API Security**
 - **Authentication**: Bearer token authentication with refresh tokens
@@ -294,7 +297,7 @@ const dataSubjectRights: DataSubjectRight[] = [
     exemptions: ['Legal obligation', 'Public interest', 'Legal claims']
   }
 ];
-```
+```markdown
 
 ### **Privacy Impact Assessment**
 ```typescript
@@ -327,7 +330,7 @@ interface PrivacyMitigation {
   timeline: Date;
   status: 'planned' | 'implemented' | 'effective';
 }
-```
+```markdown
 
 ## 8. **Compliance Management**
 
@@ -376,7 +379,7 @@ interface SecurityIncident {
   timeline: IncidentTimeline[];
   response: IncidentResponse;
 }
-```
+```markdown
 
 ### **Incident Response Process**
 1. **Detection**: Automated alerts and monitoring
@@ -445,7 +448,7 @@ interface SecurityMetrics {
     dataLossIncidents: number;
   };
 }
-```
+```markdown
 
 ### **Compliance Reporting**
 - **Automated Reports**: Daily, weekly, and monthly security summaries
@@ -481,7 +484,7 @@ interface SecurityControl {
   evidence: string;
   rating: 'adequate' | 'needs_improvement' | 'inadequate';
 }
-```
+```markdown
 
 ### **Third-Party Access Management**
 - **Just-in-Time Access**: Temporary access for specific tasks
@@ -521,7 +524,7 @@ interface RecoveryResponse {
   rto: number; // hours
   rpo: number; // hours
 }
-```
+```markdown
 
 ### **Backup and Recovery**
 - **Backup Frequency**: Continuous data replication
@@ -560,10 +563,10 @@ interface RecoveryResponse {
 **Note**: Some privacy and security enhancements are scheduled for 2026 implementation based on infrastructure constraints and resource availability.
 
 **Related Documents**
-- [Security Framework](..md) - Comprehensive security architecture
-- [Traffic Security Matrix](..md) - Database security strategy framework
-- [Compliance Procedures](../detailed-compliance.md) - Regulatory compliance workflows
-- [Data Privacy Policy](../international.md) - Customer-facing privacy information
+- [Security Framework](.) - Comprehensive security architecture
+- [Traffic Security Matrix](.) - Database security strategy framework
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
+- [Data Privacy Policy](../international) - Customer-facing privacy information
 
 **Keywords**: security policies, privacy procedures, data protection, compliance, risk management, incident response, access control, encryption, GDPR, CCPA
 ---

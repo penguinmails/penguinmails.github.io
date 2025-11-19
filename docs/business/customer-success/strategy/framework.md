@@ -17,10 +17,11 @@ The Customer Success Framework provides a systematic approach to driving custome
 ### 1. Customer Health Assessment Model
 
 #### Health Score Calculation
-```
-Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) + 
+
+```markdown
+Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
                        (Business Health × 0.25) + (Relationship Health × 0.15)
-```
+```markdown
 
 #### Health Score Categories
 - **Green (80-100)**: Healthy, low-risk accounts with expansion potential
@@ -223,10 +224,10 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 ---
 
 **Related Documentation:**
-- [Strategy Overview](overview)
-- [Customer Success Analytics](../analytics.md)
-- [Customer Retention Strategies](../retention.md)
-- [Cross-Domain Integration](../cross-domain-integration.md)
+- [Strategy Overview](/docs/business/strategy/overview)
+- [Customer Success Analytics](/docs/business/analytics/overview)
+- [Customer Retention Strategies](../retention)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
 
 ---
 *Level 2: Operational framework for customer success implementation*

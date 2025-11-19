@@ -11,6 +11,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ## User Profile: Platform Administrators
 
 ### **Primary Characteristics**
+
 - Full system access and configuration management
 - Responsible for user management and tenant administration
 - Implement security policies and compliance measures
@@ -18,6 +19,7 @@ This document outlines the key user journeys for Platform Administrators who man
 - Technical expertise in platform administration
 
 ### **Common Tools & Systems**
+
 - Platform admin dashboard
 - User management interface
 - Security and compliance tools
@@ -31,6 +33,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ### **Journey 1: User Management & Access Control**
 
 #### **Initial Setup**
+
 1. **Access Admin Dashboard**
    - Log into administrative interface
    - Navigate to user management section
@@ -49,6 +52,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Establish communication preferences
 
 #### **Daily Operations**
+
 1. **Monitor User Activity**
    - Review daily login metrics
    - Identify unusual access patterns
@@ -62,6 +66,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Process user deactivation requests
 
 #### **Advanced Management**
+
 1. **Bulk User Operations**
    - Mass user updates and migrations
    - Department restructuring and reassignments
@@ -79,6 +84,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ### **Journey 2: System Configuration & Environment Management**
 
 #### **Environment Setup**
+
 1. **Initial Platform Configuration**
    - Configure basic platform settings
    - Set up email domains and routing
@@ -92,6 +98,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Control feature access by user segments
 
 #### **Ongoing Configuration**
+
 1. **Performance Optimization**
    - Monitor system performance metrics
    - Adjust resource allocation
@@ -109,6 +116,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ### **Journey 3: Security & Compliance Management**
 
 #### **Security Setup**
+
 1. **Access Control Implementation**
    - Configure role-based access control (RBAC)
    - Set up multi-factor authentication
@@ -122,6 +130,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Manage data classification
 
 #### **Ongoing Security Operations**
+
 1. **Threat Monitoring**
    - Review security alerts and notifications
    - Investigate suspicious activities
@@ -139,6 +148,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ### **Journey 4: Platform Monitoring & Analytics**
 
 #### **Daily Monitoring**
+
 1. **System Health Dashboard**
    - Review overall system status
    - Check critical service health
@@ -152,6 +162,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Track support ticket trends
 
 #### **Reporting & Insights**
+
 1. **Administrative Reporting**
    - Generate user growth reports
    - Create system performance summaries
@@ -169,6 +180,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ## User Type Context
 
 ### **Key Pain Points**
+
 - Complex user permission management across large user base
 - Balancing security with usability for different user types
 - Managing platform configuration changes without service disruption
@@ -176,6 +188,7 @@ This document outlines the key user journeys for Platform Administrators who man
 - Coordinating with multiple internal teams for system updates
 
 ### **Success Metrics**
+
 - **User Satisfaction**: Admin users rate experience positively
 - **Security Compliance**: 100% compliance with security policies
 - **System Uptime**: Maintain high availability for admin functions
@@ -187,12 +200,14 @@ This document outlines the key user journeys for Platform Administrators who man
 ## Integration Points
 
 ### **With Other Internal Teams**
+
 - **Technical Teams**: Coordinate on system updates and feature deployments
 - **Customer Success**: Handle escalations and customer account management
 - **Marketing**: Manage marketing user accounts and campaign access
 - **Finance**: Coordinate billing and subscription management
 
 ### **With External Systems**
+
 - **Google Workspace**: User authentication and directory integration
 - **Jira**: Issue tracking and project management coordination
 - **CRM Systems**: Customer account synchronization
@@ -203,6 +218,7 @@ This document outlines the key user journeys for Platform Administrators who man
 ## Common Admin Workflows
 
 ### **Weekly Administrative Tasks**
+
 1. **User Account Review**
    - Review new user requests
    - Process account modifications
@@ -216,6 +232,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Update configuration settings
 
 ### **Monthly Administrative Tasks**
+
 1. **Security Review**
    - Conduct security assessments
    - Review access logs and permissions
@@ -229,6 +246,7 @@ This document outlines the key user journeys for Platform Administrators who man
    - Plan system improvements
 
 ### **Quarterly Administrative Tasks**
+
 1. **System Optimization**
    - Review and optimize platform performance
    - Update configuration baselines
@@ -243,11 +261,12 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`technical-teams-journeys.md`](technical-teams-journeys.md)
-- [`operations-journeys.md`](operations-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`technical-teams-journeys.md`](technical-teams-journeys)
+- [`operations-journeys.md`](operations-journeys)
 
 ---
 

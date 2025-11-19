@@ -51,8 +51,8 @@ Consistent code formatting is crucial for team collaboration. Prettier automates
 
 ## Related Documentation
 
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - **Primary reference** for Prettier configuration and code formatting standards
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Code formatting standards
+- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards) - **Primary reference** for Prettier configuration and code formatting standards
+- [Team Workflow](../../docs/quick-access/team-workflow) - Code formatting standards
 
 ## Dependencies
 
@@ -65,5 +65,3 @@ Consistent code formatting is crucial for team collaboration. Prettier automates
 - [ ] Run `npm run format:check` and verify it detects formatting issues
 - [ ] Verify Prettier formats TypeScript, JavaScript, and JSON files
 - [ ] Confirm Prettier ignores files listed in `.prettierignore`
-
-

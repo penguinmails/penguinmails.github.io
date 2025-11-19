@@ -1,8 +1,8 @@
-Milestone 3 — Engagement Tracking
+# Milestone 3 — Engagement Tracking
 
 **Goal:** Build a high-performance webhook to capture opens and clicks and queue them for asynchronous processing.
 
-### Tickets
+## Tickets
 
 - MAIL-3.1 Implement Tracking Token Generation
 - MAIL-3.2 Create the Public Tracking API Route (/api/track/[...slug])

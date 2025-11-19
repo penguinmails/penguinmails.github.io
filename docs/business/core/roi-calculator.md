@@ -15,6 +15,7 @@ last_modified_date: "2025-12-19"
 ## 🎯 Quick ROI Assessment
 
 ### Progressive Disclosure Flow
+
 ```mermaid
 graph TD
     A[Budget Decision] --> B{Volume Assessment}
@@ -37,14 +38,14 @@ graph TD
     style I fill:#e8f5e8
     style J fill:#f3e5f5
     style K fill:#f3e5f5
-```
+```markdown
 
 ### Current State vs. Optimized Infrastructure
 
 **Enter your current metrics below to calculate potential savings:**
 
 #### Input Variables
-- **Monthly Email Volume**: [10K / 100K / 1M+] 
+- **Monthly Email Volume**: [10K / 100K / 1M+]
 - **Current Deliverability Rate**: [60% / 80% / 90% / 95%]
 - **Industry/Vertical**: [SaaS / IT Services / Agency / Professional Services / General B2B]
 - **Team Size**: [1-2 / 3-4 / 5+ people]
@@ -55,9 +56,9 @@ graph TD
 
 ## 📊 Cost Comparison Summary
 
-![Monthly Cost Comparison](/docs/assets.md){: width="100%" }
+![Monthly Cost Comparison](/docs/assets){: width="100%" }
 
-![Total Cost of Ownership Comparison](/docs/assets.md){: width="100%" }
+![Total Cost of Ownership Comparison](/docs/assets){: width="100%" }
 
 ### Managed ESP vs Self-Hosted TCO Analysis
 
@@ -71,39 +72,39 @@ graph TD
 
 | Scale | Recommended Provider | Monthly Cost | Best For |
 |-------|---------------------|--------------|----------|
-| **Small (10K.md)** | Postmark | $15/month | Lowest entry price, reliable delivery |
-| **Medium (100K.md)** | Mailgun Growth | $80-150/month | Best value, dedicated IP included |
-| **Enterprise (1M+.md)** | SendGrid Pro | $500-1,000/month | Enterprise features, support |
+| **Small (10K)** | Postmark | $15/month | Lowest entry price, reliable delivery |
+| **Medium (100K)** | Mailgun Growth | $80-150/month | Best value, dedicated IP included |
+| **Enterprise (1M+)** | SendGrid Pro | $500-1,000/month | Enterprise features, support |
 
 ---
 
 ## 💰 Output Calculations
 
 ### Current Monthly Cost
-```
+```markdown
 Base Infrastructure Cost: $________
 Monitoring & Tools: $________
-Personnel (time × $100.md): $________
+Personnel (time × $100): $________
 Compliance & Security: $________
 TOTAL CURRENT: $________
-```
+```markdown
 
 ### Alternative Monthly Cost
-```
+```markdown
 Managed ESP Plan: $________
 Additional Tools: $________
 Reduced Personnel: $________
 Compliance (built-in): $________
 TOTAL ALTERNATIVE: $________
-```
+```markdown
 
 ### ROI Analysis
-```
+```markdown
 Annual Cost Difference: $________
 ROI Percentage: _______%
 Payback Period: _____ months
 3-Year Net Benefit: $________
-```
+```markdown
 
 ---
 
@@ -176,13 +177,13 @@ Payback Period: _____ months
 - [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
-- [📊 Detailed ROI Calculator](../financial-analysis.md) - Complete cost-benefit analysis with detailed calculations
-- [🏗️ Implementation Roadmap](../implementation.md) - Resource planning and timeline
+- [📊 Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
+- [🏗️ Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
 - [🏆 Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
-- [🔧 Technical Infrastructure](../implementation.md) - Technical specifications
-- [📋 Performance Benchmarks](../performance.md) - Industry data and metrics
+- [🔧 Technical Infrastructure](/docs/business/implementation) - Technical specifications
+- [📋 Performance Benchmarks](/docs/business/performance) - Industry data and metrics
 
 ---
 

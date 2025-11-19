@@ -23,6 +23,6 @@ In the `/lib/db/schema` directory, create schema files for `vps_instances` and `
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (coding, linting, CI)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Quick Setup / Getting Started](../../docs/quick-setup.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (coding, linting, CI)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Quick Setup / Getting Started](../../docs/quick-setup)

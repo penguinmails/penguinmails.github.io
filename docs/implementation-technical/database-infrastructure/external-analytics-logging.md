@@ -3,6 +3,7 @@
 This document defines how high-volume events, observability data, and exploratory analytics are handled outside the OLAP warehouse. It generalizes the approach so the backend can use PostHog or any equivalent product analytics / logging / observability stack.
 
 The goal is to:
+
 - Keep the OLAP warehouse focused on durable, contractual, and compliance-relevant aggregates.
 - Route noisy, granular, or purely operational data to specialized external systems.
 - Avoid coupling OLAP schema to infra configuration or runtime telemetry.
@@ -24,7 +25,7 @@ The goal is to:
        - Customer-facing analytics dashboards.
        - Regulatory and enterprise audits.
 
-2. External Analytics .md)
+2. External Analytics )
    - Primary sink for:
      - High-volume clickstream events.
      - Feature usage and funnels.
@@ -35,7 +36,7 @@ The goal is to:
      - Flexible schema.
      - Tunable retention and sampling.
    - Feeds:
-     - Aggregated, stable metrics back into OLAP when.md).
+     - Aggregated, stable metrics back into OLAP when).
 
 3. Observability / Logging / Security Tooling
    - Includes APM, metrics, logs, SIEM, etc.
@@ -112,7 +113,7 @@ This section maps specific existing concepts out of the OLAP schema into externa
     - Tenant-wide configuration changes.
     - Billing and subscription modifications.
     - Data export requests/approvals affecting PII or contractual scope.
-    - Security-sensitive operations (impersonation, account lockdown, deletion.md).
+    - Security-sensitive operations (impersonation, account lockdown, deletion).
 - External:
   - Log:
     - Low-risk admin actions, navigation, and routine reads.
@@ -150,7 +151,7 @@ These are infra/operational concerns.
 ### 3.4 `analytics_access_audit` and Export Controls
 
 - Detailed per-query/per-dashboard access logs:
-  - External system (SIEM.md).
+  - External system (SIEM).
 - OLAP:
   - Maintain a narrow, long-retention record of:
     - Sensitive-data access events.
@@ -194,7 +195,7 @@ When designing new tracking:
     - SLAs or contractual proof?
     - Regulatory or enterprise audits?
     - Promised customer-facing analytics?
-  - If yes → model an aggregate.md) and/or store narrowly scoped records in `admin_audit_log` where explicitly compliance-relevant.
+  - If yes → model an aggregate) and/or store narrowly scoped records in `admin_audit_log` where explicitly compliance-relevant.
 - Else:
   - If it is behavioral, experimental, UX, or exploratory → send to product analytics (e.g. PostHog).
   - If it is infra/ops/telemetry → send to observability/logging.
@@ -208,11 +209,11 @@ This document is the canonical reference for avoiding concern-mixing in the OLAP
 ## 6. Recommended Integration Patterns (from legacy plans, normalized)
 
 This section consolidates the durable patterns from legacy docs
-(such as [`../technical/architecture/detailed-technical/analytics-architecture`](../technical/architecture/detailed-technical.md)
-and [`../technical/integration/overview`](../technical.md)
+(such as [`../technical/architecture/detailed-technical/analytics-architecture`](/docs/technical/architecture/detailed-technical)
+and [`../technical/integration/overview`](../technical)
 into a concise, canonical form.
 
-### 6.1 PostHog .md)
+### 6.1 PostHog )
 
 Use a thin abstraction to send high-volume behavioral and UX events to PostHog (or equivalent),
 keeping OLAP free of clickstream:
@@ -225,7 +226,7 @@ export const posthog = new PostHog(process.env.POSTHOG_API_KEY!, {
   host: process.env.POSTHOG_HOST || 'https://app.posthog.com',
 });
 
-/.md)
+/)
 export async function trackEmailOpened(props: {
   userId: string;
   tenantId: string;
@@ -244,12 +245,12 @@ export async function trackEmailOpened(props: {
     },
   });
 }
-```
+```markdown
 
 Key rules:
 - Do not mirror these raw events into OLAP.
 - Only derive aggregates into canonical OLAP tables if they are:
-  - Contractual (billing.md),
+  - Contractual (billing),
   - Compliance-relevant,
   - Explicitly needed for durable analytics.
 
@@ -324,7 +325,7 @@ export async function aggregateDailyCampaignAnalytics(tenantId: string, date: st
     `);
   }
 }
-```
+```markdown
 
 Key rules:
 - Jobs and ETL workers:

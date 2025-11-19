@@ -12,10 +12,10 @@ Detailed guides for PenguinMails core functionality, organized by progressive co
 
 ## Features
 
-- [Warm-ups](warm-ups.md) - Email reputation building and optimization
-- [Inbox Rotation](inbox-rotation.md) - Multi-account email rotation
-- [Unified Inbox](unified-inbox.md) - Consolidated response management  
-- [Analytics](analytics.md) - Performance tracking and insights
+- [Warm-ups](/docs/core-features/warm-ups/overview) - Email reputation building and optimization
+- [Inbox Rotation](/docs/core-features/inbox-rotation/overview) - Multi-account email rotation
+- [Unified Inbox](/docs/core-features/unified-inbox/overview) - Consolidated response management
+- [Analytics](/docs/core-features/analytics/overview) - Performance tracking and insights
 
 ## Complexity Levels
 
@@ -28,18 +28,21 @@ Detailed guides for PenguinMails core functionality, organized by progressive co
 Each feature is organized into progressive complexity levels:
 
 ### Level 1: Overview
+
 - Basic feature introduction
 - Core concepts and benefits
 - Quick setup instructions
 - Essential configuration
 
 ### Level 2: Advanced Strategies
+
 - Optimization techniques
 - Best practices
 - Performance tuning
 - Strategic implementation
 
 ### Level 3: Technical Implementation
+
 - Detailed technical setup
 - Integration guides
 - Advanced configuration
@@ -48,39 +51,29 @@ Each feature is organized into progressive complexity levels:
 ## Feature Deep Dives
 
 ### Warm-ups
-- [Overview](warm-ups/overview.md) - Basic warm-up concepts
-- [Deep Dive](warm-ups/deep-dive.md) - Advanced warming strategies
-  - [Reputation Optimization](warm-ups/deep-dive/reputation-optimization.md)
-  - [Algorithm Details](warm-ups/deep-dive/algorithm-details.md)
-  - [Performance Tuning](warm-ups/deep-dive/performance-tuning.md)
-- [Technical Implementation](warm-ups/technical-implementation.md) - Technical setup
+
+- [Overview](/docs/core-features/warm-ups/overview) - Basic warm-up concepts
 
 ### Inbox Rotation
-- [Overview](inbox-rotation/overview.md) - Basic rotation concepts
-- [Advanced Strategies](inbox-rotation/advanced-strategies.md) - Advanced rotation
-- [Technical Implementation](inbox-rotation/technical-implementation.md) - Technical setup
+
+- [Overview](/docs/core-features/inbox-rotation/overview) - Basic rotation concepts
 
 ### Unified Inbox
-- [Overview](unified-inbox/overview.md) - Basic inbox concepts
-- [Advanced Usage](unified-inbox/advanced-usage.md) - Advanced features
-- [Technical Implementation](unified-inbox/technical-implementation.md) - Technical setup
+
+- [Overview](/docs/core-features/unified-inbox/overview) - Basic inbox concepts
 
 ### Analytics
-- [Overview](analytics/overview.md) - Basic analytics concepts
-- [Advanced Analytics](analytics/advanced-analytics.md) - Advanced analytics
-  - [User Journeys Analytics](analytics/advanced-analytics/user-journeys-analytics.md)
-  - [ROI Tracking](analytics/advanced-analytics/roi-tracking.md)
-  - [Predictive Insights](analytics/advanced-analytics/predictive-insights.md)
-- [Technical Implementation](analytics/technical-implementation.md) - Technical setup
-  - [Data Integration](analytics/technical-implementation/data-integration.md)
+
+- [Overview](/docs/core-features/analytics/overview) - Basic analytics concepts
 
 ## Integration with Other Areas
 
-- **Business Context**: [Business Documentation](../business.md)
-- **Technical Implementation**: [Technical Documentation](../technical.md)
-- **User Journeys**: [User Journey Documentation](../user-journeys.md)
-- **Compliance & Security**: [Compliance Documentation](../compliance-security.md)
+- **Business Context**: [Business Documentation](/docs/business/README.md)
+- **Technical Implementation**: [Technical Documentation](/docs/technical/README.md)
+- **User Journeys**: [User Journey Documentation](/user-journeys/README.md)
+- **Compliance & Security**: [Compliance Documentation](/docs/compliance-security/README.md)
 
 ---
-*Previous: [Quick Setup Guide](../quick-setup.md) | Next: [Business Context](../business.md) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Business Context](/docs/business/README.md) →*
+
 ---

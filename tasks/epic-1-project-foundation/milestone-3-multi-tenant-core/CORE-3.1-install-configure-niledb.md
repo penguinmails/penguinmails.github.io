@@ -11,7 +11,8 @@ Install the `@niledatabase/server` package. Configure the Nile client by adding 
 
 ## Context
 
-According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails uses:
+According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails uses:
+
 - **NileDB** for authentication and multi-tenant management
 - **Multi-tenant architecture** with complete data isolation
 
@@ -72,8 +73,8 @@ export const nile = new Nile({
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Authentication architecture
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - NileDB setup
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Authentication architecture
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - NileDB setup
 
 ## Dependencies
 
@@ -88,5 +89,3 @@ export const nile = new Nile({
 - [ ] Test application startup with valid Nile configuration
 - [ ] Verify application fails gracefully with missing Nile configuration
 - [ ] Test Nile client initialization with invalid credentials (should handle errors)
-
-

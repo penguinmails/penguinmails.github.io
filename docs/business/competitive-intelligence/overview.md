@@ -11,13 +11,14 @@ This comprehensive competitive intelligence framework provides strategic positio
 ## 🎯 Our Core Competitive Position
 
 ### Primary Value Proposition
-```
+
+```markdown
 "Cold Email That Lands in Inboxes, Not Spam"
-```
+```markdown
 
 **Why This Differentiates Us**:
 - **Competitors focus on**: Volume and features
-- **We focus on**: Results and deliverability  
+- **We focus on**: Results and deliverability
 - **Our infrastructure**: Purpose-built, not repurposed
 
 ### Strategic Positioning Framework
@@ -44,7 +45,7 @@ This comprehensive competitive intelligence framework provides strategic positio
 
 **Their Critical Weaknesses**:
 - ❌ **Shared Infrastructure**: No dedicated IP control for deliverability
-- ❌ **Marketing Focus**: Not designed for cold email compliance and optimization  
+- ❌ **Marketing Focus**: Not designed for cold email compliance and optimization
 - ❌ **Limited Multi-Tenant**: Single account management, no agency features
 - ❌ **Basic Compliance**: Manual compliance management, high regulatory risk
 
@@ -93,43 +94,43 @@ This comprehensive competitive intelligence framework provides strategic positio
 ## 📊 Quantified Competitive Advantages
 
 ### **Deliverability Performance**
-```
+```markdown
 COMPETITOR COMPARISON:
 • Industry Average: 60-70% inbox placement
-• Mailchimp.md)
-• Smartlead.md)
+• Mailchimp)
+• Smartlead)
 • PenguinMails: 95%+ (purpose-built optimization)
 
 COMPETITIVE POSITIONING:
-"Our deliverability rates are 35-50% higher than major competitors because 
+"Our deliverability rates are 35-50% higher than major competitors because
 we're purpose-built for cold email success, not retrofitted for general marketing."
-```
+```markdown
 
 ### **Compliance Automation**
-```
+```markdown
 COMPETITOR COMPARISON:
 • Manual Management: 87% of companies struggle with compliance
 • Competitor Features: Basic templates, manual oversight required
 • PenguinMails: 90%+ reduction in compliance overhead
 
 COMPETITIVE POSITIONING:
-"While competitors require manual compliance management creating legal risk, 
-our automated engine handles regulations in real-time, protecting against 
+"While competitors require manual compliance management creating legal risk,
+our automated engine handles regulations in real-time, protecting against
 regulatory fines and campaign shutdowns."
-```
+```markdown
 
 ### **Infrastructure Control**
-```
+```markdown
 COMPETITOR COMPARISON:
 • Shared Infrastructure: Mailchimp, SendGrid (limited deliverability control)
 • VPS-Based: Smartlead, Warmbox (limited geographic distribution)
 • Dedicated Multi-Region: PenguinMails (complete control)
 
 COMPETITIVE POSITIONING:
-"Unlike shared infrastructure approaches that limit deliverability control, 
-our dedicated multi-region VPS strategy gives you complete reputation management 
+"Unlike shared infrastructure approaches that limit deliverability control,
+our dedicated multi-region VPS strategy gives you complete reputation management
 capplications essential for cold email success."
-```
+```markdown
 
 ---
 
@@ -144,7 +145,7 @@ capplications essential for cold email success."
 ### The Problem
 [What user problem does this solve? Why do most solutions fail?]
 
-### Our Solution  
+### Our Solution
 [How do we solve this problem differently/better?]
 
 ### Why We're Different
@@ -155,51 +156,51 @@ capplications essential for cold email success."
 
 ### Business Impact
 [What this means for their business/ROI]
-```
+```markdown
 
 ### **Competitive Language Patterns**
 
 #### **Pattern 1: Purpose-Built vs. Adapted**
-```
+```markdown
 "Unlike [competitor] who [does X], we [do Y] because [reason]"
 
 EXAMPLES:
-• "Unlike Mailchimp which repurposes marketing email infrastructure, we built 
-  purpose-built cold email infrastructure because cold email requires specialized 
+• "Unlike Mailchimp which repurposes marketing email infrastructure, we built
+  purpose-built cold email infrastructure because cold email requires specialized
   optimization for deliverability challenges."
 
-• "While Smartlead adapts general warm-up algorithms, we developed cold email 
-  specific reputation building because cold email sender reputation challenges 
+• "While Smartlead adapts general warm-up algorithms, we developed cold email
+  specific reputation building because cold email sender reputation challenges
   are fundamentally different from marketing email."
-```
+```markdown
 
 #### **Pattern 2: Control vs. Limitations**
-```
+```markdown
 "Unlike [competitor limitation], we [provide control] because [competitive advantage]"
 
 EXAMPLES:
-• "Unlike shared infrastructure that limits IP control, we provide dedicated 
-  VPS resources because deliverability depends on managing sender reputation 
+• "Unlike shared infrastructure that limits IP control, we provide dedicated
+  VPS resources because deliverability depends on managing sender reputation
   factors that shared infrastructure cannot control."
 
-• "While competitors restrict customization, we provide complete API access 
-  because agencies need to integrate with their existing workflows, not 
+• "While competitors restrict customization, we provide complete API access
+  because agencies need to integrate with their existing workflows, not
   adapt their workflows to our platform."
-```
+```markdown
 
 #### **Pattern 3: Automation vs. Manual**
-```
+```markdown
 "While [competitor] requires [manual process], we automate [process] because [benefit]"
 
 EXAMPLES:
-• "While competitors require manual compliance monitoring, we automate GDPR 
-  and CAN-SPAM compliance because 87% of companies struggle with manual 
+• "While competitors require manual compliance monitoring, we automate GDPR
+  and CAN-SPAM compliance because 87% of companies struggle with manual
   compliance management."
 
-• "While others require manual DNS configuration, we automate SPF, DKIM, and 
-  DMARC setup because manual configuration creates deliverability problems 
+• "While others require manual DNS configuration, we automate SPF, DKIM, and
+  DMARC setup because manual configuration creates deliverability problems
   for 60% of users."
-```
+```markdown
 
 ---
 
@@ -208,43 +209,43 @@ EXAMPLES:
 ### **"Why We Chose..." Language Pattern**
 
 #### **Infrastructure Decisions**
-```
+```markdown
 DNS CONFIGURATION APPROACH:
-"We chose automated DNS configuration over manual setup because manual DNS 
-errors cause deliverability failures for 60% of cold email campaigns, while 
+"We chose automated DNS configuration over manual setup because manual DNS
+errors cause deliverability failures for 60% of cold email campaigns, while
 our automated approach achieves 99.9% verification success rate.
 
-→ [See Technical Details](../technical-implementation/dns-storage-integration-guide.md)
+→ [See Technical Details](../technical-implementation/dns-storage-integration-guide)
 → [Competitive Advantage](competitive-analysis#dns-automation)"
 
 VPS INFRASTRUCTURE:
-"We chose dedicated VPS over shared cloud infrastructure because cold email 
-deliverability requires IP reputation control that shared infrastructure 
+"We chose dedicated VPS over shared cloud infrastructure because cold email
+deliverability requires IP reputation control that shared infrastructure
 cannot provide.
 
-→ [See Architecture Details](../architecture.md)
+→ [See Architecture Details](../architecture)
 → [Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure-limitations)"
-```
+```markdown
 
 ### **"Why We Avoided..." Language Pattern**
 
 #### **Avoided Solutions with Rationale**
-```
+```markdown
 SHARED INFRASTRUCTURE:
-"We avoided shared infrastructure approaches because they create deliverability 
-problems when one user's poor sending practices damage IP reputation for 
+"We avoided shared infrastructure approaches because they create deliverability
+problems when one user's poor sending practices damage IP reputation for
 everyone using that infrastructure.
 
 IMPACT: 35-50% lower deliverability rates compared to dedicated infrastructure
 → [See Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure)"
 
 MANUAL COMPLIANCE:
-"We avoided manual compliance processes because they don't scale and create 
+"We avoided manual compliance processes because they don't scale and create
 legal risk that could shut down campaigns or businesses.
 
 IMPACT: 90%+ reduction in compliance overhead through automation
 → [See Compliance Automation Benefits](competitive-analysis#compliance-automation)"
-```
+```markdown
 
 ---
 
@@ -257,42 +258,42 @@ IMPACT: 90%+ reduction in compliance overhead through automation
 # Cold Email That Lands in Inboxes, Not Spam
 
 ## Why We're Different
-Unlike general email marketing platforms that were adapted for cold email, 
-PenguinMails was built from the ground up to solve the specific deliverability 
+Unlike general email marketing platforms that were adapted for cold email,
+PenguinMails was built from the ground up to solve the specific deliverability
 challenges that make 73% of cold email campaigns fail.
 
 [See our competitive analysis](competitive-analysis) to understand why
-purpose-built infrastructure delivers 95%+ inbox placement vs. industry 
+purpose-built infrastructure delivers 95%+ inbox placement vs. industry
 average of 60-70%.
-```
+```markdown
 
 #### **Architecture Overview Positioning**
 ```markdown
 ## Our Architectural Philosophy
 
-We made specific architectural decisions that prioritize deliverability and 
-compliance over cost and simplicity because cold email success depends on 
+We made specific architectural decisions that prioritize deliverability and
+compliance over cost and simplicity because cold email success depends on
 factors that general email platforms don't address.
 
 ### Key Architectural Choices
-• **Dedicated VPS Infrastructure**: Unlike shared infrastructure that limits 
+• **Dedicated VPS Infrastructure**: Unlike shared infrastructure that limits
   deliverability control
 • **Compliance-First Design**: Unlike platforms that add compliance as an afterthought
 • **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
-→ [See Complete Architecture](../architecture/overview.md)
+→ [See Complete Architecture](../architecture/overview)
 → [Why These Decisions Matter](competitive-analysis#architecture-decisions)
-```
+```markdown
 
 ---
 
 ## 📈 Success Metrics & Validation Framework
 
 ### **Competitive Positioning Success Indicators**
-```
+```markdown
 DOCUMENTATION EFFECTIVENESS:
 □ Users can articulate our competitive advantages after reading docs
-□ Technical decision makers show increased confidence  
+□ Technical decision makers show increased confidence
 □ Competitive objections addressed during sales conversations
 □ Documentation becomes sales enablement resource
 
@@ -301,10 +302,10 @@ COMPETITIVE CLARITY METRICS:
 □ Cross-references to competitive analysis used regularly
 □ Technical decisions include "why we chose/avoided" rationale
 □ Strategic documents link competitive context appropriately
-```
+```markdown
 
 ### **Expected Impact & Business Results**
-```
+```markdown
 DOCUMENTATION ENGAGEMENT IMPACT:
 • 40% increase in technical documentation engagement time
 • 60% improvement in competitive feature understanding
@@ -316,14 +317,14 @@ MEASUREMENT:
 • Cross-reference click-through rates
 • Feature page → trial conversion tracking
 • Sales feedback on competitive positioning clarity
-```
+```markdown
 
 ---
 
 ## 🚀 Implementation Priority Matrix
 
 ### **High Impact, Low Effort (Week 1-2)**
-```
+```markdown
 1. FEATURE PAGE UPDATES
    - Add competitive positioning to top 5 feature pages
    - Implement problem-solution-competitive advantage structure
@@ -338,10 +339,10 @@ MEASUREMENT:
    - Add competitive comparison section to navigation
    - Create "Why Choose Us" landing page
    - Include competitive context in feature discovery flow
-```
+```markdown
 
 ### **Medium Impact, Medium Effort (Week 3-6)**
-```
+```markdown
 1. COMPETITIVE INTELLIGENCE INTEGRATION
    - Create detailed competitive comparison documentation
    - Add competitive context boxes to all feature pages
@@ -356,10 +357,10 @@ MEASUREMENT:
    - Add competitive context to user journey documentation
    - Include competitive considerations in decision flows
    - Create persona-specific competitive messaging
-```
+```markdown
 
 ### **High Impact, High Effort (Month 2-3)**
-```
+```markdown
 1. COMPREHENSIVE COMPETITIVE ANALYSIS
    - Deep-dive competitor capability analysis
    - Feature-by-feature competitive positioning
@@ -374,7 +375,7 @@ MEASUREMENT:
    - Competitive monitoring and documentation updates
    - Regular competitive positioning review
    - Market positioning optimization based on competitive changes
-```
+```markdown
 
 ---
 
@@ -403,19 +404,19 @@ MEASUREMENT:
 ## Cross-References
 
 **Related Strategic Documentation**:
-- [Business Strategy Overview](../strategy.md) - Strategic business decisions and market positioning
-- [Value Proposition Overview](../value-proposition.md) - Core value propositions and customer benefits
-- [Market Analysis Overview](../market-analysis.md) - Market opportunity and competitive landscape
-- [Business Model Overview](../model.md) - Revenue models and competitive economics
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business decisions and market positioning
+- [Value Proposition Overview](../value-proposition) - Core value propositions and customer benefits
+- [Market Analysis Overview](../market-analysis) - Market opportunity and competitive landscape
+- [Business Model Overview](../model) - Revenue models and competitive economics
 
 **Technical Documentation**:
-- [Technical Architecture Overview](../architecture.md) - Infrastructure decisions and competitive advantages
-- [Security Overview](../security.md) - Security features and compliance automation
+- [Technical Architecture Overview](../architecture) - Infrastructure decisions and competitive advantages
+- [Security Overview](/docs/compliance-security/enterprise) - Security features and compliance automation
 
 **Feature Documentation**:
-- [Warm-ups Overview](../../core-features/warm-ups.md) - Competitive differentiation in deliverability features
-- [Analytics Overview](../../core-features/analytics.md) - Performance metrics vs. competitor limitations
-- [Inbox Rotation Overview](../../core-features/inbox-rotation.md) - Advanced features not available in competitor platforms
+- [Warm-ups Overview](../../core-features/warm-ups) - Competitive differentiation in deliverability features
+- [Analytics Overview](../../core-features/analytics) - Performance metrics vs. competitor limitations
+- [Inbox Rotation Overview](../../core-features/inbox-rotation) - Advanced features not available in competitor platforms
 
 ---
 

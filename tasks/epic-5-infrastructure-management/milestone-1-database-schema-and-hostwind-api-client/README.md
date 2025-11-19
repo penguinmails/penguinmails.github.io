@@ -2,7 +2,7 @@
 
 **Goal:** Prepare the database to store infrastructure data and build a secure, reusable Hostwind API client.
 
-### Tickets
+## Tickets
 
 - INFRA-1.1 Define Drizzle Schemas for Infrastructure
 - INFRA-1.2 Generate and Apply Infrastructure Migrations

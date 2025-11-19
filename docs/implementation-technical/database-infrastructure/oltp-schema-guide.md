@@ -1,6 +1,7 @@
 # OLTP Schema Guide - Operational Database
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This OLTP schema guide supports our enterprise infrastructure framework by providing comprehensive database schemas, multi-tenant design principles, and performance optimization strategies for the PenguinMails operational database.
 
 **Technical Authority**: Our OLTP database architecture integrates with enterprise database systems, authentication platforms, and monitoring tools featuring NileDB-managed authentication, multi-tenant security, and optimized query performance for high-frequency operations.
@@ -14,12 +15,14 @@
 ## Table Naming Standards
 
 **OLTP Tier Naming Conventions:**
+
 - **Core Entities**: No prefix, plural nouns (`users`, `companies`, `campaigns`)
 - **Junction Tables**: Singular compound names (`tenant_users`, `campaign_sequence_steps`)
 - **Configuration Tables**: Descriptive names (`user_preferences`, `tenant_config`)
 - **System Tables**: Prefixed with table type (`system_config`, `feature_flags`)
 
 **Table Name Examples:**
+
 - `users` - User identity and profiles
 - `tenants` - Tenant organizations
 - `companies` - Tenant workspaces
@@ -57,6 +60,7 @@ The **OLTP (Online Transaction Processing) Database** is PenguinMails' primary o
 ### **NileDB-Managed Tables** (Authentication & User Management)
 
 #### **users** - User Identity & Profile
+
 ```sql
 CREATE TABLE users (
     id UUID PRIMARY KEY,
@@ -70,7 +74,7 @@ CREATE TABLE users (
     picture TEXT,
     email_verified TIMESTAMP WITH TIME ZONE
 );
-```
+```markdown
 
 #### **tenants** - Tenant Organization
 ```sql
@@ -82,7 +86,7 @@ CREATE TABLE tenants (
     deleted TIMESTAMP WITH TIME ZONE,
     compute_id UUID
 );
-```
+```markdown
 
 #### **tenant_users** - Multi-Tenant User Associations
 ```sql
@@ -96,7 +100,7 @@ CREATE TABLE tenant_users (
     email TEXT,
     PRIMARY KEY (tenant_id, user_id)
 );
-```
+```markdown
 
 ---
 
@@ -115,11 +119,11 @@ CREATE TABLE companies (
     status VARCHAR(20) DEFAULT 'active',
     -- Marketing-accessible fields (no sensitive operational data)
     industry VARCHAR(100), -- Optional enrichment field
-    company_size VARCHAR(50), -- Optional enrichment field (Small/Medium.md)
+    company_size VARCHAR(50), -- Optional enrichment field (Small/Medium)
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ### **Domain Management**
 
@@ -134,18 +138,18 @@ CREATE TABLE domains (
     dns_records JSONB,
     is_primary BOOLEAN DEFAULT FALSE,
     verified TIMESTAMP WITH TIME ZONE,
-    
+
     -- DNS Operational Metadata (Added for DNS Storage Integration)
     mailu_domain TEXT,                           -- Mailu's canonical hostname
     dns_ttl_observed INTEGER,                    -- Observed DNS TTL in seconds
     dns_last_verified_at TIMESTAMP WITH TIME ZONE, -- Last successful DNS verification
     dns_verification_error TEXT,                 -- Human-friendly error messages
     dns_verification_attempts INTEGER DEFAULT 0, -- Verification retry counter
-    
+
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **DNS Records JSON Structure** (dns_records JSONB)
 The `dns_records` JSONB field stores per-record DNS configuration with lifecycle management:
@@ -207,7 +211,7 @@ The `dns_records` JSONB field stores per-record DNS configuration with lifecycle
     }
   ]
 }
-```
+```markdown
 
 **DNS Record Field Meanings**:
 - `record_type`: DNS record type (SPF, DKIM, DMARC, MX, A, AAAA, CNAME)
@@ -239,7 +243,7 @@ CREATE TABLE email_accounts (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ### **Lead Management**
 
@@ -253,10 +257,10 @@ CREATE TABLE leads (
     company VARCHAR(200),
     status VARCHAR(20) DEFAULT 'active',
     updated TIMESTAMP WITH TIME ZONE,
-    
+
     UNIQUE(tenant_id, email)
 );
-```
+```markdown
 
 ### **Template Management**
 
@@ -272,7 +276,7 @@ CREATE TABLE templates (
     updated TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **Template Organization**
 ```sql
@@ -315,7 +319,7 @@ CREATE TABLE template_tags (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     UNIQUE(template_id, tag_id)
 );
-```
+```markdown
 
 ---
 
@@ -344,7 +348,7 @@ CREATE TABLE campaigns (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **campaign_sequence_steps** - Individual Campaign Steps
 ```sql
@@ -368,7 +372,7 @@ CREATE TABLE campaign_sequence_steps (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 **Step Types:**
 - **email**: Send email using template
@@ -408,7 +412,7 @@ CREATE TABLE plans (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **subscriptions** - Active Tenant Subscriptions
 ```sql
@@ -426,7 +430,7 @@ CREATE TABLE subscriptions (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **subscription_addons** - Additional Features
 ```sql
@@ -441,7 +445,7 @@ CREATE TABLE subscription_addons (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **payments** - Payment Records
 ```sql
@@ -459,7 +463,7 @@ CREATE TABLE payments (
     billing_period_end TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ---
 
@@ -484,7 +488,7 @@ CREATE TABLE vps_instances (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 **Business Justification**: The `approximate_cost` field enables business leaders to track infrastructure costs per tenant for cost optimization and profitability analysis, supporting executive decision-making for resource allocation and pricing strategy.
 
@@ -503,7 +507,7 @@ CREATE TABLE smtp_ip_addresses (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 **Business Justification**: The `approximate_cost` field supports deliverability cost analysis and email service ROI calculations, enabling business leaders to optimize IP allocation and understand the true cost of email deliverability solutions.
 
@@ -521,7 +525,7 @@ CREATE TABLE domain_ip_assignments (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ---
 
@@ -538,7 +542,7 @@ CREATE TABLE staff_members (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **staff_roles** - Role Definitions
 ```sql
@@ -548,7 +552,7 @@ CREATE TABLE staff_roles (
     description TEXT,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **staff_role_permissions** - Role Permissions
 ```sql
@@ -558,7 +562,7 @@ CREATE TABLE staff_role_permissions (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     PRIMARY KEY (role_id, permission_id)
 );
-```
+```markdown
 
 #### **permissions** - Permission Definitions
 ```sql
@@ -569,7 +573,7 @@ CREATE TABLE permissions (
     category VARCHAR(50) DEFAULT 'general',
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ---
 
@@ -591,7 +595,7 @@ CREATE TABLE system_config (
 
 -- Platform Stripe account for receiving payments (separate from tenant customer accounts)
 -- This is stored in system_config with key='stripe_account_id' as a single row
-```
+```markdown
 
 #### **feature_flags** - Feature Flag Management
 ```sql
@@ -604,7 +608,7 @@ CREATE TABLE feature_flags (
     updated_by UUID REFERENCES users(id),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **user_preferences** - User Preferences
 ```sql
@@ -621,7 +625,7 @@ CREATE TABLE user_preferences (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **tenant_config** - Tenant Configuration
 ```sql
@@ -642,7 +646,7 @@ CREATE TABLE tenant_config (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 #### **tenant_policies** - Tenant Security Policies
 ```sql
@@ -662,7 +666,7 @@ CREATE TABLE tenant_policies (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```
+```markdown
 
 ---
 
@@ -686,7 +690,7 @@ CREATE INDEX idx_tenant_users_user ON tenant_users(user_id);
 -- Infrastructure
 CREATE INDEX idx_smtp_ip_addresses_status ON smtp_ip_addresses(status);
 CREATE INDEX idx_domain_ip_assignments_domain ON domain_ip_assignments(domain_id);
-```
+```markdown
 
 ---
 
@@ -734,7 +738,7 @@ CREATE POLICY tenant_config_isolation ON tenant_config
 
 CREATE POLICY tenant_policies_isolation ON tenant_policies
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-```
+```markdown
 
 ---
 
@@ -781,7 +785,7 @@ The following infrastructure and monitoring concerns have been externalized to s
 - **Queue-Driven Processing**: Reliable job processing with retry logic and dead letter queues
 
 ### 💡 **Technical Architecture Excellence**
-- **Data Collection Strategy**: 
+- **Data Collection Strategy**:
   - **OLTP Layer**: Fast transactional operations for real-time business logic (users, campaigns, leads)
   - **Content Layer**: Heavy email storage with retention policies and compression
   - **Analytics Layer**: Aggregated metrics with OLAP optimization for dashboards
@@ -803,15 +807,15 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 ### 📚 **Supporting Documentation**
 - [Database Infrastructure README](README)) - Database and infrastructure overview
-- [Architecture System](../architecture-system.md)) - System architecture decisions
-- [Development Guidelines](../development-guidelines.md)) - Development standards
-- [Quality Assurance](../quality-assurance.md)) - Testing protocols and procedures
+- [Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)) - System architecture decisions
+- [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Development standards
+- [Quality Assurance](/docs/business/quality-assurance)) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
 
 ---
 

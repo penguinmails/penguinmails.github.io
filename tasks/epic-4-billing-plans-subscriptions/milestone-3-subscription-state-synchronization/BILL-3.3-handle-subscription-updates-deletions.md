@@ -11,7 +11,7 @@ Within the webhook, add logic to handle `customer.subscription.updated` and `cus
 
 ## Context
 
-Subscription state changes are critical for billing management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), webhook events keep subscription state synchronized. This handler ensures our database reflects subscription changes like upgrades, downgrades, cancellations, and payment failures.
+Subscription state changes are critical for billing management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), webhook events keep subscription state synchronized. This handler ensures our database reflects subscription changes like upgrades, downgrades, cancellations, and payment failures.
 
 ## Acceptance Criteria
 
@@ -159,7 +159,7 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Webhook processing
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Webhook processing
 - [Stripe Webhooks Documentation](https://stripe.com/docs/webhooks) - Official Stripe docs
 
 ## Dependencies
@@ -178,4 +178,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify cancel_at_period_end is updated correctly
 - [ ] Verify period dates are updated correctly
 - [ ] Use Stripe CLI to send test events
-

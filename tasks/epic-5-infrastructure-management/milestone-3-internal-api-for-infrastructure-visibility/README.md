@@ -2,7 +2,7 @@
 
 **Goal:** Expose synchronized infrastructure data to the frontend via secure, tenant-aware internal APIs.
 
-### Tickets
+## Tickets
 
 - INFRA-3.1 Define Drizzle Schema for domain_ip_assignments
 - INFRA-3.2 Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips)

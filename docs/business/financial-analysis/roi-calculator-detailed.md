@@ -48,6 +48,7 @@ last_modified_date: "2025-12-19"
 ### Strategic Investment Evaluation
 
 #### Manual ROI Assessment Process
+
 1. **Data Collection**: Gather available financial and operational data from backbone systems
 2. **Cost Analysis**: Calculate monthly investment costs and operational time requirements
 3. **Benefit Estimation**: Assess directional benefits and risk reduction value
@@ -57,21 +58,27 @@ last_modified_date: "2025-12-19"
 #### Strategic Investment Categories Analysis
 
 ##### Revenue Protection ROI Assessment
+
 **Focus**: Protecting existing revenue streams through directional risk indicators
+
 - **Investment Range**: $375-1,700/month
 - **Expected ROI**: 150-300% through revenue protection
 - **Payback Period**: 4-8 months
 - **Process Value**: Early warning systems for revenue risks
 
 ##### Cost Optimization ROI Assessment
+
 **Focus**: Monitoring and optimizing infrastructure costs through process-driven insights
+
 - **Investment Range**: $275-1,250/month
 - **Expected ROI**: 200-400% through cost optimization
 - **Payback Period**: 3-6 months
 - **Process Value**: Budget control and vendor optimization
 
 ##### Strategic Decision Support ROI Assessment
+
 **Focus**: Supporting long-term strategic planning through external intelligence
+
 - **Investment Range**: $350-1,400/month
 - **Expected ROI**: 120-250% through strategic decision quality
 - **Payback Period**: 6-12 months
@@ -84,22 +91,23 @@ last_modified_date: "2025-12-19"
 ### Process-Driven ROI Calculation Framework
 
 #### Revenue Protection Impact Assessment
-```
+
+```markdown
 Monthly Investment: $______
 Annual Investment: $______ × 12 = $______
 
 Potential Revenue Protection:
 - Reduced churn: $______/month
-- Improved deliverability: $______/month  
+- Improved deliverability: $______/month
 - Payment issue prevention: $______/month
 - Total Monthly Protection: $______
 
-Annual ROI: (($______ × 12) .md) × 100 = _______%
-Payback Period: $______ / ($______ .md) = ______ months
-```
+Annual ROI: (($______ × 12) ) × 100 = _______%
+Payback Period: $______ / ($______ ) = ______ months
+```markdown
 
 #### Cost Optimization Impact Assessment
-```
+```markdown
 Monthly Investment: $______
 Annual Investment: $______ × 12 = $______
 
@@ -110,12 +118,12 @@ Cost Optimization Benefits:
 - Compliance cost avoidance: $______/month
 - Total Monthly Savings: $______
 
-Annual ROI: (($______ × 12) .md) × 100 = _______%
-Payback Period: $______ / ($______ .md) = ______ months
-```
+Annual ROI: (($______ × 12) ) × 100 = _______%
+Payback Period: $______ / ($______ ) = ______ months
+```markdown
 
 #### Strategic Decision Support Impact Assessment
-```
+```markdown
 Monthly Investment: $______
 Annual Investment: $______ × 12 = $______
 
@@ -126,9 +134,9 @@ Strategic Decision Value:
 - Executive transparency: $______/month
 - Total Monthly Value: $______
 
-Annual ROI: (($______ × 12) .md) × 100 = _______%
-Payback Period: $______ / ($______ .md) = ______ months
-```
+Annual ROI: (($______ × 12) ) × 100 = _______%
+Payback Period: $______ / ($______ ) = ______ months
+```markdown
 
 ---
 

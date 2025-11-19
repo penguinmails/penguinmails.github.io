@@ -11,7 +11,7 @@ In `/lib/schemas/tenant.schemas.ts`, define and export a Zod schema (`updateComp
 
 ## Context
 
-Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Zod schemas are used throughout the application for API request validation. This schema will validate company update requests, allowing users to update individual fields without requiring all fields to be present.
+Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Zod schemas are used throughout the application for API request validation. This schema will validate company update requests, allowing users to update individual fields without requiring all fields to be present.
 
 ## Acceptance Criteria
 
@@ -60,17 +60,20 @@ export type UpdateCompanyInput = z.infer<typeof updateCompanySchema>;
 ### Validation Rules
 
 **Name:**
+
 - Optional field
 - If provided, must be non-empty string (after trimming)
 - Maximum 255 characters
 - Trimmed to remove leading/trailing whitespace
 
 **Logo URL:**
+
 - Optional field
 - If provided, must be valid URL format
 - Maximum 500 characters
 
 **General:**
+
 - At least one field must be provided (using `.refine()`)
 
 ## Implementation Notes
@@ -84,8 +87,8 @@ export type UpdateCompanyInput = z.infer<typeof updateCompanySchema>;
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Validation patterns
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data validation requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Validation patterns
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data validation requirements
 
 ## Dependencies
 
@@ -102,5 +105,3 @@ export type UpdateCompanyInput = z.infer<typeof updateCompanySchema>;
 - [ ] Test schema with very long name - should fail if exceeds max length
 - [ ] Verify TypeScript types are correctly inferred
 - [ ] Test schema with all fields - should pass
-
-

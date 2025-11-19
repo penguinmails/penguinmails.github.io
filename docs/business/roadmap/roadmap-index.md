@@ -12,8 +12,8 @@ persona: "All Teams"
 
 This document serves as the central hub for all roadmap information, providing role-based navigation and quick reference for feature availability across all teams.
 
-**Document Level:** Level 1 - Central Navigation Hub  
-**Target Audience:** All teams (Executive, Marketing, Development, Operations, Sales)  
+**Document Level:** Level 1 - Central Navigation Hub
+**Target Audience:** All teams (Executive, Marketing, Development, Operations, Sales)
 **Purpose:** Central roadmap navigation, feature availability reference, role-specific guidance
 
 ---
@@ -21,11 +21,14 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🎯 Role-Based Roadmap Access
 
 ### 👑 Executive Team
+
 **Documents**:
-- [`Executive Roadmap`](executive-roadmap) - Strategic investment and business impact
-- [`Roadmap Considerations`](...md) - Understanding our development approach
+
+- [`Executive Roadmap`](./executive-roadmap) - Strategic investment and business impact
+- [`Roadmap Considerations`](/docs/roadmap-considerations) - Understanding our development approach
 
 **What You'll Find**:
+
 - Investment requirements and ROI projections
 - Strategic decision points and business impact
 - Market positioning timeline
@@ -34,11 +37,14 @@ This document serves as the central hub for all roadmap information, providing r
 **Key Decisions**: Investment timing, market strategy, competitive positioning
 
 ### 📢 Marketing & Sales Team
+
 **Documents**:
-- [`Marketing Roadmap`](marketing-roadmap) - Feature promises and hype marketing
-- [`Executive Roadmap`](executive-roadmap) - ROI and business justification
+
+- [`Marketing Roadmap`](./marketing-roadmap) - Feature promises and hype marketing
+- [`Executive Roadmap`](./executive-roadmap) - ROI and business justification
 
 **What You'll Find**:
+
 - What features can be promised TODAY
 - Timeline for upcoming features
 - Competitive positioning strategies
@@ -47,11 +53,14 @@ This document serves as the central hub for all roadmap information, providing r
 **Key Decisions**: Sales promises, marketing campaigns, customer communication
 
 ### 💻 Developer & Operations Team
+
 **Documents**:
-- [`Developer & Operations Roadmap`](developer-operations-roadmap) - Technical implementation
-- [`Implementation Roadmap`](../implementation.md) - Technical execution
+
+- [`Developer & Operations Roadmap`](./developer-operations-roadmap) - Technical implementation
+- [`Implementation Roadmap`](/docs/business/implementation) - Technical execution
 
 **What You'll Find**:
+
 - Development timeline and technical requirements
 - Skills development roadmap
 - Infrastructure evolution plan
@@ -64,6 +73,7 @@ This document serves as the central hub for all roadmap information, providing r
 ## ⚡ Quick Feature Availability Reference
 
 ### ✅ Available NOW (Q4 2025)
+
 **Safe to Promise**: These features are production-ready
 
 | Feature Category | Description | Promise Level |
@@ -75,6 +85,7 @@ This document serves as the central hub for all roadmap information, providing r
 | **ESP Integration** | Postmark, Mailgun integration with manual configuration | ✅ PROMISE TODAY |
 
 ### 🚀 Coming Q1 2026
+
 **Timeline Promise**: Safe to announce with specific delivery
 
 | Feature Category | Description | Promise Level |
@@ -85,6 +96,7 @@ This document serves as the central hub for all roadmap information, providing r
 | **User Experience** | Guided onboarding, improved interface, mobile responsiveness | ✅ PROMISE Q1 2026 |
 
 ### 🎯 Planned 2026 (Hype Marketing)
+
 **Build Excitement**: Use for competitive positioning and future value
 
 | Feature Category | Description | Timeline |
@@ -95,6 +107,7 @@ This document serves as the central hub for all roadmap information, providing r
 | **Enterprise Features** | SSO, advanced security, real-time monitoring, enterprise integrations | Q4 2026-Q1 2027 |
 
 ### 🔮 Future Vision (2027+)
+
 **Innovation Pipeline**: Market leadership and next-generation features
 
 | Feature Category | Description | Timeline |
@@ -133,34 +146,43 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🎯 Role-Specific Decision Making
 
 ### For Executives
+
 **Investment Decisions**:
+
 - Q1 2026: $100K-150K for MVP completion
 - Q3 2026: $300K-500K for growth features
 - Q4 2026: $500K-750K for enterprise features
 
 **Strategic Questions**:
+
 - When to scale team based on customer growth?
 - How to prioritize features for market positioning?
 - What investment level matches revenue projections?
 
 ### For Marketing/Sales
+
 **Promise Decisions**:
+
 - **Available Now**: Automated infrastructure, compliance, basic analytics
 - **Q1 2026 Promise**: Campaign management, CRM integration, enhanced UX
 - **Hype Marketing**: AI optimization, real-time monitoring, enterprise features
 
 **Sales Strategy**:
+
 - Position current capabilities vs competitors
 - Build excitement for Q1 2026 features
 - Use future vision for enterprise deals
 
 ### For Developers/Operations
+
 **Technical Decisions**:
+
 - Skills development priorities by timeline
 - Technology stack evolution planning
 - Infrastructure scaling preparation
 
 **Development Planning**:
+
 - MVP completion timeline (Q1 2026)
 - Growth feature development (Q2-Q3 2026)
 - Enterprise feature preparation (Q4 2026)
@@ -170,49 +192,61 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🔗 Cross-Document Navigation
 
 ### Strategic Documents
-- [`Business Strategy Overview`](../strategy.md) - Strategic planning framework
-- [`Value Proposition Overview`](../value-proposition.md) - Customer value positioning
-- [`Market Analysis Overview`](../market-analysis.md) - Market positioning and opportunity
+
+- [`Business Strategy Overview`](/docs/business/strategy/overview) - Strategic planning framework
+- [`Value Proposition Overview`](/docs/business/value-proposition/overview) - Customer value positioning
+- [`Market Analysis Overview`](/docs/business/market-analysis/overview) - Market positioning and opportunity
 
 ### Implementation Documents
-- [`Implementation Roadmap`](../implementation.md) - Technical execution plan
-- [`Technical Infrastructure`](../implementation.md) - Infrastructure planning
-- [`Success Metrics`](../implementation.md) - Success measurement framework
+
+- [`Implementation Roadmap`](/docs/business/implementation) - Technical execution plan
+- [`Technical Infrastructure`](/docs/business/implementation/technical-infrastructure) - Infrastructure planning
+- [`Success Metrics`](/docs/business/implementation/success-metrics) - Success measurement framework
 
 ### Analytics & Reporting
-- [`Executive Analytics Dashboard`](../product/analytics.md) - KPI tracking
-- [`Marketing Analytics Dashboard`](../marketing/analytics.md) - Marketing metrics
-- [`ROI Calculator`](../reference.md) - Financial planning tool
+
+- [`Executive Analytics Dashboard`](/docs/business/product/analytics/overview) - KPI tracking
+- [`Marketing Analytics Dashboard`](/docs/business/marketing/analytics/overview) - Marketing metrics
+- [`ROI Calculator`](/docs/business/reference/roi-calculator) - Financial planning tool
 
 ### Customer & Operations
-- [`Customer Success Framework`](../customer-success/strategy.md) - Customer success planning
-- [`Operations Framework`](../operations/strategy.md) - Operational planning
-- [`Competitive Analysis`](../core.md) - Competitive positioning
+
+- [`Customer Success Framework`](/docs/business/customer-success/strategy/framework) - Customer success planning
+- [`Operations Framework`](/docs/business/operations/strategy/framework) - Operational planning
+- [`Competitive Analysis`](/docs/business/core/competitive-analysis) - Competitive positioning
 
 ---
 
 ## 📅 Key Milestones & Decision Points
 
 ### Q1 2026 Milestone: MVP Completion
+
 **Decision Point**: Scale Level 2 features or begin Level 3 development
+
 - **Investment Required**: $100K-150K
 - **Expected Outcome**: $25K-75K MRR
 - **Team Scale**: 4-5 engineers
 
 ### Q3 2026 Milestone: Growth Phase
+
 **Decision Point**: Enterprise feature investment
+
 - **Investment Required**: $300K-500K
 - **Expected Outcome**: $150K-250K MRR
 - **Team Scale**: 6-8 engineers
 
 ### Q4 2026 Milestone: Enterprise Ready
+
 **Decision Point**: Enterprise feature launch
+
 - **Investment Required**: $500K-750K
 - **Expected Outcome**: $400K-600K MRR
 - **Team Scale**: 8-12 engineers
 
 ### 2027+ Milestone: Market Leadership
+
 **Decision Point**: Innovation and market leadership
+
 - **Investment Required**: $1M+ annually
 - **Expected Outcome**: $1M+ ARR
 - **Team Scale**: 10+ engineers + data science
@@ -222,16 +256,19 @@ This document serves as the central hub for all roadmap information, providing r
 ## 🚨 Risk Management & Contingency
 
 ### Technical Risks
+
 1. **Scaling Challenges**: Infrastructure performance at growth phase
 2. **ML Complexity**: Machine learning development and deployment
 3. **Integration Complexity**: Enterprise system integration challenges
 
 ### Market Risks
+
 1. **Competitive Response**: Large competitors entering the space
 2. **Adoption Rate**: Slower than expected customer adoption
 3. **Regulatory Changes**: Email marketing regulation evolution
 
 ### Financial Risks
+
 1. **Cash Flow**: Investment timing vs revenue generation
 2. **Customer Concentration**: Over-reliance on few large customers
 
@@ -242,25 +279,28 @@ This document serves as the central hub for all roadmap information, providing r
 ## 📞 Support & Escalation
 
 ### Documentation Issues
-- **Roadmap Philosophy**: [`Roadmap Considerations`](...md)
-- **Implementation Questions**: [`Implementation Roadmap`](../implementation.md)
-- **Strategy Questions**: [`Strategy Overview`](../strategy.md)
+
+- **Roadmap Philosophy**: [`Roadmap Considerations`](/docs/roadmap-considerations)
+- **Implementation Questions**: [`Implementation Roadmap`](/docs/business/implementation)
+- **Strategy Questions**: [`Strategy Overview`](/docs/business/strategy/overview)
 
 ### Technical Questions
-- **Development Timeline**: [`Developer & Operations Roadmap`](developer-operations-roadmap)
-- **Infrastructure Planning**: [`Technical Infrastructure`](../implementation.md)
-- **Integration Questions**: [`ESP Technical Analysis`](../implementation.md)
+
+- **Development Timeline**: [`Developer & Operations Roadmap`](./developer-operations-roadmap)
+- **Infrastructure Planning**: [`Technical Infrastructure`](/docs/business/implementation/technical-infrastructure)
+- **Integration Questions**: [`ESP Technical Analysis`](/docs/business/implementation/esp-technical-analysis)
 
 ### Business Questions
-- **Investment Planning**: [`Executive Roadmap`](executive-roadmap)
-- **Sales Positioning**: [`Marketing Roadmap`](marketing-roadmap)
-- **Customer Communication**: [`Customer Success Framework`](../customer-success/strategy.md)
+
+- **Investment Planning**: [`Executive Roadmap`](./executive-roadmap)
+- **Sales Positioning**: [`Marketing Roadmap`](./marketing-roadmap)
+- **Customer Communication**: [`Customer Success Framework`](/docs/business/customer-success/strategy/framework)
 
 ---
 
-**Document Classification:** Level 1 - Central Navigation Hub  
-**Review Cycle:** Monthly roadmap updates and quarterly strategic review  
-**Stakeholder Access:** All teams with role-specific sections  
-**Roadmap Philosophy:** [`Roadmap Considerations`](...md)
+**Document Classification:** Level 1 - Central Navigation Hub
+**Review Cycle:** Monthly roadmap updates and quarterly strategic review
+**Stakeholder Access:** All teams with role-specific sections
+**Roadmap Philosophy:** [`Roadmap Considerations`](/docs/roadmap-considerations)
 
 This roadmap index provides central navigation and quick reference for all roadmap information, enabling informed decision-making across all teams and roles.

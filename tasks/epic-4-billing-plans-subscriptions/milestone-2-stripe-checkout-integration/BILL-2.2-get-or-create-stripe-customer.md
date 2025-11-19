@@ -11,7 +11,7 @@ In a new `/lib/services/billing.service.ts` file, create a function `getOrCreate
 
 ## Context
 
-Stripe Customer management is essential for subscription billing. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), each tenant needs a Stripe Customer ID to manage subscriptions. This function ensures we have a customer record in Stripe for each tenant.
+Stripe Customer management is essential for subscription billing. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), each tenant needs a Stripe Customer ID to manage subscriptions. This function ensures we have a customer record in Stripe for each tenant.
 
 ## Acceptance Criteria
 
@@ -90,8 +90,8 @@ export async function getOrCreateStripeCustomer(
 
 ## Related Documentation
 
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Stripe Connect setup
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Payment processing
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Stripe Connect setup
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Payment processing
 
 ## Dependencies
 
@@ -109,4 +109,3 @@ export async function getOrCreateStripeCustomer(
 - [ ] Verify function is idempotent (can be called multiple times)
 - [ ] Test error handling for Stripe API failures
 - [ ] Verify tenant ID is added to Stripe customer metadata
-

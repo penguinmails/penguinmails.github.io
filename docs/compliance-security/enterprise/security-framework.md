@@ -23,6 +23,7 @@ last_modified_date: "2025-10-27"
 This document outlines the security practices and protocols for the PenguinMails multi-tenant SaaS platform. While we leverage NileDB's authentication services, we maintain comprehensive security practices across all system components.
 
 ### Security Philosophy
+
 - **Defense in Depth**: Multiple layers of security controls
 - **Zero Trust**: Verify every access request regardless of origin
 - **Principle of Least Privilege**: Minimum necessary access for all users
@@ -35,20 +36,21 @@ This document outlines the security practices and protocols for the PenguinMails
 ### NileDB Authentication Integration
 
 #### Authentication Flow
+
 ```mermaid
 sequenceDiagram
     participant Client
     participant App
     participant NileDB
     participant Redis
-    
-    Client->>App: Login Request (email.md)
+
+    Client->>App: Login Request (email)
     App->>NileDB: Authenticate User
     NileDB->>App: Auth Token + User Data
     App->>Redis: Store Session
     Redis->>App: Session Confirmed
     App->>Client: Login Success + Dashboard Access
-```
+```markdown
 
 #### Security Features
 - **Managed Authentication**: NileDB handles core authentication (users table)
@@ -66,35 +68,35 @@ sequenceDiagram
 const authenticateUser = async (req, res, next) => {
   try {
     const token = req.headers.authorization?.replace('Bearer ', '');
-    
+
     if (!token) {
       return res.status(401).json({ error: 'No token provided' });
     }
-    
+
     // Verify with NileDB
     const user = await nileDB.auth.verifyToken(token);
-    
+
     if (!user) {
       return res.status(401).json({ error: 'Invalid token' });
     }
-    
+
     // Check tenant access
     const tenantAccess = await checkTenantAccess(user.id, req.params.tenantId);
-    
+
     if (!tenantAccess) {
       return res.status(403).json({ error: 'Access denied' });
     }
-    
+
     req.user = user;
     req.tenant = tenantAccess;
     next();
-    
+
   } catch (error) {
     logger.error('Authentication error:', error);
     res.status(401).json({ error: 'Authentication failed' });
   }
 };
-```
+```markdown
 
 ### Role-Based Access Control (RBAC)
 
@@ -111,7 +113,7 @@ graph TD
     EMPLOYEE[Employee<br/>Daily Operations]
     QA[QA<br/>Testing & Quality]
     BLOCKED[Blocked<br/>No Access]
-    
+
     %% Permissions Flow
     SUPER_ADMIN --> ADMIN
     SUPER_ADMIN --> OWNER
@@ -119,7 +121,7 @@ graph TD
     MANAGER --> EMPLOYEE
     EMPLOYEE --> QA
     BLOCKED --> |Revoke| QA
-    
+
     %% Styling
     classDef super_admin fill:#ffcdd2
     classDef admin fill:#f8bbd9
@@ -128,7 +130,7 @@ graph TD
     classDef employee fill:#b3e5fc
     classDef qa fill:#fff9c4
     classDef blocked fill:#ffcdd2
-```
+```markdown
 
 #### Permission Levels Detail
 
@@ -150,7 +152,7 @@ const checkPermission = (requiredPermission) => {
     try {
       const userRole = req.user.role;
       const tenantId = req.tenant.id;
-      
+
       // Check if user has required permission for tenant
       const hasPermission = await nileDB.permissions.check({
         userId: req.user.id,
@@ -158,13 +160,13 @@ const checkPermission = (requiredPermission) => {
         permission: requiredPermission,
         role: userRole
       });
-      
+
       if (!hasPermission) {
-        return res.status(403).json({ 
-          error: 'Insufficient permissions' 
+        return res.status(403).json({
+          error: 'Insufficient permissions'
         });
       }
-      
+
       next();
     } catch (error) {
       logger.error('Permission check error:', error);
@@ -174,12 +176,12 @@ const checkPermission = (requiredPermission) => {
 };
 
 // Usage in routes
-app.get('/api/tenant/:tenantId/users', 
+app.get('/api/tenant/:tenantId/users',
   authenticateUser,
   checkPermission('user_management'),
   getUsers
 );
-```
+```markdown
 
 ## Row Level Security (RLS) Policies
 
@@ -188,7 +190,7 @@ app.get('/api/tenant/:tenantId/users',
 
 **Current Implementation:**
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
-- **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets  
+- **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets
 - **Q85**: Cross-tenant access policies for staff need documentation (immediate action required)
 - **Q86**: RLS testing procedures planned as part of feature implementation
 
@@ -207,7 +209,7 @@ app.get('/api/tenant/:tenantId/users',
 
 #### Documentation Requirements (Q4 2025)
 - [ ] Formalize staff bypass procedures
-- [ ] Document cross-tenant access validation framework  
+- [ ] Document cross-tenant access validation framework
 - [ ] Create RLS testing procedures as part of feature rollout
 
 ---
@@ -226,7 +228,7 @@ CREATE POLICY tenant_isolation ON tenant_data
 
 -- Session-based tenant context
 SET app.current_tenant_id = '12345';
-```
+```markdown
 
 #### API Security
 ```javascript
@@ -234,20 +236,20 @@ SET app.current_tenant_id = '12345';
 const setTenantContext = async (req, res, next) => {
   try {
     const tenantId = req.params.tenantId || req.user.default_tenant_id;
-    
+
     // Verify user has access to this tenant
     const hasAccess = await nileDB.tenants.verifyAccess({
       userId: req.user.id,
       tenantId: tenantId
     });
-    
+
     if (!hasAccess) {
       return res.status(403).json({ error: 'Tenant access denied' });
     }
-    
+
     // Set tenant context for database queries
     await nileDB.query('SET app.current_tenant_id = $1', [tenantId]);
-    
+
     req.tenantId = tenantId;
     next();
   } catch (error) {
@@ -255,7 +257,7 @@ const setTenantContext = async (req, res, next) => {
     res.status(500).json({ error: 'Failed to set tenant context' });
   }
 };
-```
+```markdown
 
 ### Data Encryption
 
@@ -286,7 +288,7 @@ app.use(helmet({
     },
   },
 }));
-```
+```markdown
 
 #### API Key Management
 ```javascript
@@ -295,17 +297,17 @@ const apiKeyManager = {
   generateKey: () => {
     return crypto.randomBytes(32).toString('hex');
   },
-  
+
   hashKey: (key) => {
     return crypto.createHash('sha256').update(key).digest('hex');
   },
-  
+
   encryptSensitive: (data) => {
     const cipher = crypto.createCipher('aes-256-gcm', process.env.ENCRYPTION_KEY);
     return cipher.update(JSON.stringify(data), 'utf8', 'hex') + cipher.final('hex');
   }
 };
-```
+```markdown
 
 ---
 
@@ -330,7 +332,7 @@ ufw allow 443/tcp
 ufw allow from 10.0.0.0/8 to any port 3000
 ufw allow from 10.0.0.0/8 to any port 5432
 ufw allow from 10.0.0.0/8 to any port 6379
-```
+```markdown
 
 #### VPN Access
 - **Team Access**: VPN required for infrastructure management
@@ -353,7 +355,7 @@ systemctl enable fail2ban
 
 # Update system packages
 apt-get update && apt-get upgrade -y
-```
+```markdown
 
 #### SSL/TLS Configuration
 ```nginx
@@ -361,23 +363,23 @@ apt-get update && apt-get upgrade -y
 server {
     listen 443 ssl http2;
     server_name penguinmails.com;
-    
+
     ssl_certificate /etc/letsencrypt/live/penguinmails.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/penguinmails.com/privkey.pem;
-    
+
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512;
     ssl_prefer_server_ciphers off;
-    
+
     # HSTS
     add_header Strict-Transport-Security "max-age=63072000" always;
-    
+
     # Security headers
     add_header X-Frame-Options DENY;
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
 }
-```
+```markdown
 
 ---
 
@@ -395,7 +397,7 @@ TXT mailu._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQE
 
 # DMARC Record
 TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmails.com"
-```
+```markdown
 
 #### Email Authentication
 ```javascript
@@ -411,10 +413,10 @@ const sendEmail = async (emailData) => {
       'Authentication-Results': 'spf=pass smtp.mailfrom=penguinmails.com'
     }
   };
-  
+
   return await smtpTransporter.sendMail(mailOptions);
 };
-```
+```markdown
 
 ### Email Warm-up Security
 
@@ -426,27 +428,27 @@ const emailWarmup = {
   calculateDailyLimit: (reputationScore, daysActive) => {
     const baseLimit = 10; // Start with 10 emails
     const maxLimit = Math.min(1000, daysActive * 50); // Scale up gradually
-    
-    /.md)
+
+    /)
     const reputationMultiplier = reputationScore / 100;
-    
+
     return Math.floor(baseLimit * reputationMultiplier + maxLimit * (1 - reputationMultiplier));
   },
-  
+
   // Monitor bounce rates and adjust
   checkBounceRate: (sentCount, bouncedCount) => {
     const bounceRate = bouncedCount / sentCount;
-    
+
     if (bounceRate > 0.1) { // 10% bounce rate
       return { action: 'pause', reason: 'High bounce rate' };
     } else if (bounceRate > 0.05) { // 5% bounce rate
       return { action: 'reduce_volume', reason: 'Moderate bounce rate' };
     }
-    
+
     return { action: 'continue', reason: 'Healthy bounce rate' };
   }
 };
-```
+```markdown
 
 ---
 
@@ -459,10 +461,10 @@ const emailWarmup = {
 // Parameterized queries
 const getUserData = async (userId, tenantId) => {
   const query = `
-    SELECT * FROM users 
+    SELECT * FROM users
     WHERE id = $1 AND tenant_id = $2
   `;
-  
+
   const result = await nileDB.query(query, [userId, tenantId]);
   return result.rows[0];
 };
@@ -471,14 +473,14 @@ const getUserData = async (userId, tenantId) => {
 const campaignQuery = nileDB('campaigns')
   .where({ tenant_id: tenantId, status: 'active' })
   .select(['id', 'name', 'status']);
-```
+```markdown
 
 #### XSS Prevention
 ```javascript
 // Input sanitization
 const sanitizeInput = (input) => {
   return input
-    .replace(/[<>'"].md) // Remove dangerous characters
+    .replace(/[<>'"]) // Remove dangerous characters
     .trim()
     .substring(0, 1000); // Limit length
 };
@@ -486,13 +488,13 @@ const sanitizeInput = (input) => {
 // Output encoding
 const escapeHTML = (unsafe) => {
   return unsafe
-    .replace(/&.md)
-    .replace(/<.md)
-    .replace(/>.md)
-    .replace(/".md)
-    .replace(/'.md);
+    .replace(/&)
+    .replace(/<)
+    .replace(/>)
+    .replace(/")
+    .replace(/');
 };
-```
+```markdown
 
 ### Rate Limiting
 
@@ -503,33 +505,33 @@ const rateLimiter = {
   check: async (identifier, limit, window) => {
     const key = `rate_limit:${identifier}`;
     const current = await redis.get(key) || 0;
-    
+
     if (current >= limit) {
       return { allowed: false, remaining: 0 };
     }
-    
+
     await redis.multi()
       .incr(key)
       .expire(key, window)
       .exec();
-    
+
     return { allowed: true, remaining: limit - current - 1 };
   }
 };
 
 // Middleware usage
-app.use('/api.md) => {
+app.use('/api) => {
   const identifier = `${req.ip}:${req.user?.id || 'anonymous'}`;
   const result = await rateLimiter.check(identifier, 100, 3600); // 100 requests per hour
-  
+
   if (!result.allowed) {
     return res.status(429).json({ error: 'Rate limit exceeded' });
   }
-  
+
   res.setHeader('X-RateLimit-Remaining', result.remaining);
   next();
 });
-```
+```markdown
 
 ---
 
@@ -553,16 +555,16 @@ const securityLogger = {
       userAgent: event.userAgent,
       details: event.details
     };
-    
+
     // Log to secure storage
     await nileDB.security_logs.insert(logEntry);
-    
+
     // Alert on critical events
     if (event.severity === 'critical') {
       await sendSecurityAlert(logEntry);
     }
   },
-  
+
   // Track suspicious activities
   trackSuspiciousActivity: async (req, activity) => {
 #### Enhanced Audit Logging (Q4 2025)
@@ -583,12 +585,12 @@ const securityLogger = {
       activity: activity,
       timestamp: new Date()
     };
-    
+
     // Store for analysis
     await nileDB.suspicious_activities.insert(suspicious);
   }
 };
-```
+```markdown
 
 #### Audit Trail
 ```javascript
@@ -606,11 +608,11 @@ const auditLogger = {
       ip_address: getClientIP(),
       user_agent: getUserAgent()
     };
-    
+
     await nileDB.audit_log.insert(auditEntry);
   }
 };
-```
+```markdown
 
 ### Incident Response
 
@@ -630,7 +632,7 @@ flowchart TD
     ERADICATE[Remove Threat]
     RECOVER[Restore Operations]
     POST[Post-Incident Review]
-    
+
     DETECT --> ASSESS
     ASSESS -->|High Severity| CONTAIN
     ASSESS -->|Low Severity| INVESTIGATE
@@ -638,10 +640,10 @@ flowchart TD
     INVESTIGATE --> ERADICATE
     ERADICATE --> RECOVER
     RECOVER --> POST
-    
+
     %% Alert for high severity
     CONTAIN -.->|Immediate Alert| ALERT[Security Team Alert]
-```
+```markdown
 
 ---
 
@@ -656,13 +658,13 @@ const gdprCompliance = {
   // Right to be forgotten
   deleteUserData: async (userId, tenantId) => {
     await nileDB.transaction(async (trx) => {
-      /.md)
+      /)
       await trx('user_sessions').where({ user_id: userId }).del();
       await trx('tenant_users').where({ user_id: userId, tenant_id: tenantId }).del();
       await trx('users').where({ id: userId }).del();
     });
   },
-  
+
   // Data export
   exportUserData: async (userId, tenantId) => {
     const userData = {
@@ -670,16 +672,16 @@ const gdprCompliance = {
       tenant_access: await nileDB('tenant_users').where({ user_id: userId }),
       activity_log: await nileDB('audit_log').where({ user_id: userId })
     };
-    
+
     return userData;
   },
-  
+
   // Data portability
   exportDataJSON: (data) => {
     return JSON.stringify(data, null, 2);
   }
 };
-```
+```markdown
 
 ### Data Retention Policies
 
@@ -740,8 +742,8 @@ const gdprCompliance = {
 *Security is everyone's responsibility. Report any security concerns immediately to the security team.*
 
 **Related Documents**
-- [Security & Privacy Integration](..md) - Unified security and privacy approach
-- [Traffic Security Matrix](..md) - Database security strategy framework
-- [Compliance Procedures](../detailed-compliance.md) - Regulatory compliance workflows
-- [Data Privacy Policy](../international.md) - Customer-facing privacy information
+- [Security & Privacy Integration](.) - Unified security and privacy approach
+- [Traffic Security Matrix](.) - Database security strategy framework
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
+- [Data Privacy Policy](../international) - Customer-facing privacy information
 ---

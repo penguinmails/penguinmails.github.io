@@ -1,6 +1,6 @@
 # Content Database Architecture: Analysis, Gotchas, and Proposals
 
-This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure.md) and provides a pragmatic, implementation-ready refinement that aligns with:
+This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure) and provides a pragmatic, implementation-ready refinement that aligns with:
 
 - 4-tier architecture:
   - OLTP: operational entities and message metadata.
@@ -9,7 +9,7 @@ This document analyzes the current Content DB design (as described in `docs/impl
   - Queue: pipelines and async processing.
 - Separation of concerns:
   - Content DB is NOT a logging, monitoring, or analytics sink.
-  - External analytics/logging handles telemetry (per [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)).
+  - External analytics/logging handles telemetry (per [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)).
 
 This is the canonical interpretation to use when reconciling legacy content DB docs.
 
@@ -22,9 +22,9 @@ Key constructs from `docs/implementation-technical/database-infrastructure/conte
 - email_messages
   - Message-level metadata and traces, keyed by storage_key, referencing email_content.
 - email_content
-  - Email bodies (text.md), headers, compression, retention metadata.
+  - Email bodies (text), headers, compression, retention metadata.
 - content_objects
-  - Alternative.md).
+  - Alternative).
 - attachments
   - Binary blob storage keyed to content storage_key.
 - transactional_emails, notifications, system_notifications
@@ -53,7 +53,7 @@ attachments {
     uuid id PK
     varchar(500) parent_storage_key FK "Links to the email content object"
     varchar(255) filename "Original filename of the attachment"
-    varchar(100) mime_type "Content type of the file (e.g., 'application.md)"
+    varchar(100) mime_type "Content type of the file (e.g., 'application)"
     integer size_bytes "Size of the attachment file"
     bytea content "The raw binary data of the attachment file"
     varchar(50) storage_disposition "inline or attachment"
@@ -62,7 +62,7 @@ attachments {
 
 %% Relationships
 content_objects ||--o{ attachments : "can have"
-```
+```markdown
 
 captures the core idea correctly: content_objects as body store; attachments referencing via parent_storage_key.
 
@@ -185,11 +185,11 @@ CREATE TABLE content_objects (
 
 CREATE INDEX idx_content_objects_tenant ON content_objects(tenant_id);
 CREATE INDEX idx_content_objects_expires ON content_objects(expires_at) WHERE expires_at IS NOT NULL;
-```
+```markdown
 
 Key points:
 - Single canonical body store.
-- No direct FK to OLTP; tie via storage_key from OLTP tables (e.g., inbox_message_refs.md).
+- No direct FK to OLTP; tie via storage_key from OLTP tables (e.g., inbox_message_refs).
 - Optional compression/hash fields allowed, but keep semantics minimal.
 
 2) attachments
@@ -211,7 +211,7 @@ CREATE TABLE attachments (
 );
 
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
-```
+```markdown
 
 Key points:
 - No analytics/metrics here.
@@ -236,7 +236,7 @@ C. What to drop or externalize (relative to legacy guide)
 - Remove from Content DB responsibilities:
   - content_connection_pools, content_pool_metrics, deep pool tuning functions.
   - Rich system_notifications used as monitoring bus.
-  - Detailed content_access_log (use external analytics.md).
+  - Detailed content_access_log (use external analytics).
   - content_security_alerts as a heavy event store.
 - Keep only:
   - Lightweight, targeted retention_policies if you want DB-driven retention.
@@ -257,7 +257,7 @@ C. What to drop or externalize (relative to legacy guide)
   - Keep this as a documented contract, not a DB constraint.
   - Implement:
     - One-way reference: OLTP row has content_storage_key; Content DB trusts it.
-    - Background validation job (in app.md) to detect orphaned content.
+    - Background validation job (in app) to detect orphaned content.
 
 2) “Email message analytics” inside Content DB
 
@@ -287,7 +287,7 @@ C. What to drop or externalize (relative to legacy guide)
   - content_access_log and content_search_index can grow very large.
 - Guidance:
   - Prefer:
-    - Search: external search engine (OpenSearch/Meilisearch.md) or OLAP partial indexing.
+    - Search: external search engine (OpenSearch/Meilisearch) or OLAP partial indexing.
     - Access logs: security/event pipeline or external logging.
   - If you keep content_search_index:
     - Keep it lean, rolling, and clearly non-canonical; treat as projection.
@@ -311,8 +311,8 @@ When you codify this into the canonical docs:
 - Non-responsibilities:
   - No general-purpose logging store.
   - No infra metrics (pools, CPU, etc.).
-  - No rich security.md).
-  - No campaign.md).
+  - No rich security).
+  - No campaign).
 
 This analysis should be used to:
 

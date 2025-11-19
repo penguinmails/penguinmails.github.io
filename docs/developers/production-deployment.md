@@ -15,12 +15,14 @@ Comprehensive production deployment guide for scalable email platform integratio
 ### Minimum System Requirements
 
 **Server Specifications**:
+
 - CPU: 4+ cores for handling email campaign loads
 - RAM: 8GB minimum, 16GB recommended for optimal performance
 - Storage: 100GB SSD for logs, data, and temporary files
 - Network: 1Gbps bandwidth for high-volume email sending
 
 **Deployment Architecture**:
+
 - Load balancer for traffic distribution
 - Redis cluster for session management and caching
 - Database cluster for data persistence and failover
@@ -33,6 +35,7 @@ Comprehensive production deployment guide for scalable email platform integratio
 ### Multi-Stage Build Template
 
 **Dockerfile Structure**:
+
 ```dockerfile
 # Build stage
 FROM node:18-alpine AS builder
@@ -47,7 +50,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
-```
+```markdown
 
 **Container Orchestration**:
 1. Build container with optimized dependencies
@@ -62,7 +65,7 @@ CMD ["npm", "start"]
 ### Production Environment Setup
 
 **Required Environment Variables**:
-```
+```markdown
 # API Configuration
 EMAIL_API_KEY=prod_api_key_here
 EMAIL_ENVIRONMENT=production
@@ -84,7 +87,7 @@ REDIS_URL=redis://redis-host:6379
 LOG_LEVEL=info
 METRICS_ENDPOINT=/metrics
 HEALTH_CHECK_ENDPOINT=/health
-```
+```markdown
 
 ---
 
@@ -128,7 +131,7 @@ jobs:
           docker build -t email-platform .
           docker push registry.com/email-platform
           kubectl apply -f k8s/production/
-```
+```markdown
 
 **Deployment Validation**:
 1. Automated testing in staging environment

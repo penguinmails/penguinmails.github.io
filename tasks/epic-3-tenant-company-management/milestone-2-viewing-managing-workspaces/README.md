@@ -4,10 +4,10 @@
 
 ## Tickets
 
-- [TEN-2.1](./TEN-2.1-list-companies-endpoint.md) - Create API Endpoint to List Companies (GET /api/companies)
-- [TEN-2.2](./TEN-2.2-get-company-details-endpoint.md) - Create API Endpoint to Get Company Details (GET /api/companies/{companyId})
-- [TEN-2.3](./TEN-2.3-define-company-update-schema.md) - Define Zod Schema for Company Updates
-- [TEN-2.4](./TEN-2.4-update-company-endpoint.md) - Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})
+- [TEN-2.1](./TEN-2.1-list-companies-endpoint) - Create API Endpoint to List Companies (GET /api/companies)
+- [TEN-2.2](./TEN-2.2-get-company-details-endpoint) - Create API Endpoint to Get Company Details (GET /api/companies/{companyId})
+- [TEN-2.3](./TEN-2.3-define-company-update-schema) - Define Zod Schema for Company Updates
+- [TEN-2.4](./TEN-2.4-update-company-endpoint) - Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})
 
 ## Dependencies
 
@@ -25,6 +25,4 @@
 
 ## Context
 
-This milestone enables workspace management functionality. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), agencies need to manage multiple client workspaces, which this milestone supports through the companies management endpoints.
-
-
+This milestone enables workspace management functionality. According to the [Features & Capabilities](../../docs/features-capabilities/index), agencies need to manage multiple client workspaces, which this milestone supports through the companies management endpoints.

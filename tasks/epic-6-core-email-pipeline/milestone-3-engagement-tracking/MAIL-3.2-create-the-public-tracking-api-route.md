@@ -21,6 +21,6 @@ Create a public, high-performance API route handler at `/app/api/track/[...slug]
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
-- [Development Standards (API & edge handlers)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework)
+- [Development Standards (API & edge handlers)](../../docs/implementation-technical/development-guidelines/development-standards)

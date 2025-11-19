@@ -1,8 +1,8 @@
-Milestone 1 — Job Enqueueing and Campaign Scheduling
+# Milestone 1 — Job Enqueueing and Campaign Scheduling
 
 **Goal:** Create the producer side of the pipeline: logic to determine when emails should be sent and to push jobs into Redis.
 
-### Tickets
+## Tickets
 
 - MAIL-1.1 Define Drizzle Schemas for Email Pipeline
 - MAIL-1.2 Define Zod Schema for Job Payloads

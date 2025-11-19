@@ -20,17 +20,20 @@ Unlike general email marketing platforms, PenguinMails is purpose-built for cold
 
 ### Why Choose PenguinMails
 
-**For Agencies**
+## For Agencies
+
 - White-label solutions for client campaigns
 - Multi-account management and rotation
 - Advanced analytics and reporting
 
-**For Startups**
+## For Startups
+
 - Quick setup and onboarding
 - Scalable email infrastructure
 - Cost-effective cold email solutions
 
-**For Enterprise**
+## For Enterprise
+
 - Custom deployment options
 - Advanced security and compliance
 - Dedicated support and consulting
@@ -40,13 +43,16 @@ Unlike general email marketing platforms, PenguinMails is purpose-built for cold
 Choose your entry point based on your experience level:
 
 ### Quick Start (5 Minutes)
+
 → [Quick Setup Guide](quick-setup))
 
 ### Feature Overview
+
 → [Features Overview](feature-overview))
 
 ### Deep Dive
-→ [Core Features Documentation](core-features.md)
+
+→ [Core Features Documentation](core-features)
 
 ## Migration Note
 
@@ -58,4 +64,5 @@ This content is being migrated and enhanced from existing documentation to provi
 
 ---
 *Next: [Quick Setup Guide](quick-setup)) →*
+
 ---

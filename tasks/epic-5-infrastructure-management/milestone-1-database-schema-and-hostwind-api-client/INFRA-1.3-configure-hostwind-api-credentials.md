@@ -21,6 +21,6 @@ Add `HOSTWIND_API_KEY` to the environment variable configuration and update `.en
 
 ## Related documentation
 
-- [Development Standards (env & secrets)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
-- [Quick Setup / Getting Started](../../docs/quick-setup.md)
+- [Development Standards (env & secrets)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework)
+- [Quick Setup / Getting Started](../../docs/quick-setup)

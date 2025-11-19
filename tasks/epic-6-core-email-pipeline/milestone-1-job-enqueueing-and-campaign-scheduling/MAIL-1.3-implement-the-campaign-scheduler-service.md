@@ -22,6 +22,6 @@ In `/lib/services/scheduler.service.ts`, create a function `enqueueDueCampaigns(
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (background jobs & services)](../../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Operations: Infrastructure Operations Management (queues & workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (background jobs & services)](../../docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure Operations Management (queues & workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management)

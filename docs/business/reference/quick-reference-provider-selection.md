@@ -24,17 +24,23 @@ last_modified_date: "2025-12-19"
 ### Budget-Constrained Decision
 
 #### Under $200/month Budget
+
 **Recommended**: Postmark or Amazon SES
+
 - **Postmark**: $15-200/month, unlimited logs, premium deliverability
 - **Amazon SES**: $1-300/month, basic features, requires AWS knowledge
 
-#### $200-800/month Budget  
+#### $200-800/month Budget
+
 **Recommended**: Mailgun Foundation
+
 - **Cost**: $150-750/month, includes dedicated IP
 - **Value**: Cold email optimized, 5-day log retention
 
 #### $800+ /month Budget
+
 **Recommended**: SendGrid Pro or Amazon SES
+
 - **SendGrid**: $350-2,500/month, enterprise features, traditional SaaS
 - **Amazon SES**: $300-5,000/month, technical but cost-effective
 
@@ -44,25 +50,26 @@ last_modified_date: "2025-12-19"
 
 ### Current vs. Optimized State
 
-**Self-Hosted Costs (Typical)**
-```
+## Self-Hosted Costs (Typical)
+
+```markdown
 Infrastructure: $312-424/month
-Monitoring: $80-170/month  
+Monitoring: $80-170/month
 Personnel: $3,500-5,000/month
 Compliance: $200-800/month
 ─────────────────────────────────
 TOTAL: $4,092-6,394/month
-```
+```markdown
 
 **Managed ESP Costs**
-```
+```markdown
 ESP Service: $15-750/month
 Additional Tools: $40-120/month
 Reduced Personnel: $1,000-2,000/month
 Compliance (built-in): $0-200/month
 ─────────────────────────────────
 TOTAL: $1,055-2,070/month
-```
+```markdown
 
 **Annual Savings: $23,844-52,488**
 
@@ -123,7 +130,7 @@ TOTAL: $1,055-2,070/month
 - **Cost**: $15-300/month
 - **Savings**: $2,000-5,000/month
 
-### Option 2: Professional (2-4 weeks)  
+### Option 2: Professional (2-4 weeks)
 **Best For**: Balanced cost and features
 - Choose Mailgun Foundation
 - Add monitoring and analytics
@@ -171,7 +178,7 @@ TOTAL: $1,055-2,070/month
 - [ ] Identify primary use case (cold email, transactional, marketing)
 - [ ] Determine compliance requirements (GDPR, CAN-SPAM, industry-specific)
 
-### Short-term Planning (Next 2 Weeks)  
+### Short-term Planning (Next 2 Weeks)
 - [ ] Select provider based on quick decision matrix
 - [ ] Calculate projected monthly savings
 - [ ] Plan implementation timeline

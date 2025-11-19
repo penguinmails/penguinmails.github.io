@@ -10,6 +10,7 @@ This section provides comprehensive analytics and performance monitoring framewo
 ## Available Analytics Areas
 
 ### **Core Analytics Infrastructure**
+
 - **User Analytics**: User behavior analysis, engagement tracking, and conversion optimization
 - **Product Analytics**: Feature adoption, A/B testing, and product-market fit analysis
 - **Performance KPIs**: Key performance indicators and success metrics
@@ -17,6 +18,7 @@ This section provides comprehensive analytics and performance monitoring framewo
 - **Email Performance**: Deliverability, engagement, and campaign analytics
 
 ### **Advanced Analytics**
+
 - **Predictive Modeling**: Machine learning and forecasting capabilities
 - **Cohort Analysis**: User retention and behavior pattern analysis
 - **Attribution Modeling**: Marketing channel and feature impact analysis
@@ -30,10 +32,10 @@ This section provides comprehensive analytics and performance monitoring framewo
 
 ## Integration Points
 
-- [Operations Analytics Overview](...md)) - Main operations framework
-- [Business Strategy](../business/strategy.md)) - Strategic alignment
-- [Technical Architecture](../technical/architecture.md)) - System infrastructure
-- [User Journeys](../user-journeys.md)) - User experience analytics
+- [Operations Analytics Overview](..)) - Main operations framework
+- [Business Strategy](/docs/business/strategy/overview)) - Strategic alignment
+- [Technical Architecture](/docs/technical/architecture/overview)) - System infrastructure
+- [User Journeys](/docs/user-journeys)) - User experience analytics
 
 ---
 

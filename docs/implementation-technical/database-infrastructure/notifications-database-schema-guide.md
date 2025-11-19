@@ -3,12 +3,14 @@
 This guide defines the canonical schema and responsibilities for the dedicated Notifications & System Events database.
 
 It consolidates and replaces:
-- [`notifications-architecture`](docs/implementation-technical/database-infrastructure.md)
-- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure.md)
+
+- [`notifications-architecture`](docs/implementation-technical/database-infrastructure)
+- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure)
 
 Refer to:
-- [`database-schema-guide`](docs/implementation-technical/database-infrastructure.md) for the 5-tier overview.
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md) for logging/observability responsibilities.
+
+- [`database-schema-guide`](docs/implementation-technical/database-infrastructure) for the 5-tier overview.
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure) for logging/observability responsibilities.
 
 ---
 
@@ -31,9 +33,9 @@ The Notifications DB provides:
 
 - Durable, query-optimized state for:
   - User/admin in-app notifications.
-  - Curated system.md).
+  - Curated system).
 - Fast reads and simple status updates on login/admin dashboards.
-- Bounded retention (short.md).
+- Bounded retention (short).
 - A clean separation from OLAP and raw logs.
 
 ---
@@ -41,22 +43,26 @@ The Notifications DB provides:
 ## 2. Core Design Principles
 
 1) UX-first, OLAP-independent:
+
 - Notifications and admin events must be available even if OLAP is slow/down.
 - Reads and updates must be low-latency.
 
-2) Operational, not a log sink:
+1) Operational, not a log sink:
+
 - Store only what is needed for:
   - Displaying notifications.
   - Tracking relevant system events for admins.
 - Raw telemetry stays in external logging.
 
-3) Redis is not the source of truth:
+1) Redis is not the source of truth:
+
 - Use Redis only for:
   - Rate limiting (e.g., over-sending protection).
   - Caching unread counts / hot items.
 - Postgres (or equivalent) in this tier is canonical.
 
-4) Retention by design:
+1) Retention by design:
+
 - User notifications: short/mid-term.
 - System events: mid-term, with offloading to logging if needed.
 - No unbounded growth.
@@ -65,7 +71,7 @@ The Notifications DB provides:
 
 ## 3. Notifications Schema
 
-Represents user/admin visible notifications (in-app, optionally backing email.md).
+Represents user/admin visible notifications (in-app, optionally backing email).
 
 ### 3.1 Table: notifications
 
@@ -74,7 +80,7 @@ CREATE TABLE notifications (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
     -- Scope
-    user_id UUID,                         -- Recipient user (nullable for tenant.md)
+    user_id UUID,                         -- Recipient user (nullable for tenant)
     tenant_id UUID NOT NULL,
 
     -- Semantics
@@ -97,7 +103,7 @@ CREATE INDEX idx_notifications_user_tenant_created
 CREATE INDEX idx_notifications_unread
     ON notifications(user_id, tenant_id, is_read, created_at DESC)
     WHERE is_read = false;
-```
+```markdown
 
 Semantics:
 
@@ -127,10 +133,10 @@ Integration:
   - Triggered by domain events (e.g., campaign completed, quota nearing).
 - Delivery:
   - A notification can enqueue jobs:
-    - SEND_NOTIFICATION (email.md).
+    - SEND_NOTIFICATION (email).
 - Logging:
   - Notification send/interaction events:
-    - Go to external logging.md) if needed.
+    - Go to external logging) if needed.
 
 ---
 
@@ -169,7 +175,7 @@ CREATE INDEX idx_admin_system_events_tenant
 
 CREATE INDEX idx_admin_system_events_severity
     ON admin_system_events(severity, created_at DESC);
-```
+```markdown
 
 Semantics:
 
@@ -241,7 +247,7 @@ Key principles:
 
 Redis is used for:
 
-- Over-sending .md):
+- Over-sending ):
   - Keys like:
     - `auth:password-reset:{email}:tries`
     - `auth:verification-email:{email}:tries`
@@ -281,7 +287,7 @@ To avoid scope creep:
 ## 8. Mermaid ER Diagram
 
 See:
-- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure)
 for the visual ER representation of this schema.
 
 ---

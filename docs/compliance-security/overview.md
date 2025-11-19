@@ -25,13 +25,15 @@ last_modified_date: "2025-11-10"
 ## Security & Compliance Framework
 
 ### **Core Security Principles**
+
 - **Defense in Depth**: Multiple layers of security controls
-- **Zero Trust**: Continuous verification of all access requests  
+- **Zero Trust**: Continuous verification of all access requests
 - **Principle of Least Privilege**: Minimum necessary access for all users
 - **Security by Design**: Security considerations in all development phases
 - **Privacy by Design**: Privacy integrated into system architecture
 
 ### **Compliance Standards**
+
 - **GDPR**: European General Data Protection Regulation
 - **CCPA**: California Consumer Privacy Act
 - **CAN-SPAM**: US Email Marketing Regulations
@@ -45,20 +47,26 @@ last_modified_date: "2025-11-10"
 ## **Progressive Complexity Navigation**
 
 ### **📋 Detailed Compliance Procedures**
+
 Start here for implementation-focused guidance:
-- [Compliance Procedures](../detailed-compliance.md) - Regulatory workflows and procedures
-- [Accessibility Guidelines](../detailed-compliance.md) - WCAG 2.1 AA compliance standards
-- [SOP Guidelines](../detailed-compliance.md) - Standard operating procedures
+
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory workflows and procedures
+- [Accessibility Guidelines](/docs/compliance-security/detailed-compliance) - WCAG 2.1 AA compliance standards
+- [SOP Guidelines](/docs/compliance-security/detailed-compliance) - Standard operating procedures
 
 ### **🏢 Enterprise Security Framework**
+
 Advanced security architecture and implementation:
-- [Security Framework](../enterprise.md) - Comprehensive security architecture
-- [Security & Privacy Integration](../enterprise.md) - Unified security and privacy approach
-- [Traffic Security Matrix](../enterprise.md) - Database security strategy framework
+
+- [Security Framework](../enterprise) - Comprehensive security architecture
+- [Security & Privacy Integration](../enterprise) - Unified security and privacy approach
+- [Traffic Security Matrix](../enterprise) - Database security strategy framework
 
 ### **🌍 International Standards**
+
 Global compliance and privacy frameworks:
-- [Data Privacy Policy](../international.md) - Customer-facing privacy standards
+
+- [Data Privacy Policy](../international) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -66,28 +74,33 @@ Global compliance and privacy frameworks:
 ## **Quick Access to Critical Information**
 
 ### **🔐 Authentication & Access Control**
+
 - **NileDB Integration**: Managed authentication with comprehensive session handling
 - **Role-Based Access Control (RBAC)**: 7-tier permission system for granular access
 - **Multi-Factor Authentication**: Required for administrative and privileged access
 - **Row Level Security (RLS)**: Multi-tenant data isolation policies
 
 ### **🛡️ Data Protection**
+
 - **Encryption Standards**: AES-256 at rest, TLS 1.3 in transit
 - **Data Classification**: Public, Internal, Confidential, Restricted levels
 - **Retention Policies**: Automated data lifecycle management
 - **International Transfers**: Standard Contractual Clauses and adequacy decisions
 
 ### **📧 Email Security**
+
 - **Authentication**: SPF, DKIM, DMARC configuration
 - **Warm-up Security**: Reputation management and bounce rate monitoring
 - **Content Protection**: Encrypted email delivery and storage
 
 ### **🚨 Incident Response**
-- **24.md) coverage
+
+- **24) coverage
 - **Breach Response**: GDPR, CCPA, and CASL notification requirements
 - **Recovery Procedures**: Business continuity and disaster recovery
 
 ### **📊 Compliance Monitoring**
+
 - **Automated Auditing**: Continuous compliance checking
 - **Regulatory Reporting**: Executive dashboards and regulatory filings
 - **Vendor Management**: Third-party risk assessment and monitoring
@@ -97,16 +110,19 @@ Global compliance and privacy frameworks:
 ## **Key Metrics & Performance**
 
 ### **Security Uptime: 99.9%** 🎯
+
 - **Authentication Success Rate**: 99.8%+
 - **Incident Response Time**: < 15 minutes for critical issues
 - **Compliance Audit Score**: 95%+ on external audits
 
 ### **Data Protection** 🔒
+
 - **Encryption Coverage**: 100% of sensitive data
 - **Access Violations**: < 0.1% of total access attempts
 - **Data Loss Incidents**: Zero tolerance, automated prevention
 
 ### **Privacy Compliance** 📋
+
 - **DSR Response Time**: < 30 days average
 - **Consent Management**: 100% tracked and auditable
 - **Privacy Training**: 100% staff completion rate
@@ -116,28 +132,33 @@ Global compliance and privacy frameworks:
 ## **Integration Points**
 
 ### **Business Operations**
-- [Business Strategy](../business/strategy.md) - Security alignment with business objectives
-- [Market Analysis](../business/competitive-intelligence.md) - Compliance as competitive advantage
+
+- [Business Strategy](/docs/business/strategy/overview) - Security alignment with business objectives
+- [Market Analysis](../business/competitive-intelligence) - Compliance as competitive advantage
 
 ### **Core Features**
-- [Inbox Rotation](../core-features/inbox-rotation.md) - Secure email infrastructure
-- [Unified Inbox](../core-features/unified-inbox.md) - Multi-tenant security isolation
+
+- [Inbox Rotation](../core-features/inbox-rotation) - Secure email infrastructure
+- [Unified Inbox](../core-features/unified-inbox) - Multi-tenant security isolation
 
 ### **Technical Implementation**
-- [Infrastructure Documentation](../technical/architecture/detailed-technical.md) - Technical architecture
-- [Development Guidelines](../implementation-technical/development-guidelines.md) - Secure development practices
+
+- [Infrastructure Documentation](/docs/technical/architecture/detailed-technical) - Technical architecture
+- [Development Guidelines](../implementation-technical/development-guidelines) - Secure development practices
 
 ---
 
 ## **Recent Updates & Enhancements**
 
 ### **Q4 2025 Improvements**
+
 - ✅ Enhanced audit logging with GDPR, CCPA, PIPEDA, and CASL compliance
 - ✅ Traffic security matrix implementation for database optimization
 - ✅ Accessibility compliance upgraded to WCAG 2.1 AA standards
 - ✅ Multi-legislation data processing rights management
 
 ### **2026 Roadmap**
+
 - 🔄 Advanced threat monitoring and AI-powered anomaly detection
 - 🔄 Zero-trust network architecture implementation
 - 🔄 Enhanced vendor risk management automation
@@ -148,21 +169,24 @@ Global compliance and privacy frameworks:
 ## **Support & Resources**
 
 ### **Documentation**
-- [Security Framework](../enterprise.md) - Comprehensive security architecture and controls
-- [Security & Privacy Integration](../enterprise.md) - Unified security and privacy model
-- [Traffic Security Matrix](../enterprise.md) - Traffic and key selection security framework
-- [Compliance Procedures](../detailed-compliance.md) - Implementation workflows
-- [Data Privacy Policy](../international.md) - Customer-facing privacy information
+
+- [Security Framework](../enterprise) - Comprehensive security architecture and controls
+- [Security & Privacy Integration](../enterprise) - Unified security and privacy model
+- [Traffic Security Matrix](../enterprise) - Traffic and key selection security framework
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Implementation workflows
+- [Data Privacy Policy](../international) - Customer-facing privacy information
 
 ### **Training & Awareness**
+
 - **Security Training**: Regular training on OWASP Top 10 and secure development
 - **Privacy Awareness**: GDPR, CCPA, and email marketing compliance
 - **Incident Response**: 24/7 security operations center with rapid response
 
 ### **Contact Information**
-- **Data Protection Officer**: privacy@penguinmails.com
-- **Security Team**: security@penguinmails.com
-- **Compliance Inquiries**: compliance@penguinmails.com
+
+- **Data Protection Officer**: <privacy@penguinmails.com>
+- **Security Team**: <security@penguinmails.com>
+- **Compliance Inquiries**: <compliance@penguinmails.com>
 
 ---
 

@@ -44,16 +44,16 @@ graph TB
     A --> C[IT Services<br/>26.2%-27.4% Open]
     A --> D[Marketing Agencies<br/>27.2%-35.7% Open]
     A --> E[Healthcare<br/>26.8%-31.2% Open]
-    
+
     B --> F[Challenge:<br/>3,247 emails/deal]
     D --> G[Opportunity:<br/>8.5% reply rate]
     E --> H[Opportunity:<br/>4.1% meeting rate]
-    
+
     style A fill:#e1f5fe
     style F fill:#ffcdd2
     style G fill:#c8e6c9
     style H fill:#c8e6c9
-```
+```markdown
 
 #### Top Performing Segments
 
@@ -90,21 +90,21 @@ graph TB
 graph LR
     A[Awareness Stage] --> B[Content Marketing<br/>2-5% CTR]
     A --> C[Social Media<br/>500-2K leads/month]
-    
+
     D[Consideration Stage] --> E[Email Outreach<br/>1-3% CTR]
     D --> F[LinkedIn Ads<br/>200-800 leads/month]
-    
+
     G[Evaluation Stage] --> H[Cold Email<br/>5-15% reply rate]
     G --> I[SDR Phone<br/>50-200 meetings/month]
-    
+
     J[Decision Stage] --> K[SDR Phone<br/>20-40% meeting-to-deal]
     J --> L[Webinars<br/>High intent focus]
-    
+
     style A fill:#e3f2fd
     style D fill:#f3e5f5
     style G fill:#fff3e0
     style J fill:#e8f5e8
-```
+```markdown
 
 ---
 
@@ -135,17 +135,17 @@ graph TB
     A --> D[50K-100K<br/>25-30% Open<br/>4-6% Reply]
     A --> E[100K-500K<br/>20-25% Open<br/>3-5% Reply]
     A --> F[500K+<br/>15-20% Open<br/>2-4% Reply]
-    
+
     B --> G[High Personalization<br/>Extended Sequences]
     C --> H[Segmented Personalization<br/>Moderate Sequences]
     D --> I[Template Personalization<br/>Short Sequences]
     E --> J[Volume Efficiency<br/>Minimal Personalization]
     F --> K[Automation Focus<br/>Performance-Based]
-    
+
     style A fill:#e1f5fe
     style B fill:#c8e6c9
     style F fill:#ffcdd2
-```
+```markdown
 
 **Key Insight**: Performance degradation is primarily driven by reduced personalization opportunities at scale, not deliverability issues.
 
@@ -176,7 +176,7 @@ graph TB
 
 **Performance Optimization ROI**:
 - **Open Rate Optimization**: 15-30% improvement potential
-- **Reply Rate Optimization**: 5-15% improvement potential  
+- **Reply Rate Optimization**: 5-15% improvement potential
 - **Deliverability Optimization**: 20-50% improvement potential
 - **Content Optimization**: 10-25% improvement potential
 

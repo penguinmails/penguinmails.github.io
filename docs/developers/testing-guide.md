@@ -15,6 +15,7 @@ Comprehensive testing framework for email platform integrations ensuring reliabi
 ### API Testing Framework
 
 **Test Structure Template**:
+
 ```javascript
 describe('Email API Integration Tests', () => {
   test('should create email campaign successfully', async () => {
@@ -22,14 +23,14 @@ describe('Email API Integration Tests', () => {
       name: 'Test Campaign',
       recipients: ['test@example.com']
     };
-    
+
     const result = await emailAPI.createCampaign(campaignData);
-    
+
     expect(result.id).toBeDefined();
     expect(result.status).toBe('created');
   });
 });
-```
+```markdown
 
 **API Testing Coverage**:
 - Authentication and authorization testing
@@ -49,18 +50,18 @@ describe('Email Campaign E2E Tests', () => {
   test('should complete full campaign workflow', async () => {
     // Test campaign creation
     const campaign = await createTestCampaign();
-    
+
     // Test campaign execution
     const execution = await executeCampaign(campaign.id);
-    
+
     // Test analytics collection
     const analytics = await getCampaignAnalytics(campaign.id);
-    
+
     expect(execution.status).toBe('completed');
     expect(analytics.delivered).toBeGreaterThan(0);
   });
 });
-```
+```markdown
 
 **Integration Testing Scope**:
 - Database integration and data consistency
@@ -80,24 +81,24 @@ describe('Email Campaign E2E Tests', () => {
 async function performanceTest() {
   const concurrentUsers = 100;
   const testDuration = 300000; // 5 minutes
-  
+
   const results = await loadTest({
     url: 'https://api.email-platform.com/campaigns',
     concurrent: concurrentUsers,
     duration: testDuration
   });
-  
+
   return {
     averageResponseTime: results.avgResponseTime,
     errorRate: results.errorRate,
     throughput: results.requestsPerSecond
   };
 }
-```
+```markdown
 
 **Performance Testing Criteria**:
 - Response time targets (<200ms for 95% of requests)
-- Throughput requirements (1000+ requests.md)
+- Throughput requirements (1000+ requests)
 - Error rate thresholds (<1% under normal load)
 - Memory and resource utilization limits
 
@@ -119,16 +120,16 @@ jobs:
     steps:
       - name: Run Unit Tests
         run: npm test
-      
+
       - name: Run Integration Tests
         run: npm run test:integration
-      
+
       - name: Run Performance Tests
         run: npm run test:performance
-      
+
       - name: Generate Coverage Report
         run: npm run coverage
-```
+```markdown
 
 **Pipeline Testing Stages**:
 1. Unit testing with code coverage reporting

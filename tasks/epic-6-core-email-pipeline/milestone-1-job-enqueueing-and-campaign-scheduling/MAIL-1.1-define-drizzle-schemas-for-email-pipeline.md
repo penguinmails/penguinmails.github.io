@@ -22,5 +22,5 @@ Create/finalize the Drizzle schemas for `campaigns`, `leads`, `templates`, `emai
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (DB design & migrations)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (DB design & migrations)](../../docs/implementation-technical/development-guidelines/development-standards)

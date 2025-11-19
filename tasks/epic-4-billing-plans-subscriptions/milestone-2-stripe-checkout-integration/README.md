@@ -4,9 +4,9 @@
 
 ## Tickets
 
-- [BILL-2.1](./BILL-2.1-install-configure-stripe.md) - Install and Configure Stripe Node.js SDK
-- [BILL-2.2](./BILL-2.2-get-or-create-stripe-customer.md) - Implement "Get or Create Stripe Customer" Logic
-- [BILL-2.3](./BILL-2.3-create-checkout-session-endpoint.md) - Create API Endpoint for Stripe Checkout Session (POST /api/subscriptions/checkout)
+- [BILL-2.1](./BILL-2.1-install-configure-stripe) - Install and Configure Stripe Node.js SDK
+- [BILL-2.2](./BILL-2.2-get-or-create-stripe-customer) - Implement "Get or Create Stripe Customer" Logic
+- [BILL-2.3](./BILL-2.3-create-checkout-session-endpoint) - Create API Endpoint for Stripe Checkout Session (POST /api/subscriptions/checkout)
 
 ## Dependencies
 
@@ -24,5 +24,4 @@
 
 ## Context
 
-This milestone implements the payment flow. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), Stripe Connect is used for B2B billing. This milestone enables users to subscribe to plans through Stripe's secure checkout.
-
+This milestone implements the payment flow. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), Stripe Connect is used for B2B billing. This milestone enables users to subscribe to plans through Stripe's secure checkout.

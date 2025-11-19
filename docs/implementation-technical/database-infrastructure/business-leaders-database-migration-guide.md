@@ -1,10 +1,11 @@
 # Business Leaders Database Migration Guide
 
 ## Overview
+
 This document provides the comprehensive database migration guide for implementing cost tracking fields and business intelligence views to support executive-level business intelligence and decision making.
 
-**Document Level:** Level 3 - Technical Implementation  
-**Target Audience:** Database Administrators, Backend Engineers, Business Intelligence Engineers  
+**Document Level:** Level 3 - Technical Implementation
+**Target Audience:** Database Administrators, Backend Engineers, Business Intelligence Engineers
 **Migration Priority:** Critical - Essential for executive cost attribution and reporting
 
 ---
@@ -16,11 +17,13 @@ This document provides the comprehensive database migration guide for implementi
 **Primary Business Challenge:** Enterprise customers need transparent, actionable insight into email marketing performance, infrastructure efficiency, and profitability drivers without relying on unrealistic real-time per-tenant infrastructure metering from underlying providers (e.g. NileDB).
 
 **Technical Solution:** Enhanced database schema with approximate cost reference fields and internal business intelligence views that:
+
 - Use modeled/allocated values maintained by Finance/Operations
 - Support directional unit economics and margin analysis
 - Do not represent authoritative, provider-sourced billing metrics
 
 **Business Justification (Clarified):**
+
 - **Cost Transparency (Internal):** Enable PenguinMails leadership to approximate infrastructure cost distribution across tenants using controlled heuristics, not direct provider metering.
 - **Profitability Analysis:** Support internal LTV, unit economics, and pricing strategy using consistent approximation inputs.
 - **Optimization Insights:** Identify anomalous usage patterns and cost inefficiencies at a directional level (e.g. “this tenant is infra-heavy”).
@@ -29,6 +32,7 @@ This document provides the comprehensive database migration guide for implementi
 ### Migration Components
 
 **Database Enhancements (Approximate, Internal-Facing):**
+
 1. **VPS Instances Cost Reference:** Add `vps_instances.approximate_cost` as an internal reference field (DECIMAL) used for modeled allocations.
 2. **SMTP IP Cost Reference:** Add `smtp_ip_addresses.approximate_cost` as an internal reference field (DECIMAL) for IP-level cost modeling.
 3. **Business Intelligence Views:** Create executive-level reporting views that consume these fields as inputs for heuristic analysis.
@@ -42,11 +46,13 @@ This document provides the comprehensive database migration guide for implementi
 ### Step 1: VPS Instances Cost Tracking Enhancement
 
 **Business Purpose:** Provide an internal, approximate reference for infrastructure cost attribution to support executive profitability analysis, recognizing that:
+
 - PenguinMails operates shared NileDB-backed infrastructure (e.g. flat fee + storage tiers + per-GB overages).
 - Underlying providers (such as NileDB) may not expose precise per-tenant metering APIs.
 - Per-tenant values stored here are modeled by Finance/Operations, not pulled as exact real-time provider charges.
 
 **Migration SQL:**
+
 ```sql
 -- ============================================================================
 -- ENHANCEMENT 1: VPS Instances Cost Tracking
@@ -58,7 +64,7 @@ This document provides the comprehensive database migration guide for implementi
 -- - Final truth for spend remains Hostwinds invoices and Finance systems.
 
 -- Add approximate cost column
-ALTER TABLE vps_instances 
+ALTER TABLE vps_instances
 ADD COLUMN IF NOT EXISTS approximate_cost DECIMAL(8,2) DEFAULT 0.00;
 
 -- Add business-focused comments for documentation
@@ -69,14 +75,14 @@ Primary intent: track Hostwinds-related infrastructure spend per instance for in
 Not authoritative customer billing; final invoices remain in Finance systems.';
 
 -- Add check constraint to ensure non-negative costs
-ALTER TABLE vps_instances 
-ADD CONSTRAINT chk_vps_approximate_cost_positive 
+ALTER TABLE vps_instances
+ADD CONSTRAINT chk_vps_approximate_cost_positive
 CHECK (approximate_cost >= 0);
 
 -- Create index for efficient cost-based queries
-CREATE INDEX IF NOT EXISTS idx_vps_instances_approximate_cost 
+CREATE INDEX IF NOT EXISTS idx_vps_instances_approximate_cost
 ON vps_instances(approximate_cost) WHERE status = 'active';
-```
+```markdown
 
 **Business Impact (Clarified):**
 - **Internal Visibility:** CFOs and Finance can see directional infrastructure cost allocations per tenant based on Hostwinds-modeled values.
@@ -86,11 +92,11 @@ ON vps_instances(approximate_cost) WHERE status = 'active';
 - **Source of Truth Reminder:** All analyses must be reconciled to official provider invoices and Finance ledgers.
 
 **Cost Attribution Examples:**
-```
+```markdown
 Tenant A: 3 VPS instances × $150 = $450/month infrastructure cost
-Tenant B: 2 VPS instances × $200 = $400/month infrastructure cost  
+Tenant B: 2 VPS instances × $200 = $400/month infrastructure cost
 Tenant C: 1 VPS instance × $100 = $100/month infrastructure cost
-```
+```markdown
 
 ### Step 2: SMTP IP Addresses Cost Tracking Enhancement
 
@@ -99,30 +105,30 @@ Tenant C: 1 VPS instance × $100 = $100/month infrastructure cost
 **Migration SQL:**
 ```sql
 -- ============================================================================
--- ENHANCEMENT 2: SMTP IP Addresses Cost Tracking  
+-- ENHANCEMENT 2: SMTP IP Addresses Cost Tracking
 -- ============================================================================
--- Business Justification: Support deliverability cost analysis and email service 
+-- Business Justification: Support deliverability cost analysis and email service
 -- ROI calculations for optimization of IP allocation and pricing strategy
 -- Expected Impact: 10-15% monthly savings through better IP management
 
 -- Add approximate cost column
-ALTER TABLE smtp_ip_addresses 
+ALTER TABLE smtp_ip_addresses
 ADD COLUMN IF NOT EXISTS approximate_cost DECIMAL(6,2) DEFAULT 0.00;
 
--- Add business-focused comments for documentation  
+-- Add business-focused comments for documentation
 COMMENT ON COLUMN smtp_ip_addresses.approximate_cost IS
 'Internally maintained estimated monthly cost in USD per SMTP IP address used for deliverability and cost-efficiency analysis.
 Not authoritative billing; values are modeled/allocated by Finance & Operations.';
 
 -- Add check constraint to ensure non-negative costs
-ALTER TABLE smtp_ip_addresses 
-ADD CONSTRAINT chk_smtp_approximate_cost_positive 
+ALTER TABLE smtp_ip_addresses
+ADD CONSTRAINT chk_smtp_approximate_cost_positive
 CHECK (approximate_cost >= 0);
 
 -- Create index for efficient cost-based queries
-CREATE INDEX IF NOT EXISTS idx_smtp_ip_addresses_approximate_cost 
+CREATE INDEX IF NOT EXISTS idx_smtp_ip_addresses_approximate_cost
 ON smtp_ip_addresses(approximate_cost) WHERE status IN ('active', 'warmed', 'warming');
-```
+```markdown
 
 **Business Impact:**
 - **Deliverability ROI:** Calculate cost per successful email delivery
@@ -156,45 +162,45 @@ ON smtp_ip_addresses(approximate_cost) WHERE status IN ('active', 'warmed', 'war
 -- using modeled infrastructure cost approximations, NOT direct provider billing.
 
 CREATE OR REPLACE VIEW executive_business_summary AS
-SELECT 
+SELECT
     s.tenant_id,
     c.name as company_name,
     p.name as plan_name,
     s.current_period_start,
     s.current_period_end,
-    
+
     -- Revenue and cost metrics
     COALESCE(p.price_monthly, 0) as monthly_subscription_revenue,
     COALESCE(SUM(vi.approximate_cost), 0) as infrastructure_costs,
     COALESCE(SUM(sia.approximate_cost), 0) as email_service_costs,
-    
+
     -- Business performance indicators
-    CASE 
-        WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0 
-        THEN ROUND((p.price_monthly::decimal .md), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
-        ELSE 0 
+    CASE
+        WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0
+        THEN ROUND((p.price_monthly::decimal ), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
+        ELSE 0
     END as gross_margin_ratio,
-    
+
     -- Cost efficiency score (1-100)
-    CASE 
+    CASE
         WHEN p.price_monthly > 0 AND (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0
-        THEN LEAST(100, GREATEST(0, ROUND((p.price_monthly - (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))) .md)
-        ELSE 0 
+        THEN LEAST(100, GREATEST(0, ROUND((p.price_monthly - (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))) )
+        ELSE 0
     END as cost_efficiency_score,
-    
+
     -- Total cost base
     (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) as total_operational_cost,
-    
+
     -- Health status for executive dashboard
-    CASE 
+    CASE
         WHEN p.price_monthly > (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) * 2 THEN 'Excellent'
         WHEN p.price_monthly > (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) * 1.5 THEN 'Good'
         WHEN p.price_monthly > (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) THEN 'Monitor'
         ELSE 'Critical Action Required'
     END as business_health_status,
-    
+
     CURRENT_DATE as dashboard_date
-    
+
 FROM subscriptions s
 JOIN companies c ON c.id = s.tenant_id
 JOIN plans p ON p.id = s.plan_id
@@ -202,12 +208,12 @@ LEFT JOIN vps_instances vi ON vi.status = 'active'
 LEFT JOIN smtp_ip_addresses sia ON sia.vps_instance_id = vi.id
 WHERE s.status = 'active'
 GROUP BY s.tenant_id, c.name, p.name, p.price_monthly, s.current_period_start, s.current_period_end;
-```
+```markdown
 
 **Executive Dashboard Queries:**
 ```sql
 -- Daily Executive Health Check
-SELECT 
+SELECT
     company_name,
     plan_name,
     business_health_status,
@@ -216,25 +222,25 @@ SELECT
     monthly_subscription_revenue,
     total_operational_cost,
     (monthly_subscription_revenue - total_operational_cost) as monthly_profit
-FROM executive_business_summary 
+FROM executive_business_summary
 WHERE dashboard_date = CURRENT_DATE
 ORDER BY cost_efficiency_score DESC;
 
 -- Cost Optimization Opportunities
-SELECT 
+SELECT
     company_name,
     business_health_status,
     cost_efficiency_score,
-    CASE 
+    CASE
         WHEN cost_efficiency_score < 50 THEN 'High Optimization Potential'
-        WHEN cost_efficiency_score < 75 THEN 'Moderate Optimization Potential' 
+        WHEN cost_efficiency_score < 75 THEN 'Moderate Optimization Potential'
         ELSE 'Well Optimized'
     END as optimization_category,
     (monthly_subscription_revenue * 2 - total_operational_cost) as optimization_opportunity
 FROM executive_business_summary
 WHERE business_health_status != 'Excellent'
 ORDER BY optimization_opportunity DESC;
-```
+```markdown
 
 #### Business Cost Allocation View
 
@@ -249,53 +255,53 @@ ORDER BY optimization_opportunity DESC;
 -- authoritative billing and accounting systems.
 
 CREATE OR REPLACE VIEW business_cost_allocation AS
-SELECT 
+SELECT
     s.tenant_id,
     p.name as plan_name,
     p.price_monthly,
-    
+
     -- Infrastructure costs from enhanced fields
     COALESCE(SUM(vi.approximate_cost), 0) as total_infrastructure_cost,
     COALESCE(SUM(sia.approximate_cost), 0) as total_email_service_cost,
-    
+
     -- Business efficiency metrics
-    CASE 
-        WHEN SUM(ba.emails_sent) > 0 
-        THEN ROUND((SUM(py.amount) + COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal .md)::decimal, 4)
-        ELSE 0 
+    CASE
+        WHEN SUM(ba.emails_sent) > 0
+        THEN ROUND((SUM(py.amount) + COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal )::decimal, 4)
+        ELSE 0
     END as cost_per_email_delivered,
-    
+
     -- Total business cost
-    COALESCE(SUM(py.amount), 0) + 
-    COALESCE(SUM(vi.approximate_cost), 0) + 
+    COALESCE(SUM(py.amount), 0) +
+    COALESCE(SUM(vi.approximate_cost), 0) +
     COALESCE(SUM(sia.approximate_cost), 0) as total_monthly_cost,
-    
+
     -- Profitability analysis
     COALESCE(SUM(py.amount), 0) - (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) as monthly_profit,
-    
+
     -- Efficiency score (business KPIs)
-    CASE 
-        WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0 
-        THEN ROUND((COALESCE(SUM(py.amount), 0)::decimal .md), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
-        ELSE 0 
+    CASE
+        WHEN (COALESCE(SUM(vi.approximate_cost), 0) + COALESCE(SUM(sia.approximate_cost), 0)) > 0
+        THEN ROUND((COALESCE(SUM(py.amount), 0)::decimal ), 0) + COALESCE(SUM(sia.approximate_cost), 0))::decimal), 2)
+        ELSE 0
     END as business_efficiency_ratio
-    
+
 FROM subscriptions s
 JOIN plans p ON s.plan_id = p.id
-LEFT JOIN billing_analytics ba ON ba.subscription_id = s.id 
+LEFT JOIN billing_analytics ba ON ba.subscription_id = s.id
     AND ba.period_start >= CURRENT_DATE - INTERVAL '30 days'
 LEFT JOIN vps_instances vi ON vi.status = 'active'
 LEFT JOIN smtp_ip_addresses sia ON sia.vps_instance_id = vi.id
-LEFT JOIN payments py ON py.subscription_id = s.id 
+LEFT JOIN payments py ON py.subscription_id = s.id
     AND py.billing_period_start >= s.current_period_start
 WHERE s.status = 'active'
 GROUP BY s.tenant_id, p.name, p.price_monthly;
-```
+```markdown
 
 **Cost Analysis Queries:**
 ```sql
 -- Monthly Cost Analysis by Tenant
-SELECT 
+SELECT
     plan_name,
     COUNT(*) as tenant_count,
     AVG(total_infrastructure_cost) as avg_infrastructure_cost,
@@ -308,14 +314,14 @@ GROUP BY plan_name
 ORDER BY avg_efficiency_ratio DESC;
 
 -- Cost Per Email Analysis
-SELECT 
+SELECT
     company_name,
     plan_name,
     cost_per_email_delivered,
     total_monthly_cost,
     monthly_profit,
     business_efficiency_ratio,
-    CASE 
+    CASE
         WHEN cost_per_email_delivered < 0.01 THEN 'Highly Efficient'
         WHEN cost_per_email_delivered < 0.02 THEN 'Efficient'
         WHEN cost_per_email_delivered < 0.05 THEN 'Moderate'
@@ -324,29 +330,29 @@ SELECT
 FROM business_cost_allocation
 WHERE cost_per_email_delivered > 0
 ORDER BY cost_per_email_delivered ASC;
-```
+```markdown
 
 ### Step 4: Performance Optimization
 
 **Index Creation:**
 ```sql
 -- Performance indexes for executive queries
-CREATE INDEX IF NOT EXISTS idx_executive_business_summary_tenant 
+CREATE INDEX IF NOT EXISTS idx_executive_business_summary_tenant
 ON executive_business_summary(tenant_id);
 
-CREATE INDEX IF NOT EXISTS idx_executive_business_summary_date 
+CREATE INDEX IF NOT EXISTS idx_executive_business_summary_date
 ON executive_business_summary(dashboard_date);
 
 -- Additional cost optimization indexes
-CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_tenant 
+CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_tenant
 ON business_cost_allocation(tenant_id);
 
-CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_plan 
+CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_plan
 ON business_cost_allocation(plan_name);
 
-CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_profit 
+CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_profit
 ON business_cost_allocation(monthly_profit) WHERE monthly_profit > 0;
-```
+```markdown
 
 **Performance Benefits:**
 - **Executive Dashboard:** <3 second load times for business health summaries
@@ -380,13 +386,13 @@ CREATE POLICY executive_summary_tenant_isolation ON executive_business_summary
 
 CREATE POLICY cost_allocation_tenant_isolation ON business_cost_allocation
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-```
+```markdown
 
 **Access Control Matrix:**
 | Role | business_cost_allocation | executive_business_summary |
 |------|--------------------------|----------------------------|
 | C-Suite Executives | SELECT | SELECT |
-| VPs/Directors | SELECT | SELECT |  
+| VPs/Directors | SELECT | SELECT |
 | Business Analysts | SELECT | SELECT |
 | Database Administrators | ALL | ALL |
 | Application Service | SELECT | SELECT |
@@ -400,13 +406,13 @@ CREATE POLICY cost_allocation_tenant_isolation ON business_cost_allocation
 **Migration Success Queries:**
 ```sql
 -- Verify new columns exist
-SELECT 
-    table_name, 
-    column_name, 
-    data_type, 
+SELECT
+    table_name,
+    column_name,
+    data_type,
     is_nullable,
     column_default
-FROM information_schema.columns 
+FROM information_schema.columns
 WHERE table_name IN ('vps_instances', 'smtp_ip_addresses')
   AND column_name = 'approximate_cost';
 
@@ -414,12 +420,12 @@ WHERE table_name IN ('vps_instances', 'smtp_ip_addresses')
 -- ├── vps_instances.approximate_cost: DECIMAL(8,2), NULL allowed, DEFAULT 0.00
 -- ├── smtp_ip_addresses.approximate_cost: DECIMAL(6,2), NULL allowed, DEFAULT 0.00
 -- └── All columns have proper business comments
-```
+```markdown
 
 **Business Logic Validation:**
 ```sql
 -- Test business view accuracy
-SELECT 
+SELECT
     tenant_id,
     plan_name,
     monthly_subscription_revenue,
@@ -428,20 +434,20 @@ SELECT
     total_monthly_cost,
     monthly_profit,
     business_health_status
-FROM executive_business_summary 
+FROM executive_business_summary
 WHERE dashboard_date = CURRENT_DATE
 LIMIT 5;
 
 -- Validate calculations
 WITH cost_validation AS (
-    SELECT 
+    SELECT
         tenant_id,
         (total_infrastructure_cost + total_email_service_cost) as calculated_total_cost,
         (monthly_subscription_revenue - (total_infrastructure_cost + total_email_service_cost)) as calculated_profit
     FROM executive_business_summary
     WHERE dashboard_date = CURRENT_DATE
 )
-SELECT 
+SELECT
     evs.tenant_id,
     evs.total_operational_cost,
     cv.calculated_total_cost,
@@ -452,14 +458,14 @@ SELECT
 FROM executive_business_summary evs
 JOIN cost_validation cv ON evs.tenant_id = cv.tenant_id
 WHERE evs.dashboard_date = CURRENT_DATE;
-```
+```markdown
 
 **Performance Validation:**
 ```sql
 -- Test query performance
 EXPLAIN ANALYZE
-SELECT * FROM executive_business_summary 
-WHERE dashboard_date = CURRENT_DATE 
+SELECT * FROM executive_business_summary
+WHERE dashboard_date = CURRENT_DATE
 ORDER BY cost_efficiency_score DESC;
 
 -- Performance Targets:
@@ -467,7 +473,7 @@ ORDER BY cost_efficiency_score DESC;
 -- ├── Index utilization: 100% for filtered queries
 -- ├── Memory usage: <100MB for complex aggregations
 -- └── Concurrent query handling: 100+ simultaneous queries
-```
+```markdown
 
 ### Rollback Procedures
 
@@ -494,7 +500,7 @@ ALTER TABLE smtp_ip_addresses DROP CONSTRAINT IF EXISTS chk_smtp_approximate_cos
 -- Remove columns (LAST RESORT - only if absolutely necessary)
 -- ALTER TABLE vps_instances DROP COLUMN IF EXISTS approximate_cost;
 -- ALTER TABLE smtp_ip_addresses DROP COLUMN IF EXISTS approximate_cost;
-```
+```markdown
 
 **Warning:** Only use column removal as absolute last resort, as this will permanently lose business data. Prefer to set approximate_cost to 0.00 instead.
 
@@ -540,7 +546,7 @@ This section provides canonical guidance for Finance, Operations, and Customer S
     - Not exposed as authoritative customer invoices.
 - **Cadence:**
   - Populate/refresh:
-    - On resource creation or plan change (VPS.md).
+    - On resource creation or plan change (VPS).
     - On periodic reconciliation (e.g. monthly, aligned with Hostwinds billing cycle).
 - **Use Cases:**
   - Directional:
@@ -562,7 +568,7 @@ This section provides canonical guidance for Finance, Operations, and Customer S
   - “Internal approximate infrastructure cost modeling based on Hostwinds pricing and controlled assumptions, used to ensure sustainable pricing and healthy unit economics.”
 - When tenants or auditors ask:
   - Reference:
-    - Official customer invoices (Stripe.md) as the only binding documents.
+    - Official customer invoices (Stripe) as the only binding documents.
     - Internal models as tooling PenguinMails uses for responsible operations, not as direct pass-through billing meters.
 
 ---
@@ -700,8 +706,8 @@ Constraints and guarantees:
 
 ---
 
-**Document Classification:** Level 3 - Technical Implementation  
-**Business Stakeholder Access:** CTOs, Database Architects, Business Intelligence Directors  
+**Document Classification:** Level 3 - Technical Implementation
+**Business Stakeholder Access:** CTOs, Database Architects, Business Intelligence Directors
 **Technical Stakeholder Access:** Database Administrators, Backend Engineers, Business Intelligence Engineers
 
 This database migration guide provides the foundation for executive-level cost attribution and business intelligence, enabling data-driven strategic decision making with clear ROI justification and measurable business impact.

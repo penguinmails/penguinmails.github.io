@@ -13,30 +13,35 @@ This document outlines the key user journeys for press and media professionals w
 ### **Media Categories**
 
 #### **Technology Journalists**
+
 - Focus on product features, technology innovation, and platform capabilities
 - Cover industry trends and competitive positioning
 - Evaluate technical differentiation and competitive advantages
 - Assess market opportunity and growth potential
 
 #### **Business Press**
+
 - Focus on company stories, growth narratives, and market positioning
 - Cover funding rounds, leadership changes, and strategic developments
 - Analyze business model, revenue growth, and market expansion
 - Evaluate management team and organizational capability
 
 #### **Trade Publications**
+
 - Industry-specific coverage for marketing technology and SaaS markets
 - Focus on customer use cases, ROI analysis, and industry adoption
 - Cover regulatory changes, compliance, and market standards
 - Assess industry trends and future outlook
 
 #### **Podcast Hosts & Content Creators**
+
 - Interview-based content creation and discussion
 - Focus on founder stories, industry insights, and thought leadership
 - Cover company milestones, product launches, and strategic developments
 - Analyze market trends and future predictions
 
 ### **Common Information Needs**
+
 - Company background and founder stories
 - Product differentiation and competitive advantages
 - Customer success stories and use cases
@@ -51,6 +56,7 @@ This document outlines the key user journeys for press and media professionals w
 ### **Journey 1: Story Discovery & Research**
 
 #### **Topic Identification**
+
 1. **News Monitoring**
    - Monitor PenguinMails website for announcements and updates
    - Track social media presence and public communications
@@ -64,6 +70,7 @@ This document outlines the key user journeys for press and media professionals w
    - Assess market trends and industry dynamics
 
 #### **Initial Research Process**
+
 1. **Background Research**
    - Review company website, about pages, and product information
    - Analyze press releases and public announcements
@@ -77,6 +84,7 @@ This document outlines the key user journeys for press and media professionals w
    - Assess market trends and growth opportunities
 
 #### **Story Planning**
+
 1. **Angle & Focus Development**
    - Identify unique story angles and perspectives
    - Plan interview questions and discussion topics
@@ -94,6 +102,7 @@ This document outlines the key user journeys for press and media professionals w
 ### **Journey 2: Information Gathering & Verification**
 
 #### **Primary Source Interviews**
+
 1. **Founder & Leadership Interviews**
    - Schedule interviews with CEO, CTO, and key executives
    - Prepare thoughtful, well-researched questions
@@ -107,6 +116,7 @@ This document outlines the key user journeys for press and media professionals w
    - Verify product capabilities and real-world impact
 
 #### **Technical & Product Research**
+
 1. **Product Demonstration**
    - Request platform demonstrations and walkthroughs
    - Evaluate product features and capabilities
@@ -120,6 +130,7 @@ This document outlines the key user journeys for press and media professionals w
    - Assess competitive advantages and market dynamics
 
 #### **Market & Industry Analysis**
+
 1. **Market Research**
    - Analyze market size, growth, and opportunity
    - Research industry trends and future outlook
@@ -137,6 +148,7 @@ This document outlines the key user journeys for press and media professionals w
 ### **Journey 3: Content Creation & Production**
 
 #### **Article Development**
+
 1. **Writing Process**
    - Structure article with compelling headline and lead
    - Organize content with clear, logical flow
@@ -150,6 +162,7 @@ This document outlines the key user journeys for press and media professionals w
    - Ensure compliance with publication standards
 
 #### **Multimedia Content Creation**
+
 1. **Visual Content**
    - Source or create relevant images and graphics
    - Capture screenshots of product interfaces
@@ -163,6 +176,7 @@ This document outlines the key user journeys for press and media professionals w
    - Ensure audio/video quality and professionalism
 
 #### **Publication Preparation**
+
 1. **Editorial Review**
    - Submit content for editorial review and approval
    - Address editorial feedback and revisions
@@ -180,6 +194,7 @@ This document outlines the key user journeys for press and media professionals w
 ### **Journey 4: Ongoing Coverage & Relationship Building**
 
 #### **Relationship Management**
+
 1. **PR Team Coordination**
    - Maintain regular communication with PR representatives
    - Request briefings and background information
@@ -193,6 +208,7 @@ This document outlines the key user journeys for press and media professionals w
    - Foster ongoing dialogue and information sharing
 
 #### **Industry Coverage**
+
 1. **Trend Analysis**
    - Monitor industry developments and trends
    - Analyze competitive moves and market changes
@@ -210,6 +226,7 @@ This document outlines the key user journeys for press and media professionals w
 ## Press & Media Context
 
 ### **Key Pain Points**
+
 - Difficulty accessing real customers for verification and stories
 - Limited access to technical details and competitive information
 - Time pressure to produce accurate, well-researched content
@@ -217,6 +234,7 @@ This document outlines the key user journeys for press and media professionals w
 - Keeping pace with rapidly evolving technology landscape
 
 ### **Success Metrics**
+
 - **Content Quality**: Accurate, well-researched, and compelling coverage
 - **Source Relationships**: Strong, trust-based relationships with company sources
 - **Industry Impact**: Influential coverage that shapes market perception
@@ -228,6 +246,7 @@ This document outlines the key user journeys for press and media professionals w
 ## Information Access & Protocols
 
 ### **Press Information Channels**
+
 1. **Official Press Channels**
    - Company press releases and announcements
    - Media kit and company fact sheets
@@ -241,6 +260,7 @@ This document outlines the key user journeys for press and media professionals w
    - Financial information and growth metrics
 
 ### **Interview Coordination**
+
 1. **Scheduling & Preparation**
    - Coordinate interview scheduling with PR team
    - Prepare thoughtful, research-based questions
@@ -258,6 +278,7 @@ This document outlines the key user journeys for press and media professionals w
 ## Common Press & Media Workflows
 
 ### **Story Development Cycle**
+
 1. **Week 1: Research & Planning**
    - Initial research and story angle development
    - Source identification and preliminary interviews
@@ -277,6 +298,7 @@ This document outlines the key user journeys for press and media professionals w
    - Prepare for publication and promotion
 
 ### **Ongoing Coverage**
+
 1. **Daily Monitoring**
    - Monitor company communications and announcements
    - Track social media and industry developments
@@ -300,18 +322,21 @@ This document outlines the key user journeys for press and media professionals w
 ## Best Practices & Standards
 
 ### **Editorial Standards**
+
 - **Accuracy**: Verify all facts and claims before publication
 - **Objectivity**: Maintain editorial independence and balanced perspective
 - **Transparency**: Disclose sources and potential conflicts of interest
 - **Fairness**: Provide opportunity for response and clarification
 
 ### **Source Management**
+
 - **Professional Relationships**: Maintain professional, respectful interactions
 - **Information Integrity**: Ensure accurate information sharing and attribution
 - **Confidentiality**: Respect confidential information and embargo agreements
 - **Long-term Engagement**: Foster ongoing relationships for future coverage
 
 ### **Content Quality**
+
 - **Research Depth**: Conduct thorough research and fact-gathering
 - **Storytelling**: Create compelling, well-structured narratives
 - **Audience Focus**: Tailor content to target audience needs and interests
@@ -319,11 +344,12 @@ This document outlines the key user journeys for press and media professionals w
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`investor-journeys.md`](investor-journeys.md)
-- [`competitor-analysis-journeys.md`](competitor-analysis-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`investor-journeys.md`](investor-journeys)
+- [`competitor-analysis-journeys.md`](competitor-analysis-journeys)
 
 ---
 

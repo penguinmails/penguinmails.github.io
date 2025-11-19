@@ -4,10 +4,10 @@
 
 ## Tickets
 
-- [BILL-3.1](./BILL-3.1-create-webhook-handler.md) - Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)
-- [BILL-3.2](./BILL-3.2-handle-checkout-completed.md) - Implement Handler for checkout.session.completed Event
-- [BILL-3.3](./BILL-3.3-handle-subscription-updates-deletions.md) - Implement Handlers for Subscription Updates and Deletions
-- [BILL-3.4](./BILL-3.4-create-customer-portal-endpoint.md) - Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)
+- [BILL-3.1](./BILL-3.1-create-webhook-handler) - Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)
+- [BILL-3.2](./BILL-3.2-handle-checkout-completed) - Implement Handler for checkout.session.completed Event
+- [BILL-3.3](./BILL-3.3-handle-subscription-updates-deletions) - Implement Handlers for Subscription Updates and Deletions
+- [BILL-3.4](./BILL-3.4-create-customer-portal-endpoint) - Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)
 
 ## Dependencies
 
@@ -25,5 +25,4 @@
 
 ## Context
 
-This milestone ensures subscription state stays synchronized with Stripe. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), reliable webhook processing is essential for maintaining accurate subscription status across the platform.
-
+This milestone ensures subscription state stays synchronized with Stripe. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), reliable webhook processing is essential for maintaining accurate subscription status across the platform.

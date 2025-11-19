@@ -11,6 +11,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ## User Profile: Operations Staff
 
 ### **Primary Characteristics**
+
 - Daily monitoring and maintenance of platform operations
 - Issue resolution and incident response coordination
 - Performance monitoring and optimization
@@ -19,6 +20,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 - Technical operations expertise with business awareness
 
 ### **Common Tools & Systems**
+
 - Monitoring and alerting dashboards
 - Issue tracking and ticketing systems
 - Performance monitoring tools
@@ -32,6 +34,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ### **Journey 1: Daily Platform Monitoring**
 
 #### **Morning Operational Check**
+
 1. **System Health Review**
    - Log into operations dashboard
    - Review overnight system status
@@ -51,6 +54,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Check customer support ticket volume
 
 #### **Real-Time Monitoring**
+
 1. **Alert Response**
    - Receive and assess system alerts
    - Categorize alert severity and impact
@@ -64,6 +68,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Identify performance bottlenecks
 
 #### **End-of-Day Review**
+
 1. **Daily Summary Preparation**
    - Compile system performance summary
    - Document any issues or incidents
@@ -75,6 +80,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ### **Journey 2: Issue Resolution & Incident Management**
 
 #### **Issue Identification**
+
 1. **Problem Detection**
    - Monitor customer-reported issues
    - Identify issues through automated monitoring
@@ -88,6 +94,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Document initial findings and observations
 
 #### **Issue Resolution Process**
+
 1. **Immediate Response**
    - Implement immediate fixes if possible
    - Communicate issue status to stakeholders
@@ -107,6 +114,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Document resolution details and lessons learned
 
 #### **Communication & Updates**
+
 1. **Stakeholder Communication**
    - Provide regular updates on issue status
    - Communicate resolution timelines
@@ -124,6 +132,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ### **Journey 3: Customer Support Coordination**
 
 #### **Support Ticket Management**
+
 1. **Ticket Processing**
    - Review incoming support tickets
    - Categorize tickets by issue type and urgency
@@ -143,6 +152,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Identify areas for support process improvement
 
 #### **Customer Communication**
+
 1. **Proactive Communication**
    - Notify customers of planned maintenance
    - Communicate service status updates
@@ -160,6 +170,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ### **Journey 4: Performance Optimization & Maintenance**
 
 #### **Performance Analysis**
+
 1. **Metrics Review**
    - Analyze performance trends and patterns
    - Identify performance bottlenecks and issues
@@ -173,6 +184,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Plan maintenance windows and activities
 
 #### **Preventive Maintenance**
+
 1. **Scheduled Maintenance**
    - Plan and execute regular maintenance tasks
    - Coordinate maintenance windows and communications
@@ -186,6 +198,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Monitor system performance post-update
 
 #### **Capacity Planning**
+
 1. **Growth Monitoring**
    - Track user growth and system usage trends
    - Monitor resource consumption patterns
@@ -203,6 +216,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ## User Type Context
 
 ### **Key Pain Points**
+
 - Balancing system reliability with feature development
 - Rapid issue resolution under pressure
 - Coordination across multiple teams and time zones
@@ -210,6 +224,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 - Proactive issue prevention and monitoring
 
 ### **Success Metrics**
+
 - **System Uptime**: Maintain high availability (99.9%+ target)
 - **Issue Resolution Time**: Rapid resolution of customer issues
 - **Customer Satisfaction**: High satisfaction with support and communication
@@ -221,12 +236,14 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ## Integration Points
 
 ### **With Internal Teams**
+
 - **Technical Teams**: Coordinate on system issues and improvements
 - **Customer Success**: Partner on customer issue resolution
 - **Product Teams**: Provide operational insights for product decisions
 - **Marketing**: Coordinate on customer communications and updates
 
 ### **With External Systems**
+
 - **Monitoring Tools**: Real-time system monitoring and alerting
 - **Ticketing Systems**: Issue tracking and resolution workflow
 - **Communication Platforms**: Stakeholder and customer communications
@@ -237,6 +254,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ## Common Operations Workflows
 
 ### **Daily Operations Routine**
+
 1. **Morning Health Check**
    - System status review and issue identification
    - Performance metrics analysis
@@ -256,6 +274,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Documentation and knowledge sharing
 
 ### **Weekly Operations Tasks**
+
 1. **Performance Review**
    - Weekly performance metrics analysis
    - Trend identification and analysis
@@ -269,6 +288,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Team training and knowledge sharing
 
 ### **Monthly Operations Activities**
+
 1. **Strategic Planning**
    - Monthly operational reviews and planning
    - System capacity and growth planning
@@ -286,6 +306,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 ## Emergency Response Procedures
 
 ### **Critical Incident Response**
+
 1. **Immediate Response**
    - Assess incident scope and impact
    - Activate emergency response procedures
@@ -306,11 +327,12 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`admin-journeys.md`](admin-journeys.md)
-- [`technical-teams-journeys.md`](technical-teams-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`admin-journeys.md`](admin-journeys)
+- [`technical-teams-journeys.md`](technical-teams-journeys)
 
 ---
 

@@ -22,5 +22,5 @@ Within the Hostwind client (`/lib/hostwind.ts`), implement `getVpsInstances()` t
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (HTTP clients, retries)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (HTTP clients, retries)](../../docs/implementation-technical/development-guidelines/development-standards)

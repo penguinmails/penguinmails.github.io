@@ -1,6 +1,7 @@
 # Database & Infrastructure Management
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This database & infrastructure documentation supports our enterprise infrastructure framework by providing comprehensive database schemas, infrastructure management, and performance optimization strategies for the PenguinMails multi-tenant platform.
 
 **Technical Authority**: Our database architecture integrates with enterprise database systems, infrastructure platforms, and monitoring tools featuring multi-tenant security, performance optimization, and automated scaling capabilities across OLTP, content, and analytics tiers.
@@ -16,15 +17,18 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Strategic Overview**
+
 - `README` (this document) - Main database and infrastructure overview with key decisions and business impact
 - High-level database architecture and infrastructure management principles
 
 ### 🗄️ **Level 2: Detailed Technical Specifications**
+
 - `oltp-schema-guide` - Complete OLTP database schema with multi-tenant design
 - `infrastructure-management` - Infrastructure operations and deployment procedures
 - `database-performance` - Performance optimization and monitoring strategies
 
 ### 🔧 **Level 3: Enterprise Implementation**
+
 - Advanced configuration options and optimization strategies
 - Security implementation and compliance procedures
 - Performance benchmarking and scaling strategies
@@ -34,9 +38,11 @@ This section follows the **Progressive Complexity Framework** with three distinc
 ## Database Architecture Overview
 
 ### 🏢 **Multi-Tenant Database Design**
+
 **Purpose**: Scalable, secure, and isolated tenant data management
 
 **Key Features**:
+
 - Complete tenant data isolation with shared efficient infrastructure
 - Row-level security (RLS) with NileDB-managed authentication
 - Four-tier architecture: OLTP, Content, Analytics, Queue
@@ -49,12 +55,12 @@ PenguinMails uses NileDB as a managed Postgres and authentication platform withi
 Key NileDB pricing characteristics (refer to official source for updates):
 
 - Project-based pricing with included resources:
-  - Flat monthly subscription per project/tier (e.g. starter tier around $20.md)
+  - Flat monthly subscription per project/tier (e.g. starter tier around $20)
   - Fixed included storage (e.g. 50GB on entry tiers)
   - Additional usage (such as storage beyond included limits) billed separately
 - Authoritative reference:
   - Always consult the official pricing page for current terms:
-    - https://www.thenile.dev/pricing
+    - <https://www.thenile.dev/pricing>
 
 Implications for PenguinMails cost modeling:
 
@@ -85,30 +91,37 @@ Implications for PenguinMails cost modeling:
   - Must NOT be represented as “NileDB-backed per-tenant database cost metering”.
 
 This clarification applies across all documentation where NileDB appears in the context of infrastructure or cost:
+
 - NileDB is modeled as:
   - A shared, externally-priced managed database provider with clear public pricing.
   - An input into PenguinMails’ internal cost allocation models.
   - Not a per-tenant billing oracle or real-time cost tracking endpoint.
 
 ### 🏗️ **Database Tier Architecture**
+
 **Purpose**: Optimized data management across operational, analytical, and business intelligence layers
 **Key Features**:
+
 - **OLTP Tier**: Fast transactional operations for real-time business logic
 - **Content Database**: Heavy email storage with retention policies and compression
 - **Analytics Tier**: Aggregated metrics with OLAP optimization for dashboards
 - **Queue System**: Asynchronous processing with Redis + PostgreSQL hybrid storage
 
 ### 🔐 **Security & Compliance**
+
 **Purpose**: Enterprise-grade data protection and compliance
 **Key Features**:
+
 - AES-256 encryption at rest, TLS 1.3 in transit
 - Multi-tenant row-level security implementation
 - GDPR, CAN-SPAM, SOC 2 compliance with audit trails
 - Regular security assessments and penetration testing
 
 ### ⚡ **Performance & Scalability**
+
 **Purpose**: Enterprise-grade performance with horizontal and vertical scaling
 **Key Features**:
+
 - Target: <500ms cross-database queries, 99.9% uptime
 - Database read replicas and connection pooling
 - Index optimization and query performance tuning
@@ -119,24 +132,30 @@ This clarification applies across all documentation where NileDB appears in the 
 ## Infrastructure Management
 
 ### 🏢 **VPS & Email Infrastructure**
+
 **Purpose**: Automated email infrastructure provisioning and management
 **Key Features**:
+
 - Hostwinds VPS provisioning with automated configuration
 - MailU SMTP stack with Postfix, Dovecot, SpamAssassin
 - DNS automation for SPF, DKIM, DMARC records
 - IP reputation monitoring and warm-up automation
 
 ### 🗄️ **Database Operations**
+
 **Purpose**: Comprehensive database management and operations
 **Key Features**:
+
 - Automated backup and recovery procedures
 - Performance monitoring and optimization
 - Security monitoring and compliance reporting
 - Connection pooling and resource management
 
 ### 🔄 **Queue System Management**
+
 **Purpose**: Reliable job processing and asynchronous operations
 **Key Features**:
+
 - Hybrid Redis + PostgreSQL queue architecture
 - Priority-based job processing with retry logic
 - Real-time queue monitoring and alerting
@@ -147,18 +166,21 @@ This clarification applies across all documentation where NileDB appears in the 
 ## Business Impact & Technical Excellence
 
 ### 📈 **Revenue & Performance Intelligence**
+
 - **Database Performance**: 60-80% improvement in operational query performance
 - **Infrastructure Cost Optimization**: Resource allocation aligned with subscription revenue
 - **Scalability**: Architecture designed for 10,000+ tenants and 100M+ emails per month
 - **Operational Efficiency**: Automated infrastructure management reduces operational overhead
 
 ### 🚀 **Operational Excellence**
+
 - **Multi-Tenant Security**: Complete tenant isolation with enterprise-grade security
 - **Infrastructure Intelligence**: Comprehensive monitoring and automated provisioning
 - **Queue-Driven Processing**: Reliable job processing with retry logic and dead letter queues
 - **Performance Monitoring**: Real-time observability and proactive alerting
 
 ### 💡 **Developer & Operations Experience**
+
 - **Clear Database Design**: Intuitive schema design for immediate understanding
 - **Comprehensive Documentation**: Complete database and infrastructure documentation
 - **Standardized Operations**: Consistent infrastructure management across all environments
@@ -169,12 +191,14 @@ This clarification applies across all documentation where NileDB appears in the 
 ## Success Metrics & Validation
 
 ### 📊 **Database Performance Targets**
+
 - **Cross-Database Queries**: <500ms for campaign + analytics queries
 - **System Uptime**: 99.9% availability for all database tiers
 - **Query Performance**: <200ms for 95% of OLTP operations
 - **Backup Recovery**: <15 minutes for automated backup recovery
 
 ### 🔍 **Infrastructure Performance**
+
 - **VPS Provisioning**: <30 minutes for complete infrastructure setup
 - **Email Delivery**: 99.5% deliverability success rate
 - **Queue Processing**: <1 second for job processing
@@ -185,16 +209,18 @@ This clarification applies across all documentation where NileDB appears in the 
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Architecture System](../architecture-system.md)) - System architecture decisions
-- [Development Guidelines](../development-guidelines.md)) - Development standards
-- [Quality Assurance](../quality-assurance.md)) - Testing protocols and procedures
-- [Implementation Overview](...md)) - Strategic technical overview
+
+- [Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)) - System architecture decisions
+- [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Development standards
+- [Quality Assurance](/docs/business/quality-assurance)) - Testing protocols and procedures
+- [Implementation Overview](..)) - Strategic technical overview
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
+
+- [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
 
 ---
 

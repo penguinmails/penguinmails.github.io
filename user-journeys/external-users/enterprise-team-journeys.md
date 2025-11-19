@@ -13,30 +13,35 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ### **Enterprise Team Categories**
 
 #### **Sales Operations**
+
 - Large-scale sales outreach and pipeline management
 - Need sophisticated segmentation and personalization
 - Require integration with sales CRM and tools
 - Track complex sales attribution and ROI
 
 #### **Marketing Operations**
+
 - Enterprise marketing automation and campaign management
 - Need advanced analytics and reporting capabilities
 - Require governance and compliance controls
 - Coordinate across multiple departments and brands
 
 #### **Business Development**
+
 - Partnership development and strategic outreach
 - Need relationship management and communication tools
 - Require security and confidentiality controls
 - Track partnership success and business impact
 
 #### **Revenue Operations**
+
 - Comprehensive revenue generation and optimization
 - Need unified view of customer lifecycle
 - Require cross-department coordination and alignment
 - Track revenue attribution and business impact
 
 ### **Common Enterprise Needs**
+
 - Complex organizational structures and approval processes
 - Integration with existing enterprise systems
 - Compliance and security requirements
@@ -51,6 +56,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ### **Journey 1: Enterprise Implementation & Setup**
 
 #### **Organizational Assessment**
+
 1. **Organizational Analysis**
    - Map enterprise organizational structure and hierarchy
    - Identify email marketing stakeholders and decision makers
@@ -64,6 +70,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Establish success metrics and KPIs
 
 #### **System Implementation**
+
 1. **Platform Configuration**
    - Configure enterprise-grade security and access controls
    - Set up organizational hierarchies and permissions
@@ -81,6 +88,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ### **Journey 2: Large-Scale Campaign Management**
 
 #### **Campaign Planning & Coordination**
+
 1. **Strategic Planning**
    - Develop enterprise-wide email marketing strategy
    - Coordinate campaigns across multiple departments
@@ -94,6 +102,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Ensure consistency across enterprise communications
 
 #### **Execution & Management**
+
 1. **Large-Scale Deployment**
    - Deploy campaigns to large recipient lists
    - Monitor performance across enterprise segments
@@ -111,6 +120,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ### **Journey 3: Compliance & Governance**
 
 #### **Compliance Management**
+
 1. **Regulatory Compliance**
    - Ensure compliance with industry regulations (GDPR, CCPA, etc.)
    - Implement data privacy and protection controls
@@ -124,6 +134,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Maintain audit trails and compliance documentation
 
 #### **Governance Framework**
+
 1. **Policy Development**
    - Develop enterprise email marketing policies
    - Establish brand guidelines and messaging standards
@@ -141,6 +152,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ### **Journey 4: Cross-Department Coordination**
 
 #### **Departmental Integration**
+
 1. **Sales & Marketing Alignment**
    - Coordinate email marketing with sales activities
    - Provide sales teams with email performance insights
@@ -154,6 +166,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Implement monitoring and alerting systems
 
 #### **Executive Reporting**
+
 1. **Strategic Reporting**
    - Generate executive-level performance reports
    - Track business impact and ROI across departments
@@ -171,6 +184,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ## Enterprise Context
 
 ### **Key Pain Points**
+
 - Managing complexity across large organizations
 - Balancing security/compliance with operational efficiency
 - Coordinating across multiple departments and stakeholders
@@ -178,6 +192,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 - Scaling operations to meet enterprise demands
 
 ### **Success Metrics**
+
 - **Operational Efficiency**: Streamlined processes across departments
 - **Compliance Achievement**: 100% regulatory and policy compliance
 - **Business Impact**: Measurable ROI and revenue attribution
@@ -189,6 +204,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ## Common Enterprise Workflows
 
 ### **Monthly Enterprise Review**
+
 1. **Performance Analysis**
    - Review enterprise-wide email marketing performance
    - Analyze departmental and team contributions
@@ -202,6 +218,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Plan technology and process improvements
 
 ### **Quarterly Business Review**
+
 1. **Executive Reporting**
    - Present comprehensive performance reports to executives
    - Track business impact and ROI across enterprise
@@ -215,6 +232,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Plan training and development initiatives
 
 ### **Annual Strategic Planning**
+
 1. **Enterprise Planning**
    - Develop annual email marketing strategy
    - Plan enterprise-wide campaigns and initiatives
@@ -232,6 +250,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ## Enterprise Integration & Automation
 
 ### **Enterprise System Integration**
+
 1. **CRM Integration**
    - Integrate with enterprise CRM systems
    - Sync customer data and engagement history
@@ -245,6 +264,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Track customer lifecycle and journey
 
 ### **Business Intelligence**
+
 1. **Analytics Integration**
    - Integrate with enterprise analytics platforms
    - Implement advanced reporting and dashboards
@@ -262,6 +282,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ## Enterprise Security & Compliance
 
 ### **Security Framework**
+
 1. **Access Management**
    - Implement role-based access controls
    - Manage user permissions and privileges
@@ -275,6 +296,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Maintain incident response procedures
 
 ### **Compliance Management**
+
 1. **Regulatory Compliance**
    - Ensure compliance with applicable regulations
    - Implement privacy and consent management
@@ -292,6 +314,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ## Enterprise Best Practices
 
 ### **Organizational Excellence**
+
 1. **Process Standardization**
    - Standardize processes across departments
    - Create enterprise-wide templates and procedures
@@ -305,6 +328,7 @@ This document outlines the key user journeys for enterprise teams who use Pengui
    - Recognize and reward excellence
 
 ### **Technology Leadership**
+
 1. **Platform Optimization**
    - Optimize platform for enterprise scale
    - Implement advanced features and capabilities
@@ -319,11 +343,12 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`agency-owner-journeys.md`](agency-owner-journeys.md)
-- [`business-owner-journeys.md`](business-owner-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`agency-owner-journeys.md`](agency-owner-journeys)
+- [`business-owner-journeys.md`](business-owner-journeys)
 
 ---
 

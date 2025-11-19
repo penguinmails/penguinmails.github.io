@@ -11,7 +11,8 @@ Install the necessary Drizzle packages (`drizzle-orm`, `drizzle-kit`, `pg`). Cre
 
 ## Context
 
-According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), PenguinMails uses:
+According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), PenguinMails uses:
+
 - **PostgreSQL** as the primary database
 - **Drizzle ORM** for type-safe database interactions
 - **Multi-tenant architecture** with row-level security (RLS)
@@ -87,11 +88,11 @@ export const db = drizzle(pool);
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Database architecture
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - OLTP database tier specifications
-- [Connection Pooling Strategy](../../docs/implementation-technical/database-infrastructure/connection-pooling-strategy.md) - Database connection management
-- [Database Operations Guide](../../operations_runbooks/database_operations_guide.md) - Database management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Database architecture
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - 5-tier database architecture overview
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - OLTP database tier specifications
+- [Connection Pooling Strategy](../../docs/implementation-technical/database-infrastructure/connection-pooling-strategy) - Database connection management
+- [Database Operations Guide](../../operations_runbooks/database_operations_guide) - Database management
 
 ## Dependencies
 
@@ -105,5 +106,3 @@ export const db = drizzle(pool);
 - [ ] Verify the connection string is read from environment variables
 - [ ] Test database connection (if database is available)
 - [ ] Verify connection pooling is configured
-
-

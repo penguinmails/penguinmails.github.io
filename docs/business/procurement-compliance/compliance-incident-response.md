@@ -17,12 +17,14 @@ last_modified_date: "2025-12-19"
 ### Incident Classification Framework
 
 **Strategic Severity Levels**:
+
 - **Level 1 (Critical)**: >1,000 individuals affected, high risk of harm to individuals
 - **Level 2 (High)**: 100-1,000 individuals affected, medium risk of harm
 - **Level 3 (Medium)**: <100 individuals affected, low risk of harm
 - **Level 4 (Minor)**: No individuals affected, administrative error or system issue
 
 **Strategic Breach Categories**:
+
 1. **Unauthorized Access**: Personal data accessed by unauthorized parties
 2. **Data Exposure**: Personal data inadvertently made publicly accessible
 3. **System Compromise**: Email systems compromised, hacked, or infiltrated
@@ -32,6 +34,7 @@ last_modified_date: "2025-12-19"
 ### Strategic Response Protocol (0-24 hours)
 
 **Emergency Response Team Activation**:
+
 - **Incident Commander**: CISO, Security Lead, or designated crisis manager
 - **Legal Counsel**: General Counsel, Privacy Officer, or legal representative
 - **Technical Lead**: IT Security Manager or senior technical authority
@@ -39,18 +42,20 @@ last_modified_date: "2025-12-19"
 - **Compliance Officer**: Chief Compliance Officer or privacy team lead
 
 **Critical Response Actions**:
+
 - **Immediate Containment**: Isolate affected systems to prevent further exposure
 - **Evidence Preservation**: Secure forensic evidence for investigation and legal purposes
 - **Preliminary Assessment**: Determine scope, impact, and appropriate response level
 - **Stakeholder Notification**: Inform executive leadership and key stakeholders
 - **Documentation**: Comprehensive record of all actions taken and decisions made
 
-**Technical Implementation**: Complete incident response system with TypeScript automation, team coordination, and regulatory reporting available in [Email Compliance Implementation](../technical/architecture/detailed-technical.md)
+**Technical Implementation**: Complete incident response system with TypeScript automation, team coordination, and regulatory reporting available in [Email Compliance Implementation](/docs/technical/architecture/detailed-technical)
 
 ### Strategic Breach Notification Framework
 
 **GDPR 72-Hour Notification Strategy**:
-```
+
+```markdown
 To: [Supervisory Authority]
 Subject: Personal Data Breach Notification - [Company Name]
 Date: [Current Date]
@@ -74,7 +79,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 4. Contact Information:
    - [Data Protection Officer contact details]
    - [Company contact information for follow-up]
-```
+```markdown
 
 **Individual Notification Strategy**:
 - **Communication Timing**: Without undue delay after regulatory notification
@@ -213,7 +218,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 - [🛡️ Compliance Overview](compliance-overview:1) - Strategic compliance summary and risk assessment
 
 **For technical implementation:**
-- [⚙️ Email Compliance Implementation](../technical/architecture/detailed-technical.md) - Complete TypeScript implementation
+- [⚙️ Email Compliance Implementation](/docs/technical/architecture/detailed-technical) - Complete TypeScript implementation
 
 **For operational monitoring:**
 - [📊 Compliance Monitoring](compliance-monitoring:1) - Operational oversight and monitoring

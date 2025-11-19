@@ -11,7 +11,8 @@ Install a Node.js Redis client library (e.g., `ioredis`). Add the `REDIS_URL` co
 
 ## Context
 
-According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Redis is used for:
+According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Redis is used for:
+
 - **Cache Layer:** Session storage, real-time data, rate limiting
 - **Queue Processing:** Fast job queues for email processing and analytics aggregation
 - **Performance:** Reducing database load through caching
@@ -66,8 +67,8 @@ REDIS_URL=redis://localhost:6379
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Cache layer architecture
-- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide.md) - Redis monitoring
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Cache layer architecture
+- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide) - Redis monitoring
 
 ## Dependencies
 
@@ -80,5 +81,3 @@ REDIS_URL=redis://localhost:6379
 - [ ] Test that environment variable is read correctly
 - [ ] Verify connection string format is documented
 - [ ] Test with different connection string formats (if applicable)
-
-

@@ -12,17 +12,18 @@ The Component Library is a comprehensive catalog of all reusable UI components a
 ## Library Structure
 
 ### Component Organization
-```
+
+```markdown
 📁 components/
-├── 📁 primitives.md)
-├── 📁 layout.md)
-├── 📁 navigation.md)
-├── 📁 forms.md)
-├── 📁 data-display.md)
-├── 📁 feedback.md)
-├── 📁 overlays.md)
-└── 📁 utilities.md)
-```
+├── 📁 primitives
+├── 📁 layout
+├── 📁 navigation
+├── 📁 forms
+├── 📁 data-display
+├── 📁 feedback
+├── 📁 overlays
+└── 📁 utilities
+```markdown
 
 ### Component Maturity Levels
 - **Technical Experimental**: New components under development
@@ -60,16 +61,16 @@ interface ButtonProps {
 <Button variant="danger" size="sm" loading={isDeleting}>
   Delete
 </Button>
-```
+```markdown
 
 **Design Specifications:**
 - Height: 32px (sm), 40px (md), 48px (lg)
-- Border radius: 6px (sm.md), 8px (lg)
+- Border radius: 6px (sm, md), 8px (lg)
 - Font weight: 500 (regular), 600 (bold for primary)
 - Focus ring: 2px solid primary color, 2px offset
 
 ### Input
-```typescript
+```jsx
 import { Input } from '@/components/primitives/Input';
 
 interface InputProps {
@@ -101,7 +102,7 @@ interface InputProps {
   leftIcon={MailIcon}
   required
 />
-```
+```markdown
 
 **Design Specifications:**
 - Height: 32px (sm), 40px (md), 48px (lg)
@@ -132,7 +133,7 @@ interface ContainerProps {
 <Container size="full" centered padding="none">
   <HeroSection />
 </Container>
-```
+```markdown
 
 **Size Specifications:**
 - sm: 640px max-width
@@ -168,7 +169,7 @@ interface GridItemProps {
     <Sidebar />
   </GridItem>
 </Grid>
-```
+```markdown
 
 **Responsive Breakpoints:**
 - Mobile: 1 column (span resets to 12)
@@ -203,7 +204,7 @@ interface FormFieldProps {
     placeholder="e.g., Summer Sale 2025"
   />
 </FormField>
-```
+```markdown
 
 ### Select
 ```typescript
@@ -241,7 +242,7 @@ interface SelectProps {
   placeholder="Select campaign status"
   onChange={(value) => setStatus(value as string)}
 />
-```
+```markdown
 
 ### Checkbox & Radio
 ```typescript
@@ -275,12 +276,12 @@ interface RadioGroupProps {
   <Radio value="professional" label="Professional Plan" />
   <Radio value="enterprise" label="Enterprise Plan" />
 </RadioGroup>
-```
+```markdown
 
 ## Data Display Components
 
 ### Table
-```typescript
+```jsx
 import { Table } from '@/components/data-display/Table';
 
 interface TableColumn<T> {
@@ -344,7 +345,7 @@ interface TableProps<T> {
   onSelect={handleSelection}
   onRowClick={handleRowClick}
 />
-```
+```markdown
 
 ### Card
 ```typescript
@@ -391,7 +392,7 @@ interface CardProps {
     </Button>
   </CardFooter>
 </Card>
-```
+```markdown
 
 ## Feedback Components
 
@@ -420,7 +421,7 @@ interface AlertProps {
   message="Your Stripe account setup is incomplete. Complete setup to start accepting payments."
   action={{
     label: "Complete Setup",
-    onClick: () => navigate('/settings.md)
+    onClick: () => navigate('/settings')
   }}
   dismissible
 />
@@ -429,7 +430,7 @@ interface AlertProps {
   variant="success"
   message="Campaign sent successfully! Check your analytics for performance details."
 />
-```
+```markdown
 
 ### Toast
 ```typescript
@@ -458,7 +459,7 @@ const handleSave = async () => {
       message: "Your campaign has been saved successfully.",
       action: {
         label: "View Campaign",
-        onClick: () => navigate(`/campaigns.md)
+        onClick: () => navigate(`/campaigns/${campaignData.id}`
       }
     });
   } catch (error) {
@@ -469,10 +470,10 @@ const handleSave = async () => {
     });
   }
 };
-```
+```markdown
 
 ### Modal
-```typescript
+```jsx
 import { Modal } from '@/components/feedback/Modal';
 
 interface ModalProps {
@@ -515,7 +516,7 @@ interface ModalProps {
     </ul>
   </div>
 </Modal>
-```
+```markdown
 
 ## Navigation Components
 
@@ -546,7 +547,7 @@ interface BreadcrumbProps {
   ]}
   maxItems={5}
 />
-```
+```markdown
 
 ### Tabs
 ```typescript
@@ -602,7 +603,7 @@ interface TabsProps {
   variant="underline"
   onChange={setActiveTab}
 />
-```
+```markdown
 
 ## Utility Components
 
@@ -632,7 +633,7 @@ interface SkeletonProps {
 <Skeleton variant="rectangular" width="100%" height={200} />
 <Skeleton variant="text" width="60%" />
 <Skeleton variant="circular" width={40} height={40} />
-```
+```markdown
 
 ### EmptyState
 ```jsx
@@ -664,14 +665,14 @@ interface EmptyStateProps {
     label: "Create Campaign",
     variant: "primary",
     icon: PlusIcon,
-    onClick: () => navigate('/campaigns.md)
+    onClick: () => navigate('/campaigns')
   }}
   secondaryAction={{
     label: "Learn More",
     onClick: () => openTutorial('creating-campaigns')
   }}
 />
-```
+```markdown
 
 ### Badge
 ```typescript
@@ -691,7 +692,7 @@ interface BadgeProps {
 <Badge variant="warning" size="sm">Pending</Badge>
 <Badge variant="error" dot /> {/* Status dot only */}
 <Badge variant="info" icon={InfoIcon}>New Feature</Badge>
-```
+```markdown
 
 ## Component Status and Roadmap
 
@@ -732,7 +733,7 @@ import { Button, Input, Modal } from '@/components';
 // Alternative: Import with alias for complex components
 import { Table as DataTable } from '@/components/data-display/Table';
 import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
-```
+```markdown
 
 ### Component Composition
 ```typescript
@@ -763,7 +764,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
     ...
   </Card>
 </div>
-```
+```markdown
 
 ### Styling Guidelines
 - Use design tokens for all spacing, colors, and typography
@@ -774,10 +775,10 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ---
 
 ## Related Documents
-- [UI Library](...md) - Component usage guidelines and patterns
-- [Design System](...md) - Complete design system overview
-- [Design Tokens](...md) - Design token specifications
-- [Accessibility Guidelines](...md) - Inclusive design standards
+- [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
+- [Design System](/docs/design/design-system) - Complete design system overview
+- [Design Tokens](/docs/design/design-tokens) - Design token specifications
+- [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications
 ---

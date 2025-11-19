@@ -22,5 +22,5 @@ For requests to `/api/track/open`, the endpoint will: 1) Verify the JWT, 2) Push
 
 ## Related documentation
 
-- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework.md)
-- [Development Standards (high-performance endpoints)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Compliance & Security Framework](../../docs/compliance-security/enterprise/security-framework)
+- [Development Standards (high-performance endpoints)](../../docs/implementation-technical/development-guidelines/development-standards)

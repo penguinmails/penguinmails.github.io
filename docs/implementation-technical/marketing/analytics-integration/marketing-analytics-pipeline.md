@@ -4,8 +4,8 @@
 
 This document defines the comprehensive marketing analytics pipeline architecture for real-time data processing, analytics generation, and performance tracking for marketing teams persona.
 
-**Document Level:** Level 3 - Technical Implementation  
-**Target Audience:** Marketing Data Engineers, Analytics Developers, Technical Architects  
+**Document Level:** Level 3 - Technical Implementation
+**Target Audience:** Marketing Data Engineers, Analytics Developers, Technical Architects
 **Technical Focus:** <5 second latency analytics with 99.5% accuracy
 
 ---
@@ -15,9 +15,11 @@ This document defines the comprehensive marketing analytics pipeline architectur
 ### 1. Marketing Event Schema Design
 
 #### 1.1 Marketing Event Categories
+
 **Primary Objective:** Design comprehensive marketing event schema for accurate tracking and analytics
 
 **Campaign Events:**
+
 ```typescript
 interface CampaignEvent {
   event_type: 'campaign_launch' | 'campaign_optimization' | 'campaign_termination';
@@ -55,7 +57,7 @@ interface CampaignOptimization extends CampaignEvent {
     creative_rotation?: string[];
   };
 }
-```
+```markdown
 
 **Customer Journey Events:**
 ```typescript
@@ -92,7 +94,7 @@ interface JourneyStart extends CustomerJourneyEvent {
     referral_source?: string;
   };
 }
-```
+```markdown
 
 **Personalization Events:**
 ```typescript
@@ -116,7 +118,7 @@ interface PersonalizationEvent {
     };
   };
 }
-```
+```markdown
 
 #### 1.2 Real-Time Data Processing Requirements
 **Technical Requirements:**
@@ -134,20 +136,20 @@ interface AnalyticsPipeline {
     partitioning: 'tenant_id';
     retention: '90_days';
   };
-  
+
   stream_processing: {
     framework: 'apache_flink';
     processing_time: '<2_seconds';
     windowing: '5_second_tumbling';
     aggregation: 'real_time';
   };
-  
+
   analytics_generation: {
     calculation_engine: 'spark_streaming';
     cache_strategy: 'redis';
     aggregation_levels: ['real_time', 'hourly', 'daily', 'weekly'];
   };
-  
+
   storage_layers: {
     raw_data: 'hdfs';
     processed_data: 'elasticsearch';
@@ -155,7 +157,7 @@ interface AnalyticsPipeline {
     historical_data: 'data_warehouse';
   };
 }
-```
+```markdown
 
 ### 2. CRM Integration Architecture
 
@@ -174,14 +176,14 @@ interface CDPIntegration {
       burst_limit: 1000;
     };
   };
-  
+
   data_sync: {
     sync_frequency: 'real_time';
     sync_strategy: 'event_driven';
     conflict_resolution: 'latest_wins';
     data_validation: 'schema_enforcement';
   };
-  
+
   data_mapping: {
     customer_id_mapping: 'idempotent';
     event_mapping: 'type_based';
@@ -189,7 +191,7 @@ interface CDPIntegration {
     privacy_compliance: 'gdpr_ccpa';
   };
 }
-```
+```markdown
 
 **Customer Profile Analytics:**
 ```typescript
@@ -200,14 +202,14 @@ interface CustomerProfileAnalytics {
     preference_data: 'explicit_implicit';
     predictive_scores: 'ml_generated';
   };
-  
+
   profile_analytics: {
     lifetime_value: 'calculated_real_time';
     churn_probability: 'ml_prediction';
     engagement_score: 'behavioral_analysis';
     segment_membership: 'dynamic_segmentation';
   };
-  
+
   privacy_controls: {
     data_retention: 'policy_based';
     consent_management: 'real_time_check';
@@ -215,7 +217,7 @@ interface CustomerProfileAnalytics {
     audit_trail: 'complete_logging';
   };
 }
-```
+```markdown
 
 #### 2.2 Cross-Platform Data Integration
 **Primary Objective:** Integrate data from all marketing platforms for comprehensive analytics
@@ -230,14 +232,14 @@ interface PlatformIntegration {
       data_types: ['campaigns', 'ad_groups', 'keywords', 'performance'];
       attribution_model: 'data_driven';
     };
-    
+
     facebook_ads: {
       api: 'facebook_marketing_api_v18';
       sync_frequency: '30_minutes';
       data_types: ['campaigns', 'ad_sets', 'ads', 'insights'];
       attribution_model: 'last_click';
     };
-    
+
     linkedin_ads: {
       api: 'linkedin_ads_api_v2';
       sync_frequency: '60_minutes';
@@ -245,7 +247,7 @@ interface PlatformIntegration {
       attribution_model: 'first_click';
     };
   };
-  
+
   analytics_platforms: {
     google_analytics: {
       api: 'google_analytics_data_api_v1';
@@ -253,7 +255,7 @@ interface PlatformIntegration {
       data_types: ['sessions', 'conversions', 'ecommerce', 'audience'];
       attribution_model: 'data_driven_last_touch';
     };
-    
+
     post_hog: {
       api: 'post_hog_api_v1';
       sync_frequency: 'real_time';
@@ -262,7 +264,7 @@ interface PlatformIntegration {
     };
   };
 }
-```
+```markdown
 
 ### 3. Cross-Channel Attribution System
 
@@ -297,7 +299,7 @@ interface AttributionEngine {
       };
     };
   };
-  
+
   attribution_calculation: {
     time_window: '30_days';
     touchpoint_ordering: 'chronological';
@@ -305,7 +307,7 @@ interface AttributionEngine {
     multi_device: 'cross_device_mapping';
   };
 }
-```
+```markdown
 
 #### 3.2 Cross-Device Attribution Implementation
 **Primary Objective:** Implement cross-device attribution for accurate performance tracking across devices
@@ -322,13 +324,13 @@ interface CrossDeviceAttribution {
       data_sources: ['ip_address', 'user_agent', 'geolocation'];
     };
   };
-  
+
   attribution_calculation: {
     device_journey: 'complete_device_timeline';
     conversion_attribution: 'device_journey_based';
     credit_allocation: 'weight_by_time_and_probability';
   };
-  
+
   privacy_compliance: {
     gdpr_compliance: true;
     ccpa_compliance: true;
@@ -336,7 +338,7 @@ interface CrossDeviceAttribution {
     retention_policy: '90_days';
   };
 }
-```
+```markdown
 
 ---
 
@@ -358,28 +360,28 @@ flink_config:
       interval: '30_seconds'
       timeout: '10_minutes'
       mode: 'exactly_once'
-  
+
   stream_processing:
     window_size: '5_seconds'
     slide_interval: '1_second'
     watermark_strategy: 'bounded_out_of_orderness'
     late_data_handling: 'side_output'
-  
+
   processing_guarantees:
     delivery_guarantee: 'exactly_once'
     state_backend: 'rocksdb'
     checkpoint_interval: '30_seconds'
-```
+```markdown
 
 **Marketing Event Processing:**
 ```java
 public class MarketingEventProcessor {
-    
+
     @ProcessFunction
     public void processCampaignEvent(CampaignEvent event, Context ctx, Collector<ProcessedEvent> out) {
         // Real-time campaign performance calculation
         CampaignMetrics metrics = calculateRealTimeMetrics(event);
-        
+
         // Emit to analytics stream
         out.collect(new ProcessedEvent(
             event.getTenantId(),
@@ -387,21 +389,21 @@ public class MarketingEventProcessor {
             metrics,
             Instant.now()
         ));
-        
+
         // Check for optimization triggers
         if (metrics.getPerformanceScore() < OPTIMIZATION_THRESHOLD) {
             ctx.output(OPTIMIZATION_ALERTS, new OptimizationAlert(event, metrics));
         }
     }
-    
+
     @ProcessFunction
     public void processCustomerJourneyEvent(CustomerJourneyEvent event, Context ctx, Collector<ProcessedEvent> out) {
         // Real-time journey stage calculation
         JourneyMetrics metrics = calculateJourneyMetrics(event);
-        
+
         // Attribution calculation
         AttributionResult attribution = calculateAttribution(event);
-        
+
         out.collect(new ProcessedEvent(
             event.getCustomerId(),
             event.getJourneyId(),
@@ -410,7 +412,7 @@ public class MarketingEventProcessor {
             Instant.now()
         ));
     }
-    
+
     @WindowFunction
     public void aggregateRealTimeMetrics(KeyedStream<CampaignEvent, String> events, Window window, Iterable<CampaignEvent> events, Collector<AggregatedMetrics> out) {
         // 5-second tumbling window aggregation
@@ -420,7 +422,7 @@ public class MarketingEventProcessor {
         out.collect(metrics);
     }
 }
-```
+```markdown
 
 #### 4.2 Redis Cache Implementation
 **Primary Objective:** Implement Redis for high-speed caching of real-time analytics
@@ -437,20 +439,20 @@ interface RedisCache {
       save_interval: '1_minute';
     };
   };
-  
+
   cache_strategies: {
     real_time_metrics: {
       key_pattern: 'metrics:campaign:{tenant_id}:{campaign_id}';
       ttl: '5_minutes';
       update_strategy: 'write_through';
     };
-    
+
     journey_state: {
       key_pattern: 'journey:{customer_id}:{stage}';
       ttl: '1_hour';
       update_strategy: 'write_behind';
     };
-    
+
     attribution_cache: {
       key_pattern: 'attribution:{customer_id}:{time_range}';
       ttl: '30_minutes';
@@ -458,7 +460,7 @@ interface RedisCache {
     };
   };
 }
-```
+```markdown
 
 ### 5. Analytics Generation Engine
 
@@ -474,23 +476,23 @@ spark_config:
     driver_memory: '4GB'
     executor_memory: '8GB'
     executor_instances: 8
-  
+
   streaming:
     batch_interval: '1_minute'
     checkpoint_directory: 'hdfs:///checkpoint/marketing-analytics'
     state_store_provider: 'rocksdb'
-  
+
   optimization:
     dynamic_allocation: true;
     memory_fraction: 0.8;
     serialization: 'kryo';
     compression: 'lz4';
-```
+```markdown
 
 **Batch Analytics Processing:**
 ```scala
 class MarketingBatchProcessor {
-  
+
   def processRealTimeMetrics(batchData: RDD[CampaignEvent]): RDD[CampaignMetrics] = {
     batchData
       .map(event => (event.getTenantId, event.getCampaignId, event.getPerformanceMetrics))
@@ -498,11 +500,11 @@ class MarketingBatchProcessor {
         seqOp = (agg, metrics) => agg.addMetrics(metrics),
         combOp = (agg1, agg2) => agg1.combine(agg2)
       )
-      .map { case (key, aggregator) => 
+      .map { case (key, aggregator) =>
         aggregator.calculateMetrics(key._1, key._2)
       }
   }
-  
+
   def calculateAttribution(attributionData: RDD[CustomerJourneyEvent]): RDD[AttributionResult] = {
     attributionData
       .groupBy(_.getCustomerId)
@@ -511,7 +513,7 @@ class MarketingBatchProcessor {
         calculateMultiTouchAttribution(customerId, sortedEvents)
       }
   }
-  
+
   def generateExecutiveReports(reportData: RDD[AggregatedMetrics]): RDD[ExecutiveReport] = {
     reportData
       .map(report => report.getTenantId)
@@ -521,7 +523,7 @@ class MarketingBatchProcessor {
       }
   }
 }
-```
+```markdown
 
 #### 5.2 Elasticsearch Integration
 **Primary Objective:** Implement Elasticsearch for fast analytics querying and dashboard generation
@@ -533,7 +535,7 @@ elasticsearch_config:
     name: 'marketing-analytics-cluster'
     nodes: ['es-node-1:9200', 'es-node-2:9200', 'es-node-3:9200'];
     discovery_zen_ping_unicast_hosts: ['es-node-1', 'es-node-2', 'es-node-3'];
-  
+
   indices:
     marketing_events:
       number_of_shards: 3;
@@ -545,22 +547,22 @@ elasticsearch_config:
               mapping:
                 type: 'double'
                 index: true;
-    
+
     campaign_metrics:
       number_of_shards: 2;
       number_of_replicas: 1;
       refresh_interval: '5s';
-      
+
     attribution_results:
       number_of_shards: 3;
       number_of_replicas: 1;
       time_based_indexing: 'daily';
-```
+```markdown
 
 **Elasticsearch Integration:**
 ```typescript
 class ElasticsearchAnalyticsClient {
-  
+
   async indexMarketingEvent(event: MarketingEvent): Promise<void> {
     await this.client.index({
       index: 'marketing-events',
@@ -572,7 +574,7 @@ class ElasticsearchAnalyticsClient {
       }
     });
   }
-  
+
   async queryCampaignMetrics(tenantId: string, timeRange: TimeRange): Promise<CampaignMetrics[]> {
     const response = await this.client.search({
       index: 'campaign-metrics-*',
@@ -604,17 +606,17 @@ class ElasticsearchAnalyticsClient {
         }
       }
     });
-    
+
     return this.processMetricsResponse(response);
   }
-  
+
   async generateRealTimeDashboard(tenantId: string): Promise<DashboardData> {
     const [campaignMetrics, journeyMetrics, attributionMetrics] = await Promise.all([
       this.getCampaignMetrics(tenantId),
       this.getJourneyMetrics(tenantId),
       this.getAttributionMetrics(tenantId)
     ]);
-    
+
     return {
       campaignPerformance: campaignMetrics,
       customerJourney: journeyMetrics,
@@ -623,7 +625,7 @@ class ElasticsearchAnalyticsClient {
     };
   }
 }
-```
+```markdown
 
 ---
 
@@ -637,10 +639,10 @@ class ElasticsearchAnalyticsClient {
 **Performance Calculation Engine:**
 ```typescript
 class CampaignPerformanceCalculator {
-  
+
   async calculateRealTimeMetrics(campaignEvents: MarketingEvent[]): Promise<RealTimeMetrics> {
     const aggregatedMetrics = this.aggregateEvents(campaignEvents);
-    
+
     return {
       impressions: aggregatedMetrics.totalImpressions,
       clicks: aggregatedMetrics.totalClicks,
@@ -656,23 +658,23 @@ class CampaignPerformanceCalculator {
       lastUpdated: new Date()
     };
   }
-  
+
   private calculatePerformanceScore(metrics: AggregatedMetrics): number {
     // Weighted performance scoring algorithm
     const ctrWeight = 0.3;
     const conversionRateWeight = 0.3;
     const roasWeight = 0.4;
-    
-    const normalizedCTR = Math.min(metrics.ctr .md); // Normalize to 5% CTR
-    const normalizedConversionRate = Math.min(metrics.conversionRate .md); // Normalize to 10% CVR
-    const normalizedROAS = Math.min(metrics.roas .md); // Normalize to 3:1 ROAS
-    
-    return (normalizedCTR * ctrWeight + 
-            normalizedConversionRate * conversionRateWeight + 
+
+    const normalizedCTR = Math.min(metrics.ctr ); // Normalize to 5% CTR
+    const normalizedConversionRate = Math.min(metrics.conversionRate ); // Normalize to 10% CVR
+    const normalizedROAS = Math.min(metrics.roas ); // Normalize to 3:1 ROAS
+
+    return (normalizedCTR * ctrWeight +
+            normalizedConversionRate * conversionRateWeight +
             normalizedROAS * roasWeight) * 100;
   }
 }
-```
+```markdown
 
 #### 6.2 Campaign Alert System
 **Primary Objective:** Implement intelligent alerting for campaign performance issues
@@ -686,26 +688,26 @@ interface CampaignAlertSystem {
       action: 'send_notification';
       escalation: 'auto_optimization';
     };
-    
+
     budget_exhaustion: {
       trigger: 'budget_utilization > 90';
       action: 'send_notification + pause_campaign';
       escalation: 'marketing_director_notification';
     };
-    
+
     conversion_drop: {
       trigger: 'conversion_rate < baseline * 0.7';
       action: 'send_notification + investigate';
       escalation: 'performance_marketing_director';
     };
-    
+
     attribution_anomaly: {
       trigger: 'attribution_accuracy < 0.85';
       action: 'send_notification + run_diagnostics';
       escalation: 'marketing_data_engineer';
     };
   };
-  
+
   notification_channels: {
     email: ['marketing@company.com', 'performance@company.com'];
     slack: '#marketing-alerts';
@@ -713,7 +715,7 @@ interface CampaignAlertSystem {
     sms: '+1234567890'; // For critical alerts
   };
 }
-```
+```markdown
 
 ### 7. Optimization Recommendation Engine
 
@@ -723,14 +725,14 @@ interface CampaignAlertSystem {
 **Machine Learning Models:**
 ```typescript
 class OptimizationRecommendationEngine {
-  
+
   async generateOptimizationRecommendations(campaignData: CampaignData): Promise<OptimizationRecommendation[]> {
     const performanceAnalysis = await this.analyzeCampaignPerformance(campaignData);
     const marketData = await this.getMarketBenchmarkingData(campaignData.channel);
     const historicalData = await this.getHistoricalOptimizationData(campaignData);
-    
+
     const recommendations = [];
-    
+
     // Bid Optimization Recommendation
     if (performanceAnalysis.bidEfficiency < 0.7) {
       const optimalBid = await this.calculateOptimalBid(campaignData, marketData, historicalData);
@@ -743,22 +745,22 @@ class OptimizationRecommendationEngine {
         implementation: 'automatic'
       });
     }
-    
+
     // Creative Optimization Recommendation
     if (performanceAnalysis.creativePerformance < 0.6) {
       const creativeRecommendations = await this.generateCreativeRecommendations(campaignData, historicalData);
       recommendations.push(...creativeRecommendations);
     }
-    
+
     // Audience Optimization Recommendation
     if (performanceAnalysis.audienceEfficiency < 0.65) {
       const audienceRecommendations = await this.generateAudienceRecommendations(campaignData, marketData);
       recommendations.push(...audienceRecommendations);
     }
-    
+
     return this.rankRecommendations(recommendations);
   }
-  
+
   private async calculateOptimalBid(campaignData: CampaignData, marketData: MarketData, historicalData: HistoricalData): Promise<BidOptimization> {
     const features = [
       campaignData.impressionShare,
@@ -766,12 +768,12 @@ class OptimizationRecommendationEngine {
       campaignData.qualityScore,
       historicalData.bidPerformance.map(b => b.bidAmount)
     ];
-    
+
     const prediction = await this.mlModel.predict({
       features,
       model: 'bid_optimization_v2'
     });
-    
+
     return {
       bidAmount: prediction.optimalBid,
       expectedROASImprovement: prediction.expectedImprovement,
@@ -780,7 +782,7 @@ class OptimizationRecommendationEngine {
     };
   }
 }
-```
+```markdown
 
 #### 7.2 Automated Optimization Implementation
 **Primary Objective:** Implement automated optimization based on performance thresholds
@@ -795,7 +797,7 @@ interface AutomatedOptimization {
       scope: ['bid', 'audience', 'creative'];
       rollback_condition: 'performance_score > 75';
     };
-    
+
     budget_reallocation: {
       trigger: 'spend_efficiency < 0.6';
       action: 'reallocate_budget';
@@ -805,7 +807,7 @@ interface AutomatedOptimization {
         retention_percentage: 0.8;
       };
     };
-    
+
     creative_rotation: {
       trigger: 'creative_fatigue_score > 0.8';
       action: 'rotate_creatives';
@@ -816,7 +818,7 @@ interface AutomatedOptimization {
       };
     };
   };
-  
+
   safety_measures: {
     maximum_change_percentage: 0.25; // 25% max change per optimization
     human_approval_threshold: 'high_impact';
@@ -824,7 +826,7 @@ interface AutomatedOptimization {
     performance_monitoring: 'continuous';
   };
 }
-```
+```markdown
 
 ---
 
@@ -844,21 +846,21 @@ interface AnalyticsSLA {
     report_generation: '<30_seconds';
     complex_query_response: '<60_seconds';
   };
-  
+
   throughput_requirements: {
     events_per_second: 10000;
     concurrent_users: 1000;
     dashboard_refresh_rate: 'real_time';
     batch_processing_capacity: '1000000_events_per_minute';
   };
-  
+
   availability_requirements: {
     uptime: '99.9%';
     planned_maintenance: 'monthly_4_hour_window';
     disaster_recovery: '<4_hours';
     data_backup: 'hourly_incremental_daily_full';
   };
-  
+
   accuracy_requirements: {
     data_accuracy: '99.5%';
     calculation_precision: 'float64';
@@ -866,7 +868,7 @@ interface AnalyticsSLA {
     reporting_consistency: '99.9%';
   };
 }
-```
+```markdown
 
 #### 8.2 Monitoring and Alerting
 **Primary Objective:** Implement comprehensive monitoring and alerting for system performance
@@ -878,30 +880,30 @@ monitoring_config:
     prometheus:
       scrape_interval: '15_seconds';
       retention: '30_days';
-      
+
   alerting:
     alertmanager:
       group_wait: '10_seconds';
       group_interval: '5_minutes';
       repeat_interval: '4_hours';
-      
+
   custom_metrics:
     - name: 'marketing_events_processed_total'
       type: 'counter'
       description: 'Total marketing events processed'
-      
+
     - name: 'analytics_pipeline_latency_seconds'
       type: 'histogram'
       description: 'Analytics pipeline processing latency'
-      
+
     - name: 'campaign_performance_score'
       type: 'gauge'
       description: 'Real-time campaign performance score'
-      
+
     - name: 'attribution_calculation_time_seconds'
       type: 'histogram'
       description: 'Time to complete attribution calculations'
-```
+```markdown
 
 ### 9. Data Quality and Validation
 
@@ -917,7 +919,7 @@ interface DataQualityFramework {
       validation_type: 'schema_enforcement';
       action_on_failure: 'reject_and_alert';
     };
-    
+
     metric_validation: {
       numerical_ranges: {
         impressions: '>= 0';
@@ -931,7 +933,7 @@ interface DataQualityFramework {
         action: 'flag_and_investigate';
       };
     };
-    
+
     temporal_validation: {
       timestamp_requirements: {
         max_future_skew: '5_minutes';
@@ -940,7 +942,7 @@ interface DataQualityFramework {
       };
     };
   };
-  
+
   quality_monitoring: {
     real_time_validation: true;
     daily_quality_reports: true;
@@ -948,7 +950,7 @@ interface DataQualityFramework {
     quality_scoring: 'composite_score';
   };
 }
-```
+```markdown
 
 #### 9.2 Automated Data Quality Remediation
 **Primary Objective:** Implement automated data quality remediation and correction
@@ -956,30 +958,30 @@ interface DataQualityFramework {
 **Remediation Framework:**
 ```typescript
 class DataQualityRemediation {
-  
+
   async handleDataQualityIssue(issue: DataQualityIssue): Promise<RemediationResult> {
     switch (issue.type) {
       case 'missing_required_field':
         return await this.handleMissingField(issue);
-        
+
       case 'value_out_of_range':
         return await this.handleValueOutOfRange(issue);
-        
+
       case 'duplicate_event':
         return await this.handleDuplicateEvent(issue);
-        
+
       case 'temporal_anomaly':
         return await this.handleTemporalAnomaly(issue);
-        
+
       default:
         return await this.handleUnknownIssue(issue);
     }
   }
-  
+
   private async handleMissingField(issue: MissingFieldIssue): Promise<RemediationResult> {
     // Attempt to recover missing field from related data
     const recoveryResult = await this.attemptFieldRecovery(issue.event);
-    
+
     if (recoveryResult.success) {
       await this.updateEvent(issue.eventId, recoveryResult.data);
       return {
@@ -997,7 +999,7 @@ class DataQualityRemediation {
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -1061,7 +1063,7 @@ spec:
           value: "http://elasticsearch-service:9200"
         - name: KAFKA_BROKERS
           value: "kafka-service:9092"
-```
+```markdown
 
 #### 10.2 CI/CD Pipeline
 **Primary Objective:** Implement CI/CD pipeline for analytics pipeline deployment
@@ -1109,13 +1111,13 @@ jobs:
       run: |
         kubectl set image deployment/analytics-processor analytics-processor=company/marketing-analytics:${{ github.sha }}
         kubectl rollout status deployment/analytics-processor
-```
+```markdown
 
 ---
 
-**Document Classification:** Level 3 - Technical Implementation  
-**Technical Approval:** Required for deployment and implementation standards  
-**Engineering Stakeholder Access:** Marketing Data Engineers, Analytics Developers, Technical Architects  
+**Document Classification:** Level 3 - Technical Implementation
+**Technical Approval:** Required for deployment and implementation standards
+**Engineering Stakeholder Access:** Marketing Data Engineers, Analytics Developers, Technical Architects
 **Review Cycle:** Monthly technical validation and performance optimization
 
 This comprehensive marketing analytics pipeline implementation provides real-time analytics processing with <5 second latency, 99.5% accuracy, and comprehensive performance monitoring for marketing optimization and business intelligence.

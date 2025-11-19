@@ -4,8 +4,8 @@
 
 This document provides practical guidance for business leaders on coordinating technical implementation with realistic backbone constraints, emphasizing process-driven strategic oversight rather than complex real-time automation.
 
-**Document Level:** Level 2 - Strategic Coordination  
-**Target Audience:** Business Leaders, Executive Stakeholders, Technical Project Managers  
+**Document Level:** Level 2 - Strategic Coordination
+**Target Audience:** Business Leaders, Executive Stakeholders, Technical Project Managers
 **Business Impact Priority:** Strategic - Process-driven decision support with realistic constraints
 
 ---
@@ -27,7 +27,7 @@ mindmap
       Phase 1 Foundation
       Phase 2 Enhancement
       Phase 3 Optimization
-```
+```markdown
 
 ## Part I: Strategic Technical Alignment
 
@@ -80,7 +80,7 @@ mindmap
 - **Cost Control**: Leverage backbone monitoring rather than custom systems
 
 **Strategic Monitoring Categories:**
-```
+```markdown
 Revenue Protection Monitoring:
 - Directional deliverability indicators through ESP monitoring
 - Approximate cost signals from billing data
@@ -95,7 +95,7 @@ Strategic Decision Support:
 - Competitive intelligence through external data sources
 - Investment tracking through process-driven analysis
 - Strategic planning support through directional analytics
-```
+```markdown
 
 #### 3.3 Backbone-Aligned Data Access
 
@@ -136,7 +136,7 @@ Monthly Revenue Protection Review:
 2. Billing data analysis → Approximate revenue impact assessment
 3. Process-driven investigation → Strategic response planning
 4. Executive reporting → Strategic decision support
-```
+```markdown
 
 #### 4.2 Cost Optimization Coordination
 
@@ -155,7 +155,7 @@ Quarterly Cost Optimization Review:
 2. Resource utilization review → Optimization opportunity assessment
 3. Vendor performance evaluation → Strategic procurement insights
 4. Strategic investment planning → Budget optimization recommendations
-```
+```markdown
 
 #### 4.3 Strategic Decision Support Coordination
 
@@ -174,7 +174,7 @@ Strategic Planning Cycle:
 2. Investment performance analysis → Strategic ROI tracking
 3. Risk assessment and planning → Strategic decision framework
 4. Executive planning sessions → Strategic roadmap development
-```
+```markdown
 
 ### 5. Strategic Intelligence Service Implementation
 
@@ -185,10 +185,10 @@ Strategic Planning Cycle:
 interface StrategicExecutiveService {
   // Revenue protection intelligence
   generateRevenueProtectionReport(tenantId: string, timeframe: string): Promise<RevenueProtectionReport>;
-  
-  // Cost optimization intelligence  
+
+  // Cost optimization intelligence
   generateCostOptimizationReport(tenantId: string, timeframe: string): Promise<CostOptimizationReport>;
-  
+
   // Strategic planning support
   generateStrategicPlanningReport(tenantId: string, timeframe: string): Promise<StrategicPlanningReport>;
 }
@@ -199,7 +199,7 @@ interface RevenueProtectionReport {
   strategicRecommendations: string[];
   processFollowUp: string[];
 }
-```
+```markdown
 
 #### 5.2 Strategic Monitoring Implementation
 
@@ -209,10 +209,10 @@ interface RevenueProtectionReport {
 interface StrategicBusinessEvents {
   // Process-driven revenue protection
   trackRevenueProtectionAlert(tenantId: string, alert: RevenueProtectionAlert): void;
-  
+
   // Process-driven cost optimization
   trackCostOptimizationOpportunity(tenantId: string, opportunity: CostOptimizationOpportunity): void;
-  
+
   // Strategic decision support
   trackStrategicDecision(tenantId: string, decision: StrategicDecision): void;
 }
@@ -224,7 +224,7 @@ interface RevenueProtectionAlert {
   recommendedAction: string;
   followUpRequired: boolean;
 }
-```
+```markdown
 
 ---
 
@@ -296,21 +296,21 @@ interface RevenueProtectionAlert {
 ## Progressive Disclosure Navigation
 
 ### Level 1: Strategic Overview
-- [Executive Summary](../core.md) - Strategic oversight framework for business leaders
-- [Success Metrics](../implementation.md) - Realistic KPIs for strategic oversight
+- [Executive Summary](../core) - Strategic oversight framework for business leaders
+- [Success Metrics](/docs/business/implementation) - Realistic KPIs for strategic oversight
 
-### Level 2: Strategic Analysis  
-- [Strategic Implementation Guide](../implementation.md) - Realistic strategic implementation
-- [Financial Analysis](../financial-analysis.md) - Strategic financial benchmarks
+### Level 2: Strategic Analysis
+- [Strategic Implementation Guide](/docs/business/implementation) - Realistic strategic implementation
+- [Financial Analysis](/docs/business/financial-analysis) - Strategic financial benchmarks
 
 ### Level 3: Technical Coordination
-- [Executive API Overview](../implementation-technical/api.md) - Realistic data access capabilities
-- [PostHog Business Events](../implementation-technical/analytics-integration.md) - Simplified event tracking
+- [Executive API Overview](/docs/implementation-technical/api) - Realistic data access capabilities
+- [PostHog Business Events](/docs/implementation-technical/analytics-integration) - Simplified event tracking
 
 ---
 
-**Document Classification:** Level 2 - Strategic Business Coordination  
-**Business Stakeholder Access:** C-Suite, VPs, Strategic Planning Directors, Operations Leaders  
+**Document Classification:** Level 2 - Strategic Business Coordination
+**Business Stakeholder Access:** C-Suite, VPs, Strategic Planning Directors, Operations Leaders
 **Technical Stakeholder Access:** Technical Project Managers, Strategic Technology Directors, Implementation Coordinators
 
 This strategic framework provides practical guidance for business leaders to coordinate technical implementation while respecting backbone constraints and focusing on strategic value delivery through process-driven oversight and directional insights.

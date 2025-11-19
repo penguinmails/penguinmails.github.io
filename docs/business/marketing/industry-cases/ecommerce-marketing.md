@@ -14,12 +14,12 @@ redirect_from:
 
 This document provides specialized marketing guidance for e-commerce organizations with clear separation between MVP scope (2025) and Post-MVP roadmap (2026+) capabilities.
 
-**Document Level:** Level 3 - Industry-Specific Implementation  
-**Target Audience:** E-commerce Marketing Directors, Growth Marketers, Customer Success Teams  
+**Document Level:** Level 3 - Industry-Specific Implementation
+**Target Audience:** E-commerce Marketing Directors, Growth Marketers, Customer Success Teams
 **MVP Focus:** Basic segmentation, manual processes, weekly optimization
 **Post-MVP Focus:** Real-time personalization, ML analytics, automated optimization
 
-**MVP Scope Disclaimer:** This document covers Level 1-2 (Core.md) e-commerce marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
+**MVP Scope Disclaimer:** This document covers Level 1-2 (Core) e-commerce marketing capabilities. Level 3+ advanced optimization features are addressed in the roadmap section below.
 
 ---
 
@@ -47,39 +47,48 @@ This document provides specialized marketing guidance for e-commerce organizatio
 ### MVP Customer Acquisition Strategy
 
 #### MVP Awareness Stage
+
 **Customer Needs:**
+
 - Basic product discovery and comparison
 - Basic brand awareness and recognition
 - Social proof and basic reviews
 - Basic competitive differentiation
 
 **MVP Marketing Strategies:**
+
 - **Search Engine Optimization (SEO):** Basic product page optimization for search visibility
 - **Content Marketing:** Basic product guides and informational content
 - **Social Media Marketing:** Basic visual product showcases and brand storytelling
 - **Influencer Marketing:** Basic product reviews and content partnerships
 
 #### MVP Consideration Stage
+
 **Customer Needs:**
+
 - Basic product information and specifications
 - Basic customer reviews and ratings
 - Basic comparison with competitors
 - Basic trust signals and guarantees
 
 **MVP Marketing Strategies:**
+
 - **Email Marketing:** Basic product comparison emails and manual abandoned cart recovery
 - **Retargeting:** Basic dynamic ads showing viewed products
 - **Customer Reviews:** Manual encouragement and showcasing of customer feedback
 - **Basic Customer Support:** Standard customer support and product assistance
 
 #### MVP Purchase Stage
+
 **Customer Needs:**
+
 - Basic checkout process optimization
 - Secure payment options
 - Clear shipping and return policies
 - Order confirmation and basic tracking
 
 **MVP Marketing Strategies:**
+
 - **Conversion Rate Optimization (CRO):** Basic streamlined checkout process
 - **Payment Optimization:** Multiple payment options including standard digital wallets
 - **Basic Urgency Marketing:** Limited-time offers and stock scarcity messaging
@@ -88,26 +97,32 @@ This document provides specialized marketing guidance for e-commerce organizatio
 ### MVP Customer Retention Strategy
 
 #### MVP Post-Purchase Engagement
+
 **Customer Needs:**
+
 - Order confirmation and tracking information
 - Basic product care and usage guidance
 - Basic cross-sell and upsell opportunities
 - Basic loyalty program enrollment
 
 **MVP Retention Tactics:**
+
 - **Order Fulfillment Communication:** Manual shipping updates and tracking
 - **Product Education:** Basic care instructions and usage tips via email
 - **Loyalty Programs:** Basic points-based rewards and member benefits
 - **Customer Feedback:** Manual post-purchase surveys and review requests
 
 #### MVP Re-engagement Campaigns
+
 **Customer Needs:**
+
 - New product notifications
 - Basic personalized recommendations
 - Basic exclusive member discounts
 - Basic loyalty program updates
 
 **MVP Re-engagement Strategies:**
+
 - **Email Segmentation:** Basic behavioral-based email targeting
 - **Push Notifications:** Basic mobile app notifications for relevant products
 - **Social Media Retargeting:** Basic personalized ads based on purchase history
@@ -122,18 +137,20 @@ This document provides specialized marketing guidance for e-commerce organizatio
 **MVP Objective:** Drive sales through basic limited-time sale event
 
 **MVP Target Audience:**
+
 - Existing customers (primary)
 - Cart abandoners (high priority)
 - Basic lookalike audiences (expansion)
 
 **MVP Campaign Strategy:**
-```
+
+```markdown
 Event Structure:
 - Duration: 72-hour sale event
 - Discount Levels: 15% off $50+, 20% off $100+
 - Free shipping threshold: $75
 - Featured products: Limited quantities
-```
+```markdown
 
 **MVP Pre-Event Phase (5 days before):**
 - **Email Teaser:** Basic anticipation building emails
@@ -171,25 +188,25 @@ Event Structure:
 **MVP Lifecycle Email Sequences:**
 
 **MVP New Customer Onboarding (5 emails over 10 days):**
-```
+```markdown
 Day 0: Welcome email with first purchase discount
 Day 3: Product care guide and usage tips
 Day 5: Customer reviews request and social proof
 Day 7: Basic cross-sell recommendations
 Day 10: Customer support contact information
-```
+```markdown
 
 **MVP Repeat Customer Retention (bimonthly):**
-```
+```markdown
 Month 1: Basic personalized product recommendations
 Month 2: Basic member benefits reminder
-```
+```markdown
 
 **MVP At-Risk Customer Win-back (2 emails over 5 days):**
-```
+```markdown
 Day 0: "We miss you" message with special discount
 Day 5: Final offer with urgency messaging
-```
+```markdown
 
 **MVP Success Metrics:**
 - 15% increase in repeat purchase rate
@@ -317,30 +334,30 @@ Day 5: Final offer with urgency messaging
 # MVP basic recommendation logic
 def generate_basic_recommendations(customer_id, category=None):
     customer_profile = get_customer_profile(customer_id)
-    
+
     # Basic collaborative filtering
     similar_customers = find_similar_customers_basic(customer_profile)
     basic_recommendations = get_popular_products_among_similar(similar_customers)
-    
+
     # Basic content-based filtering
     viewed_products = get_recently_viewed_products(customer_id)
     content_recommendations = find_similar_products_basic(viewed_products)
-    
+
     # Basic combination
     recommendations = merge_recommendations_basic(basic_recommendations, content_recommendations)
-    
+
     return filter_by_availability(recommendations, category)
-```
+```markdown
 
 #### MVP Email Personalization
-```
+```markdown
 MVP Personalization Tactics:
 - Basic dynamic subject lines
 - Basic personalized product recommendations
 - Basic timing optimization
 - Basic frequency management
 - Basic channel preferences
-```
+```markdown
 
 ---
 
@@ -406,16 +423,16 @@ MVP Personalization Tactics:
 
 ### MVP ROI Calculation Framework
 
-```
+```markdown
 MVP E-commerce Marketing ROI Formula:
 ROI = (Revenue from Marketing - Marketing Investment) / Marketing Investment × 100
 
 MVP Customer Lifetime Value Calculation:
 CLV = (Average Order Value) × (Purchase Frequency) × (Customer Lifespan) × (Profit Margin)
-```
+```markdown
 
 **MVP Example ROI Calculation:**
-```
+```markdown
 Monthly Marketing Investment: $30,000
 New Customers Acquired: 500
 Average Order Value: $75
@@ -426,7 +443,7 @@ Profit Margin: 20%
 CLV = $75 × 1.1 × 18 × 0.20 = $297
 Monthly Revenue from New Customers = 500 × $297 = $148,500
 ROI = ($148,500 - $30,000) / $30,000 × 100 = 395%
-```
+```markdown
 
 ---
 
@@ -531,8 +548,8 @@ ROI = ($148,500 - $30,000) / $30,000 × 100 = 395%
 
 ---
 
-**Document Classification:** Level 3 - Industry-Specific E-commerce Marketing Implementation  
-**Customer Focus:** Optimized for basic customer lifecycle and conversion-focused marketing strategies  
+**Document Classification:** Level 3 - Industry-Specific E-commerce Marketing Implementation
+**Customer Focus:** Optimized for basic customer lifecycle and conversion-focused marketing strategies
 **Next Steps:** Customize framework based on specific e-commerce business model and product categories
 
 This comprehensive e-commerce marketing framework establishes the foundation for basic customer lifecycle management through manual processes, basic personalization, and weekly optimization, enabling 15% conversion improvement in the MVP phase with a clear roadmap to 20% conversion improvement through real-time personalization and ML analytics in 2026+.

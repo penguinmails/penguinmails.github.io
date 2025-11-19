@@ -13,30 +13,35 @@ This document outlines the key user journeys for marketing agency owners who use
 ### **Agency Categories**
 
 #### **Digital Marketing Agencies**
+
 - Full-service digital marketing including email campaigns
 - Manage multiple client accounts simultaneously
 - Focus on lead generation and customer acquisition
 - Require scalable solutions for client growth
 
 #### **B2B Lead Generation Agencies**
+
 - Specialized in sales outreach and lead generation
 - Focus on email deliverability and response rates
 - Need precise targeting and campaign optimization
 - Track ROI and conversion metrics closely
 
 #### **Full-Service Agencies**
+
 - Comprehensive marketing and sales support
 - Email marketing as part of broader service offering
 - Coordinate email with other marketing channels
 - Require comprehensive reporting and analytics
 
 #### **Specialized Agencies**
+
 - Industry-specific or service-specific expertise
 - Niche targeting and specialized email strategies
 - Deep domain knowledge and expertise
 - Custom solutions for specific client needs
 
 ### **Common Business Needs**
+
 - Multi-client campaign management
 - Deliverability optimization across different domains
 - Comprehensive reporting and client analytics
@@ -51,6 +56,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ### **Journey 1: Client Onboarding & Setup**
 
 #### **Initial Client Assessment**
+
 1. **Client Discovery**
    - Understand client's business goals and target audience
    - Assess current email marketing setup and challenges
@@ -64,6 +70,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Establish client-specific branding and templates
 
 #### **Account Configuration**
+
 1. **Multi-Client Management**
    - Set up client account structure and permissions
    - Configure separate branding and templates per client
@@ -81,6 +88,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ### **Journey 2: Campaign Strategy & Development**
 
 #### **Strategic Planning**
+
 1. **Campaign Planning**
    - Develop comprehensive email marketing strategy
    - Plan campaign sequences and automation workflows
@@ -94,6 +102,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Coordinate content with broader marketing campaigns
 
 #### **Deliverability Optimization**
+
 1. **Domain Optimization**
    - Optimize sending domains for maximum deliverability
    - Configure proper authentication and security measures
@@ -111,6 +120,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ### **Journey 3: Campaign Execution & Management**
 
 #### **Daily Campaign Operations**
+
 1. **Campaign Launch**
    - Launch email campaigns and monitor initial performance
    - Monitor deliverability metrics and sender reputation
@@ -124,6 +134,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Generate regular performance reports for clients
 
 #### **Optimization & Improvement**
+
 1. **Performance Analysis**
    - Analyze campaign data and identify improvement opportunities
    - Test different subject lines, content, and sending times
@@ -141,6 +152,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ### **Journey 4: Client Success & Growth**
 
 #### **Client Relationship Management**
+
 1. **Regular Communication**
    - Maintain regular communication with clients
    - Provide updates on campaign performance and insights
@@ -154,6 +166,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Support clients in achieving their business objectives
 
 #### **Agency Growth & Scaling**
+
 1. **Service Expansion**
    - Develop new service offerings for existing clients
    - Identify upsell opportunities based on performance data
@@ -171,6 +184,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ## Agency Context
 
 ### **Key Pain Points**
+
 - Managing multiple client campaigns without sacrificing quality
 - Ensuring consistent deliverability across different client domains
 - Demonstrating ROI and value to clients consistently
@@ -178,6 +192,7 @@ This document outlines the key user journeys for marketing agency owners who use
 - Balancing client customization with operational efficiency
 
 ### **Success Metrics**
+
 - **Client Satisfaction**: High client retention and satisfaction scores
 - **Campaign Performance**: Strong deliverability and engagement metrics across clients
 - **Revenue Growth**: Increased agency revenue from email marketing services
@@ -189,6 +204,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ## Common Agency Workflows
 
 ### **Weekly Client Management**
+
 1. **Campaign Planning**
    - Review client campaign calendars and upcoming launches
    - Plan new campaigns based on client objectives
@@ -202,6 +218,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Schedule client calls and strategy discussions
 
 ### **Monthly Business Development**
+
 1. **Client Reviews**
    - Conduct comprehensive performance reviews with clients
    - Present campaign results and ROI analysis
@@ -215,6 +232,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Onboard new clients and set up campaigns
 
 ### **Quarterly Strategic Planning**
+
 1. **Performance Analysis**
    - Analyze quarterly performance across all clients
    - Identify trends and patterns in campaign data
@@ -232,6 +250,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ## Integration & Automation
 
 ### **Client Tool Integration**
+
 1. **CRM Integration**
    - Sync client CRM data with email campaigns
    - Track lead attribution and conversion metrics
@@ -245,6 +264,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Monitor customer journey and engagement patterns
 
 ### **Agency Operations**
+
 1. **Workflow Automation**
    - Automate routine campaign setup and management tasks
    - Create templates for common campaign types
@@ -262,6 +282,7 @@ This document outlines the key user journeys for marketing agency owners who use
 ## Agency Growth Strategies
 
 ### **Service Development**
+
 1. **Specialization**
    - Develop expertise in specific industries or verticals
    - Create specialized service offerings and packages
@@ -275,6 +296,7 @@ This document outlines the key user journeys for marketing agency owners who use
    - Use technology to improve efficiency and results
 
 ### **Market Expansion**
+
 1. **Client Base Growth**
    - Develop systematic client acquisition processes
    - Leverage client referrals and case studies
@@ -289,11 +311,12 @@ This document outlines the key user journeys for marketing agency owners who use
 
 ---
 
-**Related Documents**
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`user-stories/methodology.md`](../user-stories/methodology.md)
-- [`freelancer-journeys.md`](freelancer-journeys.md)
-- [`business-owner-journeys.md`](business-owner-journeys.md)
+### Related Documents
+
+- [`user-types-classification.md`](../user-types-classification)
+- [`user-stories/methodology.md`](../user-stories/methodology)
+- [`freelancer-journeys.md`](freelancer-journeys)
+- [`business-owner-journeys.md`](business-owner-journeys)
 
 ---
 

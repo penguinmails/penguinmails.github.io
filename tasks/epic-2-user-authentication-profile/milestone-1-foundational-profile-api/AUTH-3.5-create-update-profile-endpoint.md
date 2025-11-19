@@ -11,7 +11,8 @@ Create a protected PATCH API route at `/api/users/me/route.ts`. This endpoint wi
 
 ## Context
 
-Profile updates are essential for user self-service. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), users need to:
+Profile updates are essential for user self-service. According to the [Features & Capabilities](../../docs/features-capabilities/index), users need to:
+
 - **Customize their experience:** Update theme, language, and preferences
 - **Manage their account:** Update name and personal information
 - **Control notifications:** Configure notification preferences
@@ -152,6 +153,7 @@ export async function PATCH(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "id": "user-uuid",
@@ -168,6 +170,7 @@ export async function PATCH(request: NextRequest) {
 ```
 
 **Error Response (400):**
+
 ```json
 {
   "error": "Validation failed",
@@ -193,8 +196,8 @@ export async function PATCH(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - API patterns
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data protection
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - API patterns
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data protection
 
 ## Dependencies
 
@@ -214,5 +217,3 @@ export async function PATCH(request: NextRequest) {
 - [ ] Verify only authenticated user's data can be updated
 - [ ] Test error handling for database failures
 - [ ] Verify updatedAt timestamp is updated correctly
-
-

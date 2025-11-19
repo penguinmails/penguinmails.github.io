@@ -12,6 +12,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Token Architecture
 
 ### Token Categories
+
 - **Color**: Brand colors, semantic colors, and neutral palettes
 - **Typography**: Font families, sizes, weights, and line heights
 - **Spacing**: Consistent spacing scale for margins, padding, and layout
@@ -21,6 +22,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 - **Animation**: Motion design tokens for interactions
 
 ### Token Naming Convention
+
 ```css
 /* Pattern: --[category]-[property]-[variant]-[modifier] */
 --color-primary-500          /* Primary color, base shade */
@@ -29,7 +31,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --space-4                     /* Spacing scale, 4th step */
 --shadow-lg                   /* Shadow, large depth */
 --radius-md                   /* Border radius, medium */
-```
+```markdown
 
 ## Color Tokens
 
@@ -58,7 +60,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --color-brand-secondary-700: #a21caf;
 --color-brand-secondary-800: #86198f;
 --color-brand-secondary-900: #701a75;
-```
+```markdown
 
 ### Semantic Colors
 ```css
@@ -109,7 +111,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --color-semantic-info-700: #1d4ed8;
 --color-semantic-info-800: #1e40af;
 --color-semantic-info-900: #1e3a8a;
-```
+```markdown
 
 ### Neutral Colors
 ```css
@@ -136,7 +138,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --color-neutral-warm-700: #44403c;
 --color-neutral-warm-800: #292524;
 --color-neutral-warm-900: #1c1917;
-```
+```markdown
 
 ### Special Colors
 ```css
@@ -157,7 +159,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --color-border-default: #d1d5db;
 --color-border-strong: #9ca3af;
 --color-border-focus: #0ea5e9;
-```
+```markdown
 
 ## Typography Tokens
 
@@ -166,7 +168,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 --font-family-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
 --font-family-display: 'Cal Sans', 'Inter', sans-serif;
-```
+```markdown
 
 ### Font Sizes
 ```css
@@ -185,7 +187,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --font-size-text-sm: 0.875rem;      /* 14px - Small body text */
 --font-size-text-xs: 0.75rem;       /* 12px - Captions */
 --font-size-text-2xs: 0.625rem;     /* 10px - Micro text */
-```
+```markdown
 
 ### Font Weights
 ```css
@@ -197,7 +199,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --font-weight-bold: 700;
 --font-weight-extrabold: 800;
 --font-weight-black: 900;
-```
+```markdown
 
 ### Line Heights
 ```css
@@ -205,7 +207,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --line-height-normal: 1.5;     /* Body text */
 --line-height-relaxed: 1.625;  /* Spacious reading */
 --line-height-loose: 2;        /* Form inputs */
-```
+```markdown
 
 ### Letter Spacing
 ```css
@@ -214,7 +216,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --letter-spacing-wide: 0.025em;     /* Small caps, buttons */
 --letter-spacing-wider: 0.05em;     /* All caps */
 --letter-spacing-widest: 0.1em;     /* Special emphasis */
-```
+```markdown
 
 ## Spacing Tokens
 
@@ -256,7 +258,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --space-72: 18rem;               /* 288px */
 --space-80: 20rem;               /* 320px */
 --space-96: 24rem;               /* 384px */
-```
+```markdown
 
 ### Spacing Usage Guidelines
 - **space-1 to space-3**: Small gaps, borders, icon spacing
@@ -273,7 +275,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --size-height-md: 2.5rem;        /* 40px - Standard inputs/buttons */
 --size-height-lg: 3rem;          /* 48px - Large buttons */
 --size-height-xl: 3.5rem;        /* 56px - Extra large buttons */
-```
+```markdown
 
 ### Icon Sizes
 ```css
@@ -283,7 +285,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --size-icon-lg: 1.5rem;          /* 24px */
 --size-icon-xl: 2rem;            /* 32px */
 --size-icon-2xl: 2.5rem;         /* 40px */
-```
+```markdown
 
 ### Border Radius
 ```css
@@ -296,7 +298,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --radius-2xl: 1rem;              /* 16px */
 --radius-3xl: 1.5rem;            /* 24px */
 --radius-full: 9999px;           /* Fully rounded */
-```
+```markdown
 
 ### Border Width
 ```css
@@ -305,37 +307,37 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --border-width-medium: 2px;
 --border-width-thick: 4px;
 --border-width-heavy: 8px;
-```
+```markdown
 
 ## Shadow Tokens
 
 ### Elevation Scale
 ```css
 --shadow-none: none;
---shadow-xs: 0 1px 2px 0 rgb(0 0 0 .md);
---shadow-sm: 0 1px 3px 0 rgb(0 0 0 .md), 0 1px 2px -1px rgb(0 0 0 .md);
---shadow-md: 0 4px 6px -1px rgb(0 0 0 .md), 0 2px 4px -2px rgb(0 0 0 .md);
---shadow-lg: 0 10px 15px -3px rgb(0 0 0 .md), 0 4px 6px -4px rgb(0 0 0 .md);
---shadow-xl: 0 20px 25px -5px rgb(0 0 0 .md), 0 8px 10px -6px rgb(0 0 0 .md);
---shadow-2xl: 0 25px 50px -12px rgb(0 0 0 .md);
---shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 .md);
-```
+--shadow-xs: 0 1px 2px 0 rgb(0 0 0 );
+--shadow-sm: 0 1px 3px 0 rgb(0 0 0 ), 0 1px 2px -1px rgb(0 0 0 );
+--shadow-md: 0 4px 6px -1px rgb(0 0 0 ), 0 2px 4px -2px rgb(0 0 0 );
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 ), 0 4px 6px -4px rgb(0 0 0 );
+--shadow-xl: 0 20px 25px -5px rgb(0 0 0 ), 0 8px 10px -6px rgb(0 0 0 );
+--shadow-2xl: 0 25px 50px -12px rgb(0 0 0 );
+--shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 );
+```markdown
 
 ### Colored Shadows
 ```css
---shadow-primary-xs: 0 1px 2px 0 rgb(14 165 233 .md);
---shadow-primary-sm: 0 1px 3px 0 rgb(14 165 233 .md), 0 1px 2px -1px rgb(14 165 233 .md);
---shadow-primary-md: 0 4px 6px -1px rgb(14 165 233 .md), 0 2px 4px -2px rgb(14 165 233 .md);
+--shadow-primary-xs: 0 1px 2px 0 rgb(14 165 233 );
+--shadow-primary-sm: 0 1px 3px 0 rgb(14 165 233 ), 0 1px 2px -1px rgb(14 165 233 );
+--shadow-primary-md: 0 4px 6px -1px rgb(14 165 233 ), 0 2px 4px -2px rgb(14 165 233 );
 
---shadow-success-xs: 0 1px 2px 0 rgb(34 197 94 .md);
---shadow-success-sm: 0 1px 3px 0 rgb(34 197 94 .md), 0 1px 2px -1px rgb(34 197 94 .md);
+--shadow-success-xs: 0 1px 2px 0 rgb(34 197 94 );
+--shadow-success-sm: 0 1px 3px 0 rgb(34 197 94 ), 0 1px 2px -1px rgb(34 197 94 );
 
---shadow-warning-xs: 0 1px 2px 0 rgb(245 158 11 .md);
---shadow-warning-sm: 0 1px 3px 0 rgb(245 158 11 .md), 0 1px 2px -1px rgb(245 158 11 .md);
+--shadow-warning-xs: 0 1px 2px 0 rgb(245 158 11 );
+--shadow-warning-sm: 0 1px 3px 0 rgb(245 158 11 ), 0 1px 2px -1px rgb(245 158 11 );
 
---shadow-error-xs: 0 1px 2px 0 rgb(239 68 68 .md);
---shadow-error-sm: 0 1px 3px 0 rgb(239 68 68 .md), 0 1px 2px -1px rgb(239 68 68 .md);
-```
+--shadow-error-xs: 0 1px 2px 0 rgb(239 68 68 );
+--shadow-error-sm: 0 1px 3px 0 rgb(239 68 68 ), 0 1px 2px -1px rgb(239 68 68 );
+```markdown
 
 ## Animation Tokens
 
@@ -345,7 +347,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --duration-fast: 150ms;
 --duration-normal: 300ms;
 --duration-slow: 500ms;
-```
+```markdown
 
 ### Easing Functions
 ```css
@@ -353,27 +355,27 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --ease-out: cubic-bezier(0, 0, 0.2, 1);
 --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
 --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-```
+```markdown
 
 ### Animation Patterns
 ```css
 --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 --transition-normal: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
 --transition-slow: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
-```
+```markdown
 
 ## Breakpoint Tokens
 
 ### Responsive Breakpoints
 ```css
 --breakpoint-xs: 475px;          /* Extra small devices */
---breakpoint-sm: 640px;          .md) */
---breakpoint-md: 768px;          .md) */
---breakpoint-lg: 1024px;         .md) */
---breakpoint-xl: 1280px;         .md) */
---breakpoint-2xl: 1536px;        .md) */
---breakpoint-3xl: 1920px;        .md) */
-```
+--breakpoint-sm: 640px;          ) */
+--breakpoint-md: 768px;          ) */
+--breakpoint-lg: 1024px;         ) */
+--breakpoint-xl: 1280px;         ) */
+--breakpoint-2xl: 1536px;        ) */
+--breakpoint-3xl: 1920px;        ) */
+```markdown
 
 ### Container Sizes
 ```css
@@ -389,7 +391,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 --container-6xl: 72rem;           /* 1152px */
 --container-7xl: 80rem;           /* 1280px */
 --container-full: 100%;           /* Full width */
-```
+```markdown
 
 ## Implementation Guidelines
 
@@ -415,10 +417,10 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ---
 
 ## Related Documents
-- [Design System](...md) - Complete design system overview
-- [Component Library](...md) - Reusable component catalog
-- [Accessibility Guidelines](...md) - Inclusive design standards
-- [UI Library](...md) - Component usage guidelines and patterns
+- [Design System](..) - Complete design system overview
+- [Component Library](..) - Reusable component catalog
+- [Accessibility Guidelines](..) - Inclusive design standards
+- [UI Library](..) - Component usage guidelines and patterns
 
 **Keywords**: design tokens, design system, color palette, typography, spacing, shadows, breakpoints, responsive design, accessibility
 ---

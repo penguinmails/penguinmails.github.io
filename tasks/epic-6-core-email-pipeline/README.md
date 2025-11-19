@@ -7,12 +7,15 @@
 ## Overview
 
 ### Objective
+
 To develop the end-to-end, asynchronous pipeline for scheduling, sending, and tracking every email dispatched by the PenguinMails platform. This includes the scheduler that creates sending jobs, the worker that processes jobs via SMTP, and the tracking system to ingest engagement events.
 
 ### Description
+
 This epic implements the core engine of PenguinMails: a decoupled, high-throughput sending pipeline built on Redis queues and a standalone worker process. Deliverables include a Campaign Scheduler (producer), a standalone Email Processor worker (consumer), job payload schemas, and a high-performance public tracking API for opens and clicks that pushes analytics events into an asynchronous processing queue.
 
 ### Prerequisites
+
 - Epics 1–5 substantially complete (Redis configured, relevant DB schemas migrated, tenant management available).
 - Ability to run a separate Node.js process for the worker (distinct from Next.js server).
 
@@ -37,8 +40,8 @@ This epic implements the core engine of PenguinMails: a decoupled, high-throughp
 
 These docs contain project-level guidance and constraints relevant to implementation and operations for the email pipeline:
 
-- [Technical Architecture — Overview](../docs/technical/architecture/overview.md)
-- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards.md)
-- [Operations: Infrastructure & Management](../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Quick Setup / Getting Started](../docs/quick-setup.md)
-- [Compliance & Security Framework](../docs/compliance-security/enterprise/security-framework.md)
+- [Technical Architecture — Overview](../docs/technical/architecture/overview)
+- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure & Management](../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Quick Setup / Getting Started](../docs/quick-setup)
+- [Compliance & Security Framework](../docs/compliance-security/enterprise/security-framework)

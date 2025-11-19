@@ -21,17 +21,19 @@ We operate a 5-tier model:
 External logging/observability is an out-of-band component that complements these tiers.
 
 For detailed per-tier guides, see:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
+
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 1. OLTP – Operational Core
 
 Purpose:
+
 - Primary system of record for:
   - Tenants, users, organizations.
   - Campaigns, leads, mailboxes, domains.
@@ -40,52 +42,61 @@ Purpose:
   - Optionally, queue/job metadata if co-located.
 
 Characteristics:
+
 - Strong consistency, transactional semantics.
 - Multi-tenant isolation via RLS and clear ownership.
 - Optimized for OLTP access patterns.
 
 Key principles:
+
 - Store only what is required for correctness and core workflows.
 - No heavy content blobs.
 - No high-volume logs or analytics aggregates.
 
 Reference:
-- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`oltp-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+
+- [`oltp-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`oltp-mermaid-er`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 2. Content Database – Heavy Content Storage
 
 Purpose:
+
 - Dedicated tier for:
-  - Email.md).
+  - Email).
   - Attachments and large binary objects.
   - Archival content.
 
 Characteristics:
+
 - Opaque `storage_key` references from OLTP.
 - Optimized for storage efficiency, retention, compression/dedup.
 
 Key principles:
+
 - No core business entities.
 - No generalized logging, metrics, or infra configuration tables.
 - No analytics aggregates as primary concern.
 
 Core schema:
+
 - `content_objects`
 - `attachments`
 
 Reference:
-- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`content-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
-- [`content-database-analysis`](docs/implementation-technical/database-infrastructure.md)
+
+- [`content-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`content-mermaid-er`](docs/implementation-technical/database-infrastructure)
+- [`content-database-analysis`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 3. OLAP Analytics Warehouse
 
 Purpose:
+
 - Durable, query-optimized analytics for:
   - Billing/usage.
   - Campaign and sequence performance.
@@ -94,11 +105,13 @@ Purpose:
   - Compliance-relevant admin actions.
 
 Characteristics:
+
 - Aggregation-focused.
 - Partitioned and indexed for reporting.
 - Feeds BI tools and customer-facing analytics.
 
 Key principles:
+
 - Only business-critical aggregates and compliance summaries.
 - No live notifications.
 - No operational system events.
@@ -106,6 +119,7 @@ Key principles:
 - No heavy blobs.
 
 Canonical tables:
+
 - `billing_analytics`
 - `campaign_analytics`
 - `mailbox_analytics`
@@ -115,14 +129,16 @@ Canonical tables:
 - `admin_audit_log` (compliance-focused only)
 
 Reference:
-- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+
+- [`olap-analytics-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`olap-mermaid-er`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 4. Queue / Jobs Store
 
 Purpose:
+
 - Asynchronous workflow orchestration for:
   - Email sending.
   - Analytics aggregation.
@@ -130,6 +146,7 @@ Purpose:
   - Background maintenance.
 
 Characteristics:
+
 - Backed by:
   - Redis + Postgres, or
   - Dedicated Postgres tables.
@@ -137,6 +154,7 @@ Characteristics:
   - Job metadata (type, payload refs, status, attempts, errors, timestamps).
 
 Key principles:
+
 - Operational; not a long-term analytics or logging store.
 - References:
   - Payloads and entities via IDs/storage_keys rather than duplicating data.
@@ -144,28 +162,31 @@ Key principles:
   - Aggressively pruned; long-lived traces belong in external logging.
 
 Reference:
-- [`queue-system-implementation-guide`](docs/implementation-technical/database-infrastructure.md)
+
+- [`queue-system-implementation-guide`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 5. Notifications & System Events Database
 
 Purpose:
+
 - Operational store for:
   - In-app user/admin notifications.
-  - Curated admin.md).
+  - Curated admin).
 
 Characteristics:
+
 - Independent from OLAP.
 - Optimized for:
   - Fast reads on login.
-  - Status updates (read/resolved.md).
-  - Bounded retention (short.md).
+  - Status updates (read/resolved).
+  - Bounded retention (short).
 
 Core tables:
 
 - `notifications`:
-  - User/admin visible notifications (in_app/email.md).
+  - User/admin visible notifications (in_app/email).
   - Fields:
     - id, user_id, tenant_id, type, title, message, channel
     - is_read, created_at, read_at, expires_at, deleted_at
@@ -183,6 +204,7 @@ Core tables:
     - Not raw logs; mid-term history only.
 
 Key principles:
+
 - Do not place these in OLAP.
 - Use Redis only as:
   - Cache and rate-limiter (never as primary store).
@@ -190,14 +212,16 @@ Key principles:
   - Holds raw/full-fidelity events and metrics.
 
 Reference:
-- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
-- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure.md)
+
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+- [`notifications-mermaid-er`](docs/implementation-technical/database-infrastructure)
 
 ---
 
 ## 6. External Logging, Analytics, and Observability (Out-of-Band)
 
 Purpose:
+
 - Handle high-volume, detailed telemetry:
   - Clickstream and product analytics.
   - Job/queue traces.
@@ -206,12 +230,14 @@ Purpose:
   - Security/forensic logs.
 
 Characteristics:
+
 - Implemented via:
   - PostHog or equivalent.
-  - Centralized logging (ELK/Loki.md).
-  - Metrics/tracing (Prometheus/OpenTelemetry.md).
+  - Centralized logging (ELK/Loki).
+  - Metrics/tracing (Prometheus/OpenTelemetry).
 
 Key principles:
+
 - Primary sink for:
   - Raw, high-volume event data.
 - Feeds:
@@ -221,7 +247,8 @@ Key principles:
   - A replacement for OLTP/Notifications DB correctness.
 
 Reference:
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure.md)
+
+- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
 
 ---
 
@@ -236,11 +263,12 @@ Reference:
 - Queue / Jobs:
   - Asynchronous execution orchestration.
 - Notifications DB:
-  - User.md).
+  - User).
 - External Logging/Analytics:
   - Telemetry, raw events, and observability; feeds OLAP when needed.
 
 When designing new features:
+
 - Use this guide plus per-tier docs to decide:
   - Which tier owns the data.
   - How it should be retained.
@@ -264,7 +292,7 @@ How the tiers behave under failures, and how we avoid abusing OLAP or logs for l
   - Jobs depending on OLTP back off and retry.
   - On recovery, queues drain and derived data (OLAP, notifications) reconverge with OLTP.
 
-2) Content DB outage
+1) Content DB outage
 
 - Impact:
   - Access to bodies/attachments limited.
@@ -276,7 +304,7 @@ How the tiers behave under failures, and how we avoid abusing OLAP or logs for l
   - Core metadata flows continue.
   - Admin_system_events/notifications can highlight content issues without involving OLAP.
 
-3) OLAP outage
+1) OLAP outage
 
 - Impact:
   - Analytics dashboards unavailable or stale.
@@ -288,7 +316,7 @@ How the tiers behave under failures, and how we avoid abusing OLAP or logs for l
   - System continues to operate.
   - This is why we keep OLAP out of live notification/system-event storage.
 
-4) Queue / Jobs outage
+1) Queue / Jobs outage
 
 - Impact:
   - Delayed async processing (emails, aggregates, some notifications).
@@ -298,7 +326,7 @@ How the tiers behave under failures, and how we avoid abusing OLAP or logs for l
   - Jobs resume when restored.
   - No OLAP write-dependence for correctness.
 
-5) Notifications DB outage
+1) Notifications DB outage
 
 - Impact:
   - In-app notifications and curated admin events temporarily unavailable.
@@ -312,7 +340,7 @@ How the tiers behave under failures, and how we avoid abusing OLAP or logs for l
 - Isolation:
   - Notifications DB issues do not impact OLTP/OLAP schema correctness.
 
-6) External logging outage
+1) External logging outage
 
 - Impact:
   - Reduced observability.

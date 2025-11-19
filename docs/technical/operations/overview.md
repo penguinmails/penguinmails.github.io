@@ -13,11 +13,12 @@ description: "Deployment, monitoring, and operational procedures for enterprise-
 
 **Operational Excellence**: Backed by **enterprise-grade monitoring and alerting** with <15 minute incident response times, automated rollback procedures, and 24/7 operational oversight that ensures your campaigns are always protected.
 
-**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](../architecture/overview.md) and [API integration](../integration/overview.md) to provide seamless, worry-free campaign management.
+**User Journey Integration**: These operational capabilities are part of your complete [technical experience journey] - connecting to [infrastructure setup](../architecture/overview) and [API integration](/docs/technical/integration/overview) to provide seamless, worry-free campaign management.
 
 PenguinMails operates on a comprehensive technical operations framework designed for **99.9% uptime guarantee** with zero-downtime deployments, automated monitoring, and enterprise-grade disaster recovery capabilities.
 
 ### **Operational Mission**
+
 Deliver **mission-critical email infrastructure** with enterprise reliability, ensuring that cold email campaigns continue seamlessly while maintaining the highest standards of deliverability, compliance, and performance.
 
 ---
@@ -26,20 +27,22 @@ Deliver **mission-critical email infrastructure** with enterprise reliability, e
 
 ### **Zero-Downtime Deployment Strategy**
 
-**Blue-Green Deployment Pattern**
+## Blue-Green Deployment Pattern
+
 - **Environment Strategy**: Development → Staging → Production with full mirroring
 - **Migration Framework**: Database schema versioning with automatic rollback capabilities
 - **Automated Testing**: Pre-production validation with performance impact assessment
 - **Rollback Procedures**: Emergency rollback scripts with traffic diversion protocols
 
-**Database Migration Architecture**
+## Database Migration Architecture
+
 ```yaml
 Migration Types:
   Data-Only: Zero downtime, online migration
-  DDL Add: Minimal downtime, deploy-first approach  
+  DDL Add: Minimal downtime, deploy-first approach
   DDL Modify: Variable downtime, blue-green deployment
   DDL Delete: High downtime, deprecation-first approach
-```
+```markdown
 
 **Environment Management**
 - **Development**: Immediate deployments, relaxed rollback requirements
@@ -112,7 +115,7 @@ Migration Types:
 - **Load Balancing**: Geographic load balancing for optimal performance
 
 **Backup & Recovery Strategy**
-- **4-Tier Backup Architecture**: 
+- **4-Tier Backup Architecture**:
   - **Tier 1**: Real-time transaction log backup (RTO: 15 minutes)
   - **Tier 2**: Daily full database backup (RTO: 1 hour)
   - **Tier 3**: Weekly incremental backup (RTO: 4 hours)
@@ -301,5 +304,5 @@ Migration Types:
 *Technical Operations ensures that PenguinMails delivers enterprise-grade reliability, performance, and security. Our comprehensive operational framework guarantees 99.9% uptime while continuously optimizing for cost efficiency and customer satisfaction.*
 
 ---
-*Previous: [Technical Architecture Overview](../architecture/overview.md) | Next: [Integration & API Overview](../integration/overview.md) →*
+*Previous: [Technical Architecture Overview](../architecture/overview) | Next: [Integration & API Overview](/docs/technical/integration/overview) →*
 ---

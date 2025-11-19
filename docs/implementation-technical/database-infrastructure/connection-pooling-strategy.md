@@ -1,6 +1,7 @@
 # Database Connection Pooling Strategy
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This connection pooling strategy supports our enterprise infrastructure framework by providing comprehensive database performance optimization and resource management for the PenguinMails multi-tenant platform with 99.9% uptime guarantees.
 
 **Technical Authority**: Our pooling architecture integrates with enterprise-grade systems featuring auto-scaling capabilities, comprehensive monitoring, and resource optimization across OLTP, content, queue, and analytics database tiers.
@@ -16,11 +17,12 @@
 This guide defines the comprehensive connection pooling strategy for PenguinMails' 4-tier database architecture. It addresses critical production performance issues and prevents connection exhaustion while enabling horizontal scaling.
 
 ### 🎯 **Purpose**
-- **Quality-Assured Performance Optimization**: All configurations follow [QA Performance Monitoring Framework](../quality-assurance.md) with automated validation
-- **Resource Management**: Prevent connection exhaustion with [QA Critical Issue Identification](../quality-assurance.md) and monitoring
-- **Scalability**: Enable auto-scaling with [QA Continuous Improvement Framework](../quality-assurance.md) integration
-- **Monitoring**: Provide visibility with [QA Issue Detection & Response](../quality-assurance.md) procedures
-- **Quality Assurance**: [Success Measurement Framework](../quality-assurance.md) validation for all pool configurations
+
+- **Quality-Assured Performance Optimization**: All configurations follow [QA Performance Monitoring Framework](/docs/business/quality-assurance) with automated validation
+- **Resource Management**: Prevent connection exhaustion with [QA Critical Issue Identification](/docs/business/quality-assurance) and monitoring
+- **Scalability**: Enable auto-scaling with [QA Continuous Improvement Framework](/docs/business/quality-assurance) integration
+- **Monitoring**: Provide visibility with [QA Issue Detection & Response](/docs/business/quality-assurance) procedures
+- **Quality Assurance**: [Success Measurement Framework](/docs/business/quality-assurance) validation for all pool configurations
 
 ⭐ **Quick Configuration** (10 minutes) - Basic pooling setup and monitoring
 ⭐⭐ **Standard Implementation** (30 minutes) - Production-grade configuration with auto-scaling
@@ -42,7 +44,9 @@ This guide defines the comprehensive connection pooling strategy for PenguinMail
 ### **Pool Configuration Standards**
 
 #### **Connection Pool Parameters**
+
 ⭐⭐ **Standard Configuration**
+
 ```yaml
 Standard Configuration:
   min_connections: 2-5 (baseline load)
@@ -53,13 +57,13 @@ Standard Configuration:
   acquire_timeout_seconds: 60
   leak_detection_threshold_seconds: 1800 (30 minutes)
   validation_query: "SELECT 1"
-  
+
 Timeout Standards:
   OLTP:      Fast (15-30s) - Transaction-heavy
-  Content:   Medium (60s) - Content operations  
+  Content:   Medium (60s) - Content operations
   Queue:     Fast (15-20s) - High concurrency
   OLAP:      Slow (90-120s) - Complex queries
-```
+```markdown
 
 ---
 
@@ -70,7 +74,7 @@ Timeout Standards:
 ```sql
 -- OLTP Primary Pool (Transactional Operations)
 INSERT INTO connection_pool_config (
-    tier, pool_name, min_connections, max_connections, 
+    tier, pool_name, min_connections, max_connections,
     connection_timeout_seconds, idle_timeout_seconds, max_lifetime_seconds
 ) VALUES (
     'oltp', 'primary_pool', 5, 50, 30, 600, 3600
@@ -80,7 +84,7 @@ INSERT INTO connection_pool_config (
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds,
     max_lifetime_seconds = EXCLUDED.max_lifetime_seconds;
-```
+```markdown
 
 **Performance Targets:**
 - **Query Response Time**: <200ms for 95th percentile
@@ -100,7 +104,7 @@ INSERT INTO connection_pool_config (
 ) ON CONFLICT (tier, pool_name) DO UPDATE SET
     min_connections = EXCLUDED.min_connections,
     max_connections = EXCLUDED.max_connections;
-```
+```markdown
 
 ---
 
@@ -120,7 +124,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 **Performance Targets:**
 - **Content Retrieval**: <1s for email content access
@@ -141,7 +145,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 ---
 
@@ -161,7 +165,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 **Performance Targets:**
 - **Queue Processing**: <20s average processing time
@@ -182,7 +186,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 ---
 
@@ -202,7 +206,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 **Performance Targets:**
 - **Query Response**: <5s for complex analytics queries
@@ -223,7 +227,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```
+```markdown
 
 ---
 
@@ -237,12 +241,12 @@ Auto-Scaling Triggers:
     - Increase max_connections by 25%
     - Set minimum to current active + 5
     - Trigger investigation for root cause
-    
+
   Critical Usage (95%+ for 2 minutes):
     - Emergency increase max_connections by 50%
     - Generate critical alert
     - Consider connection leak investigation
-    
+
   Low Usage (<30% for 30 minutes):
     - Decrease max_connections by 20%
     - Reset to baseline minimums
@@ -252,7 +256,7 @@ Scaling Limits:
   Maximum Scale: 2x baseline max_connections
   Minimum Scale: 50% of baseline max_connections
   Scale Cooldown: 10 minutes between scaling events
-```
+```markdown
 
 ### **Progressive Scaling Strategy**
 ⭐⭐⭐ **Enterprise Scaling** (30 minutes)
@@ -304,14 +308,14 @@ SELECT
         WHEN cpm.connection_errors_count > 0 THEN 'WARNING - Connection errors detected'
         ELSE 'HEALTHY'
     END as status,
-    
+
     -- QA Framework Integration: Performance Alert conditions
     CASE
         WHEN cpm.connection_usage_rate > 90 THEN 'QA_ALERT_REQUIRED'
         WHEN cpm.pending_acquires > 5 THEN 'QA_INVESTIGATION_NEEDED'
         ELSE 'QA_MONITORING_NORMAL'
     END as qa_alert_level
-    
+
 FROM connection_pool_config cpc
 JOIN connection_pool_metrics cpm ON cpc.id = cpm.pool_config_id
 WHERE cpm.collected_at >= NOW() - INTERVAL '5 minutes'
@@ -319,8 +323,8 @@ AND (cpm.connection_usage_rate > 90 OR cpm.pending_acquires > 5)
 ORDER BY cpm.connection_usage_rate DESC;
 
 -- QA Integration: Comment explaining QA framework integration
-COMMENT ON VIEW connection_pool_diagnosis IS 'QA Framework Integration: Pool exhaustion diagnosis with quality assurance alerting and [Critical Issue Identification](../quality-assurance.md) protocols';
-```
+COMMENT ON VIEW connection_pool_diagnosis IS 'QA Framework Integration: Pool exhaustion diagnosis with quality assurance alerting and [Critical Issue Identification](/docs/business/quality-assurance) protocols';
+```markdown
 
 ### **Performance Monitoring Integration**
 ⭐⭐ **Standard Monitoring** (15 minutes)
@@ -331,19 +335,19 @@ PostHog Dashboard Integration:
     - Active vs Idle Connection Ratios
     - Query Performance by Pool Type
     - Auto-scaling Events and Triggers
-    
+
   Alert Thresholds:
     - Pool Usage > 85% (Warning)
     - Pool Usage > 95% (Critical)
     - Pending Acquires > 5 (Investigation)
     - Connection Errors > 0 (Alert)
-    
+
   Monitoring Frequency:
     - Real-time: Pool utilization
     - 5-minute: Connection metrics
     - 15-minute: Performance trends
     - Hourly: Scaling decisions
-```
+```markdown
 
 ### **Business Model Integration**
 ⭐⭐⭐ **Enterprise Implementation**
@@ -392,21 +396,21 @@ PostHog Dashboard Integration:
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](../operations-management.md))** - Central operational hub
-- **[Backup & Recovery Procedures](..md))** - Data protection during incidents
-- **[Quality Assurance Testing Protocols](../quality-assurance.md))** - Performance monitoring procedures
+- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management))** - Central operational hub
+- **[Backup & Recovery Procedures](.))** - Data protection during incidents
+- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Performance monitoring procedures
 
 ### **Technical References**
-- **[OLTP Schema Guide](..md))** - OLTP pool integration
-- **[Content Database Schema Guide](..md))** - Content pool optimization
-- **[Queue System Implementation Guide](..md))** - Queue pool management
-- **[OLAP Analytics Schema Guide](..md))** - Analytics pool configuration
+- **[OLTP Schema Guide](.))** - OLTP pool integration
+- **[Content Database Schema Guide](.))** - Content pool optimization
+- **[Queue System Implementation Guide](.))** - Queue pool management
+- **[OLAP Analytics Schema Guide](.))** - Analytics pool configuration
 
 ### **Strategic Documentation**
-- **[Database Infrastructure Management](..md))** - Main database infrastructure framework
-- **[Architecture System](../architecture-system.md)** - System architecture decisions
-- **[Business Strategy Overview](../../business/strategy.md))** - Strategic business alignment
-- **[Operations Analytics Overview](../../operations-analytics.md))** - Main operations analytics framework
+- **[Database Infrastructure Management](.))** - Main database infrastructure framework
+- **[Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)** - System architecture decisions
+- **[Business Strategy Overview](../../business/strategy))** - Strategic business alignment
+- **[Operations Analytics Overview](../../operations-analytics))** - Main operations analytics framework
 
 ---
 
@@ -417,9 +421,9 @@ PostHog Dashboard Integration:
 | 2025-11-01 | Initial version - Comprehensive pooling strategy | Database Ops Team |
 | [Next Review] | [Monthly review and optimization] | Database Ops Team |
 
-**Document Classification**: Technical Operations  
-**Review Cycle**: Monthly  
-**Testing Required**: Load testing under various traffic patterns  
+**Document Classification**: Technical Operations
+**Review Cycle**: Monthly
+**Testing Required**: Load testing under various traffic patterns
 **Team Training**: All developers and database operations team
 
 This strategy ensures optimal database connection management across all tiers while providing scalability and reliability for production workloads with enterprise-grade performance standards.

@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: The real-time event processing system with machine learning integration delivers predictive analytics and automated optimization recommendations that drive campaign success and ROI growth.
 
-**User Journey Integration**: This analytics pipeline supports your complete [analytics experience](../core-features/analytics/overview.md) and [performance optimization](../business/performance.md) with real-time insights and predictive modeling.
+**User Journey Integration**: This analytics pipeline supports your complete [analytics experience](../core-features/analytics/overview) and [performance optimization](../business/performance) with real-time insights and predictive modeling.
 
 ---
 
@@ -31,7 +31,7 @@ flowchart LR
         USER[User Events<br/>Login/Action/Error]
         INFRA[Infrastructure Events<br/>SMTP/DNS/VPS]
     end
-    
+
     %% Event Processing
     subgraph "Event Processing Pipeline"
         COLLECTOR[Event Collector]
@@ -39,64 +39,64 @@ flowchart LR
         ENRICHER[Event Enricher]
         ROUTER[Event Router]
     end
-    
+
     %% Storage Layer
     subgraph "Storage Layer"
         EVENT_STORE[Event Store<br/>Raw Events]
         AGGREGATOR[Aggregator<br/>Time-based Buckets]
         CACHE[Redis Cache<br/>Real-time Data]
     end
-    
+
     %% Analytics Layer
     subgraph "Analytics Processing"
         ETL[ETL Pipeline<br/>Daily Aggregation]
         ML[Machine Learning<br/>Pattern Recognition]
         REPORT[Report Generator<br/>Business Metrics]
     end
-    
+
     %% Output
     subgraph "Analytics Output"
         DASHBOARD[Real-time Dashboard]
         ALERTS[Alert System]
         API[Analytics API]
     end
-    
+
     %% Flow
     EMAIL --> COLLECTOR
     CAMPAIGN --> COLLECTOR
     USER --> COLLECTOR
     INFRA --> COLLECTOR
-    
+
     COLLECTOR --> VALIDATOR
     VALIDATOR --> ENRICHER
     ENRICHER --> ROUTER
-    
+
     ROUTER --> EVENT_STORE
     ROUTER --> AGGREGATOR
     ROUTER --> CACHE
-    
+
     EVENT_STORE --> ETL
     AGGREGATOR --> ETL
     ETL --> ML
     ML --> REPORT
-    
+
     REPORT --> DASHBOARD
     REPORT --> ALERTS
     REPORT --> API
     CACHE --> DASHBOARD
-    
+
     classDef source fill:#e3f2fd
     classDef processing fill:#f3e5f5
     classDef storage fill:#e8f5e9
     classDef analytics fill:#fff3e0
     classDef output fill:#fce4ec
-    
+
     class EMAIL,CAMPAIGN,USER,INFRA source
     class COLLECTOR,VALIDATOR,ENRICHER,ROUTER processing
     class EVENT_STORE,AGGREGATOR,CACHE storage
     class ETL,ML,REPORT analytics
     class DASHBOARD,ALERTS,API output
-```
+```markdown
 
 ## Analytics Pipeline Stages
 

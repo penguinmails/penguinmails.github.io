@@ -22,5 +22,5 @@ Create `syncSmtpIps(ipArray)` in `/lib/services/infra.service.ts` that accepts I
 
 ## Related documentation
 
-- [Technical Architecture — Overview](../../docs/technical/architecture/overview.md)
-- [Development Standards (DB operations & indexing)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Technical Architecture — Overview](../../docs/technical/architecture/overview)
+- [Development Standards (DB operations & indexing)](../../docs/implementation-technical/development-guidelines/development-standards)

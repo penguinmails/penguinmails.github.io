@@ -11,7 +11,8 @@ Create a POST API route at `/api/auth/login/route.ts`. It will validate the requ
 
 ## Context
 
-User login is essential for authentication. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), NileDB handles:
+User login is essential for authentication. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), NileDB handles:
+
 - **Password verification**
 - **Session creation**
 - **Cookie management**
@@ -107,8 +108,8 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Authentication flow
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - User login
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Authentication flow
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - User login
 
 ## Dependencies
 
@@ -127,5 +128,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify password is not returned in response
 - [ ] Test that session cookie works for subsequent authenticated requests
 - [ ] Test error handling for NileDB failures
-
-

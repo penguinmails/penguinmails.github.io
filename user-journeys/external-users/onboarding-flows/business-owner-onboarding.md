@@ -13,6 +13,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ### **Phase 1: Business Assessment & Goal Setting**
 
 #### **Business Discovery (Day 1)**
+
 1. **Current State Assessment**
    - Evaluate existing email marketing efforts and results
    - Assess current customer base and engagement levels
@@ -26,6 +27,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Plan initial email marketing objectives and timelines
 
 #### **Goal Setting & Planning (Day 1-2)**
+
 1. **Business Objectives Definition**
    - Set specific, measurable email marketing goals
    - Identify target customer segments and campaigns
@@ -43,6 +45,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ### **Phase 2: Simple Platform Setup**
 
 #### **Account Configuration (Day 2)**
+
 1. **Basic Account Setup**
    - Create PenguinMails business account
    - Configure business branding and contact information
@@ -56,6 +59,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Establish basic reporting and analytics
 
 #### **Customer Data Import (Day 2-3)**
+
 1. **Customer List Preparation**
    - Organize existing customer data and email addresses
    - Clean and validate email lists and subscriber information
@@ -73,6 +77,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ### **Phase 3: First Campaign Launch**
 
 #### **Welcome Campaign Creation (Day 3-4)**
+
 1. **Simple Welcome Sequence**
    - Create basic welcome email series for new subscribers
    - Develop compelling content that provides immediate value
@@ -86,6 +91,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Ensure content aligns with business goals and messaging
 
 #### **Customer Re-engagement (Day 4-5)**
+
 1. **Existing Customer Campaigns**
    - Create campaigns to re-engage existing customers
    - Develop offers and content that drive customer action
@@ -103,6 +109,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ### **Phase 4: Business Integration & Automation**
 
 #### **Business Process Integration (Week 2)**
+
 1. **CRM Integration**
    - Integrate email marketing with existing CRM system
    - Set up automated lead handoff and customer workflows
@@ -116,6 +123,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Track email attribution in sales pipeline
 
 #### **Customer Journey Optimization (Week 2-3)**
+
 1. **Customer Lifecycle Automation**
    - Create automated sequences for different customer stages
    - Set up abandoned cart or service recovery campaigns
@@ -133,6 +141,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ### **Phase 5: Business Growth & Scaling**
 
 #### **Strategic Expansion (Month 2)**
+
 1. **Advanced Campaign Types**
    - Develop sophisticated segmentation strategies
    - Create advanced automation and trigger-based campaigns
@@ -146,6 +155,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Track cross-channel attribution and performance
 
 #### **Business Impact Measurement (Month 2-3)**
+
 1. **ROI Tracking & Analysis**
    - Track revenue attribution from email marketing
    - Measure customer lifetime value and acquisition costs
@@ -163,18 +173,21 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Business Owner Onboarding Success Metrics
 
 ### **Quick Wins (First 30 Days)**
+
 - Welcome email series launched and performing
 - Existing customer re-engagement campaigns active
 - Basic automation workflows running successfully
 - Email deliverability rates above 95%
 
 ### **Business Impact (First 60 Days)**
+
 - Measurable revenue from email marketing campaigns
 - Improved customer engagement and satisfaction
 - Increased customer retention and repeat purchases
 - Positive ROI from email marketing investment
 
 ### **Strategic Outcomes (First 90 Days)**
+
 - Comprehensive email marketing strategy implemented
 - Advanced automation and personalization active
 - Strong integration with business processes and systems
@@ -185,18 +198,21 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Business Owner Onboarding Resources
 
 ### **Business-Focused Tools**
+
 - Simple, intuitive email marketing interface
 - Pre-built templates and automation workflows
 - Business-focused reporting and analytics dashboards
 - Integration guides for common business tools
 
 ### **Education & Training**
+
 - Business-focused email marketing training
 - Best practices for business email communication
 - ROI measurement and business impact analysis
 - Industry-specific strategies and case studies
 
 ### **Support & Assistance**
+
 - Business owner support and consultation
 - Regular check-ins during onboarding process
 - Priority access to customer success team
@@ -207,6 +223,7 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Common Business Owner Onboarding Challenges
 
 ### **Time & Resource Constraints**
+
 1. **Limited Time**
    - Balancing email marketing with other business priorities
    - Finding time for platform learning and setup
@@ -220,6 +237,7 @@ This document outlines the comprehensive onboarding journey for business owners 
    - Ensuring platform supports business goals
 
 ### **Business Integration**
+
 1. **System Integration**
    - Integrating with existing business tools and processes
    - Ensuring data consistency across business systems
@@ -237,18 +255,21 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Business Owner Onboarding Best Practices
 
 ### **Business-First Approach**
+
 - Focus on business outcomes rather than technical features
 - Start with simple, high-impact campaigns and automation
 - Measure success by business metrics, not just email metrics
 - Integrate email marketing with existing business processes
 
 ### **Simplified Implementation**
+
 - Use pre-built templates and automation workflows
 - Focus on essential features first, then expand capabilities
 - Leverage business-focused support and training resources
 - Optimize for ease of use and minimal time investment
 
 ### **Growth-Oriented Strategy**
+
 - Plan for growth and scaling from the beginning
 - Invest in advanced features as business grows
 - Develop team capabilities and expertise over time
@@ -259,24 +280,28 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Industry-Specific Business Owner Flows
 
 ### **E-commerce Businesses**
+
 - Focus on product-focused email marketing
 - Emphasize sales and conversion optimization
 - Target customer retention and repeat purchases
 - Integrate with e-commerce platforms and shopping carts
 
 ### **Service Businesses**
+
 - Focus on lead generation and appointment setting
 - Emphasize relationship building and trust
 - Target service awareness and customer education
 - Integrate with booking and scheduling systems
 
 ### **B2B Companies**
+
 - Focus on lead nurturing and sales enablement
 - Emphasize relationship development and account management
 - Target prospect education and sales process support
 - Integrate with CRM and sales automation tools
 
 ### **SaaS Companies**
+
 - Focus on trial-to-paid conversion and user onboarding
 - Emphasize product adoption and user success
 - Target engagement and retention optimization
@@ -287,18 +312,21 @@ This document outlines the comprehensive onboarding journey for business owners 
 ## Business Owner Growth Milestones
 
 ### **30-Day Milestones**
+
 - Basic email marketing platform fully configured
 - First automated campaigns generating engagement
 - Customer data properly organized and segmented
 - Initial ROI and business impact measurable
 
 ### **60-Day Milestones**
+
 - Multiple campaign types successfully running
 - Strong email deliverability and engagement rates
 - Positive ROI demonstrated from email marketing
 - Integration with business systems and processes
 
 ### **90-Day Milestones**
+
 - Comprehensive email marketing strategy implemented
 - Advanced automation and personalization active
 - Significant business impact and revenue attribution
@@ -306,11 +334,12 @@ This document outlines the comprehensive onboarding journey for business owners 
 
 ---
 
-**Related Documents**
-- [`business-owner-journeys.md`](../business-owner-journeys.md)
-- [`user-types-classification.md`](../user-types-classification.md)
-- [`agencies-onboarding.md`](agencies-onboarding.md)
-- [`enterprise-onboarding.md`](enterprise-onboarding.md)
+### Related Documents
+
+- [`business-owner-journeys.md`](../business-owner-journeys)
+- [`user-types-classification.md`](../user-types-classification)
+- [`agencies-onboarding.md`](agencies-onboarding)
+- [`enterprise-onboarding.md`](enterprise-onboarding)
 
 ---
 

@@ -1,9 +1,11 @@
 # Notifications & System Events ER Diagram (Mermaid)
 
 This diagram visualizes the dedicated Notifications & System Events database as defined in:
-- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure.md)
+
+- [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
 
 It is an operational tier:
+
 - Not OLAP.
 - Not Content DB.
 - Not external logging.
@@ -62,7 +64,7 @@ erDiagram
 
   %% - notifications.user_id / tenant_id correspond to OLTP users/tenants.
   %% - admin_system_events.tenant_id / user_id reference affected contexts.
-  %% - Jobs.md) create notifications and events,
+  %% - Jobs) create notifications and events,
   %%   but job tables are modeled in the Queue tier docs, not here.
 
   %% ==========================

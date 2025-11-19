@@ -1,6 +1,7 @@
 # Email System Implementation
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This email system implementation supports our enterprise infrastructure framework by providing comprehensive email architecture, database design, and implementation strategies for the PenguinMails cold email infrastructure platform.
 
 **Technical Authority**: Our message-focused email architecture integrates with enterprise database systems, queue processing frameworks, and email delivery platforms featuring optimized storage, efficient processing, and comprehensive analytics capabilities.
@@ -15,8 +16,8 @@
 
 Design specification for a clear, intuitive email system architecture using message-focused table naming creates a natural email hierarchy: **message analytics → email content → attachments**.
 
-✅ **email_messages** = Message analytics and metadata (defined)  
-✅ **email_content** = Email body content (text, html, headers) (defined)  
+✅ **email_messages** = Message analytics and metadata (defined)
+✅ **email_content** = Email body content (text, html, headers) (defined)
 ✅ **attachments** = Email files and binary content (defined)
 
 This creates a natural email hierarchy that supports enterprise-scale email processing with optimal performance and maintainability.
@@ -26,9 +27,10 @@ This creates a natural email hierarchy that supports enterprise-scale email proc
 ## Database Architecture
 
 ### Email System Hierarchy
-```
+
+```markdown
 📧 Complete Email Structure
-├── email_messages (Message Analytics.md)
+├── email_messages (Message Analytics)
 │   ├── campaign_id, lead_id, direction, status
 │   ├── from_email, to_email, subject
 │   └── storage_key → email_content
@@ -43,10 +45,10 @@ This creates a natural email hierarchy that supports enterprise-scale email proc
     ├── filename, mime_type, size_bytes
     ├── content BYTEA (binary data)
     └── parent_storage_key ← email_content
-```
+```markdown
 
 ### Database Tier Integration
-```
+```markdown
 OLTP Database (Operational):
 ├── campaigns (campaign definitions)
 ├── campaign_sequence_steps (execution orchestration) ⭐
@@ -55,7 +57,7 @@ OLTP Database (Operational):
 └── leads, templates (business data)
 
 Content Database (Analytical):
-├── email_messages (message analytics.md) ⭐
+├── email_messages (message analytics) ⭐
 ├── email_content (email bodies, attachments)
 ├── transactional_emails, notifications
 └── content access and search indexes
@@ -68,7 +70,7 @@ OLAP Analytics (Business Intelligence):
 Queue System (Job Processing):
 ├── jobs, job_logs, job_queues
 └── analytics_jobs (for ETL pipeline)
-```
+```markdown
 
 ---
 
@@ -80,7 +82,7 @@ Queue System (Job Processing):
 email_messages:    "This table tracks email message analytics and metadata"
 email_content:     "This table stores the actual email content (body, headers)"
 attachments:       "This table stores email file attachments"
-```
+```markdown
 
 ### 2. **Natural Database Relationships**
 ```sql
@@ -94,7 +96,7 @@ FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1;
-```
+```markdown
 
 ### 3. **Performance Optimizations**
 - **Single Content Storage**: Email content stored once in email_content
@@ -105,31 +107,31 @@ WHERE m.tenant_id = $1;
 ### 4. **Rich Analytics Capabilities**
 ```sql
 -- Email size and attachment analysis
-SELECT 
+SELECT
     m.direction,
     m.status,
     COUNT(*) as email_count,
-    AVG(c.raw_size_bytes .md) as avg_size_kb,
+    AVG(c.raw_size_bytes ) as avg_size_kb,
     COUNT(a.*) as total_attachments
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1
 GROUP BY m.direction, m.status;
-```
+```markdown
 
 ---
 
 ## Data Flow Architecture
 
 ### Complete Email Processing Flow
-```
+```markdown
 1. Event Reception: IMAP/Cronjob/Endpoint → Queue Producer
-2. Queue Entry: Redis Queue with job classification  
-3. Handler Processing: Type-specific processing (inbound/bounce.md)
+2. Queue Entry: Redis Queue with job classification
+3. Handler Processing: Type-specific processing (inbound/bounce)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
-```
+```markdown
 
 ### Cross-Database Relationships
 ```sql
@@ -141,7 +143,7 @@ email_messages.email_account_id → email_accounts.id (OLTP)
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
 email_content.storage_key → attachments.parent_storage_key
-```
+```markdown
 
 ---
 
@@ -152,9 +154,9 @@ email_content.storage_key → attachments.parent_storage_key
 // Queue handler for creating complete email hierarchy
 async function handleIncomingEmail(emailData: any) {
   const storage_key = `email_${emailData.messageId}_${Date.now()}`;
-  
+
   return await db.$transaction(async (tx) => {
-    /.md)
+    /)
     const contentObject = await tx.email_content.create({
       data: {
         storage_key,
@@ -168,7 +170,7 @@ async function handleIncomingEmail(emailData: any) {
       }
     });
 
-    /.md)
+    /)
     const messageRef = await tx.email_messages.create({
       data: {
         storage_key,
@@ -211,7 +213,7 @@ async function handleIncomingEmail(emailData: any) {
     };
   });
 }
-```
+```markdown
 
 ### IMAP Integration Ready
 ```javascript
@@ -226,10 +228,10 @@ async function startIncomingWorker() {
 
   await client.connect();
   const lock = await client.getMailboxLock('INBOX');
-  
+
   try {
     for await (let msg of client.fetch('1:*', { envelope: true, source: true })) {
-      /.md)
+      /)
       await addEmailToQueue({
         direction: 'inbound',
         messageId: msg.envelope.messageId,
@@ -246,7 +248,7 @@ async function startIncomingWorker() {
   }
   await client.logout();
 }
-```
+```markdown
 
 ---
 
@@ -255,7 +257,7 @@ async function startIncomingWorker() {
 ### Key Performance Metrics
 ```sql
 -- Email volume tracking
-SELECT 
+SELECT
     DATE_TRUNC('day', m.created) as date,
     COUNT(*) as total_emails,
     COUNT(*) FILTER (WHERE m.direction = 'inbound') as inbound_emails,
@@ -268,10 +270,10 @@ GROUP BY DATE_TRUNC('day', m.created)
 ORDER BY date;
 
 -- Content storage analytics
-SELECT 
+SELECT
     DATE_TRUNC('day', c.created) as date,
-    SUM(c.raw_size_bytes / 1024.0 .md) as total_mb_raw,
-    SUM(c.compressed_size_bytes / 1024.0 .md) as total_mb_compressed,
+    SUM(c.raw_size_bytes / 1024.0 ) as total_mb_raw,
+    SUM(c.compressed_size_bytes / 1024.0 ) as total_mb_compressed,
     COUNT(*) as emails_processed
 FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
@@ -279,7 +281,7 @@ WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE_TRUNC('day', c.created)
 ORDER BY date;
-```
+```markdown
 
 ### Indexing Strategy
 ```sql
@@ -298,7 +300,7 @@ CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expire
 -- Attachment indexes
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 CREATE INDEX idx_attachments_mime ON attachments(mime_type);
-```
+```markdown
 
 ---
 
@@ -341,10 +343,10 @@ CREATE TABLE email_content (
 );
 
 -- Step 2: Migrate data
-INSERT INTO email_messages 
+INSERT INTO email_messages
 SELECT * FROM content_inbox_message_refs;
 
-INSERT INTO email_content 
+INSERT INTO email_content
 SELECT * FROM content_objects;
 
 -- Step 3: Update foreign key references
@@ -353,34 +355,34 @@ SELECT * FROM content_objects;
 -- Step 4: Archive old tables
 ALTER TABLE content_inbox_message_refs RENAME TO content_inbox_message_refs_archived;
 ALTER TABLE content_objects RENAME TO content_objects_archived;
-```
+```markdown
 
 ### Data Validation
 ```sql
 -- Verify migration integrity
-SELECT 
+SELECT
     'Total migrated email_messages' as check_type,
     COUNT(*) as count
 FROM email_messages
 UNION ALL
-SELECT 
+SELECT
     'Total migrated email_content' as check_type,
     COUNT(*) as count
 FROM email_content
 UNION ALL
-SELECT 
+SELECT
     'Messages with content' as check_type,
     COUNT(*) as count
 FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 UNION ALL
-SELECT 
+SELECT
     'Orphaned messages' as check_type,
     COUNT(*) as count
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
-```
+```markdown
 
 ---
 
@@ -442,15 +444,15 @@ WHERE c.storage_key IS NULL;
 
 ### 📚 **Supporting Documentation**
 - [Architecture Overview](architecture-overview)) - System architecture and design decisions
-- [Infrastructure Documentation](..md)) - Infrastructure management
-- [Database Infrastructure](../database-infrastructure.md)) - Schema and performance optimization
-- [Quality Assurance](../quality-assurance.md)) - Testing protocols
+- [Infrastructure Documentation](.)) - Infrastructure management
+- [Database Infrastructure](../database-infrastructure)) - Schema and performance optimization
+- [Quality Assurance](/docs/business/quality-assurance)) - Testing protocols
 
 ### 🔧 **Business Integration**
-- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
-- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
+- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise)) - Security architecture
+- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
 
 ---
 

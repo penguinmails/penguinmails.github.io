@@ -34,7 +34,8 @@ npm run db:generate
 ```
 
 This should create a new migration file in the `/migrations` folder, e.g.:
-```
+
+```txt
 /migrations
   └── 0002_add_companies.sql
 ```
@@ -48,6 +49,7 @@ npm run db:migrate
 ### Expected Migration Content
 
 The migration should include:
+
 - CREATE TABLE statement
 - PRIMARY KEY constraint on `id`
 - FOREIGN KEY constraint to `tenants.id` with CASCADE delete
@@ -66,8 +68,8 @@ The migration should include:
 
 ## Related Documentation
 
-- [Database Operations Guide](../../operations_runbooks/database_operations_guide.md) - Migration procedures
-- [Migration & Deployment Guide](../../operations_runbooks/migration_deployment_guide.md) - Deployment workflows
+- [Database Operations Guide](../../operations_runbooks/database_operations_guide) - Migration procedures
+- [Migration & Deployment Guide](../../operations_runbooks/migration_deployment_guide) - Deployment workflows
 
 ## Dependencies
 
@@ -85,5 +87,3 @@ The migration should include:
 - [ ] Test that the migration can be applied to a fresh database
 - [ ] Verify foreign key relationship works correctly
 - [ ] Verify unique constraint on workspace_name works
-
-

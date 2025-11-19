@@ -1,6 +1,6 @@
 # OLTP ER Diagram (Mermaid)
 
-This diagram reflects the current OLTP schema defined in [`docs/implementation-technical/database-infrastructure/oltp-schema-guide`](docs/implementation-technical/database-infrastructure.md).
+This diagram reflects the current OLTP schema defined in [`docs/implementation-technical/database-infrastructure/oltp-schema-guide`](docs/implementation-technical/database-infrastructure).
 
 ```mermaid
 ---
@@ -436,5 +436,5 @@ erDiagram
 
   users ||--o{ feature_flags : "updated by"
   users ||--o{ system_config : "updated by"
-```
+```markdown
 ---

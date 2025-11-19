@@ -11,7 +11,7 @@ Install the official `stripe` Node.js library. Add the `STRIPE_SECRET_KEY` and `
 
 ## Context
 
-Stripe integration is essential for payment processing. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), PenguinMails uses Stripe Connect for B2B billing. The Stripe SDK will handle all payment operations securely.
+Stripe integration is essential for payment processing. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), PenguinMails uses Stripe Connect for B2B billing. The Stripe SDK will handle all payment operations securely.
 
 ## Acceptance Criteria
 
@@ -75,8 +75,8 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 
 ## Related Documentation
 
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Stripe Connect setup
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Payment processing
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Stripe Connect setup
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Payment processing
 
 ## Dependencies
 
@@ -90,4 +90,3 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 - [ ] Test application startup with valid Stripe configuration
 - [ ] Verify application fails gracefully with missing Stripe configuration
 - [ ] Test Stripe client initialization with invalid key (should handle errors)
-

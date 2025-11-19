@@ -19,6 +19,7 @@ last_modified_date: "2025-11-10"
 PenguinMails is built on a modern **multi-tenant, microservices architecture** designed specifically for cold email infrastructure management. The system combines automated infrastructure provisioning, real-time deliverability monitoring, and intelligent campaign management in a unified platform.
 
 ### Key Architectural Decisions
+
 - **Multi-tenant by design**: Each customer (tenant) gets complete data isolation while sharing efficient infrastructure
 - **Email infrastructure specialization**: Built specifically for cold email deliverability, not general email marketing
 - **Automation-first approach**: Minimize manual operations through intelligent automation
@@ -27,28 +28,33 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **4-Tier Database Architecture**: Sophisticated OLTP, Content, OLAP, and Queue system for optimal performance
 - **Email System Hierarchy**: Message-focused naming with natural email hierarchy (email_messages → email_content → attachments)
 
-**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](../quick-setup.md) through [campaign creation](../../core-features.md) to [analytics and optimization](../../core-features/analytics/overview.md) - providing the reliable infrastructure that powers your success.
+**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](/docs/getting-started) through [campaign creation](/docs/core-features/README) to [analytics and optimization](/docs/core-features/analytics/overview) - providing the reliable infrastructure that powers your success.
 
 ### Technology Stack Decisions
-**Frontend Technologies**
+
+## Frontend Technologies
+
 - **React.js**: Component-based UI framework with TypeScript for scalable development
 - **Tailwind CSS**: Utility-first CSS framework for rapid development and consistent design
 - **Chart.js**: Advanced data visualization and analytics charts for comprehensive insights
 
-**Backend Technologies**
+## Backend Technologies
+
 - **Node.js**: JavaScript runtime for efficient API development and microservices
 - **Express.js**: Proven web application framework with enterprise-grade reliability
 - **PostgreSQL**: Primary database with advanced indexing and query optimization
 - **Redis**: High-performance caching and session storage for optimal response times
 
-**Email Infrastructure Specialization**
+## Email Infrastructure Specialization
+
 - **Postfix**: Enterprise SMTP server for reliable email delivery with anti-spam features
 - **Dovecot**: Secure IMAP/POP3 server for email storage and retrieval
 - **SpamAssassin**: Advanced spam filtering and reputation management
 - **MailU Stack**: Integrated email infrastructure with comprehensive monitoring
 - **Roundcube**: Optional web-based email client for complete email management
 
-**Infrastructure & DevOps**
+## Infrastructure & DevOps
+
 - **Docker**: Containerization for consistent deployments across all environments
 - **Kubernetes**: Container orchestration for enterprise scaling and management
 - **NGINX**: High-performance load balancing and reverse proxy configuration
@@ -59,9 +65,10 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 ## Core System Components
 
-#### **Infrastructure & Security Enhancements**
+### **Infrastructure & Security Enhancements**
 
 **Email Infrastructure Specialization & Optimization**:
+
 - **DNS Configuration Excellence**: Automated SPF, DKIM, DMARC record generation and validation with real-time compliance checking
 - **SMTP Server Optimization**: MailU Postfix configuration with custom deliverability algorithms and intelligent throttling
 - **IP Pool Management**: Automated IP warmup strategies with reputation monitoring across major email providers (Gmail, Outlook, Yahoo)
@@ -69,12 +76,14 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 **Advanced Database Architecture**
 **4-Tier Database Strategy**:
-- **Tier 1: OLTP (NileDB.md)**: Optimized for fast transactional operations with advanced indexing strategies
+
+- **Tier 1: OLTP (NileDB)**: Optimized for fast transactional operations with advanced indexing strategies
 - **Tier 2: Content Database**: Dedicated heavy content storage with compression algorithms and deduplication
 - **Tier 3: OLAP Analytics**: Business intelligence warehouse with ETL pipelines and real-time aggregation
 - **Tier 4: Queue System**: Hybrid PostgreSQL + Redis for durable job processing with automatic failover
 
 **Database Optimization Strategies**:
+
 - **Query Performance**: Advanced indexing and partitioning based on NileDB capabilities
 - **Connection Pooling**: Intelligent connection management with read/write separation
 - **Storage Efficiency**: Binary content storage with metadata separation for optimal performance
@@ -83,14 +92,18 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 ### Email Processing & Deliverability Engine
 
 #### **High-Throughput Email Architecture**
+
 **Capacity & Performance**:
+
 - **Processing Capability**: 10M+ emails per day with intelligent queue prioritization
 - **Delivery Speed**: <1 minute delivery for 95% of emails with automatic retry logic
 - **Rate Limiting**: Dynamic throttling based on sender reputation and compliance status
 - **Infrastructure Isolation**: Dedicated SMTP servers per tenant (enterprise tier)
 
 #### **Intelligence & Optimization Layer**
+
 **Machine Learning Integration**:
+
 - **Predictive Analytics**: Campaign success prediction with optimization recommendations
 - **Behavioral Analysis**: Recipient engagement pattern analysis and intelligent segmentation
 - **Content Optimization**: AI-powered subject line and content optimization
@@ -98,6 +111,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **Reputation Monitoring**: Continuous tracking across all major email providers with automated optimization
 
 **Compliance Automation**:
+
 - **GDPR Compliance**: Built-in data minimization, purpose limitation, and right-to-be-forgotten
 - **CAN-SPAM Compliance**: Automatic unsubscribe inclusion and accurate header management
 - **International Compliance**: TCPA, PECR, and other regional compliance automation
@@ -106,13 +120,16 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 ### API & Integration Architecture
 
 #### **Comprehensive API Ecosystem**
+
 **Core API Features**:
+
 - **Version Management**: URL-based versioning (v1, v2) with backward compatibility guarantees
 - **Authentication**: JWT tokens, API keys, OAuth 2.0, and enterprise SSO support
 - **Rate Limiting**: Tiered limits with intelligent throttling and usage analytics
 - **Documentation**: OpenAPI/Swagger with interactive testing and SDK generation
 
 **Multi-Language SDK Support**:
+
 - **Python SDK**: Full feature support with async/await patterns
 - **JavaScript SDK**: Node.js and browser compatibility
 - **PHP SDK**: Laravel and WordPress integration patterns
@@ -120,6 +137,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **Go SDK**: High-performance backend integration
 
 **Integration Marketplace**:
+
 - **CRM Integrations**: Salesforce, HubSpot, Pipedrive with bi-directional sync
 - **Marketing Automation**: Zapier (5000+ apps), Segment, custom webhooks
 - **Communication Tools**: Slack, Microsoft Teams, Discord notifications
@@ -128,27 +146,34 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 ### Advanced Monitoring & Operations
 
 #### **Intelligent Observability**
+
 **Application Monitoring**:
+
 - **Real-time Performance**: Sub-200ms response time monitoring with anomaly detection
 - **Error Tracking**: Comprehensive error logging with automatic alerting and resolution
 - **Business Metrics**: Campaign performance, revenue attribution, customer journey analytics
 - **Infrastructure Health**: Server, network, database monitoring with predictive maintenance
 
 #### **Enterprise Operations**
+
 **High Availability & Disaster Recovery**:
+
 - **Multi-Region Deployment**: Geographic distribution with automatic failover
 - **Backup Strategy**: Automated point-in-time recovery with 99.9% uptime guarantee
 - **Business Continuity**: Comprehensive SLA commitments with penalty clauses
 - **Scaling Automation**: Horizontal and vertical scaling with intelligent load distribution
 
 **Security & Compliance Operations**:
+
 - **Zero-Trust Architecture**: Multi-layer security with tenant isolation
 - **Compliance Monitoring**: Real-time compliance checking with automated enforcement
 - **Incident Response**: 24/7 monitoring with <15 minute response times
 - **Security Auditing**: Regular penetration testing and compliance verification
 
 ### 1. Infrastructure Layer
+
 **Email Infrastructure Specialization:**
+
 - **VPS Management**: Automated provisioning via Hostwind API
 - **SMTP Server Stack**: MailU Postfix with Dovecot, SpamAssassin integration
 - **DNS Configuration**: Automated SPF, DKIM, DMARC records with validation
@@ -156,38 +181,44 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 ### 2. Database Architecture
 
 #### 4-Tier Database Architecture
+
 **Strategic Alignment**: Our sophisticated 4-tier database architecture directly supports market leadership goals by providing **enterprise-grade data management** that scales to handle millions of emails while maintaining optimal performance and 99.9% data integrity.
 
-**Tier 1: OLTP (Operational Database)**
-- **Primary Database (NileDB.md)**: Fast transactional operations and real-time data access
+## Tier 1: OLTP (Operational Database)
+
+- **Primary Database (NileDB)**: Fast transactional operations and real-time data access
 - **User Data**: Authentication, profiles, preferences with secure session management
 - **Tenant Data**: Multi-tenant isolation and configuration with row-level security
 - **Campaign Data**: Email campaigns, contacts, analytics for operational workflows
 - **Infrastructure Data**: VPS instances, SMTP configurations, system monitoring
 - **Compliance Data**: Audit logs, consent records, unsubscribe lists
 
-**Tier 2: Content Database (Heavy Content Storage)**
+## Tier 2: Content Database (Heavy Content Storage)
+
 - **Email Content Storage**: Full email bodies, HTML content, headers, and attachments
 - **Message Hierarchy**: `email_messages` → `email_content` → `attachments` structure
 - **Content Optimization**: Compression algorithms, deduplication, and efficient storage
 - **Retention Policies**: Configurable retention (7+ years) with automated archival
 - **Storage Efficiency**: Binary content storage with metadata separation
 
-**Tier 3: OLAP Analytics Database (Business Intelligence)**
+## Tier 3: OLAP Analytics Database (Business Intelligence)
+
 - **Daily Aggregates**: Aggregated metrics for campaign performance and user analytics
 - **Business Intelligence**: Campaign analytics, mailbox analytics, lead analytics
 - **Analytics Pipeline**: ETL processes with queue-driven analytics aggregation
 - **Query Performance**: Optimized for complex queries and business reporting
 - **Data Marts**: Specialized analytics for different user roles and use cases
 
-**Tier 4: Queue System (Job Processing)**
+## Tier 4: Queue System (Job Processing)
+
 - **Hybrid Queue System**: PostgreSQL for durable job state + Redis for fast processing
 - **Priority Queues**: High/normal/low priority job processing with automatic scaling
 - **Analytics Pipeline**: Queue-driven analytics aggregation with OLAP integration
 - **Worker Scaling**: Horizontal scaling with Redis-based job consumption
 - **Reliability**: Comprehensive job tracking, failure recovery, and retry logic
 
-**Cache Layer (Redis)**
+## Cache Layer (Redis)
+
 - **Session Storage**: User sessions and authentication tokens with high availability
 - **Real-time Data**: Current campaign status, deliverability metrics, system health
 - **Rate Limiting**: API rate limiting and abuse prevention with intelligent throttling
@@ -195,13 +226,16 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **Performance**: Sub-200ms response times for critical operations
 
 > **⚠️ Database Optimization Dependencies**:
+>
 > - **Query Performance**: Final optimization strategies depend on NileDB's supported indexing and partitioning capabilities
 > - **Storage Limits**: Contact lists, email content, and analytics data storage constrained by NileDB limits
 > - **OLTP/OLAP Split**: Analytics performance optimization may require new approaches if NileDB doesn't support PostgreSQL-style read replicas
 > - **Connection Pooling**: Pool management strategy may need adjustment based on NileDB connection limits
 
 ### 3. Multi-Tenant Architecture
-**Tenant Isolation Strategy**
+
+## Tenant Isolation Strategy
+
 - **Data Isolation**: Each tenant has dedicated database schemas with row-level security
 - **Infrastructure Isolation**: Dedicated SMTP servers per tenant (enterprise tier)
 - **Security Isolation**: Tenant-specific authentication domains and API keys
@@ -210,7 +244,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 ## System Architecture Diagram
 
-```
+```markdown
                     ┌─────────────────────────────────────────────────────────────┐
                     │                    PENGUINMAILS PLATFORM                    │
                     └─────────────────────────────────────────────────────────────┘
@@ -248,7 +282,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
                      │ • Cache (Redis)      • Backup Systems    │
                      │                                             │
                      └─────────────────────────────────────────────┘
-```
+```markdown
 
 ---
 
@@ -428,10 +462,10 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 
 Explore the technical foundations further:
 
-1. **[Technical Operations Overview](../operations/overview.md)** - Deployment, monitoring, and operational procedures
-2. **[Integration & API Overview](../integration/overview.md)** - API documentation and third-party integrations
-3. **[Detailed Technical Architecture](detailed-technical.md)** - Deep dive into system design and implementation
-4. **[Enterprise Technical Architecture](enterprise-tech.md)** - Enterprise-specific technical considerations
+1. **[Technical Operations Overview](/docs/technical/architecture/overview)** - Deployment, monitoring, and operational procedures
+2. **[Integration & API Overview](/docs/technical/architecture/overview)** - API documentation and third-party integrations
+3. **[Detailed Technical Architecture](/docs/technical/architecture/detailed-technical)** - Deep dive into system design and implementation
+4. **[Enterprise Technical Architecture](/docs/technical/architecture/enterprise-tech)** - Enterprise-specific technical considerations
 
 ---
 

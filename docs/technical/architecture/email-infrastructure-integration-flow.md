@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: Our infrastructure integration showcases enterprise-grade load balancing, queue management, and service mesh communication that ensures 99.9% uptime for all customers.
 
-**User Journey Integration**: This integration flow is the foundation that enables your complete email infrastructure experience from [campaign creation](../core-features.md) through [analytics tracking](../core-features/analytics/overview.md) to [infrastructure management](../core-features/warm-ups/overview.md).
+**User Journey Integration**: This integration flow is the foundation that enables your complete email infrastructure experience from [campaign creation](../core-features) through [analytics tracking](../core-features/analytics/overview) to [infrastructure management](../core-features/warm-ups/overview).
 
 ---
 
@@ -29,7 +29,7 @@ graph TB
         WEB[Web Frontend<br/>React Dashboard]
         API[API Client<br/>Mobile/External]
     end
-    
+
     %% Central Layer
     subgraph "Central Infrastructure"
         CENTRAL_FRONTEND[Central Frontend<br/>User Management]
@@ -37,58 +37,58 @@ graph TB
         CENTRAL_SMTP[Central SMTP Pool<br/>Route Management]
         CENTRAL_QUEUE[Central Queue System<br/>Redis + PostgreSQL]
     end
-    
+
     %% Tenant Layer
     subgraph "Tenant Infrastructure (Per Customer)"
         TENANT_SMTP[Tenant SMTP Server<br/>MailU Stack]
         TENANT_DB[Tenant Database<br/>PostgreSQL Schema]
         TENANT_QUEUE[Tenant Queue<br/>Job Processing]
     end
-    
+
     %% External Layer
     subgraph "External Services"
         MAILU[MailU SMTP Stack<br/>Postfix + Dovecot]
         HOSTWIND[Hostwind VPS<br/>Infrastructure Provisioning]
         DNS[DNS Providers<br/>SPF/DKIM/DMARC]
     end
-    
+
     %% Client to Central Flow
     WEB --> CENTRAL_API
     API --> CENTRAL_API
     CENTRAL_API --> CENTRAL_FRONTEND
-    
+
     %% Central Routing Logic
     CENTRAL_API --> CENTRAL_SMTP
     CENTRAL_SMTP --> CENTRAL_QUEUE
     CENTRAL_QUEUE --> TENANT_QUEUE
-    
+
     %% Tenant Processing
     TENANT_QUEUE --> TENANT_SMTP
     TENANT_SMTP --> MAILU
     TENANT_SMTP --> TENANT_DB
-    
+
     %% Infrastructure Provisioning
     CENTRAL_API --> HOSTWIND
     CENTRAL_SMTP --> DNS
-    
+
     %% Data Flow
     TENANT_DB -.-> CENTRAL_QUEUE
     MAILU -.-> CENTRAL_QUEUE
-    
+
     %% Load Balancing
     CENTRAL_SMTP -.->|Load Balance| TENANT_SMTP
     CENTRAL_QUEUE -.->|Route Jobs| TENANT_QUEUE
-    
+
     classDef client fill:#e1f5fe
     classDef central fill:#f3e5f5
     classDef tenant fill:#e8f5e9
     classDef external fill:#fff3e0
-    
+
     class WEB,API client
     class CENTRAL_FRONTEND,CENTRAL_API,CENTRAL_SMTP,CENTRAL_QUEUE central
     class TENANT_SMTP,TENANT_DB,TENANT_QUEUE tenant
     class MAILU,HOSTWIND,DNS external
-```
+```markdown
 
 ## Integration Architecture Explanation
 

@@ -1,6 +1,7 @@
 # Architecture Overview
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This comprehensive architecture overview supports our enterprise infrastructure framework by providing detailed technical specifications, system design principles, and architectural decisions for the PenguinMails multi-tenant cold email platform.
 
 **Technical Authority**: Our multi-tenant, microservices architecture integrates with enterprise infrastructure platforms including Hostwinds VPS provisioning, MailU SMTP orchestration, NileDB database management, and comprehensive monitoring systems featuring automated scaling and performance optimization.
@@ -12,6 +13,7 @@
 ---
 
 ## Document Summary
+
 This document provides a comprehensive overview of PenguinMails' technical architecture, designed for both technical and non-technical stakeholders. It explains how the system works, why certain decisions were made, and what trade-offs were considered in building a scalable cold email infrastructure platform.
 
 ---
@@ -21,6 +23,7 @@ This document provides a comprehensive overview of PenguinMails' technical archi
 PenguinMails is built on a **multi-tenant, microservices architecture** designed specifically for cold email infrastructure management. The system combines automated infrastructure provisioning, real-time deliverability monitoring, and intelligent campaign management in a unified platform.
 
 ### Key Architectural Decisions
+
 - **Multi-tenant by design**: Each customer (tenant) gets complete data isolation while sharing efficient infrastructure
 - **Email infrastructure specialization**: Built specifically for cold email deliverability, not general email marketing
 - **Automation-first approach**: Minimize manual operations through intelligent automation
@@ -33,7 +36,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 ### High-Level Architecture Diagram
 
-```
+```markdown
                     ┌─────────────────────────────────────────────────────────────┐
                     │                    PENGUINMAILS PLATFORM                    │
                     └─────────────────────────────────────────────────────────────┘
@@ -71,7 +74,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
                     │ • Cache (Redis)      • Backup Systems    │
                     │                                             │
                     └─────────────────────────────────────────────┘
-```
+```markdown
 
 ---
 
@@ -80,8 +83,8 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 ### 1. User Interface Layer
 
 #### Landing Page & Marketing Site
-**Purpose**: Customer acquisition and information  
-**Technology**: Static site with dynamic content  
+**Purpose**: Customer acquisition and information
+**Technology**: Static site with dynamic content
 **Key Features**:
 - SEO-optimized content for each target segment
 - Interactive pricing calculator
@@ -89,8 +92,8 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 - Blog and resource center
 
 #### User Application Dashboard
-**Purpose**: Primary customer interface  
-**Technology**: React.js with TypeScript  
+**Purpose**: Primary customer interface
+**Technology**: React.js with TypeScript
 **Key Features**:
 - Real-time infrastructure monitoring
 - Campaign management and analytics
@@ -98,8 +101,8 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 - Billing and subscription management
 
 #### Admin Panel
-**Purpose**: Platform management and monitoring  
-**Technology**: React.js with administrative interface  
+**Purpose**: Platform management and monitoring
+**Technology**: React.js with administrative interface
 **Key Features**:
 - System health monitoring
 - Customer management
@@ -109,7 +112,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 ### 2. API Gateway & Services
 
 #### API Gateway
-**Purpose**: Single entry point for all API requests  
+**Purpose**: Single entry point for all API requests
 **Responsibilities**:
 - Authentication and authorization
 - Rate limiting and throttling
@@ -154,11 +157,11 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 #### Email Infrastructure Specialization
 
 **VPS Management**
-```
+```markdown
 Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → Warm-up → Ready for Campaigns
       │                │                 │             │              │           │
    5 minutes        10 minutes        15 minutes    10 minutes    48 hours   Active
-```
+```markdown
 
 **SMTP Server Stack**
 - **MailU Postfix**: Reliable email sending with anti-spam features
@@ -199,8 +202,8 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 ### 4. External Service Integration
 
 #### VPS Provider Integration (Hostwind)
-**Purpose**: Automated VPS provisioning and management  
-**Integration Method**: REST API with webhooks  
+**Purpose**: Automated VPS provisioning and management
+**Integration Method**: REST API with webhooks
 **Key Features**:
 - Geographic IP distribution for optimal deliverability
 - Automatic scaling based on usage
@@ -208,8 +211,8 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 - Real-time health monitoring and alerts
 
 #### SMTP Provider Integration (MailU)
-**Purpose**: Specialized email infrastructure  
-**Integration Method**: API and configuration automation  
+**Purpose**: Specialized email infrastructure
+**Integration Method**: API and configuration automation
 **Key Features**:
 - Postfix SMTP server configuration
 - Dovecot IMAP/POP3 server setup
@@ -217,8 +220,8 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 - Mail queue management and monitoring
 
 #### Payment Processing (Stripe)
-**Purpose**: Subscription billing and payment processing  
-**Integration Method**: Stripe API with webhooks  
+**Purpose**: Subscription billing and payment processing
+**Integration Method**: Stripe API with webhooks
 **Key Features**:
 - Flexible subscription management
 - Automatic billing and dunning
@@ -226,8 +229,8 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 - PCI compliance and security
 
 #### Authentication & Database (NileDB)
-**Purpose**: User authentication and data persistence  
-**Integration Method**: Built-in NileDB services  
+**Purpose**: User authentication and data persistence
+**Integration Method**: Built-in NileDB services
 **Key Features**:
 - Secure user authentication with JWT tokens
 - PostgreSQL database with automatic backups
@@ -270,7 +273,7 @@ sequenceDiagram
     InfraSvc->>TenantSvc: Infrastructure ready
     TenantSvc->>UI: Notify customer
     UI->>Customer: Infrastructure ready!
-```
+```markdown
 
 ### Email Campaign Flow
 
@@ -299,7 +302,7 @@ sequenceDiagram
     Campaign->>API: Update campaign status
     API->>UI: Real-time updates
     UI->>User: Campaign analytics
-```
+```markdown
 
 ---
 
@@ -605,15 +608,15 @@ sequenceDiagram
 
 ### 📚 **Supporting Documentation**
 - [Architecture System README](README)) - Architectural overview and decisions
-- [Email System Implementation](..md)) - Email infrastructure details
-- [Infrastructure Documentation](..md)) - Infrastructure operations
-- [Development Guidelines](../development-guidelines.md)) - Development standards
+- [Email System Implementation](.)) - Email infrastructure details
+- [Infrastructure Documentation](.)) - Infrastructure operations
+- [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Development standards
 
 ### 🔗 **Business Integration**
-- [Business Strategy Overview](../../business/strategy.md)) - Strategic business alignment
-- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture
-- [Operations Management](../../operations-analytics/operations-management.md)) - Operational procedures
-- [Analytics Performance](../../operations-analytics/analytics-performance.md)) - Performance monitoring
+- [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
+- [Security Framework](../../compliance-security/enterprise)) - Security architecture
+- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
+- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
 
 ---
 

@@ -17,11 +17,13 @@ last_modified_date: "2025-11-10"
 ### Primary Email Marketing Regulations
 
 #### CAN-SPAM Act (United States)
+
 **Legal Foundation**: 15 U.S.C. § 7701-7713
 **Enforcement**: Federal Trade Commission (FTC)
 **Scope**: All commercial email sent to or from the US
 
 **Core Requirements**:
+
 1. **Accurate Header Information**: No false or misleading headers
 2. **No Deceptive Subject Lines**: Subject line must reflect content
 3. **Clear Identification**: Must identify email as advertisement
@@ -30,6 +32,7 @@ last_modified_date: "2025-11-10"
 6. **Responsibility Assignment**: Sender must accept responsibility for compliance
 
 **Technical Implementation**:
+
 ```html
 <!-- Required CAN-SPAM elements in email template -->
 <header>
@@ -43,11 +46,11 @@ last_modified_date: "2025-11-10"
   <p>Sent by: [Company Name]</p>
   <p>Address: [Physical Address]</p>
   <p>Phone: [Contact Number]</p>
-  
+
   <!-- Clear unsubscribe mechanism -->
   <a href="mailto:unsubscribe@example.com?subject=UNSUBSCRIBE">Unsubscribe</a>
 </body>
-```
+```markdown
 
 #### General Data Protection Regulation (EU)
 **Legal Foundation**: Regulation (EU) 2016/679
@@ -133,7 +136,7 @@ v=spf1 include:_spf.google.com include:sendgrid.net include:mailgun.org ~all
 # include:sendgrid.net: Authorize SendGrid
 # include:mailgun.org: Authorize Mailgun
 # ~all: Soft fail (optional) for unauthorized senders
-```
+```markdown
 
 **Best Practices**:
 - Start with `v=spf1 ~all` during testing
@@ -152,7 +155,7 @@ default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQ
 # v=DKIM1: DKIM version
 # k=rsa: Key type
 # p=...: Public key (base64 encoded)
-```
+```markdown
 
 **Configuration Process**:
 1. **Generate Key Pair**: RSA 2048-bit minimum
@@ -172,7 +175,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@example.c
 # p=none: Policy (none, quarantine, reject)
 # rua=mailto:dmarc-reports@example.com: Aggregate reports
 # fo=1: Report generation options
-```
+```markdown
 
 **Phased Implementation**:
 1. **Phase 1**: `p=none` for monitoring (1-2 weeks)
@@ -192,7 +195,7 @@ marketing.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@
 
 # Main domain protection
 _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com"
-```
+```markdown
 
 ### Consent Management Systems
 
@@ -210,25 +213,25 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 <div class="consent-form">
   <h3>Email Marketing Consent</h3>
   <p>We'd like to send you emails about:</p>
-  
+
   <label>
     <input type="checkbox" name="consent[]" value="product-updates" required>
     Product updates and new features
   </label>
-  
+
   <label>
     <input type="checkbox" name="consent[]" value="marketing-emails" required>
     Marketing campaigns and offers
   </label>
-  
+
   <label>
     <input type="checkbox" name="consent[]" value="third-party-partners" required>
     Communications from our trusted partners
   </label>
-  
+
   <button type="submit">Give Consent</button>
 </div>
-```
+```markdown
 
 #### CAN-SPAM Compliance Implementation
 **Technical Requirements**:
@@ -246,16 +249,16 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
   [Street Address]<br>
   [City, State, ZIP Code]<br>
   [Phone Number]</p>
-  
+
   <p>You're receiving this email because you subscribed to updates from [Company Name].</p>
-  
+
   <p>
-    <a href="{{ unsubscribe_url }}">Unsubscribe</a> | 
-    <a href="{{ preferences_url }}">Update Preferences</a> | 
+    <a href="{{ unsubscribe_url }}">Unsubscribe</a> |
+    <a href="{{ preferences_url }}">Update Preferences</a> |
     <a href="{{ privacy_policy_url }}">Privacy Policy</a>
   </p>
 </div>
-```
+```markdown
 
 ### Data Subject Rights Implementation
 
@@ -284,7 +287,7 @@ class DataProcessingRecord:
         self.international_transfers = ["email_provider_data_center"]
         self.created_date = datetime.now()
         self.last_reviewed = datetime.now()
-```
+```markdown
 
 #### Right to Access Implementation
 **Technical Process**:
@@ -300,7 +303,7 @@ def handle_data_access_request(request):
     # Verify requestor identity
     if not verify_identity(request.email, request.verification_data):
         return {"error": "Identity verification failed"}
-    
+
     # Collect personal data from all systems
     personal_data = {
         "email_data": get_email_preferences(request.email),
@@ -308,19 +311,19 @@ def handle_data_access_request(request):
         "activity_data": get_user_activity(request.email),
         "preferences_data": get_communication_preferences(request.email)
     }
-    
+
     # Compile in readable format
     compiled_data = compile_personal_data(personal_data)
-    
+
     # Encrypt and secure delivery
     encrypted_data = encrypt_data(compiled_data)
     send_secure_email(request.email, encrypted_data)
-    
+
     # Log the request for audit trail
     log_data_access_request(request, "completed")
-    
+
     return {"status": "Data provided securely"}
-```
+```markdown
 
 #### Right to Deletion Implementation
 **Technical Process**:
@@ -337,16 +340,16 @@ def handle_deletion_request(request):
     # Verify legal basis for deletion
     if not verify_deletion_basis(request.reason, request.legal_basis):
         return {"error": "Deletion not permitted under law"}
-    
+
     # Identify all systems containing personal data
     systems = [
         "email_marketing_platform",
-        "customer_database", 
+        "customer_database",
         "analytics_platform",
         "support_system",
         "backup_systems"
     ]
-    
+
     # Systematic deletion
     deletion_results = {}
     for system in systems:
@@ -355,19 +358,19 @@ def handle_deletion_request(request):
             deletion_results[system] = result
         except Exception as e:
             deletion_results[system] = f"Error: {str(e)}"
-    
+
     # Verify deletion
     verification_result = verify_deletion_completion(request.email, systems)
-    
+
     # Log for compliance
     log_deletion_request(request, deletion_results, verification_result)
-    
+
     return {
         "status": "Deletion completed",
         "systems_affected": systems,
         "verification": verification_result
     }
-```
+```markdown
 
 ---
 
@@ -394,7 +397,7 @@ class ComplianceMonitor:
             "data_rights": DataRightsMonitor(),
             "security_monitoring": SecurityMonitor()
         }
-    
+
     def run_compliance_checks(self):
         results = {}
         for check_name, monitor in self.checks.items():
@@ -412,7 +415,7 @@ class ComplianceMonitor:
                     "last_checked": datetime.now()
                 }
         return results
-```
+```markdown
 
 #### Compliance Dashboard
 **Key Metrics**:
@@ -450,7 +453,7 @@ class ComplianceMonitor:
   "compliance_flags": [],
   "system_source": "email_marketing_platform"
 }
-```
+```markdown
 
 #### Audit Trail Retention
 **Retention Requirements**:
@@ -464,24 +467,24 @@ class ComplianceMonitor:
 class AuditTrailManager:
     def __init__(self, retention_config):
         self.retention_periods = retention_config
-    
+
     def store_audit_event(self, event):
         # Store event with appropriate retention period
         retention_period = self.get_retention_period(event.event_type)
         expiry_date = event.timestamp + retention_period
-        
+
         audit_record = {
             "event": event,
             "retention_period": retention_period,
             "expiry_date": expiry_date,
             "created_at": datetime.now()
         }
-        
+
         self.audit_database.store(audit_record)
-        
+
         # Schedule automatic deletion
         self.schedule_deletion(audit_record, expiry_date)
-    
+
     def get_retention_period(self, event_type):
         retention_map = {
             "email_sent": timedelta(days=1095),  # 3 years
@@ -490,7 +493,7 @@ class AuditTrailManager:
             "security_incident": timedelta(days=2555)  # 7 years
         }
         return retention_map.get(event_type, timedelta(days=1095))
-```
+```markdown
 
 ---
 
@@ -554,19 +557,19 @@ class RegulatoryChangeManager:
             "https://gdpr.eu/updates/",
             "https://oag.ca.gov/privacy/ccpa"
         ]
-    
+
     def monitor_regulatory_changes(self):
         changes = []
         for source in self.regulatory_sources:
             new_changes = self.check_for_updates(source)
             if new_changes:
                 changes.extend(new_changes)
-        
+
         for change in changes:
             impact_assessment = self.assess_impact(change)
             if impact_assessment.requires_action:
                 self.create_implementation_plan(change, impact_assessment)
-    
+
     def create_implementation_plan(self, change, assessment):
         plan = {
             "change": change,
@@ -577,7 +580,7 @@ class RegulatoryChangeManager:
             "testing_protocol": assessment.testing_steps
         }
         self.implementation_plans.append(plan)
-```
+```markdown
 
 ---
 
@@ -623,12 +626,12 @@ class ComplianceTraining:
     def __init__(self, role):
         self.role = role
         self.training_modules = self.get_role_specific_modules()
-    
+
     def get_role_specific_modules(self):
         module_map = {
             "executive": [
                 "regulatory_overview",
-                "cost_benefit_analysis", 
+                "cost_benefit_analysis",
                 "risk_management",
                 "audit_requirements"
             ],
@@ -652,7 +655,7 @@ class ComplianceTraining:
             ]
         }
         return module_map.get(self.role, [])
-```
+```markdown
 
 ### Compliance Culture Development
 
@@ -732,7 +735,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 4. Contact Information:
    - [Data Protection Officer contact]
    - [Company contact information]
-```
+```markdown
 
 ### Security Incident Response
 
@@ -787,7 +790,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 
 ## 2. Type of Personal Data
 - Email addresses
-- Names and job titles  
+- Names and job titles
 - Company information
 - Communication preferences
 
@@ -803,9 +806,9 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 
 ## 5. Obligations and Rights of Processor
 - [Processor obligations]
-- [Processor rights] 
+- [Processor rights]
 - [Sub-processor provisions]
-```
+```markdown
 
 ### Ongoing Documentation Management
 

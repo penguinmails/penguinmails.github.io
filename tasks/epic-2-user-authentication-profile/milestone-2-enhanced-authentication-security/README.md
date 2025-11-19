@@ -4,10 +4,10 @@
 
 ## Tickets
 
-- [AUTH-4.1](./AUTH-4.1-create-logout-endpoint.md) - Create API Endpoint for User Logout (POST /api/auth/logout)
-- [AUTH-4.2](./AUTH-4.2-implement-forgot-password.md) - Implement "Forgot Password" Request Endpoint
-- [AUTH-4.3](./AUTH-4.3-implement-reset-password.md) - Implement "Reset Password" Endpoint
-- [AUTH-4.4](./AUTH-4.4-create-change-password-endpoint.md) - Create API Endpoint to Change Password (POST /api/users/me/change-password)
+- [AUTH-4.1](./AUTH-4.1-create-logout-endpoint) - Create API Endpoint for User Logout (POST /api/auth/logout)
+- [AUTH-4.2](./AUTH-4.2-implement-forgot-password) - Implement "Forgot Password" Request Endpoint
+- [AUTH-4.3](./AUTH-4.3-implement-reset-password) - Implement "Reset Password" Endpoint
+- [AUTH-4.4](./AUTH-4.4-create-change-password-endpoint) - Create API Endpoint to Change Password (POST /api/users/me/change-password)
 
 ## Dependencies
 
@@ -26,8 +26,7 @@
 ## Context
 
 This milestone implements essential security features that align with:
-- **Security Best Practices:** From [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md)
-- **User Experience:** Password management from [Features & Capabilities](../../docs/features-capabilities/index.md)
-- **Session Management:** Secure session handling as outlined in [High-Level Architecture](../../docs/quick-access/high-level-architecture.md)
 
-
+- **Security Best Practices:** From [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards)
+- **User Experience:** Password management from [Features & Capabilities](../../docs/features-capabilities/index)
+- **Session Management:** Secure session handling as outlined in [High-Level Architecture](../../docs/quick-access/high-level-architecture)

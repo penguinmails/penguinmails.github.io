@@ -1,6 +1,7 @@
 # Development Standards - Advanced Enterprise Development Guidelines
 
 ## Strategic Alignment
+
 **Strategic Alignment**: This development standards guide supports our enterprise infrastructure framework by providing comprehensive coding standards, implementation guidelines, and best practices for the PenguinMails scalable development platform and engineering excellence.
 
 **Technical Authority**: Our development standards integrate with enterprise development tools, CI/CD platforms, and quality assurance systems featuring modern TypeScript frameworks, automated testing protocols, and security-first development for comprehensive software engineering excellence.
@@ -16,14 +17,17 @@
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
 ### 📋 **Level 1: Standards Overview**
+
 - `development-standards` (this document) - Main development standards with key practices and business impact
 - High-level development decisions and quality standards
 
 ### 🏗️ **Level 2: Implementation Guidelines**
+
 - Detailed coding standards, security practices, and performance optimization
 - Testing requirements, deployment procedures, and quality assurance protocols
 
 ### 🔧 **Level 3: Enterprise Excellence**
+
 - Advanced DevOps, monitoring, and continuous improvement practices
 - Security lifecycle, performance optimization, and enterprise development workflows
 
@@ -33,30 +37,14 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 These enterprise development guidelines ensure consistent, maintainable, and scalable code across the PenguinMails platform. Following these standards enables efficient collaboration, reduces technical debt, and supports long-term system evolution.
 
-# Development Standards - Comprehensive Coding & Implementation Guidelines
-
-## Strategic Alignment
-**Strategic Alignment**: This development standards guide supports our enterprise infrastructure framework by providing comprehensive coding standards, implementation guidelines, and best practices for the PenguinMails scalable development platform and engineering excellence.
-
-**Technical Authority**: Our development standards integrate with enterprise development tools, CI/CD platforms, and quality assurance systems featuring modern TypeScript frameworks, automated testing protocols, and security-first development for comprehensive software engineering excellence.
-
-**Operational Excellence**: Backed by enterprise development systems with automated quality assurance, comprehensive monitoring, and collaborative development workflows ensuring consistent code quality and reliable software delivery.
-
-**User Journey Integration**: These development standards are part of your complete development experience - connects to code quality processes, deployment workflows, and operational excellence for reliable software development and maintenance.
-
----
-
-## Executive Summary
-
-These development guidelines ensure consistent, maintainable, and scalable code across the PenguinMails platform. Following these standards enables efficient collaboration, reduces technical debt, and supports long-term system evolution.
-
 ## Code Organization
 
 ### Directory Structure
-```
+
+```markdown
 src/
 ├── components/          # Reusable UI components
-│   ├── common.md)
+│   ├── common)
 │   ├── forms/          # Form-related components
 │   ├── layout/         # Layout components
 │   └── domain/         # Domain-specific components
@@ -68,7 +56,7 @@ src/
 ├── types/              # TypeScript type definitions
 ├── constants/          # Application constants
 └── styles/             # Global styles and design tokens
-```
+```markdown
 
 ### File Naming Conventions
 - **Components**: PascalCase (`UserProfile.tsx`)
@@ -96,12 +84,12 @@ type UserRole = 'admin' | 'member' | 'viewer';
 
 // Good: Generic constraints
 function findById<T extends { id: string }>(
-  items: T[], 
+  items: T[],
   id: string
 ): T | undefined {
   return items.find(item => item.id === id);
 }
-```
+```markdown
 
 #### Type Safety
 - Use `strict` mode in `tsconfig.json`
@@ -134,7 +122,7 @@ export function UserCard({ user, onEdit }: UserCardProps) {
     </div>
   );
 }
-```
+```markdown
 
 #### Hooks Usage
 - Custom hooks for reusable logic
@@ -158,7 +146,7 @@ const useUserStore = createStore((set) => ({
   user: null,
   setUser: (user) => set({ user }),
 }));
-```
+```markdown
 
 ### API Integration
 
@@ -167,23 +155,23 @@ const useUserStore = createStore((set) => ({
 // services/userService.ts
 export class UserService {
   async getUsers(params?: UserQuery): Promise<User[]> {
-    const response = await api.get('.md);
+    const response = await api.get(');
     return response.data;
   }
 
   async createUser(userData: CreateUserRequest): Promise<User> {
-    const response = await api.post('.md);
+    const response = await api.post(');
     return response.data;
   }
 
   async updateUser(id: string, updates: UpdateUserRequest): Promise<User> {
-    const response = await api.patch(`/users.md);
+    const response = await api.patch(`/users);
     return response.data;
   }
 }
 
 export const userService = new UserService();
-```
+```markdown
 
 #### Error Handling
 ```typescript
@@ -199,7 +187,7 @@ try {
     toast.error('An unexpected error occurred');
   }
 }
-```
+```markdown
 
 ### Testing Guidelines
 
@@ -217,22 +205,22 @@ describe('UserCard', () => {
   };
 
   it('renders user information', () => {
-    render(<UserCard user={mockUser} .md);
-    
+    render(<UserCard user={mockUser} );
+
     expect(screen.getByText('John Doe')).toBeInTheDocument();
     expect(screen.getByText('john@example.com')).toBeInTheDocument();
   });
 
   it('calls onEdit when edit button is clicked', () => {
     const mockOnEdit = jest.fn();
-    render(<UserCard user={mockUser} onEdit={mockOnEdit} .md);
-    
-    fireEvent.click(screen.getByRole('button', { name: /edit.md));
-    
+    render(<UserCard user={mockUser} onEdit={mockOnEdit} );
+
+    fireEvent.click(screen.getByRole('button', { name: /edit));
+
     expect(mockOnEdit).toHaveBeenCalledWith(mockUser);
   });
 });
-```
+```markdown
 
 #### Testing Strategy
 - **Unit Tests**: Individual functions and components
@@ -252,7 +240,7 @@ const ExpensiveComponent = React.memo(({ data }: Props) => {
 
   return <div>{processedData}</div>;
 });
-```
+```markdown
 
 #### Bundle Optimization
 - Code splitting for route-based lazy loading
@@ -275,7 +263,7 @@ function handleSubmit(email: string) {
     setError(error.message);
   }
 }
-```
+```markdown
 
 #### Authentication & Authorization
 - JWT tokens with secure storage
@@ -294,12 +282,12 @@ function handleSubmit(email: string) {
 #### Query Optimization
 ```sql
 -- Good: Indexed query with selective columns
-SELECT id, email, created 
-FROM users 
-WHERE created > $1 
-ORDER BY created DESC 
+SELECT id, email, created
+FROM users
+WHERE created > $1
+ORDER BY created DESC
 LIMIT 100;
-```
+```markdown
 
 #### Data Validation
 - Application-level validation before database writes
@@ -323,7 +311,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
   },
 };
-```
+```markdown
 
 ### Pre-commit Hooks
 ```bash
@@ -334,7 +322,7 @@ module.exports = {
 npm run lint
 npm run test
 npm run type-check
-```
+```markdown
 
 ## Documentation Standards
 
@@ -348,7 +336,7 @@ npm run type-check
 function calculatePerformanceScore(metrics: CampaignMetrics): number {
   // Implementation details...
 }
-```
+```markdown
 
 ### README Files
 - Required for all new components and features
@@ -389,7 +377,7 @@ jobs:
         run: npm test
       - name: Build
         run: npm run build
-```
+```markdown
 
 ### Environment Configuration
 ```typescript
@@ -413,7 +401,7 @@ export const getConfig = () => {
   const env = process.env.NODE_ENV || 'development';
   return config[env];
 };
-```
+```markdown
 
 ## Monitoring & Logging
 
@@ -437,7 +425,7 @@ logger.error('Database connection failed', {
   connectionString: sanitizeConnectionString(dbUrl),
   retryCount: 3,
 });
-```
+```markdown
 
 ## Accessibility Guidelines
 
@@ -459,7 +447,7 @@ logger.error('Database connection failed', {
   aria-invalid={hasError}
 />
 <div id="email-help">We'll use this to send you updates</div>
-```
+```markdown
 
 ## Contributing Guidelines
 
@@ -472,13 +460,13 @@ logger.error('Database connection failed', {
 6. Squash merge to `develop`
 
 ### Commit Message Format
-```
+```markdown
 type(scope): description
 
 [optional body]
 
 [optional footer]
-```
+```markdown
 
 Types: feat, fix, docs, style, refactor, test, chore
 
@@ -487,10 +475,10 @@ Types: feat, fix, docs, style, refactor, test, chore
 ## Related Documents
 - [API Reference](api_reference)) - API usage and integration
 - [Architecture Overview](architecture_overview)) - System design principles
-- [Security Framework](../../compliance-security/enterprise.md)) - Security architecture and controls
-- [Security & Privacy Integration](../../compliance-security/enterprise.md)) - Unified security and privacy practices
-- [Traffic Security Matrix](../../compliance-security/enterprise.md)) - Keying and traffic classification guidance
-- [SOP Guidelines](../../compliance-security/detailed-compliance.md)) - Operational procedures
+- [Security Framework](../../compliance-security/enterprise)) - Security architecture and controls
+- [Security & Privacy Integration](../../compliance-security/enterprise)) - Unified security and privacy practices
+- [Traffic Security Matrix](../../compliance-security/enterprise)) - Keying and traffic classification guidance
+- [SOP Guidelines](../../compliance-security/detailed-compliance)) - Operational procedures
 
 ## Security Development Lifecycle
 
@@ -507,7 +495,7 @@ class CampaignCreateRequest(BaseModel):
     subject: str
     content: str
     recipients: List[EmailStr]
-    
+
     @validator('name')
     def validate_name(cls, v):
         if not v or len(v.strip()) == 0:
@@ -518,13 +506,13 @@ class CampaignCreateRequest(BaseModel):
         if re.search(r'<script|javascript:|on\w+=', v, re.IGNORECASE):
             raise ValueError('Invalid characters in campaign name')
         return v.strip()
-    
+
     @validator('recipients')
     def validate_recipients(cls, v):
         if len(v) > 1000:  # Prevent DoS
             raise ValueError('Too many recipients')
         return v
-```
+```markdown
 
 **Authentication & Authorization** (⭐⭐⭐)
 ```typescript
@@ -545,7 +533,7 @@ export class AuthMiddleware {
 
       const payload = jwt.verify(token, process.env.JWT_SECRET!) as any;
       const user = await this.userRepo.findById(payload.userId);
-      
+
       if (!user || !user.isActive) {
         return res.status(401).json({ error: 'Invalid user' });
       }
@@ -574,7 +562,7 @@ export class AuthMiddleware {
     return null;
   }
 }
-```
+```markdown
 
 ### Security Testing Requirements
 
@@ -599,7 +587,7 @@ export class AuthMiddleware {
 ### RESTful Design Principles (⭐⭐⭐)
 
 **URL Structure:**
-```
+```markdown
 GET    /api/v1/campaigns              # List campaigns
 POST   /api/v1/campaigns              # Create campaign
 GET    /api/v1/campaigns/{id}         # Get campaign details
@@ -608,7 +596,7 @@ DELETE /api/v1/campaigns/{id}         # Delete campaign
 
 GET    /api/v1/campaigns/{id}/emails  # List campaign emails
 POST   /api/v1/campaigns/{id}/emails  # Send campaign emails
-```
+```markdown
 
 **Response Format:**
 ```json
@@ -635,7 +623,7 @@ POST   /api/v1/campaigns/{id}/emails  # Send campaign emails
     }
   }
 }
-```
+```markdown
 
 **Error Handling:**
 ```json
@@ -657,7 +645,7 @@ POST   /api/v1/campaigns/{id}/emails  # Send campaign emails
   },
   "request_id": "req_abc123"
 }
-```
+```markdown
 
 ### API Security Standards
 
@@ -700,7 +688,7 @@ CREATE TABLE email_campaigns (
 CREATE INDEX idx_campaigns_status ON email_campaigns(status);
 CREATE INDEX idx_campaigns_created_by ON email_campaigns(created_by);
 CREATE INDEX idx_campaigns_created_at ON email_campaigns(created_at);
-```
+```markdown
 
 **Data Modeling Best Practices:**
 
@@ -727,7 +715,7 @@ def upgrade():
     op.add_column('email_campaigns',
         sa.Column('ai_optimization_enabled', sa.Boolean(), default=False)
     )
-    
+
     # Create analytics events table
     op.create_table('analytics_events',
         sa.Column('id', sa.UUID(), nullable=False),
@@ -740,11 +728,11 @@ def upgrade():
         sa.PrimaryKeyConstraint('id'),
         sa.ForeignKeyConstraint(['campaign_id'], ['email_campaigns.id'])
     )
-    
+
     # Indexes for performance
     op.create_index('idx_analytics_events_campaign_id', 'analytics_events', ['campaign_id'])
     op.create_index('idx_analytics_events_timestamp', 'analytics_events', ['timestamp'])
-```
+```markdown
 
 **Data Migration Strategy:**
 1. **Backup First**: Always backup before migration
@@ -757,7 +745,7 @@ def upgrade():
 
 ## DevOps and Deployment
 
-### CI.md)
+### CI)
 
 **GitHub Actions Workflow:**
 ```yaml
@@ -775,35 +763,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    
+
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
         cache: 'npm'
-    
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements/dev.txt
         npm ci
-    
+
     - name: Run linting
       run: |
         black --check .
         flake8 .
         eslint .
-    
+
     - name: Run tests
       run: |
         pytest --cov=app --cov-report=xml
         npm test
-    
+
     - name: Upload coverage
       uses: codecov/codecov-action@v3
 
@@ -811,7 +799,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Run security tests
       run: |
         bandit -r app/
@@ -824,11 +812,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: Deploy to production
       run: |
         # Deployment commands here
-```
+```markdown
 
 ### Deployment Standards
 
@@ -847,7 +835,7 @@ services:
     volumes:
       - ./logs:/app/logs
     restart: unless-stopped
-    
+
   worker:
     build: .
     command: celery -A app.celery worker --loglevel=info
@@ -859,7 +847,7 @@ services:
       - redis
       - postgres
     restart: unless-stopped
-```
+```markdown
 
 **Health Checks:**
 ```python
@@ -869,21 +857,21 @@ from app.services.database import DatabaseService
 from app.services.cache import CacheService
 
 def setup_health_checks(app: FastAPI):
-    @app.get(".md)
+    @app.get(")
     async def health_check():
         try:
             # Database connectivity
             db_healthy = await DatabaseService.health_check()
-            
+
             # Cache connectivity
             cache_healthy = await CacheService.health_check()
-            
+
             # AI service availability
             ai_healthy = await check_ai_service()
-            
+
             # Analytics service availability
             analytics_healthy = await check_analytics_service()
-            
+
             status = {
                 "status": "healthy" if all([db_healthy, cache_healthy, ai_healthy, analytics_healthy]) else "unhealthy",
                 "services": {
@@ -894,7 +882,7 @@ def setup_health_checks(app: FastAPI):
                 },
                 "timestamp": datetime.utcnow().isoformat()
             }
-            
+
             return status
         except Exception as e:
             return {
@@ -902,7 +890,7 @@ def setup_health_checks(app: FastAPI):
                 "error": str(e),
                 "timestamp": datetime.utcnow().isoformat()
             }
-```
+```markdown
 
 ---
 
@@ -928,7 +916,7 @@ def monitor_performance(func):
         start_time = time.time()
         method = kwargs.get('method', 'POST')
         endpoint = kwargs.get('endpoint', 'unknown')
-        
+
         try:
             result = func(*args, **kwargs)
             status = 'success'
@@ -941,9 +929,9 @@ def monitor_performance(func):
             duration = time.time() - start_time
             request_count.labels(method=method, endpoint=endpoint, status=status).inc()
             request_duration.observe(duration)
-    
+
     return wrapper
-```
+```markdown
 
 **Database Performance Monitoring:**
 ```sql
@@ -969,7 +957,7 @@ SELECT
     idx_tup_fetch
 FROM pg_stat_user_indexes
 ORDER BY idx_scan DESC;
-```
+```markdown
 
 ### Optimization Guidelines
 
@@ -1028,7 +1016,7 @@ export class DevelopmentAnalyticsService {
     });
   }
 }
-```
+```markdown
 
 ### Phase 4A AI Integration (⭐⭐⭐)
 
@@ -1038,40 +1026,40 @@ export class DevelopmentAnalyticsService {
 class AIDevelopmentAssistant:
     def __init__(self, ai_service: AIService):
         self.ai_service = ai_service
-    
+
     async def optimize_code_quality(self, code: str) -> dict:
         """AI-powered code quality optimization suggestions."""
         prompt = f"""
         Analyze the following code for quality improvements:
         {code}
-        
+
         Consider:
         1. Code style and readability
         2. Performance optimizations
         3. Security best practices
         4. Test coverage suggestions
-        
+
         Provide specific, actionable recommendations.
         """
-        
+
         response = await self.ai_service.complete(prompt)
         return self.parse_recommendations(response)
-    
+
     async def generate_test_cases(self, function_signature: str) -> list:
         """AI-generated test case suggestions."""
         prompt = f"""
         Generate comprehensive test cases for:
         {function_signature}
-        
+
         Include:
         1. Edge cases
         2. Error conditions
         3. Boundary values
         4. Happy path scenarios
         """
-        
+
         return await self.ai_service.generate_tests(prompt)
-```
+```markdown
 
 ---
 
@@ -1106,7 +1094,7 @@ class AIDevelopmentAssistant:
   min-width: 44px;
   padding: 12px 16px;
 }
-```
+```markdown
 
 **Mobile Performance Optimization:**
 ```typescript
@@ -1124,19 +1112,19 @@ export class MobilePerformanceOptimizer {
           }
         });
       });
-      
+
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
       });
     }
-    
+
     // Progressive Web App features
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('.md);
+      navigator.serviceWorker.register(');
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -1167,22 +1155,22 @@ export class MobilePerformanceOptimizer {
 ## Resources and References
 
 ### Internal Documentation
-- [Security Measures & Privacy Policies](...md)
-- [Analytics Implementation](...md)
-- [AI Personalization Engine](...md)
-- [Mobile Experience Validation](...md)
+- [Security Measures & Privacy Policies](/docs/implementation-technical/development-guidelines)
+- [Analytics Implementation](/docs/implementation-technical/development-guidelines)
+- [AI Personalization Engine](/docs/implementation-technical/development-guidelines)
+- [Mobile Experience Validation](/docs/implementation-technical/development-guidelines)
 
 ### External Resources
-- [OWASP Security Guidelines](https://owasp.org/www-project-top-ten.md)
-- [RESTful API Design Principles](https://restfulapi.net.md)
-- [PostgreSQL Performance Tuning](https://wiki.postgresql.org/wiki.md)
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices.md)
+- [OWASP Security Guidelines](https://owasp.org/www-project-top-ten)
+- [RESTful API Design Principles](https://restfulapi.net)
+- [PostgreSQL Performance Tuning](https://wiki.postgresql.org/wiki)
+- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices)
 
 ### Development Tools
-- [VS Code Extensions](https://marketplace.visualstudio.com.md)
-- [Python Testing Framework](https://docs.pytest.org.md)
-- [JavaScript Testing Tools](https://jestjs.io.md)
-- [API Documentation Tools](https://swagger.io.md)
+- [VS Code Extensions](https://marketplace.visualstudio.com)
+- [Python Testing Framework](https://docs.pytest.org)
+- [JavaScript Testing Tools](https://jestjs.io)
+- [API Documentation Tools](https://swagger.io)
 
 ---
 

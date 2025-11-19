@@ -4,11 +4,11 @@
 
 ## Tickets
 
-- [CORE-1.1](./CORE-1.1-initialize-nextjs-project.md) - Initialize Next.js 15 Project
-- [CORE-1.2](./CORE-1.2-configure-eslint.md) - Configure ESLint for Code Linting
-- [CORE-1.3](./CORE-1.3-configure-prettier.md) - Configure Prettier for Code Formatting
-- [CORE-1.4](./CORE-1.4-implement-pre-commit-hooks.md) - Implement Pre-commit Hooks with Husky
-- [CORE-1.5](./CORE-1.5-setup-environment-variables.md) - Set up Environment Variable Management
+- [CORE-1.1](./CORE-1.1-initialize-nextjs-project) - Initialize Next.js 15 Project
+- [CORE-1.2](./CORE-1.2-configure-eslint) - Configure ESLint for Code Linting
+- [CORE-1.3](./CORE-1.3-configure-prettier) - Configure Prettier for Code Formatting
+- [CORE-1.4](./CORE-1.4-implement-pre-commit-hooks) - Implement Pre-commit Hooks with Husky
+- [CORE-1.5](./CORE-1.5-setup-environment-variables) - Set up Environment Variable Management
 
 ## Dependencies
 
@@ -21,5 +21,3 @@ This milestone has no dependencies and should be completed first.
 - ✅ ESLint and Prettier enforcing code quality
 - ✅ Pre-commit hooks preventing bad commits
 - ✅ Environment variable system in place
-
-

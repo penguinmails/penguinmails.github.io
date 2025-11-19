@@ -11,7 +11,8 @@ Install the Zod library. In a new `/lib/schemas` directory, define and export Zo
 
 ## Context
 
-Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Zod will be used for:
+Data validation is critical for security and data integrity. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Zod will be used for:
+
 - **API Request Validation:** Validating incoming request data
 - **Type Safety:** Ensuring data matches expected types
 - **Security:** Preventing invalid or malicious data from entering the system
@@ -70,15 +71,18 @@ export type LoginInput = z.infer<typeof loginSchema>;
 ### Validation Rules
 
 **Email:**
+
 - Must be a valid email format
 - Required field
 
 **Password:**
+
 - Minimum 8 characters (for signup)
 - Required field
 - Consider adding complexity requirements (future enhancement)
 
 **Name:**
+
 - Optional for signup (or required based on business requirements)
 - String validation
 
@@ -93,8 +97,8 @@ export type LoginInput = z.infer<typeof loginSchema>;
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Validation patterns
-- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards.md) - Data validation requirements
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Validation patterns
+- [Compliance & Regulatory Standards](../../docs/quick-access/compliance-regulatory-standards) - Data validation requirements
 
 ## Dependencies
 
@@ -110,5 +114,3 @@ export type LoginInput = z.infer<typeof loginSchema>;
 - [ ] Test `loginSchema` with invalid email - should fail
 - [ ] Verify TypeScript types are correctly inferred
 - [ ] Test schema validation with edge cases (empty strings, null, undefined)
-
-

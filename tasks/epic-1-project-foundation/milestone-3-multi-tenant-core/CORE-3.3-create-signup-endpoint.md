@@ -11,7 +11,8 @@ Create a POST API route at `/api/auth/signup/route.ts`. It will validate the req
 
 ## Context
 
-User registration is the first step in the authentication flow. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), users must be created in both:
+User registration is the first step in the authentication flow. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), users must be created in both:
+
 - **NileDB** - For authentication and session management
 - **PostgreSQL** - For application-specific user data
 
@@ -124,10 +125,10 @@ export async function POST(request: NextRequest) {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Authentication flow
-- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference.md) - **Primary reference** for API development standards and authentication patterns
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - Users table structure (NileDB-managed)
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - User registration
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Authentication flow
+- [API Reference](../../docs/implementation-technical/development-guidelines/api-reference) - **Primary reference** for API development standards and authentication patterns
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - Users table structure (NileDB-managed)
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - User registration
 
 ## Dependencies
 
@@ -146,5 +147,3 @@ export async function POST(request: NextRequest) {
 - [ ] Verify password is not returned in response
 - [ ] Verify user ID matches between NileDB and our database
 - [ ] Test error handling for database failures
-
-

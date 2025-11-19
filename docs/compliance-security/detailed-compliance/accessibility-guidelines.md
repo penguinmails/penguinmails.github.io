@@ -25,17 +25,20 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## 2. **Legal and Standards Compliance**
 
 ### **WCAG 2.1 Guidelines**
+
 - **Level A**: Basic accessibility requirements (minimum compliance)
 - **Level AA**: Enhanced accessibility requirements (target standard)
 - **Level AAA**: Highest accessibility requirements (aspirational)
 
 ### **Legal Requirements**
+
 - **ADA (Americans with Disabilities Act)**: US federal accessibility requirements
 - **Section 508**: US government website accessibility standards
 - **EN 301 549**: European accessibility requirements for ICT products
 - **AODA (Accessibility for Ontarians with Disabilities Act)**: Canadian provincial requirements
 
 ### **Industry Standards**
+
 - **WAI-ARIA 1.2**: Accessible Rich Internet Applications specification
 - **ISO 9241-171**: Ergonomics of human-system interaction - guidance on software accessibility
 - **BITV 2.0**: German federal government's accessibility standard
@@ -43,6 +46,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## 3. **Perceivable Guidelines**
 
 ### **Text Alternatives**
+
 - **All images must have alt text** describing the image's purpose or content
 - **Decorative images** use empty alt text (alt="")
 - **Complex images** (charts, graphs) include detailed descriptions
@@ -59,7 +63,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 <!-- Avoid -->
 <img src="logo.png" alt="Logo">
 <img src="chart.png"> <!-- Missing alt text -->
-```
+```markdown
 
 ### **Color and Contrast**
 - **Normal text**: 4.5:1 contrast ratio minimum
@@ -78,7 +82,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
   outline: 2px solid hsl(199, 89%, 48%);
   outline-offset: 2px;
 }
-```
+```markdown
 
 ### **Audio and Video**
 - **Captions** for all video content
@@ -114,7 +118,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
     Draft Campaigns
   </button>
 </div>
-```
+```markdown
 
 ### **Touch Targets**
 - **Minimum size**: 44px × 44px for touch targets
@@ -136,7 +140,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
     transition-duration: 0.01ms !important;
   }
 }
-```
+```markdown
 
 ### **Error Prevention**
 - **Clear error messages** explaining what went wrong
@@ -160,7 +164,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 
 ### **Input Assistance**
 - **Field labels** clearly associated with inputs
-- **Input formats** clearly specified (e.g., "MM/DD.md)
+- **Input formats** clearly specified (e.g., "MM/DD)
 - **Help text** available for complex fields
 - **Autocomplete** for repetitive inputs
 
@@ -174,7 +178,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 <div class="error-message" role="alert" aria-live="polite">
   Please enter a valid email address
 </div>
-```
+```markdown
 
 ## 6. **Robust Guidelines**
 
@@ -229,7 +233,7 @@ export function Button({
     </button>
   );
 }
-```
+```markdown
 
 ### **Accessibility Testing Checklist**
 
@@ -279,7 +283,7 @@ export function Button({
     </tr>
   </tbody>
 </table>
-```
+```markdown
 
 ### **Modal Dialogs**
 ```html
@@ -298,7 +302,7 @@ export function Button({
     <button class="destructive">Delete Campaign</button>
   </div>
 </div>
-```
+```markdown
 
 ### **Progress Indicators**
 ```html
@@ -306,7 +310,7 @@ export function Button({
   <span class="sr-only">Sending emails: 75% complete</span>
   <div class="progress-bar" style="width: 75%"></div>
 </div>
-```
+```markdown
 
 ### **Custom Components**
 - **ARIA attributes**: Use appropriate ARIA roles and properties
@@ -402,10 +406,10 @@ export function Button({
 ---
 
 ## Related Documents
-- [Design System](../../design.md) - Complete design system overview
-- [Design Tokens](../../design.md) - Design token specifications
-- [Interaction Patterns](../../design.md) - User interaction frameworks
-- [UI Library](../../design.md) - Component usage guidelines
+- [Design System](../../design) - Complete design system overview
+- [Design Tokens](../../design) - Design token specifications
+- [Interaction Patterns](../../design) - User interaction frameworks
+- [UI Library](../../design) - Component usage guidelines
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---

@@ -9,10 +9,10 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Areas
 
-- [Architecture](architecture.md) - System design and technical foundation
-- [Operations](operations.md) - Operational procedures and monitoring
-- [Integration](integration.md) - API and integration documentation
-- [Enterprise Technical](enterprise-technical.md) - Comprehensive enterprise technical guides
+- [Architecture](architecture) - System design and technical foundation
+- [Operations](operations) - Operational procedures and monitoring
+- [Integration](integration) - API and integration documentation
+- [Enterprise Technical](enterprise-technical) - Comprehensive enterprise technical guides
 
 ## Complexity Levels
 
@@ -23,75 +23,87 @@ Technical documentation and implementation guides for PenguinMails.
 
 ## Technical Architecture
 
-### [Overview](architecture/overview.md)
+### [Overview](architecture/overview)
+
 - High-level system design and technical foundation
 - Technology stack and infrastructure overview
 
-### [Detailed Technical](architecture/detailed-technical.md)
-- [High-Level Architecture](architecture/overview.md)
-- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap.md)
-- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide.md)
+### [Detailed Technical](architecture/detailed-technical)
 
-### [Enterprise Tech](architecture/enterprise-tech.md)
-- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling.md)
-- [Custom Configurations](architecture/enterprise-tech/custom-configurations.md)
-- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure.md)
+- [High-Level Architecture](architecture/overview)
+- [Implementation Roadmap](architecture/detailed-technical/implementation-roadmap)
+- [DNS Integration Guide](architecture/detailed-technical/dns-integration-guide)
+
+### [Enterprise Tech](architecture/enterprise-tech)
+
+- [Enterprise Scaling](architecture/enterprise-tech/enterprise-scaling)
+- [Custom Configurations](architecture/enterprise-tech/custom-configurations)
+- [Advanced Infrastructure](architecture/enterprise-tech/advanced-infrastructure)
 
 ## Technical Operations
 
-### [Overview](operations/overview.md)
+### [Overview](operations/overview)
+
 - Basic operations guide and system monitoring
 - Performance management and troubleshooting
 
-### [Enterprise Operations](operations/enterprise-operations.md)
-- [Backup & Recovery](operations/enterprise-operations/backup-recovery.md)
-- [Connection Pooling](operations/enterprise-operations/connection-pooling.md)
-- [Performance Monitoring](operations/enterprise-operations/performance-monitoring.md)
+### [Enterprise Operations](operations/enterprise-operations)
 
-### [Advanced Operations](operations/advanced-operations.md)
-- [Custom Monitoring](operations/advanced-operations/custom-monitoring.md)
-- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting.md)
-- [Performance Optimization](operations/advanced-operations/performance-optimization.md)
+- [Backup & Recovery](operations/enterprise-operations/backup-recovery)
+- [Connection Pooling](operations/enterprise-operations/connection-pooling)
+- [Performance Monitoring](operations/enterprise-operations/performance-monitoring)
+
+### [Advanced Operations](operations/advanced-operations)
+
+- [Custom Monitoring](operations/advanced-operations/custom-monitoring)
+- [Advanced Troubleshooting](operations/advanced-operations/advanced-troubleshooting)
+- [Performance Optimization](operations/advanced-operations/performance-optimization)
 
 ## Integration & Development
 
-### [Overview](integration/overview.md)
+### [Overview](integration/overview)
+
 - API and integration documentation overview
 - Getting started with integrations
 
-### [Advanced Integrations](integration/advanced-integrations.md)
-- [API Reference](integration/advanced-integrations/api-reference.md)
-- [Webhook Setup](integration/advanced-integrations/webhook-setup.md)
-- [Custom Integrations](integration/advanced-integrations/custom-integrations.md)
+### [Advanced Integrations](integration/advanced-integrations)
 
-### [Development Resources](integration/development-resources.md)
-- [API Development](integration/development-resources/api-development.md)
-- [Plugin Development](integration/development-resources/plugin-development.md)
-- [Custom Workflows](integration/development-resources/custom-workflows.md)
-- [Advanced Automation](integration/development-resources/advanced-automation.md)
+- [API Reference](integration/advanced-integrations/api-reference)
+- [Webhook Setup](integration/advanced-integrations/webhook-setup)
+- [Custom Integrations](integration/advanced-integrations/custom-integrations)
+
+### [Development Resources](integration/development-resources)
+
+- [API Development](integration/development-resources/api-development)
+- [Plugin Development](integration/development-resources/plugin-development)
+- [Custom Workflows](integration/development-resources/custom-workflows)
+- [Advanced Automation](integration/development-resources/advanced-automation)
 
 ## Enterprise Technical
 
-- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide.md)
-- [Custom Development](enterprise-technical/custom-development.md)
-- [Platform Extensions](enterprise-technical/platform-extensions.md)
-- [Technical Consulting](enterprise-technical/technical-consulting.md)
+- [Enterprise Setup Guide](enterprise-technical/enterprise-setup-guide)
+- [Custom Development](enterprise-technical/custom-development)
+- [Platform Extensions](enterprise-technical/platform-extensions)
+- [Technical Consulting](enterprise-technical/technical-consulting)
 
 ## Development Workflow
 
 ### API Integration
+
 1. **Authentication**: OAuth 2.0 and API key management
 2. **Core Endpoints**: Mailbox, campaign, and analytics APIs
 3. **Webhooks**: Real-time event notifications
 4. **SDKs**: JavaScript, Python, and PHP libraries
 
 ### Custom Development
+
 1. **Plugin Architecture**: Extensible plugin system
 2. **Custom Workflows**: Automation and workflow creation
 3. **Data Integration**: External system connections
 4. **Advanced Analytics**: Custom reporting and insights
 
 ### Enterprise Deployment
+
 1. **Infrastructure Setup**: Cloud and on-premise options
 2. **Security Configuration**: Enterprise-grade security
 3. **Integration Planning**: System integration strategies
@@ -100,12 +112,14 @@ Technical documentation and implementation guides for PenguinMails.
 ## Technical Specifications
 
 ### System Requirements
+
 - **Cloud Deployment**: AWS, Azure, GCP support
 - **On-Premise**: Docker containerization
 - **Database**: PostgreSQL, MySQL compatibility
 - **APIs**: RESTful and GraphQL support
 
 ### Performance Specifications
+
 - **Uptime**: 99.9% availability guarantee
 - **Response Time**: Sub-200ms API response times
 - **Scalability**: Auto-scaling infrastructure
@@ -114,6 +128,7 @@ Technical documentation and implementation guides for PenguinMails.
 ## Integration Examples
 
 ### CRM Integration
+
 ```javascript
 // Example: Salesforce integration
 const campaign = await penguinmails.createCampaign({
@@ -122,7 +137,7 @@ const campaign = await penguinmails.createCampaign({
   template: salesTemplate,
   schedule: { startDate: '2024-01-01' }
 });
-```
+```markdown
 
 ### Analytics Integration
 ```python
@@ -130,14 +145,14 @@ const campaign = await penguinmails.createCampaign({
 import penguinmails
 
 # Track campaign performance
-performance = penguinmails.analytics.getCampaignMetrics(.md)
+performance = penguinmails.analytics.getCampaignMetrics()
     campaign_id='campaign_123',
     date_range='last_30_days'
 )
 
 # Export to Google Analytics
 analytics.export_metrics(performance, destination='ga4')
-```
+```markdown
 
 ## Quality Assurance
 
@@ -168,7 +183,7 @@ analytics.export_metrics(performance, destination='ga4')
 - **Priority Support**: Dedicated technical support team
 
 ---
-*Previous: [Business Context](../business.md) | Next: [User Journeys](../user-journeys.md) →*
+*Previous: [Business Context](../business) | Next: [User Journeys](/docs/user-journeys) →*
 
 ## Documentation Authoring Guidelines (For Contributors)
 

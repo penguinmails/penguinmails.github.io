@@ -17,9 +17,10 @@ This document provides detailed specifications for specific integrations between
 **Integration Pattern:** Real-time bidirectional CRM synchronization with conflict resolution
 
 **Workflow:**
-```
+
+```markdown
 Marketing Lead Capture → Lead Processing → CRM Sync → Sales Assignment → Follow-up Automation
-```
+```markdown
 
 **Implementation Details:**
 
@@ -38,16 +39,16 @@ const leadProcessingPipeline = {
   async processLead(rawLead: RawLeadData): Promise<ProcessedLead> {
     // Step 1: Validate and clean data
     const validatedLead = await validateLeadData(rawLead);
-    
+
     // Step 2: Check for duplicates
     const duplicateCheck = await checkCRMForDuplicates(validatedLead.email);
     if (duplicateCheck.found) {
       return await mergeWithExistingLead(validatedLead, duplicateCheck.record);
     }
-    
+
     // Step 3: Calculate lead score
     const leadScore = await calculateLeadScore(validatedLead);
-    
+
     // Step 4: Create/update CRM record
     const crmRecord = await syncToCRM({
       ...validatedLead,
@@ -55,17 +56,17 @@ const leadProcessingPipeline = {
       source: 'marketing_platform',
       sync_timestamp: new Date().toISOString()
     });
-    
+
     // Step 5: Assign to sales rep
     const assignment = await assignSalesRep(crmRecord, leadScore);
-    
+
     // Step 6: Trigger follow-up automation
     await triggerFollowUpSequence(crmRecord.id, assignment.rep_id);
-    
+
     return crmRecord;
   }
 };
-```
+```markdown
 
 **CRM Integration Mapping:**
 
@@ -96,7 +97,7 @@ const leadProcessingPipeline = {
     }
   }
 }
-```
+```markdown
 
 **HubSpot Integration:**
 ```json
@@ -123,7 +124,7 @@ const leadProcessingPipeline = {
     }
   }
 }
-```
+```markdown
 
 ### 2. Campaign Attribution Tracking
 
@@ -148,14 +149,14 @@ class CampaignAttributionEngine implements AttributionTracking {
       metadata: touchpoint.metadata,
       weight: this.calculateTouchpointWeight(touchpoint)
     });
-    
+
     // Update real-time attribution score
     await this.updateRealTimeAttribution(touchpoint.contact_id);
   }
-  
+
   async calculateRevenueAttribution(campaignId: string): Promise<RevenueAttribution> {
     const attributionModel = await this.getAttributionModel(campaignId);
-    
+
     return {
       campaign_id: campaignId,
       total_revenue: await this.calculateTotalRevenue(campaignId),
@@ -165,37 +166,37 @@ class CampaignAttributionEngine implements AttributionTracking {
     };
   }
 }
-```
+```markdown
 
 **Attribution Models Supported:**
 
 **First-Touch Attribution:**
 ```sql
 WITH first_touch AS (
-  SELECT 
+  SELECT
     contact_id,
     MIN(timestamp) as first_interaction,
     campaign_id
-  FROM touchpoints 
-  WHERE campaign_id = ? 
+  FROM touchpoints
+  WHERE campaign_id = ?
     AND contact_id IN (SELECT contact_id FROM opportunities WHERE is_closed_won = true)
   GROUP BY contact_id, campaign_id
 )
-SELECT 
+SELECT
   ft.campaign_id,
   COUNT(*) as attributed_customers,
   SUM(o.amount) as attributed_revenue,
-  SUM(o.amount) .md) as avg_deal_size
+  SUM(o.amount) ) as avg_deal_size
 FROM first_touch ft
 JOIN opportunities o ON o.contact_id = ft.contact_id
 WHERE o.is_closed_won = true
 GROUP BY ft.campaign_id;
-```
+```markdown
 
 **Multi-Touch Attribution (Linear Model):**
 ```sql
 WITH touchpoint_sequence AS (
-  SELECT 
+  SELECT
     t.contact_id,
     t.campaign_id,
     t.touchpoint_type,
@@ -207,24 +208,24 @@ WITH touchpoint_sequence AS (
     AND t.contact_id IN (SELECT contact_id FROM opportunities WHERE is_closed_won = true)
 ),
 weighted_attribution AS (
-  SELECT 
+  SELECT
     ts.campaign_id,
     ts.touchpoint_type,
-    (1.0 .md) as attribution_weight,
+    (1.0 ) as attribution_weight,
     o.amount,
-    o.amount * (1.0 .md) as weighted_revenue
+    o.amount * (1.0 ) as weighted_revenue
   FROM touchpoint_sequence ts
   JOIN opportunities o ON o.contact_id = ts.contact_id
   WHERE o.is_closed_won = true
 )
-SELECT 
+SELECT
   campaign_id,
   touchpoint_type,
   SUM(weighted_revenue) as attributed_revenue,
   SUM(attribution_weight) as total_weight
 FROM weighted_attribution
 GROUP BY campaign_id, touchpoint_type;
-```
+```markdown
 
 ---
 
@@ -246,28 +247,28 @@ class ProductMarketingIntegration {
   async trackFeatureUsage(event: FeatureUsageEvent): Promise<void> {
     // Store usage event
     await this.analytics.track(event);
-    
+
     // Check for adoption milestones
     const adoptionMilestone = await this.checkAdoptionMilestone(event);
     if (adoptionMilestone.achieved) {
       await this.triggerAdoptionSuccessCampaign(event.tenant_id, event.feature_id);
     }
-    
+
     // Update customer health score
     await this.updateCustomerHealthScore(event.tenant_id);
-    
+
     // Generate expansion opportunity signals
     await this.identifyExpansionOpportunities(event.tenant_id, event.feature_id);
   }
 }
-```
+```markdown
 
 **Product Analytics Schema:**
 ```json
 {
   "feature_usage_events": {
     "tenant_id": "string",
-    "user_id": "string", 
+    "user_id": "string",
     "feature_id": "string",
     "feature_name": "string",
     "usage_timestamp": "datetime",
@@ -280,7 +281,7 @@ class ProductMarketingIntegration {
     }
   }
 }
-```
+```markdown
 
 **Adoption Campaign Triggering:**
 ```typescript
@@ -294,7 +295,7 @@ interface AdoptionCampaignTrigger {
     "advanced_feature": "upgrade_campaign_id"
   };
 }
-```
+```markdown
 
 ### 2. Customer Feedback Integration
 
@@ -306,22 +307,22 @@ class FeedbackMarketingIntegration {
   async processCustomerFeedback(feedback: CustomerFeedback): Promise<void> {
     // Categorize feedback for marketing insights
     const marketingInsights = await this.categorizeForMarketing(feedback);
-    
+
     // Update customer persona profiles
     await this.updatePersonaProfiles(feedback.customer_id, marketingInsights);
-    
+
     // Generate case study opportunities
     if (feedback.sentiment === 'positive' && feedback.score >= 8) {
       await this.generateCaseStudyOpportunity(feedback);
     }
-    
+
     // Update pain point messaging
     await this.updatePainPointMessaging(feedback.pain_points);
-    
+
     // Trigger targeted campaigns based on feedback themes
     await this.triggerTargetedCampaigns(feedback.themes);
   }
-  
+
   private async categorizeForMarketing(feedback: CustomerFeedback): Promise<MarketingInsights> {
     return {
       customer_segment: await this.inferSegment(feedback),
@@ -333,7 +334,7 @@ class FeedbackMarketingIntegration {
     };
   }
 }
-```
+```markdown
 
 ---
 
@@ -366,7 +367,7 @@ class CustomerHealthIntegration {
       this.getFinancialMetrics(tenantId),
       this.getMarketingEngagementMetrics(tenantId)
     ]);
-    
+
     // Weighted health score calculation
     const healthScore = {
       overall_score: this.calculateWeightedScore({
@@ -385,10 +386,10 @@ class CustomerHealthIntegration {
       health_trend: await this.calculateHealthTrend(tenantId),
       last_updated: new Date().toISOString()
     };
-    
+
     return healthScore;
   }
-  
+
   private calculateWeightedScore(metrics: Record<string, number>): number {
     const weights = {
       usage_frequency: 0.25,
@@ -398,7 +399,7 @@ class CustomerHealthIntegration {
       payment_stability: 0.15,
       marketing_engagement: 0.10
     };
-    
+
     return Math.round(
       Object.entries(metrics).reduce((total, [key, value]) => {
         return total + (value * weights[key]);
@@ -406,7 +407,7 @@ class CustomerHealthIntegration {
     ) / 100;
   }
 }
-```
+```markdown
 
 **Marketing Engagement Metrics:**
 ```typescript
@@ -433,7 +434,7 @@ interface MarketingEngagementMetrics {
     case_study_participation: number;
   };
 }
-```
+```markdown
 
 ### 2. Retention Campaign Automation
 
@@ -459,19 +460,19 @@ const retentionCampaignEngine = {
   async evaluateRetentionTriggers(tenantId: string): Promise<void> {
     const healthScore = await this.calculateHealthScore(tenantId);
     const triggers = this.checkRetentionTriggers(healthScore);
-    
+
     if (triggers.high_risk.length > 0) {
       await this.triggerHighRiskCampaign(tenantId, triggers.high_risk);
       await this.notifyCustomerSuccess(tenantId, 'high_risk');
     } else if (triggers.medium_risk.length > 0) {
       await this.triggerMediumRiskCampaign(tenantId, triggers.medium_risk);
     }
-    
+
     // Log intervention for tracking
     await this.logRetentionIntervention(tenantId, triggers, healthScore);
   }
 };
-```
+```markdown
 
 ---
 
@@ -502,11 +503,11 @@ class FinanceMarketingIntegration {
       this.getOperationalCosts(campaignId),
       this.getOpportunityCosts(campaignId)
     ]);
-    
+
     const totalCosts = campaignCosts + operationalCosts + opportunityCosts;
     const netRevenue = attributedRevenue - totalCosts;
-    const roi = ((netRevenue .md) * 100);
-    
+    const roi = ((netRevenue ) * 100);
+
     return {
       campaign_id: campaignId,
       total_investment: totalCosts,
@@ -518,7 +519,7 @@ class FinanceMarketingIntegration {
     };
   }
 }
-```
+```markdown
 
 **Cost Attribution Schema:**
 ```json
@@ -549,7 +550,7 @@ class FinanceMarketingIntegration {
     }
   }
 }
-```
+```markdown
 
 ### 2. Budget Optimization Integration
 
@@ -570,14 +571,14 @@ class BudgetOptimizationEngine {
       this.getLTVMetrics(analysisPeriod),
       this.getSeasonalTrends(analysisPeriod)
     ]);
-    
+
     const optimizationRecommendations = this.generateOptimizationRecommendations({
       channelPerformance,
       customerAcquisitionCosts,
       lifetimeValueMetrics,
       seasonalTrends
     });
-    
+
     return {
       current_allocation: await this.getCurrentBudgetAllocation(),
       optimized_allocation: optimizationRecommendations.allocations,
@@ -587,7 +588,7 @@ class BudgetOptimizationEngine {
     };
   }
 }
-```
+```markdown
 
 ---
 
@@ -627,7 +628,7 @@ class MarketingEventStream {
         correlation_id: event.correlationId
       }
     };
-    
+
     await this.kafkaProducer.send({
       topic: this.getTopicForEvent(event.type),
       messages: [{
@@ -637,7 +638,7 @@ class MarketingEventStream {
     });
   }
 }
-```
+```markdown
 
 ### Batch Data Synchronization
 
@@ -662,19 +663,19 @@ class BatchSynchronizationEngine {
     switch (jobType) {
       case 'crm_contact_sync':
         return await this.syncContactsToCRM(parameters.dateRange);
-      
+
       case 'campaign_performance_summary':
         return await this.generateCampaignSummaries(parameters.dateRange);
-      
+
       case 'financial_data_export':
         return await this.exportFinancialData(parameters.dateRange);
-      
+
       default:
         throw new Error(`Unknown sync job type: ${jobType}`);
     }
   }
 }
-```
+```markdown
 
 ---
 
@@ -701,23 +702,23 @@ class DataQualityEngine {
   async validateAndCleanData(data: RawData, rules: ValidationRules): Promise<ValidatedData> {
     // Step 1: Structure validation
     const structureValidation = await this.validateStructure(data, rules);
-    
+
     // Step 2: Content validation
     const contentValidation = await this.validateContent(data, rules);
-    
+
     // Step 3: Business rule validation
     const businessValidation = await this.validateBusinessRules(data, rules);
-    
+
     // Step 4: Data enrichment
     const enrichedData = await this.enrichData(data);
-    
+
     // Step 5: Final quality score
     const qualityScore = this.calculateQualityScore({
       structure: structureValidation,
       content: contentValidation,
       business: businessValidation
     });
-    
+
     return {
       data: enrichedData,
       quality_score: qualityScore,
@@ -730,7 +731,7 @@ class DataQualityEngine {
     };
   }
 }
-```
+```markdown
 
 ### Error Recovery and Retry Logic
 
@@ -750,37 +751,37 @@ class IntegrationErrorHandler {
     retryPolicy: RetryPolicy
   ): Promise<T> {
     let lastError: Error;
-    
+
     for (let attempt = 1; attempt <= retryPolicy.max_attempts; attempt++) {
       try {
         return await operation();
       } catch (error) {
         lastError = error;
-        
+
         if (!this.isRetryableError(error, retryPolicy.retryable_errors)) {
           throw error;
         }
-        
+
         if (attempt === retryPolicy.max_attempts) {
           break;
         }
-        
+
         const delay = this.calculateBackoffDelay(
           attempt,
           retryPolicy.base_delay_ms,
           retryPolicy.max_delay_ms,
           retryPolicy.backoff_strategy
         );
-        
+
         await this.logRetryAttempt(context, attempt, error, delay);
         await this.sleep(delay);
       }
     }
-    
+
     throw new Error(`Operation failed after ${retryPolicy.max_attempts} attempts: ${lastError.message}`);
   }
 }
-```
+```markdown
 
 ---
 
@@ -812,12 +813,12 @@ class IntegrationMonitor {
   async trackPerformance(operation: string, startTime: number): Promise<void> {
     const endTime = Date.now();
     const duration = endTime - startTime;
-    
+
     await this.metrics.recordHistogram('integration_operation_duration', duration, {
       operation: operation,
       status: 'success'
     });
-    
+
     // Check SLA compliance
     const slaTarget = this.getSLATarget(operation);
     if (duration > slaTarget) {
@@ -825,7 +826,7 @@ class IntegrationMonitor {
     }
   }
 }
-```
+```markdown
 
 ---
 

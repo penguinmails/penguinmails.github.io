@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: The real-time tracking pipeline captures every email interaction from delivery through engagement, providing actionable analytics that optimize campaign performance and deliverability.
 
-**User Journey Integration**: This tracking flow supports your complete [email campaign monitoring](../core-features/analytics/overview.md) and [deliverability optimization](../core-features/warm-ups/overview.md) with real-time performance insights.
+**User Journey Integration**: This tracking flow supports your complete [email campaign monitoring](../core-features/analytics/overview) and [deliverability optimization](../core-features/warm-ups/overview) with real-time performance insights.
 
 ---
 
@@ -33,19 +33,19 @@ sequenceDiagram
     participant Recipient as Email Recipient
     participant Analytics as Analytics Engine
     participant DB as Database
-    
+
     User->>API: Create Campaign
     API->>DB: Store Campaign Data
     DB-->>API: Campaign Created
-    
+
     API->>Queue: Queue Email Jobs
     Queue-->>API: Jobs Queued
-    
+
     loop Process Emails
         Worker->>SMTP: Send Email
         SMTP->>MailU: Deliver Email
         MailU->>Recipient: Email Delivered
-        
+
         alt Delivery Success
             Recipient-->>MailU: May Open Email
             MailU-->>Analytics: Log Open Event
@@ -56,16 +56,16 @@ sequenceDiagram
         else Delivery Failed
             MailU-->>Analytics: Log Bounce Event
         end
-        
+
         MailU-->>Worker: Delivery Status
         Worker->>DB: Update Email Status
         Worker->>Analytics: Process Events
     end
-    
+
     Analytics->>DB: Update Campaign Analytics
     DB-->>API: Analytics Data
     API-->>User: Real-time Updates
-```
+```markdown
 
 ## Email Lifecycle Stages
 

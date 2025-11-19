@@ -13,6 +13,7 @@ persona: "Documentation Users"
 ### Python Templates
 
 #### Basic Email Campaign Script
+
 ```python
 #!/usr/bin/env python3
 """
@@ -26,7 +27,7 @@ from datetime import datetime
 def create_basic_campaign():
     """Create a basic email campaign"""
     client = Client(api_key="YOUR_API_KEY")
-    
+
     campaign = {
         "name": "Welcome Campaign",
         "subject": "Welcome to PenguinMails!",
@@ -38,14 +39,14 @@ def create_basic_campaign():
             "type": "immediate"
         }
     }
-    
+
     result = client.campaigns.create(campaign)
     return result
 
 # Usage
 campaign = create_basic_campaign()
 print(f"Campaign created: {campaign['id']}")
-```
+```markdown
 
 #### Flask/FastAPI Integration Example
 ```python
@@ -56,13 +57,13 @@ import os
 app = Flask(__name__)
 client = Client(api_key=os.getenv("PENGUINMAILS_API_KEY"))
 
-@app.route('.md)
+@app.route(')
 def send_welcome_email():
     """Send welcome email to new user"""
     data = request.json
     email = data.get('email')
     name = data.get('name')
-    
+
     try:
         campaign = client.campaigns.send_immediate({
             "template_id": "welcome-template",
@@ -72,14 +73,14 @@ def send_welcome_email():
                 "company": "PenguinMails"
             }
         })
-        
+
         return jsonify({"success": True, "campaign_id": campaign['id']})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 400
 
 if __name__ == '__main__':
     app.run(debug=True)
-```
+```markdown
 
 ### JavaScript/Node.js Templates
 
@@ -96,9 +97,9 @@ const client = new PenguinMails({
 });
 
 // Send notification email
-app.post('.md) => {
+app.post(') => {
   const { email, message, type } = req.body;
-  
+
   try {
     const result = await client.campaigns.sendImmediate({
       templateId: 'notification-template',
@@ -109,7 +110,7 @@ app.post('.md) => {
         timestamp: new Date().toISOString()
       }
     });
-    
+
     res.json({ success: true, campaignId: result.id });
   } catch (error) {
     res.status(400).json({ success: false, error: error.message });
@@ -117,9 +118,9 @@ app.post('.md) => {
 });
 
 // Campaign creation endpoint
-app.post('.md) => {
+app.post(') => {
   const { name, subject, templateId, segmentId } = req.body;
-  
+
   try {
     const campaign = await client.campaigns.create({
       name,
@@ -133,7 +134,7 @@ app.post('.md) => {
         time: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours from now
       }
     });
-    
+
     res.json({ success: true, campaign });
   } catch (error) {
     res.status(400).json({ success: false, error: error.message });
@@ -143,7 +144,7 @@ app.post('.md) => {
 app.listen(3000, () => {
   console.log('PenguinMails integration server running on port 3000');
 });
-```
+```markdown
 
 #### Next.js Component Example
 ```jsx
@@ -163,14 +164,14 @@ export default function EmailCampaignManager() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       const response = await fetch('/api/create-campaign', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(campaign)
       });
-      
+
       const result = await response.json();
       if (result.success) {
         alert('Campaign created successfully!');
@@ -180,14 +181,14 @@ export default function EmailCampaignManager() {
     } catch (error) {
       alert('Error: ' + error.message);
     }
-    
+
     setIsLoading(false);
   };
 
   return (
     <div className="max-w-md mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Create Email Campaign</h1>
-      
+
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium mb-1">Campaign Name</label>
@@ -199,7 +200,7 @@ export default function EmailCampaignManager() {
             required
           />
         </div>
-        
+
         <div>
           <label className="block text-sm font-medium mb-1">Subject</label>
           <input
@@ -210,7 +211,7 @@ export default function EmailCampaignManager() {
             required
           />
         </div>
-        
+
         <button
           type="submit"
           disabled={isLoading}
@@ -222,7 +223,7 @@ export default function EmailCampaignManager() {
     </div>
   );
 }
-```
+```markdown
 
 ### PHP Templates
 
@@ -309,7 +310,7 @@ class CampaignController extends Controller
         }
     }
 }
-```
+```markdown
 
 ### Go Templates
 
@@ -346,7 +347,7 @@ func main() {
         BaseURL: "https://api.penguinmails.com",
     })
 
-    http.HandleFunc(".md) {
+    http.HandleFunc(") {
         var req EmailRequest
         if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
             http.Error(w, err.Error(), 400)
@@ -370,7 +371,7 @@ func main() {
         })
     })
 
-    http.HandleFunc(".md) {
+    http.HandleFunc(") {
         var req CampaignRequest
         if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
             http.Error(w, err.Error(), 400)
@@ -412,7 +413,7 @@ func main() {
     fmt.Println("PenguinMails integration server running on :8080")
     http.ListenAndServe(":8080", nil)
 }
-```
+```markdown
 
 ## Development Workflow Templates
 
@@ -438,7 +439,7 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
-```
+```markdown
 
 ### Package.json Template
 ```json
@@ -474,7 +475,7 @@ services:
     "npm": ">=8.0.0"
   }
 }
-```
+```markdown
 
 ### Configuration Template
 ```javascript
@@ -501,7 +502,7 @@ module.exports = {
     }
   }
 };
-```
+```markdown
 
 ## Cross-Domain Integration Requirements
 
@@ -510,7 +511,7 @@ module.exports = {
 - **Lead Attribution**: Track email campaign engagement for sales pipeline attribution
 - **Sales Alert Integration**: Send alerts for high-value prospect engagement
 
-### Marketing Integration  
+### Marketing Integration
 - **Campaign Performance Analytics**: Coordinate with marketing analytics platforms
 - **Customer Segment Sync**: Real-time synchronization of customer segments
 - **Cross-Channel Coordination**: Coordinate email with other marketing channels

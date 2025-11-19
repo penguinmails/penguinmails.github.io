@@ -1,10 +1,11 @@
 # Executive Dashboard Specification for Business Leaders
 
 ## Overview
+
 This document outlines the technical specification for a comprehensive Executive Dashboard designed for Business Leaders (C-Suite, VPs, Finance Directors) to monitor business performance, track cost optimization, and make strategic decisions based on real-time business intelligence.
 
-**Document Level:** Level 3 - Technical Implementation  
-**Target Audience:** Technical Architects, Frontend Developers, Business Intelligence Engineers  
+**Document Level:** Level 3 - Technical Implementation
+**Target Audience:** Technical Architects, Frontend Developers, Business Intelligence Engineers
 **Implementation Priority:** High - Critical for executive decision making
 
 ---
@@ -16,6 +17,7 @@ This document outlines the technical specification for a comprehensive Executive
 **Primary Business Challenge:** Enterprise customers need transparent, real-time insights into email marketing performance, cost attribution, and deliverability management to make data-driven strategic decisions.
 
 **Critical Business Requirements:**
+
 1. **Real-time Revenue Protection Monitoring** - Immediate visibility into deliverability issues that impact revenue
 2. **Cost Optimization Tracking** - Clear identification of savings opportunities and realized savings
 3. **Operational Efficiency Metrics** - Resource utilization and performance optimization insights
@@ -38,7 +40,7 @@ This document outlines the technical specification for a comprehensive Executive
 
 ### Dashboard Component Structure
 
-```
+```markdown
 Executive Dashboard
 ├── Revenue Protection Monitor
 │   ├── Deliverability Status Panel
@@ -65,7 +67,7 @@ Executive Dashboard
     ├── Key Performance Indicators
     ├── Critical Alerts Summary
     └── Recommended Actions
-```
+```markdown
 
 ### Data Integration Architecture
 
@@ -87,7 +89,7 @@ graph TD
     B --> G[Executive Dashboard]
     B --> H[Executive Reports]
     B --> I[Alert Management System]
-```
+```markdown
 
 ---
 
@@ -106,8 +108,8 @@ graph TD
   - Overall deliverability rate (%)
   - Bounce rate (%)
   - Spam complaint rate (%)
-  - IP reputation status (Good/Fair/Poor.md)
-  - Domain reputation status (Good/Fair/Poor.md)
+  - IP reputation status (Good/Fair/Poor)
+  - Domain reputation status (Good/Fair/Poor)
 
 **Revenue Risk Assessment:**
 - **Calculation:** `(Bounce Rate × $0.05 + Spam Rate × $0.25) × Monthly Email Volume`
@@ -190,12 +192,12 @@ graph TD
   - Best/worst performing tenants
   - Industry benchmark comparisons
 - **Efficiency Score Calculation:**
-  ```
-  Efficiency Score = (Deliverability Rate × 0.3) + 
-                    (Cost Efficiency × 0.3) + 
-                    (Resource Utilization × 0.2) + 
+  ```markdown
+  Efficiency Score = (Deliverability Rate × 0.3) +
+                    (Cost Efficiency × 0.3) +
+                    (Resource Utilization × 0.2) +
                     (Response Time × 0.2)
-  ```
+  ```markdown
 
 ### 4. Strategic Decision Tracker
 
@@ -251,7 +253,7 @@ interface ExecutiveDashboardState {
   isLoading: boolean;
   lastUpdated: Date;
 }
-```
+```markdown
 
 #### Key Dashboard Components
 
@@ -272,7 +274,7 @@ const RevenueProtectionMonitor: React.FC<RevenueProtectionMonitorProps> = ({
   // Revenue risk calculation and visualization
   // Alert management and escalation
 };
-```
+```markdown
 
 **2. Cost Optimization Center Component**
 ```typescript
@@ -291,7 +293,7 @@ const CostOptimizationCenter: React.FC<CostOptimizationCenterProps> = ({
   // Optimization opportunity identification
   // ROI tracking and forecasting
 };
-```
+```markdown
 
 ### Real-time Data Architecture
 
@@ -299,13 +301,13 @@ const CostOptimizationCenter: React.FC<CostOptimizationCenterProps> = ({
 ```typescript
 class ExecutiveDashboardDataService {
   private wsConnection: WebSocket;
-  
+
   connectToRealtimeData(tenantId: string): void {
     // WebSocket connection to PostHog streaming API
     // Real-time business event updates
     // Dashboard state synchronization
   }
-  
+
   subscribeToBusinessEvents(eventTypes: string[]): void {
     // Subscribe to specific business event types
     // Revenue impact events
@@ -313,25 +315,25 @@ class ExecutiveDashboardDataService {
     // Deliverability alerts
   }
 }
-```
+```markdown
 
 #### Data Caching Strategy
 ```typescript
 class DashboardCacheManager {
   private cache = new Map<string, DashboardData>();
   private expiryTime = 5 * 60 * 1000; // 5 minutes
-  
+
   getCachedData(tenantId: string): DashboardData | null {
     // Retrieve cached dashboard data
     // Check expiry and refresh if needed
   }
-  
+
   updateCachedData(tenantId: string, data: DashboardData): void {
     // Update cache with new business data
     // Invalidate related cache entries
   }
 }
-```
+```markdown
 
 ---
 
@@ -342,7 +344,7 @@ class DashboardCacheManager {
 #### 1. Dashboard Data Retrieval
 ```http
 GET /api/executive-dashboard/{tenantId}/summary
-```
+```markdown
 
 **Response:**
 ```json
@@ -387,12 +389,12 @@ GET /api/executive-dashboard/{tenantId}/summary
   ],
   "lastUpdated": "2025-12-19T10:35:00Z"
 }
-```
+```markdown
 
 #### 2. Real-time Business Events
 ```http
 GET /api/executive-dashboard/{tenantId}/events/realtime
-```
+```markdown
 
 **WebSocket Event Format:**
 ```json
@@ -407,12 +409,12 @@ GET /api/executive-dashboard/{tenantId}/events/realtime
   },
   "timestamp": "2025-12-19T10:35:00Z"
 }
-```
+```markdown
 
 #### 3. Cost Analysis Deep Dive
 ```http
 GET /api/executive-dashboard/{tenantId}/cost-analysis
-```
+```markdown
 
 **Response:**
 ```json
@@ -454,7 +456,7 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
     }
   ]
 }
-```
+```markdown
 
 ---
 
@@ -540,8 +542,8 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 
 ---
 
-**Document Classification:** Level 3 - Technical Implementation  
-**Business Stakeholder Access:** CTOs, Engineering Directors, Solution Architects  
+**Document Classification:** Level 3 - Technical Implementation
+**Business Stakeholder Access:** CTOs, Engineering Directors, Solution Architects
 **Technical Stakeholder Access:** Frontend Developers, Backend Engineers, DevOps Engineers
 
 This specification provides comprehensive technical guidance for implementing an executive-level business intelligence dashboard that delivers actionable insights for strategic decision making.

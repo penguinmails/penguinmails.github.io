@@ -11,12 +11,13 @@ In the `/lib/db/schema` directory, create new files for the `plans`, `subscripti
 
 ## Context
 
-Billing schemas are essential for managing subscriptions and payments. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index.md), PenguinMails offers:
+Billing schemas are essential for managing subscriptions and payments. According to the [Implementation & Getting Started](../../docs/implementation-getting-started/index), PenguinMails offers:
+
 - **Starter Plan:** $99/month
 - **Professional Plan:** $299/month
 - **Enterprise Plan:** Custom pricing
 
-The [Goals & Competitive Edge](../../docs/goals-competitive-edge/index.md) document outlines the B2B SaaS subscription model that these schemas will support.
+The [Goals & Competitive Edge](../../docs/goals-competitive-edge/index) document outlines the B2B SaaS subscription model that these schemas will support.
 
 ## Acceptance Criteria
 
@@ -129,9 +130,9 @@ export const tenantConfig = pgTable('tenant_config', {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Database schema patterns
-- [Implementation & Getting Started](../../docs/implementation-getting-started/index.md) - Subscription tiers
-- [Goals & Competitive Edge](../../docs/goals-competitive-edge/index.md) - Business model
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Database schema patterns
+- [Implementation & Getting Started](../../docs/implementation-getting-started/index) - Subscription tiers
+- [Goals & Competitive Edge](../../docs/goals-competitive-edge/index) - Business model
 
 ## Dependencies
 
@@ -147,4 +148,3 @@ export const tenantConfig = pgTable('tenant_config', {
 - [ ] Check that required fields are marked as not null
 - [ ] Verify cascade delete behavior (when tenant is deleted)
 - [ ] Test that optional fields can be null
-

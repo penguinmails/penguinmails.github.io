@@ -13,19 +13,24 @@ This document provides executive ROI summary with key financial metrics, demonst
 ## Executive Financial Summary
 
 ### Total Investment Overview
+
 **Marketing Technology Investment:**
+
 - **Total Implementation Cost:** $850K over 18 months
 - **Annual Operational Cost:** $350K (maintenance, licenses, training)
 - **3-Year Total Investment:** $1.9M
 
 **Expected Returns:**
+
 - **Annual Value Delivery:** $1.2M (beginning Year 2)
 - **3-Year ROI:** 525% return on investment
 - **Payback Period:** 18 months
 - **Net Present Value (NPV):** $2.8M over 3 years
 
 ### Financial Value Framework
+
 **Primary Value Drivers:**
+
 1. **Marketing Analytics Foundation** - $750K annual value (62% of total)
 2. **Campaign Performance Optimization** - $200K annual value (17% of total)
 3. **Customer Journey Optimization** - $150K annual value (12% of total)
@@ -36,22 +41,25 @@ This document provides executive ROI summary with key financial metrics, demonst
 ## Epic-Level ROI Analysis
 
 ### Epic 1: Marketing Foundation ROI
+
 **Investment:** $400K implementation + $150K annual operational
 
 **Annual Value Delivery:**
+
 - Real-time Analytics Prevention: $250K annual campaign waste prevention
 - CMO Decision Velocity: $200K value from faster strategic decisions
 - Attribution Accuracy: $150K value from improved marketing spend efficiency
 - Compliance Protection: $100K value from automated compliance and risk mitigation
 
 **ROI Calculation:**
-```
+
+```markdown
 Annual Value: $750K
 Annual Investment: $150K
 Net Annual Value: $600K
 ROI: 400% annually
 Payback: 8 months
-```
+```markdown
 
 ### Epic 2: Campaign Performance ROI
 **Investment:** $150K implementation + $50K annual operational
@@ -63,13 +71,13 @@ Payback: 8 months
 - Testing Automation: $75K value from automated A/B testing and optimization
 
 **ROI Calculation:**
-```
+```markdown
 Annual Value: $525K
 Annual Investment: $50K
 Net Annual Value: $475K
 ROI: 950% annually
 Payback: 4 months
-```
+```markdown
 
 ### Epic 3: Customer Journey Optimization ROI
 **Investment:** $120K implementation + $40K annual operational
@@ -81,13 +89,13 @@ Payback: 4 months
 - Experience Optimization: $75K value from customer experience excellence
 
 **ROI Calculation:**
-```
+```markdown
 Annual Value: $425K
 Annual Investment: $40K
 Net Annual Value: $385K
 ROI: 962% annually
 Payback: 4 months
-```
+```markdown
 
 ---
 

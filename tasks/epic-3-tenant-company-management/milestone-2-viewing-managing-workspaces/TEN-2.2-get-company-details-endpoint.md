@@ -11,7 +11,7 @@ Create a protected GET API route at `/api/companies/[companyId]/route.ts`. This 
 
 ## Context
 
-Viewing individual company details is essential for workspace management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), tenant isolation must be enforced—users should only access companies within their tenant. This endpoint enables detailed company viewing while maintaining security.
+Viewing individual company details is essential for workspace management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), tenant isolation must be enforced—users should only access companies within their tenant. This endpoint enables detailed company viewing while maintaining security.
 
 ## Acceptance Criteria
 
@@ -95,6 +95,7 @@ export async function GET(
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "id": "company-uuid",
@@ -108,6 +109,7 @@ export async function GET(
 ```
 
 **Error Response (404):**
+
 ```json
 {
   "error": "Company not found"
@@ -125,8 +127,8 @@ export async function GET(
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Tenant isolation
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - Workspace management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Tenant isolation
+- [Features & Capabilities](../../docs/features-capabilities/index) - Workspace management
 
 ## Dependencies
 
@@ -145,5 +147,3 @@ export async function GET(
 - [ ] Verify response includes all company fields
 - [ ] Test error handling for database failures
 - [ ] Verify tenant isolation is enforced (cannot access other tenant's companies)
-
-

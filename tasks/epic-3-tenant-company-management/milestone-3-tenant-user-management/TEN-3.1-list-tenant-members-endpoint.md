@@ -11,7 +11,7 @@ Create a protected GET API route at `/api/tenants/users/route.ts`. This endpoint
 
 ## Context
 
-Listing tenant members is essential for team management. According to the [Team Workflow](../../docs/quick-access/team-workflow.md), PenguinMails supports team collaboration with role-based access control. This endpoint enables users to see who is part of their tenant/workspace.
+Listing tenant members is essential for team management. According to the [Team Workflow](../../docs/quick-access/team-workflow), PenguinMails supports team collaboration with role-based access control. This endpoint enables users to see who is part of their tenant/workspace.
 
 ## Acceptance Criteria
 
@@ -78,6 +78,7 @@ export async function GET(request: NextRequest) {
 ### Expected Response Format
 
 **Success Response (200):**
+
 ```json
 {
   "users": [
@@ -93,6 +94,7 @@ export async function GET(request: NextRequest) {
 ```
 
 **Empty Response (200):**
+
 ```json
 {
   "users": [],
@@ -113,8 +115,8 @@ export async function GET(request: NextRequest) {
 
 ## Related Documentation
 
-- [Team Workflow](../../docs/quick-access/team-workflow.md) - Team management
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Multi-tenant architecture
+- [Team Workflow](../../docs/quick-access/team-workflow) - Team management
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Multi-tenant architecture
 
 ## Dependencies
 
@@ -132,5 +134,3 @@ export async function GET(request: NextRequest) {
 - [ ] Verify response includes user email, role, and ID
 - [ ] Test error handling for NileDB failures
 - [ ] Verify response format matches expected structure
-
-

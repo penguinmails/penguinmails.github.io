@@ -11,7 +11,8 @@ Create a file at `/lib/redis.ts`. In this file, initialize a new Redis client an
 
 ## Context
 
-A singleton Redis client is essential for performance and resource management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture.md), Redis handles:
+A singleton Redis client is essential for performance and resource management. According to the [High-Level Architecture](../../docs/quick-access/high-level-architecture), Redis handles:
+
 - **Session Storage:** User sessions and authentication tokens
 - **Real-time Data:** Current campaign status, deliverability metrics
 - **Rate Limiting:** API rate limiting and abuse prevention
@@ -100,11 +101,11 @@ export { redis };
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Cache layer
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - Queue system architecture (Redis integration)
-- [Queue System Implementation Guide](../../docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md) - Queue system design and Redis integration
-- [Connection Pooling Strategy](../../operations_runbooks/connection_pooling_strategy.md) - Connection management
-- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide.md) - Redis monitoring
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Cache layer
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - Queue system architecture (Redis integration)
+- [Queue System Implementation Guide](../../docs/implementation-technical/database-infrastructure/queue-system-implementation-guide) - Queue system design and Redis integration
+- [Connection Pooling Strategy](../../operations_runbooks/connection_pooling_strategy) - Connection management
+- [Performance Monitoring Guide](../../operations_runbooks/performance_monitoring_guide) - Redis monitoring
 
 ## Dependencies
 
@@ -119,5 +120,3 @@ export { redis };
 - [ ] Test error handling for invalid connection string
 - [ ] Test error handling for Redis server unavailable
 - [ ] Verify connection retry logic works
-
-

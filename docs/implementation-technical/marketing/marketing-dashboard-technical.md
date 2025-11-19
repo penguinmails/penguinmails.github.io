@@ -12,6 +12,7 @@ This document defines the technical implementation for simple marketing dashboar
 ## OLAP-Based Dashboard Architecture
 
 ### Data Sources Integration
+
 ```typescript
 interface MarketingDataSources {
   database_views: {
@@ -26,7 +27,7 @@ interface MarketingDataSources {
     power_bi: 'api_data_feeds';
   };
 }
-```
+```markdown
 
 ### Data Access Framework
 - **Database Views**: Pre-defined OLAP views with RBAC controls
@@ -59,15 +60,15 @@ interface ExportConfiguration {
     incremental_updates: 'change_detection';
   };
 }
-```
+```markdown
 
 ### Dashboard API Endpoints
-```
+```markdown
 GET /api/v1/marketing/clients
 GET /api/v1/marketing/metrics
 POST /api/v1/marketing/export
 GET /api/v1/marketing/health
-```
+```markdown
 
 ### Data Export Management
 - **Security**: Marketing role authentication, audit logging
@@ -92,7 +93,7 @@ interface ChartTypes {
     simple_pie: 'category_breakdown';
   };
 }
-```
+```markdown
 
 ### Interactive Features
 - **Basic Filtering**: Date range and category filters
@@ -123,7 +124,7 @@ interface ProcessingPipeline {
     derived_scores: 'simple_rule_based_calculations';
   };
 }
-```
+```markdown
 
 ---
 
@@ -155,7 +156,7 @@ interface UserRoles {
     export_permissions: 'full_data_access';
   };
 }
-```
+```markdown
 
 ---
 
@@ -178,7 +179,7 @@ interface UserRoles {
 
 ### Core Web Vitals Monitoring
 - **Largest Contentful Paint**: <2.5 seconds target
-- **First Input Delay**: <100 milliseconds target  
+- **First Input Delay**: <100 milliseconds target
 - **Cumulative Layout Shift**: <0.1 target
 
 ### Application Performance

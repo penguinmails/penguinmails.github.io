@@ -21,5 +21,5 @@ In the worker's entry point, implement an infinite loop that uses the Redis `BRP
 
 ## Related documentation
 
-- [Operations: Infrastructure Operations Management (queues & workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management.md)
-- [Development Standards (background job patterns)](../../docs/implementation-technical/development-guidelines/development-standards.md)
+- [Operations: Infrastructure Operations Management (queues & workers)](../../docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Development Standards (background job patterns)](../../docs/implementation-technical/development-guidelines/development-standards)

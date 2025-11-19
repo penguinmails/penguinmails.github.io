@@ -10,7 +10,7 @@ This document provides standardized templates and examples for creating user sto
 
 ## Standard External Stakeholder User Story Template
 
-```
+```markdown
 As a [STAKEHOLDER TYPE - Investor/Press/Competitor/Analyst], 
 I want [INFORMATION/ASSESSMENT CAPABILITY], 
 so that I can [EVALUATION/DUE DILIGENCE/MARKET ANALYSIS].
@@ -59,7 +59,7 @@ DEFINITION OF DONE:
 - [ ] Stakeholder experience validated
 - [ ] Business value delivered to stakeholder
 - [ ] Stakeholder feedback incorporated
-```
+```markdown
 
 ---
 
@@ -67,7 +67,7 @@ DEFINITION OF DONE:
 
 ### **Example 1: Investment Analysis Dashboard**
 
-```
+```markdown
 As a potential investor,
 I want to access a comprehensive investment analysis dashboard with financial metrics and growth projections,
 so that I can evaluate the investment opportunity and ROI potential.
@@ -120,11 +120,11 @@ DEFINITION OF DONE:
 - [ ] Investor access controls and permissions configured
 - [ ] Confidentiality agreements and data protection implemented
 - [ ] Investor feedback collected and incorporated
-```
+```markdown
 
 ### **Example 2: Customer Success Portfolio**
 
-```
+```markdown
 As a venture capital investor,
 I want to access detailed customer success stories and case studies,
 so that I can validate market demand and customer satisfaction with the platform.
@@ -176,7 +176,7 @@ DEFINITION OF DONE:
 - [ ] Customer testimonial and reference program established
 - [ ] Investor access to customer success portfolio configured
 - [ ] Regular updates and new case studies planned
-```
+```markdown
 
 ---
 
@@ -184,7 +184,7 @@ DEFINITION OF DONE:
 
 ### **Example 3: Media Kit & Resources**
 
-```
+```markdown
 As a technology journalist,
 I want to access a comprehensive media kit with company information and product resources,
 so that I can create accurate, compelling stories about PenguinMails.
@@ -236,7 +236,7 @@ DEFINITION OF DONE:
 - [ ] Visual asset library created and maintained
 - [ ] Industry insight and thought leadership content developed
 - [ ] Journalist access and communication system established
-```
+```markdown
 
 ---
 
@@ -244,7 +244,7 @@ DEFINITION OF DONE:
 
 ### **Example 4: Competitive Intelligence Portal**
 
-```
+```markdown
 As a competitor analysis team member,
 I want to access publicly available competitive intelligence about PenguinMails,
 so that I can understand market positioning and competitive advantages.
@@ -295,7 +295,7 @@ DEFINITION OF DONE:
 - [ ] Customer review and feedback compilation system working
 - [ ] Competitive positioning materials developed
 - [ ] Regular updates and information maintenance established
-```
+```markdown
 
 ---
 
@@ -303,7 +303,7 @@ DEFINITION OF DONE:
 
 ### **Example 5: Analyst Briefings**
 
-```
+```markdown
 As an industry analyst,
 I want to schedule comprehensive product briefings with technical deep-dives,
 so that I can provide accurate market analysis and vendor evaluation.
@@ -355,7 +355,7 @@ DEFINITION OF DONE:
 - [ ] Product roadmap and innovation direction prepared
 - [ ] Analyst access and scheduling system working
 - [ ] Follow-up and ongoing analyst relationship management
-```
+```markdown
 
 ---
 
@@ -385,10 +385,10 @@ DEFINITION OF DONE:
 ---
 
 **Related Documents**
-- [`../methodology.md`](../methodology.md)
-- [`../user-types-classification.md`](../user-types-classification.md)
-- [`internal-user-stories.md`](internal-user-stories.md)
-- [`customer-stories.md`](customer-stories.md)
+- [`../methodology.md`](../methodology)
+- [`../user-types-classification.md`](../user-types-classification)
+- [`internal-user-stories.md`](internal-user-stories)
+- [`customer-stories.md`](customer-stories)
 
 ---
 

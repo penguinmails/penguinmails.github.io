@@ -12,7 +12,7 @@ persona: "Technical Users"
 
 **Technical Authority**: The multi-tenant isolation system uses row-level security, tenant-specific infrastructure, and automated resource management to ensure each customer's data remains completely isolated and secure.
 
-**User Journey Integration**: This isolation flow is part of your complete [security framework](../compliance-security/overview.md) and [tenant management](../technical/architecture/detailed-technical.md) experience with guaranteed data protection.
+**User Journey Integration**: This isolation flow is part of your complete [security framework](../compliance-security/overview) and [tenant management](/docs/technical/architecture/detailed-technical) experience with guaranteed data protection.
 
 ---
 
@@ -28,67 +28,67 @@ graph TB
         APP[Client Applications]
         API_GW[API Gateway]
     end
-    
+
     subgraph "Tenant Routing"
         AUTH[Tenant Authentication]
         ROUTER[Tenant Router]
         ISOLATION[Data Isolation Layer]
     end
-    
+
     subgraph "Database Layer"
         subgraph "Tenant A Schema"
             A_USERS[Tenant A Users]
             A_CAMPAIGNS[Tenant A Campaigns]
             A_QUEUE[Tenant A Queue]
         end
-        
+
         subgraph "Tenant B Schema"
             B_USERS[Tenant B Users]
             B_CAMPAIGNS[Tenant B Campaigns]
             B_QUEUE[Tenant B Queue]
         end
-        
+
         subgraph "Shared Services"
             SHARED_CONFIG[System Configuration]
             SHARED_MONITORING[Monitoring Data]
         end
     end
-    
+
     %% Flow
     APP --> API_GW
     API_GW --> AUTH
     AUTH --> ROUTER
     ROUTER --> ISOLATION
-    
+
     %% Tenant A Access
     ISOLATION -->|Tenant A| A_USERS
     ISOLATION -->|Tenant A| A_CAMPAIGNS
     ISOLATION -->|Tenant A| A_QUEUE
-    
+
     %% Tenant B Access
     ISOLATION -->|Tenant B| B_USERS
     ISOLATION -->|Tenant B| B_CAMPAIGNS
     ISOLATION -->|Tenant B| B_QUEUE
-    
+
     %% Shared Access
     ISOLATION --> SHARED_CONFIG
     ISOLATION --> SHARED_MONITORING
-    
+
     %% Security
     ROUTER -.->|Row Level Security| ISOLATION
-    
+
     classDef app fill:#e1f5fe
     classDef routing fill:#f3e5f5
     classDef tenantA fill:#e8f5e9
     classDef tenantB fill:#fff3e0
     classDef shared fill:#fce4ec
-    
+
     class APP,API_GW app
     class AUTH,ROUTER,ISOLATION routing
     class A_USERS,A_CAMPAIGNS,A_QUEUE tenantA
     class B_USERS,B_CAMPAIGNS,B_QUEUE tenantB
     class SHARED_CONFIG,SHARED_MONITORING shared
-```
+```markdown
 
 ## Isolation Architecture
 

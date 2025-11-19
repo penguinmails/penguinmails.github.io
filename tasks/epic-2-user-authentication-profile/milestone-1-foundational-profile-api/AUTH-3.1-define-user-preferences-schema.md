@@ -11,7 +11,8 @@ In the `/lib/db/schema` directory, create a new file for the `user_preferences` 
 
 ## Context
 
-User preferences allow users to customize their experience within PenguinMails. According to the [Features & Capabilities](../../docs/features-capabilities/index.md), the platform supports:
+User preferences allow users to customize their experience within PenguinMails. According to the [Features & Capabilities](../../docs/features-capabilities/index), the platform supports:
+
 - **Dark/Light Mode:** User preference-based theme switching
 - **Customizable Layout:** Drag-and-drop dashboard customization
 - **Localization:** Multi-language support (future enhancement)
@@ -65,6 +66,7 @@ export const userPreferences = pgTable('user_preferences', {
 ```
 
 **Note:** Match the exact schema from the [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md#user_preferences---user-preferences). The schema uses:
+
 - `created` and `updated` (not `created_at`/`updated_at`)
 - Separate boolean columns for notification preferences (not JSON)
 - VARCHAR types with specific lengths
@@ -81,10 +83,10 @@ export const userPreferences = pgTable('user_preferences', {
 
 ## Related Documentation
 
-- [High-Level Architecture](../../docs/quick-access/high-level-architecture.md) - Database schema patterns
-- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide.md) - **Primary reference** for user_preferences table structure and OLTP design patterns
-- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide.md) - 5-tier database architecture overview
-- [Features & Capabilities](../../docs/features-capabilities/index.md) - User preferences features
+- [High-Level Architecture](../../docs/quick-access/high-level-architecture) - Database schema patterns
+- [OLTP Schema Guide](../../docs/implementation-technical/database-infrastructure/oltp-schema-guide) - **Primary reference** for user_preferences table structure and OLTP design patterns
+- [Database Schema Guide](../../docs/implementation-technical/database-infrastructure/database-schema-guide) - 5-tier database architecture overview
+- [Features & Capabilities](../../docs/features-capabilities/index) - User preferences features
 
 ## Dependencies
 
@@ -99,5 +101,3 @@ export const userPreferences = pgTable('user_preferences', {
 - [ ] Verify unique constraint prevents duplicate user preferences
 - [ ] Check that default values are set appropriately
 - [ ] Verify cascade delete behavior (when user is deleted)
-
-
