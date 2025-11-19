@@ -34,6 +34,13 @@ This comprehensive guide is designed to help independent consultants build succe
 
 ## Business Development Resources
 
+### Quotation and Proposal Preparation
+
+- **Professional Quotation Guide**: [Step-by-step guidance for preparing transparent quotations](quotation-guide.md)
+- **Google Docs Template**: [Official quotation template with detailed instructions](https://docs.google.com/document/d/1Ul4A-Ibhdt8cBfDGolbdNWSOk06lZd0Mp8oCl3CeifE/edit?usp=sharing)
+- **Task-Based Payment Model**: Understanding PenguinMails' unique compensation structure
+- **Technical Proposal Framework**: Professional approach to project scoping and delivery planning
+
 ### Service Package Development
 
 - **Tiered Offerings**: Create packages for different client sizes and needs
@@ -75,9 +82,9 @@ This comprehensive guide is designed to help independent consultants build succe
 
 ### Operational Requirements
 
-- **Professional Standards**: [Internal Operations Framework](../operations/freelancer-management/framework.md)
-- **Quality Expectations**: [Implementation Templates](../operations/freelancer-management/templates.md)
-- **Compliance Guidelines**: [Confidentiality and Data Protection](../../compliance-security/)
+- **Professional Standards**: [Internal Operations Framework](/docs/operations/freelancer-management/framework.md)
+- **Quality Expectations**: [Implementation Templates](/docs/operations/freelancer-management/templates.md)
+- **Compliance Guidelines**: [Confidentiality and Data Protection](/docs/compliance-security/)
 
 ### Platform and Technical Resources
 
@@ -121,20 +128,21 @@ This comprehensive guide is designed to help independent consultants build succe
 - **Level 1**: Strategic overview and getting started guides (This document)
 - **Level 2**: [Business Success Framework](business-framework.md) - Strategy and platform optimization
 - **Level 3**: [Implementation Resources](implementation-resources.md) - Tools and detailed guidance
+- **Specialized**: [Quotation Guide](quotation-guide.md) - Professional quotation preparation with Google Docs template
 
 ### 🔗 Cross-Reference Guide
 
-- **Internal Operations**: [Management Framework](../operations/freelancer-management/)
-- **Technical Resources**: [Platform Documentation](../../)
-- **Compliance Requirements**: [Security and Privacy](../../compliance-security/)
-- **Community Resources**: [Professional Networking and Support](../../community/)
+- **Internal Operations**: [Management Framework](/docs/operations/freelancer-management/)
+- **Technical Resources**: [Platform Documentation](/docs/)
+- **Compliance Requirements**: [Security and Privacy](/docs/compliance-security/)
+- **Community Resources**: [Professional Networking and Support](/docs/community/)
 
 ### 📖 Specialized Content
 
-- **Industry Guides**: [Technology Sector](industry-guides/technology-freelancers.md)
-- **Industry Guides**: [Creative Industries](industry-guides/creative-freelancers.md)
-- **Industry Guides**: [Marketing Specialists](industry-guides/marketing-freelancers.md)
-- **Success Metrics**: [Performance Tracking and KPIs](success-metrics.md)
+- **Industry Guides**: [Technology Sector](/docs/freelancer-support/industry-guides/technology-freelancers.md)
+- **Industry Guides**: [Creative Industries](/docs/freelancer-support/industry-guides/creative-freelancers.md)
+- **Industry Guides**: [Marketing Specialists](/docs/freelancer-support/industry-guides/marketing-freelancers.md)
+- **Success Metrics**: [Performance Tracking and KPIs](/docs/freelancer-support/success-metrics.md)
 
 ---
 
@@ -142,4 +150,4 @@ This comprehensive guide is designed to help independent consultants build succe
 **Business Value:** Comprehensive freelancer success framework enabling independent consultants to build thriving email marketing practices
 **Implementation Status:** Ready for freelancer onboarding and business development
 **Audience:** Independent consultants, freelancers, and email marketing specialists
-**Next Steps:** Review [Business Success Framework](business-framework.md) for detailed strategy and implementation guidance
+**Next Steps:** Review [Business Success Framework](/docs/freelancer-support/business-framework.md) for detailed strategy and implementation guidance

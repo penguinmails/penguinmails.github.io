@@ -64,6 +64,12 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 - Detailed procedures, forms, and operational templates
 - Ready-to-use documents and compliance frameworks
 
+### Specialized: Freelancer Success Resources
+
+- **Professional Quotation Guide**: [Step-by-step quotation preparation with Google Docs template](/docs/freelancer-support/quotation-guide.md)
+- [Freelancer Success Center](/docs/freelancer-support/README.md) - Complete external support hub
+- Comprehensive freelancer onboarding and business development resources
+
 ## Cross-Domain Integration Requirements
 
 ### Sales Operations
@@ -134,17 +140,18 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 While this documentation focuses on internal operations management, we recognize the importance of supporting freelancer success. For **freelancer-focused business development guidance**, see:
 
-- [Freelancer Success Center](../../freelancer-support/README.md) - Comprehensive external support hub
-- [Business Success Framework](../../freelancer-support/business-framework.md) - Strategic business development guidance
-- [Implementation Resources](../../freelancer-support/implementation-resources.md) - Practical tools and templates
-- [Success Metrics and KPIs](../../freelancer-support/success-metrics.md) - Performance tracking for freelancer growth
+- [Freelancer Success Center](/docs/freelancer-support/README.md) - Comprehensive external support hub
+- [Business Success Framework](/docs/freelancer-support/business-framework.md) - Strategic business development guidance
+- [Implementation Resources](/docs/freelancer-support/implementation-resources.md) - Practical tools and templates
+- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics.md) - Performance tracking for freelancer growth
 
 ### Shared Standards and Compliance
 
 For unified standards that apply to both internal operations and external freelancer success:
 
-- [Shared Freelancer Standards](../../shared/freelancer-resources/standards-and-guidelines.md) - Common quality and conduct standards
-- [Compliance Framework](../../compliance-security/) - Data protection and privacy requirements
+- **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/freelancer-support/quotation-guide.md)
+- [Shared Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines.md) - Common quality and conduct standards
+- [Compliance Framework](/docs/compliance-security/) - Data protection and privacy requirements
 
 ---
 
