@@ -1,5 +1,6 @@
-Gemfile
-Gemfile.lock
-.bundle
+_site/
+.roo/
 .jekyll-cache
 .jekyll-metadata
+AGENTS.md
+Dockerfile

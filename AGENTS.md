@@ -51,6 +51,7 @@ For detailed development setup and contribution procedures, please refer to our 
 ### 4. Code Quality Requirements
 
 - **Linting Compliance**: All code changes must pass linting requirements (.markdownlint.json)
+- **Markdown Linting**: Use Docker-based markdown linting as documented in [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md)
 - **Formatting Standards**: Follow established formatting rules (Prettier configuration)
 - **Error Prevention**: Never introduce syntax errors or broken references
 - **Testing Validation**: Changes must not break existing functionality

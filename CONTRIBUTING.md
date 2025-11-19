@@ -169,10 +169,13 @@ Our repository emphasizes targeted surgical edits over bulk automation:
 - **Surgical Fixes**: Use targeted search/replace edits to fix individual problems
 - **Historical Reference**: Legacy automation scripts are archived in `.roo/legacy-archive/development-automation/`
 
+For comprehensive markdown linting documentation, including troubleshooting and CI/CD integration, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
+
 ### Common Issues and Solutions
 
 - **MD001**: Heading levels should only increment by one level at a time
 - **MD022**: Headings should be surrounded by blank lines
+- **MD032**: Lists should be surrounded by blank lines
 - **MD036**: Emphasis should not be used in place of strong
 - **MD041**: First line in file should be a top-level heading
 - **MD047**: Files should end with a single newline character
