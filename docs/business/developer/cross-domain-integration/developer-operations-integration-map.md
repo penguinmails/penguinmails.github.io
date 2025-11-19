@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 4 - Cross-Domain Integration
 **Target Audience**: Developer Teams, Operations Teams, Operations Management Leadership
 **Business Impact Priority**: High - Operations coordination and developer platform automation
-**Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy) | [Operations Strategy Framework](docs/business/operations/strategy) | [Developer Operations Framework](docs/business/developer/operations) | [Operations Operations Framework](docs/business/operations/operations) | [Developer Analytics Framework](docs/business/developer/analytics) | [Operations Analytics Framework](docs/business/operations/analytics)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/developer/strategy) | [Operations Strategy Framework](/docs/business/operations/strategy) | [Developer Operations Framework](/docs/business/developer/operations) | [Operations Operations Framework](/docs/business/operations/operations) | [Developer Analytics Framework](/docs/business/developer/analytics) | [Operations Analytics Framework](/docs/business/operations/analytics)
 
 ## Executive Summary
 
@@ -47,7 +47,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Service optimization systems activated
 - Planning integration validation completed and verified
 
-**Business Framework Integration**: [Operations Strategy Framework](docs/business/operations/strategy) + [Developer Strategy Framework](docs/business/developer/strategy)
+**Business Framework Integration**: [Operations Strategy Framework](/docs/business/operations/strategy) + [Developer Strategy Framework](/docs/business/developer/strategy)
 
 #### Integration Point 1.1.2: Service Delivery Coordination
 
@@ -61,7 +61,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Support optimization systems activated
 - Delivery coordination validation completed and optimized
 
-**Business Framework Integration**: [Operations Operations Framework](docs/business/operations/operations) + [Developer Operations Framework](docs/business/developer/operations)
+**Business Framework Integration**: [Operations Operations Framework](/docs/business/operations/operations) + [Developer Operations Framework](/docs/business/developer/operations)
 
 #### Integration Point 1.1.3: Operational Risk Management
 
@@ -75,7 +75,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Reliability optimization systems activated
 - Risk assessment validation completed and verified
 
-**Business Framework Integration**: [Operations Strategy Framework](docs/business/operations/strategy) + [Developer Strategy Framework](docs/business/developer/strategy)
+**Business Framework Integration**: [Operations Strategy Framework](/docs/business/operations/strategy) + [Developer Strategy Framework](/docs/business/developer/strategy)
 
 ### 1.2 Platform Automation Excellence
 
@@ -105,7 +105,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Optimization systems activated
 - Efficiency optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 #### Integration Point 1.2.3: Automation ROI Optimization
 
@@ -119,7 +119,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Value creation optimization systems activated
 - ROI optimization validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 ---
 
@@ -139,7 +139,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Resolution optimization systems activated
 - Support integration validation completed and verified
 
-**Business Framework Integration**: [Operations Operations Framework](docs/business/operations/operations) + [Developer Operations Framework](docs/business/developer/operations)
+**Business Framework Integration**: [Operations Operations Framework](/docs/business/operations/operations) + [Developer Operations Framework](/docs/business/developer/operations)
 
 #### Integration Point 2.1.2: Service Quality Enhancement
 
@@ -167,7 +167,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Optimization systems activated
 - Success optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 ### 2.2 Service Optimization Excellence
 
@@ -183,7 +183,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Service optimization systems activated
 - Coordination validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations) + [Operations Operations Framework](docs/business/operations/operations)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/developer/operations) + [Operations Operations Framework](/docs/business/operations/operations)
 
 #### Integration Point 2.2.2: Operational Excellence Integration
 
@@ -197,7 +197,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Achievement optimization systems activated
 - Excellence integration validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy) + [Operations Strategy Framework](docs/business/operations/strategy)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/developer/strategy) + [Operations Strategy Framework](/docs/business/operations/strategy)
 
 #### Integration Point 2.2.3: Support Performance Measurement
 
@@ -211,7 +211,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Performance optimization systems activated
 - Performance measurement validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 ---
 
@@ -231,7 +231,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Coordination requirement optimization systems activated
 - Operations planning validation completed and verified
 
-**Business Framework Integration**: [Operations Strategy Framework](docs/business/operations/strategy) + [Developer Operations Framework](docs/business/developer/operations)
+**Business Framework Integration**: [Operations Strategy Framework](/docs/business/operations/strategy) + [Developer Operations Framework](/docs/business/developer/operations)
 
 #### Integration Point 3.1.2: Platform Operations Management
 
@@ -245,7 +245,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Coordination optimization systems activated
 - Operations management validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations) + [Operations Operations Framework](docs/business/operations/operations)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/developer/operations) + [Operations Operations Framework](/docs/business/operations/operations)
 
 #### Integration Point 3.1.3: Operational Success Coordination
 
@@ -259,7 +259,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Success optimization systems activated
 - Coordination validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 ### 3.2 Performance Monitoring Excellence
 
@@ -275,7 +275,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Performance optimization systems activated
 - Monitoring validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 #### Integration Point 3.2.2: Operational Quality Monitoring
 
@@ -303,7 +303,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Achievement optimization systems activated
 - Success tracking validation completed and optimized
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations) + [Operations Operations Framework](docs/business/operations/operations)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/developer/operations) + [Operations Operations Framework](/docs/business/operations/operations)
 
 ---
 
@@ -323,7 +323,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Holistic management systems activated
 - Dashboard validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 #### Integration Point 4.1.2: Operational Success Measurement
 
@@ -337,7 +337,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Success achievement optimization systems activated
 - Success measurement validation completed and optimized
 
-**Business Framework Integration**: [Developer Analytics Framework](docs/business/developer/analytics) + [Operations Analytics Framework](docs/business/operations/analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/developer/analytics) + [Operations Analytics Framework](/docs/business/operations/analytics)
 
 #### Integration Point 4.1.3: Performance Coordination Success
 
@@ -351,7 +351,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Performance optimization systems activated
 - Coordination success validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations) + [Operations Operations Framework](docs/business/operations/operations)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/developer/operations) + [Operations Operations Framework](/docs/business/operations/operations)
 
 ### 4.2 Continuous Improvement Integration
 
@@ -367,7 +367,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Value maximization systems activated
 - Optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](docs/business/developer/strategy) + [Operations Strategy Framework](docs/business/operations/strategy)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/developer/strategy) + [Operations Strategy Framework](/docs/business/operations/strategy)
 
 #### Integration Point 4.2.2: Platform Operations Excellence
 
@@ -381,7 +381,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Performance optimization systems activated
 - Operations excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](docs/business/developer/operations) + [Operations Operations Framework](docs/business/operations/operations)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/developer/operations) + [Operations Operations Framework](/docs/business/operations/operations)
 
 ---
 

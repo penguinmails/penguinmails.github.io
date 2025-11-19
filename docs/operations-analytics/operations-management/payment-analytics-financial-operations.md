@@ -683,25 +683,25 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Operations & Analytics
-- [`docs/operations-analytics/overview`](docs/operations-analytics) - Global operations analytics framework.
-- [`docs/operations-analytics/analytics-performance/metrics-kpis`](docs/operations-analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
-- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](docs/operations-analytics/operations-management) - Team and organization management analytics.
-- [`docs/operations-analytics/operations-management/environment-release-management`](docs/operations-analytics/operations-management) - Environment and release operations impact on billing and reliability.
+- [`docs/operations-analytics/overview`](/docs/operations-analytics) - Global operations analytics framework.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis`](/docs/operations-analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](/docs/operations-analytics/operations-management) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/environment-release-management`](/docs/operations-analytics/operations-management) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
-- [`docs/business/model/overview`](docs/business/model) - Canonical business and revenue model.
-- [`docs/business/value-proposition/overview`](docs/business/value-proposition) - Value proposition framing for pricing and packaging.
-- [`docs/business/strategy/overview`](docs/business/strategy) - Strategic priorities that payment analytics must support.
+- [`docs/business/model/overview`](/docs/business/model) - Canonical business and revenue model.
+- [`docs/business/value-proposition/overview`](/docs/business/value-proposition) - Value proposition framing for pricing and packaging.
+- [`docs/business/strategy/overview`](/docs/business/strategy) - Strategic priorities that payment analytics must support.
 
 ### Technical Architecture
-- [`docs/technical/architecture/overview`](docs/technical/architecture) - High-level system architecture.
-- [`docs/technical/architecture/detailed-technical/integration-guide`](docs/technical/architecture/detailed-technical) - Canonical integration patterns, including billing/Stripe.
-- [`docs/implementation-technical/development-guidelines/api-reference`](docs/implementation-technical/development-guidelines) - API surface for billing, subscriptions, and webhooks.
+- [`docs/technical/architecture/overview`](/docs/technical/architecture) - High-level system architecture.
+- [`docs/technical/architecture/detailed-technical/integration-guide`](/docs/technical/architecture/detailed-technical) - Canonical integration patterns, including billing/Stripe.
+- [`docs/implementation-technical/development-guidelines/api-reference`](/docs/implementation-technical/development-guidelines) - API surface for billing, subscriptions, and webhooks.
 
 ### Compliance & Security
-- [`docs/compliance-security/overview`](docs/compliance-security) - Compliance posture.
-- [`docs/compliance-security/enterprise/security-framework`](docs/compliance-security/enterprise) - Security controls relevant to financial data.
-- [`docs/compliance-security/international/data-privacy-policy`](docs/compliance-security/international) - Data handling, retention, and privacy for billing records.
+- [`docs/compliance-security/overview`](/docs/compliance-security) - Compliance posture.
+- [`docs/compliance-security/enterprise/security-framework`](/docs/compliance-security/enterprise) - Security controls relevant to financial data.
+- [`docs/compliance-security/international/data-privacy-policy`](/docs/compliance-security/international) - Data handling, retention, and privacy for billing records.
 
 This section is authoritative; legacy content references should be treated as non-canonical historical scaffolding.
 

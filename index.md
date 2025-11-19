@@ -36,22 +36,22 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [🏢 Executive Summary](docs/business/core/executive-summary) - *15-minute strategic overview*
-- [💰 ROI Calculator](docs/business/core/roi-calculator) - *Interactive cost-benefit analysis*
-- [🏆 Competitive Analysis](docs/business/core/competitive-analysis) - *Provider selection matrix*
-- [📘 Procurement Guide](docs/business/procurement-compliance/procurement-guide) - *Enterprise evaluation pack*
-- [🛡️ Security & Compliance](docs/business/procurement-compliance/security-compliance) - *Risk assessment overview*
-- [🏗️ Implementation Roadmap](docs/business/implementation/implementation-roadmap) - *Executive timeline*
-- [📈 Success Metrics](docs/business/implementation/success-metrics) - *Business KPI framework*
-- [📊 Performance Dashboard](docs/business/performance/performance-dashboard) - *Executive dashboard*
+- [🏢 Executive Summary](/docs/business/core/executive-summary) - *15-minute strategic overview*
+- [💰 ROI Calculator](/docs/business/core/roi-calculator) - *Interactive cost-benefit analysis*
+- [🏆 Competitive Analysis](/docs/business/core/competitive-analysis) - *Provider selection matrix*
+- [📘 Procurement Guide](/docs/business/procurement-compliance/procurement-guide) - *Enterprise evaluation pack*
+- [🛡️ Security & Compliance](/docs/business/procurement-compliance/security-compliance) - *Risk assessment overview*
+- [🏗️ Implementation Roadmap](/docs/business/implementation/implementation-roadmap) - *Executive timeline*
+- [📈 Success Metrics](/docs/business/implementation/success-metrics) - *Business KPI framework*
+- [📊 Performance Dashboard](/docs/business/performance/performance-dashboard) - *Executive dashboard*
 
 **Industry-Specific Deep Dives:**
 
-- [🏥 Healthcare Business Case](docs/business/industry-business-cases/healthcare) - *HIPAA compliance & patient communications*
-- [🏛️ Financial Services Case](docs/business/industry-business-cases/financial-services) - *SOX compliance & banking security*
-- [🛒 E-commerce Business Case](docs/business/industry-business-cases/ecommerce) - *Customer retention & marketing automation*
-- [🏢 Agencies & Consulting](docs/business/industry-business-cases/agencies-consulting) - *Client confidentiality & multi-client management*
-- [🚀 SaaS Business Case](docs/business/industry-business-cases/saas) - *Customer lifecycle & product-led growth*
+- [🏥 Healthcare Business Case](/docs/business/industry-business-cases/healthcare) - *HIPAA compliance & patient communications*
+- [🏛️ Financial Services Case](/docs/business/industry-business-cases/financial-services) - *SOX compliance & banking security*
+- [🛒 E-commerce Business Case](/docs/business/industry-business-cases/ecommerce) - *Customer retention & marketing automation*
+- [🏢 Agencies & Consulting](/docs/business/industry-business-cases/agencies-consulting) - *Client confidentiality & multi-client management*
+- [🚀 SaaS Business Case](/docs/business/industry-business-cases/saas) - *Customer lifecycle & product-led growth*
 
 ### 🏗️ For Technical Teams (IT/DevOps)
 
@@ -59,11 +59,11 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [🔧 Technical Infrastructure](docs/business/technical-infrastructure) - *Complete technical specs*
-- [⚖️ Compliance Framework](docs/business/compliance-framework) - *Technical compliance implementation*
-- [🏗️ Architecture Overview](docs/technical/architecture/overview) - *System architecture*
-- [🔌 API Reference](docs/implementation-technical/development-guidelines/api-reference) - *Developer documentation*
-- [📚 Quick Setup](docs/quick-setup) - *Implementation guide*
+- [🔧 Technical Infrastructure](/docs/business/technical-infrastructure) - *Complete technical specs*
+- [⚖️ Compliance Framework](/docs/business/compliance-framework) - *Technical compliance implementation*
+- [🏗️ Architecture Overview](/docs/technical/architecture/overview) - *System architecture*
+- [🔌 API Reference](/docs/implementation-technical/development-guidelines/api-reference) - *Developer documentation*
+- [📚 Quick Setup](/docs/quick-setup) - *Implementation guide*
 
 ### 📊 For Marketing & Operations
 
@@ -71,10 +71,10 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📈 Analytics & Performance](docs/operations-analytics/analytics-performance/README) - *Performance monitoring*
-- [👥 User Analytics](docs/operations-analytics/analytics-performance/user-analytics) - *Campaign insights*
-- [💹 Financial Operations](docs/operations-analytics/operations-management/payment-analytics-financial-operations) - *Revenue tracking*
-- [🏢 Operations Management](docs/operations-analytics/operations-management/README) - *Process optimization*
+- [📈 Analytics & Performance](/docs/operations-analytics/analytics-performance/README) - *Performance monitoring*
+- [👥 User Analytics](/docs/operations-analytics/analytics-performance/user-analytics) - *Campaign insights*
+- [💹 Financial Operations](/docs/operations-analytics/operations-management/payment-analytics-financial-operations) - *Revenue tracking*
+- [🏢 Operations Management](/docs/operations-analytics/operations-management/README) - *Process optimization*
 
 ---
 
@@ -89,8 +89,8 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 - ✅ 95% deliverability rates
 - ✅ Complete audit trail
 
-**Cost Analysis**: Detailed pricing comparisons available in [ROI Calculator](docs/business/core/roi-calculator) and [Competitive Analysis](docs/business/core/competitive-analysis)
-**Performance Data**: Comprehensive benchmarks available in [Performance Dashboard](docs/business/performance/performance-dashboard)
+**Cost Analysis**: Detailed pricing comparisons available in [ROI Calculator](/docs/business/core/roi-calculator) and [Competitive Analysis](/docs/business/core/competitive-analysis)
+**Performance Data**: Comprehensive benchmarks available in [Performance Dashboard](/docs/business/performance/performance-dashboard)
 
 ---
 

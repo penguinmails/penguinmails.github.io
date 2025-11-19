@@ -110,7 +110,7 @@ To keep messaging consistent and accurate:
 
 For SQL-level definitions, implementation details, and governance specifics, refer to:
 
-- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide`](docs/implementation-technical/database-infrastructure)
+- [`docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide`](/docs/implementation-technical/database-infrastructure)
 - Hostwinds Unmanaged Linux VPS reference pricing: [https://www.hostwinds.com/vps/unmanaged-linux](https://www.hostwinds.com/vps)
 
 ---

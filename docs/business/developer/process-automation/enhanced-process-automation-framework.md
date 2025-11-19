@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 6 - Process Automation and Standardization
 **Target Audience**: Process Engineers, Automation Specialists, Developer Operations Teams
 **Business Impact Priority**: High - Developer workflow automation and process optimization responsibility
-**Framework Integration**: [Developer Automation Framework](../automation) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Process Automation Framework](docs/business/process-automation)
+**Framework Integration**: [Developer Automation Framework](../automation) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Process Automation Framework](/docs/business/process-automation)
 
 ## Executive Summary
 
@@ -49,7 +49,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated workflow systems activation and optimization
 - Workflow automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Process Automation Framework](docs/business/process-automation)
+**Business Framework Integration**: [Developer Automation Framework](../automation) + [Process Automation Framework](/docs/business/process-automation)
 
 #### Automation Point 1.1.2: Intelligent Process Monitoring
 

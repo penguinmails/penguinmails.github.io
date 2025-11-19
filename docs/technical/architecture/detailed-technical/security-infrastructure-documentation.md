@@ -9,49 +9,49 @@ persona: "Documentation Users"
 
 ## Overview
 
-This comprehensive document outlines the security practices and protocols for the PenguinMails multi-tenant SaaS platform, establishing enterprise-grade security standards that exceed industry requirements and support our [market leadership positioning](docs/business/strategy) through demonstrated [security excellence](docs/compliance-security). While we leverage NileDB's authentication services, we maintain comprehensive security practices across all system components that integrate seamlessly with our [4-tier database architecture](docs/technical/architecture) and [operational excellence](docs/business/operations) standards.
+This comprehensive document outlines the security practices and protocols for the PenguinMails multi-tenant SaaS platform, establishing enterprise-grade security standards that exceed industry requirements and support our [market leadership positioning](/docs/business/strategy) through demonstrated [security excellence](/docs/compliance-security). While we leverage NileDB's authentication services, we maintain comprehensive security practices across all system components that integrate seamlessly with our [4-tier database architecture](/docs/technical/architecture) and [operational excellence](/docs/business/operations) standards.
 
-**Strategic Alignment**: Our security framework supports our [competitive differentiation](docs/business/strategy) by implementing enterprise-grade security that exceeds industry standards, demonstrating our [operational excellence](docs/business/operations) and [customer protection](docs/business/value-proposition/detailed-analysis) commitment. The comprehensive approach to security enables our [enterprise market penetration](docs/business/market-analysis) by meeting the stringent security requirements that large organizations demand.
+**Strategic Alignment**: Our security framework supports our [competitive differentiation](/docs/business/strategy) by implementing enterprise-grade security that exceeds industry standards, demonstrating our [operational excellence](/docs/business/operations) and [customer protection](/docs/business/value-proposition/detailed-analysis) commitment. The comprehensive approach to security enables our [enterprise market penetration](/docs/business/market-analysis) by meeting the stringent security requirements that large organizations demand.
 
-**Technical Authority**: Our security system integrates with our [comprehensive infrastructure monitoring](docs/technical/architecture/detailed-technical) to provide real-time threat detection, automated response capabilities, and intelligent risk management. The framework leverages [OLAP analytics](docs/technical/architecture/detailed-technical) for security intelligence and predictive threat modeling across all system components.
+**Technical Authority**: Our security system integrates with our [comprehensive infrastructure monitoring](/docs/technical/architecture/detailed-technical) to provide real-time threat detection, automated response capabilities, and intelligent risk management. The framework leverages [OLAP analytics](/docs/technical/architecture/detailed-technical) for security intelligence and predictive threat modeling across all system components.
 
-**Operational Excellence**: Backed by our [99.9% uptime commitment](docs/technical/architecture/detailed-technical) with comprehensive monitoring systems, automated security enforcement, and enterprise-grade security measures. Our procedures ensure maximum security while maintaining optimal [system performance](docs/technical/architecture/detailed-technical) and [customer experience](docs/business/value-proposition/detailed-analysis).
+**Operational Excellence**: Backed by our [99.9% uptime commitment](/docs/technical/architecture/detailed-technical) with comprehensive monitoring systems, automated security enforcement, and enterprise-grade security measures. Our procedures ensure maximum security while maintaining optimal [system performance](/docs/technical/architecture/detailed-technical) and [customer experience](/docs/business/value-proposition/detailed-analysis).
 
-**User Journey Integration**: These security procedures are part of your complete [user experience journey](docs/user-journeys) - ensuring security-first design in [authentication systems](docs/technical/architecture/detailed-technical) and [email system operations](docs/technical/architecture/detailed-technical) while maintaining seamless [service delivery](docs/business/value-proposition/detailed-analysis) and transparent security protection.
+**User Journey Integration**: These security procedures are part of your complete [user experience journey](/docs/user-journeys) - ensuring security-first design in [authentication systems](/docs/technical/architecture/detailed-technical) and [email system operations](/docs/technical/architecture/detailed-technical) while maintaining seamless [service delivery](/docs/business/value-proposition/detailed-analysis) and transparent security protection.
 
 ---
 
 ## Security Philosophy with Business Integration
 
-Our security framework is built on four fundamental principles that support our [competitive strategy](docs/business/strategy) and [customer value proposition](docs/business/value-proposition/detailed-analysis):
+Our security framework is built on four fundamental principles that support our [competitive strategy](/docs/business/strategy) and [customer value proposition](/docs/business/value-proposition/detailed-analysis):
 
 ### **Defense in Depth: Multi-Layered Business Protection**
 
-- **Security Philosophy**: Multiple layers of security controls protecting [customer data](docs/business/value-proposition/detailed-analysis) and [business assets](docs/business/strategy)
-- **Business Value**: Demonstrates [operational excellence](docs/business/operations) and [risk management](docs/business/operations) capabilities that enable [enterprise sales](docs/business/market-analysis)
-- **Implementation**: [Security monitoring](docs/technical/architecture/detailed-technical) with [intelligent threat detection](docs/technical/architecture/detailed-technical) and [automated response](docs/technical/architecture/detailed-technical)
-- **Strategic Impact**: Builds [customer trust](docs/business/value-proposition/detailed-analysis) and [regulatory confidence](docs/compliance-security) for [market expansion](docs/business/market-analysis)
+- **Security Philosophy**: Multiple layers of security controls protecting [customer data](/docs/business/value-proposition/detailed-analysis) and [business assets](/docs/business/strategy)
+- **Business Value**: Demonstrates [operational excellence](/docs/business/operations) and [risk management](/docs/business/operations) capabilities that enable [enterprise sales](/docs/business/market-analysis)
+- **Implementation**: [Security monitoring](/docs/technical/architecture/detailed-technical) with [intelligent threat detection](/docs/technical/architecture/detailed-technical) and [automated response](/docs/technical/architecture/detailed-technical)
+- **Strategic Impact**: Builds [customer trust](/docs/business/value-proposition/detailed-analysis) and [regulatory confidence](/docs/compliance-security) for [market expansion](/docs/business/market-analysis)
 
 ### **Zero Trust: Verification-First Business Culture**
 
-- **Security Philosophy**: Verify every access request regardless of origin with [continuous verification](docs/compliance-security)
-- **Business Value**: Enables [secure remote work](docs/business/operations) and [partner integration](docs/business/operations) while maintaining [security standards](docs/compliance-security)
-- **Implementation**: [Multi-factor authentication](docs/technical/architecture/detailed-technical) with [behavioral analytics](docs/technical/architecture/detailed-technical) and [risk-based access](docs/compliance-security)
-- **Strategic Impact**: Supports [scalable business operations](docs/business/model) and [global expansion](docs/business/strategy) through [secure-by-design](docs/business/operations) architecture
+- **Security Philosophy**: Verify every access request regardless of origin with [continuous verification](/docs/compliance-security)
+- **Business Value**: Enables [secure remote work](/docs/business/operations) and [partner integration](/docs/business/operations) while maintaining [security standards](/docs/compliance-security)
+- **Implementation**: [Multi-factor authentication](/docs/technical/architecture/detailed-technical) with [behavioral analytics](/docs/technical/architecture/detailed-technical) and [risk-based access](/docs/compliance-security)
+- **Strategic Impact**: Supports [scalable business operations](/docs/business/model) and [global expansion](/docs/business/strategy) through [secure-by-design](/docs/business/operations) architecture
 
 ### **Principle of Least Privilege: Business-Optimized Access**
 
-- **Security Philosophy**: Minimum necessary access for all users with [business process](docs/business/operations) integration
-- **Business Value**: Balances [security protection](docs/compliance-security) with [operational efficiency](docs/business/operations) and [user productivity](docs/business/operations)
-- **Implementation**: [Role-based access control](docs/technical/architecture/detailed-technical) with [granular permissions](docs/compliance-security) and [time-based access](docs/compliance-security)
-- **Strategic Impact**: Enables [cross-functional collaboration](docs/business/operations) while maintaining [security excellence](docs/compliance-security) and [regulatory compliance](docs/compliance-security)
+- **Security Philosophy**: Minimum necessary access for all users with [business process](/docs/business/operations) integration
+- **Business Value**: Balances [security protection](/docs/compliance-security) with [operational efficiency](/docs/business/operations) and [user productivity](/docs/business/operations)
+- **Implementation**: [Role-based access control](/docs/technical/architecture/detailed-technical) with [granular permissions](/docs/compliance-security) and [time-based access](/docs/compliance-security)
+- **Strategic Impact**: Enables [cross-functional collaboration](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security) and [regulatory compliance](/docs/compliance-security)
 
 ### **Security by Design: Strategic Integration**
 
-- **Security Philosophy**: Security considerations in all development phases with [product development](docs/technical/architecture/detailed-technical) integration
-- **Business Value**: Reduces [security debt](docs/technical/architecture/detailed-technical) and [compliance costs](docs/compliance-security) while enabling [rapid innovation](docs/business/strategy)
-- **Implementation**: [DevSecOps practices](docs/technical/architecture/detailed-technical) with [automated security testing](docs/technical/architecture/detailed-technical) and [security-first development](docs/technical/architecture/detailed-technical)
-- **Strategic Impact**: Supports [competitive advantage](docs/business/strategy) through [faster time-to-market](docs/business/strategy) and [superior security](docs/compliance-security)
+- **Security Philosophy**: Security considerations in all development phases with [product development](/docs/technical/architecture/detailed-technical) integration
+- **Business Value**: Reduces [security debt](/docs/technical/architecture/detailed-technical) and [compliance costs](/docs/compliance-security) while enabling [rapid innovation](/docs/business/strategy)
+- **Implementation**: [DevSecOps practices](/docs/technical/architecture/detailed-technical) with [automated security testing](/docs/technical/architecture/detailed-technical) and [security-first development](/docs/technical/architecture/detailed-technical)
+- **Strategic Impact**: Supports [competitive advantage](/docs/business/strategy) through [faster time-to-market](/docs/business/strategy) and [superior security](/docs/compliance-security)
 
 ---
 
@@ -81,7 +81,7 @@ sequenceDiagram
     Note over App,Business: Security-enhanced business workflow
 ```markdown
 
-**Strategic Business Integration**: This authentication flow supports our [customer onboarding experience](docs/user-journeys) while ensuring [security excellence](docs/compliance-security) and [business process](docs/business/operations) optimization. The integration with [business intelligence](docs/business/analytics) enables personalized access and [value delivery](docs/business/value-proposition/detailed-analysis).
+**Strategic Business Integration**: This authentication flow supports our [customer onboarding experience](/docs/user-journeys) while ensuring [security excellence](/docs/compliance-security) and [business process](/docs/business/operations) optimization. The integration with [business intelligence](/docs/business/analytics) enables personalized access and [value delivery](/docs/business/value-proposition/detailed-analysis).
 
 #### **Comprehensive Security Features with Business Value**
 
@@ -102,7 +102,7 @@ interface AuthenticationFeatures {
   emailVerification: {
     status: '✅ IMPLEMENTED using Loop service + custom verification endpoint';
     business: 'Builds [customer trust] and [email deliverability] while ensuring [user authenticity]';
-    integration: 'Seamless integration with [email system](docs/technical/architecture/detailed-technical)) and [customer journey](docs/user-journeys))';
+    integration: 'Seamless integration with [email system](/docs/technical/architecture/detailed-technical)) and [customer journey](/docs/user-journeys))';
   };
 
   passwordReset: {
@@ -137,7 +137,7 @@ interface AuthenticationFeatures {
 }
 ```markdown
 
-**Strategic Authentication Excellence**: This framework transforms authentication from a security function into a [competitive advantage](docs/business/strategy) by providing [superior user experience](docs/business/value-proposition/detailed-analysis) while maintaining [enterprise-grade security](docs/compliance-security).
+**Strategic Authentication Excellence**: This framework transforms authentication from a security function into a [competitive advantage](/docs/business/strategy) by providing [superior user experience](/docs/business/value-proposition/detailed-analysis) while maintaining [enterprise-grade security](/docs/compliance-security).
 
 #### **Advanced Implementation Example with Business Integration**
 
@@ -219,7 +219,7 @@ const authenticateUser = async (req, res, next) => {
 };
 ```markdown
 
-**Business-Enhanced Security**: This implementation ensures that authentication serves both [security objectives](docs/compliance-security) and [business goals](docs/business/strategy) by integrating [business context](docs/business/operations), [customer insights](docs/business/analytics), and [value optimization](docs/business/value-proposition/detailed-analysis) into the security workflow.
+**Business-Enhanced Security**: This implementation ensures that authentication serves both [security objectives](/docs/compliance-security) and [business goals](/docs/business/strategy) by integrating [business context](/docs/business/operations), [customer insights](/docs/business/analytics), and [value optimization](/docs/business/value-proposition/detailed-analysis) into the security workflow.
 
 ### **Advanced Role-Based Access Control (RBAC) with Strategic Integration**
 
@@ -268,21 +268,21 @@ graph TD
     classDef operational_excellence fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#000
 ```markdown
 
-**Strategic Permission Architecture**: This hierarchical system supports our [organizational structure](docs/business/operations) while enabling [scalable business operations](docs/business/model) and [competitive advantage](docs/business/strategy) through [operational excellence](docs/business/operations).
+**Strategic Permission Architecture**: This hierarchical system supports our [organizational structure](/docs/business/operations) while enabling [scalable business operations](/docs/business/model) and [competitive advantage](/docs/business/strategy) through [operational excellence](/docs/business/operations).
 
 #### **Comprehensive Permission Matrix with Business Integration**
 
 | Role | User Management | Billing | Email Config | Data Export | System Settings | Business Value |
 |------|----------------|---------|--------------|-------------|-----------------|----------------|
-| **Super Admin** | Full | Full | Full | Full | Full | [Enterprise Security Leadership](docs/compliance-security) |
-| **Admin** | Tenant Users | Plans | Full | Full | Limited | [Business Operations Control](docs/business/operations) |
-| **Owner** | Team Members | Payment History | Email Setup | Data Download | None | [Strategic Decision Making](docs/business/strategy) |
-| **Manager** | View Users | Usage Stats | Email Templates | Campaign Reports | None | [Team Coordination Excellence](docs/business/operations) |
-| **Employee** | Own Profile | None | Send Emails | Own Data | None | [Customer Service Delivery](docs/business/value-proposition/detailed-analysis) |
-| **QA** | None | None | Test Config | Test Data | None | [Quality Assurance Leadership](docs/business/operations) |
-| **Blocked** | None | None | None | None | None | [Security Enforcement](docs/compliance-security) |
+| **Super Admin** | Full | Full | Full | Full | Full | [Enterprise Security Leadership](/docs/compliance-security) |
+| **Admin** | Tenant Users | Plans | Full | Full | Limited | [Business Operations Control](/docs/business/operations) |
+| **Owner** | Team Members | Payment History | Email Setup | Data Download | None | [Strategic Decision Making](/docs/business/strategy) |
+| **Manager** | View Users | Usage Stats | Email Templates | Campaign Reports | None | [Team Coordination Excellence](/docs/business/operations) |
+| **Employee** | Own Profile | None | Send Emails | Own Data | None | [Customer Service Delivery](/docs/business/value-proposition/detailed-analysis) |
+| **QA** | None | None | Test Config | Test Data | None | [Quality Assurance Leadership](/docs/business/operations) |
+| **Blocked** | None | None | None | None | None | [Security Enforcement](/docs/compliance-security) |
 
-**Business-Driven Permission Design**: This matrix ensures that access controls support [business objectives](docs/business/strategy) while maintaining [security excellence](docs/compliance-security), enabling [operational efficiency](docs/business/operations) and [competitive advantage](docs/business/strategy).
+**Business-Driven Permission Design**: This matrix ensures that access controls support [business objectives](/docs/business/strategy) while maintaining [security excellence](/docs/compliance-security), enabling [operational efficiency](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
 #### **Advanced Implementation with Business Intelligence**
 
@@ -373,7 +373,7 @@ app.post('/api/tenant/:tenantId/campaigns',
 );
 ```markdown
 
-**Business-Integrated Access Control**: This implementation ensures that access controls enhance [business productivity](docs/business/operations) while maintaining [security excellence](docs/compliance-security), enabling [intelligent business processes](docs/business/analytics) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Access Control**: This implementation ensures that access controls enhance [business productivity](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
 ---
 
@@ -381,38 +381,38 @@ app.post('/api/tenant/:tenantId/campaigns',
 
 ### **Complete RLS Policy Matrix with Strategic Implementation**
 
-*For comprehensive RLS policy documentation and implementation details, see [Security & Compliance Gaps Analysis](docs/compliance-security)*
+*For comprehensive RLS policy documentation and implementation details, see [Security & Compliance Gaps Analysis](/docs/compliance-security)*
 
 **Current Implementation with Business Enhancement:**
-- **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement with [business logic](docs/business/operations) integration
-- **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets with [audit trail](docs/compliance-security) and [business justification](docs/business/operations) tracking
-- **Q85**: Cross-tenant access policies for staff with [business approval](docs/business/operations) and [regulatory compliance](docs/compliance-security) validation
-- **Q86**: RLS testing procedures with [business scenario](docs/business/operations) integration and [performance optimization](docs/business/operations)
+- **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement with [business logic](/docs/business/operations) integration
+- **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets with [audit trail](/docs/compliance-security) and [business justification](/docs/business/operations) tracking
+- **Q85**: Cross-tenant access policies for staff with [business approval](/docs/business/operations) and [regulatory compliance](/docs/compliance-security) validation
+- **Q86**: RLS testing procedures with [business scenario](/docs/business/operations) integration and [performance optimization](/docs/business/operations)
 
 ### **Advanced Staff Emergency Access Protocols with Business Oversight**
 
 #### **Current Bypass Methods with Business Context**
 
 1. **Super Admin/Admin Privileges with Business Accountability**
-   - Users with super_admin or admin roles can access tenant data with [business justification](docs/business/operations) required
-   - All actions logged for audit purposes with [business impact](docs/business/analytics) assessment
-   - Enhanced approval workflow with [stakeholder notification](docs/business/operations) and [business value](docs/business/value-proposition/detailed-analysis) validation
-   - Real-time monitoring with [intelligent alerting](docs/technical/architecture/detailed-technical) and [business impact](docs/business/analytics) assessment
+   - Users with super_admin or admin roles can access tenant data with [business justification](/docs/business/operations) required
+   - All actions logged for audit purposes with [business impact](/docs/business/analytics) assessment
+   - Enhanced approval workflow with [stakeholder notification](/docs/business/operations) and [business value](/docs/business/value-proposition/detailed-analysis) validation
+   - Real-time monitoring with [intelligent alerting](/docs/technical/architecture/detailed-technical) and [business impact](/docs/business/analytics) assessment
 
 2. **Internal Dev Ticket Process with Business Integration**
-   - Staff can create internal tickets for temporary access with [business approval](docs/business/operations) workflow
-   - Dev team creates time-limited access for specific tasks with [business justification](docs/business/operations) and [success criteria](docs/business/operations) documentation
-   - Full audit trail maintained for all temporary access with [business context](docs/business/operations) and [value assessment](docs/business/analytics)
-   - Automated access revocation with [business rule](docs/business/operations) enforcement and [compliance verification](docs/compliance-security)
+   - Staff can create internal tickets for temporary access with [business approval](/docs/business/operations) workflow
+   - Dev team creates time-limited access for specific tasks with [business justification](/docs/business/operations) and [success criteria](/docs/business/operations) documentation
+   - Full audit trail maintained for all temporary access with [business context](/docs/business/operations) and [value assessment](/docs/business/analytics)
+   - Automated access revocation with [business rule](/docs/business/operations) enforcement and [compliance verification](/docs/compliance-security)
 
 #### **Documentation Enhancement Requirements (Q4 2025)**
 
-- [ ] **Formalize staff bypass procedures** with [business process](docs/business/operations) integration and [stakeholder approval](docs/business/operations)
-- [ ] **Document cross-tenant access validation framework** with [business impact](docs/business/analytics) assessment and [regulatory compliance](docs/compliance-security) validation
-- [ ] **Create RLS testing procedures** with [business scenario](docs/business/operations) coverage and [performance optimization](docs/business/operations) validation
-- [ ] **Implement business oversight** with [intelligent monitoring](docs/technical/architecture/detailed-technical) and [automated compliance](docs/compliance-security) checking
+- [ ] **Formalize staff bypass procedures** with [business process](/docs/business/operations) integration and [stakeholder approval](/docs/business/operations)
+- [ ] **Document cross-tenant access validation framework** with [business impact](/docs/business/analytics) assessment and [regulatory compliance](/docs/compliance-security) validation
+- [ ] **Create RLS testing procedures** with [business scenario](/docs/business/operations) coverage and [performance optimization](/docs/business/operations) validation
+- [ ] **Implement business oversight** with [intelligent monitoring](/docs/technical/architecture/detailed-technical) and [automated compliance](/docs/compliance-security) checking
 
-**Strategic RLS Enhancement**: This framework ensures that row-level security supports both [data protection](docs/compliance-security) and [business operations](docs/business/operations) by integrating [business logic](docs/business/operations), [regulatory requirements](docs/compliance-security), and [operational efficiency](docs/business/operations) into security policies.
+**Strategic RLS Enhancement**: This framework ensures that row-level security supports both [data protection](/docs/compliance-security) and [business operations](/docs/business/operations) by integrating [business logic](/docs/business/operations), [regulatory requirements](/docs/compliance-security), and [operational efficiency](/docs/business/operations) into security policies.
 
 ---
 
@@ -443,7 +443,7 @@ SET app.business_justification = 'Standard user access';
 SET app.audit_level = 'standard';
 ```markdown
 
-**Business-Enhanced Security**: This approach ensures that data isolation supports [business operations](docs/business/operations) while maintaining [security excellence](docs/compliance-security), enabling [collaborative workflows](docs/business/operations) and [operational efficiency](docs/business/operations).
+**Business-Enhanced Security**: This approach ensures that data isolation supports [business operations](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [collaborative workflows](/docs/business/operations) and [operational efficiency](/docs/business/operations).
 
 #### **API Security with Business Integration**
 
@@ -527,15 +527,15 @@ const setTenantContext = async (req, res, next) => {
 };
 ```markdown
 
-**Business-Integrated Security**: This implementation ensures that API security supports [business processes](docs/business/operations) while maintaining [regulatory compliance](docs/compliance-security), enabling [seamless business operations](docs/business/operations) and [customer experience](docs/business/value-proposition/detailed-analysis).
+**Business-Integrated Security**: This implementation ensures that API security supports [business processes](/docs/business/operations) while maintaining [regulatory compliance](/docs/compliance-security), enabling [seamless business operations](/docs/business/operations) and [customer experience](/docs/business/value-proposition/detailed-analysis).
 
 ### **Advanced Data Encryption with Business Excellence**
 
 #### **Encryption at Rest with Business Optimization**
 
-- **Database**: PostgreSQL TDE (Transparent Data Encryption) with [business logic](docs/business/operations) preservation and [performance optimization](docs/technical/architecture/detailed-technical)
-- **File Storage**: Encrypted backups and log files with [business continuity](docs/business/operations) planning and [regulatory compliance](docs/compliance-security)
-- **Configuration**: Encrypted environment variables with [business process](docs/business/operations) integration and [operational efficiency](docs/business/operations)
+- **Database**: PostgreSQL TDE (Transparent Data Encryption) with [business logic](/docs/business/operations) preservation and [performance optimization](/docs/technical/architecture/detailed-technical)
+- **File Storage**: Encrypted backups and log files with [business continuity](/docs/business/operations) planning and [regulatory compliance](/docs/compliance-security)
+- **Configuration**: Encrypted environment variables with [business process](/docs/business/operations) integration and [operational efficiency](/docs/business/operations)
 
 #### **Encryption in Transit with Business Intelligence**
 
@@ -598,7 +598,7 @@ app.use((req, res, next) => {
 });
 ```markdown
 
-**Business-Enhanced Security Headers**: This implementation ensures that security measures support [business operations](docs/business/operations) while maintaining [compliance excellence](docs/compliance-security), enabling [secure business communication](docs/business/operations) and [regulatory confidence](docs/compliance-security).
+**Business-Enhanced Security Headers**: This implementation ensures that security measures support [business operations](/docs/business/operations) while maintaining [compliance excellence](/docs/compliance-security), enabling [secure business communication](/docs/business/operations) and [regulatory confidence](/docs/compliance-security).
 
 #### **Advanced API Key Management with Business Intelligence**
 
@@ -659,7 +659,7 @@ const apiKeyManager = {
 };
 ```markdown
 
-**Business-Integrated Key Management**: This approach ensures that API key management supports [business intelligence](docs/business/analytics) and [operational optimization](docs/business/operations) while maintaining [security excellence](docs/compliance-security), enabling [intelligent business processes](docs/business/analytics) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Key Management**: This approach ensures that API key management supports [business intelligence](/docs/business/analytics) and [operational optimization](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
 ---
 
@@ -695,14 +695,14 @@ ufw allow from monitoring-vpn to any port 9090   # Monitoring systems
 ufw allow from business-vpn to any port 8443     # Business application
 ```markdown
 
-**Business-Enhanced Network Security**: This configuration ensures that network security supports [business operations](docs/business/operations) while maintaining [security excellence](docs/compliance-security), enabling [partner integrations](docs/business/operations) and [collaborative workflows](docs/business/operations) with [security confidence](docs/compliance-security).
+**Business-Enhanced Network Security**: This configuration ensures that network security supports [business operations](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [partner integrations](/docs/business/operations) and [collaborative workflows](/docs/business/operations) with [security confidence](/docs/compliance-security).
 
 #### **VPN Access with Business Integration**
 
-- **Team Access**: VPN required for infrastructure management with [business approval](docs/business/operations) workflow
-- **Database Access**: VPN-only access to production databases with [business justification](docs/business/operations) tracking
-- **Monitoring**: VPN access to monitoring dashboards with [business intelligence](docs/business/analytics) integration
-- **Partner Access**: Secure VPN for partner integrations with [business rules](docs/business/operations) enforcement
+- **Team Access**: VPN required for infrastructure management with [business approval](/docs/business/operations) workflow
+- **Database Access**: VPN-only access to production databases with [business justification](/docs/business/operations) tracking
+- **Monitoring**: VPN access to monitoring dashboards with [business intelligence](/docs/business/analytics) integration
+- **Partner Access**: Secure VPN for partner integrations with [business rules](/docs/business/operations) enforcement
 
 ### **Server Security with Business Optimization**
 
@@ -747,7 +747,7 @@ apt-get update && apt-get upgrade -y
 apt-get autoremove -y
 ```markdown
 
-**Business-Integrated Security Hardening**: This approach ensures that server security supports [business continuity](docs/business/operations) while maintaining [operational excellence](docs/business/operations), enabling [reliable business operations](docs/business/operations) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Security Hardening**: This approach ensures that server security supports [business continuity](/docs/business/operations) while maintaining [operational excellence](/docs/business/operations), enabling [reliable business operations](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
 #### **Enhanced SSL/TLS Configuration with Business Intelligence**
 
@@ -795,7 +795,7 @@ server {
 }
 ```markdown
 
-**Business-Enhanced SSL Configuration**: This setup ensures that SSL/TLS security supports [business operations](docs/business/operations) while maintaining [compliance excellence](docs/compliance-security), enabling [secure business communication](docs/business/operations) and [regulatory confidence](docs/compliance-security).
+**Business-Enhanced SSL Configuration**: This setup ensures that SSL/TLS security supports [business operations](/docs/business/operations) while maintaining [compliance excellence](/docs/compliance-security), enabling [secure business communication](/docs/business/operations) and [regulatory confidence](/docs/compliance-security).
 
 ---
 
@@ -820,7 +820,7 @@ TXT _business._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=BUSINESS_SIGNING_KE
 TXT _partner._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=PARTNER_INTEGRATION_KEY"
 ```markdown
 
-**Business-Enhanced Email Authentication**: This configuration ensures that email security supports [business communication](docs/business/operations) while maintaining [deliverability excellence](docs/technical/architecture/detailed-technical), enabling [partner integrations](docs/business/operations) and [customer engagement](docs/business/value-proposition/detailed-analysis).
+**Business-Enhanced Email Authentication**: This configuration ensures that email security supports [business communication](/docs/business/operations) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [partner integrations](/docs/business/operations) and [customer engagement](/docs/business/value-proposition/detailed-analysis).
 
 #### **Email Authentication with Business Logic**
 
@@ -865,7 +865,7 @@ const sendEmail = async (emailData) => {
 };
 ```markdown
 
-**Business-Integrated Email Security**: This implementation ensures that email security supports [business intelligence](docs/business/analytics) and [customer engagement](docs/business/value-proposition/detailed-analysis) while maintaining [deliverability excellence](docs/technical/architecture/detailed-technical), enabling [intelligent business processes](docs/business/analytics) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Email Security**: This implementation ensures that email security supports [business intelligence](/docs/business/analytics) and [customer engagement](/docs/business/value-proposition/detailed-analysis) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
 ### **Email Warm-up Security with Business Optimization**
 
@@ -949,7 +949,7 @@ const emailWarmup = {
 };
 ```markdown
 
-**Business-Enhanced Warm-up Strategy**: This approach ensures that email warm-up supports [business objectives](docs/business/strategy) while maintaining [deliverability excellence](docs/technical/architecture/detailed-technical), enabling [intelligent business scaling](docs/business/operations) and [competitive advantage](docs/business/strategy).
+**Business-Enhanced Warm-up Strategy**: This approach ensures that email warm-up supports [business objectives](/docs/business/strategy) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [intelligent business scaling](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
 ---
 
@@ -1024,7 +1024,7 @@ const filterDataByBusinessRules = (data, businessContext) => {
 };
 ```markdown
 
-**Business-Enhanced Security**: This implementation ensures that security measures support [business operations](docs/business/operations) while maintaining [data protection](docs/compliance-security), enabling [intelligent business processes](docs/business/analytics) and [regulatory compliance](docs/compliance-security).
+**Business-Enhanced Security**: This implementation ensures that security measures support [business operations](/docs/business/operations) while maintaining [data protection](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [regulatory compliance](/docs/compliance-security).
 
 #### **XSS Prevention with Business Intelligence**
 
@@ -1108,7 +1108,7 @@ const validateBusinessContent = (content, businessContext) => {
 };
 ```markdown
 
-**Business-Integrated Content Security**: This approach ensures that content security supports [business compliance](docs/compliance-security) while maintaining [user experience](docs/business/value-proposition/detailed-analysis), enabling [intelligent content management](docs/business/analytics) and [regulatory excellence](docs/compliance-security).
+**Business-Integrated Content Security**: This approach ensures that content security supports [business compliance](/docs/compliance-security) while maintaining [user experience](/docs/business/value-proposition/detailed-analysis), enabling [intelligent content management](/docs/business/analytics) and [regulatory excellence](/docs/compliance-security).
 
 ### **Rate Limiting with Business Intelligence**
 
@@ -1206,7 +1206,7 @@ app.use('/api) => {
 });
 ```markdown
 
-**Business-Intelligent Rate Limiting**: This implementation ensures that rate limiting supports [business scalability](docs/business/model) while maintaining [system performance](docs/technical/architecture/detailed-technical), enabling [intelligent resource management](docs/business/analytics) and [competitive advantage](docs/business/strategy).
+**Business-Intelligent Rate Limiting**: This implementation ensures that rate limiting supports [business scalability](/docs/business/model) while maintaining [system performance](/docs/technical/architecture/detailed-technical), enabling [intelligent resource management](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
 ---
 
@@ -1321,7 +1321,7 @@ const auditLogger = {
 };
 ```markdown
 
-**Business-Integrated Security Monitoring**: This approach ensures that security monitoring supports [business intelligence](docs/business/analytics) while maintaining [security excellence](docs/compliance-security), enabling [proactive threat management](docs/compliance-security) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Security Monitoring**: This approach ensures that security monitoring supports [business intelligence](/docs/business/analytics) while maintaining [security excellence](/docs/compliance-security), enabling [proactive threat management](/docs/compliance-security) and [competitive advantage](/docs/business/strategy).
 
 #### **Enhanced Audit Trail with Business Intelligence**
 
@@ -1393,16 +1393,16 @@ const comprehensiveAuditLogger = {
 };
 ```markdown
 
-**Business-Enhanced Audit System**: This implementation ensures that audit logging supports [business intelligence](docs/business/analytics) while maintaining [regulatory compliance](docs/compliance-security), enabling [strategic business analysis](docs/business/analytics) and [competitive advantage](docs/business/strategy).
+**Business-Enhanced Audit System**: This implementation ensures that audit logging supports [business intelligence](/docs/business/analytics) while maintaining [regulatory compliance](/docs/compliance-security), enabling [strategic business analysis](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
 ### **Advanced Incident Response with Business Integration**
 
 #### **Security Incident Types with Business Classification**
 
-1. **Unauthorized Access with Business Impact Assessment**: Detected login from unusual locations with [customer impact](docs/business/analytics) analysis and [competitive risk](docs/business/strategy) evaluation
-2. **Data Breach with Business Continuity Planning**: Suspicious data access or extraction with [business operations](docs/business/operations) assessment and [customer communication](docs/business/operations) strategy
-3. **System Compromise with Business Recovery**: Malware or unauthorized system changes with [business continuity](docs/business/operations) planning and [operational recovery](docs/business/operations) procedures
-4. **Email Abuse with Business Reputation Management**: Spam or phishing from our infrastructure with [reputation management](docs/business/operations) and [customer protection](docs/business/value-proposition/detailed-analysis) measures
+1. **Unauthorized Access with Business Impact Assessment**: Detected login from unusual locations with [customer impact](/docs/business/analytics) analysis and [competitive risk](/docs/business/strategy) evaluation
+2. **Data Breach with Business Continuity Planning**: Suspicious data access or extraction with [business operations](/docs/business/operations) assessment and [customer communication](/docs/business/operations) strategy
+3. **System Compromise with Business Recovery**: Malware or unauthorized system changes with [business continuity](/docs/business/operations) planning and [operational recovery](/docs/business/operations) procedures
+4. **Email Abuse with Business Reputation Management**: Spam or phishing from our infrastructure with [reputation management](/docs/business/operations) and [customer protection](/docs/business/value-proposition/detailed-analysis) measures
 
 #### **Enhanced Response Procedures with Business Integration**
 
@@ -1438,14 +1438,14 @@ flowchart TD
     classDef business fill:#e0f2f1,stroke:#00796b,stroke-width:3px
 ```markdown
 
-**Business-Integrated Incident Response**: This framework ensures that incident response supports [business continuity](docs/business/operations) while maintaining [security excellence](docs/compliance-security), enabling [proactive business protection](docs/business/operations) and [competitive advantage](docs/business/strategy) preservation.
+**Business-Integrated Incident Response**: This framework ensures that incident response supports [business continuity](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [proactive business protection](/docs/business/operations) and [competitive advantage](/docs/business/strategy) preservation.
 
 ---
 
 ## Related Documents and Strategic Integration
 
 ### **Strategic Security Document Portfolio**
-- [Security & Compliance Gaps Analysis](docs/compliance-security) - Comprehensive analysis of RLS, audit logging, and data privacy gaps with [business impact](docs/business/analytics) assessment
+- [Security & Compliance Gaps Analysis](/docs/compliance-security) - Comprehensive analysis of RLS, audit logging, and data privacy gaps with [business impact](/docs/business/analytics) assessment
 - [Compliance Procedures](.) - Regulatory compliance procedures with [strategic business](/docs/business/strategy/overview) integration
 - [Incident Response Plan](.) - Detailed breach response procedures with [business continuity](../business/operations) planning
 - [Infrastructure Operations](.) - Infrastructure management with [operational excellence](../business/operations) standards
@@ -1456,19 +1456,19 @@ flowchart TD
 
 #### **Team Security Practices with Business Integration**
 
-- **Secure Coding Training**: Regular training on OWASP Top 10 with [business impact](docs/business/operations) education and [competitive advantage](docs/business/strategy) development
-- **Code Review Process**: Security-focused code reviews with [business logic](docs/business/operations) validation and [operational excellence](docs/business/operations) standards
-- **Dependency Management**: Regular security updates and vulnerability scanning with [business continuity](docs/business/operations) planning and [operational efficiency](docs/business/operations) optimization
-- **Environment Segregation**: Clear separation of dev/staging/production with [business process](docs/business/operations) integration and [regulatory compliance](docs/compliance-security) validation
+- **Secure Coding Training**: Regular training on OWASP Top 10 with [business impact](/docs/business/operations) education and [competitive advantage](/docs/business/strategy) development
+- **Code Review Process**: Security-focused code reviews with [business logic](/docs/business/operations) validation and [operational excellence](/docs/business/operations) standards
+- **Dependency Management**: Regular security updates and vulnerability scanning with [business continuity](/docs/business/operations) planning and [operational efficiency](/docs/business/operations) optimization
+- **Environment Segregation**: Clear separation of dev/staging/production with [business process](/docs/business/operations) integration and [regulatory compliance](/docs/compliance-security) validation
 
 #### **Access Management with Business Optimization**
 
-- **Principle of Least Privilege**: Minimum necessary access with [business productivity](docs/business/operations) optimization and [operational efficiency](docs/business/operations) balancing
-- **Regular Access Reviews**: Quarterly access audits with [business value](docs/business/analytics) assessment and [competitive analysis](docs/business/market-analysis)
-- **Password Management**: Use of secure password managers with [business integration](docs/business/operations) and [user experience](docs/business/value-proposition/detailed-analysis) optimization
-- **MFA Enforcement**: Multi-factor authentication for all admin access with [business flexibility](docs/business/operations) and [security excellence](docs/compliance-security) maintenance
+- **Principle of Least Privilege**: Minimum necessary access with [business productivity](/docs/business/operations) optimization and [operational efficiency](/docs/business/operations) balancing
+- **Regular Access Reviews**: Quarterly access audits with [business value](/docs/business/analytics) assessment and [competitive analysis](/docs/business/market-analysis)
+- **Password Management**: Use of secure password managers with [business integration](/docs/business/operations) and [user experience](/docs/business/value-proposition/detailed-analysis) optimization
+- **MFA Enforcement**: Multi-factor authentication for all admin access with [business flexibility](/docs/business/operations) and [security excellence](/docs/compliance-security) maintenance
 
-**Business-Integrated Security Culture**: This approach ensures that security practices support [business objectives](docs/business/strategy) while building [security excellence](docs/compliance-security), enabling [operational efficiency](docs/business/operations) and [competitive advantage](docs/business/strategy).
+**Business-Integrated Security Culture**: This approach ensures that security practices support [business objectives](/docs/business/strategy) while building [security excellence](/docs/compliance-security), enabling [operational efficiency](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
 ---
 
@@ -1478,9 +1478,9 @@ This security and infrastructure documentation framework represents a cornerston
 
 **Business Impact**: The framework directly supports our [revenue model](/docs/business/model/overview) by building customer trust, enabling enterprise sales, and creating barriers to entry for competitors who cannot match our security standards. Our comprehensive approach to security enables our [enterprise market penetration](/docs/business/market-analysis/overview) by meeting the stringent security requirements that large organizations demand.
 
-**Technical Excellence**: The system showcases our [technical leadership](docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](.), [automated security enforcement](.), and [predictive threat management](.). The framework ensures [security excellence](/docs/compliance-security) while maintaining optimal [system performance](.) and [customer experience](../business/value-proposition/detailed-analysis).
+**Technical Excellence**: The system showcases our [technical leadership](/docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](.), [automated security enforcement](.), and [predictive threat management](.). The framework ensures [security excellence](/docs/compliance-security) while maintaining optimal [system performance](.) and [customer experience](../business/value-proposition/detailed-analysis).
 
-**Strategic Competitive Advantage**: This framework transforms security from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [security leadership](/docs/compliance-security), and [customer protection](../business/value-proposition/detailed-analysis). The comprehensive approach to security enables our [market differentiation](docs/business/strategy) and [competitive advantage](docs/business/strategy) through enterprise-grade security that exceeds industry standards.
+**Strategic Competitive Advantage**: This framework transforms security from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [security leadership](/docs/compliance-security), and [customer protection](../business/value-proposition/detailed-analysis). The comprehensive approach to security enables our [market differentiation](/docs/business/strategy) and [competitive advantage](/docs/business/strategy) through enterprise-grade security that exceeds industry standards.
 
 **Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the security platform provides reliable, scalable service that supports our [operational excellence](../business/operations) standards while maintaining the [security standards](/docs/compliance-security) required for our [growth strategy](..).
 

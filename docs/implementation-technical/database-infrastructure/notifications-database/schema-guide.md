@@ -9,13 +9,13 @@ This guide defines the canonical schema and responsibilities for the dedicated N
 
 It consolidates and replaces:
 
-- [`notifications-architecture`](docs/implementation-technical/database-infrastructure)
-- [`transactional-emails-and-notifications`](docs/implementation-technical/database-infrastructure)
+- [`notifications-architecture`](/docs/implementation-technical/database-infrastructure)
+- [`transactional-emails-and-notifications`](/docs/implementation-technical/database-infrastructure)
 
 Refer to:
 
-- [`database-schema-guide`](docs/implementation-technical/database-infrastructure) for the 5-tier overview.
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure) for logging/observability responsibilities.
+- [`database-schema-guide`](/docs/implementation-technical/database-infrastructure) for the 5-tier overview.
+- [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure) for logging/observability responsibilities.
 
 ---
 

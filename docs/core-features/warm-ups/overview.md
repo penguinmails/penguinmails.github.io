@@ -88,8 +88,8 @@ Unlike manual warm-up processes that often fail, our system uses proven delivera
 
 For a deeper view of how reputation, cost, and monitoring are handled across the platform, see:
 
-- Strategic and technical framing in [`business-leaders-technical-framework.md`](docs/business/technical-implementation)
-- Implementation roadmap details in [`implementation-roadmap.md`](docs/business/implementation)
+- Strategic and technical framing in [`business-leaders-technical-framework.md`](/docs/business/technical-implementation)
+- Implementation roadmap details in [`implementation-roadmap.md`](/docs/business/implementation)
 
 ## Performance & Reputation Dashboard
 

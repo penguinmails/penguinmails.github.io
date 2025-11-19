@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 6 - Process Automation and Standardization
 **Target Audience**: Standardization Engineers, Certification Specialists, Developer Standards Teams
 **Business Impact Priority**: Critical - Enterprise-grade developer standards and certification responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Validation Framework](/docs/business/operations/validation/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Standardization Framework](docs/business/standardization)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Validation Framework](/docs/business/operations/validation/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Standardization Framework](/docs/business/standardization)
 
 ## Executive Summary
 
@@ -49,7 +49,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Certification management systems activation and optimization
 - Standards validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Standardization Framework](docs/business/standardization)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Standardization Framework](/docs/business/standardization)
 
 #### Standards Point 1.1.2: Developer Certification Systems
 
@@ -107,7 +107,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Excellence systems activated and validated
 - Standardization validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Standardization Framework](docs/business/standardization)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Standardization Framework](/docs/business/standardization)
 
 #### Assurance Point 1.2.3: Excellence Validation Systems
 
@@ -141,7 +141,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Compliance validation systems activation and optimization
 - Governance validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](/docs/business/operations/strategy/framework) + [Standardization Framework](docs/business/standardization)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/operations/strategy/framework) + [Standardization Framework](/docs/business/standardization)
 
 #### Governance Point 2.1.2: Compliance Automation Systems
 
@@ -169,7 +169,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Recognition systems activation and optimization
 - Framework validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Standardization Framework](docs/business/standardization)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Standardization Framework](/docs/business/standardization)
 
 ### 2.2 Compliance Excellence
 
@@ -199,7 +199,7 @@ The framework provides enterprise-grade developer standards with 99% enhancement
 - Validation systems activated and validated
 - Excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Operations Framework](/docs/business/operations/strategy/framework) + [Standardization Framework](docs/business/standardization)
+**Business Framework Integration**: [Developer Operations Framework](/docs/business/operations/strategy/framework) + [Standardization Framework](/docs/business/standardization)
 
 #### Excellence Point 2.2.3: Success Measurement Systems
 

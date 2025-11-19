@@ -172,9 +172,9 @@ interface IncidentResponseTeam {
 
 ### **Escalation Contacts with Strategic Context**
 
-- **Primary On-call**: Engineering Lead (24) - Authority to implement [emergency procedures](docs/technical/architecture/detailed-technical)
-- **Secondary On-call**: DevOps Engineer (24) - Expert in [system automation](docs/technical/architecture/detailed-technical) and [monitoring systems](docs/technical/architecture/detailed-technical)
-- **Management**: CTO (Business hours), CEO (Critical incidents) - Strategic decision authority for [business impact assessment](docs/business/operations)
+- **Primary On-call**: Engineering Lead (24) - Authority to implement [emergency procedures](/docs/technical/architecture/detailed-technical)
+- **Secondary On-call**: DevOps Engineer (24) - Expert in [system automation](/docs/technical/architecture/detailed-technical) and [monitoring systems](/docs/technical/architecture/detailed-technical)
+- **Management**: CTO (Business hours), CEO (Critical incidents) - Strategic decision authority for [business impact assessment](/docs/business/operations)
 - **External**: Security firm (Security incidents), Legal counsel (Legal issues) - External expertise for [compliance requirements](../../compliance-security)
 
 ---
@@ -284,11 +284,11 @@ interface MonitoringConfig {
 
 ### **Initial Assessment Process with Business Context**
 
-1. **Alert Triage**: Automated alerts routed to on-call engineer with [business impact scoring](docs/business/analytics)
-2. **Impact Evaluation**: Assess affected systems, users, and [business operations impact](docs/business/operations)
-3. **Severity Classification**: Assign appropriate severity level with [strategic business considerations](docs/business/strategy)
-4. **Initial Response**: Begin containment using [automated response procedures](docs/technical/architecture/detailed-technical)
-5. **Notification**: Alert incident response team if SEV-1 or SEV-2 with [stakeholder communication plan](docs/business/operations)
+1. **Alert Triage**: Automated alerts routed to on-call engineer with [business impact scoring](/docs/business/analytics)
+2. **Impact Evaluation**: Assess affected systems, users, and [business operations impact](/docs/business/operations)
+3. **Severity Classification**: Assign appropriate severity level with [strategic business considerations](/docs/business/strategy)
+4. **Initial Response**: Begin containment using [automated response procedures](/docs/technical/architecture/detailed-technical)
+5. **Notification**: Alert incident response team if SEV-1 or SEV-2 with [stakeholder communication plan](/docs/business/operations)
 
 ### **Comprehensive Impact Assessment Framework**
 
@@ -443,11 +443,11 @@ const containmentPlaybooks = {
 
 ### **Investigation Phase with Strategic Analysis**
 
-1. **Evidence Collection**: Preserve logs, screenshots, and system state with [compliance chain of custody](docs/compliance-security)
-2. **Root Cause Analysis**: Identify underlying cause using 5-whys technique with [strategic business analysis](docs/business/analytics)
-3. **Impact Analysis**: Assess full scope of incident effects including [competitive implications](docs/business/strategy)
-4. **Timeline Reconstruction**: Document sequence of events with [business decision points](docs/business/operations)
-5. **Evidence Preservation**: Maintain chain of custody for legal purposes with [regulatory compliance](docs/compliance-security)
+1. **Evidence Collection**: Preserve logs, screenshots, and system state with [compliance chain of custody](/docs/compliance-security)
+2. **Root Cause Analysis**: Identify underlying cause using 5-whys technique with [strategic business analysis](/docs/business/analytics)
+3. **Impact Analysis**: Assess full scope of incident effects including [competitive implications](/docs/business/strategy)
+4. **Timeline Reconstruction**: Document sequence of events with [business decision points](/docs/business/operations)
+5. **Evidence Preservation**: Maintain chain of custody for legal purposes with [regulatory compliance](/docs/compliance-security)
 
 ### **Advanced Recovery Process with Business Integration**
 
@@ -561,7 +561,7 @@ interface InternalCommunication {
 }
 ```markdown
 
-**Strategic Communication Framework**: This communication structure supports our [enterprise stakeholder management](docs/business/operations) by ensuring that technical incident information is translated into business implications and strategic considerations. The framework enables informed decision-making at all organizational levels.
+**Strategic Communication Framework**: This communication structure supports our [enterprise stakeholder management](/docs/business/operations) by ensuring that technical incident information is translated into business implications and strategic considerations. The framework enables informed decision-making at all organizational levels.
 
 ### **External Communication with Brand Protection**
 
@@ -693,7 +693,7 @@ interface IncidentClosure {
 }
 ```markdown
 
-**Business-Focused Post-Incident Process**: This closure framework supports our [continuous improvement strategy](docs/business/operations) by ensuring that incidents become opportunities for business growth, competitive advantage enhancement, and strategic positioning improvement.
+**Business-Focused Post-Incident Process**: This closure framework supports our [continuous improvement strategy](/docs/business/operations) by ensuring that incidents become opportunities for business growth, competitive advantage enhancement, and strategic positioning improvement.
 
 ### **Strategic Post-Mortem Process**
 
@@ -750,16 +750,16 @@ interface PostMortemAction {
 }
 ```markdown
 
-**Strategic Learning and Improvement**: This post-mortem framework supports our [organizational learning strategy](docs/business/operations) by ensuring that incidents become catalysts for business improvement, competitive advantage enhancement, and strategic positioning strengthening.
+**Strategic Learning and Improvement**: This post-mortem framework supports our [organizational learning strategy](/docs/business/operations) by ensuring that incidents become catalysts for business improvement, competitive advantage enhancement, and strategic positioning strengthening.
 
 ### **Continuous Improvement with Business Integration**
 
-- **Lessons Learned**: Document and share incident insights with [business impact assessment](docs/business/analytics)
-- **Process Updates**: Refine response procedures based on [operational excellence](docs/business/operations) standards
-- **Tool Improvements**: Enhance monitoring and alerting capabilities with [intelligent automation](docs/technical/architecture/detailed-technical)
-- **Training Updates**: Update team training based on incident patterns with [strategic business](docs/business/operations) integration
-- **Competitive Advantage**: Develop new [market differentiation](docs/business/strategy) opportunities from incident response learnings
-- **Strategic Planning**: Integrate insights with [strategic planning](docs/business/strategy) and [market positioning](docs/business/strategy)
+- **Lessons Learned**: Document and share incident insights with [business impact assessment](/docs/business/analytics)
+- **Process Updates**: Refine response procedures based on [operational excellence](/docs/business/operations) standards
+- **Tool Improvements**: Enhance monitoring and alerting capabilities with [intelligent automation](/docs/technical/architecture/detailed-technical)
+- **Training Updates**: Update team training based on incident patterns with [strategic business](/docs/business/operations) integration
+- **Competitive Advantage**: Develop new [market differentiation](/docs/business/strategy) opportunities from incident response learnings
+- **Strategic Planning**: Integrate insights with [strategic planning](/docs/business/strategy) and [market positioning](/docs/business/strategy)
 
 ---
 
@@ -814,9 +814,9 @@ interface BreachNotification {
 
 ### **Evidence Preservation with Strategic Considerations**
 
-- **Chain of Custody**: Document all evidence handling procedures with [legal compliance](docs/compliance-security) and [regulatory requirements](docs/compliance-security)
-- **Forensic Imaging**: Preserve system state for analysis with [business continuity](docs/business/operations) considerations
-- **Log Preservation**: Maintain all relevant logs and audit trails with [intelligent analytics](docs/technical/architecture/detailed-technical) integration
+- **Chain of Custody**: Document all evidence handling procedures with [legal compliance](/docs/compliance-security) and [regulatory requirements](/docs/compliance-security)
+- **Forensic Imaging**: Preserve system state for analysis with [business continuity](/docs/business/operations) considerations
+- **Log Preservation**: Maintain all relevant logs and audit trails with [intelligent analytics](/docs/technical/architecture/detailed-technical) integration
 - **Legal Hold**: Implement preservation orders when litigation expected with [strategic business](../../business/strategy) impact assessment
 - **Competitive Intelligence**: Analyze evidence for [market opportunity] identification and [competitive advantage] development
 
@@ -888,14 +888,14 @@ interface IncidentTesting {
 }
 ```markdown
 
-**Strategic Testing Framework**: This testing approach supports our [continuous improvement strategy](docs/business/operations) by ensuring that incident response capabilities are continuously validated against not just technical requirements but also business objectives, competitive standards, and strategic positioning goals.
+**Strategic Testing Framework**: This testing approach supports our [continuous improvement strategy](/docs/business/operations) by ensuring that incident response capabilities are continuously validated against not just technical requirements but also business objectives, competitive standards, and strategic positioning goals.
 
 ### **Advanced Plan Maintenance with Business Integration**
 
-- **Annual Review**: Complete plan review and updates with [strategic planning](docs/business/strategy) integration
-- **Change Management**: Update plan when significant changes occur with [business impact](docs/business/operations) assessment
-- **Contact Updates**: Maintain current contact information with [stakeholder relationship](docs/business/operations) management
-- **Tool Updates**: Update procedures when tools or systems change with [technology roadmap](docs/technical/architecture/detailed-technical) alignment
+- **Annual Review**: Complete plan review and updates with [strategic planning](/docs/business/strategy) integration
+- **Change Management**: Update plan when significant changes occur with [business impact](/docs/business/operations) assessment
+- **Contact Updates**: Maintain current contact information with [stakeholder relationship](/docs/business/operations) management
+- **Tool Updates**: Update procedures when tools or systems change with [technology roadmap](/docs/technical/architecture/detailed-technical) alignment
 - **Competitive Analysis**: Regular review against [competitive landscape](/docs/business/market-analysis/overview) and [market positioning](/docs/business/strategy/overview)
 - **Strategic Alignment**: Ensure procedures support [long-term strategic](/docs/business/strategy/overview) objectives and [market leadership](/docs/business/strategy/overview) goals
 
@@ -947,11 +947,11 @@ interface IncidentMetrics {
 
 ### **Strategic Reporting with Business Intelligence**
 
-- **Monthly Reports**: Incident summary and trend analysis with [business impact](docs/business/analytics) assessment and [competitive positioning](docs/business/strategy) implications
-- **Quarterly Reviews**: Process effectiveness and improvement opportunities with [strategic planning](docs/business/strategy) integration and [market positioning](docs/business/strategy) analysis
-- **Annual Audits**: Comprehensive plan and procedure review with [competitive benchmarking](docs/business/market-analysis) and [strategic alignment](docs/business/strategy) validation
-- **Regulatory Reporting**: Required submissions to authorities with [compliance excellence](docs/compliance-security) demonstration and [transparency commitment](docs/business/value-proposition/detailed-analysis)
-- **Strategic Business Reviews**: Executive-level reporting with [market opportunity](docs/business/strategy) identification and [competitive advantage](docs/business/strategy) development recommendations
+- **Monthly Reports**: Incident summary and trend analysis with [business impact](/docs/business/analytics) assessment and [competitive positioning](/docs/business/strategy) implications
+- **Quarterly Reviews**: Process effectiveness and improvement opportunities with [strategic planning](/docs/business/strategy) integration and [market positioning](/docs/business/strategy) analysis
+- **Annual Audits**: Comprehensive plan and procedure review with [competitive benchmarking](/docs/business/market-analysis) and [strategic alignment](/docs/business/strategy) validation
+- **Regulatory Reporting**: Required submissions to authorities with [compliance excellence](/docs/compliance-security) demonstration and [transparency commitment](/docs/business/value-proposition/detailed-analysis)
+- **Strategic Business Reviews**: Executive-level reporting with [market opportunity](/docs/business/strategy) identification and [competitive advantage](/docs/business/strategy) development recommendations
 
 ---
 
@@ -966,10 +966,10 @@ interface IncidentMetrics {
 
 ### **Strategic Resource Inventory**
 
-- **Contact Lists**: Updated emergency contact information with [stakeholder relationship](docs/business/operations) management and [competitive intelligence](docs/business/market-analysis) network
-- **Runbooks**: Detailed response procedures for common incidents with [business continuity](docs/business/operations) integration and [competitive advantage](docs/business/strategy) preservation
-- **Templates**: Incident report, communication, and post-mortem templates with [brand messaging](docs/business/strategy) integration and [market positioning](docs/business/strategy) alignment
-- **Checklists**: Verification checklists for different incident types with [operational excellence](docs/business/operations) standards and [strategic validation](docs/business/strategy) criteria
+- **Contact Lists**: Updated emergency contact information with [stakeholder relationship](/docs/business/operations) management and [competitive intelligence](/docs/business/market-analysis) network
+- **Runbooks**: Detailed response procedures for common incidents with [business continuity](/docs/business/operations) integration and [competitive advantage](/docs/business/strategy) preservation
+- **Templates**: Incident report, communication, and post-mortem templates with [brand messaging](/docs/business/strategy) integration and [market positioning](/docs/business/strategy) alignment
+- **Checklists**: Verification checklists for different incident types with [operational excellence](/docs/business/operations) standards and [strategic validation](/docs/business/strategy) criteria
 
 ---
 
@@ -979,9 +979,9 @@ This incident response and operations management framework represents a cornerst
 
 **Business Impact**: The framework directly supports our [revenue model](../../business/model) by maintaining customer trust, minimizing revenue impact during disruptions, and converting potential negatives into demonstrations of our [operational maturity](../../business/operations) and [customer-first approach](../../business/value-proposition/detailed-analysis). The systematic approach to incident response enables our [enterprise market penetration strategy](../../business/market-analysis) by demonstrating operational maturity that enterprise customers require.
 
-**Technical Excellence**: The system showcases our [technical leadership](docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](docs/technical/architecture/detailed-technical), [automated response procedures](docs/technical/architecture/detailed-technical), and [predictive analytics](docs/technical/architecture/detailed-technical). The integration with our [4-tier database architecture](docs/technical/architecture) and [progressive queue processing](.) provides unified incident response across all system components.
+**Technical Excellence**: The system showcases our [technical leadership](/docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](/docs/technical/architecture/detailed-technical), [automated response procedures](/docs/technical/architecture/detailed-technical), and [predictive analytics](/docs/technical/architecture/detailed-technical). The integration with our [4-tier database architecture](/docs/technical/architecture) and [progressive queue processing](.) provides unified incident response across all system components.
 
-**Strategic Competitive Advantage**: This framework transforms incident response from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [customer protection](../business/value-proposition/detailed-analysis), and [market leadership](docs/business/strategy) capabilities. The comprehensive approach to business impact assessment and strategic opportunity identification enables us to emerge stronger from incidents, turning challenges into [competitive differentiation](docs/business/strategy) opportunities.
+**Strategic Competitive Advantage**: This framework transforms incident response from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [customer protection](../business/value-proposition/detailed-analysis), and [market leadership](/docs/business/strategy) capabilities. The comprehensive approach to business impact assessment and strategic opportunity identification enables us to emerge stronger from incidents, turning challenges into [competitive differentiation](/docs/business/strategy) opportunities.
 
 **Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the incident response platform provides reliable, scalable service that supports our [operational excellence](../../business/operations) standards and enables our [growth strategy](..).
 

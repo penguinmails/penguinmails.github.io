@@ -28,8 +28,8 @@ persona: "Documentation Users"
 
 For those concerns:
 
-- Notifications & system events: see [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
-- External logging / observability: see [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
+- Notifications & system events: see [`notifications-database-schema-guide`](/docs/implementation-technical/database-infrastructure)
+- External logging / observability: see [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure)
 
 ---
 
@@ -247,7 +247,7 @@ The following are intentionally NOT present in OLAP (and must not be reintroduce
 
 - admin_system_events:
   - Live/operational system events are owned by the Notifications DB:
-    - See [`notifications-database-schema-guide`](docs/implementation-technical/database-infrastructure)
+    - See [`notifications-database-schema-guide`](/docs/implementation-technical/database-infrastructure)
   - OLAP may later define aggregates, but no admin_system_events base table exists here.
 
 - notifications:
@@ -303,7 +303,7 @@ Apply RLS and access controls to all OLAP tables:
 - Restrict admin_audit_log to authorized roles and necessary scopes.
 
 Detailed security and logging strategy:
-- [`external-analytics-logging`](docs/implementation-technical/database-infrastructure)
+- [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure)
 
 ---
 

@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: Financial Services Developer Teams, Compliance Officers, Financial IT Leadership
 **Business Impact Priority**: Critical - Financial compliance and developer platform responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Financial Services Strategy Framework](docs/business/financial-services/strategy) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Financial Services Operations Framework](docs/business/financial-services/operations) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Financial Services Analytics Framework](docs/business/financial-services/analytics)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Financial Services Strategy Framework](/docs/business/financial-services/strategy) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Financial Services Operations Framework](/docs/business/financial-services/operations) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Financial Services Analytics Framework](/docs/business/financial-services/analytics)
 
 ## Executive Summary
 

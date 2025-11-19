@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: Agencies & Consulting Developer Teams, Project Managers, Client Relationship Leaders
 **Business Impact Priority**: High - Client development and consulting platform responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Agencies & Consulting Strategy Framework](docs/business/agencies-consulting/strategy) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Agencies & Consulting Operations Framework](docs/business/agencies-consulting/operations) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Agencies & Consulting Analytics Framework](docs/business/agencies-consulting/analytics)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Agencies & Consulting Strategy Framework](/docs/business/agencies-consulting/strategy) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Agencies & Consulting Operations Framework](/docs/business/agencies-consulting/operations) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Agencies & Consulting Analytics Framework](/docs/business/agencies-consulting/analytics)
 
 ## Executive Summary
 
