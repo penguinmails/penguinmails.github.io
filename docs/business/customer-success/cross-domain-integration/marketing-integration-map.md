@@ -1,9 +1,9 @@
 ---
-title: Customer Success - Marketing Systems Integration Map
-description: Comprehensive CS-Marketing integration covering lifecycle coordination, retention campaigns, expansion alignment
+title: "Customer Success - Marketing Systems Integration Map"
+description: "Comprehensive CS-Marketing integration covering lifecycle coordination, retention campaigns, expansion alignment"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success - Marketing Systems Integration Map

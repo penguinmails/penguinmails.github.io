@@ -2,6 +2,8 @@
 title: "Agencies & Consulting Business Case - Executive Summary"
 description: "Agencies and consulting firms business case covering client communication management and confidentiality protection"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Agencies & Consulting Business Case

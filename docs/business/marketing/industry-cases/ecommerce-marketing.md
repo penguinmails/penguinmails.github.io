@@ -2,10 +2,9 @@
 title: "E-commerce Marketing Framework: MVP vs Post-MVP Roadmap"
 description: "E-commerce marketing framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic segmentation, manual processes, weekly optimization | **Post-MVP**: Real-time personalization, ML analytics, automated optimization"
 last_modified_date: "2025-11-17"
-level: 3
-persona: "E-commerce Marketing Directors, Growth Marketers, Customer Success Teams"
-redirect_from:
-  - "/docs/business/marketing/industry-cases/ecommerce-marketing.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # E-commerce Marketing Framework: MVP vs Post-MVP Roadmap

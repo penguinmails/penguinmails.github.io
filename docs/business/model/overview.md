@@ -2,6 +2,8 @@
 title: "Business Model & Financial Framework"
 description: "Comprehensive business model and financial framework for CFOs, VPs, and Budget Owners with actionable insights for decision-making"
 last_modified_date: "2025-11-18"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Business Model & Financial Framework

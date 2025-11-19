@@ -2,8 +2,8 @@
 title: "Customer Health Scoring Framework"
 description: "Comprehensive customer health monitoring and scoring methodology for proactive retention and expansion management"
 last_modified_date: "2025-11-15"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Health Scoring Framework

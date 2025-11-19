@@ -2,6 +2,8 @@
 title: "Compliance Framework Overview - Strategic Oversight for Business Leaders"
 description: "Strategic compliance framework overview for CFOs, VPs, and Budget Owners with process-driven oversight aligned with backbone constraints"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Framework Overview - Strategic Oversight for Business Leaders

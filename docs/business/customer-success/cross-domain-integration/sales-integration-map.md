@@ -1,9 +1,9 @@
 ---
-title: Customer Success - Sales Systems Integration Map
-description: Comprehensive CS-Sales integration covering handoff processes, expansion pipeline, renewal coordination
+title: "Customer Success - Sales Systems Integration Map"
+description: "Comprehensive CS-Sales integration covering handoff processes, expansion pipeline, renewal coordination"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success - Sales Systems Integration Map

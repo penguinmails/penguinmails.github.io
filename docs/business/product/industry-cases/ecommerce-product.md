@@ -2,8 +2,8 @@
 title: "E-commerce Product Framework"
 description: "Industry-specific product development strategies for e-commerce organizations with customer experience and conversion optimization"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # E-commerce Product Framework

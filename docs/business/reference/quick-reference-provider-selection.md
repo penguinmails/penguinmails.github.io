@@ -2,6 +2,8 @@
 title: "Executive Quick Reference: Provider Selection Guide"
 description: "One-page decision matrix for email service provider selection based on volume, budget, and compliance requirements"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Executive Quick Reference: Provider Selection Guide

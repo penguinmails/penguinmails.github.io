@@ -1,6 +1,9 @@
 ---
 title: "Strategic Operations Oversight for Business Leaders"
 description: "Executive-focused operational insights, strategic metrics, and directional intelligence for business leaders overseeing email infrastructure operations"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Strategic Operations Oversight for Business Leaders

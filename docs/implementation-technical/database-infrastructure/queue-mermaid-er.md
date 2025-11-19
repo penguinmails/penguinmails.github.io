@@ -2,7 +2,7 @@
 title: "Queue )"
 description: "Documentation for Queue ) - Queue Mermaid Er"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

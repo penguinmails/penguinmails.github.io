@@ -1,6 +1,9 @@
 ---
 title: "Value Proposition Framework"
 description: "Enterprise value proposition framework with strategic ROI modeling, competitive positioning, and business impact assessment"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Value Proposition Framework

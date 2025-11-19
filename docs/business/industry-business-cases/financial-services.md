@@ -2,7 +2,7 @@
 title: "Financial Services Industry Business Case"
 description: "Documentation for Financial Services Industry Business Case - Financial Services"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

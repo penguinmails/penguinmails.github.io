@@ -2,8 +2,8 @@
 title: "Enhanced Analytics Dashboard Framework"
 description: "Phase 6 enhancement providing advanced reporting capabilities, historical trend analysis, predictive insights, and comprehensive KPI tracking for customer success operations"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Enhanced Analytics Dashboard Framework

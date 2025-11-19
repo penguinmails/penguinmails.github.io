@@ -2,8 +2,8 @@
 title: "Agencies & Consulting Operations Framework"
 description: "Industry-specific operational strategies for agencies and consulting organizations with client data security, project management, and professional compliance"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Agencies & Consulting Operations Framework

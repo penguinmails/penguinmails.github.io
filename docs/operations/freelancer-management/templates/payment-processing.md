@@ -2,8 +2,8 @@
 title: "Payment Processing Templates"
 description: "Monthly payment request forms, effort point adjustment requests, and financial approval workflows"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Operations Managers, Finance Coordinators, Project Managers"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Payment Processing Templates

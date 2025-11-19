@@ -2,6 +2,8 @@
 title: "Security & Compliance Overview - Executive Summary"
 description: "High-level security and compliance summary for business leaders, CFOs, and procurement teams"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Security & Compliance Overview

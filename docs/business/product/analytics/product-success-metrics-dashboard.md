@@ -2,8 +2,8 @@
 title: "Product Success Metrics Tracking Dashboard: Achievement and Performance Monitoring"
 description: "Comprehensive product success metrics tracking dashboard for achievement monitoring, performance assessment, and strategic optimization"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Product Success Metrics Tracking Dashboard: Achievement and Performance Monitoring

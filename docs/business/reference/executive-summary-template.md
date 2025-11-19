@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Executive Summary Template: PenguinMails Investment Decision
 
 **Use this template to present the PenguinMails investment decision to your executive team and board for approval.**

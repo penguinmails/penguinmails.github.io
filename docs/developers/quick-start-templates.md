@@ -2,7 +2,7 @@
 title: "Developer Quick Start Templates"
 description: "Documentation for Developer Quick Start Templates - Quick Start Templates"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

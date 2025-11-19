@@ -1,9 +1,9 @@
 ---
-title: Customer Success Cross-Domain API Documentation
-description: Comprehensive API specifications for CS integrations with Marketing, Sales, Product, Finance, Operations
+title: "Customer Success Cross-Domain API Documentation"
+description: "Comprehensive API specifications for CS integrations with Marketing, Sales, Product, Finance, Operations"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Cross-Domain API Documentation

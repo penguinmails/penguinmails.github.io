@@ -2,7 +2,7 @@
 title: "Queue System Implementation Guide"
 description: "Documentation for Queue System Implementation Guide - Queue System Implementation"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

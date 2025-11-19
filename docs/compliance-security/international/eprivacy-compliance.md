@@ -1,17 +1,17 @@
 ---
-title: ePrivacy Directive Compliance Analysis
-description: Comprehensive analysis of ePrivacy Directive requirements for electronic communications and marketing, specifically affecting email outreach platforms like PenguinMails.
-last_modified_date: 2025-11-19
-category: Level 2 - Detailed Analysis
-audience: Legal teams, compliance officers, technical architects
-status: production-ready
-version: 1.0
-document_type: legal_analysis
-related_documents:
-  - path: docs/compliance-security/international/european-compliance-overview.md
-    type: overview
-  - path: docs/compliance-security/international/gdpr-compliance.md
-    type: related
+title: "ePrivacy Directive Compliance Analysis"
+- path: "docs/compliance-security/international/gdpr-compliance.md"
+audience: "Legal teams, compliance officers, technical architects"
+category: "Level 2 - Detailed Analysis"
+description: "Comprehensive analysis of ePrivacy Directive requirements for electronic communications and marketing, specifically affecting email outreach platforms like PenguinMails."
+document_type: "legal_analysis"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+related_documents: ""
+status: "production-ready"
+type: "related"
+version: "1.0"
 ---
 
 # ePrivacy Directive Compliance Analysis

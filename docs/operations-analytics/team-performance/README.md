@@ -1,6 +1,9 @@
 ---
 title: "Team Performance"
 description: "Comprehensive team coordination frameworks and performance tracking systems"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Team Performance

@@ -1,19 +1,17 @@
 ---
-title: National Laws Compliance Analysis
-description: Country-specific data protection requirements and variations across key European markets, focusing on implementation differences that affect PenguinMails' compliance strategy.
-last_modified_date: 2025-11-19
-category: Level 2 - Detailed Analysis
-audience: Legal teams, compliance officers, international operations
-status: production-ready
-version: 1.0
-document_type: legal_analysis
-related_documents:
-  - path: docs/compliance-security/international/european-compliance-overview.md
-    type: overview
-  - path: docs/compliance-security/international/gdpr-compliance.md
-    type: related
-  - path: docs/compliance-security/international/eprivacy-compliance.md
-    type: related
+title: "National Laws Compliance Analysis"
+- path: "docs/compliance-security/international/eprivacy-compliance.md"
+audience: "Legal teams, compliance officers, international operations"
+category: "Level 2 - Detailed Analysis"
+description: "Country-specific data protection requirements and variations across key European markets, focusing on implementation differences that affect PenguinMails' compliance strategy."
+document_type: "legal_analysis"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+related_documents: ""
+status: "production-ready"
+type: "related"
+version: "1.0"
 ---
 
 # National Laws Compliance Analysis

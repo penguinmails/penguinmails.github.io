@@ -1,6 +1,9 @@
 ---
 title: "Technical Operations Overview"
 description: "Deployment, monitoring, and operational procedures for enterprise-grade reliability"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Technical Operations Overview

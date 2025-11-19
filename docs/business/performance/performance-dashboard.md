@@ -2,6 +2,8 @@
 title: "Performance Dashboard - Executive Dashboard Templates"
 description: "Executive dashboard templates, review processes, and business monitoring frameworks for email infrastructure performance tracking"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Performance Dashboard: Executive Dashboard Templates

@@ -2,8 +2,8 @@
 title: "Customer Success Framework"
 description: "Comprehensive customer success methodology and operational framework for retention optimization and expansion management"
 last_modified_date: "2025-11-15"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Framework

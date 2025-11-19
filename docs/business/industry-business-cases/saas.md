@@ -2,6 +2,8 @@
 title: "SaaS Industry Business Case - Executive Summary"
 description: "SaaS companies business case covering customer lifecycle management and product-led growth strategies"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # SaaS Industry Business Case

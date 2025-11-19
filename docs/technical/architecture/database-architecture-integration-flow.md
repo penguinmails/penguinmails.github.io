@@ -2,8 +2,8 @@
 title: "Database Architecture Integration Flow"
 description: "OLTP, Content Database, and OLAP Analytics integration with different query patterns"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Database Architecture Integration Flow

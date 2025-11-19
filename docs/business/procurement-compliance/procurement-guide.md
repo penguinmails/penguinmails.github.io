@@ -2,6 +2,8 @@
 title: "Enterprise Procurement Guide - Executive Overview"
 description: "High-level procurement, security, compliance, and SLA overview for enterprise buyers"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Enterprise Procurement & Evaluation Guide

@@ -2,6 +2,8 @@
 title: "Queue & Events REST API Contract - System Operations"
 description: "REST API contract for system events, notifications, and operational tracking aligned with backbone constraints"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Queue & Events REST API Contract - System Operations

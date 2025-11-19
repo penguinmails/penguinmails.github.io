@@ -1,6 +1,9 @@
 ---
-title: Design System
+title: "Design System"
 description: "Complete design system framework for PenguinMails"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Design System

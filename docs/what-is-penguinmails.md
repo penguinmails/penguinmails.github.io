@@ -1,6 +1,9 @@
 ---
 title: "Cold Email That Lands in Inboxes, Not Spam"
 description: "The #1 Cold Email Infrastructure Platform delivering 95%+ inbox placement with automated compliance"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Cold Email That Lands in Inboxes, Not Spam

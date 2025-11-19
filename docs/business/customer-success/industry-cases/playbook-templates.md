@@ -2,8 +2,8 @@
 title: "Industry-Specific Playbook Templates"
 description: "Phase 6 implementation providing vertical-specific process templates and workflows for healthcare, financial services, e-commerce, agencies/consulting, and SaaS customer success operations"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Industry-Specific Playbook Templates

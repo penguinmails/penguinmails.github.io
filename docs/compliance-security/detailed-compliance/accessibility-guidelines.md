@@ -1,5 +1,7 @@
 ---
 last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Accessibility Guidelines

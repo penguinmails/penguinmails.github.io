@@ -2,10 +2,9 @@
 title: "Marketing Customer Journey Summary: MVP vs Post-MVP Roadmap"
 description: "Customer journey optimization with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic mapping, 15% improvement, manual analysis | **Post-MVP**: Real-time personalization, 30% improvement, ML analytics"
 last_modified_date: "2025-11-17"
-level: 1
-persona: "Customer Experience Directors, Personalization Managers, Journey Optimization Teams"
-redirect_from:
-  - "/docs/business/marketing/journey/summary.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Customer Journey Summary: MVP vs Post-MVP Roadmap

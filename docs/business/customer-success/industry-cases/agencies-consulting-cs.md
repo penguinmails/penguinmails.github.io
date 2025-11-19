@@ -2,8 +2,8 @@
 title: "Agencies & Consulting Customer Success Framework"
 description: "Industry-specific customer success strategies for agencies and consulting firms with relationship management, project delivery excellence, and long-term partnership focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Agencies & Consulting Customer Success Framework

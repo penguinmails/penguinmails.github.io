@@ -2,8 +2,8 @@
 title: "Task Assignment Templates"
 description: "Task assignment forms, estimation templates, and approval workflows for freelancer coordination"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Operations Coordinators, Project Managers, Task Managers"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Task Assignment Templates

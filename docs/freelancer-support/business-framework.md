@@ -2,8 +2,8 @@
 title: "Freelancer Business Success Framework"
 description: "Comprehensive business development strategy for independent email marketing consultants"
 last_modified_date: "2025-11-19"
-level: 2
-persona: "Independent Consultants, Freelancers, Business Development Specialists"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Business Success Framework

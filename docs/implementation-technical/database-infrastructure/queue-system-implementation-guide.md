@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Queue System Implementation Guide - Job Processing & Reliability
 
 ## Strategic Alignment

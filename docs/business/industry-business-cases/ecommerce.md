@@ -2,6 +2,8 @@
 title: "E-commerce & Retail Business Case - Executive Summary"
 description: "E-commerce and retail-specific email infrastructure business case covering customer communication optimization and marketing automation"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # E-commerce & Retail Business Case

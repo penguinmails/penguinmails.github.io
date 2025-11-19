@@ -2,8 +2,8 @@
 title: "SaaS Customer Success Framework"
 description: "Industry-specific customer success strategies for SaaS organizations with subscription lifecycle management, product adoption optimization, and expansion revenue focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # SaaS Customer Success Framework

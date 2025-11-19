@@ -2,6 +2,8 @@
 title: "Detailed Procurement Guide - Complete Enterprise Evaluation"
 description: "Comprehensive enterprise procurement framework with detailed evaluation criteria, contract terms, and implementation requirements"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Detailed Procurement Guide: Complete Enterprise Evaluation

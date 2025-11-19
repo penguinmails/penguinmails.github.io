@@ -2,6 +2,8 @@
 title: "Operations Strategy Framework"
 description: "Phase 1 implementation providing comprehensive strategic operations planning, security strategy development, risk management, and operational excellence protocols for Operations Teams"
 last_modified_date: "2025-11-16"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Strategy Framework

@@ -2,6 +2,8 @@
 title: "API Reference - Complete Integration Guide"
 description: "Lean, strategic API entrypoint plus links to dedicated REST API contracts (SMTP, Executive, Queue) for the PenguinMails platform."
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # API Reference - Complete Integration Guide

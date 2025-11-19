@@ -1,6 +1,9 @@
 ---
 title: "AI Features Roadmap & Integration (Proposal)"
 description: "Concrete, product-ready AI utilities for templates, spam analysis, and inbox assistance, plus future exploration paths."
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # AI Features Roadmap & Integration (Proposal)

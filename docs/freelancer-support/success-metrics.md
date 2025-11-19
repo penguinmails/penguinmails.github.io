@@ -2,8 +2,8 @@
 title: "Freelancer Success Metrics and KPIs"
 description: "Comprehensive performance tracking framework for email marketing consultants"
 last_modified_date: "2025-11-19"
-level: 2
-persona: "Independent Consultants, Business Performance Analysts"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Success Metrics and KPIs

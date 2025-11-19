@@ -2,8 +2,8 @@
 title: "Product Analytics Executive Dashboard: Strategic KPIs and Performance Metrics"
 description: "Executive analytics dashboard providing directional KPIs, performance metrics, and data-driven insights for product leadership decision-making - **MVP Scope**: Basic KPI visibility and reporting | **Post-MVP**: Advanced analytics and predictive modeling"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Product Analytics Executive Dashboard: Strategic KPIs and Performance Metrics

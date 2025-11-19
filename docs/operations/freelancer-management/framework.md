@@ -2,8 +2,8 @@
 title: "Freelancer Operations Framework"
 description: "Operational framework for freelancer coordination, task management, and performance monitoring"
 last_modified_date: "2025-11-19"
-level: 2
-persona: "Operations Managers, Project Coordinators, Freelancer Relations"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Operations Framework

@@ -1,10 +1,13 @@
 ---
-layout: default
-title: Developer Strategy Framework
-nav_order: 1
-parent: Developer Business Frameworks
-grand_parent: Business
-has_children: false
+title: "Developer Strategy Framework"
+grand_parent: "Business"
+has_children: "false"
+last_modified_date: "2025-11-19"
+layout: "default"
+level: "2"
+nav_order: "1"
+parent: "Developer Business Frameworks"
+persona: "Documentation Users"
 ---
 
 # Developer Strategy Framework

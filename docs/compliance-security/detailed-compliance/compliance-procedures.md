@@ -2,6 +2,8 @@
 title: "Compliance Procedures"
 description: "Regulatory compliance procedures for GDPR, CCPA, CAN-SPAM, and international email marketing regulations"
 last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Procedures

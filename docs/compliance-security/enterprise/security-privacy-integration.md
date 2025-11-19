@@ -2,6 +2,8 @@
 title: "Security & Privacy Integration Framework"
 description: "Unified security and privacy framework ensuring comprehensive data protection and regulatory compliance across all system components"
 last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Security & Privacy Integration Framework

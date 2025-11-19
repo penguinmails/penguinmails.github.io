@@ -1,5 +1,8 @@
 ---
 title: "Security and Infrastructure Documentation"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Security and Infrastructure Documentation

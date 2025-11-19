@@ -2,10 +2,9 @@
 title: "Feature Taxonomy and Roadmap Framework"
 description: "Central reference for feature classification with progressive disclosure levels - Core, MVP, Growth, Enterprise, and Future roadmap features"
 last_modified_date: "2025-11-17"
-level: 1
-persona: "All Teams"
-redirect_from:
-  - "/business/feature-taxonomy-and-roadmap.html"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Feature Taxonomy and Progressive Roadmap Framework
@@ -32,7 +31,7 @@ Level 2: MVP FEATURES (Basic UX Requirements)  → 2025 Q4 - 2026 Q1
 Level 3: GROWTH FEATURES (Market Expansion)    → 2026 Q1 - Q3
 Level 4: ENTERPRISE FEATURES (Scale Features)  → 2026 Q4 - 2027
 Level 5: FUTURE FEATURES (Innovation Pipeline) → 2027+
-```markdown
+```
 
 ---
 

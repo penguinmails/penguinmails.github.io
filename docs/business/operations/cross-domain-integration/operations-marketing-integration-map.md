@@ -2,8 +2,8 @@
 title: "Operations-Marketing Integration Map"
 description: "Comprehensive integration framework for operations coordination with marketing campaigns, content production, distribution optimization, and performance measurement"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations-Marketing Integration Map

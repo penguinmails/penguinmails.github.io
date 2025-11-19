@@ -2,8 +2,8 @@
 title: "Email Infrastructure Integration Flow"
 description: "How Central SMTP, Frontend, Queue, and Tenant SMTP work together in the system architecture"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Email Infrastructure Integration Flow

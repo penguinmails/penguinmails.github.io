@@ -2,8 +2,8 @@
 title: "Enhanced Process Automation Framework"
 description: "Phase 6 enhancement providing rule-based workflow automation for routine customer success processes, intelligent intervention triggers, and scalable operational efficiency improvements"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Enhanced Process Automation Framework

@@ -2,8 +2,8 @@
 title: "E-commerce Operations Framework"
 description: "Industry-specific operational strategies for e-commerce organizations with customer data security, payment processing, and online retail compliance"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # E-commerce Operations Framework

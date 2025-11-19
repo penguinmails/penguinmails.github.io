@@ -2,8 +2,8 @@
 title: "Customer Onboarding Summary"
 description: "Executive summary of customer onboarding strategies, activation processes, and time-to-value optimization"
 last_modified_date: "2025-11-15"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Onboarding Summary

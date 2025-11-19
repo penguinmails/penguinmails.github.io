@@ -2,6 +2,8 @@
 title: "Strategic ROI Calculator - Business Leaders Investment Analysis"
 description: "Process-driven ROI analysis framework for strategic infrastructure investments with backbone-aligned data access"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Strategic ROI Calculator: Business Leaders Investment Analysis

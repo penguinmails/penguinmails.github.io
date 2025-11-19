@@ -2,6 +2,8 @@
 title: "Email Warm-up Overview"
 description: "Achieve 95%+ inbox placement with automated sender reputation building"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Achieve 95%+ Inbox Placement with Automated Reputation Building

@@ -1,5 +1,7 @@
 ---
 last_modified_date: "2025-10-27"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Enterprise Security Framework

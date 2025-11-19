@@ -2,6 +2,8 @@
 title: "Free Mailbox Creation"
 description: "Create professional email accounts quickly and easily for your cold email campaigns"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Free Mailbox Creation

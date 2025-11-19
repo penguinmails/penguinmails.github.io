@@ -2,6 +2,8 @@
 title: "Compliance Tool Pricing - Platform Comparison"
 description: "Detailed compliance platform pricing, feature comparison, and vendor selection framework"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Tool Pricing - Platform Comparison

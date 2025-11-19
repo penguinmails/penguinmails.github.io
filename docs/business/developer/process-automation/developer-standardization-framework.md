@@ -1,10 +1,13 @@
 ---
-layout: default
-title: Developer Standardization Framework
-nav_order: 4
-parent: Developer Process Automation and Standardization
-grand_parent: Process Automation and Standardization
-has_children: false
+title: "Developer Standardization Framework"
+grand_parent: "Process Automation and Standardization"
+has_children: "false"
+last_modified_date: "2025-11-19"
+layout: "default"
+level: "2"
+nav_order: "4"
+parent: "Developer Process Automation and Standardization"
+persona: "Documentation Users"
 ---
 
 # Developer Standardization Framework

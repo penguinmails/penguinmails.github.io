@@ -2,6 +2,8 @@
 title: "Contribution Guide - Complete Developer Onboarding & Collaboration"
 description: "Comprehensive developer onboarding, contribution standards, and collaboration guidelines for PenguinMails platform development"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 # Contribution Guide - Complete Developer Onboarding & Collaboration
 

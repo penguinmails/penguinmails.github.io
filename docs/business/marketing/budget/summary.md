@@ -2,10 +2,9 @@
 title: "Marketing Budget Optimization Summary: MVP vs Post-MVP Roadmap"
 description: "Budget optimization framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Manual tracking, 10% efficiency, basic reporting | **Post-MVP**: Real-time optimization, 25% efficiency, ML forecasting"
 last_modified_date: "2025-11-17"
-level: 1
-persona: "Marketing Finance Managers, Budget Directors, Financial Planning Teams"
-redirect_from:
-  - "/docs/business/marketing/budget/summary.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Budget Optimization Summary: MVP vs Post-MVP Roadmap

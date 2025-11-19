@@ -2,8 +2,8 @@
 title: "Performance Tracking Templates"
 description: "Monthly performance review templates, metrics dashboards, and freelancer assessment forms"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Operations Managers, Project Coordinators, Performance Analysts"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Performance Tracking Templates

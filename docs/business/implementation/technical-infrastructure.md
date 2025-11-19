@@ -2,6 +2,8 @@
 title: "Technical Infrastructure - VPS and ESP Technical Details"
 description: "Comprehensive technical specifications, infrastructure requirements, and technical implementation details for email systems"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Technical Infrastructure: VPS and ESP Technical Details

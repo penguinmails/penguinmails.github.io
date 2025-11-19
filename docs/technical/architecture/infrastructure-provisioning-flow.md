@@ -2,8 +2,8 @@
 title: "Infrastructure Provisioning Flow"
 description: "Automated VPS, SMTP, DNS, and SSL provisioning with error handling and rollback procedures"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Infrastructure Provisioning Flow

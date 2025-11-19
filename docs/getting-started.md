@@ -1,6 +1,9 @@
 ---
 title: "Getting Started with PenguinMails"
 description: "Quick introduction to PenguinMails cold email infrastructure"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Getting Started with PenguinMails

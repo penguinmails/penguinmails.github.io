@@ -2,8 +2,8 @@
 title: "Operations Management"
 description: "Comprehensive operations management framework covering cross-domain coordination, freelancer management, operational runbooks, and implementation procedures"
 last_modified_date: "2025-11-19"
-level: 1
-persona: "Operations Directors, Project Managers, Business Leaders"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Management

@@ -2,6 +2,8 @@
 title: "Compliance Monitoring - Operational Oversight Strategy"
 description: "Strategic operational monitoring systems for ongoing compliance management and oversight"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Monitoring - Operational Oversight Strategy

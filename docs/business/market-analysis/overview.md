@@ -1,6 +1,9 @@
 ---
 title: "Market Analysis & Competitive Intelligence"
 description: "Comprehensive market analysis, competitive landscape, customer segmentation, and go-to-market strategy for business stakeholders"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Market Analysis & Competitive Intelligence

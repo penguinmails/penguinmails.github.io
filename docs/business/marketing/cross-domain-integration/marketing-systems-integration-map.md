@@ -2,10 +2,9 @@
 title: "Marketing Systems Cross-Domain Integration Map: MVP vs Post-MVP Roadmap"
 description: "Integration map with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Daily sync, basic APIs, manual processes | **Post-MVP**: Real-time integration, event streaming, automated optimization"
 last_modified_date: "2025-11-17"
-level: 3
-persona: "Marketing Directors, Sales Leaders, Product Managers, Customer Success Teams, Finance Leaders"
-redirect_from:
-  - "/docs/business/marketing/cross-domain-integration/marketing-systems-integration-map.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Systems Cross-Domain Integration Map: MVP vs Post-MVP Roadmap

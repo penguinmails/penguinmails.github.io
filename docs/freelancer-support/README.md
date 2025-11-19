@@ -2,8 +2,8 @@
 title: "Freelancer Success Center"
 description: "Comprehensive guide for independent consultants to build successful email marketing practices with PenguinMails"
 last_modified_date: "2025-11-19"
-level: 1
-persona: "Independent Consultants, Freelancers, Email Marketing Specialists"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Success Center

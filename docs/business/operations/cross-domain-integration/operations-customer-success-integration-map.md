@@ -2,8 +2,8 @@
 title: "Operations-Customer Success Integration Map"
 description: "Comprehensive integration framework for operations coordination with customer success processes, customer health monitoring, retention automation, and expansion coordination"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations-Customer Success Integration Map

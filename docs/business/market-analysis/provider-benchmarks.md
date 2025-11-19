@@ -2,6 +2,8 @@
 title: "Provider Benchmarks - Email Service Provider Detailed Pricing Analysis"
 description: "Comprehensive ESP pricing analysis with CPM calculations, overage pricing, and provider recommendation matrix"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Provider Benchmarks: Email Service Provider Detailed Pricing Analysis

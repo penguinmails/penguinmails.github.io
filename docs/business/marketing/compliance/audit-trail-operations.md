@@ -2,10 +2,9 @@
 title: "Marketing Operations Audit Trail Framework: MVP vs Post-MVP Roadmap"
 description: "Audit trail framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Weekly monitoring, manual processes, basic reporting | **Post-MVP**: Real-time analytics, ML detection, automated compliance"
 last_modified_date: "2025-11-17"
-level: 3
-persona: "CMO, Marketing Directors, Compliance Officers, Audit Teams"
-redirect_from:
-  - "/docs/business/marketing/compliance/audit-trail-operations.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Operations Audit Trail Framework: MVP vs Post-MVP Roadmap

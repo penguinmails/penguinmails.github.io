@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Executive Reporting Framework for Business Leaders
 
 ## Overview

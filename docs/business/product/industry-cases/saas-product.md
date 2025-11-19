@@ -2,8 +2,8 @@
 title: "SaaS Product Framework"
 description: "Industry-specific product development strategies for SaaS organizations with product-led growth and engagement focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # SaaS Product Framework

@@ -2,8 +2,8 @@
 title: "Product ROI and Business Impact Dashboard: Financial Performance and Value Attribution"
 description: "Comprehensive product ROI and business impact dashboard for financial performance tracking, value attribution, and strategic business optimization"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Product ROI and Business Impact Dashboard: Financial Performance and Value Attribution

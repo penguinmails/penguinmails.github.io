@@ -1,10 +1,13 @@
 ---
-layout: default
-title: Developer-Product Integration Map
-nav_order: 3
-parent: Developer Cross-Domain Integration
-grand_parent: Cross-Domain Integration
-has_children: false
+title: "Developer-Product Integration Map"
+grand_parent: "Cross-Domain Integration"
+has_children: "false"
+last_modified_date: "2025-11-19"
+layout: "default"
+level: "2"
+nav_order: "3"
+parent: "Developer Cross-Domain Integration"
+persona: "Documentation Users"
 ---
 
 # Developer-Product Integration Map

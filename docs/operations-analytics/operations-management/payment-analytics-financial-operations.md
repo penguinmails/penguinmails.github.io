@@ -1,7 +1,9 @@
 ---
-last_modified_date: "2025-10-28"
 title: "Payment Analytics & Financial Operations"
 description: "Comprehensive payment analytics and financial operations for enterprise-grade billing, revenue tracking, and Stripe Connect integration"
+last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Payment Analytics & Financial Operations

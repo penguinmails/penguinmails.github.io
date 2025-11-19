@@ -2,6 +2,8 @@
 title: "Performance Benchmarks - Industry Performance Data and Optimization"
 description: "Comprehensive B2B email performance benchmarks, deliverability analysis, and optimization strategies across industry segments"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Performance Benchmarks: Industry Performance Data and Optimization

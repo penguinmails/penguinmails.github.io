@@ -2,10 +2,9 @@
 title: "Marketing Executive Requirements: MVP vs Post-MVP Roadmap"
 description: "Executive stakeholder requirements with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic reporting, 48-hour decisions, directional analytics | **Post-MVP**: Real-time monitoring, automated optimization, <5 second latency"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "CMO, Marketing Directors, Marketing Operations, Executive Team"
-redirect_from:
-  - "/docs/business/marketing/executive/requirements.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Executive Requirements: MVP vs Post-MVP Roadmap

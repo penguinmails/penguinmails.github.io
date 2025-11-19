@@ -2,6 +2,8 @@
 title: "Compliance Implementation - Technical Implementation Summary"
 description: "Technical implementation summary for compliance systems and processes"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Implementation - Technical Implementation Summary

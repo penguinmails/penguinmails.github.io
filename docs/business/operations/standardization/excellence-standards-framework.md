@@ -2,6 +2,8 @@
 title: "Operations Excellence Standards Framework"
 description: "Phase 6 implementation providing comprehensive enterprise-grade operations excellence standards, continuous improvement frameworks, operations governance and compliance automation, and innovation pipeline automation for Operations Teams"
 last_modified_date: "2025-11-16"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Excellence Standards Framework

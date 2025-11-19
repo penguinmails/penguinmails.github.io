@@ -2,8 +2,8 @@
 title: "Compliance Checklists"
 description: "Confidentiality agreements, quality assurance reviews, and compliance verification templates"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Operations Coordinators, Compliance Officers, Project Managers"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Checklists

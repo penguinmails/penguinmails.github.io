@@ -2,6 +2,8 @@
 title: "Incident Response Operations"
 description: "Comprehensive incident response framework for security incidents, system outages, and operational disruptions with structured classification and recovery procedures"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Incident Response Operations

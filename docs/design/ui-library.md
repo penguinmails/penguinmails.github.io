@@ -1,6 +1,9 @@
 ---
-title: UI Library
+title: "UI Library"
 description: "Component usage guidelines and implementation patterns for PenguinMails"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # UI Library Guide

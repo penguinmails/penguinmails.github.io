@@ -2,8 +2,8 @@
 title: "Customer Success Executive Dashboard Framework: Unified Cross-Domain Visibility"
 description: "Comprehensive executive dashboard framework for customer success performance, cross-domain integration, and strategic decision support"
 last_modified_date: "2025-11-16"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Executive Dashboard Framework: Unified Cross-Domain Visibility

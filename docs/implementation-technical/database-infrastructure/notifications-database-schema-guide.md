@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Notifications & System Events Database Schema Guide
 
 This guide defines the canonical schema and responsibilities for the dedicated Notifications & System Events database.

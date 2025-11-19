@@ -2,8 +2,8 @@
 title: "Executive Roadmap: Strategic Feature Delivery Timeline"
 description: "High-level executive view of feature development with investment requirements and business impact timeline"
 last_modified_date: "2025-11-17"
-level: 1
-persona: "Executives"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Executive Roadmap: Strategic Feature Delivery Timeline

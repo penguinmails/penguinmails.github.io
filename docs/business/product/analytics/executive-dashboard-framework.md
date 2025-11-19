@@ -2,8 +2,8 @@
 title: "Product Executive Dashboard Framework: Unified Cross-Domain Performance Visibility"
 description: "Comprehensive executive dashboard framework for product performance, cross-domain integration, and strategic decision support"
 last_modified_date: "2025-11-16"
-level: 1
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Product Executive Dashboard Framework: Unified Cross-Domain Performance Visibility

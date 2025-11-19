@@ -2,8 +2,8 @@
 title: "Email Processing Pipeline Flow"
 description: "Complete email flow from client creation through queue processing to database state updates"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Email Processing Pipeline Flow

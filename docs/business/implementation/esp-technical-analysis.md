@@ -2,6 +2,8 @@
 title: "ESP Technical Analysis - Strategic Provider Assessment"
 description: "Strategic ESP provider analysis, performance comparison, and implementation requirements"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # ESP Technical Analysis - Strategic Provider Assessment

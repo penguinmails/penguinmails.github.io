@@ -2,6 +2,8 @@
 title: "Analytics Overview"
 description: "Transform cold email into a predictable revenue channel with comprehensive analytics and directional insights"
 last_modified_date: "2025-11-17"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Optimize Campaigns for Maximum ROI with Comprehensive Analytics

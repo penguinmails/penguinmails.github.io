@@ -2,8 +2,8 @@
 title: "Healthcare Operations Framework"
 description: "Industry-specific operational strategies for healthcare organizations with HIPAA compliance, patient safety, and clinical workflow integration"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Healthcare Operations Framework

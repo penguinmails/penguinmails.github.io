@@ -2,6 +2,8 @@
 title: "Compliance Framework - Complete Technical Compliance Analysis"
 description: "Comprehensive technical compliance framework covering GDPR, CCPA, CAN-SPAM, and email-specific compliance requirements"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Framework: Complete Technical Compliance Analysis

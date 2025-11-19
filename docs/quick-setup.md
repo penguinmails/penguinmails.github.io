@@ -1,6 +1,9 @@
 ---
 title: "Implementation & Quick Setup Guide"
 description: "Get started in 5 minutes, achieve 95% inbox placement in 21 days with comprehensive implementation process"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Transform Your Cold Email in 30 Days or Less

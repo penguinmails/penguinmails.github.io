@@ -2,6 +2,8 @@
 title: "Unified Inbox Overview"
 description: "Manage all your cold email responses in one centralized inbox"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Command Center for All Your Cold Email Responses

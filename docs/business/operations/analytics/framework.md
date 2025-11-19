@@ -2,6 +2,8 @@
 title: "Operations Analytics Framework"
 description: "Phase 1 implementation providing comprehensive operational performance analytics, security monitoring analytics, compliance tracking, and incident analysis frameworks for Operations Teams"
 last_modified_date: "2025-11-16"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Analytics Framework

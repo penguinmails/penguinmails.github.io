@@ -2,10 +2,9 @@
 title: "Marketing Strategy Overview: Executive Framework"
 description: "Executive overview for CMO and marketing leadership - **MVP Scope**: Basic marketing analytics and third-party tool integration for 2025 | **Post-MVP**: Advanced AI marketing automation and predictive analytics for 2026+"
 last_modified_date: "2025-11-19"
-level: 1
-persona: "CMO, Marketing Directors, Marketing Strategy Teams"
-redirect_from:
-  - "/business/marketing/strategy/overview.html"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Strategy Overview: Executive Framework

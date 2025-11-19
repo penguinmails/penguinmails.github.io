@@ -1,6 +1,9 @@
 ---
-title: Design Tokens
+title: "Design Tokens"
 description: "Complete design token specifications for PenguinMails"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Design Tokens

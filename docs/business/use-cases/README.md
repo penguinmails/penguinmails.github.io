@@ -1,6 +1,9 @@
 ---
 title: "Use Cases"
 description: "Real-world examples and implementation scenarios for PenguinMails"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Use Cases

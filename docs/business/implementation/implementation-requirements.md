@@ -2,6 +2,8 @@
 title: "Implementation Requirements - Server Configuration and Setup"
 description: "Technical server configuration, implementation requirements, and operational management procedures"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Implementation Requirements - Server Configuration and Setup

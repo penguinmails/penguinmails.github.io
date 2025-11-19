@@ -2,8 +2,8 @@
 title: "Product Process Standardization Framework"
 description: "Phase 6A implementation providing consistent product development process standards, quality assurance protocols, and governance frameworks for Product Teams operations"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Product Process Standardization Framework

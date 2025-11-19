@@ -2,8 +2,8 @@
 title: "Operations-Finance Integration Map"
 description: "Comprehensive integration framework for operations coordination with financial processes, budgeting, cost optimization, revenue recognition, and financial reporting"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations-Finance Integration Map

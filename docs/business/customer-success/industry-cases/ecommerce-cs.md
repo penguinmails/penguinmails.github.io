@@ -2,8 +2,8 @@
 title: "E-commerce Customer Success Framework"
 description: "Industry-specific customer success strategies for e-commerce organizations with scale management and customer lifecycle optimization"
 last_modified_date: "2025-11-15"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # E-commerce Customer Success Framework

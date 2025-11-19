@@ -1,6 +1,9 @@
 ---
-title: Accessibility Guidelines
+title: "Accessibility Guidelines"
 description: "WCAG 2.1 AA compliance and inclusive design standards for PenguinMails"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Accessibility Guidelines

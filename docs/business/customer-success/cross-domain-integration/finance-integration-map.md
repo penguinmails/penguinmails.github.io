@@ -1,9 +1,9 @@
 ---
-title: Customer Success - Finance Systems Integration Map
-description: Comprehensive CS-Finance integration covering revenue attribution, ROI measurement, forecasting alignment
+title: "Customer Success - Finance Systems Integration Map"
+description: "Comprehensive CS-Finance integration covering revenue attribution, ROI measurement, forecasting alignment"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success - Finance Systems Integration Map

@@ -2,6 +2,8 @@
 title: "Central SMTP Operations REST API Contract"
 description: "Internal REST API contract for managing shared SMTP infrastructure: IPs, pools, routing, and reputation for PenguinMails operations."
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Central SMTP Operations REST API Contract
@@ -23,7 +25,7 @@ Strictly aligned with:
   - `../database-infrastructure/oltp-mermaid-er.md`
   - `../database-infrastructure/notifications-mermaid-er.md`
 - Executive security & audit requirements (BF-004)
-- Executive ) via read-only consumption of these resources by the Executive API
+- Executive via read-only consumption of these resources by the Executive API
 
 All endpoints are:
 
@@ -80,7 +82,7 @@ Response:
     }
   ]
 }
-```markdown
+```
 
 ### 2.2 Get Single IP
 
@@ -128,7 +130,7 @@ Response:
     }
   ]
 }
-```markdown
+```
 
 ### 3.2 Get Pool Details
 
@@ -174,7 +176,7 @@ Body (example):
   "mode": "primary",
   "notes": "Manual override due to dedicated pool saturation"
 }
-```markdown
+```
 
 Constraints:
 
@@ -198,8 +200,9 @@ Returns aggregate health across all IPs/pools for internal dashboards.
 GET `/api/v1/admin/smtp/pools/reputation?window=7d`
 
 Used by:
+
 - Internal deliverability dashboards
-- Executive cost)
+- Executive cost
 
 ## 6. Error Handling
 
@@ -234,5 +237,5 @@ Additional constraints:
   - Consumes aggregated data derived from central ops + BI views.
   - Never exposes raw IP assignment details.
 - Queue & Events API:
+
   - Emits events (e.g., `smtp.ip.reputation_changed`, `smtp.pool.updated`) for downstream analytics and alerts.
----

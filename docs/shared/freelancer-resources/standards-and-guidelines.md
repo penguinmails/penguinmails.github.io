@@ -2,8 +2,8 @@
 title: "Shared Freelancer Standards and Guidelines"
 description: "Common professional standards, quality metrics, and communication protocols for freelancer operations"
 last_modified_date: "2025-11-19"
-level: 1
-persona: "Operations Managers, Freelancers, Quality Assurance Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Shared Freelancer Standards and Guidelines

@@ -1,6 +1,9 @@
 ---
 title: "Analytics Architecture"
 description: "Comprehensive analytics system design and implementation guide"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Analytics Architecture Documentation

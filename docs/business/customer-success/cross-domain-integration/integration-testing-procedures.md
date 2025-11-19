@@ -2,8 +2,8 @@
 title: "Customer Success Cross-Domain Integration Testing Procedures"
 description: "Comprehensive end-to-end testing procedures for customer success integration with Marketing, Sales, Product, Finance, and Operations domains including test scenarios, validation checklists, and success criteria"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Cross-Domain Integration Testing Procedures

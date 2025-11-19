@@ -2,6 +2,8 @@
 title: "ESP Integration Implementation - Technical Details"
 description: "TypeScript implementation details for Email Service Provider integration and management"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # ESP Integration Implementation - Technical Details

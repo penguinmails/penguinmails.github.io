@@ -2,8 +2,8 @@
 title: "Customer Success Strategy Overview"
 description: "Executive overview of customer success strategy for retention optimization, expansion management, and customer lifetime value enhancement"
 last_modified_date: "2025-11-15"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Strategy Overview

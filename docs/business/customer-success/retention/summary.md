@@ -2,8 +2,8 @@
 title: "Customer Retention Strategies Summary"
 description: "Executive summary of customer retention strategies, churn prevention tactics, and revenue protection methodologies"
 last_modified_date: "2025-11-15"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Retention Strategies Summary

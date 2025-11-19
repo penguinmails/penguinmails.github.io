@@ -2,8 +2,8 @@
 title: "Healthcare Customer Success Framework"
 description: "Industry-specific customer success strategies for healthcare organizations with HIPAA compliance and patient outcome focus"
 last_modified_date: "2025-11-15"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Healthcare Customer Success Framework

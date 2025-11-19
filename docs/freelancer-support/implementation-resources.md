@@ -2,8 +2,8 @@
 title: "Freelancer Implementation Resources"
 description: "Practical tools, templates, and resources for building successful email marketing consulting practices"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Independent Consultants, Freelancers, Implementation Specialists"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Implementation Resources

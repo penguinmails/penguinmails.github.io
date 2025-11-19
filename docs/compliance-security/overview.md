@@ -1,9 +1,11 @@
 ---
 title: "Compliance & Security Overview"
 description: "Comprehensive security and compliance framework for enterprise-grade data protection and regulatory adherence"
-nav_order: 2
-nav_exclude: false
 last_modified_date: "2025-11-10"
+level: "2"
+nav_exclude: "false"
+nav_order: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance & Security Overview

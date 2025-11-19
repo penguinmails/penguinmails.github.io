@@ -2,6 +2,8 @@
 title: "Financial Analysis Benchmarks - Strategic Planning Framework"
 description: "Strategic financial benchmarks for business leaders with process-driven analysis aligned with backbone constraints"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Financial Analysis Benchmarks - Strategic Planning Framework

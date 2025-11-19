@@ -2,8 +2,8 @@
 title: "Customer Success Operations Framework"
 description: "Operational framework for customer success team management, process optimization, and customer success delivery"
 last_modified_date: "2025-11-15"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Operations Framework

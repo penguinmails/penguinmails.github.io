@@ -2,8 +2,8 @@
 title: "Freelancer Agreement Templates and Implementation Procedures"
 description: "Ready-to-use freelancer agreement templates, forms, and implementation procedures"
 last_modified_date: "2025-11-19"
-level: 3
-persona: "Operations Coordinators, HR Representatives, Project Managers"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Freelancer Agreement Templates and Implementation Procedures

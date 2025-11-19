@@ -2,8 +2,8 @@
 title: "Standardization Framework Documentation"
 description: "Phase 6 implementation providing consistent business process documentation standards, quality assurance protocols, and governance frameworks for Customer Success operations"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Standardization Framework Documentation

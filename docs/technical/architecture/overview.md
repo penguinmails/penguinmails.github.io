@@ -1,9 +1,11 @@
 ---
 title: "High-Level Architecture Overview"
-nav_order: 1
-nav_exclude: false
 description: "System design and technical overview for decision makers and technical teams"
 last_modified_date: "2025-11-10"
+level: "2"
+nav_exclude: "false"
+nav_order: "1"
+persona: "Documentation Users"
 ---
 
 # High-Level Architecture Overview

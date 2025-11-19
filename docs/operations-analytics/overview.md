@@ -2,6 +2,8 @@
 title: "Strategic Analytics Oversight for Business Leaders"
 description: "Executive-focused analytics intelligence and strategic performance insights for business leaders overseeing email infrastructure analytics and monitoring"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Strategic Analytics Oversight for Business Leaders

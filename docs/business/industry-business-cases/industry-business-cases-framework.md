@@ -2,6 +2,8 @@
 title: "Industry-Specific Business Cases Structure"
 description: "Framework for industry-specific business cases and ROI analysis for regulated and specialized verticals"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Industry-Specific Business Cases Structure

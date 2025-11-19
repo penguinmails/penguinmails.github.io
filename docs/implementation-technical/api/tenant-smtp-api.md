@@ -2,6 +2,8 @@
 title: "Tenant SMTP REST API Contract"
 description: "REST API contract for tenant-scoped SMTP configuration, verification, and deliverability metrics."
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Tenant SMTP REST API Contract

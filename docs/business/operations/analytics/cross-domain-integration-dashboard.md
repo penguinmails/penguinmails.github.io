@@ -2,7 +2,8 @@
 title: "Operations Cross-Domain Integration Performance Dashboard: Unified Business Integration Analytics"
 description: "Comprehensive cross-domain integration performance dashboard for unified business analytics, coordination tracking, and strategic optimization"
 last_modified_date: "2025-11-16"
-level: 2
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Cross-Domain Integration Performance Dashboard: Unified Business Integration Analytics

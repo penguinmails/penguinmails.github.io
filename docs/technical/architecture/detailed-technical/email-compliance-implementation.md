@@ -2,6 +2,8 @@
 title: "Email Compliance Implementation - Technical Details"
 description: "TypeScript implementation details for email compliance systems and data subject rights"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Email Compliance Implementation - Technical Details

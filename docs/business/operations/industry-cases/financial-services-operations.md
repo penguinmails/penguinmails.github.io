@@ -2,8 +2,8 @@
 title: "Financial Services Operations Framework"
 description: "Industry-specific operational strategies for financial services organizations with SOX compliance, PCI-DSS requirements, and banking regulation adherence"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Operations Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Financial Services Operations Framework

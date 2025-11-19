@@ -1,9 +1,9 @@
 ---
-title: Customer Success - Product Systems Integration Map
-description: Comprehensive CS-Product integration covering adoption tracking, feedback loops, roadmap influence
+title: "Customer Success - Product Systems Integration Map"
+description: "Comprehensive CS-Product integration covering adoption tracking, feedback loops, roadmap influence"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success - Product Systems Integration Map

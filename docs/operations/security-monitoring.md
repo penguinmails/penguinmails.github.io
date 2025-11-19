@@ -2,7 +2,7 @@
 title: "Security Monitoring Framework"
 description: "Documentation for Security Monitoring Framework - Security Monitoring"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

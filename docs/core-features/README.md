@@ -1,9 +1,11 @@
 ---
 title: "Core Features"
 description: "Detailed guides for PenguinMails core functionality with progressive complexity"
-nav_order: 3
-nav_exclude: false
 last_modified_date: "2025-11-10"
+level: "2"
+nav_exclude: "false"
+nav_order: "3"
+persona: "Documentation Users"
 ---
 
 # Core Features

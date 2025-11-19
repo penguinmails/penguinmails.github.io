@@ -2,6 +2,8 @@
 title: "Detailed Methodology - Complete Analysis Framework"
 description: "Comprehensive research methodology, data collection framework, and analytical approach for email infrastructure cost analysis"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Detailed Methodology: Complete Analysis Framework

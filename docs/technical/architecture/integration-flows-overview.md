@@ -2,8 +2,8 @@
 title: "Architecture Integration Flows Overview"
 description: "Complete guide to all system integration flows and how architectural components work together"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Architecture Integration Flows Overview

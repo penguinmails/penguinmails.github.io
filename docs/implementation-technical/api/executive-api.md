@@ -2,6 +2,8 @@
 title: "Executive REST API Contract - Central System Operations"
 description: "REST API contract for executive dashboards and central system operations with backbone-aligned data access for all users and operations"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Executive REST API Contract - Central System Operations

@@ -2,7 +2,7 @@
 title: "Database Schema Guide – 5-Tier Architecture"
 description: "Documentation for Database Schema Guide – 5-Tier Architecture - Database Schema Guide"
 last_modified_date: "2025-11-17"
-level: 2
+level: "2"
 persona: "Documentation Users"
 ---
 

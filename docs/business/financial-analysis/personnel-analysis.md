@@ -1,8 +1,9 @@
 ---
 title: "Personnel Analysis - Team Structure and Email Operations Costs"
-
 description: "Comprehensive team structure analysis, role definitions, and FTE requirements for email operations at different scales"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Personnel Analysis: Team Structure and Email Operations Costs

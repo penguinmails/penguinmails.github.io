@@ -2,6 +2,8 @@
 title: "Provider Performance Analysis - ESP Comparison"
 description: "ESP-specific performance analysis, deliverability comparison, and provider optimization strategies"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Provider Performance Analysis - ESP Comparison

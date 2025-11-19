@@ -2,6 +2,8 @@
 title: "Inbox Rotation Overview"
 description: "Smart inbox rotation to avoid detection and maximize deliverability"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Smart Inbox Rotation for Sustainable Deliverability

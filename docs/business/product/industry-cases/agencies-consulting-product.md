@@ -2,8 +2,8 @@
 title: "Agencies & Consulting Product Framework"
 description: "Industry-specific product development strategies for agencies and consulting organizations with project-based development focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Agencies & Consulting Product Framework

@@ -2,10 +2,9 @@
 title: "Marketing Performance Dashboard Framework: MVP vs Post-MVP Roadmap"
 description: "Marketing performance dashboard framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic dashboard visibility, directional analytics, weekly reporting | **Post-MVP**: Real-time monitoring, AI analytics, automated optimization"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Marketing Directors, Performance Analysts, Campaign Managers"
-redirect_from:
-  - "/docs/business/marketing/analytics/performance-dashboard-framework.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # Marketing Performance Dashboard Framework: MVP vs Post-MVP Roadmap

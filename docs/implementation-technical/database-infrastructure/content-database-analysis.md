@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Content Database Architecture: Analysis, Gotchas, and Proposals
 
 This document analyzes the current Content DB design (as described in `docs/implementation-technical/database-infrastructure) and provides a pragmatic, implementation-ready refinement that aligns with:

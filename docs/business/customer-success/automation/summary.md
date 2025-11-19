@@ -2,8 +2,8 @@
 title: "Customer Success Automation Summary"
 description: "Executive summary of customer success automation strategies, process automation, and operational efficiency optimization"
 last_modified_date: "2025-11-16"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Automation Summary

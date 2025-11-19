@@ -2,8 +2,8 @@
 title: "Customer Success Automation Framework: Intelligent Workflow Orchestration"
 description: "Comprehensive automation framework for customer success processes including health monitoring, workflow automation, communication orchestration, and cross-domain integration"
 last_modified_date: "2025-11-16"
-level: 2
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success Automation Framework: Intelligent Workflow Orchestration

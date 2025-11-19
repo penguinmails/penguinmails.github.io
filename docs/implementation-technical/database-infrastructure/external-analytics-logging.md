@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # External Analytics and Logging Integration
 
 This document defines how high-volume events, observability data, and exploratory analytics are handled outside the OLAP warehouse. It generalizes the approach so the backend can use PostHog or any equivalent product analytics / logging / observability stack.

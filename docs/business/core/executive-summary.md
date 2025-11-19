@@ -2,6 +2,8 @@
 title: "Executive Summary - Business Leaders Strategic Oversight"
 description: "Strategic oversight framework for CFOs, VPs, and Budget Owners focusing on revenue protection, cost optimization, and directional insights"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Executive Summary: Business Leaders Strategic Oversight

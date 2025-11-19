@@ -2,6 +2,8 @@
 title: "Infrastructure Overview - Strategic Technical Planning"
 description: "Strategic infrastructure planning with VPS specifications, ESP selection, and technical architecture decisions"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Infrastructure Overview - Strategic Technical Planning

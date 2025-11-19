@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # Content Database ER Diagram (Mermaid)
 
 This diagram represents the canonical Content DB schema corresponding to:

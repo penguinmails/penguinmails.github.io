@@ -2,6 +2,8 @@
 title: "Operations Adoption Framework"
 description: "Phase 1 implementation providing comprehensive security tool adoption, compliance procedure adoption, operational procedure adoption, and performance optimization adoption frameworks for Operations Teams"
 last_modified_date: "2025-11-16"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Operations Adoption Framework

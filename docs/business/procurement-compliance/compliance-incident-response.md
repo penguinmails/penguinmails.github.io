@@ -2,6 +2,8 @@
 title: "Compliance Incident Response - Strategic Risk Management"
 description: "Strategic incident response procedures for compliance violations and data breaches"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance Incident Response - Strategic Risk Management

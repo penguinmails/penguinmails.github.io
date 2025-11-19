@@ -1,10 +1,13 @@
 ---
-layout: default
-title: Executive Developer Dashboard Framework
-nav_order: 1
-parent: Developer Executive Dashboards and Analytics
-grand_parent: Executive Dashboards and Analytics
-has_children: false
+title: "Executive Developer Dashboard Framework"
+grand_parent: "Executive Dashboards and Analytics"
+has_children: "false"
+last_modified_date: "2025-11-19"
+layout: "default"
+level: "2"
+nav_order: "1"
+parent: "Developer Executive Dashboards and Analytics"
+persona: "Documentation Users"
 ---
 
 # Executive Developer Dashboard Framework

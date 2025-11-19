@@ -2,10 +2,9 @@
 title: "SaaS Marketing Framework: MVP vs Post-MVP Roadmap"
 description: "SaaS marketing framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic analytics, manual processes, 10% growth | **Post-MVP**: Advanced analytics, optimization, 15% growth"
 last_modified_date: "2025-11-17"
-level: 3
-persona: "SaaS Marketing Directors, Growth Marketers, Customer Success Teams"
-redirect_from:
-  - "/docs/business/marketing/industry-cases/saas-marketing.md"
+level: "2"
+persona: "Documentation Users"
+redirect_from: ""
 ---
 
 # SaaS Marketing Framework: MVP vs Post-MVP Roadmap

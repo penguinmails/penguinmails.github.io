@@ -2,6 +2,8 @@
 title: "Detailed Security Framework - Technical Implementation"
 description: "Comprehensive security framework with technical controls, implementation details, and audit procedures"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Detailed Security Framework: Technical Implementation

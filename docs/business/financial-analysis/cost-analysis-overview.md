@@ -2,6 +2,8 @@
 title: "Cost Analysis Overview - Strategic Compliance Investment"
 description: "Strategic compliance investment analysis with regulatory risk assessment and ROI framework"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Cost Analysis Overview - Strategic Compliance Investment

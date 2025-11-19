@@ -2,8 +2,8 @@
 title: "Financial Services Product Framework"
 description: "Industry-specific product development strategies for financial services organizations with compliance and risk management focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Financial Services Product Framework

@@ -2,6 +2,8 @@
 title: "Data Privacy Policy"
 description: "Comprehensive data privacy policy for PenguinMails covering GDPR, CCPA, and international data protection compliance"
 last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Data Privacy Policy

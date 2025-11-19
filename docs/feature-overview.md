@@ -1,6 +1,9 @@
 ---
 title: "Features & Capabilities Overview"
 description: "Navigate PenguinMails platform features and capabilities with comprehensive feature matrix and ROI analysis"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Features & Capabilities Overview

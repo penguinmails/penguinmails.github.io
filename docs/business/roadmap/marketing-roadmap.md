@@ -2,8 +2,8 @@
 title: "Marketing Roadmap: Feature Promises & Hype Marketing"
 description: "Marketing-focused view of features for sales promises, customer communication, and hype marketing"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Marketing Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Marketing Roadmap: Feature Promises & Hype Marketing

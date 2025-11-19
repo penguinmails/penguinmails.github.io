@@ -2,8 +2,8 @@
 title: "Customer Journey Management Summary"
 description: "Executive summary of customer journey management strategies, lifecycle optimization, and customer experience enhancement"
 last_modified_date: "2025-11-15"
-level: 1
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Journey Management Summary

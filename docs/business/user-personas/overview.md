@@ -2,6 +2,8 @@
 title: "User Personas"
 description: "Key user personas for PenguinMails based on extensive research, targeting agency owners, startup founders, and enterprise decision makers"
 last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # User Personas

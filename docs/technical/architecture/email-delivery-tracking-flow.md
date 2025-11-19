@@ -2,8 +2,8 @@
 title: "Email Delivery and Tracking Flow"
 description: "End-to-end email lifecycle with delivery tracking, opens, clicks, replies, and bounces"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Email Delivery and Tracking Flow

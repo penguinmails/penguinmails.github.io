@@ -2,6 +2,8 @@
 title: "Metrics & KPIs Framework"
 description: "Comprehensive metrics and KPIs framework for enterprise-grade performance monitoring, business intelligence, and strategic decision-making"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Metrics & KPIs Framework

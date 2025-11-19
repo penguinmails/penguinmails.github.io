@@ -1,7 +1,9 @@
 ---
-last_modified_date: "2025-10-28"
 title: "Growth Analytics & Performance Metrics"
 description: "Comprehensive growth analytics and performance metrics for enterprise-grade acquisition tracking, market expansion, and sustainable scaling"
+last_modified_date: "2025-10-28"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Growth Analytics & Performance Metrics

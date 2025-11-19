@@ -1,9 +1,9 @@
 ---
-title: Customer Success - Operations Systems Integration Map
-description: Comprehensive CS-Operations integration covering process automation, resource coordination, performance optimization
+title: "Customer Success - Operations Systems Integration Map"
+description: "Comprehensive CS-Operations integration covering process automation, resource coordination, performance optimization"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Customer Success Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Customer Success - Operations Systems Integration Map

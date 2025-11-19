@@ -2,8 +2,8 @@
 title: "Healthcare Product Framework"
 description: "Industry-specific product development strategies for healthcare organizations with HIPAA compliance and patient outcome focus"
 last_modified_date: "2025-11-16"
-level: 3
-persona: "Product Teams"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Healthcare Product Framework

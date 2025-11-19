@@ -2,8 +2,8 @@
 title: "Real-Time Analytics Pipeline Flow"
 description: "Event processing pipeline from email events through machine learning to business intelligence"
 last_modified_date: "2025-11-17"
-level: 2
-persona: "Technical Users"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Real-Time Analytics Pipeline Flow

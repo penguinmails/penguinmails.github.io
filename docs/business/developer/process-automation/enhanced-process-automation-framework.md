@@ -1,10 +1,13 @@
 ---
-layout: default
-title: Enhanced Process Automation Framework
-nav_order: 1
-parent: Developer Process Automation and Standardization
-grand_parent: Process Automation and Standardization
-has_children: false
+title: "Enhanced Process Automation Framework"
+grand_parent: "Process Automation and Standardization"
+has_children: "false"
+last_modified_date: "2025-11-19"
+layout: "default"
+level: "2"
+nav_order: "1"
+parent: "Developer Process Automation and Standardization"
+persona: "Documentation Users"
 ---
 
 # Enhanced Process Automation Framework

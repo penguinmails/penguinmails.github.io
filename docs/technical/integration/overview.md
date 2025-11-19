@@ -1,6 +1,9 @@
 ---
 title: "Integration & API Overview"
 description: "Complete API documentation and third-party integration guides for developers and integrators"
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Integration & API Overview

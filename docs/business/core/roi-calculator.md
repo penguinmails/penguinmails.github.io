@@ -2,6 +2,8 @@
 title: "ROI Calculator - Executive Summary"
 description: "Quick cost-benefit analysis tool for email infrastructure investment decisions"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # ROI Calculator: Email Infrastructure Cost-Benefit Analysis
@@ -38,13 +40,14 @@ graph TD
     style I fill:#e8f5e8
     style J fill:#f3e5f5
     style K fill:#f3e5f5
-```markdown
+```
 
 ### Current State vs. Optimized Infrastructure
 
 **Enter your current metrics below to calculate potential savings:**
 
 #### Input Variables
+
 - **Monthly Email Volume**: [10K / 100K / 1M+]
 - **Current Deliverability Rate**: [60% / 80% / 90% / 95%]
 - **Industry/Vertical**: [SaaS / IT Services / Agency / Professional Services / General B2B]
@@ -81,30 +84,27 @@ graph TD
 ## 💰 Output Calculations
 
 ### Current Monthly Cost
-```markdown
-Base Infrastructure Cost: $________
-Monitoring & Tools: $________
-Personnel (time × $100): $________
-Compliance & Security: $________
-TOTAL CURRENT: $________
-```markdown
+
+**Base Infrastructure Cost:** $________
+**Monitoring & Tools:** $________
+**Personnel (time × $100):** $________
+**Compliance & Security:** $________
+**TOTAL CURRENT:** $________
 
 ### Alternative Monthly Cost
-```markdown
-Managed ESP Plan: $________
-Additional Tools: $________
-Reduced Personnel: $________
-Compliance (built-in): $________
-TOTAL ALTERNATIVE: $________
-```markdown
+
+**Managed ESP Plan:** $________
+**Additional Tools:** $________
+**Reduced Personnel:** $________
+**Compliance (built-in):** $________
+**TOTAL ALTERNATIVE:** $________
 
 ### ROI Analysis
-```markdown
-Annual Cost Difference: $________
-ROI Percentage: _______%
-Payback Period: _____ months
-3-Year Net Benefit: $________
-```markdown
+
+**Annual Cost Difference:** $________
+**ROI Percentage:** _______%
+**Payback Period:** _____ months
+**3-Year Net Benefit:** $________
 
 ---
 
@@ -128,6 +128,7 @@ Payback Period: _____ months
 ## 🎯 Executive Decision Framework
 
 ### When to Choose Managed ESPs
+
 - ✅ Volume < 1M emails/month
 - ✅ Deliverability is business critical
 - ✅ No dedicated DevOps team
@@ -135,6 +136,7 @@ Payback Period: _____ months
 - ✅ Want predictable costs and support
 
 ### When to Consider Self-Hosted
+
 - ⚠️ Volume > 10M emails/month
 - ⚠️ Have 4-6+ email infrastructure engineers
 - ⚠️ Email is core product (not just marketing)
@@ -156,6 +158,7 @@ Payback Period: _____ months
 ## 🎲 Scenario Planning Summary
 
 ### Best Case Scenario (Optimized)
+
 - **Deliverability**: 95%
 - **Provider**: Managed ESP
 - **Annual Savings**: $40,000-$57,600
@@ -163,6 +166,7 @@ Payback Period: _____ months
 - **Payback**: 2-3 months
 
 ### Realistic Scenario (Average)
+
 - **Deliverability**: 80-90%
 - **Provider**: Managed ESP
 - **Annual Savings**: $15,000-$30,000
@@ -174,14 +178,17 @@ Payback Period: _____ months
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
+
 - [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
+
 - [📊 Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
 - [🏗️ Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
 - [🏆 Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
+
 - [🔧 Technical Infrastructure](/docs/business/implementation) - Technical specifications
 - [📋 Performance Benchmarks](/docs/business/performance) - Industry data and metrics
 

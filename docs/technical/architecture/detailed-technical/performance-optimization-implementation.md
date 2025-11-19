@@ -2,6 +2,8 @@
 title: "Performance Optimization Implementation - Technical Details"
 description: "TypeScript implementation details for email performance optimization and A/B testing"
 last_modified_date: "2025-12-19"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Performance Optimization Implementation - Technical Details

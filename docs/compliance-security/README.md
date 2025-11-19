@@ -2,6 +2,8 @@
 title: "Compliance & Security"
 description: "Comprehensive compliance and security documentation for PenguinMails"
 last_modified_date: "2025-11-10"
+level: "2"
+persona: "Documentation Users"
 ---
 
 # Compliance & Security

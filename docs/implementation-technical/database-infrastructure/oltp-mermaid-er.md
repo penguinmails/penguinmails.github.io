@@ -1,3 +1,8 @@
+---
+last_modified_date: "2025-11-19"
+level: "2"
+persona: "Documentation Users"
+---
 # OLTP ER Diagram (Mermaid)
 
 This diagram reflects the current OLTP schema defined in [`docs/implementation-technical/database-infrastructure/oltp-schema-guide`](docs/implementation-technical/database-infrastructure).
