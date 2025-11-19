@@ -1,3 +1,11 @@
+---
+title: "BILL-3.1: Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)"
+description: "Documentation for BILL-3.1: Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe) - BILL 3.1 Create Webhook Handler"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-3.1: Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)
 
 **Ticket ID:** BILL-3.1  

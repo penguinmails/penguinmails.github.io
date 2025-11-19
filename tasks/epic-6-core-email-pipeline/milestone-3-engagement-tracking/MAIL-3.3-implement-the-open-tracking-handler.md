@@ -1,3 +1,11 @@
+---
+title: "MAIL-3.3: Implement the Open Tracking Handler"
+description: "Documentation for MAIL-3.3: Implement the Open Tracking Handler - MAIL 3.3 Implement The Open Tracking Handler"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-3.3: Implement the Open Tracking Handler
 
 **Ticket ID:** MAIL-3.3  

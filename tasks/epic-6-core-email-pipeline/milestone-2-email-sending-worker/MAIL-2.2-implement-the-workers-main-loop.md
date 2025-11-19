@@ -1,3 +1,11 @@
+---
+title: "MAIL-2.2: Implement the Worker's Main Loop"
+description: "Documentation for MAIL-2.2: Implement the Worker's Main Loop - MAIL 2.2 Implement The Workers Main Loop"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-2.2: Implement the Worker's Main Loop
 
 **Ticket ID:** MAIL-2.2  

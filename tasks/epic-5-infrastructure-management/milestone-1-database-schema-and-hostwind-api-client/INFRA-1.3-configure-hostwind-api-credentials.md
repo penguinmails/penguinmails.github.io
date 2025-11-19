@@ -1,3 +1,11 @@
+---
+title: "INFRA-1.3: Configure Hostwind API Credentials"
+description: "Documentation for INFRA-1.3: Configure Hostwind API Credentials - INFRA 1.3 Configure Hostwind Api Credentials"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # INFRA-1.3: Configure Hostwind API Credentials
 
 **Ticket ID:** INFRA-1.3  

@@ -1,3 +1,11 @@
+---
+title: "PenguinMails Development Tasks"
+description: "Documentation for PenguinMails Development Tasks - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # PenguinMails Development Tasks
 
 This directory contains all development tasks, tickets, and epics for the PenguinMails project.

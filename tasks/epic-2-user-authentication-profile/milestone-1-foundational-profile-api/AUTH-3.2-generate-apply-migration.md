@@ -1,3 +1,11 @@
+---
+title: "AUTH-3.2: Generate and Apply user_preferences Migration"
+description: "Documentation for AUTH-3.2: Generate and Apply user_preferences Migration - AUTH 3.2 Generate Apply Migration"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # AUTH-3.2: Generate and Apply user_preferences Migration
 
 **Ticket ID:** AUTH-3.2  

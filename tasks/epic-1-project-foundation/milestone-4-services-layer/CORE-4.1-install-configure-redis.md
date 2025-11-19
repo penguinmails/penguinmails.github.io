@@ -1,3 +1,11 @@
+---
+title: "CORE-4.1: Install Redis Client and Configure Connection"
+description: "Documentation for CORE-4.1: Install Redis Client and Configure Connection - CORE 4.1 Install Configure Redis"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-4.1: Install Redis Client and Configure Connection
 
 **Ticket ID:** CORE-4.1  

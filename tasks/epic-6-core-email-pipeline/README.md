@@ -1,3 +1,11 @@
+---
+title: "Epic 6: Core Email Sending & Processing Pipeline"
+description: "Documentation for Epic 6: Core Email Sending & Processing Pipeline - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Epic 6: Core Email Sending & Processing Pipeline
 
 **Last Updated:** November 11, 2025  

@@ -1,3 +1,11 @@
+---
+title: "AUTH-3.5: Create API Endpoint to Update User Profile (PATCH /api/users/me)"
+description: "Documentation for AUTH-3.5: Create API Endpoint to Update User Profile (PATCH /api/users/me) - AUTH 3.5 Create Update Profile Endpoint"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # AUTH-3.5: Create API Endpoint to Update User Profile (PATCH /api/users/me)
 
 **Ticket ID:** AUTH-3.5  

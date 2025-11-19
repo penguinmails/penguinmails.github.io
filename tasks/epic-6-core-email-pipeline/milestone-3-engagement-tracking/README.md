@@ -1,3 +1,11 @@
+---
+title: "Milestone 3 — Engagement Tracking"
+description: "Documentation for Milestone 3 — Engagement Tracking - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 3 — Engagement Tracking
 
 **Goal:** Build a high-performance webhook to capture opens and clicks and queue them for asynchronous processing.

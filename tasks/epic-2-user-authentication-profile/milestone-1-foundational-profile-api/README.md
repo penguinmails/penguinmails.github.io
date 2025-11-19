@@ -1,3 +1,11 @@
+---
+title: "Milestone 1: Foundational User Profile API"
+description: "Documentation for Milestone 1: Foundational User Profile API - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 1: Foundational User Profile API
 
 **Goal:** To establish the basic API functionality for a user to retrieve and update their core profile information. This milestone creates the Drizzle schema for user preferences and the primary endpoints for profile management.

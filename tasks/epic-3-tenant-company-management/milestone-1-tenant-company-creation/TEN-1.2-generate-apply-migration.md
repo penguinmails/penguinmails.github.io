@@ -1,3 +1,11 @@
+---
+title: "TEN-1.2: Generate and Apply companies Migration"
+description: "Documentation for TEN-1.2: Generate and Apply companies Migration - TEN 1.2 Generate Apply Migration"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # TEN-1.2: Generate and Apply companies Migration
 
 **Ticket ID:** TEN-1.2  

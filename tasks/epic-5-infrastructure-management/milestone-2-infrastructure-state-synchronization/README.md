@@ -1,3 +1,11 @@
+---
+title: "Milestone 2 — Infrastructure State Synchronization"
+description: "Documentation for Milestone 2 — Infrastructure State Synchronization - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 2 — Infrastructure State Synchronization
 
 **Goal:** Create an automated background process that regularly fetches Hostwind infrastructure state and updates the local database.

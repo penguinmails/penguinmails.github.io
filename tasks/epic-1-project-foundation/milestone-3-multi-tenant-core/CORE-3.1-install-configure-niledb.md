@@ -1,3 +1,11 @@
+---
+title: "CORE-3.1: Install and Configure NileDB Server SDK"
+description: "Documentation for CORE-3.1: Install and Configure NileDB Server SDK - CORE 3.1 Install Configure Niledb"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-3.1: Install and Configure NileDB Server SDK
 
 **Ticket ID:** CORE-3.1  

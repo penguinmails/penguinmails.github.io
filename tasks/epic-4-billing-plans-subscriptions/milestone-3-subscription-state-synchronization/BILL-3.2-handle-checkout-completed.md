@@ -1,3 +1,11 @@
+---
+title: "BILL-3.2: Implement Handler for checkout.session.completed Event"
+description: "Documentation for BILL-3.2: Implement Handler for checkout.session.completed Event - BILL 3.2 Handle Checkout Completed"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-3.2: Implement Handler for checkout.session.completed Event
 
 **Ticket ID:** BILL-3.2  

@@ -1,3 +1,11 @@
+---
+title: "BILL-2.1: Install and Configure Stripe Node.js SDK"
+description: "Documentation for BILL-2.1: Install and Configure Stripe Node.js SDK - BILL 2.1 Install Configure Stripe"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-2.1: Install and Configure Stripe Node.js SDK
 
 **Ticket ID:** BILL-2.1  

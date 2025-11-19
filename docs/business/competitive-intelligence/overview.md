@@ -1,3 +1,11 @@
+---
+title: "Competitive Intelligence"
+description: "Documentation for Competitive Intelligence - Overview"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Competitive Intelligence
 
 ## Executive Summary

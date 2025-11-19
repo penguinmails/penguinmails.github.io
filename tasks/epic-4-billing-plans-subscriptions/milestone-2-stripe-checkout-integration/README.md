@@ -1,3 +1,11 @@
+---
+title: "Milestone 2: Stripe Checkout Integration"
+description: "Documentation for Milestone 2: Stripe Checkout Integration - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 2: Stripe Checkout Integration
 
 **Goal:** To allow a user to select a plan and complete a payment through a secure, Stripe-hosted checkout page.

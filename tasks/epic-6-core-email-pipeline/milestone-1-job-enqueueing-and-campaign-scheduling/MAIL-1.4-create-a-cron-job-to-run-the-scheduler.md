@@ -1,3 +1,11 @@
+---
+title: "MAIL-1.4: Create a Cron Job to Run the Scheduler"
+description: "Documentation for MAIL-1.4: Create a Cron Job to Run the Scheduler - MAIL 1.4 Create A Cron Job To Run The Scheduler"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-1.4: Create a Cron Job to Run the Scheduler
 
 **Ticket ID:** MAIL-1.4  

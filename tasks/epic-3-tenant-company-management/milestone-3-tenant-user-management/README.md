@@ -1,3 +1,11 @@
+---
+title: "Milestone 3: Tenant User Management"
+description: "Documentation for Milestone 3: Tenant User Management - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 3: Tenant User Management
 
 **Goal:** To implement the functionality for inviting and managing users within a tenant. This relies heavily on the NileDB SDK's built-in user management features.

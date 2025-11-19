@@ -1,3 +1,11 @@
+---
+title: "Milestone 1: Tenant and Company Creation"
+description: "Documentation for Milestone 1: Tenant and Company Creation - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 1: Tenant and Company Creation
 
 **Goal:** To enable a new user to create their first Tenant and an associated Company (Workspace). This is the crucial first step in the user onboarding flow after they sign up.

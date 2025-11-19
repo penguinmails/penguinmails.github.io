@@ -1,3 +1,11 @@
+---
+title: "Epic 1: Project Foundation & Core Services"
+description: "Documentation for Epic 1: Project Foundation & Core Services - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Epic 1: Project Foundation & Core Services
 
 **Last Updated:** October 27, 2025  

@@ -1,3 +1,11 @@
+---
+title: "INFRA-3.1: Define Drizzle Schema for domain_ip_assignments"
+description: "Documentation for INFRA-3.1: Define Drizzle Schema for domain_ip_assignments - INFRA 3.1 Define Drizzle Schema For Domain Ip Assignments"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # INFRA-3.1: Define Drizzle Schema for domain_ip_assignments
 
 **Ticket ID:** INFRA-3.1  

@@ -1,3 +1,11 @@
+---
+title: "MAIL-3.1: Implement Tracking Token Generation"
+description: "Documentation for MAIL-3.1: Implement Tracking Token Generation - MAIL 3.1 Implement Tracking Token Generation"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-3.1: Implement Tracking Token Generation
 
 **Ticket ID:** MAIL-3.1  

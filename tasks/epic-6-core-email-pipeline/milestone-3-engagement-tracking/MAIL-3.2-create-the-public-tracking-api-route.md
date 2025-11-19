@@ -1,3 +1,11 @@
+---
+title: "MAIL-3.2: Create the Public Tracking API Route (/api/track/[...slug])"
+description: "Documentation for MAIL-3.2: Create the Public Tracking API Route (/api/track/[...slug]) - MAIL 3.2 Create The Public Tracking Api Route"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-3.2: Create the Public Tracking API Route (/api/track/[...slug])
 
 **Ticket ID:** MAIL-3.2  

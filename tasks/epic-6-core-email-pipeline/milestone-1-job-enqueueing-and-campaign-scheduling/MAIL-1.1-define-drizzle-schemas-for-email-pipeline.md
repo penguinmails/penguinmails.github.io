@@ -1,3 +1,11 @@
+---
+title: "MAIL-1.1: Define Drizzle Schemas for Email Pipeline"
+description: "Documentation for MAIL-1.1: Define Drizzle Schemas for Email Pipeline - MAIL 1.1 Define Drizzle Schemas For Email Pipeline"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-1.1: Define Drizzle Schemas for Email Pipeline
 
 **Ticket ID:** MAIL-1.1  

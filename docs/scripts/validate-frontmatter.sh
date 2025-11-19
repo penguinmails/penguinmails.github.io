@@ -7,7 +7,17 @@ set -e
 REQUIRED_FIELDS="title description last_modified_date level persona"
 CURRENT_DATE=$(date +%Y-%m-%d)
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DOCS_DIR=".."
+# Go up to the repository root (script is in docs/scripts/, need to go up 2 levels)
+REPO_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+DOCS_DIR="$REPO_ROOT/docs"
+
+# Verify we're in the correct repo root
+if [ ! -f "$REPO_ROOT/_config.yaml" ]; then
+  echo "❌ Error: _config.yaml not found in $REPO_ROOT. Not a Jekyll repo root."
+  exit 1
+fi
+echo "✅ Confirmed Jekyll repo root: $REPO_ROOT"
+echo "📁 Targeting docs directory: $DOCS_DIR"
 
 mkdir -p "$SCRIPT_DIR"
 
@@ -43,7 +53,7 @@ validate_date() {
   fi
 }
 
-# Find all MD files
+# Find all MD files only in docs/ subdirectory
 find "$DOCS_DIR" -name "*.md" -not -path "*/legacy-archive/*" -not -path "*/scripts/*" | sort | while read -r file; do
   echo "Checking [$file]..."
   
@@ -53,8 +63,8 @@ find "$DOCS_DIR" -name "*.md" -not -path "*/legacy-archive/*" -not -path "*/scri
     continue
   fi
   
-  # Check if frontmatter exists
-  if ! head -20 "$file" | grep -q "^---$" || ! grep -A100 "^---$" "$file" | grep -qm1 "^---$"; then
+  # Check if frontmatter exists (proper YAML frontmatter with title field)
+  if ! awk '/^---/{f=1;next} f&&/^---/{has_title=1;exit} f&&/^title:/{has_title=1}' "$file" | grep -q "^title:" || ! head -30 "$file" | grep -A20 "^---$" | grep -qm1 "^---$"; then
     echo "❌ MISSING frontmatter: $file"
     
     title=$(extract_title "$file")
@@ -77,52 +87,61 @@ EOF
     continue
   fi
   
-  # Extract existing frontmatter
-  frontmatter=$(awk '/^---/{f=1;next} f&&/^---/{f=0;exit} f' "$file")
+  # Extract existing frontmatter (only if proper YAML structure exists)
+  frontmatter=$(awk '
+  /^---/{f=1;next}
+  /^title:/{has_title=1}
+  /^[a-zA-Z_]+:/ && f{has_yaml=1}
+  f&&/^---/{f=0;exit}
+  f' "$file")
   
-  # Check required fields
-  missing=()
-  for field in $REQUIRED_FIELDS; do
-    if ! echo "$frontmatter" | grep -q "^$field:"; then
-      missing+=("$field")
-    fi
-  done
-  
-  # Validate existing fields
-  errors=()
-  if echo "$frontmatter" | grep -q "^last_modified_date:"; then
-    date=$(echo "$frontmatter" | grep "^last_modified_date:" | sed 's/.*: *"\([^"]*\)".*/\1/')
-    if ! validate_date "$date"; then
-      errors+=("invalid last_modified_date format")
-    fi
-  fi
-  
-  if [ ${#missing[@]} -ne 0 ] || [ ${#errors[@]} -ne 0 ]; then
-    echo "⚠️  Issues in $file: ${missing[*]} ${errors[*]}"
-    
-    # Create backup
-    cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
-    
-    # Auto-fix missing fields (insert before second ---)
-    temp_file=$(mktemp)
-    awk -v date="$CURRENT_DATE" '
-    /^---/ {print; lines=0; next}
-    lines==0 && /^---/ { 
-      if (!/title:/) print "title: \"Document Title\"";
-      if (!/description:/) print "description: \"Documentation content\"";
-      if (!/last_modified_date:/) print "last_modified_date: \"" date "\"";
-      if (!/level:/) print "level: 2";
-      if (!/persona:/) print "persona: \"Documentation Users\"";
-      print; next
-    }
-    {print; lines++}
-    END {if (lines>0) print "---"}
-    ' "$file" > "$temp_file"
-    
-    mv "$temp_file" "$file"
-    echo "✅ Auto-fixed $file (backup: $file.backup.*)"
+  if ! echo "$frontmatter" | grep -q "^title:"; then
+    echo "❌ INVALID frontmatter (missing title YAML): $file"
   else
-    echo "✅ VALID: $file"
+    # Check required fields
+    missing=()
+    for field in $REQUIRED_FIELDS; do
+      if ! echo "$frontmatter" | grep -q "^$field:"; then
+        missing+=("$field")
+      fi
+    done
+    
+    # Validate existing fields
+    errors=()
+    if echo "$frontmatter" | grep -q "^last_modified_date:"; then
+      date=$(echo "$frontmatter" | grep "^last_modified_date:" | sed 's/.*: *"\([^"]*\)".*/\1/')
+      if ! validate_date "$date"; then
+        errors+=("invalid last_modified_date format")
+      fi
+    fi
+    
+    if [ ${#missing[@]} -ne 0 ] || [ ${#errors[@]} -ne 0 ]; then
+      echo "⚠️  Issues in $file: ${missing[*]} ${errors[*]}"
+      
+      # Create backup
+      cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
+      
+      # Auto-fix missing fields (insert before second ---)
+      temp_file=$(mktemp)
+      awk -v date="$CURRENT_DATE" '
+      /^---/ {print; lines=0; next}
+      lines==0 && /^---/ { 
+        if (!/title:/) print "title: \"Document Title\"";
+        if (!/description:/) print "description: \"Documentation content\"";
+        if (!/last_modified_date:/) print "last_modified_date: \"" date "\"";
+        if (!/level:/) print "level: 2";
+        if (!/persona:/) print "persona: \"Documentation Users\"";
+        print; next
+      }
+      {print; lines++}
+      END {if (lines>0) print "---"}
+      ' "$file" > "$temp_file"
+      
+      mv "$temp_file" "$file"
+      echo "✅ Auto-fixed $file (backup: $file.backup.*)"
+    else
+      echo "✅ VALID: $file"
+    fi
   fi
 done
 

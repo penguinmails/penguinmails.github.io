@@ -1,6 +1,9 @@
 ---
 title: "White Label Business Strategies"
 description: "Advanced white-label business strategies for agencies based on comprehensive market analysis and revenue optimization frameworks"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
 ---
 
 # White Label Business Strategies

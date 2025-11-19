@@ -1,3 +1,11 @@
+---
+title: "Milestone 3: The Secure, Multi-Tenant Core"
+description: "Documentation for Milestone 3: The Secure, Multi-Tenant Core - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 3: The Secure, Multi-Tenant Core
 
 **Goal:** To implement the core authentication and authorization layer, transforming the application into a true, multi-tenant SaaS platform.

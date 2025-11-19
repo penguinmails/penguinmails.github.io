@@ -1,3 +1,11 @@
+---
+title: "Milestone 1: Plans and Subscriptions Schema Setup"
+description: "Documentation for Milestone 1: Plans and Subscriptions Schema Setup - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 1: Plans and Subscriptions Schema Setup
 
 **Goal:** To prepare our database to store all necessary billing-related information. This involves creating the tables for subscription plans, current subscriptions, and tenant-specific billing configurations.

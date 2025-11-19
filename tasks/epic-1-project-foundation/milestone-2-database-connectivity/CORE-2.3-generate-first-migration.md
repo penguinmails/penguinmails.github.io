@@ -1,3 +1,11 @@
+---
+title: "CORE-2.3: Generate First Database Migration"
+description: "Documentation for CORE-2.3: Generate First Database Migration - CORE 2.3 Generate First Migration"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-2.3: Generate First Database Migration
 
 **Ticket ID:** CORE-2.3  

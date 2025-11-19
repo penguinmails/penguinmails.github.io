@@ -1,3 +1,11 @@
+---
+title: "TEN-2.1: Create API Endpoint to List Companies (GET /api/companies)"
+description: "Documentation for TEN-2.1: Create API Endpoint to List Companies (GET /api/companies) - TEN 2.1 List Companies Endpoint"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # TEN-2.1: Create API Endpoint to List Companies (GET /api/companies)
 
 **Ticket ID:** TEN-2.1  

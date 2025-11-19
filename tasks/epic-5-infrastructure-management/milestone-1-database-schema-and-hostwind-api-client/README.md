@@ -1,3 +1,11 @@
+---
+title: "Milestone 1 — Database Schema and Hostwind API Client"
+description: "Documentation for Milestone 1 — Database Schema and Hostwind API Client - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 1 — Database Schema and Hostwind API Client
 
 **Goal:** Prepare the database to store infrastructure data and build a secure, reusable Hostwind API client.

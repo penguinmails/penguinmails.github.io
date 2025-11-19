@@ -1,3 +1,11 @@
+---
+title: "MAIL-2.4: Implement SMTP Sending with Nodemailer"
+description: "Documentation for MAIL-2.4: Implement SMTP Sending with Nodemailer - MAIL 2.4 Implement Smtp Sending With Nodemailer"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # MAIL-2.4: Implement SMTP Sending with Nodemailer
 
 **Ticket ID:** MAIL-2.4  

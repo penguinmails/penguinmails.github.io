@@ -1,3 +1,11 @@
+---
+title: "CORE-2.2: Define Initial Drizzle Schemas"
+description: "Documentation for CORE-2.2: Define Initial Drizzle Schemas - CORE 2.2 Define Initial Schemas"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-2.2: Define Initial Drizzle Schemas
 
 **Ticket ID:** CORE-2.2  

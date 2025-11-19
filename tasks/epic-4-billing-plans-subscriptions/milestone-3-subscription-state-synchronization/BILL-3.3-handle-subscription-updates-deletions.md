@@ -1,3 +1,11 @@
+---
+title: "BILL-3.3: Implement Handlers for Subscription Updates and Deletions"
+description: "Documentation for BILL-3.3: Implement Handlers for Subscription Updates and Deletions - BILL 3.3 Handle Subscription Updates Deletions"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-3.3: Implement Handlers for Subscription Updates and Deletions
 
 **Ticket ID:** BILL-3.3  

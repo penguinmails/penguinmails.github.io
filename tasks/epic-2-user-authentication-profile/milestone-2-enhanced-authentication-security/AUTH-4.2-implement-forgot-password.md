@@ -1,3 +1,11 @@
+---
+title: "AUTH-4.2: Implement \"Forgot Password\" Request Endpoint"
+description: "Documentation for AUTH-4.2: Implement \\"Forgot Password\\" Request Endpoint - AUTH 4.2 Implement Forgot Password"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # AUTH-4.2: Implement "Forgot Password" Request Endpoint
 
 **Ticket ID:** AUTH-4.2  

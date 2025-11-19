@@ -1,3 +1,11 @@
+---
+title: "CORE-2.4: Implement Migration Application Script"
+description: "Documentation for CORE-2.4: Implement Migration Application Script - CORE 2.4 Implement Migration Script"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-2.4: Implement Migration Application Script
 
 **Ticket ID:** CORE-2.4  

@@ -1,3 +1,11 @@
+---
+title: "BILL-3.4: Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)"
+description: "Documentation for BILL-3.4: Create API Endpoint for Customer Portal (POST /api/subscriptions/portal) - BILL 3.4 Create Customer Portal Endpoint"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-3.4: Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)
 
 **Ticket ID:** BILL-3.4  

@@ -1,3 +1,11 @@
+---
+title: "Content Database Schema Guide"
+description: "Documentation for Content Database Schema Guide - Content Database Schema Guide"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Content Database Schema Guide
 
 This guide defines the canonical Content Database schema for PenguinMails.

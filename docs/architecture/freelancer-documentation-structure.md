@@ -1,8 +1,8 @@
 ---
 title: "Freelancer Documentation Structure Architecture"
-description: "Comprehensive documentation structure design separating internal operations from public-facing freelancer support"
+description: "Structure design separating internal operations from public-facing freelancer support"
 last_modified_date: "2025-11-19"
-level: 1
+level: 2
 persona: "Documentation Architects, Operations Directors, Technical Writers"
 ---
 

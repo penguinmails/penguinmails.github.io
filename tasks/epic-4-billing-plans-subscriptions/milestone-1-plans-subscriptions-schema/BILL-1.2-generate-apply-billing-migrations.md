@@ -1,3 +1,11 @@
+---
+title: "BILL-1.2: Generate and Apply Billing Migrations"
+description: "Documentation for BILL-1.2: Generate and Apply Billing Migrations - BILL 1.2 Generate Apply Billing Migrations"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-1.2: Generate and Apply Billing Migrations
 
 **Ticket ID:** BILL-1.2  

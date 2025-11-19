@@ -1,7 +1,9 @@
 ---
-title: "Competitive Analysis - Executive Summary"
-description: "Side-by-side comparison matrix for email service provider selection and strategic decision making"
-last_modified_date: "2025-12-19"
+title: "Competitive Analysis: Email Service Provider Selection Matrix"
+description: "Documentation for Competitive Analysis: Email Service Provider Selection Matrix - Competitive Analysis"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
 ---
 
 # Competitive Analysis: Email Service Provider Selection Matrix

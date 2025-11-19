@@ -1,3 +1,11 @@
+---
+title: "CORE-1.1: Initialize Next.js 15 Project"
+description: "Documentation for CORE-1.1: Initialize Next.js 15 Project - CORE 1.1 Initialize Nextjs Project"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-1.1: Initialize Next.js 15 Project
 
 **Ticket ID:** CORE-1.1  

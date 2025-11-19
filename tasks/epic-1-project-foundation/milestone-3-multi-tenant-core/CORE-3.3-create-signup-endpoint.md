@@ -1,3 +1,11 @@
+---
+title: "CORE-3.3: Create Public API Endpoint for User Signup"
+description: "Documentation for CORE-3.3: Create Public API Endpoint for User Signup - CORE 3.3 Create Signup Endpoint"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # CORE-3.3: Create Public API Endpoint for User Signup
 
 **Ticket ID:** CORE-3.3  

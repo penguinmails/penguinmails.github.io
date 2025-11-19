@@ -1,3 +1,11 @@
+---
+title: "Milestone 3 — Internal API for Infrastructure Visibility"
+description: "Documentation for Milestone 3 — Internal API for Infrastructure Visibility - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 3 — Internal API for Infrastructure Visibility
 
 **Goal:** Expose synchronized infrastructure data to the frontend via secure, tenant-aware internal APIs.

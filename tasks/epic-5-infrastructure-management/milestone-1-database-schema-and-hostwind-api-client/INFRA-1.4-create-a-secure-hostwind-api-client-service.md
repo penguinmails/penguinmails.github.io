@@ -1,3 +1,11 @@
+---
+title: "INFRA-1.4: Create a Secure Hostwind API Client Service"
+description: "Documentation for INFRA-1.4: Create a Secure Hostwind API Client Service - INFRA 1.4 Create A Secure Hostwind Api Client Service"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # INFRA-1.4: Create a Secure Hostwind API Client Service
 
 **Ticket ID:** INFRA-1.4  

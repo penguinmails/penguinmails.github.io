@@ -1,3 +1,11 @@
+---
+title: "Epic 4: Billing, Plans, & Subscriptions"
+description: "Documentation for Epic 4: Billing, Plans, & Subscriptions - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Epic 4: Billing, Plans, & Subscriptions
 
 **Last Updated:** October 27, 2025  

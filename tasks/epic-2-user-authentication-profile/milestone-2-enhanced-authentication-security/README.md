@@ -1,3 +1,11 @@
+---
+title: "Milestone 2: Enhanced Authentication and Security"
+description: "Documentation for Milestone 2: Enhanced Authentication and Security - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 2: Enhanced Authentication and Security
 
 **Goal:** To add critical authentication-related features that improve user experience and security, including session management and password resets.

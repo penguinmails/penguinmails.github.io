@@ -1,3 +1,11 @@
+---
+title: "AUTH-3.1: Define Drizzle Schema for user_preferences"
+description: "Documentation for AUTH-3.1: Define Drizzle Schema for user_preferences - AUTH 3.1 Define User Preferences Schema"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # AUTH-3.1: Define Drizzle Schema for user_preferences
 
 **Ticket ID:** AUTH-3.1  

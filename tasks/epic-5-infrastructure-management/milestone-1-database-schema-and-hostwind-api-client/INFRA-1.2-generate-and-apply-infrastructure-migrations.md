@@ -1,3 +1,11 @@
+---
+title: "INFRA-1.2: Generate and Apply Infrastructure Migrations"
+description: "Documentation for INFRA-1.2: Generate and Apply Infrastructure Migrations - INFRA 1.2 Generate And Apply Infrastructure Migrations"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # INFRA-1.2: Generate and Apply Infrastructure Migrations
 
 **Ticket ID:** INFRA-1.2  

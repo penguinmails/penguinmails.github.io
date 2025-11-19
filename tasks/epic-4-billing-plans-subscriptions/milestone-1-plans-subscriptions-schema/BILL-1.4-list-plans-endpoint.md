@@ -1,3 +1,11 @@
+---
+title: "BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)"
+description: "Documentation for BILL-1.4: Create API Endpoint to List Plans (GET /api/plans) - BILL 1.4 List Plans Endpoint"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)
 
 **Ticket ID:** BILL-1.4  

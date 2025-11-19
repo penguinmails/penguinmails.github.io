@@ -1,3 +1,11 @@
+---
+title: "Milestone 3: Subscription State Synchronization with Webhooks"
+description: "Documentation for Milestone 3: Subscription State Synchronization with Webhooks - README"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # Milestone 3: Subscription State Synchronization with Webhooks
 
 **Goal:** To reliably receive and process billing events from Stripe to keep our application's subscription data perfectly in sync with the source of truth (Stripe).

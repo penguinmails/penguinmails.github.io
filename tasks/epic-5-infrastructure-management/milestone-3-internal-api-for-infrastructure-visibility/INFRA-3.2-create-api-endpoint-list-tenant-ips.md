@@ -1,3 +1,11 @@
+---
+title: "INFRA-3.2: Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips)"
+description: "Documentation for INFRA-3.2: Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips) - INFRA 3.2 Create Api Endpoint List Tena"
+last_modified_date: "2025-11-19"
+level: 2
+persona: "Documentation Users"
+---
+
 # INFRA-3.2: Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips)
 
 **Ticket ID:** INFRA-3.2  
