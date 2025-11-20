@@ -144,6 +144,67 @@ This comprehensive guide is designed to help independent consultants build succe
 - **Industry Guides**: [Marketing Specialists](/docs/freelancer-support/industry-guides/marketing-freelancers.md)
 - **Success Metrics**: [Performance Tracking and KPIs](/docs/freelancer-support/success-metrics.md)
 
+## Task Completion Standards
+
+### Definition of Done (DoD)
+
+As a freelancer working on PenguinMails tasks, you must ensure every task meets these completion criteria:
+
+#### General Task Completion
+
+A task is **Done** when:
+
+- ✅ All acceptance criteria are met
+- ✅ Work is reviewed, tested, and approved by the lead
+- ✅ Jira status is updated with all links or screenshots
+- ✅ No blockers or pending dependencies remain
+- ✅ Work is verified on staging
+
+#### Development Tasks
+
+For development work, **Done** means:
+
+- ✅ Code is committed, reviewed, and merged into the right branch
+- ✅ Follows linting and naming standards
+- ✅ Tested manually or with unit tests
+- ✅ Documentation or .env.sample updated if needed
+- ✅ Successfully deployed to staging
+
+#### Bug Fixes
+
+For bug fixes, **Done** means:
+
+- ✅ The issue is replicated and the root cause found
+- ✅ Fix verified in staging with before/after proof
+- ✅ Related areas regression-tested
+
+#### Research Spikes
+
+For research tasks, **Done** means:
+
+- ✅ Research completed and documented (Google Doc link in Jira)
+- ✅ Includes clear findings or recommendations
+- ✅ Reviewed by Anthony or team lead before closing
+
+### Story Points Guide
+
+Story points measure the relative effort to complete a task, considering complexity, uncertainty, and dependencies—not just time.
+
+#### How We Estimate
+
+We use relative estimation, comparing new tasks to known examples:
+
+| Story Points | Meaning | Typical Effort |
+| :----- | :----- | :---- |
+| 1 point | Very small task | Quick config, text change, or minor UI fix, simple investigation or quick validation |
+| 2 points | Small task | One function, small component, or bug fix |
+| 3 points | Medium task | New feature with some logic or API use, Research + short proof of concept |
+| 5 points | Large task | Multi-step logic, backend + frontend integration, deep research spike with multiple dependencies |
+| 8 points | Complex feature | Multiple systems involved, requires testing + review |
+| 13 points | Very complex | Requires research or touches critical flows (may split) |
+
+**Important**: Always provide effort estimates (in story points) and delivery timeframes before accepting any task, as outlined in the [Operations Framework](/docs/operations/freelancer-management/framework.md).
+
 ---
 
 **Document Classification:** Level 1 - Strategic Overview

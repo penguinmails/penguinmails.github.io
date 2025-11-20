@@ -172,6 +172,67 @@ This framework provides detailed operational procedures for managing freelancer 
 - Maintain accurate cost tracking and budget allocation for freelancer services
 - Ensure financial compliance and audit trail requirements
 
+### Task Completion Standards
+
+#### Definition of Done (DoD)
+
+All tasks must meet these completion criteria before final approval and payment:
+
+##### General Task Completion
+
+A task is **Done** when:
+
+- ✅ All acceptance criteria are met
+- ✅ Work is reviewed, tested, and approved by the lead
+- ✅ Jira status is updated with all links or screenshots
+- ✅ No blockers or pending dependencies remain
+- ✅ Work is verified on staging
+
+##### Development Tasks
+
+For development work, **Done** means:
+
+- ✅ Code is committed, reviewed, and merged into the right branch
+- ✅ Follows linting and naming standards
+- ✅ Tested manually or with unit tests
+- ✅ Documentation or .env.sample updated if needed
+- ✅ Successfully deployed to staging
+
+##### Bug Fixes
+
+For bug fixes, **Done** means:
+
+- ✅ The issue is replicated and the root cause found
+- ✅ Fix verified in staging with before/after proof
+- ✅ Related areas regression-tested
+
+##### Research Spikes
+
+For research tasks, **Done** means:
+
+- ✅ Research completed and documented (Google Doc link in Jira)
+- ✅ Includes clear findings or recommendations
+- ✅ Reviewed by Anthony or team lead before closing
+
+#### Story Points Guide
+
+Story points measure relative effort including complexity, uncertainty, and dependencies—not just time.
+
+##### Effort Estimation Guidelines
+
+| Story Points | Meaning | Typical Effort |
+| :----- | :----- | :---- |
+| 1 point | Very small task | Quick config, text change, or minor UI fix, simple investigation or quick validation |
+| 2 points | Small task | One function, small component, or bug fix |
+| 3 points | Medium task | New feature with some logic or API use, Research + short proof of concept |
+| 5 points | Large task | Multi-step logic, backend + frontend integration, deep research spike with multiple dependencies |
+| 8 points | Complex feature | Multiple systems involved, requires testing + review |
+| 13 points | Very complex | Requires research or touches critical flows (may split) |
+
+##### Estimation Process
+
+Freelancers must provide effort estimates in story points before accepting any task, and clients evaluate and approve/reject these estimates as part of the task assignment framework.
+
 ## Operational Success Metrics
 
 ### Performance Targets
