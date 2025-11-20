@@ -20,10 +20,10 @@ This contract defines REST-only endpoints for PenguinMails internal operations t
 Strictly aligned with:
 
 - Multi-tenant isolation and infra docs:
-  - `../database-infrastructure/queue-system-implementation-guide.md`
-  - `../database-infrastructure/business-leaders-database-migration-guide.md`
-  - `../database-infrastructure/oltp-mermaid-er.md`
-  - `../database-infrastructure/notifications-database/mermaid-er.md`
+  - `/docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/oltp-mermaid-er.md`
+  - `/docs/implementation-technical/database-infrastructure/notifications-database/mermaid-er.md`
 - Executive security & audit requirements (BF-004)
 - Executive via read-only consumption of these resources by the Executive API
 
@@ -47,7 +47,7 @@ All endpoints are:
 
 Reference:
 
-- `business-leaders-database-migration-guide.md#step-5-security--access-control`
+- `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md#step-5-security--access-control`
 - BF-004 executive security and audit story.
 
 ## 2. IP Inventory Management
@@ -206,7 +206,7 @@ Used by:
 
 ## 6. Error Handling
 
-Uses the common error envelope from `../development-guidelines/api-reference.md`:
+Uses the common error envelope from `/docs/implementation-technical/development-guidelines/api-reference.md`:
 
 - 401 `AUTHENTICATION_REQUIRED`
 - 403 `INSUFFICIENT_PERMISSIONS`
@@ -233,7 +233,7 @@ Additional constraints:
 
 - Tenant SMTP API:
   - Exposes safe tenant-scoped views only.
-- Executive API:
+- [Executive API](/docs/implementation-technical/api/executive-api.md):
   - Consumes aggregated data derived from central ops + BI views.
   - Never exposes raw IP assignment details.
 - Queue & Events API:

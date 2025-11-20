@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **For Platform Engineers and Automation Teams**: Comprehensive guide to building reliable, secure, and efficient automation with the Hostwinds API
 
-**Parent Documentation**: [Hostwinds API Overview](hostwinds-api.md)
+**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md)
 
 ---
 
@@ -671,10 +671,10 @@ class MetricsCollector {
 
 ## Related Documentation
 
-- [Hostwinds API Overview](hostwinds-api.md) - Main API overview
-- [Hostwinds Server Management API](hostwinds-server-management-api.md) - Instance operations
-- [Hostwinds Networking API](hostwinds-networking-api.md) - IP and network management
-- [Hostwinds Monitoring API](hostwinds-monitoring-api.md) - Monitoring and diagnostics
+- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
+- [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md) - Instance operations
+- [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking.md) - IP and network management
+- [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring.md) - Monitoring and diagnostics
 - [Development Standards](../development-guidelines/development-standards.md) - General development best practices
 
 ---

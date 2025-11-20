@@ -16,8 +16,8 @@ This contract defines REST-only endpoints that expose each tenant's SMTP configu
 - Multi-tenant isolation and RLS
 - Business Leaders backlog (BF-006, revenue)
 - Database and infra docs:
-  - `../database-infrastructure/oltp-schema-guide.md`
-  - `../database-infrastructure/business-leaders-database-migration-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/oltp-schema-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`
 - Executive and BI consumption via the Executive API (no direct DB exposure)
 
 All endpoints are:
@@ -148,7 +148,7 @@ Constraints:
 
 ## 3. Error Handling
 
-Uses the shared standard from `../development-guidelines/api-reference.md`:
+Uses the shared standard from `/docs/implementation-technical/development-guidelines/api-reference.md`:
 
 - `AUTHENTICATION_REQUIRED`, `INSUFFICIENT_PERMISSIONS`
 - `RESOURCE_NOT_FOUND` when tenant does not exist or no SMTP config

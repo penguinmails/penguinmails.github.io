@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **For Platform Engineers and Finance Teams**: Complete API reference for Hostwinds resource upgrades, billing cycle management, and cost planning
 
-**Parent Documentation**: [Hostwinds API Overview](hostwinds-api.md)
+**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md)
 
 ---
 
@@ -315,8 +315,8 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 
 ## Related Documentation
 
-- [Hostwinds API Overview](hostwinds-api.md) - Main API overview
-- [Hostwinds Server Management API](hostwinds-server-management-api.md) - Instance operations
+- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
+- [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md) - Instance operations
 - [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling details
 - [Database Migration Guide](../database-infrastructure/business-leaders-database-migration-guide.md) - Cost field implementation
 

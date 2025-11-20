@@ -116,7 +116,7 @@ Endpoints for creating, managing, and monitoring VPS instances.
 - Rebuild and repair servers
 - Manage rescue mode
 
-**Documentation**: [Hostwinds Server Management API](hostwinds-server-management-api.md)
+**Documentation**: [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md)
 
 **Common Use Cases**:
 
@@ -138,7 +138,7 @@ Endpoints for managing IP addresses, networking, and firewall configuration.
 - Manage firewall profiles
 - Regenerate network configuration
 
-**Documentation**: [Hostwinds Networking API](hostwinds-networking-api.md)
+**Documentation**: [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking.md)
 
 **Common Use Cases**:
 
@@ -160,7 +160,7 @@ Endpoints for managing server upgrades, billing cycles, and pricing queries.
 - Manage service levels (managed/unmanaged)
 - Create upgrade orders and invoices
 
-**Documentation**: [Hostwinds Upgrade & Billing API](hostwinds-upgrade-billing-api.md)
+**Documentation**: [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing.md)
 
 **Common Use Cases**:
 
@@ -182,7 +182,7 @@ Endpoints for monitoring server health, logs, and performance.
 - Validate service IDs
 - Monitor SMTP filters
 
-**Documentation**: [Hostwinds Monitoring API](hostwinds-monitoring-api.md)
+**Documentation**: [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring.md)
 
 **Common Use Cases**:
 
@@ -204,7 +204,7 @@ Recommendations for reliable, secure, and efficient automation.
 - Rate limiting and efficiency
 - Integration patterns
 
-**Documentation**: [Hostwinds Automation Best Practices](hostwinds-automation-best-practices.md)
+**Documentation**: [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices.md)
 
 **Critical for**:
 
@@ -223,7 +223,7 @@ Recommendations for reliable, secure, and efficient automation.
 
 ### API Documentation
 
-- [Central SMTP Operations API](central-smtp-operations-api.md) - Internal SMTP infrastructure management
+- [Central SMTP Operations API](/docs/implementation-technical/api/smtp/central-operations.md) - Internal SMTP infrastructure management
 - [Executive API](executive-api.md) - High-level business metrics and reporting
 
 ### Implementation Guides

@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **For DevOps Engineers and SRE Teams**: Complete API reference for Hostwinds server monitoring, log access, and diagnostic operations
 
-**Parent Documentation**: [Hostwinds API Overview](hostwinds-api.md)
+**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md)
 
 ---
 
@@ -342,9 +342,9 @@ scrape_configs:
 
 ## Related Documentation
 
-- [Hostwinds API Overview](hostwinds-api.md) - Main API overview
-- [Hostwinds Server Management API](hostwinds-server-management-api.md) - Instance operations
-- [Hostwinds Automation Best Practices](hostwinds-automation-best-practices.md) - Error handling and workflows
+- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
+- [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md) - Instance operations
+- [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices.md) - Error handling and workflows
 - [Architecture Overview](../architecture-system/architecture-overview.md) - System monitoring integration
 
 ---
