@@ -79,9 +79,10 @@ CREATE TABLE users (
     picture TEXT,
     email_verified TIMESTAMP WITH TIME ZONE
 );
-```markdown
+```
 
 #### **tenants** - Tenant Organization
+
 ```sql
 CREATE TABLE tenants (
     id UUID PRIMARY KEY,
@@ -91,9 +92,10 @@ CREATE TABLE tenants (
     deleted TIMESTAMP WITH TIME ZONE,
     compute_id UUID
 );
-```markdown
+```
 
 #### **tenant_users** - Multi-Tenant User Associations
+
 ```sql
 CREATE TABLE tenant_users (
     tenant_id UUID REFERENCES tenants(id) ON DELETE CASCADE,
@@ -105,7 +107,7 @@ CREATE TABLE tenant_users (
     email TEXT,
     PRIMARY KEY (tenant_id, user_id)
 );
-```markdown
+```
 
 ---
 
@@ -114,6 +116,7 @@ CREATE TABLE tenant_users (
 ### **Company & Workspace Management**
 
 #### **companies** - Tenant Workspaces (Marketing Access)
+
 ```sql
 CREATE TABLE companies (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -128,11 +131,12 @@ CREATE TABLE companies (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ### **Domain Management**
 
 #### **domains** - Email Sending Domains
+
 ```sql
 CREATE TABLE domains (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -154,9 +158,10 @@ CREATE TABLE domains (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **DNS Records JSON Structure** (dns_records JSONB)
+
 The `dns_records` JSONB field stores per-record DNS configuration with lifecycle management:
 
 ```json
@@ -216,9 +221,10 @@ The `dns_records` JSONB field stores per-record DNS configuration with lifecycle
     }
   ]
 }
-```markdown
+```
 
 **DNS Record Field Meanings**:
+
 - `record_type`: DNS record type (SPF, DKIM, DMARC, MX, A, AAAA, CNAME)
 - `name`: DNS record name (@ for root, subdomain for others)
 - `value`: Expected DNS record value
@@ -232,6 +238,7 @@ The `dns_records` JSONB field stores per-record DNS configuration with lifecycle
 - `source`: Source of record creation ("ui", "platform", "api")
 
 #### **email_accounts** - Email Account Configuration
+
 ```sql
 CREATE TABLE email_accounts (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -248,11 +255,12 @@ CREATE TABLE email_accounts (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ### **Lead Management**
 
 #### **leads** - Contact Database
+
 ```sql
 CREATE TABLE leads (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -265,11 +273,12 @@ CREATE TABLE leads (
 
     UNIQUE(tenant_id, email)
 );
-```markdown
+```
 
 ### **Template Management**
 
 #### **templates** - Email Templates
+
 ```sql
 CREATE TABLE templates (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -281,9 +290,10 @@ CREATE TABLE templates (
     updated TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **Template Organization**
+
 ```sql
 -- Template folders for organization (UUID → BIGINT optimization)
 CREATE TABLE folders (
@@ -324,13 +334,14 @@ CREATE TABLE template_tags (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     UNIQUE(template_id, tag_id)
 );
-```markdown
+```
 
 ---
 
 ### 📧 **Campaign Execution System (OLTP Metadata)**
 
 #### **campaign_sequence_steps** - Campaign Execution Orchestration
+
 *(Note: Email message analytics moved to Content Database as `email_messages` and `email_content`)*
 
 ---
@@ -340,6 +351,7 @@ CREATE TABLE template_tags (
 ### **Campaign Orchestration**
 
 #### **campaigns** - Campaign Definitions
+
 ```sql
 CREATE TABLE campaigns (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -353,9 +365,10 @@ CREATE TABLE campaigns (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **campaign_sequence_steps** - Individual Campaign Steps
+
 ```sql
 CREATE TABLE campaign_sequence_steps (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -377,9 +390,10 @@ CREATE TABLE campaign_sequence_steps (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 **Step Types:**
+
 - **email**: Send email using template
 - **wait**: Delay before next step
 - **condition**: Conditional logic based on lead behavior
@@ -391,6 +405,7 @@ CREATE TABLE campaign_sequence_steps (
 ### **Subscription Plans**
 
 #### **plans** - Subscription Plan Definitions
+
 ```sql
 CREATE TABLE plans (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -417,9 +432,10 @@ CREATE TABLE plans (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **subscriptions** - Active Tenant Subscriptions
+
 ```sql
 CREATE TABLE subscriptions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -435,9 +451,10 @@ CREATE TABLE subscriptions (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **subscription_addons** - Additional Features
+
 ```sql
 CREATE TABLE subscription_addons (
     id VARCHAR(255) PRIMARY KEY,
@@ -450,9 +467,10 @@ CREATE TABLE subscription_addons (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **payments** - Payment Records
+
 ```sql
 CREATE TABLE payments (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -468,7 +486,7 @@ CREATE TABLE payments (
     billing_period_end TIMESTAMP WITH TIME ZONE,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ---
 
@@ -477,6 +495,7 @@ CREATE TABLE payments (
 ### **VPS & IP Management**
 
 #### **vps_instances** - VPS Server Instances
+
 ```sql
 CREATE TABLE vps_instances (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -493,11 +512,12 @@ CREATE TABLE vps_instances (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 **Business Justification**: The `approximate_cost` field enables business leaders to track infrastructure costs per tenant for cost optimization and profitability analysis, supporting executive decision-making for resource allocation and pricing strategy.
 
 #### **smtp_ip_addresses** - SMTP IP Addresses
+
 ```sql
 CREATE TABLE smtp_ip_addresses (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -512,11 +532,12 @@ CREATE TABLE smtp_ip_addresses (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 **Business Justification**: The `approximate_cost` field supports deliverability cost analysis and email service ROI calculations, enabling business leaders to optimize IP allocation and understand the true cost of email deliverability solutions.
 
 #### **domain_ip_assignments** - Domain-to-IP Mappings
+
 ```sql
 CREATE TABLE domain_ip_assignments (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -530,7 +551,7 @@ CREATE TABLE domain_ip_assignments (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ---
 
@@ -539,6 +560,7 @@ CREATE TABLE domain_ip_assignments (
 ### **Staff System**
 
 #### **staff_members** - Staff User Mapping
+
 ```sql
 CREATE TABLE staff_members (
     user_id UUID PRIMARY KEY REFERENCES users(id),
@@ -547,9 +569,10 @@ CREATE TABLE staff_members (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **staff_roles** - Role Definitions
+
 ```sql
 CREATE TABLE staff_roles (
     id INTEGER PRIMARY KEY,
@@ -557,9 +580,10 @@ CREATE TABLE staff_roles (
     description TEXT,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **staff_role_permissions** - Role Permissions
+
 ```sql
 CREATE TABLE staff_role_permissions (
     role_id INTEGER REFERENCES staff_roles(id),
@@ -567,9 +591,10 @@ CREATE TABLE staff_role_permissions (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     PRIMARY KEY (role_id, permission_id)
 );
-```markdown
+```
 
 #### **permissions** - Permission Definitions
+
 ```sql
 CREATE TABLE permissions (
     id INTEGER PRIMARY KEY,
@@ -578,7 +603,7 @@ CREATE TABLE permissions (
     category VARCHAR(50) DEFAULT 'general',
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ---
 
@@ -587,6 +612,7 @@ CREATE TABLE permissions (
 ### **Configuration & Settings**
 
 #### **system_config** - System-Wide Configuration
+
 ```sql
 CREATE TABLE system_config (
     key VARCHAR(255) PRIMARY KEY,
@@ -600,9 +626,10 @@ CREATE TABLE system_config (
 
 -- Platform Stripe account for receiving payments (separate from tenant customer accounts)
 -- This is stored in system_config with key='stripe_account_id' as a single row
-```markdown
+```
 
 #### **feature_flags** - Feature Flag Management
+
 ```sql
 CREATE TABLE feature_flags (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -613,9 +640,10 @@ CREATE TABLE feature_flags (
     updated_by UUID REFERENCES users(id),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **user_preferences** - User Preferences
+
 ```sql
 CREATE TABLE user_preferences (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -630,9 +658,10 @@ CREATE TABLE user_preferences (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **tenant_config** - Tenant Configuration
+
 ```sql
 CREATE TABLE tenant_config (
     tenant_id UUID PRIMARY KEY REFERENCES tenants(id),
@@ -651,9 +680,10 @@ CREATE TABLE tenant_config (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### **tenant_policies** - Tenant Security Policies
+
 ```sql
 CREATE TABLE tenant_policies (
     tenant_id UUID PRIMARY KEY REFERENCES tenants(id),
@@ -671,13 +701,14 @@ CREATE TABLE tenant_policies (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ---
 
 ## 📊 **Performance Indexes**
 
 ### **Critical OLTP Indexes**
+
 ```sql
 -- Multi-tenant filtering
 CREATE INDEX idx_campaigns_tenant ON campaigns(tenant_id);
@@ -695,13 +726,14 @@ CREATE INDEX idx_tenant_users_user ON tenant_users(user_id);
 -- Infrastructure
 CREATE INDEX idx_smtp_ip_addresses_status ON smtp_ip_addresses(status);
 CREATE INDEX idx_domain_ip_assignments_domain ON domain_ip_assignments(domain_id);
-```markdown
+```
 
 ---
 
 ## 🔐 **Security & RLS Policies**
 
 ### **Row Level Security Implementation**
+
 ```sql
 -- Enable RLS on all multi-tenant tables
 ALTER TABLE campaigns ENABLE ROW LEVEL SECURITY;
@@ -743,7 +775,7 @@ CREATE POLICY tenant_config_isolation ON tenant_config
 
 CREATE POLICY tenant_policies_isolation ON tenant_policies
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-```markdown
+```
 
 ---
 
@@ -754,18 +786,21 @@ CREATE POLICY tenant_policies_isolation ON tenant_policies
 The following infrastructure and monitoring concerns have been externalized to specialized analytics platforms for better observability and product insights:
 
 #### **Connection Pool Monitoring**
+
 - **External Events**: `connection_pool_metrics`, `pool_utilization`, `connection_leaks`
 - **Tracking**: Connection pool performance, utilization rates, leak detection
 - **Platform**: External analytics platform (PostHog, Segment, or similar)
 - **Benefits**: Better visualization of database performance trends, alerting capabilities
 
 #### **Security Event Monitoring**
+
 - **External Events**: `security_incidents`, `authentication_failures`, `suspicious_activity`
 - **Tracking**: Security events, audit trails, incident patterns
 - **Platform**: External analytics platform with security focus
 - **Benefits**: Centralized security analytics, threat detection, compliance reporting
 
 #### **Infrastructure Metrics**
+
 - **External Events**: `system_performance`, `error_rates`, `resource_utilization`
 - **Tracking**: Application performance, error rates, system health
 - **Platform**: Infrastructure monitoring platform
@@ -778,18 +813,21 @@ The following infrastructure and monitoring concerns have been externalized to s
 ## Business Impact & Technical Excellence
 
 ### 📈 **Revenue & Performance Intelligence**
+
 - **Unified Billing Analytics**: `billing_analytics` table centralizes all tenant usage tracking with period-based aggregation
 - **Enhanced Plan Flexibility**: Explicit limits in `plans` table support enterprise pricing models
 - **Subscription Lifecycle**: `pending_plan_id` enables seamless plan upgrades/downgrades at billing cycle end
 - **Separate Billing Contacts**: `billing_contact_user_id` allows different billing emails from tenant accounts
 
 ### 🚀 **Operational Excellence Achievements**
+
 - **4-Tier Architecture**: Clear separation between OLTP operations, content storage, analytics, and job processing
 - **Multi-Tenant Security**: Row-level security with NileDB-managed authentication using ARRAY-type roles
 - **Infrastructure Intelligence**: `admin_system_events` provides comprehensive system monitoring and alerting
 - **Queue-Driven Processing**: Reliable job processing with retry logic and dead letter queues
 
 ### 💡 **Technical Architecture Excellence**
+
 - **Data Collection Strategy**:
   - **OLTP Layer**: Fast transactional operations for real-time business logic (users, campaigns, leads)
   - **Content Layer**: Heavy email storage with retention policies and compression
@@ -801,6 +839,7 @@ The following infrastructure and monitoring concerns have been externalized to s
 ## Success Metrics & Validation
 
 ### Performance Targets
+
 - **OLTP Query Performance**: 60-80% improvement in campaign operations
 - **Content DB Throughput**: Handle 100K+ message analytics operations/hour
 - **Cross-Database Queries**: <500ms for campaign + message analytics
@@ -811,12 +850,14 @@ The following infrastructure and monitoring concerns have been externalized to s
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
+
 - [Database Infrastructure README](README)) - Database and infrastructure overview
 - [Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)) - System architecture decisions
 - [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Development standards
 - [Quality Assurance](/docs/business/quality-assurance)) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
+
 - [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
 - [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
 - [Security Framework](../../compliance-security/enterprise)) - Security architecture

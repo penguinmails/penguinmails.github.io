@@ -22,6 +22,7 @@ The PenguinMails platform implements a sophisticated 5-tier database architectur
 5. **Notifications & System Events Database** - User-facing notifications and curated admin events
 
 ### Out-of-Band Component
+
 - **External Logging/Analytics** - High-volume telemetry and observability
 
 ---
@@ -31,6 +32,7 @@ The PenguinMails platform implements a sophisticated 5-tier database architectur
 ### 1. **Clear Separation of Concerns**
 
 Each tier owns specific data types and access patterns, providing:
+
 - **Performance Optimization**: Each tier optimized for its specific workload
 - **Maintenance Simplicity**: Clear ownership reduces complexity
 - **Scaling Flexibility**: Independent scaling of each tier
@@ -43,6 +45,7 @@ Each tier can fail independently without cascading failures. **Critical Design D
 ### 3. **Multi-Tenant Optimization**
 
 Row-Level Security (RLS) with intelligent tenant isolation:
+
 - Connection pooling: 100 connections per tenant
 - Data volume: 100GB per tenant with auto-archiving
 - Query performance: Sub-500ms response times
@@ -50,6 +53,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 ### 4. **No Cross-Database Foreign Keys**
 
 **Benefits:**
+
 - **Migration Independence**: Tiers can evolve independently
 - **Technology Flexibility**: Different database technologies per tier
 - **Failure Isolation**: Cross-tier failures don't cascade
@@ -66,18 +70,21 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: System of record for core business entities
 
 **Key Entities**:
+
 - Tenants, users, organizations
 - Campaigns, leads, mailboxes, domains
 - Billing entities and subscriptions
 - Operational configurations
 
 **Performance Characteristics**:
+
 - Sub-500ms query times
 - 100 concurrent connections per tenant
 - 30-second query timeout
 - 100GB data volume per tenant (soft limit)
 
 **What NOT to store**:
+
 - Heavy content blobs (use Content DB)
 - High-volume logs (use External Logging)
 - Analytics aggregates (use OLAP)
@@ -87,6 +94,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: Dedicated storage for large content objects and binary data
 
 **Key Capabilities**:
+
 - Email bodies (text/HTML) with compression support
 - Large attachments and binary files
 - Content deduplication and lifecycle management
@@ -94,6 +102,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 - Efficient content retrieval and storage
 
 **Content Types**:
+
 - Email body content with rich text support
 - File attachments and multimedia content
 - Headers and metadata storage
@@ -104,6 +113,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: Durable, query-optimized analytics for business intelligence
 
 **Key Capabilities**:
+
 - Campaign performance metrics and reporting
 - Billing and usage analytics
 - Compliance and audit summaries
@@ -111,6 +121,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 - BI tool integration support
 
 **Design Principles**:
+
 - **Aggregation-focused**: Stores processed analytics, not raw data
 - **Partitioned**: Time-based partitioning for optimal performance
 - **Read-optimized**: Designed for complex queries and reporting tools
@@ -121,6 +132,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: Asynchronous workflow orchestration
 
 **Key Capabilities**:
+
 - Hybrid PostgreSQL + Redis architecture for durability and performance
 - Priority-based job routing and scheduling
 - Horizontal scaling with worker distribution
@@ -128,6 +140,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 - Real-time job tracking and monitoring
 
 **Primary Job Types**:
+
 - Email sending coordination and delivery tracking
 - Analytics aggregation and data processing
 - Data imports/exports and migrations
@@ -139,6 +152,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: Operational store for user notifications and curated admin events
 
 **Key Capabilities**:
+
 - User-facing notifications with multi-channel delivery
 - Administrative system events and audit trails
 - Event lifecycle management and resolution tracking
@@ -148,6 +162,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Critical Design Decision**: Independent from OLAP - ensures operational visibility even when analytics systems are unavailable.
 
 **Notification Types**:
+
 - In-app notifications for users
 - Email and push notification channels
 - Administrative system alerts
@@ -161,6 +176,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 **Purpose**: High-volume telemetry and observability
 
 **Data Types Handled**:
+
 - Clickstream and product analytics (PostHog)
 - Job/queue execution traces
 - Infrastructure logs (ELK/Loki)
@@ -174,6 +190,7 @@ Row-Level Security (RLS) with intelligent tenant isolation:
 The 5-tier database architecture provides **enterprise-grade separation of concerns** while maintaining **operational excellence** and **scalability**. Each tier has clear responsibilities, independent failure domains, and optimized performance characteristics.
 
 **Key Takeaways**:
+
 - **OLTP** owns core business entities with strong consistency
 - **Content DB** handles heavy content with lifecycle management
 - **OLAP** provides analytics without coupling to operational state
@@ -186,12 +203,14 @@ This architecture enables the system to scale to thousands of tenants while main
 ---
 
 **📚 Additional Resources**:
+
 - [5-Tier Database Implementation Guide](5-tier-database-implementation-guide.md) - Detailed implementation patterns and operational procedures
 - [5-Tier Database Questions](5-tier-database-questions.md) - Exploratory questions for architectural validation
 - [Complete Database Infrastructure Overview](README.md) - Navigation and cross-references
 
 **Related Tier Documentation**:
-- [OLTP Schema Guide](oltp-schema-guide.md) - Complete database schema with multi-tenant design
+
+- [OLTP Database Documentation](oltp-database/) - Complete database schema with multi-tenant design
 - [Content Database Documentation](content-database/README.md) - Complete schema design and data structures
 - [OLAP Analytics Documentation](olap-database/) - Complete warehouse schema and data structures
 - [Queue System Documentation](queue/) - Complete implementation guide and patterns

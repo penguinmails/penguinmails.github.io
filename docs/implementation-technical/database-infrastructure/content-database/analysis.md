@@ -93,7 +93,7 @@ Summarized issues and risks based on the content_database_schema_guide:
 - Principle:
   - Content DB should be a pure blob/document store keyed by storage_key, with minimal metadata for retrieval and retention.
 
-2) Cross-database foreign keys and tight coupling
+1) Cross-database foreign keys and tight coupling
 
 - Problem:
   - Legacy doc suggests direct FKs or implied strong coupling to:
@@ -108,7 +108,7 @@ Summarized issues and risks based on the content_database_schema_guide:
     - Application-level validation.
     - No hard cross-DB FKs.
 
-3) Overloading Content DB with logging, analytics, and monitoring
+1) Overloading Content DB with logging, analytics, and monitoring
 
 - Problem:
   - Tables like:
@@ -127,7 +127,7 @@ Summarized issues and risks based on the content_database_schema_guide:
   - Detailed logging / monitoring → external analytics/logging stack.
   - Content DB: minimal, targeted audit/retention metadata only where legally required.
 
-4) Functions with heavy in-DB logic and embedded infra semantics
+1) Functions with heavy in-DB logic and embedded infra semantics
 
 - Problem:
   - Lifecycle management functions:
@@ -146,7 +146,7 @@ Summarized issues and risks based on the content_database_schema_guide:
   - Move:
     - Complex monitoring and tuning to application and infra orchestration.
 
-5) Confused separation between Content DB, Notifications, and System Alerts
+1) Confused separation between Content DB, Notifications, and System Alerts
 
 - Problem:
   - system_notifications and similar tables live in the content doc, but:
@@ -196,11 +196,12 @@ CREATE INDEX idx_content_objects_expires ON content_objects(expires_at) WHERE ex
 ```
 
 Key points:
+
 - Single canonical body store.
 - No direct FK to OLTP; tie via storage_key from OLTP tables (e.g., inbox_message_refs).
 - Optional compression/hash fields allowed, but keep semantics minimal.
 
-2) attachments
+1) attachments
 
 - Purpose:
   - Store binary attachments linked to content_objects.
@@ -222,6 +223,7 @@ CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 ```
 
 Key points:
+
 - No analytics/metrics here.
 - Only what's needed to fetch and render files.
 
@@ -267,7 +269,7 @@ C. What to drop or externalize (relative to legacy guide)
     - One-way reference: OLTP row has content_storage_key; Content DB trusts it.
     - Background validation job (in app) to detect orphaned content.
 
-2) "Email message analytics" inside Content DB
+1) "Email message analytics" inside Content DB
 
 - Gotcha:
   - email_messages described as analytics/traces in Content DB.
@@ -278,7 +280,7 @@ C. What to drop or externalize (relative to legacy guide)
   - Content DB:
     - Only bodies and attachments.
 
-3) Lifecycle / compression / dedup in SQL
+1) Lifecycle / compression / dedup in SQL
 
 - Gotcha:
   - Hard-coded algorithms and thresholds in DB functions.
@@ -289,7 +291,7 @@ C. What to drop or externalize (relative to legacy guide)
       - Configurable policies.
       - Metrics shipped to observability, not content DB.
 
-4) Access logs and search index in Content DB
+1) Access logs and search index in Content DB
 
 - Gotcha:
   - content_access_log and content_search_index can grow very large.

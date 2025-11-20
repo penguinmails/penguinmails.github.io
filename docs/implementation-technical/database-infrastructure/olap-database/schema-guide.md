@@ -70,6 +70,7 @@ CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
 ```
 
 Purpose:
+
 - Aggregated usage per tenant per period.
 - Drives billing, quotas, and revenue analytics.
 
@@ -96,6 +97,7 @@ CREATE TABLE campaign_analytics (
 ```
 
 Purpose:
+
 - Aggregated per-campaign performance for reporting and optimization.
 
 ### 1.3 Mailbox Analytics
@@ -123,6 +125,7 @@ CREATE TABLE mailbox_analytics (
 ```
 
 Purpose:
+
 - Mailbox-level deliverability, health, and warmup analytics.
 
 ### 1.4 Lead Analytics
@@ -147,6 +150,7 @@ CREATE TABLE lead_analytics (
 ```
 
 Purpose:
+
 - Per-lead engagement summaries to support scoring and segmentation.
 
 ### 1.5 Warmup Analytics
@@ -172,6 +176,7 @@ CREATE TABLE warmup_analytics (
 ```
 
 Purpose:
+
 - Warmup performance and reputation metrics.
 
 ### 1.6 Sequence Step Analytics
@@ -196,6 +201,7 @@ CREATE TABLE sequence_step_analytics (
 ```
 
 Purpose:
+
 - Step-level performance to support optimization and A/B testing.
 
 ---
@@ -225,6 +231,7 @@ CREATE TABLE admin_audit_log (
 ```
 
 Purpose:
+
 - OLAP-resident, compliance-scope audit log for high-risk actions:
   - Permission/role changes.
   - Billing/subscription changes.
@@ -233,6 +240,7 @@ Purpose:
 - Not a full technical log stream.
 
 Key constraints:
+
 - Do NOT store:
   - Raw performance metrics.
   - Low-risk UI events.
@@ -270,6 +278,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 ## 4. Relationships (High-Level)
 
 See ER diagram:
+
 - [`mermaid-er.md`](mermaid-er.md)
 
 Key relationships:
@@ -290,6 +299,7 @@ Key relationships:
   - Per-mailbox warmup tracking.
 
 Logical notes:
+
 - IDs like tenant_id, campaign_id, company_id, mailbox_id, lead_id are logical references to OLTP, denormalized for warehouse flexibility.
 - No foreign keys to operational schemas.
 
@@ -303,6 +313,7 @@ Apply RLS and access controls to all OLAP tables:
 - Restrict admin_audit_log to authorized roles and necessary scopes.
 
 Detailed security and logging strategy:
+
 - [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure)
 
 ---
@@ -319,11 +330,13 @@ If future needs arise (not implemented now), consider:
   - quota_breach_counts_over_time
 
 These would be:
+
 - Derived from the Notifications DB (`admin_system_events`) and/or external logs.
 - Implemented as clearly named aggregate tables/views.
 - Still respecting OLAP's "aggregated and lean" constraints.
 
 Currently:
+
 - No such OLAP tables are defined.
 - All admin/system event analytics are future/roadmap only.
 
@@ -339,6 +352,7 @@ OLAP is now clearly constrained to:
 - No infra/config/telemetry storage.
 
 Notifications/system events, logs, and jobs:
+
 - Live in their respective tiers and feed OLAP only via intentional, aggregate pipelines when justified.
 
 Use this guide as the authoritative reference for what belongs in the OLAP warehouse.

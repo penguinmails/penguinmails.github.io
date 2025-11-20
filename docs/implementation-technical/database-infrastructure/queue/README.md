@@ -65,6 +65,7 @@ This directory contains comprehensive documentation for the PenguinMails Queue S
 ## Integration
 
 This queue system integrates with:
+
 - Email processing pipelines
 - Analytics data collection
 - Monitoring and alerting systems

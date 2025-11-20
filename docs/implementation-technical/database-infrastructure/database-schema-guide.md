@@ -55,8 +55,8 @@ Key principles:
 
 Reference:
 
-- [`oltp-schema-guide`](/docs/implementation-technical/database-infrastructure)
-- [`oltp-mermaid-er`](/docs/implementation-technical/database-infrastructure)
+- [`oltp-database/`](oltp-database/) - Complete OLTP database schema with multi-tenant design
+- [`oltp-database/mermaid-er.md`](oltp-database/mermaid-er.md) - Visual OLTP schema representation
 
 ---
 

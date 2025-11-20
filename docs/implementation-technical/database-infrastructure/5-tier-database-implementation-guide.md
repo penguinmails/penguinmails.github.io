@@ -62,6 +62,7 @@ async function sendEmail(emailData: EmailData) {
 ### Performance Optimization
 
 **Query Optimization**:
+
 ```sql
 -- OLTP: B-tree indexes for lookups
 CREATE INDEX idx_emails_tenant_status ON emails(tenant_id, status);
@@ -76,6 +77,7 @@ CREATE INDEX idx_notifications_unread ON notifications(user_id, created_at DESC)
 ```
 
 **Connection Pooling**:
+
 ```typescript
 const pools = {
     oltp: new Pool({
@@ -112,6 +114,7 @@ const pools = {
 ### Monitoring and Alerting
 
 **Key Metrics to Monitor**:
+
 - Query response times per tier
 - Connection pool utilization
 - Queue depth and processing rates
@@ -119,6 +122,7 @@ const pools = {
 - Tenant-specific performance metrics
 
 **Critical Alerts**:
+
 - Any tier exceeding 80% capacity
 - Cross-tier consistency failures
 - Connection pool exhaustion
@@ -177,8 +181,9 @@ CREATE POLICY tenant_isolation ON campaigns
 ---
 
 **Related Documentation**:
+
 - [5-Tier Database Architecture Guide](5-tier-database-architecture-guide.md) - Core architectural concepts
-- [OLTP Schema Guide](oltp-schema-guide.md) - Operational database implementation
+- [OLTP Database Documentation](oltp-database/) - Operational database implementation
 - [Content Database Documentation](content-database/README.md) - Content storage patterns
 - [Queue System Documentation](queue/) - Background job processing
 - [Database Infrastructure Overview](README.md) - Complete ecosystem

@@ -55,6 +55,7 @@ The Notifications Database follows an operational tier approach:
 - **Redis**: Rate limiting and caching layer only
 
 This design ensures:
+
 - Fast dashboard performance
 - Clean separation from logging/analytics
 - Bounded table growth
@@ -69,6 +70,7 @@ This design ensures:
 ## Integration
 
 This notifications database integrates with:
+
 - OLTP system for user and tenant references
 - Queue system for background job creation
 - External logging for high-volume telemetry

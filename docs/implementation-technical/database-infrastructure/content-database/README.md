@@ -58,6 +58,7 @@ The Content Database follows a lean, focused approach:
 - **Retention Systems**: Optional lifecycle policies and archival processes
 
 This design avoids:
+
 - Analytics and logging tables (handled by external systems)
 - Cross-database foreign key constraints
 - General-purpose monitoring or infrastructure metrics
@@ -72,6 +73,7 @@ This design avoids:
 ## Integration
 
 This content database integrates with:
+
 - OLTP system for message metadata and content references
 - Queue system for lifecycle management and processing
 - External analytics for access logging and performance monitoring

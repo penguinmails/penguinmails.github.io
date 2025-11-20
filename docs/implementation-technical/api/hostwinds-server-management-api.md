@@ -1,6 +1,7 @@
 # Hostwinds Server Management API
 
 ---
+
 title: "Hostwinds Server Instance Management API"
 description: "Detailed API contract for Hostwinds VPS instance lifecycle management, operations, and maintenance"
 last_modified_date: "2025-11-19"
@@ -85,6 +86,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Success Response** | **Code:** 200. **Content:** `[ { "result": "success", "action": "Invoice Paid", ... }, { "result": "success", "action": "Add Instance", "message": "Server is being Created!" } ]` |
 
 **Notes**:
+
 - This is an asynchronous operation - the success response indicates the task was queued
 - Poll `get_instance` to check creation status
 - The response includes invoice payment confirmation
@@ -101,6 +103,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Success Response** | **Code:** 200. **Content:** `[ { <Server_Instance Object> }, { <Server_Instance Object> }, ... ]` |
 
 **Notes**:
+
 - Returns all instances for the authenticated account
 - Use this to validate `serviceid` before other operations
 
@@ -116,6 +119,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Success Response** | **Code:** 200. **Content:** `{ <Server_Instance Object> }` |
 
 **Notes**:
+
 - Use for polling instance status after async operations
 - Check `status`, `vm_state`, and `task_state` fields
 
@@ -124,6 +128,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 ### get_instance_ids (Get List of Valid Instance IDs)
 
 **Instance Object**:
+
 ```json
 {
     "id": "integer",
@@ -168,6 +173,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Success Response** | **Code:** 200. **Content:** `[ { "result": "success", "action": "Reboot", "message": "Instance rebooted" } ]` |
 
 **Notes**:
+
 - The `time` parameter allows scheduling the reboot
 - Required after password changes to take effect
 
@@ -303,6 +309,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Error Response** | **Code:** 200. **Content:** `[ { "result": "error", "action": "Toggle Lock", "message": "Service Id is required.", "ERROR": "5529903" } ]` |
 
 **Notes**:
+
 - Locked instances cannot be modified or deleted
 - Use to prevent accidental changes to production instances
 

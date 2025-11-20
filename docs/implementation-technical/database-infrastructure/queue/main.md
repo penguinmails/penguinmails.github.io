@@ -104,6 +104,7 @@ graph TD
 ### 1. PostgreSQL Job Management (Durable State)
 
 The PostgreSQL component provides:
+
 - Permanent job storage with full audit trail
 - Complex query capabilities for job management
 - ACID compliance for job state consistency
@@ -114,6 +115,7 @@ The PostgreSQL component provides:
 ### 2. Redis Queue Structure (Fast Processing)
 
 The Redis component provides:
+
 - Millisecond-latency job queue operations
 - Priority-based queue routing
 - Real-time job tracking and monitoring
@@ -124,6 +126,7 @@ The Redis component provides:
 ### 3. Queuer Process Implementation
 
 The migrator service handles:
+
 - Automated job migration from PostgreSQL to Redis
 - Priority-based queue routing
 - Batch processing for efficiency
@@ -134,6 +137,7 @@ The migrator service handles:
 ### 4. Worker Server Implementation
 
 Worker processes provide:
+
 - Background job consumption from Redis queues
 - Job execution with comprehensive error handling
 - Automatic retry with exponential backoff
@@ -242,6 +246,7 @@ For detailed implementation guidance, refer to the specific component documentat
 ---
 
 **Related Documents:**
+
 - [Database Schema](database-schema.md) - Complete database schema with queue tables
 - [Operations](operations.md) - Infrastructure setup and deployment
 - [Entity Relationship Diagram](mermaid-er.md) - Visual database schema

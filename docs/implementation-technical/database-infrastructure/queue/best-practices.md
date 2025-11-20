@@ -20,7 +20,8 @@ These best practices ensure optimal performance, reliability, and maintainabilit
 
 ### Job Design Principles
 
-**Minimize Job Payload Size**
+### Minimize Job Payload Size
+
 ```pseudo
 // GOOD: Minimal, essential data only
 good_job_payload = {
@@ -48,7 +49,8 @@ bad_job_payload = {
 
 ### Database Optimization
 
-**Index Strategy**
+### Index Strategy
+
 ```pseudo
 -- Essential indexes for queue operations
 
@@ -71,7 +73,8 @@ ON jobs(status, updated_at DESC);
 
 ### Idempotent Job Processing
 
-**Design for Idempotency**
+### Design for Idempotency
+
 ```pseudo
 // GOOD: Idempotent job design
 async function sendWelcomeEmail(job) {
@@ -115,7 +118,8 @@ async function sendWelcomeEmail(job) {
 
 ### Timeout Management
 
-**Job Timeouts**
+### Job Timeouts
+
 ```pseudo
 // Set appropriate timeouts for different job types
 JOB_TIMEOUTS = {
@@ -154,7 +158,8 @@ async function processJobWithTimeout(job) {
 
 ### Job Validation
 
-**Input Validation**
+### Input Validation
+
 ```pseudo
 function validateJobPayload(payload) {
   const schema = {
@@ -178,7 +183,8 @@ function validateJobPayload(payload) {
 
 ### Key Metrics
 
-**Essential Metrics to Track**
+### Essential Metrics to Track
+
 ```pseudo
 class QueueMetrics {
   async collectMetrics() {
@@ -211,7 +217,8 @@ class QueueMetrics {
 
 ### Comprehensive Error Strategy
 
-**Error Classification**
+### Error Classification
+
 ```pseudo
 class JobErrorHandler {
   static isRetryable(error) {
@@ -252,7 +259,8 @@ class JobErrorHandler {
 
 ### Deployment Best Practices
 
-**Rolling Updates**
+### Rolling Updates
+
 ```pseudo
 # Kubernetes rolling update strategy
 apiVersion: apps/v1

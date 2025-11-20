@@ -1,6 +1,7 @@
 # Hostwinds Monitoring and Diagnostics API
 
 ---
+
 title: "Hostwinds Monitoring and Diagnostics API"
 description: "Detailed API contract for Hostwinds server monitoring, logs, and diagnostic tools"
 last_modified_date: "2025-11-19"
@@ -19,6 +20,7 @@ persona: "Documentation Users"
 ### get_serial / get_vnc (Get Server Logs)
 
 **Data Array Structure**:
+
 ```json
 [
   "0": "string", // Status
@@ -30,6 +32,7 @@ persona: "Documentation Users"
 ```
 
 **Log Container Object**:
+
 ```json
 {
   "draw": "integer",
@@ -48,6 +51,7 @@ persona: "Documentation Users"
 | **Success Response** | **Code:** 200. **Content:** `{"success": {<log_entry_object>}}` |
 
 **Use Cases**:
+
 - Debugging boot failures
 - Investigating system crashes
 - Monitoring system messages
@@ -55,6 +59,7 @@ persona: "Documentation Users"
 
 **DataTables Integration**:
 This endpoint is designed to work with jQuery DataTables for pagination and filtering. Example parameters:
+
 - `draw` - Draw counter for DataTables
 - `start` - Starting record index
 - `length` - Number of records to return
@@ -74,12 +79,14 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 | **Success Response** | No response is listed in the documentation |
 
 **Period Options** (typical):
+
 - `1h` - Last hour
 - `24h` - Last 24 hours
 - `7d` - Last 7 days
 - `30d` - Last 30 days
 
 **Expected Metrics** (based on typical VPS monitoring):
+
 - CPU utilization
 - Memory usage
 - Disk I/O
@@ -104,6 +111,7 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 | **Notes** | This function is a simple boolean check. Automation scripts should check for the presence of `"success": true` in the response body. |
 
 **Use Cases**:
+
 - Validate service ID before operations
 - Check if instance still exists
 - Verify API access to specific instance
@@ -123,6 +131,7 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 | **Success Response** | **Code:** 200. **Content:** `{ success: {spam: [ { type: string,created: string, invoice_id: integer} ]}}` |
 
 **Use Cases**:
+
 - Monitor spam filtering status
 - Audit SMTP security configuration
 - Track filter deployment dates
@@ -143,6 +152,7 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 | **Notes** | This action retrieves information about **in-progress or scheduled maintenance events** for the specific instance. The message field provides the status or type of event. |
 
 **Event Types** (typical):
+
 - Snapshots in progress
 - Scheduled maintenance windows
 - System updates
@@ -150,6 +160,7 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 - Network maintenance
 
 **Integration Points**:
+
 - Alert systems for maintenance windows
 - Automated backup verification
 - Capacity planning for migrations
@@ -162,6 +173,7 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 ### Recommended Monitoring Strategy
 
 **1. Health Checks**:
+
 ```javascript
 // Every 5 minutes
 async function healthCheck(serviceid) {
@@ -179,6 +191,7 @@ async function healthCheck(serviceid) {
 ```
 
 **2. Performance Monitoring**:
+
 ```javascript
 // Every hour
 async function collectMetrics(serviceid) {
@@ -193,6 +206,7 @@ async function collectMetrics(serviceid) {
 ```
 
 **3. Maintenance Tracking**:
+
 ```javascript
 // Every 15 minutes
 async function checkMaintenance(serviceid) {
@@ -204,6 +218,7 @@ async function checkMaintenance(serviceid) {
 ```
 
 **4. Log Analysis**:
+
 ```javascript
 // On-demand or scheduled
 async function analyzeLogs(serviceid) {
@@ -231,12 +246,14 @@ async function analyzeLogs(serviceid) {
 ### Critical Alerts
 
 **Immediate Response Required**:
+
 - Instance status changes to `error` or `suspended`
 - Service ID validation fails
 - Unexpected maintenance events
 - High error rate in serial logs
 
 **Warning Alerts**:
+
 - CPU/Memory above 80% for >15 minutes
 - Disk space above 85%
 - Network bandwidth approaching limits
@@ -245,6 +262,7 @@ async function analyzeLogs(serviceid) {
 ### Integration with Monitoring Tools
 
 **Prometheus/Grafana**:
+
 ```yaml
 # Example Prometheus scrape config
 scrape_configs:
@@ -256,6 +274,7 @@ scrape_configs:
 ```
 
 **PagerDuty/Opsgenie**:
+
 - Alert on instance status changes
 - Escalate on repeated health check failures
 - Notify on scheduled maintenance
@@ -266,24 +285,28 @@ scrape_configs:
 ## Best Practices
 
 ### Monitoring Frequency
+
 - **Health checks**: Every 5 minutes
 - **Performance metrics**: Every 15-60 minutes
 - **Log analysis**: Hourly or on-demand
 - **Maintenance checks**: Every 15 minutes
 
 ### Data Retention
+
 - **Real-time metrics**: 24 hours
 - **Hourly aggregates**: 30 days
 - **Daily aggregates**: 1 year
 - **Critical logs**: Indefinite
 
 ### Alert Thresholds
+
 - **CPU**: Warning at 80%, Critical at 95%
 - **Memory**: Warning at 85%, Critical at 95%
 - **Disk**: Warning at 80%, Critical at 90%
 - **Network**: Warning at 80% of limit
 
 ### Performance Optimization
+
 - Cache `check_serviceid` results (5 minutes)
 - Batch log queries when possible
 - Use appropriate time windows for charts
@@ -296,18 +319,21 @@ scrape_configs:
 ### Common Issues
 
 **Serial Console Not Responding**:
+
 1. Verify service ID is valid
 2. Check instance status
 3. Try VNC console as alternative
 4. Contact Hostwinds support if persistent
 
 **Missing Performance Data**:
+
 1. Verify `period` parameter is valid
 2. Check if instance was recently created
 3. Ensure instance is running
 4. Try different time periods
 
 **Maintenance Events Not Showing**:
+
 1. Verify no maintenance is scheduled
 2. Check if instance is in maintenance mode
 3. Poll more frequently during known maintenance windows

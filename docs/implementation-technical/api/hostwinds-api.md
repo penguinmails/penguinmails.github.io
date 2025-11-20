@@ -1,6 +1,7 @@
 # Hostwinds API Overview
 
 ---
+
 title: "Hostwinds Cloud API Integration"
 description: "Overview of Hostwinds VPS and infrastructure API integration for PenguinMails server management"
 last_modified_date: "2025-11-19"
@@ -108,6 +109,7 @@ graph TB
 Endpoints for creating, managing, and monitoring VPS instances.
 
 **Key Operations**:
+
 - Create and provision new servers
 - Retrieve server details and status
 - Start, stop, reboot instances
@@ -117,6 +119,7 @@ Endpoints for creating, managing, and monitoring VPS instances.
 **Documentation**: [Hostwinds Server Management API](hostwinds-server-management-api.md)
 
 **Common Use Cases**:
+
 - Tenant onboarding: Create VPS for new tenant
 - Maintenance: Reboot servers for updates
 - Troubleshooting: Enter rescue mode for diagnostics
@@ -128,6 +131,7 @@ Endpoints for creating, managing, and monitoring VPS instances.
 Endpoints for managing IP addresses, networking, and firewall configuration.
 
 **Key Operations**:
+
 - Allocate and manage dedicated IPs
 - Configure primary and secondary IPs
 - Set reverse DNS (rDNS)
@@ -137,6 +141,7 @@ Endpoints for managing IP addresses, networking, and firewall configuration.
 **Documentation**: [Hostwinds Networking API](hostwinds-networking-api.md)
 
 **Common Use Cases**:
+
 - IP allocation: Add dedicated IP for tenant
 - DNS configuration: Set rDNS for deliverability
 - Network troubleshooting: Regenerate networking
@@ -148,6 +153,7 @@ Endpoints for managing IP addresses, networking, and firewall configuration.
 Endpoints for managing server upgrades, billing cycles, and pricing queries.
 
 **Key Operations**:
+
 - Upgrade server resources (CPU, RAM, disk)
 - Change billing cycles
 - Query pricing and plans
@@ -157,6 +163,7 @@ Endpoints for managing server upgrades, billing cycles, and pricing queries.
 **Documentation**: [Hostwinds Upgrade & Billing API](hostwinds-upgrade-billing-api.md)
 
 **Common Use Cases**:
+
 - Capacity planning: Query available plans and pricing
 - Resource scaling: Upgrade server for growing tenant
 - Cost optimization: Change billing cycle for savings
@@ -168,6 +175,7 @@ Endpoints for managing server upgrades, billing cycles, and pricing queries.
 Endpoints for monitoring server health, logs, and performance.
 
 **Key Operations**:
+
 - Retrieve server logs and serial console
 - Get server performance charts
 - Check maintenance events
@@ -177,6 +185,7 @@ Endpoints for monitoring server health, logs, and performance.
 **Documentation**: [Hostwinds Monitoring API](hostwinds-monitoring-api.md)
 
 **Common Use Cases**:
+
 - Troubleshooting: Access serial console logs
 - Performance monitoring: Retrieve server metrics
 - Maintenance planning: Check scheduled events
@@ -188,6 +197,7 @@ Endpoints for monitoring server health, logs, and performance.
 Recommendations for reliable, secure, and efficient automation.
 
 **Key Topics**:
+
 - Error handling and retry strategies
 - Asynchronous operation polling
 - Security and credential management
@@ -197,6 +207,7 @@ Recommendations for reliable, secure, and efficient automation.
 **Documentation**: [Hostwinds Automation Best Practices](hostwinds-automation-best-practices.md)
 
 **Critical for**:
+
 - Production automation scripts
 - CI/CD pipeline integration
 - Monitoring and alerting systems
@@ -206,14 +217,17 @@ Recommendations for reliable, secure, and efficient automation.
 ## 🔗 Related Documentation
 
 ### Infrastructure Planning
+
 - [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling and provider roles
 - [Database Infrastructure](../database-infrastructure/business-leaders-database-migration-guide.md) - Schema integration and cost fields
 
 ### API Documentation
+
 - [Central SMTP Operations API](central-smtp-operations-api.md) - Internal SMTP infrastructure management
 - [Executive API](executive-api.md) - High-level business metrics and reporting
 
 ### Implementation Guides
+
 - [Architecture Overview](../architecture-system/architecture-overview.md) - System architecture and integration points
 - [Development Standards](../development-guidelines/development-standards.md) - API integration best practices
 

@@ -1,6 +1,7 @@
 # Hostwinds Upgrade, Billing, and Pricing API
 
 ---
+
 title: "Hostwinds Upgrade, Billing, and Pricing API"
 description: "Detailed API contract for Hostwinds server upgrades, billing management, and pricing queries"
 last_modified_date: "2025-11-19"
@@ -19,6 +20,7 @@ persona: "Documentation Users"
 ### get_price_list (Get Available Resources with Prices)
 
 **Resource Prices Options Object**:
+
 ```json
 {
   "id": "integer",
@@ -55,6 +57,7 @@ persona: "Documentation Users"
 | **Notes** | Returns both **fixed plans** and **custom plans**. Custom plans include the nested pricing object, which defines granular options for components like RAM and CPU. |
 
 **Use Cases**:
+
 - Populate `vps_instances.approximate_cost` field
 - Cost planning and budgeting
 - Upgrade path analysis
@@ -78,6 +81,7 @@ persona: "Documentation Users"
 
 > [!IMPORTANT]
 > **Two-Step Upgrade Process**: Hostwinds upgrades require two separate API calls:
+>
 > 1. `upgrade_instance` - Creates the upgrade order and invoice
 > 2. `upgrade_server` - Applies the upgrade after invoice payment
 
@@ -93,6 +97,7 @@ persona: "Documentation Users"
 | **Notes** | **Creates the invoice. The upgrade is *not* applied to the server until the invoice is paid and `upgrade_server` is called.** |
 
 **Parameters**:
+
 - `rid` - Resource ID from `get_price_list`
 - `ram`, `cpu`, `disk`, `bandwidth` - For custom plans only
 
@@ -176,6 +181,7 @@ persona: "Documentation Users"
 | **Notes** | If `billingcycle` is omitted, the default value is "monthly". |
 
 **Valid Billing Cycles**:
+
 - `hourly` (if enabled)
 - `monthly`
 - `quarterly`
@@ -219,10 +225,12 @@ persona: "Documentation Users"
 ### Cost Modeling Workflow
 
 **Baseline Configuration**:
+
 - Default plan: Hostwinds Unmanaged Linux VPS 1 CPU / 2 GB / 50 GB / 2 TB at **$9.99/month**
 - IP cost: **$4.99/month per dedicated IP**
 
 **Automated Cost Tracking**:
+
 1. Call `get_price_list` on instance creation
 2. Normalize pricing to monthly equivalent
 3. Populate `vps_instances.approximate_cost`
@@ -230,6 +238,7 @@ persona: "Documentation Users"
 5. Update on upgrades or billing cycle changes
 
 **Database Integration**:
+
 - `vps_instances.approximate_cost` - Populated from pricing APIs
 - `smtp_ip_addresses.approximate_cost` - $4.99/month baseline
 - Periodic reconciliation against actual invoices
@@ -282,18 +291,21 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 ## Best Practices
 
 ### Upgrade Planning
+
 - Always check for existing upgrade orders first
 - Verify invoice payment before applying upgrades
 - Check reboot requirements and schedule accordingly
 - Test upgrade path in staging environment
 
 ### Cost Management
+
 - Query pricing regularly to detect changes
 - Normalize all pricing to monthly equivalent
 - Reconcile modeled costs with actual invoices monthly
 - Document pricing assumptions and constants
 
 ### Billing Optimization
+
 - Analyze cost savings for annual vs monthly billing
 - Consider managed vs unmanaged based on team capacity
 - Monitor upgrade costs vs new instance costs

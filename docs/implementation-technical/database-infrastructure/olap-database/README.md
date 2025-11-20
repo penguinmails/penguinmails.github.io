@@ -59,6 +59,7 @@ The OLAP Analytics Database follows a warehouse approach:
 - **admin_audit_log**: Compliance-focused audit trail
 
 This design ensures:
+
 - Fast analytical queries and reporting
 - Clear separation from operational systems
 - Compliance with data retention policies
@@ -73,6 +74,7 @@ This design ensures:
 ## Integration
 
 This OLAP analytics database integrates with:
+
 - OLTP system for aggregated data ingestion
 - Queue system for ETL job orchestration
 - External analytics/BI tools for reporting

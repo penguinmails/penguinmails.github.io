@@ -37,14 +37,18 @@ The Queue tier:
 The database schema consists of three main entities:
 
 ### Job Queues
+
 The `job_queues` entity defines different queue types with their configuration:
+
 - `name`: Primary key identifying the queue
 - `default_priority`: Default priority level (lower numbers = higher priority)
 - `is_active`: Boolean flag to pause/resume all jobs in this queue
 - `created_at`: Timestamp when the queue was created
 
 ### Jobs
+
 The `jobs` entity represents individual work items to be processed:
+
 - `id`: Unique identifier for the job
 - `queue_name`: Foreign key referencing the queue this job belongs to
 - `status`: Current job state (queued, running, completed, failed, cancelled)
@@ -60,7 +64,9 @@ The `jobs` entity represents individual work items to be processed:
 - `created_at` and `updated_at`: Job lifecycle timestamps
 
 ### Job Logs
+
 The `job_logs` entity provides optional, bounded logging for debugging:
+
 - `id`: Unique identifier for the log entry
 - `job_id`: Foreign key referencing the associated job
 - `status`: Log entry status (attempting, success, retry, failed)
@@ -78,7 +84,9 @@ The `job_logs` entity provides optional, bounded logging for debugging:
 ## Design Principles
 
 ### Payload Best Practices
+
 The `payload` field should store only what workers need:
+
 - IDs and small configuration data
 - References to OLTP/Content/Notifications records
 - **DO NOT store**:
@@ -87,18 +95,23 @@ The `payload` field should store only what workers need:
   - High-PII data blobs
 
 ### Job Logs Guidelines
+
 The `job_logs` entity is optional and should be:
+
 - Bounded via retention policies
 - Used for local debugging purposes
 - **NOT** a full observability sink
 
 ### External Logging Integration
+
 For comprehensive monitoring, raw traces, stack traces, provider responses, and metrics should belong in the external logging/observability stack (see external-analytics-logging documentation).
 
 ### Analytics Restrictions
+
 OLAP systems must **NOT** query this tier directly as a primary analytics source. If analytics are needed, create dedicated aggregates fed from jobs or events.
 
 ### Architecture Alignment
+
 This model fits the 5-tier architecture where jobs orchestrate work between OLTP, Content DB, Notifications DB, external services, and OLAP loaders, without overloading any individual tier.
 
 ```mermaid

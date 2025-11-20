@@ -292,6 +292,7 @@ To avoid scope creep:
 ## 8. Mermaid ER Diagram
 
 See:
+
 - [`mermaid-er.md`](mermaid-er.md)
 for the visual ER representation of this schema.
 

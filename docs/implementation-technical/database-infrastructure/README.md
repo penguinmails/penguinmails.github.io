@@ -29,7 +29,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ### 🗄️ **Level 2: Detailed Technical Specifications**
 
-- `oltp-schema-guide` - Complete OLTP database schema with multi-tenant design
+- `oltp-database/` - OLTP database documentation and schema (operational core, multi-tenant)
 - `content-database/` - Content database documentation and schema (email bodies, attachments)
 - `notifications-database/` - Notifications & system events database documentation
 - `olap-database/` - OLAP analytics database documentation

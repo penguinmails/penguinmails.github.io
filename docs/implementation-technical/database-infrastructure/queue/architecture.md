@@ -20,14 +20,16 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 
 ### Dual Storage Strategy
 
-**PostgreSQL (Durable Layer)**
+### PostgreSQL (Durable Layer)
+
 - Permanent job storage and state tracking
 - ACID compliance for data consistency
 - Complex queries for job management
 - Comprehensive audit trails
 - Integration with analytics systems
 
-**Redis (Performance Layer)**
+### Redis (Performance Layer)
+
 - Millisecond-latency job queues
 - Real-time job processing
 - Priority-based routing
@@ -46,7 +48,7 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 
 ### Component Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                    Queue System Architecture                │
 ├─────────────────────────────────────────────────────────────┤
@@ -69,6 +71,7 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 ### Component Responsibilities
 
 #### API Layer (Producer)
+
 - **Purpose**: Creates new jobs and submits them to the system
 - **Storage**: Initially stores jobs in PostgreSQL
 - **Priority**: High-priority jobs may bypass Redis migration
@@ -96,6 +99,7 @@ function createJob(queueName, payload, priority) {
 ```
 
 #### Queuer Process (Migrator)
+
 - **Purpose**: Migrates jobs from PostgreSQL to Redis for processing
 - **Frequency**: Runs continuously, checking every few seconds
 - **Strategy**: Priority-based batch migration
@@ -150,6 +154,7 @@ function migrateJobToRedis(job) {
 ```
 
 #### Worker Servers (Consumers)
+
 - **Purpose**: Process jobs from Redis queues
 - **Scaling**: Multiple workers can run concurrently
 - **Reliability**: Automatic retry with exponential backoff
@@ -255,34 +260,40 @@ function determineQueueName(priority, queueName) {
 
 ### Horizontal Scaling
 
-**PostgreSQL Scaling**
+### PostgreSQL Scaling
+
 - Read replicas for query distribution
 - Connection pooling for efficiency
 - Proper indexing for performance
 
-**Redis Scaling**
+### Redis Scaling
+
 - Redis Cluster for horizontal distribution
 - Memory optimization and eviction policies
 - Connection multiplexing
 
-**Worker Scaling**
+### Worker Scaling
+
 - Stateless worker design
 - Container orchestration (Kubernetes)
 - Auto-scaling based on queue depth
 
 ### Performance Optimization
 
-**Batch Operations**
+### Batch Operations
+
 - Migrate jobs in batches to reduce database load
 - Process multiple jobs per worker iteration
 - Bulk updates for status changes
 
-**Memory Management**
+### Memory Management
+
 - Redis memory limits and eviction policies
 - Connection pooling for database connections
 - Efficient serialization (JSON vs binary)
 
-**Monitoring Integration**
+### Monitoring Integration
+
 - Real-time queue depth monitoring
 - Worker utilization tracking
 - Performance metrics collection
@@ -291,17 +302,20 @@ function determineQueueName(priority, queueName) {
 
 ### System Resilience
 
-**Database Failures**
+### Database Failures
+
 - PostgreSQL read replicas for redundancy
 - Automatic failover mechanisms
 - Job recovery after database restoration
 
-**Redis Failures**
+### Redis Failures
+
 - Redis persistence configuration
 - Queue backup and recovery procedures
 - Graceful degradation strategies
 
-**Worker Failures**
+### Worker Failures
+
 - Automatic job reassignment
 - Timeout-based job recovery
 - Dead letter queue for failed jobs

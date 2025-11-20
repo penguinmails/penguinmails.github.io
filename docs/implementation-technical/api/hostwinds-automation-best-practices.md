@@ -1,6 +1,7 @@
 # Hostwinds Automation Best Practices
 
 ---
+
 title: "Hostwinds API Automation Best Practices"
 description: "Best practices and recommendations for reliable, secure, and efficient Hostwinds API automation"
 last_modified_date: "2025-11-19"
@@ -48,6 +49,7 @@ if (response.status === 200) {
 ### Error Response Handling
 
 **Standard Error Format**:
+
 ```json
 [
   {
@@ -163,6 +165,7 @@ async function safeInstanceOperation(serviceid, operation) {
 Many Hostwinds operations are asynchronous. The success response only means the task was **queued**, not completed.
 
 **Operations Requiring Polling**:
+
 - `add_instance` - Server creation
 - `recreate` - Server recreation
 - `reinstall_instance` - OS reinstall
@@ -266,6 +269,7 @@ async function upgradeInstanceWorkflow(serviceid, rid) {
 **Recommended Approaches**:
 
 1. **Environment Variables**:
+
 ```javascript
 // .env file (never commit this)
 HOSTWINDS_API_KEY=your_api_key_here
@@ -277,7 +281,8 @@ if (!apiKey) {
 }
 ```
 
-2. **Secrets Manager** (AWS, Azure, GCP):
+1. **Secrets Manager** (AWS, Azure, GCP):
+
 ```javascript
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager');
 
@@ -290,7 +295,8 @@ async function getHostwindsAPIKey() {
 }
 ```
 
-3. **Encrypted Configuration**:
+1. **Encrypted Configuration**:
+
 ```javascript
 const crypto = require('crypto');
 
@@ -596,18 +602,21 @@ class HostwindsAutomation {
 ### Metrics to Track
 
 **API Performance**:
+
 - Request latency (p50, p95, p99)
 - Error rate by action
 - Retry rate
 - Circuit breaker state changes
 
 **Business Metrics**:
+
 - Instance creation success rate
 - Average provisioning time
 - Cost per instance
 - API call volume by action
 
 **Operational Metrics**:
+
 - Failed validations
 - Timeout rate
 - Rate limit hits

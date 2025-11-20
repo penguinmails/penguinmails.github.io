@@ -21,12 +21,14 @@ Worker processes consume jobs from Redis queues and execute the actual business 
 ### Core Design Principles
 
 **Stateless Design**:
+
 - Workers maintain no persistent state between jobs
 - All job data retrieved from Redis and PostgreSQL
 - Can be scaled up/down without data loss
 - Multiple workers can process same queue type
 
 **Fault Tolerance**:
+
 - Automatic job reassignment on worker failure
 - Timeout-based job recovery
 - Graceful shutdown with job completion

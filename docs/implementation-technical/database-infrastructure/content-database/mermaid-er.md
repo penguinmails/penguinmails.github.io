@@ -85,4 +85,5 @@ erDiagram
   %% These belong in external analytics/logging/observability systems
   %% as defined in external-analytics-logging.md.
 ```
+
 ---

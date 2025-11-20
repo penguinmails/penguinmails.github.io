@@ -19,7 +19,7 @@ The Content DB is a dedicated tier for heavy content storage:
 It is NOT:
 
 - An analytics warehouse (OLAP covers that)
-- An operational store for campaigns)
+- An operational store for campaigns
 - A general logging/telemetry sink (see external analytics)
 
 For analytics and logging responsibilities, refer to:
@@ -114,6 +114,7 @@ CREATE INDEX idx_content_objects_hash
 ```
 
 Notes:
+
 - storage_key:
   - Opaque identifier; referenced by OLTP records (e.g., emails, messages).
 - No direct FKs to OLTP:
@@ -145,6 +146,7 @@ CREATE INDEX idx_attachments_parent
 ```
 
 Notes:
+
 - attachments are strictly scoped to content_objects.
 - No analytics or logging behavior here.
 
@@ -165,6 +167,7 @@ Notes:
     - Detect broken references (OLTP row referencing missing content).
 
 No cross-database FK:
+
 - This avoids migration coupling and cross-tier failures.
 
 ### 3.2 How OLAP interacts with Content DB
@@ -197,6 +200,7 @@ Content DB is not a log sink. The following apply:
   - Do not treat content_search_index as a primary Content DB responsibility.
 
 For patterns and responsibilities:
+
 - See [External Analytics Logging](README.md).
 
 ---
@@ -205,33 +209,35 @@ For patterns and responsibilities:
 
 Several lifecycle and optimization flows were previously encoded entirely in SQL functions in legacy docs. Use this split instead:
 
-1) JS/TS application)
+1) JS/TS application
 
 Implement in services/workers:
-  - Content ingestion:
-    - Generate storage_key.
-    - Write to content_objects and attachments.
-  - Compression and re-compression:
-    - Choose algorithms dynamically.
-    - Stream content through compression libraries.
-  - Deduplication:
-    - Compute hashes.
-    - Decide when/how to deduplicate.
-  - Virus and security scanning:
-    - Integrate with scanning services.
-  - Scheduling:
-    - Trigger lifecycle jobs (archive) based on policies.
+
+- Content ingestion:
+  - Generate storage_key.
+  - Write to content_objects and attachments.
+- Compression and re-compression:
+  - Choose algorithms dynamically.
+  - Stream content through compression libraries.
+- Deduplication:
+  - Compute hashes.
+  - Decide when/how to deduplicate.
+- Virus and security scanning:
+  - Integrate with scanning services.
+- Scheduling:
+  - Trigger lifecycle jobs (archive) based on policies.
 - Reason:
   - Easier to test, deploy, and iterate.
   - Keeps DB schema guide stable and provider-agnostic.
 
-2) SQL )
+1) SQL
 
 Implement in SQL:
-  - Small, deterministic helpers with clear interfaces, e.g.:
-    - Mark content as archived by storage_key.
-    - Select candidates for expiration based on expires_at.
-    - Summarize per-tenant storage usage for billing/OLAP ingestion.
+
+- Small, deterministic helpers with clear interfaces, e.g.:
+  - Mark content as archived by storage_key.
+  - Select candidates for expiration based on expires_at.
+  - Summarize per-tenant storage usage for billing/OLAP ingestion.
 - Guidelines:
   - No hard-coded third-party logic.
   - No complex alert routing or provider-specific functionality.
@@ -263,6 +269,7 @@ $$ LANGUAGE plpgsql;
 ```
 
 JS/TS worker would:
+
 - Call this helper in batches.
 - Emit metrics/logs to external systems.
 - Avoid embedding monitoring logic back into DB.
@@ -278,10 +285,10 @@ Use this guide as the forward-looking contract:
 - Extract:
 - Good ideas (tiered storage, retention policies, dedup).
 - Re-implement them as:
-    - JS/TS workers orchestrating:
-    - Reads/writes to content_objects/attachments.
-    - Logging to external analytics/observability.
-    - Optional helper functions in SQL for batch operations.
+  - JS/TS workers orchestrating:
+  - Reads/writes to content_objects/attachments.
+  - Logging to external analytics/observability.
+  - Optional helper functions in SQL for batch operations.
 
 - For new work:
   - Add or adjust only:
@@ -293,8 +300,10 @@ Use this guide as the forward-looking contract:
     - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
+
 - [OLTP Schema Guide](README.md),
 - [OLAP Analytics Schema Guide](README.md),
 - [External Analytics Logging](README.md),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
+
 ---
