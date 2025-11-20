@@ -100,7 +100,7 @@ A task is considered done only if it meets acceptance criteria and has been veri
 | Role | Responsibilities |
 | ----- | ----- |
 | **Founders** (Mustafa & Anthony) | Oversee product direction, business strategy, and technical vision. Approve sprint goals, review demos, and ensure alignment between product and market goals. |
-| **Product Owner** (Rasak) | Maintains sprint structure, Jira board organization, and progress tracking. Acts as a bridge between founders and developers to ensure clarity and quality delivery. |
+| **Product Owner** | Maintains sprint structure, Jira board organization, and progress tracking. Acts as a bridge between founders and developers to ensure clarity and quality delivery. |
 | **Frontend Developer(s)** | Implement UI/UX features, integrate APIs, and ensure frontend responsiveness and functionality. |
 | **Infrastructure Developer(s)** | Handle server setup, automation, deployment pipelines, and scalability. Ensure reliable backend and email delivery infrastructure. |
 | **Designer(s)** | Create product visuals, landing pages, and support UI consistency. |

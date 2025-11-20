@@ -110,6 +110,19 @@ Each ticket includes:
 - **Dependencies** - Related tickets that must be completed first
 - **Testing** - Test cases to verify completion
 
+### Task Status Workflow
+
+Following PenguinMails SOP, all tasks follow this standardized status progression:
+
+- **Backlog** – Idea or future task
+- **Selected for Development** – Approved for the current sprint
+- **In Progress** – Developer actively working on it
+- **Ready for Testing** – Implementation complete and pending validation
+- **Blocked** – Stuck due to dependencies or missing inputs
+- **Done** – Fully reviewed and accepted
+
+**Note:** A task is considered done only if it meets acceptance criteria and has been verified by the Product Owner.
+
 ## How to Use
 
 1. **Start with the Epic README** - Read the epic overview to understand the big picture

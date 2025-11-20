@@ -44,6 +44,17 @@ This repository contains the complete documentation for PenguinMails, including:
 - **Docker** - Containerized development environment
 - **GitHub Pages** - Reliable hosting with custom domain support
 
+### For Freelancers
+
+Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
+
+- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/)** - Complete freelancer success center and business development resources
+- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+- 📋 **[Operations Framework](/docs/operations/freelancer-management/)** - Team structure, sprint workflow, and coordination protocols
+- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional quotation preparation and business development
+
+**Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
+
 ## Quick Start
 
 ### For End Users

@@ -186,6 +186,55 @@ For research spikes, **Done** means:
 
 This Definition of Done ensures consistent quality standards across all contributions and provides clear expectations for both contributors and reviewers.
 
+## PenguinMails Standard Operating Procedure (SOP)
+
+### Purpose
+
+This SOP defines the standard processes for planning, communication, task management, and sprint execution at PenguinMails.
+
+It ensures all team members follow a consistent workflow to improve productivity, accountability, and delivery quality.
+
+### Tools & Platform
+
+- **Jira** – Task creation, sprint planning, progress tracking
+- **Discord** – Team communication, quick discussions, and daily updates
+- **Google Docs/Sheets** – Documentation, PRDs, and research outputs
+- **GitHub** – Code collaboration and version control
+
+### Communication Rules
+
+- All work-related discussions happen in Discord using defined channels
+- Avoid direct messages for project-related issues, keep discussions transparent
+- Tag teammates directly when a response is required
+- Maintain professionalism and clarity at all times
+- **Sync meetings**: Once per sprint (Planning + Demo)
+- **Async updates**: Daily in the sprint channel
+
+### Developer Responsibilities
+
+- Update progress daily in Jira
+- Report blockers early through Discord or directly in Jira
+- Keep PRs small and link them to relevant Jira tasks
+- Write short documentation for implemented features
+- Follow the Definition of Done (DoD) for all contributions
+- Ensure all code meets linting and naming standards
+
+### Code & Infrastructure Standards
+
+- All environments (staging, production) must have clear documentation
+- Infrastructure scripts must be version-controlled in GitHub
+- Access permissions and credentials should be approved before use
+- Use secure practices when managing configuration or deployment keys
+- Follow established Git workflow and commit message formats
+
+### Compliance & Security
+
+- Follow security best practices for all integrations and APIs
+- Use secure credentials and enable 2FA on all project accounts
+- Do not share confidential or client data outside official channels
+- Ensure compliance with GDPR and applicable data privacy laws
+- Maintain clean, documented code that meets repository standards
+
 ## Markdown Linting
 
 ### Docker-Based Linting Approach

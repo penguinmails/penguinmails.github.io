@@ -233,6 +233,93 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 Freelancers must provide effort estimates in story points before accepting any task, and clients evaluate and approve/reject these estimates as part of the task assignment framework.
 
+### Team Structure
+
+| Role | Responsibilities |
+| :----- | :----- |
+| **Founders (Mustafa & Anthony)** | Oversee product direction, business strategy, and technical vision. Approve sprint goals, review demos, and ensure alignment between product and market goals. |
+| **Product Owner** | Maintains sprint structure, Jira board organization, and progress tracking. Acts as a bridge between founders and developers to ensure clarity and quality delivery. |
+| **Frontend Developer(s)** | Implement UI/UX features, integrate APIs, and ensure frontend responsiveness and functionality. |
+| **Infrastructure Developer(s)** | Handle server setup, automation, deployment pipelines, and scalability. Ensure reliable backend and email delivery infrastructure. |
+| **Designer(s)** | Create product visuals, landing pages, and support UI consistency. |
+| **Interns/Assistants** | Support planning, documentation, and follow-ups under PO guidance. |
+
+### Sprint Workflow
+
+Each sprint runs for 1–2 weeks, depending on scope.
+
+**Phases:**
+
+- **Planning**: Define sprint goals and prioritize tasks
+- **Execution**: Developers update Jira daily and communicate blockers
+- **Demo**: Product Owner and stakeholders review completed tasks
+- **Retrospective**: Discuss what went well and how to improve in the next sprint
+
+**Task Status Workflow:**
+
+- **Backlog** – Idea or future task
+- **Selected for Development** – Approved for the current sprint
+- **In Progress** – Developer actively working on it
+- **Ready for Testing** – Implementation complete and pending validation
+- **Blocked** – Stuck due to dependencies or missing inputs
+- **Done** – Fully reviewed and accepted
+
+**Completion Rule:**
+
+A task is considered done only if it meets acceptance criteria and has been verified by the Product Owner.
+
+### Communication & Coordination Protocols
+
+#### Tools & Platform Standards
+
+- **Jira** – Task creation, sprint planning, progress tracking
+- **Discord** – Team communication, quick discussions, and daily updates
+- **Google Docs/Sheets** – Documentation, PRDs, and research outputs
+- **GitHub** – Code collaboration and version control
+
+#### Communication Rules
+
+- All work-related discussions happen in Discord using defined channels
+- Avoid direct messages for project-related issues, keep discussions transparent
+- Tag teammates directly when a response is required
+- Maintain professionalism and clarity at all times
+- **Sync meetings**: Once per sprint (Planning + Demo)
+- **Async updates**: Daily in the sprint channel
+
+#### Developer Responsibilities
+
+- Update progress daily in Jira
+- Report blockers early through Discord or directly in Jira
+- Keep PRs small and link them to relevant Jira tasks
+- Write short documentation for implemented features
+- Follow the Definition of Done (DoD) for all contributions
+- Ensure all work meets quality standards and compliance requirements
+
+#### Product Owner Responsibilities
+
+- Ensure backlog is groomed and prioritized before each sprint
+- Follow up on blockers and task progress
+- Maintain alignment between product goals and technical execution
+- Review, test, and validate completed work
+- Act as bridge between founders and developers
+- Ensure sprint structure and progress tracking
+
+#### Code & Infrastructure Standards
+
+- All environments (staging, production) must have clear documentation
+- Infrastructure scripts must be version-controlled in GitHub
+- Access permissions and credentials should be approved before use
+- Use secure practices when managing configuration or deployment keys
+- Follow established quality assurance and testing procedures
+
+#### Compliance & Security
+
+- Follow security best practices for all integrations and APIs
+- Use secure credentials and enable 2FA on all project accounts
+- Do not share confidential or client data outside official channels
+- Ensure compliance with GDPR and applicable data privacy laws
+- Maintain clean, documented code that meets repository standards
+
 ## Operational Success Metrics
 
 ### Performance Targets
