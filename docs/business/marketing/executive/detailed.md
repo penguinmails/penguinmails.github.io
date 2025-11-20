@@ -188,9 +188,9 @@ This section defines how executive roles govern marketing initiatives at a busin
 - **Upward context:** `docs/business/marketing/executive/summary.md`, `docs/business/marketing/strategy/overview.md`
 - **Sideways context:** `docs/business/marketing/roi/detailed.md`, `docs/business/marketing/operations/detailed.md`
 - **Downward (technical implementation references only):**
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-automation-platform.md`
+  - See technical implementation: `docs/implementation-technical/marketing/analytics-integration/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/dashboard/marketing-dashboard-technical.md`
+  - See technical implementation: `docs/implementation-technical/marketing/automation/marketing-automation-platform-specification.md`
 
 This executive requirements analysis focuses on stakeholder expectations, governance structures, and decision rights, providing a clear business foundation without prescribing low-level technical implementations
 ---

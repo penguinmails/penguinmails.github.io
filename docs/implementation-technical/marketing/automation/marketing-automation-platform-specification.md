@@ -141,7 +141,7 @@ const crmIntegration = {
 - **For strategic context see:** `docs/business/marketing/operations/detailed.md`
 - **For executive requirements see:** `docs/business/marketing/executive/detailed.md`
 - **For ROI analysis see:** `docs/business/marketing/roi/detailed.md`
-- **For technical foundation see:** `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+- **For technical foundation see:** `../analytics-integration/marketing-analytics-architecture.md`
 
 This technical implementation focuses exclusively on automation platform architecture, integration patterns, and operational excellence without business value narratives or stakeholder storytelling.
 ---

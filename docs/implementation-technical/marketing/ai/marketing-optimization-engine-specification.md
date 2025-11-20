@@ -188,7 +188,7 @@ class ModelMaintenanceSystem:
 - **For strategic context see:** `docs/business/marketing/strategy/detailed.md`
 - **For performance requirements see:** `docs/business/marketing/performance/summary.md`
 - **For ROI analysis see:** `docs/business/marketing/roi/detailed.md`
-- **For technical foundation see:** `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+- **For technical foundation see:** `../analytics-integration/marketing-analytics-architecture.md`
 
 This technical implementation focuses exclusively on ML model architecture, inference systems, and optimization algorithms without business value narratives or strategic storytelling.
 ---

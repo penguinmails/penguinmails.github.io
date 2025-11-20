@@ -23,19 +23,19 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ### 📋 **Level 1: Strategic Overview**
 
-- `5-tier-database-architecture-guide.md` - Comprehensive backend developer guide for the 5-tier database architecture
+- `architecture/5-tier-database-architecture-guide.md` - Comprehensive backend developer guide for the 5-tier database architecture
 - `README` (this document) - Main database and infrastructure overview with key decisions and business impact
 - High-level database architecture and infrastructure management principles
 
 ### 🗄️ **Level 2: Detailed Technical Specifications**
 
+- `architecture/` - Database architecture, schema guides, and implementation details
+- `operations/` - Database operations, backup/recovery, and migration guides
 - `oltp-database/` - OLTP database documentation and schema (operational core, multi-tenant)
 - `content-database/` - Content database documentation and schema (email bodies, attachments)
 - `notifications-database/` - Notifications & system events database documentation
 - `olap-database/` - OLAP analytics database documentation
 - `queue/` - Queue system documentation and management procedures
-- `infrastructure-management` - Infrastructure operations and deployment procedures
-- `database-performance` - Performance optimization and monitoring strategies
 
 ### 🔧 **Level 3: Enterprise Implementation**
 

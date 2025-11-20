@@ -318,7 +318,7 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md) - Instance operations
 - [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling details
-- [Database Migration Guide](../database-infrastructure/business-leaders-database-migration-guide.md) - Cost field implementation
+- [Database Migration Guide](../database-infrastructure/operations/database-migration-guide.md) - Cost field implementation
 
 ---
 

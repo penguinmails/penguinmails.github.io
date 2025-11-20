@@ -239,7 +239,7 @@ This document provides marketing performance optimization with clear separation 
 
 - **Detailed Strategy**: `docs/business/marketing/strategy/detailed.md#performance-framework`
 - **Journey Optimization**: `docs/business/marketing/journey/summary.md#optimization-strategy`
-- **Technical Implementation**: `docs/implementation-technical/marketing/marketing-dashboard-technical.md#performance-optimization`
+- **Technical Implementation**: `docs/implementation-technical/marketing/dashboard/marketing-dashboard-technical.md#performance-optimization`
 
 **Document Classification:** Level 1 - Performance Summary
 **Performance Approval:** Required for implementation and performance optimization standards

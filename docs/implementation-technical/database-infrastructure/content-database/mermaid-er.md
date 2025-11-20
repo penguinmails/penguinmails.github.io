@@ -83,7 +83,7 @@ erDiagram
   %% - Detailed security or behavioral analytics
   %%
   %% These belong in external analytics/logging/observability systems
-  %% as defined in external-analytics-logging.md.
+  %% as defined in ../operations/external-analytics-logging.md.
 ```
 
 ---

@@ -205,7 +205,7 @@ This architecture enables the system to scale to thousands of tenants while main
 **📚 Additional Resources**:
 
 - [5-Tier Database Implementation Guide](5-tier-database-implementation-guide.md) - Detailed implementation patterns and operational procedures
-- [5-Tier Database Questions](5-tier-database-questions.md) - Exploratory questions for architectural validation
+- [5-Tier Database Questions](5-tier-database-faq.md) - Exploratory questions for architectural validation
 - [Complete Database Infrastructure Overview](README.md) - Navigation and cross-references
 
 **Related Tier Documentation**:
@@ -215,6 +215,6 @@ This architecture enables the system to scale to thousands of tenants while main
 - [OLAP Analytics Documentation](olap-database/) - Complete warehouse schema and data structures
 - [Queue System Documentation](queue/) - Complete implementation guide and patterns
 - [Notifications Documentation](notifications-database/) - Complete schema for notifications and system events
-- [External Analytics Logging](external-analytics-logging.md) - Complete guide to logging boundaries and integration patterns
+- [External Analytics Logging](../operations/external-analytics-logging.md) - Complete guide to logging boundaries and integration patterns
 
 **Keywords**: database architecture, multi-tenant, 5-tier, OLTP, OLAP, content database, notifications, queue system, external logging, enterprise architecture, scalability, operational excellence

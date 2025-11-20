@@ -295,7 +295,7 @@ This document provides customer journey optimization with clear separation betwe
 
 - **Detailed Framework**: `docs/business/marketing/strategy/detailed.md#customer-journey`
 - **Personalization Strategy**: `docs/business/marketing/performance/summary.md#personalization-engine`
-- **Technical Implementation**: `docs/implementation-technical/marketing/marketing-dashboard-technical.md#personalization-framework`
+- **Technical Implementation**: `docs/implementation-technical/marketing/dashboard/marketing-dashboard-technical.md#personalization-framework`
 
 **Document Classification:** Level 1 - Customer Journey Summary
 **Experience Approval:** Required for implementation and customer experience optimization standards

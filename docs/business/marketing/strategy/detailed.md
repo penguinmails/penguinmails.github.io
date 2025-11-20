@@ -122,10 +122,10 @@ This section defines how strategic initiatives are prioritized, sequenced, and g
 
 For each epic, detailed implementation is maintained in Level 4 technical specifications:
 
-- **Epic 1 (Foundation):** See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-- **Epic 2 (Campaign Performance):** See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
-- **Epic 3 (Customer Journey Optimization):** See technical implementation: `docs/implementation-technical/marketing/marketing-personalization-engine.md`
-- **Epic 4 (Marketing Intelligence):** See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
+- **Epic 1 (Foundation):** See technical implementation: `docs/implementation-technical/marketing/analytics-integration/marketing-analytics-architecture.md`
+- **Epic 2 (Campaign Performance):** See technical implementation: `docs/implementation-technical/marketing/ai/marketing-optimization-engine-specification.md`
+- **Epic 3 (Customer Journey Optimization):** See technical implementation: `docs/implementation-technical/marketing/personalization/marketing-personalization-engine-specification.md`
+- **Epic 4 (Marketing Intelligence):** See technical implementation: `docs/implementation-technical/marketing/analytics-integration/marketing-analytics-architecture.md`
 
 All low-level implementation guidance (APIs, data models, infrastructure) is out of scope for this Level 3 strategy document and must reside in the corresponding Level 4 technical docs.
 

@@ -194,9 +194,9 @@ Marketing Operations tracks:
 - **Upward context:** `docs/business/marketing/operations/summary.md`, `docs/business/marketing/strategy/overview.md`
 - **Sideways context:** `docs/business/marketing/executive/detailed.md`, `docs/business/marketing/roi/detailed.md`
 - **Downward (technical implementation references only):**
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-automation-platform.md`
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
+  - See technical implementation: `docs/implementation-technical/marketing/automation/marketing-automation-platform-specification.md`
+  - See technical implementation: `docs/implementation-technical/marketing/analytics-integration/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/dashboard/marketing-dashboard-technical.md`
 
 This operations framework is intentionally business-focused, defining required capabilities, ownership, and outcomes while delegating detailed schemas, APIs, and infrastructure choices to Level 4 technical documentation
 ---

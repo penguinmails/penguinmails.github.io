@@ -17,7 +17,7 @@ This contract defines REST-only endpoints that expose each tenant's SMTP configu
 - Business Leaders backlog (BF-006, revenue)
 - Database and infra docs:
   - `/docs/implementation-technical/database-infrastructure/oltp-schema-guide.md`
-  - `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/operations/database-migration-guide.md`
 - Executive and BI consumption via the Executive API (no direct DB exposure)
 
 All endpoints are:

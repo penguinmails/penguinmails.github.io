@@ -21,7 +21,7 @@ Strictly aligned with:
 
 - Multi-tenant isolation and infra docs:
   - `/docs/implementation-technical/database-infrastructure/queue-system-implementation-guide.md`
-  - `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md`
+  - `/docs/implementation-technical/database-infrastructure/operations/database-migration-guide.md`
   - `/docs/implementation-technical/database-infrastructure/oltp-mermaid-er.md`
   - `/docs/implementation-technical/database-infrastructure/notifications-database/mermaid-er.md`
 - Executive security & audit requirements (BF-004)
@@ -47,7 +47,7 @@ All endpoints are:
 
 Reference:
 
-- `/docs/implementation-technical/database-infrastructure/business-leaders-database-migration-guide.md#step-5-security--access-control`
+- `/docs/implementation-technical/database-infrastructure/operations/database-migration-guide.md#step-5-security--access-control`
 - BF-004 executive security and audit story.
 
 ## 2. IP Inventory Management

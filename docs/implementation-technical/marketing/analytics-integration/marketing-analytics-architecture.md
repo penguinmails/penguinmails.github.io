@@ -150,7 +150,7 @@ Dashboards are simple consumers of OLAP views; business-facing views are built o
 
 Backlink:
 
-- Technical dashboard details: `docs/implementation-technical/marketing/marketing-dashboard-technical.md`
+- Technical dashboard details: `../dashboard/marketing-dashboard-technical.md`
 
 APIs:
 

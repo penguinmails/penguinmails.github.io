@@ -243,7 +243,7 @@ A third-party ticket system will be integrated to provide:
 **Operations Links:**
 
 - **Detailed Operations**: `docs/business/marketing/operations/detailed.md#operations-framework`
-- **Technology Integration**: `docs/implementation-technical/marketing/marketing-dashboard-technical.md#technology-integration`
+- **Technology Integration**: `docs/implementation-technical/marketing/dashboard/marketing-dashboard-technical.md#technology-integration`
 - **Performance Framework**: `docs/business/marketing/performance/summary.md#optimization-strategy`
 
 **Document Classification:** Level 1 - Operations Summary

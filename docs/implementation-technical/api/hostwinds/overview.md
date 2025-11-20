@@ -219,7 +219,7 @@ Recommendations for reliable, secure, and efficient automation.
 ### Infrastructure Planning
 
 - [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling and provider roles
-- [Database Infrastructure](../database-infrastructure/business-leaders-database-migration-guide.md) - Schema integration and cost fields
+- [Database Infrastructure](../database-infrastructure/operations/database-migration-guide.md) - Schema integration and cost fields
 
 ### API Documentation
 

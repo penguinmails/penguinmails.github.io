@@ -214,8 +214,8 @@ This document provides detailed ROI analysis with scenarios, risk assessment, in
 - **Upward context:** `docs/business/marketing/roi/summary.md`, `docs/business/marketing/strategy/overview.md`
 - **Sideways context:** `docs/business/marketing/executive/detailed.md`, `docs/business/marketing/operations/detailed.md`
 - **Downward (technical implementation references only):**
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-analytics-architecture.md`
-  - See technical implementation: `docs/implementation-technical/marketing/marketing-optimization-engine.md`
+  - See technical implementation: `docs/implementation-technical/marketing/analytics-integration/marketing-analytics-architecture.md`
+  - See technical implementation: `docs/implementation-technical/marketing/ai/marketing-optimization-engine-specification.md`
 
 This detailed ROI analysis provides comprehensive financial validation for marketing technology investments, demonstrating strong business value delivery across multiple scenarios and risk-adjusted outcomes
 ---
