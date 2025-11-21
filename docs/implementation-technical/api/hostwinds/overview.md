@@ -18,6 +18,9 @@ persona: "Documentation Users"
 > [!WARNING]
 > **API Limitations**: This documentation currently lacks information for required Hostwinds APIs regarding **VPS management**, **secondary IP**, **monitoring**, and **billing**. Refer to the official Hostwinds documentation for complete coverage.
 
+> [!NOTE]
+> **Architecture Context**: Hostwinds is an **external service** integrated into PenguinMails' infrastructure. For a complete overview of how it fits with our internal servers, see **[API Architecture Overview](../README.md)**.
+
 ---
 
 ## 🎯 Purpose and Scope
@@ -40,26 +43,64 @@ This API integration enables PenguinMails to:
 
 ## 🏗️ Integration Architecture
 
-### Role in PenguinMails Infrastructure
+### Hostwinds as External Infrastructure Provider
+
+**Status**: **External Service** (3rd-party API, not part of PenguinMails codebase)
+
+Hostwinds provides the physical VPS infrastructure that powers our SMTP sending capabilities. Our internal servers consume the Hostwinds API to provision and manage this infrastructure.
+
+### Which PenguinMails Servers Use Hostwinds API
+
+| Internal Server | Uses Hostwinds For | Example Operations |
+|-----------------|-------------------|-------------------|
+| **`smtp-server`** | IP availability checks | Before assigning IP to tenant, verify VPS is active |
+| **`queue-server`** | VPS health validation | Before processing send job, ensure tenant's VPS is up |
+| **`platform-api`** | Admin dashboard data | Show VPS status in admin panel (up/down/provisioning) |
+| **`api` (tenant)** | Tenant provisioning | Create new VPS when tenant signs up |
+| **Operations scripts** | Maintenance & billing | Automated VPS upgrades, cost reconciliation |
+
+### Architecture Diagram
 
 ```mermaid
 graph TB
-    A[PenguinMails Platform] --> B[Hostwinds API]
-    B --> C[VPS Instances]
-    B --> D[IP Addresses]
-    B --> E[Network Config]
+    subgraph "PenguinMails Internal Services"
+        WEB[web: Next.js Frontend]
+        API[api: Tenant API]
+        SMTP[smtp-server]
+        QUEUE[queue-server]
+        PLATFORM[platform-api]
+    end
     
-    C --> F[Mailu SMTP Stack]
-    D --> G[Dedicated IPs]
-    E --> H[DNS/Firewall]
+    subgraph "External Services"
+        HOSTWINDS[Hostwinds Cloud API]
+    end
     
-    F --> I[Tenant Email Infrastructure]
-    G --> I
-    H --> I
+    subgraph "Hostwinds Infrastructure"
+        VPS[VPS Instances]
+        IPS[Dedicated IPs]
+        NET[Network Config]
+    end
     
-    style A fill:#e1f5fe
-    style B fill:#fff3e0
-    style I fill:#c8e6c9
+    API -->|Provision VPS| HOSTWINDS
+    SMTP -->|Check IP availability| HOSTWINDS
+    QUEUE -->|Validate VPS health| HOSTWINDS
+    PLATFORM -->|Get VPS status| HOSTWINDS
+    
+    HOSTWINDS -->|Manages| VPS
+    HOSTWINDS -->|Allocates| IPS
+    HOSTWINDS -->|Configures| NET
+    
+    VPS -->|Runs| MAILU[Mailu SMTP Stack]
+    IPS -->|Used by| MAILU
+    NET -->|Supports| MAILU
+    
+    style HOSTWINDS fill:#fff3e0
+    style WEB fill:#e1f5fe
+    style API fill:#e1f5fe
+    style SMTP fill:#e1f5fe
+    style QUEUE fill:#e1f5fe
+    style PLATFORM fill:#e1f5fe
+    style MAILU fill:#c8e6c9
 ```
 
 ### Key Integration Points
@@ -78,6 +119,34 @@ graph TB
    - Tenant onboarding → VPS provisioning → Mailu deployment
    - IP allocation → DNS configuration → warmup process
    - Billing reconciliation → cost tracking → margin analysis
+
+### Example: Queue Server Usage
+
+```typescript
+// apps/queue-server/src/workers/email-sender.ts
+import { HostwindsClient } from '@penguinmails/hostwinds-client';
+import { db } from '@penguinmails/database';
+
+async function processEmailSendJob(job) {
+  const { tenantId, campaignId } = job.data;
+  
+  // 1. Get tenant's VPS info from DB
+  const vps = await db.vps_instances.findUnique({
+    where: { tenant_id: tenantId }
+  });
+  
+  // 2. Check VPS health via Hostwinds API (external call)
+  const hostwinds = new HostwindsClient();
+  const vpsStatus = await hostwinds.getServerStatus(vps.hostwinds_instance_id);
+  
+  // 3. Abort if VPS is down
+  if (vpsStatus !== 'active') {
+    throw new Error(`Tenant VPS is ${vpsStatus}, cannot send emails`);
+  }
+  
+  // 4. Proceed with sending...
+}
+```
 
 ---
 
