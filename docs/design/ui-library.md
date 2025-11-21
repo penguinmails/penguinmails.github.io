@@ -63,7 +63,7 @@ const form = useForm({
 
 ### Icons
 
-**lucide-react**
+### lucide-react
 
 - Consistent icon library
 - Tree-shakeable
@@ -909,7 +909,7 @@ const breakpoints = {
 
 ### Theme Support
 
-**Light/Dark Mode**
+### Light/Dark Mode
 
 - Use Tailwind's `dark:` variant
 - Store preference in localStorage

@@ -787,7 +787,7 @@ window.location.href = session.url;
 | **Professional** | 100,000 | Advanced analytics, AI optimization, webhooks | $99/month |
 | **Enterprise** | 1,000,000 | Unlimited features, priority support, custom integrations | $299/month |
 
-**Rate Limit Headers**
+### Rate Limit Headers
 
 ```markdown
 X-RateLimit-Limit: 1000

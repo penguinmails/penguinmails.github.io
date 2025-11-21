@@ -77,6 +77,7 @@
   - **Keyboard Navigation**: Theme switching available via keyboard shortcuts
 
 **Related Accessibility Documentation**:
+
 - [Accessibility Guidelines](../accessibility-guidelines.md) - Comprehensive WCAG 2.1 AA compliance standards
 - [Accessibility Guidelines: Color and Contrast](../accessibility-guidelines.md#color-and-contrast) - Theme contrast requirements
 - [Accessibility Guidelines: Reduced Motion](../accessibility-guidelines.md#timing-and-movement) - Animation preferences

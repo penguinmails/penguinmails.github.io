@@ -45,7 +45,7 @@ docker system prune -a && docker build -t penguinmails-docs .
 docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
 
 # Debug markdown lint issues using Docker-based markdownlint
-docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
 
 ## Content Standards
@@ -251,7 +251,7 @@ Our repository uses a Docker-based markdown linting approach for consistency and
 
 ```bash
 # Check focused markdown files (avoids noise from other directories)
-docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
 
 ### Development Approach

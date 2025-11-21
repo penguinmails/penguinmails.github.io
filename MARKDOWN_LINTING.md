@@ -15,7 +15,7 @@ This guide provides instructions for maintaining high-quality markdown documenta
 ### Basic Linting Command
 
 ```bash
-docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json
 ```
 
 ### Lint Specific Directory
@@ -23,7 +23,7 @@ docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint do
 To lint only the international compliance documents:
 
 ```bash
-docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/compliance-security/international/*.md --config .markdownlint.json
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/compliance-security/international/*.md --config .markdownlint.json
 ```
 
 ### Auto-Fix Linting Issues
@@ -31,7 +31,7 @@ docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint do
 Many markdown linting issues can be automatically corrected using the `--fix` flag:
 
 ```bash
-docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --fix
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --fix
 ```
 
 ## Linting Configuration
@@ -78,7 +78,7 @@ Add to your `.git/hooks/pre-commit` file:
 ```bash
 #!/bin/bash
 # Check for markdown linting issues before commit
-if docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --quiet; then
+if docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --quiet; then
     echo "Markdown linting passed ✓"
 else
     echo "Markdown linting failed. Run with --fix to auto-correct issues."
@@ -94,7 +94,7 @@ For automated linting in CI/CD pipelines:
 # Example GitHub Actions workflow
 - name: Lint Documentation
   run: |
-    docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
+    docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
       markdownlint docs/ --config .markdownlint.json --fail-on-warnings
 ```
 
@@ -125,7 +125,7 @@ pwd
 # Should show the penguinmails repository root
 
 # If issues persist, try absolute paths
-docker run -v $(pwd):/md -w /md peterdavehello/markdownlint:latest \
+docker run --rm -v $(pwd):/md -w /md peterdavehello/markdownlint:latest \
   markdownlint docs/ --config .markdownlint.json
 ```
 
@@ -139,10 +139,10 @@ docker run -v $(pwd):/md -w /md peterdavehello/markdownlint:latest \
 
 | Command | Purpose |
 |---------|---------|
-| `docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json` | Full directory linting |
-| `docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --fix` | Auto-fix common issues |
-| `docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --quiet` | Quiet mode (errors only) |
-| `docker run -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/compliance-security/international/*.md --config .markdownlint.json` | Specific directory linting |
+| `docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json` | Full directory linting |
+| `docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --fix` | Auto-fix common issues |
+| `docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/ --config .markdownlint.json --quiet` | Quiet mode (errors only) |
+| `docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint docs/compliance-security/international/*.md --config .markdownlint.json` | Specific directory linting |
 
 ---
 

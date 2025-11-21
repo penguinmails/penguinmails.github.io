@@ -17,7 +17,6 @@ persona: "Documentation Users"
 
 > [!WARNING]
 > **API Limitations**: This documentation currently lacks information for required Hostwinds APIs regarding **VPS management**, **secondary IP**, **monitoring**, and **billing**. Refer to the official Hostwinds documentation for complete coverage.
-
 > [!NOTE]
 > **Architecture Context**: Hostwinds is an **external service** integrated into PenguinMails' infrastructure. For a complete overview of how it fits with our internal servers, see **[API Architecture Overview](../README.md)**.
 
