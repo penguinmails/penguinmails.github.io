@@ -145,7 +145,9 @@ This document outlines the key user journeys for marketing agency owners who use
    - Generate comprehensive performance reports for clients
    - Provide insights and recommendations for improvement
    - Present results in client-friendly formats
+   - Present results in client-friendly formats
    - Schedule regular strategy review meetings with clients
+   - *See [Client Report Portal Design](/docs/design/analytics-views#33-client-report-portal-white-label) for view specifications*
 
 ---
 

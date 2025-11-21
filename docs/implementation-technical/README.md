@@ -77,11 +77,33 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ## Document Categories
 
+### 📡 **API Architecture & Integration** ⭐ NEW
+
+**Purpose**: Complete overview of internal servers, external services, and API contracts
+**Target Audience**: All developers, DevOps, architects, product managers
+**Content Focus**: Server topology, API endpoints, integration patterns
+
+**Key Documents**:
+
+- [**API Architecture Overview**](./api/README.md) - Complete server topology and communication patterns
+  - `web` - Next.js frontend (Server Actions → REST)
+  - `api` - Tenant REST API (campaign management)
+  - `smtp-server` - SMTP infrastructure management  
+  - `queue-server` - Event processing & notifications
+  - `platform-api` - Analytics & BI aggregation
+  - [Hostwinds API](./api/hostwinds/overview.md) - External VPS infrastructure
+
 ### 🏗️ **Architecture & System Design**
 
 **Purpose**: Technical architecture decisions, system design, and infrastructure planning
 **Target Audience**: Architects, senior developers, technical stakeholders
 **Content Focus**: System diagrams, architectural patterns, integration strategies
+
+**Key Documents**:
+
+- [Architecture System](./architecture-system/) - System architecture and email infrastructure
+- Microservices communication patterns
+- Multi-tenant isolation strategies
 
 ### 💻 **Development Guidelines & Standards**
 
@@ -89,17 +111,35 @@ This section follows the **Progressive Complexity Framework** with three distinc
 **Target Audience**: Development teams, code reviewers, technical leads
 **Content Focus**: Coding standards, testing protocols, deployment procedures
 
+**Key Documents**:
+
+- [Development Guidelines](./development-guidelines/) - Code standards and best practices
+- TypeScript conventions (shared via Turborepo)
+- API integration patterns
+
 ### 🗄️ **Database & Infrastructure Management**
 
 **Purpose**: Database schemas, infrastructure operations, and performance optimization
 **Target Audience**: Database administrators, infrastructure engineers, DevOps teams
 **Content Focus**: Schema documentation, migration procedures, performance optimization
 
+**Key Documents**:
+
+- [Database Infrastructure](./database-infrastructure/) - Multi-tenant schema design
+- OLTP, Content, and OLAP database tiers
+- NileDB integration and RLS (Row-Level Security)
+
 ### 🧪 **Quality Assurance & Testing**
 
 **Purpose**: Testing protocols, QA procedures, and quality standards
 **Target Audience**: QA engineers, testing teams, product managers
 **Content Focus**: Test procedures, bug management, quality metrics
+
+**Key Documents**:
+
+- [Quality Assurance](./quality-assurance/) - Testing protocols and QA standards
+- API endpoint testing strategies
+- Integration test patterns
 
 ---
 

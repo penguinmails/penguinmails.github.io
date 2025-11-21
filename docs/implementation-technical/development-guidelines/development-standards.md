@@ -480,6 +480,8 @@ Types: feat, fix, docs, style, refactor, test, chore
 ## Related Documents
 - [API Reference](api_reference)) - API usage and integration
 - [Architecture Overview](architecture_overview)) - System design principles
+- [Design System](/docs/design/design-system) - UI/UX standards and principles
+- [Component Library](/docs/design/component-library) - Reusable component specifications
 - [Security Framework](../../compliance-security/enterprise)) - Security architecture and controls
 - [Security & Privacy Integration](../../compliance-security/enterprise)) - Unified security and privacy practices
 - [Traffic Security Matrix](../../compliance-security/enterprise)) - Keying and traffic classification guidance

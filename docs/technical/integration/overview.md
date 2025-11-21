@@ -708,6 +708,74 @@ async function handleNewSubscriber(subscriberData) {
 
 ---
 
+## 💳 Payment Processing Integrations
+
+### **Stripe Integration (⭐⭐⭐)**
+
+PenguinMails uses **Stripe** for subscription management and payment processing, providing secure checkout flows and self-service billing management for tenants.
+
+**Key Features**:
+- **Stripe Checkout Sessions**: Hosted payment pages for plan upgrades and subscription creation
+- **Webhook Integration**: Real-time synchronization of subscription events
+- **Customer Portal**: Self-service billing management (planned)
+- **Payment Security**: PCI-compliant payment processing without storing card details
+
+**Architecture**:
+- **Light Database Reference**: Stripe is the source of truth for billing data
+- **Metadata Tracking**: Company and user context attached to Stripe sessions
+- **Event-Driven Sync**: Webhooks update local subscription state automatically
+
+**Implementation Details**:
+
+For complete technical implementation details, including:
+- Checkout flow and API routes
+- Webhook event handlers
+- Database schema requirements
+- Security best practices
+- Testing with Stripe test mode
+
+See: **[Stripe Integration Documentation](stripe.md)**
+
+**Quick Integration Example**:
+
+```typescript
+// Create checkout session for plan upgrade
+const session = await stripeApi.checkout.sessions.create({
+  mode: 'subscription',
+  line_items: [{
+    price_data: {
+      currency: 'usd',
+      recurring: { interval: 'month' },
+      product_data: { name: 'Pro Plan' },
+      unit_amount: 8900, // $89 in cents
+    },
+    quantity: 1,
+  }],
+  success_url: `${appUrl}/dashboard/settings/billing?checkout=success`,
+  cancel_url: `${appUrl}/dashboard/settings/billing?checkout=canceled`,
+  metadata: {
+    tenant_id: tenantId,  // NileDB tenant ID for multi-tenant isolation
+    plan_id: 'pro',
+  },
+});
+
+// Redirect user to Stripe Checkout
+window.location.href = session.url;
+```
+
+**Webhook Events Handled**:
+
+- `checkout.session.completed`: Links subscription to tenant's subscription record (updates `subscriptions` + `tenant_config` tables)
+- `invoice.paid`: Records payment in `payments` table and confirms service continuation
+- `customer.subscription.updated`: Syncs subscription status and period end date in `subscriptions` table
+
+**Related Resources**:
+
+- [Settings Billing Route](../../design/routes/settings.md#dashboard-settings-billing---billing--subscriptions)
+- [Pricing Plans](../../finance/pricing/overview.md) (if exists)
+
+---
+
 ## 🔐 Rate Limiting & Error Handling
 
 ### **Rate Limiting Tiers (⭐⭐⭐)**
@@ -720,6 +788,7 @@ async function handleNewSubscriber(subscriberData) {
 | **Enterprise** | 1,000,000 | Unlimited features, priority support, custom integrations | $299/month |
 
 **Rate Limit Headers**
+
 ```markdown
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 999

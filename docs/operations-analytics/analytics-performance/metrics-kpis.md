@@ -198,6 +198,8 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 - **Expansion Revenue**: Upsell rates, plan migrations
 - **Customer Success**: NPS, retention by cohort
 
+> **Design Note**: For detailed visual specifications of these dashboards, refer to the **[Unified Analytics Views & Experience Design](/docs/design/analytics-views)** document.
+
 ---
 
 ## Alert Thresholds & Monitoring

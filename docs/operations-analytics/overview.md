@@ -180,6 +180,7 @@ Navigate to specific strategic analytics areas:
 - **[Strategic Performance Analytics](./analytics-performance)** → Strategic analytics and performance intelligence
 - **[Strategic Operations Intelligence](./operations-management)** → Strategic operational insights and planning
 - **[Strategic Team Intelligence](./team-performance)** → Strategic team coordination and performance guidance
+- **[Analytics Views Architecture](/docs/core-features/analytics/views-architecture.md)** → Visual design specifications for analytics dashboards
 
 ---
 
