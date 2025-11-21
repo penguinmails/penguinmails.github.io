@@ -281,8 +281,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Heatmaps**: Visualize activity patterns and optimal sending times
 - **Cohort Analysis**: Track customer lifecycle and retention
-- **Advanced Segmentation**: Complex audience analysis and filtering
-- **Custom Dashboards**: Build personalized analytics dashboards
+- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](views-architecture.md)** → Visual design specifications for analytics dashboards
 
 ## Enterprise Integration
 
