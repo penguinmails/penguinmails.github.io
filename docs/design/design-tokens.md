@@ -12,6 +12,16 @@ persona: "Documentation Users"
 
 Design tokens are the fundamental building blocks of PenguinMails design system. They provide a single source of truth for design decisions, enabling consistent visual language across all platforms and ensuring scalable, maintainable design implementation.
 
+## 🛠️ Implementation Reference
+
+| Token Category | Implementation Location | Format |
+|---|---|---|
+| **Global Tokens** | `apps/web/app/globals.css` | CSS Variables (`:root`) |
+| **Tailwind Config** | `apps/web/tailwind.config.ts` | Tailwind Theme Extension |
+| **Type Definitions** | `packages/types/src/design-system.d.ts` | TypeScript Interfaces |
+
+> **Note**: Changes to tokens in this document must be reflected in `globals.css` and `tailwind.config.ts` to take effect.
+
 ## Token Architecture
 
 ### Token Categories

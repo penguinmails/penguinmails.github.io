@@ -10,18 +10,197 @@ persona: "Documentation Users"
 
 ## Purpose
 
-The UI Library provides a comprehensive catalog of reusable components, patterns, and guidelines for building consistent user interfaces across PenguinMails. This guide ensures design system implementation and maintains visual consistency while supporting scalable development.
+The UI Library defines **high-level patterns**, **tech stack recommendations**, and **component requirements** for building PenguinMails. This is a planning document that specifies **what** we need and **how** it should work, using general ideas rather than explicit implementation code.
 
-## Component Architecture
+> **Note**: For detailed component specifications (props, token usage, accessibility), see [Component Library](./component-library.md).
 
-### Component Categories
+---
 
-- **Layout Components**: Grid systems, containers, spacing utilities
-- **Form Components**: Input fields, selectors, validation states
-- **Navigation Components**: Menus, breadcrumbs, tabs, pagination
-- **Feedback Components**: Alerts, toasts, progress indicators, modals
-- **Data Display**: Tables, cards, badges, avatars, charts
-- **Interactive Elements**: Buttons, links, dropdowns, tooltips
+## 🛠️ Tech Stack
+
+### Frontend Framework
+
+**Next.js 15** (App Router)
+
+- Server Components by default
+- Server Actions for MVP (BFF pattern)
+- Progressive migration to REST API calls post-MVP
+- File-based routing in `app/` directory
+
+### Styling & Design System
+
+**Tailwind CSS v4** + **shadcn/ui**
+
+- Utility-first CSS framework (v4)
+- shadcn/ui for pre-built accessible components
+- Custom design tokens in `tailwind.config.ts`
+- Global styles in `app/globals.css`
+
+### Form Management
+
+**react-hook-form** + **zod**
+
+- Type-safe form validation
+- Schema-based validation with Zod
+- Minimal re-renders
+- Built-in error handling
+
+**Example Pattern**:
+
+```typescript
+// Define schema
+const campaignSchema = z.object({
+  name: z.string().min(1, "Campaign name required"),
+  subject: z.string().min(1, "Subject required"),
+  recipients: z.array(z.string().email()).min(1)
+});
+
+// Use in form
+const form = useForm({
+  resolver: zodResolver(campaignSchema)
+});
+```
+
+### Icons
+
+**lucide-react**
+
+- Consistent icon library
+- Tree-shakeable
+- TypeScript support
+- Example: `import { Mail, Send, Users } from 'lucide-react'`
+
+### Animation & Motion
+
+**tw-animate-css** + **CSS Transitions**
+
+- Use `tw-animate-css` for standard animations (fade, slide, bounce)
+- Use standard CSS transitions for hover states and micro-interactions
+- Avoid heavy JS animation libraries like Framer Motion unless absolutely necessary for complex gestures
+
+### Dark Mode
+
+**Tailwind Dark Mode** (`selector` strategy)
+
+- Use `darkMode: 'selector'` in Tailwind config
+- Toggle class `dark` on the `<html>` element
+- Use `dark:` prefix for dark mode styles (e.g., `bg-white dark:bg-slate-900`)
+
+### State Management
+
+**React Context** (for simple global state)
+
+- Theme preferences
+- User session
+- Feature flags
+
+**Zustand** (for complex state, if needed)
+
+- Campaign editor state
+- Multi-step form state
+
+### Data Fetching
+
+**MVP**: Server Actions (Next.js 15)
+
+```typescript
+'use server';
+export async function getCampaigns() {
+  const data = await db.campaigns.findMany();
+  return data;
+}
+```
+
+**Post-MVP**: REST API with fetch/axios
+
+```typescript
+const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
+```
+
+---
+
+## 📋 Component Requirements
+
+### Data Tables
+
+**Requirement**: Two variants needed
+
+1. **Realtime DataTable**
+   - Live updates via WebSocket/Server-Sent Events
+   - Use case: Campaign sending status, live analytics
+   - Features: Auto-refresh, optimistic updates
+
+2. **Paginated DataTable**
+   - Server-side pagination
+   - Use case: Campaign history, recipient lists
+   - Features: Sorting, filtering, search
+
+**Recommended Library**: `@tanstack/react-table` (headless, flexible)
+
+### Forms
+
+**Pattern**: shadcn/ui + react-hook-form + zod
+
+**Requirements**:
+
+- All forms must use Zod schemas for validation
+- Error messages must be user-friendly
+- Support for multi-step forms (campaign creation wizard)
+- Auto-save drafts for long forms
+
+**Example Structure**:
+
+```typescript
+// 1. Define schema
+const schema = z.object({ /* ... */ });
+
+// 2. Create form
+const form = useForm({ resolver: zodResolver(schema) });
+
+// 3. Use shadcn Form components
+<Form {...form}>
+  <FormField name="email" />
+</Form>
+```
+
+### Modals & Dialogs
+
+**Pattern**: shadcn/ui Dialog component
+
+**Requirements**:
+
+- Accessible (ARIA, keyboard navigation)
+- Backdrop click to close (configurable)
+- Escape key to close
+- Focus trap within modal
+- Sizes: sm, md, lg, xl, full
+
+**Use Cases**:
+
+- Confirmation dialogs (delete campaign)
+- Multi-step wizards (campaign setup)
+- Detail views (recipient details)
+
+### Notifications
+
+**Pattern**: shadcn/ui Toast (using sonner)
+
+**Requirements**:
+
+- Position: top-right (default)
+- Auto-dismiss: 3s (success), 5s (error), manual (warning)
+- Action buttons for undo/retry
+- Stack multiple toasts
+
+**Example**:
+
+```typescript
+import { toast } from 'sonner';
+
+toast.success('Campaign sent!', {
+  action: { label: 'View', onClick: () => navigate('/campaigns/123') }
+});
+```
 
 ### Component Structure
 
@@ -708,11 +887,259 @@ export const Loading: Story = {
 
 ---
 
-## Related Documents
-- [Component Library](..) - Reusable component catalog
-- [Design System](..) - Complete design system overview
-- [Design Tokens](..) - Design token specifications
-- [Accessibility Guidelines](..) - Inclusive design standards
+## 🎨 Design Patterns
 
-**Keywords**: UI library, component library, design system, reusable components, React components, component patterns, design tokens, accessibility
+### Responsive Design Strategy
+
+**Mobile-First Approach**
+- Base styles target mobile (< 640px)
+- Progressive enhancement for tablet (768px+) and desktop (1024px+)
+- Touch-friendly targets: minimum 44px × 44px
+
+**Breakpoints** (from design-tokens.md):
+```typescript
+const breakpoints = {
+  sm: '640px',   // Small devices
+  md: '768px',   // Tablets
+  lg: '1024px',  // Desktops
+  xl: '1280px',  // Large desktops
+  '2xl': '1536px' // Extra large
+};
+```
+
+### Theme Support
+
+**Light/Dark Mode**
+
+- Use Tailwind's `dark:` variant
+- Store preference in localStorage
+- Respect system preference (`prefers-color-scheme`)
+- Smooth transitions between themes
+
+**Implementation Pattern**:
+
+```typescript
+// Use next-themes for theme management
+import { ThemeProvider } from 'next-themes';
+
+<ThemeProvider attribute="class" defaultTheme="system">
+  {children}
+</ThemeProvider>
+```
+
+### Animation Strategy
+
+**Library**: **Framer Motion** (for complex animations) + **CSS Transitions** (for simple states)
+
+**When to Use Framer Motion**:
+
+- Page transitions
+- Complex multi-step animations
+- Gesture-based interactions (drag, swipe)
+- Orchestrated animations (stagger effects)
+
+**When to Use CSS Transitions**:
+
+- Hover states
+- Focus indicators
+- Simple show/hide animations
+- Color/opacity changes
+
+**Performance Guidelines**:
+
+- Respect `prefers-reduced-motion`
+- Animate `transform` and `opacity` only (GPU-accelerated)
+- Avoid animating `width`, `height`, `top`, `left`
+- Keep animations under 300ms for UI feedback
+
+**Example**:
+
+```typescript
+// Framer Motion for page transitions
+import { motion } from 'framer-motion';
+
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  exit={{ opacity: 0, y: -20 }}
+  transition={{ duration: 0.2 }}
+>
+  {content}
+</motion.div>
+
+// CSS for hover states
+.button {
+  transition: background-color 150ms ease-in-out;
+}
+.button:hover {
+  background-color: var(--color-primary-600);
+}
+```
+
+### Loading States
+
+**Pattern**: Skeleton screens + Suspense boundaries
+
+**Requirements**:
+
+- Show skeleton UI while data loads
+- Use React Suspense for async components
+- Provide meaningful loading indicators
+- Avoid full-page spinners (use progressive loading)
+
+**Example**:
+
+```typescript
+import { Suspense } from 'react';
+import { CampaignListSkeleton } from '@/components/skeletons';
+
+<Suspense fallback={<CampaignListSkeleton />}>
+  <CampaignList />
+</Suspense>
+```
+
+### Error Handling
+
+**Pattern**: Error boundaries + user-friendly messages
+
+**Requirements**:
+
+- Catch errors at component boundaries
+- Show actionable error messages
+- Provide retry mechanisms
+- Log errors to monitoring service (Sentry)
+
+**Example**:
+
+```typescript
+<ErrorBoundary
+  fallback={<ErrorFallback />}
+  onError={(error) => logToSentry(error)}
+>
+  <CampaignEditor />
+</ErrorBoundary>
+```
+
 ---
+
+## 🔐 Authentication & Authorization Patterns
+
+### Protected Routes
+
+**Pattern**: Middleware-based route protection
+
+**Requirements**:
+
+- Check authentication in Next.js middleware
+- Redirect to login if unauthenticated
+- Check role permissions for restricted routes
+- Store session in httpOnly cookies
+
+### Role-Based UI Rendering
+
+**Pattern**: Conditional rendering based on user roles
+
+**Example**:
+
+```typescript
+import { useSession } from '@/lib/auth';
+
+function Dashboard() {
+  const { user } = useSession();
+  
+  return (
+    <>
+      {user.roles.includes('admin') && <AdminPanel />}
+      {user.roles.includes('customer') && <CampaignDashboard />}
+      {user.roles.includes('agency') && <AgencyCommandCenter />}
+    </>
+  );
+}
+```
+
+---
+
+## 📊 Data Visualization
+
+### Charts & Graphs
+
+**Recommended Library**: **Recharts** (React-friendly, declarative)
+
+**Requirements**:
+
+- Responsive charts (adapt to container width)
+- Accessible (ARIA labels, keyboard navigation)
+- Consistent color palette (use design tokens)
+- Interactive tooltips
+
+**Chart Types Needed**:
+
+- Line charts: Campaign performance over time
+- Bar charts: Comparative metrics
+- Pie/Donut charts: Distribution (open rate, click rate)
+- Area charts: Cumulative metrics
+
+### Real-time Updates
+
+**Pattern**: Server-Sent Events (SSE) or WebSockets
+
+**Use Cases**:
+
+- Live campaign sending status
+- Real-time analytics updates
+- Notification feed
+
+**Implementation**:
+
+```typescript
+// Server-Sent Events for one-way updates
+const eventSource = new EventSource('/api/campaigns/123/live');
+eventSource.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  updateCampaignMetrics(data);
+};
+```
+
+---
+
+## 🧪 Testing Strategy
+
+### Component Testing
+
+**Library**: **Vitest** + **React Testing Library**
+
+**Requirements**:
+
+- Test user interactions (click, type, submit)
+- Test accessibility (ARIA, keyboard navigation)
+- Test error states and loading states
+- Mock API calls
+
+### E2E Testing
+
+**Library**: **Playwright**
+
+**Critical Flows to Test**:
+
+- User login/logout
+- Campaign creation wizard
+- Email sending flow
+- Dashboard navigation
+
+---
+
+## 📚 Related Documents
+
+- [Component Library](./component-library.md) - Detailed component specifications
+- [Design System](./design-system.md) - Core design principles
+- [Design Tokens](./design-tokens.md) - Color, spacing, typography values
+- [Accessibility Guidelines](./accessibility-guidelines.md) - WCAG compliance standards
+- [Analytics Views](./analytics-views.md) - Dashboard and view specifications
+
+---
+
+**Keywords**: UI patterns, tech stack, Next.js 15, Tailwind CSS, shadcn/ui, react-hook-form, zod, lucide-react, design patterns, animation, responsive design, Framer Motion, testing
+
+---
+
+> **Note**: The detailed component implementation code above (Layout Components, Button Components, Form Components, etc.) is legacy content that will be moved to `component-library.md`. This document focuses on high-level patterns and tech stack decisions.

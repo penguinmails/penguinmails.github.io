@@ -12,6 +12,50 @@ persona: "Documentation Users"
 
 The Component Library is a comprehensive catalog of all reusable UI components available in PenguinMails. This document serves as the single source of truth for component specifications, usage patterns, and implementation details, ensuring consistent design and development practices across the platform.
 
+## 🛠️ Implementation Reference
+
+| Component Category | Codebase Location |
+|---|---|
+| **Primitives** | `apps/web/components/primitives/` |
+| **Layout** | `apps/web/components/layout/` |
+| **Forms** | `apps/web/components/forms/` |
+| **Data Display** | `apps/web/components/data-display/` |
+| **Feedback** | `apps/web/components/feedback/` |
+| **Navigation** | `apps/web/components/navigation/` |
+
+> **Developer Note**: All components are exported from the barrel file at `apps/web/components/index.ts` for cleaner imports.
+
+## 🏗️ Implementation Guidelines
+
+### Applying Design Tokens
+
+Components should strictly use the design tokens defined in [Design Tokens](./design-tokens.md) via Tailwind CSS utility classes.
+
+- **Colors**: Use semantic names (e.g., `bg-primary`, `text-foreground`).
+- **Spacing**: Use spacing scale (e.g., `p-4`, `gap-2`).
+- **Typography**: Use text utilities (e.g., `text-sm`, `font-medium`).
+
+### Mobile Support
+
+Follow a **mobile-first** approach. Default styles should apply to mobile viewports, with `md:` and `lg:` overrides for larger screens.
+
+- **Touch Targets**: Ensure interactive elements are at least 44px high on mobile.
+- **Widths**: Use `w-full` on mobile for block-level actions.
+
+### Theme Support
+
+All components must support both light and dark modes using Tailwind's `dark:` modifier.
+
+- **Backgrounds**: `bg-white dark:bg-slate-950`
+- **Borders**: `border-slate-200 dark:border-slate-800`
+- **Text**: `text-slate-900 dark:text-slate-50`
+
+### Accessibility (a11y)
+
+- **Interactive Elements**: Must be keyboard accessible (focusable).
+- **ARIA Attributes**: Use `aria-label`, `aria-expanded`, etc., where visual context is missing.
+- **Focus States**: Always define visible focus states (`focus-visible:ring-2`).
+
 ## Library Structure
 
 ### Component Organization

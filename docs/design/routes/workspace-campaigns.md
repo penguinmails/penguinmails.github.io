@@ -1,0 +1,252 @@
+# Workspace Campaigns
+
+## 1. Purpose & Context (The "Why")
+
+* **Goal**: Enable users to create, manage, and analyze cold email campaigns.
+* **Feature References**:
+  * [Campaign Management](../../core-features/analytics/overview.md) (Analytics integration)
+* **User Journey**: Core loop: Create Campaign -> Configure -> Launch -> Monitor -> Optimize.
+
+## 2. UI Patterns & Components (The "How")
+
+* **Core Components**:
+  * `DataTable`: For the campaigns list (Sortable, Filterable).
+  * `Wizard`: For `/new` campaign creation flow.
+  * `RichTextEditor`: For campaign sequence editing.
+* **Analytics Patterns**:
+  * `DataCard`: For campaign summary stats (Sent, Open Rate, Reply Rate).
+  * `LineChart`: For engagement over time.
+  * See [Analytics UI Patterns](../analytics-ui-patterns.md).
+* **Layout**: Workspace Context.
+
+## 3. Route Specifications
+
+| Route | Access | Purpose | State/Data Requirements |
+|---|---|---|---|
+| `/dashboard/workspaces/[slug]/campaigns` | Tenant | List Campaigns | **Server Component**. Paginated list. Columns: Name, Status, Sent, Open%, Reply%. Actions: Pause, Resume, Edit. |
+| `/dashboard/workspaces/[slug]/campaigns/new` | Tenant | Create Campaign | **Client Component**. Multi-step Wizard: 1. Name/Goal, 2. Audience (Upload/Select), 3. Sequence (Editor), 4. Schedule, 5. Review. |
+| `/dashboard/workspaces/[slug]/campaigns/[id]` | Tenant | Campaign Dashboard | **Server Component**. Aggregated analytics view. Shows "Headline Metrics" cards top, "Engagement Trend" chart middle, "Lead Activity" table bottom. |
+| `/dashboard/workspaces/[slug]/campaigns/[id]/edit` | Tenant | Edit Campaign | **Client Component**. Tabbed interface: Sequence, Audience, Settings. Auto-saving form state. |
+| `/dashboard/workspaces/[slug]/campaigns/[id]/settings` | Tenant | Configuration | Form for Sending Window, Daily Limits, Tracking Options. |
+
+## 4. Detailed View Descriptions
+
+### `/dashboard/workspaces/[slug]/campaigns` - Campaign List
+
+**User Story**: *"As a marketer, I want to see all my campaigns at a glance with key metrics, so I can quickly identify which campaigns need attention."*
+
+**What You'll Find**:
+
+* **Header Actions**:
+  * **"New Campaign" Button**: Primary CTA (top-right).
+  * **Filter Dropdown**: Status (Active, Paused, Completed, Draft).
+  * **Search Bar**: Search by campaign name.
+
+* **Data Table** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-tables)):
+  * **Columns**: Name, Status, Sent, Open Rate, Reply Rate, Created Date, Actions.
+  * **Status Badge**: Color-coded (Green=Active, Yellow=Paused, Gray=Draft).
+  * **Sortable Headers**: Click to sort by any column.
+  * **Row Actions**: Pause/Resume, Edit, Duplicate, Delete.
+
+* **Empty State**:
+  * Illustration + "Create your first campaign" CTA.
+
+**User Journey Context**: Primary dashboard for campaign management. Daily check-in to monitor performance.
+
+**Related Documentation**:
+
+* [Campaign Management](../../core-features/analytics/overview.md)
+* [DataTable Component](../ui-library.md#data-tables)
+
+**Technical Integration**:
+
+* **Server Component**: Fetches campaigns with pagination (10/page).
+* **Real-time Updates**: Polling every 30s for status changes.
+
+---
+
+### `/dashboard/workspaces/[slug]/campaigns/new` - Campaign Creation Wizard
+
+**User Story**: *"As a new user, I want a guided wizard to create my first campaign without getting overwhelmed by options, so I can launch quickly."*
+
+**What You'll Find**:
+
+* **Step 1: Campaign Basics**
+  * Name, Goal (Awareness, Lead Gen, Sales).
+  * "Next" button.
+
+* **Step 2: Audience Selection**
+  * **Option A**: Upload CSV (drag-and-drop).
+  * **Option B**: Select from existing Leads/Segments.
+  * Shows preview of first 5 records.
+
+* **Step 3: Email Sequence**
+  * **Initial Email + Follow-ups**: Add up to 7 emails.
+  * Rich text editor with variable insertion (`{{firstName}}`).
+  * **Preview Button**: See how email renders.
+
+* **Step 4: Sending Schedule**
+  * Sending Window: "Mon-Fri, 9am-5pm".
+  * Daily Send Limit: 50/day (adjustable).
+  * Start Date selector.
+
+* **Step 5: Review & Launch**
+  * Summary of all settings.
+  * **"Launch Campaign" Button** or "Save as Draft".
+
+**User Journey Context**: Critical onboarding moment. Must be simple yet comprehensive.
+
+**Related Documentation**:
+
+* [Campaign Setup Best Practices](../../core-features/analytics/overview.md)
+* [Wizard Pattern](../ui-library.md#wizards)
+
+**Technical Integration**:
+
+* **Client State**: Wizard state managed in React Context.
+* **Auto-save**: Draft saved to backend every 30s.
+
+---
+
+### `/dashboard/workspaces/[slug]/campaigns/[id]` - Campaign Analytics Dashboard
+
+**User Story**: *"As a campaign manager, I want to see detailed engagement metrics and lead activity, so I can optimize my messaging and follow-up strategy."*
+
+**What You'll Find**:
+
+* **Headline Metrics Row** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-cards)):
+  * **DataCards**: Sent, Opened (%), Clicked (%), Replied (%).
+  * **Trend Indicators**: ↑ 12% vs. last 7 days.
+
+* **Engagement Chart**:
+  * **LineChart**: Sent/Opened/Replied over time (Daily view, last 30 days).
+  * **Hover Tooltip**: Shows exact counts.
+
+* **Lead Activity Table**:
+  * Columns: Lead Name, Email, Status (Sent, Opened, Replied), Last Activity.
+  * **Click Name**: Opens slide-over with full lead details.
+
+* **Actions**:
+  * **"Edit Campaign" Button**.
+  * **"Pause Campaign" Button** (if active).
+
+**User Journey Context**: Monitoring hub. Accessed multiple times daily during active campaigns.
+
+**Related Documentation**:
+
+* [Analytics Views Architecture](../../core-features/analytics/views-architecture.md)
+* [Campaign Analytics](../../core-features/analytics/overview.md)
+
+**Technical Integration**:
+
+* **Aggregated Data**: Fetched from OLAP (ClickHouse) with daily refresh.
+* **Caching**: ISR with 5-minute revalidation.
+
+---
+
+### `/dashboard/workspaces/[slug]/campaigns/[id]/edit` - Campaign Editor
+
+**User Story**: *"As a user who needs to fix a typo in an active campaign, I want to make quick edits without disrupting the campaign, so I can maintain quality."*
+
+**What You'll Find**:
+
+* **Tabbed Interface**:
+  * **Tab 1: Sequence**: Edit email content (Rich Text Editor).
+  * **Tab 2: Audience**: Add/remove leads (with warnings if campaign is active).
+  * **Tab 3: Settings**: Sending window, daily limits, tracking toggles.
+
+* **Auto-save Indicator**: "Saving..." → "All changes saved" (top-right).
+
+* **Warnings Modal**:
+  * "Editing an active campaign may affect delivery. Continue?"
+
+**User Journey Context**: Infrequent use for corrections or optimizations.
+
+**Related Documentation**:
+
+* [Campaign Management](../../core-features/analytics/overview.md)
+
+**Technical Integration**:
+
+* **Optimistic UI**: Changes reflected immediately, synced to backend asynchronously.
+* **Conflict Detection**: If campaign modified elsewhere, shows merge prompt.
+
+---
+
+### `/dashboard/workspaces/[slug]/campaigns/[id]/settings` - Campaign Configuration
+
+**User Story**: *"As a power user, I want granular control over sending behavior and tracking settings, so I can optimize deliverability."*
+
+**What You'll Find**:
+
+* **Form Groups**:
+  * **Sending Window**: Time range selector (9am-5pm, Timezone-aware).
+  * **Daily Send Limit**: Slider (10-500/day).
+  * **Tracking Options**: Toggles for "Open Tracking", "Click Tracking", "Unsubscribe Link".
+  * **Reply Handling**: "Pause campaign on reply" checkbox.
+
+* **Save Button**: Sticky at bottom.
+
+**User Journey Context**: Advanced settings. Accessed during campaign setup or optimization.
+
+**Related Documentation**:
+
+* [Warm-ups](../../core-features/warm-ups/overview.md)
+* [Inbox Rotation](../../core-features/inbox-rotation/overview.md)
+
+**Technical Integration**:
+
+* **Background Jobs**: Changes trigger recalculation of sending schedule (background queue job).
+
+## 5. Related API Endpoints
+
+| Route | Related API | Description |
+|---|---|---|
+| `/campaigns` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `GET /api/v1/tenant/campaigns` (List), `POST` (Create). |
+| `/campaigns/[id]` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `GET /api/v1/tenant/campaigns/{id}` (Details & Analytics). |
+| `/campaigns/[id]/edit` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `PATCH /api/v1/tenant/campaigns/{id}` (Update). |
+| `/campaigns/[id]/settings` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `PATCH /api/v1/tenant/campaigns/{id}/config`. |
+
+## 6. Data Strategy
+
+* **Fetching Method**:
+  * **List View**: Server Component with searchParams for pagination/filtering.
+  * **Analytics View**: Server Component fetching aggregated OLAP data.
+* **Caching**:
+  * **Campaign List**: Cached for 30s. Invalidated on Create/Delete/StatusChange.
+  * **Analytics**: Cached for 5 minutes (heavy query).
+* **Real-time Updates**:
+  * **Status Polling**: Client component polls `/api/v1/tenant/campaigns/status` every 30s to update "Sending" vs "Completed" badges.
+
+* **Optimistic Updates**:
+  * Pause/Resume actions update UI immediately, revert on failure.
+
+## 7. Edge Cases & Error Handling
+
+* **Campaign Not Found**: 404 Page with "Return to Campaigns" button.
+* **Editing Active Campaign**: Warning modal explains risks (pausing recommended).
+* **Zero Leads**: Cannot launch campaign without leads. "Import Leads" CTA shown.
+* **Quota Exceeded**: Launch blocked if monthly email limit reached. Upgrade prompt shown.
+* **Campaign Not Found**: 404 Page with "Return to Campaigns" button.
+* **Editing Active Campaign**: Warning modal explains risks (pausing recommended).
+* **Zero Leads**: Cannot launch campaign without leads. "Import Leads" CTA shown.
+* **Quota Exceeded**: Launch blocked if monthly email limit reached. Upgrade prompt shown.
+
+## 8. Component Architecture
+
+### Page Components
+
+* **`CampaignListTable`** (Server)
+  * Props: `campaigns: Campaign[]`, `pagination: PaginationData`
+  * Dependencies: `StatusBadge`, `ActionMenu`
+* **`CampaignWizard`** (Client)
+  * State: Multi-step form state (Steps: Details -> Audience -> Content -> Schedule)
+  * Sub-components: `AudienceSelector`, `TemplatePicker`, `ScheduleDatePicker`
+* **`AnalyticsDashboard`** (Server)
+  * Props: `stats: CampaignStats`
+  * Sub-components: `MetricCard`, `EngagementChart` (Recharts), `ActivityFeed`
+
+### Shared Components
+
+* **`StatusBadge`**: Reused across Campaigns and Jobs.
+* **`MetricCard`**: Reused in Dashboard and Analytics.
