@@ -415,7 +415,7 @@ Campaign Performance
 ### **Business Strategy**
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
 - [Market Analysis](/docs/business/market-analysis/overview) - Market positioning
-- [User Personas](../business/user-personas) - Target audience profiles
+- [User Personas](/docs/business/user-personas) - Target audience profiles
 
 ### **Technical Architecture**
 - [Analytics Architecture](/docs/technical/architecture/detailed-technical) - Technical implementation
@@ -424,8 +424,8 @@ Campaign Performance
 
 ### **User Experience**
 - [User Journeys Overview](/docs/user-journeys) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys) - UX optimization
+- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
 - [Compliance Overview](/docs/compliance-security) - Regulatory compliance

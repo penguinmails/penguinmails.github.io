@@ -4,8 +4,8 @@
 
 - **Goal**: Internal tools for PenguinMails staff to manage the platform, support users, and monitor health.
 - **Feature References**:
-  - [Internal Views](../../core-features/analytics/specs/internal-views.md)
-  - [Operations Analytics](../../operations-analytics/overview.md)
+  - [Internal Views](/docs/core-features/analytics/specs/internal-views)
+  - [Operations Analytics](/docs/operations-analytics/overview)
 - **User Journey**: Support ticket → Admin looks up user → Reviews audit trail to debug.
 
 ## 2. UI Patterns & Components (The "How")
@@ -15,7 +15,7 @@
   - `JSONViewer`: For viewing raw logs/payloads.
   - `StatusIndicator`: Traffic light system for service health.
 - **Analytics Patterns**:
-  - `ExecutiveDashboard`: See [Internal Views](../../core-features/analytics/specs/internal-views.md).
+  - `ExecutiveDashboard`: See [Internal Views](/docs/core-features/analytics/specs/internal-views).
 - **Layout**: Admin Context (Distinct visual theme).
 
 ## 3. Route Specifications
@@ -81,8 +81,8 @@
 
 **Related Documentation**:
 
-- [Support Processes](../../customer-success/support-playbooks/account-lookup.md)
-- [GDPR Compliance](../../compliance-security/data-privacy/gdpr.md)
+- [Support Processes](/docs/customer-success/support-playbooks/account-lookup)
+- [GDPR Compliance](/docs/compliance-security/data-privacy/gdpr)
 
 **Technical Integration**:
 
@@ -128,8 +128,8 @@
 
 **Related Documentation**:
 
-- [Feature Flags](../../technical/feature-management/flags.md)
-- [Sales SLA](../../business/sales/contract-management.md)
+- [Feature Flags](/docs/technical/feature-management/flags)
+- [Sales SLA](/docs/business/sales/contract-management)
 
 **Technical Integration**:
 
@@ -144,7 +144,7 @@
 
 **What You'll Find**:
 
-#### MRR Dashboard (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-cards))
+#### MRR Dashboard (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards))
 
 - **Headline Metrics**:
   - **Current MRR**: $45,230.
@@ -179,8 +179,8 @@
 
 **Related Documentation**:
 
-- [Finance Processes](../../finance/reporting/mrr-calculation.md)
-- [Stripe Webhooks](../../technical/integrations/stripe.md)
+- [Finance Processes](/docs/finance/reporting/mrr-calculation)
+- [Stripe Webhooks](/docs/technical/integrations/stripe)
 
 **Technical Integration**:
 
@@ -222,8 +222,8 @@
 
 **Related Documentation**:
 
-- [Queue System Implementation](../../technical/architecture/detailed-technical/queue-system-implementation.md)
-- [Incident Response](../../operations/incident-management/runbooks.md)
+- [Queue System Implementation](/docs/technical/architecture/detailed-technical/queue-system-implementation)
+- [Incident Response](/docs/operations/incident-management/runbooks)
 
 **Technical Integration**:
 
@@ -241,7 +241,7 @@
 
 **What You'll Find**:
 
-#### Service Health Grid (see [Analytics UI Patterns](../analytics-ui-patterns.md))
+#### Service Health Grid (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns))
 
 - **Status Cards** (Traffic light):
   - **API Server**: ✅ Healthy (Response time: 120ms).
@@ -264,8 +264,8 @@
 
 **Related Documentation**:
 
-- [Infrastructure Overview](../../technical/infrastructure/server-architecture.md)
-- [Monitoring Setup](../../operations/monitoring/prometheus-grafana.md)
+- [Infrastructure Overview](/docs/technical/infrastructure/server-architecture)
+- [Monitoring Setup](/docs/operations/monitoring/prometheus-grafana)
 
 **Technical Integration**:
 
@@ -309,8 +309,8 @@
 
 **Related Documentation**:
 
-- [Logging Standards](../../technical/observability/logging.md)
-- [Error Tracking](../../operations/monitoring/sentry-integration.md)
+- [Logging Standards](/docs/technical/observability/logging)
+- [Error Tracking](/docs/operations/monitoring/sentry-integration)
 
 **Technical Integration**:
 
@@ -331,16 +331,16 @@
 
 **Related Documentation**:
 
-- [Design Tokens](../design-tokens.md)
+- [Design Tokens](/docs/design/design-tokens)
 
 ## 5. Related API Endpoints
 
 | Route | Related API | Description |
 |---|---|---|
-| `/users` | [Admin API](../../implementation-technical/api/platform-api/admin.md) | `GET /api/v1/platform/admin/users` (List), `GET .../audit` (Audit Trail). |
-| `/tenants` | [Admin API](../../implementation-technical/api/platform-api/admin.md) | `GET /api/v1/platform/admin/tenants` (List), `PATCH` (Overrides). |
-| `/finance` | [Subscriptions API](../../implementation-technical/api/platform-api/subscriptions.md) | `GET /api/v1/platform/subscriptions/mrr` (Revenue stats). |
-| `/system/queues` | [Queue API](../../implementation-technical/api/queue/jobs.md) | `GET /api/v1/queue/stats` (Monitor), `POST .../retry` (Actions). |
+| `/users` | [Admin API](/docs/implementation-technical/api/platform-api/admin) | `GET /api/v1/platform/admin/users` (List), `GET .../audit` (Audit Trail). |
+| `/tenants` | [Admin API](/docs/implementation-technical/api/platform-api/admin) | `GET /api/v1/platform/admin/tenants` (List), `PATCH` (Overrides). |
+| `/finance` | [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) | `GET /api/v1/platform/subscriptions/mrr` (Revenue stats). |
+| `/system/queues` | [Queue API](/docs/implementation-technical/api/queue/jobs) | `GET /api/v1/queue/stats` (Monitor), `POST .../retry` (Actions). |
 
 ## 6. Data Strategy
 

@@ -159,7 +159,7 @@ Shared standards reduce operational risks:
 - Quality assurance and delivery standards
 - Compliance and regulatory adherence
 
-For detailed operational procedures, see [Internal Operations Framework](/docs/operations/freelancer-management/framework.md)
+For detailed operational procedures, see [Internal Operations Framework](/docs/operations/freelancer-management/framework)
 
 ### External Success Support
 
@@ -179,7 +179,7 @@ Standards facilitate sustainable business growth:
 - Industry recognition and thought leadership
 - Long-term client relationship building
 
-For business development guidance, see [Freelancer Success Framework](/docs/freelancer-support/business-framework.md)
+For business development guidance, see [Freelancer Success Framework](/docs/freelancer-support/business-framework)
 
 ---
 
@@ -188,7 +188,7 @@ For business development guidance, see [Freelancer Success Framework](/docs/free
 **Implementation Status:** Ready for implementation across all freelancer engagements
 **Cross-References:**
 
-- [Internal Operations Framework](/docs/operations/freelancer-management/framework.md)
-- [Freelancer Success Framework](/docs/freelancer-support/business-framework.md)
+- [Internal Operations Framework](/docs/operations/freelancer-management/framework)
+- [Freelancer Success Framework](/docs/freelancer-support/business-framework)
 - [Quality Assurance Templates](/docs/operations/freelancer-management/templates/)
-- [Implementation Resources](/docs/freelancer-support/implementation-resources.md)
+- [Implementation Resources](/docs/freelancer-support/implementation-resources)

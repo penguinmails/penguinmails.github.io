@@ -24,8 +24,8 @@ It is NOT:
 
 For analytics and logging responsibilities, refer to:
 
-- [OLAP Analytics Schema Guide](README.md) - Analytics and aggregation responsibilities
-- [External Analytics Logging](README.md) - Logging and telemetry responsibilities
+- [OLAP Analytics Schema Guide](README) - Analytics and aggregation responsibilities
+- [External Analytics Logging](README) - Logging and telemetry responsibilities
 
 ---
 
@@ -201,7 +201,7 @@ Content DB is not a log sink. The following apply:
 
 For patterns and responsibilities:
 
-- See [External Analytics Logging](README.md).
+- See [External Analytics Logging](README).
 
 ---
 
@@ -301,9 +301,9 @@ Use this guide as the forward-looking contract:
 
 This schema guide, alongside:
 
-- [OLTP Schema Guide](README.md),
-- [OLAP Analytics Schema Guide](README.md),
-- [External Analytics Logging](README.md),
+- [OLTP Schema Guide](README),
+- [OLAP Analytics Schema Guide](README),
+- [External Analytics Logging](README),
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 
 ---

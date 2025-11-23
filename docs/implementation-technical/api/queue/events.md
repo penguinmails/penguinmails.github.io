@@ -8,8 +8,8 @@ persona: "Backend Developers"
 
 # Events API
 
-**Parent API**: [Queue API](../queue.md)  
-**URL Prefix**: `/api/v1/queue/events`
+**Parent API**: [Queue API](/docs/implementation-technical/api/queue)
+**URL Prefix**: `/api/../queue/events`
 
 ---
 

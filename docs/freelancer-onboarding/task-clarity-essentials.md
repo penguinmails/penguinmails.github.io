@@ -140,47 +140,47 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 **If you're reading Definition of Done:**
 
-- [Quality Standards](/docs/operations/freelancer-management/framework.md#quality-control-procedures) - Detailed performance monitoring
-- [Operations Framework](/docs/operations/freelancer-management/framework.md#acceptance-procedures) - Review and approval processes
-- [Quick Setup Overview](/docs/quick-setup.md) - Role-based navigation for different user types
+- [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Detailed performance monitoring
+- [Operations Framework](/docs/operations/freelancer-management/framework#acceptance-procedures) - Review and approval processes
+- [Quick Setup Overview](/docs/quick-setup) - Role-based navigation for different user types
 
 **If you're reading Story Points:**
 
-- [Quotation Guide](/docs/freelancer-support/quotation-guide.md#task-based-payment-model) - How story points relate to payment
-- [Operations Framework](/docs/operations/freelancer-management/framework.md#estimation-standards) - Estimation best practices
-- [Freelancer Success Center](/docs/freelancer-support/README.md#service-package-development) - Business value of accurate estimates
+- [Quotation Guide](/docs/freelancer-support/quotation-guide#task-based-payment-model) - How story points relate to payment
+- [Operations Framework](/docs/operations/freelancer-management/framework#estimation-standards) - Estimation best practices
+- [Freelancer Success Center](/docs/freelancer-support/README#service-package-development) - Business value of accurate estimates
 
 **If you're reading SOP Workflow:**
 
-- [Operations Framework](/docs/operations/freelancer-management/framework.md#team-structure) - Team roles and responsibilities
-- [Communication Standards](/docs/operations/freelancer-management/framework.md#communication-protocols) - Professional protocols
-- [Freelancer Support Hub](/docs/freelancer-support/README.md#professional-excellence-standards) - Quality and delivery standards
+- [Operations Framework](/docs/operations/freelancer-management/framework#team-structure) - Team roles and responsibilities
+- [Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols) - Professional protocols
+- [Freelancer Support Hub](/docs/freelancer-support/README#professional-excellence-standards) - Quality and delivery standards
 
 **If you're reading Tools Overview:**
 
-- [Implementation Technical](/docs/implementation-technical/README.md) - Platform technical resources
-- [Development Environment Setup](/docs/operations/freelancer-management/framework.md#development-environment) - Technical requirements
-- [Google Workspace Configuration](/docs/freelancer-support/implementation-resources.md#google-workspace-setup) - Tool-specific guidance
+- [Implementation Technical](/docs/implementation-technical/README) - Platform technical resources
+- [Development Environment Setup](/docs/operations/freelancer-management/framework#development-environment) - Technical requirements
+- [Google Workspace Configuration](/docs/freelancer-support/implementation-resources#google-workspace-setup) - Tool-specific guidance
 
 ### 🔗 **Essential Reading by Experience Level**
 
 **New to Freelancing:**
 
-- [Freelancer Success Center](/docs/freelancer-support/README.md) - Complete business development guide
-- [Quotation Guide](/docs/freelancer-support/quotation-guide.md) - Professional proposal preparation
-- [Operations Framework](/docs/operations/freelancer-management/framework.md) - Professional workflow procedures
+- [Freelancer Success Center](/docs/freelancer-support/README) - Complete business development guide
+- [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional proposal preparation
+- [Operations Framework](/docs/operations/freelancer-management/framework) - Professional workflow procedures
 
 **Experienced Freelancers:**
 
-- [Communication Standards](/docs/operations/freelancer-management/framework.md#communication-protocols) - Our specific approach
-- [Quality Standards](/docs/operations/freelancer-management/framework.md#quality-control-procedures) - Performance expectations
-- [Team Structure](/docs/operations/freelancer-management/framework.md#team-structure) - Coordination protocols
+- [Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols) - Our specific approach
+- [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Performance expectations
+- [Team Structure](/docs/operations/freelancer-management/framework#team-structure) - Coordination protocols
 
 **Industry Specialists:**
 
-- [Business Development Resources](/docs/freelancer-support/README.md#industry-specialization) - Specialization opportunities
-- [Premium Service Development](/docs/freelancer-support/README.md#scaling-success) - Advanced offerings
-- [Technical Standards](/docs/operations/freelancer-management/framework.md#code-infrastructure-standards) - Development practices
+- [Business Development Resources](/docs/freelancer-support/README#industry-specialization) - Specialization opportunities
+- [Premium Service Development](/docs/freelancer-support/README#scaling-success) - Advanced offerings
+- [Technical Standards](/docs/operations/freelancer-management/framework#code-infrastructure-standards) - Development practices
 
 ### 📋 **Progressive Reading Path**
 
@@ -190,7 +190,7 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 **Step 2 Complete** (Story Points):
 
-→ **Next**: Continue to SOP Workflow section or jump to [Operations Framework](/docs/operations/freelancer-management/framework.md) for implementation details
+→ **Next**: Continue to SOP Workflow section or jump to [Operations Framework](/docs/operations/freelancer-management/framework) for implementation details
 
 **Step 3 Complete** (SOP Workflow):
 
@@ -198,23 +198,23 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 **Step 4 Complete** (Tools Overview):
 
-→ **Next**: Move to [Freelancer Success Center](/docs/freelancer-support/README.md) for business development guidance
+→ **Next**: Move to [Freelancer Success Center](/docs/freelancer-support/README) for business development guidance
 
 **Step 5 Complete** (Quick Start Checklist):
 
-→ **Next**: Proceed to [Quotation Guide](/docs/freelancer-support/quotation-guide.md) for professional proposal preparation
+→ **Next**: Proceed to [Quotation Guide](/docs/freelancer-support/quotation-guide) for professional proposal preparation
 
 ### ✅ **Compliance and Standards**
 
-- [Quality Standards](/docs/operations/freelancer-management/framework.md#quality-control-procedures) - Performance monitoring
+- [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Performance monitoring
 - [Confidentiality Requirements](/docs/compliance-security/) - Data protection guidelines
-- [Technical Standards](/docs/operations/freelancer-management/framework.md#code-infrastructure-standards) - Development practices
+- [Technical Standards](/docs/operations/freelancer-management/framework#code-infrastructure-standards) - Development practices
 
 ### 🎓 **Learning Enhancement Resources**
 
-- [Success Center: Business Development](/docs/freelancer-support/README.md#business-development-resources) - Build your practice
-- [Implementation Resources](/docs/freelancer-support/implementation-resources.md) - Practical tools and templates
-- [Success Metrics](/docs/freelancer-support/success-metrics.md) - Performance tracking and KPIs
+- [Success Center: Business Development](/docs/freelancer-support/README#business-development-resources) - Build your practice
+- [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and templates
+- [Success Metrics](/docs/freelancer-support/success-metrics) - Performance tracking and KPIs
 
 ---
 

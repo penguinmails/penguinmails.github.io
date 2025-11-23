@@ -612,16 +612,16 @@ sequenceDiagram
 ## Related Documents
 
 ### 📚 **Supporting Documentation**
-- [Architecture System README](README)) - Architectural overview and decisions
-- [Email System Implementation](.)) - Email infrastructure details
-- [Infrastructure Documentation](.)) - Infrastructure operations
-- [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Development standards
+- [Architecture System README](/docs/implementation-technical/architecture-system) - Architectural overview and decisions
+- [Email System Implementation](/docs/implementation-technical/architecture-system/email-system-implementation) - Email infrastructure details
+- [Infrastructure Documentation](/docs/implementation-technical/architecture-system) - Infrastructure operations
+- [Development Guidelines](/docs/implementation-technical/development-guidelines) - Development standards
 
 ### 🔗 **Business Integration**
-- [Business Strategy Overview](../../business/strategy)) - Strategic business alignment
-- [Security Framework](../../compliance-security/enterprise)) - Security architecture
-- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
-- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business alignment
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
+- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
 
 ---
 

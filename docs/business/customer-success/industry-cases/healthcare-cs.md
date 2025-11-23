@@ -302,8 +302,8 @@ Healthcare organizations present unique customer success challenges requiring sp
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 - [Healthcare Marketing Framework](/docs/business/marketing/industry-cases)
-- [Healthcare Business Case](../../industry-business-cases)
-- [Cross-Domain Integration](../cross-domain-integration/overview
+- [Healthcare Business Case](/docs/business/industry-business-cases)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview
 
 ---
 

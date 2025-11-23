@@ -401,7 +401,7 @@ PostHog Dashboard Integration:
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management))** - Central operational hub
+- **[Infrastructure Operations Management](/do/operations-analytics/operations-management/README.md** - Central operational hub
 - **[Backup & Recovery Procedures](.))** - Data protection during incidents
 - **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Performance monitoring procedures
 
@@ -409,13 +409,12 @@ PostHog Dashboard Integration:
 - **[OLTP Schema Guide](.))** - OLTP pool integration
 - **[Content Database Schema Guide](.))** - Content pool optimization
 - **[Queue System Implementation Guide](.))** - Queue pool management
-- **[OLAP Analytics Schema Guide](.))** - Analytics pool configuration
 
 ### **Strategic Documentation**
-- **[Database Infrastructure Management](.))** - Main database infrastructure framework
+- **[Database Infrastructure Management](/docs/implementation-technical/database-infrastructure/architecture/connection-pooling-strategy)** - Main database infrastructure framework
 - **[Architecture System](/docs/implementation-technical/architecture-system/architecture-overview)** - System architecture decisions
-- **[Business Strategy Overview](../../business/strategy))** - Strategic business alignment
-- **[Operations Analytics Overview](../../operations-analytics))** - Main operations analytics framework
+- **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic business alignment
+- **[Operations Analytics Overview](/docs/operations-analytics/overview)** - Main operations analytics framework
 
 ---
 

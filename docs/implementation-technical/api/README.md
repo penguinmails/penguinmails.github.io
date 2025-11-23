@@ -68,42 +68,42 @@ graph TB
 
 We use a **hub-and-spoke** pattern for documentation. Each major API domain has a "Hub" file that provides an overview and links to detailed "Spoke" files in a corresponding subdirectory.
 
-### 1. [Tenant API](./tenant-api.md) (Hub)
+### 1. [Tenant API](/docs/implementation-technical/api/tenant-api) (Hub)
 
 **Prefix**: `/api/v1/tenant/*`
 Customer-facing operations for the core application.
 
-- [Campaigns](./tenant-api/campaigns.md)
-- [Workspaces](./tenant-api/workspaces.md)
-- [Templates](./tenant-api/templates.md)
-- [Unified Inbox](./tenant-api/inbox.md)
+- [Campaigns](/docs/implementation-technical/api/tenant-api/campaigns)
+- [Workspaces](/docs/implementation-technical/api/tenant-api/workspaces)
+- [Templates](/docs/implementation-technical/api/tenant-api/templates)
+- [Unified Inbox](/docs/implementation-technical/api/tenant-api/inbox)
 
-### 2. [Platform API](./platform-api.md) (Hub)
+### 2. [Platform API](/docs/implementation-technical/api/platform-api) (Hub)
 
 **Prefix**: `/api/v1/platform/*`
 Internal operations, analytics, and system administration.
 
-- [Subscriptions & Billing](./platform-api/subscriptions.md)
-- [System Analytics](./platform-api/analytics.md)
-- [Admin Operations](./platform-api/admin.md)
+- [Subscriptions & Billing](/docs/implementation-technical/api/platform-api/subscriptions)
+- [System Analytics](/docs/implementation-technical/api/platform-api/analytics)
+- [Admin Operations](/docs/implementation-technical/api/platform-api/admin)
 
-### 3. [SMTP Admin API](./central-smtp.md) (Hub)
+### 3. [SMTP Admin API](/docs/implementation-technical/api/central-smtp) (Hub)
 
 **Prefix**: `/api/v1/smtp/*`
 Infrastructure management for email delivery.
 
-- [IP Pools](./central-smtp/ip-pools.md)
-- [Routing](./central-smtp/routing.md)
-- [Warmup](./central-smtp/warmup.md)
+- [IP Pools](/docs/implementation-technical/api/central-smtp/ip-pools)
+- [Routing](/docs/implementation-technical/api/central-smtp/routing)
+- [Reputation](/docs/implementation-technical/api/central-smtp/reputation)
 
-### 4. [Queue API](./queue.md) (Hub)
+### 4. [Queue API](/docs/implementation-technical/api/queue) (Hub)
 
 **Prefix**: `/api/v1/queue/*`
 Background job monitoring and event processing.
 
-- [Events](./queue/events.md)
-- [Notifications](./queue/notifications.md)
-- [Job Management](./queue/jobs.md)
+- [Events](/docs/implementation-technical/api/queue/events)
+- [Notifications](/docs/implementation-technical/api/queue/notifications)
+- [Job Management](/docs/implementation-technical/api/queue/jobs)
 
 ---
 
@@ -137,5 +137,5 @@ Decisions to split services will be driven by **performance metrics** and **oper
 
 **Related Documentation**:
 
-- [Database Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md)
-- [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation.md)
+- [Database Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
+- [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation)

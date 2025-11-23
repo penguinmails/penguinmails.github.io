@@ -24,7 +24,7 @@ The Tenant API handles all user-facing functionality within the dashboard. It is
 
 ### 1. Workspace Management
 
-**Documentation**: [Workspaces API](./tenant-api/workspaces.md)
+**Documentation**: [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces)
 
 Manage workspaces, client assignments, and workspace-specific settings.
 
@@ -36,7 +36,7 @@ Manage workspaces, client assignments, and workspace-specific settings.
 
 ### 2. Campaign Management
 
-**Documentation**: [Campaigns API](./tenant-api/campaigns.md)
+**Documentation**: [Campaigns API](/docs/implementation-technical/api/tenant-api/campaigns)
 
 Create, configure, and manage email campaigns.
 
@@ -49,19 +49,19 @@ Create, configure, and manage email campaigns.
 
 ### 3. Template Management
 
-**Documentation**: [Templates API](./tenant-api/templates.md)
+**Documentation**: [Templates API](/docs/implementation-technical/api/tenant-api/templates)
 
 Manage reusable email templates and assets.
 
 ### 4. Lead Management
 
-**Documentation**: [Leads API](./tenant-api/leads.md)
+**Documentation**: [Leads API](/docs/implementation-technical/api/tenant-api/leads)
 
 Manage contacts, segments, and lists.
 
 ### 5. Unified Inbox
 
-**Documentation**: [Inbox API](./tenant-api/inbox.md)
+**Documentation**: [Inbox API](/docs/implementation-technical/api/tenant-api/inbox)
 
 Manage threads, replies, and inbox organization.
 

@@ -16,67 +16,67 @@ persona: "Documentation Users"
 
 **New freelancers**: Begin your journey here for essential requirements and expectations.
 
-→ **[Task Clarity Essentials](task-clarity-essentials.md)** ← Your first stop for understanding how we define task completion, story points, and our workflow standards.
+→ **[Task Clarity Essentials](task-clarity-essentials)** ← Your first stop for understanding how we define task completion, story points, and our workflow standards.
 
 ### 📚 **What You'll Find Here**
 
 #### Level 1: Getting Started (5 minutes)
 
-- **Task Requirements**: [Definition of Done, Story Points, Workflow](task-clarity-essentials.md)
+- **Task Requirements**: [Definition of Done, Story Points, Workflow](task-clarity-essentials)
 - **Essential Tools**: Jira, Discord, GitHub, Google Workspace setup
 - **Communication Standards**: How we work together professionally
 
 #### Level 2: Business Success (10 minutes)
 
-- **Professional Quotation Process**: [Task-based payment model and proposal preparation](/docs/freelancer-support/quotation-guide.md)
-- **Success Framework**: [Build your freelance practice with PenguinMails](/docs/freelancer-support/README.md)
-- **Industry Specialization**: [Choose your focus area for market differentiation](/docs/freelancer-support/README.md#industry-specialization)
+- **Professional Quotation Process**: [Task-based payment model and proposal preparation](/docs/freelancer-support/quotation-guide)
+- **Success Framework**: [Build your freelance practice with PenguinMails](/docs/freelancer-support/README)
+- **Industry Specialization**: [Choose your focus area for market differentiation](/docs/freelancer-support/README#industry-specialization)
 
 #### Level 3: Detailed Operations (Reference)
 
-- **Complete Operations Framework**: [All procedures, standards, and compliance requirements](/docs/operations/freelancer-management/framework.md)
-- **Quality Assurance**: [Performance monitoring and improvement processes](/docs/operations/freelancer-management/framework.md#quality-control-procedures)
-- **Team Structure**: [Roles, responsibilities, and coordination protocols](/docs/operations/freelancer-management/framework.md#team-structure)
+- **Complete Operations Framework**: [All procedures, standards, and compliance requirements](/docs/operations/freelancer-management/framework)
+- **Quality Assurance**: [Performance monitoring and improvement processes](/docs/operations/freelancer-management/framework#quality-control-procedures)
+- **Team Structure**: [Roles, responsibilities, and coordination protocols](/docs/operations/freelancer-management/framework#team-structure)
 
 ## 🚀 **Your First 3 Steps**
 
 ### Step 1: Understand Task Standards (10 minutes)
 
-→ **[Task Clarity Essentials](task-clarity-essentials.md)**
+→ **[Task Clarity Essentials](task-clarity-essentials)
 Read this first. It covers Definition of Done, Story Points, SOP workflow, and tools overview.
 
 ### Step 2: Prepare Professional Proposal (15 minutes)
 
-→ **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)**
+→ **[Quotation Guide](/docs/freelancer-support/quotation-guide)
 Learn our task-based payment model and prepare your professional quotation using the Google Docs template.
 
 ### Step 3: Review Complete Framework (20 minutes)
 
-→ **[Operations Framework](/docs/operations/freelancer-management/framework.md)**
+→ **[Operations Framework](/docs/operations/freelancer-management/framework)
 Understand detailed procedures, team structure, and communication protocols.
 
 ## 📊 **Contextual Navigation Based on Your Experience**
 
 ### 🆕 **If You're New to Freelancing** (Recommended Path)
 
-1. **Start Here**: [Task Clarity Essentials](task-clarity-essentials.md) - Master task completion standards
-2. **Next**: [Success Center Overview](/docs/freelancer-support/README.md) - Build your freelance practice
-3. **Then**: [Quotation Guide](/docs/freelancer-support/quotation-guide.md) - Create professional proposals
-4. **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework.md) - Complete procedures
+1. **Start Here**: [Task Clarity Essentials](task-clarity-essentials) - Master task completion standards
+2. **Next**: [Success Center Overview](/docs/freelancer-support/README) - Build your freelance practice
+3. **Then**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Create professional proposals
+4. **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework) - Complete procedures
 
 ### ⚡ **If You're an Experienced Freelancer** (Quick Path)
 
-1. **Focus**: [Task Clarity Differences](task-clarity-essentials.md#sop-workflow) - Our unique workflow approach
-2. **Review**: [Communication Standards](task-clarity-essentials.md#communication-standards) - Professional protocols
-3. **Understand**: [2x Time Rule](task-clarity-essentials.md#delivery-enforcement) - Delivery enforcement policy
-4. **Apply**: [Operations Framework](/docs/operations/freelancer-management/framework.md) - Team structure
+1. **Focus**: [Task Clarity Differences](task-clarity-essentials#sop-workflow) - Our unique workflow approach
+2. **Review**: [Communication Standards](task-clarity-essentials#communication-standards) - Professional protocols
+3. **Understand**: [2x Time Rule](task-clarity-essentials#delivery-enforcement) - Delivery enforcement policy
+4. **Apply**: [Operations Framework](/docs/operations/freelancer-management/framework) - Team structure
 
 ### 🎯 **If You're an Industry Specialist** (Specialization Path)
 
-1. **Business Development**: [Success Center](/docs/freelancer-support/README.md) - Build specialization
-2. **Task Mastery**: [Task Clarity Essentials](task-clarity-essentials.md) - Premium task handling
-3. **Proposal Excellence**: [Quotation Guide](/docs/freelancer-support/quotation-guide.md) - High-value services
-4. **Advanced Operations**: [Operations Framework](/docs/operations/freelancer-management/framework.md) - Team leadership
+1. **Business Development**: [Success Center](/docs/freelancer-support/README) - Build specialization
+2. **Task Mastery**: [Task Clarity Essentials](task-clarity-essentials) - Premium task handling
+3. **Proposal Excellence**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - High-value services
+4. **Advanced Operations**: [Operations Framework](/docs/operations/freelancer-management/framework) - Team leadership
 
 ## ✅ **Progress Tracking: Your Onboarding Journey**
 
@@ -84,7 +84,7 @@ Understand detailed procedures, team structure, and communication protocols.
 
 #### Phase 1: Foundation (Required)
 
-- [ ] Read [Task Clarity Essentials](task-clarity-essentials.md) completely
+- [ ] Read [Task Clarity Essentials](task-clarity-essentials) completely
 - [ ] Understand Definition of Done requirements
 - [ ] Confirm access to all required tools (Jira, Discord, GitHub, Google Workspace)
 - [ ] Provide effort estimates in story points for tasks
@@ -92,31 +92,31 @@ Understand detailed procedures, team structure, and communication protocols.
 
 #### Phase 2: Professional Preparation (Recommended)
 
-- [ ] Review [Quotation Guide](/docs/freelancer-support/quotation-guide.md)
+- [ ] Review [Quotation Guide](/docs/freelancer-support/quotation-guide)
 - [ ] Create your first professional quotation using the template
-- [ ] Study [Success Center](/docs/freelancer-support/README.md) for business development
+- [ ] Study [Success Center](/docs/freelancer-support/README) for business development
 - [ ] Set up your development environment and staging access
 
 #### Phase 3: Advanced Operations (Optional)
 
-- [ ] Review complete [Operations Framework](/docs/operations/freelancer-management/framework.md)
+- [ ] Review complete [Operations Framework](/docs/operations/freelancer-management/framework)
 - [ ] Understand quality control procedures and team structure
 - [ ] Connect with team leads for advanced project assignments
 - [ ] Develop specialization focus areas
 
 ### 🎯 **Next Steps Based on Completion**
 
-**After Task Clarity Essentials**: You're ready to start working! Move to [Quotation Guide](/docs/freelancer-support/quotation-guide.md) to prepare professional proposals.
+**After Task Clarity Essentials**: You're ready to start working! Move to [Quotation Guide](/docs/freelancer-support/quotation-guide) to prepare professional proposals.
 
-**After Quotation Guide**: Begin working with clients using [Operations Framework](/docs/operations/freelancer-management/framework.md) for detailed procedures.
+**After Quotation Guide**: Begin working with clients using [Operations Framework](/docs/operations/freelancer-management/framework) for detailed procedures.
 
-**After Operations Framework**: Focus on business growth through [Success Center](/docs/freelancer-support/README.md) specialization resources.
+**After Operations Framework**: Focus on business growth through [Success Center](/docs/freelancer-support/README) specialization resources.
 
 ## 💡 **Success Tips for New Freelancers**
 
 ### ✅ **Before Starting**
 
-- Read [Task Clarity Essentials](task-clarity-essentials.md) completely
+- Read [Task Clarity Essentials](task-clarity-essentials) completely
 - Set up access to all required tools (Jira, Discord, GitHub, Google Workspace)
 - Prepare effort estimates in story points for every task
 - Understand the 2x delivery time rule
@@ -139,42 +139,42 @@ Understand detailed procedures, team structure, and communication protocols.
 
 ```text
 Level 1: Overview (This page) → 5 minutes
-Level 2: Task Essentials (task-clarity-essentials.md) → 10 minutes
-Level 3: Operations Framework (/docs/operations/freelancer-management/framework.md) → 20 minutes
+Level 2: Task Essentials (task-clarity-essentials) → 10 minutes
+Level 3: Operations Framework (/docs/operations/freelancer-management/framework) → 20 minutes
 ```
 
 ### 📋 **Document Reading Order**
 
-1. **[Freelancer Onboarding Hub](README.md)** *(This page)* - Quick start and navigation
-2. **[Task Clarity Essentials](task-clarity-essentials.md)** - Essential task requirements
-3. **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional proposals
-4. **[Operations Framework](/docs/operations/freelancer-management/framework.md)** - Complete procedures
+1. **[Freelancer Onboarding Hub](README)** *(This page)* - Quick start and navigation
+2. **[Task Clarity Essentials](task-clarity-essentials)** - Essential task requirements
+3. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional proposals
+4. **[Operations Framework](/docs/operations/freelancer-management/framework)** - Complete procedures
 
 ## 🔗 **Quick Reference Links**
 
 ### Essential Documents
 
-- **[Task Clarity Essentials](task-clarity-essentials.md)** - DoD, Story Points, SOP workflow
-- **[Professional Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Proposal preparation
-- **[Operations Framework](/docs/operations/freelancer-management/framework.md)** - Complete procedures
+- **[Task Clarity Essentials](task-clarity-essentials)** - DoD, Story Points, SOP workflow
+- **[Professional Quotation Guide](/docs/freelancer-support/quotation-guide)** - Proposal preparation
+- **[Operations Framework](/docs/operations/freelancer-management/framework)** - Complete procedures
 
 ### Business Development
 
-- **[Freelancer Success Center](/docs/freelancer-support/README.md)** - Building your practice
-- **[Implementation Resources](/docs/freelancer-support/implementation-resources.md)** - Practical tools
-- **[Success Metrics](/docs/freelancer-support/success-metrics.md)** - Performance tracking
+- **[Freelancer Success Center](/docs/freelancer-support/README)** - Building your practice
+- **[Implementation Resources](/docs/freelancer-support/implementation-resources)** - Practical tools
+- **[Success Metrics](/docs/freelancer-support/success-metrics)** - Performance tracking
 
 ### Industry Development
 
-- **[Industry Specialization](/docs/freelancer-support/README.md#industry-specialization)** - Market differentiation
-- **[Business Development Resources](/docs/freelancer-support/README.md#business-development-resources)** - Practice building
-- **[Scaling Success](/docs/freelancer-support/README.md#scaling-success)** - Growth strategies
+- **[Industry Specialization](/docs/freelancer-support/README#industry-specialization)** - Market differentiation
+- **[Business Development Resources](/docs/freelancer-support/README#business-development-resources)** - Practice building
+- **[Scaling Success](/docs/freelancer-support/README#scaling-success)** - Growth strategies
 
 ### Compliance & Standards
 
-- **[Quality Assurance](/docs/operations/freelancer-management/framework.md#quality-control-procedures)** - Performance monitoring
+- **[Quality Assurance](/docs/operations/freelancer-management/framework#quality-control-procedures)** - Performance monitoring
 - **[Confidentiality Requirements](/docs/compliance-security/)** - Data protection
-- **[Team Structure](/docs/operations/freelancer-management/framework.md#team-structure)** - Roles and responsibilities
+- **[Team Structure](/docs/operations/freelancer-management/framework#team-structure)** - Roles and responsibilities
 
 ## 🎓 **Learning Path Recommendations**
 
@@ -200,14 +200,14 @@ Level 3: Operations Framework (/docs/operations/freelancer-management/framework.
 
 ### **Questions About Tasks?**
 
-- Start with [Task Clarity Essentials](task-clarity-essentials.md)
-- Check [Operations Framework](/docs/operations/freelancer-management/framework.md)
+- Start with [Task Clarity Essentials](task-clarity-essentials)
+- Check [Operations Framework](/docs/operations/freelancer-management/framework)
 - Ask in Discord channels tagged appropriately
 
 ### **Questions About Business Development?**
 
-- Review [Freelancer Success Center](/docs/freelancer-support/README.md)
-- Follow [Quotation Guide](/docs/freelancer-support/quotation-guide.md)
+- Review [Freelancer Success Center](/docs/freelancer-support/README)
+- Follow [Quotation Guide](/docs/freelancer-support/quotation-guide)
 - Connect with business development resources
 
 ### **Technical Questions?**

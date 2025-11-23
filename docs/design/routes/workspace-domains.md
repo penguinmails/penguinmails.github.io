@@ -4,9 +4,9 @@
 
 - **Goal**: Manage sending domains and email accounts (infrastructure) for the workspace.
 - **Feature References**:
-  - [Inbox Rotation](../../core-features/inbox-rotation/overview.md)
-  - [Warm-ups](../../core-features/warm-ups/overview.md)
-  - [Free Mailbox Creation](../../core-features/free-mailbox-creation/overview.md)
+  - [Inbox Rotation](/docs/core-features/inbox-rotation/overview)
+  - [Warm-ups](/docs/core-features/warm-ups/overview)
+  - [Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)
 - **User Journey**: Setup domains first (Infrastructure) during onboarding, then add email accounts for sending.
 
 ## 2. UI Patterns & Components (The "How")
@@ -48,7 +48,7 @@
     - ⏳ Pending (Yellow)
     - ❌ Failed (Red) with "Check DNS" link.
 
-- **Reputation Score** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-cards)):
+- **Reputation Score** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards)):
   - Color-coded: 90-100 (Green), 70-89 (Yellow), <70 (Red).
   - Tooltip: "Based on bounce rate, spam complaints, and blacklist status."
 
@@ -65,8 +65,8 @@
 
 **Related Documentation**:
 
-- [Domain Setup Guide](../../core-features/warm-ups/overview.md)
-- [DNS Configuration](../../technical/infrastructure/email-deliverability.md)
+- [Domain Setup Guide](/docs/core-features/warm-ups/overview)
+- [DNS Configuration](/docs/technical/infrastructure/email-deliverability)
 
 **Technical Integration**:
 
@@ -111,8 +111,8 @@
 
 **Related Documentation**:
 
-- [Domain Setup Tutorial](../../freelancer-support/tutorials/domain-setup.md)
-- [DNS Provider Guides](../../technical/infrastructure/dns-providers.md)
+- [Domain Setup Tutorial](/docs/freelancer-support/tutorials/domain-setup)
+- [DNS Provider Guides](/docs/technical/infrastructure/dns-providers)
 
 **Technical Integration**:
 
@@ -155,8 +155,8 @@
 
 **Related Documentation**:
 
-- [Email Account Health](../../core-features/warm-ups/overview.md)
-- [Inbox Rotation Strategy](../../core-features/inbox-rotation/overview.md)
+- [Email Account Health](/docs/core-features/warm-ups/overview)
+- [Inbox Rotation Strategy](/docs/core-features/inbox-rotation/overview)
 
 **Technical Integration**:
 
@@ -198,8 +198,8 @@
 
 **Related Documentation**:
 
-- [DNS Best Practices](../../technical/infrastructure/dns-providers.md)
-- [DKIM Rotation](../../technical/infrastructure/email-deliverability.md)
+- [DNS Best Practices](/docs/technical/infrastructure/dns-providers)
+- [DKIM Rotation](/docs/technical/infrastructure/email-deliverability)
 
 ---
 
@@ -234,8 +234,8 @@
 
 **Related Documentation**:
 
-- [Free Mailbox Creation](../../core-features/free-mailbox-creation/overview.md)
-- [Security Best Practices](../../compliance-security/enterprise/overview.md)
+- [Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)
+- [Security Best Practices](/docs/compliance-security/enterprise/overview)
 
 **Technical Integration**:
 
@@ -290,8 +290,8 @@
 
 **Related Documentation**:
 
-- [Email Account Health](../../core-features/warm-ups/overview.md)
-- [Deliverability Monitoring](../../operations/monitoring/email-health.md)
+- [Email Account Health](/docs/core-features/warm-ups/overview)
+- [Deliverability Monitoring](/docs/operations/monitoring/email-health)
 
 ---
 
@@ -332,8 +332,8 @@
 
 **Related Documentation**:
 
-- [Warmup Strategies](../../core-features/warm-ups/overview.md)
-- [Best Practices](../../business/email-deliverability/warmup-guide.md)
+- [Warmup Strategies](/docs/core-features/warm-ups/overview)
+- [Best Practices](/docs/business/email-deliverability/warmup-guide)
 
 **Technical Integration**:
 
@@ -345,10 +345,10 @@
 
 | Route | Related API | Description |
 |---|---|---|
-| `/domains` | [Domains API](../../implementation-technical/api/tenant-smtp/domains.md) | `GET /api/v1/tenant/domains` (List), `POST` (Add). |
-| `/domains/[id]` | [Domains API](../../implementation-technical/api/tenant-smtp/domains.md) | `GET /api/v1/tenant/domains/{id}` (Details & DNS Status). |
-| `/domains/[id]/emails` | [Domains API](../../implementation-technical/api/tenant-smtp/domains.md) | `POST /api/v1/tenant/domains/{id}/accounts` (Add Email). |
-| `/domains` (Health) | [Reputation API](../../implementation-technical/api/central-smtp/reputation.md) | `GET /api/v1/reputation/domains/{domain}` (Health Score). |
+| `/domains` | [Domains API](/docs/implementation-technical/api/tenant-smtp/domains) | `GET /api/v1/tenant/domains` (List), `POST` (Add). |
+| `/domains/[id]` | [Domains API](/docs/implementation-technical/api/tenant-smtp/domains) | `GET /api/v1/tenant/domains/{id}` (Details & DNS Status). |
+| `/domains/[id]/emails` | [Domains API](/docs/implementation-technical/api/tenant-smtp/domains) | `POST /api/v1/tenant/domains/{id}/accounts` (Add Email). |
+| `/domains` (Health) | [Reputation API](/docs/implementation-technical/api/central-smtp/reputation) | `GET /api/v1/reputation/domains/{domain}` (Health Score). |
 
 ## 6. Data Strategy
 

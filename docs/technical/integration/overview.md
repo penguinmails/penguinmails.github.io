@@ -16,7 +16,7 @@ persona: "Documentation Users"
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
-**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](../../core-features) and [analytics tracking](../../core-features/analytics/overview) to provide seamless workflow automation that scales with your business.
+**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](/docs/core-features) and [analytics tracking](/docs/core-features/analytics/overview) to provide seamless workflow automation that scales with your business.
 
 PenguinMails provides a comprehensive integration ecosystem designed for developers, with **RESTful APIs, SDKs for major programming languages, webhook systems, and extensive third-party integrations**. Build custom solutions with confidence using our enterprise-grade API infrastructure.
 
@@ -734,7 +734,7 @@ For complete technical implementation details, including:
 - Security best practices
 - Testing with Stripe test mode
 
-See: **[Stripe Integration Documentation](stripe.md)**
+See: **[Stripe Integration Documentation](/docs/technical/integration/stripe)**
 
 **Quick Integration Example**:
 
@@ -771,8 +771,8 @@ window.location.href = session.url;
 
 **Related Resources**:
 
-- [Settings Billing Route](../../design/routes/settings.md#dashboard-settings-billing---billing--subscriptions)
-- [Pricing Plans](../../finance/pricing/overview.md) (if exists)
+- [Settings Billing Route](/docs/design/routes/settings#dashboard-settings/billing)
+- [Pricing Plans](/docs/pricing/overview) (if exists)
 
 ---
 
@@ -921,10 +921,10 @@ class TestPenguinMailsAPI:
 ## 📚 Additional Resources
 
 ### **Developer Documentation**
-- **[API Reference](advanced-integrations)** - Complete API documentation
-- **[SDK Documentation](development-resources)** - Detailed SDK guides
-- **[Webhook Guide](advanced-integrations/webhook-guide)** - Webhook implementation guide
-- **[Testing Framework](development-resources/testing-framework)** - Testing tools and best practices
+- **[API Reference](/docs/technical/integration/advanced-integrations)** - Complete API documentation
+- **[SDK Documentation](/docs/technical/integration/development-resources)** - Detailed SDK guides
+- **[Webhook Guide](/docs/technical/integration/advanced-integrations/webhook-guide)** - Webhook implementation guide
+- **[Testing Framework](/docs/technical/integration/development-resources/testing-framework)** - Testing tools and best practices
 
 ### **Support & Community**
 - **Developer Support**: developer-support@penguinmails.com
@@ -943,5 +943,5 @@ class TestPenguinMailsAPI:
 *Our comprehensive integration ecosystem ensures that PenguinMails seamlessly fits into your existing technology stack while providing the flexibility to build custom solutions that drive your business forward.*
 
 ---
-*Previous: [Technical Operations Overview](../operations/overview) | Next: [Core Features Overview](../../core-features) →*
+*Previous: [Technical Operations Overview](/docs/technical/operations/overview) | Next: [Core Features Overview](/docs/core-features) →*
 ---

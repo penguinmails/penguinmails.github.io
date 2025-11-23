@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # System Analytics API
 
-**Parent API**: [Platform API](../platform-api.md)  
+**Parent API**: [Platform API](/docs/implementation-technical/api/platform-api)
 **URL Prefix**: `/api/v1/platform/system`
 
 ---

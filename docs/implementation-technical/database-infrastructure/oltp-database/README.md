@@ -14,9 +14,9 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 ### Core Components
 
-- **[Schema Guide](schema-guide.md)** - Complete OLTP database schema and design principles
-- **[Entity Relationship Diagram](mermaid-er.md)** - Database schema visualization
-- **[SQL Implementation Challenge](sql-implementation-guide.md)** - Hands-on exercises for building and testing OLTP architecture
+- **[Schema Guide](schema-guide)** - Complete OLTP database schema and design principles
+- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
+- **[SQL Implementation Challenge](sql-implementation-guide)** - Hands-on exercises for building and testing OLTP architecture
 
 ### Design Principles
 
@@ -29,9 +29,9 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Schema Guide](schema-guide.md) | Complete OLTP schema and implementation | Database engineers |
-| [Mermaid ER](mermaid-er.md) | Visual database schema representation | All technical stakeholders |
-| [SQL Implementation Challenge](sql-implementation-guide.md) | Hands-on SQL exercises for developers | Backend developers |
+| [Schema Guide](schema-guide) | Complete OLTP schema and implementation | Database engineers |
+| [Mermaid ER](mermaid-er) | Visual database schema representation | All technical stakeholders |
+| [SQL Implementation Challenge](sql-implementation-guide) | Hands-on SQL exercises for developers | Backend developers |
 
 ## Key Concepts
 
@@ -68,9 +68,9 @@ This design ensures:
 
 ## Getting Started
 
-1. Review [Schema Guide](schema-guide.md) for implementation details
-2. Reference [Mermaid ER](mermaid-er.md) for visual schema understanding
-3. Complete [SQL Implementation Challenge](sql-implementation-guide.md) for hands-on learning
+1. Review [Schema Guide](schema-guide) for implementation details
+2. Reference [Mermaid ER](mermaid-er) for visual schema understanding
+3. Complete [SQL Implementation Challenge](sql-implementation-guide) for hands-on learning
 4. Follow design principles for new development
 
 ## Integration
@@ -86,7 +86,7 @@ For questions or support, contact the Engineering team.
 
 ## Hands-On Learning
 
-The [SQL Implementation Challenge](sql-implementation-guide.md) provides interactive exercises to:
+The [SQL Implementation Challenge](sql-implementation-guide) provides interactive exercises to:
 
 - Build and test OLTP schemas with realistic sample data
 - Implement multi-tenant isolation patterns

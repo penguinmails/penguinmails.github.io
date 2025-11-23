@@ -5,9 +5,9 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Database Architects"
 related_docs:
-  - "[Main Guide](main.md) - Complete overview"
-  - "[Architecture](architecture.md) - System design principles"
-  - "[Entity Relationship Diagram](mermaid-er.md) - Visual schema"
+  - "[Main Guide](main) - Complete overview"
+  - "[Architecture](architecture) - System design principles"
+  - "[Entity Relationship Diagram](mermaid-er) - Visual schema"
 ---
 
 # Queue Database Schema

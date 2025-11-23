@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # Jobs API
 
-**Parent API**: [Queue API](../queue.md)  
+**Parent API**: [Queue API](/docs/implementation-technical/api/queue)
 **URL Prefix**: `/api/v1/queue`
 
 ---

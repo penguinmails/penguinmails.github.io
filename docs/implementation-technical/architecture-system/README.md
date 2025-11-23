@@ -167,17 +167,17 @@ This architectural documentation integrates with:
 
 ### 📚 **Supporting Documentation**
 
-- [Implementation Overview](..)) - Strategic technical overview
-- [Development Guidelines](/docs/implementation-technical/development-guidelines)) - Coding standards and practices
-- [Database Infrastructure](../database-infrastructure)) - Schema and performance optimization
-- [Quality Assurance](/docs/business/quality-assurance)) - Testing protocols and procedures
+- [Implementation Overview](/docs/implementation-technical/overview) - Strategic technical overview
+- [Development Guidelines](/docs/implementation-technical/development-guidelines) - Coding standards and practices
+- [Database Infrastructure](/docs/implementation-technical/database-infrastructure) - Schema and performance optimization
+- [Quality Assurance](/docs/business/quality-assurance) - Testing protocols and procedures
 
 ### 🔧 **Business Integration**
 
-- [Business Strategy Overview](../../business/strategy)) - Strategic business decisions
-- [Operations Management](../../operations-analytics/operations-management)) - Operational procedures
-- [Security Framework](../../compliance-security/enterprise)) - Security architecture
-- [Analytics Performance](../../operations-analytics/analytics-performance)) - Performance monitoring
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business decisions
+- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
+- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
 
 ---
 

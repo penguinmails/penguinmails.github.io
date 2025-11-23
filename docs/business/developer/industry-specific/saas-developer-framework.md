@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: SaaS Developer Teams, Cloud Architects, SaaS Platform Leaders
 **Business Impact Priority**: High - Multi-tenant developer platform and SaaS compliance responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [SaaS Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [SaaS Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [SaaS Analytics Framework](../analytics/framework
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [SaaS Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [SaaS Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [SaaS Analytics Framework](/docs/business/analytics/framework
 
 ## Executive Summary
 
@@ -105,7 +105,7 @@ The SaaS Developer Framework establishes comprehensive protocols for multi-tenan
 - Performance validation systems activated and monitored
 - Management optimization compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [SaaS Tenant Management](/docs/business/strategy/overview)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [SaaS Tenant Management](/docs/business/strategy/overview)
 
 #### Optimization Point 1.2.3: SaaS Platform Compliance Validation
 
@@ -197,7 +197,7 @@ The SaaS Developer Framework establishes comprehensive protocols for multi-tenan
 - Cost optimization validation systems activated and validated
 - Resource optimization completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [SaaS Cloud Resource Optimization](/docs/business/strategy/overview)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [SaaS Cloud Resource Optimization](/docs/business/strategy/overview)
 
 #### Management Point 2.2.3: SaaS Monitoring Excellence
 
@@ -289,7 +289,7 @@ The SaaS Developer Framework establishes comprehensive protocols for multi-tenan
 - Validation automation systems activated and validated
 - Compliance automation completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [SaaS Privacy Compliance Automation](/docs/business/strategy/overview)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [SaaS Privacy Compliance Automation](/docs/business/strategy/overview)
 
 #### Compliance Point 3.2.3: Regulatory Reporting Excellence
 
@@ -381,7 +381,7 @@ The SaaS Developer Framework establishes comprehensive protocols for multi-tenan
 - Message tracking optimization systems activated and validated
 - Notification management completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [SaaS Notification Management](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [SaaS Notification Management](/docs/business/operations/strategy/framework)
 
 #### Excellence Point 4.2.3: Notification Automation Excellence
 
@@ -395,7 +395,7 @@ The SaaS Developer Framework establishes comprehensive protocols for multi-tenan
 - Optimization systems activated and validated
 - Automation excellence completion verified and documented
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [SaaS Notification Automation](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [SaaS Notification Automation](/docs/business/operations/strategy/framework)
 
 ---
 

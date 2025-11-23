@@ -301,7 +301,7 @@ interface RevenueProtectionAlert {
 ## Progressive Disclosure Navigation
 
 ### Level 1: Strategic Overview
-- [Executive Summary](../core) - Strategic oversight framework for business leaders
+- [Executive Summary](/docs/business/core) - Strategic oversight framework for business leaders
 - [Success Metrics](/docs/business/implementation) - Realistic KPIs for strategic oversight
 
 ### Level 2: Strategic Analysis

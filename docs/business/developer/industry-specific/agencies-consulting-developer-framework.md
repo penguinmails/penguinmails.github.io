@@ -105,7 +105,7 @@ The Agencies & Consulting Developer Framework establishes comprehensive protocol
 - Client satisfaction validation systems activated and monitored
 - Project lifecycle compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Agencies & Consulting Project Management](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Agencies & Consulting Project Management](/docs/business/operations/strategy/framework)
 
 #### Development Point 1.2.3: Consulting Platform Compliance Validation
 
@@ -289,7 +289,7 @@ The Agencies & Consulting Developer Framework establishes comprehensive protocol
 - Project delivery optimization systems activated and validated
 - Efficiency optimization completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Agencies & Consulting Developer Efficiency](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Agencies & Consulting Developer Efficiency](/docs/business/operations/strategy/framework)
 
 #### Excellence Point 3.2.3: Consulting Platform Reliability
 
@@ -323,7 +323,7 @@ The Agencies & Consulting Developer Framework establishes comprehensive protocol
 - Relationship management systems activated and monitored
 - Development automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Agencies & Consulting Client Development Automation](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Agencies & Consulting Client Development Automation](/docs/business/operations/strategy/framework)
 
 #### Automation Point 4.1.2: Client Onboarding Automation
 
@@ -381,7 +381,7 @@ The Agencies & Consulting Developer Framework establishes comprehensive protocol
 - Optimization systems activated and validated
 - Project automation excellence completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Agencies & Consulting Project Automation](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Agencies & Consulting Project Automation](/docs/business/operations/strategy/framework)
 
 #### Excellence Point 4.2.3: Agency Success Automation
 

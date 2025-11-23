@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: The multi-tier separation between operational, content, and analytics data enables both high-performance transactional operations and comprehensive business intelligence reporting.
 
-**User Journey Integration**: This database architecture supports your complete email infrastructure experience from [user management](/docs/technical/architecture/detailed-technical) through [campaign operations](../core-features) to [analytics reporting](../core-features/analytics/overview).
+**User Journey Integration**: This database architecture supports your complete email infrastructure experience from [user management](/docs/technical/architecture/detailed-technical) through [campaign operations](/docs/core-features) to [analytics reporting](/docs/core-features/analytics/overview).
 
 ---
 

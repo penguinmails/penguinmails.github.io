@@ -632,20 +632,18 @@ echo "Disaster recovery completed"
 ## 📋 **Related Documentation**
 
 ### **Operational References**
-- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management))** - Central operational hub
-- **[Connection Pooling Strategy](.))** - Pool management during recovery
-- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Emergency response coordination
+- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management)** - Central operational hub
+- **[Connection Pooling Strategy](/docs/implementation-technical/database-infrastructure/architecture/connection-pooling-strategy)** - Pool management during recovery
+- **[Quality Assurance Testing Protocols](/docs/implementation-technical/quality-assurance/qa-testing-protocols)** - Emergency response coordination
 
 ### **Technical References**
-- **[OLTP Schema Guide](.))** - OLTP backup integration
-- **[Content Database Schema Guide](.))** - Content backup procedures
-- **[Queue System Implementation Guide](.))** - Queue recovery methods
-- **[OLAP Analytics Schema Guide](.))** - Analytics backup strategy
+- **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/schema/oltp-schema-guide)** - OLTP backup integration
+- **[Content Database Schema Guide](/docs/implementation-technical/database-infrastructure/schema/content-database-schema-guide)** - Content backup procedures
 
 ### **Strategic Documentation**
-- **[Operations Analytics Overview](..))** - Main operations analytics framework
-- **[Business Strategy Overview](../../business/strategy))** - Strategic business alignment
-- **[Compliance & Security](../../compliance-security)** - Security and compliance frameworks
+- **[Operations Analytics Overview](/docs/operations-analytics/overview)** - Main operations analytics framework
+- **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic business alignment
+- **[Compliance & Security](/docs/compliance-security)** - Security and compliance frameworks
 
 ---
 

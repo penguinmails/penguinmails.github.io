@@ -205,13 +205,13 @@ This comprehensive competitive intelligence framework provides strategic positio
 **DNS Configuration Approach:**
 "We chose automated DNS configuration over manual setup because manual DNS errors cause deliverability failures for 60% of cold email campaigns, while our automated approach achieves 99.9% verification success rate."
 
-→ [See Technical Details](../technical-implementation/dns-storage-integration-guide)
+→ [See Technical Details](/docs/technical-implementation/dns-storage-integration-guide)
 → [Competitive Advantage](competitive-analysis#dns-automation)
 
 **VPS Infrastructure:**
 "We chose dedicated VPS over shared cloud infrastructure because cold email deliverability requires IP reputation control that shared infrastructure cannot provide."
 
-→ [See Architecture Details](../architecture)
+→ [See Architecture Details](/docs/architecture)
 → [Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure-limitations)
 
 ### **"Why We Avoided..." Language Pattern**
@@ -257,7 +257,7 @@ We made specific architectural decisions that prioritize deliverability and comp
 - **Compliance-First Design**: Unlike platforms that add compliance as an afterthought
 - **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
-→ [See Complete Architecture](../architecture/overview)
+→ [See Complete Architecture](/docs/architecture/overview)
 → [Why These Decisions Matter](competitive-analysis#architecture-decisions)
 
 ---
@@ -390,20 +390,20 @@ We made specific architectural decisions that prioritize deliverability and comp
 **Related Strategic Documentation**:
 
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business decisions and market positioning
-- [Value Proposition Overview](../value-proposition) - Core value propositions and customer benefits
-- [Market Analysis Overview](../market-analysis) - Market opportunity and competitive landscape
-- [Business Model Overview](../model) - Revenue models and competitive economics
+- [Value Proposition Overview](/docs/business/value-proposition) - Core value propositions and customer benefits
+- [Market Analysis Overview](/docs/business/market-analysis) - Market opportunity and competitive landscape
+- [Business Model Overview](/docs/business/model) - Revenue models and competitive economics
 
 **Technical Documentation**:
 
-- [Technical Architecture Overview](../architecture) - Infrastructure decisions and competitive advantages
+- [Technical Architecture Overview](/docs/architecture) - Infrastructure decisions and competitive advantages
 - [Security Overview](/docs/compliance-security/enterprise) - Security features and compliance automation
 
 **Feature Documentation**:
 
-- [Warm-ups Overview](../../core-features/warm-ups) - Competitive differentiation in deliverability features
-- [Analytics Overview](../../core-features/analytics) - Performance metrics vs. competitor limitations
-- [Inbox Rotation Overview](../../core-features/inbox-rotation) - Advanced features not available in competitor platforms
+- [Warm-ups Overview](/docs/core-features/warm-ups) - Competitive differentiation in deliverability features
+- [Analytics Overview](/docs/core-features/analytics) - Performance metrics vs. competitor limitations
+- [Inbox Rotation Overview](/docs/core-features/inbox-rotation) - Advanced features not available in competitor platforms
 
 ---
 

@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **For Platform Engineers and Automation Teams**: Complete API reference for Hostwinds server instance creation, management, and operations
 
-**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md)
+**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview)
 
 ---
 
@@ -358,10 +358,10 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ## Related Documentation
 
-- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
-- [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking.md) - IP and network management
-- [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing.md) - Resource upgrades and billing
-- [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices.md) - Error handling and workflows
+- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
+- [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking) - IP and network management
+- [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing ) - Resource upgrades and billing
+- [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices ) - Error handling and workflows
 
 ---
 

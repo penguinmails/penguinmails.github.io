@@ -356,7 +356,7 @@ All freelancer deliverables must meet the following standards:
 - Continuous improvement and optimization
 - Performance monitoring and adjustment
 
-For detailed quality standards, see [Internal Operations Templates](../operations/freelancer-management/templates.md)
+For detailed quality standards, see [Internal Operations Templates](/docs/operations/freelancer-management/templates)
 
 ### Compliance and Data Protection
 
@@ -374,7 +374,7 @@ For detailed quality standards, see [Internal Operations Templates](../operation
 - Professional conduct and behavior requirements
 - Continuous learning and skill development
 
-For comprehensive compliance requirements, see [Data Protection Guidelines](../../compliance-security/)
+For comprehensive compliance requirements, see [Data Protection Guidelines](/docs/compliance-security)
 
 ---
 
@@ -383,7 +383,7 @@ For comprehensive compliance requirements, see [Data Protection Guidelines](../.
 **Implementation Status:** Ready for immediate use by independent consultants and freelancers
 **Cross-References:**
 
-- [Business Success Framework](business-framework.md)
-- [Internal Quality Standards](../operations/freelancer-management/templates.md)
-- [Success Metrics and KPIs](success-metrics.md)
-- [Compliance Requirements](../../compliance-security/)
+- [Business Success Framework](/docs/freelancer-support/business-framework)
+- [Internal Quality Standards](/docs/operations/freelancer-management/templates)
+- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics)
+- [Compliance Requirements](/docs/compliance-security)

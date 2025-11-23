@@ -150,7 +150,7 @@ persona: "Documentation Users"
 - [Strategic Business Overview](/docs/business/strategy/overview) - Strategic alignment and executive objectives
 - [Strategic Market Intelligence](/docs/business/market-analysis/overview) - Strategic market positioning and opportunities
 - [Strategic Value Proposition](/docs/business/value-proposition/overview) - Strategic competitive differentiation
-- [Strategic Leadership Framework](../business/user-personas) - Strategic leadership analysis and guidance
+- [Strategic Leadership Framework](/docs/business/user-personas) - Strategic leadership analysis and guidance
 
 ### **Strategic Technical Integration**
 
@@ -162,8 +162,8 @@ persona: "Documentation Users"
 ### **Strategic User Experience Integration**
 
 - [Strategic User Overview](/docs/user-journeys) - Strategic user experience flows and planning
-- [Strategic User Onboarding](../user-experience-journeys/detailed-journeys) - Strategic user activation and planning
-- [Strategic User Intelligence](../user-experience-journeys/detailed-journeys) - Strategic UX optimization and planning
+- [Strategic User Onboarding](/docs/user-experience-journeys/detailed-journeys) - Strategic user activation and planning
+- [Strategic User Intelligence](/docs/user-experience-journeys/detailed-journeys) - Strategic UX optimization and planning
 
 ### **Strategic Compliance Integration**
 
@@ -177,10 +177,10 @@ persona: "Documentation Users"
 
 Navigate to specific strategic analytics areas:
 
-- **[Strategic Performance Analytics](./analytics-performance)** → Strategic analytics and performance intelligence
-- **[Strategic Operations Intelligence](./operations-management)** → Strategic operational insights and planning
-- **[Strategic Team Intelligence](./team-performance)** → Strategic team coordination and performance guidance
-- **[Analytics Views Architecture](/docs/core-features/analytics/views-architecture.md)** → Visual design specifications for analytics dashboards
+- **[Strategic Performance Analytics](/docs/operations-analytics/analytics-performance)** → Strategic analytics and performance intelligence
+- **[Strategic Operations Intelligence](/docs/operations-analytics/operations-management)** → Strategic operational insights and planning
+- **[Strategic Team Intelligence](/docs/operations-analytics/team-performance)** → Strategic team coordination and performance guidance
+- **[Analytics Views Architecture](/docs/core-features/analytics/views-architecture)** → Visual design specifications for analytics dashboards
 
 ---
 
@@ -188,9 +188,9 @@ Navigate to specific strategic analytics areas:
 
 Navigate to specific strategic analytics areas:
 
-- **[Strategic Performance Analytics](./analytics-performance)** → Strategic analytics and performance intelligence
-- **[Strategic Operations Intelligence](./operations-management)** → Strategic operational insights and planning
-- **[Strategic Team Intelligence](./team-performance)** → Strategic team coordination and performance guidance
+- **[Strategic Performance Analytics](/docs/operations-analytics/analytics-performance)** → Strategic analytics and performance intelligence
+- **[Strategic Operations Intelligence](/docs/operations-analytics/operations-management)** → Strategic operational insights and planning
+- **[Strategic Team Intelligence](/docs/operations-analytics/team-performance)** → Strategic team coordination and performance guidance
 
 ---
 

@@ -349,7 +349,7 @@ The Operations Management Framework provides comprehensive daily operations mana
 
 **Related Management Documents:**
 
-- [Operations Management Overview](..) - Operations management context and strategic alignment
+- [Operations Management Overview](/docs/business/operations/management) - Operations management context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and management integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with management integration
 - [Daily Operations Procedures](.) - Daily operations management and procedures

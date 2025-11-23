@@ -5,9 +5,9 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Engineering Teams"
 related_docs:
-  - "[Main Guide](main.md) - Complete overview"
-  - "[Architecture](architecture.md) - System design principles"
-  - "[Operations](operations.md) - Deployment and monitoring"
+  - "[Main Guide](main) - Complete overview"
+  - "[Architecture](architecture) - System design principles"
+  - "[Operations](operations) - Deployment and monitoring"
 ---
 
 # Queue System Best Practices

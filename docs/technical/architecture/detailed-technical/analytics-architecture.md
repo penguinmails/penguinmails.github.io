@@ -14,11 +14,11 @@ persona: "Documentation Users"
 
 **Operational Excellence**: Backed by **intelligent monitoring systems** with automated data validation, real-time performance tracking, and comprehensive alerting that ensure 99.9% data accuracy and operational reliability.
 
-**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](../../core-features/analytics) through [business intelligence insights](../business/analytics/overview) to [advanced optimization recommendations](./implementation-roadmap) - providing the data intelligence that powers your success.
+**User Journey Integration**: This analytics foundation enables your complete data journey from [campaign performance monitoring](/docs/core-features/analytics) through [business intelligence insights](/docs/business/analytics/overview) to [advanced optimization recommendations](/docs/technical/architecture/detailed-technical/implementation-roadmap) - providing the data intelligence that powers your success.
 
 ## Quick Navigation
 
-- [🏠 **Main Overview**](/docs/business/strategy/overview) | [Setup **Infrastructure**](../detailed-technical/infrastructure-operations) | [🔒 **Security**](../compliance-security/overview)
+- [🏠 **Main Overview**](/docs/business/strategy/overview) | [Setup **Infrastructure**](/docs/technical/architecture/detailed-technical/infrastructure-operations) | [🔒 **Security**](/docs/compliance-security/overview)
 
 ---
 

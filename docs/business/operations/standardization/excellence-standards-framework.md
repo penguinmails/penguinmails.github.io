@@ -394,12 +394,12 @@ The Operations Excellence Standards Framework provides comprehensive enterprise-
 
 **Related Excellence Documents:**
 
-- [Operations Excellence Overview](..) - Operations excellence context and strategic alignment
+- [Operations Excellence Overview](/docs/business/operations/standardization) - Operations excellence context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and excellence integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with excellence integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with excellence coordination
 - [Process Standardization Framework](/docs/business/operations/standardization) - Process standardization with excellence integration
-- [Enhanced Automation Framework](../automation) - Enhanced automation with excellence coordination
+- [Enhanced Automation Framework](/docs/business/operations/automation) - Enhanced automation with excellence coordination
 
 **Next Steps:**
 

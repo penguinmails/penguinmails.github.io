@@ -354,7 +354,7 @@ The Enhanced Operations Automation Framework provides comprehensive advanced ope
 
 **Related Automation Documents:**
 
-- [Operations Automation Overview](..) - Operations automation context and strategic alignment
+- [Operations Automation Overview](/docs/business/operations/automation) - Operations automation context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and automation integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with automation integration
 - [Operations Development Framework](/docs/business/operations/development/framework) - Operations development with automation coordination

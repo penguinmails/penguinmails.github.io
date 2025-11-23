@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Executive Leadership, C-Level Executives, Developer Leadership
 **Business Impact Priority**: Critical - Executive visibility and developer performance responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive Dashboard Framework](../executive-dashboard) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive Dashboard Framework](/docs/business/executive/dashboard) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview)
 
 ## Executive Summary
 
@@ -47,7 +47,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform status and performance metrics systems activated and optimized
 - Dashboard validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Dashboard Framework](../executive-dashboard)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Dashboard Framework](/docs/business/executive/dashboard)
 
 #### Dashboard Point 1.1.2: Developer Platform Status Monitoring
 
@@ -91,7 +91,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform achievement tracking systems activated and optimized
 - Success metrics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive KPI Framework](../executive-kpi)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive KPI Framework](/docs/business/executive/kpi)
 
 #### KPI Point 1.2.2: Developer Platform Efficiency KPIs
 
@@ -153,7 +153,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Platform performance and optimization systems activated and optimized
 - Analysis dashboards validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Dashboard Framework](../executive-dashboard)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Dashboard Framework](/docs/business/executive/dashboard)
 
 #### Monitoring Point 2.1.3: Developer Success Tracking
 
@@ -211,7 +211,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Predictive analytics systems activated and optimized
 - Performance intelligence validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Analytics Intelligence](../executive-analytics-intelligence)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Analytics Intelligence](/docs/business/executive/analytics-intelligence)
 
 ---
 
@@ -231,7 +231,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Issue evaluation systems activated and optimized
 - Risk assessment validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Executive Risk Framework](../executive-risk)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Executive Risk Framework](/docs/business/executive/risk)
 
 #### Risk Point 3.1.2: Developer Platform Risk Monitoring
 
@@ -275,7 +275,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Strategic insight systems activated and optimized
 - Decision support validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Decision Support Framework](../executive-decision-support)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Decision Support Framework](/docs/business/executive/decision-support)
 
 #### Support Point 3.2.2: Developer Platform Investment Analytics
 
@@ -289,7 +289,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Value optimization systems activated and validated
 - Investment analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Investment Analytics](../executive-investment-analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Investment Analytics](/docs/business/executive/investment-analytics)
 
 #### Support Point 3.2.3: Developer Success Probability Analytics
 
@@ -303,7 +303,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 - Achievement forecasting systems activated and optimized
 - Probability analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](../executive-predictive-analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](/docs/business/executive/predictive-analytics)
 
 ---
 

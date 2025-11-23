@@ -302,7 +302,7 @@ Agencies and consulting firms operate in a relationship-driven, expertise-based 
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 - [Agencies & Consulting Marketing Framework](/docs/business/marketing/industry-cases)
-- [Cross-Domain Integration](../cross-domain-integration/overview
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview
 
 ---
 

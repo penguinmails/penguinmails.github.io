@@ -17,7 +17,7 @@ This comprehensive guide covers PenguinMails' enterprise-grade onboarding and au
 
 **Operational Excellence**: Backed by [99.9% uptime guarantees](.) with comprehensive monitoring systems, automated failover, and enterprise-grade security. The authentication system includes real-time health checks, predictive scaling, and intelligent error recovery mechanisms.
 
-**User Journey Integration**: This feature is part of your complete [user experience journey](../../user-journeys) - connecting seamlessly to [business strategy overview](/docs/business/strategy/overview), [market analysis insights](/docs/business/market-analysis/overview), and [value proposition delivery](../business/value-proposition/detailed-analysis).
+**User Journey Integration**: This feature is part of your complete [user experience journey](/docs/user-journeys) - connecting seamlessly to [business strategy overview](/docs/business/strategy/overview), [market analysis insights](/docs/business/market-analysis/overview), and [value proposition delivery](/docs/business/value-proposition/detailed-analysis).
 
 ---
 
@@ -188,7 +188,7 @@ export async function POST(req: NextRequest) {
 }
 ```markdown
 
-**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](/docs/business/strategy)) by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](/docs/business/value-proposition/detailed-analysis)) of respecting user privacy while maintaining security.
+**Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](/docs/business/strategy/overview by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](/docs/business/value-proposition/detailed-analysis)) of respecting user privacy while maintaining security.
 
 ### **Email Verification with Loop Service**
 
@@ -458,7 +458,7 @@ export async function POST(req: NextRequest) {
 }
 ```markdown
 
-**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](/docs/compliance-security)) while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
+**Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](/docs/compliance-security while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
 
 ---
 
@@ -1116,7 +1116,7 @@ export async function POST(req: NextRequest) {
 }
 ```markdown
 
-**Security and UX Excellence**: This login system supports our [enterprise security standards](/docs/compliance-security)) while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
+**Security and UX Excellence**: This login system supports our [enterprise security standards](/docs/compliance-security while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
 
 ---
 
@@ -1299,7 +1299,7 @@ env:
     secret: loop-api-key
 ```markdown
 
-**Security Configuration**: This environment configuration supports our [enterprise security standards](/docs/compliance-security)) by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](/docs/technical/architecture/detailed-technical)) through proper environment separation and secret rotation capabilities.
+**Security Configuration**: This environment configuration supports our [enterprise security standards](/docs/compliance-security by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](/docs/technical/architecture/detailed-technical)) through proper environment separation and secret rotation capabilities.
 
 ---
 
@@ -1326,7 +1326,7 @@ env:
 - **Session timeout**: 30-day sessions with refresh capability and intelligent session extension
 - **CSRF protection**: Implement CSRF tokens for state-changing operations with automatic token validation
 
-**Enterprise Security Integration**: These security practices support our [competitive differentiation](/docs/business/strategy)) by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](/docs/business/market-analysis)).
+**Enterprise Security Integration**: These security practices support our [competitive differentiation](/docs/business/strategy/overview by providing enterprise-grade security that meets SOC 2, GDPR, and PCI DSS compliance requirements. The comprehensive security posture enables our [enterprise customer acquisition strategy](/docs/business/market-analysis)).
 
 ---
 
@@ -1370,7 +1370,7 @@ env:
 - [IP Management Guide](/docs/technical/architecture/detailed-technical) - Email infrastructure and deliverability
 - [Analytics Architecture](.) - User behavior tracking and analytics
 - [Database Schema Guide](/docs/business/strategy/overview) - Multi-tenant database structure
-- [Security Documentation](../../compliance-security) - Authentication and security procedures
+- [Security Documentation](/docs/compliance-security) - Authentication and security procedures
 
 ---
 
@@ -1378,11 +1378,11 @@ env:
 
 This onboarding and authentication system represents a cornerstone of our technical architecture, supporting our [market leadership positioning](/docs/business/strategy/overview) through enterprise-grade security and user experience. The system integrates seamlessly with our [comprehensive technical infrastructure](..) to provide scalable, secure, and user-friendly access to our email platform.
 
-**Business Impact**: The authentication system directly supports our [revenue model](/docs/business/model/overview) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](../business/analytics). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](/docs/business/market-analysis/overview).
+**Business Impact**: The authentication system directly supports our [revenue model](/docs/business/model/overview) by enabling smooth customer acquisition and conversion, with analytics integration providing insights for [continuous optimization](/docs/business/analytics). The enterprise-grade security and compliance features enable our [enterprise market penetration strategy](/docs/business/market-analysis/overview).
 
 **Technical Excellence**: The system showcases our [technical authority](/docs/business/strategy) through modern security practices, scalable architecture, and comprehensive monitoring. The integration with our [progressive queue system](.) and [OLAP analytics](.) demonstrates our commitment to technical excellence and data-driven optimization.
 
-**Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](../business/operations) standards.
+**Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the authentication platform provides reliable, scalable service that supports our [operational excellence](/docs/business/operations) standards.
 
 This implementation follows modern best practices for web authentication, payment processing, and user experience design, ensuring scalability and maintainability as the platform grows to support our [expansion strategy](/docs/business/strategy).
 ---

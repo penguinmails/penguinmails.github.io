@@ -1048,7 +1048,7 @@ This implementation represents a **comprehensive infrastructure advancement** th
 - [Email System Implementation](.) - Email processing and queue integration
 - [Analytics Architecture](.) - PostHog integration and business intelligence
 - [OLAP Analytics Schema](.) - Business intelligence and data warehousing
-- [Business Operations](../../business/operations) - Operational procedures and quality assurance
-- [Security Documentation](../../compliance-security) - Enterprise security and compliance
+- [Business Operations](/docs/business/operations) - Operational procedures and quality assurance
+- [Security Documentation](/docs/compliance-security) - Enterprise security and compliance
 
 **Keywords**: infrastructure, operations, hostwinds, vps, smtp, mailu, nileDB, redis, queue system, deployment, monitoring, troubleshooting, maintenance, enterprise infrastructure, operational excellence

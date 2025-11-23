@@ -249,23 +249,23 @@ This framework provides business leaders with strategic oversight capabilities f
 
 ### Healthcare Operations
 
-- **[Healthcare Operations Framework](./industry-cases)** - HIPAA compliance, patient safety, clinical workflow integration
+- **[Healthcare Operations Framework](/docs/business/operations/industry-cases)** - HIPAA compliance, patient safety, clinical workflow integration
 
 ### Financial Services Operations
 
-- **[Financial Services Operations Framework](./industry-cases)** - SOX compliance, PCI-DSS requirements, banking regulations
+- **[Financial Services Operations Framework](/docs/business/operations/industry-cases)** - SOX compliance, PCI-DSS requirements, banking regulations
 
 ### E-commerce Operations
 
-- **[E-commerce Operations Framework](./industry-cases)** - Customer data security, payment processing, online retail compliance
+- **[E-commerce Operations Framework](/docs/business/operations/industry-cases)** - Customer data security, payment processing, online retail compliance
 
 ### Agencies & Consulting Operations
 
-- **[Agencies & Consulting Operations Framework](./industry-cases)** - Client data security, project management, professional compliance
+- **[Agencies & Consulting Operations Framework](/docs/business/operations/industry-cases)** - Client data security, project management, professional compliance
 
 ### SaaS Operations
 
-- **[SaaS Operations Framework](./industry-cases)** - Multi-tenant security, SaaS compliance, cloud operations
+- **[SaaS Operations Framework](/docs/business/operations/industry-cases)** - Multi-tenant security, SaaS compliance, cloud operations
 
 ---
 

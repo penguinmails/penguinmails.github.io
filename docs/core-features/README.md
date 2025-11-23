@@ -70,12 +70,12 @@ Each feature is organized into progressive complexity levels:
 
 ## Integration with Other Areas
 
-- **Business Context**: [Business Documentation](/docs/business/README.md)
-- **Technical Implementation**: [Technical Documentation](/docs/technical/README.md)
-- **User Journeys**: [User Journey Documentation](/user-journeys/README.md)
-- **Compliance & Security**: [Compliance Documentation](/docs/compliance-security/README.md)
+- **Business Context**: [Business Documentation](/docs/business/README)
+- **Technical Implementation**: [Technical Documentation](/docs/technical/README)
+- **User Journeys**: [User Journey Documentation](/user-journeys/README)
+- **Compliance & Security**: [Compliance Documentation](/docs/compliance-security/README)
 
 ---
-*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Business Context](/docs/business/README.md) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Business Context](/docs/business/README) →*
 
 ---

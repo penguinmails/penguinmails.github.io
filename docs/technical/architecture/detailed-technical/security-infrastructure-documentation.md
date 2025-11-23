@@ -1447,10 +1447,10 @@ flowchart TD
 ### **Strategic Security Document Portfolio**
 - [Security & Compliance Gaps Analysis](/docs/compliance-security) - Comprehensive analysis of RLS, audit logging, and data privacy gaps with [business impact](/docs/business/analytics) assessment
 - [Compliance Procedures](.) - Regulatory compliance procedures with [strategic business](/docs/business/strategy/overview) integration
-- [Incident Response Plan](.) - Detailed breach response procedures with [business continuity](../business/operations) planning
-- [Infrastructure Operations](.) - Infrastructure management with [operational excellence](../business/operations) standards
+- [Incident Response Plan](/docs/technical/architecture/detailed-technical) - Detailed breach response procedures with [business continuity](/docs/business/operations) planning
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - Infrastructure management with [operational excellence](/docs/business/operations) standards
 - [Email System Implementation](.) - Email security with [deliverability optimization](.)
-- [Integration Guide](.) - Secure integrations with [partner management](../business/operations) protocols
+- [Integration Guide](/docs/technical/architecture/detailed-technical) - Secure integrations with [partner management](/docs/business/operations) protocols
 
 ### **Security Training & Awareness with Business Excellence**
 
@@ -1478,11 +1478,11 @@ This security and infrastructure documentation framework represents a cornerston
 
 **Business Impact**: The framework directly supports our [revenue model](/docs/business/model/overview) by building customer trust, enabling enterprise sales, and creating barriers to entry for competitors who cannot match our security standards. Our comprehensive approach to security enables our [enterprise market penetration](/docs/business/market-analysis/overview) by meeting the stringent security requirements that large organizations demand.
 
-**Technical Excellence**: The system showcases our [technical leadership](/docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](.), [automated security enforcement](.), and [predictive threat management](.). The framework ensures [security excellence](/docs/compliance-security) while maintaining optimal [system performance](.) and [customer experience](../business/value-proposition/detailed-analysis).
+**Technical Excellence**: The system showcases our [technical leadership](/docs/business/strategy) through integration with our [comprehensive infrastructure](/docs/technical/architecture), including [intelligent monitoring](/docs/technical/architecture/detailed-technical), [automated security enforcement](/docs/technical/architecture/detailed-technical), and [predictive threat management](/docs/technical/architecture/detailed-technical). The framework ensures [security excellence](/docs/compliance-security) while maintaining optimal [system performance](/docs/technical/architecture/detailed-technical) and [customer experience](/docs/business/value-proposition/detailed-analysis).
 
-**Strategic Competitive Advantage**: This framework transforms security from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [security leadership](/docs/compliance-security), and [customer protection](../business/value-proposition/detailed-analysis). The comprehensive approach to security enables our [market differentiation](/docs/business/strategy) and [competitive advantage](/docs/business/strategy) through enterprise-grade security that exceeds industry standards.
+**Strategic Competitive Advantage**: This framework transforms security from a cost center into a competitive advantage by demonstrating superior [operational excellence](/docs/business/operations), [security leadership](/docs/compliance-security), and [customer protection](/docs/business/value-proposition/detailed-analysis). The comprehensive approach to security enables our [market differentiation](/docs/business/strategy) and [competitive advantage](/docs/business/strategy) through enterprise-grade security that exceeds industry standards.
 
-**Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the security platform provides reliable, scalable service that supports our [operational excellence](../business/operations) standards while maintaining the [security standards](/docs/compliance-security) required for our [growth strategy](..).
+**Operational Reliability**: Backed by our [99.9% uptime commitment](/docs/technical/architecture/detailed-technical) and comprehensive monitoring systems, the security platform provides reliable, scalable service that supports our [operational excellence](/docs/business/operations) standards while maintaining the [security standards](/docs/compliance-security) required for our [growth strategy](/docs/technical/architecture).
 
 This implementation follows modern best practices for enterprise security while integrating strategic business considerations, competitive positioning, and market opportunity identification to ensure that security becomes a catalyst for business growth, customer trust, and competitive advantage development.
 ---

@@ -4,7 +4,7 @@
 
 - **Goal**: Manage all replies from all campaigns and email accounts in a single interface.
 - **Feature References**:
-  - [Unified Inbox](../../core-features/unified-inbox/overview.md)
+  - [Unified Inbox](/docs/core-features/unified-inbox/overview)
 - **User Journey**: Daily workflow: Check Inbox → Reply/Archive/Mark Interested → Zero Inbox.
 
 ## 2. UI Patterns & Components (The "How")
@@ -79,8 +79,8 @@
 
 **Related Documentation**:
 
-- [Unified Inbox Overview](../../core-features/unified-inbox/overview.md)
-- [Response Best Practices](../../business/messaging/reply-strategies.md)
+- [Unified Inbox Overview](/docs/core-features/unified-inbox/overview)
+- [Response Best Practices](/docs/business/messaging/reply-strategies)
 
 **Technical Integration**:
 
@@ -111,7 +111,7 @@
 
 **Related Documentation**:
 
-- [Email Notifications](../../operations/notifications/email-alerts.md)
+- [Email Notifications](/docs/operations/notifications/email-alerts)
 
 ---
 
@@ -136,7 +136,7 @@
 
 **Related Documentation**:
 
-- [Keyboard Navigation Patterns](../ui-library.md#accessibility)
+- [Keyboard Navigation Patterns](/docs/design/ui-library#accessibility)
 
 ---
 
@@ -160,7 +160,7 @@
 
 **Related Documentation**:
 
-- [Search Best Practices](../ui-library.md#search)
+- [Search Best Practices](/docs/design/ui-library#search)
 
 ---
 
@@ -192,8 +192,8 @@
 
 **Related Documentation**:
 
-- [Email Templates](../ui-library.md#templates)
-- [Reply Tracking](../../technical/email-tracking/overview.md)
+- [Email Templates](/docs/design/ui-library#templates)
+- [Reply Tracking](/docs/technical/email-tracking/overview)
 
 ---
 
@@ -222,17 +222,17 @@
 
 **Related Documentation**:
 
-- [Notification Settings](../../operations/notifications/preferences.md)
-- [Browser Notifications API](../ui-library.md#notifications)
+- [Notification Settings](/docs/operations/notifications/preferences)
+- [Browser Notifications API](/docs/design/ui-library#notifications)
 
 ## 5. Related API Endpoints
 
 | Route | Related API | Description |
 |---|---|---|
-| `/inbox` | [Inbox API](../../implementation-technical/api/tenant-api/inbox.md) | `GET /api/v1/tenant/inbox/threads` (List threads). |
-| `/inbox/[threadId]` | [Inbox API](../../implementation-technical/api/tenant-api/inbox.md) | `GET /api/v1/tenant/inbox/threads/{id}` (Thread details). |
-| `/inbox/[threadId]/reply` | [Inbox API](../../implementation-technical/api/tenant-api/inbox.md) | `POST /api/v1/tenant/inbox/threads/{id}/reply` (Send reply). |
-| `/inbox/ws` | [Inbox API](../../implementation-technical/api/tenant-api/inbox.md) | WebSocket endpoint for real-time updates. |
+| `/inbox` | [Inbox API](/docs/implementation-technical/api/tenant-api/inbox) | `GET /api/v1/tenant/inbox/threads` (List threads). |
+| `/inbox/[threadId]` | [Inbox API](/docs/implementation-technical/api/tenant-api/inbox) | `GET /api/v1/tenant/inbox/threads/{id}` (Thread details). |
+| `/inbox/[threadId]/reply` | [Inbox API](/docs/implementation-technical/api/tenant-api/inbox) | `POST /api/v1/tenant/inbox/threads/{id}/reply` (Send reply). |
+| `/inbox/ws` | [Inbox API](/docs/implementation-technical/api/tenant-api/inbox) | WebSocket endpoint for real-time updates. |
 
 ## 6. Data Strategy
 

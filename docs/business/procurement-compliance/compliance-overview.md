@@ -244,7 +244,7 @@ Strategic Quarterly Compliance Strategic Assessment:
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic decisions:**
-- [🏢 Executive Summary](../core) - Complete strategic analysis and oversight framework
+- [🏢 Executive Summary](/docs/business/core) - Complete strategic analysis and oversight framework
 - [💰 ROI Calculator](/docs/business/financial-analysis) - Strategic cost-benefit analysis with compliance strategic considerations
 
 **For implementation details:**

@@ -82,10 +82,10 @@ Operations management encompasses the day-to-day activities required to keep the
 
 ## Related Documentation
 
-- [Operations Analytics Overview](..)) - Main operations analytics framework
+- [Operations Analytics Overview](.) - Main operations analytics framework
 - [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring and analytics
 - [Team Performance](/docs/operations-analytics/team-performance) - Team performance and sprint management
-- [Compliance & Security](../../compliance-security) - Security and compliance frameworks
+- [Compliance & Security](/docs/compliance-security) - Security and compliance frameworks
 
 ---
 

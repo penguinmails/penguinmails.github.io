@@ -381,10 +381,10 @@ Our pricing is designed around **cold email sending volume** and **feature acces
 
 ### **Documentation**
 
-- **[Features & Capabilities](../feature-overview))** - Explore all available features
-- **[Getting Started](../getting-started))** - Complete platform introduction
-- **[Architecture Overview](../technical/architecture))** - Technical foundation
-- **[Key Performance Indicators](../technical/architecture))** - Success metrics
+- **[Features & Capabilities](/docs/feature-overview)** - Explore all available features
+- **[Getting Started](/docs/getting-started)** - Complete platform introduction
+- **[Architecture Overview](/docs/technical/architecture)** - Technical foundation
+- **[Key Performance Indicators](/docs/operations-analytics/analytics-performance)** - Success metrics
 
 ### **Training Materials**
 

@@ -10,7 +10,7 @@ persona: "Documentation Users"
 
 ## Strategic Account Protection & Detection Avoidance
 
-> **📖 Getting Started?** See our [Features Overview](../feature-overview) for complete context and navigation.
+> **📖 Getting Started?** See our [Features Overview](/docs/core-features/feature-overview) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 >
 > - **⭐ Beginner Path**: Basic inbox rotation for account protection
@@ -289,14 +289,14 @@ Ready to optimize your cold email outreach with smart inbox rotation?
 
 ### **Related Features**
 
-1. **[Warm-ups](../warm-ups/overview)** - Build reputation for each account in your rotation
-2. **[Unified Inbox](../unified-inbox/overview)** - Manage responses from all rotated accounts
-3. **[Analytics](../analytics/overview)** - Track performance across all accounts and rotation patterns
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview)** - Create accounts for rotation
+1. **[Warm-ups](/docs/core-features/warm-ups/overview)** - Build reputation for each account in your rotation
+2. **[Unified Inbox](/docs/core-features/unified-inbox/overview)** - Manage responses from all rotated accounts
+3. **[Analytics](/docs/core-features/analytics/overview)** - Track performance across all accounts and rotation patterns
+4. **[Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)** - Create accounts for rotation
 
 ### **Implementation Resources**
 
-1. **[Getting Started](../getting-started)** - Complete setup and integration
+1. **[Getting Started](/docs/getting-started)** - Complete setup and integration
 
 ### **Prerequisites**
 
@@ -314,8 +314,8 @@ Ready to optimize your cold email outreach with smart inbox rotation?
 
 ### **Deep Dive Options**
 
-- **[Advanced Strategies](advanced-strategies)** - Advanced rotation techniques and optimization
-- **[Technical Implementation](technical-implementation)** - Detailed technical setup and configuration
+- **[Advanced Strategies](/docs/core-features/inbox-rotation/advanced-strategies)** - Advanced rotation techniques and optimization
+- **[Technical Implementation](/docs/core-features/inbox-rotation/technical-implementation)** - Detailed technical setup and configuration
 
 ### **Success Metrics**
 

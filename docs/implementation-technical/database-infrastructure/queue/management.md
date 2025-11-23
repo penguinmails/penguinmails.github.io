@@ -5,9 +5,9 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "System Engineers"
 related_docs:
-  - "[Main Guide](main.md) - Complete overview"
-  - "[Architecture](architecture.md) - System design principles"
-  - "[Database Schema](database-schema.md) - Job tables and indexes"
+  - "[Main Guide](main) - Complete overview"
+  - "[Architecture](architecture) - System design principles"
+  - "[Database Schema](database-schema) - Job tables and indexes"
 ---
 
 # Queue Management

@@ -60,15 +60,15 @@ Start here for implementation-focused guidance:
 
 Advanced security architecture and implementation:
 
-- [Security Framework](../enterprise) - Comprehensive security architecture
-- [Security & Privacy Integration](../enterprise) - Unified security and privacy approach
-- [Traffic Security Matrix](../enterprise) - Database security strategy framework
+- [Security Framework](/docs/compliance-security/enterprise) - Comprehensive security architecture
+- [Security & Privacy Integration](/docs/compliance-security/enterprise) - Unified security and privacy approach
+- [Traffic Security Matrix](/docs/compliance-security/enterprise) - Database security strategy framework
 
 ### **🌍 International Standards**
 
 Global compliance and privacy frameworks:
 
-- [Data Privacy Policy](../international) - Customer-facing privacy standards
+- [Data Privacy Policy](/docs/compliance-security/international) - Customer-facing privacy standards
 - International compliance monitoring and reporting
 
 ---
@@ -136,17 +136,17 @@ Global compliance and privacy frameworks:
 ### **Business Operations**
 
 - [Business Strategy](/docs/business/strategy/overview) - Security alignment with business objectives
-- [Market Analysis](../business/competitive-intelligence) - Compliance as competitive advantage
+- [Market Analysis](/docs/business/competitive-intelligence) - Compliance as competitive advantage
 
 ### **Core Features**
 
-- [Inbox Rotation](../core-features/inbox-rotation) - Secure email infrastructure
-- [Unified Inbox](../core-features/unified-inbox) - Multi-tenant security isolation
+- [Inbox Rotation](/docs/core-features/inbox-rotation) - Secure email infrastructure
+- [Unified Inbox](/docs/core-features/unified-inbox) - Multi-tenant security isolation
 
 ### **Technical Implementation**
 
 - [Infrastructure Documentation](/docs/technical/architecture/detailed-technical) - Technical architecture
-- [Development Guidelines](../implementation-technical/development-guidelines) - Secure development practices
+- [Development Guidelines](/docs/implementation-technical/development-guidelines) - Secure development practices
 
 ---
 
@@ -172,11 +172,11 @@ Global compliance and privacy frameworks:
 
 ### **Documentation**
 
-- [Security Framework](../enterprise) - Comprehensive security architecture and controls
-- [Security & Privacy Integration](../enterprise) - Unified security and privacy model
-- [Traffic Security Matrix](../enterprise) - Traffic and key selection security framework
+- [Security Framework](/docs/compliance-security/enterprise) - Comprehensive security architecture and controls
+- [Security & Privacy Integration](/docs/compliance-security/enterprise) - Unified security and privacy model
+- [Traffic Security Matrix](/docs/compliance-security/enterprise) - Traffic and key selection security framework
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Implementation workflows
-- [Data Privacy Policy](../international) - Customer-facing privacy information
+- [Data Privacy Policy](/docs/compliance-security/international) - Customer-facing privacy information
 
 ### **Training & Awareness**
 

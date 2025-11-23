@@ -99,7 +99,7 @@ How users move from a high-level metric to the underlying data.
 
 ## 6. Color Palette for Data
 
-Use the semantic colors defined in [Design Tokens](./design-tokens.md) to ensure accessibility and consistency.
+Use the semantic colors defined in [Design Tokens](/docs/design/design-tokens) to ensure accessibility and consistency.
 
 * **Primary Data**: Brand Primary Color.
 * **Secondary Data**: Brand Secondary or Neutral Gray.

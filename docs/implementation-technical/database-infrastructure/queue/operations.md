@@ -5,9 +5,9 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "DevOps Engineers"
 related_docs:
-  - "[Main Guide](main.md) - Complete overview"
-  - "[Architecture](architecture.md) - System design principles"
-  - "[Workers](workers.md) - Background job processing"
+  - "[Main Guide](main) - Complete overview"
+  - "[Architecture](architecture) - System design principles"
+  - "[Workers](workers) - Background job processing"
 ---
 
 # Operations & Monitoring

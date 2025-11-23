@@ -91,7 +91,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Enhancement optimization systems activated
 - Automation validation completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Operations Automation Framework]
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Operations Automation Framework]
 
 #### Integration Point 1.2.2: Operational Efficiency Optimization
 

@@ -4,7 +4,7 @@
 
 * **Goal**: Define the shell of the application that persists across views, handling navigation, context switching, and global state.
 * **Feature References**:
-  * [Frontend Routing Map](../frontend-routing-map.md)
+  * [Frontend Routing Map](/docs/design/frontend-routing-map)
 * **User Journey**: The user spends 100% of their authenticated time within this shell. It must be responsive and context-aware.
 
 ## 2. UI Patterns & Components (The "How")
@@ -57,8 +57,8 @@
 
 **Related Documentation**:
 
-* [Navigation Patterns](../ui-library.md#navigation)
-* [Layout Components](../component-library.md#layouts)
+* [Navigation Patterns](/docs/design/ui-library#navigation)
+* [Layout Components](/docs/design/component-library#layouts)
 
 **Technical Integration**:
 
@@ -86,8 +86,8 @@
 
 **Related Documentation**:
 
-* [Agency Features](../../business/user-personas/agency-owners.md)
-* [Multi-tenancy Architecture](../../technical/architecture/multi-tenancy.md)
+* [Agency Features](/docs/business/user-personas/agency-owners)
+* [Multi-tenancy Architecture](/docs/technical/architecture/multi-tenancy)
 
 ---
 
@@ -109,14 +109,14 @@
 
 **Related Documentation**:
 
-* [Error Handling Patterns](../ui-library.md#error-handling)
-* [Loading States](../design-system.md#feedback)
+* [Error Handling Patterns](/docs/design/ui-library#error-handling)
+* [Loading States](/docs/design/design-system#feedback)
 
 ## 5. Related API Endpoints
 
 | Route | Related API | Description |
 |---|---|---|
-| `/dashboard` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `GET /api/v1/tenant/workspaces` used to populate the sidebar context switcher. |
+| `/dashboard` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `GET /api/v1/tenant/workspaces` used to populate the sidebar context switcher. |
 | `/dashboard` | **NileDB SDK** | `getUser()` used to hydrate user profile in the Topbar. |
 
 ## 6. Data Strategy

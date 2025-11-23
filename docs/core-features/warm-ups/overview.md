@@ -28,7 +28,7 @@ persona: "Documentation Users"
 **👤 Ideal for Startup Founders** - Build sender reputation without hiring email specialists
 **👤 Enterprise-Ready** - Automated compliance and audit trails for large teams
 
-**Strategic Reference**: See our detailed [Value Proposition Analysis](./docs/business/value-proposition) for comprehensive ROI analysis and competitive positioning.
+**Strategic Reference**: See our detailed [Value Proposition Analysis](/docs/business/value-proposition) for comprehensive ROI analysis and competitive positioning.
 
 ### **The Competitive Advantage**
 
@@ -39,7 +39,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 - **Enterprise Security**: Compliance and audit trails for enterprise requirements
 - **Predictive Optimization**: AI-powered recommendations for maximum deliverability
 
-**See our [Value Proposition](./docs/business/value-proposition) for detailed ROI analysis and competitive positioning.**
+**See our [Value Proposition](/docs/business/value-proposition) for detailed ROI analysis and competitive positioning.**
 
 ---
 
@@ -88,8 +88,8 @@ Unlike manual warm-up processes that often fail, our system uses proven delivera
 
 For a deeper view of how reputation, cost, and monitoring are handled across the platform, see:
 
-- Strategic and technical framing in [`business-leaders-technical-framework.md`](/docs/business/technical-implementation)
-- Implementation roadmap details in [`implementation-roadmap.md`](/docs/business/implementation)
+- Strategic and technical framing in [Business Leaders Technical Framework](/docs/business/technical-implementation)
+- Implementation roadmap details in [Implementation Roadmap](/docs/business/implementation)
 
 ## Performance & Reputation Dashboard
 
@@ -552,14 +552,14 @@ Ready to improve your cold email deliverability?
 
 ### **Related Features**
 
-1. **[Unified Inbox](../unified-inbox/overview)** - Manage responses from your warmed-up accounts
-2. **[Inbox Rotation](../inbox-rotation/overview)** - Rotate between multiple email addresses
-3. **[Analytics](../analytics/overview)** - Track your warm-up progress and performance
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview)** - Set up new email accounts for warm-up
+1. **[Unified Inbox](/docs/core-features/unified-inbox/overview)** - Manage responses from your warmed-up accounts
+2. **[Inbox Rotation](/docs/core-features/inbox-rotation/overview)** - Rotate between multiple email addresses
+3. **[Analytics](/docs/core-features/analytics/overview)** - Track your warm-up progress and performance
+4. **[Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)** - Set up new email accounts for warm-up
 
 ### **Implementation Resources**
 
-1. **[Getting Started](../getting-started)** - Complete your cold email setup
+1. **[Getting Started](/docs/getting-started)** - Complete your cold email setup
 
 ### **Prerequisites**
 

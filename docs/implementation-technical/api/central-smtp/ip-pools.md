@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # IP & Pools API
 
-**Parent API**: [Central SMTP API](../central-smtp.md)  
+**Parent API**: [Central SMTP API](/docs/implementation-technical/api/central-smtp)
 **URL Prefix**: `/api/v1/smtp/admin`
 
 ---

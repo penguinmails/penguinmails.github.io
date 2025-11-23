@@ -28,7 +28,7 @@ persona: "Documentation Users"
 **👤 Ideal for Startup Founders** - Data-driven optimization to maximize limited marketing budget
 **👤 Enterprise-Ready** - Executive dashboards and compliance reporting for sales leadership
 
-**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](/docs/business/strategy) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ### **The PenguinMails Advantage**
 
@@ -40,7 +40,7 @@ Unlike basic email analytics, our platform provides:
 - **Real-time Alerts** - Immediate notifications for performance issues
 - **Enterprise Reporting** - Professional dashboards for stakeholders
 
-**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](./docs/business/strategy) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
+**Strategic Reference**: Our analytics support our goal of [market leadership through deliverability excellence](/docs/business/strategy) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
 ---
 
@@ -281,7 +281,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Heatmaps**: Visualize activity patterns and optimal sending times
 - **Cohort Analysis**: Track customer lifecycle and retention
-- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](views-architecture.md)** → Visual design specifications for analytics dashboards
+- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](/docs/core-features/analytics/views-architecture)** → Visual design specifications for analytics dashboards
 
 ## Enterprise Integration
 
@@ -514,21 +514,21 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 
 ### **Related Business Intelligence**
 
-1. **[Key Performance Indicators Framework](../business/kpi-framework)** - Comprehensive business metrics and formulas
-2. **[Business Strategy & Roadmap](../business/strategy/overview)** - Strategic implementation and development priorities
-3. **[Market Analysis & Competitive Intelligence](../business/market-analysis/overview)** - Market insights and competitive positioning
+1. **[Key Performance Indicators Framework](/docs/business/kpi-framework)** - Comprehensive business metrics and formulas
+2. **[Business Strategy & Roadmap](/docs/business/strategy/overview)** - Strategic implementation and development priorities
+3. **[Market Analysis & Competitive Intelligence](/docs/business/market-analysis/overview)** - Market insights and competitive positioning
 
 ### **Related Feature Documentation**
 
-1. **[Warm-ups](../warm-ups/overview)** - Build reputation to improve deliverability metrics
-2. **[Unified Inbox](../unified-inbox/overview)** - Track responses and conversations
-3. **[Inbox Rotation](../inbox-rotation/overview)** - Optimize across multiple accounts
+1. **[Warm-ups](/docs/core-features/warm-ups/overview)** - Build reputation to improve deliverability metrics
+2. **[Unified Inbox](/docs/core-features/unified-inbox/overview)** - Track responses and conversations
+3. **[Inbox Rotation](/docs/core-features/inbox-rotation/overview)** - Optimize across multiple accounts
 
 ### **Deep Dive Options**
 
-- **[Advanced Analytics](advanced-analytics)** - Advanced analytics techniques and insights
-- **[KPI Dashboard Setup](../business/kpi-framework/dashboard-setup)** - Detailed KPI configuration and implementation
-- **[Success Metrics & Targets](../business/kpi-framework/success-metrics)** - Business performance tracking and optimization
+- **[Advanced Analytics](/docs/core-features/analytics/advanced-analytics)** - Advanced analytics techniques and insights
+- **[KPI Dashboard Setup](/docs/business/kpi-framework/dashboard-setup)** - Detailed KPI configuration and implementation
+- **[Success Metrics & Targets](/docs/business/kpi-framework/success-metrics)** - Business performance tracking and optimization
 
 ### **Success Metrics & Implementation**
 

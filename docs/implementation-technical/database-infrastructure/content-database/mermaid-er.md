@@ -10,13 +10,13 @@ persona: "Documentation Users"
 
 This diagram represents the canonical Content DB schema corresponding to:
 
-- [Content Database Schema Guide](schema-guide.md)
+- [Content Database Schema Guide](schema-guide)
 
 It is scoped strictly to heavy content storage (bodies, attachments) and intentionally excludes:
 
 - Analytics/OLAP tables
 - OLTP business entities
-- Generic logging/telemetry/infra metrics (see [External Analytics Logging](README.md))
+- Generic logging/telemetry/infra metrics (see [External Analytics Logging](README))
 
 ```mermaid
 ---

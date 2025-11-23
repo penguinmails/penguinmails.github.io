@@ -5,7 +5,7 @@ persona: "Documentation Users"
 ---
 # OLTP ER Diagram (Mermaid)
 
-This diagram reflects the current OLTP schema defined in [`schema-guide.md`](schema-guide.md).
+This diagram reflects the current OLTP schema defined in [`schema-guide`](schema-guide).
 
 ```mermaid
 ---

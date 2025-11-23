@@ -369,7 +369,7 @@ We comply with applicable privacy laws in other jurisdictions where we operate, 
 ## Related Documents
 
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Detailed compliance workflows
-- [Security Framework](../enterprise) - Technical security implementation
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Technical security implementation
 - [SOP Guidelines](/docs/compliance-security/detailed-compliance) - Standard operating procedures
 
 ---

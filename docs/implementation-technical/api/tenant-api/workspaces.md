@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # Workspaces API
 
-**Parent API**: [Tenant API](../tenant-api.md)  
+**Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
 **URL Prefix**: `/api/v1/tenant/workspaces`
 
 ---

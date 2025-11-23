@@ -18,37 +18,37 @@ Comprehensive operations management framework providing strategic oversight, ope
 
 #### Core Operations Framework
 
-- **Cross-Domain Coordination**: [Coordination Implementation](coordination-implementation.md) - Systematic stakeholder alignment and process optimization
-- **Freelancer Management**: [Freelancer Management Overview](freelancer-management/README.md) - Strategic framework for external partnerships
-- **Operations Analytics**: [Operations Analytics Overview](../operations-analytics/overview.md) - Performance monitoring and business intelligence
+- **Cross-Domain Coordination**: [Coordination Implementation](/docs/operations/coordination-implementation) - Systematic stakeholder alignment and process optimization
+- **Freelancer Management**: [Freelancer Management Overview](/docs/operations/freelancer-management) - Strategic framework for external partnerships
+- **Operations Analytics**: [Operations Analytics Overview](/docs/operations-analytics/overview) - Performance monitoring and business intelligence
 
 #### Strategic Implementation
 
-- [Operational Runbooks](operational-runbooks.md) - Daily, weekly, and monthly operational procedures
-- [Security Monitoring](security-monitoring.md) - Comprehensive security oversight and incident response
-- [Incident Response](incident-response.md) - Emergency procedures and crisis management
+- [Operational Runbooks](/docs/operations/operational-runbooks) - Daily, weekly, and monthly operational procedures
+- [Security Monitoring](/docs/operations/security-monitoring) - Comprehensive security oversight and incident response
+- [Incident Response](/docs/operations/incident-response) - Emergency procedures and crisis management
 
 ### Level 2: Operational Frameworks
 
 #### Operational Procedures
 
-- [Coordination Implementation](coordination-implementation.md) - Cross-domain integration and stakeholder management
-- [Freelancer Operations Framework](freelancer-management/framework.md) - Detailed freelancer coordination procedures
-- [Templates and Examples](templates.md) - Proven operations optimization templates
+- [Coordination Implementation](/docs/operations/coordination-implementation) - Cross-domain integration and stakeholder management
+- [Freelancer Operations Framework](/docs/operations/freelancer-management/framework) - Detailed freelancer coordination procedures
+- [Templates and Examples](/docs/operations/templates) - Proven operations optimization templates
 
 #### Performance Management
 
-- [Security Monitoring](security-monitoring.md) - Security oversight and compliance procedures
-- [Incident Response](incident-response.md) - Crisis management and recovery protocols
-- [Operations Analytics](../operations-analytics/overview.md) - Performance monitoring and optimization
+- [Security Monitoring](/docs/operations/security-monitoring) - Security oversight and compliance procedures
+- [Incident Response](/docs/operations/incident-response) - Crisis management and recovery protocols
+- [Operations Analytics](/docs/operations-analytics/overview) - Performance monitoring and optimization
 
 ### Level 3: Implementation Templates and Procedures
 
 #### Ready-to-Use Resources
 
-- [Operations Templates](templates.md) - Process optimization and workflow automation templates
-- [Freelancer Templates](freelancer-management/templates.md) - Agreement templates, forms, and implementation procedures
-- [Incident Response Procedures](incident-response.md) - Emergency response and recovery workflows
+- [Operations Templates](/docs/operations/templates) - Process optimization and workflow automation templates
+- [Freelancer Templates](/docs/operations/freelancer-management/templates) - Agreement templates, forms, and implementation procedures
+- [Incident Response Procedures](/docs/operations/incident-response) - Emergency response and recovery workflows
 
 ## Core Operations Areas
 
@@ -170,21 +170,21 @@ Comprehensive operations management framework providing strategic oversight, ope
 
 ### Business Operations
 
-- [Business Operations Overview](../business/operations/overview.md)
-- [Customer Success Operations](../business/customer-success/operations/framework.md)
-- [Developer Operations](../business/developer/operations/framework.md)
+- [Business Operations Overview](/docs/business/operations/overview)
+- [Customer Success Operations](/docs/business/customer-success/operations/framework)
+- [Developer Operations](/docs/business/developer/operations/framework)
 
 ### Analytics and Performance
 
-- [Operations Analytics](../operations-analytics/overview.md)
-- [Business Intelligence](../business/analytics/overview.md)
-- [Performance Monitoring](../operations-analytics/analytics-performance/README.md)
+- [Operations Analytics](/docs/operations-analytics/overview)
+- [Business Intelligence](/docs/business/analytics/overview)
+- [Performance Monitoring](/docs/operations-analytics/analytics-performance)
 
 ### Compliance and Security
 
-- [Compliance Framework](../compliance-security/overview.md)
-- [Security Standards](../compliance-security/security-standards.md)
-- [International Compliance](../compliance-security/international/overview.md)
+- [Compliance Framework](/docs/compliance-security/overview)
+- [Security Standards](/docs/compliance-security/security-standards)
+- [International Compliance](/docs/compliance-security/international/overview)
 
 ---
 

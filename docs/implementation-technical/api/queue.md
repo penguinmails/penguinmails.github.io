@@ -16,7 +16,7 @@ persona: "Backend Developers, Frontend Developers"
 
 ## Overview
 
-The Queue API handles asynchronous system events and provides notification feeds for operational monitoring. It aligns with the [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation.md).
+The Queue API handles asynchronous system events and provides notification feeds for operational monitoring. It aligns with the [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation).
 
 ---
 
@@ -24,7 +24,7 @@ The Queue API handles asynchronous system events and provides notification feeds
 
 ### 1. Event Processing
 
-**Documentation**: [Events API](./queue/events.md)
+**Documentation**: [Events API](/docs/implementation-technical/api/queue/events)
 
 Publish system events for processing and notification generation.
 
@@ -34,7 +34,7 @@ Publish system events for processing and notification generation.
 
 ### 2. Notifications
 
-**Documentation**: [Notifications API](./queue/notifications.md)
+**Documentation**: [Notifications API](/docs/implementation-technical/api/queue/notifications)
 
 Retrieve and manage system notifications.
 
@@ -45,7 +45,7 @@ Retrieve and manage system notifications.
 
 ### 3. Job Management
 
-**Documentation**: [Jobs API](./queue/jobs.md)
+**Documentation**: [Jobs API](/docs/implementation-technical/api/queue/jobs)
 
 Monitor and manage background jobs (Hybrid PostgreSQL + Redis).
 

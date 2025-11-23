@@ -51,13 +51,13 @@ The API documentation follows a progressive disclosure model:
 Authoritative domain contracts:
 
 - Tenant SMTP API:
-  - [`tenant-smtp-api`](../api)
+  - [`tenant-smtp-api`](/docs/implementation-technical/api/tenant-smtp)
 - Central SMTP Operations API:
-  - [`central-smtp-operations-api`](../api)
+  - [`central-smtp-operations-api`](/docs/implementation-technical/api/central-smtp)
 - Queue & Events API:
-  - [`queue-events-api`](../api)
+  - [`queue-events-api`](/docs/implementation-technical/api/queue)
 - Executive REST API (C-Suite Dashboards):
-  - [`executive-api`](../api)
+  - [`executive-api`](/docs/implementation-technical/api/platform-api)
 - Core Product / Marketing / Webhooks / SDKs:
   - Defined and maintained in their own dedicated specs (e.g. `core-product-api.md`, `webhooks-api.md`, `sdk-guides.md`) separate from this entrypoint.
 

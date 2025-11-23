@@ -346,7 +346,7 @@ The Operations Adoption Framework provides comprehensive security tool adoption 
 
 **Related Adoption Documents:**
 
-- [Operations Adoption Overview](..) - Operations adoption context and strategic alignment
+- [Operations Adoption Overview](/docs/business/operations/adoption) - Operations adoption context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and adoption integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with adoption integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with adoption coordination

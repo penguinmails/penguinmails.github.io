@@ -594,13 +594,13 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Operations & Analytics**
 - [Operations Analytics Overview](..)) - Main operations framework
-- [User Analytics](/docs/operations-analytics/analytics-performance)) - User behavior analysis
-- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
+- [User Analytics](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - User behavior analysis
+- [Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - Comprehensive KPI framework
 
 ### **Business Strategy**
 - [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
 - [Market Analysis](/docs/business/market-analysis/overview)) - Market positioning
-- [User Personas](../business/user-personas)) - Target audience analysis
+- [User Personas](/docs/business/user-personas)) - Target audience analysis
 
 ### **Technical Architecture**
 - [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
@@ -609,12 +609,12 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **User Experience**
 - [User Journeys Overview](/docs/user-journeys)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](/docs/compliance-security)) - Regulatory compliance
-- [Security Framework](/docs/compliance-security/enterprise)) - Security operations
+- [Compliance Overview](/docs/compliance-security - Regulatory compliance
+- [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
 - [Data Privacy Policy](/docs/compliance-security/international)) - Privacy compliance
 
 ### **Team Performance**
@@ -630,7 +630,7 @@ Navigate to specific organization and team areas:
 
 - **[Staff Operations](.))** → Operational staff coordination
 - **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md** → Comprehensive KPI framework
 
 ---
 

@@ -29,7 +29,7 @@ The Component Library is a comprehensive catalog of all reusable UI components a
 
 ### Applying Design Tokens
 
-Components should strictly use the design tokens defined in [Design Tokens](./design-tokens.md) via Tailwind CSS utility classes.
+Components should strictly use the design tokens defined in [Design Tokens](/docs/design/design-tokens) via Tailwind CSS utility classes.
 
 - **Colors**: Use semantic names (e.g., `bg-primary`, `text-foreground`).
 - **Spacing**: Use spacing scale (e.g., `p-4`, `gap-2`).

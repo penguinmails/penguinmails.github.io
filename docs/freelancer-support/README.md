@@ -36,7 +36,7 @@ This comprehensive guide is designed to help independent consultants build succe
 
 ### Quotation and Proposal Preparation
 
-- **Professional Quotation Guide**: [Step-by-step guidance for preparing transparent quotations](quotation-guide.md)
+- **Professional Quotation Guide**: [Step-by-step guidance for preparing transparent quotations](/docs/freelancer-support/quotation-guide)
 - **Google Docs Template**: [Official quotation template with detailed instructions](https://docs.google.com/document/d/1Ul4A-Ibhdt8cBfDGolbdNWSOk06lZd0Mp8oCl3CeifE/edit?usp=sharing)
 - **Task-Based Payment Model**: Understanding PenguinMails' unique compensation structure
 - **Technical Proposal Framework**: Professional approach to project scoping and delivery planning
@@ -82,15 +82,15 @@ This comprehensive guide is designed to help independent consultants build succe
 
 ### Operational Requirements
 
-- **Professional Standards**: [Internal Operations Framework](/docs/operations/freelancer-management/framework.md)
-- **Quality Expectations**: [Implementation Templates](/docs/operations/freelancer-management/templates.md)
+- **Professional Standards**: [Internal Operations Framework](/docs/operations/freelancer-management/framework)
+- **Quality Expectations**: [Implementation Templates](/docs/operations/freelancer-management/templates)
 - **Compliance Guidelines**: [Confidentiality and Data Protection](/docs/compliance-security/)
 
 ### Platform and Technical Resources
 
-- **Technical Implementation**: [Business Implementation Guides](../../business/implementation/)
-- **Platform Optimization**: [Account Configuration and Best Practices](../../business/product/)
-- **Integration Resources**: [Cross-Domain Integration Guides](../../business/cross-domain-integration/)
+- **Technical Implementation**: [Business Implementation Guides](/docs/business/implementation/)
+- **Platform Optimization**: [Account Configuration and Best Practices](/docs/business/product/)
+- **Integration Resources**: [Cross-Domain Integration Guides](/docs/business/cross-domain-integration/)
 
 ### Community and Support
 
@@ -126,77 +126,77 @@ This comprehensive guide is designed to help independent consultants build succe
 ### 📚 Documentation Structure
 
 - **Level 1**: Strategic overview and getting started guides (This document)
-- **Level 2**: [Business Success Framework](business-framework.md) - Strategy and platform optimization
-- **Level 3**: [Implementation Resources](implementation-resources.md) - Tools and detailed guidance
-- **Specialized**: [Quotation Guide](quotation-guide.md) - Professional quotation preparation with Google Docs template
+- **Level 2**: [Business Success Framework](/docs/freelancer-support/business-framework) - Strategy and platform optimization
+- **Level 3**: [Implementation Resources](/docs/freelancer-support/implementation-resources) - Tools and detailed guidance
+- **Specialized**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional quotation preparation with Google Docs template
 
 ### 🎯 **Contextual Navigation by Reading Section**
 
 **If you're reading Getting Started:**
 
-- **Next**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md) - Master task completion standards
-- **Then**: [Quotation Guide](quotation-guide.md) - Professional proposal preparation
-- **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework.md) - Workflow procedures
+- **Next**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) - Master task completion standards
+- **Then**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional proposal preparation
+- **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework) - Workflow procedures
 
 **If you're reading Building Your Practice:**
 
-- **Focus**: [Implementation Resources](implementation-resources.md) - Practical tools and systems
-- **Apply**: [Operations Framework](/docs/operations/freelancer-management/framework.md#team-structure) - Team coordination
-- **Develop**: [Industry Specialization](#industry-specialization) - Choose your focus area
+- **Focus**: [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and systems
+- **Apply**: [Operations Framework](/docs/operations/freelancer-management/framework#team-structure) - Team coordination
+- **Develop**: [Industry Specialization](/docs/freelancer-support#industry-specialization) - Choose your focus area
 
 **If you're reading Scaling Success:**
 
-- **Advanced**: [Premium Services Development](/docs/freelancer-support/premium-services.md) - High-value offerings
-- **Strategy**: [Business Success Framework](business-framework.md) - Strategic planning
+- **Advanced**: [Premium Services Development](/docs/freelancer-support/premium-services) - High-value offerings
+- **Strategy**: [Business Success Framework](/docs/freelancer-support/business-framework) - Strategic planning
 - **Networking**: [Community Resources](/docs/community/) - Professional connections
 
 **If you're reading Business Development Resources:**
 
-- **Proposal Excellence**: [Quotation Guide](quotation-guide.md) - Create compelling proposals
-- **Client Acquisition**: [Service Package Development](#service-package-development) - Build offerings
-- **Quality Standards**: [Operations Framework](/docs/operations/freelancer-management/framework.md#quality-control-procedures) - Professional delivery
+- **Proposal Excellence**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Create compelling proposals
+- **Client Acquisition**: [Service Package Development](/docs/freelancer-support#service-package-development) - Build offerings
+- **Quality Standards**: [Operations Framework](/docs/operations/freelancer-management/framework#quality-control-procedures) - Professional delivery
 
 ### 🛤️ **Role-Based Learning Paths**
 
 #### 🆕 **New Freelancer Path** (30-Day Foundation)
 
-1. **Week 1**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md) → [Quotation Guide](quotation-guide.md)
-2. **Week 2**: [Implementation Resources](implementation-resources.md) → Tool setup and environment
-3. **Week 3**: [Operations Framework](/docs/operations/freelancer-management/framework.md) → Professional procedures
+1. **Week 1**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) → [Quotation Guide](/docs/freelancer-support/quotation-guide)
+2. **Week 2**: [Implementation Resources](/docs/freelancer-support/implementation-resources) → Tool setup and environment
+3. **Week 3**: [Operations Framework](/docs/operations/freelancer-management/framework) → Professional procedures
 4. **Week 4**: [First Client Project] → Apply learning with real work
 
 #### ⚡ **Experienced Freelancer Path** (Adapt to PenguinMails)
 
-1. **Day 1**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md#sop-workflow) → Our unique workflow
-2. **Day 2**: [Operations Framework](/docs/operations/freelancer-management/framework.md#communication-protocols) → Team coordination
-3. **Day 3**: [Quotation Guide](quotation-guide.md) → Task-based payment model
-4. **Week 1**: [Business Success Center](README.md#scaling-success) → Growth strategies
+1. **Day 1**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow) → Our unique workflow
+2. **Day 2**: [Operations Framework](/docs/operations/freelancer-management/framework#communication-protocols) → Team coordination
+3. **Day 3**: [Quotation Guide](/docs/freelancer-support/quotation-guide) → Task-based payment model
+4. **Week 1**: [Business Success Center](/docs/freelancer-support#business-development-resources) → Growth strategies
 
 #### 🎯 **Industry Specialist Path** (Premium Positioning)
 
-1. **Foundation**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md) → Master standards
+1. **Foundation**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) → Master standards
 2. **Specialization**: [Industry Guides](/docs/freelancer-support/industry-guides/) → Choose focus area
-3. **Premium Services**: [Premium Services Development](/docs/freelancer-support/premium-services.md) → High-value offerings
-4. **Leadership**: [Advanced Operations](/docs/operations/freelancer-management/framework.md) → Team leadership roles
+3. **Premium Services**: [Premium Services Development](/docs/freelancer-support/premium-services) → High-value offerings
+4. **Leadership**: [Advanced Operations](/docs/operations/freelancer-management/framework) → Team leadership roles
 
 ### 📋 **Progressive Reading Completion Guide**
 
 #### ✅ **Foundation Level Complete** (Quick Start Journey)
 
-→ **Next**: [Quotation Guide](quotation-guide.md) - Professional proposals
-→ **Then**: [Business Success Framework](business-framework.md) - Strategic development
-→ **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework.md) - Advanced procedures
+→ **Next**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional proposals
+→ **Then**: [Business Success Framework](/docs/freelancer-support/business-framework) - Strategic development
+→ **Finally**: [Operations Framework](/docs/operations/freelancer-management/framework) - Advanced procedures
 
 #### ✅ **Business Development Level Complete** (Building Your Practice)
 
-→ **Next**: [Implementation Resources](implementation-resources.md) - Practical tools
-→ **Then**: [Success Metrics](/docs/freelancer-support/success-metrics.md) - Performance tracking
-→ **Finally**: [Industry Specialization](#industry-specialization) - Market differentiation
+→ **Next**: [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools
+→ **Then**: [Success Metrics](/docs/freelancer-support/success-metrics) - Performance tracking
+→ **Finally**: [Industry Specialization](/docs/freelancer-support#industry-specialization) - Market differentiation
 
 #### ✅ **Scaling Level Complete** (Scaling Success)
 
-→ **Next**: [Premium Services Development](/docs/freelancer-support/premium-services.md) - Advanced offerings
-→ **Then**: [Business Success Framework](business-framework.md) - Strategic planning
+→ **Next**: [Premium Services Development](/docs/freelancer-support/premium-services) - Advanced offerings
+→ **Then**: [Business Success Framework](/docs/freelancer-support/business-framework) - Strategic planning
 → **Finally**: [Community Resources](/docs/community/) - Professional networking
 
 ### 🔗 **Cross-Reference Guide**
@@ -208,10 +208,10 @@ This comprehensive guide is designed to help independent consultants build succe
 
 ### 📖 **Specialized Content**
 
-- **Industry Guides**: [Technology Sector](/docs/freelancer-support/industry-guides/technology-freelancers.md)
-- **Industry Guides**: [Creative Industries](/docs/freelancer-support/industry-guides/creative-freelancers.md)
-- **Industry Guides**: [Marketing Specialists](/docs/freelancer-support/industry-guides/marketing-freelancers.md)
-- **Success Metrics**: [Performance Tracking and KPIs](/docs/freelancer-support/success-metrics.md)
+- **Industry Guides**: [Technology Sector](/docs/freelancer-support/industry-guides/technology-freelancers)
+- **Industry Guides**: [Creative Industries](/docs/freelancer-support/industry-guides/creative-freelancers)
+- **Industry Guides**: [Marketing Specialists](/docs/freelancer-support/industry-guides/marketing-freelancers)
+- **Success Metrics**: [Performance Tracking and KPIs](/docs/freelancer-support/success-metrics)
 
 ## Task Completion Standards
 
@@ -272,7 +272,7 @@ We use relative estimation, comparing new tasks to known examples:
 | 8 points | Complex feature | Multiple systems involved, requires testing + review |
 | 13 points | Very complex | Requires research or touches critical flows (may split) |
 
-**Important**: Always provide effort estimates (in story points) and delivery timeframes before accepting any task, as outlined in the [Operations Framework](/docs/operations/freelancer-management/framework.md).
+**Important**: Always provide effort estimates (in story points) and delivery timeframes before accepting any task, as outlined in the [Operations Framework](/docs/operations/freelancer-management/framework).
 
 ---
 
@@ -280,4 +280,4 @@ We use relative estimation, comparing new tasks to known examples:
 **Business Value:** Comprehensive freelancer success framework enabling independent consultants to build thriving email marketing practices
 **Implementation Status:** Ready for freelancer onboarding and business development
 **Audience:** Independent consultants, freelancers, and email marketing specialists
-**Next Steps:** Review [Business Success Framework](/docs/freelancer-support/business-framework.md) for detailed strategy and implementation guidance
+**Next Steps:** Review [Business Success Framework](business-framework) for detailed strategy and implementation guidance

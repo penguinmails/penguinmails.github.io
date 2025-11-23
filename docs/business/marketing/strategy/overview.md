@@ -212,7 +212,7 @@ To support strong, defensible market positioning, marketing leadership will main
   - A marketing and strategy responsibility.
   - Informed by internal telemetry where available.
   - Governed by the competitive intelligence framework documented in:
-    - [`competitive-analysis-detailed`](../../competitive-intelligence/competitive-analysis-detailed)
+    - [Competitive Analysis Detailed](/docs/business/competitive-intelligence/competitive-analysis-detailed)
 
 ### Boundaries
 
@@ -234,9 +234,9 @@ This ensures competitive deliverability benchmarking is clearly understood as a 
 **Related Documentation:**
 
 - **Detailed Strategy**: [`detailed`](detailed)
-- **ROI Analysis**: [`roi/summary`](../roi/summary)
-- **Implementation Roadmap**: [`implementation-roadmap`](../../implementation/implementation-roadmap)
-- **Competitive Intelligence Framework**: [`competitive-analysis-detailed`](../../competitive-intelligence/competitive-analysis-detailed)
+- **ROI Analysis**: [ROI Summary](/docs/business/marketing/roi/summary)
+- **Implementation Roadmap**: [Implementation Roadmap](/docs/implementation/implementation-roadmap)
+- **Competitive Intelligence Framework**: [Competitive Analysis Detailed](/docs/business/competitive-intelligence/competitive-analysis-detailed)
 
 **Document Classification:** Level 1 - Executive Strategy
 **Approval Required:** CMO and executive team alignment

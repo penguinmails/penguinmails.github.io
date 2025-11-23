@@ -480,8 +480,8 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 ### User Experience
 
 - [User Journeys Overview](/docs/user-journeys) - User flow documentation
-- [Onboarding Journey](../user-experience-journeys/detailed-journeys) - User activation
-- [User Interaction Patterns](../user-experience-journeys/detailed-journeys) - UX optimization
+- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
 
 ### Compliance & Security
 

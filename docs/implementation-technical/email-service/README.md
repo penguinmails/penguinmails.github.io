@@ -16,21 +16,21 @@ This section contains implementation guides specifically designed for email serv
 
 #### Quick Start and Setup
 
-- **[5-Minute Quick Start](../quick-setup.md)** - Rapid deployment overview for customers
-- **[Getting Started](../getting-started.md)** - Complete customer onboarding process
-- **[Feature Overview](../feature-overview.md)** - Platform capabilities overview
+- **[5-Minute Quick Start](/docs/implementation-technical/email-service/customer-quick-setup)** - Rapid deployment overview for customers
+- **[Getting Started](/docs/getting-started)** - Complete customer onboarding process
+- **[Feature Overview](/docs/feature-overview)** - Platform capabilities overview
 
 #### Technical Implementation
 
-- **[Architecture Overview](../technical/architecture.md)** - System architecture for customers
-- **[Database Infrastructure](../database-infrastructure/README.md)** - Database setup and management
-- **[API Documentation](../api/)** - Customer integration APIs
+- **[Architecture Overview](/docs/technical/architecture)** - System architecture for customers
+- **[Database Infrastructure](/docs/implementation-technical/database-infrastructure)** - Database setup and management
+- **[API Documentation](/docs/implementation-technical/api)** - Customer integration APIs
 
 #### Platform Configuration
 
-- **[Core Features](../core-features/README.md)** - Feature-specific implementation guides
-- **[Team Management](../getting-started.md#team-setup)** - Customer team configuration
-- **[Billing Setup](../quick-setup.md#billing-configuration)** - Customer billing configuration
+- **[Core Features](/docs/core-features)** - Feature-specific implementation guides
+- **[Team Management](/docs/getting-started)** - Customer team configuration
+- **[Billing Setup](/docs/implementation-technical/email-service/customer-quick-setup)** - Customer billing configuration
 
 ### 🎯 Implementation Roadmap for Customers
 
@@ -62,10 +62,10 @@ This section contains implementation guides specifically designed for email serv
 
 ### 📞 Customer Support Resources
 
-- **[Quick Setup Guide](../quick-setup.md)** - 5-minute rapid deployment
-- **[Getting Started Guide](../getting-started.md)** - Complete customer onboarding
+- **[Quick Setup Guide](/docs/implementation-technical/email-service/customer-quick-setup)** - 5-minute rapid deployment
+- **[Getting Started Guide](/docs/getting-started)** - Complete customer onboarding
 - **[Support Center](https://help.penguinmails.com/)** - Customer support documentation
 
 ---
 
-**Note**: This section is for customers using PenguinMails email services. Freelancers working on the PenguinMails platform should refer to [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README.md) instead.
+**Note**: This section is for customers using PenguinMails email services. Freelancers working on the PenguinMails platform should refer to [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README) instead.

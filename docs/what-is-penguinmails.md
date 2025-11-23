@@ -428,6 +428,6 @@ Ready to transform your cold email outreach? PenguinMails offers:
 *PenguinMails is the email infrastructure platform that agencies and B2B companies trust to scale their cold outreach without technical complexity or compliance risk.*
 
 ---
-*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Core Features](/docs/core-features/README.md) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Core Features](/docs/core-features/README) →*
 
 ---

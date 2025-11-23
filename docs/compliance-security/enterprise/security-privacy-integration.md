@@ -565,10 +565,10 @@ interface RecoveryResponse {
 **Note**: Some privacy and security enhancements are scheduled for 2026 implementation based on infrastructure constraints and resource availability.
 
 **Related Documents**
-- [Security Framework](.) - Comprehensive security architecture
-- [Traffic Security Matrix](.) - Database security strategy framework
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Comprehensive security architecture
+- [Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix) - Database security strategy framework
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
-- [Data Privacy Policy](../international) - Customer-facing privacy information
+- [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 
 **Keywords**: security policies, privacy procedures, data protection, compliance, risk management, incident response, access control, encryption, GDPR, CCPA
 ---

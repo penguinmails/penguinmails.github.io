@@ -14,7 +14,7 @@ Choose the path that matches your role and goals. Each path provides tailored gu
 
 ### 🚀 **Are you a Customer?**
 
-→ **[Customer Quick Setup Guide](/docs/implementation-technical/email-service/customer-quick-setup.md)**  
+→ **[Customer Quick Setup Guide](/docs/implementation-technical/email-service/customer-quick-setup)**
 **Get started in 5 minutes, achieve 95% inbox placement in 21 days**
 
 Perfect for:
@@ -29,7 +29,7 @@ Perfect for:
 
 ### 💻 **Are you a Freelancer?**
 
-→ **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README.md)**  
+→ **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)**
 **Master task requirements and delivery standards**
 
 Perfect for:
@@ -44,7 +44,7 @@ Perfect for:
 
 ### 🛠️ **Are you a Developer?**
 
-→ **[Developer Implementation Guide](/docs/implementation-technical/README.md)**  
+→ **[Developer Implementation Guide](/docs/implementation-technical/README)**
 **Build and integrate with PenguinMails infrastructure**
 
 Perfect for:
@@ -67,9 +67,9 @@ Perfect for:
 Quick Setup Overview → Customer Implementation → Campaign Launch
 ```
 
-1. **[Customer Quick Setup](/docs/implementation-technical/email-service/customer-quick-setup.md)** - 5-minute infrastructure setup
-2. **[Getting Started Guide](/docs/getting-started.md)** - Platform onboarding
-3. **[Core Features](/docs/core-features/README.md)** - Feature-specific guides
+1. **[Customer Quick Setup](/docs/implementation-technical/email-service/customer-quick-setup)** - 5-minute infrastructure setup
+2. **[Getting Started Guide](/docs/getting-started)** - Platform onboarding
+3. **[Core Features](/docs/core-features/README)** - Feature-specific guides
 
 ### **Freelancer Path** - Platform Contributors
 
@@ -79,26 +79,26 @@ Role Selection → Tailored Learning Path → Implementation → Success
 
 #### 🆕 **New Freelancers** (Starting Your Journey)
 
-1. **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README.md)** - Welcome and navigation
-2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md)** - DoD, Story Points, tools
-3. **[Success Center Overview](/docs/freelancer-support/README.md)** - Build your practice
-4. **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional proposals
-5. **[Operations Framework](/docs/operations/freelancer-management/framework.md)** - Complete procedures
+1. **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)** - Welcome and navigation
+2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - DoD, Story Points, tools
+3. **[Success Center Overview](/docs/freelancer-support/README)** - Build your practice
+4. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional proposals
+5. **[Operations Framework](/docs/operations/freelancer-management/framework)** - Complete procedures
 
 #### ⚡ **Experienced Freelancers** (Adapting to Our Model)
 
-1. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md#sop-workflow)** - Our unique workflow approach
-2. **[Communication Standards](/docs/operations/freelancer-management/framework.md#communication-protocols)** - Professional protocols
-3. **[Quotation Guide](/docs/freelancer-support/quotation-guide.md#task-based-payment-model)** - Task-based payment model
-4. **[Team Structure](/docs/operations/freelancer-management/framework.md#team-structure)** - Coordination protocols
+1. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow)** - Our unique workflow approach
+2. **[Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols)** - Professional protocols
+3. **[Quotation Guide](/docs/freelancer-support/quotation-guide#task-based-payment-model)** - Task-based payment model
+4. **[Team Structure](/docs/operations/freelancer-management/framework#team-structure)** - Coordination protocols
 
 #### 🎯 **Industry Specialists** (Premium Positioning)
 
-1. **[Success Center](/docs/freelancer-support/README.md#industry-specialization)** - Build specialization
-2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md)** - Master task standards
-3. **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - High-value service proposals
-4. **[Premium Services Development](/docs/freelancer-support/premium-services.md)** - Advanced offerings
-5. **[Advanced Operations](/docs/operations/freelancer-management/framework.md)** - Leadership roles
+1. **[Success Center](/docs/freelancer-support/README#industry-specialization)** - Build specialization
+2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - Master task standards
+3. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - High-value service proposals
+4. **[Premium Services Development](/docs/freelancer-support/premium-services)** - Advanced offerings
+5. **[Advanced Operations](/docs/operations/freelancer-management/framework)** - Leadership roles
 
 ### **Developer Path** - Platform Builders
 
@@ -106,8 +106,8 @@ Role Selection → Tailored Learning Path → Implementation → Success
 Developer Overview → Technical Implementation → System Architecture  
 ```
 
-1. **[Implementation Technical](/docs/implementation-technical/README.md)** - Development setup
-2. **[Architecture System](/docs/implementation-technical/architecture-system/README.md)** - System design
+1. **[Implementation Technical](/docs/implementation-technical/README)** - Development setup
+2. **[Architecture System](/docs/implementation-technical/architecture-system/README)** - System design
 3. **[API Documentation](/docs/implementation-technical/api/)** - Integration guides
 
 ---
@@ -141,15 +141,15 @@ Developer Overview → Technical Implementation → System Architecture
 
 ### **Platform Overview**
 
-- **[What is PenguinMails](/docs/what-is-penguinmails.md)** - Platform capabilities and vision
-- **[Feature Overview](/docs/feature-overview.md)** - Complete feature documentation
-- **[Getting Started](/docs/getting-started.md)** - Platform introduction
+- **[What is PenguinMails](/docs/what-is-penguinmails)** - Platform capabilities and vision
+- **[Feature Overview](/docs/feature-overview)** - Complete feature documentation
+- **[Getting Started](/docs/getting-started)** - Platform introduction
 
 ### **Support and Community**
 
 - **[Help Center](https://help.penguinmails.com/)** - Customer support
 - **[Documentation Hub](/docs/)** - Complete documentation library
-- **[Business Context](/docs/business/README.md)** - Strategic and business information
+- **[Business Context](/docs/business/README)** - Strategic and business information
 
 ---
 

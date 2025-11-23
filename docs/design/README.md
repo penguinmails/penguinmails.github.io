@@ -20,12 +20,12 @@ persona: "Designers & Developers"
 
 | File | Purpose | Focus |
 |------|---------|-------|
-| **[Design System](./design-system.md)** | Core principles, philosophy, and high-level standards. | Foundation for all design decisions. |
-| **[Design Tokens](./design-tokens.md)** | Primitive values (colors, spacing, typography). | Maps to CSS variables / Tailwind config. |
-| **[UI Library](./ui-library.md)** | **High-level patterns** and tech stack recommendations. | "Use shadcn + react-hook-form + zod", "DataTable needs realtime + paginated variants" |
-| **[Component Library](./component-library.md)** | **Detailed component specs** showing how components apply guidelines. | How components use tokens, ensure mobile support, implement theming. |
-| **[Analytics UI Patterns](./analytics-ui-patterns.md)** | **Visual patterns** for data display. | Data cards, charts, tables, and drill-down interaction patterns. |
-| **[Accessibility](./accessibility-guidelines.md)** | WCAG 2.1 AA standards and testing checklists. | Enforced via linting and testing. |
+| **[Design System](/docs/design/design-system)** | Core principles, philosophy, and high-level standards. | Foundation for all design decisions. |
+| **[Design Tokens](/docs/design/design-tokens)** | Primitive values (colors, spacing, typography). | Maps to CSS variables / Tailwind config. |
+| **[UI Library](/docs/design/ui-library)** | **High-level patterns** and tech stack recommendations. | "Use shadcn + react-hook-form + zod", "DataTable needs realtime + paginated variants" |
+| **[Component Library](/docs/design/component-library)** | **Detailed component specs** showing how components apply guidelines. | How components use tokens, ensure mobile support, implement theming. |
+| **[Analytics UI Patterns](/docs/design/analytics-ui-patterns)** | **Visual patterns** for data display. | Data cards, charts, tables, and drill-down interaction patterns. |
+| **[Accessibility](/docs/design/accessibility-guidelines)** | WCAG 2.1 AA standards and testing checklists. | Enforced via linting and testing. |
 
 ---
 
@@ -63,5 +63,5 @@ We maintain a strict separation of concerns while ensuring tight integration:
 
 ## 🔗 Related Documentation
 
-* **[API Architecture](../implementation-technical/api/README.md)**: Backend services supporting these views.
-* **[Development Standards](../implementation-technical/development-guidelines/development-standards.md)**: Coding standards for implementing these designs.
+* **[API Architecture](/docs/implementation-technical/api)**: Backend services supporting these views.
+* **[Development Standards](/docs/implementation-technical/development-guidelines/development-standards)**: Coding standards for implementing these designs.

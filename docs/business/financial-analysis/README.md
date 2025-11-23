@@ -48,7 +48,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 **Related Directories:**
 
-- [Core Business Documents](../core) - Executive financial summaries
+- [Core Business Documents](/docs/business/core) - Executive financial summaries
 - [Implementation Guide](/docs/business/implementation) - Technical cost implementation
 - [Procurement & Compliance](/docs/business/procurement-compliance) - Compliance cost analysis
 - [Performance Analysis](/docs/business/performance) - Cost-performance relationships

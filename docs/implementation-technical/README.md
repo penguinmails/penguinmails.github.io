@@ -85,13 +85,13 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Key Documents**:
 
-- [**API Architecture Overview**](./api/README.md) - Complete server topology and communication patterns
+- [**API Architecture Overview**](/docs/implementation-technical/api/README) - Complete server topology and communication patterns
   - `web` - Next.js frontend (Server Actions → REST)
   - `api` - Tenant REST API (campaign management)
   - `smtp-server` - SMTP infrastructure management  
   - `queue-server` - Event processing & notifications
   - `platform-api` - Analytics & BI aggregation
-  - [Hostwinds API](./api/hostwinds/overview.md) - External VPS infrastructure
+  - [Hostwinds API](/docs/implementation-technical/api/hostwinds/overview) - External VPS infrastructure
 
 ### 🏗️ **Architecture & System Design**
 
@@ -101,7 +101,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Key Documents**:
 
-- [Architecture System](./architecture-system/) - System architecture and email infrastructure
+- [Architecture System](/docs/implementation-technical/architecture-system/) - System architecture and email infrastructure
 - Microservices communication patterns
 - Multi-tenant isolation strategies
 
@@ -113,7 +113,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Key Documents**:
 
-- [Development Guidelines](./development-guidelines/) - Code standards and best practices
+- [Development Guidelines](/docs/implementation-technical/development-guidelines/) - Code standards and best practices
 - TypeScript conventions (shared via Turborepo)
 - API integration patterns
 
@@ -125,7 +125,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Key Documents**:
 
-- [Database Infrastructure](./database-infrastructure/) - Multi-tenant schema design
+- [Database Infrastructure](/docs/implementation-technical/database-infrastructure/) - Multi-tenant schema design
 - OLTP, Content, and OLAP database tiers
 - NileDB integration and RLS (Row-Level Security)
 
@@ -137,7 +137,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Key Documents**:
 
-- [Quality Assurance](./quality-assurance/) - Testing protocols and QA standards
+- [Quality Assurance](/docs/implementation-technical/quality-assurance/) - Testing protocols and QA standards
 - API endpoint testing strategies
 - Integration test patterns
 

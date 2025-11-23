@@ -372,7 +372,7 @@ The Operations Process Standardization Framework provides comprehensive standard
 
 **Related Standardization Documents:**
 
-- [Operations Standardization Overview](..) - Operations standardization context and strategic alignment
+- [Operations Standardization Overview](/docs/business/operations/standardization) - Operations standardization context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and standardization integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with standardization integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with standardization coordination

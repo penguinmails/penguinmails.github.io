@@ -24,7 +24,7 @@ The Tenant SMTP API allows tenants to manage their sending domains and view thei
 
 ### 1. Domain Management
 
-**Documentation**: [Domains API](./tenant-smtp/domains.md)
+**Documentation**: [Domains API](/docs/implementation-technical/api/tenant-smtp/domains)
 
 Manage sending domains and DNS verification.
 
@@ -35,7 +35,7 @@ Manage sending domains and DNS verification.
 
 ### 2. Health & Metrics
 
-**Documentation**: [Health API](./tenant-smtp/health.md)
+**Documentation**: [Health API](/docs/implementation-technical/api/tenant-smtp/health)
 
 View sending status and performance metrics.
 

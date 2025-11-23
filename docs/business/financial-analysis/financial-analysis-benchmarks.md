@@ -380,22 +380,22 @@ Strategic The Strategic B2B strategic cold strategic email strategic landscape s
 
 ### Strategic Business Strategic Model & Strategic Strategy
 
-- [Strategic Business Strategic Model Strategic Overview](..) - Strategic canonical strategic business and strategic revenue strategic model strategic alignment
-- [Strategic Value Strategic Proposition Strategic Overview](../../value-proposition) - Strategic value strategic proposition for strategic cost strategic optimization
-- [Strategic Market Strategic Analysis Strategic Overview](../../market-analysis) - Strategic market strategic positioning for strategic financial strategic analysis
-- [Strategic Competitive Strategic Analysis Strategic Overview](../../competitive-analysis) - Strategic competitive strategic landscape and strategic cost strategic positioning
+- [Strategic Business Model Overview](/docs/business/financial-analysis/overview) - Strategic canonical business and revenue model alignment
+- [Strategic Value Proposition Overview](/docs/business/value-proposition/overview) - Strategic value proposition for strategic cost strategic optimization
+- [Strategic Market Strategic Analysis Strategic Overview](/docs/market-analysis) - Strategic market strategic positioning for strategic financial strategic analysis
+- [Strategic Competitive Strategic Analysis Strategic Overview](/docs/competitive-analysis) - Strategic competitive strategic landscape and strategic cost strategic positioning
 
 ### Strategic Operations & Strategic Analytics
 
-- [Strategic Operations Strategic Management Strategic Overview](../../operations-analytics/operations-management) - Strategic operational strategic cost strategic management and strategic analytics
-- [Strategic Payment Strategic Analytics & Strategic Financial Strategic Operations](../../operations-analytics/operations-management) - Strategic financial strategic operations and strategic billing strategic management
-- [Strategic Infrastructure Strategic Operations Strategic Management](../../operations-analytics/operations-management) - Strategic database and strategic infrastructure strategic operational strategic procedures
+- [Strategic Operations Strategic Management Strategic Overview](/docs/operations-analytics/operations-management) - Strategic operational strategic cost strategic management and strategic analytics
+- [Strategic Payment Strategic Analytics & Strategic Financial Strategic Operations](/docs/operations-analytics/operations-management) - Strategic financial strategic operations and strategic billing strategic management
+- [Strategic Infrastructure Strategic Operations Strategic Management](/docs/operations-analytics/operations-management) - Strategic database and strategic infrastructure strategic operational strategic procedures
 
 ### Strategic Technical Strategic Architecture
 
-- [Strategic Architecture Strategic Overview](../../technical/architecture) - Strategic system strategic architecture for strategic financial strategic planning
-- [Strategic Implementation Strategic Roadmap](../../technical/architecture/detailed-technical) - Strategic infrastructure strategic implementation strategic costs
-- [Strategic Integration Strategic Guide](../../technical/architecture/detailed-technical) - Strategic cost strategic implications of strategic technical strategic integrations
+- [Strategic Architecture Strategic Overview](/docs/technical/architecture) - Strategic system strategic architecture for strategic financial strategic planning
+- [Strategic Implementation Strategic Roadmap](/docs/technical/architecture/detailed-technical) - Strategic infrastructure strategic implementation strategic costs
+- [Strategic Integration Strategic Guide](/docs/technical/architecture/detailed-technical) - Strategic cost strategic implications of strategic technical strategic integrations
 
 ---
 

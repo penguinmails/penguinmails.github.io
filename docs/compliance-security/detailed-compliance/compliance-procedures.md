@@ -287,13 +287,13 @@ Personal data breach?
 ---
 
 ## Related Documents
-- [Security & Compliance Gaps Analysis](../../enterprise) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
-- [Security Framework](../../enterprise) - Security procedures and protocols
-- [SOP Guidelines](.) - Standard operating procedures
-- [Data Privacy Policy](../../international) - Customer-facing privacy information
-- [Security Documentation](../../enterprise) - Security procedures and protocols
-- [Incident Response Plan](../../../../operations-analytics/operations-management) - Detailed breach response procedures
-- [Vendor Management Policy](../../international) - Third-party vendor compliance
+- [Security & Compliance Gaps Analysis](/docs/compliance-security/enterprise/security-compliance-gaps) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security procedures and protocols
+- [SOP Guidelines](/docs/compliance-security/detailed-compliance/sop-guidelines) - Standard operating procedures
+- [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
+- [Security Documentation](/docs/compliance-security/enterprise) - Security procedures and protocols
+- [Incident Response Plan](/docs/operations-analytics/operations-management/incident-response) - Detailed breach response procedures
+- [Vendor Management Policy](/docs/compliance-security/international/vendor-management-policy) - Third-party vendor compliance
 
 **Implementation Timeline**: Some compliance features are scheduled for 2026 based on infrastructure capacity and resource constraints.
 

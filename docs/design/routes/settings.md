@@ -4,7 +4,7 @@
 
 - **Goal**: Manage user profile, organization details, billing, and team access.
 - **Feature References**:
-  - [Security](../../compliance-security/enterprise/overview.md)
+  - [Security](/docs/compliance-security/enterprise/overview)
 - **User Journey**: Infrequent access for configuration and maintenance.
 
 ## 2. UI Patterns & Components (The "How")
@@ -78,9 +78,9 @@
 
 **Related Accessibility Documentation**:
 
-- [Accessibility Guidelines](../accessibility-guidelines.md) - Comprehensive WCAG 2.1 AA compliance standards
-- [Accessibility Guidelines: Color and Contrast](../accessibility-guidelines.md#color-and-contrast) - Theme contrast requirements
-- [Accessibility Guidelines: Reduced Motion](../accessibility-guidelines.md#timing-and-movement) - Animation preferences
+- [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Comprehensive WCAG 2.1 AA compliance standards
+- [Accessibility Guidelines: Color and Contrast](/docs/design/accessibility-guidelines#color-and-contrast) - Theme contrast requirements
+- [Accessibility Guidelines: Reduced Motion](/docs/design/accessibility-guidelines#timing-and-movement) - Animation preferences
 
 **Save Button**: Sticky at bottom, saves all changes.
 
@@ -88,8 +88,8 @@
 
 **Related Documentation**:
 
-- [Account Security](../../compliance-security/enterprise/overview.md)
-- [2FA Setup Guide](../../freelancer-support/tutorials/2fa-setup.md)
+- [Account Security](/docs/compliance-security/enterprise/overview)
+- [2FA Setup Guide](/docs/freelancer-support/tutorials/2fa-setup)
 
 **Technical Integration**:
 
@@ -131,7 +131,7 @@
 
 **Related Documentation**:
 
-- [Organization Setup](../../business/onboarding/organization-config.md)
+- [Organization Setup](/docs/business/onboarding/organization-config)
 
 ---
 
@@ -170,8 +170,8 @@
 
 **Related Documentation**:
 
-- [Team Roles & Permissions](../../business/collaboration/team-roles.md)
-- [RBAC Implementation](../../technical/security/rbac.md)
+- [Team Roles & Permissions](/docs/business/collaboration/team-roles)
+- [RBAC Implementation](/docs/technical/security/rbac)
 
 **Technical Integration**:
 
@@ -211,8 +211,8 @@
 
 **Related Documentation**:
 
-- [Pricing Plans](../../finance/pricing/overview.md)
-- [Stripe Integration](../../technical/integration/stripe.md)
+- [Pricing Plans](/docs/finance/pricing/overview)
+- [Stripe Integration](/docs/technical/integration/stripe)
 
 **Technical Integration**:
 
@@ -248,8 +248,8 @@
 
 **Related Documentation**:
 
-- [Dedicated Infrastructure](../../technical/infrastructure/dedicated-ip-pools.md)
-- [Deliverability Monitoring](../../operations/monitoring/email-health.md)
+- [Dedicated Infrastructure](/docs/technical/infrastructure/dedicated-ip-pools)
+- [Deliverability Monitoring](/docs/operations/monitoring/email-health)
 
 **Technical Integration**:
 
@@ -261,9 +261,9 @@
 | Route | Related API | Description |
 |---|---|---|
 | `/settings/profile` | **NileDB SDK** | `updateUser()` for profile changes. |
-| `/settings/organization` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `PATCH /api/v1/tenant/workspaces/{id}` (Update Org details). |
-| `/settings/team` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `GET /api/v1/tenant/workspaces/{id}/members` (List), `POST` (Invite). |
-| `/settings/billing` | [Subscriptions API](../../implementation-technical/api/platform-api/subscriptions.md) | `GET /api/v1/platform/subscriptions/tenant/{id}` (Plan details). |
+| `/settings/organization` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `PATCH /api/v1/tenant/workspaces/{id}` (Update Org details). |
+| `/settings/team` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `GET /api/v1/tenant/workspaces/{id}/members` (List), `POST` (Invite). |
+| `/settings/billing` | [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) | `GET /api/v1/platform/subscriptions/tenant/{id}` (Plan details). |
 
 ## 6. Data Strategy
 

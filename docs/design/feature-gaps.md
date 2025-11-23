@@ -3,7 +3,7 @@
 **Purpose**: This document tracks features referenced in route specifications that have been clarified, deferred to the roadmap, or addressed during the frontend routing validation process.
 
 **Status**: Updated 2025-11-21  
-**Related**: [Frontend Routing Map](frontend-routing-map.md) | [Implementation Plan](file:///home/israel/.gemini/antigravity/brain/88de798e-8e79-4b8a-b72d-7673ffde78c7/implementation_plan.md)
+**Related**: [Frontend Routing Map](/docs/design/frontend-routing-map) | [Implementation Plan](/docs/implementation-technical/overview)
 
 ---
 
@@ -113,7 +113,7 @@
 - Custom monitoring UI (not BullMQ Arena)
 - Queue names: `queue:email-sending:high`, `queue:email-sending`, `queue:email-sending:low`, etc.
 
-**Documentation**: [Queue System Implementation](../technical/architecture/detailed-technical/queue-system-implementation.md)
+**Documentation**: [Queue System Implementation](/docs/implementation-technical/architecture-system/email-system-implementation)
 
 **Updated Files**:
 
@@ -206,7 +206,7 @@
 - [ ] **Queue Monitoring API**: Check if endpoint exists in executive/platform API
 - [ ] **Stripe Documentation**: Create comprehensive integration guide
 
-**See Also**: [Implementation Plan - Phase 4](file:///home/israel/.gemini/antigravity/brain/88de798e-8e79-4b8a-b72d-7673ffde78c7/implementation_plan.md#phase-4-database--api-verification)
+**See Also**: [Implementation Plan - Phase 4](/docs/implementation-technical/overview#implementation-phases)
 
 ---
 

@@ -298,11 +298,11 @@ Severity × User Impact × Business Value
 ---
 
 ## Related Documents
-- [Development Standards](/docs/implementation-technical/development-guidelines)) - Code standards and development practices
-- [SOP Guidelines](../../compliance-security/detailed-compliance)) - Standard operating procedures
-- [Security Documentation](../../compliance-security)) - Security testing protocols
-- [Infrastructure Documentation](../database-infrastructure)) - Testing environment setup
-- [Sprint Retrospective Template](../../operations-analytics/team-performance)) - Testing feedback integration
+- [Development Standards](/docs/implementation-technical/development-guidelines) - Code standards and development practices
+- [SOP Guidelines](/docs/compliance-security/detailed-compliance) - Standard operating procedures
+- [Security Documentation](/docs/compliance-security) - Security testing protocols
+- [Infrastructure Documentation](/docs/implementation-technical/database-infrastructure) - Testing environment setup
+- [Sprint Retrospective Template](/docs/operations-analytics/team-performance) - Testing feedback integration
 
 **Keywords**: quality assurance, testing protocols, automated testing, bug management, performance testing, security testing, accessibility testing, CI/CD integration, test automation, quality metrics
 ---

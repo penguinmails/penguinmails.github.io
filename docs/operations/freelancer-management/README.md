@@ -54,20 +54,20 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 ### Level 2: Operational Framework
 
-- [Freelancer Operations Framework](framework.md)
+- [Freelancer Operations Framework](framework)
 - Detailed operational procedures and coordination protocols
 - Performance management and compliance requirements
 
 ### Level 3: Implementation Templates
 
-- [Freelancer Agreements and Templates](templates.md)
+- [Freelancer Agreements and Templates](templates)
 - Detailed procedures, forms, and operational templates
 - Ready-to-use documents and compliance frameworks
 
 ### Specialized: Freelancer Success Resources
 
-- **Professional Quotation Guide**: [Step-by-step quotation preparation with Google Docs template](/docs/freelancer-support/quotation-guide.md)
-- [Freelancer Success Center](/docs/freelancer-support/README.md) - Complete external support hub
+- **Professional Quotation Guide**: [Step-by-step quotation preparation with Google Docs template](/docs/freelancer-support/quotation-guide)
+- [Freelancer Success Center](/docs/freelancer-support/README) - Complete external support hub
 - Comprehensive freelancer onboarding and business development resources
 
 ## Cross-Domain Integration Requirements
@@ -140,17 +140,17 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 While this documentation focuses on internal operations management, we recognize the importance of supporting freelancer success. For **freelancer-focused business development guidance**, see:
 
-- [Freelancer Success Center](/docs/freelancer-support/README.md) - Comprehensive external support hub
-- [Business Success Framework](/docs/freelancer-support/business-framework.md) - Strategic business development guidance
-- [Implementation Resources](/docs/freelancer-support/implementation-resources.md) - Practical tools and templates
-- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics.md) - Performance tracking for freelancer growth
+- [Freelancer Success Center](/docs/freelancer-support/README) - Comprehensive external support hub
+- [Business Success Framework](/docs/freelancer-support/business-framework) - Strategic business development guidance
+- [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and templates
+- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics) - Performance tracking for freelancer growth
 
 ### Shared Standards and Compliance
 
 For unified standards that apply to both internal operations and external freelancer success:
 
-- **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/freelancer-support/quotation-guide.md)
-- [Shared Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines.md) - Common quality and conduct standards
+- **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/freelancer-support/quotation-guide)
+- [Shared Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines) - Common quality and conduct standards
 - [Compliance Framework](/docs/compliance-security/) - Data protection and privacy requirements
 
 ---

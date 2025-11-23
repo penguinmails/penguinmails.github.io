@@ -332,8 +332,8 @@ Financial services organizations operate in a highly regulated environment requi
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 - [Financial Services Marketing Framework](/docs/business/marketing/industry-cases)
-- [Financial Services Business Case](../../industry-business-cases)
-- [Cross-Domain Integration](../cross-domain-integration/overview
+- [Financial Services Business Case](/docs/business/industry-business-cases)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview
 
 ---
 

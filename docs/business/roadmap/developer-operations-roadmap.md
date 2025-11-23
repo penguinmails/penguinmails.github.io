@@ -16,7 +16,7 @@ This document provides development and operations teams with a clear understandi
 **Target Audience:** Engineering Teams, DevOps, Operations, Technical Leads, Product Engineers
 **Purpose:** Technical planning, development timeline, operational preparedness, technical skill development
 
-**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](..) for complete feature definitions.
+**Central Reference**: [`Feature Taxonomy and Roadmap Framework`](/docs/business/roadmap/feature-taxonomy-and-roadmap) for complete feature definitions.
 
 ---
 

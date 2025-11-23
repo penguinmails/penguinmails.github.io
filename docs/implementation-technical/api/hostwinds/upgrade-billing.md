@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **For Platform Engineers and Finance Teams**: Complete API reference for Hostwinds resource upgrades, billing cycle management, and cost planning
 
-**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md)
+**Parent Documentation**: [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview)
 
 ---
 
@@ -243,7 +243,7 @@ persona: "Documentation Users"
 - `smtp_ip_addresses.approximate_cost` - $4.99/month baseline
 - Periodic reconciliation against actual invoices
 
-See [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) for complete cost modeling details.
+See [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) for complete cost modeling details.
 
 ---
 
@@ -315,10 +315,10 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 
 ## Related Documentation
 
-- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview.md) - Main API overview
-- [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md) - Instance operations
-- [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling details
-- [Database Migration Guide](../database-infrastructure/operations/database-migration-guide.md) - Cost field implementation
+- [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
+- [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management) - Instance operations
+- [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) - Cost modeling details
+- [Database Migration Guide](/docs/implementation-technical/database-infrastructure/operations/database-migration-guide) - Cost field implementation
 
 ---
 

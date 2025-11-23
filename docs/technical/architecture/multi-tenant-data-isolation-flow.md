@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: The multi-tenant isolation system uses row-level security, tenant-specific infrastructure, and automated resource management to ensure each customer's data remains completely isolated and secure.
 
-**User Journey Integration**: This isolation flow is part of your complete [security framework](../compliance-security/overview) and [tenant management](/docs/technical/architecture/detailed-technical) experience with guaranteed data protection.
+**User Journey Integration**: This isolation flow is part of your complete [security framework](/docs/compliance-security/overview) and [tenant management](/docs/technical/architecture/detailed-technical) experience with guaranteed data protection.
 
 ---
 

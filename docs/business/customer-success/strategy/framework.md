@@ -226,7 +226,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 **Related Documentation:**
 - [Strategy Overview](/docs/business/strategy/overview)
 - [Customer Success Analytics](/docs/business/analytics/overview)
-- [Customer Retention Strategies](../retention)
+- [Customer Retention Strategies](/docs/business/customer-success/retention)
 - [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
 
 ---

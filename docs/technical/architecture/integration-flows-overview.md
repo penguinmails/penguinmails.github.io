@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: Each flow demonstrates sophisticated system integration patterns including asynchronous processing, multi-tenant isolation, real-time analytics, and automated infrastructure management.
 
-**User Journey Integration**: These integration flows connect to every aspect of your email infrastructure experience from [system architecture](../architecture) through [technical implementation](../implementation-technical/overview) to [operational excellence](/docs/business/operations/strategy/framework).
+**User Journey Integration**: These integration flows connect to every aspect of your email infrastructure experience from [system architecture](/docs/architecture) through [technical implementation](/docs/implementation-technical/overview) to [operational excellence](/docs/business/operations/strategy/framework).
 
 ---
 

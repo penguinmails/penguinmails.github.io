@@ -348,8 +348,8 @@ The Operations Validation Framework provides comprehensive security validation p
 
 **Related Validation Documents:**
 
-- [Operations Validation Overview](..) - Operations validation context and strategic alignment
-- [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and validation integration
+- [Operations Strategy Overview](/docs/business/operations/strategy/overview) - Strategic operations context and validation integration
+- [Operations Strategy Framework](/docs/business/operations/strategy/overview) - Strategic operations context and validation integration
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with validation integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with validation coordination
 - [Security Validation Protocols](.) - Security validation and penetration testing

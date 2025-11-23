@@ -4,7 +4,7 @@
 
 - **Goal**: Create and configure workspaces (sub-tenants/clients). Crucial for Agencies.
 - **Feature References**:
-  - [Agency Features](../../business/user-personas/agency-owners.md)
+  - [Agency Features](/docs/business/user-personas/agency-owners)
 - **User Journey**: Agency signs up → Creates Workspace for "Client A" → Invites Client A users.
 
 ## 2. UI Patterns & Components (The "How")
@@ -35,7 +35,7 @@
 
 **For Agencies (Multi-Workspace)**:
 
-- **Header Stats Row** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-cards)):
+- **Header Stats Row** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards)):
   - **DataCards**: Total Clients, Active Campaigns (across all), Total Emails Sent (MTD), Aggregated Reply Rate.
 
 - **Workspace Grid**:
@@ -61,8 +61,8 @@
 
 **Related Documentation**:
 
-- [Agency Owner Persona](../../business/user-personas/agency-owners.md)
-- [Multi-tenancy Architecture](../../technical/architecture/multi-tenancy.md)
+- [Agency Owner Persona](/docs/business/user-personas/agency-owners)
+- [Multi-tenancy Architecture](/docs/technical/architecture/multi-tenancy)
 
 **Technical Integration**:
 
@@ -95,7 +95,7 @@
 
 **Related Documentation**:
 
-- [Workspace Setup Guide](../../freelancer-support/tutorials/workspace-creation.md)
+- [Workspace Setup Guide](/docs/freelancer-support/tutorials/workspace-creation)
 
 **Technical Integration**:
 
@@ -144,8 +144,8 @@
 
 **Related Documentation**:
 
-- [Team Management](../../business/collaboration/team-roles.md)
-- [Billing & Subscriptions](../../finance/pricing/overview.md)
+- [Team Management](/docs/business/collaboration/team-roles)
+- [Billing & Subscriptions](/docs/finance/pricing/overview)
 
 **Technical Integration**:
 
@@ -184,7 +184,7 @@
 
 **Related Documentation**:
 
-- [Health Metrics](../../operations-analytics/metrics/workspace-health.md)
+- [Health Metrics](/docs/operations-analytics/metrics/workspace-health)
 
 ---
 
@@ -192,7 +192,7 @@
 
 **User Story**: *"As an agency user working across multiple clients, I want seamless context switching, so I don't lose my workflow."*
 
-**Mechanism** (as described in [Core App Structure](core-app-structure.md)):
+**Mechanism** (as described in [Core App Structure](core-app-structure)):
 
 - **Context Switcher in Sidebar**: Dropdown showing current workspace.
 - **Quick Switch**: Click to change, updates URL and sidebar nav.
@@ -205,16 +205,16 @@
 
 **Related Documentation**:
 
-- [Multi-tenancy UX Patterns](../ui-library.md#multi-tenancy)
+- [Multi-tenancy UX Patterns](/docs/design/ui-library#multi-tenancy)
 
 ## 5. Related API Endpoints
 
 | Route | Related API | Description |
 |---|---|---|
-| `/workspaces` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `GET /api/v1/tenant/workspaces` (List), `POST` (Create). |
-| `/workspaces/[slug]` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `GET /api/v1/tenant/workspaces/{id}` (Details & Stats). |
-| `/workspaces/[slug]/settings` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `PATCH /api/v1/tenant/workspaces/{id}` (Update settings). |
-| `/workspaces/[slug]/members` | [Workspaces API](../../implementation-technical/api/tenant-api/workspaces.md) | `POST /api/v1/tenant/workspaces/{id}/members` (Invite). |
+| `/workspaces` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `GET /api/v1/tenant/workspaces` (List), `POST` (Create). |
+| `/workspaces/[slug]` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `GET /api/v1/tenant/workspaces/{id}` (Details & Stats). |
+| `/workspaces/[slug]/settings` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `PATCH /api/v1/tenant/workspaces/{id}` (Update settings). |
+| `/workspaces/[slug]/members` | [Workspaces API](/docs/implementation-technical/api/tenant-api/workspaces) | `POST /api/v1/tenant/workspaces/{id}/members` (Invite). |
 
 ## 6. Data Strategy
 

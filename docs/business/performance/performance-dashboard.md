@@ -18,7 +18,7 @@ persona: "Documentation Users"
 
 > Note: The KPI ranges and thresholds in this dashboard are reference bands derived from the same underlying analyses used across the Business Leaders corpus:
 >
-> - [Financial Analysis Benchmarks](./model/detailed-analysis)
+> - [Financial Analysis Benchmarks](/docs/business/performance/model/detailed-analysis)
 > - [Cost Comparisons](.)
 > - [Provider Benchmarks](.)
 > - [Competitive Analysis](.)
@@ -484,7 +484,7 @@ persona: "Documentation Users"
 
 ---
 
-[^performance-dashboard-methodology]: Methodology and references: Dashboard targets (e.g., ROI bands, payback periods, deliverability and uptime thresholds, CPL) are derived from the cost, pricing, and performance models documented in [Financial Analysis Benchmarks](./model/detailed-analysis), [Cost Comparisons](.), [Provider Benchmarks](.), [Competitive Analysis](.), and [Performance Benchmarks](.), and are intended as instrumented monitoring thresholds. Organizations should compute their actual values using the [ROI Calculator](.) and their internal baselines.
+[^performance-dashboard-methodology]: Methodology and references: Dashboard targets (e.g., ROI bands, payback periods, deliverability and uptime thresholds, CPL) are derived from the cost, pricing, and performance models documented in [Financial Analysis Benchmarks](/docs/business/performance/model/detailed-analysis), [Cost Comparisons](/docs/business/performance), [Provider Benchmarks](/docs/business/performance), [Competitive Analysis](/docs/business/performance), and [Performance Benchmarks](/docs/business/performance), and are intended as instrumented monitoring thresholds. Organizations should compute their actual values using the [ROI Calculator](/docs/business/performance) and their internal baselines.
 
 *This performance dashboard framework is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside success metrics and implementation roadmap for complete business performance monitoring and optimization.*
 ---

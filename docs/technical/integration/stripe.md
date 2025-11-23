@@ -481,7 +481,7 @@ window.location.href = portalSession.url;
 
 ## 9. Database Schema Integration
 
-The Stripe integration uses existing tables in the OLTP database to store subscription and billing references. See the complete schema in [OLTP Database Schema Guide](../../implementation-technical/database-infrastructure/oltp-database/schema-guide.md).
+The Stripe integration uses existing tables in the OLTP database to store subscription and billing references. See the complete schema in [OLTP Database Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide).
 
 ### `subscriptions` Table
 
@@ -682,10 +682,10 @@ Avoid storing sensitive data in Stripe metadata:
 
 ## 13. Related Documentation
 
-- [Settings Route Specification](../../design/routes/settings.md)
-- [Pricing Plans](../../finance/pricing/overview.md) (if exists)
-- [NileDB Authentication](../architecture/detailed-technical/onboarding-authentication.md)
-- [Queue System](../architecture/detailed-technical/queue-system-implementation.md)
+- [Settings Route Specification](/docs/design/routes/settings)
+- [Pricing Plans](/docs/finance/pricing/overview) (if exists)
+- [NileDB Authentication](/docs/technical/architecture/detailed-technical/onboarding-authentication)
+- [Queue System](/docs/technical/architecture/detailed-technical/queue-system-implementation)
 
 ## 14. Implementation Checklist
 

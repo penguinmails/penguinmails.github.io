@@ -362,7 +362,7 @@ E-commerce organizations present unique operational challenges requiring special
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 - [Operations Analytics Framework](/docs/business/analytics/overview)
 - [E-commerce Product Framework](/docs/business/product/industry-cases)
-- [Operations Cross-Domain Integration](../cross-domain-integration/operations-marketing-integration-map
+- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-marketing-integration-map
 
 ---
 

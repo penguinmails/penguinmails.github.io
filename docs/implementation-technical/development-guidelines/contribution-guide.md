@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 **Strategic Alignment**: This contribution guide supports our enterprise infrastructure framework by providing comprehensive development collaboration, contribution standards, and community engagement for the PenguinMails platform.
 
-**Documentation Development**: For documentation contribution guidelines, please refer to our **[CONTRIBUTING.md](../../CONTRIBUTING.md)** guide which covers local development setup, content standards, and markdown linting procedures.
+**Documentation Development**: For documentation contribution guidelines, please refer to our **[CONTRIBUTING.md](/CONTRIBUTING)** guide which covers local development setup, content standards, and markdown linting procedures.
 
 **Technical Authority**: Our contribution guidelines integrate with enterprise development workflows, code review systems, and collaboration platforms featuring automated testing protocols, security standards, and comprehensive developer experience.
 

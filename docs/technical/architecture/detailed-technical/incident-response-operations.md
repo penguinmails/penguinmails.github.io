@@ -11,13 +11,13 @@ persona: "Documentation Users"
 
 This comprehensive guide outlines PenguinMails' enterprise-grade incident response and operations management system, designed to maintain our 99.9% uptime commitment while ensuring rapid, effective response to security incidents, system outages, and operational disruptions. Our incident response framework integrates with our [comprehensive infrastructure monitoring](.) to provide proactive threat detection and automated response capabilities.
 
-**Strategic Alignment**: This operational framework supports our [market leadership positioning](../../business/strategy) by demonstrating enterprise-grade reliability and professional incident management that exceeds industry standards. Our systematic approach to incident response directly contributes to our [competitive differentiation](..) and enterprise customer confidence.
+**Strategic Alignment**: This operational framework supports our [market leadership positioning](/docs/business/strategy) by demonstrating enterprise-grade reliability and professional incident management that exceeds industry standards. Our systematic approach to incident response directly contributes to our [competitive differentiation](..) and enterprise customer confidence.
 
 **Technical Authority**: Our incident response system integrates with our [4-tier database architecture](..) and [progressive queue processing](.) to provide real-time monitoring, automated failover, and intelligent incident classification. The system leverages [OLAP analytics](.) for predictive incident detection and pattern analysis.
 
 **Operational Excellence**: Backed by our [99.9% uptime guarantees](.) with comprehensive monitoring systems, automated incident detection, and enterprise-grade response procedures. Our incident response team operates 24/7 with proven methodologies that have been tested through quarterly simulations and annual disaster recovery exercises.
 
-**User Journey Integration**: This operational framework is part of your complete [user experience journey](../../user-journeys) - ensuring minimal disruption to [email system operations](.) and maintaining seamless [authentication services](.) even during incident response.
+**User Journey Integration**: This operational framework is part of your complete [user experience journey](/docs/user-journeys) - ensuring minimal disruption to [email system operations](.) and maintaining seamless [authentication services](.) even during incident response.
 
 ---
 
@@ -25,7 +25,7 @@ This comprehensive guide outlines PenguinMails' enterprise-grade incident respon
 
 This Incident Response Plan (IRP) establishes comprehensive procedures for detecting, responding to, and recovering from security incidents, system outages, and operational disruptions that affect PenguinMails services. The plan ensures rapid response, effective communication, and minimal impact on customers and business operations.
 
-**Strategic Business Impact**: Our incident response capabilities directly support our [revenue model](../../business/model) by maintaining customer trust and minimizing revenue impact during disruptions. The comprehensive framework enables our [enterprise market penetration strategy](../../business/market-analysis) by demonstrating operational maturity that enterprise customers require.
+**Strategic Business Impact**: Our incident response capabilities directly support our [revenue model](/docs/business/model) by maintaining customer trust and minimizing revenue impact during disruptions. The comprehensive framework enables our [enterprise market penetration strategy](/docs/business/market-analysis) by demonstrating operational maturity that enterprise customers require.
 
 **Technical Integration**: This system integrates with our entire [technical architecture](..) including [database systems](.), [queue processing](.), and [integration platforms](.) to provide unified incident response across all system components.
 
@@ -88,15 +88,15 @@ interface Incident {
 }
 ```markdown
 
-**Enterprise Risk Management**: This severity framework supports our [operational excellence standards](../../business/operations) by providing clear escalation paths and business impact assessment. The framework enables data-driven decision making during incidents to protect our [competitive positioning](../../business/strategy) and maintain customer trust.
+**Enterprise Risk Management**: This severity framework supports our [operational excellence standards](/docs/business/operations) by providing clear escalation paths and business impact assessment. The framework enables data-driven decision making during incidents to protect our [competitive positioning](/docs/business/strategy) and maintain customer trust.
 
 ### **Incident Categories with Strategic Context**
 
-- **Security Incidents**: Unauthorized access, data breaches, malware - directly impacting our [enterprise security positioning](../../compliance-security)
+- **Security Incidents**: Unauthorized access, data breaches, malware - directly impacting our [enterprise security positioning](/docs/compliance-security)
 - **System Outages**: Service unavailability, performance degradation - affecting our [99.9% uptime commitment](.)
-- **Data Incidents**: Data corruption, loss, or unauthorized disclosure - threatening our [data integrity standards](../../compliance-security)
+- **Data Incidents**: Data corruption, loss, or unauthorized disclosure - threatening our [data integrity standards](/docs/compliance-security)
 - **Third-party Issues**: Vendor outages, API failures, integration problems - impacting our [integration reliability](.)
-- **Operational Issues**: Configuration errors, deployment failures - affecting our [operational maturity](../../business/operations)
+- **Operational Issues**: Configuration errors, deployment failures - affecting our [operational maturity](/docs/business/operations)
 
 ---
 
@@ -168,14 +168,14 @@ interface IncidentResponseTeam {
 }
 ```markdown
 
-**Strategic Leadership Structure**: This team structure supports our [enterprise market strategy](../../business/strategy) by ensuring that incident response decisions consider both technical resolution and business impact. The framework enables rapid decision-making while maintaining alignment with our [competitive positioning](..).
+**Strategic Leadership Structure**: This team structure supports our [enterprise market strategy](/docs/business/strategy) by ensuring that incident response decisions consider both technical resolution and business impact. The framework enables rapid decision-making while maintaining alignment with our [competitive positioning](/docs/technical/architecture).
 
 ### **Escalation Contacts with Strategic Context**
 
 - **Primary On-call**: Engineering Lead (24) - Authority to implement [emergency procedures](/docs/technical/architecture/detailed-technical)
 - **Secondary On-call**: DevOps Engineer (24) - Expert in [system automation](/docs/technical/architecture/detailed-technical) and [monitoring systems](/docs/technical/architecture/detailed-technical)
 - **Management**: CTO (Business hours), CEO (Critical incidents) - Strategic decision authority for [business impact assessment](/docs/business/operations)
-- **External**: Security firm (Security incidents), Legal counsel (Legal issues) - External expertise for [compliance requirements](../../compliance-security)
+- **External**: Security firm (Security incidents), Legal counsel (Legal issues) - External expertise for [compliance requirements](/docs/compliance-security)
 
 ---
 
@@ -280,7 +280,7 @@ interface MonitoringConfig {
 }
 ```markdown
 
-**Strategic Monitoring Integration**: This comprehensive monitoring system supports our [data-driven optimization strategy](../../business/analytics) by providing real-time insights into both technical performance and business impact. The integration with our [OLAP analytics platform](.) enables predictive incident detection and business impact forecasting.
+**Strategic Monitoring Integration**: This comprehensive monitoring system supports our [data-driven optimization strategy](/docs/business/analytics) by providing real-time insights into both technical performance and business impact. The integration with our [OLAP analytics platform](.) enables predictive incident detection and business impact forecasting.
 
 ### **Initial Assessment Process with Business Context**
 
@@ -348,7 +348,7 @@ interface ImpactAssessment {
 }
 ```markdown
 
-**Strategic Business Integration**: This assessment framework supports our [comprehensive business strategy](../../business/strategy) by ensuring that incident response considers not just technical resolution but also strategic business impact, competitive positioning, and long-term market implications.
+**Strategic Business Integration**: This assessment framework supports our [comprehensive business strategy](/docs/business/strategy) by ensuring that incident response considers not just technical resolution but also strategic business impact, competitive positioning, and long-term market implications.
 
 ---
 
@@ -439,7 +439,7 @@ const containmentPlaybooks = {
 };
 ```markdown
 
-**Strategic Response Integration**: This containment strategy supports our [operational excellence standards](../../business/operations) by ensuring that technical response procedures are coordinated with business impact considerations. The framework enables rapid technical resolution while protecting our [competitive positioning](../../business/strategy) and [customer relationships](..).
+**Strategic Response Integration**: This containment strategy supports our [operational excellence standards](/docs/business/operations) by ensuring that technical response procedures are coordinated with business impact considerations. The framework enables rapid technical resolution while protecting our [competitive positioning](/docs/business/strategy) and [customer relationships](/docs/technical/architecture).
 
 ### **Investigation Phase with Strategic Analysis**
 
@@ -510,7 +510,7 @@ interface RecoveryProcess {
 }
 ```markdown
 
-**Comprehensive Recovery Strategy**: This recovery framework supports our [business continuity strategy](../../business/operations) by ensuring that technical restoration is coordinated with business operations, customer experience, and competitive positioning. The approach enables us to not just restore service but potentially emerge stronger from incidents.
+**Comprehensive Recovery Strategy**: This recovery framework supports our [business continuity strategy](/docs/business/operations) by ensuring that technical restoration is coordinated with business operations, customer experience, and competitive positioning. The approach enables us to not just restore service but potentially emerge stronger from incidents.
 
 ---
 
@@ -626,7 +626,7 @@ interface ExternalCommunication {
 }
 ```markdown
 
-**Market-Focused Communication Strategy**: This external communication framework supports our [market leadership positioning](/docs/business/strategy/overview) by ensuring that incident communication reinforces rather than undermines our competitive advantages. The approach transforms potential negatives into demonstrations of our [operational excellence](../business/operations) and [customer-first approach](../business/value-proposition/detailed-analysis).
+**Market-Focused Communication Strategy**: This external communication framework supports our [market leadership positioning](/docs/business/strategy/overview) by ensuring that incident communication reinforces rather than undermines our competitive advantages. The approach transforms potential negatives into demonstrations of our [operational excellence](/docs/business/operations) and [customer-first approach](/docs/business/value-proposition/detailed-analysis).
 
 ---
 
@@ -810,14 +810,14 @@ interface BreachNotification {
 }
 ```markdown
 
-**Compliance as Competitive Advantage**: This legal and compliance framework supports our [regulatory excellence strategy](../../compliance-security) by transforming compliance requirements into demonstrations of our [operational maturity](../../business/operations) and [customer protection](../../business/value-proposition/detailed-analysis) commitment.
+**Compliance as Competitive Advantage**: This legal and compliance framework supports our [regulatory excellence strategy](/docs/compliance-security) by transforming compliance requirements into demonstrations of our [operational maturity](/docs/business/operations) and [customer protection](/docs/business/value-proposition/detailed-analysis) commitment.
 
 ### **Evidence Preservation with Strategic Considerations**
 
 - **Chain of Custody**: Document all evidence handling procedures with [legal compliance](/docs/compliance-security) and [regulatory requirements](/docs/compliance-security)
 - **Forensic Imaging**: Preserve system state for analysis with [business continuity](/docs/business/operations) considerations
 - **Log Preservation**: Maintain all relevant logs and audit trails with [intelligent analytics](/docs/technical/architecture/detailed-technical) integration
-- **Legal Hold**: Implement preservation orders when litigation expected with [strategic business](../../business/strategy) impact assessment
+- **Legal Hold**: Implement preservation orders when litigation expected with [strategic business](/docs/business/strategy) impact assessment
 - **Competitive Intelligence**: Analyze evidence for [market opportunity] identification and [competitive advantage] development
 
 ---
@@ -943,7 +943,7 @@ interface IncidentMetrics {
 }
 ```markdown
 
-**Business-Driven Metrics Framework**: This metrics system supports our [data-driven optimization strategy](../../business/analytics) by ensuring that incident response performance is measured not just by technical metrics but by business outcomes, competitive positioning, and strategic objective achievement.
+**Business-Driven Metrics Framework**: This metrics system supports our [data-driven optimization strategy](/docs/business/analytics) by ensuring that incident response performance is measured not just by technical metrics but by business outcomes, competitive positioning, and strategic objective achievement.
 
 ### **Strategic Reporting with Business Intelligence**
 
@@ -961,7 +961,7 @@ interface IncidentMetrics {
 
 - **Communication**: Slack channels, Zoom bridges, status page with [automated stakeholder] notification and [competitive intelligence] integration
 - **Monitoring**: DataDog, New Relic, custom dashboards with [business intelligence](.) integration and [predictive analytics](.)
-- **Documentation**: Confluence, Google Docs, incident timeline tools with [strategic planning](../../business/strategy) integration and [competitive analysis](../../business/market-analysis) capabilities
+- **Documentation**: Confluence, Google Docs, incident timeline tools with [strategic planning](/docs/business/strategy) integration and [competitive analysis](/docs/business/market-analysis) capabilities
 - **Alerting**: PagerDuty, OpsGenie, custom alerting systems with [business impact](..) prioritization and [competitive response](..) triggers
 
 ### **Strategic Resource Inventory**
@@ -975,15 +975,15 @@ interface IncidentMetrics {
 
 ## Strategic Integration Summary
 
-This incident response and operations management framework represents a cornerstone of our [operational excellence strategy](../../business/operations), supporting our [market leadership positioning](../../business/strategy) through enterprise-grade reliability and professional incident management that exceeds industry standards.
+This incident response and operations management framework represents a cornerstone of our [operational excellence strategy](/docs/business/operations), supporting our [market leadership positioning](/docs/business/strategy) through enterprise-grade reliability and professional incident management that exceeds industry standards.
 
-**Business Impact**: The framework directly supports our [revenue model](../../business/model) by maintaining customer trust, minimizing revenue impact during disruptions, and converting potential negatives into demonstrations of our [operational maturity](../../business/operations) and [customer-first approach](../../business/value-proposition/detailed-analysis). The systematic approach to incident response enables our [enterprise market penetration strategy](../../business/market-analysis) by demonstrating operational maturity that enterprise customers require.
+**Business Impact**: The framework directly supports our [revenue model](/docs/business/model) by maintaining customer trust, minimizing revenue impact during disruptions, and converting potential negatives into demonstrations of our [operational maturity](/docs/business/operations) and [customer-first approach](/docs/business/value-proposition/detailed-analysis). The systematic approach to incident response enables our [enterprise market penetration strategy](/docs/business/market-analysis) by demonstrating operational maturity that enterprise customers require.
 
 **Technical Excellence**: The system showcases our [technical leadership](/docs/business/strategy) through integration with our [comprehensive infrastructure](..), including [intelligent monitoring](/docs/technical/architecture/detailed-technical), [automated response procedures](/docs/technical/architecture/detailed-technical), and [predictive analytics](/docs/technical/architecture/detailed-technical). The integration with our [4-tier database architecture](/docs/technical/architecture) and [progressive queue processing](.) provides unified incident response across all system components.
 
-**Strategic Competitive Advantage**: This framework transforms incident response from a cost center into a competitive advantage by demonstrating superior [operational excellence](../business/operations), [customer protection](../business/value-proposition/detailed-analysis), and [market leadership](/docs/business/strategy) capabilities. The comprehensive approach to business impact assessment and strategic opportunity identification enables us to emerge stronger from incidents, turning challenges into [competitive differentiation](/docs/business/strategy) opportunities.
+**Strategic Competitive Advantage**: This framework transforms incident response from a cost center into a competitive advantage by demonstrating superior [operational excellence](/docs/business/operations), [customer protection](/docs/business/value-proposition/detailed-analysis), and [market leadership](/docs/business/strategy) capabilities. The comprehensive approach to business impact assessment and strategic opportunity identification enables us to emerge stronger from incidents, turning challenges into [competitive differentiation](/docs/business/strategy) opportunities.
 
-**Operational Reliability**: Backed by our [99.9% uptime commitment](.) and comprehensive monitoring systems, the incident response platform provides reliable, scalable service that supports our [operational excellence](../../business/operations) standards and enables our [growth strategy](..).
+**Operational Reliability**: Backed by our [99.9% uptime commitment](/docs/technical/architecture/detailed-technical) and comprehensive monitoring systems, the incident response platform provides reliable, scalable service that supports our [operational excellence](/docs/business/operations) standards and enables our [growth strategy](/docs/technical/architecture).
 
 This implementation follows modern best practices for enterprise incident response while integrating strategic business considerations, competitive positioning, and market opportunity identification to ensure that incidents become catalysts for business growth and competitive advantage enhancement.
 ---

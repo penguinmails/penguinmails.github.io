@@ -184,11 +184,11 @@ analytics.export_metrics(performance, destination='ga4')
 - **Custom Development**: Tailored solution development
 - **Training Programs**: Technical training and certification
 - **Priority Support**: Dedicated technical support team
-
----
-*Previous: [Business Context](../business) | Next: [User Journeys](/docs/user-journeys) →*
-
-## Documentation Authoring Guidelines (For Contributors)
+ 
+ ---
+ *Previous: [Business Context](/docs/business) | Next: [User Journeys](/docs/user-journeys) →*
+ 
+ ## Documentation Authoring Guidelines (For Contributors)
 
 Use these rules when adding or updating docs in this repository.
 

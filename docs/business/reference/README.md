@@ -48,7 +48,7 @@ This directory contains quick reference guides, executive templates, detailed me
 
 **Related Directories:**
 
-- [Core Business Documents](../core) - Main business case documents
+- [Core Business Documents](/docs/business/core) - Main business case documents
 - [Financial Analysis](/docs/business/financial-analysis) - Deep financial analysis
 - [Implementation Guide](/docs/business/implementation) - Implementation templates and guides
 - [Industry Business Cases](/docs/business/industry-business-cases) - Industry-specific reference materials

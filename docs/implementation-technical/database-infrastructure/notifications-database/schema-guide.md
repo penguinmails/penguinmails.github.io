@@ -293,7 +293,7 @@ To avoid scope creep:
 
 See:
 
-- [`mermaid-er.md`](mermaid-er.md)
+- [`mermaid-er`](mermaid-er)
 for the visual ER representation of this schema.
 
 ---

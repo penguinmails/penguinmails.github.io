@@ -622,8 +622,8 @@ const supportTemplates = {
 
 ### **Operations & Analytics**
 - [Operations Analytics Overview](..)) - Main operations framework
-- [Organization Analytics](/docs/operations-analytics/operations-management)) - Team and organization management
-- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
+- [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
+- [Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - Comprehensive KPI framework
 
 ### **Business Strategy**
 - [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
@@ -633,16 +633,16 @@ const supportTemplates = {
 ### **Technical Architecture**
 - [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
 - [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
-- [Development Guidelines](../technical/development)) - Code standards and practices
+- [Development Guidelines](/docs/technical/development)) - Code standards and practices
 
 ### **User Experience**
 - [User Journeys Overview](/docs/user-journeys)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
 
 ### **Compliance & Security**
-- [Compliance Overview](/docs/compliance-security)) - Regulatory compliance
-- [Security Framework](/docs/compliance-security/enterprise)) - Security operations
+- [Compliance Overview](/docs/compliance-security - Regulatory compliance
+- [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
 - [QA Security Testing](/docs/compliance-security/enterprise) - Security testing protocols
 
 ---
@@ -673,7 +673,7 @@ Navigate to specific team performance areas:
 
 - **[QA Testing Protocols](.))** → Quality assurance procedures
 - **[Sprint Retrospectives](.))** → Agile development practices
-- **[Organization Analytics](/docs/operations-analytics/operations-management))** → Team and organization management
+- **[Organization Analytics](/do/operations-analytics/operations-management/README.md** → Team and organization management
 
 ---
 

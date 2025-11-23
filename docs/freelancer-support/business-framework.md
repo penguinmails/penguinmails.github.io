@@ -177,7 +177,7 @@ Our professional delivery standards align with internal operations frameworks to
 - Timely delivery and milestone achievement
 - Comprehensive documentation and reporting
 
-For detailed operational requirements, see [Internal Operations Framework](../operations/freelancer-management/framework.md)
+For detailed operational requirements, see [Internal Operations Framework](/docs/operations/freelancer-management/framework)
 
 ### Compliance and Data Protection
 
@@ -189,7 +189,7 @@ All freelancer activities must adhere to strict data protection standards:
 - Follow platform terms of service and usage guidelines
 - Ensure compliance with relevant privacy regulations
 
-For comprehensive compliance requirements, see [Data Protection Guidelines](../../compliance-security/)
+For comprehensive compliance requirements, see [Data Protection Guidelines](/docs/compliance-security)
 
 ### Quality Assurance Integration
 
@@ -201,7 +201,7 @@ Professional quality standards ensure client satisfaction and business success:
 - Maintain documentation standards for all client work
 - Ensure alignment with platform best practices and capabilities
 
-For detailed quality standards, see [Implementation Templates](../operations/freelancer-management/templates.md)
+For detailed quality standards, see [Implementation Templates](/docs/operations/freelancer-management/templates)
 
 ## Business Growth Milestones
 
@@ -260,7 +260,7 @@ For detailed quality standards, see [Implementation Templates](../operations/fre
 **Implementation Status:** Ready for freelancer business development and client acquisition
 **Cross-References:**
 
-- [Internal Operations Framework](../operations/freelancer-management/framework.md)
-- [Implementation Resources](implementation-resources.md)
-- [Success Metrics and KPIs](success-metrics.md)
-- [Compliance Guidelines](../../compliance-security/)
+- [Internal Operations Framework](/docs/operations/freelancer-management/framework)
+- [Implementation Resources](/docs/freelancer-support/implementation-resources)
+- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics)
+- [Compliance Guidelines](/docs/compliance-security)

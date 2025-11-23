@@ -214,8 +214,8 @@ This document is the canonical reference for avoiding concern-mixing in the OLAP
 ## 6. Recommended Integration Patterns (from legacy plans, normalized)
 
 This section consolidates the durable patterns from legacy docs
-(such as [`../technical/architecture/detailed-technical/analytics-architecture`](/docs/technical/architecture/detailed-technical)
-and [`../technical/integration/overview`](../technical)
+(such as [Analytics Architecture](/docs/technical/architecture/detailed-technical/analytics-architecture)
+and [Integration Overview](/docs/technical/integration/overview))
 into a concise, canonical form.
 
 ### 6.1 PostHog )

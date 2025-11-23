@@ -40,6 +40,43 @@ persona: "Documentation Users"
 **Freelancer Signature:** _______________________ **Date:** __________  
 **Task Manager Approval:** _____________________ **Date:** __________
 
+## Effort Point Adjustment Request
+
+**Adjustment ID:** [Generated ID]  
+**Original Task ID:** ______________________________  
+**Freelancer Name:** ______________________________  
+**Request Date:** ______________________________
+
+### Original Task Details
+
+**Original Effort Points:** __________________________  
+**Original Delivery Estimate:** ________________________  
+**Actual Effort Required:** ________________________
+
+### Justification for Adjustment
+
+**Reason for Request:**  
+☐ Scope changes during execution  
+☐ Technical complexity underestimated  
+☐ Additional requirements discovered  
+☐ External dependencies causing delays  
+☐ Quality requirements exceeded expectations  
+☐ Other: ______________________________
+
+### Impact Assessment
+
+**Effort Point Adjustment:** ☐ Increase ☐ Decrease  
+**Additional Points:** __________________________  
+**Impact on Timeline:** ________________________  
+**Impact on Cost:** __________________________
+
+### Approval Process
+
+**Freelancer Request:** __________________________ **Date:** __________  
+**Task Manager Review:** ________________________  
+**Project Manager Approval:** ________________________  
+**Final Decision:** __________________________ **Date:** __________
+
 ---
 
 **Document Classification:** Level 3 - Implementation Template

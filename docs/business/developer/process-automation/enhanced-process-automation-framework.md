@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 6 - Process Automation and Standardization
 **Target Audience**: Process Engineers, Automation Specialists, Developer Operations Teams
 **Business Impact Priority**: High - Developer workflow automation and process optimization responsibility
-**Framework Integration**: [Developer Automation Framework](../automation) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Process Automation Framework](/docs/business/process-automation)
+**Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Process Automation Framework](/docs/business/process-automation)
 
 ## Executive Summary
 
@@ -49,7 +49,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Automated workflow systems activation and optimization
 - Workflow automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Process Automation Framework](/docs/business/process-automation)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Process Automation Framework](/docs/business/process-automation)
 
 #### Automation Point 1.1.2: Intelligent Process Monitoring
 
@@ -93,7 +93,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement systems activation and optimization
 - Optimization validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Operations Framework](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Operations Framework](/docs/business/operations/strategy/framework)
 
 #### Optimization Point 1.2.2: Intelligent Intervention Systems
 
@@ -141,7 +141,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Continuous optimization capabilities systems activation and optimization
 - Enhancement validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Analytics Framework](/docs/business/analytics/overview)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Analytics Framework](/docs/business/analytics/overview)
 
 #### Intelligence Point 2.1.2: Continuous Process Intelligence
 
@@ -169,7 +169,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement systems activation and optimization
 - Optimization systems validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Strategy Framework](/docs/business/strategy/overview)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Strategy Framework](/docs/business/strategy/overview)
 
 ### 2.2 Enhancement Excellence
 
@@ -199,7 +199,7 @@ The framework provides enterprise-grade developer automation with 95% enhancemen
 - Intelligent enhancement frameworks systems activated and validated
 - Excellence automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Validation Framework](/docs/business/operations/validation/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Validation Framework](/docs/business/operations/validation/framework)
 
 #### Enhancement Point 2.2.3: Validation Frameworks
 

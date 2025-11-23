@@ -116,12 +116,12 @@ Any updates or process changes will be communicated in the channel.
 
 ## Related Documents
 
-* [Onboarding Guide](../../user-experience-journeys/detailed-journeys) - Team member integration processes
-* [Security Framework](../../enterprise) - Enterprise security procedures and controls
-* [Security & Privacy Integration](../../enterprise) - Unified security and privacy practices
-* [Traffic Security Matrix](../../enterprise) - Traffic and key selection security framework
-* [Implementation Roadmap](../../enterprise) - Security process improvement planning
-* [Development Standards](../../implementation-technical/development-guidelines) - Code standards and development practices
+* [Onboarding Guide](/docs/user-experience-journeys/detailed-journeys) - Team member integration processes
+* [Security Framework](/docs/compliance-security/enterprise) - Enterprise security procedures and controls
+* [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy practices
+* [Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix) - Traffic and key selection security framework
+* [Implementation Roadmap](/docs/compliance-security/enterprise/implementation-roadmap) - Security process improvement planning
+* [Development Standards](/docs/implementation-technical/development-guidelines) - Code standards and development practices
 
 **Keywords**: standard operating procedure, team workflow, sprint management, communication protocols, task management, quality assurance, operational excellence
 ---

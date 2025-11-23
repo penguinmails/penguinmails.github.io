@@ -296,7 +296,7 @@ The current primary key strategy demonstrates excellent architectural judgment a
 For future table creation, use this matrix to ensure consistent and appropriate primary key selection across the system.
 
 **Related Documents**
-- [Security Framework](.) - Comprehensive security architecture
-- [Security & Privacy Integration](.) - Unified security and privacy approach
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Comprehensive security architecture
+- [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
 ---

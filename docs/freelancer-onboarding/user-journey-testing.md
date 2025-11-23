@@ -23,14 +23,14 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 **Expected Journey**:
 
-1. Landing page: [Quick Setup Overview](/docs/quick-setup.md)
+1. Landing page: [Quick Setup Overview](/docs/quick-setup)
 2. Role identification: "Freelancer" path selection
 3. Experience level: "New Freelancers" selection
-4. Navigation to: [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README.md)
-5. First step: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md)
-6. Next step: [Success Center](/docs/freelancer-support/README.md)
-7. Professional preparation: [Quotation Guide](/docs/freelancer-support/quotation-guide.md)
-8. Complete operations: [Operations Framework](/docs/operations/freelancer-management/framework.md)
+4. Navigation to: [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)
+5. First step: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
+6. Next step: [Success Center](/docs/freelancer-support/README)
+7. Professional preparation: [Quotation Guide](/docs/freelancer-support/quotation-guide)
+8. Complete operations: [Operations Framework](/docs/operations/freelancer-management/framework)
 
 **Success Metrics**:
 
@@ -52,12 +52,12 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 **Expected Journey**:
 
-1. Landing page: [Quick Setup Overview](/docs/quick-setup.md)
+1. Landing page: [Quick Setup Overview](/docs/quick-setup)
 2. Role identification: "Freelancer" path selection
 3. Experience level: "Experienced Freelancers" selection
-4. Focus on workflow differences: [Task Clarity Essentials - SOP Workflow](/docs/freelancer-onboarding/task-clarity-essentials.md#sop-workflow)
-5. Communication standards: [Operations Framework - Communication Protocols](/docs/operations/freelancer-management/framework.md#communication-protocols)
-6. Payment model adaptation: [Quotation Guide - Task-based Payment](/docs/freelancer-support/quotation-guide.md#task-based-payment-model)
+4. Focus on workflow differences: [Task Clarity Essentials - SOP Workflow](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow)
+5. Communication standards: [Operations Framework - Communication Protocols](/docs/operations/freelancer-management/framework#communication-protocols)
+6. Payment model adaptation: [Quotation Guide - Task-based Payment](/docs/freelancer-support/quotation-guide#task-based-payment-model)
 
 **Success Metrics**:
 
@@ -78,13 +78,13 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 **Expected Journey**:
 
-1. Landing page: [Quick Setup Overview](/docs/quick-setup.md)
+1. Landing page: [Quick Setup Overview](/docs/quick-setup)
 2. Role identification: "Freelancer" path selection
 3. Experience level: "Industry Specialists" selection
-4. Specialization focus: [Success Center - Industry Specialization](/docs/freelancer-support/README.md#industry-specialization)
-5. Premium positioning: [Task Clarity Essentials - Premium Task Standards](/docs/freelancer-onboarding/task-clarity-essentials.md)
-6. High-value proposals: [Quotation Guide - Premium Services](/docs/freelancer-support/quotation-guide.md)
-7. Leadership opportunities: [Operations Framework - Advanced Roles](/docs/operations/freelancer-management/framework.md)
+4. Specialization focus: [Success Center - Industry Specialization](/docs/freelancer-support/README#industry-specialization)
+5. Premium positioning: [Task Clarity Essentials - Premium Task Standards](/docs/freelancer-onboarding/task-clarity-essentials)
+6. High-value proposals: [Quotation Guide - Premium Services](/docs/freelancer-support/quotation-guide)
+7. Leadership opportunities: [Operations Framework - Advanced Roles](/docs/operations/freelancer-management/framework)
 
 **Success Metrics**:
 
@@ -105,7 +105,7 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 **Expected Journey**:
 
-1. Direct navigation to [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials.md)
+1. Direct navigation to [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
 2. Quick reference for specific topic (Definition of Done, Story Points, etc.)
 3. Cross-reference to relevant operations documentation
 4. Return to work with clear understanding

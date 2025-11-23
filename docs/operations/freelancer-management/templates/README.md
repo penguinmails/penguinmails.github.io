@@ -16,22 +16,22 @@ This hub provides quick access to all standardized templates required for freela
 
 ### Task Management Templates
 
-- **[Task Assignment Form](task-assignment.md)** - Task scope definition, effort estimation, and approval workflows
-- **[Effort Point Adjustment Request](task-assignment.md#effort-point-adjustment-request)** - Post-delivery effort point modification requests
+- **[Task Assignment Form](/docs/operations/freelancer-management/templates/task-assignment)** - Task scope definition, effort estimation, and approval workflows
+- **[Effort Point Adjustment Request](/docs/operations/freelancer-management/templates/task-assignment#effort-point-adjustment-request)** - Post-delivery effort point modification requests
 
 ### Performance Tracking Templates
 
-- **[Monthly Performance Review](performance-tracking.md)** - Comprehensive monthly performance assessment and goal setting
+- **[Monthly Performance Review](/docs/operations/freelancer-management/templates/performance-tracking)** - Comprehensive monthly performance assessment and goal setting
 
 ### Payment Processing Templates
 
-- **[Monthly Payment Request](payment-processing.md)** - Effort point reconciliation and payment approval
-- **[Payment Adjustment Form](payment-processing.md#payment-adjustment-form-template)** - Financial adjustments and approval workflows
+- **[Monthly Payment Request](/docs/operations/freelancer-management/templates/payment-processing)** - Effort point reconciliation and payment approval
+- **[Payment Adjustment Form](/docs/operations/freelancer-management/templates/payment-processing#payment-adjustment-form-template)** - Financial adjustments and approval workflows
 
 ### Compliance Templates
 
-- **[Confidentiality Checklist](compliance-checklists.md)** - Pre/during/post engagement confidentiality verification
-- **[Quality Assurance Review](compliance-checklists.md#quality-assurance-review-template)** - Deliverable quality assessment and approval
+- **[Confidentiality Checklist](/docs/operations/freelancer-management/templates/compliance-checklists)** - Pre/during/post engagement confidentiality verification
+- **[Quality Assurance Review](/docs/operations/freelancer-management/templates/compliance-checklists#quality-assurance-review-template)** - Deliverable quality assessment and approval
 
 ## Usage Guidelines
 
@@ -44,9 +44,9 @@ This hub provides quick access to all standardized templates required for freela
 
 ### Compliance Notes
 
-- All templates align with [Freelancer Operations Framework](../framework.md)
+- All templates align with [Freelancer Operations Framework](/docs/operations/freelancer-management/framework)
 - Google Docs agreement template available at [Freelancer Agreement Template](https://docs.google.com/document/d/15UFrNqx1kX0iJWSaHg_yYbR-8lpvIVuMka_DxHua_nU/edit?usp=sharing)
-- Shared standards in [Freelancer Standards](../shared/freelancer-resources/standards-and-guidelines.md)
+- Shared standards in [Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines)
 
 ---
 

@@ -362,7 +362,7 @@ Healthcare organizations present unique operational challenges requiring special
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 - [Operations Analytics Framework](/docs/business/analytics/overview)
 - [Healthcare Product Framework](/docs/business/product/industry-cases)
-- [Operations Cross-Domain Integration](../cross-domain-integration/operations-customer-success-integration-map
+- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-customer-success-integration-map
 
 ---
 

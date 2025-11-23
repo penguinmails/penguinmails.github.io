@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 **Operational Excellence**: Backed by **comprehensive performance optimization** with intelligent indexing, efficient content management, and automated monitoring that ensure 99.9% data integrity and optimal query performance.
 
-**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](../../core-features) through [analytics tracking](analytics-architecture) to [performance optimization](.) - providing the data architecture that powers your email infrastructure success.
+**User Journey Integration**: This email system foundation enables your complete data journey from [campaign creation](/docs/core-features) through [analytics tracking](/docs/technical/architecture/detailed-technical/analytics-architecture) to [performance optimization](/docs/technical/architecture/detailed-technical) - providing the data architecture that powers your email infrastructure success.
 
 ---
 

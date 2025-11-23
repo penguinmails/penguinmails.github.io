@@ -48,7 +48,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 **Related Directories:**
 
-- [Core Business Documents](../core) - Performance justification for business case
+- [Core Business Documents](/docs/business/core) - Performance justification for business case
 - [Implementation Guide](/docs/business/implementation) - Performance-focused implementation
 - [Financial Analysis](/docs/business/financial-analysis) - Cost-performance relationships
 - [Procurement & Compliance](/docs/business/procurement-compliance) - Performance compliance requirements

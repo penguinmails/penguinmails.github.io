@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # Domains API
 
-**Parent API**: [Tenant SMTP API](../tenant-smtp.md)  
+**Parent API**: [Tenant SMTP API](/docs/implementation-technical/api/tenant-smtp)
 **URL Prefix**: `/api/v1/tenant/smtp`
 
 ---

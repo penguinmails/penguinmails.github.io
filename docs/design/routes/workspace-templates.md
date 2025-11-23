@@ -4,7 +4,7 @@
 
 - **Goal**: Manage reusable email templates for the workspace.
 - **Feature References**:
-  - [Templates](../../core-features/templates.md)
+  - [Templates](/docs/core-features/templates)
 - **User Journey**: Create templates first (Content) to be used in Campaigns. Templates grow as a library over time.
 
 ## 2. UI Patterns & Components (The "How")
@@ -56,9 +56,9 @@
 
 **Related Documentation**:
 
-- [Email Best Practices](../../business/marketing/overview.md)
-- [CardGrid Component](../ui-library.md#grids)
-- [Templates Feature](../../core-features/templates.md)
+- [Email Best Practices](/docs/business/marketing/overview)
+- [CardGrid Component](/docs/design/ui-library#grids)
+- [Templates Feature](/docs/core-features/templates)
 
 **Technical Integration**:
 
@@ -93,9 +93,9 @@
 
 **Related Documentation**:
 
-- [Content Guidelines](../../business/messaging/overview.md)
-- [Rich Text Editor](../ui-library.md#editors)
-- [Template Variables](../../core-features/templates.md#variables)
+- [Content Guidelines](/docs/business/messaging/overview)
+- [Rich Text Editor](/docs/design/ui-library#editors)
+- [Template Variables](/docs/core-features/templates#variables)
 
 **Technical Integration**:
 
@@ -142,7 +142,7 @@
 
 **Related Documentation**:
 
-- [Template Management](../../core-features/templates.md)
+- [Template Management](/docs/core-features/templates)
 
 **Technical Integration**:
 
@@ -173,8 +173,8 @@
 
 **Related Documentation**:
 
-- [Template Management](../../core-features/templates.md)
-- [Version Control](../ui-library.md#versioning)
+- [Template Management](/docs/core-features/templates)
+- [Version Control](/docs/design/ui-library#versioning)
 
 **Technical Integration**:
 
@@ -186,9 +186,9 @@
 
 | Route | Related API | Description |
 |---|---|---|
-| `/templates` | [Templates API](../../implementation-technical/api/tenant-api/templates.md) | `GET /api/v1/tenant/templates` (List), `POST` (Create). |
-| `/templates/[id]` | [Templates API](../../implementation-technical/api/tenant-api/templates.md) | `GET /api/v1/tenant/templates/{id}` (Details). |
-| `/templates/[id]/edit` | [Templates API](../../implementation-technical/api/tenant-api/templates.md) | `PATCH /api/v1/tenant/templates/{id}` (Update). |
+| `/templates` | [Templates API](/docs/implementation-technical/api/tenant-api/templates) | `GET /api/v1/tenant/templates` (List), `POST` (Create). |
+| `/templates/[id]` | [Templates API](/docs/implementation-technical/api/tenant-api/templates) | `GET /api/v1/tenant/templates/{id}` (Details). |
+| `/templates/[id]/edit` | [Templates API](/docs/implementation-technical/api/tenant-api/templates) | `PATCH /api/v1/tenant/templates/{id}` (Update). |
 
 ## 6. Data Strategy
 

@@ -476,14 +476,14 @@ Ready to manage all your cold email responses efficiently?
 
 ### **Related Features**
 
-1. **[Warm-ups](../warm-ups/overview)** - Build sender reputation before sending cold emails
-2. **[Inbox Rotation](../inbox-rotation/overview)** - Rotate between multiple email addresses
-3. **[Analytics](../analytics/overview)** - Track response rates and performance metrics
-4. **[Free Mailbox Creation](../free-mailbox-creation/overview)** - Set up additional email accounts
+1. **[Warm-ups](/docs/core-features/warm-ups/overview)** - Build sender reputation before sending cold emails
+2. **[Inbox Rotation](/docs/core-features/inbox-rotation/overview)** - Rotate between multiple email addresses
+3. **[Analytics](/docs/core-features/analytics/overview)** - Track response rates and performance metrics
+4. **[Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)** - Set up additional email accounts
 
 ### **Implementation Resources**
 
-1. **[Implementation Guide](../getting-started)** - Complete setup process
+1. **[Implementation Guide](/docs/getting-started)** - Complete setup process
 
 ### **Prerequisites**
 
@@ -501,8 +501,8 @@ Ready to manage all your cold email responses efficiently?
 
 ### **Deep Dive Options**
 
-- **[Advanced Usage](advanced-usage)** - Advanced features and optimization techniques
-- **[Technical Implementation](technical-implementation)** - Detailed technical setup and configuration
+- **[Advanced Usage](/docs/core-features/unified-inbox/advanced-usage)** - Advanced features and optimization techniques
+- **[Technical Implementation](/docs/core-features/unified-inbox/technical-implementation)** - Detailed technical setup and configuration
 
 ### **Success Metrics**
 

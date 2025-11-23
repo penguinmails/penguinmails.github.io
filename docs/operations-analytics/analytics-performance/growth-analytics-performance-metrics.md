@@ -560,11 +560,11 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 ### **User Experience**
 - [User Journeys Overview](/docs/user-journeys)) - User flow documentation
-- [Onboarding Journey](../user-journeys/detailed-journeys)) - User activation
-- [User Interaction Patterns](../user-journeys/detailed-journeys)) - UX optimization
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
 
 ### **Operations Management**
-- [Organization Analytics](/docs/operations-analytics/operations-management)) - Team and organization management
+- [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
 - [Team Performance](/docs/operations-analytics/team-performance)) - Team coordination and development
 
 ---

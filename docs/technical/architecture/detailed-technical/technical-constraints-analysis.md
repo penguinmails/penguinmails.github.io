@@ -743,7 +743,7 @@ This analysis represents a **comprehensive strategic advancement** that establis
 - [Email System Implementation](.) - Email processing and queue integration
 - [Analytics Architecture](.) - PostHog integration and business intelligence
 - [OLAP Analytics Schema](.) - Business intelligence and data warehousing
-- [Business Operations](../../business/operations) - Operational procedures and quality assurance
-- [Security Documentation](../../compliance-security) - Enterprise security and compliance
+- [Business Operations](/docs/business/operations) - Operational procedures and quality assurance
+- [Security Documentation](/docs/compliance-security) - Enterprise security and compliance
 
 **Keywords**: technical constraints, architecture limitations, scalability constraints, performance limits, database constraints, infrastructure boundaries, compliance requirements, cost optimization, strategic constraint management, enterprise excellence

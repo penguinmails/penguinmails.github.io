@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: E-commerce Developer Teams, Platform Architects, E-commerce IT Leadership
 **Business Impact Priority**: High - E-commerce platform optimization and developer experience responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [E-commerce Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [E-commerce Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [E-commerce Analytics Framework](../analytics/framework
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [E-commerce Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [E-commerce Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [E-commerce Analytics Framework](/docs/business/analytics/framework
 
 ## Executive Summary
 
@@ -105,7 +105,7 @@ The E-commerce Developer Framework establishes comprehensive protocols for platf
 - Journey validation systems activated and monitored
 - Journey optimization compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [E-commerce Journey Framework](/docs/user-journeys)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [E-commerce Journey Framework](/docs/user-journeys)
 
 #### Optimization Point 1.2.3: E-commerce Platform Compliance Validation
 
@@ -289,7 +289,7 @@ The E-commerce Developer Framework establishes comprehensive protocols for platf
 - Time-to-market optimization systems activated and validated
 - Efficiency optimization completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [E-commerce Developer Efficiency](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [E-commerce Developer Efficiency](/docs/business/operations/strategy/framework)
 
 #### Optimization Point 3.2.3: E-commerce Platform Reliability
 
@@ -367,7 +367,7 @@ The E-commerce Developer Framework establishes comprehensive protocols for platf
 - Deployment optimization systems activated and validated
 - Development automation completion verified and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [E-commerce Development Automation](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [E-commerce Development Automation](/docs/business/operations/strategy/framework)
 
 #### Automation Point 4.2.2: E-commerce Workflow Optimization
 

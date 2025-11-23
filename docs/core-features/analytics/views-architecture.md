@@ -10,8 +10,8 @@ persona: "Product Designers & Developers"
 
 **Purpose**: This document serves as the high-level guide to the analytics capabilities of PenguinMails. It bridges the gap between the routing structure and the detailed technical specifications.
 
-> **Note**: For the complete routing map, see [Frontend Routing Map](../../../design/frontend-routing-map.md).
-> For detailed technical implementation (RBAC, Stack), see [Technical Implementation](../../../implementation-technical/analytics-integration/technical-implementation.md).
+> **Note**: For the complete routing map, see [Frontend Routing Map](/docs/design/frontend-routing-map).
+> For detailed technical implementation (RBAC, Stack), see [Technical Implementation](/docs/implementation-technical/analytics-integration/technical-implementation).
 
 ---
 
@@ -27,7 +27,7 @@ The application's analytics views are divided into three primary categories base
 * **Operations Monitor ("The Watchtower")**: System reliability, queues, and infrastructure health.
 * **Product Insights**: Feature adoption and user journey analysis.
 
-👉 **[View Detailed Internal Specs](specs/internal-views.md)**
+👉 **[View Detailed Internal Specs](/docs/core-features/analytics/specs/internal-views)
 
 ### 1.2 Customer Workspaces
 
@@ -37,7 +37,7 @@ The application's analytics views are divided into three primary categories base
 * **Agency Command Center**: Multi-tenant management for agencies.
 * **Client Report Portal**: White-label views for agency clients.
 
-👉 **[View Detailed Customer Specs](specs/customer-views.md)**
+👉 **[View Detailed Customer Specs](/docs/core-features/analytics/specs/customer-views)
 
 ### 1.3 Stakeholder & Public
 
@@ -46,7 +46,7 @@ The application's analytics views are divided into three primary categories base
 * **System Status Page**: Public transparency during outages.
 * **Investor Briefing Room**: Secure, high-level metrics for board members.
 
-👉 **[View Detailed Public Specs](specs/public-views.md)**
+👉 **[View Detailed Public Specs](/docs/core-features/analytics/specs/public-views)
 
 ---
 

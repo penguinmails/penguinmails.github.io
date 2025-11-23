@@ -105,7 +105,7 @@ The Financial Services Developer Framework establishes comprehensive protocols f
 - Integration validation systems activated and monitored
 - Data integration compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Financial Services Data Framework](/docs/compliance-security/enterprise)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Financial Services Data Framework](/docs/compliance-security/enterprise)
 
 #### Compliance Point 1.2.3: Financial Platform Compliance Validation
 

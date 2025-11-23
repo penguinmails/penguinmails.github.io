@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 6 - Process Automation and Standardization
 **Target Audience**: Template Engineers, Industry Specialists, Developer Template Teams
 **Business Impact Priority**: High - Vertical-specific developer playbooks and process workflow responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Industry Frameworks](../industry-specific) | [Platform Template Framework](../platform-template/framework
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Industry Frameworks](/docs/business/developer/industry-specific) | [Platform Template Framework](/docs/business/developer/platform-template/framework
 
 ## Executive Summary
 
@@ -49,7 +49,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Process template systems activation and optimization
 - Playbook validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Platform Template Framework](../platform-template)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Platform Template Framework](/docs/business/developer/platform-template)
 
 #### Playbook Point 1.1.2: Process Workflow Templates
 
@@ -77,7 +77,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Automation frameworks systems activation and optimization
 - Compliance validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Industry Frameworks](../industry-specific)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Industry Frameworks](/docs/business/developer/industry-specific)
 
 ### 1.2 Automation Excellence
 
@@ -93,7 +93,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Optimization frameworks systems activation and optimization
 - Automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Operations Framework](/docs/business/operations/strategy/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Operations Framework](/docs/business/operations/strategy/framework)
 
 #### Automation Point 1.2.2: Excellence Framework Templates
 
@@ -141,7 +141,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Optimization systems activation and optimization
 - Best practices validation completed and verified
 
-**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Platform Template Framework](../platform-template)
+**Business Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) + [Platform Template Framework](/docs/business/developer/platform-template)
 
 #### Practices Point 2.1.2: Validation Framework Templates
 
@@ -169,7 +169,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Enhancement systems activation and optimization
 - Automation validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Industry Frameworks](../industry-specific)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Industry Frameworks](/docs/business/developer/industry-specific)
 
 ### 2.2 Optimization Excellence
 
@@ -213,7 +213,7 @@ The framework integrates developer strategy, operations, and analytics component
 - Optimization systems activation and optimization
 - Excellence validation completed and verified
 
-**Business Framework Integration**: [Developer Automation Framework](../automation) + [Developer Validation Framework](/docs/business/operations/validation/framework)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [Developer Validation Framework](/docs/business/operations/validation/framework)
 
 ---
 

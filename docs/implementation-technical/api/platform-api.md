@@ -24,7 +24,7 @@ The Platform API provides internal operations, analytics aggregation, and busine
 
 ### 1. Subscriptions & Billing
 
-**Documentation**: [Subscriptions API](./platform-api/subscriptions.md)
+**Documentation**: [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions)
 
 Manage tenant subscriptions, billing, and payment records.
 
@@ -36,7 +36,7 @@ Manage tenant subscriptions, billing, and payment records.
 
 ### 2. System Analytics
 
-**Documentation**: [Analytics API](./platform-api/analytics.md)
+**Documentation**: [Analytics API](/docs/implementation-technical/api/platform-api/analytics)
 
 System-wide metrics, revenue protection, and cost optimization.
 
@@ -48,7 +48,7 @@ System-wide metrics, revenue protection, and cost optimization.
 
 ### 3. Admin Operations
 
-**Documentation**: [Admin API](./platform-api/admin.md)
+**Documentation**: [Admin API](/docs/implementation-technical/api/platform-api/admin)
 
 User management, tenant management, and feature flags.
 

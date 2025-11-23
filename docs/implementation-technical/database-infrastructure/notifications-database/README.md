@@ -13,8 +13,8 @@ This directory contains comprehensive documentation for the PenguinMails Notific
 
 ### Core Components
 
-- **[Schema Guide](schema-guide.md)** - Complete database schema and design principles
-- **[Entity Relationship Diagram](mermaid-er.md)** - Database schema visualization
+- **[Schema Guide](schema-guide)** - Complete database schema and design principles
+- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
 
 ### Design Principles
 
@@ -27,8 +27,8 @@ This directory contains comprehensive documentation for the PenguinMails Notific
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Schema Guide](schema-guide.md) | Complete database schema and implementation | Database engineers |
-| [Mermaid ER](mermaid-er.md) | Visual database schema representation | All technical stakeholders |
+| [Schema Guide](schema-guide) | Complete database schema and implementation | Database engineers |
+| [Mermaid ER](mermaid-er) | Visual database schema representation | All technical stakeholders |
 
 ## Key Concepts
 
@@ -63,8 +63,8 @@ This design ensures:
 
 ## Getting Started
 
-1. Review [Schema Guide](schema-guide.md) for implementation details
-2. Reference [Mermaid ER](mermaid-er.md) for visual schema understanding
+1. Review [Schema Guide](schema-guide) for implementation details
+2. Reference [Mermaid ER](mermaid-er) for visual schema understanding
 3. Follow design principles for new development
 
 ## Integration

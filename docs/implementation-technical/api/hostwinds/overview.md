@@ -18,7 +18,7 @@ persona: "Documentation Users"
 > [!WARNING]
 > **API Limitations**: This documentation currently lacks information for required Hostwinds APIs regarding **VPS management**, **secondary IP**, **monitoring**, and **billing**. Refer to the official Hostwinds documentation for complete coverage.
 > [!NOTE]
-> **Architecture Context**: Hostwinds is an **external service** integrated into PenguinMails' infrastructure. For a complete overview of how it fits with our internal servers, see **[API Architecture Overview](../README.md)**.
+> **Architecture Context**: Hostwinds is an **external service** integrated into PenguinMails' infrastructure. For a complete overview of how it fits with our internal servers, see **[API Architecture Overview](/docs/implementation-technical/api/)**.
 
 ---
 
@@ -110,7 +110,7 @@ graph TB
    - `smtp_ip_addresses.approximate_cost` - IP cost modeling
 
 2. **Cost Modeling**
-   - See [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) for canonical cost model
+   - See [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) for canonical cost model
    - Baseline: Hostwinds Unmanaged Linux VPS 1 CPU / 2 GB / 50 GB / 2 TB at **$9.99/month**
    - IP pricing: **$4.99/month per dedicated IP** (configurable constant)
 
@@ -184,7 +184,7 @@ Endpoints for creating, managing, and monitoring VPS instances.
 - Rebuild and repair servers
 - Manage rescue mode
 
-**Documentation**: [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management.md)
+**Documentation**: [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management )
 
 **Common Use Cases**:
 
@@ -206,7 +206,7 @@ Endpoints for managing IP addresses, networking, and firewall configuration.
 - Manage firewall profiles
 - Regenerate network configuration
 
-**Documentation**: [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking.md)
+**Documentation**: [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking )
 
 **Common Use Cases**:
 
@@ -228,7 +228,7 @@ Endpoints for managing server upgrades, billing cycles, and pricing queries.
 - Manage service levels (managed/unmanaged)
 - Create upgrade orders and invoices
 
-**Documentation**: [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing.md)
+**Documentation**: [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing )
 
 **Common Use Cases**:
 
@@ -250,7 +250,7 @@ Endpoints for monitoring server health, logs, and performance.
 - Validate service IDs
 - Monitor SMTP filters
 
-**Documentation**: [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring.md)
+**Documentation**: [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring )
 
 **Common Use Cases**:
 
@@ -272,7 +272,7 @@ Recommendations for reliable, secure, and efficient automation.
 - Rate limiting and efficiency
 - Integration patterns
 
-**Documentation**: [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices.md)
+**Documentation**: [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices )
 
 **Critical for**:
 
@@ -286,18 +286,18 @@ Recommendations for reliable, secure, and efficient automation.
 
 ### Infrastructure Planning
 
-- [Infrastructure Overview](../../business/implementation/infrastructure-overview.md) - Cost modeling and provider roles
-- [Database Infrastructure](../database-infrastructure/operations/database-migration-guide.md) - Schema integration and cost fields
+- [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) - Cost modeling and provider roles
+- [Database Infrastructure](/docs/implementation-technical/database-infrastructure/operations/database-migration-guide) - Schema integration and cost fields
 
 ### API Documentation
 
-- [Central SMTP Operations API](/docs/implementation-technical/api/smtp/central-operations.md) - Internal SMTP infrastructure management
-- [Executive API](executive-api.md) - High-level business metrics and reporting
+- [Central SMTP API](/docs/implementation-technical/api/central-smtp) - Internal SMTP infrastructure management
+- [Executive API](/docs/implementation-technical/api/platform-api) - High-level business metrics and reporting
 
 ### Implementation Guides
 
-- [Architecture Overview](../architecture-system/architecture-overview.md) - System architecture and integration points
-- [Development Standards](../development-guidelines/development-standards.md) - API integration best practices
+- [Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - System architecture and integration points
+- [Development Standards](/docs/implementation-technical/development-guidelines/README) - API integration best practices
 
 ---
 

@@ -4,15 +4,15 @@
 
 * **Goal**: Provide secure entry points for users to access the platform, register, and recover accounts.
 * **Feature References**:
-  * [User Onboarding](../../core-features/getting-started.md)
-  * [Security & Compliance](../../compliance-security/enterprise/overview.md)
+  * [User Onboarding](/docs/core-features/getting-started)
+  * [Security & Compliance](/docs/compliance-security/enterprise/overview)
 * **User Journey**: These are the first touchpoints. The experience must be fast, trustworthy, and clear.
 
 ## 2. UI Patterns & Components (The "How")
 
 * **Core Components**:
   * `AuthLayout`: Specialized layout with split screen (Marketing visual left, Form right).
-  * `Form`: Use `react-hook-form` + `zod` for validation (see [UI Library](../ui-library.md)).
+  * `Form`: Use `react-hook-form` + `zod` for validation (see [UI Library](/docs/design/ui-library)).
   * `Button`: Primary variant for "Sign In"/"Register", Ghost variant for "Forgot Password".
 * **Analytics Patterns**: N/A (Operational views).
 * **Layout**: `PublicLayout` (Minimal header/footer) or `AuthLayout`.
@@ -47,8 +47,8 @@
 
 **Related Documentation**:
 
-* [Marketing Strategy](../../business/marketing/overview.md)
-* [Value Propositions](../../business/value-propositions/overview.md)
+* [Marketing Strategy](/docs/business/marketing/overview)
+* [Value Propositions](/docs/business/value-propositions/overview)
 
 ---
 
@@ -70,8 +70,8 @@
 
 **Related Documentation**:
 
-* [Authentication Architecture](../../technical/architecture/detailed-technical/onboarding-authentication.md)
-* [Security Standards](../../compliance-security/enterprise/overview.md)
+* [Authentication Architecture](/docs/technical/architecture/detailed-technical/onboarding-authentication)
+* [Security Standards](/docs/compliance-security/enterprise/overview)
 
 **Technical Integration**:
 
@@ -82,7 +82,7 @@
 * **Email Verification**: Loop service handles verification emails.
 
 > [!NOTE]
-> See [Onboarding & Authentication](../../technical/architecture/detailed-technical/onboarding-authentication.md) for complete implementation details.
+> See [Onboarding & Authentication](/docs/technical/architecture/detailed-technical/onboarding-authentication) for complete implementation details.
 
 ---
 
@@ -106,8 +106,8 @@
 
 **Related Documentation**:
 
-* [Onboarding Flow](../../technical/architecture/detailed-technical/onboarding-authentication.md)
-* [User Personas](../../business/user-personas/startup-founders.md)
+* [Onboarding Flow](/docs/technical/architecture/detailed-technical/onboarding-authentication)
+* [User Personas](/docs/business/user-personas/startup-founders)
 
 **Post-Registration**: Redirect to `/dashboard/onboarding` for workspace setup.
 
@@ -151,7 +151,7 @@
 
 **Related Documentation**:
 
-* [Security Policies](../../compliance-security/enterprise/overview.md)
+* [Security Policies](/docs/compliance-security/enterprise/overview)
 
 ---
 
@@ -197,7 +197,7 @@
 
 **Related Documentation**:
 
-* [Infrastructure Monitoring](../../operations/monitoring/system-health.md)
+* [Infrastructure Monitoring](/docs/operations/monitoring/system-health)
 
 **Technical Integration**:
 

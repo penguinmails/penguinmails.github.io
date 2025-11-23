@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # Notifications API
 
-**Parent API**: [Queue API](../queue.md)  
+**Parent API**: [Queue API](/docs/implementation-technical/api/queue)
 **URL Prefix**: `/api/v1/queue/notifications`
 
 ---
@@ -64,7 +64,7 @@ persona: "Backend Developers"
 ### Bulk Review
 
 **Method**: `POST`  
-**URL**: `/api/v1/queue/notifications/bulk-review`  
+**URL**: `/api/../queue/notifications/bulk-review`  
 **Purpose**: Mark multiple notifications as reviewed.
 
 **Request**:

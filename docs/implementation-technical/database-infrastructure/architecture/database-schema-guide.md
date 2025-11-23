@@ -23,7 +23,7 @@ External logging/observability is an out-of-band component that complements thes
 For detailed per-tier guides, see:
 
 - [`oltp-schema-guide`](/docs/implementation-technical/database-infrastructure)
-- [`content-database/README.md`](/docs/implementation-technical/database-infrastructure)
+- [`content-database/README`](/docs/implementation-technical/database-infrastructure)
 - [`olap-database/`](/docs/implementation-technical/database-infrastructure)
 - [`notifications-database-schema-guide`](/docs/implementation-technical/database-infrastructure)
 - [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure)
@@ -56,7 +56,7 @@ Key principles:
 Reference:
 
 - [`oltp-database/`](oltp-database/) - Complete OLTP database schema with multi-tenant design
-- [`oltp-database/mermaid-er.md`](oltp-database/mermaid-er.md) - Visual OLTP schema representation
+- [`oltp-database/mermaid-er`](oltp-database/mermaid-er) - Visual OLTP schema representation
 
 ---
 
@@ -87,8 +87,8 @@ Core schema:
 
 Reference:
 
-- [`content-database/schema-guide.md`](/docs/implementation-technical/database-infrastructure)
-- [`content-database/mermaid-er.md`](/docs/implementation-technical/database-infrastructure)
+- [`content-database/schema-guide`](/docs/implementation-technical/database-infrastructure)
+- [`content-database/mermaid-er`](/docs/implementation-technical/database-infrastructure)
 - [`content-database-analysis`](/docs/implementation-technical/database-infrastructure)
 
 ---
@@ -131,7 +131,7 @@ Canonical tables:
 Reference:
 
 - [`olap-database/`](/docs/implementation-technical/database-infrastructure)
-- [`olap-database/mermaid-er.md`](/docs/implementation-technical/database-infrastructure)
+- [`olap-database/mermaid-er`](/docs/implementation-technical/database-infrastructure)
 
 ---
 

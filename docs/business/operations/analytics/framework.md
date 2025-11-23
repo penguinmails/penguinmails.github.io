@@ -392,7 +392,7 @@ The Operations Analytics Framework provides comprehensive operational performanc
 
 **Related Analytics Documents:**
 
-- [Operations Analytics Overview](..) - Operations analytics context and strategic alignment
+- [Operations Analytics Overview](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and analytics integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with analytics integration
 - [Performance Analytics Dashboard](.) - Executive analytics dashboard with real-time insights

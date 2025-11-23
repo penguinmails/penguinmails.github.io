@@ -366,7 +366,7 @@ The Operations Executive Dashboard Framework provides unified visibility into se
 
 **Related Operations Documents:**
 
-- [Operations Analytics Overview](..) - Operations analytics context and strategic alignment
+- [Operations Analytics Overview](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 - [Operations Strategy Framework](/docs/business/strategy/overview) - Strategic operations context and dashboard integration
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with dashboard integration
 - [Operations Analytics Framework](.) - Operations analytics with dashboard framework integration

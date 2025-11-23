@@ -52,7 +52,7 @@ This directory contains detailed implementation guidance, technical requirements
 
 **Related Directories:**
 
-- [Core Business Documents](../core) - Executive approval for implementation
+- [Core Business Documents](/docs/business/core) - Executive approval for implementation
 - [Procurement & Compliance](/docs/business/procurement-compliance) - Enterprise procurement requirements
 - [Performance Analysis](/docs/business/performance) - Performance optimization during implementation
 - [Financial Analysis](/docs/business/financial-analysis) - Implementation cost analysis

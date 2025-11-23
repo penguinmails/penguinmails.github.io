@@ -96,9 +96,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ### Navigation Framework
 
-- [Internal Operations](../) - Back to operations hub
-- [External Freelancer Support](../freelancer-support/) - Cross-reference
-- [Compliance Framework](../compliance-security/) - Related requirements
+- [Internal Operations](/docs/operations) - Back to operations hub
+- [External Freelancer Support](/docs/freelancer-support/) - Cross-reference
+- [Compliance Framework](/docs/compliance-security/) - Related requirements
 
 #### External Freelancer Support Hub
 
@@ -122,9 +122,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ### Navigation Framework
 
-- [Internal Operations Management](../operations/freelancer-management/) - For reference
-- [Platform Documentation](../../) - Technical guides
-- [Community Resources](../../community/) - Networking and support
+- [Internal Operations Management](/docs/operations/freelancer-management/) - For reference
+- [Platform Documentation](/docs/) - Technical guides
+- [Community Resources](/docs/community/) - Networking and support
 
 ### Level 2: Operational Frameworks
 
@@ -145,9 +145,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ### Integration References
 
-- [External Success Framework](../freelancer-support/business-framework.md)
-- [Compliance Requirements](../../compliance-security/)
-- [Cross-Functional Integration](../../operations/)
+- [External Success Framework](/docs/freelancer-support/business-framework)
+- [Compliance Requirements](/docs/compliance-security/)
+- [Cross-Functional Integration](/docs/operations/)
 
 #### External Success Framework
 
@@ -180,9 +180,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ### Cross-References
 
-- [Internal Operations Requirements](../operations/freelancer-management/framework.md)
-- [Technical Implementation Guides](../../business/implementation/)
-- [Success Metrics and KPIs](./success-metrics.md)
+- [Internal Operations Requirements](/docs/operations/freelancer-management/framework)
+- [Technical Implementation Guides](/docs/business/implementation/)
+- [Success Metrics and KPIs](/docs/architecture/success-metrics)
 
 ### Level 3: Implementation and Templates
 
@@ -203,9 +203,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ### Integration Notes
 
-- Reference to [External Support Resources](../freelancer-support/resources/)
-- Compliance with [Platform Terms](../../legal/terms/)
-- Alignment with [Business Framework](../freelancer-support/business-framework.md)
+- Reference to [External Support Resources](/docs/freelancer-support/resources/)
+- Compliance with [Platform Terms](/docs/legal/terms/)
+- Alignment with [Business Framework](/docs/freelancer-support/business-framework)
 
 #### External Implementation Resources
 
@@ -238,9 +238,9 @@ This document presents a comprehensive documentation structure that addresses tw
 
 ## Integration References
 
-- [Internal Quality Standards](../operations/freelancer-management/templates.md)
-- [Platform Technical Guides](../../business/implementation/)
-- [Compliance Requirements](../../compliance-security/)
+- [Internal Quality Standards](/docs/operations/freelancer-management/templates)
+- [Platform Technical Guides](/docs/business/implementation/)
+- [Compliance Requirements](/docs/compliance-security/)
 
 ## Cross-Reference Architecture
 
@@ -252,8 +252,8 @@ This document presents a comprehensive documentation structure that addresses tw
 
 **Examples:**
 
-- "Quality standards align with freelancer success metrics in [Business Framework](../freelancer-support/business-framework.md)"
-- "Payment processes support freelancer cash flow needs as outlined in [Implementation Resources](../freelancer-support/implementation-resources.md)"
+- "Quality standards align with freelancer success metrics in [Business Framework](/docs/freelancer-support/business-framework)"
+- "Payment processes support freelancer cash flow needs as outlined in [Implementation Resources](/docs/freelancer-support/implementation-resources)"
 
 #### External-to-Internal References
 
@@ -261,8 +261,8 @@ This document presents a comprehensive documentation structure that addresses tw
 
 **Examples:**
 
-- "Professional standards align with internal operations framework in [Operations Framework](../operations/freelancer-management/framework.md)"
-- "Quality expectations match internal delivery requirements in [Templates](../operations/freelancer-management/templates.md)"
+- "Professional standards align with internal operations framework in [Operations Framework](/docs/operations/freelancer-management/framework)"
+- "Quality expectations match internal delivery requirements in [Templates](/docs/operations/freelancer-management/templates)"
 
 ### Shared Resource Integration
 

@@ -171,8 +171,8 @@ Security and compliance features are integrated into the core platform:
 **For Executive Decision Making (Level 2):**
 
 - [📊 Cost Analysis Overview](/docs/business/financial-analysis) - Business case for security investment
-- [💰 ROI Calculator](../core) - Financial justification for security features
-- [🏆 Competitive Analysis](../core) - Security capabilities vs. alternatives
+- [💰 ROI Calculator](/docs/business/core) - Financial justification for security features
+- [🏆 Competitive Analysis](/docs/business/core) - Security capabilities vs. alternatives
 - [🏗️ Implementation Roadmap](/docs/business/implementation) - Timeline and resource requirements
 
 **For Technical Validation (Level 3):**

@@ -329,8 +329,8 @@ The Operations Strategy Framework provides comprehensive strategic operations pl
 
 **Related Strategic Documents:**
 
-- [Strategic Operations Overview](..) - Strategic operations context and alignment
-- [Operations Analytics Framework](/docs/business/analytics/overview) - Strategic analytics and performance intelligence
+- [Operations Strategy Overview](/docs/business/operations/strategy/overview) - Strategic operations context and alignment
+- [Operations Analytics Framework](/docs/business/operations/analytics/framework) - Strategic analytics and performance intelligence
 - [Operations Management Framework](/docs/business/operations/management/framework) - Strategic operations management and coordination
 - [Security Operations Framework](.) - Strategic security operations and threat management
 - [Risk Management Framework](.) - Strategic risk management and mitigation

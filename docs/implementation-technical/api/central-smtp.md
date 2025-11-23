@@ -24,7 +24,7 @@ The Central SMTP API manages the underlying infrastructure for email delivery, i
 
 ### 1. IP & Pool Management
 
-**Documentation**: [IP & Pools API](./central-smtp/ip-pools.md)
+**Documentation**: [IP & Pools API](/docs/implementation-technical/api/central-smtp/ip-pools)
 
 Manage IP inventory, pools, and capacity.
 
@@ -35,7 +35,7 @@ Manage IP inventory, pools, and capacity.
 
 ### 2. Routing & Assignment
 
-**Documentation**: [Routing API](./central-smtp/routing.md)
+**Documentation**: [Routing API](/docs/implementation-technical/api/central-smtp/routing)
 
 Assign tenants to specific pools or IPs.
 
@@ -46,7 +46,7 @@ Assign tenants to specific pools or IPs.
 
 ### 3. Reputation & Health
 
-**Documentation**: [Reputation API](./central-smtp/reputation.md)
+**Documentation**: [Reputation API](/docs/implementation-technical/api/central-smtp/reputation)
 
 Monitor infrastructure health signals.
 

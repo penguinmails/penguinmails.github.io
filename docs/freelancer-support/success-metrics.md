@@ -158,7 +158,7 @@ Freelancer success metrics align with internal operational requirements:
 - Communication protocols maintain professional relationships
 - Continuous improvement drives excellence and growth
 
-For operational requirements and standards, see [Internal Operations Framework](../operations/freelancer-management/framework.md)
+For operational requirements and standards, see [Internal Operations Framework](/docs/operations/freelancer-management/framework)
 
 **Performance Monitoring Alignment**
 Internal performance tracking supports freelancer success:
@@ -168,7 +168,7 @@ Internal performance tracking supports freelancer success:
 - Communication standards maintain client relationships
 - Professional development drives market competitiveness
 
-For detailed performance tracking procedures, see [Operations Templates](../operations/freelancer-management/templates.md)
+For detailed performance tracking procedures, see [Operations Templates](/docs/operations/freelancer-management/templates)
 
 ### Platform and Technical Integration
 
@@ -254,7 +254,7 @@ Platform capabilities support freelancer business growth:
 **Implementation Status:** Ready for immediate implementation by independent consultants
 **Cross-References:**
 
-- [Business Success Framework](business-framework.md)
-- [Implementation Resources](implementation-resources.md)
-- [Internal Operations Standards](../operations/freelancer-management/framework.md)
-- [Quality Assurance Templates](../operations/freelancer-management/templates.md)
+- [Business Success Framework](/docs/freelancer-support/business-framework)
+- [Implementation Resources](/docs/freelancer-support/implementation-resources)
+- [Internal Operations Standards](/docs/operations/freelancer-management/framework)
+- [Quality Assurance Templates](/docs/operations/freelancer-management/templates)

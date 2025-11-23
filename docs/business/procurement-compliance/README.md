@@ -54,7 +54,7 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 **Related Directories:**
 
-- [Core Business Documents](../core) - Executive business case for procurement justification
+- [Core Business Documents](/docs/business/core) - Executive business case for procurement justification
 - [Implementation Guide](/docs/business/implementation) - Technical implementation requirements
 - [Financial Analysis](/docs/business/financial-analysis) - Cost analysis for procurement planning
 - [Industry Business Cases](/docs/business/industry-business-cases) - Industry-specific compliance requirements

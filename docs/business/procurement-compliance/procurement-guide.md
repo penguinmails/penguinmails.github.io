@@ -165,9 +165,9 @@ This guide is intentionally:
 
 **For Executive Decision Making (Level 2):**
 
-- [🏢 Executive Summary](../core) - Strategic findings and recommendations
-- [💰 ROI Calculator](../core) - Financial justification and cost analysis
-- [🏆 Competitive Analysis](../core) - Provider selection and comparison
+- [🏢 Executive Summary](/docs/business/core) - Strategic findings and recommendations
+- [💰 ROI Calculator](/docs/business/core) - Financial justification and cost analysis
+- [🏆 Competitive Analysis](/docs/business/core) - Provider selection and comparison
 - [🛡️ Security & Compliance](security-compliance) - Risk assessment and compliance overview
 
 **For Procurement & Legal Review (Level 3):**

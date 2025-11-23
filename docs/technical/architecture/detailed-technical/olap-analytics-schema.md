@@ -1258,7 +1258,7 @@ This implementation represents a **significant architectural advancement** that 
 - [Architecture Overview](..) - Strategic foundation and market positioning
 - [Analytics Architecture](.) - PostHog integration and business intelligence
 - [Queue System Implementation](.) - Job processing and reliability
-- [Campaign Management](../../campaigns) - User experience and business operations
-- [Business Analytics](../../business/analytics) - Revenue intelligence and optimization
+- [Campaign Management](/docs/campaigns) - User experience and business operations
+- [Business Analytics](/docs/business/analytics) - Revenue intelligence and optimization
 
 **Keywords**: OLAP, analytics, business intelligence, data warehousing, reporting, analytics schema, campaign analytics, billing analytics, administrative analytics, materialized views, performance optimization, enterprise security

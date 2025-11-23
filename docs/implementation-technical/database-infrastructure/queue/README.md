@@ -14,29 +14,29 @@ This directory contains comprehensive documentation for the PenguinMails Queue S
 
 ### Core Components
 
-- **[Main Guide](main.md)** - Complete overview and strategic alignment
-- **[Architecture](architecture.md)** - System design and component overview
-- **[Database Schema](database-schema.md)** - Job tables, relationships, and indexing
-- **[Management](management.md)** - Redis queues and migrator processes
-- **[Workers](workers.md)** - Background job processing and handlers
-- **[Operations](operations.md)** - Deployment, monitoring, and maintenance
-- **[Best Practices](best-practices.md)** - Performance, reliability, and security guidelines
+- **[Main Guide](main)** - Complete overview and strategic alignment
+- **[Architecture](architecture)** - System design and component overview
+- **[Database Schema](database-schema)** - Job tables, relationships, and indexing
+- **[Management](management)** - Redis queues and migrator processes
+- **[Workers](workers)** - Background job processing and handlers
+- **[Operations](operations)** - Deployment, monitoring, and maintenance
+- **[Best Practices](best-practices)** - Performance, reliability, and security guidelines
 
 ### Visual Documentation
 
-- **[Entity Relationship Diagram](mermaid-er.md)** - Database schema visualization
+- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
 
 ## Quick Navigation
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Main Guide](main.md) | Strategic overview and implementation summary | All stakeholders |
-| [Architecture](architecture.md) | System design principles and components | Technical architects |
-| [Database Schema](database-schema.md) | Database design and optimization | Database architects |
-| [Management](management.md) | Redis configuration and job migration | System engineers |
-| [Workers](workers.md) | Job processing logic and error handling | Backend engineers |
-| [Operations](operations.md) | Deployment and monitoring procedures | DevOps engineers |
-| [Best Practices](best-practices.md) | Guidelines and recommendations | Engineering teams |
+| [Main Guide](main) | Strategic overview and implementation summary | All stakeholders |
+| [Architecture](architecture) | System design principles and components | Technical architects |
+| [Database Schema](database-schema) | Database design and optimization | Database architects |
+| [Management](management) | Redis configuration and job migration | System engineers |
+| [Workers](workers) | Job processing logic and error handling | Backend engineers |
+| [Operations](operations) | Deployment and monitoring procedures | DevOps engineers |
+| [Best Practices](best-practices) | Guidelines and recommendations | Engineering teams |
 
 ## Key Concepts
 
@@ -57,10 +57,10 @@ This directory contains comprehensive documentation for the PenguinMails Queue S
 
 ## Getting Started
 
-1. Start with the [Main Guide](main.md) for a complete overview
-2. Review [Architecture](architecture.md) for system design understanding
+1. Start with the [Main Guide](main) for a complete overview
+2. Review [Architecture](architecture) for system design understanding
 3. Consult specific component docs for detailed implementation guidance
-4. Follow [Best Practices](best-practices.md) for production deployment
+4. Follow [Best Practices](best-practices) for production deployment
 
 ## Integration
 

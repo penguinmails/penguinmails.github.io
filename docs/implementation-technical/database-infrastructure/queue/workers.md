@@ -5,9 +5,9 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Backend Engineers"
 related_docs:
-  - "[Main Guide](main.md) - Complete overview"
-  - "[Architecture](architecture.md) - System design principles"
-  - "[Management](management.md) - Redis and migrator details"
+  - "[Main Guide](main) - Complete overview"
+  - "[Architecture](architecture) - System design principles"
+  - "[Management](management) - Redis and migrator details"
 ---
 
 # Worker Processes

@@ -302,7 +302,7 @@ SaaS organizations require specialized customer success approaches focused on su
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 - [SaaS Marketing Framework](/docs/business/marketing/industry-cases)
-- [Cross-Domain Integration](../cross-domain-integration/overview
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview
 
 ---
 

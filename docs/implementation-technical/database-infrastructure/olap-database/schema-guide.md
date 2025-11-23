@@ -279,7 +279,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 
 See ER diagram:
 
-- [`mermaid-er.md`](mermaid-er.md)
+- [`mermaid-er`](mermaid-er)
 
 Key relationships:
 

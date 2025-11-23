@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 The UI Library defines **high-level patterns**, **tech stack recommendations**, and **component requirements** for building PenguinMails. This is a planning document that specifies **what** we need and **how** it should work, using general ideas rather than explicit implementation code.
 
-> **Note**: For detailed component specifications (props, token usage, accessibility), see [Component Library](./component-library.md).
+> **Note**: For detailed component specifications (props, token usage, accessibility), see [Component Library](/docs/design/component-library).
 
 ---
 
@@ -1130,11 +1130,11 @@ eventSource.onmessage = (event) => {
 
 ## 📚 Related Documents
 
-- [Component Library](./component-library.md) - Detailed component specifications
-- [Design System](./design-system.md) - Core design principles
-- [Design Tokens](./design-tokens.md) - Color, spacing, typography values
-- [Accessibility Guidelines](./accessibility-guidelines.md) - WCAG compliance standards
-- [Analytics Views](./analytics-views.md) - Dashboard and view specifications
+- [Component Library](/docs/design/component-library) - Detailed component specifications
+- [Design System](/docs/design/design-system) - Core design principles
+- [Design Tokens](/docs/design/design-tokens) - Color, spacing, typography values
+- [Accessibility Guidelines](/docs/design/accessibility-guidelines) - WCAG compliance standards
+- [Analytics Views](/docs/design/analytics-views) - Dashboard and view specifications
 
 ---
 

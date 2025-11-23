@@ -4,7 +4,7 @@
 
 * **Goal**: Enable users to create, manage, and analyze cold email campaigns.
 * **Feature References**:
-  * [Campaign Management](../../core-features/analytics/overview.md) (Analytics integration)
+  * [Campaign Management](/docs/core-features/analytics/overview) (Analytics integration)
 * **User Journey**: Core loop: Create Campaign -> Configure -> Launch -> Monitor -> Optimize.
 
 ## 2. UI Patterns & Components (The "How")
@@ -16,7 +16,7 @@
 * **Analytics Patterns**:
   * `DataCard`: For campaign summary stats (Sent, Open Rate, Reply Rate).
   * `LineChart`: For engagement over time.
-  * See [Analytics UI Patterns](../analytics-ui-patterns.md).
+  * See [Analytics UI Patterns](/docs/design/analytics-ui-patterns).
 * **Layout**: Workspace Context.
 
 ## 3. Route Specifications
@@ -42,7 +42,7 @@
   * **Filter Dropdown**: Status (Active, Paused, Completed, Draft).
   * **Search Bar**: Search by campaign name.
 
-* **Data Table** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-tables)):
+* **Data Table** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-tables)):
   * **Columns**: Name, Status, Sent, Open Rate, Reply Rate, Created Date, Actions.
   * **Status Badge**: Color-coded (Green=Active, Yellow=Paused, Gray=Draft).
   * **Sortable Headers**: Click to sort by any column.
@@ -55,8 +55,8 @@
 
 **Related Documentation**:
 
-* [Campaign Management](../../core-features/analytics/overview.md)
-* [DataTable Component](../ui-library.md#data-tables)
+* [Campaign Management](/docs/core-features/analytics/overview)
+* [DataTable Component](/docs/design/ui-library#data-tables)
 
 **Technical Integration**:
 
@@ -98,8 +98,8 @@
 
 **Related Documentation**:
 
-* [Campaign Setup Best Practices](../../core-features/analytics/overview.md)
-* [Wizard Pattern](../ui-library.md#wizards)
+* [Campaign Setup Best Practices](/docs/core-features/analytics/overview)
+* [Wizard Pattern](/docs/design/ui-library#wizards)
 
 **Technical Integration**:
 
@@ -114,7 +114,7 @@
 
 **What You'll Find**:
 
-* **Headline Metrics Row** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-cards)):
+* **Headline Metrics Row** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards)):
   * **DataCards**: Sent, Opened (%), Clicked (%), Replied (%).
   * **Trend Indicators**: ↑ 12% vs. last 7 days.
 
@@ -134,8 +134,8 @@
 
 **Related Documentation**:
 
-* [Analytics Views Architecture](../../core-features/analytics/views-architecture.md)
-* [Campaign Analytics](../../core-features/analytics/overview.md)
+* [Analytics Views Architecture](/docs/core-features/analytics/views-architecture)
+* [Campaign Analytics](/docs/core-features/analytics/overview)
 
 **Technical Integration**:
 
@@ -164,7 +164,7 @@
 
 **Related Documentation**:
 
-* [Campaign Management](../../core-features/analytics/overview.md)
+* [Campaign Management](/docs/core-features/analytics/overview)
 
 **Technical Integration**:
 
@@ -191,8 +191,8 @@
 
 **Related Documentation**:
 
-* [Warm-ups](../../core-features/warm-ups/overview.md)
-* [Inbox Rotation](../../core-features/inbox-rotation/overview.md)
+* [Warm-ups](/docs/core-features/warm-ups/overview)
+* [Inbox Rotation](/docs/core-features/inbox-rotation/overview)
 
 **Technical Integration**:
 
@@ -202,10 +202,10 @@
 
 | Route | Related API | Description |
 |---|---|---|
-| `/campaigns` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `GET /api/v1/tenant/campaigns` (List), `POST` (Create). |
-| `/campaigns/[id]` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `GET /api/v1/tenant/campaigns/{id}` (Details & Analytics). |
-| `/campaigns/[id]/edit` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `PATCH /api/v1/tenant/campaigns/{id}` (Update). |
-| `/campaigns/[id]/settings` | [Campaigns API](../../implementation-technical/api/tenant-api/campaigns.md) | `PATCH /api/v1/tenant/campaigns/{id}/config`. |
+| `/campaigns` | [Campaigns API](/docs/implementation-technical/api/tenant-api/campaigns) | `GET /api/v1/tenant/campaigns` (List), `POST` (Create). |
+| `/campaigns/[id]` | [Campaigns API](/docs/implementation-technical/api/tenant-api/campaigns) | `GET /api/v1/tenant/campaigns/{id}` (Details & Analytics). |
+| `/campaigns/[id]/edit` | [Campaigns API](/docs/implementation-technical/api/tenant-api/campaigns) | `PATCH /api/v1/tenant/campaigns/{id}` (Update). |
+| `/campaigns/[id]/settings` | [Campaigns API](/docs/implementation-technical/api/tenant-api/campaigns) | `PATCH /api/v1/tenant/campaigns/{id}/config`. |
 
 ## 6. Data Strategy
 

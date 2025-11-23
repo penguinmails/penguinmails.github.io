@@ -195,9 +195,9 @@ Global compliance and privacy frameworks:
 
 ## Integration Points
 
-- **Core Features**: [Feature Documentation](../core-features)
-- **Business Context**: [Business Documentation](../business)
-- **Technical Implementation**: [Technical Documentation](../technical)
+- **Core Features**: [Feature Documentation](/docs/core-features)
+- **Business Context**: [Business Documentation](/docs/business)
+- **Technical Implementation**: [Technical Documentation](/docs/technical)
 - **User Journeys**: [User Journey Documentation](/docs/user-journeys)
 
 ---

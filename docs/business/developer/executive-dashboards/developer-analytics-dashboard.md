@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Analytics Teams, Developer Leadership, Executive Analytics Management
 **Business Impact Priority**: High - Real-time developer analytics and performance insights responsibility
-**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) | [Executive Analytics Framework](../executive-analytics/framework
+**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) | [Executive Analytics Framework](/docs/business/executive/analytics/framework
 
 ## Executive Summary
 
@@ -183,7 +183,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Achievement prediction systems activated and validated
 - Predictive insights validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](../executive-predictive-analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](/docs/business/executive/predictive-analytics)
 
 #### Analytics Point 2.2.2: Engagement Analytics Dashboards
 
@@ -245,7 +245,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 - Achievement forecasting systems activated and validated
 - Probability analytics validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](../executive-predictive-analytics)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Executive Predictive Analytics](/docs/business/executive/predictive-analytics)
 
 #### Measurement Point 3.1.3: Developer Performance Optimization Intelligence
 

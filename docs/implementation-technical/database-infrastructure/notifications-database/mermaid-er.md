@@ -7,7 +7,7 @@ persona: "Documentation Users"
 
 This diagram visualizes the dedicated Notifications & System Events database as defined in:
 
-- [`schema-guide.md`](schema-guide.md)
+- [`schema-guide`](schema-guide)
 
 It is an operational tier:
 

@@ -161,17 +161,17 @@ This technical documentation integrates with:
 
 ### 📚 **Technical Documentation**
 
-- [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic business decisions
-- [Security Framework](/docs/compliance-security/enterprise)) - Security architecture
-- [Analytics Performance](../operations-analytics/analytics-performance)) - Performance monitoring
-- [Operations Management](/docs/business/operations/strategy/framework)) - Operational procedures
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business decisions
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
+- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
+- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
 
 ### 🔧 **Implementation Guides**
 
-- [Architecture System](./architecture-system)) - Detailed system architecture
-- [Development Guidelines](./development-guidelines)) - Development standards
-- [Database Infrastructure](./database-infrastructure)) - Database management
-- [Quality Assurance](./quality-assurance)) - Testing protocols
+- [Architecture System](/docs/implementation-technical/architecture-system) - Detailed system architecture
+- [Development Guidelines](/docs/implementation-technical/development-guidelines) - Development standards
+- [Database Infrastructure](/docs/implementation-technical/database-infrastructure) - Database management
+- [Quality Assurance](/docs/implementation-technical/quality-assurance) - Testing protocols
 
 ---
 

@@ -4,7 +4,7 @@
 
 - **Goal**: Centralized management of all contacts/leads across the tenant's account, regardless of which workspace they belong to.
 - **Feature References**:
-  - [Lead Management](../../core-features/analytics/overview.md) (Segmentation)
+  - [Lead Management](/docs/core-features/analytics/overview) (Segmentation)
 - **User Journey**: Import leads → Segment them → Assign to Campaigns.
 
 ## 2. UI Patterns & Components (The "How")
@@ -45,7 +45,7 @@
     - Logic: AND/OR operators.
     - **Save as Segment** button.
 
-- **Data Table** (see [Analytics UI Patterns](../analytics-ui-patterns.md#data-tables)):
+- **Data Table** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-tables)):
   - **Columns**: Name, Email, Company, Status, Last Contact, Tags, Actions.
   - **Status Icons**: ✅ Active, 📧 Sent, 👁️ Opened, 💬 Replied, ⚠️ Bounced.
   - **Checkbox Column**: Select for bulk actions.
@@ -60,8 +60,8 @@
 
 **Related Documentation**:
 
-- [Segmentation Strategy](../../business/marketing/overview.md)
-- [DataTable Component](../ui-library.md#data-tables)
+- [Segmentation Strategy](/docs/business/marketing/overview)
+- [DataTable Component](/docs/design/ui-library#data-tables)
 
 **Technical Integration**:
 
@@ -107,8 +107,8 @@
 
 **Related Documentation**:
 
-- [CRM Integration](../../technical/integrations/crm-sync.md)
-- [SlideOver Component](../ui-library.md#overlays)
+- [CRM Integration](/docs/technical/integrations/crm-sync)
+- [SlideOver Component](/docs/design/ui-library#overlays)
 
 **Technical Integration**:
 
@@ -143,8 +143,8 @@
 
 **Related Documentation**:
 
-- [Segmentation Best Practices](../../business/marketing/overview.md)
-- [Filter Builder Component](../ui-library.md#filters)
+- [Segmentation Best Practices](/docs/business/marketing/overview)
+- [Filter Builder Component](/docs/design/ui-library#filters)
 
 **Technical Integration**:
 
@@ -180,8 +180,8 @@
 
 **Related Documentation**:
 
-- [Lead Import Guide](../../freelancer-support/tutorials/lead-import.md)
-- [CSV Format Requirements](../../technical/data-formats/csv-specs.md)
+- [Lead Import Guide](/docs/freelancer-support/tutorials/lead-import)
+- [CSV Format Requirements](/docs/technical/data-formats/csv-specs)
 
 **Technical Integration**:
 
@@ -193,10 +193,10 @@
 
 | Route | Related API | Description |
 |---|---|---|
-| `/leads` | [Leads API](../../implementation-technical/api/tenant-api/leads.md) | `GET /api/v1/tenant/leads` (List with filters), `POST` (Create). |
-| `/leads/[id]` | [Leads API](../../implementation-technical/api/tenant-api/leads.md) | `GET /api/v1/tenant/leads/{id}` (Details & Activity). |
-| `/leads/segments` | [Leads API](../../implementation-technical/api/tenant-api/leads.md) | `GET /api/v1/tenant/leads/segments`. |
-| `/leads/import` | [Leads API](../../implementation-technical/api/tenant-api/leads.md) | `POST /api/v1/tenant/leads/import` (Bulk Import). |
+| `/leads` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `GET /api/v1/tenant/leads` (List with filters), `POST` (Create). |
+| `/leads/[id]` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `GET /api/v1/tenant/leads/{id}` (Details & Activity). |
+| `/leads/segments` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `GET /api/v1/tenant/leads/segments`. |
+| `/leads/import` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `POST /api/v1/tenant/leads/import` (Bulk Import). |
 
 ## 6. Data Strategy
 

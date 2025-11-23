@@ -5,13 +5,13 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 related_docs:
-  - "[Architecture](architecture.md) - Hybrid PostgreSQL + Redis design"
-  - "[Database Schema](database-schema.md) - Job tables and indexes"
-  - "[Management](management.md) - Redis queues and migrator process"
-  - "[Workers](workers.md) - Background job processing"
-  - "[Operations](operations.md) - Deployment and health monitoring"
-  - "[Best Practices](best-practices.md) - Performance and reliability guidelines"
-  - "[Entity Relationship Diagram](mermaid-er.md) - Database schema visualization"
+  - "[Architecture](architecture) - Hybrid PostgreSQL + Redis design"
+  - "[Database Schema](database-schema) - Job tables and indexes"
+  - "[Management](management) - Redis queues and migrator process"
+  - "[Workers](workers) - Background job processing"
+  - "[Operations](operations) - Deployment and health monitoring"
+  - "[Best Practices](best-practices) - Performance and reliability guidelines"
+  - "[Entity Relationship Diagram](mermaid-er) - Database schema visualization"
 ---
 
 # Queue System Implementation Guide
@@ -110,7 +110,7 @@ The PostgreSQL component provides:
 - ACID compliance for job state consistency
 - Integration with analytics and reporting systems
 
-**See detailed documentation**: [Database Schema](database-schema.md)
+**See detailed documentation**: [Database Schema](database-schema)
 
 ### 2. Redis Queue Structure (Fast Processing)
 
@@ -121,7 +121,7 @@ The Redis component provides:
 - Real-time job tracking and monitoring
 - Horizontal scaling capabilities
 
-**See detailed documentation**: [Management](management.md)
+**See detailed documentation**: [Management](management)
 
 ### 3. Queuer Process Implementation
 
@@ -132,7 +132,7 @@ The migrator service handles:
 - Batch processing for efficiency
 - Error handling and retry logic
 
-**See detailed documentation**: [Management](management.md)
+**See detailed documentation**: [Management](management)
 
 ### 4. Worker Server Implementation
 
@@ -143,7 +143,7 @@ Worker processes provide:
 - Automatic retry with exponential backoff
 - Dead letter queue management
 
-**See detailed documentation**: [Workers](workers.md)
+**See detailed documentation**: [Workers](workers)
 
 ---
 
@@ -156,7 +156,7 @@ Worker processes provide:
 - **Worker Servers**: Scalable background processing
 - **Health Monitoring**: Real-time system health tracking
 
-**See detailed documentation**: [Operations](operations.md)
+**See detailed documentation**: [Operations](operations)
 
 ---
 
@@ -183,7 +183,7 @@ Worker processes provide:
 - Data encryption strategies
 - Comprehensive audit logging
 
-**See detailed documentation**: [Best Practices](best-practices.md)
+**See detailed documentation**: [Best Practices](best-practices)
 
 ---
 
@@ -247,8 +247,8 @@ For detailed implementation guidance, refer to the specific component documentat
 
 **Related Documents:**
 
-- [Database Schema](database-schema.md) - Complete database schema with queue tables
-- [Operations](operations.md) - Infrastructure setup and deployment
-- [Entity Relationship Diagram](mermaid-er.md) - Visual database schema
+- [Database Schema](database-schema) - Complete database schema with queue tables
+- [Operations](operations) - Infrastructure setup and deployment
+- [Entity Relationship Diagram](mermaid-er) - Visual database schema
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, asynchronous processing
