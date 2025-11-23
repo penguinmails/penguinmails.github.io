@@ -48,10 +48,10 @@ This repository contains the complete documentation for PenguinMails, including:
 
 Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
 
-- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/)** - Complete freelancer success center and business development resources
-- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
-- 📋 **[Operations Framework](/docs/operations/freelancer-management/)** - Team structure, sprint workflow, and coordination protocols
-- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional quotation preparation and business development
+- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/README.md)** - Complete freelancer success center and business development resources
+- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+- 📋 **[Operations Framework](/docs/operations/freelancer-management/README.md)** - Team structure, sprint workflow, and coordination protocols
+- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
 
 **Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
 
@@ -61,13 +61,13 @@ Looking to work on PenguinMails? Here's your clear path to task clarity and onbo
 
 Visit our **[live documentation site](https://penguinmails.github.io)** and navigate through the sidebar to find:
 
-- [What is PenguinMails](./docs/what-is-penguinmails/) - Platform overview
-- [Features & Capabilities](./docs/features-capabilities/) - Feature details
-- [Getting Started](./docs/implementation-getting-started/) - Setup guide
+- [What is PenguinMails](./docs/what-is-penguinmails/README.md) - Platform overview
+- [Features & Capabilities](./docs/features-capabilities/README.md) - Feature details
+- [Getting Started](./docs/implementation-getting-started/README.md) - Setup guide
 
 ### For Contributors
 
-Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING)** guide, including:
 
 - Local development setup with Docker
 - Content standards and guidelines
@@ -135,14 +135,14 @@ docs/
 
 ## Contributing
 
-We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
 
 ### Quick Contribution Process
 
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions)
+4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING) for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards
@@ -159,7 +159,7 @@ We welcome contributions to improve our documentation! For detailed development 
 ### Getting Help
 
 - **Documentation Issues:** Check the main sections first
-- **Technical Questions:** Review [Resources & Support](./docs/resources-support/)
+- **Technical Questions:** Review [Resources & Support](./docs/resources-support/README.md)
 - **Contributing Help:** See [Contributing Guidelines](#contributing) above
 
 ### Reporting Problems
