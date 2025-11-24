@@ -47,7 +47,7 @@
 
 - **Data Table** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-tables)):
   - **Columns**: Name, Email, Company, Status, Last Contact, Tags, Actions.
-  - **Status Icons**: ✅ Active, 📧 Sent, 👁️ Opened, 💬 Replied, ⚠️ Bounced.
+  - **Status Icons**: Active, Sent, Opened, Replied, Bounced.
   - **Checkbox Column**: Select for bulk actions.
   - **Pagination**: Server-side, 50 leads/page.
 
@@ -88,10 +88,10 @@
 
 - **Activity Timeline** (Vertical, Chronological):
   - Icons for each event type:
-    - 📧 Email Sent (from Campaign X).
-    - 👁️ Email Opened (timestamp).
-    - 🖱️ Link Clicked (which link).
-    - 💬 Replied (shows reply preview).
+    - Email Sent (from Campaign X).
+    - Email Opened (timestamp).
+    - Link Clicked (which link).
+    - Replied (shows reply preview).
   - **"View Full Email"** expandable.
 
 - **Custom Fields Section**:

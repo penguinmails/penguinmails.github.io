@@ -186,10 +186,10 @@
 **What You'll Find**:
 
 * **Service Status Grid**:
-  * API: ✅ Operational
-  * SMTP Service: ✅ Operational
-  * Dashboard: ✅ Operational
-  * Unified Inbox: ⚠️ Degraded Performance
+  * API: Operational
+  * SMTP Service: Operational
+  * Dashboard: Operational
+  * Unified Inbox: Degraded Performance
 * **Incident History**: Last 7 days of incidents (if any).
 * **Metrics**: API Latency (avg. 150ms), Uptime (99.9%).
 
