@@ -128,7 +128,7 @@ This comprehensive guide is designed to help independent consultants build succe
 - **Level 1**: Strategic overview and getting started guides (This document)
 - **Level 2**: [Business Success Framework](/docs/freelancer-support/business-framework) - Strategy and platform optimization
 - **Level 3**: [Implementation Resources](/docs/freelancer-support/implementation-resources) - Tools and detailed guidance
-- **Specialized**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional quotation preparation with Google Docs template
+- **Quotation Guide**: [Professional Quotation Template](/docs/freelancer-support/quotation-guide) - Professional quotation preparation with Google Docs template
 
 ### 🎯 **Contextual Navigation by Reading Section**
 
@@ -280,4 +280,4 @@ We use relative estimation, comparing new tasks to known examples:
 **Business Value:** Comprehensive freelancer success framework enabling independent consultants to build thriving email marketing practices
 **Implementation Status:** Ready for freelancer onboarding and business development
 **Audience:** Independent consultants, freelancers, and email marketing specialists
-**Next Steps:** Review [Business Success Framework](business-framework) for detailed strategy and implementation guidance
+**Next Steps:** Review [Business Success Framework](/docs/freelancer-support/business-framework) for detailed strategy and implementation guidance

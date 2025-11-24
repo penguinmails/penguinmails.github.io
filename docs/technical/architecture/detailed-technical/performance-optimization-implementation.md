@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🧪 A/B Testing Framework
+## A/B Testing Framework
 
 ### Subject Line Optimization
 
@@ -153,11 +153,11 @@ class SubjectLineOptimizer {
     };
   }
 }
-```markdown
+```
 
 ---
 
-## 📊 Email Content Personalization
+## Email Content Personalization
 
 ### Dynamic Content Engine
 
@@ -284,11 +284,11 @@ class EmailPersonalizationEngine {
     return email.replace(/\[.*?\]);
   }
 }
-```markdown
+```
 
 ---
 
-## 📈 Performance Analytics
+## Performance Analytics
 
 ### Email Performance Monitor
 
@@ -464,11 +464,11 @@ class PerformanceAnalytics {
     return recommendations;
   }
 }
-```markdown
+```
 
 ---
 
-## 📋 Business Context and Impact
+## Business Context and Impact
 
 **Related Business Documentation**:
 - [Performance Overview](performance-overview:1) - Executive performance benchmarks and strategic goals
