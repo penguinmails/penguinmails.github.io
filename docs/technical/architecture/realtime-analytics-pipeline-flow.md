@@ -96,7 +96,7 @@ flowchart LR
     class EVENT_STORE,AGGREGATOR,CACHE storage
     class ETL,ML,REPORT analytics
     class DASHBOARD,ALERTS,API output
-```markdown
+```
 
 ## Analytics Pipeline Stages
 

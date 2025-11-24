@@ -133,7 +133,203 @@ docs/
 | [Analytics](./docs/analytics/) | Business intelligence and metrics | Product & Business Teams |
 | [Development](./docs/development/) | Code standards and best practices | Developers & Engineering Teams |
 
-## Contributing
+---
+
+## 📐 Documentation Architecture & File Relationships
+
+### Core Documentation Goals
+
+Our documentation is organized around **6 primary goals** that drive implementation:
+
+1. **📅 Roadmap** - What to build and when
+2. **✨ Features** - Approved features vs features to approve
+3. **🖥️ Frontend View Specs** - What the UI looks like (`docs/design/routes/`)
+4. **🔌 API Design** - What the backend provides (`docs/implementation-technical/api/`)
+5. **🧭 User Journeys** - How users accomplish their goals
+6. **📋 Tasks** - Actionable implementation work items (`/tasks/`)
+
+All other documentation exists to **support, inform, or provide context** for these 6 core outputs.
+
+### Documentation Flow: From Strategy to Implementation
+
+Our documentation follows a clear pipeline from planning to execution:
+
+```text
+┌─────────────────────┐
+│   ROADMAP           │  What to build and when
+│   (Product Vision)  │
+└──────────┬──────────┘
+           │
+           ↓
+┌─────────────────────┐
+│   FEATURES          │  Detailed feature specs
+│   (Approved/Review) │  ← Links to user journeys
+└──────────┬──────────┘
+           │
+           ├──────────────────────┐
+           ↓                      ↓
+┌──────────────────┐   ┌──────────────────┐
+│  FRONTEND SPECS  │   │   API DESIGN     │
+│  (View Routes)   │   │   (Endpoints)    │
+└────────┬─────────┘   └────────┬─────────┘
+         │                      │
+         └──────────┬───────────┘
+                    ↓
+         ┌──────────────────┐
+         │   TASKS          │  Implementation work items
+         │   (Actionable)   │
+         └──────────────────┘
+                    ↓
+         ┌──────────────────┐
+         │   IMPLEMENTATION │
+         └──────────────────┘
+```
+
+### Reader Journeys by Persona
+
+#### 🎯 Business Leader / Product Manager
+
+**Goal**: Understand what's being built and when
+
+```text
+index.md → Planning & Roadmap
+  ├─ Product Roadmap ────────→ Feature timeline
+  ├─ Features Overview ──────→ Feature catalog (with status fields)
+  └─ User Journeys ──────────→ Customer workflows
+```
+
+**Key Files**:
+
+- `docs/roadmap-considerations.md` - Development philosophy and timeline
+- `docs/business/feature-taxonomy-and-roadmap.md` - Feature classification
+- `docs/feature-overview.md` - Feature catalog
+- `user-journeys/*.md` - Customer workflow maps
+
+#### 🏗️ Technical Lead / Architect
+
+**Goal**: Understand technical implementation and architecture
+
+```text
+index.md → Technical Teams
+  ├─ Technical Roadmap ───────→ Infrastructure milestones
+  ├─ Frontend Specs ──────────→ View routes and UI components
+  ├─ API Design ──────────────→ Backend endpoints and schemas
+  └─ Architecture ────────────→ System design
+```
+
+**Key Files**:
+
+- `docs/design/frontend-routing-map.md` - Master view registry
+- `docs/design/routes/*.md` - Individual view specifications
+- `docs/implementation-technical/api/README.md` - API architecture
+- `docs/implementation-technical/api/**/*.md` - Endpoint specifications
+
+#### 👨‍💻 Developer / Contributor
+
+**Goal**: Find tasks and implementation specifications
+
+```text
+index.md → Developers
+  ├─ Active Tasks ────────────→ Current development work
+  │   └─ Each task links to:
+  │       ├─ Feature spec
+  │       ├─ Frontend spec (docs/design/routes/*.md)
+  │       ├─ API spec (docs/implementation-technical/api/**/*.md)
+  │       └─ User journey
+  │
+  ├─ Frontend Specs ──────────→ What to build (UI)
+  ├─ API Docs ────────────────→ What to build (Backend)
+  └─ Features ────────────────→ Why we're building it
+```
+
+**Key Files**:
+
+- `tasks/**/*.md` - Active implementation tasks (with status fields)
+- `docs/design/routes/*.md` - Frontend view specifications
+- `docs/implementation-technical/api/**/*.md` - API specifications
+- `docs/features/*.md` - Feature requirements (planned migration)
+
+#### 📊 Marketing / Operations
+
+**Goal**: Understand customer workflows and available features
+
+```text
+index.md → Marketing & Operations
+  ├─ User Journeys ───────────→ Customer workflows
+  ├─ Features ────────────────→ Available capabilities
+  └─ Analytics ───────────────→ Performance monitoring
+```
+
+**Key Files**:
+
+- `user-journeys/*.md` - Customer workflow maps
+- `docs/feature-overview.md` - Feature capabilities
+- `docs/operations-analytics/**/*.md` - Analytics documentation
+
+### File Relationship Principles
+
+#### Cross-Linking Strategy
+
+Every major document includes a **"Related Documentation"** section linking to:
+
+- **Planning Docs** - Roadmap, features, user journeys (the "why")
+- **Specification Docs** - Frontend specs, API specs (the "what")
+- **Implementation Docs** - Tasks, code (the "how")
+
+#### Status-Based Organization
+
+Rather than organizing files by status into separate folders, we use **frontmatter fields**:
+
+```yaml
+---
+status: APPROVED | IN_REVIEW | BACKLOG | DRAFT | IMPLEMENTED
+priority: HIGH | MEDIUM | LOW
+roadmap_milestone: Q4_2025
+---
+```
+
+This allows:
+
+- ✅ Flat directory structure (easier navigation)
+- ✅ Flexible status changes (no file moves)
+- ✅ Programmatic filtering by status
+- ✅ Clear metadata in each document
+
+#### Progressive Disclosure
+
+Documentation is organized in 3 levels:
+
+1. **Hub Pages** (`README.md` in major directories) - Overview + navigation
+2. **Master Registry** (e.g., `frontend-routing-map.md`) - Complete index
+3. **Detail Pages** (e.g., `routes/workspace-management.md`) - Specific documentation
+
+### Navigation Breadcrumbs
+
+```text
+index.md → [Role Section] → [Hub Page] → [Detail Page]
+
+Example for Developer:
+index.md 
+  → Developers Section 
+    → Active Tasks 
+      → Frontend Tasks 
+        → auth-views.md
+          ├─ Links to: features/authentication.md
+          ├─ Links to: design/routes/public-auth.md
+          └─ Links to: api/tenant-api/auth.md
+```
+
+### Supporting Documentation
+
+All other directories support these core goals:
+
+- **`docs/business/`** - Business context and ROI analysis
+- **`docs/compliance-security/`** - Compliance requirements
+- **`docs/operations/`** - Operations playbooks
+- **`docs/technical/`** - Technical deep-dives
+- **`docs/developers/`** - Developer onboarding
+
+---## Contributing
 
 We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
 

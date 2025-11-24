@@ -60,7 +60,7 @@ Investment: $X,XXX per month
 
 **Service Description:**
 
-```markdown
+```
 "Strategic Email Marketing Growth"
 Ideal for: Established businesses ready to scale their email marketing
 

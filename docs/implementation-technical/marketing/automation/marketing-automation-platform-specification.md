@@ -44,7 +44,7 @@ This technical specification defines the implementation architecture for marketi
   "nodes": [{"id": "string", "type": "action|condition|delay", "config": {}}],
   "errorHandling": {"retryPolicy": "exponential|linear|none", "maxRetries": "number"}
 }
-```markdown
+```
 
 ### API Endpoints
 
@@ -63,7 +63,7 @@ const emailIntegration = {
   endpoints: { sendEmail: '/v3/mail/send', createList: '/v3/lists' },
   auth: 'apiKey|bearer', rateLimits: { requestsPerMinute: 600, burstLimit: 1000 }
 };
-```markdown
+```
 
 **CRM Integration:**
 ```javascript
@@ -73,7 +73,7 @@ const crmIntegration = {
   conflictResolution: 'last-write-wins|source-priority',
   dataMapping: { contactFields: {}, activityTypes: {} }
 };
-```markdown
+```
 
 ---
 

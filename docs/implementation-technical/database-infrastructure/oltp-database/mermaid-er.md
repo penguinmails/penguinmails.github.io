@@ -441,5 +441,5 @@ erDiagram
 
   users ||--o{ feature_flags : "updated by"
   users ||--o{ system_config : "updated by"
-```markdown
+```
 ---

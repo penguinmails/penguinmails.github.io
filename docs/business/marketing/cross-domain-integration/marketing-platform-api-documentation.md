@@ -631,7 +631,7 @@ GET /api/v1/integrations/usage
 
 ## SDKs and Client Libraries
 
-### JavaScript/Node.js SDK
+### JavaScript/TypeScript SDK
 
 **Installation:**
 ```bash
@@ -640,7 +640,7 @@ npm install @marketing-platform/sdk
 
 **Usage:**
 ```javascript
-const { MarketingPlatform } = require('@marketing-platform);
+import { MarketingPlatform } from '@marketing-platform/sdk';
 
 const client = new MarketingPlatform({
   apiKey: 'pk_live_your_api_key',
@@ -651,71 +651,51 @@ const client = new MarketingPlatform({
 const campaign = await client.campaigns.create({
   name: 'Q1 Launch Campaign',
   type: 'email_marketing',
-  target_audience: {
+  targetAudience: {
     segments: ['enterprise_customers']
   }
 });
 
 // Track conversion
 await client.analytics.trackConversion({
-  campaign_id: campaign.id,
-  recipient_id: 'recipient_123',
+  campaignId: campaign.id,
+  recipientId: 'recipient_123',
   revenue: 299.99
 });
-```markdown
+```
 
-### Python SDK
+**CSS Integration for Email Templates:**
+```css
+/* Marketing Platform Email Template Styles */
+.email-template {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 
-**Installation:**
-```bash
-pip install marketing-platform-sdk
-```markdown
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
 
-**Usage:**
-```python
-from marketing_platform import MarketingPlatform
+.content {
+  padding: 30px 20px;
+  background: #ffffff;
+}
 
-client = MarketingPlatform(
-    api_key='pk_live_your_api_key',
-    environment='production'
-)
-
-# Create campaign
-campaign = client.campaigns.create(
-    name='Q1 Launch Campaign',
-    type='email_marketing',
-    target_audience={'segments': ['enterprise_customers']}
-)
-
-# Get analytics
-analytics = client.analytics.get_campaign_performance(campaign.id)
-```markdown
-
-### PHP SDK
-
-**Installation:**
-```bash
-composer require marketing-platform/sdk
-```markdown
-
-**Usage:**
-```php
-use MarketingPlatform\SDK\Client;
-
-$client = new Client([
-    'api_key' => 'pk_live_your_api_key',
-    'environment' => 'production'
-]);
-
-// Create campaign
-$campaign = $client->campaigns()->create([
-    'name' => 'Q1 Launch Campaign',
-    'type' => 'email_marketing',
-    'target_audience' => [
-        'segments' => ['enterprise_customers']
-    ]
-]);
-```markdown
+.cta-button {
+  display: inline-block;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+```
 
 ---
 

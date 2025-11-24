@@ -69,7 +69,7 @@ Our queue system implements a **dual-layer architecture** that combines the **du
                         │   Worker Proc   │
                         │   (Consumer)    │
                         └─────────────────┘
-```markdown
+```
 
 ### Database Tier Integration
 
@@ -99,7 +99,7 @@ Monitoring Layer (Operational Excellence):
 ├── QueueHealthMonitor (real-time system health)
 ├── DeadLetterHandler (failed job recovery)
 └── PerformanceMetrics (SLA tracking)
-```markdown
+```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **dual-layer processing**, **automatic failover**, and **comprehensive monitoring** systems that detect and resolve issues before they impact customers.
 
@@ -165,7 +165,7 @@ CREATE TABLE analytics_jobs ()
     error_message TEXT,
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### Performance Indexes
 
@@ -184,7 +184,7 @@ WHERE status = 'queued';
 CREATE INDEX idx_jobs_status_timestamps ON jobs(status, updated_at, queue_name);
 CREATE INDEX idx_job_logs_worker ON job_logs(job_id, attempt_number, finished_at);
 CREATE INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_at);
-```markdown
+```
 
 ### 2. Redis Queue Structure (Fast Processing)
 
@@ -209,7 +209,7 @@ const QueueNames = {
   BOUNCE_PROCESSING: 'queue:bounce:process',
   WEBHOOK_PROCESSING: 'queue:webhook:process'
 } as const;
-```markdown
+```
 
 #### Redis Data Structures
 
@@ -240,7 +240,7 @@ const exampleJob = {
   attempt_count: 0,
   max_attempts: 3
 };
-```markdown
+```
 
 **B. Hashes (Job Metadata)**
 ```typescript
@@ -253,7 +253,7 @@ interface JobMetadata {
   last_error?: string;           // Error message if failed
   attempt_count: number;         // Current attempt number
 }
-```markdown
+```
 
 ---
 
@@ -379,7 +379,7 @@ export class JobMigrator {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
-```markdown
+```
 
 ### 4. Worker Server Implementation
 
@@ -668,7 +668,7 @@ export class EmailWorker {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
 }
-```markdown
+```
 
 ---
 
@@ -730,7 +730,7 @@ services:
 
 volumes:
   redis_data:
-```markdown
+```
 
 ### Monitoring and Health Checks
 
@@ -849,7 +849,7 @@ export class QueueHealthMonitor {
     return match ? parseInt(match[1]) : 0;
   }
 }
-```markdown
+```
 
 ### Error Handling and Recovery
 
@@ -927,7 +927,7 @@ export class DeadLetterHandler {
     return { success: true, job_id: jobId };
   }
 }
-```markdown
+```
 
 ---
 

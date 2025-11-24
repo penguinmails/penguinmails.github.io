@@ -170,21 +170,21 @@ Security and compliance features are integrated into the core platform:
 
 **For Executive Decision Making (Level 2):**
 
-- [📊 Cost Analysis Overview](/docs/business/financial-analysis) - Business case for security investment
-- [💰 ROI Calculator](/docs/business/core) - Financial justification for security features
-- [🏆 Competitive Analysis](/docs/business/core) - Security capabilities vs. alternatives
-- [🏗️ Implementation Roadmap](/docs/business/implementation) - Timeline and resource requirements
+- [Cost Analysis Overview](/docs/business/financial-analysis) - Business case for security investment
+- [ROI Calculator](/docs/business/core) - Financial justification for security features
+- [Competitive Analysis](/docs/business/core) - Security capabilities vs. alternatives
+- [Implementation Roadmap](/docs/business/implementation) - Timeline and resource requirements
 
 **For Technical Validation (Level 3):**
 
-- [📋 Detailed Security Framework](security-compliance-detailed) - Complete technical security analysis
-- [📋 Compliance Framework](compliance-framework) - Complete regulatory analysis
-- [🛡️ Security Framework (Enterprise)](/docs/compliance-security/enterprise) - Technical security controls
+- [Detailed Security Framework](security-compliance-detailed) - Complete technical security analysis
+- [Compliance Framework](compliance-framework) - Complete regulatory analysis
+- [Security Framework (Enterprise)](/docs/compliance-security/enterprise) - Technical security controls
 
 **For Procurement & Legal Review:**
 
-- [📋 Procurement Guide](procurement-guide) - Enterprise evaluation framework
-- [🔍 Industry-Specific Cases](/docs/business/industry-business-cases) - Sector-specific requirements
+- [Procurement Guide](procurement-guide) - Enterprise evaluation framework
+- [Industry-Specific Cases](/docs/business/industry-business-cases) - Sector-specific requirements
 
 ---
 

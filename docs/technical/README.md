@@ -96,7 +96,7 @@ Technical documentation and implementation guides for PenguinMails.
 1. **Authentication**: OAuth 2.0 and API key management
 2. **Core Endpoints**: Mailbox, campaign, and analytics APIs
 3. **Webhooks**: Real-time event notifications
-4. **SDKs**: JavaScript, Python, and PHP libraries
+4. **SDKs**: JavaScript and TypeScript libraries
 
 ### Custom Development
 
@@ -140,22 +140,23 @@ const campaign = await penguinmails.createCampaign({
   template: salesTemplate,
   schedule: { startDate: '2024-01-01' }
 });
-```markdown
+```
 
 ### Analytics Integration
-```python
-# Example: Google Analytics integration
-import penguinmails
+```javascript
+// Example: Google Analytics integration
+import { PenguinMails } from '@penguinmails/sdk';
 
-# Track campaign performance
-performance = penguinmails.analytics.getCampaignMetrics()
-    campaign_id='campaign_123',
-    date_range='last_30_days'
-)
+// Track campaign performance
+const client = new PenguinMails({ apiKey: 'your-api-key' });
+const performance = await client.analytics.getCampaignMetrics({
+  campaignId: 'campaign_123',
+  dateRange: 'last_30_days'
+});
 
-# Export to Google Analytics
-analytics.export_metrics(performance, destination='ga4')
-```markdown
+// Export to Google Analytics
+await analytics.exportMetrics(performance, { destination: 'ga4' });
+```
 
 ## Quality Assurance
 
@@ -176,7 +177,7 @@ analytics.export_metrics(performance, destination='ga4')
 ### Developer Resources
 - **Documentation**: Comprehensive API and integration guides
 - **Code Examples**: Sample implementations and best practices
-- **SDK Libraries**: Official libraries for popular languages
+- **SDK Libraries**: Official JavaScript/TypeScript SDK with comprehensive support
 - **Community Forum**: Developer community and support
 
 ### Enterprise Support
@@ -212,12 +213,12 @@ Every substantial page should support layered reading:
 - Start with:
   - 3–6 line executive summary: who this is for, what it enables.
 - Then:
-  - Beginner/⭐: high-level explanation and quick start.
-  - Intermediate/⭐⭐: detailed usage, options, examples.
-  - Expert/⭐⭐⭐: edge cases, internals, migration notes, SLAs, integration details.
+  - Beginner/Level 1: high-level explanation and quick start.
+  - Intermediate/Level 2: detailed usage, options, examples.
+  - Expert/Level 3: edge cases, internals, migration notes, SLAs, integration details.
 - Implementation:
   - Use headings and short sections instead of collapsible UI; keep Markdown simple.
-  - Explicitly label complexity where helpful (e.g. “(⭐⭐ Advanced)” in headings).
+  - Explicitly label complexity where helpful (e.g. "(Level 2 Advanced)" in headings).
 
 ### 3. Cross-References and Single Source of Truth
 

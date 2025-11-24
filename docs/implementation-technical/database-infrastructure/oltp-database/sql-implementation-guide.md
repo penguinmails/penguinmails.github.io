@@ -8,7 +8,7 @@ persona: "Backend Developers"
 
 # OLTP Database SQL Implementation Challenge
 
-## 🎯 Your Mission: Build & Test the Operational Database
+## Your Mission: Build & Test the Operational Database
 
 Instead of asking "what do you think", we're going to **build the OLTP database in SQL and discover the real operational challenges through implementation**. You'll create schemas, implement multi-tenant patterns, and find the performance bottlenecks that theoretical discussions miss.
 
@@ -22,7 +22,7 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 
 ---
 
-## 🏗️ **SQL Implementation Exercises by Core Domain**
+## SQL Implementation Exercises by Core Domain
 
 ### **Exercise 1: Multi-Tenant Core Infrastructure**
 
@@ -43,9 +43,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 - What's the optimal way to handle user authentication across multiple tenants?
 - How do you manage tenant lifecycle (creation, suspension, deletion)?
 
-**⚡ Challenge**: Create 100 tenants, 1000 users, and test RLS isolation under concurrent access. Measure query performance with tenant filtering.
+**Challenge**: Create 100 tenants, 1000 users, and test RLS isolation under concurrent access. Measure query performance with tenant filtering.
 
-**🔍 Exploration Goal**: You'll discover whether RLS provides adequate isolation or creates unacceptable performance overhead.
+**Exploration Goal**: You'll discover whether RLS provides adequate isolation or creates unacceptable performance overhead.
 
 ---
 
@@ -68,9 +68,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 - What's the optimal way to manage SMTP IP warming and reputation?
 - How do you handle IP assignment conflicts and failover scenarios?
 
-**⚡ Challenge**: Build domain management for 1000 domains across 50 tenants, simulate DNS verification, and test IP assignment optimization.
+**Challenge**: Build domain management for 1000 domains across 50 tenants, simulate DNS verification, and test IP assignment optimization.
 
-**🔍 Exploration Goal**: You'll discover whether domain infrastructure belongs in OLTP or needs separate handling.
+**Exploration Goal**: You'll discover whether domain infrastructure belongs in OLTP or needs separate handling.
 
 ---
 
@@ -93,9 +93,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 - What's the optimal way to track lead engagement across campaigns?
 - How do you manage template versioning and organization?
 
-**⚡ Challenge**: Create 500 campaigns with 50,000 leads, implement complex sequences, and measure query performance for campaign analytics.
+**Challenge**: Create 500 campaigns with 50,000 leads, implement complex sequences, and measure query performance for campaign analytics.
 
-**🔍 Exploration Goal**: You'll discover whether campaign logic creates appropriate OLTP patterns or needs specialized optimization.
+**Exploration Goal**: You'll discover whether campaign logic creates appropriate OLTP patterns or needs specialized optimization.
 
 ---
 
@@ -118,9 +118,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 - What's the best way to handle subscription transitions?
 - How do you track costs for business intelligence and tenant analysis?
 
-**⚡ Challenge**: Build billing system for 1000 tenants with various plan types, simulate subscription changes, and test limit enforcement.
+**Challenge**: Build billing system for 1000 tenants with various plan types, simulate subscription changes, and test limit enforcement.
 
-**🔍 Exploration Goal**: You'll discover whether billing belongs in OLTP or needs dedicated financial systems integration.
+**Exploration Goal**: You'll discover whether billing belongs in OLTP or needs dedicated financial systems integration.
 
 ---
 
@@ -143,13 +143,13 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 - What's the optimal way to handle feature flags with rollout percentages?
 - How do you manage tenant policies without query complexity?
 
-**⚡ Challenge**: Build configuration system for 100 features across 1000 tenants, test policy enforcement, and measure lookup performance.
+**Challenge**: Build configuration system for 100 features across 1000 tenants, test policy enforcement, and measure lookup performance.
 
-**🔍 Exploration Goal**: You'll discover whether configuration systems create OLTP complexity or benefit from separate management.
+**Exploration Goal**: You'll discover whether configuration systems create OLTP complexity or benefit from separate management.
 
 ---
 
-## 🔗 **Cross-Tier Integration Challenges**
+## Cross-Tier Integration Challenges
 
 ### **Challenge 1: Campaign-to-Content Integration**
 
@@ -165,9 +165,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 -- 4. Handle content lifecycle and cleanup
 ```
 
-**⚡ Execution**: Build campaign creation flow with content references and test consistency during content lifecycle events.
+**Execution**: Build campaign creation flow with content references and test consistency during content lifecycle events.
 
-**🔍 What You'll Discover**: Whether OLTP-to-Content integration creates operational complexity or manageable separation.
+**What You'll Discover**: Whether OLTP-to-Content integration creates operational complexity or manageable separation.
 
 ---
 
@@ -185,9 +185,9 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 -- 4. Maintains data freshness across tiers
 ```
 
-**⚡ Execution**: Build analytics pipeline with realistic campaign volumes and measure data freshness requirements.
+**Execution**: Build analytics pipeline with realistic campaign volumes and measure data freshness requirements.
 
-**🔍 What You'll Discover**: Whether OLTP should handle analytics or delegate to specialized systems.
+**What You'll Discover**: Whether OLTP should handle analytics or delegate to specialized systems.
 
 ---
 
@@ -205,13 +205,13 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 -- 4. Track notification status and failures
 ```
 
-**⚡ Execution**: Build notification system for campaign events and test high-volume scenarios.
+**Execution**: Build notification system for campaign events and test high-volume scenarios.
 
-**🔍 What You'll Discover**: Whether OLTP should trigger notifications or if dedicated systems handle this better.
+**What You'll Discover**: Whether OLTP should trigger notifications or if dedicated systems handle this better.
 
 ---
 
-## 🎯 **Multi-Tenant Performance Testing**
+## Multi-Tenant Performance Testing
 
 ### **Test 1: Tenant Isolation Performance**
 
@@ -282,7 +282,7 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 
 ---
 
-## 🔧 **Real-World Integration Patterns**
+## Real-World Integration Patterns
 
 ### **Pattern 1: NileDB Authentication Integration**
 
@@ -322,7 +322,7 @@ Instead of asking "what do you think", we're going to **build the OLTP database 
 
 ---
 
-## 📊 **Discovery-Driven Learning**
+## Discovery-Driven Learning
 
 ### **What You'll Learn by Building**
 
@@ -358,7 +358,7 @@ Rather than starting with "what do you think", you'll naturally discover:
 
 ---
 
-## 📝 **Implementation Deliverables**
+## Implementation Deliverables
 
 ### **What to Build and Test**
 
@@ -392,7 +392,7 @@ Instead of theoretical feedback, provide:
 
 ---
 
-## 🚀 **Getting Started**
+## Getting Started
 
 ### **Environment Setup**
 

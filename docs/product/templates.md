@@ -58,7 +58,7 @@ Proven product development templates and frameworks for feature optimization, ma
 As a [user persona],
 I want [functionality]
 so that [business value/user benefit].
-```markdown
+```
 
 **Acceptance Criteria Framework**:
 - **Given** [initial context/state]

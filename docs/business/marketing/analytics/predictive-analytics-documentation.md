@@ -96,7 +96,7 @@ class MarketingPerformanceTracker implements CampaignPerformanceTracker {
     };
   }
 }
-```markdown
+```
 
 **Basic Performance Metrics:**
 - **Tracking Accuracy:** Basic performance tracking with 75% directional accuracy

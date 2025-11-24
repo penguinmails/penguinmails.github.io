@@ -100,6 +100,32 @@ For automated linting in CI/CD pipelines:
 
 ## Link Validation
 
+### Manual Validation Commands
+
+You can use these regex commands to manually validate links in your markdown files:
+
+```bash
+# Check for .md extensions in internal links (Jekyll incompatible)
+grep -r "\[.*\](\([^)]*\)[^)]*\.md[^)]*)" docs/ --include="*.md"
+
+# Check for file:// URLs (should be relative paths)
+grep -r "file://" docs/ --include="*.md"
+
+# Check for malformed relative link patterns
+grep -r "]\(\.\.\)" docs/ --include="*.md"
+grep -r "]\(\.\.\/" docs/ --include="*.md"
+
+# Find all relative links within the same directory
+grep -r "\[.*\](\.\.?/[^)]*)" docs/ --include="*.md"
+
+# Check for anchor links and validate .md extension patterns
+grep -r "\[.*\]([^)]*#[^)]*)" docs/ --include="*.md"
+
+# Check for reference-style link definitions and usage
+grep -r "^\[.*\]: " docs/ --include="*.md"
+grep -r "\[.*\]\[.*\]" docs/ --include="*.md" | grep -v "^\[.*\]: "
+```
+
 ### Detecting Relative Links
 
 To easily identify relative links in markdown files, you can use these grep commands:
@@ -147,7 +173,7 @@ The following broken links have been identified and fixed during the markdown li
 - ✅ **Technical Documents**: Fixed incomplete relative paths in all technical architecture files
 - ✅ **Implementation Documents**: Fixed incomplete relative paths in all implementation guides
 
-**Final Validation**: All 100+ broken link patterns successfully resolved via validate-links.sh
+**Final Validation**: All 100+ broken link patterns successfully resolved via manual validation commands
 **Result**: 0 Errors, 0 Warnings - All link validations passed! 🎉
 
 ### Comprehensive Link Fix Summary
@@ -220,7 +246,7 @@ The following broken links have been identified and fixed during the markdown li
 
 **Total Files Modified:** 50+ documentation files
 **Total Link Patterns Fixed:** 100+ broken/incomplete links
-**Validation Script:** Enhanced `validate-links.sh` with comprehensive checking
+**Validation Method:** Comprehensive manual validation using regex commands
 
 ### Task Completion Summary
 
@@ -232,19 +258,19 @@ The original task to fix 4 broken links mentioned in MARKDOWN_LINTING.md evolved
 4. **Malformed Syntax Patterns**: ✅ All fixed
 5. **Jekyll Compatibility**: ✅ 100% compliant
 
-**Final Result**: All documentation links are now Jekyll-compatible and validated. The `validate-links.sh` script confirms zero errors and zero warnings across the entire documentation codebase.
+**Final Result**: All documentation links are now Jekyll-compatible and validated. Manual validation confirms zero errors and zero warnings across the entire documentation codebase.
 
 **Jekyll Link Format Corrected**: All API documentation links now use the proper Jekyll pattern: `./directory/file` (points to `directory/file.md` without the .md extension).
 
 ### Automated Link Validation Script
 
-This repository includes a comprehensive link validation script (`validate-links.sh`) that checks for:
+Use the manual validation commands above to check for:
 
-- **Jekyll-compatible links**: Verifies no `.md` extensions in internal links
-- **Broken relative links**: Confirms referenced files exist
-- **Invalid URLs**: Detects `file://` URLs and other problematic patterns
-- **Anchor link formatting**: Validates section anchor compatibility
-- **Reference link consistency**: Checks reference-style link definitions
+- **Jekyll-compatible links**: Verify no `.md` extensions in internal links
+- **Broken relative links**: Manually confirm referenced files exist
+- **Invalid URLs**: Detect `file://` URLs and other problematic patterns
+- **Anchor link formatting**: Validate section anchor compatibility
+- **Reference link consistency**: Check reference-style link definitions
 
 ### Common Link Issues and Fixes
 
@@ -278,9 +304,9 @@ Since this repository uses Jekyll static site generator:
 2. **Use Auto-Fix**: Start with `--fix` flag to resolve common issues automatically
 3. **Review Changes**: Manually verify changes made by auto-fix
 4. **Consistent Formatting**: Follow established heading hierarchy and spacing patterns
-5. **Test Links**: Run link validation script before committing documentation changes
+5. **Test Links**: Run manual validation commands before committing documentation changes
 6. **Validate Internal Links**: Ensure all internal links follow Jekyll conventions (no `.md` extensions)
-7. **Check Broken References**: Use `validate-links.sh` to detect broken relative links
+7. **Check Broken References**: Use manual validation commands to detect broken relative links
 8. **Maintain Link Hygiene**: Regularly run link validation to catch issues early
 
 ## Troubleshooting

@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🎯 Strategic Oversight KPIs
+## Strategic Oversight KPIs
 
 > Note: The KPIs in this document reflect realistic capabilities aligned with backbone technical constraints. They emphasize directional insights and process-driven measurement over precise real-time monitoring, focusing on strategic oversight rather than tactical operations.
 
@@ -47,7 +47,7 @@ persona: "Documentation Users"
 
 ---
 
-## 📊 Strategic Performance Tracking
+## Strategic Performance Tracking
 
 ### Revenue Protection Metrics
 
@@ -112,7 +112,7 @@ Target: >32) for effective strategic decision support
 
 ---
 
-## 🚀 Strategic Milestone Tracking
+## Strategic Milestone Tracking
 
 ### Quarterly Strategic Reviews
 
@@ -169,7 +169,7 @@ Target: >32) for effective strategic decision support
 
 ---
 
-## 📈 Strategic Benchmarking
+## Strategic Benchmarking
 
 ### Industry-Aligned Strategic KPIs
 
@@ -212,7 +212,7 @@ Strategic Decision Support Health:
 
 ---
 
-## 🎯 Strategic Optimization Framework
+## Strategic Optimization Framework
 
 ### Continuous Strategic Improvement
 
@@ -247,19 +247,19 @@ Strategic Decision Support Health:
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For strategic oversight framework:**
-- [🏢 Executive Summary](executive-summary:1) - Strategic oversight framework and decision support
-- [💰 ROI Calculator](roi-calculator-detailed:1) - Strategic investment analysis with realistic constraints
+- [Executive Summary](executive-summary:1) - Strategic oversight framework and decision support
+- [ROI Calculator](roi-calculator-detailed:1) - Strategic investment analysis with realistic constraints
 
 **For operational implementation:**
-- [🏗️ Implementation Roadmap](implementation-roadmap:1) - Realistic strategic implementation expectations
-- [📊 Financial Analysis Benchmarks](financial-analysis-benchmarks:1) - Industry benchmarks with backbone constraints
+- [Implementation Roadmap](implementation-roadmap:1) - Realistic strategic implementation expectations
+- [Financial Analysis Benchmarks](financial-analysis-benchmarks:1) - Industry benchmarks with backbone constraints
 
 **For competitive intelligence:**
-- [🏆 Competitive Analysis](competitive-analysis:1) - Strategic positioning and market intelligence
-- [⚖️ Compliance Overview](compliance-overview:1) - Strategic regulatory oversight for business leaders
+- [Competitive Analysis](competitive-analysis:1) - Strategic positioning and market intelligence
+- [Compliance Overview](compliance-overview:1) - Strategic regulatory oversight for business leaders
 
 ---
 

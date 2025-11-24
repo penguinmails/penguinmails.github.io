@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🎯 Quick ROI Assessment
+## Quick ROI Assessment
 
 ### Progressive Disclosure Flow
 
@@ -57,7 +57,7 @@ graph TD
 
 ---
 
-## 📊 Cost Comparison Summary
+## Cost Comparison Summary
 
 ![Monthly Cost Comparison](/docs/assets){: width="100%" }
 
@@ -81,7 +81,7 @@ graph TD
 
 ---
 
-## 💰 Output Calculations
+## Output Calculations
 
 ### Current Monthly Cost
 
@@ -108,7 +108,7 @@ graph TD
 
 ---
 
-## 📈 Performance Impact Summary
+## Performance Impact Summary
 
 ### Deliverability Impact on Pipeline
 
@@ -125,27 +125,27 @@ graph TD
 
 ---
 
-## 🎯 Executive Decision Framework
+## Executive Decision Framework
 
 ### When to Choose Managed ESPs
 
-- ✅ Volume < 1M emails/month
-- ✅ Deliverability is business critical
-- ✅ No dedicated DevOps team
-- ✅ Need built-in compliance and security
-- ✅ Want predictable costs and support
+- Volume < 1M emails/month
+- Deliverability is business critical
+- No dedicated DevOps team
+- Need built-in compliance and security
+- Want predictable costs and support
 
 ### When to Consider Self-Hosted
 
-- ⚠️ Volume > 10M emails/month
-- ⚠️ Have 4-6+ email infrastructure engineers
-- ⚠️ Email is core product (not just marketing)
-- ⚠️ Need complete infrastructure control
-- ⚠️ Have complex custom requirements
+- Volume > 10M emails/month
+- Have 4-6+ email infrastructure engineers
+- Email is core product (not just marketing)
+- Need complete infrastructure control
+- Have complex custom requirements
 
 ---
 
-## 🚀 Implementation Timeline ROI
+## Implementation Timeline ROI
 
 | Phase | Volume Target | Investment | Break-Even Timeline |
 |-------|---------------|------------|-------------------|
@@ -155,7 +155,7 @@ graph TD
 
 ---
 
-## 🎲 Scenario Planning Summary
+## Scenario Planning Summary
 
 ### Best Case Scenario (Optimized)
 
@@ -175,26 +175,26 @@ graph TD
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For strategic context:**
 
-- [🏢 Executive Summary](executive-summary) - Strategic findings and recommendations
+- [Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
 
-- [📊 Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
-- [🏗️ Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
-- [🏆 Competitive Analysis](competitive-analysis) - Provider selection matrix
+- [Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
+- [Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
+- [Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
 
-- [🔧 Technical Infrastructure](/docs/business/implementation) - Technical specifications
-- [📋 Performance Benchmarks](/docs/business/performance) - Industry data and metrics
+- [Technical Infrastructure](/docs/business/implementation) - Technical specifications
+- [Performance Benchmarks](/docs/business/performance) - Industry data and metrics
 
 ---
 
-**Keywords**: ROI calculator, cost-benefit analysis, TCO analysis, email infrastructure ROI, managed ESP vs self-hosted, payback period, financial planning
+ROI calculator, cost-benefit analysis, TCO analysis, email infrastructure ROI, managed ESP vs self-hosted, payback period, financial planning
 
 ---
 

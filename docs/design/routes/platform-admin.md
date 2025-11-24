@@ -160,8 +160,8 @@
 
 - **Last Sync**: "5 minutes ago".
 - **Sync Health**:
-  - ✅ All invoices synced.
-  - ⚠️ 3 failed payments (links to details).
+  - All invoices synced.
+  - 3 failed payments (links to details).
 
 - **"Force Sync Now" Button**: Manually triggers webhook replay.
 
@@ -244,10 +244,10 @@
 #### Service Health Grid (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns))
 
 - **Status Cards** (Traffic light):
-  - **API Server**: ✅ Healthy (Response time: 120ms).
-  - **SMTP Service**: ⚠️ Degraded (Queue backlog: 5,000 emails).
-  - **Database (OLTP)**: ✅ Healthy.
-  - **Database (OLAP)**: ✅ Healthy.
+  - **API Server**: Healthy (Response time: 120ms).
+  - **SMTP Service**: Degraded (Queue backlog: 5,000 emails).
+  - **Database (OLTP)**: Healthy.
+  - **Database (OLAP)**: Healthy.
 
 #### IP Reputation Monitor
 

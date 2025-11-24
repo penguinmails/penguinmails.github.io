@@ -62,7 +62,7 @@ DEFINITION OF DONE:
 - [ ] Documentation updated
 - [ ] Acceptance criteria verified
 - [ ] User story validated with stakeholders
-```markdown
+```
 
 ---
 
@@ -122,7 +122,7 @@ DEFINITION OF DONE:
 - [ ] Security and audit controls validated
 - [ ] Integration with identity management system completed
 - [ ] Documentation and training materials created
-```markdown
+```
 
 ### **Example 2: System Configuration**
 
@@ -177,7 +177,7 @@ DEFINITION OF DONE:
 - [ ] Configuration validation rules implemented
 - [ ] Notification system integrated
 - [ ] Documentation completed
-```markdown
+```
 
 ---
 
@@ -237,7 +237,7 @@ DEFINITION OF DONE:
 - [ ] Integration with ticketing system completed
 - [ ] Escalation procedures tested and validated
 - [ ] Documentation and training completed
-```markdown
+```
 
 ---
 
@@ -297,7 +297,7 @@ DEFINITION OF DONE:
 - [ ] Sandbox environment configured and secured
 - [ ] Automated documentation generation working
 - [ ] Developer feedback incorporated and refined
-```markdown
+```
 
 ---
 

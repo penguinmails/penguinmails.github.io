@@ -14,19 +14,19 @@ persona: "Documentation Users"
 
 **The Hidden Cost**: Companies lose an average of **$45,000-60,000 annually** on ineffective campaigns due to lack of optimization data. Our analytics deliver **150% improvement in response rates** and **40% reduction in cost per acquisition** within 30 days.
 
-## 🎯 Guaranteed Business Outcomes
+## Guaranteed Business Outcomes
 
 ### **What You'll Achieve**
 
-✅ **Increase Response Rates** by 150%+ through data-driven optimization
-✅ **Reduce Cost Per Acquisition** by 40%+ with performance-based scaling
-✅ **Predict Revenue** with 95%+ accuracy using AI-powered forecasting
-✅ **Scale Intelligently** with real-time performance monitoring and alerts
-✅ **Prove ROI** with comprehensive attribution and pipeline tracking
+**Increase Response Rates** by 150%+ through data-driven optimization
+**Reduce Cost Per Acquisition** by 40%+ with performance-based scaling
+**Predict Revenue** with 95%+ accuracy using AI-powered forecasting
+**Scale Intelligently** with real-time performance monitoring and alerts
+**Prove ROI** with comprehensive attribution and pipeline tracking
 
-**👤 Perfect for Agency Owners** - Client reporting and performance attribution that justifies campaign investments
-**👤 Ideal for Startup Founders** - Data-driven optimization to maximize limited marketing budget
-**👤 Enterprise-Ready** - Executive dashboards and compliance reporting for sales leadership
+**Perfect for Agency Owners** - Client reporting and performance attribution that justifies campaign investments
+**Ideal for Startup Founders** - Data-driven optimization to maximize limited marketing budget
+**Enterprise-Ready** - Executive dashboards and compliance reporting for sales leadership
 
 **Strategic Impact**: Our analytics support our goal of [market leadership through deliverability excellence](/docs/business/strategy) by providing comprehensive performance tracking that enables continuous optimization and competitive advantage.
 
@@ -46,7 +46,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Why Analytics Drive Cold Email Success
 
-### **⭐ Beginner Path: The Hidden Cost of Guesswork**
+### **Level 1: The Hidden Cost of Guesswork**
 
 **Without proper analytics, cold email campaigns are like flying blind:**
 
@@ -55,7 +55,7 @@ Unlike basic email analytics, our platform provides:
 - Businesses lack visibility into which prospects convert to revenue
 - Teams can't prove ROI or scale successful strategies
 
-### **⭐⭐ Intermediate Path: Data-Driven Transformation**
+### **Level 2: Data-Driven Transformation**
 
 **Analytics turn uncertainty into predictable results:**
 
@@ -64,7 +64,7 @@ Unlike basic email analytics, our platform provides:
 - **Measure True Impact**: Track cold email revenue attribution across your entire sales funnel
 - **Scale Intelligently**: Expand successful campaigns while improving underperformers
 
-### **⭐⭐ Expert Path: Real Business Impact**
+### **Level 3: Real Business Impact**
 
 **Our customers see measurable results within 30 days:**
 
@@ -75,7 +75,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Comprehensive Performance Analytics
 
-### **⭐ Beginner Path: Essential Metrics**
+### **Level 1: Essential Metrics**
 
 **Key metrics every cold emailer should track:**
 
@@ -84,7 +84,7 @@ Unlike basic email analytics, our platform provides:
 - **Campaign Performance**: Track which campaigns are most successful
 - **Cost Per Lead**: Calculate efficiency of your cold email efforts
 
-### **⭐⭐ Intermediate Path: Advanced Analytics**
+### **Level 2: Advanced Analytics**
 
 ## Revenue-Driven Metrics
 
@@ -106,7 +106,7 @@ Unlike basic email analytics, our platform provides:
 - **Blacklist Monitoring**: Instant alerts if accounts appear on email blacklists
 - **Deliverability Prediction**: AI forecasting of inbox placement success
 
-### **⭐⭐ Expert Path: Technical Implementation**
+### **Level 3: Technical Implementation**
 
 ## Operational Intelligence
 
@@ -135,7 +135,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Key Performance Indicators (KPIs)
 
-### **⭐ Beginner Path: Essential Business Metrics**
+### **Level 1: Essential Business Metrics**
 
 **Critical metrics to track daily for business health:**
 
@@ -156,7 +156,7 @@ Unlike basic email analytics, our platform provides:
 - **Net Revenue Retention** - Target: >110% (expansion revenue focus)
 - **Monthly Churn Rate** - Target: <5% for sustainable growth
 
-### **⭐⭐ Intermediate Path: Detailed Performance Metrics**
+### **Level 2: Detailed Performance Metrics**
 
 ## Engagement Metrics
 
@@ -178,7 +178,7 @@ Unlike basic email analytics, our platform provides:
 - **Timing Optimization**: Best send times for your audience
 - **List Quality Analysis**: Performance by contact list segment
 
-### **⭐⭐ Expert Path: Strategic Business Analytics**
+### **Level 3: Strategic Business Analytics**
 
 ## Advanced Performance Indicators
 
@@ -245,7 +245,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Analytics Dashboard Features
 
-### **⭐ Beginner Path: Essential Dashboard**
+### **Level 1: Essential Dashboard**
 
 **Core features for immediate insights:**
 
@@ -254,7 +254,7 @@ Unlike basic email analytics, our platform provides:
 - **Key Metrics**: Essential metrics like response rates and deliverability
 - **Easy Exports**: Download reports in CSV or PDF format
 
-### **⭐⭐ Intermediate Path: Professional Features**
+### **Level 2: Professional Features**
 
 ## Real-Time Monitoring
 
@@ -275,7 +275,7 @@ Unlike basic email analytics, our platform provides:
 - **Trend Analysis**: Track performance trends over time
 - **Performance Comparisons**: Compare different campaigns, templates, and strategies
 
-### **⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Advanced Visual Analytics
 
@@ -299,14 +299,14 @@ Unlike basic email analytics, our platform provides:
 
 ## Advanced Analytics Features
 
-### **⭐ Beginner Path: Basic Testing**
+### **Level 1: Basic Testing**
 
 **Simple A/B testing to improve performance:**
 
 - **Template Testing**: Compare different email templates and their performance
 - **Subject Line Testing**: Analyze which subject lines generate more opens
 
-### **⭐⭐ Intermediate Path: Professional Analysis**
+### **Level 2: Professional Analysis**
 
 ## Advanced A/B Testing
 
@@ -327,7 +327,7 @@ Unlike basic email analytics, our platform provides:
 - **Cost Analysis**: Calculate ROI including time, tools, and subscription costs
 - **Pipeline Value**: Track potential revenue from responses and meetings
 
-### **⭐⭐ Expert Path: Advanced Analytics & Future Roadmap**
+### **Level 3: Advanced Analytics & Future Roadmap**
 
 **Future Roadmap Considerations (2027+):**
 
@@ -352,7 +352,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Setting Up Analytics
 
-### **⭐ Beginner Path: Quick Start (5 Minutes)**
+### **Level 1: Quick Start (5 Minutes)**
 
 **Essential setup for immediate insights:**
 
@@ -361,7 +361,7 @@ Unlike basic email analytics, our platform provides:
 3. **View Dashboard**: Access your analytics dashboard for immediate insights
 4. **Set Up Alerts**: Configure basic notifications for responses and bounces
 
-### **⭐⭐ Intermediate Path: Professional Setup**
+### **Level 2: Professional Setup**
 
 ## Step 1: Campaign Tracking
 
@@ -384,7 +384,7 @@ Unlike basic email analytics, our platform provides:
 - **Alert Configuration**: Configure alerts for performance thresholds
 - **Team Sharing**: Set up team access and collaborative features
 
-### **⭐⭐ Expert Path: Enterprise Integration**
+### **Level 3: Enterprise Integration**
 
 ## Advanced Data Integration
 
@@ -409,7 +409,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Interpreting Analytics Data
 
-### **⭐ Beginner Path: Basic Analysis**
+### **Level 1: Basic Analysis**
 
 **Quick insights to check daily:**
 
@@ -417,7 +417,7 @@ Unlike basic email analytics, our platform provides:
 - **Warning Signs**: Declining open rates, increasing spam complaints
 - **Action Items**: Review content, adjust sending patterns, warm-up accounts
 
-### **⭐⭐ Intermediate Path: Advanced Analysis**
+### **Level 2: Advanced Analysis**
 
 ## Response Analysis
 
@@ -432,7 +432,7 @@ Unlike basic email analytics, our platform provides:
 - **Targeting Improvements**: Refine prospect lists based on response patterns
 - **Volume Scaling**: Increase or decrease sending based on capacity and performance
 
-### **⭐⭐ Expert Path: Strategic Analysis**
+### **Level 3: Strategic Analysis**
 
 ## Advanced Performance Indicators
 
@@ -452,7 +452,7 @@ Unlike basic email analytics, our platform provides:
 
 ## Best Practices for Analytics
 
-### **⭐ Beginner Path: Essential Habits**
+### **Level 1: Essential Habits**
 
 **Daily practices for better results:**
 
@@ -461,9 +461,9 @@ Unlike basic email analytics, our platform provides:
 - **Focus on Trends**: Look for patterns over time, not just daily snapshots
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Practices</strong></summary>
+<summary><strong>Level 2: Professional Practices</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Practices**
+### **Level 2: Professional Practices**
 
 ## Regular Monitoring
 
@@ -486,9 +486,9 @@ Unlike basic email analytics, our platform provides:
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Excellence</strong></summary>
+<summary><strong>Level 3: Enterprise Excellence</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Excellence**
+### **Level 3: Enterprise Excellence**
 
 ## Advanced Analytics Strategy
 

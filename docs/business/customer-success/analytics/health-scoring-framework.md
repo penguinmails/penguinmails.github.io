@@ -16,10 +16,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 ### Core Health Score Formula
 
-```markdown
-Overall Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
-                      (Business Health × 0.25) + (Relationship Health × 0.15)
-```markdown
+`Overall Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) + (Business Health × 0.25) + (Relationship Health × 0.15)`
 
 ### Health Score Ranges and Action Triggers
 - **Green (80-100)**: Healthy accounts - Expansion focus and relationship deepening
@@ -48,9 +45,8 @@ Overall Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 - **Data Processing**: Monthly data volume ≥500GB = 100 points, 100-499GB = 70 points, <100GB = 30 points
 
 #### Usage Health Calculation
-```markdown
-Usage Health = (Active User Score × 0.4) + (Feature Adoption × 0.4) + (Usage Quality × 0.2)
-```markdown
+
+`Usage Health = (Active User Score × 0.4) + (Feature Adoption × 0.4) + (Usage Quality × 0.2)`
 
 ### 2. Engagement Health (25% Weight)
 
@@ -71,12 +67,11 @@ Usage Health = (Active User Score × 0.4) + (Feature Adoption × 0.4) + (Usage Q
 - **Executive Touchpoints**: ≥1 executive meeting/quarter = 100 points, 1 executive meeting/6 months = 70 points, <1 meeting/6 months = 30 points
 
 #### Engagement Health Calculation
-```markdown
-Engagement Health = (Support Quality × 0.4) + (Training Adoption × 0.3) + (Proactive Engagement × 0.3)
-```markdown
+
+`Engagement Health = (Support Quality × 0.4) + (Training Adoption × 0.3) + (Proactive Engagement × 0.3)`
 
 ### 3. Business Health (25% Weight)
-
+`
 #### Metrics and Thresholds
 
 **Success Metric Achievement**
@@ -95,9 +90,8 @@ Engagement Health = (Support Quality × 0.4) + (Training Adoption × 0.3) + (Pro
 - **Future Planning**: Clear expansion/renewal plans = 100 points, General future plans = 70 points, No clear plans = 30 points
 
 #### Business Health Calculation
-```markdown
-Business Health = (Success Achievement × 0.4) + (Financial Health × 0.3) + (Strategic Alignment × 0.3)
-```markdown
+
+`Business Health = (Success Achievement × 0.4) + (Financial Health × 0.3) + (Strategic Alignment × 0.3)`
 
 ### 4. Relationship Health (15% Weight)
 
@@ -118,9 +112,8 @@ Business Health = (Success Achievement × 0.4) + (Financial Health × 0.3) + (St
 - **Loyalty Indicators**: Long-term commitment signals = 100 points, Mixed signals = 70 points, Churn signals = 30 points
 
 #### Relationship Health Calculation
-```markdown
-Relationship Health = (Stakeholder Relationships × 0.5) + (Advocacy Indicators × 0.3) + (Brand Perception × 0.2)
-```markdown
+
+`Relationship Health = (Stakeholder Relationships × 0.5) + (Advocacy Indicators × 0.3) + (Brand Perception × 0.2)`
 
 ## Health Score Monitoring and Alerting
 

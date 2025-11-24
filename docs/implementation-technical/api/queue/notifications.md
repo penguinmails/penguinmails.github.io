@@ -64,7 +64,7 @@ persona: "Backend Developers"
 ### Bulk Review
 
 **Method**: `POST`  
-**URL**: `/api/../queue/notifications/bulk-review`  
+**URL**: `/api/v1/queue/notifications/bulk-review`  
 **Purpose**: Mark multiple notifications as reviewed.
 
 **Request**:

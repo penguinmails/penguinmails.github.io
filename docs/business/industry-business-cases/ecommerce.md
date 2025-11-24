@@ -206,19 +206,19 @@ E-commerce and retail organizations face critical challenges in:
 - **Compliance Score**: Target >95% compliance rate
 - **Campaign Automation Rate**: Target 80%+ automated campaigns
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For E-commerce Executive Decision Making (Level 2):**
 
-- [💰 ROI Calculator](/docs/business/core/roi-calculator) - E-commerce-specific ROI calculations
-- [📊 Cost Comparisons](/docs/business/core/cost-comparisons) - E-commerce cost analysis and benchmarks
-- [🏆 Competitive Analysis](/docs/business/core/competitive-analysis) - E-commerce provider comparison
+- [ROI Calculator](/docs/business/core/roi-calculator) - E-commerce-specific ROI calculations
+- [Cost Comparisons](/docs/business/core/cost-comparisons) - E-commerce cost analysis and benchmarks
+- [Competitive Analysis](/docs/business/core/competitive-analysis) - E-commerce provider comparison
 
 **For Technical Validation (Level 3):**
 
-- [📋 Detailed E-commerce Analysis](/docs/business/customer-success/industry-cases/ecommerce-cs) - Complete e-commerce implementation and automation deep dive
-- [📋 Compliance Framework](/docs/business/procurement-compliance) - Complete e-commerce compliance analysis
-- [🔒 Security Compliance Overview](/docs/business/procurement-compliance) - E-commerce security overview
+- [Detailed E-commerce Analysis](/docs/business/customer-success/industry-cases/ecommerce-cs) - Complete e-commerce implementation and automation deep dive
+- [Compliance Framework](/docs/business/procurement-compliance) - Complete e-commerce compliance analysis
+- [Security Compliance Overview](/docs/business/procurement-compliance) - E-commerce security overview
 
 ---
 

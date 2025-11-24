@@ -65,7 +65,7 @@ sequenceDiagram
     Analytics->>DB: Update Campaign Analytics
     DB-->>API: Analytics Data
     API-->>User: Real-time Updates
-```markdown
+```
 
 ## Email Lifecycle Stages
 

@@ -10,12 +10,12 @@ persona: "Documentation Users"
 
 ## Professional Email Infrastructure in Under 5 Minutes
 
-> **📖 Getting Started?** See our [Features Overview](/docs/core-features/feature-overview) for complete context and navigation.
+> **Getting Started?** See our [Features Overview](/docs/core-features/feature-overview) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 >
-> - **⭐ Beginner Path**: Quick account creation for immediate cold email use
-> - **⭐⭐ Intermediate Path**: Advanced configuration and domain management
-> - **⭐⭐⭐ Expert Path**: Bulk creation and enterprise features
+> - **Level 1**: Quick account creation for immediate cold email use
+> - **Level 2**: Advanced configuration and domain management
+> - **Level 3**: Bulk creation and enterprise features
 
 ---
 
@@ -23,13 +23,13 @@ persona: "Documentation Users"
 
 **The Time-Saving Impact**: Traditional email setup takes 2-4 weeks and requires technical expertise. Our automated system delivers **professional accounts in under 5 minutes**, enabling you to start cold email campaigns immediately rather than weeks later.
 
-**👤 Perfect for Agency Owners** - Scale client campaigns quickly without technical overhead
-**👤 Ideal for Startup Founders** - Get professional email infrastructure without hiring technical staff
-**👤 Enterprise-Ready** - Enterprise-grade security and compliance from day one
+**Perfect for Agency Owners** - Scale client campaigns quickly without technical overhead
+**Ideal for Startup Founders** - Get professional email infrastructure without hiring technical staff
+**Enterprise-Ready** - Enterprise-grade security and compliance from day one
 
 ## Why Create Multiple Email Accounts
 
-### **⭐ Beginner Path: Basic Benefits**
+### **Level 1: Basic Benefits**
 
 **Simple advantages of multiple accounts:**
 
@@ -37,7 +37,7 @@ persona: "Documentation Users"
 - **Better Organization**: Separate business communications from personal emails
 - **Deliverability Protection**: Distribute risk across multiple accounts
 
-### **⭐⭐ Intermediate Path: Strategic Benefits**
+### **Level 2: Strategic Benefits**
 
 **Professional advantages:**
 
@@ -53,7 +53,7 @@ persona: "Documentation Users"
   - Target different market segments
   - Maintain organization and tracking
 
-### **⭐⭐⭐ Expert Path: Enterprise Benefits**
+### **Level 3: Enterprise Benefits**
 
 **Advanced strategic advantages:**
 
@@ -64,7 +64,7 @@ persona: "Documentation Users"
 
 ## How Our Mailbox Creation Works
 
-### **⭐ Beginner Path: Simple Process**
+### **Level 1: Simple Process**
 
 **Quick account creation in minutes:**
 
@@ -73,7 +73,7 @@ persona: "Documentation Users"
 3. **Automatic Verification**: DNS records configured automatically
 4. **Immediate Availability**: Account ready for use within minutes
 
-### **⭐⭐ Intermediate Path: Professional Process**
+### **Level 2: Professional Process**
 
 **Advanced setup options:**
 
@@ -89,7 +89,7 @@ persona: "Documentation Users"
   - **IMAP/SMTP Settings**: Ready for email client integration
   - **Webmail Access**: Browser-based email interface
 
-### **⭐⭐⭐ Expert Path: Enterprise Architecture**
+### **Level 3: Enterprise Architecture**
 
 **Advanced technical implementation:**
 
@@ -106,7 +106,7 @@ persona: "Documentation Users"
 
 ## Key Features
 
-### **⭐ Beginner Path: Essential Features**
+### **Level 1: Essential Features**
 
 **Core functionality for immediate use:**
 
@@ -115,9 +115,9 @@ persona: "Documentation Users"
 - **Basic Configuration**: Professional email settings pre-configured
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Features</strong></summary>
+<summary><strong>Level 2: Professional Features</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Features**
+### **Level 2: Professional Features**
 
 ## Professional Configuration
 
@@ -141,9 +141,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Features</strong></summary>
+<summary><strong>Level 3: Enterprise Features</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Advanced Management
 
@@ -169,7 +169,7 @@ persona: "Documentation Users"
 
 ## Account Setup Process
 
-### **⭐ Beginner Path: Quick Setup (5 Minutes)**
+### **Level 1: Quick Setup (5 Minutes)**
 
 **Essential steps for immediate use:**
 
@@ -179,9 +179,9 @@ persona: "Documentation Users"
 4. **Account Ready**: Email account ready for immediate use
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Setup</strong></summary>
+<summary><strong>Level 2: Professional Setup</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Setup**
+### **Level 2: Professional Setup**
 
 ## Step 1: Account Information
 
@@ -214,9 +214,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Setup</strong></summary>
+<summary><strong>Level 3: Enterprise Setup</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Setup**
+### **Level 3: Enterprise Setup**
 
 ## Advanced Configuration
 
@@ -243,7 +243,7 @@ persona: "Documentation Users"
 
 ## Professional Email Setup
 
-### **⭐ Beginner Path: Client Integration**
+### **Level 1: Client Integration**
 
 **Basic email client setup:**
 
@@ -252,9 +252,9 @@ persona: "Documentation Users"
 - **Basic Access**: Webmail interface access
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Setup</strong></summary>
+<summary><strong>Level 2: Professional Setup</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Setup**
+### **Level 2: Professional Setup**
 
 ## Email Client Configuration
 
@@ -280,9 +280,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Setup</strong></summary>
+<summary><strong>Level 3: Enterprise Setup</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Setup**
+### **Level 3: Enterprise Setup**
 
 ## Enterprise Client Management
 
@@ -309,7 +309,7 @@ persona: "Documentation Users"
 
 ## Domain Management
 
-### **⭐ Beginner Path: Basic Domain Selection**
+### **Level 1: Basic Domain Selection**
 
 **Simple domain choices:**
 
@@ -317,9 +317,9 @@ persona: "Documentation Users"
 - **Brand Alignment**: Match domains to your company name
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Strategic Management</strong></summary>
+<summary><strong>Level 2: Strategic Management</strong></summary>
 
-### **⭐⭐ Intermediate Path: Strategic Management**
+### **Level 2: Strategic Management**
 
 ## Domain Selection Strategy
 
@@ -345,9 +345,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Management</strong></summary>
+<summary><strong>Level 3: Enterprise Management</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Management**
+### **Level 3: Enterprise Management**
 
 ## Advanced Domain Portfolio
 
@@ -374,7 +374,7 @@ persona: "Documentation Users"
 
 ## Best Practices for Email Accounts
 
-### **⭐ Beginner Path: Essential Guidelines**
+### **Level 1: Essential Guidelines**
 
 **Basic account management:**
 
@@ -383,9 +383,9 @@ persona: "Documentation Users"
 - **Security Basics**: Use strong passwords and basic security practices
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Practices</strong></summary>
+<summary><strong>Level 2: Professional Practices</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Practices**
+### **Level 2: Professional Practices**
 
 ## Account Naming Conventions
 
@@ -411,9 +411,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Excellence</strong></summary>
+<summary><strong>Level 3: Enterprise Excellence</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Excellence**
+### **Level 3: Enterprise Excellence**
 
 ## Advanced Reputation Management
 
@@ -440,7 +440,7 @@ persona: "Documentation Users"
 
 ## Advanced Features
 
-### **⭐ Beginner Path: Basic Automation**
+### **Level 1: Basic Automation**
 
 **Simple automation features:**
 
@@ -448,9 +448,9 @@ persona: "Documentation Users"
 - **Automatic Setup**: Automatic account configuration
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Features</strong></summary>
+<summary><strong>Level 2: Professional Features</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Features**
+### **Level 2: Professional Features**
 
 ## Bulk Account Creation
 
@@ -476,9 +476,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Features</strong></summary>
+<summary><strong>Level 3: Enterprise Features</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Advanced Automation
 
@@ -505,7 +505,7 @@ persona: "Documentation Users"
 
 ## Security and Compliance
 
-### **⭐ Beginner Path: Basic Security**
+### **Level 1: Basic Security**
 
 **Essential security measures:**
 
@@ -513,9 +513,9 @@ persona: "Documentation Users"
 - **SSL Encryption**: Secure email transmission enabled
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Security</strong></summary>
+<summary><strong>Level 2: Professional Security</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Security**
+### **Level 2: Professional Security**
 
 ## Security Features
 
@@ -541,9 +541,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Security</strong></summary>
+<summary><strong>Level 3: Enterprise Security</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Security**
+### **Level 3: Enterprise Security**
 
 ## Advanced Security
 
@@ -570,7 +570,7 @@ persona: "Documentation Users"
 
 ## Troubleshooting
 
-### **⭐ Beginner Path: Common Issues**
+### **Level 1: Common Issues**
 
 **Quick fixes for typical problems:**
 
@@ -578,9 +578,9 @@ persona: "Documentation Users"
 - **Account Access**: Unable to log in to created accounts
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Solutions</strong></summary>
+<summary><strong>Level 2: Professional Solutions</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Solutions**
+### **Level 2: Professional Solutions**
 
 ## Common Setup Issues
 
@@ -606,9 +606,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Solutions</strong></summary>
+<summary><strong>Level 3: Enterprise Solutions</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Solutions**
+### **Level 3: Enterprise Solutions**
 
 ## Advanced Troubleshooting
 
@@ -635,7 +635,7 @@ persona: "Documentation Users"
 
 ## Account Management
 
-### **⭐ Beginner Path: Basic Management**
+### **Level 1: Basic Management**
 
 **Simple account oversight:**
 
@@ -643,9 +643,9 @@ persona: "Documentation Users"
 - **Quick Actions**: Common account management tasks from dashboard
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Management</strong></summary>
+<summary><strong>Level 2: Professional Management</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Management**
+### **Level 2: Professional Management**
 
 ## Dashboard Features
 
@@ -671,9 +671,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Management</strong></summary>
+<summary><strong>Level 3: Enterprise Management</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Management**
+### **Level 3: Enterprise Management**
 
 ## Advanced Management
 

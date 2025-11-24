@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🔧 Strategic Investment Categories
+## Strategic Investment Categories
 
 ### Revenue Protection Investments
 
@@ -45,7 +45,7 @@ persona: "Documentation Users"
 
 ---
 
-## 👥 Process-Driven Analysis Framework
+## Process-Driven Analysis Framework
 
 ### Strategic Investment Evaluation
 
@@ -88,7 +88,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🎯 Strategic Impact Assessment
+## Strategic Impact Assessment
 
 ### Process-Driven ROI Calculation Framework
 
@@ -106,7 +106,7 @@ Potential Revenue Protection:
 
 Annual ROI: (($______ × 12) ) × 100 = _______%
 Payback Period: $______ / ($______ ) = ______ months
-```markdown
+```
 
 #### Cost Optimization Impact Assessment
 ```markdown
@@ -122,7 +122,7 @@ Cost Optimization Benefits:
 
 Annual ROI: (($______ × 12) ) × 100 = _______%
 Payback Period: $______ / ($______ ) = ______ months
-```markdown
+```
 
 #### Strategic Decision Support Impact Assessment
 ```markdown
@@ -138,11 +138,11 @@ Strategic Decision Value:
 
 Annual ROI: (($______ × 12) ) × 100 = _______%
 Payback Period: $______ / ($______ ) = ______ months
-```markdown
+```
 
 ---
 
-## 🛡️ Strategic Risk Assessment
+## Strategic Risk Assessment
 
 ### Process-Driven Risk Analysis
 
@@ -162,7 +162,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ---
 
-## 📈 Strategic Performance Modeling
+## Strategic Performance Modeling
 
 ### Directional Scenario Analysis
 
@@ -209,7 +209,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ---
 
-## 🏗️ Implementation Cost Analysis
+## Implementation Cost Analysis
 
 ### Strategic Implementation Framework
 
@@ -242,7 +242,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ---
 
-## 🎲 Strategic Risk-Adjusted ROI
+## Strategic Risk-Adjusted ROI
 
 ### Conservative Strategic Assessment
 **Process-driven approach with realistic constraints**

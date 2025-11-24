@@ -14,7 +14,7 @@ persona: "All Technical Stakeholders"
 
 ---
 
-## 🏗️ Architecture: Unified Monolithic Server
+## Architecture: Unified Monolithic Server
 
 For the MVP phase, PenguinMails uses a **monolithic API architecture**.
 
@@ -64,7 +64,7 @@ graph TB
 
 ---
 
-## 📚 Documentation Structure (Hub-and-Spoke)
+## Documentation Structure (Hub-and-Spoke)
 
 We use a **hub-and-spoke** pattern for documentation. Each major API domain has a "Hub" file that provides an overview and links to detailed "Spoke" files in a corresponding subdirectory.
 
@@ -107,7 +107,7 @@ Background job monitoring and event processing.
 
 ---
 
-## 🔄 Post-MVP Evolution
+## Post-MVP Evolution
 
 While we start with a monolith, the logical separation allows us to evolve:
 
@@ -119,7 +119,7 @@ Decisions to split services will be driven by **performance metrics** and **oper
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### For Frontend Developers
 

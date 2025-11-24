@@ -285,20 +285,20 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 #### High-Traffic Tables Heatmap
 
 | **Table Category** | **Table Name** | **Operations/Hour** | **Data Volume** | **User Impact** | **Traffic Level** |
-| **🔥 High OLTP** | `campaign_sequence_steps` | 50K-500K | High | High | 🟡 **HIGH** |
-| **🔥 Critical Content** | `email_messages` | 100K-1M | High | High | 🔴 **CRITICAL** |
-| **🔥 Critical Content** | `content_inbox_message_refs` | 100K-1M | High | High | 🔴 **CRITICAL** |
-| **🔥 Critical OLTP** | `inbox_message_refs` | 100K-1M | High | High | 🔴 **CRITICAL** |
-| **🔥 High OLTP** | `campaigns` | 5K-50K | Medium | Medium | 🟡 **HIGH** |
-| **⚡ Content DB** | `content_objects` | 200K-2M | Very High | High | 🔴 **CRITICAL** |
-| **⚡ Content DB** | `email_opens` | 200K-2M | Very High | High | 🔴 **CRITICAL** |
-| **⚡ Content DB** | `email_clicks` | 50K-500K | High | High | 🔴 **CRITICAL** |
-| **⚡ Content DB** | `attachments` | 100K-500K | High | Medium | 🟡 **HIGH** |
-| **📊 Analytics OLAP** | `daily_analytics` | 1K-10K | Medium | Medium | 🟢 **MEDIUM** |
-| **📊 Analytics OLAP** | `campaign_analytics` | 500-5K | Low | Low | 🟢 **MEDIUM** |
-| **📊 Analytics OLAP** | `billing_analytics` | 100-1K | Low | Low | 🟢 **MEDIUM** |
-| **⚡ Queue System** | `jobs` | 10K-100K | Medium | Critical | 🟡 **HIGH** |
-| **⚡ Queue System** | `job_logs` | 5K-50K | Medium | Medium | 🟡 **HIGH** |
+| **High OLTP** | `campaign_sequence_steps` | 50K-500K | High | High | **HIGH** |
+| **Critical Content** | `email_messages` | 100K-1M | High | High | **CRITICAL** |
+| **Critical Content** | `content_inbox_message_refs` | 100K-1M | High | High | **CRITICAL** |
+| **Critical OLTP** | `inbox_message_refs` | 100K-1M | High | High | **CRITICAL** |
+| **High OLTP** | `campaigns` | 5K-50K | Medium | Medium | **HIGH** |
+| **Content DB** | `content_objects` | 200K-2M | Very High | High | **CRITICAL** |
+| **Content DB** | `email_opens` | 200K-2M | Very High | High | **CRITICAL** |
+| **Content DB** | `email_clicks` | 50K-500K | High | High | **CRITICAL** |
+| **Content DB** | `attachments` | 100K-500K | High | Medium | **HIGH** |
+| **Analytics OLAP** | `daily_analytics` | 1K-10K | Medium | Medium | **MEDIUM** |
+| **Analytics OLAP** | `campaign_analytics` | 500-5K | Low | Low | **MEDIUM** |
+| **Analytics OLAP** | `billing_analytics` | 100-1K | Low | Low | **MEDIUM** |
+| **Queue System** | `jobs` | 10K-100K | Medium | Critical | **HIGH** |
+| **Queue System** | `job_logs` | 5K-50K | Medium | Medium | **HIGH** |
 
 #### Scaling Projections by Tenant Count
 

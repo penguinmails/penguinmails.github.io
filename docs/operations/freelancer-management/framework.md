@@ -182,37 +182,37 @@ All tasks must meet these completion criteria before final approval and payment:
 
 A task is **Done** when:
 
-- ✅ All acceptance criteria are met
-- ✅ Work is reviewed, tested, and approved by the lead
-- ✅ Jira status is updated with all links or screenshots
-- ✅ No blockers or pending dependencies remain
-- ✅ Work is verified on staging
+- All acceptance criteria are met
+- Work is reviewed, tested, and approved by the lead
+- Jira status is updated with all links or screenshots
+- No blockers or pending dependencies remain
+- Work is verified on staging
 
 ##### Development Tasks
 
 For development work, **Done** means:
 
-- ✅ Code is committed, reviewed, and merged into the right branch
-- ✅ Follows linting and naming standards
-- ✅ Tested manually or with unit tests
-- ✅ Documentation or .env.sample updated if needed
-- ✅ Successfully deployed to staging
+- Code is committed, reviewed, and merged into the right branch
+- Follows linting and naming standards
+- Tested manually or with unit tests
+- Documentation or .env.sample updated if needed
+- Successfully deployed to staging
 
 ##### Bug Fixes
 
 For bug fixes, **Done** means:
 
-- ✅ The issue is replicated and the root cause found
-- ✅ Fix verified in staging with before/after proof
-- ✅ Related areas regression-tested
+- The issue is replicated and the root cause found
+- Fix verified in staging with before/after proof
+- Related areas regression-tested
 
 ##### Research Spikes
 
 For research tasks, **Done** means:
 
-- ✅ Research completed and documented (Google Doc link in Jira)
-- ✅ Includes clear findings or recommendations
-- ✅ Reviewed by Anthony or team lead before closing
+- Research completed and documented (Google Doc link in Jira)
+- Includes clear findings or recommendations
+- Reviewed by Anthony or team lead before closing
 
 #### Story Points Guide
 

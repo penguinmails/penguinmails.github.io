@@ -34,7 +34,7 @@ ROI = ((Total Benefits - Total Costs) ) × 100
 Where:
 - Total Benefits = Revenue Impact + Time Savings Value + Risk Mitigation Value
 - Total Costs = Initial Investment + Ongoing Operational Costs
-```markdown
+```
 
 **ROI Analysis Timeframes**:
 - **Quarterly**: Quick ROI assessments for tactical decisions
@@ -139,7 +139,7 @@ Allocation by Category:
 - Marketing (10%): Advertising, content, events, partnerships
 - Innovation (5%): R&D, pilot projects, emerging technologies
 - Contingency (5%): Emergency fund, unexpected opportunities
-```markdown
+```
 
 **Budget Tracking Process**:
 1. **Monthly Monitoring**: Track actual vs. planned spending by category

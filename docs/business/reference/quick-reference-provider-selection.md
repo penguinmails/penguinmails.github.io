@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🎯 60-Second Provider Recommendation
+## 60-Second Provider Recommendation
 
 ### Volume-Based Quick Decision
 
@@ -48,7 +48,7 @@ persona: "Documentation Users"
 
 ---
 
-## 💰 Cost Impact Calculator
+## Cost Impact Calculator
 
 ### Current vs. Optimized State
 
@@ -61,7 +61,7 @@ Personnel: $3,500-5,000/month
 Compliance: $200-800/month
 ─────────────────────────────────
 TOTAL: $4,092-6,394/month
-```markdown
+```
 
 **Managed ESP Costs**
 ```markdown
@@ -71,28 +71,28 @@ Reduced Personnel: $1,000-2,000/month
 Compliance (built-in): $0-200/month
 ─────────────────────────────────
 TOTAL: $1,055-2,070/month
-```markdown
+```
 
 **Annual Savings: $23,844-52,488**
 
 ---
 
-## 🚦 Decision Traffic Light
+## Decision Traffic Light
 
-### 🟢 Green Light (Go with Managed ESP)
+### Green Light (Go with Managed ESP)
 - Volume < 1M emails/month
 - No dedicated DevOps team
 - Deliverability is business critical
 - Need compliance built-in
 - Want predictable costs
 
-### 🟡 Yellow Light (Evaluate Carefully)
+### Yellow Light (Evaluate Carefully)
 - Volume 1M-10M emails/month
 - Have some technical expertise
 - Email is important but not core product
 - Can handle basic technical setup
 
-### 🔴 Red Light (Consider Self-Hosted)
+### Red Light (Consider Self-Hosted)
 - Volume > 10M emails/month
 - Have 4-6+ email infrastructure engineers
 - Email is core product
@@ -101,7 +101,7 @@ TOTAL: $1,055-2,070/month
 
 ---
 
-## 📊 Performance Expectations
+## Performance Expectations
 
 ### Deliverability by Provider Tier
 
@@ -122,7 +122,7 @@ TOTAL: $1,055-2,070/month
 
 ---
 
-## ⚡ Quick Implementation Paths
+## Quick Implementation Paths
 
 ### Option 1: Fast Track (1-2 weeks)
 **Best For**: Immediate cost savings
@@ -150,7 +150,7 @@ TOTAL: $1,055-2,070/month
 
 ---
 
-## 🔍 Risk Assessment
+## Risk Assessment
 
 ### Managed ESP Risks (Low)
 - **Vendor Lock-in**: Moderate risk, mitigated by API standards
@@ -172,7 +172,7 @@ TOTAL: $1,055-2,070/month
 
 ---
 
-## 📞 Next Steps Checklist
+## Next Steps Checklist
 
 ### Immediate Actions (This Week)
 - [ ] Assess current monthly email volume
@@ -201,7 +201,7 @@ TOTAL: $1,055-2,070/month
 
 ---
 
-**💡 Pro Tip**: Start with the provider that matches your current volume and budget, then optimize as you scale. Most organizations save 60-80% on email infrastructure costs within the first 3 months.
+**Pro Tip**: Start with the provider that matches your current volume and budget, then optimize as you scale. Most organizations save 60-80% on email infrastructure costs within the first 3 months.
 
 ---
 

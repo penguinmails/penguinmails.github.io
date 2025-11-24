@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🚨 Regulatory Risk Context & Penalty Exposure
+## Regulatory Risk Context & Penalty Exposure
 
 ### Critical Penalty Exposure Analysis
 
@@ -44,7 +44,7 @@ persona: "Documentation Users"
 
 ---
 
-## 💰 Strategic Compliance Investment Framework
+## Strategic Compliance Investment Framework
 
 ### Total Cost Analysis by Organization Size
 
@@ -65,7 +65,7 @@ graph TB
     style C fill:#fff3e0
     style D fill:#f3e5f5
     style E fill:#ffcdd2
-```markdown
+```
 
 #### Investment Tiers and Recommendations
 
@@ -91,7 +91,7 @@ graph TB
 
 ---
 
-## 📊 ROI Calculation and Business Impact
+## ROI Calculation and Business Impact
 
 ### Risk vs. Prevention Cost Matrix
 
@@ -113,7 +113,7 @@ graph LR
     style F fill:#ffcdd2
     style G fill:#4caf50
     style H fill:#4caf50
-```markdown
+```
 
 ### Strategic ROI Examples
 
@@ -155,7 +155,7 @@ graph LR
 
 ---
 
-## 📈 Budget Planning and Cost Optimization
+## Budget Planning and Cost Optimization
 
 ### Strategic Cost Optimization Strategies
 
@@ -181,7 +181,7 @@ graph LR
 
 ---
 
-## 🎯 Strategic Recommendations by Business Stage
+## Strategic Recommendations by Business Stage
 
 ### Startup Phase (0-2 years)
 **Investment Philosophy**: Essential compliance foundation
@@ -203,19 +203,19 @@ graph LR
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For detailed cost analysis:**
-- [💰 Compliance Tool Pricing](cost-tool-pricing:1) - Detailed platform pricing and comparison
-- [⚙️ Implementation Management](cost-implementation:1) - Implementation and ongoing management costs
+- [Compliance Tool Pricing](cost-tool-pricing:1) - Detailed platform pricing and comparison
+- [Implementation Management](cost-implementation:1) - Implementation and ongoing management costs
 
 **For strategic planning:**
-- [🏢 Executive Summary](executive-summary:1) - Complete strategic analysis
-- [💱 ROI Calculator](roi-calculator:1) - Interactive cost-benefit analysis
+- [Executive Summary](executive-summary:1) - Complete strategic analysis
+- [ROI Calculator](roi-calculator:1) - Interactive cost-benefit analysis
 
 **For compliance framework:**
-- [🛡️ Compliance Overview](compliance-overview:1) - Regulatory compliance requirements
-- [🔧 Technical Infrastructure](technical-infrastructure:1) - Technical implementation costs
+- [Compliance Overview](compliance-overview:1) - Regulatory compliance requirements
+- [Technical Infrastructure](technical-infrastructure:1) - Technical implementation costs
 
 ---
 

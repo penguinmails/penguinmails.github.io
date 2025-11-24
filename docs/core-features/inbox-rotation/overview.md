@@ -10,12 +10,12 @@ persona: "Documentation Users"
 
 ## Strategic Account Protection & Detection Avoidance
 
-> **📖 Getting Started?** See our [Features Overview](/docs/core-features/feature-overview) for complete context and navigation.
+> **Getting Started?** See our [Features Overview](/docs/core-features/feature-overview) for complete context and navigation.
 > **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
 >
-> - **⭐ Beginner Path**: Basic inbox rotation for account protection
-> - **⭐⭐ Intermediate Path**: Advanced rotation strategies and optimization
-> - **⭐⭐⭐ Expert Path**: Technical implementation and enterprise features
+> - **Level 1**: Basic inbox rotation for account protection
+> - **Level 2**: Advanced rotation strategies and optimization
+> - **Level 3**: Technical implementation and enterprise features
 
 ---
 
@@ -25,13 +25,13 @@ persona: "Documentation Users"
 
 **Our Solution**: Intelligent rotation algorithms that mimic natural human sending patterns while distributing risk across multiple accounts, maintaining 95%+ deliverability rates even at scale.
 
-**👤 Perfect for Agency Owners** - Scale client campaigns across multiple domains without detection risk
-**👤 Ideal for Startup Founders** - Protect reputation while scaling from hundreds to thousands of sends
-**👤 Enterprise-Ready** - Advanced algorithms with comprehensive compliance and audit trails
+**Perfect for Agency Owners** - Scale client campaigns across multiple domains without detection risk
+**Ideal for Startup Founders** - Protect reputation while scaling from hundreds to thousands of sends
+**Enterprise-Ready** - Advanced algorithms with comprehensive compliance and audit trails
 
 ## Why Inbox Rotation Matters
 
-### **⭐ Beginner Path: Basic Protection**
+### **Level 1: Basic Protection**
 
 **Simple reasons to use rotation:**
 
@@ -39,7 +39,7 @@ persona: "Documentation Users"
 - **Account Protection**: Spread risk across multiple email addresses
 - **Maintain Reputation**: Protect your sender reputation by avoiding flags
 
-### **⭐⭐ Intermediate Path: Strategic Benefits**
+### **Level 2: Strategic Benefits**
 
 **Professional advantages:**
 
@@ -55,7 +55,7 @@ persona: "Documentation Users"
   - Reduced spam complaint rates
   - Better long-term campaign performance
 
-### **⭐⭐⭐ Expert Path: Technical Advantages**
+### **Level 3: Technical Advantages**
 
 **Enterprise-grade benefits:**
 
@@ -66,7 +66,7 @@ persona: "Documentation Users"
 
 ## How Our Inbox Rotation Works
 
-### **⭐ Beginner Path: Simple Setup**
+### **Level 1: Simple Setup**
 
 **Basic rotation for immediate protection:**
 
@@ -74,7 +74,7 @@ persona: "Documentation Users"
 - **Volume Limits**: Set daily limits for each account to avoid flags
 - **Basic Monitoring**: Track account health and performance
 
-### **⭐⭐ Intermediate Path: Smart Rotation**
+### **Level 2: Smart Rotation**
 
 **Advanced rotation features:**
 
@@ -90,7 +90,7 @@ persona: "Documentation Users"
   - **Failover Protection**: Automatically switches to backup accounts if issues arise
   - **Custom Rules**: Apply your specific rotation preferences and restrictions
 
-### **⭐⭐⭐ Expert Path: Advanced Intelligence**
+### **Level 3: Advanced Intelligence**
 
 **Enterprise-grade rotation system:**
 
@@ -116,7 +116,7 @@ persona: "Documentation Users"
 
 ## Key Features
 
-### **⭐ Beginner Path: Essential Features**
+### **Level 1: Essential Features**
 
 **Core rotation capabilities:**
 
@@ -124,7 +124,7 @@ persona: "Documentation Users"
 - **Volume Limits**: Set daily/weekly limits for each account
 - **Basic Account Management**: Simple account addition and removal
 
-### **⭐⭐ Intermediate Path: Professional Features**
+### **Level 2: Professional Features**
 
 ## Flexible Rotation Settings
 
@@ -147,7 +147,7 @@ persona: "Documentation Users"
 - **Business Day Optimization**: Focus on sending during business hours
 - **Custom Scheduling**: Create custom schedules based on your strategy
 
-### **⭐⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Analytics and Insights
 
@@ -172,7 +172,7 @@ persona: "Documentation Users"
 
 ## Setting Up Inbox Rotation
 
-### **⭐ Beginner Path: Quick Setup (10 Minutes)**
+### **Level 1: Quick Setup (10 Minutes)**
 
 **Basic rotation configuration:**
 
@@ -181,7 +181,7 @@ persona: "Documentation Users"
 3. **Basic Configuration**: Set up simple rotation rules and limits
 4. **Testing**: Test rotation with a small sample campaign
 
-### **⭐⭐ Intermediate Path: Professional Setup**
+### **Level 2: Professional Setup**
 
 ## Step 1: Account Preparation
 
@@ -204,7 +204,7 @@ persona: "Documentation Users"
 - **Sequence Setup**: Create multi-touch sequences across accounts
 - **Performance Monitoring**: Set up tracking and analytics
 
-### **⭐⭐ Expert Path: Enterprise Setup**
+### **Level 3: Enterprise Setup**
 
 ## Advanced Account Management
 
@@ -229,7 +229,7 @@ persona: "Documentation Users"
 
 ## Performance Monitoring
 
-### **⭐ Beginner Path: Basic Monitoring**
+### **Level 1: Basic Monitoring**
 
 **Essential metrics to track:**
 
@@ -237,7 +237,7 @@ persona: "Documentation Users"
 - **Response Rates**: Monitor response quality and quantity by account
 - **Bounce Rates**: Keep track of hard and soft bounces across accounts
 
-### **⭐⭐ Intermediate Path: Professional Analytics**
+### **Level 2: Professional Analytics**
 
 ## Account Health Indicators
 
@@ -260,7 +260,7 @@ persona: "Documentation Users"
 - **Cost Analysis**: Calculate cost per successful email across accounts
 - **ROI Measurement**: Measure return on investment for rotation strategies
 
-### **⭐⭐ Expert Path: Advanced Analytics**
+### **Level 3: Advanced Analytics**
 
 ## Predictive Analytics
 

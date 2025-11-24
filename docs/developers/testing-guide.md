@@ -35,7 +35,7 @@ describe('Email API Integration Tests', () => {
     expect(result.status).toBe('created');
   });
 });
-```markdown
+```
 
 **API Testing Coverage**:
 - Authentication and authorization testing
@@ -66,7 +66,7 @@ describe('Email Campaign E2E Tests', () => {
     expect(analytics.delivered).toBeGreaterThan(0);
   });
 });
-```markdown
+```
 
 **Integration Testing Scope**:
 - Database integration and data consistency
@@ -99,7 +99,7 @@ async function performanceTest() {
     throughput: results.requestsPerSecond
   };
 }
-```markdown
+```
 
 **Performance Testing Criteria**:
 - Response time targets (<200ms for 95% of requests)
@@ -134,7 +134,7 @@ jobs:
 
       - name: Generate Coverage Report
         run: npm run coverage
-```markdown
+```
 
 **Pipeline Testing Stages**:
 1. Unit testing with code coverage reporting

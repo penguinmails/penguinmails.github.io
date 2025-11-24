@@ -63,7 +63,7 @@ persona: "Documentation Users"
     "budget_variance": true
   }
 }
-```markdown
+```
 
 **Database Integration Patterns**
 - **Direct Database Connections**: Secure ODBC/JDBC connections
@@ -98,7 +98,7 @@ FROM financial_revenue_attribution
 WHERE campaign_date >= CURRENT_DATE - INTERVAL '30 days'
 GROUP BY campaign_id, campaign_name
 ORDER BY total_revenue DESC;
-```markdown
+```
 
 #### Marketing Integration - Campaign ROI
 **Marketing Automation Integration**
@@ -148,7 +148,7 @@ def calculate_marketing_roi(campaign_data):
         })
 
     return results
-```markdown
+```
 
 #### Product Integration - Development ROI
 **Product Development Cost Tracking**

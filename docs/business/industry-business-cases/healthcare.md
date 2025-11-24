@@ -198,23 +198,23 @@ Healthcare organizations struggle with:
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For Healthcare Executive Decision Making (Level 2):**
 
-- [💰 ROI Calculator](/docs/business/core/roi-calculator) - Healthcare-specific ROI calculations
-- [📊 Cost Comparisons](/docs/business/core/cost-comparisons) - Healthcare cost analysis and benchmarks
-- [🏆 Competitive Analysis](/docs/business/core/competitive-analysis) - Healthcare provider comparison
+- [ROI Calculator](/docs/business/core/roi-calculator) - Healthcare-specific ROI calculations
+- [Cost Comparisons](/docs/business/core/cost-comparisons) - Healthcare cost analysis and benchmarks
+- [Competitive Analysis](/docs/business/core/competitive-analysis) - Healthcare provider comparison
 
 **For Technical Validation (Level 3):**
 
-- [📋 Detailed Healthcare Analysis](/docs/business/customer-success/industry-cases/healthcare-cs) - Complete healthcare implementation and compliance deep dive
-- [📋 Compliance Framework](/docs/business/procurement-compliance) - Complete HIPAA compliance analysis
-- [🔒 Security Compliance Overview](/docs/business/procurement-compliance) - Healthcare security overview
+- [Detailed Healthcare Analysis](/docs/business/customer-success/industry-cases/healthcare-cs) - Complete healthcare implementation and compliance deep dive
+- [Compliance Framework](/docs/business/procurement-compliance) - Complete HIPAA compliance analysis
+- [Security Compliance Overview](/docs/business/procurement-compliance) - Healthcare security overview
 
 **For Compliance and Legal Review:**
 
-- [📋 Procurement Guide](/docs/business/procurement-compliance) - Enterprise healthcare evaluation framework
+- [Procurement Guide](/docs/business/procurement-compliance) - Enterprise healthcare evaluation framework
 
 ---
 

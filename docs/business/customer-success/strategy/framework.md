@@ -21,7 +21,7 @@ The Customer Success Framework provides a systematic approach to driving custome
 ```markdown
 Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
                        (Business Health × 0.25) + (Relationship Health × 0.15)
-```markdown
+```
 
 #### Health Score Categories
 - **Green (80-100)**: Healthy, low-risk accounts with expansion potential

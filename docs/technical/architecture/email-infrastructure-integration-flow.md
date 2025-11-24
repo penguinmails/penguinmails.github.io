@@ -88,7 +88,7 @@ graph TB
     class CENTRAL_FRONTEND,CENTRAL_API,CENTRAL_SMTP,CENTRAL_QUEUE central
     class TENANT_SMTP,TENANT_DB,TENANT_QUEUE tenant
     class MAILU,HOSTWIND,DNS external
-```markdown
+```
 
 ## Integration Architecture Explanation
 

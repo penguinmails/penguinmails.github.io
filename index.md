@@ -59,8 +59,8 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [🔧 Technical Infrastructure](/docs/business/technical-infrastructure) - *Complete technical specs*
-- [⚖️ Compliance Framework](/docs/business/compliance-framework) - *Technical compliance implementation*
+- [🔧 Technical Infrastructure](/docs/business/implementation/technical-infrastructure) - *Complete technical specs*
+- [⚖️ Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - *Technical compliance implementation*
 - [🏗️ Architecture Overview](/docs/technical/architecture/overview) - *System architecture*
 - [🔌 API Reference](/docs/implementation-technical/development-guidelines/api-reference) - *Developer documentation*
 - [📚 Quick Setup](/docs/quick-setup) - *Implementation guide*
@@ -75,6 +75,53 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 - [👥 User Analytics](/docs/operations-analytics/analytics-performance/user-analytics) - *Campaign insights*
 - [💹 Financial Operations](/docs/operations-analytics/operations-management/payment-analytics-financial-operations) - *Revenue tracking*
 - [🏢 Operations Management](/docs/operations-analytics/operations-management/README) - *Process optimization*
+
+### 👨‍💻 For Developers & Contributors
+
+## Code implementation, task management, and contribution workflow
+
+{: .highlight .btn-group-vertical }
+
+- [📋 Active Tasks](/tasks/README) - *Current development work and sprint tasks*
+- [🖥️ Frontend Specifications](/docs/design/frontend-routing-map) - *View routes and UI component specs*
+- [🔌 API Documentation](/docs/implementation-technical/api/README) - *Backend endpoints and schemas*
+- [✨ Features](/docs/feature-overview) - *Feature specifications to implement*
+- [🧭 User Journeys](/user-journeys/README) - *User workflows to support*
+- [📚 Contributing Guide](/CONTRIBUTING) - *How to contribute to the project*
+
+---
+
+## 🗺️ Planning & Roadmap
+
+### What We're Building & When
+
+{: .highlight }
+
+**Navigate our product development timeline and feature pipeline**
+
+{: .highlight .btn-group-vertical }
+
+- [📅 Product Roadmap](/docs/roadmap-considerations) - *Feature timeline and development phases*
+- [🏗️ Implementation Roadmap](/docs/business/implementation/implementation-roadmap) - *Technical milestones and delivery schedule*
+- [✨ Features Overview](/docs/feature-overview) - *Approved and planned feature catalog*
+- [📊 Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap) - *Feature classification framework*
+
+### Understanding Customer Workflows
+
+{: .highlight .btn-group-vertical }
+
+- [🧭 User Journeys Hub](/user-journeys/README) - *How customers accomplish their goals*
+- [🛤️ Onboarding Flow](/docs/freelancer-onboarding/user-journey-testing) - *New user experience*
+- [📧 Campaign Journey](/docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns) - *Campaign creation workflow*
+
+### For Implementers & Developers
+
+{: .highlight .btn-group-vertical }
+
+- [📋 Active Development Tasks](/tasks/README) - *Current sprint work and task queue*
+- [🖥️ Frontend View Specifications](/docs/design/frontend-routing-map) - *Complete route and UI specs*
+- [🔌 API Architecture](/docs/implementation-technical/api/README) - *Backend endpoint documentation*
+- [🎨 Design System](/docs/design/README) - *UI patterns and component library*
 
 ---
 

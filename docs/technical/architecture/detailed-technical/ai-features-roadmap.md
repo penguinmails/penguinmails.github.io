@@ -12,13 +12,13 @@ This document defines grounded AI features for PenguinMails and how they integra
 
 We follow the progressive disclosure model:
 
-- ⭐ Tier 1: Simple, safe utilities directly visible to users.
-- ⭐⭐ Tier 2: Cross-feature workflows and configuration.
-- ⭐⭐⭐ Tier 3: Technical architecture and integration details.
+- Level 1: Simple, safe utilities directly visible to users.
+- Level 2: Cross-feature workflows and configuration.
+- Level 3: Technical architecture and integration details.
 
 ---
 
-## 1. Template Composer AI Utilities (⭐)
+## 1. Template Composer AI Utilities (Level 1)
 
 AI helpers available directly in the template editor. Scope is focused, reversible, and user-controlled.
 
@@ -73,7 +73,7 @@ AI helpers available directly in the template editor. Scope is focused, reversib
 
 ---
 
-## 2. Template Analyzer (⭐ )
+## 2. Template Analyzer (Level 1)
 
 A post-composition "Analyze" button that inspects the template before sending or saving.
 
@@ -113,7 +113,7 @@ A post-composition "Analyze" button that inspects the template before sending or
 
 ---
 
-## 3. Inbox Assistance (⭐ )
+## 3. Inbox Assistance (Level 1)
 
 AI helpers in the unified inbox to reduce manual triage and reply drafting workload.
 
@@ -150,7 +150,7 @@ AI helpers in the unified inbox to reduce manual triage and reply drafting workl
 
 ---
 
-## 4. Future Exploration (Clearly Marked as Experimental) (⭐⭐⭐)
+## 4. Future Exploration (Clearly Marked as Experimental) (Level 3)
 
 These ideas come from the earlier AI artifacts but are intentionally de-scoped to “explore”:
 
@@ -171,7 +171,7 @@ All of these:
 
 ---
 
-## 5. Technical Integration Pointers (⭐⭐⭐ summary)
+## 5. Technical Integration Pointers (Level 3 summary)
 
 Implementation details should live in detailed architecture docs, but core patterns are:
 

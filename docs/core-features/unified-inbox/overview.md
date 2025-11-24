@@ -16,13 +16,13 @@ persona: "Documentation Users"
 
 **Our Solution**: A centralized command center that consolidates all cold email responses with AI-powered organization, real-time notifications, and automated follow-up management, ensuring **zero missed opportunities** and faster response times.
 
-**👤 Perfect for Agency Owners** - Manage client responses across multiple campaigns without losing track
-**👤 Ideal for Startup Founders** - Centralize response management as you scale outreach efforts
-**👤 Enterprise-Ready** - Team collaboration tools with comprehensive audit trails and performance tracking
+**Perfect for Agency Owners** - Manage client responses across multiple campaigns without losing track
+**Ideal for Startup Founders** - Centralize response management as you scale outreach efforts
+**Enterprise-Ready** - Team collaboration tools with comprehensive audit trails and performance tracking
 
 ## Why You Need a Unified Inbox
 
-### **⭐ Beginner Path: Basic Problem Solving**
+### **Level 1: Basic Problem Solving**
 
 **Simple problems to address:**
 
@@ -30,7 +30,7 @@ persona: "Documentation Users"
 - **Missed Opportunities**: Important responses get buried or forgotten
 - **Time Wasted**: Checking multiple email accounts wastes valuable time
 
-### **⭐⭐ Intermediate Path: Professional Benefits**
+### **Level 2: Professional Benefits**
 
 **Enhanced productivity through centralized management:**
 
@@ -46,7 +46,7 @@ persona: "Documentation Users"
   - Track conversation history across multiple touchpoints
   - Prioritize high-value responses automatically
 
-### **⭐⭐ Expert Path: Strategic Advantages**
+### **Level 3: Strategic Advantages**
 
 **Enterprise-grade capabilities:**
 
@@ -57,7 +57,7 @@ persona: "Documentation Users"
 
 ## How Our Unified Inbox Works
 
-### **⭐ Beginner Path: Simple Setup**
+### **Level 1: Simple Setup**
 
 **Basic integration for immediate results:**
 
@@ -65,7 +65,7 @@ persona: "Documentation Users"
 - **Basic Organization**: Simple categorization and response tracking
 - **Email Integration**: Works with Gmail, Outlook, Yahoo, and custom domains
 
-### **⭐⭐ Intermediate Path: Smart Features**
+### **Level 2: Smart Features**
 
 **Advanced organization and filtering:**
 
@@ -81,7 +81,7 @@ persona: "Documentation Users"
   - **Custom Labels**: Create your own categorization system
   - **Time-based Views**: See responses by day, week, or month
 
-### **⭐⭐ Expert Path: Advanced Intelligence**
+### **Level 3: Advanced Intelligence**
 
 **Enterprise-grade features:**
 
@@ -104,7 +104,7 @@ persona: "Documentation Users"
 
 ## Key Features
 
-### **⭐ Beginner Path: Essential Features**
+### **Level 1: Essential Features**
 
 **Core functionality for immediate value:**
 
@@ -112,7 +112,7 @@ persona: "Documentation Users"
 - **Basic Organization**: Simple categorization and response tracking
 - **Mobile Access**: Check responses on-the-go
 
-### **⭐⭐ Intermediate Path: Professional Features**
+### **Level 2: Professional Features**
 
 ## Conversation Management
 
@@ -135,7 +135,7 @@ persona: "Documentation Users"
 - **Time-to-Response Metrics**: Measure how quickly prospects respond to your outreach
 - **Conversion Tracking**: Follow prospects from initial response to booked meetings
 
-### **⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Advanced Team Collaboration
 
@@ -160,7 +160,7 @@ persona: "Documentation Users"
 
 ## Setting Up Your Unified Inbox
 
-### **⭐ Beginner Path: Quick Setup (5 Minutes)**
+### **Level 1: Quick Setup (5 Minutes)**
 
 **Essential setup for immediate results:**
 
@@ -169,7 +169,7 @@ persona: "Documentation Users"
 3. **Basic Organization**: Set up simple labels and categories
 4. **Start Managing**: Begin organizing and responding to responses
 
-### **⭐⭐ Intermediate Path: Professional Setup**
+### **Level 2: Professional Setup**
 
 ## Step 1: Account Connection
 
@@ -192,7 +192,7 @@ persona: "Documentation Users"
 - **Reporting Setup**: Configure performance tracking and analytics
 - **Team Sharing**: Invite team members to collaborate on responses
 
-### **⭐⭐ Expert Path: Enterprise Setup**
+### **Level 3: Enterprise Setup**
 
 ## Advanced Configuration
 
@@ -217,7 +217,7 @@ persona: "Documentation Users"
 
 ## Response Management Workflow
 
-### **⭐ Beginner Path: Simple Process**
+### **Level 1: Simple Process**
 
 **Basic workflow for daily use:**
 
@@ -226,7 +226,7 @@ persona: "Documentation Users"
 3. **Categorize**: Apply basic tags (Interested)
 4. **Respond**: Reply directly or schedule follow-up
 
-### **⭐⭐ Intermediate Path: Professional Process**
+### **Level 2: Professional Process**
 
 ## Step 1: Response Review
 
@@ -249,7 +249,7 @@ persona: "Documentation Users"
 3. **Performance Analysis**: Track conversion rates and response quality
 4. **Workflow Optimization**: Adjust strategies based on performance data
 
-### **⭐⭐ Expert Path: Advanced Process**
+### **Level 3: Advanced Process**
 
 ## Enterprise Workflow Management
 
@@ -276,7 +276,7 @@ persona: "Documentation Users"
 
 ## Advanced Features
 
-### **⭐ Beginner Path: Smart Auto-responses**
+### **Level 1: Smart Auto-responses**
 
 **Basic automation features:**
 
@@ -284,9 +284,9 @@ persona: "Documentation Users"
 - **Basic Auto-tagging**: Automatically categorize responses
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Automation</strong></summary>
+<summary><strong>Level 2: Professional Automation</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Automation**
+### **Level 2: Professional Automation**
 
 ## Smart Auto-responses
 
@@ -305,9 +305,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Features</strong></summary>
+<summary><strong>Level 3: Enterprise Features</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Features**
+### **Level 3: Enterprise Features**
 
 ## Advanced Team Collaboration
 
@@ -336,7 +336,7 @@ persona: "Documentation Users"
 
 ## Best Practices
 
-### **⭐ Beginner Path: Essential Habits**
+### **Level 1: Essential Habits**
 
 **Daily practices for success:**
 
@@ -345,9 +345,9 @@ persona: "Documentation Users"
 - **Professional Tone**: Maintain professional communication standards
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Practices</strong></summary>
+<summary><strong>Level 2: Professional Practices</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Practices**
+### **Level 2: Professional Practices**
 
 ## Response Speed
 
@@ -373,9 +373,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Excellence</strong></summary>
+<summary><strong>Level 3: Enterprise Excellence</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Excellence**
+### **Level 3: Enterprise Excellence**
 
 ## Advanced Response Strategy
 
@@ -404,7 +404,7 @@ persona: "Documentation Users"
 
 ## Troubleshooting
 
-### **⭐ Beginner Path: Common Issues**
+### **Level 1: Common Issues**
 
 **Quick fixes for typical problems:**
 
@@ -413,9 +413,9 @@ persona: "Documentation Users"
 - **Performance Issues**: Refresh the page and check internet connection
 
 <details>
-<summary><strong>⭐⭐ Intermediate Path: Professional Solutions</strong></summary>
+<summary><strong>Level 2: Professional Solutions</strong></summary>
 
-### **⭐⭐ Intermediate Path: Professional Solutions**
+### **Level 2: Professional Solutions**
 
 ## Sync Issues
 
@@ -441,9 +441,9 @@ persona: "Documentation Users"
 </details>
 
 <details>
-<summary><strong>⭐⭐⭐ Expert Path: Enterprise Solutions</strong></summary>
+<summary><strong>Level 3: Enterprise Solutions</strong></summary>
 
-### **⭐⭐⭐ Expert Path: Enterprise Solutions**
+### **Level 3: Enterprise Solutions**
 
 ## Advanced Issue Resolution
 

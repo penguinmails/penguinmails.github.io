@@ -250,7 +250,7 @@ export async function trackEmailOpened(props: {
     },
   });
 }
-```markdown
+```
 
 Key rules:
 - Do not mirror these raw events into OLAP.
@@ -330,7 +330,7 @@ export async function aggregateDailyCampaignAnalytics(tenantId: string, date: st
     `);
   }
 }
-```markdown
+```
 
 Key rules:
 - Jobs and ETL workers:

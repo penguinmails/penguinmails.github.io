@@ -56,7 +56,7 @@ sequenceDiagram
     API-->>Client: Campaign Status Update
 
     Note over Client,Analytics: Real-time updates through WebSocket
-```markdown
+```
 
 ## Processing Pipeline Stages
 

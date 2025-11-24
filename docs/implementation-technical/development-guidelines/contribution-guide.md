@@ -25,17 +25,17 @@ persona: "Documentation Users"
 
 This section follows the **Progressive Complexity Framework** with three distinct levels:
 
-### 📋 **Level 1: Getting Started**
+### **Level 1: Getting Started**
 
 - `contribution-guide` (this document) - Main onboarding and contribution process
 - Environment setup, first-time contributor guidance, and community overview
 
-### 🏗️ **Level 2: Development Standards**
+### **Level 2: Development Standards**
 
 - Code contribution process, code review standards, and collaboration guidelines
 - Testing requirements, documentation standards, and quality assurance
 
-### 🚀 **Level 3: Advanced Contribution**
+### **Level 3: Advanced Contribution**
 
 - Enterprise development workflows, security protocols, and performance standards
 - Community governance, recognition programs, and long-term contribution strategies
@@ -44,22 +44,22 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ## Getting Started
 
-### Welcome to PenguinMails (⭐⭐⭐)
+### Welcome to PenguinMails (Level 3)
 
 Thank you for your interest in contributing to PenguinMails! We're excited to have you join our community of developers working to revolutionize email marketing through AI-powered analytics and personalization.
 
 **What You Can Contribute:**
 
-- 🐛 Bug fixes and improvements
-- ✨ New features and enhancements
-- 📚 Documentation improvements
-- 🧪 Test coverage additions
-- 🎨 UI/UX improvements
-- 🌐 Internationalization (i18n)
-- 📊 Analytics and reporting features
-- 🤖 AI/ML integration improvements
+- Bug fixes and improvements
+- New features and enhancements
+- Documentation improvements
+- Test coverage additions
+- UI/UX improvements
+- Internationalization (i18n)
+- Analytics and reporting features
+- AI/ML integration improvements
 
-### First-Time Contributor Setup (⭐⭐)
+### First-Time Contributor Setup (Level 2)
 
 #### 1. Fork and Clone the Repository
 
@@ -71,13 +71,8 @@ cd penguinmails
 # Add the upstream repository as remote
 git remote add upstream https://github.com/penguinmails/platform.git
 
-# Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -r requirements/dev.txt
-npm install  # For JavaScript/TypeScript components
+# Install dependencies
+npm install  # For JavaScript/TypeScript components and CSS processing
 ```markdown
 
 #### 2. Environment Configuration
@@ -96,34 +91,31 @@ ANALYTICS_ENDPOINT=http://localhost:8080/analytics
 
 #### 3. Database Setup
 ```bash
-# Create development database
-createdb penguinmails_dev
+# Set up database connection
+# Update DATABASE_URL in .env file
+# Example: postgresql://dev:dev@localhost:5432/penguinmails_dev
 
-# Run migrations
-python manage.py migrate
+# Run database migrations
+npm run db:migrate
 
 # Load sample data (optional)
-python manage.py loaddata development_data.json
-
-# Create superuser for admin access
-python manage.py createsuperuser
+npm run db:seed
 ```markdown
 
 #### 4. Verify Installation
 ```bash
 # Run development server
-python manage.py runserver
+npm run dev
 
 # In another terminal, run tests
-python manage.py test
+npm test
 
 # Run linting
-black .
-flake8 .
-eslint .
+npm run lint
+npm run type-check
 ```markdown
 
-### Development Environment Tools (⭐⭐)
+### Development Environment Tools (Level 2)
 
 #### Recommended IDE Setup
 **VS Code Configuration:**
@@ -147,26 +139,25 @@ eslint .
 ```markdown
 
 **Required Extensions:**
-- Python
-- Python Docstring Generator
-- Black Formatter
+- TypeScript
+- JavaScript
 - ESLint
 - Prettier
 - GitLens
 - Docker
 - REST Client
+- SQLite Viewer
 
 #### Development Tools Installation
 ```bash
 # Install pre-commit hooks
-pre-commit install
+npm run install:hooks
 
 # Install additional development tools
-pip install bandit safety pytest-cov factory_boy
 npm install -g @typescript-eslint/cli prettier
 ```markdown
 
-### Understanding the Project Structure (⭐⭐)
+### Understanding the Project Structure (Level 2)
 
 ```markdown
 penguinmails/
@@ -188,10 +179,9 @@ penguinmails/
 │   └── e2e/                      # End-to-end tests
 ├── scripts/                      # Development scripts
 ├── migrations/                   # Database migrations
-├── requirements/                 # Python dependencies
-│   ├── base.txt                  # Core dependencies
-│   ├── dev.txt                   # Development dependencies
-│   └── prod.txt                  # Production dependencies
+├── package.json                  # Node.js dependencies and scripts
+├── tsconfig.json                # TypeScript configuration
+├── tailwind.config.js           # CSS framework configuration
 └── docker/                       # Docker configuration
 ```markdown
 
@@ -199,7 +189,7 @@ penguinmails/
 
 ## Code Contribution Process
 
-### Development Workflow (⭐⭐⭐)
+### Development Workflow (Level 3)
 
 #### 1. Create a Feature Branch
 ```bash
@@ -273,7 +263,7 @@ Add screenshots to help explain your changes.
 Any additional information or context.
 ```markdown
 
-### Contribution Types (⭐⭐⭐)
+### Contribution Types (Level 3)
 
 #### Bug Fixes
 ```python
@@ -368,31 +358,31 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
 ```markdown
 ```markdown
 
-### Code Review Process (⭐⭐⭐)
+### Code Review Process (Level 3)
 
 #### Review Criteria
 
-**Code Quality (⭐⭐⭐)**
+**Code Quality (Level 3)**
 - [ ] Follows established coding patterns
 - [ ] Properly documented with docstrings/comments
 - [ ] Handles edge cases and errors gracefully
 - [ ] No hardcoded values or magic numbers
 - [ ] Appropriate abstractions and separation of concerns
 
-**Testing (⭐⭐⭐)**
+**Testing (Level 3)**
 - [ ] Unit tests cover new functionality (minimum 80% coverage)
 - [ ] Integration tests for API endpoints
 - [ ] E2E tests for critical user workflows
 - [ ] Performance tests for performance-sensitive code
 
-**Security (⭐⭐⭐)**
+**Security (Level 3)**
 - [ ] Input validation implemented
 - [ ] Authentication/authorization checks
 - [ ] SQL injection prevention
 - [ ] XSS protection measures
 - [ ] No sensitive data exposure
 
-**Performance (⭐⭐)**
+**Performance (Level 2)**
 - [ ] Efficient algorithms and data structures
 - [ ] Proper indexing for database queries
 - [ ] Memory usage optimization
@@ -435,7 +425,7 @@ git log --oneline -5
 
 ## Bug Reporting
 
-### Bug Report Guidelines (⭐⭐⭐)
+### Bug Report Guidelines (Level 3)
 
 Before reporting a bug, please:
 1. **Search existing issues** to avoid duplicates
@@ -443,7 +433,7 @@ Before reporting a bug, please:
 3. **Verify the bug** on the latest version
 4. **Prepare minimal reproduction** case
 
-### Bug Report Template (⭐⭐⭐)
+### Bug Report Template (Level 3)
 
 ```markdown
 ## Bug Description
@@ -466,7 +456,7 @@ A clear and concise description of what actually happened.
 - OS: [e.g. macOS Big Sur, Ubuntu 20.04, Windows 11]
 - Browser: [e.g. chrome, safari, firefox]
 - Version: [e.g. 91.0.4472.124]
-- Python Version: [e.g. 3.9.7]
+- Node.js Version: [e.g. 18.x.x]
 - PenguinMails Version: [e.g. 2.1.3]
 
 ## Screenshots
@@ -487,7 +477,7 @@ Add any other context about the problem here.
 - [ ] Low (minor inconvenience)
 ```markdown
 
-### Bug Triage Process (⭐⭐)
+### Bug Triage Process (Level 2)
 
 #### Issue Classification
 - **Critical**: System down, security vulnerabilities, data loss
@@ -513,7 +503,7 @@ graph TD
     L --> M[Update Documentation]
 ```markdown
 
-### Bug Fix Guidelines (⭐⭐⭐)
+### Bug Fix Guidelines (Level 3)
 
 #### Root Cause Analysis
 ```python
@@ -603,7 +593,7 @@ class EmailService:
 
 ## Feature Requests
 
-### Feature Request Process (⭐⭐⭐)
+### Feature Request Process (Level 3)
 
 #### Before Submitting a Feature Request
 
@@ -619,7 +609,7 @@ class EmailService:
 - Technical feasibility: Implementation complexity
 - Resource requirements: Development effort needed
 
-### Feature Request Template (⭐⭐⭐)
+### Feature Request Template (Level 3)
 
 ```markdown
 ## Feature Description
@@ -656,7 +646,7 @@ If applicable, provide mockups or examples of the feature.
 Any additional information about the feature request.
 ```markdown
 
-### Feature Development Workflow (⭐⭐⭐)
+### Feature Development Workflow (Level 3)
 
 #### 1. Feature Approval Process
 ```mermaid
@@ -804,7 +794,7 @@ async def test_optimization_api_integration():
 
 ## Code Style & Quality Standards
 
-### Python Code Standards (⭐⭐⭐)
+### Python Code Standards (Level 3)
 
 #### Style Guide Compliance
 ```python
@@ -1481,7 +1471,7 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
 ## Testing Requirements
 
-### Testing Standards (⭐⭐⭐)
+### Testing Standards (Level 3)
 
 #### Test Coverage Requirements
 - **Overall Coverage**: Minimum 80%
@@ -1513,7 +1503,7 @@ tests/
 └── conftest.py                   # Pytest configuration
 ```markdown
 
-#### Unit Testing Standards (⭐⭐⭐)
+#### Unit Testing Standards (Level 3)
 ```python
 # tests/unit/test_email_service.py
 import pytest
@@ -1621,7 +1611,7 @@ class TestEmailService:
         assert self.mock_smtp_client.send_email_batch.call_count == expected_batches
 ```markdown
 
-#### Integration Testing Standards (⭐⭐)
+#### Integration Testing Standards (Level 2)
 ```python
 # tests/integration/test_campaign_api.py
 import pytest
@@ -1806,7 +1796,7 @@ class TestCampaignAPI:
         assert data2["meta"]["pagination"]["page"] == 2
 ```markdown
 
-#### End-to-End Testing Standards (⭐⭐)
+#### End-to-End Testing Standards (Level 2)
 ```typescript
 // tests/e2e/campaign-workflow.spec.ts
 import { test, expect } from '@playwright/test';
@@ -1941,7 +1931,7 @@ test.describe('Campaign Workflow E2E Tests', () => {
 
 ## Documentation Contributions
 
-### Documentation Standards (⭐⭐⭐)
+### Documentation Standards (Level 3)
 
 #### Writing Guidelines
 ```markdown
@@ -2104,7 +2094,7 @@ except AuthenticationError as e:
 5. **Enable AI optimization** for better performance (when available)
 ```markdown
 
-### Tutorial Documentation (⭐⭐)
+### Tutorial Documentation (Level 2)
 ```markdown
 # Getting Started with PenguinMails API
 
@@ -2135,9 +2125,9 @@ response = requests.get(
 )
 
 if response.status_code == 200:
-    print("✅ API connection successful!")
+    print("API connection successful!")
 else:
-    print(f"❌ Connection failed: {response.status_code}")
+    print(f"Connection failed: {response.status_code}")
 ```markdown
 
 ## Step 2: Create Your First Campaign
@@ -2309,13 +2299,13 @@ Congratulations! You've created and sent your first campaign with PenguinMails.
 
 ## Community Governance
 
-### Contributor Recognition Programs (⭐⭐⭐)
+### Contributor Recognition Programs (Level 3)
 
 #### Contribution Levels
-- **🥉 Bronze Contributor** (1-10 contributions): Bug fixes, documentation updates
-- **🥈 Silver Contributor** (11-50 contributions): Features, significant improvements
-- **🥇 Gold Contributor** (51+ contributions): Major features, core functionality
-- **⭐ Core Maintainer** (By invitation): Direct repository access, project direction input
+- **Bronze Contributor** (1-10 contributions): Bug fixes, documentation updates
+- **Silver Contributor** (11-50 contributions): Features, significant improvements
+- **Gold Contributor** (51+ contributions): Major features, core functionality
+- **Core Maintainer** (By invitation): Direct repository access, project direction input
 
 #### Recognition Benefits
 - **Public Recognition**: Contributor profiles on website and documentation
@@ -2324,7 +2314,7 @@ Congratulations! You've created and sent your first campaign with PenguinMails.
 - **Swag Package**: Branded merchandise for significant contributors
 - **Annual Summit**: Invitation to contributor summit and roadmap planning
 
-### Community Guidelines (⭐⭐)
+### Community Guidelines (Level 2)
 
 #### Code of Conduct
 We are committed to providing a welcoming and inclusive environment for all contributors.
@@ -2349,7 +2339,7 @@ We are committed to providing a welcoming and inclusive environment for all cont
 - **Monthly Community Calls**: Open meetings for project updates and feedback
 - **Documentation**: Clear, comprehensive guides and references
 
-### Governance Structure (⭐⭐)
+### Governance Structure (Level 2)
 
 #### Project Maintainers
 - **Technical Lead**: Overall project direction and major decisions
@@ -2375,14 +2365,14 @@ We are committed to providing a welcoming and inclusive environment for all cont
 
 ## Licensing & IP Guidelines
 
-### Open Source License (⭐⭐⭐)
+### Open Source License (Level 3)
 
 **Current License**: MIT License
-- **Commercial Use**: ✅ Permitted
-- **Modification**: ✅ Permitted
-- **Distribution**: ✅ Permitted
-- **Private Use**: ✅ Permitted
-- **Attribution**: ✅ Required
+- **Commercial Use**: Permitted
+- **Modification**: Permitted
+- **Distribution**: Permitted
+- **Private Use**: Permitted
+- **Attribution**: Required
 
 ### Contributor License Agreement (CLA)
 
@@ -2400,6 +2390,17 @@ For corporate contributors, additional agreements may be required for large cont
 - Do not contribute proprietary or confidential information
 
 #### Code Attribution
+```typescript
+// Example: Proper attribution for adapted code
+// Based on implementation from https://github.com/example/repo
+// Used under MIT License, copyright (c) 2023 Example Author
+function optimizedFunction(): void {
+  // Your implementation here
+}
+```
+```
+
+#### Documentation Attribution
 ```python
 # Example: Proper attribution for adapted code
 # Based on implementation from https://github.com/example/repo

@@ -21,7 +21,7 @@ This document provides the central reference for understanding our feature class
 
 ## Feature Classification System
 
-### 🏗️ Progressive Disclosure Levels
+### Progressive Disclosure Levels
 
 Our feature development follows a **progressive disclosure** approach, revealing capabilities in levels based on market validation, technical complexity, and business impact:
 

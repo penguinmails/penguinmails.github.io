@@ -67,7 +67,7 @@ graph LR
     class CONTENT,CONTENT_INDEX content
     class ANALYTICS,REPORTS analytics
     class API api
-```markdown
+```
 
 ## Database Tier Architecture
 

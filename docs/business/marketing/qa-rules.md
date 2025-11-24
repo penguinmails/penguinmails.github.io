@@ -132,7 +132,7 @@ qa_rules:
         type: consistency
         target: visual_elements
         severity: medium
-```markdown
+```
 
 ### Validation Triggers
 - **Content Creation:** Rules applied during content drafting

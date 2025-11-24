@@ -55,7 +55,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY . .
 EXPOSE 3000
 CMD ["npm", "start"]
-```markdown
+```
 
 **Container Orchestration**:
 1. Build container with optimized dependencies
@@ -92,7 +92,7 @@ REDIS_URL=redis://redis-host:6379
 LOG_LEVEL=info
 METRICS_ENDPOINT=/metrics
 HEALTH_CHECK_ENDPOINT=/health
-```markdown
+```
 
 ---
 
@@ -136,7 +136,7 @@ jobs:
           docker build -t email-platform .
           docker push registry.com/email-platform
           kubectl apply -f k8s/production/
-```markdown
+```
 
 **Deployment Validation**:
 1. Automated testing in staging environment

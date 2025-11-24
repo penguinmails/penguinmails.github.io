@@ -130,13 +130,11 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **Rate Limiting**: Tiered limits with intelligent throttling and usage analytics
 - **Documentation**: OpenAPI/Swagger with interactive testing and SDK generation
 
-**Multi-Language SDK Support**:
+**SDK Support**:
 
-- **Python SDK**: Full feature support with async/await patterns
-- **JavaScript SDK**: Node.js and browser compatibility
-- **PHP SDK**: Laravel and WordPress integration patterns
-- **Ruby SDK**: Rails and Sinatra integration
-- **Go SDK**: High-performance backend integration
+- **JavaScript/TypeScript SDK**: Comprehensive support for Node.js and browser compatibility with modern development patterns
+- **CSS Support**: Full styling support for email templates and responsive design
+- **SQL Integration**: Database query support and optimization
 
 **Integration Marketplace**:
 
@@ -284,7 +282,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
                      │ • Cache (Redis)      • Backup Systems    │
                      │                                             │
                      └─────────────────────────────────────────────┘
-```markdown
+```
 
 ---
 
@@ -417,7 +415,9 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **Documentation**: OpenAPI/Swagger specifications with interactive testing
 
 **API Ecosystem**
-- **SDK Libraries**: Python, JavaScript, PHP, Ruby, and Go SDKs
+- **SDK Libraries**: Comprehensive JavaScript/TypeScript SDK with full API coverage
+- **CSS Integration**: Email template styling and responsive design capabilities
+- **SQL Support**: Database integration and query optimization
 - **Webhook System**: Real-time event notifications for external integrations
 - **GraphQL Support**: Flexible data querying for complex integration requirements
 - **Rate Limiting**: Comprehensive rate limiting with usage analytics

@@ -70,7 +70,7 @@ This document establishes the comprehensive customer success automation framewor
 Health Score < 60 → High Priority Alert + Retention Workflow
 Health Trend ↓20% → Proactive Intervention Workflow
 Expansion Readiness > 80 → Sales Handoff Workflow
-```markdown
+```
 
 #### 2.2 Predictive Churn and Expansion Automation
 **Primary Objective:** ML-powered prediction of churn risk and expansion readiness
@@ -172,7 +172,7 @@ in-app:
 sms:
   - critical_alerts: escalation_notification
   - milestone_celebration: success_achievement
-```markdown
+```
 
 #### 9.2 AI-Powered Personalization
 - **Dynamic Content Generation:** ML-driven content personalization
@@ -194,7 +194,7 @@ Core Platforms:
 ├── Workflow Engine: Zapier/Tray.io)
 ├── AI/ML: Custom models + OpenAI integration
 └── Data: Real-time sync via webhooks/APIs
-```markdown
+```
 
 #### 10.2 Integration Architecture
 - **Event Bus:** Kafka/Redis Streams for real-time event processing

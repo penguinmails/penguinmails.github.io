@@ -79,7 +79,7 @@ sequenceDiagram
     App->>Client: Login Success + [Dashboard Access with Business Intelligence]
 
     Note over App,Business: Security-enhanced business workflow
-```markdown
+```
 
 **Strategic Business Integration**: This authentication flow supports our [customer onboarding experience](/docs/user-journeys) while ensuring [security excellence](/docs/compliance-security) and [business process](/docs/business/operations) optimization. The integration with [business intelligence](/docs/business/analytics) enables personalized access and [value delivery](/docs/business/value-proposition/detailed-analysis).
 
@@ -135,7 +135,7 @@ interface AuthenticationFeatures {
     analytics: '[Behavioral analysis] for [fraud detection] and [customer insights] using [OLAP analytics]';
   };
 }
-```markdown
+```
 
 **Strategic Authentication Excellence**: This framework transforms authentication from a security function into a [competitive advantage](/docs/business/strategy) by providing [superior user experience](/docs/business/value-proposition/detailed-analysis) while maintaining [enterprise-grade security](/docs/compliance-security).
 
@@ -217,7 +217,7 @@ const authenticateUser = async (req, res, next) => {
     res.status(401).json({ error: 'Authentication failed' });
   }
 };
-```markdown
+```
 
 **Business-Enhanced Security**: This implementation ensures that authentication serves both [security objectives](/docs/compliance-security) and [business goals](/docs/business/strategy) by integrating [business context](/docs/business/operations), [customer insights](/docs/business/analytics), and [value optimization](/docs/business/value-proposition/detailed-analysis) into the security workflow.
 
@@ -266,7 +266,7 @@ graph TD
     classDef customer_success fill:#fff3e0,stroke:#ef6c00,stroke-width:3px,color:#000
     classDef customer_value fill:#e0f2f1,stroke:#00695c,stroke-width:3px,color:#000
     classDef operational_excellence fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#000
-```markdown
+```
 
 **Strategic Permission Architecture**: This hierarchical system supports our [organizational structure](/docs/business/operations) while enabling [scalable business operations](/docs/business/model) and [competitive advantage](/docs/business/strategy) through [operational excellence](/docs/business/operations).
 
@@ -371,7 +371,7 @@ app.post('/api/tenant/:tenantId/campaigns',
   validateBusinessRules, // Business logic validation
   createCampaign // Business-aware campaign creation
 );
-```markdown
+```
 
 **Business-Integrated Access Control**: This implementation ensures that access controls enhance [business productivity](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
@@ -441,7 +441,7 @@ SET app.current_tenant_id = '12345';
 SET app.business_context = 'false';
 SET app.business_justification = 'Standard user access';
 SET app.audit_level = 'standard';
-```markdown
+```
 
 **Business-Enhanced Security**: This approach ensures that data isolation supports [business operations](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [collaborative workflows](/docs/business/operations) and [operational efficiency](/docs/business/operations).
 
@@ -525,7 +525,7 @@ const setTenantContext = async (req, res, next) => {
     });
   }
 };
-```markdown
+```
 
 **Business-Integrated Security**: This implementation ensures that API security supports [business processes](/docs/business/operations) while maintaining [regulatory compliance](/docs/compliance-security), enabling [seamless business operations](/docs/business/operations) and [customer experience](/docs/business/value-proposition/detailed-analysis).
 
@@ -596,7 +596,7 @@ app.use((req, res, next) => {
   res.setHeader('X-Security-Policy', 'enterprise');
   next();
 });
-```markdown
+```
 
 **Business-Enhanced Security Headers**: This implementation ensures that security measures support [business operations](/docs/business/operations) while maintaining [compliance excellence](/docs/compliance-security), enabling [secure business communication](/docs/business/operations) and [regulatory confidence](/docs/compliance-security).
 
@@ -657,7 +657,7 @@ const apiKeyManager = {
     };
   }
 };
-```markdown
+```
 
 **Business-Integrated Key Management**: This approach ensures that API key management supports [business intelligence](/docs/business/analytics) and [operational optimization](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
@@ -693,7 +693,7 @@ ufw allow from monitoring-vpn to any port 9090   # Monitoring systems
 
 # Business application rule
 ufw allow from business-vpn to any port 8443     # Business application
-```markdown
+```
 
 **Business-Enhanced Network Security**: This configuration ensures that network security supports [business operations](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [partner integrations](/docs/business/operations) and [collaborative workflows](/docs/business/operations) with [security confidence](/docs/compliance-security).
 
@@ -745,7 +745,7 @@ EOF
 # Update system packages with business impact assessment
 apt-get update && apt-get upgrade -y
 apt-get autoremove -y
-```markdown
+```
 
 **Business-Integrated Security Hardening**: This approach ensures that server security supports [business continuity](/docs/business/operations) while maintaining [operational excellence](/docs/business/operations), enabling [reliable business operations](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
@@ -793,7 +793,7 @@ server {
         proxy_set_header X-Tenant-ID $arg_tenant;
     }
 }
-```markdown
+```
 
 **Business-Enhanced SSL Configuration**: This setup ensures that SSL/TLS security supports [business operations](/docs/business/operations) while maintaining [compliance excellence](/docs/compliance-security), enabling [secure business communication](/docs/business/operations) and [regulatory confidence](/docs/compliance-security).
 
@@ -818,7 +818,7 @@ TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmai
 # Business-specific authentication records
 TXT _business._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=BUSINESS_SIGNING_KEY"
 TXT _partner._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=PARTNER_INTEGRATION_KEY"
-```markdown
+```
 
 **Business-Enhanced Email Authentication**: This configuration ensures that email security supports [business communication](/docs/business/operations) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [partner integrations](/docs/business/operations) and [customer engagement](/docs/business/value-proposition/detailed-analysis).
 
@@ -863,7 +863,7 @@ const sendEmail = async (emailData) => {
 
   return await smtpTransporter.sendMail(mailOptions);
 };
-```markdown
+```
 
 **Business-Integrated Email Security**: This implementation ensures that email security supports [business intelligence](/docs/business/analytics) and [customer engagement](/docs/business/value-proposition/detailed-analysis) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [intelligent business processes](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
@@ -947,7 +947,7 @@ const emailWarmup = {
     return optimization;
   }
 };
-```markdown
+```
 
 **Business-Enhanced Warm-up Strategy**: This approach ensures that email warm-up supports [business objectives](/docs/business/strategy) while maintaining [deliverability excellence](/docs/technical/architecture/detailed-technical), enabling [intelligent business scaling](/docs/business/operations) and [competitive advantage](/docs/business/strategy).
 
@@ -1022,7 +1022,7 @@ const filterDataByBusinessRules = (data, businessContext) => {
     return true;
   });
 };
-```markdown
+```
 
 **Business-Enhanced Security**: This implementation ensures that security measures support [business operations](/docs/business/operations) while maintaining [data protection](/docs/compliance-security), enabling [intelligent business processes](/docs/business/analytics) and [regulatory compliance](/docs/compliance-security).
 
@@ -1106,7 +1106,7 @@ const validateBusinessContent = (content, businessContext) => {
 
   return validation;
 };
-```markdown
+```
 
 **Business-Integrated Content Security**: This approach ensures that content security supports [business compliance](/docs/compliance-security) while maintaining [user experience](/docs/business/value-proposition/detailed-analysis), enabling [intelligent content management](/docs/business/analytics) and [regulatory excellence](/docs/compliance-security).
 
@@ -1204,7 +1204,7 @@ app.use('/api) => {
 
   next();
 });
-```markdown
+```
 
 **Business-Intelligent Rate Limiting**: This implementation ensures that rate limiting supports [business scalability](/docs/business/model) while maintaining [system performance](/docs/technical/architecture/detailed-technical), enabling [intelligent resource management](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
@@ -1319,7 +1319,7 @@ const auditLogger = {
     await processAuditForBusinessIntelligence(auditEntry);
   }
 };
-```markdown
+```
 
 **Business-Integrated Security Monitoring**: This approach ensures that security monitoring supports [business intelligence](/docs/business/analytics) while maintaining [security excellence](/docs/compliance-security), enabling [proactive threat management](/docs/compliance-security) and [competitive advantage](/docs/business/strategy).
 
@@ -1391,7 +1391,7 @@ const comprehensiveAuditLogger = {
     };
   }
 };
-```markdown
+```
 
 **Business-Enhanced Audit System**: This implementation ensures that audit logging supports [business intelligence](/docs/business/analytics) while maintaining [regulatory compliance](/docs/compliance-security), enabling [strategic business analysis](/docs/business/analytics) and [competitive advantage](/docs/business/strategy).
 
@@ -1436,7 +1436,7 @@ flowchart TD
     classDef recover fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
     classDef post fill:#fff9c4,stroke:#ffc107,stroke-width:2px
     classDef business fill:#e0f2f1,stroke:#00796b,stroke-width:3px
-```markdown
+```
 
 **Business-Integrated Incident Response**: This framework ensures that incident response supports [business continuity](/docs/business/operations) while maintaining [security excellence](/docs/compliance-security), enabling [proactive business protection](/docs/business/operations) and [competitive advantage](/docs/business/strategy) preservation.
 

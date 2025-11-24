@@ -21,9 +21,9 @@ persona: "Documentation Users"
 
 Design specification for a clear, intuitive email system architecture using message-focused table naming creates a natural email hierarchy: **message analytics → email content → attachments**.
 
-✅ **email_messages** = Message analytics and metadata (defined)
-✅ **email_content** = Email body content (text, html, headers) (defined)
-✅ **attachments** = Email files and binary content (defined)
+**email_messages** = Message analytics and metadata (defined)
+**email_content** = Email body content (text, html, headers) (defined)
+**attachments** = Email files and binary content (defined)
 
 This creates a natural email hierarchy that supports enterprise-scale email processing with optimal performance and maintainability.
 
@@ -34,7 +34,7 @@ This creates a natural email hierarchy that supports enterprise-scale email proc
 ### Email System Hierarchy
 
 ```markdown
-📧 Complete Email Structure
+Complete Email Structure
 ├── email_messages (Message Analytics)
 │   ├── campaign_id, lead_id, direction, status
 │   ├── from_email, to_email, subject
@@ -56,13 +56,13 @@ This creates a natural email hierarchy that supports enterprise-scale email proc
 ```markdown
 OLTP Database (Operational):
 ├── campaigns (campaign definitions)
-├── campaign_sequence_steps (execution orchestration) ⭐
+├── campaign_sequence_steps (execution orchestration) Level 1
 ├── users, tenants, companies (user management)
 ├── domains, email_accounts (infrastructure)
 └── leads, templates (business data)
 
 Content Database (Analytical):
-├── email_messages (message analytics) ⭐
+├── email_messages (message analytics) Level 1
 ├── email_content (email bodies, attachments)
 ├── transactional_emails, notifications
 └── content access and search indexes
@@ -393,19 +393,19 @@ WHERE c.storage_key IS NULL;
 
 ## Design Benefits
 
-### ✅ **Clear Separation Achieved**
+### **Clear Separation Achieved**
 - **OLTP Focus**: campaign_sequence_steps handles operational campaign execution
 - **Content Focus**: email_messages handles analytics, email_content handles content
 - **Queue Integration**: Perfect fit with 4-step queue architecture
 - **Mailu Ready**: Sets foundation for external email system integration
 
-### ✅ **Developer Experience Enhanced**
+### **Developer Experience Enhanced**
 - **Intuitive Names**: New developers immediately understand the schema
 - **Natural Relationships**: Logical foreign key hierarchy
 - **Better APIs**: Endpoint design becomes clear and logical
 - **Maintainability**: Database structure easier to understand and extend
 
-### ✅ **Performance Optimization Achieved**
+### **Performance Optimization Achieved**
 - **Efficient Storage**: No content duplication, shared references
 - **Optimized Queries**: Proper indexing for common email analytics patterns
 - **Content Deduplication**: Shared storage via content_hash
@@ -415,19 +415,19 @@ WHERE c.storage_key IS NULL;
 
 ## Business Impact & Technical Excellence
 
-### 📈 **Revenue & Performance Intelligence**
+### Revenue & Performance Intelligence
 - **Unified Email Analytics**: Complete email tracking with optimized performance
 - **Enhanced Plan Flexibility**: Email system supports enterprise pricing models
 - **Subscription Lifecycle**: Email analytics enable seamless plan management
 - **Performance Monitoring**: Real-time email deliverability and analytics
 
-### 🚀 **Operational Excellence Achievements**
+### Operational Excellence Achievements
 - **4-Tier Architecture**: Clear separation between OLTP, content, analytics, and queue processing
 - **Multi-Tenant Security**: Row-level security with comprehensive email isolation
 - **Infrastructure Intelligence**: Email system provides comprehensive monitoring and analytics
 - **Queue-Driven Processing**: Reliable email processing with retry logic and priority handling
 
-### 💡 **Technical Architecture Benefits**
+### Technical Architecture Benefits
 - **Message-Focused Design**: Intuitive email system structure for immediate understanding
 - **Natural Hierarchy**: Email analytics → content → attachments specification
 - **Queue Integration**: Perfect fit with 4-step queue architecture planned
@@ -446,19 +446,19 @@ WHERE c.storage_key IS NULL;
 ---
 
 ## Related Documents
+### Supporting Documentation
 
-### 📚 **Supporting Documentation**
 - [Architecture Overview](/docs/architecture-overview) - System architecture and design decisions
 - [Infrastructure Documentation](/docs/infrastructure-documentation) - Infrastructure management
 - [Database Infrastructure](/docs/database-infrastructure) - Schema and performance optimization
 - [Quality Assurance](/docs/business/quality-assurance) - Testing protocols
 
-### 🔧 **Business Integration**
+### Business Integration
+
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business alignment
 - [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
 - [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
-
 ---
 
 **This email system implementation represents a significant architectural improvement that positions PenguinMails for enterprise-scale operations with superior performance, security, and business intelligence capabilities.**

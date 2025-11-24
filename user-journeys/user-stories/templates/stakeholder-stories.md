@@ -59,7 +59,7 @@ DEFINITION OF DONE:
 - [ ] Stakeholder experience validated
 - [ ] Business value delivered to stakeholder
 - [ ] Stakeholder feedback incorporated
-```markdown
+```
 
 ---
 
@@ -120,7 +120,7 @@ DEFINITION OF DONE:
 - [ ] Investor access controls and permissions configured
 - [ ] Confidentiality agreements and data protection implemented
 - [ ] Investor feedback collected and incorporated
-```markdown
+```
 
 ### **Example 2: Customer Success Portfolio**
 
@@ -176,7 +176,7 @@ DEFINITION OF DONE:
 - [ ] Customer testimonial and reference program established
 - [ ] Investor access to customer success portfolio configured
 - [ ] Regular updates and new case studies planned
-```markdown
+```
 
 ---
 
@@ -236,7 +236,7 @@ DEFINITION OF DONE:
 - [ ] Visual asset library created and maintained
 - [ ] Industry insight and thought leadership content developed
 - [ ] Journalist access and communication system established
-```markdown
+```
 
 ---
 
@@ -295,7 +295,7 @@ DEFINITION OF DONE:
 - [ ] Customer review and feedback compilation system working
 - [ ] Competitive positioning materials developed
 - [ ] Regular updates and information maintenance established
-```markdown
+```
 
 ---
 
@@ -355,7 +355,7 @@ DEFINITION OF DONE:
 - [ ] Product roadmap and innovation direction prepared
 - [ ] Analyst access and scheduling system working
 - [ ] Follow-up and ongoing analyst relationship management
-```markdown
+```
 
 ---
 

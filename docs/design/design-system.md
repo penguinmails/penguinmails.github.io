@@ -50,7 +50,7 @@ Our design tokens establish the foundation for consistent visual communication:
   --spacing-xl: 2rem;
   --spacing-xxl: 3rem;
 }
-```markdown
+```
 
 ## Color Palette
 
@@ -93,7 +93,7 @@ We use a 8px-based spacing system for consistent alignment:
   gap: var(--spacing-md);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-```markdown
+```
 
 ### Spacing Scale
 - **xs**: 4px (0.25rem) - Small gaps, tight layouts

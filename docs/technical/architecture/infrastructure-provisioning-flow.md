@@ -68,7 +68,7 @@ flowchart TD
     class DB storage
     class MONITOR monitoring
     class ROLLBACK,CLEANUP,ERROR error
-```markdown
+```
 
 ## Provisioning Process Stages
 

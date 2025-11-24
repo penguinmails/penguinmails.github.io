@@ -88,7 +88,7 @@ graph TB
     class A_USERS,A_CAMPAIGNS,A_QUEUE tenantA
     class B_USERS,B_CAMPAIGNS,B_QUEUE tenantB
     class SHARED_CONFIG,SHARED_MONITORING shared
-```markdown
+```
 
 ## Isolation Architecture
 

@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Strategic Alignment**: Our comprehensive integration ecosystem supports our market leadership goals by providing **unlimited connectivity** to existing business systems. This technical flexibility enables customers to scale their operations without changing their core workflows, supporting our value proposition of being the most adaptable cold email solution.
 
-**Technical Authority**: Our API infrastructure integrates **enterprise-grade security and scalability** featuring OAuth 2.0 authentication, comprehensive rate limiting, and SDK support across all major programming languages that establish technical credibility in the developer community.
+**Technical Authority**: Our API infrastructure integrates **enterprise-grade security and scalability** featuring OAuth 2.0 authentication, comprehensive rate limiting, and comprehensive JavaScript/TypeScript SDK support that establish technical credibility in the developer community.
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
@@ -26,7 +26,7 @@ Enable **seamless integration** with existing business systems while providing t
 
 ---
 
-## 🔌 Core API Architecture
+## Core API Architecture
 
 ### **RESTful API Design**
 
@@ -52,15 +52,15 @@ Enable **seamless integration** with existing business systems while providing t
     "timestamp": "2025-12-01T09:00:00Z"
   }
 }
-```markdown
+```
 
 ### **Authentication & Authorization**
 
-**API Key Authentication (⭐⭐⭐)**
+**API Key Authentication (Level 3)**
 ```http
 Authorization: Bearer pk_live_abc123def456ghi789
 Content-Type: application/json
-```markdown
+```
 
 **JWT Token Authentication**
 ```http
@@ -71,18 +71,18 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "secure_password"
 }
-```markdown
+```
 
 **OAuth 2.0 Integration**
 ```http
 https://app.penguinmails.com/oauth/authorize?client_id=your_client_id&redirect_uri=your_callback_url&response_type=code&scope=read write
-```markdown
+```
 
 ---
 
-## 📊 Core API Endpoints
+## Core API Endpoints
 
-### **Campaign Management API (⭐⭐⭐)**
+### **Campaign Management API (Level 3)**
 
 **Create Campaign**
 ```http
@@ -114,7 +114,7 @@ Content-Type: application/json
     "track_clicks": true
   }
 }
-```markdown
+```
 
 **AI-Powered Optimization Response**
 ```json
@@ -131,9 +131,9 @@ Content-Type: application/json
     }
   }
 }
-```markdown
+```
 
-### **Email Sending API (⭐⭐⭐)**
+### **Email Sending API (Level 3)**
 
 **Single Email Send**
 ```http
@@ -153,7 +153,7 @@ Content-Type: application/json
     "track_clicks": true
   }
 }
-```markdown
+```
 
 **Bulk Email Send**
 ```http
@@ -172,15 +172,15 @@ Content-Type: application/json
   "batch_size": 100,
   "delay_between_batches": 5
 }
-```markdown
+```
 
-### **Analytics & Reporting API (⭐⭐⭐)**
+### **Analytics & Reporting API (Level 3)**
 
 **Campaign Analytics**
 ```http
 GET /api/v1/analytics/campaigns/{campaign_id}?period=7d
 Authorization: Bearer {token}
-```markdown
+```
 
 **Advanced Analytics Response**
 ```json
@@ -209,13 +209,13 @@ Authorization: Bearer {token}
     }
   }
 }
-```markdown
+```
 
 ---
 
-## 🤖 AI & Machine Learning APIs
+## AI & Machine Learning APIs
 
-### **AI Personalization Engine (⭐⭐⭐)**
+### **AI Personalization Engine (Level 3)**
 
 **Content Optimization**
 ```http
@@ -236,7 +236,7 @@ Content-Type: application/json
   },
   "optimization_goals": ["open_rate", "click_rate", "revenue"]
 }
-```markdown
+```
 
 **AI Response with Optimization**
 ```json
@@ -258,11 +258,11 @@ Content-Type: application/json
     }
   }
 }
-```markdown
+```
 
 ---
 
-## 🔗 Webhook System
+## Webhook System
 
 ### **Real-time Event Notifications**
 
@@ -287,7 +287,7 @@ Content-Type: application/json
   ],
   "secret": "your-webhook-secret"
 }
-```markdown
+```
 
 **Webhook Payload Format**
 ```json
@@ -309,90 +309,40 @@ Content-Type: application/json
     }
   }
 }
-```markdown
+```
 
 **Signature Verification**
-```python
-import hmac
-import hashlib
+```javascript
+const crypto = require('crypto');
 
-def verify_webhook_signature(payload: str, signature: str, secret: str) -> bool:
-    expected_signature = hmac.new()
-        secret.encode('utf-8'),
-        payload.encode('utf-8'),
-        hashlib.sha256
-    ).hexdigest()
-    return hmac.compare_digest(f"sha256={expected_signature}", signature)
-```markdown
+function verifyWebhookSignature(payload, signature, secret) {
+  const expectedSignature = crypto
+    .createHmac('sha256', secret)
+    .update(payload, 'utf8')
+    .digest('hex');
+    
+  const expectedHeader = `sha256=${expectedSignature}`;
+  return crypto.timingSafeEqual(
+    Buffer.from(expectedHeader),
+    Buffer.from(signature)
+  );
+}
+```
 
 ---
 
-## 💻 SDK Libraries
+## SDK Libraries
 
-### **Python SDK (⭐⭐⭐)**
+### **JavaScript/TypeScript SDK**
 
-**Installation & Basic Usage**
-```bash
-pip install penguinmails-python
-```markdown
+Our primary SDK support focuses on JavaScript and TypeScript for modern web development workflows.
 
-```python
-from penguinmails import PenguinMails
-from penguinmails.models import Campaign, Email
-
-# Initialize client
-client = PenguinMails(api_key="pk_live_abc123def456")
-
-# Create campaign with AI optimization
-campaign_data = {
-    "name": "Product Launch",
-    "subject": "New Product Available!",
-    "content": {
-        "html": "<h1>Exciting News!</h1><p>Check out our new product.</p>",
-        "text": "Exciting News! Check out our new product."
-    }
-}
-
-campaign = client.campaigns.create(campaign_data)
-print(f"Campaign created: {campaign.id}")
-
-# Send email
-email = Email()
-    to="user@example.com",
-    subject="Hello!",
-    content="<p>Welcome to PenguinMails!</p>"
-)
-
-result = client.emails.send(email)
-print(f"Email sent: {result.message_id}")
-
-# Get analytics with AI insights
-analytics = client.analytics.get_campaign_metrics(campaign.id)
-print(f"Open rate: {analytics.open_rate}")
-print(f"AI optimization score: {analytics.ai_insights.optimization_score}")
-```markdown
-
-**Advanced AI Features**
-```python
-from penguinmails.ai import AIOptimizer
-
-# AI-powered content optimization
-ai_optimizer = AIOptimizer(client)
-optimized_content = ai_optimizer.optimize_content()
-    content=campaign_data["content"],
-    audience={
-        "demographics": {"age_range": "25-45"},
-        "interests": ["technology", "shopping"]
-    }
-)
-```markdown
-
-### **JavaScript)**
+### **JavaScript SDK**
 
 **Installation & Basic Usage**
 ```bash
 npm install @penguinmails/sdk
-```markdown
+```
 
 ```javascript
 import { PenguinMails } from '@penguinmails/sdk';
@@ -427,7 +377,7 @@ const email = {
 
 const result = await client.emails.send(email);
 console.log(`Email sent: ${result.message_id}`);
-```markdown
+```
 
 **React Integration**
 ```jsx
@@ -459,70 +409,62 @@ function App() {
     </PenguinMailsProvider>
   );
 }
-```markdown
+```
 
-### **PHP SDK (⭐⭐)**
+### **CSS Integration**
 
-**Installation & Usage**
-```bash
-composer require penguinmails/php-sdk
-```markdown
+Our platform supports CSS-based email template customization with responsive design capabilities:
 
-```php
-<?php
-use PenguinMails\Client;
-use PenguinMails\Models\Campaign;
-
-// Initialize client
-$client = new Client('pk_live_abc123def456');
-
-// Create campaign
-$campaignData = [
-    'name' => 'Product Launch',
-    'subject' => 'New Product Available!',
-    'content' => [
-        'html' => '<h1>Exciting News!</h1><p>Check out our new product.</p>',
-        'text' => 'Exciting News! Check out our new product.'
-    ]
-];
-
-$campaign = $client->campaigns()->create($campaignData);
-echo "Campaign created: " . $campaign->getId() . "\n";
-?>
-```markdown
-
-### **Ruby SDK (⭐⭐)**
-
-**Installation & Usage**
-```bash
-gem install penguinmails-ruby
-```markdown
-
-```ruby
-require 'penguinmails'
-
-# Initialize client
-client = PenguinMails::Client.new(api_key: 'pk_live_abc123def456')
-
-# Create campaign
-campaign_data = {
-  name: 'Welcome Series',
-  subject: 'Welcome to PenguinMails!',
-  content: {
-    html: '<h1>Welcome!</h1><p>Thank you for joining us.</p>',
-    text: 'Welcome! Thank you for joining us.'
-  }
+```css
+/* PenguinMails Email Template Styles */
+.penguin-email-container {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-campaign = client.campaigns.create(campaign_data)
-puts "Campaign created: #{campaign.id}"
-```markdown
+.penguin-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.penguin-content {
+  padding: 30px 20px;
+  background: #ffffff;
+}
+
+.penguin-button {
+  display: inline-block;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  .penguin-email-container {
+    width: 100% !important;
+  }
+  
+  .penguin-content {
+    padding: 20px 15px !important;
+  }
+}
+```
 
 ---
 
-## 🔌 Third-Party Integrations
+## Third-Party Integrations
 
-### **CRM Integrations (⭐⭐)**
+### **CRM Integrations (Level 2)**
 
 **Salesforce Integration**
 ```typescript
@@ -560,102 +502,117 @@ class SalesforcePenguinMailsIntegration {
     await this.triggerLeadSequence(contact.id, enrichedData);
   }
 }
-```markdown
+```
 
 **HubSpot Integration**
-```python
-from penguinmails import PenguinMails
-import hubspot
+```javascript
+import { PenguinMails } from '@penguinmails/sdk';
+import { Client } from '@hubspot/api-client';
 
-class HubSpotPenguinMailsIntegration:
-    def __init__(self, penguinmails_api_key, hubspot_api_key):
-        self.email_client = PenguinMails(api_key=penguinmails_api_key)
-        self.hubspot = hubspot.Client(access_token=hubspot_api_key)
+class HubSpotPenguinMailsIntegration {
+  constructor(penguinmailsApiKey, hubspotApiKey) {
+    this.emailClient = new PenguinMails({ apiKey: penguinmailsApiKey });
+    this.hubspot = new Client({ accessToken: hubspotApiKey });
+  }
 
-    def sync_contact_to_email(self, hubspot_contact):
-        """Sync HubSpot contact to PenguinMails with AI enrichment."""
-        try:
-            # Get additional contact data
-            contact_data = self.hubspot.crm.contacts.basic_api.get_by_id()
-                contact_id=hubspot_contact.id,
-                properties=['email', 'firstname', 'lastname', 'company', 'lifecyclestage']
-            )
+  async syncContactToEmail(hubspotContact) {
+    try {
+      // Get additional contact data from HubSpot
+      const contactData = await this.hubspot.crm.contacts.basicApi.getById(
+        hubspotContact.id,
+        ['email', 'firstname', 'lastname', 'company', 'lifecyclestage']
+      );
 
-            # AI-enrichment for better targeting
-            enriched_data = self.email_client.ai.analyze_contact({
-                'company': contact_data.properties.get('company', ''),
-                'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead')
-            })
+      // AI-enrichment for better targeting
+      const enrichedData = await this.emailClient.ai.analyzeContact({
+        company: contactData.properties.company || '',
+        lifecycleStage: contactData.properties.lifecyclestage || 'lead'
+      });
 
-            # Create contact in PenguinMails
-            contact = self.email_client.contacts.create({
-                'email': contact_data.properties['email'],
-                'first_name': contact_data.properties.get('firstname', ''),
-                'last_name': contact_data.properties.get('lastname', ''),
-                'company': contact_data.properties.get('company', ''),
-                'custom_fields': {
-                    'hubspot_contact_id': hubspot_contact.id,
-                    'lifecycle_stage': contact_data.properties.get('lifecyclestage', 'lead'),
-                    'ai_enrichment': enriched_data
-                },
-                'tags': ['hubspot_sync', 'crm_integration']
-            })
+      // Create contact in PenguinMails
+      const contact = await this.emailClient.contacts.create({
+        email: contactData.properties.email,
+        firstName: contactData.properties.firstname || '',
+        lastName: contactData.properties.lastname || '',
+        company: contactData.properties.company || '',
+        customFields: {
+          hubspotContactId: hubspotContact.id,
+          lifecycleStage: contactData.properties.lifecyclestage || 'lead',
+          aiEnrichment: enrichedData
+        },
+        tags: ['hubspot_sync', 'crm_integration']
+      });
 
-            return contact
+      return contact;
+    } catch (error) {
+      console.error('Integration error:', error);
+      throw error;
+    }
+  }
+}
+```
 
-        except Exception as e:
-            print(f"Integration error: {e}")
-            raise
-```markdown
-
-### **E-commerce Platform Integrations (⭐⭐⭐)**
+### **E-commerce Platform Integrations (Level 3)**
 
 **Shopify Integration**
-```python
-import shopify
-from penguinmails import PenguinMails
+```javascript
+import { PenguinMails } from '@penguinmails/sdk';
+import { shopifyApi } from '@shopify/shopify-api';
 
-class ShopifyPenguinMailsIntegration:
-    def __init__(self, shopify_api_key, penguinmails_api_key):
-        self.shopify = shopify.ShopifyAPI(api_key=shopify_api_key)
-        self.email_client = PenguinMails(api_key=penguinmails_api_key)
+class ShopifyPenguinMailsIntegration {
+  constructor(shopifyApiKey, penguinmailsApiKey) {
+    this.shopify = shopifyApi({ apiKey: shopifyApiKey });
+    this.emailClient = new PenguinMails({ apiKey: penguinmailsApiKey });
+  }
 
-    def sync_customer_and_send_welcome(self, customer_data):
-        """Sync Shopify customer and send personalized welcome email."""
-        try:
-            # Create contact with purchase history
-            contact_data = {
-                'email': customer_data['email'],
-                'first_name': customer_data['first_name'],
-                'custom_fields': {
-                    'shopify_customer_id': customer_data['id'],
-                    'total_spent': customer_data['total_spent'],
-                    'order_count': customer_data['orders_count']
-                },
-                'tags': ['shopify_customer', 'new_customer']
-            }
+  async syncCustomerAndSendWelcome(customerData) {
+    try {
+      // Create contact with purchase history
+      const contactData = {
+        email: customerData.email,
+        firstName: customerData.first_name,
+        customFields: {
+          shopifyCustomerId: customerData.id,
+          totalSpent: customerData.total_spent,
+          orderCount: customerData.orders_count
+        },
+        tags: ['shopify_customer', 'new_customer']
+      };
 
-            contact = self.email_client.contacts.create(contact_data)
+      const contact = await this.emailClient.contacts.create(contactData);
 
-            # Send personalized welcome email
-            email_data = {
-                'to': customer_data['email'],
-                'subject': f"Welcome {customer_data['first_name']}!",
-                'content': {
-                    'html': self.generate_welcome_html(customer_data),
-                    'text': self.generate_welcome_text(customer_data)
-                }
-            }
+      // Send personalized welcome email
+      const emailData = {
+        to: customerData.email,
+        subject: `Welcome ${customerData.first_name}!`,
+        content: {
+          html: this.generateWelcomeHtml(customerData),
+          text: this.generateWelcomeText(customerData)
+        }
+      };
 
-            result = self.email_client.emails.send(email_data)
-            return result
+      const result = await this.emailClient.emails.send(emailData);
+      return result;
+    } catch (error) {
+      console.error('Integration error:', error);
+      throw error;
+    }
+  }
 
-        except Exception as e:
-            print(f"Integration error: {e}")
-            raise
-```markdown
+  generateWelcomeHtml(customerData) {
+    return `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h1>Welcome ${customerData.first_name}!</h1>
+        <p>Thank you for joining our community!</p>
+        <p>Order History: ${customerData.orders_count} orders</p>
+        <p>Total Spent: $${customerData.total_spent}</p>
+      </div>
+    `;
+  }
+}
+```
 
-### **Zapier Integration (⭐⭐)**
+### **Zapier Integration (Level 2)**
 
 **Zapier Webhook Handler**
 ```javascript
@@ -704,13 +661,13 @@ async function handleNewSubscriber(subscriberData) {
   // Trigger welcome sequence
   await emailClient.campaigns.trigger_sequence(contact.id, 'welcome_series');
 }
-```markdown
+```
 
 ---
 
-## 💳 Payment Processing Integrations
+## Payment Processing Integrations
 
-### **Stripe Integration (⭐⭐⭐)**
+### **Stripe Integration (Level 3)**
 
 PenguinMails uses **Stripe** for subscription management and payment processing, providing secure checkout flows and self-service billing management for tenants.
 
@@ -776,9 +733,9 @@ window.location.href = session.url;
 
 ---
 
-## 🔐 Rate Limiting & Error Handling
+## Rate Limiting & Error Handling
 
-### **Rate Limiting Tiers (⭐⭐⭐)**
+### **Rate Limiting Tiers (Level 3)**
 
 | Tier | Requests/Hour | Features | Cost |
 |------|---------------|----------|------|
@@ -793,9 +750,9 @@ window.location.href = session.url;
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 999
 X-RateLimit-Reset: 1701429600
-```markdown
+```
 
-### **Error Handling Best Practices (⭐⭐)**
+### **Error Handling Best Practices (Level 2)**
 
 **Standard Error Response**
 ```json
@@ -813,41 +770,51 @@ X-RateLimit-Reset: 1701429600
     "request_id": "req_abc123"
   }
 }
-```markdown
+```
 
-**Python Error Handling**
-```python
-from penguinmails.exceptions import ()
-    PenguinMailsError,
-    ValidationError,
-    RateLimitError,
-    AuthenticationError
-)
+**JavaScript/TypeScript Error Handling**
+```javascript
+import {
+  PenguinMailsError,
+  ValidationError,
+  RateLimitError,
+  AuthenticationError
+} from '@penguinmails/sdk';
 
-def send_campaign_with_retry(client, campaign_data, max_retries=3):
-    for attempt in range(max_retries):
-        try:
-            return client.campaigns.create(campaign_data)
+async function sendCampaignWithRetry(client, campaignData, maxRetries = 3) {
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      return await client.campaigns.create(campaignData);
+    } catch (error) {
+      if (error instanceof ValidationError) {
+        console.error('Validation failed:', error.details);
+        return null; // Don't retry validation errors
+      }
 
-        except ValidationError as e:
-            print(f"Validation failed: {e.details}")
-            return None  # Don't retry validation errors
+      if (error instanceof RateLimitError) {
+        if (attempt === maxRetries - 1) {
+          throw error;
+        }
+        const waitTime = error.retryAfter || Math.pow(2, attempt) * 1000;
+        console.log(`Rate limited. Retrying in ${waitTime}ms...`);
+        await new Promise(resolve => setTimeout(resolve, waitTime));
+        continue;
+      }
 
-        except RateLimitError as e:
-            if attempt == max_retries - 1:
-                raise
-            wait_time = e.retry_after or (2 ** attempt)
-            print(f"Rate limited. Retrying in {wait_time} seconds...")
-            time.sleep(wait_time)
+      if (error instanceof AuthenticationError) {
+        console.error('Authentication failed:', error.message);
+        return null;
+      }
 
-        except AuthenticationError as e:
-            print(f"Authentication failed: {e}")
-            return None
-```markdown
+      throw error; // Re-throw unexpected errors
+    }
+  }
+}
+```
 
 ---
 
-## 🧪 Testing & Development Tools
+## Testing & Development Tools
 
 ### **Sandbox Environment**
 
@@ -858,67 +825,103 @@ def send_campaign_with_retry(client, campaign_data, max_retries=3):
 - **Rate Limits**: Relaxed for testing
 
 ### **Test Data Generator**
-```python
-class PenguinMailsTestDataGenerator:
-    def __init__(self, client):
-        self.client = client
+```javascript
+import { PenguinMails } from '@penguinmails/sdk';
 
-    def generate_test_campaigns(self, count=5):
-        """Generate test campaigns for testing."""
-        campaigns = []
+class PenguinMailsTestDataGenerator {
+  constructor(client) {
+    this.client = client;
+  }
 
-        for i in range(count):
-            campaign_data = {
-                "name": f"Test Campaign {i+1}",
-                "subject": f"Test Subject {i+1}",
-                "content": {
-                    "html": f"<h1>Test Email {i+1}</h1><p>This is test content.</p>",
-                    "text": f"Test Email {i+1} - This is test content."
-                },
-                "recipients": self.generate_test_recipients(50),
-                "settings": {
-                    "analytics_enabled": True,
-                    "ai_optimization": True,
-                    "track_opens": True,
-                    "track_clicks": True
-                }
-            }
+  async generateTestCampaigns(count = 5) {
+    const campaigns = [];
 
-            campaign = self.client.campaigns.create(campaign_data)
-            campaigns.append(campaign)
+    for (let i = 0; i < count; i++) {
+      const campaignData = {
+        name: `Test Campaign ${i + 1}`,
+        subject: `Test Subject ${i + 1}`,
+        content: {
+          html: `<h1>Test Email ${i + 1}</h1><p>This is test content.</p>`,
+          text: `Test Email ${i + 1} - This is test content.`
+        },
+        recipients: this.generateTestRecipients(50),
+        settings: {
+          analyticsEnabled: true,
+          aiOptimization: true,
+          trackOpens: true,
+          trackClicks: true
+        }
+      };
 
-        return campaigns
-```markdown
+      const campaign = await this.client.campaigns.create(campaignData);
+      campaigns.push(campaign);
+    }
+
+    return campaigns;
+  }
+
+  generateTestRecipients(count) {
+    const recipients = [];
+    for (let i = 0; i < count; i++) {
+      recipients.push({
+        email: `test${i}@example.com`,
+        personalization: {
+          name: `Test User ${i}`,
+          company: `Test Company ${i}`
+        }
+      });
+    }
+    return recipients;
+  }
+}
+```
 
 ### **API Testing Framework**
-```python
-import pytest
-from penguinmails import PenguinMails
-from penguinmails.exceptions import ValidationError
+```javascript
+import { test, expect } from '@jest/globals';
+import { PenguinMails } from '@penguinmails/sdk';
+import { ValidationError } from '@penguinmails/sdk';
 
-class TestPenguinMailsAPI:
-    @pytest.fixture
-    def client(self):
-        return PenguinMails(api_key="sk_test_abc123")
+describe('PenguinMails API', () => {
+  let client;
 
-    def test_campaign_creation(self, client):
-        campaign_data = {
-            "name": "Test Campaign",
-            "subject": "Test Subject",
-            "content": {"html": "<h1>Test</h1>", "text": "Test"},
-            "recipients": [{"email": "test@example.com"}]
-        }
+  beforeEach(() => {
+    client = new PenguinMails({ apiKey: 'sk_test_abc123' });
+  });
 
-        campaign = client.campaigns.create(campaign_data)
+  test('should create campaign successfully', async () => {
+    const campaignData = {
+      name: 'Test Campaign',
+      subject: 'Test Subject',
+      content: { html: '<h1>Test</h1>', text: 'Test' },
+      recipients: [{ email: 'test@example.com' }]
+    };
 
-        assert campaign.id is not None
-        assert campaign.name == campaign_data["name"]
-        assert campaign.status == "draft"
-```markdown
+    const campaign = await client.campaigns.create(campaignData);
+
+    expect(campaign.id).toBeDefined();
+    expect(campaign.name).toBe(campaignData.name);
+    expect(campaign.status).toBe('draft');
+  });
+
+  test('should handle validation errors', async () => {
+    const invalidCampaignData = {
+      name: '', // Invalid: empty name
+      subject: 'Test Subject',
+      content: { html: '<h1>Test</h1>', text: 'Test' },
+      recipients: []
+    };
+
+    await expect(client.campaigns.create(invalidCampaignData))
+      .rejects
+      .toThrow(ValidationError);
+  });
+});
+```
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### **Developer Documentation**
 - **[API Reference](/docs/technical/integration/advanced-integrations)** - Complete API documentation

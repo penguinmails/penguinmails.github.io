@@ -43,11 +43,11 @@ persona: "Documentation Users"
 
 ### PenguinMails Competitive Advantages
 
-- ✅ **Only platform** purpose-built for cold email infrastructure
-- ✅ **Multi-tenant architecture** - perfect for agency/team management
-- ✅ **Automated compliance** - GDPR/CAN-SPAM built-in
-- ✅ **95%+ deliverability** vs industry average 85-90%
-- ✅ **30-60 day ROI** vs 90-180 days for alternatives
+- **Only platform** purpose-built for cold email infrastructure
+- **Multi-tenant architecture** - perfect for agency/team management
+- **Automated compliance** - GDPR/CAN-SPAM built-in
+- **95%+ deliverability** vs industry average 85-90%
+- **30-60 day ROI** vs 90-180 days for alternatives
 
 ---
 
@@ -152,9 +152,9 @@ persona: "Documentation Users"
 
 | Risk | Current State | With PenguinMails |
 |:-----|:--------------|:------------------|
-| **Compliance Violation** | High risk (€20M exposure) | ✅ Minimal risk |
-| **Email Deliverability** | 40-60% deliverability | ✅ 95%+ deliverability |
-| **Technical Dependency** | High developer dependency | ✅ Self-service platform |
+| **Compliance Violation** | High risk (€20M exposure) | Minimal risk |
+| **Email Deliverability** | 40-60% deliverability | 95%+ deliverability |
+| **Technical Dependency** | High developer dependency | Self-service platform |
 
 ---
 
@@ -198,18 +198,18 @@ persona: "Documentation Users"
 
 ### Choose PenguinMails If
 
-- ✅ Cold email is critical to your business model
-- ✅ You need multi-tenant/agency management capabilities
-- ✅ Compliance automation is a priority
-- ✅ You want fast time-to-value (< 30 days)
-- ✅ You need white-label capabilities for clients
+- Cold email is critical to your business model
+- You need multi-tenant/agency management capabilities
+- Compliance automation is a priority
+- You want fast time-to-value (< 30 days)
+- You need white-label capabilities for clients
 
 ### Consider Alternatives If
 
-- ⚠️ You only send transactional emails (Postmark, SendGrid)
-- ⚠️ You need comprehensive sales engagement (Apollo, SalesLoft)
-- ⚠️ Budget is the primary constraint (Mailchimp, Mailgun)
-- ⚠️ You have existing email infrastructure you want to keep
+- You only send transactional emails (Postmark, SendGrid)
+- You need comprehensive sales engagement (Apollo, SalesLoft)
+- Budget is the primary constraint (Mailchimp, Mailgun)
+- You have existing email infrastructure you want to keep
 
 ---
 

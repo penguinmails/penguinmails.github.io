@@ -65,7 +65,7 @@ persona: "Documentation Users"
     "market_validation": true
   }
 }
-```markdown
+```
 
 **Webhook Integration Patterns**
 - **Real-time Feature Tracking**: Webhook-based feature usage monitoring
@@ -98,7 +98,7 @@ LEFT JOIN sales_opportunities s ON u.company_id = s.company_id
 WHERE f.release_date >= CURRENT_DATE - INTERVAL '90 days'
 GROUP BY f.feature_id, f.feature_name, f.release_date
 ORDER BY associated_revenue DESC;
-```markdown
+```
 
 #### Marketing Integration - Product Messaging
 **Marketing Automation Integration**
@@ -136,7 +136,7 @@ class ProductLaunchCoordinator:
             'marketing_alignment': self.validate_messaging_alignment(feature_messaging),
             'success_metrics': self.define_success_metrics(launch_data)
         }
-```markdown
+```
 
 #### Customer Success Integration - Product Feedback
 **Customer Success Platform Integration**
@@ -194,7 +194,7 @@ def calculate_market_validation_score(product_data):
         'component_scores': metrics,
         'validation_status': get_validation_status(validation_score)
     }
-```markdown
+```
 
 #### A/B Testing Integration
 **Experimentation Framework**
@@ -232,7 +232,7 @@ class MarketTestingCoordinator {
         return test;
     }
 }
-```markdown
+```
 
 ### Product Analytics Integration
 
@@ -285,7 +285,7 @@ product_development_workflow:
     - coordinated_release_timing
     - marketing_messaging_alignment
     - success_metrics_tracking
-```markdown
+```
 
 #### Cross-Functional Coordination
 **Product-Finance Coordination**

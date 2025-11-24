@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🧮 Internal Infrastructure Cost Model (Canonical Overview)
+## Internal Infrastructure Cost Model (Canonical Overview)
 
 This section provides the high-level, canonical explanation of how PenguinMails models infrastructure costs internally. It is the reference point for Finance, Operations, Product, Sales, and Customer Service when explaining “how infra costs work” without exposing misleading or low-level implementation details.
 
@@ -115,7 +115,7 @@ For SQL-level definitions, implementation details, and governance specifics, ref
 
 ---
 
-## 🏗️ Infrastructure Planning Framework
+## Infrastructure Planning Framework
 
 ### Volume-Based Infrastructure Strategy
 
@@ -136,7 +136,7 @@ graph TB
     style C fill:#fff3e0
     style D fill:#f3e5f5
     style E fill:#ffcdd2
-```markdown
+```
 
 ### VPS Provider Comparison Matrix
 
@@ -162,7 +162,7 @@ graph TB
 
 ---
 
-## 📧 ESP Selection and Architecture
+## ESP Selection and Architecture
 
 ### Provider Technical Capabilities
 
@@ -215,11 +215,11 @@ graph LR
     style D fill:#fff3e0
     style E fill:#f3e5f5
     style F fill:#ffcdd2
-```markdown
+```
 
 ---
 
-## 🔧 Technical Architecture Decisions
+## Technical Architecture Decisions
 
 ### Self-Hosted vs Managed ESP Analysis
 
@@ -265,7 +265,7 @@ graph LR
 
 ---
 
-## 📈 Performance and Cost Optimization
+## Performance and Cost Optimization
 
 ### Performance Benchmarks by Infrastructure
 
@@ -301,7 +301,7 @@ graph LR
 
 ---
 
-## 🎯 Strategic Recommendations
+## Strategic Recommendations
 
 ### Phase 1: Foundation (1-3 months)
 1. **Provider Selection**: Choose primary VPS/ESP provider
@@ -323,19 +323,19 @@ graph LR
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For technical implementation:**
-- [🏆 ESP Technical Analysis](esp-technical-analysis:1) - Detailed ESP specifications
-- [⚙️ Implementation Requirements](implementation-requirements:1) - Technical setup details
+- [ESP Technical Analysis](esp-technical-analysis:1) - Detailed ESP specifications
+- [Implementation Requirements](implementation-requirements:1) - Technical setup details
 
 **For business context:**
-- [💰 Cost Analysis Overview](cost-analysis-overview:1) - Infrastructure cost analysis
-- [📈 Performance Overview](performance-overview:1) - Performance impact analysis
+- [Cost Analysis Overview](cost-analysis-overview:1) - Infrastructure cost analysis
+- [Performance Overview](performance-overview:1) - Performance impact analysis
 
 **For compliance:**
-- [🛡️ Compliance Overview](compliance-overview:1) - Compliance requirements
-- [⚖️ Compliance Implementation](compliance-implementation:1) - Technical compliance
+- [Compliance Overview](compliance-overview:1) - Compliance requirements
+- [Compliance Implementation](compliance-implementation:1) - Technical compliance
 
 ---
 

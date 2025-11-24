@@ -102,7 +102,7 @@ Successful responses:
   "data": {},
   "meta": {}
 }
-```markdown
+```
 
 Error responses:
 
@@ -118,7 +118,7 @@ Error responses:
   },
   "timestamp": "ISO8601"
 }
-```markdown
+```
 
 Additional requirements:
 

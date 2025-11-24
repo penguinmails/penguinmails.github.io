@@ -14,7 +14,7 @@ persona: "Documentation Users"
 
 ---
 
-## 🛡️ Core Privacy & Compliance Platforms
+## Core Privacy & Compliance Platforms
 
 ### Enterprise Privacy Management Solutions
 
@@ -152,7 +152,7 @@ persona: "Documentation Users"
 
 ---
 
-## 📊 Vendor Selection Framework
+## Vendor Selection Framework
 
 ### Selection Recommendations by Use Case
 
@@ -197,11 +197,11 @@ gantt
     User Training       :train, 2025-02-26, 2025-03-04
     System Testing      :test, 2025-03-05, 2025-03-11
     Go-Live            :active, go-live, 2025-03-12, 2025-03-18
-```markdown
+```
 
 ---
 
-## 💰 Total Cost of Ownership Analysis
+## Total Cost of Ownership Analysis
 
 ### Hidden Costs and Considerations
 
@@ -227,17 +227,17 @@ gantt
 
 ---
 
-## 🔗 Progressive Disclosure Navigation
+## Progressive Disclosure Navigation
 
 **For strategic overview:**
-- [💰 Cost Analysis Overview](cost-analysis-overview:1) - Strategic investment analysis
+- [Cost Analysis Overview](cost-analysis-overview:1) - Strategic investment analysis
 
 **For implementation details:**
-- [⚙️ Implementation Management](cost-implementation:1) - Implementation and ongoing costs
+- [Implementation Management](cost-implementation:1) - Implementation and ongoing costs
 
 **For business context:**
-- [🏢 Executive Summary](executive-summary:1) - Complete strategic analysis
-- [💱 ROI Calculator](roi-calculator:1) - Platform cost-benefit analysis
+- [Executive Summary](executive-summary:1) - Complete strategic analysis
+- [ROI Calculator](roi-calculator:1) - Platform cost-benefit analysis
 
 ---
 

@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 ---
 
-## 💰 Executive Summary: The Business Case
+## Executive Summary: The Business Case
 
 ### The Problem
 
@@ -37,7 +37,7 @@ persona: "Documentation Users"
 
 ---
 
-## 📊 5-Minute ROI Calculator
+## 5-Minute ROI Calculator
 
 ### Current State Assessment
 
@@ -72,7 +72,7 @@ ROI Percentage: _______%
 
 ---
 
-## 🎯 Provider Selection by Budget
+## Provider Selection by Budget
 
 ### Budget Tiers & Recommendations
 
@@ -93,7 +93,7 @@ ROI Percentage: _______%
 
 ---
 
-## ⚡ Implementation Investment Levels
+## Implementation Investment Levels
 
 ### Level 1: Quick Win (2 weeks, $0-500 setup)
 **Ideal for**: Immediate cost reduction
@@ -118,7 +118,7 @@ ROI Percentage: _______%
 
 ---
 
-## 📈 Business Impact Metrics
+## Business Impact Metrics
 
 ### Financial Impact
 - **Direct Cost Savings**: $24,000-60,000 annually
@@ -140,23 +140,23 @@ ROI Percentage: _______%
 
 ---
 
-## 🚦 Go/No-Go Decision Framework
+## Go/No-Go Decision Framework
 
-### Green Light Indicators ✅
+### Green Light Indicators
 - Email volume > 10K/month
 - Current costs > $500/month
 - Team lacks email expertise
 - Compliance is important
 - Growth plans include email marketing
 
-### Yellow Light Indicators ⚠️
+### Yellow Light Indicators
 - Email volume 5K-10K/month
 - Current costs $200-500/month
 - Have some technical capability
 - Email is secondary priority
 - Short-term budget constraints
 
-### Red Light Indicators ❌
+### Red Light Indicators
 - Email volume < 5K/month
 - Current costs < $200/month
 - Have dedicated email team
@@ -165,7 +165,7 @@ ROI Percentage: _______%
 
 ---
 
-## 📋 Executive Approval Template
+## Executive Approval Template
 
 ### Budget Request Format
 ```markdown
@@ -196,7 +196,7 @@ Approve [Level 1/2/3] implementation for immediate ROI and risk mitigation.
 
 ---
 
-## 🔍 Due Diligence Checklist
+## Due Diligence Checklist
 
 ### Technical Validation
 - [ ] Provider has required integrations
@@ -218,7 +218,7 @@ Approve [Level 1/2/3] implementation for immediate ROI and risk mitigation.
 
 ---
 
-## 💡 Pro Tips for Approval Success
+## Pro Tips for Approval Success
 
 ### Present the Problem First
 - "We're spending $______/month on email infrastructure"
