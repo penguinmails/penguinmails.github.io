@@ -145,10 +145,10 @@ Our platform is purpose-built for B2B cold outreach at scale, providing a level 
 | Feature | PenguinMails | Mailchimp/SendGrid | Smartlead/Warmbox |
 | :--- | :---: | :---: | :---: |
 | **Focus** | Cold Outreach & Deliverability | Transactional & Marketing | Warm-up & Basic Sending |
-| **Infrastructure Control** | ✅ Full VPS & SMTP Control | ❌ Shared Infrastructure | ❌ Limited Control |
-| **Compliance Automation** | ✅ Built-in & Automated | ❌ Basic Features Only | ❌ Manual Management |
-| **Multi-Tenant Management** | ✅ Built for Agencies | ❌ Single Account Focus | ❌ Limited |
-| **Enterprise Security** | ✅ SSO, Audit Trails | ❌ Basic Features | ❌ Basic Features |
+| **Infrastructure Control** | Full VPS & SMTP Control | Shared Infrastructure | Limited Control |
+| **Compliance Automation** | Built-in & Automated | Basic Features Only | Manual Management |
+| **Multi-Tenant Management** | Built for Agencies | Single Account Focus | Limited |
+| **Enterprise Security** | SSO, Audit Trails | Basic Features | Basic Features |
 
 ---
 

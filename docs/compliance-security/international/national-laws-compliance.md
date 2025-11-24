@@ -70,7 +70,7 @@ version: "1.0"
 - **Local Data Processing:** Potential requirements for EU-based data processing
 - **German Language Requirements:** Communications and legal documents in German
 
-🌍 **Official Reference:** [TTDSG Legal Portal](https://www.gesetze-im-internet.de/ttdsg/)
+**Official Reference:** [TTDSG Legal Portal](https://www.gesetze-im-internet.de/ttdsg/)
 
 ## France - CNIL Enforcement
 
@@ -106,7 +106,7 @@ version: "1.0"
 - **Enhanced Privacy Policies:** Comprehensive disclosure of processing activities
 - **Local Compliance Officer:** Potential requirement for French-based compliance support
 
-🌍 **Official Reference:** [CNIL Official Site](https://www.cnil.fr/en/home)
+**Official Reference:** [CNIL Official Site](https://www.cnil.fr/en/home)
 
 ## Spain - AEPD Requirements
 
@@ -142,7 +142,7 @@ version: "1.0"
 - **AEPD Registration:** Potential registration requirements for data controllers
 - **Legal Representation:** Spanish legal counsel for ongoing compliance support
 
-🌍 **Official Reference:** [Spanish Data Protection Agency](https://www.aepd.es/en)
+**Official Reference:** [Spanish Data Protection Agency](https://www.aepd.es/en)
 
 ## Italy - Garante Oversight
 
@@ -273,7 +273,7 @@ version: "1.0"
 
 ---
 
-**🌍 Country-Specific References:**
+**Country-Specific References:**
 
 - [German TTDSG](https://www.gesetze-im-internet.de/ttdsg/)
 - [French CNIL](https://www.cnil.fr/en/home)

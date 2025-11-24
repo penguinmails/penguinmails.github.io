@@ -138,7 +138,7 @@ version: "1.0"
 - **Penalty Range:** Up to €20 million or 4% of annual turnover
 - **Investigation Powers:** Comprehensive audit and monitoring capabilities
 
-🌍 **Reference:** [CNIL Official Guidelines](https://www.cnil.fr/en/home)
+**Reference:** [CNIL Official Guidelines](https://www.cnil.fr/en/home)
 
 ### Spain - AEPD Requirements
 
@@ -154,7 +154,7 @@ version: "1.0"
 - **Penalty Structure:** GDPR-aligned administrative fines
 - **Supervision Focus:** Regular monitoring of marketing compliance
 
-🌍 **Reference:** [Spanish Data Protection Agency](https://www.aepd.es/en)
+**Reference:** [Spanish Data Protection Agency](https://www.aepd.es/en)
 
 ### Germany - BfDI Oversight
 
@@ -170,7 +170,7 @@ version: "1.0"
 - **Data Retention Limits:** Strict data storage limitation principles
 - **Consent Management:** Advanced consent withdrawal mechanisms
 
-🌍 **Reference:** [TTDSG Legal Portal](https://www.gesetze-im-internet.de/ttdsg/)
+**Reference:** [TTDSG Legal Portal](https://www.gesetze-im-internet.de/ttdsg/)
 
 ## Proposed ePrivacy Regulation Impact
 
@@ -186,7 +186,7 @@ version: "1.0"
 - **Transition Period:** Gradual implementation over several years
 - **Business Preparation:** Proactive compliance with proposed standards
 
-🌍 **Reference:** [ePrivacy Regulation Proposal](https://digital-strategy.ec.europa.eu/en/policies/eprivacy-regulation)
+**Reference:** [ePrivacy Regulation Proposal](https://digital-strategy.ec.europa.eu/en/policies/eprivacy-regulation)
 
 ## Risk Assessment for PenguinMails
 
@@ -254,7 +254,7 @@ version: "1.0"
 
 ---
 
-**🌍 Official References:**
+**Official References:**
 
 - [ePrivacy Directive Full Text - EUR-Lex](https://eur-lex.europa.eu/eli/dir/2002/58/oj)
 - [Electronic Communications Framework](https://eur-lex.europa.eu/eli/dir/2002/21/oj)
