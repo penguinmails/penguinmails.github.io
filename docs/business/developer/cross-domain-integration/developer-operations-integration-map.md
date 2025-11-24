@@ -153,7 +153,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Excellence optimization systems activated
 - Quality enhancement validation completed and optimized
 
-**Business Framework Integration**: [Developer Validation Framework](/docs/business/operations/validation/framework) + [Operations Excellence Framework
+**Business Framework Integration**: [Developer Validation Framework](/docs/business/operations/validation/framework) + [Operations Excellence Framework](/docs/business/operations/excellence/framework)
 
 #### Integration Point 2.1.3: Support Success Optimization
 
@@ -289,7 +289,7 @@ The Developer-Operations Integration Map establishes comprehensive coordination 
 - Quality requirement optimization systems activated
 - Quality monitoring validation completed and verified
 
-**Business Framework Integration**: [Developer Validation Framework](/docs/business/operations/validation/framework) + [Operations Validation Framework]
+**Business Framework Integration**: [Developer Validation Framework](/docs/business/operations/validation/framework) + [Operations Validation Framework](/docs/business/operations/validation/framework)
 
 #### Integration Point 3.2.3: Platform Success Tracking
 

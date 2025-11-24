@@ -49,9 +49,9 @@ This repository contains the complete documentation for PenguinMails, including:
 Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
 
 - 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/README.md)** - Complete freelancer success center and business development resources
-- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
 - 📋 **[Operations Framework](/docs/operations/freelancer-management/README.md)** - Team structure, sprint workflow, and coordination protocols
-- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
+- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional quotation preparation and business development
 
 **Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
 
@@ -67,7 +67,7 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 
 ### For Contributors
 
-Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING)** guide, including:
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
 
 - Local development setup with Docker
 - Content standards and guidelines
@@ -200,10 +200,10 @@ index.md → Planning & Roadmap
 
 **Key Files**:
 
-- `docs/roadmap-considerations.md` - Development philosophy and timeline
+- `docs/roadmap/product-roadmap.md` - Development philosophy and timeline
 - `docs/business/feature-taxonomy-and-roadmap.md` - Feature classification
-- `docs/feature-overview.md` - Feature catalog
-- `user-journeys/*.md` - Customer workflow maps
+- `docs/features/README.md` - Feature catalog
+- `docs/user-journeys/*.md` - Customer workflow maps
 
 #### 🏗️ Technical Lead / Architect
 
@@ -247,7 +247,7 @@ index.md → Developers
 - `tasks/**/*.md` - Active implementation tasks (with status fields)
 - `docs/design/routes/*.md` - Frontend view specifications
 - `docs/implementation-technical/api/**/*.md` - API specifications
-- `docs/features/*.md` - Feature requirements (planned migration)
+- `docs/features/*.md` - Feature requirements
 
 #### 📊 Marketing / Operations
 
@@ -262,8 +262,8 @@ index.md → Marketing & Operations
 
 **Key Files**:
 
-- `user-journeys/*.md` - Customer workflow maps
-- `docs/feature-overview.md` - Feature capabilities
+- `docs/user-journeys/*.md` - Customer workflow maps
+- `docs/features/README.md` - Feature capabilities
 - `docs/operations-analytics/**/*.md` - Analytics documentation
 
 ### File Relationship Principles
@@ -331,14 +331,14 @@ All other directories support these core goals:
 
 ---## Contributing
 
-We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
 
 ### Quick Contribution Process
 
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING) for setup instructions)
+4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards

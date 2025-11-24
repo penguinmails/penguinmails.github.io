@@ -262,7 +262,7 @@ Our repository emphasizes targeted surgical edits over bulk automation:
 - **Surgical Fixes**: Use targeted search/replace edits to fix individual problems
 - **Historical Reference**: Legacy automation scripts are archived in `.roo/legacy-archive/development-automation/`
 
-For comprehensive markdown linting documentation, including troubleshooting and CI/CD integration, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING).
+For comprehensive markdown linting documentation, including troubleshooting and CI/CD integration, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
 
 ### Common Issues and Solutions
 

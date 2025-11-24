@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Finance Teams, Executive Leadership, Business Impact Management
 **Business Impact Priority**: Critical - Developer ROI tracking and business impact responsibility
-**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive ROI Framework](/docs/business/executive/roi) | [Business Impact Analytics Framework](/docs/business/analytics/business-impact/framework
+**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive ROI Framework](/docs/business/executive/roi) | [Business Impact Analytics Framework](/docs/business/analytics/business-impact/framework)
 
 ## Executive Summary
 

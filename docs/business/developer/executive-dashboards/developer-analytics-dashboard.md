@@ -16,7 +16,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Analytics Teams, Developer Leadership, Executive Analytics Management
 **Business Impact Priority**: High - Real-time developer analytics and performance insights responsibility
-**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) | [Executive Analytics Framework](/docs/business/executive/analytics/framework
+**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) | [Executive Analytics Framework](/docs/business/executive/analytics/framework)
 
 ## Executive Summary
 
