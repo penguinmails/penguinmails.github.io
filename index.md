@@ -118,7 +118,6 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📋 Active Development Tasks](/tasks/README) - *Current sprint work and task queue*
 - [🖥️ Frontend View Specifications](/docs/design/frontend-routing-map) - *Complete route and UI specs*
 - [🔌 API Architecture](/docs/implementation-technical/api/README) - *Backend endpoint documentation*
 - [🎨 Design System](/docs/design/README) - *UI patterns and component library*
@@ -155,7 +154,3 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 5. **Resources**: Do you lack dedicated email infrastructure expertise?
 
 **If you answered "yes" to 2+ questions, PenguinMails can provide significant value.**
-
----
-
-*For the complete documentation overview and contribution guidelines, see our [README](./README)*

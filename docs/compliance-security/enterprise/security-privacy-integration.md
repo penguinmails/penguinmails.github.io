@@ -66,7 +66,7 @@ interface DataAsset {
   encryption: boolean;
   accessControls: AccessControl[];
 }
-```markdown
+```
 
 ### **Encryption Standards**
 - **Data at Rest**: AES-256 encryption for all stored data
@@ -112,7 +112,7 @@ const retentionPolicies: RetentionPolicy[] = [
     auditRequired: true
   }
 ];
-```markdown
+```
 
 ## 4. **Access Control Systems**
 
@@ -167,7 +167,7 @@ const roles: UserRole[] = [
     sessionTimeout: 480
   }
 ];
-```markdown
+```
 
 ### **Multi-Factor Authentication (MFA)**
 - **Required for**: Administrative accounts, privileged access
@@ -241,7 +241,7 @@ const securityRequirements: SecurityRequirement[] = [
     severity: 'critical'
   }
 ];
-```markdown
+```
 
 ### **API Security**
 - **Authentication**: Bearer token authentication with refresh tokens
@@ -299,7 +299,7 @@ const dataSubjectRights: DataSubjectRight[] = [
     exemptions: ['Legal obligation', 'Public interest', 'Legal claims']
   }
 ];
-```markdown
+```
 
 ### **Privacy Impact Assessment**
 ```typescript
@@ -332,7 +332,7 @@ interface PrivacyMitigation {
   timeline: Date;
   status: 'planned' | 'implemented' | 'effective';
 }
-```markdown
+```
 
 ## 8. **Compliance Management**
 
@@ -381,7 +381,7 @@ interface SecurityIncident {
   timeline: IncidentTimeline[];
   response: IncidentResponse;
 }
-```markdown
+```
 
 ### **Incident Response Process**
 1. **Detection**: Automated alerts and monitoring
@@ -450,7 +450,7 @@ interface SecurityMetrics {
     dataLossIncidents: number;
   };
 }
-```markdown
+```
 
 ### **Compliance Reporting**
 - **Automated Reports**: Daily, weekly, and monthly security summaries
@@ -486,7 +486,7 @@ interface SecurityControl {
   evidence: string;
   rating: 'adequate' | 'needs_improvement' | 'inadequate';
 }
-```markdown
+```
 
 ### **Third-Party Access Management**
 - **Just-in-Time Access**: Temporary access for specific tasks

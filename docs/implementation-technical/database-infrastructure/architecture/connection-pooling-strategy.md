@@ -68,7 +68,7 @@ Timeout Standards:
   Content:   Medium (60s) - Content operations
   Queue:     Fast (15-20s) - High concurrency
   OLAP:      Slow (90-120s) - Complex queries
-```markdown
+```
 
 ---
 
@@ -89,7 +89,7 @@ INSERT INTO connection_pool_config (
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds,
     max_lifetime_seconds = EXCLUDED.max_lifetime_seconds;
-```markdown
+```
 
 **Performance Targets:**
 - **Query Response Time**: <200ms for 95th percentile
@@ -109,7 +109,7 @@ INSERT INTO connection_pool_config (
 ) ON CONFLICT (tier, pool_name) DO UPDATE SET
     min_connections = EXCLUDED.min_connections,
     max_connections = EXCLUDED.max_connections;
-```markdown
+```
 
 ---
 
@@ -129,7 +129,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 **Performance Targets:**
 - **Content Retrieval**: <1s for email content access
@@ -150,7 +150,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 ---
 
@@ -170,7 +170,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 **Performance Targets:**
 - **Queue Processing**: <20s average processing time
@@ -191,7 +191,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 ---
 
@@ -211,7 +211,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 **Performance Targets:**
 - **Query Response**: <5s for complex analytics queries
@@ -232,7 +232,7 @@ INSERT INTO connection_pool_config (
     max_connections = EXCLUDED.max_connections,
     connection_timeout_seconds = EXCLUDED.connection_timeout_seconds,
     idle_timeout_seconds = EXCLUDED.idle_timeout_seconds;
-```markdown
+```
 
 ---
 
@@ -261,7 +261,7 @@ Scaling Limits:
   Maximum Scale: 2x baseline max_connections
   Minimum Scale: 50% of baseline max_connections
   Scale Cooldown: 10 minutes between scaling events
-```markdown
+```
 
 ### **Progressive Scaling Strategy**
 Level 3: Enterprise Scaling (30 minutes)
@@ -329,7 +329,7 @@ ORDER BY cpm.connection_usage_rate DESC;
 
 -- QA Integration: Comment explaining QA framework integration
 COMMENT ON VIEW connection_pool_diagnosis IS 'QA Framework Integration: Pool exhaustion diagnosis with quality assurance alerting and [Critical Issue Identification](/docs/business/quality-assurance) protocols';
-```markdown
+```
 
 ### **Performance Monitoring Integration**
 Level 2: Standard Monitoring (15 minutes)
@@ -352,7 +352,7 @@ PostHog Dashboard Integration:
     - 5-minute: Connection metrics
     - 15-minute: Performance trends
     - Hourly: Scaling decisions
-```markdown
+```
 
 ### **Business Model Integration**
 Level 3: Enterprise Implementation

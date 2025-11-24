@@ -70,7 +70,7 @@ This represents a **strategic architectural evolution** from 3-tier to **4-tier 
 
 ```markdown
 OLTP: emails (heavy content + metadata) → Queue → OLAP: analytics
-```markdown
+```
 **Issues**: Slow queries, index bloat, connection pool exhaustion
 
 #### Optimized System (4-tier):
@@ -78,7 +78,7 @@ OLTP: emails (heavy content + metadata) → Queue → OLAP: analytics
 OLTP: inbox_message_refs (metadata only)
     ↘ Content DB: content_objects (heavy content)
     ↘ Queue → OLAP: analytics
-```markdown
+```
 **Benefits**: 60-80% faster queries, efficient indexing, scalable architecture
 
 ### Content Storage Architecture
@@ -103,7 +103,7 @@ inbox_message_refs {
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 }
-```markdown
+```
 
 **Performance Benefits**:
 - 90% smaller table size
@@ -136,7 +136,7 @@ attachments {
     varchar(50) storage_disposition
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 }
-```markdown
+```
 
 **Storage Optimization**:
 - Intelligent compression algorithms

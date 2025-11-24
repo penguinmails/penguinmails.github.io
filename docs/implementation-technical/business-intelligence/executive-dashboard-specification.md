@@ -72,7 +72,7 @@ Executive Dashboard
     ├── Key Performance Indicators
     ├── Critical Alerts Summary
     └── Recommended Actions
-```markdown
+```
 
 ### Data Integration Architecture
 
@@ -94,7 +94,7 @@ graph TD
     B --> G[Executive Dashboard]
     B --> H[Executive Reports]
     B --> I[Alert Management System]
-```markdown
+```
 
 ---
 
@@ -202,7 +202,7 @@ graph TD
                     (Cost Efficiency × 0.3) +
                     (Resource Utilization × 0.2) +
                     (Response Time × 0.2)
-  ```markdown
+  ```
 
 ### 4. Strategic Decision Tracker
 
@@ -258,7 +258,7 @@ interface ExecutiveDashboardState {
   isLoading: boolean;
   lastUpdated: Date;
 }
-```markdown
+```
 
 #### Key Dashboard Components
 
@@ -279,7 +279,7 @@ const RevenueProtectionMonitor: React.FC<RevenueProtectionMonitorProps> = ({
   // Revenue risk calculation and visualization
   // Alert management and escalation
 };
-```markdown
+```
 
 **2. Cost Optimization Center Component**
 ```typescript
@@ -298,7 +298,7 @@ const CostOptimizationCenter: React.FC<CostOptimizationCenterProps> = ({
   // Optimization opportunity identification
   // ROI tracking and forecasting
 };
-```markdown
+```
 
 ### Real-time Data Architecture
 
@@ -320,7 +320,7 @@ class ExecutiveDashboardDataService {
     // Deliverability alerts
   }
 }
-```markdown
+```
 
 #### Data Caching Strategy
 ```typescript
@@ -338,7 +338,7 @@ class DashboardCacheManager {
     // Invalidate related cache entries
   }
 }
-```markdown
+```
 
 ---
 
@@ -349,7 +349,7 @@ class DashboardCacheManager {
 #### 1. Dashboard Data Retrieval
 ```http
 GET /api/executive-dashboard/{tenantId}/summary
-```markdown
+```
 
 **Response:**
 ```json
@@ -394,12 +394,12 @@ GET /api/executive-dashboard/{tenantId}/summary
   ],
   "lastUpdated": "2025-12-19T10:35:00Z"
 }
-```markdown
+```
 
 #### 2. Real-time Business Events
 ```http
 GET /api/executive-dashboard/{tenantId}/events/realtime
-```markdown
+```
 
 **WebSocket Event Format:**
 ```json
@@ -414,12 +414,12 @@ GET /api/executive-dashboard/{tenantId}/events/realtime
   },
   "timestamp": "2025-12-19T10:35:00Z"
 }
-```markdown
+```
 
 #### 3. Cost Analysis Deep Dive
 ```http
 GET /api/executive-dashboard/{tenantId}/cost-analysis
-```markdown
+```
 
 **Response:**
 ```json
@@ -461,7 +461,7 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
     }
   ]
 }
-```markdown
+```
 
 ---
 

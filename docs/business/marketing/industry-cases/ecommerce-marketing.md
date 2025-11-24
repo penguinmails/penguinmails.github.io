@@ -149,7 +149,7 @@ Event Structure:
 - Discount Levels: 15% off $50+, 20% off $100+
 - Free shipping threshold: $75
 - Featured products: Limited quantities
-```markdown
+```
 
 **MVP Pre-Event Phase (5 days before):**
 - **Email Teaser:** Basic anticipation building emails
@@ -193,19 +193,19 @@ Day 3: Product care guide and usage tips
 Day 5: Customer reviews request and social proof
 Day 7: Basic cross-sell recommendations
 Day 10: Customer support contact information
-```markdown
+```
 
 **MVP Repeat Customer Retention (bimonthly):**
 ```markdown
 Month 1: Basic personalized product recommendations
 Month 2: Basic member benefits reminder
-```markdown
+```
 
 **MVP At-Risk Customer Win-back (2 emails over 5 days):**
 ```markdown
 Day 0: "We miss you" message with special discount
 Day 5: Final offer with urgency messaging
-```markdown
+```
 
 **MVP Success Metrics:**
 - 15% increase in repeat purchase rate
@@ -346,7 +346,7 @@ def generate_basic_recommendations(customer_id, category=None):
     recommendations = merge_recommendations_basic(basic_recommendations, content_recommendations)
 
     return filter_by_availability(recommendations, category)
-```markdown
+```
 
 #### MVP Email Personalization
 ```markdown
@@ -356,7 +356,7 @@ MVP Personalization Tactics:
 - Basic timing optimization
 - Basic frequency management
 - Basic channel preferences
-```markdown
+```
 
 ---
 
@@ -428,7 +428,7 @@ ROI = (Revenue from Marketing - Marketing Investment) / Marketing Investment × 
 
 MVP Customer Lifetime Value Calculation:
 CLV = (Average Order Value) × (Purchase Frequency) × (Customer Lifespan) × (Profit Margin)
-```markdown
+```
 
 **MVP Example ROI Calculation:**
 ```markdown
@@ -442,7 +442,7 @@ Profit Margin: 20%
 CLV = $75 × 1.1 × 18 × 0.20 = $297
 Monthly Revenue from New Customers = 500 × $297 = $148,500
 ROI = ($148,500 - $30,000) / $30,000 × 100 = 395%
-```markdown
+```
 
 ---
 

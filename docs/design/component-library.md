@@ -70,7 +70,7 @@ All components must support both light and dark modes using Tailwind's `dark:` m
 ├── 📁 feedback
 ├── 📁 overlays
 └── 📁 utilities
-```markdown
+```
 
 ### Component Maturity Levels
 - **Technical Experimental**: New components under development
@@ -108,7 +108,7 @@ interface ButtonProps {
 <Button variant="danger" size="sm" loading={isDeleting}>
   Delete
 </Button>
-```markdown
+```
 
 **Design Specifications:**
 - Height: 32px (sm), 40px (md), 48px (lg)
@@ -149,7 +149,7 @@ interface InputProps {
   leftIcon={MailIcon}
   required
 />
-```markdown
+```
 
 **Design Specifications:**
 - Height: 32px (sm), 40px (md), 48px (lg)
@@ -180,7 +180,7 @@ interface ContainerProps {
 <Container size="full" centered padding="none">
   <HeroSection />
 </Container>
-```markdown
+```
 
 **Size Specifications:**
 - sm: 640px max-width
@@ -216,7 +216,7 @@ interface GridItemProps {
     <Sidebar />
   </GridItem>
 </Grid>
-```markdown
+```
 
 **Responsive Breakpoints:**
 - Mobile: 1 column (span resets to 12)
@@ -251,7 +251,7 @@ interface FormFieldProps {
     placeholder="e.g., Summer Sale 2025"
   />
 </FormField>
-```markdown
+```
 
 ### Select
 ```typescript
@@ -289,7 +289,7 @@ interface SelectProps {
   placeholder="Select campaign status"
   onChange={(value) => setStatus(value as string)}
 />
-```markdown
+```
 
 ### Checkbox & Radio
 ```typescript
@@ -323,7 +323,7 @@ interface RadioGroupProps {
   <Radio value="professional" label="Professional Plan" />
   <Radio value="enterprise" label="Enterprise Plan" />
 </RadioGroup>
-```markdown
+```
 
 ## Data Display Components
 
@@ -392,7 +392,7 @@ interface TableProps<T> {
   onSelect={handleSelection}
   onRowClick={handleRowClick}
 />
-```markdown
+```
 
 ### Card
 ```typescript
@@ -439,7 +439,7 @@ interface CardProps {
     </Button>
   </CardFooter>
 </Card>
-```markdown
+```
 
 ## Feedback Components
 
@@ -477,7 +477,7 @@ interface AlertProps {
   variant="success"
   message="Campaign sent successfully! Check your analytics for performance details."
 />
-```markdown
+```
 
 ### Toast
 ```typescript
@@ -517,7 +517,7 @@ const handleSave = async () => {
     });
   }
 };
-```markdown
+```
 
 ### Modal
 ```jsx
@@ -563,7 +563,7 @@ interface ModalProps {
     </ul>
   </div>
 </Modal>
-```markdown
+```
 
 ## Navigation Components
 
@@ -594,7 +594,7 @@ interface BreadcrumbProps {
   ]}
   maxItems={5}
 />
-```markdown
+```
 
 ### Tabs
 ```typescript
@@ -650,7 +650,7 @@ interface TabsProps {
   variant="underline"
   onChange={setActiveTab}
 />
-```markdown
+```
 
 ## Utility Components
 
@@ -680,7 +680,7 @@ interface SkeletonProps {
 <Skeleton variant="rectangular" width="100%" height={200} />
 <Skeleton variant="text" width="60%" />
 <Skeleton variant="circular" width={40} height={40} />
-```markdown
+```
 
 ### EmptyState
 ```jsx
@@ -719,7 +719,7 @@ interface EmptyStateProps {
     onClick: () => openTutorial('creating-campaigns')
   }}
 />
-```markdown
+```
 
 ### Badge
 ```typescript
@@ -739,7 +739,7 @@ interface BadgeProps {
 <Badge variant="warning" size="sm">Pending</Badge>
 <Badge variant="error" dot /> {/* Status dot only */}
 <Badge variant="info" icon={InfoIcon}>New Feature</Badge>
-```markdown
+```
 
 ## Component Status and Roadmap
 
@@ -780,7 +780,7 @@ import { Button, Input, Modal } from '@/components';
 // Alternative: Import with alias for complex components
 import { Table as DataTable } from '@/components/data-display/Table';
 import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
-```markdown
+```
 
 ### Component Composition
 ```typescript
@@ -811,7 +811,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
     ...
   </Card>
 </div>
-```markdown
+```
 
 ### Styling Guidelines
 - Use design tokens for all spacing, colors, and typography

@@ -60,7 +60,7 @@ This document establishes comprehensive operations-sales integration requirement
     "performance_tracking": "predictive_success_modeling"
   }
 }
-```markdown
+```
 
 ---
 
@@ -75,7 +75,7 @@ Sales Activities ──┐
 Customer Data ─────┘                       │
                                            ▼
 Operations Insights ◄─── Performance Analytics ◄─── Success Metrics
-```markdown
+```
 
 **Operations Intelligence Integration:**
 ```json
@@ -101,7 +101,7 @@ Operations Insights ◄─── Performance Analytics ◄─── Success Metr
     }
   }
 }
-```markdown
+```
 
 ### Operations-Sales API Integration Framework
 
@@ -137,7 +137,7 @@ Sales Operations APIs:
     - Performance analysis
     - Coaching recommendations
     - Success acceleration
-```markdown
+```
 
 ---
 
@@ -177,7 +177,7 @@ Sales Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Sales Pipeline Operations Coordination
 
@@ -213,7 +213,7 @@ Sales Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Customer Onboarding and Success Coordination
 
@@ -249,7 +249,7 @@ Sales Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -288,7 +288,7 @@ Sales Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Revenue Operations Integration
 
@@ -324,7 +324,7 @@ Sales Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -369,7 +369,7 @@ Technology Stack Integration:
       - Predictive analytics
       - Optimization insights
       - Executive reporting
-```markdown
+```
 
 ### Data Integration and Synchronization
 
@@ -404,7 +404,7 @@ Technology Stack Integration:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -473,7 +473,7 @@ Technology Stack Integration:
     }
   }
 }
-```markdown
+```
 
 ### Business Value Measurement
 

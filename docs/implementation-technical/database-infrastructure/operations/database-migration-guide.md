@@ -87,7 +87,7 @@ CHECK (approximate_cost >= 0);
 -- Create index for efficient cost-based queries
 CREATE INDEX IF NOT EXISTS idx_vps_instances_approximate_cost
 ON vps_instances(approximate_cost) WHERE status = 'active';
-```markdown
+```
 
 **Business Impact (Clarified):**
 - **Internal Visibility:** CFOs and Finance can see directional infrastructure cost allocations per tenant based on Hostwinds-modeled values.
@@ -101,7 +101,7 @@ ON vps_instances(approximate_cost) WHERE status = 'active';
 Tenant A: 3 VPS instances × $150 = $450/month infrastructure cost
 Tenant B: 2 VPS instances × $200 = $400/month infrastructure cost
 Tenant C: 1 VPS instance × $100 = $100/month infrastructure cost
-```markdown
+```
 
 ### Step 2: SMTP IP Addresses Cost Tracking Enhancement
 
@@ -133,7 +133,7 @@ CHECK (approximate_cost >= 0);
 -- Create index for efficient cost-based queries
 CREATE INDEX IF NOT EXISTS idx_smtp_ip_addresses_approximate_cost
 ON smtp_ip_addresses(approximate_cost) WHERE status IN ('active', 'warmed', 'warming');
-```markdown
+```
 
 **Business Impact:**
 - **Deliverability ROI:** Calculate cost per successful email delivery
@@ -213,7 +213,7 @@ LEFT JOIN vps_instances vi ON vi.status = 'active'
 LEFT JOIN smtp_ip_addresses sia ON sia.vps_instance_id = vi.id
 WHERE s.status = 'active'
 GROUP BY s.tenant_id, c.name, p.name, p.price_monthly, s.current_period_start, s.current_period_end;
-```markdown
+```
 
 **Executive Dashboard Queries:**
 ```sql
@@ -245,7 +245,7 @@ SELECT
 FROM executive_business_summary
 WHERE business_health_status != 'Excellent'
 ORDER BY optimization_opportunity DESC;
-```markdown
+```
 
 #### Business Cost Allocation View
 
@@ -301,7 +301,7 @@ LEFT JOIN payments py ON py.subscription_id = s.id
     AND py.billing_period_start >= s.current_period_start
 WHERE s.status = 'active'
 GROUP BY s.tenant_id, p.name, p.price_monthly;
-```markdown
+```
 
 **Cost Analysis Queries:**
 ```sql
@@ -335,7 +335,7 @@ SELECT
 FROM business_cost_allocation
 WHERE cost_per_email_delivered > 0
 ORDER BY cost_per_email_delivered ASC;
-```markdown
+```
 
 ### Step 4: Performance Optimization
 
@@ -357,7 +357,7 @@ ON business_cost_allocation(plan_name);
 
 CREATE INDEX IF NOT EXISTS idx_business_cost_allocation_profit
 ON business_cost_allocation(monthly_profit) WHERE monthly_profit > 0;
-```markdown
+```
 
 **Performance Benefits:**
 - **Executive Dashboard:** <3 second load times for business health summaries
@@ -391,7 +391,7 @@ CREATE POLICY executive_summary_tenant_isolation ON executive_business_summary
 
 CREATE POLICY cost_allocation_tenant_isolation ON business_cost_allocation
     FOR ALL USING (tenant_id = current_setting('app.current_tenant_id')::uuid);
-```markdown
+```
 
 **Access Control Matrix:**
 | Role | business_cost_allocation | executive_business_summary |
@@ -425,7 +425,7 @@ WHERE table_name IN ('vps_instances', 'smtp_ip_addresses')
 -- ├── vps_instances.approximate_cost: DECIMAL(8,2), NULL allowed, DEFAULT 0.00
 -- ├── smtp_ip_addresses.approximate_cost: DECIMAL(6,2), NULL allowed, DEFAULT 0.00
 -- └── All columns have proper business comments
-```markdown
+```
 
 **Business Logic Validation:**
 ```sql
@@ -463,7 +463,7 @@ SELECT
 FROM executive_business_summary evs
 JOIN cost_validation cv ON evs.tenant_id = cv.tenant_id
 WHERE evs.dashboard_date = CURRENT_DATE;
-```markdown
+```
 
 **Performance Validation:**
 ```sql
@@ -478,7 +478,7 @@ ORDER BY cost_efficiency_score DESC;
 -- ├── Index utilization: 100% for filtered queries
 -- ├── Memory usage: <100MB for complex aggregations
 -- └── Concurrent query handling: 100+ simultaneous queries
-```markdown
+```
 
 ### Rollback Procedures
 
@@ -505,7 +505,7 @@ ALTER TABLE smtp_ip_addresses DROP CONSTRAINT IF EXISTS chk_smtp_approximate_cos
 -- Remove columns (LAST RESORT - only if absolutely necessary)
 -- ALTER TABLE vps_instances DROP COLUMN IF EXISTS approximate_cost;
 -- ALTER TABLE smtp_ip_addresses DROP COLUMN IF EXISTS approximate_cost;
-```markdown
+```
 
 **Warning:** Only use column removal as absolute last resort, as this will permanently lose business data. Prefer to set approximate_cost to 0.00 instead.
 

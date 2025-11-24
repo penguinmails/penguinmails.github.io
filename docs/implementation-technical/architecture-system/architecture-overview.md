@@ -79,7 +79,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
                     │ • Cache (Redis)      • Backup Systems    │
                     │                                             │
                     └─────────────────────────────────────────────┘
-```markdown
+```
 
 ---
 
@@ -166,7 +166,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → Warm-up → Ready for Campaigns
       │                │                 │             │              │           │
    5 minutes        10 minutes        15 minutes    10 minutes    48 hours   Active
-```markdown
+```
 
 **SMTP Server Stack**
 - **MailU Postfix**: Reliable email sending with anti-spam features
@@ -278,7 +278,7 @@ sequenceDiagram
     InfraSvc->>TenantSvc: Infrastructure ready
     TenantSvc->>UI: Notify customer
     UI->>Customer: Infrastructure ready!
-```markdown
+```
 
 ### Email Campaign Flow
 
@@ -307,7 +307,7 @@ sequenceDiagram
     Campaign->>API: Update campaign status
     API->>UI: Real-time updates
     UI->>User: Campaign analytics
-```markdown
+```
 
 ---
 

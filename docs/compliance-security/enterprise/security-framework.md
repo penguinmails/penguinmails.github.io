@@ -52,7 +52,7 @@ sequenceDiagram
     App->>Redis: Store Session
     Redis->>App: Session Confirmed
     App->>Client: Login Success + Dashboard Access
-```markdown
+```
 
 #### Security Features
 - **Managed Authentication**: NileDB handles core authentication (users table)
@@ -98,7 +98,7 @@ const authenticateUser = async (req, res, next) => {
     res.status(401).json({ error: 'Authentication failed' });
   }
 };
-```markdown
+```
 
 ### Role-Based Access Control (RBAC)
 
@@ -132,7 +132,7 @@ graph TD
     classDef employee fill:#b3e5fc
     classDef qa fill:#fff9c4
     classDef blocked fill:#ffcdd2
-```markdown
+```
 
 #### Permission Levels Detail
 
@@ -183,7 +183,7 @@ app.get('/api/tenant/:tenantId/users',
   checkPermission('user_management'),
   getUsers
 );
-```markdown
+```
 
 ## Row Level Security (RLS) Policies
 
@@ -230,7 +230,7 @@ CREATE POLICY tenant_isolation ON tenant_data
 
 -- Session-based tenant context
 SET app.current_tenant_id = '12345';
-```markdown
+```
 
 #### API Security
 ```javascript
@@ -259,7 +259,7 @@ const setTenantContext = async (req, res, next) => {
     res.status(500).json({ error: 'Failed to set tenant context' });
   }
 };
-```markdown
+```
 
 ### Data Encryption
 
@@ -290,7 +290,7 @@ app.use(helmet({
     },
   },
 }));
-```markdown
+```
 
 #### API Key Management
 ```javascript
@@ -309,7 +309,7 @@ const apiKeyManager = {
     return cipher.update(JSON.stringify(data), 'utf8', 'hex') + cipher.final('hex');
   }
 };
-```markdown
+```
 
 ---
 
@@ -334,7 +334,7 @@ ufw allow 443/tcp
 ufw allow from 10.0.0.0/8 to any port 3000
 ufw allow from 10.0.0.0/8 to any port 5432
 ufw allow from 10.0.0.0/8 to any port 6379
-```markdown
+```
 
 #### VPN Access
 - **Team Access**: VPN required for infrastructure management
@@ -357,7 +357,7 @@ systemctl enable fail2ban
 
 # Update system packages
 apt-get update && apt-get upgrade -y
-```markdown
+```
 
 #### SSL/TLS Configuration
 ```nginx
@@ -381,7 +381,7 @@ server {
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
 }
-```markdown
+```
 
 ---
 
@@ -399,7 +399,7 @@ TXT mailu._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQE
 
 # DMARC Record
 TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmails.com"
-```markdown
+```
 
 #### Email Authentication
 ```javascript
@@ -418,7 +418,7 @@ const sendEmail = async (emailData) => {
 
   return await smtpTransporter.sendMail(mailOptions);
 };
-```markdown
+```
 
 ### Email Warm-up Security
 
@@ -450,7 +450,7 @@ const emailWarmup = {
     return { action: 'continue', reason: 'Healthy bounce rate' };
   }
 };
-```markdown
+```
 
 ---
 
@@ -475,7 +475,7 @@ const getUserData = async (userId, tenantId) => {
 const campaignQuery = nileDB('campaigns')
   .where({ tenant_id: tenantId, status: 'active' })
   .select(['id', 'name', 'status']);
-```markdown
+```
 
 #### XSS Prevention
 ```javascript
@@ -496,7 +496,7 @@ const escapeHTML = (unsafe) => {
     .replace(/")
     .replace(/');
 };
-```markdown
+```
 
 ### Rate Limiting
 
@@ -533,7 +533,7 @@ app.use('/api) => {
   res.setHeader('X-RateLimit-Remaining', result.remaining);
   next();
 });
-```markdown
+```
 
 ---
 
@@ -592,7 +592,7 @@ const securityLogger = {
     await nileDB.suspicious_activities.insert(suspicious);
   }
 };
-```markdown
+```
 
 #### Audit Trail
 ```javascript
@@ -614,7 +614,7 @@ const auditLogger = {
     await nileDB.audit_log.insert(auditEntry);
   }
 };
-```markdown
+```
 
 ### Incident Response
 
@@ -645,7 +645,7 @@ flowchart TD
 
     %% Alert for high severity
     CONTAIN -.->|Immediate Alert| ALERT[Security Team Alert]
-```markdown
+```
 
 ---
 
@@ -683,7 +683,7 @@ const gdprCompliance = {
     return JSON.stringify(data, null, 2);
   }
 };
-```markdown
+```
 
 ### Data Retention Policies
 

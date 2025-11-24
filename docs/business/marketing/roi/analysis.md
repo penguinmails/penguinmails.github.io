@@ -67,7 +67,7 @@ Annual Investment: $150K
 Net Annual Value: $600K
 ROI: 400% annually
 Payback: 8 months
-```markdown
+```
 
 **Business Impact Metrics:**
 - **Analytics Accuracy:** 99.5% marketing data accuracy
@@ -91,7 +91,7 @@ Annual Investment: $75K
 Net Annual Value: $325K
 ROI: 433% annually
 Payback: 7 months
-```markdown
+```
 
 ### Epic 2: Campaign Performance ROI
 
@@ -111,7 +111,7 @@ Annual Investment: $50K
 Net Annual Value: $475K
 ROI: 950% annually
 Payback: 4 months
-```markdown
+```
 
 **Performance Impact Analysis:**
 - **Campaign Efficiency:** 35% improvement in campaign performance metrics
@@ -137,7 +137,7 @@ Annual Investment: $40K
 Net Annual Value: $385K
 ROI: 962% annually
 Payback: 4 months
-```markdown
+```
 
 **Journey Impact Metrics:**
 - **Conversion Rate:** 30% improvement in customer journey conversion rates
@@ -163,7 +163,7 @@ Annual Investment: $35K
 Net Annual Value: $265K
 ROI: 757% annually
 Payback: 5 months
-```markdown
+```
 
 ### Epic 5: Marketing Automation ROI
 
@@ -183,7 +183,7 @@ Annual Investment: $30K
 Net Annual Value: $235K
 ROI: 783% annually
 Payback: 4 months
-```markdown
+```
 
 ### Epic 6: Marketing Excellence ROI
 
@@ -203,7 +203,7 @@ Annual Investment: $25K
 Net Annual Value: $130K
 ROI: 520% annually
 Payback: 6 months
-```markdown
+```
 
 ---
 
@@ -222,7 +222,7 @@ Base ROI: 400%
 Risk Adjustment: 5% reduction
 Adjusted ROI: 380%
 Net Risk-Adjusted Value: $570K annually
-```markdown
+```
 
 #### Campaign Optimization (CP-001)
 **Confidence Level:** 90%
@@ -235,7 +235,7 @@ Base ROI: 950%
 Risk Adjustment: 10% reduction
 Adjusted ROI: 855%
 Net Risk-Adjusted Value: $427K annually
-```markdown
+```
 
 ### Medium Confidence Investments (70-85% Success Rate)
 
@@ -250,7 +250,7 @@ Base ROI: 962%
 Risk Adjustment: 20% reduction
 Adjusted ROI: 770%
 Net Risk-Adjusted Value: $308K annually
-```markdown
+```
 
 #### Marketing Intelligence (MI-001)
 **Confidence Level:** 75%
@@ -263,7 +263,7 @@ Base ROI: 757%
 Risk Adjustment: 25% reduction
 Adjusted ROI: 568%
 Net Risk-Adjusted Value: $170K annually
-```markdown
+```
 
 ### Future Value Investments (60-70% Success Rate)
 
@@ -278,7 +278,7 @@ Base ROI: 783%
 Risk Adjustment: 30% reduction
 Adjusted ROI: 548%
 Net Risk-Adjusted Value: $147K annually
-```markdown
+```
 
 #### Marketing Excellence (ME-001)
 **Confidence Level:** 65%
@@ -291,7 +291,7 @@ Base ROI: 520%
 Risk Adjustment: 35% reduction
 Adjusted ROI: 338%
 Net Risk-Adjusted Value: $84K annually
-```markdown
+```
 
 ---
 

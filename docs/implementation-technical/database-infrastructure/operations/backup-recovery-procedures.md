@@ -62,7 +62,7 @@ Recovery Point Objectives (RPO):
   Content:  1 hour (acceptable for email content) - QA Validation: Weekly quality checks
   Queue:    0 minutes (transaction log replay) - QA Validation: Continuous validation
   OLAP:     24 hours (analytics data acceptable loss) - QA Validation: Monthly comprehensive review
-```markdown
+```
 
 ---
 
@@ -115,7 +115,7 @@ aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/oltp)/" \
   --storage-class STANDARD_IA
 
 echo "OLTP backup completed successfully"
-```markdown
+```
 
 ### **Hourly Incremental Backup**
 Level 2: Standard Operations (5 minutes)
@@ -141,7 +141,7 @@ aws s3 sync "$WAL_ARCHIVE_DIR" "s3://$S3_BUCKET/oltp/wal_archive)/" \
   --server-side-encryption AES256
 
 echo "WAL archive completed: $(date)"
-```markdown
+```
 
 ---
 
@@ -202,7 +202,7 @@ aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/content)/" \
   --storage-class GLACIER
 
 echo "Content backup completed with compression optimization"
-```markdown
+```
 
 ---
 
@@ -245,7 +245,7 @@ aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/queue/wal)/" \
   --server-side-encryption AES256
 
 echo "Queue WAL backup completed"
-```markdown
+```
 
 ---
 
@@ -303,7 +303,7 @@ aws s3 sync "$BACKUP_DIR" "s3://$S3_BUCKET/olap)/" \
   --storage-class STANDARD_IA
 
 echo "OLAP analytics backup completed"
-```markdown
+```
 
 ---
 
@@ -380,7 +380,7 @@ psql -h localhost -U postgres -d "$DB_NAME" -c "SELECT COUNT(*) as table_count F
 
 echo "OLTP recovery completed successfully"
 echo "Recovery point: $RECOVERY_TARGET_TIME"
-```markdown
+```
 
 ### **Content Database Recovery**
 Level 1: Emergency Recovery (20-30 minutes)
@@ -439,7 +439,7 @@ pg_restore \
 sudo systemctl start postgresql-content
 
 echo "Content database recovery completed"
-```markdown
+```
 
 ---
 
@@ -509,7 +509,7 @@ echo "  OLTP: $OLTP_SIZE"
 echo "  Content: $CONTENT_SIZE"
 
 echo "Backup validation completed successfully with QA framework integration"
-```markdown
+```
 
 ### **Recovery Testing (Monthly)**
 Level 3: Enterprise Testing (30 minutes)
@@ -554,7 +554,7 @@ $$ LANGUAGE plpgsql;
 
 -- Execute recovery tests
 SELECT * FROM test_recovery_procedures();
-```markdown
+```
 
 ---
 
@@ -578,7 +578,7 @@ Secondary Region: us-west-2
 Recovery Locations:
   Primary: us-east-1 (RTO: 15 minutes)
   Secondary: us-west-2 (RTO: 2 hours)
-```markdown
+```
 
 ### **Disaster Recovery Runbook**
 Level 1: Emergency Response (30-60 minutes)
@@ -625,7 +625,7 @@ echo "Step 6: Resume normal operations"
 # Switch traffic to recovered databases
 
 echo "Disaster recovery completed"
-```markdown
+```
 
 ---
 

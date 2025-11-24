@@ -45,7 +45,7 @@ Customer Success integrates with Sales through well-defined data flows and API i
 │ • Renewal Risk  │    │ • Event Stream  │    │ • Opportunity   │
 │ • Relationship  │    │ • Auth/RBAC     │    │ • Forecasting   │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```markdown
+```
 
 ### Integration Principles
 
@@ -75,7 +75,7 @@ Sales Close Data ──┐
 Relationship Intel ─┘                        │
                                              ▼
 Success Baseline ◄─── Validation ──► Pipeline Update
-```markdown
+```
 
 ### Key Integration Points
 
@@ -89,7 +89,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
     "baseline_metrics": "day_zero_health"
   }
 }
-```markdown
+```
 
 **2. Knowledge Transfer Automation**
 ```json
@@ -101,7 +101,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
     "expansion_potential": "white_space_analysis"
   }
 }
-```markdown
+```
 
 ### CS-Sales Handoff APIs
 
@@ -116,7 +116,7 @@ GET /api/v1/cs-sales/handoff/status/{customer_id}
 - Transition completeness
 - Knowledge gaps identification
 - Success plan alignment
-```markdown
+```
 
 ### Integration Benefits
 
@@ -145,7 +145,7 @@ Success Signals ──┐
 Usage Patterns ────┘                           │
                                               ▼
 Deal Progression ◄─── Qualification ──► CS Support
-```markdown
+```
 
 ### Key Integration Points
 
@@ -159,7 +159,7 @@ Deal Progression ◄─── Qualification ──► CS Support
     "timing_alignment": "renewal_window_optimization"
   }
 }
-```markdown
+```
 
 **2. Joint Qualification**
 ```json
@@ -171,7 +171,7 @@ Deal Progression ◄─── Qualification ──► CS Support
     "executive_engagement": "sponsor_briefing_materials"
   }
 }
-```markdown
+```
 
 ### CS-Expansion APIs
 
@@ -186,7 +186,7 @@ POST /api/v1/cs-sales/qualified/{opportunity_id}
 - Sales-qualified confirmation
 - CS support commitment
 - Pipeline progression trigger
-```markdown
+```
 
 ### Benefits
 
@@ -215,7 +215,7 @@ Health Trends ──┐
 Contract Data ──┘                      │
                                        ▼
 Negotiation Support ◄─── Close Data ──► CS Update
-```markdown
+```
 
 ### Key Integration Points
 
@@ -229,7 +229,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
     "competitive_threats": "market_position_monitoring"
   }
 }
-```markdown
+```
 
 **2. Strategy Development**
 ```json
@@ -241,7 +241,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
     "expansion_bundling": "renewal_plus_opportunities"
   }
 }
-```markdown
+```
 
 ### CS-Renewal APIs
 
@@ -256,7 +256,7 @@ POST /api/v1/cs-sales/renewal/close/{contract_id}
 - Renewal confirmation processing
 - Success plan updates
 - Expansion pipeline seeding
-```markdown
+```
 
 ### Benefits
 
@@ -276,7 +276,7 @@ cs_sales_gateway:
   auth: "oauth2_sales_cs_scoped"
   rate_limits: "opportunity_concurrent_5"
   monitoring: "pipeline_health_metrics"
-```markdown
+```
 
 ### Event Streaming
 
@@ -285,7 +285,7 @@ topics:
   handoff_complete: "cs_sales_transitions"
   expansion_qualified: "opportunity_development"
   renewal_risk_change: "contract_health_events"
-```markdown
+```
 
 ---
 

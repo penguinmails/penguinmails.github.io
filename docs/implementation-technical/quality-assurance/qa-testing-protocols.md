@@ -91,7 +91,7 @@ This document establishes comprehensive quality assurance protocols for PenguinM
 **Actual Result**: [Pass/Fail with details]
 **Environment**: [Browser, OS, Device]
 **Test Data**: [Sample user details]
-```markdown
+```
 
 ### **Test Case Categories**
 - **Smoke Tests**: Critical path validation (15-20 tests)
@@ -135,7 +135,7 @@ describe('User Authentication', () => {
     await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
   });
 });
-```markdown
+```
 
 ## 6. **Manual Testing Protocols**
 
@@ -211,7 +211,7 @@ describe('User Authentication', () => {
 **Screenshots/Videos**: [Attached evidence]
 **Test Data**: [Used for reproduction]
 **Browser Console**: [Error messages]
-```markdown
+```
 
 ### **Bug Triage Process**
 1. **Initial Review**: Validate bug report completeness
@@ -284,7 +284,7 @@ Impact assessment?
 ├── High impact + Low probability → Priority 2 (High)
 ├── Low impact + High probability → Priority 3 (Medium)
 └── Low impact + Low probability → Priority 4 (Low)
-```markdown
+```
 
 ### **Bug Fix Priority**
 ```markdown
@@ -293,7 +293,7 @@ Severity × User Impact × Business Value
 ├── Critical + High + Medium → Fix this sprint
 ├── Critical + Medium + Any → Fix next sprint
 └── Other combinations → Backlog consideration
-```markdown
+```
 
 ---
 

@@ -35,7 +35,7 @@ Customer Success integrates with Finance through well-defined data flows and API
 
 ### Core Integration Framework
 
-```markdown
+```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   CUSTOMER      │◄──►│   INTEGRATION   │◄──►│    FINANCE      │
 │   SUCCESS       │    │     LAYER       │    │    SYSTEMS      │
@@ -45,7 +45,7 @@ Customer Success integrates with Finance through well-defined data flows and API
 │ • Expansion     │    │ • Event Stream  │    │ • Revenue Recog │
 │ • Churn Risk    │    │ • Auth/RBAC     │    │ • ROI Analytics │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```markdown
+```
 
 ### Integration Principles
 
@@ -69,13 +69,13 @@ Precise allocation of expansion revenue and churn protection to CS activities.
 
 ### Data Flow Architecture
 
-```markdown
+```
 CS Outcomes ──┐
                ├──► Attribution Engine ──► Revenue Recognition
 Financial Data─┘                           │
                                           ▼
 Reporting Ledger ◄─── Validation ──► CS Portfolio
-```markdown
+```
 
 ### Key Integration Points
 
@@ -89,7 +89,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
     "causal_validation": "pre_post_success_comparison"
   }
 }
-```markdown
+```
 
 **2. Churn Prevention Value**
 ```json
@@ -101,7 +101,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
     "benchmark_adjustment": "industry_retention_norms"
   }
 }
-```markdown
+```
 
 ### CS-Finance Attribution APIs
 
@@ -115,7 +115,7 @@ POST /api/v1/cs-finance/attribute/{customer_id}
 GET /api/v1/cs-finance/portfolio/{period}
 - Consolidated attribution reporting
 - Variance reconciliation
-```markdown
+```
 
 ### Integration Benefits
 
@@ -144,7 +144,7 @@ Contract Terms ──┐
 Success Metrics ──┘                             │
                                                ▼
 Variance Alerts ◄─── Reconciliation ──► CS Action
-```markdown
+```
 
 ### Key Integration Points
 
@@ -158,7 +158,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
     "expansion_unlocking": "threshold_based_upsells"
   }
 }
-```markdown
+```
 
 **2. ROI Calculation**
 ```json
@@ -170,7 +170,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
     "benchmark_comparison": "industry_cs_benchmarks"
   }
 }
-```markdown
+```
 
 ### CS-Value APIs
 
@@ -184,7 +184,7 @@ GET /api/v1/cs-finance/realization/{contract_id}
 POST /api/v1/cs-finance/certify
 - Quarterly value certification
 - Evidence submission
-```markdown
+```
 
 ### Benefits
 
@@ -213,7 +213,7 @@ Health Trends ──┐
 Pipeline Data ──┘                            │
                                             ▼
 Scenario Models ◄─── Validation ──► CS Confidence
-```markdown
+```
 
 ### Key Integration Points
 
@@ -227,7 +227,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
     "executive_override": "relationship_signals"
   }
 }
-```markdown
+```
 
 **2. Expansion Pipeline**
 ```json
@@ -239,7 +239,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
     "conversion_velocity": "historical_success_rates"
   }
 }
-```markdown
+```
 
 ### CS-Forecast APIs
 
@@ -253,7 +253,7 @@ GET /api/v1/cs-finance/forecast/{customer_id}
 POST /api/v1/cs-finance/adjust
 - CS-informed forecast updates
 - Evidence-based adjustments
-```markdown
+```
 
 ### Benefits
 
@@ -273,7 +273,7 @@ cs_finance_gateway:
   auth: "oauth2_finance_cs_scoped"
   rate_limits: "quarterly_batch_100"
   monitoring: "attribution_accuracy_metrics"
-```markdown
+```
 
 ### Event Streaming
 
@@ -282,7 +282,7 @@ topics:
   value_realization: "contract_outcome_events"
   attribution_update: "revenue_allocation_changes"
   forecast_adjustment: "health_trend_signals"
-```markdown
+```
 
 ---
 

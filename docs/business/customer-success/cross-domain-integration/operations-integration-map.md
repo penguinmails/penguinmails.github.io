@@ -45,7 +45,7 @@ Customer Success integrates with Operations through well-defined data flows and 
 │ • Performance   │    │ • Event Stream  │    │ • Monitoring    │
 │ • Optimization  │    │ • Auth/RBAC     │    │ • Optimization  │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```markdown
+```
 
 ### Integration Principles
 
@@ -75,7 +75,7 @@ CS Triggers ──┐
 Escalations ───┘                            │
                                            ▼
 Performance Data ◄─── Metrics ──► Optimization Loop
-```markdown
+```
 
 ### Key Integration Points
 
@@ -89,7 +89,7 @@ Performance Data ◄─── Metrics ──► Optimization Loop
     "compliance_gateways": "audit_trail_integration"
   }
 }
-```markdown
+```
 
 **2. Escalation Automation**
 ```json
@@ -101,7 +101,7 @@ Performance Data ◄─── Metrics ──► Optimization Loop
     "resolution_tracking": "outcome_correlation"
   }
 }
-```markdown
+```
 
 ### CS-Operations Automation APIs
 
@@ -115,7 +115,7 @@ POST /api/v1/cs-ops/execute/{workflow_id}
 GET /api/v1/cs-ops/escalations/active
 - Pending escalations dashboard
 - SLA breach predictions
-```markdown
+```
 
 ### Integration Benefits
 
@@ -144,7 +144,7 @@ Workload Signals ──┐
 Skill Requirements─┘                           │
                                               ▼
 Performance Balance ◄─── Utilization ──► CS Optimization
-```markdown
+```
 
 ### Key Integration Points
 
@@ -158,7 +158,7 @@ Performance Balance ◄─── Utilization ──► CS Optimization
     "overflow_provisioning": "peak_demand_buffering"
   }
 }
-```markdown
+```
 
 **2. Dynamic Allocation**
 ```json
@@ -170,7 +170,7 @@ Performance Balance ◄─── Utilization ──► CS Optimization
     "performance_routing": "historical_success_rates"
   }
 }
-```markdown
+```
 
 ### CS-Resource APIs
 
@@ -184,7 +184,7 @@ GET /api/v1/cs-ops/capacity/forecast
 POST /api/v1/cs-ops/allocate/{customer_id}
 - Optimal CS assignment recommendations
 - Conflict resolution
-```markdown
+```
 
 ### Benefits
 
@@ -213,7 +213,7 @@ Operational Data ──┐
 Alerts ────────────┘                               │
                                                   ▼
 Improvement Cycle ◄─── Metrics ──► CS Refinement
-```markdown
+```
 
 ### Key Integration Points
 
@@ -227,7 +227,7 @@ Improvement Cycle ◄─── Metrics ──► CS Refinement
     "dashboard_federation": "unified_cs_ops_view"
   }
 }
-```markdown
+```
 
 **2. Bottleneck Optimization**
 ```json
@@ -239,7 +239,7 @@ Improvement Cycle ◄─── Metrics ──► CS Refinement
     "kaizen_integration": "rapid_improvement_events"
   }
 }
-```markdown
+```
 
 ### CS-Performance APIs
 
@@ -253,7 +253,7 @@ GET /api/v1/cs-ops/performance/live
 POST /api/v1/cs-ops/optimize
 - Bottleneck resolution recommendations
 - A/B test deployment
-```markdown
+```
 
 ### Benefits
 
@@ -273,7 +273,7 @@ cs_operations_gateway:
   auth: "oauth2_ops_cs_scoped"
   rate_limits: "workflow_concurrent_20"
   monitoring: "capacity_utilization_metrics"
-```markdown
+```
 
 ### Event Streaming
 
@@ -282,7 +282,7 @@ topics:
   workflow_events: "cs_process_automation"
   capacity_signals: "resource_demand_changes"
   performance_alerts: "operational_anomalies"
-```markdown
+```
 
 ---
 

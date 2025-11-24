@@ -65,7 +65,7 @@ This document establishes comprehensive operations-finance integration requireme
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -80,7 +80,7 @@ Financial Activities ──┐
 Cost Data ─────────────┘                            │
                                                   ▼
 Operations Insights ◄─── Financial Analytics ◄─── Performance Metrics
-```markdown
+```
 
 **Operations Intelligence Integration:**
 ```json
@@ -106,7 +106,7 @@ Operations Insights ◄─── Financial Analytics ◄─── Performance Me
     }
   }
 }
-```markdown
+```
 
 ### Operations-Finance API Integration Framework
 
@@ -142,7 +142,7 @@ Financial Operations APIs:
     - Financial forecasting
     - Scenario planning
     - Strategic planning support
-```markdown
+```
 
 ---
 
@@ -182,7 +182,7 @@ Financial Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Cost Management and Optimization Operations
 
@@ -218,7 +218,7 @@ Financial Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Revenue Operations and Financial Performance
 
@@ -254,7 +254,7 @@ Financial Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -293,7 +293,7 @@ Financial Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Financial Planning and Forecasting Coordination
 
@@ -329,7 +329,7 @@ Financial Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -374,7 +374,7 @@ Financial Operations Technology Stack:
       - Financial risk correlation
       - Mitigation strategy coordination
       - Performance impact analysis
-```markdown
+```
 
 ### Data Integration and Synchronization
 
@@ -409,7 +409,7 @@ Financial Operations Technology Stack:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -478,7 +478,7 @@ Financial Operations Technology Stack:
     }
   }
 }
-```markdown
+```
 
 ### Business Value Measurement
 

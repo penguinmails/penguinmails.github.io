@@ -232,7 +232,7 @@ interface ComponentProps extends BaseComponentProps {
 >
   Submit Form
 </Button>
-```markdown
+```
 
 ## Layout Components
 
@@ -257,7 +257,7 @@ interface ComponentProps extends BaseComponentProps {
   justify-content: center;
   min-height: 100vh;
 }
-```markdown
+```
 
 ### Grid System
 ```typescript
@@ -280,7 +280,7 @@ interface GridItemProps {
   <GridItem span={8}>Main Content</GridItem>
   <GridItem span={4}>Sidebar</GridItem>
 </Grid>
-```markdown
+```
 
 ### Flexbox Utilities
 ```css
@@ -299,7 +299,7 @@ interface GridItemProps {
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
 .justify-between { justify-content: space-between; }
-```markdown
+```
 
 ## Button Components
 
@@ -332,7 +332,7 @@ interface ButtonProps {
 <Button variant="danger" size="md" loading={isDeleting} onClick={handleDelete}>
   Delete Account
 </Button>
-```markdown
+```
 
 ### Button Group Pattern
 ```typescript
@@ -349,7 +349,7 @@ interface ButtonGroupProps {
   <Button active>Weekly</Button>
   <Button>Monthly</Button>
 </ButtonGroup>
-```markdown
+```
 
 ## Form Components
 
@@ -371,7 +371,7 @@ interface InputProps {
   onBlur?: () => void;
   onFocus?: () => void;
 }
-```markdown
+```
 
 ```jsx
 // Usage with validation
@@ -388,7 +388,7 @@ const [emailError, setEmailError] = useState('');
   errorMessage={emailError}
   required
 />
-```markdown
+```
 
 ### Select Components
 ```typescript
@@ -422,7 +422,7 @@ interface SelectProps {
   placeholder="Select country"
   onChange={(value) => setCountry(value)}
 />
-```markdown
+```
 
 ### Form Validation Patterns
 ```typescript
@@ -460,7 +460,7 @@ const FormField = ({ name, rules, children }: FormFieldProps) => {
     touched: !!touched
   });
 };
-```markdown
+```
 
 ## Data Display Components
 
@@ -501,7 +501,7 @@ interface TableProps<T> {
   selectable
   onSelect={handleSelection}
 />
-```markdown
+```
 
 ### Card Component
 ```typescript
@@ -533,7 +533,7 @@ interface CardProps {
     <Metric label="Clicks" value={campaign.clicks} />
   </div>
 </Card>
-```markdown
+```
 
 ## Feedback Components
 
@@ -565,7 +565,7 @@ interface AlertProps {
   }}
   dismissible
 />
-```markdown
+```
 
 ### Toast Notifications
 ```typescript
@@ -598,7 +598,7 @@ toast.success({
     onClick: () => navigate(`/campaigns)
   }
 });
-```markdown
+```
 
 ### Modal Component
 ```typescript
@@ -612,7 +612,7 @@ interface ModalProps {
   footer?: React.ReactNode;
   children: React.ReactNode;
 }
-```markdown
+```
 
 ```javascript
 // Usage
@@ -634,7 +634,7 @@ interface ModalProps {
 >
   <p>Are you sure you want to delete "{campaignName}"? This will permanently remove all associated data.</p>
 </Modal>
-```markdown
+```
 
 ## Navigation Components
 
@@ -660,7 +660,7 @@ interface BreadcrumbProps {
     { label: 'Summer Sale 2025', current: true }
   ]}
 />
-```markdown
+```
 
 ### Tab Component
 ```typescript
@@ -691,7 +691,7 @@ interface TabsProps {
   activeTab={activeTab}
   onChange={setActiveTab}
 />
-```markdown
+```
 
 ## Utility Components
 
@@ -709,7 +709,7 @@ interface LoadingProps {
 <Loading size="md" variant="spinner" />
 <Loading variant="skeleton" />
 <Loading variant="dots" text="Saving changes..." />
-```markdown
+```
 
 ### Empty States
 ```jsx
@@ -734,7 +734,7 @@ interface EmptyStateProps {
     onClick: () => navigate('/campaigns)
   }}
 />
-```markdown
+```
 
 ### Badge Component
 ```typescript
@@ -750,7 +750,7 @@ interface BadgeProps {
 <Badge variant="success">Active</Badge>
 <Badge variant="warning" size="sm">Pending</Badge>
 <Badge variant="error" dot /> {/* Just colored dot */}
-```markdown
+```
 
 ## Component Development Guidelines
 
@@ -802,7 +802,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({
 });
 
 Button.displayName = 'Button';
-```markdown
+```
 
 ### Component Testing
 ```typescript
@@ -830,7 +830,7 @@ describe('Button', () => {
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
 });
-```markdown
+```
 
 ### Component Documentation
 ```typescript
@@ -883,7 +883,7 @@ export const Loading: Story = {
     children: 'Loading...'
   }
 };
-```markdown
+```
 
 ---
 

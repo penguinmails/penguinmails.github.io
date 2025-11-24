@@ -153,7 +153,7 @@ Scaling Factors:
 - RAM: 1GB per 25,000-50,000 monthly emails
 - Storage: 1GB per 100,000 monthly emails (for 90-day log retention)
 - Bandwidth: 2TB per 1M monthly emails (conservative estimate)
-```markdown
+```
 
 #### Cost-Performance Analysis
 **Framework for Evaluating Value**:
@@ -232,7 +232,7 @@ Where:
 - Variable Usage Costs: Overage charges, additional features
 - Additional Services: Dedicated IPs, premium support, compliance tools
 - Labor Costs: Operational overhead at $100/hour industry standard
-```markdown
+```
 
 #### CPM (Cost Per Thousand) Calculation
 **Methodology**:
@@ -242,7 +242,7 @@ CPM = (Total Monthly Cost ÷ Monthly Email Volume) × 1,000
 Example:
 - SendGrid Essentials 100K: $350/month for 100,000 emails
 - CPM = ($350 ÷ 100,000) × 1,000 = $3.50
-```markdown
+```
 
 #### Value Analysis Framework
 **Evaluation Criteria**:
@@ -270,7 +270,7 @@ Where:
 - IP Management Factor: 1.0 (shared) to 1.15 (dedicated)
 - Volume Factor: 1.0 (low volume) to 0.85 (high volume)
 - List Quality Factor: 0.7 (poor) to 1.1 (excellent)
-```markdown
+```
 
 ---
 
@@ -331,7 +331,7 @@ FTE = (Total Weekly Hours ÷ 40 hours) × (Required Quality Level ÷ 1.0)
 Where:
 - Total Weekly Hours = Sum of function-specific hours
 - Required Quality Level = 1.0 (standard) to 1.5 (high-touch)
-```markdown
+```
 
 #### Team Composition Optimization
 **Framework**:
@@ -400,7 +400,7 @@ Where:
 - Penalty Exposure = Maximum penalty for violation
 - Probability of Violation = Based on operations complexity and compliance maturity
 - Prevention Investment = Tools, training, and process costs
-```markdown
+```
 
 #### Cost-Benefit Analysis
 **Components**:

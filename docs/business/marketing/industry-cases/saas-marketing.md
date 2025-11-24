@@ -149,7 +149,7 @@ MVP Product-Led Funnel Structure:
 - Basic Activation: Key feature usage and initial value realization
 - Basic Conversion: Paid plan upgrade with expanded features
 - Basic Expansion: Usage-based growth and team collaboration features
-```markdown
+```
 
 **MVP Freemium Strategy:**
 - **Limited Feature Access:** Core functionality available in free tier
@@ -191,7 +191,7 @@ MVP Account Targeting Framework:
 - Basic Behavioral Signals: Website visits, content downloads
 - Basic Pain Point Mapping: Business challenges and solution fit
 - Basic Stakeholder Mapping: Decision-makers and influencers identification
-```markdown
+```
 
 **MVP Personalization Strategy:**
 - **Account Research:** Basic research into company challenges and initiatives
@@ -381,7 +381,7 @@ CLV = (Average Monthly Revenue per Customer) × (Gross Margin %) )
 
 MVP Payback Period:
 Payback Period = Customer Acquisition Cost )
-```markdown
+```
 
 **MVP Example ROI Calculation:**
 ```markdown
@@ -395,7 +395,7 @@ Customer Lifetime Value = ($400 × 0.75) / 0.07 = $4,286
 Customer Acquisition Cost = $60,000 / 150 = $400
 ROI = ($4,286 - $400) / $400 × 100 = 972%
 Payback Period = $400 ) = 1.33 months
-```markdown
+```
 
 ---
 

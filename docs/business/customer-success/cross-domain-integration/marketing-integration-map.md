@@ -45,7 +45,7 @@ Customer Success integrates with Marketing through well-defined data flows and A
 │ • Expansion     │    │ • Event Stream  │    │ • Analytics     │
 │ • Retention     │    │ • Auth/RBAC     │    │ • Personalization│
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```markdown
+```
 
 ### Integration Principles
 
@@ -76,7 +76,7 @@ CS Health Scores ──┐
 Success Milestones ─┘                         │
                                               ▼
 Campaign Performance ◄─── Attribution ──► CS Insights
-```markdown
+```
 
 ### Key Integration Points
 
@@ -90,7 +90,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
     "success_correlation": "feature_usage_tracking"
   }
 }
-```markdown
+```
 
 **2. Milestone Celebrations**
 ```json
@@ -102,7 +102,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
     "advocacy_trigger": "reference_program_eligibility"
   }
 }
-```markdown
+```
 
 **3. Health-Based Segmentation**
 ```json
@@ -114,7 +114,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
     "dynamic_lists": "real_time_sync"
   }
 }
-```markdown
+```
 
 ### CS-Marketing APIs
 
@@ -129,7 +129,7 @@ GET /api/v1/cs-marketing/performance/{campaign_id}
 - CS-attributed campaign results
 - Health impact correlation
 - ROI attribution breakdown
-```markdown
+```
 
 ### Integration Benefits
 
@@ -158,7 +158,7 @@ Risk Signals ──┐
 Intervention ──┘                           │
                                            ▼
 Recovery Metrics ◄─── Performance ──► CS Optimization
-```markdown
+```
 
 ### Key Integration Points
 
@@ -172,7 +172,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
     "escalation_triggers": "recovery_monitoring"
   }
 }
-```markdown
+```
 
 **2. Win-back Sequences**
 ```json
@@ -184,7 +184,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
     "feedback_integration": "recovery_surveys"
   }
 }
-```markdown
+```
 
 ### CS-Retention APIs
 
@@ -198,7 +198,7 @@ GET /api/v1/cs-retention/risk/{customer_id}
 POST /api/v1/cs-retention/recovery
 - Campaign execution confirmation
 - Recovery trajectory tracking
-```markdown
+```
 
 ### Benefits
 
@@ -227,7 +227,7 @@ Success Signals ──┐
 Value Metrics ─────┘                          │
                                              ▼
 Conversion Data ◄─── Attribution ──► CS Pipeline
-```markdown
+```
 
 ### Key Integration Points
 
@@ -241,7 +241,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
     "timing_optimization": "renewal_windows"
   }
 }
-```markdown
+```
 
 **2. Cross-sell Targeting**
 ```json
@@ -253,7 +253,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
     "pipeline_sync": "joint_qualification"
   }
 }
-```markdown
+```
 
 ### CS-Expansion APIs
 
@@ -267,7 +267,7 @@ GET /api/v1/cs-expansion/opportunities/{customer_id}
 POST /api/v1/cs-expansion/campaigns
 - Triggers expansion sequences
 - Tracks conversion attribution
-```markdown
+```
 
 ### Benefits
 
@@ -287,7 +287,7 @@ cs_marketing_gateway:
   auth: "oauth2_cs_scoped"
   rate_limits: "customer_concurrent_10"
   monitoring: "health_correlation_metrics"
-```markdown
+```
 
 ### Event Streaming
 
@@ -296,7 +296,7 @@ topics:
   cs_health_changes: "customer_health_events"
   success_milestones: "milestone_achievements"
   expansion_signals: "opportunity_identification"
-```markdown
+```
 
 ---
 

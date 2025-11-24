@@ -65,7 +65,7 @@ This document establishes comprehensive operations-customer success integration 
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -80,7 +80,7 @@ Customer Activities ──┐
 Health Indicators ─────┘                          │
                                                ▼
 Operations Insights ◄─── Success Analytics ◄─── Performance Metrics
-```markdown
+```
 
 **Operations Intelligence Integration:**
 ```json
@@ -106,7 +106,7 @@ Operations Insights ◄─── Success Analytics ◄─── Performance Metr
     }
   }
 }
-```markdown
+```
 
 ### Operations-Customer Success API Integration Framework
 
@@ -142,7 +142,7 @@ Customer Success Operations APIs:
     - Success metrics tracking
     - ROI measurement
     - Attribution analysis
-```markdown
+```
 
 ---
 
@@ -182,7 +182,7 @@ Customer Success Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Retention Operations and Churn Prevention
 
@@ -218,7 +218,7 @@ Customer Success Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Expansion Pipeline Operations and Revenue Optimization
 
@@ -254,7 +254,7 @@ Customer Success Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -293,7 +293,7 @@ Customer Success Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ### Customer Onboarding and Success Coordination
 
@@ -329,7 +329,7 @@ Customer Success Operations APIs:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -374,7 +374,7 @@ Customer Success Operations Technology Stack:
       - Intervention coordination
       - Recovery process management
       - Success celebration
-```markdown
+```
 
 ### Data Integration and Synchronization
 
@@ -409,7 +409,7 @@ Customer Success Operations Technology Stack:
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -478,7 +478,7 @@ Customer Success Operations Technology Stack:
     }
   }
 }
-```markdown
+```
 
 ### Business Value Measurement
 

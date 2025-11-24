@@ -62,7 +62,7 @@ Monthly Revenue Protection Score:
 - Total Monthly Score: ____/40
 
 Target: >32) for effective revenue protection oversight
-```markdown
+```
 
 #### Process-Driven Revenue Protection KPIs
 - **Revenue Risk Alert Frequency**: 2-5 significant directional alerts per month
@@ -82,7 +82,7 @@ Monthly Cost Optimization Score:
 - Total Monthly Score: ____/40
 
 Target: >36) for effective cost optimization oversight
-```markdown
+```
 
 #### Strategic Cost Management KPIs
 - **Monthly Budget Variance**: ±5-10% of predicted infrastructure costs
@@ -102,7 +102,7 @@ Quarterly Strategic Decision Score:
 - Total Quarterly Score: ____/40
 
 Target: >32) for effective strategic decision support
-```markdown
+```
 
 #### Strategic Planning Support KPIs
 - **Strategic Investment ROI**: Maintain 150-300% ROI on strategic infrastructure investments
@@ -131,7 +131,7 @@ Target: >32) for effective strategic decision support
 - Deliverability Issue Resolution: ______
 - Payment Problem Prevention: ______
 - Strategic Revenue Insights: ______
-```markdown
+```
 
 #### Cost Optimization Review
 ```markdown
@@ -148,7 +148,7 @@ Target: >32) for effective strategic decision support
 - Infrastructure Utilization: ______% (Target: 85-95%)
 - Compliance Cost Avoidance: $______
 - Strategic Procurement Impact: $______ savings
-```markdown
+```
 
 #### Strategic Decision Support Review
 ```markdown
@@ -165,7 +165,7 @@ Target: >32) for effective strategic decision support
 - Market Position Assessment: ______
 - Strategic Planning Updates: ______ major decisions
 - Long-term Strategic Value: ______ (Score: ______)
-```markdown
+```
 
 ---
 
@@ -208,7 +208,7 @@ Strategic Decision Support Health:
 - Investment Tracking: [ ] Excellent (90%+) [ ] Good (80-90%) [ ] Needs Improvement (<80%)
 - Competitive Intelligence: [ ] Excellent (Quarterly) [ ] Good (Bi-annual) [ ] Needs Improvement (Annual)
 - Strategic Planning: [ ] Excellent (Proactive) [ ] Good (Reactive) [ ] Needs Improvement (Ad-hoc)
-```markdown
+```
 
 ---
 

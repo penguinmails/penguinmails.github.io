@@ -108,7 +108,7 @@ Content Pillar Strategy:
 - Industry-Specific Case Studies (bi-weekly deep dives)
 - ROI Calculators and Assessment Tools (monthly releases)
 - Webinar Series with Industry Experts (monthly events)
-```markdown
+```
 
 **Content Development:**
 - **Weekly Insights:** Industry trend analysis and implications
@@ -144,7 +144,7 @@ Account Targeting Criteria:
 - Industry: Technology, financial services, healthcare
 - Pain Points: Digital transformation, operational efficiency
 - Decision-Maker Access: C-level and VP-level contacts
-```markdown
+```
 
 **Personalization Approach:**
 - **Account Research:** Deep dive into company strategy, challenges, and initiatives
@@ -325,7 +325,7 @@ ROI = (Total Project Revenue - (Marketing Investment + Project Delivery Costs)) 
 
 Client Lifetime Value Calculation:
 CLV = (Average Annual Project Revenue) × (Average Client Relationship Length) × (Profit Margin) - (Ongoing Relationship Costs)
-```markdown
+```
 
 **Example ROI Calculation:**
 ```markdown
@@ -339,7 +339,7 @@ Profit Margin: 30%
 Client Lifetime Value = ($125,000 × 4 × 0.30) - ($0) = $150,000
 Total New Client Revenue = 50 × $150,000 = $7,500,000
 ROI = ($7,500,000 - $750,000) / $750,000 × 100 = 900%
-```markdown
+```
 
 ---
 

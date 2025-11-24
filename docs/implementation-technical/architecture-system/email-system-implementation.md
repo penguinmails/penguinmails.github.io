@@ -50,7 +50,7 @@ Complete Email Structure
     ├── filename, mime_type, size_bytes
     ├── content BYTEA (binary data)
     └── parent_storage_key ← email_content
-```markdown
+```
 
 ### Database Tier Integration
 ```markdown
@@ -75,7 +75,7 @@ OLAP Analytics (Business Intelligence):
 Queue System (Job Processing):
 ├── jobs, job_logs, job_queues
 └── analytics_jobs (for ETL pipeline)
-```markdown
+```
 
 ---
 
@@ -87,7 +87,7 @@ Queue System (Job Processing):
 email_messages:    "This table tracks email message analytics and metadata"
 email_content:     "This table stores the actual email content (body, headers)"
 attachments:       "This table stores email file attachments"
-```markdown
+```
 
 ### 2. **Natural Database Relationships**
 ```sql
@@ -101,7 +101,7 @@ FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1;
-```markdown
+```
 
 ### 3. **Performance Optimizations**
 - **Single Content Storage**: Email content stored once in email_content
@@ -123,7 +123,7 @@ JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1
 GROUP BY m.direction, m.status;
-```markdown
+```
 
 ---
 
@@ -136,7 +136,7 @@ GROUP BY m.direction, m.status;
 3. Handler Processing: Type-specific processing (inbound/bounce)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
-```markdown
+```
 
 ### Cross-Database Relationships
 ```sql
@@ -148,7 +148,7 @@ email_messages.email_account_id → email_accounts.id (OLTP)
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
 email_content.storage_key → attachments.parent_storage_key
-```markdown
+```
 
 ---
 
@@ -218,7 +218,7 @@ async function handleIncomingEmail(emailData: any) {
     };
   });
 }
-```markdown
+```
 
 ### IMAP Integration Ready
 ```javascript
@@ -253,7 +253,7 @@ async function startIncomingWorker() {
   }
   await client.logout();
 }
-```markdown
+```
 
 ---
 
@@ -286,7 +286,7 @@ WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE_TRUNC('day', c.created)
 ORDER BY date;
-```markdown
+```
 
 ### Indexing Strategy
 ```sql
@@ -305,7 +305,7 @@ CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expire
 -- Attachment indexes
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 CREATE INDEX idx_attachments_mime ON attachments(mime_type);
-```markdown
+```
 
 ---
 
@@ -360,7 +360,7 @@ SELECT * FROM content_objects;
 -- Step 4: Archive old tables
 ALTER TABLE content_inbox_message_refs RENAME TO content_inbox_message_refs_archived;
 ALTER TABLE content_objects RENAME TO content_objects_archived;
-```markdown
+```
 
 ### Data Validation
 ```sql
@@ -387,7 +387,7 @@ SELECT
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
-```markdown
+```
 
 ---
 

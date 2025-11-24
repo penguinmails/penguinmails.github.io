@@ -33,14 +33,14 @@ securitySchemes:
           cs-marketing.write: "Marketing campaign triggers"
           cs-sales.read: "Sales pipeline visibility"
           # ... domain-specific scopes
-```markdown
+```
 
 ---
 
 ## Marketing Integration APIs
 
 ### Health Trigger API
-```markdown
+```
 POST /marketing/triggers/{customer_id}
 Content-Type: application/json
 
@@ -57,7 +57,7 @@ Response 202:
   "triggered_sequences": ["onboarding_nurture"],
   "estimated_impact": "15% health_uplift"
 }
-```markdown
+```
 
 ### Campaign Performance API
 ```markdown
@@ -68,7 +68,7 @@ Response 200:
   "health_correlation": 0.87,
   "revenue_impact": "$12,500"
 }
-```markdown
+```
 
 **Full Spec:** [marketing-integration-map#cs-marketing-apis](marketing-integration-map)
 
@@ -91,7 +91,7 @@ Response 200:
   "knowledge_gaps": [],
   "pipeline_sync": "confirmed"
 }
-```markdown
+```
 
 ### Expansion Opportunity API
 ```markdown
@@ -102,7 +102,7 @@ Response 200:
   "value_portfolio": ["3x_roi_demonstrated"],
   "white_space": "$150k_annualized"
 }
-```markdown
+```
 
 **Full Spec:** [sales-integration-map#cs-sales-apis](sales-integration-map)
 
@@ -120,7 +120,7 @@ Response 200:
   "barriers": ["onboarding_friction"],
   "recommendations": ["targeted_tutorial"]
 }
-```markdown
+```
 
 ### Feedback Submission API
 ```markdown
@@ -139,7 +139,7 @@ Response 201:
   "priority": "P1",
   "roadmap_position": "Q2_target"
 }
-```markdown
+```
 
 **Full Spec:** [product-integration-map#cs-product-apis](product-integration-map)
 
@@ -156,7 +156,7 @@ Response 200:
   "utilization_gaps": ["feature_x_45%"],
   "roi_trajectory": "11.8x_projected"
 }
-```markdown
+```
 
 ### Forecast Adjustment API
 ```markdown
@@ -167,7 +167,7 @@ Request:
   "confidence_interval": [0.88, 0.97],
   "scenarios": {"expansion": "$75k"}
 }
-```markdown
+```
 
 **Full Spec:** [finance-integration-map#cs-finance-apis](finance-integration-map)
 
@@ -189,7 +189,7 @@ Response 202:
   "sla_target": "4h",
   "current_status": "in_progress"
 }
-```markdown
+```
 
 ### Capacity Forecast API
 ```markdown
@@ -200,7 +200,7 @@ Response 200:
   "skill_gaps": ["enterprise_complexity"],
   "hiring_triggers": ["urgent"]
 }
-```markdown
+```
 
 **Full Spec:** [operations-integration-map#cs-operations-apis](operations-integration-map)
 
@@ -212,7 +212,7 @@ Response 200:
 X-Request-ID: unique-trace-id
 X-RateLimit-Remaining: 47
 X-Audit-Trail: audit-log-url
-```markdown
+```
 
 ## Error Handling
 
@@ -223,7 +223,7 @@ X-Audit-Trail: audit-log-url
   "detail": "Retry after 60s",
   "instance": "/v1/cs-integrations/marketing/triggers/cust_123"
 }
-```markdown
+```
 
 ---
 

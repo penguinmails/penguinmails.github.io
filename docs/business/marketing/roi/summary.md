@@ -64,7 +64,7 @@ Annual Investment: $150K
 Net Annual Value: $600K
 ROI: 400% annually
 Payback: 8 months
-```markdown
+```
 
 ### Epic 2: Campaign Performance ROI
 **Investment:** $150K implementation + $50K annual operational
@@ -82,7 +82,7 @@ Annual Investment: $50K
 Net Annual Value: $475K
 ROI: 950% annually
 Payback: 4 months
-```markdown
+```
 
 ### Epic 3: Customer Journey Optimization ROI
 **Investment:** $120K implementation + $40K annual operational
@@ -100,7 +100,7 @@ Annual Investment: $40K
 Net Annual Value: $385K
 ROI: 962% annually
 Payback: 4 months
-```markdown
+```
 
 ---
 

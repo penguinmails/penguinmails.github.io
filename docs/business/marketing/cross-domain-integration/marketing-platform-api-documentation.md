@@ -51,7 +51,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
   "scope": "read:campaigns write:campaigns read:analytics",
   "token_lifetime": "3600 seconds"
 }
-```markdown
+```
 
 **2. API Key Authentication**
 ```json
@@ -64,7 +64,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
     "burst_limit": 100
   }
 }
-```markdown
+```
 
 **3. JWT Token Authentication**
 ```json
@@ -74,7 +74,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
   "claims": ["sub", "aud", "exp", "scope"],
   "token_endpoint": "https://api.marketingplatform.com/auth/jwt"
 }
-```markdown
+```
 
 ### Security Headers
 
@@ -86,7 +86,7 @@ Content-Type: application/json
 X-API-Version: v1
 X-Request-ID: {uuid}
 User-Agent: {integration_name}/{version}
-```markdown
+```
 
 ---
 
@@ -97,7 +97,7 @@ User-Agent: {integration_name}/{version}
 **Create Campaign**
 ```http
 POST /api/v1/campaigns
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -130,7 +130,7 @@ POST /api/v1/campaigns
     "performance_monitoring": true
   }
 }
-```markdown
+```
 
 **Response:**
 ```json
@@ -144,12 +144,12 @@ POST /api/v1/campaigns
     "manage": "/api/v1/campaigns/camp_789xyz"
   }
 }
-```markdown
+```
 
 **Get Campaign Performance**
 ```http
 GET /api/v1/campaigns/{campaign_id}/performance
-```markdown
+```
 
 **Response:**
 ```json
@@ -178,14 +178,14 @@ GET /api/v1/campaigns/{campaign_id}/performance
     "roi": 405.2
   }
 }
-```markdown
+```
 
 ### Lead Management API
 
 **Capture Lead**
 ```http
 POST /api/v1/leads
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -221,7 +221,7 @@ POST /api/v1/leads
     "referrer": "https://google.com"
   }
 }
-```markdown
+```
 
 **Response:**
 ```json
@@ -239,12 +239,12 @@ POST /api/v1/leads
     "schedule_follow_up"
   ]
 }
-```markdown
+```
 
 **Update Lead Status**
 ```http
 PATCH /api/v1/leads/{lead_id}
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -255,14 +255,14 @@ PATCH /api/v1/leads/{lead_id}
   "notes": "High-value prospect, interested in enterprise features",
   "follow_up_date": "2025-01-25T14:00:00Z"
 }
-```markdown
+```
 
 ### Analytics and Reporting API
 
 **Get Campaign Analytics**
 ```http
 GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
-```markdown
+```
 
 **Response:**
 ```json
@@ -302,7 +302,7 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
     }
   ]
 }
-```markdown
+```
 
 ---
 
@@ -313,7 +313,7 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
 **Salesforce Integration**
 ```http
 POST /api/v1/integrations/crm/salesforce/sync
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -331,12 +331,12 @@ POST /api/v1/integrations/crm/salesforce/sync
   "sync_frequency": "real_time",
   "conflict_resolution": "last_write_wins"
 }
-```markdown
+```
 
 **HubSpot Integration**
 ```http
 POST /api/v1/integrations/crm/hubspot/contacts
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -361,14 +361,14 @@ POST /api/v1/integrations/crm/hubspot/contacts
     }
   ]
 }
-```markdown
+```
 
 ### Analytics Integration API
 
 **Google Analytics Integration**
 ```http
 POST /api/v1/integrations/analytics/google/track
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -382,12 +382,12 @@ POST /api/v1/integrations/analytics/google/track
     "open_timestamp": "2025-01-15T10:30:00Z"
   }
 }
-```markdown
+```
 
 **Customer Data Platform Integration**
 ```http
 POST /api/v1/integrations/cdp/audience/update
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -406,14 +406,14 @@ POST /api/v1/integrations/cdp/audience/update
     }
   ]
 }
-```markdown
+```
 
 ### E-commerce Integration API
 
 **Shopify Integration**
 ```http
 POST /api/v1/integrations/ecommerce/shopify/customer-event
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -438,12 +438,12 @@ POST /api/v1/integrations/ecommerce/shopify/customer-event
     }
   }
 }
-```markdown
+```
 
 **WooCommerce Integration**
 ```http
 POST /api/v1/integrations/ecommerce/woocommerce/order-update
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -458,7 +458,7 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
     "conversion_date": "2025-01-15T14:30:00Z"
   }
 }
-```markdown
+```
 
 ---
 
@@ -469,7 +469,7 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
 **Register Webhook Endpoint**
 ```http
 POST /api/v1/webhooks
-```markdown
+```
 
 **Request Body:**
 ```json
@@ -485,7 +485,7 @@ POST /api/v1/webhooks
   "secret": "webhook_secret_key",
   "active": true
 }
-```markdown
+```
 
 **Webhook Payload Example:**
 ```json
@@ -510,7 +510,7 @@ POST /api/v1/webhooks
   },
   "signature": "sha256=abc123..."
 }
-```markdown
+```
 
 ### Webhook Security
 
@@ -526,7 +526,7 @@ function verifyWebhookSignature(payload, signature, secret) {
 
   return signature === `sha256=${expectedSignature}`;
 }
-```markdown
+```
 
 ---
 
@@ -541,7 +541,7 @@ X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 995
 X-RateLimit-Reset: 1705324800
 X-RateLimit-Window: 3600
-```markdown
+```
 
 ### Rate Limit Tiers
 
@@ -557,7 +557,7 @@ X-RateLimit-Window: 3600
 **Get Current Usage**
 ```http
 GET /api/v1/integrations/usage
-```markdown
+```
 
 **Response:**
 ```json
@@ -575,7 +575,7 @@ GET /api/v1/integrations/usage
     "tier": "Professional"
   }
 }
-```markdown
+```
 
 ---
 
@@ -598,7 +598,7 @@ GET /api/v1/integrations/usage
     "timestamp": "2025-01-15T10:30:00Z"
   }
 }
-```markdown
+```
 
 ### Common Error Codes
 
@@ -625,7 +625,7 @@ GET /api/v1/integrations/usage
     "retryable_codes": [429, 500, 502, 503, 504]
   }
 }
-```markdown
+```
 
 ---
 
@@ -636,7 +636,7 @@ GET /api/v1/integrations/usage
 **Installation:**
 ```bash
 npm install @marketing-platform/sdk
-```markdown
+```
 
 **Usage:**
 ```javascript
@@ -731,7 +731,7 @@ servers:
     description: Production server
   - url: https://api-sandbox.marketingplatform.com/v1
     description: Sandbox server
-```markdown
+```
 
 ---
 
@@ -760,7 +760,7 @@ servers:
     "webhook: https://alerts.company.com/api"
   ]
 }
-```markdown
+```
 
 ### Support and Documentation
 

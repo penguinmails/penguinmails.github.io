@@ -52,7 +52,7 @@ persona: "Documentation Users"
   <!-- Clear unsubscribe mechanism -->
   <a href="mailto:unsubscribe@example.com?subject=UNSUBSCRIBE">Unsubscribe</a>
 </body>
-```markdown
+```
 
 #### General Data Protection Regulation (EU)
 **Legal Foundation**: Regulation (EU) 2016/679
@@ -138,7 +138,7 @@ v=spf1 include:_spf.google.com include:sendgrid.net include:mailgun.org ~all
 # include:sendgrid.net: Authorize SendGrid
 # include:mailgun.org: Authorize Mailgun
 # ~all: Soft fail (optional) for unauthorized senders
-```markdown
+```
 
 **Best Practices**:
 - Start with `v=spf1 ~all` during testing
@@ -157,7 +157,7 @@ default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQ
 # v=DKIM1: DKIM version
 # k=rsa: Key type
 # p=...: Public key (base64 encoded)
-```markdown
+```
 
 **Configuration Process**:
 1. **Generate Key Pair**: RSA 2048-bit minimum
@@ -177,7 +177,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@example.c
 # p=none: Policy (none, quarantine, reject)
 # rua=mailto:dmarc-reports@example.com: Aggregate reports
 # fo=1: Report generation options
-```markdown
+```
 
 **Phased Implementation**:
 1. **Phase 1**: `p=none` for monitoring (1-2 weeks)
@@ -197,7 +197,7 @@ marketing.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@
 
 # Main domain protection
 _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com"
-```markdown
+```
 
 ### Consent Management Systems
 
@@ -233,7 +233,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 
   <button type="submit">Give Consent</button>
 </div>
-```markdown
+```
 
 #### CAN-SPAM Compliance Implementation
 **Technical Requirements**:
@@ -260,7 +260,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
     <a href="{{ privacy_policy_url }}">Privacy Policy</a>
   </p>
 </div>
-```markdown
+```
 
 ### Data Subject Rights Implementation
 
@@ -289,7 +289,7 @@ class DataProcessingRecord:
         self.international_transfers = ["email_provider_data_center"]
         self.created_date = datetime.now()
         self.last_reviewed = datetime.now()
-```markdown
+```
 
 #### Right to Access Implementation
 **Technical Process**:
@@ -325,7 +325,7 @@ def handle_data_access_request(request):
     log_data_access_request(request, "completed")
 
     return {"status": "Data provided securely"}
-```markdown
+```
 
 #### Right to Deletion Implementation
 **Technical Process**:
@@ -372,7 +372,7 @@ def handle_deletion_request(request):
         "systems_affected": systems,
         "verification": verification_result
     }
-```markdown
+```
 
 ---
 
@@ -417,7 +417,7 @@ class ComplianceMonitor:
                     "last_checked": datetime.now()
                 }
         return results
-```markdown
+```
 
 #### Compliance Dashboard
 **Key Metrics**:
@@ -455,7 +455,7 @@ class ComplianceMonitor:
   "compliance_flags": [],
   "system_source": "email_marketing_platform"
 }
-```markdown
+```
 
 #### Audit Trail Retention
 **Retention Requirements**:
@@ -495,7 +495,7 @@ class AuditTrailManager:
             "security_incident": timedelta(days=2555)  # 7 years
         }
         return retention_map.get(event_type, timedelta(days=1095))
-```markdown
+```
 
 ---
 
@@ -582,7 +582,7 @@ class RegulatoryChangeManager:
             "testing_protocol": assessment.testing_steps
         }
         self.implementation_plans.append(plan)
-```markdown
+```
 
 ---
 
@@ -657,7 +657,7 @@ class ComplianceTraining:
             ]
         }
         return module_map.get(self.role, [])
-```markdown
+```
 
 ### Compliance Culture Development
 
@@ -737,7 +737,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 4. Contact Information:
    - [Data Protection Officer contact]
    - [Company contact information]
-```markdown
+```
 
 ### Security Incident Response
 
@@ -810,7 +810,7 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 - [Processor obligations]
 - [Processor rights]
 - [Sub-processor provisions]
-```markdown
+```
 
 ### Ongoing Documentation Management
 

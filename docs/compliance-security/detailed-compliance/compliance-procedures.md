@@ -77,7 +77,7 @@ graph TD
     F --> G[Process within 30 days]
     G --> H[Document Response]
     H --> I[Update Records]
-```markdown
+```
 
 ### **CCPA Compliance Procedures**
 
@@ -191,7 +191,7 @@ graph TD
     I --> J[Send Notifications]
     J --> K[Document Incident]
     K --> L[Post-Incident Review]
-```markdown
+```
 
 ### **Breach Response Team**
 - **Incident Commander**: Overall coordination and decision making
@@ -273,7 +273,7 @@ Processing personal data?
 │   ├── High risk? → DPIA mandatory
 │   └── Low risk? → Basic assessment
 └── No → Standard data handling procedures
-```markdown
+```
 
 ### **Breach Notification Decision Tree**
 ```markdown
@@ -282,7 +282,7 @@ Personal data breach?
 │   ├── High risk to individuals? → Notify within 72 hours
 │   └── Low risk? → Document for 72-hour assessment
 └── No → Document incident without notification
-```markdown
+```
 
 ---
 

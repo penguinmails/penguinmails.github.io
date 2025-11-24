@@ -39,7 +39,7 @@ Distribution Examples:
 - BIGINT (Analytics performance): 9% of tables - High-traffic analytics, logs
 - VARCHAR (External): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
 - Composite (Multi-tenant): 10% of tables - Tenant associations, junction tables
-```markdown
+```
 
 ## Security Danger Assessment
 
@@ -92,7 +92,7 @@ Distribution Examples:
 CREATE TABLE users (id UUID PRIMARY KEY, ...);
 CREATE TABLE tenants (id UUID PRIMARY KEY, ...);
 CREATE TABLE tenant_users (...); -- Composite key
-```markdown
+```
 
 ### 2. External System Integration (VARCHAR)
 ```sql
@@ -100,21 +100,21 @@ CREATE TABLE tenant_users (...); -- Composite key
 CREATE TABLE subscriptions (id VARCHAR(255) PRIMARY KEY, ...);
 CREATE TABLE vps_instances (hostwinds_instance_id VARCHAR(255), ...);
 CREATE TABLE payments (stripe_payment_intent_id VARCHAR(255), ...);
-```markdown
+```
 
 ### 3. Natural Keys (VARCHAR)
 ```sql
 -- Use appropriate VARCHAR length for natural keys
 CREATE TABLE job_queues (name VARCHAR(100) PRIMARY KEY, ...);
 CREATE TABLE content_objects (storage_key VARCHAR(500) PRIMARY KEY, ...);
-```markdown
+```
 
 ### 4. Performance Optimization (BIGINT)
 ```sql
 -- Use BIGINT for high-traffic, low-security analytics
 CREATE TABLE campaign_analytics (id BIGINT PRIMARY KEY, ...);
 CREATE TABLE admin_audit_log (id BIGINT PRIMARY KEY, ...);
-```markdown
+```
 
 ### 5. Security Protection (UUID)
 ```sql
@@ -122,7 +122,7 @@ CREATE TABLE admin_audit_log (id BIGINT PRIMARY KEY, ...);
 CREATE TABLE companies (id UUID PRIMARY KEY, ...);
 CREATE TABLE leads (id UUID PRIMARY KEY, ...);
 CREATE TABLE transactional_emails (id UUID PRIMARY KEY, ...);
-```markdown
+```
 
 ## Migration Considerations
 
@@ -154,7 +154,7 @@ ALTER TABLE low_security_table ADD CONSTRAINT uk_id_uuid UNIQUE (id_uuid);
 ALTER TABLE low_security_table DROP CONSTRAINT pk_old_id CASCADE;
 ALTER TABLE low_security_table ADD CONSTRAINT pk_id_uuid PRIMARY KEY (id_uuid);
 ALTER TABLE low_security_table DROP COLUMN id_old;
-```markdown
+```
 
 ## Performance Impact Analysis
 
@@ -220,7 +220,7 @@ Is this an analytics/aggregation table?
 Natural key available (name, external ID)?
     ├─ YES → VARCHAR (Natural Key)
     └─ NO → UUID (Default)
-```markdown
+```
 
 ## Current Implementation Status
 
@@ -285,7 +285,7 @@ const trafficSecurity = {
     next();
   }
 };
-```markdown
+```
 
 ---
 

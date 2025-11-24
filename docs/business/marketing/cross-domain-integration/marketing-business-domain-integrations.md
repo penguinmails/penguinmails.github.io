@@ -25,7 +25,7 @@ This document provides detailed specifications for specific integrations between
 
 ```markdown
 Marketing Lead Capture → Lead Processing → CRM Sync → Sales Assignment → Follow-up Automation
-```markdown
+```
 
 **Implementation Details:**
 
@@ -71,7 +71,7 @@ const leadProcessingPipeline = {
     return crmRecord;
   }
 };
-```markdown
+```
 
 **CRM Integration Mapping:**
 
@@ -102,7 +102,7 @@ const leadProcessingPipeline = {
     }
   }
 }
-```markdown
+```
 
 **HubSpot Integration:**
 ```json
@@ -129,7 +129,7 @@ const leadProcessingPipeline = {
     }
   }
 }
-```markdown
+```
 
 ### 2. Campaign Attribution Tracking
 
@@ -171,7 +171,7 @@ class CampaignAttributionEngine implements AttributionTracking {
     };
   }
 }
-```markdown
+```
 
 **Attribution Models Supported:**
 
@@ -196,7 +196,7 @@ FROM first_touch ft
 JOIN opportunities o ON o.contact_id = ft.contact_id
 WHERE o.is_closed_won = true
 GROUP BY ft.campaign_id;
-```markdown
+```
 
 **Multi-Touch Attribution (Linear Model):**
 ```sql
@@ -230,7 +230,7 @@ SELECT
   SUM(attribution_weight) as total_weight
 FROM weighted_attribution
 GROUP BY campaign_id, touchpoint_type;
-```markdown
+```
 
 ---
 
@@ -266,7 +266,7 @@ class ProductMarketingIntegration {
     await this.identifyExpansionOpportunities(event.tenant_id, event.feature_id);
   }
 }
-```markdown
+```
 
 **Product Analytics Schema:**
 ```json
@@ -286,7 +286,7 @@ class ProductMarketingIntegration {
     }
   }
 }
-```markdown
+```
 
 **Adoption Campaign Triggering:**
 ```typescript
@@ -300,7 +300,7 @@ interface AdoptionCampaignTrigger {
     "advanced_feature": "upgrade_campaign_id"
   };
 }
-```markdown
+```
 
 ### 2. Customer Feedback Integration
 
@@ -339,7 +339,7 @@ class FeedbackMarketingIntegration {
     };
   }
 }
-```markdown
+```
 
 ---
 
@@ -412,7 +412,7 @@ class CustomerHealthIntegration {
     ) / 100;
   }
 }
-```markdown
+```
 
 **Marketing Engagement Metrics:**
 ```typescript
@@ -439,7 +439,7 @@ interface MarketingEngagementMetrics {
     case_study_participation: number;
   };
 }
-```markdown
+```
 
 ### 2. Retention Campaign Automation
 
@@ -477,7 +477,7 @@ const retentionCampaignEngine = {
     await this.logRetentionIntervention(tenantId, triggers, healthScore);
   }
 };
-```markdown
+```
 
 ---
 
@@ -524,7 +524,7 @@ class FinanceMarketingIntegration {
     };
   }
 }
-```markdown
+```
 
 **Cost Attribution Schema:**
 ```json
@@ -555,7 +555,7 @@ class FinanceMarketingIntegration {
     }
   }
 }
-```markdown
+```
 
 ### 2. Budget Optimization Integration
 
@@ -593,7 +593,7 @@ class BudgetOptimizationEngine {
     };
   }
 }
-```markdown
+```
 
 ---
 
@@ -643,7 +643,7 @@ class MarketingEventStream {
     });
   }
 }
-```markdown
+```
 
 ### Batch Data Synchronization
 
@@ -680,7 +680,7 @@ class BatchSynchronizationEngine {
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -736,7 +736,7 @@ class DataQualityEngine {
     };
   }
 }
-```markdown
+```
 
 ### Error Recovery and Retry Logic
 
@@ -786,7 +786,7 @@ class IntegrationErrorHandler {
     throw new Error(`Operation failed after ${retryPolicy.max_attempts} attempts: ${lastError.message}`);
   }
 }
-```markdown
+```
 
 ---
 
@@ -831,7 +831,7 @@ class IntegrationMonitor {
     }
   }
 }
-```markdown
+```
 
 ---
 

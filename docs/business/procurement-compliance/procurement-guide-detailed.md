@@ -70,7 +70,7 @@ Ongoing Operational Costs:
 - Support fees: $X/month
 - Monitoring tools: $Y/month
 - Compliance reporting: $Z/month
-```markdown
+```
 
 #### Indirect Costs
 ```markdown
@@ -84,7 +84,7 @@ Risk Mitigation:
 - Security incident prevention: $X
 - Compliance violation avoidance: $Y
 - System downtime costs: $Z
-```markdown
+```
 
 ### ROI Calculation Framework
 ```markdown
@@ -93,7 +93,7 @@ Annual Operational Savings: $Y
 Revenue Impact (if applicable): $Z
 Break-even Period: X months
 3-Year ROI: Y%
-```markdown
+```
 
 ---
 
@@ -126,9 +126,10 @@ Scalability Expectations:
 - Geographic load distribution
 - Performance monitoring and alerting
 - Capacity planning support
-```markdown
+```
 
 #### Reliability Standards
+
 ```markdown
 Uptime Requirements:
 - 99.9% minimum uptime SLA
@@ -141,7 +142,7 @@ Disaster Recovery:
 - RTO: Maximum 4 hours to full recovery
 - Geographic redundancy
 - Regular backup and recovery testing
-```markdown
+```
 
 ---
 
@@ -162,7 +163,7 @@ Performance Standards:
 - API response times under 2 seconds
 - Support response times by priority level
 - System capacity guarantees
-```markdown
+```
 
 #### Support and Maintenance
 ```markdown
@@ -176,7 +177,7 @@ Maintenance Windows:
 - Scheduled: Weekly 4-hour maintenance window
 - Emergency: As needed with 2-hour notice
 - Annual maintenance budget: X hours included
-```markdown
+```
 
 ### Data and Security Terms
 
@@ -193,7 +194,7 @@ Data Security:
 - Access control and monitoring obligations
 - Incident notification procedures (24-48 hours)
 - Regular security assessments and reporting
-```markdown
+```
 
 #### Compliance and Audit Rights
 ```markdown
@@ -208,7 +209,7 @@ Regulatory Compliance:
 - Data protection impact assessments
 - Privacy policy and terms of service alignment
 - Regulatory change adaptation procedures
-```markdown
+```
 
 ### Commercial Terms
 
@@ -225,7 +226,7 @@ Billing Terms:
 - Usage-based billing with detailed reporting
 - Prorated billing for mid-cycle changes
 - Dispute resolution procedures
-```markdown
+```
 
 #### Contract Duration and Renewal
 ```markdown
@@ -233,7 +234,7 @@ Initial Term: 12-36 months
 Renewal Options: Automatic with 90-day notice
 Early Termination: 60-day notice with pro-rata adjustment
 Price Protection: Lock-in pricing for contract term
-```markdown
+```
 
 ---
 

@@ -45,7 +45,7 @@ Customer Success integrates with Product through well-defined data flows and API
 │ • Health Scores │    │ • Event Stream  │    │ • Roadmap       │
 │ • Beta Mgmt     │    │ • Auth/RBAC     │    │ • Release Mgmt  │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
-```markdown
+```
 
 ### Integration Principles
 
@@ -75,7 +75,7 @@ Usage Patterns ──┐
 Health Scores ────┘                          │
                                             ▼
 Success Correlation ◄─── Insights ──► CS Playbooks
-```markdown
+```
 
 ### Key Integration Points
 
@@ -89,7 +89,7 @@ Success Correlation ◄─── Insights ──► CS Playbooks
     "barrier_detection": "churn_predictors"
   }
 }
-```markdown
+```
 
 **2. Optimization Recommendations**
 ```json
@@ -101,7 +101,7 @@ Success Correlation ◄─── Insights ──► CS Playbooks
     "flag_management": "success_correlated_rollouts"
   }
 }
-```markdown
+```
 
 ### CS-Product Adoption APIs
 
@@ -115,7 +115,7 @@ GET /api/v1/cs-product/adoption/{feature_id}
 POST /api/v1/cs-product/optimize
 - Automated optimization recommendations
 - Rollout success predictions
-```markdown
+```
 
 ### Integration Benefits
 
@@ -144,7 +144,7 @@ Customer Voice ──┐
 CS Context ───────┘                            │
                                               ▼
 Delivery Tracking ◄─── Roadmap ──► CS Confirmation
-```markdown
+```
 
 ### Key Integration Points
 
@@ -158,7 +158,7 @@ Delivery Tracking ◄─── Roadmap ──► CS Confirmation
     "evidence_attachment": "usage_screenshots"
   }
 }
-```markdown
+```
 
 **2. Prioritization Acceleration**
 ```json
@@ -170,7 +170,7 @@ Delivery Tracking ◄─── Roadmap ──► CS Confirmation
     "delivery_tracking": "milestone_alerts"
   }
 }
-```markdown
+```
 
 ### CS-Feedback APIs
 
@@ -184,7 +184,7 @@ POST /api/v1/cs-product/feedback
 GET /api/v1/cs-product/feedback/status/{ticket_id}
 - Roadmap position tracking
 - Delivery timeline estimates
-```markdown
+```
 
 ### Benefits
 
@@ -213,7 +213,7 @@ Success Metrics ──┐
 Beta Candidates ───┘                         │
                                             ▼
 Participant Mgmt ◄─── Selection ──► CS Validation
-```markdown
+```
 
 ### Key Integration Points
 
@@ -227,7 +227,7 @@ Participant Mgmt ◄─── Selection ──► CS Validation
     "consensus_thresholds": "multi_cs_agreement"
   }
 }
-```markdown
+```
 
 **2. Beta Participant Selection**
 ```json
@@ -239,7 +239,7 @@ Participant Mgmt ◄─── Selection ──► CS Validation
     "feedback_commitment": "structured_collection"
   }
 }
-```markdown
+```
 
 ### CS-Roadmap APIs
 
@@ -252,7 +252,7 @@ POST /api/v1/cs-product/vote/{feature_id}
 GET /api/v1/cs-product/beta/eligible/{customer_id}
 - Beta readiness assessment
 - Capacity and profile matching
-```markdown
+```
 
 ### Benefits
 
@@ -272,7 +272,7 @@ cs_product_gateway:
   auth: "oauth2_product_cs_scoped"
   rate_limits: "feedback_batch_50"
   monitoring: "adoption_correlation_metrics"
-```markdown
+```
 
 ### Event Streaming
 
@@ -281,7 +281,7 @@ topics:
   adoption_insights: "feature_usage_events"
   feedback_submitted: "customer_voice_pipeline"
   roadmap_priority: "success_voting_changes"
-```markdown
+```
 
 ---
 

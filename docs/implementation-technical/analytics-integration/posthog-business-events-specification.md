@@ -55,7 +55,7 @@ This document defines the process-driven PostHog integration strategy for busine
     "strategic_priority": "medium"
   }
 }
-```markdown
+```
 
 **Strategic Use Cases:**
 - Directional revenue protection pattern recognition
@@ -81,7 +81,7 @@ This document defines the process-driven PostHog integration strategy for busine
     "strategic_review_required": true
   }
 }
-```markdown
+```
 
 **Strategic Use Cases:**
 - Strategic cost optimization tracking for budget planning
@@ -108,7 +108,7 @@ This document defines the process-driven PostHog integration strategy for busine
     "outcome_follow_up": "process_driven"
   }
 }
-```markdown
+```
 
 **Strategic Use Cases:**
 - Strategic decision outcome tracking for learning
@@ -143,7 +143,7 @@ interface RevenueProtectionSummary {
   strategicRecommendations: string[];
   processFollowUpRequired: boolean;
 }
-```markdown
+```
 
 ### Strategic Alert System (Simplified)
 
@@ -207,7 +207,7 @@ FROM strategic_metrics sm
 JOIN subscriptions s ON s.tenant_id = sm.tenant_id
 WHERE s.status = 'active'
 ORDER BY strategic_activity_level DESC;
-```markdown
+```
 
 **Cost Optimization Tracking Query (Simplified):**
 ```sql
@@ -229,7 +229,7 @@ WHERE event.event = 'cost_optimization_trend'
   AND event.timestamp >= date_trunc('quarter', current_date)
 GROUP BY event.properties.tenant_id, event.properties.optimization_type
 ORDER BY optimization_opportunities_identified DESC;
-```markdown
+```
 
 ---
 
@@ -242,7 +242,7 @@ Strategic Business Events → PostHog API → Directional Analysis → Strategic
                 Process-Driven Alerts → Monthly/Quarterly Review
                           ↓
                 Strategic Insights → Executive Decision Support
-```markdown
+```
 
 ### Performance Requirements (Realistic)
 - **Event Processing**: Batch processing suitable for strategic analysis

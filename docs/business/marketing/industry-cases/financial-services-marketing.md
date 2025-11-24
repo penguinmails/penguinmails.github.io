@@ -47,7 +47,7 @@ Marketing Compliance Checklist:
 □ Testimonials comply with FINRA Rule 2210 requirements
 □ No material misrepresentations or omissions in marketing materials
 □ Anti-fraud provisions compliance (Rule 10b-5)
-```markdown
+```
 
 #### Banking Regulations
 - **Truth in Lending Act (TILA):** Accurate cost disclosures for credit products
@@ -71,7 +71,7 @@ Substantiation Requirements:
 - Benchmarks must be appropriate and clearly labeled
 - Risk disclosures must be prominently displayed
 - Performance periods must be representative, not cherry-picked
-```markdown
+```
 
 #### Fee Transparency Requirements
 - **All-in Fee Disclosure:** Total cost including all fees and expenses
@@ -157,7 +157,7 @@ Value Proposition:
 - Tax-loss harvesting and optimization built-in
 - Transparent, low-cost fee structure
 - 24/7 access and real-time portfolio monitoring
-```markdown
+```
 
 **Compliance Considerations:**
 - All investment performance claims substantiated with backtesting
@@ -194,7 +194,7 @@ Message Framework:
 - Solution: Comprehensive small business banking with integrated services
 - Proof: 89% customer satisfaction, $50K average business loan approval
 - Action: Free business banking consultation with financial health assessment
-```markdown
+```
 
 **Campaign Execution:**
 - **Search Engine Marketing:** Google Ads for business banking keywords
@@ -375,7 +375,7 @@ ROI = (Client Lifetime Value - Customer Acquisition Cost) / Customer Acquisition
 
 Client Lifetime Value Calculation:
 CLV = (Average Annual Revenue per Client) × (Average Client Relationship Length) - (Service Delivery Costs)
-```markdown
+```
 
 **Example ROI Calculation:**
 ```markdown
@@ -387,7 +387,7 @@ Service Delivery Cost per Client: $2,000/year
 
 Client Lifetime Value = ($8,500 × 10) - ($2,000 × 10) = $65,000
 ROI = ($65,000 × 200 - $500,000) / $500,000 × 100 = 2,500%
-```markdown
+```
 
 ---
 

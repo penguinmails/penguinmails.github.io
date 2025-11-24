@@ -273,7 +273,7 @@ RAM: 1-2GB
 Storage: 25-50GB SSD
 Bandwidth: 1-2TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```markdown
+```
 
 ##### 10K-100K emails/month
 ```markdown
@@ -282,7 +282,7 @@ RAM: 2-4GB
 Storage: 50-80GB SSD
 Bandwidth: 2-4TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```markdown
+```
 
 ##### 100K-1M emails/month
 ```markdown
@@ -291,7 +291,7 @@ RAM: 4-8GB
 Storage: 100-160GB SSD
 Bandwidth: 4-6TB/month
 OS: Ubuntu 20.04+ LTS or CentOS 8+
-```markdown
+```
 
 ##### 1M+ emails/month
 ```markdown
@@ -301,7 +301,7 @@ Storage: 160-320GB+ SSD
 Bandwidth: 6-8TB+ SSD
 OS: Ubuntu 20.04+ LTS or CentOS 8+
 Multiple servers for load balancing
-```markdown
+```
 
 #### Software Stack Requirements
 
@@ -329,21 +329,21 @@ Multiple servers for load balancing
 # POP3: 110, 995 (SSL)
 # Webmail: 80, 443
 # SSH: 22 (restricted access)
-```markdown
+```
 
 ##### DNS Configuration Requirements
 - **SPF Record**: Required for all sending domains
   ```markdown
   v=spf1 include:_spf.google.com include:sendgrid.net ~all
-  ```markdown
+  ```
 - **DKIM Record**: Required for deliverability
   ```markdown
   default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
-  ```markdown
+  ```
 - **DMARC Record**: Recommended for policy enforcement
   ```markdown
   _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc@example.com"
-  ```markdown
+  ```
 
 ### IP Management and Reputation
 
@@ -382,7 +382,7 @@ for ip in $(cat /etc/email); do
         fi
     done
 done
-```markdown
+```
 
 ##### Deliverability Monitoring
 - **Open Rate Tracking**: ESP APIs for engagement data
@@ -421,7 +421,7 @@ rsync -av /var/mail/ $BACKUP_DIR/mailboxes/
 
 # Upload to cloud storage
 aws s3 sync $BACKUP_DIR s3://email-backups/$DATE/
-```markdown
+```
 
 #### Disaster Recovery Plan
 1. **Primary Server Failure**: Automatic failover to backup server
@@ -446,7 +446,7 @@ minimal_backoff_time = 300s
 maximal_backoff_time = 3600s
 default_process_limit = 50
 default_destination_concurrency_limit = 5
-```markdown
+```
 
 #### System-Level Optimizations
 ```bash
@@ -457,7 +457,7 @@ net.core.netdev_max_backlog = 3000
 net.ipv4.tcp_max_syn_backlog = 1024
 net.core.rmem_max = 16777216
 net.core.wmem_max = 16777216
-```markdown
+```
 
 #### Database Optimization
 ```sql
@@ -465,7 +465,7 @@ net.core.wmem_max = 16777216
 SET GLOBAL innodb_buffer_pool_size = 2147483648; -- 2GB
 SET GLOBAL query_cache_size = 134217728; -- 128MB
 SET GLOBAL max_connections = 200;
-```markdown
+```
 
 ### Email Queue Management
 
@@ -482,7 +482,7 @@ postqueue -f
 
 # Remove specific messages
 postsuper -d MESSAGE_ID
-```markdown
+```
 
 #### Performance Metrics
 - **Queue Size**: <100 messages for healthy system
@@ -512,7 +512,7 @@ for i in {1..1000}; do
     ) &
 done
 wait
-```markdown
+```
 
 #### Capacity Planning Guidelines
 - **Email Server**: 1,000 emails/minute per CPU core

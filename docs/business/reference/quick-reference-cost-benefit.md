@@ -50,7 +50,7 @@ Current Monthly Costs:
 • Personnel (time × $100): $______
 • Compliance & Security: $______
 • TOTAL CURRENT: $______/month
-```markdown
+```
 
 ### Optimized State Projection
 ```markdown
@@ -59,7 +59,7 @@ Additional Tools Needed: $______/month
 Reduced Personnel: $______/month
 Compliance (built-in): $______/month
 • TOTAL OPTIMIZED: $______/month
-```markdown
+```
 
 ### Quick ROI Calculation
 ```markdown
@@ -68,7 +68,7 @@ Annual Savings: $______/year
 Implementation Cost: $______ one-time
 Payback Period: _____ months
 ROI Percentage: _______%
-```markdown
+```
 
 ---
 
@@ -192,7 +192,7 @@ RISK MITIGATION:
 
 RECOMMENDATION:
 Approve [Level 1/2/3] implementation for immediate ROI and risk mitigation.
-```markdown
+```
 
 ---
 
