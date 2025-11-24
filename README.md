@@ -48,10 +48,10 @@ This repository contains the complete documentation for PenguinMails, including:
 
 Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
 
-- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/README.md)** - Complete freelancer success center and business development resources
-- ✅ **[Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
-- 📋 **[Operations Framework](/docs/operations/freelancer-management/README.md)** - Team structure, sprint workflow, and coordination protocols
-- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide.md)** - Professional quotation preparation and business development
+- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/README)** - Complete freelancer success center and business development resources
+- ✅ **[Task Clarity Essentials](/docs/freelancer-support#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+- 📋 **[Operations Framework](/docs/operations/README)** - Team structure, sprint workflow, and coordination protocols
+- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
 
 **Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
 
@@ -61,13 +61,13 @@ Looking to work on PenguinMails? Here's your clear path to task clarity and onbo
 
 Visit our **[live documentation site](https://penguinmails.github.io)** and navigate through the sidebar to find:
 
-- [What is PenguinMails](./docs/what-is-penguinmails/README.md) - Platform overview
-- [Features & Capabilities](./docs/features-capabilities/README.md) - Feature details
-- [Getting Started](./docs/implementation-getting-started/README.md) - Setup guide
+- [What is PenguinMails](/docs/what-is-penguinmails) - Platform overview
+- [Features & Capabilities](/docs/features/README) - Feature details
+- [Getting Started](/docs/getting-started) - Setup guide
 
 ### For Contributors
 
-Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING)** guide, including:
 
 - Local development setup with Docker
 - Content standards and guidelines
@@ -78,60 +78,31 @@ Detailed development instructions are available in our **[CONTRIBUTING.md](./CON
 
 ```txt
 docs/
-├── what-is-penguinmails.md                    # What is PenguinMails
-├── features-capabilities.md                   # Platform capabilities
-├── goals-competitive-edge.md                  # Strategic advantages
-├── plan/                                      # Strategic planning
-│   ├── high-level-architecture.md             # System architecture
-│   ├── key-performance-indicators.md          # Performance metrics
-│   └── roadmap-development-priorities.md      # Development roadmap
-├── implement/                                  # Technical implementation
-│   ├── getting-started.md                     # Onboarding guide
-│   ├── backup-recovery.md                     # Data protection procedures
-│   ├── database-operations.md                 # Database management
-│   ├── deployment.md                          # Deployment processes
-│   ├── performance-monitoring.md              # System monitoring
-│   └── connection-pooling.md                  # Resource management
-├── operate/                                    # Ongoing operations
-│   ├── compliance-standards.md                # Regulatory compliance
-│   ├── team-workflow.md                       # Team processes
-│   └── resources-support.md                   # Support resources
-├── design/                                     # Design system
-│   ├── design-system.md                       # Core design philosophy
-│   ├── ui-library.md                          # UI components
-│   ├── component-library.md                   # Component specs
-│   └── user-personas.md                       # User research
-├── security/                                   # Security & compliance
-│   ├── overview.md                            # Security practices
-│   ├── incident-response.md                   # Crisis management
-│   └── procedures.md                          # Security procedures
-├── analytics/                                  # Business intelligence
-│   ├── financial.md                           # Financial metrics
-│   ├── user-behavior.md                       # Usage analytics
-│   ├── growth.md                              # Growth metrics
-│   └── product-performance.md                 # Feature performance
-├── development/                                # Development guides
-│   ├── style-guide.md                         # Code conventions
-│   ├── faq-gotchas.md                         # Common issues
-│   └── best-practices.md                      # Development guidelines
-├── tasks/                                      # Project management
-│   └── project-management.md                  # Sprint planning
-└── finance-business-model.md                   # Business model
+├── getting-started.md                          # Getting started guide
+├── features/                                   # Feature documentation
+├── business/                                   # Business strategy and analysis
+├── compliance-security/                        # Security and compliance
+├── design/                                     # Design system and UI
+├── operations/                                 # Operations management
+├── technical/                                  # Technical documentation
+├── core-features/                              # Core platform features
+├── implementation-technical/                   # Implementation guides
+└── freelancer-support/                         # Freelancer resources
 ```
 
 ### Key Documentation Sections
 
 | Section | Description | Audience |
 |---------|-------------|----------|
-| [What is PenguinMails](./docs/what-is-penguinmails.md) | Platform fundamentals and value proposition | Everyone |
-| [Features & Capabilities](./docs/features-capabilities.md) | Detailed feature documentation | Users & Decision Makers |
-| [Strategic Planning](./docs/plan/) | Architecture, KPIs, and roadmap | Decision Makers & Architects |
-| [Implementation](./docs/implement/) | Setup, deployment, and technical guides | Developers & IT Teams |
-| [Operations](./docs/operate/) | Compliance, workflows, and support | Operations & Compliance Teams |
-| [Design System](./docs/design/) | UI/UX guidelines and user research | Designers & Product Teams |
-| [Security](./docs/security/) | Security practices and incident response | Security & Compliance Teams |
-| [Analytics](./docs/analytics/) | Business intelligence and metrics | Product & Business Teams |
-| [Development](./docs/development/) | Code standards and best practices | Developers & Engineering Teams |
+| [What is PenguinMails](/docs/what-is-penguinmails) | Platform fundamentals and value proposition | Everyone |
+| [Features & Capabilities](/docs/features/README) | Detailed feature documentation | Users & Decision Makers |
+| [Strategic Planning](/docs/business/strategy/overview) | Architecture, KPIs, and roadmap | Decision Makers & Architects |
+| [Implementation](/docs/implementation-technical) | Setup, deployment, and technical guides | Developers & IT Teams |
+| [Operations](/docs/operations/README) | Compliance, workflows, and support | Operations & Compliance Teams |
+| [Design System](/docs/design/README) | UI/UX guidelines and user research | Designers & Product Teams |
+| [Security](/docs/compliance-security/README) | Security practices and incident response | Security & Compliance Teams |
+| [Analytics](/docs/business/analytics/overview) | Business intelligence and metrics | Product & Business Teams |
+| [Technical Implementation](/docs/technical/README) | Complete technical architecture, API docs, and development guides | Developers & Engineering Teams |
 
 ---
 
@@ -319,26 +290,16 @@ index.md
           └─ Links to: api/tenant-api/auth.md
 ```
 
-### Supporting Documentation
+## Contributing
 
-All other directories support these core goals:
-
-- **`docs/business/`** - Business context and ROI analysis
-- **`docs/compliance-security/`** - Compliance requirements
-- **`docs/operations/`** - Operations playbooks
-- **`docs/technical/`** - Technical deep-dives
-- **`docs/developers/`** - Developer onboarding
-
----## Contributing
-
-We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
 
 ### Quick Contribution Process
 
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING.md) for setup instructions)
+4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING) for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards
@@ -355,7 +316,7 @@ We welcome contributions to improve our documentation! For detailed development 
 ### Getting Help
 
 - **Documentation Issues:** Check the main sections first
-- **Technical Questions:** Review [Resources & Support](./docs/resources-support/README.md)
+- **Technical Questions:** Review [Resources & Support](/docs/operations/README)
 - **Contributing Help:** See [Contributing Guidelines](#contributing) above
 
 ### Reporting Problems
