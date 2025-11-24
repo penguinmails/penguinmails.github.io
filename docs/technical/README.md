@@ -198,7 +198,7 @@ Use these rules when adding or updating docs in this repository.
 - Prefer small, purpose-specific files.
 - Use existing top-level sections:
   - `docs/business/` for strategy, positioning, pricing, personas.
-  - `docs/core-features/` or feature-specific paths for product capabilities.
+  - `docs/features/` or feature-specific paths for product capabilities.
   - `docs/user-journeys/` for end-to-end flows.
   - `docs/implementation-technical/` and `docs/technical/` for implementation details.
   - `docs/design/` for design system, components, accessibility.

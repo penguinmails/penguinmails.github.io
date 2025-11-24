@@ -63,7 +63,7 @@ Transform cold email from guesswork into a predictable, scalable revenue channel
 
 - **[Analytics Dashboard Route](../design/routes/analytics-dashboard.md)** - *[To be created]*
 - **[Analytics UI Patterns](../design/analytics-ui-patterns.md)** - Visual design specifications
-- **[Analytics Views Architecture](../../core-features/analytics/views-architecture.md)** - Architecture details
+- **[Analytics Views Architecture](../../features/analytics/views-architecture.md)** - Architecture details
 
 ### Key Components
 
@@ -224,7 +224,7 @@ Transform cold email from guesswork into a predictable, scalable revenue channel
 
 ### Planning
 
-- **[Feature Roadmap](../roadmap/features/analytics.md)** - Timeline, dependencies, milestones (Q4 2025, 60% complete)
+- **[Feature Roadmap](../roadmap/product-roadmap.md)** - Timeline, dependencies, milestones (Q4 2025, 60% complete)
 - **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
 - **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Classification framework
 
@@ -232,7 +232,7 @@ Transform cold email from guesswork into a predictable, scalable revenue channel
 
 - **[Analytics UI Patterns](../design/analytics-ui-patterns.md)** - Design system
 - **[Analytics API](../implementation-technical/api/tenant-api/analytics.md)** - Backend endpoints
-- **[Analytics Views](../../core-features/analytics/views-architecture.md)** - Architecture
+- **[Analytics Views](../../features/analytics/views-architecture.md)** - Architecture
 
 ### Implementation
 
@@ -241,7 +241,7 @@ Transform cold email from guesswork into a predictable, scalable revenue channel
 
 ### Reference
 
-- **[Analytics Overview](../../core-features/analytics/overview.md)** - Detailed documentation
+- **[Analytics Overview](../../features/analytics/core-analytics/overview.md)** - Detailed documentation
 - **[KPI Framework](../../business/kpi-framework/)** - Business metrics
 
 ---

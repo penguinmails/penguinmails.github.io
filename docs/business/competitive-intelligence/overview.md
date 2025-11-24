@@ -401,9 +401,9 @@ We made specific architectural decisions that prioritize deliverability and comp
 
 **Feature Documentation**:
 
-- [Warm-ups Overview](/docs/core-features/warm-ups) - Competitive differentiation in deliverability features
-- [Analytics Overview](/docs/core-features/analytics) - Performance metrics vs. competitor limitations
-- [Inbox Rotation Overview](/docs/core-features/inbox-rotation) - Advanced features not available in competitor platforms
+- [Warm-ups Overview](/docs/features/warmup/email-warmups/overview) - Competitive differentiation in deliverability features
+- [Analytics Overview](/docs/features/analytics) - Performance metrics vs. competitor limitations
+- [Inbox Rotation Overview](/docs/features/inbox/inbox-rotation/overview) - Advanced features not available in competitor platforms
 
 ---
 

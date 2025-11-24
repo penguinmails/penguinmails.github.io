@@ -82,7 +82,7 @@ Automated warm-up system that transforms zero-reputation email addresses into tr
 
 ### Planning
 
-- **[Feature Roadmap](../roadmap/features/email-warmups.md)** - Timeline, dependencies, milestones (Q4 2025-Q1 2026)
+- **[Feature Roadmap](../roadmap/product-roadmap.md)** - Timeline, dependencies, milestones (Q4 2025-Q1 2026)
 - **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
 - **[Technical Roadmap](../roadmap/technical-roadmap.md)** - Infrastructure requirements
 
@@ -102,7 +102,7 @@ Automated warm-up system that transforms zero-reputation email addresses into tr
 
 ### Reference
 
-- **[Warm-ups Overview](../../core-features/warm-ups/overview.md)** - Detailed documentation
+- **[Warm-ups Overview](../../features/warmup/email-warmups/overview.md)** - Detailed documentation
 
 ---
 

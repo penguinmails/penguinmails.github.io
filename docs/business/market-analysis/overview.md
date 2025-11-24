@@ -474,7 +474,7 @@ persona: "Documentation Users"
 
 ### **Operational Excellence**: Backed by comprehensive market research and customer validation processes that ensure business decisions are driven by real market data and customer insights
 
-### **User Journey Integration**: This market analysis informs our complete user journey from [customer persona development](/docs/business/user-personas/overview) through [feature development](/docs/core-features) to [success measurement](/docs/business/analytics/overview) - providing the market intelligence foundation that drives customer success
+### **User Journey Integration**: This market analysis informs our complete user journey from [customer persona development](/docs/business/user-personas/overview) through [feature development](/docs/features) to [success measurement](/docs/business/analytics/overview) - providing the market intelligence foundation that drives customer success
 
 ---
 

@@ -16,7 +16,7 @@ persona: "Documentation Users"
 
 **Operational Excellence**: Backed by **99.9% API uptime** with comprehensive error handling, detailed logging, and intelligent rate limiting that ensures your integrations always work reliably when you need them.
 
-**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](/docs/core-features) and [analytics tracking](/docs/core-features/analytics/overview) to provide seamless workflow automation that scales with your business.
+**User Journey Integration**: This integration capability is part of your complete [developer experience journey] - connecting to [campaign management](/docs/features) and [analytics tracking](/docs/features/analytics/core-analytics/overview) to provide seamless workflow automation that scales with your business.
 
 PenguinMails provides a comprehensive integration ecosystem designed for developers, with **RESTful APIs, SDKs for major programming languages, webhook systems, and extensive third-party integrations**. Build custom solutions with confidence using our enterprise-grade API infrastructure.
 
@@ -946,5 +946,5 @@ describe('PenguinMails API', () => {
 *Our comprehensive integration ecosystem ensures that PenguinMails seamlessly fits into your existing technology stack while providing the flexibility to build custom solutions that drive your business forward.*
 
 ---
-*Previous: [Technical Operations Overview](/docs/technical/operations/overview) | Next: [Core Features Overview](/docs/core-features) →*
+*Previous: [Technical Operations Overview](/docs/technical/operations/overview) | Next: [Core Features Overview](/docs/features) →*
 ---

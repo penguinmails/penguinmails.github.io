@@ -4,7 +4,7 @@
 
 - **Goal**: Manage all replies from all campaigns and email accounts in a single interface.
 - **Feature References**:
-  - [Unified Inbox](/docs/core-features/unified-inbox/overview)
+  - [Unified Inbox](/docs/features/inbox/unified-inbox/overview)
 - **User Journey**: Daily workflow: Check Inbox → Reply/Archive/Mark Interested → Zero Inbox.
 
 ## 2. UI Patterns & Components (The "How")
@@ -79,7 +79,7 @@
 
 **Related Documentation**:
 
-- [Unified Inbox Overview](/docs/core-features/unified-inbox/overview)
+- [Unified Inbox Overview](/docs/features/inbox/unified-inbox/overview)
 - [Response Best Practices](/docs/business/messaging/reply-strategies)
 
 **Technical Integration**:

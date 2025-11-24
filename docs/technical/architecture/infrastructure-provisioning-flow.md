@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: The automated provisioning system integrates with Hostwind VPS, DNS providers, and MailU SMTP to deliver complete infrastructure setup in under 30 minutes with zero manual intervention.
 
-**User Journey Integration**: This provisioning flow enables your complete [infrastructure setup](/docs/technical/architecture) and [email warm-up process](/docs/core-features/warm-ups/overview) with automated configuration management.
+**User Journey Integration**: This provisioning flow enables your complete [infrastructure setup](/docs/technical/architecture) and [email warm-up process](/docs/features/warmup/email-warmups/overview) with automated configuration management.
 
 ---
 

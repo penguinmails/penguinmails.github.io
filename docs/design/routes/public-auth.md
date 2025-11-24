@@ -4,7 +4,7 @@
 
 * **Goal**: Provide secure entry points for users to access the platform, register, and recover accounts.
 * **Feature References**:
-  * [User Onboarding](/docs/core-features/getting-started)
+  * [User Onboarding](/docs/features/getting-started)
   * [Security & Compliance](/docs/compliance-security/enterprise/overview)
 * **User Journey**: These are the first touchpoints. The experience must be fast, trustworthy, and clear.
 

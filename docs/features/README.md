@@ -1,240 +1,182 @@
----
-title: "Features Overview"
-description: "Complete feature catalog with approval status tracking"
-last_modified_date: "2025-11-24"
-level: "1"
-persona: "All Stakeholders"
----
+# ✨ Core Features
 
-# ✨ Features Overview
-
-## Purpose
-
-This directory contains detailed specifications for all PenguinMails features. Features are tracked using **status fields** in frontmatter rather than separate folders, making it easy to filter and update as features progress through the approval pipeline.
+**Quick access to PenguinMails' essential features.** Each feature uses **progressive reveal** - start with the overview and dive deeper as needed.
 
 ---
 
-## 🎯 Feature Status Workflow
+## 🚀 Foundation Features (Start Here)
 
-Features progress through the following statuses:
+### Infrastructure & Setup
 
-```
-DRAFT → IN_REVIEW → APPROVED → IMPLEMENTED
-         ↓
-      BACKLOG (deferred)
-```
+**[Free Mailbox Creation](./infrastructure/free-mailbox-creation/overview.md)** - Professional accounts in <5 min
 
-### Status Definitions
+- **Level 1**: Quick setup guide
+- **Level 2**: Domain & DNS management  
+- **Level 3**: Enterprise automation
 
-| Status | Meaning | Next Steps |
-|--------|---------|------------|
-| **DRAFT** | Initial concept, being refined | Complete requirements, add acceptance criteria |
-| **IN_REVIEW** | Under evaluation by stakeholders | Review, discuss, approve/defer |
-| **APPROVED** | Greenlit for development | Create tasks, begin implementation |
-| **IMPLEMENTED** | Shipped to production | Monitor usage, gather feedback |
-| **BACKLOG** | Deferred for future consideration | Review quarterly for re-prioritization |
+### Campaign Execution  
 
----
+**[Email Warmups](./warmup/email-warmups/overview.md)** - Build sender reputation for 95%+ deliverability
 
-## 📋 Features by Status
+- **Level 1**: Automated setup
+- **Level 2**: Optimization strategies
+- **Level 3**: Predictive analytics
 
-### ✅ Approved Features (Ready for Implementation)
+**[Campaign Management](./campaigns/campaign-management/overview.md)** - Multi-channel campaign orchestration
 
-Based on existing documentation, the following features are approved:
+- **Level 1**: Basic campaign creation
+- **Level 2**: Advanced sequences
+- **Level 3**: Campaign analytics
 
-- **[Analytics](./analytics.md)** - Data-driven insights and reporting
-- **[Email Warm-ups](./email-warmups.md)** - Automated sender reputation building
-- **[Free Mailbox Creation](./free-mailbox-creation.md)** - Professional email account automation
-- **[Unified Inbox](./unified-inbox.md)** - Centralized response management
-- **[Inbox Rotation](./inbox-rotation.md)** - Sustainable account scaling
+### Response Management
 
-*See individual feature documents for detailed specifications, acceptance criteria, and implementation status.*
+**[Unified Inbox](./inbox/unified-inbox/overview.md)** - Centralized response management
 
-### 🔍 In Review (Under Evaluation)
+- **Level 1**: Basic inbox consolidation
+- **Level 2**: Smart filtering
+- **Level 3**: Team collaboration
 
-Features currently under stakeholder review. Check individual feature documents for review notes.
+**[Inbox Rotation](./inbox/inbox-rotation/overview.md)** - Sustainable account scaling
 
-*To be populated as features are extracted and status fields added*
+- **Level 1**: Basic rotation
+- **Level 2**: Smart algorithms
+- **Level 3**: Enterprise scale
 
-### 📦 Backlog (Future Consideration)
+### Performance Tracking
 
-Features deferred for future development phases.
+**[Analytics](./analytics/core-analytics/overview.md)** - Data-driven insights and optimization
 
-*See [Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md) for Level 4 and Level 5 features*
+- **Level 1**: Essential metrics
+- **Level 2**: Advanced reporting
+- **Level 3**: AI-powered insights
 
 ---
 
-## 🏗️ Feature Template
+## 📋 Browse All Categories
 
-When creating a new feature document, use this frontmatter structure:
-
-```yaml
----
-title: "Feature Name"
-description: "Brief feature description"
-status: DRAFT | IN_REVIEW | APPROVED | IMPLEMENTED | BACKLOG
-priority: HIGH | MEDIUM | LOW
-roadmap_milestone: Q4_2025
-owner: Product Team
-last_modified_date: "2025-11-24"
-level: "2"
-persona: "Target User Persona"
----
-```
-
-**Required Sections**:
-
-1. **Feature Overview** - What it does and why it matters
-2. **User Journeys Impacted** - Which workflows this supports
-3. **Frontend Requirements** - Links to `docs/design/routes/*.md`
-4. **Backend Requirements** - Links to `docs/implementation-technical/api/**/*.md`
-5. **Acceptance Criteria** - Definition of done
-6. **Related Documentation** - Links to roadmap, user journeys, specs, tasks
+| Category | Features | Description |
+|----------|----------|-------------|
+| [🗂️ Inbox](./inbox/) | 2 | Email organization and response management |
+| [📧 Campaigns](./campaigns/) | 1 | Campaign creation and sequences |
+| [🔥 Warmup](./warmup/) | 1 | Domain reputation and sender warming |
+| [🌐 Domains](./domains/) | 0 | DNS management and configuration |
+| [🏗️ Infrastructure](./infrastructure/) | 1 | VPS, IPs, SMTP, provisioning |
+| [📝 Templates](./templates/) | 0 | Email templates and content editor |
+| [📊 Analytics](./analytics/) | 2 | Platform-wide reporting and insights |
+| [👥 Leads](./leads/) | 0 | Lead lists and segmentation |
+| [⚖️ Compliance](./compliance/) | 0 | GDPR, CAN-SPAM compliance |
+| [💳 Payments](./payments/) | 0 | Billing and subscriptions |
+| [⚙️ Queue](./queue/) | 1 | Background jobs and notifications |
+| [🔌 Integrations](./integrations/) | 1 | CRM and third-party connections |
+| [🤖 Automation](./automation/) | 1 | Workflow automation and triggers |
+| [🏢 Enterprise](./enterprise/) | 1 | SSO, MFA, security features |
 
 ---
 
-## 🔄 Feature Approval Process
+## 🎯 Quick Navigation by Need
 
-### 1. Create Feature Document
+### For New Users
 
-- Create new `.md` file with feature name
-- Set status: `DRAFT`
-- Complete all required sections
-- Link to relevant user journeys
+1. Start with [Free Mailbox Creation](./infrastructure/free-mailbox-creation/overview.md)
+2. Then [Email Warmups](./warmup/email-warmups/overview.md)
+3. Track performance with [Analytics](./analytics/core-analytics/overview.md)
 
-### 2. Submit for Review
+### For Scaling Teams
 
-- Update status: `IN_REVIEW`
-- Notify stakeholders
-- Present in planning meeting
-- Gather feedback
+1. Implement [Inbox Rotation](./inbox/inbox-rotation/overview.md)
+2. Use [Unified Inbox](./inbox/unified-inbox/overview.md) for team coordination
+3. Deploy [Campaign Management](./campaigns/campaign-management/overview.md) for advanced workflows
 
-### 3. Approval Decision
+### For Enterprise
 
-**If Approved**:
-
-- Update status: `APPROVED`
-- Add to roadmap milestone
-- Create frontend/API specs
-- Generate implementation tasks
-
-**If Deferred**:
-
-- Update status: `BACKLOG`
-- Document reasons
-- Set review date
-
-### 4. Implementation
-
-- Create tasks in `/tasks/`
-- Link tasks to feature spec
-- Track progress
-- Update status: `IMPLEMENTED` when shipped
+1. Enable [Enterprise Features](./enterprise/enterprise-features/overview.md)
+2. Connect with [CRM Integration](./integrations/crm-integration/overview.md)
+3. Automate with [Workflow Automation](./automation/workflow-automation/overview.md)
 
 ---
 
-## 📊 Feature Metrics
-
-### Completion Tracking
-
-*To be updated as migration progresses*
-
-| Status | Count | Percentage |
-|--------|-------|------------|
-| Approved | 5 | - |
-| In Review | 0 | - |
-| Backlog | - | - |
-| Implemented | 0 | - |
+**Planning implementation?** → [Product Roadmap](../roadmap/product-roadmap.md)  
+**Need feature comparisons?** → [Feature Catalog](../feature-overview.md)
 
 ---
 
-## 🔗 Related Documentation
+## Progressive Reveal Philosophy
 
-### Planning
+Each feature document is structured in **three progressive complexity levels**:
 
-- **[Roadmap](../roadmap/README.md)** - When features will be delivered
-- **[Feature Roadmaps](../roadmap/features/README.md)** - Individual feature timelines with dependencies
-- **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Feature classification framework
-- **[User Journeys](../user-journeys/README.md)** - Customer workflows
+### Level 1: Overview
 
-### Specifications
+- Basic feature introduction and value proposition
+- Core concepts and benefits
+- Quick setup instructions (get started in minutes)
+- Essential configuration
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - View specifications
-- **[Frontend Routes](../design/routes/)** - Detailed view specs
-- **[API Architecture](../implementation-technical/api/README.md)** - Backend endpoints
-- **[Design System](../design/README.md)** - UI patterns and components
+### Level 2: Advanced Strategies
 
-### Implementation
+- Optimization techniques and best practices
+- Performance tuning strategies
+- Strategic implementation guidance
+- Use case examples
 
-- **[Active Tasks](../../tasks/README.md)** - Current development work
-- **[Development Guidelines](../implementation-technical/development-guidelines/)** - Code standards
+### Level 3: Technical Implementation
 
----
+- Detailed technical setup and architecture
+- Integration guides with other systems
+- Advanced configuration options
+- Custom implementations and APIs
 
-## 🎯 Quick Navigation by Role
-
-### For Business Leaders
-
-**Goal**: Understand feature portfolio and priorities
-
-```
-Features Overview → Approved Features → Roadmap → User Journeys
-```
-
-### For Product Managers
-
-**Goal**: Manage feature pipeline and approval process
-
-```
-Features Overview → In Review → Approval Process → Roadmap Alignment
-```
-
-### For Developers
-
-**Goal**: Find features to implement
-
-```
-Features Overview → Approved Features → Frontend Specs → API Specs → Tasks
-```
-
-### For Marketing/Ops
-
-**Goal**: Understand available capabilities
-
-```
-Features Overview → Approved Features → User Journeys → Analytics
-```
+**Start shallow, dive deep when you need to.**
 
 ---
 
-## 📝 Migration Notes
+## Integration with Other Documentation
 
-**Current State**: Features are currently documented in:
-
-- `docs/feature-overview.md` - High-level feature catalog
-- `docs/core-features/` - Individual feature directories
-- `docs/business/feature-taxonomy-and-roadmap.md` - Feature classification
-
-**Target State**: All features consolidated here with:
-
-- ✅ Flat file structure
-- ✅ Status tracking in frontmatter
-- ✅ Consistent template
-- ✅ Clear approval workflow
-
-**Next Steps**:
-
-1. Extract individual features from `core-features/*`
-2. Add frontmatter with status fields
-3. Standardize to feature template
-4. Update all cross-references
+- **[Business Context](../business/README.md)** - ROI analysis and business value
+- **[Technical Architecture](../technical/README.md)** - System design and infrastructure
+- **[User Journeys](../../user-journeys/README.md)** - Customer workflows and paths
+- **[Compliance & Security](../compliance-security/README.md)** - Regulatory requirements
 
 ---
 
-**Last Updated**: 2025-11-24  
-**Review Cycle**: Weekly sprint planning  
-**Owner**: Product Team
+## 🗺️ Feature Roadmap Timeline
+
+### Q4 2025: MVP Foundation
+
+| Feature | Status | Progress | Priority |
+|---------|--------|----------|----------|
+| **[Free Mailbox Creation](./infrastructure/free-mailbox-creation/overview.md)** | In Progress | 80% | Critical |
+| **[Analytics](./analytics/core-analytics/overview.md)** | In Progress | 60% | High |
+| **[Email Warmups](./warmup/email-warmups/overview.md)** | Planned | 0% | High |
+
+### Q1 2026: Growth Phase
+
+| Feature | Status | Progress | Priority |
+|---------|--------|----------|----------|
+| **[Unified Inbox](./inbox/unified-inbox/overview.md)** | Planned | 0% | High |
+| **[Campaign Management](./campaigns/campaign-management/overview.md)** | Planned | 0% | Critical |
+| **[Enhanced Analytics](./analytics/enhanced-analytics/overview.md)** | Planned | 0% | Medium |
+| **[CRM Integration](./integrations/crm-integration/overview.md)** | Planned | 0% | High |
+
+### Q1-Q2 2026: Scale Optimization
+
+| Feature | Status | Progress | Priority |
+|---------|--------|----------|----------|
+| **[Inbox Rotation](./inbox/inbox-rotation/overview.md)** | Planned | 0% | Medium |
+
+### Q2-Q3 2026: Advanced Automation
+
+| Feature | Status | Progress | Priority |
+|---------|--------|----------|----------|
+| **[Workflow Automation](./automation/workflow-automation/overview.md)** | Planned | 0% | Medium |
+
+### Q4 2026 - Q1 2027: Enterprise Ready
+
+| Feature | Status | Progress | Priority |
+|---------|--------|----------|----------|
+| **[Enterprise Features](./enterprise/enterprise-features/overview.md)** | Planned | 0% | High |
+
+**For detailed dependency graphs and critical path** → [Product Roadmap](../roadmap/product-roadmap.md)
 
 ---
 
-*For feature requests or approval questions, contact the Product Team.*
+*Previous: [Quick Setup Guide](../quick-setup.md) | Next: [Product Roadmap](../roadmap/product-roadmap.md) →*

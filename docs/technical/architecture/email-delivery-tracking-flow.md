@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: The real-time tracking pipeline captures every email interaction from delivery through engagement, providing actionable analytics that optimize campaign performance and deliverability.
 
-**User Journey Integration**: This tracking flow supports your complete [email campaign monitoring](/docs/core-features/analytics/overview) and [deliverability optimization](/docs/core-features/warm-ups/overview) with real-time performance insights.
+**User Journey Integration**: This tracking flow supports your complete [email campaign monitoring](/docs/features/analytics/core-analytics/overview) and [deliverability optimization](/docs/features/warmup/email-warmups/overview) with real-time performance insights.
 
 ---
 

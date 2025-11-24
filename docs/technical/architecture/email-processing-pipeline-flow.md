@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: Our asynchronous processing architecture with queue-based workflows ensures 99.9% email delivery success while providing real-time campaign monitoring and analytics.
 
-**User Journey Integration**: This processing flow connects your [campaign creation](/docs/core-features) through [queue management](/docs/implementation-technical/database-infrastructure/queue-system-implementation-guide) to [analytics tracking](/docs/core-features/analytics/overview).
+**User Journey Integration**: This processing flow connects your [campaign creation](/docs/features) through [queue management](/docs/implementation-technical/database-infrastructure/queue-system-implementation-guide) to [analytics tracking](/docs/features/analytics/core-analytics/overview).
 
 ---
 

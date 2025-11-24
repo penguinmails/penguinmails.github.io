@@ -209,7 +209,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 - **[Email Warmups](../features/email-warmups.md)** - Email reputation management (Level 2)
 - **[Unified Inbox](../features/unified-inbox.md)** - Centralized message management (Level 2-3)
 - **[Free Mailbox Creation](../features/free-mailbox-creation.md)** - Automated mailbox provisioning (Level 1)
-- **[Inbox Rotation](../features/inbox-rotation.md)** - Load balancing and deliverability (Level 2-3)
+- **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Load balancing and deliverability (Level 2-3)
 
 ### User Workflows
 

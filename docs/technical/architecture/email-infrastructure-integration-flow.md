@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: Our infrastructure integration showcases enterprise-grade load balancing, queue management, and service mesh communication that ensures 99.9% uptime for all customers.
 
-**User Journey Integration**: This integration flow is the foundation that enables your complete email infrastructure experience from [campaign creation](/docs/core-features) through [analytics tracking](/docs/core-features/analytics/overview) to [infrastructure management](/docs/core-features/warm-ups/overview).
+**User Journey Integration**: This integration flow is the foundation that enables your complete email infrastructure experience from [campaign creation](/docs/features) through [analytics tracking](/docs/features/analytics/core-analytics/overview) to [infrastructure management](/docs/features/warmup/email-warmups/overview).
 
 ---
 

@@ -4,7 +4,7 @@
 
 - **Goal**: Internal tools for PenguinMails staff to manage the platform, support users, and monitor health.
 - **Feature References**:
-  - [Internal Views](/docs/core-features/analytics/specs/internal-views)
+  - [Internal Views](/docs/features/analytics/specs/internal-views)
   - [Operations Analytics](/docs/operations-analytics/overview)
 - **User Journey**: Support ticket → Admin looks up user → Reviews audit trail to debug.
 
@@ -15,7 +15,7 @@
   - `JSONViewer`: For viewing raw logs/payloads.
   - `StatusIndicator`: Traffic light system for service health.
 - **Analytics Patterns**:
-  - `ExecutiveDashboard`: See [Internal Views](/docs/core-features/analytics/specs/internal-views).
+  - `ExecutiveDashboard`: See [Internal Views](/docs/features/analytics/specs/internal-views).
 - **Layout**: Admin Context (Distinct visual theme).
 
 ## 3. Route Specifications

@@ -339,19 +339,19 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 
 ## Perfect for First-Time Users and Agency Owners
 
-1. **[Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)** - Create professional email accounts (5 minutes)
-2. **[Warm-ups](/docs/core-features/warm-ups/overview)** - Build sender reputation (21-day automated process)
+1. **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Create professional email accounts (5 minutes)
+2. **[Warm-ups](/docs/features/warmup/email-warmups/overview)** - Build sender reputation (21-day automated process)
 
 ### **Scaling Up**
 
 **Ideal for Startup Founders and Growing Teams**
-3. **[Inbox Rotation](/docs/core-features/inbox-rotation/overview)** - Rotate between accounts to avoid detection
-4. **[Unified Inbox](/docs/core-features/unified-inbox/overview)** - Manage all responses in one place
+3. **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Rotate between accounts to avoid detection
+4. **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Manage all responses in one place
 
 ### **Enterprise & Advanced**
 
 **Designed for Sales Directors and Large Teams**
-5. **[Analytics](/docs/core-features/analytics/overview)** - Advanced performance tracking and insights
+5. **[Analytics](/docs/features/analytics/core-analytics/overview)** - Advanced performance tracking and insights
 
 ### **Implementation Paths**
 
@@ -367,14 +367,14 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 
 Start here for basic infrastructure and setup:
 
-#### **[Email Warm-ups](/docs/core-features/warm-ups/overview)** - *The #1 Success Factor*
+#### **[Email Warm-ups](/docs/features/warmup/email-warmups/overview)** - *The #1 Success Factor*
 
 - **Level 1**: 5-minute automated setup for immediate results
 - **Level 2**: Advanced progression algorithms and optimization
 - **Level 3**: Enterprise compliance and predictive analytics
 - **Quick Start**: Create accounts → Warm-up → Start campaigns
 
-#### **[Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)** - *Professional Infrastructure*
+#### **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - *Professional Infrastructure*
 
 - **Level 1**: Instant professional email accounts
 - **Level 2**: Advanced domain and DNS management
@@ -385,14 +385,14 @@ Start here for basic infrastructure and setup:
 
 Scale your campaigns with data-driven insights:
 
-#### **[Analytics](/docs/core-features/analytics/overview)** - *Data-Driven Optimization*
+#### **[Analytics](/docs/features/analytics/core-analytics/overview)** - *Data-Driven Optimization*
 
 - **Level 1**: Essential metrics and performance tracking
 - **Level 2**: Advanced reporting and ROI analysis
 - **Level 3**: AI-powered insights and predictive analytics
 - **Business Impact**: 150% response improvement through optimization
 
-#### **[Unified Inbox](/docs/core-features/unified-inbox/overview)** - *Response Management*
+#### **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - *Response Management*
 
 - **Level 1**: Centralized response monitoring
 - **Level 2**: Smart filtering and team collaboration
@@ -403,7 +403,7 @@ Scale your campaigns with data-driven insights:
 
 For enterprise-level operations and maximum efficiency:
 
-#### **[Inbox Rotation](/docs/core-features/inbox-rotation/overview)** - *Sustainable Scaling*
+#### **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - *Sustainable Scaling*
 
 - **Level 1**: Basic account protection and rotation
 - **Level 2**: Smart algorithms and optimization
@@ -428,6 +428,6 @@ Ready to transform your cold email outreach? PenguinMails offers:
 *PenguinMails is the email infrastructure platform that agencies and B2B companies trust to scale their cold outreach without technical complexity or compliance risk.*
 
 ---
-*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Core Features](/docs/core-features/README) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Core Features](/docs/features/README) →*
 
 ---

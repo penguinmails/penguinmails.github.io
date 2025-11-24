@@ -4,7 +4,7 @@
 
 - **Goal**: Manage reusable email templates for the workspace.
 - **Feature References**:
-  - [Templates](/docs/core-features/templates)
+  - [Templates](/docs/features/templates)
 - **User Journey**: Create templates first (Content) to be used in Campaigns. Templates grow as a library over time.
 
 ## 2. UI Patterns & Components (The "How")
@@ -58,7 +58,7 @@
 
 - [Email Best Practices](/docs/business/marketing/overview)
 - [CardGrid Component](/docs/design/ui-library#grids)
-- [Templates Feature](/docs/core-features/templates)
+- [Templates Feature](/docs/features/templates)
 
 **Technical Integration**:
 
@@ -95,7 +95,7 @@
 
 - [Content Guidelines](/docs/business/messaging/overview)
 - [Rich Text Editor](/docs/design/ui-library#editors)
-- [Template Variables](/docs/core-features/templates#variables)
+- [Template Variables](/docs/features/templates#variables)
 
 **Technical Integration**:
 
@@ -142,7 +142,7 @@
 
 **Related Documentation**:
 
-- [Template Management](/docs/core-features/templates)
+- [Template Management](/docs/features/templates)
 
 **Technical Integration**:
 
@@ -173,7 +173,7 @@
 
 **Related Documentation**:
 
-- [Template Management](/docs/core-features/templates)
+- [Template Management](/docs/features/templates)
 - [Version Control](/docs/design/ui-library#versioning)
 
 **Technical Integration**:

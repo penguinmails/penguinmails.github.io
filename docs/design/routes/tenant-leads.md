@@ -4,7 +4,7 @@
 
 - **Goal**: Centralized management of all contacts/leads across the tenant's account, regardless of which workspace they belong to.
 - **Feature References**:
-  - [Lead Management](/docs/core-features/analytics/overview) (Segmentation)
+  - [Lead Management](/docs/features/analytics/core-analytics/overview) (Segmentation)
 - **User Journey**: Import leads → Segment them → Assign to Campaigns.
 
 ## 2. UI Patterns & Components (The "How")

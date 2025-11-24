@@ -4,7 +4,7 @@
 
 * **Goal**: Enable users to create, manage, and analyze cold email campaigns.
 * **Feature References**:
-  * [Campaign Management](/docs/core-features/analytics/overview) (Analytics integration)
+  * [Campaign Management](/docs/features/analytics/core-analytics/overview) (Analytics integration)
 * **User Journey**: Core loop: Create Campaign -> Configure -> Launch -> Monitor -> Optimize.
 
 ## 2. UI Patterns & Components (The "How")
@@ -55,7 +55,7 @@
 
 **Related Documentation**:
 
-* [Campaign Management](/docs/core-features/analytics/overview)
+* [Campaign Management](/docs/features/analytics/core-analytics/overview)
 * [DataTable Component](/docs/design/ui-library#data-tables)
 
 **Technical Integration**:
@@ -98,7 +98,7 @@
 
 **Related Documentation**:
 
-* [Campaign Setup Best Practices](/docs/core-features/analytics/overview)
+* [Campaign Setup Best Practices](/docs/features/analytics/core-analytics/overview)
 * [Wizard Pattern](/docs/design/ui-library#wizards)
 
 **Technical Integration**:
@@ -134,8 +134,8 @@
 
 **Related Documentation**:
 
-* [Analytics Views Architecture](/docs/core-features/analytics/views-architecture)
-* [Campaign Analytics](/docs/core-features/analytics/overview)
+* [Analytics Views Architecture](/docs/features/analytics/views-architecture)
+* [Campaign Analytics](/docs/features/analytics/core-analytics/overview)
 
 **Technical Integration**:
 
@@ -164,7 +164,7 @@
 
 **Related Documentation**:
 
-* [Campaign Management](/docs/core-features/analytics/overview)
+* [Campaign Management](/docs/features/analytics/core-analytics/overview)
 
 **Technical Integration**:
 
@@ -191,8 +191,8 @@
 
 **Related Documentation**:
 
-* [Warm-ups](/docs/core-features/warm-ups/overview)
-* [Inbox Rotation](/docs/core-features/inbox-rotation/overview)
+* [Warm-ups](/docs/features/warmup/email-warmups/overview)
+* [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)
 
 **Technical Integration**:
 

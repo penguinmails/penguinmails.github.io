@@ -580,7 +580,7 @@ This basic customer journey optimization framework establishes the foundation fo
 
 - **[Analytics](../features/analytics.md)** - Performance tracking
 - **[Campaign Management](../features/campaign-management.md)** - Campaign workflows
-- **[Inbox Rotation](../features/inbox-rotation.md)** - Deliverability optimization
+- **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Deliverability optimization
 
 ### Specifications
 

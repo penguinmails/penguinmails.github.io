@@ -69,7 +69,7 @@ Quick Setup Overview → Customer Implementation → Campaign Launch
 
 1. **[Customer Quick Setup](/docs/implementation-technical/email-service/customer-quick-setup)** - 5-minute infrastructure setup
 2. **[Getting Started Guide](/docs/getting-started)** - Platform onboarding
-3. **[Core Features](/docs/core-features/README)** - Feature-specific guides
+3. **[Core Features](/docs/features/README)** - Feature-specific guides
 
 ### **Freelancer Path** - Platform Contributors
 

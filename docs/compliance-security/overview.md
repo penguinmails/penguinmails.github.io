@@ -140,8 +140,8 @@ Global compliance and privacy frameworks:
 
 ### **Core Features**
 
-- [Inbox Rotation](/docs/core-features/inbox-rotation) - Secure email infrastructure
-- [Unified Inbox](/docs/core-features/unified-inbox) - Multi-tenant security isolation
+- [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview) - Secure email infrastructure
+- [Unified Inbox](/docs/features/unified-inbox) - Multi-tenant security isolation
 
 ### **Technical Implementation**
 

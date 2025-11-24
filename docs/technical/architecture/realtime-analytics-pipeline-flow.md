@@ -12,7 +12,7 @@ persona: "Documentation Users"
 
 **Technical Authority**: The real-time event processing system with machine learning integration delivers predictive analytics and automated optimization recommendations that drive campaign success and ROI growth.
 
-**User Journey Integration**: This analytics pipeline supports your complete [analytics experience](/docs/core-features/analytics/overview) and [performance optimization](/docs/business/performance) with real-time insights and predictive modeling.
+**User Journey Integration**: This analytics pipeline supports your complete [analytics experience](/docs/features/analytics/core-analytics/overview) and [performance optimization](/docs/business/performance) with real-time insights and predictive modeling.
 
 ---
 

@@ -47,7 +47,7 @@ We maintain a strict separation of concerns while ensuring tight integration:
 
 ### 3. Views & Dashboards → Code
 
-* **Design**: Architecture in `../core-features/analytics/views-architecture.md`, Patterns in `analytics-ui-patterns.md`.
+* **Design**: Architecture in `../features/analytics/views-architecture.md`, Patterns in `analytics-ui-patterns.md`.
 * **Implementation**: Next.js App Router pages.
 * **Location**: `apps/web/app/dashboard/...`
 

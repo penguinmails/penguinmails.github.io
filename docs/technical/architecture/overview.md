@@ -30,7 +30,7 @@ PenguinMails is built on a modern **multi-tenant, microservices architecture** d
 - **4-Tier Database Architecture**: Sophisticated OLTP, Content, OLAP, and Queue system for optimal performance
 - **Email System Hierarchy**: Message-focused naming with natural email hierarchy (email_messages → email_content → attachments)
 
-**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](/docs/getting-started) through [campaign creation](/docs/core-features/README) to [analytics and optimization](/docs/core-features/analytics/overview) - providing the reliable infrastructure that powers your success.
+**User Journey Integration**: This architecture is the technical foundation that enables your complete user journey from [account setup](/docs/getting-started) through [campaign creation](/docs/features/README) to [analytics and optimization](/docs/features/analytics/core-analytics/overview) - providing the reliable infrastructure that powers your success.
 
 ### Technology Stack Decisions
 

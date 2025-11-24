@@ -101,9 +101,10 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📅 Product Roadmap](/docs/roadmap-considerations) - *Feature timeline and development phases*
+- [📅 Product Roadmap](/docs/roadmap/product-roadmap) - *Feature timeline and development phases*
 - [🏗️ Implementation Roadmap](/docs/business/implementation/implementation-roadmap) - *Technical milestones and delivery schedule*
-- [✨ Features Overview](/docs/feature-overview) - *Approved and planned feature catalog*
+- [✨ Features Catalog](/docs/feature-overview) - *Feature comparison and benefits*
+- [🗂️ Core Features Hub](/docs/features/README) - *Detailed feature specifications*
 - [📊 Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap) - *Feature classification framework*
 
 ### Understanding Customer Workflows

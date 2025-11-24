@@ -41,7 +41,7 @@ Instant professional email account creation with automated DNS configuration and
 
 ### Planning
 
-- **[Feature Roadmap](../roadmap/features/free-mailbox-creation.md)** - Timeline, dependencies, milestones (Q4 2025, 80% complete)
+- **[Feature Roadmap](../roadmap/product-roadmap.md)** - Timeline, dependencies, milestones (Q4 2025, 80% complete)
 - **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
 
 ### User Workflows
@@ -61,6 +61,6 @@ Instant professional email account creation with automated DNS configuration and
 
 ### Reference
 
-- **[Free Mailbox Creation Overview](../../core-features/free-mailbox-creation/overview.md)** - Detailed documentation
+- **[Free Mailbox Creation Overview](../../features/infrastructure/free-mailbox-creation/overview.md)** - Detailed documentation
 
 **Status**: APPROVED | **Priority**: HIGH

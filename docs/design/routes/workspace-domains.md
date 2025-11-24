@@ -4,9 +4,9 @@
 
 - **Goal**: Manage sending domains and email accounts (infrastructure) for the workspace.
 - **Feature References**:
-  - [Inbox Rotation](/docs/core-features/inbox-rotation/overview)
-  - [Warm-ups](/docs/core-features/warm-ups/overview)
-  - [Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)
+  - [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)
+  - [Warm-ups](/docs/features/warmup/email-warmups/overview)
+  - [Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)
 - **User Journey**: Setup domains first (Infrastructure) during onboarding, then add email accounts for sending.
 
 ## 2. UI Patterns & Components (The "How")
@@ -65,7 +65,7 @@
 
 **Related Documentation**:
 
-- [Domain Setup Guide](/docs/core-features/warm-ups/overview)
+- [Domain Setup Guide](/docs/features/warmup/email-warmups/overview)
 - [DNS Configuration](/docs/technical/infrastructure/email-deliverability)
 
 **Technical Integration**:
@@ -155,8 +155,8 @@
 
 **Related Documentation**:
 
-- [Email Account Health](/docs/core-features/warm-ups/overview)
-- [Inbox Rotation Strategy](/docs/core-features/inbox-rotation/overview)
+- [Email Account Health](/docs/features/warmup/email-warmups/overview)
+- [Inbox Rotation Strategy](/docs/features/inbox/inbox-rotation/overview)
 
 **Technical Integration**:
 
@@ -234,7 +234,7 @@
 
 **Related Documentation**:
 
-- [Free Mailbox Creation](/docs/core-features/free-mailbox-creation/overview)
+- [Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)
 - [Security Best Practices](/docs/compliance-security/enterprise/overview)
 
 **Technical Integration**:
@@ -290,7 +290,7 @@
 
 **Related Documentation**:
 
-- [Email Account Health](/docs/core-features/warm-ups/overview)
+- [Email Account Health](/docs/features/warmup/email-warmups/overview)
 - [Deliverability Monitoring](/docs/operations/monitoring/email-health)
 
 ---
@@ -332,7 +332,7 @@
 
 **Related Documentation**:
 
-- [Warmup Strategies](/docs/core-features/warm-ups/overview)
+- [Warmup Strategies](/docs/features/warmup/email-warmups/overview)
 - [Best Practices](/docs/business/email-deliverability/warmup-guide)
 
 **Technical Integration**:

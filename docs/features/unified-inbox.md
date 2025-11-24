@@ -41,7 +41,7 @@ Consolidate all email responses into one command center for zero missed opportun
 
 ### Planning
 
-- **[Feature Roadmap](../roadmap/features/unified-inbox.md)** - Timeline, dependencies, milestones (Q1 2026)
+- **[Feature Roadmap](../roadmap/product-roadmap.md)** - Timeline, dependencies, milestones (Q1 2026)
 - **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
 
 ### User Workflows
@@ -60,6 +60,6 @@ Consolidate all email responses into one command center for zero missed opportun
 
 ### Reference
 
-- **[Unified Inbox Overview](../../core-features/unified-inbox/overview.md)** - Detailed documentation
+- **[Unified Inbox Overview](../../features/inbox/unified-inbox/overview.md)** - Detailed documentation
 
 **Status**: APPROVED | **Priority**: MEDIUM

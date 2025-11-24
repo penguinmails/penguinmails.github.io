@@ -28,7 +28,7 @@ This section contains implementation guides specifically designed for email serv
 
 #### Platform Configuration
 
-- **[Core Features](/docs/core-features)** - Feature-specific implementation guides
+- **[Core Features](/docs/features)** - Feature-specific implementation guides
 - **[Team Management](/docs/getting-started)** - Customer team configuration
 - **[Billing Setup](/docs/implementation-technical/email-service/customer-quick-setup)** - Customer billing configuration
 

@@ -70,10 +70,10 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 | Feature Category | Description | Status |
 |------------------|-------------|--------|
-| **Email Infrastructure** | Automated VPS setup, SMTP configuration, DNS automation | AVAILABLE |
+| **[Email Infrastructure](../features/infrastructure/free-mailbox-creation/overview.md)** | Automated VPS setup, SMTP configuration, DNS automation | AVAILABLE |
 | **Multi-Tenant Platform** | User management, role-based access, team collaboration | AVAILABLE |
-| **Compliance & Security** | GDPR/CCPA compliance, SPF/DKIM setup, data privacy | AVAILABLE |
-| **Basic Analytics** | Directional performance tracking (75% accuracy), weekly reports | AVAILABLE |
+| **[Compliance & Security](../features/compliance/README.md)** | GDPR/CCPA compliance, SPF/DKIM setup, data privacy | AVAILABLE |
+| **[Basic Analytics](../features/analytics/core-analytics/overview.md)** | Directional performance tracking (75% accuracy), weekly reports | AVAILABLE |
 | **ESP Integration** | Postmark, Mailgun integration with manual configuration | AVAILABLE |
 
 ### 🚀 Coming Q1 2026
@@ -82,9 +82,9 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
-| **Campaign Management** | Email sequencing, A/B testing, personalization, templates | Q1 2026 |
-| **Enhanced Analytics** | Improved dashboard, optimization recommendations, automation | Q1 2026 |
-| **CRM Integration** | Salesforce, HubSpot integration with bi-directional sync | Q1 2026 |
+| **[Campaign Management](../features/campaigns/campaign-management/overview.md)** | Email sequencing, A/B testing, personalization, templates | Q1 2026 |
+| **[Enhanced Analytics](../features/analytics/enhanced-analytics/overview.md)** | Improved dashboard, optimization recommendations, automation | Q1 2026 |
+| **[CRM Integration](../features/integrations/crm-integration/overview.md)** | Salesforce, HubSpot integration with bi-directional sync | Q1 2026 |
 | **User Experience** | Guided onboarding, improved interface, mobile responsiveness | Q1 2026 |
 
 ### 📊 Planned 2026 (Growth Phase)
@@ -93,10 +93,10 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
-| **Advanced Analytics** | Enhanced KPI tracking, predictive modeling, cross-channel integration | Q2-Q3 2026 |
-| **Workflow Automation** | Marketing automation, intelligent recommendations, team collaboration | Q2-Q3 2026 |
+| **[Advanced Analytics](../features/analytics/enhanced-analytics/overview.md)** | Enhanced KPI tracking, predictive modeling, cross-channel integration | Q2-Q3 2026 |
+| **[Workflow Automation](../features/automation/workflow-automation/overview.md)** | Marketing automation, intelligent recommendations, team collaboration | Q2-Q3 2026 |
 | **Scale Infrastructure** | Dedicated IP management, performance optimization, API access | Q2-Q3 2026 |
-| **Enterprise Features** | SSO, advanced security, real-time monitoring, enterprise integrations | Q4 2026-Q1 2027 |
+| **[Enterprise Features](../features/enterprise/enterprise-features/overview.md)** | SSO, advanced security, real-time monitoring, enterprise integrations | Q4 2026-Q1 2027 |
 
 ### 🔮 Future Vision (2027+)
 
@@ -223,11 +223,11 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Core Features (Roadmap Items)
 
-- **[Analytics](../features/analytics.md)** - Performance tracking and insights (Q4 2025 - Q1 2026)
-- **[Email Warmups](../features/email-warmups.md)** - Email reputation management (Q1 2026)
-- **[Unified Inbox](../features/unified-inbox.md)** - Centralized message management (Q1-Q2 2026)
-- **[Free Mailbox Creation](../features/free-mailbox-creation.md)** - Automated mailbox provisioning (Q4 2025)
-- **[Inbox Rotation](../features/inbox-rotation.md)** - Load balancing and deliverability (Q2-Q3 2026)
+- **[Analytics](../features/analytics/core-analytics/overview.md)** - Performance tracking and insights (Q4 2025 - Q1 2026)
+- **[Email Warmups](../features/warmup/email-warmups/overview.md)** - Email reputation management (Q1 2026)
+- **[Unified Inbox](../features/inbox/unified-inbox/overview.md)** - Centralized message management (Q1-Q2 2026)
+- **[Free Mailbox Creation](../features/infrastructure/free-mailbox-creation/overview.md)** - Automated mailbox provisioning (Q4 2025)
+- **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Load balancing and deliverability (Q2-Q3 2026)
 
 ### User Workflows
 

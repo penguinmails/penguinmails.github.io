@@ -41,7 +41,7 @@ Smart rotation algorithms to maintain 95%+ deliverability at enterprise scale.
 
 ### Planning
 
-- **[Feature Roadmap](../roadmap/features/inbox-rotation.md)** - Timeline, dependencies, milestones (Q1-Q2 2026)
+- **[Feature Roadmap](../roadmap/product-roadmap.md)** - Timeline, dependencies, milestones (Q1-Q2 2026)
 - **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
 
 ### User Workflows
@@ -59,7 +59,7 @@ Smart rotation algorithms to maintain 95%+ deliverability at enterprise scale.
 
 ### Reference
 
-- **[Inbox Rotation Overview](../../core-features/inbox-rotation/overview.md)** - Detailed documentation
+- **[Inbox Rotation Overview](../../features/inbox/inbox-rotation/overview.md)** - Detailed documentation
 - **[Load Balancing Architecture](../technical/architecture/load-balancing.md)** - Technical design
 
 **Status**: APPROVED | **Priority**: MEDIUM
