@@ -52,7 +52,7 @@ Our email system implements a **natural email hierarchy** that mirrors how email
     ├── filename, mime_type, size_bytes
     ├── content BYTEA (binary data)
     └── parent_storage_key ← email_content
-```markdown
+```
 
 ### Database Tier Integration
 
@@ -80,7 +80,7 @@ OLAP Analytics (Business Intelligence):
 Queue System (Job Processing):
 ├── jobs, job_logs, job_queues
 └── analytics_jobs (for ETL pipeline)
-```markdown
+```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant data storage**, **queue-based processing**, and **real-time monitoring** systems that detect and resolve issues before they impact users.
 
@@ -98,7 +98,7 @@ Queue System (Job Processing):
 3. Handler Processing: Type-specific processing (inbound/bounce)
 4. Database Storage: email_messages (analytics) + email_content (content)
 5. Analytics Pipeline: Queue → OLAP analytics aggregation
-```markdown
+```
 
 ### Cross-Database Relationships
 
@@ -111,7 +111,7 @@ email_messages.email_account_id → email_accounts.id (OLTP)
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
 email_content.storage_key → attachments.parent_storage_key
-```markdown
+```
 
 **Technical Authority**: These relationships ensure **data integrity** across our **enterprise infrastructure** while providing the **performance optimization** needed for **high-volume operations**.
 
@@ -186,7 +186,7 @@ async function handleIncomingEmail(emailData: any) {
     };
   });
 }
-```markdown
+```
 
 ### IMAP Integration Ready
 
@@ -224,7 +224,7 @@ async function startIncomingWorker() {
   }
   await client.logout();
 }
-```markdown
+```
 
 ---
 
@@ -260,7 +260,7 @@ WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE_TRUNC('day', c.created)
 ORDER BY date;
-```markdown
+```
 
 ### Indexing Strategy
 
@@ -282,7 +282,7 @@ CREATE INDEX idx_email_content_expires ON email_content(expires_at) WHERE expire
 -- Attachment indexes
 CREATE INDEX idx_attachments_parent ON attachments(parent_storage_key);
 CREATE INDEX idx_attachments_mime ON attachments(mime_type);
-```markdown
+```
 
 ---
 
@@ -297,7 +297,7 @@ CREATE INDEX idx_attachments_mime ON attachments(mime_type);
 email_messages:    "This table tracks email message analytics and metadata"
 email_content:     "This table stores the actual email content (body, headers)"
 attachments:       "This table stores email file attachments"
-```markdown
+```
 
 ### 2. **Natural Database Relationships**
 
@@ -314,7 +314,7 @@ FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1;
-```markdown
+```
 
 ### 3. **Rich Analytics Capabilities**
 
@@ -343,7 +343,7 @@ FROM email_content c
 JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
 GROUP BY c.compression_algorithm;
-```markdown
+```
 
 ---
 
@@ -413,7 +413,7 @@ CREATE TABLE email_content ()
     expires TIMESTAMP WITH TIME ZONE,
     retention_days INTEGER DEFAULT 2555
 );
-```markdown
+```
 
 ### Data Validation
 
@@ -443,7 +443,7 @@ SELECT
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
-```markdown
+```
 
 ---
 

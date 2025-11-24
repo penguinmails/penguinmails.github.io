@@ -75,7 +75,7 @@ interface OnboardingState {
   tenant_id: string;
   company_id: string;
 }
-```markdown
+```
 
 **Technical Excellence**: This state management integrates with our [OLAP analytics system](/docs/technical/architecture/detailed-technical) for real-time user journey optimization and conversion funnel analysis. The comprehensive tracking enables predictive analytics for user behavior and automated intervention for drop-off points.
 
@@ -143,7 +143,7 @@ const SignUpForm = () => {
     </form>
   );
 };
-```markdown
+```
 
 ### **Turnstile Verification API**
 
@@ -186,7 +186,7 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-```markdown
+```
 
 **Strategic Security Integration**: Our CAPTCHA implementation supports our [competitive differentiation](/docs/business/strategy/overview by using privacy-first Cloudflare Turnstile instead of intrusive alternatives. This aligns with our [enterprise customer value proposition](/docs/business/value-proposition/detailed-analysis)) of respecting user privacy while maintaining security.
 
@@ -279,7 +279,7 @@ async function sendVerificationEmail(email: string, userId: string) {
     })
   });
 }
-```markdown
+```
 
 **Multi-Tenant Architecture**: This implementation showcases our [enterprise database architecture](/docs/technical/architecture)) with proper tenant isolation, row-level security, and scalable multi-tenant design that supports our [business model growth](/docs/business/model)).
 
@@ -335,7 +335,7 @@ async function sendVerificationEmail(email: string, userId: string) {
     Having trouble? <a href="https://app.penguinmails.com/verify">Enter the code manually</a>
   </p>
 </div>
-```markdown
+```
 
 **User Experience Excellence**: This email design supports our [customer value proposition](/docs/business/value-proposition/detailed-analysis)) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
 
@@ -408,7 +408,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(');
   }
 }
-```markdown
+```
 
 ### **Manual Verification with Code**
 
@@ -456,7 +456,7 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-```markdown
+```
 
 **Accessibility and Security**: This dual verification system supports our [enterprise accessibility standards](/docs/compliance-security while maintaining high security. The fallback code system ensures users with email client restrictions can still complete verification, improving conversion rates and user satisfaction.
 
@@ -541,7 +541,7 @@ const OnboardingModal = () => {
     </div>
   );
 };
-```markdown
+```
 
 **Strategic Business Integration**: This plan selection system supports our [tiered business model](/docs/business/model)) by providing clear value differentiation and smooth upgrade paths. The modal-based approach reduces cognitive load and improves conversion rates through focused decision-making.
 
@@ -641,7 +641,7 @@ async function createOrGetStripeAccount(tenantId: string, email: string) {
 
   return account;
 }
-```markdown
+```
 
 ### **Stripe Webhook Handler**
 
@@ -709,7 +709,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     [tenantId, `workspace-${tenantId.slice(0, 8)}`]
   );
 }
-```markdown
+```
 
 **Financial System Integration**: This Stripe Connect integration supports our [revenue model](/docs/business/model)) with automated payment processing, revenue sharing, and compliance with financial regulations. The webhook system ensures reliable payment state management and automatic account provisioning.
 
@@ -812,7 +812,7 @@ const WorkspaceSetup = () => {
     </div>
   );
 };
-```markdown
+```
 
 ### **Provisioning Status**
 
@@ -908,7 +908,7 @@ const ProvisioningStatus = () => {
     </div>
   );
 };
-```markdown
+```
 
 **Infrastructure Provisioning**: This workspace creation system integrates with our [comprehensive infrastructure](/docs/technical/architecture/detailed-technical)) to automatically provision email domains, configure DNS settings, and set up monitoring. The progressive status updates provide transparency and manage user expectations during the provisioning process.
 
@@ -1048,7 +1048,7 @@ export default function LoginPage() {
     </div>
   );
 }
-```markdown
+```
 
 ### **NileDB Login API**
 
@@ -1114,7 +1114,7 @@ export async function POST(req: NextRequest) {
     );
   }
 }
-```markdown
+```
 
 **Security and UX Excellence**: This login system supports our [enterprise security standards](/docs/compliance-security while providing an intuitive user experience. The CAPTCHA integration balances security with accessibility, and the comprehensive error handling provides clear feedback for users.
 
@@ -1243,7 +1243,7 @@ export const useAuth = () => {
   }
   return context;
 };
-```markdown
+```
 
 **Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](/docs/technical/architecture)) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
 
@@ -1278,7 +1278,7 @@ JWT_SECRET=your-super-secret-jwt-key
 
 # Application URLs
 NEXT_PUBLIC_APP_URL=https://app.penguinmails.com
-```markdown
+```
 
 ### **Firebase/Deployment Secrets**
 
@@ -1297,7 +1297,7 @@ env:
     secret: turnstile-secret-key
   - variable: LOOP_API_KEY
     secret: loop-api-key
-```markdown
+```
 
 **Security Configuration**: This environment configuration supports our [enterprise security standards](/docs/compliance-security by implementing secure secret management, environment isolation, and compliance with security best practices. The configuration enables our [operational excellence](/docs/technical/architecture/detailed-technical)) through proper environment separation and secret rotation capabilities.
 

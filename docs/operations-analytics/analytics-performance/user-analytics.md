@@ -53,7 +53,7 @@ interface UserProfile {
   };
   events: AnalyticsEvent[];
 }
-```markdown
+```
 
 ### **Analytics Database Design**
 ```sql
@@ -79,7 +79,7 @@ CREATE TABLE user_properties (
     total_sessions INTEGER DEFAULT 0,
     total_events INTEGER DEFAULT 0
 );
-```markdown
+```
 
 ---
 
@@ -118,7 +118,7 @@ interface ConversionFunnel {
     conversionRate: number;   // paying / firstCampaign
   };
 }
-```markdown
+```
 
 ---
 
@@ -132,7 +132,7 @@ Visitor → Signup → Email Verification → Company Setup
     ↓         ↓            ↓              ↓
 Team Setup → Stripe → IP Config → First Campaign
   90-95%   80-85%    75-80%       60-70%
-```markdown
+```
 
 ### **Critical Path Analysis**
 - **Drop-off Points**: Identify where users abandon the onboarding flow
@@ -160,7 +160,7 @@ graph TD
     L --> M[Abandonment]
     M --> N[Recovery Email]
     N --> E
-```markdown
+```
 
 ---
 
@@ -186,7 +186,7 @@ interface UserCohort {
   };
   lifecycle: 'trial' | 'active' | 'churned' | 'dormant';
 }
-```markdown
+```
 
 ### **Feature Usage Patterns**
 - **High-Value Features**: Campaigns, templates, analytics
@@ -221,7 +221,7 @@ interface ExperimentVariant {
   conversionRate: number;
   sampleSize: number;
 }
-```markdown
+```
 
 ### **Key Test Categories**
 - **Onboarding Optimization**: Signup flow and user activation
@@ -258,7 +258,7 @@ const calculateCohortRetention = (
 
   return retention;
 };
-```markdown
+```
 
 ### **Churn Prediction**
 - **Early Warning Signals**: Decreased login frequency, feature usage decline
@@ -330,7 +330,7 @@ interface CohortAnalysis {
     byCompanySize: Record<string, CohortMetrics>;
   };
 }
-```markdown
+```
 
 ---
 
@@ -371,7 +371,7 @@ Engagement Metrics
 ├── Pages per Session: X
 ├── Feature Adoption: X%
 └── Support Tickets: X per user
-```markdown
+```
 
 ### **Product Dashboard**
 ```markdown
@@ -386,7 +386,7 @@ User Flows
 ├── Time to First Campaign: X days
 ├── Power User Rate: X%
 └── Feature Discovery Rate: X%
-```markdown
+```
 
 ### **Marketing Dashboard**
 ```markdown
@@ -401,7 +401,7 @@ Campaign Performance
 ├── Click Rates: X%
 ├── Conversion Rates: X%
 └── ROI: X%
-```markdown
+```
 
 ---
 

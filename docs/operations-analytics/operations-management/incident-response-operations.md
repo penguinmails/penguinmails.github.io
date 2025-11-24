@@ -71,7 +71,7 @@ interface Incident {
   tags: string[];
   timeline: IncidentEvent[];
 }
-```markdown
+```
 
 ### Incident Categories
 - **Security Incidents**: Unauthorized access, data breaches, malware
@@ -125,7 +125,7 @@ interface IncidentResponseTeam {
     ];
   };
 }
-```markdown
+```
 
 ### Escalation Contacts
 - **Primary On-call**: Engineering Lead (24)
@@ -165,7 +165,7 @@ interface MonitoringConfig {
     ];
   };
 }
-```markdown
+```
 
 ### Initial Assessment Process
 1. **Alert Triage**: Automated alerts routed to on-call engineer
@@ -197,7 +197,7 @@ interface ImpactAssessment {
     resourceUtilization: number;  // Additional resources required
   };
 }
-```markdown
+```
 
 ## Response Procedures
 
@@ -251,7 +251,7 @@ const containmentPlaybooks = {
     'Implement data recovery'
   ]
 };
-```markdown
+```
 
 ### Investigation Phase
 1. **Evidence Collection**: Preserve logs, screenshots, and system state
@@ -296,7 +296,7 @@ interface RecoveryProcess {
     ];
   };
 }
-```markdown
+```
 
 ## Communication Procedures
 
@@ -317,7 +317,7 @@ interface InternalCommunication {
     content: ['Incident status', 'Expected resolution time', 'Business impact'];
   };
 }
-```markdown
+```
 
 ### External Communication
 ```typescript
@@ -354,7 +354,7 @@ interface ExternalCommunication {
     content: ['Prepared statements', 'Background information'];
   };
 }
-```markdown
+```
 
 ### Status Page Management
 - **Real-time Updates**: Automated status updates based on monitoring
@@ -395,7 +395,7 @@ interface IncidentClosure {
     ];
   };
 }
-```markdown
+```
 
 ### Post-Mortem Process
 ```typescript
@@ -428,7 +428,7 @@ interface PostMortemAction {
   status: 'pending' | 'in_progress' | 'completed';
   followUp: string; // How success will be measured
 }
-```markdown
+```
 
 ### Continuous Improvement
 - **Lessons Learned**: Document and share incident insights
@@ -470,7 +470,7 @@ interface BreachNotification {
     contractual: 'Notify customers per contract terms';
   };
 }
-```markdown
+```
 
 ### Evidence Preservation
 - **Chain of Custody**: Document all evidence handling procedures
@@ -510,7 +510,7 @@ interface IncidentTesting {
     participants: 'All response team members';
   };
 }
-```markdown
+```
 
 ### Plan Maintenance
 - **Annual Review**: Complete plan review and updates
@@ -541,7 +541,7 @@ interface IncidentMetrics {
     resolutionSatisfaction: number; // Internal satisfaction score
   };
 }
-```markdown
+```
 
 ### Reporting Requirements
 - **Monthly Reports**: Incident summary and trend analysis

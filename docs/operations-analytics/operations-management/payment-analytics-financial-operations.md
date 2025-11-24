@@ -209,7 +209,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
     throw error;
   }
 }
-```markdown
+```
 
 ##### 2. **Onboarding Link Generation**
 ```typescript
@@ -229,7 +229,7 @@ export async function getStripeOnboardingLink(accountId: string) {
     throw error;
   }
 }
-```markdown
+```
 
 #### **Database Schema**
 
@@ -248,7 +248,7 @@ ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
 -- - plans: plan definitions and limits
 -- - subscription_addons: additional features
 -- - Usage calculated at runtime from campaigns, emails, companies tables
-```markdown
+```
 
 #### **Settings/Billing Integration**
 
@@ -285,7 +285,7 @@ export async function getStripeConnectStatus() {
     throw error;
   }
 }
-```markdown
+```
 
 #### **Webhook Integration**
 
@@ -329,7 +329,7 @@ const calculateARR = (mrr: number) => mrr * 12;
 const calculateNRR = (startingARR: number, endingARR: number, expansions: number) => {
   return ((endingARR + expansions) ) * 100;
 };
-```markdown
+```
 
 #### **Key Revenue KPIs**
 - **MRR Growth Rate**: Month-over-month subscription revenue growth
@@ -369,7 +369,7 @@ const costBreakdown: CostBreakdown = {
   operations: 0.07,
   legal: 0.03
 };
-```markdown
+```
 
 ### **Profitability Metrics**
 
@@ -389,7 +389,7 @@ const calculateBreakEven = (
   const contributionMarginPerUser = averageRevenuePerUser - averageVariableCostPerUser;
   return Math.ceil(fixedCosts );
 };
-```markdown
+```
 
 ### **Cash Flow Management**
 
@@ -417,7 +417,7 @@ interface CashFlowProjection {
   netCashFlow: number;
   endingCash: number;
 }
-```markdown
+```
 
 ### **Churn and Retention Analysis**
 
@@ -451,7 +451,7 @@ const calculateLTV = (
   const monthlyChurn = churnRate / 100;
   return (averageRevenuePerUser * grossMargin) / monthlyChurn;
 };
-```markdown
+```
 
 ### **Financial Dashboard**
 
@@ -463,7 +463,7 @@ Financial Overview
 ├── Net Revenue Retention: X%
 ├── Gross Margin: X%
 └── Cash Runway: X months
-```markdown
+```
 
 #### **Revenue Analytics**
 ```markdown
@@ -478,7 +478,7 @@ Growth Trends
 ├── Expansion Revenue: $X this month
 ├── Churned Revenue: $X this month
 └── Net New MRR: $X this month
-```markdown
+```
 
 #### **Cost Analysis**
 ```markdown
@@ -493,7 +493,7 @@ Cost Trends
 ├── Burn Rate: $X per month
 ├── CAC: $X per customer
 └── CAC Payback: X months
-```markdown
+```
 
 ---
 
@@ -504,7 +504,7 @@ Cost Trends
 #### **Failed Payment Handling**
 ```markdown
 Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace Period → Account Actions
-```markdown
+```
 
 **Detailed Process:**
 1. **Payment Failure Detection**:
@@ -525,7 +525,7 @@ Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace P
 #### **Plan Changes & Proration**
 ```markdown
 Current Plan → Change Request → Confirmation → Prorated Billing → Feature Updates → New Cycle
-```markdown
+```
 
 **Upgrade Process:**
 1. **Plan Selection**:
@@ -541,7 +541,7 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
 #### **Chargeback & Dispute Management**
 ```markdown
 Charge Filed → Stripe Notification → Evidence Collection → Response Submission → Resolution
-```markdown
+```
 
 **Detailed Process:**
 1. **Dispute Detection**:
@@ -559,7 +559,7 @@ Charge Filed → Stripe Notification → Evidence Collection → Response Submis
 #### **Stripe Service Outage**
 ```markdown
 Payment Processing Down → Graceful Degradation → Alternative Handling → Service Restoration
-```markdown
+```
 
 **System Response:**
 1. **Detection**: Stripe API monitoring alerts
@@ -570,7 +570,7 @@ Payment Processing Down → Graceful Degradation → Alternative Handling → Se
 #### **Revenue Share Disputes**
 ```markdown
 Fee Calculation Error → Investigation → Evidence Review → Adjustment → Reconciliation
-```markdown
+```
 
 **Resolution Process:**
 1. **Detection**: User reports incorrect fees or calculations
@@ -585,7 +585,7 @@ Fee Calculation Error → Investigation → Evidence Review → Adjustment → R
 ### **First-Time Stripe Connect Setup**
 ```markdown
 Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verification → Success
-```markdown
+```
 
 **Detailed Steps:**
 1. **Onboarding Context**:
@@ -607,7 +607,7 @@ Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verifica
 ### **Payment Method Addition**
 ```markdown
 Billing Settings → Add Method → Card Form → 3DS Verification → Confirmation → Default Set
-```markdown
+```
 
 **Detailed Steps:**
 1. **Access Point**:

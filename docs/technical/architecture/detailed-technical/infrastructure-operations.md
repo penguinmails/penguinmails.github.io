@@ -63,7 +63,7 @@ Our infrastructure implements a **comprehensive multi-tenant architecture** that
     ├── Stripe Payments (Financial Processing)
     ├── Loop Emails (Transactional Email)
     └── DNS Provider (Domain Management)
-```markdown
+```
 
 ### System Architecture Integration
 
@@ -98,7 +98,7 @@ External Integration:
 ├── Stripe Payments (Financial processing & compliance)
 ├── Loop Emails (Transactional email delivery)
 └── DNS Provider (Domain verification & management)
-```markdown
+```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant infrastructure**, **automatic failover**, and **comprehensive monitoring** that ensures **reliable operations** for all customers.
 
@@ -183,7 +183,7 @@ graph TB
     class AUTH,TENANT,BILL,EMAIL app
     class HOST,SMTP,DOMAIN,WARMUP infra
     class STRIPE,LOOP,DNS external
-```markdown
+```
 
 ### Multi-Tenant Database Schema
 
@@ -355,7 +355,7 @@ erDiagram
     TENANTS ||--o{ SUBSCRIPTIONS : has
     PLANS ||--o{ SUBSCRIPTIONS : defines
     SUBSCRIPTIONS ||--o{ PAYMENTS : generates
-```markdown
+```
 
 ### Email Infrastructure Flow
 
@@ -445,7 +445,7 @@ flowchart TB
     class AUTH_SMTP,SEND_EMAIL,TRACK_OPEN,TRACK_CLICK sending
     class WARMUP_QUEUE,REPUTATION,VOLUME_CONTROL warmup
     class BOUNCE,COMPLAINT,BLACKLIST feedback
-```markdown
+```
 
 ### Deployment Pipeline
 
@@ -525,7 +525,7 @@ flowchart LR
     class PROD_DEPLOY,PROD_MONITOR,PROD_DB prod
     class MIGRATION_SCRIPT,BACKUP,VALIDATE migration
     class GITHUB,BUILD,TEST,DEPLOY cicd
-```markdown
+```
 
 ---
 
@@ -603,7 +603,7 @@ mailu_1_7:
   tls_enabled: true
   dkim_selector: mailu
   default_language: en
-```markdown
+```
 
 #### SMTP Features Excellence
 
@@ -633,7 +633,7 @@ const db = new NileDB({
   port: 5432,
   ssl: process.env.NODE_ENV === 'production'
 });
-```markdown
+```
 
 #### Multi-Tenant Data Isolation Excellence
 
@@ -681,7 +681,7 @@ const jobManager = new JobManager({
     password: process.env.DB_PASSWORD
   }
 });
-```markdown
+```
 
 #### Hybrid Queue Architecture Excellence
 
@@ -707,7 +707,7 @@ if (job.priority < 50) {
     priority: job.priority
   }));
 }
-```markdown
+```
 
 **B. Queuer Process (Migration Service):**
 ```javascript
@@ -752,7 +752,7 @@ class JobMigrator {
     return 'queue:email-sending:low';
   }
 }
-```markdown
+```
 
 **C. Consumer Pattern (Worker Servers):**
 ```javascript
@@ -829,7 +829,7 @@ class Worker {
     }
   }
 }
-```markdown
+```
 
 #### Queue Processing Benefits Excellence
 
@@ -878,7 +878,7 @@ services:
     depends_on:
       - database
       - redis
-```markdown
+```
 
 ### Production Environment Variables
 
@@ -893,7 +893,7 @@ HOSTWIND_API_KEY=${HOSTWIND_API_KEY}
 STRIPE_SECRET_KEY=${STRIPE_SECRET_KEY}
 STRIPE_WEBHOOK_SECRET=${STRIPE_WEBHOOK_SECRET}
 LOOP_API_KEY=${LOOP_API_KEY}
-```markdown
+```
 
 ---
 

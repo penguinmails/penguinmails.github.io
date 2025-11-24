@@ -322,7 +322,7 @@ interface CampaignEngagement {
     byTimeOfDay: Record<string, EngagementMetrics>;
   };
 }
-```markdown
+```
 
 #### **Campaign Analytics Dashboard**
 ```markdown
@@ -338,7 +338,7 @@ Engagement Trends
 ├── Top Performing: [Campaign] (X% open rate)
 ├── Best Time: X:XX AM/PM
 └── Device Breakdown: X% mobile, X% desktop
-```markdown
+```
 
 ### **User Journey Analytics**
 
@@ -365,7 +365,7 @@ interface JourneyAnalytics {
     conversionValue: number;
   };
 }
-```markdown
+```
 
 #### **Behavioral Analysis**
 - **User Flow Visualization**: Complete journey mapping
@@ -421,7 +421,7 @@ interface JourneyAnalytics {
 #### **Campaign Launch Failures**
 ```markdown
 Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis → Recovery Options → Relaunch
-```markdown
+```
 
 **Failure Types & Recovery:**
 1. **SMTP Connection Issues**:
@@ -447,7 +447,7 @@ Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis 
 #### **Large-Scale Campaign Management**
 ```markdown
 Bulk Operations → Progress Tracking → Partial Failures → Selective Retry → Completion Reconciliation
-```markdown
+```
 
 **Bulk Processing Strategies:**
 1. **Batch Segmentation**:
@@ -468,7 +468,7 @@ Bulk Operations → Progress Tracking → Partial Failures → Selective Retry �
 #### **Content & Compliance Issues**
 ```markdown
 Pre-Launch Check → Spam Detection → Content Review → Approval Workflow → Launch Authorization
-```markdown
+```
 
 **Content Validation Process:**
 1. **Automated Spam Checking**:
@@ -521,7 +521,7 @@ Pre-Launch Check → Spam Detection → Content Review → Approval Workflow →
 ### **First Campaign Creation**
 ```markdown
 Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Setup → Test Send → Launch Success
-```markdown
+```
 
 **Detailed New User Flow:**
 1. **Discovery & Access**:
@@ -550,7 +550,7 @@ Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Set
 ### **IP Selection & Warmup Setup**
 ```markdown
 IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configuration → Activation Monitoring
-```markdown
+```
 
 **IP Decision Process:**
 1. **IP Portfolio Review**:
@@ -602,7 +602,7 @@ IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configurat
 ### **Deliverability Crisis Response**
 ```markdown
 High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → Recovery Actions → Relaunch
-```markdown
+```
 
 **Crisis Management:**
 1. **Automatic Detection**:
@@ -623,7 +623,7 @@ High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → 
 ### **SMTP Infrastructure Failure**
 ```markdown
 SMTP Connection Failure → Automatic Failover → Backup Server Activation → Status Updates → Service Restoration
-```markdown
+```
 
 **Infrastructure Resilience:**
 1. **Failure Detection**:

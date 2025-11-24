@@ -52,7 +52,7 @@ interface UserSegment {
   retentionRate: number;
   upgradeRate: number;
 }
-```markdown
+```
 
 ### **Feature Performance Dashboard**
 ```markdown
@@ -67,7 +67,7 @@ Usage Patterns
 ├── Fastest Growing: [Feature] (+X% MoM)
 ├── Highest Satisfaction: [Feature] (X)
 └── Most Problematic: [Feature] (X% error rate)
-```markdown
+```
 
 ---
 
@@ -107,7 +107,7 @@ const calculateUXHealthScore = (metrics: UXMetrics): number => {
     return score + (value * weight);
   }, 0);
 };
-```markdown
+```
 
 ### **Product Health Indicators**
 - **Feature Health Score**: Composite metric of performance, usage, and satisfaction
@@ -149,7 +149,7 @@ interface ExperimentResults {
   practicalSignificance: boolean;
   recommendations: string[];
 }
-```markdown
+```
 
 ### **Experiment Categories**
 - **Feature Optimization**: Improving existing feature performance
@@ -191,7 +191,7 @@ const calculateStatisticalSignificance = (
     ]
   };
 };
-```markdown
+```
 
 ---
 
@@ -238,7 +238,7 @@ const calculateProductMarketFit = (data: ProductMarketFit): number => {
     return score + (value * weight);
   }, 0);
 };
-```markdown
+```
 
 ### **Market Feedback Integration**
 - **User Surveys**: Regular feedback collection and analysis
@@ -280,7 +280,7 @@ interface Milestone {
   completed: boolean;
   metrics: Record<string, number>;
 }
-```markdown
+```
 
 ### **Feature Success Criteria**
 - **Adoption Target**: Minimum percentage of users using the feature
@@ -325,7 +325,7 @@ const calculateRICEScore = (feature: FeaturePrioritization): number => {
   const { reach, impact, confidence, effort } = feature.rice;
   return (reach * impact * (confidence )) / effort;
 };
-```markdown
+```
 
 ### **Qualitative Factors**
 - **Strategic Alignment**: Contribution to company goals
@@ -403,7 +403,7 @@ interface Idea {
     results: ValidationResult;
   };
 }
-```markdown
+```
 
 ### **Innovation Success Factors**
 - **User-Centric Focus**: Solving real user problems
@@ -434,7 +434,7 @@ Experiment Results
 ├── Completed: X this month
 ├── Success Rate: X%
 └── Average Impact: +X% improvement
-```markdown
+```
 
 ### **Executive Product Report**
 ```markdown
@@ -455,7 +455,7 @@ Recommendations
 ├── Short-term Projects: [List]
 ├── Long-term Investments: [List]
 └── Strategic Changes: [List]
-```markdown
+```
 
 ### **Product Team Metrics**
 - **Sprint Velocity**: Story points completed per sprint

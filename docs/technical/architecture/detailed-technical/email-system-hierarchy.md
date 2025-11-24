@@ -39,7 +39,7 @@ Complete Email System
     ├── filename, mime_type, size_bytes
     ├── content BYTEA (binary data)
     └── parent_storage_key ← email_content
-```markdown
+```
 
 ### Table Definitions
 
@@ -62,7 +62,7 @@ CREATE TABLE email_messages ()
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### email_content - Email Body Content
 ```sql
@@ -83,7 +83,7 @@ CREATE TABLE email_content ()
     is_archived BOOLEAN DEFAULT FALSE,
     last_accessed TIMESTAMP WITH TIME ZONE
 );
-```markdown
+```
 
 #### attachments - Email File Attachments (Existing)
 ```sql
@@ -100,7 +100,7 @@ CREATE TABLE attachments ()
     compression_algorithm VARCHAR(20),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ---
 
@@ -112,7 +112,7 @@ CREATE TABLE attachments ()
 email_messages:    "This table tracks email message analytics and metadata"
 email_content:     "This table stores the actual email content (body, headers)"
 attachments:       "This table stores email file attachments"
-```markdown
+```
 
 ### 2. **Natural Database Relationships**
 ```sql
@@ -126,7 +126,7 @@ FROM email_messages m
 JOIN email_content c ON m.storage_key = c.storage_key
 LEFT JOIN attachments a ON c.storage_key = a.parent_storage_key
 WHERE m.tenant_id = $1;
-```markdown
+```
 
 ### 3. **Efficient Content Management**
 - **Single Storage**: Email content stored once in email_content
@@ -162,7 +162,7 @@ JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
 AND c.compression_algorithm IS NOT NULL
 GROUP BY c.compression_algorithm;
-```markdown
+```
 
 ---
 
@@ -178,7 +178,7 @@ email_messages.email_account_id → email_accounts.id (OLTP)
 -- Content Database internal references
 email_messages.storage_key → email_content.storage_key
 email_content.storage_key → attachments.parent_storage_key
-```markdown
+```
 
 ### Complete Email Query Pattern
 ```sql
@@ -212,7 +212,7 @@ GROUP BY
     c.raw_size_bytes, c.compressed_size_bytes
 ORDER BY m.created DESC
 LIMIT 100;
-```markdown
+```
 
 ---
 
@@ -297,7 +297,7 @@ async function handleIncomingEmail(emailData: any) {
     };
   });
 }
-```markdown
+```
 
 ---
 
@@ -327,7 +327,7 @@ CREATE INDEX idx_attachments_size ON attachments(size_bytes);
 -- Composite indexes for common queries
 CREATE INDEX idx_email_messages_campaign_status ON email_messages(campaign_id, status);
 CREATE INDEX idx_email_messages_lead_created ON email_messages(lead_id, created_at);
-```markdown
+```
 
 ### Query Optimization Examples
 ```sql
@@ -358,7 +358,7 @@ JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '7 days'
 GROUP BY c.compression_algorithm;
-```markdown
+```
 
 ---
 
@@ -390,7 +390,7 @@ SELECT * FROM content_objects;
 -- Step 4: Archive old tables
 ALTER TABLE content_inbox_message_refs RENAME TO content_inbox_message_refs_archived;
 ALTER TABLE content_objects RENAME TO content_objects_archived;
-```markdown
+```
 
 ### Data Validation
 ```sql
@@ -417,7 +417,7 @@ SELECT
 FROM email_messages m
 LEFT JOIN email_content c ON m.storage_key = c.storage_key
 WHERE c.storage_key IS NULL;
-```markdown
+```
 
 ---
 
@@ -451,7 +451,7 @@ WHERE m.tenant_id = $1
 AND m.created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE_TRUNC('day', c.created)
 ORDER BY date;
-```markdown
+```
 
 ### Alerting Thresholds
 ```sql
@@ -468,7 +468,7 @@ JOIN email_messages m ON c.storage_key = m.storage_key
 WHERE m.tenant_id = $1
 AND c.created >= NOW() - INTERVAL '1 day'
 HAVING SUM(raw_size_bytes) > 1024 * 1024 * 100; -- 100MB
-```markdown
+```
 
 ---
 
@@ -486,7 +486,7 @@ CRITICAL   |  BIGINT   |   BIGINT   |  UUID
 HIGH       |  BIGINT   |   UUID     |  UUID
 MEDIUM     |  BIGINT   |   UUID     |  UUID
 LOW        |   INT     |   UUID     |  UUID
-```markdown
+```
 
 ### **Email System PK Distribution**
 

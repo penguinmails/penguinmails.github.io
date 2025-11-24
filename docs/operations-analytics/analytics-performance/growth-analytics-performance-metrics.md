@@ -61,7 +61,7 @@ const calculateConversionRates = (funnel: ConversionFunnel) => {
     overallRate: (funnel.conversions ) * 100
   };
 };
-```markdown
+```
 
 ### **Channel Performance**
 - **Cost Per Acquisition (CPA)**: Marketing spend divided by new customers
@@ -107,7 +107,7 @@ const trackFeatureAdoption = (feature: string, userBase: User[]) => {
     averageUsage: calculateAverageUsage(activeUsers, feature)
   };
 };
-```markdown
+```
 
 ### **Account Expansion**
 - **Upsell Rate**: Percentage of customers upgrading plans
@@ -145,7 +145,7 @@ const calculateMarketPenetration = (metrics: GeographicMetrics) => {
     growthEfficiency: metrics.growthRate / metrics.penetrationRate
   };
 };
-```markdown
+```
 
 ### **Vertical Expansion**
 - **Industry Distribution**: User base across different industries
@@ -196,7 +196,7 @@ const calculateGrowthAccounting = (accounting: GrowthAccounting) => {
     }
   };
 };
-```markdown
+```
 
 ### **Efficiency Ratios**
 - **Blended CAC Payback**: Time to recover acquisition costs across all channels
@@ -255,7 +255,7 @@ const projectGrowth = (model: GrowthModel): GrowthProjection => {
     confidence: calculateProjectionConfidence(model)
   };
 };
-```markdown
+```
 
 ### **Leading Indicators**
 - **Trial-to-Paid Conversion Trends**: Early signal of acquisition quality
@@ -304,7 +304,7 @@ const evaluateContentPerformance = (content: ContentMetrics) => {
     }
   };
 };
-```markdown
+```
 
 ### **Paid Advertising Optimization**
 - **Cost Per Click (CPC)**: Average cost for ad clicks
@@ -376,7 +376,7 @@ const optimizeResourceAllocation = (
     expectedOutcomes: projectAllocationOutcomes(recommendedAllocation, growthGoals)
   };
 };
-```markdown
+```
 
 ### **Growth Scaling Strategy**
 - **Phased Expansion**: Gradual market and capability expansion
@@ -407,7 +407,7 @@ Expansion Metrics
 ├── Expansion Revenue: $X
 ├── Upsell Rate: X%
 └── Cross-sell Rate: X%
-```markdown
+```
 
 ### **Channel Performance Dashboard**
 ```markdown
@@ -423,7 +423,7 @@ Channel Efficiency
 ├── Most Efficient: [Channel] ($X CAC)
 ├── Highest Volume: [Channel] (X users)
 └── Best ROI: [Channel] (X:1 ratio)
-```markdown
+```
 
 ### **Predictive Analytics Dashboard**
 ```markdown
@@ -438,7 +438,7 @@ Risk Indicators
 ├── Market Saturation: X%
 ├── Competitive Pressure: High/Medium/Low
 └── Economic Impact: Positive/Neutral/Negative
-```markdown
+```
 
 ---
 
@@ -466,7 +466,7 @@ const analyzeCohorts = (cohorts: CohortMetrics[]) => {
     retentionCurve: generateRetentionCurve(cohort.retention)
   }));
 };
-```markdown
+```
 
 ### **Attribution Modeling**
 ```typescript
@@ -497,7 +497,7 @@ const calculateAttribution = (model: AttributionModel) => {
     timeDecay: calculateTimeDecayAttribution(model.touchpoints, totalValue)
   };
 };
-```markdown
+```
 
 ### **Growth Experimentation**
 ```typescript
@@ -535,7 +535,7 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
     recommendation: lift > 0 && confidence >= 95 ? 'Implement' : 'Keep control'
   };
 };
-```markdown
+```
 
 ---
 

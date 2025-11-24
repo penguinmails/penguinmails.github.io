@@ -59,7 +59,7 @@ Our OLAP schema implements a **comprehensive analytics architecture** that combi
     ├── row_level_security (tenant isolation)
     ├── data_classification (privacy protection)
     └── audit_logging (regulatory compliance)
-```markdown
+```
 
 ### Database Tier Integration
 
@@ -91,7 +91,7 @@ Performance Optimization Layer (Query Excellence):
 ├── Data partitioning (scalable storage)
 ├── Connection pooling (resource efficiency)
 └── Parallel processing (high-performance analytics)
-```markdown
+```
 
 **Operational Excellence**: This architecture supports our **99.9% uptime commitment** through **redundant analytics processing**, **automatic failover**, and **comprehensive monitoring** systems that ensure **reliable business intelligence** for all customers.
 
@@ -130,7 +130,7 @@ ON billing_analytics(tenant_id, period_start, period_end);
 CREATE INDEX idx_billing_analytics_tenant ON billing_analytics(tenant_id);
 CREATE INDEX idx_billing_analytics_subscription ON billing_analytics(subscription_id);
 CREATE INDEX idx_billing_analytics_period ON billing_analytics(period_start, period_end);
-```markdown
+```
 
 **User Journey Integration**: This table provides **real-time usage visibility** that connects to **billing dashboards**, **customer success tools**, and **revenue optimization** to support your **complete business intelligence** experience.
 
@@ -170,7 +170,7 @@ CREATE INDEX idx_campaign_analytics_campaign ON campaign_analytics(campaign_id);
 CREATE INDEX idx_campaign_analytics_company ON campaign_analytics(company_id);
 CREATE INDEX idx_campaign_analytics_status ON campaign_analytics(status);
 CREATE INDEX idx_campaign_analytics_billing ON campaign_analytics(billing_id);
-```markdown
+```
 
 **Business Intelligence**: This analytics provide **actionable insights** into **campaign effectiveness**, **conversion optimization**, and **audience engagement** that drive **better marketing outcomes** and **revenue growth**.
 
@@ -214,7 +214,7 @@ CREATE INDEX idx_mailbox_analytics_company ON mailbox_analytics(company_id);
 CREATE INDEX idx_mailbox_analytics_warmup ON mailbox_analytics(warmup_status);
 CREATE INDEX idx_mailbox_analytics_health ON mailbox_analytics(health_score);
 CREATE INDEX idx_mailbox_analytics_billing ON mailbox_analytics(billing_id);
-```markdown
+```
 
 **Strategic Alignment**: This analytics support our **deliverability excellence** by providing **real-time visibility** into **mailbox health**, **warmup progression**, and **reputation metrics** that ensure **consistent email delivery**.
 
@@ -253,7 +253,7 @@ CREATE INDEX idx_lead_analytics_lead ON lead_analytics(lead_id);
 CREATE INDEX idx_lead_analytics_campaign ON lead_analytics(campaign_id);
 CREATE INDEX idx_lead_analytics_status ON lead_analytics(status);
 CREATE INDEX idx_lead_analytics_billing ON lead_analytics(billing_id);
-```markdown
+```
 
 **Business Value**: This analytics enable **precision targeting** and **conversion optimization** by providing **granular insights** into **customer behavior**, **engagement patterns**, and **response likelihood**.
 
@@ -294,7 +294,7 @@ CREATE INDEX idx_warmup_analytics_company ON warmup_analytics(company_id);
 CREATE INDEX idx_warmup_analytics_health ON warmup_analytics(health_score);
 CREATE INDEX idx_warmup_analytics_progress ON warmup_analytics(progress_percentage);
 CREATE INDEX idx_warmup_analytics_billing ON warmup_analytics(billing_id);
-```markdown
+```
 
 **Strategic Foundation**: This analytics support our **deliverability excellence** by providing **progressive reputation building** insights that ensure **long-term email success** and **customer satisfaction**.
 
@@ -333,7 +333,7 @@ CREATE INDEX idx_sequence_step_analytics_step ON sequence_step_analytics(step_id
 CREATE INDEX idx_sequence_step_analytics_campaign ON sequence_step_analytics(campaign_id);
 CREATE INDEX idx_sequence_step_analytics_company ON sequence_step_analytics(company_id);
 CREATE INDEX idx_sequence_step_analytics_billing ON sequence_step_analytics(billing_id);
-```markdown
+```
 
 **Business Intelligence**: This analytics provide **actionable insights** into **sequence effectiveness**, **step optimization opportunities**, and **conversion drivers** that support **data-driven campaign improvement**.
 
@@ -394,7 +394,7 @@ CREATE INDEX idx_admin_audit_analytics ON admin_audit_log(analytics_event_id) WH
 CREATE INDEX idx_admin_audit_compliance ON admin_audit_log USING gin(compliance_flags) WHERE compliance_flags IS NOT NULL;
 CREATE INDEX idx_admin_audit_classification ON admin_audit_log(data_classification, retention_category);
 CREATE INDEX idx_admin_audit_complexity ON admin_audit_log(query_complexity_score DESC) WHERE query_complexity_score IS NOT NULL;
-```markdown
+```
 
 **Strategic Value**: This comprehensive audit system ensures **complete compliance** with **enterprise security requirements** while providing **performance optimization** insights for **operational excellence**.
 
@@ -446,7 +446,7 @@ CREATE INDEX idx_admin_system_events_unresolved ON admin_system_events(resolved_
 CREATE INDEX idx_admin_system_events_session_token ON admin_system_events(session_token) WHERE session_token IS NOT NULL;
 CREATE INDEX idx_admin_system_events_active_sessions ON admin_system_events(admin_user_id, is_active) WHERE is_active = true;
 CREATE INDEX idx_admin_system_events_timestamp ON admin_system_events(timestamp);
-```markdown
+```
 
 **Operational Excellence**: This unified monitoring system provides **real-time visibility** into **system health**, **user activity**, and **security events** to maintain our **99.9% uptime commitment**.
 
@@ -628,7 +628,7 @@ export class AnalyticsAggregator {
     });
   }
 }
-```markdown
+```
 
 ### 2. Queue-Driven Analytics Processing
 
@@ -712,7 +712,7 @@ export class AnalyticsWorker extends JobProcessor {
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -773,7 +773,7 @@ SELECT
   updated_at
 FROM ranked_campaigns
 ORDER BY sent DESC;
-```markdown
+```
 
 ### 2. Tenant Usage Analytics
 
@@ -806,7 +806,7 @@ SELECT
 FROM billing_analytics ba
 WHERE ba.period_start >= NOW() - INTERVAL '3 months'
 ORDER BY ba.tenant_id, ba.period_start;
-```markdown
+```
 
 ### 3. Warmup Performance Analytics
 
@@ -852,7 +852,7 @@ FROM warmup_progress
 GROUP BY mailbox_id, company_id
 HAVING COUNT(*) >= 3  -- At least 3 days of tracking
 ORDER BY avg_health_score DESC, avg_progress DESC;
-```markdown
+```
 
 ### 4. Administrative Activity Analysis
 
@@ -887,7 +887,7 @@ GROUP BY
   aal.creation_time::DATE,
   EXTRACT(HOUR FROM aal.creation_time)
 ORDER BY action_count DESC, activity_date DESC;
-```markdown
+```
 
 ---
 
@@ -939,7 +939,7 @@ BEGIN
   REFRESH MATERIALIZED VIEW CONCURRENTLY campaign_performance_summary;
 END;
 $$ LANGUAGE plpgsql;
-```markdown
+```
 
 ### 2. Partitioning Strategy for Large Tables
 
@@ -965,7 +965,7 @@ FOR VALUES FROM ('2025-02-01') TO ('2025-03-01');
 -- Indexes on partition tables
 CREATE INDEX idx_billing_analytics_2025_01_tenant ON billing_analytics_2025_01(tenant_id);
 CREATE INDEX idx_billing_analytics_2025_02_tenant ON billing_analytics_2025_02(tenant_id);
-```markdown
+```
 
 ### 3. Automated Maintenance
 
@@ -1013,7 +1013,7 @@ BEGIN
     );
 END;
 $$ LANGUAGE plpgsql;
-```markdown
+```
 
 ---
 
@@ -1057,7 +1057,7 @@ INSERT INTO analytics_connection_pools ()
 ('report_generation', 2, 8, 120, 600, true, 4),     -- Complex report generation
 ('data_exports', 1, 5, 180, 1800, false, 1),        -- Large data exports
 ('ad_hoc_analytics', 2, 10, 90, 300, true, 3);      -- Exploratory analytics
-```markdown
+```
 
 ### Unified Security Policies for Analytics
 
@@ -1098,7 +1098,7 @@ CREATE POLICY admin_audit_logs_access ON admin_audit_logs
         current_setting('app.user_role') = 'admin'
         OR tenant_id = current_setting('app.current_tenant_id')::text
     );
-```markdown
+```
 
 ### Analytics Security Tables
 
@@ -1140,7 +1140,7 @@ CREATE TABLE analytics_rate_limits ()
 
     UNIQUE(tenant_id, query_type, time_window_seconds)
 );
-```markdown
+```
 
 ### Analytics Security Functions
 
@@ -1205,7 +1205,7 @@ BEGIN
     RETURN TRUE;
 END;
 $$ LANGUAGE plpgsql SECURITY DEFINER;
-```markdown
+```
 
 ---
 

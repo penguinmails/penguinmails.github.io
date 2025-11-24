@@ -1071,7 +1071,7 @@ interface DataRetention {
     security: '[Archival security] with [encryption] and [access controls]';
   };
 }
-```markdown
+```
 
 **Strategic Data Retention**: This framework ensures that data retention decisions support [business objectives](/docs/business/strategy/overview while maintaining [regulatory compliance](/docs/compliance-security, enabling [data-driven business](/docs/business/analytics without compliance risk.
 
@@ -1112,7 +1112,7 @@ graph TD
     M --> N[Competitive Analysis]
     N --> O[Strategic Planning Update]
     O --> P[Market Positioning Enhancement]
-```markdown
+```
 
 **Business-Integrated Response**: This workflow ensures that incidents become opportunities for [business improvement](/docs/business/operations, [competitive advantage](/docs/business/strategy/overview development, and [strategic positioning](/docs/business/strategy/overview enhancement.
 
@@ -1178,7 +1178,7 @@ interface StaffTraining {
     simulation: '[Realistic scenarios] with [business impact] modeling and [strategic response] planning';
   };
 }
-```markdown
+```
 
 **Business-Integrated Training**: This approach ensures that compliance training supports [business objectives](/docs/business/strategy/overview and [organizational development](/docs/business/operations` (target not found: `/home/israel/personal/penguinmails/penguinmails.github.io/docs/business/strategy/overview.
 
@@ -1224,7 +1224,7 @@ Processing personal data?
 └── No → Standard data handling procedures with [optimization] opportunities
     ├── Optimization opportunity? → Business process improvement
     └── Standard process → Regular monitoring and review
-```markdown
+```
 
 **Strategic Decision Framework**: This decision tree ensures that data processing decisions consider both [regulatory compliance](/docs/compliance-security and [business value](/docs/business/model` (target not found: `/home/israel/personal/penguinmails/penguinmails.github.io/docs/business/strategy/overview development rather than mere compliance maintenance.
 
@@ -1247,7 +1247,7 @@ Personal data breach?
 └── No → Document incident without notification
     ├── Business learning opportunity? → Process improvement initiative
     └── Standard documentation → Regular review and update
-```markdown
+```
 
 **Strategic Incident Management**: This framework transforms breach response from a crisis management exercise into a [competitive advantage](/docs/business/strategy/overview opportunity through [transparency](/docs/business/value-proposition/detailed-analysis [customer protection](/docs/business/value-proposition/detailed-analysis and [business improvement](/docs/business/operations.
 
@@ -1687,7 +1687,7 @@ graph TD
     M --> N[Competitive Analysis]
     N --> O[Strategic Planning Update]
     O --> P[Market Positioning Enhancement]
-```markdown
+```
 
 **Business-Integrated Response**: This workflow ensures that incidents become opportunities for [business improvement](/docs/business/operations, [competitive advantage](/docs/business/strategy/overview development, and [strategic positioning](/docs/business/strategy/overview enhancement.
 

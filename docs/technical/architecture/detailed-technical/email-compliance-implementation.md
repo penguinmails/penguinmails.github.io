@@ -56,7 +56,7 @@ class ComplianceDataProcessor {
     };
   }
 }
-```markdown
+```
 
 ### Data Access Request Handler
 
@@ -136,7 +136,7 @@ class DataRightsHandler {
     console.log(`Data access request: ${request.email} - ${status}`);
   }
 }
-```markdown
+```
 
 ### Data Deletion Request Handler
 
@@ -200,7 +200,7 @@ class DataDeletionHandler {
     // Log for audit compliance
   }
 }
-```markdown
+```
 
 ---
 
@@ -295,7 +295,7 @@ class SecurityMonitor {
     return { isCompliant: true, details: { incidents: 0, status: 'secure' } };
   }
 }
-```markdown
+```
 
 ---
 
@@ -365,7 +365,7 @@ class RegulatoryChangeManager {
     this.implementationPlans.push(plan);
   }
 }
-```markdown
+```
 
 ---
 
@@ -432,7 +432,7 @@ class ComplianceTraining {
     };
   }
 }
-```markdown
+```
 
 ---
 

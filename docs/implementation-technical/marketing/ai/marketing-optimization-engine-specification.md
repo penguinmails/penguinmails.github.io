@@ -42,7 +42,7 @@ class CampaignPerformanceModel(nn.Module):
         for layer in self.layers:
             x = layer(x)
         return torch.sigmoid(self.output_layer(x))
-```markdown
+```
 
 **Bid Optimization Model:**
 
@@ -53,7 +53,7 @@ class BidOptimizationModel:
 
     def predict_optimal_bid(self, features):
         return self.model.predict([features])
-```markdown
+```
 
 ---
 
@@ -78,7 +78,7 @@ class FeatureEngineeringPipeline:
         features['cpc'] = raw_data.spend / raw_data.clicks
         features['ctr'] = raw_data.clicks / raw_data.impressions
         return pd.DataFrame(features)
-```markdown
+```
 
 ---
 
@@ -103,7 +103,7 @@ async def predict_performance(campaign_data: CampaignData):
         "confidence_interval": {"lower": float(prediction[0] - confidence), "upper": float(prediction[0] + confidence)},
         "model_version": "v2.1.0", "inference_time_ms": float(inference_time)
     }
-```markdown
+```
 
 ---
 
@@ -124,7 +124,7 @@ class OnlineLearningSystem:
         loss = self.compute_loss(prediction, actual_outcome)
         gradients = self.compute_gradients(features, loss)
         self.model.apply_gradients(gradients, self.learning_rate)
-```markdown
+```
 
 ### A/B Testing Framework
 
@@ -139,7 +139,7 @@ class ABTestManager:
             if hash_value < cumulative_split:
                 return variant
         return list(self.active_tests[experiment_id]['variants'].keys())[-1]
-```markdown
+```
 
 ---
 
@@ -165,7 +165,7 @@ class ModelMaintenanceSystem:
 
         if should_retrain:
             self.initiate_retraining_process()
-```markdown
+```
 
 ---
 

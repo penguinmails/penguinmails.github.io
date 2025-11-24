@@ -163,7 +163,7 @@ interface TeamEngagement {
     mentorshipPairs: number;
   };
 }
-```markdown
+```
 
 #### **Organization Health KPIs**
 - **Team Utilization Rate**: Active members / total invited
@@ -193,7 +193,7 @@ Performance Indicators
 ├── Onboarding Completion: X%
 ├── Access Security Score: X/100
 └── Team Satisfaction: X)
-```markdown
+```
 
 ### **Role-Based Access Control Analytics**
 
@@ -225,7 +225,7 @@ interface AccessControlAnalytics {
     roleChangeFrequency: number;
   };
 }
-```markdown
+```
 
 #### **Security & Compliance Metrics**
 - **Access Violation Rate**: Unauthorized access attempts
@@ -260,7 +260,7 @@ interface TenantAnalytics {
     availability: number;
   };
 }
-```markdown
+```
 
 #### **Scalability & Performance**
 - **Tenant Scalability**: Performance under varying loads
@@ -299,7 +299,7 @@ interface TeamPerformancePrediction {
     historicalTrend: number[];
   };
 }
-```markdown
+```
 
 #### **Organizational Intelligence**
 - **Team Composition Analysis**: Optimal role distributions
@@ -329,7 +329,7 @@ interface RoleBasedJourney {
     leadershipIndex: number;
   };
 }
-```markdown
+```
 
 #### **Organizational Culture Metrics**
 - **Team Communication Patterns**: Internal vs external collaboration
@@ -348,7 +348,7 @@ interface RoleBasedJourney {
 #### **Team Member Removal Process**
 ```markdown
 Team Dashboard → Member Selection → Removal Confirmation → Asset Transfer → Access Termination → Notifications
-```markdown
+```
 
 **Detailed Steps:**
 1. **Removal Initiation** (`):
@@ -376,7 +376,7 @@ Team Dashboard → Member Selection → Removal Confirmation → Asset Transfer 
 #### **Role Escalation & Changes**
 ```markdown
 Role Change Request → Permission Impact Review → Security Approval → Access Update → Team Notification
-```markdown
+```
 
 **Detailed Steps:**
 1. **Role Change Request**:
@@ -397,7 +397,7 @@ Role Change Request → Permission Impact Review → Security Approval → Acces
 #### **Owner Role Transfer**
 ```markdown
 Owner Departure → Successor Selection → Transfer Confirmation → New Owner Setup → Team Notification
-```markdown
+```
 
 **Detailed Steps:**
 1. **Transfer Initiation**:
@@ -422,7 +422,7 @@ Owner Departure → Successor Selection → Transfer Confirmation → New Owner 
 ### **Company Creation & Setup**
 ```markdown
 Onboarding Start → Company Form → Industry/Type Selection → Team Size Config → Owner Setup → Database Creation
-```markdown
+```
 
 **Detailed Steps:**
 1. **Onboarding Context**:
@@ -449,7 +449,7 @@ Onboarding Start → Company Form → Industry/Type Selection → Team Size Conf
 ### **First Team Member Invitation**
 ```markdown
 Post-Company Creation → Team Tab Access → Invite Modal → Email Config → Send → Recipient Flow
-```markdown
+```
 
 **Detailed Steps:**
 1. **Team Management Discovery**:
@@ -474,7 +474,7 @@ Post-Company Creation → Team Tab Access → Invite Modal → Email Config → 
 ### **Critical Admin Protection**
 ```markdown
 Last Admin Removal Attempt → System Block → Alternative Assignment → Permission Preservation
-```markdown
+```
 
 **Safety Mechanisms:**
 1. **Detection Logic**:
@@ -495,7 +495,7 @@ Last Admin Removal Attempt → System Block → Alternative Assignment → Permi
 ### **Lost Administrative Access Recovery**
 ```markdown
 Admin Access Loss → Support Ticket → Identity Verification → Staff Intervention → Access Restoration
-```markdown
+```
 
 **Recovery Process:**
 1. **Issue Identification**:

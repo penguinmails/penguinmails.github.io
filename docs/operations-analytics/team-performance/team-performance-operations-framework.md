@@ -192,7 +192,7 @@ This framework provides a structured approach for conducting effective sprint re
 **Actual Result**: [Pass/Fail with details]
 **Environment**: [Browser, OS, Device]
 **Test Data**: [Sample user details]
-```markdown
+```
 
 #### **Test Case Categories**
 - **Smoke Tests**: Critical path validation (15-20 tests)
@@ -236,7 +236,7 @@ describe('User Authentication', () => {
     await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
   });
 });
-```markdown
+```
 
 ### **Performance Testing**
 
@@ -301,7 +301,7 @@ describe('User Authentication', () => {
 │  • Staff Member Management                    • Ticket     │
 │                                               • System     │
 └─────────────────────────────────────────────────────────────┘
-```markdown
+```
 
 ### **Staff Management System**
 
@@ -339,7 +339,7 @@ CREATE TABLE staff_role_permissions (
     permission_id INTEGER REFERENCES permissions(id),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 ### **Staff Hierarchy Design**
 
@@ -412,7 +412,7 @@ async function checkStaffPermission(userId: string, permissionName: string) {
     permission => permission.permissions.name === permissionName
   ) || false;
 }
-```markdown
+```
 
 ### **Help System Integration**
 
@@ -464,7 +464,7 @@ const helpLinks = [
     ))}
   </DropdownMenuContent>
 </DropdownMenu>
-```markdown
+```
 
 #### **Landing Page Support Button**
 ```tsx
@@ -501,7 +501,7 @@ const SupportButton = () => {
     </div>
   );
 };
-```markdown
+```
 
 ### **Email-Based Support Workflow**
 
@@ -567,7 +567,7 @@ const supportTemplates = {
     `
   }
 };
-```markdown
+```
 
 ---
 

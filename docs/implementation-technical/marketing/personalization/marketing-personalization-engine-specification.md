@@ -39,7 +39,7 @@ class SegmentationEngine:
             self.redis_client.sadd(f"segment:{segment_definition['name']}", customer_id)
 
         return len(segment_customers['hits']['hits'])
-```markdown
+```
 
 ---
 
@@ -66,7 +66,7 @@ class FeatureStore:
             value = cached_features[i]
             features[feature_name] = float(value) if value is not None else 0.0
         return features
-```markdown
+```
 
 ### Behavioral Feature Computation
 
@@ -89,7 +89,7 @@ class BehavioralFeatureComputer:
             'page_views_30d': engagement_features['page_views'],
             'conversion_rate': engagement_features['form_submits'] )
         }
-```markdown
+```
 
 ---
 
@@ -123,7 +123,7 @@ class ContextualBanditDecisionEngine:
             'confidence_score': max(scores, key=lambda x: x[1])[1],
             'alternative_options': [item[0] for item in sorted(scores, key=lambda x: x[1], reverse=True)[1:4]]
         }
-```markdown
+```
 
 ### Real-Time API Endpoints
 
@@ -146,7 +146,7 @@ async def personalize_content(request: PersonalizationRequest):
         'reasoning': 'Selected based on customer engagement patterns',
         'latency_ms': latency_ms
     }
-```markdown
+```
 
 ---
 
@@ -168,7 +168,7 @@ class ContentAPIClient:
             return response.json()['content_items']
         else:
             raise APIException(f"Content API error: {response.status_code}")
-```markdown
+```
 
 ### Performance Monitoring
 
@@ -184,7 +184,7 @@ class PersonalizationPerformanceMonitor:
         self.prometheus_client.counter('personalization_conversions_total').inc()
         if value:
             self.prometheus_client.histogram('personalization_conversion_value', value)
-```markdown
+```
 
 ---
 

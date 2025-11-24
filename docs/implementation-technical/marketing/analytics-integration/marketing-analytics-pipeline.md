@@ -62,7 +62,7 @@ interface CampaignOptimization extends CampaignEvent {
     creative_rotation?: string[];
   };
 }
-```markdown
+```
 
 **Customer Journey Events:**
 ```typescript
@@ -99,7 +99,7 @@ interface JourneyStart extends CustomerJourneyEvent {
     referral_source?: string;
   };
 }
-```markdown
+```
 
 **Personalization Events:**
 ```typescript
@@ -123,7 +123,7 @@ interface PersonalizationEvent {
     };
   };
 }
-```markdown
+```
 
 #### 1.2 Real-Time Data Processing Requirements
 **Technical Requirements:**
@@ -162,7 +162,7 @@ interface AnalyticsPipeline {
     historical_data: 'data_warehouse';
   };
 }
-```markdown
+```
 
 ### 2. CRM Integration Architecture
 
@@ -196,7 +196,7 @@ interface CDPIntegration {
     privacy_compliance: 'gdpr_ccpa';
   };
 }
-```markdown
+```
 
 **Customer Profile Analytics:**
 ```typescript
@@ -222,7 +222,7 @@ interface CustomerProfileAnalytics {
     audit_trail: 'complete_logging';
   };
 }
-```markdown
+```
 
 #### 2.2 Cross-Platform Data Integration
 **Primary Objective:** Integrate data from all marketing platforms for comprehensive analytics
@@ -269,7 +269,7 @@ interface PlatformIntegration {
     };
   };
 }
-```markdown
+```
 
 ### 3. Cross-Channel Attribution System
 
@@ -312,7 +312,7 @@ interface AttributionEngine {
     multi_device: 'cross_device_mapping';
   };
 }
-```markdown
+```
 
 #### 3.2 Cross-Device Attribution Implementation
 **Primary Objective:** Implement cross-device attribution for accurate performance tracking across devices
@@ -343,7 +343,7 @@ interface CrossDeviceAttribution {
     retention_policy: '90_days';
   };
 }
-```markdown
+```
 
 ---
 
@@ -376,7 +376,7 @@ flink_config:
     delivery_guarantee: 'exactly_once'
     state_backend: 'rocksdb'
     checkpoint_interval: '30_seconds'
-```markdown
+```
 
 **Marketing Event Processing:**
 ```java
@@ -427,7 +427,7 @@ public class MarketingEventProcessor {
         out.collect(metrics);
     }
 }
-```markdown
+```
 
 #### 4.2 Redis Cache Implementation
 **Primary Objective:** Implement Redis for high-speed caching of real-time analytics
@@ -465,7 +465,7 @@ interface RedisCache {
     };
   };
 }
-```markdown
+```
 
 ### 5. Analytics Generation Engine
 
@@ -492,7 +492,7 @@ spark_config:
     memory_fraction: 0.8;
     serialization: 'kryo';
     compression: 'lz4';
-```markdown
+```
 
 **Batch Analytics Processing:**
 ```scala
@@ -528,7 +528,7 @@ class MarketingBatchProcessor {
       }
   }
 }
-```markdown
+```
 
 #### 5.2 Elasticsearch Integration
 **Primary Objective:** Implement Elasticsearch for fast analytics querying and dashboard generation
@@ -562,7 +562,7 @@ elasticsearch_config:
       number_of_shards: 3;
       number_of_replicas: 1;
       time_based_indexing: 'daily';
-```markdown
+```
 
 **Elasticsearch Integration:**
 ```typescript
@@ -630,7 +630,7 @@ class ElasticsearchAnalyticsClient {
     };
   }
 }
-```markdown
+```
 
 ---
 
@@ -679,7 +679,7 @@ class CampaignPerformanceCalculator {
             normalizedROAS * roasWeight) * 100;
   }
 }
-```markdown
+```
 
 #### 6.2 Campaign Alert System
 **Primary Objective:** Implement intelligent alerting for campaign performance issues
@@ -720,7 +720,7 @@ interface CampaignAlertSystem {
     sms: '+1234567890'; // For critical alerts
   };
 }
-```markdown
+```
 
 ### 7. Optimization Recommendation Engine
 
@@ -787,7 +787,7 @@ class OptimizationRecommendationEngine {
     };
   }
 }
-```markdown
+```
 
 #### 7.2 Automated Optimization Implementation
 **Primary Objective:** Implement automated optimization based on performance thresholds
@@ -831,7 +831,7 @@ interface AutomatedOptimization {
     performance_monitoring: 'continuous';
   };
 }
-```markdown
+```
 
 ---
 
@@ -873,7 +873,7 @@ interface AnalyticsSLA {
     reporting_consistency: '99.9%';
   };
 }
-```markdown
+```
 
 #### 8.2 Monitoring and Alerting
 **Primary Objective:** Implement comprehensive monitoring and alerting for system performance
@@ -908,7 +908,7 @@ monitoring_config:
     - name: 'attribution_calculation_time_seconds'
       type: 'histogram'
       description: 'Time to complete attribution calculations'
-```markdown
+```
 
 ### 9. Data Quality and Validation
 
@@ -955,7 +955,7 @@ interface DataQualityFramework {
     quality_scoring: 'composite_score';
   };
 }
-```markdown
+```
 
 #### 9.2 Automated Data Quality Remediation
 **Primary Objective:** Implement automated data quality remediation and correction
@@ -1004,7 +1004,7 @@ class DataQualityRemediation {
     }
   }
 }
-```markdown
+```
 
 ---
 
@@ -1068,7 +1068,7 @@ spec:
           value: "http://elasticsearch-service:9200"
         - name: KAFKA_BROKERS
           value: "kafka-service:9092"
-```markdown
+```
 
 #### 10.2 CI/CD Pipeline
 **Primary Objective:** Implement CI/CD pipeline for analytics pipeline deployment
@@ -1116,7 +1116,7 @@ jobs:
       run: |
         kubectl set image deployment/analytics-processor analytics-processor=company/marketing-analytics:${{ github.sha }}
         kubectl rollout status deployment/analytics-processor
-```markdown
+```
 
 ---
 

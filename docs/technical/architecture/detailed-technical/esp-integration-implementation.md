@@ -88,7 +88,7 @@ class SendGridProvider {
     return response.json();
   }
 }
-```markdown
+```
 
 ### Mailgun API Integration
 
@@ -155,7 +155,7 @@ class MailgunProvider {
     return { success: true };
   }
 }
-```markdown
+```
 
 ### Amazon SES Integration
 
@@ -208,7 +208,7 @@ class SESProvider {
     };
   }
 }
-```markdown
+```
 
 ---
 
@@ -285,7 +285,7 @@ class MultiProviderManager {
     return this.providers.sendgrid;
   }
 }
-```markdown
+```
 
 ### Performance Analytics Dashboard
 
@@ -387,7 +387,7 @@ class ESPAnalyticsDashboard {
     return insights;
   }
 }
-```markdown
+```
 
 ---
 

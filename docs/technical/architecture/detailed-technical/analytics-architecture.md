@@ -146,7 +146,7 @@ graph TB
     class API,ANALYTICS,TRACKING backend
     class NILEDB,POSTGRES,POSTHOG data
     class POSTHOG_API,POSTHOG_DASH external
-```markdown
+```
 
 ---
 
@@ -214,7 +214,7 @@ CREATE TABLE email_replies (
     message_id VARCHAR(255),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### 2. Daily Aggregates
 
@@ -259,7 +259,7 @@ CREATE TABLE daily_analytics (
 
     UNIQUE(user_id, tenant_id, campaign_id, mailbox_id, date)
 );
-```markdown
+```
 
 #### 3. Warmup Tracking
 
@@ -292,7 +292,7 @@ CREATE TABLE warmup_daily_stats ()
 
     UNIQUE(mailbox_id, date)
 );
-```markdown
+```
 
 ### Indexes for Performance
 
@@ -312,7 +312,7 @@ CREATE INDEX idx_daily_analytics_campaign ON daily_analytics(campaign_id);
 
 CREATE INDEX idx_warmup_interactions_mailbox ON warmup_interactions(mailbox_id);
 CREATE INDEX idx_warmup_interactions_date ON warmup_interactions(interaction_at::DATE);
-```markdown
+```
 
 ### Enhanced OLAP Analytics Schema
 
@@ -429,7 +429,7 @@ spam_complaints INTEGER DEFAULT 0,
 billing_id BIGINT REFERENCES billing_analytics(id),
 updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-```markdown
+```
 
 #### Queue-Driven ETL Analytics Pipeline
 
@@ -647,7 +647,7 @@ private async processDailyAggregate(data: any) {
   });
 }
 }
-```markdown
+```
 
 ---
 
@@ -658,7 +658,7 @@ private async processDailyAggregate(data: any) {
 #### Tracking URL Format
 ```markdown
 https://track.penguinmails.com/open?email_id=abc123&token=xyz789
-```markdown
+```
 
 #### Architecture Design
 ```typescript
@@ -708,14 +708,14 @@ export async function trackOpen(req: Request) {
     }
   });
 }
-```markdown
+```
 
 ### 2. Click Tracking (Redirect)
 
 #### URL Format
 ```markdown
 https://track.penguinmails.com/click?email_id=abc123&url=https%3A%2F%2Fclient.com&token=xyz789
-```markdown
+```
 
 #### Architecture Design
 ```typescript
@@ -771,7 +771,7 @@ export async function trackClick(req: Request) {
     }
   });
 }
-```markdown
+```
 
 ### 3. Warmup Tracking
 
@@ -806,7 +806,7 @@ export async function trackWarmupInteraction()
     }
   });
 }
-```markdown
+```
 
 ---
 
@@ -869,7 +869,7 @@ export async function aggregateDailyAnalytics(date: string) {
 
   return analytics;
 }
-```markdown
+```
 
 ---
 
@@ -930,7 +930,7 @@ export const trackEmailEvent = {
     });
   }
 };
-```markdown
+```
 
 ### PostHog Dashboard Configuration
 
@@ -985,7 +985,7 @@ export const useCampaignAnalytics = (campaignId: string) => {
     enabled: !!campaignId,
   });
 };
-```markdown
+```
 
 ---
 
@@ -1033,7 +1033,7 @@ services:
 
 volumes:
   postgres_data:
-```markdown
+```
 
 ### Drizzle ORM Setup
 
@@ -1066,7 +1066,7 @@ export const emailOpens = pgTable('email_opens', {)
   userAgent: text('user_agent'),
   createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
 });
-```markdown
+```
 
 ---
 

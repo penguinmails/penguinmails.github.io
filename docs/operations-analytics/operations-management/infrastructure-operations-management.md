@@ -61,7 +61,7 @@ External Support:
 - Database Vendor: https:/)
 - Cloud Provider: https://console.aws.amazon.com/support
 - Security Incident: security@penguinmails.com +1-555-SEC-HELP
-```markdown
+```
 
 ### First Response Procedures
 
@@ -86,7 +86,7 @@ psql -h db-host -U app_user -d penguinmails_oltp -c "SELECT 1;"
 
 # 5. Execute failover if needed
 # See: backup_recovery_procedures.md
-```markdown
+```
 
 #### 2. Performance Degradation
 ```sql
@@ -105,7 +105,7 @@ FROM connection_pool_metrics cpm
 JOIN connection_pool_config cpc ON cpm.pool_config_id = cpc.id
 WHERE cpm.collected_at >= NOW() - INTERVAL '5 minutes'
 ORDER BY cpm.collected_at DESC;
-```markdown
+```
 
 ---
 
@@ -213,7 +213,7 @@ FROM connection_pool_config cpc
 JOIN connection_pool_metrics cpm ON cpc.id = cpm.pool_config_id
 WHERE cpc.tier = 'oltp'
 AND cpm.collected_at >= NOW() - INTERVAL '5 minutes';
-```markdown
+```
 
 **Performance Targets:**
 - **Query Response Time**: <200ms for 95th percentile
@@ -236,7 +236,7 @@ FROM email_messages
 WHERE created >= NOW() - INTERVAL '30 days'
 GROUP BY DATE(created)
 ORDER BY content_date DESC;
-```markdown
+```
 
 **Performance Targets:**
 - **Content Retrieval**: <1s for email content access
@@ -266,7 +266,7 @@ ORDER BY
         WHEN 'low' THEN 4
         ELSE 5
     END;
-```markdown
+```
 
 **Performance Targets:**
 - **Queue Processing**: <20s average processing time
@@ -306,7 +306,7 @@ Configuration Notes:
   - Replace [PROJECT_ID] with actual PostHog project ID
   - Configure custom events for database performance tracking
   - Set up alerting rules for critical performance thresholds
-```markdown
+```
 
 ---
 
@@ -342,7 +342,7 @@ External Support:
   - Database Vendor Support: [portal-url]
   - Cloud Provider Support: [portal-url]
   - Security Team: [contact-info]
-```markdown
+```
 
 ---
 

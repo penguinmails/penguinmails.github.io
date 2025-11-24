@@ -86,7 +86,7 @@ interface Incident {
     competitiveAdvantageRisk: number;
   };
 }
-```markdown
+```
 
 **Enterprise Risk Management**: This severity framework supports our [operational excellence standards](/docs/business/operations) by providing clear escalation paths and business impact assessment. The framework enables data-driven decision making during incidents to protect our [competitive positioning](/docs/business/strategy) and maintain customer trust.
 
@@ -166,7 +166,7 @@ interface IncidentResponseTeam {
     expertise: 'Business operations and customer relationship management';
   };
 }
-```markdown
+```
 
 **Strategic Leadership Structure**: This team structure supports our [enterprise market strategy](/docs/business/strategy) by ensuring that incident response decisions consider both technical resolution and business impact. The framework enables rapid decision-making while maintaining alignment with our [competitive positioning](/docs/technical/architecture).
 
@@ -278,7 +278,7 @@ interface MonitoringConfig {
     ];
   };
 }
-```markdown
+```
 
 **Strategic Monitoring Integration**: This comprehensive monitoring system supports our [data-driven optimization strategy](/docs/business/analytics) by providing real-time insights into both technical performance and business impact. The integration with our [OLAP analytics platform](.) enables predictive incident detection and business impact forecasting.
 
@@ -346,7 +346,7 @@ interface ImpactAssessment {
     };
   };
 }
-```markdown
+```
 
 **Strategic Business Integration**: This assessment framework supports our [comprehensive business strategy](/docs/business/strategy) by ensuring that incident response considers not just technical resolution but also strategic business impact, competitive positioning, and long-term market implications.
 
@@ -437,7 +437,7 @@ const containmentPlaybooks = {
     'Communicate with customers about [service improvements]'
   ]
 };
-```markdown
+```
 
 **Strategic Response Integration**: This containment strategy supports our [operational excellence standards](/docs/business/operations) by ensuring that technical response procedures are coordinated with business impact considerations. The framework enables rapid technical resolution while protecting our [competitive positioning](/docs/business/strategy) and [customer relationships](/docs/technical/architecture).
 
@@ -508,7 +508,7 @@ interface RecoveryProcess {
     brandProtection: 'Implement [reputation management] procedures'
   };
 }
-```markdown
+```
 
 **Comprehensive Recovery Strategy**: This recovery framework supports our [business continuity strategy](/docs/business/operations) by ensuring that technical restoration is coordinated with business operations, customer experience, and competitive positioning. The approach enables us to not just restore service but potentially emerge stronger from incidents.
 
@@ -559,7 +559,7 @@ interface InternalCommunication {
     ];
   };
 }
-```markdown
+```
 
 **Strategic Communication Framework**: This communication structure supports our [enterprise stakeholder management](/docs/business/operations) by ensuring that technical incident information is translated into business implications and strategic considerations. The framework enables informed decision-making at all organizational levels.
 
@@ -624,7 +624,7 @@ interface ExternalCommunication {
     ];
   };
 }
-```markdown
+```
 
 **Market-Focused Communication Strategy**: This external communication framework supports our [market leadership positioning](/docs/business/strategy/overview) by ensuring that incident communication reinforces rather than undermines our competitive advantages. The approach transforms potential negatives into demonstrations of our [operational excellence](/docs/business/operations) and [customer-first approach](/docs/business/value-proposition/detailed-analysis).
 
@@ -691,7 +691,7 @@ interface IncidentClosure {
     ];
   };
 }
-```markdown
+```
 
 **Business-Focused Post-Incident Process**: This closure framework supports our [continuous improvement strategy](/docs/business/operations) by ensuring that incidents become opportunities for business growth, competitive advantage enhancement, and strategic positioning improvement.
 
@@ -748,7 +748,7 @@ interface PostMortemAction {
     validation: string;
   };
 }
-```markdown
+```
 
 **Strategic Learning and Improvement**: This post-mortem framework supports our [organizational learning strategy](/docs/business/operations) by ensuring that incidents become catalysts for business improvement, competitive advantage enhancement, and strategic positioning strengthening.
 
@@ -808,7 +808,7 @@ interface BreachNotification {
     competitiveAnalysis: 'Assess competitive implications and [market opportunity] identification';
   };
 }
-```markdown
+```
 
 **Compliance as Competitive Advantage**: This legal and compliance framework supports our [regulatory excellence strategy](/docs/compliance-security) by transforming compliance requirements into demonstrations of our [operational maturity](/docs/business/operations) and [customer protection](/docs/business/value-proposition/detailed-analysis) commitment.
 
@@ -886,7 +886,7 @@ interface IncidentTesting {
     benchmarking: 'Compare response quality and speed with [industry leaders]';
   };
 }
-```markdown
+```
 
 **Strategic Testing Framework**: This testing approach supports our [continuous improvement strategy](/docs/business/operations) by ensuring that incident response capabilities are continuously validated against not just technical requirements but also business objectives, competitive standards, and strategic positioning goals.
 
@@ -941,7 +941,7 @@ interface IncidentMetrics {
     stakeholderConfidence: number; // Maintenance of [stakeholder trust] and [investor confidence]
   };
 }
-```markdown
+```
 
 **Business-Driven Metrics Framework**: This metrics system supports our [data-driven optimization strategy](/docs/business/analytics) by ensuring that incident response performance is measured not just by technical metrics but by business outcomes, competitive positioning, and strategic objective achievement.
 
