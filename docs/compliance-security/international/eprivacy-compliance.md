@@ -1,6 +1,5 @@
 ---
 title: "ePrivacy Directive Compliance Analysis"
-- path: "docs/compliance-security/international/gdpr-compliance.md"
 audience: "Legal teams, compliance officers, technical architects"
 category: "Level 2 - Detailed Analysis"
 description: "Comprehensive analysis of ePrivacy Directive requirements for electronic communications and marketing, specifically affecting email outreach platforms like PenguinMails."

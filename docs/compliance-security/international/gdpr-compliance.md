@@ -1,6 +1,5 @@
 ---
 title: "GDPR Compliance Analysis for PenguinMails"
-- path: "docs/compliance-security/international/european-compliance-overview.md"
 audience: "Legal teams, compliance officers, technical architects"
 category: "Level 2 - Detailed Analysis"
 description: "Detailed analysis of General Data Protection Regulation (GDPR) requirements affecting email outreach platforms and PenguinMails' specific compliance obligations."

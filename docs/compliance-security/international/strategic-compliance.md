@@ -1,6 +1,5 @@
 ---
 title: "Strategic Compliance Recommendations for EU Market Entry"
-- path: "docs/compliance-security/international/technical-implementation.md"
 audience: "Executive leadership, business strategists, product managers, marketing teams"
 category: "Level 3 - Strategic Implementation"
 description: "Business strategy and market entry guidance for achieving European regulatory compliance and leveraging compliance as a competitive advantage."
