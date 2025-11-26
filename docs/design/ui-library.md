@@ -73,7 +73,6 @@ const form = useForm({
 
 - Example: `import { Mail, Send, Users } from 'lucide-react'`
 
-
 ### Animation & Motion
 
 **tw-animate-css** + **CSS Transitions**
@@ -166,15 +165,14 @@ const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
 
 **Pattern**: shadcn/ui + react-hook-form + zod
 
-**Requirements**
+#### Requirements
 
 - All forms must use Zod schemas for validation
 - Error messages must be user-friendly
 - Support for multi-step forms (campaign creation wizard)
-
 - Auto-save drafts for long forms
 
-**Example Structure**:
+#### Example Structure
 
 ```typescript
 
@@ -200,24 +198,18 @@ const form = useForm({ resolver: zodResolver(schema) });
 
 **Pattern**: shadcn/ui Dialog component
 
-**Requirements**
+#### Requirements
 
 - Accessible (ARIA, keyboard navigation)
-
 - Backdrop click to close (configurable)
-
 - Escape key to close
-
 - Focus trap within modal
-
 - Sizes: sm, md, lg, xl, full
 
-**Use Cases**
+#### Use Cases
 
 - Confirmation dialogs (delete campaign)
-
 - Multi-step wizards (campaign setup)
-
 - Detail views (recipient details)
 
 ### Notifications
@@ -849,6 +841,7 @@ interface LoadingProps {
 ```
 
 ### Empty States
+
 ```jsx
 interface EmptyStateProps {
   icon?: React.ComponentType;
@@ -1051,14 +1044,14 @@ const breakpoints = {
 
 ### Theme Support
 
-### Light/Dark Mode
+#### Light/Dark Mode
 
 - Use Tailwind's `dark:` variant
 - Store preference in localStorage
 - Respect system preference (`prefers-color-scheme`)
 - Smooth transitions between themes
 
-**Implementation Pattern**:
+#### Implementation Pattern:
 
 ```typescript
 // Use next-themes for theme management

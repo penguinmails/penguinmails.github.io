@@ -441,6 +441,7 @@ ORDER BY c.created_at DESC;
 ## Development Workflow Templates
 
 ### Environment Setup Template
+
 ```yaml
 # docker-compose.yml
 version: '3.8'
