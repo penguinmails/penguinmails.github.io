@@ -49,81 +49,147 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Color Tokens
 
 ### Brand Colors
+
 ```css
+
 /* Primary Blue - Trust, Technology, Professionalism */
+
 --color-brand-primary-50: #f0f9ff;
+
 --color-brand-primary-100: #e0f2fe;
+
 --color-brand-primary-200: #bae6fd;
+
 --color-brand-primary-300: #7dd3fc;
+
 --color-brand-primary-400: #38bdf8;
+
 --color-brand-primary-500: #0ea5e9;  /* Primary brand color */
+
 --color-brand-primary-600: #0284c7;
+
 --color-brand-primary-700: #0369a1;
+
 --color-brand-primary-800: #075985;
+
 --color-brand-primary-900: #0c4a6e;
 
 /* Secondary Colors */
+
 --color-brand-secondary-50: #fdf4ff;
+
 --color-brand-secondary-100: #fae8ff;
+
 --color-brand-secondary-200: #f5d0fe;
+
 --color-brand-secondary-300: #f0abfc;
+
 --color-brand-secondary-400: #e879f9;
+
 --color-brand-secondary-500: #d946ef;  /* Secondary accent */
+
 --color-brand-secondary-600: #c026d3;
+
 --color-brand-secondary-700: #a21caf;
+
 --color-brand-secondary-800: #86198f;
+
 --color-brand-secondary-900: #701a75;
+
 ```
 
 ### Semantic Colors
+
 ```css
+
 /* Success States */
+
 --color-semantic-success-50: #f0fdf4;
+
 --color-semantic-success-100: #dcfce7;
+
 --color-semantic-success-200: #bbf7d0;
+
 --color-semantic-success-300: #86efac;
+
 --color-semantic-success-400: #4ade80;
+
 --color-semantic-success-500: #22c55e;  /* Success */
+
 --color-semantic-success-600: #16a34a;
+
 --color-semantic-success-700: #15803d;
+
 --color-semantic-success-800: #166534;
+
 --color-semantic-success-900: #14532d;
 
 /* Warning States */
+
 --color-semantic-warning-50: #fffbeb;
+
 --color-semantic-warning-100: #fef3c7;
+
 --color-semantic-warning-200: #fde68a;
+
 --color-semantic-warning-300: #fcd34d;
+
 --color-semantic-warning-400: #fbbf24;
+
 --color-semantic-warning-500: #f59e0b;  /* Warning */
+
 --color-semantic-warning-600: #d97706;
+
 --color-semantic-warning-700: #b45309;
+
 --color-semantic-warning-800: #92400e;
+
 --color-semantic-warning-900: #78350f;
 
 /* Error States */
+
 --color-semantic-error-50: #fef2f2;
+
 --color-semantic-error-100: #fee2e2;
+
 --color-semantic-error-200: #fecaca;
+
 --color-semantic-error-300: #fca5a5;
+
 --color-semantic-error-400: #f87171;
+
 --color-semantic-error-500: #ef4444;  /* Error */
+
 --color-semantic-error-600: #dc2626;
+
 --color-semantic-error-700: #b91c1c;
+
 --color-semantic-error-800: #991b1b;
+
 --color-semantic-error-900: #7f1d1d;
 
 /* Info States */
+
 --color-semantic-info-50: #eff6ff;
+
 --color-semantic-info-100: #dbeafe;
+
 --color-semantic-info-200: #bfdbfe;
+
 --color-semantic-info-300: #93c5fd;
+
 --color-semantic-info-400: #60a5fa;
+
 --color-semantic-info-500: #3b82f6;  /* Info */
+
 --color-semantic-info-600: #2563eb;
+
 --color-semantic-info-700: #1d4ed8;
+
 --color-semantic-info-800: #1e40af;
+
 --color-semantic-info-900: #1e3a8a;
+
 ```
 
 ### Neutral Colors

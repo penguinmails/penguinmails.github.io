@@ -1,4 +1,4 @@
-#  PenguinMails Documentation
+# PenguinMails Documentation
 
 [![Documentation Status](https://img.shields.io/badge/Documentation-Active-brightgreen.svg)](https://penguinmails.github.io)
 [![Built with Just the Docs](https://img.shields.io/badge/Built%20with-Just%20the%20Docs-blue.svg)](https://pmarsceill.github.io/just-the-docs/)
@@ -53,10 +53,13 @@ This repository contains the complete documentation for PenguinMails, including:
 
 Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
 
--  **[Freelancer Onboarding Hub](/docs/freelancer-support/)** - Complete freelancer success center and business development resources
--  **[Task Clarity Essentials](/docs/freelancer-support/#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
--  **[Operations Framework](/docs/operations/freelancer-management/)** - Team structure, sprint workflow, and coordination protocols
--  **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
+- **[Freelancer Onboarding Hub](/docs/freelancer-support/)** - Complete freelancer success center and business development resources
+
+- **[Task Clarity Essentials](/docs/freelancer-support/#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+
+- **[Operations Framework](/docs/operations/freelancer-management/)** - Team structure, sprint workflow, and coordination protocols
+
+- **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
 
 **Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
 
@@ -75,26 +78,41 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 ### For Contributors
 
 #### 1. Clone the Repository
+
 ```
+
 git clone https://github.com/penguinmails/penguinmails.github.io.git
+
 cd penguinmails.github.io
+
 ```
 
 #### 2. Launch the Docs
 
 **Option A Docker (recommended)**  
+
 Provides an isolated, reproducible environment.
+
 ```bash
+
 # Build and run with Docker
+
 docker build -t penguinmails-docs .
+
 docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+
 ```
 
 **Option B Ruby/Jekyll**  
+
 Requires Ruby, Bundler, and the Jekyll gem installed locally.
+
 ```
+
 bundle install
+
 bundle exec jekyll serve --livereload
+
 ```
 
 Your site will be available at [http://localhost:4000](http://localhost:4000).
@@ -194,9 +212,11 @@ We welcome contributions to improve our documentation! For detailed development 
 
 Additional resources:
 
-* **Contributor Credits:** Listed in [CONTRIBUTORS.md](CONTRIBUTORS).
-* **Support:** Open an Issue or start a Discussion if you need help.
-* **Freelancer & OSS Fastlane:** Begin at the **Freelancer Onboarding Hub**, confirm Definition of Done via **Task Clarity Essentials**, and browse open opportunities on the Issues board.
+- **Contributor Credits:** Listed in [CONTRIBUTORS.md](CONTRIBUTORS).
+
+- **Support:** Open an Issue or start a Discussion if you need help.
+
+- **Freelancer & OSS Fastlane:** Begin at the **Freelancer Onboarding Hub**, confirm Definition of Done via **Task Clarity Essentials**, and browse open opportunities on the Issues board.
 
 ---
 
@@ -260,11 +280,15 @@ Our documentation represents a comprehensive transformation delivering enterpris
 
 ### **Quality Standards Achieved**
 
- **Customer-Focused Language** - All content transformed to be customer-facing
- **Strategic Enhancement** - Business value integrated throughout technical content
- **Progressive Disclosure** - Information revealed based on complexity level
- **Enterprise Standards** - Documentation meets enterprise customer requirements
- **Complete Integration** - Seamless cross-references and navigation flow
+**Customer-Focused Language** - All content transformed to be customer-facing
+
+**Strategic Enhancement** - Business value integrated throughout technical content
+
+**Progressive Disclosure** - Information revealed based on complexity level
+
+**Enterprise Standards** - Documentation meets enterprise customer requirements
+
+**Complete Integration** - Seamless cross-references and navigation flow
 
 ---
 
@@ -297,8 +321,6 @@ PenguinMails is a trademark of PenguinMails, Inc.
 
 ---
 
-** Star this repository if you find it helpful!**
+**Star this repository if you find it helpful!**
 
 *For the latest updates and detailed technical information, visit our [full documentation site](https://penguinmails.github.io).*
-
-

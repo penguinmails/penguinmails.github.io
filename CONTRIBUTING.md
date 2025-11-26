@@ -5,6 +5,7 @@ We welcome contributions to improve our documentation! This guide provides every
 ## Quick Start
 
 **For immediate contributions:**
+
 1. Fork this repository
 
 2. Create a feature branch: `git checkout -b feature/your-improvement`
@@ -40,12 +41,14 @@ We welcome contributions to improve our documentation! This guide provides every
 ### Local Development
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/penguinmails/penguinmails.github.io.git
    cd penguinmails.github.io
    ```
 
 2. **Start development server:**
+
    ```bash
    # Build and run with Docker
    docker build -t penguinmails-docs .
@@ -53,6 +56,7 @@ We welcome contributions to improve our documentation! This guide provides every
    ```
 
 3. **View the documentation:**
+
    Open [http://localhost:4000](http://localhost:4000) in your browser
 
 ### Common Commands
@@ -112,12 +116,19 @@ last_modified_date: "YYYY-MM-DD"
 Only these files may have sidebar navigation fields:
 
 - `docs/business/strategy/overview.md`
+
 - `docs/technical/architecture/overview.md`
+
 - `docs/compliance-security/overview.md`
+
 - `docs/core-features/README.md`
+
 - `docs/implementation-technical/README.md`
 
+ 
+
 **Navigation frontmatter format:**
+
 ```yaml
 ---
 title: "Page Title"
@@ -203,6 +214,7 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 ```
 
 **Common issues:**
+
 - **MD022**: Headings need blank lines around them
 - **MD032**: Lists need blank lines around them
 - **MD036**: Use proper headings instead of bold emphasis
@@ -214,7 +226,7 @@ For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md
 
 ### Before Submitting
 
-1. **Local Testing**: Verify changes render correctly at http://localhost:4000
+1. **Local Testing**: Verify changes render correctly at <http://localhost:4000>
 2. **Link Validation**: Ensure all internal and external links work
 3. **Linting Compliance**: Run Docker-based markdown linting
 4. **Content Review**: Verify business value and technical accuracy
