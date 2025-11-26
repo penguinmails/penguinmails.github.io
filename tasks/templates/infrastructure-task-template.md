@@ -53,7 +53,7 @@ integration_spec: ""  # Link to docs/technical/integration/*.md (if applicable)
 [Describe the infrastructure component being set up]
 
 - **Component Type**: [Database, Cache, Queue, External Service, CI/CD, Hosting]
-- **Technology**: [PostgreSQL, Redis, BullMQ, Stripe, Hostwinds, etc.]
+- **Technology**: [PostgreSQL, Redis, PostgreSQL + Redis Queue System, Stripe, Hostwinds, etc.]
 - **Purpose**: [What this component does and why it's needed]
 - **Location**: [Cloud provider, region, or local development]
 
