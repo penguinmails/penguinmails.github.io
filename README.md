@@ -19,6 +19,8 @@ This repository contains the complete documentation for PenguinMails, including:
 - Operations runbooks and best practices
 - User guides and support resources
 
+AI Agents: We support AI assistants—see **[AGENTS.md](./AGENTS.md)** for agent system and operational protocols.
+
 **Documentation Live Site:** [https://penguinmails.github.io](https://penguinmails.github.io)
 
 ## Features
@@ -53,7 +55,7 @@ Looking to work on PenguinMails? Here's your clear path to task clarity and onbo
 - 📋 **[Operations Framework](/docs/operations/README)** - Team structure, sprint workflow, and coordination protocols
 - 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
 
-**Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/README.md#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
+**Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
 
 ## Quick Start
 
@@ -67,7 +69,7 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 
 ### For Contributors
 
-Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING)** guide, including:
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
 
 - Local development setup with Docker
 - Content standards and guidelines
@@ -292,14 +294,16 @@ index.md
 
 ## Contributing
 
-We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
+
+For AI agents: We support AI assistants—use **[AGENTS.md](./AGENTS.md)** as the base for your agent system.
 
 ### Quick Contribution Process
 
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING) for setup instructions)
+4. **Test locally** (see **[CONTRIBUTING.md](./CONTRIBUTING.md)** for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards

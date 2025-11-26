@@ -2,6 +2,8 @@
 
 We welcome contributions to improve our documentation! This guide provides detailed instructions for developers and contributors working on the PenguinMails documentation.
 
+For AI agent-specific rules and operational protocols, see **[AGENTS.md](./AGENTS.md)**.
+
 ## Getting Started
 
 ### Prerequisites
@@ -73,15 +75,26 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownli
 
 ### Standard Format
 
-All documentation files must follow this frontmatter format:
+All Jekyll documentation files (`index.md` and `docs/` directory) must follow this frontmatter format:
 
 ```yaml
 ---
 title: "Descriptive Page Title"
 description: "Comprehensive description of page content and purpose"
 last_modified_date: "YYYY-MM-DD"
+level: "2"                          # Progressive disclosure: 1=overview, 2=detailed, 3=implementation
+persona: "Documentation Users"      # Target audience (for devs/LLMs, not rendered)
 ---
 ```
+
+**Custom Metadata Fields:**
+- `level` - Progressive disclosure level (helps organize content complexity)
+- `persona` - Target audience (helps devs/AI understand who the content is for)
+- `keywords` - Being moved from document body to frontmatter for better organization
+
+These custom fields are for developers and AI assistants, not rendered by Jekyll/Just the Docs.
+
+**Note:** Non-Jekyll files (`README.md`, `CONTRIBUTING.md`, `tasks/`, `user-journeys/`) do NOT require frontmatter.
 
 ### Navigation Files
 
@@ -93,24 +106,34 @@ Only 5 main files are allowed to have sidebar navigation fields:
 - Core Features: `docs/core-features/README.md`
 - Implementation Technical: `docs/implementation-technical/README.md`
 
-**Sidebar Navigation Format:**
+**Sidebar Navigation Format (ONLY for 5 main files):**
 
 ```yaml
 ---
 title: "Page Title"
 description: "Page description"
-nav_order: X
-nav_exclude: false
-last_modified_date: "2025-11-10"
+last_modified_date: "YYYY-MM-DD"
+level: "2"
+nav_exclude: "false"
+nav_order: "1"
+persona: "Documentation Users"
 ---
 ```
 
 ### Rules
 
-- Use `title`, `description`, and `last_modified_date` for all files
-- Use `nav_order` and `nav_exclude` only for the 5 main sidebar files
-- Field order: `title` → `description` → `nav_order` → `nav_exclude` → `last_modified_date`
+- Use `title`, `description`, `last_modified_date`, `level`, and `persona` for all Jekyll files
+- Use `nav_order` and `nav_exclude` only for the 5 main sidebar files (Just the Docs feature)
+- Field order for standard files: `title` → `description` → `last_modified_date` → `level` → `persona`
+- Field order for navigation files: `title` → `description` → `last_modified_date` → `level` → `nav_exclude` → `nav_order` → `persona`
 - Date format: YYYY-MM-DD
+- `keywords` should be in frontmatter, not document body
+- Non-Jekyll files (README.md, CONTRIBUTING.md, tasks/, user-journeys/) do NOT require frontmatter
+
+**Progressive Disclosure Levels:**
+- Level 1: Overview and strategic content
+- Level 2: Detailed documentation and guides
+- Level 3: Implementation details and technical specs
 
 ### Quality Assurance
 
@@ -296,6 +319,84 @@ For comprehensive markdown linting documentation, including troubleshooting and 
 - Test all navigation links after structural changes
 - Preserve meaningful cross-reference relationships
 
+## Tech Stack Compliance Standards
+
+### Approved Technology Stack
+
+**MANDATORY COMPLIANCE RULES:**
+- ✅ **ONLY TypeScript and JavaScript** allowed for code examples
+- ❌ **NO Python, Ruby, PHP, C#** in any documentation code examples
+- ❌ **NO Prisma ORM** - Use Drizzle ORM only
+- ❌ **NO BullMQ** - Use PostgreSQL + Redis queue system only
+- ❌ **NO MySQL** - Use PostgreSQL with NileDB multi-tenancy only
+- ❌ **NO Apache Kafka** - Use PostgreSQL + Redis for event streaming
+
+### Code Example Templates
+
+**TypeScript Template (Recommended):**
+```typescript
+// ✅ CORRECT: Complete TypeScript example with proper typing
+interface ExampleRequest {
+  id: string;
+  data: Record<string, unknown>;
+}
+
+interface ExampleResponse {
+  success: boolean;
+  result?: unknown;
+  error?: string;
+}
+
+async function processExample(request: ExampleRequest): Promise<ExampleResponse> {
+  try {
+    // Implementation with proper typing
+    const result = await doSomething(request.data);
+    return {
+      success: true,
+      result,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Unknown error',
+    };
+  }
+}
+```
+
+**JavaScript Template (Alternative):**
+```javascript
+// ✅ CORRECT: JavaScript example with proper structure
+async function processExample(request) {
+  try {
+    // Implementation with proper error handling
+    const result = await doSomething(request.data);
+    return {
+      success: true,
+      result,
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message || 'Unknown error',
+    };
+  }
+}
+```
+
+### Quality Assurance Checklist
+
+**Before Submitting Documentation Changes:**
+- [ ] All code examples use TypeScript or JavaScript (no Python, Ruby, PHP, C#)
+- [ ] All functions have proper typing (for TypeScript)
+- [ ] All interfaces defined for complex objects (TypeScript examples)
+- [ ] Import statements use ES6 module syntax
+- [ ] No `any` types used in TypeScript (use proper typing)
+- [ ] Async/await properly typed with Promise<T> (TypeScript)
+- [ ] Error handling uses proper error types
+
+**Validation Commands:**
+For detailed linting and compliance verification commands (including forbidden language and tech checks), see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md#tech-stack-compliance-verification).
 ## Testing and Validation
 
 ### Before Submitting

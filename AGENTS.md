@@ -27,7 +27,13 @@ For detailed development setup and contribution procedures, please refer to our 
 
 - **Jekyll & Just the Docs Theme**: Repository uses Jekyll static site generator with Just the Docs theme
 - **Frontmatter Format**: Follow Jekyll frontmatter standards with proper YAML formatting and date accuracy
-- **Link Formatting**: Use Jekyll-compatible relative links without .md extensions to avoid navigation breaks
+  - Standard format: `title`, `description`, `last_modified_date`, `level`, `persona`
+  - Navigation format (5 files only): Add `nav_exclude` and `nav_order` (Just the Docs features)
+  - Custom metadata: `level` (progressive disclosure), `persona` (target audience), `keywords` (SEO)
+  - These custom fields are for devs/AI assistants, not rendered by Jekyll
+  - Non-Jekyll files (README.md, CONTRIBUTING.md, tasks/, user-journeys/) do NOT require frontmatter
+- **Keywords Migration**: Move `keywords` from document body to frontmatter for better organization
+- **Link Formatting**: For docs pages, use site-absolute links starting with `/docs/` and drop `.md` extensions. For root files (e.g., `README.md`, `CONTRIBUTING.md`, `AGENTS.md`), use relative links like `./CONTRIBUTING.md` and `./AGENTS.md`.
 - **Markdown Style**: Follow GitHub-flavored Markdown with inline reference links and footnotes
 
   ```markdown
@@ -44,11 +50,28 @@ For detailed development setup and contribution procedures, please refer to our 
 - **Emoji Usage**: Avoid emojis in titles and content for professional appearance
 - **Level Classification**: All docs must have appropriate level classification (Level 1-3)
 - **Target Audience**: Clearly define target audience and document purpose
-- **Cross-References**: Use proper internal linking with relative paths
+- **Cross-References**: Use site-absolute links for all content under `/docs/` and relative links only for root files (e.g., `./CONTRIBUTING.md`, `./AGENTS.md`).
 - **Structured Headers**: Maintain consistent header hierarchy and naming conventions
 - **Date Accuracy**: Include accurate last_modified_date in frontmatter when possible
 
-### 4. Code Quality Requirements
+### 4. Tech Stack Compliance
+
+**Repository Tech Stack Requirements:**
+
+- **Language**: TypeScript (primary) or JavaScript for all code examples
+- **ORM**: Drizzle ORM only (NO Prisma, TypeORM, Mongoose)
+- **Database**: PostgreSQL with NileDB multi-tenancy (NO MySQL, MongoDB)
+- **Queue**: PostgreSQL + Redis (NO BullMQ, RabbitMQ, Kafka)
+- **Authentication**: NileDB SDK (NO NextAuth.js, Clerk, Auth0)
+- **Framework**: Next.js 15 App Router (NO Pages Router, Remix)
+
+**Compliance Verification:**
+For tech stack compliance verification commands, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md#tech-stack-compliance-verification).
+
+**Code Example Standards:**
+For detailed code example templates and conversion patterns, see [CONTRIBUTING.md](./CONTRIBUTING.md#code-example-templates).
+
+### 5. Code Quality Requirements
 
 - **Linting Compliance**: All code changes must pass linting requirements (.markdownlint.json)
 - **Markdown Linting**: Use Docker-based markdown linting as documented in [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md)
@@ -181,7 +204,7 @@ These guidelines ensure AI agents contribute effectively to the PenguinMails rep
 
 - **Progressive Disclosure Structure**: All documentation follows progressive disclosure principles, organizing information from strategic overview to detailed implementation
 - **Level Classification**: Documentation is classified into Level 1-3 based on technical complexity and target audience
-- **Cross-Reference Integration**: Comprehensive internal linking with relative paths and proper reference formatting
+- **Cross-Reference Integration**: Comprehensive internal linking using site-absolute links for docs (`/docs/...`) and relative links only for root files; maintain proper reference formatting
 - **Business-Focused Language**: Technical content transformed to highlight business value and customer benefits
 - **Cleanup Procedures**: Regular review and cleanup of process documentation to maintain production-ready state
 
