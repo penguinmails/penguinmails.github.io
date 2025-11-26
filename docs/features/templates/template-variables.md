@@ -14,6 +14,8 @@ related_tasks:
   - epic-6-templates-content
 ---
 
+{% raw %}
+
 # Template Variables
 
 **Quick Access**: Personalize emails at scale with dynamic variables, conditional content, and merge tags that automatically populate with contact data.
@@ -950,3 +952,5 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)  
 **Target Release:** Q2 2026  
 **Owner:** Templates Team
+
+{% endraw %}

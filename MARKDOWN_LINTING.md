@@ -298,6 +298,48 @@ Since this repository uses Jekyll static site generator:
 3. **Anchor links**: Format as `path-to-file#section-anchor`
 4. **Reference links**: Use `[link text][reference]` with `[reference]: url` definitions
 
+## Tech Stack Compliance Verification
+
+### Forbidden Technology Detection
+
+Check for forbidden programming languages and technologies in documentation:
+
+```bash
+# Check for forbidden programming languages in code examples
+grep -r "```python\|```ruby\|```php\|```csharp" docs/ --include="*.md" || echo "✅ No forbidden language violations found"
+
+# Check for forbidden technologies
+grep -ri "prisma\|bullmq\|mysql\|kafka\|auth0\|nextauth" docs/ --include="*.md" || echo "✅ No forbidden tech violations"
+
+# Verify approved language usage
+grep -r "```typescript\|```javascript" docs/ --include="*.md" | wc -l
+```
+
+### Approved Technology Verification
+
+Verify documentation uses approved tech stack:
+
+```bash
+# Check for approved technologies
+grep -ri "drizzle\|niledb\|postgresql\|redis" docs/ --include="*.md" | wc -l
+
+# Verify TypeScript/JavaScript usage
+grep -r "```typescript" docs/ --include="*.md" | wc -l
+grep -r "```javascript" docs/ --include="*.md" | wc -l
+```
+
+### Tech Stack Rules
+
+**MANDATORY COMPLIANCE:**
+- ✅ **ONLY TypeScript and JavaScript** for code examples
+- ❌ **NO Python, Ruby, PHP, C#** in documentation
+- ❌ **NO Prisma ORM** - Use Drizzle ORM only
+- ❌ **NO BullMQ** - Use PostgreSQL + Redis queue system
+- ❌ **NO MySQL** - Use PostgreSQL with NileDB multi-tenancy
+- ❌ **NO Apache Kafka** - Use PostgreSQL + Redis for event streaming
+
+For detailed tech stack compliance standards and code examples, see [CONTRIBUTING.md](./CONTRIBUTING.md#tech-stack-compliance-standards).
+
 ## Best Practices
 
 1. **Run Linting Early**: Include linting in your development workflow
@@ -308,6 +350,7 @@ Since this repository uses Jekyll static site generator:
 6. **Validate Internal Links**: Ensure all internal links follow Jekyll conventions (no `.md` extensions)
 7. **Check Broken References**: Use manual validation commands to detect broken relative links
 8. **Maintain Link Hygiene**: Regularly run link validation to catch issues early
+9. **Verify Tech Stack Compliance**: Run tech stack verification commands before committing
 
 ## Troubleshooting
 

@@ -439,11 +439,11 @@ interface CardProps {
     </Button>
   </CardFooter>
 </Card>
-```
 
 ## Feedback Components
 
 ### Alert
+{% raw %}
 ```jsx
 import { Alert } from '@/components/feedback/Alert';
 
@@ -478,6 +478,7 @@ interface AlertProps {
   message="Campaign sent successfully! Check your analytics for performance details."
 />
 ```
+{% endraw %}
 
 ### Toast
 ```typescript
@@ -506,7 +507,7 @@ const handleSave = async () => {
       message: "Your campaign has been saved successfully.",
       action: {
         label: "View Campaign",
-        onClick: () => navigate(`/campaigns/${campaignData.id}`
+        onClick: () => navigate(`/campaigns/${campaignData.id}`)
       }
     });
   } catch (error) {
@@ -563,7 +564,6 @@ interface ModalProps {
     </ul>
   </div>
 </Modal>
-```
 
 ## Navigation Components
 
@@ -594,7 +594,6 @@ interface BreadcrumbProps {
   ]}
   maxItems={5}
 />
-```
 
 ### Tabs
 ```typescript
@@ -650,7 +649,6 @@ interface TabsProps {
   variant="underline"
   onChange={setActiveTab}
 />
-```
 
 ## Utility Components
 
@@ -680,9 +678,9 @@ interface SkeletonProps {
 <Skeleton variant="rectangular" width="100%" height={200} />
 <Skeleton variant="text" width="60%" />
 <Skeleton variant="circular" width={40} height={40} />
-```
 
 ### EmptyState
+{% raw %}
 ```jsx
 import { EmptyState } from '@/components/utilities/EmptyState';
 
@@ -720,6 +718,7 @@ interface EmptyStateProps {
   }}
 />
 ```
+{% endraw %}
 
 ### Badge
 ```typescript

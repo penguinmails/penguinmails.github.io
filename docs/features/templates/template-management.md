@@ -56,6 +56,8 @@ Inject dynamic data into your templates using Handlebars syntax.
 
 **Standard Variables:**
 
+{% raw %}
+
 - `{{contact.first_name}}`
 - `{{contact.email}}`
 - `{{company.name}}`
@@ -66,11 +68,13 @@ Inject dynamic data into your templates using Handlebars syntax.
 
 - `{{contact.custom.job_title}}`
 - `{{contact.custom.industry}}`
+{% endraw %}
 
 ### Conditional Logic
 
 Show or hide content based on data.
 
+{% raw %}
 ```handlebars
 {{#if contact.first_name}}
   Hi {{contact.first_name}},
@@ -82,11 +86,13 @@ Show or hide content based on data.
   <p>Thanks for being a VIP!</p>
 {{/if}}
 ```
+{% endraw %}
 
 ### Loops
 
 Iterate over lists (e.g., for e-commerce receipts).
 
+{% raw %}
 ```handlebars
 <ul>
   {{#each order_items}}
@@ -94,6 +100,7 @@ Iterate over lists (e.g., for e-commerce receipts).
   {{/each}}
 </ul>
 ```
+{% endraw %}
 
 ---
 

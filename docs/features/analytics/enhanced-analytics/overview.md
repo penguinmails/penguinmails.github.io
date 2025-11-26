@@ -266,6 +266,8 @@ class SendTimePredictor {
 
 **Subject Line Performance Prediction:**
 
+{% raw %}
+
 ```typescript
 class SubjectLinePredictor {
   async predictOpenRate(subjectLine: string, audience: string): Promise<{
@@ -336,6 +338,8 @@ class SubjectLinePredictor {
   }
 }
 ```
+
+{% endraw %}
 
 **Deliverability Prediction:**
 

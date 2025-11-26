@@ -126,7 +126,7 @@ Comprehensive timeline for template management features from basic HTML editor t
 - **Date Formatting**: Format dates with filters (e.g., `{{ date | format: "%B %d, %Y" }}`)
 - **String Manipulation**: upcase, downcase, capitalize, truncate filters
 - **Number Formatting**: currency, percentage, round filters
-- **Loops**: Iterate over lists (e.g., `{% for item in items %}`)
+- **Loops**: Iterate over lists (e.g., {% raw %}{% for item in items %}{% endraw %})
 
 **Value Proposition**: Enables sophisticated personalization that improves engagement by 30%+.
 

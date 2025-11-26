@@ -336,6 +336,34 @@ CREATE TABLE template_tags (
 );
 ```
 
+#### Eta Template Rendering Storage
+
+```sql
+CREATE TABLE email_templates (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tenant_id UUID NOT NULL,
+    name TEXT NOT NULL,
+    subject TEXT NOT NULL,
+    body TEXT NOT NULL,          -- raw .eta template body
+    async BOOLEAN DEFAULT FALSE, -- if template uses async includes
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    UNIQUE (tenant_id, name)
+);
+```
+
+```sql
+CREATE TABLE template_dictionaries (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tenant_id UUID NOT NULL,
+    key TEXT NOT NULL,
+    value JSONB NOT NULL,
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+CREATE INDEX idx_template_dictionaries_tenant ON template_dictionaries(tenant_id);
+```
+
 ---
 
 ### Campaign Execution System (OLTP Metadata)
