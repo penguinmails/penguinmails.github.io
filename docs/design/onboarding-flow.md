@@ -24,7 +24,7 @@ status: "DRAFT"
 
 ### 1. Welcome & Intent
 
-*Screen: "Welcome to PenguinMails"*
+#### Screen: Welcome to PenguinMails
 
 - **Goal**: Understand user persona.
 - **Question**: "What do you want to do first?"
@@ -34,7 +34,7 @@ status: "DRAFT"
 
 ### 2. Workspace Setup
 
-*Screen: "Name your Workspace"*
+#### Screen: Name your Workspace
 
 - **Input**: Workspace Name (e.g., "Acme Marketing")
 - **Input**: Company Website
@@ -42,7 +42,7 @@ status: "DRAFT"
 
 ### 3. Domain Connection (Optional but Recommended)
 
-*Screen: "Connect your Domain"*
+#### Screen: Connect your Domain
 
 - **Input**: Domain Name
 - **Display**: DNS Records to copy.
@@ -50,14 +50,14 @@ status: "DRAFT"
 
 ### 4. Import Contacts
 
-*Screen: "Add your Audience"*
+#### Screen: Add your Audience
 
 - **Action**: Upload CSV or Manual Entry.
 - **Sample**: "Add me as a test contact" button.
 
 ### 5. First Campaign
 
-*Screen: "Create your first email"*
+#### Screen: Create your first email
 
 - **Action**: Select a template.
 - **Editor**: Simple text edit.

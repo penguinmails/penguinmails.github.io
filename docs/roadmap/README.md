@@ -44,8 +44,10 @@ Start with **Roadmap Considerations** to understand our development philosophy, 
 
 **Navigation Path**:
 
-```
+```text
+
 Roadmap Overview → Roadmap Considerations → Feature Taxonomy → Implementation Roadmap
+
 ```
 
 ### For Technical Teams
@@ -54,8 +56,10 @@ Focus on the **Technical Roadmap** documents to understand infrastructure milest
 
 **Navigation Path**:
 
-```
+```text
+
 Roadmap Overview → Technical Implementation Roadmap → AI Features Roadmap
+
 ```
 
 ### For Product Managers
@@ -64,8 +68,10 @@ Review both product and technical roadmaps to understand the complete developmen
 
 **Navigation Path**:
 
-```
+```text
+
 Roadmap Overview → Feature Taxonomy → Implementation Roadmap → Department Roadmaps
+
 ```
 
 ---

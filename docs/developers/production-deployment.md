@@ -57,10 +57,16 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-**Container Orchestration**:
+### Container Orchestration
+
+#### Container Orchestration
+
 1. Build container with optimized dependencies
+
 2. Configure environment variables and secrets
+
 3. Set up health checks and monitoring endpoints
+
 4. Implement graceful shutdown procedures
 
 ---
@@ -69,29 +75,46 @@ CMD ["npm", "start"]
 
 ### Production Environment Setup
 
-**Required Environment Variables**:
+#### Required Environment Variables
+
 ```markdown
+
 # API Configuration
+
 EMAIL_API_KEY=prod_api_key_here
+
 EMAIL_ENVIRONMENT=production
+
 EMAIL_WEBHOOK_URL=https://yourapp.com/webhooks/email
+
 EMAIL_TIMEOUT=30
+
 EMAIL_RATE_LIMIT=1000
 
 # Security Configuration
+
 JWT_SECRET=your_jwt_secret_here
+
 ENCRYPTION_KEY=your_encryption_key_here
+
 SSL_CERT_PATH=/etc/ssl/certs/email-cert.pem
+
 SSL_KEY_PATH=/etc/ssl/private/email-key.pem
 
 # Database Configuration
+
 DATABASE_URL=postgresql://user:pass@db-host:5432/email_db
+
 REDIS_URL=redis://redis-host:6379
 
 # Monitoring Configuration
+
 LOG_LEVEL=info
+
 METRICS_ENDPOINT=/metrics
+
 HEALTH_CHECK_ENDPOINT=/health
+
 ```
 
 ---
@@ -100,16 +123,24 @@ HEALTH_CHECK_ENDPOINT=/health
 
 ### Certificate Management
 
-**SSL Certificate Installation**:
+#### SSL Certificate Installation
+
 1. Obtain SSL certificate from trusted CA
+
 2. Install certificate on load balancer and web servers
+
 3. Configure HTTPS redirects and HSTS headers
+
 4. Set up automatic certificate renewal (Let's Encrypt)
 
-**Security Configuration**:
+#### Security Configuration
+
 - TLS 1.3 minimum version requirement
+
 - Strong cipher suite configuration
+
 - Certificate pinning for API communications
+
 - Regular security scanning and vulnerability assessment
 
 ---
@@ -118,12 +149,18 @@ HEALTH_CHECK_ENDPOINT=/health
 
 ### CI/CD Pipeline Integration
 
-**Deployment Pipeline**:
+#### Deployment Pipeline
+
 ```yaml
+
 # GitHub Actions deployment example
+
 name: Production Deploy
+
 on:
+
   push:
+
     branches: [main]
 
 jobs:

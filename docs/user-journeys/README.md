@@ -213,32 +213,40 @@ level: "2"
 
 **Goal**: Understand customer experience
 
-```
+```text
+
 User Journeys Hub → Core Journeys → Pain Points → Roadmap Priorities
+
 ```
 
 ### For Product Managers
 
 **Goal**: Design better user experiences
 
-```
+```text
+
 User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
+
 ```
 
 ### For Developers
 
 **Goal**: Understand what to build and why
 
-```
+```text
+
 User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Tasks
+
 ```
 
 ### For Marketing/Ops
 
 **Goal**: Understand how customers use the platform
 
-```
+```text
+
 User Journeys Hub → Core Journeys → Success Metrics → Analytics
+
 ```
 
 ---

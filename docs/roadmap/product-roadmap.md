@@ -49,7 +49,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### 👨‍💻 For Developer & Operations Team
 
-**Focus**: Technical implementation timeline
+#### Focus: Technical implementation timeline
 
 - Development timeline and technical requirements
 - Skills development roadmap
@@ -66,7 +66,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### ✅ Available NOW (Q4 2025)
 
-**Safe to Promise**: These features are production-ready
+#### Safe to Promise: These features are production-ready
 
 | Feature Category | Description | Status |
 |------------------|-------------|--------|
@@ -81,7 +81,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### 🚀 Coming Q1 2026
 
-**Promise with Confidence**: Specific delivery timeline
+#### Promise with Confidence: Specific delivery timeline
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
@@ -106,7 +106,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### 📊 Planned 2026 (Growth Phase)
 
-**Build Excitement**: Competitive positioning and future value
+#### Build Excitement: Competitive positioning and future value
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|

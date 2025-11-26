@@ -22,13 +22,7 @@ PenguinMails handles your entire email operation - from VPS setup to campaign op
 
 Welcome to our help center. PenguinMails is purpose-built for cold email success, focusing on **deliverability**, **compliance**, and **reputation management** - the three factors that determine whether your cold emails actually reach prospects.
 
----
-
-## 🎯 Quick Start by Role
-
-### 💼 For Business Leaders (CFO/VP Level)
-
-## Executive-level financial analysis, ROI planning, and infrastructure investment decisions
+## Why PenguinMails
 
 {: .highlight }
 
@@ -55,7 +49,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ### 🏗️ For Technical Teams (IT/DevOps)
 
-## Implementation guides, API reference, and technical architecture
+Implementation guides, API reference, and technical architecture
 
 {: .highlight .btn-group-vertical }
 
@@ -67,7 +61,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ### 📊 For Marketing & Operations
 
-## Campaign optimization, analytics, and performance monitoring
+Campaign optimization, analytics, and performance monitoring
 
 {: .highlight .btn-group-vertical }
 
@@ -78,7 +72,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ### 👨‍💻 For Developers & Contributors
 
-## Code implementation, task management, and contribution workflow
+Code implementation, task management, and contribution workflow
 
 {: .highlight .btn-group-vertical }
 
@@ -95,9 +89,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ### What We're Building & When
 
-{: .highlight }
-
-**Navigate our product development timeline and feature pipeline**
+Navigate our product development timeline and feature pipeline
 
 {: .highlight .btn-group-vertical }
 
@@ -127,7 +119,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 ## 📊 Cost & ROI Overview
 
-## Executive Benefits
+### Executive Benefits
 
 - ✅ CFO-friendly ROI analysis
 - ✅ Procurement-ready documentation

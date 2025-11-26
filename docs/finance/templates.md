@@ -41,11 +41,16 @@ Where:
 - **Annual**: Comprehensive ROI analysis for strategic planning
 - **Multi-Year**: Long-term ROI projections for major investments
 
-**Monthly Review Process**:
+### Monthly Review Process
+
 1. Calculate ROI using weighted component model
+
 2. Compare results against target ROI thresholds (15% minimum, 25% target)
+
 3. Identify underperforming investments requiring intervention
+
 4. Document ROI trends and contributing factors
+
 5. Report ROI performance to stakeholders
 
 ---
@@ -54,24 +59,36 @@ Where:
 
 ### Investment Decision Framework
 
-**Stage 1: Investment Evaluation (Days 1-7)**
+#### Stage 1: Investment Evaluation (Days 1-7)
+
 - Goal: Assess investment viability and financial impact
+
 - Key Metrics: ROI projection, payback period, risk assessment
+
 - Success Criteria: 15%+ projected ROI, <24 month payback period
 
-**Stage 2: Risk Analysis (Days 8-14)**
+#### Stage 2: Risk Analysis (Days 8-14)
+
 - Goal: Identify and quantify investment risks
+
 - Key Metrics: Risk probability, impact severity, mitigation costs
+
 - Success Criteria: Risk-adjusted ROI >12%, mitigation plan documented
 
-**Stage 3: Resource Planning (Days 15-21)**
+#### Stage 3: Resource Planning (Days 15-21)
+
 - Goal: Plan implementation resources and timeline
+
 - Key Metrics: Resource allocation, timeline milestones, budget tracking
+
 - Success Criteria: Resource plan approved, budget allocated, timeline committed
 
-**Stage 4: Decision & Approval (Days 22-30)**
+#### Stage 4: Decision & Approval (Days 22-30)
+
 - Goal: Obtain approval and initiate investment
+
 - Key Metrics: Stakeholder approval, funding secured, project initiated
+
 - Success Criteria: Executive approval obtained, budget released, project started
 
 ---
@@ -80,22 +97,34 @@ Where:
 
 ### Budget Allocation Framework
 
-**Strategic Budget Categories**:
+#### Strategic Budget Categories
+
 - **Growth Investments (35%)**: New feature development, market expansion, talent acquisition
+
 - **Operational Excellence (30%)**: Process optimization, technology upgrades, efficiency improvements
+
 - **Risk Management (20%)**: Compliance, security, business continuity
+
 - **Innovation (15%)**: R&D, experimental projects, emerging technology
 
-**Budget Optimization Process**:
+#### Budget Optimization Process
+
 1. **Quarterly Review**: Analyze budget performance vs. targets
+
 2. **Reallocation Planning**: Shift resources to high-performing areas
+
 3. **Efficiency Tracking**: Monitor cost per outcome metrics
+
 4. **Forecast Updates**: Adjust projections based on actual performance
 
-**Budget Performance Indicators**:
+#### Budget Performance Indicators
+
 - Budget Variance: Target <5% variance from planned spend
+
 - ROI by Category: Track returns on investment by budget category
+
 - Cost per Outcome: Measure cost efficiency across initiatives
+
 - Forecast Accuracy: Target 90%+ accuracy in budget predictions
 
 ---
@@ -104,22 +133,34 @@ Where:
 
 ### Executive Financial Dashboard (Monthly View)
 
-**Key Metrics Display**:
+#### Key Metrics Display
+
 - Overall ROI Performance: Aggregate ROI across all investments
+
 - Budget Utilization: Spending rate vs. planned budget allocation
+
 - Cost Optimization: Cost reduction achievements vs. targets
+
 - Financial Risk Status: Risk exposure and mitigation progress
 
-**Trend Analysis (3-Month Rolling)**:
+#### Trend Analysis (3-Month Rolling)
+
 - ROI performance trends by investment category
+
 - Budget variance patterns and contributing factors
+
 - Cost optimization achievement rates
+
 - Risk mitigation progress and effectiveness
 
-**Action Items Section**:
+#### Action Items Section
+
 - High-priority investment reviews requiring immediate attention
+
 - Budget reallocation opportunities for maximum ROI
+
 - Cost optimization initiatives ready for implementation
+
 - Financial forecasting updates needed
 
 ---
@@ -128,8 +169,10 @@ Where:
 
 ### Budget Planning Template
 
-**Annual Budget Structure**:
+#### Annual Budget Structure
+
 ```markdown
+
 Total Budget = Revenue Projections - Target Profit Margin
 
 Allocation by Category:
@@ -139,12 +182,17 @@ Allocation by Category:
 - Marketing (10%): Advertising, content, events, partnerships
 - Innovation (5%): R&D, pilot projects, emerging technologies
 - Contingency (5%): Emergency fund, unexpected opportunities
+
 ```
 
-**Budget Tracking Process**:
+#### Budget Tracking Process
+
 1. **Monthly Monitoring**: Track actual vs. planned spending by category
+
 2. **Variance Analysis**: Investigate deviations >10% from budget
+
 3. **Forecast Updates**: Adjust remaining budget based on performance
+
 4. **Reallocation Decisions**: Move funds between categories as needed
 
 ---

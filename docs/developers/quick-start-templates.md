@@ -15,38 +15,61 @@ persona: "Documentation Users"
 #### Basic Email Campaign Script
 
 ```javascript
+
 // Basic PenguinMails email campaign template
+
 import { PenguinMails } from '@penguinmails/sdk';
 
 async function createBasicCampaign() {
+
   const client = new PenguinMails({
+
     apiKey: "YOUR_API_KEY",
+
     environment: process.env.NODE_ENV === 'production' ? 'production' : 'sandbox'
+
   });
 
   const campaign = {
+
     name: "Welcome Campaign",
+
     subject: "Welcome to PenguinMails!",
+
     templateId: "welcome-template",
+
     audience: {
+
       segmentId: "new_subscribers"
+
     },
+
     schedule: {
+
       type: "immediate"
+
     }
+
   };
 
   const result = await client.campaigns.create(campaign);
+
   return result;
+
 }
 
 // Usage
+
 const campaign = await createBasicCampaign();
+
 console.log(`Campaign created: ${campaign.id}`);
+
 ```
 
 #### Node.js Express Integration Template
+
 ```javascript
+
 const express = require('express');
 const { PenguinMails } = require('@penguinmails/sdk');
 

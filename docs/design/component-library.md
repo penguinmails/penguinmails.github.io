@@ -209,45 +209,71 @@ interface InputProps {
 ```
 
 **Design Specifications:**
+
 - Height: 32px (sm), 40px (md), 48px (lg)
+
 - Border: 1px solid neutral-300 (default)
+
 - Border radius: 6px
+
 - Padding: 8px 12px (sm), 12px 16px (md), 16px 20px (lg)
+
 - Font size: 14px (sm), 16px (md), 18px (lg)
 
 ## Layout Components
 
 ### Container
+
 ```typescript
+
 import { Container } from '@/components/layout/Container';
 
 interface ContainerProps {
+
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
+
   centered?: boolean;
+
   children: React.ReactNode;
+
 }
 
 // Usage Examples
+
 <Container size="lg" padding="md">
+
   <h1>Main Content</h1>
+
   <p>Container with large max-width and medium padding</p>
+
 </Container>
 
 <Container size="full" centered padding="none">
+
   <HeroSection />
+
 </Container>
+
 ```
 
 **Size Specifications:**
+
 - sm: 640px max-width
+
 - md: 768px max-width
+
 - lg: 1024px max-width
+
 - xl: 1280px max-width
+
 - full: 100% width
 
 ### Grid & GridItem
+
 ```typescript
+
 import { Grid, GridItem } from '@/components/layout/Grid';
 
 interface GridProps {

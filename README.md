@@ -79,12 +79,9 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 
 #### 1. Clone the Repository
 
-```
-
+```bash
 git clone https://github.com/penguinmails/penguinmails.github.io.git
-
 cd penguinmails.github.io
-
 ```
 
 #### 2. Launch the Docs
@@ -98,21 +95,16 @@ Provides an isolated, reproducible environment.
 # Build and run with Docker
 
 docker build -t penguinmails-docs .
-
 docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
-
 ```
 
 **Option B Ruby/Jekyll**  
 
 Requires Ruby, Bundler, and the Jekyll gem installed locally.
 
-```
-
+```bash
 bundle install
-
 bundle exec jekyll serve --livereload
-
 ```
 
 Your site will be available at [http://localhost:4000](http://localhost:4000).
@@ -246,9 +238,11 @@ Additional resources:
 
 ### Resources
 
+```markdown
 - **Live Documentation:** [https://penguinmails.github.io](https://penguinmails.github.io)
 - **Repository:** [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
 - **Issues:** [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
+```
 
 ---
 
