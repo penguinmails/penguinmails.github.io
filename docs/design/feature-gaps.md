@@ -97,6 +97,7 @@ Status: **Not Planned**
 - **Rationale:** SMTP credentials sufficient for MVP. OAuth email connections add convenience for Gmail/Outlook users.
 
 **Important Distinction:**
+
 - **User Authentication OAuth** (2027 consideration) - How users log into PenguinMails
 - **Email Account OAuth** (Q4 2026) - How users connect Gmail/Outlook accounts to send emails
 
