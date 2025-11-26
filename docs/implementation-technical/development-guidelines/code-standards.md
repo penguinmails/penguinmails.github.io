@@ -8,154 +8,199 @@ persona: "Senior Developers"
 
 # Code Style & Quality Standards
 
-## Python Code Standards
+## TypeScript Code Standards
 
 ### Style Guide Compliance
 
-```python
-# ✅ Good: Clear, documented, well-structured code
-def calculate_email_delivery_score(
-    recipient_engagement: float,
-    content_quality: float,
-    technical_score: float,
-    historical_performance: Optional[dict] = None
-) -> EmailDeliveryScore:
-    """Calculate comprehensive email delivery score using multiple metrics.
+```typescript
+// ✅ Good: Clear, documented, well-structured code
+interface EmailDeliveryScore {
+  overallScore: number;
+  confidence: number;
+  componentScores: {
+    engagement: number;
+    quality: number;
+    technical: number;
+  };
+}
 
-    This function analyzes recipient engagement patterns, content quality,
-    technical deliverability factors, and historical performance to provide
-    a weighted delivery score.
+interface HistoricalPerformance {
+  campaigns?: CampaignMetrics[];
+  averagePerformance?: number;
+  trendDirection?: 'improving' | 'declining' | 'stable';
+}
 
-    Args:
-        recipient_engagement: Historical engagement rate (0.0-1.0)
-        content_quality: AI-evaluated content score (0.0-1.0)
-        technical_score: Technical deliverability score (0.0-1.0)
-        historical_performance: Optional historical metrics for trend analysis
+interface CampaignMetrics {
+  id: string;
+  performance: number;
+  date: string;
+}
 
-    Returns:
-        EmailDeliveryScore: Comprehensive delivery score with confidence interval
+/**
+ * Calculate comprehensive email delivery score using multiple metrics.
+ *
+ * This function analyzes recipient engagement patterns, content quality,
+ * technical deliverability factors, and historical performance to provide
+ * a weighted delivery score.
+ *
+ * @param recipientEngagement - Historical engagement rate (0.0-1.0)
+ * @param contentQuality - AI-evaluated content score (0.0-1.0)
+ * @param technicalScore - Technical deliverability score (0.0-1.0)
+ * @param historicalPerformance - Optional historical metrics for trend analysis
+ * @returns Comprehensive delivery score with confidence interval
+ * @throws {Error} If any score is outside valid range (0.0-1.0)
+ *
+ * @example
+ * ```typescript
+ * const score = calculateEmailDeliveryScore(0.85, 0.92, 0.88);
+ * console.log(score.overallScore); // 0.88
+ * ```
+ */
+function calculateEmailDeliveryScore(
+  recipientEngagement: number,
+  contentQuality: number,
+  technicalScore: number,
+  historicalPerformance?: HistoricalPerformance
+): EmailDeliveryScore {
+  // Validate input parameters
+  const scoreParams = [
+    { name: 'recipientEngagement', value: recipientEngagement },
+    { name: 'contentQuality', value: contentQuality },
+    { name: 'technicalScore', value: technicalScore }
+  ];
 
-    Raises:
-        ValueError: If any score is outside valid range (0.0-1.0)
-
-    Example:
-        >>> score = calculate_email_delivery_score(0.85, 0.92, 0.88)
-        >>> print(score.overall_score)
-        0.88
-    """
-    # Validate input parameters
-    for name, value in [
-        ('recipient_engagement', recipient_engagement),
-        ('content_quality', content_quality),
-        ('technical_score', technical_score)
-    ]:
-        if not isinstance(value, (int, float)) or not (0.0 <= value <= 1.0):
-            raise ValueError(f"{name} must be a float between 0.0 and 1.0")
-
-    # Calculate weighted score with confidence based on data quality
-    weights = {
-        'engagement': 0.4,
-        'quality': 0.35,
-        'technical': 0.25
+  for (const param of scoreParams) {
+    if (typeof param.value !== 'number' || param.value < 0.0 || param.value > 1.0) {
+      throw new Error(`${param.name} must be a number between 0.0 and 1.0`);
     }
+  }
 
-    base_score = (
-        recipient_engagement * weights['engagement'] +
-        content_quality * weights['quality'] +
-        technical_score * weights['technical']
-    )
+  // Calculate weighted score with confidence based on data quality
+  const weights = {
+    engagement: 0.4,
+    quality: 0.35,
+    technical: 0.25
+  };
 
-    # Adjust confidence based on historical data availability
-    confidence = 0.7  # Base confidence
-    if historical_performance:
-        confidence += 0.2  # Increase confidence with historical data
-        if len(historical_performance.get('campaigns', [])) > 10:
-            confidence += 0.1  # More confidence with more data
+  const baseScore =
+    recipientEngagement * weights.engagement +
+    contentQuality * weights.quality +
+    technicalScore * weights.technical;
 
-    return EmailDeliveryScore(
-        overall_score=round(base_score, 3),
-        confidence=min(confidence, 1.0),
-        component_scores={
-            'engagement': recipient_engagement,
-            'quality': content_quality,
-            'technical': technical_score
-        }
-    )
+  // Adjust confidence based on historical data availability
+  let confidence = 0.7; // Base confidence
+  
+  if (historicalPerformance) {
+    confidence += 0.2; // Increase confidence with historical data
+    
+    const campaignCount = historicalPerformance.campaigns?.length || 0;
+    if (campaignCount > 10) {
+      confidence += 0.1; // More confidence with more data
+    }
+  }
 
-# ❌ Bad: Poor documentation, unclear variable names, magic numbers
-def calc(x, y, z):
-    s = x * 0.4 + y * 0.35 + z * 0.25
-    return EmailDeliveryScore(overall_score=s, confidence=0.7)
+  return {
+    overallScore: Math.round(baseScore * 1000) / 1000,
+    confidence: Math.min(confidence, 1.0),
+    componentScores: {
+      engagement: recipientEngagement,
+      quality: contentQuality,
+      technical: technicalScore
+    }
+  };
+}
+
+// ❌ Bad: Poor documentation, unclear variable names, magic numbers
+function calc(x: number, y: number, z: number): EmailDeliveryScore {
+  const s = x * 0.4 + y * 0.35 + z * 0.25;
+  return {
+    overallScore: s,
+    confidence: 0.7,
+    componentScores: { engagement: x, quality: y, technical: z }
+  };
+}
 ```
 
 ### Documentation Standards
 
-```python
-from typing import List, Dict, Optional, Union
-from datetime import datetime
-from pydantic import BaseModel
+```typescript
+interface EmailCampaignAnalytics {
+  campaignId: string;
+  sentCount: number;
+  deliveredCount: number;
+  openedCount: number;
+  clickedCount: number;
+  bouncedCount: number;
+  complainedCount: number;
+  createdAt: Date;
+  deliveryRate?: number;
+  openRate?: number;
+  clickRate?: number;
+}
 
-class EmailCampaignAnalytics(BaseModel):
-    """Analytics data for email campaign performance."""
+/**
+ * Analytics data for email campaign performance.
+ */
+class EmailCampaignAnalyticsService {
+  constructor(private readonly analytics: EmailCampaignAnalytics) {}
 
-    campaign_id: str
-    sent_count: int
-    delivered_count: int
-    opened_count: int
-    clicked_count: int
-    bounced_count: int
-    complained_count: int
-    created_at: datetime
+  /**
+   * Calculate delivery rate as percentage.
+   */
+  getDeliveryRate(): number {
+    if (this.analytics.sentCount === 0) {
+      return 0.0;
+    }
+    return (this.analytics.deliveredCount / this.analytics.sentCount) * 100;
+  }
 
-    @property
-    def delivery_rate(self) -> float:
-        """Calculate delivery rate as percentage."""
-        if self.sent_count == 0:
-            return 0.0
-        return (self.delivered_count / self.sent_count) * 100
+  /**
+   * Calculate open rate as percentage of delivered emails.
+   */
+  getOpenRate(): number {
+    if (this.analytics.deliveredCount === 0) {
+      return 0.0;
+    }
+    return (this.analytics.openedCount / this.analytics.deliveredCount) * 100;
+  }
 
-    @property
-    def open_rate(self) -> float:
-        """Calculate open rate as percentage of delivered emails."""
-        if self.delivered_count == 0:
-            return 0.0
-        return (self.opened_count / self.delivered_count) * 100
+  /**
+   * Calculate click rate as percentage of delivered emails.
+   */
+  getClickRate(): number {
+    if (this.analytics.deliveredCount === 0) {
+      return 0.0;
+    }
+    return (this.analytics.clickedCount / this.analytics.deliveredCount) * 100;
+  }
 
-    @property
-    def click_rate(self) -> float:
-        """Calculate click rate as percentage of delivered emails."""
-        if self.delivered_count == 0:
-            return 0.0
-        return (self.clicked_count / self.delivered_count) * 100
+  /**
+   * Convert analytics to dictionary format.
+   *
+   * @param includeCalculated - Whether to include calculated rates
+   * @returns Dictionary representation of analytics data
+   */
+  toDictionary(includeCalculated: boolean = true): Record<string, number | string> {
+    const data: Record<string, number | string> = {
+      campaignId: this.analytics.campaignId,
+      sentCount: this.analytics.sentCount,
+      deliveredCount: this.analytics.deliveredCount,
+      openedCount: this.analytics.openedCount,
+      clickedCount: this.analytics.clickedCount,
+      bouncedCount: this.analytics.bouncedCount,
+      complainedCount: this.analytics.complainedCount,
+      createdAt: this.analytics.createdAt.toISOString()
+    };
 
-    def to_dict(self, include_calculated: bool = True) -> Dict[str, Union[int, float, str]]:
-        """Convert analytics to dictionary format.
+    if (includeCalculated) {
+      data.deliveryRate = this.getDeliveryRate();
+      data.openRate = this.getOpenRate();
+      data.clickRate = this.getClickRate();
+    }
 
-        Args:
-            include_calculated: Whether to include calculated rates
-
-        Returns:
-            Dictionary representation of analytics data
-        """
-        data = {
-            'campaign_id': self.campaign_id,
-            'sent_count': self.sent_count,
-            'delivered_count': self.delivered_count,
-            'opened_count': self.opened_count,
-            'clicked_count': self.clicked_count,
-            'bounced_count': self.bounced_count,
-            'complained_count': self.complained_count,
-            'created_at': self.created_at.isoformat()
-        }
-
-        if include_calculated:
-            data.update({
-                'delivery_rate': self.delivery_rate,
-                'open_rate': self.open_rate,
-                'click_rate': self.click_rate
-            })
-
-        return data
+    return data;
+  }
+}
 ```
 
 ## TypeScript Standards
@@ -697,71 +742,207 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
 ### Input Validation
 
-```python
-# Security-focused validation example
-from pydantic import BaseModel, validator, Field
-from typing import Optional
-import re
+```typescript
+// Security-focused validation example
 
-class SecureCampaignRequest(BaseModel):
-    name: str = Field(..., min_length=1, max_length=100, description="Campaign name")
-    subject: str = Field(..., min_length=1, max_length=200, description="Email subject")
-    content: dict = Field(..., description="Email content")
-    recipients: list = Field(..., min_items=1, max_items=10000, description="Recipients list")
-    
-    # Security validations
-    @validator('name')
-    def validate_name(cls, v):
-        # Prevent XSS and injection
-        if re.search(r'[<>"\']', v):
-            raise ValueError("Invalid characters in name")
-        return v.strip()
-    
-    @validator('subject')
-    def validate_subject(cls, v):
-        # Prevent header injection
-        if re.search(r'[\r\n]', v):
-            raise ValueError("Invalid characters in subject")
-        return v.strip()
-    
-    @validator('recipients')
-    def validate_recipients(cls, v):
-        email_pattern = re.compile(
-            r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-        )
-        
-        for recipient in v:
-            if not isinstance(recipient, dict):
-                raise ValueError("Invalid recipient format")
-            
-            email = recipient.get('email', '')
-            if not email_pattern.match(email):
-                raise ValueError(f"Invalid email address: {email}")
-                
-            # Sanitize personalization data
-            if 'personalization' in recipient:
-                recipient['personalization'] = cls._sanitize_personalization(
-                    recipient['personalization']
-                )
-        
-        return v
-    
-    @classmethod
-    def _sanitize_personalization(cls, data: dict) -> dict:
-        """Sanitize personalization data to prevent injection."""
-        if not isinstance(data, dict):
-            return {}
-        
-        sanitized = {}
-        for key, value in data.items():
-            # Only allow safe string/number values
-            if isinstance(value, (str, int, float, bool)):
-                if isinstance(value, str):
-                    # Basic XSS prevention
-                    sanitized[key] = value.replace('<', '<').replace('>', '>')
-                else:
-                    sanitized[key] = value
-        return sanitized
+interface SecureCampaignRequest {
+  name: string;
+  subject: string;
+  content: EmailContent;
+  recipients: EmailRecipient[];
+}
+
+interface EmailContent {
+  html: string;
+  text: string;
+  templateId?: string;
+}
+
+interface EmailRecipient {
+  email: string;
+  name?: string;
+  personalization?: Record<string, string | number | boolean>;
+}
+
+interface ValidationResult {
+  isValid: boolean;
+  errors: string[];
+}
+
+interface PersonalizationSanitizer {
+  [key: string]: string | number | boolean;
+}
+
+/**
+ * Security-focused validation service
+ */
+class SecureCampaignValidationService {
+  private readonly emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  private readonly invalidNamePattern = /[<>\"']/;
+  private readonly invalidSubjectPattern = /[\r\n]/;
+
+  /**
+   * Validate campaign request with security considerations
+   */
+  validateCampaignRequest(request: SecureCampaignRequest): ValidationResult {
+    const errors: string[] = [];
+
+    // Validate name
+    const nameValidation = this.validateName(request.name);
+    if (!nameValidation.isValid) {
+      errors.push(...nameValidation.errors);
+    }
+
+    // Validate subject
+    const subjectValidation = this.validateSubject(request.subject);
+    if (!subjectValidation.isValid) {
+      errors.push(...subjectValidation.errors);
+    }
+
+    // Validate content
+    const contentValidation = this.validateContent(request.content);
+    if (!contentValidation.isValid) {
+      errors.push(...contentValidation.errors);
+    }
+
+    // Validate recipients
+    const recipientsValidation = this.validateRecipients(request.recipients);
+    if (!recipientsValidation.isValid) {
+      errors.push(...recipientsValidation.errors);
+    }
+
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
+  }
+
+  private validateName(name: string): ValidationResult {
+    const errors: string[] = [];
+
+    if (!name || name.trim().length === 0) {
+      errors.push("Name is required");
+      return { isValid: false, errors };
+    }
+
+    if (name.length > 100) {
+      errors.push("Name must be less than 100 characters");
+    }
+
+    if (this.invalidNamePattern.test(name)) {
+      errors.push("Name contains invalid characters");
+    }
+
+    return { isValid: errors.length === 0, errors };
+  }
+
+  private validateSubject(subject: string): ValidationResult {
+    const errors: string[] = [];
+
+    if (!subject || subject.trim().length === 0) {
+      errors.push("Subject is required");
+      return { isValid: false, errors };
+    }
+
+    if (subject.length > 200) {
+      errors.push("Subject must be less than 200 characters");
+    }
+
+    if (this.invalidSubjectPattern.test(subject)) {
+      errors.push("Subject contains invalid characters");
+    }
+
+    return { isValid: errors.length === 0, errors };
+  }
+
+  private validateContent(content: EmailContent): ValidationResult {
+    const errors: string[] = [];
+
+    if (!content.html || content.html.trim().length === 0) {
+      errors.push("HTML content is required");
+    }
+
+    if (!content.text || content.text.trim().length === 0) {
+      errors.push("Text content is required");
+    }
+
+    return { isValid: errors.length === 0, errors };
+  }
+
+  private validateRecipients(recipients: EmailRecipient[]): ValidationResult {
+    const errors: string[] = [];
+
+    if (!recipients || recipients.length === 0) {
+      errors.push("At least one recipient is required");
+      return { isValid: false, errors };
+    }
+
+    if (recipients.length > 10000) {
+      errors.push("Maximum 10,000 recipients allowed");
+      return { isValid: false, errors };
+    }
+
+    for (let i = 0; i < recipients.length; i++) {
+      const recipient = recipients[i];
+      const recipientErrors = this.validateRecipient(recipient, i);
+      errors.push(...recipientErrors);
+    }
+
+    return { isValid: errors.length === 0, errors };
+  }
+
+  private validateRecipient(recipient: EmailRecipient, index: number): string[] {
+    const errors: string[] = [];
+    const prefix = `Recipient ${index + 1}`;
+
+    if (!recipient.email) {
+      errors.push(`${prefix}: Email is required`);
+      return errors;
+    }
+
+    if (!this.emailPattern.test(recipient.email)) {
+      errors.push(`${prefix}: Invalid email address: ${recipient.email}`);
+    }
+
+    if (recipient.personalization) {
+      const sanitized = this.sanitizePersonalization(recipient.personalization);
+      if (Object.keys(sanitized).length !== Object.keys(recipient.personalization).length) {
+        errors.push(`${prefix}: Personalization contains invalid data`);
+      }
+    }
+
+    return errors;
+  }
+
+  /**
+   * Sanitize personalization data to prevent injection
+   */
+  private sanitizePersonalization(data: PersonalizationSanitizer): PersonalizationSanitizer {
+    if (!data || typeof data !== 'object') {
+      return {};
+    }
+
+    const sanitized: PersonalizationSanitizer = {};
+
+    for (const [key, value] of Object.entries(data)) {
+      // Only allow safe string/number/boolean values
+      if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') {
+        if (typeof value === 'string') {
+          // Basic XSS prevention - escape HTML
+          sanitized[key] = value
+            .replace(/</g, '<')
+            .replace(/>/g, '>')
+            .replace(/"/g, '"')
+            .replace(/'/g, '&#x27;');
+        } else {
+          sanitized[key] = value;
+        }
+      }
+    }
+
+    return sanitized;
+  }
+}
 ```
 
 ### Authentication & Authorization
@@ -852,127 +1033,334 @@ export function requirePermission(permission: string) {
 
 ### Database Optimization
 
-```python
-# Optimized database queries
-from sqlalchemy.orm import joinedload, selectinload
-from typing import List, Optional
+```typescript
+// Optimized database queries with TypeScript
 
-class OptimizedCampaignService:
-    """Service with performance-optimized database operations."""
-    
-    async def get_campaign_with_metrics(self, campaign_id: str) -> Optional[Campaign]:
-        """Eager load related data to minimize N+1 queries."""
-        return await self.db.query(Campaign)
-        .options(
-            selectinload(Campaign.recipients),  # Batch load recipients
-            joinedload(Campaign.user),          # Join with user table
-            selectinload(Campaign.analytics)    # Load analytics in one query
-        )
-        .filter(Campaign.id == campaign_id)
-        .first()
-    
-    async def get_campaigns_batch(self, user_id: str, limit: int = 50) -> List[Campaign]:
-        """Efficiently load campaigns with pagination."""
-        return await self.db.query(Campaign)
-        .options(
-            selectinload(Campaign.recipients),
-            selectinload(Campaign.analytics)
-        )
-        .filter(Campaign.user_id == user_id)
-        .order_by(Campaign.created_at.desc())
-        .limit(limit)
-        .all()
-    
-    async def search_campaigns(self, query: str, user_id: str) -> List[Campaign]:
-        """Use database-level search for better performance."""
-        return await self.db.query(Campaign)
-        .options(selectinload(Campaign.recipients))
-        .filter(
-            and_(
-                Campaign.user_id == user_id,
-                or_(
-                    Campaign.name.ilike(f"%{query}%"),
-                    Campaign.subject.ilike(f"%{query}%")
-                )
-            )
-        )
-        .all()
+interface Campaign {
+  id: string;
+  name: string;
+  subject: string;
+  userId: string;
+  createdAt: Date;
+  recipients?: EmailRecipient[];
+  analytics?: CampaignAnalytics[];
+  user?: User;
+}
+
+interface EmailRecipient {
+  id: string;
+  email: string;
+  name?: string;
+  campaignId: string;
+}
+
+interface CampaignAnalytics {
+  id: string;
+  campaignId: string;
+  sentCount: number;
+  deliveredCount: number;
+  openedCount: number;
+  clickedCount: number;
+}
+
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
+interface CampaignQueryOptions {
+  includeRecipients?: boolean;
+  includeAnalytics?: boolean;
+  includeUser?: boolean;
+  limit?: number;
+  offset?: number;
+}
+
+/**
+ * Service with performance-optimized database operations
+ */
+class OptimizedCampaignService {
+  constructor(private readonly db: DatabaseService) {}
+
+  /**
+   * Eager load related data to minimize N+1 queries
+   */
+  async getCampaignWithMetrics(
+    campaignId: string,
+    options: CampaignQueryOptions = {}
+  ): Promise<Campaign | null> {
+    const queryBuilder = this.db.createQueryBuilder()
+      .select('campaign')
+      .from(Campaign, 'campaign')
+      .where('campaign.id = :campaignId', { campaignId });
+
+    // Eager load recipients to avoid N+1 queries
+    if (options.includeRecipients !== false) {
+      queryBuilder.leftJoinAndSelect('campaign.recipients', 'recipients');
+    }
+
+    // Join with user table
+    if (options.includeUser) {
+      queryBuilder.leftJoinAndSelect('campaign.user', 'user');
+    }
+
+    // Load analytics in one query
+    if (options.includeAnalytics) {
+      queryBuilder.leftJoinAndSelect('campaign.analytics', 'analytics');
+    }
+
+    return queryBuilder.getOne();
+  }
+
+  /**
+   * Efficiently load campaigns with pagination
+   */
+  async getCampaignsBatch(
+    userId: string,
+    options: CampaignQueryOptions = {}
+  ): Promise<Campaign[]> {
+    const { limit = 50, offset = 0, includeRecipients = true, includeAnalytics = true } = options;
+
+    const queryBuilder = this.db.createQueryBuilder()
+      .select('campaign')
+      .from(Campaign, 'campaign')
+      .where('campaign.userId = :userId', { userId })
+      .orderBy('campaign.createdAt', 'DESC')
+      .take(limit)
+      .skip(offset);
+
+    // Eager load related data
+    if (includeRecipients) {
+      queryBuilder.leftJoinAndSelect('campaign.recipients', 'recipients');
+    }
+
+    if (includeAnalytics) {
+      queryBuilder.leftJoinAndSelect('campaign.analytics', 'analytics');
+    }
+
+    return queryBuilder.getMany();
+  }
+
+  /**
+   * Use database-level search for better performance
+   */
+  async searchCampaigns(
+    query: string,
+    userId: string,
+    options: CampaignQueryOptions = {}
+  ): Promise<Campaign[]> {
+    const queryBuilder = this.db.createQueryBuilder()
+      .select('campaign')
+      .from(Campaign, 'campaign')
+      .where('campaign.userId = :userId', { userId })
+      .andWhere(
+        '(campaign.name ILIKE :query OR campaign.subject ILIKE :query)',
+        { query: `%${query}%` }
+      )
+      .orderBy('campaign.createdAt', 'DESC');
+
+    // Include recipients for search results
+    if (options.includeRecipients !== false) {
+      queryBuilder.leftJoinAndSelect('campaign.recipients', 'recipients');
+    }
+
+    return queryBuilder.getMany();
+  }
+}
+
+/**
+ * Enhanced query builder interface
+ */
+interface QueryBuilder<T> {
+  select(alias: string): QueryBuilder<T>;
+  from(entity: Function, alias: string): QueryBuilder<T>;
+  where(condition: string, parameters?: Record<string, unknown>): QueryBuilder<T>;
+  andWhere(condition: string, parameters?: Record<string, unknown>): QueryBuilder<T>;
+  leftJoinAndSelect(propertyPath: string, alias: string): QueryBuilder<T>;
+  orderBy(sort: string, order?: 'ASC' | 'DESC'): QueryBuilder<T>;
+  take(limit: number): QueryBuilder<T>;
+  skip(offset: number): QueryBuilder<T>;
+  getOne(): Promise<T | null>;
+  getMany(): Promise<T[]>;
+}
+
+interface DatabaseService {
+  createQueryBuilder<T>(): QueryBuilder<T>;
+}
 ```
 
 ### Caching Strategy
 
-```python
-# Efficient caching implementation
-import redis.asyncio as redis
-from typing import Any, Optional
-import json
-import time
+```typescript
+// Efficient caching implementation with TypeScript
 
-class CacheService:
-    def __init__(self, redis_url: str):
-        self.redis = redis.from_url(redis_url)
-    
-    async def get(self, key: str) -> Optional[Any]:
-        """Get value from cache with error handling."""
-        try:
-            value = await self.redis.get(key)
-            return json.loads(value) if value else None
-        except Exception as e:
-            # Log error but don't fail the main operation
-            logger.warning(f"Cache get failed for key {key}: {e}")
-            return None
-    
-    async def set(self, key: str, value: Any, expire: int = 3600) -> bool:
-        """Set value in cache with expiration."""
-        try:
-            await self.redis.setex(
-                key,
-                expire,
-                json.dumps(value, default=str)
-            )
-            return True
-        except Exception as e:
-            logger.warning(f"Cache set failed for key {key}: {e}")
-            return False
-    
-    async def invalidate_pattern(self, pattern: str) -> int:
-        """Invalidate multiple keys matching a pattern."""
-        try:
-            keys = await self.redis.keys(pattern)
-            if keys:
-                return await self.redis.delete(*keys)
-            return 0
-        except Exception as e:
-            logger.warning(f"Cache invalidate failed for pattern {pattern}: {e}")
-            return 0
+interface CacheValue {
+  data: unknown;
+  timestamp: number;
+  ttl: number;
+}
 
-class CampaignCacheDecorator:
-    def __init__(self, cache_service: CacheService):
-        self.cache = cache_service
-        self.default_ttl = 300  # 5 minutes
+interface CacheOptions {
+  ttl?: number; // Time to live in seconds
+  tags?: string[];
+}
+
+interface CacheResult<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+/**
+ * High-performance caching service
+ */
+class CacheService {
+  private readonly defaultTTL = 3600; // 1 hour
+  private readonly redisClient: RedisClient;
+
+  constructor(redisClient: RedisClient) {
+    this.redisClient = redisClient;
+  }
+
+  /**
+   * Get value from cache with error handling
+   */
+  async get<T>(key: string): Promise<T | null> {
+    try {
+      const value = await this.redisClient.get(key);
+      if (!value) return null;
+
+      const parsed = JSON.parse(value) as CacheValue;
+      
+      // Check if cache entry has expired
+      if (Date.now() - parsed.timestamp > parsed.ttl * 1000) {
+        await this.redisClient.del(key);
+        return null;
+      }
+
+      return parsed.data as T;
+    } catch (error) {
+      console.warn(`Cache get failed for key ${key}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Set value in cache with expiration
+   */
+  async set<T>(key: string, value: T, options: CacheOptions = {}): Promise<boolean> {
+    const ttl = options.ttl || this.defaultTTL;
     
-    def cached_campaign(self, ttl: Optional[int] = None):
-        """Decorator for caching campaign data."""
-        def decorator(func):
-            @wraps(func)
-            async def wrapper(campaign_id: str, *args, **kwargs):
-                cache_key = f"campaign:{campaign_id}"
-                
-                # Try cache first
-                cached = await self.cache.get(cache_key)
-                if cached is not None:
-                    return cached
-                
-                # Get from database
-                result = await func(campaign_id, *args, **kwargs)
-                
-                # Cache result
-                if result:
-                    await self.cache.set(cache_key, result, ttl or self.default_ttl)
-                
-                return result
-            return wrapper
-        return decorator
+    try {
+      const cacheValue: CacheValue = {
+        data: value,
+        timestamp: Date.now(),
+        ttl
+      };
+
+      await this.redisClient.setex(key, ttl, JSON.stringify(cacheValue));
+      return true;
+    } catch (error) {
+      console.warn(`Cache set failed for key ${key}:`, error);
+      return false;
+    }
+  }
+
+  /**
+   * Invalidate multiple keys matching a pattern
+   */
+  async invalidatePattern(pattern: string): Promise<number> {
+    try {
+      const keys = await this.redisClient.keys(pattern);
+      if (keys.length === 0) return 0;
+
+      return await this.redisClient.del(...keys);
+    } catch (error) {
+      console.warn(`Cache invalidate failed for pattern ${pattern}:`, error);
+      return 0;
+    }
+  }
+
+  /**
+   * Get multiple cache values in batch
+   */
+  async mget<T>(keys: string[]): Promise<(T | null)[]> {
+    try {
+      const values = await this.redisClient.mget(keys);
+      return values.map(value => {
+        if (!value) return null;
+        
+        try {
+          const parsed = JSON.parse(value) as CacheValue;
+          if (Date.now() - parsed.timestamp > parsed.ttl * 1000) {
+            return null;
+          }
+          return parsed.data as T;
+        } catch {
+          return null;
+        }
+      });
+    } catch (error) {
+      console.warn(`Cache mget failed for keys ${keys.join(', ')}:`, error);
+      return keys.map(() => null);
+    }
+  }
+}
+
+/**
+ * Decorator for caching function results
+ */
+class CampaignCacheDecorator {
+  constructor(
+    private readonly cacheService: CacheService,
+    private readonly defaultTTL: number = 300 // 5 minutes
+  ) {}
+
+  /**
+   * Decorator for caching campaign data
+   */
+  cachedCampaign<T extends (...args: unknown[]) => Promise<unknown>>(
+    ttl?: number
+  ) {
+    return (target: unknown, propertyKey: string, descriptor: PropertyDescriptor) => {
+      const originalMethod = descriptor.value;
+
+      descriptor.value = async function (...args: unknown[]) {
+        const cacheKey = `campaign:${JSON.stringify(args)}`;
+        
+        // Try cache first
+        const cached = await this.cacheService.get<T>(cacheKey);
+        if (cached !== null) {
+          return cached;
+        }
+        
+        // Get from original method
+        const result = await originalMethod.apply(this, args);
+        
+        // Cache result if not null/undefined
+        if (result !== null && result !== undefined) {
+          await this.cacheService.set(cacheKey, result, { ttl: ttl || this.defaultTTL });
+        }
+        
+        return result;
+      };
+
+      return descriptor;
+    };
+  }
+}
+
+/**
+ * Redis client interface
+ */
+interface RedisClient {
+  get(key: string): Promise<string | null>;
+  setex(key: string, ttl: number, value: string): Promise<void>;
+  del(...keys: string[]): Promise<number>;
+  mget(...keys: string[]): Promise<(string | null)[]>;
+  keys(pattern: string): Promise<string[]>;
+}
 ```
 
 ## Code Review Checklist

@@ -254,38 +254,265 @@ graph TD
 ```
 
 **Automated Analytics Calculations:**
-```python
-class WeeklyPerformanceAnalyzer:
-    def calculate_business_health_score(self, tenant_id, week_start, week_end):
-        revenue_score = self.calculate_revenue_protection_score(tenant_id, week_start, week_end)
-        cost_score = self.calculate_cost_optimization_score(tenant_id, week_start, week_end)
-        efficiency_score = self.calculate_operational_efficiency_score(tenant_id, week_start, week_end)
-        strategic_score = self.calculate_strategic_execution_score(tenant_id, week_start, week_end)
+```typescript
+// services/weekly-performance-analyzer.ts
+interface BusinessMetrics {
+  revenueProtection: number;
+  costOptimization: number;
+  operationalEfficiency: number;
+  strategicExecution: number;
+}
 
-        # Weighted business health calculation
-        health_score = (revenue_score * 0.3 +
-                       cost_score * 0.25 +
-                       efficiency_score * 0.25 +
-                       strategic_score * 0.2)
+interface TrendAnalysis {
+  current: number;
+  trend: 'improving' | 'stable' | 'declining';
+  velocity: number;
+  confidence: number;
+}
 
-        return min(100, max(0, health_score))
+interface BusinessHealthScore {
+  overall: number;
+  revenueProtection: number;
+  costOptimization: number;
+  operationalEfficiency: number;
+  strategicExecution: number;
+}
 
-    def generate_trend_analysis(self, tenant_id, current_week, previous_weeks=3):
-        trends = {}
+interface WeeklyPerformanceAnalyzer {
+  calculateBusinessHealthScore(tenantId: string, weekStart: Date, weekEnd: Date): Promise<BusinessHealthScore>;
+  generateTrendAnalysis(tenantId: string, currentWeek: Date, previousWeeks?: number): Promise<Record<string, TrendAnalysis>>;
+}
 
-        for metric in ['revenue_protection', 'cost_optimization', 'efficiency', 'strategic']:
-            current_value = self.get_metric_value(tenant_id, metric, current_week)
-            previous_values = [self.get_metric_value(tenant_id, metric, week)
-                             for week in self.get_previous_weeks(current_week, previous_weeks)]
+class WeeklyPerformanceAnalyzerImpl implements WeeklyPerformanceAnalyzer {
+  async calculateBusinessHealthScore(
+    tenantId: string,
+    weekStart: Date,
+    weekEnd: Date
+  ): Promise<BusinessHealthScore> {
+    const [
+      revenueScore,
+      costScore,
+      efficiencyScore,
+      strategicScore
+    ] = await Promise.all([
+      this.calculateRevenueProtectionScore(tenantId, weekStart, weekEnd),
+      this.calculateCostOptimizationScore(tenantId, weekStart, weekEnd),
+      this.calculateOperationalEfficiencyScore(tenantId, weekStart, weekEnd),
+      this.calculateStrategicExecutionScore(tenantId, weekStart, weekEnd)
+    ]);
 
-            trends[metric] = {
-                'current': current_value,
-                'trend': self.calculate_trend_direction(previous_values + [current_value]),
-                'velocity': self.calculate_trend_velocity(previous_values + [current_value]),
-                'confidence': self.calculate_trend_confidence(previous_values + [current_value])
-            }
+    // Weighted business health calculation
+    const healthScore = (
+      revenueScore * 0.3 +
+      costScore * 0.25 +
+      efficiencyScore * 0.25 +
+      strategicScore * 0.2
+    );
 
-        return trends
+    const overallScore = Math.max(0, Math.min(100, healthScore));
+
+    return {
+      overall: overallScore,
+      revenueProtection: revenueScore,
+      costOptimization: costScore,
+      operationalEfficiency: efficiencyScore,
+      strategicExecution: strategicScore
+    };
+  }
+
+  async generateTrendAnalysis(
+    tenantId: string,
+    currentWeek: Date,
+    previousWeeks: number = 3
+  ): Promise<Record<string, TrendAnalysis>> {
+    const metrics = ['revenueProtection', 'costOptimization', 'efficiency', 'strategic'];
+    const trends: Record<string, TrendAnalysis> = {};
+
+    for (const metric of metrics) {
+      const currentValue = await this.getMetricValue(tenantId, metric, currentWeek);
+      const previousWeeksList = this.getPreviousWeeks(currentWeek, previousWeeks);
+      const previousValues = await Promise.all(
+        previousWeeksList.map(week => this.getMetricValue(tenantId, metric, week))
+      );
+
+      const allValues = [...previousValues, currentValue];
+
+      trends[metric] = {
+        current: currentValue,
+        trend: this.calculateTrendDirection(allValues),
+        velocity: this.calculateTrendVelocity(allValues),
+        confidence: this.calculateTrendConfidence(allValues)
+      };
+    }
+
+    return trends;
+  }
+
+  private async calculateRevenueProtectionScore(tenantId: string, weekStart: Date, weekEnd: Date): Promise<number> {
+    // Mock implementation - would calculate based on deliverability metrics
+    const deliverabilityRate = await this.getDeliverabilityRate(tenantId, weekStart, weekEnd);
+    const bounceRate = await this.getBounceRate(tenantId, weekStart, weekEnd);
+    const revenueAtRisk = await this.getRevenueAtRisk(tenantId, weekStart, weekEnd);
+
+    // Calculate score based on multiple factors
+    const deliverabilityScore = deliverabilityRate * 100; // Convert to 0-100 scale
+    const bounceScore = Math.max(0, 100 - (bounceRate * 10)); // Penalty for bounces
+    const riskScore = Math.max(0, 100 - (revenueAtRisk / 100)); // Penalty for revenue at risk
+
+    return (deliverabilityScore + bounceScore + riskScore) / 3;
+  }
+
+  private async calculateCostOptimizationScore(tenantId: string, weekStart: Date, weekEnd: Date): Promise<number> {
+    // Mock implementation - would calculate based on cost metrics
+    const costEfficiency = await this.getCostEfficiency(tenantId, weekStart, weekEnd);
+    const optimizationOpportunities = await this.getOptimizationOpportunities(tenantId, weekStart, weekEnd);
+    const implementedSavings = await this.getImplementedSavings(tenantId, weekStart, weekEnd);
+
+    return (costEfficiency + optimizationOpportunities + implementedSavings) / 3;
+  }
+
+  private async calculateOperationalEfficiencyScore(tenantId: string, weekStart: Date, weekEnd: Date): Promise<number> {
+    // Mock implementation - would calculate based on operational metrics
+    const processAutomationRate = await this.getProcessAutomationRate(tenantId, weekStart, weekEnd);
+    const systemPerformance = await this.getSystemPerformance(tenantId, weekStart, weekEnd);
+    const resourceUtilization = await this.getResourceUtilization(tenantId, weekStart, weekEnd);
+
+    return (processAutomationRate + systemPerformance + resourceUtilization) / 3;
+  }
+
+  private async calculateStrategicExecutionScore(tenantId: string, weekStart: Date, weekEnd: Date): Promise<number> {
+    // Mock implementation - would calculate based on strategic metrics
+    const initiativeProgress = await this.getInitiativeProgress(tenantId, weekStart, weekEnd);
+    const goalAchievement = await this.getGoalAchievement(tenantId, weekStart, weekEnd);
+    const decisionSpeed = await this.getDecisionSpeed(tenantId, weekStart, weekEnd);
+
+    return (initiativeProgress + goalAchievement + decisionSpeed) / 3;
+  }
+
+  private async getMetricValue(tenantId: string, metric: string, week: Date): Promise<number> {
+    // Mock implementation - would fetch from database
+    return Math.random() * 100; // Random value between 0-100 for demonstration
+  }
+
+  private getPreviousWeeks(currentWeek: Date, count: number): Date[] {
+    const weeks: Date[] = [];
+    const current = new Date(currentWeek);
+    
+    for (let i = 1; i <= count; i++) {
+      const week = new Date(current);
+      week.setDate(week.getDate() - (i * 7));
+      weeks.push(week);
+    }
+    
+    return weeks;
+  }
+
+  private calculateTrendDirection(values: number[]): 'improving' | 'stable' | 'declining' {
+    if (values.length < 2) return 'stable';
+    
+    const recent = values.slice(-3); // Last 3 values
+    const older = values.slice(0, -3); // Previous values
+    
+    if (older.length === 0) return 'stable';
+    
+    const recentAvg = recent.reduce((sum, val) => sum + val, 0) / recent.length;
+    const olderAvg = older.reduce((sum, val) => sum + val, 0) / older.length;
+    
+    const changePercent = ((recentAvg - olderAvg) / olderAvg) * 100;
+    
+    if (changePercent > 5) return 'improving';
+    if (changePercent < -5) return 'declining';
+    return 'stable';
+  }
+
+  private calculateTrendVelocity(values: number[]): number {
+    if (values.length < 2) return 0;
+    
+    const firstHalf = values.slice(0, Math.floor(values.length / 2));
+    const secondHalf = values.slice(Math.floor(values.length / 2));
+    
+    const firstAvg = firstHalf.reduce((sum, val) => sum + val, 0) / firstHalf.length;
+    const secondAvg = secondHalf.reduce((sum, val) => sum + val, 0) / secondHalf.length;
+    
+    return secondAvg - firstAvg;
+  }
+
+  private calculateTrendConfidence(values: number[]): number {
+    if (values.length < 3) return 0.5;
+    
+    const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
+    const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
+    const standardDeviation = Math.sqrt(variance);
+    
+    // Higher confidence for lower standard deviation relative to mean
+    const coefficientOfVariation = standardDeviation / mean;
+    return Math.max(0, Math.min(1, 1 - coefficientOfVariation));
+  }
+
+  // Mock data methods (would be replaced with actual database queries)
+  private async getDeliverabilityRate(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 0.985; // 98.5% deliverability
+  }
+
+  private async getBounceRate(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 0.012; // 1.2% bounce rate
+  }
+
+  private async getRevenueAtRisk(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 2500; // $2,500 at risk
+  }
+
+  private async getCostEfficiency(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 85; // 85% cost efficiency
+  }
+
+  private async getOptimizationOpportunities(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 78; // 78% optimization score
+  }
+
+  private async getImplementedSavings(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 82; // 82% savings implementation
+  }
+
+  private async getProcessAutomationRate(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 67; // 67% automation
+  }
+
+  private async getSystemPerformance(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 89; // 89% system performance
+  }
+
+  private async getResourceUtilization(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 78; // 78% resource utilization
+  }
+
+  private async getInitiativeProgress(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 85; // 85% initiative progress
+  }
+
+  private async getGoalAchievement(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 92; // 92% goal achievement
+  }
+
+  private async getDecisionSpeed(tenantId: string, start: Date, end: Date): Promise<number> {
+    return 88; // 88% decision speed
+  }
+}
+
+// Usage example
+async function demonstrateWeeklyAnalysis() {
+  const analyzer = new WeeklyPerformanceAnalyzerImpl();
+  
+  const tenantId = 'tenant_123';
+  const weekStart = new Date('2025-11-18');
+  const weekEnd = new Date('2025-11-24');
+  
+  const healthScore = await analyzer.calculateBusinessHealthScore(tenantId, weekStart, weekEnd);
+  console.log('Business Health Score:', healthScore);
+  
+  const trends = await analyzer.generateTrendAnalysis(tenantId, weekEnd);
+  console.log('Trend Analysis:', trends);
+}
 ```
 
 ### 3. Monthly Strategic Review
@@ -372,109 +599,735 @@ Risk Mitigation Priorities:
 #### Technical Implementation
 
 **Advanced Analytics Integration:**
-```python
-class MonthlyStrategicAnalyzer:
-    def generate_comprehensive_analysis(self, tenant_id, month_start, month_end):
-        # Multi-dimensional analysis
-        financial_analysis = self.analyze_financial_performance(tenant_id, month_start, month_end)
-        operational_analysis = self.analyze_operational_excellence(tenant_id, month_start, month_end)
-        strategic_analysis = self.analyze_strategic_initiatives(tenant_id, month_start, month_end)
-        market_analysis = self.analyze_market_position(tenant_id, month_start, month_end)
+```typescript
+// services/monthly-strategic-analyzer.ts
+interface AnalysisResults {
+  executiveSummary: ExecutiveScorecard;
+  detailedAnalysis: {
+    financial: FinancialAnalysis;
+    operational: OperationalAnalysis;
+    strategic: StrategicAnalysis;
+    market: MarketAnalysis;
+  };
+  predictiveInsights: PredictiveInsights;
+  strategicRecommendations: StrategicRecommendations[];
+}
 
-        # Generate predictive insights
-        predictive_insights = self.generate_predictive_analysis(tenant_id, month_end)
+interface ExecutiveScorecard {
+  businessHealthScore: number;
+  strategicAchievementRate: number;
+  financialRoiAchievement: number;
+  operationalExcellenceScore: number;
+  marketPositionImprovement: number;
+  riskAdjustedPerformance: number;
+}
 
-        # Calculate executive KPIs
-        executive_scorecard = self.calculate_executive_scorecard(
-            financial_analysis, operational_analysis,
-            strategic_analysis, market_analysis
-        )
+interface FinancialAnalysis {
+  roi: number;
+  revenueProtection: number;
+  costOptimization: number;
+  profitability: number;
+}
 
-        # Generate strategic recommendations
-        recommendations = self.generate_strategic_recommendations(
-            financial_analysis, operational_analysis,
-            strategic_analysis, market_analysis, predictive_insights
-        )
+interface OperationalAnalysis {
+  efficiency: number;
+  automation: number;
+  performance: number;
+  optimization: number;
+}
 
-        return {
-            'executive_summary': executive_scorecard,
-            'detailed_analysis': {
-                'financial': financial_analysis,
-                'operational': operational_analysis,
-                'strategic': strategic_analysis,
-                'market': market_analysis
-            },
-            'predictive_insights': predictive_insights,
-            'strategic_recommendations': recommendations
+interface StrategicAnalysis {
+  achievementRate: number;
+  initiativeProgress: number;
+  goalCompletion: number;
+  execution: number;
+}
+
+interface MarketAnalysis {
+  positionImprovement: number;
+  competitiveAdvantage: number;
+  marketShare: number;
+  customerSatisfaction: number;
+}
+
+interface PredictiveInsights {
+  trends: TrendPrediction[];
+  forecasts: PerformanceForecast[];
+  opportunities: OpportunityPrediction[];
+  risks: RiskPrediction[];
+}
+
+interface StrategicRecommendations {
+  priority: 'high' | 'medium' | 'low';
+  category: string;
+  title: string;
+  description: string;
+  expectedImpact: string;
+  timeline: string;
+  resources: string;
+}
+
+interface MonthlyStrategicAnalyzer {
+  generateComprehensiveAnalysis(
+    tenantId: string,
+    monthStart: Date,
+    monthEnd: Date
+  ): Promise<AnalysisResults>;
+}
+
+class MonthlyStrategicAnalyzerImpl implements MonthlyStrategicAnalyzer {
+  async generateComprehensiveAnalysis(
+    tenantId: string,
+    monthStart: Date,
+    monthEnd: Date
+  ): Promise<AnalysisResults> {
+    // Multi-dimensional analysis
+    const [financialAnalysis, operationalAnalysis, strategicAnalysis, marketAnalysis] = await Promise.all([
+      this.analyzeFinancialPerformance(tenantId, monthStart, monthEnd),
+      this.analyzeOperationalExcellence(tenantId, monthStart, monthEnd),
+      this.analyzeStrategicInitiatives(tenantId, monthStart, monthEnd),
+      this.analyzeMarketPosition(tenantId, monthStart, monthEnd)
+    ]);
+
+    // Generate predictive insights
+    const predictiveInsights = await this.generatePredictiveAnalysis(tenantId, monthEnd);
+
+    // Calculate executive KPIs
+    const executiveScorecard = this.calculateExecutiveScorecard(
+      financialAnalysis, operationalAnalysis, strategicAnalysis, marketAnalysis
+    );
+
+    // Generate strategic recommendations
+    const recommendations = this.generateStrategicRecommendations(
+      financialAnalysis, operationalAnalysis, strategicAnalysis, marketAnalysis, predictiveInsights
+    );
+
+    return {
+      executiveSummary: executiveScorecard,
+      detailedAnalysis: {
+        financial: financialAnalysis,
+        operational: operationalAnalysis,
+        strategic: strategicAnalysis,
+        market: marketAnalysis
+      },
+      predictiveInsights,
+      strategicRecommendations: recommendations
+    };
+  }
+
+  private calculateExecutiveScorecard(
+    financial: FinancialAnalysis,
+    operational: OperationalAnalysis,
+    strategic: StrategicAnalysis,
+    market: MarketAnalysis
+  ): ExecutiveScorecard {
+    // Executive-level KPI calculations
+    return {
+      businessHealthScore: this.calculateWeightedHealthScore(financial, operational, strategic, market),
+      strategicAchievementRate: strategic.achievementRate,
+      financialRoiAchievement: financial.roi,
+      operationalExcellenceScore: operational.efficiency,
+      marketPositionImprovement: market.positionImprovement,
+      riskAdjustedPerformance: this.calculateRiskAdjustedPerformance(
+        financial, operational, strategic, market
+      )
+    };
+  }
+
+  private async analyzeFinancialPerformance(tenantId: string, monthStart: Date, monthEnd: Date): Promise<FinancialAnalysis> {
+    // Mock implementation - would analyze financial metrics
+    return {
+      roi: 261, // 261% ROI
+      revenueProtection: 285000, // $285K protected
+      costOptimization: 45600, // $45.6K savings
+      profitability: 15.8 // 15.8% profit margin
+    };
+  }
+
+  private async analyzeOperationalExcellence(tenantId: string, monthStart: Date, monthEnd: Date): Promise<OperationalAnalysis> {
+    // Mock implementation - would analyze operational metrics
+    return {
+      efficiency: 89, // 89% efficiency score
+      automation: 67, // 67% automation rate
+      performance: 94, // 94% system performance
+      optimization: 78 // 78% optimization score
+    };
+  }
+
+  private async analyzeStrategicInitiatives(tenantId: string, monthStart: Date, monthEnd: Date): Promise<StrategicAnalysis> {
+    // Mock implementation - would analyze strategic metrics
+    return {
+      achievementRate: 78, // 78% achievement rate
+      initiativeProgress: 65, // 65% initiative progress
+      goalCompletion: 82, // 82% goal completion
+      execution: 75 // 75% execution score
+    };
+  }
+
+  private async analyzeMarketPosition(tenantId: string, monthStart: Date, monthEnd: Date): Promise<MarketAnalysis> {
+    // Mock implementation - would analyze market metrics
+    return {
+      positionImprovement: 12, // +12% improvement
+      competitiveAdvantage: 85, // 85% competitive advantage
+      marketShare: 7.2, // 7.2% market share
+      customerSatisfaction: 4.7 // 4.7/5.0 satisfaction
+    };
+  }
+
+  private async generatePredictiveAnalysis(tenantId: string, monthEnd: Date): Promise<PredictiveInsights> {
+    // Mock implementation - would generate predictive analytics
+    return {
+      trends: [
+        {
+          metric: 'revenue_protection',
+          direction: 'improving',
+          confidence: 0.85,
+          timeframe: '3_months'
         }
-
-    def calculate_executive_scorecard(self, financial, operational, strategic, market):
-        # Executive-level KPI calculations
-        return {
-            'business_health_score': self.calculate_weighted_health_score(
-                financial, operational, strategic, market
-            ),
-            'strategic_achievement_rate': strategic.achievement_rate,
-            'financial_roi_achievement': financial.roi_achievement,
-            'operational_excellence_score': operational.excellence_score,
-            'market_position_improvement': market.position_improvement,
-            'risk_adjusted_performance': self.calculate_risk_adjusted_performance(
-                financial, operational, strategic, market
-            )
+      ],
+      forecasts: [
+        {
+          metric: 'monthly_revenue',
+          projected: 485000,
+          confidence: 0.78,
+          range: { min: 450000, max: 520000 }
         }
+      ],
+      opportunities: [
+        {
+          type: 'cost_optimization',
+          potential_value: 125000,
+          confidence: 0.72,
+          timeframe: '6_months'
+        }
+      ],
+      risks: [
+        {
+          type: 'deliverability',
+          impact: 'medium',
+          probability: 0.15,
+          mitigation: 'Infrastructure monitoring'
+        }
+      ]
+    };
+  }
+
+  private calculateWeightedHealthScore(
+    financial: FinancialAnalysis,
+    operational: OperationalAnalysis,
+    strategic: StrategicAnalysis,
+    market: MarketAnalysis
+  ): number {
+    const weights = {
+      financial: 0.35,
+      operational: 0.25,
+      strategic: 0.25,
+      market: 0.15
+    };
+
+    const normalizedFinancial = Math.min(100, financial.roi / 3); // ROI normalization
+    const normalizedOperational = (operational.efficiency + operational.automation) / 2;
+    const normalizedStrategic = (strategic.achievementRate + strategic.execution) / 2;
+    const normalizedMarket = (market.competitiveAdvantage + market.customerSatisfaction * 20) / 2;
+
+    return (
+      normalizedFinancial * weights.financial +
+      normalizedOperational * weights.operational +
+      normalizedStrategic * weights.strategic +
+      normalizedMarket * weights.market
+    );
+  }
+
+  private calculateRiskAdjustedPerformance(
+    financial: FinancialAnalysis,
+    operational: OperationalAnalysis,
+    strategic: StrategicAnalysis,
+    market: MarketAnalysis
+  ): number {
+    // Mock risk adjustment calculation
+    const baseScore = this.calculateWeightedHealthScore(financial, operational, strategic, market);
+    const riskPenalty = 5; // 5% risk penalty
+    return Math.max(0, baseScore - riskPenalty);
+  }
+
+  private generateStrategicRecommendations(
+    financial: FinancialAnalysis,
+    operational: OperationalAnalysis,
+    strategic: StrategicAnalysis,
+    market: MarketAnalysis,
+    predictiveInsights: PredictiveInsights
+  ): StrategicRecommendations[] {
+    const recommendations: StrategicRecommendations[] = [];
+
+    // Financial recommendations
+    if (financial.costOptimization > 30000) {
+      recommendations.push({
+        priority: 'high',
+        category: 'cost_optimization',
+        title: 'Scale Cost Optimization Initiatives',
+        description: 'Expand successful optimization programs to achieve greater savings',
+        expectedImpact: '$180K additional annual savings',
+        timeline: '6_months',
+        resources: '2_analysts_1_engineer'
+      });
+    }
+
+    // Operational recommendations
+    if (operational.automation < 75) {
+      recommendations.push({
+        priority: 'high',
+        category: 'automation',
+        title: 'Increase Process Automation',
+        description: 'Automate remaining manual processes to improve efficiency',
+        expectedImpact: '15% efficiency improvement',
+        timeline: '4_months',
+        resources: '1_engineer_2_analysts'
+      });
+    }
+
+    // Strategic recommendations
+    if (strategic.achievementRate < 80) {
+      recommendations.push({
+        priority: 'medium',
+        category: 'strategy_execution',
+        title: 'Enhance Strategic Initiative Tracking',
+        description: 'Implement better tracking and support for strategic initiatives',
+        expectedImpact: '20% improvement in achievement rate',
+        timeline: '3_months',
+        resources: '1_project_manager'
+      });
+    }
+
+    // Market recommendations
+    if (market.positionImprovement > 10) {
+      recommendations.push({
+        priority: 'medium',
+        category: 'market_expansion',
+        title: 'Leverage Market Position Gains',
+        description: 'Capitalize on improved market position for expansion',
+        expectedImpact: '$2.5M revenue potential',
+        timeline: '12_months',
+        resources: 'marketing_team_sales_team'
+      });
+    }
+
+    return recommendations;
+  }
+}
+
+// Supporting interfaces
+interface TrendPrediction {
+  metric: string;
+  direction: 'improving' | 'stable' | 'declining';
+  confidence: number;
+  timeframe: string;
+}
+
+interface PerformanceForecast {
+  metric: string;
+  projected: number;
+  confidence: number;
+  range: { min: number; max: number };
+}
+
+interface OpportunityPrediction {
+  type: string;
+  potential_value: number;
+  confidence: number;
+  timeframe: string;
+}
+
+interface RiskPrediction {
+  type: string;
+  impact: 'low' | 'medium' | 'high';
+  probability: number;
+  mitigation: string;
+}
 ```
 
 **Executive Presentation Generation:**
-```python
-class ExecutivePresentationGenerator:
-    def generate_monthly_presentation(self, analysis_data, template_type='board'):
-        # Create executive-level presentation
-        presentation = self.create_presentation_structure(template_type)
+```typescript
+// services/executive-presentation-generator.ts
+interface AnalysisData {
+  executiveSummary: ExecutiveScorecard;
+  detailedAnalysis: {
+    financial: FinancialAnalysis;
+    operational: OperationalAnalysis;
+    strategic: StrategicAnalysis;
+    market: MarketAnalysis;
+  };
+  predictiveInsights: PredictiveInsights;
+  strategicRecommendations: StrategicRecommendations[];
+}
 
-        # Add executive summary slide
-        presentation.add_executive_summary_slide(analysis_data['executive_summary'])
+interface PresentationTemplate {
+  slideCount: number;
+  focusAreas: string[];
+  detailLevel: 'high_level' | 'detailed' | 'operational';
+  visualizationStyle: 'executive' | 'analytical' | 'operational';
+}
 
-        # Add detailed analysis slides
-        presentation.add_financial_performance_slide(analysis_data['detailed_analysis']['financial'])
-        presentation.add_operational_excellence_slide(analysis_data['detailed_analysis']['operational'])
-        presentation.add_strategic_initiatives_slide(analysis_data['detailed_analysis']['strategic'])
-        presentation.add_market_position_slide(analysis_data['detailed_analysis']['market'])
+interface ExecutivePresentation {
+  slides: PresentationSlide[];
+  template: PresentationTemplate;
+  metadata: {
+    title: string;
+    createdAt: Date;
+    templateType: string;
+  };
+}
 
-        # Add predictive insights
-        presentation.add_predictive_insights_slide(analysis_data['predictive_insights'])
+interface PresentationSlide {
+  id: string;
+  type: string;
+  title: string;
+  content: unknown;
+  visualizations: ChartVisualization[];
+}
 
-        # Add strategic recommendations
-        presentation.add_strategic_recommendations_slide(analysis_data['strategic_recommendations'])
+interface ChartVisualization {
+  type: 'bar' | 'line' | 'pie' | 'scorecard' | 'kpi';
+  title: string;
+  data: unknown;
+  config: {
+    width?: number;
+    height?: number;
+    colors?: string[];
+    showLegend?: boolean;
+  };
+}
 
-        # Add appendix with supporting data
-        presentation.add_appendix_slides(self.generate_supporting_data(analysis_data))
+interface ExecutivePresentationGenerator {
+  generateMonthlyPresentation(analysisData: AnalysisData, templateType?: string): Promise<ExecutivePresentation>;
+}
 
-        return presentation
+class ExecutivePresentationGeneratorImpl implements ExecutivePresentationGenerator {
+  async generateMonthlyPresentation(
+    analysisData: AnalysisData,
+    templateType: string = 'board'
+  ): Promise<ExecutivePresentation> {
+    // Create executive-level presentation
+    const presentation = await this.createPresentationStructure(templateType);
 
-    def create_presentation_structure(self, template_type):
-        # Templates: 'board', 'c_suite', 'vp', 'strategic_review'
-        templates = {
-            'board': {
-                'slide_count': 15,
-                'focus_areas': ['strategic_overview', 'financial_performance', 'risk_assessment', 'future_outlook'],
-                'detail_level': 'high_level',
-                'visualization_style': 'executive'
-            },
-            'c_suite': {
-                'slide_count': 20,
-                'focus_areas': ['business_health', 'operational_excellence', 'strategic_initiatives', 'market_intelligence'],
-                'detail_level': 'detailed',
-                'visualization_style': 'analytical'
-            },
-            'vp': {
-                'slide_count': 25,
-                'focus_areas': ['performance_metrics', 'operational_details', 'team_performance', 'resource_optimization'],
-                'detail_level': 'detailed',
-                'visualization_style': 'operational'
-            }
+    // Add executive summary slide
+    presentation.slides.push(
+      await this.createExecutiveSummarySlide(analysisData.executiveSummary)
+    );
+
+    // Add detailed analysis slides
+    presentation.slides.push(
+      await this.createFinancialPerformanceSlide(analysisData.detailedAnalysis.financial)
+    );
+    presentation.slides.push(
+      await this.createOperationalExcellenceSlide(analysisData.detailedAnalysis.operational)
+    );
+    presentation.slides.push(
+      await this.createStrategicInitiativesSlide(analysisData.detailedAnalysis.strategic)
+    );
+    presentation.slides.push(
+      await this.createMarketPositionSlide(analysisData.detailedAnalysis.market)
+    );
+
+    // Add predictive insights
+    presentation.slides.push(
+      await this.createPredictiveInsightsSlide(analysisData.predictiveInsights)
+    );
+
+    // Add strategic recommendations
+    presentation.slides.push(
+      await this.createStrategicRecommendationsSlide(analysisData.strategicRecommendations)
+    );
+
+    // Add appendix with supporting data
+    const appendixSlides = await this.generateSupportingData(analysisData);
+    presentation.slides.push(...appendixSlides);
+
+    return presentation;
+  }
+
+  private async createPresentationStructure(templateType: string): Promise<ExecutivePresentation> {
+    // Templates: 'board', 'c_suite', 'vp', 'strategic_review'
+    const templates: Record<string, PresentationTemplate> = {
+      board: {
+        slideCount: 15,
+        focusAreas: ['strategic_overview', 'financial_performance', 'risk_assessment', 'future_outlook'],
+        detailLevel: 'high_level',
+        visualizationStyle: 'executive'
+      },
+      c_suite: {
+        slideCount: 20,
+        focusAreas: ['business_health', 'operational_excellence', 'strategic_initiatives', 'market_intelligence'],
+        detailLevel: 'detailed',
+        visualizationStyle: 'analytical'
+      },
+      vp: {
+        slideCount: 25,
+        focusAreas: ['performance_metrics', 'operational_details', 'team_performance', 'resource_optimization'],
+        detailLevel: 'detailed',
+        visualizationStyle: 'operational'
+      }
+    };
+
+    const template = templates[templateType] || templates.board;
+
+    return {
+      slides: [],
+      template,
+      metadata: {
+        title: `Monthly Executive Presentation - ${new Date().toLocaleDateString()}`,
+        createdAt: new Date(),
+        templateType
+      }
+    };
+  }
+
+  private async createExecutiveSummarySlide(summary: ExecutiveScorecard): Promise<PresentationSlide> {
+    return {
+      id: 'executive_summary',
+      type: 'scorecard',
+      title: 'Executive Summary',
+      content: {
+        businessHealthScore: summary.businessHealthScore,
+        keyMetrics: [
+          { label: 'Strategic Achievement', value: `${summary.strategicAchievementRate}%` },
+          { label: 'ROI Achievement', value: `${summary.financialRoiAchievement}%` },
+          { label: 'Operational Excellence', value: `${summary.operationalExcellenceScore}/100` },
+          { label: 'Market Position', value: `+${summary.marketPositionImprovement}%` }
+        ]
+      },
+      visualizations: [
+        {
+          type: 'scorecard',
+          title: 'Business Health Score',
+          data: { score: summary.businessHealthScore, maxScore: 100 },
+          config: { width: 400, height: 300 }
         }
+      ]
+    };
+  }
 
-        return ExecutivePresentation(templates[template_type])
+  private async createFinancialPerformanceSlide(financial: FinancialAnalysis): Promise<PresentationSlide> {
+    return {
+      id: 'financial_performance',
+      type: 'analysis',
+      title: 'Financial Performance Analysis',
+      content: {
+        metrics: [
+          { label: 'Total ROI', value: `${financial.roi}%` },
+          { label: 'Revenue Protected', value: `$${financial.revenueProtection.toLocaleString()}` },
+          { label: 'Cost Savings', value: `$${financial.costOptimization.toLocaleString()}` },
+          { label: 'Profit Margin', value: `${financial.profitability}%` }
+        ]
+      },
+      visualizations: [
+        {
+          type: 'bar',
+          title: 'Financial Metrics',
+          data: [
+            { category: 'ROI', value: financial.roi },
+            { category: 'Revenue Protection', value: financial.revenueProtection / 1000 },
+            { category: 'Cost Optimization', value: financial.costOptimization / 1000 },
+            { category: 'Profit Margin', value: financial.profitability * 10 }
+          ],
+          config: { showLegend: false }
+        }
+      ]
+    };
+  }
+
+  private async createOperationalExcellenceSlide(operational: OperationalAnalysis): Promise<PresentationSlide> {
+    return {
+      id: 'operational_excellence',
+      type: 'performance',
+      title: 'Operational Excellence Metrics',
+      content: {
+        efficiency: operational.efficiency,
+        automation: operational.automation,
+        performance: operational.performance,
+        optimization: operational.optimization
+      },
+      visualizations: [
+        {
+          type: 'line',
+          title: 'Operational Performance Trends',
+          data: [
+            { period: 'Q1', efficiency: 85, automation: 60, performance: 90 },
+            { period: 'Q2', efficiency: 87, automation: 63, performance: 92 },
+            { period: 'Q3', efficiency: 89, automation: 67, performance: 94 }
+          ],
+          config: { showLegend: true }
+        }
+      ]
+    };
+  }
+
+  private async createStrategicInitiativesSlide(strategic: StrategicAnalysis): Promise<PresentationSlide> {
+    return {
+      id: 'strategic_initiatives',
+      type: 'progress',
+      title: 'Strategic Initiative Progress',
+      content: {
+        achievementRate: strategic.achievementRate,
+        initiatives: [
+          { name: 'Email Infrastructure', progress: 80, status: 'on_track' },
+          { name: 'Customer Success', progress: 60, status: 'at_risk' },
+          { name: 'Analytics Platform', progress: 40, status: 'on_track' }
+        ]
+      },
+      visualizations: [
+        {
+          type: 'pie',
+          title: 'Initiative Status Distribution',
+          data: [
+            { label: 'On Track', value: 65, color: '#28a745' },
+            { label: 'At Risk', value: 25, color: '#ffc107' },
+            { label: 'Delayed', value: 10, color: '#dc3545' }
+          ],
+          config: { showLegend: true }
+        }
+      ]
+    };
+  }
+
+  private async createMarketPositionSlide(market: MarketAnalysis): Promise<PresentationSlide> {
+    return {
+      id: 'market_position',
+      type: 'competitive',
+      title: 'Market Position Analysis',
+      content: {
+        positionImprovement: market.positionImprovement,
+        competitiveAdvantage: market.competitiveAdvantage,
+        marketShare: market.marketShare,
+        satisfaction: market.customerSatisfaction
+      },
+      visualizations: [
+        {
+          type: 'kpi',
+          title: 'Market KPIs',
+          data: [
+            { label: 'Position Improvement', value: `+${market.positionImprovement}%` },
+            { label: 'Competitive Advantage', value: `${market.competitiveAdvantage}%` },
+            { label: 'Market Share', value: `${market.marketShare}%` },
+            { label: 'Customer Satisfaction', value: `${market.customerSatisfaction}/5.0` }
+          ],
+          config: {}
+        }
+      ]
+    };
+  }
+
+  private async createPredictiveInsightsSlide(insights: PredictiveInsights): Promise<PresentationSlide> {
+    return {
+      id: 'predictive_insights',
+      type: 'forecast',
+      title: 'Predictive Insights & Forecasting',
+      content: {
+        trends: insights.trends,
+        forecasts: insights.forecasts,
+        opportunities: insights.opportunities,
+        risks: insights.risks
+      },
+      visualizations: [
+        {
+          type: 'line',
+          title: 'Performance Forecast',
+          data: insights.forecasts,
+          config: { showLegend: true }
+        }
+      ]
+    };
+  }
+
+  private async createStrategicRecommendationsSlide(recommendations: StrategicRecommendations[]): Promise<PresentationSlide> {
+    const priorityData = recommendations.reduce((acc, rec) => {
+      acc[rec.priority] = (acc[rec.priority] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+
+    return {
+      id: 'strategic_recommendations',
+      type: 'recommendations',
+      title: 'Strategic Recommendations',
+      content: {
+        recommendations,
+        priority: priorityData
+      },
+      visualizations: [
+        {
+          type: 'pie',
+          title: 'Recommendations by Priority',
+          data: Object.entries(priorityData).map(([priority, count]) => ({
+            label: priority.charAt(0).toUpperCase() + priority.slice(1),
+            value: count,
+            color: priority === 'high' ? '#dc3545' : priority === 'medium' ? '#ffc107' : '#28a745'
+          })),
+          config: { showLegend: true }
+        }
+      ]
+    };
+  }
+
+  private async generateSupportingData(analysisData: AnalysisData): Promise<PresentationSlide[]> {
+    return [
+      {
+        id: 'appendix_methodology',
+        type: 'appendix',
+        title: 'Analysis Methodology',
+        content: {
+          description: 'This presentation uses comprehensive business intelligence analysis including financial metrics, operational KPIs, strategic initiatives, and market position data.',
+          dataSources: ['PostHog Analytics', 'Financial Systems', 'Operational Metrics', 'Market Research']
+        },
+        visualizations: []
+      },
+      {
+        id: 'appendix_definitions',
+        type: 'appendix',
+        title: 'Key Definitions',
+        content: {
+          definitions: [
+            { term: 'Business Health Score', definition: 'Weighted composite score of all business performance metrics' },
+            { term: 'ROI Achievement', definition: 'Return on investment compared to target expectations' },
+            { term: 'Strategic Achievement Rate', definition: 'Percentage of strategic initiatives meeting objectives' }
+          ]
+        },
+        visualizations: []
+      }
+    ];
+  }
+}
+
+// Usage example
+async function demonstratePresentationGeneration() {
+  const generator = new ExecutivePresentationGeneratorImpl();
+  
+  // Mock analysis data
+  const analysisData: AnalysisData = {
+    executiveSummary: {
+      businessHealthScore: 87,
+      strategicAchievementRate: 78,
+      financialRoiAchievement: 261,
+      operationalExcellenceScore: 89,
+      marketPositionImprovement: 12,
+      riskAdjustedPerformance: 82
+    },
+    detailedAnalysis: {
+      financial: { roi: 261, revenueProtection: 285000, costOptimization: 45600, profitability: 15.8 },
+      operational: { efficiency: 89, automation: 67, performance: 94, optimization: 78 },
+      strategic: { achievementRate: 78, initiativeProgress: 65, goalCompletion: 82, execution: 75 },
+      market: { positionImprovement: 12, competitiveAdvantage: 85, marketShare: 7.2, customerSatisfaction: 4.7 }
+    },
+    predictiveInsights: {
+      trends: [],
+      forecasts: [],
+      opportunities: [],
+      risks: []
+    },
+    strategicRecommendations: []
+  };
+
+  const presentation = await generator.generateMonthlyPresentation(analysisData, 'c_suite');
+  console.log(`Generated presentation with ${presentation.slides.length} slides`);
+}
 ```
 
 ---

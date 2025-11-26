@@ -143,69 +143,270 @@ This feature adds AI-powered email content optimization to improve campaign perf
 ### 3. Feature Testing Requirements
 
 **Automated Testing:**
-```python
-# tests/unit/test_ai_optimization.py
-import pytest
-from unittest.mock import Mock, patch
-from app.ai.optimizer import EmailOptimizer
+```typescript
+// tests/unit/test-ai-optimization.ts
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { EmailOptimizer } from '../../app/ai/optimizer';
+import { OptimizationResult } from '../../app/ai/types';
 
-class TestEmailOptimizer:
-    def setup_method(self):
-        self.optimizer = EmailOptimizer()
+describe('EmailOptimizer', () => {
+  let optimizer: EmailOptimizer;
 
-    def test_optimize_subject_line_improvement(self):
-        """Test that optimization improves subject line performance."""
-        original_subject = "New product launch"
-        optimized_subject = self.optimizer.optimize_subject_line(
-            original_subject,
-            target_audience="tech_professionals"
-        )
+  beforeEach(() => {
+    optimizer = new EmailOptimizer();
+  });
 
-        # Verify optimization made meaningful changes
-        assert optimized_subject != original_subject
-        assert len(optimized_subject) <= 100  # Character limit
+  it('should improve subject line performance', async () => {
+    const originalSubject = 'New product launch';
+    const optimizedSubject = await optimizer.optimizeSubjectLine(
+      originalSubject,
+      { targetAudience: 'tech_professionals' }
+    );
 
-        # Mock AI model prediction
-        with patch.object(self.optimizer, '_predict_improvement') as mock_predict:
-            mock_predict.return_value = 0.15
-            improvement = self.optimizer._predict_improvement(optimized_subject)
-            assert improvement > 0
+    // Verify optimization made meaningful changes
+    expect(optimizedSubject).not.toBe(originalSubject);
+    expect(optimizedSubject.length).toBeLessThanOrEqual(100);
 
-    def test_optimization_score_calculation(self):
-        """Test optimization score calculation."""
-        content = {
-            'subject': 'Welcome to our platform!',
-            'html': '<h1>Welcome!</h1><p>Get started today.</p>'
-        }
+    // Mock AI model prediction
+    const mockPredictImprovement = vi.spyOn(optimizer, 'predictImprovement');
+    mockPredictImprovement.mockResolvedValue(0.15);
+    
+    const improvement = await optimizer.predictImprovement(optimizedSubject);
+    expect(improvement).toBeGreaterThan(0);
+  });
 
-        score = self.optimizer.calculate_optimization_score(content)
-        assert 0 <= score <= 1
-        assert isinstance(score, float)
+  it('should calculate optimization score correctly', async () => {
+    const content: EmailContent = {
+      subject: 'Welcome to our platform!',
+      html: '<h1>Welcome!</h1><p>Get started today.</p>'
+    };
+
+    const score = await optimizer.calculateOptimizationScore(content);
+    expect(score).toBeGreaterThanOrEqual(0);
+    expect(score).toBeLessThanOrEqual(1);
+    expect(typeof score).toBe('number');
+  });
+
+  it('should handle empty content gracefully', async () => {
+    const emptyContent: EmailContent = {
+      subject: '',
+      html: ''
+    };
+
+    const result = await optimizer.optimizeContent(emptyContent);
+    expect(result.success).toBe(true);
+    expect(result.error).toBeUndefined();
+  });
+
+  it('should provide optimization recommendations', async () => {
+    const content: EmailContent = {
+      subject: 'Limited time offer - buy now!',
+      html: '<h1>SPECIAL DEAL!</h1><p>Click here to get 50% off!</p>'
+    };
+
+    const result = await optimizer.optimizeContent(content);
+    expect(result.recommendations).toBeDefined();
+    expect(result.recommendations.length).toBeGreaterThan(0);
+    expect(result.recommendations).toEqual(
+      expect.arrayContaining([
+        expect.stringContaining('professional'),
+        expect.stringContaining('call-to-action')
+      ])
+    );
+  });
+});
+
+// Supporting types
+interface EmailContent {
+  subject: string;
+  html: string;
+  text?: string;
+}
+
+interface OptimizationOptions {
+  targetAudience: string;
+  confidenceThreshold?: number;
+  includeExplanations?: boolean;
+}
+
+interface AudienceDemographics {
+  ageRange?: string;
+  industry?: string;
+  interests?: string[];
+}
+
+interface EmailOptimizer {
+  optimizeSubjectLine(
+    subject: string,
+    options: OptimizationOptions
+  ): Promise<string>;
+  calculateOptimizationScore(content: EmailContent): Promise<number>;
+  optimizeContent(content: EmailContent): Promise<OptimizationResult>;
+  predictImprovement(content: string): Promise<number>;
+}
 ```
 
 **Integration Testing:**
-```python
-# tests/integration/test_ai_optimization_api.py
-import pytest
-from httpx import AsyncClient
-from app.main import app
+```typescript
+// tests/integration/test-ai-optimization-api.ts
+import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { setupServer } from 'msw/node';
+import { http, HttpResponse } from 'msw';
+import { EmailOptimizationAPI } from '../../api/ai-optimization';
+import { EmailCampaign, OptimizationRequest, OptimizationResponse } from '../../app/ai/types';
 
-@pytest.mark.asyncio
-async def test_optimization_api_integration():
-    async with AsyncClient(app=app, base_url="http://testserver") as client:
-        response = await client.post("/api/v1/ai/optimize-content", json={
-            "content": {
-                "subject": "Product Update",
-                "html": "<h1>Update</h1><p>New features available.</p>"
-            },
-            "audience": {"demographics": {"age_range": "25-45"}}
-        })
+describe('AI Optimization API Integration', () => {
+  let server: ReturnType<typeof setupServer>;
+  let apiClient: EmailOptimizationAPI;
 
-        assert response.status_code == 200
-        data = response.json()
-        assert "optimized_content" in data
-        assert "improvement_score" in data
-        assert "recommendations" in data
+  beforeAll(() => {
+    server = setupServer(
+      http.post('/api/v1/ai/optimize-content', async ({ request }) => {
+        const body = await request.json() as OptimizationRequest;
+        
+        // Mock successful optimization response
+        const response: OptimizationResponse = {
+          optimizedContent: {
+            subject: `Optimized: ${body.content.subject}`,
+            html: body.content.html
+          },
+          improvementScore: 0.15,
+          confidence: 0.85,
+          recommendations: [
+            'Consider using more engaging subject lines',
+            'Add personalization elements'
+          ],
+          explanations: [
+            {
+              type: 'subject_analysis',
+              message: 'Subject line improved for engagement',
+              confidence: 0.85
+            }
+          ]
+        };
+
+        return HttpResponse.json(response);
+      })
+    );
+
+    server.listen();
+    apiClient = new EmailOptimizationAPI();
+  });
+
+  afterAll(() => {
+    server.close();
+  });
+
+  it('should optimize email content successfully', async () => {
+    const request: OptimizationRequest = {
+      content: {
+        subject: 'Product Update',
+        html: '<h1>Update</h1><p>New features available.</p>'
+      },
+      audience: {
+        demographics: {
+          ageRange: '25-45',
+          industry: 'technology'
+        }
+      }
+    };
+
+    const response = await apiClient.optimizeContent(request);
+    
+    expect(response.status).toBe(200);
+    expect(response.data).toBeDefined();
+    expect(response.data.optimizedContent).toBeDefined();
+    expect(response.data.improvementScore).toBeGreaterThan(0);
+    expect(response.data.recommendations).toBeDefined();
+    expect(response.data.recommendations.length).toBeGreaterThan(0);
+  });
+
+  it('should handle optimization errors gracefully', async () => {
+    server.use(
+      http.post('/api/v1/ai/optimize-content', () => {
+        return new HttpResponse('Service unavailable', { status: 503 });
+      })
+    );
+
+    const request: OptimizationRequest = {
+      content: { subject: 'Test', html: '<p>Test content</p>' },
+      audience: { demographics: {} }
+    };
+
+    await expect(apiClient.optimizeContent(request)).rejects.toThrow('Service unavailable');
+  });
+
+  it('should validate optimization request parameters', async () => {
+    const invalidRequest = {
+      content: null,
+      audience: {}
+    };
+
+    await expect(apiClient.optimizeContent(invalidRequest as OptimizationRequest))
+      .rejects.toThrow('Invalid request parameters');
+  });
+});
+
+// Supporting types and classes
+interface OptimizationRequest {
+  content: EmailContent;
+  audience: AudienceData;
+  constraints?: ContentConstraints;
+}
+
+interface OptimizationResponse {
+  optimizedContent: EmailContent;
+  improvementScore: number;
+  confidence: number;
+  recommendations: string[];
+  explanations: OptimizationExplanation[];
+}
+
+interface OptimizationExplanation {
+  type: 'subject_analysis' | 'content_analysis' | 'audience_targeting';
+  message: string;
+  confidence: number;
+}
+
+interface AudienceData {
+  demographics: AudienceDemographics;
+  preferences?: AudiencePreferences;
+}
+
+interface ContentConstraints {
+  maxLength?: number;
+  includeEmojis?: boolean;
+  tone?: 'professional' | 'casual' | 'urgent';
+}
+
+class EmailOptimizationAPI {
+  private readonly baseURL = '/api/v1/ai';
+  
+  async optimizeContent(request: OptimizationRequest): Promise<{
+    status: number;
+    data: OptimizationResponse;
+  }> {
+    try {
+      const response = await fetch(`${this.baseURL}/optimize-content`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.API_TOKEN}`
+        },
+        body: JSON.stringify(request)
+      });
+
+      if (!response.ok) {
+        throw new Error(`API request failed: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      return { status: response.status, data };
+    } catch (error) {
+      throw new Error(`Optimization request failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  }
+}
 ```
 
 ## Feature Categories
@@ -349,56 +550,193 @@ interface OptimizationResponse {
 ### Infrastructure Features
 
 **Database Migration Pattern:**
-```python
-# migrations/0024_add_ai_optimization_features.py
-from sqlalchemy import Column, Integer, String, DateTime, Text, Float, Boolean
-from sqlalchemy.dialects.postgresql import JSONB
-from datetime import datetime
+```typescript
+// migrations/0024_add_ai_optimization_features.ts
+import { sql } from 'postgres';
 
-def upgrade():
-    """Add AI optimization tables and features."""
-    
-    # Create AI optimization cache table
-    op.create_table('ai_optimization_cache',
-        Column('id', Integer, primary_key=True),
-        Column('content_hash', String(64), unique=True, nullable=False),
-        Column('original_subject', Text, nullable=False),
-        Column('optimized_subject', Text, nullable=False),
-        Column('improvement_score', Float, nullable=False),
-        Column('confidence', Float, nullable=False),
-        Column('optimization_type', String(50), nullable=False),
-        Column('created_at', DateTime, default=datetime.utcnow),
-        Column('expires_at', DateTime, nullable=False),
-        Index('ix_optimization_cache_content_hash', 'content_hash'),
-        Index('ix_optimization_cache_expires', 'expires_at')
-    )
+interface ColumnDefinition {
+  name: string;
+  type: 'INTEGER' | 'VARCHAR' | 'TEXT' | 'TIMESTAMP' | 'FLOAT' | 'BOOLEAN' | 'JSONB';
+  primaryKey?: boolean;
+  unique?: boolean;
+  nullable?: boolean;
+  default?: string;
+  references?: string;
+}
 
-    # Create optimization metrics table
-    op.create_table('optimization_metrics',
-        Column('id', Integer, primary_key=True),
-        Column('campaign_id', Integer, nullable=False),
-        Column('original_metrics', JSONB, nullable=False),
-        Column('optimized_metrics', JSONB, nullable=False),
-        Column('improvement_percentage', Float, nullable=False),
-        Column('metric_type', String(50), nullable=False),
-        Column('created_at', DateTime, default=datetime.utcnow),
-        ForeignKey('campaigns.id', ondelete='CASCADE'),
-        Index('ix_optimization_metrics_campaign', 'campaign_id'),
-        Index('ix_optimization_metrics_type', 'metric_type')
-    )
+interface TableDefinition {
+  name: string;
+  columns: ColumnDefinition[];
+  indexes?: string[];
+}
 
-    # Add optimization columns to campaigns table
-    op.add_column('campaigns', Column('ai_optimization_enabled', Boolean, default=False))
-    op.add_column('campaigns', Column('optimization_score', Float, nullable=True))
-    op.add_column('campaigns', Column('last_optimization', DateTime, nullable=True))
+interface MigrationResult {
+  success: boolean;
+  message: string;
+  tablesCreated?: string[];
+  columnsAdded?: string[];
+}
 
-def downgrade():
-    """Remove AI optimization features."""
-    op.drop_column('campaigns', 'last_optimization')
-    op.drop_column('campaigns', 'optimization_score')
-    op.drop_column('campaigns', 'ai_optimization_enabled')
-    op.drop_table('optimization_metrics')
-    op.drop_table('ai_optimization_cache')
+interface DatabaseMigration {
+  upgrade(): Promise<MigrationResult>;
+  downgrade(): Promise<MigrationResult>;
+}
+
+class AIOptimizationMigration implements DatabaseMigration {
+  async upgrade(): Promise<MigrationResult> {
+    try {
+      const results = {
+        success: true,
+        message: 'AI optimization features migration completed',
+        tablesCreated: [] as string[],
+        columnsAdded: [] as string[]
+      };
+
+      // Create AI optimization cache table
+      await sql`
+        CREATE TABLE ai_optimization_cache (
+          id SERIAL PRIMARY KEY,
+          content_hash VARCHAR(64) UNIQUE NOT NULL,
+          original_subject TEXT NOT NULL,
+          optimized_subject TEXT NOT NULL,
+          improvement_score FLOAT NOT NULL,
+          confidence FLOAT NOT NULL,
+          optimization_type VARCHAR(50) NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          expires_at TIMESTAMP NOT NULL
+        );
+      `;
+      results.tablesCreated.push('ai_optimization_cache');
+
+      // Create indexes for optimization cache
+      await sql`CREATE INDEX ix_optimization_cache_content_hash ON ai_optimization_cache(content_hash);`;
+      await sql`CREATE INDEX ix_optimization_cache_expires ON ai_optimization_cache(expires_at);`;
+
+      // Create optimization metrics table
+      await sql`
+        CREATE TABLE optimization_metrics (
+          id SERIAL PRIMARY KEY,
+          campaign_id INTEGER NOT NULL,
+          original_metrics JSONB NOT NULL,
+          optimized_metrics JSONB NOT NULL,
+          improvement_percentage FLOAT NOT NULL,
+          metric_type VARCHAR(50) NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          FOREIGN KEY (campaign_id) REFERENCES campaigns(id) ON DELETE CASCADE
+        );
+      `;
+      results.tablesCreated.push('optimization_metrics');
+
+      // Create indexes for optimization metrics
+      await sql`CREATE INDEX ix_optimization_metrics_campaign ON optimization_metrics(campaign_id);`;
+      await sql`CREATE INDEX ix_optimization_metrics_type ON optimization_metrics(metric_type);`;
+
+      // Add optimization columns to campaigns table
+      await sql`ALTER TABLE campaigns ADD COLUMN ai_optimization_enabled BOOLEAN DEFAULT FALSE;`;
+      results.columnsAdded.push('campaigns.ai_optimization_enabled');
+
+      await sql`ALTER TABLE campaigns ADD COLUMN optimization_score FLOAT;`;
+      results.columnsAdded.push('campaigns.optimization_score');
+
+      await sql`ALTER TABLE campaigns ADD COLUMN last_optimization TIMESTAMP;`;
+      results.columnsAdded.push('campaigns.last_optimization');
+
+      return results;
+    } catch (error) {
+      return {
+        success: false,
+        message: `Migration failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+
+  async downgrade(): Promise<MigrationResult> {
+    try {
+      const results = {
+        success: true,
+        message: 'AI optimization features rollback completed',
+        tablesCreated: [],
+        columnsAdded: []
+      };
+
+      // Remove optimization columns from campaigns table
+      await sql`ALTER TABLE campaigns DROP COLUMN IF EXISTS last_optimization;`;
+      await sql`ALTER TABLE campaigns DROP COLUMN IF EXISTS optimization_score;`;
+      await sql`ALTER TABLE campaigns DROP COLUMN IF EXISTS ai_optimization_enabled;`;
+
+      // Drop optimization metrics table
+      await sql`DROP TABLE IF EXISTS optimization_metrics CASCADE;`;
+
+      // Drop AI optimization cache table
+      await sql`DROP TABLE IF EXISTS ai_optimization_cache CASCADE;`;
+
+      return results;
+    } catch (error) {
+      return {
+        success: false,
+        message: `Rollback failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      };
+    }
+  }
+}
+
+// Migration runner utility
+class MigrationRunner {
+  async runMigration(migration: DatabaseMigration): Promise<boolean> {
+    try {
+      console.log('Starting migration...');
+      const result = await migration.upgrade();
+      
+      if (result.success) {
+        console.log(`Migration completed successfully: ${result.message}`);
+        if (result.tablesCreated) {
+          console.log(`Tables created: ${result.tablesCreated.join(', ')}`);
+        }
+        if (result.columnsAdded) {
+          console.log(`Columns added: ${result.columnsAdded.join(', ')}`);
+        }
+        return true;
+      } else {
+        console.error(`Migration failed: ${result.message}`);
+        return false;
+      }
+    } catch (error) {
+      console.error(`Migration error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      return false;
+    }
+  }
+
+  async rollbackMigration(migration: DatabaseMigration): Promise<boolean> {
+    try {
+      console.log('Starting rollback...');
+      const result = await migration.downgrade();
+      
+      if (result.success) {
+        console.log(`Rollback completed successfully: ${result.message}`);
+        return true;
+      } else {
+        console.error(`Rollback failed: ${result.message}`);
+        return false;
+      }
+    } catch (error) {
+      console.error(`Rollback error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      return false;
+    }
+  }
+}
+
+// Usage example
+async function runAIOptimizationMigration() {
+  const migration = new AIOptimizationMigration();
+  const runner = new MigrationRunner();
+  
+  const success = await runner.runMigration(migration);
+  if (!success) {
+    throw new Error('Migration failed - please check logs');
+  }
+  
+  return success;
+}
 ```
 
 ## Feature Development Guidelines

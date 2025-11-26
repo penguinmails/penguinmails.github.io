@@ -112,42 +112,216 @@ ORDER BY total_revenue DESC;
 - **Lifetime Value (LTV)**: Customer value attribution by acquisition channel
 
 **Marketing ROI Framework**
-```python
-# Marketing ROI Calculation Example
-def calculate_marketing_roi(campaign_data):
-    """
-    Calculate comprehensive marketing campaign ROI
-    """
-    results = []
+```typescript
+// services/marketing-roi-calculator.ts
+interface CampaignData {
+  id: string;
+  totalRevenue: number;
+  mediaSpend: number;
+  creativeCosts: number;
+  personnelCosts: number;
+  technologyCosts: number;
+  leadsGenerated: number;
+  customersAcquired: number;
+}
 
-    for campaign in campaign_data:
-        # Revenue attribution
-        attributed_revenue = campaign['total_revenue']
+interface ROIMetrics {
+  campaignId: string;
+  roiPercentage: number;
+  cac: number; // Customer Acquisition Cost
+  ltv: number; // Lifetime Value
+  ltvCacRatio: number;
+  totalCost: number;
+  netRevenue: number;
+}
 
-        # Cost calculation
-        total_cost = (
-            campaign['media_spend'] +
-            campaign['creative_costs'] +
-            campaign['personnel_costs'] +
-            campaign['technology_costs']
-        )
+interface MarketingROICalculator {
+  calculateMarketingROI(campaignData: CampaignData[]): ROIMetrics[];
+  analyzeCampaignPerformance(campaignId: string): Promise<CampaignPerformanceAnalysis>;
+}
 
-        # ROI calculation
-        roi_percentage = ((attributed_revenue - total_cost) ) * 100
+class MarketingROICalculatorImpl implements MarketingROICalculator {
+  calculateMarketingROI(campaignData: CampaignData[]): ROIMetrics[] {
+    const results: ROIMetrics[] = [];
 
-        # Additional metrics
-        cac = total_cost / campaign['leads_generated']
-        ltv = attributed_revenue / campaign['customers_acquired']
+    for (const campaign of campaignData) {
+      // Revenue attribution
+      const attributedRevenue = campaign.totalRevenue;
 
-        results.append({
-            'campaign_id': campaign['id'],
-            'roi_percentage': round(roi_percentage, 2),
-            'cac': round(cac, 2),
-            'ltv': round(ltv, 2),
-            'ltv_cac_ratio': round(ltv ) if cac > 0 else 0
-        })
+      // Cost calculation
+      const totalCost = (
+        campaign.mediaSpend +
+        campaign.creativeCosts +
+        campaign.personnelCosts +
+        campaign.technologyCosts
+      );
 
-    return results
+      // ROI calculation
+      const netRevenue = attributedRevenue - totalCost;
+      const roiPercentage = (netRevenue / totalCost) * 100;
+
+      // Additional metrics
+      const cac = campaign.leadsGenerated > 0 ? totalCost / campaign.leadsGenerated : 0;
+      const ltv = campaign.customersAcquired > 0 ? attributedRevenue / campaign.customersAcquired : 0;
+      const ltvCacRatio = cac > 0 ? ltv / cac : 0;
+
+      results.push({
+        campaignId: campaign.id,
+        roiPercentage: Math.round(roiPercentage * 100) / 100,
+        cac: Math.round(cac * 100) / 100,
+        ltv: Math.round(ltv * 100) / 100,
+        ltvCacRatio: Math.round(ltvCacRatio * 100) / 100,
+        totalCost,
+        netRevenue
+      });
+    }
+
+    return results;
+  }
+
+  async analyzeCampaignPerformance(campaignId: string): Promise<CampaignPerformanceAnalysis> {
+    // Mock implementation - would fetch actual campaign data
+    const campaignData: CampaignData = {
+      id: campaignId,
+      totalRevenue: 250000,
+      mediaSpend: 50000,
+      creativeCosts: 15000,
+      personnelCosts: 25000,
+      technologyCosts: 10000,
+      leadsGenerated: 1000,
+      customersAcquired: 150
+    };
+
+    const roiResults = this.calculateMarketingROI([campaignData]);
+    const roi = roiResults[0];
+
+    return {
+      campaignId,
+      roiMetrics: roi,
+      performance: {
+        status: roi.roiPercentage > 200 ? 'excellent' : roi.roiPercentage > 100 ? 'good' : 'poor',
+        efficiency: roi.ltvCacRatio > 3 ? 'high' : roi.ltvCacRatio > 1 ? 'medium' : 'low',
+        profitability: roi.netRevenue > 0 ? 'profitable' : 'loss'
+      },
+      recommendations: this.generateRecommendations(roi),
+      benchmarkComparison: {
+        industryAverage: 150,
+        performanceRating: roi.roiPercentage > 150 ? 'above_average' : 'below_average'
+      }
+    };
+  }
+
+  private generateRecommendations(roi: ROIMetrics): string[] {
+    const recommendations: string[] = [];
+
+    if (roi.roiPercentage < 100) {
+      recommendations.push('Consider reducing costs or increasing revenue attribution');
+      recommendations.push('Review campaign targeting and messaging effectiveness');
+    } else if (roi.roiPercentage > 300) {
+      recommendations.push('Excellent performance - consider scaling this campaign');
+      recommendations.push('Analyze success factors for replication in other campaigns');
+    }
+
+    if (roi.ltvCacRatio < 1) {
+      recommendations.push('Customer acquisition cost too high - optimize targeting');
+    } else if (roi.ltvCacRatio > 5) {
+      recommendations.push('High LTV/CAC ratio - consider increasing acquisition spend');
+    }
+
+    if (roi.cac > 100) {
+      recommendations.push('High customer acquisition cost - review media mix strategy');
+    }
+
+    return recommendations;
+  }
+
+  async generatePortfolioAnalysis(campaigns: CampaignData[]): Promise<PortfolioAnalysis> {
+    const roiResults = this.calculateMarketingROI(campaigns);
+    
+    const totalInvestment = roiResults.reduce((sum, roi) => sum + roi.totalCost, 0);
+    const totalRevenue = roiResults.reduce((sum, roi) => sum + (roi.netRevenue + roi.totalCost), 0);
+    const portfolioROI = ((totalRevenue - totalInvestment) / totalInvestment) * 100;
+
+    const averageCAC = roiResults.reduce((sum, roi) => sum + roi.cac, 0) / roiResults.length;
+    const averageLTV = roiResults.reduce((sum, roi) => sum + roi.ltv, 0) / roiResults.length;
+
+    return {
+      totalInvestment,
+      totalRevenue,
+      portfolioROI: Math.round(portfolioROI * 100) / 100,
+      campaignCount: campaigns.length,
+      averageCAC: Math.round(averageCAC * 100) / 100,
+      averageLTV: Math.round(averageLTV * 100) / 100,
+      topPerformers: roiResults
+        .filter(roi => roi.roiPercentage > 200)
+        .sort((a, b) => b.roiPercentage - a.roiPercentage)
+        .slice(0, 5),
+      underperformers: roiResults
+        .filter(roi => roi.roiPercentage < 100)
+        .sort((a, b) => a.roiPercentage - b.roiPercentage)
+        .slice(0, 5)
+    };
+  }
+}
+
+// Supporting interfaces
+interface CampaignPerformanceAnalysis {
+  campaignId: string;
+  roiMetrics: ROIMetrics;
+  performance: {
+    status: 'excellent' | 'good' | 'poor';
+    efficiency: 'high' | 'medium' | 'low';
+    profitability: 'profitable' | 'loss';
+  };
+  recommendations: string[];
+  benchmarkComparison: {
+    industryAverage: number;
+    performanceRating: 'above_average' | 'below_average';
+  };
+}
+
+interface PortfolioAnalysis {
+  totalInvestment: number;
+  totalRevenue: number;
+  portfolioROI: number;
+  campaignCount: number;
+  averageCAC: number;
+  averageLTV: number;
+  topPerformers: ROIMetrics[];
+  underperformers: ROIMetrics[];
+}
+
+// Usage example
+const calculator = new MarketingROICalculatorImpl();
+
+const sampleCampaigns: CampaignData[] = [
+  {
+    id: 'camp_001',
+    totalRevenue: 250000,
+    mediaSpend: 50000,
+    creativeCosts: 15000,
+    personnelCosts: 25000,
+    technologyCosts: 10000,
+    leadsGenerated: 1000,
+    customersAcquired: 150
+  },
+  {
+    id: 'camp_002',
+    totalRevenue: 180000,
+    mediaSpend: 40000,
+    creativeCosts: 12000,
+    personnelCosts: 20000,
+    technologyCosts: 8000,
+    leadsGenerated: 800,
+    customersAcquired: 100
+  }
+];
+
+const roiResults = calculator.calculateMarketingROI(sampleCampaigns);
+console.log('Marketing ROI Analysis:', roiResults);
+
+const portfolioAnalysis = await calculator.generatePortfolioAnalysis(sampleCampaigns);
+console.log('Portfolio Analysis:', portfolioAnalysis);
 ```
 
 #### Product Integration - Development ROI

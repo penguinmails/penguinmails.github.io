@@ -31,34 +31,36 @@ persona: "Technical Writers"
 
 #### Code Examples
 
-```python
-# ✅ Good: Complete, tested, well-commented example
-from penguinmails import PenguinMails
+```typescript
+// ✅ Good: Complete, tested, well-commented example
+import { PenguinMailsClient } from '@penguinmails/sdk';
 
-# Initialize the client with your API key
-client = PenguinMails(api_key="pk_live_your_api_key_here")
+// Initialize the client with your API key
+const client = new PenguinMailsClient({
+  apiKey: 'pk_live_your_api_key_here'
+});
 
-# Create a simple email campaign
-campaign = client.campaigns.create({
-    "name": "Welcome Email Series",
-    "subject": "Welcome to PenguinMails!",
-    "content": {
-        "html": "<h1>Welcome!</h1><p>Thank you for joining us.</p>",
-        "text": "Welcome! Thank you for joining us."
-    },
-    "recipients": [
-        {
-            "email": "newuser@example.com",
-            "personalization": {"name": "New User"}
-        }
-    ]
-})
+// Create a simple email campaign
+const campaign = await client.campaigns.create({
+  name: 'Welcome Email Series',
+  subject: 'Welcome to PenguinMails!',
+  content: {
+    html: '<h1>Welcome!</h1><p>Thank you for joining us.</p>',
+    text: 'Welcome! Thank you for joining us.'
+  },
+  recipients: [
+    {
+      email: 'newuser@example.com',
+      personalization: { name: 'New User' }
+    }
+  ]
+});
 
-print(f"Campaign created with ID: {campaign.id}")
+console.log(`Campaign created with ID: ${campaign.id}`);
 
-# ❌ Bad: Incomplete, missing context, no explanation
-client = PenguinMails("key")
-c = client.campaigns.create({"name": "test"})
+// ❌ Bad: Incomplete, missing context, no explanation
+const client = new PenguinMailsClient('key');
+const campaign = await client.campaigns.create({ name: 'test' });
 ```
 
 ## API Documentation
@@ -123,43 +125,50 @@ Creates a new email campaign for sending to recipients.
 - `409 Conflict`: Campaign name already exists
 
 **Example Usage**:
-```python
-from penguinmails import PenguinMails
+```typescript
+import { PenguinMailsClient, ValidationError, AuthenticationError } from '@penguinmails/sdk';
 
-client = PenguinMails(api_key="your_api_key")
+const client = new PenguinMailsClient({
+  apiKey: 'your_api_key'
+});
 
-campaign_data = {
-    "name": "Product Launch Announcement",
-    "subject": "Exciting News: New Product Launch!",
-    "content": {
-        "html": "<h1>Product Launch</h1><p>Check out our new offering!</p>",
-        "text": "Product Launch - Check out our new offering!"
+const campaignData = {
+  name: 'Product Launch Announcement',
+  subject: 'Exciting News: New Product Launch!',
+  content: {
+    html: '<h1>Product Launch</h1><p>Check out our new offering!</p>',
+    text: 'Product Launch - Check out our new offering!'
+  },
+  recipients: [
+    {
+      email: 'customer1@example.com',
+      personalization: { name: 'John' }
     },
-    "recipients": [
-        {
-            "email": "customer1@example.com",
-            "personalization": {"name": "John"}
-        },
-        {
-            "email": "customer2@example.com",
-            "personalization": {"name": "Jane"}
-        }
-    ],
-    "settings": {
-        "analytics_enabled": True,
-        "ai_optimization": True,
-        "track_opens": True,
-        "track_clicks": True
+    {
+      email: 'customer2@example.com',
+      personalization: { name: 'Jane' }
     }
-}
+  ],
+  settings: {
+    analyticsEnabled: true,
+    aiOptimization: true,
+    trackOpens: true,
+    trackClicks: true
+  }
+};
 
-try:
-    campaign = client.campaigns.create(campaign_data)
-    print(f"Campaign created: {campaign.id}")
-except ValidationError as e:
-    print(f"Validation error: {e}")
-except AuthenticationError as e:
-    print(f"Authentication error: {e}")
+try {
+  const campaign = await client.campaigns.create(campaignData);
+  console.log(`Campaign created: ${campaign.id}`);
+} catch (error) {
+  if (error instanceof ValidationError) {
+    console.log(`Validation error: ${error.message}`);
+  } else if (error instanceof AuthenticationError) {
+    console.log(`Authentication error: ${error.message}`);
+  } else {
+    console.log(`Unexpected error: ${error}`);
+  }
+}
 ```
 
 **Best Practices**:
@@ -192,56 +201,60 @@ This tutorial will walk you through your first steps with the PenguinMails API, 
 4. Copy your API key for use in your application
 
 ### Test Your Connection
-```python
-import requests
+```typescript
+import fetch from 'node-fetch';
 
-# Test API connection
-response = requests.get(
-    'https://api.penguinmails.com/api/v1/health',
-    headers={'Authorization': 'Bearer YOUR_API_KEY'}
-)
+// Test API connection
+const response = await fetch('https://api.penguinmails.com/api/v1/health', {
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+  }
+});
 
-if response.status_code == 200:
-    print("API connection successful!")
-else:
-    print(f"Connection failed: {response.status_code}")
+if (response.ok) {
+  console.log('API connection successful!');
+} else {
+  console.log(`Connection failed: ${response.status}`);
+}
 ```
 
 ## Step 2: Create Your First Campaign
 
 ### Basic Campaign Structure
-```python
-from penguinmails import PenguinMails
+```typescript
+import { PenguinMailsClient } from '@penguinmails/sdk';
 
-# Initialize client
-client = PenguinMails(api_key="YOUR_API_KEY")
+// Initialize client
+const client = new PenguinMailsClient({
+  apiKey: 'YOUR_API_KEY'
+});
 
-# Create campaign data
-campaign_data = {
-    "name": "My First Campaign",
-    "subject": "Welcome to Our Platform!",
-    "content": {
-        "html": "<h1>Welcome!</h1><p>Thank you for joining us.</p>",
-        "text": "Welcome! Thank you for joining us."
-    },
-    "recipients": [
-        {
-            "email": "user@example.com",
-            "personalization": {
-                "name": "John Doe"
-            }
-        }
-    ],
-    "settings": {
-        "analytics_enabled": True,
-        "track_opens": True,
-        "track_clicks": True
+// Create campaign data
+const campaignData = {
+  name: 'My First Campaign',
+  subject: 'Welcome to Our Platform!',
+  content: {
+    html: '<h1>Welcome!</h1><p>Thank you for joining us.</p>',
+    text: 'Welcome! Thank you for joining us.'
+  },
+  recipients: [
+    {
+      email: 'user@example.com',
+      personalization: {
+        name: 'John Doe'
+      }
     }
-}
+  ],
+  settings: {
+    analyticsEnabled: true,
+    trackOpens: true,
+    trackClicks: true
+  }
+};
 
-# Create campaign
-campaign = client.campaigns.create(campaign_data)
-print(f"Campaign created: {campaign.id}")
+// Create campaign
+const campaign = await client.campaigns.create(campaignData);
+console.log(`Campaign created: ${campaign.id}`);
 ```
 
 ### Understanding Campaign States
@@ -254,71 +267,71 @@ print(f"Campaign created: {campaign.id}")
 ## Step 3: Send and Monitor
 
 ### Send Campaign
-```python
-# Send the campaign
-send_result = client.campaigns.send(campaign.id)
-print(f"Sending started: {send_result.status}")
+```typescript
+// Send the campaign
+const sendResult = await client.campaigns.send(campaign.id);
+console.log(`Sending started: ${sendResult.status}`);
 
-# Check campaign status
-status = client.campaigns.get_status(campaign.id)
-print(f"Current status: {status}")
+// Check campaign status
+const status = await client.campaigns.getStatus(campaign.id);
+console.log(`Current status: ${status}`);
 ```
 
 ### Monitor Performance
-```python
-# Get campaign analytics
-analytics = client.analytics.get_campaign_metrics(campaign.id)
+```typescript
+// Get campaign analytics
+const analytics = await client.analytics.getCampaignMetrics(campaign.id);
 
-print(f"Emails sent: {analytics.sent}")
-print(f"Delivery rate: {analytics.delivery_rate:.2%}")
-print(f"Open rate: {analytics.open_rate:.2%}")
-print(f"Click rate: {analytics.click_rate:.2%}")
+console.log(`Emails sent: ${analytics.sent}`);
+console.log(`Delivery rate: ${analytics.deliveryRate.toFixed(2)}%`);
+console.log(`Open rate: ${analytics.openRate.toFixed(2)}%`);
+console.log(`Click rate: ${analytics.clickRate.toFixed(2)}%`);
 ```
 
 ## Step 4: Advanced Features
 
 ### AI Content Optimization
-```python
-# Enable AI optimization
-campaign_data["settings"]["ai_optimization"] = True
+```typescript
+// Enable AI optimization
+campaignData.settings.aiOptimization = true;
 
-# Create campaign with AI optimization
-campaign = client.campaigns.create(campaign_data)
+// Create campaign with AI optimization
+const campaign = await client.campaigns.create(campaignData);
 
-# AI will automatically optimize content based on your audience
-print(f"AI optimization score: {campaign.ai_optimization.improvement_score:.2%}")
+// AI will automatically optimize content based on your audience
+console.log(`AI optimization score: ${campaign.aiOptimization.improvementScore.toFixed(2)}%`);
 ```
 
 ### Personalization
-```python
-# Advanced personalization
-recipients = [
-    {
-        "email": "john@example.com",
-        "personalization": {
-            "name": "John",
-            "company": "Acme Corp",
-            "industry": "Technology",
-            "recent_purchase": "Laptop"
-        }
-    },
-    {
-        "email": "sarah@example.com",
-        "personalization": {
-            "name": "Sarah",
-            "company": "Design Co",
-            "industry": "Design",
-            "recent_purchase": "Software License"
-        }
+```typescript
+// Advanced personalization
+const recipients = [
+  {
+    email: 'john@example.com',
+    personalization: {
+      name: 'John',
+      company: 'Acme Corp',
+      industry: 'Technology',
+      recentPurchase: 'Laptop'
     }
-]
+  },
+  {
+    email: 'sarah@example.com',
+    personalization: {
+      name: 'Sarah',
+      company: 'Design Co',
+      industry: 'Design',
+      recentPurchase: 'Software License'
+    }
+  }
+];
 
-# Use personalization tokens in content
-content = {
-    "html": """<h1>Hello {{name}}!</h1>
-               <p>We noticed you recently purchased a {{recent_purchase}}
-               from {{company}}. Here's something special for you!</p>"""
-}
+// Use personalization tokens in content
+const content = {
+  html: `<h1>Hello {{name}}!</h1>
+         <p>We noticed you recently purchased a {{recentPurchase}}
+         from {{company}}. Here's something special for you!</p>`
+};
 ```
 
 ## Troubleshooting
@@ -326,33 +339,39 @@ content = {
 ### Common Issues
 
 #### Authentication Errors
-```python
-# 401: Invalid API key
-if response.status_code == 401:
-    print("Check your API key is correct and active")
+```typescript
+// 401: Invalid API key
+if (response.status === 401) {
+  console.log('Check your API key is correct and active');
+}
 
-# 403: Insufficient permissions
-if response.status_code == 403:
-    print("Your API key doesn't have permission for this action")
+// 403: Insufficient permissions
+if (response.status === 403) {
+  console.log('Your API key doesn\'t have permission for this action');
+}
 ```
 
 #### Rate Limiting
-```python
-# 429: Rate limit exceeded
-if response.status_code == 429:
-    print("You've exceeded the rate limit. Wait before retrying.")
-    retry_after = int(response.headers.get('Retry-After', 60))
-    time.sleep(retry_after)
+```typescript
+// 429: Rate limit exceeded
+if (response.status === 429) {
+  console.log('You\'ve exceeded the rate limit. Wait before retrying.');
+  const retryAfter = parseInt(response.headers.get('Retry-After') || '60');
+  await new Promise(resolve => setTimeout(resolve, retryAfter * 1000));
+}
 ```
 
 #### Validation Errors
-```python
-# 400: Invalid request data
-try:
-    campaign = client.campaigns.create(invalid_data)
-except ValidationError as e:
-    print(f"Validation error: {e.details}")
-    # Check the details for specific field issues
+```typescript
+// 400: Invalid request data
+try {
+  const campaign = await client.campaigns.create(invalidData);
+} catch (error) {
+  if (error instanceof ValidationError) {
+    console.log(`Validation error: ${error.details}`);
+    // Check the details for specific field issues
+  }
+}
 ```
 
 ## Next Steps
@@ -388,10 +407,11 @@ Congratulations! You've created and sent your first campaign with PenguinMails.
 
 #### Code Blocks
 ```markdown
-```python
-# Always specify language for syntax highlighting
-def example_function():
-    pass
+```typescript
+// Always specify language for syntax highlighting
+function exampleFunction(): void {
+  // TypeScript function example
+}
 ```
 
 Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and commands `npm run build`.

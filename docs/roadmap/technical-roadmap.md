@@ -205,10 +205,12 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Core Features
 
-- **[Analytics](../features/analytics.md)** - Performance tracking and insights (Level 1-2)
-- **[Email Warmups](../features/email-warmups.md)** - Email reputation management (Level 2)
-- **[Unified Inbox](../features/unified-inbox.md)** - Centralized message management (Level 2-3)
-- **[Free Mailbox Creation](../features/free-mailbox-creation.md)** - Automated mailbox provisioning (Level 1)
+- **[Analytics](../features/analytics/core-analytics/overview.md)** - Performance tracking and insights (Level 1-2)
+- **[Email Warmups](../features/warmup/email-warmups/overview.md)** - Email reputation management (Level 2)
+- **[Unified Inbox](../features/inbox/unified-inbox/overview.md)** - Centralized message management (Level 2-3)
+- **[Free Mailbox Creation](../features/infrastructure/free-mailbox-creation/overview.md)** - Automated mailbox provisioning (Level 1)
+- **[Email Infrastructure Setup](../features/infrastructure/email-infrastructure-setup.md)** - VPS provisioning, SMTP, DNS automation (Level 1)
+- **[Security Features](../features/compliance/security-features.md)** - SSL/TLS, encryption, access control (Level 1)
 - **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Load balancing and deliverability (Level 2-3)
 
 ### User Workflows

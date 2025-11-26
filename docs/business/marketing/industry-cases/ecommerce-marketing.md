@@ -329,23 +329,200 @@ Day 5: Final offer with urgency messaging
 ### MVP Personalization Implementation
 
 #### MVP Product Recommendation System
-```python
-# MVP basic recommendation logic
-def generate_basic_recommendations(customer_id, category=None):
-    customer_profile = get_customer_profile(customer_id)
+```typescript
+// services/mvp-recommendation-engine.ts
+interface CustomerProfile {
+  id: string;
+  browsingHistory: ProductView[];
+  purchaseHistory: Purchase[];
+  preferences: CustomerPreferences;
+  demographics: CustomerDemographics;
+}
 
-    # Basic collaborative filtering
-    similar_customers = find_similar_customers_basic(customer_profile)
-    basic_recommendations = get_popular_products_among_similar(similar_customers)
+interface Product {
+  id: string;
+  name: string;
+  category: string;
+  price: number;
+  availability: boolean;
+  attributes: Record<string, unknown>;
+}
 
-    # Basic content-based filtering
-    viewed_products = get_recently_viewed_products(customer_id)
-    content_recommendations = find_similar_products_basic(viewed_products)
+interface RecommendationEngine {
+  generateBasicRecommendations(customerId: string, category?: string): Promise<Product[]>;
+  findSimilarCustomersBasic(profile: CustomerProfile): Promise<CustomerProfile[]>;
+  getPopularProductsAmongSimilar(customers: CustomerProfile[]): Promise<Product[]>;
+  findSimilarProductsBasic(products: ProductView[]): Promise<Product[]>;
+  mergeRecommendationsBasic(collab: Product[], content: Product[]): Product[];
+  filterByAvailability(products: Product[], category?: string): Product[];
+}
 
-    # Basic combination
-    recommendations = merge_recommendations_basic(basic_recommendations, content_recommendations)
+class MVPRecommendationEngine implements RecommendationEngine {
+  async generateBasicRecommendations(customerId: string, category?: string): Promise<Product[]> {
+    const customerProfile = await this.getCustomerProfile(customerId);
 
-    return filter_by_availability(recommendations, category)
+    // Basic collaborative filtering
+    const similarCustomers = await this.findSimilarCustomersBasic(customerProfile);
+    const basicRecommendations = await this.getPopularProductsAmongSimilar(similarCustomers);
+
+    // Basic content-based filtering
+    const viewedProducts = await this.getRecentlyViewedProducts(customerId);
+    const contentRecommendations = await this.findSimilarProductsBasic(viewedProducts);
+
+    // Basic combination
+    const combinedRecommendations = this.mergeRecommendationsBasic(
+      basicRecommendations,
+      contentRecommendations
+    );
+
+    return this.filterByAvailability(combinedRecommendations, category);
+  }
+
+  private async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
+    // Mock implementation - would fetch from customer database
+    return {
+      id: customerId,
+      browsingHistory: [
+        { productId: 'prod_1', viewedAt: new Date(), category: 'electronics' },
+        { productId: 'prod_2', viewedAt: new Date(), category: 'electronics' }
+      ],
+      purchaseHistory: [
+        { productId: 'prod_3', purchasedAt: new Date(), amount: 99.99 }
+      ],
+      preferences: { preferredBrands: ['Brand A', 'Brand B'] },
+      demographics: { ageRange: '25-35', location: 'US' }
+    };
+  }
+
+  async findSimilarCustomersBasic(profile: CustomerProfile): Promise<CustomerProfile[]> {
+    // Mock implementation - would use basic similarity matching
+    return [
+      {
+        id: 'similar_1',
+        browsingHistory: profile.browsingHistory,
+        purchaseHistory: [],
+        preferences: profile.preferences,
+        demographics: profile.demographics
+      }
+    ];
+  }
+
+  async getPopularProductsAmongSimilar(customers: CustomerProfile[]): Promise<Product[]> {
+    // Mock implementation - would aggregate popular products
+    return [
+      {
+        id: 'prod_popular_1',
+        name: 'Popular Product 1',
+        category: 'electronics',
+        price: 199.99,
+        availability: true,
+        attributes: { rating: 4.5, reviews: 150 }
+      },
+      {
+        id: 'prod_popular_2',
+        name: 'Popular Product 2',
+        category: 'electronics',
+        price: 149.99,
+        availability: true,
+        attributes: { rating: 4.3, reviews: 89 }
+      }
+    ];
+  }
+
+  async getRecentlyViewedProducts(customerId: string): Promise<ProductView[]> {
+    // Mock implementation - would fetch recent product views
+    return [
+      { productId: 'prod_1', viewedAt: new Date(), category: 'electronics' },
+      { productId: 'prod_2', viewedAt: new Date(), category: 'electronics' }
+    ];
+  }
+
+  async findSimilarProductsBasic(products: ProductView[]): Promise<Product[]> {
+    // Mock implementation - would find products with similar attributes
+    return [
+      {
+        id: 'prod_similar_1',
+        name: 'Similar Product 1',
+        category: 'electronics',
+        price: 179.99,
+        availability: true,
+        attributes: { rating: 4.4, reviews: 75 }
+      },
+      {
+        id: 'prod_similar_2',
+        name: 'Similar Product 2',
+        category: 'electronics',
+        price: 129.99,
+        availability: true,
+        attributes: { rating: 4.2, reviews: 120 }
+      }
+    ];
+  }
+
+  mergeRecommendationsBasic(collaborative: Product[], content: Product[]): Product[] {
+    // Simple merging strategy - prioritize collaborative filtering results
+    const merged = [...collaborative];
+    
+    // Add content-based recommendations that aren't already in the list
+    for (const product of content) {
+      if (!merged.find(p => p.id === product.id)) {
+        merged.push(product);
+      }
+    }
+    
+    // Limit to top 10 recommendations
+    return merged.slice(0, 10);
+  }
+
+  filterByAvailability(products: Product[], category?: string): Product[] {
+    return products
+      .filter(product => product.availability)
+      .filter(product => !category || product.category === category);
+  }
+}
+
+// Supporting interfaces
+interface ProductView {
+  productId: string;
+  viewedAt: Date;
+  category: string;
+}
+
+interface Purchase {
+  productId: string;
+  purchasedAt: Date;
+  amount: number;
+}
+
+interface CustomerPreferences {
+  preferredBrands: string[];
+  priceRange?: { min: number; max: number };
+}
+
+interface CustomerDemographics {
+  ageRange: string;
+  location: string;
+}
+
+// Usage example
+const recommendationEngine = new MVPRecommendationEngine();
+
+async function demonstrateBasicRecommendations() {
+  try {
+    const customerId = 'cust_123';
+    const recommendations = await recommendationEngine.generateBasicRecommendations(
+      customerId,
+      'electronics'
+    );
+    
+    console.log(`Generated ${recommendations.length} recommendations for customer ${customerId}`);
+    recommendations.forEach(product => {
+      console.log(`- ${product.name} (${product.price})`);
+    });
+  } catch (error) {
+    console.error('Error generating recommendations:', error);
+  }
+}
 ```
 
 #### MVP Email Personalization

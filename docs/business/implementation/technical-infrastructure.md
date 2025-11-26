@@ -23,7 +23,7 @@ persona: "Documentation Users"
 | **1K-10K** | 1 vCPU, 1-2GB RAM, 25-50GB SSD, 1-2TB BW | $6-$15 | DigitalOcean Basic 1GB ($6), DO Basic 2GB ($12), Vultr Regular 1GB ($10), AWS t4g.micro ($6-8) |
 | **10K-100K** | 1-2 vCPU, 2-4GB RAM, 50-80GB SSD, 2-4TB BW | $12-$40 | DO Basic 2-4GB ($18-24), Vultr Regular), AWS t4g.small) |
 | **100K-1M** | 2-4 vCPU, 4-8GB RAM, 100-160GB SSD, 4-6TB BW | $20-$120 | Vultr HP 4-8GB ($24-48), DO Basic), AWS t4g.large ) |
-| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110), AWS m5.xlarge+ ) |
+| **1M+** | 4-8+ vCPU, 8-16GB+ RAM, 160-320GB+ SSD, 6-8TB+ BW; multi-server | $300-$1700+ (multi-node) | DO 16GB+ ($96+), Vultr HP/VX1 16GB+ ($48-110), AWS m5.xlarge+ |
 
 ### Implementation Notes
 
@@ -313,7 +313,7 @@ Multiple servers for load balancing
 - **Amavisd-new**: Content filter integration
 
 ##### Supporting Software
-- **MySQL/PostgreSQL**: Database for user management
+- **PostgreSQL**: Database for user management (with NileDB multi-tenancy)
 - **Apache/Nginx**: Web server for administration
 - **Roundcube/SquirrelMail**: Webmail interface
 - **Fail2ban**: Intrusion prevention system
@@ -461,10 +461,10 @@ net.core.wmem_max = 16777216
 
 #### Database Optimization
 ```sql
--- MySQL performance optimization
-SET GLOBAL innodb_buffer_pool_size = 2147483648; -- 2GB
-SET GLOBAL query_cache_size = 134217728; -- 128MB
-SET GLOBAL max_connections = 200;
+-- PostgreSQL performance optimization
+ALTER SYSTEM SET shared_buffers = '512MB';
+ALTER SYSTEM SET effective_cache_size = '2GB';
+ALTER SYSTEM SET max_connections = 200;
 ```
 
 ### Email Queue Management

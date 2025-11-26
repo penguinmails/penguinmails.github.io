@@ -546,7 +546,7 @@ compliance_framework:
 
 ### Advanced Real-Time Integration (2026+)
 **Post-MVP Advanced Architecture:**
-- **Event-Driven Architecture:** Apache Kafka for event streaming
+- **Event-Driven Architecture:** PostgreSQL + Redis for event streaming
 - **Real-Time Data Sync:** <5 second latency for real-time integrations
 - **Advanced APIs:** GraphQL support for efficient data querying
 - **Microservices:** Service mesh for advanced integration patterns

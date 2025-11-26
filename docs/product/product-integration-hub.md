@@ -107,35 +107,368 @@ ORDER BY associated_revenue DESC;
 - **HubSpot Marketing**: Content marketing and product education
 
 **Product Launch Coordination**
-```python
-# Product Launch Coordination Example
-class ProductLaunchCoordinator:
-    def __init__(self, marketing_api, product_api):
-        self.marketing_api = marketing_api
-        self.product_api = product_api
+```typescript
+// services/product-launch-coordinator.ts
+interface LaunchData {
+  productName: string;
+  newFeatures: string[];
+  launchDate: Date;
+  targetAudience: string[];
+  marketingChannels: string[];
+}
 
-    def coordinate_launch(self, launch_data):
-        """
-        Coordinate product launch across marketing and product teams
-        """
-        # 1. Sync product roadmap with marketing campaigns
-        marketing_campaigns = self.marketing_api.get_campaigns({
-            'product_launch': launch_data['product_name']
-        })
+interface MarketingCampaign {
+  id: string;
+  name: string;
+  type: string;
+  startDate: Date;
+  endDate: Date;
+  status: 'draft' | 'active' | 'completed';
+}
 
-        # 2. Ensure feature messaging alignment
-        feature_messaging = self.product_api.get_feature_messaging({
-            'feature_ids': launch_data['new_features']
-        })
+interface FeatureMessaging {
+  featureId: string;
+  messaging: string;
+  positioning: string;
+  keyBenefits: string[];
+}
 
-        # 3. Coordinate timing and messaging
-        launch_timeline = self.create_launch_timeline(launch_data, marketing_campaigns)
+interface LaunchTimeline {
+  phases: LaunchPhase[];
+  milestones: LaunchMilestone[];
+  dependencies: LaunchDependency[];
+}
 
-        return {
-            'launch_timeline': launch_timeline,
-            'marketing_alignment': self.validate_messaging_alignment(feature_messaging),
-            'success_metrics': self.define_success_metrics(launch_data)
-        }
+interface LaunchPhase {
+  name: string;
+  startDate: Date;
+  endDate: Date;
+  activities: string[];
+  owner: string;
+}
+
+interface LaunchMilestone {
+  name: string;
+  date: Date;
+  description: string;
+  critical: boolean;
+}
+
+interface LaunchDependency {
+  from: string;
+  to: string;
+  type: 'approval' | 'resource' | 'timeline';
+}
+
+interface ProductLaunchCoordinator {
+  coordinateLaunch(launchData: LaunchData): Promise<LaunchCoordinationResult>;
+}
+
+class ProductLaunchCoordinatorImpl implements ProductLaunchCoordinator {
+  private marketingAPI: MarketingAPI;
+  private productAPI: ProductAPI;
+
+  constructor(marketingAPI: MarketingAPI, productAPI: ProductAPI) {
+    this.marketingAPI = marketingAPI;
+    this.productAPI = productAPI;
+  }
+
+  async coordinateLaunch(launchData: LaunchData): Promise<LaunchCoordinationResult> {
+    try {
+      // 1. Sync product roadmap with marketing campaigns
+      const marketingCampaigns = await this.marketingAPI.getCampaigns({
+        product_launch: launchData.productName
+      });
+
+      // 2. Ensure feature messaging alignment
+      const featureMessaging = await this.productAPI.getFeatureMessaging({
+        featureIds: launchData.newFeatures
+      });
+
+      // 3. Coordinate timing and messaging
+      const launchTimeline = await this.createLaunchTimeline(launchData, marketingCampaigns);
+
+      // 4. Validate alignment and define success metrics
+      const alignment = this.validateMessagingAlignment(featureMessaging);
+      const successMetrics = this.defineSuccessMetrics(launchData);
+
+      return {
+        launchTimeline,
+        marketingAlignment: alignment,
+        successMetrics,
+        coordinationStatus: 'ready',
+        recommendations: this.generateCoordinationRecommendations(launchData, alignment)
+      };
+    } catch (error) {
+      throw new Error(`Launch coordination failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  }
+
+  private async createLaunchTimeline(launchData: LaunchData, campaigns: MarketingCampaign[]): Promise<LaunchTimeline> {
+    const launchDate = new Date(launchData.launchDate);
+    
+    // Create coordinated timeline phases
+    const phases: LaunchPhase[] = [
+      {
+        name: 'Pre-Launch Preparation',
+        startDate: new Date(launchDate.getTime() - 30 * 24 * 60 * 60 * 1000), // 30 days before
+        endDate: new Date(launchDate.getTime() - 7 * 24 * 60 * 60 * 1000), // 7 days before
+        activities: [
+          'Feature completion and testing',
+          'Marketing campaign development',
+          'Sales team training',
+          'Customer success preparation'
+        ],
+        owner: 'Product Team'
+      },
+      {
+        name: 'Launch Week',
+        startDate: new Date(launchDate.getTime() - 7 * 24 * 60 * 60 * 1000),
+        endDate: new Date(launchDate.getTime() + 7 * 24 * 60 * 60 * 1000),
+        activities: [
+          'Launch announcement',
+          'Marketing campaign activation',
+          'Customer onboarding',
+          'Performance monitoring'
+        ],
+        owner: 'Cross-functional Team'
+      },
+      {
+        name: 'Post-Launch Optimization',
+        startDate: new Date(launchDate.getTime() + 7 * 24 * 60 * 60 * 1000),
+        endDate: new Date(launchDate.getTime() + 30 * 24 * 60 * 60 * 1000), // 30 days after
+        activities: [
+          'Performance analysis',
+          'Customer feedback collection',
+          'Feature optimization',
+          'Success metrics evaluation'
+        ],
+        owner: 'Product Team'
+      }
+    ];
+
+    const milestones: LaunchMilestone[] = [
+      {
+        name: 'Feature Freeze',
+        date: new Date(launchDate.getTime() - 14 * 24 * 60 * 60 * 1000),
+        description: 'No more feature changes allowed',
+        critical: true
+      },
+      {
+        name: 'Marketing Campaign Launch',
+        date: new Date(launchDate.getTime() - 7 * 24 * 60 * 60 * 1000),
+        description: 'Start pre-launch marketing activities',
+        critical: true
+      },
+      {
+        name: 'Product Launch',
+        date: launchDate,
+        description: 'Official product launch',
+        critical: true
+      },
+      {
+        name: 'Launch Review',
+        date: new Date(launchDate.getTime() + 30 * 24 * 60 * 60 * 1000),
+        description: 'Comprehensive launch performance review',
+        critical: false
+      }
+    ];
+
+    const dependencies: LaunchDependency[] = [
+      {
+        from: 'Feature Freeze',
+        to: 'Marketing Campaign Launch',
+        type: 'timeline'
+      },
+      {
+        from: 'Marketing Campaign Launch',
+        to: 'Product Launch',
+        type: 'timeline'
+      },
+      {
+        from: 'Sales team training',
+        to: 'Product Launch',
+        type: 'approval'
+      }
+    ];
+
+    return { phases, milestones, dependencies };
+  }
+
+  private validateMessagingAlignment(featureMessaging: FeatureMessaging[]): MessagingAlignment {
+    const alignmentChecks = featureMessaging.map(messaging => ({
+      featureId: messaging.featureId,
+      messaging: messaging.messaging,
+      positioning: messaging.positioning,
+      alignment: this.assessMessagingAlignment(messaging),
+      keyBenefits: messaging.keyBenefits
+    }));
+
+    const overallAlignment = alignmentChecks.every(check => check.alignment === 'aligned');
+
+    return {
+      status: overallAlignment ? 'aligned' : 'misaligned',
+      featureAlignments: alignmentChecks,
+      recommendations: overallAlignment ? [] : ['Review messaging alignment across features'],
+      coordinationScore: overallAlignment ? 95 : 70
+    };
+  }
+
+  private assessMessagingAlignment(messaging: FeatureMessaging): 'aligned' | 'misaligned' | 'needs_review' {
+    // Mock implementation - would assess messaging consistency
+    return messaging.messaging && messaging.positioning ? 'aligned' : 'needs_review';
+  }
+
+  private defineSuccessMetrics(launchData: LaunchData): LaunchSuccessMetrics {
+    return {
+      launchMetrics: {
+        launchOnTime: true,
+        featureCompletionRate: 100,
+        marketingCampaignsActive: launchData.marketingChannels.length,
+        salesTeamReadiness: 95
+      },
+      performanceMetrics: {
+        customerAdoption: { target: 25, current: 0 },
+        revenueImpact: { target: 100000, current: 0 },
+        customerSatisfaction: { target: 4.5, current: 0 },
+        featureUsage: { target: 60, current: 0 }
+      },
+      timeline: {
+        totalDuration: 60, // days
+        criticalPath: ['Feature development', 'Marketing preparation', 'Sales training', 'Launch'],
+        riskFactors: ['Feature scope creep', 'Marketing timeline', 'Resource availability']
+      },
+      successCriteria: [
+        'Launch completed within 5% of target date',
+        '90% feature completion by launch',
+        '25% customer adoption within 30 days',
+        '4.5+ customer satisfaction score'
+      ]
+    };
+  }
+
+  private generateCoordinationRecommendations(
+    launchData: LaunchData,
+    alignment: MessagingAlignment
+  ): string[] {
+    const recommendations: string[] = [];
+
+    if (alignment.coordinationScore < 90) {
+      recommendations.push('Review and align feature messaging across teams');
+    }
+
+    if (launchData.marketingChannels.length < 3) {
+      recommendations.push('Consider expanding marketing channel coverage');
+    }
+
+    const daysUntilLaunch = Math.ceil(
+      (new Date(launchData.launchDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
+    );
+
+    if (daysUntilLaunch < 30) {
+      recommendations.push('Accelerate pre-launch preparation timeline');
+    }
+
+    recommendations.push('Schedule daily standups during launch week');
+    recommendations.push('Prepare contingency plans for potential issues');
+
+    return recommendations;
+  }
+}
+
+// Supporting interfaces and classes
+interface MarketingAPI {
+  getCampaigns(criteria: Record<string, string>): Promise<MarketingCampaign[]>;
+}
+
+interface ProductAPI {
+  getFeatureMessaging(criteria: { featureIds: string[] }): Promise<FeatureMessaging[]>;
+}
+
+interface LaunchCoordinationResult {
+  launchTimeline: LaunchTimeline;
+  marketingAlignment: MessagingAlignment;
+  successMetrics: LaunchSuccessMetrics;
+  coordinationStatus: 'ready' | 'needs_attention' | 'blocked';
+  recommendations: string[];
+}
+
+interface MessagingAlignment {
+  status: 'aligned' | 'misaligned' | 'needs_review';
+  featureAlignments: Array<{
+    featureId: string;
+    messaging: string;
+    positioning: string;
+    alignment: 'aligned' | 'misaligned' | 'needs_review';
+    keyBenefits: string[];
+  }>;
+  recommendations: string[];
+  coordinationScore: number;
+}
+
+interface LaunchSuccessMetrics {
+  launchMetrics: Record<string, unknown>;
+  performanceMetrics: Record<string, { target: number; current: number }>;
+  timeline: {
+    totalDuration: number;
+    criticalPath: string[];
+    riskFactors: string[];
+  };
+  successCriteria: string[];
+}
+
+// Mock implementations
+class MarketingAPIImpl implements MarketingAPI {
+  async getCampaigns(criteria: Record<string, string>): Promise<MarketingCampaign[]> {
+    return [
+      {
+        id: 'camp_001',
+        name: 'Product Launch Campaign',
+        type: 'product_launch',
+        startDate: new Date(),
+        endDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        status: 'draft'
+      }
+    ];
+  }
+}
+
+class ProductAPIImpl implements ProductAPI {
+  async getFeatureMessaging(criteria: { featureIds: string[] }): Promise<FeatureMessaging[]> {
+    return criteria.featureIds.map(id => ({
+      featureId: id,
+      messaging: `Feature ${id} messaging`,
+      positioning: `Positioning for ${id}`,
+      keyBenefits: [`Benefit 1 for ${id}`, `Benefit 2 for ${id}`]
+    }));
+  }
+}
+
+// Usage example
+const marketingAPI = new MarketingAPIImpl();
+const productAPI = new ProductAPIImpl();
+const coordinator = new ProductLaunchCoordinatorImpl(marketingAPI, productAPI);
+
+async function demonstrateLaunchCoordination() {
+  try {
+    const launchData: LaunchData = {
+      productName: 'AI-Powered Analytics Dashboard',
+      newFeatures: ['feature_1', 'feature_2', 'feature_3'],
+      launchDate: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000), // 45 days from now
+      targetAudience: ['enterprise_customers', 'power_users'],
+      marketingChannels: ['email', 'social_media', 'webinars', 'content_marketing']
+    };
+
+    const result = await coordinator.coordinateLaunch(launchData);
+    
+    console.log('Launch coordination completed:');
+    console.log('- Status:', result.coordinationStatus);
+    console.log('- Alignment score:', result.marketingAlignment.coordinationScore);
+    console.log('- Recommendations:', result.recommendations);
+  } catch (error) {
+    console.error('Launch coordination failed:', error);
+  }
+}
 ```
 
 #### Customer Success Integration - Product Feedback
@@ -164,36 +497,315 @@ class ProductLaunchCoordinator:
 - **Usability Testing**: Product usability and experience validation
 
 **Quantitative Validation**
-```python
-# Market Validation Metrics Framework
-def calculate_market_validation_score(product_data):
-    """
-    Calculate comprehensive market validation score
-    """
-    metrics = {
-        'user_engagement': calculate_engagement_score(product_data['usage_metrics']),
-        'feature_adoption': calculate_adoption_score(product_data['adoption_data']),
-        'customer_satisfaction': calculate_satisfaction_score(product_data['survey_data']),
-        'market_fit': calculate_market_fit_score(product_data['market_research']),
-        'competitive_analysis': calculate_competitive_score(product_data['competitive_data'])
-    }
+```typescript
+// services/market-validation-analyzer.ts
+interface ProductData {
+  usageMetrics: UsageMetrics;
+  adoptionData: AdoptionData;
+  surveyData: SurveyData;
+  marketResearch: MarketResearchData;
+  competitiveData: CompetitiveAnalysisData;
+}
 
-    # Weighted validation score
-    weights = {
-        'user_engagement': 0.25,
-        'feature_adoption': 0.30,
-        'customer_satisfaction': 0.25,
-        'market_fit': 0.15,
-        'competitive_analysis': 0.05
-    }
+interface UsageMetrics {
+  dailyActiveUsers: number;
+  weeklyActiveUsers: number;
+  monthlyActiveUsers: number;
+  sessionDuration: number;
+  featureUsage: Record<string, number>;
+  retentionRate: number;
+}
 
-    validation_score = sum(metrics[metric] * weights[metric] for metric in metrics)
+interface AdoptionData {
+  totalUsers: number;
+  powerUsers: number;
+  casualUsers: number;
+  adoptionRate: number;
+  featureAdoptionRates: Record<string, number>;
+  timeToAdoption: number;
+}
+
+interface SurveyData {
+  npsScore: number;
+  satisfactionScore: number;
+  likelihoodToRecommend: number;
+  featureRatings: Record<string, number>;
+  feedbackVolume: number;
+}
+
+interface MarketResearchData {
+  targetMarketSize: number;
+  marketPenetration: number;
+  growthRate: number;
+  customerSegmentation: Record<string, number>;
+  marketTrends: string[];
+}
+
+interface CompetitiveAnalysisData {
+  marketPosition: number;
+  competitiveAdvantage: number;
+  differentiationScore: number;
+  competitiveBenchmarks: Record<string, number>;
+}
+
+interface ValidationResults {
+  overallScore: number;
+  componentScores: ValidationComponents;
+  validationStatus: 'strong' | 'moderate' | 'weak' | 'needs_improvement';
+  recommendations: string[];
+  benchmarks: ValidationBenchmarks;
+}
+
+interface ValidationComponents {
+  userEngagement: number;
+  featureAdoption: number;
+  customerSatisfaction: number;
+  marketFit: number;
+  competitiveAnalysis: number;
+}
+
+interface ValidationBenchmarks {
+  industryAverage: number;
+  topPerformers: number;
+  targetScore: number;
+}
+
+interface MarketValidationAnalyzer {
+  calculateMarketValidationScore(productData: ProductData): Promise<ValidationResults>;
+}
+
+class MarketValidationAnalyzerImpl implements MarketValidationAnalyzer {
+  async calculateMarketValidationScore(productData: ProductData): Promise<ValidationResults> {
+    const metrics = {
+      userEngagement: this.calculateEngagementScore(productData.usageMetrics),
+      featureAdoption: this.calculateAdoptionScore(productData.adoptionData),
+      customerSatisfaction: this.calculateSatisfactionScore(productData.surveyData),
+      marketFit: this.calculateMarketFitScore(productData.marketResearch),
+      competitiveAnalysis: this.calculateCompetitiveScore(productData.competitiveData)
+    };
+
+    // Weighted validation score
+    const weights = {
+      userEngagement: 0.25,
+      featureAdoption: 0.30,
+      customerSatisfaction: 0.25,
+      marketFit: 0.15,
+      competitiveAnalysis: 0.05
+    };
+
+    const validationScore = Object.entries(metrics).reduce((total, [metric, score]) => {
+      return total + (score * weights[metric as keyof typeof weights]);
+    }, 0);
+
+    const validationStatus = this.getValidationStatus(validationScore);
+    const recommendations = this.generateRecommendations(metrics, validationScore);
+    const benchmarks = this.generateBenchmarks(validationScore);
 
     return {
-        'overall_score': validation_score,
-        'component_scores': metrics,
-        'validation_status': get_validation_status(validation_score)
+      overallScore: Math.round(validationScore * 100) / 100,
+      componentScores: metrics,
+      validationStatus,
+      recommendations,
+      benchmarks
+    };
+  }
+
+  private calculateEngagementScore(metrics: UsageMetrics): number {
+    const engagementFactors = [
+      this.normalizeMetric(metrics.dailyActiveUsers / metrics.monthlyActiveUsers, 0, 1, 50, 100),
+      this.normalizeMetric(metrics.sessionDuration, 0, 600, 0, 100), // 0-10 minutes
+      this.normalizeMetric(metrics.retentionRate, 0, 100, 0, 100),
+      this.calculateFeatureUsageScore(metrics.featureUsage)
+    ];
+
+    return engagementFactors.reduce((sum, score) => sum + score, 0) / engagementFactors.length;
+  }
+
+  private calculateAdoptionScore(adoptionData: AdoptionData): number {
+    const adoptionFactors = [
+      this.normalizeMetric(adoptionData.adoptionRate, 0, 100, 0, 100),
+      this.normalizeMetric(adoptionData.powerUsers / adoptionData.totalUsers, 0, 0.3, 0, 100), // 0-30% power users
+      this.calculateFeatureAdoptionScore(adoptionData.featureAdoptionRates),
+      this.normalizeMetric(adoptionData.timeToAdoption, 0, 30, 100, 0) // Lower is better (0-30 days)
+    ];
+
+    return adoptionFactors.reduce((sum, score) => sum + score, 0) / adoptionFactors.length;
+  }
+
+  private calculateSatisfactionScore(surveyData: SurveyData): number {
+    const satisfactionFactors = [
+      this.normalizeMetric(surveyData.npsScore, -100, 100, 0, 100),
+      this.normalizeMetric(surveyData.satisfactionScore, 1, 5, 0, 100),
+      this.calculateFeatureRatingScore(surveyData.featureRatings),
+      this.normalizeMetric(surveyData.feedbackVolume, 0, 1000, 0, 100)
+    ];
+
+    return satisfactionFactors.reduce((sum, score) => sum + score, 0) / satisfactionFactors.length;
+  }
+
+  private calculateMarketFitScore(marketData: MarketResearchData): number {
+    const marketFactors = [
+      this.normalizeMetric(marketData.marketPenetration, 0, 100, 0, 100),
+      this.normalizeMetric(marketData.growthRate, -50, 100, 0, 100),
+      this.calculateMarketSegmentationScore(marketData.customerSegmentation),
+      this.normalizeMetric(marketData.targetMarketSize / 1000000, 0, 100, 0, 100) // Market size in millions
+    ];
+
+    return marketFactors.reduce((sum, score) => sum + score, 0) / marketFactors.length;
+  }
+
+  private calculateCompetitiveScore(competitiveData: CompetitiveAnalysisData): number {
+    const competitiveFactors = [
+      this.normalizeMetric(competitiveData.marketPosition, 1, 10, 0, 100), // 1-10 ranking
+      this.normalizeMetric(competitiveData.competitiveAdvantage, 0, 100, 0, 100),
+      this.normalizeMetric(competitiveData.differentiationScore, 0, 100, 0, 100),
+      this.calculateBenchmarkScore(competitiveData.competitiveBenchmarks)
+    ];
+
+    return competitiveFactors.reduce((sum, score) => sum + score, 0) / competitiveFactors.length;
+  }
+
+  private normalizeMetric(value: number, min: number, max: number, targetMin: number, targetMax: number): number {
+    if (max === min) return targetMin;
+    const normalized = (value - min) / (max - min);
+    return Math.max(targetMin, Math.min(targetMax, targetMin + normalized * (targetMax - targetMin)));
+  }
+
+  private calculateFeatureUsageScore(featureUsage: Record<string, number>): number {
+    const usageValues = Object.values(featureUsage);
+    const averageUsage = usageValues.reduce((sum, usage) => sum + usage, 0) / usageValues.length;
+    return this.normalizeMetric(averageUsage, 0, 100, 0, 100);
+  }
+
+  private calculateFeatureAdoptionScore(featureAdoptionRates: Record<string, number>): number {
+    const adoptionRates = Object.values(featureAdoptionRates);
+    const averageAdoption = adoptionRates.reduce((sum, rate) => sum + rate, 0) / adoptionRates.length;
+    return this.normalizeMetric(averageAdoption, 0, 100, 0, 100);
+  }
+
+  private calculateFeatureRatingScore(featureRatings: Record<string, number>): number {
+    const ratings = Object.values(featureRatings);
+    const averageRating = ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length;
+    return this.normalizeMetric(averageRating, 1, 5, 0, 100);
+  }
+
+  private calculateMarketSegmentationScore(segmentation: Record<string, number>): number {
+    const segments = Object.keys(segmentation).length;
+    const coverage = Math.min(segments / 5, 1) * 100; // Assume 5 target segments
+    return coverage;
+  }
+
+  private calculateBenchmarkScore(benchmarks: Record<string, number>): number {
+    const benchmarkValues = Object.values(benchmarks);
+    const averageBenchmark = benchmarkValues.reduce((sum, value) => sum + value, 0) / benchmarkValues.length;
+    return this.normalizeMetric(averageBenchmark, 0, 100, 0, 100);
+  }
+
+  private getValidationStatus(score: number): 'strong' | 'moderate' | 'weak' | 'needs_improvement' {
+    if (score >= 80) return 'strong';
+    if (score >= 65) return 'moderate';
+    if (score >= 50) return 'weak';
+    return 'needs_improvement';
+  }
+
+  private generateRecommendations(metrics: ValidationComponents, score: number): string[] {
+    const recommendations: string[] = [];
+
+    if (metrics.userEngagement < 60) {
+      recommendations.push('Focus on improving user engagement through better UX and feature discovery');
     }
+
+    if (metrics.featureAdoption < 70) {
+      recommendations.push('Enhance feature adoption through better onboarding and education');
+    }
+
+    if (metrics.customerSatisfaction < 65) {
+      recommendations.push('Address customer pain points and improve support experience');
+    }
+
+    if (metrics.marketFit < 55) {
+      recommendations.push('Reassess market positioning and target audience alignment');
+    }
+
+    if (metrics.competitiveAnalysis < 60) {
+      recommendations.push('Strengthen competitive differentiation and unique value proposition');
+    }
+
+    if (score >= 80) {
+      recommendations.push('Strong market validation - consider scaling and expansion');
+    } else if (score >= 65) {
+      recommendations.push('Moderate validation - focus on identified weak areas');
+    } else {
+      recommendations.push('Weak validation - significant improvements needed before scaling');
+    }
+
+    return recommendations;
+  }
+
+  private generateBenchmarks(score: number): ValidationBenchmarks {
+    return {
+      industryAverage: 65,
+      topPerformers: 85,
+      targetScore: Math.max(score + 10, 75)
+    };
+  }
+}
+
+// Usage example
+const analyzer = new MarketValidationAnalyzerImpl();
+
+async function demonstrateMarketValidation() {
+  try {
+    const productData: ProductData = {
+      usageMetrics: {
+        dailyActiveUsers: 5000,
+        weeklyActiveUsers: 12000,
+        monthlyActiveUsers: 25000,
+        sessionDuration: 8.5, // minutes
+        featureUsage: { 'feature_1': 85, 'feature_2': 62, 'feature_3': 45 },
+        retentionRate: 78
+      },
+      adoptionData: {
+        totalUsers: 50000,
+        powerUsers: 8500,
+        casualUsers: 32000,
+        adoptionRate: 68,
+        featureAdoptionRates: { 'feature_1': 75, 'feature_2': 58, 'feature_3': 42 },
+        timeToAdoption: 12 // days
+      },
+      surveyData: {
+        npsScore: 45,
+        satisfactionScore: 4.2,
+        likelihoodToRecommend: 78,
+        featureRatings: { 'feature_1': 4.5, 'feature_2': 4.1, 'feature_3': 3.8 },
+        feedbackVolume: 250
+      },
+      marketResearch: {
+        targetMarketSize: 500000, // potential customers
+        marketPenetration: 5.2, // percentage
+        growthRate: 15, // percentage
+        customerSegmentation: { 'enterprise': 40, 'smb': 35, 'startup': 25 },
+        marketTrends: ['AI adoption', 'Remote work', 'Digital transformation']
+      },
+      competitiveData: {
+        marketPosition: 6, // 1-10 ranking
+        competitiveAdvantage: 72,
+        differentiationScore: 68,
+        competitiveBenchmarks: { 'deliverability': 85, 'features': 78, 'pricing': 65, 'support': 82 }
+      }
+    };
+
+    const results = await analyzer.calculateMarketValidationScore(productData);
+    
+    console.log('Market Validation Results:');
+    console.log('- Overall Score:', results.overallScore);
+    console.log('- Status:', results.validationStatus);
+    console.log('- Component Scores:', results.componentScores);
+    console.log('- Recommendations:', results.recommendations);
+  } catch (error) {
+    console.error('Market validation analysis failed:', error);
+  }
+}
 ```
 
 #### A/B Testing Integration

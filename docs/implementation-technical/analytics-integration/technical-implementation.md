@@ -37,7 +37,7 @@ penguinmails/
 │   │   └── server.ts
 │   ├── queue-server/           # Event processing & job queue server
 │   │   ├── src/
-│   │   │   ├── workers/        # BullMQ job processors
+│   │   │   ├── workers/        # Queue job processors
 │   │   │   ├── events/         # Event handlers
 │   │   │   ├── routes/         # Queue & events REST API
 │   │   │   └── notifications/  # Notification system
@@ -49,11 +49,11 @@ penguinmails/
 │       │   └── intelligence/   # Analytics processing
 │       └── server.ts
 ├── packages/
-│   ├── database/               # Shared Prisma/Drizzle client
+│   ├── database/               # Shared Drizzle ORM client
 │   ├── auth/                   # RBAC utilities
 │   ├── types/                  # Shared TypeScript types
 │   ├── config/                 # Shared secrets/env
-│   └── queue/                  # Shared BullMQ queue client
+│   └── queue/                  # Shared queue client
 └── turbo.json
 ```
 

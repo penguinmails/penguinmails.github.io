@@ -8,39 +8,31 @@ Comprehensive email organization, response management, and conversation tracking
 
 #### [Unified Inbox](./unified-inbox/overview.md)
 
-Centralized response management across all campaigns and accounts.
+Centralized command center for managing responses across all email accounts with AI categorization and real-time sync.
 
 **Key Capabilities**:
 
-- Consolidate all campaign responses in one view
-- Smart filtering and organization
-- Team collaboration features
+- **Universal Aggregation**: Sync emails from Gmail, Outlook, and SMTP in one view
+- **AI Intent Detection**: Auto-categorize as Interested, OOO, Not Interested
+- **Real-Time Sync**: Bi-directional synchronization with provider mailboxes
+- **Team Collaboration**: Assignment, internal notes, and status tracking
+- **Advanced Filtering**: Filter by campaign, lead score, and intent
 
-**Status**: Approved | **Priority**: High
-
----
+**Status**: Available | **Priority**: Critical
 
 #### [Inbox Rotation](./inbox-rotation/overview.md)
 
-Sustainable account scaling with intelligent rotation algorithms.
+Maximize deliverability by automatically rotating sending across multiple email accounts with smart health monitoring.
 
 **Key Capabilities**:
 
-- Smart rotation algorithms
-- 95%+ sustained deliverability
-- Enterprise-scale support
+- **Rotation Pools**: Group accounts for load balancing
+- **Smart Distribution**: Weighted rotation based on health scores
+- **Auto-Pause & Recovery**: Protect accounts with high bounce rates
+- **Domain Diversity**: Prevent pattern detection
+- **Volume Ramping**: Automated warmup schedules
 
-**Status**: Approved | **Priority**: Medium
-
----
-
-### 🔜 Coming Soon
-
-- **Threads** - Conversation tracking with campaign origin
-- **Starred** - Mark important threads for quick access
-- **Folders** - Categorize threads fororganization
-- **Search** - Full-text email search across all inboxes
-- **Filters** - Advanced filtering by campaign, tenant, company
+**Status**: Available | **Priority**: High
 
 ---
 

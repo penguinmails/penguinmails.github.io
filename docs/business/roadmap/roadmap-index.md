@@ -1,7 +1,7 @@
 ---
 title: "Roadmap Index: Central Navigation & Quick Reference"
 description: "Central hub for all roadmap documents with role-based navigation and feature availability quick reference"
-last_modified_date: "2025-11-17"
+last_modified_date: "2025-11-26"
 level: "2"
 persona: "Documentation Users"
 ---
@@ -90,6 +90,8 @@ This document serves as the central hub for all roadmap information, providing r
 
 | Feature Category | Description | Promise Level |
 |------------------|-------------|---------------|
+| **API Key Management** | Secure API key generation, Vault storage, permission scopes, rate limiting | PROMISE Q1 2026 |
+| **REST API & Webhooks** | Core API endpoints, webhook system, OpenAPI documentation | PROMISE Q1 2026 |
 | **Campaign Management** | Email sequencing, A/B testing, personalization, templates | PROMISE Q1 2026 |
 | **Enhanced Analytics** | Improved dashboard, optimization recommendations, automation | PROMISE Q1 2026 |
 | **CRM Integration** | Salesforce, HubSpot integration with bi-directional sync | PROMISE Q1 2026 |
@@ -101,6 +103,9 @@ This document serves as the central hub for all roadmap information, providing r
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
+| **Zapier Integration** | Connect to 5,000+ apps with pre-built Zaps, no-code automation | Q2 2026 |
+| **ESP Integration UI** | Postmark, Mailgun configuration with routing rules and analytics | Q3 2026 |
+| **Custom Webhook Builder** | Advanced filtering, conditional logic, payload transformation | Q3 2026 |
 | **Advanced Analytics** | Enhanced KPI tracking, predictive modeling, cross-channel integration | Q2-Q3 2026 |
 | **Workflow Automation** | Marketing automation, intelligent recommendations, team collaboration | Q2-Q3 2026 |
 | **AI Optimization** | ML-based optimization, predictive analytics, intelligent automation | 2027+ roadmap consideration |
@@ -112,6 +117,8 @@ This document serves as the central hub for all roadmap information, providing r
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
+| **Integration Marketplace** | Developer portal, third-party integrations, public marketplace | Q4 2026+ |
+| **Real-Time Sync** | Sub-1-minute CRM sync latency with WebSocket/SSE infrastructure | Q4 2026 |
 | **Generative AI** | AI-powered content creation, natural language interfaces | 2027+ |
 | **Platform Ecosystem** | Marketplace, third-party integrations, custom workflows | 2027+ |
 | **Global Expansion** | Multi-region deployment, local compliance, global optimization | 2027+ |

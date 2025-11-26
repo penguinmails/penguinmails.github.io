@@ -44,297 +44,561 @@ tests/
 
 ## Unit Testing Standards
 
-```python
-# tests/unit/test_email_service.py
-import pytest
-from unittest.mock import Mock, patch, MagicMock
-from datetime import datetime, timezone
-from app.services.email_service import EmailService
-from app.models.email import EmailMessage, EmailStatus
-from app.exceptions import EmailDeliveryError, ValidationError
+```typescript
+// tests/unit/test-email-service.ts
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { EmailService } from '../../app/services/email-service';
+import { EmailStatus, EmailMessage } from '../../app/models/email';
+import { EmailDeliveryError, ValidationError } from '../../app/exceptions';
 
-class TestEmailService:
-    """Comprehensive unit tests for EmailService."""
+// Mock dependencies
+vi.mock('../../app/services/smtp-client');
+vi.mock('../../app/services/template-service');
+vi.mock('../../app/services/analytics-service');
+vi.mock('../../app/database/connection');
 
-    def setup_method(self):
-        """Set up test fixtures before each test method."""
-        self.mock_smtp_client = Mock()
-        self.mock_template_service = Mock()
-        self.mock_analytics_service = Mock()
-        self.mock_database = Mock()
+describe('EmailService', () => {
+  let emailService: EmailService;
+  let mockSmtpClient: ReturnType<typeof vi.fn>;
+  let mockTemplateService: ReturnType<typeof vi.fn>;
+  let mockAnalyticsService: ReturnType<typeof vi.fn>;
+  let mockDatabase: ReturnType<typeof vi.fn>;
 
-        self.email_service = EmailService(
-            smtp_client=self.mock_smtp_client,
-            template_service=self.mock_template_service,
-            analytics_service=self.mock_analytics_service,
-            database=self.mock_database
-        )
+  beforeEach(() => {
+    // Setup mocks
+    mockSmtpClient = vi.fn();
+    mockTemplateService = vi.fn();
+    mockAnalyticsService = vi.fn();
+    mockDatabase = vi.fn();
 
-    def test_send_email_success(self):
-        """Test successful email sending."""
-        # Arrange
-        email_data = {
-            'to': 'test@example.com',
-            'subject': 'Test Subject',
-            'content': {'html': '<p>Test content</p>', 'text': 'Test content'},
-            'from': {'name': 'Test Sender', 'email': 'sender@example.com'}
-        }
+    // Initialize service with mocked dependencies
+    emailService = new EmailService(
+      mockSmtpClient as any,
+      mockTemplateService as any,
+      mockAnalyticsService as any,
+      mockDatabase as any
+    );
+  });
 
-        expected_message_id = 'msg_123456'
-        self.mock_smtp_client.send_email.return_value = {
-            'message_id': expected_message_id,
-            'status': 'sent'
-        }
+  afterEach(() => {
+    vi.clearAllMocks();
+  });
 
-        # Act
-        result = self.email_service.send_email(email_data)
+  it('should send email successfully', async () => {
+    // Arrange
+    const emailData: EmailData = {
+      to: 'test@example.com',
+      subject: 'Test Subject',
+      content: { html: '<p>Test content</p>', text: 'Test content' },
+      from: { name: 'Test Sender', email: 'sender@example.com' }
+    };
 
-        # Assert
-        assert result.message_id == expected_message_id
-        assert result.status == EmailStatus.SENT
-        assert result.sent_at is not None
+    const expectedMessageId = 'msg_123456';
+    mockSmtpClient.sendEmail = vi.fn().mockResolvedValue({
+      messageId: expectedMessageId,
+      status: 'sent'
+    });
 
-        # Verify method calls
-        self.mock_smtp_client.send_email.assert_called_once()
-        self.mock_analytics_service.track_delivery.assert_called_once()
+    // Act
+    const result = await emailService.sendEmail(emailData);
 
-        # Verify analytics tracking data
-        delivery_call = self.mock_analytics_service.track_delivery.call_args
-        assert delivery_call[1]['email'] == email_data['to']
-        assert delivery_call[1]['message_id'] == expected_message_id
+    // Assert
+    expect(result.messageId).toBe(expectedMessageId);
+    expect(result.status).toBe(EmailStatus.SENT);
+    expect(result.sentAt).toBeDefined();
 
-    def test_send_email_invalid_recipient(self):
-        """Test email sending with invalid recipient email."""
-        # Arrange
-        email_data = {
-            'to': 'invalid-email',  # Invalid email format
-            'subject': 'Test Subject',
-            'content': {'html': '<p>Test</p>', 'text': 'Test'}
-        }
+    // Verify method calls
+    expect(mockSmtpClient.sendEmail).toHaveBeenCalledTimes(1);
+    expect(mockAnalyticsService.trackDelivery).toHaveBeenCalledTimes(1);
 
-        # Act & Assert
-        with pytest.raises(ValidationError) as exc_info:
-            self.email_service.send_email(email_data)
+    // Verify analytics tracking data
+    const deliveryCall = mockAnalyticsService.trackDelivery.mock.calls[0];
+    expect(deliveryCall[0].email).toBe(emailData.to);
+    expect(deliveryCall[0].messageId).toBe(expectedMessageId);
+  });
 
-        assert 'invalid email' in str(exc_info.value).lower()
+  it('should throw ValidationError for invalid recipient email', async () => {
+    // Arrange
+    const emailData: EmailData = {
+      to: 'invalid-email', // Invalid email format
+      subject: 'Test Subject',
+      content: { html: '<p>Test</p>', text: 'Test' }
+    };
 
-        # Verify no external services were called
-        self.mock_smtp_client.send_email.assert_not_called()
-        self.mock_analytics_service.track_delivery.assert_not_called()
+    // Act & Assert
+    await expect(emailService.sendEmail(emailData)).rejects.toThrow(ValidationError);
+    
+    const error = await emailService.sendEmail(emailData).catch(err => err);
+    expect(error.message.toLowerCase()).toContain('invalid email');
 
-    def test_send_bulk_emails_batch_processing(self):
-        """Test bulk email sending with proper batch processing."""
-        # Arrange
-        recipients = [
-            {'email': f'user{i}@example.com', 'name': f'User {i}'}
-            for i in range(250)  # Test with more than default batch size
-        ]
+    // Verify no external services were called
+    expect(mockSmtpClient.sendEmail).not.toHaveBeenCalled();
+    expect(mockAnalyticsService.trackDelivery).not.toHaveBeenCalled();
+  });
 
-        email_data = {
-            'subject': 'Bulk Test Email',
-            'content': {'html': '<p>Bulk content</p>', 'text': 'Bulk content'}
-        }
+  it('should process bulk emails with proper batch processing', async () => {
+    // Arrange
+    const recipients = Array.from({ length: 250 }, (_, i) => ({
+      email: `user${i}@example.com`,
+      name: `User ${i}`
+    }));
 
-        self.mock_smtp_client.send_email_batch.return_value = [
-            {'message_id': f'msg_{i}', 'status': 'sent'} for i in range(250)
-        ]
+    const emailData: EmailData = {
+      subject: 'Bulk Test Email',
+      content: { html: '<p>Bulk content</p>', text: 'Bulk content' }
+    };
 
-        # Act
-        results = self.email_service.send_bulk_emails(recipients, email_data)
+    // Mock batch sending response
+    const batchResults = Array.from({ length: 250 }, (_, i) => ({
+      messageId: `msg_${i}`,
+      status: 'sent'
+    }));
 
-        # Assert
-        assert len(results) == 250
-        assert all(result.status == EmailStatus.SENT for result in results)
+    mockSmtpClient.sendEmailBatch = vi.fn().mockResolvedValue(batchResults);
 
-        # Verify batch processing
-        expected_batches = (250 + 99) // 100  # Assuming batch size of 100
-        assert self.mock_smtp_client.send_email_batch.call_count == expected_batches
+    // Act
+    const results = await emailService.sendBulkEmails(recipients, emailData);
+
+    // Assert
+    expect(results).toHaveLength(250);
+    expect(results.every(result => result.status === EmailStatus.SENT)).toBe(true);
+
+    // Verify batch processing (assuming batch size of 100)
+    const expectedBatches = Math.ceil(250 / 100);
+    expect(mockSmtpClient.sendEmailBatch).toHaveBeenCalledTimes(expectedBatches);
+  });
+
+  it('should handle email delivery failures gracefully', async () => {
+    // Arrange
+    const emailData: EmailData = {
+      to: 'test@example.com',
+      subject: 'Test Subject',
+      content: { html: '<p>Test content</p>', text: 'Test content' }
+    };
+
+    mockSmtpClient.sendEmail = vi.fn().mockRejectedValue(
+      new Error('SMTP connection failed')
+    );
+
+    // Act & Assert
+    await expect(emailService.sendEmail(emailData)).rejects.toThrow(EmailDeliveryError);
+    
+    // Verify analytics service was called with failure tracking
+    expect(mockAnalyticsService.trackFailure).toHaveBeenCalledTimes(1);
+  });
+
+  it('should validate email content before sending', async () => {
+    // Arrange - Test with missing required content
+    const emailData = {
+      to: 'test@example.com',
+      subject: '', // Empty subject
+      content: { html: '', text: '' } // Empty content
+    };
+
+    // Act & Assert
+    await expect(emailService.sendEmail(emailData)).rejects.toThrow(ValidationError);
+    
+    expect(mockSmtpClient.sendEmail).not.toHaveBeenCalled();
+  });
+});
+
+// Supporting interfaces
+interface EmailData {
+  to: string;
+  subject: string;
+  content: {
+    html: string;
+    text: string;
+  };
+  from?: {
+    name: string;
+    email: string;
+  };
+}
+
+interface EmailResult {
+  messageId: string;
+  status: EmailStatus;
+  sentAt: Date;
+}
 ```
 
 ## Integration Testing Standards
 
-```python
-# tests/integration/test_campaign_api.py
-import pytest
-import asyncio
-from httpx import AsyncClient
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from app.main import app
-from app.database.connection import get_database
-from app.models.campaign import Campaign
-from app.models.user import User
+```typescript
+// tests/integration/test-campaign-api.ts
+import { describe, it, expect, beforeAll, afterAll, beforeEach } from 'vitest';
+import { setupServer } from 'msw/node';
+import { http, HttpResponse } from 'msw';
+import { createCampaign, getCampaigns } from '../../app/services/campaign-service';
+import { Database } from '../../app/database/connection';
 
-@pytest.fixture
-async def test_client():
-    """Create test client with test database."""
-    # Setup test database
-    engine = create_engine("postgresql://test:test@localhost/testdb")
-    TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+// Mock database setup
+const mockDatabase = {
+  campaigns: {
+    create: vi.fn(),
+    findMany: vi.fn(),
+    findById: vi.fn(),
+    update: vi.fn()
+  },
+  users: {
+    findByEmail: vi.fn(),
+    create: vi.fn()
+  }
+};
 
-    # Create tables
-    from app.database.models import Base
-    Base.metadata.create_all(bind=engine)
+vi.mock('../../app/database/connection', () => ({
+  Database: {
+    getInstance: () => mockDatabase
+  }
+}));
 
-    # Override database dependency
-    def get_test_database():
-        try:
-            db = TestingSessionLocal()
-            yield db
-        finally:
-            db.close()
+describe('Campaign API Integration Tests', () => {
+  let testUser: TestUser;
+  let mockServer: ReturnType<typeof setupServer>;
 
-    app.dependency_overrides[get_database] = get_test_database
+  beforeAll(async () => {
+    // Setup test database and create test user
+    await setupTestDatabase();
+    testUser = await createTestUser();
+  });
 
-    async with AsyncClient(app=app, base_url="http://testserver") as client:
-        yield client
+  afterAll(async () => {
+    await cleanupTestDatabase();
+  });
 
-    # Cleanup
-    Base.metadata.drop_all(bind=engine)
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
 
-@pytest.fixture
-async def test_user(test_client):
-    """Create test user for authentication."""
-    user_data = {
-        "email": "test@example.com",
-        "password": "testpass123",
-        "first_name": "Test",
-        "last_name": "User"
+  describe('Campaign Creation', () => {
+    it('should create campaign successfully', async () => {
+      // Arrange
+      const campaignData: CreateCampaignRequest = {
+        name: 'Test Campaign',
+        subject: 'Test Subject Line',
+        content: {
+          html: '<h1>Test Campaign</h1><p>This is a test campaign.</p>',
+          text: 'Test Campaign - This is a test campaign.'
+        },
+        recipients: [
+          {
+            email: 'recipient@example.com',
+            personalization: { name: 'Test Recipient' }
+          }
+        ],
+        settings: {
+          analyticsEnabled: true,
+          trackOpens: true,
+          trackClicks: true,
+          aiOptimization: false
+        }
+      };
+
+      // Mock successful database creation
+      mockDatabase.campaigns.create.mockResolvedValue({
+        id: 'camp_123',
+        ...campaignData,
+        status: 'draft',
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        metrics: { sent: 0, delivered: 0, opened: 0, clicked: 0 }
+      });
+
+      // Act
+      const result = await createCampaign(campaignData, testUser.id);
+
+      // Assert
+      expect(result.success).toBe(true);
+      expect(result.data).toBeDefined();
+      expect(result.data.name).toBe(campaignData.name);
+      expect(result.data.subject).toBe(campaignData.subject);
+      expect(result.data.status).toBe('draft');
+      expect(result.data.id).toBeDefined();
+      expect(result.data.createdAt).toBeDefined();
+
+      // Verify campaign metrics are initialized
+      expect(result.data.metrics).toBeDefined();
+      expect(result.data.metrics.sent).toBe(0);
+
+      // Verify database calls
+      expect(mockDatabase.campaigns.create).toHaveBeenCalledTimes(1);
+    });
+
+    it('should reject campaign creation with duplicate name', async () => {
+      // Arrange
+      const campaignData: CreateCampaignRequest = {
+        name: 'Duplicate Name Test',
+        subject: 'Test Subject',
+        content: { html: '<p>Test</p>', text: 'Test' },
+        recipients: [{ email: 'test@example.com' }]
+      };
+
+      // Mock database conflict (duplicate name)
+      mockDatabase.campaigns.create.mockRejectedValue(
+        new Error('Campaign name already exists')
+      );
+
+      // Act & Assert
+      await expect(createCampaign(campaignData, testUser.id))
+        .rejects.toThrow('Campaign name already exists');
+    });
+
+    it('should validate required fields', async () => {
+      // Arrange - Test with missing required fields
+      const invalidData: CreateCampaignRequest = {
+        name: '', // Empty name
+        subject: 'Test Subject',
+        content: { html: '<p>Test</p>', text: 'Test' },
+        recipients: []
+      };
+
+      // Act & Assert
+      await expect(createCampaign(invalidData, testUser.id))
+        .rejects.toThrow('Campaign name is required');
+    });
+  });
+
+  describe('Campaign Listing', () => {
+    beforeEach(async () => {
+      // Create multiple campaigns for testing
+      const campaigns = Array.from({ length: 5 }, (_, i) => ({
+        id: `camp_${i}`,
+        name: `Test Campaign ${i + 1}`,
+        subject: `Test Subject ${i + 1}`,
+        content: { html: `<p>Campaign ${i + 1}</p>`, text: `Campaign ${i + 1}` },
+        recipients: [{ email: `test${i + 1}@example.com` }],
+        status: 'draft' as const,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        userId: testUser.id
+      }));
+
+      mockDatabase.campaigns.findMany.mockResolvedValue(campaigns);
+    });
+
+    it('should list campaigns with pagination', async () => {
+      // Arrange
+      const paginationParams: PaginationParams = {
+        page: 1,
+        perPage: 3
+      };
+
+      // Mock pagination response
+      const mockCampaigns = Array.from({ length: 3 }, (_, i) => ({
+        id: `camp_${i}`,
+        name: `Test Campaign ${i + 1}`,
+        subject: `Test Subject ${i + 1}`
+      }));
+
+      mockDatabase.campaigns.findMany.mockResolvedValue(mockCampaigns);
+
+      // Act
+      const result = await getCampaigns(testUser.id, paginationParams);
+
+      // Assert
+      expect(result.success).toBe(true);
+      expect(result.data).toHaveLength(3);
+      expect(result.meta.pagination.page).toBe(1);
+      expect(result.meta.pagination.perPage).toBe(3);
+      expect(result.meta.pagination.total).toBe(5);
+
+      // Test second page
+      const page2Params = { ...paginationParams, page: 2 };
+      const page2Campaigns = Array.from({ length: 2 }, (_, i) => ({
+        id: `camp_${i + 3}`,
+        name: `Test Campaign ${i + 4}`,
+        subject: `Test Subject ${i + 4}`
+      }));
+
+      mockDatabase.campaigns.findMany.mockResolvedValue(page2Campaigns);
+      
+      const result2 = await getCampaigns(testUser.id, page2Params);
+      expect(result2.data).toHaveLength(2);
+      expect(result2.meta.pagination.page).toBe(2);
+    });
+  });
+
+  describe('Campaign Management', () => {
+    it('should update campaign successfully', async () => {
+      // Arrange
+      const campaignId = 'camp_123';
+      const updateData: UpdateCampaignRequest = {
+        name: 'Updated Campaign Name',
+        subject: 'Updated Subject'
+      };
+
+      const existingCampaign = {
+        id: campaignId,
+        name: 'Original Campaign',
+        subject: 'Original Subject',
+        status: 'draft',
+        userId: testUser.id
+      };
+
+      mockDatabase.campaigns.findById.mockResolvedValue(existingCampaign);
+      mockDatabase.campaigns.update.mockResolvedValue({
+        ...existingCampaign,
+        ...updateData,
+        updatedAt: new Date()
+      });
+
+      // Act
+      const result = await updateCampaign(campaignId, updateData, testUser.id);
+
+      // Assert
+      expect(result.success).toBe(true);
+      expect(result.data.name).toBe(updateData.name);
+      expect(result.data.subject).toBe(updateData.subject);
+    });
+
+    it('should prevent unauthorized campaign updates', async () => {
+      // Arrange
+      const campaignId = 'camp_456';
+      const updateData = { name: 'Updated Name' };
+      const campaign = {
+        id: campaignId,
+        userId: 'different_user_id' // Different user
+      };
+
+      mockDatabase.campaigns.findById.mockResolvedValue(campaign);
+
+      // Act & Assert
+      await expect(updateCampaign(campaignId, updateData, testUser.id))
+        .rejects.toThrow('Unauthorized');
+    });
+  });
+});
+
+// Supporting functions and types
+async function setupTestDatabase(): Promise<void> {
+  // Mock database setup
+  console.log('Setting up test database...');
+}
+
+async function cleanupTestDatabase(): Promise<void> {
+  // Mock database cleanup
+  console.log('Cleaning up test database...');
+}
+
+async function createTestUser(): Promise<TestUser> {
+  return {
+    id: 'user_123',
+    email: 'test@example.com',
+    token: 'mock_jwt_token'
+  };
+}
+
+// Supporting interfaces
+interface TestUser {
+  id: string;
+  email: string;
+  token: string;
+}
+
+interface CreateCampaignRequest {
+  name: string;
+  subject: string;
+  content: {
+    html: string;
+    text: string;
+  };
+  recipients: Array<{
+    email: string;
+    personalization?: Record<string, unknown>;
+  }>;
+  settings?: {
+    analyticsEnabled?: boolean;
+    trackOpens?: boolean;
+    trackClicks?: boolean;
+    aiOptimization?: boolean;
+  };
+}
+
+interface UpdateCampaignRequest {
+  name?: string;
+  subject?: string;
+  content?: {
+    html?: string;
+    text?: string;
+  };
+}
+
+interface PaginationParams {
+  page: number;
+  perPage: number;
+}
+
+interface Campaign {
+  id: string;
+  name: string;
+  subject: string;
+  status: string;
+  userId: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface APIResponse<T> {
+  success: boolean;
+  data?: T;
+  meta?: {
+    pagination?: PaginationMeta;
+  };
+  error?: {
+    message: string;
+  };
+}
+
+interface PaginationMeta {
+  page: number;
+  perPage: number;
+  total: number;
+  totalPages: number;
+}
+
+// Mock service functions
+async function createCampaign(
+  data: CreateCampaignRequest,
+  userId: string
+): Promise<APIResponse<Campaign>> {
+  // Mock implementation
+  return mockDatabase.campaigns.create({ ...data, userId });
+}
+
+async function getCampaigns(
+  userId: string,
+  params: PaginationParams
+): Promise<APIResponse<Campaign[]>> {
+  // Mock implementation
+  const campaigns = await mockDatabase.campaigns.findMany({ userId });
+  return {
+    success: true,
+    data: campaigns,
+    meta: {
+      pagination: {
+        page: params.page,
+        perPage: params.perPage,
+        total: campaigns.length,
+        totalPages: Math.ceil(campaigns.length / params.perPage)
+      }
     }
+  };
+}
 
-    response = await test_client.post("/api/v1/auth/register", json=user_data)
-    assert response.status_code == 201
-
-    # Login to get token
-    login_response = await test_client.post("/api/v1/auth/login", json={
-        "email": user_data["email"],
-        "password": user_data["password"]
-    })
-
-    token = login_response.json()["data"]["access_token"]
-    return {"token": token, "user_id": login_response.json()["data"]["user"]["id"]}
-
-@pytest.mark.asyncio
-class TestCampaignAPI:
-    """Integration tests for Campaign API endpoints."""
-
-    async def test_create_campaign_success(self, test_client, test_user):
-        """Test successful campaign creation."""
-        campaign_data = {
-            "name": "Test Campaign",
-            "subject": "Test Subject Line",
-            "content": {
-                "html": "<h1>Test Campaign</h1><p>This is a test campaign.</p>",
-                "text": "Test Campaign - This is a test campaign."
-            },
-            "recipients": [
-                {
-                    "email": "recipient@example.com",
-                    "personalization": {"name": "Test Recipient"}
-                }
-            ],
-            "settings": {
-                "analytics_enabled": True,
-                "track_opens": True,
-                "track_clicks": True,
-                "ai_optimization": False
-            }
-        }
-
-        headers = {"Authorization": f"Bearer {test_user['token']}"}
-
-        response = await test_client.post(
-            "/api/v1/campaigns",
-            json=campaign_data,
-            headers=headers
-        )
-
-        assert response.status_code == 201
-        data = response.json()
-
-        assert data["success"] is True
-        assert "data" in data
-        assert data["data"]["name"] == campaign_data["name"]
-        assert data["data"]["subject"] == campaign_data["subject"]
-        assert data["data"]["status"] == "draft"
-        assert "id" in data["data"]
-        assert "created_at" in data["data"]
-
-        # Verify campaign metrics are initialized
-        assert "metrics" in data["data"]
-        assert data["data"]["metrics"]["sent"] == 0
-
-    async def test_create_campaign_duplicate_name(self, test_client, test_user):
-        """Test campaign creation with duplicate name."""
-        campaign_data = {
-            "name": "Duplicate Name Test",
-            "subject": "Test Subject",
-            "content": {"html": "<p>Test</p>", "text": "Test"},
-            "recipients": [{"email": "test@example.com"}]
-        }
-
-        headers = {"Authorization": f"Bearer {test_user['token']}"}
-
-        # Create first campaign
-        response1 = await test_client.post(
-            "/api/v1/campaigns",
-            json=campaign_data,
-            headers=headers
-        )
-        assert response1.status_code == 201
-
-        # Try to create second campaign with same name
-        response2 = await test_client.post(
-            "/api/v1/campaigns",
-            json=campaign_data,
-            headers=headers
-        )
-        assert response2.status_code == 409
-        assert "duplicate" in response2.json()["error"]["message"].lower()
-
-    async def test_list_campaigns_pagination(self, test_client, test_user):
-        """Test campaign listing with pagination."""
-        # Create multiple campaigns
-        headers = {"Authorization": f"Bearer {test_user['token']}"}
-
-        campaigns_to_create = 5
-        for i in range(campaigns_to_create):
-            campaign_data = {
-                "name": f"Test Campaign {i+1}",
-                "subject": f"Test Subject {i+1}",
-                "content": {"html": f"<p>Campaign {i+1}</p>", "text": f"Campaign {i+1}"},
-                "recipients": [{"email": f"test{i+1}@example.com"}]
-            }
-
-            await test_client.post(
-                "/api/v1/campaigns",
-                json=campaign_data,
-                headers=headers
-            )
-
-        # Test pagination
-        response = await test_client.get(
-            "/api/v1/campaigns?page=1&per_page=3",
-            headers=headers
-        )
-
-        assert response.status_code == 200
-        data = response.json()
-
-        assert len(data["data"]) == 3
-        assert data["meta"]["pagination"]["page"] == 1
-        assert data["meta"]["pagination"]["per_page"] == 3
-        assert data["meta"]["pagination"]["total"] == 5
-
-        # Test second page
-        response2 = await test_client.get(
-            "/api/v1/campaigns?page=2&per_page=3",
-            headers=headers
-        )
-
-        data2 = response2.json()
-        assert len(data2["data"]) == 2  # Remaining campaigns
-        assert data2["meta"]["pagination"]["page"] == 2
+async function updateCampaign(
+  id: string,
+  data: UpdateCampaignRequest,
+  userId: string
+): Promise<APIResponse<Campaign>> {
+  const campaign = await mockDatabase.campaigns.findById(id);
+  if (!campaign || campaign.userId !== userId) {
+    throw new Error('Unauthorized');
+  }
+  
+  const updated = await mockDatabase.campaigns.update(id, data);
+  return { success: true, data: updated };
+}
 ```
 
 ## End-to-End Testing Standards
@@ -494,60 +758,240 @@ test.describe('Campaign Workflow E2E Tests', () => {
 
 ### Test Data Management
 
-```python
-# tests/fixtures/sample_campaigns.py
-import pytest
-from datetime import datetime
-from typing import List, Dict
+```typescript
+// tests/fixtures/sample-campaigns.ts
+import { CampaignData, RecipientData, BulkRecipients } from '../types/test-types';
 
-@pytest.fixture
-def sample_campaign_data() -> Dict:
-    """Basic campaign data for testing."""
-    return {
-        "name": "Test Campaign",
-        "subject": "Test Subject Line",
-        "content": {
-            "html": "<h1>Test Campaign</h1><p>This is a test campaign.</p>",
-            "text": "Test Campaign - This is a test campaign."
-        },
-        "recipients": [
-            {
-                "email": "test@example.com",
-                "personalization": {"name": "Test User"}
-            }
-        ],
-        "settings": {
-            "analytics_enabled": True,
-            "track_opens": True,
-            "track_clicks": True,
-            "ai_optimization": False
-        }
+// Sample campaign data for testing
+export const sampleCampaignData: CampaignData = {
+  name: 'Test Campaign',
+  subject: 'Test Subject Line',
+  content: {
+    html: '<h1>Test Campaign</h1><p>This is a test campaign.</p>',
+    text: 'Test Campaign - This is a test campaign.'
+  },
+  recipients: [
+    {
+      email: 'test@example.com',
+      personalization: { name: 'Test User' }
     }
+  ],
+  settings: {
+    analyticsEnabled: true,
+    trackOpens: true,
+    trackClicks: true,
+    aiOptimization: false
+  }
+};
 
-@pytest.fixture
-def bulk_recipients() -> List[Dict]:
-    """Generate bulk recipient data for testing."""
-    return [
-        {
-            "email": f"user{i}@example.com",
-            "personalization": {"name": f"User {i}"}
-        }
-        for i in range(1, 251)  # 250 recipients
+// Generate bulk recipient data for testing
+export function createBulkRecipients(count: number = 250): BulkRecipients {
+  return Array.from({ length: count }, (_, i) => ({
+    email: `user${i + 1}@example.com`,
+    personalization: {
+      name: `User ${i + 1}`,
+      company: `Company ${i + 1}`
+    }
+  }));
+}
+
+// Invalid recipient data for negative testing
+export const invalidRecipientData: CampaignData = {
+  name: 'Invalid Campaign',
+  subject: 'Test Subject',
+  content: { html: '<p>Test</p>', text: 'Test' },
+  recipients: [
+    { email: 'invalid-email' }, // Invalid email format
+    { name: 'No Email User' }, // Missing email
+    { email: '' }, // Empty email
+    { email: 'missing@company', personalization: { name: '' } }, // Empty personalization
+    {
+      email: 'valid@example.com',
+      personalization: null as any // Invalid personalization type
+    }
+  ]
+};
+
+// Campaign templates for different scenarios
+export const campaignTemplates = {
+  // Welcome email campaign
+  welcomeCampaign: {
+    name: 'Welcome New Users',
+    subject: 'Welcome to Our Platform, {{name}}!',
+    content: {
+      html: `<h1>Welcome {{name}}!</h1><p>We're excited to have you on board.</p>`,
+      text: 'Welcome {{name}}! We\'re excited to have you on board.'
+    },
+    recipients: [
+      {
+        email: 'newuser@example.com',
+        personalization: { name: 'New User' }
+      }
     ]
+  },
 
-@pytest.fixture
-def invalid_recipient_data() -> Dict:
-    """Invalid recipient data for negative testing."""
-    return {
-        "name": "Invalid Campaign",
-        "subject": "Test Subject",
-        "content": {"html": "<p>Test</p>", "text": "Test"},
-        "recipients": [
-            {"email": "invalid-email"},  # Invalid email
-            {"name": "No Email User"},  # Missing email
-            {"email": ""}  # Empty email
-        ]
+  // Promotional email campaign
+  promotionalCampaign: {
+    name: 'Black Friday Sale',
+    subject: 'Limited Time: 50% Off Everything!',
+    content: {
+      html: `<h1>Black Friday Sale!</h1><p>Get 50% off all products. Use code: BLACKFRIDAY</p>`,
+      text: 'Black Friday Sale! Get 50% off all products. Use code: BLACKFRIDAY'
+    },
+    recipients: [
+      {
+        email: 'customer@example.com',
+        personalization: { name: 'Customer' }
+      }
+    ],
+    settings: {
+      trackOpens: true,
+      trackClicks: true
     }
+  },
+
+  // Newsletter campaign
+  newsletterCampaign: {
+    name: 'Weekly Newsletter',
+    subject: 'Your Weekly Tech Update',
+    content: {
+      html: `<h1>Tech News This Week</h1><p>Latest updates in technology and industry trends.</p>`,
+      text: 'Tech News This Week - Latest updates in technology and industry trends.'
+    },
+    recipients: [
+      {
+        email: 'subscriber@example.com',
+        personalization: {
+          name: 'Subscriber',
+          interests: ['technology', 'innovation']
+        }
+      }
+    ]
+  }
+};
+
+// Test data generators
+export class TestDataGenerator {
+  static generateRecipients(count: number): RecipientData[] {
+    return Array.from({ length: count }, (_, i) => ({
+      email: `test${i + 1}@example.com`,
+      personalization: {
+        name: `Test User ${i + 1}`,
+        company: `Test Company ${i + 1}`,
+        role: `Role ${i + 1}`
+      }
+    }));
+  }
+
+  static generateCampaignName(index: number): string {
+    const prefixes = ['Test', 'Demo', 'Sample', 'Example', 'Mock'];
+    const suffixes = ['Campaign', 'Email', 'Newsletter', 'Update', 'Alert'];
+    
+    const prefix = prefixes[index % prefixes.length];
+    const suffix = suffixes[Math.floor(index / prefixes.length) % suffixes.length];
+    
+    return `${prefix} ${suffix} ${index + 1}`;
+  }
+
+  static generateEmailContent(type: 'welcome' | 'promotional' | 'newsletter'): EmailContent {
+    switch (type) {
+      case 'welcome':
+        return {
+          html: '<h1>Welcome {{name}}!</h1><p>Thank you for joining us.</p>',
+          text: 'Welcome {{name}}! Thank you for joining us.'
+        };
+      case 'promotional':
+        return {
+          html: '<h1>Special Offer!</h1><p>Get 25% off your next purchase.</p>',
+          text: 'Special Offer! Get 25% off your next purchase.'
+        };
+      case 'newsletter':
+        return {
+          html: '<h1>Weekly Update</h1><p>Here are this week\'s updates.</p>',
+          text: 'Weekly Update - Here are this week\'s updates.'
+        };
+    }
+  }
+}
+
+// Test fixtures for Vitest
+export const testFixtures = {
+  // Basic campaign fixture
+  sampleCampaign: () => sampleCampaignData,
+
+  // Bulk recipients fixture
+  bulkRecipients: (count = 250) => createBulkRecipients(count),
+
+  // Invalid data fixture
+  invalidData: () => invalidRecipientData,
+
+  // Template fixtures
+  welcomeTemplate: () => campaignTemplates.welcomeCampaign,
+  promotionalTemplate: () => campaignTemplates.promotionalCampaign,
+  newsletterTemplate: () => campaignTemplates.newsletterCampaign,
+
+  // Generator fixtures
+  generateRecipients: (count: number) => TestDataGenerator.generateRecipients(count),
+  generateCampaignName: (index: number) => TestDataGenerator.generateCampaignName(index)
+};
+
+// Export commonly used test constants
+export const TEST_CONSTANTS = {
+  VALID_EMAIL: 'test@example.com',
+  INVALID_EMAIL: 'invalid-email',
+  EMPTY_EMAIL: '',
+  MAX_RECIPIENTS: 10000,
+  BATCH_SIZE: 100,
+  CAMPAIGN_NAME_MAX_LENGTH: 255,
+  SUBJECT_LINE_MAX_LENGTH: 100,
+  EMAIL_CONTENT_MAX_LENGTH: 50000
+};
+
+// Validation test cases
+export const validationTestCases = {
+  validEmails: [
+    'user@example.com',
+    'test.user@company.co.uk',
+    'name+tag@domain.com',
+    'user123@test-domain.org'
+  ],
+  
+  invalidEmails: [
+    'invalid-email',
+    '@domain.com',
+    'user@',
+    'user..double.dot@example.com',
+    'user@domain',
+    'user@.domain.com',
+    'user@domain..com'
+  ],
+
+  edgeCaseNames: [
+    '', // Empty name
+    'A', // Single character
+    'a'.repeat(256), // Too long
+    'Campaign with "quotes"',
+    'Campaign with \'single quotes\'',
+    'Campaign with <script>tags</script>',
+    'Campaign with newline\nbreak',
+    'Campaign with special chars: !@#$%^&*()'
+  ]
+};
+
+// Usage example in tests:
+// import { testFixtures, TEST_CONSTANTS, validationTestCases } from './sample-campaigns';
+//
+// describe('Campaign Validation', () => {
+//   it('should validate email addresses correctly', () => {
+//     validationTestCases.validEmails.forEach(email => {
+//       expect(isValidEmail(email)).toBe(true);
+//     });
+//
+//     validationTestCases.invalidEmails.forEach(email => {
+//       expect(isValidEmail(email)).toBe(false);
+//     });
+//   });
+// });
 ```
 
 ## Running Tests

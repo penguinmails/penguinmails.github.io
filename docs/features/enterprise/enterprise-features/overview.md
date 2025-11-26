@@ -44,7 +44,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
   - [ ] Enterprise customer requirements gathering
   - [ ] Security audit and penetration testing
   - [ ] Compliance requirements (SOC 2, GDPR, HIPAA)
-  - [ ] SSO provider research (Okta, Azure AD, Auth0)
+  - [ ] SSO provider research (Okta, Azure AD, Google Workspace)
   - [ ] Enterprise architecture design
   
 - [ ] **M2: Security & SSO** (Weeks 9-16)
@@ -102,13 +102,18 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 #### 1. **Single Sign-On (SSO)**
 
+**Status:** Planned for 2027 (potential roadmap item to improve or substitute NileDB auth)  
+**Current Authentication:** NileDB email/password (MVP and near-term releases)
+
 - **Protocols**: SAML 2.0, OAuth 2.0, OpenID Connect
-- **Providers**: Okta, Azure AD, Google Workspace, OneLogin, Auth0
+- **Providers**: Okta, Azure AD, Google Workspace (integration approach TBD)
 - **Features**:
   - Just-in-time (JIT) user provisioning
   - Automatic role mapping from SSO
   - SSO enforcement (disable password login)
   - Multiple SSO providers per tenant
+
+**Note:** This is a potential 2027 enhancement for enterprise customers. MVP continues using NileDB's secure email/password authentication. OAuth 2.0/SSO would be evaluated as an alternative or complement to NileDB auth based on enterprise customer demand.
 
 #### 2. **Multi-Factor Authentication (MFA)**
 

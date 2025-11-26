@@ -27,6 +27,7 @@
 | `/dashboard/finance` | Finance | Revenue Ops | Stripe sync status, MRR dashboard. |
 | `/dashboard/system/queues` | Ops | Queue Health Monitor | Custom UI for hybrid PostgreSQL + Redis queue system. Job retry controls. |
 | `/dashboard/system/logs` | Ops | System Logs | Log viewer (Elasticsearch/ClickHouse interface). |
+| `/admin/secrets` | Super Admin | Vault Secrets Management | Centralized secrets management for all tenants. Vault health monitoring, SSH keys, SMTP credentials, API keys, DKIM keys. Bulk rotation and audit log viewer. |
 
 ## 4. Detailed View Descriptions
 
@@ -319,6 +320,193 @@
 
 ---
 
+### `/admin/secrets` - Vault Secrets Management
+
+**User Story**: *"As a platform admin, I want to monitor Vault health and manage tenant secrets centrally, so I can ensure secure credential storage and respond quickly to security incidents."*
+
+**What You'll Find**:
+
+#### Vault Health Dashboard
+
+- **Status Cards** (Traffic light):
+  - **Vault Seal Status**: Unsealed (Green) / Sealed (Red).
+  - **Active Node**: vault-node-1 (Primary).
+  - **Storage Backend**: PostgreSQL - Healthy.
+  - **Last Backup**: 2 hours ago (Green) / 25 hours ago (Yellow warning).
+  - **Backup Health**: Healthy / Warning / Critical.
+
+- **Quick Actions**:
+  - **"Force Backup Now" Button**: Manually trigger Vault snapshot.
+  - **"View Backup History" Link**: Shows last 30 backups with restore points.
+
+#### Tenant Secrets Overview
+
+- **Search Bar**:
+  - Placeholder: "Search by tenant ID, tenant name, or VPS IP".
+  - Autocomplete with tenant suggestions.
+
+- **Filters**:
+  - **Secret Type**: All, SSH Keys, SMTP Credentials, API Keys, DKIM Keys.
+  - **Status**: Active, Expired, Revoked.
+  - **Rotation Due**: Next 7 days, Next 30 days, Overdue.
+
+- **Tenants Table**:
+  - **Columns**: Tenant ID, Tenant Name, VPS IP, SSH Key Status, SMTP Status, API Keys Count, DKIM Keys Count, Last Rotation, Actions.
+  - **Color Coding**:
+    - Expired secrets: Red background.
+    - Rotation due soon: Yellow background.
+    - Healthy: Green indicator.
+
+#### Secret Details View (Click tenant row to expand)
+
+- **SSH Keys Section**:
+  - **Admin SSH Key**: Status (Active/Expired), Last Rotated, Next Rotation, Key Fingerprint.
+  - **Tenant SSH Key**: Status, Last Rotated, Next Rotation, Key Fingerprint, Last Downloaded.
+  - **Actions**: "Rotate Now", "View Rotation History".
+
+- **SMTP Credentials Section**:
+  - **Admin Username**: Display masked username (e.g., `admin@*****.com`).
+  - **Webmail URL**: Display full URL (e.g., `https://mail.example.com`).
+  - **Last Rotated**: Timestamp (e.g., "2025-07-15 10:00:00 UTC").
+  - **Next Rotation**: 180 days from last rotation (e.g., "2026-01-15 10:00:00 UTC").
+  - **Rotation Status**: Color-coded indicator (Green: Healthy, Yellow: Due soon, Red: Overdue).
+  - **Actions**: 
+    - **"View Credentials" Button**: Requires re-authentication (password + 2FA).
+      - Opens secure modal with time-limited access (15 minutes).
+      - Password initially masked (click eye icon to reveal).
+      - Copy to clipboard button with confirmation.
+      - Countdown timer showing expiration.
+      - Auto-hide credentials after 15 minutes.
+    - **"Rotate Now" Button**: Manual rotation with reason input.
+    - **"Emergency Reset" Button**: For security incidents (requires incident ID).
+    - **"View Audit Trail" Link**: Shows all credential access events.
+
+- **API Keys Section**:
+  - **Table**: Key ID, Permissions, Rate Limit, Created, Last Used, Request Count, Status.
+  - **Actions**: "Revoke Key", "View Usage Analytics".
+
+- **DKIM Keys Section**:
+  - **Table**: Domain, Selector, Last Rotated, Next Rotation (365 days), Status.
+  - **Actions**: "Rotate Now", "View DNS Records".
+
+#### Rotation Management
+
+- **Bulk Rotation Panel**:
+  - **"Rotate All SSH Keys" Button**: Triggers rotation for all tenants (confirmation required).
+  - **"Rotate All SMTP Credentials" Button**: Bulk SMTP rotation.
+  - **"Rotate Overdue Secrets" Button**: Rotates only secrets past rotation date.
+
+- **Rotation Schedule Configuration**:
+  - **SSH Keys**: 90 days (default), Custom (30-365 days).
+  - **SMTP Credentials**: 180 days (default), Custom.
+  - **DKIM Keys**: 365 days (default), Custom.
+
+- **Grace Period Settings**:
+  - **SSH Keys**: 24 hours (both old and new keys valid).
+  - **DKIM Keys**: 48 hours (DNS propagation time).
+
+#### SMTP Credentials Viewing Modal
+
+**Triggered by**: Clicking "View Credentials" button in SMTP Credentials Section.
+
+**Security Requirements**:
+- **Re-authentication Required**: Admin must enter password + 2FA code.
+- **Time-Limited Access**: Credentials visible for 15 minutes only.
+- **Audit Logging**: All credential views logged with timestamp, user, and IP address.
+
+**Modal Components**:
+
+1. **Re-authentication Step**:
+   - **Password Input**: "Enter your password to continue".
+   - **2FA Code Input**: "Enter your 2FA code".
+   - **"Verify" Button**: Validates credentials.
+   - **Error Handling**: "Invalid credentials. Please try again."
+
+2. **Credentials Display** (After successful re-authentication):
+   - **Header**: "SMTP Admin Credentials - Tenant: {tenant_name}".
+   - **Expiration Timer**: "Credentials expire in 14:32" (countdown).
+   - **Warning Banner**: "⚠️ These credentials provide full access to the tenant's email infrastructure. Handle with care."
+   
+   - **Credential Fields**:
+     - **Username**: `admin@example.com` (plain text, copyable).
+     - **Password**: `••••••••••••••••` (masked by default).
+       - **Eye Icon Button**: Click to reveal password.
+       - **Copy Button**: Copy password to clipboard (shows "Copied!" confirmation).
+     - **Webmail URL**: `https://mail.example.com` (clickable link, opens in new tab).
+   
+   - **Metadata**:
+     - **Created**: "2025-01-15 10:00:00 UTC".
+     - **Last Rotated**: "2025-07-15 10:00:00 UTC".
+     - **Next Rotation**: "2026-01-15 10:00:00 UTC".
+   
+   - **Actions**:
+     - **"Close" Button**: Closes modal immediately.
+     - **"Rotate Now" Button**: Triggers manual rotation (confirmation required).
+     - **"Emergency Reset" Button**: For security incidents (requires incident ID).
+
+3. **Auto-Hide Behavior**:
+   - After 15 minutes, modal automatically closes.
+   - Display warning at 1 minute remaining: "Credentials will expire in 1 minute".
+   - After expiration, show message: "Credentials expired. Please re-authenticate to view again."
+
+**Implementation Notes**:
+- **API Endpoint**: `GET /api/v1/platform-admin/tenants/{tenant_id}/smtp-credentials`.
+- **Re-auth Token**: Generated on successful re-authentication, valid for 15 minutes.
+- **Audit Event**: `smtp_credentials_viewed` logged with tenant_id, admin_user_id, timestamp, ip_address.
+
+#### Audit Log Viewer
+
+- **Real-time Audit Stream**:
+  - **Columns**: Timestamp, Action, Tenant, User, Secret Type, IP Address, Status.
+  - **Actions**: read, write, delete, rotate, download.
+  - **Auto-refresh**: Every 5 seconds.
+
+- **Filters**:
+  - **Tenant**: Select from dropdown.
+  - **Secret Type**: SSH, SMTP, API Keys, DKIM.
+  - **Action**: Read, Write, Delete, Rotate, Download.
+  - **Date Range**: Last hour, Last 24 hours, Last 7 days, Custom.
+  - **User**: Filter by admin user who performed action.
+
+- **Suspicious Activity Alerts**:
+  - **Alert Banner**: "⚠️ 5 failed authentication attempts detected in last 5 minutes".
+  - **Alert Types**:
+    - Multiple failed authentication attempts (>5 in 5 minutes).
+    - Access to secrets outside normal hours (2am-6am).
+    - Bulk secret reads (>100 secrets in 1 minute).
+    - Secret deletion without prior approval.
+
+- **Export Audit Logs**:
+  - **"Export to CSV" Button**: Download filtered audit logs.
+  - **"Export to JSON" Button**: For programmatic analysis.
+
+**User Journey Context**: Proactive security monitoring and reactive incident response.
+
+**Related Documentation**:
+
+- [Vault Integration Architecture](/docs/design/routes/infrastructure-ssh-access) - Detailed route specification
+- [Vault SSH Management Feature](/docs/features/infrastructure/vault-ssh-management) - Feature documentation
+- [Security Compliance](/docs/compliance-security/enterprise/infrastructure-security)
+- [Incident Response](/docs/operations/incident-management/runbooks)
+
+**Technical Integration**:
+
+- **HashiCorp Vault**: Centralized secrets storage with KV v2 engine.
+- **Vault API**: All secret operations via Vault REST API.
+- **Access Control**: Role-based policies (admin full access, tenant read-only).
+- **Audit Logging**: All Vault operations logged to audit device (file + syslog).
+- **Backup System**: Automated daily snapshots to S3 with AES-256-GCM encryption.
+- **Monitoring**: Prometheus metrics for Vault health, PagerDuty alerts for critical issues.
+- **Database Reference**: Vault uses PostgreSQL storage backend for HA.
+- **API Endpoints**:
+  - `GET /api/v1/admin/vault/health` - Vault health status.
+  - `GET /api/v1/admin/secrets/tenants` - List all tenant secrets.
+  - `GET /api/v1/admin/secrets/tenant/{tenant_id}` - Tenant secret details.
+  - `POST /api/v1/admin/secrets/rotate-all` - Bulk rotation.
+  - `GET /api/v1/admin/vault/audit-logs` - Retrieve audit logs.
+
+---
+
 ### Admin-Specific UI Theme
 
 **User Story**: *"As an admin, I want a visually distinct interface, so I always know when I'm in admin mode and avoid accidental changes."*
@@ -341,6 +529,7 @@
 | `/tenants` | [Admin API](/docs/implementation-technical/api/platform-api/admin) | `GET /api/v1/platform/admin/tenants` (List), `PATCH` (Overrides). |
 | `/finance` | [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) | `GET /api/v1/platform/subscriptions/mrr` (Revenue stats). |
 | `/system/queues` | [Queue API](/docs/implementation-technical/api/queue/jobs) | `GET /api/v1/queue/stats` (Monitor), `POST .../retry` (Actions). |
+| `/admin/secrets` | Vault Admin API | `GET /api/v1/admin/vault/health` (Health), `GET /api/v1/admin/secrets/tenants` (List), `POST /api/v1/admin/secrets/rotate-all` (Bulk rotation), `GET /api/v1/admin/vault/audit-logs` (Audit). |
 
 ## 6. Data Strategy
 

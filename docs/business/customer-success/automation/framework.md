@@ -197,7 +197,7 @@ Core Platforms:
 ```
 
 #### 10.2 Integration Architecture
-- **Event Bus:** Kafka/Redis Streams for real-time event processing
+- **Event Bus:** PostgreSQL + Redis for real-time event processing
 - **API Gateway:** Centralized API management and rate limiting
 - **Data Lake:** Unified customer data for ML training and analytics
 - **Observability:** Comprehensive logging, monitoring, alerting

@@ -86,9 +86,19 @@
 
 **User Journey Context**: Occasional updates. Critical for account security.
 
+> [!NOTE]
+> **Missing MVP Features**: 
+> - Session Management UI (view/revoke active sessions)
+> - Email Change Verification Flow UI
+> - Login Activity Log
+> - Password strength enforcement (server-side)
+> 
+> See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
+
 **Related Documentation**:
 
 - [Account Security](/docs/compliance-security/enterprise/overview)
+- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
 - [2FA Setup Guide](/docs/freelancer-support/tutorials/2fa-setup)
 
 **Technical Integration**:

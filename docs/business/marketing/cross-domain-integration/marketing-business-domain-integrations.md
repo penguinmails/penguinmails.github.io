@@ -604,7 +604,7 @@ class BudgetOptimizationEngine {
 **Event-Driven Architecture:**
 ```typescript
 interface EventStreamingConfig {
-  event_broker: "Apache Kafka";
+  event_broker: "PostgreSQL + Redis";
   topics: {
     "lead-capture": "Real-time lead events";
     "campaign-performance": "Campaign metrics updates";
@@ -634,9 +634,9 @@ class MarketingEventStream {
       }
     };
 
-    await this.kafkaProducer.send({
-      topic: this.getTopicForEvent(event.type),
-      messages: [{
+    await this.eventStreamer.publish({
+      stream: this.getStreamForEvent(event.type),
+      records: [{
         key: event.tenantId,
         value: JSON.stringify(eventData)
       }]

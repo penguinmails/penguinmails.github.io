@@ -177,7 +177,7 @@ interface FoundationImplementation {
   backend: {
     runtime: 'Node.js with TypeScript',
     api: 'Next.js API routes',
-    database: 'NileDB with Prisma ORM',
+    database: 'NileDB with Drizzle ORM',
     authentication: 'Custom JWT implementation'
   };
 

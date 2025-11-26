@@ -21,7 +21,7 @@ This technical specification defines the implementation architecture for marketi
 
 **Workflow Engine:** Node.js-based workflow orchestration service with JSON-based workflow definitions, parallel/sequential execution paths, and built-in error handling
 
-**Trigger Management System:** Apache Kafka event-driven architecture supporting time-based, behavior-based, and API-based triggers with <100ms latency
+**Trigger Management System:** PostgreSQL + Redis event-driven architecture supporting time-based, behavior-based, and API-based triggers with <100ms latency
 
 **Integration Layer:** RESTful API gateway with OAuth 2.0 authentication, 50+ platform integrations, webhook synchronization, and GraphQL endpoints
 
@@ -81,7 +81,7 @@ const crmIntegration = {
 
 ### Required Services
 
-**Message Queue:** Apache Kafka for event streaming and workflow coordination
+**Message Queue:** PostgreSQL + Redis for event streaming and workflow coordination
 **Database:** PostgreSQL for workflow metadata and execution logs
 **Cache:** Redis for workflow state management and rate limiting
 **Monitoring:** Prometheus + Grafana for metrics and alerting

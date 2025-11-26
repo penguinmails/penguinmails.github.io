@@ -118,7 +118,7 @@ Technical documentation and implementation guides for PenguinMails.
 
 - **Cloud Deployment**: AWS, Azure, GCP support
 - **On-Premise**: Docker containerization
-- **Database**: PostgreSQL, MySQL compatibility
+- **Database**: PostgreSQL with NileDB multi-tenancy
 - **APIs**: RESTful and GraphQL support
 
 ### Performance Specifications

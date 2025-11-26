@@ -8,13 +8,16 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ## Features in This Category
 
+### ✅ Available Now
+
+- **[Subscription Management](./subscription-management.md)** - Plan management and upgrades
+- **[Stripe Integration](./stripe-integration.md)** - Payment processing via Stripe
+- **[Billing Dashboard](./billing-dashboard.md)** - Usage and billing overview
+
 ### 🔜 Coming Soon
 
-- **Subscription Management** - Plan management and upgrades
-- **Stripe Integration** - Payment processing via Stripe
-- **Invoicing** - Automated invoice generation
-- **Billing Dashboard** - Usage and billing overview
-- **Payment History** - Complete payment records
+- **Invoicing** - Advanced invoice customization(covered in Billing Dashboard)
+- **Payment History** - Complete payment records (covered in Billing Dashboard)
 
 ---
 

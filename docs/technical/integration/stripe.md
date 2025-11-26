@@ -701,7 +701,7 @@ Avoid storing sensitive data in Stripe metadata:
 - [x] Integrate with billing page
 - [ ] Configure Stripe webhook endpoint in Dashboard
 - [x] Database tables exist (`subscriptions`, `tenant_config`, `payments`)
-- [ ] Connect webhook handlers to database updates (implement Prisma/ORM queries)
+- [ ] Connect webhook handlers to database updates (implement Drizzle ORM queries)
 - [ ] Implement Customer Portal (planned feature)
 - [ ] Add comprehensive error logging
 - [ ] Write integration tests

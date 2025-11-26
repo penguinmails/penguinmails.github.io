@@ -275,20 +275,46 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 - Security measures
 
 **Implementation Framework**:
-```python
-# Data processing record system
-class DataProcessingRecord:
-    def __init__(self):
-        self.record_id = generate_unique_id()
-        self.processing_purpose = "email_marketing"
-        self.data_categories = ["email", "name", "company", "job_title"]
-        self.data_subjects = ["prospects", "customers", "partners"]
-        self.recipients = ["internal_teams", "email_service_provider"]
-        self.retention_period = "24_months"
-        self.security_measures = ["encryption", "access_controls", "audit_logs"]
-        self.international_transfers = ["email_provider_data_center"]
-        self.created_date = datetime.now()
-        self.last_reviewed = datetime.now()
+```typescript
+// Data processing record system
+interface DataProcessingRecord {
+  recordId: string;
+  processingPurpose: string;
+  dataCategories: string[];
+  dataSubjects: string[];
+  recipients: string[];
+  retentionPeriod: string;
+  securityMeasures: string[];
+  internationalTransfers: string[];
+  createdDate: string;
+  lastReviewed: string;
+}
+
+class DataProcessingRecordManager implements DataProcessingRecord {
+  recordId: string;
+  processingPurpose: string;
+  dataCategories: string[];
+  dataSubjects: string[];
+  recipients: string[];
+  retentionPeriod: string;
+  securityMeasures: string[];
+  internationalTransfers: string[];
+  createdDate: string;
+  lastReviewed: string;
+
+  constructor() {
+    this.recordId = generateUniqueId();
+    this.processingPurpose = "email_marketing";
+    this.dataCategories = ["email", "name", "company", "job_title"];
+    this.dataSubjects = ["prospects", "customers", "partners"];
+    this.recipients = ["internal_teams", "email_service_provider"];
+    this.retentionPeriod = "24_months";
+    this.securityMeasures = ["encryption", "access_controls", "audit_logs"];
+    this.internationalTransfers = ["email_provider_data_center"];
+    this.createdDate = new Date().toISOString();
+    this.lastReviewed = new Date().toISOString();
+  }
+}
 ```
 
 #### Right to Access Implementation
@@ -300,31 +326,51 @@ class DataProcessingRecord:
 5. **Secure Delivery**: Deliver data securely to requestor
 
 **Implementation Example**:
-```python
-def handle_data_access_request(request):
-    # Verify requestor identity
-    if not verify_identity(request.email, request.verification_data):
-        return {"error": "Identity verification failed"}
+```typescript
+interface DataAccessRequest {
+  email: string;
+  verificationData: string;
+  requestId: string;
+}
 
-    # Collect personal data from all systems
-    personal_data = {
-        "email_data": get_email_preferences(request.email),
-        "account_data": get_account_information(request.email),
-        "activity_data": get_user_activity(request.email),
-        "preferences_data": get_communication_preferences(request.email)
-    }
+interface DataAccessResponse {
+  status: string;
+  error?: string;
+}
 
-    # Compile in readable format
-    compiled_data = compile_personal_data(personal_data)
+interface PersonalData {
+  emailData: EmailPreferences;
+  accountData: AccountInformation;
+  activityData: UserActivity;
+  preferencesData: CommunicationPreferences;
+}
 
-    # Encrypt and secure delivery
-    encrypted_data = encrypt_data(compiled_data)
-    send_secure_email(request.email, encrypted_data)
+async function handleDataAccessRequest(request: DataAccessRequest): Promise<DataAccessResponse> {
+  // Verify requestor identity
+  if (!await verifyIdentity(request.email, request.verificationData)) {
+    return { status: "error", error: "Identity verification failed" };
+  }
 
-    # Log the request for audit trail
-    log_data_access_request(request, "completed")
+  // Collect personal data from all systems
+  const personalData: PersonalData = {
+    emailData: await getEmailPreferences(request.email),
+    accountData: await getAccountInformation(request.email),
+    activityData: await getUserActivity(request.email),
+    preferencesData: await getCommunicationPreferences(request.email)
+  };
 
-    return {"status": "Data provided securely"}
+  // Compile in readable format
+  const compiledData = await compilePersonalData(personalData);
+
+  // Encrypt and secure delivery
+  const encryptedData = await encryptData(compiledData);
+  await sendSecureEmail(request.email, encryptedData);
+
+  // Log the request for audit trail
+  await logDataAccessRequest(request, "completed");
+
+  return { status: "Data provided securely" };
+}
 ```
 
 #### Right to Deletion Implementation
@@ -337,41 +383,70 @@ def handle_data_access_request(request):
 6. **Documentation**: Record deletion for audit compliance
 
 **Implementation Example**:
-```python
-def handle_deletion_request(request):
-    # Verify legal basis for deletion
-    if not verify_deletion_basis(request.reason, request.legal_basis):
-        return {"error": "Deletion not permitted under law"}
+```typescript
+interface DeletionRequest {
+  email: string;
+  reason: string;
+  legalBasis: string;
+  requestId: string;
+}
 
-    # Identify all systems containing personal data
-    systems = [
-        "email_marketing_platform",
-        "customer_database",
-        "analytics_platform",
-        "support_system",
-        "backup_systems"
-    ]
+interface DeletionResponse {
+  status: string;
+  systemsAffected: string[];
+  verification: DeletionVerification;
+  error?: string;
+}
 
-    # Systematic deletion
-    deletion_results = {}
-    for system in systems:
-        try:
-            result = delete_personal_data(system, request.email)
-            deletion_results[system] = result
-        except Exception as e:
-            deletion_results[system] = f"Error: {str(e)}"
+interface DeletionVerification {
+  verified: boolean;
+  systemsChecked: string[];
+  deletionStatus: Record<string, boolean>;
+}
 
-    # Verify deletion
-    verification_result = verify_deletion_completion(request.email, systems)
-
-    # Log for compliance
-    log_deletion_request(request, deletion_results, verification_result)
-
+async function handleDeletionRequest(request: DeletionRequest): Promise<DeletionResponse> {
+  // Verify legal basis for deletion
+  if (!await verifyDeletionBasis(request.reason, request.legalBasis)) {
     return {
-        "status": "Deletion completed",
-        "systems_affected": systems,
-        "verification": verification_result
+      status: "error",
+      error: "Deletion not permitted under law",
+      systemsAffected: [],
+      verification: { verified: false, systemsChecked: [], deletionStatus: {} }
+    };
+  }
+
+  // Identify all systems containing personal data
+  const systems = [
+    "email_marketing_platform",
+    "customer_database",
+    "analytics_platform",
+    "support_system",
+    "backup_systems"
+  ];
+
+  // Systematic deletion
+  const deletionResults: Record<string, boolean | string> = {};
+  for (const system of systems) {
+    try {
+      const result = await deletePersonalData(system, request.email);
+      deletionResults[system] = result;
+    } catch (error) {
+      deletionResults[system] = `Error: ${error instanceof Error ? error.message : 'Unknown error'}`;
     }
+  }
+
+  // Verify deletion
+  const verificationResult = await verifyDeletionCompletion(request.email, systems);
+
+  // Log for compliance
+  await logDeletionRequest(request, deletionResults, verificationResult);
+
+  return {
+    status: "Deletion completed",
+    systemsAffected: systems,
+    verification: verificationResult
+  };
+}
 ```
 
 ---
@@ -389,34 +464,55 @@ def handle_deletion_request(request):
 5. **Security Incidents**: Monitor for data breaches and incidents
 
 **Implementation Example**:
-```python
-class ComplianceMonitor:
-    def __init__(self):
-        self.checks = {
-            "email_auth": EmailAuthMonitor(),
-            "consent_tracking": ConsentMonitor(),
-            "opt_out_processing": OptOutMonitor(),
-            "data_rights": DataRightsMonitor(),
-            "security_monitoring": SecurityMonitor()
-        }
+```typescript
+interface ComplianceCheck {
+  status: 'pass' | 'fail' | 'error';
+  details: string;
+  error?: string;
+  lastChecked: string;
+}
 
-    def run_compliance_checks(self):
-        results = {}
-        for check_name, monitor in self.checks.items():
-            try:
-                result = monitor.check_compliance()
-                results[check_name] = {
-                    "status": "pass" if result.is_compliant else "fail",
-                    "details": result.details,
-                    "last_checked": datetime.now()
-                }
-            except Exception as e:
-                results[check_name] = {
-                    "status": "error",
-                    "error": str(e),
-                    "last_checked": datetime.now()
-                }
-        return results
+interface ComplianceResults {
+  [checkName: string]: ComplianceCheck;
+}
+
+class ComplianceMonitor {
+  private checks: Record<string, ComplianceChecker>;
+
+  constructor() {
+    this.checks = {
+      emailAuth: new EmailAuthMonitor(),
+      consentTracking: new ConsentMonitor(),
+      optOutProcessing: new OptOutMonitor(),
+      dataRights: new DataRightsMonitor(),
+      securityMonitoring: new SecurityMonitor()
+    };
+  }
+
+  async runComplianceChecks(): Promise<ComplianceResults> {
+    const results: ComplianceResults = {};
+    
+    for (const [checkName, monitor] of Object.entries(this.checks)) {
+      try {
+        const result = await monitor.checkCompliance();
+        results[checkName] = {
+          status: result.isCompliant ? 'pass' : 'fail',
+          details: result.details,
+          lastChecked: new Date().toISOString()
+        };
+      } catch (error) {
+        results[checkName] = {
+          status: 'error',
+          details: 'Compliance check failed',
+          error: error instanceof Error ? error.message : 'Unknown error',
+          lastChecked: new Date().toISOString()
+        };
+      }
+    }
+    
+    return results;
+  }
+}
 ```
 
 #### Compliance Dashboard
@@ -465,36 +561,76 @@ class ComplianceMonitor:
 - **Industry Standards**: 7 years for comprehensive audit trail
 
 **Implementation**:
-```python
-class AuditTrailManager:
-    def __init__(self, retention_config):
-        self.retention_periods = retention_config
+```typescript
+interface AuditEvent {
+  eventType: string;
+  timestamp: string;
+  userId: string;
+  eventData: Record<string, unknown>;
+}
 
-    def store_audit_event(self, event):
-        # Store event with appropriate retention period
-        retention_period = self.get_retention_period(event.event_type)
-        expiry_date = event.timestamp + retention_period
+interface AuditRecord {
+  event: AuditEvent;
+  retentionPeriod: string;
+  expiryDate: string;
+  createdAt: string;
+}
 
-        audit_record = {
-            "event": event,
-            "retention_period": retention_period,
-            "expiry_date": expiry_date,
-            "created_at": datetime.now()
-        }
+interface RetentionConfig {
+  emailSent: string;
+  consentGiven: string;
+  dataAccess: string;
+  securityIncident: string;
+}
 
-        self.audit_database.store(audit_record)
+class AuditTrailManager {
+  private retentionPeriods: RetentionConfig;
+  private auditDatabase: AuditDatabase;
 
-        # Schedule automatic deletion
-        self.schedule_deletion(audit_record, expiry_date)
+  constructor(retentionConfig: RetentionConfig) {
+    this.retentionPeriods = retentionConfig;
+    this.auditDatabase = new AuditDatabase();
+  }
 
-    def get_retention_period(self, event_type):
-        retention_map = {
-            "email_sent": timedelta(days=1095),  # 3 years
-            "consent_given": timedelta(days=1095),  # 3 years
-            "data_access": timedelta(days=1095),  # 3 years
-            "security_incident": timedelta(days=2555)  # 7 years
-        }
-        return retention_map.get(event_type, timedelta(days=1095))
+  async storeAuditEvent(event: AuditEvent): Promise<void> {
+    // Store event with appropriate retention period
+    const retentionPeriod = this.getRetentionPeriod(event.eventType);
+    const expiryDate = this.calculateExpiryDate(event.timestamp, retentionPeriod);
+
+    const auditRecord: AuditRecord = {
+      event,
+      retentionPeriod,
+      expiryDate,
+      createdAt: new Date().toISOString()
+    };
+
+    await this.auditDatabase.store(auditRecord);
+
+    // Schedule automatic deletion
+    await this.scheduleDeletion(auditRecord, expiryDate);
+  }
+
+  private getRetentionPeriod(eventType: string): string {
+    const retentionMap: Record<string, string> = {
+      emailSent: '1095', // 3 years in days
+      consentGiven: '1095', // 3 years in days
+      dataAccess: '1095', // 3 years in days
+      securityIncident: '2555' // 7 years in days
+    };
+    return retentionMap[eventType] || '1095';
+  }
+
+  private calculateExpiryDate(timestamp: string, retentionDays: string): string {
+    const eventDate = new Date(timestamp);
+    const expiryDate = new Date(eventDate.getTime() + parseInt(retentionDays) * 24 * 60 * 60 * 1000);
+    return expiryDate.toISOString();
+  }
+
+  private async scheduleDeletion(auditRecord: AuditRecord, expiryDate: string): Promise<void> {
+    // Implementation for scheduling automatic deletion
+    await this.auditDatabase.scheduleDeletion(auditRecord, expiryDate);
+  }
+}
 ```
 
 ---
@@ -551,37 +687,94 @@ class AuditTrailManager:
 6. **Training Delivery**: Train team on new requirements
 
 **Example Implementation**:
-```python
-class RegulatoryChangeManager:
-    def __init__(self):
-        self.regulatory_sources = [
-            "https://ftc.gov/compliance",
-            "https://gdpr.eu/updates/",
-            "https://oag.ca.gov/privacy/ccpa"
-        ]
+```typescript
+interface RegulatoryChange {
+  id: string;
+  source: string;
+  description: string;
+  effectiveDate: string;
+  regulation: string;
+}
 
-    def monitor_regulatory_changes(self):
-        changes = []
-        for source in self.regulatory_sources:
-            new_changes = self.check_for_updates(source)
-            if new_changes:
-                changes.extend(new_changes)
+interface ImpactAssessment {
+  requiresAction: boolean;
+  impactLevel: 'low' | 'medium' | 'high' | 'critical';
+  requirements: string[];
+  recommendedTimeline: string;
+  owner: string;
+  testingSteps: string[];
+}
 
-        for change in changes:
-            impact_assessment = self.assess_impact(change)
-            if impact_assessment.requires_action:
-                self.create_implementation_plan(change, impact_assessment)
+interface ImplementationPlan {
+  change: RegulatoryChange;
+  impactLevel: string;
+  technicalRequirements: string[];
+  timeline: string;
+  responsibleParty: string;
+  testingProtocol: string[];
+}
 
-    def create_implementation_plan(self, change, assessment):
-        plan = {
-            "change": change,
-            "impact_level": assessment.impact_level,
-            "technical_requirements": assessment.requirements,
-            "timeline": assessment.recommended_timeline,
-            "responsible_party": assessment.owner,
-            "testing_protocol": assessment.testing_steps
-        }
-        self.implementation_plans.append(plan)
+class RegulatoryChangeManager {
+  private regulatorySources: string[];
+  private implementationPlans: ImplementationPlan[];
+
+  constructor() {
+    this.regulatorySources = [
+      "https://ftc.gov/compliance",
+      "https://gdpr.eu/updates/",
+      "https://oag.ca.gov/privacy/ccpa"
+    ];
+    this.implementationPlans = [];
+  }
+
+  async monitorRegulatoryChanges(): Promise<void> {
+    const changes: RegulatoryChange[] = [];
+    
+    for (const source of this.regulatorySources) {
+      const newChanges = await this.checkForUpdates(source);
+      if (newChanges) {
+        changes.push(...newChanges);
+      }
+    }
+
+    for (const change of changes) {
+      const impactAssessment = await this.assessImpact(change);
+      if (impactAssessment.requiresAction) {
+        this.createImplementationPlan(change, impactAssessment);
+      }
+    }
+  }
+
+  private createImplementationPlan(change: RegulatoryChange, assessment: ImpactAssessment): void {
+    const plan: ImplementationPlan = {
+      change,
+      impactLevel: assessment.impactLevel,
+      technicalRequirements: assessment.requirements,
+      timeline: assessment.recommendedTimeline,
+      responsibleParty: assessment.owner,
+      testingProtocol: assessment.testingSteps
+    };
+    
+    this.implementationPlans.push(plan);
+  }
+
+  private async checkForUpdates(source: string): Promise<RegulatoryChange[]> {
+    // Implementation for checking regulatory updates
+    return [];
+  }
+
+  private async assessImpact(change: RegulatoryChange): Promise<ImpactAssessment> {
+    // Implementation for impact assessment
+    return {
+      requiresAction: false,
+      impactLevel: 'low',
+      requirements: [],
+      recommendedTimeline: '30 days',
+      owner: 'compliance_team',
+      testingSteps: []
+    };
+  }
+}
 ```
 
 ---
@@ -623,40 +816,75 @@ class RegulatoryChangeManager:
 - Incident response: Real-time training for incidents
 
 **Training Content Structure**:
-```python
-class ComplianceTraining:
-    def __init__(self, role):
-        self.role = role
-        self.training_modules = self.get_role_specific_modules()
+```typescript
+type UserRole = 'executive' | 'marketing' | 'technical' | 'customer_service';
 
-    def get_role_specific_modules(self):
-        module_map = {
-            "executive": [
-                "regulatory_overview",
-                "cost_benefit_analysis",
-                "risk_management",
-                "audit_requirements"
-            ],
-            "marketing": [
-                "email_marketing_regulations",
-                "consent_management",
-                "can_spam_compliance",
-                "data_subject_rights"
-            ],
-            "technical": [
-                "technical_implementation",
-                "security_protocols",
-                "data_processing",
-                "audit_trail_management"
-            ],
-            "customer_service": [
-                "data_subject_processes",
-                "consent_procedures",
-                "privacy_policy_handling",
-                "escalation_procedures"
-            ]
-        }
-        return module_map.get(self.role, [])
+interface TrainingModule {
+  id: string;
+  name: string;
+  description: string;
+  duration: number; // in minutes
+  required: boolean;
+}
+
+interface ComplianceTrainingConfig {
+  role: UserRole;
+  modules: TrainingModule[];
+  completionRequired: boolean;
+}
+
+class ComplianceTraining {
+  private role: UserRole;
+  private trainingModules: TrainingModule[];
+
+  constructor(role: UserRole) {
+    this.role = role;
+    this.trainingModules = this.getRoleSpecificModules();
+  }
+
+  private getRoleSpecificModules(): TrainingModule[] {
+    const moduleMap: Record<UserRole, TrainingModule[]> = {
+      executive: [
+        { id: 'regulatory_overview', name: 'Regulatory Overview', description: 'Comprehensive regulatory landscape', duration: 60, required: true },
+        { id: 'cost_benefit_analysis', name: 'Cost-Benefit Analysis', description: 'Compliance ROI analysis', duration: 45, required: true },
+        { id: 'risk_management', name: 'Risk Management', description: 'Risk assessment and mitigation', duration: 90, required: true },
+        { id: 'audit_requirements', name: 'Audit Requirements', description: 'Audit preparation and compliance', duration: 75, required: true }
+      ],
+      marketing: [
+        { id: 'email_marketing_regulations', name: 'Email Marketing Regulations', description: 'CAN-SPAM, GDPR, CCPA requirements', duration: 60, required: true },
+        { id: 'consent_management', name: 'Consent Management', description: 'Proper consent collection and management', duration: 45, required: true },
+        { id: 'can_spam_compliance', name: 'CAN-SPAM Compliance', description: 'US email marketing compliance', duration: 30, required: true },
+        { id: 'data_subject_rights', name: 'Data Subject Rights', description: 'Handling data subject requests', duration: 60, required: true }
+      ],
+      technical: [
+        { id: 'technical_implementation', name: 'Technical Implementation', description: 'Technical compliance implementation', duration: 120, required: true },
+        { id: 'security_protocols', name: 'Security Protocols', description: 'Data security and protection', duration: 90, required: true },
+        { id: 'data_processing', name: 'Data Processing', description: 'Secure data handling procedures', duration: 75, required: true },
+        { id: 'audit_trail_management', name: 'Audit Trail Management', description: 'Comprehensive audit logging', duration: 60, required: true }
+      ],
+      customer_service: [
+        { id: 'data_subject_processes', name: 'Data Subject Processes', description: 'Handling customer data requests', duration: 60, required: true },
+        { id: 'consent_procedures', name: 'Consent Procedures', description: 'Customer consent management', duration: 45, required: true },
+        { id: 'privacy_policy_handling', name: 'Privacy Policy Handling', description: 'Explaining privacy policies to customers', duration: 30, required: true },
+        { id: 'escalation_procedures', name: 'Escalation Procedures', description: 'When and how to escalate issues', duration: 30, required: true }
+      ]
+    };
+    
+    return moduleMap[this.role] || [];
+  }
+
+  getTrainingModules(): TrainingModule[] {
+    return this.trainingModules;
+  }
+
+  async generateTrainingPlan(): Promise<ComplianceTrainingConfig> {
+    return {
+      role: this.role,
+      modules: this.trainingModules,
+      completionRequired: true
+    };
+  }
+}
 ```
 
 ### Compliance Culture Development

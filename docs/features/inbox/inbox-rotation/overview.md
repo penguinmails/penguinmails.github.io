@@ -1,330 +1,434 @@
 ---
-title: "Inbox Rotation Overview"
-description: "Smart inbox rotation to avoid detection and maximize deliverability"
-last_modified_date: "2025-11-10"
+title: "Inbox Rotation"
+description: "Maximize deliverability by automatically rotating sending across multiple email accounts with smart health monitoring"
 level: "2"
-persona: "Documentation Users"
+status: "AVAILABLE"
+roadmap_timeline: "Q1 2026"
+priority: "High"
+related_features:
+  - inbox/unified-inbox/overview
+  - warmup/reputation-monitoring
+  - campaigns/campaign-management/overview
+  - infrastructure/free-mailbox-creation/overview
+related_tasks:
+  - epic-8-inbox-management
 ---
 
-# Smart Inbox Rotation for Sustainable Deliverability
+# Inbox Rotation
 
-## Strategic Account Protection & Detection Avoidance
+**Quick Access**: Scale your outreach volume safely by distributing sending load across multiple email accounts, domains, and IPs.
 
-> **Getting Started?** See our [Features Overview](/docs/features/feature-overview) for complete context and navigation.
-> **Progressive Disclosure Guide**: Choose your expertise level for the most relevant content
->
-> - **Level 1**: Basic inbox rotation for account protection
-> - **Level 2**: Advanced rotation strategies and optimization
-> - **Level 3**: Technical implementation and enterprise features
+## Overview
+
+Inbox Rotation protects your sender reputation by ensuring no single email account exceeds safe sending limits. Instead of sending 500 emails from one address (high risk), PenguinMails automatically distributes them across 10 addresses (50 emails each, low risk). If an account's health score drops, it's automatically paused while others pick up the slack.
+
+### Key Capabilities
+
+- **Rotation Pools**: Group accounts by purpose (e.g., "Sales Team", "Newsletter", "Cold Outreach")
+- **Smart Load Balancing**: Distribute volume based on account age, warmup status, and health score
+- **Auto-Pause & Recovery**: Automatically remove accounts with high bounce rates or low reputation
+- **Domain Diversity**: Rotate across different domains to prevent domain-wide blacklisting
+- **Volume Ramping**: Automatically increase limits as accounts mature
+- **Unified Analytics**: Track performance of the entire pool as a single entity
 
 ---
 
-**Most cold email campaigns fail because they trigger detection algorithms that flag automated sending patterns.** Inbox rotation is a strategic technique that automatically alternates between multiple email addresses, preventing email providers from identifying your campaigns as spam while maintaining high deliverability rates over time.
-
-**The Detection Problem**: Email providers use sophisticated algorithms to detect automated sending patterns. Consistent sending from the same address to multiple recipients risks **account flagging, deliverability damage, and permanent sender reputation issues**.
-
-**Our Solution**: Intelligent rotation algorithms that mimic natural human sending patterns while distributing risk across multiple accounts, maintaining 95%+ deliverability rates even at scale.
-
-**Perfect for Agency Owners** - Scale client campaigns across multiple domains without detection risk
-**Ideal for Startup Founders** - Protect reputation while scaling from hundreds to thousands of sends
-**Enterprise-Ready** - Advanced algorithms with comprehensive compliance and audit trails
-
-## Why Inbox Rotation Matters
-
-### **Level 1: Basic Protection**
-
-**Simple reasons to use rotation:**
-
-- **Avoid Detection Patterns**: Email providers detect automated sending from single addresses
-- **Account Protection**: Spread risk across multiple email addresses
-- **Maintain Reputation**: Protect your sender reputation by avoiding flags
-
-### **Level 2: Strategic Benefits**
-
-**Professional advantages:**
-
-- **Distribute Risk**: Spreading sending across multiple addresses means:
-  - If one account gets flagged, others continue functioning
-  - Each email address maintains its individual reputation
-  - You can scale your outreach without increasing spam risk
-  - Recovery is faster if issues occur
-
-- **Maintain Deliverability**: Proper inbox rotation helps maintain:
-  - Consistent inbox placement rates
-  - Positive sender reputation
-  - Reduced spam complaint rates
-  - Better long-term campaign performance
-
-### **Level 3: Technical Advantages**
-
-**Enterprise-grade benefits:**
-
-- **Detection Algorithm Evasion**: Advanced algorithms that stay ahead of email provider detection
-- **Performance Optimization**: Real-time optimization based on account performance data
-- **Scalability Architecture**: Support for thousands of accounts and millions of sends
-- **Compliance Management**: Automated compliance with international email regulations
-
-## How Our Inbox Rotation Works
-
-### **Level 1: Simple Setup**
-
-**Basic rotation for immediate protection:**
-
-- **Frequency-Based Rotation**: Automatically switch between email addresses
-- **Volume Limits**: Set daily limits for each account to avoid flags
-- **Basic Monitoring**: Track account health and performance
-
-### **Level 2: Smart Rotation**
-
-**Advanced rotation features:**
-
-- **Smart Rotation Algorithm**: Our system uses intelligent algorithms to determine optimal rotation patterns:
-  - **Frequency-Based Rotation**: Adjusts rotation based on your sending volume
-  - **Time-Based Scheduling**: Spaces out emails from each address
-  - **Reputation Monitoring**: Prioritizes accounts with better sender scores
-  - **Geographic Considerations**: Considers target audience locations
-
-- **Automatic Account Selection**:
-  - **Performance Tracking**: Monitors which accounts perform best
-  - **Load Balancing**: Distributes sending evenly across available accounts
-  - **Failover Protection**: Automatically switches to backup accounts if issues arise
-  - **Custom Rules**: Apply your specific rotation preferences and restrictions
-
-### **Level 3: Advanced Intelligence**
-
-**Enterprise-grade rotation system:**
-
-## Real-time Monitoring
-
-- **Account Health Scoring**: Continuously monitors each email account's reputation
-- **Performance Analytics**: Tracks deliverability and response rates by account
-- **Risk Assessment**: Identifies accounts at risk of being flagged
-- **Optimization Suggestions**: Recommends rotation adjustments for better results
-
-## Technical Architecture
-
-- **Machine Learning Algorithms**: AI-powered optimization for maximum deliverability
-- **Queue System Integration**: Intelligent scheduling with performance-based prioritization
-- **Failover Systems**: Automated failover to maintain service continuity
-- **Real-time Analytics**: Comprehensive performance tracking and optimization
-
-**Strategic Alignment**: This feature supports our goal of market leadership through deliverability excellence by providing scalable infrastructure that maintains high performance even as campaigns grow.
-
-**Technical Authority**: Our rotation algorithms integrate with comprehensive queue system infrastructure featuring intelligent scheduling, performance-based account prioritization, and automated failover systems. Each rotation decision is based on real-time performance data and machine learning optimization.
-
-**Operational Excellence**: Powered by enterprise-grade monitoring systems with automated account health tracking, proactive detection prevention, and 99.9% uptime guarantees ensuring uninterrupted rotation services.
-
-## Key Features
-
-### **Level 1: Essential Features**
-
-**Core rotation capabilities:**
-
-- **Rotation Frequency**: Configure how often to switch between email addresses
-- **Volume Limits**: Set daily/weekly limits for each account
-- **Basic Account Management**: Simple account addition and removal
-
-### **Level 2: Professional Features**
-
-## Flexible Rotation Settings
-
-- **Sequence Management**: Create custom sending sequences with multiple accounts
-- **Break Periods**: Schedule rest periods for accounts to recover reputation
-- **Performance Ranking**: Rank accounts by performance and prioritize accordingly
-- **Risk Assessment**: Monitor accounts for signs of reputation issues
-
-## Intelligent Account Management
-
-- **Auto-Creation**: Automatically create new email accounts when needed
-- **Warm-up Integration**: Seamlessly incorporate new accounts into rotation
-- **Custom Rules**: Apply your specific rotation preferences and restrictions
-- **Account Health Monitoring**: Continuous monitoring of account status
-
-## Advanced Scheduling
-
-- **Time-Based Rules**: Send emails at optimal times for each account
-- **Geographic Rotation**: Consider target audience time zones
-- **Business Day Optimization**: Focus on sending during business hours
-- **Custom Scheduling**: Create custom schedules based on your strategy
-
-### **Level 3: Enterprise Features**
-
-## Analytics and Insights
-
-- **Account Performance Tracking**: Compare performance across all accounts
-- **Rotation Effectiveness**: Measure how rotation impacts deliverability
-- **ROI Analysis**: Calculate return on investment for different rotation strategies
-- **Optimization Recommendations**: Get AI-powered suggestions for improvement
-
-## Enterprise Management
-
-- **Multi-tenant Support**: Manage rotation across hundreds of client accounts
-- **Custom Algorithms**: Industry-specific rotation patterns and optimizations
-- **API Integration**: Full RESTful API for custom automation and integration
-- **White-label Support**: Custom branding and reporting for agency clients
-
-## Advanced Intelligence
-
-- **Predictive Analytics**: AI-powered predictions of account performance
-- **Behavioral Learning**: Algorithms that learn from your specific sending patterns
-- **Competitive Intelligence**: Analysis of market trends and optimal strategies
-- **Real-time Optimization**: Continuous optimization based on live performance data
-
-## Setting Up Inbox Rotation
-
-### **Level 1: Quick Setup (10 Minutes)**
-
-**Basic rotation configuration:**
-
-1. **Email Account Creation**: Create multiple email addresses for rotation
-2. **Domain Verification**: Verify domains and set up DNS records
-3. **Basic Configuration**: Set up simple rotation rules and limits
-4. **Testing**: Test rotation with a small sample campaign
-
-### **Level 2: Professional Setup**
-
-## Step 1: Account Preparation
-
-1. **Email Account Creation**: Create multiple email addresses for rotation
-2. **Domain Verification**: Verify domains and set up DNS records
-3. **Warm-up Process**: Warm up each account before including in rotation
-4. **Initial Testing**: Test deliverability for each account individually
-
-## Step 2: Rotation Configuration
-
-- **Rotation Rules**: Set up rotation frequency and volume limits
-- **Priority Settings**: Define which accounts to prioritize
-- **Fallback Accounts**: Configure backup accounts for emergencies
-- **Scheduling Preferences**: Set up optimal sending schedules
-
-## Step 3: Campaign Integration
-
-- **Contact List Preparation**: Organize contacts for rotation sending
-- **Template Assignment**: Link email templates to specific rotation rules
-- **Sequence Setup**: Create multi-touch sequences across accounts
-- **Performance Monitoring**: Set up tracking and analytics
-
-### **Level 3: Enterprise Setup**
-
-## Advanced Account Management
-
-- **Bulk Account Creation**: Automated creation of dozens or hundreds of accounts
-- **Domain Portfolio Management**: Manage multiple domains with sophisticated strategies
-- **IP Address Distribution**: Geographic and provider-specific IP distribution
-- **Advanced DNS Configuration**: Enterprise-grade DNS setup and monitoring
-
-## Enterprise Integration
-
-- **API-Driven Setup**: Complete automation through RESTful APIs
-- **CRM Integration**: Seamless integration with existing CRM systems
-- **Marketing Automation**: Integration with marketing automation platforms
-- **Custom Workflows**: Tailored workflows for specific business requirements
-
-## Advanced Configuration
-
-- **Machine Learning Optimization**: AI-powered optimization based on historical data
-- **Competitive Analysis**: Integration of competitive intelligence into rotation decisions
-- **Regulatory Compliance**: Automated compliance with international regulations
-- **Custom Reporting**: Branded reporting and analytics for stakeholders
-
-## Performance Monitoring
-
-### **Level 1: Basic Monitoring**
-
-**Essential metrics to track:**
-
-- **Deliverability Rate**: Percentage of emails landing in inbox vs spam
-- **Response Rates**: Monitor response quality and quantity by account
-- **Bounce Rates**: Keep track of hard and soft bounces across accounts
-
-### **Level 2: Professional Analytics**
-
-## Account Health Indicators
-
-- **Sender Score**: Monitor reputation scores for each account
-- **Spam Complaint Rate**: Track complaint rates by account
-- **Blacklist Status**: Check if accounts appear on any blacklists
-- **Provider Feedback**: Monitor feedback from Gmail, Yahoo, etc.
-
-## Optimization Strategies
-
-- **A/B Testing**: Test different rotation frequencies and patterns
-- **Performance Comparison**: Compare accounts and identify top performers
-- **Timing Optimization**: Optimize send times based on account performance
-- **Content Variation**: Test different content approaches across accounts
-
-## Comprehensive Metrics
-
-- **Response Quality Analysis**: Analyze the quality of responses received
-- **Conversion Tracking**: Track conversions from rotation campaigns
-- **Cost Analysis**: Calculate cost per successful email across accounts
-- **ROI Measurement**: Measure return on investment for rotation strategies
-
-### **Level 3: Advanced Analytics**
-
-## Predictive Analytics
-
-- **Performance Forecasting**: Predict future account performance
-- **Risk Prediction**: Early warning systems for potential issues
-- **Optimization Recommendations**: AI-powered optimization suggestions
-- **Market Intelligence**: Analysis of market trends and opportunities
-
-## Enterprise Reporting
-
-- **Executive Dashboards**: High-level strategic insights for leadership
-- **Client Reporting**: Comprehensive reporting for agency clients
-- **Compliance Reporting**: Automated compliance reporting for regulatory requirements
-- **Custom Analytics**: Custom analytics solutions for specific business needs
-
-## Advanced Intelligence
-
-- **Behavioral Analysis**: Deep analysis of prospect behavior patterns
-- **Competitive Intelligence**: Analysis of competitor rotation strategies
-- **Market Segmentation**: Advanced market segmentation and optimization
-- **Strategic Planning**: Data-driven strategic planning for rotation programs
-
-## Next Steps
-
-Ready to optimize your cold email outreach with smart inbox rotation?
-
-### **Related Features**
-
-1. **[Warm-ups](/docs/features/warmup/email-warmups/overview)** - Build reputation for each account in your rotation
-2. **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Manage responses from all rotated accounts
-3. **[Analytics](/docs/features/analytics/core-analytics/overview)** - Track performance across all accounts and rotation patterns
-4. **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Create accounts for rotation
-
-### **Implementation Resources**
-
-1. **[Getting Started](/docs/getting-started)** - Complete setup and integration
-
-### **Prerequisites**
-
-- **Multiple Email Accounts**: Have at least 2-3 email accounts ready for rotation
-- **Domain Configuration**: Ensure proper DNS setup for all domains
-- **Campaign Data**: Define target audience and campaign parameters
-- **Volume Planning**: Determine expected sending volumes
-
-### **Alternative Approaches**
-
-- **Single Account Strategy**: Use single account with lower volumes
-- **Manual Rotation**: Manual account switching (not recommended)
-- **Third-party Tools**: External rotation services
-- **Gradual Implementation**: Phase rotation into existing campaigns
-
-### **Deep Dive Options**
-
-- **[Advanced Strategies](/docs/features/inbox/inbox-rotation/advanced-strategies)** - Advanced rotation techniques and optimization
-- **[Technical Implementation](/docs/features/inbox/inbox-rotation/technical-implementation)** - Detailed technical setup and configuration
-
-### **Success Metrics**
-
-- **Week 1**: Rotation system operational with 2-3 accounts
-- **Week 2**: Performance baseline established across accounts
-- **Week 4**: 25% improvement in deliverability rates
-- **Month 3**: 95%+ deliverability sustained across all accounts
+## Level 1: Quick Start Guide
+
+### Set Up Your First Rotation Pool
+
+#### Step 1: Create a Pool
+
+```
+Dashboard → Infrastructure → Rotation Pools → Create New
+
+Pool Configuration:
+┌─────────────────────────────────────────────────────┐
+│ Pool Name: "SDR Outreach Team"                      │
+│ Description: Cold outreach for Q1 Sales             │
+│                                                     │
+│ Strategy:                                           │
+│ ● Round Robin (Even distribution)                   │
+│ ○ Weighted (Based on health/limit)                  │
+│ ○ Random                                            │
+│                                                     │
+│ Daily Limit per Account: [50] emails                │
+│ Min. Delay between sends: [120] seconds             │
+└─────────────────────────────────────────────────────┘
+```
+
+#### Step 2: Add Accounts
+
+Select accounts to include in this rotation.
+
+```
+Available Accounts:
+☑ sarah@company.com (Health: 98%)
+☑ mike@company.com (Health: 95%)
+☑ sales@company.net (Health: 92%)
+☑ hello@company.io (Health: 88%)
+
+[Add to Pool]
+```
+
+#### Step 3: Assign to Campaign
+
+Link your campaign to the pool instead of a single sender.
+
+```
+Campaign Settings → Sender:
+┌─────────────────────────────────────────────────────┐
+│ From: [Rotation Pool: SDR Outreach Team ▼]          │
+│                                                     │
+│ Fallback Behavior:                                  │
+│ If pool capacity reached:                           │
+│ ● Pause campaign until tomorrow                     │
+│ ○ Continue with warning                             │
+└─────────────────────────────────────────────────────┘
+```
+
+#### Step 4: Monitor Health
+
+**Pool Dashboard:**
+
+```
+Status: Healthy (4/4 Active)
+Capacity: 200 emails/day
+Used Today: 145 (72%)
+
+Account Performance:
+- sarah@company.com: 45 sent | 0 bounces
+- mike@company.com: 42 sent | 1 bounce
+- sales@company.net: 38 sent | 0 bounces
+- hello@company.io: 20 sent | 0 bounces
+```
 
 ---
-*Smart inbox rotation is essential for sustainable cold email success. Our automated system takes the complexity out of account management while maximizing your deliverability and response rates.*
+
+## Level 2: Advanced Configuration
+
+### Smart Rotation Logic
+
+Configure how the system selects the next sender.
+
+**Weighted by Health Score:**
+
+```yaml
+rotation_strategy:
+  type: "weighted_health"
+  
+  weights:
+    health_score: 0.6  # Prioritize healthy accounts
+    warmup_status: 0.3 # Prioritize fully warmed accounts
+    usage_today: 0.1   # Deprioritize heavily used accounts
+    
+  constraints:
+    min_health_score: 85
+    max_bounce_rate: 2.5%
+```
+
+**Domain Diversity Enforcement:**
+
+Ensure consecutive emails don't come from the same domain to avoid pattern detection.
+
+```yaml
+diversity_rules:
+  prevent_consecutive_domains: true
+  max_consecutive_provider: 3  # Don't send >3 Gmails in a row
+  
+  # Example pattern:
+  # 1. user@domain-a.com (Google)
+  # 2. user@domain-b.com (Outlook)
+  # 3. user@domain-c.com (Zoho)
+```
+
+### Auto-Pause & Recovery Rules
+
+Protect accounts from burning out.
+
+```yaml
+safety_rules:
+  # Pause triggers
+  triggers:
+    - if: bounce_rate_24h > 5%
+      action: pause_account
+      duration: 24h
+      notify: admin
+      
+    - if: spam_complaint_count > 1
+      action: pause_account
+      duration: 48h
+      
+    - if: consecutive_failures > 3
+      action: pause_account
+      duration: 1h
+      
+  # Recovery logic
+  recovery:
+    - after: pause_duration
+      action: enable_warmup_only
+      duration: 3d
+      
+    - if: warmup_score > 95
+      action: restore_to_pool
+```
+
+### Volume Ramping
+
+Automatically increase sending limits for new accounts.
+
+```json
+{
+  "ramping_schedule": {
+    "week_1": { "daily_limit": 10, "min_delay": 300 },
+    "week_2": { "daily_limit": 20, "min_delay": 240 },
+    "week_3": { "daily_limit": 35, "min_delay": 180 },
+    "week_4": { "daily_limit": 50, "min_delay": 120 }
+  },
+  "condition": "health_score > 90"
+}
+```
 
 ---
+
+## Level 3: Technical Implementation
+
+### Database Schema
+
+```sql
+-- Rotation Pools
+CREATE TABLE rotation_pools (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  tenant_id UUID NOT NULL REFERENCES tenants(id),
+  name VARCHAR(255) NOT NULL,
+  description TEXT,
+  strategy VARCHAR(50) DEFAULT 'round_robin', -- round_robin, weighted, random
+  
+  -- Limits
+  daily_limit_per_account INTEGER DEFAULT 50,
+  max_pool_capacity INTEGER, -- Total daily emails for pool
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_rotation_pools_tenant ON rotation_pools(tenant_id);
+
+-- Pool Members (Accounts in the pool)
+CREATE TABLE pool_members (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  pool_id UUID NOT NULL REFERENCES rotation_pools(id) ON DELETE CASCADE,
+  account_id UUID NOT NULL REFERENCES email_accounts(id),
+  
+  status VARCHAR(50) DEFAULT 'active', -- active, paused, cooling_down
+  priority INTEGER DEFAULT 1,
+  weight DECIMAL(3,2) DEFAULT 1.0,
+  
+  -- Stats for rotation logic
+  sent_today INTEGER DEFAULT 0,
+  last_sent_at TIMESTAMP,
+  
+  -- Override limits
+  custom_daily_limit INTEGER,
+  
+  created_at TIMESTAMP DEFAULT NOW(),
+  UNIQUE(pool_id, account_id)
+);
+
+CREATE INDEX idx_pool_members_pool ON pool_members(pool_id);
+CREATE INDEX idx_pool_members_account ON pool_members(account_id);
+
+-- Rotation Rules (Safety & Logic)
+CREATE TABLE rotation_rules (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  pool_id UUID NOT NULL REFERENCES rotation_pools(id) ON DELETE CASCADE,
+  
+  rule_type VARCHAR(50), -- pause_trigger, diversity, ramping
+  config JSONB NOT NULL,
+  
+  is_active BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+-- Account Health History (for scoring)
+CREATE TABLE account_health_logs (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  account_id UUID NOT NULL REFERENCES email_accounts(id),
+  
+  health_score INTEGER, -- 0-100
+  bounce_rate DECIMAL(5,2),
+  spam_rate DECIMAL(5,2),
+  open_rate DECIMAL(5,2),
+  
+  snapshot_date DATE DEFAULT CURRENT_DATE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+
+CREATE INDEX idx_account_health_account ON account_health_logs(account_id);
+```
+
+### Rotation Algorithm (TypeScript)
+
+The core logic for selecting the next sender.
+
+```typescript
+class RotationService {
+  
+  /**
+   * Select the best account for the next email
+   */
+  async selectNextSender(poolId: string): Promise<EmailAccount> {
+    // 1. Fetch active members
+    const members = await db.poolMembers.find({
+      where: {
+        pool_id: poolId,
+        status: 'active'
+      },
+      include: ['account']
+    });
+
+    // 2. Filter out ineligible accounts
+    const eligible = members.filter(member => {
+      const limit = member.custom_daily_limit || member.pool.daily_limit_per_account;
+      
+      // Check limits
+      if (member.sent_today >= limit) return false;
+      
+      // Check cooldown (min delay)
+      const minDelay = 120 * 1000; // 2 mins
+      const timeSinceLast = Date.now() - new Date(member.last_sent_at).getTime();
+      if (timeSinceLast < minDelay) return false;
+      
+      return true;
+    });
+
+    if (eligible.length === 0) {
+      throw new Error('Pool exhausted: No accounts available');
+    }
+
+    // 3. Apply Strategy
+    const pool = await db.rotationPools.findById(poolId);
+    
+    if (pool.strategy === 'weighted') {
+      return this.selectWeighted(eligible);
+    } else if (pool.strategy === 'random') {
+      return eligible[Math.floor(Math.random() * eligible.length)].account;
+    } else {
+      // Round Robin (default): Select one with least sends today, or longest time since last send
+      return eligible.sort((a, b) => a.sent_today - b.sent_today)[0].account;
+    }
+  }
+
+  /**
+   * Weighted selection based on health and capacity
+   */
+  private selectWeighted(members: PoolMember[]): EmailAccount {
+    // Calculate score: Health * (Remaining Capacity / Total Capacity)
+    const scored = members.map(m => {
+      const health = m.account.health_score || 50;
+      const limit = m.custom_daily_limit || 50;
+      const remaining = limit - m.sent_today;
+      
+      return {
+        member: m,
+        score: health * (remaining / limit)
+      };
+    });
+
+    // Sort by score desc
+    scored.sort((a, b) => b.score - a.score);
+    return scored[0].member.account;
+  }
+}
+```
+
+### Health Monitoring Service
+
+Runs periodically to update scores and trigger safety rules.
+
+```typescript
+class HealthMonitor {
+  
+  async checkPoolHealth(poolId: string) {
+    const members = await db.poolMembers.findByPool(poolId);
+    
+    for (const member of members) {
+      const stats = await this.getDailyStats(member.account_id);
+      
+      // 1. Check Pause Triggers
+      if (stats.bounceRate > 0.05) { // 5% bounce rate
+        await this.pauseMember(member, 'High bounce rate detected');
+        continue;
+      }
+      
+      // 2. Update Health Score
+      const newScore = this.calculateHealthScore(stats);
+      await db.emailAccounts.update(member.account_id, { health_score: newScore });
+      
+      // 3. Check Ramping
+      if (newScore > 90 && member.sent_today >= member.custom_daily_limit) {
+        // Auto-scale limit if eligible
+        await this.increaseLimit(member);
+      }
+    }
+  }
+  
+  private calculateHealthScore(stats: DailyStats): number {
+    // Simple algorithm: Start at 100, deduct for bad signals
+    let score = 100;
+    score -= (stats.bounceRate * 100 * 2); // Heavy penalty for bounces
+    score -= (stats.spamComplaintRate * 100 * 5); // Severe penalty for spam
+    score += (stats.openRate > 0.3 ? 5 : 0); // Bonus for good engagement
+    return Math.max(0, Math.min(100, score));
+  }
+}
+```
+
+### API Endpoints
+
+```typescript
+// Create Pool
+router.post('/api/rotation/pools', async (req, res) => {
+  const pool = await db.rotationPools.create({
+    tenant_id: req.user.tenantId,
+    ...req.body
+  });
+  res.json(pool);
+});
+
+// Add Members
+router.post('/api/rotation/pools/:id/members', async (req, res) => {
+  const { accountIds } = req.body;
+  const members = await Promise.all(accountIds.map(accId => 
+    db.poolMembers.create({
+      pool_id: req.params.id,
+      account_id: accId
+    })
+  ));
+  res.json(members);
+});
+
+// Get Pool Status
+router.get('/api/rotation/pools/:id/status', async (req, res) => {
+  const members = await db.poolMembers.find({
+    where: { pool_id: req.params.id },
+    include: ['account']
+  });
+  
+  const stats = {
+    total_accounts: members.length,
+    active_accounts: members.filter(m => m.status === 'active').length,
+    total_sent_today: members.reduce((sum, m) => sum + m.sent_today, 0),
+    total_capacity: members.reduce((sum, m) => sum + (m.custom_daily_limit || 50), 0)
+  };
+  
+  res.json({ stats, members });
+});
+```
+
+---
+
+**Last Updated:** November 25, 2025
+**Status:** Available - Core Feature
+**Target Release:** Q1 2026
+**Owner:** Infrastructure Team

@@ -88,24 +88,129 @@ Any additional information or context.
 
 ### Bug Fixes
 
-```python
-# Before: bug_fix/workflow-update-contribution-guide.md
-# Example bug fix for email delivery
-def send_email_bug_fix(self, email_data):
-    """Fixed: Email sending failing with empty recipients list."""
-    if not email_data.get('recipients'):
-        raise ValidationError("Recipients list cannot be empty")
+```typescript
+// services/email-service.ts - Bug fix implementation
+interface EmailData {
+  recipients?: EmailRecipient[];
+  subject?: string;
+  content?: string;
+  [key: string]: unknown;
+}
 
-    # Original buggy code:
-    # recipients = email_data['recipients']  # Would throw KeyError
+interface EmailRecipient {
+  email: string;
+  name?: string;
+}
 
-    # Fixed code:
-    recipients = email_data.get('recipients', [])
-    if not recipients:
-        raise ValidationError("Recipients list cannot be empty")
+interface ValidationResult {
+  isValid: boolean;
+  errors: string[];
+}
 
-    # Continue with email sending logic
-    return self.process_email_batch(recipients, email_data)
+class EmailService {
+  async sendEmailBugFix(emailData: EmailData): Promise<EmailSendResult> {
+    // Fixed: Email sending failing with empty recipients list
+    const validation = this.validateEmailData(emailData);
+    if (!validation.isValid) {
+      throw new Error(`Email validation failed: ${validation.errors.join(', ')}`);
+    }
+
+    // Original buggy code would have been:
+    // const recipients = emailData['recipients']; // Would throw KeyError
+
+    // Fixed code:
+    const recipients = emailData.recipients || [];
+    if (recipients.length === 0) {
+      throw new Error('Recipients list cannot be empty');
+    }
+
+    // Continue with email sending logic
+    return await this.processEmailBatch(recipients, emailData);
+  }
+
+  private validateEmailData(emailData: EmailData): ValidationResult {
+    const errors: string[] = [];
+
+    // Validate recipients
+    if (!emailData.recipients || emailData.recipients.length === 0) {
+      errors.push('Recipients list cannot be empty');
+    } else {
+      emailData.recipients.forEach((recipient, index) => {
+        if (!recipient.email || typeof recipient.email !== 'string') {
+          errors.push(`Recipient at index ${index} must have a valid email`);
+        }
+      });
+    }
+
+    // Validate subject
+    if (!emailData.subject || emailData.subject.trim().length === 0) {
+      errors.push('Subject cannot be empty');
+    }
+
+    // Validate content
+    if (!emailData.content || emailData.content.trim().length === 0) {
+      errors.push('Content cannot be empty');
+    }
+
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
+  }
+
+  private async processEmailBatch(
+    recipients: EmailRecipient[],
+    emailData: EmailData
+  ): Promise<EmailSendResult> {
+    // Mock implementation - would actually send emails
+    console.log(`Processing ${recipients.length} recipients`);
+    
+    return {
+      success: true,
+      sentCount: recipients.length,
+      failedCount: 0,
+      batchId: `batch_${Date.now()}`
+    };
+  }
+}
+
+// Usage example
+async function demonstrateBugFix() {
+  const emailService = new EmailService();
+
+  try {
+    // Test with valid data
+    const validData: EmailData = {
+      recipients: [
+        { email: 'user1@example.com', name: 'User 1' },
+        { email: 'user2@example.com', name: 'User 2' }
+      ],
+      subject: 'Test Email',
+      content: 'This is a test email content'
+    };
+
+    const result = await emailService.sendEmailBugFix(validData);
+    console.log('Email sent successfully:', result);
+
+    // Test with empty recipients (should throw error)
+    const invalidData: EmailData = {
+      recipients: [],
+      subject: 'Test Email',
+      content: 'This is a test email content'
+    };
+
+    await emailService.sendEmailBugFix(invalidData);
+  } catch (error) {
+    console.error('Email sending failed:', error);
+  }
+}
+
+interface EmailSendResult {
+  success: boolean;
+  sentCount: number;
+  failedCount: number;
+  batchId: string;
+}
 ```
 
 ### Feature Additions

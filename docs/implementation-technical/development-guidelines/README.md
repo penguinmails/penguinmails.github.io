@@ -130,7 +130,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 - **Node.js**: JavaScript runtime for API development
 - **Express.js**: Web application framework
-- **Database**: PostgreSQL with Prisma ORM
+- **Database**: PostgreSQL with Drizzle ORM
 - **Authentication**: JWT-based with multi-factor support
 
 ### Infrastructure & DevOps

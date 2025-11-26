@@ -36,7 +36,7 @@ description: "Detailed widget and data requirements for Internal Command Center 
 
 ### Widgets
 
-* **Queue Health**: Job processing rates & backlogs (Redis/BullMQ).
+* **Queue Health**: Job processing rates & backlogs (PostgreSQL + Redis Queue).
 * **Error Stream**: Real-time error logs (Sentry feed).
 * **Infrastructure Load**: CPU/Memory/Disk usage heatmaps.
 * **Deliverability Global Map**: Real-time sending success rates by region/ISP.

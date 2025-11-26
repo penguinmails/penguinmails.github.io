@@ -79,22 +79,28 @@ Status: **Not Planned**
 - `docs/design/routes/public-auth.md`
 - `docs/design/routes/workspace-assets.md`
 
-### OAuth Providers - Q4 2026 Post-MVP
+### OAuth Providers - Potential 2027 Enhancement
 
-**User Authentication**:
+**User Authentication (2027 Consideration)**:
 
-- Google OAuth
-- Microsoft OAuth  
-- Or NileDB MFA solution (TBD)
+- **Current:** NileDB email/password authentication (MVP and near-term releases)
+- **Future Consideration:** OAuth 2.0/SSO (SAML, OpenID Connect) for enterprise customers
+- **Timeline:** Potential 2027 roadmap item to improve or substitute NileDB auth
+- **Alternative:** NileDB MFA solution (if OAuth not pursued)
+- **Rationale:** NileDB email/password provides secure MVP authentication. OAuth 2.0/SSO would be evaluated based on enterprise customer demand for identity provider integration.
 
-**Email Account Integration**:
+**Email Account Integration (Q4 2026 Post-MVP)**:
 
-- OAuth for Gmail/Outlook email account connections
+- OAuth for Gmail/Outlook email account connections (separate from user auth)
 - Currently uses SMTP credentials only
+- **Timeline:** Q4 2026 post-MVP
+- **Rationale:** SMTP credentials sufficient for MVP. OAuth email connections add convenience for Gmail/Outlook users.
 
-**Rationale**: Email/password provides MVP authentication. OAuth adds convenience but is not core functionality.
+**Important Distinction:**
+- **User Authentication OAuth** (2027 consideration) - How users log into PenguinMails
+- **Email Account OAuth** (Q4 2026) - How users connect Gmail/Outlook accounts to send emails
 
-**Roadmap Documentation**: Added to route specs with clear Q4 2026 timeline markers.
+**Roadmap Documentation**: Added to route specs with clear timeline markers.
 
 ---
 
@@ -104,13 +110,13 @@ Status: **Not Planned**
 
 Status: **Updated**
 
-**Old References**: Generic "BullMQ dashboard" mentions
+**Old References**: Generic "queue dashboard" mentions
 
 **Actual Implementation**: Hybrid PostgreSQL + Redis queue system
 
 - PostgreSQL for durable job state (`jobs`, `job_queues`, `job_logs` tables)
 - Redis for fast processing
-- Custom monitoring UI (not BullMQ Arena)
+- Custom monitoring UI
 - Queue names: `queue:email-sending:high`, `queue:email-sending`, `queue:email-sending:low`, etc.
 
 **Documentation**: [Queue System Implementation](/docs/implementation-technical/architecture-system/email-system-implementation)

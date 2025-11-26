@@ -21,9 +21,14 @@ Complete enterprise security and compliance suite.
 
 ---
 
-### 🔜 Future Enhancements
+### ✅ Available Now
 
-- **Advanced RBAC** - Granular permission controls
+- **[User Management](./user-management.md)** - Authentication, profiles, and team management
+- **[Onboarding Experience](./onboarding-experience.md)** - Guided setup wizard, interactive tutorials (Q1 2026)
+
+### 🔜 Coming Soon
+
+- **SSO Integration** - SAML/OIDC support
 - **Compliance Automation** - Automated compliance reporting
 - **Security Policies** - Custom security rule enforcement
 

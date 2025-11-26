@@ -59,17 +59,17 @@
 | [🗂️ Inbox](./inbox/) | 2 | Email organization and response management |
 | [📧 Campaigns](./campaigns/) | 1 | Campaign creation and sequences |
 | [🔥 Warmup](./warmup/) | 1 | Domain reputation and sender warming |
-| [🌐 Domains](./domains/) | 0 | DNS management and configuration |
-| [🏗️ Infrastructure](./infrastructure/) | 1 | VPS, IPs, SMTP, provisioning |
-| [📝 Templates](./templates/) | 0 | Email templates and content editor |
+| [🌐 Domains](./domains/) | 1 | DNS management and configuration |
+| [🏗️ Infrastructure](./infrastructure/) | 3 | VPS, IPs, SMTP, provisioning |
+| [📝 Templates](./templates/) | 1 | Email templates and content editor |
 | [📊 Analytics](./analytics/) | 2 | Platform-wide reporting and insights |
-| [👥 Leads](./leads/) | 0 | Lead lists and segmentation |
-| [⚖️ Compliance](./compliance/) | 0 | GDPR, CAN-SPAM compliance |
-| [💳 Payments](./payments/) | 0 | Billing and subscriptions |
-| [⚙️ Queue](./queue/) | 1 | Background jobs and notifications |
-| [🔌 Integrations](./integrations/) | 1 | CRM and third-party connections |
+| [👥 Leads](./leads/) | 1 | Lead lists and segmentation |
+| [⚖️ Compliance](./compliance/) | 4 | GDPR, CAN-SPAM compliance |
+| [💳 Payments](./payments/) | 3 | Billing and subscriptions |
+| [⚙️ Queue](./queue/) | 2 | Background jobs and notifications |
+| [🔌 Integrations](./integrations/) | 3 | CRM and third-party connections |
 | [🤖 Automation](./automation/) | 1 | Workflow automation and triggers |
-| [🏢 Enterprise](./enterprise/) | 1 | SSO, MFA, security features |
+| [🏢 Enterprise](./enterprise/) | 2 | SSO, MFA, security features |
 
 ---
 
