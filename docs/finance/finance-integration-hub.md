@@ -96,8 +96,10 @@ persona: "Documentation Users"
 - **Revenue Forecasting**: Predictive revenue modeling
 
 ### Sales Performance Analytics
+
 ```sql
 -- Revenue Attribution Query Example
+
 SELECT
     campaign_id,
     campaign_name,
@@ -333,18 +335,22 @@ const sampleCampaigns: CampaignData[] = [
     leadsGenerated: 800,
     customersAcquired: 100
   }
-];
+};
 
 const roiResults = calculator.calculateMarketingROI(sampleCampaigns);
+
 console.log('Marketing ROI Analysis:', roiResults);
 
 const portfolioAnalysis = await calculator.generatePortfolioAnalysis(sampleCampaigns);
+
 console.log('Portfolio Analysis:', portfolioAnalysis);
-```
+
 
 #### Product Integration - Development ROI
 
 ### Product Development Cost Tracking
+
+ 
 
 - **Feature Development ROI**: Cost per feature implementation
 

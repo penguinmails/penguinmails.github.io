@@ -170,19 +170,27 @@ jobs:
         run: npm test
 
       - name: Run Integration Tests
+
         run: npm run test:integration
 
       - name: Run Performance Tests
+
         run: npm run test:performance
 
       - name: Generate Coverage Report
+
         run: npm run coverage
+
 ```
 
-**Pipeline Testing Stages**:
+**Pipeline Testing Stages**
+
 1. Unit testing with code coverage reporting
+
 2. Integration testing with database seeding
+
 3. End-to-end testing with test environment
+
 4. Performance testing with load simulation
 
 ---

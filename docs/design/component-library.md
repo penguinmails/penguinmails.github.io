@@ -301,50 +301,82 @@ interface GridItemProps {
 </Grid>
 ```
 
-**Responsive Breakpoints:**
+#### Responsive Breakpoints
+
 - Mobile: 1 column (span resets to 12)
+
 - Tablet: 8 columns max
+
 - Desktop: 12 columns max
 
 ## Form Components
 
 ### FormField
+
 ```typescript
+
 import { FormField } from '@/components/forms/FormField';
 
 interface FormFieldProps {
+
   label?: string;
+
   required?: boolean;
+
   helperText?: string;
+
   errorMessage?: string;
+
   disabled?: boolean;
+
   children: React.ReactNode;
+
 }
 
 // Usage Example
+
 <FormField
+
   label="Campaign Name"
+
   required
+
   helperText="Choose a descriptive name for your campaign"
+
   errorMessage={errors.name}
+
 >
+
   <Input
+
     value={campaignName}
+
     onChange={setCampaignName}
+
     placeholder="e.g., Summer Sale 2025"
+
   />
+
 </FormField>
+
 ```
 
 ### Select
+
 ```typescript
+
 import { Select } from '@/components/forms/Select';
 
 interface SelectOption {
+
   value: string | number;
+
   label: string;
+
   disabled?: boolean;
+
   icon?: React.ComponentType;
+
 }
 
 interface SelectProps {
@@ -375,65 +407,109 @@ interface SelectProps {
 ```
 
 ### Checkbox & Radio
+
 ```typescript
+
 import { Checkbox, Radio, RadioGroup } from '@/components/forms/Checkbox';
 
 interface CheckboxProps {
+
   checked: boolean;
+
   disabled?: boolean;
+
   label?: string;
+
   helperText?: string;
+
   onChange: (checked: boolean) => void;
+
 }
 
 interface RadioGroupProps {
+
   value: string;
+
   onChange: (value: string) => void;
+
   disabled?: boolean;
+
   children: React.ReactNode;
+
 }
 
 // Usage Examples
+
 <Checkbox
+
   checked={agreeToTerms}
+
   onChange={setAgreeToTerms}
+
   label="I agree to the Terms of Service"
+
   helperText="You must agree to continue"
+
 />
 
 <RadioGroup value={planType} onChange={setPlanType}>
+
   <Radio value="starter" label="Starter Plan" />
+
   <Radio value="professional" label="Professional Plan" />
+
   <Radio value="enterprise" label="Enterprise Plan" />
+
 </RadioGroup>
+
 ```
 
 ## Data Display Components
 
 ### Table
+
 ```jsx
+
 import { Table } from '@/components/data-display/Table';
 
 interface TableColumn<T> {
+
   key: keyof T;
+
   header: string;
+
   sortable?: boolean;
+
   filterable?: boolean;
+
   width?: string | number;
+
   align?: 'left' | 'center' | 'right';
+
   render?: (value: any, row: T) => React.ReactNode;
+
 }
 
 interface TableProps<T> {
+
   data: T[];
+
   columns: TableColumn<T>[];
+
   loading?: boolean;
+
   selectable?: boolean;
+
   pagination?: boolean;
+
   pageSize?: number;
+
   emptyState?: React.ReactNode;
+
   onSort?: (key: keyof T, direction: 'asc' | 'desc') => void;
+
   onSelect?: (selectedRows: T[]) => void;
+
   onRowClick?: (row: T) => void;
 }
 
@@ -478,23 +554,37 @@ interface TableProps<T> {
 ```
 
 ### Card
+
 ```typescript
+
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/data-display/Card';
 
 interface CardProps {
+
   variant?: 'default' | 'elevated' | 'outlined' | 'filled';
+
   size?: 'sm' | 'md' | 'lg';
+
   padding?: 'none' | 'sm' | 'md' | 'lg';
+
   hoverable?: boolean;
+
   clickable?: boolean;
+
   fullWidth?: boolean;
+
   onClick?: () => void;
+
   children: React.ReactNode;
+
 }
 
 // Usage Example
+
 <Card variant="elevated" hoverable clickable onClick={handleCardClick}>
+
   <CardHeader>
+
     <Avatar src={campaign.creator.avatar} size="md" />
     <div>
       <h3 className="card-title">{campaign.name}</h3>
@@ -527,173 +617,306 @@ interface CardProps {
 ## Feedback Components
 
 ### Alert
+
 ```jsx
+
 import { Alert } from '@/components/feedback/Alert';
 
 interface AlertProps {
+
   variant: 'info' | 'success' | 'warning' | 'error';
+
   title?: string;
+
   message: string;
+
   dismissible?: boolean;
+
   action?: {
+
     label: string;
+
     onClick: () => void;
+
     variant?: 'primary' | 'secondary';
+
   };
+
   icon?: React.ComponentType;
+
   onDismiss?: () => void;
+
 }
 
 // Usage Examples
+
 <Alert
+
   variant="warning"
+
   title="Action Required"
+
   message="Your Stripe account setup is incomplete. Complete setup to start accepting payments."
+
   action={{
+
     label: "Complete Setup",
+
     onClick: () => navigate('/settings')
+
   }}
+
   dismissible
+
 />
 
 <Alert
+
   variant="success"
+
   message="Campaign sent successfully! Check your analytics for performance details."
+
 />
+
 ```
 
 ### Toast
+
 ```typescript
+
 import { useToast } from '@/components/feedback/Toast';
 
 interface ToastOptions {
+
   variant?: 'info' | 'success' | 'warning' | 'error';
+
   title?: string;
+
   message: string;
+
   duration?: number;
+
   persistent?: boolean;
+
   action?: {
+
     label: string;
+
     onClick: () => void;
+
   };
+
 }
 
 // Usage with Hook
+
 const toast = useToast();
 
 const handleSave = async () => {
+
   try {
+
     await saveCampaign(campaignData);
+
     toast.success({
+
       title: "Campaign Saved",
+
       message: "Your campaign has been saved successfully.",
+
       action: {
+
         label: "View Campaign",
+
         onClick: () => navigate(`/campaigns/${campaignData.id}`
+
       }
+
     });
+
   } catch (error) {
+
     toast.error({
+
       title: "Save Failed",
+
       message: "Unable to save campaign. Please try again.",
+
       persistent: true
+
     });
+
   }
+
 };
+
 ```
 
 ### Modal
+
 ```jsx
+
 import { Modal } from '@/components/feedback/Modal';
 
 interface ModalProps {
+
   isOpen: boolean;
+
   onClose: () => void;
+
   title?: string;
+
   description?: string;
+
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
+
   closable?: boolean;
+
   closeOnOverlayClick?: boolean;
+
   closeOnEscape?: boolean;
+
   footer?: React.ReactNode;
+
   children: React.ReactNode;
+
 }
 
 // Usage Example
+
 <Modal
+
   isOpen={showDeleteModal}
+
   onClose={() => setShowDeleteModal(false)}
+
   title="Delete Campaign"
+
   description="This action cannot be undone. All campaign data will be permanently removed."
+
   size="md"
+
   footer={
+
     <div className="modal-footer-actions">
+
       <Button variant="secondary" onClick={() => setShowDeleteModal(false)}>
+
         Cancel
+
       </Button>
+
       <Button variant="danger" onClick={handleDelete} loading={isDeleting}>
+
         Delete Campaign
+
       </Button>
+
     </div>
+
   }
+
 >
+
   <div className="delete-confirmation">
+
     <p>Are you sure you want to delete <strong>"{campaignName}"</strong>?</p>
+
     <ul className="delete-consequences">
+
       <li>All email data will be permanently removed</li>
+
       <li>Analytics and reports will be deleted</li>
+
       <li>Recipients will no longer receive campaign emails</li>
+
     </ul>
+
   </div>
+
 </Modal>
-```
+
 
 ## Navigation Components
 
+
 ### Breadcrumb
+
+
 ```typescript
+
 import { Breadcrumb } from '@/components/navigation/Breadcrumb';
 
 interface BreadcrumbItem {
+
   label: string;
+
   href?: string;
+
   icon?: React.ComponentType;
+
   current?: boolean;
+
 }
 
 interface BreadcrumbProps {
+
   items: BreadcrumbItem[];
+
   separator?: React.ComponentType;
+
   maxItems?: number;
+
   collapsible?: boolean;
+
 }
 
 // Usage Example
+
 <Breadcrumb
-  items={[
+
+  items=[
+
     { label: 'Dashboard', href: '/dashboard', icon: HomeIcon },
+
     { label: 'Campaigns', href: '/campaigns' },
+
     { label: 'Summer Sale 2025', current: true }
-  ]}
+
+  ]
+
   maxItems={5}
+
 />
-```
+
 
 ### Tabs
+
+
 ```typescript
+
 import { Tabs } from '@/components/navigation/Tabs';
 
 interface TabItem {
+
   id: string;
+
   label: string;
+
   icon?: React.ComponentType;
+
   badge?: string | number;
+
   disabled?: boolean;
+
   content?: React.ReactNode;
+
 }
 
 interface TabsProps {
+
   tabs: TabItem[];
+
   activeTab: string;
   variant?: 'default' | 'pills' | 'underline' | 'buttons';
   size?: 'sm' | 'md' | 'lg';
@@ -738,90 +961,155 @@ interface TabsProps {
 ## Utility Components
 
 ### Loading
+
 ```typescript
+
 import { Loading, Skeleton } from '@/components/utilities/Loading';
 
 interface LoadingProps {
+
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars';
+
   color?: string;
+
   overlay?: boolean;
+
   text?: string;
+
   showText?: boolean;
+
 }
 
 interface SkeletonProps {
+
   variant?: 'text' | 'rectangular' | 'circular';
+
   width?: string | number;
+
   height?: string | number;
+
   animation?: 'pulse' | 'wave' | false;
+
 }
 
 // Usage Examples
+
 <Loading size="md" variant="spinner" text="Saving changes..." />
 
 <Skeleton variant="rectangular" width="100%" height={200} />
+
 <Skeleton variant="text" width="60%" />
+
 <Skeleton variant="circular" width={40} height={40} />
+
 ```
 
 ### EmptyState
+
 ```jsx
+
 import { EmptyState } from '@/components/utilities/EmptyState';
 
 interface EmptyStateProps {
+
   icon?: React.ComponentType;
+
   title: string;
+
   description?: string;
+
   size?: 'sm' | 'md' | 'lg';
+
   action?: {
+
     label: string;
+
     onClick: () => void;
+
     variant?: 'primary' | 'secondary';
+
     icon?: React.ComponentType;
+
   };
+
   secondaryAction?: {
+
     label: string;
+
     onClick: () => void;
+
   };
+
 }
 
 // Usage Example
+
 <EmptyState
+
   icon={InboxIcon}
+
   title="No campaigns yet"
+
   description="Create your first email campaign to get started with automated outreach."
+
   action={{
+
     label: "Create Campaign",
+
     variant: "primary",
+
     icon: PlusIcon,
+
     onClick: () => navigate('/campaigns')
+
   }}
+
   secondaryAction={{
+
     label: "Learn More",
+
     onClick: () => openTutorial('creating-campaigns')
+
   }}
+
 />
+
 ```
 
 ### Badge
+
 ```typescript
+
 import { Badge } from '@/components/utilities/Badge';
 
 interface BadgeProps {
+
   variant?: 'default' | 'success' | 'warning' | 'error' | 'info' | 'neutral';
+
   size?: 'xs' | 'sm' | 'md';
+
   rounded?: boolean;
+
   dot?: boolean;
+
   icon?: React.ComponentType;
+
   children: React.ReactNode;
+
 }
 
 // Usage Examples
+
 <Badge variant="success">Active</Badge>
+
 <Badge variant="warning" size="sm">Pending</Badge>
+
 <Badge variant="error" dot /> {/* Status dot only */}
+
 <Badge variant="info" icon={InfoIcon}>New Feature</Badge>
+
 ```
 
 ## Component Status and Roadmap
@@ -841,38 +1129,61 @@ interface BadgeProps {
 | Tooltip | Completed Stable | 1.4.1 | Jul 2025 |
 
 ### Upcoming Components
+
 - **DatePicker**: Advanced date selection with calendar
+
 - **TimePicker**: Time selection with timezone support
+
 - **ColorPicker**: Color selection for email templates
+
 - **FileUpload**: Drag-and-drop file upload with progress
+
 - **Stepper**: Multi-step process indicator
+
 - **Accordion**: Collapsible content sections
 
 ### Component Deprecations
+
 - **LegacyButton**: Deprecated in favor of new Button component
+
 - **OldModal**: Deprecated, migrate to new Modal component by Dec 2025
+
 - **BasicTable**: Deprecated, use enhanced Table component
 
 ## Implementation Guidelines
 
 ### Import Patterns
+
 ```typescript
+
 // Preferred: Import specific components
+
 import { Button, Input, Modal } from '@/components';
 
 // Alternative: Import with alias for complex components
+
 import { Table as DataTable } from '@/components/data-display/Table';
+
 import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
+
 ```
 
 ### Component Composition
+
 ```typescript
+
 // Good: Compose components logically
+
 <Card>
+
   <CardHeader>
+
     <Avatar src={user.avatar} />
+
     <div>
+
       <h3>{user.name}</h3>
+
       <p>{user.role}</p>
     </div>
   </CardHeader>
@@ -897,17 +1208,25 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ```
 
 ### Styling Guidelines
+
 - Use design tokens for all spacing, colors, and typography
+
 - Avoid inline styles except for dynamic values
+
 - Use CSS custom properties for themeable values
+
 - Follow BEM naming convention for custom styles
 
 ---
 
 ## Related Documents
+
 - [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
+
 - [Design System](/docs/design/design-system) - Complete design system overview
+
 - [Design Tokens](/docs/design/design-tokens) - Design token specifications
+
 - [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications

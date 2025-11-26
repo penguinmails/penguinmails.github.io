@@ -66,37 +66,50 @@ const form = useForm({
 ### lucide-react
 
 - Consistent icon library
+
 - Tree-shakeable
+
 - TypeScript support
+
 - Example: `import { Mail, Send, Users } from 'lucide-react'`
+
 
 ### Animation & Motion
 
 **tw-animate-css** + **CSS Transitions**
 
 - Use `tw-animate-css` for standard animations (fade, slide, bounce)
+
 - Use standard CSS transitions for hover states and micro-interactions
+
 - Avoid heavy JS animation libraries like Framer Motion unless absolutely necessary for complex gestures
+
 
 ### Dark Mode
 
 **Tailwind Dark Mode** (`selector` strategy)
 
 - Use `darkMode: 'selector'` in Tailwind config
+
 - Toggle class `dark` on the `<html>` element
+
 - Use `dark:` prefix for dark mode styles (e.g., `bg-white dark:bg-slate-900`)
+
 
 ### State Management
 
 **React Context** (for simple global state)
 
 - Theme preferences
+
 - User session
+
 - Feature flags
 
 **Zustand** (for complex state, if needed)
 
 - Campaign editor state
+
 - Multi-step form state
 
 ### Data Fetching
@@ -104,17 +117,25 @@ const form = useForm({
 **MVP**: Server Actions (Next.js 15)
 
 ```typescript
+
 'use server';
+
 export async function getCampaigns() {
+
   const data = await db.campaigns.findMany();
+
   return data;
+
 }
+
 ```
 
 **Post-MVP**: REST API with fetch/axios
 
 ```typescript
+
 const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
+
 ```
 
 ---
@@ -126,13 +147,19 @@ const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
 **Requirement**: Two variants needed
 
 1. **Realtime DataTable**
+
    - Live updates via WebSocket/Server-Sent Events
+
    - Use case: Campaign sending status, live analytics
+
    - Features: Auto-refresh, optimistic updates
 
 2. **Paginated DataTable**
+
    - Server-side pagination
+
    - Use case: Campaign history, recipient lists
+
    - Features: Sorting, filtering, search
 
 **Recommended Library**: `@tanstack/react-table` (headless, flexible)
@@ -141,97 +168,142 @@ const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
 
 **Pattern**: shadcn/ui + react-hook-form + zod
 
-**Requirements**:
+**Requirements**
 
 - All forms must use Zod schemas for validation
 - Error messages must be user-friendly
 - Support for multi-step forms (campaign creation wizard)
+
 - Auto-save drafts for long forms
 
 **Example Structure**:
 
 ```typescript
+
 // 1. Define schema
+
 const schema = z.object({ /* ... */ });
 
 // 2. Create form
+
 const form = useForm({ resolver: zodResolver(schema) });
 
 // 3. Use shadcn Form components
+
 <Form {...form}>
+
   <FormField name="email" />
+
 </Form>
+
 ```
 
 ### Modals & Dialogs
 
 **Pattern**: shadcn/ui Dialog component
 
-**Requirements**:
+**Requirements**
 
 - Accessible (ARIA, keyboard navigation)
+
 - Backdrop click to close (configurable)
+
 - Escape key to close
+
 - Focus trap within modal
+
 - Sizes: sm, md, lg, xl, full
 
-**Use Cases**:
+**Use Cases**
 
 - Confirmation dialogs (delete campaign)
+
 - Multi-step wizards (campaign setup)
+
 - Detail views (recipient details)
 
 ### Notifications
 
 **Pattern**: shadcn/ui Toast (using sonner)
 
-**Requirements**:
+**Requirements**
 
 - Position: top-right (default)
+
 - Auto-dismiss: 3s (success), 5s (error), manual (warning)
+
 - Action buttons for undo/retry
+
 - Stack multiple toasts
 
 **Example**:
 
 ```typescript
+
 import { toast } from 'sonner';
 
 toast.success('Campaign sent!', {
+
   action: { label: 'View', onClick: () => navigate('/campaigns/123') }
+
 });
+
 ```
 
 ### Component Structure
 
 ```typescript
+
 interface BaseComponentProps {
+
   className?: string;
+
   style?: React.CSSProperties;
+
   'data-testid'?: string; // Testing support
+
   children?: React.ReactNode;
+
 }
 
 // Consistent component pattern
+
 interface ComponentProps extends BaseComponentProps {
+
   // Component-specific props
+
   variant?: 'primary' | 'secondary' | 'tertiary';
+
   size?: 'sm' | 'md' | 'lg';
+
   disabled?: boolean;
+
   loading?: boolean;
+
 }
 
 // Usage example
+
 <Button
+
   variant="primary"
+
   size="md"
+
   disabled={false}
+
   loading={false}
+
   onClick={handleClick}
+
   data-testid="submit-button"
+
 >
+
   Submit Form
+
 </Button>
+
 ```
 
 ## Layout Components
@@ -374,6 +446,7 @@ interface ButtonProps {
 }
 
 // Component usage examples
+
 <Button variant="primary" size="md" onClick={handleSubmit}>
   Create Campaign
 </Button>
@@ -385,10 +458,14 @@ interface ButtonProps {
 <Button variant="danger" size="md" loading={isDeleting} onClick={handleDelete}>
   Delete Account
 </Button>
+
 ```
 
+
 ### Button Group Pattern
+
 ```typescript
+
 interface ButtonGroupProps {
   variant?: 'segmented' | 'attached';
   size?: ButtonSize;
@@ -397,16 +474,20 @@ interface ButtonGroupProps {
 }
 
 // Usage for mutually exclusive options
+
 <ButtonGroup variant="segmented">
   <Button>Daily</Button>
   <Button active>Weekly</Button>
   <Button>Monthly</Button>
 </ButtonGroup>
+
 ```
+
 
 ## Form Components
 
 ### Input Field Variants
+
 ```typescript
 interface InputProps {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url';
@@ -608,19 +689,20 @@ interface AlertProps {
 }
 
 // Usage
+
 <Alert
   variant="warning"
   title="Action Required"
   message="Your Stripe account setup is incomplete."
   action={{
     label: "Complete Setup",
-    onClick: () => navigate('/settings)
+    onClick: () => navigate('/settings')
   }}
   dismissible
 />
-```
 
 ### Toast Notifications
+
 ```typescript
 interface ToastProps {
   id: string;
@@ -641,6 +723,7 @@ interface ToastContainerProps {
 }
 
 // Toast manager usage
+
 const toast = useToast();
 
 toast.success({
@@ -648,12 +731,12 @@ toast.success({
   message: "Your campaign has been successfully created and scheduled.",
   action: {
     label: "View Campaign",
-    onClick: () => navigate(`/campaigns)
+    onClick: () => navigate(`/campaigns`)
   }
 });
-```
 
 ### Modal Component
+
 ```typescript
 interface ModalProps {
   isOpen: boolean;
@@ -858,6 +941,7 @@ Button.displayName = 'Button';
 ```
 
 ### Component Testing
+
 ```typescript
 // components/Button/Button.test.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -865,20 +949,20 @@ import { Button } from './Button';
 
 describe('Button', () => {
   it('renders with default props', () => {
-    render(<Button>Click me<);
-    expect(screen.getByRole('button', { name: /click me)).toBeInTheDocument();
+    render(<Button>Click me</Button>);
+    expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
   });
 
   it('handles click events', () => {
     const handleClick = jest.fn();
-    render(<Button onClick={handleClick}>Click me<);
+    render(<Button onClick={handleClick}>Click me</Button>);
 
-    fireEvent.click(screen.getByRole('button', { name: /click me));
+    fireEvent.click(screen.getByRole('button', { name: /click me/i }));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
   it('shows loading state', () => {
-    render(<Button loading>Submit<);
+    render(<Button loading>Submit</Button>);
     expect(screen.getByRole('button')).toBeDisabled();
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
@@ -886,6 +970,7 @@ describe('Button', () => {
 ```
 
 ### Component Documentation
+
 ```typescript
 // components/Button/Button.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
@@ -1106,9 +1191,7 @@ function Dashboard() {
       {user.roles.includes('customer') && <CampaignDashboard />}
       {user.roles.includes('agency') && <AgencyCommandCenter />}
     </>
-  );
-}
-```
+  );}
 
 ---
 
@@ -1118,45 +1201,28 @@ function Dashboard() {
 
 **Recommended Library**: **Recharts** (React-friendly, declarative)
 
-**Requirements**:
+
+
+**Requirements**
 
 - Responsive charts (adapt to container width)
+
 - Accessible (ARIA labels, keyboard navigation)
+
 - Consistent color palette (use design tokens)
+
 - Interactive tooltips
 
-**Chart Types Needed**:
+
+**Chart Types Needed**
 
 - Line charts: Campaign performance over time
+
 - Bar charts: Comparative metrics
+
 - Pie/Donut charts: Distribution (open rate, click rate)
+
 - Area charts: Cumulative metrics
-
-### Real-time Updates
-
-**Pattern**: Server-Sent Events (SSE) or WebSockets
-
-**Use Cases**:
-
-- Live campaign sending status
-- Real-time analytics updates
-- Notification feed
-
-**Implementation**:
-
-```typescript
-// Server-Sent Events for one-way updates
-const eventSource = new EventSource('/api/campaigns/123/live');
-eventSource.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  updateCampaignMetrics(data);
-};
-```
-
----
-
-## Testing Strategy
-
 ### Component Testing
 
 **Library**: **Vitest** + **React Testing Library**

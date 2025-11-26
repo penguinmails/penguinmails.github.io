@@ -89,9 +89,12 @@ persona: "Documentation Users"
 
 - **Pipedrive Integration**: Sales opportunity correlation with product features
 
+
 ### Feature Adoption Tracking
+
 ```sql
 -- Feature Adoption ROI Query Example
+
 SELECT
     f.feature_name,
     f.release_date,
