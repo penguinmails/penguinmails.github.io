@@ -1,157 +1,147 @@
 # Contributing to PenguinMails Documentation
 
-We welcome contributions to improve our documentation! This guide provides detailed instructions for developers and contributors working on the PenguinMails documentation.
+We welcome contributions to improve our documentation! This guide provides everything you need to get started with contributing to the PenguinMails documentation project.
 
-For AI agent-specific rules and operational protocols, see **[AGENTS.md](./AGENTS.md)**.
+##  Quick Start
 
-## Getting Started
+**For immediate contributions:**
+1. Fork this repository
+2. Create a feature branch: `git checkout -b feature/your-improvement`
+3. Make your changes
+4. Test locally (see setup below)
+5. Submit a pull request
+
+**Need help?** Check our [Support section](#support) or [open an issue](https://github.com/penguinmails/penguinmails.github.io/issues).
+
+##  Table of Contents
+
+- [Quick Start](#-quick-start)
+- [Development Setup](#-development-setup)
+- [Content Standards](#-content-standards)
+- [Frontmatter Requirements](#-frontmatter-requirements)
+- [Git Workflow](#-git-workflow)
+- [Quality Assurance](#-quality-assurance)
+- [Testing & Validation](#-testing--validation)
+- [Support](#support)
+- [Resources](#resources)
+
+##  Development Setup
 
 ### Prerequisites
 
-- Docker installed on your system
-- Git for version control
-- Modern web browser for testing
+- **Docker** - Required for consistent development environment
+- **Git** - For version control
+- **Modern web browser** - For testing documentation
 
-### Local Development Setup
+### Local Development
 
 1. **Clone the repository:**
-
    ```bash
    git clone https://github.com/penguinmails/penguinmails.github.io.git
    cd penguinmails.github.io
    ```
 
-2. **Build and run the documentation:**
-
+2. **Start development server:**
    ```bash
-   # Build Docker image
+   # Build and run with Docker
    docker build -t penguinmails-docs .
-   
-   # Start development server
    docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
    ```
 
 3. **View the documentation:**
-   Open [http://localhost:4000](http://localhost:4000) in your browser
+   Open [http://localhost:4000](http://localhost:4000)
 
-### Development Commands
+### Common Commands
 
 ```bash
-# Build documentation only
-docker build -t penguinmails-docs .
-
-# Clean rebuild (remove cache)
+# Rebuild without cache
 docker system prune -a && docker build -t penguinmails-docs .
 
-# Live reload development
-docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
-
-# Debug markdown lint issues using Docker-based markdownlint
-docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
+# Run linting checks
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
+  markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
 
-## Content Standards
+##  Content Standards
 
 ### Ways to Contribute
 
-- **Fix typos or improve clarity**
-- **Add missing documentation sections**
-- **Update outdated information**
-- **Improve navigation and structure**
-- **Add examples or use cases**
+- **Fix typos or improve clarity** - Quick wins that help readability
+- **Add missing documentation sections** - Fill gaps in coverage
+- **Update outdated information** - Keep content current
+- **Improve navigation and structure** - Better user experience
+- **Add examples or use cases** - Practical guidance
 
-### Content Guidelines
+### Writing Guidelines
 
-- Keep language clear and accessible
-- Include practical examples when relevant
-- Update related sections when making changes
-- Test all links and navigation
-- Follow existing markdown formatting
-- Use customer-focused language throughout
-- Maintain business value emphasis in technical content
-- Use targeted surgical edits for linting fixes (see development approach below)
+- **Clear and accessible language** - Avoid jargon when possible
+- **Include practical examples** - Show, don't just tell
+- **Update related sections** - Maintain consistency
+- **Test all links and navigation** - Ensure nothing breaks
+- **Follow existing markdown formatting** - Keep consistency
+- **Use customer-focused language** - Highlight business value
+- **Target surgical edits for linting** - Fix specific issues
 
-## Frontmatter Standards
+### Content Quality
+
+- **File length**: Target 200-300 lines max for readability
+- **Progressive disclosure**: Organize from basic to advanced
+- **Cross-references**: Use proper internal linking
+- **Business value**: Emphasize customer benefits in technical content
+
+##  Frontmatter Requirements
 
 ### Standard Format
 
-All Jekyll documentation files (`index.md` and `docs/` directory) must follow this frontmatter format:
+All documentation files must include this frontmatter:
 
 ```yaml
 ---
 title: "Descriptive Page Title"
 description: "Comprehensive description of page content and purpose"
 last_modified_date: "YYYY-MM-DD"
-level: "2"                          # Progressive disclosure: 1=overview, 2=detailed, 3=implementation
-persona: "Documentation Users"      # Target audience (for devs/LLMs, not rendered)
 ---
 ```
 
-**Custom Metadata Fields:**
-- `level` - Progressive disclosure level (helps organize content complexity)
-- `persona` - Target audience (helps devs/AI understand who the content is for)
-- `keywords` - Being moved from document body to frontmatter for better organization
+### Navigation Files (5 main files only)
 
-These custom fields are for developers and AI assistants, not rendered by Jekyll/Just the Docs.
+Only these files may have sidebar navigation fields:
 
-**Note:** Non-Jekyll files (`README.md`, `CONTRIBUTING.md`, `tasks/`, `user-journeys/`) do NOT require frontmatter.
+- `docs/business/strategy/overview.md`
+- `docs/technical/architecture/overview.md`
+- `docs/compliance-security/overview.md`
+- `docs/core-features/README.md`
+- `docs/implementation-technical/README.md`
 
-### Navigation Files
-
-Only 5 main files are allowed to have sidebar navigation fields:
-
-- Business/Strategy: `docs/business/strategy/overview.md`
-- Technical/Architecture: `docs/technical/architecture/overview.md`
-- Compliance/Security: `docs/compliance-security/overview.md`
-- Core Features: `docs/core-features/README.md`
-- Implementation Technical: `docs/implementation-technical/README.md`
-
-**Sidebar Navigation Format (ONLY for 5 main files):**
-
+**Navigation frontmatter format:**
 ```yaml
 ---
 title: "Page Title"
 description: "Page description"
-last_modified_date: "YYYY-MM-DD"
-level: "2"
-nav_exclude: "false"
-nav_order: "1"
-persona: "Documentation Users"
+nav_order: X
+nav_exclude: false
+last_modified_date: "2025-11-26"
 ---
 ```
 
-### Rules
+### Rules & Quality Checks
 
-- Use `title`, `description`, `last_modified_date`, `level`, and `persona` for all Jekyll files
-- Use `nav_order` and `nav_exclude` only for the 5 main sidebar files (Just the Docs feature)
-- Field order for standard files: `title` → `description` → `last_modified_date` → `level` → `persona`
-- Field order for navigation files: `title` → `description` → `last_modified_date` → `level` → `nav_exclude` → `nav_order` → `persona`
-- Date format: YYYY-MM-DD
-- `keywords` should be in frontmatter, not document body
-- Non-Jekyll files (README.md, CONTRIBUTING.md, tasks/, user-journeys/) do NOT require frontmatter
+- **Required fields**: `title`, `description`, `last_modified_date` for all files
+- **Navigation fields**: Only for the 5 main files listed above
+- **Field order**: `title`  `description`  `nav_order`  `nav_exclude`  `last_modified_date`
+- **Date format**: ISO format (YYYY-MM-DD)
+- **Validation**: Test navigation links after structural changes
 
-**Progressive Disclosure Levels:**
-- Level 1: Overview and strategic content
-- Level 2: Detailed documentation and guides
-- Level 3: Implementation details and technical specs
-
-### Quality Assurance
-
-- **Field Completeness**: Ensure all three fields are present in every documentation file
-- **Date Format**: Use ISO format (YYYY-MM-DD) for all dates
-- **Link Validation**: Test all navigation links after making structural changes
-- **Consistency Checks**: Verify internal document references when moving or renaming files
-
-## Git Workflow
+##  Git Workflow
 
 ### Contribution Process
 
-1. **Fork the repository**
+1. **Fork the repository** from GitHub
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
-3. **Make your changes** following our style guidelines
-4. **Test locally** using the Docker setup above
-5. **Run linting checks** to ensure quality compliance
-6. **Submit a pull request** with a clear description
+3. **Make your changes** following style guidelines
+4. **Test locally** using Docker setup
+5. **Run linting checks** to ensure quality
+6. **Submit a pull request** with clear description
 
 ### Commit Message Format
 
@@ -159,281 +149,124 @@ persona: "Documentation Users"
 docs: add installation troubleshooting guide
 
 - Added common Docker setup issues and solutions
-- Included Windows-specific troubleshooting steps
+- Included Windows-specific troubleshooting steps  
 - Updated development setup section
 
 Fixes #123
 ```
 
-## Definition of Done (DoD)
+### Branch Naming
 
-### General Completion Criteria
+- `feature/your-feature-name` - New features
+- `fix/issue-description` - Bug fixes
+- `docs/content-update` - Documentation updates
+- `refactor/area-description` - Code refactoring
+
+##  Quality Assurance
+
+### Definition of Done (DoD)
 
 A task is **Done** when:
 
-- ✅ All acceptance criteria are met
-- ✅ It's reviewed, tested, and approved by the lead
-- ✅ Jira status is updated with all links or screenshots
-- ✅ No blockers or pending dependencies remain
-- ✅ It's verified on staging
+-  All acceptance criteria are met
+-  Reviewed, tested, and approved by the lead
+-  Jira status updated with all links/screenshots
+-  No blockers or pending dependencies remain
+-  Verified on staging environment
 
-### Development Tasks
+### Development Tasks DoD
 
-For development work, **Done** means:
+For development work:
 
-- ✅ Code is committed, reviewed, and merged into the right branch
-- ✅ Follows linting and naming standards
-- ✅ Tested manually or with unit tests
-- ✅ Docs or .env.sample updated if needed
-- ✅ Deployed successfully to staging
+-  Code committed, reviewed, and merged to right branch
+-  Follows linting and naming standards
+-  Tested manually or with unit tests
+-  Documentation updated if needed
+-  Deployed successfully to staging
 
-### Bug Fixes
+### Markdown Linting
 
-For bug fixes, **Done** means:
-
-- ✅ The issue is replicated and the root cause found
-- ✅ Fix verified in staging with before/after proof
-- ✅ Related areas regression-tested
-
-### Research Spikes
-
-For research spikes, **Done** means:
-
-- ✅ Research completed and documented (Google Doc link in Jira)
-- ✅ Includes clear findings or recommendations
-- ✅ Reviewed by Anthony or team lead before closing
-
-### Summary
-
-**"Done"** means built, tested, reviewed, documented, deployed to staging, and approved with no loose ends.
-
-This Definition of Done ensures consistent quality standards across all contributions and provides clear expectations for both contributors and reviewers.
-
-## PenguinMails Standard Operating Procedure (SOP)
-
-### Purpose
-
-This SOP defines the standard processes for planning, communication, task management, and sprint execution at PenguinMails.
-
-It ensures all team members follow a consistent workflow to improve productivity, accountability, and delivery quality.
-
-### Tools & Platform
-
-- **Jira** – Task creation, sprint planning, progress tracking
-- **Discord** – Team communication, quick discussions, and daily updates
-- **Google Docs/Sheets** – Documentation, PRDs, and research outputs
-- **GitHub** – Code collaboration and version control
-
-### Communication Rules
-
-- All work-related discussions happen in Discord using defined channels
-- Avoid direct messages for project-related issues, keep discussions transparent
-- Tag teammates directly when a response is required
-- Maintain professionalism and clarity at all times
-- **Sync meetings**: Once per sprint (Planning + Demo)
-- **Async updates**: Daily in the sprint channel
-
-### Developer Responsibilities
-
-- Update progress daily in Jira
-- Report blockers early through Discord or directly in Jira
-- Keep PRs small and link them to relevant Jira tasks
-- Write short documentation for implemented features
-- Follow the Definition of Done (DoD) for all contributions
-- Ensure all code meets linting and naming standards
-
-### Code & Infrastructure Standards
-
-- All environments (staging, production) must have clear documentation
-- Infrastructure scripts must be version-controlled in GitHub
-- Access permissions and credentials should be approved before use
-- Use secure practices when managing configuration or deployment keys
-- Follow established Git workflow and commit message formats
-
-### Compliance & Security
-
-- Follow security best practices for all integrations and APIs
-- Use secure credentials and enable 2FA on all project accounts
-- Do not share confidential or client data outside official channels
-- Ensure compliance with GDPR and applicable data privacy laws
-- Maintain clean, documented code that meets repository standards
-
-## Markdown Linting
-
-### Docker-Based Linting Approach
-
-Our repository uses a Docker-based markdown linting approach for consistency and ease of setup:
-
-- **Containerized**: Uses `peterdavehello/markdownlint:latest` Docker image
-- **Consistent Environment**: Same linting results across all development environments
-- **No Dependencies**: Eliminates need for Node.js/npm installation
-- **CI/CD Ready**: Easily integrated into continuous integration pipelines
-- **Latest Version**: Uses the most recent markdownlint version for best compatibility
-
-### Linting Command
+**Docker-based linting approach:**
 
 ```bash
-# Check focused markdown files (avoids noise from other directories)
-docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
+# Check specific files
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
+  markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
+
+# Auto-fix common issues
+docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
+  markdownlint docs/ --config .markdownlint.json --fix
 ```
 
-### Development Approach
+**Common issues:**
+- **MD022**: Headings need blank lines around them
+- **MD032**: Lists need blank lines around them
+- **MD036**: Use proper headings instead of bold emphasis
+- **MD047**: Files must end with single newline
 
-Our repository emphasizes targeted surgical edits over bulk automation:
+For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
 
-- **Lint Check**: Run Docker-based linting to identify specific issues
-- **Surgical Fixes**: Use targeted search/replace edits to fix individual problems
-- **Historical Reference**: Legacy automation scripts are archived in `.roo/legacy-archive/development-automation/`
-
-For comprehensive markdown linting documentation, including troubleshooting and CI/CD integration, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
-
-### Common Issues and Solutions
-
-- **MD001**: Heading levels should only increment by one level at a time
-- **MD022**: Headings should be surrounded by blank lines
-- **MD032**: Lists should be surrounded by blank lines
-- **MD036**: Emphasis should not be used in place of strong
-- **MD041**: First line in file should be a top-level heading
-- **MD047**: Files should end with a single newline character
-
-## Development Best Practices
-
-### File Organization
-
-- Maintain progressive disclosure structure
-- Use nested folders to convey reading levels
-- Keep public-facing docs in `docs/` folder clean of development artifacts
-- Avoid emojis in titles and content for professional appearance
-
-### Documentation Quality
-
-- Maintain readable file lengths (target 200-300 lines max)
-- Use proper internal linking with relative paths
-- Follow GitHub-flavored Markdown with inline reference links
-- Include accurate `last_modified_date` in frontmatter when possible
-
-### Cross-Reference Management
-
-- Use Jekyll-compatible relative links without .md extensions
-- Maintain consistent header hierarchy and naming conventions
-- Test all navigation links after structural changes
-- Preserve meaningful cross-reference relationships
-
-## Tech Stack Compliance Standards
-
-### Approved Technology Stack
-
-**MANDATORY COMPLIANCE RULES:**
-- ✅ **ONLY TypeScript and JavaScript** allowed for code examples
-- ❌ **NO Python, Ruby, PHP, C#** in any documentation code examples
-- ❌ **NO Prisma ORM** - Use Drizzle ORM only
-- ❌ **NO BullMQ** - Use PostgreSQL + Redis queue system only
-- ❌ **NO MySQL** - Use PostgreSQL with NileDB multi-tenancy only
-- ❌ **NO Apache Kafka** - Use PostgreSQL + Redis for event streaming
-
-### Code Example Templates
-
-**TypeScript Template (Recommended):**
-```typescript
-// ✅ CORRECT: Complete TypeScript example with proper typing
-interface ExampleRequest {
-  id: string;
-  data: Record<string, unknown>;
-}
-
-interface ExampleResponse {
-  success: boolean;
-  result?: unknown;
-  error?: string;
-}
-
-async function processExample(request: ExampleRequest): Promise<ExampleResponse> {
-  try {
-    // Implementation with proper typing
-    const result = await doSomething(request.data);
-    return {
-      success: true,
-      result,
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error instanceof Error ? error.message : 'Unknown error',
-    };
-  }
-}
-```
-
-**JavaScript Template (Alternative):**
-```javascript
-// ✅ CORRECT: JavaScript example with proper structure
-async function processExample(request) {
-  try {
-    // Implementation with proper error handling
-    const result = await doSomething(request.data);
-    return {
-      success: true,
-      result,
-    };
-  } catch (error) {
-    return {
-      success: false,
-      error: error.message || 'Unknown error',
-    };
-  }
-}
-```
-
-### Quality Assurance Checklist
-
-**Before Submitting Documentation Changes:**
-- [ ] All code examples use TypeScript or JavaScript (no Python, Ruby, PHP, C#)
-- [ ] All functions have proper typing (for TypeScript)
-- [ ] All interfaces defined for complex objects (TypeScript examples)
-- [ ] Import statements use ES6 module syntax
-- [ ] No `any` types used in TypeScript (use proper typing)
-- [ ] Async/await properly typed with Promise<T> (TypeScript)
-- [ ] Error handling uses proper error types
-
-**Validation Commands:**
-For detailed linting and compliance verification commands (including forbidden language and tech checks), see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md#tech-stack-compliance-verification).
-## Testing and Validation
+##  Testing & Validation
 
 ### Before Submitting
 
-1. **Local Testing**: Verify changes render correctly in local development server
-2. **Link Validation**: Ensure all internal and external links work properly
-3. **Linting Compliance**: Run Docker-based markdown linting to catch formatting issues
-4. **Content Review**: Verify business value and technical accuracy are maintained
+1. **Local Testing**: Verify changes render correctly at http://localhost:4000
+2. **Link Validation**: Ensure all internal and external links work
+3. **Linting Compliance**: Run Docker-based markdown linting
+4. **Content Review**: Verify business value and technical accuracy
 
 ### Quality Standards
 
-- Zero syntax errors or broken references
-- 100% compliance with repository standards
-- All changes pass automated validation checks
-- Cross-references remain functional
-- Business value is preserved in all modifications
+- **Zero syntax errors** or broken references
+- **100% compliance** with repository standards
+- **Automated validation** checks pass
+- **Cross-references remain** functional
+- **Business value preserved** in all modifications
 
-## Support
+### Best Practices
+
+- **Progressive disclosure**: Organize from basic to advanced
+- **File organization**: Use nested folders for reading levels
+- **Link management**: Use Jekyll-compatible relative links
+- **Content consistency**: Maintain professional appearance
+- **Regular testing**: Validate changes before committing
+
+##  Support
 
 ### Getting Help
 
-- **Documentation Issues:** Check the main sections first
-- **Technical Questions:** Review the development guidelines
-- **Contributing Help:** See the contribution guidelines above
+- **Documentation questions**: Check main sections first
+- **Technical issues**: Review development guidelines above
+- **Contributing help**: See contribution guidelines
+- **Quick questions**: Check [FAQ](#frequently-asked-questions)
 
 ### Reporting Problems
 
-- **Documentation Issues:** [Open an issue](https://github.com/penguinmails/penguinmails.github.io/issues)
-- **Content Requests:** Submit a pull request with your suggestions
-- **Bug Reports:** Include steps to reproduce and expected behavior
+- **Documentation issues**: [Open an issue](https://github.com/penguinmails/penguinmails.github.io/issues)
+- **Content requests**: Submit a pull request with suggestions
+- **Bug reports**: Include steps to reproduce and expected behavior
 
-### Resources
+### Frequently Asked Questions
 
-- **Repository:** [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
-- **Issues:** [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
-- **Live Documentation:** [https://penguinmails.github.io](https://penguinmails.github.io)
+**Q: How do I fix Docker permission issues?**
+A: Ensure Docker is running and you have proper volume mount permissions. Try using absolute paths if $(pwd) doesn't work.
+
+**Q: Why does my link not work in the built site?**
+A: Internal links should not include .md extensions. Use `[text](path/to/file)` instead of `[text](path/to/file.md)`.
+
+**Q: How do I add a new page to the navigation?**
+A: Only the 5 main navigation files can have `nav_order` fields. Other pages are discovered automatically through links.
+
+##  Resources
+
+- **Live documentation**: [https://penguinmails.github.io](https://penguinmails.github.io)
+- **Repository**: [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
+- **Issues**: [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
+- **Markdown linting**: [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md)
+- **AI agent guidelines**: [AGENTS.md](./AGENTS.md)
 
 ---
 
-**Thank you for contributing to PenguinMails documentation!** Your help in maintaining high-quality, comprehensive documentation is invaluable to our users and community.
+**Thank you for contributing to PenguinMails documentation!** Your help maintaining high-quality, comprehensive documentation is invaluable to our users and community.
+
+**Last updated**: 2025-11-26

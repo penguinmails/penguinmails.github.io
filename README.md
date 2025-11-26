@@ -1,9 +1,12 @@
-# PenguinMails Documentation
+#  PenguinMails Documentation
 
 [![Documentation Status](https://img.shields.io/badge/Documentation-Active-brightgreen.svg)](https://penguinmails.github.io)
 [![Built with Just the Docs](https://img.shields.io/badge/Built%20with-Just%20the%20Docs-blue.svg)](https://pmarsceill.github.io/just-the-docs/)
+[![Build Status](https://github.com/penguinmails/penguinmails.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/penguinmails/penguinmails.github.io/actions)
+[![Contributors](https://img.shields.io/github/contributors/penguinmails/penguinmails.github.io.svg)](CONTRIBUTORS)
 [![GitHub Issues](https://img.shields.io/github/issues/penguinmails/penguinmails.github.io.svg)](https://github.com/penguinmails/penguinmails.github.io/issues)
-[![GitHub License](https://img.shields.io/github/license/penguinmails/penguinmails.github.io.svg)](https://github.com/penguinmails/penguinmails.github.io/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/penguinmails/penguinmails.github.io.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/penguinmails/penguinmails.github.io?style=social)](https://github.com/penguinmails/penguinmails.github.io)
 
 > **Complete enterprise email management platform documentation**  
 > A comprehensive guide covering architecture, implementation, operations, and best practices for PenguinMails.
@@ -19,9 +22,9 @@ This repository contains the complete documentation for PenguinMails, including:
 - Operations runbooks and best practices
 - User guides and support resources
 
-AI Agents: We support AI assistants—see **[AGENTS.md](./AGENTS.md)** for agent system and operational protocols.
-
 **Documentation Live Site:** [https://penguinmails.github.io](https://penguinmails.github.io)
+
+---
 
 ## Features
 
@@ -50,12 +53,14 @@ AI Agents: We support AI assistants—see **[AGENTS.md](./AGENTS.md)** for agent
 
 Looking to work on PenguinMails? Here's your clear path to task clarity and onboarding:
 
-- 👥 **[Freelancer Onboarding Hub](/docs/freelancer-support/README)** - Complete freelancer success center and business development resources
-- ✅ **[Task Clarity Essentials](/docs/freelancer-support#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
-- 📋 **[Operations Framework](/docs/operations/README)** - Team structure, sprint workflow, and coordination protocols
-- 💼 **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
+-  **[Freelancer Onboarding Hub](/docs/freelancer-support/)** - Complete freelancer success center and business development resources
+-  **[Task Clarity Essentials](/docs/freelancer-support/#task-completion-standards)** - Definition of Done (DoD), Story Points Guide, and completion criteria
+-  **[Operations Framework](/docs/operations/freelancer-management/)** - Team structure, sprint workflow, and coordination protocols
+-  **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional quotation preparation and business development
 
-**Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
+**Quick Start**: New to PenguinMails freelancing? Start with [Task Clarity Essentials](/docs/freelancer-support/#task-completion-standards) to understand DoD, Story Points, and SOP workflow.
+
+---
 
 ## Quick Start
 
@@ -63,247 +68,119 @@ Looking to work on PenguinMails? Here's your clear path to task clarity and onbo
 
 Visit our **[live documentation site](https://penguinmails.github.io)** and navigate through the sidebar to find:
 
-- [What is PenguinMails](/docs/what-is-penguinmails) - Platform overview
-- [Features & Capabilities](/docs/features/README) - Feature details
-- [Getting Started](/docs/getting-started) - Setup guide
+- [What is PenguinMails](./docs/what-is-penguinmails/) - Platform overview
+- [Features & Capabilities](./docs/features-capabilities/) - Feature details
+- [Getting Started](./docs/implementation-getting-started/) - Setup guide
 
 ### For Contributors
 
-Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide, including:
+#### 1. Clone the Repository
+```
+git clone https://github.com/penguinmails/penguinmails.github.io.git
+cd penguinmails.github.io
+```
+
+#### 2. Launch the Docs
+
+**Option A Docker (recommended)**  
+Provides an isolated, reproducible environment.
+```bash
+# Build and run with Docker
+docker build -t penguinmails-docs .
+docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+```
+
+**Option B Ruby/Jekyll**  
+Requires Ruby, Bundler, and the Jekyll gem installed locally.
+```
+bundle install
+bundle exec jekyll serve --livereload
+```
+
+Your site will be available at [http://localhost:4000](http://localhost:4000).
+
+#### 3. Development Instructions
+
+Detailed development instructions are available in our **[CONTRIBUTING.md](./CONTRIBUTING)** guide, including:
 
 - Local development setup with Docker
 - Content standards and guidelines
 - Git workflow and contribution process
 - Markdown linting and quality checks
 
+---
+
 ## Documentation Structure
 
 ```txt
 docs/
-├── getting-started.md                          # Getting started guide
-├── features/                                   # Feature documentation
-├── business/                                   # Business strategy and analysis
-├── compliance-security/                        # Security and compliance
-├── design/                                     # Design system and UI
-├── operations/                                 # Operations management
-├── technical/                                  # Technical documentation
-├── core-features/                              # Core platform features
-├── implementation-technical/                   # Implementation guides
-└── freelancer-support/                         # Freelancer resources
+ what-is-penguinmails.md                    # What is PenguinMails
+ features-capabilities.md                   # Platform capabilities
+ goals-competitive-edge.md                  # Strategic advantages
+ plan/                                      # Strategic planning
+    high-level-architecture.md             # System architecture
+    key-performance-indicators.md          # Performance metrics
+    roadmap-development-priorities.md      # Development roadmap
+ implement/                                  # Technical implementation
+    getting-started.md                     # Onboarding guide
+    backup-recovery.md                     # Data protection procedures
+    database-operations.md                 # Database management
+    deployment.md                          # Deployment processes
+    performance-monitoring.md              # System monitoring
+    connection-pooling.md                  # Resource management
+ operate/                                    # Ongoing operations
+    compliance-standards.md                # Regulatory compliance
+    team-workflow.md                       # Team processes
+    resources-support.md                   # Support resources
+ design/                                     # Design system
+    design-system.md                       # Core design philosophy
+    ui-library.md                          # UI components
+    component-library.md                   # Component specs
+    user-personas.md                       # User research
+ security/                                   # Security & compliance
+    overview.md                            # Security practices
+    incident-response.md                   # Crisis management
+    procedures.md                          # Security procedures
+ analytics/                                  # Business intelligence
+    financial.md                           # Financial metrics
+    user-behavior.md                       # Usage analytics
+    growth.md                              # Growth metrics
+    product-performance.md                 # Feature performance
+ development/                                # Development guides
+    style-guide.md                         # Code conventions
+    faq-gotchas.md                         # Common issues
+    best-practices.md                      # Development guidelines
+ tasks/                                      # Project management
+    project-management.md                  # Sprint planning
+ finance-business-model.md                   # Business model
 ```
 
 ### Key Documentation Sections
 
 | Section | Description | Audience |
 |---------|-------------|----------|
-| [What is PenguinMails](/docs/what-is-penguinmails) | Platform fundamentals and value proposition | Everyone |
-| [Features & Capabilities](/docs/features/README) | Detailed feature documentation | Users & Decision Makers |
-| [Strategic Planning](/docs/business/strategy/overview) | Architecture, KPIs, and roadmap | Decision Makers & Architects |
-| [Implementation](/docs/implementation-technical) | Setup, deployment, and technical guides | Developers & IT Teams |
-| [Operations](/docs/operations/README) | Compliance, workflows, and support | Operations & Compliance Teams |
-| [Design System](/docs/design/README) | UI/UX guidelines and user research | Designers & Product Teams |
-| [Security](/docs/compliance-security/README) | Security practices and incident response | Security & Compliance Teams |
-| [Analytics](/docs/business/analytics/overview) | Business intelligence and metrics | Product & Business Teams |
-| [Technical Implementation](/docs/technical/README) | Complete technical architecture, API docs, and development guides | Developers & Engineering Teams |
+| [What is PenguinMails](./docs/what-is-penguinmails) | Platform fundamentals and value proposition | Everyone |
+| [Features & Capabilities](./docs/features-capabilities) | Detailed feature documentation | Users & Decision Makers |
+| [Strategic Planning](./docs/plan/) | Architecture, KPIs, and roadmap | Decision Makers & Architects |
+| [Implementation](./docs/implement/) | Setup, deployment, and technical guides | Developers & IT Teams |
+| [Operations](./docs/operate/) | Compliance, workflows, and support | Operations & Compliance Teams |
+| [Design System](./docs/design/) | UI/UX guidelines and user research | Designers & Product Teams |
+| [Security](./docs/security/) | Security practices and incident response | Security & Compliance Teams |
+| [Analytics](./docs/analytics/) | Business intelligence and metrics | Product & Business Teams |
+| [Development](./docs/development/) | Code standards and best practices | Developers & Engineering Teams |
 
 ---
-
-## 📐 Documentation Architecture & File Relationships
-
-### Core Documentation Goals
-
-Our documentation is organized around **6 primary goals** that drive implementation:
-
-1. **📅 Roadmap** - What to build and when
-2. **✨ Features** - Approved features vs features to approve
-3. **🖥️ Frontend View Specs** - What the UI looks like (`docs/design/routes/`)
-4. **🔌 API Design** - What the backend provides (`docs/implementation-technical/api/`)
-5. **🧭 User Journeys** - How users accomplish their goals
-6. **📋 Tasks** - Actionable implementation work items (`/tasks/`)
-
-All other documentation exists to **support, inform, or provide context** for these 6 core outputs.
-
-### Documentation Flow: From Strategy to Implementation
-
-Our documentation follows a clear pipeline from planning to execution:
-
-```text
-┌─────────────────────┐
-│   ROADMAP           │  What to build and when
-│   (Product Vision)  │
-└──────────┬──────────┘
-           │
-           ↓
-┌─────────────────────┐
-│   FEATURES          │  Detailed feature specs
-│   (Approved/Review) │  ← Links to user journeys
-└──────────┬──────────┘
-           │
-           ├──────────────────────┐
-           ↓                      ↓
-┌──────────────────┐   ┌──────────────────┐
-│  FRONTEND SPECS  │   │   API DESIGN     │
-│  (View Routes)   │   │   (Endpoints)    │
-└────────┬─────────┘   └────────┬─────────┘
-         │                      │
-         └──────────┬───────────┘
-                    ↓
-         ┌──────────────────┐
-         │   TASKS          │  Implementation work items
-         │   (Actionable)   │
-         └──────────────────┘
-                    ↓
-         ┌──────────────────┐
-         │   IMPLEMENTATION │
-         └──────────────────┘
-```
-
-### Reader Journeys by Persona
-
-#### 🎯 Business Leader / Product Manager
-
-**Goal**: Understand what's being built and when
-
-```text
-index.md → Planning & Roadmap
-  ├─ Product Roadmap ────────→ Feature timeline
-  ├─ Features Overview ──────→ Feature catalog (with status fields)
-  └─ User Journeys ──────────→ Customer workflows
-```
-
-**Key Files**:
-
-- `docs/roadmap/product-roadmap.md` - Development philosophy and timeline
-- `docs/business/feature-taxonomy-and-roadmap.md` - Feature classification
-- `docs/features/README.md` - Feature catalog
-- `docs/user-journeys/*.md` - Customer workflow maps
-
-#### 🏗️ Technical Lead / Architect
-
-**Goal**: Understand technical implementation and architecture
-
-```text
-index.md → Technical Teams
-  ├─ Technical Roadmap ───────→ Infrastructure milestones
-  ├─ Frontend Specs ──────────→ View routes and UI components
-  ├─ API Design ──────────────→ Backend endpoints and schemas
-  └─ Architecture ────────────→ System design
-```
-
-**Key Files**:
-
-- `docs/design/frontend-routing-map.md` - Master view registry
-- `docs/design/routes/*.md` - Individual view specifications
-- `docs/implementation-technical/api/README.md` - API architecture
-- `docs/implementation-technical/api/**/*.md` - Endpoint specifications
-
-#### 👨‍💻 Developer / Contributor
-
-**Goal**: Find tasks and implementation specifications
-
-```text
-index.md → Developers
-  ├─ Active Tasks ────────────→ Current development work
-  │   └─ Each task links to:
-  │       ├─ Feature spec
-  │       ├─ Frontend spec (docs/design/routes/*.md)
-  │       ├─ API spec (docs/implementation-technical/api/**/*.md)
-  │       └─ User journey
-  │
-  ├─ Frontend Specs ──────────→ What to build (UI)
-  ├─ API Docs ────────────────→ What to build (Backend)
-  └─ Features ────────────────→ Why we're building it
-```
-
-**Key Files**:
-
-- `tasks/**/*.md` - Active implementation tasks (with status fields)
-- `docs/design/routes/*.md` - Frontend view specifications
-- `docs/implementation-technical/api/**/*.md` - API specifications
-- `docs/features/*.md` - Feature requirements
-
-#### 📊 Marketing / Operations
-
-**Goal**: Understand customer workflows and available features
-
-```text
-index.md → Marketing & Operations
-  ├─ User Journeys ───────────→ Customer workflows
-  ├─ Features ────────────────→ Available capabilities
-  └─ Analytics ───────────────→ Performance monitoring
-```
-
-**Key Files**:
-
-- `docs/user-journeys/*.md` - Customer workflow maps
-- `docs/features/README.md` - Feature capabilities
-- `docs/operations-analytics/**/*.md` - Analytics documentation
-
-### File Relationship Principles
-
-#### Cross-Linking Strategy
-
-Every major document includes a **"Related Documentation"** section linking to:
-
-- **Planning Docs** - Roadmap, features, user journeys (the "why")
-- **Specification Docs** - Frontend specs, API specs (the "what")
-- **Implementation Docs** - Tasks, code (the "how")
-
-#### Status-Based Organization
-
-Rather than organizing files by status into separate folders, we use **frontmatter fields**:
-
-```yaml
----
-status: APPROVED | IN_REVIEW | BACKLOG | DRAFT | IMPLEMENTED
-priority: HIGH | MEDIUM | LOW
-roadmap_milestone: Q4_2025
----
-```
-
-This allows:
-
-- ✅ Flat directory structure (easier navigation)
-- ✅ Flexible status changes (no file moves)
-- ✅ Programmatic filtering by status
-- ✅ Clear metadata in each document
-
-#### Progressive Disclosure
-
-Documentation is organized in 3 levels:
-
-1. **Hub Pages** (`README.md` in major directories) - Overview + navigation
-2. **Master Registry** (e.g., `frontend-routing-map.md`) - Complete index
-3. **Detail Pages** (e.g., `routes/workspace-management.md`) - Specific documentation
-
-### Navigation Breadcrumbs
-
-```text
-index.md → [Role Section] → [Hub Page] → [Detail Page]
-
-Example for Developer:
-index.md 
-  → Developers Section 
-    → Active Tasks 
-      → Frontend Tasks 
-        → auth-views.md
-          ├─ Links to: features/authentication.md
-          ├─ Links to: design/routes/public-auth.md
-          └─ Links to: api/tenant-api/auth.md
-```
 
 ## Contributing
 
-We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
-
-For AI agents: We support AI assistants—use **[AGENTS.md](./AGENTS.md)** as the base for your agent system.
+We welcome contributions to improve our documentation! For detailed development instructions, please see our **[CONTRIBUTING.md](./CONTRIBUTING)** guide.
 
 ### Quick Contribution Process
 
 1. **Fork the repository**
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
 3. **Make your changes** following our style guidelines
-4. **Test locally** (see **[CONTRIBUTING.md](./CONTRIBUTING.md)** for setup instructions)
+4. **Test locally** (see [CONTRIBUTING.md](./CONTRIBUTING) for setup instructions)
 5. **Submit a pull request** with a clear description
 
 ### Content Standards
@@ -315,12 +192,30 @@ For AI agents: We support AI assistants—use **[AGENTS.md](./AGENTS.md)** as th
 - Follow existing markdown formatting
 - Maintain customer-focused language throughout
 
+Additional resources:
+
+* **Contributor Credits:** Listed in [CONTRIBUTORS.md](CONTRIBUTORS).
+* **Support:** Open an Issue or start a Discussion if you need help.
+* **Freelancer & OSS Fastlane:** Begin at the **Freelancer Onboarding Hub**, confirm Definition of Done via **Task Clarity Essentials**, and browse open opportunities on the Issues board.
+
+---
+
+## Project Structure & Key Files
+
+| Directory/File | Purpose | Common Tasks |
+| --- | --- | --- |
+| `docs/` | Markdown source for all documentation pages. | Add or update content. |
+| `_config.yml` | Jekyll configuration, site metadata, navigation. | Adjust site settings or sidebar links. |
+| `.github/` | GitHub Actions, workflows, and CI/CD utilities. | Modify build or deployment automation. |
+
+---
+
 ## Support
 
 ### Getting Help
 
 - **Documentation Issues:** Check the main sections first
-- **Technical Questions:** Review [Resources & Support](/docs/operations/README)
+- **Technical Questions:** Review [Resources & Support](./docs/resources-support/)
 - **Contributing Help:** See [Contributing Guidelines](#contributing) above
 
 ### Reporting Problems
@@ -334,6 +229,8 @@ For AI agents: We support AI assistants—use **[AGENTS.md](./AGENTS.md)** as th
 - **Live Documentation:** [https://penguinmails.github.io](https://penguinmails.github.io)
 - **Repository:** [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
 - **Issues:** [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
+
+---
 
 ## Documentation Quality & Coverage
 
@@ -363,11 +260,13 @@ Our documentation represents a comprehensive transformation delivering enterpris
 
 ### **Quality Standards Achieved**
 
-✅ **Customer-Focused Language** - All content transformed to be customer-facing
-✅ **Strategic Enhancement** - Business value integrated throughout technical content
-✅ **Progressive Disclosure** - Information revealed based on complexity level
-✅ **Enterprise Standards** - Documentation meets enterprise customer requirements
-✅ **Complete Integration** - Seamless cross-references and navigation flow
+ **Customer-Focused Language** - All content transformed to be customer-facing
+ **Strategic Enhancement** - Business value integrated throughout technical content
+ **Progressive Disclosure** - Information revealed based on complexity level
+ **Enterprise Standards** - Documentation meets enterprise customer requirements
+ **Complete Integration** - Seamless cross-references and navigation flow
+
+---
 
 ## Project Statistics
 
@@ -376,7 +275,9 @@ Our documentation represents a comprehensive transformation delivering enterpris
 | Documentation Pages | 93+ |
 | Active Contributors | 5+ |
 | Last Updated | December 2024 |
-| Total Issues | [View on GitHub](https://github.com/penguinmails/penguinmails.github.io/issues) |
+| Open Issues | [View All](https://github.com/penguinmails/penguinmails.github.io/issues) |
+
+---
 
 ## Acknowledgments
 
@@ -387,13 +288,17 @@ Built with modern web technologies and best practices:
 - **[GitHub Pages](https://pages.github.com/)** - Reliable hosting platform
 - **[Docker](https://www.docker.com/)** - Consistent development environment
 
-## 📄 License
+---
 
-This documentation is licensed under the [MIT License](LICENSE).  
+## License
+
+This documentation is licensed under the [Apache License 2.0](LICENSE).  
 PenguinMails is a trademark of PenguinMails, Inc.
 
 ---
 
-**⭐ Star this repository if you find it helpful!**
+** Star this repository if you find it helpful!**
 
 *For the latest updates and detailed technical information, visit our [full documentation site](https://penguinmails.github.io).*
+
+
