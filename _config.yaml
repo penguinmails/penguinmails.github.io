@@ -26,6 +26,10 @@ gh_edit_view_mode: "tree"
 nav_enabled: true
 nav_sort: case_sensitive
 
+# Exclude non-site content from Jekyll processing
+exclude:
+  - tasks/
+
 # Only show docs/ folder navigation in sidebar
 defaults:
   - scope:

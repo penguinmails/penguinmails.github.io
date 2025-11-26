@@ -312,6 +312,10 @@ async function sendVerificationEmail(email: string, userId: string) {
 **From**: PenguinMails <no-reply@penguinmails.com>
 
 **HTML Body**:
+
+
+{% raw %}
+
 ```html
 <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
   <h2>Welcome to PenguinMails!</h2>
@@ -336,6 +340,8 @@ async function sendVerificationEmail(email: string, userId: string) {
   </p>
 </div>
 ```
+
+{% endraw %}
 
 **User Experience Excellence**: This email design supports our [customer value proposition](/docs/business/value-proposition/detailed-analysis)) by providing clear, actionable communication with multiple verification methods. The accessibility-first design ensures compliance with WCAG 2.1 AA standards and provides inclusive user experience.
 
@@ -1052,7 +1058,7 @@ export default function LoginPage() {
 
 ### **NileDB Login API**
 
-```jsx
+```typescript
 // app/api/auth/login/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { nile } from "@/lib/niledb/client";
@@ -1123,6 +1129,8 @@ export async function POST(req: NextRequest) {
 ## Multi-Tenant Session Management
 
 ### **Auth Context with Tenant Support**
+
+{% raw %}
 
 ```typescript
 // context/AuthContext.tsx
@@ -1244,6 +1252,8 @@ export const useAuth = () => {
   return context;
 };
 ```
+
+{% endraw %}
 
 **Multi-Tenant Architecture**: This session management system implements our [enterprise multi-tenant architecture](/docs/technical/architecture)) with proper tenant isolation, row-level security, and scalable user management. The context-based approach provides clean separation of concerns and efficient state management.
 

@@ -1,6 +1,5 @@
 ---
 title: "National Laws Compliance Analysis"
-- path: "docs/compliance-security/international/eprivacy-compliance.md"
 audience: "Legal teams, compliance officers, international operations"
 category: "Level 2 - Detailed Analysis"
 description: "Country-specific data protection requirements and variations across key European markets, focusing on implementation differences that affect PenguinMails' compliance strategy."

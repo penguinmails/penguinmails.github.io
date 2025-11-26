@@ -1,6 +1,5 @@
 ---
 title: "Technical Implementation Guide for European Compliance"
-- path: "docs/compliance-security/international/strategic-compliance.md"
 audience: "Technical architects, developers, DevOps engineers, security teams"
 category: "Level 3 - Implementation Guide"
 description: "Detailed technical architecture and security requirements for implementing GDPR and ePrivacy compliance in PenguinMails' email outreach platform."

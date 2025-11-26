@@ -139,6 +139,9 @@ graph TD
 ```
 
 **Email Template Structure:**
+
+{% raw %}
+
 ```html
 <!-- Executive Summary Header -->
 <div class="executive-summary">
@@ -173,6 +176,8 @@ graph TD
   {{costOptimizationSummary}}
 </div>
 ```
+
+{% endraw %}
 
 ### 2. Weekly Performance Report
 

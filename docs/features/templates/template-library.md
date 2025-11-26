@@ -14,6 +14,8 @@ related_tasks:
   - epic-6-templates-content
 ---
 
+{% raw %}
+
 # Template Library
 
 **Quick Access**: Browse and use professionally designed email templates across multiple categories, customize them to match your brand, and share templates across workspaces.
@@ -984,3 +986,5 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 **Status:** Planned - High Priority (Level 2)  
 **Target Release:** Q2 2026  
 **Owner:** Templates Team
+
+{% endraw %}

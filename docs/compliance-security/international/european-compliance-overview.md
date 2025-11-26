@@ -1,6 +1,5 @@
 ---
 title: "European Legal Compliance Overview"
-- name: "Strategic Recommendations"
 audience: "Executive leadership, business strategists, compliance officers"
 category: "Level 1 - Strategic Overview"
 description: "Business strategy and market entry recommendations"

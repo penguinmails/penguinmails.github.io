@@ -52,6 +52,7 @@ Best regards,
 
 **Standard Merge Tags:**
 
+```shell
 - `{{firstName}}` - Contact's first name
 - `{{lastName}}` - Contact's last name
 - `{{email}}` - Email address
@@ -60,6 +61,7 @@ Best regards,
 - `{{city}}` - City
 - `{{state}}` - State/Province
 - `{{country}}` - Country
+```
 
 ### Fallback Values
 
@@ -341,6 +343,8 @@ CREATE TABLE custom_field_definitions (
 
 ### Personalization Validation
 
+{% raw %}
+
 ```typescript
 class PersonalizationValidator {
   async validateTemplate(template: string, tenantId: string): Promise<ValidationResult> {
@@ -398,6 +402,8 @@ class PersonalizationValidator {
   }
 }
 ```
+
+{% endraw %}
 
 ### Performance Optimization
 
