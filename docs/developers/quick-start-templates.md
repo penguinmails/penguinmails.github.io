@@ -618,7 +618,6 @@ export const getConfig = (): PenguinMailsConfig => {
 
 - **ROI Tracking**: Coordinate email campaign ROI with financial reporting
 
-
 ## Quick Start Checklist
 
 - [ ] Set up development environment with Docker

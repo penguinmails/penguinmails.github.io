@@ -182,7 +182,7 @@ jobs:
 
 ```
 
-**Pipeline Testing Stages**
+#### Pipeline Testing Stages
 
 1. Unit testing with code coverage reporting
 2. Integration testing with database seeding

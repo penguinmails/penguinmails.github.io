@@ -291,5 +291,5 @@ When adding technical docs:
     - Internal links are relative and valid.
     - New content fits progressive disclosure and cross-reference patterns.
 
-This section should be treated as the canonical contributor guide for technical and implementation documentation.
+This section should be treated as the canonical contributor guide for technical and implementation documentation
 ---

@@ -315,6 +315,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Current State: MVP-Complete
 
 **What's Available Today:**
+
 - ✅ Complete domain verification workflow with multi-step wizard
 - ✅ Comprehensive DNS record management (SPF, DKIM, DMARC, CNAME, MX)
 - ✅ Industry-standard authentication (2048-bit DKIM, SPF, DMARC)
@@ -374,8 +375,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - Geographic routing and failover
   - **Business Impact:** Enables global enterprise customers, unlocks international markets
 
-#### Q1 2027: Predictive Features
-#### Q1 2027: Predictive Features
+### Q1 2027: Predictive Features
 
 - **[P3] Reputation Prediction & Proactive Alerts** (10-14 days)
   - Predict reputation trends 7-14 days ahead
@@ -456,13 +456,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 #### Phase 2: User-Facing Features (Weeks 6-8)
 
-3. Basic Trigger Library (1 week) - 15+ triggers
-4. Basic Action Library (1 week) - 12+ actions
+1. Basic Trigger Library (1 week) - 15+ triggers
+2. Basic Action Library (1 week) - 12+ actions
 
 #### Phase 3: Workflow Builder (Weeks 9-14)
 
-5. Visual Workflow Builder UI (4-6 weeks) - Drag-and-drop interface
-6. Workflow Execution History & Debugging (2-3 weeks) - Monitoring tools
+1. Visual Workflow Builder UI (4-6 weeks) - Drag-and-drop interface
+2. Workflow Execution History & Debugging (2-3 weeks) - Monitoring tools
 
 ### Post-MVP Roadmap (2026-2027)
 

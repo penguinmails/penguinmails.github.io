@@ -216,17 +216,14 @@ const form = useForm({ resolver: zodResolver(schema) });
 
 **Pattern**: shadcn/ui Toast (using sonner)
 
-**Requirements**
+#### Requirements
 
 - Position: top-right (default)
-
 - Auto-dismiss: 3s (success), 5s (error), manual (warning)
-
 - Action buttons for undo/retry
-
 - Stack multiple toasts
 
-**Example**:
+#### Example
 
 ```typescript
 
@@ -1032,6 +1029,7 @@ export const Loading: Story = {
 - Touch-friendly targets: minimum 44px × 44px
 
 **Breakpoints** (from design-tokens.md):
+
 ```typescript
 const breakpoints = {
   sm: '640px',   // Small devices
@@ -1051,7 +1049,7 @@ const breakpoints = {
 - Respect system preference (`prefers-color-scheme`)
 - Smooth transitions between themes
 
-#### Implementation Pattern:
+#### Implementation Pattern
 
 ```typescript
 // Use next-themes for theme management

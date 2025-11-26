@@ -154,26 +154,18 @@ so that [business value/user benefit].
 ## Cross-Domain Integration Requirements
 
 **Sales Integration**:
+
 - CRM product roadmap sync for account manager visibility
 - Feature adoption tracking for sales opportunity identification
 - Product launch coordination with sales forecasting
 
 **Marketing Integration**:
+
 - Product messaging coordination for consistent positioning
 - Launch campaign support with feature benefit communication
 - Product marketing alignment for go-to-market execution
 
-## Cross-Domain Integration Requirements
-
-**Sales Integration**:
-
-- CRM product roadmap sync for sales pipeline coordination
-- Feature-sales alignment for revenue impact optimization
-
-**Marketing Integration**:
-
-- Product messaging coordination for consistent communication
-- Campaign timing alignment with product feature launches
+### Additional Cross-Domain Integrations
 
 **Product Integration**:
 
@@ -191,7 +183,7 @@ so that [business value/user benefit].
 
 ## Template Usage Guidelines
 
-#### Implementation Best Practices
+### Implementation Best Practices
 
 - Customize templates to match organizational product development methodology
 - Review and update templates quarterly based on launch success rates

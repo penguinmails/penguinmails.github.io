@@ -192,12 +192,14 @@ Allocation by Category:
 ### Portfolio Investment Tracking
 
 **Investment Portfolio Metrics**:
+
 - **Total Portfolio ROI**: Weighted average ROI across all investments
 - **Investment Diversity**: Distribution across risk levels and timeframes
 - **Performance Benchmarks**: ROI performance vs. industry standards
 - **Risk Exposure**: Total risk-adjusted value at risk
 
 **Monthly Investment Review**:
+
 1. Update investment performance data
 2. Calculate portfolio-level metrics and trends
 3. Identify underperforming investments for intervention
@@ -236,14 +238,14 @@ Allocation by Category:
 
 ## Template Usage Guidelines
 
-#### Implementation Best Practices
+### Implementation Best Practices
 
 - Customize templates to match organizational financial processes
 - Review and update templates quarterly based on performance data
 - Train all finance team members on consistent template usage
 - Document template modifications and maintain version control
 
-#### Success Metrics
+### Success Metrics
 
 - 35% improvement in ROI measurement accuracy with systematic templates
 - 25% reduction in budget variance through standardized tracking
