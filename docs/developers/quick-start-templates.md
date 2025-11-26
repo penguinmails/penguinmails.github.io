@@ -66,12 +66,9 @@ console.log(`Campaign created: ${campaign.id}`);
 
 ```
 
-
 #### Node.js Express Integration Template
 
-
 ```javascript
-
 const express = require('express');
 
 const { PenguinMails } = require('@penguinmails/sdk');
@@ -149,6 +146,7 @@ app.listen(3000, () => {
 ```
 
 #### Next.js Component Example
+
 ```jsx
 'use client';
 
@@ -230,6 +228,7 @@ export default function EmailCampaignManager() {
 ### CSS Email Templates
 
 #### Responsive Email Template
+
 ```css
 /* PenguinMails Email Template Styles */
 .email-container {
@@ -466,6 +465,7 @@ services:
 ```
 
 ### Package.json Template
+
 ```json
 {
   "name": "penguinmails-integration",
@@ -507,6 +507,7 @@ services:
 ```
 
 ### TypeScript Configuration Template
+
 ```json
 // tsconfig.json
 {
@@ -542,6 +543,7 @@ services:
 ```
 
 ### Configuration Template
+
 ```typescript
 // config/penguinmails.ts
 interface PenguinMailsConfig {
@@ -587,36 +589,25 @@ export const getConfig = (): PenguinMailsConfig => {
 };
 ```
 
-
 ## Cross-Domain Integration Requirements
-
 
 ### Sales Integration
 
 - **CRM System Coordination**: Synchronize campaign data with CRM systems
-
 - **Lead Attribution**: Track email campaign engagement for sales pipeline attribution
-
 - **Sales Alert Integration**: Send alerts for high-value prospect engagement
-
 
 ### Marketing Integration
 
 - **Campaign Performance Analytics**: Coordinate with marketing analytics platforms
-
 - **Customer Segment Sync**: Real-time synchronization of customer segments
-
 - **Cross-Channel Coordination**: Coordinate email with other marketing channels
-
 
 ### Customer Success Integration
 
 - **Health Score Correlation**: Link email engagement to customer health scores
-
 - **Success Campaign Coordination**: Coordinate email campaigns with success initiatives
-
 - **Retention Campaign Automation**: Automate retention campaigns based on customer signals
-
 
 ### Finance Integration
 

@@ -110,9 +110,8 @@ Status: **Not Planned**
 
 Status: **Updated**
 
-**Old References**: Generic "queue dashboard" mentions
-
-**Actual Implementation**: Hybrid PostgreSQL + Redis queue system
+- Old References: Generic "queue dashboard" mentions
+- Actual Implementation: Hybrid PostgreSQL + Redis queue system
 
 - PostgreSQL for durable job state (`jobs`, `job_queues`, `job_logs` tables)
 - Redis for fast processing

@@ -233,7 +233,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Post-MVP Roadmap (Q2 2026-Q1 2027)
 
-**Q2 2026: Multi-Region Deployment**
+#### Q2 2026: Multi-Region Deployment
 
 - **[P1] Multi-Region Infrastructure Deployment** (4-6 weeks)
   - Deploy infrastructure across multiple regions (US, EU, Asia)
@@ -241,7 +241,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - Regional failover with automatic traffic rerouting
   - **Business Impact:** Enables global enterprise customers, unlocks international markets
 
-**Q3 2026: Auto-Scaling**
+#### Q3 2026: Auto-Scaling
 
 - **[P1] Auto-Scaling Infrastructure Based on Load** (4-6 weeks)
   - Automated vertical and horizontal scaling
@@ -249,7 +249,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - Cost-aware scaling with budget limits
   - **Business Impact:** Eliminates manual scaling, optimizes costs, prevents performance degradation
 
-**Q4 2026: Disaster Recovery**
+#### Q4 2026: Disaster Recovery
 
 - **[P0] Disaster Recovery & Business Continuity** (6-8 weeks)
   - Automated failover to backup region (RTO < 15 minutes)
@@ -257,7 +257,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - Hot standby infrastructure for critical components
   - **Business Impact:** Meets enterprise SLA requirements (99.9%+ uptime), ensures business continuity
 
-**Q1 2027: Provider Flexibility**
+#### Q1 2027: Provider Flexibility
 
 - **[P2] Alternative VPS Providers** (6-8 weeks)
   - Support for AWS EC2, DigitalOcean, Linode, Vultr
@@ -331,14 +331,16 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Post-MVP Roadmap (Q1 2026-Q1 2027)
 
-**Q1 2026: Enterprise Features**
+#### Q1 2026: Enterprise Features
+
 - **[P1] Subdomain Support & Reputation Isolation** (3-5 days)
   - Independent DKIM keys per subdomain
   - Subdomain-level reputation tracking
   - Team segmentation by subdomain
   - **Business Impact:** Unlocks enterprise tier pricing, enables multi-brand organizations
 
-**Q2 2026: Agency Features**
+#### Q2 2026: Agency Features
+
 - **[P2] Bulk Domain Onboarding & Templates** (5-7 days)
   - CSV import for 50+ subdomains at once
   - DNS instruction templates (save/reuse)
@@ -356,21 +358,25 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - Pre-configured templates
   - **Business Impact:** Improves UX, reduces support tickets
 
-**Q3 2026: Power User Features**
+#### Q3 2026: Power User Features
+
 - **[P2] Real-Time DNS Validation & Alerts** (5-7 days)
   - Real-time DNS validation with instant feedback
   - Misconfiguration detection and alerts
   - DNS health score (0-100)
   - **Business Impact:** Reduces support tickets, improves deliverability
 
-**Q4 2026: Global Expansion**
+#### Q4 2026: Global Expansion
+
 - **[P1] Multi-Region Sending Pools & DKIM** (10-14 days)
   - Send from multiple regions (US, EU, APAC)
   - Region-specific DKIM selectors
   - Geographic routing and failover
   - **Business Impact:** Enables global enterprise customers, unlocks international markets
 
-**Q1 2027: Predictive Features**
+#### Q1 2027: Predictive Features
+#### Q1 2027: Predictive Features
+
 - **[P3] Reputation Prediction & Proactive Alerts** (10-14 days)
   - Predict reputation trends 7-14 days ahead
   - Proactive alerts before reputation drops
@@ -385,23 +391,27 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Key Dependencies
 
 **Infrastructure:**
+
 - HashiCorp Vault (already implemented) - DKIM key storage
 - Multi-region infrastructure (Q4 2026) - Required for multi-region sending
 - Analytics infrastructure - Required for reputation prediction
 
 **Features:**
+
 - Subdomain support (Q1 2026) - Prerequisite for bulk subdomain onboarding
 - Historical data (6+ months) - Required for reputation prediction
 
 ### Success Metrics
 
 **Technical:**
+
 - DNS verification success rate > 95%
 - DKIM key rotation automated (365-day cycle)
 - Domain health monitoring accuracy > 90%
 - Multi-region failover < 5 minutes
 
 **Business:**
+
 - Enterprise customer acquisition enabled (Q1 2026)
 - Agency customer retention improved by 20% (Q2 2026)
 - Support tickets reduced by 30% (Q3 2026)
@@ -423,11 +433,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Current State vs. Target
 
 **What Exists Today:**
+
 - ✅ Basic campaign sequences (linear email flows)
 - ✅ Time-based delays between emails
 - ✅ Campaign scheduling and manual triggers
 
 **What's Missing (MVP Scope):**
+
 - ❌ Visual workflow builder with drag-and-drop
 - ❌ Event tracking infrastructure (email opens, clicks, replies)
 - ❌ Conditional logic and branching (if/then/else)
@@ -437,15 +449,18 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### MVP Implementation Plan (Q2-Q3 2026)
 
-**Phase 1: Foundation (Weeks 1-5)**
+#### Phase 1: Foundation (Weeks 1-5)
+
 1. Event Tracking Infrastructure (2-3 weeks) - P0 blocker
 2. Workflow Execution Engine (4-5 weeks) - P0 blocker
 
-**Phase 2: User-Facing Features (Weeks 6-8)**
+#### Phase 2: User-Facing Features (Weeks 6-8)
+
 3. Basic Trigger Library (1 week) - 15+ triggers
 4. Basic Action Library (1 week) - 12+ actions
 
-**Phase 3: Workflow Builder (Weeks 9-14)**
+#### Phase 3: Workflow Builder (Weeks 9-14)
+
 5. Visual Workflow Builder UI (4-6 weeks) - Drag-and-drop interface
 6. Workflow Execution History & Debugging (2-3 weeks) - Monitoring tools
 
@@ -460,11 +475,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Key Dependencies
 
 **Required Before Automation:**
+
 - Enhanced Analytics (Q1 2026) - Event tracking foundation
 - Campaign Management (Q1 2026) - Base campaign infrastructure
 - Contact Management - Segmentation and tagging
 
 **Enables Future Features:**
+
 - Lead Scoring - Automated scoring based on behavior
 - Predictive Analytics - ML-powered insights
 - Cross-Channel Campaigns - Omnichannel orchestration
@@ -472,12 +489,14 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Success Metrics
 
 **Technical:**
+
 - Event processing latency < 5 seconds
 - Workflow execution accuracy 99.9%
 - Support 100+ concurrent workflows
 - Handle 1000+ events/second
 
 **Business:**
+
 - 30% reduction in manual campaign management time
 - 20% increase in email engagement (vs. linear sequences)
 - 15% improvement in lead conversion rates

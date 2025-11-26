@@ -132,6 +132,7 @@ ORDER BY total_revenue DESC;
 - **Lifetime Value (LTV)**: Customer value attribution by acquisition channel
 
 ### Marketing ROI Framework
+
 ```typescript
 // services/marketing-roi-calculator.ts
 interface CampaignData {

@@ -84,7 +84,6 @@ const form = useForm({
 
 - Avoid heavy JS animation libraries like Framer Motion unless absolutely necessary for complex gestures
 
-
 ### Dark Mode
 
 **Tailwind Dark Mode** (`selector` strategy)
@@ -94,7 +93,6 @@ const form = useForm({
 - Toggle class `dark` on the `<html>` element
 
 - Use `dark:` prefix for dark mode styles (e.g., `bg-white dark:bg-slate-900`)
-
 
 ### State Management
 
@@ -461,11 +459,9 @@ interface ButtonProps {
 
 ```
 
-
 ### Button Group Pattern
 
 ```typescript
-
 interface ButtonGroupProps {
   variant?: 'segmented' | 'attached';
   size?: ButtonSize;
@@ -474,15 +470,12 @@ interface ButtonGroupProps {
 }
 
 // Usage for mutually exclusive options
-
 <ButtonGroup variant="segmented">
   <Button>Daily</Button>
   <Button active>Weekly</Button>
   <Button>Monthly</Button>
 </ButtonGroup>
-
 ```
-
 
 ## Form Components
 
@@ -525,6 +518,7 @@ const [emailError, setEmailError] = useState('');
 ```
 
 ### Select Components
+
 ```typescript
 interface SelectOption {
   value: string | number;
@@ -559,6 +553,7 @@ interface SelectProps {
 ```
 
 ### Form Validation Patterns
+
 ```typescript
 interface ValidationRule {
   type: 'required' | 'email' | 'minLength' | 'maxLength' | 'pattern';
@@ -599,6 +594,7 @@ const FormField = ({ name, rules, children }: FormFieldProps) => {
 ## Data Display Components
 
 ### Table Component
+
 ```typescript
 interface TableColumn<T> {
   key: keyof T;
@@ -638,6 +634,7 @@ interface TableProps<T> {
 ```
 
 ### Card Component
+
 ```typescript
 interface CardProps {
   variant?: 'default' | 'elevated' | 'outlined' | 'filled';
@@ -672,6 +669,7 @@ interface CardProps {
 ## Feedback Components
 
 ### Alert Component
+
 ```jsx
 type AlertVariant = 'info' | 'success' | 'warning' | 'error';
 
@@ -775,6 +773,7 @@ interface ModalProps {
 ## Navigation Components
 
 ### Breadcrumb Component
+
 ```typescript
 interface BreadcrumbItem {
   label: string;
@@ -799,6 +798,7 @@ interface BreadcrumbProps {
 ```
 
 ### Tab Component
+
 ```typescript
 interface TabItem {
   id: string;
@@ -832,6 +832,7 @@ interface TabsProps {
 ## Utility Components
 
 ### Loading States
+
 ```typescript
 interface LoadingProps {
   size?: 'xs' | 'sm' | 'md' | 'lg';
@@ -873,6 +874,7 @@ interface EmptyStateProps {
 ```
 
 ### Badge Component
+
 ```typescript
 interface BadgeProps {
   variant?: 'default' | 'success' | 'warning' | 'error' | 'info';
@@ -891,6 +893,7 @@ interface BadgeProps {
 ## Component Development Guidelines
 
 ### Component Structure
+
 ```typescript
 // components/Button/Button.tsx
 import React from 'react';
@@ -1029,7 +1032,8 @@ export const Loading: Story = {
 
 ### Responsive Design Strategy
 
-**Mobile-First Approach**
+#### Mobile-First Approach
+
 - Base styles target mobile (< 640px)
 - Progressive enhancement for tablet (768px+) and desktop (1024px+)
 - Touch-friendly targets: minimum 44px × 44px
