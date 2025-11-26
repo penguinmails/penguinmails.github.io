@@ -1231,4 +1231,3 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications
 ---
- 
