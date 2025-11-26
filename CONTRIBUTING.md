@@ -2,30 +2,34 @@
 
 We welcome contributions to improve our documentation! This guide provides everything you need to get started with contributing to the PenguinMails documentation project.
 
-##  Quick Start
+## Quick Start
 
 **For immediate contributions:**
 1. Fork this repository
+
 2. Create a feature branch: `git checkout -b feature/your-improvement`
+
 3. Make your changes
+
 4. Test locally (see setup below)
+
 5. Submit a pull request
 
 **Need help?** Check our [Support section](#support) or [open an issue](https://github.com/penguinmails/penguinmails.github.io/issues).
 
-##  Table of Contents
+## Table of Contents
 
-- [Quick Start](#-quick-start)
-- [Development Setup](#-development-setup)
-- [Content Standards](#-content-standards)
-- [Frontmatter Requirements](#-frontmatter-requirements)
-- [Git Workflow](#-git-workflow)
-- [Quality Assurance](#-quality-assurance)
-- [Testing & Validation](#-testing--validation)
+- [Quick Start](#quick-start)
+- [Development Setup](#development-setup)
+- [Content Standards](#content-standards)
+- [Frontmatter Requirements](#frontmatter-requirements)
+- [Git Workflow](#git-workflow)
+- [Quality Assurance](#quality-assurance)
+- [Testing & Validation](#testing--validation)
 - [Support](#support)
 - [Resources](#resources)
 
-##  Development Setup
+## Development Setup
 
 ### Prerequisites
 
@@ -49,7 +53,7 @@ We welcome contributions to improve our documentation! This guide provides every
    ```
 
 3. **View the documentation:**
-   Open [http://localhost:4000](http://localhost:4000)
+   Open [http://localhost:4000](http://localhost:4000) in your browser
 
 ### Common Commands
 
@@ -62,7 +66,7 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
   markdownlint README.md CONTRIBUTING.md AGENTS.md --config .markdownlint.json
 ```
 
-##  Content Standards
+## Content Standards
 
 ### Ways to Contribute
 
@@ -89,7 +93,7 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 - **Cross-references**: Use proper internal linking
 - **Business value**: Emphasize customer benefits in technical content
 
-##  Frontmatter Requirements
+## Frontmatter Requirements
 
 ### Standard Format
 
@@ -132,7 +136,7 @@ last_modified_date: "2025-11-26"
 - **Date format**: ISO format (YYYY-MM-DD)
 - **Validation**: Test navigation links after structural changes
 
-##  Git Workflow
+## Git Workflow
 
 ### Contribution Process
 
@@ -162,27 +166,27 @@ Fixes #123
 - `docs/content-update` - Documentation updates
 - `refactor/area-description` - Code refactoring
 
-##  Quality Assurance
+## Quality Assurance
 
 ### Definition of Done (DoD)
 
 A task is **Done** when:
 
--  All acceptance criteria are met
--  Reviewed, tested, and approved by the lead
--  Jira status updated with all links/screenshots
--  No blockers or pending dependencies remain
--  Verified on staging environment
+- All acceptance criteria are met
+- Reviewed, tested, and approved by the lead
+- Jira status updated with all links/screenshots
+- No blockers or pending dependencies remain
+- Verified on staging environment
 
 ### Development Tasks DoD
 
 For development work:
 
--  Code committed, reviewed, and merged to right branch
--  Follows linting and naming standards
--  Tested manually or with unit tests
--  Documentation updated if needed
--  Deployed successfully to staging
+- Code committed, reviewed, and merged to right branch
+- Follows linting and naming standards
+- Tested manually or with unit tests
+- Documentation updated if needed
+- Deployed successfully to staging
 
 ### Markdown Linting
 
@@ -206,7 +210,7 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 
 For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
 
-##  Testing & Validation
+## Testing & Validation
 
 ### Before Submitting
 
@@ -231,7 +235,7 @@ For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md
 - **Content consistency**: Maintain professional appearance
 - **Regular testing**: Validate changes before committing
 
-##  Support
+## Support
 
 ### Getting Help
 
@@ -257,7 +261,7 @@ A: Internal links should not include .md extensions. Use `[text](path/to/file)` 
 **Q: How do I add a new page to the navigation?**
 A: Only the 5 main navigation files can have `nav_order` fields. Other pages are discovered automatically through links.
 
-##  Resources
+## Resources
 
 - **Live documentation**: [https://penguinmails.github.io](https://penguinmails.github.io)
 - **Repository**: [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
