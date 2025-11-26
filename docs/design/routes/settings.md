@@ -178,14 +178,27 @@
 
 **User Journey Context**: Collaboration setup. Frequency depends on team size.
 
+> [!NOTE]
+> **Missing MVP Features**:
+> - Workspace management feature documentation
+> - Workspace health scoring system
+> - RBAC permission matrix documentation
+> - Team member removal workflow documentation
+> - Workspace member management documentation
+>
+> See [Team Management Roadmap](/docs/features/enterprise/team-roadmap) for timeline.
+
 **Related Documentation**:
 
+- [Team Management & Authentication](/docs/features/enterprise/user-management)
+- [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
+- [Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)
 - [Team Roles & Permissions](/docs/business/collaboration/team-roles)
 - [RBAC Implementation](/docs/technical/security/rbac)
 
 **Technical Integration**:
 
-- **Invitation Emails**: Sent via **Resend** or **SendGrid**.
+- **Invitation Emails**: Sent via **Loop.so** (transactional email service).
 - **Magic Links**: Click link → Auto-login → Set password.
 
 ---
@@ -219,16 +232,32 @@
 
 **User Journey Context**: Monthly check-in or when issues arise.
 
+> [!NOTE]
+> **Missing MVP Features**:
+> - Plan comparison modal for upgrades/downgrades
+> - Real-time usage progress bars with color-coded alerts
+> - Direct PDF invoice download (currently redirects to Stripe portal)
+> - In-app payment method updates (currently uses Stripe portal)
+> - Failed payment recovery banner with one-click retry
+> - Cancellation flow with retention offers
+> - Budget controls and spending limits
+>
+> See [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap.md) for timeline.
+
 **Related Documentation**:
 
-- [Pricing Plans](/docs/finance/pricing/overview)
-- [Stripe Integration](/docs/technical/integration/stripe)
+- [Billing & Subscriptions Overview](/docs/features/payments/README.md)
+- [Subscription Management](/docs/features/payments/subscription-management.md)
+- [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- [Billing Dashboard](/docs/features/payments/billing-dashboard.md)
+- [Billing Roadmap](/docs/features/payments/roadmap.md)
 
 **Technical Integration**:
 
 - **Stripe Checkout**: For plan upgrades and subscription creation.
-- **Stripe Customer Portal**: For payment method updates, invoice downloads (planned).
-- **Webhooks**: `checkout.session.completed`, `invoice.paid`, `customer.subscription.updated` events update local database.
+- **Stripe Customer Portal**: For payment method updates, invoice downloads (planned to be replaced with in-app UI in Q1 2026).
+- **Stripe Elements**: For in-app payment method updates (Q1 2026).
+- **Webhooks**: `checkout.session.completed`, `invoice.paid`, `invoice.payment_failed`, `customer.subscription.updated` events update local database.
 
 ---
 

@@ -463,9 +463,52 @@ Response:
 
 ---
 
-## Team Management
+## Team & Workspace Management
 
-### Inviting Users
+### MVP Status & Roadmap
+
+**Current Status: Partially Complete**
+
+**What's Available Today:**
+
+- ✅ Team member invitation system
+- ✅ Role-based access control (Owner, Admin, Member)
+- ✅ View all team members with status
+- ✅ Update user roles
+- ✅ Remove team members from tenant
+- ✅ Workspace assignment during invitation
+- ✅ Multi-tenant architecture with complete data isolation
+
+**Missing MVP Features (Q1 2026):**
+
+- ⏳ Workspace management feature documentation (2-3 days)
+- ⏳ Workspace health scoring system (3-5 days)
+- ⏳ Organization settings & branding documentation (2-3 days)
+- ⏳ RBAC permission matrix documentation (2-3 days)
+- ⏳ Team member removal workflow documentation (1-2 days)
+- ⏳ Workspace member management documentation (3-5 days)
+- ⏳ Workspace deletion & data handling documentation (3-5 days)
+
+**Post-MVP Enhancements (2026+):**
+
+- 🔮 Advanced permissions system (custom roles) - Q2 2026
+- 🔮 Audit logs for team actions - Q3 2026
+- 🔮 Team analytics & activity monitoring - Q4 2026
+- 🔮 Bulk user management - Q3 2026
+- 🔮 User groups & teams within tenant - Q1 2027
+- 🔮 Workspace templates - Q2 2027
+- 🔮 Workspace duplication - Q3 2027
+- 🔮 Advanced session management - Q4 2026
+- 🔮 Team member onboarding workflows - Q1 2027
+- 🔮 External user collaboration (client portal) - Q2 2027
+
+**Detailed Roadmap:** [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
+
+---
+
+### Team Management
+
+#### Inviting Users
 
 **Add team members to tenant:**
 
@@ -511,7 +554,7 @@ Response:
 
 ---
 
-### Managing Team Members
+#### Managing Team Members
 
 **View all team members:**
 
@@ -561,6 +604,26 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
 // Loses access to all workspaces
 // Data ownership transferred to tenant owner
 ```
+
+---
+
+### Workspace Management
+
+**Multi-workspace support for agencies:**
+
+- Create multiple client workspaces within tenant
+- Workspace-level access control (Admin, Member, Viewer)
+- Assign team members to specific workspaces
+- Workspace health monitoring (0-100 score)
+- Isolated campaigns, leads, and settings per workspace
+
+**Workspace Routes:**
+
+- `/dashboard/workspaces` - List all workspaces with health scores
+- `/dashboard/workspaces/new` - Create new workspace
+- `/dashboard/workspaces/[slug]/settings` - Workspace settings
+
+**See Also:** [Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture) for technical details
 
 ---
 
@@ -691,7 +754,8 @@ Response:
 ### Authentication & Security
 
 - **[Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)** - Detailed authentication timeline and quarterly breakdown
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation
+- **[Team Management Roadmap](/docs/features/enterprise/team-roadmap)** - Detailed team & workspace management timeline
+- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation and workspace architecture
 - **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security overview
 - **[Vault Integration](/docs/features/integrations/overview#vault-integration)** - Secure secrets management for API keys and credentials
 

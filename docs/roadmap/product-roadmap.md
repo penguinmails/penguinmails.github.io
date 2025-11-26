@@ -103,6 +103,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **[CRM Integration](../features/integrations/crm-integration/overview.md)** | Salesforce, HubSpot integration with bi-directional sync | Q1 2026 |
 | **[Onboarding Experience](../features/enterprise/onboarding-experience.md)** | Guided setup wizard, interactive tutorials, progress tracking | Q1 2026 |
 | **[Subdomain Support](../features/domains/roadmap.md#p1-subdomain-support--reputation-isolation)** | Independent DKIM keys per subdomain, reputation isolation, team segmentation | Q1 2026 |
+| **[Team & Workspace Management MVP](../features/enterprise/team-roadmap.md)** | Workspace management documentation, health scoring, organization settings, RBAC matrix, workspace member management | Q1 2026 (17-30 days) |
 
 ### 📊 Planned 2026 (Growth Phase)
 
@@ -132,6 +133,10 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **[Leads Management](../features/leads/leads-management.md)** | Contact database, segmentation, lead scoring | AVAILABLE |
 | **[Biometric Authentication](../features/enterprise/authentication-roadmap.md#q4-2026-advanced-features)** | WebAuthn/FIDO2 for passwordless login (Face ID, Touch ID, Windows Hello, YubiKey) | Q4 2026 |
 | **[Advanced Session Management](../features/enterprise/authentication-roadmap.md#q4-2026-advanced-features)** | Risk-based authentication, conditional policies, session analytics for enterprise | Q4 2026 |
+| **[Advanced Permissions System](../features/enterprise/team-roadmap.md#8-post-mvp---p2-advanced-permissions-system-custom-roles)** | Custom role creation with granular permissions, role templates, enterprise organizational structures | Q2 2026 (2-3 weeks) |
+| **[Audit Logs for Team Actions](../features/enterprise/team-roadmap.md#9-post-mvp---p2-audit-logs-for-team-actions)** | Comprehensive audit trail, SOC 2/ISO 27001 compliance, security monitoring | Q3 2026 (3-4 weeks) |
+| **[Bulk User Management](../features/enterprise/team-roadmap.md#10-post-mvp---p3-bulk-user-management)** | CSV import/export, batch processing, enterprise onboarding | Q3 2026 (2-3 weeks) |
+| **[Team Analytics & Activity Monitoring](../features/enterprise/team-roadmap.md#11-post-mvp---p3-team-analytics--activity-monitoring)** | Team productivity metrics, usage patterns, license optimization | Q4 2026 (3-4 weeks) |
 | **[AI-Powered Campaign Optimization](../features/campaigns/roadmap.md#1-ai-powered-campaign-optimization)** | Auto-optimization, send time ML, AI subject lines, frequency optimization | Q4 2026 (6-8 weeks) |
 | **[Predictive Sending Intelligence](../features/campaigns/roadmap.md#2-predictive-sending-intelligence)** | Performance forecasting, deliverability prediction, risk assessment, scenario analysis | Q4 2026 (5-7 weeks) |
 | **[Intelligent Deliverability Management](../features/campaigns/roadmap.md#3-intelligent-deliverability-management)** | Predictive reputation, automated IP rotation, smart throttling, proactive detection | Q4 2026 (7-9 weeks) |
@@ -158,6 +163,11 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **Platform Ecosystem** | Marketplace, third-party integrations, custom workflows | 2027+ |
 | **Global Expansion** | Multi-region deployment, local compliance, global optimization | 2027+ |
 | **[Reputation Prediction](../features/domains/roadmap.md#p3-reputation-prediction--proactive-alerts)** | Predictive analytics for domain reputation with proactive recommendations | Q1 2027 |
+| **[User Groups & Teams](../features/enterprise/team-roadmap.md#13-post-mvp---p3-user-groups--teams-within-tenant)** | Logical user groups, department organization, group-based permissions | Q1 2027 (3-4 weeks) |
+| **[Team Member Onboarding Workflows](../features/enterprise/team-roadmap.md#14-post-mvp---p3-team-member-onboarding-workflows)** | Automated onboarding, guided tours, progressive feature access | Q1 2027 (3-4 weeks) |
+| **[Workspace Templates](../features/enterprise/team-roadmap.md#15-post-mvp---p3-workspace-templates)** | Pre-configured workspace templates, industry-specific galleries | Q2 2027 (2-3 weeks) |
+| **[External User Collaboration](../features/enterprise/team-roadmap.md#16-post-mvp---p3-external-user-collaboration-client-portal)** | Client portal, white-label branding, read-only access for external stakeholders | Q2 2027 (4-6 weeks) |
+| **[Workspace Duplication](../features/enterprise/team-roadmap.md#17-post-mvp---p3-workspace-duplication)** | Clone workspaces with settings, campaigns, templates | Q3 2027 (3-4 weeks) |
 
 ---
 
@@ -483,6 +493,607 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 - 15% improvement in lead conversion rates
 
 **Detailed Roadmap:** [Automation Roadmap](/docs/features/automation/roadmap.md)
+
+---
+
+## Feature Deep Dive: Billing & Subscriptions
+
+### Overview
+
+**Status:** Partially Complete (Core infrastructure functional, 7 MVP gaps)  
+**Timeline:** Q1 2026 (MVP) → Q2-Q4 2026 (Post-MVP)  
+**Priority:** Critical (Revenue infrastructure - MVP gaps block launch)
+
+### Current State: Partially Complete
+
+**What's Available Today:**
+
+- ✅ Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
+- ✅ Stripe Checkout integration for secure payment processing
+- ✅ Automatic subscription creation and management
+- ✅ Prorated upgrades and downgrades
+- ✅ Usage tracking (emails, users, workspaces, domains)
+- ✅ Automatic invoice generation via Stripe
+- ✅ Payment method updates via Stripe Customer Portal
+- ✅ Failed payment retry logic (Days 3, 5, 7, 14)
+- ✅ Subscription cancellation with 90-day grace period
+- ✅ MRR tracking and financial reporting
+
+**Assessment:** Core billing infrastructure is functional, but critical user-facing features are missing. 7 MVP gaps block production readiness.
+
+### MVP Gaps (Q1 2026)
+
+**Critical Missing Features:**
+
+- **[P0] Plan Upgrade/Downgrade UI Flow** (3-5 days)
+  - Plan comparison modal with feature differences
+  - Proration preview before confirmation
+  - Downgrade validation (usage vs new limits)
+  - **Business Impact:** Core monetization feature - users must self-service plan changes
+
+- **[P0] Usage Tracking Dashboard** (4-6 days)
+  - Real-time progress bars with color-coded alerts
+  - Historical usage charts (6-month trends)
+  - CSV export functionality
+  - **Business Impact:** Prevents service interruptions, drives upgrade conversions
+
+- **[P1] Invoice Management System** (3-5 days)
+  - Direct PDF download from PenguinMails UI
+  - Invoice preview modal and search/filtering
+  - Bulk download capability
+  - **Business Impact:** Professional businesses expect self-service invoice management
+
+- **[P1] Payment Method Management UI** (4-6 days)
+  - In-app card updates using Stripe Elements
+  - Multiple payment methods support
+  - Payment method verification
+  - **Business Impact:** Payment failures are major churn driver - easy updates critical
+
+- **[P0] Failed Payment Recovery Flow** (2-3 days)
+  - Dashboard banner with failure reason
+  - One-click "Update Payment & Retry" button
+  - Grace period countdown timer
+  - **Business Impact:** Quick recovery prevents service interruption and churn
+
+- **[P1] Subscription Cancellation Flow** (2-3 days)
+  - Cancellation reason survey
+  - Retention offer modal (discount, pause option)
+  - Data export reminder
+  - **Business Impact:** Graceful cancellation reduces negative sentiment
+
+- **[P2] Budget Controls** (3-4 days)
+  - Budget limit configuration
+  - Alert thresholds (80%, 100%)
+  - Overage handling options
+  - **Business Impact:** Budget-conscious customers need spending controls
+
+**Total MVP Effort:** 21-36 days (4-7 weeks)
+
+### Post-MVP Roadmap (Q2-Q4 2026)
+
+**Q2 2026: Enterprise Features**
+
+- **[P1] Custom Pricing and Enterprise Billing** (2-3 weeks)
+  - Custom pricing configuration per tenant
+  - Volume discount tiers
+  - Custom billing cycles (quarterly, annual)
+  - Custom payment terms (Net 30, Net 60)
+  - Contract management with renewals
+  - **Business Impact:** Enables enterprise segment, unlocks $50K+ ARR deals
+
+- **[P2] Flexible Payment Options** (2-3 weeks)
+  - ACH direct debit for US customers
+  - SEPA direct debit for EU customers
+  - Wire transfer instructions
+  - Purchase order workflow
+  - Installment plans (3, 6, 12 months)
+  - **Business Impact:** Enterprise customers require alternative payment methods
+
+**Q3 2026: International & Advanced**
+
+- **[P1] Multi-Currency Support** (3-4 weeks)
+  - Support EUR, GBP, CAD, AUD currencies
+  - Local payment methods (SEPA, iDEAL, Bancontact)
+  - Currency-specific invoicing with local tax
+  - Multi-currency financial reporting
+  - **Business Impact:** Enables international expansion, unlocks global markets
+
+- **[P2] Revenue Recognition & Financial Reporting** (3-4 weeks)
+  - Automated revenue recognition (ASC 606 / IFRS 15)
+  - Deferred revenue tracking
+  - Revenue waterfall reports
+  - Cohort retention analysis
+  - Export to QuickBooks, Xero, NetSuite
+  - **Business Impact:** Automated financial reporting for investor/board meetings
+
+- **[P2] Referral Credits & Promotional Discounts** (2-3 weeks)
+  - Referral link generation and tracking
+  - Account credit system ($50 per referral)
+  - Promotional discount codes
+  - Discount analytics dashboard
+  - **Business Impact:** Referral rewards drive word-of-mouth growth
+
+**Q4 2026: Optimization & Retention**
+
+- **[P2] Advanced Usage Analytics & Forecasting** (3-4 weeks)
+  - Predict next month's usage (ML model)
+  - Forecast monthly costs for next 3 months
+  - Anomaly detection (unusual usage spikes)
+  - Recommend optimal plan based on usage
+  - **Business Impact:** Proactive recommendations prevent service interruptions
+
+- **[P2] Subscription Pause & Seasonal Plans** (2-3 weeks)
+  - Pause subscription for 1-3 months
+  - Reduced-rate pause option ($10/month)
+  - Automatic resume after pause period
+  - **Business Impact:** Flexibility for seasonal businesses reduces churn
+
+- **[P2] Advanced Dunning Management** (3-4 weeks)
+  - Smart retry timing based on failure reason
+  - Multi-channel dunning (email, SMS, in-app)
+  - Pre-expiration notifications
+  - Payment recovery campaigns
+  - **Business Impact:** Reduces involuntary churn by 50%
+
+### Total Post-MVP Effort
+
+**Effort:** 20-28 weeks (5-7 months)  
+**Priority Distribution:** 2 P0 features, 3 P1 features, 6 P2 features
+
+### Key Dependencies
+
+**Third-Party Services:**
+
+- **Stripe** - Payment processing, subscriptions, invoicing (fully integrated)
+- **Loop.so** - Transactional email delivery (Q1 2026, replaced Q3 2026)
+- **Stripe Tax** - Automated tax calculation (Q3 2026)
+- **Accounting Systems** - QuickBooks, Xero, NetSuite (Q3 2026)
+
+**Infrastructure:**
+
+- Usage tracking system (Q1 2026) - Required for budget controls
+- Analytics infrastructure (Q1-Q4 2026) - Required for forecasting
+- ML infrastructure (Q4 2026) - Required for predictive analytics
+- Historical data (6+ months) - Required for churn prediction
+
+### Success Metrics
+
+**Technical:**
+
+- Payment success rate > 95%
+- Invoice generation success rate > 99%
+- Failed payment recovery rate > 60%
+- Usage tracking accuracy > 98%
+
+**Business:**
+
+- Support tickets reduced by 30%
+- Self-service plan changes > 80%
+- Payment failure churn reduced by 40%
+- Enterprise customer acquisition enabled (Q2 2026)
+- International revenue > 20% of total (Q3 2026)
+- Involuntary churn reduced by 50% (Q4 2026)
+
+**Detailed Roadmap:** [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap.md)
+
+---
+
+## Feature Deep Dive: Analytics & Reporting
+
+### Overview
+
+**Status:** Partially Complete (Core Analytics 60%, Enhanced Analytics Planned Q1 2026)  
+**Timeline:** Q4 2025 (Partial) → Q1 2026 (MVP Complete) → Q1 2026 (Enhanced) → Q2-Q3 2026 (Advanced)  
+**Priority:** High (Data-driven decision making - MVP gaps block optimal user experience)
+
+### Current State: Partially Complete
+
+**What's Available Today:**
+
+- ✅ Real-time performance dashboards (campaign-level)
+- ✅ Deliverability metrics tracking (inbox placement, bounce rates)
+- ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
+- ✅ Manual reporting with CSV/Excel/PDF export
+- ✅ KPI framework with business metrics (MRR, CAC, LTV, NRR)
+- ✅ OLAP analytics systems for real-time data processing
+- ✅ Scheduled reports (daily, weekly, monthly)
+- ✅ Google Sheets integration
+- ✅ API-based programmatic export
+
+**Assessment:** Core analytics infrastructure is functional, but critical user-facing features are missing. 5 MVP gaps identified that block optimal user experience and data-driven optimization.
+
+### MVP Gaps (Q1 2026)
+
+**Critical Missing Features:**
+
+- **[P0] Real-Time Analytics Dashboard** (5-7 days)
+  - Dedicated `/dashboard/analytics` route with overview dashboard
+  - Cross-campaign aggregation and workspace-level performance breakdown
+  - Time-range selector (7d, 30d, 90d, custom)
+  - Drill-down to campaign-level details
+  - **Business Impact:** Single source of truth for analytics, expected by users in any email platform
+
+- **[P0] Deliverability Analytics Deep-Dive** (5-7 days)
+  - Provider-specific inbox placement tracking (Gmail, Yahoo, Outlook)
+  - Bounce analysis with hard/soft classification
+  - Reputation monitoring with trend charts
+  - Blacklist alerts and recommendations
+  - **Business Impact:** Critical for cold email success, early issue detection
+
+- **[P1] Engagement Heatmaps** (4-6 days)
+  - Visual day-of-week × hour-of-day engagement grid
+  - Color-coded cells by engagement level
+  - Optimal send time recommendations
+  - Timezone adjustment
+  - **Business Impact:** Send time optimization improves open rates by 10-15%
+
+- **[P1] Comparative Analytics** (5-7 days)
+  - Side-by-side campaign comparison (2-5 campaigns)
+  - A/B test result analysis with statistical significance
+  - Comparative charts and metrics tables
+  - Export capabilities
+  - **Business Impact:** Optimization requires comparison, identify best-performing campaigns
+
+- **[P1] Alert Configuration UI** (5-7 days)
+  - Customizable performance alerts (deliverability drop, bounce spike, spam complaints, blacklist detection)
+  - Multi-channel notifications (email, SMS, webhook)
+  - Alert history and resolution tracking
+  - Alert testing functionality
+  - **Business Impact:** Proactive issue detection, reduce time to resolution
+
+**Total MVP Effort:** 24-36 days (5-7 weeks)
+
+### Enhanced Analytics (Q1 2026)
+
+**Advanced Features:**
+
+- **[P2] Predictive Analytics** (3-4 weeks)
+  - AI-powered send time optimization (Gemini AI)
+  - Subject line performance prediction
+  - Deliverability forecasting
+  - Churn prediction with retention recommendations
+  - **Business Impact:** Automated optimization, proactive recommendations
+
+- **[P2] Custom Dashboard Builder** (3-4 weeks)
+  - Drag-and-drop dashboard builder
+  - Widget library (metric cards, charts, tables, funnels)
+  - Custom metric definitions
+  - White-label branding for agencies
+  - **Business Impact:** Personalized analytics views, client-specific dashboards
+
+- **[P2] Advanced Segmentation Analytics** (3-4 weeks)
+  - Behavioral segmentation (highly engaged, at-risk, champions)
+  - Predictive segmentation (likely to convert, churn risk, high LTV)
+  - Segment performance analysis
+  - Segment-specific optimization recommendations
+  - **Business Impact:** Identify high-performing segments, optimize targeting
+
+**Total Enhanced Effort:** 9-12 weeks
+
+### Advanced Analytics (Q2-Q3 2026)
+
+**Q2 2026: Attribution & Data Processing**
+
+- **[P3] Multi-Touch Attribution** (4-5 weeks)
+  - 5 attribution models (first-touch, last-touch, linear, time-decay, position-based)
+  - Customer journey tracking across all touchpoints
+  - Revenue attribution by campaign
+  - Attribution comparison view
+  - **Business Impact:** Accurate ROI calculation, multi-channel attribution
+
+- **[P3] Large-Scale Data Processing Investigation** (2-3 weeks)
+  - Evaluate Apache Spark, Apache Airflow, managed services
+  - Performance benchmarks and cost analysis
+  - Implement chosen solution if validated
+  - **Business Impact:** Scalable analytics infrastructure, improved query performance
+
+**Q3 2026: Enterprise & Cohort Analysis**
+
+- **[P3] Enterprise Data Warehouse Integration** (3-4 weeks)
+  - WebSocket/SSE server for real-time data streaming
+  - Data warehouse connectors (Snowflake, BigQuery, Redshift)
+  - Streaming API with authentication
+  - Client SDKs (JavaScript, Python)
+  - **Business Impact:** Real-time data synchronization, enterprise data infrastructure integration
+
+- **[P3] Cohort Analysis** (2-3 weeks)
+  - Retention matrix by cohort
+  - Cohort-based engagement trends
+  - Lifetime value tracking by cohort
+  - Churn pattern identification
+  - **Business Impact:** Retention analysis, cohort-based optimization
+
+**Total Advanced Effort:** 16-24 weeks
+
+### Future Vision (Q4 2026)
+
+**Q3 2026: Cost Optimization**
+
+- **[P3] In-House Transactional Email System** (2-3 weeks)
+  - Replace Loop.so with central SMTP server
+  - Template management system
+  - Delivery tracking and analytics
+  - **Business Impact:** Cost savings $29/month → $0
+
+### Total Post-MVP Effort
+
+**Effort:** 27-39 weeks (6-9 months)  
+**Priority Distribution:** 2 P0 features, 3 P1 features, 5 P3 features
+
+### Key Dependencies
+
+**Third-Party Services:**
+
+- **PostHog** - Product analytics, event tracking, error monitoring (Active MVP)
+- **Stripe** - MRR calculation and financial analytics (Active)
+- **Loop.so** - Scheduled report delivery (Active, replace Q3 2026)
+- **Gemini AI** - Predictive analytics models (Q1 2026)
+
+**Infrastructure:**
+
+- Historical data (30+ days) - Required for predictive analytics
+- ML infrastructure (Q1 2026) - Required for enhanced analytics
+- CRM integration (Q2 2026) - Required for attribution
+- Historical data (6+ months) - Required for cohort analysis
+
+### Success Metrics
+
+**Technical:**
+
+- Analytics dashboard load time < 2 seconds
+- Real-time metric updates < 5 seconds
+- Data export completion < 30 seconds
+- Alert delivery latency < 1 minute
+- Predictive analytics accuracy > 80%
+- Data accuracy > 90% with bot detection
+
+**Business:**
+
+- Analytics dashboard adoption > 80% of active users
+- Deliverability issue detection time reduced by 50%
+- Send time optimization improves open rates by 10-15%
+- Alert response time < 15 minutes
+- Predictive analytics adoption > 60% of power users
+- Custom dashboard adoption > 40% of power users
+- Segmentation improves campaign performance by 20%
+
+**Detailed Roadmap:** [Analytics & Reporting Roadmap](/docs/features/analytics/roadmap.md)
+
+---
+
+## Feature Deep Dive: Integrations
+
+### Overview
+
+**Status:** Foundation Documented, Implementation Pending  
+**Timeline:** Q1 2026 (MVP) → Q1-Q2 2026 (Vendor Integrations) → Q3-Q4 2026 (Advanced Features)  
+**Priority:** Critical (Foundation feature - API-first strategy)  
+**Strategy:** Build general-purpose REST API + webhooks first (MVP), add vendor-specific integrations later (Post-MVP)
+
+### Current State: Foundation Documented
+
+**What's Documented:**
+
+- ✅ API-first integration strategy defined
+- ✅ API key management architecture with Vault storage
+- ✅ Core REST API endpoint specifications
+- ✅ Webhook system architecture with retry logic
+- ✅ Vault integration for secrets management (SSH keys, SMTP credentials, API keys)
+- ✅ Third-party dependency analysis (Vault, Stripe, Hostwind, Loop.so)
+- ✅ CRM integration specifications (Salesforce, HubSpot)
+- ✅ Zapier integration plan
+
+**Assessment:** Comprehensive integration architecture documented. Implementation ready to begin. API-first approach enables customers to build custom integrations immediately while we develop pre-built vendor integrations.
+
+### MVP Implementation (Q1 2026)
+
+**Critical Features (P0) - Blocks programmatic integrations:**
+
+- **[P0] API Key Management System** (1-2 weeks)
+  - API key generation with format `pm_live_{32_random_chars}`
+  - bcrypt hashing (salt rounds: 12) before Vault storage
+  - Permission scope enforcement (8 scopes)
+  - Rate limiting per API key (tier-based: Starter 60/min, Pro 300/min, Enterprise 1000/min)
+  - Usage tracking in PostgreSQL
+  - **Business Impact:** Enables all programmatic integrations, blocks customer success for technical users
+
+- **[P0] API Key Management UI** (5-7 days)
+  - Self-service API key creation, viewing, regeneration, revocation
+  - Permission scope selector with 8 scopes
+  - Usage charts and analytics
+  - Code examples (cURL, Node.js, Python)
+  - **Business Impact:** Self-service API access, reduces support burden
+
+- **[P0] Core REST API Endpoints** (2-3 weeks)
+  - Contacts API (CRUD operations)
+  - Campaigns API (CRUD, start, pause)
+  - Emails API (send, list, get details)
+  - Analytics API (email metrics, campaign metrics, contact engagement)
+  - Standard REST conventions with pagination, filtering, sorting
+  - **Business Impact:** Core integration functionality, enables custom integrations
+
+- **[P0] API Documentation (OpenAPI/Swagger)** (1 week)
+  - OpenAPI 3.0 specification
+  - Swagger UI at /api/docs
+  - Code examples in multiple languages
+  - Getting started guide and best practices
+  - **Business Impact:** Developer enablement, reduces integration friction
+
+**High Priority (P1) - Enables real-time integrations:**
+
+- **[P1] Webhook System Backend** (1-2 weeks)
+  - Event delivery engine with queue-based processing
+  - 10 event types (email.sent, email.opened, email.clicked, etc.)
+  - HMAC-SHA256 signature verification
+  - Retry logic with exponential backoff (5 attempts)
+  - Webhook delivery logging and health monitoring
+  - **Business Impact:** Real-time integrations, competitive standard feature
+
+- **[P1] Webhook Configuration UI** (1-2 weeks)
+  - Self-service webhook setup with event selection
+  - Webhook testing interface with sample payloads
+  - Delivery log viewer with statistics
+  - Signature verification code examples
+  - **Business Impact:** Self-service webhook setup, enables real-time workflows
+
+**Total MVP Effort:** 6-9 weeks (2-3 engineers)
+
+### Post-MVP Roadmap (Q1-Q4 2026)
+
+**Q1 2026: Advanced CRM Integrations**
+
+- **[P2] Salesforce Integration** (20-30 days)
+  - OAuth 2.0 authentication flow
+  - Bi-directional contact/lead sync
+  - Field mapping (standard and custom fields)
+  - Activity logging (emails, opens, clicks as Salesforce tasks)
+  - Conflict resolution strategies
+  - **Business Impact:** Unlocks enterprise customers, competitive requirement
+
+- **[P2] HubSpot Integration** (20-30 days)
+  - OAuth 2.0 authentication flow
+  - Bi-directional contact sync
+  - Field mapping (standard and custom properties)
+  - Activity logging (timeline events)
+  - Workflow triggers based on email engagement
+  - **Business Impact:** Unlocks SMB/mid-market customers, competitive requirement
+
+**Q2 2026: No-Code Integrations**
+
+- **[P2] Zapier Integration** (2-3 weeks)
+  - Zapier app setup with 5+ triggers and 5+ actions
+  - Pre-built Zap templates (20+ common workflows)
+  - Authentication via API key
+  - **Business Impact:** Expands ecosystem to 5,000+ apps, enables non-technical users
+
+**Q3 2026: Enhanced Features**
+
+- **[P1] ESP Integration UI** (10-14 days)
+  - Postmark/Mailgun configuration interface
+  - Routing rules builder (transactional → Postmark, marketing → Mailgun)
+  - ESP performance analytics and comparison
+  - **Business Impact:** Optimizes deliverability and costs, competitive differentiator
+
+- **[P3] Custom Webhook Builder** (3-4 weeks)
+  - Advanced event filtering (contact tags, lead score, email domain)
+  - Conditional logic (if/then rules, threshold-based triggers)
+  - Payload transformation (custom templates, field mapping)
+  - Visual webhook builder (drag-and-drop interface)
+  - **Business Impact:** Advanced automation for power users, competitive differentiator
+
+- **[P3] Additional CRM Integrations** (2-3 weeks each)
+  - Pipedrive integration (Q2 2026)
+  - Zoho CRM integration (Q3 2026)
+  - Close.io integration (Q3 2026)
+  - **Business Impact:** Expands addressable market, supports SMB customers
+
+**Q4 2026+: Ecosystem Expansion**
+
+- **[P3] Integration Marketplace** (8-12 weeks)
+  - Developer portal for third-party integrations
+  - Integration marketplace (browse, search, install)
+  - OAuth app registration for developers
+  - Integration review process
+  - **Business Impact:** Community-driven ecosystem, long-term strategic value
+
+- **[P3] Real-Time Sync** (6-8 weeks)
+  - WebSocket/SSE infrastructure for push notifications
+  - Sub-1-minute sync latency for enterprise customers
+  - Change Data Capture (CDC) from PostgreSQL
+  - **Business Impact:** Enterprise feature, competitive advantage
+
+### Vault Integration Timeline
+
+**Q1 2026: Foundation**
+
+- **[P0] Vault Integration Architecture** (1 week) - ✅ Documented
+  - Secret structure, access policies, rotation procedures
+  - Backup and recovery procedures
+  - High availability setup (3-node cluster)
+
+- **[P1] VPS SSH Key Management** (1-2 weeks) - ✅ Documented
+  - Store admin and tenant SSH keys in Vault
+  - Frontend UI for credential viewing
+  - 90-day automated rotation
+
+- **[P1] SMTP Credentials Vault Storage** (1 week) - ✅ Documented
+  - Store MailU admin credentials in Vault
+  - AES-256-GCM encryption before storage
+  - 180-day automated rotation
+
+- **[P1] Vault Disaster Recovery** (1-2 weeks) - ✅ Documented
+  - Automated daily backups to S3
+  - VPS migration workflow
+  - Quarterly disaster recovery drills
+
+**Total Vault Integration Effort:** 4-6 weeks
+
+### Key Dependencies
+
+**Vault Integration:**
+
+- HashiCorp Vault (HCP Vault: $22/month MVP, self-hosted Post-MVP)
+- VPS SSH key storage (enables tenant self-service)
+- SMTP credentials storage (enables support troubleshooting)
+- API key management (enables programmatic integrations)
+- Disaster recovery procedures (enables rapid recovery)
+
+**Third-Party Services:**
+
+- **Stripe** - Payment processing (fully integrated, no migration planned)
+- **Hostwind API** - VPS provisioning (add alternatives Q2 2026)
+- **Loop.so** - Transactional emails ($29/month, migrate to MailU Q3 2026)
+- **Postmark** - Transactional email delivery (active integration)
+- **Mailgun** - Bulk marketing email delivery (active integration)
+
+**Infrastructure:**
+
+- PostgreSQL database (API data storage)
+- Redis (rate limiting, webhook queue)
+- Event system (webhook triggers)
+
+### Success Metrics
+
+**Technical:**
+
+- API key generation success rate > 99%
+- API response time < 200ms (p95)
+- Webhook delivery success rate > 95%
+- CRM sync success rate > 95% (Post-MVP)
+
+**Business:**
+
+- 50+ developers using API within first month (MVP)
+- 100+ API keys generated (MVP)
+- 200+ webhooks configured (MVP)
+- 10+ custom integrations built by customers (MVP)
+- 20+ customers using Salesforce integration (Q1 2026)
+- 15+ customers using HubSpot integration (Q1 2026)
+- 50+ customers using Zapier integration (Q2 2026)
+
+### API-First Strategy Rationale
+
+**Why API-First Approach?**
+
+**Benefits:**
+- **Flexibility**: Customers can integrate with ANY system, not just pre-built integrations
+- **Faster Time-to-Market**: General API is simpler than vendor-specific integrations (6-9 weeks vs 20-30 days per vendor)
+- **Lower Maintenance**: One API to maintain vs. multiple vendor integrations
+- **Customer Empowerment**: Technical customers can build custom integrations immediately
+- **Foundation for Future**: Vendor integrations built on top of stable API
+- **Reduced Risk**: Prove API works before investing in vendor partnerships
+
+**Customer Use Cases Enabled by General API:**
+- Custom CRM integrations (any CRM, not just Salesforce/HubSpot)
+- Internal tool integrations (dashboards, analytics, reporting)
+- Workflow automation (trigger actions based on email events)
+- Data export/import (bulk operations, migrations)
+- Third-party app integrations (marketing tools, analytics platforms)
+
+**Customer Communication:**
+"PenguinMails provides a powerful REST API and webhook system that enables integration with any external system. Build custom integrations with your CRM, analytics tools, or internal systems. Pre-built integrations with Salesforce, HubSpot, and Zapier coming in Q1-Q2 2026."
+
+**Detailed Roadmap:** [Integrations Roadmap](/docs/features/integrations/roadmap.md)
 
 ---
 
