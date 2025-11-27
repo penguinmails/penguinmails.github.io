@@ -238,11 +238,9 @@ Additional resources:
 
 ### Resources
 
-```markdown
 - **Live Documentation:** [https://penguinmails.github.io](https://penguinmails.github.io)
 - **Repository:** [https://github.com/penguinmails/penguinmails.github.io](https://github.com/penguinmails/penguinmails.github.io)
 - **Issues:** [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
-```
 
 ---
 
