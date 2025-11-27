@@ -41,6 +41,7 @@ Vault SSH Key Management centralizes SSH credential storage and automates rotati
 ### 1. Dual SSH Key System
 
 **Admin SSH Keys (PenguinMails Access):**
+
 - Generated during VPS provisioning
 - Stored in Vault at `/vps/{tenant_id}/admin_ssh`
 - Used by PenguinMails for infrastructure management
@@ -48,6 +49,7 @@ Vault SSH Key Management centralizes SSH credential storage and automates rotati
 - Rotated every 90 days automatically
 
 **Tenant SSH Keys (Customer Access):**
+
 - Generated during VPS provisioning
 - Stored in Vault at `/vps/{tenant_id}/tenant_ssh`
 - Downloadable by tenant owner/admin
@@ -57,12 +59,14 @@ Vault SSH Key Management centralizes SSH credential storage and automates rotati
 ### 2. Secure Key Download
 
 **One-Time Download:**
+
 - Tenant can download private key once from UI
 - Download triggers audit log entry
 - Warning message: "Store this key securely. It will not be shown again."
 - Key never displayed in UI after initial download
 
 **Download Process:**
+
 ```typescript
 // User clicks "Download Private Key"
 POST /api/v1/tenant/infrastructure/ssh-credentials/download
@@ -86,11 +90,13 @@ res.download('tenant-ssh-key.pem', privateKey);
 ### 3. Automated Key Rotation
 
 **Rotation Schedule:**
+
 - SSH keys rotated every 90 days
 - Cron job checks rotation policy daily
 - Manual rotation trigger available in UI
 
 **Rotation Workflow:**
+
 ```
 Cron job checks last_rotated timestamp
   ↓
@@ -112,6 +118,7 @@ Log rotation event in audit trail
 ```
 
 **Grace Period:**
+
 - 24-hour grace period prevents service disruption
 - Both old and new keys valid during grace period
 - Tenants notified to update their SSH clients
@@ -119,12 +126,14 @@ Log rotation event in audit trail
 ### 4. Key Revocation and Regeneration
 
 **Revoke SSH Access:**
+
 - Tenant can revoke SSH access immediately
 - Removes public key from VPS authorized_keys
 - Marks key as revoked in Vault
 - No grace period (immediate revocation)
 
 **Regenerate SSH Key:**
+
 - Tenant can regenerate new SSH key after revocation
 - Generates new RSA 4096-bit key pair
 - Stores new key in Vault
@@ -134,6 +143,7 @@ Log rotation event in audit trail
 ### 5. Connection Instructions
 
 **UI Display:**
+
 ```bash
 # SSH Connection Command
 ssh -i /path/to/private-key.pem tenant-{tenant_id}@{vps_ip}
@@ -143,6 +153,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 ```
 
 **Troubleshooting Tips:**
+
 - Ensure private key has correct permissions: `chmod 600 private-key.pem`
 - Verify VPS IP address is correct
 - Check firewall allows SSH connections (port 22)
@@ -151,6 +162,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 ### 6. Audit Logging
 
 **Logged Events:**
+
 - SSH key download (who, when, IP address)
 - SSH key rotation (automated or manual)
 - SSH key revocation
@@ -158,6 +170,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 - Failed SSH authentication attempts (from VPS logs)
 
 **Audit Log Format:**
+
 ```json
 {
   "timestamp": "2025-11-26T10:30:00.000Z",

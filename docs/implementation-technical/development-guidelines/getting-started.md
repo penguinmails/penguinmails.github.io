@@ -13,6 +13,7 @@ persona: "New Contributors"
 Thank you for your interest in contributing to PenguinMails! We're excited to have you join our community of developers working to revolutionize email marketing through AI-powered analytics and personalization.
 
 **What You Can Contribute:**
+
 - Bug fixes and improvements
 - New features and enhancements
 - Documentation improvements
@@ -86,6 +87,7 @@ npm run type-check
 ### Recommended IDE Setup
 
 **VS Code Configuration:**
+
 ```json
 {
   "python.defaultInterpreterPath": "./venv/bin/python",
@@ -106,6 +108,7 @@ npm run type-check
 ```
 
 **Required Extensions:**
+
 - TypeScript
 - JavaScript
 - ESLint

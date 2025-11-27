@@ -13,6 +13,7 @@ persona: "Technical Writers"
 ### Writing Guidelines
 
 #### Voice and Tone
+
 - **Clear and concise**: Avoid jargon, explain technical terms
 - **Action-oriented**: Focus on what users can accomplish
 - **Inclusive**: Use gender-neutral language
@@ -21,6 +22,7 @@ persona: "Technical Writers"
 #### Structure Guidelines
 
 ### Page Structure
+
 1. **Title**: Clear, descriptive, action-oriented
 2. **Overview**: Brief description of what this documentation covers
 3. **Prerequisites**: What users need before starting
@@ -103,6 +105,7 @@ Creates a new email campaign for sending to recipients.
 ```
 
 **Response**:
+
 ```json
 {
   "success": true,
@@ -120,11 +123,13 @@ Creates a new email campaign for sending to recipients.
 ```
 
 **Error Responses**:
+
 - `400 Bad Request`: Invalid request data
 - `401 Unauthorized`: Missing or invalid authentication
 - `409 Conflict`: Campaign name already exists
 
 **Example Usage**:
+
 ```typescript
 import { PenguinMailsClient, ValidationError, AuthenticationError } from '@penguinmails/sdk';
 
@@ -172,11 +177,13 @@ try {
 ```
 
 **Best Practices**:
+
 1. **Use descriptive names**: "Welcome Email Series" vs "Campaign 1"
 2. **Keep subjects under 100 characters** for better deliverability
 3. **Always include both HTML and text versions** for accessibility
 4. **Test with small recipient lists first** before sending to large audiences
 5. **Enable AI optimization** for better performance (when available)
+
 ```
 
 ## Tutorial Documentation
@@ -221,6 +228,7 @@ if (response.ok) {
 ## Step 2: Create Your First Campaign
 
 ### Basic Campaign Structure
+
 ```typescript
 import { PenguinMailsClient } from '@penguinmails/sdk';
 
@@ -258,6 +266,7 @@ console.log(`Campaign created: ${campaign.id}`);
 ```
 
 ### Understanding Campaign States
+
 - **draft**: Campaign created but not sent
 - **scheduled**: Campaign set to send at future time
 - **sending**: Campaign currently being sent
@@ -267,6 +276,7 @@ console.log(`Campaign created: ${campaign.id}`);
 ## Step 3: Send and Monitor
 
 ### Send Campaign
+
 ```typescript
 // Send the campaign
 const sendResult = await client.campaigns.send(campaign.id);
@@ -278,6 +288,7 @@ console.log(`Current status: ${status}`);
 ```
 
 ### Monitor Performance
+
 ```typescript
 // Get campaign analytics
 const analytics = await client.analytics.getCampaignMetrics(campaign.id);
@@ -291,6 +302,7 @@ console.log(`Click rate: ${analytics.clickRate.toFixed(2)}%`);
 ## Step 4: Advanced Features
 
 ### AI Content Optimization
+
 ```typescript
 // Enable AI optimization
 campaignData.settings.aiOptimization = true;
@@ -303,6 +315,7 @@ console.log(`AI optimization score: ${campaign.aiOptimization.improvementScore.t
 ```
 
 ### Personalization
+
 ```typescript
 // Advanced personalization
 const recipients = [
@@ -339,6 +352,7 @@ const content = {
 ### Common Issues
 
 #### Authentication Errors
+
 ```typescript
 // 401: Invalid API key
 if (response.status === 401) {
@@ -352,6 +366,7 @@ if (response.status === 403) {
 ```
 
 #### Rate Limiting
+
 ```typescript
 // 429: Rate limit exceeded
 if (response.status === 429) {
@@ -362,6 +377,7 @@ if (response.status === 429) {
 ```
 
 #### Validation Errors
+
 ```typescript
 // 400: Invalid request data
 try {
@@ -378,17 +394,20 @@ try {
 
 Congratulations! You've created and sent your first campaign with PenguinMails.
 
-### Recommended Next Steps:
+### Recommended Next Steps
+
 1. **Explore Analytics**: Learn about [advanced analytics features](.)
 2. **Set Up Webhooks**: Implement [real-time event tracking](.)
 3. **Optimize Performance**: Discover [AI optimization features](.)
 4. **Integrate with CRM**: Connect with your [existing tools](.)
 
-### Additional Resources:
+### Additional Resources
+
 - [API Reference](.) - Complete API documentation
 - [SDK Documentation](.) - Language-specific guides
 - [Best Practices Guide](.) - Production deployment tips
 - [Community Forum](https://discord.gg/penguinmails) - Get help and share ideas
+
 ```
 
 ## Documentation Style Guide
@@ -406,6 +425,7 @@ Congratulations! You've created and sent your first campaign with PenguinMails.
 ```
 
 #### Code Blocks
+
 ```markdown
 ```typescript
 // Always specify language for syntax highlighting
@@ -417,18 +437,21 @@ function exampleFunction(): void {
 Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and commands `npm run build`.
 
 #### Lists
+
 - Use bullet points for unordered lists
 - Use numbers for ordered lists
 - Nest lists with proper indentation (2 spaces)
 - Keep list items concise and actionable
 
 #### Links
+
 - [Internal links](relative-path) without .md extension
 - [External links](https://example.com) with descriptive text
 - [Email links](mailto:contact@example.com)
 - Use descriptive link text, not "click here"
 
 #### Tables
+
 ```markdown
 | Column 1 | Column 2 | Column 3 |
 |----------|----------|----------|
@@ -437,6 +460,7 @@ Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and co
 ```
 
 #### Emphasis
+
 - **Bold**: `**bold text**` for important terms
 - *Italic*: `*italic text*` for subtle emphasis
 - `Code`: Backticks for code terms
@@ -445,12 +469,14 @@ Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and co
 ### Technical Writing Best Practices
 
 #### Clarity
+
 1. **Use active voice**: "Click the button" not "The button should be clicked"
 2. **Write in second person**: "You can" not "One can"
 3. **Be specific**: "Click the 'Submit' button" not "Click the button"
 4. **Avoid jargon**: Define technical terms on first use
 
 #### Organization
+
 1. **Start with overview**: What will users accomplish?
 2. **Prerequisites first**: What do users need before starting?
 3. **Step by step**: Numbered, actionable steps
@@ -458,6 +484,7 @@ Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and co
 5. **Troubleshooting**: Common issues and solutions
 
 #### Completeness
+
 1. **Cover edge cases**: What if something goes wrong?
 2. **Include error scenarios**: How to handle failures?
 3. **Cross-reference**: Link to related topics
@@ -466,6 +493,7 @@ Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and co
 ### Content Types
 
 #### API Documentation
+
 ```typescript
 // Type definitions for API responses
 interface CampaignResponse {
@@ -486,6 +514,7 @@ const campaign = await client.campaigns.create({
 ```
 
 #### User Guides
+
 ```markdown
 ## Creating Your First Campaign
 
@@ -500,6 +529,7 @@ const campaign = await client.campaigns.create({
 ```
 
 #### Troubleshooting Guides
+
 ```markdown
 ## Campaign Not Sending
 
@@ -564,6 +594,7 @@ const campaign = await client.campaigns.create({
 ### Review Process
 
 **Self Review Checklist:**
+
 - [ ] Content is accurate and up-to-date
 - [ ] Examples are tested and working
 - [ ] Links are functional and correct
@@ -572,6 +603,7 @@ const campaign = await client.campaigns.create({
 - [ ] Navigation and cross-references work
 
 **Peer Review:**
+
 - [ ] Technical accuracy validated
 - [ ] Clarity and comprehensibility assessed
 - [ ] User experience considerations addressed
@@ -580,18 +612,21 @@ const campaign = await client.campaigns.create({
 ## Documentation Tools
 
 ### Markdown Extensions
+
 - **Front Matter**: YAML metadata for page properties
 - **Code Blocks**: Language-specific syntax highlighting
 - **Mermaid Diagrams**: Flowcharts and diagrams
 - **Mathematical Formulas**: LaTeX math notation support
 
 ### Screenshot Tools
+
 - Use consistent styling and branding
 - Include cursor highlights and annotations
 - Ensure screenshots are current and accurate
 - Optimize file sizes for web delivery
 
 ### Content Management
+
 - Version control for all documentation
 - Automated deployment pipelines
 - Search functionality for content discovery
@@ -600,18 +635,21 @@ const campaign = await client.campaigns.create({
 ## Documentation Metrics
 
 ### Usage Analytics
+
 - Page views and unique visitors
 - Search terms and results
 - Time spent on pages
 - Exit rates and bounce rates
 
 ### Quality Metrics
+
 - User feedback scores
 - Support ticket reduction
 - Tutorial completion rates
 - Community engagement
 
 ### Improvement Indicators
+
 - Reduced support requests
 - Increased feature adoption
 - Better developer experience

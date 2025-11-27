@@ -478,9 +478,9 @@ Total: $61.25/month
 
 | Timestamp | Provider | Event | Email | Status | Details |
 |-----------|----------|-------|-------|--------|---------|
-| 2:34 PM | Postmark | Delivery | user@example.com | Success | Delivered in 1.2s |
-| 2:33 PM | Mailgun | Open | lead@company.com | Success | Opened on mobile |
-| 2:30 PM | Postmark | Bounce | invalid@test.com | Hard Bounce | User unknown |
+| 2:34 PM | Postmark | Delivery | <user@example.com> | Success | Delivered in 1.2s |
+| 2:33 PM | Mailgun | Open | <lead@company.com> | Success | Opened on mobile |
+| 2:30 PM | Postmark | Bounce | <invalid@test.com> | Hard Bounce | User unknown |
 
 **"View Full Log" Link**: Opens detailed webhook event viewer.
 

@@ -69,12 +69,14 @@ interface DataAsset {
 ```
 
 ### **Encryption Standards**
+
 - **Data at Rest**: AES-256 encryption for all stored data
 - **Data in Transit**: TLS 1.3 for all network communications
 - **Database Encryption**: Transparent data encryption (TDE)
 - **Key Management**: Hardware Security Modules (HSMs) for cryptographic keys
 
 ### **Data Retention Policies**
+
 ```typescript
 interface RetentionPolicy {
   dataType: string;
@@ -117,6 +119,7 @@ const retentionPolicies: RetentionPolicy[] = [
 ## 4. **Access Control Systems**
 
 ### **Identity and Access Management (IAM)**
+
 ```typescript
 interface UserRole {
   id: string;
@@ -170,12 +173,14 @@ const roles: UserRole[] = [
 ```
 
 ### **Multi-Factor Authentication (MFA)**
+
 - **Required for**: Administrative accounts, privileged access
 - **Supported Methods**: TOTP, SMS, hardware security keys
 - **Grace Period**: 7 days for MFA enrollment after account creation
 - **Recovery Process**: Secure MFA reset with identity verification
 
 ### **Session Management**
+
 - **Session Management**: Fully handled by NileDB authentication system
 - **Application Layer**: `validateSession()` and `getCurrentUser()` functions validate sessions
 - **No Custom Tracking**: Application does not manage sessions or device tracking
@@ -184,18 +189,21 @@ const roles: UserRole[] = [
 ## 5. **Network Security**
 
 ### **Network Architecture**
+
 - **Zero Trust Network**: Micro-segmentation and continuous verification
 - **Web Application Firewall (WAF)**: Protection against web-based attacks
 - **DDoS Protection**: Cloud-based mitigation services
 - **VPN Requirements**: Encrypted access for administrative functions
 
 ### **Endpoint Security**
+
 - **Device Management**: MDM solution for company devices
 - **Endpoint Detection & Response (EDR)**: Continuous monitoring
 - **Patch Management**: Automated security updates
 - **Remote Wipe**: Capability to secure erase lost/stolen devices
 
 ### **Cloud Security**
+
 - **Infrastructure as Code**: Automated, version-controlled infrastructure
 - **Container Security**: Image scanning and runtime protection
 - **Secrets Management**: Secure storage of credentials and keys
@@ -204,6 +212,7 @@ const roles: UserRole[] = [
 ## 6. **Application Security**
 
 ### **Secure Development Lifecycle (SDLC)**
+
 ```typescript
 interface SecurityRequirement {
   id: string;
@@ -244,12 +253,14 @@ const securityRequirements: SecurityRequirement[] = [
 ```
 
 ### **API Security**
+
 - **Authentication**: Bearer token authentication with refresh tokens
 - **Rate Limiting**: Request throttling to prevent abuse
 - **Input Validation**: Schema validation for all API inputs
 - **Output Encoding**: Proper encoding to prevent injection attacks
 
 ### **Third-Party Risk Management**
+
 - **Vendor Assessment**: Security questionnaires for all vendors
 - **Contract Requirements**: Security clauses in all agreements
 - **Continuous Monitoring**: Ongoing security posture assessment
@@ -258,6 +269,7 @@ const securityRequirements: SecurityRequirement[] = [
 ## 7. **Privacy Program**
 
 ### **Privacy by Design Principles**
+
 1. **Proactive**: Anticipate privacy issues before they occur
 2. **Privacy as Default**: Strongest privacy settings by default
 3. **Privacy Embedded**: Privacy built into design and architecture
@@ -267,6 +279,7 @@ const securityRequirements: SecurityRequirement[] = [
 7. **Respect for User Privacy**: User-centric privacy controls
 
 ### **Data Subject Rights**
+
 ```typescript
 interface DataSubjectRight {
   right: 'access' | 'rectification' | 'erasure' | 'restriction' | 'portability' | 'objection';
@@ -302,6 +315,7 @@ const dataSubjectRights: DataSubjectRight[] = [
 ```
 
 ### **Privacy Impact Assessment**
+
 ```typescript
 interface PrivacyImpactAssessment {
   project: string;
@@ -337,6 +351,7 @@ interface PrivacyMitigation {
 ## 8. **Compliance Management**
 
 ### **Regulatory Compliance Framework**
+
 - **GDPR**: European data protection regulation
 - **CCPA**: California consumer privacy act
 - **CAN-SPAM**: Email marketing regulations
@@ -344,12 +359,14 @@ interface PrivacyMitigation {
 - **ISO 27001**: Information security management standard
 
 ### **Compliance Monitoring**
+
 - **Automated Auditing**: Continuous compliance checking
 - **Manual Assessments**: Quarterly compliance reviews
 - **Third-Party Audits**: Annual external validation
 - **Gap Analysis**: Identification of compliance deficiencies
 
 ### **Documentation and Reporting**
+
 - **Compliance Registers**: Tracking of all compliance requirements
 - **Audit Trails**: Complete records of compliance activities
 - **Management Reporting**: Executive-level compliance dashboards
@@ -358,6 +375,7 @@ interface PrivacyMitigation {
 ## 9. **Incident Response**
 
 ### **Incident Classification**
+
 ```typescript
 enum IncidentSeverity {
   CRITICAL = 1,    // System-wide outage, data breach
@@ -384,6 +402,7 @@ interface SecurityIncident {
 ```
 
 ### **Incident Response Process**
+
 1. **Detection**: Automated alerts and monitoring
 2. **Assessment**: Impact evaluation and severity classification
 3. **Containment**: Immediate steps to limit damage
@@ -392,6 +411,7 @@ interface SecurityIncident {
 6. **Lessons Learned**: Post-incident review and improvements
 
 ### **Communication Plan**
+
 - **Internal Communication**: Team notification and coordination
 - **External Communication**: Customer notification requirements
 - **Regulatory Reporting**: Required notifications to authorities
@@ -400,18 +420,21 @@ interface SecurityIncident {
 ## 10. **Security Awareness and Training**
 
 ### **Employee Training Program**
+
 - **New Hire Training**: Security fundamentals and policies
 - **Annual Refresher**: Updated security awareness training
 - **Role-Specific Training**: Specialized training by job function
 - **Phishing Simulations**: Regular security testing exercises
 
 ### **Security Metrics**
+
 - **Training Completion**: Percentage of employees trained
 - **Phishing Success Rate**: Percentage falling for simulated attacks
 - **Incident Reporting**: Number and timeliness of security reports
 - **Policy Acknowledgment**: Confirmation of policy understanding
 
 ### **Awareness Campaigns**
+
 - **Monthly Themes**: Focused security topics
 - **Lunch and Learn**: Educational sessions
 - **Security Champions**: Department-level security advocates
@@ -420,12 +443,14 @@ interface SecurityIncident {
 ## 11. **Security Monitoring and Logging**
 
 ### **Security Information and Event Management (SIEM)**
+
 - **Log Collection**: Centralized logging from all systems
 - **Real-time Analysis**: Automated threat detection
 - **Alert Generation**: Immediate notification of security events
 - **Forensic Analysis**: Detailed investigation capabilities
 
 ### **Key Security Metrics**
+
 ```typescript
 interface SecurityMetrics {
   authentication: {
@@ -453,6 +478,7 @@ interface SecurityMetrics {
 ```
 
 ### **Compliance Reporting**
+
 - **Automated Reports**: Daily, weekly, and monthly security summaries
 - **Executive Dashboards**: High-level security posture overview
 - **Regulatory Reports**: Required submissions to authorities
@@ -461,6 +487,7 @@ interface SecurityMetrics {
 ## 12. **Vendor and Third-Party Security**
 
 ### **Vendor Risk Assessment**
+
 ```typescript
 interface VendorAssessment {
   vendor: string;
@@ -489,6 +516,7 @@ interface SecurityControl {
 ```
 
 ### **Third-Party Access Management**
+
 - **Just-in-Time Access**: Temporary access for specific tasks
 - **Access Reviews**: Regular review of third-party permissions
 - **Monitoring**: Continuous monitoring of third-party activities
@@ -497,12 +525,14 @@ interface SecurityControl {
 ## 13. **Business Continuity and Disaster Recovery**
 
 ### **Business Impact Analysis**
+
 - **Critical Business Functions**: Identification of essential operations
 - **Recovery Time Objectives (RTO)**: Maximum allowable downtime
 - **Recovery Point Objectives (RPO)**: Maximum allowable data loss
 - **Impact Assessment**: Quantitative and qualitative impact evaluation
 
 ### **Disaster Recovery Plan**
+
 ```typescript
 interface DisasterRecoveryPlan {
   scenarios: DisasterScenario[];

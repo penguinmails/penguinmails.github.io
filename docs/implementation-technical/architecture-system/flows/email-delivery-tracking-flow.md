@@ -70,24 +70,28 @@ sequenceDiagram
 ## Email Lifecycle Stages
 
 ### **1. Campaign Initiation**
+
 - **Campaign Creation**: User creates email campaign through dashboard
 - **Data Storage**: Campaign configuration stored in database
 - **Job Queueing**: Individual email jobs created and queued for processing
 - **Worker Assignment**: Queue system assigns jobs to available email workers
 
 ### **2. Email Delivery Process**
+
 - **SMTP Processing**: Email workers process queued jobs
 - **MailU Integration**: Emails sent through MailU SMTP stack
 - **Delivery Confirmation**: MailU confirms successful delivery to recipients
 - **Status Updates**: Email delivery status updated in database
 
 ### **3. Engagement Tracking**
+
 - **Open Tracking**: Invisible pixels track email opens
 - **Click Tracking**: Links redirect through tracking system
 - **Reply Processing**: Email replies captured and processed
 - **Bounce Handling**: Failed deliveries logged and processed
 
 ### **4. Real-Time Analytics**
+
 - **Event Processing**: All interactions processed by analytics engine
 - **Performance Metrics**: Delivery rates, open rates, click rates calculated
 - **Database Updates**: Analytics data aggregated and stored
@@ -96,6 +100,7 @@ sequenceDiagram
 ## Tracking Features
 
 ### **Comprehensive Event Capture**
+
 - **Delivery Status**: Successful/failed delivery tracking
 - **Open Tracking**: Invisible pixel tracking for open rates
 - **Click Tracking**: Link tracking for click-through rates
@@ -103,12 +108,14 @@ sequenceDiagram
 - **Bounce Management**: Hard/soft bounce classification and handling
 
 ### **Real-Time Processing**
+
 - **Immediate Analytics**: Events processed as they occur
 - **Live Dashboard**: Real-time campaign performance updates
 - **Alert System**: Automatic alerts for delivery issues
 - **Performance Monitoring**: Continuous deliverability monitoring
 
 ### **Data Integrity**
+
 - **Event Audit Trail**: Complete logging of all email interactions
 - **Data Validation**: Event data validation and error handling
 - **Consistency Checks**: Database consistency validation
@@ -117,6 +124,7 @@ sequenceDiagram
 ## Analytics Integration
 
 ### **Performance Metrics**
+
 - **Delivery Rates**: Percentage of successfully delivered emails
 - **Open Rates**: Percentage of delivered emails that were opened
 - **Click Rates**: Percentage of opened emails with link clicks
@@ -124,6 +132,7 @@ sequenceDiagram
 - **Bounce Rates**: Percentage of emails that failed to deliver
 
 ### **Optimization Insights**
+
 - **Deliverability Optimization**: Recommendations based on performance data
 - **Content Analysis**: A/B testing results and content performance
 - **Timing Optimization**: Optimal send time recommendations

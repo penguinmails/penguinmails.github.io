@@ -196,7 +196,7 @@ Each card displays:
 **Metadata**:
 
 - **Created**: "November 1, 2025 at 3:45 PM"
-- **Created By**: "john@company.com"
+- **Created By**: "<john@company.com>"
 - **Last Used**: "2 hours ago"
 - **Expires**: "Never" or specific date.
 

@@ -74,6 +74,7 @@ interface Incident {
 ```
 
 ### Incident Categories
+
 - **Security Incidents**: Unauthorized access, data breaches, malware
 - **System Outages**: Service unavailability, performance degradation
 - **Data Incidents**: Data corruption, loss, or unauthorized disclosure
@@ -83,6 +84,7 @@ interface Incident {
 ## Roles and Responsibilities
 
 ### Incident Response Team (IRT)
+
 ```typescript
 interface IncidentResponseTeam {
   incidentCommander: {
@@ -128,6 +130,7 @@ interface IncidentResponseTeam {
 ```
 
 ### Escalation Contacts
+
 - **Primary On-call**: Engineering Lead (24)
 - **Secondary On-call**: DevOps Engineer (24)
 - **Management**: CTO (Business hours), CEO (Critical incidents)
@@ -136,6 +139,7 @@ interface IncidentResponseTeam {
 ## Detection and Assessment
 
 ### Monitoring and Alerting
+
 ```typescript
 interface MonitoringConfig {
   systemHealth: {
@@ -168,6 +172,7 @@ interface MonitoringConfig {
 ```
 
 ### Initial Assessment Process
+
 1. **Alert Triage**: Automated alerts routed to on-call engineer
 2. **Impact Evaluation**: Assess affected systems, users, and business impact
 3. **Severity Classification**: Assign appropriate severity level
@@ -175,6 +180,7 @@ interface MonitoringConfig {
 5. **Notification**: Alert incident response team if SEV-1 or SEV-2
 
 ### Impact Assessment Framework
+
 ```typescript
 interface ImpactAssessment {
   technical: {
@@ -202,6 +208,7 @@ interface ImpactAssessment {
 ## Response Procedures
 
 ### Containment Phase
+
 ```typescript
 interface ContainmentStrategy {
   immediate: {
@@ -254,6 +261,7 @@ const containmentPlaybooks = {
 ```
 
 ### Investigation Phase
+
 1. **Evidence Collection**: Preserve logs, screenshots, and system state
 2. **Root Cause Analysis**: Identify underlying cause using 5-whys technique
 3. **Impact Analysis**: Assess full scope of incident effects
@@ -261,6 +269,7 @@ const containmentPlaybooks = {
 5. **Evidence Preservation**: Maintain chain of custody for legal purposes
 
 ### Recovery Phase
+
 ```typescript
 interface RecoveryProcess {
   validation: {
@@ -301,6 +310,7 @@ interface RecoveryProcess {
 ## Communication Procedures
 
 ### Internal Communication
+
 ```typescript
 interface InternalCommunication {
   immediate: {
@@ -320,6 +330,7 @@ interface InternalCommunication {
 ```
 
 ### External Communication
+
 ```typescript
 interface ExternalCommunication {
   customers: {
@@ -357,6 +368,7 @@ interface ExternalCommunication {
 ```
 
 ### Status Page Management
+
 - **Real-time Updates**: Automated status updates based on monitoring
 - **Incident Details**: Clear description of issues and impact
 - **Timeline**: Chronological incident timeline
@@ -366,6 +378,7 @@ interface ExternalCommunication {
 ## Post-Incident Activities
 
 ### Incident Closure
+
 ```typescript
 interface IncidentClosure {
   validation: {
@@ -398,6 +411,7 @@ interface IncidentClosure {
 ```
 
 ### Post-Mortem Process
+
 ```typescript
 interface PostMortem {
   timing: 'Within 5 business days of incident resolution';
@@ -431,6 +445,7 @@ interface PostMortemAction {
 ```
 
 ### Continuous Improvement
+
 - **Lessons Learned**: Document and share incident insights
 - **Process Updates**: Refine response procedures based on experience
 - **Tool Improvements**: Enhance monitoring and alerting capabilities
@@ -439,6 +454,7 @@ interface PostMortemAction {
 ## Legal and Compliance Considerations
 
 ### Data Breach Notification Requirements
+
 ```typescript
 interface BreachNotification {
   gdpr: {
@@ -473,6 +489,7 @@ interface BreachNotification {
 ```
 
 ### Evidence Preservation
+
 - **Chain of Custody**: Document all evidence handling procedures
 - **Forensic Imaging**: Preserve system state for analysis
 - **Log Preservation**: Maintain all relevant logs and audit trails
@@ -481,6 +498,7 @@ interface BreachNotification {
 ## Testing and Maintenance
 
 ### Incident Response Testing
+
 ```typescript
 interface IncidentTesting {
   tableTopExercises: {
@@ -513,6 +531,7 @@ interface IncidentTesting {
 ```
 
 ### Plan Maintenance
+
 - **Annual Review**: Complete plan review and updates
 - **Change Management**: Update plan when significant changes occur
 - **Contact Updates**: Maintain current contact information
@@ -521,6 +540,7 @@ interface IncidentTesting {
 ## Metrics and Reporting
 
 ### Incident Metrics
+
 ```typescript
 interface IncidentMetrics {
   response: {
@@ -544,6 +564,7 @@ interface IncidentMetrics {
 ```
 
 ### Reporting Requirements
+
 - **Monthly Reports**: Incident summary and trend analysis
 - **Quarterly Reviews**: Process effectiveness and improvement opportunities
 - **Annual Audits**: Comprehensive plan and procedure review
@@ -552,12 +573,14 @@ interface IncidentMetrics {
 ## Tools and Resources
 
 ### Incident Response Tools
+
 - **Communication**: Slack channels, Zoom bridges, status page
 - **Monitoring**: DataDog, New Relic, custom dashboards
 - **Documentation**: Confluence, Google Docs, incident timeline tools
 - **Alerting**: PagerDuty, OpsGenie, custom alerting systems
 
 ### Resource Inventory
+
 - **Contact Lists**: Updated emergency contact information
 - **Runbooks**: Detailed response procedures for common incidents
 - **Templates**: Incident report, communication, and post-mortem templates
@@ -566,6 +589,7 @@ interface IncidentMetrics {
 ---
 
 ## Related Documents
+
 - [Infrastructure Operations Management](infrastructure-operations-management)) - System architecture and deployment details
 - [Environment & Release Management](environment-release-management)) - Deployment and rollback procedures
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security incident handling architecture and controls

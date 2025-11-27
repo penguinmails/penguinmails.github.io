@@ -56,6 +56,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ```
 
 ### Color and Contrast
+
 - **Normal text**: 4.5:1 contrast ratio minimum
 - **Large text** (18pt+ or 14pt+ bold): 3:1 contrast ratio minimum
 - **UI components**: 3:1 contrast ratio minimum
@@ -75,12 +76,14 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ```
 
 ### Audio and Video
+
 - **Captions** for all video content
 - **Transcripts** for audio-only content
 - **Audio descriptions** for video content with important visual information
 - **Pause/stop controls** for auto-playing media
 
 ### Structure and Semantics
+
 - **Heading hierarchy**: H1 → H2 → H3 (no skipping levels)
 - **Semantic HTML**: Use proper elements (`<main>`, `<nav>`, `<article>`, etc.)
 - **Landmarks**: ARIA landmarks for screen reader navigation
@@ -89,6 +92,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## Operable Guidelines
 
 ### Keyboard Navigation
+
 - **All interactive elements** must be keyboard accessible
 - **Logical tab order** following reading order
 - **Keyboard shortcuts** don't interfere with screen readers
@@ -111,11 +115,13 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ```
 
 ### Touch Targets
+
 - **Minimum size**: 44px × 44px for touch targets
 - **Adequate spacing**: 8px minimum between interactive elements
 - **Touch gestures**: Support common gestures with alternatives
 
 ### Timing and Movement
+
 - **No auto-advancing** carousels or timed content without pause controls
 - **Adjustable timeouts**: At least 20 seconds, preferably 10 minutes
 - **Reduced motion**: Respect `prefers-reduced-motion` setting
@@ -133,6 +139,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ```
 
 ### Error Prevention
+
 - **Clear error messages** explaining what went wrong
 - **Suggestions for correction** when possible
 - **Confirmation** for destructive actions
@@ -141,18 +148,21 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## Understandable Guidelines
 
 ### Clear Language
+
 - **Plain language** avoiding jargon and technical terms
 - **Consistent terminology** throughout the interface
 - **Progressive disclosure** of complex information
 - **Helpful error messages** with actionable guidance
 
 ### Predictable Behavior
+
 - **Consistent navigation** across all pages
 - **Expected interactions** following platform conventions
 - **Clear focus indicators** for keyboard navigation
 - **No unexpected context changes**
 
 ### Input Assistance
+
 - **Field labels** clearly associated with inputs
 - **Input formats** clearly specified (e.g., "MM/DD)
 - **Help text** available for complex fields
@@ -173,12 +183,14 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## Robust Guidelines
 
 ### Compatible Technologies
+
 - **Standards compliance**: Valid HTML5, CSS3, and JavaScript
 - **Progressive enhancement**: Core functionality works without JavaScript
 - **Cross-browser support**: Modern browsers with fallbacks
 - **API accessibility**: REST APIs designed for assistive technology
 
 ### Assistive Technology Support
+
 - **Screen readers**: JAWS, NVDA, VoiceOver, TalkBack
 - **Screen magnifiers**: ZoomText, built-in browser zoom
 - **Voice control**: Dragon NaturallySpeaking
@@ -187,6 +199,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ## Implementation Guidelines
 
 ### Development Process
+
 1. **Accessibility-first design**: Consider accessibility in initial designs
 2. **Automated testing**: Run accessibility audits during development
 3. **Manual testing**: Include assistive technology testing
@@ -194,6 +207,7 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 5. **Continuous monitoring**: Regular accessibility audits post-launch
 
 ### Code Quality Standards
+
 ```typescript
 // Accessible component example
 interface ButtonProps {
@@ -228,6 +242,7 @@ export function Button({
 ### Accessibility Testing Checklist
 
 #### Automated Testing
+
 - [ ] Color contrast ratios meet WCAG standards
 - [ ] Alt text provided for all images
 - [ ] Form fields properly labeled
@@ -237,6 +252,7 @@ export function Button({
 - [ ] Focus indicators are visible
 
 #### Manual Testing
+
 - [ ] Screen reader navigation works
 - [ ] Keyboard-only operation possible
 - [ ] Touch targets are adequate size
@@ -245,6 +261,7 @@ export function Button({
 - [ ] Color is not the only way information is conveyed
 
 #### Assistive Technology Testing
+
 - [ ] Works with screen readers (NVDA, JAWS, VoiceOver)
 - [ ] Works with voice control software
 - [ ] Works with screen magnification
@@ -254,6 +271,7 @@ export function Button({
 ## Component-Specific Guidelines
 
 ### Data Tables
+
 ```html
 <table role="table" aria-label="Campaign performance data">
   <thead>
@@ -276,6 +294,7 @@ export function Button({
 ```
 
 ### Modal Dialogs
+
 ```html
 <div role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-header">
@@ -295,6 +314,7 @@ export function Button({
 ```
 
 ### Progress Indicators
+
 ```html
 <div role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
   <span class="sr-only">Sending emails: 75% complete</span>
@@ -303,6 +323,7 @@ export function Button({
 ```
 
 ### Custom Components
+
 - **ARIA attributes**: Use appropriate ARIA roles and properties
 - **Keyboard support**: Custom components need keyboard event handlers
 - **Focus management**: Proper focus behavior for complex components
@@ -311,6 +332,7 @@ export function Button({
 ## Content Guidelines
 
 ### Writing for Accessibility
+
 - **Clear headings** that describe section content
 - **Short paragraphs** (3-5 sentences maximum)
 - **Simple words** avoiding complex vocabulary
@@ -318,6 +340,7 @@ export function Button({
 - **Front-loaded content** (most important information first)
 
 ### Visual Design Guidelines
+
 - **Sufficient contrast** for all text and UI elements
 - **Meaningful icons** with text labels
 - **Consistent spacing** for visual hierarchy
@@ -325,6 +348,7 @@ export function Button({
 - **Readable fonts** at appropriate sizes
 
 ### Multimedia Content
+
 - **Audio content** requires transcripts
 - **Video content** requires captions and audio descriptions
 - **Animations** should be optional and respect user preferences
@@ -333,6 +357,7 @@ export function Button({
 ## Tools and Resources
 
 ### Development Tools
+
 - **axe DevTools**: Browser extension for accessibility testing
 - **WAVE**: Web accessibility evaluation tool
 - **Lighthouse**: Automated accessibility auditing
@@ -340,12 +365,14 @@ export function Button({
 - **NVDA**: Free screen reader for testing
 
 ### Design Tools
+
 - **Stark**: Contrast checking and simulation tools
 - **Color Oracle**: Color blindness simulation
 - **Accessibility Plugin for Figma**: Design-time accessibility checks
 - **Contrast Grid**: Contrast ratio visualization
 
 ### Testing Environments
+
 - **Screen Reader Testing**: NVDA (Windows), VoiceOver (macOS), TalkBack (Android)
 - **Keyboard Testing**: Full keyboard navigation testing
 - **Mobile Testing**: Touch target and gesture testing
@@ -354,18 +381,21 @@ export function Button({
 ## Monitoring and Maintenance
 
 ### Accessibility Audits
+
 - **Quarterly automated scans** of all pages
 - **Annual comprehensive audit** by external experts
 - **Continuous monitoring** of accessibility metrics
 - **User feedback integration** from accessibility issues
 
 ### Performance Metrics
+
 - **Accessibility score**: Lighthouse accessibility score > 90
 - **Issue resolution time**: Average time to fix accessibility issues < 48 hours
 - **User satisfaction**: Accessibility-related support ticket volume
 - **Compliance rate**: Percentage of components meeting accessibility standards
 
 ### Training and Awareness
+
 - **Developer training**: Accessibility fundamentals for all developers
 - **Designer training**: Inclusive design principles and techniques
 - **QA training**: Accessibility testing methodologies
@@ -374,28 +404,34 @@ export function Button({
 ## Common Issues and Solutions
 
 ### Missing Alt Text
+
 **Issue**: Images without alternative text
 **Solution**: Implement alt text requirements in component library
 
 ### Poor Color Contrast
+
 **Issue**: Text doesn't meet contrast requirements
 **Solution**: Design system enforces contrast ratios
 
 ### Keyboard Navigation Problems
+
 **Issue**: Interactive elements not keyboard accessible
 **Solution**: Component library includes keyboard support by default
 
 ### Missing Form Labels
+
 **Issue**: Form fields without proper labels
 **Solution**: Form components require labels and enforce proper association
 
 ### Inaccessible Custom Components
+
 **Issue**: Custom widgets not accessible to assistive technology
 **Solution**: ARIA implementation guidelines and testing requirements
 
 ---
 
 ## Related Documents
+
 - [Design System](/docs/design/design-system) - Complete design system overview
 - [Design Tokens](design-tokens) - Design token specifications
 - [Component Library](component-library) - Reusable component catalog

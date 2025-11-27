@@ -169,6 +169,81 @@ Each feature document is structured in **three progressive complexity levels**:
 |---------|--------|----------|----------|
 | **[Workflow Automation](./automation/workflow-automation/overview.md)** | Planned | 0% | Medium |
 
+---
+
+## Strategic Architecture Decisions
+
+### 🚨 Critical Blocker: Stalwart Mail Server Integration
+
+**Impact**: Blocks all inbox management development
+
+**Issue**: The unified inbox architecture proposes custom tables without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
+
+**Required Action**: 3-5 day architecture spike (Q4 2025) to determine:
+
+- Can we extend Stalwart's schema with custom fields?
+- Should inbox metadata live in OLTP, Content DB, or Stalwart's database?
+- How does Stalwart store emails and can we add foreign keys?
+
+**Affected Features**:
+
+- [Unified Inbox](/docs/features/inbox/unified-inbox/overview) - Email threading, star/favorite, folders (Q1 2026)
+- [Campaign Reply Detection](/docs/features/campaigns/roadmap#7-reply-detection-and-management) - Reply attribution to campaigns (Q1 2026)
+
+**See**: [Inbox Management Roadmap](/docs/features/inbox/roadmap) for details
+
+---
+
+### 🤖 AI Strategy: Google Gemini AI
+
+**Decision**: Use Google Gemini AI consistently across all AI-powered features
+
+**Rationale**:
+
+- **Cost-effective**: $0.00025 per 1K tokens (vs. $0.03 for OpenAI GPT-4)
+- **Generous free tier**: 1,500 requests/day (sufficient for early MVP)
+- **Consistency**: Single AI provider simplifies integration and maintenance
+- **Long-term plan**: Train custom models (Q1 2027) to reduce costs by 80-90%
+
+**Affected Features**:
+
+- [Inbox Smart Replies](/docs/features/inbox/roadmap#7-smart-reply-suggestions-gemini-ai) - AI-generated reply suggestions (Q2 2026)
+- [Inbox Sentiment Analysis](/docs/features/inbox/roadmap#8-sentiment-analysis--tone-detection) - Emotion detection (Q2 2026)
+- [Predictive Analytics](/docs/features/analytics/roadmap#6-post-mvp---p2-predictive-analytics) - Send time optimization, churn prediction (Q1 2026)
+- [Campaign Optimization](/docs/features/campaigns/roadmap#1-ai-powered-campaign-optimization) - Auto-optimization (Q4 2026)
+
+**Cost Estimate**: $20-87.50/month for Post-MVP features (Q2 2026)
+
+---
+
+### 🔌 Integration Strategy: API-First Approach
+
+**Decision**: Build general-purpose REST API + webhooks first, add vendor-specific integrations later
+
+**Rationale**:
+
+- **Faster time-to-market**: General API (6-9 weeks) vs. vendor integrations (20-30 days each)
+- **Customer flexibility**: Technical customers can integrate with ANY system immediately
+- **Lower maintenance**: One stable API vs. multiple vendor-specific integrations
+- **Foundation for future**: Vendor integrations built on top of stable API
+
+**Timeline**:
+
+- **Q1 2026 (MVP)**: Core REST API + webhook system (6-9 weeks)
+- **Q1-Q2 2026 (Post-MVP)**: Salesforce, HubSpot integrations (20-30 days each)
+- **Q2 2026**: Zapier integration (2-3 weeks)
+
+**Affected Features**:
+
+- [API Key Management](/docs/features/integrations/vault-api-keys) - Secure API access (Q1 2026)
+- [Webhook System](/docs/features/integrations/webhook-system) - Real-time event notifications (Q1 2026)
+- [CRM Integration](/docs/features/integrations/crm-integration/overview) - Salesforce, HubSpot (Q1-Q2 2026)
+- [Zapier Integration](/docs/features/automation/roadmap#11-zapier-integration-q2-2027) - 5,000+ app ecosystem (Q2 2026)
+
+**See**: [Integrations Roadmap](/docs/features/integrations/roadmap) for details
+
+---
+
 ### Q4 2026 - Q1 2027: Enterprise Ready
 
 | Feature | Status | Progress | Priority |

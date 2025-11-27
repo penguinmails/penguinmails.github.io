@@ -40,6 +40,7 @@ securitySchemes:
 ## Marketing Integration APIs
 
 ### Health Trigger API
+
 ```
 POST /marketing/triggers/{customer_id}
 Content-Type: application/json
@@ -60,6 +61,7 @@ Response 202:
 ```
 
 ### Campaign Performance API
+
 ```markdown
 GET /marketing/performance/{campaign_id}
 Response 200:
@@ -77,6 +79,7 @@ Response 200:
 ## Sales Integration APIs
 
 ### Handoff Completion API
+
 ```markdown
 POST /sales/handoff/complete/{deal_id}
 Request:
@@ -94,6 +97,7 @@ Response 200:
 ```
 
 ### Expansion Opportunity API
+
 ```markdown
 GET /sales/expansion/{customer_id}
 Response 200:
@@ -111,6 +115,7 @@ Response 200:
 ## Product Integration APIs
 
 ### Adoption Insights API
+
 ```markdown
 GET /product/adoption/{feature_id}
 Response 200:
@@ -123,6 +128,7 @@ Response 200:
 ```
 
 ### Feedback Submission API
+
 ```markdown
 POST /product/feedback
 Request:
@@ -148,6 +154,7 @@ Response 201:
 ## Finance Integration APIs
 
 ### Value Realization API
+
 ```markdown
 GET /finance/realization/{contract_id}
 Response 200:
@@ -159,6 +166,7 @@ Response 200:
 ```
 
 ### Forecast Adjustment API
+
 ```markdown
 POST /finance/forecast/{customer_id}
 Request:
@@ -176,6 +184,7 @@ Request:
 ## Operations Integration APIs
 
 ### Workflow Execution API
+
 ```markdown
 POST /operations/execute/{workflow_id}/{customer_id}
 Request:
@@ -192,6 +201,7 @@ Response 202:
 ```
 
 ### Capacity Forecast API
+
 ```markdown
 GET /operations/capacity/forecast?period=next_90d
 Response 200:
@@ -232,6 +242,7 @@ X-Audit-Trail: audit-log-url
 Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 
 **Related Documentation:**
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
 - [Domain Maps](/docs/business/customer-success/cross-domain-integration)
 

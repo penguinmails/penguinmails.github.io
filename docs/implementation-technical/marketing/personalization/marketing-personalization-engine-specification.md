@@ -1053,5 +1053,5 @@ class PersonalizationPerformanceMonitor {
 - **For journey optimization see:** `docs/business/marketing/journey/summary.md`
 - **For technical foundation see:** `../analytics-integration/marketing-analytics-architecture.md`
 
-This technical implementation focuses exclusively on personalization system architecture and real-time decisioning algorithms without business value narratives.
+This technical implementation focuses exclusively on personalization system architecture and real-time decisioning algorithms without business value narratives
 ---

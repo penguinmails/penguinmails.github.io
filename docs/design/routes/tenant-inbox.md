@@ -273,3 +273,83 @@
 
 - **`ReplyComposer`**: Rich text input with "Insert Template" and "AI Assist" actions.
 - **`LeadContextSidebar`**: Reused from Lead Profile Drawer.
+
+---
+
+## 9. Implementation Status & MVP Gaps
+
+### Current Status
+
+**Documentation**: Complete route specifications with comprehensive UI patterns and component architecture.
+
+**Implementation**: Pending architecture spike completion.
+
+### Critical Blocker: Stalwart Integration
+
+**Problem**: The inbox architecture proposes custom tables (`inbox_threads`, `inbox_messages`) without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
+
+**Required Investigation** (Q4 2025 - 3-5 days):
+
+- Can we extend Stalwart's schema with custom fields?
+- Should inbox metadata live in OLTP, Content DB, or Stalwart's database?
+- How does Stalwart store emails and can we add foreign keys?
+
+**Impact**: This architectural decision blocks all inbox development.
+
+### MVP Gaps (Q1 2026 - Post-Spike)
+
+Once the Stalwart investigation is complete, the following features need implementation:
+
+1. **Email Threading Algorithm** (1-2 weeks)
+   - Match replies using RFC 5322 headers (References, In-Reply-To)
+   - Fallback to Subject + Contact matching
+   - Handle edge cases (forwarded emails, subject changes)
+
+2. **Star/Favorite Feature** (2-3 days)
+   - Add star icon to thread list UI
+   - Create "Starred" folder view
+   - Implement star/unstar API endpoint
+
+3. **Folder/View System** (3-5 days)
+   - Implement All, Starred, Sent, Archived, Trash views
+   - Add "Archive" and "Delete" actions with bulk support
+   - Implement soft delete (trash folder, permanent delete after 30 days)
+
+4. **Attachment Support** (1-2 days documentation)
+   - Document integration with existing Content DB attachments table
+   - Add file upload UI specifications
+   - Document file size limits (25 MB per attachment)
+
+5. **Browser Notifications** (1-2 days integration)
+   - Integrate with existing Notifications Database
+   - Request browser notification permission on first inbox visit
+   - Create notification when new reply arrives
+
+**Total MVP Effort**: Unknown until Stalwart spike complete (estimated 2-4 weeks post-spike)
+
+### Post-MVP Enhancements (Q2-Q3 2026)
+
+**Q2 2026: AI Features**
+
+- Smart Reply Suggestions (Gemini AI) - 1-2 weeks
+- Sentiment Analysis & Tone Detection - 3-5 days
+- Advanced Inbox Analytics - 3-4 weeks
+- Scheduled Sending - 3-5 days
+- Lead Context Sidebar - 2-3 weeks
+
+**Q3 2026: International Features**
+
+- Offline Support (IndexedDB) - 3-5 days
+- Multi-Language Support & Translation - 1-2 weeks
+
+### Related Documentation
+
+- [Inbox Management Roadmap](/docs/features/inbox/roadmap) - Detailed timeline and roadmap items
+- [Unified Inbox Overview](/docs/features/inbox/unified-inbox/overview) - Feature specifications
+- [Stalwart Investigation Spike](/tasks/spike-stalwart-database-schema-investigation) - Architecture investigation task
+
+---
+
+**Last Updated**: November 26, 2025  
+**Status**: Route specifications complete, awaiting Stalwart spike completion  
+**Next Review**: After Stalwart spike (Q4 2025)

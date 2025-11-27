@@ -147,18 +147,23 @@ For detailed implementation timeline and planned enhancements:
 ### Multi-Layered Security Model
 
 **Layer 1: Network Security**
+
 - VPS firewall rules, DDoS protection, IP whitelisting, Fail2ban
 
 **Layer 2: Application Security**
+
 - Authentication middleware, rate limiting, CSRF protection, security headers
 
 **Layer 3: Data Security**
+
 - Database encryption, field-level encryption, key management
 
 **Layer 4: Email Security**
+
 - SPF, DKIM, DMARC authentication, SMTP TLS, sender reputation monitoring
 
 **Layer 5: Monitoring & Response**
+
 - Comprehensive audit logging, suspicious activity detection, security alerts
 
 ### Critical Security Dependency
@@ -166,6 +171,7 @@ For detailed implementation timeline and planned enhancements:
 **Vault Integration (P0 - MVP Blocker):**
 
 HashiCorp Vault integration is a foundational security dependency for:
+
 - VPS SSH key management (automated rotation)
 - SMTP credentials storage (encrypted, rotated)
 - Tenant API key system (hashed, scoped permissions)
@@ -176,14 +182,17 @@ HashiCorp Vault integration is a foundational security dependency for:
 ## Third-Party Security Dependencies
 
 **Infrastructure:**
+
 - NileDB (multi-tenant PostgreSQL, GDPR compliant)
 - Redis (caching, queue management)
 - Hostwind (VPS hosting, US data centers, EU planned Q2 2026)
 
 **Payment Processing:**
+
 - Stripe (PCI DSS Level 1 certified)
 
 **Email Delivery (Optional):**
+
 - Postmark (transactional email, GDPR compliant)
 - Mailgun (bulk email, GDPR compliant, EU option available)
 

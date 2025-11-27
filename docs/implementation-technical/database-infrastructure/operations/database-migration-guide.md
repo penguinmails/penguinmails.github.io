@@ -90,6 +90,7 @@ ON vps_instances(approximate_cost) WHERE status = 'active';
 ```
 
 **Business Impact (Clarified):**
+
 - **Internal Visibility:** CFOs and Finance can see directional infrastructure cost allocations per tenant based on Hostwinds-modeled values.
 - **Budget Planning:** Finance teams can forecast costs using approximations aligned to Hostwinds pricing, not NileDB metering.
 - **Margin Analysis:** Product managers can estimate customer/unit economics using these internal references.
@@ -97,6 +98,7 @@ ON vps_instances(approximate_cost) WHERE status = 'active';
 - **Source of Truth Reminder:** All analyses must be reconciled to official provider invoices and Finance ledgers.
 
 **Cost Attribution Examples:**
+
 ```markdown
 Tenant A: 3 VPS instances × $150 = $450/month infrastructure cost
 Tenant B: 2 VPS instances × $200 = $400/month infrastructure cost
@@ -108,6 +110,7 @@ Tenant C: 1 VPS instance × $100 = $100/month infrastructure cost
 **Business Purpose:** Support infrastructure and deliverability cost analysis and ROI calculations for Hostwinds-backed resources.
 
 **Migration SQL:**
+
 ```sql
 -- ============================================================================
 -- ENHANCEMENT 2: SMTP IP Addresses Cost Tracking
@@ -136,12 +139,14 @@ ON smtp_ip_addresses(approximate_cost) WHERE status IN ('active', 'warmed', 'war
 ```
 
 **Business Impact:**
+
 - **Deliverability ROI:** Calculate cost per successful email delivery
 - **Resource Optimization:** Identify over-provisioned IP addresses
 - **Competitive Analysis:** Benchmark email service costs vs. industry
 - **IP Management:** Optimize IP warmup and allocation strategies
 
 **SMTP IP Approximate Cost Model (Clarified):**
+
 - Hostwinds API does not expose a clean, standalone "per IP" price.
 - Internal testing confirms an effective baseline of **$4.99/month per dedicated IP** for our current configuration.
 - Implementation guidance:
@@ -159,6 +164,7 @@ ON smtp_ip_addresses(approximate_cost) WHERE status IN ('active', 'warmed', 'war
 #### Executive Summary View
 
 **Migration SQL:**
+
 ```sql
 -- ============================================================================
 -- VIEW 1: Executive Business Summary
@@ -216,6 +222,7 @@ GROUP BY s.tenant_id, c.name, p.name, p.price_monthly, s.current_period_start, s
 ```
 
 **Executive Dashboard Queries:**
+
 ```sql
 -- Daily Executive Health Check
 SELECT
@@ -250,6 +257,7 @@ ORDER BY optimization_opportunity DESC;
 #### Business Cost Allocation View
 
 **Migration SQL:**
+
 ```sql
 -- ============================================================================
 -- VIEW 2: Business Cost Allocation
@@ -304,6 +312,7 @@ GROUP BY s.tenant_id, p.name, p.price_monthly;
 ```
 
 **Cost Analysis Queries:**
+
 ```sql
 -- Monthly Cost Analysis by Tenant
 SELECT
@@ -340,6 +349,7 @@ ORDER BY cost_per_email_delivered ASC;
 ### Step 4: Performance Optimization
 
 **Index Creation:**
+
 ```sql
 -- Performance indexes for executive queries
 CREATE INDEX IF NOT EXISTS idx_executive_business_summary_tenant
@@ -360,6 +370,7 @@ ON business_cost_allocation(monthly_profit) WHERE monthly_profit > 0;
 ```
 
 **Performance Benefits:**
+
 - **Executive Dashboard:** <3 second load times for business health summaries
 - **Cost Analysis:** <5 second query times for complex cost breakdowns
 - **Real-time Updates:** Immediate availability of cost data for live dashboards
@@ -368,6 +379,7 @@ ON business_cost_allocation(monthly_profit) WHERE monthly_profit > 0;
 ### Step 5: Security & Access Control
 
 **Permission Configuration:**
+
 ```sql
 -- ============================================================================
 -- SECURITY CONFIGURATION: Role-Based Access Control
@@ -394,6 +406,7 @@ CREATE POLICY cost_allocation_tenant_isolation ON business_cost_allocation
 ```
 
 **Access Control Matrix:**
+
 | Role | business_cost_allocation | executive_business_summary |
 |------|--------------------------|----------------------------|
 | C-Suite Executives | SELECT | SELECT |
@@ -409,6 +422,7 @@ CREATE POLICY cost_allocation_tenant_isolation ON business_cost_allocation
 ### Data Integrity Validation
 
 **Migration Success Queries:**
+
 ```sql
 -- Verify new columns exist
 SELECT
@@ -428,6 +442,7 @@ WHERE table_name IN ('vps_instances', 'smtp_ip_addresses')
 ```
 
 **Business Logic Validation:**
+
 ```sql
 -- Test business view accuracy
 SELECT
@@ -466,6 +481,7 @@ WHERE evs.dashboard_date = CURRENT_DATE;
 ```
 
 **Performance Validation:**
+
 ```sql
 -- Test query performance
 EXPLAIN ANALYZE
@@ -483,6 +499,7 @@ ORDER BY cost_efficiency_score DESC;
 ### Rollback Procedures
 
 **Emergency Rollback (if needed):**
+
 ```sql
 -- ============================================================================
 -- ROLLBACK PROCEDURES (Use Only in Emergency)
@@ -577,6 +594,7 @@ This section provides canonical guidance for Finance, Operations, and Customer S
     - Internal models as tooling PenguinMails uses for responsible operations, not as direct pass-through billing meters.
 
 ---
+
 ## Business Impact & Success Metrics
 
 ### Hostwinds-Backed Cost Modeling
@@ -611,16 +629,19 @@ Constraints and guarantees:
 ### Expected Business Outcomes
 
 **Revenue Protection:**
+
 - **Customer Churn Reduction:** 5% improvement through proactive cost/margin monitoring
 - **Deliverability Optimization:** $50K-100K annually in issue prevention
 - **Revenue Transparency:** Clear linkage between infra spend (Hostwinds) and plans, enabling rational pricing
 
 **Cost Optimization:**
+
 - **Infrastructure Efficiency:** 10-15% monthly cost savings through better allocation
 - **Resource Right-sizing:** Identify and eliminate over-provisioned instances and IPs grounded in real Hostwinds pricing
 - **Vendor Optimization:** Data-driven vendor negotiations and configuration choices based on actual price points
 
 **Executive Decision Making:**
+
 - **Decision Speed:** <48 hours for strategic decisions with full cost visibility
 - **Budget Accuracy:** 95% accuracy in cost forecasting and budget planning
 - **ROI Measurement:** Real-time tracking of strategic initiative returns
@@ -628,12 +649,14 @@ Constraints and guarantees:
 ### Technical Success Metrics
 
 **Database Performance:**
+
 - Query execution time: <500ms for executive dashboards
 - Index utilization: 100% for cost-based queries
 - Concurrent users supported: 100+ executives simultaneously
 - Data accuracy: 99.9% accuracy in cost calculations
 
 **Business Intelligence Accuracy:**
+
 - Cost attribution accuracy: 100% for infrastructure costs
 - Profitability calculations: 99.9% accuracy with real-time updates
 - Executive dashboard refresh: <3 seconds for complete business health summary
@@ -642,12 +665,14 @@ Constraints and guarantees:
 ### ROI Analysis
 
 **Migration Investment:**
+
 - **Database Engineering:** $15K for migration implementation
 - **Testing & Validation:** $8K for comprehensive testing
 - **Documentation & Training:** $5K for user documentation and training
 - **Total Investment:** $28K
 
 **Expected Annual Returns:**
+
 - **Cost Avoidance:** $75K annually in prevented cost overruns
 - **Optimization Savings:** $125K annually in infrastructure optimization
 - **Efficiency Gains:** $85K annually in reduced manual monitoring
@@ -661,30 +686,35 @@ Constraints and guarantees:
 ## Implementation Timeline
 
 ### Phase 1: Foundation (Week 1)
+
 - [ ] Database schema enhancements (approximate_cost fields)
 - [ ] Basic constraint and index creation
 - [ ] Data integrity validation
 - [ ] Initial testing with sample data
 
 ### Phase 2: Business Intelligence Views (Week 2)
+
 - [ ] Executive summary view creation
 - [ ] Business cost allocation view creation
 - [ ] Performance optimization indexing
 - [ ] Query performance validation
 
 ### Phase 3: Security & Access Control (Week 3)
+
 - [ ] Role-based access control implementation
 - [ ] Row Level Security configuration
 - [ ] Permission testing and validation
 - [ ] Security audit and compliance verification
 
 ### Phase 4: Testing & Validation (Week 4)
+
 - [ ] End-to-end business workflow testing
 - [ ] Executive dashboard integration testing
 - [ ] Performance testing under load
 - [ ] Business user acceptance testing
 
 ### Phase 5: Production Deployment (Week 5)
+
 - [ ] Production migration execution
 - [ ] Real-time monitoring setup
 - [ ] Executive user training
@@ -695,16 +725,19 @@ Constraints and guarantees:
 ## Integration Points
 
 ### Business Intelligence Dashboard
+
 - **Real-time Data:** Direct integration with executive dashboard components
 - **Cost Monitoring:** Live cost tracking and optimization opportunity identification
 - **Executive Alerts:** Automated alerts for cost anomalies and optimization opportunities
 
 ### PostHog Analytics Integration
+
 - **Event Tracking:** Cost optimization events for executive reporting
 - **Business Metrics:** Real-time cost and efficiency metrics for analytics
 - **Trend Analysis:** Historical cost data for strategic planning
 
 ### Executive Reporting Framework
+
 - **Automated Reports:** Cost data feeds daily, weekly, and monthly executive reports
 - **ROI Analysis:** Comprehensive cost-benefit analysis for strategic decisions
 - **Performance Tracking:** Executive KPI tracking with cost attribution
@@ -715,5 +748,5 @@ Constraints and guarantees:
 **Business Stakeholder Access:** CTOs, Database Architects, Business Intelligence Directors
 **Technical Stakeholder Access:** Database Administrators, Backend Engineers, Business Intelligence Engineers
 
-This database migration guide provides the foundation for executive-level cost attribution and business intelligence, enabling data-driven strategic decision making with clear ROI justification and measurable business impact.
+This database migration guide provides the foundation for executive-level cost attribution and business intelligence, enabling data-driven strategic decision making with clear ROI justification and measurable business impact
 ---

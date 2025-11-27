@@ -632,22 +632,26 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 ### Technical Metrics
 
 **Q1 2026 (MVP):**
+
 - Payment success rate > 95%
 - Invoice generation success rate > 99%
 - Usage tracking accuracy > 98%
 - Failed payment recovery rate > 60%
 
 **Q2 2026 (Enterprise):**
+
 - Custom pricing configuration time < 15 minutes
 - Contract renewal automation rate > 80%
 - Alternative payment method adoption > 20%
 
 **Q3 2026 (International):**
+
 - Multi-currency transaction success rate > 95%
 - Tax calculation accuracy > 99%
 - Revenue recognition automation > 90%
 
 **Q4 2026 (Retention):**
+
 - Subscription pause adoption > 10%
 - Dunning recovery rate > 70%
 - Churn prediction accuracy > 75%
@@ -655,21 +659,25 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 ### Business Metrics
 
 **Q1 2026 (MVP):**
+
 - Support tickets reduced by 30%
 - Self-service plan changes > 80%
 - Payment failure churn reduced by 40%
 
 **Q2 2026 (Enterprise):**
+
 - Enterprise customer acquisition enabled
 - Average contract value increased by 50%
 - Custom pricing deals closed > 10
 
 **Q3 2026 (International):**
+
 - International revenue > 20% of total
 - Multi-currency adoption > 30%
 - Referral program signups > 100
 
 **Q4 2026 (Retention):**
+
 - Involuntary churn reduced by 50%
 - Subscription pause retention > 60%
 - Predictive analytics accuracy > 70%

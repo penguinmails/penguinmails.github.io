@@ -64,6 +64,7 @@ Customer Success integrates with Product through well-defined data flows and API
 Customer usage patterns correlated with success outcomes to drive adoption optimization.
 
 **Primary Systems:**
+
 - CS Health Engine, Usage Analytics
 - Product Feature Flags, Adoption Dashboards
 
@@ -80,6 +81,7 @@ Success Correlation ◄─── Insights ──► CS Playbooks
 ### Key Integration Points
 
 **1. Segmented Adoption Analytics**
+
 ```json
 {
   "adoption_analytics": {
@@ -92,6 +94,7 @@ Success Correlation ◄─── Insights ──► CS Playbooks
 ```
 
 **2. Optimization Recommendations**
+
 ```json
 {
   "optimization_recs": {
@@ -106,6 +109,7 @@ Success Correlation ◄─── Insights ──► CS Playbooks
 ### CS-Product Adoption APIs
 
 **Adoption API:**
+
 ```markdown
 GET /api/v1/cs-product/adoption/{feature_id}
 - Segment-level adoption rates
@@ -133,6 +137,7 @@ POST /api/v1/cs-product/optimize
 Accelerated, prioritized customer voice from CS frontlines to product roadmap.
 
 **Primary Systems:**
+
 - CS Feedback Collection, NPS Engine
 - Product Feedback Prioritization, Jira Integration
 
@@ -149,6 +154,7 @@ Delivery Tracking ◄─── Roadmap ──► CS Confirmation
 ### Key Integration Points
 
 **1. Contextual Feedback Capture**
+
 ```json
 {
   "feedback_capture": {
@@ -161,6 +167,7 @@ Delivery Tracking ◄─── Roadmap ──► CS Confirmation
 ```
 
 **2. Prioritization Acceleration**
+
 ```json
 {
   "prioritization": {
@@ -175,6 +182,7 @@ Delivery Tracking ◄─── Roadmap ──► CS Confirmation
 ### CS-Feedback APIs
 
 **Feedback API:**
+
 ```markdown
 POST /api/v1/cs-product/feedback
 - Contextualized customer voice
@@ -202,6 +210,7 @@ GET /api/v1/cs-product/feedback/status/{ticket_id}
 CS success metrics directly influencing product prioritization and beta selection.
 
 **Primary Systems:**
+
 - CS Roadmap Voting, Beta Management
 - Product Planning Tools, Release Orchestration
 
@@ -218,6 +227,7 @@ Participant Mgmt ◄─── Selection ──► CS Validation
 ### Key Integration Points
 
 **1. Success-Weighted Voting**
+
 ```json
 {
   "roadmap_voting": {
@@ -230,6 +240,7 @@ Participant Mgmt ◄─── Selection ──► CS Validation
 ```
 
 **2. Beta Participant Selection**
+
 ```json
 {
   "beta_selection": {
@@ -244,6 +255,7 @@ Participant Mgmt ◄─── Selection ──► CS Validation
 ### CS-Roadmap APIs
 
 **Voting API:**
+
 ```markdown
 POST /api/v1/cs-product/vote/{feature_id}
 - Success-weighted prioritization vote
@@ -295,6 +307,7 @@ topics:
 ---
 
 **Related Documentation:**
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
 - [Product Systems Map](/docs/business/product/cross-domain-integration)
 

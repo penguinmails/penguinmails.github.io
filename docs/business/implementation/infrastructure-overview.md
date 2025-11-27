@@ -147,6 +147,7 @@ graph TB
 | **AWS EC2** | $6-8/month | $30-40/month | $192-336+/month | Enterprise features, global scale |
 
 **Strategic Considerations**:
+
 - **DigitalOcean**: Best for simplicity and ease of use
 - **Vultr**: Best for performance and geographic distribution
 - **AWS EC2**: Best for enterprise integration and scaling
@@ -167,6 +168,7 @@ graph TB
 ### Provider Technical Capabilities
 
 **SendGrid Enterprise Features**:
+
 - **API Rate Limits**: 1,000 requests/hour per API key
 - **Email Limits**: 12x contact limit per month (Pro)
 - **IP Management**: Automated warmup and rotation
@@ -174,6 +176,7 @@ graph TB
 - **Best For**: Enterprise campaigns with dedicated IP management
 
 **Mailgun Cold Email Optimization**:
+
 - **API Rate Limits**: 2,000 requests/hour per user
 - **Email Limits**: 12x contact limit per send (Scale)
 - **Cold Email Focus**: Built-in list hygiene and compliance
@@ -181,6 +184,7 @@ graph TB
 - **Best For**: High-volume cold email campaigns
 
 **Postmark Transactional Excellence**:
+
 - **API Rate Limits**: 500 requests/minute per token
 - **Reliability**: 99.99% uptime SLA
 - **Transaction Focus**: Unlimited transactional email volume
@@ -188,6 +192,7 @@ graph TB
 - **Best For**: Transactional emails, confirmations, notifications
 
 **Amazon SES Cost Optimization**:
+
 - **Scaling**: Auto-scaling sending quota
 - **Integration**: Full AWS ecosystem support
 - **Cost**: Most cost-effective at high volumes
@@ -224,26 +229,32 @@ graph LR
 ### Self-Hosted vs Managed ESP Analysis
 
 #### Self-Hosted Infrastructure
+
 **Advantages**:
+
 - **Complete Control**: Full customization and configuration
 - **Cost Efficiency**: Lower per-email costs at scale
 - **Data Sovereignty**: Complete data ownership and control
 - **Custom Integration**: Direct integration with existing systems
 
 **Disadvantages**:
+
 - **Technical Complexity**: Requires significant technical expertise
 - **Maintenance Overhead**: Ongoing system administration
 - **Reputation Management**: Manual IP reputation monitoring
 - **Compliance Burden**: GDPR/CCPA compliance self-implementation
 
 #### Managed ESP Solutions
+
 **Advantages**:
+
 - **Technical Simplicity**: Provider handles infrastructure complexity
 - **Built-in Compliance**: GDPR/CCPA tools and processes
 - **Expert Support**: Provider technical support and guidance
 - **Rapid Deployment**: Quick setup and scaling
 
 **Disadvantages**:
+
 - **Vendor Lock-in**: Difficult migration between providers
 - **Per-email Costs**: Higher per-email pricing
 - **Limited Customization**: Provider feature constraints
@@ -252,12 +263,14 @@ graph LR
 ### Architecture Decision Framework
 
 **Choose Self-Hosted When**:
+
 - **Volume**: 500K+ emails)
 - **Technical Team**: Strong email infrastructure expertise
 - **Customization**: Need specific integrations or workflows
 - **Compliance**: Have dedicated compliance and legal resources
 
 **Choose Managed ESP When**:
+
 - **Volume**: Under 500K emails)
 - **Technical Team**: Limited email infrastructure expertise
 - **Speed to Market**: Need rapid deployment and scaling
@@ -270,12 +283,14 @@ graph LR
 ### Performance Benchmarks by Infrastructure
 
 **Email Processing Capacity**:
+
 - **Single Server**: 1,000 emails/minute per CPU core
 - **Database**: 500 queries/second per CPU core
 - **Memory**: 1GB RAM per 10,000 active email addresses
 - **Storage**: 1GB per 1,000 emails stored
 
 **Key Performance Indicators**:
+
 - **Queue Size**: <100 messages for healthy system
 - **Processing Rate**: 100+ messages/minute for active systems
 - **Delivery Time**: <5 minutes for 95% of messages
@@ -294,6 +309,7 @@ graph LR
 | **AWS SES** | $100-800 | Medium (20h) | $500-1,500 | $800-2,500 |
 
 **Optimization Strategies**:
+
 1. **Hybrid Approach**: Self-hosted for volume, ESP for deliverability
 2. **Phased Migration**: Start with ESP, migrate to self-hosted at scale
 3. **Multi-Provider Strategy**: Use different providers for different use cases
@@ -304,18 +320,21 @@ graph LR
 ## Strategic Recommendations
 
 ### Phase 1: Foundation (1-3 months)
+
 1. **Provider Selection**: Choose primary VPS/ESP provider
 2. **Basic Setup**: Deploy essential infrastructure components
 3. **Authentication**: Implement SPF/DKIM/DMARC
 4. **Monitoring**: Deploy basic performance monitoring
 
 ### Phase 2: Optimization (3-6 months)
+
 1. **Performance Tuning**: Optimize server and ESP configurations
 2. **IP Management**: Implement IP rotation and reputation management
 3. **Backup Strategy**: Deploy comprehensive backup and disaster recovery
 4. **Compliance**: Complete GDPR/CCPA compliance implementation
 
 ### Phase 3: Scale (6-12 months)
+
 1. **Multi-Server**: Deploy load balanced infrastructure
 2. **Advanced Monitoring**: Implement comprehensive analytics
 3. **Cost Optimization**: Optimize costs based on usage patterns
@@ -326,14 +345,17 @@ graph LR
 ## Progressive Disclosure Navigation
 
 **For technical implementation:**
+
 - [ESP Technical Analysis](esp-technical-analysis:1) - Detailed ESP specifications
 - [Implementation Requirements](implementation-requirements:1) - Technical setup details
 
 **For business context:**
+
 - [Cost Analysis Overview](cost-analysis-overview:1) - Infrastructure cost analysis
 - [Performance Overview](performance-overview:1) - Performance impact analysis
 
 **For compliance:**
+
 - [Compliance Overview](compliance-overview:1) - Compliance requirements
 - [Compliance Implementation](compliance-implementation:1) - Technical compliance
 

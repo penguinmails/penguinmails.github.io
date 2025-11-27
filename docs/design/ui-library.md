@@ -237,6 +237,7 @@ interface ComponentProps extends BaseComponentProps {
 ## Layout Components
 
 ### Container System
+
 ```css
 /* Container variants */
 .container {
@@ -260,6 +261,7 @@ interface ComponentProps extends BaseComponentProps {
 ```
 
 ### Grid System
+
 ```typescript
 interface GridProps {
   columns?: number; // 1-12 columns
@@ -283,6 +285,7 @@ interface GridItemProps {
 ```
 
 ### Flexbox Utilities
+
 ```css
 /* Flexbox utility classes */
 .flex { display: flex; }
@@ -304,6 +307,7 @@ interface GridItemProps {
 ## Button Components
 
 ### Button Variants
+
 ```typescript
 type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger' | 'success';
 type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -335,6 +339,7 @@ interface ButtonProps {
 ```
 
 ### Button Group Pattern
+
 ```typescript
 interface ButtonGroupProps {
   variant?: 'segmented' | 'attached';
@@ -354,6 +359,7 @@ interface ButtonGroupProps {
 ## Form Components
 
 ### Input Field Variants
+
 ```typescript
 interface InputProps {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel' | 'url';
@@ -391,6 +397,7 @@ const [emailError, setEmailError] = useState('');
 ```
 
 ### Select Components
+
 ```typescript
 interface SelectOption {
   value: string | number;
@@ -425,6 +432,7 @@ interface SelectProps {
 ```
 
 ### Form Validation Patterns
+
 ```typescript
 interface ValidationRule {
   type: 'required' | 'email' | 'minLength' | 'maxLength' | 'pattern';
@@ -465,6 +473,7 @@ const FormField = ({ name, rules, children }: FormFieldProps) => {
 ## Data Display Components
 
 ### Table Component
+
 ```typescript
 interface TableColumn<T> {
   key: keyof T;
@@ -504,6 +513,7 @@ interface TableProps<T> {
 ```
 
 ### Card Component
+
 ```typescript
 interface CardProps {
   variant?: 'default' | 'elevated' | 'outlined' | 'filled';
@@ -538,6 +548,7 @@ interface CardProps {
 ## Feedback Components
 
 ### Alert Component
+
 ```jsx
 type AlertVariant = 'info' | 'success' | 'warning' | 'error';
 
@@ -568,6 +579,7 @@ interface AlertProps {
 ```
 
 ### Toast Notifications
+
 ```typescript
 interface ToastProps {
   id: string;
@@ -601,6 +613,7 @@ toast.success({
 ```
 
 ### Modal Component
+
 ```typescript
 interface ModalProps {
   isOpen: boolean;
@@ -639,6 +652,7 @@ interface ModalProps {
 ## Navigation Components
 
 ### Breadcrumb Component
+
 ```typescript
 interface BreadcrumbItem {
   label: string;
@@ -663,6 +677,7 @@ interface BreadcrumbProps {
 ```
 
 ### Tab Component
+
 ```typescript
 interface TabItem {
   id: string;
@@ -696,6 +711,7 @@ interface TabsProps {
 ## Utility Components
 
 ### Loading States
+
 ```typescript
 interface LoadingProps {
   size?: 'xs' | 'sm' | 'md' | 'lg';
@@ -712,6 +728,7 @@ interface LoadingProps {
 ```
 
 ### Empty States
+
 ```jsx
 interface EmptyStateProps {
   icon?: React.ComponentType;
@@ -737,6 +754,7 @@ interface EmptyStateProps {
 ```
 
 ### Badge Component
+
 ```typescript
 interface BadgeProps {
   variant?: 'default' | 'success' | 'warning' | 'error' | 'info';
@@ -755,6 +773,7 @@ interface BadgeProps {
 ## Component Development Guidelines
 
 ### Component Structure
+
 ```typescript
 // components/Button/Button.tsx
 import React from 'react';
@@ -805,6 +824,7 @@ Button.displayName = 'Button';
 ```
 
 ### Component Testing
+
 ```typescript
 // components/Button/Button.test.tsx
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -833,6 +853,7 @@ describe('Button', () => {
 ```
 
 ### Component Documentation
+
 ```typescript
 // components/Button/Button.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
@@ -892,11 +913,13 @@ export const Loading: Story = {
 ### Responsive Design Strategy
 
 **Mobile-First Approach**
+
 - Base styles target mobile (< 640px)
 - Progressive enhancement for tablet (768px+) and desktop (1024px+)
 - Touch-friendly targets: minimum 44px × 44px
 
 **Breakpoints** (from design-tokens.md):
+
 ```typescript
 const breakpoints = {
   sm: '640px',   // Small devices

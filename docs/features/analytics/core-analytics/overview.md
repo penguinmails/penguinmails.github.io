@@ -119,7 +119,7 @@ Unlike basic email analytics, our platform provides:
 
 - **OLAP Analytics Systems**: Real-time data processing with automated metric calculation
 - **Database Integration**: Enterprise-grade reporting across all database tiers
-- **4-Tier Architecture**: Real-time analytics processing with 99.9% availability
+- **5-Tier Architecture**: Real-time analytics processing with 99.9% availability
 - **Data Validation**: Automated data integrity checks and quality assurance
 
 ## Enterprise Features

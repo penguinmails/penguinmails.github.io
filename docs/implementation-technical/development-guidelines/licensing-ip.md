@@ -11,6 +11,7 @@ persona: "Legal & Compliance"
 ## Open Source License
 
 **Current License**: MIT License
+
 - **Commercial Use**: Permitted
 - **Modification**: Permitted
 - **Distribution**: Permitted
@@ -197,6 +198,7 @@ class ApprovalWorkflowImpl implements ApprovalWorkflow {
 ### Code Attribution Examples
 
 **TypeScript Attribution:**
+
 ```typescript
 // Example: Proper attribution for adapted code
 // Based on implementation from https://github.com/example/repo
@@ -207,6 +209,7 @@ function optimizedFunction(): void {
 ```
 
 **TypeScript Attribution:**
+
 ```typescript
 // Example: Proper attribution for adapted code
 // Based on implementation from https://github.com/example/repo
@@ -217,6 +220,7 @@ function optimizedFunction(): void {
 ```
 
 **Documentation Attribution:**
+
 ```markdown
 <!-- Example: Documenting external sources -->
 ## Email Deliverability Best Practices
@@ -414,12 +418,15 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 ```
 
 #### MIT License Integration
+
 **Requirements:**
+
 - Include MIT license attribution
 - Retain original copyright notice
 - Document usage context
 
 **Example Integration:**
+
 ```javascript
 // MIT licensed library integration
 // Original: https://github.com/example/lib
@@ -432,11 +439,14 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 ```
 
 #### GPL-3.0 Restrictions
+
 **Warning:** GPL-3.0 licensed code requires entire project to be GPL-3.0 licensed.
 **Process:**
+
 1. Legal review required
 2. Consider dual-licensing options
 3. Implement clean room reimplementation if possible
+
 ```
 
 ## Patent Considerations
@@ -1185,7 +1195,7 @@ async function runComplianceScan(projectPath: string): Promise<ComplianceReport>
 
 For legal questions regarding licensing, IP, or compliance:
 
-**Email**: legal@penguinmails.com  
+**Email**: <legal@penguinmails.com>  
 **Phone**: +1 (555) 123-4567  
 **Address**:  
 PenguinMails Inc.  
@@ -1194,7 +1204,7 @@ Legal Department
 Tech City, TC 12345  
 
 **Emergency Contact**: For urgent IP infringement or legal issues  
-**Email**: urgent-legal@penguinmails.com  
+**Email**: <urgent-legal@penguinmails.com>  
 **Phone**: +1 (555) 999-0000 (24/7)
 
 For contribution process questions, see [`code-contribution.md`](code-contribution.md).

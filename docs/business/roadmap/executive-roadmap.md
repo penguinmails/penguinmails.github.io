@@ -70,7 +70,10 @@ This document provides executives with a clear view of feature delivery timeline
   - **MVP Completion:** Q1 2026 (10-14 weeks)
 - [x] **Multi-Tenant Management**: User registration, authentication, access control
 - [x] **Authentication Foundation**: Email/password login, email verification, password reset, profile management, team invitations (MVP In Progress - 3 of 11 features complete)
-- [x] **Domain Management** ✅ **MVP-Complete**: Custom domains, DNS verification, SPF/DKIM/DMARC, multi-domain support, reputation monitoring, email account management, custom tracking domains with SSL, DKIM key storage in Vault
+- [x] **Domain Management** ✅ **MVP-Complete**: Custom domains, DNS verification, SPF/DKIM/DMARC, multi-domain support, reputation monitoring, email account management, custom tracking domains with SSL, DKIM key storage in Vault, full API access
+  - **Status**: All essential domain features production-ready
+  - **Capabilities**: Complete domain verification workflow, comprehensive DNS management, industry-standard authentication, real-time health monitoring
+  - **Post-MVP Roadmap**: Subdomain support (Q1 2026), bulk operations (Q2 2026), multi-region sending (Q4 2026)
 - [x] **Security Foundation**: SSL certificates, SPF/DKIM authentication
 - [x] **Compliance**: GDPR/CCPA compliance framework
 
@@ -94,15 +97,67 @@ This document provides executives with a clear view of feature delivery timeline
 **Timeline**: Q1 2026
 **Business Impact**: Complete user experience ready for market
 
+#### Enterprise Platform Administration (Q1 2026)
+
+**Critical MVP Features (P0 - Production Blockers)**:
+
+- [ ] **Platform Infrastructure Monitoring Dashboard** (P0 - 10-15 days): Real-time SMTP health, server health, queue monitoring, infrastructure alerts, PagerDuty integration
+  - **Business Impact**: Critical for platform operations and 99.9% uptime SLA. Without monitoring, issues go undetected until customers complain.
+- [ ] **Payment History & Financial Management** (P0 - 10-15 days): Transaction history, invoice management, failed payment tracking, refund management, subscription management, revenue analytics
+  - **Business Impact**: Required for finance operations and customer support. Without payment history, finance team cannot reconcile revenue or resolve billing disputes.
+- [ ] **Account Security Enhancements** (P0 - 5-7 days): Account lockout, session management UI, login activity log, password strength enforcement, CAPTCHA, email change flow, remember me
+  - **Business Impact**: Security is critical for trust and compliance. Standard features in modern SaaS applications.
+
+**High Priority MVP Features (P1)**:
+
+- [ ] **Onboarding Experience Implementation** (P1 - 10-15 days): Guided setup wizard, interactive checklist, contextual tooltips, video tutorials, achievement milestones
+  - **Business Impact**: Onboarding directly impacts activation and retention. Poor onboarding leads to churn.
+- [ ] **Admin Platform Features** (P1 - 7-10 days): User audit trail, support access tracking, tenant plan management, feature flags, MRR tracking, Stripe webhooks
+  - **Business Impact**: Required for platform operations and customer support.
+- [ ] **Session Management UI** (P1 - 3-5 days): View/revoke active sessions, session activity timeline, suspicious activity alerts
+  - **Business Impact**: Standard security feature in modern applications.
+- [ ] **Workspace Management Documentation** (P1 - 5-7 days): Comprehensive documentation for agency customers managing multiple client workspaces
+  - **Business Impact**: Workspace management is a core differentiator for agency customers. Documentation gaps block adoption.
+- [ ] **Staff Authentication System Documentation** (P1 - 2-3 days): Document staff authentication flow, permission system, role management workflows
+  - **Business Impact**: Critical for platform operations and security.
+
+**Total Enterprise MVP Effort**: 53-87 days (11-17 weeks)
+
+**Note on 2FA**: Two-Factor Authentication is NOT planned for MVP. Email/password authentication is sufficient for launch. 2FA will be evaluated based on customer demand and NileDB 2FA capabilities assessment (Q1 2026 or later).
+
 #### Enhanced User Experience
 
-- [ ] **Authentication MVP Completion**: Account lockout, session management UI, login activity log, password strength enforcement, CAPTCHA, email change flow, remember me (8 features, 22-36 days)
-- [ ] **Two-Factor Authentication (2FA)**: TOTP-based 2FA with authenticator apps, backup codes, organization-level enforcement for security-conscious customers
 - [ ] **Team & Workspace Management MVP**: Workspace management documentation, health scoring system, organization settings & branding, RBAC permission matrix, workspace member management, workspace deletion workflows (17-30 days)
 - [ ] **Campaign Management**: Email sequencing, A/B testing, personalization
 - [ ] **User Onboarding**: Guided setup process and feature discovery
+
+#### Lead Management MVP Completion (Q1 2026)
+
+**Current Status**: Comprehensive documentation exists, MVP simplified to core features  
+**MVP Timeline**: Q1 2026 (3-5 weeks)  
+**Priority**: P0 (Critical for campaign targeting)
+
+**Critical Missing Features**:
+
+- [ ] **Contact Import/Export System** (P0 - 2-3 weeks): CSV/Excel import with field mapping, validation, duplicate detection, export with filters
+  - **Business Impact**: Users cannot onboard existing contact databases without import functionality, blocking adoption
+- [ ] **Basic Contact Segmentation** (P0 - 1-2 weeks): Static lists for campaign targeting, CSV upload, list management
+  - **Business Impact**: Essential for targeted campaigns, users can manually organize contacts into lists
+
+**Total MVP Effort**: 3-5 weeks
+
+**Business Impact**:
+
+- **User Onboarding**: Import functionality enables users to onboard existing contact databases immediately
+- **Campaign Targeting**: Basic segmentation enables targeted campaigns for different customer segments
+- **Faster Time-to-Market**: MVP simplified from 8-12 weeks to 3-5 weeks by deferring complex features
+- **Foundation for Growth**: Static lists sufficient for MVP, advanced features added iteratively based on user feedback
 - [ ] **Workflow Automation**: Basic automation for routine marketing tasks
-- [ ] **Subdomain Support**: Independent DKIM keys per subdomain, reputation isolation for enterprise customers
+- [ ] **Subdomain Support**: Independent DKIM keys per subdomain, reputation isolation for enterprise customers, team segmentation (3-5 days)
+  - **Business Impact**: Unlocks enterprise tier pricing, enables multi-brand organizations
+- [ ] **Inbox Management MVP** ⚠️ **Architecture Spike Required (Q4 2025)**: Unified inbox with email threading, star/favorite, folder/view system (All, Starred, Sent, Archived, Trash), attachment support, browser notifications (2-4 weeks post-spike)
+  - **Critical Blocker**: Stalwart Mail Server database schema investigation (3-5 days spike) must complete before implementation
+  - **Business Impact**: Foundation for response management, enables sales rep efficiency, competitive standard feature
 
 #### Analytics & Reporting MVP Completion (Q1 2026)
 
@@ -124,6 +179,7 @@ This document provides executives with a clear view of feature delivery timeline
 **Total MVP Effort**: 24-36 days (5-7 weeks)
 
 **Business Impact**:
+
 - **Data-Driven Optimization**: Analytics dashboard adoption > 80% of active users
 - **Deliverability Excellence**: Issue detection time reduced by 50%
 - **Performance Improvement**: Send time optimization improves open rates by 10-15%
@@ -161,6 +217,7 @@ This document provides executives with a clear view of feature delivery timeline
 **Strategy**: Build general-purpose REST API + webhooks first (MVP), add vendor-specific integrations later (Post-MVP)
 
 **MVP Focus (Q1 2026)**:
+
 - [ ] **API Key Management System**: Secure API key generation with Vault storage, permission scopes, rate limiting (P0 - Critical, 1-2 weeks)
 - [ ] **API Key Management UI**: Self-service API key creation, viewing, regeneration, revocation (P0 - Critical, 5-7 days)
 - [ ] **Core REST API Endpoints**: Contacts, campaigns, emails, analytics APIs with OpenAPI documentation (P0 - Critical, 2-3 weeks)
@@ -171,17 +228,20 @@ This document provides executives with a clear view of feature delivery timeline
 **Total MVP Effort**: 6-9 weeks (2-3 engineers)
 
 **Post-MVP (Q1-Q2 2026)**:
+
 - [ ] **Salesforce Integration**: OAuth, bi-directional sync, field mapping, activity logging (Q1 2026, 20-30 days)
 - [ ] **HubSpot Integration**: OAuth, bi-directional sync, workflow triggers (Q1 2026, 20-30 days)
 - [ ] **Zapier Integration**: Connect to 5,000+ apps with pre-built Zaps (Q2 2026, 2-3 weeks)
 - [ ] **ESP Integration UI**: Postmark/Mailgun configuration with routing rules (Q3 2026, 10-14 days)
 
 **Vault Integration (Q1 2026)**:
+
 - [ ] **VPS SSH Key Management**: Store admin and tenant SSH keys in Vault with 90-day rotation (1-2 weeks)
 - [ ] **SMTP Credentials Storage**: Store MailU admin credentials in Vault with 180-day rotation (1 week)
 - [ ] **Vault Disaster Recovery**: Automated daily backups, VPS migration workflow (1-2 weeks)
 
 **Business Impact**:
+
 - **Customer Empowerment**: Technical customers can build custom integrations immediately with API + webhooks
 - **Faster Time-to-Market**: General API (6-9 weeks) vs vendor integrations (20-30 days each)
 - **Flexibility**: Customers can integrate with ANY system, not just pre-built integrations
@@ -202,6 +262,27 @@ This document provides executives with a clear view of feature delivery timeline
 
 **Timeline**: Q2-Q3 2026
 **Business Impact**: Market expansion and competitive advantage
+
+#### Inbox Management AI Features (Q2-Q3 2026)
+
+- [ ] **Smart Reply Suggestions (Gemini AI)** (Q2 2026 - 1-2 weeks): AI-generated reply options with different tones (direct, consultative, meeting-focused), improves sales rep efficiency
+  - **Business Impact**: Competitive differentiator, 40%+ adoption expected, free tier covers early usage
+- [ ] **Sentiment Analysis & Tone Detection** (Q2 2026 - 3-5 days): Detect prospect emotions (Frustrated, Enthusiastic, Skeptical) for tailored responses
+  - **Business Impact**: Enables personalized communication, improves conversion by 15%
+- [ ] **Advanced Inbox Analytics** (Q2 2026 - 3-4 weeks): Rep performance tracking, response time analysis, conversion by category, custom reports
+  - **Business Impact**: Data-driven optimization, manager visibility, identifies top performers
+- [ ] **Scheduled Sending** (Q2 2026 - 3-5 days): Schedule replies to send during business hours, professional communication timing
+  - **Business Impact**: Improves professionalism, avoids appearing desperate
+- [ ] **Lead Context Sidebar** (Q2 2026 - 2-3 weeks): Display lead score, company info, previous campaigns, CRM data in sidebar
+  - **Business Impact**: Personalized responses, improves conversion
+- [ ] **Multi-Language Support** (Q3 2026 - 1-2 weeks): Automatic translation for non-English emails, supports 10+ languages
+  - **Business Impact**: Enables global outreach without multilingual sales teams
+- [ ] **Offline Support** (Q3 2026 - 3-5 days): Cache threads in IndexedDB for offline access, draft replies offline
+  - **Business Impact**: Mobile/travel use case, improves UX in low-connectivity scenarios
+
+**Total Inbox AI Effort**: 7-10 weeks (Q2 2026), 3-4 weeks (Q3 2026)
+
+**Cost**: $20-87.50/month (Gemini AI + translation APIs)
 
 #### Advanced Analytics & Intelligence
 
@@ -230,6 +311,7 @@ This document provides executives with a clear view of feature delivery timeline
 **Total Advanced Effort**: 16-24 weeks
 
 **Business Impact**:
+
 - **AI-Powered Optimization**: Predictive analytics accuracy > 80%, automated recommendations
 - **Agency Enablement**: Custom dashboards enable white-label reporting for agencies
 - **Enterprise Ready**: Data warehouse integration unlocks enterprise segment
@@ -245,10 +327,54 @@ This document provides executives with a clear view of feature delivery timeline
 - [ ] **Additional CRM Integrations** (Q2-Q3 2026): Pipedrive, Zoho, Close.io for SMB customers (2-3 weeks each)
 
 **Business Impact**:
+
 - **No-Code Automation**: Zapier enables non-technical users to build integrations (50+ customers expected)
 - **Deliverability Optimization**: ESP integration UI improves email deliverability and reduces costs
 - **Power User Features**: Custom webhook builder enables sophisticated automation workflows
 - **Market Expansion**: Additional CRM integrations expand addressable market to SMB segment
+
+#### Lead Management Post-MVP Enhancements (Q1-Q3 2026)
+
+**Q1 2026: Core Enhancements**
+
+- [ ] **Dynamic Contact Segmentation** (P1 - 2-3 weeks): Rule-based filtering with filter builder UI, live preview, automatic recalculation
+  - **Business Impact**: Auto-updating segments enable sophisticated targeting, 40%+ power user adoption
+- [ ] **Basic Lead Scoring System** (P1 - 1-2 weeks): Behavioral scoring based on email engagement, recency weighting, score-based segmentation
+  - **Business Impact**: Identify engaged leads for prioritized follow-up, 15% improvement in conversion rates
+- [ ] **Contact Activity Timeline** (P1 - 1-2 weeks): Chronological interaction history, real-time WebSocket updates, event filtering
+  - **Business Impact**: Sales reps see complete interaction history before outreach, reduces redundant messaging
+- [ ] **Bulk Contact Operations** (P2 - 1 week): Multi-select actions, progress indicators, error handling
+  - **Business Impact**: Efficiency improvement for managing large contact databases
+- [ ] **Lead Enrichment** (P2 - 2 weeks): Automatic contact data enhancement, third-party service integration
+  - **Business Impact**: Enhance contact data without manual research, improve segmentation and personalization
+
+**Q2 2026: Advanced Features**
+
+- [ ] **Advanced Lead Scoring Models** (P2 - 2 weeks): Multiple scoring models, custom formulas, A/B testing
+  - **Business Impact**: Enterprise customers can create different scoring models for different product lines
+- [ ] **Contact Deduplication & Merge** (P2 - 1-2 weeks): Fuzzy matching, manual merge UI, automatic merge rules
+  - **Business Impact**: Data quality enhancement, clean contact database
+
+**Q3 2026: CRM-Like Features**
+
+- [ ] **Contact Lifecycle Stages** (P3 - 1 week): Track contacts through sales funnel, automatic stage transitions
+  - **Business Impact**: Sales and marketing teams track contacts through funnel, report on conversion rates
+- [ ] **Contact Notes & Tasks** (P3 - 1-2 weeks): Sales follow-up, collaboration, task reminders
+  - **Business Impact**: CRM feature enhances collaboration, sales reps log call notes and schedule follow-ups
+
+**Total Post-MVP Effort**: 12-18 weeks over 9 months
+
+**Business Impact**:
+
+- **Power User Adoption**: Dynamic segmentation and lead scoring drive 40%+ power user adoption
+- **Sales Efficiency**: Activity timeline and notes improve sales rep productivity by 25%
+- **Data Quality**: Enrichment and deduplication improve contact database quality
+- **Enterprise Ready**: Advanced scoring models and lifecycle stages enable enterprise customers
+
+**Future Research (Q3 2026+)**:
+
+- **Third-Party Integrations Research Spike** (Q3-Q4 2026 - 2 weeks): Evaluate CRM sync, lead enrichment, advanced email validation ROI
+- **Lead Analytics Improvements** (Q4 2027 - Research Spike): Explore advanced analytics after 12+ months of production data
 
 #### Scale & Automation
 
@@ -261,9 +387,18 @@ This document provides executives with a clear view of feature delivery timeline
 - [ ] **Audit Logs for Team Actions**: Comprehensive audit trail for SOC 2/ISO 27001 compliance (Q3 2026, 3-4 weeks)
 - [ ] **Bulk User Management**: CSV import/export for enterprise onboarding (Q3 2026, 2-3 weeks)
 - [ ] **Team Analytics & Activity Monitoring**: Team productivity metrics and license optimization (Q4 2026, 3-4 weeks)
-- [ ] **Bulk Domain Onboarding**: CSV import for 50+ subdomains, DNS templates for agencies
-- [ ] **Domain Transfer**: Transfer domain metadata between workspaces with history preservation
-- [ ] **Real-Time DNS Validation**: Proactive DNS monitoring with misconfiguration alerts
+- [ ] **Bulk Domain Onboarding**: CSV import for 50+ subdomains, DNS templates, bulk DKIM generation for agencies (Q2 2026, 5-7 days)
+  - **Business Impact**: Increases agency customer retention, enables agencies to scale client management
+- [ ] **Domain Transfer**: Transfer domain metadata between workspaces with history preservation, audit trail (Q2 2026, 5-7 days)
+  - **Business Impact**: Supports agency client offboarding, enables workspace consolidation
+- [ ] **DNS Instruction Presets**: One-click copy of all DNS records, pre-configured templates (Q2 2026, 2-3 days)
+  - **Business Impact**: Improves user experience, reduces DNS configuration errors
+- [ ] **Real-Time DNS Validation**: Proactive DNS monitoring with misconfiguration alerts, health score (Q3 2026, 5-7 days)
+  - **Business Impact**: Reduces support tickets, improves deliverability by catching DNS issues early
+- [ ] **Multi-Region Sending Pools**: Geographic routing, region-specific DKIM, global deliverability (Q4 2026, 10-14 days)
+  - **Business Impact**: Enables global enterprise customers, unlocks international markets
+- [ ] **Reputation Prediction**: Predictive analytics for domain reputation with proactive recommendations (Q1 2027, 10-14 days)
+  - **Business Impact**: Competitive differentiator for premium plans, improves customer success
 
 #### Billing & Subscriptions Growth Features (Q2-Q3 2026)
 
@@ -333,6 +468,7 @@ This document provides executives with a clear view of feature delivery timeline
 - [ ] **Custom Integration Framework**: White-label integration builder for enterprise customers
 
 **Business Impact**:
+
 - **Ecosystem Growth**: Integration marketplace enables community-driven integrations
 - **Enterprise SLA**: Real-time sync meets enterprise requirements for instant data synchronization
 - **Market Leadership**: Advanced integrations position PenguinMails as enterprise-grade platform

@@ -85,8 +85,14 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
-| **[Authentication MVP Completion](../features/enterprise/authentication-roadmap.md)** | Account lockout, session management UI, login activity log, password strength enforcement, CAPTCHA, email change flow, remember me | Q1 2026 |
-| **[Two-Factor Authentication (2FA)](../features/enterprise/authentication-roadmap.md#q1-2026-two-factor-authentication)** | TOTP-based 2FA with authenticator apps, backup codes, organization-level enforcement | Q1 2026 |
+| **[Platform Infrastructure Monitoring](../features/enterprise/roadmap.md#1-platform-infrastructure-monitoring-dashboard)** | **P0 Critical**: Real-time SMTP health, server health, queue monitoring, infrastructure alerts, PagerDuty integration | Q1 2026 (10-15 days) |
+| **[Payment History & Financial Management](../features/enterprise/roadmap.md#2-payment-history--financial-management)** | **P0 Critical**: Transaction history, invoice management, failed payment tracking, refund management, subscription management, revenue analytics | Q1 2026 (10-15 days) |
+| **[Authentication MVP Completion](../features/enterprise/authentication-roadmap.md)** | Account lockout, session management UI, login activity log, password strength enforcement, CAPTCHA, email change flow, remember me | Q1 2026 (5-7 days) |
+| **[Two-Factor Authentication (2FA)](../features/enterprise/authentication-roadmap.md#q1-2026-two-factor-authentication)** | TOTP-based 2FA with authenticator apps, backup codes, organization-level enforcement (NOT MVP - pending customer demand) | Q1 2026 or later |
+| **[Onboarding Experience](../features/enterprise/roadmap.md#5-onboarding-experience-implementation)** | Guided setup wizard, interactive checklist, contextual tooltips, video tutorials, achievement milestones | Q1 2026 (10-15 days) |
+| **[Admin Platform Features](../features/enterprise/roadmap.md#6-admin-platform-features)** | User audit trail, support access tracking, tenant plan management, feature flags, MRR tracking, Stripe webhooks | Q1 2026 (7-10 days) |
+| **[Session Management UI](../features/enterprise/roadmap.md#7-session-management-ui)** | View/revoke active sessions, session activity timeline, suspicious activity alerts | Q1 2026 (3-5 days) |
+| **[Workspace Management Documentation](../features/enterprise/roadmap.md#4-workspace-management-documentation)** | Comprehensive documentation for agency customers managing multiple client workspaces | Q1 2026 (5-7 days) |
 | **[API Key Management](../features/integrations/vault-api-keys.md)** | Secure API key generation, Vault storage, permission scopes, rate limiting | Q1 2026 |
 | **[REST API Endpoints](../features/integrations/api-access.md)** | Core API for contacts, campaigns, emails, analytics with OpenAPI documentation | Q1 2026 |
 | **[Webhook System](../features/integrations/webhook-system.md)** | Real-time event notifications, retry logic, signature verification | Q1 2026 |
@@ -102,7 +108,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **[Enhanced Analytics](../features/analytics/enhanced-analytics/overview.md)** | Improved dashboard, optimization recommendations, automation | Q1 2026 |
 | **[CRM Integration](../features/integrations/crm-integration/overview.md)** | Salesforce, HubSpot integration with bi-directional sync | Q1 2026 |
 | **[Onboarding Experience](../features/enterprise/onboarding-experience.md)** | Guided setup wizard, interactive tutorials, progress tracking | Q1 2026 |
-| **[Subdomain Support](../features/domains/roadmap.md#p1-subdomain-support--reputation-isolation)** | Independent DKIM keys per subdomain, reputation isolation, team segmentation | Q1 2026 |
+| **[Subdomain Support](../features/domains/roadmap.md#1-subdomain-support--reputation-isolation)** | Independent DKIM keys per subdomain, reputation isolation, team segmentation, enterprise enabler | Q1 2026 (3-5 days) |
 | **[Team & Workspace Management MVP](../features/enterprise/team-roadmap.md)** | Workspace management documentation, health scoring, organization settings, RBAC matrix, workspace member management | Q1 2026 (17-30 days) |
 
 ### 📊 Planned 2026 (Growth Phase)
@@ -130,7 +136,18 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **[Unsubscribe Management](../features/compliance/unsubscribe-management.md)** | One-click unsubscribe, preference center, compliance | AVAILABLE |
 | **[Workflow Automation](../features/automation/workflow-automation/overview.md)** | Visual workflow builder, event tracking, triggers/actions, conditional logic | Q2-Q3 2026 (12-15 weeks) |
 | **[Hostwind Infrastructure](../features/infrastructure/hostwind-management.md)** | VPS provisioning, IP monitoring, scaling | AVAILABLE |
-| **[Leads Management](../features/leads/leads-management.md)** | Contact database, segmentation, lead scoring | AVAILABLE |
+| **[Leads Management](../features/leads/leads-management.md)** ⚠️ | **MVP Incomplete**: Contact database documented, 2 MVP gaps (import/export, basic segmentation) | Q1 2026 (3-5 weeks) |
+| **[Contact Import/Export System](../features/leads/roadmap.md#1-contact-importexport-system)** | CSV/Excel import with field mapping, validation, duplicate detection, export with filters | Q1 2026 (2-3 weeks) |
+| **[Basic Contact Segmentation](../features/leads/roadmap.md#2-basic-contact-segmentation-static-lists)** | Static lists for campaign targeting, CSV upload, list management | Q1 2026 (1-2 weeks) |
+| **[Dynamic Contact Segmentation](../features/leads/roadmap.md#3-dynamic-contact-segmentation)** | Rule-based filtering, filter builder UI, live preview, automatic recalculation | Q1 2026 (2-3 weeks) |
+| **[Basic Lead Scoring System](../features/leads/roadmap.md#4-basic-lead-scoring-system)** | Behavioral scoring based on email engagement, recency weighting, score-based segmentation | Q1 2026 (1-2 weeks) |
+| **[Contact Activity Timeline](../features/leads/roadmap.md#5-contact-activity-timeline)** | Chronological interaction history, real-time WebSocket updates, event filtering | Q1 2026 (1-2 weeks) |
+| **[Bulk Contact Operations](../features/leads/roadmap.md#6-bulk-contact-operations)** | Multi-select actions, progress indicators, error handling | Q1 2026 (1 week) |
+| **[Lead Enrichment](../features/leads/roadmap.md#7-lead-enrichment)** | Automatic contact data enhancement, third-party service integration | Q1 2026 (2 weeks) |
+| **[Advanced Lead Scoring Models](../features/leads/roadmap.md#8-advanced-lead-scoring-models)** | Multiple scoring models, custom formulas, A/B testing | Q2 2026 (2 weeks) |
+| **[Contact Deduplication & Merge](../features/leads/roadmap.md#9-contact-deduplication--merge)** | Fuzzy matching, manual merge UI, automatic merge rules | Q2 2026 (1-2 weeks) |
+| **[Contact Lifecycle Stages](../features/leads/roadmap.md#10-contact-lifecycle-stages)** | Track contacts through sales funnel, automatic stage transitions | Q3 2026 (1 week) |
+| **[Contact Notes & Tasks](../features/leads/roadmap.md#11-contact-notes--tasks)** | Sales follow-up, collaboration, task reminders | Q3 2026 (1-2 weeks) |
 | **[Biometric Authentication](../features/enterprise/authentication-roadmap.md#q4-2026-advanced-features)** | WebAuthn/FIDO2 for passwordless login (Face ID, Touch ID, Windows Hello, YubiKey) | Q4 2026 |
 | **[Advanced Session Management](../features/enterprise/authentication-roadmap.md#q4-2026-advanced-features)** | Risk-based authentication, conditional policies, session analytics for enterprise | Q4 2026 |
 | **[Advanced Permissions System](../features/enterprise/team-roadmap.md#8-post-mvp---p2-advanced-permissions-system-custom-roles)** | Custom role creation with granular permissions, role templates, enterprise organizational structures | Q2 2026 (2-3 weeks) |
@@ -143,11 +160,12 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **[Campaign Workflow Automation](../features/campaigns/roadmap.md#4-campaign-workflow-automation)** | External event triggers, cross-campaign orchestration, complex logic, multi-channel | Q4 2026 (8-10 weeks) |
 | **[Advanced Analytics & Attribution](../features/campaigns/roadmap.md#5-advanced-analytics-and-attribution)** | Multi-touch attribution, revenue tracking, cohort analysis, funnel visualization | Q4 2026 (8-10 weeks) |
 | **[Enterprise Collaboration Features](../features/campaigns/roadmap.md#6-enterprise-collaboration-features)** | Team workspaces, approval workflows, role-based permissions, audit logs, SSO | Q4 2026 (6-8 weeks) |
-| **[Enterprise Features](../features/enterprise/enterprise-features/overview.md)** | Advanced security, real-time monitoring, enterprise integrations | Q4 2026-Q1 2027 |
-| **[Bulk Domain Onboarding](../features/domains/roadmap.md#p2-bulk-domain-onboarding--templates)** | CSV import for 50+ subdomains, DNS templates, agency features | Q2 2026 |
-| **[Domain Transfer](../features/domains/roadmap.md#p2-workspace-domain-transfer-metadata-only)** | Transfer domain metadata between workspaces with history preservation | Q2 2026 |
-| **[DNS Validation & Alerts](../features/domains/roadmap.md#p2-real-time-dns-validation--misconfiguration-alerts)** | Real-time DNS validation, misconfiguration detection, proactive alerts | Q3 2026 |
-| **[Multi-Region Sending](../features/domains/roadmap.md#p1-multi-region-sending-pools--dkim-selectors)** | Geographic routing, region-specific DKIM, global deliverability | Q4 2026 |
+| **[Enterprise Features](../features/enterprise/roadmap.md)** | Platform admin monitoring (P0), payment history (P0), account security, onboarding, workspace documentation, SSO, MFA, audit logs, compliance automation | Q1 2026-Q1 2027 |
+| **[Bulk Domain Onboarding](../features/domains/roadmap.md#2-bulk-domain-onboarding--templates)** | CSV import for 50+ subdomains, DNS templates, bulk DKIM generation, agency features | Q2 2026 (5-7 days) |
+| **[Domain Transfer](../features/domains/roadmap.md#3-workspace-domain-transfer-metadata)** | Transfer domain metadata between workspaces with history preservation, audit trail | Q2 2026 (5-7 days) |
+| **[DNS Instruction Presets](../features/domains/roadmap.md#4-dns-instruction-presets--one-click-copy)** | One-click copy of all DNS records, pre-configured templates, workspace sharing | Q2 2026 (2-3 days) |
+| **[DNS Validation & Alerts](../features/domains/roadmap.md#5-real-time-dns-validation--misconfiguration-alerts)** | Real-time DNS validation, misconfiguration detection, proactive alerts, health score | Q3 2026 (5-7 days) |
+| **[Multi-Region Sending](../features/domains/roadmap.md#6-multi-region-sending-pools--dkim-selectors)** | Geographic routing, region-specific DKIM, global deliverability, compliance | Q4 2026 (10-14 days) |
 
 ### 🔮 Future Vision (2027+)
 
@@ -162,7 +180,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | **Generative AI** | AI-powered content creation, natural language interfaces | 2027+ |
 | **Platform Ecosystem** | Marketplace, third-party integrations, custom workflows | 2027+ |
 | **Global Expansion** | Multi-region deployment, local compliance, global optimization | 2027+ |
-| **[Reputation Prediction](../features/domains/roadmap.md#p3-reputation-prediction--proactive-alerts)** | Predictive analytics for domain reputation with proactive recommendations | Q1 2027 |
+| **[Reputation Prediction](../features/domains/roadmap.md#7-reputation-prediction--proactive-alerts)** | Predictive analytics for domain reputation with proactive recommendations, pattern recognition | Q1 2027 (10-14 days) |
 | **[User Groups & Teams](../features/enterprise/team-roadmap.md#13-post-mvp---p3-user-groups--teams-within-tenant)** | Logical user groups, department organization, group-based permissions | Q1 2027 (3-4 weeks) |
 | **[Team Member Onboarding Workflows](../features/enterprise/team-roadmap.md#14-post-mvp---p3-team-member-onboarding-workflows)** | Automated onboarding, guided tours, progressive feature access | Q1 2027 (3-4 weeks) |
 | **[Workspace Templates](../features/enterprise/team-roadmap.md#15-post-mvp---p3-workspace-templates)** | Pre-configured workspace templates, industry-specific galleries | Q2 2027 (2-3 weeks) |
@@ -325,6 +343,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Current State: MVP-Complete
 
 **What's Available Today:**
+
 - ✅ Complete domain verification workflow with multi-step wizard
 - ✅ Comprehensive DNS record management (SPF, DKIM, DMARC, CNAME, MX)
 - ✅ Industry-standard authentication (2048-bit DKIM, SPF, DMARC)
@@ -342,6 +361,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Post-MVP Roadmap (Q1 2026-Q1 2027)
 
 **Q1 2026: Enterprise Features**
+
 - **[P1] Subdomain Support & Reputation Isolation** (3-5 days)
   - Independent DKIM keys per subdomain
   - Subdomain-level reputation tracking
@@ -349,6 +369,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - **Business Impact:** Unlocks enterprise tier pricing, enables multi-brand organizations
 
 **Q2 2026: Agency Features**
+
 - **[P2] Bulk Domain Onboarding & Templates** (5-7 days)
   - CSV import for 50+ subdomains at once
   - DNS instruction templates (save/reuse)
@@ -367,6 +388,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - **Business Impact:** Improves UX, reduces support tickets
 
 **Q3 2026: Power User Features**
+
 - **[P2] Real-Time DNS Validation & Alerts** (5-7 days)
   - Real-time DNS validation with instant feedback
   - Misconfiguration detection and alerts
@@ -374,6 +396,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - **Business Impact:** Reduces support tickets, improves deliverability
 
 **Q4 2026: Global Expansion**
+
 - **[P1] Multi-Region Sending Pools & DKIM** (10-14 days)
   - Send from multiple regions (US, EU, APAC)
   - Region-specific DKIM selectors
@@ -381,6 +404,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
   - **Business Impact:** Enables global enterprise customers, unlocks international markets
 
 **Q1 2027: Predictive Features**
+
 - **[P3] Reputation Prediction & Proactive Alerts** (10-14 days)
   - Predict reputation trends 7-14 days ahead
   - Proactive alerts before reputation drops
@@ -395,23 +419,27 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Key Dependencies
 
 **Infrastructure:**
+
 - HashiCorp Vault (already implemented) - DKIM key storage
 - Multi-region infrastructure (Q4 2026) - Required for multi-region sending
 - Analytics infrastructure - Required for reputation prediction
 
 **Features:**
+
 - Subdomain support (Q1 2026) - Prerequisite for bulk subdomain onboarding
 - Historical data (6+ months) - Required for reputation prediction
 
 ### Success Metrics
 
 **Technical:**
+
 - DNS verification success rate > 95%
 - DKIM key rotation automated (365-day cycle)
 - Domain health monitoring accuracy > 90%
 - Multi-region failover < 5 minutes
 
 **Business:**
+
 - Enterprise customer acquisition enabled (Q1 2026)
 - Agency customer retention improved by 20% (Q2 2026)
 - Support tickets reduced by 30% (Q3 2026)
@@ -433,11 +461,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Current State vs. Target
 
 **What Exists Today:**
+
 - ✅ Basic campaign sequences (linear email flows)
 - ✅ Time-based delays between emails
 - ✅ Campaign scheduling and manual triggers
 
 **What's Missing (MVP Scope):**
+
 - ❌ Visual workflow builder with drag-and-drop
 - ❌ Event tracking infrastructure (email opens, clicks, replies)
 - ❌ Conditional logic and branching (if/then/else)
@@ -448,6 +478,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### MVP Implementation Plan (Q2-Q3 2026)
 
 **Phase 1: Foundation (Weeks 1-5)**
+
 1. Event Tracking Infrastructure (2-3 weeks) - P0 blocker
 2. Workflow Execution Engine (4-5 weeks) - P0 blocker
 
@@ -470,11 +501,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Key Dependencies
 
 **Required Before Automation:**
+
 - Enhanced Analytics (Q1 2026) - Event tracking foundation
 - Campaign Management (Q1 2026) - Base campaign infrastructure
 - Contact Management - Segmentation and tagging
 
 **Enables Future Features:**
+
 - Lead Scoring - Automated scoring based on behavior
 - Predictive Analytics - ML-powered insights
 - Cross-Channel Campaigns - Omnichannel orchestration
@@ -482,12 +515,14 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 ### Success Metrics
 
 **Technical:**
+
 - Event processing latency < 5 seconds
 - Workflow execution accuracy 99.9%
 - Support 100+ concurrent workflows
 - Handle 1000+ events/second
 
 **Business:**
+
 - 30% reduction in manual campaign management time
 - 20% increase in email engagement (vs. linear sequences)
 - 15% improvement in lead conversion rates
@@ -1076,6 +1111,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 **Why API-First Approach?**
 
 **Benefits:**
+
 - **Flexibility**: Customers can integrate with ANY system, not just pre-built integrations
 - **Faster Time-to-Market**: General API is simpler than vendor-specific integrations (6-9 weeks vs 20-30 days per vendor)
 - **Lower Maintenance**: One API to maintain vs. multiple vendor integrations
@@ -1084,6 +1120,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 - **Reduced Risk**: Prove API works before investing in vendor partnerships
 
 **Customer Use Cases Enabled by General API:**
+
 - Custom CRM integrations (any CRM, not just Salesforce/HubSpot)
 - Internal tool integrations (dashboards, analytics, reporting)
 - Workflow automation (trigger actions based on email events)
@@ -1094,6 +1131,220 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 "PenguinMails provides a powerful REST API and webhook system that enables integration with any external system. Build custom integrations with your CRM, analytics tools, or internal systems. Pre-built integrations with Salesforce, HubSpot, and Zapier coming in Q1-Q2 2026."
 
 **Detailed Roadmap:** [Integrations Roadmap](/docs/features/integrations/roadmap.md)
+
+---
+
+## Feature Deep Dive: Inbox Management
+
+### Overview
+
+**Status:** Architecture Spike Required (Critical Blocker)  
+**Timeline:** Q4 2025 (Spike) → Q1 2026 (MVP) → Q2-Q3 2026 (AI & Analytics)  
+**Priority:** Critical (Foundation feature for response management)
+
+### Current State: Architecture Investigation Required
+
+**What's Documented:**
+
+- ✅ Complete unified inbox architecture with database schemas
+- ✅ AI intent detection system design (Gemini AI integration)
+- ✅ Inbox rotation algorithm with health monitoring
+- ✅ Route specifications for inbox UI (2 routes)
+- ✅ API endpoint specifications (5 endpoints)
+- ✅ Background job architecture (sync-worker, intent-analyzer, cleanup-worker)
+
+**Critical Gap - Stalwart Integration:**
+
+The current documentation proposes custom tables (`inbox_threads`, `inbox_messages`, `inbox_tags`, `inbox_notes`) without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
+
+**Required Investigation:**
+
+- Can we extend Stalwart's schema with custom fields?
+- Should inbox metadata live in OLTP, Content DB, or Stalwart's database?
+- How does Stalwart store emails and can we add foreign keys?
+
+**Impact:** This architectural decision blocks all inbox development. A 3-5 day spike is required to determine the correct approach.
+
+### MVP Roadmap (Q4 2025 - Q1 2026)
+
+**Q4 2025: Architecture Spike (BLOCKER)**
+
+- **[P0] Stalwart Mail Server Database Schema Investigation** (3-5 days)
+  - Review Stalwart documentation and analyze email storage tables
+  - Determine if we can extend Stalwart's schema with custom fields
+  - Evaluate 4 architecture options (extend Stalwart, OLTP metadata, Content DB metadata, hybrid)
+  - Create proof-of-concept to validate chosen approach
+  - Update documentation with correct schema design
+  - **Business Impact:** Unblocks all inbox development, foundational architecture decision
+
+**Q1 2026: Core Inbox Features (Post-Spike)**
+
+- **[P0] Email Threading Algorithm Implementation** (1-2 weeks)
+  - Match replies using RFC 5322 headers (References, In-Reply-To)
+  - Fallback to Subject + Contact matching
+  - Handle edge cases (forwarded emails, subject changes)
+  - Test threading accuracy with 100+ real-world samples
+  - **Business Impact:** Foundation for conversation-based inbox management
+
+- **[P0] Star/Favorite Feature** (2-3 days)
+  - Add `is_starred` field to thread storage
+  - Implement star/unstar API endpoint
+  - Add star icon to thread list UI with toggle
+  - Create "Starred" inbox view
+  - **Business Impact:** Standard inbox feature, helps sales reps prioritize hot leads
+
+- **[P0] Folder/View System** (3-5 days)
+  - Implement All, Starred, Sent, Archived, Trash views
+  - Add "Archive" and "Delete" actions with bulk support
+  - Implement soft delete (trash folder, permanent delete after 30 days)
+  - Add keyboard shortcuts (e: archive, #: delete)
+  - **Business Impact:** Core inbox UX, expected by users from Gmail/Outlook
+
+- **[P2] Attachment Support Documentation** (1-2 days)
+  - Document integration with existing Content DB attachments table
+  - Document file size limits (25 MB per attachment)
+  - Document virus scanning approach (ClamAV or cloud service)
+  - **Business Impact:** Clarifies existing infrastructure, minimal effort
+
+- **[P2] Browser Notifications Integration** (1-2 days)
+  - Integrate with existing Notifications Database
+  - Request browser notification permission on first inbox visit
+  - Create notification when new reply arrives
+  - Allow users to configure notification preferences
+  - **Business Impact:** Immediate awareness of hot lead replies, improves response time
+
+**Total MVP Effort:** Unknown until Stalwart spike complete (estimated 2-4 weeks post-spike)
+
+### Post-MVP Roadmap (Q2-Q3 2026)
+
+**Q2 2026: AI Features & Analytics**
+
+- **[P1] Smart Reply Suggestions (Gemini AI)** (1-2 weeks)
+  - Generate 3 reply options with different tones (direct, consultative, meeting-focused)
+  - Pass message history and context files to Gemini AI
+  - Allow one-click insertion with editing
+  - Track usage metrics
+  - **Business Impact:** Improves sales rep efficiency, competitive differentiator
+  - **Cost:** Free tier (1,500 requests/day), then $37.50/month for 10,000 messages/day
+
+- **[P1] Sentiment Analysis & Tone Detection** (3-5 days)
+  - Detect sentiment (positive/neutral/negative) and tone (enthusiastic/skeptical/frustrated)
+  - Display sentiment indicators in thread list
+  - Provide tone-based reply suggestions
+  - Track sentiment trends over time
+  - **Business Impact:** Enables tailored responses based on prospect emotions
+  - **Cost:** Shared with Smart Reply Suggestions (same Gemini AI usage)
+
+- **[P1] Advanced Inbox Analytics & Reporting** (3-4 weeks)
+  - Create OLAP analytics tables (`inbox_analytics`, `inbox_rep_analytics`, `inbox_category_analytics`)
+  - Build reporting dashboard with 10+ key metrics (response time, conversion rate, rep performance)
+  - Add custom report builder and export to CSV/PDF
+  - Add scheduled report emails (daily/weekly digests)
+  - **Business Impact:** Data-driven optimization, rep performance tracking, manager visibility
+
+- **[P2] Performance Benchmarks & Load Testing** (1 week)
+  - Establish baseline metrics (<2s sync latency, <1s load time)
+  - Create load testing suite (JMeter or k6)
+  - Test concurrent users (100, 500, 1,000 simultaneous users)
+  - **Business Impact:** Validates scalability for agency customers with 5,000+ accounts
+
+- **[P2] Scheduled Sending** (3-5 days)
+  - Enable scheduling replies to send at specific date/time
+  - Add UI for scheduling (date/time picker, timezone selector)
+  - Allow editing/canceling scheduled messages
+  - **Business Impact:** Professional communication timing, avoid appearing desperate
+
+- **[P2] Lead Context Sidebar** (2-3 weeks)
+  - Display contact information, lead score, previous campaigns, CRM data
+  - Add quick actions (update lead score, add to campaign, sync to CRM)
+  - Make sidebar collapsible
+  - **Business Impact:** Personalized responses based on prospect history
+
+**Total Q2 2026 Effort:** 7-10 weeks
+
+**Q3 2026: International Expansion**
+
+- **[P3] Offline Support (IndexedDB)** (3-5 days)
+  - Cache recent threads (last 100) in IndexedDB
+  - Allow drafting replies offline
+  - Sync drafts to server when reconnected
+  - **Business Impact:** Mobile/travel use case, improves UX in low-connectivity scenarios
+
+- **[P2] Multi-Language Support & Translation** (1-2 weeks)
+  - Integrate translation API (Google Translate or DeepL)
+  - Display original + translated text in UI
+  - Support 10+ major languages
+  - **Business Impact:** Enables global outreach without multilingual sales teams
+  - **Cost:** $20-50/month (estimated)
+
+- **[P2] AI Enhancements Research Spike** (1-2 weeks)
+  - Conduct user interviews to identify top inbox pain points
+  - Prototype 2-3 AI features with Gemini AI
+  - Measure impact on key metrics
+  - **Business Impact:** Validates future AI features before committing to implementation
+
+**Total Q3 2026 Effort:** 3-4 weeks
+
+### Total Post-MVP Effort
+
+**Effort:** 10-14 weeks spread across Q2-Q3 2026  
+**Priority Distribution:** 3 P1 features, 4 P2 features, 1 P3 feature
+
+### Key Dependencies
+
+**Stalwart Integration:**
+
+- All inbox development blocked by Stalwart spike (Q4 2025)
+- Architecture decision determines database schema approach
+- Proof-of-concept validates chosen approach
+
+**Infrastructure:**
+
+- Content Database (attachments) - Already exists
+- Notifications Database (browser notifications) - Already exists
+- OLAP Analytics Database - Needs inbox-specific tables (Q2 2026)
+- Gemini AI API - Required for AI features (Q2 2026)
+
+**Features:**
+
+- Lead Scoring - Required for lead context sidebar (Q2 2026)
+- CRM Integration - Required for lead context sidebar (Q2 2026)
+
+### Success Metrics
+
+**Technical:**
+
+- Email threading accuracy > 95%
+- Inbox sync latency < 2 seconds
+- Inbox load time < 1 second (10,000 threads)
+- Concurrent users supported: 1,000+
+- AI reply suggestion accuracy > 80%
+- Sentiment analysis accuracy > 85%
+
+**Business:**
+
+- Inbox adoption > 90% of active users
+- Average response time reduced by 30%
+- AI reply suggestions used in 40%+ of replies
+- Sentiment-based optimization improves conversion by 15%
+- Rep performance visibility improves manager satisfaction
+- Agency customers can manage 5,000+ accounts without lag
+
+### Cost Estimates
+
+**MVP (Q1 2026):** $0/month (no external dependencies)
+
+**Post-MVP (Q2-Q3 2026):**
+
+- Gemini AI: $0-37.50/month (free tier covers early usage)
+- Translation APIs: $20-50/month (estimated)
+- **Total:** $20-87.50/month
+
+**Long-term Optimization:**
+
+- Train custom intent classification model (Q1 2027) to reduce AI costs by 80-90%
+
+**Detailed Roadmap:** [Inbox Management Roadmap](/docs/features/inbox/roadmap.md)
 
 ---
 

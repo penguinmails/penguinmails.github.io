@@ -30,6 +30,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Complete API key management system with Vault storage, including backend key generation, authentication middleware, and rate limiting.
 
 **Acceptance Criteria**:
+
 - [ ] API key generation with format `pm_live_{32_random_chars}`
 - [ ] bcrypt hashing (salt rounds: 12) before Vault storage
 - [ ] Vault integration for secure key storage at path `/api_keys/{tenant_id}/{key_id}`
@@ -40,11 +41,13 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] API endpoints: POST /api/v1/platform/api-keys (create), GET /api/v1/platform/api-keys (list), DELETE /api/v1/platform/api-keys/:id (revoke)
 
 **Dependencies**:
+
 - Vault Integration Architecture
 - PostgreSQL database
 - Redis for rate limiting
 
 **References**:
+
 - [Feature Documentation](./vault-api-keys.md)
 - [Route Specification](../../design/routes/api-key-management.md)
 - [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
@@ -61,6 +64,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Frontend UI for API key management at `/dashboard/settings/developers/api-keys` with create, view, regenerate, and revoke capabilities.
 
 **Acceptance Criteria**:
+
 - [ ] API key list page with table showing masked keys, permissions, last used, and actions
 - [ ] Create API key modal with name input and permission scope selector (checkboxes for 8 scopes)
 - [ ] API key created success modal displaying full key once with copy button and code examples (cURL, Node.js, Python)
@@ -73,11 +77,13 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] Responsive design (mobile, tablet, desktop)
 
 **Dependencies**:
+
 - API Key Management System (backend)
 - React/TypeScript frontend framework
 - Chart library for usage visualization
 
 **References**:
+
 - [Route Specification](../../design/routes/api-key-management.md)
 - [Feature Documentation](./vault-api-keys.md)
 
@@ -93,6 +99,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Implement core REST API endpoints for contacts, campaigns, emails, and analytics with standard REST conventions.
 
 **Acceptance Criteria**:
+
 - [ ] **Contacts API**: GET /api/v1/contacts (list with pagination), POST /api/v1/contacts (create), GET /api/v1/contacts/:id (get), PUT /api/v1/contacts/:id (update), DELETE /api/v1/contacts/:id (delete)
 - [ ] **Campaigns API**: GET /api/v1/campaigns (list), POST /api/v1/campaigns (create), GET /api/v1/campaigns/:id (get), PUT /api/v1/campaigns/:id (update), DELETE /api/v1/campaigns/:id (delete), POST /api/v1/campaigns/:id/start (start), POST /api/v1/campaigns/:id/pause (pause)
 - [ ] **Emails API**: POST /api/v1/emails/send (send single email), GET /api/v1/emails (list sent emails), GET /api/v1/emails/:id (get email details)
@@ -107,12 +114,14 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] Comprehensive error responses with error codes and messages
 
 **Dependencies**:
+
 - API Key Management System (authentication)
 - PostgreSQL database
 - Campaign management system
 - Email sending infrastructure
 
 **References**:
+
 - [Feature Documentation](./api-access.md)
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md)
 
@@ -128,6 +137,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Create comprehensive API documentation using OpenAPI/Swagger with interactive API explorer and code examples.
 
 **Acceptance Criteria**:
+
 - [ ] OpenAPI 3.0 specification file (openapi.yaml)
 - [ ] Swagger UI hosted at /api/docs for interactive API exploration
 - [ ] Complete endpoint documentation (all endpoints, parameters, responses)
@@ -142,10 +152,12 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] API changelog (version history)
 
 **Dependencies**:
+
 - Core REST API Endpoints (to document)
 - Swagger UI library
 
 **References**:
+
 - [Feature Documentation](./api-access.md)
 
 ---
@@ -160,6 +172,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Implement webhook delivery system with event filtering, retry logic, and signature verification.
 
 **Acceptance Criteria**:
+
 - [ ] Webhook delivery engine with queue-based processing (PostgreSQL queue or Redis)
 - [ ] Event type support (email.sent, email.opened, email.clicked, email.replied, email.bounced, email.unsubscribed, campaign.started, campaign.completed, contact.created, contact.updated)
 - [ ] Event filtering by workspace, campaign, or contact tags
@@ -171,11 +184,13 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] API endpoints: POST /api/v1/webhooks (create), GET /api/v1/webhooks (list), PUT /api/v1/webhooks/:id (update), DELETE /api/v1/webhooks/:id (delete), GET /api/v1/webhooks/:id/deliveries (delivery log)
 
 **Dependencies**:
+
 - PostgreSQL or Redis for queue
 - Core REST API infrastructure
 - Event system for triggering webhooks
 
 **References**:
+
 - [Feature Documentation](./webhook-system.md)
 - [Route Specification](../../design/routes/webhook-system.md)
 
@@ -191,6 +206,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Frontend UI for webhook configuration at `/dashboard/settings/webhooks` with event selection, testing, and delivery logs.
 
 **Acceptance Criteria**:
+
 - [ ] Webhook list page with table showing endpoint URL, events, status, and actions
 - [ ] Create webhook modal with URL input, event type selector (checkboxes), and filter options
 - [ ] Webhook test interface with sample payload preview and "Send Test" button
@@ -203,11 +219,13 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - [ ] Delete webhook confirmation modal
 
 **Dependencies**:
+
 - Webhook System (backend)
 - React/TypeScript frontend framework
 - Chart library for delivery statistics
 
 **References**:
+
 - [Route Specification](../../design/routes/webhook-system.md)
 - [Feature Documentation](./webhook-system.md)
 
@@ -220,6 +238,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Priority Distribution**: 4 P0 features, 2 P1 features
 
 **Critical Path**:
+
 1. API Key Management System (1-2 weeks) - Foundation
 2. API Key Management UI (5-7 days) - User-facing
 3. Core REST API Endpoints (2-3 weeks) - Core functionality
@@ -228,6 +247,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 6. Webhook Configuration UI (1-2 weeks) - User-facing
 
 **Success Criteria**:
+
 - Customers can generate API keys and make authenticated API calls
 - Core API endpoints functional for contacts, campaigns, emails, analytics
 - Comprehensive API documentation available at /api/docs
@@ -250,6 +270,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Bi-directional sync between PenguinMails and Salesforce with OAuth authentication, field mapping, and activity logging.
 
 **Key Features**:
+
 - OAuth 2.0 authentication flow
 - Bi-directional contact/lead sync
 - Field mapping (standard and custom fields)
@@ -272,6 +293,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Bi-directional sync between PenguinMails and HubSpot with OAuth authentication, field mapping, and workflow triggers.
 
 **Key Features**:
+
 - OAuth 2.0 authentication flow
 - Bi-directional contact sync
 - Field mapping (standard and custom properties)
@@ -296,6 +318,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Zapier app integration enabling connections to 5,000+ apps with pre-built Zaps for common workflows.
 
 **Key Features**:
+
 - Zapier app setup and configuration
 - Triggers: email.sent, email.opened, email.clicked, email.replied, contact.created
 - Actions: create_contact, send_email, add_to_campaign, update_contact
@@ -308,6 +331,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Dependencies**: Stable API + webhooks
 
 **Example Zaps**:
+
 - Google Sheets → PenguinMails (new row creates contact)
 - PenguinMails → Slack (email replied sends Slack message)
 - Typeform → PenguinMails (new submission creates contact and adds to segment)
@@ -328,6 +352,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: User interface for configuring external Email Service Providers (Postmark, Mailgun) with routing rules and analytics.
 
 **Key Features**:
+
 - ESP provider selection and configuration forms
 - API key/token input with validation
 - Domain verification status display
@@ -354,6 +379,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Advanced webhook configuration with custom event filtering, conditional logic, and payload transformation.
 
 **Key Features**:
+
 - Advanced event filtering (contact tags, lead score, email domain, campaign type)
 - Conditional logic (if/then rules, threshold-based triggers)
 - Payload transformation (custom templates, field mapping, data enrichment)
@@ -425,6 +451,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Public marketplace where third-party developers can publish integrations, and users can discover and install them.
 
 **Key Features**:
+
 - Developer portal (registration, submission, testing)
 - Integration marketplace (browse, search, install)
 - Integration management (installed integrations dashboard)
@@ -449,6 +476,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Ultra-low latency bi-directional sync with WebSocket/SSE infrastructure for enterprise customers.
 
 **Key Features**:
+
 - WebSocket or Server-Sent Events (SSE) for push notifications
 - Change Data Capture (CDC) from PostgreSQL
 - Real-time event streaming (Kafka or Redis Streams)
@@ -474,6 +502,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Comprehensive Vault integration architecture documentation including secret structure, access policies, rotation procedures, and disaster recovery.
 
 **Deliverables**:
+
 - ✅ Vault secret structure definition
 - ✅ Access control policies (admin, tenant, system)
 - ✅ Secret rotation policies (SSH: 90 days, API keys: on-demand, SMTP: 180 days)
@@ -496,6 +525,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Store admin and tenant SSH keys in Vault during VPS provisioning with frontend UI for credential viewing.
 
 **Key Features**:
+
 - Store admin SSH keys in Vault during VPS provisioning
 - Generate tenant SSH keys (secondary access)
 - Frontend UI at `/dashboard/settings/infrastructure/ssh-access`
@@ -518,6 +548,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Store SMTP admin credentials in Vault during MailU setup with secure retrieval for troubleshooting.
 
 **Key Features**:
+
 - Store SMTP credentials in Vault during MailU setup
 - AES-256-GCM encryption before Vault storage
 - Secure credential viewing UI (requires re-authentication)
@@ -540,6 +571,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Description**: Automated Vault backup, disaster recovery procedures, and VPS migration workflow.
 
 **Key Features**:
+
 - Automated daily Vault backups to S3
 - VPS migration workflow (abandon VPS, restore secrets)
 - Vault restoration from backup (step-by-step runbook)
@@ -557,12 +589,14 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 ### MVP Success Criteria (Q1 2026)
 
 **Technical Metrics**:
+
 - API key generation success rate > 99%
 - API response time < 200ms (p95)
 - Webhook delivery success rate > 95%
 - API documentation completeness > 90%
 
 **Business Metrics**:
+
 - 50+ developers using API within first month
 - 100+ API keys generated
 - 200+ webhooks configured
@@ -571,11 +605,13 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 ### Post-MVP Success Criteria (Q2-Q4 2026)
 
 **Technical Metrics**:
+
 - CRM sync success rate > 95%
 - Zapier Zap success rate > 98%
 - Real-time sync latency < 1 minute (enterprise)
 
 **Business Metrics**:
+
 - 20+ customers using Salesforce integration
 - 15+ customers using HubSpot integration
 - 50+ customers using Zapier integration
@@ -586,16 +622,19 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 ## Cross-References
 
 **Related Features**:
+
 - [Authentication & Security](../enterprise/user-management.md) - API key authentication, OAuth flows
 - [Infrastructure Management](../infrastructure/README.md) - VPS provisioning, SSH key management, SMTP setup
 - [Domain Management](../domains/README.md) - DKIM key storage in Vault
 - [Email Operations](../campaigns/README.md) - Campaign API endpoints, webhook events
 
 **Implementation**:
+
 - [API Documentation](../../implementation-technical/api/README.md) - Technical API specifications
 - [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Secrets management architecture
 
 **Business Strategy**:
+
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md) - API-first approach rationale
 - [Product Roadmap](../../roadmap/product-roadmap.md) - Integration timeline and priorities
 - [Executive Roadmap](../../business/roadmap/executive-roadmap.md) - Strategic integration investments
@@ -605,4 +644,3 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Last Updated**: 2025-11-26  
 **Review Cycle**: Monthly roadmap updates, quarterly strategic review  
 **Status**: Active planning and implementation
-

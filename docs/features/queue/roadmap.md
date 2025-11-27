@@ -17,6 +17,7 @@ Timeline for queue system enhancements from current active state through future 
 **Status**: Production-ready, future enhancements as needed
 
 **Strategic Focus**:
+
 - **Now**: High-throughput email processing (ACTIVE)
 - **Future**: Enhanced monitoring, advanced scheduling, notification system
 
@@ -30,6 +31,7 @@ Timeline for queue system enhancements from current active state through future 
 **Throughput**: 10,000+ emails/minute
 
 **Capabilities**:
+
 - **High Throughput**: Process 10,000+ emails/minute
 - **Reliable Delivery**: At-least-once delivery guarantee with retry logic
 - **Smart Throttling**: Respect provider limits and warmup constraints
@@ -42,12 +44,14 @@ Timeline for queue system enhancements from current active state through future 
 - **Stateless Workers**: Horizontal scaling support (50-100 workers per node)
 
 **Technical Architecture**:
+
 - **PostgreSQL**: Job metadata and state storage
 - **Redis**: Active queue for high-performance processing
 - **Worker Pools**: Separate pools for email, import, export jobs
 - **Concurrency**: 50-100 email workers per node, 2-5 import workers per node
 
 **Success Metrics**:
+
 - Throughput: 10,000+ emails/minute
 - Delivery guarantee: 99.9%+ (at-least-once)
 - Job latency: < 5 seconds from enqueue to processing
@@ -60,6 +64,7 @@ Timeline for queue system enhancements from current active state through future 
 **Status**: ACTIVE (Production-Ready)
 
 **Job Types**:
+
 1. **email.send**: Send individual emails (high concurrency: 50-100 per node)
 2. **campaign.process**: Process active campaigns, execute next steps (every 5 minutes)
 3. **import.contacts**: Import contact lists (low concurrency: 2-5 per node)
@@ -68,11 +73,13 @@ Timeline for queue system enhancements from current active state through future 
 6. **maintenance.cleanup**: Clean up old data (daily)
 
 **Campaign Processing Jobs**:
+
 - **campaign-processor** (every 5 minutes): Process active campaigns, execute next steps
 - **campaign-analytics-aggregator** (daily at 2 AM): Aggregate campaign metrics
 - **campaign-auto-complete** (hourly): Mark completed campaigns
 
 **Warmup Processing Jobs**:
+
 - **warmup-scheduler** (daily at 9 AM): Schedule daily warmup emails
 - **warmup-health-check** (hourly): Check warmup health and auto-pause if needed
 - **warmup-engagement-simulator**: Simulate opens, clicks, replies for warmup pool
@@ -80,11 +87,13 @@ Timeline for queue system enhancements from current active state through future 
 - **reputation-calculator** (daily at 2 AM): Calculate domain health scores
 
 **Queue Processing Jobs**:
+
 - **email-worker**: Process email send jobs (high concurrency: 50-100 per node)
 - **import-worker**: Process contact imports (low concurrency: 2-5 per node)
 - **stalled-job-detector**: Re-queue stalled jobs
 
 **Capabilities**:
+
 - **Priority-Based Processing**: High-priority jobs processed first
 - **Graceful Shutdown**: Complete jobs before shutdown
 - **Stalled Job Detection**: Re-queue stalled jobs automatically (after 30 minutes)
@@ -93,6 +102,7 @@ Timeline for queue system enhancements from current active state through future 
 - **Prometheus Metrics**: Integration for monitoring (`jobs_completed_total`, throughput, queue backlogs)
 
 **Success Metrics**:
+
 - Job completion rate: 99%+
 - Stalled job rate: < 1%
 - Graceful shutdown success: 100%
@@ -103,10 +113,12 @@ Timeline for queue system enhancements from current active state through future 
 ## Future Enhancements
 
 ### Queue Monitoring Dashboard
+
 **Priority**: Medium  
 **Timeline**: As needed based on operational requirements
 
 **Planned Capabilities**:
+
 - Real-time queue depth visualization
 - Job throughput metrics (jobs/minute, jobs/hour)
 - Worker health monitoring (active workers, idle workers, failed workers)
@@ -117,6 +129,7 @@ Timeline for queue system enhancements from current active state through future 
 **Value Proposition**: Enhanced operational visibility for troubleshooting and capacity planning.
 
 **Technical Requirements**:
+
 - Real-time metrics dashboard (React + WebSocket)
 - Historical data storage (PostgreSQL time-series)
 - Alert configuration UI
@@ -125,10 +138,12 @@ Timeline for queue system enhancements from current active state through future 
 ---
 
 ### Advanced Job Scheduling
+
 **Priority**: Low  
 **Timeline**: Future (as needed for complex workflows)
 
 **Planned Capabilities**:
+
 - Job dependencies (wait for other jobs to complete)
 - Workflow orchestration (multi-step workflows with conditional logic)
 - Scheduled recurring jobs (cron-like scheduling)
@@ -138,6 +153,7 @@ Timeline for queue system enhancements from current active state through future 
 **Value Proposition**: Support for complex multi-step workflows and dependencies.
 
 **Technical Requirements**:
+
 - Workflow engine (state machine)
 - Job dependency graph
 - Cron scheduler
@@ -146,10 +162,12 @@ Timeline for queue system enhancements from current active state through future 
 ---
 
 ### Notification System
+
 **Priority**: Medium  
 **Timeline**: Future (as needed for user notifications)
 
 **Planned Capabilities**:
+
 - In-app notifications (real-time via WebSocket)
 - Email notifications (via transactional email service)
 - Push notifications (mobile apps)
@@ -160,6 +178,7 @@ Timeline for queue system enhancements from current active state through future 
 **Value Proposition**: Keep users informed of important events (campaign completion, reputation issues, etc.).
 
 **Technical Requirements**:
+
 - Notification service (background jobs)
 - WebSocket server (real-time in-app notifications)
 - Email template system (notification emails)
@@ -171,16 +190,19 @@ Timeline for queue system enhancements from current active state through future 
 ## Related Documentation
 
 ### Feature Documentation
+
 - [Queue & Background Jobs Overview](/docs/features/queue) - Queue features catalog
 - [Campaign Management](/docs/features/campaigns) - Email campaigns using queue system
 - [Warmup & Reputation](/docs/features/warmup) - Warmup jobs and scheduling
 
 ### Technical Implementation
+
 - [Queue API](/docs/implementation-technical/api/queue) - Background job management
 - [Email Pipeline](/docs/features/queue/email-pipeline) - Email sending infrastructure
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline) - Implementation tasks
 
 ### Business Strategy
+
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Technical dependencies
 

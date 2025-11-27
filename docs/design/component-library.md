@@ -73,6 +73,7 @@ All components must support both light and dark modes using Tailwind's `dark:` m
 ```
 
 ### Component Maturity Levels
+
 - **Technical Experimental**: New components under development
 - **Completed Stable**: Production-ready components with full test coverage
 - **🔒 Deprecated**: Components scheduled for removal (with migration guides)
@@ -81,6 +82,7 @@ All components must support both light and dark modes using Tailwind's `dark:` m
 ## Primitives
 
 ### Button
+
 ```typescript
 import { Button } from '@/components/primitives/Button';
 
@@ -111,12 +113,14 @@ interface ButtonProps {
 ```
 
 **Design Specifications:**
+
 - Height: 32px (sm), 40px (md), 48px (lg)
 - Border radius: 6px (sm, md), 8px (lg)
 - Font weight: 500 (regular), 600 (bold for primary)
 - Focus ring: 2px solid primary color, 2px offset
 
 ### Input
+
 ```jsx
 import { Input } from '@/components/primitives/Input';
 
@@ -152,6 +156,7 @@ interface InputProps {
 ```
 
 **Design Specifications:**
+
 - Height: 32px (sm), 40px (md), 48px (lg)
 - Border: 1px solid neutral-300 (default)
 - Border radius: 6px
@@ -161,6 +166,7 @@ interface InputProps {
 ## Layout Components
 
 ### Container
+
 ```typescript
 import { Container } from '@/components/layout/Container';
 
@@ -183,6 +189,7 @@ interface ContainerProps {
 ```
 
 **Size Specifications:**
+
 - sm: 640px max-width
 - md: 768px max-width
 - lg: 1024px max-width
@@ -190,6 +197,7 @@ interface ContainerProps {
 - full: 100% width
 
 ### Grid & GridItem
+
 ```typescript
 import { Grid, GridItem } from '@/components/layout/Grid';
 
@@ -219,6 +227,7 @@ interface GridItemProps {
 ```
 
 **Responsive Breakpoints:**
+
 - Mobile: 1 column (span resets to 12)
 - Tablet: 8 columns max
 - Desktop: 12 columns max
@@ -226,6 +235,7 @@ interface GridItemProps {
 ## Form Components
 
 ### FormField
+
 ```typescript
 import { FormField } from '@/components/forms/FormField';
 
@@ -254,6 +264,7 @@ interface FormFieldProps {
 ```
 
 ### Select
+
 ```typescript
 import { Select } from '@/components/forms/Select';
 
@@ -292,6 +303,7 @@ interface SelectProps {
 ```
 
 ### Checkbox & Radio
+
 ```typescript
 import { Checkbox, Radio, RadioGroup } from '@/components/forms/Checkbox';
 
@@ -328,6 +340,7 @@ interface RadioGroupProps {
 ## Data Display Components
 
 ### Table
+
 ```jsx
 import { Table } from '@/components/data-display/Table';
 
@@ -395,6 +408,7 @@ interface TableProps<T> {
 ```
 
 ### Card
+
 ```typescript
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/data-display/Card';
 
@@ -478,9 +492,11 @@ interface AlertProps {
   message="Campaign sent successfully! Check your analytics for performance details."
 />
 ```
+
 {% endraw %}
 
 ### Toast
+
 ```typescript
 import { useToast } from '@/components/feedback/Toast';
 
@@ -521,6 +537,7 @@ const handleSave = async () => {
 ```
 
 ### Modal
+
 ```jsx
 import { Modal } from '@/components/feedback/Modal';
 
@@ -718,9 +735,11 @@ interface EmptyStateProps {
   }}
 />
 ```
+
 {% endraw %}
 
 ### Badge
+
 ```typescript
 import { Badge } from '@/components/utilities/Badge';
 
@@ -757,6 +776,7 @@ interface BadgeProps {
 | Tooltip | Completed Stable | 1.4.1 | Jul 2025 |
 
 ### Upcoming Components
+
 - **DatePicker**: Advanced date selection with calendar
 - **TimePicker**: Time selection with timezone support
 - **ColorPicker**: Color selection for email templates
@@ -765,6 +785,7 @@ interface BadgeProps {
 - **Accordion**: Collapsible content sections
 
 ### Component Deprecations
+
 - **LegacyButton**: Deprecated in favor of new Button component
 - **OldModal**: Deprecated, migrate to new Modal component by Dec 2025
 - **BasicTable**: Deprecated, use enhanced Table component
@@ -772,6 +793,7 @@ interface BadgeProps {
 ## Implementation Guidelines
 
 ### Import Patterns
+
 ```typescript
 // Preferred: Import specific components
 import { Button, Input, Modal } from '@/components';
@@ -782,6 +804,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ```
 
 ### Component Composition
+
 ```typescript
 // Good: Compose components logically
 <Card>
@@ -813,6 +836,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ```
 
 ### Styling Guidelines
+
 - Use design tokens for all spacing, colors, and typography
 - Avoid inline styles except for dynamic values
 - Use CSS custom properties for themeable values
@@ -821,6 +845,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ---
 
 ## Related Documents
+
 - [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
 - [Design System](/docs/design/design-system) - Complete design system overview
 - [Design Tokens](/docs/design/design-tokens) - Design token specifications

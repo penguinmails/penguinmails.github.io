@@ -82,12 +82,14 @@ graph TD
 ### **CCPA Compliance Procedures**
 
 #### **Consumer Rights**
+
 - **Right to Know**: Categories and specific pieces of personal information collected
 - **Right to Delete**: Delete personal information (with exceptions)
 - **Right to Opt-out**: Opt-out of sale of personal information
 - **Right to Non-discrimination**: No retaliation for exercising rights
 
 #### **Data Inventory Requirements**
+
 - **Categories Collected**: Email addresses, IP addresses, device information
 - **Sources**: Direct from users, third-party integrations
 - **Business Purposes**: Service provision, analytics, marketing
@@ -98,6 +100,7 @@ graph TD
 ### **CAN-SPAM Act Requirements**
 
 #### **Message Requirements**
+
 - **Clear Identification**: Sender name and address must be accurate
 - **Subject Line**: Must not be deceptive
 - **Physical Address**: Valid physical postal address
@@ -105,6 +108,7 @@ graph TD
 - **Honor Opt-outs**: Process unsubscribes within 10 business days
 
 #### **CAN-SPAM Compliance Checklist**
+
 - [ ] Accurate sender information
 - [ ] Non-deceptive subject lines
 - [ ] Physical mailing address included
@@ -116,12 +120,14 @@ graph TD
 ### **CASL Compliance Procedures**
 
 #### **Consent Requirements**
+
 - **Express Consent**: Clear, active consent for commercial emails
 - **Implied Consent**: For existing business relationships (limited)
 - **Unsubscribe**: Must include unsubscribe mechanism
 - **Identification**: Sender must be clearly identifiable
 
 #### **CASL Enforcement**
+
 - **Penalties**: Up to $10 million for violations
 - **Private Right of Action**: Individuals can sue for violations
 - **Record Keeping**: Maintain consent records for 2 years
@@ -129,6 +135,7 @@ graph TD
 ## 5. **Privacy Program Management**
 
 ### **Data Protection Officer Responsibilities**
+
 - **Compliance Oversight**: Monitor regulatory changes and requirements
 - **Risk Assessment**: Regular privacy impact assessments
 - **Training Coordination**: Staff privacy training and awareness
@@ -136,6 +143,7 @@ graph TD
 - **Audit Preparation**: Coordinate privacy audits and assessments
 
 ### **Privacy Impact Assessment Process**
+
 1. **Project Identification**: New features or changes requiring assessment
 2. **Data Mapping**: Identify personal data collection and processing
 3. **Risk Evaluation**: Assess privacy risks and mitigation measures
@@ -145,24 +153,28 @@ graph TD
 ## 6. **Data Security Measures**
 
 ### **Data Encryption**
+
 - **In Transit**: TLS 1.3 encryption for all data transmission
 - **At Rest**: AES-256 encryption for stored personal data
 - **Key Management**: Secure key rotation and storage procedures
 - **Database Encryption**: Transparent data encryption for sensitive fields
 
 ### **Access Controls**
+
 - **Role-Based Access**: Least privilege access to personal data
 - **Multi-Factor Authentication**: Required for administrative access
 - **Audit Logging**: Comprehensive logging of data access and changes
 - **Regular Reviews**: Quarterly access permission reviews
 
 ### **Data Retention**
+
 - **Retention Schedule**: Defined retention periods by data type
 - **Automated Deletion**: Scheduled data purging procedures
 - **Legal Holds**: Suspension of deletion during legal proceedings
 - **Archival Procedures**: Secure long-term data storage when required
 
 ### **User Data Deletion & PII Anonymization**
+
 - **Soft Delete Implementation**: Users marked as deleted rather than hard deleted
 - **PII Anonymization Function**: `anonymize_user()` function replaces personal data with generic values
 - **Data Ownership Transfer**: Critical business data transferred to 'system' user to prevent orphaned records
@@ -172,12 +184,14 @@ graph TD
 ## 7. **Incident Response Procedures**
 
 ### **Breach Notification Requirements**
+
 - **GDPR**: Notify supervisory authority within 72 hours, affected individuals without undue delay
 - **CCPA**: Notify affected California residents without unreasonable delay
 - **CAN-SPAM**: No specific breach notification, but FTC may investigate
 - **CASL**: Notify Privacy Commissioner and affected individuals
 
 ### **Incident Response Workflow**
+
 ```mermaid
 graph TD
     A[Breach Detected] --> B[Assess Impact]
@@ -194,6 +208,7 @@ graph TD
 ```
 
 ### **Breach Response Team**
+
 - **Incident Commander**: Overall coordination and decision making
 - **Legal Counsel**: Regulatory compliance and notification requirements
 - **Technical Lead**: Technical assessment and remediation
@@ -203,12 +218,14 @@ graph TD
 ## 8. **Vendor Compliance Management**
 
 ### **Third-Party Risk Assessment**
+
 - **Vendor Evaluation**: Privacy and security capability assessment
 - **Contract Requirements**: Data protection clauses and audit rights
 - **Ongoing Monitoring**: Regular vendor compliance reviews
 - **Incident Reporting**: Vendor breach notification procedures
 
 ### **Key Vendors and Compliance Status**
+
 | Vendor | Purpose | Compliance Status | Last Review |
 |--------|---------|-------------------|-------------|
 | Stripe | Payment Processing | PCI DSS, SOC 2 | Monthly |
@@ -219,18 +236,21 @@ graph TD
 ## 9. **Compliance Monitoring and Reporting**
 
 ### **Regular Compliance Activities**
+
 - **Monthly**: Compliance metric review and reporting
 - **Quarterly**: Privacy impact assessments and vendor reviews
 - **Annually**: Full compliance audit and certification renewal
 - **Continuous**: Regulatory change monitoring and policy updates
 
 ### **Compliance Metrics**
+
 - **DSR Response Time**: Average time to respond to data subject requests
 - **Opt-out Processing**: Percentage of opt-outs processed within 10 days
 - **Training Completion**: Percentage of staff completing privacy training
 - **Audit Findings**: Number and severity of compliance issues identified
 
 ### **Reporting Requirements**
+
 - **Internal Reports**: Monthly compliance dashboard for management
 - **External Reports**: SOC 2 reports for customers and auditors
 - **Regulatory Filings**: Required submissions to supervisory authorities
@@ -239,12 +259,14 @@ graph TD
 ## 10. **Training and Awareness**
 
 ### **Staff Training Requirements**
+
 - **New Employee Training**: Privacy and compliance orientation
 - **Annual Refresher**: Updated training on regulatory changes
 - **Role-Specific Training**: Specialized training for high-risk roles
 - **Incident Response Training**: Regular drills and simulations
 
 ### **Training Topics**
+
 - **Data Protection Laws**: GDPR, CCPA, and other regulations
 - **Email Marketing Rules**: CAN-SPAM, CASL compliance
 - **Security Best Practices**: Data handling and incident prevention
@@ -253,12 +275,14 @@ graph TD
 ## 11. **Audit and Certification**
 
 ### **External Audits**
+
 - **SOC 2 Type II**: Annual audit of security controls
 - **GDPR Audit**: Biennial assessment of GDPR compliance
 - **ISO 27001**: Triennial certification renewal
 - **Penetration Testing**: Annual security assessment
 
 ### **Internal Audits**
+
 - **Quarterly Self-Assessments**: Internal compliance reviews
 - **Process Audits**: Workflow and procedure effectiveness
 - **Technical Audits**: System configuration and security settings
@@ -267,6 +291,7 @@ graph TD
 ## 12. **Decision Trees**
 
 ### **Data Processing Decision Tree**
+
 ```markdown
 Processing personal data?
 ├── Yes → Privacy impact assessment required
@@ -276,6 +301,7 @@ Processing personal data?
 ```
 
 ### **Breach Notification Decision Tree**
+
 ```markdown
 Personal data breach?
 ├── Yes → Assess severity and impact
@@ -287,6 +313,7 @@ Personal data breach?
 ---
 
 ## Related Documents
+
 - [Security & Compliance Gaps Analysis](/docs/compliance-security/enterprise/security-compliance-gaps) - Comprehensive analysis of RLS, audit logging, and data privacy gaps
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security procedures and protocols
 - [SOP Guidelines](/docs/compliance-security/detailed-compliance/sop-guidelines) - Standard operating procedures

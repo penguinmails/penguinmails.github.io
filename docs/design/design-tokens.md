@@ -49,6 +49,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Color Tokens
 
 ### Brand Colors
+
 ```css
 /* Primary Blue - Trust, Technology, Professionalism */
 --color-brand-primary-50: #f0f9ff;
@@ -76,6 +77,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Semantic Colors
+
 ```css
 /* Success States */
 --color-semantic-success-50: #f0fdf4;
@@ -127,6 +129,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Neutral Colors
+
 ```css
 /* Gray Scale */
 --color-neutral-gray-50: #f9fafb;
@@ -154,6 +157,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Special Colors
+
 ```css
 /* Background Colors */
 --color-background-primary: #ffffff;
@@ -177,6 +181,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Typography Tokens
 
 ### Font Families
+
 ```css
 --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 --font-family-mono: 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
@@ -184,6 +189,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Font Sizes
+
 ```css
 /* Display sizes */
 --font-size-display-2xl: 4.5rem;    /* 72px - Hero headlines */
@@ -203,6 +209,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Font Weights
+
 ```css
 --font-weight-thin: 100;
 --font-weight-light: 300;
@@ -215,6 +222,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Line Heights
+
 ```css
 --line-height-tight: 1.25;     /* Headlines */
 --line-height-normal: 1.5;     /* Body text */
@@ -223,6 +231,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Letter Spacing
+
 ```css
 --letter-spacing-tight: -0.025em;   /* Headlines */
 --letter-spacing-normal: 0;         /* Body text */
@@ -234,6 +243,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Spacing Tokens
 
 ### Space Scale
+
 ```css
 --space-0: 0;                    /* 0px */
 --space-px: 1px;                 /* 1px */
@@ -274,6 +284,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Spacing Usage Guidelines
+
 - **space-1 to space-3**: Small gaps, borders, icon spacing
 - **space-4 to space-6**: Component padding, form spacing
 - **space-8 to space-12**: Section spacing, card padding
@@ -282,6 +293,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Sizing Tokens
 
 ### Component Heights
+
 ```css
 --size-height-xs: 1.5rem;        /* 24px - Small buttons */
 --size-height-sm: 2rem;          /* 32px - Small inputs */
@@ -291,6 +303,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Icon Sizes
+
 ```css
 --size-icon-xs: 0.75rem;         /* 12px */
 --size-icon-sm: 1rem;            /* 16px */
@@ -301,6 +314,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Border Radius
+
 ```css
 --radius-none: 0;
 --radius-xs: 0.125rem;           /* 2px */
@@ -314,6 +328,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Border Width
+
 ```css
 --border-width-none: 0;
 --border-width-thin: 1px;
@@ -325,6 +340,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Shadow Tokens
 
 ### Elevation Scale
+
 ```css
 --shadow-none: none;
 --shadow-xs: 0 1px 2px 0 rgb(0 0 0 );
@@ -337,6 +353,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Colored Shadows
+
 ```css
 --shadow-primary-xs: 0 1px 2px 0 rgb(14 165 233 );
 --shadow-primary-sm: 0 1px 3px 0 rgb(14 165 233 ), 0 1px 2px -1px rgb(14 165 233 );
@@ -355,6 +372,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Animation Tokens
 
 ### Duration
+
 ```css
 --duration-instant: 0ms;
 --duration-fast: 150ms;
@@ -363,6 +381,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Easing Functions
+
 ```css
 --ease-in: cubic-bezier(0.4, 0, 1, 1);
 --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -371,6 +390,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Animation Patterns
+
 ```css
 --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
 --transition-normal: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -380,6 +400,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Breakpoint Tokens
 
 ### Responsive Breakpoints
+
 ```css
 --breakpoint-xs: 475px;          /* Extra small devices */
 --breakpoint-sm: 640px;          ) */
@@ -391,6 +412,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ```
 
 ### Container Sizes
+
 ```css
 --container-xs: 20rem;            /* 320px */
 --container-sm: 24rem;            /* 384px */
@@ -409,12 +431,14 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Implementation Guidelines
 
 ### Token Usage Priority
+
 1. **Design Tokens**: Always use tokens instead of hard-coded values
 2. **Semantic Naming**: Use meaningful names that convey purpose
 3. **Platform Consistency**: Ensure tokens work across all platforms
 4. **Accessibility**: Verify all token combinations meet accessibility standards
 
 ### Token Modification Process
+
 1. **Impact Assessment**: Evaluate effects on existing components
 2. **Platform Testing**: Test across all supported platforms
 3. **Documentation Update**: Update design system documentation
@@ -422,6 +446,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 5. **Communication**: Notify all stakeholders of changes
 
 ### Version Control
+
 - **Semantic Versioning**: Major.Minor.Patch for token changes
 - **Deprecation Notices**: Clear timeline for token removal
 - **Migration Tools**: Automated migration assistance
@@ -430,6 +455,7 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ---
 
 ## Related Documents
+
 - [Design System](design-system) - Complete design system overview
 - [Component Library](component-library) - Reusable component catalog
 - [Accessibility Guidelines](accessibility-guidelines) - Inclusive design standards

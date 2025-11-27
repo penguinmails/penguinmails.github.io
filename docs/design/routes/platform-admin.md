@@ -370,7 +370,7 @@
   - **Last Rotated**: Timestamp (e.g., "2025-07-15 10:00:00 UTC").
   - **Next Rotation**: 180 days from last rotation (e.g., "2026-01-15 10:00:00 UTC").
   - **Rotation Status**: Color-coded indicator (Green: Healthy, Yellow: Due soon, Red: Overdue).
-  - **Actions**: 
+  - **Actions**:
     - **"View Credentials" Button**: Requires re-authentication (password + 2FA).
       - Opens secure modal with time-limited access (15 minutes).
       - Password initially masked (click eye icon to reveal).
@@ -410,6 +410,7 @@
 **Triggered by**: Clicking "View Credentials" button in SMTP Credentials Section.
 
 **Security Requirements**:
+
 - **Re-authentication Required**: Admin must enter password + 2FA code.
 - **Time-Limited Access**: Credentials visible for 15 minutes only.
 - **Audit Logging**: All credential views logged with timestamp, user, and IP address.
@@ -426,19 +427,19 @@
    - **Header**: "SMTP Admin Credentials - Tenant: {tenant_name}".
    - **Expiration Timer**: "Credentials expire in 14:32" (countdown).
    - **Warning Banner**: "⚠️ These credentials provide full access to the tenant's email infrastructure. Handle with care."
-   
+
    - **Credential Fields**:
      - **Username**: `admin@example.com` (plain text, copyable).
      - **Password**: `••••••••••••••••` (masked by default).
        - **Eye Icon Button**: Click to reveal password.
        - **Copy Button**: Copy password to clipboard (shows "Copied!" confirmation).
      - **Webmail URL**: `https://mail.example.com` (clickable link, opens in new tab).
-   
+
    - **Metadata**:
      - **Created**: "2025-01-15 10:00:00 UTC".
      - **Last Rotated**: "2025-07-15 10:00:00 UTC".
      - **Next Rotation**: "2026-01-15 10:00:00 UTC".
-   
+
    - **Actions**:
      - **"Close" Button**: Closes modal immediately.
      - **"Rotate Now" Button**: Triggers manual rotation (confirmation required).
@@ -450,6 +451,7 @@
    - After expiration, show message: "Credentials expired. Please re-authenticate to view again."
 
 **Implementation Notes**:
+
 - **API Endpoint**: `GET /api/v1/platform-admin/tenants/{tenant_id}/smtp-credentials`.
 - **Re-auth Token**: Generated on successful re-authentication, valid for 15 minutes.
 - **Audit Event**: `smtp_credentials_viewed` logged with tenant_id, admin_user_id, timestamp, ip_address.

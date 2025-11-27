@@ -325,6 +325,7 @@ interface CampaignEngagement {
 ```
 
 #### **Campaign Analytics Dashboard**
+
 ```markdown
 Campaign Performance
 ├── Total Sent: X emails
@@ -343,6 +344,7 @@ Engagement Trends
 ### **User Journey Analytics**
 
 #### **Journey Performance Tracking**
+
 ```typescript
 interface JourneyAnalytics {
   journeyId: string;
@@ -368,6 +370,7 @@ interface JourneyAnalytics {
 ```
 
 #### **Behavioral Analysis**
+
 - **User Flow Visualization**: Complete journey mapping
 - **Drop-off Point Analysis**: Where users abandon workflows
 - **Time-to-Value Tracking**: Speed of user activation
@@ -381,6 +384,7 @@ interface JourneyAnalytics {
 ### **Analytics System Recovery**
 
 #### **Data Consistency Issues**
+
 - **Scenario**: Discrepancies detected between different data sources or metrics
 - **Action**: System automatically detects data mismatch alerts
 - **Page**: Data Consistency Alerts
@@ -394,6 +398,7 @@ interface JourneyAnalytics {
 - **Page**: Accuracy Verification Dashboard
 
 #### **Reporting Failures**
+
 - **Scenario**: Scheduled reports fail to generate or contain errors
 - **Action**: System detects report generation failure
 - **Page**: Report Failure Alerts
@@ -405,6 +410,7 @@ interface JourneyAnalytics {
 - **Page**: Report Investigation Console
 
 #### **Dashboard Performance Issues**
+
 - **Scenario**: Analytics dashboard loads slowly or times out
 - **Action**: Monitor dashboard response times and detect slowdowns
 - **Page**: Performance Monitoring
@@ -419,11 +425,13 @@ interface JourneyAnalytics {
 ### **Campaign Operations Recovery**
 
 #### **Campaign Launch Failures**
+
 ```markdown
 Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis → Recovery Options → Relaunch
 ```
 
 **Failure Types & Recovery:**
+
 1. **SMTP Connection Issues**:
    - **Detection**: Connection timeout or authentication failure
    - **Recovery**: Automatic retry with different SMTP server
@@ -445,11 +453,13 @@ Campaign Ready → Launch Attempt → Failure Detection → Root Cause Analysis 
    - **Prevention**: Pre-launch list hygiene checks
 
 #### **Large-Scale Campaign Management**
+
 ```markdown
 Bulk Operations → Progress Tracking → Partial Failures → Selective Retry → Completion Reconciliation
 ```
 
 **Bulk Processing Strategies:**
+
 1. **Batch Segmentation**:
    - **Size**: 10,000 recipients per batch
    - **Timing**: Staggered sends to avoid rate limits
@@ -466,11 +476,13 @@ Bulk Operations → Progress Tracking → Partial Failures → Selective Retry �
    - **Load Balancing**: Distribution across multiple SMTP servers
 
 #### **Content & Compliance Issues**
+
 ```markdown
 Pre-Launch Check → Spam Detection → Content Review → Approval Workflow → Launch Authorization
 ```
 
 **Content Validation Process:**
+
 1. **Automated Spam Checking**:
    - **Tools**: Multiple spam filters (SpamAssassin, etc.)
    - **Thresholds**: Block if score > 5.0
@@ -491,6 +503,7 @@ Pre-Launch Check → Spam Detection → Content Review → Approval Workflow →
 ## Initial Setup Scenarios
 
 ### **First Analytics Review**
+
 - **Scenario**: User accessing analytics for the first time
 - **Action**: System detects first-time access and shows onboarding tour
 - **Page**: Analytics Onboarding Tour
@@ -504,6 +517,7 @@ Pre-Launch Check → Spam Detection → Content Review → Approval Workflow →
 - **Button**: 'Schedule Regular Reviews'
 
 ### **Data Source Configuration**
+
 - **Scenario**: Setting up analytics data sources for new organization
 - **Action**: Access data source configuration panel
 - **Page**: Data Source Setup
@@ -519,11 +533,13 @@ Pre-Launch Check → Spam Detection → Content Review → Approval Workflow →
 - **Page**: Monitoring Activation
 
 ### **First Campaign Creation**
+
 ```markdown
 Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Setup → Test Send → Launch Success
 ```
 
 **Detailed New User Flow:**
+
 1. **Discovery & Access**:
    - **Dashboard**: Post-onboarding welcome screen with prominent "Send Your First Campaign" button
    - **Empty State**: Campaign list shows "No campaigns yet" with creation prompt
@@ -548,11 +564,13 @@ Dashboard Access → "Create Campaign" CTA → Template Selection → Guided Set
    - **Follow-up**: Automated performance email after completion
 
 ### **IP Selection & Warmup Setup**
+
 ```markdown
 IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configuration → Activation Monitoring
 ```
 
 **IP Decision Process:**
+
 1. **IP Portfolio Review**:
    - **Dashboard**: IP management section showing available IPs
    - **Metrics**: Reputation scores, capacity, pricing per IP
@@ -574,6 +592,7 @@ IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configurat
 ## Emergency Scenarios
 
 ### **Analytics System Failure**
+
 - **Scenario**: Complete failure of analytics data collection or reporting
 - **Action**: System detects critical failure and activates emergency protocols
 - **Page**: System Failure Alerts
@@ -587,6 +606,7 @@ IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configurat
 - **Status**: Analytics system fully restored
 
 ### **Critical Performance Drop**
+
 - **Scenario**: Sudden, significant drop in platform performance metrics
 - **Action**: Automated alerts trigger for critical performance degradation
 - **Page**: Critical Performance Alerts
@@ -600,11 +620,13 @@ IP Options Display → Cost-Benefit Analysis → Selection → Warmup Configurat
 - **Page**: Performance Recovery Dashboard
 
 ### **Deliverability Crisis Response**
+
 ```markdown
 High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → Recovery Actions → Relaunch
 ```
 
 **Crisis Management:**
+
 1. **Automatic Detection**:
    - **Bounce Threshold**: > 5% hard bounces trigger pause
    - **Complaint Threshold**: > 0.2% spam complaints trigger review
@@ -621,11 +643,13 @@ High Bounce Rate Alert → Automatic Campaign Pause → Root Cause Analysis → 
    - **Re-engagement Strategy**: Clean list re-engagement campaigns
 
 ### **SMTP Infrastructure Failure**
+
 ```markdown
 SMTP Connection Failure → Automatic Failover → Backup Server Activation → Status Updates → Service Restoration
 ```
 
 **Infrastructure Resilience:**
+
 1. **Failure Detection**:
    - **Connection Monitoring**: Real-time SMTP server health checks
    - **Queue Backups**: Failed sends trigger automatic retries
@@ -648,6 +672,7 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 ### **Analytics Issues**
 
 #### **"Why are my analytics not updating?"**
+
 1. **Processing Delay**:
    - **Symptom**: Analytics not showing immediately
    - **Solution**: Analytics update every 15-30 minutes
@@ -666,6 +691,7 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 ### **Campaign Issues**
 
 #### **"Why is my campaign stuck in 'Draft' status?"**
+
 1. **Incomplete Setup**:
    - **Symptom**: Campaign shows as draft despite clicking "Launch"
    - **Solution**: Check completion checklist - missing content, recipients, or IP selection
@@ -682,6 +708,7 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
    - **Check**: Account settings show verification status
 
 #### **"Why aren't my emails being delivered?"**
+
 1. **IP Reputation Issues**:
    - **Symptom**: High bounce rates or emails going to spam
    - **Solution**: Check IP reputation dashboard, consider IP rotation
@@ -698,6 +725,7 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
    - **Prevention**: Regular list cleaning and validation
 
 #### **"Why is my campaign sending slowly?"**
+
 1. **Rate Limiting**:
    - **Symptom**: Emails sent in small batches over long time
    - **Solution**: IP warmup in progress or shared IP throttling
@@ -714,6 +742,7 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
    - **Optimization**: Consider list segmentation for faster delivery
 
 #### **"Why did my campaign get paused automatically?"**
+
 1. **Bounce Rate Threshold**:
    - **Symptom**: Campaign paused due to high bounces
    - **Solution**: Review bounce analysis, clean recipient list
@@ -739,33 +768,39 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
+
 - [Operations Analytics Overview](.) - Main operations framework
 - [User Analytics](.) - User behavior analysis
 - [Product Analytics](.) - Feature performance analysis
 - [Metrics & KPIs](.) - Comprehensive KPI framework
 
 ### **Business Strategy**
+
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
 - [Market Analysis](/docs/business/market-analysis/overview) - Market positioning
 - [Value Proposition](/docs/business/value-proposition/overview) - Competitive differentiation
 
 ### **Technical Architecture**
+
 - [Technical Architecture Overview](/docs/technical/architecture/overview) - System design
 - [Analytics Architecture](/docs/technical/architecture/detailed-technical) - Technical implementation
 - [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System management
 - [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
+
 - [User Journeys Overview](/docs/user-journeys) - User flow documentation
 - [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
 - [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
+
 - [Compliance Overview](/docs/compliance-security) - Regulatory compliance
 - [Security Framework](/docs/compliance-security/enterprise) - Security operations
 - [Data Privacy Policy](/docs/compliance-security/international) - Privacy compliance
 
 ### **Operations Management**
+
 - [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
 - [Staff Operations](/docs/operations-analytics/operations-management) - Team coordination
 - [QA Protocols](/docs/operations-analytics/team-performance) - Quality assurance

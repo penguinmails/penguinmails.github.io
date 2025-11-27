@@ -30,6 +30,7 @@ Marketing Lead Capture → Lead Processing → CRM Sync → Sales Assignment →
 **Implementation Details:**
 
 **Lead Processing Pipeline:**
+
 ```typescript
 interface LeadProcessingWorkflow {
   step1: "Lead Capture & Validation"
@@ -76,6 +77,7 @@ const leadProcessingPipeline = {
 **CRM Integration Mapping:**
 
 **Salesforce Integration:**
+
 ```json
 {
   "salesforce_mapping": {
@@ -105,6 +107,7 @@ const leadProcessingPipeline = {
 ```
 
 **HubSpot Integration:**
+
 ```json
 {
   "hubspot_mapping": {
@@ -136,6 +139,7 @@ const leadProcessingPipeline = {
 **Integration Pattern:** Multi-touch attribution with revenue tracking
 
 **Implementation:**
+
 ```typescript
 interface AttributionTracking {
   trackTouchpoint(touchpoint: TouchpointEvent): Promise<void>;
@@ -176,6 +180,7 @@ class CampaignAttributionEngine implements AttributionTracking {
 **Attribution Models Supported:**
 
 **First-Touch Attribution:**
+
 ```sql
 WITH first_touch AS (
   SELECT
@@ -199,6 +204,7 @@ GROUP BY ft.campaign_id;
 ```
 
 **Multi-Touch Attribution (Linear Model):**
+
 ```sql
 WITH touchpoint_sequence AS (
   SELECT
@@ -241,6 +247,7 @@ GROUP BY campaign_id, touchpoint_type;
 **Integration Pattern:** Product usage analytics feeding marketing insights
 
 **Implementation:**
+
 ```typescript
 interface FeatureAdoptionTracker {
   trackFeatureUsage(event: FeatureUsageEvent): Promise<void>;
@@ -269,6 +276,7 @@ class ProductMarketingIntegration {
 ```
 
 **Product Analytics Schema:**
+
 ```json
 {
   "feature_usage_events": {
@@ -289,6 +297,7 @@ class ProductMarketingIntegration {
 ```
 
 **Adoption Campaign Triggering:**
+
 ```typescript
 interface AdoptionCampaignTrigger {
   feature_adoption_threshold: number; // 70% of users adopted
@@ -307,6 +316,7 @@ interface AdoptionCampaignTrigger {
 **Integration Pattern:** Product feedback feeding marketing message optimization
 
 **Implementation:**
+
 ```typescript
 class FeedbackMarketingIntegration {
   async processCustomerFeedback(feedback: CustomerFeedback): Promise<void> {
@@ -350,6 +360,7 @@ class FeedbackMarketingIntegration {
 **Integration Pattern:** Marketing engagement data feeding customer health scores
 
 **Health Score Calculation:**
+
 ```typescript
 interface CustomerHealthScore {
   calculateHealthScore(tenantId: string): Promise<HealthScore>;
@@ -415,6 +426,7 @@ class CustomerHealthIntegration {
 ```
 
 **Marketing Engagement Metrics:**
+
 ```typescript
 interface MarketingEngagementMetrics {
   email_engagement: {
@@ -446,6 +458,7 @@ interface MarketingEngagementMetrics {
 **Integration Pattern:** Health score triggers automated retention campaigns
 
 **Campaign Trigger Rules:**
+
 ```typescript
 interface RetentionCampaignTriggers {
   high_risk_triggers: {
@@ -488,6 +501,7 @@ const retentionCampaignEngine = {
 **Integration Pattern:** Real-time revenue attribution feeding financial analytics
 
 **ROI Calculation Engine:**
+
 ```typescript
 interface MarketingROITracker {
   calculateCampaignROI(campaignId: string): Promise<CampaignROI>;
@@ -527,6 +541,7 @@ class FinanceMarketingIntegration {
 ```
 
 **Cost Attribution Schema:**
+
 ```json
 {
   "marketing_cost_attribution": {
@@ -562,6 +577,7 @@ class FinanceMarketingIntegration {
 **Integration Pattern:** Performance data driving budget reallocation
 
 **Budget Optimization Engine:**
+
 ```typescript
 class BudgetOptimizationEngine {
   async optimizeBudgetAllocation(analysisPeriod: DateRange): Promise<BudgetOptimization> {
@@ -602,6 +618,7 @@ class BudgetOptimizationEngine {
 ### Real-Time Event Streaming
 
 **Event-Driven Architecture:**
+
 ```typescript
 interface EventStreamingConfig {
   event_broker: "PostgreSQL + Redis";
@@ -648,6 +665,7 @@ class MarketingEventStream {
 ### Batch Data Synchronization
 
 **Scheduled Synchronization Jobs:**
+
 ```typescript
 interface BatchSyncSchedule {
   daily_sync: {
@@ -840,5 +858,5 @@ class IntegrationMonitor {
 **Implementation Access:** Integration Developers, Business Analysts, Domain Stakeholders
 **Review Cycle:** Monthly integration performance review and quarterly pattern optimization
 
-This comprehensive integration specification provides detailed implementation patterns and workflows for seamless cross-domain integration between marketing systems and other business domains, ensuring robust data flow and operational coordination.
+This comprehensive integration specification provides detailed implementation patterns and workflows for seamless cross-domain integration between marketing systems and other business domains, ensuring robust data flow and operational coordination
 ---

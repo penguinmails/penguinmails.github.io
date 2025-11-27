@@ -16,12 +16,14 @@ This document provides comprehensive disaster recovery procedures for HashiCorp 
 ### Purpose
 
 Vault stores all critical secrets for the PenguinMails platform:
+
 - VPS SSH keys (admin and tenant access)
 - SMTP credentials (MailU admin passwords)
 - API keys (tenant programmatic access)
 - DKIM private keys (email signing)
 
 Loss of Vault data would be catastrophic, preventing:
+
 - VPS access and management
 - Email sending operations
 - API authentication
@@ -38,13 +40,12 @@ This document ensures rapid recovery from any Vault failure scenario with minima
 | Vault Compromise | 2-4 hours | 24 hours (daily backups) | All tenants (API keys revoked) |
 | Complete Data Center Loss | 4-6 hours | 24 hours (daily backups) | All services affected |
 
-
-
 ## Automated Backup Strategy
 
 ### Backup Schedule
 
 **Daily Backups:**
+
 - **Frequency:** Every day at 02:00 UTC
 - **Retention:** 30 daily backups (rolling window)
 - **Storage:** Encrypted S3 bucket (or equivalent object storage)
@@ -52,12 +53,14 @@ This document ensures rapid recovery from any Vault failure scenario with minima
 - **Verification:** Automated integrity check after each backup
 
 **Monthly Backups:**
+
 - **Frequency:** First day of each month at 02:00 UTC
 - **Retention:** 12 monthly backups (1 year)
 - **Storage:** Same encrypted S3 bucket, separate prefix
 - **Purpose:** Long-term recovery and compliance
 
 **Backup Naming Convention:**
+
 ```
 s3://penguinmails-vault-backups/
 ├── daily/
@@ -98,8 +101,6 @@ sequenceDiagram
         BackupService->>Monitoring: Log Error Details
     end
 ```
-
-
 
 **Implementation:**
 
@@ -221,8 +222,6 @@ async function encryptBackup(
 }
 ```
 
-
-
 ### Backup Retention Policy
 
 **Automated Cleanup:**
@@ -332,8 +331,6 @@ async function testBackupRestoration(): Promise<void> {
   }
 }
 ```
-
-
 
 ## VPS Migration Workflow
 
@@ -497,8 +494,6 @@ async function migrateToNewVps(
 }
 ```
 
-
-
 ### SMTP Credential Recovery
 
 **Specific SMTP Recovery Workflow:**
@@ -549,11 +544,10 @@ async function recoverSmtpCredentialsToNewVps(
 ```
 
 **Reference:** See [SMTP Credentials Vault Storage](vault-smtp-credentials.md) for detailed SMTP disaster recovery scenarios including:
+
 - VPS failure recovery
 - Vault restoration
 - Credential compromise response
-
-
 
 ## Secret Recovery Procedures
 
@@ -696,13 +690,12 @@ async function drillVaultFailure(): Promise<DrillResult> {
 }
 ```
 
-
-
 ## Vault Restoration from Backup
 
 ### Step-by-Step Runbook
 
 **Prerequisites:**
+
 - Access to S3 backup bucket
 - Backup encryption key
 - Vault unseal keys (3 of 5 required)
@@ -864,8 +857,6 @@ rm /tmp/vault-backup.snap
 echo "Vault restored from backup: ${BACKUP_DATE}" >> /var/log/vault/restoration.log
 ```
 
-
-
 ### Automated Restoration Script
 
 ```typescript
@@ -979,8 +970,6 @@ async function decryptBackup(
   return decrypted;
 }
 ```
-
-
 
 ## High Availability Setup
 
@@ -1184,8 +1173,6 @@ async function monitorVaultClusterHealth(): Promise<void> {
 }
 ```
 
-
-
 ## Monitoring and Alerting
 
 ### Vault Health Monitoring
@@ -1347,8 +1334,6 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
 }
 ```
 
-
-
 ### Alert Configuration
 
 **Alert Severity Levels:**
@@ -1467,8 +1452,6 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
 - vault_replication_wal_last_wal (gauge)
 - vault_storage_backend_size_bytes (gauge)
 ```
-
-
 
 ## Emergency Procedures for Vault Compromise
 
@@ -1735,8 +1718,6 @@ async function conductPostIncidentReview(
 }
 ```
 
-
-
 ## Implementation Checklist
 
 ### Phase 1: Automated Backup System (Week 1)
@@ -1822,8 +1803,6 @@ async function conductPostIncidentReview(
 - [ ] Reference SMTP disaster recovery documentation
 - [ ] Conduct end-to-end SMTP recovery drill
 
-
-
 ## Related Documentation
 
 ### Route Specifications
@@ -1882,4 +1861,3 @@ async function conductPostIncidentReview(
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive disaster recovery procedures for HashiCorp Vault, ensuring rapid recovery from any failure scenario with minimal data loss and service disruption. All Vault-dependent features must reference this document for disaster recovery planning.*
-

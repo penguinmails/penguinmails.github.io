@@ -52,6 +52,7 @@ git push origin feature/your-feature-name
 ### 3. Create Pull Request
 
 **PR Template:**
+
 ```markdown
 ## Description
 Brief description of changes and motivation.
@@ -266,6 +267,7 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
 ```
 
 **Example Response:**
+
 ```json
 {
   "campaign_id": "camp_123",
@@ -285,6 +287,7 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
   }
 }
 ```
+
 ```
 
 ## Code Review Process
@@ -338,6 +341,7 @@ git log --oneline -5
 ```
 
 **Peer Review Guidelines:**
+
 - Reviewers should understand the problem being solved
 - Provide constructive feedback focusing on improvements
 - Ask questions when code is unclear
@@ -345,6 +349,7 @@ git log --oneline -5
 - Acknowledge good patterns and clean code
 
 **Automated Checks:**
+
 - CI/CD pipeline validates all changes
 - Security scanning for vulnerabilities
 - Performance benchmarking for major changes
@@ -363,6 +368,7 @@ Footer
 ```
 
 **Types:**
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -373,6 +379,7 @@ Footer
 - `chore`: Maintenance tasks
 
 **Examples:**
+
 ```bash
 feat(ai): add email content optimization algorithm
 

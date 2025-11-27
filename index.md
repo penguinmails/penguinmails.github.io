@@ -59,9 +59,9 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [🔧 Technical Infrastructure](/docs/business/implementation/technical-infrastructure) - *Complete technical specs*
+- [🔧 Technical Infrastructure](/docs/implementation-technical/architecture-system/README) - *Complete technical specs*
 - [⚖️ Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - *Technical compliance implementation*
-- [🏗️ Architecture Overview](/docs/technical/architecture/overview) - *System architecture*
+- [🏗️ Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - *System architecture*
 - [🔌 API Reference](/docs/implementation-technical/development-guidelines/api-reference) - *Developer documentation*
 - [📚 Quick Setup](/docs/quick-setup) - *Implementation guide*
 
@@ -83,6 +83,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 {: .highlight .btn-group-vertical }
 
 - [📋 Active Tasks](/tasks/README) - *Current development work and sprint tasks*
+- [💼 Freelancer Onboarding](/docs/freelancer-onboarding/README) - *Start here if you are a freelancer*
 - [🖥️ Frontend Specifications](/docs/design/frontend-routing-map) - *View routes and UI component specs*
 - [🔌 API Documentation](/docs/implementation-technical/api/README) - *Backend endpoints and schemas*
 - [✨ Features](/docs/feature-overview) - *Feature specifications to implement*

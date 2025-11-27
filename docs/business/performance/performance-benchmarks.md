@@ -478,13 +478,16 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@exa
 ```
 
 ##### IP Management Strategy
+
 **Cold Email IP Requirements**:
+
 - **Below 10K/month**: Shared IP acceptable
 - **10K-50K/month**: 1-2 dedicated IPs recommended
 - **50K-100K/month**: 3-5 dedicated IPs essential
 - **Above 100K/month**: 5+ dedicated IPs with rotation
 
 **IP Warming Protocol**:
+
 ```markdown
 Week 1: 10-50 emails/day per IP
 Week 2: 50-200 emails)
@@ -496,7 +499,9 @@ Week 5+: Target volume per IP
 #### List Quality Optimization
 
 ##### Email Verification Strategy
+
 **Verification Process**:
+
 1. **Syntax Check**: Format validation (removes 5-10% invalid emails)
 2. **Domain Check**: Valid domain existence (removes 10-15% invalid)
 3. **MX Record Check**: Valid mail server (removes 5-10% invalid)
@@ -504,13 +509,16 @@ Week 5+: Target volume per IP
 5. **Engagement Check**: Recent activity validation (removes 20-30% stale)
 
 **Expected Results**:
+
 - **Pre-verification**: 15-25% bounce rate typical
 - **Post-verification**: <2% bounce rate target
 - **Cost**: $0.001-0.01 per email verified
 - **ROI**: 300-500% through reduced bounces and improved deliverability
 
 ##### List Hygiene Maintenance
+
 **Ongoing Maintenance**:
+
 - **Weekly**: Remove hard bounces and unsubscribes
 - **Monthly**: Engagement analysis and segmentation
 - **Quarterly**: Full list validation and cleanup
@@ -521,6 +529,7 @@ Week 5+: Target volume per IP
 #### Key Performance Indicators
 
 ##### Primary Metrics
+
 - **Deliverability Rate**: >95% target
 - **Open Rate**: >30% target for cold email
 - **Reply Rate**: >5% target for cold email
@@ -529,6 +538,7 @@ Week 5+: Target volume per IP
 - **Unsubscribe Rate**: <0.1% target
 
 ##### Secondary Metrics
+
 - **Domain Reputation**: Monitor daily
 - **IP Reputation**: Monitor daily
 - **Spam Score**: Keep below 2.0
@@ -538,7 +548,9 @@ Week 5+: Target volume per IP
 #### Analytics Framework
 
 ##### Performance Tracking Setup
+
 **Required Integrations**:
+
 1. **ESP Analytics**: Built-in performance tracking
 2. **UTM Parameters**: Campaign performance attribution
 3. **CRM Integration**: Lead and opportunity tracking
@@ -546,19 +558,23 @@ Week 5+: Target volume per IP
 5. **Custom Dashboards**: Real-time performance monitoring
 
 ##### Reporting Structure
+
 **Daily Reports**:
+
 - Deliverability status
 - Send volume and success rates
 - Bounce and complaint rates
 - Revenue attribution
 
 **Weekly Reports**:
+
 - Campaign performance analysis
 - A/B test results
 - List quality metrics
 - Competitive benchmarking
 
 **Monthly Reports**:
+
 - ROI analysis and trends
 - Strategic optimization recommendations
 - Budget and performance forecasting
@@ -571,11 +587,13 @@ Week 5+: Target volume per IP
 ### SaaS Company: 50K → 150K Email Volume Scale-Up
 
 #### Challenge
+
 - Growing from 50K to 150K monthly emails
 - Maintaining performance at scale
 - Increasing sales team efficiency
 
 #### Solution
+
 1. **Technical Infrastructure**:
    - Upgraded to dedicated IPs (5 total)
    - Implemented advanced monitoring
@@ -592,6 +610,7 @@ Week 5+: Target volume per IP
    - Created performance dashboards
 
 #### Results
+
 - **Open Rate**: Maintained at 32% (vs 25% industry average)
 - **Reply Rate**: Increased to 6.5% (vs 4% baseline)
 - **Meeting Rate**: Improved to 2.1% (vs 1.2% baseline)
@@ -601,11 +620,13 @@ Week 5+: Target volume per IP
 ### Marketing Agency: Deliverability Recovery
 
 #### Challenge
+
 - Domain reputation damaged, 60% deliverability
 - High bounce rates and spam complaints
 - Campaign performance severely impacted
 
 #### Solution
+
 1. **Emergency Actions**:
    - Implemented DMARC quarantine policy
    - Paused sending to damaged lists
@@ -622,6 +643,7 @@ Week 5+: Target volume per IP
    - Improved unsubscribe mechanisms
 
 #### Results
+
 - **Deliverability**: Recovered to 94% within 8 weeks
 - **Bounce Rate**: Reduced from 18% to 1.2%
 - **Spam Complaints**: Reduced from 0.8% to 0.05%
@@ -630,11 +652,13 @@ Week 5+: Target volume per IP
 ### Enterprise Company: Multi-Provider Optimization
 
 #### Challenge
+
 - Multiple ESPs with inconsistent performance
 - Lack of centralized analytics
 - Difficulty scaling while maintaining quality
 
 #### Solution
+
 1. **Provider Consolidation**:
    - Standardized on primary ESP
    - Maintained secondary provider for testing
@@ -651,6 +675,7 @@ Week 5+: Target volume per IP
    - Continuous performance monitoring
 
 #### Results
+
 - **Overall Deliverability**: Improved to 96%
 - **Cost Efficiency**: Reduced by 30% through optimization
 - **Scalability**: Successfully scaled to 500K+ emails/month
@@ -661,14 +686,17 @@ Week 5+: Target volume per IP
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
+
 - [Executive Summary](executive-summary:1) - High-level strategic findings
 - [ROI Calculator](roi-calculator:1) - Performance-based ROI analysis
 
 **For detailed analysis:**
+
 - [Cost Comparisons](cost-comparisons:1) - Cost vs performance analysis
 - [Competitive Analysis](competitive-analysis:1) - Provider performance comparison
 
 **For technical implementation:**
+
 - [Technical Infrastructure](technical-infrastructure:1) - Technical performance optimization
 - [Detailed Methodology](detailed-methodology:1) - Performance measurement methodology
 
@@ -682,32 +710,8 @@ Week 5+: Target volume per IP
 
 ## References
 
-[^1]: https://martal.ca/b2b-cold-email-statistics-lb/
-[^2]: https://belkins.io/blog/cold-email-response-rates
-[^3]: https://www.nukesend.com/insights/b2b-cold-outreach-trends-what-works-2025
-[^4]: https://snov.io/blog/cold-email-statistics/
-[^5]: https://focus-digital.co/b2b-cold-email-open-rates/
-[^6]: https://www.saleshandy.com/blog/cold-email-statistics/
-[^7]: https://www.klenty.com/blog/cold-email-statistics/
-[^8]: https://www.hubspot.com/marketing-statistics
-[^9]: https://copywriting.org/how-long-does-email-copywriting-take/
-[^10]: https://www.reddit.com/r/marketing/comments/1f2pvd8/how_much_time_do_you_spend_optimizing_email_copy/
-[^11]: https://www.campaignmonitor.com/resources/guides/email-list-building-new-era-email-marketing/
-[^12]: https://help.klaviyo.com/hc/en-us/articles/115000201131
-[^13]: https://nation.marketo.com/t5/product-discussions/how-long-after-an-email-was-delivered-do-you-report-metrics/m-p/177458
-[^14]: http://anniemaguire.com/how-long-should-copywriting-take/
-[^15]: https://www.reddit.com/r/coldemail/comments/1kyw7ts/sent_50000_emails_in_may_here_is_everything_to/
-[^16]: https://help.instantly.ai/en/articles/5975326-instantly-cold-email-strategy
-[^17]: https://bentonow.com/tools/email-sending-calculator
-[^18]: https://www.litmus.com/wp-content/uploads/pdf/Ultimate-Guide-to-Email-Deliverability.pdf
-[^19]: https://blog.hubspot.com/marketing/email-a-b-test-sample-size-testing-time
-[^20]: https://dmarcly.com/blog/the-fastest-way-to-set-up-dmarc-dkim-and-spf-easy-email-authentication-deployment-explained
-[^21]: https://www.primeforge.ai/blog/dkim-authentication-complete-guide
-[^22]: https://redsift.com/guides/guide_dmarc-implementation
-[^23]: https://instantly.ai/blog/7-step-cold-email-checklist-book-more-demos/
-[^24]: https://wpmailsmtp.com/twilio-sendgrid-review/
-[^25]: https://www.gmass.co/blog/mailgun-review/
-[^26]: https://userjot.com/blog/postmark-pricing-in-2025
-[^27]: https://aws.amazon.com/ses/pricing/
-[^28]: https://mailbluster.com/blog/amazon-ses-pricing
+[^1]: <https://martal.ca/b2b-cold-email-statistics-lb/>
+[^2]: <https://belkins.io/blog/cold-email-response-rates>
+[^3]: <https://www.nukesend.com/insights/b2b-cold-outreach-trends-what-works-2025>
+[^4]: <https://snov.io/blog/cold-email-statistics/>
 ---

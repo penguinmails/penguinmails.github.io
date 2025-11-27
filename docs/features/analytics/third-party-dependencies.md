@@ -1,15 +1,17 @@
 ---
 title: "Analytics Third-Party Dependencies"
 description: "Third-party services and integrations used by the Analytics & Reporting system"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-11-27"
 level: "3"
 persona: "Technical Teams, Developers"
 ---
 
 # Analytics & Reporting - Third-Party Dependencies
 
-**Last Updated:** November 26, 2025  
+**Last Updated:** November 27, 2025  
 **Audience:** Technical teams, developers, and infrastructure planners
+
+**See Also:** [Platform-Wide Third-Party Services](/docs/technical/architecture/third-party-services) - Comprehensive analysis of all platform dependencies
 
 ---
 
@@ -471,6 +473,11 @@ This document outlines all third-party services and integrations used by the Ana
 ---
 
 ## Related Documentation
+
+### Platform-Wide Dependencies
+
+- **[Third-Party Services (Platform-Wide)](/docs/technical/architecture/third-party-services)** - Comprehensive analysis of all platform dependencies
+- **[Third-Party Dependencies Report](/.kiro/specs/feature-completeness-review/findings/third-party-dependencies.md)** - Detailed dependency analysis with cost optimization strategies
 
 ### Feature Documentation
 

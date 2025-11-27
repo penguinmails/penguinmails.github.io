@@ -180,6 +180,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 **Replacement Plan:** Not recommended (PCI compliance complexity)
 
 **Current Usage:**
+
 - Stripe Checkout for payment collection
 - Subscription management and billing
 - Customer Portal for self-service
@@ -193,6 +194,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 **Replacement Plan:** In-house SMTP (Q3 2026)
 
 **Current Usage:**
+
 - Payment failure notifications
 - Invoice delivery emails
 - Usage alert emails

@@ -64,6 +64,7 @@ Customer Success integrates with Sales through well-defined data flows and API i
 Structured knowledge transfer ensuring continuity from sales to success ownership.
 
 **Primary Systems:**
+
 - CRM Handoff Workflows, Knowledge Repositories
 - CS Onboarding Automation, Success Planning
 
@@ -80,6 +81,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
 ### Key Integration Points
 
 **1. Structured Handoff Package**
+
 ```json
 {
   "handoff_package": {
@@ -92,6 +94,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
 ```
 
 **2. Knowledge Transfer Automation**
+
 ```json
 {
   "knowledge_transfer": {
@@ -106,6 +109,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
 ### CS-Sales Handoff APIs
 
 **Handoff Completion API:**
+
 ```markdown
 POST /api/v1/cs-sales/handoff/complete/{deal_id}
 - Accepts handoff package
@@ -134,6 +138,7 @@ GET /api/v1/cs-sales/handoff/status/{customer_id}
 Joint pipeline development from CS success signals to sales-qualified expansions.
 
 **Primary Systems:**
+
 - CS Expansion Engine, Usage Analytics
 - Sales Opportunity Management, Qualification Scoring
 
@@ -150,6 +155,7 @@ Deal Progression ◄─── Qualification ──► CS Support
 ### Key Integration Points
 
 **1. Opportunity Identification**
+
 ```json
 {
   "opportunity_id": {
@@ -162,6 +168,7 @@ Deal Progression ◄─── Qualification ──► CS Support
 ```
 
 **2. Joint Qualification**
+
 ```json
 {
   "joint_qualification": {
@@ -176,6 +183,7 @@ Deal Progression ◄─── Qualification ──► CS Support
 ### CS-Expansion APIs
 
 **Opportunity API:**
+
 ```markdown
 GET /api/v1/cs-sales/expansion/{customer_id}
 - Readiness assessment scoring
@@ -204,6 +212,7 @@ POST /api/v1/cs-sales/qualified/{opportunity_id}
 Health-correlated renewal strategies with shared risk assessment.
 
 **Primary Systems:**
+
 - CS Renewal Risk Engine, Contract Intelligence
 - Sales Forecasting, Negotiation Playbooks
 
@@ -220,6 +229,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
 ### Key Integration Points
 
 **1. Risk Assessment**
+
 ```json
 {
   "renewal_risk": {
@@ -232,6 +242,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
 ```
 
 **2. Strategy Development**
+
 ```json
 {
   "strategy_development": {
@@ -246,6 +257,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
 ### CS-Renewal APIs
 
 **Risk API:**
+
 ```markdown
 GET /api/v1/cs-sales/renewal/risk/{contract_id}
 - Probability-weighted forecasting
@@ -299,6 +311,7 @@ topics:
 ---
 
 **Related Documentation:**
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
 - [Sales Systems Map](/docs/business/sales/cross-domain-integration)
 

@@ -43,9 +43,11 @@ This document specifies the frontend routes for tenant SSH credential management
 
 3. **Connection Instructions**
    - Code block with SSH command:
+
      ```bash
      ssh -i /path/to/private-key.pem tenant-{tenant_id}@{vps_ip}
      ```
+
    - Link to detailed SSH setup guide
    - Troubleshooting tips
 
@@ -179,24 +181,29 @@ interface TenantSecretsSummary {
 ## Navigation
 
 **Tenant Access:**
+
 - Settings → Infrastructure → SSH Access
 
 **Admin Access:**
+
 - Admin Panel → Secrets Management
 
 ## Related Documentation
 
 ### Planning
+
 - [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Comprehensive Vault architecture
 - [Infrastructure Management Feature](../../features/infrastructure/vault-ssh-management.md) - SSH key management feature
 - [SMTP Credentials Vault Storage](../../features/infrastructure/vault-smtp-credentials.md) - SMTP credentials management feature
 
 ### Implementation
+
 - [Task 11.4 - VPS SSH Key Management](../../.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)
 - [Task 11.5 - SMTP Credentials Vault Storage](../../.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)
 - [Epic 5: Infrastructure Management](../../tasks/epic-5-infrastructure-management/)
 
 ### Reference
+
 - [Infrastructure Routes](./infrastructure.md) - Other infrastructure routes
 - [Settings Routes](./settings.md) - General settings routes
 - [Admin Routes](./admin.md) - Admin panel routes

@@ -322,7 +322,7 @@ Sending test event to https://yourapp.com/webhooks...
 
 - **Copy Button**: Copy URL to clipboard.
 
-**Created**: "November 1, 2025 by john@company.com"
+**Created**: "November 1, 2025 by <john@company.com>"
 
 #### Configuration Summary
 
@@ -652,34 +652,39 @@ app.post('/webhooks/penguinmails', (req, res) => {
 });
 ```
 
-**Python**:
+**TypeScript/Node.js**:
 
-```python
-import hmac
-import hashlib
+```typescript
+import crypto from 'crypto';
+import express, { Request, Response } from 'express';
 
-def verify_signature(payload, signature, secret):
-    computed = hmac.new(
-        secret.encode(),
-        payload.encode(),
-        hashlib.sha256
-    ).hexdigest()
-    expected = f"sha256={computed}"
-    return hmac.compare_digest(expected, signature)
+function verifySignature(payload: string, signature: string, secret: string): boolean {
+  const hmac = crypto.createHmac('sha256', secret);
+  hmac.update(payload, 'utf8');
+  const computed = hmac.digest('hex');
+  const expected = `sha256=${computed}`;
+  return crypto.timingSafeEqual(
+    Buffer.from(expected),
+    Buffer.from(signature)
+  );
+}
 
-# Usage
-@app.route('/webhooks/penguinmails', methods=['POST'])
-def webhook():
-    signature = request.headers.get('X-PenguinMails-Signature')
-    secret = 'whsec_...'  # Your webhook secret
-    
-    if not verify_signature(request.data, signature, secret):
-        return 'Invalid signature', 401
-    
-    # Process event
-    event = request.json
-    print(f"Event: {event['type']}")
-    return 'OK', 200
+// Usage
+const app = express();
+app.use(express.json());
+
+app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
+  const signature = req.headers['x-penguinmails-signature'] as string;
+  const secret = 'whsec_...'; // Your webhook secret
+  
+  if (!verifySignature(JSON.stringify(req.body), signature, secret)) {
+    return res.status(401).send('Invalid signature');
+  }
+  
+  // Process event
+  console.log('Event:', req.body.type);
+  return res.status(200).send('OK');
+});
 ```
 
 **Copy Button**: Copy code snippet.

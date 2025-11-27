@@ -29,6 +29,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Event ingestion API (`POST /api/v1/events`)
 - [ ] Event storage (PostgreSQL events table + Redis cache)
 - [ ] Event processing queue (PostgreSQL + Redis)
@@ -40,6 +41,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Event retention policy (90 days)
 
 **Dependencies:**
+
 - PostgreSQL database schema
 - Redis queue system
 - Campaign tracking infrastructure
@@ -57,6 +59,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Workflow state machine implementation
 - [ ] Condition evaluation engine (AND/OR logic)
 - [ ] Action execution queue
@@ -68,6 +71,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Graceful degradation on failures
 
 **Dependencies:**
+
 - Event tracking infrastructure (task 1)
 - PostgreSQL workflow schema
 - Redis queue system
@@ -85,6 +89,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Time-based triggers: Schedule, Delay, Recurring
 - [ ] Email event triggers: Sent, Opened, Clicked, Replied, Bounced
 - [ ] Contact event triggers: Created, Updated, Tagged, Field changed
@@ -95,6 +100,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Documentation and examples for each trigger
 
 **Dependencies:**
+
 - Event tracking infrastructure (task 1)
 - Workflow execution engine (task 2)
 
@@ -111,6 +117,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Email actions: Send email, Add to campaign, Remove from campaign
 - [ ] Contact actions: Update field, Add tag, Remove tag, Change status
 - [ ] Internal actions: Create task, Send notification, Update score
@@ -121,6 +128,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Documentation and examples for each action
 
 **Dependencies:**
+
 - Workflow execution engine (task 2)
 - Campaign management system
 - Contact management system
@@ -138,6 +146,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Visual canvas with drag-and-drop (React Flow)
 - [ ] Trigger selection and configuration
 - [ ] Condition builder (simple if/else, AND/OR logic)
@@ -150,6 +159,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Workflow deletion with confirmation
 
 **Dependencies:**
+
 - Workflow execution engine (task 2)
 - Trigger library (task 3)
 - Action library (task 4)
@@ -167,6 +177,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Execution history table (workflow, trigger, status, timestamp)
 - [ ] Execution detail view (step-by-step log)
 - [ ] Error details and stack traces
@@ -177,6 +188,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Real-time execution monitoring
 
 **Dependencies:**
+
 - Workflow execution engine (task 2)
 - Visual workflow builder (task 5)
 
@@ -195,6 +207,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Nested conditions (unlimited depth)
 - [ ] Advanced operators (>, <, contains, regex, in list)
 - [ ] Multiple condition groups (complex AND/OR)
@@ -203,6 +216,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Visual condition builder for complex logic
 
 **Dependencies:**
+
 - Basic workflow system (MVP tasks 1-6)
 
 **Why Post-MVP:** Advanced feature for power users; basic if/else sufficient for MVP
@@ -218,6 +232,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Best send time prediction per contact
 - [ ] Content personalization recommendations
 - [ ] Workflow path optimization suggestions
@@ -228,6 +243,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Recommendation UI in workflow builder
 
 **Dependencies:**
+
 - Basic workflow system (MVP tasks 1-6)
 - Enhanced analytics (Q1 2026)
 - ML infrastructure (Python microservice)
@@ -245,6 +261,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] 50+ pre-built workflow templates
 - [ ] Template categories (lead nurturing, re-engagement, onboarding, sales)
 - [ ] Template preview and details
@@ -255,6 +272,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Community-contributed templates (moderated)
 
 **Dependencies:**
+
 - Basic workflow system (MVP tasks 1-6)
 - Mature workflow usage data
 
@@ -271,6 +289,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] SMS action support
 - [ ] Push notification action support
 - [ ] Channel preference management
@@ -280,6 +299,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Channel-specific triggers
 
 **Dependencies:**
+
 - Basic workflow system (MVP tasks 1-6)
 - SMS infrastructure (Q4 2026)
 - Push notification infrastructure (Q1 2027)
@@ -297,6 +317,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 **Epic:** Automation & Workflows
 
 **Acceptance Criteria:**
+
 - [ ] Zapier webhook triggers (PenguinMails → Zapier)
 - [ ] Zapier action endpoints (Zapier → PenguinMails)
 - [ ] API key authentication for Zapier
@@ -306,11 +327,21 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [ ] Support 20+ common Zapier actions
 
 **Authentication Note:**
+
 - Zapier uses API keys to authenticate with PenguinMails APIs
 - User authentication remains NileDB email/password (no OAuth for user login)
+
+**Dependencies:**
+
+- **API-First Integration Strategy** - Zapier integration built on top of general-purpose REST API + webhooks (Q1 2026)
+  - See [Integrations Roadmap](/docs/features/integrations/roadmap) for API-first approach details
+  - Core REST API endpoints (Q1 2026) - Foundation for Zapier integration
+  - Webhook system (Q1 2026) - Required for Zapier triggers
+  - API key management (Q1 2026) - Required for Zapier authentication
 - OAuth 2.0 for user authentication is a separate 2027 enterprise roadmap consideration
 
 **Dependencies:**
+
 - Basic workflow system (MVP tasks 1-6)
 - Stable API endpoints
 - API key management system
@@ -329,6 +360,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 2. Workflow Execution Engine (4-5 weeks) - Can start in parallel
 
 **Deliverables:**
+
 - Event ingestion API operational
 - Workflow execution engine processing test workflows
 - 1000+ events/second throughput
@@ -343,6 +375,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 4. Basic Action Library (1 week) - Can run in parallel with triggers
 
 **Deliverables:**
+
 - 15+ trigger templates available
 - 12+ action templates available
 - Trigger and action configuration UIs
@@ -357,6 +390,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 6. Workflow Execution History & Debugging (2-3 weeks) - Can start in parallel
 
 **Deliverables:**
+
 - Drag-and-drop workflow builder operational
 - Users can create, test, and activate workflows
 - Execution history and debugging tools available
@@ -368,18 +402,21 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 ### MVP Success Criteria
 
 **Technical Metrics:**
+
 - Event processing latency < 5 seconds
 - Workflow execution accuracy 99.9%
 - Support 100+ concurrent workflows
 - Handle 1000+ events/second
 
 **User Metrics:**
+
 - 50+ workflows created in first month
 - 80% workflow activation rate (created → activated)
 - < 5% workflow error rate
 - 90% user satisfaction with workflow builder
 
 **Business Metrics:**
+
 - 30% reduction in manual campaign management time
 - 20% increase in email engagement (vs. linear sequences)
 - 15% improvement in lead conversion rates
@@ -417,11 +454,13 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 ## Related Documentation
 
 ### Planning
+
 - [Automation Overview](/docs/features/automation/README.md) - Feature summary
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Infrastructure milestones
 
 ### Specifications
+
 - [Workflow Automation Overview](/docs/features/automation/workflow-automation/overview.md) - Detailed feature spec
 - [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation
 - [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns.md) - Campaign management API
@@ -429,6 +468,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 ### Related Features
 
 **Foundation Features:**
+
 - [Campaign Management](/docs/features/campaigns/overview.md) - Basic email sequences (linear workflow foundation)
 - [Email Sequences](/docs/features/campaigns/email-sequences.md) - Campaign flows to be extended with branching
 - [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling.md) - Time-based triggers
@@ -439,13 +479,16 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [Background Jobs](/docs/features/queue/background-jobs.md) - Queue infrastructure for action execution
 
 **Analytics & Tracking:**
+
 - [Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md) - Event tracking foundation for triggers
 - [Core Analytics](/docs/features/analytics/core-analytics.md) - Workflow performance metrics
 
 **Contact Management:**
+
 - [Lead Management](/docs/features/leads/overview.md) - Contact segmentation for triggers and conditions
 
 **Integrations:**
+
 - [Webhook System](/docs/features/integrations/webhook-system.md) - External event triggers and action notifications
 - [API Access](/docs/features/integrations/api-access.md) - Programmatic workflow management
 - [Integrations Overview](/docs/features/integrations/overview.md) - Third-party automation (Zapier, Make.com)
@@ -453,11 +496,13 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 ### Technical Implementation
 
 **Routes & UI:**
+
 - [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation (foundation for workflows)
 - [Template Routes](/docs/design/routes/workspace-templates.md) - Template management UI
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Queue monitoring for workflow execution
 
 **APIs:**
+
 - [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns) - Campaign management endpoints
 - [Templates API](/docs/implementation-technical/api/tenant-api/templates) - Template management for automation emails
 - [Analytics API](/docs/implementation-technical/api/tenant-api/analytics) - Event tracking foundation
@@ -465,6 +510,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 - [Tenant API Overview](/docs/implementation-technical/api/tenant-api) - Complete tenant API reference
 
 **Implementation Tasks:**
+
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email sending infrastructure (foundation for workflow actions)
   - Milestone 1: Job enqueueing and campaign scheduling (time-based triggers)
   - Milestone 2: Email sending worker (email action execution)

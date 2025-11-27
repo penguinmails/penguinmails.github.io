@@ -7,6 +7,7 @@ Automated email warmup, domain reputation building, and sender health monitoring
 **Current State**: Core warmup system approved, advanced features planned for Q3 2026
 
 **What's Ready**:
+
 - Email Warmups (core system) - APPROVED (High Priority)
 - Progressive volume increase (21+ days to 95%+ inbox placement)
 - Domain warmup state tracking
@@ -14,6 +15,7 @@ Automated email warmup, domain reputation building, and sender health monitoring
 - Automatic safeguards (pause on high bounce/spam rates)
 
 **What's Coming**:
+
 - **Q3 2026**: Automated warmup scheduling, reputation monitoring (8-10 weeks)
 
 See [Warmup Roadmap](./roadmap.md) for detailed timeline.
@@ -103,15 +105,18 @@ Advanced deliverability features for proactive reputation management.
 ## Roadmap Summary
 
 ### Now (APPROVED)
+
 - **Email Warmups** (Core system) - High Priority
   - Progressive volume increase (21 days to 95%+ inbox placement)
   - Automatic safeguards and health-based progression
 
 ### Q3 2026 (8-10 weeks)
+
 - **Warmup Scheduling** (Automated) - 4-5 weeks
 - **Reputation Monitoring** (Real-time) - 4-5 weeks
 
 ### Q4 2026 (7-9 weeks)
+
 - **Intelligent Deliverability Management** (AI-powered) - 7-9 weeks
 
 **Total Investment**: 15-19 weeks of development effort
@@ -123,17 +128,20 @@ See [Warmup Roadmap](./roadmap.md) for complete timeline and feature details.
 ## Related Documentation
 
 ### Feature Documentation
+
 - [Campaign Management](/docs/features/campaigns) - Email campaigns requiring warmup
 - [Infrastructure Management](/docs/features/infrastructure) - VPS and SMTP setup
 - [Domain Management](/docs/features/domains) - Domain verification and DNS
 - [Queue System](/docs/features/queue) - Email pipeline and background jobs
 
 ### Technical Implementation
+
 - [Warmup API](/docs/implementation-technical/api/tenant-api/warmup) - Warmup management endpoints
 - [Domain Routes](/docs/design/routes/workspace-domains.md) - Warmup management route
 - [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management) - Infrastructure setup
 
 ### Business Strategy
+
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
 

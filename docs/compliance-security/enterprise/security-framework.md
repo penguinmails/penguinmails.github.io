@@ -55,6 +55,7 @@ sequenceDiagram
 ```
 
 #### Security Features
+
 - **Managed Authentication**: NileDB handles core authentication (users table)
 - **Session Management**: Fully handled by NileDB authentication system
 - **Email Verification**: ✅ IMPLEMENTED using Loop service + custom verification endpoint
@@ -65,6 +66,7 @@ sequenceDiagram
 - **Failed Login Tracking**: No tracking implemented - users contact support
 
 #### Implementation Example
+
 ```javascript
 // Authentication middleware
 const authenticateUser = async (req, res, next) => {
@@ -103,6 +105,7 @@ const authenticateUser = async (req, res, next) => {
 ### Role-Based Access Control (RBAC)
 
 #### Permission Matrix
+
 Our 7-tier permission system provides granular access control:
 
 ```mermaid
@@ -147,6 +150,7 @@ graph TD
 | **Blocked** | None | None | None | None | None |
 
 #### Implementation
+
 ```javascript
 // Permission checking middleware
 const checkPermission = (requiredPermission) => {
@@ -188,9 +192,11 @@ app.get('/api/tenant/:tenantId/users',
 ## Row Level Security (RLS) Policies
 
 ### Complete RLS Policy Matrix
+
 *For comprehensive RLS policy documentation and implementation details, see [Row Level Security (RLS) Policies](#row-level-security-rls-policies)*
 
 **Current Implementation:**
+
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
 - **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets
 - **Q85**: Cross-tenant access policies for staff need documentation (immediate action required)
@@ -199,6 +205,7 @@ app.get('/api/tenant/:tenantId/users',
 ### Staff Emergency Access Protocols
 
 #### Current Bypass Methods
+
 1. **Super Admin/Admin Privileges**
    - Users with super_admin or admin roles can access tenant data
    - All actions are logged for audit purposes
@@ -210,6 +217,7 @@ app.get('/api/tenant/:tenantId/users',
    - Full audit trail maintained for all temporary access
 
 #### Documentation Requirements (Q4 2025)
+
 - [ ] Formalize staff bypass procedures
 - [ ] Document cross-tenant access validation framework
 - [ ] Create RLS testing procedures as part of feature rollout
@@ -221,6 +229,7 @@ app.get('/api/tenant/:tenantId/users',
 ### Multi-Tenant Data Isolation
 
 #### Database Security
+
 ```sql
 -- Row Level Security Example
 ALTER TABLE tenant_data ENABLE ROW LEVEL SECURITY;
@@ -233,6 +242,7 @@ SET app.current_tenant_id = '12345';
 ```
 
 #### API Security
+
 ```javascript
 // Tenant context middleware
 const setTenantContext = async (req, res, next) => {
@@ -264,11 +274,13 @@ const setTenantContext = async (req, res, next) => {
 ### Data Encryption
 
 #### Encryption at Rest
+
 - **Database**: PostgreSQL TDE (Transparent Data Encryption)
 - **File Storage**: Encrypted backups and log files
 - **Configuration**: Encrypted environment variables
 
 #### Encryption in Transit
+
 ```javascript
 // HTTPS enforcement
 const enforceHTTPS = (req, res, next) => {
@@ -293,6 +305,7 @@ app.use(helmet({
 ```
 
 #### API Key Management
+
 ```javascript
 // Secure API key handling
 const apiKeyManager = {
@@ -318,6 +331,7 @@ const apiKeyManager = {
 ### Network Security
 
 #### Firewall Configuration
+
 ```bash
 # UFW Firewall Rules
 ufw default deny incoming
@@ -337,6 +351,7 @@ ufw allow from 10.0.0.0/8 to any port 6379
 ```
 
 #### VPN Access
+
 - **Team Access**: VPN required for infrastructure management
 - **Database Access**: VPN-only access to production databases
 - **Monitoring**: VPN access to monitoring dashboards
@@ -344,6 +359,7 @@ ufw allow from 10.0.0.0/8 to any port 6379
 ### Server Security
 
 #### VPS Security Hardening
+
 ```bash
 # Disable root SSH login
 sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
@@ -360,6 +376,7 @@ apt-get update && apt-get upgrade -y
 ```
 
 #### SSL/TLS Configuration
+
 ```nginx
 # Nginx SSL Configuration
 server {
@@ -390,6 +407,7 @@ server {
 ### SPF, DKIM, DMARC Configuration
 
 #### DNS Records
+
 ```dns
 # SPF Record
 TXT @ "v=spf1 include:_spf.penguinmails.com ~all"
@@ -402,6 +420,7 @@ TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmai
 ```
 
 #### Email Authentication
+
 ```javascript
 // Email sending with authentication headers
 const sendEmail = async (emailData) => {
@@ -423,6 +442,7 @@ const sendEmail = async (emailData) => {
 ### Email Warm-up Security
 
 #### Reputation Management
+
 ```javascript
 // Safe warm-up algorithm
 const emailWarmup = {
@@ -459,6 +479,7 @@ const emailWarmup = {
 ### Input Validation & Sanitization
 
 #### SQL Injection Prevention
+
 ```javascript
 // Parameterized queries
 const getUserData = async (userId, tenantId) => {
@@ -478,6 +499,7 @@ const campaignQuery = nileDB('campaigns')
 ```
 
 #### XSS Prevention
+
 ```javascript
 // Input sanitization
 const sanitizeInput = (input) => {
@@ -501,6 +523,7 @@ const escapeHTML = (unsafe) => {
 ### Rate Limiting
 
 #### API Rate Limiting
+
 ```javascript
 // Redis-based rate limiter
 const rateLimiter = {
@@ -544,6 +567,7 @@ app.use('/api) => {
 ### Logging & Auditing
 
 #### Security Event Logging
+
 ```javascript
 // Security event logger
 const securityLogger = {
@@ -595,6 +619,7 @@ const securityLogger = {
 ```
 
 #### Audit Trail
+
 ```javascript
 // Comprehensive audit logging
 const auditLogger = {
@@ -619,12 +644,14 @@ const auditLogger = {
 ### Incident Response
 
 #### Security Incident Types
+
 1. **Unauthorized Access**: Detected login from unusual locations
 2. **Data Breach**: Suspicious data access or extraction
 3. **System Compromise**: Malware or unauthorized system changes
 4. **Email Abuse**: Spam or phishing from our infrastructure
 
 #### Response Procedures
+
 ```mermaid
 flowchart TD
     DETECT[Security Event Detected]
@@ -654,6 +681,7 @@ flowchart TD
 ### GDPR Compliance
 
 #### Data Processing Rights
+
 ```javascript
 // GDPR compliance functions
 const gdprCompliance = {
@@ -688,6 +716,7 @@ const gdprCompliance = {
 ### Data Retention Policies
 
 #### Retention Schedule
+
 | Data Type | Retention Period | Deletion Method |
 |-----------|------------------|-----------------|
 | **User Sessions** | 30 days | Automated purge |
@@ -703,12 +732,14 @@ const gdprCompliance = {
 ### Team Security Practices
 
 #### Development Security
+
 - **Secure Coding Training**: Regular training on OWASP Top 10
 - **Code Review Process**: Security-focused code reviews
 - **Dependency Management**: Regular security updates and vulnerability scanning
 - **Environment Segregation**: Clear separation of dev/staging/production
 
 #### Access Management
+
 - **Principle of Least Privilege**: Minimum necessary access
 - **Regular Access Reviews**: Quarterly access audits
 - **Password Management**: Use of secure password managers
@@ -719,6 +750,7 @@ const gdprCompliance = {
 ## Security Checklist
 
 ### Pre-Deployment Security
+
 - [ ] Environment variables secured
 - [ ] SSL/TLS certificates valid
 - [ ] Database connections encrypted
@@ -731,6 +763,7 @@ const gdprCompliance = {
 - [ ] Backup encryption verified
 
 ### Ongoing Security Maintenance
+
 - [ ] Weekly security updates
 - [ ] Monthly vulnerability scans
 - [ ] Quarterly access reviews
@@ -744,8 +777,10 @@ const gdprCompliance = {
 *Security is everyone's responsibility. Report any security concerns immediately to the security team.*
 
 **Related Documents**
+
 - [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
 - [Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix) - Database security strategy framework
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
+
 ---

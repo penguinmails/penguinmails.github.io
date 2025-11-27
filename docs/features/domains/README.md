@@ -23,6 +23,8 @@ All essential domain verification, DNS management, and authentication features a
 
 **No MVP-blocking gaps identified.** See [Domain Management Roadmap](./roadmap.md) for Post-MVP enhancements.
 
+**Last Reviewed:** November 26, 2025 - Comprehensive feature completeness review confirmed MVP-ready status
+
 ## Features in This Category
 
 ### ✅ Available Now
@@ -72,20 +74,26 @@ See [Domain Management Roadmap](./roadmap.md) for detailed timeline and features
 ## Related Documentation
 
 ### Planning & Strategy
+
 - [Domain Management Roadmap](./roadmap.md) - Post-MVP feature timeline
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
 
 ### Implementation & Technical
+
 - [Domain Routes](/docs/design/routes/workspace-domains) - UI specifications (7 routes)
 - [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning and mailbox creation
 - [Email Operations](/docs/features/email-operations/README.md) - Email sending pipeline
 - [Warmup Features](/docs/features/warmup/README.md) - Email warmup system
 
 ### Security & Compliance
-- [Vault Integration](/docs/technical/architecture/vault-integration-architecture) - DKIM key storage in HashiCorp Vault
+
+- [Vault Integration](/docs/features/integrations/overview#vault-integration) - DKIM key storage in HashiCorp Vault
+- [Vault SSH Management](/docs/features/infrastructure/vault-ssh-management) - SSH key storage for VPS access
+- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
 - [Compliance & Security](/docs/compliance-security/overview) - Security architecture
 
 ### APIs
+
 - Domain Management API - `POST /api/v1/domains`, `GET /api/v1/domains/{id}/dns`
 - See [Domain Management](./domain-management.md) for API examples
 

@@ -198,6 +198,32 @@
 | `/leads/segments` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `GET /api/v1/tenant/leads/segments`. |
 | `/leads/import` | [Leads API](/docs/implementation-technical/api/tenant-api/leads) | `POST /api/v1/tenant/leads/import` (Bulk Import). |
 
+## Related Documentation
+
+### Planning & Strategy
+
+- [Lead Management README](/docs/features/leads/README.md) - Feature area overview with MVP status
+- [Lead Management Roadmap](/docs/features/leads/roadmap.md) - Detailed timeline and quarterly breakdown
+- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature delivery
+
+### Feature Documentation
+
+- [Leads Management](/docs/features/leads/leads-management.md) - Core contact database
+- [Contact Segmentation](/docs/features/leads/contact-segmentation.md) - Dynamic and static segmentation
+- [Import/Export](/docs/features/leads/import-export.md) - Bulk contact operations
+- [Lead Scoring](/docs/features/leads/lead-scoring.md) - Behavioral and demographic scoring
+
+### Implementation Tasks
+
+- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Implementation task breakdown
+
+### Related Features
+
+- [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) - Use segments in campaigns
+- [Inbox Management](/docs/features/inbox/README.md) - Reply management linked to contacts
+- [Integrations](/docs/features/integrations/README.md) - CRM integrations (Post-MVP)
+
 ## 6. Data Strategy
 
 - **Fetching Method**:

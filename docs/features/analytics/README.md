@@ -7,6 +7,7 @@ Platform-wide analytics, performance tracking, and data-driven insights (not cam
 **Overall Completion**: 60% (Core Analytics in progress, Enhanced Analytics planned Q1 2026)
 
 **What's Available Today**:
+
 - ✅ Real-time performance dashboards (campaign-level)
 - ✅ Deliverability metrics tracking (inbox placement, bounce rates)
 - ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
@@ -15,6 +16,7 @@ Platform-wide analytics, performance tracking, and data-driven insights (not cam
 - ✅ OLAP analytics systems for real-time data processing
 
 **What's Missing (MVP)**:
+
 - ❌ Dedicated analytics dashboard route (`/dashboard/analytics`)
 - ❌ Deliverability deep-dive with provider-specific insights
 - ❌ Engagement heatmaps for send time optimization
@@ -45,6 +47,7 @@ Essential performance tracking and reporting with directional insights.
 **Status**: In Progress (60% complete) | **Priority**: High
 
 **Current Limitations**:
+
 - No dedicated analytics dashboard route
 - Analytics embedded in campaign views only
 - ~75% data accuracy (directional insights)
@@ -70,6 +73,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 **Status**: Planned | **Priority**: Medium | **Target**: Q1 2026
 
 **Dependencies**:
+
 - Core analytics MVP completion
 - 30+ days of historical campaign data
 - ML infrastructure (Gemini AI integration)

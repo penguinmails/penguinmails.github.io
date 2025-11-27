@@ -256,7 +256,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ## Architecture Comparison
 
-- **PenguinMails**: 4-tier database architecture with real-time optimization
+- **PenguinMails**: 5-tier database architecture with real-time optimization
 - **Competitors**: Basic email sending with minimal optimization
 - **Manual**: Human-managed with high error rates
 

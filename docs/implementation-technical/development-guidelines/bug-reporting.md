@@ -92,6 +92,7 @@ graph TD
 ### Bug Triage Checklist
 
 **Initial Assessment:**
+
 - [ ] Reproducible steps provided
 - [ ] Environment details complete
 - [ ] Expected vs actual behavior clear
@@ -99,6 +100,7 @@ graph TD
 - [ ] Related issues linked
 
 **Technical Review:**
+
 - [ ] Bug confirmed reproducible
 - [ ] Root cause analysis performed
 - [ ] Fix approach defined
@@ -106,6 +108,7 @@ graph TD
 - [ ] Documentation update required
 
 **Assignment:**
+
 - [ ] Developer assigned based on expertise
 - [ ] Estimated effort provided
 - [ ] Target milestone/sprint identified
@@ -535,6 +538,7 @@ async function demonstrateBugFix() {
 ### Email Delivery Issues
 
 **Problem**: Emails not being sent to certain recipients
+
 ```typescript
 // services/bounce-handler.ts
 interface BounceData {
@@ -667,6 +671,7 @@ async function demonstrateBounceHandling() {
 ```
 
 **Problem**: Campaign tracking not working
+
 ```typescript
 // services/email-tracking-service.ts
 import { DatabaseError } from '../errors/database-error';
@@ -878,6 +883,7 @@ async function demonstrateEmailTracking() {
 ### API Issues
 
 **Problem**: Inconsistent error responses
+
 ```typescript
 // api/campaigns-controller.ts
 import { Request, Response } from 'express';
@@ -1098,6 +1104,7 @@ const controller = new CampaignsController(campaignService);
 ### Database Issues
 
 **Problem**: N+1 query problem
+
 ```typescript
 // services/campaign-query-service.ts
 import { Database, Table } from '../database/connection';
@@ -1986,6 +1993,7 @@ async function demonstrateValidation() {
 ## Bug Verification Checklist
 
 **Before marking as fixed:**
+
 - [ ] Bug reproduced in original environment
 - [ ] Fix applied successfully
 - [ ] Fix doesn't break existing functionality
@@ -1997,6 +2005,7 @@ async function demonstrateValidation() {
 - [ ] User communication prepared if needed
 
 **Regression Testing:**
+
 - [ ] All related functionality still works
 - [ ] No new bugs introduced
 - [ ] Performance maintained

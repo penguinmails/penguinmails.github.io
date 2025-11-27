@@ -46,6 +46,7 @@ Automated workflows with triggers and actions.
 **Status**: Planned | **Priority**: P0-P1 | **Target**: Q2-Q3 2026 | **Effort**: 12-15 weeks
 
 **Key Dependencies**:
+
 - Enhanced Analytics (Q1 2026) - Required for trigger conditions
 - Campaign Management (Q1 2026) - Base campaign infrastructure
 - Event tracking system - Foundation for behavioral triggers
@@ -59,6 +60,7 @@ Automated workflows with triggers and actions.
 Complex branching with nested conditions, multiple paths, and advanced operators.
 
 **Capabilities**:
+
 - Nested conditions (unlimited depth)
 - Advanced operators (>, <, contains, regex)
 - A/B split testing in workflows
@@ -73,6 +75,7 @@ Complex branching with nested conditions, multiple paths, and advanced operators
 Machine learning recommendations for workflow improvements and predictive triggers.
 
 **Capabilities**:
+
 - Best send time prediction per contact
 - Content personalization recommendations
 - Workflow path optimization
@@ -88,6 +91,7 @@ Machine learning recommendations for workflow improvements and predictive trigge
 Library of pre-built workflow templates for common use cases.
 
 **Capabilities**:
+
 - 50+ pre-built workflow templates
 - Template categories (lead nurturing, re-engagement, onboarding)
 - Template customization and sharing
@@ -102,6 +106,7 @@ Library of pre-built workflow templates for common use cases.
 Workflows that coordinate across email, SMS, push notifications, and other channels.
 
 **Capabilities**:
+
 - Multi-channel action support
 - Channel preference management
 - Fallback channel logic
@@ -116,6 +121,7 @@ Workflows that coordinate across email, SMS, push notifications, and other chann
 Enable workflows to trigger external apps via Zapier and receive Zapier triggers.
 
 **Capabilities**:
+
 - Zapier webhook triggers (PenguinMails → Zapier)
 - Zapier action endpoints (Zapier → PenguinMails)
 - API key authentication
@@ -152,6 +158,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 ## Related Documentation
 
 ### Planning & Strategy
+
 - [Automation Roadmap](./roadmap.md) - Detailed implementation timeline
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap.md) - Feature classification
@@ -159,6 +166,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 ### Related Features
 
 **Foundation Features (Required for Automation):**
+
 - [Campaign Management](/docs/features/campaigns/overview.md) - Basic email sequences (linear workflow foundation)
 - [Email Sequences](/docs/features/campaigns/email-sequences.md) - Campaign flows to be extended with branching
 - [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling.md) - Time-based triggers
@@ -167,35 +175,42 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 - [Background Jobs](/docs/features/queue/background-jobs.md) - Queue infrastructure for action execution
 
 **Analytics & Tracking:**
+
 - [Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md) - Event tracking foundation for triggers
 - [Core Analytics](/docs/features/analytics/core-analytics.md) - Workflow performance metrics
 
 **Contact Management:**
+
 - [Lead Management](/docs/features/leads/overview.md) - Contact segmentation for triggers and conditions
 
 **Integrations:**
+
 - [Webhook System](/docs/features/integrations/webhook-system.md) - External event triggers
 - [API Access](/docs/features/integrations/api-access.md) - Programmatic workflow management
 - [Integrations Overview](/docs/features/integrations/overview.md) - Third-party automation (Zapier, Make.com)
 
 ### User Journeys
+
 - [Marketing Team Journey](/docs/user-journeys/marketing-journey.md) - Automation in marketing workflow
 - [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys.md) - Multi-client automation
 
 ### Technical Implementation
 
 **Routes & UI:**
+
 - [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation
 - [Template Routes](/docs/design/routes/workspace-templates.md) - Template management UI
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Queue monitoring
 
 **APIs:**
+
 - [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns) - Campaign management endpoints
 - [Templates API](/docs/implementation-technical/api/tenant-api/templates) - Template management
 - [Analytics API](/docs/implementation-technical/api/tenant-api/analytics) - Event tracking
 - [Queue API](/docs/implementation-technical/api/queue) - Background job management
 
 **Implementation Tasks:**
+
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email sending infrastructure
 - [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Contact management
 

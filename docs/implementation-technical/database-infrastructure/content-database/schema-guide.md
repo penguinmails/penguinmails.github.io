@@ -31,19 +31,48 @@ For analytics and logging responsibilities, refer to:
 
 ## 1. Design Principles
 
+**⚠️ IMPORTANT: Stalwart Mail Server Integration**
+
+Before implementing the Content DB schema for email storage, we must investigate **Stalwart Mail Server's PostgreSQL schema** to determine the correct architecture:
+
+- **Stalwart Documentation:** <https://stalw.art/docs/storage/backends/postgresql>
+- **Key Questions:**
+  - Does Stalwart store emails in PostgreSQL? If so, what's the schema?
+  - Can we extend Stalwart's schema with custom fields (is_starred, category, tenant_id)?
+  - Should inbox metadata live in OLTP, Content DB, or Stalwart's schema?
+  - How do we link Stalwart messages to our campaigns, contacts, and tenants?
+
+**Architecture Options:**
+
+1. **Extend Stalwart Schema:** Add custom fields to Stalwart's PostgreSQL tables
+2. **OLTP Metadata:** Store inbox metadata in OLTP, reference Stalwart by message_id
+3. **Content DB Metadata:** Store inbox metadata in Content DB, reference Stalwart by storage_key
+4. **Hybrid:** Some fields in Stalwart, some in OLTP/Content DB
+
+**Status:** Architecture spike required (Q4 2025, 3-5 days) before finalizing Content DB schema for email storage.
+
+**See:** `docs/features/inbox/unified-inbox/overview.md` for proposed schema (pending Stalwart investigation)
+
+---
+
 1) Clear 4-tier separation
 
 - OLTP:
   - Owns message metadata, campaign relationships, lead references, statuses.
   - Stores a content_storage_key (or similar) pointing into Content DB.
+  - **Note:** May also store inbox metadata if Stalwart schema cannot be extended.
 - Content DB:
   - Owns only the heavy content itself (bodies, headers, attachments).
   - Keys are opaque storage_key values referenced from OLTP.
+  - **Note:** May also store inbox metadata if separate from Stalwart.
 - OLAP:
   - Owns aggregated analytics (campaign_analytics, billing_analytics, etc.).
   - Never stores full bodies or large binaries.
 - Queue:
   - Owns jobs and pipelines that move/transform data between tiers.
+- **Stalwart Mail Server:**
+  - Owns email storage and SMTP/IMAP operations.
+  - PostgreSQL backend (schema TBD - requires investigation).
 
 1) No cross-database foreign keys
 

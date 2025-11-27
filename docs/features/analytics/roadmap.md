@@ -15,6 +15,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Current Status**: 60% Complete (Core Analytics in progress, Enhanced Analytics planned Q1 2026)
 
 **Timeline Summary**:
+
 - **MVP Completion**: Q1 2026 (5 features, 24-36 days)
 - **Enhanced Analytics**: Q1 2026 (3 features, 9-12 weeks)
 - **Advanced Analytics**: Q2-Q3 2026 (4 features, 16-24 weeks)
@@ -27,6 +28,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### What's Available Today
 
 **Core Analytics (60% complete)**:
+
 - ✅ Real-time performance dashboards (campaign-level)
 - ✅ Deliverability metrics tracking (inbox placement, bounce rates)
 - ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
@@ -40,6 +42,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### Current Limitations
 
 **Missing MVP Features**:
+
 - ❌ No dedicated analytics dashboard route (`/dashboard/analytics`)
 - ❌ Analytics embedded in campaign views only (no cross-campaign aggregation)
 - ❌ No provider-specific deliverability breakdown (Gmail, Yahoo, Outlook)
@@ -48,6 +51,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 - ❌ No alert configuration UI for performance monitoring
 
 **Data Accuracy**:
+
 - Current: ~75% accuracy (directional insights)
 - Target (Enhanced Analytics): 90%+ accuracy with bot detection
 
@@ -64,6 +68,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium
 
 **Acceptance Criteria**:
+
 - [ ] Create `/dashboard/analytics` route with overview dashboard
 - [ ] Display aggregated metrics across all campaigns (sent, delivered, opened, clicked, bounced)
 - [ ] Show workspace-level performance breakdown with drill-down capability
@@ -74,11 +79,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add loading states and error handling
 
 **Dependencies**:
+
 - Core analytics API endpoints
 - Chart visualization library (Chart.js/Recharts)
 - OLAP analytics database queries
 
 **Business Impact**:
+
 - Single source of truth for all analytics
 - Cross-campaign comparison capability
 - Workspace-level aggregation
@@ -95,6 +102,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium
 
 **Acceptance Criteria**:
+
 - [ ] Create `/dashboard/analytics/deliverability` route
 - [ ] Show inbox placement rate by email provider (Gmail, Yahoo, Outlook, Microsoft, Other)
 - [ ] Display bounce rate with hard/soft bounce classification
@@ -105,11 +113,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Support export of deliverability data
 
 **Dependencies**:
+
 - Reputation monitoring service integration
 - Blacklist checking API
 - Provider-specific inbox placement tracking
 
 **Business Impact**:
+
 - Identify deliverability problems early
 - Provider-specific inbox placement rates
 - Bounce reason classification
@@ -127,6 +137,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium
 
 **Acceptance Criteria**:
+
 - [ ] Create engagement heatmap visualization component
 - [ ] Show day-of-week × hour-of-day engagement grid (7 days × 24 hours)
 - [ ] Color-code cells by engagement level (green = high, yellow = medium, red = low)
@@ -137,11 +148,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add tooltip showing exact engagement metrics on hover
 
 **Dependencies**:
+
 - Historical engagement data (minimum 30 days)
 - Heatmap visualization library
 - Timezone handling
 
 **Business Impact**:
+
 - Visual identification of high-engagement time windows
 - Day-of-week and hour-of-day patterns
 - Audience-specific timing insights
@@ -158,6 +171,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium
 
 **Acceptance Criteria**:
+
 - [ ] Create `/dashboard/analytics/compare` route
 - [ ] Support selecting 2-5 campaigns for comparison
 - [ ] Display side-by-side metrics table with all key metrics
@@ -168,11 +182,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Include percentage difference calculations between campaigns
 
 **Dependencies**:
+
 - Statistical significance calculation library
 - Campaign selection UI component
 - Comparative chart components
 
 **Business Impact**:
+
 - Identify best-performing campaigns
 - Compare template effectiveness
 - Analyze A/B test results
@@ -189,6 +205,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium
 
 **Acceptance Criteria**:
+
 - [ ] Create `/dashboard/settings/alerts` route for alert configuration
 - [ ] Support alert types: deliverability drop, bounce spike, spam complaints, blacklist detection, reputation drop
 - [ ] Allow custom threshold configuration (e.g., "Alert if bounce rate > 5%")
@@ -199,11 +216,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add alert priority levels (critical, warning, info)
 
 **Dependencies**:
+
 - Notification service (email via Loop.so, SMS via Twilio)
 - Webhook delivery system
 - Alert evaluation engine (background job)
 
 **Business Impact**:
+
 - Proactive issue detection
 - Customizable alert thresholds
 - Multi-channel notifications
@@ -218,6 +237,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Priority Distribution**: 2 P0 features, 3 P1 features
 
 **Success Metrics**:
+
 - Analytics dashboard adoption > 80% of active users
 - Deliverability issue detection time reduced by 50%
 - Send time optimization improves open rates by 10-15%
@@ -237,6 +257,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Large
 
 **Acceptance Criteria**:
+
 - [ ] Integrate Gemini AI API for predictive analytics
 - [ ] Implement send time optimization (per-contact predictions)
 - [ ] Build subject line performance prediction with recommendations
@@ -248,16 +269,26 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add fallback handling for API failures
 
 **Dependencies**:
+
 - 30+ days of historical campaign data
 - Gemini AI API access and configuration
 - Prompt engineering for analytics use cases
 - Historical data export pipeline
 
 **Business Impact**:
+
 - Automated send time optimization
 - Subject line performance prediction
 - Deliverability forecasting
 - Churn risk identification
+
+**AI Strategy Note:**
+
+- **Consistent AI Provider**: PenguinMails uses Google Gemini AI across all features (analytics, inbox, campaigns) for cost-effectiveness and consistency
+  - Generous free tier: 1,500 requests/day (sufficient for early MVP)
+  - Cost-effective paid tier: $0.00025 per 1K tokens (vs. $0.03 for OpenAI GPT-4)
+  - See [Inbox Management Roadmap](/docs/features/inbox/roadmap) for shared AI strategy
+  - Long-term plan: Train custom models (Q1 2027) to reduce costs by 80-90%
 - Proactive optimization recommendations
 
 ---
@@ -271,6 +302,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Large
 
 **Acceptance Criteria**:
+
 - [ ] Create dashboard builder UI with drag-and-drop interface
 - [ ] Implement widget library (metric cards, charts, tables, funnels)
 - [ ] Support custom metric definitions with formula builder
@@ -281,12 +313,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Implement real-time widget updates
 
 **Dependencies**:
+
 - Core analytics complete
 - Widget component library
 - Dashboard persistence layer (database schema)
 - Drag-and-drop library (react-grid-layout)
 
 **Business Impact**:
+
 - Personalized analytics views
 - Client-specific dashboards
 - Custom metric definitions
@@ -303,6 +337,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Large
 
 **Acceptance Criteria**:
+
 - [ ] Create segment performance analysis view
 - [ ] Implement behavioral segmentation (highly engaged, at-risk, champions)
 - [ ] Build predictive segmentation (likely to convert, churn risk, high LTV)
@@ -313,12 +348,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add segment export functionality
 
 **Dependencies**:
+
 - Core analytics complete
 - Lead scoring system
 - ML-based segmentation models
 - Segment definition engine
 
 **Business Impact**:
+
 - Identify high-performing segments
 - Optimize targeting strategies
 - Predictive segment creation
@@ -333,6 +370,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Target**: Q1 2026
 
 **Success Metrics**:
+
 - Predictive analytics accuracy > 80%
 - Custom dashboard adoption > 40% of power users
 - Segmentation improves campaign performance by 20%
@@ -351,6 +389,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Large
 
 **Acceptance Criteria**:
+
 - [ ] Build attribution engine supporting 5 attribution models
 - [ ] Implement customer journey tracking across all touchpoints
 - [ ] Create attribution visualization (journey map, touchpoint timeline)
@@ -361,12 +400,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add attribution export for external analysis
 
 **Dependencies**:
+
 - Core analytics complete
 - CRM integration (customer-driven)
 - Customer journey tracking system
 - Revenue tracking and conversion events
 
 **Business Impact**:
+
 - Accurate ROI calculation
 - Multi-channel attribution
 - Customer journey analysis
@@ -383,12 +424,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium-Large
 
 **Triggers for Investigation**:
+
 - Analytics queries taking >5 seconds
 - Database storage exceeding 500GB for analytics data
 - Complex multi-step ETL requirements
 - PostHog limitations for custom aggregations
 
 **Acceptance Criteria**:
+
 - [ ] Conduct spike to evaluate data processing needs and volume projections
 - [ ] Analyze PostHog limitations for current and projected data volumes
 - [ ] Evaluate solutions: Apache Spark, Apache Airflow, managed services (Databricks, AWS Glue)
@@ -399,11 +442,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Migrate complex analytics queries to new processing layer
 
 **Dependencies**:
+
 - Core analytics complete
 - 3+ months of production analytics data
 - Performance metrics and bottleneck analysis
 
 **Business Impact**:
+
 - Scalable analytics infrastructure
 - Improved query performance
 - Cost optimization
@@ -420,11 +465,13 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Large
 
 **Triggers for Investigation**:
+
 - 3+ enterprise customers requesting data warehouse integration
 - Real-time streaming requirements
 - Compliance requirements for data residency
 
 **Acceptance Criteria**:
+
 - [ ] Conduct spike to validate enterprise customer demand (3+ customers)
 - [ ] Build WebSocket/SSE server for real-time data streaming
 - [ ] Implement data warehouse connectors (Snowflake, BigQuery, Redshift)
@@ -435,12 +482,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Provide client SDKs (JavaScript, Python)
 
 **Dependencies**:
+
 - Core analytics complete
 - Large-scale data processing spike results
 - WebSocket infrastructure
 - Enterprise customer validation
 
 **Business Impact**:
+
 - Real-time data synchronization
 - Custom analytics in external tools
 - Live dashboard updates
@@ -457,6 +506,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: Medium-Large
 
 **Acceptance Criteria**:
+
 - [ ] Create cohort analysis view with retention matrix
 - [ ] Support cohort definition by signup date, first campaign, or custom event
 - [ ] Show retention curves by cohort
@@ -467,12 +517,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Add cohort export for external analysis
 
 **Dependencies**:
+
 - Core analytics complete
 - Historical data (6+ months minimum)
 - Cohort definition system
 - Retention calculation engine
 
 **Business Impact**:
+
 - Retention analysis
 - Cohort-based engagement trends
 - Lifetime value tracking
@@ -487,6 +539,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Target**: Q2-Q3 2026
 
 **Success Metrics**:
+
 - Multi-touch attribution accuracy > 85%
 - Data processing latency < 5 seconds
 - Enterprise data warehouse adoption > 10 customers
@@ -505,6 +558,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Effort**: High
 
 **Acceptance Criteria**:
+
 - [ ] Build central SMTP server for transactional emails
 - [ ] Implement template management system
 - [ ] Add delivery tracking and analytics
@@ -515,12 +569,14 @@ This document outlines the detailed roadmap for analytics and reporting features
 - [ ] Monitor delivery rates and reputation
 
 **Dependencies**:
+
 - Core analytics complete
 - SMTP infrastructure
 - Template engine
 - Delivery tracking system
 
 **Business Impact**:
+
 - Cost savings: $29/month → $0
 - Full control over delivery
 - Custom template management
@@ -533,18 +589,21 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### Current MVP Dependencies
 
 **PostHog - Product Analytics & Event Tracking**
+
 - **Purpose**: User behavior analytics, event tracking, error monitoring
 - **Usage**: User engagement tracking, funnel analysis, error tracking, operational analytics
 - **Cost**: Free tier (1M events/month), then usage-based pricing
 - **Status**: Active (MVP)
 
 **Stripe - Payment Processing**
+
 - **Purpose**: MRR calculation and financial analytics
 - **Usage**: Webhook integration for subscription events, revenue tracking
 - **Cost**: Transaction fees (2.9% + $0.30)
 - **Status**: Active
 
 **Loop.so - Transactional Email Service**
+
 - **Purpose**: Scheduled report delivery via email
 - **Usage**: Send weekly/monthly reports to users
 - **Cost**: $29/month (up to 50K emails)
@@ -554,6 +613,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### Planned Dependencies (Enhanced Analytics)
 
 **Gemini AI - ML/AI Framework**
+
 - **Purpose**: Predictive analytics models and AI-powered insights
 - **Usage**: Send time optimization, subject line prediction, churn prediction
 - **Cost**: Usage-based API pricing
@@ -567,18 +627,21 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### Technical Metrics
 
 **MVP (Q1 2026)**:
+
 - Analytics dashboard load time < 2 seconds
 - Real-time metric updates < 5 seconds
 - Data export completion < 30 seconds
 - Alert delivery latency < 1 minute
 
 **Enhanced Analytics (Q1 2026)**:
+
 - Predictive analytics accuracy > 80%
 - Custom dashboard load time < 3 seconds
 - Segmentation query performance < 5 seconds
 - Data accuracy > 90% with bot detection
 
 **Advanced Analytics (Q2-Q3 2026)**:
+
 - Attribution calculation latency < 10 seconds
 - Data processing throughput > 1000 events/second
 - Data warehouse sync latency < 1 minute
@@ -587,18 +650,21 @@ This document outlines the detailed roadmap for analytics and reporting features
 ### Business Metrics
 
 **MVP (Q1 2026)**:
+
 - Analytics dashboard adoption > 80% of active users
 - Deliverability issue detection time reduced by 50%
 - Send time optimization improves open rates by 10-15%
 - Alert response time < 15 minutes
 
 **Enhanced Analytics (Q1 2026)**:
+
 - Predictive analytics adoption > 60% of power users
 - Custom dashboard adoption > 40% of power users
 - Segmentation improves campaign performance by 20%
 - Customer satisfaction score > 4.5/5
 
 **Advanced Analytics (Q2-Q3 2026)**:
+
 - Multi-touch attribution adoption > 30% of enterprise customers
 - Data warehouse integration > 10 enterprise customers
 - Cohort analysis improves retention by 15%

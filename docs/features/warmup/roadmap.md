@@ -18,6 +18,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Total Investment**: 15-19 weeks of development effort
 
 **Strategic Focus**:
+
 - **Now**: Core warmup system with progressive volume increase (APPROVED)
 - **Q3 2026**: Automated warmup scheduling, real-time reputation monitoring
 - **Q4 2026**: AI-powered predictive reputation management and intelligent deliverability
@@ -32,6 +33,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Target**: 95%+ inbox placement within 21 days
 
 **Capabilities**:
+
 - **Automated Warmup Sequences**: Progressive volume increase over 21+ days
 - **Volume Progression**: Days 1-3: 5-10/day → Days 22+: 50-100/day
 - **Domain Warmup State Tracking**: Monitor warmup progress per domain
@@ -45,6 +47,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Value Proposition**: Achieves 95%+ inbox placement within 21 days through automated reputation building.
 
 **Technical Requirements**:
+
 - Warmup schedule engine
 - Engagement simulation system (warmup pool)
 - Reputation calculation algorithm
@@ -53,6 +56,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - Performance tracking dashboard
 
 **Success Metrics**:
+
 - 95%+ inbox placement within 21 days
 - Bounce rate < 2% during warmup
 - Spam complaint rate < 0.1% during warmup
@@ -63,10 +67,12 @@ Comprehensive timeline for email warmup and reputation management features from 
 ## Q3 2026: Automated Scheduling & Monitoring (8-10 weeks)
 
 ### 1. Warmup Scheduling (Automated)
+
 **Effort**: 4-5 weeks  
 **Priority**: High
 
 **Capabilities**:
+
 - **Automated Warmup Schedules**: Standard, aggressive, conservative, custom plans
 - **Gradual Volume Ramping**: Progressive increase over 4-8 weeks
 - **Domain and IP Warmup**: Separate strategies for domains and IP addresses
@@ -104,6 +110,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Value Proposition**: Automated warmup management that reduces manual work by 80%+ and ensures consistent reputation building.
 
 **Technical Requirements**:
+
 - Schedule engine with multiple plan types
 - Warmup pool management (10,000+ accounts)
 - Engagement simulation (opens, clicks, replies)
@@ -112,6 +119,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - Safety limit enforcement
 
 **Success Metrics**:
+
 - Warmup completion rate > 95%
 - Manual intervention reduces by 80%+
 - Reputation scores improve consistently across all schedules
@@ -120,10 +128,12 @@ Comprehensive timeline for email warmup and reputation management features from 
 ---
 
 ### 2. Reputation Monitoring (Real-Time)
+
 **Effort**: 4-5 weeks  
 **Priority**: High
 
 **Capabilities**:
+
 - **Real-Time Reputation Tracking**: Monitor reputation across Gmail, Outlook, Yahoo, Apple Mail
 - **52+ Blacklist Monitoring**: Check against Spamhaus, Spamcop, SORBS, Barracuda, SURBL, URIBL, and 46+ more
 - **Domain Health Scores**: 0-100 scale for overall domain health
@@ -135,6 +145,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - **Delisting Process Guidance**: Step-by-step instructions for blacklist removal
 
 **Reputation Scoring Algorithm**:
+
 - **Inbox Placement Rate** (40%): Percentage of emails landing in inbox
 - **Engagement Rate** (30%): Opens, clicks, replies
 - **Bounce Rate** (15%): Hard and soft bounces
@@ -142,6 +153,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - **Blacklist Status** (5%): Presence on blacklists
 
 **Alert Thresholds**:
+
 - **Critical**: Reputation score < 50, blacklist detection, spam complaint rate > 0.3%
 - **Warning**: Reputation score 50-70, bounce rate > 5%, spam complaint rate > 0.1%
 - **Info**: Reputation score 70-85, minor fluctuations
@@ -149,6 +161,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Value Proposition**: Proactive reputation management that prevents deliverability issues before they impact campaigns.
 
 **Technical Requirements**:
+
 - Reputation tracking API integrations (Gmail Postmaster, Outlook SNDS)
 - Blacklist checking service (52+ blacklists)
 - Reputation scoring algorithm
@@ -157,6 +170,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - AI recommendation engine
 
 **Success Metrics**:
+
 - Reputation issues detected within 1 hour
 - Blacklist detection within 15 minutes
 - Reputation recovery time reduces by 50%+
@@ -170,6 +184,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Investment**: 2 parallel workstreams (scheduling, monitoring)
 
 **Success Criteria**:
+
 - [ ] Automated warmup schedules reduce manual work by 80%+
 - [ ] Warmup completion rate > 95%
 - [ ] Reputation issues detected within 1 hour
@@ -182,10 +197,12 @@ Comprehensive timeline for email warmup and reputation management features from 
 ## Q4 2026: Intelligent Deliverability Management (7-9 weeks)
 
 ### Advanced Deliverability Features
+
 **Effort**: 7-9 weeks  
 **Priority**: Medium (Competitive Differentiation)
 
 **Capabilities**:
+
 - **Predictive Reputation Management**: Forecast reputation changes and adjust sending proactively
 - **Automated IP Rotation**: Intelligently rotate IPs based on reputation and engagement
 - **Smart Throttling**: Dynamically adjust sending rate based on real-time deliverability signals
@@ -200,12 +217,14 @@ Comprehensive timeline for email warmup and reputation management features from 
 - **Root Cause Analysis**: Automatically identify causes of deliverability issues
 
 **Predictive Models**:
+
 1. **Reputation Forecasting**: Predict reputation score 7 days ahead
 2. **Deliverability Prediction**: Forecast inbox placement rate per campaign
 3. **Risk Assessment**: Identify high-risk campaigns before sending
 4. **Optimal IP Selection**: Choose best IP for each recipient based on history
 
 **Automated Actions**:
+
 - **Throttle Down**: Reduce sending rate when reputation drops
 - **Pause Sending**: Stop sending when critical issues detected
 - **Switch IPs**: Rotate to healthier IP when current IP reputation degrades
@@ -215,6 +234,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 **Value Proposition**: AI-powered deliverability management that maintains 95%+ inbox placement through intelligent IP rotation and throttling.
 
 **Technical Requirements**:
+
 - Multiple IP pools with intelligent routing
 - Real-time deliverability monitoring
 - Predictive models for reputation forecasting
@@ -224,6 +244,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - 12+ months of deliverability data
 
 **Dependencies**:
+
 - Email warmup system (APPROVED)
 - Reputation monitoring (Q3 2026)
 - Multiple IP infrastructure
@@ -231,6 +252,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - 12+ months of deliverability data
 
 **Success Metrics**:
+
 - Inbox placement maintains 95%+
 - Reputation issues prevented proactively (80%+ reduction)
 - IP rotation optimizes deliverability by 10%+
@@ -242,9 +264,11 @@ Comprehensive timeline for email warmup and reputation management features from 
 ## Implementation Sequence
 
 ### Phase 1: Current State (APPROVED)
+
 **Focus**: Core warmup system with progressive volume increase
 
 **Capabilities**:
+
 - Automated warmup sequences
 - Progressive volume increase (21 days to 95%+ inbox placement)
 - Domain warmup state tracking
@@ -256,9 +280,11 @@ Comprehensive timeline for email warmup and reputation management features from 
 ---
 
 ### Phase 2: Automated Scheduling & Monitoring (Q3 2026) - 8-10 weeks
+
 **Focus**: Automated warmup scheduling and real-time reputation monitoring
 
 **Parallel Workstreams**:
+
 1. **Warmup Scheduling (Automated)** - 4-5 weeks
 2. **Reputation Monitoring (Real-Time)** - 4-5 weeks
 
@@ -267,9 +293,11 @@ Comprehensive timeline for email warmup and reputation management features from 
 ---
 
 ### Phase 3: Intelligent Deliverability Management (Q4 2026) - 7-9 weeks
+
 **Focus**: AI-powered predictive reputation management
 
 **Capabilities**:
+
 1. Predictive reputation management
 2. Automated IP rotation
 3. Smart throttling
@@ -288,12 +316,14 @@ Comprehensive timeline for email warmup and reputation management features from 
 ## Success Metrics by Quarter
 
 ### Current State (APPROVED)
+
 - [ ] 95%+ inbox placement within 21 days
 - [ ] Bounce rate < 2% during warmup
 - [ ] Spam complaint rate < 0.1% during warmup
 - [ ] Warmup completion rate > 90%
 
 ### Q3 2026 (Automated Scheduling & Monitoring)
+
 - [ ] Automated warmup schedules reduce manual work by 80%+
 - [ ] Warmup completion rate > 95%
 - [ ] Reputation issues detected within 1 hour
@@ -302,6 +332,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 - [ ] Proactive alerts prevent 80%+ of deliverability issues
 
 ### Q4 2026 (Intelligent Deliverability)
+
 - [ ] Inbox placement maintains 95%+
 - [ ] Reputation issues prevented proactively (80%+ reduction)
 - [ ] IP rotation optimizes deliverability by 10%+
@@ -313,17 +344,20 @@ Comprehensive timeline for email warmup and reputation management features from 
 ## Related Documentation
 
 ### Feature Documentation
+
 - [Warmup & Reputation Overview](/docs/features/warmup) - Warmup features catalog
 - [Campaign Management](/docs/features/campaigns) - Email campaigns requiring warmup
 - [Infrastructure Management](/docs/features/infrastructure) - VPS and SMTP setup
 - [Domain Management](/docs/features/domains) - Domain verification and DNS
 
 ### Technical Implementation
+
 - [Warmup API](/docs/implementation-technical/api/tenant-api/warmup) - Warmup management endpoints
 - [Domain Routes](/docs/design/routes/workspace-domains.md) - Warmup management route
 - [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management) - Infrastructure setup
 
 ### Business Strategy
+
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
 

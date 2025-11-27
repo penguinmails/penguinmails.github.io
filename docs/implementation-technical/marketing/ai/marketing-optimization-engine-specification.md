@@ -894,5 +894,5 @@ class RetrainingTrigger implements RetrainingTrigger {
 - **For ROI analysis see:** `docs/business/marketing/roi/detailed.md`
 - **For technical foundation see:** `../analytics-integration/marketing-analytics-architecture.md`
 
-This technical implementation focuses exclusively on ML model architecture, inference systems, and optimization algorithms without business value narratives or strategic storytelling.
+This technical implementation focuses exclusively on ML model architecture, inference systems, and optimization algorithms without business value narratives or strategic storytelling
 ---

@@ -64,6 +64,7 @@ Customer Success integrates with Finance through well-defined data flows and API
 Precise allocation of expansion revenue and churn protection to CS activities.
 
 **Primary Systems:**
+
 - CS Value Engine, Expansion Tracking
 - Finance Revenue Recognition, Attribution Models
 
@@ -80,6 +81,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
 ### Key Integration Points
 
 **1. Expansion Revenue Attribution**
+
 ```json
 {
   "expansion_attribution": {
@@ -92,6 +94,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
 ```
 
 **2. Churn Prevention Value**
+
 ```json
 {
   "churn_protection": {
@@ -106,6 +109,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
 ### CS-Finance Attribution APIs
 
 **Attribution API:**
+
 ```markdown
 POST /api/v1/cs-finance/attribute/{customer_id}
 - CS outcome revenue allocation
@@ -133,6 +137,7 @@ GET /api/v1/cs-finance/portfolio/{period}
 Continuous monitoring of contractual outcome delivery vs. commitments.
 
 **Primary Systems:**
+
 - CS Success Metrics, Contract Intelligence
 - Finance Contract Management, Utilization Tracking
 
@@ -149,6 +154,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
 ### Key Integration Points
 
 **1. Contractual Value Delivery**
+
 ```json
 {
   "value_delivery": {
@@ -161,6 +167,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
 ```
 
 **2. ROI Calculation**
+
 ```json
 {
   "roi_calculation": {
@@ -175,6 +182,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
 ### CS-Value APIs
 
 **Realization API:**
+
 ```markdown
 GET /api/v1/cs-finance/realization/{contract_id}
 - Delivery vs. commitment tracking
@@ -202,6 +210,7 @@ POST /api/v1/cs-finance/certify
 CS health signals enhancing revenue predictability.
 
 **Primary Systems:**
+
 - CS Predictive Risk, Health Trending
 - Finance Planning, Scenario Modeling
 
@@ -218,6 +227,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
 ### Key Integration Points
 
 **1. Renewal Probability**
+
 ```json
 {
   "renewal_forecast": {
@@ -230,6 +240,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
 ```
 
 **2. Expansion Pipeline**
+
 ```json
 {
   "expansion_forecast": {
@@ -244,6 +255,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
 ### CS-Forecast APIs
 
 **Forecast API:**
+
 ```markdown
 GET /api/v1/cs-finance/forecast/{customer_id}
 - Renewal/expansion probabilities
@@ -296,6 +308,7 @@ topics:
 ---
 
 **Related Documentation:**
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
 - [Finance Systems Map](/docs/business/finance/cross-domain-integration)
 

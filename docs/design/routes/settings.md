@@ -87,12 +87,13 @@
 **User Journey Context**: Occasional updates. Critical for account security.
 
 > [!NOTE]
-> **Missing MVP Features**: 
+> **Missing MVP Features**:
+>
 > - Session Management UI (view/revoke active sessions)
 > - Email Change Verification Flow UI
 > - Login Activity Log
 > - Password strength enforcement (server-side)
-> 
+>
 > See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
 
 **Related Documentation**:
@@ -180,6 +181,7 @@
 
 > [!NOTE]
 > **Missing MVP Features**:
+>
 > - Workspace management feature documentation
 > - Workspace health scoring system
 > - RBAC permission matrix documentation
@@ -234,6 +236,7 @@
 
 > [!NOTE]
 > **Missing MVP Features**:
+>
 > - Plan comparison modal for upgrades/downgrades
 > - Real-time usage progress bars with color-coded alerts
 > - Direct PDF invoice download (currently redirects to Stripe portal)

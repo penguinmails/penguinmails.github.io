@@ -7,6 +7,7 @@ Background job processing, queue monitoring, and notifications.
 **Current State**: Core email pipeline and background jobs active
 
 **What's Ready**:
+
 - Email Pipeline (PostgreSQL + Redis) - ACTIVE
 - Background Jobs (job processing) - ACTIVE
 - High throughput (10,000+ emails/minute)
@@ -15,6 +16,7 @@ Background job processing, queue monitoring, and notifications.
 - Multiple queue priorities
 
 **What's Working**:
+
 - Email sending jobs processed reliably
 - Campaign processing and analytics aggregation
 - Warmup scheduling and health checks
@@ -68,6 +70,7 @@ Job processing system for asynchronous tasks.
 Enhanced real-time queue monitoring and alerting.
 
 **Planned Capabilities**:
+
 - Real-time queue depth visualization
 - Job throughput metrics
 - Worker health monitoring
@@ -81,6 +84,7 @@ Enhanced real-time queue monitoring and alerting.
 Sophisticated job scheduling with dependencies and workflows.
 
 **Planned Capabilities**:
+
 - Job dependencies (wait for other jobs)
 - Workflow orchestration
 - Scheduled recurring jobs
@@ -94,6 +98,7 @@ Sophisticated job scheduling with dependencies and workflows.
 In-app and email notifications for users.
 
 **Planned Capabilities**:
+
 - In-app notifications
 - Email notifications
 - Push notifications
@@ -109,16 +114,19 @@ In-app and email notifications for users.
 ## Related Documentation
 
 ### Feature Documentation
+
 - [Campaign Management](/docs/features/campaigns) - Email campaigns using queue system
 - [Warmup & Reputation](/docs/features/warmup) - Warmup jobs and scheduling
 - [Analytics](/docs/features/analytics) - Analytics aggregation jobs
 
 ### Technical Implementation
+
 - [Queue API](/docs/implementation-technical/api/queue) - Background job management
 - [Email Pipeline](/docs/features/queue/email-pipeline) - Email sending infrastructure
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline) - Implementation tasks
 
 ### Business Strategy
+
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Technical dependencies
 

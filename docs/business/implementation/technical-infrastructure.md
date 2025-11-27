@@ -276,6 +276,7 @@ OS: Ubuntu 20.04+ LTS or CentOS 8+
 ```
 
 ##### 10K-100K emails/month
+
 ```markdown
 CPU: 1-2 vCPUs (2.4+ GHz)
 RAM: 2-4GB
@@ -285,6 +286,7 @@ OS: Ubuntu 20.04+ LTS or CentOS 8+
 ```
 
 ##### 100K-1M emails/month
+
 ```markdown
 CPU: 2-4 vCPUs (3.0+ GHz)
 RAM: 4-8GB
@@ -294,6 +296,7 @@ OS: Ubuntu 20.04+ LTS or CentOS 8+
 ```
 
 ##### 1M+ emails/month
+
 ```markdown
 CPU: 4-8+ vCPUs (3.2+ GHz)
 RAM: 8-16GB+ SSD
@@ -306,6 +309,7 @@ Multiple servers for load balancing
 #### Software Stack Requirements
 
 ##### Core Email Server Software
+
 - **Postfix**: SMTP server with advanced configuration
 - **Dovecot**: IMAP/POP3 server for mailbox access
 - **SpamAssassin**: Spam filtering and virus protection
@@ -313,6 +317,7 @@ Multiple servers for load balancing
 - **Amavisd-new**: Content filter integration
 
 ##### Supporting Software
+
 - **PostgreSQL**: Database for user management (with NileDB multi-tenancy)
 - **Apache/Nginx**: Web server for administration
 - **Roundcube/SquirrelMail**: Webmail interface
@@ -322,6 +327,7 @@ Multiple servers for load balancing
 #### Network and Security Configuration
 
 ##### Firewall Requirements
+
 ```bash
 # Essential ports for email servers
 # SMTP (Outbound): 25, 465 (SSL), 587 (TLS)
@@ -332,15 +338,21 @@ Multiple servers for load balancing
 ```
 
 ##### DNS Configuration Requirements
+
 - **SPF Record**: Required for all sending domains
+
   ```markdown
   v=spf1 include:_spf.google.com include:sendgrid.net ~all
   ```
+
 - **DKIM Record**: Required for deliverability
+
   ```markdown
   default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
   ```
+
 - **DMARC Record**: Recommended for policy enforcement
+
   ```markdown
   _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc@example.com"
   ```
@@ -348,21 +360,25 @@ Multiple servers for load balancing
 ### IP Management and Reputation
 
 #### IP Allocation Strategy
+
 **Cold Email Requirements**:
 
 ##### Small Volume (1K-10K)
+
 - **Primary IP**: 1 dedicated IP
 - **Backup IP**: 1 additional IP for rotation
 - **Warmup Period**: 2-3 weeks gradual ramp-up
 - **Daily Send Limit**: 10 emails/day initial, 10-20% daily increase
 
 ##### Medium Volume (10K-100K)
+
 - **Primary IPs**: 3-5 dedicated IPs
 - **Rotation Strategy**: Round-robin with reputation-based routing
 - **Warmup Period**: 3-4 weeks per domain
 - **Daily Send Limit**: 50-100 emails/day per IP
 
 ##### Large Volume (100K+)
+
 - **Primary IPs**: 10-20+ dedicated IPs
 - **Load Balancing**: Geographic and reputation-based distribution
 - **Warmup Period**: 4-6 weeks for new domains
@@ -371,6 +387,7 @@ Multiple servers for load balancing
 #### Reputation Management Technical Implementation
 
 ##### Monitoring Setup
+
 ```bash
 # Blacklist monitoring script example
 #!/bin/bash
@@ -385,6 +402,7 @@ done
 ```
 
 ##### Deliverability Monitoring
+
 - **Open Rate Tracking**: ESP APIs for engagement data
 - **Bounce Rate Monitoring**: Real-time bounce processing
 - **Complaint Rate Tracking**: Feedback loop integration
@@ -393,7 +411,9 @@ done
 ### Backup and Disaster Recovery
 
 #### Backup Strategy
+
 **Critical Components**:
+
 - **Configuration Files**: Postfix, Dovecot, DNS settings
 - **User Data**: Mailbox contents, user preferences
 - **Database Backups**: User accounts, message metadata
@@ -401,6 +421,7 @@ done
 - **Custom Scripts**: Automation and monitoring tools
 
 #### Backup Implementation
+
 ```bash
 # Daily backup script example
 #!/bin/bash
@@ -424,6 +445,7 @@ aws s3 sync $BACKUP_DIR s3://email-backups/$DATE/
 ```
 
 #### Disaster Recovery Plan
+
 1. **Primary Server Failure**: Automatic failover to backup server
 2. **IP Blacklisting**: Emergency IP rotation procedures
 3. **Domain Compromised**: Emergency domain shutdown and re-verification
@@ -437,6 +459,7 @@ aws s3 sync $BACKUP_DIR s3://email-backups/$DATE/
 ### Server Performance Tuning
 
 #### Postfix Optimization
+
 ```bash
 # /etc/postfix/main.cf optimizations
 default_process_limit = 200
@@ -449,6 +472,7 @@ default_destination_concurrency_limit = 5
 ```
 
 #### System-Level Optimizations
+
 ```bash
 # Kernel parameters for email servers
 # /etc/sysctl.conf
@@ -460,6 +484,7 @@ net.core.wmem_max = 16777216
 ```
 
 #### Database Optimization
+
 ```sql
 -- PostgreSQL performance optimization
 ALTER SYSTEM SET shared_buffers = '512MB';
@@ -470,6 +495,7 @@ ALTER SYSTEM SET max_connections = 200;
 ### Email Queue Management
 
 #### Queue Monitoring
+
 ```bash
 # Monitor mail queue size
 mailq | grep -c "^[A-F0-9]"
@@ -485,6 +511,7 @@ postsuper -d MESSAGE_ID
 ```
 
 #### Performance Metrics
+
 - **Queue Size**: <100 messages for healthy system
 - **Processing Rate**: 100+ messages/minute for active systems
 - **Delivery Time**: <5 minutes for 95% of messages
@@ -494,6 +521,7 @@ postsuper -d MESSAGE_ID
 ### Load Testing and Capacity Planning
 
 #### Email Volume Testing
+
 ```bash
 # Load testing script example
 for i in {1..1000}; do
@@ -515,6 +543,7 @@ wait
 ```
 
 #### Capacity Planning Guidelines
+
 - **Email Server**: 1,000 emails/minute per CPU core
 - **Database**: 500 queries/second per CPU core
 - **Memory**: 1GB RAM per 10,000 active email addresses
@@ -526,14 +555,17 @@ wait
 ## 🔗 Progressive Disclosure Navigation
 
 **For strategic context:**
+
 - [Executive Summary](executive-summary:1) - High-level strategic findings
 - [ROI Calculator](roi-calculator:1) - Cost-benefit analysis and planning
 
 **For operational implementation:**
+
 - [Cost Comparisons](cost-comparisons:1) - Complete TCO analysis
 - [Personnel Analysis](personnel-analysis:1) - Team structure and technical roles
 
 **For complete technical analysis:**
+
 - [Performance Benchmarks](performance-benchmarks:1) - Industry performance data
 - [Compliance Framework](compliance-framework:1) - Technical compliance implementation
 - [Detailed Methodology](detailed-methodology:1) - Complete analysis methodology
@@ -548,22 +580,4 @@ wait
 
 ## References
 
-[^1]: DigitalOcean Pricing - Droplets. https://www.digitalocean.com/pricing/droplets
-[^2]: AWS EC2 On-Demand Pricing. https://aws.amazon.com/ec2/pricing/on-demand/
-[^3]: Vultr VPS Pricing. https://www.vultr.com/pricing/
-[^4]: VPSBenchmarks DigitalOcean Comparison. https://www.vpsbenchmarks.com/compare/docean
-[^5]: Spendflo DigitalOcean Pricing Guide. https://www.spendflo.com/blog/digitalocean-pricing-guide
-[^6]: VPSBenchmarks Vultr Comparison. https://www.vpsbenchmarks.com/compare/vultr
-[^7]: FreeRDPS Best VPS for Email Server. https://freerdps.com/blog/best-vps-for-email-server/
-[^8]: NOPS EC2 Pricing Analysis. https://www.nops.io/blog/ec2-pricing-how-much-does-aws-ec2-really-cost/
-[^9]: SSDNodes VPS Hosting Comparison. https://www.ssdnodes.com/blog/digitalocean-vs-linode-vs-vultr/
-[^10]: FreeRDPS Email Server VPS Guide. https://freerdps.com/blog/best-vps-for-email-server/
-[^110]: Cloudflare DNS Pricing. https://www.cloudflare.com/plans/
-[^111]: GlockApps Pricing. https://glockapps.com/pricing/
-[^112]: Datadog Pricing. https://www.datadoghq.com/pricing/
-[^113]: Backblaze B2 Cloud Storage Pricing. https://www.backblaze.com/cloud-storage/pricing
-[^114]: AWS SES Pricing. https://aws.amazon.com/ses/pricing/
-[^115]: SendGrid Pricing. https://sendgrid.com/pricing/
-[^116]: Mailgun Pricing. https://www.mailgun.com/pricing
-[^117]: Postmark Pricing. https://postmarkapp.com/pricing
 ---

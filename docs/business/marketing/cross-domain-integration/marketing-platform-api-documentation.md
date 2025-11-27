@@ -54,6 +54,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
 ```
 
 **2. API Key Authentication**
+
 ```json
 {
   "auth_method": "api_key",
@@ -67,6 +68,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
 ```
 
 **3. JWT Token Authentication**
+
 ```json
 {
   "auth_method": "jwt",
@@ -95,11 +97,13 @@ User-Agent: {integration_name}/{version}
 ### Campaign Management API
 
 **Create Campaign**
+
 ```http
 POST /api/v1/campaigns
 ```
 
 **Request Body:**
+
 ```json
 {
   "name": "Q1 Product Launch Campaign",
@@ -133,6 +137,7 @@ POST /api/v1/campaigns
 ```
 
 **Response:**
+
 ```json
 {
   "campaign_id": "camp_789xyz",
@@ -147,11 +152,13 @@ POST /api/v1/campaigns
 ```
 
 **Get Campaign Performance**
+
 ```http
 GET /api/v1/campaigns/{campaign_id}/performance
 ```
 
 **Response:**
+
 ```json
 {
   "campaign_id": "camp_789xyz",
@@ -183,11 +190,13 @@ GET /api/v1/campaigns/{campaign_id}/performance
 ### Lead Management API
 
 **Capture Lead**
+
 ```http
 POST /api/v1/leads
 ```
 
 **Request Body:**
+
 ```json
 {
   "source": "website_form",
@@ -224,6 +233,7 @@ POST /api/v1/leads
 ```
 
 **Response:**
+
 ```json
 {
   "lead_id": "lead_456abc",
@@ -242,11 +252,13 @@ POST /api/v1/leads
 ```
 
 **Update Lead Status**
+
 ```http
 PATCH /api/v1/leads/{lead_id}
 ```
 
 **Request Body:**
+
 ```json
 {
   "status": "qualified",
@@ -260,11 +272,13 @@ PATCH /api/v1/leads/{lead_id}
 ### Analytics and Reporting API
 
 **Get Campaign Analytics**
+
 ```http
 GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
 ```
 
 **Response:**
+
 ```json
 {
   "summary": {
@@ -311,11 +325,13 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
 ### CRM Integration API
 
 **Salesforce Integration**
+
 ```http
 POST /api/v1/integrations/crm/salesforce/sync
 ```
 
 **Request Body:**
+
 ```json
 {
   "sync_type": "bi_directional",
@@ -334,11 +350,13 @@ POST /api/v1/integrations/crm/salesforce/sync
 ```
 
 **HubSpot Integration**
+
 ```http
 POST /api/v1/integrations/crm/hubspot/contacts
 ```
 
 **Request Body:**
+
 ```json
 {
   "action": "create_or_update",
@@ -366,11 +384,13 @@ POST /api/v1/integrations/crm/hubspot/contacts
 ### Analytics Integration API
 
 **Google Analytics Integration**
+
 ```http
 POST /api/v1/integrations/analytics/google/track
 ```
 
 **Request Body:**
+
 ```json
 {
   "event_category": "email_campaign",
@@ -385,11 +405,13 @@ POST /api/v1/integrations/analytics/google/track
 ```
 
 **Customer Data Platform Integration**
+
 ```http
 POST /api/v1/integrations/cdp/audience/update
 ```
 
 **Request Body:**
+
 ```json
 {
   "audience_id": "aud_enterprise_customers",
@@ -411,11 +433,13 @@ POST /api/v1/integrations/cdp/audience/update
 ### E-commerce Integration API
 
 **Shopify Integration**
+
 ```http
 POST /api/v1/integrations/ecommerce/shopify/customer-event
 ```
 
 **Request Body:**
+
 ```json
 {
   "customer_id": "shopify_customer_789",
@@ -441,11 +465,13 @@ POST /api/v1/integrations/ecommerce/shopify/customer-event
 ```
 
 **WooCommerce Integration**
+
 ```http
 POST /api/v1/integrations/ecommerce/woocommerce/order-update
 ```
 
 **Request Body:**
+
 ```json
 {
   "order_id": 12345,
@@ -467,11 +493,13 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
 ### Webhook Configuration
 
 **Register Webhook Endpoint**
+
 ```http
 POST /api/v1/webhooks
 ```
 
 **Request Body:**
+
 ```json
 {
   "url": "https://your-crm.com/webhooks/marketing-platform",
@@ -488,6 +516,7 @@ POST /api/v1/webhooks
 ```
 
 **Webhook Payload Example:**
+
 ```json
 {
   "event": "lead.created",
@@ -515,6 +544,7 @@ POST /api/v1/webhooks
 ### Webhook Security
 
 **Signature Verification:**
+
 ```javascript
 const crypto = require('crypto');
 
@@ -555,11 +585,13 @@ X-RateLimit-Window: 3600
 ### Rate Limit Management
 
 **Get Current Usage**
+
 ```http
 GET /api/v1/integrations/usage
 ```
 
 **Response:**
+
 ```json
 {
   "current_period": {
@@ -615,6 +647,7 @@ GET /api/v1/integrations/usage
 ### Retry Logic
 
 **Exponential Backoff:**
+
 ```json
 {
   "retry_policy": {
@@ -634,11 +667,13 @@ GET /api/v1/integrations/usage
 ### JavaScript/TypeScript SDK
 
 **Installation:**
+
 ```bash
 npm install @marketing-platform/sdk
 ```
 
 **Usage:**
+
 ```javascript
 import { MarketingPlatform } from '@marketing-platform/sdk';
 
@@ -665,6 +700,7 @@ await client.analytics.trackConversion({
 ```
 
 **CSS Integration for Email Templates:**
+
 ```css
 /* Marketing Platform Email Template Styles */
 .email-template {
@@ -706,6 +742,7 @@ await client.analytics.trackConversion({
 **Base URL:** `https://api-sandbox.marketingplatform.com`
 
 **Sandbox Features:**
+
 - Test data and simulated responses
 - No actual email delivery
 - Limited rate limits for testing
@@ -714,12 +751,14 @@ await client.analytics.trackConversion({
 ### API Testing Tools
 
 **Postman Collection:**
+
 - Complete API endpoint collection
 - Pre-configured authentication
 - Example requests and responses
 - Environment variables for easy testing
 
 **OpenAPI Specification:**
+
 ```yaml
 openapi: 3.0.3
 info:
@@ -740,12 +779,14 @@ servers:
 ### API Monitoring
 
 **Performance Metrics:**
+
 - Response time monitoring
 - Error rate tracking
 - Success rate analytics
 - Usage pattern analysis
 
 **Real-time Alerts:**
+
 ```json
 {
   "alert_conditions": {
@@ -765,15 +806,17 @@ servers:
 ### Support and Documentation
 
 **Developer Portal:**
+
 - Interactive API documentation
 - Code examples and tutorials
 - Integration guides
 - Community forums
 
 **Support Channels:**
-- Email: api-support@marketingplatform.com
+
+- Email: <api-support@marketingplatform.com>
 - Slack: #api-developer-support
-- Status Page: https://status.marketingplatform.com
+- Status Page: <https://status.marketingplatform.com>
 
 ---
 
@@ -782,5 +825,5 @@ servers:
 **Developer Access:** Integration Developers, Marketing Operations Teams, Technical Architects
 **Review Cycle:** Monthly API performance review and quarterly documentation updates
 
-This comprehensive API documentation enables seamless integration between marketing platforms and external business systems, supporting robust cross-domain data flow and operational coordination.
+This comprehensive API documentation enables seamless integration between marketing platforms and external business systems, supporting robust cross-domain data flow and operational coordination
 ---

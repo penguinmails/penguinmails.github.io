@@ -31,12 +31,14 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Current Gap:** Analytics are embedded in campaign views and admin routes, but no dedicated `/dashboard/analytics` route exists for centralized analytics access.
 
 **User Impact:**
+
 - Users must navigate to individual campaigns to view performance
 - No cross-campaign comparison capability
 - No workspace-level aggregation view
 - Difficult to get holistic performance overview
 
 **Business Value:**
+
 - Single source of truth for all analytics
 - Faster decision-making with centralized data
 - Improved user experience and platform stickiness
@@ -45,6 +47,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Complexity:** Medium (5-7 days)
 
 **Acceptance Criteria:**
+
 - [ ] Create `/dashboard/analytics` route with overview dashboard
 - [ ] Display aggregated metrics across all campaigns (sent, delivered, opened, clicked, bounced)
 - [ ] Show workspace-level performance breakdown with drill-down capability
@@ -55,6 +58,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - [ ] Add loading states and error handling
 
 **Dependencies:**
+
 - Core analytics API endpoints
 - Chart visualization library (Chart.js/Recharts)
 - OLAP analytics database queries
@@ -70,12 +74,14 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Current Gap:** Deliverability metrics exist but lack dedicated UI for deep analysis and provider-specific breakdowns.
 
 **User Impact:**
+
 - Cannot diagnose deliverability issues effectively
 - No provider-specific inbox placement visibility (Gmail vs Yahoo vs Outlook)
 - Difficult to identify root causes of delivery problems
 - No proactive blacklist monitoring
 
 **Business Value:**
+
 - Early detection of deliverability problems
 - Provider-specific optimization strategies
 - Reduced bounce rates and improved sender reputation
@@ -84,6 +90,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Complexity:** Medium (5-7 days)
 
 **Acceptance Criteria:**
+
 - [ ] Create `/dashboard/analytics/deliverability` route
 - [ ] Show inbox placement rate by email provider (Gmail, Yahoo, Outlook, Microsoft, Other)
 - [ ] Display bounce rate with hard/soft bounce classification
@@ -94,6 +101,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - [ ] Support export of deliverability data
 
 **Dependencies:**
+
 - Reputation monitoring service integration
 - Blacklist checking API
 - Provider-specific inbox placement tracking
@@ -111,12 +119,14 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Current Gap:** Timing metrics exist (average time to open/click) but no visual heatmap representation for pattern identification.
 
 **User Impact:**
+
 - Cannot easily identify best days/times to send emails
 - Manual analysis required to find engagement patterns
 - Missed optimization opportunities
 - No data-driven send time recommendations
 
 **Business Value:**
+
 - Visual identification of high-engagement time windows
 - Improved open rates through send time optimization
 - Data-driven scheduling decisions
@@ -125,6 +135,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Complexity:** Medium (4-6 days)
 
 **Acceptance Criteria:**
+
 - [ ] Create engagement heatmap visualization component
 - [ ] Show day-of-week × hour-of-day engagement grid (7 days × 24 hours)
 - [ ] Color-code cells by engagement level (green = high, yellow = medium, red = low)
@@ -135,6 +146,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - [ ] Add tooltip showing exact engagement metrics on hover
 
 **Dependencies:**
+
 - Historical engagement data (minimum 30 days)
 - Heatmap visualization library
 - Timezone handling
@@ -150,12 +162,14 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Current Gap:** Individual campaign analytics exist but no comparison view for identifying winners or analyzing A/B tests.
 
 **User Impact:**
+
 - Cannot easily compare campaign performance
 - Manual spreadsheet work required for comparisons
 - Difficult to identify best-performing templates
 - No statistical significance testing for A/B tests
 
 **Business Value:**
+
 - Identify best-performing campaigns and templates
 - Data-driven optimization decisions
 - Faster A/B test analysis
@@ -164,6 +178,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Complexity:** Medium (5-7 days)
 
 **Acceptance Criteria:**
+
 - [ ] Create `/dashboard/analytics/compare` route
 - [ ] Support selecting 2-5 campaigns for comparison
 - [ ] Display side-by-side metrics table with all key metrics
@@ -174,6 +189,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - [ ] Include percentage difference calculations between campaigns
 
 **Dependencies:**
+
 - Statistical significance calculation library
 - Campaign selection UI component
 - Comparative chart components
@@ -189,12 +205,14 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Current Gap:** Alerts mentioned in documentation but no UI for configuration or management.
 
 **User Impact:**
+
 - Must manually check dashboards for issues
 - Delayed response to performance problems
 - No proactive monitoring
 - Missed critical deliverability issues
 
 **Business Value:**
+
 - Proactive issue detection and resolution
 - Reduced time to resolution for problems
 - Automated monitoring reduces manual work
@@ -203,6 +221,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Complexity:** Medium (5-7 days)
 
 **Acceptance Criteria:**
+
 - [ ] Create `/dashboard/settings/alerts` route for alert configuration
 - [ ] Support alert types: deliverability drop, bounce spike, spam complaints, blacklist detection, reputation drop
 - [ ] Allow custom threshold configuration (e.g., "Alert if bounce rate > 5%")
@@ -213,6 +232,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - [ ] Add alert priority levels (critical, warning, info)
 
 **Dependencies:**
+
 - Notification service (email via Loop.so, SMS via Twilio)
 - Webhook delivery system
 - Alert evaluation engine (background job)
@@ -226,10 +246,12 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 ### Total Effort Estimate
 
 **Priority P0 (Blockers):** 10-14 days
+
 - Real-Time Analytics Dashboard: 5-7 days
 - Deliverability Analytics Deep-Dive: 5-7 days
 
 **Priority P1 (Important):** 14-22 days
+
 - Engagement Heatmaps: 4-6 days
 - Comparative Analytics: 5-7 days
 - Alert Configuration UI: 5-7 days
@@ -239,6 +261,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 ### Implementation Order
 
 **Phase 1 (Weeks 1-2):** P0 Features
+
 1. Real-Time Analytics Dashboard
 2. Deliverability Analytics Deep-Dive
 
@@ -250,6 +273,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 ### Success Criteria
 
 **MVP Complete When:**
+
 - [ ] All 5 features implemented with acceptance criteria met
 - [ ] Users can access centralized analytics dashboard
 - [ ] Deliverability issues can be diagnosed and monitored

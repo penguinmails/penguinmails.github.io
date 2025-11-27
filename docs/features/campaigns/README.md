@@ -7,11 +7,13 @@ Campaign creation, multi-channel orchestration, sequence management, and campaig
 **Current State**: Core infrastructure active, advanced features planned for Q1 2026
 
 **What's Ready**:
+
 - Email pipeline and queue system (ACTIVE)
 - Template management (basic)
 - Background job processing
 
 **What's Missing (MVP Blockers)**:
+
 - Bounce handling system (P0 - 5-7 days)
 - Unsubscribe management (P0 - 5-7 days)
 - Campaign scheduling (basic) (P0 - 3-4 days)
@@ -49,12 +51,14 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 
 **MVP Capabilities** (Q1 2026):
+
 - Immediate send (launch now)
 - Scheduled send (specific date/time)
 - Timezone-aware delivery (recipient's local time)
 - Schedule editing and cancellation
 
 **Advanced Capabilities** (Post-MVP):
+
 - AI-powered send-time optimization
 - Business hours enforcement
 - Holiday/weekend skipping
@@ -83,12 +87,14 @@ Design and automate multi-step email sequences with conditional branching and tr
 Split testing engine for optimizing subject lines, content, and send times.
 
 **MVP Capabilities** (Q1 2026):
+
 - Subject line A/B testing (2 variants)
 - Test sample size (10-20% of audience)
 - Automatic winner selection based on open rate
 - Basic test analytics
 
 **Advanced Capabilities** (Q2 2026):
+
 - Multi-variant testing (3-5 variants)
 - Content A/B testing (email body)
 - Sender name and send time testing
@@ -102,6 +108,7 @@ Split testing engine for optimizing subject lines, content, and send times.
 Advanced personalization engine for dynamic content insertion.
 
 **MVP Capabilities** (Q1 2026):
+
 - Merge tags for contact data
 - Conditional content blocks (if/elsif/else)
 - Custom fields and nested properties
@@ -109,6 +116,7 @@ Advanced personalization engine for dynamic content insertion.
 - Dynamic links with UTM parameters
 
 **Advanced Capabilities** (Q3 2026):
+
 - AI-powered content selection
 - Dynamic image generation
 - Predictive send-time optimization
@@ -171,13 +179,16 @@ Advanced personalization engine for dynamic content insertion.
 ## Post-MVP Enhancements
 
 ### Q2 2026
+
 - Advanced Multi-Variate Testing (4-5 weeks)
 
 ### Q3 2026
+
 - Advanced Personalization Engine (4-6 weeks)
 - Smart Campaign Sequencing (5-6 weeks)
 
 ### Q4 2026
+
 - AI-Powered Campaign Optimization (6-8 weeks)
 - Predictive Sending Intelligence (5-7 weeks)
 - Campaign Workflow Automation (8-10 weeks)
@@ -190,21 +201,25 @@ See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 ## Related Documentation
 
 ### Feature Documentation
+
 - [Template Management](/docs/features/templates) - Email templates and content
 - [Warmup & Reputation](/docs/features/warmup) - Sender reputation building
 - [Queue System](/docs/features/queue) - Email pipeline and background jobs
 - [Analytics](/docs/features/analytics) - Campaign performance tracking
 
 ### Technical Implementation
+
 - [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns) - Campaign management endpoints
 - [Email Pipeline](/docs/features/queue/email-pipeline) - Email sending infrastructure
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline) - Implementation tasks
 
 ### Route Specifications
+
 - [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - 5 campaign management routes
 - [Template Routes](/docs/design/routes/workspace-templates.md) - 4 template management routes
 
 ### Business Strategy
+
 - [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
 

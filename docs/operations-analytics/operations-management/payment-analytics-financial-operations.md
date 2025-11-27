@@ -212,6 +212,7 @@ export async function createStripeConnectAccount(companyId: string, billingEmail
 ```
 
 ##### 2. **Onboarding Link Generation**
+
 ```typescript
 // API Endpoint: GET /api/stripe/connect/onboarding-link
 export async function getStripeOnboardingLink(accountId: string) {
@@ -253,6 +254,7 @@ ALTER TABLE tenant_config ADD COLUMN stripe_account_id VARCHAR(255) UNIQUE;
 #### **Settings/Billing Integration**
 
 ##### 1. **Status Checking Logic**
+
 ```typescript
 // API Endpoint: GET /api/stripe/connect/status
 export async function getStripeConnectStatus() {
@@ -290,11 +292,13 @@ export async function getStripeConnectStatus() {
 #### **Webhook Integration**
 
 ##### 1. **Webhook Endpoint**
+
 **Endpoint**: `POST /api/webhooks/stripe`
 
 Handles account updates, capability changes, and other Stripe events for real-time status synchronization.
 
 ##### 2. **Event Handlers**
+
 - **Account Updates**: Process account information changes
 - **Capability Updates**: Handle payment capability status changes
 - **Payment Events**: Track payment processing and failures
@@ -306,12 +310,14 @@ Handles account updates, capability changes, and other Stripe events for real-ti
 ### **Revenue Metrics**
 
 #### **Core Revenue Streams**
+
 - **Subscription Revenue**: Monthly/annual recurring revenue from platform plans
 - **Add-on Revenue**: Dedicated IPs, additional domains, premium support
 - **Professional Services**: Custom integrations, consulting, training
 - **Marketplace Revenue**: Third-party integrations and templates
 
 #### **Revenue Calculation Methods**
+
 ```typescript
 /)
 const calculateMRR = (subscriptions: Subscription[]) => {
@@ -332,6 +338,7 @@ const calculateNRR = (startingARR: number, endingARR: number, expansions: number
 ```
 
 #### **Key Revenue KPIs**
+
 - **MRR Growth Rate**: Month-over-month subscription revenue growth
 - **ARR Growth Rate**: Year-over-year annualized revenue growth
 - **Average Revenue Per User (ARPU)**: Total revenue divided by active users
@@ -341,18 +348,21 @@ const calculateNRR = (startingARR: number, endingARR: number, expansions: number
 ### **Cost Structure Analysis**
 
 #### **Fixed Costs**
+
 - **Infrastructure Costs**: VPS hosting, database, CDN, monitoring
 - **Software Licenses**: Development tools, third-party services
 - **Insurance**: Business liability, cyber security, workers' compensation
 - **Legal & Compliance**: Regulatory compliance, legal fees, audits
 
 #### **Variable Costs**
+
 - **Payment Processing Fees**: Stripe Connect fees (2.9% + $0.30 per transaction)
 - **Email Delivery Costs**: ESP fees based on volume ($0.0001-$0.001 per email)
 - **Customer Acquisition**: Marketing spend, sales commissions
 - **Customer Success**: Support staffing, training materials
 
 #### **Cost Allocation**
+
 ```typescript
 interface CostBreakdown {
   infrastructure: number;    // 35% of total costs
@@ -374,12 +384,14 @@ const costBreakdown: CostBreakdown = {
 ### **Profitability Metrics**
 
 #### **Unit Economics**
+
 - **Customer Acquisition Cost (CAC)**: Total marketing spend divided by new customers
 - **Gross Margin**: Revenue minus cost of goods sold
 - **Contribution Margin**: Revenue minus variable costs
 - **Net Profit Margin**: Net income as percentage of revenue
 
 #### **Break-even Analysis**
+
 ```typescript
 const calculateBreakEven = (
   fixedCosts: number,
@@ -394,12 +406,14 @@ const calculateBreakEven = (
 ### **Cash Flow Management**
 
 #### **Operating Cash Flow**
+
 - **Cash Inflows**: Subscription payments, one-time services, marketplace revenue
 - **Cash Outflows**: Operating expenses, cost of sales, taxes
 - **Working Capital**: Current assets minus current liabilities
 - **Cash Conversion Cycle**: Time to convert investments to cash
 
 #### **Cash Flow Forecasting**
+
 ```typescript
 interface CashFlowProjection {
   month: string;
@@ -422,12 +436,14 @@ interface CashFlowProjection {
 ### **Churn and Retention Analysis**
 
 #### **Churn Metrics**
+
 - **Monthly Churn Rate**: Percentage of customers lost in a month
 - **Annual Churn Rate**: Percentage of customers lost in a year
 - **Revenue Churn**: Dollar value of lost subscriptions
 - **Gross Churn vs Net Churn**: Including vs excluding expansions
 
 #### **Retention Calculations**
+
 ```typescript
 // Cohort Analysis
 const calculateCohortRetention = (cohortData: Map<string, number[]>) => {
@@ -456,6 +472,7 @@ const calculateLTV = (
 ### **Financial Dashboard**
 
 #### **Executive Summary**
+
 ```markdown
 Financial Overview
 ├── MRR: $[X] (↑X% MoM)
@@ -466,6 +483,7 @@ Financial Overview
 ```
 
 #### **Revenue Analytics**
+
 ```markdown
 Revenue Breakdown
 ├── Subscriptions: X% of total
@@ -481,6 +499,7 @@ Growth Trends
 ```
 
 #### **Cost Analysis**
+
 ```markdown
 Cost Structure
 ├── Personnel: X% of total
@@ -502,11 +521,13 @@ Cost Trends
 ### **Payment Operations Recovery**
 
 #### **Failed Payment Handling**
+
 ```markdown
 Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace Period → Account Actions
 ```
 
 **Detailed Process:**
+
 1. **Payment Failure Detection**:
    - **Trigger**: Stripe webhook for failed payment
    - **Notification**: Email to billing contact + dashboard alert
@@ -523,11 +544,13 @@ Invoice Generated → Payment Due → Failed Attempt → Retry Logic → Grace P
    - **Recovery Page**: Dedicated payment recovery portal
 
 #### **Plan Changes & Proration**
+
 ```markdown
 Current Plan → Change Request → Confirmation → Prorated Billing → Feature Updates → New Cycle
 ```
 
 **Upgrade Process:**
+
 1. **Plan Selection**:
    - **Page**: Billing plans (`/billing)
    - **Comparison**: Feature matrix with current vs. new plan
@@ -539,11 +562,13 @@ Current Plan → Change Request → Confirmation → Prorated Billing → Featur
    - **Billing**: Prorated charges applied to current cycle
 
 #### **Chargeback & Dispute Management**
+
 ```markdown
 Charge Filed → Stripe Notification → Evidence Collection → Response Submission → Resolution
 ```
 
 **Detailed Process:**
+
 1. **Dispute Detection**:
    - **Webhook**: Stripe dispute.created event
    - **Notification**: Urgent email to account owner
@@ -557,22 +582,26 @@ Charge Filed → Stripe Notification → Evidence Collection → Response Submis
 ### **Emergency Scenarios**
 
 #### **Stripe Service Outage**
+
 ```markdown
 Payment Processing Down → Graceful Degradation → Alternative Handling → Service Restoration
 ```
 
 **System Response:**
+
 1. **Detection**: Stripe API monitoring alerts
 2. **User Communication**: Dashboard banner + email notifications
 3. **Graceful Handling**: Queue payments for retry, disable new subscriptions
 4. **Alternative Options**: Manual invoice generation, delayed billing
 
 #### **Revenue Share Disputes**
+
 ```markdown
 Fee Calculation Error → Investigation → Evidence Review → Adjustment → Reconciliation
 ```
 
 **Resolution Process:**
+
 1. **Detection**: User reports incorrect fees or calculations
 2. **Investigation**: Transaction log review, Stripe Connect reconciliation
 3. **Evidence**: Platform usage data, fee structure documentation
@@ -583,11 +612,13 @@ Fee Calculation Error → Investigation → Evidence Review → Adjustment → R
 ## Initial Setup Scenarios
 
 ### **First-Time Stripe Connect Setup**
+
 ```markdown
 Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verification → Success
 ```
 
 **Detailed Steps:**
+
 1. **Onboarding Context**:
    - **Trigger**: User reaches Step 3 of onboarding
    - **Education**: Modal explaining B2B payment model and fees
@@ -605,11 +636,13 @@ Onboarding Flow → Stripe OAuth → Business Info → Bank Details → Verifica
    - **Feature Unlock**: Billing features activated
 
 ### **Payment Method Addition**
+
 ```markdown
 Billing Settings → Add Method → Card Form → 3DS Verification → Confirmation → Default Set
 ```
 
 **Detailed Steps:**
+
 1. **Access Point**:
    - **Page**: Billing dashboard (`)
    - **Element**: "Add Payment Method" button or empty state prompt
@@ -631,6 +664,7 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ### **Payment & Billing Issues**
 
 #### **"Why was my payment declined?"**
+
 1. **Insufficient Funds**:
    - **Symptom**: "Payment declined" with bank error code
    - **Solution**: Check account balance, add alternative payment method
@@ -647,6 +681,7 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
    - **Prevention**: Use business cards for business subscriptions
 
 #### **"Why am I being charged the wrong amount?"**
+
 1. **Prorated Billing**:
    - **Symptom**: Unexpected partial charges on plan changes
    - **Solution**: Check billing history for upgrade/downgrade details
@@ -663,6 +698,7 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
    - **Prevention**: Set correct billing address during setup
 
 #### **"Why can't I change my payment method?"**
+
 1. **Account Verification Pending**:
    - **Symptom**: Payment method changes disabled
    - **Solution**: Complete Stripe Connect business verification
@@ -683,22 +719,26 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 ## Cross-Reference Integration (Canonical Alignment)
 
 ### Operations & Analytics
+
 - [`docs/operations-analytics/overview`](/docs/operations-analytics) - Global operations analytics framework.
 - [`docs/operations-analytics/analytics-performance/metrics-kpis`](/docs/operations-analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
 - [`docs/operations-analytics/operations-management/organization-analytics-team-management`](/docs/operations-analytics/operations-management) - Team and organization management analytics.
 - [`docs/operations-analytics/operations-management/environment-release-management`](/docs/operations-analytics/operations-management) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
+
 - [`docs/business/model/overview`](/docs/business/model) - Canonical business and revenue model.
 - [`docs/business/value-proposition/overview`](/docs/business/value-proposition) - Value proposition framing for pricing and packaging.
 - [`docs/business/strategy/overview`](/docs/business/strategy) - Strategic priorities that payment analytics must support.
 
 ### Technical Architecture
+
 - [`docs/technical/architecture/overview`](/docs/technical/architecture) - High-level system architecture.
 - [`docs/technical/architecture/detailed-technical/integration-guide`](/docs/technical/architecture/detailed-technical) - Canonical integration patterns, including billing/Stripe.
 - [`docs/implementation-technical/development-guidelines/api-reference`](/docs/implementation-technical/development-guidelines) - API surface for billing, subscriptions, and webhooks.
 
 ### Compliance & Security
+
 - [`docs/compliance-security/overview`](/docs/compliance-security) - Compliance posture.
 - [`docs/compliance-security/enterprise/security-framework`](/docs/compliance-security/enterprise) - Security controls relevant to financial data.
 - [`docs/compliance-security/international/data-privacy-policy`](/docs/compliance-security/international) - Data handling, retention, and privacy for billing records.

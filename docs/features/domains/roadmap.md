@@ -1,189 +1,280 @@
 ---
 title: "Domain Management Roadmap"
-description: "Post-MVP feature roadmap for domain management, including subdomain support, bulk operations, and multi-region sending"
+description: "Post-MVP enhancements for domain management features including subdomain support, bulk operations, and multi-region sending"
 last_modified_date: "2025-11-26"
 level: "2"
-persona: "Product Managers, Technical Leaders"
+persona: "Product Teams, Technical Leaders"
 ---
 
 # Domain Management Roadmap
 
-## MVP Status
+## Overview
 
-**✅ Domain Management is MVP-Complete**
+Domain management is **MVP-complete** with all essential features implemented. This roadmap outlines Post-MVP enhancements focused on enterprise features, agency operations, and global expansion.
 
-All essential domain verification, DNS management, and authentication features are implemented and ready for launch. No blocking gaps identified.
+**Current Status:** ✅ MVP Complete (November 2025)
 
-### What's Already Built
+**Post-MVP Timeline:** Q1 2026 - Q1 2027
 
-- Complete domain verification workflow with multi-step wizard
-- Comprehensive DNS record management (SPF, DKIM, DMARC, CNAME, MX)
-- Industry-standard authentication protocols (2048-bit DKIM, SPF, DMARC)
-- Real-time health monitoring and reputation tracking
-- Multi-domain support per workspace
-- Email account management per domain
-- Custom tracking domains with automated SSL (Let's Encrypt)
-- Full API access for programmatic management
-- Google Postmaster Tools integration
-- Blacklist monitoring (URIBL, SURBL)
+## MVP Status Summary
+
+### ✅ Implemented Features
+
+All core domain management features are production-ready:
+
+- **Domain Verification** - Multi-step wizard with automated DNS record generation
+- **DNS Management** - Complete DNS record management (SPF, DKIM, DMARC, CNAME, MX)
+- **Sender Authentication** - Industry-standard SPF, DKIM (2048-bit RSA), DMARC
+- **Health Monitoring** - Real-time reputation tracking, blacklist monitoring, Google Postmaster integration
+- **Multi-Domain Support** - Unlimited domains per workspace with independent configuration
+- **Email Account Management** - Per-domain email account provisioning and health tracking
+- **Custom Tracking Domains** - Branded link tracking with automated SSL (Let's Encrypt)
+- **API Access** - Full programmatic domain management
+
+**No MVP-blocking gaps identified.**
 
 ## Post-MVP Roadmap
 
 ### Q1 2026: Enterprise Features
 
-#### [P1] Subdomain Support & Reputation Isolation
+#### 1. Subdomain Support & Reputation Isolation
 
-**Target:** January 2026 | **Effort:** 3-5 days
+**Priority:** P1 (High - Enterprise Enabler)
 
-Enable users to send from subdomains with independent DKIM keys and reputation tracking.
+**Description:** Enable sending from subdomains with independent DKIM keys and reputation tracking for team segmentation and brand isolation.
 
-**Key Capabilities:**
-- Independent DKIM key generation per subdomain
-- Subdomain-level reputation tracking (separate from parent)
-- UI for subdomain organization and filtering
-- Team segmentation by subdomain
+**Use Cases:**
 
-**Business Impact:**
-- Unlocks enterprise tier pricing
-- Enables multi-brand organizations
-- Reputation isolation prevents cross-contamination
-
-**User Benefits:**
 - Marketing team sends from `marketing.example.com`
 - Sales team sends from `sales.example.com`
-- Poor performance in one subdomain doesn't affect others
+- Support team sends from `support.example.com`
+- Each subdomain maintains independent reputation
+
+**Key Features:**
+
+- Subdomain validation and verification
+- Independent DKIM key generation per subdomain
+- Subdomain-level reputation tracking (isolated from parent domain)
+- UI subdomain organization (grouping/filtering)
+- Subdomain tree view (optional)
+- API endpoints for subdomain operations
+
+**Business Impact:**
+
+- Unlocks enterprise tier pricing
+- Enables multi-brand organizations
+- Provides reputation isolation for different teams
+- Supports A/B testing with separate domain reputations
+
+**Effort:** 3-5 days
+
+**Dependencies:**
+
+- Domain verification system (✅ implemented)
+- Reputation monitoring system (✅ implemented)
 
 ---
 
-### Q2 2026: Agency Features
+### Q2 2026: Agency & Power User Features
 
-#### [P2] Bulk Domain Onboarding & Templates
+#### 2. Bulk Domain Onboarding & Templates
 
-**Target:** April 2026 | **Effort:** 5-7 days
+**Priority:** P2 (Medium - Agency Focus)
 
-Bulk subdomain provisioning and DNS instruction templates for agencies managing many client domains.
+**Description:** Bulk subdomain provisioning and DNS instruction templates for agencies managing many client domains.
 
-**Key Capabilities:**
-- CSV import for 50+ subdomains at once
+**Use Cases:**
+
+- Agency imports 50 client subdomains via CSV
+- Pre-configured DNS templates for consistent setup
+- Standardized DKIM/SPF/DMARC policies across domains
+- Team-based subdomain routing
+
+**Key Features:**
+
+- CSV import for bulk subdomain creation (50+ at once)
 - DNS instruction templates (save/reuse configurations)
 - Bulk DKIM key generation
-- Subdomain policy engine (apply rules across subdomains)
+- Subdomain policy engine (apply rules to groups)
+- Subdomain grouping and tagging
+- Subdomain-level access control (RBAC integration)
 
 **Business Impact:**
+
 - Increases agency customer retention
 - Enables agencies to scale client management
-- Reduces onboarding time from hours to minutes
+- Reduces manual configuration work
+- Improves consistency across client domains
 
-**User Benefits:**
-- Rapidly provision client subdomains
-- Standardized DNS configurations across domains
-- Manage hundreds of subdomains efficiently
+**Effort:** 5-7 days
+
+**Dependencies:**
+
+- Subdomain support (Q1 2026)
+- Team & tenant management (✅ implemented)
+- RBAC system (✅ implemented)
 
 ---
 
-#### [P2] Workspace Domain Transfer (Metadata Only)
+#### 3. Workspace Domain Transfer (Metadata)
 
-**Target:** May 2026 | **Effort:** 5-7 days
+**Priority:** P2 (Medium - Agency Focus)
 
-Transfer domain metadata between workspaces within PenguinMails with full history preservation.
+**Description:** Transfer domain metadata between workspaces within PenguinMails with full history preservation.
 
-**Key Capabilities:**
+**Use Cases:**
+
+- Agency transfers `client.com` metadata to client's own workspace
+- Workspace consolidation during business restructuring
+- Client takes ownership of domain after contract ends
+- Bulk migration of 10+ domains between workspaces
+
+**Key Features:**
+
 - Domain transfer workflow (request → approve → transfer)
-- Reputation history preserved during transfer
-- DKIM keys and email accounts transferred with domain
-- Bulk transfer supports 10+ domains at once
+- Metadata preservation (reputation, warmup history, analytics, DKIM keys)
+- Email account migration
+- Transfer audit trail for compliance
+- Rollback capability (24-hour window)
+- Bulk transfer support (10+ domains)
 
 **Business Impact:**
+
 - Supports agency client offboarding
 - Enables workspace consolidation
 - Maintains historical data during transitions
+- Provides flexibility for changing business relationships
 
-**User Benefits:**
-- Agencies can transfer client domains when contracts end
-- Clients can take ownership of their domain metadata
-- Don't lose historical reputation data
+**Effort:** 5-7 days
+
+**Dependencies:**
+
+- Multi-tenant architecture (✅ implemented)
+- Domain reputation system (✅ implemented)
+- Audit logging system
 
 **Note:** This is metadata transfer within PenguinMails only. DNS records remain at the user's registrar.
 
 ---
 
-#### [P3] DNS Instruction Presets & One-Click Copy
+#### 4. DNS Instruction Presets & One-Click Copy
 
-**Target:** June 2026 | **Effort:** 2-3 days
+**Priority:** P3 (Low - Convenience)
 
-Pre-configured DNS instruction templates with one-click copy for faster domain setup.
+**Description:** Pre-configured DNS instruction templates with one-click copy for faster domain setup.
 
-**Key Capabilities:**
-- One-click "Copy All DNS Records" button
-- Save and reuse DNS instruction templates
+**Use Cases:**
+
+- One-click copy of all DNS records to clipboard
+- Pre-validated DNS templates with best practices
+- Agency standardization across client domains
+- Error reduction through pre-configured templates
+
+**Key Features:**
+
+- "Copy All DNS Records" button
+- DNS instruction template library
+- Template naming and descriptions
 - Workspace-level template sharing
 - Default PenguinMails templates (best practices)
+- Template preview before applying
 
 **Business Impact:**
-- Improves user experience
-- Reduces support tickets for DNS configuration
-- Faster onboarding for new domains
 
-**User Benefits:**
-- Copy all DNS records at once instead of one-by-one
-- Ensure all domains follow best practices
-- Pre-validated configurations reduce DNS mistakes
+- Improves user experience
+- Reduces DNS configuration errors
+- Decreases support tickets
+- Faster domain onboarding
+
+**Effort:** 2-3 days
+
+**Dependencies:**
+
+- Domain management system (✅ implemented)
+- Team & workspace management (✅ implemented)
 
 ---
 
-### Q3 2026: Power User Features
+### Q3 2026: Advanced Monitoring
 
-#### [P2] Real-Time DNS Validation & Misconfiguration Alerts
+#### 5. Real-Time DNS Validation & Misconfiguration Alerts
 
-**Target:** September 2026 | **Effort:** 5-7 days
+**Priority:** P2 (Medium - Power Users)
 
-Real-time DNS record validation with proactive alerts for common misconfigurations.
+**Description:** Real-time DNS record validation with proactive alerts for common misconfigurations.
 
-**Key Capabilities:**
-- Real-time DNS validation with instant feedback
-- DNS validator identifies common configuration errors
-- DNS change monitoring detects when records break
-- DNS health score (0-100) indicates configuration quality
-- Email/webhook alerts for DNS issues
+**Use Cases:**
+
+- Instant feedback on DNS record correctness
+- Proactive alerts when DNS records change or break
+- Common misconfiguration detection (SPF syntax, DKIM format, DMARC policy)
+- Clear troubleshooting guidance
+
+**Key Features:**
+
+- Real-time DNS validation (instant feedback)
+- DNS configuration validator (detect common mistakes)
+- DNS change monitoring (periodic checks for drift)
+- Alerting system (email/webhook when DNS breaks)
+- DNS health score (0-100 quality indicator)
+- Clear error messages with fix instructions
+- Dashboard showing DNS health across all domains
 
 **Business Impact:**
+
 - Reduces support tickets
 - Improves deliverability by catching DNS issues early
-- Proactive monitoring prevents sending problems
+- Provides confidence in DNS configuration
+- Enables proactive issue resolution
 
-**User Benefits:**
-- Quickly identify DNS configuration problems
-- Catch DNS issues before they affect sending
-- Clear guidance reduces DNS mistakes
-- Know immediately if DNS is configured correctly
+**Effort:** 5-7 days
+
+**Dependencies:**
+
+- Domain verification system (✅ implemented)
+- Alerting infrastructure
 
 ---
 
 ### Q4 2026: Global Expansion
 
-#### [P1] Multi-Region Sending Pools & DKIM Selectors
+#### 6. Multi-Region Sending Pools & DKIM Selectors
 
-**Target:** December 2026 | **Effort:** 10-14 days
+**Priority:** P1 (High - Global Expansion)
 
-Send from multiple geographic regions with region-specific DKIM selectors and IP pools.
+**Description:** Send from multiple geographic regions with region-specific DKIM selectors and IP pools for global reach and compliance.
 
-**Key Capabilities:**
-- Configure domains for multiple regions (US, EU, APAC)
+**Use Cases:**
+
+- Send from US, EU, and APAC regions with optimized routing
+- Meet data residency requirements (GDPR compliance)
+- Reduce latency by sending from nearest region
+- Automatic failover to backup region
+
+**Key Features:**
+
+- Multi-region domain configuration
 - Region-specific DKIM selectors (e.g., `us._domainkey`, `eu._domainkey`)
-- Geographic routing (send from nearest region to recipient)
-- Automatic failover if region unavailable
+- Region-specific IP pools
+- Geographic routing logic (send from nearest region)
+- Region failover mechanism
 - Region-level reputation tracking
+- Multi-region analytics dashboard
 
 **Business Impact:**
+
 - Enables global enterprise customers
 - Unlocks international markets
-- Meets regional data regulations (GDPR, etc.)
+- Meets regional compliance requirements
+- Improves global deliverability
 
-**User Benefits:**
-- Better deliverability in international markets
-- Faster email delivery worldwide
-- Compliance with regional data regulations
-- Automatic failover between regions
+**Effort:** 10-14 days
+
+**Dependencies:**
+
+- Multi-region infrastructure (Post-MVP infrastructure work)
+- Domain management system (✅ implemented)
+- Reputation monitoring system (✅ implemented)
 
 **Note:** Users still manage DNS at their registrar. We provide region-specific DKIM records for them to add.
 
@@ -191,49 +282,44 @@ Send from multiple geographic regions with region-specific DKIM selectors and IP
 
 ### Q1 2027: Predictive Features
 
-#### [P3] Reputation Prediction & Proactive Alerts
+#### 7. Reputation Prediction & Proactive Alerts
 
-**Target:** March 2027 | **Effort:** 10-14 days
+**Priority:** P3 (Low - Advanced Feature)
 
-Predictive analytics for domain reputation trends with proactive recommendations.
+**Description:** Predictive analytics for domain reputation trends with proactive recommendations based on platform-wide patterns.
 
-**Key Capabilities:**
-- Predict domain reputation trends 7-14 days ahead
-- Proactive alerts before reputation drops significantly
-- Recommendations based on platform-wide patterns
-- Anomaly detection for unusual bounce/spam patterns
+**Use Cases:**
+
+- "Your domain reputation is trending down. Reduce sending volume by 20%."
+- "Based on similar domains, we recommend enabling DMARC quarantine policy."
+- "Unusual spike in bounces detected. Investigate immediately."
+- "Your bounce rate increased 15% this week. Review your lead list quality."
+
+**Key Features:**
+
+- Reputation trend analysis (7-14 day predictions)
+- Anomaly detection (unusual bounce/spam patterns)
+- Recommendation engine (based on platform-wide patterns)
+- Historical data analysis
+- Proactive alerting system
 - Insights dashboard with trend predictions
 
 **Business Impact:**
+
 - Competitive differentiator for premium plans
 - Improves customer success
-- Reduces churn by preventing deliverability issues
+- Enables proactive issue resolution
+- Provides data-driven optimization guidance
 
-**User Benefits:**
-- Fix issues before they impact deliverability
-- Data-driven decisions based on platform-wide patterns
-- Prevent reputation damage before it happens
-- Learn from aggregate platform data
+**Effort:** 10-14 days
+
+**Dependencies:**
+
+- Domain reputation monitoring (✅ implemented)
+- Analytics infrastructure
+- Historical data collection (6+ months of MVP data)
 
 **Note:** This is pattern-based analytics, not deep AI/ML. Analyzes platform-wide trends and applies them to individual domains.
-
----
-
-## Optional MVP Enhancements
-
-These are low-priority convenience features that can be implemented if time permits, but are not blocking MVP launch:
-
-### [P3] Bulk Domain Import
-
-**Effort:** 2-3 days
-
-CSV upload for importing multiple domains at once. Current one-by-one flow is acceptable for MVP.
-
-### [P3] Domain Configuration Templates
-
-**Effort:** 2-3 days
-
-Save DNS configurations as templates for faster setup. Current automated generation is fast enough for MVP.
 
 ---
 
@@ -241,8 +327,8 @@ Save DNS configurations as templates for faster setup. Current automated generat
 
 ### Timeline Overview
 
-| Quarter | Features | Total Effort | Focus Area |
-|---------|----------|--------------|------------|
+| Quarter | Features | Effort | Focus Area |
+|---------|----------|--------|------------|
 | **Q1 2026** | Subdomain Support | 3-5 days | Enterprise enabler |
 | **Q2 2026** | Bulk Onboarding, Transfers, Presets | 12-17 days | Agency features |
 | **Q3 2026** | Real-Time DNS Validation | 5-7 days | Power user features |
@@ -255,95 +341,110 @@ Save DNS configurations as templates for faster setup. Current automated generat
 
 - **P1 (High Priority):** 2 features - Subdomain support, Multi-region sending
 - **P2 (Medium Priority):** 3 features - Bulk onboarding, Transfers, DNS validation
-- **P3 (Low Priority):** 5 features - Optional enhancements and convenience features
+- **P3 (Low Priority):** 2 features - DNS presets, Reputation prediction
 
 ### Business Impact by Quarter
 
-**Q1 2026:** Enterprise sales enablement
-- Subdomain support unlocks enterprise tier pricing
+**Q1 2026:**
+
+- Unlocks enterprise tier pricing
 - Enables multi-brand organizations
 
-**Q2 2026:** Agency retention and growth
-- Bulk operations support key customer segment
-- Transfer features enable flexible client management
+**Q2 2026:**
 
-**Q3 2026:** User experience and support reduction
-- DNS validation reduces support tickets
-- Proactive monitoring improves deliverability
+- Increases agency customer retention
+- Enables agencies to scale client management
 
-**Q4 2026:** Global market expansion
-- Multi-region sending enables international customers
-- Compliance with regional regulations
+**Q3 2026:**
 
-**Q1 2027:** Competitive differentiation
-- Predictive features differentiate premium plans
-- Data-driven insights improve customer success
+- Reduces support tickets
+- Improves deliverability monitoring
 
----
+**Q4 2026:**
+
+- Enables global enterprise customers
+- Unlocks international markets
+
+**Q1 2027:**
+
+- Competitive differentiator for premium plans
+- Improves customer success
 
 ## Scope Constraints
 
 ### What We're Building
 
-PenguinMails is an SMTP platform, not a DNS registrar. We focus on:
+✅ **SMTP Platform Features:**
 
-- ✅ DNS instruction generation (SPF, DKIM, DMARC, CNAME)
-- ✅ DNS verification (check if records exist)
-- ✅ DKIM key management (generate, rotate, store in Vault)
-- ✅ Sending pool management (IPs, regions, reputation)
-- ✅ Email identity management (authentication, reputation, analytics)
+- DNS instruction generation (SPF, DKIM, DMARC, CNAME)
+- DNS verification (check if records exist)
+- DKIM key management (generate, rotate, store in Vault)
+- Sending pool management (IPs, regions, reputation)
+- Email identity management (authentication, reputation, analytics)
 
 ### What We're NOT Building
 
-- ❌ Domain registrar features (buying domains, NS records)
-- ❌ DNS hosting/authority (zone files, wildcard DNS control)
-- ❌ Automated DNS propagation (users manage DNS at their registrar)
-- ❌ DNS provider integrations (Cloudflare API, Route53 API) - Optional Post-MVP enhancement only
+❌ **Registrar/DNS Authority Features:**
 
-Users continue managing DNS at their registrar (Cloudflare, Namecheap, GoDaddy, etc.). We only generate instructions and verify records exist.
+- Domain registrar features (buying domains, NS records)
+- DNS hosting/authority (zone files, wildcard DNS control)
+- Automated DNS propagation (users manage DNS at their registrar)
+- DNS provider integrations (Cloudflare API, Route53 API) - Optional Post-MVP enhancement only
 
----
+**Rationale:** PenguinMails is an SMTP provider, not a DNS registrar. Users own their domains and manage DNS at their registrar (Cloudflare, Namecheap, etc.). We only generate DNS instructions, verify records exist, and manage email identity.
 
-## Dependencies
+## Optional MVP Enhancements
 
-### Infrastructure Dependencies
+These convenience features can be implemented if time permits, but are not blocking MVP launch:
 
-- **HashiCorp Vault** - DKIM private key storage (already implemented)
-- **Multi-Region Infrastructure** - Required for Q4 2026 multi-region sending
-- **Analytics Infrastructure** - Required for Q1 2027 reputation prediction
+### 1. Bulk Domain Import
 
-### Feature Dependencies
+**Priority:** P3 (Low)
 
-- **Subdomain Support** (Q1 2026) - Prerequisite for bulk subdomain onboarding (Q2 2026)
-- **Historical Data Collection** - 6+ months of MVP data required for reputation prediction (Q1 2027)
+**Description:** Import multiple domains at once via CSV upload.
 
-### Third-Party Services
+**Effort:** 2-3 days
 
-- **DNS Providers** - User-managed (Cloudflare, Route53, GoDaddy, Namecheap)
-- **Let's Encrypt** - SSL certificates for tracking domains
-- **Google Postmaster Tools** - Gmail reputation tracking
-- **Blacklist Services** - URIBL, SURBL, Spamhaus
+**Target:** MVP (if time permits) or Q1 2026
 
-See [Domain Management Review](/.kiro/specs/feature-completeness-review/findings/domain-management.md) for detailed third-party dependency analysis.
+**Rationale:** Current one-by-one flow is acceptable for MVP. Most users start with 1-3 domains.
 
----
+### 2. Domain Configuration Templates
+
+**Priority:** P3 (Low)
+
+**Description:** Save DNS configurations as templates for faster setup.
+
+**Effort:** 2-3 days
+
+**Target:** Q2 2026
+
+**Rationale:** Current automated DNS generation is fast enough for MVP. Templates are a convenience feature.
 
 ## Related Documentation
 
 ### Planning & Strategy
-- [Domain Management README](./README.md) - Feature overview
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
-- [Feature Completeness Review](/.kiro/specs/feature-completeness-review/findings/domain-management.md) - Detailed gap analysis
 
-### Implementation & Technical
-- [Domain Routes](/docs/design/routes/workspace-domains) - UI specifications (7 routes)
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Business-level roadmap
+- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical infrastructure roadmap
+
+### Feature Documentation
+
+- [Domain Management](/docs/features/domains/domain-management) - Current domain features
 - [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning
 - [Email Operations](/docs/features/email-operations/README.md) - Email sending pipeline
 - [Warmup Features](/docs/features/warmup/README.md) - Email warmup system
 
-### Security & Architecture
+### Technical Architecture
+
 - [Vault Integration](/docs/technical/architecture/vault-integration-architecture) - DKIM key storage
-- [Compliance & Security](/docs/compliance-security/overview) - Security architecture
+- [Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture) - Database isolation
+
+### Implementation
+
+- [Domain Routes](/docs/design/routes/workspace-domains) - UI specifications
+- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/) - Implementation tasks
 
 ---
 

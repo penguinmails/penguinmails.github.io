@@ -77,6 +77,7 @@ Executive Dashboard
 ### Data Integration Architecture
 
 #### Primary Data Sources
+
 1. **OLTP Database** - `executive_business_summary` view for cost allocation data
 2. **PostHog Analytics** - Business event tracking for real-time insights
 3. **Deliverability API** - Email deliverability metrics and reputation data
@@ -84,6 +85,7 @@ Executive Dashboard
 5. **Infrastructure Monitoring** - VPS and SMTP IP usage data
 
 #### Data Flow Architecture
+
 ```mermaid
 graph TD
     A[OLTP Database] --> B[Business Intelligence Layer]
@@ -107,6 +109,7 @@ graph TD
 #### Technical Requirements
 
 **Deliverability Status Panel:**
+
 - **Data Source:** PostHog `email_deliverability_event` events
 - **Update Frequency:** Real-time (WebSocket connection)
 - **Key Metrics:**
@@ -117,6 +120,7 @@ graph TD
   - Domain reputation status (Good/Fair/Poor)
 
 **Revenue Risk Assessment:**
+
 - **Calculation:** `(Bounce Rate × $0.05 + Spam Rate × $0.25) × Monthly Email Volume`
 - **Visualization:** Risk gauge with color-coded severity levels
 - **Threshold Alerts:**
@@ -125,6 +129,7 @@ graph TD
   - Monitor: 5-10% bounce rate or 1-1.5% spam rate
 
 **Critical Alert Management:**
+
 - **Real-time Notifications:** WebSocket-based alert system
 - **Alert Types:**
   - Deliverability degradation
@@ -143,6 +148,7 @@ graph TD
 #### Technical Requirements
 
 **Infrastructure Cost Analysis:**
+
 - **Data Source:** `executive_business_summary` view
 - **Visualization:** Cost breakdown pie chart + trend lines
 - **Key Metrics:**
@@ -153,6 +159,7 @@ graph TD
   - Infrastructure efficiency ratio
 
 **Email Service Cost Tracking:**
+
 - **Data Source:** `smtp_ip_addresses.approximate_cost`
 - **Tracking Points:**
   - Cost per IP address
@@ -165,6 +172,7 @@ graph TD
   - Vendor comparison insights
 
 **Optimization Opportunities:**
+
 - **Algorithm:** ML-based cost optimization recommendations
 - **Categories:**
   - Infrastructure right-sizing
@@ -180,6 +188,7 @@ graph TD
 #### Technical Requirements
 
 **Resource Utilization Metrics:**
+
 - **VPS Utilization:**
   - CPU utilization (%)
   - Memory utilization (%)
@@ -192,11 +201,13 @@ graph TD
   - Error rate trends
 
 **Performance Benchmarking:**
+
 - **Internal Benchmarks:**
   - Company historical performance
   - Best/worst performing tenants
   - Industry benchmark comparisons
 - **Efficiency Score Calculation:**
+
   ```markdown
   Efficiency Score = (Deliverability Rate × 0.3) +
                     (Cost Efficiency × 0.3) +
@@ -211,6 +222,7 @@ graph TD
 #### Technical Requirements
 
 **Decision Log Management:**
+
 - **Data Structure:** `strategic_decision_event` from PostHog
 - **Tracking Fields:**
   - Decision type (Budget, Infrastructure, Vendor, Process)
@@ -220,6 +232,7 @@ graph TD
   - Review schedule
 
 **Outcome Tracking:**
+
 - **Automated Tracking:** Integration with business metrics
 - **Manual Updates:** Executive input for qualitative outcomes
 - **ROI Measurement:** Expected vs actual outcome comparison
@@ -240,6 +253,7 @@ graph TD
 ### Component Architecture
 
 #### Main Dashboard Component
+
 ```typescript
 interface ExecutiveDashboard {
   tenantId: string;
@@ -263,6 +277,7 @@ interface ExecutiveDashboardState {
 #### Key Dashboard Components
 
 **1. Revenue Protection Monitor Component**
+
 ```typescript
 interface RevenueProtectionMonitorProps {
   tenantId: string;
@@ -282,6 +297,7 @@ const RevenueProtectionMonitor: React.FC<RevenueProtectionMonitorProps> = ({
 ```
 
 **2. Cost Optimization Center Component**
+
 ```typescript
 interface CostOptimizationCenterProps {
   tenantId: string;
@@ -303,6 +319,7 @@ const CostOptimizationCenter: React.FC<CostOptimizationCenterProps> = ({
 ### Real-time Data Architecture
 
 #### WebSocket Connection Management
+
 ```typescript
 class ExecutiveDashboardDataService {
   private wsConnection: WebSocket;
@@ -323,6 +340,7 @@ class ExecutiveDashboardDataService {
 ```
 
 #### Data Caching Strategy
+
 ```typescript
 class DashboardCacheManager {
   private cache = new Map<string, DashboardData>();
@@ -347,11 +365,13 @@ class DashboardCacheManager {
 ### Executive Dashboard API Endpoints
 
 #### 1. Dashboard Data Retrieval
+
 ```http
 GET /api/executive-dashboard/{tenantId}/summary
 ```
 
 **Response:**
+
 ```json
 {
   "tenantId": "string",
@@ -397,11 +417,13 @@ GET /api/executive-dashboard/{tenantId}/summary
 ```
 
 #### 2. Real-time Business Events
+
 ```http
 GET /api/executive-dashboard/{tenantId}/events/realtime
 ```
 
 **WebSocket Event Format:**
+
 ```json
 {
   "eventType": "revenue_impact",
@@ -417,11 +439,13 @@ GET /api/executive-dashboard/{tenantId}/events/realtime
 ```
 
 #### 3. Cost Analysis Deep Dive
+
 ```http
 GET /api/executive-dashboard/{tenantId}/cost-analysis
 ```
 
 **Response:**
+
 ```json
 {
   "tenantId": "string",
@@ -468,18 +492,21 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 ## Performance Requirements
 
 ### Response Time Targets
+
 - **Dashboard Initial Load:** <3 seconds
 - **Real-time Updates:** <1 second
 - **Data Refresh:** <5 seconds
 - **Report Generation:** <10 seconds
 
 ### Scalability Requirements
+
 - **Concurrent Users:** Support 100+ executives simultaneously
 - **Data Processing:** Handle 10K+ business events per minute
 - **Storage:** Efficient caching for 30 days of historical data
 - **Availability:** 99.9% uptime for executive access
 
 ### Security Requirements
+
 - **Authentication:** Multi-factor authentication for executive access
 - **Authorization:** Role-based access control (C-Suite, VPs, Directors)
 - **Data Encryption:** End-to-end encryption for sensitive business data
@@ -490,24 +517,28 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 ## Implementation Phases
 
 ### Phase 1: Foundation (Weeks 1-4)
+
 - [ ] Database migration implementation (vps_instances.approximate_cost, smtp_ip_addresses.approximate_cost)
 - [ ] PostHog business events integration
 - [ ] Basic dashboard API endpoints
 - [ ] Authentication and authorization setup
 
 ### Phase 2: Core Dashboard (Weeks 5-8)
+
 - [ ] Revenue Protection Monitor component
 - [ ] Cost Optimization Center component
 - [ ] Real-time data streaming implementation
 - [ ] Basic alert management system
 
 ### Phase 3: Advanced Features (Weeks 9-12)
+
 - [ ] Operational Efficiency Dashboard component
 - [ ] Strategic Decision Tracker component
 - [ ] Advanced analytics and forecasting
 - [ ] Mobile-responsive design
 
 ### Phase 4: Optimization (Weeks 13-16)
+
 - [ ] Performance optimization and caching
 - [ ] Advanced visualization components
 - [ ] Executive reporting automation
@@ -518,12 +549,14 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 ## Success Metrics
 
 ### Technical Success Criteria
+
 - Dashboard loads in <3 seconds for 95% of requests
 - Real-time updates propagate within 1 second
 - 99.9% uptime for executive access
 - Zero data loss in business event tracking
 
 ### Business Success Criteria
+
 - 25% reduction in manual monitoring time
 - 15% improvement in cost optimization identification
 - 50% faster executive decision making
@@ -534,12 +567,14 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 ## Integration Points
 
 ### External Systems Integration
+
 - **PostHog Analytics:** Business event tracking and real-time insights
 - **Deliverability Providers:** SendGrid, Mailgun, Amazon SES API integration
 - **Infrastructure Monitoring:** VPS provider APIs for real-time usage data
 - **Financial Systems:** Billing and subscription management integration
 
 ### Internal System Integration
+
 - **OLTP Database:** Executive summary views and cost allocation data
 - **Authentication System:** Role-based access and user management
 - **Notification System:** Alert distribution and escalation management
@@ -551,5 +586,5 @@ GET /api/executive-dashboard/{tenantId}/cost-analysis
 **Business Stakeholder Access:** CTOs, Engineering Directors, Solution Architects
 **Technical Stakeholder Access:** Frontend Developers, Backend Engineers, DevOps Engineers
 
-This specification provides comprehensive technical guidance for implementing an executive-level business intelligence dashboard that delivers actionable insights for strategic decision making.
+This specification provides comprehensive technical guidance for implementing an executive-level business intelligence dashboard that delivers actionable insights for strategic decision making
 ---

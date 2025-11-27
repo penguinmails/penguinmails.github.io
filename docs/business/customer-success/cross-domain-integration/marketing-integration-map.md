@@ -64,6 +64,7 @@ Customer Success integrates with Marketing through well-defined data flows and A
 CS health signals trigger personalized lifecycle marketing automation.
 
 **Primary Systems:**
+
 - CS Health Engine, Success Milestones
 - Marketing Automation: Klaviyo, Marketo, HubSpot
 - Customer Segmentation, Personalization Engines
@@ -81,6 +82,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 ### Key Integration Points
 
 **1. Onboarding/Adoption Campaigns**
+
 ```json
 {
   "onboarding_integration": {
@@ -93,6 +95,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 ```
 
 **2. Milestone Celebrations**
+
 ```json
 {
   "milestone_integration": {
@@ -105,6 +108,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 ```
 
 **3. Health-Based Segmentation**
+
 ```json
 {
   "segmentation_integration": {
@@ -119,6 +123,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 ### CS-Marketing APIs
 
 **Health Trigger API:**
+
 ```markdown
 POST /api/v1/cs-marketing/triggers/{customer_id}
 - Health score threshold breaches
@@ -147,6 +152,7 @@ GET /api/v1/cs-marketing/performance/{campaign_id}
 Proactive churn prevention through automated CS-triggered retention campaigns.
 
 **Primary Systems:**
+
 - CS Risk Engine, Intervention Playbooks
 - Marketing Win-back Automation, Loyalty Programs
 
@@ -163,6 +169,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 ### Key Integration Points
 
 **1. Churn Risk Automation**
+
 ```json
 {
   "risk_integration": {
@@ -175,6 +182,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 ```
 
 **2. Win-back Sequences**
+
 ```json
 {
   "winback_integration": {
@@ -189,6 +197,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 ### CS-Retention APIs
 
 **Risk API:**
+
 ```markdown
 GET /api/v1/cs-retention/risk/{customer_id}
 - Churn probability scores
@@ -216,6 +225,7 @@ POST /api/v1/cs-retention/recovery
 CS success signals trigger targeted expansion marketing campaigns.
 
 **Primary Systems:**
+
 - CS Expansion Engine, Value Realization
 - Marketing Upsell Automation, ABM Platforms
 
@@ -232,6 +242,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 ### Key Integration Points
 
 **1. Expansion Readiness**
+
 ```json
 {
   "readiness_integration": {
@@ -244,6 +255,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 ```
 
 **2. Cross-sell Targeting**
+
 ```json
 {
   "crosssell_integration": {
@@ -258,6 +270,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 ### CS-Expansion APIs
 
 **Opportunity API:**
+
 ```markdown
 GET /api/v1/cs-expansion/opportunities/{customer_id}
 - Expansion readiness assessment
@@ -310,6 +323,7 @@ topics:
 ---
 
 **Related Documentation:**
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
 - [Marketing Systems Map](/docs/business/marketing/cross-domain-integration)
 

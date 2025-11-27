@@ -150,6 +150,7 @@ Clients MUST:
 - Implement basic, configurable retry/backoff for transient failures.
 
 Implementation code samples (e.g. retry handlers in JS/TS) belong in:
+
 - SDK documentation.
 - Integration playbooks.
 - Not in this high-level reference.
@@ -245,6 +246,7 @@ Recommended cross-cutting practices:
   - Align with RBAC and data minimization principles.
 
 For domain-specific best practices:
+
 - See each focused API contract and its associated implementation notes.
 
 ---
@@ -261,5 +263,5 @@ For domain-specific best practices:
   - Use dedicated SDK guides, integration docs, and testing/sandbox references.
   - Keep this entrypoint free of large code samples to maintain clarity and durability.
 
-This structure ensures `api-reference.md` remains a concise, maintainable entrypoint aligned with the REST-only, JS/TS-first, progressive documentation strategy.
+This structure ensures `api-reference.md` remains a concise, maintainable entrypoint aligned with the REST-only, JS/TS-first, progressive documentation strategy
 ---

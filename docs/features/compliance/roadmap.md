@@ -65,18 +65,21 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Core Security Infrastructure ✅
 
 **Email Authentication:**
+
 - ✅ SPF (Sender Policy Framework) - Automated setup
 - ✅ DKIM (DomainKeys Identified Mail) - 2048-bit keys, quarterly rotation
 - ✅ DMARC (Domain-based Message Authentication) - Staged rollout support
 - ✅ SSL/TLS certificates (Let's Encrypt auto-renewal)
 
 **Data Protection:**
+
 - ✅ Encryption at rest (PostgreSQL TDE, field-level encryption)
 - ✅ Encryption in transit (TLS 1.3, SMTP TLS)
 - ✅ Secure credential storage (bcrypt, AES-256)
 - ✅ Key management (derivation, rotation support)
 
 **Access Control:**
+
 - ✅ Email/password authentication (NileDB SDK)
 - ✅ Role-based access control (Platform Admin, Tenant Admin, Workspace Owner, Member)
 - ✅ Tenant isolation (multi-tenant architecture)
@@ -84,6 +87,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - ✅ Rate limiting (auth endpoints, API endpoints)
 
 **Compliance Features:**
+
 - ✅ GDPR compliance (data subject rights, consent management, DPAs)
 - ✅ CAN-SPAM compliance (unsubscribe, accurate headers, physical address)
 - ✅ Data retention policies (automated deletion, configurable periods)
@@ -93,6 +97,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Critical Security Dependency 🚨
 
 **Vault Integration (P0 - MVP Blocker):**
+
 - 🔄 Vault architecture design (task 11.3)
 - 🔄 VPS SSH key management (task 11.4)
 - 🔄 SMTP credentials storage (task 11.5)
@@ -100,12 +105,14 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - 🔄 Disaster recovery procedures (task 11.7)
 
 **Why Critical:**
+
 - All secrets stored in Vault (not ENV files)
 - Enables rapid VPS migration without secret exposure
 - Centralized secret rotation and audit trail
 - Compliance-ready secret management (SOC2, ISO 27001)
 
 **Blocks:**
+
 - Infrastructure provisioning features
 - API key management UI
 - SMTP setup automation
@@ -120,6 +127,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Status:** UI exists in `/dashboard/settings/profile`, implementation needed
 
 **Features:**
+
 - TOTP (Time-based One-Time Password)
 - QR code generation for authenticator apps
 - Backup codes (10 single-use codes)
@@ -127,6 +135,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Email verification codes (fallback method)
 
 **Implementation:**
+
 - User enrollment flow
 - Recovery code generation
 - 2FA enforcement policies (optional vs required)
@@ -137,6 +146,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Advanced Audit Logging
 
 **Enhancements:**
+
 - Real-time audit log streaming
 - Advanced search and filtering
 - Anomaly detection (ML-based suspicious activity)
@@ -148,6 +158,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Password Policy Enhancements
 
 **Features:**
+
 - Configurable password complexity rules
 - Password expiration policies (90-day default, configurable)
 - Password history (prevent reuse of last 5-10 passwords)
@@ -165,6 +176,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Scope:** Security, Availability, Confidentiality
 
 **Requirements:**
+
 - Formal security policies and procedures
 - Access control documentation
 - Change management processes
@@ -173,6 +185,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Risk assessment framework
 
 **Deliverables:**
+
 - SOC 2 Type I report
 - Security policy documentation
 - Compliance evidence repository
@@ -184,6 +197,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### EU Data Residency
 
 **Features:**
+
 - EU-based VPS hosting option (Hetzner, OVH)
 - Data localization controls (keep EU data in EU)
 - Standard Contractual Clauses (SCCs) implementation
@@ -191,6 +205,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Regional data routing
 
 **Benefits:**
+
 - GDPR compliance for EU customers
 - Reduced data transfer risks
 - Improved latency for EU users
@@ -201,11 +216,13 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Enhanced Privacy Features
 
 **Data Minimization:**
+
 - Automatic PII detection and flagging
 - Data retention policy enforcement (automated)
 - Unused data cleanup (quarterly reviews)
 
 **Privacy Impact Assessments:**
+
 - Automated PIA workflow
 - Risk scoring for new features
 - Privacy review checklist
@@ -222,6 +239,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Scope:** Information Security Management System (ISMS)
 
 **Requirements:**
+
 - ISMS documentation
 - Risk management framework
 - Security controls implementation (114 controls)
@@ -230,6 +248,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Continuous improvement procedures
 
 **Deliverables:**
+
 - ISO 27001 certificate
 - ISMS documentation
 - Risk register
@@ -241,6 +260,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Advanced Threat Detection
 
 **Features:**
+
 - Intrusion detection system (IDS)
 - Behavioral analysis (ML-based)
 - Threat intelligence integration
@@ -252,6 +272,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Penetration Testing Program
 
 **Scope:**
+
 - Quarterly external penetration tests
 - Annual internal penetration tests
 - Bug bounty program launch
@@ -267,12 +288,14 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### OAuth Social Login
 
 **Providers:**
+
 - Google OAuth 2.0
 - GitHub OAuth
 - Microsoft Azure AD
 - LinkedIn OAuth (optional)
 
 **Features:**
+
 - Social account linking
 - Profile data import
 - Email verification bypass (trusted providers)
@@ -283,11 +306,13 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Single Sign-On (SSO) for Enterprise
 
 **Protocols:**
+
 - SAML 2.0 (primary)
 - OpenID Connect (OIDC)
 - OAuth 2.0 (fallback)
 
 **Providers:**
+
 - Okta
 - Auth0
 - Azure AD
@@ -295,6 +320,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - OneLogin
 
 **Features:**
+
 - Just-in-time (JIT) provisioning
 - SCIM user provisioning
 - Group/role mapping
@@ -306,10 +332,12 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Hardware Security Keys
 
 **Standards:**
+
 - FIDO2/WebAuthn
 - U2F (Universal 2nd Factor)
 
 **Supported Keys:**
+
 - YubiKey
 - Google Titan
 - Feitian
@@ -326,6 +354,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Scope:** If handling card data directly (currently Stripe handles)
 
 **Requirements:**
+
 - Secure cardholder data storage
 - Encryption of transmission
 - Vulnerability management
@@ -342,6 +371,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Scope:** For healthcare customers
 
 **Requirements:**
+
 - Business Associate Agreements (BAAs)
 - PHI encryption and access controls
 - Audit logging for PHI access
@@ -356,6 +386,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### International Compliance
 
 **Regions:**
+
 - PIPEDA (Canada)
 - LGPD (Brazil)
 - PDPA (Singapore)
@@ -363,6 +394,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Privacy Act (Australia)
 
 **Features:**
+
 - Regional compliance templates
 - Localized privacy policies
 - Country-specific consent flows
@@ -379,6 +411,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Scope:** For US government customers
 
 **Requirements:**
+
 - FedRAMP Moderate baseline (325 controls)
 - Continuous monitoring
 - Incident response
@@ -386,6 +419,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 - Third-party assessment
 
 **Benefits:**
+
 - Access to US government contracts
 - State and local government sales
 - Enhanced security posture
@@ -396,6 +430,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Advanced DLP (Data Loss Prevention)
 
 **Features:**
+
 - Content inspection (email, attachments)
 - PII detection and redaction
 - Policy-based blocking
@@ -411,17 +446,20 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Ongoing Security Enhancements
 
 **Monthly:**
+
 - Dependency vulnerability scans (npm audit, Snyk)
 - Security patch deployment
 - Threat intelligence updates
 
 **Quarterly:**
+
 - External penetration testing
 - Security awareness training
 - Policy review and updates
 - Disaster recovery drills
 
 **Annually:**
+
 - SOC 2 Type II audit
 - ISO 27001 surveillance audit
 - Comprehensive security assessment
@@ -430,12 +468,14 @@ This roadmap outlines the implementation timeline for compliance certifications,
 ### Monitoring & Response
 
 **24/7 Security Operations:**
+
 - Real-time threat monitoring
 - Automated incident response
 - Security alert triage
 - Vulnerability management
 
 **Incident Response:**
+
 - 15-minute detection target
 - 1-hour containment target
 - 24-hour resolution target
@@ -466,11 +506,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** TOTP-based 2FA with authenticator apps (Google Authenticator, Authy, 1Password).
 
 **Business Value:**
+
 - Enhanced account security (99.9% reduction in account takeover)
 - Enterprise customer requirement
 - SOC 2 certification prerequisite
 
 **Acceptance Criteria:**
+
 - [ ] TOTP-based 2FA setup (QR code, manual entry)
 - [ ] Authenticator app support (Google Authenticator, Authy, 1Password)
 - [ ] Backup codes generation (10 single-use codes)
@@ -491,11 +533,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Cloudflare/Route53 integration for automated DNS record management.
 
 **Business Value:**
+
 - Automated SPF, DKIM, DMARC setup
 - Reduced setup friction for customers
 - Improved deliverability through proper DNS configuration
 
 **Acceptance Criteria:**
+
 - [ ] Cloudflare API integration
 - [ ] Route53 API integration
 - [ ] Automated DNS record creation (SPF, DKIM, DMARC)
@@ -517,11 +561,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Visual dashboard showing compliance status across all regulations (GDPR, CAN-SPAM, CCPA, SOC 2, ISO 27001).
 
 **Business Value:**
+
 - Reduces audit preparation time by 80%
 - Proactive compliance gap identification
 - Executive-level compliance visibility
 
 **Acceptance Criteria:**
+
 - [ ] Real-time compliance status indicators (GDPR, CAN-SPAM, CCPA, SOC 2)
 - [ ] Compliance score calculation (0-100%)
 - [ ] Compliance gap identification and recommendations
@@ -542,11 +588,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Generate compliance reports for audits (GDPR, SOC 2, ISO 27001, HIPAA).
 
 **Business Value:**
+
 - Reduces audit preparation time from weeks to hours
 - Standardized compliance documentation
 - Simplified customer security questionnaire responses
 
 **Acceptance Criteria:**
+
 - [ ] GDPR compliance report (data subject rights, consent records, DPAs)
 - [ ] SOC 2 compliance report (security controls, audit logs, incident response)
 - [ ] ISO 27001 compliance report (security policies, risk assessments, controls)
@@ -567,11 +615,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Track and manage compliance certifications (SOC 2, ISO 27001, HIPAA, FedRAMP).
 
 **Business Value:**
+
 - Centralized certification management
 - Automated renewal reminders
 - Customer-facing certification status page
 
 **Acceptance Criteria:**
+
 - [ ] Certification tracking (SOC 2, ISO 27001, HIPAA, FedRAMP, PCI DSS)
 - [ ] Certification status (in progress, certified, expired, renewal due)
 - [ ] Certification documentation storage (reports, certificates, evidence)
@@ -592,11 +642,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** EU data centers for GDPR compliance (EU VPS, EU database, EU backups).
 
 **Business Value:**
+
 - GDPR compliance for EU customers
 - Improved performance (data closer to users)
 - Competitive advantage in EU market
 
 **Acceptance Criteria:**
+
 - [ ] EU data residency (EU VPS, EU database, EU backups)
 - [ ] Data residency selection (customer chooses region during signup)
 - [ ] Data residency enforcement (data never leaves selected region)
@@ -617,11 +669,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Cookie consent banner and preference management (GDPR, ePrivacy Directive).
 
 **Business Value:**
+
 - GDPR and ePrivacy Directive compliance
 - User control over cookie preferences
 - Reduced privacy risk
 
 **Acceptance Criteria:**
+
 - [ ] Cookie consent banner (accept, reject, customize)
 - [ ] Cookie preference management (essential, analytics, marketing)
 - [ ] Cookie consent storage (consent records, timestamps)
@@ -641,11 +695,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Centralized logging for security monitoring and compliance.
 
 **Business Value:**
+
 - SOC 2 Type II requirement
 - Centralized security event monitoring
 - Advanced log search and analysis
 
 **Acceptance Criteria:**
+
 - [ ] Elasticsearch deployment (self-hosted or Elastic Cloud)
 - [ ] Log forwarding (application, security, audit, error logs)
 - [ ] Log retention policies (90 days default, 1 year enterprise, 7 years compliance)
@@ -666,11 +722,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Real-time error tracking and performance monitoring.
 
 **Business Value:**
+
 - Faster incident response
 - Improved application stability
 - Performance monitoring
 
 **Acceptance Criteria:**
+
 - [ ] Sentry deployment (Sentry.io or self-hosted)
 - [ ] Error tracking (application errors, exceptions)
 - [ ] Performance monitoring (slow queries, API latency)
@@ -693,11 +751,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Automated notification system for data breaches (GDPR 72-hour requirement).
 
 **Business Value:**
+
 - Ensures GDPR 72-hour notification deadline
 - Reduces breach response time from hours to minutes
 - Compliance with breach notification laws
 
 **Acceptance Criteria:**
+
 - [ ] Automated breach detection (unauthorized access, data exfiltration, anomalies)
 - [ ] Breach severity classification (low, medium, high, critical)
 - [ ] Automated notification to supervisory authority (GDPR 72-hour requirement)
@@ -718,11 +778,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Enhanced audit logging with advanced search, filtering, and analysis.
 
 **Business Value:**
+
 - Faster security investigations (hours vs. days)
 - Simplified compliance audit evidence collection
 - Advanced threat detection
 
 **Acceptance Criteria:**
+
 - [ ] Advanced audit log search (full-text, filters, date ranges)
 - [ ] Audit log analytics (user behavior, anomaly detection, trends)
 - [ ] Audit log export (CSV, JSON, PDF)
@@ -743,11 +805,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Granular permissions and custom roles beyond basic Owner/Admin/Member.
 
 **Business Value:**
+
 - Custom roles tailored to organization structure
 - Principle of least privilege enforcement
 - SOC 2 and ISO 27001 requirement
 
 **Acceptance Criteria:**
+
 - [ ] Custom role creation (name, description, permissions)
 - [ ] Granular permissions (read, write, delete, admin per resource)
 - [ ] Permission inheritance (workspace → tenant → platform)
@@ -768,11 +832,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Restrict access based on IP address or geographic location.
 
 **Business Value:**
+
 - Enhanced security (prevent access from untrusted IPs)
 - Compliance with enterprise security policies
 - Geo-restrictions for regulatory compliance
 
 **Acceptance Criteria:**
+
 - [ ] IP whitelist management (add, remove, edit IP ranges)
 - [ ] IP whitelist enforcement (block access from non-whitelisted IPs)
 - [ ] Geo-restriction configuration (allow/block countries)
@@ -793,11 +859,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Anonymized analytics with differential privacy and k-anonymity.
 
 **Business Value:**
+
 - Enhanced privacy protection
 - Reduced GDPR/CCPA compliance risk
 - Competitive advantage in privacy-conscious market
 
 **Acceptance Criteria:**
+
 - [ ] Differential privacy implementation (add noise to aggregate queries)
 - [ ] K-anonymity implementation (ensure minimum group size)
 - [ ] Privacy budget management (track privacy loss)
@@ -817,11 +885,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Build in-house central SMTP server for transactional emails.
 
 **Business Value:**
+
 - Cost savings (no per-email cost)
 - Full control over email delivery
 - Custom templates and delivery tracking
 
 **Acceptance Criteria:**
+
 - [ ] Central SMTP server deployment
 - [ ] Transactional email templates (verification, password reset, invitations)
 - [ ] Email delivery tracking and analytics
@@ -842,11 +912,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Migrate from HCP Vault to self-hosted Vault for cost optimization.
 
 **Business Value:**
+
 - Long-term cost savings (~$250/month → $50-100/month)
 - Full control over Vault infrastructure
 - Unlimited scale
 
 **Acceptance Criteria:**
+
 - [ ] Self-hosted Vault deployment (3-node HA cluster)
 - [ ] Vault data migration (HCP → self-hosted)
 - [ ] Vault backup and recovery procedures
@@ -869,11 +941,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** SOC 2 Type II certification (operational effectiveness over 6-12 months).
 
 **Business Value:**
+
 - Enterprise customer trust
 - Competitive advantage in enterprise sales
 - Demonstrates long-term security commitment
 
 **Acceptance Criteria:**
+
 - [ ] 6-12 months operational history after Type I
 - [ ] Continuous compliance monitoring (automated)
 - [ ] Control effectiveness evidence collection
@@ -893,11 +967,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Enterprise SSO with SAML 2.0 and OAuth 2.0 (Okta, Auth0, Azure AD).
 
 **Business Value:**
+
 - Enterprise customer requirement
 - Simplified user management
 - Centralized access control
 
 **Acceptance Criteria:**
+
 - [ ] SAML 2.0 SSO support (Okta, Auth0, Azure AD)
 - [ ] OAuth 2.0 SSO support (Google Workspace, GitHub, Microsoft)
 - [ ] Just-in-time (JIT) user provisioning
@@ -918,11 +994,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Integration with enterprise SIEM platforms (Splunk, Datadog, Sumo Logic, Elastic Security).
 
 **Business Value:**
+
 - Centralized security monitoring
 - Advanced threat detection
 - Enterprise customer requirement
 
 **Acceptance Criteria:**
+
 - [ ] Splunk integration (forward security events)
 - [ ] Datadog integration (forward security events)
 - [ ] Sumo Logic integration (forward security events)
@@ -943,11 +1021,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** Multi-region data residency for UK, Canada, and Australia.
 
 **Business Value:**
+
 - International expansion
 - Regulatory compliance (UK GDPR, PIPEDA)
 - Improved performance
 
 **Acceptance Criteria:**
+
 - [ ] UK data residency (UK VPS, UK database, UK backups)
 - [ ] Canadian data residency (Canadian VPS, Canadian database, Canadian backups)
 - [ ] Australian data residency (Australian VPS, Australian database, Australian backups)
@@ -969,11 +1049,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** HIPAA compliance for healthcare customers handling PHI.
 
 **Business Value:**
+
 - Access to healthcare market
 - HIPAA-compliant email infrastructure
 - Business Associate Agreement (BAA) support
 
 **Acceptance Criteria:**
+
 - [ ] HIPAA Security Rule compliance (administrative, physical, technical safeguards)
 - [ ] HIPAA Privacy Rule compliance (PHI handling, patient rights)
 - [ ] Business Associate Agreement (BAA) templates
@@ -997,11 +1079,13 @@ Q2 2027: FedRAMP, Advanced DLP
 **Description:** FedRAMP compliance for government customers.
 
 **Business Value:**
+
 - Access to government market
 - FedRAMP-authorized cloud infrastructure
 - Government-grade security controls
 
 **Acceptance Criteria:**
+
 - [ ] FedRAMP security controls implementation (800+ controls)
 - [ ] FedRAMP-authorized cloud infrastructure (AWS GovCloud, Azure Government)
 - [ ] System Security Plan (SSP) documentation
@@ -1072,4 +1156,3 @@ Q2 2027: FedRAMP, Advanced DLP
 **Owner:** Security & Compliance Team
 
 *This roadmap is subject to change based on customer needs, regulatory requirements, and business priorities.*
-

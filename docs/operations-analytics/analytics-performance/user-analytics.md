@@ -56,6 +56,7 @@ interface UserProfile {
 ```
 
 ### **Analytics Database Design**
+
 ```sql
 -- User Events Table
 CREATE TABLE user_events (
@@ -86,6 +87,7 @@ CREATE TABLE user_properties (
 ## Key User Metrics
 
 ### **Engagement Metrics**
+
 - **Daily Active Users (DAU)**: Users active in a 24-hour period
 - **Weekly Active Users (WAU)**: Users active in a 7-day period
 - **Monthly Active Users (MAU)**: Users active in a 30-day period
@@ -94,12 +96,14 @@ CREATE TABLE user_properties (
 - **Bounce Rate**: Percentage of single-page sessions
 
 ### **Feature Adoption Metrics**
+
 - **Feature Usage Rate**: Percentage of users using specific features
 - **Time to First Value**: Days from signup to first campaign
 - **Feature Discovery Rate**: How users find and adopt new features
 - **Power User Identification**: Users with high engagement across features
 
 ### **Conversion Funnel Metrics**
+
 ```typescript
 interface ConversionFunnel {
   stages: {
@@ -125,6 +129,7 @@ interface ConversionFunnel {
 ## User Journey Analysis
 
 ### **Onboarding Funnel**
+
 ```markdown
 Visitor → Signup → Email Verification → Company Setup
     ↓         ↓            ↓              ↓
@@ -135,12 +140,14 @@ Team Setup → Stripe → IP Config → First Campaign
 ```
 
 ### **Critical Path Analysis**
+
 - **Drop-off Points**: Identify where users abandon the onboarding flow
 - **Time Analysis**: How long each step takes and optimization opportunities
 - **Error Tracking**: Technical issues causing user friction
 - **Support Interaction**: Correlation between help requests and completion rates
 
 ### **User Flow Visualization**
+
 ```mermaid
 graph TD
     A[Landing Page] --> B[Signup Form]
@@ -167,12 +174,14 @@ graph TD
 ## Behavioral Segmentation
 
 ### **User Persona Segmentation**
+
 - **Email Novices**: First-time email marketers, need basic guidance
 - **Growing Businesses**: Small teams scaling their email efforts
 - **Marketing Professionals**: Advanced users requiring sophisticated features
 - **Enterprise Users**: Large organizations with complex requirements
 
 ### **Behavioral Cohorts**
+
 ```typescript
 interface UserCohort {
   cohortId: string;
@@ -189,6 +198,7 @@ interface UserCohort {
 ```
 
 ### **Feature Usage Patterns**
+
 - **High-Value Features**: Campaigns, templates, analytics
 - **Underutilized Features**: Advanced segmentation, automation
 - **Feature Correlations**: Which features are used together
@@ -199,6 +209,7 @@ interface UserCohort {
 ## A/B Testing Framework
 
 ### **Experiment Design**
+
 ```typescript
 interface ABTest {
   id: string;
@@ -224,12 +235,14 @@ interface ExperimentVariant {
 ```
 
 ### **Key Test Categories**
+
 - **Onboarding Optimization**: Signup flow and user activation
 - **Feature Adoption**: New feature introduction and tutorials
 - **Pricing Optimization**: Plan selection and upgrade prompts
 - **Email Optimization**: Subject lines, send times, content performance
 
 ### **Statistical Analysis**
+
 - **Sample Size Calculation**: Required users for statistical significance
 - **Confidence Intervals**: Range of likely true effect sizes
 - **P-value Assessment**: Probability of results being due to chance
@@ -240,6 +253,7 @@ interface ExperimentVariant {
 ## Retention Analysis
 
 ### **Retention Cohorts**
+
 ```typescript
 // Calculate cohort retention rates
 const calculateCohortRetention = (
@@ -261,12 +275,14 @@ const calculateCohortRetention = (
 ```
 
 ### **Churn Prediction**
+
 - **Early Warning Signals**: Decreased login frequency, feature usage decline
 - **Risk Scoring**: Machine learning models predicting churn probability
 - **Intervention Strategies**: Targeted retention campaigns and support outreach
 - **Win-back Campaigns**: Personalized offers for at-risk users
 
 ### **Retention Drivers**
+
 - **Product Satisfaction**: Feature completeness and ease of use
 - **Support Quality**: Response times and resolution effectiveness
 - **Value Perception**: ROI and business impact realization
@@ -277,18 +293,21 @@ const calculateCohortRetention = (
 ## User Experience Optimization
 
 ### **Heatmaps and Click Tracking**
+
 - **Page Interaction Analysis**: Where users click and scroll
 - **Form Completion Rates**: Field-level conversion optimization
 - **Navigation Patterns**: User flow through the application
 - **Mobile vs Desktop**: Device-specific behavior differences
 
 ### **Performance Impact**
+
 - **Page Load Times**: Correlation with user engagement and bounce rates
 - **Feature Response Times**: API performance and user satisfaction
 - **Error Frequency**: Technical issues causing user frustration
 - **Mobile Optimization**: Responsive design effectiveness
 
 ### **Accessibility Analysis**
+
 - **Screen Reader Usage**: Assistive technology adoption tracking
 - **Keyboard Navigation**: Alternative input method usage
 - **Color Contrast**: Visual accessibility preferences
@@ -299,18 +318,21 @@ const calculateCohortRetention = (
 ## Advanced Analytics
 
 ### **Predictive Modeling**
+
 - **User Lifetime Value**: Revenue prediction based on behavior patterns
 - **Feature Usage Prediction**: Which users will adopt specific features
 - **Support Ticket Prediction**: Proactive issue identification
 - **Upgrade Propensity**: Likelihood of plan upgrades
 
 ### **Attribution Modeling**
+
 - **Marketing Channel Attribution**: Which acquisition channels drive valuable users
 - **Feature Impact Analysis**: How new features affect user behavior
 - **Content Effectiveness**: Which help articles and tutorials are most valuable
 - **Social Proof**: How testimonials and reviews influence conversions
 
 ### **Cohort Analysis Deep Dive**
+
 ```typescript
 interface CohortAnalysis {
   timeBased: {
@@ -337,18 +359,21 @@ interface CohortAnalysis {
 ## Privacy and Compliance
 
 ### **Data Collection Ethics**
+
 - **Consent Management**: Clear opt-in for analytics tracking
 - **Data Minimization**: Collect only necessary user behavior data
 - **Purpose Limitation**: Use data only for specified analytics purposes
 - **Retention Limits**: Automatic data deletion after defined periods
 
 ### **GDPR Compliance**
+
 - **Data Subject Rights**: Access, rectification, erasure, portability
 - **Consent Withdrawal**: Easy opt-out from analytics tracking
 - **Data Processing Records**: Detailed documentation of data usage
 - **Privacy by Design**: Analytics built with privacy considerations
 
 ### **Analytics Data Security**
+
 - **Encryption**: Data encrypted in transit and at rest
 - **Access Controls**: Role-based permissions for analytics data
 - **Audit Logging**: Comprehensive tracking of data access
@@ -359,6 +384,7 @@ interface CohortAnalysis {
 ## Reporting and Dashboards
 
 ### **Executive Dashboard**
+
 ```markdown
 User Overview
 ├── Total Users: X (↑X% MoM)
@@ -374,6 +400,7 @@ Engagement Metrics
 ```
 
 ### **Product Dashboard**
+
 ```markdown
 Feature Usage
 ├── Campaign Creation: X users
@@ -389,6 +416,7 @@ User Flows
 ```
 
 ### **Marketing Dashboard**
+
 ```markdown
 Acquisition Funnel
 ├── Visitors: X
@@ -408,26 +436,31 @@ Campaign Performance
 ## Cross-Reference Integration
 
 ### **Operations & Analytics**
+
 - [Operations Analytics Overview](.) - Main operations framework
 - [Performance KPIs](.) - Comprehensive KPI framework
 - [Product Analytics](.) - Feature performance analysis
 
 ### **Business Strategy**
+
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
 - [Market Analysis](/docs/business/market-analysis/overview) - Market positioning
 - [User Personas](/docs/business/user-personas) - Target audience profiles
 
 ### **Technical Architecture**
+
 - [Analytics Architecture](/docs/technical/architecture/detailed-technical) - Technical implementation
 - [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System monitoring
 - [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
+
 - [User Journeys Overview](/docs/user-journeys) - User flow documentation
 - [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
 - [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
+
 - [Compliance Overview](/docs/compliance-security) - Regulatory compliance
 - [Data Privacy Policy](/docs/compliance-security/international) - Privacy compliance
 - [Security Framework](/docs/compliance-security/enterprise) - Security operations

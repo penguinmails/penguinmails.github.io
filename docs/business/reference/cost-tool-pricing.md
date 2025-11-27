@@ -206,12 +206,14 @@ gantt
 ### Hidden Costs and Considerations
 
 **Implementation Costs**:
+
 - **Setup and configuration**: $5,000–$25,000 (one-time)
 - **Data migration**: $2,000–$10,000 (one-time)
 - **Training**: $1,000–$5,000 (annually)
 - **Integration development**: $5,000–$20,000 (one-time)
 
 **Ongoing Operational Costs**:
+
 - **Platform licensing**: As listed above
 - **User licenses**: Additional $50–$200/user/month
 - **Support and maintenance**: 15–25% of license cost annually
@@ -230,12 +232,15 @@ gantt
 ## Progressive Disclosure Navigation
 
 **For strategic overview:**
+
 - [Cost Analysis Overview](cost-analysis-overview:1) - Strategic investment analysis
 
 **For implementation details:**
+
 - [Implementation Management](cost-implementation:1) - Implementation and ongoing costs
 
 **For business context:**
+
 - [Executive Summary](executive-summary:1) - Complete strategic analysis
 - [ROI Calculator](roi-calculator:1) - Platform cost-benefit analysis
 

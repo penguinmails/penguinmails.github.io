@@ -253,6 +253,7 @@ export async function trackEmailOpened(props: {
 ```
 
 Key rules:
+
 - Do not mirror these raw events into OLAP.
 - Only derive aggregates into canonical OLAP tables if they are:
   - Contractual (billing),
@@ -333,6 +334,7 @@ export async function aggregateDailyCampaignAnalytics(tenantId: string, date: st
 ```
 
 Key rules:
+
 - Jobs and ETL workers:
   - Live in the Queue / Jobs tier.
   - Emit traces/metrics to external logging.
@@ -359,6 +361,7 @@ Standardize event categories (from the legacy integration plan) as external-only
   - `business_signup`, `business_upgrade`, `business_churn`
 
 These:
+
 - Are tracked in external analytics/logging platforms.
 - Only surface in OLAP as coarse aggregates if they meet the design rules above.
 

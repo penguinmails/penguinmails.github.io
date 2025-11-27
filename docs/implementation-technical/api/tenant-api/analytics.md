@@ -18,6 +18,7 @@ persona: "Backend Developers"
 The Analytics API provides comprehensive campaign performance metrics, engagement tracking, and deliverability analytics for tenant workspaces. All endpoints require workspace-level authentication and return data scoped to the authenticated workspace.
 
 **Key Capabilities:**
+
 - Real-time campaign performance metrics
 - Engagement tracking (opens, clicks, replies)
 - Deliverability analytics and inbox placement
@@ -26,6 +27,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 - Data export functionality
 
 **Technical Architecture:**
+
 - **OLAP Database**: PostgreSQL with TimescaleDB for time-series analytics data
 - **PostHog**: Event tracking, user behavior analytics, and operational monitoring
 - **Queue System**: PostgreSQL + Redis for background job processing (exports, reports)
@@ -41,10 +43,12 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Retrieve comprehensive analytics for a specific campaign
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 - `campaignId` (string, required) - Campaign identifier
 
 **Query Parameters:**
+
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d`, `custom` (default: `30d`)
 - `startDate` (ISO 8601, optional) - Start date for custom range
 - `endDate` (ISO 8601, optional) - End date for custom range
@@ -111,9 +115,11 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Retrieve aggregated analytics across all campaigns in a workspace
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
+
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d`, `custom` (default: `30d`)
 - `startDate` (ISO 8601, optional) - Start date for custom range
 - `endDate` (ISO 8601, optional) - End date for custom range
@@ -166,9 +172,11 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Retrieve detailed deliverability metrics and inbox placement data
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
+
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d` (default: `30d`)
 - `campaignId` (string, optional) - Filter by specific campaign
 - `domainId` (string, optional) - Filter by specific sending domain
@@ -259,9 +267,11 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Retrieve engagement patterns by day of week and hour of day
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
+
 - `timeRange` (string, optional) - Time range for analysis: `30d`, `90d` (default: `30d`)
 - `campaignId` (string, optional) - Filter by specific campaign
 - `timezone` (string, optional) - Timezone for hour calculations (default: workspace timezone)
@@ -310,6 +320,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Compare performance metrics across multiple campaigns
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 
 **Request Body:**
@@ -371,6 +382,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Generate and export analytics data in various formats
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 
 **Request Body:**
@@ -408,6 +420,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 **Purpose**: Check status of analytics export and retrieve download URL
 
 **Path Parameters:**
+
 - `workspaceId` (string, required) - Workspace identifier
 - `exportId` (string, required) - Export job identifier
 
@@ -532,24 +545,29 @@ interface TimeSeriesDataPoint {
 ## Related Documentation
 
 ### Feature Documentation
+
 - **[Analytics & Reporting Features](/docs/features/analytics/core-analytics/overview.md)** - Feature overview and capabilities
 - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Q1 2026 advanced analytics features
 - **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and data export
 
 ### API Documentation
+
 - **[Campaign Management API](/docs/implementation-technical/api/tenant-api/campaigns.md)** - Campaign CRUD operations
 - **[Workspace API](/docs/implementation-technical/api/tenant-api/workspaces.md)** - Workspace management
 - **[Platform Analytics API](/docs/implementation-technical/api/platform-api/analytics.md)** - System-level analytics
 
 ### Frontend Routes
+
 - **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign dashboard with analytics
 - **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance and system analytics
 
 ### Technical Architecture
+
 - **[OLAP Analytics Schema](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Database architecture for analytics
 - **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing
 
 ### Implementation Planning
+
 - **[Analytics Feature Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Gap analysis, roadmap, and implementation priorities
 
 ---
