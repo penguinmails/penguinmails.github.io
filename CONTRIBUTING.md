@@ -60,11 +60,17 @@ We welcome contributions to improve our documentation! This guide provides every
 2. **Start development server:**
 
    ```bash
-   # Build and run with Docker
+   # Build Docker image (one-time setup)
    docker build -t penguinmails-docs .
-   docker run --rm -v $PWD:/srv/jekyll -w /srv/jekyll jekyll-penguinmails jekyll build
-   docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
+
+   # Build static files (useful for CI/CD or testing built output)
+   docker run --rm -v $PWD:/srv/jekyll -w /srv/jekyll penguinmails-docs jekyll build
+
+   # Development server with live reload (recommended for local editing)
+   docker run --rm -p 4000:4000 -v $PWD:/srv/jekyll penguinmails-docs
    ```
+
+   **Note:** The `jekyll build` command generates static files in `_site/`. Use `jekyll serve` for development with auto-reload at [http://localhost:4000](http://localhost:4000).
 
 3. **View the documentation:**
    Open [http://localhost:4000](http://localhost:4000)

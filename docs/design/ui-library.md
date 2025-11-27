@@ -621,6 +621,8 @@ interface CardProps {
 
 ### Alert Component
 
+{% raw %}
+
 ```jsx
 type AlertVariant = 'info' | 'success' | 'warning' | 'error';
 
@@ -648,9 +650,9 @@ interface AlertProps {
   }}
   dismissible
 />
-
-
 ```
+
+{% endraw %}
 
 ### Toast Notifications
 
@@ -796,6 +798,8 @@ interface TabsProps {
 
 ### Loading States
 
+{% raw %}
+
 ```typescript
 interface LoadingProps {
   size?: 'xs' | 'sm' | 'md' | 'lg';
@@ -837,9 +841,9 @@ interface EmptyStateProps {
     onClick: () => navigate('/campaigns)
   }}
 />
-
-
 ```
+
+{% endraw %}
 
 ### Badge Component
 
@@ -1091,7 +1095,9 @@ import { ThemeProvider } from 'next-themes';
 
 **Example**:
 
-```typescript
+{% raw %}
+
+```jsx
 // Framer Motion for page transitions
 import { motion } from 'framer-motion';
 
@@ -1111,9 +1117,9 @@ import { motion } from 'framer-motion';
 .button:hover {
   background-color: var(--color-primary-600);
 }
-
-
 ```
+
+{% endraw %}
 
 ### Loading States
 

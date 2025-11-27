@@ -6,7 +6,7 @@
 [![Contributors](https://img.shields.io/github/contributors/penguinmails/penguinmails.github.io.svg)](CONTRIBUTORS)
 [![GitHub Issues](https://img.shields.io/github/issues/penguinmails/penguinmails.github.io.svg)](https://github.com/penguinmails/penguinmails.github.io/issues)
 [![License](https://img.shields.io/github/license/penguinmails/penguinmails.github.io.svg)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/penguinmails/penguinmails.github.io?style=social)](https://github.com/penguinmails/penguinmails.github.io)
+[![GitHub Stars](https://img.shields.io/github/stars/penguinmails/penguinmails.github.io.svg?style=social)](https://github.com/penguinmails/penguinmails.github.io/stars)
 
 > **Complete enterprise email management platform documentation**  
 > A comprehensive guide covering architecture, implementation, operations, and best practices for PenguinMails.
@@ -97,25 +97,28 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 git clone https://github.com/penguinmails/penguinmails.github.io.git
 cd penguinmails.github.io
 
-
 ```
 
 #### 2. Launch the Docs
 
 Option A Docker (recommended)
-
 Provides an isolated, reproducible environment.
 
 ```bash
-
-
-# Build and run with Docker
-
+# Build Docker image (one-time setup)
 docker build -t penguinmails-docs .
-docker run --rm -p 4000:4000 -v $(pwd):/srv/jekyll penguinmails-docs
 
-
+# Development server with live reload (recommended for local editing)
+docker run --rm -p 4000:4000 -v $PWD:/srv/jekyll penguinmails-docs
 ```
+
+**For building static files** (useful for CI/CD or previewing `_site/` output):
+
+```bash
+docker run --rm -v $PWD:/srv/jekyll -w /srv/jekyll penguinmails-docs jekyll build
+```
+
+View at [http://localhost:4000](http://localhost:4000). The `jekyll build` command generates static files in `_site/`.
 
 Option B Ruby/Jekyll
 
@@ -125,10 +128,7 @@ Requires Ruby, Bundler, and the Jekyll gem installed locally.
 bundle install
 bundle exec jekyll serve --livereload
 
-
 ```
-
-Your site will be available at [http://localhost:4000](http://localhost:4000).
 
 #### 3. Development Instructions
 
