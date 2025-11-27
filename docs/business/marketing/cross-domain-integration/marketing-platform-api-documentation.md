@@ -3,7 +3,10 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
+
+
 # Marketing Platform API Integration Documentation
+
 
 ## Overview
 
@@ -15,33 +18,58 @@ This document provides comprehensive API documentation for marketing platform in
 
 ---
 
+
 ## API Integration Architecture
+
 
 ### API Gateway Overview
 
 Marketing platform APIs integrate with external systems through a centralized API gateway providing:
 
+
 - **Authentication & Authorization:** OAuth 2.0, API keys, JWT tokens
+
+
 - **Rate Limiting:** Configurable limits per integration partner
+
+
 - **Data Transformation:** Format conversion and data mapping
+
+
 - **Error Handling:** Standardized error responses and retry logic
+
+
 - **Monitoring:** Comprehensive logging and performance tracking
+
 
 ### API Design Principles
 
+
 - **RESTful Design:** Consistent URL patterns and HTTP methods
+
+
 - **JSON Data Format:** Standardized request/response payloads
+
+
 - **Version Management:** Backward compatibility with versioned endpoints
+
+
 - **Comprehensive Documentation:** OpenAPI 3.0 specifications
+
+
 - **Security First:** End-to-end encryption and audit trails
 
 ---
 
+
 ## Authentication and Security
+
 
 ### Authentication Methods
 
+
 ## 1. OAuth 2.0 (Recommended)
+
 
 ```json
 {
@@ -51,9 +79,12 @@ Marketing platform APIs integrate with external systems through a centralized AP
   "scope": "read:campaigns write:campaigns read:analytics",
   "token_lifetime": "3600 seconds"
 }
+
+
 ```
 
 **2. API Key Authentication**
+
 
 ```json
 {
@@ -65,9 +96,12 @@ Marketing platform APIs integrate with external systems through a centralized AP
     "burst_limit": 100
   }
 }
+
+
 ```
 
 **3. JWT Token Authentication**
+
 
 ```json
 {
@@ -76,11 +110,15 @@ Marketing platform APIs integrate with external systems through a centralized AP
   "claims": ["sub", "aud", "exp", "scope"],
   "token_endpoint": "https://api.marketingplatform.com/auth/jwt"
 }
+
+
 ```
+
 
 ### Security Headers
 
 All API requests must include security headers:
+
 
 ```http
 Authorization: Bearer {access_token}
@@ -88,21 +126,29 @@ Content-Type: application/json
 X-API-Version: v1
 X-Request-ID: {uuid}
 User-Agent: {integration_name}/{version}
+
+
 ```
 
 ---
 
+
 ## Core Marketing APIs
+
 
 ### Campaign Management API
 
 **Create Campaign**
 
+
 ```http
 POST /api/v1/campaigns
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -134,9 +180,12 @@ POST /api/v1/campaigns
     "performance_monitoring": true
   }
 }
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -149,15 +198,21 @@ POST /api/v1/campaigns
     "manage": "/api/v1/campaigns/camp_789xyz"
   }
 }
+
+
 ```
 
 **Get Campaign Performance**
 
+
 ```http
 GET /api/v1/campaigns/{campaign_id}/performance
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -185,17 +240,24 @@ GET /api/v1/campaigns/{campaign_id}/performance
     "roi": 405.2
   }
 }
+
+
 ```
+
 
 ### Lead Management API
 
 **Capture Lead**
 
+
 ```http
 POST /api/v1/leads
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -230,9 +292,12 @@ POST /api/v1/leads
     "referrer": "https://google.com"
   }
 }
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -249,15 +314,21 @@ POST /api/v1/leads
     "schedule_follow_up"
   ]
 }
+
+
 ```
 
 **Update Lead Status**
 
+
 ```http
 PATCH /api/v1/leads/{lead_id}
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -267,17 +338,24 @@ PATCH /api/v1/leads/{lead_id}
   "notes": "High-value prospect, interested in enterprise features",
   "follow_up_date": "2025-01-25T14:00:00Z"
 }
+
+
 ```
+
 
 ### Analytics and Reporting API
 
 **Get Campaign Analytics**
 
+
 ```http
 GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -316,21 +394,30 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
     }
   ]
 }
+
+
 ```
 
 ---
 
+
 ## Integration-Specific APIs
+
 
 ### CRM Integration API
 
-**Salesforce Integration**
+
+### Salesforce Integration
+
 
 ```http
 POST /api/v1/integrations/crm/salesforce/sync
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -347,15 +434,22 @@ POST /api/v1/integrations/crm/salesforce/sync
   "sync_frequency": "real_time",
   "conflict_resolution": "last_write_wins"
 }
+
+
 ```
 
-**HubSpot Integration**
+
+### HubSpot Integration
+
 
 ```http
 POST /api/v1/integrations/crm/hubspot/contacts
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -379,17 +473,25 @@ POST /api/v1/integrations/crm/hubspot/contacts
     }
   ]
 }
+
+
 ```
+
 
 ### Analytics Integration API
 
-**Google Analytics Integration**
+
+### Google Analytics Integration
+
 
 ```http
 POST /api/v1/integrations/analytics/google/track
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -402,15 +504,21 @@ POST /api/v1/integrations/analytics/google/track
     "open_timestamp": "2025-01-15T10:30:00Z"
   }
 }
+
+
 ```
 
 **Customer Data Platform Integration**
 
+
 ```http
 POST /api/v1/integrations/cdp/audience/update
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -428,17 +536,25 @@ POST /api/v1/integrations/cdp/audience/update
     }
   ]
 }
+
+
 ```
+
 
 ### E-commerce Integration API
 
-**Shopify Integration**
+
+### Shopify Integration
+
 
 ```http
 POST /api/v1/integrations/ecommerce/shopify/customer-event
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -462,15 +578,22 @@ POST /api/v1/integrations/ecommerce/shopify/customer-event
     }
   }
 }
+
+
 ```
 
-**WooCommerce Integration**
+
+### WooCommerce Integration
+
 
 ```http
 POST /api/v1/integrations/ecommerce/woocommerce/order-update
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -484,21 +607,29 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
     "conversion_date": "2025-01-15T14:30:00Z"
   }
 }
+
+
 ```
 
 ---
 
+
 ## Webhook Integration API
+
 
 ### Webhook Configuration
 
 **Register Webhook Endpoint**
 
+
 ```http
 POST /api/v1/webhooks
+
+
 ```
 
 **Request Body:**
+
 
 ```json
 {
@@ -513,9 +644,12 @@ POST /api/v1/webhooks
   "secret": "webhook_secret_key",
   "active": true
 }
+
+
 ```
 
 **Webhook Payload Example:**
+
 
 ```json
 {
@@ -539,11 +673,15 @@ POST /api/v1/webhooks
   },
   "signature": "sha256=abc123..."
 }
+
+
 ```
+
 
 ### Webhook Security
 
 **Signature Verification:**
+
 
 ```javascript
 const crypto = require('crypto');
@@ -556,22 +694,30 @@ function verifyWebhookSignature(payload, signature, secret) {
 
   return signature === `sha256=${expectedSignature}`;
 }
+
+
 ```
 
 ---
 
+
 ## Rate Limiting and Quotas
+
 
 ### Rate Limit Headers
 
 All API responses include rate limiting information:
+
 
 ```http
 X-RateLimit-Limit: 1000
 X-RateLimit-Remaining: 995
 X-RateLimit-Reset: 1705324800
 X-RateLimit-Window: 3600
+
+
 ```
+
 
 ### Rate Limit Tiers
 
@@ -582,15 +728,20 @@ X-RateLimit-Window: 3600
 | Enterprise | 100,000 | 10,000 | $799 |
 | Custom | Unlimited | Unlimited | Custom |
 
+
 ### Rate Limit Management
 
 **Get Current Usage**
 
+
 ```http
 GET /api/v1/integrations/usage
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -607,13 +758,18 @@ GET /api/v1/integrations/usage
     "tier": "Professional"
   }
 }
+
+
 ```
 
 ---
 
+
 ## Error Handling and Status Codes
 
+
 ### Standard Error Response
+
 
 ```json
 {
@@ -630,7 +786,10 @@ GET /api/v1/integrations/usage
     "timestamp": "2025-01-15T10:30:00Z"
   }
 }
+
+
 ```
+
 
 ### Common Error Codes
 
@@ -644,9 +803,11 @@ GET /api/v1/integrations/usage
 | `QUOTA_EXCEEDED` | 402 | API quota exceeded |
 | `INTERNAL_ERROR` | 500 | Server error |
 
+
 ### Retry Logic
 
 **Exponential Backoff:**
+
 
 ```json
 {
@@ -658,21 +819,29 @@ GET /api/v1/integrations/usage
     "retryable_codes": [429, 500, 502, 503, 504]
   }
 }
+
+
 ```
 
 ---
 
+
 ## SDKs and Client Libraries
+
 
 ### JavaScript/TypeScript SDK
 
 **Installation:**
 
+
 ```bash
 npm install @marketing-platform/sdk
+
+
 ```
 
 **Usage:**
+
 
 ```javascript
 import { MarketingPlatform } from '@marketing-platform/sdk';
@@ -697,9 +866,12 @@ await client.analytics.trackConversion({
   recipientId: 'recipient_123',
   revenue: 299.99
 });
+
+
 ```
 
 **CSS Integration for Email Templates:**
+
 
 ```css
 /* Marketing Platform Email Template Styles */
@@ -731,11 +903,15 @@ await client.analytics.trackConversion({
   font-weight: bold;
   margin: 20px 0;
 }
+
+
 ```
 
 ---
 
+
 ## Testing and Sandbox
+
 
 ### Sandbox Environment
 
@@ -743,21 +919,37 @@ await client.analytics.trackConversion({
 
 **Sandbox Features:**
 
+
 - Test data and simulated responses
+
+
 - No actual email delivery
+
+
 - Limited rate limits for testing
+
+
 - Reset capability for clean slate testing
+
 
 ### API Testing Tools
 
 **Postman Collection:**
 
+
 - Complete API endpoint collection
+
+
 - Pre-configured authentication
+
+
 - Example requests and responses
+
+
 - Environment variables for easy testing
 
 **OpenAPI Specification:**
+
 
 ```yaml
 openapi: 3.0.3
@@ -766,26 +958,42 @@ info:
   version: 1.0.0
   description: Comprehensive API for marketing platform integrations
 servers:
+
+
   - url: https://api.marketingplatform.com/v1
     description: Production server
+
+
   - url: https://api-sandbox.marketingplatform.com/v1
     description: Sandbox server
+
+
 ```
 
 ---
 
+
 ## Monitoring and Support
+
 
 ### API Monitoring
 
 **Performance Metrics:**
 
+
 - Response time monitoring
+
+
 - Error rate tracking
+
+
 - Success rate analytics
+
+
 - Usage pattern analysis
 
 **Real-time Alerts:**
+
 
 ```json
 {
@@ -801,21 +1009,36 @@ servers:
     "webhook: https://alerts.company.com/api"
   ]
 }
+
+
 ```
+
 
 ### Support and Documentation
 
 **Developer Portal:**
 
+
 - Interactive API documentation
+
+
 - Code examples and tutorials
+
+
 - Integration guides
+
+
 - Community forums
 
 **Support Channels:**
 
+
 - Email: <api-support@marketingplatform.com>
+
+
 - Slack: #api-developer-support
+
+
 - Status Page: <https://status.marketingplatform.com>
 
 ---

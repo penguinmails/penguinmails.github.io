@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Developer Quick Start Templates
 
 ## Technology-Specific Templates
@@ -43,6 +44,8 @@ async function createBasicCampaign() {
 // Usage
 const campaign = await createBasicCampaign();
 console.log(`Campaign created: ${campaign.id}`);
+
+
 ```
 
 #### Node.js Express Integration Template
@@ -106,6 +109,8 @@ app.post('/api/create-campaign', async (req, res) => {
 app.listen(3000, () => {
   console.log('PenguinMails integration server running on port 3000');
 });
+
+
 ```
 
 #### Next.js Component Example
@@ -186,6 +191,8 @@ export default function EmailCampaignManager() {
     </div>
   );
 }
+
+
 ```
 
 ### CSS Email Templates
@@ -307,6 +314,8 @@ export default function EmailCampaignManager() {
     border: none !important;
   }
 <![endif]-->
+
+
 ```
 
 ### SQL Database Integration
@@ -398,6 +407,8 @@ FROM campaigns c
 LEFT JOIN email_events e ON c.id = e.campaign_id
 GROUP BY c.id, c.name, c.subject, c.created_at, c.status
 ORDER BY c.created_at DESC;
+
+
 ```
 
 ## Development Workflow Templates
@@ -405,26 +416,43 @@ ORDER BY c.created_at DESC;
 ### Environment Setup Template
 
 ```yaml
+
+
 # docker-compose.yml
+
 version: '3.8'
 
 services:
   app:
     build: .
     ports:
+
+
       - "3000:3000"
     environment:
+
+
       - PENGUINMAILS_API_KEY=${PENGUINMAILS_API_KEY}
+
+
       - PENGUINMAILS_ENV=${PENGUINMAILS_ENV:-sandbox}
     volumes:
+
+
       - .:/app
+
+
       - /app/node_modules
 
   # Optional: Redis for queue management
   redis:
     image: redis:alpine
     ports:
+
+
       - "6379:6379"
+
+
 ```
 
 ### Package.json Template
@@ -467,6 +495,8 @@ services:
     "npm": ">=8.0.0"
   }
 }
+
+
 ```
 
 ### TypeScript Configuration Template
@@ -503,6 +533,8 @@ services:
     "**/*.spec.ts"
   ]
 }
+
+
 ```
 
 ### Configuration Template
@@ -547,6 +579,8 @@ export const getConfig = (): PenguinMailsConfig => {
   const env = process.env.NODE_ENV || 'development';
   return configs[env] || configs.development;
 };
+
+
 ```
 
 ## Cross-Domain Integration Requirements
@@ -554,41 +588,61 @@ export const getConfig = (): PenguinMailsConfig => {
 ### Sales Integration
 
 - **CRM System Coordination**: Synchronize campaign data with CRM systems
+
 - **Lead Attribution**: Track email campaign engagement for sales pipeline attribution
+
 - **Sales Alert Integration**: Send alerts for high-value prospect engagement
 
 ### Marketing Integration
 
 - **Campaign Performance Analytics**: Coordinate with marketing analytics platforms
+
 - **Customer Segment Sync**: Real-time synchronization of customer segments
+
 - **Cross-Channel Coordination**: Coordinate email with other marketing channels
 
 ### Customer Success Integration
 
 - **Health Score Correlation**: Link email engagement to customer health scores
+
 - **Success Campaign Coordination**: Coordinate email campaigns with success initiatives
+
 - **Retention Campaign Automation**: Automate retention campaigns based on customer signals
 
 ### Finance Integration
 
 - **Revenue Attribution**: Track revenue attribution from email campaigns
+
 - **Cost Allocation**: Allocate marketing costs to appropriate budget categories
+
 - **ROI Tracking**: Coordinate email campaign ROI with financial reporting
 
 ## Quick Start Checklist
 
 - [ ] Set up development environment with Docker
+
 - [ ] Configure API keys and environment variables
+
 - [ ] Install and configure PenguinMails SDK
+
 - [ ] Test basic email sending functionality
+
 - [ ] Set up error handling and logging
+
 - [ ] Configure rate limiting and retry logic
+
 - [ ] Implement cross-domain integrations
+
 - [ ] Set up monitoring and alerting
+
 - [ ] Configure production deployment
+
 - [ ] Implement comprehensive testing
+
 - [ ] Set up TypeScript configuration
+
 - [ ] Configure CSS framework for email templates
+
 - [ ] Set up SQL database schema for analytics
 
 This template library provides developers with proven starting points for PenguinMails integration using JavaScript/TypeScript, CSS, and SQL.

@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Workspaces API
 
 **Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Workspaces
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: List all workspaces the current user has access to.
 
 **Response**:
+
 
 ```json
 {
@@ -39,7 +43,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Create Workspace
 
@@ -49,14 +56,18 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "name": "New Client",
   "slug": "new-client" // Optional, auto-generated if missing
 }
+
+
 ```
 
 **Response**:
+
 
 ```json
 {
@@ -67,7 +78,10 @@ persona: "Backend Developers"
     "slug": "new-client"
   }
 }
+
+
 ```
+
 
 ### Get Workspace Details
 
@@ -76,6 +90,7 @@ persona: "Backend Developers"
 **Purpose**: Get detailed information about a specific workspace.
 
 **Response**:
+
 
 ```json
 {
@@ -98,4 +113,7 @@ persona: "Backend Developers"
     ]
   }
 }
+
+
 ```
+

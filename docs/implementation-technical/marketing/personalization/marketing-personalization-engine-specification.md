@@ -3,7 +3,10 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
+
+
 # Marketing Personalization Engine Technical Specification
+
 
 ## Overview
 
@@ -15,7 +18,9 @@ This technical specification defines the implementation architecture for real-ti
 
 ---
 
+
 ## Architecture Overview
+
 
 ### Core Personalization Pipeline
 
@@ -25,7 +30,9 @@ This technical specification defines the implementation architecture for real-ti
 
 **Decision Engine:** Drools rule engine for business logic, TensorFlow Serving for ML inference, Redis-based contextual bandit, A/B testing framework with traffic allocation
 
+
 ### Segmentation Engine
+
 
 ```typescript
 interface SegmentDefinition {
@@ -143,13 +150,18 @@ class SegmentationEngine {
     return await this.redisClient.smembers(`segment:${segmentName}`);
   }
 }
+
+
 ```
 
 ---
 
+
 ## Feature Store Implementation
 
+
 ### Customer Feature Schema
+
 
 ```typescript
 interface CustomerFeature {
@@ -237,9 +249,13 @@ class FeatureStoreImpl implements FeatureStore {
     };
   }
 }
+
+
 ```
 
+
 ### Behavioral Feature Computation
+
 
 ```typescript
 interface CustomerEvent {
@@ -398,13 +414,18 @@ class BehavioralFeatureComputer {
     return features.formSubmits / features.pageViews;
   }
 }
+
+
 ```
 
 ---
 
+
 ## Real-Time Decisioning System
 
+
 ### Contextual Bandit Implementation
+
 
 ```typescript
 interface ContentItem {
@@ -592,9 +613,13 @@ class ContextualBanditDecisionEngine {
     return `Selected due to ${reasons.join(', ')}`;
   }
 }
+
+
 ```
 
+
 ### Real-Time API Endpoints
+
 
 ```typescript
 import express, { Request, Response } from 'express';
@@ -753,13 +778,18 @@ class PersonalizationAPIController {
     return this.app;
   }
 }
+
+
 ```
 
 ---
 
+
 ## Content and Offer APIs
 
+
 ### Content Management Integration
+
 
 ```typescript
 import fetch from 'node-fetch';
@@ -893,9 +923,13 @@ class APIException extends Error {
     this.name = 'APIException';
   }
 }
+
+
 ```
 
+
 ### Performance Monitoring
+
 
 ```typescript
 interface PrometheusClient {
@@ -1035,9 +1069,12 @@ class PersonalizationPerformanceMonitor {
     };
   }
 }
+
+
 ```
 
 ---
+
 
 ## Dependencies and Infrastructure
 
@@ -1047,10 +1084,16 @@ class PersonalizationPerformanceMonitor {
 
 ---
 
+
 ## Business Context and Traceability
 
+
 - **For strategic context see:** `docs/business/marketing/strategy/detailed.md`
+
+
 - **For journey optimization see:** `docs/business/marketing/journey/summary.md`
+
+
 - **For technical foundation see:** `../analytics-integration/marketing-analytics-architecture.md`
 
 This technical implementation focuses exclusively on personalization system architecture and real-time decisioning algorithms without business value narratives

@@ -6,42 +6,75 @@ status: "PLANNED"
 roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
+
+
   - warmup/warmup-management
+
+
   - warmup/reputation-monitoring
+
+
   - domains/domain-management
+
+
   - infrastructure/email-infrastructure-setup
 related_tasks:
+
+
   - epic-4-warmup-deliverability
 ---
+
 
 # Warmup Scheduling
 
 **Quick Access**: Automatically warm up new email accounts and domains with intelligent scheduling, gradual volume increases, and engagement simulation to build sender reputation.
 
+
 ## Overview
 
 Warmup Scheduling automates the process of establishing sender reputation for new email accounts and domains. The system gradually increases sending volume while simulating natural engagement patterns to avoid spam filters and build trust with email providers.
 
+
 ### Key Capabilities
 
+
 - **Automated Warmup Schedules**: Pre-configured ramp-up plans
+
+
 - **Gradual Volume Ramping**: Increase sends progressively over 4-8 weeks
+
+
 - **Domain & IP Warmup**: Separate strategies for domains and dedicated IPs
+
+
 - **Engagement Simulation**: Automated opens, clicks, and replies
+
+
 - **Progress Tracking**: Real-time warmup status and metrics
+
+
 - **Custom Schedules**: Tailor warmup plans to your needs
+
+
 - **Multi-Account Warmup**: Warm up multiple accounts simultaneously
+
+
 - **Safety Limits**: Automatic throttling to prevent reputation damage
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Start Your First Warmup
 
+
 #### Step 1: Select Email Account
 
+
 ```
+
 Warmup → Start New Warmup
 
 Select Email Account:
@@ -56,11 +89,16 @@ Account Status:
   Current Reputation: Unknown
   
 [Continue →]
+
+
 ```
+
 
 #### Step 2: Choose Warmup Plan
 
+
 ```
+
 Select Warmup Plan:
 
 ● Standard Warmup (Recommended)
@@ -85,11 +123,16 @@ Select Warmup Plan:
   Configure your own schedule
   
 [Continue →]
+
+
 ```
+
 
 #### Step 3: Configure Settings
 
+
 ```
+
 Warmup Configuration
 
 Engagement Simulation:
@@ -100,12 +143,22 @@ Engagement Simulation:
   
 Warmup Pool:
   ● Use PenguinMails warmup network (Recommended)
+
+
     - 10,000+ verified warmup accounts
+
+
     - Automatic engagement
+
+
     - Best deliverability
     
   ○ Use custom warmup list
+
+
     - Upload your own contacts
+
+
     - Manual engagement required
     
 Safety Settings:
@@ -114,11 +167,16 @@ Safety Settings:
   ☑ Daily send limit: 500 emails
   
 [Start Warmup]
+
+
 ```
+
 
 #### Step 4: Warmup Running
 
+
 ```
+
 Warmup Progress: sales@penguinmails.com
 
 Status: ✓ Active (Day 3 of 42)
@@ -143,22 +201,36 @@ Next Milestone:
 Health Score: 95/100 ✓ Excellent
 
 [View Details] [Pause Warmup] [Adjust Schedule]
+
+
 ```
+
 
 ### Understanding Warmup Phases
 
+
 #### Phase 1: Foundation (Week 1-2)
 
+
 ```
+
 Days 1-14: Building Initial Reputation
 
 Daily Volume: 10 → 100 emails/day
 Focus: Establish sending pattern
 
 Activities:
+
+
   - Send to warmup pool only
+
+
   - High engagement simulation (70%+ opens)
+
+
   - Consistent sending times
+
+
   - Monitor bounce rates closely
   
 Goals:
@@ -166,20 +238,33 @@ Goals:
   ✓ Bounce rate < 2%
   ✓ Consistent delivery
   ✓ Positive engagement signals
+
+
 ```
+
 
 #### Phase 2: Growth (Week 3-4)
 
+
 ```
+
 Days 15-28: Scaling Volume
 
 Daily Volume: 100 → 300 emails/day
 Focus: Gradual increase
 
 Activities:
+
+
   - Continue warmup pool (80%)
+
+
   - Introduce real contacts (20%)
+
+
   - Maintain high engagement
+
+
   - Monitor sender reputation
   
 Goals:
@@ -187,20 +272,33 @@ Goals:
   ✓ Build domain reputation
   ✓ Inbox placement > 90%
   ✓ No blacklist appearances
+
+
 ```
+
 
 #### Phase 3: Maturity (Week 5-6)
 
+
 ```
+
 Days 29-42: Reaching Target Volume
 
 Daily Volume: 300 → 500 emails/day
 Focus: Stabilize at target
 
 Activities:
+
+
   - Warmup pool (50%)
+
+
   - Real contacts (50%)
+
+
   - Natural engagement patterns
+
+
   - Full campaign readiness
   
 Goals:
@@ -208,13 +306,19 @@ Goals:
   ✓ Strong sender reputation
   ✓ Ready for production campaigns
   ✓ Established sending patterns
+
+
 ```
+
 
 ### Quick Actions
 
+
 #### Pause Warmup
 
+
 ```
+
 Pause Warmup: sales@penguinmails.com
 
 Reason:
@@ -229,11 +333,16 @@ Resume Plan:
   ○ Restart from beginning
   
 [Pause Warmup]
+
+
 ```
+
 
 #### Adjust Schedule
 
+
 ```
+
 Adjust Warmup Schedule
 
 Current: Day 15 of 42
@@ -251,15 +360,21 @@ New Schedule:
   Week 7-8: 250 → 500 emails/day
   
 [Apply Changes]
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Warmup Strategies
+
 
 ### Custom Warmup Schedules
 
+
 #### Create Custom Plan
+
 
 ```yaml
 custom_warmup_plan:
@@ -267,6 +382,8 @@ custom_warmup_plan:
   duration: 56  # days
   
   phases:
+
+
     - name: "Foundation"
       days: 1-14
       daily_volume:
@@ -283,6 +400,8 @@ custom_warmup_plan:
         warmup_pool: 100
         real_contacts: 0
     
+
+
     - name: "Growth"
       days: 15-35
       daily_volume:
@@ -299,6 +418,8 @@ custom_warmup_plan:
         warmup_pool: 70
         real_contacts: 30
     
+
+
     - name: "Maturity"
       days: 36-56
       daily_volume:
@@ -320,13 +441,19 @@ custom_warmup_plan:
     max_spam_rate: 0.1
     max_daily_increase: 100
     pause_on_blacklist: true
+
+
 ```
+
 
 ### Domain vs IP Warmup
 
+
 #### Domain Warmup Strategy
 
+
 ```
+
 Domain Warmup: penguinmails.com
 
 Strategy: New Domain
@@ -334,31 +461,64 @@ Duration: 6-8 weeks
 Focus: Build domain reputation
 
 Week 1-2: Foundation
+
+
   - Use shared IPs
+
+
   - Low volume (10-100/day)
+
+
   - High engagement simulation
+
+
   - SPF, DKIM, DMARC verification
   
 Week 3-4: Growth
+
+
   - Gradually increase volume
+
+
   - Monitor domain reputation
+
+
   - Check blacklist status
+
+
   - Maintain engagement
   
 Week 5-6: Scaling
+
+
   - Reach target volume
+
+
   - Mix warmup + real contacts
+
+
   - Monitor inbox placement
   
 Week 7-8: Stabilization
+
+
   - Consistent high volume
+
+
   - Production-ready
+
+
   - Ongoing monitoring
+
+
 ```
+
 
 #### Dedicated IP Warmup
 
+
 ```
+
 IP Warmup: 192.0.2.100
 
 Strategy: New Dedicated IP
@@ -366,44 +526,94 @@ Duration: 4-6 weeks
 Focus: Build IP reputation
 
 Week 1: Start Slow
+
+
   - 50-200 emails/day
+
+
   - Use existing warm domain
+
+
   - High engagement only
+
+
   - Monitor IP reputation
   
 Week 2-3: Gradual Increase
+
+
   - 200-1,000 emails/day
+
+
   - Consistent sending times
+
+
   - Maintain engagement
+
+
   - Check IP blacklists
   
 Week 4-6: Full Volume
+
+
   - 1,000-5,000+ emails/day
+
+
   - Production campaigns
+
+
   - Ongoing monitoring
+
+
   - Reputation maintenance
+
+
 ```
+
 
 ### Engagement Simulation
 
+
 #### Warmup Pool Network
 
+
 ```
+
 PenguinMails Warmup Network
 
 Network Size: 12,847 active accounts
 Coverage: 50+ email providers
+
+
   - Gmail: 4,200 accounts
+
+
   - Outlook: 2,800 accounts
+
+
   - Yahoo: 1,500 accounts
+
+
   - Apple Mail: 1,200 accounts
+
+
   - Other: 3,147 accounts
 
 Engagement Patterns:
+
+
   - Opens: 65-80% (randomized timing)
+
+
   - Clicks: 12-20% (varied links)
+
+
   - Replies: 3-8% (automated responses)
+
+
   - Spam reports: 0%
+
+
   - Bounces: < 0.5%
 
 Behavior Simulation:
@@ -412,17 +622,30 @@ Behavior Simulation:
   ☑ Natural reply delays (2-48 hours)
   ☑ Different devices (mobile, desktop)
   ☑ Geographic diversity
+
+
 ```
+
 
 #### Custom Warmup List
 
+
 ```
+
 Upload Custom Warmup List
 
 Requirements:
+
+
   - Minimum 100 contacts
+
+
   - Valid email addresses
+
+
   - Willing to engage (opens, clicks, replies)
+
+
   - Low bounce/spam risk
   
 Upload CSV:
@@ -439,13 +662,19 @@ Engagement Configuration:
 
 ⚠ Note: Manual engagement required
    You must coordinate with these contacts
+
+
 ```
+
 
 ### Multi-Account Warmup
 
+
 #### Bulk Warmup Management
 
+
 ```
+
 Warmup Dashboard
 
 Active Warmups: 5
@@ -464,13 +693,19 @@ Bulk Actions:
 Alerts:
   ⚠ info@penguinmails.com: Bounce rate elevated (4.2%)
   ℹ hello@penguinmails.com: Paused for manual review
+
+
 ```
+
 
 ### Warmup Analytics
 
+
 #### Progress Tracking
 
+
 ```
+
 Warmup Analytics: sales@penguinmails.com
 
 Overall Progress: 36% (Day 15/42)
@@ -498,11 +733,16 @@ Reputation Score:
   Overall: 82/100 (Good)
   
 Trend: ↗ Improving
+
+
 ```
+
 
 #### Comparative Analysis
 
+
 ```
+
 Warmup Comparison
 
 Account A: sales@penguinmails.com
@@ -512,19 +752,30 @@ Account B: support@penguinmails.com
   Day 15: 80/day, Health: 88
   
 Difference:
+
+
   - Account A: Faster ramp-up
+
+
   - Account B: More conservative
+
+
   - Both: On track for target
   
 Recommendation:
   Continue current pace for both accounts
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Warmup schedules
@@ -653,9 +904,13 @@ CREATE TABLE warmup_events (
 );
 
 CREATE INDEX idx_warmup_events_schedule ON warmup_events(warmup_schedule_id, created_at);
+
+
 ```
 
+
 ### Warmup Service
+
 
 ```typescript
 interface WarmupConfig {
@@ -901,9 +1156,13 @@ class WarmupService {
     await this.sendWarmupAlert(scheduleId, reason);
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Daily warmup scheduler
@@ -944,9 +1203,13 @@ cron.schedule('0 * * * *', async () => {
     await service.checkWarmupHealth(schedule.id);
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Start warmup
@@ -990,15 +1253,25 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
   
   return res.json({ success: true });
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Email Warmups](./email-warmups/overview.md)** - Overall warmup strategy
+
+
 - **[Reputation Monitoring](./reputation-monitoring.md)** - Track sender reputation
+
+
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
+
+
 - **[Email Infrastructure](../infrastructure/email-infrastructure-setup.md)** - SMTP setup
 
 ---

@@ -6,40 +6,69 @@ status: "AVAILABLE"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - inbox/unified-inbox/overview
+
+
   - warmup/reputation-monitoring
+
+
   - campaigns/campaign-management/overview
+
+
   - infrastructure/free-mailbox-creation/overview
 related_tasks:
+
+
   - epic-8-inbox-management
 ---
+
 
 # Inbox Rotation
 
 **Quick Access**: Scale your outreach volume safely by distributing sending load across multiple email accounts, domains, and IPs.
 
+
 ## Overview
 
 Inbox Rotation protects your sender reputation by ensuring no single email account exceeds safe sending limits. Instead of sending 500 emails from one address (high risk), PenguinMails automatically distributes them across 10 addresses (50 emails each, low risk). If an account's health score drops, it's automatically paused while others pick up the slack.
 
+
 ### Key Capabilities
 
+
 - **Rotation Pools**: Group accounts by purpose (e.g., "Sales Team", "Newsletter", "Cold Outreach")
+
+
 - **Smart Load Balancing**: Distribute volume based on account age, warmup status, and health score
+
+
 - **Auto-Pause & Recovery**: Automatically remove accounts with high bounce rates or low reputation
+
+
 - **Domain Diversity**: Rotate across different domains to prevent domain-wide blacklisting
+
+
 - **Volume Ramping**: Automatically increase limits as accounts mature
+
+
 - **Unified Analytics**: Track performance of the entire pool as a single entity
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Set Up Your First Rotation Pool
 
+
 #### Step 1: Create a Pool
 
+
 ```
+
 Dashboard → Infrastructure → Rotation Pools → Create New
 
 Pool Configuration:
@@ -55,13 +84,18 @@ Pool Configuration:
 │ Daily Limit per Account: [50] emails                │
 │ Min. Delay between sends: [120] seconds             │
 └─────────────────────────────────────────────────────┘
+
+
 ```
+
 
 #### Step 2: Add Accounts
 
 Select accounts to include in this rotation.
 
+
 ```
+
 Available Accounts:
 ☑ sarah@company.com (Health: 98%)
 ☑ mike@company.com (Health: 95%)
@@ -69,13 +103,18 @@ Available Accounts:
 ☑ hello@company.io (Health: 88%)
 
 [Add to Pool]
+
+
 ```
+
 
 #### Step 3: Assign to Campaign
 
 Link your campaign to the pool instead of a single sender.
 
+
 ```
+
 Campaign Settings → Sender:
 ┌─────────────────────────────────────────────────────┐
 │ From: [Rotation Pool: SDR Outreach Team ▼]          │
@@ -85,33 +124,51 @@ Campaign Settings → Sender:
 │ ● Pause campaign until tomorrow                     │
 │ ○ Continue with warning                             │
 └─────────────────────────────────────────────────────┘
+
+
 ```
+
 
 #### Step 4: Monitor Health
 
 **Pool Dashboard:**
 
+
 ```
+
 Status: Healthy (4/4 Active)
 Capacity: 200 emails/day
 Used Today: 145 (72%)
 
 Account Performance:
+
+
 - sarah@company.com: 45 sent | 0 bounces
+
+
 - mike@company.com: 42 sent | 1 bounce
+
+
 - sales@company.net: 38 sent | 0 bounces
+
+
 - hello@company.io: 20 sent | 0 bounces
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Configuration
+
 
 ### Smart Rotation Logic
 
 Configure how the system selects the next sender.
 
 **Weighted by Health Score:**
+
 
 ```yaml
 rotation_strategy:
@@ -125,11 +182,14 @@ rotation_strategy:
   constraints:
     min_health_score: 85
     max_bounce_rate: 2.5%
+
+
 ```
 
 **Domain Diversity Enforcement:**
 
 Ensure consecutive emails don't come from the same domain to avoid pattern detection.
+
 
 ```yaml
 diversity_rules:
@@ -140,42 +200,60 @@ diversity_rules:
   # 1. user@domain-a.com (Google)
   # 2. user@domain-b.com (Outlook)
   # 3. user@domain-c.com (Zoho)
+
+
 ```
+
 
 ### Auto-Pause & Recovery Rules
 
 Protect accounts from burning out.
 
+
 ```yaml
 safety_rules:
   # Pause triggers
   triggers:
+
+
     - if: bounce_rate_24h > 5%
       action: pause_account
       duration: 24h
       notify: admin
       
+
+
     - if: spam_complaint_count > 1
       action: pause_account
       duration: 48h
       
+
+
     - if: consecutive_failures > 3
       action: pause_account
       duration: 1h
       
   # Recovery logic
   recovery:
+
+
     - after: pause_duration
       action: enable_warmup_only
       duration: 3d
       
+
+
     - if: warmup_score > 95
       action: restore_to_pool
+
+
 ```
+
 
 ### Volume Ramping
 
 Automatically increase sending limits for new accounts.
+
 
 ```json
 {
@@ -187,13 +265,18 @@ Automatically increase sending limits for new accounts.
   },
   "condition": "health_score > 90"
 }
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Rotation Pools
@@ -265,16 +348,22 @@ CREATE TABLE account_health_logs (
 );
 
 CREATE INDEX idx_account_health_account ON account_health_logs(account_id);
+
+
 ```
+
 
 ### Rotation Algorithm (TypeScript)
 
 The core logic for selecting the next sender.
 
+
 ```typescript
 class RotationService {
   
   /**
+
+
    * Select the best account for the next email
    */
   async selectNextSender(poolId: string): Promise<EmailAccount> {
@@ -320,6 +409,8 @@ class RotationService {
   }
 
   /**
+
+
    * Weighted selection based on health and capacity
    */
   private selectWeighted(members: PoolMember[]): EmailAccount {
@@ -340,11 +431,15 @@ class RotationService {
     return scored[0].member.account;
   }
 }
+
+
 ```
+
 
 ### Health Monitoring Service
 
 Runs periodically to update scores and trigger safety rules.
+
 
 ```typescript
 class HealthMonitor {
@@ -382,9 +477,13 @@ class HealthMonitor {
     return Math.max(0, Math.min(100, score));
   }
 }
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create Pool
@@ -424,6 +523,8 @@ router.get('/api/rotation/pools/:id/status', async (req, res) => {
   
   res.json({ stats, members });
 });
+
+
 ```
 
 ---

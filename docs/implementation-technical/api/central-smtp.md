@@ -6,6 +6,7 @@ level: "2"
 persona: "Backend Developers"
 ---
 
+
 # Central SMTP API
 
 **Server**: Central Monolithic Server  
@@ -14,13 +15,16 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Overview
 
 The Central SMTP API manages the underlying infrastructure for email delivery, including IP pools, routing logic, and reputation monitoring. It is **internal-only**.
 
 ---
 
+
 ## Endpoint Categories
+
 
 ### 1. IP & Pool Management
 
@@ -30,8 +34,12 @@ Manage IP inventory, pools, and capacity.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/smtp/admin/ips` - List IPs
+
+
 - `GET /api/v1/smtp/admin/pools` - List Pools
+
 
 ### 2. Routing & Assignment
 
@@ -41,8 +49,12 @@ Assign tenants to specific pools or IPs.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/smtp/admin/assignments` - View assignments
+
+
 - `PUT /api/v1/smtp/admin/assignments/{id}` - Update assignment
+
 
 ### 3. Reputation & Health
 
@@ -52,15 +64,20 @@ Monitor infrastructure health signals.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/smtp/admin/ips/health-summary`
 
 ---
+
 
 ## Authentication
 
 **Required Roles**:
 
+
 - `ROLE_SMTP_ADMIN`
+
+
 - `ROLE_DELIVERABILITY_ENGINEER`
 
 **Audit**:

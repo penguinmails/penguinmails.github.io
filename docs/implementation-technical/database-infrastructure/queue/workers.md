@@ -5,36 +5,62 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Backend Engineers"
 related_docs:
+
+
   - "[Main Guide](main) - Complete overview"
+
+
   - "[Architecture](architecture) - System design principles"
+
+
   - "[Management](management) - Redis and migrator details"
 ---
 
+
 # Worker Processes
+
 
 ## Overview
 
 Worker processes consume jobs from Redis queues and execute the actual business logic. These stateless services provide horizontal scalability, fault tolerance, and comprehensive error handling for reliable job processing.
 
+
 ## Worker Architecture
+
 
 ### Core Design Principles
 
 **Stateless Design**:
 
+
 - Workers maintain no persistent state between jobs
+
+
 - All job data retrieved from Redis and PostgreSQL
+
+
 - Can be scaled up/down without data loss
+
+
 - Multiple workers can process same queue type
 
 **Fault Tolerance**:
 
+
 - Automatic job reassignment on worker failure
+
+
 - Timeout-based job recovery
+
+
 - Graceful shutdown with job completion
+
+
 - Dead letter queue for permanent failures
 
+
 ### Worker Lifecycle Management
+
 
 ```pseudo
 class QueueWorker {
@@ -97,11 +123,16 @@ class QueueWorker {
     }
   }
 }
+
+
 ```
+
 
 ## Job Processing Workflow
 
+
 ### Core Processing Logic
+
 
 ```pseudo
 async function processJob(job: Job, queueName: string) {
@@ -138,9 +169,13 @@ async function processJob(job: Job, queueName: string) {
     await this.handleJobFailure(job, error)
   }
 }
+
+
 ```
 
+
 ### Job Execution by Queue Type
+
 
 ```pseudo
 async function executeJobLogic(payload: JobPayload, queueName: string) {
@@ -167,11 +202,16 @@ async function executeJobLogic(payload: JobPayload, queueName: string) {
       throw new Error(`Unknown queue type: ${queueName}`)
   }
 }
+
+
 ```
+
 
 ## Specialized Job Handlers
 
+
 ### Email Processing
+
 
 ```pseudo
 async function processIncomingEmail(payload) {
@@ -227,9 +267,13 @@ async function processIncomingEmail(payload) {
     throw new Error(`Email processing failed: ${error.message}`)
   }
 }
+
+
 ```
 
+
 ### Email Sending
+
 
 ```pseudo
 async function processEmailSending(payload) {
@@ -283,9 +327,13 @@ async function processEmailSending(payload) {
     throw new Error(`Email sending failed: ${error.message}`)
   }
 }
+
+
 ```
 
+
 ### Warmup Processing
+
 
 ```pseudo
 async function processWarmupJob(payload) {
@@ -316,9 +364,13 @@ async function processWarmupJob(payload) {
     throw new Error(`Warmup processing failed: ${error.message}`)
   }
 }
+
+
 ```
 
+
 ### Bounce Processing
+
 
 ```pseudo
 async function processBounceJob(payload) {
@@ -366,11 +418,16 @@ async function processBounceJob(payload) {
     throw new Error(`Bounce processing failed: ${error.message}`)
   }
 }
+
+
 ```
+
 
 ## Error Handling and Retry Logic
 
+
 ### Job Failure Handling
+
 
 ```pseudo
 async function handleJobFailure(job: Job, error: Error) {
@@ -409,9 +466,13 @@ async function handleJobFailure(job: Job, error: Error) {
     logError(`Failed to log job failure for ${id}`, logError)
   }
 }
+
+
 ```
 
+
 ### Exponential Backoff Calculation
+
 
 ```pseudo
 function calculateBackoffDelay(attemptNumber: number): number {
@@ -433,11 +494,16 @@ function calculateBackoffDelay(attemptNumber: number): number {
 // Attempt 7: 128s
 // Attempt 8: 256s
 // Attempt 9: 300s (max)
+
+
 ```
+
 
 ## Job Status Management
 
+
 ### Status Updates
+
 
 ```pseudo
 async function updateJobStatus(jobId: string, status: JobStatus, additionalData: any = {}) {
@@ -473,11 +539,16 @@ async function markJobCompleted(jobId: string, result: any) {
     result: JSON.stringify(result)
   })
 }
+
+
 ```
+
 
 ## Performance Optimization
 
+
 ### Batch Processing
+
 
 ```pseudo
 // Process multiple jobs in batch for efficiency
@@ -507,11 +578,16 @@ async function processBatch(jobs: Job[]) {
   
   return results
 }
+
+
 ```
+
 
 ## Worker Scaling and Load Distribution
 
+
 ### Horizontal Scaling Strategy
+
 
 ```pseudo
 // Auto-scaling based on queue depth
@@ -546,9 +622,13 @@ function getQueueList(): string[] {
     'queue:webhook:process'
   ]
 }
+
+
 ```
 
+
 ### Graceful Shutdown
+
 
 ```pseudo
 async function gracefulShutdown() {
@@ -574,11 +654,16 @@ async function gracefulShutdown() {
   await this.cleanup()
   process.exit(0)
 }
+
+
 ```
+
 
 ## Monitoring and Health Checks
 
+
 ### Worker Health Monitoring
+
 
 ```pseudo
 async function getWorkerHealth() {
@@ -600,17 +685,31 @@ function generateWorkerId(): string {
   const random = Math.random().toString(36).substr(2, 9)
   return `worker-${hostname}-${pid}-${random}`
 }
+
+
 ```
+
 
 ## Conclusion
 
 Worker processes provide:
 
+
 - **Reliable Job Processing**: Comprehensive error handling and retry logic
+
+
 - **Horizontal Scalability**: Stateless design supports unlimited worker instances
+
+
 - **Priority Handling**: Multi-queue consumption with proper priority ordering
+
+
 - **Fault Tolerance**: Graceful shutdown and failure recovery mechanisms
+
+
 - **Performance Optimization**: Batch processing and memory management
+
+
 - **Monitoring Integration**: Real-time health and performance metrics
 
 This architecture ensures robust, scalable job processing that can handle varying workloads while maintaining system reliability and performance.

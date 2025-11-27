@@ -6,21 +6,36 @@ level: "2"
 persona: "Quality Assurance"
 ---
 
+
 # Testing Requirements & Quality Standards
+
 
 ## Testing Standards
 
+
 ### Test Coverage Requirements
 
+
 - **Overall Coverage**: Minimum 80%
+
+
 - **Critical Paths**: Minimum 90%
+
+
 - **New Code**: Must maintain existing coverage percentage
+
+
 - **Business Logic**: 95% coverage required
+
+
 - **API Endpoints**: 100% coverage for request/response handling
+
 
 ### Test Organization
 
+
 ```
+
 tests/
 ├── unit/                          # Unit tests
 │   ├── test_email_service.py      # Service layer tests
@@ -40,9 +55,13 @@ tests/
 │   ├── user_profiles.json         # User profile data
 │   └── analytics_data.json        # Analytics test data
 └── conftest.py                   # Pytest configuration
+
+
 ```
 
+
 ## Unit Testing Standards
+
 
 ```typescript
 // tests/unit/test-email-service.ts
@@ -221,9 +240,13 @@ interface EmailResult {
   status: EmailStatus;
   sentAt: Date;
 }
+
+
 ```
 
+
 ## Integration Testing Standards
+
 
 ```typescript
 // tests/integration/test-campaign-api.ts
@@ -599,9 +622,13 @@ async function updateCampaign(
   const updated = await mockDatabase.campaigns.update(id, data);
   return { success: true, data: updated };
 }
+
+
 ```
 
+
 ## End-to-End Testing Standards
+
 
 ```typescript
 // tests/e2e/campaign-workflow.spec.ts
@@ -729,34 +756,67 @@ test.describe('Campaign Workflow E2E Tests', () => {
     await expect(page.locator('[data-testid="mobile-success"]')).toContainText('Campaign created');
   });
 });
+
+
 ```
+
 
 ## Testing Best Practices
 
+
 ### Unit Testing Guidelines
 
+
 1. **Test Isolation**: Each test should be independent
+
+
 2. **Arrange-Act-Assert**: Clear test structure
+
+
 3. **Mock External Dependencies**: Use mocks for external services
+
+
 4. **Test Edge Cases**: Cover boundary conditions
+
+
 5. **Descriptive Test Names**: Test names should describe what is being tested
+
 
 ### Integration Testing Guidelines
 
+
 1. **Test Real Dependencies**: Use actual databases and services
+
+
 2. **Clean State**: Reset database state between tests
+
+
 3. **Error Handling**: Test failure scenarios
+
+
 4. **Performance**: Test response times and scalability
+
 
 ### E2E Testing Guidelines
 
+
 1. **User Journey Focus**: Test complete user workflows
+
+
 2. **Realistic Data**: Use realistic test data
+
+
 3. **Cross-Browser**: Test in multiple browsers
+
+
 4. **Mobile Testing**: Test mobile responsiveness
+
+
 5. **Performance**: Monitor page load times
 
+
 ### Test Data Management
+
 
 ```typescript
 // tests/fixtures/sample-campaigns.ts
@@ -992,37 +1052,62 @@ export const validationTestCases = {
 //     });
 //   });
 // });
+
+
 ```
+
 
 ## Running Tests
 
+
 ```bash
+
+
 # Run all tests
+
 npm test
 
+
 # Run unit tests only
+
 npm run test:unit
 
+
 # Run integration tests only
+
 npm run test:integration
 
+
 # Run E2E tests only
+
 npm run test:e2e
 
+
 # Run tests with coverage
+
 npm run test:coverage
 
+
 # Run specific test file
+
 npm test -- --grep "test_send_email_success"
 
+
 # Run tests in watch mode
+
 npm run test:watch
 
+
 # Run E2E tests with UI
+
 npm run test:e2e:ui
 
+
 # Run tests on CI
+
 npm run test:ci
+
+
 ```
 
 For code style and quality standards, see [`code-standards.md`](code-standards).

@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # System Analytics API
 
 **Parent API**: [Platform API](/docs/implementation-technical/api/platform-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### System Overview
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: Single entrypoint for executive and operational dashboards.
 
 **Response**:
+
 
 ```json
 {
@@ -41,7 +45,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Tenant System Summary
 
@@ -50,6 +57,7 @@ persona: "Backend Developers"
 **Purpose**: System overview for a single tenant.
 
 **Response**:
+
 
 ```json
 {
@@ -66,7 +74,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Revenue & Business Metrics
 
@@ -76,7 +87,9 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `window`: 'quarterly' (default)
+
 
 ### Cost & Optimization View
 
@@ -84,11 +97,13 @@ persona: "Backend Developers"
 **URL**: `/api/v1/platform/system/cost-optimization`  
 **Purpose**: Cost analysis and optimization opportunities.
 
+
 ### System Intelligence Summary
 
 **Method**: `GET`  
 **URL**: `/api/v1/platform/system/intelligence/summary`  
 **Purpose**: Lightweight system intelligence for dashboard overview.
+
 
 ### Business Planning View
 

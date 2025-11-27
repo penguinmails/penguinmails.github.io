@@ -6,39 +6,66 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - campaigns/campaign-management/overview
+
+
   - campaigns/ab-testing
+
+
   - leads/contact-segmentation
 related_tasks:
+
+
   - epic-6-core-email-pipeline
 ---
+
 
 # Campaign Scheduling
 
 **Quick Access**: Schedule campaigns with precision using timezone-aware scheduling, AI-powered send-time optimization, and calendar integration for maximum engagement.
 
+
 ## Overview
 
 Campaign Scheduling enables precise control over when your emails are sent, with intelligent features like timezone-aware delivery, send-time optimization based on recipient behavior, business hours enforcement, and calendar integration. Maximize engagement by reaching contacts at their optimal times.
 
+
 ### Key Capabilities
 
+
 - **Timezone-Aware Scheduling**: Send emails at the perfect local time for each recipient
+
+
 - **Send-Time Optimization**: AI-powered optimal send time based on historical engagement
+
+
 - **Business Hours Enforcement**: Automatically respect business hours and skip weekends
+
+
 - **Calendar Integration**: Sync with Google Calendar and Outlook for event-based campaigns
+
+
 - **Recurring Campaigns**: Set up daily, weekly, or monthly recurring schedules
+
+
 - **Batch Scheduling**: Schedule multiple campaigns at once with smart conflict resolution
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Schedule Your First Campaign
 
+
 #### Step 1: Basic Scheduling
 
+
 ```
+
 Campaign Builder → Schedule Tab
 
 ┌─────────────────────────────────────────────────────┐
@@ -53,39 +80,65 @@ Campaign Builder → Schedule Tab
 │                                                     │
 │ Preview: Sends on Monday, Nov 26 at 9:00 AM EST     │
 └─────────────────────────────────────────────────────┘
+
+
 ```
+
 
 #### Step 2: Timezone Options
 
 **Single Timezone (Simple):**
 
+
 ```
+
 All contacts receive email at:
 9:00 AM Eastern Time (EST)
 
 Example:
+
+
 - Contact in New York: 9:00 AM EST
+
+
 - Contact in Los Angeles: 6:00 AM PST
+
+
 - Contact in London: 2:00 PM GMT
+
+
 ```
 
 **Recipient Timezone (Smart):**
 
+
 ```
+
 Each contact receives email at their local time:
 9:00 AM in their timezone
 
 Example:
+
+
 - Contact in New York: 9:00 AM EST
+
+
 - Contact in Los Angeles: 9:00 AM PST
+
+
 - Contact in London: 9:00 AM GMT
+
+
 ```
+
 
 #### Step 3: Business Hours
 
 **Enable Business Hours Protection:**
 
+
 ```
+
 ┌─────────────────────────────────────────────────────┐
 │ Business Hours Settings                             │
 │                                                     │
@@ -101,22 +154,32 @@ Example:
 │ ● Delay until next business day                     │
 │ ○ Send anyway                                       │
 └─────────────────────────────────────────────────────┘
+
+
 ```
 
 **Result:**
 
+
 ```
+
 Scheduled: Saturday, Nov 23 at 3:00 PM
 Actual Send: Monday, Nov 25 at 9:00 AM
 
 (Delayed to next business day)
+
+
 ```
+
 
 ### Recurring Campaigns
 
+
 #### Daily Newsletter
 
+
 ```
+
 Recurrence Pattern:
 ┌─────────────────────────────────────────────────────┐
 │ Frequency: ● Daily                                  │
@@ -132,14 +195,25 @@ Recurrence Pattern:
 └─────────────────────────────────────────────────────┘
 
 Preview:
+
+
 - First send: Monday, Nov 25 at 8:00 AM
+
+
 - Next 5 sends: Nov 26, 27, 28, 29, Dec 2
+
+
 - Total sends: 30 (weekdays only)
+
+
 ```
+
 
 #### Weekly Report
 
+
 ```
+
 Recurrence Pattern:
 ┌─────────────────────────────────────────────────────┐
 │ Frequency: ● Weekly                                 │
@@ -154,15 +228,24 @@ Recurrence Pattern:
 └─────────────────────────────────────────────────────┘
 
 Preview:
+
+
 - Sends every Friday at 10:00 AM
+
+
 - Next 3 sends: Nov 29, Dec 6, Dec 13
+
+
 ```
+
 
 ### Quick Schedule Templates
 
 **Pre-Built Schedule Patterns:**
 
+
 ```
+
 Common Patterns:
 ┌─────────────────────────────────────────────────────┐
 │ 📅 Morning Blast (9 AM, recipient timezone)         │
@@ -172,29 +255,47 @@ Common Patterns:
 │ 📅 Monthly Update (1st of month, 9 AM)              │
 │ 🎯 Optimal Time (AI-powered, per contact)           │
 └─────────────────────────────────────────────────────┘
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Scheduling
 
+
 ### Send-Time Optimization
+
 
 #### AI-Powered Optimal Timing
 
 **How It Works:**
 
+
 ```
+
 For each contact, analyze:
+
+
 1. Historical open times (when they opened past emails)
+
+
 2. Historical click times (when they clicked links)
+
+
 3. Industry benchmarks (typical engagement times)
+
+
 4. Day-of-week patterns (best days for this contact)
 
 Result: Personalized send time for maximum engagement
+
+
 ```
 
 **Configuration:**
+
 
 ```yaml
 send_time_optimization:
@@ -202,9 +303,17 @@ send_time_optimization:
   strategy: "engagement_based"
   
   data_sources:
+
+
     - historical_opens: weight 40%
+
+
     - historical_clicks: weight 30%
+
+
     - industry_benchmarks: weight 20%
+
+
     - day_patterns: weight 10%
   
   constraints:
@@ -214,11 +323,15 @@ send_time_optimization:
       start: "06:00"
       end: "20:00"
     respect_business_hours: true
+
+
 ```
 
 **Example Results:**
 
+
 ```
+
 Contact A (Software Developer):
   Historical pattern: Opens emails at 7:30 AM
   Optimal send time: 7:15 AM (15 min before typical open)
@@ -229,13 +342,18 @@ Contact B (Executive):
   
 Contact C (No history):
   Fallback: Industry benchmark (9:00 AM)
+
+
 ```
 
+
 ### Advanced Timezone Handling
+
 
 #### Multi-Region Campaigns
 
 **Coordinate Across Timezones:**
+
 
 ```yaml
 timezone_strategy:
@@ -250,22 +368,32 @@ timezone_strategy:
     auto_calculate: true
     
   regions:
+
+
     - name: "APAC"
       timezones: ["Pacific/Auckland", "Australia/Sydney", "Asia/Tokyo"]
       send_time: "09:00 local"
       
+
+
     - name: "EMEA"
       timezones: ["Europe/London", "Europe/Paris", "Europe/Moscow"]
       send_time: "09:00 local"
       
+
+
     - name: "Americas"
       timezones: ["America/New_York", "America/Chicago", "America/Los_Angeles"]
       send_time: "09:00 local"
+
+
 ```
 
 **Result:**
 
+
 ```
+
 Global Campaign Rollout:
 09:00 NZDT (Auckland)    → Nov 25, 9:00 AM
 09:00 AEDT (Sydney)      → Nov 25, 9:00 AM (1 hr later)
@@ -276,11 +404,15 @@ Global Campaign Rollout:
 
 Total rollout window: 17 hours
 All contacts receive at their local 9 AM
+
+
 ```
+
 
 #### Daylight Saving Time Handling
 
 **Automatic DST Adjustment:**
+
 
 ```yaml
 dst_handling:
@@ -295,11 +427,15 @@ dst_handling:
     fall_back:  # Clocks move back 1 hour
       action: "advance_1_hour"
       reason: "Avoid duplicate sends"
+
+
 ```
 
 **Example:**
 
+
 ```
+
 Campaign scheduled: 9:00 AM EST
 DST transition: March 10, 2024 (spring forward)
 
@@ -307,13 +443,18 @@ Before DST: 9:00 AM EST (UTC-5)
 After DST:  9:00 AM EDT (UTC-4)
 
 System automatically adjusts to maintain 9:00 AM local time
+
+
 ```
 
+
 ### Calendar Integration
+
 
 #### Google Calendar Sync
 
 **Event-Based Campaigns:**
+
 
 ```yaml
 calendar_integration:
@@ -321,66 +462,102 @@ calendar_integration:
   calendar_id: "primary"
   
   trigger_rules:
+
+
     - event_type: "webinar"
       campaign_template: "webinar_reminder"
       send_before: "1 hour"
       
+
+
     - event_type: "meeting"
       campaign_template: "meeting_followup"
       send_after: "2 hours"
       
+
+
     - event_type: "product_launch"
       campaign_template: "launch_announcement"
       send_at: "event_start"
+
+
 ```
 
 **Example Workflow:**
 
+
 ```
+
 Google Calendar Event Created:
   Title: "Product Launch Webinar"
   Date: Dec 1, 2025 at 2:00 PM EST
   
 Automatic Campaign Triggers:
+
+
   1. Reminder email: Dec 1 at 1:00 PM (1 hour before)
+
+
   2. Join link email: Dec 1 at 1:55 PM (5 min before)
+
+
   3. Follow-up email: Dec 1 at 4:00 PM (2 hours after)
+
+
   4. Recording email: Dec 2 at 9:00 AM (next day)
+
+
 ```
+
 
 #### Outlook Integration
 
 **Meeting-Based Automation:**
+
 
 ```yaml
 outlook_integration:
   enabled: true
   
   sync_calendars:
+
+
     - "Sales Team Calendar"
+
+
     - "Marketing Events"
   
   automation_rules:
+
+
     - calendar: "Sales Team Calendar"
       event_contains: "Demo"
       action:
         send_campaign: "demo_followup"
         delay: "1 day"
         
+
+
     - calendar: "Marketing Events"
       event_contains: "Conference"
       action:
         send_campaign: "conference_recap"
         delay: "3 days"
+
+
 ```
 
+
 ### Batch Scheduling
+
 
 #### Schedule Multiple Campaigns
 
 **Bulk Schedule Interface:**
 
+
 ```
+
 Batch Scheduler:
 ┌─────────────────────────────────────────────────────┐
 │ Selected Campaigns: 5                               │
@@ -410,11 +587,15 @@ Campaign 2: Nov 25, 11:00 AM
 Campaign 3: Nov 25, 1:00 PM
 Campaign 4: Nov 25, 3:00 PM
 Campaign 5: Nov 25, 5:00 PM
+
+
 ```
+
 
 #### Smart Conflict Resolution
 
 **Prevent Email Fatigue:**
+
 
 ```typescript
 interface ConflictResolution {
@@ -431,14 +612,24 @@ interface ConflictResolution {
     after_max_delays: 'skip';
   };
 }
+
+
 ```
 
 **Example:**
 
+
 ```
+
 Contact receives:
+
+
 - Campaign A (Priority: High) at 9:00 AM
+
+
 - Campaign B (Priority: Medium) scheduled 11:00 AM
+
+
 - Campaign C (Priority: Low) scheduled 2:00 PM
 
 Conflict Resolution:
@@ -449,24 +640,35 @@ Conflict Resolution:
 Result:
 Nov 25: Campaign A (9 AM), Campaign B (1 PM)
 Nov 26: Campaign C (9 AM)
+
+
 ```
+
 
 ### Holiday and Blackout Dates
 
+
 #### Configure Blackout Periods
+
 
 ```yaml
 blackout_dates:
   # US Holidays
+
+
   - date: "2025-12-25"
     name: "Christmas Day"
     action: "delay_to_next_business_day"
     
+
+
   - date: "2025-01-01"
     name: "New Year's Day"
     action: "delay_to_next_business_day"
   
   # Company blackouts
+
+
   - date_range:
       start: "2025-12-24"
       end: "2025-12-26"
@@ -474,14 +676,20 @@ blackout_dates:
     action: "skip"
   
   # Industry events
+
+
   - date: "2025-11-28"
     name: "Black Friday"
     action: "allow"  # Override, send anyway
+
+
 ```
 
 **Custom Holiday Calendars:**
 
+
 ```
+
 Holiday Calendar: US Federal + Company
 ┌─────────────────────────────────────────────────────┐
 │ ☑ New Year's Day                                    │
@@ -497,13 +705,18 @@ Holiday Calendar: US Federal + Company
 │ + Company Anniversary (June 15)                     │
 │ + Annual Conference (Oct 10-12)                     │
 └─────────────────────────────────────────────────────┘
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Campaign schedules
@@ -653,9 +866,13 @@ CREATE TABLE contact_send_preferences (
 );
 
 CREATE INDEX idx_contact_send_prefs_contact ON contact_send_preferences(contact_id);
+
+
 ```
 
+
 ### Scheduling Service
+
 
 ```typescript
 interface CampaignSchedule {
@@ -685,6 +902,8 @@ interface RecurrencePattern {
 
 class CampaignSchedulingService {
   /**
+
+
    * Calculate next send time for a campaign
    */
   async calculateNextSendTime(
@@ -728,6 +947,8 @@ class CampaignSchedulingService {
   }
   
   /**
+
+
    * Calculate optimal send time based on contact behavior
    */
   private async calculateOptimalSendTime(contact: Contact): Promise<Date> {
@@ -764,6 +985,8 @@ class CampaignSchedulingService {
   }
   
   /**
+
+
    * Adjust send time for recipient's timezone
    */
   private adjustForRecipientTimezone(
@@ -782,6 +1005,8 @@ class CampaignSchedulingService {
   }
   
   /**
+
+
    * Enforce business hours constraints
    */
   private enforceBusinessHours(
@@ -822,6 +1047,8 @@ class CampaignSchedulingService {
   }
   
   /**
+
+
    * Check and handle blackout dates
    */
   private async checkBlackoutDates(
@@ -849,6 +1076,8 @@ class CampaignSchedulingService {
   }
   
   /**
+
+
    * Calculate next occurrence for recurring campaign
    */
   private calculateRecurringSendTime(
@@ -887,9 +1116,13 @@ class CampaignSchedulingService {
     return nextSend;
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Process scheduled campaigns every minute
@@ -983,9 +1216,13 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
   
   logger.info('Contact send preferences updated');
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create campaign schedule
@@ -1059,26 +1296,43 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
   
   res.json({ previews });
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaign Features
 
+
 - **[Campaign Management](./campaign-management/overview.md)** - Core campaign creation and management
+
+
 - **[Email Sequences](./email-sequences.md)** - Multi-step automated sequences
+
+
 - **[A/B Testing](./ab-testing.md)** - Campaign optimization
+
 
 ### Analytics
 
+
 - **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
+
+
 - **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
+
 
 ### Technical
 
+
 - **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
+
+
 - **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
 
 ---

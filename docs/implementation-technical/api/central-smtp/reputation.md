@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Reputation API
 
 **Parent API**: [Central SMTP API](/docs/implementation-technical/api/central-smtp)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### IP Health Summary
 
@@ -23,7 +26,9 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `window`: e.g., `24h`
+
 
 ### Pool Reputation Overview
 
@@ -32,5 +37,6 @@ persona: "Backend Developers"
 **Purpose**: Aggregate reputation metrics per pool.
 
 **Query Parameters**:
+
 
 - `window`: e.g., `7d`

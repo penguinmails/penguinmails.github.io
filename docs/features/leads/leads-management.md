@@ -8,66 +8,112 @@ status: "ACTIVE"
 category: "Leads"
 ---
 
+
 # Leads Management
 
 **Centralized contact management with powerful segmentation and enrichment capabilities.**
 
 ---
 
+
 ## Overview
 
 Leads Management is the core of your audience strategy. It allows you to import, organize, clean, and segment your contacts to ensure the right message reaches the right person.
 
+
 ### Key Features
 
+
 - **Contact Database** - Unified view of all leads
+
+
 - **Smart Lists** - Dynamic segmentation based on behavior
+
+
 - **Custom Fields** - Store any data point
+
+
 - **Lead Scoring** - Identify high-value prospects
+
+
 - **Import/Export** - CSV and API support
 
 ---
 
+
 ## Level 1: Managing Contacts
+
 
 ### Adding Contacts
 
 **Methods:**
 
+
 1. **CSV Import**: Bulk upload via dashboard.
+
+
 2. **Manual Entry**: Add one-by-one.
+
+
 3. **API**: Programmatic sync from CRM.
+
+
 4. **Forms**: Web forms on your landing pages.
+
 
 ### Contact Profile
 
 **Standard Fields:**
 
+
 - Email Address (Unique Identifier)
+
+
 - First Name / Last Name
+
+
 - Company Name
+
+
 - Job Title
+
+
 - Phone Number
+
+
 - Status (Active, Unsubscribed, Bounced)
 
 **Custom Fields:**
 Create fields specific to your business:
 
+
 - `Industry` (Text)
+
+
 - `Budget` (Number)
+
+
 - `Subscription Date` (Date)
+
+
 - `VIP Status` (Boolean)
 
 ---
 
+
 ## Level 2: Segmentation
+
 
 ### Static Lists
 
 **Manual collections of contacts.**
 
+
 - Example: "Conference Attendees 2025"
+
+
 - Contacts are manually added or removed.
+
 
 ### Smart Segments
 
@@ -76,19 +122,31 @@ Automatically update as contact data changes.
 
 **Example Rules:**
 
+
 - `Industry` IS "Technology" AND `Location` IS "USA"
+
+
 - `Last Opened Email` < 30 days ago
+
+
 - `Lead Score` > 50
 
 **Use Cases:**
 
+
 - Re-engagement campaigns for inactive users
+
+
 - VIP offers for high-value leads
+
+
 - Industry-specific newsletters
 
 ---
 
+
 ## Level 3: Lead Scoring & Enrichment
+
 
 ### Lead Scoring
 
@@ -105,9 +163,15 @@ Automatically update as contact data changes.
 
 **Score Tiers:**
 
+
 - **Hot (50+)**: Ready for sales outreach
+
+
 - **Warm (20-49)**: Nurture with content
+
+
 - **Cold (<20)**: Awareness campaigns
+
 
 ### Data Enrichment (Future)
 
@@ -116,9 +180,12 @@ Automatically populate missing fields (Company Size, Location, Social Profiles) 
 
 ---
 
+
 ## Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 CREATE TABLE contacts (
@@ -142,9 +209,13 @@ CREATE TABLE lists (
   name VARCHAR(255),
   type VARCHAR(20) -- 'static' or 'dynamic'
 );
+
+
 ```
 
+
 ### API Usage
+
 
 ```javascript
 // Add a contact
@@ -159,19 +230,28 @@ POST /api/v1/contacts
 
 // Search contacts
 GET /api/v1/contacts/search?query=industry:SaaS
+
+
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaigns
 
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Sending to lists
+
 
 ### Compliance
 
+
 - **[GDPR Compliance](../compliance/gdpr-compliance.md)** - Data rights
+
+
 - **[Unsubscribe Management](../compliance/unsubscribe-management.md)** - Opt-out handling
 
 ---

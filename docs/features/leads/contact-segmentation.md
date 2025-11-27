@@ -6,61 +6,100 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - leads/leads-management
+
+
   - leads/lead-scoring
+
+
   - campaigns/campaign-management/overview
+
+
   - campaigns/personalization-system
 related_tasks:
+
+
   - epic-7-leads-management
 ---
+
 
 # Contact Segmentation
 
 **Quick Access**: Create targeted contact segments using behavioral data, demographics, and custom criteria for precise campaign targeting.
 
+
 ## Overview
 
 Contact Segmentation enables you to divide your contact database into meaningful groups based on shared characteristics, behaviors, or custom criteria. Send the right message to the right people at the right time.
 
+
 ### Key Capabilities
 
+
 - **Dynamic Segments**: Auto-updating lists based on rules
+
+
 - **Static Segments**: Manual, fixed contact lists
+
+
 - **Multi-Criteria Filtering**: Combine multiple conditions
+
+
 - **Behavioral Segmentation**: Based on email engagement
+
+
 - **Import/Export**: Bulk segment management
+
+
 - **Campaign Integration**: Direct segment-to-campaign assignment
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Your First Segment
 
+
 #### Step 1: Create Segment
 
+
 ```
+
 Contacts → Segments → Create New Segment
 
 Segment Name: Active Subscribers
 Description: Contacts who opened emails in last 30 days
 Type: ○ Dynamic  ○ Static
+
+
 ```
+
 
 #### Step 2: Define Rules (Dynamic Segment)
 
+
 ```
+
 Conditions (Match ALL):
   ☑ Last Email Opened: within last 30 days
   ☑ Subscription Status: Active
   ☑ Unsubscribed: No
 
 Preview: 2,847 contacts match
+
+
 ```
+
 
 #### Step 3: Save & Use
 
+
 ```
+
 [Save Segment]
 
 ✓ Segment created: "Active Subscribers"
@@ -68,283 +107,548 @@ Preview: 2,847 contacts match
 
 Quick Actions:
   [Create Campaign] [Export List] [View Contacts]
+
+
 ```
 
+
 ### Common Segment Types
+
 
 #### By Engagement Level
 
 **Highly Engaged:**
 
+
 ```
+
 Conditions:
+
+
   - Opened emails: ≥ 5 in last 30 days
+
+
   - Clicked links: ≥ 2 in last 30 days
+
+
   - Last activity: Within 7 days
+
+
 ```
 
 **Inactive Contacts:**
 
+
 ```
+
 Conditions:
+
+
   - Last opened: More than 90 days ago
+
+
   - Subscription status: Active
+
+
   - Unsubscribed: No
+
+
 ```
 
 **Never Engaged:**
 
+
 ```
+
 Conditions:
+
+
   - Total opens: 0
+
+
   - Total clicks: 0
+
+
   - Date added: More than 30 days ago
+
+
 ```
+
 
 #### By Demographics
 
 **Location-Based:**
 
+
 ```
+
 Conditions:
+
+
   - Country: United States
+
+
   - State: California
   OR
+
+
   - City: San Francisco
+
+
 ```
 
 **Company Size:**
 
+
 ```
+
 Conditions:
+
+
   - Custom Field: company_size
+
+
   - Value: 51-200 employees
+
+
 ```
 
 **Industry:**
 
+
 ```
+
 Conditions:
+
+
   - Custom Field: industry
+
+
   - Value: SaaS, Technology, Software
+
+
 ```
+
 
 #### By Lifecycle Stage
 
 **New Leads (Last 7 Days):**
 
+
 ```
+
 Conditions:
+
+
   - Date added: Within last 7 days
+
+
   - Emails sent: 0
+
+
 ```
 
 **Trial Users:**
 
+
 ```
+
 Conditions:
+
+
   - Custom Field: account_type = "trial"
+
+
   - Custom Field: trial_end_date: Within next 7 days
+
+
 ```
 
 **Customers:**
 
+
 ```
+
 Conditions:
+
+
   - Custom Field: account_type = "paid"
+
+
   - Custom Field: last_purchase_date: Within last 90 days
+
+
 ```
+
 
 ### Static Segments
 
 **When to Use:**
 
+
 - One-time campaigns (event invitations, announcements)
+
+
 - Manual contact selection
+
+
 - Imported lists from external sources
+
+
 - A/B test control groups
 
 **Creating Static Segment:**
 
+
 ```
+
+
 1. Select contacts manually from list
+
+
 2. Or import CSV file
+
+
 3. Name segment
+
+
 4. Save as static segment (won't auto-update)
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Segmentation
 
+
 ### Complex Rule Logic
+
 
 #### AND/OR Combinations
 
 **Engaged OR High-Value:**
 
+
 ```
+
 Match ANY of these groups:
 
 Group 1 (Engaged):
+
+
   - Opens: ≥ 3 in last 30 days
+
+
   - Clicks: ≥ 1 in last 30 days
 
 Group 2 (High-Value):
+
+
   - Custom Field: lead_score ≥ 75
+
+
   - Custom Field: customer_ltv ≥ $1,000
+
+
 ```
 
 **Advanced Multi-Condition:**
 
+
 ```
+
 Match ALL:
   Group 1 (Location):
+
+
     - Country: United States OR Canada
+
+
     - Timezone: PST, MST, CST, EST
   
   Group 2 (Engagement):
+
+
     - Last opened: Within 60 days
+
+
     - Total clicks: ≥ 5
   
   Group 3 (Not):
+
+
     - Tag: does NOT include "unqualified"
+
+
     - Custom Field: bounced ≠ true
+
+
 ```
 
+
 ### Behavioral Segmentation
+
 
 #### Email Engagement Patterns
 
 **Click-But-Never-Convert:**
 
+
 ```
+
 Conditions:
+
+
   - Total clicks: ≥ 10
+
+
   - Total conversions: 0
+
+
   - Last clicked: Within 30 days
+
+
 ```
 
 **Opens Mobile vs Desktop:**
 
+
 ```
+
 Conditions:
+
+
   - Last opened device: Mobile
+
+
   - Open count (mobile): ≥ 5
+
+
   - Open count (desktop): 0
+
+
 ```
 
 **Time-Based Engagement:**
 
+
 ```
+
 Conditions:
+
+
   - Most common open time: 9am-12pm
+
+
   - Preferred day: Monday-Friday
+
+
 ```
+
 
 #### Campaign-Specific Behavior
 
 **Clicked Specific Link:**
 
+
 ```
+
 Conditions:
+
+
   - Campaign: "Product Launch Q4"
+
+
   - Clicked URL: contains "pricing"
+
+
   - Did NOT click URL: contains "demo"
+
+
 ```
 
 **Opened But Didn't Click:**
 
+
 ```
+
 Conditions:
+
+
   - Campaign: "Feature Announcement"
+
+
   - Opened: Yes
+
+
   - Clicked any link: No
+
+
   - Days since sent: ≥ 3
+
+
 ```
+
 
 ### Lead Score Integration
 
 **Score-Based Segments:**
 
+
 ```
+
 Hot Leads (Score 80-100):
+
+
   - Lead Score: 80-100
+
+
   - Last activity: Within 14 days
+
+
   - Opened last email: Yes
 
 Warm Leads (Score 50-79):
+
+
   - Lead Score: 50-79
+
+
   - Last activity: Within 30 days
 
 Cold Leads (Score 0-49):
+
+
   - Lead Score: 0-49
   OR
+
+
   - Last activity: More than 60 days ago
+
+
 ```
+
 
 ### Custom Field Segmentation
 
 **Multi-Select Custom Fields:**
 
+
 ```
+
 Conditions:
+
+
   - Custom Field: interests
+
+
   - Contains ANY: "email marketing", "automation", "analytics"
+
+
 ```
 
 **Date-Based Custom Fields:**
 
+
 ```
+
 Trial Expiring Soon:
+
+
   - Custom Field: trial_end_date
+
+
   - Is between: today and 7 days from now
 
 Anniversary Outreach:
+
+
   - Custom Field: signup_date
+
+
   - Anniversary: this month
+
+
 ```
 
 **Numeric Range Custom Fields:**
 
+
 ```
+
 High-Value Cohort:
+
+
   - Custom Field: total_revenue
+
+
   - Is greater than: $5,000
   
+
+
   - Custom Field: lifetime_opens
+
+
   - Is greater than: 50
+
+
 ```
+
 
 ### Segment Exclusions
 
 **Exclude Other Segments:**
 
+
 ```
+
 Include:
+
+
   - Segment: "All Active Subscribers"
 
 Exclude:
+
+
   - Segment: "Recent Purchasers"
+
+
   - Segment: "Unengaged (90+ days)"
+
+
 ```
 
 **Suppress Based on Recent Activity:**
 
+
 ```
+
 Include:
+
+
   - All contacts in "Product Users"
 
 Exclude:
+
+
   - Received campaign: Within last 7 days
+
+
   - Campaign name: contains "Product"
+
+
 ```
+
 
 ### Segment Performance Tracking
 
 **View Segment Analytics:**
 
+
 ```
+
 Segment: "Active Subscribers" (2,847 contacts)
 
 Performance (Last 30 Days):
@@ -354,15 +658,24 @@ Performance (Last 30 Days):
   Revenue Generated: $12,450
 
 Trend:
+
+
   - Segment size: +12% month-over-month
+
+
   - Engagement: +5% vs all contacts
+
+
 ```
+
 
 ### Segment A/B Testing
 
 **Test Segment Criteria:**
 
+
 ```
+
 Hypothesis: "High engagement = Lead Score > 60"
 
 Test Setup:
@@ -374,13 +687,18 @@ Test Setup:
   
 Result: Segment A 2.3x higher conversion
 Action: Adjust scoring model
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Segments table
@@ -458,9 +776,13 @@ CREATE TABLE segment_analytics (
 );
 
 CREATE INDEX idx_segment_analytics_segment_date ON segment_analytics(segment_id, date);
+
+
 ```
 
+
 ### Segment Rules Engine
+
 
 ```typescript
 interface SegmentRule {
@@ -621,9 +943,13 @@ class SegmentEngine {
     });
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Recalculate dynamic segments
@@ -658,9 +984,13 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
     await calculateSegmentAnalytics(segment.id);
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create segment
@@ -725,16 +1055,28 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
     total: segment.contactCount,
   });
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Leads Management](./leads-management.md)** - Contact database and management
+
+
 - **[Lead Scoring](./lead-scoring.md)** - Behavioral scoring system
+
+
 - **[Import/Export](./import-export.md)** - Bulk contact operations
+
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use segments in campaigns
+
+
 - **[Personalization System](../campaigns/personalization-system.md)** - Segment-specific content
 
 ---

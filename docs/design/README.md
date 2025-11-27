@@ -6,6 +6,7 @@ level: "1"
 persona: "Designers & Developers"
 ---
 
+
 # Design Documentation Overview
 
 **Purpose**: This directory contains the **planning foundation** for PenguinMails' user interface, including visual specifications, UX patterns, and design standards. These are **guidelines and requirements**, not explicit implementation code.
@@ -36,19 +37,25 @@ We maintain a strict separation of concerns while ensuring tight integration:
 ### 1. Design Tokens → Code
 
 * **Design**: Defined in `design-tokens.md` (e.g., `--color-primary-500`).
+
 * **Implementation**: Implemented in Tailwind configuration and global CSS.
+
 * **Location**: `apps/web/tailwind.config.ts` and `apps/web/app/globals.css`.
 
 ### 2. Components → Code
 
 * **Design**: Specs in `component-library.md`.
+
 * **Implementation**: React components using Tailwind.
+
 * **Location**: `apps/web/components/primitives`, `apps/web/components/layout`, etc.
 
 ### 3. Views & Dashboards → Code
 
 * **Design**: Architecture in `../features/analytics/views-architecture.md`, Patterns in `analytics-ui-patterns.md`.
+
 * **Implementation**: Next.js App Router pages.
+
 * **Location**: `apps/web/app/dashboard/...`
 
 ---
@@ -56,7 +63,9 @@ We maintain a strict separation of concerns while ensuring tight integration:
 ## 📝 Workflow Guidelines
 
 1. **Design First**: Consult these documents *before* writing code.
+
 2. **Update Together**: If implementation requires a design change, update these docs.
+
 3. **Verify**: Use `accessibility-guidelines.md` checklists during PR review.
 
 ---
@@ -64,4 +73,5 @@ We maintain a strict separation of concerns while ensuring tight integration:
 ## 🔗 Related Documentation
 
 * **[API Architecture](/docs/implementation-technical/api)**: Backend services supporting these views.
+
 * **[Development Standards](/docs/implementation-technical/development-guidelines/development-standards)**: Coding standards for implementing these designs.

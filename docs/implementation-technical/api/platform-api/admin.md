@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Admin Operations API
 
 **Parent API**: [Platform API](/docs/implementation-technical/api/platform-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Users
 
@@ -23,11 +26,17 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `search`: Email or name
+
+
 - `role`: Filter by role
+
+
 - `tenant_id`: Filter by tenant
 
 **Response**:
+
 
 ```json
 {
@@ -43,13 +52,17 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Get User Details
 
 **Method**: `GET`  
 **URL**: `/api/v1/platform/admin/users/{id}`  
 **Purpose**: Get detailed user profile.
+
 
 ### User Audit Trail
 
@@ -58,6 +71,7 @@ persona: "Backend Developers"
 **Purpose**: View activity log for a specific user.
 
 **Response**:
+
 
 ```json
 {
@@ -77,7 +91,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Campaign Analytics (Cross-Tenant)
 

@@ -6,44 +6,77 @@ status: "PLANNED"
 roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
+
+
   - templates/template-editor
+
+
   - templates/template-variables
+
+
   - templates/template-management
+
+
   - campaigns/campaign-management/overview
 related_tasks:
+
+
   - epic-6-templates-content
 ---
 
 {% raw %}
 
+
 # Template Library
 
 **Quick Access**: Browse and use professionally designed email templates across multiple categories, customize them to match your brand, and share templates across workspaces.
+
 
 ## Overview
 
 The Template Library provides a curated collection of pre-built, responsive email templates designed for common use cases. Start with proven designs and customize them to match your brand, saving time while maintaining professional quality.
 
+
 ### Key Capabilities
 
+
 - **Pre-Built Templates**: 100+ professionally designed templates
+
+
 - **Multiple Categories**: Welcome, newsletter, promotional, transactional, event
+
+
 - **One-Click Customization**: Apply your brand colors and logo instantly
+
+
 - **Template Sharing**: Share templates across workspaces
+
+
 - **Template Analytics**: See which templates perform best
+
+
 - **Industry-Specific**: Templates tailored for SaaS, E-commerce, B2B
+
+
 - **Mobile-Optimized**: All templates responsive by default
+
+
 - **Regular Updates**: New templates added monthly
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Browse Template Library
 
+
 #### Library Home
 
+
 ```
+
 Templates → Library
 
 Categories:
@@ -63,11 +96,16 @@ Filter by:
   Complexity: [All ▼] [Simple] [Moderate] [Advanced]
   
 Sort by: [Most Popular ▼] [Newest] [Highest Rated]
+
+
 ```
+
 
 #### Template Preview
 
+
 ```
+
 Welcome Email - Clean & Simple
 ★★★★★ 4.8 (1,247 uses)
 
@@ -98,13 +136,19 @@ Performance:
   Avg Click Rate: 12%
   
 [Use Template] [Preview] [Customize]
+
+
 ```
+
 
 ### Use a Template
 
+
 #### Step 1: Select Template
 
+
 ```
+
 Click [Use Template]
 
 Template Name: Welcome Email - Clean & Simple
@@ -115,11 +159,16 @@ Save As:
   Workspace: [PenguinMails ▼]
   
 [Continue →]
+
+
 ```
+
 
 #### Step 2: Quick Customization
 
+
 ```
+
 Brand Customization
 
 Logo:
@@ -146,11 +195,16 @@ Social Media:
   LinkedIn: https://linkedin.com/company/yourco
   
 [Apply Branding] [Skip]
+
+
 ```
+
 
 #### Step 3: Edit Content
 
+
 ```
+
 Opens in Template Editor with pre-filled content:
 
 Welcome to {{company}}!
@@ -159,8 +213,13 @@ Hi {{first_name}},
 
 We're excited to have you on board. Here's what to do next:
 
+
 1. Complete your profile
+
+
 2. Invite your team
+
+
 3. Create your first campaign
 
 [Get Started →]
@@ -168,97 +227,204 @@ We're excited to have you on board. Here's what to do next:
 Need help? Our support team is here for you.
 
 [Edit in Visual Editor]
+
+
 ```
+
 
 ### Template Categories
 
+
 #### Welcome Series
 
+
 ```
+
 Available Templates:
 
+
 1. Clean & Simple Welcome
+
+
    - Minimalist design
+
+
    - Single CTA
+
+
    - Best for: SaaS, Apps
 
+
 2. Feature Showcase Welcome
+
+
    - Highlights 3-4 key features
+
+
    - Multiple CTAs
+
+
    - Best for: Complex products
 
+
 3. Onboarding Checklist
+
+
    - Step-by-step guide
+
+
    - Progress tracking
+
+
    - Best for: Multi-step onboarding
 
+
 4. Video Welcome
+
+
    - Embedded video thumbnail
+
+
    - Personal touch
+
+
    - Best for: High-touch sales
+
+
 ```
+
 
 #### Newsletters
 
+
 ```
+
 Available Templates:
 
+
 1. Single Article Focus
+
+
    - Hero image
+
+
    - One main story
+
+
    - Best for: Blog updates
 
+
 2. Multi-Story Digest
+
+
    - 3-5 article summaries
+
+
    - Grid layout
+
+
    - Best for: Weekly roundups
 
+
 3. Curated Links
+
+
    - List of resources
+
+
    - Minimal design
+
+
    - Best for: Industry news
 
+
 4. Image-Heavy Magazine
+
+
    - Large images
+
+
    - Editorial style
+
+
    - Best for: Visual content
+
+
 ```
+
 
 #### Promotional
 
+
 ```
+
 Available Templates:
 
+
 1. Flash Sale
+
+
    - Urgency-focused
+
+
    - Countdown timer
+
+
    - Best for: Limited-time offers
 
+
 2. Product Launch
+
+
    - Product showcase
+
+
    - Feature highlights
+
+
    - Best for: New releases
 
+
 3. Seasonal Campaign
+
+
    - Holiday themes
+
+
    - Festive design
+
+
    - Best for: Holiday sales
 
+
 4. Discount Code
+
+
    - Code highlight
+
+
    - Simple redemption
+
+
    - Best for: Coupon campaigns
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Library Features
+
 
 ### Template Customization
 
+
 #### Brand Presets
 
+
 ```
+
 Save Brand Preset
 
 Preset Name: PenguinMails Brand 2025
@@ -297,11 +463,16 @@ Buttons:
 Apply to:
   ☑ All new templates from library
   ☑ Existing templates (bulk update)
+
+
 ```
+
 
 #### Component Swapping
 
+
 ```
+
 Template: Welcome Email
 
 Swap Components:
@@ -325,13 +496,19 @@ Available Alternatives:
   ○ Multi-Column Footer
   
 [Swap Component]
+
+
 ```
+
 
 ### Template Sharing
 
+
 #### Share Across Workspaces
 
+
 ```
+
 Template: New User Welcome
 
 Sharing Settings:
@@ -350,11 +527,16 @@ Permissions:
   ☐ Can edit (modify original)
   
 [Share Template]
+
+
 ```
+
 
 #### Public Template Submission
 
+
 ```
+
 Submit to Public Library
 
 Template: Product Launch Email
@@ -377,17 +559,31 @@ License:
 [Submit for Review]
 
 Review Process:
+
+
   1. Design quality check (1-2 days)
+
+
   2. Code validation
+
+
   3. Mobile responsiveness test
+
+
   4. Approval & publication
+
+
 ```
+
 
 ### Template Analytics
 
+
 #### Performance Metrics
 
+
 ```
+
 Template: Welcome Email - Clean & Simple
 
 Usage Stats:
@@ -406,14 +602,25 @@ Compared to Category Average:
   Conversion: +1.2% ✓
   
 Top Performing Variants:
+
+
   1. With video thumbnail: 48% open rate
+
+
   2. Personalized subject: 45% open rate
+
+
   3. Original: 42% open rate
+
+
 ```
+
 
 #### A/B Test Results
 
+
 ```
+
 Template Comparison
 
 Template A: Clean & Simple Welcome
@@ -432,75 +639,156 @@ Confidence: 95%
 Recommendation:
   Use Template B for conversion-focused campaigns
   Use Template A for awareness campaigns
+
+
 ```
+
 
 ### Industry-Specific Templates
 
+
 #### SaaS Templates
 
+
 ```
+
 SaaS Template Collection (24 templates)
 
 Onboarding:
+
+
   - Trial Start Welcome
+
+
   - Feature Activation
+
+
   - Onboarding Progress
+
+
   - Trial Expiring Soon
   
 Engagement:
+
+
   - Feature Announcement
+
+
   - Product Update
+
+
   - Tips & Best Practices
+
+
   - Case Study Showcase
   
 Conversion:
+
+
   - Trial to Paid
+
+
   - Upgrade Offer
+
+
   - Annual Plan Discount
+
+
   - Enterprise Inquiry
   
 Retention:
+
+
   - Re-engagement
+
+
   - Win-back Campaign
+
+
   - Renewal Reminder
+
+
   - Success Story
+
+
 ```
+
 
 #### E-commerce Templates
 
+
 ```
+
 E-commerce Template Collection (20 templates)
 
 Transactional:
+
+
   - Order Confirmation
+
+
   - Shipping Notification
+
+
   - Delivery Confirmation
+
+
   - Return/Refund
   
 Marketing:
+
+
   - Abandoned Cart
+
+
   - Product Recommendations
+
+
   - Back in Stock
+
+
   - Price Drop Alert
   
 Seasonal:
+
+
   - Black Friday
+
+
   - Cyber Monday
+
+
   - Holiday Gift Guide
+
+
   - End of Season Sale
   
 Loyalty:
+
+
   - Birthday Discount
+
+
   - VIP Exclusive
+
+
   - Referral Program
+
+
   - Loyalty Points Update
+
+
 ```
+
 
 ### Template Versioning
 
+
 #### Template Updates
 
+
 ```
+
 Template: Welcome Email - Clean & Simple
 
 Version History:
@@ -526,13 +814,18 @@ Auto-Update:
   ☐ Auto-update my templates (not recommended)
   
 [Update to v3.0]
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Template library (public templates)
@@ -647,9 +940,13 @@ CREATE TABLE brand_presets (
 );
 
 CREATE INDEX idx_brand_presets_tenant ON brand_presets(tenant_id);
+
+
 ```
 
+
 ### Template Library Service
+
 
 ```typescript
 interface TemplateLibraryFilter {
@@ -883,9 +1180,13 @@ class TemplateLibraryService {
     };
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Update template analytics daily
@@ -906,9 +1207,13 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
     });
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Browse template library
@@ -969,15 +1274,25 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
   
   return res.json(analytics);
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Template Editor](./template-editor.md)** - Customize library templates
+
+
 - **[Template Variables](./template-variables.md)** - Personalize template content
+
+
 - **[Template Management](./template-management.md)** - Organize your templates
+
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use templates in campaigns
 
 ---

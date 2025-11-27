@@ -5,22 +5,34 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Engineering Teams"
 related_docs:
+
+
   - "[Main Guide](main) - Complete overview"
+
+
   - "[Architecture](architecture) - System design principles"
+
+
   - "[Operations](operations) - Deployment and monitoring"
 ---
 
+
 # Queue System Best Practices
+
 
 ## Overview
 
 These best practices ensure optimal performance, reliability, and maintainability of the queue system. Following these guidelines will help prevent common issues and maximize system efficiency.
 
+
 ## Performance Optimization
+
 
 ### Job Design Principles
 
+
 ### Minimize Job Payload Size
+
 
 ```pseudo
 // GOOD: Minimal, essential data only
@@ -45,11 +57,16 @@ bad_job_payload = {
   api_keys: "secret-key-value",
   user_data: full_user_profile_object
 }
+
+
 ```
+
 
 ### Database Optimization
 
+
 ### Index Strategy
+
 
 ```pseudo
 -- Essential indexes for queue operations
@@ -67,13 +84,19 @@ WHERE status IN ('queued', 'migrated_to_redis');
 -- Status reporting and analytics
 CREATE INDEX idx_jobs_status_time 
 ON jobs(status, updated_at DESC);
+
+
 ```
+
 
 ## Reliability Patterns
 
+
 ### Idempotent Job Processing
 
+
 ### Design for Idempotency
+
 
 ```pseudo
 // GOOD: Idempotent job design
@@ -114,11 +137,16 @@ async function sendWelcomeEmail(job) {
   
   return { success: true, messageId: result.messageId }
 }
+
+
 ```
+
 
 ### Timeout Management
 
+
 ### Job Timeouts
+
 
 ```pseudo
 // Set appropriate timeouts for different job types
@@ -152,13 +180,19 @@ async function processJobWithTimeout(job) {
     throw error
   }
 }
+
+
 ```
+
 
 ## Security Considerations
 
+
 ### Job Validation
 
+
 ### Input Validation
+
 
 ```pseudo
 function validateJobPayload(payload) {
@@ -177,13 +211,19 @@ function validateJobPayload(payload) {
   
   return value
 }
+
+
 ```
+
 
 ## Monitoring and Observability
 
+
 ### Key Metrics
 
+
 ### Essential Metrics to Track
+
 
 ```pseudo
 class QueueMetrics {
@@ -211,13 +251,19 @@ class QueueMetrics {
     }
   }
 }
+
+
 ```
+
 
 ## Error Handling
 
+
 ### Comprehensive Error Strategy
 
+
 ### Error Classification
+
 
 ```pseudo
 class JobErrorHandler {
@@ -253,16 +299,25 @@ class JobErrorHandler {
     return Math.floor(delay)
   }
 }
+
+
 ```
+
 
 ## Operational Excellence
 
+
 ### Deployment Best Practices
+
 
 ### Rolling Updates
 
+
 ```pseudo
+
+
 # Kubernetes rolling update strategy
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -273,7 +328,10 @@ spec:
     rollingUpdate:
       maxSurge: 1                    # Allow 1 extra worker during update
       maxUnavailable: 1              # Ensure at least N-1 workers available
+
+
 ```
+
 
 ## Conclusion
 

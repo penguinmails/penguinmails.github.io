@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Subscriptions API
 
 **Parent API**: [Platform API](/docs/implementation-technical/api/platform-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Tenant Subscriptions
 
@@ -23,12 +26,20 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `status` (optional): Filter by status ('active', 'past_due', 'canceled', 'unpaid')
+
+
 - `plan_id` (optional): Filter by plan UUID
+
+
 - `limit` (optional): Number of results (default: 50, max: 100)
+
+
 - `offset` (optional): Pagination offset (default: 0)
 
 **Response**:
+
 
 ```json
 {
@@ -59,7 +70,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Get Subscription Details
 
@@ -68,6 +82,7 @@ persona: "Backend Developers"
 **Purpose**: Retrieve detailed information about a specific subscription, including billing history.
 
 **Response**:
+
 
 ```json
 {
@@ -91,7 +106,10 @@ persona: "Backend Developers"
     ]
   }
 }
+
+
 ```
+
 
 ### Get Tenant Subscription
 
@@ -100,6 +118,7 @@ persona: "Backend Developers"
 **Purpose**: Retrieve the active subscription for a specific tenant.
 
 **Response**:
+
 
 ```json
 {
@@ -121,7 +140,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Update Subscription Status
 
@@ -131,13 +153,17 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "status": "active",
   "cancel_at_period_end": false,
   "notes": "Manual reactivation after payment issue resolved"
 }
+
+
 ```
+
 
 ### Subscription Analytics
 
@@ -147,9 +173,11 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `window`: Time window ('weekly', 'monthly', 'quarterly', 'yearly')
 
 **Response**:
+
 
 ```json
 {
@@ -164,4 +192,7 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+

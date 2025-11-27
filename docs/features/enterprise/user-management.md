@@ -8,94 +8,180 @@ status: "ACTIVE"
 category: "Enterprise"
 ---
 
+
 # User Management & Authentication
 
 **Secure user authentication and comprehensive profile management powered by NileDB.**
 
 ---
 
+
 ## MVP Status & Roadmap
+
 
 ### Current Status: MVP In Progress
 
 **What's Available Today:**
 
+
 - ✅ Email/password signup and login
+
+
 - ✅ Email verification flow
+
+
 - ✅ Password reset flow
+
+
 - ✅ Change password (authenticated)
+
+
 - ✅ JWT-based session management
+
+
 - ✅ Token refresh mechanism
+
+
 - ✅ Profile management (view/edit)
+
+
 - ✅ Team member invitations
+
+
 - ✅ Role-based access control (Owner/Admin/Member)
+
+
 - ✅ Account deletion with grace period
 
 **Missing MVP Features (Q1 2026):**
 
+
 - ⏳ Account lockout / brute force protection
+
+
 - ⏳ Session management UI (view/revoke active sessions)
+
+
 - ⏳ Email change verification flow UI
+
+
 - ⏳ Password strength enforcement (server-side)
+
+
 - ⏳ Login activity log
+
+
 - ⏳ Unverified email restrictions
+
+
 - ⏳ Remember me functionality
+
+
 - ⏳ CAPTCHA for sensitive operations
 
 **Post-MVP Enhancements (2026+):**
 
+
 - 🔮 Two-factor authentication (2FA) - Q1 2026
+
+
 - 🔮 Social login (OAuth) - Q2 2026
+
+
 - 🔮 Single sign-on (SSO) for enterprise - Q3 2026
+
+
 - 🔮 Biometric authentication - Q4 2026
+
+
 - 🔮 Advanced session management - Q4 2026
 
 **Detailed Roadmap:** [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
 
 ---
 
+
 ## Overview
 
 PenguinMails provides enterprise-grade user authentication with email/password login, profile management, password security features, and session management - all built on NileDB's secure authentication framework.
 
+
 ### Authentication Features
 
+
 - 🔐 **Secure Login** - Email/password authentication via NileDB SDK
+
+
 - 👤 **Profile Management** - Self-service profile editing
+
+
 - 🔑 **Password Security** - Forgot/reset/change password workflows
+
+
 - 🚪 **Session Management** - Secure token-based sessions
+
+
 - 👥 **Team Management** - Multi-user tenant support
+
+
 - 📧 **Email Verification** - Confirmed email addresses only
 
 ---
 
+
 ## Level 1: User Authentication
+
 
 ### Sign Up (Registration)
 
 **Create a new account and tenant:**
 
+
 ```text
 Sign Up Form:
+
+
 - Email Address *
+
+
 - Full Name *
+
+
 - Password * (min 8 characters)
+
+
 - Company Name *
+
+
 - [ ] I agree to Terms of Service
 
 [Create Account]
+
+
 ```
 
 **Sign Up Flow:**
 
+
 1. User submits registration form
+
+
 2. Backend creates tenant + owner user
+
+
 3. Email verification sent
+
+
 4. User clicks verification link
+
+
 5. Account activated
+
+
 6. Redirected to onboarding
 
 **API Endpoint:**
+
 
 ```javascript
 POST /api/v1/auth/signup
@@ -115,32 +201,54 @@ Response:
   "email_verified": false,
   "verification_sent": true
 }
+
+
 ```
 
 ---
+
 
 ### Login
 
 **Secure email/password authentication:**
 
+
 ```text
 Login Form:
+
+
 - Email Address
+
+
 - Password
+
+
 - [x] Remember me (optional)
 
 [Login] | [Forgot Password?]
+
+
 ```
 
 **Login Flow:**
 
+
 1. User enters email/password
+
+
 2. NileDB validates credentials
+
+
 3. JWT token generated (includes tenant_id)
+
+
 4. Session established
+
+
 5. Redirect to dashboard
 
 **API Endpoint:**
+
 
 ```javascript
 POST /api/v1/auth/login
@@ -163,13 +271,17 @@ Response:
   },
   "expires_in": 3600 // 1 hour
 }
+
+
 ```
 
 ---
 
+
 ### Logout
 
 **End user session:**
+
 
 ```javascript
 POST /api/v1/auth/logout
@@ -185,21 +297,30 @@ Response:
 // 1. Invalidate access token
 // 2. Revoke refresh token
 // 3. Clear server-side session
+
+
 ```
 
 **Client-side:**
 
+
 - Remove tokens from storage
+
+
 - Clear user state
+
+
 - Redirect to login page
 
 ---
+
 
 ### Email Verification
 
 **Verify email address after signup:**
 
 **Verification Email:**
+
 
 ```text
 Subject: Verify your PenguinMails account
@@ -214,9 +335,12 @@ Or copy this link:
 https://app.penguinmails.com/verify-email?token=abc123
 
 This link expires in 24 hours.
+
+
 ```
 
 **Verification Flow:**
+
 
 ```javascript
 GET /api/v1/auth/verify-email?token={verification_token}
@@ -227,26 +351,34 @@ Response:
   "email_verified": true,
   "redirect_url": "/onboarding"
 }
+
+
 ```
 
 **Re-send Verification:**
+
 
 ```javascript
 POST /api/v1/auth/resend-verification
 {
   "email": "user@example.com"
 }
+
+
 ```
 
 ---
 
+
 ## Level 2: Password Management
+
 
 ### Forgot Password
 
 **Reset password via email link:**
 
 **Forgot Password Form:**
+
 
 ```text
 Forgot Password
@@ -256,19 +388,35 @@ Enter your email address and we'll send you a link to reset your password.
 Email Address: _______________
 
 [Send Reset Link]
+
+
 ```
 
 **Reset Flow:**
 
+
 1. User enters email
+
+
 2. System sends reset link (if email exists)
+
+
 3. Link expires in 1 hour
+
+
 4. User clicks link
+
+
 5. Enter new password
+
+
 6. Password updated
+
+
 7. Auto-login with new password
 
 **API Endpoints:**
+
 
 ```javascript
 // Step 1: Request reset
@@ -297,13 +445,17 @@ Response:
   "message": "Password reset successful",
   "access_token": "eyJhbGc..." // Auto-login
 }
+
+
 ```
 
 ---
 
+
 ### Change Password
 
 **Change password while logged in:**
+
 
 ```text
 Change Password
@@ -313,17 +465,29 @@ New Password: _______________
 Confirm New Password: _______________
 
 [Update Password]
+
+
 ```
 
 **Password Requirements:**
 
+
 - ✅ Minimum 8 characters
+
+
 - ✅ At least one uppercase letter
+
+
 - ✅ At least one lowercase letter
+
+
 - ✅ At least one number
+
+
 - ✅ At least one special character (optional but recommended)
 
 **API Endpoint:**
+
 
 ```javascript
 POST /api/v1/auth/change-password
@@ -339,15 +503,20 @@ Response:
   "success": true,
   "message": "Password updated successfully"
 }
+
+
 ```
 
 ---
 
+
 ## Level 3: Profile Management
+
 
 ### View Profile
 
 **User profile information:**
+
 
 ```javascript
 GET /api/v1/users/me
@@ -368,13 +537,17 @@ Response:
     "email_notifications": true
   }
 }
+
+
 ```
 
 ---
 
+
 ### Update Profile
 
 **Edit profile information:**
+
 
 ```text
 Edit Profile
@@ -385,9 +558,12 @@ Timezone: America/Los_Angeles
 Date Format: MM/DD/YYYY
 
 [Save Changes]
+
+
 ```
 
 **API Endpoint:**
+
 
 ```javascript
 PUT /api/v1/users/me
@@ -412,9 +588,12 @@ Response:
     }
   }
 }
+
+
 ```
 
 **Changing Email:**
+
 
 ```javascript
 // Requires email verification
@@ -430,13 +609,17 @@ Response:
   "email_verification_sent": true,
   "message": "Verify your new email address"
 }
+
+
 ```
 
 ---
 
+
 ### User Preferences
 
 **Customizable user settings:**
+
 
 ```javascript
 {
@@ -459,11 +642,15 @@ Response:
     "show_onboarding": false
   }
 }
+
+
 ```
 
 ---
 
+
 ## Team & Workspace Management
+
 
 ### MVP Status & Roadmap
 
@@ -471,46 +658,94 @@ Response:
 
 **What's Available Today:**
 
+
 - ✅ Team member invitation system
+
+
 - ✅ Role-based access control (Owner, Admin, Member)
+
+
 - ✅ View all team members with status
+
+
 - ✅ Update user roles
+
+
 - ✅ Remove team members from tenant
+
+
 - ✅ Workspace assignment during invitation
+
+
 - ✅ Multi-tenant architecture with complete data isolation
 
 **Missing MVP Features (Q1 2026):**
 
+
 - ⏳ Workspace management feature documentation (2-3 days)
+
+
 - ⏳ Workspace health scoring system (3-5 days)
+
+
 - ⏳ Organization settings & branding documentation (2-3 days)
+
+
 - ⏳ RBAC permission matrix documentation (2-3 days)
+
+
 - ⏳ Team member removal workflow documentation (1-2 days)
+
+
 - ⏳ Workspace member management documentation (3-5 days)
+
+
 - ⏳ Workspace deletion & data handling documentation (3-5 days)
 
 **Post-MVP Enhancements (2026+):**
 
+
 - 🔮 Advanced permissions system (custom roles) - Q2 2026
+
+
 - 🔮 Audit logs for team actions - Q3 2026
+
+
 - 🔮 Team analytics & activity monitoring - Q4 2026
+
+
 - 🔮 Bulk user management - Q3 2026
+
+
 - 🔮 User groups & teams within tenant - Q1 2027
+
+
 - 🔮 Workspace templates - Q2 2027
+
+
 - 🔮 Workspace duplication - Q3 2027
+
+
 - 🔮 Advanced session management - Q4 2026
+
+
 - 🔮 Team member onboarding workflows - Q1 2027
+
+
 - 🔮 External user collaboration (client portal) - Q2 2027
 
 **Detailed Roadmap:** [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
 
 ---
 
+
 ### Team Management
+
 
 #### Inviting Users
 
 **Add team members to tenant:**
+
 
 ```text
 Invite Team Member
@@ -520,18 +755,32 @@ Role: [Admin ▼]
 Workspaces: [x] Client A  [ ] Client B
 
 [Send Invitation]
+
+
 ```
 
 **Invitation Flow:**
 
+
 1. Admin sends invitation
+
+
 2. Email sent to invitee
+
+
 3. Invitee clicks link
+
+
 4. Creates account or logs in
+
+
 5. Automatically added to tenant
+
+
 6. Assigned to selected workspaces
 
 **API Endpoint:**
+
 
 ```javascript
 POST /api/v1/tenants/{tenant_id}/invitations
@@ -550,13 +799,17 @@ Response:
   "status": "pending",
   "expires_at": "2025-12-01T10:00:00Z"
 }
+
+
 ```
 
 ---
 
+
 #### Managing Team Members
 
 **View all team members:**
+
 
 ```javascript
 GET /api/v1/tenants/{tenant_id}/users
@@ -584,18 +837,24 @@ Response:
   ],
   "total": 2
 }
+
+
 ```
 
 **Update User Role:**
+
 
 ```javascript
 PUT /api/v1/tenants/{tenant_id}/users/{user_id}
 {
   "role": "member" // Downgrade from admin
 }
+
+
 ```
 
 **Remove User:**
+
 
 ```javascript
 DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
@@ -603,35 +862,55 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
 // User removed from tenant
 // Loses access to all workspaces
 // Data ownership transferred to tenant owner
+
+
 ```
 
 ---
+
 
 ### Workspace Management
 
 **Multi-workspace support for agencies:**
 
+
 - Create multiple client workspaces within tenant
+
+
 - Workspace-level access control (Admin, Member, Viewer)
+
+
 - Assign team members to specific workspaces
+
+
 - Workspace health monitoring (0-100 score)
+
+
 - Isolated campaigns, leads, and settings per workspace
 
 **Workspace Routes:**
 
+
 - `/dashboard/workspaces` - List all workspaces with health scores
+
+
 - `/dashboard/workspaces/new` - Create new workspace
+
+
 - `/dashboard/workspaces/[slug]/settings` - Workspace settings
 
 **See Also:** [Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture) for technical details
 
 ---
 
+
 ## Session Management
+
 
 ### JWT Tokens
 
 **Authentication uses JWT (JSON Web Tokens):**
+
 
 ```javascript
 {
@@ -649,14 +928,20 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
   },
   "signature": "..."
 }
+
+
 ```
 
 **Token Types:**
 
+
 - **Access Token** - Short-lived (1 hour), used for API requests
+
+
 - **Refresh Token** - Long-lived (30 days), used to get new access tokens
 
 **Token Refresh:**
+
 
 ```javascript
 POST /api/v1/auth/refresh
@@ -669,21 +954,34 @@ Response:
   "access_token": "eyJhbGciOiJI...", // New access token
   "expires_in": 3600
 }
+
+
 ```
 
 ---
+
 
 ### Session Security
 
 **Security Features:**
 
+
 1. **Automatic Logout** - 30 minutes of inactivity
+
+
 2. **Token Expiration** - Access tokens expire in 1 hour
+
+
 3. **Refresh Rotation** - New refresh token on each refresh
+
+
 4. **Revocation** - Tokens can be revoked server-side
+
+
 5. **IP Tracking** - Log IP addresses for security monitoring
 
 **Session Endpoints:**
+
 
 ```javascript
 // Get active sessions
@@ -704,13 +1002,17 @@ Response:
 
 // Revoke session
 DELETE /api/v1/auth/sessions/{session_id}
+
+
 ```
 
 ---
 
+
 ## Account Deletion
 
 **Delete user account:**
+
 
 ```text
 ⚠️ Delete Account
@@ -720,9 +1022,12 @@ This will permanently delete your account and all associated data.
 Type "DELETE" to confirm: _______________
 
 [Delete My Account]
+
+
 ```
 
 **Deletion Process:**
+
 
 ```javascript
 DELETE /api/v1/users/me
@@ -739,40 +1044,72 @@ Response:
   "scheduled_deletion": "2025-12-24T10:00:00Z", // 30 days
   "message": "Account scheduled for deletion"
 }
+
+
 ```
 
 **What Happens:**
 
+
 - Immediate: Account marked for deletion, access revoked
+
+
 - 30 days: Grace period for account recovery
+
+
 - After 30 days: Permanent deletion of all data
 
 ---
 
+
 ## Related Documentation
+
 
 ### Authentication & Security
 
+
 - **[Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)** - Detailed authentication timeline and quarterly breakdown
+
+
 - **[Team Management Roadmap](/docs/features/enterprise/team-roadmap)** - Detailed team & workspace management timeline
+
+
 - **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation and workspace architecture
+
+
 - **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security overview
+
+
 - **[Vault Integration](/docs/features/integrations/overview#vault-integration)** - Secure secrets management for API keys and credentials
+
 
 ### Implementation
 
+
 - **[NileDB Authentication](../../implementation-technical/database-infrastructure/niledb.md)** - Auth implementation
+
+
 - **[API Authentication](../../implementation-technical/api/platform-api/authentication.md)** - API auth details
+
+
 - **[Public & Authentication Routes](/docs/design/routes/public-auth)** - Login, signup, password reset UI
+
+
 - **[Settings Routes](/docs/design/routes/settings)** - Profile, team management, security settings UI
+
 
 ### Tasks
 
+
 - **[Epic 2: User Authentication](../../tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+
 
 ### Roadmap
 
+
 - **[Product Roadmap](/docs/roadmap/product-roadmap#authentication--security)** - Authentication features timeline
+
+
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic authentication priorities
 
 ---

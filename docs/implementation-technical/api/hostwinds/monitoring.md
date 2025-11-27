@@ -15,11 +15,14 @@ persona: "Documentation Users"
 
 ---
 
+
 ## Serial Console and Logs
+
 
 ### get_serial / get_vnc (Get Server Logs)
 
 **Data Array Structure**:
+
 
 ```json
 [
@@ -29,9 +32,12 @@ persona: "Documentation Users"
   "3": "string", // Action/Path
   "4": "string"  // Error Message
 ]
+
+
 ```
 
 **Log Container Object**:
+
 
 ```json
 {
@@ -40,6 +46,8 @@ persona: "Documentation Users"
   "recordsFiltered": "integer",
   "data": ["data_array", "data_array..."]
 }
+
+
 ```
 
 | Spec | Detail |
@@ -52,22 +60,38 @@ persona: "Documentation Users"
 
 **Use Cases**:
 
+
 - Debugging boot failures
+
+
 - Investigating system crashes
+
+
 - Monitoring system messages
+
+
 - Troubleshooting network issues
 
 **DataTables Integration**:
 This endpoint is designed to work with jQuery DataTables for pagination and filtering. Example parameters:
 
+
 - `draw` - Draw counter for DataTables
+
+
 - `start` - Starting record index
+
+
 - `length` - Number of records to return
+
+
 - `columns` - Column definitions for filtering
 
 ---
 
+
 ## Performance Monitoring
+
 
 ### get_server_charts (Get Server Performance Data)
 
@@ -80,17 +104,33 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 
 **Period Options** (typical):
 
+
 - `1h` - Last hour
+
+
 - `24h` - Last 24 hours
+
+
 - `7d` - Last 7 days
+
+
 - `30d` - Last 30 days
 
 **Expected Metrics** (based on typical VPS monitoring):
 
+
 - CPU utilization
+
+
 - Memory usage
+
+
 - Disk I/O
+
+
 - Network bandwidth
+
+
 - Disk space usage
 
 > [!NOTE]
@@ -98,7 +138,9 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 
 ---
 
+
 ## Service Validation
+
 
 ### check_serviceid (Validate Service ID)
 
@@ -112,14 +154,23 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 
 **Use Cases**:
 
+
 - Validate service ID before operations
+
+
 - Check if instance still exists
+
+
 - Verify API access to specific instance
+
+
 - Pre-flight checks in automation scripts
 
 ---
 
+
 ## SMTP Monitoring
+
 
 ### get_smtp_filters (Get SMTP Filter Configuration)
 
@@ -132,14 +183,23 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 
 **Use Cases**:
 
+
 - Monitor spam filtering status
+
+
 - Audit SMTP security configuration
+
+
 - Track filter deployment dates
+
+
 - Verify billing for premium filters
 
 ---
 
+
 ## Maintenance and Events
+
 
 ### get_instance_maintenance (Get Maintenance Events)
 
@@ -153,26 +213,45 @@ This endpoint is designed to work with jQuery DataTables for pagination and filt
 
 **Event Types** (typical):
 
+
 - Snapshots in progress
+
+
 - Scheduled maintenance windows
+
+
 - System updates
+
+
 - Hardware migrations
+
+
 - Network maintenance
 
 **Integration Points**:
 
+
 - Alert systems for maintenance windows
+
+
 - Automated backup verification
+
+
 - Capacity planning for migrations
+
+
 - Incident response coordination
 
 ---
 
+
 ## Monitoring Integration with PenguinMails
+
 
 ### Recommended Monitoring Strategy
 
 **1. Health Checks**:
+
 
 ```javascript
 // Every 5 minutes
@@ -188,9 +267,12 @@ async function healthCheck(serviceid) {
     alert(`Instance status: ${instance.status}`);
   }
 }
+
+
 ```
 
 **2. Performance Monitoring**:
+
 
 ```javascript
 // Every hour
@@ -203,9 +285,12 @@ async function collectMetrics(serviceid) {
     alert('High CPU usage');
   }
 }
+
+
 ```
 
 **3. Maintenance Tracking**:
+
 
 ```javascript
 // Every 15 minutes
@@ -215,9 +300,12 @@ async function checkMaintenance(serviceid) {
     await logMaintenanceEvent(serviceid, maintenance);
   }
 }
+
+
 ```
 
 **4. Log Analysis**:
+
 
 ```javascript
 // On-demand or scheduled
@@ -237,114 +325,212 @@ async function analyzeLogs(serviceid) {
     await alertErrors(serviceid, errors);
   }
 }
+
+
 ```
 
 ---
 
+
 ## Alerting and Incident Response
+
 
 ### Critical Alerts
 
 **Immediate Response Required**:
 
+
 - Instance status changes to `error` or `suspended`
+
+
 - Service ID validation fails
+
+
 - Unexpected maintenance events
+
+
 - High error rate in serial logs
 
 **Warning Alerts**:
 
+
 - CPU/Memory above 80% for >15 minutes
+
+
 - Disk space above 85%
+
+
 - Network bandwidth approaching limits
+
+
 - Scheduled maintenance in next 24 hours
+
 
 ### Integration with Monitoring Tools
 
 **Prometheus/Grafana**:
 
+
 ```yaml
+
+
 # Example Prometheus scrape config
+
 scrape_configs:
+
+
   - job_name: 'hostwinds_instances'
     scrape_interval: 5m
     static_configs:
+
+
       - targets: ['monitoring-api:9090']
     metrics_path: '/metrics/hostwinds'
+
+
 ```
 
 **PagerDuty/Opsgenie**:
 
+
 - Alert on instance status changes
+
+
 - Escalate on repeated health check failures
+
+
 - Notify on scheduled maintenance
+
+
 - Page on critical errors in logs
 
 ---
 
+
 ## Best Practices
+
 
 ### Monitoring Frequency
 
+
 - **Health checks**: Every 5 minutes
+
+
 - **Performance metrics**: Every 15-60 minutes
+
+
 - **Log analysis**: Hourly or on-demand
+
+
 - **Maintenance checks**: Every 15 minutes
+
 
 ### Data Retention
 
+
 - **Real-time metrics**: 24 hours
+
+
 - **Hourly aggregates**: 30 days
+
+
 - **Daily aggregates**: 1 year
+
+
 - **Critical logs**: Indefinite
+
 
 ### Alert Thresholds
 
+
 - **CPU**: Warning at 80%, Critical at 95%
+
+
 - **Memory**: Warning at 85%, Critical at 95%
+
+
 - **Disk**: Warning at 80%, Critical at 90%
+
+
 - **Network**: Warning at 80% of limit
+
 
 ### Performance Optimization
 
+
 - Cache `check_serviceid` results (5 minutes)
+
+
 - Batch log queries when possible
+
+
 - Use appropriate time windows for charts
+
+
 - Implement exponential backoff for retries
 
 ---
 
+
 ## Troubleshooting Guide
+
 
 ### Common Issues
 
 **Serial Console Not Responding**:
 
+
 1. Verify service ID is valid
+
+
 2. Check instance status
+
+
 3. Try VNC console as alternative
+
+
 4. Contact Hostwinds support if persistent
 
 **Missing Performance Data**:
 
+
 1. Verify `period` parameter is valid
+
+
 2. Check if instance was recently created
+
+
 3. Ensure instance is running
+
+
 4. Try different time periods
 
 **Maintenance Events Not Showing**:
 
+
 1. Verify no maintenance is scheduled
+
+
 2. Check if instance is in maintenance mode
+
+
 3. Poll more frequently during known maintenance windows
 
 ---
 
+
 ## Related Documentation
 
+
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
+
+
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management) - Instance operations
+
+
 - [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices) - Error handling and workflows
+
+
 - [Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - System monitoring integration
 
 ---

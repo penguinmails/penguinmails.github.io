@@ -6,6 +6,7 @@ level: "2"
 persona: "Backend Developers, Frontend Developers"
 ---
 
+
 # Queue API
 
 **Server**: Central Monolithic Server  
@@ -14,13 +15,16 @@ persona: "Backend Developers, Frontend Developers"
 
 ---
 
+
 ## Overview
 
 The Queue API handles asynchronous system events and provides notification feeds for operational monitoring. It aligns with the [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation).
 
 ---
 
+
 ## Endpoint Categories
+
 
 ### 1. Event Processing
 
@@ -30,7 +34,9 @@ Publish system events for processing and notification generation.
 
 **Key Endpoints**:
 
+
 - `POST /api/v1/queue/events` - Publish system event
+
 
 ### 2. Notifications
 
@@ -40,8 +46,12 @@ Retrieve and manage system notifications.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/queue/notifications` - Notification feed
+
+
 - `POST /api/v1/queue/notifications/{id}/reviewed` - Mark reviewed
+
 
 ### 3. Job Management
 
@@ -51,13 +61,18 @@ Monitor and manage background jobs (Hybrid PostgreSQL + Redis).
 
 ---
 
+
 ## Authentication
 
 **Headers**:
+
 
 - `Authorization`: Bearer token
 
 **Roles**:
 
+
 - Event Producers: `system:publish` scope
+
+
 - Notification Consumers: All user roles (scoped to their access level)

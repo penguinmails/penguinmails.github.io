@@ -6,42 +6,75 @@ status: "PLANNED"
 roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
+
+
   - templates/template-management
+
+
   - templates/template-variables
+
+
   - templates/template-library
+
+
   - campaigns/campaign-management/overview
 related_tasks:
+
+
   - epic-6-templates-content
 ---
+
 
 # Template Editor
 
 **Quick Access**: Create beautiful, responsive email templates with a powerful visual editor featuring drag-and-drop components, live preview, and HTML editing capabilities.
 
+
 ## Overview
 
 The Template Editor is a comprehensive WYSIWYG (What You See Is What You Get) email design tool that allows marketers and designers to create professional email templates without requiring extensive coding knowledge, while still providing full HTML access for advanced users.
 
+
 ### Key Capabilities
 
+
 - **Drag-and-Drop Interface**: Build emails visually with pre-built components
+
+
 - **WYSIWYG Editing**: See exactly how your email will look
+
+
 - **HTML/Visual Mode Toggle**: Switch between visual and code editing
+
+
 - **Component Library**: Pre-designed buttons, headers, footers, images, text blocks
+
+
 - **Mobile Preview**: Real-time preview for desktop, tablet, and mobile
+
+
 - **Template Versioning**: Auto-save and version history
+
+
 - **Responsive Design**: Mobile-first, responsive by default
+
+
 - **Undo/Redo**: Full edit history
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Your First Template
 
+
 #### Step 1: Create New Template
 
+
 ```
+
 Templates → Create Template
 
 Template Name: Welcome Email
@@ -53,27 +86,43 @@ Starting Point:
   ○ Import HTML
 
 [Continue →]
+
+
 ```
+
 
 #### Step 2: Choose Base Template
 
+
 ```
+
 Select a Template:
 
 [Basic Email]     [Newsletter]     [Promotional]
 [Transactional]   [Event]          [Product Launch]
 
 Selected: Basic Email
+
+
   - Simple header with logo
+
+
   - Single column content area
+
+
   - Footer with social links
 
 [Use This Template]
+
+
 ```
+
 
 #### Step 3: Visual Editor
 
+
 ```
+
 ┌─────────────────────────────────────────────────────────┐
 │ Template Editor: Welcome Email               [Save ▼]  │
 ├─────────────────────────────────────────────────────────┤
@@ -97,11 +146,16 @@ Selected: Basic Email
 
 Mode: [Visual] [HTML] [Preview]
 Device: [📱 Mobile] [📱 Tablet] [🖥️ Desktop]
+
+
 ```
+
 
 #### Step 4: Drag Components
 
+
 ```
+
 Drag "Button" from Components → Drop in Content Area
 
 Button Properties:
@@ -112,11 +166,16 @@ Button Properties:
   Full Width: ☐
 
 [Apply]
+
+
 ```
+
 
 #### Step 5: Edit Content
 
+
 ```
+
 Click on Text Block:
 
 "Welcome to PenguinMails"
@@ -132,11 +191,16 @@ Variables Available:
   {{company}}
   
 [Insert Variable ▼]
+
+
 ```
+
 
 #### Step 6: Mobile Preview
 
+
 ```
+
 Switch to Mobile View: 📱
 
 Preview:
@@ -156,11 +220,16 @@ Preview:
 └──────────┘
 
 ✓ Looks good on mobile
+
+
 ```
+
 
 #### Step 7: Save Template
 
+
 ```
+
 [Save ▼]
   ● Save
   ○ Save As...
@@ -171,28 +240,41 @@ Last saved: 2 seconds ago
 
 Actions:
   [Preview] [Test Send] [Use in Campaign]
+
+
 ```
+
 
 ### Common Editing Tasks
 
+
 #### Add a Header
 
+
 ```
+
 Drag "Header" component to top:
 
 Header Settings:
   Logo: [Upload] (max 200kb)
+
+
     - Recommended: 600x200px
   Background Color: #ffffff
   Padding: 20px
   Alignment: Center
 
 [Apply]
+
+
 ```
+
 
 #### Add Social Media Links
 
+
 ```
+
 Drag "Social" component:
 
 Social Media Links:
@@ -209,11 +291,16 @@ Icon Style:
   ○ Square B&W
 
 [Apply]
+
+
 ```
+
 
 #### Insert Image
 
+
 ```
+
 Drag "Image" component:
 
 Image Source:
@@ -232,15 +319,20 @@ Link to:
   URL: https://example.com/product
 
 [Insert]
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Editing Features
+
 
 ### HTML/Visual Mode Toggle
 
 **Switch to HTML Mode:**
+
 
 ```html
 <!DOCTYPE html>
@@ -308,130 +400,259 @@ Link to:
   </table>
 </body>
 </html>
+
+
 ```
+
 
 ### Component Library
 
 **Structure Components:**
 
+
 ```yaml
 row:
   description: "Container for columns"
   settings:
+
+
     - background_color
+
+
     - padding
+
+
     - full_width
     
 column:
   description: "Content column (supports 1-4 columns)"
   layouts:
+
+
     - single: "100%"
+
+
     - two_equal: "50% | 50%"
+
+
     - two_third: "66% | 33%"
+
+
     - three_equal: "33% | 33% | 33%"
+
+
     - four_equal: "25% | 25% | 25% | 25%"
+
+
 ```
 
 **Content Components:**
+
 
 ```yaml
 text_block:
   description: "Rich text editor"
   supports:
+
+
     - Bold, Italic, Underline
+
+
     - Headings (H1-H6)
+
+
     - Lists (ordered, unordered)
+
+
     - Links
+
+
     - Font family, size, color
+
+
     - Alignment
+
+
     - Line height, letter spacing
     
 image:
   description: "Image with link"
   settings:
+
+
     - source: upload | url | asset_library
+
+
     - alt_text
+
+
     - width, height
+
+
     - alignment
+
+
     - link_url
+
+
     - border, padding
     
 button:
   description: "Call-to-action button"
   styles:
+
+
     - primary: "#0066cc"
+
+
     - secondary: "#6c757d"
+
+
     - success: "#28a745"
+
+
     - danger: "#dc3545"
+
+
     - custom: "any color"
   settings:
+
+
     - text
+
+
     - link_url
+
+
     - style
+
+
     - alignment
+
+
     - full_width
+
+
     - border_radius
+
+
     - padding
     
 divider:
   description: "Horizontal line separator"
   settings:
+
+
     - line_style: solid | dashed | dotted
+
+
     - color
+
+
     - thickness
+
+
     - width
+
+
     - padding
     
 spacer:
   description: "Vertical spacing"
   settings:
+
+
     - height: 10px - 100px
     
 html:
   description: "Custom HTML block"
   usage: "For advanced users"
+
+
 ```
 
 **Layout Components:**
+
 
 ```yaml
 header:
   description: "Email header with logo and navigation"
   presets:
+
+
     - logo_centered
+
+
     - logo_left_menu_right
+
+
     - full_width_image
     
 footer:
   description: "Email footer with legal and social"
   includes:
+
+
     - unsubscribe_link (required)
+
+
     - company_address
+
+
     - social_media_links
+
+
     - copyright_text
     
 social:
   description: "Social media icons"
   platforms:
+
+
     - facebook
+
+
     - twitter
+
+
     - linkedin
+
+
     - instagram
+
+
     - youtube
+
+
     - tiktok
   styles:
+
+
     - round_color
+
+
     - square_color
+
+
     - round_bw
+
+
     - square_bw
+
+
     - icons_only
+
+
 ```
+
 
 ### Advanced Styling
 
 **Global Styles:**
 
+
 ```
+
 Settings → Global Styles
 
 Typography:
@@ -456,9 +677,12 @@ Buttons:
   Border Radius: 4px
   Padding: 15px 30px
   Font Weight: 600
+
+
 ```
 
 **Responsive Settings:**
+
 
 ```yaml
 breakpoints:
@@ -472,13 +696,18 @@ mobile_overrides:
   button_full_width: true
   hide_images: optional
   stack_columns: true  # 2-col → 1-col
+
+
 ```
+
 
 ### Template Versioning
 
 **Version History:**
 
+
 ```
+
 Template: Welcome Email (v8)
 
 Version History:
@@ -501,16 +730,26 @@ Version History:
 └────────────────────────────────────────────────────┘
 
 Auto-save: ✓ Enabled (every 30 seconds)
+
+
 ```
 
 **Compare Versions:**
 
+
 ```
+
 Version Comparison: v7 → v8
 
 Changes:
+
+
   - Button style: Secondary → Primary
+
+
   - Button color: #6c757d → #0066cc
+
+
   - Button text: "Learn More" → "Get Started"
 
 Side-by-Side View:
@@ -522,13 +761,18 @@ Side-by-Side View:
 └──────────────┴──────────────┘
 
 [Restore v7] [Keep v8] [Merge Changes]
+
+
 ```
+
 
 ### Template Testing
 
 **Preview & Test:**
 
+
 ```
+
 Template: Welcome Email
 
 Preview Mode:
@@ -553,39 +797,72 @@ Email Client Preview:
   ☑ Yahoo Mail
   
   [Generate Previews] (uses Litmus/Email on Acid API)
+
+
 ```
 
 **Validation Checks:**
 
+
 ```
+
 Template Validation
 
 ✓ Passed:
+
+
   - Valid HTML structure
+
+
   - Mobile responsive
+
+
   - Unsubscribe link present
+
+
   - Alt text on images
+
+
   - No broken links
+
+
   - File size < 100kb
 
 ⚠ Warnings:
+
+
   - Some email clients may not support web fonts
+
+
   - Image "hero.jpg" is 150kb (recommended < 100kb)
   
 ✗ Errors:
+
+
   - None
 
 Spam Score: 2.1 / 10 (✓ Good)
+
+
   - Subject line length OK
+
+
   - No spammy words detected
+
+
   - Image-to-text ratio OK
+
+
 ```
+
 
 ### Collaboration Features
 
 **Comments & Feedback:**
 
+
 ```
+
 Template Editor → Comments
 
 💬 Sarah Johnson (2 hours ago)
@@ -602,11 +879,15 @@ Template Editor → Comments
    Status: ✓ Resolved
 
 [Add Comment]
+
+
 ```
 
 **Approval Workflow:**
 
+
 ```
+
 Template Status: Pending Approval
 
 Workflow:
@@ -618,13 +899,18 @@ Comments:
   Michael: "Looks good, approved for marketing review"
   
 [Request Changes] [Approve Template]
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Templates
@@ -734,9 +1020,13 @@ CREATE TABLE template_components (
 );
 
 CREATE INDEX idx_components_category ON template_components(category);
+
+
 ```
 
+
 ### Template Editor Service
+
 
 ```typescript
 interface TemplateComponent {
@@ -976,9 +1266,13 @@ class TemplateEditorService {
     });
   }
 }
+
+
 ```
 
+
 ### Auto-Save System
+
 
 ```typescript
 // Client-side auto-save
@@ -1022,9 +1316,13 @@ class AutoSaveManager {
     return this.unsavedChanges;
   }
 }
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create template
@@ -1079,15 +1377,25 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
   
   return res.json({ html });
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Template Management](./template-management.md)** - Template organization and management
+
+
 - **[Template Variables](./template-variables.md)** - Dynamic content and merge tags
+
+
 - **[Template Library](./template-library.md)** - Pre-built template collection
+
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use templates in campaigns
 
 ---

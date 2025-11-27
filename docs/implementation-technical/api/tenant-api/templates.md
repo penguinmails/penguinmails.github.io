@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Templates API
 
 **Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Templates
 
@@ -23,11 +26,17 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `workspace` (string, required): Workspace slug
+
+
 - `limit` (integer, optional): Default 20
+
+
 - `offset` (integer, optional): Default 0
 
 **Response**:
+
 
 ```json
 {
@@ -48,7 +57,10 @@ persona: "Backend Developers"
     "has_more": false
   }
 }
+
+
 ```
+
 
 ### Create Template
 
@@ -58,6 +70,7 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "workspace_slug": "acme-corp",
@@ -65,9 +78,12 @@ persona: "Backend Developers"
   "subject": "Just checking in...",
   "body": "<p>Hi {{firstName}},</p>..."
 }
+
+
 ```
 
 **Response**:
+
 
 ```json
 {
@@ -78,7 +94,10 @@ persona: "Backend Developers"
     "created_at": "2025-11-21T12:00:00Z"
   }
 }
+
+
 ```
+
 
 ### Get Template Details
 
@@ -87,6 +106,7 @@ persona: "Backend Developers"
 **Purpose**: Retrieve full content of a template.
 
 **Response**:
+
 
 ```json
 {
@@ -99,7 +119,10 @@ persona: "Backend Developers"
     "variables": ["firstName", "company"]
   }
 }
+
+
 ```
+
 
 ### Update Template
 
@@ -109,12 +132,16 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "name": "New Welcome Email",
   "subject": "Welcome aboard!"
 }
+
+
 ```
+
 
 ### Delete Template
 

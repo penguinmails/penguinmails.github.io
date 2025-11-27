@@ -5,22 +5,33 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "System Engineers"
 related_docs:
+
+
   - "[Main Guide](main) - Complete overview"
+
+
   - "[Architecture](architecture) - System design principles"
+
+
   - "[Database Schema](database-schema) - Job tables and indexes"
 ---
 
+
 # Queue Management
+
 
 ## Overview
 
 Queue management handles the Redis-based high-performance job processing layer and the migrator process that bridges PostgreSQL durability with Redis speed. This component ensures efficient job routing, priority handling, and optimal worker consumption.
 
+
 ## Redis Queue Structure
+
 
 ### Queue Naming Convention
 
 Queues follow a consistent naming pattern for easy identification and priority routing:
+
 
 ```pseudo
 queue naming = {
@@ -48,11 +59,15 @@ queue naming = {
     webhook: "queue:webhook:process"
   }
 }
+
+
 ```
+
 
 ### Priority Routing Logic
 
 Jobs are automatically routed based on priority levels:
+
 
 ```pseudo
 function determineQueueName(priority, baseQueueName) {
@@ -67,13 +82,18 @@ function determineQueueName(priority, baseQueueName) {
 
 HIGH_PRIORITY_THRESHOLD = 50
 NORMAL_PRIORITY_THRESHOLD = 150
+
+
 ```
 
+
 ## Redis Data Structures
+
 
 ### Job Queue Structure (Redis Lists)
 
 Each Redis queue uses list data structures for FIFO job processing:
+
 
 ```pseudo
 // Job payload structure in Redis lists
@@ -102,11 +122,15 @@ emailJob = {
   attempt_count: 0,
   max_attempts: 3
 }
+
+
 ```
+
 
 ### Job Metadata Tracking (Redis Hashes)
 
 Real-time job status tracking using Redis hashes:
+
 
 ```pseudo
 // Redis hash for real-time status
@@ -127,11 +151,15 @@ redis.hgetall("job:uuid-job-123") = {
   started_at: "2025-10-30T09:01:00Z",
   attempt_count: "1"
 }
+
+
 ```
+
 
 ### Recent Jobs Tracking (Redis Sets)
 
 Prevents duplicate job processing:
+
 
 ```pseudo
 // Set-based duplicate prevention
@@ -143,13 +171,18 @@ if redis.sismember(`recent_jobs:${queueName}`, jobId) {
   // Skip duplicate job
   return DUPLICATE
 }
+
+
 ```
 
+
 ## Queuer Process (Migrator)
+
 
 ### Core Migration Logic
 
 The migrator service continuously moves jobs from PostgreSQL to Redis:
+
 
 ```pseudo
 class JobMigrator {
@@ -238,11 +271,15 @@ class JobMigrator {
     })
   }
 }
+
+
 ```
+
 
 ### Queue Depth Monitoring
 
 Track queue sizes for monitoring and scaling:
+
 
 ```pseudo
 async function monitorQueueDepths() {
@@ -272,13 +309,18 @@ async function monitorQueueDepths() {
   
   return depths
 }
+
+
 ```
 
+
 ## Job Retrieval for Workers
+
 
 ### Blocking Pop with Priority
 
 Workers use blocking pop (BRPOP) to efficiently retrieve jobs:
+
 
 ```pseudo
 async function workerJobRetrieval(workerId) {
@@ -311,11 +353,15 @@ async function workerJobRetrieval(workerId) {
     }
   }
 }
+
+
 ```
+
 
 ### Job Processing Workflow
 
 Complete job processing flow:
+
 
 ```pseudo
 async function processJob(job, queueName, workerId) {
@@ -370,11 +416,16 @@ async function processJob(job, queueName, workerId) {
     await handleJobFailure(job, error)
   }
 }
+
+
 ```
+
 
 ## Retry Logic and Error Handling
 
+
 ### Exponential Backoff Strategy
+
 
 ```pseudo
 async function handleJobFailure(job, error) {
@@ -432,9 +483,13 @@ async function handleJobFailure(job, error) {
     await moveToDeadLetterQueue(job, error)
   }
 }
+
+
 ```
 
+
 ### Dead Letter Queue Management
+
 
 ```pseudo
 async function moveToDeadLetterQueue(job, error) {
@@ -486,11 +541,16 @@ async function replayDeadLetterJob(jobId) {
   
   return { success: true, job_id: jobId }
 }
+
+
 ```
+
 
 ## Performance Optimization
 
+
 ### Batch Operations
+
 
 ```pseudo
 // Batch migration for efficiency
@@ -511,9 +571,13 @@ async function batchMigrateJobs(jobs) {
   // Execute all operations in single round trip
   await pipeline.exec()
 }
+
+
 ```
 
+
 ### Memory Management
+
 
 ```pseudo
 // Redis memory optimization
@@ -539,11 +603,16 @@ async function optimizeRedisMemory() {
     await triggerMemoryCleanup()
   }
 }
+
+
 ```
+
 
 ## Monitoring and Health Checks
 
+
 ### Queue Health Metrics
+
 
 ```pseudo
 async function getQueueHealth() {
@@ -574,16 +643,28 @@ async function checkRedisHealth() {
     }
   }
 }
+
+
 ```
+
 
 ## Conclusion
 
 The queue management system provides:
 
+
 - **High Performance**: Redis-based queues with millisecond latency
+
+
 - **Priority Routing**: Automatic job routing based on priority levels  
+
+
 - **Reliability**: Comprehensive error handling and retry mechanisms
+
+
 - **Monitoring**: Real-time queue health and performance tracking
+
+
 - **Scalability**: Horizontal scaling through multiple workers and Redis clustering
 
 This architecture ensures efficient job processing while maintaining data durability and system reliability.

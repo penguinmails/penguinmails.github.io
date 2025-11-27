@@ -7,44 +7,77 @@ persona: "Infrastructure Teams, Security Teams"
 keywords: ["vault", "smtp", "credentials", "security", "mailu", "encryption", "rotation"]
 ---
 
+
 # SMTP Credentials Vault Storage
+
 
 ## Overview
 
 This document describes the secure storage and management of MailU SMTP admin credentials in HashiCorp Vault. All SMTP credentials are encrypted before storage, automatically rotated every 180 days, and protected with comprehensive audit logging.
 
+
 ### Purpose
 
 Traditional approaches to storing SMTP credentials create security vulnerabilities:
 
+
 - Credentials stored in ENV files on VPS are exposed if VPS is compromised
+
+
 - Manual credential rotation is error-prone and often neglected
+
+
 - No centralized audit trail for credential access
+
+
 - Difficult to recover credentials after VPS failure
 
 Vault-based SMTP credential storage provides:
 
+
 - **Centralized Storage** - Credentials stored in Vault, not on VPS
+
+
 - **Encryption at Rest** - AES-256-GCM encryption before Vault storage
+
+
 - **Automated Rotation** - 180-day rotation policy with zero downtime
+
+
 - **Audit Trail** - All credential access logged with timestamp and user
+
+
 - **Disaster Recovery** - Rapid credential recovery from Vault backups
+
 
 ### Key Benefits
 
+
 1. **VPS Compromise Protection** - If VPS is compromised, credentials can be rotated immediately
+
+
 2. **Zero-Downtime Rotation** - Automated rotation without service interruption
+
+
 3. **Admin Troubleshooting** - PenguinMails admins can retrieve credentials for support
+
+
 4. **Emergency Reset** - Rapid credential reset in case of security incident
+
+
 5. **Compliance** - Audit trail supports SOC 2, ISO 27001, and GDPR requirements
 
+
 ## Architecture
+
 
 ### Vault Secret Structure
 
 SMTP credentials are stored in Vault at the following path:
 
+
 ```
+
 vault/smtp/{tenant_id}/admin/
 ├── username          # MailU admin username
 ├── password          # Encrypted password (AES-256-GCM)
@@ -52,20 +85,35 @@ vault/smtp/{tenant_id}/admin/
 ├── created_at        # ISO 8601 timestamp
 ├── last_rotated      # ISO 8601 timestamp
 └── rotation_policy   # "180_days"
+
+
 ```
 
 **Path Parameters:**
+
 
 - `{tenant_id}` - UUID v4 format (e.g., `550e8400-e29b-41d4-a716-446655440000`)
 
 **Secret Fields:**
 
+
 - `username` - MailU admin username (typically `admin@domain.com`)
+
+
 - `password` - Encrypted password (AES-256-GCM with random IV)
+
+
 - `webmail_url` - Full URL to MailU webmail interface
+
+
 - `created_at` - Timestamp when credentials were first created
+
+
 - `last_rotated` - Timestamp of last password rotation
+
+
 - `rotation_policy` - Rotation frequency (`180_days`)
+
 
 ### Encryption Specification
 
@@ -73,12 +121,20 @@ vault/smtp/{tenant_id}/admin/
 
 **Key Derivation:**
 
+
 - Master encryption key stored in Vault's encryption backend
+
+
 - Per-tenant encryption keys derived using HKDF (HMAC-based Key Derivation Function)
+
+
 - Salt: Tenant ID + timestamp
+
+
 - Iterations: 100,000 (PBKDF2)
 
 **Encryption Process:**
+
 
 ```typescript
 // Generate random IV (Initialization Vector)
@@ -99,13 +155,18 @@ const authTag = cipher.getAuthTag();
 
 // Store: IV + authTag + encryptedPassword
 const storedValue = Buffer.concat([iv, authTag, encryptedPassword]).toString('base64');
+
+
 ```
 
+
 ## Credential Storage Workflow
+
 
 ### Initial Storage (During MailU Setup)
 
 When a new VPS is provisioned and MailU is configured, SMTP credentials are automatically stored in Vault:
+
 
 ```mermaid
 sequenceDiagram
@@ -126,9 +187,12 @@ sequenceDiagram
     Vault-->>Backend: Confirmation
     Backend->>Backend: Log Storage Event
     Backend-->>User: VPS Ready
+
+
 ```
 
 **Implementation Steps:**
+
 
 1. **Generate MailU Admin Credentials**
 
@@ -141,12 +205,14 @@ sequenceDiagram
    await configureMailU(vpsIp, username, password);
    ```
 
+
 2. **Encrypt Password**
 
    ```typescript
    // Encrypt password before Vault storage
    const encryptedPassword = await encryptPassword(password, tenantId);
    ```
+
 
 3. **Store in Vault**
 
@@ -161,6 +227,7 @@ sequenceDiagram
      rotation_policy: '180_days'
    });
    ```
+
 
 4. **Audit Logging**
 
@@ -178,7 +245,9 @@ sequenceDiagram
    });
    ```
 
+
 ## Credential Retrieval
+
 
 ### Admin Troubleshooting Access
 
@@ -186,12 +255,20 @@ PenguinMails administrators can retrieve SMTP credentials for troubleshooting pu
 
 **Access Requirements:**
 
+
 - Admin role with `support-team` Vault policy
+
+
 - Re-authentication required (password + 2FA)
+
+
 - Time-limited access (15-minute session)
+
+
 - All access logged in audit trail
 
 **Retrieval Workflow:**
+
 
 ```mermaid
 sequenceDiagram
@@ -215,9 +292,12 @@ sequenceDiagram
     Backend-->>UI: Return Credentials (masked)
     UI->>Admin: Display Credentials (15-min timeout)
     Note over UI,Admin: Credentials auto-hidden after 15 minutes
+
+
 ```
 
 **Implementation:**
+
 
 ```typescript
 // API endpoint for admin credential retrieval
@@ -265,9 +345,13 @@ async function retrieveSmtpCredentials(
     expires_at: new Date(Date.now() + 15 * 60 * 1000) // 15 minutes
   };
 }
+
+
 ```
 
+
 ## Secure Credential Viewing UI
+
 
 ### Admin Dashboard Route
 
@@ -275,11 +359,17 @@ async function retrieveSmtpCredentials(
 
 **Access Control:**
 
+
 - Requires `platform-admin` role
+
+
 - Requires re-authentication (password + 2FA)
+
+
 - Session expires after 15 minutes of inactivity
 
 **UI Components:**
+
 
 1. **Re-authentication Modal**
 
@@ -292,6 +382,7 @@ async function retrieveSmtpCredentials(
    // Display modal requiring password + 2FA
    // Generate time-limited re-auth token on success
    ```
+
 
 2. **Credential Display Component**
 
@@ -308,6 +399,7 @@ async function retrieveSmtpCredentials(
    // - Countdown timer (15 minutes)
    // - Auto-hide after expiration
    ```
+
 
 3. **Audit Trail Display**
 
@@ -326,13 +418,24 @@ async function retrieveSmtpCredentials(
 
 **Security Features:**
 
+
 - Password initially masked (click to reveal)
+
+
 - Copy to clipboard with confirmation
+
+
 - Auto-hide credentials after 15 minutes
+
+
 - Warning banner: "Credentials expire in X minutes"
+
+
 - Audit trail visible to all admins
 
+
 ## Automated Credential Rotation
+
 
 ### 180-Day Rotation Policy
 
@@ -340,12 +443,20 @@ SMTP credentials are automatically rotated every 180 days to maintain security:
 
 **Rotation Schedule:**
 
+
 - **Frequency:** Every 180 days
+
+
 - **Trigger:** Automated cron job (daily check at 02:00 UTC)
+
+
 - **Downtime:** Zero (MailU supports immediate password change)
+
+
 - **Notification:** Email to admins 7 days before rotation
 
 **Rotation Workflow:**
+
 
 ```mermaid
 sequenceDiagram
@@ -373,9 +484,12 @@ sequenceDiagram
     else Not Due
         RotationService->>RotationService: Skip Rotation
     end
+
+
 ```
 
 **Implementation:**
+
 
 ```typescript
 // Automated rotation service (runs daily)
@@ -443,7 +557,10 @@ async function rotateSmtpCredentials(tenantId: string): Promise<void> {
   // Send notification to admins
   await sendRotationCompletedNotification(tenantId);
 }
+
+
 ```
+
 
 ### Manual Rotation
 
@@ -451,11 +568,17 @@ Admins can manually trigger credential rotation at any time:
 
 **Use Cases:**
 
+
 - Security incident (suspected credential compromise)
+
+
 - Compliance requirement (immediate rotation)
+
+
 - Troubleshooting (reset to known state)
 
 **Manual Rotation Workflow:**
+
 
 ```typescript
 // API endpoint for manual rotation
@@ -485,9 +608,12 @@ async function manualRotateSmtpCredentials(
     }
   });
 }
+
+
 ```
 
 **UI Component:**
+
 
 ```typescript
 // Manual rotation button in admin dashboard
@@ -501,15 +627,20 @@ async function manualRotateSmtpCredentials(
 >
   Rotate Credentials Now
 </Button>
+
+
 ```
 
+
 ## Emergency Credential Reset
+
 
 ### Reset Workflow
 
 In case of security incident or credential compromise, admins can perform an emergency reset:
 
 **Emergency Reset Process:**
+
 
 ```mermaid
 sequenceDiagram
@@ -534,9 +665,12 @@ sequenceDiagram
     Backend->>AuditLog: Log Emergency Reset
     Backend->>Notification: Alert Security Team
     Backend-->>Admin: Reset Complete
+
+
 ```
 
 **Implementation:**
+
 
 ```typescript
 // Emergency reset endpoint
@@ -615,9 +749,12 @@ async function emergencyResetSmtpCredentials(
     expires_at: new Date(Date.now() + 15 * 60 * 1000)
   };
 }
+
+
 ```
 
 **UI Component:**
+
 
 ```typescript
 // Emergency reset button (requires confirmation)
@@ -634,9 +771,13 @@ async function emergencyResetSmtpCredentials(
 >
   Emergency Reset
 </Button>
+
+
 ```
 
+
 ## Audit Logging
+
 
 ### Logged Events
 
@@ -644,14 +785,26 @@ All SMTP credential operations are logged in the audit trail:
 
 **Event Types:**
 
+
 - `smtp_credentials_stored` - Initial credential storage during VPS provisioning
+
+
 - `smtp_credentials_accessed` - Admin retrieval for troubleshooting
+
+
 - `smtp_credentials_rotated` - Automated or manual rotation
+
+
 - `smtp_credentials_emergency_reset` - Emergency credential reset
+
+
 - `smtp_credentials_viewed` - Credential viewing in UI
+
+
 - `smtp_credentials_copied` - Copy to clipboard action
 
 **Audit Log Schema:**
+
 
 ```typescript
 interface SmtpCredentialAuditEvent {
@@ -670,9 +823,12 @@ interface SmtpCredentialAuditEvent {
     previous_rotation?: string;
   };
 }
+
+
 ```
 
 **Audit Log Query Examples:**
+
 
 ```typescript
 // Get all credential access events for a tenant
@@ -701,7 +857,10 @@ const adminOperations = await auditLog.query({
   order_by: 'timestamp DESC',
   limit: 100
 });
+
+
 ```
+
 
 ### Audit Alerts
 
@@ -709,12 +868,20 @@ Configure alerts for suspicious activity:
 
 **Alert Triggers:**
 
+
 - Multiple credential access attempts (>5 in 1 hour)
+
+
 - Credential access outside business hours (10pm-6am)
+
+
 - Emergency reset without incident ID
+
+
 - Failed authentication attempts (>3 in 5 minutes)
 
 **Alert Implementation:**
+
 
 ```typescript
 // Monitor audit log for suspicious activity
@@ -753,15 +920,20 @@ async function monitorSmtpCredentialAccess(): Promise<void> {
     }
   }
 }
+
+
 ```
 
+
 ## Disaster Recovery Procedures
+
 
 ### Scenario 1: VPS Failure
 
 If a VPS fails or needs to be replaced, SMTP credentials can be rapidly recovered from Vault:
 
 **Recovery Process:**
+
 
 ```mermaid
 sequenceDiagram
@@ -782,9 +954,12 @@ sequenceDiagram
     Backend->>Backend: Update DNS Records
     Backend-->>Admin: VPS Restored
     Note over Admin,Backend: RTO: 1 hour, RPO: 0 (no data loss)
+
+
 ```
 
 **Implementation:**
+
 
 ```typescript
 // Recover SMTP credentials to new VPS
@@ -823,10 +998,13 @@ async function recoverSmtpCredentialsToNewVps(
     }
   });
 }
+
+
 ```
 
 **Recovery Time Objective (RTO):** 1 hour
 **Recovery Point Objective (RPO):** 0 (no data loss)
+
 
 ### Scenario 2: Vault Backup Restoration
 
@@ -834,12 +1012,20 @@ If Vault itself fails, credentials can be restored from encrypted backups:
 
 **Backup Strategy:**
 
+
 - **Frequency:** Daily at 02:00 UTC
+
+
 - **Retention:** 30 daily backups, 12 monthly backups
+
+
 - **Storage:** Encrypted S3 bucket (AES-256-GCM)
+
+
 - **Encryption Key:** Stored separately from backups
 
 **Restoration Process:**
+
 
 ```typescript
 // Restore Vault from backup
@@ -880,16 +1066,20 @@ async function restoreVaultFromBackup(
     }
   });
 }
+
+
 ```
 
 **Recovery Time Objective (RTO):** 30 minutes
 **Recovery Point Objective (RPO):** 24 hours (daily backups)
+
 
 ### Scenario 3: Credential Compromise
 
 If SMTP credentials are compromised, immediate rotation is required:
 
 **Compromise Response:**
+
 
 ```typescript
 // Respond to credential compromise
@@ -938,26 +1128,35 @@ async function respondToCredentialCompromise(
     }
   });
 }
+
+
 ```
 
 **Response Time:** Immediate (< 5 minutes)
 **Impact:** Zero downtime (MailU supports immediate password change)
 
+
 ## API Endpoints
+
 
 ### Platform Admin API
 
 **Base URL:** `/api/v1/platform-admin`
 
+
 #### Get SMTP Credentials
+
 
 ```http
 GET /tenants/{tenant_id}/smtp-credentials
 Authorization: Bearer {admin_token}
 X-Reauth-Token: {reauth_token}
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -969,9 +1168,13 @@ X-Reauth-Token: {reauth_token}
   "next_rotation": "2026-01-15T10:00:00Z",
   "expires_at": "2025-11-26T10:15:00Z"
 }
+
+
 ```
 
+
 #### Rotate SMTP Credentials
+
 
 ```http
 POST /tenants/{tenant_id}/smtp-credentials/rotate
@@ -981,9 +1184,12 @@ Content-Type: application/json
 {
   "reason": "Manual rotation for security audit"
 }
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -991,9 +1197,13 @@ Content-Type: application/json
   "rotated_at": "2025-11-26T10:00:00Z",
   "next_rotation": "2026-05-26T10:00:00Z"
 }
+
+
 ```
 
+
 #### Emergency Reset SMTP Credentials
+
 
 ```http
 POST /tenants/{tenant_id}/smtp-credentials/emergency-reset
@@ -1004,9 +1214,12 @@ Content-Type: application/json
   "incident_id": "INC-2025-001",
   "reason": "Suspected credential compromise"
 }
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -1017,16 +1230,23 @@ Content-Type: application/json
   "expires_at": "2025-11-26T10:15:00Z",
   "incident_id": "INC-2025-001"
 }
+
+
 ```
 
+
 #### Get Audit Trail
+
 
 ```http
 GET /tenants/{tenant_id}/smtp-credentials/audit
 Authorization: Bearer {admin_token}
+
+
 ```
 
 **Response:**
+
 
 ```json
 {
@@ -1054,188 +1274,393 @@ Authorization: Bearer {admin_token}
   "page": 1,
   "per_page": 50
 }
+
+
 ```
 
+
 ## Security Considerations
+
 
 ### Threat Model
 
 **Threats Mitigated:**
 
+
 1. **VPS Compromise** - Credentials stored in Vault, not on VPS
+
+
 2. **Credential Theft** - Encrypted before Vault storage (AES-256-GCM)
+
+
 3. **Unauthorized Access** - Role-based access control with re-authentication
+
+
 4. **Insider Threats** - Comprehensive audit trail tracks all access
+
+
 5. **Credential Aging** - Automated 180-day rotation policy
 
 **Residual Risks:**
 
+
 1. **Vault Compromise** - If Vault is compromised, encrypted credentials exposed (mitigated by encryption)
+
+
 2. **Encryption Key Theft** - If encryption key stolen, credentials can be decrypted (mitigated by key rotation)
+
+
 3. **Admin Account Compromise** - Compromised admin can access credentials (mitigated by re-authentication, audit trail)
+
 
 ### Best Practices
 
+
 1. **Principle of Least Privilege**
+
+
    - Only `platform-admin` and `support-team` roles can access credentials
+
+
    - Re-authentication required for every access
+
+
    - Time-limited access (15 minutes)
 
+
 2. **Defense in Depth**
+
+
    - Multiple layers: Vault access control + encryption + re-authentication + audit logging
+
+
    - No single point of failure
+
+
    - Assume breach mentality
 
+
 3. **Audit Everything**
+
+
    - All credential access logged
+
+
    - Monitor for suspicious activity
+
+
    - Alert on anomalies
 
+
 4. **Rotate Regularly**
+
+
    - Automated 180-day rotation
+
+
    - Manual rotation capability
+
+
    - Emergency reset workflow
 
+
 5. **Test Recovery**
+
+
    - Quarterly disaster recovery drills
+
+
    - Verify backup restoration
+
+
    - Document recovery procedures
 
+
 ## Compliance
+
 
 ### SOC 2 Type II
 
 **Vault SMTP Credential Storage Supports:**
 
+
 - **Security** - Access control, encryption, audit logging
+
+
 - **Availability** - Disaster recovery, automated backups
+
+
 - **Confidentiality** - Encryption at rest and in transit
+
+
 - **Processing Integrity** - Audit trail, versioning
+
+
 - **Privacy** - Tenant isolation, access control
+
 
 ### ISO 27001
 
 **Vault SMTP Credential Storage Supports:**
 
+
 - **A.9 Access Control** - Role-based access control, re-authentication
+
+
 - **A.10 Cryptography** - AES-256-GCM encryption
+
+
 - **A.12 Operations Security** - Backup, monitoring, incident response
+
+
 - **A.14 System Acquisition** - Secure development lifecycle
+
+
 - **A.18 Compliance** - Audit logging, regular reviews
+
 
 ### GDPR
 
 **Vault SMTP Credential Storage Supports:**
 
+
 - **Article 32 - Security of Processing** - Encryption, access control
+
+
 - **Article 33 - Breach Notification** - Audit trail, monitoring
+
+
 - **Article 25 - Data Protection by Design** - Encryption by default
+
 
 ## Implementation Checklist
 
+
 ### Phase 1: Vault Integration (Week 1)
 
+
 - [ ] Configure Vault KV v2 secrets engine for SMTP path
+
+
 - [ ] Create access policies for SMTP credentials
+
+
 - [ ] Implement encryption/decryption functions (AES-256-GCM)
+
+
 - [ ] Test credential storage and retrieval
+
 
 ### Phase 2: Storage Workflow (Week 1-2)
 
+
 - [ ] Implement credential storage during MailU setup
+
+
 - [ ] Encrypt passwords before Vault storage
+
+
 - [ ] Add audit logging for storage events
+
+
 - [ ] Test end-to-end VPS provisioning with credential storage
+
 
 ### Phase 3: Admin Access (Week 2)
 
+
 - [ ] Create platform admin API endpoints
+
+
 - [ ] Implement re-authentication requirement
+
+
 - [ ] Build secure credential viewing UI
+
+
 - [ ] Add time-limited access (15 minutes)
+
+
 - [ ] Test admin credential retrieval workflow
+
 
 ### Phase 4: Automated Rotation (Week 3)
 
+
 - [ ] Implement rotation check cron job (daily at 02:00 UTC)
+
+
 - [ ] Build automated rotation workflow
+
+
 - [ ] Add rotation notifications (7 days before)
+
+
 - [ ] Test automated rotation end-to-end
+
+
 - [ ] Verify zero downtime during rotation
+
 
 ### Phase 5: Emergency Reset (Week 3)
 
+
 - [ ] Implement emergency reset API endpoint
+
+
 - [ ] Build emergency reset UI component
+
+
 - [ ] Add security alerts for emergency resets
+
+
 - [ ] Test emergency reset workflow
+
+
 - [ ] Document incident response procedures
+
 
 ### Phase 6: Disaster Recovery (Week 4)
 
+
 - [ ] Document VPS failure recovery procedures
+
+
 - [ ] Test credential recovery to new VPS
+
+
 - [ ] Implement Vault backup restoration
+
+
 - [ ] Conduct disaster recovery drill
+
+
 - [ ] Verify RTO/RPO targets met
+
 
 ### Phase 7: Monitoring & Alerts (Week 4)
 
+
 - [ ] Configure audit log monitoring
+
+
 - [ ] Set up alerts for suspicious activity
+
+
 - [ ] Create admin dashboard for audit trail
+
+
 - [ ] Test alert delivery (email, Slack)
+
+
 - [ ] Document monitoring procedures
+
 
 ## Related Documentation
 
+
 ### Route Specifications
 
+
 - **[Infrastructure SSH Access Routes](/docs/design/routes/infrastructure-ssh-access)** - SSH and secrets management UI
+
+
 - **[Admin Routes](/docs/design/routes/admin)** - Admin secrets management panel
+
+
 - **[Settings Routes](/docs/design/routes/settings)** - General settings navigation
+
 
 ### Feature Documentation
 
+
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation
+
+
 - **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Tenant API key system
+
+
 - **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery)** - Backup and recovery
+
+
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - MailU configuration
+
+
 - **[Hostwind Management](/docs/features/infrastructure/hostwind-management)** - VPS provisioning workflow
+
 
 ### API Documentation
 
+
 - **[Platform API](/docs/implementation-technical/api/platform-api)** - Platform-level endpoints
+
+
 - **[Tenant SMTP API](/docs/implementation-technical/api/tenant-smtp)** - SMTP configuration endpoints
+
+
 - **[API Reference](/docs/implementation-technical/api/README)** - Complete API documentation
+
 
 ### Architecture & Security
 
+
 - **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Complete Vault architecture
+
+
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation
+
+
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Security features
+
+
 - **[Security Monitoring](/docs/operations/security-monitoring)** - Monitoring and alerting
+
 
 ### Planning & Review
 
+
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+
+
 - **[Feature Completeness Review Requirements](/.kiro/specs/feature-completeness-review/requirements.md)** - Review requirements
+
+
 - **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure roadmap
+
 
 ### Implementation Tasks
 
+
 - **[Task 11.5 - SMTP Credentials Vault Storage](/.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)** - SMTP credentials implementation
+
+
 - **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
+
+
 - **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)** - SSH key storage
+
+
 - **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - API key storage
+
+
 - **[Task 11.7 - Vault Disaster Recovery](/.kiro/specs/feature-completeness-review/tasks.md#117-implement-vault-disaster-recovery-procedures)** - Disaster recovery
+
+
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
+
 
 ### External Resources
 
+
 - **[HashiCorp Vault Documentation](https://www.vaultproject.io/docs)** - Official Vault docs
+
+
 - **[Vault KV Secrets Engine](https://www.vaultproject.io/docs/secrets/kv/kv-v2)** - Key-value storage
+
+
 - **[Vault Access Policies](https://www.vaultproject.io/docs/concepts/policies)** - Access control
+
+
 - **[AES-256-GCM Encryption](https://en.wikipedia.org/wiki/Galois/Counter_Mode)** - Encryption standard
 
 ---

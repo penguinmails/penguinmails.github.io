@@ -6,6 +6,7 @@ level: "2"
 persona: "Product Designers & Developers"
 ---
 
+
 # Frontend Routing Map & Architecture
 
 **Purpose**: This document defines the complete routing structure for the PenguinMails frontend application (Next.js 15). It serves as the blueprint for navigation, access control, and page-level requirements.
@@ -15,10 +16,15 @@ persona: "Product Designers & Developers"
 ## 1. Routing Philosophy
 
 * **Single Application**: One Next.js application serves all user types (Super Admin, Admin, Tenant).
+
 * **Role-Based Rendering**: Routes are protected by middleware; content adapts based on the user's role.
+
 * **Dashboard Layout**: The `/dashboard` path serves as the layout wrapper for all authenticated/private routes.
+
 * **Internationalization (i18n)**: Non-English routes are prefixed with the language code (e.g., `/es/dashboard/...`). The default language (English) uses the root path.
+
 * **Dynamic Dashboards**: The `/dashboard` home route is a smart traffic controller that renders the appropriate view for the user's primary role.
+
 * **Resource-Oriented**: URLs follow a RESTful resource pattern (e.g., `/dashboard/campaigns/[id]`).
 
 ---
@@ -148,36 +154,55 @@ The sidebar changes based on the user's role and current context (Global vs. Wor
 **Global Context (Tenant/Agency Root):**
 
 * Dashboard (Overview)
+
 * Inbox (Unified)
+
 * Leads (Global)
+
 * Workspaces (List)
+
 * Settings
 
 **Workspace Context (Inside a Workspace):**
 
 * *Back to Global Dashboard*
+
 * **[Workspace Name]**
+
 * Dashboard (Workspace Stats)
+
 * Campaigns
+
 * Templates
+
 * Domains
+
 * Settings (Workspace)
 
 **Super Admin View:**
 
 * Dashboard (Executive Pulse)
+
 * User Management
+
 * Tenant Management
+
 * System Ops
+
   * Queues
+
   * Logs
+
 * Finance
 
 ### 3.2 Top Navigation
 
 * **Breadcrumbs**: Contextual navigation (e.g., `Campaigns > Summer Sale > Edit`).
+
 * **Global Search**: Search for campaigns, contacts, or (for admins) users.
+
 * **User Menu**: Profile, Organization Switcher (if multi-tenant), Logout.
+
 * **Help/Support**: Link to documentation or support chat.
 
 ---
@@ -189,16 +214,21 @@ The sidebar changes based on the user's role and current context (Global vs. Wor
 All routes under `/dashboard` must be protected by Next.js middleware:
 
 1. **Authentication**: Is the user logged in?
+
 2. **Authorization**: Does the user have the required role?
+
 3. **Tenant Context**: Does the user have access to the requested resource ID?
 
 ### 4.2 Dynamic Routing & Context
 
 * **Resource IDs**: `app/campaigns/[campaignId]/page.tsx`
+
 * **Workspace Context**: For agencies accessing a client workspace (`/dashboard/workspaces/[slug]`), the UI should visually indicate the context switch (e.g., "Viewing as [Client Name]").
 
 ### 4.3 Layouts
 
 * **Public Layout**: Simple header/footer.
+
 * **App Layout**: Sidebar, Topbar, Auth Context.
+
 * **Admin Layout**: Distinct visual theme (e.g., red accent) for privileged context.

@@ -18,11 +18,17 @@ Status: **Needs Creation**
 **Required Content**:
 
 - Stripe Connect architecture overview
+
 - Light database reference approach (Stripe manages subscriptions)
+
 - Stripe Elements integration for Next.js
+
 - Customer Portal implementation for tenant self-service
+
 - Webhook endpoints and their purposes
+
 - API consumption patterns for subscription status checks
+
 - One-time payment and subscription handling
 
 **Current State**: Referenced in multiple route specs but documentation file doesn't exist yet.
@@ -40,13 +46,17 @@ Status: **Not Planned**
 **Previous References**:
 
 - `/dashboard/users` route (platform-admin.md)
+
 - 7 instances across  route specifications
 
 **Replacement**: **Audit Trail Viewer**
 
 - Comprehensive user action history
+
 - Searchable timeline with filters
+
 - Export capability for detailed analysis
+
 - Support access logging
 
 **Rationale**: Impersonation poses security and privacy concerns. Audit trail viewing provides debugging capabilities without direct account access.
@@ -54,6 +64,7 @@ Status: **Not Planned**
 **Updated Files**:
 
 - `docs/design/routes/platform-admin.md`
+
 - `docs/design/frontend-routing-map.md`
 
 ---
@@ -65,18 +76,23 @@ Status: **Not Planned**
 **Provider**: NileDB SDK (email/password only)
 
 - Front-end and back-end authentication functions
+
 - HTTP-only session cookies
+
 - CSRF protection enabled
 
 **Email Verification**: Loop service
 
 - Verification emails with magic links
+
 - Fallback 6-digit codes
+
 - 30-minute token expiration
 
 **Updated Files**:
 
 - `docs/design/routes/public-auth.md`
+
 - `docs/design/routes/workspace-assets.md`
 
 ### OAuth Providers - Potential 2027 Enhancement
@@ -84,21 +100,29 @@ Status: **Not Planned**
 **User Authentication (2027 Consideration)**:
 
 - **Current:** NileDB email/password authentication (MVP and near-term releases)
+
 - **Future Consideration:** OAuth 2.0/SSO (SAML, OpenID Connect) for enterprise customers
+
 - **Timeline:** Potential 2027 roadmap item to improve or substitute NileDB auth
+
 - **Alternative:** NileDB MFA solution (if OAuth not pursued)
+
 - **Rationale:** NileDB email/password provides secure MVP authentication. OAuth 2.0/SSO would be evaluated based on enterprise customer demand for identity provider integration.
 
 **Email Account Integration (Q4 2026 Post-MVP)**:
 
 - OAuth for Gmail/Outlook email account connections (separate from user auth)
+
 - Currently uses SMTP credentials only
+
 - **Timeline:** Q4 2026 post-MVP
+
 - **Rationale:** SMTP credentials sufficient for MVP. OAuth email connections add convenience for Gmail/Outlook users.
 
 **Important Distinction:**
 
 - **User Authentication OAuth** (2027 consideration) - How users log into PenguinMails
+
 - **Email Account OAuth** (Q4 2026) - How users connect Gmail/Outlook accounts to send emails
 
 **Roadmap Documentation**: Added to route specs with clear timeline markers.
@@ -116,8 +140,11 @@ Status: **Updated**
 **Actual Implementation**: Hybrid PostgreSQL + Redis queue system
 
 - PostgreSQL for durable job state (`jobs`, `job_queues`, `job_logs` tables)
+
 - Redis for fast processing
+
 - Custom monitoring UI
+
 - Queue names: `queue:email-sending:high`, `queue:email-sending`, `queue:email-sending:low`, etc.
 
 **Documentation**: [Queue System Implementation](/docs/implementation-technical/architecture-system/email-system-implementation)
@@ -125,8 +152,11 @@ Status: **Updated**
 **Updated Files**:
 
 - `docs/design/routes/platform-admin.md`
+
 - `docs/design/routes/tenant-leads.md`
+
 - `docs/design/routes/workspace-campaigns.md`
+
 - `docs/design/frontend-routing-map.md`
 
 ---
@@ -138,13 +168,17 @@ Status: **Updated**
 **Database Schema**: Requires verification
 
 - Audit log table structure
+
 - Retention policies
+
 - Index optimization
 
 **API Endpoint**: Requires verification
 
 - Executive/Platform API audit trail retrieval endpoint
+
 - Query parameters and response format
+
 - Pagination and filtering capabilities
 
 **Action Required**: Phase 4 verification (see implementation plan)
@@ -154,13 +188,17 @@ Status: **Updated**
 **Database Tables**: Documented in queue system implementation
 
 - `jobs` - Job state and audit trail  
+
 - `job_queues` - Queue configuration
+
 - `job_logs` - Execution audit trail
 
 **API Endpoint**: Requires verification
 
 - Executive/Platform API queue monitoring endpoint
+
 - Real-time queue depth tracking
+
 - Job status retrieval
 
 **Action Required**: Phase 4 verification (see implementation plan)
@@ -184,6 +222,7 @@ Status: **Updated**
 **Referenced in**:
 
 - `docs/design/routes/settings.md` (Lines 201, 205-206)
+
 - `docs/design/routes/platform-admin.md` (Line 174)
 
 ---
@@ -208,9 +247,13 @@ Status: **Updated**
 ## 8. Outstanding Verification Tasks
 
 - [ ] **Audit Log Schema**: Verify database table structure and indexes
+
 - [ ] **Queue Tables**: Confirm schema documentation in queue system implementation
+
 - [ ] **Audit Trail API**: Check if endpoint exists in executive/platform API
+
 - [ ] **Queue Monitoring API**: Check if endpoint exists in executive/platform API
+
 - [ ] **Stripe Documentation**: Create comprehensive integration guide
 
 **See Also**: [Implementation Plan - Phase 4](/docs/implementation-technical/overview#implementation-phases)

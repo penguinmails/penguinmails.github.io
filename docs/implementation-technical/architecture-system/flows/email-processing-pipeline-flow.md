@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Email Processing Pipeline Flow
 
 **Strategic Alignment**: This pipeline demonstrates our enterprise-grade email processing capabilities that enable scalable campaign delivery while maintaining real-time analytics and system reliability.
@@ -16,11 +17,14 @@ persona: "Documentation Users"
 
 ---
 
+
 ## Email Processing Pipeline Overview
 
 This sequence diagram shows the complete email lifecycle from client campaign creation through queue processing to database state updates and real-time analytics.
 
+
 ## Complete Email Processing Sequence
+
 
 ```mermaid
 sequenceDiagram
@@ -56,54 +60,104 @@ sequenceDiagram
     API-->>Client: Campaign Status Update
 
     Note over Client,Analytics: Real-time updates through WebSocket
+
+
 ```
+
 
 ## Processing Pipeline Stages
 
+
 ### **1. Campaign Creation**
 
+
 - **Client Request**: User creates email campaign through dashboard
+
+
 - **Authentication**: API validates user token and permissions
+
+
 - **Data Storage**: Campaign definition stored in database with unique ID
+
+
 - **Job Queueing**: Email jobs created and added to processing queue
+
 
 ### **2. Queue Processing**
 
+
 - **Job Distribution**: Queue system distributes jobs to available SMTP workers
+
+
 - **SMTP Worker Processing**: Each worker processes individual email jobs
+
+
 - **MailU Integration**: Workers send emails through MailU SMTP stack
+
+
 - **Delivery Confirmation**: MailU confirms email delivery status
+
 
 ### **3. State Management**
 
+
 - **Database Updates**: Email status updated in database (pending → sent → delivered)
+
+
 - **Event Logging**: All interactions logged for analytics and audit trails
+
+
 - **Error Handling**: Failed deliveries trigger retry logic and error reporting
+
 
 ### **4. Real-Time Analytics**
 
+
 - **Event Processing**: Analytics engine processes email events (send, open, click, reply)
+
+
 - **Data Aggregation**: Campaign performance metrics aggregated and stored
+
+
 - **Live Updates**: Dashboard receives real-time updates via WebSocket
+
 
 ## Key Processing Features
 
+
 ### **Asynchronous Architecture**
 
+
 - **Non-blocking Processing**: Campaign creation doesn't wait for email delivery
+
+
 - **Scalable Queue System**: Redis + PostgreSQL handles millions of email jobs
+
+
 - **Worker Scaling**: Horizontal scaling of SMTP workers based on queue load
+
 
 ### **Fault Tolerance**
 
+
 - **Retry Logic**: Automatic retry for temporary delivery failures
+
+
 - **Dead Letter Queue**: Failed jobs moved to separate queue for analysis
+
+
 - **Graceful Degradation**: System continues operating even with component failures
+
 
 ### **Real-Time Monitoring**
 
+
 - **Live Status Updates**: Campaign progress visible in real-time
+
+
 - **Performance Metrics**: Delivery rates, bounce rates, and engagement tracked
+
+
 - **Alert System**: Automatic alerts for delivery issues or performance problems
 
 ---

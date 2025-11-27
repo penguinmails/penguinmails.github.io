@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Inbox API
 
 **Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Threads
 
@@ -23,11 +26,17 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `workspace` (string, required): Workspace slug
+
+
 - `status` (string, optional): `open` (default), `archived`, `snoozed`
+
+
 - `limit` (integer, optional): Default 20
 
 **Response**:
+
 
 ```json
 {
@@ -47,7 +56,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Get Thread Details
 
@@ -56,6 +68,7 @@ persona: "Backend Developers"
 **Purpose**: Retrieve full conversation history for a thread.
 
 **Response**:
+
 
 ```json
 {
@@ -79,7 +92,10 @@ persona: "Backend Developers"
     ]
   }
 }
+
+
 ```
+
 
 ### Reply to Thread
 
@@ -89,12 +105,16 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "body": "Great, see you then!",
   "attachments": []
 }
+
+
 ```
+
 
 ### Update Thread Status
 
@@ -104,9 +124,13 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "status": "archived",
   "unread": false
 }
+
+
 ```
+

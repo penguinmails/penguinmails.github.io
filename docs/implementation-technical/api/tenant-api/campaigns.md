@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Campaigns API
 
 **Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Campaigns
 
@@ -23,12 +26,20 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `workspace` (string, required): Workspace slug
+
+
 - `status` (string, optional): Filter by status (draft, active, paused, completed)
+
+
 - `limit` (integer, optional): Default 20
+
+
 - `offset` (integer, optional): Default 0
 
 **Response**:
+
 
 ```json
 {
@@ -53,7 +64,10 @@ persona: "Backend Developers"
     "has_more": false
   }
 }
+
+
 ```
+
 
 ### Create Campaign
 
@@ -63,15 +77,19 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "workspace_slug": "acme-corp",
   "name": "New Campaign",
   "goal": "lead_gen" // awareness, lead_gen, sales
 }
+
+
 ```
 
 **Response**:
+
 
 ```json
 {
@@ -82,7 +100,10 @@ persona: "Backend Developers"
     "status": "draft"
   }
 }
+
+
 ```
+
 
 ### Get Campaign Details
 
@@ -91,6 +112,7 @@ persona: "Backend Developers"
 **Purpose**: Get full details of a campaign, including sequence and settings.
 
 **Response**:
+
 
 ```json
 {
@@ -113,7 +135,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Update Campaign
 
@@ -123,6 +148,7 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "name": "Updated Name",
@@ -130,7 +156,10 @@ persona: "Backend Developers"
     "daily_limit": 100
   }
 }
+
+
 ```
+
 
 ### Launch Campaign
 
@@ -140,8 +169,12 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "action": "start" // or "resume", "pause"
 }
+
+
 ```
+

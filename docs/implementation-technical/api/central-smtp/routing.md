@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Routing API
 
 **Parent API**: [Central SMTP API](/docs/implementation-technical/api/central-smtp)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Tenant Assignments
 
@@ -23,9 +26,11 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `tenantId`: Filter by tenant
 
 **Response**:
+
 
 ```json
 {
@@ -39,7 +44,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Set / Update Assignment
 
@@ -49,6 +57,7 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "tenant_id": "tn_123",
@@ -56,4 +65,7 @@ persona: "Backend Developers"
   "mode": "primary",
   "notes": "Upgraded to dedicated IP"
 }
+
+
 ```
+

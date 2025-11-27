@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Leads API
 
 **Parent API**: [Tenant API](/docs/implementation-technical/api/tenant-api)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Leads
 
@@ -23,13 +26,23 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `workspace` (string, required): Workspace slug
+
+
 - `status` (string, optional): Filter by status (new, contacted, replied, converted)
+
+
 - `search` (string, optional): Search by email or name
+
+
 - `limit` (integer, optional): Default 50
+
+
 - `offset` (integer, optional): Default 0
 
 **Response**:
+
 
 ```json
 {
@@ -52,7 +65,10 @@ persona: "Backend Developers"
     "has_more": true
   }
 }
+
+
 ```
+
 
 ### Create Lead
 
@@ -62,6 +78,7 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "workspace_slug": "acme-corp",
@@ -70,7 +87,10 @@ persona: "Backend Developers"
   "last_name": "Smith",
   "company": "Tech Corp"
 }
+
+
 ```
+
 
 ### Get Lead Details
 
@@ -79,6 +99,7 @@ persona: "Backend Developers"
 **Purpose**: Get full lead profile and activity history.
 
 **Response**:
+
 
 ```json
 {
@@ -99,7 +120,10 @@ persona: "Backend Developers"
     ]
   }
 }
+
+
 ```
+
 
 ### Update Lead
 
@@ -109,6 +133,7 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "status": "contacted",
@@ -116,4 +141,7 @@ persona: "Backend Developers"
     "phone": "+15551234567"
   }
 }
+
+
 ```
+

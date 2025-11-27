@@ -15,7 +15,9 @@ persona: "Documentation Users"
 
 ---
 
+
 ## IP Address Management
+
 
 ### get_instance_ips (Retrieve Server IPs)
 
@@ -28,11 +30,17 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Returns all IP addresses associated with an instance
+
+
 - Includes both primary and secondary IPs
+
+
 - Use `location_id` to filter by data center location
 
 ---
+
 
 ### change_main_ip (Change Main IP of Instance)
 
@@ -45,11 +53,17 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Automatically assigns a new primary IP from available pool
+
+
 - Old IP may be released or converted to secondary
+
+
 - May require network configuration regeneration
 
 ---
+
 
 ### set_main_ip (Set Specific IP as Primary)
 
@@ -62,11 +76,17 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Sets a specific IP address as the primary IP
+
+
 - The IP must already be assigned to the instance
+
+
 - Use this to promote a secondary IP to primary
 
 ---
+
 
 ### delete_ip (Remove Secondary IP)
 
@@ -82,13 +102,20 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Removes a secondary IP from the instance
+
+
 - IP is returned to the available pool
+
+
 - Update DNS records before removing IPs used for email
 
 ---
 
+
 ## Network Configuration
+
 
 ### regenerate_networking (Rebuild and Reboot Network)
 
@@ -103,9 +130,16 @@ persona: "Documentation Users"
 
 **Use Cases**:
 
+
 - Network connectivity issues
+
+
 - After IP address changes
+
+
 - DNS or routing problems
+
+
 - Firewall configuration issues
 
 > [!CAUTION]
@@ -113,7 +147,9 @@ persona: "Documentation Users"
 
 ---
 
+
 ## DNS Configuration
+
 
 ### set_rdns (Set Reverse DNS)
 
@@ -127,24 +163,39 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Critical for email deliverability
+
+
 - rDNS should match the hostname in SMTP HELO/EHLO
+
+
 - Format: `mail.example.com` (not `example.com`)
+
+
 - Changes may take up to 24-48 hours to propagate
 
 **Best Practices**:
 
+
 - Set rDNS before sending email
+
+
 - Match rDNS to SPF and DKIM records
+
+
 - Use consistent naming across all IPs
 
 ---
 
+
 ## Firewall Management
+
 
 ### get_instance_firewall_profile (Get Firewall Configuration)
 
 **Firewall Profile Object**:
+
 
 ```json
 {
@@ -153,9 +204,12 @@ persona: "Documentation Users"
     "description": "string",
     "security_group_rules": "array"
 }
+
+
 ```
 
 **Security Group Rule Object**:
+
 
 ```json
 {
@@ -166,6 +220,8 @@ persona: "Documentation Users"
   "port_range_max": "integer, // or null",
   "description": "string"
 }
+
+
 ```
 
 | Spec | Detail |
@@ -177,6 +233,7 @@ persona: "Documentation Users"
 | **Notes** | **This action retrieves the detailed network security rules (ingress/egress, protocols, etc.) applied to the instance.** |
 
 ---
+
 
 ### set_instance_firewall (Set Firewall Profile)
 
@@ -190,20 +247,34 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Profile name must exist in available firewall profiles
+
+
 - Use `get_firewall_profiles` to list available profiles
+
+
 - Changes apply immediately but may require connection reset
 
 **Common Profiles**:
 
+
 - `default` - Standard web/SSH access
+
+
 - `smtp` - Email server (ports 25, 465, 587, 993, 995)
+
+
 - `web` - HTTP/HTTPS only
+
+
 - `custom` - User-defined rules
 
 ---
 
+
 ## SMTP-Specific Configuration
+
 
 ### get_smtp_filters (Get SMTP Filters)
 
@@ -216,13 +287,20 @@ persona: "Documentation Users"
 
 **Notes**:
 
+
 - Returns spam filtering configuration
+
+
 - Shows active filters and their creation dates
+
+
 - May include billing information for premium filters
 
 ---
 
+
 ## IP Cleanup and Billing
+
 
 ### create_ip_cleanup_fee (Create Invoice for IP Cleanup Fee)
 
@@ -236,79 +314,154 @@ persona: "Documentation Users"
 
 **Use Cases**:
 
+
 - IP reputation cleanup services
+
+
 - Spam list removal requests
+
+
 - IP warming services
 
 ---
 
+
 ## Integration with PenguinMails
+
 
 ### Database Schema Integration
 
 The networking API integrates with PenguinMails database schema:
 
+
 - **`smtp_ip_addresses` table**:
+
+
   - `ip_address` - Populated from `get_instance_ips`
+
+
   - `rdns_hostname` - Set via `set_rdns`
+
+
   - `approximate_cost` - $4.99/month baseline (configurable)
   
+
 - **`vps_instances` table**:
+
+
   - `main_ip` - Tracked from instance object
+
+
   - `private_ip` - Internal networking
+
+
   - `ips` - Array of all assigned IPs
+
 
 ### Automation Workflows
 
 **IP Allocation Workflow**:
 
+
 1. Allocate new IP via Hostwinds portal/API
+
+
 2. Call `get_instance_ips` to retrieve new IP
+
+
 3. Call `set_rdns` to configure reverse DNS
+
+
 4. Update `smtp_ip_addresses` table
+
+
 5. Configure firewall via `set_instance_firewall`
+
+
 6. Begin IP warmup process
 
 **IP Removal Workflow**:
 
+
 1. Verify IP is not primary via `get_instance_ips`
+
+
 2. Update DNS records to remove IP
+
+
 3. Call `delete_ip` to release IP
+
+
 4. Update `smtp_ip_addresses` table status
+
+
 5. Reconcile billing
 
 ---
 
+
 ## Best Practices
+
 
 ### IP Management
 
+
 - Always verify IP assignments before deletion
+
+
 - Set rDNS immediately after IP allocation
+
+
 - Use consistent naming conventions for rDNS
+
+
 - Document IP-to-tenant mappings
+
 
 ### Network Configuration
 
+
 - Test firewall rules before applying to production
+
+
 - Schedule network regeneration during maintenance windows
+
+
 - Monitor connectivity after network changes
+
+
 - Keep backup of working firewall configurations
+
 
 ### DNS Configuration
 
+
 - Allow 24-48 hours for rDNS propagation
+
+
 - Verify rDNS matches SMTP hostname
+
+
 - Test email deliverability after rDNS changes
+
+
 - Use DNS monitoring tools to verify changes
 
 ---
 
+
 ## Related Documentation
 
+
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
+
+
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management) - Instance operations
+
+
 - [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices) - Error handling and workflows
+
+
 - [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) - IP cost modeling
 
 ---

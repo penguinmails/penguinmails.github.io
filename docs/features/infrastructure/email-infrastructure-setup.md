@@ -6,87 +6,153 @@ status: "ACTIVE"
 roadmap_timeline: "Q4 2025"
 priority: "Critical"
 related_features:
+
+
   - infrastructure/hostwind-management
+
+
   - infrastructure/free-mailbox-creation
+
+
   - domains/domain-management
+
+
   - compliance/security-features
 related_tasks:
+
+
   - epic-5-infrastructure-management
 related_api:
+
+
   - implementation-technical/api/platform-api/infrastructure
 ---
+
 
 # Email Infrastructure Setup
 
 **Quick Access**: This feature enables automated provisioning and configuration of professional email infrastructure in under 5 minutes.
 
+
 ## Overview
 
 Email Infrastructure Setup provides end-to-end automation for creating production-ready email sending infrastructure, including VPS provisioning, SMTP server installation, DNS configuration, and security hardening.
 
+
 ### Key Value Proposition
 
+
 - **Speed**: Professional email infrastructure ready in < 5 minutes
+
+
 - **Automation**: Zero manual server configuration required
+
+
 - **Security**: Built-in SSL, SPF, DKIM, DMARC configuration
+
+
 - **Compliance**: GDPR/CCPA-ready infrastructure from day one
+
+
 - **Scale**: Support for multi-tenant architecture with workspace isolation
 
 ---
 
+
 ## Level 1: Quick Setup Guide
+
 
 ### What You Get
 
 Professional email infrastructure includes:
 
+
 1. **VPS Server**: Dedicated or shared virtual private server via Hostwind
+
+
 2. **SMTP Server**: MailU SMTP server pre-configured and secured
+
+
 3. **DNS Records**: Automated SPF, DKIM, DMARC record setup
+
+
 4. **SSL Certificates**: Let's Encrypt SSL/TLS certificates auto-installed
+
+
 5. **Email Accounts**: Initial mailbox creation with authentication
+
 
 ### 5-Minute Setup Process
 
+
 #### Step 1: Domain Verification
 
+
 ```
+
+
 1. Add your domain to PenguinMails
+
+
 2. System generates DNS verification record
+
+
 3. Add TXT record to your DNS provider
+
+
 4. Click "Verify Domain" (usually instant)
+
+
 ```
 
 **Required Information:**
 
+
 - Domain name (e.g., `yourdomain.com`)
+
+
 - DNS provider access (for record creation)
+
 
 #### Step 2: Infrastructure Provisioning
 
 Once domain is verified, click **"Launch Infrastructure"**:
 
+
 ```
+
 [Automated Process - 2-3 minutes]
 ✓ VPS server provisioned via Hostwind API
 ✓ MailU SMTP server installed and configured
 ✓ SSL certificates generated (Let's Encrypt)
 ✓ Firewall rules configured
 ✓ Initial system hardening applied
+
+
 ```
 
 **What Happens Behind the Scenes:**
 
+
 - VPS created with Ubuntu LTS + optimized email settings
+
+
 - MailU installed with production configuration
+
+
 - Port 25, 465, 587, 993 opened and secured
+
+
 - Fail2ban installed for brute-force protection
+
 
 #### Step 3: DNS Configuration
 
 System displays required DNS records:
 
+
 ```
+
 Add these records to your DNS provider:
 
 MX Record:
@@ -109,126 +175,215 @@ TXT Record (DKIM):
 TXT Record (DMARC):
   Host: _dmarc
   Value: v=DMARC1; p=quarantine; rua=mailto:postmaster@yourdomain.com
+
+
 ```
 
 **Automation Option:** For supported DNS providers (Cloudflare, Route53, etc.), click **"Auto-Configure DNS"** to apply all records automatically.
 
+
 #### Step 4: Create Email Account
 
+
 ```
+
+
 1. Click "Create Email Account"
+
+
 2. Enter email address (e.g., sales@yourdomain.com)
+
+
 3. Set secure password (or auto-generate)
+
+
 4. Click "Create Account"
+
+
 ```
 
 **Result:** Email account ready to send/receive in 30 seconds.
+
 
 #### Step 5: Verification & Testing
 
 System automatically runs verification:
 
+
 ```
+
 ✓ SMTP connection test
 ✓ SPF record validation
 ✓ DKIM signature validation
 ✓ DMARC policy check
 ✓ SSL certificate validation
 ✓ Deliverability score (initial)
+
+
 ```
 
 **Test Email:** Send test email to verify configuration.
+
 
 ### Success Criteria
 
 Infrastructure setup is complete when:
 
+
 - ✅ All DNS records validated
+
+
 - ✅ SMTP server responding on ports 25, 465, 587
+
+
 - ✅ SSL certificate valid
+
+
 - ✅ Test email delivered successfully
+
+
 - ✅ Deliverability score > 80%
 
 ---
 
+
 ## Level 2: Advanced Configuration
 
+
 ### Infrastructure Customization
+
 
 #### VPS Configuration Options
 
 **Server Sizing:**
 
+
 - **Starter**: 1 CPU, 2GB RAM (up to 5K emails/day)
+
+
 - **Professional**: 2 CPU, 4GB RAM (up to 25K emails/day)
+
+
 - **Business**: 4 CPU, 8GB RAM (up to 100K emails/day)
+
+
 - **Enterprise**: Custom sizing for high-volume needs
 
 **Server Location:**
 
+
 - Choose geographic region for optimal deliverability
+
+
 - Consider GDPR data residency requirements
+
+
 - Multi-region deployment available (Enterprise)
+
 
 #### SMTP Server Optimization
 
 **Performance Tuning:**
 
+
 ```yaml
+
+
 # Email sending limits
+
 max_connections: 50
 max_messages_per_connection: 100
 connection_timeout: 300s
 retry_attempts: 3
 retry_delay: 60s
 
+
 # Queue configuration
+
 queue_lifetime: 5d
 bounce_queue_lifetime: 5d
 defer_transports: true
+
+
 ```
 
 **Security Hardening:**
 
+
 - TLS 1.2+ enforcement
+
+
 - Strong cipher suite configuration
+
+
 - SMTP authentication required
+
+
 - IP-based access restrictions (optional)
+
+
 - Rate limiting per account
+
 
 #### DNS Best Practices
 
 **SPF Configuration Strategies:**
 
+
 ```
+
+
 # Simple (single server)
+
 v=spf1 ip4:123.45.67.89 ~all
 
+
 # Multiple servers
+
 v=spf1 ip4:123.45.67.89 ip4:123.45.67.90 ~all
 
+
 # Include third-party (e.g., Postmark for transactional)
+
 v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
+
+
 ```
 
 **DKIM Key Rotation:**
 
+
 - Rotate DKIM keys quarterly for security
+
+
 - Support for multiple simultaneous keys
+
+
 - Automated rotation available (Enterprise)
 
 **DMARC Policy Progression:**
 
+
 ```
+
+
 # Phase 1: Monitor only
+
 v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com
 
+
 # Phase 2: Quarantine (after 30 days)
+
 v=DMARC1; p=quarantine; pct=10; rua=mailto:dmarc@yourdomain.com
 
+
 # Phase 3: Reject (after 90 days)
+
 v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com
+
+
 ```
+
 
 ### Multi-Workspace Infrastructure
 
@@ -236,31 +391,62 @@ For agencies managing multiple clients:
 
 **Workspace Isolation Options:**
 
+
 1. **Shared VPS** (Cost-effective):
+
+
    - Multiple domains on single VPS
+
+
    - Separate DKIM keys per domain
+
+
    - Shared IP reputation
+
+
    - Best for: Startups, small agencies
 
+
 2. **Dedicated VPS per Workspace** (Recommended):
+
+
    - Complete isolation between clients
+
+
    - Independent IP reputation
+
+
    - Custom server configuration per workspace
+
+
    - Best for: Agencies, enterprise clients
 
+
 3. **IP Pooling** (Enterprise):
+
+
    - Multiple IPs per VPS
+
+
    - Intelligent IP rotation
+
+
    - Dedicated IPs for high-volume senders
+
+
    - Best for: High-volume sending
 
+
 ### Monitoring & Maintenance
+
 
 #### Health Checks
 
 System performs automated monitoring:
 
+
 ```
+
 Every 5 minutes:
 ✓ SMTP service status
 ✓ Queue size and processing rate
@@ -276,26 +462,44 @@ Daily:
 ✓ Email deliverability test
 ✓ Spam trap detection
 ✓ Blacklist monitoring
+
+
 ```
+
 
 #### Alerting
 
 Automated alerts for:
 
+
 - SMTP service downtime
+
+
 - DNS record changes or failures
+
+
 - SSL certificate expiration (30, 7, 1 day warnings)
+
+
 - IP blacklisting
+
+
 - Deliverability score drop > 10%
+
+
 - Disk space > 80% full
 
 ---
 
+
 ## Level 3: Technical Implementation
+
 
 ### Architecture Overview
 
+
 ```
+
 ┌─────────────────────────────────────────────────────────┐
 │                     PenguinMails Platform               │
 │                                                         │
@@ -338,11 +542,15 @@ Automated alerts for:
         │  │   - Let's Encrypt SSL    │ │
         │  └──────────────────────────┘ │
         └────────────────────────────────┘
+
+
 ```
+
 
 ### Database Schema
 
 Infrastructure state tracking:
+
 
 ```sql
 -- Infrastructure tracking
@@ -427,13 +635,18 @@ CREATE TABLE email_accounts (
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
+
+
 ```
 
+
 ### API Endpoints
+
 
 #### Infrastructure Provisioning
 
 **POST** `/api/infrastructure/provision`
+
 
 ```typescript
 interface ProvisionInfrastructureRequest {
@@ -471,9 +684,12 @@ interface ProvisionInfrastructureResponse {
   dnsRecords: DNSRecord[];
   nextSteps: string[];
 }
+
+
 ```
 
 **Implementation:**
+
 
 ```typescript
 async function provisionInfrastructure(req: Request): Promise<Response> {
@@ -543,11 +759,15 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
       ['Add DNS records to your provider', 'Verify DNS'],
   };
 }
+
+
 ```
+
 
 #### DNS Validation
 
 **POST** `/api/infrastructure/{id}/validate-dns`
+
 
 ```typescript
 async function validateDNS(infrastructureId: string): Promise<ValidationResult> {
@@ -583,11 +803,16 @@ async function validateDNS(infrastructureId: string): Promise<ValidationResult> 
     records: validationResults,
   };
 }
+
+
 ```
+
 
 ### Integration Points
 
+
 #### Hostwind API Integration
+
 
 ```typescript
 class HostwindClient {
@@ -614,11 +839,15 @@ class HostwindClient {
     await this.apiClient.delete(`/vps/${vpsId}`);
   }
 }
+
+
 ```
+
 
 #### DNS Provider Integration
 
 Support for automated DNS configuration:
+
 
 ```typescript
 interface DNSProviderAdapter {
@@ -634,9 +863,13 @@ class CloudflareDNSAdapter implements DNSProviderAdapter {
 class Route53DNSAdapter implements DNSProviderAdapter {
   // Implementation for AWS Route53
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Scheduled job: Health monitoring
@@ -673,34 +906,63 @@ cron.schedule('0 0 * * *', async () => {
     await renewSSLCertificate(infra);
   }
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Planning & Product
 
+
 - **[Product Roadmap](../../roadmap/product-roadmap.md)** - Infrastructure timeline (Q4 2025)
+
+
 - **[Technical Roadmap](../../roadmap/technical-roadmap.md)** - Infrastructure considerations
+
+
 - **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Level 1 core feature
+
 
 ### Related Features
 
+
 - **[Hostwind Management](./hostwind-management.md)** - VPS monitoring and operations
+
+
 - **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Email account provisioning
+
+
 - **[Domain Management](../domains/domain-management.md)** - DNS and domain configuration
+
+
 - **[Security Features](../compliance/security-features.md)** - SSL, SPF, DKIM, DMARC details
+
+
 - **[Multi-Tenant Architecture](./multi-tenant-architecture.md)** - Isolation and workspace management
+
+
 - **[Vault SSH Management](./vault-ssh-management.md)** - SSH key storage and rotation in Vault
+
+
 - **[SMTP Credentials Vault Storage](./vault-smtp-credentials.md)** - Secure SMTP credential management
+
 
 ### Technical Specifications
 
+
 - **[Infrastructure API](../../implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
+
+
 - **[Architecture Overview](../../technical/architecture/overview.md)** - System architecture
 
+
 ### Implementation
+
 
 - **[Epic 5: Infrastructure Management](../../../tasks/epic-5-infrastructure-management/)** - Implementation tasks
 

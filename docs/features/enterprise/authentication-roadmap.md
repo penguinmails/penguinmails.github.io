@@ -8,11 +8,13 @@ status: "ACTIVE"
 category: "Enterprise"
 ---
 
+
 # Authentication & Security Roadmap
 
 **Strategic timeline for authentication and security feature development**
 
 ---
+
 
 ## Overview
 
@@ -24,12 +26,15 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
+
 ## MVP Features (Q4 2025 - Q1 2026)
+
 
 ### Phase 1: Critical Security (Weeks 1-2)
 
 **Priority:** P0 (MVP Blocker)  
 **Effort:** 6-10 days
+
 
 #### 1. Password Strength Enforcement
 
@@ -43,13 +48,23 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - Server-side validation on signup, password reset, and password change
+
+
 - Enforce minimum requirements: 8+ characters, uppercase, lowercase, number
+
+
 - Reject passwords from Have I Been Pwned API
+
+
 - Reject passwords containing user's email or name
+
+
 - Return clear error messages explaining rejection reasons
 
 ---
+
 
 #### 2. Unverified Email Restrictions
 
@@ -63,13 +78,23 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - Block unverified users from sending campaigns
+
+
 - Block unverified users from adding team members
+
+
 - Block unverified users from accessing billing settings
+
+
 - Display persistent banner: "Please verify your email to unlock all features"
+
+
 - Implement 24-hour grace period before hard restrictions
 
 ---
+
 
 #### 3. CAPTCHA for Sensitive Operations
 
@@ -83,18 +108,29 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - CAPTCHA on registration form
+
+
 - CAPTCHA on password reset form
+
+
 - CAPTCHA after 3 failed login attempts
+
+
 - Invisible CAPTCHA for low-risk users
+
+
 - Audio CAPTCHA alternative for accessibility
 
 ---
+
 
 ### Phase 2: Core Authentication (Weeks 3-4)
 
 **Priority:** P0 (MVP Blocker)  
 **Effort:** 8-13 days
+
 
 #### 4. Email Verification System
 
@@ -106,13 +142,23 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - ✅ Send verification email on signup
+
+
 - ✅ Generate secure verification token (24-hour expiration)
+
+
 - ✅ Verify token on `/verify-email` route
+
+
 - ✅ Provide "Resend verification email" option
+
+
 - ✅ Show verification status in user profile
 
 ---
+
 
 #### 5. Password Reset Flow
 
@@ -124,14 +170,26 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - ✅ "Forgot Password" form on `/forgot-password` route
+
+
 - ✅ Send password reset email using Loop.so
+
+
 - ✅ Generate secure reset token (1-hour expiration)
+
+
 - ✅ Validate token and allow password reset
+
+
 - ✅ Auto-login after successful reset
+
+
 - ✅ Invalidate all existing sessions after password reset
 
 ---
+
 
 #### 6. Change Password Functionality
 
@@ -143,18 +201,29 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - ✅ "Change Password" section in `/dashboard/settings/profile`
+
+
 - ✅ Validate current password before allowing change
+
+
 - ✅ Enforce password strength requirements
+
+
 - ✅ Send confirmation email after password change
+
+
 - ✅ Invalidate all other sessions after password change
 
 ---
+
 
 ### Phase 3: Account Security (Weeks 5-6)
 
 **Priority:** P0-P1  
 **Effort:** 8-13 days
+
 
 #### 7. Account Lockout / Brute Force Protection
 
@@ -168,14 +237,26 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - Lock account after 5 failed attempts within 15 minutes
+
+
 - Send email notification when account is locked
+
+
 - Automatic unlock after 30 minutes
+
+
 - Manual unlock via email verification link
+
+
 - Require CAPTCHA after unlock
+
+
 - Log all lockout events for security monitoring
 
 ---
+
 
 #### 8. Login Activity Log
 
@@ -189,15 +270,29 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - "Login Activity" section in `/dashboard/settings/profile`
+
+
 - Display last 50 login attempts with pagination
+
+
 - Show: Timestamp, IP Address, Location, Device/Browser, Status
+
+
 - Filter by status (All, Successful, Failed)
+
+
 - Filter by date range
+
+
 - Highlight suspicious logins (new device, unusual location)
+
+
 - Export functionality (CSV, JSON)
 
 ---
+
 
 #### 9. Session Management UI
 
@@ -211,19 +306,32 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - "Active Sessions" section in `/dashboard/settings/profile`
+
+
 - Display table of active sessions: Device, Browser, Location, IP, Last Active
+
+
 - Highlight current session with "This device" badge
+
+
 - "Sign out" button for each session (except current)
+
+
 - "Sign out all other sessions" button
+
+
 - Auto-refresh every 30 seconds
 
 ---
+
 
 ### Phase 4: User Experience (Week 7)
 
 **Priority:** P1-P2  
 **Effort:** 4-5 days
+
 
 #### 10. Email Change Verification Flow
 
@@ -237,15 +345,29 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - "Change Email" section in `/dashboard/settings/profile`
+
+
 - Form with new email and password confirmation
+
+
 - Send verification email to new address
+
+
 - Send notification email to old address
+
+
 - Display pending email change status in UI
+
+
 - Allow user to cancel pending change
+
+
 - Update email after successful verification
 
 ---
+
 
 #### 11. Remember Me Functionality
 
@@ -259,14 +381,26 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Acceptance Criteria:**
 
+
 - "Remember me" checkbox on `/login` form
+
+
 - Extend refresh token expiration to 30 days when checked
+
+
 - Keep access token expiration at 1 hour (unchanged)
+
+
 - Implement device fingerprinting to detect token theft
+
+
 - Revoke all "remember me" sessions when user changes password
+
+
 - Display warning: "Only use on trusted devices"
 
 ---
+
 
 ## MVP Summary
 
@@ -278,13 +412,20 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Priority Breakdown:**
 
+
 - **P0 (Critical):** 6 features - Must have for security and compliance
+
+
 - **P1 (High):** 4 features - Important for user experience and security
+
+
 - **P2 (Medium):** 1 feature - Nice to have, improves convenience
 
 ---
 
+
 ## Post-MVP Features (2026+)
+
 
 ### Q1 2026: Two-Factor Authentication
 
@@ -298,15 +439,25 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Key Features:**
 
+
 - TOTP-based 2FA with QR code setup
+
+
 - 10 backup codes for account recovery
+
+
 - "Trust this device for 30 days" option
+
+
 - Organization-level 2FA enforcement (admin setting)
+
+
 - Email notifications for 2FA events
 
 **Business Impact:** Enables sales to security-conscious SMB and mid-market customers. Required for enterprise compliance (SOC 2, ISO 27001).
 
 ---
+
 
 ### Q2 2026: Social Login (OAuth)
 
@@ -320,15 +471,25 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Key Features:**
 
+
 - "Sign in with Google" button
+
+
 - "Sign in with GitHub" button
+
+
 - "Sign in with Microsoft" button
+
+
 - Account linking (connect OAuth to existing account)
+
+
 - Profile data pre-fill from OAuth provider
 
 **Business Impact:** 20-40% improvement in signup conversion rates. Reduces friction for new users.
 
 ---
+
 
 ### Q3 2026: Single Sign-On (SSO)
 
@@ -342,17 +503,28 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Key Features:**
 
+
 - SAML 2.0 support
+
+
 - OpenID Connect (OIDC) support
+
+
 - Just-in-Time (JIT) provisioning
+
+
 - SCIM provisioning (automatic user/group sync)
+
+
 - Custom SSO login URL per tenant
 
 **Business Impact:** Unlocks enterprise segment ($50K+ ARR deals). Many large companies mandate SSO for all SaaS tools.
 
 ---
 
+
 ### Q4 2026: Advanced Features
+
 
 #### Biometric Authentication
 
@@ -366,15 +538,25 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Key Features:**
 
+
 - WebAuthn / FIDO2 support
+
+
 - Platform authenticators (Face ID, Touch ID, Windows Hello)
+
+
 - Security keys (YubiKey, Google Titan Key)
+
+
 - Multiple authenticator registration
+
+
 - Fallback to password if biometric unavailable
 
 **Business Impact:** Modern user experience, especially for mobile users. Phishing-resistant authentication.
 
 ---
+
 
 #### Advanced Session Management
 
@@ -388,26 +570,46 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Key Features:**
 
+
 - Conditional session policies (shorter timeout for remote networks)
+
+
 - Risk-based authentication (detect anomalous login patterns)
+
+
 - Session context tracking (device fingerprinting, network info)
+
+
 - Concurrent session limits
+
+
 - Organization-level session policies
+
+
 - Session analytics dashboard
 
 **Business Impact:** Required for enterprise compliance. Supports SSO sales motion.
 
 ---
 
+
 ## Third-Party Dependencies
+
 
 ### Loop.so - Transactional Email Service
 
 **Current Usage:**
 
+
 - Email verification emails
+
+
 - Password reset emails
+
+
 - Team invitation emails
+
+
 - Account notification emails
 
 **Cost:** $29-99/month for MVP (up to 50K-100K emails)
@@ -416,12 +618,18 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
+
 ### Cloudflare Turnstile - CAPTCHA
 
 **Planned Usage:**
 
+
 - CAPTCHA on signup
+
+
 - CAPTCHA on password reset
+
+
 - CAPTCHA after failed login attempts
 
 **Cost:** Free tier available, scales with usage
@@ -430,9 +638,11 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
+
 ### Have I Been Pwned API - Password Breach Database
 
 **Planned Usage:**
+
 
 - Check passwords against breach database during signup and password change
 
@@ -442,135 +652,242 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
+
 ## Success Metrics
+
 
 ### Technical Metrics
 
+
 - Account lockout effectiveness: >99% brute force attack prevention
+
+
 - Password strength: >95% of passwords meet complexity requirements
+
+
 - Email verification rate: >90% of users verify within 24 hours
+
+
 - Session security: Zero unauthorized session access incidents
+
+
 - CAPTCHA effectiveness: >95% bot prevention rate
+
 
 ### Business Metrics
 
+
 - User retention: 20% improvement with "Remember me" feature
+
+
 - Security incidents: <1 per 1000 users per month
+
+
 - Support tickets: 30% reduction with login activity log
+
+
 - Enterprise sales: 2FA and SSO enable $50K+ ARR deals
+
+
 - Conversion rate: 20-40% improvement with OAuth (Q2 2026)
 
 ---
 
+
 ## Implementation Sequence
+
 
 ### Q4 2025 - Q1 2026: MVP Completion
 
 **Week 1-2:** Critical Security
 
+
 1. Password Strength Enforcement
+
+
 2. Unverified Email Restrictions
+
+
 3. CAPTCHA for Sensitive Operations
 
 **Week 3-4:** Core Authentication
 
+
 4. Email Verification System (Complete)
+
+
 5. Password Reset Flow (Complete)
+
+
 6. Change Password Functionality (Complete)
 
 **Week 5-6:** Account Security
 
+
 7. Account Lockout / Brute Force Protection
+
+
 8. Login Activity Log
+
+
 9. Session Management UI
 
 **Week 7:** User Experience
 
+
 10. Email Change Verification Flow
+
+
 11. Remember Me Functionality
+
 
 ### Q1 2026: Enterprise Features
 
+
 12. Two-Factor Authentication (2FA)
+
 
 ### Q2 2026: Conversion Optimization
 
+
 13. Social Login (OAuth)
+
 
 ### Q3 2026: Enterprise Market Entry
 
+
 14. Single Sign-On (SSO)
+
+
 15. In-House Transactional Email System
+
 
 ### Q4 2026: Advanced Features
 
+
 16. Biometric Authentication
+
+
 17. Advanced Session Management
 
 ---
 
+
 ## Risk Management
+
 
 ### Technical Risks
 
+
 1. **NileDB Dependency:** Core authentication relies on NileDB SDK
+
+
    - **Mitigation:** Evaluate alternatives if NileDB becomes limiting factor
 
+
 2. **Third-Party Service Outages:** Loop.so, Cloudflare Turnstile
+
+
    - **Mitigation:** Implement fallback mechanisms and monitoring
 
+
 3. **OAuth Provider Changes:** Google, Microsoft may change OAuth policies
+
+
    - **Mitigation:** Stay updated on provider changes, implement graceful degradation
+
 
 ### Security Risks
 
+
 1. **Password Breach Database Latency:** Have I Been Pwned API may be slow
+
+
    - **Mitigation:** Cache results, implement timeout fallback
 
+
 2. **CAPTCHA Bypass:** Sophisticated bots may bypass CAPTCHA
+
+
    - **Mitigation:** Implement rate limiting as defense in depth
 
+
 3. **Session Hijacking:** Token theft via XSS or network interception
+
+
    - **Mitigation:** HTTP-only cookies, device fingerprinting, anomaly detection
+
 
 ### Business Risks
 
+
 1. **Feature Delays:** Authentication features may take longer than estimated
+
+
    - **Mitigation:** Prioritize P0 features, defer P2 features if needed
 
+
 2. **Enterprise Requirements:** Enterprise customers may require features not on roadmap
+
+
    - **Mitigation:** Flexible architecture, gather requirements early
 
+
 3. **Competitive Pressure:** Competitors may release similar features first
+
+
    - **Mitigation:** Focus on differentiation (deliverability, compliance)
 
 ---
 
+
 ## Related Documentation
+
 
 ### Feature Documentation
 
+
 - **[User Management & Authentication](/docs/features/enterprise/user-management)** - Current authentication features
+
+
 - **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security overview
+
+
 - **[Vault Integration](/docs/features/integrations/overview#vault-integration)** - Secure secrets management
+
 
 ### Implementation
 
+
 - **[NileDB Authentication](/docs/implementation-technical/database-infrastructure/niledb)** - Auth implementation
+
+
 - **[API Authentication](/docs/implementation-technical/api/platform-api/authentication)** - API auth details
+
+
 - **[Public & Authentication Routes](/docs/design/routes/public-auth)** - Login, signup, password reset UI
+
+
 - **[Settings Routes](/docs/design/routes/settings)** - Profile, team management, security settings UI
+
 
 ### Tasks
 
+
 - **[Epic 2: User Authentication](/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+
 
 ### Roadmap
 
+
 - **[Product Roadmap](/docs/roadmap/product-roadmap)** - Overall product timeline
+
+
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 
+
 ### Review
+
 
 - **[Authentication & Security Review](/.kiro/specs/feature-completeness-review/findings/authentication-security.md)** - Complete feature gap analysis
 

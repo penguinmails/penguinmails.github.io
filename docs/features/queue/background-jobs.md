@@ -8,15 +8,18 @@ status: "ACTIVE"
 category: "Queue"
 ---
 
+
 # Queue & Background Jobs
 
 **Deep dive into the background processing system that powers PenguinMails.**
 
 ---
 
+
 ## Overview
 
 PenguinMails relies heavily on asynchronous background processing to ensure the web interface remains fast and responsive. We use **PostgreSQL + Redis queue system** to manage these jobs.
+
 
 ### Job Types
 
@@ -31,11 +34,14 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
 
 ---
 
+
 ## Job Definitions
+
 
 ### 1. Email Send Job (`email.send`)
 
 **Payload:**
+
 
 ```json
 {
@@ -45,37 +51,61 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
   "tenant_id": "tenant_abc",
   "campaign_id": "camp_xyz"
 }
+
+
 ```
 
 **Processing Logic:**
 
+
 1. Render HTML template.
+
+
 2. Check suppression list.
+
+
 3. Select sending provider (Internal/ESP).
+
+
 4. Send email.
+
+
 5. Update analytics.
+
 
 ### 2. Campaign Process Job (`campaign.process`)
 
 **Payload:**
+
 
 ```json
 {
   "campaign_id": "camp_xyz",
   "tenant_id": "tenant_abc"
 }
+
+
 ```
 
 **Processing Logic:**
 
+
 1. Fetch target list/segment.
+
+
 2. Iterate through contacts.
+
+
 3. Create `email.send` jobs (batched).
+
+
 4. Update campaign status to "Sending".
+
 
 ### 3. Contact Import Job (`import.contacts`)
 
 **Payload:**
+
 
 ```json
 {
@@ -83,65 +113,108 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
   "tenant_id": "tenant_abc",
   "mapping": { "col_0": "email", "col_1": "name" }
 }
+
+
 ```
 
 **Processing Logic:**
 
+
 1. Stream CSV file.
+
+
 2. Validate email format.
+
+
 3. Upsert contacts to database.
+
+
 4. Update list counts.
+
+
 5. Notify user of completion.
 
 ---
 
+
 ## Worker Configuration
+
 
 ### Concurrency & Scaling
 
 Workers are stateless Node.js processes.
 
+
 - **Email Workers**: High concurrency (50-100 per node). I/O bound.
+
+
 - **Import Workers**: Low concurrency (2-5 per node). CPU/Memory bound.
 
 **Scaling Policy:**
 
+
 - Scale up Email Workers when `queue_depth > 1000`.
+
+
 - Scale up Import Workers when `memory_usage > 80%`.
+
 
 ### Reliability
 
+
 - **Graceful Shutdown**: Workers finish current job before stopping.
+
+
 - **Stalled Job Detection**: Redis automatically re-queues jobs if worker crashes.
+
+
 - **Idempotency**: Jobs are designed to be safe to run multiple times (e.g., checking status before sending).
 
 ---
+
 
 ## Monitoring
 
 **Queue Dashboard:**
 Internal admin tool to view:
 
+
 - Active jobs
+
+
 - Waiting jobs
+
+
 - Failed jobs
+
+
 - Job throughput
 
 **Metrics (Prometheus):**
 
+
 - `jobs_completed_total`
+
+
 - `jobs_failed_total`
+
+
 - `job_duration_seconds`
 
 ---
 
+
 ## Related Documentation
+
 
 ### Architecture
 
+
 - **[Core Email Pipeline](./email-pipeline.md)** - High-level pipeline architecture
 
+
 ### Tasks
+
 
 - **[Epic 6: Core Email Pipeline](../../tasks/epic-6-core-email-pipeline/README.md)** - Implementation tasks
 

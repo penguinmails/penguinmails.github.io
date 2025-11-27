@@ -6,7 +6,9 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Customer Success Cross-Domain API Documentation
+
 
 ## Overview
 
@@ -19,7 +21,9 @@ Centralized API documentation for all Customer Success cross-domain integrations
 
 ---
 
+
 ## Authentication & Authorization
+
 
 ```yaml
 securitySchemes:
@@ -33,15 +37,21 @@ securitySchemes:
           cs-marketing.write: "Marketing campaign triggers"
           cs-sales.read: "Sales pipeline visibility"
           # ... domain-specific scopes
+
+
 ```
 
 ---
 
+
 ## Marketing Integration APIs
+
 
 ### Health Trigger API
 
+
 ```
+
 POST /marketing/triggers/{customer_id}
 Content-Type: application/json
 
@@ -58,9 +68,13 @@ Response 202:
   "triggered_sequences": ["onboarding_nurture"],
   "estimated_impact": "15% health_uplift"
 }
+
+
 ```
 
+
 ### Campaign Performance API
+
 
 ```markdown
 GET /marketing/performance/{campaign_id}
@@ -70,15 +84,20 @@ Response 200:
   "health_correlation": 0.87,
   "revenue_impact": "$12,500"
 }
+
+
 ```
 
 **Full Spec:** [marketing-integration-map#cs-marketing-apis](marketing-integration-map)
 
 ---
 
+
 ## Sales Integration APIs
 
+
 ### Handoff Completion API
+
 
 ```markdown
 POST /sales/handoff/complete/{deal_id}
@@ -94,9 +113,13 @@ Response 200:
   "knowledge_gaps": [],
   "pipeline_sync": "confirmed"
 }
+
+
 ```
 
+
 ### Expansion Opportunity API
+
 
 ```markdown
 GET /sales/expansion/{customer_id}
@@ -106,15 +129,20 @@ Response 200:
   "value_portfolio": ["3x_roi_demonstrated"],
   "white_space": "$150k_annualized"
 }
+
+
 ```
 
 **Full Spec:** [sales-integration-map#cs-sales-apis](sales-integration-map)
 
 ---
 
+
 ## Product Integration APIs
 
+
 ### Adoption Insights API
+
 
 ```markdown
 GET /product/adoption/{feature_id}
@@ -125,9 +153,13 @@ Response 200:
   "barriers": ["onboarding_friction"],
   "recommendations": ["targeted_tutorial"]
 }
+
+
 ```
 
+
 ### Feedback Submission API
+
 
 ```markdown
 POST /product/feedback
@@ -145,15 +177,20 @@ Response 201:
   "priority": "P1",
   "roadmap_position": "Q2_target"
 }
+
+
 ```
 
 **Full Spec:** [product-integration-map#cs-product-apis](product-integration-map)
 
 ---
 
+
 ## Finance Integration APIs
 
+
 ### Value Realization API
+
 
 ```markdown
 GET /finance/realization/{contract_id}
@@ -163,9 +200,13 @@ Response 200:
   "utilization_gaps": ["feature_x_45%"],
   "roi_trajectory": "11.8x_projected"
 }
+
+
 ```
 
+
 ### Forecast Adjustment API
+
 
 ```markdown
 POST /finance/forecast/{customer_id}
@@ -175,15 +216,20 @@ Request:
   "confidence_interval": [0.88, 0.97],
   "scenarios": {"expansion": "$75k"}
 }
+
+
 ```
 
 **Full Spec:** [finance-integration-map#cs-finance-apis](finance-integration-map)
 
 ---
 
+
 ## Operations Integration APIs
 
+
 ### Workflow Execution API
+
 
 ```markdown
 POST /operations/execute/{workflow_id}/{customer_id}
@@ -198,9 +244,13 @@ Response 202:
   "sla_target": "4h",
   "current_status": "in_progress"
 }
+
+
 ```
 
+
 ### Capacity Forecast API
+
 
 ```markdown
 GET /operations/capacity/forecast?period=next_90d
@@ -210,21 +260,29 @@ Response 200:
   "skill_gaps": ["enterprise_complexity"],
   "hiring_triggers": ["urgent"]
 }
+
+
 ```
 
 **Full Spec:** [operations-integration-map#cs-operations-apis](operations-integration-map)
 
 ---
 
+
 ## Common Response Headers
+
 
 ```markdown
 X-Request-ID: unique-trace-id
 X-RateLimit-Remaining: 47
 X-Audit-Trail: audit-log-url
+
+
 ```
 
+
 ## Error Handling
+
 
 ```json
 {
@@ -233,9 +291,12 @@ X-Audit-Trail: audit-log-url
   "detail": "Retry after 60s",
   "instance": "/v1/cs-integrations/marketing/triggers/cust_123"
 }
+
+
 ```
 
 ---
+
 
 ## OpenAPI Specification
 
@@ -243,7 +304,10 @@ Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 
 **Related Documentation:**
 
+
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+
+
 - [Domain Maps](/docs/business/customer-success/cross-domain-integration)
 
 **Document Classification:** Level 3 - CS API Reference Documentation

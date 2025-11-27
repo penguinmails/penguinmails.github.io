@@ -3,16 +3,27 @@ title: "Analytics Implementation Details"
 description: "Technical specifications, code snippets, and architecture for the analytics views"
 ---
 
+
 # Analytics Implementation Details
+
 
 ## 1. Technical Stack (MVP)
 
+
 * **Frontend**: Next.js 15 (App Router) + TypeScript + Tailwind CSS
+
+
 * **Backend**: Node.js + TypeScript + Hapi/Koa
+
+
 * **Monorepo**: Turborepo for shared packages
+
+
 * **Post-MVP Migration Path**: TanStack Router or React Router 7 (to reduce cloud function costs)
 
+
 ### Turborepo Structure
+
 
 ```bash
 penguinmails/
@@ -55,7 +66,10 @@ penguinmails/
 │   ├── config/                 # Shared secrets/env
 │   └── queue/                  # Shared queue client
 └── turbo.json
+
+
 ```
+
 
 ### Server Responsibilities
 
@@ -67,9 +81,12 @@ penguinmails/
 | **queue-server** | Event processing & notifications | 4002 | Internal only |
 | **executive-api** | Analytics aggregation & BI | 4003 | Internal only (exec, ops, analysts) |
 
+
 ## 2. RBAC Implementation with Next.js 15
 
+
 ### Shared Type Definitions (`packages/types/src/rbac.ts`)
+
 
 ```typescript
 export type UserRole = 
@@ -93,9 +110,13 @@ export interface DashboardViewConfig {
   allowedRoutes: string[];
   defaultRedirect: string;
 }
+
+
 ```
 
+
 ### Next.js Middleware (`apps/web/middleware.ts`)
+
 
 ```typescript
 import { NextResponse } from 'next/server';
@@ -133,9 +154,13 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!_next|api|favicon.ico).*)'],
 };
+
+
 ```
 
+
 ### Server Actions (BFF Pattern) (`apps/web/app/actions/analytics.ts`)
+
 
 ```typescript
 'use server';
@@ -184,9 +209,13 @@ export async function getCampaignAnalytics(campaignId: string) {
     opened: campaign.openedCount,
   };
 }
+
+
 ```
 
+
 ### Role-Based UI Rendering (`apps/web/app/dashboard/page.tsx`)
+
 
 ```typescript
 import { getSession } from '@penguinmails/auth';
@@ -212,9 +241,13 @@ export default async function DashboardPage() {
   
   return <div>No dashboard available for your role</div>;
 }
+
+
 ```
 
+
 ### Central API Server (Post-MVP Migration Target) (`apps/api/src/routes/analytics.ts`)
+
 
 ```typescript
 import Hapi from '@hapi/hapi';
@@ -233,11 +266,16 @@ export const analyticsRoutes: Hapi.ServerRoute[] = [
     },
   },
 ];
+
+
 ```
+
 
 ## 3. Navigation Implementation
 
+
 ### Global Navigation Structure
+
 
 ```typescript
 // Navigation items shown based on user roles
@@ -256,9 +294,13 @@ const AppNav = ({ userRoles }) => {
   const navItems = userRoles.flatMap(role => navigationConfig[role]);
   return <Nav items={[...new Set(navItems)]} />;
 };
+
+
 ```
 
+
 ### Security Implementation
+
 
 ```typescript
 // Frontend: Route protection
@@ -277,4 +319,7 @@ router.get('/analytics/executive',
     res.json(data);
   }
 );
+
+
 ```
+

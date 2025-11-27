@@ -6,51 +6,96 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Reference Materials - Supporting Documentation
 
 **For All Business Users** - Templates, methodology guides, and quick reference materials
 
 This directory contains quick reference guides, executive templates, detailed methodology, and supporting documentation that complements the core progressive disclosure journey.
 
+
 ## Progressive Disclosure Flow
+
 
 ### 📋 Reference Documents
 
+
 - [**Quick Reference: Cost-Benefit**](.) - Quick cost-benefit analysis guide (≤100 lines)
+
+
 - [**Quick Reference: Provider Selection**](.) - Vendor selection checklist (≤100 lines)
+
+
 - [**Cost Tool Pricing**](.) - Pricing tool and calculator guidance (≤200 lines)
+
+
 - [**Executive Summary Template**](.) - Template for executive presentations (≤200 lines)
+
+
 - [**Detailed Methodology**](.) - Comprehensive analysis methodology (≤300 lines)
+
 
 ### 🎯 Reference Usage Path
 
+
 1. **Quick Analysis**: Use `quick-reference-cost-benefit` for rapid assessments
+
+
 2. **Vendor Evaluation**: Reference `quick-reference-provider-selection` for vendor selection
+
+
 3. **Pricing Tools**: Use `cost-tool-pricing` for pricing analysis
+
+
 4. **Executive Preparation**: Template with `executive-summary-template`
+
+
 5. **Deep Analysis**: Comprehensive methodology in `detailed-methodology`
+
 
 ### 📋 Reference Characteristics
 
+
 - **Content Depth**: Concise reference materials (100-300 lines per document)
+
+
 - **Tone**: Practical guidance and templates
+
+
 - **Target Audience**: All business users requiring quick access to key information
+
+
 - **Progression**: Quick reference → detailed methodology → implementation
+
 
 ### 🔧 Reference Types
 
+
 - **Quick References**: Fast access to key information and checklists
+
+
 - **Templates**: Standardized formats for executive presentations and analysis
+
+
 - **Methodology**: Detailed analysis frameworks and best practices
+
+
 - **Tools**: Pricing tools and calculators with usage guidance
 
 ---
 
 **Related Directories:**
 
+
 - [Core Business Documents](/docs/business/core) - Main business case documents
+
+
 - [Financial Analysis](/docs/business/financial-analysis) - Deep financial analysis
+
+
 - [Implementation Guide](/docs/business/implementation) - Implementation templates and guides
+
+
 - [Industry Business Cases](/docs/business/industry-business-cases) - Industry-specific reference materials
 
 ---

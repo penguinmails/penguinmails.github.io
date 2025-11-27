@@ -6,70 +6,121 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - enterprise/user-management
+
+
   - infrastructure/email-infrastructure-setup
+
+
   - domains/domain-management
+
+
   - payments/subscription-management
 related_tasks:
+
+
   - epic-2-user-authentication-profile
+
+
   - epic-3-tenant-company-management
 ---
+
 
 # Onboarding Experience
 
 **Quick Access**: Get new users productive in under 10 minutes with guided setup, interactive tutorials, and contextual help.
 
+
 ## Overview
 
 The Onboarding Experience provides a structured, interactive journey for new users from signup to their first successful email campaign, reducing time-to-value and improving activation rates.
 
+
 ### Key Components
 
+
 1. **Guided Setup Wizard**: Step-by-step infrastructure configuration
+
+
 2. **Interactive Checklist**: Track progress toward first campaign
+
+
 3. **Contextual Tooltips**: In-app guidance and feature discovery
+
+
 4. **Video Tutorials**: Quick how-to videos at key moments
+
+
 5. **Progress Tracking**: Visual progress indicators
+
+
 6. **Achievement Milestones**: Celebrate user progress
 
 ---
 
+
 ## Level 1: Onboarding Flow Overview
+
 
 ### New User Journey
 
+
 ```
+
+
 1. Sign Up → 2. Workspace Setup → 3. Domain Configuration → 
+
+
 4. Payment → 5. First Email Account → 6. First Campaign → 7. Success!
+
+
 ```
 
 **Time to Complete**: 8-10 minutes
 
+
 ### Step-by-Step Walkthrough
+
 
 #### Step 1: Sign Up (1 min)
 
 **Fields:**
 
+
 - Email address
+
+
 - Password
+
+
 - Company name
+
+
 - User name
 
 **Welcome Screen:**
 
+
 ```
+
 Welcome to PenguinMails! 🐧
 
 Let's get your professional email infrastructure 
 set up in under 10 minutes.
 
 [Start Setup] [Skip Tour]
+
+
 ```
+
 
 #### Step 2: Create Workspace (1 min)
 
+
 ```
+
 Create Your First Workspace
 
 Workspaces help you organize campaigns by client, 
@@ -79,13 +130,18 @@ Workspace Name: [_______________]
 Example: "Main Company" or "Client: Acme Corp"
 
 [Continue]
+
+
 ```
 
 **Tooltip:** "You can create unlimited workspaces. Start with one for now."
 
+
 #### Step 3: Add Domain (2 min)
 
+
 ```
+
 Step 3 of 6: Add Your Sending Domain
 
 This is the domain you'll send emails from 
@@ -96,16 +152,24 @@ Domain: [_______________]
 ☐ I have access to DNS settings for this domain
 
 [Continue] [Need help?]
+
+
 ```
 
 **If "Need help?" clicked:**
 
+
 - Show video: "What is a sending domain?"
+
+
 - Link to: Domain setup guide
+
 
 #### Step 4: Verify Domain (2 min)
 
+
 ```
+
 Step 4 of 6: Verify Domain Ownership
 
 Add this DNS record to verify you own this domain:
@@ -119,17 +183,27 @@ TXT Record:
 OR
 
 [Auto-Configure with Cloudflare] [Auto-Configure with Route53]
+
+
 ```
 
 **Auto-detection:**
 
+
 - System polls for DNS record every 10 seconds
+
+
 - Shows "Verifying..." animation
+
+
 - Auto-advances when verified
+
 
 #### Step 5: Set Up Payment (1 min)
 
+
 ```
+
 Step 5 of 6: Choose Your Plan
 
 ○ Starter - $49/mo
@@ -147,22 +221,31 @@ Step 5 of 6: Choose Your Plan
   Dedicated infrastructure
 
 [Start 14-Day Free Trial] No credit card required
+
+
 ```
 
 **After trial started:**
 
+
 ```
+
 ✓ Trial Started - 14 days remaining
 
 You won't be charged until your trial ends.
 Add payment method anytime in Settings.
 
 [Continue to Infrastructure Setup]
+
+
 ```
+
 
 #### Step 6: Provision Infrastructure (2-3 min)
 
+
 ```
+
 Step 6 of 6: Launch Your Email Infrastructure
 
 We're setting up your professional email infrastructure:
@@ -174,13 +257,17 @@ We're setting up your professional email infrastructure:
 ○ Creating your first email account
 
 [Watch Setup Video] while you wait
+
+
 ```
 
 **Progress bar animates** showing real-time status.
 
 **Complete:**
 
+
 ```
+
 🎉 Infrastructure Ready!
 
 Your email infrastructure is live at:
@@ -189,22 +276,32 @@ mail.yourdomain.com
 Next: Create your first email account
 
 [Create Email Account]
+
+
 ```
+
 
 #### Step 7: Create First Email Account (1 min)
 
+
 ```
+
 Create Your First Sending Account
 
 Email Address: [___]@yourdomain.com
 Password: [Generate Secure Password]
 
 [Create Account & Finish Setup]
+
+
 ```
+
 
 #### Step 8: Success & Next Steps (30 sec)
 
+
 ```
+
 🎉 Congratulations! You're All Set
 
 Your email infrastructure is ready to send.
@@ -215,17 +312,23 @@ Quick Actions:
 ☐ Set up email warmup (recommended)
 
 [Go to Dashboard] [Take the Product Tour]
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Onboarding Features
+
 
 ### Interactive Checklist
 
 Persistent checklist in sidebar:
 
+
 ```
+
 Getting Started ━━━━━━━━○○○ 70%
 
 ✓ Create workspace
@@ -237,33 +340,55 @@ Getting Started ━━━━━━━━○○○ 70%
 ○ Send first email
 
 [Collapse]
+
+
 ```
 
 **Features:**
 
+
 - Persists across sessions
+
+
 - Click items to jump to relevant page
+
+
 - Progress percentage updates in real-time
+
+
 - Dismissible after completion
+
 
 ### Contextual Tooltips
 
 **First-time visitor tooltips:**
 
+
 ```
+
 [i] Workspaces
     Organize your campaigns by client, 
     brand, or project.
     
     [Got It] [Learn More]
+
+
 ```
 
 **Smart triggering:**
 
+
 - Show on first page visit only
+
+
 - Don't show if user has interacted with feature
+
+
 - Allow dismissal (never show again)
+
+
 - Max 3 tooltips per page
+
 
 ### Interactive Tutorial Mode
 
@@ -271,15 +396,26 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **Flow:**
 
+
 1. Dim entire UI
+
+
 2. Highlight specific element
+
+
 3. Show explanation overlay
+
+
 4. Guide through workflow
+
+
 5. Allow skipping or pausing
 
 **Example:**
 
+
 ```
+
 [Spotlight on "Create Campaign" button]
 
 Step 1 of 5: Creating Your First Campaign
@@ -287,65 +423,108 @@ Step 1 of 5: Creating Your First Campaign
 Click here to create a new email campaign.
 
 [Next] [Skip Tour]
+
+
 ```
+
 
 ### Video Tutorials
 
 **Embedded at key moments:**
 
+
 - Domain setup: "How to add DNS records"
+
+
 - Email warmup: "Why warmup matters"
+
+
 - Campaign creation: "Your first campaign"
 
 **Format:**
 
+
 - 60-90 seconds each
+
+
 - Skippable
+
+
 - Closed captions
+
+
 - Hosted on CDN for fast loading
+
 
 ### Progress Milestones
 
 **Achievement notifications:**
 
+
 ```
+
 🎊 Milestone Unlocked: First Email Sent!
 
 You've sent your first email through PenguinMails.
 Keep going!
 
 [View Campaign Analytics]
+
+
 ```
 
 **Milestones:**
 
+
 - ✓ First workspace created
+
+
 - ✓ First domain verified
+
+
 - ✓ First email account created
+
+
 - ✓ First 10 contacts imported
+
+
 - ✓ First campaign created
+
+
 - ✓ First email sent
+
+
 - ✓ First email opened
+
+
 - ✓ First link clicked
+
 
 ### Personalized Recommendations
 
 Based on user behavior:
 
+
 ```
+
 👋 We noticed you haven't set up email warmup yet.
 
 Warmup helps build sender reputation and improves 
 deliverability. It only takes 2 minutes.
 
 [Set Up Warmup Now] [Remind Me Later]
+
+
 ```
+
 
 ### Team Onboarding
 
 For workspace invites:
 
+
 ```
+
 Welcome to [Workspace Name]!
 
 You've been invited as a Workspace Member.
@@ -356,13 +535,18 @@ Here's what you can do:
 ○ Can't: Modify billing or infrastructure
 
 [View Permissions] [Explore Dashboard]
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Onboarding State Management
+
 
 ```typescript
 interface OnboardingState {
@@ -403,9 +587,13 @@ interface OnboardingChecklistItem {
   actionUrl?: string;
   completedAt?: Date;
 }
+
+
 ```
 
+
 ### Database Schema
+
 
 ```sql
 CREATE TABLE user_onboarding (
@@ -448,9 +636,13 @@ CREATE TABLE onboarding_events (
 );
 
 CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at);
+
+
 ```
 
+
 ### Onboarding Service
+
 
 ```typescript
 class OnboardingService {
@@ -547,9 +739,13 @@ class OnboardingService {
     });
   }
 }
+
+
 ```
 
+
 ### Frontend Components
+
 
 ```tsx
 // Onboarding wizard
@@ -608,15 +804,25 @@ function OnboardingChecklist() {
     </aside>
   );
 }
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[User Management](./user-management.md)** - Authentication and registration
+
+
 - **[Email Infrastructure Setup](../infrastructure/email-infrastructure-setup.md)** - Infrastructure provisioning
+
+
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
+
+
 - **[Subscription Management](../payments/subscription-management.md)** - Payment and trials
 
 ---

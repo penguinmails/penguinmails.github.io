@@ -8,47 +8,74 @@ status: "ACTIVE"
 category: "Templates"
 ---
 
+
 # Template Management
 
 **Create, manage, and reuse beautiful email templates for your campaigns.**
 
 ---
 
+
 ## Overview
 
 The Template Management system allows you to design responsive email layouts, save them for reuse, and dynamically inject content using variables. It supports both a visual Drag-and-Drop builder and a raw HTML code editor.
 
+
 ### Key Features
 
+
 - **Visual Builder** - No-code drag-and-drop interface
+
+
 - **HTML Editor** - Full control for developers
+
+
 - **Variable Injection** - Personalization (`{{first_name}}`)
+
+
 - **Responsive Design** - Mobile-friendly out of the box
+
+
 - **Template Library** - Pre-built professional designs
 
 ---
 
+
 ## Level 1: Creating Templates
+
 
 ### Visual Builder
 
 **Best for:** Marketers and non-technical users.
 
+
 - **Blocks**: Drag text, images, buttons, dividers, and social icons.
+
+
 - **Styles**: Global settings for fonts, colors, and padding.
+
+
 - **Preview**: Real-time mobile and desktop preview.
+
 
 ### HTML Editor
 
 **Best for:** Developers and custom designs.
 
+
 - **Monaco Editor**: Syntax highlighting, auto-complete.
+
+
 - **Live Preview**: See changes as you type.
+
+
 - **Asset Hosting**: Upload images directly to PenguinMails CDN.
 
 ---
 
+
 ## Level 2: Personalization & Logic
+
 
 ### Variables (Merge Tags)
 
@@ -58,23 +85,37 @@ Inject dynamic data into your templates using Handlebars syntax.
 
 {% raw %}
 
+
 - `{{contact.first_name}}`
+
+
 - `{{contact.email}}`
+
+
 - `{{company.name}}`
+
+
 - `{{company.address}}`
+
+
 - `{{unsubscribe_url}}`
 
 **Custom Fields:**
 
+
 - `{{contact.custom.job_title}}`
+
+
 - `{{contact.custom.industry}}`
 {% endraw %}
+
 
 ### Conditional Logic
 
 Show or hide content based on data.
 
 {% raw %}
+
 
 ```handlebars
 {{#if contact.first_name}}
@@ -86,9 +127,12 @@ Show or hide content based on data.
 {{#if is_premium_user}}
   <p>Thanks for being a VIP!</p>
 {{/if}}
+
+
 ```
 
 {% endraw %}
+
 
 ### Loops
 
@@ -96,23 +140,29 @@ Iterate over lists (e.g., for e-commerce receipts).
 
 {% raw %}
 
+
 ```handlebars
 <ul>
   {{#each order_items}}
     <li>{{product_name}}: {{price}}</li>
   {{/each}}
 </ul>
+
+
 ```
 
 {% endraw %}
 
 ---
 
+
 ## Level 3: Technical Implementation
+
 
 ### Template Storage
 
 Templates are stored in the database with versioning.
+
 
 ```sql
 CREATE TABLE templates (
@@ -124,11 +174,15 @@ CREATE TABLE templates (
   thumbnail_url VARCHAR(255),
   updated_at TIMESTAMP
 );
+
+
 ```
+
 
 ### API Usage
 
 **Render a template:**
+
 
 ```javascript
 POST /api/v1/templates/{id}/render
@@ -137,9 +191,12 @@ POST /api/v1/templates/{id}/render
     "contact": { "first_name": "Alice" }
   }
 }
+
+
 ```
 
 **Create via API:**
+
 
 ```javascript
 POST /api/v1/templates
@@ -147,17 +204,24 @@ POST /api/v1/templates
   "name": "Welcome Email v2",
   "html_content": "<html>...</html>"
 }
+
+
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaigns
 
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Using templates in campaigns
 
+
 ### Compliance
+
 
 - **[CAN-SPAM Compliance](../compliance/can-spam-compliance.md)** - Required footer elements
 

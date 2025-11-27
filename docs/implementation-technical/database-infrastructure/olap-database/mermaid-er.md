@@ -3,11 +3,14 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
+
+
 # OLAP Analytics ER Diagram (Mermaid)
 
 This diagram reflects the OLAP/analytics schema defined in
 [`schema-guide`](schema-guide),
 modeled as the analytics tier separate from OLTP, Content DB, Notifications DB, and external logging.
+
 
 ```mermaid
 ---

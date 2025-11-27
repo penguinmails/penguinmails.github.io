@@ -6,40 +6,68 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - campaigns/campaign-management/overview
+
+
   - campaigns/ab-testing
+
+
   - templates/template-management
+
+
   - leads/leads-management
 related_tasks:
+
+
   - epic-6-core-email-pipeline
+
+
   - epic-7-leads-management
 ---
+
 
 # Personalization System
 
 **Quick Access**: Create dynamic, personalized emails using merge tags, conditional content blocks, and custom data fields.
 
+
 ## Overview
 
 The Personalization System enables 1:1 email customization at scale by dynamically inserting contact data, displaying conditional content, and adapting messaging based on recipient attributes and behavior.
 
+
 ### Key Capabilities
 
+
 - **Merge Tags**: Insert contact data ({{firstName}}, {{company}}, etc.)
+
+
 - **Conditional Content**: Show/hide blocks based on conditions
+
+
 - **Custom Fields**: Use any contact attribute for personalization
+
+
 - **Fallback Values**: Default content when data is missing
+
+
 - **Preview & Testing**: Test personalization before sending
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Basic Merge Tags
 
 Insert contact information directly into your emails:
 
+
 ```
+
 Hi {{firstName}},
 
 I noticed you're from {{company}} in {{city}}. 
@@ -48,59 +76,103 @@ performance by {{customField.industryBenchmark}}%.
 
 Best regards,
 {{senderName}}
+
+
 ```
 
 **Standard Merge Tags:**
 
+
 ```shell
+
+
 - `{{firstName}}` - Contact's first name
+
+
 - `{{lastName}}` - Contact's last name
+
+
 - `{{email}}` - Email address
+
+
 - `{{company}}` - Company name
+
+
 - `{{jobTitle}}` - Job title
+
+
 - `{{city}}` - City
+
+
 - `{{state}}` - State/Province
+
+
 - `{{country}}` - Country
+
+
 ```
+
 
 ### Fallback Values
 
 Provide defaults when data is missing:
 
+
 ```
+
 Hi {{firstName|there}},
 
 {{company|Your company}} could benefit from...
+
+
 ```
 
 **Result:**
 
+
 - If firstName exists: "Hi Sarah,"
+
+
 - If firstName missing: "Hi there,"
+
 
 ### Using Custom Fields
 
 Access any custom field from your contact records:
 
+
 ```
+
 {{customField.subscribedDate}}
 {{customField.leadScore}}
 {{customField.industry}}
 {{customField.lastPurchaseAmount}}
+
+
 ```
+
 
 ### Preview Personalization
 
 Before sending, preview how emails appear to different contacts:
 
+
 1. Click "Preview Personalization"
+
+
 2. Select contact or enter test data
+
+
 3. View rendered email
+
+
 4. Test multiple contacts to ensure formatting
 
 ---
 
+
 ## Level 2: Advanced Personalization
+
 
 ### Conditional Content
 
@@ -108,17 +180,23 @@ Show different content blocks based on contact attributes:
 
 **Basic Conditional:**
 
+
 ```
+
 {% if company %}
   We've helped companies like {{company}} achieve...
 {% else %}
   We've helped businesses like yours achieve...
 {% endif %}
+
+
 ```
 
 **Multiple Conditions:**
 
+
 ```
+
 {% if leadScore > 50 %}
   You're a valued customer! Here's an exclusive offer...
 {% elsif leadScore > 20 %}
@@ -126,11 +204,15 @@ Show different content blocks based on contact attributes:
 {% else %}
   Welcome! Here's how we can help...
 {% endif %}
+
+
 ```
 
 **Conditional by Industry:**
 
+
 ```
+
 {% if customField.industry == "SaaS" %}
   Our platform integrates seamlessly with your tech stack.
 {% elsif customField.industry == "E-commerce" %}
@@ -138,13 +220,18 @@ Show different content blocks based on contact attributes:
 {% else %}
   Discover how email automation can grow your business.
 {% endif %}
+
+
 ```
+
 
 ### Personalized CTAs
 
 Adapt call-to-action based on contact status:
 
+
 ```
+
 {% if customField.trialUser %}
   <a href="{{upgradeLink}}">Upgrade to Premium</a>
 {% elsif customField.freeUser %}
@@ -152,49 +239,71 @@ Adapt call-to-action based on contact status:
 {% else %}
   <a href="{{signupLink}}">Get Started Free</a>
 {% endif %}
+
+
 ```
+
 
 ### Date-Based Personalization
 
 Use date fields for dynamic content:
 
+
 ```
+
 {% if customField.subscriptionRenewalDate < now + 30days %}
   Your subscription renews on {{customField.subscriptionRenewalDate|date('F j, Y')}}.
   Renew now and save 20%!
 {% endif %}
+
+
 ```
+
 
 ### Behavioral Personalization
 
 Personalize based on past actions:
 
+
 ```
+
 {% if customField.lastPurchaseDate > now - 90days %}
   Thanks for your recent purchase! Here's what's new...
 {% else %}
   We miss you! Come back and save 15%...
 {% endif %}
+
+
 ```
+
 
 ### Dynamic Product Recommendations
 
 Show relevant products:
 
+
 ```
+
 Based on your interest in {{customField.lastViewedProduct}}, 
 you might also like:
 
 {% for product in relatedProducts %}
+
+
   - {{product.name}} - ${{product.price}}
 {% endfor %}
+
+
 ```
+
 
 ### Localization
 
 Adapt content by location:
 
+
 ```
+
 {% if country == "United States" %}
   Free shipping on orders over $50!
 {% elsif country == "Canada" %}
@@ -202,24 +311,34 @@ Adapt content by location:
 {% elsif country == "United Kingdom" %}
   Free shipping on orders over £40!
 {% endif %}
+
+
 ```
+
 
 ### A/B Testing with Personalization
 
 Combine with A/B testing:
 
+
 ```
+
 Test A: Hi {{firstName}},
 Test B: Hi {{firstName}}, fellow {{customField.industry}} professional,
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
+
 
 ### Templating Engine
 
 Uses Liquid-based syntax for compatibility:
+
 
 ```typescript
 import { Liquid } from 'liquidjs';
@@ -241,9 +360,13 @@ engine.registerFilter('currency', (amount: number, currency = 'USD') => {
     currency,
   }).format(amount);
 });
+
+
 ```
 
+
 ### Merge Tag Resolution
+
 
 ```typescript
 interface PersonalizationContext {
@@ -289,9 +412,13 @@ async function computeDynamicFields(contact: Contact): Promise<Record<string, an
     recommendedProducts: await this.getRecommendations(contact),
   };
 }
+
+
 ```
 
+
 ### Database Schema
+
 
 ```sql
 -- Contact custom fields (JSONB for flexibility)
@@ -339,11 +466,15 @@ CREATE TABLE custom_field_definitions (
   
   UNIQUE(tenant_id, field_name)
 );
+
+
 ```
+
 
 ### Personalization Validation
 
 {% raw %}
+
 
 ```typescript
 class PersonalizationValidator {
@@ -401,11 +532,15 @@ class PersonalizationValidator {
     return Array.from(matches).map(m => m[1].trim().split('|')[0]);
   }
 }
+
+
 ```
 
 {% endraw %}
 
+
 ### Performance Optimization
+
 
 ```typescript
 // Batch personalization for bulk sends
@@ -447,15 +582,25 @@ async function renderCached(templateId: string, context: any): Promise<string> {
   
   return engine.render(compiled, context);
 }
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Campaign Management](./campaign-management/overview.md)** - Create personalized campaigns
+
+
 - **[A/B Testing](./ab-testing.md)** - Test personalized variants
+
+
 - **[Template Management](../templates/template-management.md)** - Build reusable templates
+
+
 - **[Leads Management](../leads/leads-management.md)** - Contact data and custom fields
 
 ---

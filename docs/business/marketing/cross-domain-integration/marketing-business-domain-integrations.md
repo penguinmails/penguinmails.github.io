@@ -3,7 +3,10 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
+
+
 # Marketing-Business Domain Integration Specifications
+
 
 ## Overview
 
@@ -15,7 +18,9 @@ This document provides detailed specifications for specific integrations between
 
 ---
 
+
 ## Sales Domain Integration Patterns
+
 
 ### 1. CRM Lead Synchronization
 
@@ -23,13 +28,17 @@ This document provides detailed specifications for specific integrations between
 
 **Workflow:**
 
+
 ```markdown
 Marketing Lead Capture → Lead Processing → CRM Sync → Sales Assignment → Follow-up Automation
+
+
 ```
 
 **Implementation Details:**
 
 **Lead Processing Pipeline:**
+
 
 ```typescript
 interface LeadProcessingWorkflow {
@@ -72,11 +81,14 @@ const leadProcessingPipeline = {
     return crmRecord;
   }
 };
+
+
 ```
 
 **CRM Integration Mapping:**
 
 **Salesforce Integration:**
+
 
 ```json
 {
@@ -104,9 +116,12 @@ const leadProcessingPipeline = {
     }
   }
 }
+
+
 ```
 
 **HubSpot Integration:**
+
 
 ```json
 {
@@ -132,13 +147,17 @@ const leadProcessingPipeline = {
     }
   }
 }
+
+
 ```
+
 
 ### 2. Campaign Attribution Tracking
 
 **Integration Pattern:** Multi-touch attribution with revenue tracking
 
 **Implementation:**
+
 
 ```typescript
 interface AttributionTracking {
@@ -175,11 +194,14 @@ class CampaignAttributionEngine implements AttributionTracking {
     };
   }
 }
+
+
 ```
 
 **Attribution Models Supported:**
 
 **First-Touch Attribution:**
+
 
 ```sql
 WITH first_touch AS (
@@ -201,9 +223,12 @@ FROM first_touch ft
 JOIN opportunities o ON o.contact_id = ft.contact_id
 WHERE o.is_closed_won = true
 GROUP BY ft.campaign_id;
+
+
 ```
 
 **Multi-Touch Attribution (Linear Model):**
+
 
 ```sql
 WITH touchpoint_sequence AS (
@@ -236,17 +261,22 @@ SELECT
   SUM(attribution_weight) as total_weight
 FROM weighted_attribution
 GROUP BY campaign_id, touchpoint_type;
+
+
 ```
 
 ---
 
+
 ## Product Domain Integration Patterns
+
 
 ### 1. Feature Adoption Tracking
 
 **Integration Pattern:** Product usage analytics feeding marketing insights
 
 **Implementation:**
+
 
 ```typescript
 interface FeatureAdoptionTracker {
@@ -273,9 +303,12 @@ class ProductMarketingIntegration {
     await this.identifyExpansionOpportunities(event.tenant_id, event.feature_id);
   }
 }
+
+
 ```
 
 **Product Analytics Schema:**
+
 
 ```json
 {
@@ -294,9 +327,12 @@ class ProductMarketingIntegration {
     }
   }
 }
+
+
 ```
 
 **Adoption Campaign Triggering:**
+
 
 ```typescript
 interface AdoptionCampaignTrigger {
@@ -309,13 +345,17 @@ interface AdoptionCampaignTrigger {
     "advanced_feature": "upgrade_campaign_id"
   };
 }
+
+
 ```
+
 
 ### 2. Customer Feedback Integration
 
 **Integration Pattern:** Product feedback feeding marketing message optimization
 
 **Implementation:**
+
 
 ```typescript
 class FeedbackMarketingIntegration {
@@ -349,17 +389,22 @@ class FeedbackMarketingIntegration {
     };
   }
 }
+
+
 ```
 
 ---
 
+
 ## Customer Success Domain Integration Patterns
+
 
 ### 1. Customer Health Monitoring
 
 **Integration Pattern:** Marketing engagement data feeding customer health scores
 
 **Health Score Calculation:**
+
 
 ```typescript
 interface CustomerHealthScore {
@@ -423,9 +468,12 @@ class CustomerHealthIntegration {
     ) / 100;
   }
 }
+
+
 ```
 
 **Marketing Engagement Metrics:**
+
 
 ```typescript
 interface MarketingEngagementMetrics {
@@ -451,13 +499,17 @@ interface MarketingEngagementMetrics {
     case_study_participation: number;
   };
 }
+
+
 ```
+
 
 ### 2. Retention Campaign Automation
 
 **Integration Pattern:** Health score triggers automated retention campaigns
 
 **Campaign Trigger Rules:**
+
 
 ```typescript
 interface RetentionCampaignTriggers {
@@ -490,17 +542,22 @@ const retentionCampaignEngine = {
     await this.logRetentionIntervention(tenantId, triggers, healthScore);
   }
 };
+
+
 ```
 
 ---
 
+
 ## Finance Domain Integration Patterns
+
 
 ### 1. Marketing ROI Tracking
 
 **Integration Pattern:** Real-time revenue attribution feeding financial analytics
 
 **ROI Calculation Engine:**
+
 
 ```typescript
 interface MarketingROITracker {
@@ -538,9 +595,12 @@ class FinanceMarketingIntegration {
     };
   }
 }
+
+
 ```
 
 **Cost Attribution Schema:**
+
 
 ```json
 {
@@ -570,13 +630,17 @@ class FinanceMarketingIntegration {
     }
   }
 }
+
+
 ```
+
 
 ### 2. Budget Optimization Integration
 
 **Integration Pattern:** Performance data driving budget reallocation
 
 **Budget Optimization Engine:**
+
 
 ```typescript
 class BudgetOptimizationEngine {
@@ -609,15 +673,20 @@ class BudgetOptimizationEngine {
     };
   }
 }
+
+
 ```
 
 ---
 
+
 ## Data Synchronization Patterns
+
 
 ### Real-Time Event Streaming
 
 **Event-Driven Architecture:**
+
 
 ```typescript
 interface EventStreamingConfig {
@@ -660,11 +729,15 @@ class MarketingEventStream {
     });
   }
 }
+
+
 ```
+
 
 ### Batch Data Synchronization
 
 **Scheduled Synchronization Jobs:**
+
 
 ```typescript
 interface BatchSyncSchedule {
@@ -698,13 +771,18 @@ class BatchSynchronizationEngine {
     }
   }
 }
+
+
 ```
 
 ---
 
+
 ## Error Handling and Data Quality
 
+
 ### Data Validation Pipeline
+
 
 ```typescript
 interface DataValidationRules {
@@ -754,9 +832,13 @@ class DataQualityEngine {
     };
   }
 }
+
+
 ```
 
+
 ### Error Recovery and Retry Logic
+
 
 ```typescript
 interface RetryPolicy {
@@ -804,13 +886,18 @@ class IntegrationErrorHandler {
     throw new Error(`Operation failed after ${retryPolicy.max_attempts} attempts: ${lastError.message}`);
   }
 }
+
+
 ```
 
 ---
 
+
 ## Performance Monitoring and SLA
 
+
 ### Integration Performance Metrics
+
 
 ```typescript
 interface IntegrationSLA {
@@ -849,6 +936,8 @@ class IntegrationMonitor {
     }
   }
 }
+
+
 ```
 
 ---

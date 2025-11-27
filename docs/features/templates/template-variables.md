@@ -6,44 +6,77 @@ status: "PLANNED"
 roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
+
+
   - templates/template-editor
+
+
   - templates/template-management
+
+
   - campaigns/personalization-system
+
+
   - leads/leads-management
 related_tasks:
+
+
   - epic-6-templates-content
 ---
 
 {% raw %}
 
+
 # Template Variables
 
 **Quick Access**: Personalize emails at scale with dynamic variables, conditional content, and merge tags that automatically populate with contact data.
+
 
 ## Overview
 
 Template Variables enable you to create dynamic, personalized email content that adapts to each recipient. Use merge tags to insert contact information, conditional logic to show/hide content, and default values to handle missing data gracefully.
 
+
 ### Key Capabilities
 
+
 - **Merge Tags**: Insert contact data with `{{variable_name}}`
+
+
 - **Default Values**: Fallback content when data is missing
+
+
 - **Conditional Blocks**: Show/hide content based on conditions
+
+
 - **Custom Variables**: Workspace-specific variables
+
+
 - **Dynamic Content**: Personalize images, links, and text
+
+
 - **Testing & Preview**: Test with sample data before sending
+
+
 - **Nested Variables**: Complex data structures
+
+
 - **Date Formatting**: Display dates in any format
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Basic Merge Tags
 
+
 #### Standard Contact Fields
 
+
 ```
+
 Hi {{first_name}},
 
 Welcome to {{company}}! We're excited to have you on board.
@@ -52,11 +85,15 @@ Your account email is: {{email}}
 
 Best regards,
 The {{workspace_name}} Team
+
+
 ```
 
 **Output Example:**
 
+
 ```
+
 Hi John,
 
 Welcome to Acme Inc! We're excited to have you on board.
@@ -65,9 +102,13 @@ Your account email is: john@acme.com
 
 Best regards,
 The PenguinMails Team
+
+
 ```
 
+
 #### Available Standard Variables
+
 
 ```yaml
 Contact Information:
@@ -95,59 +136,94 @@ Workspace:
   {{workspace_url}}     # https://app.penguinmails.com
   {{sender_name}}       # Sarah Johnson
   {{sender_email}}      # sarah@penguinmails.com
+
+
 ```
+
 
 ### Default Values
 
+
 #### Basic Syntax
 
+
 ```
+
 Hi {{first_name | default: "there"}},
 
 Welcome to {{company | default: "our platform"}}!
+
+
 ```
 
 **When Data Exists:**
 
+
 ```
+
 Hi John,
 Welcome to Acme Inc!
+
+
 ```
 
 **When Data Missing:**
 
+
 ```
+
 Hi there,
 Welcome to our platform!
+
+
 ```
+
 
 #### Multiple Fallbacks
 
+
 ```
+
 {{first_name | default: {{contact_name}} | default: "Valued Customer"}}
+
+
 ```
 
 **Fallback Chain:**
 
+
 1. Try `first_name`
+
+
 2. If empty, try `contact_name`
+
+
 3. If empty, use "Valued Customer"
+
 
 ### Conditional Content
 
+
 #### Simple If/Else
 
+
 ```
+
 {% if lead_score >= 75 %}
   You're a VIP customer! Here's an exclusive offer...
 {% else %}
   Check out our latest features...
 {% endif %}
+
+
 ```
+
 
 #### If/Elsif/Else
 
+
 ```
+
 {% if lead_score >= 90 %}
   🌟 Platinum Tier - Exclusive Access
 {% elsif lead_score >= 75 %}
@@ -157,23 +233,34 @@ Welcome to our platform!
 {% else %}
   👋 Welcome - Getting Started
 {% endif %}
+
+
 ```
+
 
 #### Checking for Empty Values
 
+
 ```
+
 {% if company %}
   We noticed you work at {{company}}.
 {% else %}
   Tell us about your company!
 {% endif %}
+
+
 ```
+
 
 ### Quick Examples
 
+
 #### Personalized Greeting
 
+
 ```
+
 {% if first_name %}
   Hi {{first_name}},
 {% else %}
@@ -181,11 +268,16 @@ Welcome to our platform!
 {% endif %}
 
 Thanks for being a valued customer!
+
+
 ```
+
 
 #### Location-Based Content
 
+
 ```
+
 {% if country == "United States" %}
   Free shipping on orders over $50!
 {% elsif country == "Canada" %}
@@ -193,11 +285,16 @@ Thanks for being a valued customer!
 {% else %}
   International shipping available!
 {% endif %}
+
+
 ```
+
 
 #### Account Type Messaging
 
+
 ```
+
 {% if custom.account_type == "trial" %}
   Your trial expires in {{custom.trial_days_remaining}} days.
   [Upgrade Now →]
@@ -206,17 +303,24 @@ Thanks for being a valued customer!
 {% else %}
   [Start Your Free Trial →]
 {% endif %}
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Variable Usage
+
 
 ### Custom Fields
 
+
 #### Accessing Custom Fields
 
+
 ```
+
 Standard Syntax:
   {{custom.industry}}
   {{custom.company_size}}
@@ -225,11 +329,16 @@ Standard Syntax:
 Nested Custom Fields:
   {{custom.preferences.email_frequency}}
   {{custom.settings.notifications_enabled}}
+
+
 ```
+
 
 #### Custom Field Examples
 
+
 ```
+
 Industry-Specific Content:
   {% if custom.industry == "SaaS" %}
     Discover how {{company}} can scale with our API...
@@ -245,30 +354,46 @@ Company Size Targeting:
   {% else %}
     Starter plans for small teams
   {% endif %}
+
+
 ```
+
 
 ### Advanced Conditionals
 
+
 #### Multiple Conditions (AND)
 
+
 ```
+
 {% if lead_score >= 75 and custom.account_type == "trial" %}
   You're a highly engaged trial user!
   [Upgrade to unlock premium features →]
 {% endif %}
+
+
 ```
+
 
 #### Multiple Conditions (OR)
 
+
 ```
+
 {% if country == "United States" or country == "Canada" %}
   North American customers get free shipping!
 {% endif %}
+
+
 ```
+
 
 #### Complex Logic
 
+
 ```
+
 {% if (lead_score >= 75 and custom.account_type == "trial") or custom.is_vip == true %}
   🎁 Special offer just for you!
   
@@ -278,9 +403,13 @@ Company Size Targeting:
     Exclusive VIP discount: 15% off your next renewal!
   {% endif %}
 {% endif %}
+
+
 ```
 
+
 #### Comparison Operators
+
 
 ```yaml
 Equals:
@@ -306,13 +435,19 @@ Contains:
 
 Not Contains:
   {% if tags not_contains "unsubscribed" %}
+
+
 ```
+
 
 ### Dynamic Links
 
+
 #### Personalized URLs
 
+
 ```
+
 Track your order:
 <a href="https://example.com/orders/{{order_id}}?email={{email}}">
   View Order #{{order_id}}
@@ -322,34 +457,50 @@ Personalized landing page:
 <a href="https://example.com/welcome?name={{first_name}}&ref={{campaign_id}}">
   Get Started
 </a>
+
+
 ```
+
 
 #### UTM Parameters
 
+
 ```
+
 <a href="{{landing_page_url}}?utm_source=email&utm_medium=campaign&utm_campaign={{campaign_name}}&utm_content={{email}}">
   Click Here
 </a>
 
 Output:
 https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welcome_series&utm_content=john@example.com
+
+
 ```
+
 
 ### Dynamic Images
 
+
 #### Personalized Images
 
+
 ```
+
 <img src="https://api.example.com/badge/{{first_name}}/{{lead_score}}" 
      alt="Your Score: {{lead_score}}">
 
 <img src="{{cdn_url}}/images/{{custom.industry}}-hero.jpg" 
      alt="{{custom.industry}} Solutions">
+
+
 ```
+
 
 #### Conditional Images
 
+
 ```
+
 {% if lead_score >= 90 %}
   <img src="{{cdn_url}}/badges/platinum.png" alt="Platinum Member">
 {% elsif lead_score >= 75 %}
@@ -357,13 +508,19 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 {% elsif lead_score >= 50 %}
   <img src="{{cdn_url}}/badges/silver.png" alt="Silver Member">
 {% endif %}
+
+
 ```
+
 
 ### Date & Time Formatting
 
+
 #### Date Filters
 
+
 ```
+
 Account created:
   {{created_at | date: "MMMM DD, YYYY"}}
   Output: November 24, 2025
@@ -379,11 +536,16 @@ Short date:
 Relative time:
   {{last_activity | time_ago}}
   Output: 2 hours ago
+
+
 ```
+
 
 #### Date Calculations
 
+
 ```
+
 Trial expiration:
   {% assign trial_end = created_at | date_add: 14, "days" %}
   Your trial expires on {{trial_end | date: "MMMM DD, YYYY"}}
@@ -391,29 +553,48 @@ Trial expiration:
 Days remaining:
   {% assign days_left = trial_end_date | days_from_now %}
   {{days_left}} days left in your trial
+
+
 ```
+
 
 ### Loops & Iterations
 
+
 #### Loop Through Lists
 
+
 ```
+
 Your recent purchases:
 
 {% for item in recent_purchases %}
+
+
   - {{item.name}} - ${{item.price}}
 {% endfor %}
 
 Output:
 Your recent purchases:
+
+
   - Widget Pro - $49.99
+
+
   - Gadget Plus - $29.99
+
+
   - Tool Kit - $79.99
+
+
 ```
+
 
 #### Loop with Conditionals
 
+
 ```
+
 {% for tag in tags %}
   {% if tag == "vip" %}
     🌟 VIP Member
@@ -421,23 +602,34 @@ Your recent purchases:
     🏢 Enterprise Customer
   {% endif %}
 {% endfor %}
+
+
 ```
+
 
 #### Loop Limits
 
+
 ```
+
 Top 3 products:
 
 {% for product in recommended_products limit: 3 %}
   {{forloop.index}}. {{product.name}} - ${{product.price}}
 {% endfor %}
+
+
 ```
+
 
 ### String Manipulation
 
+
 #### Text Filters
 
+
 ```
+
 Uppercase:
   {{company | upcase}}
   Output: ACME INC
@@ -461,11 +653,16 @@ Truncate:
 Strip HTML:
   {{bio | strip_html}}
   Removes all HTML tags
+
+
 ```
+
 
 #### String Operations
 
+
 ```
+
 Concatenation:
   {{first_name}} {{last_name}}
   Output: John Doe
@@ -479,13 +676,19 @@ Split:
   {% assign name_parts = full_name | split: " " %}
   First: {{name_parts[0]}}
   Last: {{name_parts[1]}}
+
+
 ```
+
 
 ### Number Formatting
 
+
 #### Number Filters
 
+
 ```
+
 Currency:
   {{revenue | currency}}
   Output: $1,234.56
@@ -504,11 +707,16 @@ Round:
 Thousands separator:
   {{subscribers | number_with_delimiter}}
   Output: 1,234,567
+
+
 ```
+
 
 ### Math Operations
 
+
 ```
+
 Addition:
   {% assign total = price + tax %}
   Total: ${{total}}
@@ -524,13 +732,18 @@ Multiplication:
 Division:
   {% assign monthly = annual_price | divided_by: 12 %}
   Monthly: ${{monthly}}
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Template variables (workspace-level)
@@ -574,9 +787,13 @@ CREATE TABLE variable_usage (
 );
 
 CREATE INDEX idx_variable_usage_template ON variable_usage(template_id);
+
+
 ```
 
+
 ### Variable Parser Service
+
 
 ```typescript
 interface VariableContext {
@@ -872,9 +1089,13 @@ class VariableParser {
     // Useful for analytics and cleanup
   }
 }
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Parse template with test data
@@ -935,15 +1156,25 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
   
   return res.json(variable);
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Template Editor](./template-editor.md)** - Visual template creation
+
+
 - **[Template Management](./template-management.md)** - Template organization
+
+
 - **[Personalization System](../campaigns/personalization-system.md)** - Advanced personalization
+
+
 - **[Leads Management](../leads/leads-management.md)** - Contact data source
 
 ---

@@ -6,60 +6,99 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - integrations/api-access
+
+
   - integrations/crm-integration/overview
+
+
   - queue/email-pipeline
+
+
   - campaigns/campaign-management/overview
 related_tasks:
+
+
   - epic-6-core-email-pipeline
 ---
+
 
 # Webhook System
 
 **Quick Access**: Receive real-time notifications about email events, campaign activities, and system updates via HTTP webhooks.
 
+
 ## Overview
 
 The Webhook System enables external applications to receive instant notifications when events occur in PenguinMails, powering integrations with CRMs, analytics tools, marketing automation platforms, and custom applications.
 
+
 ### Key Capabilities
 
+
 - **Real-Time Events**: Instant HTTP POST notifications
+
+
 - **Event Filtering**: Subscribe only to relevant events
+
+
 - **Retry Logic**: Automatic retries on delivery failures
+
+
 - **Signature Verification**: Cryptographic signatures for security
+
+
 - **Event Replay**: Retrieve historical events
+
+
 - **Testing Tools**: Webhook debugger and request inspector
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Create Your First Webhook
 
+
 #### Step 1: Navigate to Webhooks
 
+
 ```
+
 Dashboard → Settings → Integrations → Webhooks → Create Webhook
+
+
 ```
+
 
 #### Step 2: Configure Webhook
 
 **Basic Configuration:**
 
+
 ```
+
 Webhook Name: CRM Contact Sync
 Endpoint URL: https://yourapp.com/webhooks/penguinmails
 Description: Sync email engagement to CRM
 
 Status: ○ Active  ○ Paused
+
+
 ```
+
 
 #### Step 3: Select Events
 
 **Choose which events to receive:**
 
+
 ```
+
 Email Events:
   ☑ email.sent
   ☑ email.delivered
@@ -78,11 +117,16 @@ Contact Events:
   ☐ contact.created
   ☐ contact.updated
   ☐ contact.unsubscribed
+
+
 ```
+
 
 #### Step 4: Test Webhook
 
+
 ```
+
 [Send Test Event]
 
 Test payload will be sent to:
@@ -90,22 +134,31 @@ https://yourapp.com/webhooks/penguinmails
 
 Sending test event...
 ✓ Test  successful! (Response: 200 OK)
+
+
 ```
+
 
 #### Step 5: Save & Activate
 
+
 ```
+
 [Save Webhook]
 
 ✓ Webhook created and activated
 Secret Key: whsec_abc123... [Copy]
 
 Add this to your application for signature verification.
+
+
 ```
+
 
 ### Receiving Webhook Events
 
 **Example Payload (Email Opened):**
+
 
 ```json
 {
@@ -131,11 +184,15 @@ Add this to your application for signature verification.
     }
   }
 }
+
+
 ```
+
 
 ### Handling Webhooks in Your Application
 
 **Node.js Example:**
+
 
 ```javascript
 const express = require('express');
@@ -175,32 +232,45 @@ function verifySignature(payload, signature) {
   const digest = `sha256=${hmac.digest('hex')}`;
   return crypto.timingSafeEqual(Buffer.from(digest), Buffer.from(signature));
 }
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Webhook Configuration
+
 
 ### Event Filtering
 
 **Filter by workspace:**
 
+
 ```
+
 Webhook Name: Client A Events Only
 Event Filters:
   Workspaces: [Client A]
   Events: [email.opened, email.clicked]
+
+
 ```
 
 **Filter by campaign:**
 
+
 ```
+
 Event Filters:
   Campaign ID: camp_xyz123
   Events: [All]
+
+
 ```
 
 **Custom filters (JSON):**
+
 
 ```json
 {
@@ -210,13 +280,18 @@ Event Filters:
     "campaign.type": "promotional"
   }
 }
+
+
 ```
+
 
 ### Retry Logic & Error Handling
 
 **Automatic Retries:**
 
+
 ```
+
 If webhook delivery fails:
   Retry #1: After 1 minute
   Retry #2: After 5 minutes
@@ -225,40 +300,70 @@ If webhook delivery fails:
   Retry #5: After 24 hours
 
 After 5 failed attempts:
+
+
   - Mark webhook as "failing"
+
+
   - Send email notification to admin
+
+
   - Pause webhook after 100 consecutive failures
+
+
 ```
 
 **View Failed Deliveries:**
 
+
 ```
+
 Recent Deliveries:
   ✓ email.opened     200 OK   Nov 25, 14:30
   ✓ email.clicked    200 OK   Nov 25, 14:29
   ✗ email.bounced    500 Error Nov 25, 14:28 [Retry #2]
   
 [View Failed Event] [Retry Now] [Disable Webhook]
+
+
 ```
+
 
 ### Signature Verification
 
 **Why Important:**
 
+
 - Prevents spoofed webhook requests
+
+
 - Ensures data integrity
+
+
 - Verifies sender authenticity
 
 **Verification Process:**
 
+
 ```
+
+
 1. PenguinMails generates HMAC-SHA256 signature
+
+
 2. Signature sent in X-PenguinMails-Signature header
+
+
 3. Your app recomputes signature with shared secret
+
+
 4. Compare signatures (use timing-safe comparison)
+
+
 ```
 
 **TypeScript/Node.js Example:**
+
 
 ```typescript
 import express from 'express';
@@ -416,13 +521,18 @@ function standaloneVerify(payload, signature, secret) {
     return false;
   }
 }
+
+
 ```
+
 
 ### Webhook Debugging
 
 **Request Inspector:**
 
+
 ```
+
 Last 50 Webhook Deliveries:
 
 [Nov 25, 14:30:15] email.opened
@@ -444,11 +554,15 @@ Response:
   200 OK
   Content-Type: text/plain
   Body: "OK"
+
+
 ```
 
 **Test Mode:**
 
+
 ```
+
 [Send Test Event]
 
 Choose test event type:
@@ -465,13 +579,18 @@ OR
   Use sample data ☑
 
 [Send Test]
+
+
 ```
+
 
 ### Event Replay
 
 **Replay missed events:**
 
+
 ```
+
 Replay Events
 
 From: Nov 20, 2025  14:00
@@ -484,19 +603,29 @@ Found: 1,247 matching events
 [Replay All Events]
 
 Status: Replaying... (234 / 1,247)
+
+
 ```
 
 **Use Cases:**
 
+
 - Recover from downtime
+
+
 - Backfill data after webhook creation
+
+
 - Re-sync after bug fixes
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Webhook endpoints
@@ -570,9 +699,13 @@ CREATE TABLE webhook_events (
 );
 
 CREATE INDEX idx_webhook_events_tenant_type ON webhook_events(tenant_id, event_type, created_at);
+
+
 ```
 
+
 ### Webhook Delivery Service
+
 
 ```typescript
 class WebhookDeliveryService {
@@ -698,9 +831,13 @@ class WebhookDeliveryService {
     }
   }
 }
+
+
 ```
 
+
 ### Event Emission
+
 
 ```typescript
 // Emit webhook event when email is opened
@@ -735,9 +872,13 @@ async function handleEmailOpen(emailId: string): Promise<void> {
   // Deliver to webhooks
   await webhookDeliveryService.deliverEvent(event);
 }
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create webhook
@@ -791,11 +932,15 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
     return res.status(400).json({ error: error.message });
   }
 });
+
+
 ```
 
 ---
 
+
 ## Event Reference
+
 
 ### Email Events
 
@@ -809,6 +954,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 | `email.spam_reported` | Marked as spam | emailId, reportedAt |
 | `email.unsubscribed` | Recipient unsubscribed | emailId, contactId, unsubscribedAt |
 
+
 ### Campaign Events
 
 | Event Type | Description |
@@ -816,6 +962,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 | `campaign.launched` | Campaign started sending |
 | `campaign.completed` | Campaign finished sending |
 | `campaign.paused` | Campaign paused by user |
+
 
 ### Contact Events
 
@@ -827,37 +974,70 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 ---
 
+
 ## Related Documentation
+
 
 ### Route Specifications
 
+
 - **[Webhook System Routes](/docs/design/routes/webhook-system)** - Complete webhook UI routes
+
+
 - **[API Access Routes](/docs/design/routes/api-access)** - API key management routes
+
+
 - **[ESP Integration Routes](/docs/design/routes/esp-integration)** - ESP webhook configuration
+
 
 ### Feature Documentation
 
+
 - **[API Access](/docs/features/integrations/api-access)** - REST API and authentication
+
+
 - **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Secure API key system
+
+
 - **[ESP Integration](/docs/features/integrations/esp-integration)** - External ESP webhooks
+
+
 - **[CRM Integration](/docs/features/integrations/crm-integration/overview)** - Pre-built integrations
+
 
 ### API Documentation
 
+
 - **[Platform API](/docs/implementation-technical/api/platform-api)** - Webhook management endpoints
+
+
 - **[Tenant API](/docs/implementation-technical/api/tenant-api)** - Event data endpoints
+
+
 - **[Queue System](/docs/implementation-technical/api/queue)** - Event processing
+
 
 ### Architecture & Implementation
 
+
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+
+
 - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
+
+
 - **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign events
+
+
 - **[Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/)** - Email pipeline tasks
+
 
 ### User Journeys
 
+
 - **[Technical Teams Journeys](/user-journeys/internal-users/technical-teams-journeys)** - Developer workflows
+
+
 - **[Developer Onboarding](/user-journeys/external-users/onboarding-flows/developer-onboarding)** - Developer setup
 
 ---

@@ -4,9 +4,11 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Enterprise Security Framework
 
 ---
+
 
 ## **Strategic Alignment**
 
@@ -20,24 +22,37 @@ persona: "Documentation Users"
 
 ---
 
+
 ## Overview
 
 This document outlines the security practices and protocols for the PenguinMails multi-tenant SaaS platform. While we leverage NileDB's authentication services, we maintain comprehensive security practices across all system components.
 
+
 ### Security Philosophy
 
+
 - **Defense in Depth**: Multiple layers of security controls
+
+
 - **Zero Trust**: Verify every access request regardless of origin
+
+
 - **Principle of Least Privilege**: Minimum necessary access for all users
+
+
 - **Security by Design**: Security considerations in all development phases
 
 ---
 
+
 ## Authentication & Authorization
+
 
 ### NileDB Authentication Integration
 
+
 #### Authentication Flow
+
 
 ```mermaid
 sequenceDiagram
@@ -52,20 +67,40 @@ sequenceDiagram
     App->>Redis: Store Session
     Redis->>App: Session Confirmed
     App->>Client: Login Success + Dashboard Access
+
+
 ```
+
 
 #### Security Features
 
+
 - **Managed Authentication**: NileDB handles core authentication (users table)
+
+
 - **Session Management**: Fully handled by NileDB authentication system
+
+
 - **Email Verification**: ✅ IMPLEMENTED using Loop service + custom verification endpoint
+
+
 - **Password Reset**: Planned alongside email verification
+
+
 - **Multi-Factor Authentication**: Not implemented (planned under feature flag)
+
+
 - **Password Policies**: Configurable through tenant_policies table (not enforced)
+
+
 - **Account Lockout**: Not implemented - relies on password reset flow
+
+
 - **Failed Login Tracking**: No tracking implemented - users contact support
 
+
 #### Implementation Example
+
 
 ```javascript
 // Authentication middleware
@@ -100,13 +135,18 @@ const authenticateUser = async (req, res, next) => {
     res.status(401).json({ error: 'Authentication failed' });
   }
 };
+
+
 ```
 
+
 ### Role-Based Access Control (RBAC)
+
 
 #### Permission Matrix
 
 Our 7-tier permission system provides granular access control:
+
 
 ```mermaid
 graph TD
@@ -135,7 +175,10 @@ graph TD
     classDef employee fill:#b3e5fc
     classDef qa fill:#fff9c4
     classDef blocked fill:#ffcdd2
+
+
 ```
+
 
 #### Permission Levels Detail
 
@@ -149,7 +192,9 @@ graph TD
 | **QA** | None | None | Test Config | Test Data | None |
 | **Blocked** | None | None | None | None | None |
 
+
 #### Implementation
+
 
 ```javascript
 // Permission checking middleware
@@ -187,9 +232,13 @@ app.get('/api/tenant/:tenantId/users',
   checkPermission('user_management'),
   getUsers
 );
+
+
 ```
 
+
 ## Row Level Security (RLS) Policies
+
 
 ### Complete RLS Policy Matrix
 
@@ -197,38 +246,71 @@ app.get('/api/tenant/:tenantId/users',
 
 **Current Implementation:**
 
+
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
+
+
 - **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets
+
+
 - **Q85**: Cross-tenant access policies for staff need documentation (immediate action required)
+
+
 - **Q86**: RLS testing procedures planned as part of feature implementation
+
 
 ### Staff Emergency Access Protocols
 
+
 #### Current Bypass Methods
 
+
 1. **Super Admin/Admin Privileges**
+
+
    - Users with super_admin or admin roles can access tenant data
+
+
    - All actions are logged for audit purposes
+
+
    - No additional approval required beyond role assignment
 
+
 2. **Internal Dev Ticket Process**
+
+
    - Staff can create internal tickets for temporary access
+
+
    - Dev team creates time-limited access for specific tasks
+
+
    - Full audit trail maintained for all temporary access
+
 
 #### Documentation Requirements (Q4 2025)
 
+
 - [ ] Formalize staff bypass procedures
+
+
 - [ ] Document cross-tenant access validation framework
+
+
 - [ ] Create RLS testing procedures as part of feature rollout
 
 ---
 
+
 ## Data Security
+
 
 ### Multi-Tenant Data Isolation
 
+
 #### Database Security
+
 
 ```sql
 -- Row Level Security Example
@@ -239,9 +321,13 @@ CREATE POLICY tenant_isolation ON tenant_data
 
 -- Session-based tenant context
 SET app.current_tenant_id = '12345';
+
+
 ```
 
+
 #### API Security
+
 
 ```javascript
 // Tenant context middleware
@@ -269,17 +355,28 @@ const setTenantContext = async (req, res, next) => {
     res.status(500).json({ error: 'Failed to set tenant context' });
   }
 };
+
+
 ```
+
 
 ### Data Encryption
 
+
 #### Encryption at Rest
 
+
 - **Database**: PostgreSQL TDE (Transparent Data Encryption)
+
+
 - **File Storage**: Encrypted backups and log files
+
+
 - **Configuration**: Encrypted environment variables
 
+
 #### Encryption in Transit
+
 
 ```javascript
 // HTTPS enforcement
@@ -302,9 +399,13 @@ app.use(helmet({
     },
   },
 }));
+
+
 ```
 
+
 #### API Key Management
+
 
 ```javascript
 // Secure API key handling
@@ -322,63 +423,105 @@ const apiKeyManager = {
     return cipher.update(JSON.stringify(data), 'utf8', 'hex') + cipher.final('hex');
   }
 };
+
+
 ```
 
 ---
 
+
 ## Infrastructure Security
+
 
 ### Network Security
 
+
 #### Firewall Configuration
 
+
 ```bash
+
+
 # UFW Firewall Rules
+
 ufw default deny incoming
 ufw default allow outgoing
 
+
 # SSH access (specific IPs only)
+
 ufw allow from 192.168.1.0/24 to any port 22
 
+
 # HTTP/HTTPS
+
 ufw allow 80/tcp
 ufw allow 443/tcp
 
+
 # Application ports (internal only)
+
 ufw allow from 10.0.0.0/8 to any port 3000
 ufw allow from 10.0.0.0/8 to any port 5432
 ufw allow from 10.0.0.0/8 to any port 6379
+
+
 ```
+
 
 #### VPN Access
 
+
 - **Team Access**: VPN required for infrastructure management
+
+
 - **Database Access**: VPN-only access to production databases
+
+
 - **Monitoring**: VPN access to monitoring dashboards
+
 
 ### Server Security
 
+
 #### VPS Security Hardening
 
+
 ```bash
+
+
 # Disable root SSH login
+
 sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 
+
 # Disable password authentication (key-based only)
+
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
 
+
 # Install fail2ban
+
 apt-get install fail2ban
 systemctl enable fail2ban
 
+
 # Update system packages
+
 apt-get update && apt-get upgrade -y
+
+
 ```
+
 
 #### SSL/TLS Configuration
 
+
 ```nginx
+
+
 # Nginx SSL Configuration
+
 server {
     listen 443 ssl http2;
     server_name penguinmails.com;
@@ -398,28 +541,45 @@ server {
     add_header X-Content-Type-Options nosniff;
     add_header X-XSS-Protection "1; mode=block";
 }
+
+
 ```
 
 ---
 
+
 ## Email Security
+
 
 ### SPF, DKIM, DMARC Configuration
 
+
 #### DNS Records
 
+
 ```dns
+
+
 # SPF Record
+
 TXT @ "v=spf1 include:_spf.penguinmails.com ~all"
 
+
 # DKIM Record
+
 TXT mailu._domainkey.penguinmails.com "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQE..."
 
+
 # DMARC Record
+
 TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmails.com"
+
+
 ```
 
+
 #### Email Authentication
+
 
 ```javascript
 // Email sending with authentication headers
@@ -437,11 +597,16 @@ const sendEmail = async (emailData) => {
 
   return await smtpTransporter.sendMail(mailOptions);
 };
+
+
 ```
+
 
 ### Email Warm-up Security
 
+
 #### Reputation Management
+
 
 ```javascript
 // Safe warm-up algorithm
@@ -470,15 +635,21 @@ const emailWarmup = {
     return { action: 'continue', reason: 'Healthy bounce rate' };
   }
 };
+
+
 ```
 
 ---
 
+
 ## Application Security
+
 
 ### Input Validation & Sanitization
 
+
 #### SQL Injection Prevention
+
 
 ```javascript
 // Parameterized queries
@@ -496,9 +667,13 @@ const getUserData = async (userId, tenantId) => {
 const campaignQuery = nileDB('campaigns')
   .where({ tenant_id: tenantId, status: 'active' })
   .select(['id', 'name', 'status']);
+
+
 ```
 
+
 #### XSS Prevention
+
 
 ```javascript
 // Input sanitization
@@ -518,11 +693,16 @@ const escapeHTML = (unsafe) => {
     .replace(/")
     .replace(/');
 };
+
+
 ```
+
 
 ### Rate Limiting
 
+
 #### API Rate Limiting
+
 
 ```javascript
 // Redis-based rate limiter
@@ -556,17 +736,24 @@ app.use('/api) => {
   res.setHeader('X-RateLimit-Remaining', result.remaining);
   next();
 });
+
+
 ```
 
 ---
 
+
 ## Security Monitoring
+
 
 - All privileged staff roles (including super_admin, admin, support, and QA) operate under strict least-privilege policies, and every privileged action affecting tenant data, billing, authentication, or configuration MUST be logged with tenant context, resource identifiers, and sufficient metadata to satisfy SOC 2 and GDPR audit expectations.
 
+
 ### Logging & Auditing
 
+
 #### Security Event Logging
+
 
 ```javascript
 // Security event logger
@@ -593,13 +780,24 @@ const securityLogger = {
 
   // Track suspicious activities
   trackSuspiciousActivity: async (req, activity) => {
+
+
 #### Enhanced Audit Logging (Q4 2025)
+
 *For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Enhanced Audit Logging](#enhanced-audit-logging-q4-2025)*
 
 **Current Enhancements Planned:**
+
+
 - Multi-legislation compliance fields (GDPR, CCPA, PIPEDA, CASL)
+
+
 - Legal basis tracking for GDPR compliance
+
+
 - Cross-border transfer monitoring
+
+
 - Enhanced retention management
 
 **Note**: Some audit logging enhancements are scheduled for 2026 due to database storage constraints.
@@ -616,9 +814,13 @@ const securityLogger = {
     await nileDB.suspicious_activities.insert(suspicious);
   }
 };
+
+
 ```
 
+
 #### Audit Trail
+
 
 ```javascript
 // Comprehensive audit logging
@@ -639,18 +841,31 @@ const auditLogger = {
     await nileDB.audit_log.insert(auditEntry);
   }
 };
+
+
 ```
+
 
 ### Incident Response
 
+
 #### Security Incident Types
 
+
 1. **Unauthorized Access**: Detected login from unusual locations
+
+
 2. **Data Breach**: Suspicious data access or extraction
+
+
 3. **System Compromise**: Malware or unauthorized system changes
+
+
 4. **Email Abuse**: Spam or phishing from our infrastructure
 
+
 #### Response Procedures
+
 
 ```mermaid
 flowchart TD
@@ -672,15 +887,21 @@ flowchart TD
 
     %% Alert for high severity
     CONTAIN -.->|Immediate Alert| ALERT[Security Team Alert]
+
+
 ```
 
 ---
 
+
 ## Compliance & Privacy
+
 
 ### GDPR Compliance
 
+
 #### Data Processing Rights
+
 
 ```javascript
 // GDPR compliance functions
@@ -711,9 +932,13 @@ const gdprCompliance = {
     return JSON.stringify(data, null, 2);
   }
 };
+
+
 ```
 
+
 ### Data Retention Policies
+
 
 #### Retention Schedule
 
@@ -727,49 +952,102 @@ const gdprCompliance = {
 
 ---
 
+
 ## Security Training & Awareness
+
 
 ### Team Security Practices
 
+
 #### Development Security
 
+
 - **Secure Coding Training**: Regular training on OWASP Top 10
+
+
 - **Code Review Process**: Security-focused code reviews
+
+
 - **Dependency Management**: Regular security updates and vulnerability scanning
+
+
 - **Environment Segregation**: Clear separation of dev/staging/production
+
 
 #### Access Management
 
+
 - **Principle of Least Privilege**: Minimum necessary access
+
+
 - **Regular Access Reviews**: Quarterly access audits
+
+
 - **Password Management**: Use of secure password managers
+
+
 - **MFA Enforcement**: Multi-factor authentication for all admin access
 
 ---
 
+
 ## Security Checklist
+
 
 ### Pre-Deployment Security
 
+
 - [ ] Environment variables secured
+
+
 - [ ] SSL/TLS certificates valid
+
+
 - [ ] Database connections encrypted
+
+
 - [ ] API endpoints protected
+
+
 - [ ] Rate limiting configured
+
+
 - [ ] Input validation implemented
+
+
 - [ ] Security headers set
+
+
 - [ ] Error handling secure
+
+
 - [ ] Logging configured
+
+
 - [ ] Backup encryption verified
+
 
 ### Ongoing Security Maintenance
 
+
 - [ ] Weekly security updates
+
+
 - [ ] Monthly vulnerability scans
+
+
 - [ ] Quarterly access reviews
+
+
 - [ ] Semi-annual penetration testing
+
+
 - [ ] Annual security training
+
+
 - [ ] Regular backup testing
+
+
 - [ ] Security incident drills
 
 ---
@@ -778,9 +1056,16 @@ const gdprCompliance = {
 
 **Related Documents**
 
+
 - [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
+
+
 - [Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix) - Database security strategy framework
+
+
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
+
+
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 
 ---

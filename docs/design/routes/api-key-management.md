@@ -9,11 +9,14 @@ status: "PLANNED"
 priority: "P0 - Critical"
 ---
 
+
 # API Key Management Routes
+
 
 ## Overview
 
 This document specifies the frontend routes for tenant API key management, enabling self-service creation, viewing, regeneration, and revocation of API keys for programmatic access to PenguinMails.
+
 
 ### Routes Summary
 
@@ -25,6 +28,7 @@ This document specifies the frontend routes for tenant API key management, enabl
 
 ---
 
+
 ## Route 1: API Key List
 
 **Path:** `/dashboard/settings/developers/api-keys`
@@ -35,9 +39,12 @@ This document specifies the frontend routes for tenant API key management, enabl
 
 **Layout:** Settings page with sidebar navigation
 
+
 ### Page Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────────────────┐
 │ Settings Sidebar │ API Keys                                  │
 ├──────────────────┼───────────────────────────────────────────┤
@@ -65,36 +72,67 @@ This document specifies the frontend routes for tenant API key management, enabl
 │                  │ │ Last used: 1d ago  Requests: 5,432     ││
 │                  │ └────────────────────────────────────────┘│
 └─────────────────────────────────────────────────────────────┘
+
+
 ```
 
+
 ### UI Components
+
 
 #### 1. Page Header
 
 **Elements:**
 
+
 - Title: "API Keys"
+
+
 - Description: "Manage API keys for programmatic access to PenguinMails."
+
+
 - Primary action: "Create API Key" button (top right)
+
 
 #### 2. API Key Table
 
 **Columns:**
 
+
 - **Name** - User-provided key name
+
+
 - **Key** - Masked key value (`pm_live_abc...xyz`)
+
+
 - **Permissions** - Badge list of scopes
+
+
 - **Rate Limit** - Requests per minute
+
+
 - **Status** - Active (green) or Revoked (red)
+
+
 - **Last Used** - Relative time ("2 hours ago")
+
+
 - **Actions** - Copy, Regenerate, Revoke buttons
 
 **Row Details (expandable):**
 
+
 - Created date
+
+
 - Total requests (lifetime)
+
+
 - Error count
+
+
 - Request chart (last 7 days)
+
 
 #### 3. Empty State
 
@@ -102,36 +140,65 @@ This document specifies the frontend routes for tenant API key management, enabl
 
 **Content:**
 
+
 - Icon: Key icon
+
+
 - Title: "No API keys yet"
+
+
 - Description: "Create your first API key to start using the PenguinMails API programmatically."
+
+
 - Action: "Create API Key" button
+
 
 #### 4. Table Actions
 
 **Copy Button:**
 
+
 - Copies masked key to clipboard
+
+
 - Shows toast: "Key copied to clipboard"
+
+
 - Note: Full key not available after creation
 
 **Regenerate Button:**
 
+
 - Opens confirmation modal
+
+
 - Warning: "Old key will be revoked immediately"
+
+
 - Generates new key with same permissions
+
+
 - Displays new key once
 
 **Revoke Button:**
 
+
 - Opens confirmation modal
+
+
 - Warning: "This action cannot be undone"
+
+
 - Marks key as revoked
+
+
 - Key remains visible but inactive
+
 
 ### API Calls
 
 **Load API Keys:**
+
 
 ```typescript
 GET /api/v1/platform/api-keys
@@ -153,9 +220,12 @@ Response:
     }
   ]
 }
+
+
 ```
 
 ---
+
 
 ## Route 2: Create API Key Modal
 
@@ -163,9 +233,12 @@ Response:
 
 **Modal Type:** Centered modal with backdrop
 
+
 ### Modal Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────┐
 │ Create API Key                            [X]   │
 ├─────────────────────────────────────────────────┤
@@ -187,55 +260,110 @@ Response:
 │                                                 │
 │ [Cancel]                    [Generate Key]     │
 └─────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### Form Fields
 
 **1. Name (required)**
 
+
 - Type: Text input
+
+
 - Placeholder: "e.g., Production Server, Staging Environment"
+
+
 - Validation: 1-50 characters, alphanumeric and spaces
+
+
 - Error: "Name is required" or "Name must be 1-50 characters"
 
 **2. Permissions (required)**
 
+
 - Type: Multi-select checkboxes
+
+
 - Options:
+
+
   - `send_email` - Send emails via API
+
+
   - `read_analytics` - Read campaign and email analytics
+
+
   - `manage_contacts` - Create, update, delete contacts
+
+
   - `manage_campaigns` - Create, update, delete campaigns
+
+
   - `manage_templates` - Create, update, delete templates
+
+
   - `manage_domains` - Add, verify, delete domains
+
+
   - `read_inbox` - Read unified inbox messages
+
+
   - `manage_webhooks` - Configure webhooks
+
+
 - Validation: At least one permission required
+
+
 - Error: "Select at least one permission"
 
 **3. Rate Limit (display only)**
 
+
 - Shows tier-based rate limit
+
+
 - Starter: 60 requests/min
+
+
 - Pro: 300 requests/min
+
+
 - Enterprise: 1000 requests/min
+
+
 - Link: "Upgrade plan to increase rate limit"
+
 
 ### Modal Actions
 
 **Cancel Button:**
 
+
 - Closes modal without creating key
+
+
 - No API call
 
 **Generate Key Button:**
 
+
 - Validates form fields
+
+
 - Creates API key via API
+
+
 - Opens "API Key Created" success modal
+
+
 - Closes create modal
 
+
 ### API Call
+
 
 ```typescript
 POST /api/v1/platform/api-keys
@@ -256,9 +384,12 @@ Response (201 Created):
   "created_at": "2025-11-26T10:00:00Z",
   "warning": "Store this key securely. It will not be shown again."
 }
+
+
 ```
 
 ---
+
 
 ## Route 3: API Key Created Success Modal
 
@@ -266,9 +397,12 @@ Response (201 Created):
 
 **Modal Type:** Centered modal with backdrop (cannot close by clicking backdrop)
 
+
 ### Modal Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ API Key Created                        [X]   │
 ├─────────────────────────────────────────────────┤
@@ -295,43 +429,73 @@ Response (201 Created):
 │                                                 │
 │ [View Documentation]              [Done]       │
 └─────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### UI Components
 
 **1. Warning Banner**
 
+
 - Icon: ⚠️ Warning icon
+
+
 - Text: "Store this key securely. It will not be shown again."
+
+
 - Style: Yellow background, prominent
 
 **2. API Key Display**
 
+
 - Full API key value (plaintext)
+
+
 - Copy button (clipboard icon)
+
+
 - Monospace font
+
+
 - Select-all on click
 
 **3. Action Buttons**
 
+
 - **Copy Key:** Copies API key to clipboard, shows toast
+
+
 - **Download .env:** Downloads file with `PENGUINMAILS_API_KEY=pm_live_...`
 
 **4. Code Examples**
 
+
 - Tabbed interface: cURL, Node.js, Python, PHP
+
+
 - Syntax highlighting
+
+
 - Copy button for each example
+
+
 - Pre-filled with actual API key
 
 **5. Footer Actions**
 
+
 - **View Documentation:** Opens API docs in new tab
+
+
 - **Done:** Closes modal, returns to API key list
+
 
 ### Code Examples
 
 **cURL:**
+
 
 ```bash
 curl -X POST https://api.penguinmails.com/api/v1/emails/send \
@@ -342,9 +506,12 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
     "subject": "Test Email",
     "body": "Hello from PenguinMails API"
   }'
+
+
 ```
 
 **Node.js:**
+
 
 ```javascript
 const axios = require('axios');
@@ -365,9 +532,12 @@ axios.post('https://api.penguinmails.com/api/v1/emails/send', {
 }).catch(error => {
   console.error('Error:', error.response.data);
 });
+
+
 ```
 
 **JavaScript/Node.js:**
+
 
 ```javascript
 const axios = require('axios');
@@ -398,9 +568,12 @@ async function sendEmail() {
 }
 
 sendEmail();
+
+
 ```
 
 ---
+
 
 ## Route 4: API Key Details Modal
 
@@ -408,9 +581,12 @@ sendEmail();
 
 **Modal Type:** Large centered modal with tabs
 
+
 ### Modal Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────┐
 │ Production Server                         [X]   │
 ├─────────────────────────────────────────────────┤
@@ -435,32 +611,58 @@ sendEmail();
 │                                                 │
 │ [Regenerate Key]  [Revoke Key]                 │
 └─────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### Tabs
 
 **1. Overview Tab**
 
+
 - Key metadata (ID, masked key, permissions, rate limit, status)
+
+
 - Created and last used timestamps
+
+
 - Usage statistics (total requests, error count)
+
+
 - Actions (Regenerate, Revoke)
 
 **2. Usage Tab**
 
+
 - Requests per day chart (last 30 days)
+
+
 - Error rate trend chart
+
+
 - Top endpoints table (endpoint, request count, avg response time)
+
+
 - Geographic distribution map (if available)
 
 **3. Security Tab**
 
+
 - Audit log (last 50 events)
+
+
 - IP addresses used (last 10 unique IPs)
+
+
 - Security recommendations
+
+
 - Rotation reminder (if >90 days old)
 
+
 ### API Call
+
 
 ```typescript
 GET /api/v1/platform/api-keys/{key_id}
@@ -486,9 +688,12 @@ Response (200 OK):
     { "endpoint": "/api/v1/analytics/campaigns", "count": 3234, "avg_response_time_ms": 150 }
   ]
 }
+
+
 ```
 
 ---
+
 
 ## Route 5: Regenerate API Key Confirmation Modal
 
@@ -496,9 +701,12 @@ Response (200 OK):
 
 **Modal Type:** Small centered confirmation modal
 
+
 ### Modal Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ Regenerate API Key?                    [X]   │
 ├─────────────────────────────────────────────────┤
@@ -513,22 +721,35 @@ Response (200 OK):
 │                                                 │
 │ [Cancel]                    [Regenerate Key]   │
 └─────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### Modal Actions
 
 **Cancel Button:**
 
+
 - Closes modal without regenerating
+
+
 - No API call
 
 **Regenerate Key Button:**
 
+
 - Regenerates API key via API
+
+
 - Opens "API Key Created" success modal with new key
+
+
 - Closes confirmation modal
 
+
 ### API Call
+
 
 ```typescript
 POST /api/v1/platform/api-keys/{key_id}/regenerate
@@ -543,9 +764,12 @@ Response (200 OK):
   "created_at": "2025-11-26T16:00:00Z",
   "warning": "Old key has been revoked. Update your application immediately."
 }
+
+
 ```
 
 ---
+
 
 ## Route 6: Revoke API Key Confirmation Modal
 
@@ -553,9 +777,12 @@ Response (200 OK):
 
 **Modal Type:** Small centered confirmation modal
 
+
 ### Modal Structure
 
+
 ```
+
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ Revoke API Key?                        [X]   │
 ├─────────────────────────────────────────────────┤
@@ -569,23 +796,38 @@ Response (200 OK):
 │                                                 │
 │ [Cancel]                         [Revoke Key]  │
 └─────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### Modal Actions
 
 **Cancel Button:**
 
+
 - Closes modal without revoking
+
+
 - No API call
 
 **Revoke Key Button:**
 
+
 - Revokes API key via API
+
+
 - Shows success toast: "API key revoked successfully"
+
+
 - Refreshes API key list
+
+
 - Closes confirmation modal
 
+
 ### API Call
+
 
 ```typescript
 DELETE /api/v1/platform/api-keys/{key_id}
@@ -596,13 +838,18 @@ Response (200 OK):
   "key_id": "550e8400-e29b-41d4-a716-446655440000",
   "revoked_at": "2025-11-26T16:30:00Z"
 }
+
+
 ```
 
 ---
 
+
 ## State Management
 
+
 ### API Key List State
+
 
 ```typescript
 interface APIKeyListState {
@@ -628,9 +875,13 @@ interface APIKey {
   request_count: number;
   error_count: number;
 }
+
+
 ```
 
+
 ### Actions
+
 
 ```typescript
 // Load API keys
@@ -672,60 +923,90 @@ async function revokeAPIKey(keyId: string): Promise<void> {
   });
   await loadAPIKeys(); // Refresh list
 }
+
+
 ```
 
 ---
 
+
 ## Error Handling
+
 
 ### API Errors
 
 **401 Unauthorized:**
 
+
 - Redirect to login page
+
+
 - Show toast: "Session expired. Please log in again."
 
 **403 Forbidden:**
 
+
 - Show error message: "You don't have permission to manage API keys."
+
+
 - Disable "Create API Key" button
 
 **429 Too Many Requests:**
 
+
 - Show error message: "Rate limit exceeded. Please try again in a few minutes."
+
+
 - Disable action buttons temporarily
 
 **500 Internal Server Error:**
 
+
 - Show error message: "Something went wrong. Please try again later."
+
+
 - Log error to monitoring system
+
 
 ### Validation Errors
 
 **Name field:**
 
+
 - Empty: "Name is required"
+
+
 - Too long: "Name must be 50 characters or less"
 
 **Permissions field:**
 
+
 - None selected: "Select at least one permission"
+
 
 ### Network Errors
 
 **Connection failed:**
 
+
 - Show error message: "Unable to connect. Check your internet connection."
+
+
 - Retry button
 
 **Timeout:**
 
+
 - Show error message: "Request timed out. Please try again."
+
+
 - Retry button
 
 ---
 
+
 ## Security Considerations
+
 
 ### 1. API Key Display
 
@@ -733,10 +1014,18 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 **Solution:**
 
+
 - Display key only once in modal
+
+
 - Require explicit user action to view (cannot close modal accidentally)
+
+
 - Warn user to store securely
+
+
 - Never display full key again (only masked)
+
 
 ### 2. Copy to Clipboard
 
@@ -744,9 +1033,15 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 **Solution:**
 
+
 - Use secure clipboard API (`navigator.clipboard.writeText()`)
+
+
 - Show toast confirmation
+
+
 - Clear clipboard after 60 seconds (optional, may annoy users)
+
 
 ### 3. Download .env File
 
@@ -754,9 +1049,15 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 **Solution:**
 
+
 - Include comment in .env file: "# DO NOT COMMIT THIS FILE TO VERSION CONTROL"
+
+
 - Suggest adding `.env` to `.gitignore`
+
+
 - Link to security best practices documentation
+
 
 ### 4. Modal Security
 
@@ -764,9 +1065,15 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 **Solution:**
 
+
 - Disable backdrop click to close
+
+
 - Require explicit "Done" button click
+
+
 - Show confirmation if user tries to close without copying
+
 
 ### 5. Regenerate Confirmation
 
@@ -774,53 +1081,98 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 **Solution:**
 
+
 - Require explicit confirmation
+
+
 - Show warning about immediate revocation
+
+
 - Display key name and masked value for verification
 
 ---
 
+
 ## Accessibility
+
 
 ### Keyboard Navigation
 
+
 - Tab through all interactive elements
+
+
 - Enter/Space to activate buttons
+
+
 - Escape to close modals
+
+
 - Arrow keys to navigate table rows
+
 
 ### Screen Reader Support
 
+
 - ARIA labels for all buttons and inputs
+
+
 - ARIA live regions for toast notifications
+
+
 - ARIA descriptions for complex interactions
+
+
 - Semantic HTML (table, form, button elements)
+
 
 ### Visual Accessibility
 
+
 - High contrast colors (WCAG AA compliant)
+
+
 - Focus indicators on all interactive elements
+
+
 - Error messages with icons and text
+
+
 - Loading states with spinners and text
 
 ---
 
+
 ## Related Documentation
+
 
 ### Planning
 
+
 - [Feature Documentation - Tenant API Key System](/docs/features/integrations/vault-api-keys)
+
+
 - [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
+
 
 ### Implementation
 
+
 - [Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)
+
+
 - [API Access Feature](/docs/features/integrations/api-access)
+
 
 ### Reference
 
+
 - [Frontend Routing Map](/docs/design/frontend-routing-map) - Master route registry
+
+
 - [Component Library](/docs/design/component-library) - Reusable UI components
+
+
 - [Design System](/docs/design/design-system) - Design tokens and patterns
 
 ---

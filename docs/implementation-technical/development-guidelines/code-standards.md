@@ -6,11 +6,15 @@ level: "3"
 persona: "Senior Developers"
 ---
 
+
 # Code Style & Quality Standards
+
 
 ## TypeScript Code Standards
 
+
 ### Style Guide Compliance
+
 
 ```typescript
 // ✅ Good: Clear, documented, well-structured code
@@ -37,23 +41,56 @@ interface CampaignMetrics {
 }
 
 /**
+
+
  * Calculate comprehensive email delivery score using multiple metrics.
+
+
  *
+
  * This function analyzes recipient engagement patterns, content quality,
+
+
  * technical deliverability factors, and historical performance to provide
+
+
  * a weighted delivery score.
+
+
  *
+
  * @param recipientEngagement - Historical engagement rate (0.0-1.0)
+
+
  * @param contentQuality - AI-evaluated content score (0.0-1.0)
+
+
  * @param technicalScore - Technical deliverability score (0.0-1.0)
+
+
  * @param historicalPerformance - Optional historical metrics for trend analysis
+
+
  * @returns Comprehensive delivery score with confidence interval
+
+
  * @throws {Error} If any score is outside valid range (0.0-1.0)
+
+
  *
+
  * @example
+
+
  * ```typescript
+
+
  * const score = calculateEmailDeliveryScore(0.85, 0.92, 0.88);
+
+
  * console.log(score.overallScore); // 0.88
+
+
  * ```
  */
 function calculateEmailDeliveryScore(
@@ -119,9 +156,13 @@ function calc(x: number, y: number, z: number): EmailDeliveryScore {
     componentScores: { engagement: x, quality: y, technical: z }
   };
 }
+
+
 ```
 
+
 ### Documentation Standards
+
 
 ```typescript
 interface EmailCampaignAnalytics {
@@ -139,12 +180,16 @@ interface EmailCampaignAnalytics {
 }
 
 /**
+
+
  * Analytics data for email campaign performance.
  */
 class EmailCampaignAnalyticsService {
   constructor(private readonly analytics: EmailCampaignAnalytics) {}
 
   /**
+
+
    * Calculate delivery rate as percentage.
    */
   getDeliveryRate(): number {
@@ -155,6 +200,8 @@ class EmailCampaignAnalyticsService {
   }
 
   /**
+
+
    * Calculate open rate as percentage of delivered emails.
    */
   getOpenRate(): number {
@@ -165,6 +212,8 @@ class EmailCampaignAnalyticsService {
   }
 
   /**
+
+
    * Calculate click rate as percentage of delivered emails.
    */
   getClickRate(): number {
@@ -175,9 +224,16 @@ class EmailCampaignAnalyticsService {
   }
 
   /**
+
+
    * Convert analytics to dictionary format.
+
+
    *
+
    * @param includeCalculated - Whether to include calculated rates
+
+
    * @returns Dictionary representation of analytics data
    */
   toDictionary(includeCalculated: boolean = true): Record<string, number | string> {
@@ -201,11 +257,16 @@ class EmailCampaignAnalyticsService {
     return data;
   }
 }
+
+
 ```
+
 
 ## TypeScript Standards
 
+
 ### Interface and Type Definitions
+
 
 ```typescript
 // types/campaign.types.ts
@@ -361,9 +422,13 @@ export class ValidationError extends Error {
     this.name = 'ValidationError';
   }
 }
+
+
 ```
 
+
 ### Component Development Standards
+
 
 ```tsx
 // components/CampaignEditor.tsx
@@ -610,11 +675,16 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     </div>
   );
 };
+
+
 ```
+
 
 ## CSS Standards
 
+
 ### Design System Integration
+
 
 ```scss
 // styles/components/campaign-editor.scss
@@ -736,11 +806,16 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
     }
   }
 }
+
+
 ```
+
 
 ## Security Standards
 
+
 ### Input Validation
+
 
 ```typescript
 // Security-focused validation example
@@ -774,6 +849,8 @@ interface PersonalizationSanitizer {
 }
 
 /**
+
+
  * Security-focused validation service
  */
 class SecureCampaignValidationService {
@@ -782,6 +859,8 @@ class SecureCampaignValidationService {
   private readonly invalidSubjectPattern = /[\r\n]/;
 
   /**
+
+
    * Validate campaign request with security considerations
    */
   validateCampaignRequest(request: SecureCampaignRequest): ValidationResult {
@@ -915,6 +994,8 @@ class SecureCampaignValidationService {
   }
 
   /**
+
+
    * Sanitize personalization data to prevent injection
    */
   private sanitizePersonalization(data: PersonalizationSanitizer): PersonalizationSanitizer {
@@ -943,9 +1024,13 @@ class SecureCampaignValidationService {
     return sanitized;
   }
 }
+
+
 ```
 
+
 ### Authentication & Authorization
+
 
 ```typescript
 // Secure authentication patterns
@@ -1027,11 +1112,16 @@ export function requirePermission(permission: string) {
     }
   };
 }
+
+
 ```
+
 
 ## Performance Standards
 
+
 ### Database Optimization
+
 
 ```typescript
 // Optimized database queries with TypeScript
@@ -1078,12 +1168,16 @@ interface CampaignQueryOptions {
 }
 
 /**
+
+
  * Service with performance-optimized database operations
  */
 class OptimizedCampaignService {
   constructor(private readonly db: DatabaseService) {}
 
   /**
+
+
    * Eager load related data to minimize N+1 queries
    */
   async getCampaignWithMetrics(
@@ -1114,6 +1208,8 @@ class OptimizedCampaignService {
   }
 
   /**
+
+
    * Efficiently load campaigns with pagination
    */
   async getCampaignsBatch(
@@ -1143,6 +1239,8 @@ class OptimizedCampaignService {
   }
 
   /**
+
+
    * Use database-level search for better performance
    */
   async searchCampaigns(
@@ -1170,6 +1268,8 @@ class OptimizedCampaignService {
 }
 
 /**
+
+
  * Enhanced query builder interface
  */
 interface QueryBuilder<T> {
@@ -1188,9 +1288,13 @@ interface QueryBuilder<T> {
 interface DatabaseService {
   createQueryBuilder<T>(): QueryBuilder<T>;
 }
+
+
 ```
 
+
 ### Caching Strategy
+
 
 ```typescript
 // Efficient caching implementation with TypeScript
@@ -1213,6 +1317,8 @@ interface CacheResult<T> {
 }
 
 /**
+
+
  * High-performance caching service
  */
 class CacheService {
@@ -1224,6 +1330,8 @@ class CacheService {
   }
 
   /**
+
+
    * Get value from cache with error handling
    */
   async get<T>(key: string): Promise<T | null> {
@@ -1247,6 +1355,8 @@ class CacheService {
   }
 
   /**
+
+
    * Set value in cache with expiration
    */
   async set<T>(key: string, value: T, options: CacheOptions = {}): Promise<boolean> {
@@ -1268,6 +1378,8 @@ class CacheService {
   }
 
   /**
+
+
    * Invalidate multiple keys matching a pattern
    */
   async invalidatePattern(pattern: string): Promise<number> {
@@ -1283,6 +1395,8 @@ class CacheService {
   }
 
   /**
+
+
    * Get multiple cache values in batch
    */
   async mget<T>(keys: string[]): Promise<(T | null)[]> {
@@ -1309,6 +1423,8 @@ class CacheService {
 }
 
 /**
+
+
  * Decorator for caching function results
  */
 class CampaignCacheDecorator {
@@ -1318,6 +1434,8 @@ class CampaignCacheDecorator {
   ) {}
 
   /**
+
+
    * Decorator for caching campaign data
    */
   cachedCampaign<T extends (...args: unknown[]) => Promise<unknown>>(
@@ -1352,6 +1470,8 @@ class CampaignCacheDecorator {
 }
 
 /**
+
+
  * Redis client interface
  */
 interface RedisClient {
@@ -1361,50 +1481,119 @@ interface RedisClient {
   mget(...keys: string[]): Promise<(string | null)[]>;
   keys(pattern: string): Promise<string[]>;
 }
+
+
 ```
+
 
 ## Code Review Checklist
 
+
 ### Before Submitting PR
 
+
 - [ ] Code follows style guidelines and passes linting
+
+
 - [ ] All functions/classes have proper docstrings
+
+
 - [ ] Complex logic includes inline comments
+
+
 - [ ] No hardcoded values or magic numbers
+
+
 - [ ] Error handling is comprehensive
+
+
 - [ ] Input validation is implemented
+
+
 - [ ] Security best practices followed
+
+
 - [ ] Performance considerations addressed
+
+
 - [ ] Tests are written and passing
+
+
 - [ ] Documentation is updated
+
+
 - [ ] No console.logs or debug statements
+
+
 - [ ] Dead code removed
+
+
 - [ ] Consistent naming conventions
+
+
 - [ ] File size reasonable (<500 lines)
+
 
 ### Security Review Points
 
+
 - [ ] User inputs are validated and sanitized
+
+
 - [ ] Authentication and authorization implemented
+
+
 - [ ] Sensitive data not logged or exposed
+
+
 - [ ] SQL injection prevention
+
+
 - [ ] XSS protection measures
+
+
 - [ ] CSRF protection where applicable
+
+
 - [ ] Rate limiting implemented
+
+
 - [ ] Secure headers set
+
+
 - [ ] Dependencies are up to date
+
+
 - [ ] No hardcoded secrets or keys
+
 
 ### Performance Review Points
 
+
 - [ ] Database queries are optimized
+
+
 - [ ] N+1 query problems avoided
+
+
 - [ ] Appropriate caching implemented
+
+
 - [ ] Large datasets are paginated
+
+
 - [ ] Image/media files are optimized
+
+
 - [ ] Bundle sizes are reasonable
+
+
 - [ ] Lazy loading where appropriate
+
+
 - [ ] Memory usage is efficient
+
+
 - [ ] API response times are acceptable
 
 For comprehensive testing requirements, see [`testing-requirements.md`](testing-requirements).

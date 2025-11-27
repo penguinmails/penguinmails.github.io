@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Jobs API
 
 **Parent API**: [Queue API](/docs/implementation-technical/api/queue)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### List Queues
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: List all active system queues and their stats.
 
 **Response**:
+
 
 ```json
 {
@@ -38,7 +42,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### List Jobs in Queue
 
@@ -48,8 +55,12 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `status`: `active`, `waiting`, `completed`, `failed`
+
+
 - `limit`: Default 20
+
 
 ### Get Job Details
 
@@ -57,11 +68,13 @@ persona: "Backend Developers"
 **URL**: `/api/v1/queue/{name}/jobs/{id}`  
 **Purpose**: Get payload and status of a specific job.
 
+
 ### Retry Job
 
 **Method**: `POST`  
 **URL**: `/api/v1/queue/{name}/jobs/{id}/retry`  
 **Purpose**: Retry a failed job.
+
 
 ### Pause/Resume Queue
 

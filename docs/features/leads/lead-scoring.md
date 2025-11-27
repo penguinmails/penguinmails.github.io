@@ -6,50 +6,85 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - leads/leads-management
+
+
   - leads/contact-segmentation
+
+
   - campaigns/personalization-system
+
+
   - analytics/core-analytics/overview
 related_tasks:
+
+
   - epic-7-leads-management
 ---
+
 
 # Lead Scoring
 
 **Quick Access**: Automatically score leads based on engagement behavior, demographics, and custom criteria to identify your hottest prospects.
 
+
 ## Overview
 
 Lead Scoring assigns numeric values to contacts based on their actions, characteristics, and engagement patterns. Focus your efforts on high-value leads and personalize outreach based on interest level.
 
+
 ### Key Benefits
 
+
 - **Prioritization**: Focus on highest-potential leads
+
+
 - **Automation**: Auto-score based on behavior and attributes
+
+
 - **Segmentation**: Create score-based segments
+
+
 - **Sales Alignment**: Pass qualified leads to sales at threshold
+
+
 - **Personalization**: Tailor messaging by score range
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Understanding Lead Scores
 
 **Score Range**: 0-100
 
+
 - **0-25**: Cold/Unengaged
+
+
 - **26-50**: Warming Up
+
+
 - **51-75**: Interested/Engaged
+
+
 - **76-100**: Hot/Ready to Buy
 
 **Recalculation**: Real-time as contacts take actions
 
+
 ### Your First Scoring Model
+
 
 #### Default Scoring Rules
 
+
 ```
+
 Email Engagement:
   ✓ Email Opened: +5 points
   ✓ Link Clicked: +10 points
@@ -66,12 +101,19 @@ Demographics:
   ✓ Company Size (200+): +15 points
 
 Time Decay:
+
+
   - Score decreases 5% every 30 days of inactivity
+
+
 ```
+
 
 ### View Lead Scores
 
+
 ```
+
 Contacts → View All
 
 Sort by: Lead Score (High to Low)
@@ -83,13 +125,18 @@ Michael Chen           87     1 day ago
 Emily Rodriguez        76     3 days ago
 David Kim              68     1 week ago
 ...
+
+
 ```
+
 
 ### Use Scores in Campaigns
 
 **Score-Based Segments:**
 
+
 ```
+
 Hot Leads (Score 76-100):
   Campaign: "Book a Demo" (Aggressive CTA)
   
@@ -98,17 +145,23 @@ Warm Leads (Score 51-75):
   
 Cold Leads (Score 0-50):
   Campaign: "Getting Started Guide" (Nurture)
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Scoring Configuration
 
+
 ### Custom Scoring Rules
+
 
 #### Behavioral Scoring
 
 **Engagement Actions**
+
 
 ```yaml
 email_actions:
@@ -140,9 +193,12 @@ email_actions:
     
   forwarded_email:
     points: 12
+
+
 ```
 
 **Website Activity** (if integrated)
+
 
 ```yaml
 website_actions:
@@ -164,9 +220,12 @@ website_actions:
   time_on_site:
     gt_5_minutes: 5
     gt_15_minutes: 10
+
+
 ```
 
 **Negative Actions**
+
 
 ```yaml
 negative_actions:
@@ -189,11 +248,15 @@ negative_actions:
     
   inactive_180_days:
     points: -50
+
+
 ```
+
 
 #### Demographic Scoring
 
 **Firmographic Data**
+
 
 ```yaml
 company_attributes:
@@ -217,9 +280,12 @@ company_attributes:
     1m_10m: 10
     10m_50m: 15
     50m_plus: 20
+
+
 ```
 
 **Role-Based Scoring**
+
 
 ```yaml
 job_title_keywords:
@@ -239,9 +305,12 @@ job_title_keywords:
     specialist: 3
     coordinator: 3
     analyst: 5
+
+
 ```
 
 **Geographic Scoring**
+
 
 ```yaml
 location:
@@ -253,11 +322,15 @@ location:
     
   tier_3_markets:  # Rest of world
     points: 0
+
+
 ```
+
 
 ### Score Decay & Recency
 
 **Time-Based Decay:**
+
 
 ```yaml
 decay_rules:
@@ -272,9 +345,12 @@ decay_rules:
     after_30_days: 76  # -5%
     after_60_days: 72  # -5% again
     after_90_days: 68
+
+
 ```
 
 **Recency Boosting:**
+
 
 ```yaml
 recency_multipliers:
@@ -289,11 +365,15 @@ recency_multipliers:
     
   action_older_than_30d:
     multiplier: 0.5
+
+
 ```
+
 
 ### Multi-Dimensional Scoring
 
 **Separate Scores for Different Aspects:**
+
 
 ```yaml
 scoring_dimensions:
@@ -314,44 +394,62 @@ scoring_dimensions:
     
   composite_score:  # Total 0-100
     formula: engagement + fit + intent
+
+
 ```
+
 
 ### Score-Based Automation
 
 **Auto-Segmentation:**
 
+
 ```
+
 When lead score reaches 75:
   → Add to "Hot Leads" segment
   → Trigger "Sales Qualified Lead" workflow
   → Notify sales team
   → Send "Book a Demo" campaign
+
+
 ```
 
 **Lead Lifecycle Stages:**
 
+
 ```
+
 Score 0-25:    Status = "Cold Lead"
 Score 26-50:   Status = "Nurture"
 Score 51-75:   Status = "Marketing Qualified Lead (MQL)"
 Score 76-100:  Status = "Sales Qualified Lead (SQL)"
+
+
 ```
 
 **CRM Sync:**
 
+
 ```
+
 When lead score >= 75:
   → Create lead in Salesforce
   → Assign to sales rep (round-robin)
   → Set priority = "High"
   → Add to sales follow-up queue
+
+
 ```
+
 
 ### Score Analytics
 
 **Score Distribution:**
 
+
 ```
+
 Lead Score Distribution:
 
 0-25:  ████████████████ 45% (2,250 contacts)
@@ -361,11 +459,15 @@ Lead Score Distribution:
 
 Average Score: 38
 Median Score: 32
+
+
 ```
 
 **Score Trends:**
 
+
 ```
+
 Score Movement (Last 30 Days):
 
 Increased Score: 1,200 contacts (+15%)
@@ -373,16 +475,27 @@ Decreased Score: 800 contacts (-10%)
 No Change: 3,000 contacts
 
 Top Scoring Actions:
+
+
   1. Demo Requested: +60 pts (120 actions)
+
+
   2. Pricing Page Click: +25 pts (450 actions)
+
+
   3. Email Reply: +20 pts (230 actions)
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Lead scoring configuration
@@ -451,9 +564,13 @@ CREATE TABLE score_events (
 
 CREATE INDEX idx_score_events_contact ON score_events(contact_id, created_at);
 CREATE INDEX idx_score_events_type ON score_events(event_type);
+
+
 ```
 
+
 ### Scoring Engine
+
 
 ```typescript
 interface ScoringRule {
@@ -627,9 +744,13 @@ class LeadScoringEngine {
     }
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Apply decay to all contacts daily
@@ -669,9 +790,13 @@ async function recalculateScoresForContact(contactId: string): Promise<void> {
     { fitScore }
   );
 }
+
+
 ```
 
+
 ### Event Listeners
+
 
 ```typescript
 // Listen for email events and update scores
@@ -702,15 +827,25 @@ eventEmitter.on('contact.updated', async (event) => {
   // Recalculate fit score when demographics change
   await recalculateScoresForContact(event.contactId);
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Leads Management](./leads-management.md)** - Contact database
+
+
 - **[Contact Segmentation](./contact-segmentation.md)** - Score-based segments
+
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Score-based targeting
+
+
 - **[Analytics](../analytics/core-analytics/overview.md)** - Score analytics
 
 ---

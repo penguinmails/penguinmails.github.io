@@ -6,6 +6,7 @@ level: "2"
 persona: "Backend Developers, Frontend Developers"
 ---
 
+
 # Platform API
 
 **Server**: Central Monolithic Server  
@@ -14,13 +15,16 @@ persona: "Backend Developers, Frontend Developers"
 
 ---
 
+
 ## Overview
 
 The Platform API provides internal operations, analytics aggregation, and business intelligence. It is primarily consumed by the Admin Dashboard and executive views.
 
 ---
 
+
 ## Endpoint Categories
+
 
 ### 1. Subscriptions & Billing
 
@@ -30,9 +34,15 @@ Manage tenant subscriptions, billing, and payment records.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/platform/subscriptions` - List subscriptions
+
+
 - `GET /api/v1/platform/tenants/{id}/subscription` - Get tenant subscription
+
+
 - `GET /api/v1/platform/subscriptions/analytics` - Revenue metrics
+
 
 ### 2. System Analytics
 
@@ -42,9 +52,15 @@ System-wide metrics, revenue protection, and cost optimization.
 
 **Key Endpoints**:
 
+
 - `GET /api/v1/platform/system/overview` - System health
+
+
 - `GET /api/v1/platform/system/revenue-protection` - Business metrics
+
+
 - `GET /api/v1/platform/system/cost-optimization` - Cost analysis
+
 
 ### 3. Admin Operations
 
@@ -54,21 +70,30 @@ User management, tenant management, and feature flags.
 
 ---
 
+
 ## Authentication
 
 All endpoints require a valid session authenticated via **NileDB** with appropriate RBAC roles.
 
 **Required Roles**:
 
+
 - `ROLE_SYSTEM_ADMIN`
+
+
 - `ROLE_EXECUTIVE_*`
+
+
 - `ROLE_OPERATIONS_MANAGER`
 
 ---
 
+
 ## Common Patterns
 
+
 ### Response Envelope
+
 
 ```json
 {
@@ -79,4 +104,7 @@ All endpoints require a valid session authenticated via **NileDB** with appropri
     "last_updated": "ISO8601"
   }
 }
+
+
 ```
+

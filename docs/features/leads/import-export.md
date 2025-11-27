@@ -6,61 +6,102 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
+
+
   - leads/leads-management
+
+
   - leads/contact-segmentation
+
+
   - leads/lead-scoring
 related_tasks:
+
+
   - epic-7-leads-management
 ---
+
 
 # Contact Import/Export
 
 **Quick Access**: Bulk import contacts from CSV/Excel files with intelligent field mapping, validation, and export capabilities for data portability.
 
+
 ## Overview
 
 Contact Import/Export enables you to efficiently manage large contact databases by importing from external sources and exporting for analysis, backups, or migration to other systems.
 
+
 ### Key Capabilities
 
+
 - **CSV/Excel Import**: Support for multiple file formats
+
+
 - **Intelligent Field Mapping**: Auto-detect and map columns
+
+
 - **Validation & Error Handling**: Catch issues before import
+
+
 - **Bulk Operations**: Update, add, or merge thousands of contacts
+
+
 - **Custom Field Support**: Import custom field data
+
+
 - **Export with Filters**: Export specific segments or entire lists
+
+
 - **Import History**: Track all imports with rollback capability
+
+
 - **Duplicate Detection**: Smart merging and conflict resolution
 
 ---
 
+
 ## Level 1: Quick Start Guide
 
+
 ### Your First Import
+
 
 #### Step 1: Prepare Your File
 
 **Supported Formats:**
 
+
 - CSV (Comma-separated values)
+
+
 - TSV (Tab-separated values)
+
+
 - Excel (.xlsx, .xls)
 
 **Recommended Columns:**
+
 
 ```csv
 email,first_name,last_name,company,phone,tags,custom_field_industry
 john@example.com,John,Doe,Acme Inc,555-1234,customer|vip,SaaS
 jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
+
+
 ```
 
 **Required Field:**
 
+
 - `email` (must be unique)
+
 
 #### Step 2: Upload File
 
+
 ```
+
 Contacts → Import → Upload File
 
 [Choose File] contacts.csv (2.5 MB, 5,000 rows)
@@ -71,11 +112,16 @@ Preview:
   ✓ Header row detected
 
 [Next: Map Fields →]
+
+
 ```
+
 
 #### Step 3: Map Fields
 
+
 ```
+
 Map Your Columns:
 
 CSV Column          →  PenguinMails Field
@@ -92,11 +138,16 @@ Unmapped Columns:
   (none)
 
 [Next: Validation →]
+
+
 ```
+
 
 #### Step 4: Validation
 
+
 ```
+
 Validation Results:
 
 ✓ Valid Records: 4,892 (97.8%)
@@ -114,11 +165,16 @@ Actions:
   ○ Download error report
 
 [Import Valid Records]
+
+
 ```
+
 
 #### Step 5: Configure Import
 
+
 ```
+
 Import Options:
 
 Duplicate Handling:
@@ -134,11 +190,16 @@ Segment:
   ☑ Add to segment: Create new "November Import"
 
 [Start Import]
+
+
 ```
+
 
 #### Step 6: Import Running
 
+
 ```
+
 Importing Contacts...
 
 Progress: ████████████░░░░ 75% (3,669 / 4,892)
@@ -147,11 +208,16 @@ Elapsed: 00:02:14
 Estimated remaining: 00:00:45
 
 [View Live Progress]
+
+
 ```
+
 
 #### Step 7: Import Complete
 
+
 ```
+
 ✓ Import Completed Successfully
 
 Summary:
@@ -163,13 +229,19 @@ Summary:
   Created (new): 4,460
 
 [View Contacts] [Download Report] [Import History]
+
+
 ```
+
 
 ### Quick Export
 
+
 #### Export All Contacts
 
+
 ```
+
 Contacts → Export
 
 Selection:
@@ -196,39 +268,67 @@ Fields:
 
 ✓ Export ready: contacts_export_2025-11-25.csv (2.8 MB)
 [Download]
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Import/Export
 
+
 ### Advanced Import Options
+
 
 #### Field Mapping Strategies
 
 **Auto-Mapping Rules:**
 
+
 ```yaml
 auto_mapping:
   exact_match:
+
+
     - email → email
+
+
     - first_name → firstName
+
+
     - firstname → firstName
+
+
     - fname → firstName
     
   fuzzy_match:
+
+
     - company_name → company (80% similarity)
+
+
     - org → company
+
+
     - organization → company
     
   custom_field_detection:
+
+
     - pattern: custom_*, cf_*
+
+
     - create_if_missing: true
+
+
 ```
 
 **Manual Mapping:**
 
+
 ```
+
 Custom Field Mapping:
 
 CSV Column: "annual_revenue"
@@ -242,9 +342,12 @@ CSV Column: "subscription_tier"
      Field Name: subscription_tier
      Field Type: ○ Text  ● Select  ○ Multi-Select
      Options: Free, Starter, Pro, Enterprise
+
+
 ```
 
 **Transformation Rules:**
+
 
 ```yaml
 transformations:
@@ -263,11 +366,15 @@ transformations:
     
   company:
     title_case: true  # "acme inc" → "Acme Inc"
+
+
 ```
+
 
 #### Validation Rules
 
 **Email Validation:**
+
 
 ```yaml
 email_validation:
@@ -281,29 +388,49 @@ email_validation:
     no_mx_record: warn
     disposable: warn
     role_based: accept
+
+
 ```
 
 **Duplicate Detection:**
 
+
 ```yaml
 duplicate_detection:
   match_on:
+
+
     - email  # Primary key
     
   fuzzy_match:
+
+
     - first_name + last_name + company
+
+
     - phone
     
   similarity_threshold: 85%  # 85% match = duplicate
   
   resolution_strategy:
+
+
     - skip_new
+
+
     - update_existing
+
+
     - merge_fields
+
+
     - create_new
+
+
 ```
 
 **Data Validation:**
+
 
 ```yaml
 field_validation:
@@ -323,13 +450,18 @@ field_validation:
   custom_fields:
     validate_type: true
     enforce_required: true
+
+
 ```
+
 
 #### Merge Strategies
 
 **Update Existing Contacts:**
 
+
 ```
+
 When duplicate email found:
 
 Strategy: Smart Merge
@@ -346,9 +478,12 @@ Per-Field Strategy:
   Tags: [Append (merge)]
   Custom Fields: [Update if blank]
   Lead Score: [Keep existing]
+
+
 ```
 
 **Conflict Resolution:**
+
 
 ```yaml
 conflict_resolution:
@@ -367,15 +502,21 @@ conflict_resolution:
     
   lead_score:
     action: keep_higher_value
+
+
 ```
 
+
 ### Advanced Export Options
+
 
 #### Filtered Exports
 
 **Export by Segment:**
 
+
 ```
+
 Export Contacts
 
 Segment: Hot Leads (Score 75+)
@@ -386,21 +527,29 @@ Filters:
   ☑ Exclude: Bounced emails
 
 Result: 1,247 contacts
+
+
 ```
 
 **Export by Date Range:**
 
+
 ```
+
 Export Contacts Added:
   From: 2025-10-01
   To: 2025-10-31
   
   Includes: 3,450 contacts
+
+
 ```
 
 **Export by Custom Criteria:**
 
+
 ```
+
 Advanced Filter:
   Country = "United States"
   AND Company Size ≥ "51-200"
@@ -408,11 +557,16 @@ Advanced Filter:
   AND Tags contains "enterprise"
   
   Result: 892 contacts
+
+
 ```
+
 
 #### Custom Field Selection
 
+
 ```
+
 Select Fields to Export:
 
 Standard Fields:
@@ -444,29 +598,50 @@ Engagement Metrics:
 
 Segments:
   ☑ Active Segments (comma-separated)
+
+
 ```
+
 
 #### Export Formats
 
 **CSV Export:**
 
+
 ```csv
 email,first_name,last_name,company,phone,lead_score,tags,industry,created_at
 john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-15T14:30:00Z
+
+
 ```
 
 **Excel Export (.xlsx):**
 
+
 ```
+
 Features:
+
+
   - Multiple sheets (Contacts, Custom Fields, Segments)
+
+
   - Formatted headers
+
+
   - Data validation
+
+
   - Freeze panes
+
+
   - Auto-filter enabled
+
+
 ```
 
 **JSON Export:**
+
 
 ```json
 [
@@ -487,13 +662,19 @@ Features:
     "lastActivityAt": "2025-11-24T10:15:00Z"
   }
 ]
+
+
 ```
+
 
 ### Import History & Rollback
 
+
 #### View Import History
 
+
 ```
+
 Import History
 
 Date                User           File               Status    Records
@@ -505,11 +686,16 @@ Date                User           File               Status    Records
 2025-10-28 13:00   Sarah Johnson  october_leads.csv  ✓ Success  3,210
 
 [View Details] [Download Report] [Rollback]
+
+
 ```
+
 
 #### Import Details
 
+
 ```
+
 Import Details: contacts_nov.csv
 Imported: 2025-11-25 14:30:42
 User: Sarah Johnson
@@ -519,10 +705,16 @@ Summary:
   Total Rows: 5,000
   
   Imported Successfully: 4,892 (97.8%)
+
+
     - New Contacts: 4,460
+
+
     - Updated Existing: 432
   
   Skipped (Errors): 13 (0.3%)
+
+
     - Invalid Email: 13
   
   Skipped (Duplicates): 95 (1.9%)
@@ -535,24 +727,43 @@ Mapping:
   tags → Tags
 
 Tags Added:
+
+
   - imported_2025_11
+
+
   - bulk_upload
 
 Segment Created:
+
+
   - "November Import" (4,892 contacts)
 
 [Download Error Report] [Rollback Import]
+
+
 ```
+
 
 #### Rollback Import
 
+
 ```
+
 Rollback Import: contacts_nov.csv
 
 ⚠ Warning: This will:
+
+
   - Delete 4,460 contacts created by this import
+
+
   - Restore 432 contacts to their previous state
+
+
   - Remove tags: imported_2025_11, bulk_upload
+
+
   - Delete segment: "November Import"
 
 This action CANNOT be undone.
@@ -562,11 +773,15 @@ Confirm rollback:
   ☐ I have exported a backup
 
 [Cancel] [Confirm Rollback]
+
+
 ```
+
 
 ### Scheduled Imports
 
 **Automated CSV Import:**
+
 
 ```yaml
 scheduled_import:
@@ -596,9 +811,12 @@ scheduled_import:
     duplicate_strategy: update_existing
     add_tag: "salesforce_sync"
     notification_email: admin@example.com
+
+
 ```
 
 **API Import Automation:**
+
 
 ```typescript
 // Sync from external CRM daily
@@ -612,13 +830,18 @@ cron.schedule('0 2 * * *', async () => {
     tags: ['crm_sync', `sync_${new Date().toISOString().split('T')[0]}`],
   });
 });
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Import jobs tracking
@@ -721,9 +944,13 @@ CREATE TABLE export_jobs (
 
 CREATE INDEX idx_export_jobs_tenant ON export_jobs(tenant_id);
 CREATE INDEX idx_export_jobs_status ON export_jobs(status);
+
+
 ```
 
+
 ### Import Service
+
 
 ```typescript
 interface ImportOptions {
@@ -1077,9 +1304,13 @@ class ImportService {
     });
   }
 }
+
+
 ```
 
+
 ### Export Service
+
 
 ```typescript
 interface ExportOptions {
@@ -1222,9 +1453,13 @@ class ExportService {
     return XLSX.write(workbook, { type: 'buffer', bookType: 'xlsx' });
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Process import jobs
@@ -1262,9 +1497,13 @@ cron.schedule('0 4 * * *', async () => {  // 4 AM daily
     await db.exportJobs.delete(exportJob.id);
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Start import
@@ -1338,15 +1577,25 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
   
   return res.json({ downloadUrl: signedUrl });
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Leads Management](./leads-management.md)** - Contact database and management
+
+
 - **[Contact Segmentation](./contact-segmentation.md)** - Create segments from imported contacts
+
+
 - **[Lead Scoring](./lead-scoring.md)** - Score imported contacts automatically
+
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use imported contacts in campaigns
 
 ---

@@ -5,33 +5,51 @@ last_modified_date: "2025-11-19"
 level: "2"
 persona: "DevOps Engineers"
 related_docs:
+
+
   - "[Main Guide](main) - Complete overview"
+
+
   - "[Architecture](architecture) - System design principles"
+
+
   - "[Workers](workers) - Background job processing"
 ---
 
+
 # Operations & Monitoring
+
 
 ## Overview
 
 Operations management covers deployment, monitoring, and maintenance of the queue system infrastructure. This includes container orchestration, health monitoring, performance tracking, and operational procedures for maintaining system reliability.
 
+
 ## Deployment Architecture
+
 
 ### Container Orchestration
 
 The queue system uses a multi-container architecture with distinct services for each component:
 
+
 ```yaml
+
+
 # docker-compose.queue.yml (Simplified Configuration)
+
 version: '3.8'
 
 services:
   redis:
     image: redis:7-alpine
     ports:
+
+
       - "6379:6379"
     volumes:
+
+
       - redis_data:/data
     command: >
       redis-server 
@@ -49,11 +67,21 @@ services:
       context: .
       dockerfile: Dockerfile.queuer
     environment:
+
+
       - DATABASE_URL=${DATABASE_URL}
+
+
       - REDIS_URL=redis://redis:6379
+
+
       - NODE_ENV=production
     depends_on:
+
+
       - redis
+
+
       - postgres
     restart: unless-stopped
     deploy:
@@ -64,12 +92,24 @@ services:
       context: .
       dockerfile: Dockerfile.worker
     environment:
+
+
       - DATABASE_URL=${DATABASE_URL}
+
+
       - REDIS_URL=redis://redis:6379
+
+
       - NODE_ENV=production
+
+
       - WORKER_ID=${WORKER_ID}
     depends_on:
+
+
       - redis
+
+
       - postgres
     restart: unless-stopped
     deploy:
@@ -77,11 +117,16 @@ services:
 
 volumes:
   redis_data:
+
+
 ```
+
 
 ## Health Monitoring
 
+
 ### System Health Monitoring
+
 
 ```pseudo
 class QueueHealthMonitor {
@@ -116,11 +161,16 @@ class QueueHealthMonitor {
     return 'healthy'
   }
 }
+
+
 ```
+
 
 ## Operational Procedures
 
+
 ### System Recovery Procedures
+
 
 ```pseudo
 class DisasterRecovery {
@@ -144,11 +194,16 @@ class DisasterRecovery {
     log('Redis failover completed - using backup instance')
   }
 }
+
+
 ```
+
 
 ## Performance Monitoring
 
+
 ### Key Performance Indicators
+
 
 ```pseudo
 class PerformanceMonitor {
@@ -163,11 +218,16 @@ class PerformanceMonitor {
     }
   }
 }
+
+
 ```
+
 
 ## Scaling Operations
 
+
 ### Auto-scaling Configuration
+
 
 ```pseudo
 class AutoScaler {
@@ -198,17 +258,31 @@ class AutoScaler {
     }
   }
 }
+
+
 ```
+
 
 ## Conclusion
 
 Operations management ensures:
 
+
 - **High Availability**: Comprehensive health monitoring and automatic failover
+
+
 - **Performance Optimization**: Real-time metrics and alerting for proactive management
+
+
 - **Scalability**: Auto-scaling based on workload patterns
+
+
 - **Reliability**: Robust backup and recovery procedures
+
+
 - **Maintainability**: Structured maintenance and operational procedures
+
+
 - **Observability**: Detailed logging and metrics for troubleshooting
 
 This operational framework provides the foundation for running a production-ready queue system that can handle varying workloads while maintaining system reliability and performance.

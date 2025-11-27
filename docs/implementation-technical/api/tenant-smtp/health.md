@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Health & Metrics API
 
 **Parent API**: [Tenant SMTP API](/docs/implementation-technical/api/tenant-smtp)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### Get SMTP Status
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: Summarized operational health for the tenant's sending.
 
 **Response**:
+
 
 ```json
 {
@@ -32,7 +36,10 @@ persona: "Backend Developers"
     "recent_bounce_rate": 0.012
   }
 }
+
+
 ```
+
 
 ### Get SMTP Metrics
 
@@ -42,9 +49,11 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `window`: e.g., `7d`
 
 **Response**:
+
 
 ```json
 {
@@ -57,4 +66,7 @@ persona: "Backend Developers"
     "opens": 80000
   }
 }
+
+
 ```
+

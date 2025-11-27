@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Notifications API
 
 **Parent API**: [Queue API](/docs/implementation-technical/api/queue)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### System Notifications Feed
 
@@ -23,12 +26,20 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
+
 - `scope`: `system` (default), `operational`, `business`, `alerts`
+
+
 - `priority`: `critical`, `high`, `medium`, `low`
+
+
 - `status`: `unread`, `reviewed`
+
+
 - `limit`: Default 25
 
 **Response**:
+
 
 ```json
 {
@@ -44,7 +55,10 @@ persona: "Backend Developers"
     }
   ]
 }
+
+
 ```
+
 
 ### Mark Notification Reviewed
 
@@ -54,12 +68,16 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "reviewed": true,
   "notes": "System trend acknowledged"
 }
+
+
 ```
+
 
 ### Bulk Review
 
@@ -69,10 +87,14 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "ids": ["ntf_123", "ntf_456"],
   "action": "quarterly_review",
   "context": "Q1 operational planning cycle"
 }
+
+
 ```
+

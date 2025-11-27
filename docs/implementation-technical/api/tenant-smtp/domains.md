@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Domains API
 
 **Parent API**: [Tenant SMTP API](/docs/implementation-technical/api/tenant-smtp)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### Get Tenant SMTP Configuration
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: Retrieve effective SMTP configuration and domain verification status.
 
 **Response**:
+
 
 ```json
 {
@@ -41,7 +45,10 @@ persona: "Backend Developers"
     }
   }
 }
+
+
 ```
+
 
 ### Add Domain
 
@@ -51,11 +58,15 @@ persona: "Backend Developers"
 
 **Request**:
 
+
 ```json
 {
   "domain": "marketing.example.com"
 }
+
+
 ```
+
 
 ### Get DNS Records
 

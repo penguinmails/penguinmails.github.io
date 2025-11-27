@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # UI Library Guide
 
 ## Purpose
@@ -23,8 +24,11 @@ The UI Library defines **high-level patterns**, **tech stack recommendations**, 
 **Next.js 15** (App Router)
 
 - Server Components by default
+
 - Server Actions for MVP (BFF pattern)
+
 - Progressive migration to REST API calls post-MVP
+
 - File-based routing in `app/` directory
 
 ### Styling & Design System
@@ -32,8 +36,11 @@ The UI Library defines **high-level patterns**, **tech stack recommendations**, 
 **Tailwind CSS v4** + **shadcn/ui**
 
 - Utility-first CSS framework (v4)
+
 - shadcn/ui for pre-built accessible components
+
 - Custom design tokens in `tailwind.config.ts`
+
 - Global styles in `app/globals.css`
 
 ### Form Management
@@ -41,8 +48,11 @@ The UI Library defines **high-level patterns**, **tech stack recommendations**, 
 **react-hook-form** + **zod**
 
 - Type-safe form validation
+
 - Schema-based validation with Zod
+
 - Minimal re-renders
+
 - Built-in error handling
 
 **Example Pattern**:
@@ -59,6 +69,8 @@ const campaignSchema = z.object({
 const form = useForm({
   resolver: zodResolver(campaignSchema)
 });
+
+
 ```
 
 ### Icons
@@ -66,8 +78,11 @@ const form = useForm({
 ### lucide-react
 
 - Consistent icon library
+
 - Tree-shakeable
+
 - TypeScript support
+
 - Example: `import { Mail, Send, Users } from 'lucide-react'`
 
 ### Animation & Motion
@@ -75,7 +90,9 @@ const form = useForm({
 **tw-animate-css** + **CSS Transitions**
 
 - Use `tw-animate-css` for standard animations (fade, slide, bounce)
+
 - Use standard CSS transitions for hover states and micro-interactions
+
 - Avoid heavy JS animation libraries like Framer Motion unless absolutely necessary for complex gestures
 
 ### Dark Mode
@@ -83,7 +100,9 @@ const form = useForm({
 **Tailwind Dark Mode** (`selector` strategy)
 
 - Use `darkMode: 'selector'` in Tailwind config
+
 - Toggle class `dark` on the `<html>` element
+
 - Use `dark:` prefix for dark mode styles (e.g., `bg-white dark:bg-slate-900`)
 
 ### State Management
@@ -91,12 +110,15 @@ const form = useForm({
 **React Context** (for simple global state)
 
 - Theme preferences
+
 - User session
+
 - Feature flags
 
 **Zustand** (for complex state, if needed)
 
 - Campaign editor state
+
 - Multi-step form state
 
 ### Data Fetching
@@ -109,12 +131,16 @@ export async function getCampaigns() {
   const data = await db.campaigns.findMany();
   return data;
 }
+
+
 ```
 
 **Post-MVP**: REST API with fetch/axios
 
 ```typescript
 const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
+
+
 ```
 
 ---
@@ -126,13 +152,19 @@ const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
 **Requirement**: Two variants needed
 
 1. **Realtime DataTable**
+
    - Live updates via WebSocket/Server-Sent Events
+
    - Use case: Campaign sending status, live analytics
+
    - Features: Auto-refresh, optimistic updates
 
 2. **Paginated DataTable**
+
    - Server-side pagination
+
    - Use case: Campaign history, recipient lists
+
    - Features: Sorting, filtering, search
 
 **Recommended Library**: `@tanstack/react-table` (headless, flexible)
@@ -144,8 +176,11 @@ const campaigns = await fetch('/api/v1/campaigns').then(r => r.json());
 **Requirements**:
 
 - All forms must use Zod schemas for validation
+
 - Error messages must be user-friendly
+
 - Support for multi-step forms (campaign creation wizard)
+
 - Auto-save drafts for long forms
 
 **Example Structure**:
@@ -161,6 +196,8 @@ const form = useForm({ resolver: zodResolver(schema) });
 <Form {...form}>
   <FormField name="email" />
 </Form>
+
+
 ```
 
 ### Modals & Dialogs
@@ -170,15 +207,21 @@ const form = useForm({ resolver: zodResolver(schema) });
 **Requirements**:
 
 - Accessible (ARIA, keyboard navigation)
+
 - Backdrop click to close (configurable)
+
 - Escape key to close
+
 - Focus trap within modal
+
 - Sizes: sm, md, lg, xl, full
 
 **Use Cases**:
 
 - Confirmation dialogs (delete campaign)
+
 - Multi-step wizards (campaign setup)
+
 - Detail views (recipient details)
 
 ### Notifications
@@ -188,8 +231,11 @@ const form = useForm({ resolver: zodResolver(schema) });
 **Requirements**:
 
 - Position: top-right (default)
+
 - Auto-dismiss: 3s (success), 5s (error), manual (warning)
+
 - Action buttons for undo/retry
+
 - Stack multiple toasts
 
 **Example**:
@@ -200,6 +246,8 @@ import { toast } from 'sonner';
 toast.success('Campaign sent!', {
   action: { label: 'View', onClick: () => navigate('/campaigns/123') }
 });
+
+
 ```
 
 ### Component Structure
@@ -232,6 +280,8 @@ interface ComponentProps extends BaseComponentProps {
 >
   Submit Form
 </Button>
+
+
 ```
 
 ## Layout Components
@@ -258,6 +308,8 @@ interface ComponentProps extends BaseComponentProps {
   justify-content: center;
   min-height: 100vh;
 }
+
+
 ```
 
 ### Grid System
@@ -282,6 +334,8 @@ interface GridItemProps {
   <GridItem span={8}>Main Content</GridItem>
   <GridItem span={4}>Sidebar</GridItem>
 </Grid>
+
+
 ```
 
 ### Flexbox Utilities
@@ -302,6 +356,8 @@ interface GridItemProps {
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
 .justify-between { justify-content: space-between; }
+
+
 ```
 
 ## Button Components
@@ -336,6 +392,8 @@ interface ButtonProps {
 <Button variant="danger" size="md" loading={isDeleting} onClick={handleDelete}>
   Delete Account
 </Button>
+
+
 ```
 
 ### Button Group Pattern
@@ -354,6 +412,8 @@ interface ButtonGroupProps {
   <Button active>Weekly</Button>
   <Button>Monthly</Button>
 </ButtonGroup>
+
+
 ```
 
 ## Form Components
@@ -377,6 +437,8 @@ interface InputProps {
   onBlur?: () => void;
   onFocus?: () => void;
 }
+
+
 ```
 
 ```jsx
@@ -394,6 +456,8 @@ const [emailError, setEmailError] = useState('');
   errorMessage={emailError}
   required
 />
+
+
 ```
 
 ### Select Components
@@ -429,6 +493,8 @@ interface SelectProps {
   placeholder="Select country"
   onChange={(value) => setCountry(value)}
 />
+
+
 ```
 
 ### Form Validation Patterns
@@ -468,6 +534,8 @@ const FormField = ({ name, rules, children }: FormFieldProps) => {
     touched: !!touched
   });
 };
+
+
 ```
 
 ## Data Display Components
@@ -510,6 +578,8 @@ interface TableProps<T> {
   selectable
   onSelect={handleSelection}
 />
+
+
 ```
 
 ### Card Component
@@ -543,6 +613,8 @@ interface CardProps {
     <Metric label="Clicks" value={campaign.clicks} />
   </div>
 </Card>
+
+
 ```
 
 ## Feedback Components
@@ -576,6 +648,8 @@ interface AlertProps {
   }}
   dismissible
 />
+
+
 ```
 
 ### Toast Notifications
@@ -610,6 +684,8 @@ toast.success({
     onClick: () => navigate(`/campaigns)
   }
 });
+
+
 ```
 
 ### Modal Component
@@ -625,6 +701,8 @@ interface ModalProps {
   footer?: React.ReactNode;
   children: React.ReactNode;
 }
+
+
 ```
 
 ```javascript
@@ -647,6 +725,8 @@ interface ModalProps {
 >
   <p>Are you sure you want to delete "{campaignName}"? This will permanently remove all associated data.</p>
 </Modal>
+
+
 ```
 
 ## Navigation Components
@@ -674,6 +754,8 @@ interface BreadcrumbProps {
     { label: 'Summer Sale 2025', current: true }
   ]}
 />
+
+
 ```
 
 ### Tab Component
@@ -706,6 +788,8 @@ interface TabsProps {
   activeTab={activeTab}
   onChange={setActiveTab}
 />
+
+
 ```
 
 ## Utility Components
@@ -725,6 +809,8 @@ interface LoadingProps {
 <Loading size="md" variant="spinner" />
 <Loading variant="skeleton" />
 <Loading variant="dots" text="Saving changes..." />
+
+
 ```
 
 ### Empty States
@@ -751,6 +837,8 @@ interface EmptyStateProps {
     onClick: () => navigate('/campaigns)
   }}
 />
+
+
 ```
 
 ### Badge Component
@@ -768,6 +856,8 @@ interface BadgeProps {
 <Badge variant="success">Active</Badge>
 <Badge variant="warning" size="sm">Pending</Badge>
 <Badge variant="error" dot /> {/* Just colored dot */}
+
+
 ```
 
 ## Component Development Guidelines
@@ -821,6 +911,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({
 });
 
 Button.displayName = 'Button';
+
+
 ```
 
 ### Component Testing
@@ -850,6 +942,8 @@ describe('Button', () => {
     expect(screen.getByTestId('spinner')).toBeInTheDocument();
   });
 });
+
+
 ```
 
 ### Component Documentation
@@ -904,6 +998,8 @@ export const Loading: Story = {
     children: 'Loading...'
   }
 };
+
+
 ```
 
 ---
@@ -912,10 +1008,12 @@ export const Loading: Story = {
 
 ### Responsive Design Strategy
 
-**Mobile-First Approach**
+### Mobile-First Approach
 
 - Base styles target mobile (< 640px)
+
 - Progressive enhancement for tablet (768px+) and desktop (1024px+)
+
 - Touch-friendly targets: minimum 44px × 44px
 
 **Breakpoints** (from design-tokens.md):
@@ -928,6 +1026,8 @@ const breakpoints = {
   xl: '1280px',  // Large desktops
   '2xl': '1536px' // Extra large
 };
+
+
 ```
 
 ### Theme Support
@@ -935,8 +1035,11 @@ const breakpoints = {
 ### Light/Dark Mode
 
 - Use Tailwind's `dark:` variant
+
 - Store preference in localStorage
+
 - Respect system preference (`prefers-color-scheme`)
+
 - Smooth transitions between themes
 
 **Implementation Pattern**:
@@ -948,6 +1051,8 @@ import { ThemeProvider } from 'next-themes';
 <ThemeProvider attribute="class" defaultTheme="system">
   {children}
 </ThemeProvider>
+
+
 ```
 
 ### Animation Strategy
@@ -957,22 +1062,31 @@ import { ThemeProvider } from 'next-themes';
 **When to Use Framer Motion**:
 
 - Page transitions
+
 - Complex multi-step animations
+
 - Gesture-based interactions (drag, swipe)
+
 - Orchestrated animations (stagger effects)
 
 **When to Use CSS Transitions**:
 
 - Hover states
+
 - Focus indicators
+
 - Simple show/hide animations
+
 - Color/opacity changes
 
 **Performance Guidelines**:
 
 - Respect `prefers-reduced-motion`
+
 - Animate `transform` and `opacity` only (GPU-accelerated)
+
 - Avoid animating `width`, `height`, `top`, `left`
+
 - Keep animations under 300ms for UI feedback
 
 **Example**:
@@ -997,6 +1111,8 @@ import { motion } from 'framer-motion';
 .button:hover {
   background-color: var(--color-primary-600);
 }
+
+
 ```
 
 ### Loading States
@@ -1006,8 +1122,11 @@ import { motion } from 'framer-motion';
 **Requirements**:
 
 - Show skeleton UI while data loads
+
 - Use React Suspense for async components
+
 - Provide meaningful loading indicators
+
 - Avoid full-page spinners (use progressive loading)
 
 **Example**:
@@ -1019,6 +1138,8 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 <Suspense fallback={<CampaignListSkeleton />}>
   <CampaignList />
 </Suspense>
+
+
 ```
 
 ### Error Handling
@@ -1028,8 +1149,11 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 **Requirements**:
 
 - Catch errors at component boundaries
+
 - Show actionable error messages
+
 - Provide retry mechanisms
+
 - Log errors to monitoring service (Sentry)
 
 **Example**:
@@ -1041,6 +1165,8 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 >
   <CampaignEditor />
 </ErrorBoundary>
+
+
 ```
 
 ---
@@ -1054,8 +1180,11 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 **Requirements**:
 
 - Check authentication in Next.js middleware
+
 - Redirect to login if unauthenticated
+
 - Check role permissions for restricted routes
+
 - Store session in httpOnly cookies
 
 ### Role-Based UI Rendering
@@ -1078,6 +1207,8 @@ function Dashboard() {
     </>
   );
 }
+
+
 ```
 
 ---
@@ -1091,15 +1222,21 @@ function Dashboard() {
 **Requirements**:
 
 - Responsive charts (adapt to container width)
+
 - Accessible (ARIA labels, keyboard navigation)
+
 - Consistent color palette (use design tokens)
+
 - Interactive tooltips
 
 **Chart Types Needed**:
 
 - Line charts: Campaign performance over time
+
 - Bar charts: Comparative metrics
+
 - Pie/Donut charts: Distribution (open rate, click rate)
+
 - Area charts: Cumulative metrics
 
 ### Real-time Updates
@@ -1109,7 +1246,9 @@ function Dashboard() {
 **Use Cases**:
 
 - Live campaign sending status
+
 - Real-time analytics updates
+
 - Notification feed
 
 **Implementation**:
@@ -1121,6 +1260,8 @@ eventSource.onmessage = (event) => {
   const data = JSON.parse(event.data);
   updateCampaignMetrics(data);
 };
+
+
 ```
 
 ---
@@ -1134,8 +1275,11 @@ eventSource.onmessage = (event) => {
 **Requirements**:
 
 - Test user interactions (click, type, submit)
+
 - Test accessibility (ARIA, keyboard navigation)
+
 - Test error states and loading states
+
 - Mock API calls
 
 ### E2E Testing
@@ -1145,8 +1289,11 @@ eventSource.onmessage = (event) => {
 **Critical Flows to Test**:
 
 - User login/logout
+
 - Campaign creation wizard
+
 - Email sending flow
+
 - Dashboard navigation
 
 ---
@@ -1154,9 +1301,13 @@ eventSource.onmessage = (event) => {
 ## Related Documents
 
 - [Component Library](/docs/design/component-library) - Detailed component specifications
+
 - [Design System](/docs/design/design-system) - Core design principles
+
 - [Design Tokens](/docs/design/design-tokens) - Color, spacing, typography values
+
 - [Accessibility Guidelines](/docs/design/accessibility-guidelines) - WCAG compliance standards
+
 - [Analytics Views](/docs/design/analytics-views) - Dashboard and view specifications
 
 ---

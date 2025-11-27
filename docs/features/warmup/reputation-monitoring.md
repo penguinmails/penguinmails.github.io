@@ -6,42 +6,75 @@ status: "PLANNED"
 roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
+
+
   - warmup/warmup-management
+
+
   - warmup/warmup-scheduling
+
+
   - domains/domain-management
+
+
   - compliance/security-features
 related_tasks:
+
+
   - epic-4-warmup-deliverability
 ---
+
 
 # Reputation Monitoring
 
 **Quick Access**: Monitor sender reputation in real-time with blacklist checking, domain health scores, deliverability alerts, and automated recovery recommendations.
 
+
 ## Overview
 
 Reputation Monitoring provides comprehensive visibility into your email sending reputation across domains, IPs, and email accounts. Get instant alerts when issues arise and receive actionable recommendations to maintain optimal deliverability.
 
+
 ### Key Capabilities
 
+
 - **Real-Time Reputation Tracking**: Monitor sender scores across all major providers
+
+
 - **Blacklist Monitoring**: Check 50+ blacklists automatically
+
+
 - **Domain Health Scores**: Aggregate health metrics for each domain
+
+
 - **Deliverability Alerts**: Instant notifications for reputation issues
+
+
 - **Recovery Recommendations**: AI-powered guidance to fix problems
+
+
 - **Historical Trends**: Track reputation changes over time
+
+
 - **Competitive Benchmarking**: Compare against industry standards
+
+
 - **Automated Remediation**: Auto-pause sending when issues detected
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Reputation Dashboard
 
+
 #### Overview
 
+
 ```
+
 Reputation Dashboard
 
 Overall Health: 87/100 (Good) ✓
@@ -66,11 +99,16 @@ Recent Alerts:
   ℹ Warmup completed: support@penguinmails.com
   
 [View Details] [Run Full Scan] [Export Report]
+
+
 ```
+
 
 #### Domain Health Details
 
+
 ```
+
 Domain: penguinmails.com
 Health Score: 92/100 (Excellent) ✓
 
@@ -99,13 +137,19 @@ Blacklists:
 Trend: ↗ Improving (+3 points this week)
 
 [View History] [Run Diagnostics] [Export Report]
+
+
 ```
+
 
 ### Blacklist Monitoring
 
+
 #### Blacklist Status
 
+
 ```
+
 Blacklist Monitor
 
 Status: ✓ All Clear
@@ -134,11 +178,16 @@ IPs Monitored:
   ✓ 192.0.2.101 (Dedicated)
   
 [Run Scan Now] [Configure Alerts]
+
+
 ```
+
 
 #### Blacklist Alert
 
+
 ```
+
 ⚠ BLACKLIST ALERT
 
 Domain: sales.penguinmails.com
@@ -157,19 +206,33 @@ Immediate Actions Taken:
   ✓ Created support ticket
   
 Recommended Actions:
+
+
   1. Review recent campaigns for spam triggers
+
+
   2. Check for compromised accounts
+
+
   3. Request delisting from Spamcop
+
+
   4. Implement stricter list hygiene
   
 [View Delisting Instructions] [Contact Support]
+
+
 ```
+
 
 ### Health Alerts
 
+
 #### Alert Types
 
+
 ```
+
 Active Alerts (2):
 
 ⚠ High Bounce Rate
@@ -188,11 +251,16 @@ Active Alerts (2):
   Day: 21/42
   
   [View Progress]
+
+
 ```
+
 
 #### Alert Configuration
 
+
 ```
+
 Alert Settings
 
 Email Notifications:
@@ -218,17 +286,24 @@ Auto-Actions:
   ☑ Pause sending on spam complaints (> 0.1%)
   
 [Save Settings]
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Monitoring
+
 
 ### Reputation Metrics
 
+
 #### Sender Score Breakdown
 
+
 ```
+
 Sender Score: 95/100
 
 Components:
@@ -253,11 +328,16 @@ Compared to Industry:
   Top 10%: 88/100
   
   You're in the top 5% ✓
+
+
 ```
+
 
 #### Provider-Specific Reputation
 
+
 ```
+
 Reputation by Email Provider
 
 Gmail:
@@ -285,13 +365,19 @@ Apple Mail:
   Reputation: Excellent ✓
   Inbox Rate: 95%
   Estimated Spam Rate: 3%
+
+
 ```
+
 
 ### Blacklist Deep Dive
 
+
 #### Blacklist Categories
 
+
 ```
+
 Blacklist Coverage (52 lists)
 
 IP-Based Lists (24):
@@ -314,11 +400,16 @@ Combined Lists (10):
   ✓ PSBL
   ✓ Invaluement
   ... and 7 more
+
+
 ```
+
 
 #### Delisting Process
 
+
 ```
+
 Delisting Guide: Spamcop
 
 Status: Listed
@@ -327,40 +418,61 @@ Auto-Delist: 24 hours after last report
 
 Steps to Delist:
 
+
 1. Identify Root Cause
    ☐ Review recent campaigns
    ☐ Check for compromised accounts
    ☐ Verify list quality
    
+
+
 2. Fix Issues
    ☐ Remove problematic content
    ☐ Clean email list
    ☐ Secure compromised accounts
    
+
+
 3. Request Delisting
    URL: https://www.spamcop.net/bl.shtml
    
    Information Needed:
+
+
    - IP Address: 192.0.2.100
+
+
    - Listing ID: ABC123XYZ
+
+
    - Explanation of corrective actions
    
+
+
 4. Monitor Status
    ☐ Check delisting status (every 4 hours)
    ☐ Verify removal (may take 24-48 hours)
    
+
+
 5. Resume Sending
    ☐ Gradually increase volume
    ☐ Monitor reputation closely
    
 [Copy Delisting Template] [Track Progress]
+
+
 ```
+
 
 ### Domain Health Monitoring
 
+
 #### Health Score Components
 
+
 ```
+
 Domain Health: penguinmails.com (92/100)
 
 Authentication (25 points): 25/25 ✓
@@ -384,11 +496,16 @@ Infrastructure (20 points): 17/20 ✓
   Reverse DNS: ✓ Configured
   Blacklists: ✓ Clean (20/20)
   IP Reputation: 85/100 (-3 points)
+
+
 ```
+
 
 #### Historical Trends
 
+
 ```
+
 Reputation Trend: Last 30 Days
 
 Health Score:
@@ -412,13 +529,19 @@ Inbox Rate:
 Engagement:
   Open Rate: 24% → 28% (↗ +4%)
   Click Rate: 3.8% → 4.2% (↗ +0.4%)
+
+
 ```
+
 
 ### Recovery Recommendations
 
+
 #### AI-Powered Insights
 
+
 ```
+
 Reputation Recovery Plan
 
 Current Status:
@@ -429,36 +552,52 @@ Current Status:
 Recommended Actions:
 
 Priority 1: Immediate (Next 24 hours)
+
+
   1. ☐ Pause all campaigns from this domain
      Impact: Prevent further damage
      Effort: 5 minutes
      
+
+
   2. ☐ Clean email list (remove hard bounces)
      Impact: Reduce bounce rate by ~2%
      Effort: 30 minutes
      
+
+
   3. ☐ Verify list source and acquisition method
      Impact: Identify root cause
      Effort: 1 hour
 
 Priority 2: Short-term (Next 7 days)
+
+
   4. ☐ Implement double opt-in for new signups
      Impact: Improve list quality long-term
      Effort: 2 hours
      
+
+
   5. ☐ Re-engage inactive subscribers
      Impact: Improve engagement metrics
      Effort: 4 hours
      
+
+
   6. ☐ Reduce sending volume by 50%
      Impact: Rebuild reputation gradually
      Effort: 15 minutes
 
 Priority 3: Long-term (Next 30 days)
+
+
   7. ☐ Implement list hygiene automation
      Impact: Maintain high list quality
      Effort: 8 hours
      
+
+
   8. ☐ Set up engagement-based segmentation
      Impact: Send only to engaged subscribers
      Effort: 4 hours
@@ -469,11 +608,16 @@ Expected Outcome:
   Week 4: Health score → 90/100
 
 [Start Recovery Plan] [Customize Plan]
+
+
 ```
+
 
 #### Automated Remediation
 
+
 ```
+
 Auto-Remediation Rules
 
 Rule 1: High Bounce Rate
@@ -509,11 +653,16 @@ Rule 4: Low Engagement
     ☑ Recommend re-engagement campaign
 
 [Edit Rules] [Add Custom Rule]
+
+
 ```
+
 
 ### Competitive Benchmarking
 
+
 ```
+
 Industry Benchmarks
 
 Your Performance vs Industry Average
@@ -549,13 +698,18 @@ Bounce Rate:
 Industry: SaaS
 Region: North America
 Company Size: 51-200 employees
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Domain reputation tracking
@@ -683,9 +837,13 @@ CREATE TABLE reputation_history (
 );
 
 CREATE INDEX idx_reputation_history_domain ON reputation_history(domain_id, snapshot_date);
+
+
 ```
 
+
 ### Reputation Monitoring Service
+
 
 ```typescript
 interface ReputationMetrics {
@@ -954,9 +1112,13 @@ class ReputationMonitoringService {
     });
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Check blacklists hourly
@@ -998,9 +1160,13 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
     await service.checkReputationHealth(domain.id);
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Get domain reputation
@@ -1047,15 +1213,25 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
   
   return res.json(alerts);
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
 
+
 - **[Email Warmups](./email-warmups/overview.md)** - Overall warmup strategy overview
+
+
 - **[Warmup Scheduling](./warmup-scheduling.md)** - Automated warmup
+
+
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
+
+
 - **[Security Features](../compliance/security-features.md)** - Authentication setup
 
 ---

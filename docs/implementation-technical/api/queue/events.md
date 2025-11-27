@@ -6,6 +6,7 @@ level: "3"
 persona: "Backend Developers"
 ---
 
+
 # Events API
 
 **Parent API**: [Queue API](/docs/implementation-technical/api/queue)
@@ -13,7 +14,9 @@ persona: "Backend Developers"
 
 ---
 
+
 ## Endpoints
+
 
 ### Publish System Event
 
@@ -22,6 +25,7 @@ persona: "Backend Developers"
 **Purpose**: Publish a system event for processing and notification generation.
 
 **Request**:
+
 
 ```json
 {
@@ -35,9 +39,12 @@ persona: "Backend Developers"
     "context": "deliverability_trend_analysis"
   }
 }
+
+
 ```
 
 **Response**:
+
 
 ```json
 {
@@ -48,7 +55,10 @@ persona: "Backend Developers"
     "notification_generated": true
   }
 }
+
+
 ```
+
 
 ### Domain-Specific Events
 
@@ -58,6 +68,11 @@ persona: "Backend Developers"
 
 **Supported Domains**:
 
+
 - `system-alerts`
+
+
 - `business-metrics`
+
+
 - `operational-updates`

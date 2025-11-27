@@ -6,42 +6,75 @@ status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "Critical"
 related_features:
+
+
   - campaigns/ab-testing
+
+
   - campaigns/personalization-system
+
+
   - templates/template-management
+
+
   - leads/contact-segmentation
+
+
   - analytics/core-analytics/overview
 related_tasks:
+
+
   - epic-6-core-email-pipeline
+
+
   - epic-7-leads-management
 ---
+
 
 # Campaign Management
 
 **Quick Access**: Create, schedule, and optimize sophisticated multi-step email campaigns with advanced sequencing, A/B testing, personalization, and comprehensive analytics.
 
+
 ## Overview
 
 Campaign Management is the core revenue-generating feature of PenguinMails, enabling sophisticated email marketing through multi-step sequences, conditional logic, A/B testing, and personalization at scale. Create campaigns in minutes, not hours, with intuitive drag-and-drop builders and pre-built templates.
 
+
 ### Key Capabilities
 
+
 - **Multi-Step Sequences**: Create up to 20-step email sequences with time delays and conditional branching
+
+
 - **Campaign Types**: One-time broadcasts, drip campaigns, triggered campaigns, and A/B tests
+
+
 - **Visual Builder**: Drag-and-drop campaign builder with real-time preview
+
+
 - **Template Integration**: Use pre-built templates or create custom designs
+
+
 - **Advanced Scheduling**: Timezone-aware scheduling with send-time optimization
+
+
 - **Comprehensive Analytics**: Track performance at campaign and step level
 
 ---
 
+
 ## Level 1: Quick Start Guide
+
 
 ### Your First Campaign
 
+
 #### Step 1: Create a New Campaign
 
+
 ```
+
 Dashboard → Campaigns → Create New Campaign
 
 Campaign Setup:
@@ -51,23 +84,32 @@ Campaign Setup:
 │ Target Audience: Select segment (500 contacts)      │
 │ From Address: sales@yourcompany.com                 │
 └─────────────────────────────────────────────────────┘
+
+
 ```
+
 
 #### Step 2: Build Your Sequence
 
 **Simple 3-Email Welcome Sequence:**
 
+
 ```
+
 Email 1: Welcome Email (Send immediately)
   ↓ Wait 2 days
 Email 2: Product Overview (Send 2 days after signup)
   ↓ Wait 3 days
 Email 3: Special Offer (Send 5 days after signup)
+
+
 ```
 
 **Visual Builder:**
 
+
 ```
+
 ┌──────────────────────────────────────────────────┐
 │ Sequence Builder                                 │
 ├──────────────────────────────────────────────────┤
@@ -101,32 +143,48 @@ Email 3: Special Offer (Send 5 days after signup)
 │  [END]                                           │
 │                                                  │
 └──────────────────────────────────────────────────┘
+
+
 ```
+
 
 #### Step 3: Configure Email Content
 
 **Email 1 Setup:**
 
+
 ```
+
 Subject Line: Welcome to {{company}}!
 Preview Text: Thanks for signing up, {{firstName}}
 
 Template: Select from library or create new
+
+
   - Welcome Email Template
+
+
   - Getting Started Template
+
+
   - Custom Template
 
 Personalization:
   ☑ Use contact first name
   ☑ Include company name
   ☑ Add custom fields
+
+
 ```
+
 
 #### Step 4: Review and Launch
 
 **Pre-Launch Checklist:**
 
+
 ```
+
 Campaign Review:
 ✓ Audience: 500 contacts selected
 ✓ Sequence: 3 emails configured
@@ -136,13 +194,18 @@ Campaign Review:
 ✓ From Address: Verified and warmed
 
 [Preview Campaign] [Send Test Email] [Launch Campaign]
+
+
 ```
+
 
 #### Step 5: Monitor Performance
 
 **Campaign Dashboard:**
 
+
 ```
+
 Campaign: Welcome Series
 Status: Active | Started: Nov 25, 2025
 
@@ -157,82 +220,144 @@ Step Performance:
 Email 1: 500 sent | 50% open | 20% click
 Email 2: 350 sent | 45% open | 18% click
 Email 3: 200 sent | 40% open | 15% click
+
+
 ```
 
+
 ### Campaign Types
+
 
 #### One-Time Broadcast
 
 Send a single email to your entire list or segment:
 
+
 ```
+
 Use Cases:
+
+
 - Product announcements
+
+
 - Newsletter broadcasts
+
+
 - Event invitations
+
+
 - Special promotions
 
 Setup Time: 5 minutes
 Best For: Time-sensitive announcements
+
+
 ```
+
 
 #### Drip Campaign
 
 Automated sequence delivered over time:
 
+
 ```
+
 Use Cases:
+
+
 - Welcome series (3-5 emails)
+
+
 - Onboarding sequences (5-10 emails)
+
+
 - Educational content series
+
+
 - Lead nurturing campaigns
 
 Setup Time: 15-30 minutes
 Best For: Relationship building
+
+
 ```
+
 
 #### Triggered Campaign
 
 Event-based campaigns that start automatically:
 
+
 ```
+
 Triggers:
+
+
 - Contact signup
+
+
 - Form submission
+
+
 - Purchase completion
+
+
 - Abandoned cart
+
+
 - Custom events
 
 Setup Time: 20-40 minutes
 Best For: Behavioral automation
+
+
 ```
+
 
 #### A/B Test Campaign
 
 Compare variations to optimize performance:
 
+
 ```
+
 Test Elements:
+
+
 - Subject lines
+
+
 - Email content
+
+
 - Send times
+
+
 - Sender names
 
 Setup Time: 10-20 minutes
 Best For: Performance optimization
+
+
 ```
 
 ---
 
+
 ## Level 2: Advanced Configuration
 
+
 ### Multi-Step Sequences
+
 
 #### Complex Sequence Example
 
 **10-Step Lead Nurturing Campaign:**
 
+
 ```
+
 START
   │
   ▼
@@ -258,11 +383,15 @@ Email 1: Introduction (Day 0)
                                         │
                                         ▼
                                     [END or Re-engage]
+
+
 ```
+
 
 #### Conditional Branching
 
 **Branch Based on Engagement:**
+
 
 ```yaml
 sequence_step:
@@ -270,43 +399,67 @@ sequence_step:
   wait_duration: 2 days
   
   conditions:
+
+
     - if: email_opened
       then: send_email("engaged_path")
       
+
+
     - if: email_clicked
       then: send_email("hot_lead_path")
       
+
+
     - if: email_not_opened
       wait: 1 day
       then: send_email("re_engagement")
       
+
+
     - if: email_replied
       then: exit_sequence("move_to_sales")
+
+
 ```
 
 **Branch Based on Contact Attributes:**
 
+
 ```yaml
 sequence_step:
   conditions:
+
+
     - if: contact.industry == "SaaS"
       then: send_email("saas_specific_content")
       
+
+
     - if: contact.company_size > 100
       then: send_email("enterprise_content")
       
+
+
     - if: contact.lead_score > 50
       then: send_email("high_value_offer")
       
+
+
     - else:
       then: send_email("standard_content")
+
+
 ```
 
+
 ### Advanced Scheduling
+
 
 #### Timezone-Aware Scheduling
 
 **Send at Optimal Local Time:**
+
 
 ```yaml
 campaign_schedule:
@@ -315,25 +468,41 @@ campaign_schedule:
   timezone_fallback: "America/New_York"
   
   rules:
+
+
     - if_timezone_unknown: use_fallback
+
+
     - respect_business_hours: true
+
+
     - skip_weekends: true
+
+
     - skip_holidays: true
+
+
 ```
 
 **Example:**
 
+
 ```
+
 Contact in New York (EST): Email sent at 9:00 AM EST
 Contact in Los Angeles (PST): Email sent at 9:00 AM PST
 Contact in London (GMT): Email sent at 9:00 AM GMT
 
 All contacts receive email at their local 9:00 AM
+
+
 ```
+
 
 #### Send-Time Optimization
 
 **AI-Powered Optimal Send Times:**
+
 
 ```yaml
 send_optimization:
@@ -341,32 +510,50 @@ send_optimization:
   strategy: "engagement_based"
   
   analysis:
+
+
     - historical_open_times
+
+
     - historical_click_times
+
+
     - industry_benchmarks
+
+
     - contact_behavior_patterns
   
   optimization_window:
     start: "06:00"
     end: "18:00"
     timezone: "recipient_local"
+
+
 ```
 
 **Results:**
 
+
 ```
+
 Contact A: Historically opens at 7:30 AM → Send at 7:15 AM
 Contact B: Historically opens at 2:00 PM → Send at 1:45 PM
 Contact C: No history → Send at industry benchmark (9:00 AM)
+
+
 ```
 
+
 ### Campaign Templates
+
 
 #### Pre-Built Campaign Templates
 
 **Welcome Series Template:**
 
+
 ```
+
 Template: "SaaS Welcome Series"
 Duration: 14 days
 Emails: 5
@@ -378,11 +565,15 @@ Day 9: Advanced Features
 Day 14: Success Story + Upgrade Offer
 
 Conversion Rate: 12-18% (industry average)
+
+
 ```
 
 **Lead Nurturing Template:**
 
+
 ```
+
 Template: "B2B Lead Nurturing"
 Duration: 30 days
 Emails: 8
@@ -393,13 +584,18 @@ Week 3: Product positioning (2 emails)
 Week 4: Conversion push (2 emails)
 
 Conversion Rate: 8-12% (industry average)
+
+
 ```
+
 
 #### Custom Template Creation
 
 **Save Campaign as Template:**
 
+
 ```
+
 Campaign Actions:
   → Save as Template
   
@@ -420,13 +616,18 @@ Template Configuration:
 │ ● Team (all workspace members)                      │
 │ ○ Public (template library)                         │
 └─────────────────────────────────────────────────────┘
+
+
 ```
 
+
 ### Audience Segmentation Integration
+
 
 #### Dynamic Audience Selection
 
 **Segment-Based Campaigns:**
+
 
 ```yaml
 campaign_audience:
@@ -434,49 +635,87 @@ campaign_audience:
   segment_id: "engaged_users"
   
   criteria:
+
+
     - lead_score: "> 30"
+
+
     - last_activity: "< 30 days"
+
+
     - email_verified: true
+
+
     - unsubscribed: false
   
   refresh: "daily"  # Re-evaluate segment membership
   
   enrollment_rules:
+
+
     - new_contacts: "auto_enroll"
+
+
     - exited_contacts: "remove_from_sequence"
+
+
 ```
 
 **Example:**
 
+
 ```
+
 Day 1: 500 contacts match criteria → Enrolled
 Day 5: 50 new contacts match → Auto-enrolled at step 1
 Day 5: 20 contacts no longer match → Removed from sequence
+
+
 ```
+
 
 #### Exclusion Rules
 
 **Prevent Over-Messaging:**
 
+
 ```yaml
 exclusion_rules:
+
+
   - exclude_if: "in_other_campaign"
+
+
   - exclude_if: "received_email_last_24h"
+
+
   - exclude_if: "marked_as_customer"
+
+
   - exclude_if: "unsubscribed_from_category"
   
   priority_handling:
+
+
     - if_conflict: "pause_lower_priority"
+
+
     - resume_after: "higher_priority_complete"
+
+
 ```
 
+
 ### Team Collaboration
+
 
 #### Campaign Approval Workflow
 
 **Enterprise Approval Process:**
 
+
 ```
+
 Campaign Creation:
   ↓
 Draft Review (Creator)
@@ -492,30 +731,46 @@ Compliance Review ──REJECT──▶ Back to Creator
   APPROVE
   ↓
 Schedule & Launch
+
+
 ```
 
 **Approval Configuration:**
 
+
 ```yaml
 approval_workflow:
   required_approvers:
+
+
     - role: "campaign_manager"
       required: true
+
+
     - role: "compliance_officer"
       required: true
       conditions:
+
+
         - if: audience_size > 10000
+
+
         - if: contains_promotional_content
   
   approval_timeout: 48 hours
   timeout_action: "auto_reject"
+
+
 ```
+
 
 #### Collaborative Editing
 
 **Real-Time Collaboration:**
 
+
 ```
+
 Campaign Editor:
 ┌─────────────────────────────────────────────────────┐
 │ 👤 Sarah (editing Email 2)                          │
@@ -527,13 +782,18 @@ Campaign Editor:
 │ • Mike added comment on Email 1 (5 min ago)         │
 │ • Lisa uploaded new template (10 min ago)           │
 └─────────────────────────────────────────────────────┘
+
+
 ```
 
 ---
 
+
 ## Level 3: Technical Implementation
 
+
 ### Database Schema
+
 
 ```sql
 -- Campaigns table
@@ -713,9 +973,13 @@ CREATE TABLE campaign_approvals (
 
 CREATE INDEX idx_campaign_approvals_campaign ON campaign_approvals(campaign_id);
 CREATE INDEX idx_campaign_approvals_status ON campaign_approvals(status);
+
+
 ```
 
+
 ### Campaign Execution Engine
+
 
 ```typescript
 interface Campaign {
@@ -747,6 +1011,8 @@ interface CampaignStep {
 
 class CampaignExecutionEngine {
   /**
+
+
    * Launch a campaign and enroll contacts
    */
   async launchCampaign(campaignId: string): Promise<void> {
@@ -775,6 +1041,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Enroll contacts in campaign
    */
   private async enrollContacts(
@@ -802,6 +1070,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Process next steps for all contacts ready to receive emails
    */
   async processNextSteps(campaignId: string): Promise<void> {
@@ -818,6 +1088,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Process a single step for a contact
    */
   private async processContactStep(
@@ -845,6 +1117,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Send campaign email to contact
    */
   private async sendCampaignEmail(
@@ -896,6 +1170,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Process wait step
    */
   private async processWaitStep(
@@ -919,6 +1195,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Process conditional step
    */
   private async processConditionalStep(
@@ -957,6 +1235,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Evaluate conditional logic
    */
   private async evaluateCondition(
@@ -993,6 +1273,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Calculate next send time based on strategy
    */
   private calculateNextSendTime(
@@ -1017,6 +1299,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Calculate optimal send time based on contact behavior
    */
   private calculateOptimalSendTime(contact: Contact): Date {
@@ -1042,6 +1326,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Render email content with personalization
    */
   private async renderEmailContent(
@@ -1053,6 +1339,8 @@ class CampaignExecutionEngine {
   }
   
   /**
+
+
    * Get next step in sequence
    */
   private async getNextStep(
@@ -1064,9 +1352,13 @@ class CampaignExecutionEngine {
     });
   }
 }
+
+
 ```
 
+
 ### Background Jobs
+
 
 ```typescript
 // Process campaign steps every 5 minutes
@@ -1130,9 +1422,13 @@ cron.schedule('0 * * * *', async () => {  // Every hour
     }
   }
 });
+
+
 ```
 
+
 ### API Endpoints
+
 
 ```typescript
 // Create campaign
@@ -1256,31 +1552,52 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
   
   res.json(cloned);
 });
+
+
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaign Features
 
+
 - **[A/B Testing](../ab-testing.md)** - Split testing for campaign optimization
+
+
 - **[Personalization System](../personalization-system.md)** - Dynamic email personalization
+
+
 - **[Template Management](../../templates/template-management.md)** - Email template library
+
 
 ### Audience Management
 
+
 - **[Contact Segmentation](../../leads/contact-segmentation.md)** - Audience targeting
+
+
 - **[Lead Scoring](../../leads/lead-scoring.md)** - Contact prioritization
+
 
 ### Analytics
 
+
 - **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
+
+
 - **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
+
 
 ### Technical
 
+
 - **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
+
+
 - **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
 
 ---

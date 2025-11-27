@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Component Library
 
 ## Purpose
@@ -32,7 +33,9 @@ The Component Library is a comprehensive catalog of all reusable UI components a
 Components should strictly use the design tokens defined in [Design Tokens](/docs/design/design-tokens) via Tailwind CSS utility classes.
 
 - **Colors**: Use semantic names (e.g., `bg-primary`, `text-foreground`).
+
 - **Spacing**: Use spacing scale (e.g., `p-4`, `gap-2`).
+
 - **Typography**: Use text utilities (e.g., `text-sm`, `font-medium`).
 
 ### Mobile Support
@@ -40,6 +43,7 @@ Components should strictly use the design tokens defined in [Design Tokens](/doc
 Follow a **mobile-first** approach. Default styles should apply to mobile viewports, with `md:` and `lg:` overrides for larger screens.
 
 - **Touch Targets**: Ensure interactive elements are at least 44px high on mobile.
+
 - **Widths**: Use `w-full` on mobile for block-level actions.
 
 ### Theme Support
@@ -47,13 +51,17 @@ Follow a **mobile-first** approach. Default styles should apply to mobile viewpo
 All components must support both light and dark modes using Tailwind's `dark:` modifier.
 
 - **Backgrounds**: `bg-white dark:bg-slate-950`
+
 - **Borders**: `border-slate-200 dark:border-slate-800`
+
 - **Text**: `text-slate-900 dark:text-slate-50`
 
 ### Accessibility (a11y)
 
 - **Interactive Elements**: Must be keyboard accessible (focusable).
+
 - **ARIA Attributes**: Use `aria-label`, `aria-expanded`, etc., where visual context is missing.
+
 - **Focus States**: Always define visible focus states (`focus-visible:ring-2`).
 
 ## Library Structure
@@ -70,13 +78,18 @@ All components must support both light and dark modes using Tailwind's `dark:` m
 ├── 📁 feedback
 ├── 📁 overlays
 └── 📁 utilities
+
+
 ```
 
 ### Component Maturity Levels
 
 - **Technical Experimental**: New components under development
+
 - **Completed Stable**: Production-ready components with full test coverage
+
 - **🔒 Deprecated**: Components scheduled for removal (with migration guides)
+
 - **🚫 Removed**: Components no longer available
 
 ## Primitives
@@ -110,13 +123,18 @@ interface ButtonProps {
 <Button variant="danger" size="sm" loading={isDeleting}>
   Delete
 </Button>
+
+
 ```
 
 **Design Specifications:**
 
 - Height: 32px (sm), 40px (md), 48px (lg)
+
 - Border radius: 6px (sm, md), 8px (lg)
+
 - Font weight: 500 (regular), 600 (bold for primary)
+
 - Focus ring: 2px solid primary color, 2px offset
 
 ### Input
@@ -153,14 +171,20 @@ interface InputProps {
   leftIcon={MailIcon}
   required
 />
+
+
 ```
 
 **Design Specifications:**
 
 - Height: 32px (sm), 40px (md), 48px (lg)
+
 - Border: 1px solid neutral-300 (default)
+
 - Border radius: 6px
+
 - Padding: 8px 12px (sm), 12px 16px (md), 16px 20px (lg)
+
 - Font size: 14px (sm), 16px (md), 18px (lg)
 
 ## Layout Components
@@ -186,14 +210,20 @@ interface ContainerProps {
 <Container size="full" centered padding="none">
   <HeroSection />
 </Container>
+
+
 ```
 
 **Size Specifications:**
 
 - sm: 640px max-width
+
 - md: 768px max-width
+
 - lg: 1024px max-width
+
 - xl: 1280px max-width
+
 - full: 100% width
 
 ### Grid & GridItem
@@ -224,12 +254,16 @@ interface GridItemProps {
     <Sidebar />
   </GridItem>
 </Grid>
+
+
 ```
 
 **Responsive Breakpoints:**
 
 - Mobile: 1 column (span resets to 12)
+
 - Tablet: 8 columns max
+
 - Desktop: 12 columns max
 
 ## Form Components
@@ -261,6 +295,8 @@ interface FormFieldProps {
     placeholder="e.g., Summer Sale 2025"
   />
 </FormField>
+
+
 ```
 
 ### Select
@@ -300,6 +336,8 @@ interface SelectProps {
   placeholder="Select campaign status"
   onChange={(value) => setStatus(value as string)}
 />
+
+
 ```
 
 ### Checkbox & Radio
@@ -335,6 +373,8 @@ interface RadioGroupProps {
   <Radio value="professional" label="Professional Plan" />
   <Radio value="enterprise" label="Enterprise Plan" />
 </RadioGroup>
+
+
 ```
 
 ## Data Display Components
@@ -405,6 +445,8 @@ interface TableProps<T> {
   onSelect={handleSelection}
   onRowClick={handleRowClick}
 />
+
+
 ```
 
 ### Card
@@ -454,10 +496,15 @@ interface CardProps {
   </CardFooter>
 </Card>
 
+
 ## Feedback Components
 
+
 ### Alert
+
 {% raw %}
+
+
 ```jsx
 import { Alert } from '@/components/feedback/Alert';
 
@@ -491,6 +538,8 @@ interface AlertProps {
   variant="success"
   message="Campaign sent successfully! Check your analytics for performance details."
 />
+
+
 ```
 
 {% endraw %}
@@ -534,6 +583,8 @@ const handleSave = async () => {
     });
   }
 };
+
+
 ```
 
 ### Modal
@@ -582,9 +633,13 @@ interface ModalProps {
   </div>
 </Modal>
 
+
 ## Navigation Components
 
+
 ### Breadcrumb
+
+
 ```typescript
 import { Breadcrumb } from '@/components/navigation/Breadcrumb';
 
@@ -612,7 +667,10 @@ interface BreadcrumbProps {
   maxItems={5}
 />
 
+
 ### Tabs
+
+
 ```typescript
 import { Tabs } from '@/components/navigation/Tabs';
 
@@ -667,9 +725,13 @@ interface TabsProps {
   onChange={setActiveTab}
 />
 
+
 ## Utility Components
 
+
 ### Loading
+
+
 ```typescript
 import { Loading, Skeleton } from '@/components/utilities/Loading';
 
@@ -696,8 +758,12 @@ interface SkeletonProps {
 <Skeleton variant="text" width="60%" />
 <Skeleton variant="circular" width={40} height={40} />
 
+
 ### EmptyState
+
 {% raw %}
+
+
 ```jsx
 import { EmptyState } from '@/components/utilities/EmptyState';
 
@@ -734,6 +800,8 @@ interface EmptyStateProps {
     onClick: () => openTutorial('creating-campaigns')
   }}
 />
+
+
 ```
 
 {% endraw %}
@@ -757,6 +825,8 @@ interface BadgeProps {
 <Badge variant="warning" size="sm">Pending</Badge>
 <Badge variant="error" dot /> {/* Status dot only */}
 <Badge variant="info" icon={InfoIcon}>New Feature</Badge>
+
+
 ```
 
 ## Component Status and Roadmap
@@ -778,16 +848,23 @@ interface BadgeProps {
 ### Upcoming Components
 
 - **DatePicker**: Advanced date selection with calendar
+
 - **TimePicker**: Time selection with timezone support
+
 - **ColorPicker**: Color selection for email templates
+
 - **FileUpload**: Drag-and-drop file upload with progress
+
 - **Stepper**: Multi-step process indicator
+
 - **Accordion**: Collapsible content sections
 
 ### Component Deprecations
 
 - **LegacyButton**: Deprecated in favor of new Button component
+
 - **OldModal**: Deprecated, migrate to new Modal component by Dec 2025
+
 - **BasicTable**: Deprecated, use enhanced Table component
 
 ## Implementation Guidelines
@@ -801,6 +878,8 @@ import { Button, Input, Modal } from '@/components';
 // Alternative: Import with alias for complex components
 import { Table as DataTable } from '@/components/data-display/Table';
 import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
+
+
 ```
 
 ### Component Composition
@@ -833,13 +912,18 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
     ...
   </Card>
 </div>
+
+
 ```
 
 ### Styling Guidelines
 
 - Use design tokens for all spacing, colors, and typography
+
 - Avoid inline styles except for dynamic values
+
 - Use CSS custom properties for themeable values
+
 - Follow BEM naming convention for custom styles
 
 ---
@@ -847,8 +931,11 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 ## Related Documents
 
 - [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
+
 - [Design System](/docs/design/design-system) - Complete design system overview
+
 - [Design Tokens](/docs/design/design-tokens) - Design token specifications
+
 - [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
 
 **Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications

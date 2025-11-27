@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Task Clarity Essentials
 
 ## Quick Start Guide for Freelancers
@@ -19,9 +20,13 @@ This guide provides everything you need to understand task requirements, deliver
 A task is **Done** when:
 
 - All acceptance criteria are met
+
 - Work is reviewed, tested, and approved by the lead
+
 - Jira status is updated with all links or screenshots
+
 - No blockers or pending dependencies remain
+
 - Work is verified on staging
 
 ### Development Tasks
@@ -29,9 +34,13 @@ A task is **Done** when:
 For development work, **Done** means:
 
 - Code is committed, reviewed, and merged into the right branch
+
 - Follows linting and naming standards
+
 - Tested manually or with unit tests
+
 - Documentation or .env.sample updated if needed
+
 - Successfully deployed to staging
 
 ### Bug Fixes
@@ -39,7 +48,9 @@ For development work, **Done** means:
 For bug fixes, **Done** means:
 
 - The issue is replicated and the root cause found
+
 - Fix verified in staging with before/after proof
+
 - Related areas regression-tested
 
 ### Research Spikes
@@ -47,7 +58,9 @@ For bug fixes, **Done** means:
 For research tasks, **Done** means:
 
 - Research completed and documented (Google Doc link in Jira)
+
 - Includes clear findings or recommendations
+
 - Reviewed by Anthony or team lead before closing
 
 ## Story Points Guide
@@ -68,7 +81,9 @@ Story points measure relative effort including complexity, uncertainty, and depe
 ### Estimation Process
 
 - Always provide effort estimates (in story points) and delivery timeframes before accepting any task
+
 - Clients evaluate and approve/reject effort point estimates as part of the task assignment framework
+
 - Use relative estimation, comparing new tasks to known examples
 
 ## SOP Workflow
@@ -76,16 +91,23 @@ Story points measure relative effort including complexity, uncertainty, and depe
 ### Task Status Progression
 
 1. **Backlog** – Idea or future task
+
 2. **Selected for Development** – Approved for the current sprint
+
 3. **In Progress** – Developer actively working on it
+
 4. **Ready for Testing** – Implementation complete and pending validation
+
 5. **Blocked** – Stuck due to dependencies or missing inputs
+
 6. **Done** – Fully reviewed and accepted
 
 ### Delivery Enforcement
 
 - **2x Time Rule**: If task delivery exceeds **twice the originally estimated calendar time**, client may unilaterally terminate task without payment
+
 - **Early Communication**: Must respond in writing to any client inquiries about task status after original delivery time has passed
+
 - **Obstacle Reporting**: Must inform clients in writing of any obstacles or problems faced during task execution
 
 ## Tools Overview
@@ -102,10 +124,15 @@ Story points measure relative effort including complexity, uncertainty, and depe
 ### Communication Standards
 
 - All work-related discussions happen in Discord using defined channels
+
 - Avoid direct messages for project-related issues, keep discussions transparent
+
 - Tag teammates directly when a response is required
+
 - Maintain professionalism and clarity at all times
+
 - **Sync meetings**: Once per sprint (Planning + Demo)
+
 - **Async updates**: Daily in the sprint channel
 
 ## Quick Start Checklist
@@ -113,25 +140,37 @@ Story points measure relative effort including complexity, uncertainty, and depe
 ### Before Starting Your First Task
 
 - [ ] Review and understand all DoD requirements
+
 - [ ] Confirm access to Jira, Discord, GitHub, and Google Workspace
+
 - [ ] Provide effort estimate in story points and delivery timeframe
+
 - [ ] Understand 2x time rule and communication requirements
+
 - [ ] Set up proper development environment and staging access
 
 ### Daily Workflow
 
 - [ ] Update Jira status and progress daily
+
 - [ ] Report blockers early through Discord or Jira
+
 - [ ] Maintain regular communication in sprint channels
+
 - [ ] Follow Definition of Done for all contributions
+
 - [ ] Keep PRs small and link to relevant Jira tasks
 
 ### Before Task Completion
 
 - [ ] Verify all acceptance criteria are met
+
 - [ ] Ensure work is tested and reviewed
+
 - [ ] Update Jira with all links or screenshots
+
 - [ ] Confirm no blockers or dependencies remain
+
 - [ ] Verify deployment to staging if applicable
 
 ## Contextual Related Resources
@@ -141,25 +180,33 @@ Story points measure relative effort including complexity, uncertainty, and depe
 **If you're reading Definition of Done:**
 
 - [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Detailed performance monitoring
+
 - [Operations Framework](/docs/operations/freelancer-management/framework#acceptance-procedures) - Review and approval processes
+
 - [Quick Setup Overview](/docs/quick-setup) - Role-based navigation for different user types
 
 **If you're reading Story Points:**
 
 - [Quotation Guide](/docs/freelancer-support/quotation-guide#task-based-payment-model) - How story points relate to payment
+
 - [Operations Framework](/docs/operations/freelancer-management/framework#estimation-standards) - Estimation best practices
+
 - [Freelancer Success Center](/docs/freelancer-support/README#service-package-development) - Business value of accurate estimates
 
 **If you're reading SOP Workflow:**
 
 - [Operations Framework](/docs/operations/freelancer-management/framework#team-structure) - Team roles and responsibilities
+
 - [Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols) - Professional protocols
+
 - [Freelancer Support Hub](/docs/freelancer-support/README#professional-excellence-standards) - Quality and delivery standards
 
 **If you're reading Tools Overview:**
 
 - [Implementation Technical](/docs/implementation-technical/README) - Platform technical resources
+
 - [Development Environment Setup](/docs/operations/freelancer-management/framework#development-environment) - Technical requirements
+
 - [Google Workspace Configuration](/docs/freelancer-support/implementation-resources#google-workspace-setup) - Tool-specific guidance
 
 ### **Essential Reading by Experience Level**
@@ -167,19 +214,25 @@ Story points measure relative effort including complexity, uncertainty, and depe
 **New to Freelancing:**
 
 - [Freelancer Success Center](/docs/freelancer-support/README) - Complete business development guide
+
 - [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional proposal preparation
+
 - [Operations Framework](/docs/operations/freelancer-management/framework) - Professional workflow procedures
 
 **Experienced Freelancers:**
 
 - [Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols) - Our specific approach
+
 - [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Performance expectations
+
 - [Team Structure](/docs/operations/freelancer-management/framework#team-structure) - Coordination protocols
 
 **Industry Specialists:**
 
 - [Business Development Resources](/docs/freelancer-support/README#industry-specialization) - Specialization opportunities
+
 - [Premium Service Development](/docs/freelancer-support/README#scaling-success) - Advanced offerings
+
 - [Technical Standards](/docs/operations/freelancer-management/framework#code-infrastructure-standards) - Development practices
 
 ### **Progressive Reading Path**
@@ -207,13 +260,17 @@ Story points measure relative effort including complexity, uncertainty, and depe
 ### **Compliance and Standards**
 
 - [Quality Standards](/docs/operations/freelancer-management/framework#quality-control-procedures) - Performance monitoring
+
 - [Confidentiality Requirements](/docs/compliance-security/) - Data protection guidelines
+
 - [Technical Standards](/docs/operations/freelancer-management/framework#code-infrastructure-standards) - Development practices
 
 ### **Learning Enhancement Resources**
 
 - [Success Center: Business Development](/docs/freelancer-support/README#business-development-resources) - Build your practice
+
 - [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and templates
+
 - [Success Metrics](/docs/freelancer-support/success-metrics) - Performance tracking and KPIs
 
 ---

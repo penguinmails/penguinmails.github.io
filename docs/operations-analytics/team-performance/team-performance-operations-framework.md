@@ -6,6 +6,7 @@ level: "2"
 persona: "Documentation Users"
 ---
 
+
 # Team Performance & Operations Framework
 
 **Strategic Alignment**: This team performance framework supports our enterprise operational strategy by providing comprehensive agile development, quality assurance, and staff operations that drive strategic business outcomes and competitive market positioning.
@@ -18,164 +19,325 @@ persona: "Documentation Users"
 
 ---
 
+
 ## Sprint Retrospective & Team Improvement
+
 
 ### **Purpose**
 
 This framework provides a structured approach for conducting effective sprint retrospectives, continuously improving team processes, celebrating successes, and identifying actionable improvements for future sprints.
 
+
 ### **Retrospective Overview**
+
 
 #### **When**: End of each sprint (Friday afternoon)
 
+
 #### **Duration**: 60 minutes
+
 
 #### **Attendees**: Development team, Product Owner, occasional stakeholders
 
+
 #### **Facilitator**: Rotates weekly among team members
+
 
 #### **Format**: Structured discussion with time-boxed sections
 
+
 ### **Preparation (Pre-Retrospective)**
+
 
 #### **Data Collection**
 
+
 - **Sprint Metrics**: Velocity, burndown chart, completion rate
+
+
 - **Quality Metrics**: Bug count, test coverage, deployment frequency
+
+
 - **Team Feedback**: Anonymous input collected via shared document
+
+
 - **Stakeholder Feedback**: Product Owner input on deliverables
+
 
 #### **Pre-Work Assignments**
 
+
 - **Team Members**: Review completed work and personal experiences
+
+
 - **Product Owner**: Prepare feedback on sprint outcomes
+
+
 - **Facilitator**: Review sprint data and prepare agenda
+
 
 ### **Retrospective Structure**
 
+
 #### **Opening (5 minutes)**
 
+
 - **Welcome**: Facilitator welcomes team and reviews agenda
+
+
 - **Ground Rules**: Quick reminder of respectful communication
+
+
 - **Sprint Summary**: Product Owner provides high-level sprint overview
+
+
 - **Success Acknowledgment**: Recognize team achievements
+
 
 #### **Data Review (10 minutes)**
 
+
 - **Sprint Metrics**: Velocity, story points completed, burndown trends
+
+
 - **Quality Metrics**: Bug rates, test coverage, technical debt
+
+
 - **Process Metrics**: Meeting attendance, blocker resolution time
+
+
 - **Discussion**: Initial reactions to quantitative data
+
 
 #### **What Went Well (15 minutes)**
 
+
 - **Individual Reflections**: Each person shares 1-2 positive experiences
+
+
 - **Category Grouping**: Facilitator groups similar themes
+
+
 - **Discussion**: Explore why things went well and how to sustain successes
+
+
 - **Action Items**: Identify ways to build on positive momentum
+
 
 #### **What Could Be Improved (15 minutes)**
 
+
 - **Individual Reflections**: Each person shares 1-2 improvement opportunities
+
+
 - **Category Grouping**: Group into themes (process, communication, technical)
+
+
 - **Root Cause Analysis**: Dig deeper into underlying causes
+
+
 - **Prioritization**: Identify most impactful improvement areas
+
 
 #### **Action Planning (10 minutes)**
 
+
 - **Action Item Creation**: Convert improvements into specific, actionable items
+
+
 - **Owner Assignment**: Assign responsible team members for each action
+
+
 - **Timeline Setting**: Define when actions should be implemented
+
+
 - **Success Metrics**: Define how success will be measured
+
 
 #### **Closing (5 minutes)**
 
+
 - **Commitment Review**: Team confirms commitment to action items
+
+
 - **Next Sprint Preview**: Product Owner shares upcoming priorities
+
+
 - **Appreciation**: Round of appreciation for team contributions
+
+
 - **Meeting Adjournment**: Confirm next retrospective date
+
 
 ### **Retrospective Techniques**
 
+
 #### **Keep, Stop, Start**
 
+
 - **Keep**: What should we continue doing?
+
+
 - **Stop**: What should we stop doing?
+
+
 - **Start**: What should we start doing?
+
 
 #### **Sailboat Retrospective**
 
+
 - **Wind in Sails**: What helped us move forward?
+
+
 - **Anchors**: What held us back?
+
+
 - **Rocks**: What dangers should we avoid?
+
+
 - **Islands**: What opportunities lie ahead?
+
 
 #### **Starfish Retrospective**
 
+
 - **Keep Doing**: What worked well and should continue?
+
+
 - **Stop Doing**: What should we eliminate?
+
+
 - **Start Doing**: What new practices should we adopt?
+
+
 - **Do More**: What should we increase?
+
+
 - **Do Less**: What should we decrease?
 
 ---
 
+
 ## QA Testing & Quality Assurance
+
 
 ### **Testing Framework**
 
+
 #### **Testing Types**
 
+
 - **Unit Testing**: Individual component and function validation
+
+
 - **Integration Testing**: Component interaction and API endpoint testing
+
+
 - **End-to-End Testing**: Complete user journey validation
+
+
 - **Performance Testing**: System load and scalability assessment
+
+
 - **Security Testing**: Vulnerability assessment and penetration testing
+
+
 - **Accessibility Testing**: WCAG compliance and inclusive design validation
+
+
 - **Cross-browser Testing**: Compatibility across different browsers and devices
+
 
 #### **Testing Tools**
 
+
 - **Jest**: Unit testing framework
+
+
 - **Cypress**: End-to-end testing
+
+
 - **Playwright**: Cross-browser automation
+
+
 - **Lighthouse**: Performance and accessibility auditing
+
+
 - **OWASP ZAP**: Security vulnerability scanning
+
+
 - **Postman**: API testing and documentation
+
 
 ### **Testing Lifecycle**
 
+
 #### **Pre-Development Testing**
 
+
 - **Requirement Review**: Validate acceptance criteria clarity
+
+
 - **Test Case Design**: Create comprehensive test scenarios
+
+
 - **Test Data Preparation**: Set up realistic test environments
+
+
 - **Automation Planning**: Identify automation opportunities
+
 
 #### **Development Phase Testing**
 
+
 - **Continuous Integration**: Automated testing on every commit
+
+
 - **Code Review**: Peer testing during pull request reviews
+
+
 - **Unit Test Coverage**: Maintain 80%+ code coverage minimum
+
+
 - **Static Analysis**: Automated code quality checks
+
 
 #### **Pre-Release Testing**
 
+
 - **Regression Testing**: Ensure existing functionality remains intact
+
+
 - **Integration Testing**: Validate component interactions
+
+
 - **User Acceptance Testing**: Stakeholder validation of features
+
+
 - **Performance Testing**: Load testing under expected conditions
+
 
 #### **Post-Release Testing**
 
+
 - **Production Monitoring**: Real-time error tracking and alerting
+
+
 - **Beta Testing**: Limited user group validation
+
+
 - **A/B Testing**: Feature comparison and optimization
+
+
 - **Customer Feedback**: User experience validation
+
 
 ### **Test Case Management**
 
+
 #### **Test Case Structure**
+
 
 ```markdown
 **Test Case ID**: QA-001
@@ -184,34 +346,65 @@ This framework provides a structured approach for conducting effective sprint re
 **Type**: Functional
 **Preconditions**: Clean database, valid email service
 **Steps**:
+
+
 1. Navigate to signup page
+
+
 2. Enter valid user details
+
+
 3. Submit registration form
+
+
 4. Check email verification
 **Expected Result**: User account created, verification email sent
 **Actual Result**: [Pass/Fail with details]
 **Environment**: [Browser, OS, Device]
 **Test Data**: [Sample user details]
+
+
 ```
+
 
 #### **Test Case Categories**
 
+
 - **Smoke Tests**: Critical path validation (15-20 tests)
+
+
 - **Regression Tests**: Existing functionality protection (200+ tests)
+
+
 - **Feature Tests**: New functionality validation (per feature)
+
+
 - **Edge Case Tests**: Error condition and boundary testing
+
+
 - **Performance Tests**: Load and stress testing scenarios
+
 
 ### **Automated Testing**
 
+
 #### **CI/CD Integration**
 
+
 - **GitHub Actions**: Automated test execution on pull requests
+
+
 - **Parallel Execution**: Multiple test environments running simultaneously
+
+
 - **Test Reporting**: Detailed results with screenshots and logs
+
+
 - **Failure Notifications**: Slack alerts for test failures
 
+
 #### **Test Automation Strategy**
+
 
 ```typescript
 // Example automated test structure
@@ -239,65 +432,126 @@ describe('User Authentication', () => {
     await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
   });
 });
+
+
 ```
+
 
 ### **Performance Testing**
 
+
 #### **Load Testing Scenarios**
 
+
 - **Normal Load**: 100 concurrent users
+
+
 - **Peak Load**: 500 concurrent users
+
+
 - **Stress Testing**: System limits and failure points
+
+
 - **Spike Testing**: Sudden traffic increases
+
 
 #### **Performance Metrics**
 
+
 - **Response Time**: <2 seconds for API calls
+
+
 - **Throughput**: 1000+ requests per minute
+
+
 - **Error Rate**: <1% under normal load
+
+
 - **Memory Usage**: <80% of allocated resources
+
 
 ### **Security Testing**
 
+
 #### **Vulnerability Assessment**
 
+
 - **Automated Scanning**: Weekly OWASP ZAP scans
+
+
 - **Manual Penetration Testing**: Quarterly ethical hacking
+
+
 - **Dependency Checking**: Automated vulnerability detection
+
+
 - **Code Review**: Security-focused peer reviews
+
 
 #### **Security Test Cases**
 
+
 - **Authentication Bypass**: Attempt unauthorized access
+
+
 - **SQL Injection**: Test input sanitization
+
+
 - **XSS Prevention**: Script injection attempts
+
+
 - **CSRF Protection**: Cross-site request forgery tests
+
+
 - **Data Encryption**: Verify data protection in transit and at rest
+
 
 ### **Quality Metrics**
 
+
 #### **Testing Metrics**
 
+
 - **Test Coverage**: 80%+ code coverage target
+
+
 - **Defect Density**: <0.5 bugs per 100 lines of code
+
+
 - **Test Execution Time**: <30 minutes for regression suite
+
+
 - **Automation Rate**: 70% of tests automated
+
 
 #### **Quality Gates**
 
+
 - **Code Review**: Required for all changes
+
+
 - **Unit Tests**: Must pass before merge
+
+
 - **Integration Tests**: Required for feature branches
+
+
 - **Security Scan**: Clean security report required
+
+
 - **Performance Baseline**: Meet or exceed performance targets
 
 ---
 
+
 ## Staff Operations & Management
+
 
 ### **System Architecture**
 
+
 #### **Current Design Implementation**
+
 
 ```markdown
 ┌─────────────────────────────────────────────────────────────┐
@@ -311,11 +565,16 @@ describe('User Authentication', () => {
 │  • Staff Member Management                    • Ticket     │
 │                                               • System     │
 └─────────────────────────────────────────────────────────────┘
+
+
 ```
+
 
 ### **Staff Management System**
 
+
 #### **Database Design**
+
 
 ```sql
 -- Staff roles with 4-tier hierarchy
@@ -350,37 +609,79 @@ CREATE TABLE staff_role_permissions (
     permission_id INTEGER REFERENCES permissions(id),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
+
+
 ```
+
 
 ### **Staff Hierarchy Design**
 
+
 #### **4-Tier Staff System**
 
+
 1. **super_admin**
+
+
    - Full system administration and tenant management
+
+
    - Can access all data across all tenants
+
+
    - User management and system configuration
+
+
    - Staff role assignment and permission management
 
+
 2. **admin**
+
+
    - High-level operational oversight
+
+
    - Billing and subscription management
+
+
    - Tenant-level administration
+
+
    - Cannot modify staff roles or system-wide settings
 
+
 3. **support**
+
+
    - Customer support and tenant assistance
+
+
    - Read access to customer data for troubleshooting
+
+
    - Cannot make billing changes or system modifications
+
+
    - Access to help center and support tools
 
+
 4. **qa**
+
+
    - Quality assurance and testing operations
+
+
    - Read-only access to test environments
+
+
    - Campaign testing and validation
+
+
    - No customer data access in production
 
+
 ### **Role Assignment Process**
+
 
 ```typescript
 // Add staff member to system
@@ -423,11 +724,16 @@ async function checkStaffPermission(userId: string, permissionName: string) {
     permission => permission.permissions.name === permissionName
   ) || false;
 }
+
+
 ```
+
 
 ### **Help System Integration**
 
+
 #### **Dashboard Help Integration**
+
 
 ```tsx
 const helpLinks = [
@@ -476,9 +782,13 @@ const helpLinks = [
     ))}
   </DropdownMenuContent>
 </DropdownMenu>
+
+
 ```
 
+
 #### **Landing Page Support Button**
+
 
 ```tsx
 // Floating support button on landing page
@@ -514,9 +824,13 @@ const SupportButton = () => {
     </div>
   );
 };
+
+
 ```
 
+
 ### **Email-Based Support Workflow**
+
 
 #### **Support Process Design**
 
@@ -524,13 +838,24 @@ const SupportButton = () => {
 
 **Process Flow Design:**
 
+
 1. **Customer Contact** via landing page button or help center
+
+
 2. **Manual Triage** by support team
+
+
 3. **Email Assignment** based on category/expertise
+
+
 4. **Response & Resolution** via email
+
+
 5. **Follow-up** as needed
 
+
 #### **Email Template System**
+
 
 ```typescript
 // Support email templates
@@ -583,127 +908,237 @@ const supportTemplates = {
     `
   }
 };
+
+
 ```
 
 ---
 
+
 ## Team Performance Metrics
+
 
 ### **Retrospective Metrics**
 
+
 #### **Effectiveness Measures**
 
+
 - **Action Completion Rate**: Percentage of action items completed
+
+
 - **Sprint Velocity Trend**: Improvement in delivery capacity
+
+
 - **Team Satisfaction**: Regular pulse surveys on team morale
+
+
 - **Process Adherence**: How well team follows improved processes
+
 
 #### **Continuous Improvement Tracking**
 
+
 - **Trend Analysis**: Identify patterns across multiple retrospectives
+
+
 - **Theme Recurrence**: Track frequently mentioned improvement areas
+
+
 - **Impact Assessment**: Evaluate the effect of implemented changes
+
+
 - **Learning Culture**: Team's openness to feedback and change
+
 
 ### **QA Quality Metrics**
 
+
 #### **Quality Gates**
 
+
 - **Code Review**: Required for all changes
+
+
 - **Unit Tests**: Must pass before merge
+
+
 - **Integration Tests**: Required for feature branches
+
+
 - **Security Scan**: Clean security report required
+
+
 - **Performance Baseline**: Meet or exceed performance targets
+
 
 #### **Performance Metrics**
 
+
 - **Response Time**: <2 seconds for API calls
+
+
 - **Throughput**: 1000+ requests per minute
+
+
 - **Error Rate**: <1% under normal load
+
+
 - **Memory Usage**: <80% of allocated resources
+
 
 ### **Staff Operations Metrics**
 
+
 #### **Support Performance**
 
+
 - **Response Time**: <24 hours for initial response
+
+
 - **Resolution Time**: <4 hours for critical issues
+
+
 - **Customer Satisfaction**: >4.5/5 rating
+
+
 - **First Contact Resolution**: >70% of issues resolved in first interaction
+
 
 #### **Team Performance**
 
+
 - **Sprint Velocity**: Consistent story point completion
+
+
 - **Code Coverage**: >80% unit test coverage
+
+
 - **Deployment Frequency**: Daily releases
+
+
 - **Mean Time to Recovery**: <2 hours for production issues
 
 ---
 
+
 ## Cross-Reference Integration
+
 
 ### **Operations & Analytics**
 
+
 - [Operations Analytics Overview](..)) - Main operations framework
+
+
 - [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
+
+
 - [Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - Comprehensive KPI framework
+
 
 ### **Business Strategy**
 
+
 - [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
+
+
 - [Business Model](/docs/business/model/overview)) - Revenue model and unit economics
+
+
 - [Value Proposition](/docs/business/value-proposition/overview)) - Competitive differentiation
+
 
 ### **Technical Architecture**
 
+
 - [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+
+
 - [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+
+
 - [Development Guidelines](/docs/technical/development)) - Code standards and practices
+
 
 ### **User Experience**
 
+
 - [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+
+
 - [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+
+
 - [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
+
 
 ### **Compliance & Security**
 
+
 - [Compliance Overview](/docs/compliance-security - Regulatory compliance
+
+
 - [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
+
+
 - [QA Security Testing](/docs/compliance-security/enterprise) - Security testing protocols
 
 ---
 
+
 ## Common Challenges & Solutions
+
 
 ### **Challenge: Uneven Participation**
 
+
 - **Solution**: Use round-robin format and anonymous input options
+
+
 - **Prevention**: Rotate facilitation and encourage quieter team members
+
 
 ### **Challenge: Action Item Overload**
 
+
 - **Solution**: Limit to 3-5 high-impact action items per retrospective
+
+
 - **Prevention**: Focus on quality over quantity of improvements
+
 
 ### **Challenge: Lack of Follow-through**
 
+
 - **Solution**: Assign clear owners and timelines with accountability
+
+
 - **Prevention**: Review action items regularly and celebrate completion
+
 
 ### **Challenge: Negative Focus**
 
+
 - **Solution**: Balance with positive aspects and focus on solutions
+
+
 - **Prevention**: Start with successes and frame improvements positively
 
 ---
+
 
 ## Next Steps
 
 Navigate to specific team performance areas:
 
+
 - **[QA Testing Protocols](.))** → Quality assurance procedures
+
+
 - **[Sprint Retrospectives](.))** → Agile development practices
+
+
 - **[Organization Analytics](/do/operations-analytics/operations-management/README.md** → Team and organization management
 
 ---

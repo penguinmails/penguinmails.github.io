@@ -6,9 +6,11 @@
 
 ---
 
+
 ## 1. Database Schema (Drizzle ORM)
 
 Define the following tables using Drizzle ORM schema definitions.
+
 
 ```typescript
 // db/schema/leads.ts
@@ -33,15 +35,20 @@ export const leads = pgTable('leads', {
 export const leadsRelations = relations(leads, ({ many }) => ({
   // Future: campaign_leads, lead_activities, etc.
 }));
+
+
 ```
 
 ---
 
+
 ## 2. API Implementation (Next.js App Router)
+
 
 ### GET /api/v1/contacts
 
 *List contacts with pagination and search.*
+
 
 ```typescript
 // app/api/v1/leads/route.ts
@@ -100,11 +107,15 @@ export async function GET(req: Request) {
     }
   });
 }
+
+
 ```
+
 
 ### POST /api/v1/contacts
 
 *Create a single contact.*
+
 
 ```typescript
 // app/api/v1/leads/route.ts
@@ -140,41 +151,80 @@ export async function POST(req: Request) {
     return new NextResponse('Invalid request', { status: 400 });
   }
 }
+
+
 ```
 
 ---
 
+
 ## 3. Frontend Components
+
 
 ### Contact List Table
 
 *Located at `components/contacts/contact-table.tsx`*
 
+
 - Use `@tanstack/react-table` for functionality.
+
+
 - Columns:
+
+
   - **Name**: Combine `firstName` + `lastName`
+
+
   - **Email**: Link to detail view
+
+
   - **Status**: Badge (Green for active, Red for bounced)
+
+
   - **Score**: Numeric value
+
+
   - **Added**: Date format
+
+
   - **Actions**: Edit / Delete dropdown
+
 
 ### Add Contact Modal
 
 *Located at `components/contacts/add-contact-modal.tsx`*
 
+
 - Form fields:
+
+
   - Email (Required)
+
+
   - First Name
+
+
   - Last Name
+
+
   - Custom Attributes (Key/Value pair input)
 
 ---
 
+
 ## 4. Next Steps
 
+
 1. **Database Schema**: Use the existing OLTP database schema (leads table is NileDB-managed)
+
+
 2. **Scaffold API**: Create the Drizzle ORM route handlers
+
+
 3. **Build UI**: Implement the leads list view and forms
+
+
 4. **Test**: Verify tenant isolation (User A cannot see User B's leads)
+
+
 5. **Generate Migrations**: Apply Drizzle migrations if needed for additional fields
