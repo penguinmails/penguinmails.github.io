@@ -65,27 +65,16 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 
 - **Focus indicators**: 3:1 contrast ratio against adjacent colors
 
-```css
-
 /* Color contrast compliance */
-
 --text-primary: hsl(222, 84%, 5%);    /* On white background: 20.6:1 */
-
 --text-secondary: hsl(215, 16%, 47%); /* On white background: 6.8:1 */
-
 --text-muted: hsl(215, 16%, 47%);     /* On gray background: 4.6:1 */
 
 /* Focus indicators */
-
 .focus-visible {
-
   outline: 2px solid hsl(199, 89%, 48%);
-
   outline-offset: 2px;
-
 }
-
-```
 
 ### Audio and Video
 
