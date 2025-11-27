@@ -116,9 +116,7 @@ last_modified_date: "YYYY-MM-DD"
 Only these files may have sidebar navigation fields:
 
 - `docs/business/strategy/overview.md`
-
 - `docs/technical/architecture/overview.md`
-
 - `docs/compliance-security/overview.md`
 - `docs/core-features/README.md`
 - `docs/implementation-technical/README.md`
