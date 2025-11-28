@@ -17,7 +17,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: SaaS Developer Teams, Cloud Architects, SaaS Platform Leaders
 **Business Impact Priority**: High - Multi-tenant developer platform and SaaS compliance responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [SaaS Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [SaaS Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [SaaS Analytics Framework](/docs/business/analytics/framework
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [SaaS Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [SaaS Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [SaaS Analytics Framework](/docs/business/analytics/framework)
 
 ## Executive Summary
 

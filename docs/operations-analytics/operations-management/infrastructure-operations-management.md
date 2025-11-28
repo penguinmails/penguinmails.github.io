@@ -654,11 +654,11 @@ External Support:
 
 - **[Database Infrastructure Management](/docs/database-infrastructure)** - Database procedures and infrastructure
 
-- **[Connection Pooling Strategy](/database-infrastructure/README.md** - Pool configuration and optimization
+- **[Connection Pooling Strategy](/docs/implementation-technical/database-infrastructure/architecture/connection-pooling-strategy)** - Pool configuration and optimization
 
-- **[Backup & Recovery Procedures](/database-infrastructure/README.md** - Data protection and restoration
+- **[Backup & Recovery Procedures](/docs/implementation-technical/database-infrastructure/operations/backup-recovery-procedures)** - Data protection and restoration
 
-- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Testing procedures and validation
+- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance)** - Performance monitoring procedures
 
 ### **Technical References**
 
@@ -672,7 +672,7 @@ External Support:
 
 - **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic business alignment
 
-- **[Operations Analytics Overview](..))** - Main operations analytics framework
+- **[Operations Analytics Overview](/docs/operations-analytics)** - Main operations analytics framework
 
 - **[Analytics Performance](/docs/operations-analytics/analytics-performance)** - Performance monitoring and analytics
 

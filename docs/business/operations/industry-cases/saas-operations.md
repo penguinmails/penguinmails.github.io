@@ -489,7 +489,7 @@ SaaS organizations present unique operational challenges requiring specialized a
 
 - [SaaS Product Framework](/docs/business/product/industry-cases)
 
-- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-customer-success-integration-map
+- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-customer-success-integration-map)
 
 ---
 

@@ -553,19 +553,19 @@ Level 3: Enterprise Implementation
 
 ### **Operational References**
 
-- **[Infrastructure Operations Management](/do/operations-analytics/operations-management/README.md** - Central operational hub
+- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management/README)** - Central operational hub
 
-- **[Backup & Recovery Procedures](.))** - Data protection during incidents
+- **[Backup & Recovery Procedures](/docs/implementation-technical/database-infrastructure/operations/backup-recovery-procedures)** - Data protection during incidents
 
-- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance))** - Performance monitoring procedures
+- **[Quality Assurance Testing Protocols](/docs/business/quality-assurance)** - Performance monitoring procedures
 
 ### **Technical References**
 
-- **[OLTP Schema Guide](.))** - OLTP pool integration
+- **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)** - OLTP pool integration
 
-- **[Content Database Schema Guide](.))** - Content pool optimization
+- **[Content Database Schema Guide](/docs/implementation-technical/database-infrastructure/content-database)** - Content pool optimization
 
-- **[Queue System Implementation Guide](.))** - Queue pool management
+- **[Queue System Implementation Guide](/docs/implementation-technical/database-infrastructure)** - Queue pool management
 
 ### **Strategic Documentation**
 

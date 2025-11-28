@@ -165,7 +165,7 @@ Implement comprehensive health monitoring across multiple dimensions:
 
 - [Customer Success Analytics](/docs/business/analytics/overview)
 
-- [Customer Retention Strategies](/docs/business/customer-success/retention/summary
+- [Customer Retention Strategies](/docs/business/customer-success/retention/summary)
 
 ---
 

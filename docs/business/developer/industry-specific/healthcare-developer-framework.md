@@ -17,7 +17,7 @@ persona: "Documentation Users"
 **Level**: Level 3 - Industry-Specific Implementation
 **Target Audience**: Healthcare Developer Teams, Compliance Officers, Healthcare IT Leadership
 **Business Impact Priority**: Critical - Healthcare compliance and developer platform responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Healthcare Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Healthcare Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Healthcare Analytics Framework](/docs/business/analytics/framework
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Healthcare Strategy Framework](/docs/business/strategy/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Healthcare Operations Framework](/docs/business/operations/strategy/framework) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Healthcare Analytics Framework](/docs/business/analytics/framework)
 
 ## Executive Summary
 

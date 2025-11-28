@@ -489,7 +489,7 @@ Financial services organizations present unique operational challenges requiring
 
 - [Financial Services Product Framework](/docs/business/product/industry-cases)
 
-- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-finance-integration-map
+- [Operations Cross-Domain Integration](/docs/business/operations/cross-domain-integration/operations-finance-integration-map)
 
 ---
 

@@ -938,7 +938,7 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 - **Benefits**: Unified monitoring dashboard, proactive alerting
 
-> 📋 **See [External Analytics Integration Plan](external_analytics_integration_plan))** for detailed implementation strategies, event schemas, and platform migration guidelines.
+> 📋 **See [External Analytics Integration Plan](/docs/implementation-technical/database-infrastructure/oltp-database/external-analytics-logging)** for detailed implementation strategies, event schemas, and platform migration guidelines.
 
 ---
 

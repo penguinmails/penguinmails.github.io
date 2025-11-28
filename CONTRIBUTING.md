@@ -60,7 +60,7 @@ cd penguinmails.github.io
 
 2. **Start development server:**
 
-```
+```bash
 
 # Build Docker image (one-time setup)
 
@@ -83,9 +83,8 @@ cd penguinmails.github.io
 
 ### Common Commands
 
-```
+```bash
 # Rebuild without cache
-
 docker system prune -a && docker build -t penguinmails-docs .
 
 # Run linting checks

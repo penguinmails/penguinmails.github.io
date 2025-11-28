@@ -6,7 +6,6 @@ level: "1"
 persona: "All Stakeholders"
 ---
 
-
 # 🧭 User Journeys Hub
 
 ## Purpose
@@ -39,7 +38,7 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 **Goal**: Get new users from signup to first successful campaign
 
-- **[User Journey Testing](./user-journey-testing.md)** - New user onboarding experience
+- **[User Journey Testing](/docs/user-journeys/user-journey-testing)** - New user onboarding experience
 
 - **[Tenant Onboarding](./tenant-onboarding-flow.md)** - *[To be created]*
 
@@ -51,7 +50,7 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 **Goal**: Enable users to create, launch, and optimize campaigns
 
-- **[Campaign Creation Journey](../../docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns.md)** - End-to-end campaign workflow
+- **[Campaign Creation Journey](/docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
 
 - **[Template Design](./template-design-flow.md)** - *[To be created]*
 
@@ -142,7 +141,6 @@ complexity: LOW | MEDIUM | HIGH
 last_modified_date: "2025-11-24"
 level: "2"
 ---
-
 
 ```
 
@@ -254,19 +252,19 @@ level: "2"
 
 ### Planning
 
-- **[Roadmap](../roadmap/README.md)** - When journeys will be improved
+- **[Roadmap](/docs/roadmap)** - When journeys will be improved
 
-- **[Features](../features/README.md)** - Features that support journeys
+- **[Features](/docs/features)** - Features that support journeys
 
 ### Specifications
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - All views
+- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - All views
 
-- **[Frontend Routes](../design/routes/)** - Detailed view specs
+- **[Frontend Routes](/docs/design/routes/)** - Detailed view specs
 
-- **[API Architecture](../implementation-technical/api/README.md)** - Backend endpoints
+- **[API Architecture](/docs/implementation-technical/api)** - Backend endpoints
 
-- **[Design System](../design/README.md)** - UI components
+- **[Design System](/docs/design)** - UI components
 
 ### Implementation
 
@@ -286,7 +284,6 @@ level: "2"
 
 User Journeys Hub → Core Journeys → Pain Points → Roadmap Priorities
 
-
 ```
 
 ### For Product Managers
@@ -296,7 +293,6 @@ User Journeys Hub → Core Journeys → Pain Points → Roadmap Priorities
 ```text
 
 User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
-
 
 ```
 
@@ -308,7 +304,6 @@ User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
 
 User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Tasks
 
-
 ```
 
 ### For Marketing/Ops
@@ -318,7 +313,6 @@ User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Task
 ```text
 
 User Journeys Hub → Core Journeys → Success Metrics → Analytics
-
 
 ```
 

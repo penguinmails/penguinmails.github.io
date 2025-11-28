@@ -7,7 +7,6 @@ persona: "All Stakeholders"
 status: ACTIVE
 ---
 
-
 # Product Roadmap
 
 ## Overview
@@ -1895,7 +1894,6 @@ We follow a **progressive enhancement** approach:
 ```text
 
 Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → Level 4: Enterprise → Level 5: Future
-
 
 ```
 

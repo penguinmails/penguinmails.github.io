@@ -685,7 +685,7 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 ### **Operations Management**
 
-- [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
+- [Organization Analytics](/docs/operations-analytics/operations-management/README) - Team and organization management
 
 - [Team Performance](/docs/operations-analytics/team-performance)) - Team coordination and development
 
