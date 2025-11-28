@@ -58,7 +58,7 @@ cd penguinmails.github.io
 
 ```
 
-1. **Start development server:**
+2. **Start development server:**
 
 ```bash
 
@@ -78,7 +78,7 @@ cd penguinmails.github.io
 
    **Note:** The `jekyll build` command generates static files in `_site/`. Use `jekyll serve` for development with auto-reload at [http://localhost:4000](http://localhost:4000).
 
-1. **View the documentation:**
+3. **View the documentation:**
    Open [http://localhost:4000](http://localhost:4000)
 
 ### Common Commands
