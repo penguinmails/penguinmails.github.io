@@ -951,7 +951,7 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](.))** → Team and organization management
+- **[Organization Analytics](/docs/operations-analytics/operations-management/organization-analytics-team-management)** → Team and organization management
 
 - **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
 

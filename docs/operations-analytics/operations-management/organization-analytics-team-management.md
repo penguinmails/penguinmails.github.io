@@ -847,17 +847,17 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Technical Architecture**
 
-- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Technical Architecture Overview](/docs/technical/architecture/overview) - System design
 
-- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System management
 
-- [Integration Guide](/docs/technical/architecture/detailed-technical)) - Analytics integrations
+- [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [User Journeys Overview](/docs/user-journeys) - User flow documentation
 
-- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys) - User activation
 
 - [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
 

@@ -790,7 +790,7 @@ const supportTemplates = {
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](..)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
 
 - [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
 
@@ -798,27 +798,27 @@ const supportTemplates = {
 
 ### **Business Strategy**
 
-- [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
+- [Business Strategy Overview](/docs/business/strategy/overview) - Strategic alignment
 
-- [Business Model](/docs/business/model/overview)) - Revenue model and unit economics
+- [Business Model](/docs/business/model/overview) - Revenue model and unit economics
 
-- [Value Proposition](/docs/business/value-proposition/overview)) - Competitive differentiation
+- [Value Proposition](/docs/business/value-proposition/overview) - Competitive differentiation
 
 ### **Technical Architecture**
 
-- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Technical Architecture Overview](/docs/technical/architecture/overview) - System design
 
-- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System management
 
-- [Development Guidelines](/docs/technical/development)) - Code standards and practices
+- [Development Guidelines](/docs/technical/development) - Code standards and practices
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [User Journeys Overview](/docs/user-journeys) - User flow documentation
 
-- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys) - User activation
 
-- [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
+- [User Interaction Patterns](/docs/user-journeys/detailed-journeys) - UX optimization
 
 ### **Compliance & Security**
 
