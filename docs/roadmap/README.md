@@ -78,7 +78,6 @@ Review both product and technical roadmaps to understand the complete developmen
 
 Roadmap Overview → Feature Taxonomy → Implementation Roadmap → Department Roadmaps
 
-
 ```
 
 ---
