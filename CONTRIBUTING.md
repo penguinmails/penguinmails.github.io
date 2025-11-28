@@ -82,6 +82,7 @@ cd penguinmails.github.io
    Open [http://localhost:4000](http://localhost:4000)
 
 ### Common Commands
+
 ```bash
 # Rebuild without cache
 docker system prune -a && docker build -t penguinmails-docs .

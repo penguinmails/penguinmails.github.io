@@ -4,7 +4,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Marketing Customer Journey: Basic Experience Framework
 
 ## Overview

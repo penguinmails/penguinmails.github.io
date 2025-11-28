@@ -6,7 +6,6 @@ level: "1"
 persona: "All Stakeholders"
 ---
 
-
 # 🧭 User Journeys Hub
 
 ## Purpose
