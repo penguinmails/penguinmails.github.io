@@ -458,7 +458,7 @@ async function checkRateLimit(
 
 **Rate Limit Headers:**
 
-```
+```text
 
 X-RateLimit-Limit: 300
 X-RateLimit-Remaining: 287

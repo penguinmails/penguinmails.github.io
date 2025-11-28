@@ -866,7 +866,7 @@ async function runAIOptimizationMigration() {
 
 ### Code Organization
 
-```
+```text
 
 feature/
 ├── src/

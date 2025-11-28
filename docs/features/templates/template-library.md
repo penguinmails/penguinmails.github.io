@@ -60,7 +60,7 @@ The Template Library provides a curated collection of pre-built, responsive emai
 
 #### Library Home
 
-```
+```text
 
 Templates → Library
 
@@ -87,7 +87,7 @@ Sort by: [Most Popular ▼] [Newest] [Highest Rated]
 
 #### Template Preview
 
-```
+```text
 
 Welcome Email - Clean & Simple
 ★★★★★ 4.8 (1,247 uses)
@@ -127,7 +127,7 @@ Performance:
 
 #### Step 1: Select Template
 
-```
+```text
 
 Click [Use Template]
 
@@ -145,7 +145,7 @@ Save As:
 
 #### Step 2: Quick Customization
 
-```
+```text
 
 Brand Customization
 
@@ -179,7 +179,7 @@ Social Media:
 
 #### Step 3: Edit Content
 
-```
+```text
 
 Opens in Template Editor with pre-filled content:
 
@@ -211,7 +211,7 @@ Need help? Our support team is here for you.
 
 #### Welcome Series
 
-```
+```text
 
 Available Templates:
 
@@ -268,7 +268,7 @@ Available Templates:
 
 #### Newsletters
 
-```
+```text
 
 Available Templates:
 
@@ -325,7 +325,7 @@ Available Templates:
 
 #### Promotional
 
-```
+```text
 
 Available Templates:
 
@@ -388,7 +388,7 @@ Available Templates:
 
 #### Brand Presets
 
-```
+```text
 
 Save Brand Preset
 
@@ -434,7 +434,7 @@ Apply to:
 
 #### Component Swapping
 
-```
+```text
 
 Template: Welcome Email
 
@@ -467,7 +467,7 @@ Available Alternatives:
 
 #### Share Across Workspaces
 
-```
+```text
 
 Template: New User Welcome
 
@@ -493,7 +493,7 @@ Permissions:
 
 #### Public Template Submission
 
-```
+```text
 
 Submit to Public Library
 
@@ -537,7 +537,7 @@ Review Process:
 
 #### Performance Metrics
 
-```
+```text
 
 Template: Welcome Email - Clean & Simple
 
@@ -572,7 +572,7 @@ Top Performing Variants:
 
 #### A/B Test Results
 
-```
+```text
 
 Template Comparison
 
@@ -600,7 +600,7 @@ Recommendation:
 
 #### SaaS Templates
 
-```
+```text
 
 SaaS Template Collection (24 templates)
 
@@ -665,7 +665,7 @@ Retention:
 
 #### E-commerce Templates
 
-```
+```text
 
 E-commerce Template Collection (20 templates)
 
@@ -732,7 +732,7 @@ Loyalty:
 
 #### Template Updates
 
-```
+```text
 
 Template: Welcome Email - Clean & Simple
 

@@ -50,7 +50,7 @@ A/B Testing enables data-driven campaign optimization by testing variations of y
 
 #### Step 1: Create Campaign with A/B Test
 
-```
+```text
 
 
 1. Navigate to Campaigns → Create New Campaign
@@ -72,7 +72,7 @@ A/B Testing enables data-driven campaign optimization by testing variations of y
 
 **Example: Subject Line Test**
 
-```
+```text
 
 Variant A (Control):
 Subject: "Limited Time: 50% Off All Products"
@@ -100,7 +100,7 @@ Subject: "Don't Miss Out: Half Price Sale Ends Tonight"
 
 System displays:
 
-```
+```text
 
 Total Audience: 10,000 contacts
 
@@ -143,7 +143,7 @@ Winner Deployment:
 
 After 4 hours:
 
-```
+```text
 
 Test Results:
   Variant A: 22% open rate
@@ -174,7 +174,7 @@ Deploying to remaining 7,000 contacts...
 
 **Examples:**
 
-```
+```text
 
 Control: "New Features Released"
 Test:    "{{firstName}}, Check Out What's New"
@@ -202,7 +202,7 @@ Test:    "Last Chance: Offer Expires At Midnight"
 
 **Examples:**
 
-```
+```text
 
 Control: "Learn More" button
 Test:    "Get Started Free" button
@@ -220,7 +220,7 @@ Test:    Visual/image-heavy email
 
 **Variations:**
 
-```
+```text
 
 Control: "PenguinMails Team"
 Test:    "Sarah from PenguinMails"
@@ -235,7 +235,7 @@ Test:    "sarah.jones@company.com"
 
 **Optimize delivery timing:**
 
-```
+```text
 
 Variant A: 9:00 AM Tuesday
 Variant B: 2:00 PM Tuesday
@@ -311,7 +311,7 @@ confidence_threshold: 95%
 
 **Results Display:**
 
-```
+```text
 
 Variant A: 24% open rate (Confidence: 48% - inconclusive)
 Variant B: 28% open rate (Confidence: 96% - WINNER)
@@ -329,7 +329,7 @@ Test multiple elements in sequence:
 
 **Example: 3-Stage Test**
 
-```
+```text
 
 Stage 1: Subject Line Test (Week 1)
   Result: "{{firstName}}, ..." wins

@@ -167,7 +167,7 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 
 #### 1. **Lead Nurturing**
 
-```
+```text
 
 Trigger: Contact added to list
 → Wait 1 day
@@ -182,7 +182,7 @@ Trigger: Contact added to list
 
 #### 2. **Re-Engagement**
 
-```
+```text
 
 Trigger: No engagement in 30 days
 → Send re-engagement email
@@ -195,7 +195,7 @@ Trigger: No engagement in 30 days
 
 #### 3. **Behavioral Automation**
 
-```
+```text
 
 Trigger: Link clicked (pricing page)
 → Add tag "high-intent"

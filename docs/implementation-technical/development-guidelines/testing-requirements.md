@@ -25,7 +25,7 @@ persona: "Quality Assurance"
 
 ### Test Organization
 
-```
+```text
 
 tests/
 ├── unit/                          # Unit tests

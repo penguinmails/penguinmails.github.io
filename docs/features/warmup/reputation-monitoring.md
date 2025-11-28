@@ -59,7 +59,7 @@ Reputation Monitoring provides comprehensive visibility into your email sending 
 
 #### Overview
 
-```
+```text
 
 Reputation Dashboard
 
@@ -91,7 +91,7 @@ Recent Alerts:
 
 #### Domain Health Details
 
-```
+```text
 
 Domain: penguinmails.com
 Health Score: 92/100 (Excellent) ✓
@@ -129,7 +129,7 @@ Trend: ↗ Improving (+3 points this week)
 
 #### Blacklist Status
 
-```
+```text
 
 Blacklist Monitor
 
@@ -165,7 +165,7 @@ IPs Monitored:
 
 #### Blacklist Alert
 
-```
+```text
 
 ⚠ BLACKLIST ALERT
 
@@ -207,7 +207,7 @@ Recommended Actions:
 
 #### Alert Types
 
-```
+```text
 
 Active Alerts (2):
 
@@ -233,7 +233,7 @@ Active Alerts (2):
 
 #### Alert Configuration
 
-```
+```text
 
 Alert Settings
 
@@ -272,7 +272,7 @@ Auto-Actions:
 
 #### Sender Score Breakdown
 
-```
+```text
 
 Sender Score: 95/100
 
@@ -304,7 +304,7 @@ Compared to Industry:
 
 #### Provider-Specific Reputation
 
-```
+```text
 
 Reputation by Email Provider
 
@@ -341,7 +341,7 @@ Apple Mail:
 
 #### Blacklist Categories
 
-```
+```text
 
 Blacklist Coverage (52 lists)
 
@@ -371,7 +371,7 @@ Combined Lists (10):
 
 #### Delisting Process
 
-```
+```text
 
 Delisting Guide: Spamcop
 
@@ -431,7 +431,7 @@ Steps to Delist:
 
 #### Health Score Components
 
-```
+```text
 
 Domain Health: penguinmails.com (92/100)
 
@@ -462,7 +462,7 @@ Infrastructure (20 points): 17/20 ✓
 
 #### Historical Trends
 
-```
+```text
 
 Reputation Trend: Last 30 Days
 
@@ -495,7 +495,7 @@ Engagement:
 
 #### AI-Powered Insights
 
-```
+```text
 
 Reputation Recovery Plan
 
@@ -569,7 +569,7 @@ Expected Outcome:
 
 #### Automated Remediation
 
-```
+```text
 
 Auto-Remediation Rules
 
@@ -612,7 +612,7 @@ Rule 4: Low Engagement
 
 ### Competitive Benchmarking
 
-```
+```text
 
 Industry Benchmarks
 

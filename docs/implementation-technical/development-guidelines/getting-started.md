@@ -191,7 +191,7 @@ npm install -g @typescript-eslint/cli prettier
 
 ## Understanding the Project Structure
 
-```
+```text
 
 penguinmails/
 ├── app/                          # Main application code

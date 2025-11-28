@@ -52,7 +52,7 @@ Campaign Scheduling enables precise control over when your emails are sent, with
 
 #### Step 1: Basic Scheduling
 
-```
+```text
 
 Campaign Builder → Schedule Tab
 
@@ -76,7 +76,7 @@ Campaign Builder → Schedule Tab
 
 **Single Timezone (Simple):**
 
-```
+```text
 
 All contacts receive email at:
 9:00 AM Eastern Time (EST)
@@ -97,7 +97,7 @@ Example:
 
 **Recipient Timezone (Smart):**
 
-```
+```text
 
 Each contact receives email at their local time:
 9:00 AM in their timezone
@@ -120,7 +120,7 @@ Example:
 
 **Enable Business Hours Protection:**
 
-```
+```text
 
 ┌─────────────────────────────────────────────────────┐
 │ Business Hours Settings                             │
@@ -143,7 +143,7 @@ Example:
 
 **Result:**
 
-```
+```text
 
 Scheduled: Saturday, Nov 23 at 3:00 PM
 Actual Send: Monday, Nov 25 at 9:00 AM
@@ -157,7 +157,7 @@ Actual Send: Monday, Nov 25 at 9:00 AM
 
 #### Daily Newsletter
 
-```
+```text
 
 Recurrence Pattern:
 ┌─────────────────────────────────────────────────────┐
@@ -189,7 +189,7 @@ Preview:
 
 #### Weekly Report
 
-```
+```text
 
 Recurrence Pattern:
 ┌─────────────────────────────────────────────────────┐
@@ -219,7 +219,7 @@ Preview:
 
 **Pre-Built Schedule Patterns:**
 
-```
+```text
 
 Common Patterns:
 ┌─────────────────────────────────────────────────────┐
@@ -244,7 +244,7 @@ Common Patterns:
 
 **How It Works:**
 
-```
+```text
 
 For each contact, analyze:
 
@@ -299,7 +299,7 @@ send_time_optimization:
 
 **Example Results:**
 
-```
+```text
 
 Contact A (Software Developer):
   Historical pattern: Opens emails at 7:30 AM
@@ -357,7 +357,7 @@ timezone_strategy:
 
 **Result:**
 
-```
+```text
 
 Global Campaign Rollout:
 09:00 NZDT (Auckland)    → Nov 25, 9:00 AM
@@ -396,7 +396,7 @@ dst_handling:
 
 **Example:**
 
-```
+```text
 
 Campaign scheduled: 9:00 AM EST
 DST transition: March 10, 2024 (spring forward)
@@ -444,7 +444,7 @@ calendar_integration:
 
 **Example Workflow:**
 
-```
+```text
 
 Google Calendar Event Created:
   Title: "Product Launch Webinar"
@@ -509,7 +509,7 @@ outlook_integration:
 
 **Bulk Schedule Interface:**
 
-```
+```text
 
 Batch Scheduler:
 ┌─────────────────────────────────────────────────────┐
@@ -569,7 +569,7 @@ interface ConflictResolution {
 
 **Example:**
 
-```
+```text
 
 Contact receives:
 
@@ -634,7 +634,7 @@ blackout_dates:
 
 **Custom Holiday Calendars:**
 
-```
+```text
 
 Holiday Calendar: US Federal + Company
 ┌─────────────────────────────────────────────────────┐

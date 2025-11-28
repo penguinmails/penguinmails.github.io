@@ -38,7 +38,7 @@ This document specifies the frontend routes for tenant API key management, enabl
 
 ### Page Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────────────────┐
 │ Settings Sidebar │ API Keys                                  │
@@ -193,7 +193,7 @@ Response:
 
 ### Modal Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────┐
 │ Create API Key                            [X]   │
@@ -323,7 +323,7 @@ Response (201 Created):
 
 ### Modal Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ API Key Created                        [X]   │
@@ -484,7 +484,7 @@ sendEmail();
 
 ### Modal Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────┐
 │ Production Server                         [X]   │
@@ -586,7 +586,7 @@ Response (200 OK):
 
 ### Modal Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ Regenerate API Key?                    [X]   │
@@ -651,7 +651,7 @@ Response (200 OK):
 
 ### Modal Structure
 
-```
+```text
 
 ┌─────────────────────────────────────────────────┐
 │ ⚠️ Revoke API Key?                        [X]   │

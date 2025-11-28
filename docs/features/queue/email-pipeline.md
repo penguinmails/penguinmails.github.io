@@ -206,51 +206,37 @@ const emailWorker = new Worker('email-queue', async (job: Job) => {
   }
 });
 
-```
-
-
 ### Failure Handling
 
-## Retry Strategy:
-
+## Retry Strategy
 
 - **Exponential Backoff**: Wait 1s, then 2s, 4s, 8s...
 
-
 - **Max Retries**: 3 attempts standard, 5 for high priority.
 
-## Dead Letter Queue (DLQ):
-Jobs that fail all retries are moved to DLQ for manual inspection. This prevents data loss.
+## Dead Letter Queue (DLQ)
 
+Jobs that fail all retries are moved to DLQ for manual inspection. This prevents data loss.
 
 ### Scalability
 
-
 - **Stateless Workers**: Workers can be scaled horizontally (Kubernetes/Docker).
 
-
 - **Redis Cluster**: Supports high throughput and data persistence.
-
 
 - **Batch Processing**: Campaign jobs are batched to reduce database load.
 
 ---
 
-
 ## Related Documentation
-
 
 ### Features
 
-
 - **[Campaign Management](../../features/campaigns/campaign-management/overview.md)** - The source of most pipeline jobs
-
 
 - **[ESP Integration](../../features/integrations/esp-integration.md)** - External delivery gateways
 
-
 ### Tasks
-
 
 - **[Epic 6: Core Email Pipeline](../../tasks/epic-6-core-email-pipeline/README.md)** - Development tasks
 

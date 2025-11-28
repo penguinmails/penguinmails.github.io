@@ -1043,8 +1043,6 @@ Reliability Framework:
 
 - Go-live and monitoring
 
-```
-
 ---
 
 

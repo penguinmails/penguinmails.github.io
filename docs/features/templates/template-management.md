@@ -103,7 +103,7 @@ Show or hide content based on data.
 {{/if}}
 
 
-```json
+```
 
 {% endraw %}
 
@@ -115,7 +115,7 @@ Iterate over lists (e.g., for e-commerce receipts).
 {% raw %}
 
 
-```
+```text
 
 <ul>
   {{#each order_items}}
@@ -123,7 +123,7 @@ Iterate over lists (e.g., for e-commerce receipts).
   {{/each}}
 </ul>
 
-```sql
+```
 
 {% endraw %}
 
@@ -138,7 +138,7 @@ Iterate over lists (e.g., for e-commerce receipts).
 Templates are stored in the database with versioning.
 
 
-```
+```text
 
 CREATE TABLE templates (
   id UUID PRIMARY KEY,
@@ -150,7 +150,7 @@ CREATE TABLE templates (
   updated_at TIMESTAMP
 );
 
-```text
+```
 
 
 ### API Usage
@@ -158,7 +158,7 @@ CREATE TABLE templates (
 ## Render a template:
 
 
-```
+```text
 
 POST /api/v1/templates/{id}/render
 {
@@ -167,12 +167,12 @@ POST /api/v1/templates/{id}/render
   }
 }
 
-```sql
+```
 
 ## Create via API:
 
 
-```
+```text
 
 POST /api/v1/templates
 {

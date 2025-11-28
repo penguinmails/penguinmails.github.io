@@ -59,7 +59,7 @@ Warmup Scheduling automates the process of establishing sender reputation for ne
 
 #### Step 1: Select Email Account
 
-```
+```text
 
 Warmup → Start New Warmup
 
@@ -81,7 +81,7 @@ Account Status:
 
 #### Step 2: Choose Warmup Plan
 
-```
+```text
 
 Select Warmup Plan:
 
@@ -113,7 +113,7 @@ Select Warmup Plan:
 
 #### Step 3: Configure Settings
 
-```
+```text
 
 Warmup Configuration
 
@@ -155,7 +155,7 @@ Safety Settings:
 
 #### Step 4: Warmup Running
 
-```
+```text
 
 Warmup Progress: sales@penguinmails.com
 
@@ -189,7 +189,7 @@ Health Score: 95/100 ✓ Excellent
 
 #### Phase 1: Foundation (Week 1-2)
 
-```
+```text
 
 Days 1-14: Building Initial Reputation
 
@@ -221,7 +221,7 @@ Goals:
 
 #### Phase 2: Growth (Week 3-4)
 
-```
+```text
 
 Days 15-28: Scaling Volume
 
@@ -253,7 +253,7 @@ Goals:
 
 #### Phase 3: Maturity (Week 5-6)
 
-```
+```text
 
 Days 29-42: Reaching Target Volume
 
@@ -287,7 +287,7 @@ Goals:
 
 #### Pause Warmup
 
-```
+```text
 
 Pause Warmup: sales@penguinmails.com
 
@@ -309,7 +309,7 @@ Resume Plan:
 
 #### Adjust Schedule
 
-```
+```text
 
 Adjust Warmup Schedule
 
@@ -413,7 +413,7 @@ custom_warmup_plan:
 
 #### Domain Warmup Strategy
 
-```
+```text
 
 Domain Warmup: penguinmails.com
 
@@ -476,7 +476,7 @@ Week 7-8: Stabilization
 
 #### Dedicated IP Warmup
 
-```
+```text
 
 IP Warmup: 192.0.2.100
 
@@ -533,7 +533,7 @@ Week 4-6: Full Volume
 
 #### Warmup Pool Network
 
-```
+```text
 
 PenguinMails Warmup Network
 
@@ -584,7 +584,7 @@ Behavior Simulation:
 
 #### Custom Warmup List
 
-```
+```text
 
 Upload Custom Warmup List
 
@@ -624,7 +624,7 @@ Engagement Configuration:
 
 #### Bulk Warmup Management
 
-```
+```text
 
 Warmup Dashboard
 
@@ -652,7 +652,7 @@ Alerts:
 
 #### Progress Tracking
 
-```
+```text
 
 Warmup Analytics: sales@penguinmails.com
 
@@ -687,7 +687,7 @@ Trend: ↗ Improving
 
 #### Comparative Analysis
 
-```
+```text
 
 Warmup Comparison
 

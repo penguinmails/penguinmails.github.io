@@ -170,13 +170,13 @@ CREATE TABLE lists (
 );
 
 
-```text
+```
 
 
 ### API Usage
 
 
-```
+```text
 
 // Add a contact
 POST /api/v1/contacts

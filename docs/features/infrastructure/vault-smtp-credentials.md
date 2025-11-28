@@ -56,7 +56,7 @@ Vault-based SMTP credential storage provides:
 
 SMTP credentials are stored in Vault at the following path:
 
-```
+```text
 
 vault/smtp/{tenant_id}/admin/
 ├── username          # MailU admin username

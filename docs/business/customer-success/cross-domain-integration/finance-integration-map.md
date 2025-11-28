@@ -39,7 +39,7 @@ Customer Success integrates with Finance through well-defined data flows and API
 
 ### Core Integration Framework
 
-```
+```text
 
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   CUSTOMER      │◄──►│   INTEGRATION   │◄──►│    FINANCE      │
@@ -82,7 +82,7 @@ Precise allocation of expansion revenue and churn protection to CS activities.
 
 ### Data Flow Architecture
 
-```
+```text
 
 CS Outcomes ──┐
                ├──► Attribution Engine ──► Revenue Recognition

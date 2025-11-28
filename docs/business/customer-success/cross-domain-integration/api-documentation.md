@@ -44,7 +44,7 @@ securitySchemes:
 
 ### Health Trigger API
 
-```
+```text
 
 POST /marketing/triggers/{customer_id}
 Content-Type: application/json

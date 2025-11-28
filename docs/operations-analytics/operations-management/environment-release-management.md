@@ -859,7 +859,7 @@ interface QualityMetrics {
 
 ### Release Notes
 
-```
+```text
 
 
 # Release 2.1.0 - PenguinMails (October 28, 2025)

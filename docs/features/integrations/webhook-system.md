@@ -55,7 +55,7 @@ The Webhook System enables external applications to receive instant notification
 
 #### Step 1: Navigate to Webhooks
 
-```
+```text
 
 Dashboard → Settings → Integrations → Webhooks → Create Webhook
 
@@ -66,7 +66,7 @@ Dashboard → Settings → Integrations → Webhooks → Create Webhook
 
 **Basic Configuration:**
 
-```
+```text
 
 Webhook Name: CRM Contact Sync
 Endpoint URL: https://yourapp.com/webhooks/penguinmails
@@ -81,7 +81,7 @@ Status: ○ Active  ○ Paused
 
 **Choose which events to receive:**
 
-```
+```text
 
 Email Events:
   ☑ email.sent
@@ -107,7 +107,7 @@ Contact Events:
 
 #### Step 4: Test Webhook
 
-```
+```text
 
 [Send Test Event]
 
@@ -122,7 +122,7 @@ Sending test event...
 
 #### Step 5: Save & Activate
 
-```
+```text
 
 [Save Webhook]
 
@@ -220,7 +220,7 @@ function verifySignature(payload, signature) {
 
 **Filter by workspace:**
 
-```
+```text
 
 Webhook Name: Client A Events Only
 Event Filters:
@@ -232,7 +232,7 @@ Event Filters:
 
 **Filter by campaign:**
 
-```
+```text
 
 Event Filters:
   Campaign ID: camp_xyz123
@@ -259,7 +259,7 @@ Event Filters:
 
 **Automatic Retries:**
 
-```
+```text
 
 If webhook delivery fails:
   Retry #1: After 1 minute
@@ -284,7 +284,7 @@ After 5 failed attempts:
 
 **View Failed Deliveries:**
 
-```
+```text
 
 Recent Deliveries:
   ✓ email.opened     200 OK   Nov 25, 14:30
@@ -308,7 +308,7 @@ Recent Deliveries:
 
 **Verification Process:**
 
-```
+```text
 
 
 1. PenguinMails generates HMAC-SHA256 signature
@@ -491,7 +491,7 @@ function standaloneVerify(payload, signature, secret) {
 
 **Request Inspector:**
 
-```
+```text
 
 Last 50 Webhook Deliveries:
 
@@ -520,7 +520,7 @@ Response:
 
 **Test Mode:**
 
-```
+```text
 
 [Send Test Event]
 
@@ -546,7 +546,7 @@ OR
 
 **Replay missed events:**
 
-```
+```text
 
 Replay Events
 

@@ -71,7 +71,7 @@ Professional email infrastructure includes:
 
 #### Step 1: Domain Verification
 
-```
+```text
 
 
 1. Add your domain to PenguinMails
@@ -98,7 +98,7 @@ Professional email infrastructure includes:
 
 Once domain is verified, click **"Launch Infrastructure"**:
 
-```
+```text
 
 [Automated Process - 2-3 minutes]
 ✓ VPS server provisioned via Hostwind API
@@ -124,7 +124,7 @@ Once domain is verified, click **"Launch Infrastructure"**:
 
 System displays required DNS records:
 
-```
+```text
 
 Add these records to your DNS provider:
 
@@ -156,7 +156,7 @@ TXT Record (DMARC):
 
 #### Step 4: Create Email Account
 
-```
+```text
 
 
 1. Click "Create Email Account"
@@ -179,7 +179,7 @@ TXT Record (DMARC):
 
 System automatically runs verification:
 
-```
+```text
 
 ✓ SMTP connection test
 ✓ SPF record validation
@@ -274,7 +274,7 @@ defer_transports: true
 
 **SPF Configuration Strategies:**
 
-```
+```text
 
 
 # Simple (single server)
@@ -304,7 +304,7 @@ v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
 
 **DMARC Policy Progression:**
 
-```
+```text
 
 
 # Phase 1: Monitor only
@@ -366,7 +366,7 @@ For agencies managing multiple clients:
 
 System performs automated monitoring:
 
-```
+```text
 
 Every 5 minutes:
 ✓ SMTP service status
@@ -409,7 +409,7 @@ Automated alerts for:
 
 ### Architecture Overview
 
-```
+```text
 
 ┌─────────────────────────────────────────────────────────┐
 │                     PenguinMails Platform               │

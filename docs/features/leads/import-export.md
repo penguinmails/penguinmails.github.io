@@ -80,7 +80,7 @@ jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
 
 #### Step 2: Upload File
 
-```
+```text
 
 Contacts → Import → Upload File
 
@@ -98,7 +98,7 @@ Preview:
 
 #### Step 3: Map Fields
 
-```
+```text
 
 Map Your Columns:
 
@@ -122,7 +122,7 @@ Unmapped Columns:
 
 #### Step 4: Validation
 
-```
+```text
 
 Validation Results:
 
@@ -147,7 +147,7 @@ Actions:
 
 #### Step 5: Configure Import
 
-```
+```text
 
 Import Options:
 
@@ -170,7 +170,7 @@ Segment:
 
 #### Step 6: Import Running
 
-```
+```text
 
 Importing Contacts...
 
@@ -186,7 +186,7 @@ Estimated remaining: 00:00:45
 
 #### Step 7: Import Complete
 
-```
+```text
 
 ✓ Import Completed Successfully
 
@@ -207,7 +207,7 @@ Summary:
 
 #### Export All Contacts
 
-```
+```text
 
 Contacts → Export
 
@@ -289,7 +289,7 @@ auto_mapping:
 
 **Manual Mapping:**
 
-```
+```text
 
 Custom Field Mapping:
 
@@ -415,7 +415,7 @@ field_validation:
 
 **Update Existing Contacts:**
 
-```
+```text
 
 When duplicate email found:
 
@@ -466,7 +466,7 @@ conflict_resolution:
 
 **Export by Segment:**
 
-```
+```text
 
 Export Contacts
 
@@ -484,7 +484,7 @@ Result: 1,247 contacts
 
 **Export by Date Range:**
 
-```
+```text
 
 Export Contacts Added:
   From: 2025-10-01
@@ -497,7 +497,7 @@ Export Contacts Added:
 
 **Export by Custom Criteria:**
 
-```
+```text
 
 Advanced Filter:
   Country = "United States"
@@ -512,7 +512,7 @@ Advanced Filter:
 
 #### Custom Field Selection
 
-```
+```text
 
 Select Fields to Export:
 
@@ -562,7 +562,7 @@ john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-1
 
 **Excel Export (.xlsx):**
 
-```
+```text
 
 Features:
 
@@ -613,7 +613,7 @@ Features:
 
 #### View Import History
 
-```
+```text
 
 Import History
 
@@ -632,7 +632,7 @@ Date                User           File               Status    Records
 
 #### Import Details
 
-```
+```text
 
 Import Details: contacts_nov.csv
 Imported: 2025-11-25 14:30:42
@@ -684,7 +684,7 @@ Segment Created:
 
 #### Rollback Import
 
-```
+```text
 
 Rollback Import: contacts_nov.csv
 

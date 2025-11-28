@@ -531,28 +531,13 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 
 3. Implement clean room reimplementation if possible
 
-```
-
-
-## Patent Considerations
-
-
-### Patent License Grants
-
-
-```markdown
-
-
 ## Patent License Considerations
-
 
 ### Understanding Patent Grants
 
 When contributors submit code under MIT license, they may implicitly grant patent rights. However, explicit patent grants provide additional protection.
 
-
 ### Explicit Patent License Template
-
 
 ```markdown
 

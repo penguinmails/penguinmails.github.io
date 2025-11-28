@@ -67,7 +67,7 @@ Lead Scoring assigns numeric values to contacts based on their actions, characte
 
 #### Default Scoring Rules
 
-```
+```text
 
 Email Engagement:
   ✓ Email Opened: +5 points
@@ -94,7 +94,7 @@ Time Decay:
 
 ### View Lead Scores
 
-```
+```text
 
 Contacts → View All
 
@@ -115,7 +115,7 @@ David Kim              68     1 week ago
 
 **Score-Based Segments:**
 
-```
+```text
 
 Hot Leads (Score 76-100):
   Campaign: "Book a Demo" (Aggressive CTA)
@@ -367,7 +367,7 @@ scoring_dimensions:
 
 **Auto-Segmentation:**
 
-```
+```text
 
 When lead score reaches 75:
   → Add to "Hot Leads" segment
@@ -380,7 +380,7 @@ When lead score reaches 75:
 
 **Lead Lifecycle Stages:**
 
-```
+```text
 
 Score 0-25:    Status = "Cold Lead"
 Score 26-50:   Status = "Nurture"
@@ -392,7 +392,7 @@ Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 
 **CRM Sync:**
 
-```
+```text
 
 When lead score >= 75:
   → Create lead in Salesforce
@@ -407,7 +407,7 @@ When lead score >= 75:
 
 **Score Distribution:**
 
-```
+```text
 
 Lead Score Distribution:
 
@@ -424,7 +424,7 @@ Median Score: 32
 
 **Score Trends:**
 
-```
+```text
 
 Score Movement (Last 30 Days):
 

@@ -56,7 +56,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 ### New User Journey
 
-```
+```text
 
 
 1. Sign Up → 2. Workspace Setup → 3. Domain Configuration → 
@@ -85,7 +85,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 **Welcome Screen:**
 
-```
+```text
 
 Welcome to PenguinMails! 🐧
 
@@ -99,7 +99,7 @@ set up in under 10 minutes.
 
 #### Step 2: Create Workspace (1 min)
 
-```
+```text
 
 Create Your First Workspace
 
@@ -118,7 +118,7 @@ Example: "Main Company" or "Client: Acme Corp"
 
 #### Step 3: Add Domain (2 min)
 
-```
+```text
 
 Step 3 of 6: Add Your Sending Domain
 
@@ -142,7 +142,7 @@ Domain: [_______________]
 
 #### Step 4: Verify Domain (2 min)
 
-```
+```text
 
 Step 4 of 6: Verify Domain Ownership
 
@@ -171,7 +171,7 @@ OR
 
 #### Step 5: Set Up Payment (1 min)
 
-```
+```text
 
 Step 5 of 6: Choose Your Plan
 
@@ -196,7 +196,7 @@ Step 5 of 6: Choose Your Plan
 
 **After trial started:**
 
-```
+```text
 
 ✓ Trial Started - 14 days remaining
 
@@ -210,7 +210,7 @@ Add payment method anytime in Settings.
 
 #### Step 6: Provision Infrastructure (2-3 min)
 
-```
+```text
 
 Step 6 of 6: Launch Your Email Infrastructure
 
@@ -231,7 +231,7 @@ We're setting up your professional email infrastructure:
 
 **Complete:**
 
-```
+```text
 
 🎉 Infrastructure Ready!
 
@@ -247,7 +247,7 @@ Next: Create your first email account
 
 #### Step 7: Create First Email Account (1 min)
 
-```
+```text
 
 Create Your First Sending Account
 
@@ -261,7 +261,7 @@ Password: [Generate Secure Password]
 
 #### Step 8: Success & Next Steps (30 sec)
 
-```
+```text
 
 🎉 Congratulations! You're All Set
 
@@ -285,7 +285,7 @@ Quick Actions:
 
 Persistent checklist in sidebar:
 
-```
+```text
 
 Getting Started ━━━━━━━━○○○ 70%
 
@@ -316,7 +316,7 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **First-time visitor tooltips:**
 
-```
+```text
 
 [i] Workspaces
     Organize your campaigns by client, 
@@ -355,7 +355,7 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **Example:**
 
-```
+```text
 
 [Spotlight on "Create Campaign" button]
 
@@ -392,7 +392,7 @@ Click here to create a new email campaign.
 
 **Achievement notifications:**
 
-```
+```text
 
 🎊 Milestone Unlocked: First Email Sent!
 
@@ -426,7 +426,7 @@ Keep going!
 
 Based on user behavior:
 
-```
+```text
 
 👋 We noticed you haven't set up email warmup yet.
 
@@ -442,7 +442,7 @@ deliverability. It only takes 2 minutes.
 
 For workspace invites:
 
-```
+```text
 
 Welcome to [Workspace Name]!
 

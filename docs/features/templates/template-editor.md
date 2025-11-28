@@ -59,7 +59,7 @@ The Template Editor is a comprehensive WYSIWYG (What You See Is What You Get) em
 
 #### Step 1: Create New Template
 
-```
+```text
 
 Templates → Create Template
 
@@ -78,7 +78,7 @@ Starting Point:
 
 #### Step 2: Choose Base Template
 
-```
+```text
 
 Select a Template:
 
@@ -103,7 +103,7 @@ Selected: Basic Email
 
 #### Step 3: Visual Editor
 
-```
+```text
 
 ┌─────────────────────────────────────────────────────────┐
 │ Template Editor: Welcome Email               [Save ▼]  │
@@ -134,7 +134,7 @@ Device: [📱 Mobile] [📱 Tablet] [🖥️ Desktop]
 
 #### Step 4: Drag Components
 
-```
+```text
 
 Drag "Button" from Components → Drop in Content Area
 
@@ -152,7 +152,7 @@ Button Properties:
 
 #### Step 5: Edit Content
 
-```
+```text
 
 Click on Text Block:
 
@@ -175,7 +175,7 @@ Variables Available:
 
 #### Step 6: Mobile Preview
 
-```
+```text
 
 Switch to Mobile View: 📱
 
@@ -202,7 +202,7 @@ Preview:
 
 #### Step 7: Save Template
 
-```
+```text
 
 [Save ▼]
   ● Save
@@ -222,7 +222,7 @@ Actions:
 
 #### Add a Header
 
-```
+```text
 
 Drag "Header" component to top:
 
@@ -242,7 +242,7 @@ Header Settings:
 
 #### Add Social Media Links
 
-```
+```text
 
 Drag "Social" component:
 
@@ -266,7 +266,7 @@ Icon Style:
 
 #### Insert Image
 
-```
+```text
 
 Drag "Image" component:
 
@@ -609,7 +609,7 @@ social:
 
 **Global Styles:**
 
-```
+```text
 
 Settings → Global Styles
 
@@ -661,7 +661,7 @@ mobile_overrides:
 
 **Version History:**
 
-```
+```text
 
 Template: Welcome Email (v8)
 
@@ -691,7 +691,7 @@ Auto-save: ✓ Enabled (every 30 seconds)
 
 **Compare Versions:**
 
-```
+```text
 
 Version Comparison: v7 → v8
 
@@ -723,7 +723,7 @@ Side-by-Side View:
 
 **Preview & Test:**
 
-```
+```text
 
 Template: Welcome Email
 
@@ -755,7 +755,7 @@ Email Client Preview:
 
 **Validation Checks:**
 
-```
+```text
 
 Template Validation
 
@@ -810,7 +810,7 @@ Spam Score: 2.1 / 10 (✓ Good)
 
 **Comments & Feedback:**
 
-```
+```text
 
 Template Editor → Comments
 
@@ -834,7 +834,7 @@ Template Editor → Comments
 
 **Approval Workflow:**
 
-```
+```text
 
 Template Status: Pending Approval
 

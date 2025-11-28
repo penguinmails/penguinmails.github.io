@@ -75,7 +75,7 @@ This document ensures rapid recovery from any Vault failure scenario with minima
 
 **Backup Naming Convention:**
 
-```
+```text
 
 s3://penguinmails-vault-backups/
 ├── daily/

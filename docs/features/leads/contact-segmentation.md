@@ -55,7 +55,7 @@ Contact Segmentation enables you to divide your contact database into meaningful
 
 #### Step 1: Create Segment
 
-```
+```text
 
 Contacts → Segments → Create New Segment
 
@@ -68,7 +68,7 @@ Type: ○ Dynamic  ○ Static
 
 #### Step 2: Define Rules (Dynamic Segment)
 
-```
+```text
 
 Conditions (Match ALL):
   ☑ Last Email Opened: within last 30 days
@@ -82,7 +82,7 @@ Preview: 2,847 contacts match
 
 #### Step 3: Save & Use
 
-```
+```text
 
 [Save Segment]
 
@@ -101,7 +101,7 @@ Quick Actions:
 
 **Highly Engaged:**
 
-```
+```text
 
 Conditions:
 
@@ -119,7 +119,7 @@ Conditions:
 
 **Inactive Contacts:**
 
-```
+```text
 
 Conditions:
 
@@ -137,7 +137,7 @@ Conditions:
 
 **Never Engaged:**
 
-```
+```text
 
 Conditions:
 
@@ -157,7 +157,7 @@ Conditions:
 
 **Location-Based:**
 
-```
+```text
 
 Conditions:
 
@@ -176,7 +176,7 @@ Conditions:
 
 **Company Size:**
 
-```
+```text
 
 Conditions:
 
@@ -191,7 +191,7 @@ Conditions:
 
 **Industry:**
 
-```
+```text
 
 Conditions:
 
@@ -208,7 +208,7 @@ Conditions:
 
 **New Leads (Last 7 Days):**
 
-```
+```text
 
 Conditions:
 
@@ -223,7 +223,7 @@ Conditions:
 
 **Trial Users:**
 
-```
+```text
 
 Conditions:
 
@@ -238,7 +238,7 @@ Conditions:
 
 **Customers:**
 
-```
+```text
 
 Conditions:
 
@@ -265,7 +265,7 @@ Conditions:
 
 **Creating Static Segment:**
 
-```
+```text
 
 
 1. Select contacts manually from list
@@ -292,7 +292,7 @@ Conditions:
 
 **Engaged OR High-Value:**
 
-```
+```text
 
 Match ANY of these groups:
 
@@ -317,7 +317,7 @@ Group 2 (High-Value):
 
 **Advanced Multi-Condition:**
 
-```
+```text
 
 Match ALL:
   Group 1 (Location):
@@ -353,7 +353,7 @@ Match ALL:
 
 **Click-But-Never-Convert:**
 
-```
+```text
 
 Conditions:
 
@@ -371,7 +371,7 @@ Conditions:
 
 **Opens Mobile vs Desktop:**
 
-```
+```text
 
 Conditions:
 
@@ -389,7 +389,7 @@ Conditions:
 
 **Time-Based Engagement:**
 
-```
+```text
 
 Conditions:
 
@@ -406,7 +406,7 @@ Conditions:
 
 **Clicked Specific Link:**
 
-```
+```text
 
 Conditions:
 
@@ -424,7 +424,7 @@ Conditions:
 
 **Opened But Didn't Click:**
 
-```
+```text
 
 Conditions:
 
@@ -447,7 +447,7 @@ Conditions:
 
 **Score-Based Segments:**
 
-```
+```text
 
 Hot Leads (Score 80-100):
 
@@ -484,7 +484,7 @@ Cold Leads (Score 0-49):
 
 **Multi-Select Custom Fields:**
 
-```
+```text
 
 Conditions:
 
@@ -499,7 +499,7 @@ Conditions:
 
 **Date-Based Custom Fields:**
 
-```
+```text
 
 Trial Expiring Soon:
 
@@ -522,7 +522,7 @@ Anniversary Outreach:
 
 **Numeric Range Custom Fields:**
 
-```
+```text
 
 High-Value Cohort:
 
@@ -546,7 +546,7 @@ High-Value Cohort:
 
 **Exclude Other Segments:**
 
-```
+```text
 
 Include:
 
@@ -566,7 +566,7 @@ Exclude:
 
 **Suppress Based on Recent Activity:**
 
-```
+```text
 
 Include:
 
@@ -588,7 +588,7 @@ Exclude:
 
 **View Segment Analytics:**
 
-```
+```text
 
 Segment: "Active Subscribers" (2,847 contacts)
 
@@ -613,7 +613,7 @@ Trend:
 
 **Test Segment Criteria:**
 
-```
+```text
 
 Hypothesis: "High engagement = Lead Score > 60"
 

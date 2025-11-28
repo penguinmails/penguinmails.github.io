@@ -385,7 +385,7 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
 
 ```
 
-```
+```text
 
 
 ## Code Review Process
@@ -515,7 +515,7 @@ git log --oneline -5
 
 Use conventional commits format:
 
-```
+```text
 
 type(scope): subject
 

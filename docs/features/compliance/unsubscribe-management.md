@@ -53,7 +53,7 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 
 **List-Unsubscribe Header (RFC 8058)**
 
-```
+```text
 
 List-Unsubscribe: <https://penguinmails.com/unsubscribe/{{token}}>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
@@ -240,7 +240,7 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 #### Processing Workflow
 
-```
+```text
 
 Unsubscribe Request Received
   ↓

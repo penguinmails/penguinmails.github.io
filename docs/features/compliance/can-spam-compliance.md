@@ -119,7 +119,7 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 **Example Disclosure:**
 
-```
+```text
 
 This is an advertisement from [Your Company Name]
 
@@ -212,7 +212,7 @@ Company Address Setup:
 
 **Example Unsubscribe Text:**
 
-```
+```text
 
 If you no longer wish to receive these emails, you may 
 [unsubscribe here]({{unsubscribe_url}})
@@ -240,7 +240,7 @@ If you no longer wish to receive these emails, you may
 
 #### Unsubscribe Processing
 
-```
+```text
 
 User clicks unsubscribe
   ↓
@@ -444,7 +444,7 @@ Retention Policy:
 
 #### List-Unsubscribe Header
 
-```
+```text
 
 List-Unsubscribe: <mailto:unsubscribe@penguinmails.com?subject=unsubscribe>,
                   <https://penguinmails.com/unsubscribe/{{campaign_id}}/{{contact_id}}>

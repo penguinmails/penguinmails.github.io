@@ -121,7 +121,7 @@ res.download('tenant-ssh-key.pem', privateKey);
 
 **Rotation Workflow:**
 
-```
+```text
 
 Cron job checks last_rotated timestamp
   ↓
@@ -309,7 +309,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Vault Secret Structure
 
-```
+```text
 
 vault/vps/{tenant_id}/
 ├── admin_ssh/

@@ -65,7 +65,7 @@ PenguinMails implements comprehensive security controls across all platform laye
 
 **Setup** (Automated during infrastructure setup):
 
-```
+```text
 
 TXT Record: @ or yourdomain.com
 Value: v=spf1 ip4:YOUR_VPS_IP ~all
@@ -89,7 +89,7 @@ Value: v=spf1 ip4:YOUR_VPS_IP ~all
 
 **Setup** (Automated):
 
-```
+```text
 
 TXT Record: default._domainkey.yourdomain.com
 Value: v=DKIM1; k=rsa; p=YOUR_PUBLIC_KEY
@@ -113,7 +113,7 @@ Value: v=DKIM1; k=rsa; p=YOUR_PUBLIC_KEY
 
 **Setup** (Staged rollout recommended):
 
-```
+```text
 
 Phase 1 (Monitoring):
 TXT Record: _dmarc.yourdomain.com
@@ -274,7 +274,7 @@ Value: v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com
 
 **Allowed Inbound:**
 
-```
+```text
 
 Port 25   (SMTP)       - Email reception
 Port 465  (SMTPS)      - Secure SMTP
@@ -503,7 +503,7 @@ interface AuditLog {
 
 All HTTP responses include security headers:
 
-```
+```text
 
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 X-Frame-Options: DENY

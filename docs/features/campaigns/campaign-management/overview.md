@@ -61,7 +61,7 @@ Campaign Management is the core revenue-generating feature of PenguinMails, enab
 
 #### Step 1: Create a New Campaign
 
-```
+```text
 
 Dashboard → Campaigns → Create New Campaign
 
@@ -80,7 +80,7 @@ Campaign Setup:
 
 **Simple 3-Email Welcome Sequence:**
 
-```
+```text
 
 Email 1: Welcome Email (Send immediately)
   ↓ Wait 2 days
@@ -93,7 +93,7 @@ Email 3: Special Offer (Send 5 days after signup)
 
 **Visual Builder:**
 
-```
+```text
 
 ┌──────────────────────────────────────────────────┐
 │ Sequence Builder                                 │
@@ -136,7 +136,7 @@ Email 3: Special Offer (Send 5 days after signup)
 
 **Email 1 Setup:**
 
-```
+```text
 
 Subject Line: Welcome to {{company}}!
 Preview Text: Thanks for signing up, {{firstName}}
@@ -164,7 +164,7 @@ Personalization:
 
 **Pre-Launch Checklist:**
 
-```
+```text
 
 Campaign Review:
 ✓ Audience: 500 contacts selected
@@ -183,7 +183,7 @@ Campaign Review:
 
 **Campaign Dashboard:**
 
-```
+```text
 
 Campaign: Welcome Series
 Status: Active | Started: Nov 25, 2025
@@ -209,7 +209,7 @@ Email 3: 200 sent | 40% open | 15% click
 
 Send a single email to your entire list or segment:
 
-```
+```text
 
 Use Cases:
 
@@ -235,7 +235,7 @@ Best For: Time-sensitive announcements
 
 Automated sequence delivered over time:
 
-```
+```text
 
 Use Cases:
 
@@ -261,7 +261,7 @@ Best For: Relationship building
 
 Event-based campaigns that start automatically:
 
-```
+```text
 
 Triggers:
 
@@ -290,7 +290,7 @@ Best For: Behavioral automation
 
 Compare variations to optimize performance:
 
-```
+```text
 
 Test Elements:
 
@@ -322,7 +322,7 @@ Best For: Performance optimization
 
 **10-Step Lead Nurturing Campaign:**
 
-```
+```text
 
 START
   │
@@ -446,7 +446,7 @@ campaign_schedule:
 
 **Example:**
 
-```
+```text
 
 Contact in New York (EST): Email sent at 9:00 AM EST
 Contact in Los Angeles (PST): Email sent at 9:00 AM PST
@@ -490,7 +490,7 @@ send_optimization:
 
 **Results:**
 
-```
+```text
 
 Contact A: Historically opens at 7:30 AM → Send at 7:15 AM
 Contact B: Historically opens at 2:00 PM → Send at 1:45 PM
@@ -505,7 +505,7 @@ Contact C: No history → Send at industry benchmark (9:00 AM)
 
 **Welcome Series Template:**
 
-```
+```text
 
 Template: "SaaS Welcome Series"
 Duration: 14 days
@@ -524,7 +524,7 @@ Conversion Rate: 12-18% (industry average)
 
 **Lead Nurturing Template:**
 
-```
+```text
 
 Template: "B2B Lead Nurturing"
 Duration: 30 days
@@ -544,7 +544,7 @@ Conversion Rate: 8-12% (industry average)
 
 **Save Campaign as Template:**
 
-```
+```text
 
 Campaign Actions:
   → Save as Template
@@ -610,7 +610,7 @@ campaign_audience:
 
 **Example:**
 
-```
+```text
 
 Day 1: 500 contacts match criteria → Enrolled
 Day 5: 50 new contacts match → Auto-enrolled at step 1
@@ -655,7 +655,7 @@ exclusion_rules:
 
 **Enterprise Approval Process:**
 
-```
+```text
 
 Campaign Creation:
   ↓
@@ -707,7 +707,7 @@ approval_workflow:
 
 **Real-Time Collaboration:**
 
-```
+```text
 
 Campaign Editor:
 ┌─────────────────────────────────────────────────────┐

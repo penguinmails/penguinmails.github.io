@@ -55,7 +55,7 @@ The Unified Inbox consolidates emails from thousands of sender accounts into a s
 
 #### Step 1: Access the Inbox
 
-```
+```text
 
 Dashboard → Inbox
 

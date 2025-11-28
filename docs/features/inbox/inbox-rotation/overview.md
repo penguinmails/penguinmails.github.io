@@ -55,7 +55,7 @@ Inbox Rotation protects your sender reputation by ensuring no single email accou
 
 #### Step 1: Create a Pool
 
-```
+```text
 
 Dashboard → Infrastructure → Rotation Pools → Create New
 
@@ -80,7 +80,7 @@ Pool Configuration:
 
 Select accounts to include in this rotation.
 
-```
+```text
 
 Available Accounts:
 ☑ sarah@company.com (Health: 98%)
@@ -97,7 +97,7 @@ Available Accounts:
 
 Link your campaign to the pool instead of a single sender.
 
-```
+```text
 
 Campaign Settings → Sender:
 ┌─────────────────────────────────────────────────────┐
@@ -116,7 +116,7 @@ Campaign Settings → Sender:
 
 **Pool Dashboard:**
 
-```
+```text
 
 Status: Healthy (4/4 Active)
 Capacity: 200 emails/day

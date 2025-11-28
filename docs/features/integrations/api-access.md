@@ -42,12 +42,9 @@ We use **Bearer Token** authentication.
 2. Include it in the `Authorization` header.
 
 ```bash
-
 curl -X GET https://api.penguinmails.com/v1/campaigns \
   -H "Authorization: Bearer pm_live_12345..."
-
-
-```yaml
+```
 
 ---
 
@@ -84,16 +81,14 @@ Limits are applied per tenant based on your subscription plan.
 ## Send a single email:
 
 
-```
-
+```json
 POST /emails/send
 {
-  "to": "<user@example.com>",
+  "to": "user@example.com",
   "template_id": "welcome-v1",
   "variables": { "name": "Alice" }
 }
-
-```sql
+```
 
 
 ### Contacts
@@ -101,15 +96,13 @@ POST /emails/send
 ## Add or update a contact:
 
 
-```
-
+```json
 POST /contacts
 {
-  "email": "<lead@example.com>",
+  "email": "lead@example.com",
   "attributes": { "source": "signup_form" }
 }
-
-```text
+```
 
 
 ### Campaigns
@@ -117,10 +110,8 @@ POST /contacts
 ## List campaigns:
 
 
-```
-
+```http
 GET /campaigns?status=sent&limit=10
-
 ```
 
 ---

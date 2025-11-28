@@ -57,7 +57,7 @@ Email Sequences are the engine behind automated relationship building. Unlike si
 
 Every sequence starts with an entry point.
 
-```
+```text
 
 Sequence Settings:
 ┌─────────────────────────────────────────────────────┐
@@ -81,7 +81,7 @@ Sequence Settings:
 
 **Build a 3-Email Flow:**
 
-```
+```text
 
 [START]
    │
@@ -120,7 +120,7 @@ Sequence Settings:
 
 **Smart Waiting:**
 
-```
+```text
 
 Delay Settings (Step 2):
 ┌─────────────────────────────────────────────────────┐
@@ -142,7 +142,7 @@ Delay Settings (Step 2):
 
 **Launch Checklist:**
 
-```
+```text
 
 ✓ Trigger active: "New Signups" segment
 ✓ All 3 emails have content
@@ -230,7 +230,7 @@ delay_config:
 
 Stop the sequence immediately when the objective is met.
 
-```
+```text
 
 Goal Definition:
 ┌─────────────────────────────────────────────────────┐

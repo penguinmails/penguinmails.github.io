@@ -47,7 +47,7 @@ Manual Reporting provides essential data export and report generation capabiliti
 
 #### Step 1: Navigate to Reports
 
-```
+```text
 
 Dashboard → Analytics → Reports → Create New Report
 

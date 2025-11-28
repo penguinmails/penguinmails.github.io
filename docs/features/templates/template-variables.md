@@ -60,7 +60,7 @@ Template Variables enable you to create dynamic, personalized email content that
 
 #### Standard Contact Fields
 
-```
+```text
 
 Hi {{first_name}},
 
@@ -76,7 +76,7 @@ The {{workspace_name}} Team
 
 **Output Example:**
 
-```
+```text
 
 Hi John,
 
@@ -126,7 +126,7 @@ Workspace:
 
 #### Basic Syntax
 
-```
+```text
 
 Hi {{first_name | default: "there"}},
 
@@ -137,7 +137,7 @@ Welcome to {{company | default: "our platform"}}!
 
 **When Data Exists:**
 
-```
+```text
 
 Hi John,
 Welcome to Acme Inc!
@@ -147,7 +147,7 @@ Welcome to Acme Inc!
 
 **When Data Missing:**
 
-```
+```text
 
 Hi there,
 Welcome to our platform!
@@ -157,7 +157,7 @@ Welcome to our platform!
 
 #### Multiple Fallbacks
 
-```
+```text
 
 {{first_name | default: {{contact_name}} | default: "Valued Customer"}}
 
@@ -176,7 +176,7 @@ Welcome to our platform!
 
 #### Simple If/Else
 
-```
+```text
 
 {% if lead_score >= 75 %}
   You're a VIP customer! Here's an exclusive offer...
@@ -189,7 +189,7 @@ Welcome to our platform!
 
 #### If/Elsif/Else
 
-```
+```text
 
 {% if lead_score >= 90 %}
   🌟 Platinum Tier - Exclusive Access
@@ -206,7 +206,7 @@ Welcome to our platform!
 
 #### Checking for Empty Values
 
-```
+```text
 
 {% if company %}
   We noticed you work at {{company}}.
@@ -221,7 +221,7 @@ Welcome to our platform!
 
 #### Personalized Greeting
 
-```
+```text
 
 {% if first_name %}
   Hi {{first_name}},
@@ -236,7 +236,7 @@ Thanks for being a valued customer!
 
 #### Location-Based Content
 
-```
+```text
 
 {% if country == "United States" %}
   Free shipping on orders over $50!
@@ -251,7 +251,7 @@ Thanks for being a valued customer!
 
 #### Account Type Messaging
 
-```
+```text
 
 {% if custom.account_type == "trial" %}
   Your trial expires in {{custom.trial_days_remaining}} days.
@@ -273,7 +273,7 @@ Thanks for being a valued customer!
 
 #### Accessing Custom Fields
 
-```
+```text
 
 Standard Syntax:
   {{custom.industry}}
@@ -289,7 +289,7 @@ Nested Custom Fields:
 
 #### Custom Field Examples
 
-```
+```text
 
 Industry-Specific Content:
   {% if custom.industry == "SaaS" %}
@@ -314,7 +314,7 @@ Company Size Targeting:
 
 #### Multiple Conditions (AND)
 
-```
+```text
 
 {% if lead_score >= 75 and custom.account_type == "trial" %}
   You're a highly engaged trial user!
@@ -326,7 +326,7 @@ Company Size Targeting:
 
 #### Multiple Conditions (OR)
 
-```
+```text
 
 {% if country == "United States" or country == "Canada" %}
   North American customers get free shipping!
@@ -337,7 +337,7 @@ Company Size Targeting:
 
 #### Complex Logic
 
-```
+```text
 
 {% if (lead_score >= 75 and custom.account_type == "trial") or custom.is_vip == true %}
   🎁 Special offer just for you!
@@ -386,7 +386,7 @@ Not Contains:
 
 #### Personalized URLs
 
-```
+```text
 
 Track your order:
 <a href="https://example.com/orders/{{order_id}}?email={{email}}">
@@ -403,7 +403,7 @@ Personalized landing page:
 
 #### UTM Parameters
 
-```
+```text
 
 <a href="{{landing_page_url}}?utm_source=email&utm_medium=campaign&utm_campaign={{campaign_name}}&utm_content={{email}}">
   Click Here
@@ -419,7 +419,7 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 #### Personalized Images
 
-```
+```text
 
 <img src="https://api.example.com/badge/{{first_name}}/{{lead_score}}" 
      alt="Your Score: {{lead_score}}">
@@ -432,7 +432,7 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 #### Conditional Images
 
-```
+```text
 
 {% if lead_score >= 90 %}
   <img src="{{cdn_url}}/badges/platinum.png" alt="Platinum Member">
@@ -449,7 +449,7 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 #### Date Filters
 
-```
+```text
 
 Account created:
   {{created_at | date: "MMMM DD, YYYY"}}
@@ -472,7 +472,7 @@ Relative time:
 
 #### Date Calculations
 
-```
+```text
 
 Trial expiration:
   {% assign trial_end = created_at | date_add: 14, "days" %}
@@ -489,7 +489,7 @@ Days remaining:
 
 #### Loop Through Lists
 
-```
+```text
 
 Your recent purchases:
 
@@ -516,7 +516,7 @@ Your recent purchases:
 
 #### Loop with Conditionals
 
-```
+```text
 
 {% for tag in tags %}
   {% if tag == "vip" %}
@@ -531,7 +531,7 @@ Your recent purchases:
 
 #### Loop Limits
 
-```
+```text
 
 Top 3 products:
 
@@ -546,7 +546,7 @@ Top 3 products:
 
 #### Text Filters
 
-```
+```text
 
 Uppercase:
   {{company | upcase}}
@@ -577,7 +577,7 @@ Strip HTML:
 
 #### String Operations
 
-```
+```text
 
 Concatenation:
   {{first_name}} {{last_name}}
@@ -600,7 +600,7 @@ Split:
 
 #### Number Filters
 
-```
+```text
 
 Currency:
   {{revenue | currency}}
@@ -626,7 +626,7 @@ Thousands separator:
 
 ### Math Operations
 
-```
+```text
 
 Addition:
   {% assign total = price + tax %}

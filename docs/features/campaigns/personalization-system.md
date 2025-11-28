@@ -193,7 +193,7 @@ Show different content blocks based on contact attributes:
 
 Adapt call-to-action based on contact status:
 
-```
+```text
 
 {% if customField.trialUser %}
   <a href="{{upgradeLink}}">Upgrade to Premium</a>
@@ -241,7 +241,7 @@ Personalize based on past actions:
 
 Show relevant products:
 
-```
+```text
 
 Based on your interest in {{customField.lastViewedProduct}}, 
 you might also like:
@@ -259,7 +259,7 @@ you might also like:
 
 Adapt content by location:
 
-```
+```text
 
 {% if country == "United States" %}
   Free shipping on orders over $50!
@@ -276,7 +276,7 @@ Adapt content by location:
 
 Combine with A/B testing:
 
-```
+```text
 
 Test A: Hi {{firstName}},
 Test B: Hi {{firstName}}, fellow {{customField.industry}} professional,

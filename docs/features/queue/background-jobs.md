@@ -111,7 +111,7 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
   "mapping": { "col_0": "email", "col_1": "name" }
 }
 
-```
+```text
 
 ## Processing Logic:
 
