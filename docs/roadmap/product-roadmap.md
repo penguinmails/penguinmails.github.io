@@ -362,13 +362,13 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ## Vault Integration
 
-- VPS SSH key storage (see [Vault SSH Keys](/docs/features/integrations/vault-ssh-keys.md))
+- VPS SSH key storage (see [Vault SSH Keys](/docs/features/integrations/vault-ssh-keys))
 
-- SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials.md))
+- SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials))
 
-- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys.md))
+- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys))
 
-- Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery.md))
+- Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery))
 
 ## Infrastructure
 
@@ -398,7 +398,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Global market expansion enabled (Q2 2026)
 
-**Detailed Roadmap:** [Infrastructure Management Roadmap](/docs/features/infrastructure/roadmap.md)
+**Detailed Roadmap:** [Infrastructure Management Roadmap](/docs/features/infrastructure/roadmap)
 
 ---
 
@@ -561,7 +561,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Global market expansion enabled (Q4 2026)
 
-**Detailed Roadmap:** [Domain Management Roadmap](/docs/features/domains/roadmap.md)
+**Detailed Roadmap:** [Domain Management Roadmap](/docs/features/domains/roadmap)
 
 ---
 
@@ -668,7 +668,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - 15% improvement in lead conversion rates
 
-**Detailed Roadmap:** [Automation Roadmap](/docs/features/automation/roadmap.md)
+**Detailed Roadmap:** [Automation Roadmap](/docs/features/automation/roadmap)
 
 ---
 
@@ -943,7 +943,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Involuntary churn reduced by 50% (Q4 2026)
 
-**Detailed Roadmap:** [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap.md)
+**Detailed Roadmap:** [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap)
 
 ---
 
@@ -1214,7 +1214,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Segmentation improves campaign performance by 20%
 
-**Detailed Roadmap:** [Analytics & Reporting Roadmap](/docs/features/analytics/roadmap.md)
+**Detailed Roadmap:** [Analytics & Reporting Roadmap](/docs/features/analytics/roadmap)
 
 ---
 
@@ -1571,7 +1571,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 "PenguinMails provides a powerful REST API and webhook system that enables integration with any external system. Build custom integrations with your CRM, analytics tools, or internal systems. Pre-built integrations with Salesforce, HubSpot, and Zapier coming in Q1-Q2 2026."
 
-**Detailed Roadmap:** [Integrations Roadmap](/docs/features/integrations/roadmap.md)
+**Detailed Roadmap:** [Integrations Roadmap](/docs/features/integrations/roadmap)
 
 ---
 
@@ -1882,7 +1882,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 - Train custom intent classification model (Q1 2027) to reduce AI costs by 80-90%
 
-**Detailed Roadmap:** [Inbox Management Roadmap](/docs/features/inbox/roadmap.md)
+**Detailed Roadmap:** [Inbox Management Roadmap](/docs/features/inbox/roadmap)
 
 ---
 

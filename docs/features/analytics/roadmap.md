@@ -911,23 +911,23 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Planning & Strategy
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Platform-wide feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Platform-wide feature timeline
 
-- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap.md)** - Strategic feature delivery timeline
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 
 - **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Complete gap analysis
 
 ### Feature Documentation
 
-- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview.md)** - Current analytics capabilities
+- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview)** - Current analytics capabilities
 
-- **[Enhanced Analytics Overview](/docs/features/analytics/enhanced-analytics/overview.md)** - Q1 2026 advanced features
+- **[Enhanced Analytics Overview](/docs/features/analytics/enhanced-analytics/overview)** - Q1 2026 advanced features
 
-- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and data export
+- **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and data export
 
 ### Related Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Campaign-level analytics
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign-level analytics
 
 - **[Email Operations](/docs/features/campaigns/)** - Email sending and tracking
 
@@ -935,9 +935,9 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Technical Architecture
 
-- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Analytics database architecture
+- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide)** - Analytics database architecture
 
-- **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing
+- **[Queue System](/docs/features/queue/background-jobs)** - Background job processing
 
 ---
 

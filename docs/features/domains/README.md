@@ -116,11 +116,11 @@ See [Domain Management Roadmap](./roadmap.md) for detailed timeline and features
 
 - [Domain Routes](/docs/design/routes/workspace-domains) - UI specifications (7 routes)
 
-- [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning and mailbox creation
+- [Infrastructure Management](/docs/features/infrastructure/README) - VPS provisioning and mailbox creation
 
-- [Email Operations](/docs/features/email-operations/README.md) - Email sending pipeline
+- [Email Operations](/docs/features/email-operations/README) - Email sending pipeline
 
-- [Warmup Features](/docs/features/warmup/README.md) - Email warmup system
+- [Warmup Features](/docs/features/warmup/README) - Email warmup system
 
 ### Security & Compliance
 

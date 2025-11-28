@@ -202,47 +202,47 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 - [Automation Roadmap](./roadmap.md) - Detailed implementation timeline
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap.md) - Feature classification
+- [Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap) - Feature classification
 
 ### Related Features
 
 ## Foundation Features (Required for Automation)
 
-- [Campaign Management](/docs/features/campaigns/overview.md) - Basic email sequences (linear workflow foundation)
+- [Campaign Management](/docs/features/campaigns/overview) - Basic email sequences (linear workflow foundation)
 
-- [Email Sequences](/docs/features/campaigns/email-sequences.md) - Campaign flows to be extended with branching
+- [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling.md) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
 
-- [Template Management](/docs/features/templates/template-management.md) - Email templates for automation actions
+- [Template Management](/docs/features/templates/template-management) - Email templates for automation actions
 
-- [Email Pipeline](/docs/features/queue/email-pipeline.md) - Background job system for workflow execution
+- [Email Pipeline](/docs/features/queue/email-pipeline) - Background job system for workflow execution
 
-- [Background Jobs](/docs/features/queue/background-jobs.md) - Queue infrastructure for action execution
+- [Background Jobs](/docs/features/queue/background-jobs) - Queue infrastructure for action execution
 
 ## Analytics & Tracking
 
-- [Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md) - Event tracking foundation for triggers
+- [Enhanced Analytics](/docs/features/analytics/enhanced-analytics) - Event tracking foundation for triggers
 
-- [Core Analytics](/docs/features/analytics/core-analytics.md) - Workflow performance metrics
+- [Core Analytics](/docs/features/analytics/core-analytics) - Workflow performance metrics
 
 ## Contact Management
 
-- [Lead Management](/docs/features/leads/overview.md) - Contact segmentation for triggers and conditions
+- [Lead Management](/docs/features/leads/overview) - Contact segmentation for triggers and conditions
 
 ## Integrations
 
-- [Webhook System](/docs/features/integrations/webhook-system.md) - External event triggers
+- [Webhook System](/docs/features/integrations/webhook-system) - External event triggers
 
-- [API Access](/docs/features/integrations/api-access.md) - Programmatic workflow management
+- [API Access](/docs/features/integrations/api-access) - Programmatic workflow management
 
-- [Integrations Overview](/docs/features/integrations/overview.md) - Third-party automation (Zapier, Make.com)
+- [Integrations Overview](/docs/features/integrations/overview) - Third-party automation (Zapier, Make.com)
 
 ### User Journeys
 
-- [Marketing Team Journey](/docs/user-journeys/marketing-journey.md) - Automation in marketing workflow
+- [Marketing Team Journey](/docs/user-journeys/marketing-journey) - Automation in marketing workflow
 
 - [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys.md) - Multi-client automation
 
@@ -250,11 +250,11 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 ## Routes & UI
 
-- [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation
+- [Campaign Routes](/docs/design/routes/workspace-campaigns) - Current sequence implementation
 
-- [Template Routes](/docs/design/routes/workspace-templates.md) - Template management UI
+- [Template Routes](/docs/design/routes/workspace-templates) - Template management UI
 
-- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Queue monitoring
+- [Platform Admin Routes](/docs/design/routes/platform-admin) - Queue monitoring
 
 ## APIs
 

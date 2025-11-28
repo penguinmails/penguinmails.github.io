@@ -547,11 +547,11 @@ These convenience features can be implemented if time permits, but are not block
 
 - [Domain Management](/docs/features/domains/domain-management) - Current domain features
 
-- [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning
+- [Infrastructure Management](/docs/features/infrastructure/README) - VPS provisioning
 
-- [Email Operations](/docs/features/email-operations/README.md) - Email sending pipeline
+- [Email Operations](/docs/features/email-operations/README) - Email sending pipeline
 
-- [Warmup Features](/docs/features/warmup/README.md) - Email warmup system
+- [Warmup Features](/docs/features/warmup/README) - Email warmup system
 
 ### Technical Architecture
 

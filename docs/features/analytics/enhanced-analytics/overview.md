@@ -987,9 +987,9 @@ The system will automatically generate recommendations:
 
 ### Related Features
 
-- **[Core Analytics](/docs/features/analytics/core-analytics/overview.md)** - Foundation analytics (must be complete before enhanced analytics)
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Foundation analytics (must be complete before enhanced analytics)
 
-- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Data export and scheduled reports
+- **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Data export and scheduled reports
 
 ---
 

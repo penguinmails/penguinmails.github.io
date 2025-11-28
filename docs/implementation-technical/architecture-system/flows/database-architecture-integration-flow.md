@@ -234,13 +234,13 @@ graph LR
 
 ## Related Documentation
 
-- [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide.md) - Comprehensive architecture overview
+- [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Comprehensive architecture overview
 
-- [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md) - Operational database details
+- [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) - Operational database details
 
-- [Content Database Schema](/docs/implementation-technical/database-infrastructure/content-database/schema-guide.md) - Content storage details
+- [Content Database Schema](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) - Content storage details
 
-- [Notifications Database Schema](/docs/implementation-technical/database-infrastructure/notifications-database/schema-guide.md) - Notification system details
+- [Notifications Database Schema](/docs/implementation-technical/database-infrastructure/notifications-database/schema-guide) - Notification system details
 
 - [Queue System Documentation](/docs/implementation-technical/database-infrastructure/queue/) - Job processing documentation
 

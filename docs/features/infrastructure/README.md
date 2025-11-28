@@ -117,7 +117,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ## Vault Integration Dependency
 
-**CRITICAL:** Infrastructure provisioning depends on [Vault integration](/docs/features/integrations/overview.md#vault-integration) for secure secrets management.
+**CRITICAL:** Infrastructure provisioning depends on [Vault integration](/docs/features/integrations/overview#vault-integration) for secure secrets management.
 
 ## Vault-Stored Secrets
 
@@ -139,11 +139,11 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ## Related Features
 
-- [VPS SSH Key Management](/docs/features/integrations/vault-ssh-keys.md) - Secure SSH access
+- [VPS SSH Key Management](/docs/features/integrations/vault-ssh-keys) - Secure SSH access
 
-- [SMTP Credentials Storage](/docs/features/integrations/vault-smtp-credentials.md) - Email server credentials
+- [SMTP Credentials Storage](/docs/features/integrations/vault-smtp-credentials) - Email server credentials
 
-- [API Key System](/docs/features/integrations/vault-api-keys.md) - Programmatic access
+- [API Key System](/docs/features/integrations/vault-api-keys) - Programmatic access
 
 ---
 
@@ -207,17 +207,17 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
 
-- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
+- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
 
-- **[Hostwind Integration Guide](/docs/implementation-technical/guides/hostwind-integration.md)** - VPS provider integration
+- **[Hostwind Integration Guide](/docs/implementation-technical/guides/hostwind-integration)** - VPS provider integration
 
 ### Business Context
 
-- **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing.md)** - Cost structure
+- **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing)** - Cost structure
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
 
-- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap.md)** - Strategic priorities
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 
 ---
 

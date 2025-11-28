@@ -270,23 +270,23 @@
 
 ### Planning & Strategy
 
-- [Lead Management README](/docs/features/leads/README.md) - Feature area overview with MVP status
+- [Lead Management README](/docs/features/leads/README) - Feature area overview with MVP status
 
-- [Lead Management Roadmap](/docs/features/leads/roadmap.md) - Detailed timeline and quarterly breakdown
+- [Lead Management Roadmap](/docs/features/leads/roadmap) - Detailed timeline and quarterly breakdown
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature delivery
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
 ### Feature Documentation
 
-- [Leads Management](/docs/features/leads/leads-management.md) - Core contact database
+- [Leads Management](/docs/features/leads/leads-management) - Core contact database
 
-- [Contact Segmentation](/docs/features/leads/contact-segmentation.md) - Dynamic and static segmentation
+- [Contact Segmentation](/docs/features/leads/contact-segmentation) - Dynamic and static segmentation
 
-- [Import/Export](/docs/features/leads/import-export.md) - Bulk contact operations
+- [Import/Export](/docs/features/leads/import-export) - Bulk contact operations
 
-- [Lead Scoring](/docs/features/leads/lead-scoring.md) - Behavioral and demographic scoring
+- [Lead Scoring](/docs/features/leads/lead-scoring) - Behavioral and demographic scoring
 
 ### Implementation Tasks
 
@@ -294,11 +294,11 @@
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
 
-- [Inbox Management](/docs/features/inbox/README.md) - Reply management linked to contacts
+- [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 
-- [Integrations](/docs/features/integrations/README.md) - CRM integrations (Post-MVP)
+- [Integrations](/docs/features/integrations/README) - CRM integrations (Post-MVP)
 
 ## 6. Data Strategy
 

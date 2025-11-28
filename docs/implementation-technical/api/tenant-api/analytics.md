@@ -598,31 +598,31 @@ interface TimeSeriesDataPoint {
 
 ### Feature Documentation
 
-- **[Analytics & Reporting Features](/docs/features/analytics/core-analytics/overview.md)** - Feature overview and capabilities
+- **[Analytics & Reporting Features](/docs/features/analytics/core-analytics/overview)** - Feature overview and capabilities
 
-- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Q1 2026 advanced analytics features
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Q1 2026 advanced analytics features
 
-- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and data export
+- **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and data export
 
 ### API Documentation
 
-- **[Campaign Management API](/docs/implementation-technical/api/tenant-api/campaigns.md)** - Campaign CRUD operations
+- **[Campaign Management API](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign CRUD operations
 
-- **[Workspace API](/docs/implementation-technical/api/tenant-api/workspaces.md)** - Workspace management
+- **[Workspace API](/docs/implementation-technical/api/tenant-api/workspaces)** - Workspace management
 
-- **[Platform Analytics API](/docs/implementation-technical/api/platform-api/analytics.md)** - System-level analytics
+- **[Platform Analytics API](/docs/implementation-technical/api/platform-api/analytics)** - System-level analytics
 
 ### Frontend Routes
 
-- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign dashboard with analytics
+- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns)** - Campaign dashboard with analytics
 
-- **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance and system analytics
+- **[Platform Admin Routes](/docs/design/routes/platform-admin)** - Finance and system analytics
 
 ### Technical Architecture
 
-- **[OLAP Analytics Schema](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Database architecture for analytics
+- **[OLAP Analytics Schema](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide)** - Database architecture for analytics
 
-- **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing
+- **[Queue System](/docs/features/queue/background-jobs)** - Background job processing
 
 ### Implementation Planning
 

@@ -633,13 +633,13 @@ This document provides a detailed roadmap for infrastructure management features
 
 ## Vault Integration
 
-- VPS SSH key storage (see [Vault SSH Keys](/docs/features/integrations/vault-ssh-keys.md))
+- VPS SSH key storage (see [Vault SSH Keys](/docs/features/integrations/vault-ssh-keys))
 
-- SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials.md))
+- SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials))
 
-- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys.md))
+- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys))
 
-- Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery.md))
+- Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery))
 
 ## Third-Party Services
 
@@ -765,17 +765,17 @@ This document provides a detailed roadmap for infrastructure management features
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
 
-- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
+- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
 
-- **[Hostwind Integration Guide](/docs/implementation-technical/guides/hostwind-integration.md)** - VPS provider integration
+- **[Hostwind Integration Guide](/docs/implementation-technical/guides/hostwind-integration)** - VPS provider integration
 
 ### Business Context
 
-- **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing.md)** - Cost structure
+- **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing)** - Cost structure
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
 
-- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap.md)** - Strategic priorities
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 
 ---
 

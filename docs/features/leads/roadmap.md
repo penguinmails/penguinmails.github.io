@@ -760,11 +760,11 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 - [Lead Management README](./README.md) - Feature area overview
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature delivery
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Technical dependencies
+- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical dependencies
 
 ### Feature Documentation
 
@@ -778,7 +778,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Route Specifications
 
-- [Tenant Leads Routes](/docs/design/routes/tenant-leads.md) - 4 lead management routes with UI specs
+- [Tenant Leads Routes](/docs/design/routes/tenant-leads) - 4 lead management routes with UI specs
 
 ### API Documentation
 
@@ -790,11 +790,11 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
 
-- [Inbox Management](/docs/features/inbox/README.md) - Reply management linked to contacts
+- [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 
-- [Integrations](/docs/features/integrations/README.md) - CRM integrations (Post-MVP)
+- [Integrations](/docs/features/integrations/README) - CRM integrations (Post-MVP)
 
 ### Related Review Findings
 

@@ -583,67 +583,67 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 ### Planning
 
-- [Automation Overview](/docs/features/automation/README.md) - Feature summary
+- [Automation Overview](/docs/features/automation/README) - Feature summary
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Infrastructure milestones
+- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Infrastructure milestones
 
 ### Specifications
 
-- [Workflow Automation Overview](/docs/features/automation/workflow-automation/overview.md) - Detailed feature spec
+- [Workflow Automation Overview](/docs/features/automation/workflow-automation/overview) - Detailed feature spec
 
-- [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation
+- [Campaign Routes](/docs/design/routes/workspace-campaigns) - Current sequence implementation
 
-- [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns.md) - Campaign management API
+- [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns) - Campaign management API
 
 ### Related Features
 
 ## Foundation Features
 
-- [Campaign Management](/docs/features/campaigns/overview.md) - Basic email sequences (linear workflow foundation)
+- [Campaign Management](/docs/features/campaigns/overview) - Basic email sequences (linear workflow foundation)
 
-- [Email Sequences](/docs/features/campaigns/email-sequences.md) - Campaign flows to be extended with branching
+- [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling.md) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
 
-- [A/B Testing](/docs/features/campaigns/ab-testing.md) - Split testing in campaigns
+- [A/B Testing](/docs/features/campaigns/ab-testing) - Split testing in campaigns
 
-- [Personalization System](/docs/features/campaigns/personalization-system.md) - Dynamic content for automation
+- [Personalization System](/docs/features/campaigns/personalization-system) - Dynamic content for automation
 
-- [Template Management](/docs/features/templates/template-management.md) - Email templates for automation actions
+- [Template Management](/docs/features/templates/template-management) - Email templates for automation actions
 
-- [Email Pipeline](/docs/features/queue/email-pipeline.md) - Background job system for workflow execution
+- [Email Pipeline](/docs/features/queue/email-pipeline) - Background job system for workflow execution
 
-- [Background Jobs](/docs/features/queue/background-jobs.md) - Queue infrastructure for action execution
+- [Background Jobs](/docs/features/queue/background-jobs) - Queue infrastructure for action execution
 
 ## Analytics & Tracking
 
-- [Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md) - Event tracking foundation for triggers
+- [Enhanced Analytics](/docs/features/analytics/enhanced-analytics) - Event tracking foundation for triggers
 
-- [Core Analytics](/docs/features/analytics/core-analytics.md) - Workflow performance metrics
+- [Core Analytics](/docs/features/analytics/core-analytics) - Workflow performance metrics
 
 ## Contact Management
 
-- [Lead Management](/docs/features/leads/overview.md) - Contact segmentation for triggers and conditions
+- [Lead Management](/docs/features/leads/overview) - Contact segmentation for triggers and conditions
 
 ## Integrations
 
-- [Webhook System](/docs/features/integrations/webhook-system.md) - External event triggers and action notifications
+- [Webhook System](/docs/features/integrations/webhook-system) - External event triggers and action notifications
 
-- [API Access](/docs/features/integrations/api-access.md) - Programmatic workflow management
+- [API Access](/docs/features/integrations/api-access) - Programmatic workflow management
 
-- [Integrations Overview](/docs/features/integrations/overview.md) - Third-party automation (Zapier, Make.com)
+- [Integrations Overview](/docs/features/integrations/overview) - Third-party automation (Zapier, Make.com)
 
 ### Technical Implementation
 
 ## Routes & UI
 
-- [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation (foundation for workflows)
+- [Campaign Routes](/docs/design/routes/workspace-campaigns) - Current sequence implementation (foundation for workflows)
 
-- [Template Routes](/docs/design/routes/workspace-templates.md) - Template management UI
+- [Template Routes](/docs/design/routes/workspace-templates) - Template management UI
 
-- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Queue monitoring for workflow execution
+- [Platform Admin Routes](/docs/design/routes/platform-admin) - Queue monitoring for workflow execution
 
 ## APIs
 

@@ -70,13 +70,13 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - [Lead Management Roadmap](./roadmap.md) - Detailed timeline and quarterly breakdown
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature delivery
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
 ### Route Specifications
 
-- [Tenant Leads Routes](/docs/design/routes/tenant-leads.md) - 4 lead management routes with UI specs
+- [Tenant Leads Routes](/docs/design/routes/tenant-leads) - 4 lead management routes with UI specs
 
 ### API Documentation
 
@@ -88,11 +88,11 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
 
-- [Inbox Management](/docs/features/inbox/README.md) - Reply management linked to contacts
+- [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 
-- [Integrations](/docs/features/integrations/README.md) - CRM integrations (Post-MVP)
+- [Integrations](/docs/features/integrations/README) - CRM integrations (Post-MVP)
 
 ---
 

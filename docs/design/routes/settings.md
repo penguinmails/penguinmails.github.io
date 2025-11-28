@@ -310,19 +310,19 @@
 > - Cancellation flow with retention offers
 > - Budget controls and spending limits
 >
-> See [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap.md) for timeline.
+> See [Billing & Subscriptions Roadmap](/docs/features/payments/roadmap) for timeline.
 
 **Related Documentation**:
 
-- [Billing & Subscriptions Overview](/docs/features/payments/README.md)
+- [Billing & Subscriptions Overview](/docs/features/payments/README)
 
-- [Subscription Management](/docs/features/payments/subscription-management.md)
+- [Subscription Management](/docs/features/payments/subscription-management)
 
-- [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- [Stripe Integration](/docs/features/payments/stripe-integration)
 
-- [Billing Dashboard](/docs/features/payments/billing-dashboard.md)
+- [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
-- [Billing Roadmap](/docs/features/payments/roadmap.md)
+- [Billing Roadmap](/docs/features/payments/roadmap)
 
 **Technical Integration**:
 

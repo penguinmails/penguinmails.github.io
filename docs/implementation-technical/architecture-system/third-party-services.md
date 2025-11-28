@@ -448,25 +448,25 @@ This document provides a comprehensive analysis of all third-party service depen
 
 ### Feature Documentation
 
-- [Infrastructure Features](/docs/features/infrastructure/README.md) - Infrastructure management
+- [Infrastructure Features](/docs/features/infrastructure/README) - Infrastructure management
 
-- [Integration Features](/docs/features/integrations/README.md) - Third-party integrations
+- [Integration Features](/docs/features/integrations/README) - Third-party integrations
 
-- [Billing Features](/docs/features/payments/README.md) - Payment processing
+- [Billing Features](/docs/features/payments/README) - Payment processing
 
 ### Technical Documentation
 
-- [Technical Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview.md) - System architecture
+- [Technical Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - System architecture
 
-- [Infrastructure Provisioning Flow](/docs/implementation-technical/architecture-system/flows/infrastructure-provisioning-flow.md) - VPS provisioning
+- [Infrastructure Provisioning Flow](/docs/implementation-technical/architecture-system/flows/infrastructure-provisioning-flow) - VPS provisioning
 
-- [Email Infrastructure Integration](/docs/implementation-technical/architecture-system/flows/email-infrastructure-integration-flow.md) - Email setup
+- [Email Infrastructure Integration](/docs/implementation-technical/architecture-system/flows/email-infrastructure-integration-flow) - Email setup
 
 ### Roadmap
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Feature timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Feature timeline
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Technical dependencies
+- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical dependencies
 
 - [Master Roadmap](.kiro/specs/feature-completeness-review/findings/master-roadmap.md) - Consolidated roadmap
 

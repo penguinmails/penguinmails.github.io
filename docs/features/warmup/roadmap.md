@@ -493,15 +493,15 @@ Comprehensive timeline for email warmup and reputation management features from 
 
 - [Warmup API](/docs/implementation-technical/api/tenant-api/warmup) - Warmup management endpoints
 
-- [Domain Routes](/docs/design/routes/workspace-domains.md) - Warmup management route
+- [Domain Routes](/docs/design/routes/workspace-domains) - Warmup management route
 
 - [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management) - Infrastructure setup
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 
 ---
 

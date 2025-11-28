@@ -132,25 +132,25 @@ See the [Inbox Management Roadmap](./roadmap.md) for:
 
 - [Inbox Management Roadmap](./roadmap.md) - Detailed timeline and roadmap items
 
-- [Tenant Inbox Routes](/docs/design/routes/tenant-inbox.md) - UI specifications
+- [Tenant Inbox Routes](/docs/design/routes/tenant-inbox) - UI specifications
 
-- [Inbox API](/docs/implementation-technical/api/tenant-api/inbox.md) - API endpoints
+- [Inbox API](/docs/implementation-technical/api/tenant-api/inbox) - API endpoints
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) - Campaigns generate inbox responses
+- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Campaigns generate inbox responses
 
-- [Lead Management](/docs/features/leads/leads-management.md) - Lead scoring and context
+- [Lead Management](/docs/features/leads/leads-management) - Lead scoring and context
 
-- [Email Operations](/docs/features/campaigns/email-sequences/overview.md) - Automated sequences
+- [Email Operations](/docs/features/campaigns/email-sequences/overview) - Automated sequences
 
 ### Database Architecture
 
-- [Content Database](/docs/implementation-technical/database-infrastructure/content-database/schema-guide.md) - Email storage and attachments
+- [Content Database](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) - Email storage and attachments
 
-- [Notifications Database](/docs/implementation-technical/database-infrastructure/notifications-database/schema-guide.md) - Browser notifications
+- [Notifications Database](/docs/implementation-technical/database-infrastructure/notifications-database/schema-guide) - Browser notifications
 
-- [5-Tier Database Architecture](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide.md) - Overall architecture
+- [5-Tier Database Architecture](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Overall architecture
 
 ---
 

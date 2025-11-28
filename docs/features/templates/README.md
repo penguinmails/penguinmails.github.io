@@ -192,13 +192,13 @@ See [Template Roadmap](./roadmap.md) for complete timeline and feature details.
 
 - [Template API](/docs/implementation-technical/api/tenant-api/templates) - Template management endpoints
 
-- [Template Routes](/docs/design/routes/workspace-templates.md) - 4 template management routes
+- [Template Routes](/docs/design/routes/workspace-templates) - 4 template management routes
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 
 ---
 

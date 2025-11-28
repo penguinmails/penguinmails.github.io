@@ -291,9 +291,9 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### Route Specifications
 
-- **[Settings Routes](/docs/design/routes/settings.md)** - `/dashboard/settings/billing` UI specification
+- **[Settings Routes](/docs/design/routes/settings)** - `/dashboard/settings/billing` UI specification
 
-- **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - `/dashboard/finance` for finance team
+- **[Platform Admin Routes](/docs/design/routes/platform-admin)** - `/dashboard/finance` for finance team
 
 ### Implementation Tasks
 
@@ -307,9 +307,9 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### API Documentation
 
-- **[Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions.md)** - Subscription management endpoints
+- **[Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions)** - Subscription management endpoints
 
-- **[Billing API](/docs/implementation-technical/api/platform-api/billing.md)** - Billing and payment endpoints
+- **[Billing API](/docs/implementation-technical/api/platform-api/billing)** - Billing and payment endpoints
 
 ### User Journeys
 
@@ -319,9 +319,9 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### Business Documentation
 
-- **[Pricing Strategy](/docs/business/strategy/pricing-strategy.md)** - Plan pricing and positioning
+- **[Pricing Strategy](/docs/business/strategy/pricing-strategy)** - Plan pricing and positioning
 
-- **[Financial Model](/docs/business/financial-analysis/financial-model.md)** - Revenue projections
+- **[Financial Model](/docs/business/financial-analysis/financial-model)** - Revenue projections
 
 ### Detailed Roadmap
 

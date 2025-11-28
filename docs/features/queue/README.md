@@ -166,9 +166,9 @@ In-app and email notifications for users.
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap.md) - Technical dependencies
+- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical dependencies
 
 ---
 

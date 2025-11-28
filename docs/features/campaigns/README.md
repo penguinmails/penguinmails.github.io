@@ -290,15 +290,15 @@ See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 
 ### Route Specifications
 
-- [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - 5 campaign management routes
+- [Campaign Routes](/docs/design/routes/workspace-campaigns) - 5 campaign management routes
 
-- [Template Routes](/docs/design/routes/workspace-templates.md) - 4 template management routes
+- [Template Routes](/docs/design/routes/workspace-templates) - 4 template management routes
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Overall product timeline
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic feature planning
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 
 ---
 

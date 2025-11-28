@@ -732,8 +732,8 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 
 ### Technical Implementation
 
-- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Analytics database architecture
+- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide)** - Analytics database architecture
 
-- **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing for reports
+- **[Queue System](/docs/features/queue/background-jobs)** - Background job processing for reports
 
 ---

@@ -375,17 +375,17 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 ### Feature Documentation
 
-- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview.md)** - Current analytics capabilities
+- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview)** - Current analytics capabilities
 
-- **[Enhanced Analytics Roadmap](/docs/features/analytics/enhanced-analytics/overview.md)** - Q1 2026 advanced features
+- **[Enhanced Analytics Roadmap](/docs/features/analytics/enhanced-analytics/overview)** - Q1 2026 advanced features
 
-- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and exports
+- **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and exports
 
 ### Route Specifications
 
-- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign analytics dashboard
+- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns)** - Campaign analytics dashboard
 
-- **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance and system analytics
+- **[Platform Admin Routes](/docs/design/routes/platform-admin)** - Finance and system analytics
 
 ### Implementation Review
 

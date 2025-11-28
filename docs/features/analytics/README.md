@@ -138,9 +138,9 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 - **[Analytics Roadmap](./roadmap.md)** - Detailed analytics timeline with quarterly breakdown (MVP Q1 2026, Enhanced Q1 2026, Advanced Q2-Q3 2026)
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Platform-wide feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Platform-wide feature timeline
 
-- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap.md)** - Strategic feature delivery timeline
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 
 ### Feature Completeness Review
 
@@ -148,21 +148,21 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### Route Specifications
 
-- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign analytics dashboard (`/dashboard/workspaces/[slug]/campaigns/[id]`)
+- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns)** - Campaign analytics dashboard (`/dashboard/workspaces/[slug]/campaigns/[id]`)
 
-- **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance dashboard (`/dashboard/finance`), system health (`/dashboard/system/infrastructure`), logs (`/dashboard/system/logs`)
+- **[Platform Admin Routes](/docs/design/routes/platform-admin)** - Finance dashboard (`/dashboard/finance`), system health (`/dashboard/system/infrastructure`), logs (`/dashboard/system/logs`)
 
-- **[Core App Structure](/docs/design/routes/core-app-structure.md)** - Dashboard layout and navigation
+- **[Core App Structure](/docs/design/routes/core-app-structure)** - Dashboard layout and navigation
 
 ### API Documentation
 
-- **[Tenant API - Analytics Endpoints](/docs/implementation-technical/api/tenant-api/analytics.md)** - Campaign metrics, engagement data, deliverability stats, export functionality
+- **[Tenant API - Analytics Endpoints](/docs/implementation-technical/api/tenant-api/analytics)** - Campaign metrics, engagement data, deliverability stats, export functionality
 
-- **[Platform API - System Analytics](/docs/implementation-technical/api/platform-api/analytics.md)** - MRR tracking, system health, operational metrics
+- **[Platform API - System Analytics](/docs/implementation-technical/api/platform-api/analytics)** - MRR tracking, system health, operational metrics
 
 ### Related Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Campaign-level analytics integration
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign-level analytics integration
 
 - **[Email Operations](/docs/features/campaigns/)** - Email sending and tracking
 
@@ -172,27 +172,27 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### User Journeys
 
-- **[Customer Success Journey](/docs/user-journeys/customer-success-journey.md)** - Analytics-driven optimization workflows
+- **[Customer Success Journey](/docs/user-journeys/customer-success-journey)** - Analytics-driven optimization workflows
 
-- **[Marketing Journey](/docs/user-journeys/marketing-journey.md)** - Data-driven campaign management
+- **[Marketing Journey](/docs/user-journeys/marketing-journey)** - Data-driven campaign management
 
 - **[Business Owner Journeys](/user-journeys/external-users/business-owner-journeys.md)** - ROI tracking and performance monitoring
 
 ### Technical Architecture
 
-- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Analytics database architecture
+- **[OLAP Analytics Systems](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide)** - Analytics database architecture
 
-- **[Database Schema](/docs/implementation-technical/database-infrastructure/database-schema-guide.md)** - Analytics tables and relationships
+- **[Database Schema](/docs/implementation-technical/database-infrastructure/database-schema-guide)** - Analytics tables and relationships
 
-- **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing for reports
+- **[Queue System](/docs/features/queue/background-jobs)** - Background job processing for reports
 
 ### Business Documentation
 
-- **[KPI Framework](/docs/business/analytics/kpi-framework.md)** - Business metrics and formulas
+- **[KPI Framework](/docs/business/analytics/kpi-framework)** - Business metrics and formulas
 
-- **[Business Strategy](/docs/business/strategy/overview.md)** - Market leadership through deliverability excellence
+- **[Business Strategy](/docs/business/strategy/overview)** - Market leadership through deliverability excellence
 
-- **[Financial Analysis](/docs/business/financial-analysis/overview.md)** - MRR, CAC, LTV tracking
+- **[Financial Analysis](/docs/business/financial-analysis/overview)** - MRR, CAC, LTV tracking
 
 ---
 

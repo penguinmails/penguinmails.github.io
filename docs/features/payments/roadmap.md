@@ -75,7 +75,7 @@ Implement complete user interface for changing subscription plans with visual co
 
 - API: `POST /api/v1/billing/subscription/update`
 
-- Feature: [Subscription Management](/docs/features/payments/subscription-management.md)
+- Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
 - Task: [Epic 4, Milestone 3](/tasks/epic-4-billing-plans-subscriptions/milestone-3-subscription-state-synchronization/)
 
@@ -126,7 +126,7 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 
 - API: `GET /api/v1/billing/usage`
 
-- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard.md)
+- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
 - Task: [Epic 4, Milestone 1](/tasks/epic-4-billing-plans-subscriptions/milestone-1-plans-subscriptions-schema/)
 
@@ -177,9 +177,9 @@ Implement direct PDF invoice download, preview modal, search/filtering, and bulk
 
 - API: `GET /api/v1/billing/invoices`, `GET /api/v1/billing/invoices/{id}/pdf`
 
-- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard.md)
+- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
-- Integration: [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- Integration: [Stripe Integration](/docs/features/payments/stripe-integration)
 
 ---
 
@@ -228,7 +228,7 @@ Build in-app payment method management using Stripe Elements for seamless card u
 
 - API: Stripe Payment Methods API
 
-- Feature: [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- Feature: [Stripe Integration](/docs/features/payments/stripe-integration)
 
 - Integration: Stripe Elements (frontend)
 
@@ -279,7 +279,7 @@ Implement user-friendly workflow for recovering from failed payments with promin
 
 - API: `POST /api/v1/billing/retry-payment`
 
-- Feature: [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- Feature: [Stripe Integration](/docs/features/payments/stripe-integration)
 
 - Webhook: `invoice.payment_failed`
 
@@ -332,7 +332,7 @@ Build user-friendly cancellation process with feedback collection, retention off
 
 - API: `POST /api/v1/billing/subscription/cancel`
 
-- Feature: [Subscription Management](/docs/features/payments/subscription-management.md)
+- Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
 - Task: [Epic 4, Milestone 3](/tasks/epic-4-billing-plans-subscriptions/milestone-3-subscription-state-synchronization/)
 
@@ -383,7 +383,7 @@ Implement budget limit configuration with alert thresholds and overage handling 
 
 - API: `POST /api/v1/billing/budget`, `GET /api/v1/billing/budget`
 
-- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard.md)
+- Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
 ---
 
@@ -443,9 +443,9 @@ Build flexible pricing engine for enterprise customers with custom contracts, vo
 
 - Route: `/dashboard/admin/pricing` (new)
 
-- Feature: [Subscription Management](/docs/features/payments/subscription-management.md)
+- Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
-- Business: [Enterprise Pricing Strategy](/docs/business/strategy/pricing-strategy.md)
+- Business: [Enterprise Pricing Strategy](/docs/business/strategy/pricing-strategy)
 
 ---
 
@@ -496,7 +496,7 @@ Add alternative payment methods including ACH, wire transfer, purchase orders, a
 
 - Integration: Stripe ACH, Stripe SEPA
 
-- Feature: [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- Feature: [Stripe Integration](/docs/features/payments/stripe-integration)
 
 ---
 
@@ -558,7 +558,7 @@ Implement multi-currency support with automatic conversion, local payment method
 
 - Integration: Stripe Multi-Currency, Stripe Tax
 
-- Business: [International Expansion Strategy](/docs/business/strategy/international-expansion.md)
+- Business: [International Expansion Strategy](/docs/business/strategy/international-expansion)
 
 ---
 
@@ -609,7 +609,7 @@ Implement automated revenue recognition, deferred revenue tracking, and advanced
 
 - Integration: QuickBooks API, Xero API, NetSuite API
 
-- Business: [Financial Model](/docs/business/financial-analysis/financial-model.md)
+- Business: [Financial Model](/docs/business/financial-analysis/financial-model)
 
 ---
 
@@ -660,7 +660,7 @@ Build referral program with account credits and promotional discount management 
 
 - API: `POST /api/v1/referrals/generate`, `GET /api/v1/billing/credits`
 
-- Feature: [Referral Program](/docs/features/growth/referral-program.md) (new)
+- Feature: [Referral Program](/docs/features/growth/referral-program) (new)
 
 ---
 
@@ -771,7 +771,7 @@ Allow customers to pause subscriptions temporarily or switch to seasonal plans f
 
 - API: `POST /api/v1/billing/subscription/pause`
 
-- Feature: [Subscription Management](/docs/features/payments/subscription-management.md)
+- Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
 ---
 
@@ -822,7 +822,7 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 - Integration: Stripe Card Updater, SMS Provider (Twilio)
 
-- Feature: [Stripe Integration](/docs/features/payments/stripe-integration.md)
+- Feature: [Stripe Integration](/docs/features/payments/stripe-integration)
 
 ---
 
@@ -974,13 +974,13 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 ### Feature Documentation
 
-- **[Subscription Management](/docs/features/payments/subscription-management.md)** - Complete subscription lifecycle
+- **[Subscription Management](/docs/features/payments/subscription-management)** - Complete subscription lifecycle
 
-- **[Stripe Integration](/docs/features/payments/stripe-integration.md)** - Payment processing details
+- **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing details
 
-- **[Billing Dashboard](/docs/features/payments/billing-dashboard.md)** - Usage tracking and invoicing
+- **[Billing Dashboard](/docs/features/payments/billing-dashboard)** - Usage tracking and invoicing
 
-- **[Payments Overview](/docs/features/payments/README.md)** - Payment features hub
+- **[Payments Overview](/docs/features/payments/README)** - Payment features hub
 
 ### Implementation Tasks
 
@@ -994,17 +994,17 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 ### API Documentation
 
-- **[Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions.md)** - Subscription management endpoints
+- **[Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions)** - Subscription management endpoints
 
-- **[Billing API](/docs/implementation-technical/api/platform-api/billing.md)** - Billing and payment endpoints
+- **[Billing API](/docs/implementation-technical/api/platform-api/billing)** - Billing and payment endpoints
 
 ### Business Documentation
 
-- **[Pricing Strategy](/docs/business/strategy/pricing-strategy.md)** - Plan pricing and positioning
+- **[Pricing Strategy](/docs/business/strategy/pricing-strategy)** - Plan pricing and positioning
 
-- **[Financial Model](/docs/business/financial-analysis/financial-model.md)** - Revenue projections
+- **[Financial Model](/docs/business/financial-analysis/financial-model)** - Revenue projections
 
-- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap.md)** - Strategic priorities
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 
 ---
 

@@ -700,21 +700,21 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 ### Feature Documentation
 
-- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview.md)** - MVP analytics foundation
+- **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview)** - MVP analytics foundation
 
-- **[Enhanced Analytics Roadmap](/docs/features/analytics/enhanced-analytics/overview.md)** - Detailed Q1 2026 specifications
+- **[Enhanced Analytics Roadmap](/docs/features/analytics/enhanced-analytics/overview)** - Detailed Q1 2026 specifications
 
-- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and exports
+- **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and exports
 
-- **[Third-Party Dependencies](/docs/features/analytics/third-party-dependencies.md)** - External services and integrations
+- **[Third-Party Dependencies](/docs/features/analytics/third-party-dependencies)** - External services and integrations
 
-- **[Analytics MVP Gaps](/docs/features/analytics/mvp-gaps.md)** - Missing MVP features
+- **[Analytics MVP Gaps](/docs/features/analytics/mvp-gaps)** - Missing MVP features
 
 ### Route Specifications
 
-- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign analytics dashboard
+- **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns)** - Campaign analytics dashboard
 
-- **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance and system analytics
+- **[Platform Admin Routes](/docs/design/routes/platform-admin)** - Finance and system analytics
 
 ### Implementation Review
 
