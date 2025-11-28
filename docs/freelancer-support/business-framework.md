@@ -29,7 +29,7 @@ This framework provides comprehensive guidance for building a successful email m
 
 - **Pricing Range**: $500-$1,500 per month
 
-**Growth Package** - Scalable Services  
+**Growth Package** - Scalable Services
 
 - **Target Client**: Established small-medium businesses ready to scale
 

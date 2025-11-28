@@ -271,7 +271,7 @@ Result: Personalized send time for maximum engagement
 send_time_optimization:
   enabled: true
   strategy: "engagement_based"
-  
+
   data_sources:
 
 
@@ -285,7 +285,7 @@ send_time_optimization:
 
 
     - day_patterns: weight 10%
-  
+
   constraints:
     min_data_points: 5  # Require 5+ past interactions
     fallback_time: "09:00"
@@ -304,11 +304,11 @@ send_time_optimization:
 Contact A (Software Developer):
   Historical pattern: Opens emails at 7:30 AM
   Optimal send time: 7:15 AM (15 min before typical open)
-  
+
 Contact B (Executive):
   Historical pattern: Opens emails at 2:00 PM
   Optimal send time: 1:45 PM
-  
+
 Contact C (No history):
   Fallback: Industry benchmark (9:00 AM)
 
@@ -324,28 +324,28 @@ Contact C (No history):
 ```yaml
 timezone_strategy:
   mode: "coordinated_rollout"
-  
+
   # Start in earliest timezone, roll west
   rollout_pattern:
     start_timezone: "Pacific/Auckland"  # New Zealand (UTC+13)
     start_time: "09:00"
-    
+
     # Automatically calculate send times for other zones
     auto_calculate: true
-    
+
   regions:
 
 
     - name: "APAC"
       timezones: ["Pacific/Auckland", "Australia/Sydney", "Asia/Tokyo"]
       send_time: "09:00 local"
-      
+
 
 
     - name: "EMEA"
       timezones: ["Europe/London", "Europe/Paris", "Europe/Moscow"]
       send_time: "09:00 local"
-      
+
 
 
     - name: "Americas"
@@ -380,13 +380,13 @@ All contacts receive at their local 9 AM
 ```yaml
 dst_handling:
   auto_adjust: true
-  
+
   # When DST changes occur
   transition_behavior:
     spring_forward:  # Clocks move ahead 1 hour
       action: "delay_1_hour"
       reason: "Maintain same wall-clock time"
-      
+
     fall_back:  # Clocks move back 1 hour
       action: "advance_1_hour"
       reason: "Avoid duplicate sends"
@@ -419,20 +419,20 @@ System automatically adjusts to maintain 9:00 AM local time
 calendar_integration:
   provider: "google_calendar"
   calendar_id: "primary"
-  
+
   trigger_rules:
 
 
     - event_type: "webinar"
       campaign_template: "webinar_reminder"
       send_before: "1 hour"
-      
+
 
 
     - event_type: "meeting"
       campaign_template: "meeting_followup"
       send_after: "2 hours"
-      
+
 
 
     - event_type: "product_launch"
@@ -449,7 +449,7 @@ calendar_integration:
 Google Calendar Event Created:
   Title: "Product Launch Webinar"
   Date: Dec 1, 2025 at 2:00 PM EST
-  
+
 Automatic Campaign Triggers:
 
 
@@ -474,7 +474,7 @@ Automatic Campaign Triggers:
 ```yaml
 outlook_integration:
   enabled: true
-  
+
   sync_calendars:
 
 
@@ -482,7 +482,7 @@ outlook_integration:
 
 
     - "Marketing Events"
-  
+
   automation_rules:
 
 
@@ -491,7 +491,7 @@ outlook_integration:
       action:
         send_campaign: "demo_followup"
         delay: "1 day"
-        
+
 
 
     - calendar: "Marketing Events"
@@ -555,7 +555,7 @@ interface ConflictResolution {
     min_hours_between: 4;
     priority_based: true;
   };
-  
+
   actions: {
     when_conflict: 'delay_lower_priority';
     delay_duration: '24 hours';
@@ -606,13 +606,13 @@ blackout_dates:
   - date: "2025-12-25"
     name: "Christmas Day"
     action: "delay_to_next_business_day"
-    
+
 
 
   - date: "2025-01-01"
     name: "New Year's Day"
     action: "delay_to_next_business_day"
-  
+
   # Company blackouts
 
 
@@ -621,7 +621,7 @@ blackout_dates:
       end: "2025-12-26"
     name: "Holiday Break"
     action: "skip"
-  
+
   # Industry events
 
 
@@ -666,47 +666,47 @@ Holiday Calendar: US Federal + Company
 CREATE TABLE campaign_schedules (
   id UUID PRIMARY KEY,
   campaign_id UUID NOT NULL REFERENCES campaigns(id) ON DELETE CASCADE,
-  
+
   -- Schedule type
   schedule_type VARCHAR(50), -- immediate, scheduled, recurring, optimized
-  
+
   -- Basic scheduling
   scheduled_date DATE,
   scheduled_time TIME,
   timezone VARCHAR(100) DEFAULT 'UTC',
-  
+
   -- Timezone strategy
   timezone_strategy VARCHAR(50), -- single, recipient_local, coordinated
-  
+
   -- Recurrence
   is_recurring BOOLEAN DEFAULT FALSE,
   recurrence_pattern JSONB,
   recurrence_end_date DATE,
   recurrence_count INTEGER,
-  
+
   -- Optimization
   use_send_time_optimization BOOLEAN DEFAULT FALSE,
   optimization_window_start TIME,
   optimization_window_end TIME,
-  
+
   -- Business hours
   respect_business_hours BOOLEAN DEFAULT FALSE,
   business_hours_start TIME DEFAULT '09:00',
   business_hours_end TIME DEFAULT '17:00',
   skip_weekends BOOLEAN DEFAULT FALSE,
   skip_holidays BOOLEAN DEFAULT FALSE,
-  
+
   -- Calendar integration
   calendar_provider VARCHAR(50), -- google, outlook, null
   calendar_event_id VARCHAR(255),
   calendar_trigger_type VARCHAR(50), -- before, after, at
   calendar_trigger_offset INTERVAL,
-  
+
   -- Status
   status VARCHAR(50), -- pending, processing, completed, failed
   last_processed_at TIMESTAMP,
   next_send_at TIMESTAMP,
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -720,31 +720,31 @@ CREATE INDEX idx_campaign_schedules_status ON campaign_schedules(status);
 CREATE TABLE send_time_rules (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
-  
+
   -- Rule configuration
   rule_name VARCHAR(255),
   rule_type VARCHAR(50), -- global, segment, contact
-  
+
   -- Target
   segment_id UUID REFERENCES segments(id),
   contact_id UUID REFERENCES contacts(id),
-  
+
   -- Optimization settings
   optimization_strategy VARCHAR(50), -- engagement_based, industry_benchmark, custom
   min_data_points INTEGER DEFAULT 5,
   fallback_time TIME DEFAULT '09:00',
-  
+
   -- Constraints
   allowed_days JSONB, -- [1,2,3,4,5] for Mon-Fri
   allowed_hours_start TIME,
   allowed_hours_end TIME,
-  
+
   -- Weights for optimization
   open_time_weight DECIMAL(3,2) DEFAULT 0.40,
   click_time_weight DECIMAL(3,2) DEFAULT 0.30,
   industry_weight DECIMAL(3,2) DEFAULT 0.20,
   day_pattern_weight DECIMAL(3,2) DEFAULT 0.10,
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -757,24 +757,24 @@ CREATE INDEX idx_send_time_rules_segment ON send_time_rules(segment_id);
 CREATE TABLE blackout_dates (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
-  
+
   -- Date range
   blackout_date DATE,
   blackout_start_date DATE,
   blackout_end_date DATE,
-  
+
   -- Details
   name VARCHAR(255),
   description TEXT,
   blackout_type VARCHAR(50), -- holiday, company_event, industry_event
-  
+
   -- Action
   action VARCHAR(50), -- skip, delay, allow
-  
+
   -- Scope
   applies_to VARCHAR(50), -- all, specific_campaigns
   campaign_ids JSONB,
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW()
 );
@@ -786,25 +786,25 @@ CREATE INDEX idx_blackout_dates_date ON blackout_dates(blackout_date);
 CREATE TABLE contact_send_preferences (
   id UUID PRIMARY KEY,
   contact_id UUID NOT NULL REFERENCES contacts(id),
-  
+
   -- Optimal times (learned)
   optimal_send_time TIME,
   optimal_send_day INTEGER, -- 1-7 for Mon-Sun
   optimal_timezone VARCHAR(100),
-  
+
   -- Historical patterns
   typical_open_times JSONB, -- Array of times when contact opens emails
   typical_click_times JSONB,
   engagement_by_day JSONB, -- Engagement rates by day of week
   engagement_by_hour JSONB, -- Engagement rates by hour
-  
+
   -- Confidence
   data_points_count INTEGER DEFAULT 0,
   confidence_score DECIMAL(3,2), -- 0.00 - 1.00
-  
+
   -- Last updated
   last_calculated_at TIMESTAMP,
-  
+
   UNIQUE(contact_id)
 );
 
@@ -852,41 +852,41 @@ class CampaignSchedulingService {
     contact?: Contact
   ): Promise<Date> {
     let sendTime: Date;
-    
+
     switch (schedule.scheduleType) {
       case 'immediate':
         sendTime = new Date();
         break;
-        
+
       case 'scheduled':
         sendTime = this.parseScheduledTime(schedule);
         break;
-        
+
       case 'recurring':
         sendTime = this.calculateRecurringSendTime(schedule);
         break;
-        
+
       case 'optimized':
         sendTime = await this.calculateOptimalSendTime(contact);
         break;
     }
-    
+
     // Apply timezone strategy
     if (schedule.timezoneStrategy === 'recipient_local' && contact) {
       sendTime = this.adjustForRecipientTimezone(sendTime, contact);
     }
-    
+
     // Apply business hours constraints
     if (schedule.respectBusinessHours) {
       sendTime = this.enforceBusinessHours(sendTime, schedule);
     }
-    
+
     // Check blackout dates
     sendTime = await this.checkBlackoutDates(sendTime, schedule);
-    
+
     return sendTime;
   }
-  
+
   /**
 
 
@@ -896,35 +896,35 @@ class CampaignSchedulingService {
     const preferences = await db.contactSendPreferences.findByContact(
       contact.id
     );
-    
+
     if (!preferences || preferences.dataPointsCount < 5) {
       // Not enough data, use fallback
       return this.getDefaultSendTime();
     }
-    
+
     // Use learned optimal time
     const now = new Date();
     const optimal = new Date(now);
-    
+
     // Set to optimal hour
     const [hour, minute] = preferences.optimalSendTime.split(':');
     optimal.setHours(parseInt(hour), parseInt(minute), 0, 0);
-    
+
     // If optimal time has passed today, schedule for tomorrow
     if (optimal < now) {
       optimal.setDate(optimal.getDate() + 1);
     }
-    
+
     // Adjust for optimal day of week if needed
     if (preferences.optimalSendDay) {
       while (optimal.getDay() !== preferences.optimalSendDay) {
         optimal.setDate(optimal.getDate() + 1);
       }
     }
-    
+
     return optimal;
   }
-  
+
   /**
 
 
@@ -936,15 +936,15 @@ class CampaignSchedulingService {
   ): Date {
     const contactTimezone = contact.timezone || 'UTC';
     const campaignTimezone = 'UTC';
-    
+
     // Convert to contact's local time
     const localTime = moment.tz(sendTime, campaignTimezone)
       .tz(contactTimezone)
       .toDate();
-    
+
     return localTime;
   }
-  
+
   /**
 
 
@@ -956,7 +956,7 @@ class CampaignSchedulingService {
   ): Date {
     const hour = sendTime.getHours();
     const day = sendTime.getDay();
-    
+
     // Check if weekend
     if (schedule.skipWeekends && (day === 0 || day === 6)) {
       // Move to next Monday
@@ -965,11 +965,11 @@ class CampaignSchedulingService {
       sendTime.setHours(9, 0, 0, 0); // 9 AM
       return sendTime;
     }
-    
+
     // Check if outside business hours
     const businessStart = parseInt(schedule.businessHoursStart.split(':')[0]);
     const businessEnd = parseInt(schedule.businessHoursEnd.split(':')[0]);
-    
+
     if (hour < businessStart) {
       // Too early, move to business start
       sendTime.setHours(businessStart, 0, 0, 0);
@@ -977,16 +977,16 @@ class CampaignSchedulingService {
       // Too late, move to next business day
       sendTime.setDate(sendTime.getDate() + 1);
       sendTime.setHours(businessStart, 0, 0, 0);
-      
+
       // Check if next day is weekend
       if (schedule.skipWeekends && sendTime.getDay() === 6) {
         sendTime.setDate(sendTime.getDate() + 2); // Skip to Monday
       }
     }
-    
+
     return sendTime;
   }
-  
+
   /**
 
 
@@ -997,25 +997,25 @@ class CampaignSchedulingService {
     schedule: CampaignSchedule
   ): Promise<Date> {
     const blackouts = await db.blackoutDates.findForDate(sendTime);
-    
+
     for (const blackout of blackouts) {
       if (blackout.action === 'skip') {
         throw new Error(`Cannot send on blackout date: ${blackout.name}`);
       }
-      
+
       if (blackout.action === 'delay') {
         // Move to next business day
         sendTime.setDate(sendTime.getDate() + 1);
         sendTime.setHours(9, 0, 0, 0);
-        
+
         // Recursively check new date
         return await this.checkBlackoutDates(sendTime, schedule);
       }
     }
-    
+
     return sendTime;
   }
-  
+
   /**
 
 
@@ -1027,15 +1027,15 @@ class CampaignSchedulingService {
     const pattern = schedule.recurrencePattern;
     const lastSend = schedule.lastProcessedAt || new Date();
     const nextSend = new Date(lastSend);
-    
+
     switch (pattern.frequency) {
       case 'daily':
         nextSend.setDate(nextSend.getDate() + pattern.interval);
         break;
-        
+
       case 'weekly':
         nextSend.setDate(nextSend.getDate() + (7 * pattern.interval));
-        
+
         // Adjust to correct day of week
         if (pattern.daysOfWeek && pattern.daysOfWeek.length > 0) {
           while (!pattern.daysOfWeek.includes(nextSend.getDay())) {
@@ -1043,17 +1043,17 @@ class CampaignSchedulingService {
           }
         }
         break;
-        
+
       case 'monthly':
         nextSend.setMonth(nextSend.getMonth() + pattern.interval);
-        
+
         // Adjust to correct day of month
         if (pattern.dayOfMonth) {
           nextSend.setDate(pattern.dayOfMonth);
         }
         break;
     }
-    
+
     return nextSend;
   }
 }
@@ -1067,26 +1067,26 @@ class CampaignSchedulingService {
 // Process scheduled campaigns every minute
 cron.schedule('* * * * *', async () => {
   const now = new Date();
-  
+
   // Find campaigns ready to send
   const readySchedules = await db.campaignSchedules.findWhere({
     status: 'pending',
     nextSendAt: { lte: now },
   });
-  
+
   const schedulingService = new CampaignSchedulingService();
-  
+
   for (const schedule of readySchedules) {
     try {
       // Launch campaign
       const campaignEngine = new CampaignExecutionEngine();
       await campaignEngine.launchCampaign(schedule.campaignId);
-      
+
       // Update schedule status
       if (schedule.isRecurring) {
         // Calculate next occurrence
         const nextSend = schedulingService.calculateRecurringSendTime(schedule);
-        
+
         await db.campaignSchedules.update(schedule.id, {
           lastProcessedAt: now,
           nextSendAt: nextSend,
@@ -1098,11 +1098,11 @@ cron.schedule('* * * * *', async () => {
           lastProcessedAt: now,
         });
       }
-      
+
       logger.info(`Campaign ${schedule.campaignId} sent on schedule`);
     } catch (error) {
       logger.error(`Error sending scheduled campaign ${schedule.campaignId}:`, error);
-      
+
       await db.campaignSchedules.update(schedule.id, {
         status: 'failed',
       });
@@ -1113,32 +1113,32 @@ cron.schedule('* * * * *', async () => {
 // Update contact send preferences daily
 cron.schedule('0 3 * * *', async () => {  // 3 AM daily
   const contacts = await db.contacts.findAll();
-  
+
   for (const contact of contacts) {
     // Get email engagement history
     const emails = await db.emails.findWhere({
       contactId: contact.id,
       sentAt: { gte: moment().subtract(90, 'days').toDate() },
     });
-    
+
     if (emails.length < 5) continue; // Need minimum data
-    
+
     // Calculate optimal send time
     const openTimes = emails
       .filter(e => e.openedAt)
       .map(e => moment(e.openedAt).hour());
-    
+
     const clickTimes = emails
       .filter(e => e.clickedAt)
       .map(e => moment(e.clickedAt).hour());
-    
+
     // Find most common hour
     const optimalHour = this.getMostCommonValue([...openTimes, ...clickTimes]);
-    
+
     // Calculate engagement by day
     const engagementByDay = this.calculateEngagementByDay(emails);
     const optimalDay = this.getHighestEngagementDay(engagementByDay);
-    
+
     // Update preferences
     await db.contactSendPreferences.upsert({
       contactId: contact.id,
@@ -1152,7 +1152,7 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
       lastCalculatedAt: new Date(),
     });
   }
-  
+
   logger.info('Contact send preferences updated');
 });
 
@@ -1165,7 +1165,7 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
 // Create campaign schedule
 router.post('/api/campaigns/:id/schedule', async (req, res) => {
   const { scheduleType, scheduledDate, scheduledTime, timezone, recurrencePattern } = req.body;
-  
+
   const schedule = await db.campaignSchedules.create({
     campaignId: req.params.id,
     scheduleType,
@@ -1176,13 +1176,13 @@ router.post('/api/campaigns/:id/schedule', async (req, res) => {
     recurrencePattern,
     status: 'pending',
   });
-  
+
   // Calculate first send time
   const schedulingService = new CampaignSchedulingService();
   const nextSendAt = await schedulingService.calculateNextSendTime(schedule);
-  
+
   await db.campaignSchedules.update(schedule.id, { nextSendAt });
-  
+
   res.json(schedule);
 });
 
@@ -1195,32 +1195,32 @@ router.get('/api/campaigns/:id/schedule', async (req, res) => {
 // Update campaign schedule
 router.put('/api/campaigns/:id/schedule', async (req, res) => {
   const schedule = await db.campaignSchedules.findByCampaign(req.params.id);
-  
+
   await db.campaignSchedules.update(schedule.id, req.body);
-  
+
   // Recalculate send time
   const schedulingService = new CampaignSchedulingService();
   const nextSendAt = await schedulingService.calculateNextSendTime(schedule);
-  
+
   await db.campaignSchedules.update(schedule.id, { nextSendAt });
-  
+
   res.json({ success: true });
 });
 
 // Preview send times for contacts
 router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
   const { sampleSize = 10 } = req.body;
-  
+
   const campaign = await db.campaigns.findById(req.params.id);
   const schedule = await db.campaignSchedules.findByCampaign(req.params.id);
   const contacts = await db.segments.getContacts(campaign.segmentId, sampleSize);
-  
+
   const schedulingService = new CampaignSchedulingService();
-  
+
   const previews = await Promise.all(
     contacts.map(async (contact) => {
       const sendTime = await schedulingService.calculateNextSendTime(schedule, contact);
-      
+
       return {
         contactId: contact.id,
         contactEmail: contact.email,
@@ -1230,7 +1230,7 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
       };
     })
   );
-  
+
   res.json({ previews });
 });
 
@@ -1263,7 +1263,7 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority Q1 2026 Feature  
-**Target Release:** Q1 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority Q1 2026 Feature
+**Target Release:** Q1 2026
 **Owner:** Campaigns Team

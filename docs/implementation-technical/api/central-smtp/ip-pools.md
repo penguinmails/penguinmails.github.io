@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List SMTP IPs
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/ips`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/ips`
 **Purpose**: List all IPs in the inventory with status and pool assignment.
 
 **Query Parameters**:
@@ -52,14 +52,14 @@ persona: "Backend Developers"
 
 ### Get Single IP
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/ips/{ipId}`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/ips/{ipId}`
 **Purpose**: Detailed IP information.
 
 ### Update IP Metadata
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/smtp/admin/ips/{ipId}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/smtp/admin/ips/{ipId}`
 **Purpose**: Update IP status or pool assignment. **Restricted**.
 
 **Request**:
@@ -75,8 +75,8 @@ persona: "Backend Developers"
 
 ### List Pools
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/pools`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/pools`
 **Purpose**: List all IP pools.
 
 **Response**:
@@ -100,12 +100,12 @@ persona: "Backend Developers"
 
 ### Get Pool Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/pools/{poolId}`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/pools/{poolId}`
 **Purpose**: Detailed pool configuration and metrics.
 
 ### Update Pool Configuration
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/smtp/admin/pools/{poolId}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/smtp/admin/pools/{poolId}`
 **Purpose**: Update pool settings. **Restricted**.

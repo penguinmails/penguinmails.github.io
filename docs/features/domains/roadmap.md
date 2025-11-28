@@ -567,6 +567,6 @@ These convenience features can be implemented if time permits, but are not block
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Review Cycle:** Quarterly  
+**Last Updated:** November 26, 2025
+**Review Cycle:** Quarterly
 **Next Review:** February 2026

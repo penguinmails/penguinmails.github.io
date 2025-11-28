@@ -18,9 +18,9 @@ version: "1.0"
 
 ## Overview
 
-**Directive:** ePrivacy Directive 2002/58/EC  
-**Scope:** Electronic communications and unsolicited marketing  
-**Business Impact:** Critical - Directly affects email marketing operations  
+**Directive:** ePrivacy Directive 2002/58/EC
+**Scope:** Electronic communications and unsolicited marketing
+**Business Impact:** Critical - Directly affects email marketing operations
 **Relationship:** Complementary to GDPR for electronic marketing
 
 ## Regulatory Framework
@@ -333,7 +333,7 @@ version: "1.0"
 
 - [German TTDSG](https://www.gesetze-im-internet.de/ttdsg/)
 
-**Document Classification:** Level 2 - Detailed Legal Analysis  
+**Document Classification:** Level 2 - Detailed Legal Analysis
 
 ## Related Documents
 

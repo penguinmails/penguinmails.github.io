@@ -114,7 +114,7 @@ class HostwindsAPILogger {
       correlationId: this.generateCorrelationId()
     });
   }
-  
+
   logResponse(action, response, duration) {
     console.log({
       timestamp: new Date().toISOString(),
@@ -126,7 +126,7 @@ class HostwindsAPILogger {
       correlationId: this.getCurrentCorrelationId()
     });
   }
-  
+
   logError(action, error, context) {
     console.error({
       timestamp: new Date().toISOString(),
@@ -138,7 +138,7 @@ class HostwindsAPILogger {
       correlationId: this.getCurrentCorrelationId()
     });
   }
-  
+
   sanitizeParams(params) {
     const sanitized = { ...params };
     delete sanitized.API; // Never log API keys
@@ -165,13 +165,13 @@ async function safeInstanceOperation(serviceid, operation) {
   if (!isValid) {
     throw new Error(`Invalid service ID: ${serviceid}`);
   }
-  
+
   // Step 2: Get current instance state
   const instance = await getInstance(serviceid);
   if (instance.status === 'suspended') {
     throw new Error(`Instance ${serviceid} is suspended`);
   }
-  
+
   // Step 3: Execute operation
   return await operation(serviceid);
 }
@@ -206,35 +206,35 @@ async function pollInstanceStatus(serviceid, expectedStatus, options = {}) {
     intervalMs = 30000, // 30 seconds
     timeoutMs = 1800000  // 30 minutes
   } = options;
-  
+
   const startTime = Date.now();
-  
+
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     // Check timeout
     if (Date.now() - startTime > timeoutMs) {
       throw new Error(`Timeout waiting for status: ${expectedStatus}`);
     }
-    
+
     // Get current status
     const instance = await getInstance(serviceid);
-    
+
     // Check for error states
     if (instance.status === 'error') {
       throw new Error(`Instance entered error state: ${instance.disp_status}`);
     }
-    
+
     // Check for expected status
     if (instance.status === expectedStatus) {
       return instance;
     }
-    
+
     // Log progress
     console.log(`Attempt ${attempt}/${maxAttempts}: Status is ${instance.status}, waiting for ${expectedStatus}`);
-    
+
     // Wait before next attempt
     await sleep(intervalMs);
   }
-  
+
   throw new Error(`Max attempts reached waiting for status: ${expectedStatus}`);
 }
 
@@ -259,27 +259,27 @@ async function upgradeInstanceWorkflow(serviceid, rid) {
   if (existingOrder.success) {
     throw new Error('Pending upgrade order exists. Complete or cancel it first.');
   }
-  
+
   // Step 2: Create upgrade order and invoice
   const order = await upgradeInstance({ serviceid, rid });
   console.log(`Upgrade order created. Invoice ID: ${order.invoiceid}`);
-  
+
   // Step 3: Wait for invoice payment (external process)
   // This could be manual payment or automated billing system
   await waitForInvoicePayment(order.invoiceid);
-  
+
   // Step 4: Apply the upgrade
   const upgrade = await upgradeServer({ serviceid });
-  
+
   // Step 5: Poll for RESIZED status
   const instance = await pollInstanceStatus(serviceid, 'RESIZED');
-  
+
   // Step 6: Confirm the upgrade
   await confirmUpgrade(serviceid);
-  
+
   // Step 7: Verify final status
   await pollInstanceStatus(serviceid, 'active');
-  
+
   console.log(`Upgrade completed successfully for service ${serviceid}`);
 }
 
@@ -360,7 +360,7 @@ class HostwindsInputValidator {
     }
     return serviceid;
   }
-  
+
   static validateIPAddress(ip) {
     const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
     if (!ipRegex.test(ip)) {
@@ -373,7 +373,7 @@ class HostwindsInputValidator {
     }
     return ip;
   }
-  
+
   static validateLocationId(locationId) {
     const validLocations = [1, 2, 3, 4, 5]; // Update with actual valid IDs
     if (!validLocations.includes(locationId)) {
@@ -381,7 +381,7 @@ class HostwindsInputValidator {
     }
     return locationId;
   }
-  
+
   static validateHostname(hostname) {
     const hostnameRegex = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
     if (!hostnameRegex.test(hostname)) {
@@ -407,20 +407,20 @@ class RateLimiter {
     this.lastRequestTime = 0;
     this.queue = [];
   }
-  
+
   async throttle() {
     const now = Date.now();
     const timeSinceLastRequest = now - this.lastRequestTime;
     const minInterval = 1000 / this.requestsPerSecond;
-    
+
     if (timeSinceLastRequest < minInterval) {
       const delay = minInterval - timeSinceLastRequest;
       await sleep(delay);
     }
-    
+
     this.lastRequestTime = Date.now();
   }
-  
+
   async execute(fn) {
     await this.throttle();
     return await fn();
@@ -453,36 +453,36 @@ async function exponentialBackoff(fn, options = {}) {
     maxDelayMs = 30000,
     backoffMultiplier = 2
   } = options;
-  
+
   let lastError;
-  
+
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
       return await fn();
     } catch (error) {
       lastError = error;
-      
+
       // Don't retry on client errors
       if (isClientError(error)) {
         throw error;
       }
-      
+
       // Don't retry if max attempts reached
       if (attempt === maxRetries) {
         break;
       }
-      
+
       // Calculate delay with exponential backoff
       const delay = Math.min(
         initialDelayMs * Math.pow(backoffMultiplier, attempt),
         maxDelayMs
       );
-      
+
       console.log(`Attempt ${attempt + 1} failed. Retrying in ${delay}ms...`);
       await sleep(delay);
     }
   }
-  
+
   throw new Error(`Max retries (${maxRetries}) exceeded. Last error: ${lastError.message}`);
 }
 
@@ -492,7 +492,7 @@ function isClientError(error) {
     'Location Id is invalid',
     'A valid serviceid is required'
   ];
-  return clientErrorMessages.some(msg => 
+  return clientErrorMessages.some(msg =>
     error.message.toLowerCase().includes(msg.toLowerCase())
   );
 }
@@ -513,7 +513,7 @@ class CircuitBreaker {
     this.failureCount = 0;
     this.lastFailureTime = null;
   }
-  
+
   async execute(fn) {
     if (this.state === 'OPEN') {
       if (Date.now() - this.lastFailureTime > this.resetTimeout) {
@@ -522,7 +522,7 @@ class CircuitBreaker {
         throw new Error('Circuit breaker is OPEN');
       }
     }
-    
+
     try {
       const result = await fn();
       this.onSuccess();
@@ -532,16 +532,16 @@ class CircuitBreaker {
       throw error;
     }
   }
-  
+
   onSuccess() {
     this.failureCount = 0;
     this.state = 'CLOSED';
   }
-  
+
   onFailure() {
     this.failureCount++;
     this.lastFailureTime = Date.now();
-    
+
     if (this.failureCount >= this.failureThreshold) {
       this.state = 'OPEN';
       console.error(`Circuit breaker opened after ${this.failureCount} failures`);
@@ -566,10 +566,10 @@ class HostwindsAutomation {
     this.circuitBreaker = new CircuitBreaker();
     this.logger = new HostwindsAPILogger();
   }
-  
+
   async createAndConfigureInstance(config) {
     const { template, rid, locationId, srvrname, rdnsHostname } = config;
-    
+
     try {
       // Step 1: Create instance
       this.logger.logRequest('add_instance', config);
@@ -579,41 +579,41 @@ class HostwindsAutomation {
         location_id: locationId,
         srvrname
       });
-      
+
       // Extract service ID from response
       const serviceid = createResponse.serviceid;
-      
+
       // Step 2: Poll for active status
       const instance = await pollInstanceStatus(serviceid, 'active');
-      
+
       // Step 3: Configure rDNS
       await this.callAPI('set_rdns', {
         serviceid,
         ip: instance.main_ip,
         rdns: rdnsHostname
       });
-      
+
       // Step 4: Set firewall profile
       await this.callAPI('set_instance_firewall', {
         serviceid,
         name: 'smtp'
       });
-      
+
       // Step 5: Update database
       await this.updateDatabase(serviceid, instance);
-      
+
       return {
         serviceid,
         instance,
         status: 'configured'
       };
-      
+
     } catch (error) {
       this.logger.logError('createAndConfigureInstance', error, config);
       throw error;
     }
   }
-  
+
   async callAPI(action, params) {
     return await this.circuitBreaker.execute(async () => {
       return await this.rateLimiter.execute(async () => {
@@ -623,7 +623,7 @@ class HostwindsAutomation {
       });
     });
   }
-  
+
   async updateDatabase(serviceid, instance) {
     // Update vps_instances table
     await db.query(`
@@ -687,18 +687,18 @@ class MetricsCollector {
       latencies: []
     };
   }
-  
+
   recordRequest(action, duration, success) {
     const key = `${action}_${success ? 'success' : 'error'}`;
     this.metrics.requests.set(key, (this.metrics.requests.get(key) || 0) + 1);
     this.metrics.latencies.push({ action, duration, timestamp: Date.now() });
   }
-  
+
   recordError(action, errorType) {
     const key = `${action}_${errorType}`;
     this.metrics.errors.set(key, (this.metrics.errors.get(key) || 0) + 1);
   }
-  
+
   getMetrics() {
     return {
       requests: Object.fromEntries(this.metrics.requests),
@@ -706,11 +706,11 @@ class MetricsCollector {
       latency: this.calculateLatencyStats()
     };
   }
-  
+
   calculateLatencyStats() {
     const latencies = this.metrics.latencies.map(l => l.duration);
     latencies.sort((a, b) => a - b);
-    
+
     return {
       p50: latencies[Math.floor(latencies.length * 0.5)],
       p95: latencies[Math.floor(latencies.length * 0.95)],

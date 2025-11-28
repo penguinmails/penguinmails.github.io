@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### IP Health Summary
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/ips/health-summary`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/ips/health-summary`
 **Purpose**: Aggregate health metrics across all IPs.
 
 **Query Parameters**:
@@ -28,8 +28,8 @@ persona: "Backend Developers"
 
 ### Pool Reputation Overview
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/pools/reputation`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/pools/reputation`
 **Purpose**: Aggregate reputation metrics per pool.
 
 **Query Parameters**:

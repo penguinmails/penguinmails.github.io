@@ -117,7 +117,7 @@ Test Phase:
 
 
   - Duration: 4 hours
-  
+
 Winner Deployment:
 
 
@@ -262,25 +262,25 @@ variants:
   - name: "Control"
     subject: "Quarterly Product Update"
     sample_size: 10%
-    
+
 
 
   - name: "Personalized"
     subject: "{{firstName}}, See What's New This Quarter"
     sample_size: 10%
-    
+
 
 
   - name: "Urgent"
     subject: "Don't Miss: Q1 Updates Inside"
     sample_size: 10%
-    
+
 
 
   - name: "Question"
     subject: "Ready For Q1 Growth?"
     sample_size: 10%
-    
+
 
 
   - name: "Emoji"
@@ -289,7 +289,7 @@ variants:
 
 holdout:
   sample_size: 50%
-  
+
 test_duration: 6 hours
 win_criteria: open_rate
 confidence_threshold: 95%
@@ -348,7 +348,7 @@ Final Optimized Email:
   Subject: "{{firstName}}, Check Out What's New"
   Content: Short (250 words)
   CTA: "Get Started Free"
-  
+
 Combined lift: +45% vs. original
 
 
@@ -365,7 +365,7 @@ test_groups:
   - segment: "Active Users"
     variants: [A, B]
     sample_size: 20%
-    
+
 
 
   - segment: "Inactive Users"
@@ -386,7 +386,7 @@ win_criteria:
   primary: click_rate        # Primary goal
   secondary: conversion_rate # Secondary consideration
   minimum_opens: 100         # Minimum data required
-  
+
 fallback:
   if_no_winner: send_control
   if_tie: highest_open_rate
@@ -453,27 +453,27 @@ CREATE TABLE ab_tests (
   id UUID PRIMARY KEY,
   campaign_id UUID NOT NULL REFERENCES campaigns(id),
   tenant_id UUID NOT NULL REFERENCES tenants(id),
-  
+
   -- Test configuration
   test_name VARCHAR(255),
   test_type VARCHAR(50), -- subject, content, sender, send_time
   test_duration_hours INTEGER DEFAULT 4,
   sample_size_percent INTEGER DEFAULT 20,
-  
+
   -- Win criteria
   win_metric VARCHAR(50), -- open_rate, click_rate, conversion_rate
   confidence_threshold DECIMAL(5,2) DEFAULT 95.0,
   minimum_sample_size INTEGER DEFAULT 100,
-  
+
   -- Status
   status VARCHAR(50), -- draft, running, completed, winner_deployed
   started_at TIMESTAMP,
   completed_at TIMESTAMP,
   winner_variant_id UUID REFERENCES ab_test_variants(id),
-  
+
   -- Results
   results_summary JSONB,
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -483,19 +483,19 @@ CREATE TABLE ab_tests (
 CREATE TABLE ab_test_variants (
   id UUID PRIMARY KEY,
   ab_test_id UUID NOT NULL REFERENCES ab_tests(id),
-  
+
   -- Variant details
   variant_name VARCHAR(50), -- A, B, C, etc.
   is_control BOOLEAN DEFAULT FALSE,
   sample_size_percent INTEGER,
-  
+
   -- Content variations
   subject_line TEXT,
   email_content TEXT,
   sender_name VARCHAR(255),
   sender_email VARCHAR(255),
   send_time TIME,
-  
+
   -- Results
   emails_sent INTEGER DEFAULT 0,
   emails_delivered INTEGER DEFAULT 0,
@@ -503,13 +503,13 @@ CREATE TABLE ab_test_variants (
   clicks INTEGER DEFAULT 0,
   conversions INTEGER DEFAULT 0,
   unsubscribes INTEGER DEFAULT 0,
-  
+
   -- Calculated metrics
   open_rate DECIMAL(5,2),
   click_rate DECIMAL(5,2),
   conversion_rate DECIMAL(5,2),
   statistical_confidence DECIMAL(5,2),
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW()
 );
@@ -521,9 +521,9 @@ CREATE TABLE ab_test_assignments (
   variant_id UUID NOT NULL REFERENCES ab_test_variants(id),
   contact_id UUID NOT NULL REFERENCES contacts(id),
   email_id UUID REFERENCES emails(id),
-  
+
   assigned_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(ab_test_id, contact_id) -- One variant per contact per test
 );
 
@@ -537,21 +537,21 @@ class ABTestService {
   async startTest(testId: string): Promise<void> {
     const test = await db.abTests.findById(testId);
     const variants = await db.abTestVariants.findByTest(testId);
-    
+
     // 1. Calculate sample sizes
     const campaign = await db.campaigns.findById(test.campaignId);
     const totalContacts = await campaign.getContactCount();
-    
+
     const assignments = this.assignContactsToVariants(
       totalContacts,
       variants,
       test.sampleSizePercent
     );
-    
+
     // 2. Send test emails
     for (const variant of variants) {
       const contacts = assignments[variant.id];
-      
+
       await emailQueue.addBulk(contacts.map(contact => ({
         name: 'send-email',
         data: {
@@ -563,7 +563,7 @@ class ABTestService {
           senderName: variant.senderName,
         },
       })));
-      
+
       // Track assignment
       await db.abTestAssignments.createMany(
         contacts.map(contact => ({
@@ -573,17 +573,17 @@ class ABTestService {
         }))
       );
     }
-    
+
     // 3. Update test status
     await db.abTests.update(testId, {
       status: 'running',
       startedAt: new Date(),
     });
-    
+
     // 4. Schedule win selection
     await this.scheduleWinnerSelection(testId, test.testDurationHours);
   }
-  
+
   private assignContactsToVariants(
     totalContacts: Contact[],
     variants: ABTestVariant[],
@@ -591,41 +591,41 @@ class ABTestService {
   ): Record<string, Contact[]> {
     // Shuffle contacts for randomization
     const shuffled = this.shuffle(totalContacts);
-    
+
     // Calculate how many contacts per variant
     const testSampleSize = Math.floor(totalContacts.length * testSamplePercent / 100);
     const contactsPerVariant = Math.floor(testSampleSize / variants.length);
-    
+
     const assignments: Record<string, Contact[]> = {};
     let offset = 0;
-    
+
     for (const variant of variants) {
       assignments[variant.id] = shuffled.slice(offset, offset + contactsPerVariant);
       offset += contactsPerVariant;
     }
-    
+
     return assignments;
   }
-  
+
   async selectWinner(testId: string): Promise<ABTestVariant | null> {
     const test = await db.abTests.findById(testId);
     const variants = await db.abTestVariants.findByTest(testId);
-    
+
     // 1. Calculate current metrics for each variant
     for (const variant of variants) {
       const metrics = await this.calculateVariantMetrics(variant.id);
       await db.abTestVariants.update(variant.id, metrics);
     }
-    
+
     // 2. Calculate statistical significance
     const winner = this.determineWinner(variants, test);
-    
+
     if (!winner) {
       // No clear winner, extend test or use control
       logger.info(`No clear winner for test ${testId}, using control`);
       return null;
     }
-    
+
     // 3. Mark winner
     await db.abTests.update(testId, {
       status: 'completed',
@@ -633,38 +633,38 @@ class ABTestService {
       winnerVariantId: winner.id,
       resultsSummary: this.generateResultsSummary(variants, winner),
     });
-    
+
     return winner;
   }
-  
+
   private determineWinner(
     variants: ABTestVariant[],
     test: ABTest
   ): ABTestVariant | null {
     const metric = test.winMetric; // e.g., 'openRate'
-    
+
     // Sort by metric performance
     const sorted = variants.sort((a, b) => b[metric] - a[metric]);
     const topVariant = sorted[0];
     const secondVariant = sorted[1];
-    
+
     // Calculate statistical confidence
     const confidence = this.calculateConfidence(
       topVariant,
       secondVariant,
       metric
     );
-    
+
     topVariant.statisticalConfidence = confidence;
-    
+
     // Winner must exceed confidence threshold
     if (confidence >= test.confidenceThreshold) {
       return topVariant;
     }
-    
+
     return null; // No statistically significant winner
   }
-  
+
   private calculateConfidence(
     variantA: ABTestVariant,
     variantB: ABTestVariant,
@@ -675,30 +675,30 @@ class ABTestService {
     const n2 = variantB.emailsSent;
     const p1 = variantA[metric] / 100;
     const p2 = variantB[metric] / 100;
-    
+
     const pooled = (n1 * p1 + n2 * p2) / (n1 + n2);
     const se = Math.sqrt(pooled * (1 - pooled) * (1/n1 + 1/n2));
     const z = Math.abs(p1 - p2) / se;
-    
+
     // Convert z-score to confidence level
     return this.zScoreToConfidence(z);
   }
-  
+
   async deployWinner(testId: string): Promise<void> {
     const test = await db.abTests.findById(testId);
     const winner = await db.abTestVariants.findById(test.winnerVariantId);
-    
+
     if (!winner) {
       throw new Error('No winner selected');
     }
-    
+
     // Get remaining contacts (not in test sample)
     const allContacts = await db.campaigns.getContacts(test.campaignId);
     const testedContacts = await db.abTestAssignments.getContacts(testId);
     const remainingContacts = allContacts.filter(
       c => !testedContacts.includes(c.id)
     );
-    
+
     // Send winning variant to remaining contacts
     await emailQueue.addBulk(remainingContacts.map(contact => ({
       name: 'send-email',
@@ -711,7 +711,7 @@ class ABTestService {
         abTestWinner: true,
       },
     })));
-    
+
     await db.abTests.update(testId, {
       status: 'winner_deployed',
     });
@@ -727,20 +727,20 @@ class ABTestService {
 // Scheduled job: Check for completed tests
 cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
   const runningTests = await db.abTests.findRunning();
-  
+
   for (const test of runningTests) {
     const testDuration = differenceInHours(new Date(), test.startedAt);
-    
+
     if (testDuration >= test.testDurationHours) {
       const abTestService = new ABTestService();
-      
+
       // Select winner
       const winner = await abTestService.selectWinner(test.id);
-      
+
       // Deploy winner to remaining audience
       if (winner) {
         await abTestService.deployWinner(test.id);
-        
+
         // Send notification to campaign owner
         await notificationService.send({
           userId: test.createdBy,
@@ -785,7 +785,7 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - MVP Feature (Level 2)  
-**Target Release:** Q1 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - MVP Feature (Level 2)
+**Target Release:** Q1 2026
 **Owner:** Campaigns Team

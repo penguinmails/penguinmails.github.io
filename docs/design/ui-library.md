@@ -1204,7 +1204,7 @@ import { useSession } from '@/lib/auth';
 
 function Dashboard() {
   const { user } = useSession();
-  
+
   return (
     <>
       {user.roles.includes('admin') && <AdminPanel />}

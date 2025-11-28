@@ -555,7 +555,7 @@ Usage Monitoring
 Upgrade/Downgrade as Needed
   ↓
 Renewal (Automatic)
-  
+
 OR
 
 Cancellation → Free Tier (90 days) → Data Deletion
@@ -600,8 +600,8 @@ Cancellation → Free Tier (90 days) → Data Deletion
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Payment Processor:** Stripe  
+**Last Updated:** November 24, 2025
+**Payment Processor:** Stripe
 **Billing Cycle:** Monthly or Annual
 
 *Subscriptions can be modified or canceled at any time with no penalties or hidden fees.*

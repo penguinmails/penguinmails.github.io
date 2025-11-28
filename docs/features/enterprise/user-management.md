@@ -541,13 +541,13 @@ Response:
     "date_format": "MM/DD/YYYY",
     "time_format": "12h", // 12h or 24h
     "language": "en",
-    
+
     // Notification Settings
     "email_notifications": true,
     "campaign_alerts": true,
     "weekly_reports": true,
     "billing_alerts": true,
-    
+
     // Dashboard Settings
     "default_workspace": "ws_abc123",
     "dashboard_layout": "compact",
@@ -941,10 +941,10 @@ Response:
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Authentication Provider:** NileDB SDK  
-**Current Method:** Email + Password  
-**MVP Status:** In Progress (8 of 11 MVP features remaining)  
+**Last Updated:** November 26, 2025
+**Authentication Provider:** NileDB SDK
+**Current Method:** Email + Password
+**MVP Status:** In Progress (8 of 11 MVP features remaining)
 **Next Milestone:** Q1 2026 - Complete MVP authentication features
 
 *Secure user authentication is the foundation of platform security. NileDB provides enterprise-grade authentication with tenant isolation built-in. For MVP and near-term releases, we continue using NileDB's email/password authentication. OAuth 2.0 and SSO (SAML, OpenID Connect) are planned for Q2-Q3 2026 to meet enterprise customer requirements.*

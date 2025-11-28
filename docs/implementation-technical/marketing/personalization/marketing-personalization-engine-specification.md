@@ -92,7 +92,7 @@ class SegmentationEngine {
   async createDynamicSegment(segmentDefinition: SegmentDefinition): Promise<number> {
     // Build Elasticsearch query from segment conditions
     const esQuery = this.buildSegmentQuery(segmentDefinition.conditions);
-    
+
     // Search for customers matching the segment criteria
     const segmentCustomers = await this.esClient.search({
       index: 'customer_profiles',
@@ -104,7 +104,7 @@ class SegmentationEngine {
 
     // Add matching customers to Redis segment set
     const customerIds = segmentCustomers.hits.hits.map(hit => hit._source.customer_id);
-    
+
     for (const customerId of customerIds) {
       await this.redisClient.sadd(`segment:${segmentDefinition.name}`, customerId);
     }
@@ -189,30 +189,30 @@ class FeatureStoreImpl implements FeatureStore {
 
   async getCustomerFeatures(customerId: string, featureNames: string[]): Promise<Record<string, number>> {
     const redisKey = `customer_features:${customerId}`;
-    
+
     // Retrieve features from Redis hash
     const cachedFeatures = await this.redisClient.hmget(redisKey, ...featureNames);
-    
+
     const features: Record<string, number> = {};
-    
+
     for (let i = 0; i < featureNames.length; i++) {
       const featureName = featureNames[i];
       const value = cachedFeatures[i];
-      
+
       features[featureName] = value !== null ? parseFloat(value) : 0.0;
     }
-    
+
     return features;
   }
 
   async setCustomerFeatures(customerId: string, features: Record<string, number>): Promise<void> {
     const redisKey = `customer_features:${customerId}`;
-    
+
     // Set each feature in the Redis hash
     for (const [featureName, value] of Object.entries(features)) {
       await this.redisClient.hset(redisKey, featureName, value.toString());
     }
-    
+
     // Set TTL for the entire feature set
     await this.redisClient.expire(redisKey, this.defaultTTL);
   }
@@ -226,12 +226,12 @@ class FeatureStoreImpl implements FeatureStore {
   async getFeatureVector(customerId: string): Promise<CustomerFeature> {
     const redisKey = `customer_features:${customerId}`;
     const features = await this.redisClient.hgetall(redisKey);
-    
+
     const numericFeatures: Record<string, number> = {};
     for (const [key, value] of Object.entries(features)) {
       numericFeatures[key] = parseFloat(value) || 0.0;
     }
-    
+
     return {
       customerId,
       features: numericFeatures,
@@ -296,7 +296,7 @@ class BehavioralFeatureComputer {
     // Filter events from the last 30 days
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    
+
     const recentEvents = customerEvents.filter(event =>
       new Date(event.timestamp) >= thirtyDaysAgo
     );
@@ -334,7 +334,7 @@ class BehavioralFeatureComputer {
   }> {
     // Simulate Spark aggregation (in real implementation, this would use actual Spark)
     const sampleEvents = await df.collect();
-    
+
     let pageViews = 0;
     let emailOpens = 0;
     let formSubmits = 0;
@@ -485,16 +485,16 @@ class ContextualBanditDecisionEngine {
     // Score each content item
     for (const contentItem of availableContent) {
       const contextFeatures = this.buildContextFeatures(customerFeatures, contentItem, context);
-      
+
       // Get predicted reward from ML model
       const predictedReward = await this.models['content_recommendation'].predict(contextFeatures);
-      
+
       // Apply exploration-exploitation strategy
       const explorationBonus = this.shouldExplore() ?
         this.getExplorationBonus() : 0;
 
       const finalScore = predictedReward[0] + explorationBonus;
-      
+
       scores.push({
         item: contentItem,
         score: finalScore,
@@ -851,7 +851,7 @@ class ContentAPIClientImpl implements ContentAPIClient {
   async getContentByIds(ids: string[]): Promise<ContentItem[]> {
     try {
       const url = `${this.baseUrl}/api/v2/content/batch`;
-      
+
       const response = await fetch(url, {
         method: 'POST',
         headers: this.headers,
@@ -1010,7 +1010,7 @@ class PersonalizationPerformanceMonitor {
   private async trackConversionRate(conversionType: string, customerId: string): Promise<void> {
     // Calculate conversion rate metrics
     const segment = this.getCustomerSegment(customerId);
-    
+
     // Track conversion rate as a gauge
     this.prometheusClient.gauge('personalization_conversion_rate', 0, {
       conversion_type: conversionType,

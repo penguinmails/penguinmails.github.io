@@ -41,7 +41,7 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 
 1. **User clicks unsubscribe link** in email footer
 
-2. **Immediate processing** - removed from all active campaigns  
+2. **Immediate processing** - removed from all active campaigns
 
 3. **Added to suppression list** - permanently blocked from future sends
 
@@ -142,16 +142,16 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 ```html
 <footer class="email-footer">
   <p>{{company.name}}<br>{{company.address}}</p>
-  
+
   <p>
     <a href="{{unsubscribe_url}}" class="unsubscribe-link">
       Unsubscribe
-    </a> | 
+    </a> |
     <a href="{{preferences_url}}">
       Email Preferences
     </a>
   </p>
-  
+
   <p><small>© {{current_year}} {{company.name}}. All rights reserved.</small></p>
 </footer>
 
@@ -500,7 +500,7 @@ CREATE TABLE suppression_list (
   added_by UUID REFERENCES users(id),
   scope VARCHAR(20) DEFAULT 'global', -- global, tenant, workspace, campaign_type
   expires_at TIMESTAMP NULL, -- NULL = never expires
-  
+
   UNIQUE(tenant_id, email, scope)
 );
 
@@ -631,7 +631,7 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 ---
 
-**Last Updated:** November 24, 2025  
+**Last Updated:** November 24, 2025
 **Compliance:** CAN-SPAM, GDPR, CCPA, CASL
 
 *Proper unsubscribe management is critical for compliance, deliverability, and user trust. PenguinMails automates this process to ensure best-in-class opt-out handling.*

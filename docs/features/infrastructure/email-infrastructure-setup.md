@@ -467,7 +467,7 @@ CREATE TABLE infrastructure (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   workspace_id UUID REFERENCES workspaces(id),
-  
+
   -- VPS details
   vps_id VARCHAR(255) UNIQUE NOT NULL, -- Hostwind VPS ID
   vps_ip VARCHAR(45) NOT NULL,
@@ -475,22 +475,22 @@ CREATE TABLE infrastructure (
   vps_region VARCHAR(50),
   vps_size VARCHAR(50),
   vps_status VARCHAR(50), -- active, suspended, terminated
-  
+
   -- SMTP configuration
   smtp_host VARCHAR(255),
   smtp_port INTEGER DEFAULT 587,
   smtp_username VARCHAR(255),
   smtp_password_encrypted TEXT,
-  
+
   -- SSL/TLS
   ssl_certificate_path TEXT,
   ssl_certificate_expires_at TIMESTAMP,
-  
+
   -- Monitoring
   last_health_check TIMESTAMP,
   health_status VARCHAR(50), -- healthy, degraded, critical
   deliverability_score INTEGER, -- 0-100
-  
+
   -- Metadata
   provisioned_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
@@ -502,20 +502,20 @@ CREATE TABLE dns_records (
   id UUID PRIMARY KEY,
   infrastructure_id UUID NOT NULL REFERENCES infrastructure(id),
   domain_id UUID NOT NULL REFERENCES domains(id),
-  
+
   -- Record details
   record_type VARCHAR(10), -- MX, A, TXT, CNAME
   record_name VARCHAR(255),
   record_value TEXT,
   record_priority INTEGER,
   record_ttl INTEGER DEFAULT 3600,
-  
+
   -- Validation
   is_validated BOOLEAN DEFAULT FALSE,
   validated_at TIMESTAMP,
   last_validation_check TIMESTAMP,
   validation_status VARCHAR(50), -- pending, valid, invalid, missing
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -526,20 +526,20 @@ CREATE TABLE email_accounts (
   id UUID PRIMARY KEY,
   infrastructure_id UUID NOT NULL REFERENCES infrastructure(id),
   domain_id UUID NOT NULL REFERENCES domains(id),
-  
+
   email_address VARCHAR(255) UNIQUE NOT NULL,
   password_hash TEXT NOT NULL,
-  
+
   -- Configuration
   quota_mb INTEGER DEFAULT 1024,
   max_send_per_day INTEGER DEFAULT 500,
   is_active BOOLEAN DEFAULT TRUE,
-  
+
   -- Usage tracking
   emails_sent_today INTEGER DEFAULT 0,
   storage_used_mb INTEGER DEFAULT 0,
   last_login TIMESTAMP,
-  
+
   -- Metadata
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -559,19 +559,19 @@ interface ProvisionInfrastructureRequest {
   tenantId: string;
   workspaceId?: string;
   domainId: string;
-  
+
   // VPS configuration
   vpsConfig: {
     size: 'starter' | 'professional' | 'business' | 'enterprise';
     region: string; // e.g., 'us-east', 'eu-west'
   };
-  
+
   // SMTP configuration
   smtpConfig?: {
     maxConnectionsPerHour?: number;
     enableRateLimiting?: boolean;
   };
-  
+
   // DNS automation
   autoConfigureDNS?: boolean;
   dnsProvider?: 'cloudflare' | 'route53' | 'manual';
@@ -583,10 +583,10 @@ interface ProvisionInfrastructureResponse {
   vpsId: string;
   vpsIp: string;
   smtpHost: string;
-  
+
   status: 'provisioning' | 'active' | 'failed';
   estimatedCompletionTime: number; // seconds
-  
+
   dnsRecords: DNSRecord[];
   nextSteps: string[];
 }
@@ -601,21 +601,21 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
   // 1. Validate tenant and domain
   const tenant = await validateTenant(req.body.tenantId);
   const domain = await validateDomain(req.body.domainId);
-  
+
   // 2. Provision VPS via Hostwind API
   const vps = await hostwindClient.createVPS({
     size: req.body.vpsConfig.size,
     region: req.body.vpsConfig.region,
     image: 'ubuntu-22.04-email-optimized',
   });
-  
+
   // 3. Install and configure MailU SMTP
   await sshClient.connect(vps.ip);
   const smtpCredentials = await sshClient.exec('install-mailu.sh', {
     domain: domain.name,
     adminEmail: `admin@${domain.name}`,
   });
-  
+
   // 3a. Store SMTP credentials in Vault (see task 11.5)
   // Reference: docs/features/infrastructure/vault-smtp-credentials.md
   await vaultClient.write(`smtp/${tenant.id}/admin`, {
@@ -626,13 +626,13 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
     last_rotated: new Date().toISOString(),
     rotation_policy: '180_days'
   });
-  
+
   // 4. Generate SSL certificates
   await sshClient.exec('certbot --nginx -d mail.${domain.name}');
-  
+
   // 5. Generate DKIM keys
   const dkimKeys = await generateDKIMKeys(domain.name);
-  
+
   // 6. Store infrastructure record
   const infrastructure = await db.infrastructure.create({
     tenantId: req.body.tenantId,
@@ -642,16 +642,16 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
     smtpHost: `mail.${domain.name}`,
     // ... other fields
   });
-  
+
   // 7. Generate DNS records
   const dnsRecords = generateDNSRecords(domain.name, vps.ip, dkimKeys);
   await db.dnsRecords.createMany(dnsRecords);
-  
+
   // 8. Auto-configure DNS if requested
   if (req.body.autoConfigureDNS) {
     await configureDNSProvider(req.body.dnsProvider, req.body.dnsCredentials, dnsRecords);
   }
-  
+
   return {
     infrastructureId: infrastructure.id,
     vpsId: vps.id,
@@ -659,7 +659,7 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
     smtpHost: `mail.${domain.name}`,
     status: 'active',
     dnsRecords,
-    nextSteps: req.body.autoConfigureDNS ? 
+    nextSteps: req.body.autoConfigureDNS ?
       ['Verify DNS propagation', 'Create email accounts'] :
       ['Add DNS records to your provider', 'Verify DNS'],
   };
@@ -676,31 +676,31 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
 async function validateDNS(infrastructureId: string): Promise<ValidationResult> {
   const infrastructure = await db.infrastructure.findById(infrastructureId);
   const dnsRecords = await db.dnsRecords.findByInfrastructure(infrastructureId);
-  
+
   const validationResults = await Promise.all(
     dnsRecords.map(async (record) => {
       const actual = await dnsLookup(record.recordName, record.recordType);
       const isValid = compareRecordValues(actual, record.recordValue);
-      
+
       await db.dnsRecords.update(record.id, {
         isValidated: isValid,
         validatedAt: isValid ? new Date() : null,
         validationStatus: isValid ? 'valid' : 'invalid',
         lastValidationCheck: new Date(),
       });
-      
+
       return { record, isValid };
     })
   );
-  
+
   const allValid = validationResults.every(r => r.isValid);
-  
+
   if (allValid) {
     await db.infrastructure.update(infrastructureId, {
       healthStatus: 'healthy',
     });
   }
-  
+
   return {
     isValid: allValid,
     records: validationResults,
@@ -723,18 +723,18 @@ class HostwindClient {
       os: 'ubuntu-22.04',
       hostname: `mail-${generateRandomId()}`,
     });
-    
+
     // Wait for VPS to be ready
     await this.pollVPSStatus(response.vpsId, 'active', 300); // 5 min timeout
-    
+
     return response;
   }
-  
+
   async monitorVPS(vpsId: string): Promise<VPSStatus> {
     const response = await this.apiClient.get(`/vps/${vpsId}/status`);
     return response;
   }
-  
+
   async deleteVPS(vpsId: string): Promise<void> {
     await this.apiClient.delete(`/vps/${vpsId}`);
   }
@@ -771,14 +771,14 @@ class Route53DNSAdapter implements DNSProviderAdapter {
 // Scheduled job: Health monitoring
 cron.schedule('*/5 * * * *', async () => {
   const infrastructures = await db.infrastructure.findAllActive();
-  
+
   for (const infra of infrastructures) {
     const health = await checkInfrastructureHealth(infra);
     await db.infrastructure.update(infra.id, {
       lastHealthCheck: new Date(),
       healthStatus: health.status,
     });
-    
+
     if (health.status === 'critical') {
       await sendAlert(infra.tenantId, 'infrastructure-critical', health);
     }
@@ -788,7 +788,7 @@ cron.schedule('*/5 * * * *', async () => {
 // Scheduled job: DNS validation
 cron.schedule('0 * * * *', async () => {
   const infrastructures = await db.infrastructure.findAllActive();
-  
+
   for (const infra of infrastructures) {
     await validateDNS(infra.id);
   }
@@ -797,7 +797,7 @@ cron.schedule('0 * * * *', async () => {
 // Scheduled job: SSL certificate renewal
 cron.schedule('0 0 * * *', async () => {
   const infrastructures = await db.infrastructure.findExpiringCertificates(30); // 30 days
-  
+
   for (const infra of infrastructures) {
     await renewSSLCertificate(infra);
   }
@@ -846,6 +846,6 @@ cron.schedule('0 0 * * *', async () => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Active - Core Feature (Level 1)  
+**Last Updated:** November 25, 2025
+**Status:** Active - Core Feature (Level 1)
 **Owner:** Infrastructure Team

@@ -265,7 +265,7 @@ class MultiProviderManagerImpl implements MultiProviderManager {
 
     try {
       const result = await provider.sendCampaign(config, content);
-      
+
       // Log performance for future optimization
       await this.logProviderPerformance(optimalProvider, result);
 
@@ -284,7 +284,7 @@ class MultiProviderManagerImpl implements MultiProviderManager {
 
   async compareProviderPerformance(timeframe: string): Promise<PerformanceComparison> {
     const comparisons: Record<string, ProviderMetrics> = {};
-    
+
     for (const [providerName, metrics] of this.providerMetrics) {
       comparisons[providerName] = metrics;
     }
@@ -324,7 +324,7 @@ class MultiProviderManagerImpl implements MultiProviderManager {
         const provider = this.providers.get(fallbackProvider);
         if (provider) {
           const result = await provider.sendCampaign(config, content);
-          
+
           return {
             provider: fallbackProvider,
             success: result.success,

@@ -139,7 +139,7 @@ sequenceDiagram
     participant VPS
     participant MailU
     participant Vault
-    
+
     User->>Backend: Purchase Plan
     Backend->>VPS: Provision VPS
     VPS-->>Backend: VPS Details (IP, SSH)
@@ -163,7 +163,7 @@ sequenceDiagram
    // Generate secure random password
    const password = crypto.randomBytes(32).toString('base64');
    const username = `admin@${domain}`;
-   
+
    // Configure MailU with credentials
    await configureMailU(vpsIp, username, password);
    ```
@@ -230,7 +230,7 @@ sequenceDiagram
     participant Backend
     participant Vault
     participant AuditLog
-    
+
     Admin->>UI: Request SMTP Credentials
     UI->>Backend: Verify Admin Role
     Backend-->>UI: Require Re-authentication
@@ -263,22 +263,22 @@ async function retrieveSmtpCredentials(
   if (!admin.hasRole('support-team')) {
     throw new Error('Insufficient permissions');
   }
-  
+
   // Verify re-authentication token
   const isValid = await verifyReauthToken(reauthToken, adminUserId);
   if (!isValid) {
     throw new Error('Re-authentication required');
   }
-  
+
   // Retrieve credentials from Vault
   const vaultData = await vaultClient.read(`smtp/${tenantId}/admin`);
-  
+
   // Decrypt password
   const decryptedPassword = await decryptPassword(
     vaultData.password,
     tenantId
   );
-  
+
   // Log credential access
   await auditLog.create({
     event: 'smtp_credentials_accessed',
@@ -288,7 +288,7 @@ async function retrieveSmtpCredentials(
     ip_address: req.ip,
     user_agent: req.headers['user-agent']
   });
-  
+
   // Return credentials with time-limited access
   return {
     username: vaultData.username,
@@ -324,7 +324,7 @@ async function retrieveSmtpCredentials(
      onSuccess: (token: string) => void;
      onCancel: () => void;
    }
-   
+
    // Display modal requiring password + 2FA
    // Generate time-limited re-auth token on success
    ```
@@ -337,7 +337,7 @@ async function retrieveSmtpCredentials(
      credentials: SmtpCredentials;
      expiresAt: Date;
    }
-   
+
    // Display credentials with:
    // - Masked password (click to reveal)
    // - Copy to clipboard button
@@ -352,7 +352,7 @@ async function retrieveSmtpCredentials(
      tenantId: string;
      events: AuditEvent[];
    }
-   
+
    // Display recent credential access events:
    // - Timestamp
    // - Admin user
@@ -398,7 +398,7 @@ sequenceDiagram
     participant MailU
     participant AuditLog
     participant Notification
-    
+
     Cron->>RotationService: Check Rotation Due (02:00 UTC)
     RotationService->>Vault: Get SMTP Credentials
     Vault-->>RotationService: Return Credentials + Metadata
@@ -427,15 +427,15 @@ sequenceDiagram
 async function checkAndRotateSmtpCredentials(): Promise<void> {
   // Get all tenants with SMTP credentials
   const tenants = await getTenantsWith SmtpCredentials();
-  
+
   for (const tenant of tenants) {
     // Get credentials from Vault
     const vaultData = await vaultClient.read(`smtp/${tenant.id}/admin`);
-    
+
     // Check if rotation is due
     const lastRotated = new Date(vaultData.last_rotated);
     const daysSinceRotation = (Date.now() - lastRotated.getTime()) / (1000 * 60 * 60 * 24);
-    
+
     if (daysSinceRotation >= 180) {
       // Rotation due - execute rotation
       await rotateSmtpCredentials(tenant.id);
@@ -451,10 +451,10 @@ async function rotateSmtpCredentials(tenantId: string): Promise<void> {
   // Get current credentials
   const vaultData = await vaultClient.read(`smtp/${tenantId}/admin`);
   const currentPassword = await decryptPassword(vaultData.password, tenantId);
-  
+
   // Generate new password
   const newPassword = crypto.randomBytes(32).toString('base64');
-  
+
   // Update MailU password
   await updateMailUPassword(
     tenant.vps_ip,
@@ -462,17 +462,17 @@ async function rotateSmtpCredentials(tenantId: string): Promise<void> {
     currentPassword,
     newPassword
   );
-  
+
   // Encrypt new password
   const encryptedPassword = await encryptPassword(newPassword, tenantId);
-  
+
   // Update Vault with new password
   await vaultClient.write(`smtp/${tenantId}/admin`, {
     ...vaultData,
     password: encryptedPassword,
     last_rotated: new Date().toISOString()
   });
-  
+
   // Log rotation event
   await auditLog.create({
     event: 'smtp_credentials_rotated',
@@ -484,7 +484,7 @@ async function rotateSmtpCredentials(tenantId: string): Promise<void> {
       previous_rotation: vaultData.last_rotated
     }
   });
-  
+
   // Send notification to admins
   await sendRotationCompletedNotification(tenantId);
 }
@@ -518,10 +518,10 @@ async function manualRotateSmtpCredentials(
   if (!admin.hasRole('platform-admin')) {
     throw new Error('Insufficient permissions');
   }
-  
+
   // Execute rotation
   await rotateSmtpCredentials(tenantId);
-  
+
   // Log manual rotation with reason
   await auditLog.create({
     event: 'smtp_credentials_rotated',
@@ -572,7 +572,7 @@ sequenceDiagram
     participant MailU
     participant AuditLog
     participant Notification
-    
+
     Admin->>Backend: Trigger Emergency Reset
     Backend->>Backend: Verify Admin Role
     Backend->>Vault: Get Current Credentials
@@ -606,30 +606,30 @@ async function emergencyResetSmtpCredentials(
   if (!admin.hasRole('platform-admin')) {
     throw new Error('Insufficient permissions');
   }
-  
+
   // Get current credentials
   const vaultData = await vaultClient.read(`smtp/${tenantId}/admin`);
-  
+
   // Generate new password (stronger for emergency reset)
   const newPassword = crypto.randomBytes(48).toString('base64');
-  
+
   // Reset MailU password (bypass current password)
   await resetMailUPasswordEmergency(
     tenant.vps_ip,
     vaultData.username,
     newPassword
   );
-  
+
   // Encrypt new password
   const encryptedPassword = await encryptPassword(newPassword, tenantId);
-  
+
   // Store new credentials in Vault
   await vaultClient.write(`smtp/${tenantId}/admin`, {
     ...vaultData,
     password: encryptedPassword,
     last_rotated: new Date().toISOString()
   });
-  
+
   // Mark old version as compromised
   await vaultClient.metadata.put(`smtp/${tenantId}/admin`, {
     custom_metadata: {
@@ -639,7 +639,7 @@ async function emergencyResetSmtpCredentials(
       reset_at: new Date().toISOString()
     }
   });
-  
+
   // Log emergency reset
   await auditLog.create({
     event: 'smtp_credentials_emergency_reset',
@@ -652,7 +652,7 @@ async function emergencyResetSmtpCredentials(
       reason: reason
     }
   });
-  
+
   // Alert security team
   await sendSecurityAlert({
     type: 'smtp_credentials_reset',
@@ -661,7 +661,7 @@ async function emergencyResetSmtpCredentials(
     admin_user: admin.email,
     reason: reason
   });
-  
+
   // Return new credentials (one-time display)
   return {
     username: vaultData.username,
@@ -683,7 +683,7 @@ async function emergencyResetSmtpCredentials(
   onClick={() => {
     const incidentId = prompt('Enter incident ID:');
     const reason = prompt('Enter reason for emergency reset:');
-    
+
     if (incidentId && reason) {
       emergencyResetSmtpCredentials(tenantId, adminUserId, incidentId, reason);
     }
@@ -796,7 +796,7 @@ async function monitorSmtpCredentialAccess(): Promise<void> {
     timestamp_gte: new Date(Date.now() - 60 * 60 * 1000), // Last hour
     group_by: 'user_id'
   });
-  
+
   for (const [userId, count] of Object.entries(recentAccess)) {
     if (count > 5) {
       await sendSecurityAlert({
@@ -807,7 +807,7 @@ async function monitorSmtpCredentialAccess(): Promise<void> {
       });
     }
   }
-  
+
   // Check for after-hours access
   const currentHour = new Date().getHours();
   if (currentHour >= 22 || currentHour <= 6) {
@@ -815,7 +815,7 @@ async function monitorSmtpCredentialAccess(): Promise<void> {
       event: 'smtp_credentials_accessed',
       timestamp_gte: new Date(Date.now() - 5 * 60 * 1000) // Last 5 minutes
     });
-    
+
     if (afterHoursAccess.length > 0) {
       await sendSecurityAlert({
         type: 'after_hours_credential_access',
@@ -843,7 +843,7 @@ sequenceDiagram
     participant Vault
     participant NewVPS
     participant MailU
-    
+
     Admin->>Backend: Report VPS Failure
     Backend->>Backend: Provision New VPS
     Backend->>Vault: Retrieve SMTP Credentials
@@ -870,21 +870,21 @@ async function recoverSmtpCredentialsToNewVps(
   // Retrieve credentials from Vault
   const vaultData = await vaultClient.read(`smtp/${tenantId}/admin`);
   const password = await decryptPassword(vaultData.password, tenantId);
-  
+
   // Configure MailU on new VPS
   await configureMailU(newVpsIp, vaultData.username, password);
-  
+
   // Verify MailU is accessible
   const isAccessible = await verifyMailUAccess(
     vaultData.webmail_url,
     vaultData.username,
     password
   );
-  
+
   if (!isAccessible) {
     throw new Error('Failed to verify MailU access after recovery');
   }
-  
+
   // Log recovery event
   await auditLog.create({
     event: 'smtp_credentials_recovered',
@@ -931,24 +931,24 @@ async function restoreVaultFromBackup(
     Bucket: 'penguinmails-vault-backups',
     Key: `backups/${backupDate}/vault-snapshot.enc`
   });
-  
+
   // Decrypt backup
   const decryptedBackup = await decryptBackup(
     encryptedBackup,
     backupEncryptionKey
   );
-  
+
   // Restore Vault snapshot
   await vaultClient.sys.restore(decryptedBackup);
-  
+
   // Verify all secrets accessible
   const testTenantId = 'test-tenant-id';
   const testSecret = await vaultClient.read(`smtp/${testTenantId}/admin`);
-  
+
   if (!testSecret) {
     throw new Error('Vault restoration verification failed');
   }
-  
+
   // Log restoration event
   await auditLog.create({
     event: 'vault_restored_from_backup',
@@ -987,16 +987,16 @@ async function respondToCredentialCompromise(
     incidentId,
     `Credential compromise: ${compromiseDetails}`
   );
-  
+
   // Notify tenant
   await sendTenantNotification(tenantId, {
     type: 'security_incident',
     subject: 'SMTP Credentials Rotated - Security Incident',
-    message: `Your SMTP credentials have been rotated due to a security incident. 
-              Incident ID: ${incidentId}. 
+    message: `Your SMTP credentials have been rotated due to a security incident.
+              Incident ID: ${incidentId}.
               No action required on your part.`
   });
-  
+
   // Notify security team
   await sendSecurityAlert({
     type: 'credential_compromise_response',
@@ -1005,7 +1005,7 @@ async function respondToCredentialCompromise(
     details: compromiseDetails,
     action_taken: 'emergency_rotation'
   });
-  
+
   // Log incident response
   await auditLog.create({
     event: 'credential_compromise_response',
@@ -1418,9 +1418,9 @@ Authorization: Bearer {admin_token}
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Document Version:** 1.0  
-**Status:** APPROVED  
+**Last Updated:** November 26, 2025
+**Document Version:** 1.0
+**Status:** APPROVED
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive guidance for implementing secure SMTP credential storage in HashiCorp Vault with automated rotation, emergency reset, and disaster recovery capabilities.*

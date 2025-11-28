@@ -18,8 +18,8 @@ version: "1.0"
 
 ## Overview
 
-**Purpose:** Analyze country-specific variations in GDPR and ePrivacy implementation  
-**Scope:** Primary EU markets (Germany, France, Spain, Italy, Netherlands)  
+**Purpose:** Analyze country-specific variations in GDPR and ePrivacy implementation
+**Scope:** Primary EU markets (Germany, France, Spain, Italy, Netherlands)
 **Business Impact:** Medium-High - Requires multi-jurisdictional compliance approach
 
 ## Extraterritorial Compliance Requirements
@@ -354,7 +354,7 @@ version: "1.0"
 
 - [Dutch AP](https://autoriteitpersoonsgegevens.nl/en)
 
-**Document Classification:** Level 2 - Detailed Legal Analysis  
+**Document Classification:** Level 2 - Detailed Legal Analysis
 
 ## Related Documents
 

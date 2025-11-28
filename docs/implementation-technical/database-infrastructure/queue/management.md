@@ -33,22 +33,22 @@ Queues follow a consistent naming pattern for easy identification and priority r
 queue naming = {
   email_processing: {
     high: "queue:email:processing:high",     // Priority ≤ 50
-    normal: "queue:email:processing",        // Priority 51-150  
+    normal: "queue:email:processing",        // Priority 51-150
     low: "queue:email:processing:low"        // Priority > 150
   },
-  
+
   email_sending: {
     high: "queue:email-sending:high",
-    normal: "queue:email-sending", 
+    normal: "queue:email-sending",
     low: "queue:email-sending:low"
   },
-  
+
   analytics: {
     daily: "queue:analytics:daily-aggregate",
-    campaign: "queue:analytics:campaign-aggregate", 
+    campaign: "queue:analytics:campaign-aggregate",
     billing: "queue:analytics:billing-calculate"
   },
-  
+
   processing: {
     warmup: "queue:warmup:process",
     bounce: "queue:bounce:process",
@@ -105,7 +105,7 @@ emailJob = {
   priority: 75,
   payload: {
     campaign_id: "uuid-campaign",
-    recipient_id: "uuid-recipient", 
+    recipient_id: "uuid-recipient",
     template_id: "welcome-email",
     // No large content or sensitive data
   },
@@ -136,7 +136,7 @@ interface JobMetadata {
 // Hash key format: job:{jobId}
 redis.hgetall("job:uuid-job-123") = {
   status: "processing",
-  worker_id: "worker-1", 
+  worker_id: "worker-1",
   started_at: "2025-10-30T09:01:00Z",
   attempt_count: "1"
 }
@@ -173,11 +173,11 @@ class JobMigrator {
   private isRunning = false
   private batchSize = 100
   private migrationInterval = 5000 // 5 seconds
-  
+
   async start() {
     this.isRunning = true
     log("Job migrator started")
-    
+
     while (this.isRunning) {
       try {
         await this.migrateReadyJobs()
@@ -188,7 +188,7 @@ class JobMigrator {
       }
     }
   }
-  
+
   private async migrateReadyJobs() {
     // Query PostgreSQL for ready jobs
     readyJobs = await database.jobs.findMany({
@@ -202,11 +202,11 @@ class JobMigrator {
       ],
       take: this.batchSize
     })
-    
+
     if (readyJobs.length === 0) return
-    
+
     log(`Migrating ${readyJobs.length} jobs to Redis`)
-    
+
     for (job in readyJobs) {
       try {
         await this.migrateJob(job)
@@ -215,11 +215,11 @@ class JobMigrator {
       }
     }
   }
-  
+
   private async migrateJob(job) {
     // Determine target Redis queue
     queueName = this.getQueueName(job.priority, job.queue_name)
-    
+
     // Prepare Redis payload
     redisPayload = {
       id: job.id,
@@ -230,21 +230,21 @@ class JobMigrator {
       attempt_count: job.attempt_count,
       max_attempts: job.max_attempts
     }
-    
+
     // Add to Redis queue (left push for FIFO)
     await redis.lpush(queueName, JSON.stringify(redisPayload))
-    
+
     // Track in Redis hash for status monitoring
     await redis.hset(`job:${job.id}`, {
       status: 'migrated',
       queued_at: new Date().toISOString(),
       attempt_count: job.attempt_count.toString()
     })
-    
+
     // Prevent duplicates
     await redis.sadd(`recent_jobs:${job.queue_name}`, job.id)
     await redis.expire(`recent_jobs:${job.queue_name}`, 3600)
-    
+
     // Update PostgreSQL status
     await database.jobs.update({
       where: { id: job.id },
@@ -275,20 +275,20 @@ async function monitorQueueDepths() {
     'queue:analytics:daily-aggregate',
     'queue:warmup:process'
   ]
-  
+
   depths = {}
-  
+
   for (queueName in queueNames) {
     depths[queueName] = await redis.llen(queueName)
   }
-  
+
   // Alert if any queue exceeds threshold
   for (queueName, depth in depths) {
     if (depth > MAX_QUEUE_DEPTH_THRESHOLD) {
       await alertSystem.queueDepthAlert(queueName, depth)
     }
   }
-  
+
   return depths
 }
 
@@ -305,7 +305,7 @@ Workers use blocking pop (BRPOP) to efficiently retrieve jobs:
 async function workerJobRetrieval(workerId) {
   queues = [
     'queue:email:processing:high',     // Highest priority first
-    'queue:email:processing', 
+    'queue:email:processing',
     'queue:email:processing:low',
     'queue:email-sending:high',
     'queue:email-sending',
@@ -313,19 +313,19 @@ async function workerJobRetrieval(workerId) {
     'queue:warmup:process',
     'queue:bounce:process'
   ]
-  
+
   while (isRunning) {
     try {
       // Blocking pop with timeout
       result = await redis.brpop(queues, 0)
-      
+
       if (!result) continue
-      
+
       [queueName, jobData] = result
       job = JSON.parse(jobData)
-      
+
       await processJob(job, queueName, workerId)
-      
+
     } catch (error) {
       logError(`Worker ${workerId} retrieval error`, error)
       await this.delay(1000)
@@ -353,14 +353,14 @@ async function processJob(job, queueName, workerId) {
         updated_at: new Date()
       }
     })
-    
+
     // Update Redis tracking
     await redis.hset(`job:${job.id}`, {
       status: 'processing',
       worker_id: workerId,
       started_at: new Date().toISOString()
     })
-    
+
     // Execute job based on queue type
     if (queueName.includes('email:processing')) {
       await executeEmailProcessing(job.payload)
@@ -371,7 +371,7 @@ async function processJob(job, queueName, workerId) {
     } else if (queueName.includes('bounce')) {
       await executeBounceProcessing(job.payload)
     }
-    
+
     // Mark as completed
     await database.jobs.update({
       where: { id: job.id },
@@ -381,14 +381,14 @@ async function processJob(job, queueName, workerId) {
         updated_at: new Date()
       }
     })
-    
+
     await redis.hset(`job:${job.id}`, {
       status: 'completed',
       completed_at: new Date().toISOString()
     })
-    
+
     log(`Job ${job.id} completed successfully`)
-    
+
   } catch (error) {
     await handleJobFailure(job, error)
   }
@@ -404,22 +404,22 @@ async function processJob(job, queueName, workerId) {
 ```pseudo
 async function handleJobFailure(job, error) {
   attempts = job.attempt_count + 1
-  
+
   if (attempts < job.max_attempts) {
     // Calculate exponential backoff delay
     delay = Math.pow(2, attempts) * 1000  // 2s, 4s, 8s, etc.
-    
+
     await delay(delay)
-    
+
     // Re-queue job with updated attempt count
     updatedJob = {
       ...job,
       attempt_count: attempts
     }
-    
+
     queueName = determineQueueName(job.priority, job.queue_name)
     await redis.lpush(queueName, JSON.stringify(updatedJob))
-    
+
     // Update database
     await database.jobs.update({
       where: { id: job.id },
@@ -428,13 +428,13 @@ async function handleJobFailure(job, error) {
         updated_at: new Date()
       }
     })
-    
+
     await redis.hset(`job:${job.id}`, {
       status: 'retry_scheduled',
       attempt_count: attempts.toString(),
       retry_delay: delay.toString()
     })
-    
+
   } else {
     // Max attempts reached - mark as failed
     await database.jobs.update({
@@ -446,13 +446,13 @@ async function handleJobFailure(job, error) {
         updated_at: new Date()
       }
     })
-    
+
     await redis.hset(`job:${job.id}`, {
       status: 'failed',
       error: error.message,
       failed_at: new Date().toISOString()
     })
-    
+
     // Move to dead letter queue
     await moveToDeadLetterQueue(job, error)
   }
@@ -474,10 +474,10 @@ async function moveToDeadLetterQueue(job, error) {
     attempt_count: job.attempt_count,
     original_priority: job.priority
   }
-  
+
   // Add to dead letter queue
   await redis.lpush('deadletter:queue', JSON.stringify(deadLetterJob))
-  
+
   // Mark as processed in dead letter tracking
   await redis.set(`deadletter:${job.id}`, 'moved', 'EX', 604800) // 7 days
 }
@@ -488,9 +488,9 @@ async function replayDeadLetterJob(jobId) {
   if (!jobData) {
     throw new Error('No jobs in dead letter queue')
   }
-  
+
   deadLetterJob = JSON.parse(jobData)
-  
+
   // Reset job in PostgreSQL
   await database.jobs.update({
     where: { id: jobId },
@@ -502,7 +502,7 @@ async function replayDeadLetterJob(jobId) {
       updated_at: new Date()
     }
   })
-  
+
   // Re-queue for processing
   queueName = determineQueueName(deadLetterJob.original_priority, deadLetterJob.queue_name)
   await redis.lpush(queueName, JSON.stringify({
@@ -510,7 +510,7 @@ async function replayDeadLetterJob(jobId) {
     id: jobId,
     attempt_count: 0
   }))
-  
+
   return { success: true, job_id: jobId }
 }
 
@@ -525,18 +525,18 @@ async function replayDeadLetterJob(jobId) {
 // Batch migration for efficiency
 async function batchMigrateJobs(jobs) {
   pipeline = redis.pipeline()
-  
+
   for (job in jobs) {
     queueName = determineQueueName(job.priority, job.queue_name)
     redisPayload = createRedisPayload(job)
-    
+
     pipeline.lpush(queueName, JSON.stringify(redisPayload))
     pipeline.hset(`job:${job.id}`, {
       status: 'migrated',
       queued_at: new Date().toISOString()
     })
   }
-  
+
   // Execute all operations in single round trip
   await pipeline.exec()
 }
@@ -551,7 +551,7 @@ async function batchMigrateJobs(jobs) {
 async function optimizeRedisMemory() {
   // Get Redis memory info
   memoryInfo = await redis.info('memory')
-  
+
   // Clean up expired job tracking
   await redis.eval(`
     local keys = redis.call('KEYS', 'job:*')
@@ -564,7 +564,7 @@ async function optimizeRedisMemory() {
     end
     return expired
   `)
-  
+
   // Monitor memory usage
   if (memoryInfo.used_memory_percentage > 80) {
     await triggerMemoryCleanup()
@@ -593,7 +593,7 @@ async function checkRedisHealth() {
   try {
     ping = await redis.ping()
     info = await redis.info()
-    
+
     return {
       status: 'healthy',
       ping: ping,
@@ -617,7 +617,7 @@ The queue management system provides:
 
 - **High Performance**: Redis-based queues with millisecond latency
 
-- **Priority Routing**: Automatic job routing based on priority levels  
+- **Priority Routing**: Automatic job routing based on priority levels
 
 - **Reliability**: Comprehensive error handling and retry mechanisms
 

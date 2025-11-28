@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Templates
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/templates`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/templates`
 **Purpose**: List all templates for a specific workspace.
 
 **Query Parameters**:
@@ -57,8 +57,8 @@ persona: "Backend Developers"
 
 ### Create Template
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/templates`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/templates`
 **Purpose**: Create a new email template.
 
 **Request**:
@@ -91,8 +91,8 @@ persona: "Backend Developers"
 
 ### Get Template Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/templates/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/templates/{id}`
 **Purpose**: Retrieve full content of a template.
 
 **Response**:
@@ -114,8 +114,8 @@ persona: "Backend Developers"
 
 ### Update Template
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/tenant/templates/{id}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/tenant/templates/{id}`
 **Purpose**: Update template content.
 
 **Request**:
@@ -131,6 +131,6 @@ persona: "Backend Developers"
 
 ### Delete Template
 
-**Method**: `DELETE`  
-**URL**: `/api/v1/tenant/templates/{id}`  
+**Method**: `DELETE`
+**URL**: `/api/v1/tenant/templates/{id}`
 **Purpose**: Remove a template.

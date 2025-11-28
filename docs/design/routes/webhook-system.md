@@ -326,7 +326,7 @@ Sending test event to https://yourapp.com/webhooks...
 ✗ Test failed
   Status: 500 Internal Server Error
   Error: Connection timeout
-  
+
 [Retry Test] [Save Anyway]
 
 
@@ -710,12 +710,12 @@ Sending test event to https://yourapp.com/webhooks...
 Request:
   POST https://yourapp.com/webhooks/penguinmails
   Headers: X-PenguinMails-Signature: sha256=...
-  
+
 Response:
   Status: 200 OK
   Response Time: 142ms
   Body: "OK"
-  
+
 [View Full Request] [View Full Response]
 
 
@@ -767,11 +767,11 @@ function verifySignature(payload, signature, secret) {
 app.post('/webhooks/penguinmails', (req, res) => {
   const signature = req.headers['x-penguinmails-signature'];
   const secret = 'whsec_...'; // Your webhook secret
-  
+
   if (!verifySignature(req.body, signature, secret)) {
     return res.status(401).send('Invalid signature');
   }
-  
+
   // Process event
   console.log('Event:', req.body.type);
   res.status(200).send('OK');
@@ -804,11 +804,11 @@ app.use(express.json());
 app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
   const signature = req.headers['x-penguinmails-signature'] as string;
   const secret = 'whsec_...'; // Your webhook secret
-  
+
   if (!verifySignature(JSON.stringify(req.body), signature, secret)) {
     return res.status(401).send('Invalid signature');
   }
-  
+
   // Process event
   console.log('Event:', req.body.type);
   return res.status(200).send('OK');
@@ -1072,8 +1072,8 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - MVP Feature  
+**Last Updated:** November 25, 2025
+**Status:** Planned - MVP Feature
 **Target Release:** Q1 2026
 
 *Webhook system routes provide comprehensive tools for developers to receive real-time event notifications with secure delivery, retry logic, and detailed monitoring.*

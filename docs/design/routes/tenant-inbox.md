@@ -474,6 +474,6 @@ Once the Stalwart investigation is complete, the following features need impleme
 
 ---
 
-**Last Updated**: November 26, 2025  
-**Status**: Route specifications complete, awaiting Stalwart spike completion  
+**Last Updated**: November 26, 2025
+**Status**: Route specifications complete, awaiting Stalwart spike completion
 **Next Review**: After Stalwart spike (Q4 2025)

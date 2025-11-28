@@ -447,29 +447,29 @@ class WeeklyPerformanceAnalyzerImpl implements WeeklyPerformanceAnalyzer {
   private getPreviousWeeks(currentWeek: Date, count: number): Date[] {
     const weeks: Date[] = [];
     const current = new Date(currentWeek);
-    
+
     for (let i = 1; i <= count; i++) {
       const week = new Date(current);
       week.setDate(week.getDate() - (i * 7));
       weeks.push(week);
     }
-    
+
     return weeks;
   }
 
   private calculateTrendDirection(values: number[]): 'improving' | 'stable' | 'declining' {
     if (values.length < 2) return 'stable';
-    
+
     const recent = values.slice(-3); // Last 3 values
     const older = values.slice(0, -3); // Previous values
-    
+
     if (older.length === 0) return 'stable';
-    
+
     const recentAvg = recent.reduce((sum, val) => sum + val, 0) / recent.length;
     const olderAvg = older.reduce((sum, val) => sum + val, 0) / older.length;
-    
+
     const changePercent = ((recentAvg - olderAvg) / olderAvg) * 100;
-    
+
     if (changePercent > 5) return 'improving';
     if (changePercent < -5) return 'declining';
     return 'stable';
@@ -477,23 +477,23 @@ class WeeklyPerformanceAnalyzerImpl implements WeeklyPerformanceAnalyzer {
 
   private calculateTrendVelocity(values: number[]): number {
     if (values.length < 2) return 0;
-    
+
     const firstHalf = values.slice(0, Math.floor(values.length / 2));
     const secondHalf = values.slice(Math.floor(values.length / 2));
-    
+
     const firstAvg = firstHalf.reduce((sum, val) => sum + val, 0) / firstHalf.length;
     const secondAvg = secondHalf.reduce((sum, val) => sum + val, 0) / secondHalf.length;
-    
+
     return secondAvg - firstAvg;
   }
 
   private calculateTrendConfidence(values: number[]): number {
     if (values.length < 3) return 0.5;
-    
+
     const mean = values.reduce((sum, val) => sum + val, 0) / values.length;
     const variance = values.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / values.length;
     const standardDeviation = Math.sqrt(variance);
-    
+
     // Higher confidence for lower standard deviation relative to mean
     const coefficientOfVariation = standardDeviation / mean;
     return Math.max(0, Math.min(1, 1 - coefficientOfVariation));
@@ -552,14 +552,14 @@ class WeeklyPerformanceAnalyzerImpl implements WeeklyPerformanceAnalyzer {
 // Usage example
 async function demonstrateWeeklyAnalysis() {
   const analyzer = new WeeklyPerformanceAnalyzerImpl();
-  
+
   const tenantId = 'tenant_123';
   const weekStart = new Date('2025-11-18');
   const weekEnd = new Date('2025-11-24');
-  
+
   const healthScore = await analyzer.calculateBusinessHealthScore(tenantId, weekStart, weekEnd);
   console.log('Business Health Score:', healthScore);
-  
+
   const trends = await analyzer.generateTrendAnalysis(tenantId, weekEnd);
   console.log('Trend Analysis:', trends);
 }
@@ -1367,7 +1367,7 @@ class ExecutivePresentationGeneratorImpl implements ExecutivePresentationGenerat
 // Usage example
 async function demonstratePresentationGeneration() {
   const generator = new ExecutivePresentationGeneratorImpl();
-  
+
   // Mock analysis data
   const analysisData: AnalysisData = {
     executiveSummary: {

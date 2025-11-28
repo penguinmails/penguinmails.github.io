@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Users
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/admin/users`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/admin/users`
 **Purpose**: List all users across the platform (Super Admin only).
 
 **Query Parameters**:
@@ -52,14 +52,14 @@ persona: "Backend Developers"
 
 ### Get User Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/admin/users/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/admin/users/{id}`
 **Purpose**: Get detailed user profile.
 
 ### User Audit Trail
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/admin/users/{id}/audit-trail`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/admin/users/{id}/audit-trail`
 **Purpose**: View activity log for a specific user.
 
 **Response**:
@@ -88,6 +88,6 @@ persona: "Backend Developers"
 
 ### Campaign Analytics (Cross-Tenant)
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/analytics/campaigns`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/analytics/campaigns`
 **Purpose**: Aggregate campaign performance across the platform.

@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Tenant Assignments
 
-**Method**: `GET`  
-**URL**: `/api/v1/smtp/admin/assignments`  
+**Method**: `GET`
+**URL**: `/api/v1/smtp/admin/assignments`
 **Purpose**: View how tenants are mapped to IP pools.
 
 **Query Parameters**:
@@ -46,8 +46,8 @@ persona: "Backend Developers"
 
 ### Set / Update Assignment
 
-**Method**: `PUT`  
-**URL**: `/api/v1/smtp/admin/assignments/{assignmentId}`  
+**Method**: `PUT`
+**URL**: `/api/v1/smtp/admin/assignments/{assignmentId}`
 **Purpose**: Create or update a tenant's pool assignment.
 
 **Request**:

@@ -251,7 +251,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 - Third-party audit completion
 
-**Timeline:** Q2 2026 (April-June)  
+**Timeline:** Q2 2026 (April-June)
 **Status:** In Progress
 
 ### EU Data Residency
@@ -334,7 +334,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 - Control implementation evidence
 
-**Timeline:** Q3 2026 (July-September)  
+**Timeline:** Q3 2026 (July-September)
 **Status:** Planned
 
 ### Advanced Threat Detection
@@ -555,7 +555,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 - Enhanced security posture
 
-**Timeline:** Q2 2027 (April-June)  
+**Timeline:** Q2 2027 (April-June)
 **Effort:** 6-12 months
 
 ### Advanced DLP (Data Loss Prevention)
@@ -683,8 +683,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] 2FA rate limiting (prevent brute force)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** TOTP library, QR code generation, backup codes  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** TOTP library, QR code generation, backup codes
 **Target:** Q1 2026 (January-March)
 
 ---
@@ -717,8 +717,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] DNS troubleshooting tools
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Cloudflare/Route53 API keys  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Cloudflare/Route53 API keys
 **Target:** Q1 2026 (February-March)
 
 ---
@@ -755,8 +755,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Role-based access (Compliance Officer, Admin)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Audit logging system, compliance data aggregation  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Audit logging system, compliance data aggregation
 **Target:** Q2 2026 (April-May)
 
 ---
@@ -791,8 +791,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Report sharing (email, secure link, API)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Audit logging, compliance dashboard, report templates  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Audit logging, compliance dashboard, report templates
 **Target:** Q2 2026 (May-June)
 
 ---
@@ -827,8 +827,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Certification audit history (dates, auditors, findings)
 
-**Effort:** Small (1-2 weeks)  
-**Dependencies:** Compliance dashboard, document management  
+**Effort:** Small (1-2 weeks)
+**Dependencies:** Compliance dashboard, document management
 **Target:** Q2 2026 (April-May)
 
 ---
@@ -863,8 +863,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Regional compliance documentation
 
-**Effort:** Large (4-6 weeks)  
-**Dependencies:** Multi-region VPS providers, data migration tools  
+**Effort:** Large (4-6 weeks)
+**Dependencies:** Multi-region VPS providers, data migration tools
 **Target:** Q2 2026 (May-June)
 
 ---
@@ -897,8 +897,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Cookie consent API (programmatic consent management)
 
-**Effort:** Small (1-2 weeks)  
-**Dependencies:** Cookie consent library, cookie policy  
+**Effort:** Small (1-2 weeks)
+**Dependencies:** Cookie consent library, cookie policy
 **Target:** Q2 2026 (May-June)
 
 ---
@@ -933,8 +933,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Log API (programmatic access for SIEM integration)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Elasticsearch infrastructure, log forwarding  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Elasticsearch infrastructure, log forwarding
 **Target:** Q2 2026 (April-May)
 
 ---
@@ -969,8 +969,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Error resolution workflow (assign, resolve, ignore)
 
-**Effort:** Small (1 week)  
-**Dependencies:** Sentry account, error tracking SDK  
+**Effort:** Small (1 week)
+**Dependencies:** Sentry account, error tracking SDK
 **Target:** Q2 2026 (April)
 
 ---
@@ -1007,8 +1007,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Breach reporting dashboard (incidents, notifications, compliance status)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Breach detection, notification templates  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Breach detection, notification templates
 **Target:** Q3 2026 (July-August)
 
 ---
@@ -1043,8 +1043,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Audit log API (programmatic access for SIEM integration)
 
-**Effort:** Large (4-6 weeks)  
-**Dependencies:** Elasticsearch, audit log analytics engine  
+**Effort:** Large (4-6 weeks)
+**Dependencies:** Elasticsearch, audit log analytics engine
 **Target:** Q3 2026 (July-September)
 
 ---
@@ -1079,8 +1079,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] RBAC testing and validation tools
 
-**Effort:** Large (4-6 weeks)  
-**Dependencies:** Permission system redesign, custom role builder  
+**Effort:** Large (4-6 weeks)
+**Dependencies:** Permission system redesign, custom role builder
 **Target:** Q3 2026 (August-September)
 
 ---
@@ -1115,8 +1115,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] IP whitelist testing and validation tools
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** IP geolocation service (MaxMind GeoIP2)  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** IP geolocation service (MaxMind GeoIP2)
 **Target:** Q3 2026 (August-September)
 
 ---
@@ -1149,8 +1149,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Privacy-preserving analytics testing and validation
 
-**Effort:** Large (4-6 weeks)  
-**Dependencies:** Analytics system, differential privacy library  
+**Effort:** Large (4-6 weeks)
+**Dependencies:** Analytics system, differential privacy library
 **Target:** Q3 2026 (July-September)
 
 ---
@@ -1185,8 +1185,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Migration from Loop.so (zero downtime)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** SMTP server infrastructure, email templates  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** SMTP server infrastructure, email templates
 **Target:** Q3 2026 (September)
 
 ---
@@ -1221,8 +1221,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Zero downtime migration
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Vault infrastructure, migration tools  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Vault infrastructure, migration tools
 **Target:** Q3 2026 (September)
 
 ---
@@ -1257,8 +1257,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] SOC 2 Type II report sharing (secure link, NDA)
 
-**Effort:** Large (3-6 months)  
-**Dependencies:** SOC 2 Type I certification (Q2 2026)  
+**Effort:** Large (3-6 months)
+**Dependencies:** SOC 2 Type I certification (Q2 2026)
 **Target:** Q4 2026 (October-December)
 
 ---
@@ -1293,8 +1293,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] SSO testing and validation tools
 
-**Effort:** Large (4-6 weeks)  
-**Dependencies:** SAML/OAuth libraries, SSO provider integrations  
+**Effort:** Large (4-6 weeks)
+**Dependencies:** SAML/OAuth libraries, SSO provider integrations
 **Target:** Q4 2026 (November-December)
 
 ---
@@ -1329,8 +1329,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] SIEM documentation (setup guides, event schemas)
 
-**Effort:** Medium (2-3 weeks)  
-**Dependencies:** Centralized logging (Elasticsearch)  
+**Effort:** Medium (2-3 weeks)
+**Dependencies:** Centralized logging (Elasticsearch)
 **Target:** Q4 2026 (November-December)
 
 ---
@@ -1363,8 +1363,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] Data residency compliance documentation
 
-**Effort:** Large (4-6 weeks per region)  
-**Dependencies:** Multi-region VPS providers  
+**Effort:** Large (4-6 weeks per region)
+**Dependencies:** Multi-region VPS providers
 **Target:** Q4 2026 (October-December)
 
 ---
@@ -1403,8 +1403,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] External HIPAA audit and certification
 
-**Effort:** Large (3-6 months)  
-**Dependencies:** SOC 2 Type II certification  
+**Effort:** Large (3-6 months)
+**Dependencies:** SOC 2 Type II certification
 **Target:** Q1 2027 (January-March)
 
 ---
@@ -1441,8 +1441,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 - [ ] FedRAMP authorization status page
 
-**Effort:** Very Large (12-24 months)  
-**Dependencies:** SOC 2 Type II, ISO 27001  
+**Effort:** Very Large (12-24 months)
+**Dependencies:** SOC 2 Type II, ISO 27001
 **Target:** Q2 2027 (April-June)
 
 ---
@@ -1511,8 +1511,8 @@ Q2 2027: FedRAMP, Advanced DLP
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Next Review:** Monthly  
+**Last Updated:** November 26, 2025
+**Next Review:** Monthly
 **Owner:** Security & Compliance Team
 
 *This roadmap is subject to change based on customer needs, regulatory requirements, and business priorities.*

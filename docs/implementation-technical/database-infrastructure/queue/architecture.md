@@ -102,7 +102,7 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 ```pseudo
 function createJob(queueName, payload, priority) {
   jobId = generateUniqueId()
-  
+
   // Store in PostgreSQL (durable)
   job = database.jobs.create({
     id: jobId,
@@ -111,12 +111,12 @@ function createJob(queueName, payload, priority) {
     priority: priority,
     status: 'queued'
   })
-  
+
   // For high-priority jobs, also add to Redis immediately
   if (priority <= HIGH_PRIORITY_THRESHOLD) {
     redis.lpush(`${queueName}:high`, job)
   }
-  
+
   return job
 }
 
@@ -142,12 +142,12 @@ function migratorLoop() {
         orderBy: ['priority', 'created_at'],
         limit: BATCH_SIZE
       })
-      
+
       for (job in readyJobs) {
         migrateJobToRedis(job)
         updateJobStatus(job.id, 'migrated_to_redis')
       }
-      
+
       sleep(MIGRATION_INTERVAL)
     } catch (error) {
       logError('Migration failed', error)
@@ -167,10 +167,10 @@ function migrateJobToRedis(job) {
     attempt_count: job.attempt_count,
     max_attempts: job.max_attempts
   }
-  
+
   // Add to appropriate priority queue
   redis.lpush(queueName, JSON.stringify(redisPayload))
-  
+
   // Track in Redis hash for real-time status
   redis.hset(`job:${job.id}`, {
     status: 'migrated',
@@ -198,12 +198,12 @@ function workerLoop(workerId) {
     'queue:email:processing:low',
     // ... other queue names
   ]
-  
+
   while (isRunning) {
     try {
       // Blocking pop with priority ordering
       result = redis.brpop(queues, TIMEOUT)
-      
+
       if (result) {
         [queueName, jobData] = result
         job = JSON.parse(jobData)
@@ -223,27 +223,27 @@ function processJob(job, queueName, workerId) {
       started_at: now(),
       worker_id: workerId
     })
-    
+
     // Update Redis tracking
     redis.hset(`job:${job.id}`, {
       status: 'processing',
       worker_id: workerId,
       started_at: now()
     })
-    
+
     // Execute job based on queue type
     executeJobLogic(job.payload, queueName)
-    
+
     // Mark as completed
     updateJobStatus(job.id, 'completed', {
       completed_at: now()
     })
-    
+
     redis.hset(`job:${job.id}`, {
       status: 'completed',
       completed_at: now()
     })
-    
+
   } catch (error) {
     handleJobFailure(job, error)
   }
@@ -271,7 +271,7 @@ graph LR
     C --> D[Redis Queue]
     D --> E[Worker Processing]
     E --> F[PostgreSQL Update]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#fff3e0
@@ -384,25 +384,25 @@ function determineQueueName(priority, queueName) {
 function handleSystemFailure() {
   // 1. Assess failure scope
   failureType = diagnoseFailure()
-  
+
   // 2. Implement recovery based on type
   switch (failureType) {
     case 'redis_down':
       activateRedisFailover()
       pauseNewJobProcessing()
       break
-      
+
     case 'database_down':
       enableReadOnlyMode()
       queueNewJobs()
       break
-      
+
     case 'worker_failure':
       redistributeActiveJobs()
       scaleUpWorkers()
       break
   }
-  
+
   // 3. Monitor recovery
   waitForSystemStability()
   resumeNormalOperations()

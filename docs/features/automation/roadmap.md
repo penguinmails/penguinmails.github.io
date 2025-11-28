@@ -13,8 +13,8 @@ persona: "Product Team, Engineering Team"
 
 This document provides a detailed implementation roadmap for the Automation & Workflows feature set, including MVP and Post-MVP milestones with acceptance criteria, dependencies, and effort estimates.
 
-**Feature Status:** Planned (0% implementation)  
-**MVP Timeline:** Q2-Q3 2026  
+**Feature Status:** Planned (0% implementation)
+**MVP Timeline:** Q2-Q3 2026
 **Total MVP Effort:** 12-15 weeks (3-4 engineers)
 
 ---
@@ -25,8 +25,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Build event ingestion, storage, and processing system to capture user actions for automation triggers
 
-**Priority:** P0 (MVP blocker - required before any automation)  
-**Effort:** Medium (2-3 weeks)  
+**Priority:** P0 (MVP blocker - required before any automation)
+**Effort:** Medium (2-3 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -65,8 +65,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Backend service to execute workflows, evaluate conditions, and trigger actions reliably at scale
 
-**Priority:** P0 (MVP blocker - core automation engine)  
-**Effort:** Large (4-5 weeks)  
+**Priority:** P0 (MVP blocker - core automation engine)
+**Effort:** Large (4-5 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -105,8 +105,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Pre-built trigger templates for common automation scenarios (time-based, email events, contact events)
 
-**Priority:** P1 (MVP - required for usable workflows)  
-**Effort:** Small (1 week)  
+**Priority:** P1 (MVP - required for usable workflows)
+**Effort:** Small (1 week)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -141,8 +141,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Pre-built action templates for common automation tasks (email, contact updates, wait)
 
-**Priority:** P1 (MVP - required for functional workflows)  
-**Effort:** Small (1 week)  
+**Priority:** P1 (MVP - required for functional workflows)
+**Effort:** Small (1 week)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -179,8 +179,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Drag-and-drop interface for creating automation workflows with triggers, conditions, and actions
 
-**Priority:** P1 (MVP - user-facing workflow creation)  
-**Effort:** Large (4-6 weeks)  
+**Priority:** P1 (MVP - user-facing workflow creation)
+**Effort:** Large (4-6 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -221,8 +221,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** UI to view workflow execution history, debug failures, and monitor performance
 
-**Priority:** P1 (MVP - required for debugging and monitoring)  
-**Effort:** Medium (2-3 weeks)  
+**Priority:** P1 (MVP - required for debugging and monitoring)
+**Effort:** Medium (2-3 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -259,8 +259,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Complex branching with nested conditions, multiple paths, and advanced operators
 
-**Priority:** P2 (Post-MVP)  
-**Effort:** Medium (3-4 weeks)  
+**Priority:** P2 (Post-MVP)
+**Effort:** Medium (3-4 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -289,8 +289,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Machine learning recommendations for workflow improvements and predictive triggers
 
-**Priority:** P2 (Post-MVP)  
-**Effort:** Large (6-8 weeks)  
+**Priority:** P2 (Post-MVP)
+**Effort:** Large (6-8 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -327,8 +327,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Library of pre-built workflow templates for common use cases
 
-**Priority:** P3 (Post-MVP)  
-**Effort:** Medium (3-4 weeks)  
+**Priority:** P3 (Post-MVP)
+**Effort:** Medium (3-4 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -363,8 +363,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Workflows that coordinate across email, SMS, push notifications, and other channels
 
-**Priority:** P3 (Post-MVP)  
-**Effort:** Large (5-6 weeks)  
+**Priority:** P3 (Post-MVP)
+**Effort:** Large (5-6 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -399,8 +399,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 **Description:** Enable workflows to trigger external apps via Zapier and receive Zapier triggers
 
-**Priority:** P3 (Post-MVP)  
-**Effort:** Medium (3-4 weeks)  
+**Priority:** P3 (Post-MVP)
+**Effort:** Medium (3-4 weeks)
 **Epic:** Automation & Workflows
 
 ## Acceptance Criteria
@@ -677,8 +677,8 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 ---
 
-**Last Updated:** 2025-11-26  
-**Next Review:** 2026-01-15  
+**Last Updated:** 2025-11-26
+**Next Review:** 2026-01-15
 **Document Owner:** Product Team
 
 ---

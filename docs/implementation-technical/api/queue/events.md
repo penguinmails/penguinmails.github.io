@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### Publish System Event
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/events`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/events`
 **Purpose**: Publish a system event for processing and notification generation.
 
 **Request**:
@@ -57,8 +57,8 @@ persona: "Backend Developers"
 
 ### Domain-Specific Events
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/events/{domain}`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/events/{domain}`
 **Purpose**: Publish domain-specific events (system-alerts, business-metrics, operational-updates).
 
 **Supported Domains**:

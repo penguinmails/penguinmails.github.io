@@ -301,6 +301,6 @@ HashiCorp Vault integration is a foundational security dependency for:
 
 [← Back to All Features](../README.md)
 
-**Last Updated:** November 26, 2025  
-**Next Review:** Monthly  
+**Last Updated:** November 26, 2025
+**Next Review:** Monthly
 **Owner:** Security & Compliance Team

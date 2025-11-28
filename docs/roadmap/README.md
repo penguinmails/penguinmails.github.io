@@ -200,8 +200,8 @@ Roadmaps are updated monthly with:
 
 ---
 
-**Last Updated**: 2025-11-24  
-**Review Cycle**: Monthly  
+**Last Updated**: 2025-11-24
+**Review Cycle**: Monthly
 **Owner**: Product Leadership
 
 ---

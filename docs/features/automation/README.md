@@ -4,8 +4,8 @@ Workflow automation, triggers, actions, and intelligent automation rules.
 
 ## Current Status
 
-**Maturity Level:** Planned (0% implementation)  
-**Target Timeline:** Q2-Q3 2026  
+**Maturity Level:** Planned (0% implementation)
+**Target Timeline:** Q2-Q3 2026
 **Priority:** Medium-High (Critical for competitive differentiation)
 
 ### What Exists Today

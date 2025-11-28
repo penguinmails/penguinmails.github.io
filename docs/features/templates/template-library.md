@@ -79,7 +79,7 @@ Categories:
 Filter by:
   Industry: [All ▼] [SaaS] [E-commerce] [B2B] [Agency]
   Complexity: [All ▼] [Simple] [Moderate] [Advanced]
-  
+
 Sort by: [Most Popular ▼] [Newest] [Highest Rated]
 
 
@@ -113,11 +113,11 @@ Details:
   Industry: SaaS, Technology
   Complexity: Simple
   Components: 5 (Header, Hero, CTA, Footer, Social)
-  
+
 Performance:
   Avg Open Rate: 42%
   Avg Click Rate: 12%
-  
+
 [Use Template] [Preview] [Customize]
 
 
@@ -137,7 +137,7 @@ Save As:
   Name: New User Welcome
   Description: Welcome email for new signups
   Workspace: [PenguinMails ▼]
-  
+
 [Continue →]
 
 
@@ -158,7 +158,7 @@ Colors:
   Secondary Color: [#6c757d] 🎨
   Text Color: [#333333] 🎨
   Background: [#ffffff] 🎨
-  
+
   ☑ Apply to all buttons
   ☑ Apply to all links
   ☑ Apply to headers
@@ -166,12 +166,12 @@ Colors:
 Fonts:
   Heading Font: [Inter ▼]
   Body Font: [Inter ▼]
-  
+
 Social Media:
   Facebook: https://facebook.com/yourpage
   Twitter: https://twitter.com/yourhandle
   LinkedIn: https://linkedin.com/company/yourco
-  
+
 [Apply Branding] [Skip]
 
 
@@ -402,7 +402,7 @@ Colors:
   Text: #333333
   Muted: #666666
   Background: #ffffff
-  
+
 Typography:
   Heading Font: Inter, sans-serif
   Body Font: Inter, sans-serif
@@ -412,17 +412,17 @@ Typography:
     H3: 20px
     Body: 16px
     Small: 14px
-    
+
 Spacing:
   Container Padding: 30px
   Section Spacing: 40px
   Element Margin: 20px
-  
+
 Buttons:
   Border Radius: 4px
   Padding: 15px 30px
   Font Weight: 600
-  
+
 [Save Preset]
 
 Apply to:
@@ -442,22 +442,22 @@ Swap Components:
 
 Current Header:
   [Logo Centered]
-  
+
 Available Alternatives:
   ○ Logo Left, Menu Right
   ○ Full-Width Image Header
   ○ Minimal Text Header
-  
+
 [Swap Component]
 
 Current Footer:
   [Social + Unsubscribe]
-  
+
 Available Alternatives:
   ○ Full Contact Info
   ○ Minimal Unsubscribe Only
   ○ Multi-Column Footer
-  
+
 [Swap Component]
 
 
@@ -480,12 +480,12 @@ Share with:
     ☑ Sales Team
     ☐ Support Team
   ○ Make public (Template Library)
-  
+
 Permissions:
   ☑ Can view
   ☑ Can use (create copy)
   ☐ Can edit (modify original)
-  
+
 [Share Template]
 
 
@@ -504,16 +504,16 @@ Submission Details:
   Description: Clean, modern template for product announcements
   Category: [Promotional ▼]
   Industry Tags: [SaaS] [Technology] [E-commerce]
-  
+
 Preview Images:
   [Upload Desktop Preview] (required)
   [Upload Mobile Preview] (required)
   [Upload Tablet Preview] (optional)
-  
+
 License:
   ● Free for all users
   ○ Premium (paid templates)
-  
+
 [Submit for Review]
 
 Review Process:
@@ -545,17 +545,17 @@ Usage Stats:
   Total Uses: 1,247
   Active Campaigns: 89
   Total Sends: 45,892
-  
+
 Performance:
   Average Open Rate: 42.3%
   Average Click Rate: 12.1%
   Average Conversion: 3.8%
-  
+
 Compared to Category Average:
   Open Rate: +8.2% ✓
   Click Rate: +3.1% ✓
   Conversion: +1.2% ✓
-  
+
 Top Performing Variants:
 
 
@@ -617,7 +617,7 @@ Onboarding:
 
 
   - Trial Expiring Soon
-  
+
 Engagement:
 
 
@@ -631,7 +631,7 @@ Engagement:
 
 
   - Case Study Showcase
-  
+
 Conversion:
 
 
@@ -645,7 +645,7 @@ Conversion:
 
 
   - Enterprise Inquiry
-  
+
 Retention:
 
 
@@ -682,7 +682,7 @@ Transactional:
 
 
   - Return/Refund
-  
+
 Marketing:
 
 
@@ -696,7 +696,7 @@ Marketing:
 
 
   - Price Drop Alert
-  
+
 Seasonal:
 
 
@@ -710,7 +710,7 @@ Seasonal:
 
 
   - End of Season Sale
-  
+
 Loyalty:
 
 
@@ -742,22 +742,22 @@ v3.0 (Current) - Nov 2025
   ✨ New: Mobile-first redesign
   ✨ New: Dark mode support
   🔧 Improved: Button accessibility
-  
+
 v2.1 - Aug 2025
   🔧 Fixed: Outlook rendering issues
   🔧 Improved: Load time optimization
-  
+
 v2.0 - May 2025
   ✨ New: Social media component
   ✨ New: Video embed support
-  
+
 v1.0 - Jan 2025
   🎉 Initial release
 
 Auto-Update:
   ☑ Notify me of template updates
   ☐ Auto-update my templates (not recommended)
-  
+
 [Update to v3.0]
 
 
@@ -773,46 +773,46 @@ Auto-Update:
 -- Template library (public templates)
 CREATE TABLE template_library (
   id UUID PRIMARY KEY,
-  
+
   -- Template metadata
   name VARCHAR(255) NOT NULL,
   description TEXT,
   category VARCHAR(100),
   subcategory VARCHAR(100),
-  
+
   -- Template content
   html_content TEXT,
   json_structure JSONB,
   thumbnail_url TEXT,
   preview_images JSONB,  -- desktop, mobile, tablet
-  
+
   -- Classification
   industry_tags TEXT[],
   complexity_level VARCHAR(50),  -- simple, moderate, advanced
-  
+
   -- Customization
   customizable_components JSONB,
   brand_variables JSONB,  -- Which colors/fonts can be customized
-  
+
   -- Status
   is_active BOOLEAN DEFAULT TRUE,
   is_featured BOOLEAN DEFAULT FALSE,
   is_premium BOOLEAN DEFAULT FALSE,
-  
+
   -- Analytics
   usage_count INTEGER DEFAULT 0,
   rating DECIMAL(3,2),
   rating_count INTEGER DEFAULT 0,
-  
+
   -- Performance benchmarks
   avg_open_rate DECIMAL(5,2),
   avg_click_rate DECIMAL(5,2),
   avg_conversion_rate DECIMAL(5,2),
-  
+
   -- Version
   version VARCHAR(50),
   changelog TEXT,
-  
+
   created_by UUID REFERENCES users(id),
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -829,13 +829,13 @@ CREATE TABLE template_library_usage (
   library_template_id UUID NOT NULL REFERENCES template_library(id),
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   workspace_id UUID REFERENCES workspaces(id),
-  
+
   -- Created template
   template_id UUID REFERENCES templates(id),
-  
+
   -- Customizations applied
   customizations JSONB,
-  
+
   created_at TIMESTAMP DEFAULT NOW()
 );
 
@@ -847,12 +847,12 @@ CREATE TABLE template_ratings (
   id UUID PRIMARY KEY,
   library_template_id UUID NOT NULL REFERENCES template_library(id),
   user_id UUID NOT NULL REFERENCES users(id),
-  
+
   rating INTEGER CHECK (rating >= 1 AND rating <= 5),
   review TEXT,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(library_template_id, user_id)
 );
 
@@ -863,20 +863,20 @@ CREATE TABLE brand_presets (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   workspace_id UUID REFERENCES workspaces(id),
-  
+
   name VARCHAR(255) NOT NULL,
-  
+
   -- Brand settings
   colors JSONB,
   typography JSONB,
   spacing JSONB,
   logo_url TEXT,
-  
+
   -- Social media
   social_links JSONB,
-  
+
   is_default BOOLEAN DEFAULT FALSE,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -927,38 +927,38 @@ class TemplateLibraryService {
       limit: pagination.limit,
       order: [['usageCount', 'DESC']],
     };
-    
+
     if (filters.category) {
       query.where.category = filters.category;
     }
-    
+
     if (filters.industryTags && filters.industryTags.length > 0) {
       query.where.industryTags = {
         [Op.overlap]: filters.industryTags,
       };
     }
-    
+
     if (filters.complexityLevel) {
       query.where.complexityLevel = filters.complexityLevel;
     }
-    
+
     if (filters.isPremium !== undefined) {
       query.where.isPremium = filters.isPremium;
     }
-    
+
     if (filters.search) {
       query.where[Op.or] = [
         { name: { [Op.iLike]: `%${filters.search}%` } },
         { description: { [Op.iLike]: `%${filters.search}%` } },
       ];
     }
-    
+
     const templates = await db.templateLibrary.findAll(query);
     const total = await db.templateLibrary.count({ where: query.where });
-    
+
     return { templates, total };
   }
-  
+
   async useTemplate(
     libraryTemplateId: string,
     tenantId: string,
@@ -969,19 +969,19 @@ class TemplateLibraryService {
     }
   ): Promise<Template> {
     const libraryTemplate = await db.templateLibrary.findById(libraryTemplateId);
-    
+
     if (!libraryTemplate) {
       throw new Error('Template not found');
     }
-    
+
     // Clone template structure
     let jsonStructure = JSON.parse(JSON.stringify(libraryTemplate.jsonStructure));
-    
+
     // Apply brand preset if provided
     if (options.brandPreset) {
       jsonStructure = this.applyBrandPreset(jsonStructure, options.brandPreset);
     }
-    
+
     // Create new template
     const template = await db.templates.create({
       tenantId,
@@ -994,7 +994,7 @@ class TemplateLibraryService {
       status: 'draft',
       parentTemplateId: libraryTemplateId,
     });
-    
+
     // Track usage
     await db.templateLibraryUsage.create({
       libraryTemplateId,
@@ -1003,15 +1003,15 @@ class TemplateLibraryService {
       templateId: template.id,
       customizations: options.brandPreset,
     });
-    
+
     // Increment usage count
     await db.templateLibrary.update(libraryTemplateId, {
       usageCount: libraryTemplate.usageCount + 1,
     });
-    
+
     return template;
   }
-  
+
   private applyBrandPreset(
     structure: any,
     preset: BrandPreset
@@ -1026,26 +1026,26 @@ class TemplateLibraryService {
         if (component.properties.textColor === '{{brand.text}}') {
           component.properties.textColor = preset.colors.text;
         }
-        
+
         // Apply fonts
         if (component.properties.fontFamily === '{{brand.headingFont}}') {
           component.properties.fontFamily = preset.typography.headingFont;
         }
-        
+
         // Apply logo
         if (component.type === 'image' && component.properties.src === '{{brand.logo}}') {
           component.properties.src = preset.logoUrl;
         }
       }
-      
+
       // Recurse to children
       if (component.children) {
         component.children.forEach(applyToComponent);
       }
     };
-    
+
     structure.components.forEach(applyToComponent);
-    
+
     // Update global styles
     if (structure.globalStyles) {
       structure.globalStyles.colors = preset.colors;
@@ -1054,10 +1054,10 @@ class TemplateLibraryService {
         heading: preset.typography.headingFont,
       };
     }
-    
+
     return structure;
   }
-  
+
   async rateTemplate(
     libraryTemplateId: string,
     userId: string,
@@ -1071,20 +1071,20 @@ class TemplateLibraryService {
       rating,
       review,
     });
-    
+
     // Recalculate average rating
     const ratings = await db.templateRatings.findAll({
       where: { libraryTemplateId },
     });
-    
+
     const avgRating = ratings.reduce((sum, r) => sum + r.rating, 0) / ratings.length;
-    
+
     await db.templateLibrary.update(libraryTemplateId, {
       rating: avgRating,
       ratingCount: ratings.length,
     });
   }
-  
+
   async getTemplateAnalytics(
     libraryTemplateId: string
   ): Promise<any> {
@@ -1093,13 +1093,13 @@ class TemplateLibraryService {
       where: { libraryTemplateId },
       include: [{ model: db.templates, include: [{ model: db.campaigns }] }],
     });
-    
+
     // Calculate aggregate metrics
     let totalSends = 0;
     let totalOpens = 0;
     let totalClicks = 0;
     let totalConversions = 0;
-    
+
     for (const use of usage) {
       if (use.template && use.template.campaigns) {
         for (const campaign of use.template.campaigns) {
@@ -1110,7 +1110,7 @@ class TemplateLibraryService {
         }
       }
     }
-    
+
     return {
       usageCount: usage.length,
       totalSends,
@@ -1132,12 +1132,12 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
   const templates = await db.templateLibrary.findAll({
     where: { isActive: true },
   });
-  
+
   const service = new TemplateLibraryService();
-  
+
   for (const template of templates) {
     const analytics = await service.getTemplateAnalytics(template.id);
-    
+
     await db.templateLibrary.update(template.id, {
       avgOpenRate: analytics.avgOpenRate,
       avgClickRate: analytics.avgClickRate,
@@ -1155,7 +1155,7 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
 // Browse template library
 app.get('/api/template-library', async (req, res) => {
   const service = new TemplateLibraryService();
-  
+
   const result = await service.browseTemplates(
     {
       category: req.query.category,
@@ -1168,14 +1168,14 @@ app.get('/api/template-library', async (req, res) => {
       limit: parseInt(req.query.limit) || 20,
     }
   );
-  
+
   return res.json(result);
 });
 
 // Use template from library
 app.post('/api/template-library/:id/use', authenticate, async (req, res) => {
   const service = new TemplateLibraryService();
-  
+
   const template = await service.useTemplate(
     req.params.id,
     req.user.tenantId,
@@ -1185,21 +1185,21 @@ app.post('/api/template-library/:id/use', authenticate, async (req, res) => {
       brandPreset: req.body.brandPreset,
     }
   );
-  
+
   return res.json(template);
 });
 
 // Rate template
 app.post('/api/template-library/:id/rate', authenticate, async (req, res) => {
   const service = new TemplateLibraryService();
-  
+
   await service.rateTemplate(
     req.params.id,
     req.user.id,
     req.body.rating,
     req.body.review
   );
-  
+
   return res.json({ success: true });
 });
 
@@ -1207,7 +1207,7 @@ app.post('/api/template-library/:id/rate', authenticate, async (req, res) => {
 app.get('/api/template-library/:id/analytics', authenticate, async (req, res) => {
   const service = new TemplateLibraryService();
   const analytics = await service.getTemplateAnalytics(req.params.id);
-  
+
   return res.json(analytics);
 });
 
@@ -1228,9 +1228,9 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority (Level 2)  
-**Target Release:** Q2 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority (Level 2)
+**Target Release:** Q2 2026
 **Owner:** Templates Team
 
 {% endraw %}

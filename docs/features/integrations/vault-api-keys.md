@@ -267,7 +267,7 @@ function generateAPIKey(): string {
     .replace(/\//g, '')
     .replace(/=/g, '')
     .substring(0, 32);
-  
+
   return `pm_live_${base62}`;
 }
 
@@ -381,7 +381,7 @@ async function verifyAPIKey(apiKey: string, hash: string): Promise<boolean> {
 
 ```typescript
 // API endpoint with scope validation
-app.post('/api/v1/emails/send', 
+app.post('/api/v1/emails/send',
   authenticateAPIKey,
   requireScope('send_email'),
   async (req, res) => {
@@ -432,24 +432,24 @@ async function checkRateLimit(
   const key = `rate_limit:${apiKeyId}`;
   const now = Date.now();
   const windowStart = now - 60000; // 1 minute window
-  
+
   // Remove old requests outside window
   await redis.zremrangebyscore(key, 0, windowStart);
-  
+
   // Count requests in current window
   const requestCount = await redis.zcard(key);
-  
+
   if (requestCount >= rateLimit) {
     return { allowed: false, remaining: 0 };
   }
-  
+
   // Add current request
   await redis.zadd(key, now, `${now}-${Math.random()}`);
   await redis.expire(key, 60); // Expire after 1 minute
-  
-  return { 
-    allowed: true, 
-    remaining: rateLimit - requestCount - 1 
+
+  return {
+    allowed: true,
+    remaining: rateLimit - requestCount - 1
   };
 }
 
@@ -501,10 +501,10 @@ CREATE TABLE api_key_usage (
   created_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
 
-CREATE INDEX idx_api_key_usage_tenant_key 
+CREATE INDEX idx_api_key_usage_tenant_key
   ON api_key_usage(tenant_id, api_key_id, created_at DESC);
 
-CREATE INDEX idx_api_key_usage_created_at 
+CREATE INDEX idx_api_key_usage_created_at
   ON api_key_usage(created_at DESC);
 
 
@@ -518,7 +518,7 @@ async function getAPIKeyUsageStats(
   apiKeyId: string
 ): Promise<UsageStats> {
   const stats = await db.query(`
-    SELECT 
+    SELECT
       COUNT(*) as total_requests,
       COUNT(*) FILTER (WHERE status_code >= 400) as error_count,
       MAX(created_at) as last_used,
@@ -526,7 +526,7 @@ async function getAPIKeyUsageStats(
     FROM api_key_usage
     WHERE tenant_id = $1 AND api_key_id = $2
   `, [tenantId, apiKeyId]);
-  
+
   return stats.rows[0];
 }
 
@@ -887,7 +887,7 @@ async function sendEmail() {
         }
       }
     );
-    
+
     console.log('Email sent:', response.data);
   } catch (error) {
     console.error('Error:', error.response.data);
@@ -1367,10 +1367,10 @@ sendEmail();
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Document Version:** 1.0  
-**Status:** PLANNED  
-**Priority:** P0 - Critical  
+**Last Updated:** November 26, 2025
+**Document Version:** 1.0
+**Status:** PLANNED
+**Priority:** P0 - Critical
 **Next Review:** December 26, 2025
 
 *This feature documentation provides comprehensive guidance for implementing the Tenant API Key System with Vault integration. All implementation must reference the [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) for secret structure, access policies, and security requirements.*

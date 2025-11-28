@@ -1,7 +1,7 @@
 # Leads Management Implementation Guide
 
-**Feature:** Leads & Contact Management  
-**Epic:** Epic 7  
+**Feature:** Leads & Contact Management
+**Epic:** Epic 7
 **Status:** Ready for Implementation
 
 ---

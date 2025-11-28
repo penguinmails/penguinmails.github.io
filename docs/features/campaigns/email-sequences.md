@@ -188,7 +188,7 @@ step_config:
     event: "clicked_link"
     link_url_contains: "/book-demo"
     lookback_window: "3 days"
-  
+
   true_path_next: "step_2a_sales"
   false_path_next: "step_2b_nurture"
 
@@ -217,7 +217,7 @@ delay_config:
 
     - event: "user_login"
       timeout: "7 days"
-  
+
   on_timeout:
     action: "send_reengagement_email"
 
@@ -286,12 +286,12 @@ CREATE TABLE sequences (
   name VARCHAR(255) NOT NULL,
   description TEXT,
   status VARCHAR(50) DEFAULT 'draft', -- draft, active, paused, archived
-  
+
   -- Configuration
   trigger_config JSONB, -- Definition of entry triggers
   exit_config JSONB, -- Definition of exit goals
   re_enrollment_config JSONB, -- Rules for re-entry
-  
+
   -- Metadata
   created_by UUID REFERENCES users(id),
   created_at TIMESTAMP DEFAULT NOW(),
@@ -307,16 +307,16 @@ CREATE TABLE sequence_steps (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   sequence_id UUID NOT NULL REFERENCES sequences(id) ON DELETE CASCADE,
   parent_step_id UUID REFERENCES sequence_steps(id), -- For simple linear flows
-  
+
   -- Step Definition
   name VARCHAR(255),
   type VARCHAR(50) NOT NULL, -- email, delay, branch, action, goal
   config JSONB NOT NULL, -- Specific config based on type
-  
+
   -- Graph Positioning (for UI)
   ui_position_x INTEGER,
   ui_position_y INTEGER,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -330,11 +330,11 @@ CREATE TABLE sequence_connections (
   sequence_id UUID NOT NULL REFERENCES sequences(id) ON DELETE CASCADE,
   source_step_id UUID NOT NULL REFERENCES sequence_steps(id),
   target_step_id UUID NOT NULL REFERENCES sequence_steps(id),
-  
+
   -- Branching Logic
   condition_label VARCHAR(50), -- e.g., 'true', 'false', 'opened', 'clicked'
   condition_expression JSONB, -- Logic to evaluate for this path
-  
+
   created_at TIMESTAMP DEFAULT NOW()
 );
 
@@ -346,21 +346,21 @@ CREATE TABLE contact_sequences (
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   sequence_id UUID NOT NULL REFERENCES sequences(id),
   contact_id UUID NOT NULL REFERENCES contacts(id),
-  
+
   status VARCHAR(50) DEFAULT 'active', -- active, completed, exited, paused
   current_step_id UUID REFERENCES sequence_steps(id),
-  
+
   -- Timing
   enrolled_at TIMESTAMP DEFAULT NOW(),
   last_step_completed_at TIMESTAMP,
   next_execution_at TIMESTAMP, -- When the scheduler should pick this up
-  
+
   -- Context
   context_data JSONB, -- Store variables specific to this run
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(sequence_id, contact_id) -- Unless re-enrollment allows duplicates (handle via history table)
 );
 
@@ -376,10 +376,10 @@ The engine processes active enrollments, evaluates conditions, and executes step
 ```typescript
 // Core Engine Logic
 class SequenceEngine {
-  
+
   async processDueEnrollments() {
     const now = new Date();
-    
+
     // 1. Fetch enrollments ready for execution
     const dueEnrollments = await db.contactSequences.find({
       where: {
@@ -396,7 +396,7 @@ class SequenceEngine {
 
   async executeStep(enrollment: ContactSequence) {
     const step = await db.sequenceSteps.findById(enrollment.current_step_id);
-    
+
     try {
       switch (step.type) {
         case 'email':
@@ -419,12 +419,12 @@ class SequenceEngine {
 
   async handleBranchStep(enrollment: ContactSequence, step: SequenceStep) {
     const context = await this.buildContext(enrollment);
-    
+
     // Evaluate conditions for all outgoing connections
     const connections = await db.sequenceConnections.find({ source_step_id: step.id });
-    
+
     let nextStepId = null;
-    
+
     for (const conn of connections) {
       if (this.evaluateCondition(conn.condition_expression, context)) {
         nextStepId = conn.target_step_id;

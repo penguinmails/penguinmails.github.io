@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 ## Task Assignment Form Template
 
-**Task ID:** [Generated ID]  
+**Task ID:** [Generated ID]
 
 ## Project Name:** ____________________________
 
@@ -55,7 +55,7 @@ persona: "Documentation Users"
 
 ## Effort Point Adjustment Request
 
-**Adjustment ID:** [Generated ID]  
+**Adjustment ID:** [Generated ID]
 
 ## Original Task ID:** ____________________________
 
@@ -75,16 +75,16 @@ persona: "Documentation Users"
 
 ## Reason for Request
 
-☐ Scope changes during execution  
-☐ Technical complexity underestimated  
-☐ Additional requirements discovered  
-☐ External dependencies causing delays  
-☐ Quality requirements exceeded expectations  
+☐ Scope changes during execution
+☐ Technical complexity underestimated
+☐ Additional requirements discovered
+☐ External dependencies causing delays
+☐ Quality requirements exceeded expectations
 ☐ Other: ______________________________
 
 ### Impact Assessment
 
-**Effort Point Adjustment:** ☐ Increase ☐ Decrease  
+**Effort Point Adjustment:** ☐ Increase ☐ Decrease
 
 ## Additional Points:** ________________________
 

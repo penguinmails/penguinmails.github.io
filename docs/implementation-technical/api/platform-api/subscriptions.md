@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Tenant Subscriptions
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/subscriptions`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/subscriptions`
 **Purpose**: List all tenant subscriptions with filtering and pagination.
 
 **Query Parameters**:
@@ -69,8 +69,8 @@ persona: "Backend Developers"
 
 ### Get Subscription Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/subscriptions/{subscriptionId}`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/subscriptions/{subscriptionId}`
 **Purpose**: Retrieve detailed information about a specific subscription, including billing history.
 
 **Response**:
@@ -103,8 +103,8 @@ persona: "Backend Developers"
 
 ### Get Tenant Subscription
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/tenants/{tenantId}/subscription`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/tenants/{tenantId}/subscription`
 **Purpose**: Retrieve the active subscription for a specific tenant.
 
 **Response**:
@@ -135,8 +135,8 @@ persona: "Backend Developers"
 
 ### Update Subscription Status
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/platform/subscriptions/{subscriptionId}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/platform/subscriptions/{subscriptionId}`
 **Purpose**: Administrative updates to subscription metadata.
 
 **Request**:
@@ -153,8 +153,8 @@ persona: "Backend Developers"
 
 ### Subscription Analytics
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/subscriptions/analytics`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/subscriptions/analytics`
 **Purpose**: Aggregate subscription metrics for business intelligence.
 
 **Query Parameters**:

@@ -117,17 +117,17 @@ class CorporateContributionImpl implements CorporateContribution {
     // Determine if agreement is needed
     if (this.requiresCorporateAgreement(contributionScope)) {
       const agreement = this.generateCorporateAgreement(companyName, contributionScope);
-      
+
       // Start approval workflow
       const approvalRequest = await this.approvalWorkflow.createRequest({
         approvers: this.getRequiredApprovers(companyName),
         agreement,
         legalReview: true
       });
-      
+
       return approvalRequest;
     }
-    
+
     return null;
   }
 
@@ -138,7 +138,7 @@ class CorporateContributionImpl implements CorporateContribution {
       'substantial_codebase_changes',
       'third_party_integrations'
     ];
-    
+
     return highValueIndicators.some(indicator =>
       contributionScope.toLowerCase().includes(indicator)
     );
@@ -172,11 +172,11 @@ class CorporateContributionImpl implements CorporateContribution {
   private getRequiredApprovers(companyName: string): string[] {
     // Mock approver determination based on company size/type
     const corporateApprovers = ['legal-team@penguinmails.com'];
-    
+
     if (companyName.includes('Inc') || companyName.includes('Corp')) {
       corporateApprovers.push('corporate-contributor@penguinmails.com');
     }
-    
+
     return corporateApprovers;
   }
 }
@@ -323,7 +323,7 @@ class LicenseCompatibilityImpl implements LicenseCompatibility {
     'gpl-3.0': ['gpl-3.0', 'agpl-3.0'],
     'lgpl-3.0': ['lgpl-3.0', 'gpl-3.0', 'apache-2.0', 'mit']
   };
-  
+
   private readonly INCOMPATIBLE_LICENSES: Record<string, string[]> = {
     'gpl-3.0': ['mit', 'apache-2.0', 'bsd', 'proprietary'],
     'agpl-3.0': ['mit', 'apache-2.0', 'bsd', 'proprietary'],
@@ -357,7 +357,7 @@ class LicenseCompatibilityImpl implements LicenseCompatibility {
 
   generateAttributionNotice(dependencies: Dependency[]): AttributionNotice[] {
     const notices: AttributionNotice[] = [];
-    
+
     dependencies.forEach(dep => {
       if (!['unlicense', 'public_domain'].includes(dep.license.toLowerCase())) {
         const notice: AttributionNotice = {
@@ -370,16 +370,16 @@ Source: ${dep.repositoryUrl}`,
         notices.push(notice);
       }
     });
-    
+
     return notices;
   }
 
   getLicenseRiskLevel(license: string): 'LOW' | 'MEDIUM' | 'HIGH' {
     const lowRiskLicenses = ['mit', 'apache-2.0', 'bsd', 'isc', 'unlicense'];
     const highRiskLicenses = ['gpl-3.0', 'agpl-3.0', 'copyleft'];
-    
+
     const lowerLicense = license.toLowerCase();
-    
+
     if (lowRiskLicenses.includes(lowerLicense)) {
       return 'LOW';
     } else if (highRiskLicenses.includes(lowerLicense)) {
@@ -394,14 +394,14 @@ Source: ${dep.repositoryUrl}`,
 async function validateDependencies(dependencies: Dependency[]): Promise<void> {
   const licenseCompat = new LicenseCompatibilityImpl();
   const projectLicense = 'mit';
-  
+
   for (const dep of dependencies) {
     const result = licenseCompat.checkCompatibility(projectLicense, dep.license);
-    
+
     if (!result.compatible) {
       console.warn(`License warning for ${dep.name}: ${result.message}`);
     }
-    
+
     if (result.riskLevel === 'HIGH') {
       throw new Error(`High-risk license detected: ${dep.name} (${dep.license})`);
     }
@@ -511,7 +511,7 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 // MIT licensed library integration
 // Original: https://github.com/example/lib
 // Copyright (c) 2023 Example Author
-// 
+//
 // PenguinMails modifications:
 // - React integration wrapper
 // - Enhanced error handling
@@ -681,7 +681,7 @@ class PatentDefenseStrategyImpl implements PatentDefenseStrategy {
 
   private calculateOverallRisk(riskFactors: FeatureAnalysis): 'LOW' | 'MEDIUM' | 'HIGH' {
     const riskCount = Object.values(riskFactors).filter(Boolean).length;
-    
+
     if (riskCount === 0) return 'LOW';
     if (riskCount <= 2) return 'MEDIUM';
     return 'HIGH';
@@ -689,27 +689,27 @@ class PatentDefenseStrategyImpl implements PatentDefenseStrategy {
 
   private suggestMitigations(riskFactors: FeatureAnalysis): string[] {
     const mitigations: string[] = [];
-    
+
     if (riskFactors.novelAlgorithms) {
       mitigations.push('Consider defensive publication of novel algorithms');
       mitigations.push('Review existing algorithm patents before implementation');
     }
-    
+
     if (riskFactors.businessMethods) {
       mitigations.push('Legal review of business method implications required');
       mitigations.push('Consider business method patent landscape analysis');
     }
-    
+
     if (riskFactors.uiInnovations) {
       mitigations.push('UI design patent search recommended');
       mitigations.push('Consider user experience patent protection');
     }
-    
+
     if (riskFactors.dataProcessing) {
       mitigations.push('Data processing patent landscape review');
       mitigations.push('Privacy and data protection compliance check');
     }
-    
+
     return mitigations;
   }
 
@@ -907,7 +907,7 @@ class TrademarkMonitorImpl implements TrademarkMonitor {
   private async assessBrandConfusionRisk(request: TrademarkUsageRequest): Promise<TrademarkCheck> {
     // Mock implementation - would analyze potential brand confusion
     const risk = request.usageType === 'PRODUCT_NAME' ? 'HIGH' : 'LOW';
-    
+
     return {
       approved: risk === 'LOW',
       riskLevel: risk,
@@ -919,7 +919,7 @@ class TrademarkMonitorImpl implements TrademarkMonitor {
   private async checkDomainConflicts(request: TrademarkUsageRequest): Promise<TrademarkCheck> {
     // Mock implementation - would check domain name conflicts
     const containsPenguinMails = request.description.toLowerCase().includes('penguinmails');
-    
+
     return {
       approved: !containsPenguinMails,
       riskLevel: containsPenguinMails ? 'HIGH' : 'LOW',
@@ -931,7 +931,7 @@ class TrademarkMonitorImpl implements TrademarkMonitor {
   private async checkCompetitiveUsage(request: TrademarkUsageRequest): Promise<TrademarkCheck> {
     // Mock implementation - would analyze competitive usage
     const isCompetitive = request.usageType === 'PRODUCT_NAME';
-    
+
     return {
       approved: !isCompetitive,
       riskLevel: isCompetitive ? 'MEDIUM' : 'LOW',
@@ -942,7 +942,7 @@ class TrademarkMonitorImpl implements TrademarkMonitor {
   private async checkGeographicRestrictions(request: TrademarkUsageRequest): Promise<TrademarkCheck> {
     // Mock implementation - would check trademark registrations by geography
     const requiresApproval = request.geographicScope.length > 1;
-    
+
     return {
       approved: true,
       riskLevel: requiresApproval ? 'MEDIUM' : 'LOW',
@@ -1388,16 +1388,16 @@ async function runComplianceScan(projectPath: string): Promise<ComplianceReport>
 
 For legal questions regarding licensing, IP, or compliance:
 
-**Email**: <legal@penguinmails.com>  
-**Phone**: +1 (555) 123-4567  
-**Address**:  
-PenguinMails Inc.  
-Legal Department  
-123 Innovation Drive  
-Tech City, TC 12345  
+**Email**: <legal@penguinmails.com>
+**Phone**: +1 (555) 123-4567
+**Address**:
+PenguinMails Inc.
+Legal Department
+123 Innovation Drive
+Tech City, TC 12345
 
-**Emergency Contact**: For urgent IP infringement or legal issues  
-**Email**: <urgent-legal@penguinmails.com>  
+**Emergency Contact**: For urgent IP infringement or legal issues
+**Email**: <urgent-legal@penguinmails.com>
 **Phone**: +1 (555) 999-0000 (24/7)
 
 For contribution process questions, see [`code-contribution.md`](code-contribution.md).

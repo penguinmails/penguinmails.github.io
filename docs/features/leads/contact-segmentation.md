@@ -327,7 +327,7 @@ Match ALL:
 
 
     - Timezone: PST, MST, CST, EST
-  
+
   Group 2 (Engagement):
 
 
@@ -335,7 +335,7 @@ Match ALL:
 
 
     - Total clicks: ≥ 5
-  
+
   Group 3 (Not):
 
 
@@ -531,7 +531,7 @@ High-Value Cohort:
 
 
   - Is greater than: $5,000
-  
+
 
 
   - Custom Field: lifetime_opens
@@ -620,10 +620,10 @@ Hypothesis: "High engagement = Lead Score > 60"
 Test Setup:
   Segment A: Lead Score > 60 (500 contacts)
   Segment B: Lead Score 40-60 (500 contacts)
-  
+
   Send same campaign to both
   Compare: Open rate, Click rate, Conversion rate
-  
+
 Result: Segment A 2.3x higher conversion
 Action: Adjust scoring model
 
@@ -642,23 +642,23 @@ CREATE TABLE segments (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   workspace_id UUID REFERENCES workspaces(id),
-  
+
   name VARCHAR(255) NOT NULL,
   description TEXT,
-  
+
   -- Segment type
   segment_type VARCHAR(50), -- dynamic, static
-  
+
   -- Rules (for dynamic segments)
   rules JSONB, -- Filtering criteria
-  
+
   -- Metadata
   contact_count INTEGER DEFAULT 0,
   last_recalculated_at TIMESTAMP,
-  
+
   -- Status
   is_active BOOLEAN DEFAULT TRUE,
-  
+
   created_by UUID REFERENCES users(id),
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
@@ -673,11 +673,11 @@ CREATE TABLE segment_contacts (
   id UUID PRIMARY KEY,
   segment_id UUID NOT NULL REFERENCES segments(id),
   contact_id UUID NOT NULL REFERENCES contacts(id),
-  
+
   -- For dynamic segments, track when added
   added_at TIMESTAMP DEFAULT NOW(),
   added_via VARCHAR(50), -- rule_match, manual, import
-  
+
   UNIQUE(segment_id, contact_id)
 );
 
@@ -688,10 +688,10 @@ CREATE INDEX idx_segment_contacts_contact ON segment_contacts(contact_id);
 CREATE TABLE segment_analytics (
   id UUID PRIMARY KEY,
   segment_id UUID NOT NULL REFERENCES segments(id),
-  
+
   -- Timeframe
   date DATE NOT NULL,
-  
+
   -- Metrics
   contact_count INTEGER,
   emails_sent INTEGER DEFAULT 0,
@@ -700,14 +700,14 @@ CREATE TABLE segment_analytics (
   clicks INTEGER DEFAULT 0,
   conversions INTEGER DEFAULT 0,
   revenue DECIMAL(10,2) DEFAULT 0,
-  
+
   -- Rates
   open_rate DECIMAL(5,2),
   click_rate DECIMAL(5,2),
   conversion_rate DECIMAL(5,2),
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(segment_id, date)
 );
 
@@ -740,28 +740,28 @@ interface SegmentDefinition {
 class SegmentEngine {
   async evaluateSegment(segmentId: string): Promise<Contact[]> {
     const segment = await db.segments.findById(segmentId);
-    
+
     if (segment.segmentType === 'static') {
       return this.getStaticContacts(segmentId);
     }
-    
+
     // Dynamic segment - evaluate rules
     const query = this.buildQuery(segment.rules);
     const contacts = await db.contacts.findAll(query);
-    
+
     // Update cached membership
     await this.updateSegmentMembership(segmentId, contacts);
-    
+
     return contacts;
   }
-  
+
   private buildQuery(rules: SegmentDefinition): any {
     const conditions = this.buildConditions(rules.groups, rules.match);
-    
+
     let query: any = {
       where: conditions,
     };
-    
+
     // Apply exclusions
     if (rules.exclusions) {
       const exclusionConditions = this.buildConditions(
@@ -775,26 +775,26 @@ class SegmentEngine {
         ],
       };
     }
-    
+
     return query;
   }
-  
+
   private buildConditions(
     groups: SegmentConditionGroup[],
     match: 'all' | 'any'
   ): any {
     const operator = match === 'all' ? Op.and : Op.or;
-    
+
     const groupConditions = groups.map(group => {
       return this.buildGroupConditions(group);
     });
-    
+
     return { [operator]: groupConditions };
   }
-  
+
   private buildGroupConditions(group: SegmentConditionGroup): any {
     const operator = group.match === 'all' ? Op.and : Op.or;
-    
+
     const conditions = group.conditions.map(condition => {
       if ('field' in condition) {
         return this.buildRuleCondition(condition as SegmentRule);
@@ -802,18 +802,18 @@ class SegmentEngine {
         return this.buildGroupConditions(condition as SegmentConditionGroup);
       }
     });
-    
+
     return { [operator]: conditions };
   }
-  
+
   private buildRuleCondition(rule: SegmentRule): any {
     const { field, operator, value } = rule;
-    
+
     // Parse field path (e.g., "contact.email" or "customField.industry")
     const [entity, property] = field.split('.');
-    
+
     let condition: any = {};
-    
+
     if (entity === 'customField') {
       // Query JSONB custom fields
       condition = {
@@ -825,10 +825,10 @@ class SegmentEngine {
         [property]: this.getOperatorCondition(operator, value),
       };
     }
-    
+
     return condition;
   }
-  
+
   private getOperatorCondition(operator: string, value: any): any {
     switch (operator) {
       case 'equals':
@@ -851,7 +851,7 @@ class SegmentEngine {
         throw new Error(`Unknown operator: ${operator}`);
     }
   }
-  
+
   private async updateSegmentMembership(
     segmentId: string,
     contacts: Contact[]
@@ -860,7 +860,7 @@ class SegmentEngine {
     await db.segmentContacts.destroy({
       where: { segmentId },
     });
-    
+
     // Add new memberships
     await db.segmentContacts.bulkCreate(
       contacts.map(contact => ({
@@ -869,7 +869,7 @@ class SegmentEngine {
         addedVia: 'rule_match',
       }))
     );
-    
+
     // Update contact count
     await db.segments.update(segmentId, {
       contactCount: contacts.length,
@@ -892,7 +892,7 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
       isActive: true,
     },
   });
-  
+
   for (const segment of dynamicSegments) {
     await segmentQueue.add('recalculate-segment', {
       segmentId: segment.id,
@@ -903,7 +903,7 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 // Queue worker
 segmentQueue.process('recalculate-segment', async (job) => {
   const { segmentId } = job.data;
-  
+
   const engine = new SegmentEngine();
   await engine.evaluateSegment(segmentId);
 });
@@ -911,7 +911,7 @@ segmentQueue.process('recalculate-segment', async (job) => {
 // Calculate segment analytics daily
 cron.schedule('0 2 * * *', async () => {  // 2 AM daily
   const segments = await db.segments.findAll({ where: { isActive: true } });
-  
+
   for (const segment of segments) {
     await calculateSegmentAnalytics(segment.id);
   }
@@ -926,7 +926,7 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
 // Create segment
 app.post('/api/segments', authenticate, async (req, res) => {
   const { name, description, segmentType, rules, contactIds } = req.body;
-  
+
   const segment = await db.segments.create({
     tenantId: req.user.tenantId,
     workspaceId: req.body.workspaceId,
@@ -936,7 +936,7 @@ app.post('/api/segments', authenticate, async (req, res) => {
     rules: segmentType === 'dynamic' ? rules : null,
     createdBy: req.user.id,
   });
-  
+
   // For static segments, add contacts
   if (segmentType === 'static' && contactIds) {
     await db.segmentContacts.bulkCreate(
@@ -946,30 +946,30 @@ app.post('/api/segments', authenticate, async (req, res) => {
         addedVia: 'manual',
       }))
     );
-    
+
     await db.segments.update(segment.id, {
       contactCount: contactIds.length,
     });
   }
-  
+
   // For dynamic segments, trigger calculation
   if (segmentType === 'dynamic') {
     await segmentQueue.add('recalculate-segment', {
       segmentId: segment.id,
     });
   }
-  
+
   return res.json(segment);
 });
 
 // Get segment contacts
 app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
   const segment = await db.segments.findById(req.params.id);
-  
+
   if (segment.tenantId !== req.user.tenantId) {
     return res.status(403).json({ error: 'Forbidden' });
   }
-  
+
   const contacts = await db.contacts.findAll({
     include: [{
       model: db.segmentContacts,
@@ -978,7 +978,7 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
     offset: req.query.offset || 0,
     limit: req.query.limit || 50,
   });
-  
+
   return res.json({
     segment,
     contacts,
@@ -1005,7 +1005,7 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority (Level 2)  
-**Target Release:** Q1 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority (Level 2)
+**Target Release:** Q1 2026
 **Owner:** Leads Team

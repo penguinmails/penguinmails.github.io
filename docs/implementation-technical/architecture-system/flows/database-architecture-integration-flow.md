@@ -62,7 +62,7 @@ graph LR
     QUEUE_REDIS -->|Process Jobs| CONTENT
     QUEUE_REDIS -->|Send Notifications| NOTIFICATIONS
     CONTENT -->|Search| CONTENT_INDEX
-    
+
     %% Analytics Pipeline
     OLTP -->|Daily ETL| ANALYTICS
     CONTENT -->|Content Metrics| ANALYTICS

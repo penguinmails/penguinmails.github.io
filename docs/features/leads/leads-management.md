@@ -158,7 +158,7 @@ CREATE TABLE contacts (
   status VARCHAR(20) DEFAULT 'active',
   created_at TIMESTAMP,
   updated_at TIMESTAMP,
-  
+
   UNIQUE(tenant_id, email)
 );
 

@@ -284,7 +284,7 @@ The networking API integrates with PenguinMails database schema:
   - `rdns_hostname` - Set via `set_rdns`
 
   - `approximate_cost` - $4.99/month baseline (configurable)
-  
+
 - **`vps_instances` table**:
 
   - `main_ip` - Tracked from instance object

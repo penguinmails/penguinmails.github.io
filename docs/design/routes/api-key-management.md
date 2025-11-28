@@ -462,7 +462,7 @@ async function sendEmail() {
         }
       }
     );
-    
+
     console.log('Email sent:', response.data);
   } catch (error) {
     console.error('Error:', error.response.data);
@@ -965,9 +965,9 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Document Version:** 1.0  
-**Status:** PLANNED  
+**Last Updated:** November 26, 2025
+**Document Version:** 1.0
+**Status:** PLANNED
 **Priority:** P0 - Critical
 
 *This route specification provides comprehensive UI/UX guidance for implementing the API key management interface. All implementation must reference the [Tenant API Key System feature documentation](/docs/features/integrations/vault-api-keys) for backend integration and security requirements.*

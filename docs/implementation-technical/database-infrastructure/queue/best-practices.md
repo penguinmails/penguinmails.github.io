@@ -64,17 +64,17 @@ bad_job_payload = {
 -- Essential indexes for queue operations
 
 -- Job migration optimization (most important)
-CREATE INDEX idx_jobs_queuer_migration 
-ON jobs(status, run_at, priority, created_at) 
+CREATE INDEX idx_jobs_queuer_migration
+ON jobs(status, run_at, priority, created_at)
 WHERE status = 'queued';
 
 -- Queue-specific queries
-CREATE INDEX idx_jobs_by_queue 
-ON jobs(queue_name, status, priority) 
+CREATE INDEX idx_jobs_by_queue
+ON jobs(queue_name, status, priority)
 WHERE status IN ('queued', 'migrated_to_redis');
 
 -- Status reporting and analytics
-CREATE INDEX idx_jobs_status_time 
+CREATE INDEX idx_jobs_status_time
 ON jobs(status, updated_at DESC);
 
 
@@ -90,7 +90,7 @@ ON jobs(status, updated_at DESC);
 // GOOD: Idempotent job design
 async function sendWelcomeEmail(job) {
   const { recipient_email, template_id, campaign_id } = job.payload
-  
+
   // Check if email was already sent
   const existingDelivery = await database.emailDeliveries.findFirst({
     where: {
@@ -100,18 +100,18 @@ async function sendWelcomeEmail(job) {
       status: 'sent'
     }
   })
-  
+
   if (existingDelivery) {
     log(`Email already sent to ${recipient_email}, skipping`)
     return { skipped: true, reason: 'already_sent' }
   }
-  
+
   // Send email
   const result = await emailService.send({
     to: recipient_email,
     template: template_id
   })
-  
+
   // Record delivery
   await database.emailDeliveries.create({
     data: {
@@ -122,7 +122,7 @@ async function sendWelcomeEmail(job) {
       status: 'sent'
     }
   })
-  
+
   return { success: true, messageId: result.messageId }
 }
 
@@ -145,19 +145,19 @@ JOB_TIMEOUTS = {
 
 async function processJobWithTimeout(job) {
   const timeout = JOB_TIMEOUTS[job.queue_name] || 60
-  
+
   const timeoutPromise = new Promise((_, reject) => {
     setTimeout(() => reject(new Error('Job timeout')), timeout * 1000)
   })
-  
+
   try {
     const result = await Promise.race([
       executeJobLogic(job),
       timeoutPromise
     ])
-    
+
     return result
-    
+
   } catch (error) {
     if (error.message === 'Job timeout') {
       await handleJobTimeout(job)
@@ -183,13 +183,13 @@ function validateJobPayload(payload) {
     campaign_id: Joi.string().uuid().required(),
     priority: Joi.number().integer().min(1).max(1000).default(100)
   }
-  
+
   const { error, value } = Joi.validate(payload, schema)
-  
+
   if (error) {
     throw new ValidationError(`Invalid job payload: ${error.message}`)
   }
-  
+
   return value
 }
 
@@ -209,19 +209,19 @@ class QueueMetrics {
       // Throughput metrics
       jobs_processed_per_minute: await this.getJobsPerMinute(),
       jobs_created_per_minute: await this.getJobCreationRate(),
-      
+
       // Latency metrics
       average_processing_time: await this.getAverageProcessingTime(),
       p95_processing_time: await this.getPercentileProcessingTime(95),
-      
+
       // Error metrics
       error_rate: await this.getErrorRate(),
       failed_jobs_count: await this.getFailedJobsCount(),
-      
+
       // Queue health
       queue_depths: await this.getQueueDepths(),
       oldest_job_age: await this.getOldestJobAge(),
-      
+
       // Worker metrics
       active_workers: await this.getActiveWorkerCount(),
       worker_utilization: await this.getWorkerUtilization()
@@ -244,31 +244,31 @@ class JobErrorHandler {
     // Retry on transient errors
     const retryableErrors = [
       'ECONNRESET',
-      'ETIMEDOUT', 
+      'ETIMEDOUT',
       'ENOTFOUND',
       'ECONNREFUSED',
       'temporary_failure'
     ]
-    
-    return retryableErrors.some(errorType => 
+
+    return retryableErrors.some(errorType =>
       error.message.includes(errorType)
     )
   }
-  
+
   static getRetryDelay(attemptCount, errorType) {
     // Exponential backoff with jitter
     const baseDelay = 1000
     const maxDelay = 300000 // 5 minutes
-    
+
     const exponentialDelay = Math.min(
       baseDelay * Math.pow(2, attemptCount),
       maxDelay
     )
-    
+
     // Add random jitter (±25%)
     const jitter = exponentialDelay * 0.25
     const delay = exponentialDelay + (Math.random() - 0.5) * jitter * 2
-    
+
     return Math.floor(delay)
   }
 }
@@ -306,7 +306,7 @@ spec:
 These best practices provide a foundation for building and operating a robust, scalable queue system:
 
 **Performance**: Optimized job design, efficient database queries, and proper Redis configuration
-**Reliability**: Idempotent operations, timeout management, and graceful shutdown procedures  
+**Reliability**: Idempotent operations, timeout management, and graceful shutdown procedures
 **Security**: Input validation, access control, and data encryption where necessary
 **Observability**: Comprehensive monitoring, structured logging, and health checks
 **Operations**: Proper deployment strategies, capacity planning, and error handling

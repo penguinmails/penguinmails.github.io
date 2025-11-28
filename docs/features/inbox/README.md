@@ -4,8 +4,8 @@ Comprehensive email organization, response management, and conversation tracking
 
 ## Overview
 
-**Status:** Architecture Spike Required (Critical Blocker)  
-**Timeline:** Q4 2025 (Spike) → Q1 2026 (MVP) → Q2-Q3 2026 (AI & Analytics)  
+**Status:** Architecture Spike Required (Critical Blocker)
+**Timeline:** Q4 2025 (Spike) → Q1 2026 (MVP) → Q2-Q3 2026 (AI & Analytics)
 **Priority:** Critical (Foundation feature for response management)
 
 **🚨 Critical Blocker:** Stalwart Mail Server database schema investigation must be completed before any inbox development can proceed. See [Roadmap](./roadmap.md) for details.

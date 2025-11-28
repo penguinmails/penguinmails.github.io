@@ -214,7 +214,7 @@ Company Address Setup:
 
 ```text
 
-If you no longer wish to receive these emails, you may 
+If you no longer wish to receive these emails, you may
 [unsubscribe here]({{unsubscribe_url}})
 
 
@@ -430,11 +430,11 @@ Retention Policy:
 <!-- Automatically added to all commercial emails -->
 <footer class="can-spam-footer">
   <p><small>This is a commercial message from {{company.name}}</small></p>
-  
+
   <p>{{company.address}}</p>
-  
+
   <p>
-    <a href="{{unsubscribe_url}}">Unsubscribe</a> | 
+    <a href="{{unsubscribe_url}}">Unsubscribe</a> |
     <a href="{{preferences_url}}">Email Preferences</a>
   </p>
 </footer>
@@ -569,8 +569,8 @@ Before any campaign sends, PenguinMails automatically checks:
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Regulatory Authority:** Federal Trade Commission (FTC)  
+**Last Updated:** November 24, 2025
+**Regulatory Authority:** Federal Trade Commission (FTC)
 **Applies To:** All commercial emails sent to US recipients
 
 *PenguinMails automates CAN-SPAM compliance but users are ultimately responsible for ensuring their email practices comply with all applicable laws.*

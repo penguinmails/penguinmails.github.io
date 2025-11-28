@@ -178,7 +178,7 @@ TABLE analytics_jobs {
 INDEX idx_jobs_queuer ON jobs(status, run_at, priority, created_at)
 WHERE status = 'queued'
 
--- Queue-specific migration  
+-- Queue-specific migration
 INDEX idx_jobs_queue_migration ON jobs(queue_name, status, run_at, priority)
 WHERE status = 'queued'
 
@@ -212,21 +212,21 @@ INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_
 
 ```pseudo
 // Queuer process query
-SELECT * FROM jobs 
-WHERE status = 'queued' 
+SELECT * FROM jobs
+WHERE status = 'queued'
   AND run_at <= NOW()
 ORDER BY priority ASC, created_at ASC
 LIMIT 100
 
 // Job status tracking
 SELECT status, COUNT(*), updated_at
-FROM jobs 
+FROM jobs
 WHERE queue_name = 'email-sending'
 GROUP BY status, updated_at
 
 // Failed job analysis
-SELECT * FROM jobs 
-WHERE status = 'failed' 
+SELECT * FROM jobs
+WHERE status = 'failed'
   AND updated_at >= NOW() - INTERVAL '24 hours'
 ORDER BY failed DESC
 
@@ -260,7 +260,7 @@ ORDER BY failed DESC
 ```pseudo
 GOOD payload example = {
   campaign_id: "uuid-123",
-  recipient_email: "user@example.com", 
+  recipient_email: "user@example.com",
   template_id: "welcome-001",
   retry_count: 2
 }
@@ -303,14 +303,14 @@ erDiagram
   job_queues ||--o{ jobs : "contains"
   jobs ||--o{ job_logs : "tracks"
   analytics_jobs }o--|| job_queues : "references"
-  
+
   job_queues {
     varchar name PK
     int default_priority
     boolean is_active
     timestamptz created
   }
-  
+
   jobs {
     uuid id PK
     varchar queue_name FK
@@ -319,7 +319,7 @@ erDiagram
     jsonb payload
     timestamptz created
   }
-  
+
   job_logs {
     uuid id PK
     uuid job_id FK

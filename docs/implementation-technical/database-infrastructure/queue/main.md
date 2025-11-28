@@ -119,7 +119,7 @@ graph TD
     D --> E[Worker Servers<br/>Consumers]
     E --> F[Job Processing<br/>Logic]
     F --> G[PostgreSQL<br/>Status Update]
-    
+
     style A fill:#e1f5fe
     style B fill:#f3e5f5
     style C fill:#fff3e0

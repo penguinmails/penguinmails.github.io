@@ -2,7 +2,7 @@
 
 **Purpose**: This document tracks features referenced in route specifications that have been clarified, deferred to the roadmap, or addressed during the frontend routing validation process.
 
-**Status**: Updated 2025-11-21  
+**Status**: Updated 2025-11-21
 **Related**: [Frontend Routing Map](/docs/design/frontend-routing-map) | [Implementation Plan](/docs/implementation-technical/overview)
 
 ---
@@ -187,7 +187,7 @@ Status: **Updated**
 
 **Database Tables**: Documented in queue system implementation
 
-- `jobs` - Job state and audit trail  
+- `jobs` - Job state and audit trail
 
 - `job_queues` - Queue configuration
 
@@ -260,8 +260,8 @@ Status: **Updated**
 
 ---
 
-**Last Updated**: 2025-11-21  
-**Maintained By**: Product & Engineering Teams  
+**Last Updated**: 2025-11-21
+**Maintained By**: Product & Engineering Teams
 **Review Cycle**: Quarterly or when new features are added to roadmap
 
 ---

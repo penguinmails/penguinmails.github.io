@@ -76,7 +76,7 @@ This comprehensive guide is designed to help independent consultants build succe
 
 - **Technology Sector**: Advanced automation and integration services
 
-- **Creative Industries**: Design-focused and brand development services  
+- **Creative Industries**: Design-focused and brand development services
 
 - **Marketing Focus**: Strategic services with ROI measurement emphasis
 

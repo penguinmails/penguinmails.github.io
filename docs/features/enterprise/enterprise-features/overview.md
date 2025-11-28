@@ -60,7 +60,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
   - [ ] SSO provider research (Okta, Azure AD, Google Workspace)
 
   - [ ] Enterprise architecture design
-  
+
 - [ ] **M2: Security & SSO** (Weeks 9-16)
 
   - [ ] SSO implementation (SAML 2.0, OAuth 2.0)
@@ -72,7 +72,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
   - [ ] IP whitelisting
 
   - [ ] Security headers and hardening
-  
+
 - [ ] **M3: Team Collaboration** (Weeks 17-22)
 
   - [ ] Advanced role-based access control (RBAC)
@@ -84,7 +84,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
   - [ ] Shared assets and templates
 
   - [ ] Activity audit logs
-  
+
 - [ ] **M4: Monitoring & Compliance** (Weeks 23-26)
 
   - [ ] Real-time system monitoring
@@ -98,7 +98,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
   - [ ] Enterprise reporting suite
 
   - [ ] Compliance dashboard
-  
+
 - [ ] **M5: Launch Prep** (Weeks 27-28)
 
   - [ ] SOC 2 Type II certification process
@@ -139,7 +139,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 #### 1. **Single Sign-On (SSO)**
 
-**Status:** Planned for 2027 (potential roadmap item to improve or substitute NileDB auth)  
+**Status:** Planned for 2027 (potential roadmap item to improve or substitute NileDB auth)
 **Current Authentication:** NileDB email/password (MVP and near-term releases)
 
 - **Protocols**: SAML 2.0, OAuth 2.0, OpenID Connect
@@ -407,6 +407,6 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ---
 
-**Last Updated**: 2025-11-24  
-**Owner**: Security + Compliance + Engineering Teams  
+**Last Updated**: 2025-11-24
+**Owner**: Security + Compliance + Engineering Teams
 **Status**: Planned - Q4 2026-Q1 2027 enterprise readiness

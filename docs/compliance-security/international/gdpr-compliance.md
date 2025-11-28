@@ -18,9 +18,9 @@ version: "1.0"
 
 ## Overview
 
-**Regulation:** General Data Protection Regulation (GDPR)  
-**Regulation Number:** (EU) 2016/679  
-**Geographic Scope:** European Union (extraterritorial application)  
+**Regulation:** General Data Protection Regulation (GDPR)
+**Regulation Number:** (EU) 2016/679
+**Geographic Scope:** European Union (extraterritorial application)
 **Business Impact:** Critical - Affects all PenguinMails email operations
 
 ## Regulatory Scope and Applicability

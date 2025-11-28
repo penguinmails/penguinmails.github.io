@@ -75,30 +75,30 @@ graph TB
         QUEUE[queue-server]
         PLATFORM[platform-api]
     end
-    
+
     subgraph "External Services"
         HOSTWINDS[Hostwinds Cloud API]
     end
-    
+
     subgraph "Hostwinds Infrastructure"
         VPS[VPS Instances]
         IPS[Dedicated IPs]
         NET[Network Config]
     end
-    
+
     API -->|Provision VPS| HOSTWINDS
     SMTP -->|Check IP availability| HOSTWINDS
     QUEUE -->|Validate VPS health| HOSTWINDS
     PLATFORM -->|Get VPS status| HOSTWINDS
-    
+
     HOSTWINDS -->|Manages| VPS
     HOSTWINDS -->|Allocates| IPS
     HOSTWINDS -->|Configures| NET
-    
+
     VPS -->|Runs| MAILU[Mailu SMTP Stack]
     IPS -->|Used by| MAILU
     NET -->|Supports| MAILU
-    
+
     style HOSTWINDS fill:#fff3e0
     style WEB fill:#e1f5fe
     style API fill:#e1f5fe
@@ -145,21 +145,21 @@ import { db } from '@penguinmails/database';
 
 async function processEmailSendJob(job) {
   const { tenantId, campaignId } = job.data;
-  
+
   // 1. Get tenant's VPS info from DB
   const vps = await db.vps_instances.findUnique({
     where: { tenant_id: tenantId }
   });
-  
+
   // 2. Check VPS health via Hostwinds API (external call)
   const hostwinds = new HostwindsClient();
   const vpsStatus = await hostwinds.getServerStatus(vps.hostwinds_instance_id);
-  
+
   // 3. Abort if VPS is down
   if (vpsStatus !== 'active') {
     throw new Error(`Tenant VPS is ${vpsStatus}, cannot send emails`);
   }
-  
+
   // 4. Proceed with sending...
 }
 

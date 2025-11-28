@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### System Overview
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/overview`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/overview`
 **Purpose**: Single entrypoint for executive and operational dashboards.
 
 **Response**:
@@ -48,8 +48,8 @@ persona: "Backend Developers"
 
 ### Tenant System Summary
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/tenants/{tenantId}/summary`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/tenants/{tenantId}/summary`
 **Purpose**: System overview for a single tenant.
 
 **Response**:
@@ -75,8 +75,8 @@ persona: "Backend Developers"
 
 ### Revenue & Business Metrics
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/revenue-protection`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/revenue-protection`
 **Purpose**: Business metrics overview for revenue protection.
 
 **Query Parameters**:
@@ -85,18 +85,18 @@ persona: "Backend Developers"
 
 ### Cost & Optimization View
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/cost-optimization`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/cost-optimization`
 **Purpose**: Cost analysis and optimization opportunities.
 
 ### System Intelligence Summary
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/intelligence/summary`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/intelligence/summary`
 **Purpose**: Lightweight system intelligence for dashboard overview.
 
 ### Business Planning View
 
-**Method**: `GET`  
-**URL**: `/api/v1/platform/system/planning`  
+**Method**: `GET`
+**URL**: `/api/v1/platform/system/planning`
 **Purpose**: Business planning support and roadmap overview.

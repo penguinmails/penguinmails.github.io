@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Campaigns
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/campaigns`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/campaigns`
 **Purpose**: Retrieve a paginated list of campaigns for a specific workspace.
 
 **Query Parameters**:
@@ -63,8 +63,8 @@ persona: "Backend Developers"
 
 ### Create Campaign
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/campaigns`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/campaigns`
 **Purpose**: Create a new campaign draft.
 
 **Request**:
@@ -96,8 +96,8 @@ persona: "Backend Developers"
 
 ### Get Campaign Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/campaigns/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/campaigns/{id}`
 **Purpose**: Get full details of a campaign, including sequence and settings.
 
 **Response**:
@@ -129,8 +129,8 @@ persona: "Backend Developers"
 
 ### Update Campaign
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/tenant/campaigns/{id}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/tenant/campaigns/{id}`
 **Purpose**: Update campaign details. Only allowed if campaign is not 'completed'.
 
 **Request**:
@@ -148,8 +148,8 @@ persona: "Backend Developers"
 
 ### Launch Campaign
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/campaigns/{id}/send`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/campaigns/{id}/send`
 **Purpose**: Trigger the campaign to start or resume sending.
 
 **Request**:

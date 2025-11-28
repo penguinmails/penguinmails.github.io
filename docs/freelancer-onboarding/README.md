@@ -384,7 +384,7 @@ We regularly update this documentation based on:
 
 ---
 
-**Document Classification:** Level 1 - Strategic Overview  
-**Business Value:** Clear onboarding pathway enabling new freelancers to understand requirements and succeed quickly  
-**Implementation Status:** Ready for new freelancer onboarding  
+**Document Classification:** Level 1 - Strategic Overview
+**Business Value:** Clear onboarding pathway enabling new freelancers to understand requirements and succeed quickly
+**Implementation Status:** Ready for new freelancer onboarding
 **Target Audience:** New freelancers, experienced freelancers adapting to our model, industry specialists

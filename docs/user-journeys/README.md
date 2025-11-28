@@ -383,8 +383,8 @@ User Journeys Hub → Core Journeys → Success Metrics → Analytics
 
 ---
 
-**Last Updated**: 2025-11-24  
-**Review Cycle**: Monthly  
+**Last Updated**: 2025-11-24
+**Review Cycle**: Monthly
 **Owner**: Product Team
 
 ---

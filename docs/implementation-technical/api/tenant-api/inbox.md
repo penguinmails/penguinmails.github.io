@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Threads
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/inbox/threads`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/inbox/threads`
 **Purpose**: List email threads for the unified inbox.
 
 **Query Parameters**:
@@ -56,8 +56,8 @@ persona: "Backend Developers"
 
 ### Get Thread Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/inbox/threads/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/inbox/threads/{id}`
 **Purpose**: Retrieve full conversation history for a thread.
 
 **Response**:
@@ -90,8 +90,8 @@ persona: "Backend Developers"
 
 ### Reply to Thread
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/inbox/threads/{id}/reply`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/inbox/threads/{id}/reply`
 **Purpose**: Send a reply to a thread.
 
 **Request**:
@@ -107,8 +107,8 @@ persona: "Backend Developers"
 
 ### Update Thread Status
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/tenant/inbox/threads/{id}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/tenant/inbox/threads/{id}`
 **Purpose**: Archive, snooze, or mark as read.
 
 **Request**:

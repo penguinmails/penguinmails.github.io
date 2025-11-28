@@ -8,8 +8,8 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ## MVP Status
 
-**Current Status**: Comprehensive documentation exists, MVP simplified to core features  
-**MVP Completion**: Q1 2026 (3-5 weeks)  
+**Current Status**: Comprehensive documentation exists, MVP simplified to core features
+**MVP Completion**: Q1 2026 (3-5 weeks)
 **Priority**: P0 (Critical for campaign targeting)
 
 ### MVP Gaps (2 Features)

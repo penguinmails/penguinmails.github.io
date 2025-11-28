@@ -152,12 +152,12 @@ Configure how the system selects the next sender.
 ```yaml
 rotation_strategy:
   type: "weighted_health"
-  
+
   weights:
     health_score: 0.6  # Prioritize healthy accounts
     warmup_status: 0.3 # Prioritize fully warmed accounts
     usage_today: 0.1   # Deprioritize heavily used accounts
-    
+
   constraints:
     min_health_score: 85
     max_bounce_rate: 2.5%
@@ -173,7 +173,7 @@ Ensure consecutive emails don't come from the same domain to avoid pattern detec
 diversity_rules:
   prevent_consecutive_domains: true
   max_consecutive_provider: 3  # Don't send >3 Gmails in a row
-  
+
   # Example pattern:
   # 1. user@domain-a.com (Google)
   # 2. user@domain-b.com (Outlook)
@@ -196,19 +196,19 @@ safety_rules:
       action: pause_account
       duration: 24h
       notify: admin
-      
+
 
 
     - if: spam_complaint_count > 1
       action: pause_account
       duration: 48h
-      
+
 
 
     - if: consecutive_failures > 3
       action: pause_account
       duration: 1h
-      
+
   # Recovery logic
   recovery:
 
@@ -216,7 +216,7 @@ safety_rules:
     - after: pause_duration
       action: enable_warmup_only
       duration: 3d
-      
+
 
 
     - if: warmup_score > 95
@@ -257,11 +257,11 @@ CREATE TABLE rotation_pools (
   name VARCHAR(255) NOT NULL,
   description TEXT,
   strategy VARCHAR(50) DEFAULT 'round_robin', -- round_robin, weighted, random
-  
+
   -- Limits
   daily_limit_per_account INTEGER DEFAULT 50,
   max_pool_capacity INTEGER, -- Total daily emails for pool
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -273,18 +273,18 @@ CREATE TABLE pool_members (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   pool_id UUID NOT NULL REFERENCES rotation_pools(id) ON DELETE CASCADE,
   account_id UUID NOT NULL REFERENCES email_accounts(id),
-  
+
   status VARCHAR(50) DEFAULT 'active', -- active, paused, cooling_down
   priority INTEGER DEFAULT 1,
   weight DECIMAL(3,2) DEFAULT 1.0,
-  
+
   -- Stats for rotation logic
   sent_today INTEGER DEFAULT 0,
   last_sent_at TIMESTAMP,
-  
+
   -- Override limits
   custom_daily_limit INTEGER,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   UNIQUE(pool_id, account_id)
 );
@@ -296,10 +296,10 @@ CREATE INDEX idx_pool_members_account ON pool_members(account_id);
 CREATE TABLE rotation_rules (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   pool_id UUID NOT NULL REFERENCES rotation_pools(id) ON DELETE CASCADE,
-  
+
   rule_type VARCHAR(50), -- pause_trigger, diversity, ramping
   config JSONB NOT NULL,
-  
+
   is_active BOOLEAN DEFAULT TRUE,
   created_at TIMESTAMP DEFAULT NOW()
 );
@@ -308,12 +308,12 @@ CREATE TABLE rotation_rules (
 CREATE TABLE account_health_logs (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   account_id UUID NOT NULL REFERENCES email_accounts(id),
-  
+
   health_score INTEGER, -- 0-100
   bounce_rate DECIMAL(5,2),
   spam_rate DECIMAL(5,2),
   open_rate DECIMAL(5,2),
-  
+
   snapshot_date DATE DEFAULT CURRENT_DATE,
   created_at TIMESTAMP DEFAULT NOW()
 );
@@ -329,7 +329,7 @@ The core logic for selecting the next sender.
 
 ```typescript
 class RotationService {
-  
+
   /**
 
 
@@ -348,15 +348,15 @@ class RotationService {
     // 2. Filter out ineligible accounts
     const eligible = members.filter(member => {
       const limit = member.custom_daily_limit || member.pool.daily_limit_per_account;
-      
+
       // Check limits
       if (member.sent_today >= limit) return false;
-      
+
       // Check cooldown (min delay)
       const minDelay = 120 * 1000; // 2 mins
       const timeSinceLast = Date.now() - new Date(member.last_sent_at).getTime();
       if (timeSinceLast < minDelay) return false;
-      
+
       return true;
     });
 
@@ -366,7 +366,7 @@ class RotationService {
 
     // 3. Apply Strategy
     const pool = await db.rotationPools.findById(poolId);
-    
+
     if (pool.strategy === 'weighted') {
       return this.selectWeighted(eligible);
     } else if (pool.strategy === 'random') {
@@ -388,7 +388,7 @@ class RotationService {
       const health = m.account.health_score || 50;
       const limit = m.custom_daily_limit || 50;
       const remaining = limit - m.sent_today;
-      
+
       return {
         member: m,
         score: health * (remaining / limit)
@@ -410,23 +410,23 @@ Runs periodically to update scores and trigger safety rules.
 
 ```typescript
 class HealthMonitor {
-  
+
   async checkPoolHealth(poolId: string) {
     const members = await db.poolMembers.findByPool(poolId);
-    
+
     for (const member of members) {
       const stats = await this.getDailyStats(member.account_id);
-      
+
       // 1. Check Pause Triggers
       if (stats.bounceRate > 0.05) { // 5% bounce rate
         await this.pauseMember(member, 'High bounce rate detected');
         continue;
       }
-      
+
       // 2. Update Health Score
       const newScore = this.calculateHealthScore(stats);
       await db.emailAccounts.update(member.account_id, { health_score: newScore });
-      
+
       // 3. Check Ramping
       if (newScore > 90 && member.sent_today >= member.custom_daily_limit) {
         // Auto-scale limit if eligible
@@ -434,7 +434,7 @@ class HealthMonitor {
       }
     }
   }
-  
+
   private calculateHealthScore(stats: DailyStats): number {
     // Simple algorithm: Start at 100, deduct for bad signals
     let score = 100;
@@ -463,7 +463,7 @@ router.post('/api/rotation/pools', async (req, res) => {
 // Add Members
 router.post('/api/rotation/pools/:id/members', async (req, res) => {
   const { accountIds } = req.body;
-  const members = await Promise.all(accountIds.map(accId => 
+  const members = await Promise.all(accountIds.map(accId =>
     db.poolMembers.create({
       pool_id: req.params.id,
       account_id: accId
@@ -478,14 +478,14 @@ router.get('/api/rotation/pools/:id/status', async (req, res) => {
     where: { pool_id: req.params.id },
     include: ['account']
   });
-  
+
   const stats = {
     total_accounts: members.length,
     active_accounts: members.filter(m => m.status === 'active').length,
     total_sent_today: members.reduce((sum, m) => sum + m.sent_today, 0),
     total_capacity: members.reduce((sum, m) => sum + (m.custom_daily_limit || 50), 0)
   };
-  
+
   res.json({ stats, members });
 });
 

@@ -23,9 +23,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 1. API Key Management System
 
-**Priority**: P0 - Critical  
-**Complexity**: Medium (1-2 weeks)  
-**Status**: Documented, Implementation Pending  
+**Priority**: P0 - Critical
+**Complexity**: Medium (1-2 weeks)
+**Status**: Documented, Implementation Pending
 **Blocking**: Yes - Blocks all programmatic integrations
 
 **Description**: Complete API key management system with Vault storage, including backend key generation, authentication middleware, and rate limiting.
@@ -68,9 +68,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 2. API Key Management UI
 
-**Priority**: P0 - Critical  
-**Complexity**: Medium (5-7 days)  
-**Status**: Documented, Implementation Pending  
+**Priority**: P0 - Critical
+**Complexity**: Medium (5-7 days)
+**Status**: Documented, Implementation Pending
 **Blocking**: Yes - Blocks self-service API access
 
 **Description**: Frontend UI for API key management at `/dashboard/settings/developers/api-keys` with create, view, regenerate, and revoke capabilities.
@@ -115,9 +115,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 3. Core REST API Endpoints
 
-**Priority**: P0 - Critical  
-**Complexity**: Large (2-3 weeks)  
-**Status**: Partially Documented, Implementation Pending  
+**Priority**: P0 - Critical
+**Complexity**: Large (2-3 weeks)
+**Status**: Partially Documented, Implementation Pending
 **Blocking**: Yes - Blocks programmatic integrations
 
 **Description**: Implement core REST API endpoints for contacts, campaigns, emails, and analytics with standard REST conventions.
@@ -168,9 +168,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 4. API Documentation (OpenAPI/Swagger)
 
-**Priority**: P0 - Critical  
-**Complexity**: Medium (1 week)  
-**Status**: Not Started  
+**Priority**: P0 - Critical
+**Complexity**: Medium (1 week)
+**Status**: Not Started
 **Blocking**: Yes - Blocks developer adoption
 
 **Description**: Create comprehensive API documentation using OpenAPI/Swagger with interactive API explorer and code examples.
@@ -215,9 +215,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 5. Webhook System (Backend)
 
-**Priority**: P1 - High  
-**Complexity**: Large (1-2 weeks)  
-**Status**: Documented, Implementation Pending  
+**Priority**: P1 - High
+**Complexity**: Large (1-2 weeks)
+**Status**: Documented, Implementation Pending
 **Blocking**: Partial - Critical for real-time integrations
 
 **Description**: Implement webhook delivery system with event filtering, retry logic, and signature verification.
@@ -260,9 +260,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ### 6. Webhook Configuration UI
 
-**Priority**: P1 - High  
-**Complexity**: Large (1-2 weeks)  
-**Status**: Documented, Implementation Pending  
+**Priority**: P1 - High
+**Complexity**: Large (1-2 weeks)
+**Status**: Documented, Implementation Pending
 **Blocking**: Partial - Enables self-service webhook setup
 
 **Description**: Frontend UI for webhook configuration at `/dashboard/settings/webhooks` with event selection, testing, and delivery logs.
@@ -307,8 +307,8 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ## MVP Summary
 
-**Total Effort**: 6-9 weeks  
-**Team Size**: 2-3 engineers  
+**Total Effort**: 6-9 weeks
+**Team Size**: 2-3 engineers
 **Priority Distribution**: 4 P0 features, 2 P1 features
 
 **Critical Path**:
@@ -345,9 +345,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 1. Salesforce Integration
 
-**Priority**: P2 - Medium  
-**Complexity**: Very Large (20-30 days)  
-**Target**: Q1 2026  
+**Priority**: P2 - Medium
+**Complexity**: Very Large (20-30 days)
+**Target**: Q1 2026
 **Status**: Planned
 
 **Description**: Bi-directional sync between PenguinMails and Salesforce with OAuth authentication, field mapping, and activity logging.
@@ -366,16 +366,16 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Real-time and batch sync options
 
-**Effort**: 20-30 days  
+**Effort**: 20-30 days
 **Dependencies**: Stable API + webhooks
 
 ---
 
 #### 2. HubSpot Integration
 
-**Priority**: P2 - Medium  
-**Complexity**: Very Large (20-30 days)  
-**Target**: Q1 2026  
+**Priority**: P2 - Medium
+**Complexity**: Very Large (20-30 days)
+**Target**: Q1 2026
 **Status**: Planned
 
 **Description**: Bi-directional sync between PenguinMails and HubSpot with OAuth authentication, field mapping, and workflow triggers.
@@ -394,7 +394,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Real-time and batch sync options
 
-**Effort**: 20-30 days  
+**Effort**: 20-30 days
 **Dependencies**: Stable API + webhooks
 
 ---
@@ -403,9 +403,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 3. Zapier Integration
 
-**Priority**: P2 - Medium  
-**Complexity**: Medium (2-3 weeks)  
-**Target**: Q2 2026  
+**Priority**: P2 - Medium
+**Complexity**: Medium (2-3 weeks)
+**Target**: Q2 2026
 **Status**: Planned
 
 **Description**: Zapier app integration enabling connections to 5,000+ apps with pre-built Zaps for common workflows.
@@ -426,7 +426,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Authentication via API key
 
-**Effort**: 2-3 weeks  
+**Effort**: 2-3 weeks
 **Dependencies**: Stable API + webhooks
 
 **Example Zaps**:
@@ -445,9 +445,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 4. ESP Integration Settings UI
 
-**Priority**: P1 - High  
-**Complexity**: Large (10-14 days)  
-**Target**: Q3 2026  
+**Priority**: P1 - High
+**Complexity**: Large (10-14 days)
+**Target**: Q3 2026
 **Status**: Planned
 
 **Description**: User interface for configuring external Email Service Providers (Postmark, Mailgun) with routing rules and analytics.
@@ -470,7 +470,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Connection testing interface
 
-**Effort**: 10-14 days  
+**Effort**: 10-14 days
 **Dependencies**: Postmark and Mailgun integrations (already active)
 
 ---
@@ -479,9 +479,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 5. Advanced Webhook Configuration
 
-**Priority**: P3 - Low  
-**Complexity**: Large (3-4 weeks)  
-**Target**: Q3 2026  
+**Priority**: P3 - Low
+**Complexity**: Large (3-4 weeks)
+**Target**: Q3 2026
 **Status**: Planned
 
 **Description**: Advanced webhook configuration with custom event filtering, conditional logic, and payload transformation.
@@ -502,7 +502,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Test webhook with live data
 
-**Effort**: 3-4 weeks  
+**Effort**: 3-4 weeks
 **Dependencies**: Basic webhook system (MVP)
 
 ---
@@ -511,42 +511,42 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 6. Pipedrive Integration
 
-**Priority**: P3 - Low  
-**Complexity**: Medium (2-3 weeks)  
-**Target**: Q2 2026  
+**Priority**: P3 - Low
+**Complexity**: Medium (2-3 weeks)
+**Target**: Q2 2026
 **Status**: Planned
 
 **Description**: Bi-directional sync with Pipedrive CRM for SMB customers.
 
-**Effort**: 2-3 weeks  
+**Effort**: 2-3 weeks
 **Dependencies**: CRM integration framework (Salesforce/HubSpot)
 
 ---
 
 #### 7. Zoho CRM Integration
 
-**Priority**: P3 - Low  
-**Complexity**: Medium (2-3 weeks)  
-**Target**: Q3 2026  
+**Priority**: P3 - Low
+**Complexity**: Medium (2-3 weeks)
+**Target**: Q3 2026
 **Status**: Planned
 
 **Description**: Bi-directional sync with Zoho CRM for SMB customers.
 
-**Effort**: 2-3 weeks  
+**Effort**: 2-3 weeks
 **Dependencies**: CRM integration framework
 
 ---
 
 #### 8. Close.io Integration
 
-**Priority**: P3 - Low  
-**Complexity**: Medium (2-3 weeks)  
-**Target**: Q3 2026  
+**Priority**: P3 - Low
+**Complexity**: Medium (2-3 weeks)
+**Target**: Q3 2026
 **Status**: Planned
 
 **Description**: Bi-directional sync with Close.io CRM for SMB customers.
 
-**Effort**: 2-3 weeks  
+**Effort**: 2-3 weeks
 **Dependencies**: CRM integration framework
 
 ---
@@ -557,9 +557,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 9. Developer Portal & Marketplace
 
-**Priority**: P3 - Low  
-**Complexity**: Very Large (8-12 weeks)  
-**Target**: Q4 2026+  
+**Priority**: P3 - Low
+**Complexity**: Very Large (8-12 weeks)
+**Target**: Q4 2026+
 **Status**: Planned
 
 **Description**: Public marketplace where third-party developers can publish integrations, and users can discover and install them.
@@ -578,7 +578,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Integration analytics (installs, usage)
 
-**Effort**: 8-12 weeks  
+**Effort**: 8-12 weeks
 **Dependencies**: Mature API and webhook infrastructure
 
 ---
@@ -587,9 +587,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 10. Sub-1-Minute Sync Latency
 
-**Priority**: P3 - Low (Enterprise feature)  
-**Complexity**: Very Large (6-8 weeks)  
-**Target**: Q4 2026  
+**Priority**: P3 - Low (Enterprise feature)
+**Complexity**: Very Large (6-8 weeks)
+**Target**: Q4 2026
 **Status**: Planned
 
 **Description**: Ultra-low latency bi-directional sync with WebSocket/SSE infrastructure for enterprise customers.
@@ -606,7 +606,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Real-time conflict detection and resolution
 
-**Effort**: 6-8 weeks  
+**Effort**: 6-8 weeks
 **Dependencies**: CRM integrations, event streaming infrastructure
 
 ---
@@ -617,9 +617,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 1. Vault Integration Architecture
 
-**Priority**: P0 - Critical  
-**Complexity**: Medium (1 week)  
-**Status**: ✅ Documented  
+**Priority**: P0 - Critical
+**Complexity**: Medium (1 week)
+**Status**: ✅ Documented
 **Blocking**: Yes - Foundational architecture
 
 **Description**: Comprehensive Vault integration architecture documentation including secret structure, access policies, rotation procedures, and disaster recovery.
@@ -646,9 +646,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 #### 2. VPS SSH Key Management
 
-**Priority**: P1 - High  
-**Complexity**: Medium (1-2 weeks)  
-**Status**: ✅ Documented, Implementation Pending  
+**Priority**: P1 - High
+**Complexity**: Medium (1-2 weeks)
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: Partial - Enables tenant self-service
 
 **Description**: Store admin and tenant SSH keys in Vault during VPS provisioning with frontend UI for credential viewing.
@@ -667,16 +667,16 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Audit logging for all SSH key access
 
-**Effort**: 1-2 weeks  
+**Effort**: 1-2 weeks
 **Reference**: [VPS SSH Key Management](../infrastructure/vault-ssh-management.md)
 
 ---
 
 #### 3. SMTP Credentials Vault Storage
 
-**Priority**: P1 - High  
-**Complexity**: Medium (1 week)  
-**Status**: ✅ Documented, Implementation Pending  
+**Priority**: P1 - High
+**Complexity**: Medium (1 week)
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: Partial - Security best practice
 
 **Description**: Store SMTP admin credentials in Vault during MailU setup with secure retrieval for troubleshooting.
@@ -695,16 +695,16 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Emergency credential reset workflow
 
-**Effort**: 1 week  
+**Effort**: 1 week
 **Reference**: [SMTP Credentials Storage](../infrastructure/vault-smtp-credentials.md)
 
 ---
 
 #### 4. Vault Disaster Recovery
 
-**Priority**: P1 - High  
-**Complexity**: Medium (1-2 weeks)  
-**Status**: ✅ Documented, Implementation Pending  
+**Priority**: P1 - High
+**Complexity**: Medium (1-2 weeks)
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: No - Can start with manual procedures
 
 **Description**: Automated Vault backup, disaster recovery procedures, and VPS migration workflow.
@@ -723,7 +723,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Monitoring and alerting for Vault health
 
-**Effort**: 1-2 weeks  
+**Effort**: 1-2 weeks
 **Reference**: [Disaster Recovery Procedures](../infrastructure/vault-disaster-recovery.md)
 
 ---
@@ -802,6 +802,6 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 ---
 
-**Last Updated**: 2025-11-26  
-**Review Cycle**: Monthly roadmap updates, quarterly strategic review  
+**Last Updated**: 2025-11-26
+**Review Cycle**: Monthly roadmap updates, quarterly strategic review
 **Status**: Active planning and implementation

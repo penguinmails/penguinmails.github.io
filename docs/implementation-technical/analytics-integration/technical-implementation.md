@@ -78,13 +78,13 @@ penguinmails/
 ### Shared Type Definitions (`packages/types/src/rbac.ts`)
 
 ```typescript
-export type UserRole = 
-  | 'admin' 
-  | 'ops' 
-  | 'exec' 
-  | 'customer' 
-  | 'agency' 
-  | 'investor' 
+export type UserRole =
+  | 'admin'
+  | 'ops'
+  | 'exec'
+  | 'customer'
+  | 'agency'
+  | 'investor'
   | 'public';
 
 export interface UserSession {
@@ -112,29 +112,29 @@ import { getSession } from '@penguinmails/auth';
 
 export async function middleware(request: NextRequest) {
   const session = await getSession(request);
-  
+
   // Public routes
   if (request.nextUrl.pathname.startsWith('/status')) {
     return NextResponse.next();
   }
-  
+
   // Protected routes require authentication
   if (!session) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
-  
+
   // RBAC: Check if user has required role for route
   const routeRoleMap: Record<string, UserRole[]> = {
     '/analytics/executive': ['admin', 'exec'],
     '/ops': ['admin', 'ops'],
     '/clients': ['agency'],
   };
-  
+
   const requiredRoles = routeRoleMap[request.nextUrl.pathname];
   if (requiredRoles && !session.roles.some(r => requiredRoles.includes(r))) {
     return NextResponse.redirect(new URL('/unauthorized', request.url));
   }
-  
+
   return NextResponse.next();
 }
 
@@ -156,18 +156,18 @@ import { redirect } from 'next/navigation';
 
 export async function getExecutiveDashboard() {
   const session = await getSession();
-  
+
   // Authorization check
   if (!session?.roles.includes('admin') && !session?.roles.includes('exec')) {
     redirect('/unauthorized');
   }
-  
+
   // Fetch data - only accessible to admin/exec
   const metrics = await db.analytics.aggregate({
     where: { type: 'executive' },
     _sum: { mrr: true, users: true },
   });
-  
+
   return {
     mrr: metrics._sum.mrr,
     users: metrics._sum.users,
@@ -177,17 +177,17 @@ export async function getExecutiveDashboard() {
 
 export async function getCampaignAnalytics(campaignId: string) {
   const session = await getSession();
-  
+
   // Check ownership: customer can only see their own campaigns
   const campaign = await db.campaign.findUnique({
     where: { id: campaignId },
     include: { tenant: true },
   });
-  
+
   if (campaign.tenant.userId !== session.userId && !session.roles.includes('admin')) {
     throw new Error('Forbidden');
   }
-  
+
   return {
     sent: campaign.sentCount,
     delivered: campaign.deliveredCount,
@@ -208,20 +208,20 @@ import { AgencyCommandCenter } from '@/components/dashboards/agency';
 
 export default async function DashboardPage() {
   const session = await getSession();
-  
+
   // Render different dashboard based on primary role
   if (session.roles.includes('admin') || session.roles.includes('exec')) {
     return <ExecutivePulse />;
   }
-  
+
   if (session.roles.includes('agency')) {
     return <AgencyCommandCenter />;
   }
-  
+
   if (session.roles.includes('customer')) {
     return <CampaignDashboard />;
   }
-  
+
   return <div>No dashboard available for your role</div>;
 }
 
@@ -280,14 +280,14 @@ const AppNav = ({ userRoles }) => {
 
 ```typescript
 // Frontend: Route protection
-<ProtectedRoute 
-  path="/analytics/executive" 
+<ProtectedRoute
+  path="/analytics/executive"
   allowedRoles={['admin', 'exec']}
   component={ExecutiveDashboard}
 />
 
 // Backend: API authorization
-router.get('/analytics/executive', 
+router.get('/analytics/executive',
   authenticate, // Verify JWT token
   authorize(['admin', 'exec']), // Check user roles
   async (req, res) => {

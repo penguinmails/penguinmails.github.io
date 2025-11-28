@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Queues
 
-**Method**: `GET`  
-**URL**: `/api/v1/queue/list`  
+**Method**: `GET`
+**URL**: `/api/v1/queue/list`
 **Purpose**: List all active system queues and their stats.
 
 **Response**:
@@ -45,8 +45,8 @@ persona: "Backend Developers"
 
 ### List Jobs in Queue
 
-**Method**: `GET`  
-**URL**: `/api/v1/queue/{name}/jobs`  
+**Method**: `GET`
+**URL**: `/api/v1/queue/{name}/jobs`
 **Purpose**: List jobs within a specific queue.
 
 **Query Parameters**:
@@ -57,19 +57,19 @@ persona: "Backend Developers"
 
 ### Get Job Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/queue/{name}/jobs/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/queue/{name}/jobs/{id}`
 **Purpose**: Get payload and status of a specific job.
 
 ### Retry Job
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/{name}/jobs/{id}/retry`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/{name}/jobs/{id}/retry`
 **Purpose**: Retry a failed job.
 
 ### Pause/Resume Queue
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/{name}/{action}`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/{name}/{action}`
 **Purpose**: Pause or resume processing for a queue.
 **Action**: `pause` or `resume`

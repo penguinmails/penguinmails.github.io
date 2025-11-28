@@ -58,7 +58,7 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
   - [ ] OAuth 2.0 flow design
 
   - [ ] Data mapping strategy
-  
+
 - [ ] **M2: Salesforce Integration** (Weeks 3-5)
 
   - [ ] OAuth authentication
@@ -70,7 +70,7 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
   - [ ] Lead scoring updates
 
   - [ ] Custom field mapping
-  
+
 - [ ] **M3: HubSpot Integration** (Weeks 6-8)
 
   - [ ] OAuth authentication
@@ -82,7 +82,7 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
   - [ ] Workflow integration
 
   - [ ] Custom property mapping
-  
+
 - [ ] **M4: Additional CRMs & Testing** (Weeks 9-10)
 
   - [ ] Pipedrive integration (if time permits)
@@ -139,7 +139,7 @@ salesforce_oauth:
 
 
     - full  # Full access to data
-  
+
   flow:
 
 
@@ -180,7 +180,7 @@ salesforce_contact:
     MailingState → state
     MailingCountry → country
     LeadSource → lead_source
-    
+
   custom_fields:
     PenguinMails_Lead_Score__c → lead_score
     PenguinMails_Last_Email_Opened__c → last_email_opened
@@ -207,7 +207,7 @@ salesforce_lead:
     Country → country
     Status → lead_status
     Rating → lead_rating
-    
+
   custom_fields:
     PenguinMails_Engagement_Score__c → engagement_score
     PenguinMails_Last_Campaign__c → last_campaign_id
@@ -226,7 +226,7 @@ salesforce_task:
     ActivityDate: event_timestamp
     Status: "Completed"
     Type: "Email"
-    
+
   activity_types:
 
 
@@ -255,45 +255,45 @@ sync_rules:
     direction: bidirectional
     frequency: real_time  # via webhooks
     fallback: hourly_batch
-    
+
     penguinmails_to_salesforce:
 
 
       - on: email_sent
         action: create_task
-        
+
 
 
       - on: email_opened
         action: update_custom_field
         field: PenguinMails_Last_Email_Opened__c
-        
+
 
 
       - on: email_clicked
         action: increment_field
         field: PenguinMails_Total_Clicks__c
-        
+
 
 
       - on: unsubscribed
         action: update_field
         field: PenguinMails_Unsubscribed__c
         value: true
-        
+
     salesforce_to_penguinmails:
 
 
       - on: contact_created
         action: import_contact
         add_to_segment: "Salesforce Contacts"
-        
+
 
 
       - on: contact_updated
         action: update_contact
         conflict_resolution: salesforce_wins
-        
+
 
 
       - on: contact_deleted
@@ -309,10 +309,10 @@ sync_rules:
 class SalesforceService {
   async syncContact(contactId: string): Promise<void> {
     const contact = await db.contacts.findById(contactId);
-    
+
     // Check if contact exists in Salesforce
     const sfContact = await this.findSalesforceContact(contact.email);
-    
+
     if (sfContact) {
       // Update existing
       await this.updateSalesforceContact(sfContact.Id, {
@@ -332,14 +332,14 @@ class SalesforceService {
       });
     }
   }
-  
+
   async logEmailActivity(
     contactId: string,
     activityType: string,
     campaignName: string
   ): Promise<void> {
     const sfContact = await this.findSalesforceContact(contactId);
-    
+
     await this.createTask({
       WhoId: sfContact.Id,
       Subject: `Email: ${campaignName}`,
@@ -372,7 +372,7 @@ hubspot_oauth:
 
 
     - automation  # Trigger workflows
-    
+
   flow:
 
 
@@ -412,7 +412,7 @@ hubspot_contact:
     city → city
     state → state
     country → country
-    
+
   custom_properties:
     penguinmails_lead_score → lead_score
     penguinmails_last_email_opened → last_email_opened
@@ -458,7 +458,7 @@ hubspot_timeline_event:
 
 
     - email_bounced
-    
+
   event_template:
     eventTypeId: "penguinmails_email_activity"
     email: contact_email
@@ -478,45 +478,45 @@ sync_rules:
   contact_sync:
     direction: bidirectional
     frequency: real_time
-    
+
     penguinmails_to_hubspot:
 
 
       - on: email_sent
         action: create_timeline_event
         event_type: email_sent
-        
+
 
 
       - on: email_opened
         action: update_property
         property: penguinmails_last_email_opened
-        
+
 
 
       - on: email_clicked
         action: create_timeline_event
         event_type: email_clicked
         trigger_workflow: true  # Optional
-        
+
 
 
       - on: high_engagement
         condition: lead_score >= 75
         action: trigger_workflow
         workflow_id: "sales_qualified_lead"
-        
+
     hubspot_to_penguinmails:
 
 
       - on: contact_created
         action: import_contact
-        
+
 
 
       - on: contact_updated
         action: update_contact
-        
+
 
 
       - on: list_membership_changed
@@ -531,10 +531,10 @@ sync_rules:
 class HubSpotService {
   async syncContact(contactId: string): Promise<void> {
     const contact = await db.contacts.findById(contactId);
-    
+
     // Find or create HubSpot contact
     const hsContact = await this.findHubSpotContact(contact.email);
-    
+
     const properties = {
       email: contact.email,
       firstname: contact.firstName,
@@ -544,14 +544,14 @@ class HubSpotService {
       penguinmails_total_opens: contact.totalOpens,
       penguinmails_total_clicks: contact.totalClicks,
     };
-    
+
     if (hsContact) {
       await this.updateHubSpotContact(hsContact.vid, properties);
     } else {
       await this.createHubSpotContact(properties);
     }
   }
-  
+
   async createTimelineEvent(
     email: string,
     eventType: string,
@@ -567,13 +567,13 @@ class HubSpotService {
       },
     });
   }
-  
+
   async triggerWorkflow(
     contactId: string,
     workflowId: string
   ): Promise<void> {
     const hsContact = await this.findHubSpotContact(contactId);
-    
+
     await this.hubspotClient.workflows.enroll(workflowId, {
       contactVid: hsContact.vid,
     });
@@ -602,25 +602,25 @@ field_mapping:
 
 
     - aggregation  # Sum, count, etc.
-    
+
   examples:
     direct_mapping:
       crm_field: Email
       penguinmails_field: email
       direction: bidirectional
-      
+
     formula_mapping:
       crm_field: Full_Name__c
       formula: "{{first_name}} {{last_name}}"
       direction: to_crm
-      
+
     conditional_mapping:
       crm_field: Lead_Status__c
       condition: "lead_score >= 75"
       value_if_true: "Hot"
       value_if_false: "Warm"
       direction: to_crm
-      
+
     aggregation_mapping:
       crm_field: Total_Email_Engagement__c
       formula: "SUM(opens + clicks)"
@@ -648,25 +648,25 @@ class CRMSyncService {
     if (syncRule.direction === 'from_crm' || syncRule.direction === 'bidirectional') {
       await this.syncFromCRM(integration);
     }
-    
+
     // Sync from PenguinMails to CRM
     if (syncRule.direction === 'to_crm' || syncRule.direction === 'bidirectional') {
       await this.syncToCRM(integration);
     }
   }
-  
+
   private async syncFromCRM(integration: Integration): Promise<void> {
     const lastSyncTime = integration.lastSyncAt;
-    
+
     // Get updated contacts from CRM
     const updatedContacts = await this.getCRMUpdates(
       integration,
       lastSyncTime
     );
-    
+
     for (const crmContact of updatedContacts) {
       const localContact = await db.contacts.findByEmail(crmContact.email);
-      
+
       if (localContact) {
         // Handle conflict
         await this.handleConflict(
@@ -684,10 +684,10 @@ class CRMSyncService {
       }
     }
   }
-  
+
   private async syncToCRM(integration: Integration): Promise<void> {
     const lastSyncTime = integration.lastSyncAt;
-    
+
     // Get updated contacts from PenguinMails
     const updatedContacts = await db.contacts.findAll({
       where: {
@@ -695,7 +695,7 @@ class CRMSyncService {
         tenantId: integration.tenantId,
       },
     });
-    
+
     for (const contact of updatedContacts) {
       if (contact.crmId) {
         // Update existing CRM contact
@@ -710,7 +710,7 @@ class CRMSyncService {
           integration,
           this.mapLocalFields(contact, integration.fieldMapping)
         );
-        
+
         await db.contacts.update(contact.id, { crmId });
       }
     }
@@ -727,19 +727,19 @@ conflict_resolution_strategies:
   crm_wins:
     description: "CRM data always overwrites PenguinMails data"
     use_case: "CRM is source of truth for contact info"
-    
+
   penguinmails_wins:
     description: "PenguinMails data always overwrites CRM data"
     use_case: "PenguinMails is source of truth for engagement"
-    
+
   newest_wins:
     description: "Most recently updated record wins"
     use_case: "Balanced approach, respects latest changes"
-    
+
   manual:
     description: "Flag conflicts for manual resolution"
     use_case: "High-value data requiring human review"
-    
+
   field_level:
     description: "Different strategies per field"
     example:
@@ -762,11 +762,11 @@ class ConflictResolver {
       case 'crm_wins':
         await this.applyCRMData(localContact, crmContact);
         break;
-        
+
       case 'penguinmails_wins':
         await this.applyCRMData(crmContact, localContact);
         break;
-        
+
       case 'newest_wins':
         if (crmContact.updatedAt > localContact.updatedAt) {
           await this.applyCRMData(localContact, crmContact);
@@ -774,17 +774,17 @@ class ConflictResolver {
           await this.applyCRMData(crmContact, localContact);
         }
         break;
-        
+
       case 'manual':
         await this.flagForManualReview(localContact, crmContact);
         break;
-        
+
       case 'field_level':
         await this.applyFieldLevelResolution(localContact, crmContact);
         break;
     }
   }
-  
+
   private async applyFieldLevelResolution(
     localContact: Contact,
     crmContact: any
@@ -798,9 +798,9 @@ class ConflictResolver {
       totalOpens: 'penguinmails_wins',
       totalClicks: 'penguinmails_wins',
     };
-    
+
     const updates: any = {};
-    
+
     for (const [field, strategy] of Object.entries(fieldRules)) {
       if (strategy === 'crm_wins') {
         updates[field] = crmContact[field];
@@ -811,7 +811,7 @@ class ConflictResolver {
       }
       // penguinmails_wins: keep local value (no update)
     }
-    
+
     await db.contacts.update(localContact.id, updates);
   }
 }
@@ -957,6 +957,6 @@ class ConflictResolver {
 
 ---
 
-**Last Updated**: 2025-11-24  
-**Owner**: Integrations Engineering Team  
+**Last Updated**: 2025-11-24
+**Owner**: Integrations Engineering Team
 **Status**: Planned - Q1 2026 key partnership feature

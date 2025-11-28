@@ -241,7 +241,7 @@ class EmailService {
   ): Promise<EmailSendResult> {
     // Mock implementation - would actually send emails
     console.log(`Processing ${recipients.length} recipients`);
-    
+
     return {
       success: true,
       sentCount: recipients.length,

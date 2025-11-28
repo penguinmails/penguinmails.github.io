@@ -9,8 +9,8 @@ persona: "Backend Developers, Frontend Developers"
 
 # Tenant API
 
-**Server**: Central Monolithic Server  
-**URL Prefix**: `/api/v1/tenant/*`  
+**Server**: Central Monolithic Server
+**URL Prefix**: `/api/v1/tenant/*`
 **Purpose**: Core application operations for customers (Tenants) and Agencies.
 
 ---

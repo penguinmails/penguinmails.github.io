@@ -866,8 +866,8 @@ await client.emails.send({
 
 ---
 
-**Last Updated:** November 25, 2025  
-**API Version:** v1  
+**Last Updated:** November 25, 2025
+**API Version:** v1
 **SDKs:** Coming Q1 2026
 
 *API access routes provide comprehensive tools for developers to integrate PenguinMails programmatically with secure key management and real-time usage monitoring.*

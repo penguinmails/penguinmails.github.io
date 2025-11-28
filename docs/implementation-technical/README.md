@@ -107,7 +107,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
   - `api` - Tenant REST API (campaign management)
 
-  - `smtp-server` - SMTP infrastructure management  
+  - `smtp-server` - SMTP infrastructure management
 
   - `queue-server` - Event processing & notifications
 

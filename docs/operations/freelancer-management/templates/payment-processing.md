@@ -43,7 +43,7 @@ persona: "Documentation Users"
 
 ## Invoice Reference:** ____________________________
 
-**Payment Terms:** Net 30 days  
+**Payment Terms:** Net 30 days
 
 ## Bank Details:** ____________________________
 
@@ -59,7 +59,7 @@ persona: "Documentation Users"
 
 ## Payment Adjustment Form Template
 
-**Adjustment ID:** [Generated ID]  
+**Adjustment ID:** [Generated ID]
 
 ## Freelancer Name:** ____________________________
 
@@ -79,7 +79,7 @@ persona: "Documentation Users"
 
 ## Reason for Adjustment:** ________________________
 
-**Adjustment Type:** ☐ Increase ☐ Decrease ☐ Correction  
+**Adjustment Type:** ☐ Increase ☐ Decrease ☐ Correction
 
 ## Effort Point Adjustment:** ________________________
 

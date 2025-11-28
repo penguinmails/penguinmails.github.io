@@ -9,8 +9,8 @@ persona: "Backend Developers, Frontend Developers"
 
 # Platform API
 
-**Server**: Central Monolithic Server  
-**URL Prefix**: `/api/v1/platform/*`  
+**Server**: Central Monolithic Server
+**URL Prefix**: `/api/v1/platform/*`
 **Purpose**: Analytics, subscriptions, and system administration for executive and operational oversight.
 
 ---

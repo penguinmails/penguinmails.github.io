@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Workspaces
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/workspaces`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/workspaces`
 **Purpose**: List all workspaces the current user has access to.
 
 **Response**:
@@ -46,8 +46,8 @@ persona: "Backend Developers"
 
 ### Create Workspace
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/workspaces`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/workspaces`
 **Purpose**: Create a new workspace (Agency or Tenant).
 
 **Request**:
@@ -78,8 +78,8 @@ persona: "Backend Developers"
 
 ### Get Workspace Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/workspaces/{slug}`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/workspaces/{slug}`
 **Purpose**: Get detailed information about a specific workspace.
 
 **Response**:

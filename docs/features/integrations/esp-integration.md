@@ -272,7 +272,7 @@ Transactional Emails:
 
 
     - Account Alerts
-  
+
 Marketing Emails:
   Provider: Mailgun
   Types:
@@ -285,7 +285,7 @@ Marketing Emails:
 
 
     - Promotional Campaigns
-    
+
 Cold Outreach:
   Provider: Built-in SMTP
   Types:
@@ -654,8 +654,8 @@ Savings: $70/month vs all-Postmark
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Supported ESPs:** Postmark, Mailgun  
+**Last Updated:** November 24, 2025
+**Supported ESPs:** Postmark, Mailgun
 **Coming Soon:** SendGrid, Amazon SES
 
 *ESP integration is optional but recommended for critical transactional emails and high-volume marketing campaigns.*

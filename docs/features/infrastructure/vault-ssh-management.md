@@ -606,9 +606,9 @@ path "vps/*/tenant_ssh/*" {
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Feature Status:** BACKLOG  
-**Priority:** HIGH (MVP dependency)  
+**Last Updated:** November 26, 2025
+**Feature Status:** BACKLOG
+**Priority:** HIGH (MVP dependency)
 **Estimated Effort:** Large (10-15 days)
 
 *Vault SSH Key Management is a foundational security feature that enables secure VPS access and rapid disaster recovery. This feature must be implemented before infrastructure provisioning can be considered production-ready.*

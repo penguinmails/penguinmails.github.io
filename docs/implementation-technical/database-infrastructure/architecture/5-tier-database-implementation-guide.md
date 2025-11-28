@@ -18,7 +18,7 @@ This guide provides detailed implementation guidance for the 5-tier database arc
 ```typescript
 async function sendEmail(emailData: EmailData) {
     const transaction = new DatabaseTransaction();
-    
+
     try {
         // 1. Store metadata in OLTP
         const emailRecord = await transaction.insertOLTP('emails', {
@@ -27,23 +27,23 @@ async function sendEmail(emailData: EmailData) {
             subject: emailData.subject,
             content_storage_key: emailData.storageKey
         });
-        
+
         // 2. Store content in Content DB
         await transaction.insertContent('content_objects', {
             storage_key: emailData.storageKey,
             content_text: emailData.body,
             tenant_id: emailData.tenantId
         });
-        
+
         // 3. Queue analytics job
         await transaction.insertQueue('job_queue', {
             job_type: 'track_email_sent',
             payload: { email_id: emailRecord.id },
             scheduled_at: new Date()
         });
-        
+
         await transaction.commit();
-        
+
     } catch (error) {
         await transaction.rollback();
         await cleanupOrphanedData(emailData.storageKey);

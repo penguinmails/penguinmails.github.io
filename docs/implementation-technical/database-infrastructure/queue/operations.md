@@ -48,9 +48,9 @@ services:
 
       - redis_data:/data
     command: >
-      redis-server 
-      --appendonly yes 
-      --maxmemory 512mb 
+      redis-server
+      --appendonly yes
+      --maxmemory 512mb
       --maxmemory-policy allkeys-lru
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
@@ -125,7 +125,7 @@ volumes:
 class QueueHealthMonitor {
   private redis: Redis
   private database: Database
-  
+
   async getSystemHealth() {
     return {
       timestamp: new Date().toISOString(),
@@ -137,7 +137,7 @@ class QueueHealthMonitor {
       performance: await this.checkPerformanceMetrics()
     }
   }
-  
+
   private async calculateOverallStatus() {
     const checks = await Promise.all([
       this.checkRedisHealth(),
@@ -145,10 +145,10 @@ class QueueHealthMonitor {
       this.checkQueueHealth(),
       this.checkWorkerHealth()
     ])
-    
+
     const criticalIssues = checks.filter(check => check.status === 'critical')
     const warningIssues = checks.filter(check => check.status === 'warning')
-    
+
     if (criticalIssues.length > 0) return 'critical'
     if (warningIssues.length > 0) return 'warning'
     return 'healthy'
@@ -166,9 +166,9 @@ class QueueHealthMonitor {
 class DisasterRecovery {
   async handleRedisFailure() {
     log('Redis failure detected - initiating recovery procedures')
-    
+
     const redisStatus = await this.checkRedisHealth()
-    
+
     if (redisStatus.status === 'critical') {
       await this.activateRedisFailover()
       await this.pauseJobProcessing()
@@ -176,7 +176,7 @@ class DisasterRecovery {
       await this.monitorRedisRecovery()
     }
   }
-  
+
   async activateRedisFailover() {
     const backupRedis = new Redis(process.env.BACKUP_REDIS_URL)
     await backupRedis.ping()
@@ -228,15 +228,15 @@ class AutoScaler {
       min_wait_time: 300
     }
   }
-  
+
   async evaluateScaling() {
     const currentMetrics = await this.getCurrentMetrics()
     const currentWorkerCount = await this.getCurrentWorkerCount()
-    
+
     if (this.shouldScaleUp(currentMetrics, currentWorkerCount)) {
       await this.scaleUp()
     }
-    
+
     if (this.shouldScaleDown(currentMetrics, currentWorkerCount)) {
       await this.scaleDown()
     }

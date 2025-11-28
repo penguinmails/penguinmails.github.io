@@ -67,8 +67,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 1. Stalwart Mail Server Database Schema Investigation
 
-**Priority**: P0 (Critical Blocker)  
-**Timeline**: Q4 2025  
+**Priority**: P0 (Critical Blocker)
+**Timeline**: Q4 2025
 **Effort**: 3-5 days (spike)
 
 **Problem**: The current inbox documentation proposes custom tables without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
@@ -99,8 +99,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 2. Email Threading Algorithm Implementation
 
-**Priority**: P0 (MVP Critical)  
-**Timeline**: Q1 2026  
+**Priority**: P0 (MVP Critical)
+**Timeline**: Q1 2026
 **Effort**: 1-2 weeks (depends on Stalwart spike)
 
 **Description**: Implement email threading to correctly associate replies with original outbound messages and campaigns using RFC 5322 headers (References, In-Reply-To) with fallback logic.
@@ -123,8 +123,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 3. Star/Favorite Feature
 
-**Priority**: P0 (MVP Critical)  
-**Timeline**: Q1 2026  
+**Priority**: P0 (MVP Critical)
+**Timeline**: Q1 2026
 **Effort**: 2-3 days (depends on Stalwart spike)
 
 **Description**: Enable users to star/favorite important threads for quick access, helping sales reps prioritize hot leads and urgent follow-ups.
@@ -149,8 +149,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 4. Folder/View System
 
-**Priority**: P0 (MVP Critical)  
-**Timeline**: Q1 2026  
+**Priority**: P0 (MVP Critical)
+**Timeline**: Q1 2026
 **Effort**: 3-5 days (depends on Stalwart spike)
 
 **Description**: Implement standard inbox folder/view system (All, Starred, Sent, Archived, Trash) to organize threads like Gmail and Outlook.
@@ -177,8 +177,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 5. Attachment Support Documentation
 
-**Priority**: P2 (MVP Nice-to-Have)  
-**Timeline**: Q1 2026  
+**Priority**: P2 (MVP Nice-to-Have)
+**Timeline**: Q1 2026
 **Effort**: 1-2 days (documentation only)
 
 **Description**: Document how inbox attachments integrate with the existing Content Database schema.
@@ -203,8 +203,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 6. Browser Notifications Integration
 
-**Priority**: P2 (MVP Nice-to-Have)  
-**Timeline**: Q1 2026  
+**Priority**: P2 (MVP Nice-to-Have)
+**Timeline**: Q1 2026
 **Effort**: 1-2 days (integration only)
 
 **Description**: Integrate inbox messages with the existing Notifications Database to enable browser notifications for new replies.
@@ -235,8 +235,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 7. Smart Reply Suggestions (Gemini AI)
 
-**Priority**: P1 (High Value)  
-**Timeline**: Q2 2026  
+**Priority**: P1 (High Value)
+**Timeline**: Q2 2026
 **Effort**: 1-2 weeks
 
 **Description**: Integrate Google Gemini AI to generate smart reply suggestions based on message content and conversation history.
@@ -265,8 +265,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 8. Sentiment Analysis & Tone Detection
 
-**Priority**: P1 (High Value)  
-**Timeline**: Q2 2026  
+**Priority**: P1 (High Value)
+**Timeline**: Q2 2026
 **Effort**: 3-5 days
 
 **Description**: Use Google Gemini AI to analyze message sentiment and tone, enabling sales reps to tailor responses based on prospect emotions.
@@ -297,8 +297,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 9. Advanced Inbox Analytics & Reporting
 
-**Priority**: P1 (High Value)  
-**Timeline**: Q2 2026  
+**Priority**: P1 (High Value)
+**Timeline**: Q2 2026
 **Effort**: 3-4 weeks
 
 **Description**: Build advanced analytics dashboard for inbox performance metrics, extending the existing OLAP Analytics Database with inbox-specific tables.
@@ -353,8 +353,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 10. Performance Benchmarks & Load Testing
 
-**Priority**: P2 (Optimization)  
-**Timeline**: Q2 2026  
+**Priority**: P2 (Optimization)
+**Timeline**: Q2 2026
 **Effort**: 1 week (spike + ongoing monitoring)
 
 **Description**: Conduct performance spike to establish baseline metrics for inbox message aggregation at scale.
@@ -383,8 +383,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 11. Scheduled Sending
 
-**Priority**: P2 (Nice-to-Have)  
-**Timeline**: Q2 2026  
+**Priority**: P2 (Nice-to-Have)
+**Timeline**: Q2 2026
 **Effort**: 3-5 days
 
 **Description**: Enable users to schedule replies to send at a specific date/time, allowing sales reps to draft messages outside business hours.
@@ -411,8 +411,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 12. Lead Context Sidebar
 
-**Priority**: P2 (High Value, Requires Spike)  
-**Timeline**: Q2 2026  
+**Priority**: P2 (High Value, Requires Spike)
+**Timeline**: Q2 2026
 **Effort**: 2-3 weeks (1 week spike + 1-2 weeks implementation)
 
 **Description**: Display lead context in a sidebar when viewing a thread, showing contact information, lead score, previous campaigns, and CRM data.
@@ -443,8 +443,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 13. Offline Support (IndexedDB)
 
-**Priority**: P3 (Low Priority)  
-**Timeline**: Q3 2026  
+**Priority**: P3 (Low Priority)
+**Timeline**: Q3 2026
 **Effort**: 3-5 days
 
 **Description**: Enable offline inbox access by caching recent threads and messages in IndexedDB.
@@ -471,8 +471,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 14. Multi-Language Support & Translation
 
-**Priority**: P2 (Global Expansion)  
-**Timeline**: Q3 2026  
+**Priority**: P2 (Global Expansion)
+**Timeline**: Q3 2026
 **Effort**: 1-2 weeks
 
 **Description**: Integrate translation API (Google Translate or DeepL) to automatically detect and translate non-English emails.
@@ -503,8 +503,8 @@ This document outlines the development roadmap for inbox management features, in
 
 #### 15. AI Enhancements Research Spike
 
-**Priority**: P2 (Exploration)  
-**Timeline**: Q3 2026  
+**Priority**: P2 (Exploration)
+**Timeline**: Q3 2026
 **Effort**: 1-2 weeks (research only)
 
 **Description**: Conduct time-boxed research spike to explore additional AI-powered inbox features (smart prioritization, advanced automation, engagement optimization).
@@ -652,6 +652,6 @@ This document outlines the development roadmap for inbox management features, in
 
 ---
 
-**Last Updated**: November 26, 2025  
-**Status**: Roadmap defined, awaiting Stalwart spike completion  
+**Last Updated**: November 26, 2025
+**Status**: Roadmap defined, awaiting Stalwart spike completion
 **Next Review**: After Stalwart spike (Q4 2025)

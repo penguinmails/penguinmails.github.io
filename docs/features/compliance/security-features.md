@@ -454,25 +454,25 @@ interface AuditLog {
   tenantId: string;
   userId?: string;
   timestamp: Date;
-  
+
   // Event details
   eventType: string;        // 'user.login', 'email.sent', etc.
   eventCategory: string;    // 'auth', 'email', 'infrastructure'
   action: string;           // 'create', 'update', 'delete', 'view'
   resource: string;         // 'campaign', 'user', 'domain'
   resourceId?: string;
-  
+
   // Context
   ipAddress: string;
   userAgent: string;
   requestId: string;
-  
+
   // Changes (for update actions)
   changeset?: {
     before: object;
     after: object;
   };
-  
+
   // Security
   severity: 'info' | 'warning' | 'critical';
   tags: string[];
@@ -550,22 +550,22 @@ import { encrypt, decrypt } from '@/lib/encryption';
 class User {
   @Column()
   email: string;
-  
+
   @Column({ type: 'text' })
   private _passwordHash: string;
-  
+
   @Column({ type: 'text', nullable: true })
   private _apiKey: string;
-  
+
   // Encrypted API key storage
   get apiKey(): string | null {
     return this._apiKey ? decrypt(this._apiKey) : null;
   }
-  
+
   set apiKey(value: string | null) {
     this._apiKey = value ? encrypt(value) : null;
   }
-  
+
   // Password hashing
   async setPassword(password: string): Promise<void> {
     // Check against breached passwords
@@ -573,10 +573,10 @@ class User {
     if (isBreached) {
       throw new Error('Password found in breach database');
     }
-    
+
     this._passwordHash = await bcrypt.hash(password, 12);
   }
-  
+
   async verifyPassword(password: string): Promise<boolean> {
     return bcrypt.compare(password, this._passwordHash);
   }
@@ -605,12 +605,12 @@ function encrypt(data: string): string {
   const iv = randomBytes(16);
   const key = deriveKey('field-encryption');
   const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
-  
+
   let encrypted = cipher.update(data, 'utf8', 'hex');
   encrypted += cipher.final('hex');
-  
+
   const authTag = cipher.getAuthTag();
-  
+
   // Return: iv + authTag + encrypted
   return iv.toString('hex') + ':' + authTag.toString('hex') + ':' + encrypted;
 }
@@ -618,17 +618,17 @@ function encrypt(data: string): string {
 // Decrypt data
 function decrypt(encryptedData: string): string {
   const [ivHex, authTagHex, encrypted] = encryptedData.split(':');
-  
+
   const iv = Buffer.from(ivHex, 'hex');
   const authTag = Buffer.from(authTagHex, 'hex');
   const key = deriveKey('field-encryption');
-  
+
   const decipher = crypto.createDecipheriv('aes-256-gcm', key, iv);
   decipher.setAuthTag(authTag);
-  
+
   let decrypted = decipher.update(encrypted, 'hex', 'utf8');
   decrypted += decipher.final('utf8');
-  
+
   return decrypted;
 }
 
@@ -670,7 +670,7 @@ import { DKIMSigner } from 'dkim-signer';
 
 async function signEmail(email: Email, domain: Domain): Promise<string> {
   const dkimKey = await getDKIMPrivateKey(domain.id);
-  
+
   const signer = new DKIMSigner({
     domainName: domain.name,
     selector: 'default',
@@ -678,7 +678,7 @@ async function signEmail(email: Email, domain: Domain): Promise<string> {
     headerCanonicalization: 'relaxed',
     bodyCanonicalization: 'relaxed',
   });
-  
+
   const signature = await signer.sign(email.raw);
   return signature;
 }
@@ -696,7 +696,7 @@ async function generateDKIMKeys(domainId: string): Promise<DKIMKeyPair> {
       format: 'pem',
     },
   });
-  
+
   // Store encrypted private key
   await db.dkimKeys.create({
     domainId,
@@ -706,7 +706,7 @@ async function generateDKIMKeys(domainId: string): Promise<DKIMKeyPair> {
     createdAt: new Date(),
     expiresAt: addMonths(new Date(), 3), // 3-month rotation
   });
-  
+
   return { publicKey, privateKey };
 }
 
@@ -735,7 +735,7 @@ export async function authenticate(
       req.user = user;
       return next();
     }
-    
+
     // Check for API key
     const apiKey = req.headers['x-api-key'];
     if (apiKey) {
@@ -743,7 +743,7 @@ export async function authenticate(
       req.user = apiUser;
       return next();
     }
-    
+
     return res.status(401).json({ error: 'Authentication required' });
   } catch (error) {
     logger.error('Authentication error:', error);
@@ -839,9 +839,9 @@ async function detectSuspiciousActivity(event: AuditLog): Promise<void> {
     checkUnusualTime(event),
     checkMassDelete(event),
   ];
-  
+
   const alerts = (await Promise.all(checks)).filter(Boolean);
-  
+
   if (alerts.length > 0) {
     await createSecurityAlert(event.tenantId, event.userId, alerts);
   }
@@ -850,7 +850,7 @@ async function detectSuspiciousActivity(event: AuditLog): Promise<void> {
 // Example: Brute force detection
 async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
   if (event.eventType !== 'user.login.failed') return null;
-  
+
   const recentFailures = await db.auditLogs.count({
     where: {
       eventType: 'user.login.failed',
@@ -858,7 +858,7 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
       timestamp: { gte: subMinutes(new Date(), 15) },
     },
   });
-  
+
   if (recentFailures >= 5) {
     return {
       type: 'brute_force',
@@ -866,7 +866,7 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
       message: `${recentFailures} failed login attempts from ${event.ipAddress}`,
     };
   }
-  
+
   return null;
 }
 
@@ -939,6 +939,6 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Active - Core Feature (Level 1)  
+**Last Updated:** November 25, 2025
+**Status:** Active - Core Feature (Level 1)
 **Owner:** Security Team

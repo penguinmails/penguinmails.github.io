@@ -242,17 +242,17 @@ Retention Policies:
     Active contacts: Indefinite (while engaged)
     Inactive contacts: 24 months since last engagement
     Unsubscribed: 30 days (for suppression list)
-  
+
   Campaign Data:
     Campaign metadata: 36 months
     Email content: 24 months
     Analytics data: 12 months (aggregated indefinitely)
-  
+
   User Data:
     Active users: Indefinite
     Deleted accounts: 30 days (soft delete)
     Audit logs: 7 years (compliance requirement)
-  
+
   Payment Data:
     Transaction records: 7 years (tax compliance)
     Card data: Never stored (Stripe handles)
@@ -430,8 +430,8 @@ Retention Policies:
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Next Review:** Quarterly (every 3 months)  
+**Last Updated:** November 24, 2025
+**Next Review:** Quarterly (every 3 months)
 **Regulatory Changes:** Monitor EU data protection developments
 
 *PenguinMails is committed to maintaining GDPR compliance and protecting user privacy. This documentation is regularly updated to reflect current regulations and best practices.*

@@ -181,8 +181,8 @@ This document provides executives with a clear view of feature delivery timeline
 
 #### Lead Management MVP Completion (Q1 2026)
 
-**Current Status**: Comprehensive documentation exists, MVP simplified to core features  
-**MVP Timeline**: Q1 2026 (3-5 weeks)  
+**Current Status**: Comprehensive documentation exists, MVP simplified to core features
+**MVP Timeline**: Q1 2026 (3-5 weeks)
 **Priority**: P0 (Critical for campaign targeting)
 
 **Critical Missing Features**:

@@ -588,8 +588,8 @@ PUT /api/v1/billing/company-info
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Access Level:** Billing Admin, Tenant Owner  
+**Last Updated:** November 24, 2025
+**Access Level:** Billing Admin, Tenant Owner
 **Data Retention:** Invoices retained for 7 years
 
 *The Billing Dashboard provides complete transparency into your PenguinMails costs and usage.*

@@ -661,7 +661,7 @@ class ComplianceMonitor {
 
   async runComplianceChecks(): Promise<ComplianceResults> {
     const results: ComplianceResults = {};
-    
+
     for (const [checkName, monitor] of Object.entries(this.checks)) {
       try {
         const result = await monitor.checkCompliance();
@@ -679,7 +679,7 @@ class ComplianceMonitor {
         };
       }
     }
-    
+
     return results;
   }
 }
@@ -962,7 +962,7 @@ class RegulatoryChangeManager {
 
   async monitorRegulatoryChanges(): Promise<void> {
     const changes: RegulatoryChange[] = [];
-    
+
     for (const source of this.regulatorySources) {
       const newChanges = await this.checkForUpdates(source);
       if (newChanges) {
@@ -987,7 +987,7 @@ class RegulatoryChangeManager {
       responsibleParty: assessment.owner,
       testingProtocol: assessment.testingSteps
     };
-    
+
     this.implementationPlans.push(plan);
   }
 
@@ -1127,7 +1127,7 @@ class ComplianceTraining {
         { id: 'escalation_procedures', name: 'Escalation Procedures', description: 'When and how to escalate issues', duration: 30, required: true }
       ]
     };
-    
+
     return moduleMap[this.role] || [];
   }
 

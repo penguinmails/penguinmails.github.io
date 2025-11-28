@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### Get Tenant SMTP Configuration
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/smtp/config`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/smtp/config`
 **Purpose**: Retrieve effective SMTP configuration and domain verification status.
 
 **Response**:
@@ -48,8 +48,8 @@ persona: "Backend Developers"
 
 ### Add Domain
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/smtp/domains`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/smtp/domains`
 **Purpose**: Register a new sending domain.
 
 **Request**:
@@ -64,6 +64,6 @@ persona: "Backend Developers"
 
 ### Get DNS Records
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/smtp/domains/{domain}/dns`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/smtp/domains/{domain}/dns`
 **Purpose**: Retrieve required DNS records for verification.

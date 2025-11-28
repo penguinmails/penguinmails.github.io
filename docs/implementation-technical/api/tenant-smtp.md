@@ -9,8 +9,8 @@ persona: "Backend Developers, Frontend Developers"
 
 # Tenant SMTP API
 
-**Server**: Central Monolithic Server  
-**URL Prefix**: `/api/v1/tenant/smtp/*`  
+**Server**: Central Monolithic Server
+**URL Prefix**: `/api/v1/tenant/smtp/*`
 **Purpose**: Tenant-scoped SMTP configuration and deliverability metrics.
 
 ---

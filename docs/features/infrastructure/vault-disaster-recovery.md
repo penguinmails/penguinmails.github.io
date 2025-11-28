@@ -101,7 +101,7 @@ sequenceDiagram
     participant Vault
     participant S3
     participant Monitoring
-    
+
     Cron->>BackupService: Trigger Backup (02:00 UTC)
     BackupService->>Vault: Take Snapshot
     Vault-->>BackupService: Return Snapshot Data
@@ -112,7 +112,7 @@ sequenceDiagram
     BackupService->>BackupService: Delete Local Snapshot
     BackupService->>Monitoring: Log Backup Success
     BackupService->>Monitoring: Send Notification
-    
+
     alt Backup Failure
         BackupService->>Monitoring: Alert Admins
         BackupService->>Monitoring: Log Error Details
@@ -129,23 +129,23 @@ async function performVaultBackup(): Promise<void> {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const backupDate = new Date().toISOString().split('T')[0];
   const isMonthly = new Date().getDate() === 1;
-  
+
   try {
     // Take Vault snapshot
     console.log(`[${timestamp}] Starting Vault backup...`);
     const snapshot = await vaultClient.sys.snapshot();
-    
+
     // Encrypt snapshot with AES-256-GCM
     const encryptedSnapshot = await encryptBackup(snapshot, backupEncryptionKey);
-    
+
     // Generate checksum for integrity verification
     const checksum = crypto.createHash('sha256').update(encryptedSnapshot).digest('hex');
-    
+
     // Determine backup path (daily or monthly)
     const backupPath = isMonthly
       ? `monthly/${backupDate}/vault-snapshot-${timestamp}.enc`
       : `daily/${backupDate}/vault-snapshot-${timestamp}.enc`;
-    
+
     // Upload to S3
     await s3.putObject({
       Bucket: 'penguinmails-vault-backups',
@@ -157,20 +157,20 @@ async function performVaultBackup(): Promise<void> {
         vault_version: await vaultClient.sys.health().version
       }
     });
-    
+
     // Verify upload integrity
     const uploadedObject = await s3.headObject({
       Bucket: 'penguinmails-vault-backups',
       Key: backupPath
     });
-    
+
     if (uploadedObject.Metadata.checksum !== checksum) {
       throw new Error('Backup checksum mismatch after upload');
     }
-    
+
     // Delete local snapshot file
     await fs.unlink(`/tmp/vault-snapshot-${timestamp}`);
-    
+
     // Log backup success
     await auditLog.create({
       event: 'vault_backup_completed',
@@ -182,16 +182,16 @@ async function performVaultBackup(): Promise<void> {
         backup_type: isMonthly ? 'monthly' : 'daily'
       }
     });
-    
+
     // Send success notification
     await sendNotification({
       type: 'vault_backup_success',
       message: `Vault backup completed successfully: ${backupPath}`,
       timestamp: timestamp
     });
-    
+
     console.log(`[${timestamp}] Vault backup completed: ${backupPath}`);
-    
+
   } catch (error) {
     // Log backup failure
     await auditLog.create({
@@ -203,7 +203,7 @@ async function performVaultBackup(): Promise<void> {
         stack: error.stack
       }
     });
-    
+
     // Alert admins immediately
     await sendAlert({
       type: 'vault_backup_failure',
@@ -211,7 +211,7 @@ async function performVaultBackup(): Promise<void> {
       message: `Vault backup failed: ${error.message}`,
       timestamp: timestamp
     });
-    
+
     throw error;
   }
 }
@@ -223,19 +223,19 @@ async function encryptBackup(
 ): Promise<Buffer> {
   // Generate random IV
   const iv = crypto.randomBytes(16);
-  
+
   // Create cipher
   const cipher = crypto.createCipheriv('aes-256-gcm', encryptionKey, iv);
-  
+
   // Encrypt snapshot
   const encrypted = Buffer.concat([
     cipher.update(snapshot),
     cipher.final()
   ]);
-  
+
   // Get authentication tag
   const authTag = cipher.getAuthTag();
-  
+
   // Return: IV + authTag + encrypted data
   return Buffer.concat([iv, authTag, encrypted]);
 }
@@ -251,43 +251,43 @@ async function encryptBackup(
 // Clean up old backups (runs daily after backup)
 async function cleanupOldBackups(): Promise<void> {
   const now = new Date();
-  
+
   // Clean up daily backups older than 30 days
   const dailyBackups = await s3.listObjectsV2({
     Bucket: 'penguinmails-vault-backups',
     Prefix: 'daily/'
   });
-  
+
   for (const backup of dailyBackups.Contents) {
     const backupDate = new Date(backup.LastModified);
     const ageInDays = (now.getTime() - backupDate.getTime()) / (1000 * 60 * 60 * 24);
-    
+
     if (ageInDays > 30) {
       await s3.deleteObject({
         Bucket: 'penguinmails-vault-backups',
         Key: backup.Key
       });
-      
+
       console.log(`Deleted old daily backup: ${backup.Key}`);
     }
   }
-  
+
   // Clean up monthly backups older than 12 months
   const monthlyBackups = await s3.listObjectsV2({
     Bucket: 'penguinmails-vault-backups',
     Prefix: 'monthly/'
   });
-  
+
   for (const backup of monthlyBackups.Contents) {
     const backupDate = new Date(backup.LastModified);
     const ageInMonths = (now.getTime() - backupDate.getTime()) / (1000 * 60 * 60 * 24 * 30);
-    
+
     if (ageInMonths > 12) {
       await s3.deleteObject({
         Bucket: 'penguinmails-vault-backups',
         Key: backup.Key
       });
-      
+
       console.log(`Deleted old monthly backup: ${backup.Key}`);
     }
   }
@@ -306,30 +306,30 @@ async function testBackupRestoration(): Promise<void> {
   try {
     // Get latest daily backup
     const latestBackup = await getLatestBackup('daily');
-    
+
     // Download encrypted backup
     const encryptedBackup = await s3.getObject({
       Bucket: 'penguinmails-vault-backups',
       Key: latestBackup.Key
     });
-    
+
     // Decrypt backup
     const decryptedBackup = await decryptBackup(
       encryptedBackup.Body,
       backupEncryptionKey
     );
-    
+
     // Restore to staging Vault instance
     await stagingVaultClient.sys.restore(decryptedBackup);
-    
+
     // Verify secrets are accessible
     const testTenantId = 'test-tenant-id';
     const testSecret = await stagingVaultClient.read(`smtp/${testTenantId}/admin`);
-    
+
     if (!testSecret) {
       throw new Error('Test secret not found after restoration');
     }
-    
+
     // Log successful test
     await auditLog.create({
       event: 'vault_backup_test_success',
@@ -339,9 +339,9 @@ async function testBackupRestoration(): Promise<void> {
         staging_vault: 'vault-staging.penguinmails.com'
       }
     });
-    
+
     console.log('Backup restoration test successful');
-    
+
   } catch (error) {
     // Alert admins of test failure
     await sendAlert({
@@ -349,7 +349,7 @@ async function testBackupRestoration(): Promise<void> {
       severity: 'high',
       message: `Backup restoration test failed: ${error.message}`
     });
-    
+
     throw error;
   }
 }
@@ -373,7 +373,7 @@ sequenceDiagram
     participant OldVPS
     participant NewVPS
     participant DNS
-    
+
     Admin->>Backend: Report VPS Compromise
     Backend->>Backend: Provision New VPS
     Backend->>Vault: Retrieve All Secrets
@@ -401,7 +401,7 @@ async function migrateToNewVps(
 ): Promise<void> {
   const tenant = await getTenant(tenantId);
   const oldVpsIp = tenant.vps_ip;
-  
+
   try {
     // Step 1: Provision new VPS from Hostwind
     console.log(`[${tenantId}] Provisioning new VPS...`);
@@ -409,21 +409,21 @@ async function migrateToNewVps(
       plan: tenant.plan,
       region: tenant.region
     });
-    
+
     // Step 2: Retrieve all secrets from Vault
     console.log(`[${tenantId}] Retrieving secrets from Vault...`);
     const adminSshKey = await vaultClient.read(`vps/${tenantId}/admin_ssh`);
     const tenantSshKey = await vaultClient.read(`vps/${tenantId}/tenant_ssh`);
     const smtpCreds = await vaultClient.read(`smtp/${tenantId}/admin`);
     const dkimKeys = await vaultClient.list(`dkim/${tenant.domain}`);
-    
+
     // Step 3: Configure SSH access on new VPS
     console.log(`[${tenantId}] Configuring SSH access...`);
     await configureSshAccess(newVps.ip, [
       adminSshKey.public_key,
       tenantSshKey.public_key
     ]);
-    
+
     // Step 4: Install and configure MailU
     console.log(`[${tenantId}] Installing MailU...`);
     const decryptedPassword = await decryptPassword(smtpCreds.password, tenantId);
@@ -432,28 +432,28 @@ async function migrateToNewVps(
       adminUsername: smtpCreds.username,
       adminPassword: decryptedPassword
     });
-    
+
     // Step 5: Install DKIM keys
     console.log(`[${tenantId}] Installing DKIM keys...`);
     for (const selector of dkimKeys) {
       const dkimKey = await vaultClient.read(`dkim/${tenant.domain}/${selector}`);
       await installDkimKey(newVps.ip, tenant.domain, selector, dkimKey.private_key);
     }
-    
+
     // Step 6: Update DNS records
     console.log(`[${tenantId}] Updating DNS records...`);
     await updateDnsRecords(tenant.domain, {
       A: newVps.ip,
       MX: `mail.${tenant.domain}`
     });
-    
+
     // Step 7: Verify email sending works
     console.log(`[${tenantId}] Verifying email functionality...`);
     const testResult = await sendTestEmail(newVps.ip, tenant.domain);
     if (!testResult.success) {
       throw new Error(`Email test failed: ${testResult.error}`);
     }
-    
+
     // Step 8: Update tenant record
     await updateTenant(tenantId, {
       vps_ip: newVps.ip,
@@ -461,7 +461,7 @@ async function migrateToNewVps(
       migrated_at: new Date().toISOString(),
       migration_reason: reason
     });
-    
+
     // Step 9: Destroy old VPS (if accessible)
     if (reason === 'compromise') {
       console.log(`[${tenantId}] Wiping and destroying old VPS...`);
@@ -472,7 +472,7 @@ async function migrateToNewVps(
       }
       await hostwindClient.destroyVps(tenant.old_vps_id);
     }
-    
+
     // Step 10: Log migration event
     await auditLog.create({
       event: 'vps_migration_completed',
@@ -485,16 +485,16 @@ async function migrateToNewVps(
         secrets_recovered: ['ssh_keys', 'smtp_creds', 'dkim_keys']
       }
     });
-    
+
     // Step 11: Notify tenant
     await sendTenantNotification(tenantId, {
       type: 'vps_migration_complete',
       subject: 'VPS Migration Completed',
       message: `Your VPS has been migrated to a new server. New IP: ${newVps.ip}. All secrets recovered from Vault.`
     });
-    
+
     console.log(`[${tenantId}] VPS migration completed successfully`);
-    
+
   } catch (error) {
     // Log migration failure
     await auditLog.create({
@@ -507,7 +507,7 @@ async function migrateToNewVps(
         old_vps_ip: oldVpsIp
       }
     });
-    
+
     // Alert admins
     await sendAlert({
       type: 'vps_migration_failure',
@@ -515,7 +515,7 @@ async function migrateToNewVps(
       tenant_id: tenantId,
       message: `VPS migration failed: ${error.message}`
     });
-    
+
     throw error;
   }
 }
@@ -537,28 +537,28 @@ async function recoverSmtpCredentialsToNewVps(
 ): Promise<void> {
   // Retrieve SMTP credentials from Vault
   const smtpCreds = await vaultClient.read(`smtp/${tenantId}/admin`);
-  
+
   // Decrypt password
   const decryptedPassword = await decryptPassword(smtpCreds.password, tenantId);
-  
+
   // Configure MailU on new VPS with recovered credentials
   await configureMailU(newVpsIp, {
     username: smtpCreds.username,
     password: decryptedPassword,
     webmail_url: smtpCreds.webmail_url
   });
-  
+
   // Verify MailU is accessible
   const isAccessible = await verifyMailUAccess(
     smtpCreds.webmail_url,
     smtpCreds.username,
     decryptedPassword
   );
-  
+
   if (!isAccessible) {
     throw new Error('Failed to verify MailU access after recovery');
   }
-  
+
   // Log recovery event
   await auditLog.create({
     event: 'smtp_credentials_recovered',
@@ -641,12 +641,12 @@ async function executeDrDrill(
 ): Promise<DrillResult> {
   const startTime = Date.now();
   const drillId = `DR-${new Date().toISOString().split('T')[0]}-${scenario}`;
-  
+
   console.log(`[${drillId}] Starting disaster recovery drill: ${scenario}`);
-  
+
   try {
     let result: DrillResult;
-    
+
     switch (scenario) {
       case 'vault_failure':
         result = await drillVaultFailure();
@@ -661,9 +661,9 @@ async function executeDrDrill(
         result = await drillCredentialCompromise();
         break;
     }
-    
+
     const duration = Date.now() - startTime;
-    
+
     // Log drill results
     await auditLog.create({
       event: 'dr_drill_completed',
@@ -677,14 +677,14 @@ async function executeDrDrill(
         issues: result.issues
       }
     });
-    
+
     // Generate drill report
     await generateDrillReport(drillId, scenario, result, duration);
-    
+
     console.log(`[${drillId}] Drill completed in ${duration}ms`);
-    
+
     return result;
-    
+
   } catch (error) {
     // Log drill failure
     await auditLog.create({
@@ -697,7 +697,7 @@ async function executeDrDrill(
         error: error.message
       }
     });
-    
+
     throw error;
   }
 }
@@ -705,31 +705,31 @@ async function executeDrDrill(
 // Drill: Vault server failure with automatic failover
 async function drillVaultFailure(): Promise<DrillResult> {
   const startTime = Date.now();
-  
+
   // Simulate Vault server failure (stop active node)
   await stopVaultNode('vault-node-1');
-  
+
   // Wait for automatic failover
   await waitForFailover(30000); // 30 second timeout
-  
+
   // Verify standby node became active
   const activeNode = await getActiveVaultNode();
   if (activeNode !== 'vault-node-2' && activeNode !== 'vault-node-3') {
     throw new Error('Failover did not occur');
   }
-  
+
   // Verify secrets are accessible
   const testSecret = await vaultClient.read('smtp/test-tenant/admin');
   if (!testSecret) {
     throw new Error('Secrets not accessible after failover');
   }
-  
+
   // Restart failed node
   await startVaultNode('vault-node-1');
-  
+
   const duration = Date.now() - startTime;
   const rtoMet = duration < 30 * 60 * 1000; // 30 minutes
-  
+
   return {
     success: true,
     rto_met: rtoMet,
@@ -1011,44 +1011,44 @@ async function restoreVaultFromBackup(
   backupDate?: string
 ): Promise<void> {
   const date = backupDate || new Date().toISOString().split('T')[0];
-  
+
   try {
     console.log(`Starting Vault restoration from backup: ${date}`);
-    
+
     // Step 1: Download encrypted backup from S3
     const backupKey = `daily/${date}/vault-snapshot-${date}.enc`;
     const encryptedBackup = await s3.getObject({
       Bucket: 'penguinmails-vault-backups',
       Key: backupKey
     });
-    
+
     if (!encryptedBackup.Body) {
       throw new Error(`Backup not found for date: ${date}`);
     }
-    
+
     // Step 2: Decrypt backup
     const decryptedBackup = await decryptBackup(
       encryptedBackup.Body,
       backupEncryptionKey
     );
-    
+
     // Step 3: Verify checksum
     const checksum = crypto.createHash('sha256').update(decryptedBackup).digest('hex');
     if (checksum !== encryptedBackup.Metadata.checksum) {
       throw new Error('Backup checksum mismatch');
     }
-    
+
     // Step 4: Restore Vault snapshot
     await vaultClient.sys.restore(decryptedBackup);
-    
+
     // Step 5: Verify secrets are accessible
     const testTenantId = 'test-tenant-id';
     const testSecret = await vaultClient.read(`smtp/${testTenantId}/admin`);
-    
+
     if (!testSecret) {
       throw new Error('Test secret not found after restoration');
     }
-    
+
     // Step 6: Log restoration event
     await auditLog.create({
       event: 'vault_restored_from_backup',
@@ -1059,16 +1059,16 @@ async function restoreVaultFromBackup(
         checksum: checksum
       }
     });
-    
+
     // Step 7: Notify admins
     await sendNotification({
       type: 'vault_restoration_success',
       message: `Vault restored successfully from backup: ${date}`,
       timestamp: new Date().toISOString()
     });
-    
+
     console.log(`Vault restoration completed successfully from backup: ${date}`);
-    
+
   } catch (error) {
     // Log restoration failure
     await auditLog.create({
@@ -1080,7 +1080,7 @@ async function restoreVaultFromBackup(
         error: error.message
       }
     });
-    
+
     // Alert admins
     await sendAlert({
       type: 'vault_restoration_failure',
@@ -1088,7 +1088,7 @@ async function restoreVaultFromBackup(
       message: `Vault restoration failed: ${error.message}`,
       backup_date: date
     });
-    
+
     throw error;
   }
 }
@@ -1102,17 +1102,17 @@ async function decryptBackup(
   const iv = encryptedData.slice(0, 16);
   const authTag = encryptedData.slice(16, 32);
   const encrypted = encryptedData.slice(32);
-  
+
   // Create decipher
   const decipher = crypto.createDecipheriv('aes-256-gcm', encryptionKey, iv);
   decipher.setAuthTag(authTag);
-  
+
   // Decrypt data
   const decrypted = Buffer.concat([
     decipher.update(encrypted),
     decipher.final()
   ]);
-  
+
   return decrypted;
 }
 
@@ -1130,36 +1130,36 @@ graph TB
     subgraph "Load Balancer"
         LB[HAProxy / Nginx<br/>vault.penguinmails.com]
     end
-    
+
     subgraph "Vault Cluster"
         V1[Vault Node 1<br/>Active<br/>10.0.1.10]
         V2[Vault Node 2<br/>Standby<br/>10.0.1.11]
         V3[Vault Node 3<br/>Standby<br/>10.0.1.12]
     end
-    
+
     subgraph "Storage Backend"
         PG[(PostgreSQL<br/>Primary<br/>10.0.2.10)]
         PG_R1[(PostgreSQL<br/>Replica 1<br/>10.0.2.11)]
         PG_R2[(PostgreSQL<br/>Replica 2<br/>10.0.2.12)]
     end
-    
+
     subgraph "Backup Storage"
         S3[S3 Bucket<br/>Encrypted Backups]
     end
-    
+
     LB --> V1
     LB --> V2
     LB --> V3
-    
+
     V1 --> PG
     V2 --> PG
     V3 --> PG
-    
+
     PG --> PG_R1
     PG --> PG_R2
-    
+
     V1 -.Daily Backup.-> S3
-    
+
     style V1 fill:#99ff99
     style V2 fill:#ffff99
     style V3 fill:#ffff99
@@ -1198,7 +1198,7 @@ cluster_addr = "https://10.0.1.10:8201"
 storage "raft" {
   path = "/opt/vault/data"
   node_id = "vault-node-1"
-  
+
   retry_join {
     leader_api_addr = "https://10.0.1.10:8200"
   }
@@ -1225,7 +1225,7 @@ ui = true
 global
     log /dev/log local0
     maxconn 4096
-    
+
 defaults
     log global
     mode http
@@ -1242,7 +1242,7 @@ backend vault_backend
     balance roundrobin
     option httpchk GET /v1/sys/health
     http-check expect status 200
-    
+
     server vault-node-1 10.0.1.10:8200 check ssl verify none
     server vault-node-2 10.0.1.11:8200 check ssl verify none backup
     server vault-node-3 10.0.1.12:8200 check ssl verify none backup
@@ -1261,7 +1261,7 @@ sequenceDiagram
     participant V1 as Vault Node 1 (Active)
     participant V2 as Vault Node 2 (Standby)
     participant V3 as Vault Node 3 (Standby)
-    
+
     Client->>LB: Request Secret
     LB->>V1: Forward Request
     V1--xLB: Node Failure
@@ -1286,11 +1286,11 @@ async function monitorVaultClusterHealth(): Promise<void> {
     { id: 'vault-node-2', url: 'https://10.0.1.11:8200' },
     { id: 'vault-node-3', url: 'https://10.0.1.12:8200' }
   ];
-  
+
   for (const node of nodes) {
     try {
       const health = await axios.get(`${node.url}/v1/sys/health`);
-      
+
       // Log node status
       await auditLog.create({
         event: 'vault_node_health_check',
@@ -1302,7 +1302,7 @@ async function monitorVaultClusterHealth(): Promise<void> {
           standby: health.data.standby
         }
       });
-      
+
       // Alert if node is sealed
       if (health.data.sealed) {
         await sendAlert({
@@ -1312,7 +1312,7 @@ async function monitorVaultClusterHealth(): Promise<void> {
           message: `Vault node ${node.id} is sealed`
         });
       }
-      
+
     } catch (error) {
       // Node is unreachable
       await auditLog.create({
@@ -1324,7 +1324,7 @@ async function monitorVaultClusterHealth(): Promise<void> {
           error: error.message
         }
       });
-      
+
       // Alert admins
       await sendAlert({
         type: 'vault_node_failure',
@@ -1369,7 +1369,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
     overall_status: 'healthy',
     checks: []
   };
-  
+
   try {
     // Check 1: Seal Status
     const sealStatus = await vaultClient.sys.sealStatus();
@@ -1382,7 +1382,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         shares: sealStatus.n
       }
     });
-    
+
     if (sealStatus.sealed) {
       health.overall_status = 'unhealthy';
       await sendAlert({
@@ -1391,7 +1391,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         message: 'Vault is sealed and cannot serve requests'
       });
     }
-    
+
     // Check 2: Leader Status
     const leaderStatus = await vaultClient.sys.leader();
     health.checks.push({
@@ -1403,7 +1403,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         leader_address: leaderStatus.leader_address
       }
     });
-    
+
     // Check 3: Replication Lag
     const replicationStatus = await vaultClient.sys.replicationStatus();
     const replicationLag = replicationStatus.data?.secondaries?.[0]?.last_wal || 0;
@@ -1414,7 +1414,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         lag_seconds: replicationLag
       }
     });
-    
+
     if (replicationLag > 60) {
       await sendAlert({
         type: 'vault_replication_lag',
@@ -1422,7 +1422,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         message: `Vault replication lag is ${replicationLag} seconds`
       });
     }
-    
+
     // Check 4: Request Latency
     const latencyStart = Date.now();
     await vaultClient.read('sys/health');
@@ -1434,7 +1434,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         latency_ms: latency
       }
     });
-    
+
     // Check 5: Storage Usage
     const storageUsage = await getPostgresStorageUsage();
     health.checks.push({
@@ -1446,7 +1446,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         percent: storageUsage.percent
       }
     });
-    
+
     if (storageUsage.percent > 90) {
       await sendAlert({
         type: 'vault_storage_full',
@@ -1454,7 +1454,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         message: `Vault storage is ${storageUsage.percent}% full`
       });
     }
-    
+
     // Check 6: Backup Status
     const lastBackup = await getLastBackupStatus();
     const hoursSinceBackup = (Date.now() - lastBackup.timestamp) / (1000 * 60 * 60);
@@ -1467,7 +1467,7 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         backup_success: lastBackup.success
       }
     });
-    
+
     if (hoursSinceBackup > 25) {
       await sendAlert({
         type: 'vault_backup_overdue',
@@ -1475,16 +1475,16 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         message: `Vault backup is ${hoursSinceBackup} hours overdue`
       });
     }
-    
+
     // Log health status
     await auditLog.create({
       event: 'vault_health_check',
       timestamp: health.timestamp,
       details: health
     });
-    
+
     return health;
-    
+
   } catch (error) {
     health.overall_status = 'unhealthy';
     health.checks.push({
@@ -1494,13 +1494,13 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
         error: error.message
       }
     });
-    
+
     await sendAlert({
       type: 'vault_health_check_failed',
       severity: 'critical',
       message: `Vault health check failed: ${error.message}`
     });
-    
+
     return health;
   }
 }
@@ -1679,7 +1679,7 @@ sequenceDiagram
     participant Backend
     participant Tenants
     participant Monitoring
-    
+
     Security->>Vault: Detect Breach
     Security->>Vault: Seal Vault Immediately
     Vault-->>Security: Sealed
@@ -1740,26 +1740,26 @@ async function assessVaultBreach(): Promise<BreachAssessment> {
     timestamp_gte: new Date(Date.now() - 24 * 60 * 60 * 1000),
     order_by: 'timestamp DESC'
   });
-  
+
   // Identify suspicious activity
-  const suspiciousEvents = auditEvents.filter(event => 
+  const suspiciousEvents = auditEvents.filter(event =>
     event.event.includes('unauthorized') ||
     event.severity === 'critical' ||
     event.details?.error?.includes('permission denied')
   );
-  
+
   // Determine which secrets were accessed
   const accessedSecrets = auditEvents
     .filter(event => event.event === 'secret_read')
     .map(event => event.request.path);
-  
+
   // Identify affected tenants
   const affectedTenants = new Set(
     accessedSecrets
       .map(path => path.split('/')[1]) // Extract tenant_id from path
       .filter(id => id !== 'test-tenant-id')
   );
-  
+
   return {
     breach_detected_at: new Date().toISOString(),
     suspicious_events: suspiciousEvents.length,
@@ -1805,31 +1805,31 @@ async function emergencyRotateAllSecrets(
   incidentId: string
 ): Promise<void> {
   console.log(`[${incidentId}] Starting emergency secret rotation...`);
-  
+
   // Get all tenants
   const tenants = await getAllTenants();
-  
+
   for (const tenant of tenants) {
     try {
       // Rotate SSH keys
       await rotateSSHKeys(tenant.id, 'emergency', incidentId);
-      
+
       // Rotate SMTP credentials
       await rotateSMTPCredentials(tenant.id, 'emergency', incidentId);
-      
+
       // Revoke all API keys (tenants must regenerate)
       await revokeAllApiKeys(tenant.id, incidentId);
-      
+
       // Rotate DKIM keys
       await rotateDKIMKeys(tenant.domain, 'emergency', incidentId);
-      
+
       console.log(`[${incidentId}] Rotated secrets for tenant: ${tenant.id}`);
-      
+
     } catch (error) {
       console.error(`[${incidentId}] Failed to rotate secrets for tenant ${tenant.id}: ${error.message}`);
     }
   }
-  
+
   console.log(`[${incidentId}] Emergency secret rotation completed`);
 }
 
@@ -1840,12 +1840,12 @@ async function revokeAllApiKeys(
 ): Promise<void> {
   // List all API keys for tenant
   const apiKeys = await vaultClient.list(`api_keys/${tenantId}`);
-  
+
   // Revoke each key
   for (const keyId of apiKeys) {
     await vaultClient.delete(`api_keys/${tenantId}/${keyId}`);
   }
-  
+
   // Log revocation
   await auditLog.create({
     event: 'api_keys_revoked_emergency',
@@ -1877,7 +1877,7 @@ async function notifyTenantsOfBreach(
       subject: 'URGENT: Security Incident - API Keys Revoked',
       message: `
         We have detected a security incident affecting our secrets management system.
-        
+
         As a precautionary measure, we have:
 
 
@@ -1888,7 +1888,7 @@ async function notifyTenantsOfBreach(
 
 
         - Revoked all API keys
-        
+
         ACTION REQUIRED:
 
 
@@ -1896,11 +1896,11 @@ async function notifyTenantsOfBreach(
 
 
         - Update any applications using the old API keys
-        
+
         Your email sending infrastructure is unaffected and continues to operate normally.
-        
+
         Incident ID: ${incidentId}
-        
+
         We apologize for any inconvenience. Your security is our top priority.
       `
     });
@@ -1954,7 +1954,7 @@ async function conductPostIncidentReview(
   const assessment = await assessVaultBreach();
   const auditEvents = await getIncidentAuditEvents(incidentId);
   const affectedTenants = assessment.affected_tenants;
-  
+
   // Generate incident report
   const report: IncidentReport = {
     incident_id: incidentId,
@@ -1975,10 +1975,10 @@ async function conductPostIncidentReview(
     lessons_learned: [],
     preventive_measures: []
   };
-  
+
   // Store incident report
   await storeIncidentReport(report);
-  
+
   return report;
 }
 
@@ -2193,9 +2193,9 @@ async function conductPostIncidentReview(
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Document Version:** 1.0  
-**Status:** APPROVED  
+**Last Updated:** November 26, 2025
+**Document Version:** 1.0
+**Status:** APPROVED
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive disaster recovery procedures for HashiCorp Vault, ensuring rapid recovery from any failure scenario with minimal data loss and service disruption. All Vault-dependent features must reference this document for disaster recovery planning.*

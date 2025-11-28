@@ -279,7 +279,7 @@ describe('EmailOptimizer', () => {
     // Mock AI model prediction
     const mockPredictImprovement = vi.spyOn(optimizer, 'predictImprovement');
     mockPredictImprovement.mockResolvedValue(0.15);
-    
+
     const improvement = await optimizer.predictImprovement(optimizedSubject);
     expect(improvement).toBeGreaterThan(0);
   });
@@ -375,7 +375,7 @@ describe('AI Optimization API Integration', () => {
     server = setupServer(
       http.post('/api/v1/ai/optimize-content', async ({ request }) => {
         const body = await request.json() as OptimizationRequest;
-        
+
         // Mock successful optimization response
         const response: OptimizationResponse = {
           optimizedContent: {
@@ -424,7 +424,7 @@ describe('AI Optimization API Integration', () => {
     };
 
     const response = await apiClient.optimizeContent(request);
-    
+
     expect(response.status).toBe(200);
     expect(response.data).toBeDefined();
     expect(response.data.optimizedContent).toBeDefined();
@@ -493,7 +493,7 @@ interface ContentConstraints {
 
 class EmailOptimizationAPI {
   private readonly baseURL = '/api/v1/ai';
-  
+
   async optimizeContent(request: OptimizationRequest): Promise<{
     status: number;
     data: OptimizationResponse;
@@ -548,10 +548,10 @@ export const CampaignOptimizationPanel: React.FC<OptimizationPanelProps> = ({
     setIsOptimizing(true);
     try {
       const result = await aiService.optimizeCampaign(campaign.id);
-      
+
       setOptimizationScore(result.score);
       setRecommendations(result.recommendations);
-      
+
       // Update campaign content if user accepts
       if (result.confidence > 0.8) {
         onOptimizationApplied(result.optimizedContent);
@@ -582,7 +582,7 @@ export const CampaignOptimizationPanel: React.FC<OptimizationPanelProps> = ({
             <span className="score-label">Optimization Score:</span>
             <span className="score-value">{optimizationScore}%</span>
           </div>
-          
+
           <div className="recommendations">
             <h4>Recommendations</h4>
             <ul>
@@ -807,7 +807,7 @@ class MigrationRunner {
     try {
       console.log('Starting migration...');
       const result = await migration.upgrade();
-      
+
       if (result.success) {
         console.log(`Migration completed successfully: ${result.message}`);
         if (result.tablesCreated) {
@@ -831,7 +831,7 @@ class MigrationRunner {
     try {
       console.log('Starting rollback...');
       const result = await migration.downgrade();
-      
+
       if (result.success) {
         console.log(`Rollback completed successfully: ${result.message}`);
         return true;
@@ -850,12 +850,12 @@ class MigrationRunner {
 async function runAIOptimizationMigration() {
   const migration = new AIOptimizationMigration();
   const runner = new MigrationRunner();
-  
+
   const success = await runner.runMigration(migration);
   if (!success) {
     throw new Error('Migration failed - please check logs');
   }
-  
+
   return success;
 }
 

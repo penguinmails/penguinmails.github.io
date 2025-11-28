@@ -19,7 +19,7 @@ The PenguinMails platform implements a sophisticated 5-tier database architectur
 
 1. **OLTP Database (Operational Core)** - Primary system of record for core business entities
 
-2. **Content Database (Heavy Content Storage)** - Dedicated tier for email bodies and large attachments  
+2. **Content Database (Heavy Content Storage)** - Dedicated tier for email bodies and large attachments
 
 3. **OLAP Analytics Warehouse** - Aggregated analytics and compliance summaries
 

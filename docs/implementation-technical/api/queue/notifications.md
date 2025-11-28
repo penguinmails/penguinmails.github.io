@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### System Notifications Feed
 
-**Method**: `GET`  
-**URL**: `/api/v1/queue/notifications`  
+**Method**: `GET`
+**URL**: `/api/v1/queue/notifications`
 **Purpose**: Retrieve notification feed for system monitoring.
 
 **Query Parameters**:
@@ -54,8 +54,8 @@ persona: "Backend Developers"
 
 ### Mark Notification Reviewed
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/notifications/{id}/reviewed`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/notifications/{id}/reviewed`
 **Purpose**: Mark a notification as reviewed.
 
 **Request**:
@@ -71,8 +71,8 @@ persona: "Backend Developers"
 
 ### Bulk Review
 
-**Method**: `POST`  
-**URL**: `/api/v1/queue/notifications/bulk-review`  
+**Method**: `POST`
+**URL**: `/api/v1/queue/notifications/bulk-review`
 **Purpose**: Mark multiple notifications as reviewed.
 
 **Request**:

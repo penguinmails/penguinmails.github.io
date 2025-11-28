@@ -258,7 +258,7 @@ CREATE TABLE users (
   name VARCHAR(255),
   role VARCHAR(50), -- owner, admin, member
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  
+
   UNIQUE(tenant_id, email) -- Email unique per tenant
 );
 
@@ -269,7 +269,7 @@ CREATE TABLE workspaces (
   name VARCHAR(255) NOT NULL,
   slug VARCHAR(255) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  
+
   UNIQUE(tenant_id, slug)
 );
 
@@ -278,7 +278,7 @@ CREATE TABLE workspace_members (
   workspace_id UUID REFERENCES workspaces(id),
   user_id UUID REFERENCES users(id),
   role VARCHAR(50), -- admin, member, viewer
-  
+
   PRIMARY KEY(workspace_id, user_id)
 );
 
@@ -305,7 +305,7 @@ async function getCampaigns(tenantId) {
 // Create campaign (tenant context from session)
 async function createCampaign(req, campaignData) {
   const tenantId = req.user.tenant_id; // From JWT
-  
+
   const campaign = await db.campaigns.create({
     data: {
       tenant_id: tenantId, // Explicit tenant assignment
@@ -314,7 +314,7 @@ async function createCampaign(req, campaignData) {
       // ...
     }
   });
-  
+
   return campaign;
 }
 
@@ -574,8 +574,8 @@ Return results (tenant-scoped only)
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Technology:** NileDB Multi-Tenant PostgreSQL  
+**Last Updated:** November 24, 2025
+**Technology:** NileDB Multi-Tenant PostgreSQL
 **Isolation Level:** Database Row-Level Security (RLS)
 
 *Multi-tenancy is the foundation of PenguinMails' security and scalability. Complete tenant isolation ensures enterprise-grade data protection.*

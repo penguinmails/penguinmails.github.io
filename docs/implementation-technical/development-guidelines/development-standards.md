@@ -187,7 +187,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 ### Primary Development Guides
 
-- **[Code Standards](./code-standards)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization  
+- **[Code Standards](./code-standards)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization
 
 - **[Code Contribution](./code-contribution)** - Development workflow, pull request process, and collaboration guidelines
 

@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### List Leads
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/leads`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/leads`
 **Purpose**: List leads with filtering and pagination.
 
 **Query Parameters**:
@@ -63,8 +63,8 @@ persona: "Backend Developers"
 
 ### Create Lead
 
-**Method**: `POST`  
-**URL**: `/api/v1/tenant/leads`  
+**Method**: `POST`
+**URL**: `/api/v1/tenant/leads`
 **Purpose**: Manually add a new lead.
 
 **Request**:
@@ -83,8 +83,8 @@ persona: "Backend Developers"
 
 ### Get Lead Details
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/leads/{id}`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/leads/{id}`
 **Purpose**: Get full lead profile and activity history.
 
 **Response**:
@@ -114,8 +114,8 @@ persona: "Backend Developers"
 
 ### Update Lead
 
-**Method**: `PATCH`  
-**URL**: `/api/v1/tenant/leads/{id}`  
+**Method**: `PATCH`
+**URL**: `/api/v1/tenant/leads/{id}`
 **Purpose**: Update lead information or status.
 
 **Request**:

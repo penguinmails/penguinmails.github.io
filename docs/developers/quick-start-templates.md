@@ -267,19 +267,19 @@ export default function EmailCampaignManager() {
     width: 100% !important;
     margin: 0 !important;
   }
-  
+
   .email-header {
     padding: 30px 20px !important;
   }
-  
+
   .email-content {
     padding: 30px 20px !important;
   }
-  
+
   .email-footer {
     padding: 20px !important;
   }
-  
+
   .cta-button {
     width: 100% !important;
     text-align: center !important;
@@ -292,12 +292,12 @@ export default function EmailCampaignManager() {
   .email-container {
     background-color: #1a1a1a;
   }
-  
+
   .email-content {
     background: #2d2d2d;
     color: #e0e0e0;
   }
-  
+
   .email-footer {
     background: #1a1a1a;
     color: #999999;
@@ -324,7 +324,7 @@ export default function EmailCampaignManager() {
 
 ```sql
 -- Campaign Performance Analytics Query
-SELECT 
+SELECT
     c.id as campaign_id,
     c.name as campaign_name,
     c.subject,
@@ -334,18 +334,18 @@ SELECT
     COUNT(CASE WHEN e.status = 'opened' THEN 1 END) as emails_opened,
     COUNT(CASE WHEN e.status = 'clicked' THEN 1 END) as emails_clicked,
     ROUND(
-        COUNT(CASE WHEN e.status = 'delivered' THEN 1 END) * 100.0 / 
-        NULLIF(COUNT(CASE WHEN e.status = 'sent' THEN 1 END), 0), 
+        COUNT(CASE WHEN e.status = 'delivered' THEN 1 END) * 100.0 /
+        NULLIF(COUNT(CASE WHEN e.status = 'sent' THEN 1 END), 0),
         2
     ) as delivery_rate_percent,
     ROUND(
-        COUNT(CASE WHEN e.status = 'opened' THEN 1 END) * 100.0 / 
-        NULLIF(COUNT(CASE WHEN e.status = 'delivered' THEN 1 END), 0), 
+        COUNT(CASE WHEN e.status = 'opened' THEN 1 END) * 100.0 /
+        NULLIF(COUNT(CASE WHEN e.status = 'delivered' THEN 1 END), 0),
         2
     ) as open_rate_percent,
     ROUND(
-        COUNT(CASE WHEN e.status = 'clicked' THEN 1 END) * 100.0 / 
-        NULLIF(COUNT(CASE WHEN e.status = 'delivered' THEN 1 END), 0), 
+        COUNT(CASE WHEN e.status = 'clicked' THEN 1 END) * 100.0 /
+        NULLIF(COUNT(CASE WHEN e.status = 'delivered' THEN 1 END), 0),
         2
     ) as click_rate_percent
 FROM campaigns c
@@ -375,7 +375,7 @@ CREATE INDEX idx_email_events_recipient ON email_events(recipient_email);
 
 -- View for Campaign Analytics Dashboard
 CREATE VIEW campaign_analytics AS
-SELECT 
+SELECT
     c.id,
     c.name,
     c.subject,
@@ -387,19 +387,19 @@ SELECT
     COUNT(DISTINCT CASE WHEN e.status = 'clicked' THEN e.recipient_email END) as clicked_count,
     ROUND(
         COALESCE(
-            COUNT(DISTINCT CASE WHEN e.status = 'delivered' THEN e.recipient_email END) * 100.0 / 
+            COUNT(DISTINCT CASE WHEN e.status = 'delivered' THEN e.recipient_email END) * 100.0 /
             NULLIF(COUNT(DISTINCT e.recipient_email), 0), 0
         ), 2
     ) as delivery_rate,
     ROUND(
         COALESCE(
-            COUNT(DISTINCT CASE WHEN e.status = 'opened' THEN e.recipient_email END) * 100.0 / 
+            COUNT(DISTINCT CASE WHEN e.status = 'opened' THEN e.recipient_email END) * 100.0 /
             NULLIF(COUNT(DISTINCT CASE WHEN e.status = 'delivered' THEN e.recipient_email END), 0), 0
         ), 2
     ) as open_rate,
     ROUND(
         COALESCE(
-            COUNT(DISTINCT CASE WHEN e.status = 'clicked' THEN e.recipient_email END) * 100.0 / 
+            COUNT(DISTINCT CASE WHEN e.status = 'clicked' THEN e.recipient_email END) * 100.0 /
             NULLIF(COUNT(DISTINCT CASE WHEN e.status = 'delivered' THEN e.recipient_email END), 0), 0
         ), 2
     ) as click_rate

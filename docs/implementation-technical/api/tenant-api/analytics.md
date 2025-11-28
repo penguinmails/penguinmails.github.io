@@ -46,8 +46,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Get Campaign Analytics
 
-**Method**: `GET`  
-**URL**: `/api/v1/workspaces/{workspaceId}/campaigns/{campaignId}/analytics`  
+**Method**: `GET`
+**URL**: `/api/v1/workspaces/{workspaceId}/campaigns/{campaignId}/analytics`
 **Purpose**: Retrieve comprehensive analytics for a specific campaign
 
 **Path Parameters:**
@@ -124,8 +124,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Get Workspace Analytics Overview
 
-**Method**: `GET`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/overview`  
+**Method**: `GET`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/overview`
 **Purpose**: Retrieve aggregated analytics across all campaigns in a workspace
 
 **Path Parameters:**
@@ -185,8 +185,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Get Deliverability Analytics
 
-**Method**: `GET`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/deliverability`  
+**Method**: `GET`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/deliverability`
 **Purpose**: Retrieve detailed deliverability metrics and inbox placement data
 
 **Path Parameters:**
@@ -284,8 +284,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Get Engagement Heatmap
 
-**Method**: `GET`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/engagement-heatmap`  
+**Method**: `GET`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/engagement-heatmap`
 **Purpose**: Retrieve engagement patterns by day of week and hour of day
 
 **Path Parameters:**
@@ -341,8 +341,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Compare Campaigns
 
-**Method**: `POST`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/compare`  
+**Method**: `POST`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/compare`
 **Purpose**: Compare performance metrics across multiple campaigns
 
 **Path Parameters:**
@@ -407,8 +407,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Export Analytics Data
 
-**Method**: `POST`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/export`  
+**Method**: `POST`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/export`
 **Purpose**: Generate and export analytics data in various formats
 
 **Path Parameters:**
@@ -449,8 +449,8 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ### Get Export Status
 
-**Method**: `GET`  
-**URL**: `/api/v1/workspaces/{workspaceId}/analytics/exports/{exportId}`  
+**Method**: `GET`
+**URL**: `/api/v1/workspaces/{workspaceId}/analytics/exports/{exportId}`
 **Purpose**: Check status of analytics export and retrieve download URL
 
 **Path Parameters:**
@@ -630,6 +630,6 @@ interface TimeSeriesDataPoint {
 
 ---
 
-**Last Updated:** November 26, 2025  
-**API Version:** v1  
+**Last Updated:** November 26, 2025
+**API Version:** v1
 **Status:** Active Development

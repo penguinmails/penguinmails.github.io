@@ -192,7 +192,7 @@ class DatabaseMigrationValidatorImpl implements DatabaseMigrationValidator {
     ];
 
     const results: ValidationResult[] = [];
-    
+
     for (const test of tests) {
       try {
         const result = await test.call(this);
@@ -223,15 +223,15 @@ class DatabaseMigrationValidatorImpl implements DatabaseMigrationValidator {
 
     for (const [table, expected] of Object.entries(expectedColumns)) {
       const actual = await this.getColumnInfo(table, 'approximate_cost');
-      
+
       if (actual.dataType !== expected.type) {
         throw new Error(`Column type mismatch for ${table}.approximate_cost: expected ${expected.type}, got ${actual.dataType}`);
       }
-      
+
       if (actual.numericPrecision !== expected.precision) {
         throw new Error(`Precision mismatch for ${table}.approximate_cost: expected ${expected.precision}, got ${actual.numericPrecision}`);
       }
-      
+
       if (actual.numericScale !== expected.scale) {
         throw new Error(`Scale mismatch for ${table}.approximate_cost: expected ${expected.scale}, got ${actual.numericScale}`);
       }
@@ -432,7 +432,7 @@ class RealTimeEventValidatorImpl implements RealTimeEventValidator {
     if (averageProcessingTime >= 1.0) {
       throw new Error(`Average processing time too high: ${averageProcessingTime}s`);
     }
-    
+
     if (maxProcessingTime >= 2.0) {
       throw new Error(`Max processing time too high: ${maxProcessingTime}s`);
     }
@@ -764,7 +764,7 @@ class ExecutiveReportingValidatorImpl implements ExecutiveReportingValidator {
     // Validate scorecard calculations
     const scorecard = report.businessPerformanceScorecard;
     const requiredScorecardKeys = ['revenueProtection', 'costOptimization', 'operationalEfficiency', 'strategicExecution'];
-    
+
     for (const key of requiredScorecardKeys) {
       if (typeof scorecard[key] !== 'number') {
         throw new Error(`Missing or invalid scorecard metric: ${key}`);
@@ -774,7 +774,7 @@ class ExecutiveReportingValidatorImpl implements ExecutiveReportingValidator {
     // Validate KPI calculations
     const kpis = report.keyPerformanceIndicators;
     const requiredKpiKeys = ['revenueMetrics', 'costMetrics', 'efficiencyMetrics'];
-    
+
     for (const key of requiredKpiKeys) {
       if (!kpis[key] || typeof kpis[key] !== 'object') {
         throw new Error(`Missing or invalid KPI category: ${key}`);
@@ -968,11 +968,11 @@ class ReportDistributionValidatorImpl implements ReportDistributionValidator {
     if (distributionResult.totalRecipients !== testRecipients.length) {
       throw new Error(`Recipient count mismatch: expected ${testRecipients.length}, got ${distributionResult.totalRecipients}`);
     }
-    
+
     if (distributionResult.successfulDeliveries !== testRecipients.length) {
       throw new Error(`Successful delivery count mismatch: expected ${testRecipients.length}, got ${distributionResult.successfulDeliveries}`);
     }
-    
+
     if (distributionResult.failedDeliveries !== 0) {
       throw new Error(`Expected zero failed deliveries, got ${distributionResult.failedDeliveries}`);
     }
@@ -982,19 +982,19 @@ class ReportDistributionValidatorImpl implements ReportDistributionValidator {
       if (!testRecipients.includes(email.to)) {
         throw new Error(`Email sent to unexpected recipient: ${email.to}`);
       }
-      
+
       if (!email.subject) {
         throw new Error('Email missing subject');
       }
-      
+
       if (!email.subject.startsWith('Daily Executive Briefing')) {
         throw new Error(`Invalid email subject: ${email.subject}`);
       }
-      
+
       if (!email.htmlContent) {
         throw new Error('Email missing HTML content');
       }
-      
+
       if (!email.pdfAttachment) {
         throw new Error('Email missing PDF attachment');
       }
@@ -1015,7 +1015,7 @@ class ReportDistributionValidatorImpl implements ReportDistributionValidator {
     if (presentation.slideCount < 15) {
       throw new Error(`Presentation has too few slides: ${presentation.slideCount}, expected at least 15`);
     }
-    
+
     if (presentation.slideCount > 25) {
       throw new Error(`Presentation has too many slides: ${presentation.slideCount}, expected at most 25`);
     }
@@ -1171,7 +1171,7 @@ class CostAttributionValidatorImpl implements CostAttributionValidator {
     const decommissionedCost = testVPSInstances
       .filter(instance => instance.status === 'decommissioned')
       .reduce((sum, instance) => sum + instance.approximateCost, 0);
-    
+
     if (actualCost !== 0 && actualCost === (expectedCost + decommissionedCost)) {
       throw new Error('Decommissioned instances incorrectly included in cost calculation');
     }
@@ -1496,7 +1496,7 @@ class EndToEndWorkflowValidatorImpl implements EndToEndWorkflowValidator {
     // Validate update sequence
     const timestamps = dashboardUpdates.map(update => update.timestamp).sort((a, b) => a - b);
     const updateTimestamps = dashboardUpdates.map(update => update.timestamp);
-    
+
     if (!this.arraysEqual(timestamps, updateTimestamps)) {
       throw new Error("Updates not in chronological order");
     }
@@ -1721,11 +1721,11 @@ class PerformanceValidatorImpl implements PerformanceValidator {
     if (loadTestResults.successRate < 0.95) {
       throw new Error(`Success rate below 95%: ${loadTestResults.successRate}`);
     }
-    
+
     if (loadTestResults.avgResponseTime > 3.0) {
       throw new Error(`Response time too high: ${loadTestResults.avgResponseTime}s`);
     }
-    
+
     if (loadTestResults.maxResponseTime > 10.0) {
       throw new Error(`Max response time too high: ${loadTestResults.maxResponseTime}s`);
     }
@@ -1734,7 +1734,7 @@ class PerformanceValidatorImpl implements PerformanceValidator {
     if (loadTestResults.cpuUtilization > 0.80) {
       throw new Error(`CPU utilization too high: ${loadTestResults.cpuUtilization}`);
     }
-    
+
     if (loadTestResults.memoryUtilization > 0.85) {
       throw new Error(`Memory utilization too high: ${loadTestResults.memoryUtilization}`);
     }
@@ -1822,15 +1822,15 @@ class PerformanceValidatorImpl implements PerformanceValidator {
     if (avgLatency > 1.0) {
       throw new Error(`Average latency too high: ${avgLatency}s`);
     }
-    
+
     if (maxLatency > 5.0) {
       throw new Error(`Max latency too high: ${maxLatency}s`);
     }
-    
+
     if (p95Latency > 2.0) {
       throw new Error(`95th percentile latency too high: ${p95Latency}s`);
     }
-    
+
     if (p99Latency > 3.0) {
       throw new Error(`99th percentile latency too high: ${p99Latency}s`);
     }
@@ -1865,7 +1865,7 @@ class PerformanceValidatorImpl implements PerformanceValidator {
     const expectedLinearTime = times[0] * (sizes[sizes.length - 1] / sizes[0]);
     const actualTime = times[times.length - 1];
     const efficiency = (expectedLinearTime / actualTime) * 100;
-    
+
     return {
       efficiency,
       linearScore: Math.min(efficiency / 100, 1.0)
@@ -2026,7 +2026,7 @@ class SecurityValidatorImpl implements SecurityValidator {
     if (!['TLSv1.2', 'TLSv1.3'].includes(secureConnection.tlsVersion)) {
       throw new Error(`Invalid TLS version: ${secureConnection.tlsVersion}`);
     }
-    
+
     if (!['AES-256-GCM', 'ChaCha20-Poly1305'].includes(secureConnection.encryptionAlgorithm)) {
       throw new Error(`Invalid encryption algorithm: ${secureConnection.encryptionAlgorithm}`);
     }
@@ -2039,7 +2039,7 @@ class SecurityValidatorImpl implements SecurityValidator {
     if (!storedData.isEncrypted) {
       throw new Error('Data is not encrypted in storage');
     }
-    
+
     if (storedData.encryptedContent === sensitiveData.content) {
       throw new Error('Encrypted content matches original content');
     }
@@ -2080,23 +2080,23 @@ class SecurityValidatorImpl implements SecurityValidator {
       if (auditEntry.user !== activity.user) {
         throw new Error(`Audit log user mismatch: expected ${activity.user}, got ${auditEntry.user}`);
       }
-      
+
       if (auditEntry.action !== activity.action) {
         throw new Error(`Audit log action mismatch: expected ${activity.action}, got ${auditEntry.action}`);
       }
-      
+
       if (auditEntry.resource !== activity.resource) {
         throw new Error(`Audit log resource mismatch: expected ${activity.resource}, got ${auditEntry.resource}`);
       }
-      
+
       if (!auditEntry.timestamp) {
         throw new Error('Audit log missing timestamp');
       }
-      
+
       if (!auditEntry.ipAddress) {
         throw new Error('Audit log missing IP address');
       }
-      
+
       if (!auditEntry.userAgent) {
         throw new Error('Audit log missing user agent');
       }
@@ -2798,7 +2798,7 @@ class ValidationReportGeneratorImpl implements ValidationReportGenerator {
 
   generateRecommendations(results: ValidationResults): string[] {
     const recommendations: string[] = [];
-    
+
     // Mock recommendations based on validation results
     recommendations.push('Complete security validation for production readiness');
     recommendations.push('Verify mobile experience meets executive standards');

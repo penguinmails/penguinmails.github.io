@@ -237,7 +237,7 @@ class ProductLaunchCoordinatorImpl implements ProductLaunchCoordinator {
 
   private async createLaunchTimeline(launchData: LaunchData, campaigns: MarketingCampaign[]): Promise<LaunchTimeline> {
     const launchDate = new Date(launchData.launchDate);
-    
+
     // Create coordinated timeline phases
     const phases: LaunchPhase[] = [
       {
@@ -491,7 +491,7 @@ async function demonstrateLaunchCoordination() {
     };
 
     const result = await coordinator.coordinateLaunch(launchData);
-    
+
     console.log('Launch coordination completed:');
     console.log('- Status:', result.coordinationStatus);
     console.log('- Alignment score:', result.marketingAlignment.coordinationScore);
@@ -845,7 +845,7 @@ async function demonstrateMarketValidation() {
     };
 
     const results = await analyzer.calculateMarketValidationScore(productData);
-    
+
     console.log('Market Validation Results:');
     console.log('- Overall Score:', results.overallScore);
     console.log('- Status:', results.validationStatus);

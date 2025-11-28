@@ -19,8 +19,8 @@ category: "Enterprise"
 
 This document provides a detailed roadmap for authentication and security features, including MVP completion timeline, post-MVP enhancements, and enterprise features. All features are prioritized based on security requirements, user needs, and competitive positioning.
 
-**Current Status:** MVP In Progress (3 of 11 MVP features complete)  
-**Next Milestone:** Q1 2026 - Complete MVP authentication features  
+**Current Status:** MVP In Progress (3 of 11 MVP features complete)
+**Next Milestone:** Q1 2026 - Complete MVP authentication features
 **Total Effort:** 22-36 days (MVP) + 49-67 days (Post-MVP)
 
 ---
@@ -29,13 +29,13 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Phase 1: Critical Security (Weeks 1-2)
 
-**Priority:** P0 (MVP Blocker)  
+**Priority:** P0 (MVP Blocker)
 **Effort:** 6-10 days
 
 #### 1. Password Strength Enforcement
 
-**Status:** ⏳ Planned  
-**Effort:** 1-2 days  
+**Status:** ⏳ Planned
+**Effort:** 1-2 days
 **Priority:** P0
 
 **Description:** Implement server-side password validation to prevent users from choosing weak passwords. Reject passwords from common breach databases and enforce complexity requirements.
@@ -58,8 +58,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 2. Unverified Email Restrictions
 
-**Status:** ⏳ Planned  
-**Effort:** 1-2 days  
+**Status:** ⏳ Planned
+**Effort:** 1-2 days
 **Priority:** P0
 
 **Description:** Enforce restrictions on unverified users to prevent platform abuse. Users must verify email before accessing core features like sending campaigns.
@@ -82,8 +82,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 3. CAPTCHA for Sensitive Operations
 
-**Status:** ⏳ Planned  
-**Effort:** 2-3 days  
+**Status:** ⏳ Planned
+**Effort:** 2-3 days
 **Priority:** P0
 
 **Description:** Implement CAPTCHA protection for registration, password reset, and after failed login attempts using Cloudflare Turnstile or hCaptcha.
@@ -106,13 +106,13 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Phase 2: Core Authentication (Weeks 3-4)
 
-**Priority:** P0 (MVP Blocker)  
+**Priority:** P0 (MVP Blocker)
 **Effort:** 8-13 days
 
 #### 4. Email Verification System
 
-**Status:** ✅ Complete  
-**Effort:** 3-5 days  
+**Status:** ✅ Complete
+**Effort:** 3-5 days
 **Priority:** P0
 
 **Description:** Complete email verification flow for new user signups using Loop.so transactional email service.
@@ -133,8 +133,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 5. Password Reset Flow
 
-**Status:** ✅ Complete  
-**Effort:** 3-5 days  
+**Status:** ✅ Complete
+**Effort:** 3-5 days
 **Priority:** P0
 
 **Description:** Complete password reset flow for users who forget their password. Flow must not reveal whether an email exists in the system.
@@ -157,8 +157,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 6. Change Password Functionality
 
-**Status:** ✅ Complete  
-**Effort:** 1-2 days  
+**Status:** ✅ Complete
+**Effort:** 1-2 days
 **Priority:** P0
 
 **Description:** Allow authenticated users to change their password from settings. Requires current password for verification.
@@ -179,13 +179,13 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Phase 3: Account Security (Weeks 5-6)
 
-**Priority:** P0-P1  
+**Priority:** P0-P1
 **Effort:** 8-13 days
 
 #### 7. Account Lockout / Brute Force Protection
 
-**Status:** ⏳ Planned  
-**Effort:** 3-5 days  
+**Status:** ⏳ Planned
+**Effort:** 3-5 days
 **Priority:** P0
 
 **Description:** Implement account lockout mechanism to prevent brute force attacks. Lock account after multiple failed login attempts.
@@ -210,8 +210,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 8. Login Activity Log
 
-**Status:** ⏳ Planned  
-**Effort:** 3-4 days  
+**Status:** ⏳ Planned
+**Effort:** 3-4 days
 **Priority:** P1
 
 **Description:** Create user-facing login history log showing all login attempts with details like timestamp, IP address, location, device, and status.
@@ -238,8 +238,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 9. Session Management UI
 
-**Status:** ⏳ Planned  
-**Effort:** 1-2 days  
+**Status:** ⏳ Planned
+**Effort:** 1-2 days
 **Priority:** P1
 
 **Description:** Create UI for viewing and managing active login sessions. Backend API already exists; this task focuses on frontend implementation.
@@ -264,13 +264,13 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Phase 4: User Experience (Week 7)
 
-**Priority:** P1-P2  
+**Priority:** P1-P2
 **Effort:** 4-5 days
 
 #### 10. Email Change Verification Flow
 
-**Status:** ⏳ Planned  
-**Effort:** 2-3 days  
+**Status:** ⏳ Planned
+**Effort:** 2-3 days
 **Priority:** P1
 
 **Description:** Implement UI and flow for users to change their email address. Users must verify new email before change takes effect.
@@ -297,8 +297,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 11. Remember Me Functionality
 
-**Status:** ⏳ Planned  
-**Effort:** 1-2 days  
+**Status:** ⏳ Planned
+**Effort:** 1-2 days
 **Priority:** P2
 
 **Description:** Implement "Remember me" checkbox on login form that extends session duration from 30 minutes to 30 days.
@@ -323,10 +323,10 @@ This document provides a detailed roadmap for authentication and security featur
 
 ## MVP Summary
 
-**Total MVP Features:** 11  
-**Completed:** 3 (Email Verification, Password Reset, Change Password)  
-**Remaining:** 8  
-**Total Effort:** 22-36 days (4-7 weeks)  
+**Total MVP Features:** 11
+**Completed:** 3 (Email Verification, Password Reset, Change Password)
+**Remaining:** 8
+**Total Effort:** 22-36 days (4-7 weeks)
 **Target Completion:** Q1 2026
 
 ## Priority Breakdown
@@ -343,8 +343,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Q1 2026: Two-Factor Authentication
 
-**Priority:** High  
-**Effort:** 5-7 days  
+**Priority:** High
+**Effort:** 5-7 days
 **Target:** Q1 2026
 
 **Description:** Implement TOTP-based two-factor authentication using authenticator apps (Google Authenticator, Authy, 1Password).
@@ -369,8 +369,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Q2 2026: Social Login (OAuth)
 
-**Priority:** Medium  
-**Effort:** 7-10 days  
+**Priority:** Medium
+**Effort:** 7-10 days
 **Target:** Q2 2026
 
 **Description:** Implement OAuth-based social login for faster signup and authentication. Support Google, GitHub, and Microsoft.
@@ -395,8 +395,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Q3 2026: Single Sign-On (SSO)
 
-**Priority:** Critical (for enterprise)  
-**Effort:** 15-20 days  
+**Priority:** Critical (for enterprise)
+**Effort:** 15-20 days
 **Target:** Q3 2026
 
 **Description:** Implement SAML and OIDC-based SSO for enterprise customers with identity providers (Okta, Azure AD, OneLogin).
@@ -423,8 +423,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### Biometric Authentication
 
-**Priority:** Low  
-**Effort:** 7-10 days  
+**Priority:** Low
+**Effort:** 7-10 days
 **Target:** Q4 2026
 
 **Description:** Implement WebAuthn/FIDO2 biometric authentication (fingerprint, Face ID, Touch ID, Windows Hello).
@@ -449,8 +449,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### Advanced Session Management
 
-**Priority:** High (for enterprise)  
-**Effort:** 15-20 days  
+**Priority:** High (for enterprise)
+**Effort:** 15-20 days
 **Target:** Q4 2026
 
 **Description:** Advanced session management features for enterprise security requirements.
@@ -689,8 +689,8 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
-**Last Updated:** November 26, 2025  
-**Next Review:** December 15, 2025  
+**Last Updated:** November 26, 2025
+**Next Review:** December 15, 2025
 **Document Owner:** Product & Security Teams
 
 ---

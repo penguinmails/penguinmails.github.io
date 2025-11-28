@@ -57,32 +57,32 @@ class CampaignPerformanceModel {
 
   private initializeLayers(): void {
     let inputDim = this.config.inputDim;
-    
+
     // Input layer to first hidden layer
     this.layers.push(new DenseLayer(inputDim, this.config.hiddenDims[0], 'relu'));
     this.layers.push(new DropoutLayer(this.config.dropoutRate));
-    
+
     // Hidden layers
     for (let i = 0; i < this.config.hiddenDims.length - 1; i++) {
       this.layers.push(new DenseLayer(this.config.hiddenDims[i], this.config.hiddenDims[i + 1], 'relu'));
       this.layers.push(new DropoutLayer(this.config.dropoutRate));
     }
-    
+
     // Output layer
     this.outputLayer = new DenseLayer(this.config.hiddenDims[this.config.hiddenDims.length - 1], 1, 'sigmoid');
   }
 
   async predict(input: number[]): Promise<PredictionResult> {
     let output = [...input];
-    
+
     // Forward pass through hidden layers
     for (const layer of this.layers) {
       output = await layer.forward(output);
     }
-    
+
     // Final sigmoid activation
     const finalPrediction = await this.outputLayer.forward(output);
-    
+
     return {
       predictedCTR: finalPrediction[0],
       predictedConversionRate: finalPrediction[0], // Same as CTR for this model
@@ -134,7 +134,7 @@ class BidOptimizationModel {
   async predictOptimalBid(features: BidFeatures): Promise<BidPrediction> {
     const featureArray = this.extractFeatures(features);
     const prediction = await this.model.predict(featureArray);
-    
+
     return {
       optimalBid: prediction[0],
       confidence: this.calculateConfidence(features),
@@ -162,19 +162,19 @@ class BidOptimizationModel {
 
   private generateReasoning(features: BidFeatures, bid: number): string[] {
     const reasoning = [];
-    
+
     if (features.historicalCTR > 0.05) {
       reasoning.push("High historical CTR supports higher bid");
     }
-    
+
     if (features.campaignAge > 14) {
       reasoning.push("Mature campaign data enables precise bidding");
     }
-    
+
     if (features.budgetRemaining < 0.1) {
       reasoning.push("Low budget remaining may limit bid potential");
     }
-    
+
     return reasoning;
   }
 }
@@ -234,21 +234,21 @@ class FeatureEngineeringPipeline {
     const hour = timestamp.getHours();
     const dayOfWeek = timestamp.getDay();
     const dayOfMonth = timestamp.getDate();
-    
+
     // Calculate derived metrics
     const cpc = rawData.clicks > 0 ? rawData.spend / rawData.clicks : 0;
     const ctr = rawData.impressions > 0 ? rawData.clicks / rawData.impressions : 0;
     const conversionRate = rawData.clicks > 0 ? rawData.conversions / rawData.clicks : 0;
     const costPerConversion = rawData.conversions > 0 ? rawData.spend / rawData.conversions : 0;
-    
+
     // Time-based features
     const timeCategory = this.categorizeTime(hour);
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-    
+
     // Mock quality metrics (in real implementation, would come from ad platform)
     const impressionShare = Math.random() * 100;
     const qualityScore = 7 + Math.random() * 3; // 7-10 range
-    
+
     return {
       hourOfDay: hour,
       dayOfWeek: dayOfWeek,
@@ -274,15 +274,15 @@ class FeatureEngineeringPipeline {
   async normalizeFeatures(features: EngineeredFeatures[]): Promise<EngineeredFeatures[]> {
     // Min-max normalization for numerical features
     const normalized = [...features];
-    
+
     // Normalize hour of day (0-23 -> 0-1)
     const maxHour = 23;
     normalized.forEach(f => f.hourOfDay = f.hourOfDay / maxHour);
-    
+
     // Normalize day of week (0-6 -> 0-1)
     const maxDayOfWeek = 6;
     normalized.forEach(f => f.dayOfWeek = f.dayOfWeek / maxDayOfWeek);
-    
+
     return normalized;
   }
 }
@@ -335,23 +335,23 @@ interface PredictionResponse {
 
 async function predictPerformance(campaignData: CampaignData): Promise<PredictionResponse> {
   const startTime = Date.now();
-  
+
   try {
     // Feature transformation
     const features = await featurePipeline.transform(campaignData);
-    
+
     // Model prediction
     const prediction = await model.predict(features);
-    
+
     // Confidence calculation
     const confidence = calculateConfidenceInterval(features);
-    
+
     // Inference time
     const inferenceTime = Date.now() - startTime;
-    
+
     // Generate reasoning
     const reasoning = generatePredictionReasoning(campaignData, prediction);
-    
+
     return {
       predictedCTR: prediction[0],
       predictedConversionRate: prediction[1],
@@ -382,7 +382,7 @@ function calculateOptimalBid(campaignData: CampaignData, prediction: number[]): 
   const baseBid = campaignData.currentBid;
   const ctrMultiplier = prediction[0] / 0.02; // Normalize against 2% baseline CTR
   const conversionMultiplier = prediction[1] / 0.05; // Normalize against 5% baseline conversion rate
-  
+
   return baseBid * Math.min(ctrMultiplier, 1.5) * Math.min(conversionMultiplier, 1.3);
 }
 
@@ -393,19 +393,19 @@ function calculateExpectedROAS(prediction: number[], budget: number): number {
 
 function generatePredictionReasoning(campaignData: CampaignData, prediction: number[]): string[] {
   const reasoning = [];
-  
+
   if (prediction[0] > 0.05) {
     reasoning.push("High predicted CTR indicates strong ad relevance");
   }
-  
+
   if (prediction[1] > 0.08) {
     reasoning.push("Strong conversion rate suggests effective landing page");
   }
-  
+
   if (campaignData.historicalMetrics.spend > 1000) {
     reasoning.push("Sufficient historical data enables confident prediction");
   }
-  
+
   return reasoning;
 }
 
@@ -461,7 +461,7 @@ class OnlineLearningSystem {
   async processFeedback(feedback: FeedbackData): Promise<void> {
     // Add to buffer for batch processing
     this.updateBuffer.push(feedback);
-    
+
     // Maintain buffer size
     if (this.updateBuffer.length > this.maxBufferSize) {
       this.updateBuffer.shift();
@@ -512,16 +512,16 @@ class DriftDetector {
 
   async update(actualOutcome: number): Promise<DriftDetectionResult> {
     this.currentDistribution.push(actualOutcome);
-    
+
     // Keep distribution size manageable
     if (this.currentDistribution.length > 1000) {
       this.currentDistribution.shift();
     }
-    
+
     // Compute drift score using Kolmogorov-Smirnov test
     const driftScore = await this.computeDriftScore();
     const hasDrift = driftScore > this.driftThreshold;
-    
+
     return {
       hasDrift,
       driftScore,
@@ -531,11 +531,11 @@ class DriftDetector {
 
   private async computeDriftScore(): Promise<number> {
     if (this.currentDistribution.length < 10) return 0;
-    
+
     // Simplified drift detection (would use proper statistical tests)
     const baselineMean = this.calculateMean(this.baselineDistribution);
     const currentMean = this.calculateMean(this.currentDistribution);
-    
+
     return Math.abs(baselineMean - currentMean) / baselineMean;
   }
 
@@ -591,7 +591,7 @@ class ABTestManager {
     // Get hash-based assignment
     const hashValue = this.hashString(`${userId}_${experimentId}`) % 100;
     const assignment = await this.assignVariant(hashValue, experimentId);
-    
+
     // Cache the assignment
     this.assignmentCache.set(cacheKey, {
       userId,
@@ -599,7 +599,7 @@ class ABTestManager {
       variant: assignment,
       timestamp: new Date().toISOString()
     });
-    
+
     return assignment;
   }
 
@@ -610,16 +610,16 @@ class ABTestManager {
     }
 
     let cumulativeSplit = 0;
-    
+
     for (const [variantName, variant] of Object.entries(test.variants)) {
       if (!variant.isActive) continue;
-      
+
       cumulativeSplit += variant.trafficPercentage;
       if (hashValue < cumulativeSplit) {
         return variantName;
       }
     }
-    
+
     // Return last variant if no match found
     const variantKeys = Object.keys(test.variants).filter(key => test.variants[key].isActive);
     return variantKeys[variantKeys.length - 1] || 'control';
@@ -714,10 +714,10 @@ class ModelMaintenanceSystem {
     try {
       // Get current performance metrics
       const currentPerformance = await this.performanceMonitor.getPerformanceMetrics();
-      
+
       // Calculate drift scores
       const driftScores = await this.dataMonitor.calculateDriftScores();
-      
+
       // Determine if retraining is needed
       const shouldRetrain = this.retrainingTrigger.shouldTriggerRetrain({
         performanceDrop: this.calculatePerformanceDrop(currentPerformance),
@@ -738,7 +738,7 @@ class ModelMaintenanceSystem {
   private calculatePerformanceDrop(current: PerformanceMetrics): number {
     const accuracyDrop = this.baselinePerformance.accuracy - current.accuracy;
     const f1Drop = this.baselinePerformance.f1Score - current.f1Score;
-    
+
     // Weighted performance drop
     return (accuracyDrop * 0.6) + (f1Drop * 0.4);
   }
@@ -758,22 +758,22 @@ class ModelMaintenanceSystem {
   private async initiateRetrainingProcess(): Promise<void> {
     try {
       console.log("Starting automated model retraining process...");
-      
+
       // Step 1: Collect training data
       const trainingData = await this.collectRecentTrainingData();
-      
+
       // Step 2: Validate data quality
       const dataQuality = await this.validateTrainingData(trainingData);
       if (!dataQuality.isValid) {
         throw new Error(`Training data quality issue: ${dataQuality.issues.join(', ')}`);
       }
-      
+
       // Step 3: Start retraining
       const retrainingJob = await this.submitRetrainingJob(trainingData);
-      
+
       // Step 4: Monitor retraining progress
       await this.monitorRetrainingProgress(retrainingJob);
-      
+
       console.log("Model retraining completed successfully");
     } catch (error) {
       console.error(`Retraining process failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -785,22 +785,22 @@ class ModelMaintenanceSystem {
     // Collect data from last 30 days for retraining
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    
+
     // Implementation would fetch from actual data sources
     return [];
   }
 
   private async validateTrainingData(data: unknown[]): Promise<{ isValid: boolean; issues: string[] }> {
     const issues: string[] = [];
-    
+
     if (data.length < 1000) {
       issues.push("Insufficient training data");
     }
-    
+
     if (this.hasDataQualityIssues(data)) {
       issues.push("Data quality violations detected");
     }
-    
+
     return {
       isValid: issues.length === 0,
       issues
@@ -863,13 +863,13 @@ class DataMonitor {
 class RetrainingTrigger implements RetrainingTrigger {
   shouldTriggerRetrain(params: { performanceDrop: number; driftScores: DriftScores }): boolean {
     const { performanceDrop, driftScores } = params;
-    
+
     // Trigger if performance drops significantly
     if (performanceDrop > 0.05) return true;
-    
+
     // Trigger if drift is high
     if (driftScores.featureDrift > 0.1 || driftScores.predictionDrift > 0.1) return true;
-    
+
     return false;
   }
 

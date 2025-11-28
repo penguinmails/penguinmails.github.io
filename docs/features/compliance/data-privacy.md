@@ -283,7 +283,7 @@ New User Defaults:
 Active Users:
   Profile Data: Indefinite (while account active)
   Activity Logs: 12 months (rolling)
-  
+
 Deleted Accounts:
   Soft Delete: 30 days (recovery period)
   Hard Delete: Permanent after 30 days
@@ -298,11 +298,11 @@ Deleted Accounts:
 Active Contacts:
   Engaged (opened/clicked): Indefinite
   Inactive (no engagement): 24 months
-  
+
 Unsubscribed:
   Email address: Perpetual (suppression list)
   Other data: Deleted after 30 days
-  
+
 Bounced:
   Hard bounce: Immediate suppression
   Soft bounce (3x): Suppression after 3 attempts
@@ -351,7 +351,7 @@ Campaigns:
   - Location: US (EU option Q2 2026)
 
   - Data: All platform data
-  
+
 - **Redis** - Caching and queue management
 
   - Purpose: Performance, background jobs
@@ -493,12 +493,12 @@ CREATE TABLE contact_engagement (
 
 ```javascript
 // Anonymization Job (runs quarterly)
-UPDATE audit_logs 
-SET 
+UPDATE audit_logs
+SET
   user_email = 'anonymized@example.com',
   ip_address = '0.0.0.0',
   user_agent = 'anonymized'
-WHERE 
+WHERE
   created_at < NOW() - INTERVAL '90 days'
   AND anonymized = false;
 
@@ -692,8 +692,8 @@ Privacy Audit Events:
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Privacy Officer:** Chief Privacy Officer  
+**Last Updated:** November 24, 2025
+**Privacy Officer:** Chief Privacy Officer
 **Compliance:** GDPR, CCPA, PIPEDA, LGPD
 
 *Privacy is a fundamental right. PenguinMails is committed to protecting user privacy through technical excellence, transparency, and accountability.*

@@ -18,8 +18,8 @@ persona: "Backend Developers"
 
 ### Get SMTP Status
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/smtp/status`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/smtp/status`
 **Purpose**: Summarized operational health for the tenant's sending.
 
 **Response**:
@@ -39,8 +39,8 @@ persona: "Backend Developers"
 
 ### Get SMTP Metrics
 
-**Method**: `GET`  
-**URL**: `/api/v1/tenant/smtp/metrics`  
+**Method**: `GET`
+**URL**: `/api/v1/tenant/smtp/metrics`
 **Purpose**: Aggregate deliverability metrics for dashboards.
 
 **Query Parameters**:

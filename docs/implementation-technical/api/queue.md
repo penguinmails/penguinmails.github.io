@@ -9,8 +9,8 @@ persona: "Backend Developers, Frontend Developers"
 
 # Queue API
 
-**Server**: Central Monolithic Server  
-**URL Prefix**: `/api/v1/queue/*`  
+**Server**: Central Monolithic Server
+**URL Prefix**: `/api/v1/queue/*`
 **Purpose**: System event processing, notification feeds, and background job monitoring.
 
 ---

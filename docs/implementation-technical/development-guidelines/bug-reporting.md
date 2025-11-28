@@ -239,22 +239,22 @@ class RootCauseAnalyzerImpl implements RootCauseAnalyzer {
 
     // 1. Reproduce the issue in isolated environment
     const reproductionResult = await this.reproduceIssue(bugReport);
-    
+
     // 2. Identify the exact failure point
     const failurePoint = await this.identifyFailurePoint(reproductionResult);
-    
+
     // 3. Trace the execution flow
     const executionTrace = await this.traceExecutionFlow(failurePoint);
-    
+
     // 4. Determine the root cause
     analysis.hypothesis = this.determineRootCause(executionTrace);
-    
+
     // 5. Design minimal fix
     analysis.fixStrategy = this.designFixStrategy(analysis.hypothesis);
-    
+
     // Set complexity and effort based on analysis
     this.assessComplexity(analysis, bugReport);
-    
+
     // Create test specifications
     analysis.testsToCreate = this.createTestSpecs(analysis);
 
@@ -633,7 +633,7 @@ class BounceHandlerImpl implements BounceHandler {
 
   private async processBounce(bounceData: BounceData): Promise<void> {
     const bounceType = bounceData.type || 'hard';
-    
+
     switch (bounceType) {
       case 'hard':
         // Hard bounce - permanent failure
@@ -652,17 +652,17 @@ class BounceHandlerImpl implements BounceHandler {
 
   private async permanentlyBounceEmail(email: string, reason?: string): Promise<void> {
     console.log(`Permanently bouncing email ${email} - Reason: ${reason || 'No reason provided'}`);
-    
+
     // Update database to mark as permanently failed
     await this.updateEmailStatus(email, 'permanently_bounced', reason);
-    
+
     // Add to suppression list
     await this.addToSuppressionList(email, reason || 'Permanent bounce');
   }
 
   private async scheduleRetry(email: string, reason?: string): Promise<void> {
     console.log(`Scheduling retry for email ${email} - Reason: ${reason || 'Temporary failure'}`);
-    
+
     // Schedule retry in 1 hour
     const retryTime = new Date(Date.now() + 60 * 60 * 1000);
     await this.scheduleEmailRetry(email, retryTime, reason);
@@ -670,7 +670,7 @@ class BounceHandlerImpl implements BounceHandler {
 
   private async flagForReview(email: string, reason?: string): Promise<void> {
     console.log(`Flagging email ${email} for manual review - Reason: ${reason || 'Unknown bounce type'}`);
-    
+
     // Create review task
     await this.createReviewTask({
       email,
@@ -791,7 +791,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
 
       // Attempt to insert tracking record
       await this.insertOpenRecord(data);
-      
+
       return {
         success: true,
         message: 'Email open tracked successfully'
@@ -808,7 +808,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
 
       // Attempt to insert click record
       await this.insertClickRecord(data);
-      
+
       return {
         success: true,
         message: 'Email click tracked successfully'
@@ -853,7 +853,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
   private async insertOpenRecord(data: EmailTrackingData): Promise<void> {
     // Mock implementation - would insert into database
     console.log('Inserting open record:', data);
-    
+
     // Simulate potential duplicate
     if (data.recipientEmail.includes('duplicate')) {
       throw new Error('Duplicate tracking attempt');
@@ -881,7 +881,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
     if (errorMessage.includes('Duplicate tracking attempt')) {
       // Handle duplicate tracking gracefully
       console.info(`Duplicate tracking attempt for ${data.campaignId}:${data.recipientEmail}`);
-      
+
       return {
         success: true,
         message: 'Email open already tracked',
@@ -890,7 +890,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
     } else if (errorMessage.includes('constraint') || errorMessage.includes('unique')) {
       // Database constraint violation
       console.info(`Constraint violation for ${data.campaignId}:${data.recipientEmail}`);
-      
+
       return {
         success: true,
         message: 'Email interaction already tracked',
@@ -899,7 +899,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
     } else {
       // General error
       console.error(`Failed to track email interaction: ${errorMessage}`);
-      
+
       // Could send to monitoring system here
       await this.sendToMonitoringSystem({
         campaignId: data.campaignId,
@@ -907,7 +907,7 @@ class EmailTrackingServiceImpl implements EmailTrackingService {
         error: errorMessage,
         timestamp: new Date().toISOString()
       });
-      
+
       return {
         success: false,
         message: 'Failed to track email interaction'
@@ -1002,7 +1002,7 @@ class CampaignsController {
     try {
       // Validate input
       const requestData = this.validateCreateCampaignRequest(req.body);
-      
+
       // Process campaign
       const result = await this.campaignService.createCampaign(requestData);
 
@@ -1025,7 +1025,7 @@ class CampaignsController {
   async getCampaign(req: Request, res: Response): Promise<void> {
     try {
       const { id } = req.params;
-      
+
       if (!id) {
         const response: ApiResponse<never> = {
           success: false,
@@ -1040,7 +1040,7 @@ class CampaignsController {
       }
 
       const campaign = await this.campaignService.getCampaign(id);
-      
+
       if (!campaign) {
         const response: ApiResponse<never> = {
           success: false,
@@ -1117,7 +1117,7 @@ class CampaignsController {
         success: false,
         errors: error.errors
       };
-      
+
       res.status(400).json(response);
     } else if (error instanceof Error) {
       // Log unexpected errors
@@ -1246,10 +1246,10 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
 
     // Group results by campaign
     const campaignMap = new Map<string, Campaign>();
-    
+
     for (const row of results) {
       const campaignId = row.id;
-      
+
       if (!campaignMap.has(campaignId)) {
         campaignMap.set(campaignId, {
           id: row.id,
@@ -1263,7 +1263,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
       }
 
       const campaign = campaignMap.get(campaignId)!;
-      
+
       // Add recipient if exists
       if (row.recipient_id) {
         campaign.recipients!.push({
@@ -1292,7 +1292,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
       `);
 
     const results = await query.findMany();
-    
+
     if (results.length === 0) {
       return null;
     }
@@ -1354,14 +1354,14 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
   async badGetCampaignsWithRecipients(userId: string): Promise<Campaign[]> {
     // This would cause N+1 problem - don't use this!
     const campaigns = await this.db.campaigns.where('userId', '=', userId).findMany();
-    
+
     for (const campaign of campaigns) {
       // Each iteration triggers a separate database query
       campaign.recipients = await this.db.recipients
         .where('campaignId', '=', campaign.id)
         .findMany();
     }
-    
+
     return campaigns;
   }
 }
@@ -1434,10 +1434,10 @@ class MemoryProfilerImpl implements MemoryProfiler {
 
     try {
       const result = func(...args);
-      
+
       const memoryAfter = this.getMemoryUsage();
       const memoryDiff = memoryAfter.heapUsed - memoryBefore.heapUsed;
-      
+
       this.recordAnalysis({
         functionName,
         memoryBefore: memoryBefore.heapUsed,
@@ -1467,10 +1467,10 @@ class MemoryProfilerImpl implements MemoryProfiler {
 
     try {
       const result = await func(...args);
-      
+
       const memoryAfter = this.getMemoryUsage();
       const memoryDiff = memoryAfter.heapUsed - memoryBefore.heapUsed;
-      
+
       this.recordAnalysis({
         functionName,
         memoryBefore: memoryBefore.heapUsed,
@@ -1522,19 +1522,19 @@ class MemoryProfilerImpl implements MemoryProfiler {
 
   private getMemoryWarning(memoryDiff: number): string | undefined {
     const diffMB = memoryDiff / (1024 * 1024); // Convert to MB
-    
+
     if (diffMB >= this.CRITICAL_THRESHOLD) {
       return `Critical memory usage increase: ${diffMB.toFixed(2)}MB`;
     } else if (diffMB >= this.WARNING_THRESHOLD) {
       return `High memory usage increase: ${diffMB.toFixed(2)}MB`;
     }
-    
+
     return undefined;
   }
 
   private recordAnalysis(analysis: MemoryAnalysis): void {
     this.analyses.push(analysis);
-    
+
     if (analysis.warning) {
       console.warn(`[Memory Profiler] ${analysis.warning} in ${analysis.functionName}`);
     }
@@ -1581,11 +1581,11 @@ class CampaignProcessor {
   async processEmailBatch(recipients: EmailRecipient[]): Promise<void> {
     // Simulate processing emails in batch
     const chunks = this.chunkArray(recipients, 100);
-    
+
     for (const chunk of chunks) {
       // Process chunk
       await this.processChunk(chunk);
-      
+
       // Force garbage collection if available
       if (global.gc) {
         global.gc();
@@ -1612,13 +1612,13 @@ class CampaignProcessor {
 class MemoryLeakDetector {
   private profiler = new MemoryProfilerImpl();
   private baselineMemory: number | null = null;
-  
+
   initializeBaseline(): void {
     // Force garbage collection if available
     if (global.gc) {
       global.gc();
     }
-    
+
     this.baselineMemory = this.profiler.getMemorySnapshot().heapUsed;
     console.log(`Memory baseline established: ${(this.baselineMemory / (1024 * 1024)).toFixed(2)}MB`);
   }
@@ -1630,7 +1630,7 @@ class MemoryLeakDetector {
 
     const currentMemory = this.profiler.getMemorySnapshot().heapUsed;
     const memoryDiff = currentMemory - this.baselineMemory;
-    
+
     console.log(`Current memory: ${(currentMemory / (1024 * 1024)).toFixed(2)}MB`);
     console.log(`Memory change: ${(memoryDiff / (1024 * 1024)).toFixed(2)}MB`);
 
@@ -1650,7 +1650,7 @@ interface EmailRecipient {
 async function demonstrateMemoryMonitoring() {
   const processor = new CampaignProcessor();
   const detector = new MemoryLeakDetector();
-  
+
   detector.initializeBaseline();
 
   // Test large campaign processing
@@ -1703,7 +1703,7 @@ FROM pg_stats
 WHERE tablename IN (SELECT tablename FROM pg_tables WHERE schemaname = 'public')
   AND n_distinct > 100  -- Columns with high cardinality
   AND attname NOT IN (
-    SELECT indexname FROM pg_indexes 
+    SELECT indexname FROM pg_indexes
     WHERE indexname LIKE '%' || attname || '%'
   );
 
@@ -1789,7 +1789,7 @@ class CampaignValidatorImpl implements CampaignValidator {
   validateCreateRequest(data: unknown): ValidationResult {
     try {
       const validatedData = CampaignCreateRequestSchema.parse(data);
-      
+
       return {
         success: true,
         data: validatedData
@@ -1801,13 +1801,13 @@ class CampaignValidatorImpl implements CampaignValidator {
           message: err.message,
           code: this.mapErrorCode(err.code)
         }));
-        
+
         return {
           success: false,
           errors
         };
       }
-      
+
       return {
         success: false,
         errors: [{
@@ -1822,13 +1822,13 @@ class CampaignValidatorImpl implements CampaignValidator {
   sanitizeInput(input: string): string {
     // Remove HTML tags to prevent XSS
     let sanitized = input.replace(htmlTagRegex, '');
-    
+
     // Trim whitespace
     sanitized = sanitized.trim();
-    
+
     // Remove null bytes and control characters
     sanitized = sanitized.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
-    
+
     return sanitized;
   }
 
@@ -1900,7 +1900,7 @@ class CampaignValidatorImpl implements CampaignValidator {
 class ManualCampaignValidator {
   validateCreateRequest(data: unknown): ValidationResult {
     const errors: ValidationError[] = [];
-    
+
     if (!data || typeof data !== 'object') {
       return {
         success: false,
@@ -1976,7 +1976,7 @@ class ManualCampaignValidator {
       // Validate each recipient
       campaignData.recipients.forEach((recipient, index) => {
         const fieldPrefix = `recipients[${index}]`;
-        
+
         if (!recipient.email || typeof recipient.email !== 'string') {
           errors.push({
             field: `${fieldPrefix}.email`,

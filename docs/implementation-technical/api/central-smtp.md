@@ -9,8 +9,8 @@ persona: "Backend Developers"
 
 # Central SMTP API
 
-**Server**: Central Monolithic Server  
-**URL Prefix**: `/api/v1/smtp/admin/*`  
+**Server**: Central Monolithic Server
+**URL Prefix**: `/api/v1/smtp/admin/*`
 **Purpose**: Internal operations for managing shared SMTP infrastructure.
 
 ---

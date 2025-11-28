@@ -12,11 +12,11 @@
 
 - **Level 1**: Quick setup guide
 
-- **Level 2**: Domain & DNS management  
+- **Level 2**: Domain & DNS management
 
 - **Level 3**: Enterprise automation
 
-### Campaign Execution  
+### Campaign Execution
 
 **[Email Warmups](./warmup/email-warmups/overview.md)** - Build sender reputation for 95%+ deliverability
 
@@ -113,7 +113,7 @@
 
 ---
 
-**Planning implementation?** → [Product Roadmap](../roadmap/product-roadmap.md)  
+**Planning implementation?** → [Product Roadmap](../roadmap/product-roadmap.md)
 **Need feature comparisons?** → [Feature Catalog](../feature-overview.md)
 
 ---

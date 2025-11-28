@@ -67,13 +67,13 @@ Select Email Account:
   ○ sarah@penguinmails.com (Connected 2 days ago)
   ○ support@penguinmails.com (Connected 1 day ago)
   ● sales@penguinmails.com (Connected today)
-  
+
 Account Status:
   Domain: penguinmails.com
   Provider: Google Workspace
   Age: New (0 days)
   Current Reputation: Unknown
-  
+
 [Continue →]
 
 
@@ -90,22 +90,22 @@ Select Warmup Plan:
   Starting Volume: 10 emails/day
   Peak Volume: 500 emails/day
   Best for: Most use cases
-  
+
 ○ Aggressive Warmup
   Duration: 4 weeks
   Starting Volume: 20 emails/day
   Peak Volume: 1,000 emails/day
   Best for: Established domains, urgent needs
-  
+
 ○ Conservative Warmup
   Duration: 8 weeks
   Starting Volume: 5 emails/day
   Peak Volume: 300 emails/day
   Best for: New domains, high-value reputation
-  
+
 ○ Custom Plan
   Configure your own schedule
-  
+
 [Continue →]
 
 
@@ -122,7 +122,7 @@ Engagement Simulation:
   ☑ Simulate clicks (15% click rate target)
   ☑ Simulate replies (5% reply rate target)
   ☐ Simulate forwards (2% forward rate)
-  
+
 Warmup Pool:
   ● Use PenguinMails warmup network (Recommended)
 
@@ -134,7 +134,7 @@ Warmup Pool:
 
 
     - Best deliverability
-    
+
   ○ Use custom warmup list
 
 
@@ -142,12 +142,12 @@ Warmup Pool:
 
 
     - Manual engagement required
-    
+
 Safety Settings:
   ☑ Auto-pause on bounce rate > 5%
   ☑ Auto-pause on spam complaints > 0.1%
   ☑ Daily send limit: 500 emails
-  
+
 [Start Warmup]
 
 
@@ -168,16 +168,16 @@ Today's Activity:
   Opened: 21 emails (75%)
   Clicked: 5 emails (18%)
   Replied: 2 emails (7%)
-  
+
 Progress:
   Week 1: ████░░░░░░░░░░░░░░░░ 21% (Day 3/7)
-  
+
   Current Volume: 30/day
   Target Volume: 500/day
-  
+
 Next Milestone:
   Day 7: Increase to 50 emails/day
-  
+
 Health Score: 95/100 ✓ Excellent
 
 [View Details] [Pause Warmup] [Adjust Schedule]
@@ -209,7 +209,7 @@ Activities:
 
 
   - Monitor bounce rates closely
-  
+
 Goals:
   ✓ Zero spam complaints
   ✓ Bounce rate < 2%
@@ -241,7 +241,7 @@ Activities:
 
 
   - Monitor sender reputation
-  
+
 Goals:
   ✓ Maintain low bounce rate
   ✓ Build domain reputation
@@ -273,7 +273,7 @@ Activities:
 
 
   - Full campaign readiness
-  
+
 Goals:
   ✓ Consistent inbox placement
   ✓ Strong sender reputation
@@ -296,12 +296,12 @@ Reason:
   ○ Reputation issue detected
   ● Manual review needed
   ○ Other
-  
+
 Resume Plan:
   ○ Resume from current day
   ● Restart current week
   ○ Restart from beginning
-  
+
 [Pause Warmup]
 
 
@@ -321,12 +321,12 @@ Adjustment:
   ○ Speed up (reach target in 3 weeks)
   ● Slow down (extend to 8 weeks total)
   ○ Maintain current pace
-  
+
 New Schedule:
   Week 3-4: 100 → 150 emails/day
   Week 5-6: 150 → 250 emails/day
   Week 7-8: 250 → 500 emails/day
-  
+
 [Apply Changes]
 
 
@@ -344,7 +344,7 @@ New Schedule:
 custom_warmup_plan:
   name: "Enterprise Warmup - High Volume"
   duration: 56  # days
-  
+
   phases:
 
 
@@ -354,16 +354,16 @@ custom_warmup_plan:
         start: 20
         end: 150
         increment: 10  # per day
-      
+
       engagement_targets:
         open_rate: 75
         click_rate: 18
         reply_rate: 8
-      
+
       pool_distribution:
         warmup_pool: 100
         real_contacts: 0
-    
+
 
 
     - name: "Growth"
@@ -372,16 +372,16 @@ custom_warmup_plan:
         start: 150
         end: 600
         increment: 25
-      
+
       engagement_targets:
         open_rate: 65
         click_rate: 15
         reply_rate: 5
-      
+
       pool_distribution:
         warmup_pool: 70
         real_contacts: 30
-    
+
 
 
     - name: "Maturity"
@@ -390,16 +390,16 @@ custom_warmup_plan:
         start: 600
         end: 2000
         increment: 70
-      
+
       engagement_targets:
         open_rate: 55
         click_rate: 12
         reply_rate: 3
-      
+
       pool_distribution:
         warmup_pool: 40
         real_contacts: 60
-  
+
   safety_rules:
     max_bounce_rate: 3
     max_spam_rate: 0.1
@@ -434,7 +434,7 @@ Week 1-2: Foundation
 
 
   - SPF, DKIM, DMARC verification
-  
+
 Week 3-4: Growth
 
 
@@ -448,7 +448,7 @@ Week 3-4: Growth
 
 
   - Maintain engagement
-  
+
 Week 5-6: Scaling
 
 
@@ -459,7 +459,7 @@ Week 5-6: Scaling
 
 
   - Monitor inbox placement
-  
+
 Week 7-8: Stabilization
 
 
@@ -497,7 +497,7 @@ Week 1: Start Slow
 
 
   - Monitor IP reputation
-  
+
 Week 2-3: Gradual Increase
 
 
@@ -511,7 +511,7 @@ Week 2-3: Gradual Increase
 
 
   - Check IP blacklists
-  
+
 Week 4-6: Full Volume
 
 
@@ -601,17 +601,17 @@ Requirements:
 
 
   - Low bounce/spam risk
-  
+
 Upload CSV:
   email, first_name, will_open, will_click, will_reply
   john@example.com, John, yes, yes, no
   jane@example.com, Jane, yes, no, no
-  
+
 Engagement Configuration:
   Expected Open Rate: 60%
   Expected Click Rate: 10%
   Expected Reply Rate: 2%
-  
+
 [Upload List]
 
 ⚠ Note: Manual engagement required
@@ -640,7 +640,7 @@ info@penguinmails.com      ⚠ Warning 12/42  80/day    65/100
 
 Bulk Actions:
   [Pause All] [Resume All] [Export Report]
-  
+
 Alerts:
   ⚠ info@penguinmails.com: Bounce rate elevated (4.2%)
   ℹ hello@penguinmails.com: Paused for manual review
@@ -669,17 +669,17 @@ Engagement Metrics:
   Open Rate:  72% ✓ (Target: 70%)
   Click Rate: 16% ✓ (Target: 15%)
   Reply Rate:  6% ✓ (Target: 5%)
-  
+
 Deliverability:
   Inbox Rate: 94% ✓
   Spam Rate:   3% ✓
   Bounce Rate: 1.2% ✓
-  
+
 Reputation Score:
   Domain: 85/100 (Good)
   IP: 78/100 (Fair)
   Overall: 82/100 (Good)
-  
+
 Trend: ↗ Improving
 
 
@@ -693,10 +693,10 @@ Warmup Comparison
 
 Account A: sales@penguinmails.com
   Day 15: 100/day, Health: 95
-  
+
 Account B: support@penguinmails.com
   Day 15: 80/day, Health: 88
-  
+
 Difference:
 
 
@@ -707,7 +707,7 @@ Difference:
 
 
   - Both: On track for target
-  
+
 Recommendation:
   Continue current pace for both accounts
 
@@ -726,40 +726,40 @@ CREATE TABLE warmup_schedules (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   email_account_id UUID NOT NULL REFERENCES email_accounts(id),
-  
+
   -- Schedule configuration
   schedule_name VARCHAR(255),
   schedule_type VARCHAR(50),  -- standard, aggressive, conservative, custom
-  
+
   -- Duration
   total_days INTEGER,
   current_day INTEGER DEFAULT 1,
-  
+
   -- Volume settings
   start_volume INTEGER,
   target_volume INTEGER,
   current_volume INTEGER,
-  
+
   -- Engagement targets
   target_open_rate DECIMAL(5,2),
   target_click_rate DECIMAL(5,2),
   target_reply_rate DECIMAL(5,2),
-  
+
   -- Pool distribution
   warmup_pool_percentage INTEGER DEFAULT 100,
   real_contacts_percentage INTEGER DEFAULT 0,
-  
+
   -- Status
   status VARCHAR(50),  -- active, paused, completed, failed
   started_at TIMESTAMP,
   paused_at TIMESTAMP,
   completed_at TIMESTAMP,
-  
+
   -- Safety settings
   max_bounce_rate DECIMAL(5,2) DEFAULT 5.0,
   max_spam_rate DECIMAL(5,2) DEFAULT 0.1,
   auto_pause_enabled BOOLEAN DEFAULT TRUE,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -771,37 +771,37 @@ CREATE INDEX idx_warmup_schedules_status ON warmup_schedules(status);
 CREATE TABLE warmup_daily_logs (
   id UUID PRIMARY KEY,
   warmup_schedule_id UUID NOT NULL REFERENCES warmup_schedules(id),
-  
+
   -- Date
   log_date DATE NOT NULL,
   day_number INTEGER,
-  
+
   -- Volume
   scheduled_volume INTEGER,
   sent_count INTEGER DEFAULT 0,
   delivered_count INTEGER DEFAULT 0,
-  
+
   -- Engagement
   opens INTEGER DEFAULT 0,
   clicks INTEGER DEFAULT 0,
   replies INTEGER DEFAULT 0,
-  
+
   -- Deliverability
   bounces INTEGER DEFAULT 0,
   spam_complaints INTEGER DEFAULT 0,
-  
+
   -- Rates
   open_rate DECIMAL(5,2),
   click_rate DECIMAL(5,2),
   reply_rate DECIMAL(5,2),
   bounce_rate DECIMAL(5,2),
   spam_rate DECIMAL(5,2),
-  
+
   -- Health
   health_score INTEGER,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(warmup_schedule_id, log_date)
 );
 
@@ -810,25 +810,25 @@ CREATE INDEX idx_warmup_logs_schedule ON warmup_daily_logs(warmup_schedule_id, l
 -- Warmup pool accounts
 CREATE TABLE warmup_pool_accounts (
   id UUID PRIMARY KEY,
-  
+
   email VARCHAR(255) NOT NULL UNIQUE,
   provider VARCHAR(100),  -- gmail, outlook, yahoo, etc.
-  
+
   -- Engagement settings
   will_open BOOLEAN DEFAULT TRUE,
   will_click BOOLEAN DEFAULT TRUE,
   will_reply BOOLEAN DEFAULT FALSE,
-  
+
   -- Behavior
   open_delay_min INTEGER DEFAULT 5,  -- minutes
   open_delay_max INTEGER DEFAULT 120,
   click_probability DECIMAL(3,2) DEFAULT 0.15,
   reply_probability DECIMAL(3,2) DEFAULT 0.05,
-  
+
   -- Status
   is_active BOOLEAN DEFAULT TRUE,
   last_engaged_at TIMESTAMP,
-  
+
   created_at TIMESTAMP DEFAULT NOW()
 );
 
@@ -839,10 +839,10 @@ CREATE INDEX idx_warmup_pool_active ON warmup_pool_accounts(is_active);
 CREATE TABLE warmup_events (
   id UUID PRIMARY KEY,
   warmup_schedule_id UUID NOT NULL REFERENCES warmup_schedules(id),
-  
+
   event_type VARCHAR(50),  -- sent, opened, clicked, replied, bounced, spam
   event_data JSONB,
-  
+
   created_at TIMESTAMP DEFAULT NOW()
 );
 
@@ -886,39 +886,39 @@ class WarmupService {
       status: 'active',
       startedAt: new Date(),
     });
-    
+
     // Schedule first day's warmup emails
     await this.scheduleDailyWarmup(schedule.id);
-    
+
     return schedule;
   }
-  
+
   async scheduleDailyWarmup(scheduleId: string): Promise<void> {
     const schedule = await db.warmupSchedules.findById(scheduleId);
-    
+
     if (schedule.status !== 'active') {
       return;
     }
-    
+
     // Calculate today's volume
     const dailyVolume = this.calculateDailyVolume(schedule);
-    
+
     // Get warmup pool accounts
     const warmupCount = Math.floor(dailyVolume * (schedule.warmupPoolPercentage / 100));
     const realCount = dailyVolume - warmupCount;
-    
+
     const warmupAccounts = await this.getWarmupPoolAccounts(warmupCount);
     const realContacts = await this.getRealContacts(schedule.tenantId, realCount);
-    
+
     // Create warmup emails
     for (const account of warmupAccounts) {
       await this.createWarmupEmail(schedule, account, 'warmup_pool');
     }
-    
+
     for (const contact of realContacts) {
       await this.createWarmupEmail(schedule, contact, 'real_contact');
     }
-    
+
     // Log daily activity
     await db.warmupDailyLogs.create({
       warmupScheduleId: scheduleId,
@@ -927,17 +927,17 @@ class WarmupService {
       scheduledVolume: dailyVolume,
     });
   }
-  
+
   private calculateDailyVolume(schedule: WarmupSchedule): number {
     const { currentDay, totalDays, startVolume, targetVolume } = schedule;
-    
+
     // Linear ramp-up
     const volumeIncrease = (targetVolume - startVolume) / totalDays;
     const dailyVolume = Math.floor(startVolume + (volumeIncrease * currentDay));
-    
+
     return Math.min(dailyVolume, targetVolume);
   }
-  
+
   private async getWarmupPoolAccounts(count: number): Promise<any[]> {
     return await db.warmupPoolAccounts.findAll({
       where: { isActive: true },
@@ -945,7 +945,7 @@ class WarmupService {
       limit: count,
     });
   }
-  
+
   private async getRealContacts(tenantId: string, count: number): Promise<any[]> {
     // Get engaged contacts with good history
     return await db.contacts.findAll({
@@ -959,7 +959,7 @@ class WarmupService {
       limit: count,
     });
   }
-  
+
   private async createWarmupEmail(
     schedule: WarmupSchedule,
     recipient: any,
@@ -975,7 +975,7 @@ class WarmupService {
       body: this.generateWarmupBody(recipient),
     });
   }
-  
+
   private generateWarmupSubject(): string {
     const subjects = [
       'Quick question',
@@ -984,22 +984,22 @@ class WarmupService {
       'Hope you\'re well',
       'Quick update',
     ];
-    
+
     return subjects[Math.floor(Math.random() * subjects.length)];
   }
-  
+
   private generateWarmupBody(recipient: any): string {
     return `
       Hi ${recipient.firstName || 'there'},
-      
+
       Hope this email finds you well. Just wanted to check in and see how things are going.
-      
+
       Let me know if you have any questions!
-      
+
       Best regards
     `;
   }
-  
+
   async simulateEngagement(
     emailId: string,
     recipientType: string
@@ -1007,28 +1007,28 @@ class WarmupService {
     if (recipientType !== 'warmup_pool') {
       return;
     }
-    
+
     const email = await db.emails.findById(emailId);
     const poolAccount = await db.warmupPoolAccounts.findOne({
       where: { email: email.recipientEmail },
     });
-    
+
     // Simulate open
     if (poolAccount.willOpen) {
       const openDelay = this.randomDelay(
         poolAccount.openDelayMin,
         poolAccount.openDelayMax
       );
-      
+
       setTimeout(async () => {
         await this.trackOpen(emailId);
-        
+
         // Simulate click
         if (Math.random() < poolAccount.clickProbability) {
           const clickDelay = this.randomDelay(1, 30);
           setTimeout(() => this.trackClick(emailId), clickDelay * 60 * 1000);
         }
-        
+
         // Simulate reply
         if (Math.random() < poolAccount.replyProbability) {
           const replyDelay = this.randomDelay(60, 2880);  // 1-48 hours
@@ -1037,11 +1037,11 @@ class WarmupService {
       }, openDelay * 60 * 1000);
     }
   }
-  
+
   private randomDelay(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
+
   async checkWarmupHealth(scheduleId: string): Promise<void> {
     const schedule = await db.warmupSchedules.findById(scheduleId);
     const todayLog = await db.warmupDailyLogs.findOne({
@@ -1050,49 +1050,49 @@ class WarmupService {
         logDate: new Date().toISOString().split('T')[0],
       },
     });
-    
+
     if (!todayLog) return;
-    
+
     // Check bounce rate
     if (todayLog.bounceRate > schedule.maxBounceRate) {
       await this.pauseWarmup(scheduleId, 'High bounce rate detected');
       return;
     }
-    
+
     // Check spam rate
     if (todayLog.spamRate > schedule.maxSpamRate) {
       await this.pauseWarmup(scheduleId, 'Spam complaints detected');
       return;
     }
-    
+
     // Calculate health score
     const healthScore = this.calculateHealthScore(todayLog);
-    
+
     await db.warmupDailyLogs.update(todayLog.id, { healthScore });
   }
-  
+
   private calculateHealthScore(log: any): number {
     let score = 100;
-    
+
     // Penalize for bounces
     score -= log.bounceRate * 10;
-    
+
     // Penalize for spam
     score -= log.spamRate * 50;
-    
+
     // Reward for engagement
     score += (log.openRate / 100) * 20;
     score += (log.clickRate / 100) * 10;
-    
+
     return Math.max(0, Math.min(100, Math.floor(score)));
   }
-  
+
   async pauseWarmup(scheduleId: string, reason: string): Promise<void> {
     await db.warmupSchedules.update(scheduleId, {
       status: 'paused',
       pausedAt: new Date(),
     });
-    
+
     // Send alert
     await this.sendWarmupAlert(scheduleId, reason);
   }
@@ -1109,17 +1109,17 @@ cron.schedule('0 9 * * *', async () => {  // 9 AM daily
   const activeSchedules = await db.warmupSchedules.findAll({
     where: { status: 'active' },
   });
-  
+
   const service = new WarmupService();
-  
+
   for (const schedule of activeSchedules) {
     await service.scheduleDailyWarmup(schedule.id);
-    
+
     // Increment day
     await db.warmupSchedules.update(schedule.id, {
       currentDay: schedule.currentDay + 1,
     });
-    
+
     // Check if completed
     if (schedule.currentDay >= schedule.totalDays) {
       await db.warmupSchedules.update(schedule.id, {
@@ -1135,9 +1135,9 @@ cron.schedule('0 * * * *', async () => {
   const activeSchedules = await db.warmupSchedules.findAll({
     where: { status: 'active' },
   });
-  
+
   const service = new WarmupService();
-  
+
   for (const schedule of activeSchedules) {
     await service.checkWarmupHealth(schedule.id);
   }
@@ -1152,12 +1152,12 @@ cron.schedule('0 * * * *', async () => {
 // Start warmup
 app.post('/api/warmup/start', authenticate, async (req, res) => {
   const service = new WarmupService();
-  
+
   const schedule = await service.startWarmup(
     req.body.emailAccountId,
     req.body.config
   );
-  
+
   return res.json(schedule);
 });
 
@@ -1169,7 +1169,7 @@ app.get('/api/warmup/:id', authenticate, async (req, res) => {
     order: [['logDate', 'DESC']],
     limit: 30,
   });
-  
+
   return res.json({ schedule, logs });
 });
 
@@ -1177,7 +1177,7 @@ app.get('/api/warmup/:id', authenticate, async (req, res) => {
 app.post('/api/warmup/:id/pause', authenticate, async (req, res) => {
   const service = new WarmupService();
   await service.pauseWarmup(req.params.id, req.body.reason);
-  
+
   return res.json({ success: true });
 });
 
@@ -1187,7 +1187,7 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
     status: 'active',
     pausedAt: null,
   });
-  
+
   return res.json({ success: true });
 });
 
@@ -1208,7 +1208,7 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority (Level 2)  
-**Target Release:** Q3 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority (Level 2)
+**Target Release:** Q3 2026
 **Owner:** Deliverability Team

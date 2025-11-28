@@ -182,7 +182,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - Budget controls and spending limits
 
-**Effort:** 4-7 weeks  
+**Effort:** 4-7 weeks
 **Priority:** P0-P2 (MVP blockers)
 
 ### Q2 2026: Enterprise Features
@@ -201,7 +201,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - Flexible payment options (ACH, wire transfer, PO)
 
-**Effort:** 4-5 weeks  
+**Effort:** 4-5 weeks
 **Priority:** P1-P2 (Enterprise expansion)
 
 ### Q3 2026: International & Advanced
@@ -220,7 +220,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - Advanced usage analytics and forecasting
 
-**Effort:** 10-12 weeks  
+**Effort:** 10-12 weeks
 **Priority:** P1-P2 (International expansion)
 
 ### Q4 2026: Optimization & Retention
@@ -239,7 +239,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - Predictive churn prevention
 
-**Effort:** 8-10 weeks  
+**Effort:** 8-10 weeks
 **Priority:** P2 (Retention optimization)
 
 ---
@@ -248,8 +248,8 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### Stripe (Payment Processing)
 
-**Status:** Fully integrated  
-**Cost:** 2.9% + $0.30 per transaction (~$462/month at MVP)  
+**Status:** Fully integrated
+**Cost:** 2.9% + $0.30 per transaction (~$462/month at MVP)
 **Replacement Plan:** Not recommended (PCI compliance complexity)
 
 ## Current Usage
@@ -266,8 +266,8 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### Loop.so (Transactional Emails)
 
-**Status:** Active  
-**Cost:** $29/month (up to 50,000 emails)  
+**Status:** Active
+**Cost:** $29/month (up to 50,000 emails)
 **Replacement Plan:** In-house SMTP (Q3 2026)
 
 ## Current Usage
@@ -282,7 +282,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - Cancellation emails
 
-**Migration Target:** Q3 2026 (Post-MVP)  
+**Migration Target:** Q3 2026 (Post-MVP)
 **Rationale:** Cost-effective for MVP, replace at scale (10,000+ customers)
 
 ---

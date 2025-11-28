@@ -900,8 +900,8 @@ Projected Annual Cost: $735.00
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Supported ESPs:** Postmark, Mailgun  
+**Last Updated:** November 25, 2025
+**Supported ESPs:** Postmark, Mailgun
 **Coming Soon:** SendGrid, Amazon SES
 
 *ESP integration routes provide comprehensive configuration and monitoring for external email service providers, enabling optimized deliverability and cost management.*

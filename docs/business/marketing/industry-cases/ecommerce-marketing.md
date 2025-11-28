@@ -615,7 +615,7 @@ class MVPRecommendationEngine implements RecommendationEngine {
         merged.push(product);
       }
     }
-    
+
     // Limit to top 10 recommendations
     return merged.slice(0, 10);
   }

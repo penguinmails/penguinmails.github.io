@@ -272,7 +272,7 @@ class MarketingROICalculatorImpl implements MarketingROICalculator {
 
   async generatePortfolioAnalysis(campaigns: CampaignData[]): Promise<PortfolioAnalysis> {
     const roiResults = this.calculateMarketingROI(campaigns);
-    
+
     const totalInvestment = roiResults.reduce((sum, roi) => sum + roi.totalCost, 0);
     const totalRevenue = roiResults.reduce((sum, roi) => sum + (roi.netRevenue + roi.totalCost), 0);
     const portfolioROI = ((totalRevenue - totalInvestment) / totalInvestment) * 100;

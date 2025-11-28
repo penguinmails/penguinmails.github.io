@@ -177,13 +177,13 @@ const emailWorker = new Worker('email-queue', async (job: Job) => {
 
   // 1. Fetch Tenant Settings & Routing Rules
   const settings = await getTenantSettings(tenantId);
-  
+
   // 2. Render Content
   const html = await renderTemplate(templateId, data);
-  
+
   // 3. Determine Route (Failover Logic)
   const provider = determineProvider(settings);
-  
+
   // 4. Send
   try {
     const result = await sendEmail(provider, recipient, html);

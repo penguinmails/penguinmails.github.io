@@ -377,8 +377,8 @@ Response:
 
 ---
 
-**Last Updated:** November 24, 2025  
-**Stripe API Version:** 2023-10-16  
+**Last Updated:** November 24, 2025
+**Stripe API Version:** 2023-10-16
 **Compliance:** PCI DSS Level 1, SCA compliant
 
 *All payments are processed securely by Stripe. PenguinMails never stores credit card information.*

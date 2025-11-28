@@ -135,7 +135,7 @@ describe('EmailService', () => {
 
     // Act & Assert
     await expect(emailService.sendEmail(emailData)).rejects.toThrow(ValidationError);
-    
+
     const error = await emailService.sendEmail(emailData).catch(err => err);
     expect(error.message.toLowerCase()).toContain('invalid email');
 
@@ -190,7 +190,7 @@ describe('EmailService', () => {
 
     // Act & Assert
     await expect(emailService.sendEmail(emailData)).rejects.toThrow(EmailDeliveryError);
-    
+
     // Verify analytics service was called with failure tracking
     expect(mockAnalyticsService.trackFailure).toHaveBeenCalledTimes(1);
   });
@@ -205,7 +205,7 @@ describe('EmailService', () => {
 
     // Act & Assert
     await expect(emailService.sendEmail(emailData)).rejects.toThrow(ValidationError);
-    
+
     expect(mockSmtpClient.sendEmail).not.toHaveBeenCalled();
   });
 });
@@ -422,7 +422,7 @@ describe('Campaign API Integration Tests', () => {
       }));
 
       mockDatabase.campaigns.findMany.mockResolvedValue(page2Campaigns);
-      
+
       const result2 = await getCampaigns(testUser.id, page2Params);
       expect(result2.data).toHaveLength(2);
       expect(result2.meta.pagination.page).toBe(2);
@@ -605,7 +605,7 @@ async function updateCampaign(
   if (!campaign || campaign.userId !== userId) {
     throw new Error('Unauthorized');
   }
-  
+
   const updated = await mockDatabase.campaigns.update(id, data);
   return { success: true, data: updated };
 }
@@ -911,10 +911,10 @@ export class TestDataGenerator {
   static generateCampaignName(index: number): string {
     const prefixes = ['Test', 'Demo', 'Sample', 'Example', 'Mock'];
     const suffixes = ['Campaign', 'Email', 'Newsletter', 'Update', 'Alert'];
-    
+
     const prefix = prefixes[index % prefixes.length];
     const suffix = suffixes[Math.floor(index / prefixes.length) % suffixes.length];
-    
+
     return `${prefix} ${suffix} ${index + 1}`;
   }
 
@@ -980,7 +980,7 @@ export const validationTestCases = {
     'name+tag@domain.com',
     'user123@test-domain.org'
   ],
-  
+
   invalidEmails: [
     'invalid-email',
     '@domain.com',

@@ -123,10 +123,10 @@ function calculateEmailDeliveryScore(
 
   // Adjust confidence based on historical data availability
   let confidence = 0.7; // Base confidence
-  
+
   if (historicalPerformance) {
     confidence += 0.2; // Increase confidence with historical data
-    
+
     const campaignCount = historicalPerformance.campaigns?.length || 0;
     if (campaignCount > 10) {
       confidence += 0.1; // More confidence with more data
@@ -1022,7 +1022,7 @@ import bcrypt from 'bcryptjs';
 export class AuthenticationService {
   private readonly jwtSecret: string;
   private readonly jwtExpiresIn = '24h';
-  
+
   constructor(jwtSecret: string) {
     this.jwtSecret = jwtSecret;
   }
@@ -1074,14 +1074,14 @@ export class AuthenticationService {
 export function requirePermission(permission: string) {
   return (req: Request, res: Response, next: NextFunction) => {
     const token = extractTokenFromRequest(req);
-    
+
     if (!token) {
       return res.status(401).json({ error: 'Authentication required' });
     }
 
     try {
       const decoded = authService.verifyToken(token);
-      
+
       if (!authService.hasPermission(decoded, permission)) {
         return res.status(403).json({ error: 'Insufficient permissions' });
       }
@@ -1317,7 +1317,7 @@ class CacheService {
       if (!value) return null;
 
       const parsed = JSON.parse(value) as CacheValue;
-      
+
       // Check if cache entry has expired
       if (Date.now() - parsed.timestamp > parsed.ttl * 1000) {
         await this.redisClient.del(key);
@@ -1338,7 +1338,7 @@ class CacheService {
    */
   async set<T>(key: string, value: T, options: CacheOptions = {}): Promise<boolean> {
     const ttl = options.ttl || this.defaultTTL;
-    
+
     try {
       const cacheValue: CacheValue = {
         data: value,
@@ -1381,7 +1381,7 @@ class CacheService {
       const values = await this.redisClient.mget(keys);
       return values.map(value => {
         if (!value) return null;
-        
+
         try {
           const parsed = JSON.parse(value) as CacheValue;
           if (Date.now() - parsed.timestamp > parsed.ttl * 1000) {
@@ -1423,21 +1423,21 @@ class CampaignCacheDecorator {
 
       descriptor.value = async function (...args: unknown[]) {
         const cacheKey = `campaign:${JSON.stringify(args)}`;
-        
+
         // Try cache first
         const cached = await this.cacheService.get<T>(cacheKey);
         if (cached !== null) {
           return cached;
         }
-        
+
         // Get from original method
         const result = await originalMethod.apply(this, args);
-        
+
         // Cache result if not null/undefined
         if (result !== null && result !== undefined) {
           await this.cacheService.set(cacheKey, result, { ttl: ttl || this.defaultTTL });
         }
-        
+
         return result;
       };
 

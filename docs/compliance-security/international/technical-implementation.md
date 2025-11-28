@@ -18,9 +18,9 @@ version: "1.0"
 
 ## Overview
 
-**Implementation Scope:** Technical architecture for GDPR and ePrivacy compliance  
-**Technology Stack:** Next.js, SQLite/PostgreSQL, Node.js, React  
-**Business Impact:** Critical - Required for EU market entry  
+**Implementation Scope:** Technical architecture for GDPR and ePrivacy compliance
+**Technology Stack:** Next.js, SQLite/PostgreSQL, Node.js, React
+**Business Impact:** Critical - Required for EU market entry
 **Development Timeline:** 6-9 months for full implementation
 
 ## Architecture Requirements
@@ -123,9 +123,9 @@ export class ConsentService {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email })
             });
-            
+
             const result = await response.json();
-            
+
             return {
                 isValid: result.consentValid,
                 consentTimestamp: result.consentTimestamp,
@@ -225,7 +225,7 @@ export class SendGridEmailService {
 export class PostmarkEmailService {
     async sendTransactionalEmail(emailData) {
         const consentVerified = await this.consentService.verifyConsent(emailData.To);
-        
+
         if (!consentVerified.isValid) {
             throw new Error('Marketing consent required');
         }
@@ -256,7 +256,7 @@ export class AnalyticsService {
     async getCampaignMetrics(campaignId, userConsents) {
         const consentStatuses = await this.getConsentStatuses(userConsents);
         const consentingUsers = consentStatuses.filter(status => status.isValid);
-        
+
         // Only show metrics for users who provided consent
         if (consentingUsers.length === 0) {
             return {
@@ -268,7 +268,7 @@ export class AnalyticsService {
 
         // Fetch anonymized metrics
         const metrics = await this.fetchAnonymizedMetrics(campaignId);
-        
+
         return {
             openRate: metrics.openRate,
             clickRate: metrics.clickRate,
@@ -281,12 +281,12 @@ export class AnalyticsService {
     async fetchAnonymizedMetrics(campaignId) {
         // Implement privacy-preserving analytics
         return await this.database.query(`
-            SELECT 
+            SELECT
                 COUNT(CASE WHEN opened = true THEN 1 END) as opens,
                 COUNT(CASE WHEN clicked = true THEN 1 END) as clicks,
                 COUNT(*) as total
-            FROM email_engagement 
-            WHERE campaign_id = $1 
+            FROM email_engagement
+            WHERE campaign_id = $1
             AND consent_verified = true
         `, [campaignId]);
     }
@@ -352,10 +352,10 @@ export class DataSubjectRightsService {
 
         // Generate portable format
         const portableData = this.generatePortableFormat(personalData);
-        
+
         // Log the request
         await this.logRightsRequest('access', requesterEmail, new Date());
-        
+
         return {
             data: portableData,
             format: 'JSON',
@@ -380,13 +380,13 @@ export class DataSubjectRightsService {
 
         // Execute erasure
         await this.executeDataErasure(requesterEmail);
-        
+
         // Notify third parties
         await this.notifyThirdParties(requesterEmail, 'erasure');
-        
+
         // Log the request
         await this.logRightsRequest('erasure', requesterEmail, new Date(), reason);
-        
+
         return {
             status: 'completed',
             erasureDate: new Date().toISOString(),
@@ -416,12 +416,12 @@ export class EncryptionService {
         const iv = crypto.randomBytes(16);
         const cipher = crypto.createCipher(this.algorithm, this.key);
         cipher.setAAD(Buffer.from('penguinmails-gdpr'));
-        
+
         let encrypted = cipher.update(JSON.stringify(data), 'utf8', 'hex');
         encrypted += cipher.final('hex');
-        
+
         const authTag = cipher.getAuthTag();
-        
+
         return {
             encryptedData: encrypted,
             iv: iv.toString('hex'),
@@ -433,10 +433,10 @@ export class EncryptionService {
         const decipher = crypto.createDecipher(this.algorithm, this.key);
         decipher.setAAD(Buffer.from('penguinmails-gdpr'));
         decipher.setAuthTag(Buffer.from(encryptedPackage.authTag, 'hex'));
-        
+
         let decrypted = decipher.update(encryptedPackage.encryptedData, 'hex', 'utf8');
         decrypted += decipher.final('utf8');
-        
+
         return JSON.parse(decrypted);
     }
 }
@@ -461,7 +461,7 @@ export class AccessControlService {
     async checkPermission(userId, resource, action) {
         const user = await this.getUser(userId);
         const userRoles = user.roles;
-        
+
         // Check if any user role has permission
         for (const role of userRoles) {
             const permissions = this.roles[role] || [];
@@ -469,7 +469,7 @@ export class AccessControlService {
                 return true;
             }
         }
-        
+
         return false;
     }
 
@@ -620,27 +620,27 @@ volumes:
 describe('GDPR Compliance Tests', () => {
     test('should verify consent before sending emails', async () => {
         const emailData = { to: 'test@example.com', subject: 'Test' };
-        
+
         await expect(emailService.sendEmail(emailData))
             .rejects.toThrow('Consent verification failed');
     });
 
     test('should implement right to erasure', async () => {
         const userEmail = 'user@example.com';
-        
+
         await dataRightsService.processErasureRequest(userEmail, 'user_requested');
-        
+
         const remainingData = await database.query(`
             SELECT * FROM contacts WHERE email = $1
         `, [userEmail]);
-        
+
         expect(remainingData.length).toBe(0);
     });
 
     test('should encrypt personal data at rest', async () => {
         const sensitiveData = { email: 'test@example.com', name: 'Test User' };
         const encrypted = encryptionService.encrypt(sensitiveData);
-        
+
         expect(encrypted.encryptedData).toBeDefined();
         expect(encrypted.encryptedData).not.toContain('test@example.com');
     });
@@ -726,8 +726,8 @@ export class ConsentCache {
 
         const consentStatus = await this.consentService.verifyConsent(email);
         await this.redis.setex(
-            `consent:${email}`, 
-            this.cacheTTL, 
+            `consent:${email}`,
+            this.cacheTTL,
             JSON.stringify(consentStatus)
         );
 
@@ -759,7 +759,7 @@ export class ConsentCache {
 
 - [PostgreSQL Security Features](https://www.postgresql.org/docs/current/static/security.html)
 
-**Document Classification:** Level 3 - Technical Implementation  
+**Document Classification:** Level 3 - Technical Implementation
 **Related Documents:**
 
 - [European Compliance Overview](european-compliance-overview)

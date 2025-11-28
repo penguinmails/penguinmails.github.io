@@ -119,10 +119,10 @@ David Kim              68     1 week ago
 
 Hot Leads (Score 76-100):
   Campaign: "Book a Demo" (Aggressive CTA)
-  
+
 Warm Leads (Score 51-75):
   Campaign: "Feature Deep Dive" (Educational)
-  
+
 Cold Leads (Score 0-50):
   Campaign: "Getting Started Guide" (Nurture)
 
@@ -144,29 +144,29 @@ email_actions:
   opened_email:
     points: 5
     decay: true  # Points decay over time
-    
+
   clicked_link:
     points: 10
     multiplier: 1.5  # 15 points if clicked multiple times
-    
+
   clicked_pricing_page:
     points: 25
     description: "High intent action"
-    
+
   downloaded_resource:
     points: 15
     specific_resources:
       whitepaper: 20
       case_study: 15
       ebook: 10
-      
+
   watched_demo_video:
     points: 30
     threshold: 75%  # Must watch 75% to count
-    
+
   replied_to_email:
     points: 20
-    
+
   forwarded_email:
     points: 12
 
@@ -179,19 +179,19 @@ email_actions:
 website_actions:
   visited_pricing_page:
     points: 20
-    
+
   visited_features_page:
     points: 10
-    
+
   started_trial:
     points: 50
-    
+
   requested_demo:
     points: 60
-    
+
   added_to_cart:
     points: 40
-    
+
   time_on_site:
     gt_5_minutes: 5
     gt_15_minutes: 10
@@ -206,20 +206,20 @@ negative_actions:
   unsubscribed:
     points: -100
     set_score_to: 0
-    
+
   marked_spam:
     points: -50
-    
+
   email_bounced_hard:
     points: -25
     set_score_to: 0
-    
+
   email_bounced_soft:
     points: -5
-    
+
   inactive_90_days:
     points: -30
-    
+
   inactive_180_days:
     points: -50
 
@@ -238,7 +238,7 @@ company_attributes:
     51-200: 10
     201-1000: 15
     1001+: 20
-    
+
   industry:
     saas: 20
     technology: 15
@@ -246,7 +246,7 @@ company_attributes:
     healthcare: 10
     finance: 10
     other: 0
-    
+
   revenue:
     lt_1m: 0
     1m_10m: 10
@@ -266,12 +266,12 @@ job_title_keywords:
     vp: 20
     director: 15
     head_of: 15
-    
+
   influencers:
     manager: 10
     lead: 8
     senior: 8
-    
+
   end_users:
     specialist: 3
     coordinator: 3
@@ -286,10 +286,10 @@ job_title_keywords:
 location:
   tier_1_markets:  # US, UK, Canada, Australia
     points: 10
-    
+
   tier_2_markets:  # Western Europe
     points: 5
-    
+
   tier_3_markets:  # Rest of world
     points: 0
 
@@ -307,7 +307,7 @@ decay_rules:
     rate: 5_percent
     interval: 30_days
     min_score: 0
-    
+
   example:
     initial_score: 80
     after_30_days: 76  # -5%
@@ -323,13 +323,13 @@ decay_rules:
 recency_multipliers:
   action_within_24h:
     multiplier: 2.0
-    
+
   action_within_7d:
     multiplier: 1.5
-    
+
   action_within_30d:
     multiplier: 1.0
-    
+
   action_older_than_30d:
     multiplier: 0.5
 
@@ -346,17 +346,17 @@ scoring_dimensions:
     email_opens: 5
     email_clicks: 10
     email_replies: 15
-    
+
   fit_score:  # 0-40 points
     company_size: 15
     industry: 15
     job_title: 10
-    
+
   intent_score:  # 0-20 points
     pricing_page_visit: 10
     demo_request: 20
     trial_started: 20
-    
+
   composite_score:  # Total 0-100
     formula: engagement + fit + intent
 
@@ -457,21 +457,21 @@ Top Scoring Actions:
 CREATE TABLE lead_scoring_models (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
-  
+
   name VARCHAR(255) NOT NULL,
   description TEXT,
-  
+
   -- Scoring rules (JSON configuration)
   scoring_rules JSONB NOT NULL,
-  
+
   -- Decay settings
   decay_enabled BOOLEAN DEFAULT true,
   decay_rate DECIMAL(5,2) DEFAULT 5.0,  -- Percentage
   decay_interval_days INTEGER DEFAULT 30,
-  
+
   -- Status
   is_active BOOLEAN DEFAULT TRUE,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW()
 );
@@ -481,18 +481,18 @@ CREATE TABLE contact_scores (
   id UUID PRIMARY KEY,
   contact_id UUID NOT NULL REFERENCES contacts(id),
   scoring_model_id UUID REFERENCES lead_scoring_models(id),
-  
+
   -- Scores
   total_score INTEGER DEFAULT 0,
   engagement_score INTEGER DEFAULT 0,
   fit_score INTEGER DEFAULT 0,
   intent_score INTEGER DEFAULT 0,
-  
+
   -- Metadata
   last_calculated_at TIMESTAMP DEFAULT NOW(),
   last_activity_at TIMESTAMP,
   previous_score INTEGER DEFAULT 0,  -- For tracking changes
-  
+
   UNIQUE(contact_id, scoring_model_id)
 );
 
@@ -503,16 +503,16 @@ CREATE INDEX idx_contact_scores_contact ON contact_scores(contact_id);
 CREATE TABLE score_events (
   id UUID PRIMARY KEY,
   contact_id UUID NOT NULL REFERENCES contacts(id),
-  
+
   -- Event details
   event_type VARCHAR(100),  -- email_opened, clicked_link, etc.
   event_data JSONB,
-  
+
   -- Score change
   points_added INTEGER,
   score_before INTEGER,
   score_after INTEGER,
-  
+
   -- Timestamp
   created_at TIMESTAMP DEFAULT NOW()
 );
@@ -552,17 +552,17 @@ class LeadScoringEngine {
     const contact = await db.contacts.findById(contactId);
     const model = await this.getScoringModel(contact.tenantId);
     const currentScore = await this.getCurrentScore(contactId);
-    
+
     // Find matching rule
     const rule = model.rules.find(r => r.action === action);
-    
+
     if (!rule) {
       return currentScore.totalScore;
     }
-    
+
     // Calculate points
     let points = rule.points;
-    
+
     // Apply conditions
     if (rule.conditions) {
       const meetsConditions = this.evaluateConditions(rule.conditions, metadata);
@@ -570,7 +570,7 @@ class LeadScoringEngine {
         return currentScore.totalScore;
       }
     }
-    
+
     // Apply multiplier for repeated actions
     if (rule.multiplier) {
       const recentActions = await this.countRecentActions(contactId, action, 30);
@@ -578,16 +578,16 @@ class LeadScoringEngine {
         points *= rule.multiplier;
       }
     }
-    
+
     // Apply recency boost
     points = this.applyRecencyBoost(points, new Date());
-    
+
     // Calculate new score
     const newScore = Math.max(0, Math.min(100, currentScore.totalScore + points));
-    
+
     // Update score
     await this.updateScore(contactId, newScore, action, points);
-    
+
     // Log event
     await db.scoreEvents.create({
       contactId,
@@ -597,16 +597,16 @@ class LeadScoringEngine {
       scoreBefore: currentScore.totalScore,
       scoreAfter: newScore,
     });
-    
+
     // Check for automation triggers
     await this.checkAutomationTriggers(contactId, currentScore.totalScore, newScore);
-    
+
     return newScore;
   }
-  
+
   private applyRecencyBoost(basePoints: number, actionDate: Date): number {
     const hoursSinceAction = differenceInHours(new Date(), actionDate);
-    
+
     if (hoursSinceAction < 24) {
       return basePoints * 2.0;
     } else if (hoursSinceAction < 168) {  // 7 days
@@ -617,36 +617,36 @@ class LeadScoringEngine {
       return basePoints * 0.5;
     }
   }
-  
+
   async applyDecay(contactId: string): Promise<void> {
     const contact = await db.contacts.findById(contactId);
     const model = await this.getScoringModel(contact.tenantId);
-    
+
     if (!model.decayEnabled) {
       return;
     }
-    
+
     const currentScore = await this.getCurrentScore(contactId);
     const daysSinceLastActivity = differenceInDays(
       new Date(),
       currentScore.lastActivityAt
     );
-    
+
     if (daysSinceLastActivity < model.decayIntervalDays) {
       return;
     }
-    
+
     // Calculate number of decay periods
     const decayPeriods = Math.floor(daysSinceLastActivity / model.decayIntervalDays);
-    
+
     // Apply exponential decay
     let newScore = currentScore.totalScore;
     for (let i = 0; i < decayPeriods; i++) {
       newScore = newScore * (1 - model.decayRate / 100);
     }
-    
+
     newScore = Math.max(0, Math.floor(newScore));
-    
+
     if (newScore !== currentScore.totalScore) {
       await this.updateScore(
         contactId,
@@ -656,7 +656,7 @@ class LeadScoringEngine {
       );
     }
   }
-  
+
   private async checkAutomationTriggers(
     contactId: string,
     oldScore: number,
@@ -664,14 +664,14 @@ class LeadScoringEngine {
   ): Promise<void> {
     // Check if score crossed threshold
     const thresholds = [25, 50, 75];
-    
+
     for (const threshold of thresholds) {
       if (oldScore < threshold && newScore >= threshold) {
         await this.triggerScoreAutomation(contactId, threshold);
       }
     }
   }
-  
+
   private async triggerScoreAutomation(
     contactId: string,
     threshold: number
@@ -683,13 +683,13 @@ class LeadScoringEngine {
         await this.notifySalesTeam(contactId);
         await this.addToSegment(contactId, 'hot-leads');
         break;
-        
+
       case 50:
         // Marketing Qualified Lead
         await this.markAsMQLead(contactId);
         await this.addToSegment(contactId, 'warm-leads');
         break;
-        
+
       case 25:
         // Warming up
         await this.addToSegment(contactId, 'nurture-leads');
@@ -711,9 +711,9 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
       isActive: true,
     },
   });
-  
+
   const scoringEngine = new LeadScoringEngine();
-  
+
   for (const contact of contacts) {
     await scoringQueue.add('apply-decay', {
       contactId: contact.id,
@@ -731,11 +731,11 @@ scoringQueue.process('apply-decay', async (job) => {
 // Recalculate scores for contacts with new custom field data
 async function recalculateScoresForContact(contactId: string): Promise<void> {
   const engine = new LeadScoringEngine();
-  
+
   // Recalculate fit score based on demographics
   const contact = await db.contacts.findById(contactId);
   const fitScore = await engine.calculateFitScore(contact);
-  
+
   await db.contactScores.update(
     { where: { contactId } },
     { fitScore }
@@ -759,13 +759,13 @@ eventEmitter.on('email.opened', async (event) => {
 
 eventEmitter.on('email.clicked', async (event) => {
   const engine = new LeadScoringEngine();
-  
+
   // Check if clicked URL is high-intent (pricing, demo)
-  const isHighIntent = event.url.includes('/pricing') || 
+  const isHighIntent = event.url.includes('/pricing') ||
                        event.url.includes('/demo');
-  
+
   const action = isHighIntent ? 'clicked_high_intent_link' : 'clicked_link';
-  
+
   await engine.scoreAction(event.contactId, action, {
     url: event.url,
     emailId: event.emailId,
@@ -794,7 +794,7 @@ eventEmitter.on('contact.updated', async (event) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority (Level 2)  
-**Target Release:** Q1 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority (Level 2)
+**Target Release:** Q1 2026
 **Owner:** Leads Team

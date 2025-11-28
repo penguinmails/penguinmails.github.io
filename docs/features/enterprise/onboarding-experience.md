@@ -59,7 +59,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 ```text
 
 
-1. Sign Up → 2. Workspace Setup → 3. Domain Configuration → 
+1. Sign Up → 2. Workspace Setup → 3. Domain Configuration →
 
 
 4. Payment → 5. First Email Account → 6. First Campaign → 7. Success!
@@ -89,7 +89,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 Welcome to PenguinMails! 🐧
 
-Let's get your professional email infrastructure 
+Let's get your professional email infrastructure
 set up in under 10 minutes.
 
 [Start Setup] [Skip Tour]
@@ -103,7 +103,7 @@ set up in under 10 minutes.
 
 Create Your First Workspace
 
-Workspaces help you organize campaigns by client, 
+Workspaces help you organize campaigns by client,
 project, or brand.
 
 Workspace Name: [_______________]
@@ -122,7 +122,7 @@ Example: "Main Company" or "Client: Acme Corp"
 
 Step 3 of 6: Add Your Sending Domain
 
-This is the domain you'll send emails from 
+This is the domain you'll send emails from
 (e.g., yourdomain.com)
 
 Domain: [_______________]
@@ -151,7 +151,7 @@ Add this DNS record to verify you own this domain:
 TXT Record:
   Host: _penguinmails-verify
   Value: abc123xyz...
-  
+
 [Copy Record] [I've Added the Record]
 
 OR
@@ -178,12 +178,12 @@ Step 5 of 6: Choose Your Plan
 ○ Starter - $49/mo
   Up to 5,000 emails/month
   1 workspace
-  
+
 ● Professional - $99/mo  [RECOMMENDED]
   Up to 25,000 emails/month
   Unlimited workspaces
   Priority support
-  
+
 ○ Business - $249/mo
   Up to 100,000 emails/month
   Everything in Professional
@@ -319,9 +319,9 @@ Getting Started ━━━━━━━━○○○ 70%
 ```text
 
 [i] Workspaces
-    Organize your campaigns by client, 
+    Organize your campaigns by client,
     brand, or project.
-    
+
     [Got It] [Learn More]
 
 
@@ -430,7 +430,7 @@ Based on user behavior:
 
 👋 We noticed you haven't set up email warmup yet.
 
-Warmup helps build sender reputation and improves 
+Warmup helps build sender reputation and improves
 deliverability. It only takes 2 minutes.
 
 [Set Up Warmup Now] [Remind Me Later]
@@ -468,26 +468,26 @@ Here's what you can do:
 interface OnboardingState {
   userId: string;
   tenantId: string;
-  
+
   // Progress tracking
   currentStep: number;
   totalSteps: number;
   completedSteps: string[];
   startedAt: Date;
   completedAt?: Date;
-  
+
   // Checklist
   checklistItems: OnboardingChecklistItem[];
   checklistProgress: number; // 0-100
-  
+
   // User preferences
   skipTutorials: boolean;
   dismissedTooltips: string[];
   watchedVideos: string[];
-  
+
   // Milestones
   unlockedMilestones: string[];
-  
+
   // Metadata
   lastActiveStep: string;
   lastActivityAt: Date;
@@ -514,29 +514,29 @@ CREATE TABLE user_onboarding (
   id UUID PRIMARY KEY,
   user_id UUID NOT NULL REFERENCES users(id),
   tenant_id UUID NOT NULL REFERENCES tenants(id),
-  
+
   -- Progress
   current_step INTEGER DEFAULT 1,
   completed_steps TEXT[] DEFAULT '{}',
   started_at TIMESTAMP DEFAULT NOW(),
   completed_at TIMESTAMP,
-  
+
   -- Checklist
   checklist_progress INTEGER DEFAULT 0,
   checklist_items JSONB DEFAULT '[]',
-  
+
   -- Preferences
   skip_tutorials BOOLEAN DEFAULT FALSE,
   dismissed_tooltips TEXT[] DEFAULT '{}',
   watched_videos TEXT[] DEFAULT '{}',
-  
+
   -- Milestones
   unlocked_milestones TEXT[] DEFAULT '{}',
-  
+
   -- Metadata
   last_active_step VARCHAR(100),
   last_activity_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(user_id)
 );
 
@@ -560,7 +560,7 @@ CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at
 class OnboardingService {
   async initializeOnboarding(userId: string, tenantId: string): Promise<OnboardingState> {
     const checklist = this.generateChecklist(userId, tenantId);
-    
+
     const onboarding = await db.userOnboarding.create({
       userId,
       tenantId,
@@ -568,60 +568,60 @@ class OnboardingService {
       checklistItems: checklist,
       checklistProgress: 0,
     });
-    
+
     await this.trackEvent(userId, 'onboarding_started');
-    
+
     return onboarding;
   }
-  
+
   async completeStep(userId: string, step: string): Promise<void> {
     const onboarding = await db.userOnboarding.findByUser(userId);
-    
+
     await db.userOnboarding.update(userId, {
       completedSteps: [...onboarding.completedSteps, step],
       lastActiveStep: step,
       lastActivityAt: new Date(),
     });
-    
+
     await this.trackEvent(userId, 'onboarding_step_completed', { step });
-    
+
     // Check for milestone unlocks
     await this.checkMilestones(userId, step);
-    
+
     // Update checklist if applicable
     await this.updateChecklist(userId, step);
   }
-  
+
   async updateChecklist(userId: string, action: string): Promise<void> {
     const onboarding = await db.userOnboarding.findByUser(userId);
     const checklist = onboarding.checklistItems;
-    
+
     // Find matching checklist item
     const item = checklist.find(i => i.id === action);
     if (item && !item.completed) {
       item.completed = true;
       item.completedAt = new Date();
-      
+
       const progress = this.calculateProgress(checklist);
-      
+
       await db.userOnboarding.update(userId, {
         checklistItems: checklist,
         checklistProgress: progress,
       });
-      
+
       // Check if onboarding complete
       if (progress === 100) {
         await this.completeOnboarding(userId);
       }
     }
   }
-  
+
   private calculateProgress(checklist: OnboardingChecklistItem[]): number {
     const total = checklist.filter(i => i.required).length;
     const completed = checklist.filter(i => i.required && i.completed).length;
     return Math.round((completed / total) * 100);
   }
-  
+
   async checkMilestones(userId: string, event: string): Promise<void> {
     const milestones = {
       'workspace_created': 'first_workspace',
@@ -629,20 +629,20 @@ class OnboardingService {
       'email_sent': 'first_email',
       'email_opened': 'first_open',
     };
-    
+
     const milestone = milestones[event];
     if (milestone) {
       await this.unlockMilestone(userId, milestone);
     }
   }
-  
+
   async unlockMilestone(userId: string, milestone: string): Promise<void> {
     await db.userOnboarding.update(userId, {
       unlockedMilestones: db.raw('array_append(unlocked_milestones, ?)', [milestone]),
     });
-    
+
     await this.trackEvent(userId, 'milestone_unlocked', { milestone });
-    
+
     // Send notification
     await notificationService.send({
       userId,
@@ -661,7 +661,7 @@ class OnboardingService {
 // Onboarding wizard
 function OnboardingWizard() {
   const { onboarding, completeStep } = useOnboarding();
-  
+
   const steps = [
     { id: 'workspace', component: WorkspaceSetup },
     { id: 'domain', component: DomainSetup },
@@ -670,16 +670,16 @@ function OnboardingWizard() {
     { id: 'email-account', component: EmailAccountSetup },
     { id: 'complete', component: OnboardingComplete },
   ];
-  
+
   const currentStepComponent = steps[onboarding.currentStep - 1]?.component;
-  
+
   return (
     <div className="onboarding-wizard">
-      <ProgressBar 
-        current={onboarding.currentStep} 
-        total={steps.length} 
+      <ProgressBar
+        current={onboarding.currentStep}
+        total={steps.length}
       />
-      
+
       {currentStepComponent && React.createElement(currentStepComponent, {
         onComplete: () => completeStep(steps[onboarding.currentStep - 1].id),
       })}
@@ -691,9 +691,9 @@ function OnboardingWizard() {
 function OnboardingChecklist() {
   const { checklist, progress } = useOnboarding();
   const [collapsed, setCollapsed] = useState(false);
-  
+
   if (progress === 100) return null; // Hide when complete
-  
+
   return (
     <aside className="onboarding-checklist">
       <header onClick={() => setCollapsed(!collapsed)}>
@@ -701,7 +701,7 @@ function OnboardingChecklist() {
         <ProgressBar value={progress} />
         <span>{progress}%</span>
       </header>
-      
+
       {!collapsed && (
         <ul>
           {checklist.map(item => (
@@ -732,7 +732,7 @@ function OnboardingChecklist() {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - MVP Feature (Level 2)  
-**Target Release:** Q1 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - MVP Feature (Level 2)
+**Target Release:** Q1 2026
 **Owner:** Product Team

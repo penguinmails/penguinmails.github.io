@@ -212,7 +212,7 @@ async function healthCheck(serviceid) {
     alert('Instance no longer accessible');
     return;
   }
-  
+
   const instance = await getInstance(serviceid);
   if (instance.status !== 'active') {
     alert(`Instance status: ${instance.status}`);
@@ -229,7 +229,7 @@ async function healthCheck(serviceid) {
 async function collectMetrics(serviceid) {
   const charts = await getServerCharts(serviceid, '1h');
   await storeMetrics(serviceid, charts);
-  
+
   // Alert on thresholds
   if (charts.cpu > 80) {
     alert('High CPU usage');
@@ -263,12 +263,12 @@ async function analyzeLogs(serviceid) {
     start: 0,
     length: 100
   });
-  
+
   // Parse for errors
-  const errors = logs.data.filter(entry => 
+  const errors = logs.data.filter(entry =>
     entry[0] === 'error' || entry[4]
   );
-  
+
   if (errors.length > 0) {
     await alertErrors(serviceid, errors);
   }

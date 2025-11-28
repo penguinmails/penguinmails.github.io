@@ -101,18 +101,18 @@ Contact Information:
   {{phone}}             # +1-555-123-4567
   {{company}}           # Acme Inc
   {{job_title}}         # Marketing Director
-  
+
 Location:
   {{city}}              # San Francisco
   {{state}}             # California
   {{country}}           # United States
   {{timezone}}          # America/Los_Angeles
-  
+
 Account:
   {{lead_score}}        # 87
   {{created_at}}        # 2025-10-15
   {{last_activity}}     # 2025-11-24
-  
+
 Workspace:
   {{workspace_name}}    # PenguinMails
   {{workspace_url}}     # https://app.penguinmails.com
@@ -279,7 +279,7 @@ Standard Syntax:
   {{custom.industry}}
   {{custom.company_size}}
   {{custom.annual_revenue}}
-  
+
 Nested Custom Fields:
   {{custom.preferences.email_frequency}}
   {{custom.settings.notifications_enabled}}
@@ -341,7 +341,7 @@ Company Size Targeting:
 
 {% if (lead_score >= 75 and custom.account_type == "trial") or custom.is_vip == true %}
   🎁 Special offer just for you!
-  
+
   {% if custom.account_type == "trial" %}
     Upgrade now and get 20% off your first year!
   {% else %}
@@ -421,10 +421,10 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 ```text
 
-<img src="https://api.example.com/badge/{{first_name}}/{{lead_score}}" 
+<img src="https://api.example.com/badge/{{first_name}}/{{lead_score}}"
      alt="Your Score: {{lead_score}}">
 
-<img src="{{cdn_url}}/images/{{custom.industry}}-hero.jpg" 
+<img src="{{cdn_url}}/images/{{custom.industry}}-hero.jpg"
      alt="{{custom.industry}} Solutions">
 
 
@@ -659,23 +659,23 @@ CREATE TABLE template_variables (
   id UUID PRIMARY KEY,
   tenant_id UUID NOT NULL REFERENCES tenants(id),
   workspace_id UUID REFERENCES workspaces(id),
-  
+
   -- Variable definition
   variable_key VARCHAR(255) NOT NULL,
   variable_name VARCHAR(255),
   description TEXT,
-  
+
   -- Value
   default_value TEXT,
   variable_type VARCHAR(50),  -- string, number, boolean, date, url
-  
+
   -- Validation
   is_required BOOLEAN DEFAULT FALSE,
   validation_rules JSONB,
-  
+
   created_at TIMESTAMP DEFAULT NOW(),
   updated_at TIMESTAMP DEFAULT NOW(),
-  
+
   UNIQUE(tenant_id, workspace_id, variable_key)
 );
 
@@ -687,10 +687,10 @@ CREATE TABLE variable_usage (
   id UUID PRIMARY KEY,
   template_id UUID REFERENCES templates(id),
   variable_key VARCHAR(255),
-  
+
   usage_count INTEGER DEFAULT 0,
   last_used_at TIMESTAMP,
-  
+
   created_at TIMESTAMP DEFAULT NOW()
 );
 
@@ -722,24 +722,24 @@ class VariableParser {
     options: ParseOptions = {}
   ): Promise<string> {
     let parsed = templateContent;
-    
+
     // Parse merge tags
     parsed = await this.parseMergeTags(parsed, context, options);
-    
+
     // Parse conditional blocks
     parsed = await this.parseConditionals(parsed, context);
-    
+
     // Parse loops
     parsed = await this.parseLoops(parsed, context);
-    
+
     // Escape HTML if needed
     if (options.escapeHtml) {
       parsed = this.escapeHtml(parsed);
     }
-    
+
     return parsed;
   }
-  
+
   private async parseMergeTags(
     content: string,
     context: VariableContext,
@@ -747,20 +747,20 @@ class VariableParser {
   ): Promise<string> {
     // Match {{variable_name}} or {{variable_name | filter: "arg"}}
     const mergeTagRegex = /\{\{([^}]+)\}\}/g;
-    
+
     return content.replace(mergeTagRegex, (match, variable) => {
       const parts = variable.split('|').map(p => p.trim());
       const variableName = parts[0];
       const filters = parts.slice(1);
-      
+
       // Get variable value
       let value = this.getVariableValue(variableName, context);
-      
+
       // Apply filters
       for (const filter of filters) {
         value = this.applyFilter(value, filter);
       }
-      
+
       // Handle missing values
       if (value === null || value === undefined) {
         if (options.strictMode) {
@@ -768,16 +768,16 @@ class VariableParser {
         }
         return '';
       }
-      
+
       // Track usage
       if (options.trackUsage) {
         this.trackVariableUsage(variableName);
       }
-      
+
       return String(value);
     });
   }
-  
+
   private getVariableValue(
     variableName: string,
     context: VariableContext
@@ -785,7 +785,7 @@ class VariableParser {
     // Handle nested properties (e.g., "custom.industry")
     const parts = variableName.split('.');
     let value: any = context;
-    
+
     for (const part of parts) {
       if (value && typeof value === 'object') {
         value = value[part];
@@ -793,101 +793,101 @@ class VariableParser {
         return null;
       }
     }
-    
+
     return value;
   }
-  
+
   private applyFilter(value: any, filter: string): any {
     const [filterName, ...args] = filter.split(':').map(s => s.trim());
-    
+
     switch (filterName) {
       case 'default':
         return value || args[0]?.replace(/['"]/g, '');
-        
+
       case 'upcase':
         return String(value).toUpperCase();
-        
+
       case 'downcase':
         return String(value).toLowerCase();
-        
+
       case 'capitalize':
         return String(value).charAt(0).toUpperCase() + String(value).slice(1);
-        
+
       case 'titlecase':
-        return String(value).replace(/\w\S*/g, (txt) => 
+        return String(value).replace(/\w\S*/g, (txt) =>
           txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
         );
-        
+
       case 'truncate':
         const length = parseInt(args[0]) || 50;
-        return String(value).length > length 
+        return String(value).length > length
           ? String(value).substring(0, length) + '...'
           : value;
-        
+
       case 'date':
         const format = args[0]?.replace(/['"]/g, '') || 'YYYY-MM-DD';
         return this.formatDate(value, format);
-        
+
       case 'currency':
         const currency = args[0]?.replace(/['"]/g, '') || 'USD';
         return this.formatCurrency(value, currency);
-        
+
       case 'percentage':
         return `${(parseFloat(value) * 100).toFixed(1)}%`;
-        
+
       case 'round':
         return Math.round(parseFloat(value));
-        
+
       case 'number_with_delimiter':
         return parseFloat(value).toLocaleString();
-        
+
       default:
         return value;
     }
   }
-  
+
   private async parseConditionals(
     content: string,
     context: VariableContext
   ): Promise<string> {
     // Match {% if condition %} ... {% endif %}
     const conditionalRegex = /\{% if (.+?) %\}([\s\S]*?)\{% endif %\}/g;
-    
+
     return content.replace(conditionalRegex, (match, condition, body) => {
       // Parse elsif and else
       const parts = body.split(/\{% elsif (.+?) %\}|\{% else %\}/);
-      
+
       // Evaluate main condition
       if (this.evaluateCondition(condition, context)) {
         return parts[0];
       }
-      
+
       // Check elsif conditions
       for (let i = 1; i < parts.length; i += 2) {
         if (parts[i] && this.evaluateCondition(parts[i], context)) {
           return parts[i + 1] || '';
         }
       }
-      
+
       // Return else block if exists
       return parts[parts.length - 1] || '';
     });
   }
-  
+
   private evaluateCondition(
     condition: string,
     context: VariableContext
   ): boolean {
     // Parse condition (e.g., "lead_score >= 75")
     const operators = ['>=', '<=', '==', '!=', '>', '<', 'contains', 'not_contains'];
-    
+
     for (const op of operators) {
       if (condition.includes(op)) {
         const [left, right] = condition.split(op).map(s => s.trim());
-        
+
         const leftValue = this.getVariableValue(left, context);
         const rightValue = right.replace(/['"]/g, '');
-        
+
         switch (op) {
           case '==':
             return leftValue == rightValue;
@@ -908,28 +908,28 @@ class VariableParser {
         }
       }
     }
-    
+
     // Simple truthy check
     return !!this.getVariableValue(condition, context);
   }
-  
+
   private async parseLoops(
     content: string,
     context: VariableContext
   ): Promise<string> {
     // Match {% for item in items %} ... {% endfor %}
     const loopRegex = /\{% for (\w+) in (\w+)(?: limit: (\d+))? %\}([\s\S]*?)\{% endfor %\}/g;
-    
+
     return content.replace(loopRegex, (match, itemVar, arrayVar, limit, body) => {
       const array = this.getVariableValue(arrayVar, context);
-      
+
       if (!Array.isArray(array)) {
         return '';
       }
-      
+
       const limitNum = limit ? parseInt(limit) : array.length;
       const items = array.slice(0, limitNum);
-      
+
       return items.map((item, index) => {
         const loopContext = {
           ...context,
@@ -942,45 +942,45 @@ class VariableParser {
             length: items.length,
           },
         };
-        
+
         return this.parseMergeTags(body, loopContext, {});
       }).join('');
     });
   }
-  
+
   private formatDate(value: any, format: string): string {
     const date = new Date(value);
-    
+
     // Simple date formatting (use library like date-fns in production)
     const formats: Record<string, string> = {
       'YYYY-MM-DD': date.toISOString().split('T')[0],
-      'MMMM DD, YYYY': date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+      'MMMM DD, YYYY': date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
       }),
-      'MMM D, YYYY': date.toLocaleDateString('en-US', { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
+      'MMM D, YYYY': date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
       }),
-      'MM/DD/YY': date.toLocaleDateString('en-US', { 
-        year: '2-digit', 
-        month: '2-digit', 
-        day: '2-digit' 
+      'MM/DD/YY': date.toLocaleDateString('en-US', {
+        year: '2-digit',
+        month: '2-digit',
+        day: '2-digit'
       }),
     };
-    
+
     return formats[format] || date.toISOString();
   }
-  
+
   private formatCurrency(value: any, currency: string): string {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency,
     }).format(parseFloat(value));
   }
-  
+
   private escapeHtml(content: string): string {
     return content
       .replace(/&/g, '&amp;')
@@ -989,7 +989,7 @@ class VariableParser {
       .replace(/"/g, '&quot;')
       .replace(/'/g, '&#039;');
   }
-  
+
   private trackVariableUsage(variableName: string): void {
     // Track which variables are being used
     // Useful for analytics and cleanup
@@ -1005,22 +1005,22 @@ class VariableParser {
 // Parse template with test data
 app.post('/api/templates/:id/parse', authenticate, async (req, res) => {
   const { testData } = req.body;
-  
+
   const template = await db.templates.findById(req.params.id);
   const parser = new VariableParser();
-  
+
   const context: VariableContext = {
     contact: testData.contact || {},
     workspace: await db.workspaces.findById(template.workspaceId),
     customVariables: testData.customVariables || {},
   };
-  
+
   const parsed = await parser.parseTemplate(
     template.htmlContent,
     context,
     { escapeHtml: false }
   );
-  
+
   return res.json({ parsed });
 });
 
@@ -1034,11 +1034,11 @@ app.get('/api/templates/variables', authenticate, async (req, res) => {
     { key: 'lead_score', name: 'Lead Score', type: 'number' },
     // ... more standard variables
   ];
-  
+
   const customVariables = await db.templateVariables.findAll({
     where: { tenantId: req.user.tenantId },
   });
-  
+
   return res.json({
     standard: standardVariables,
     custom: customVariables,
@@ -1048,7 +1048,7 @@ app.get('/api/templates/variables', authenticate, async (req, res) => {
 // Create custom variable
 app.post('/api/templates/variables', authenticate, async (req, res) => {
   const { variableKey, variableName, defaultValue, variableType } = req.body;
-  
+
   const variable = await db.templateVariables.create({
     tenantId: req.user.tenantId,
     workspaceId: req.body.workspaceId,
@@ -1057,7 +1057,7 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
     defaultValue,
     variableType,
   });
-  
+
   return res.json(variable);
 });
 
@@ -1078,9 +1078,9 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 
 ---
 
-**Last Updated:** November 25, 2025  
-**Status:** Planned - High Priority (Level 2)  
-**Target Release:** Q2 2026  
+**Last Updated:** November 25, 2025
+**Status:** Planned - High Priority (Level 2)
+**Target Release:** Q2 2026
 **Owner:** Templates Team
 
 {% endraw %}
