@@ -58,9 +58,9 @@ cd penguinmails.github.io
 
 ```
 
-2. **Start development server:**
+1. **Start development server:**
 
-```
+```bash
 
 # Build Docker image (one-time setup)
 
@@ -78,14 +78,12 @@ cd penguinmails.github.io
 
    **Note:** The `jekyll build` command generates static files in `_site/`. Use `jekyll serve` for development with auto-reload at [http://localhost:4000](http://localhost:4000).
 
-3. **View the documentation:**
+1. **View the documentation:**
    Open [http://localhost:4000](http://localhost:4000)
 
 ### Common Commands
-
-```
+```bash
 # Rebuild without cache
-
 docker system prune -a && docker build -t penguinmails-docs .
 
 # Run linting checks
