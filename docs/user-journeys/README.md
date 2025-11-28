@@ -142,7 +142,6 @@ last_modified_date: "2025-11-24"
 level: "2"
 ---
 
-
 ```
 
 **Required Sections**:
@@ -296,7 +295,6 @@ User Journeys Hub → Core Journeys → Pain Points → Roadmap Priorities
 
 User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
 
-
 ```
 
 ### For Developers
@@ -307,7 +305,6 @@ User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
 
 User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Tasks
 
-
 ```
 
 ### For Marketing/Ops
@@ -317,7 +314,6 @@ User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Task
 ```text
 
 User Journeys Hub → Core Journeys → Success Metrics → Analytics
-
 
 ```
 

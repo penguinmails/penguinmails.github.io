@@ -71,7 +71,6 @@ As a [user persona],
 I want [functionality]
 so that [business value/user benefit].
 
-
 ```
 
 **Acceptance Criteria Framework**:
