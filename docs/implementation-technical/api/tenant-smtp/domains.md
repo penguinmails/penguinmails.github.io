@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### Get Tenant SMTP Configuration
 
@@ -25,7 +23,6 @@ persona: "Backend Developers"
 **Purpose**: Retrieve effective SMTP configuration and domain verification status.
 
 **Response**:
-
 
 ```json
 {
@@ -49,7 +46,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Add Domain
 
 **Method**: `POST`  
@@ -58,7 +54,6 @@ persona: "Backend Developers"
 
 **Request**:
 
-
 ```json
 {
   "domain": "marketing.example.com"
@@ -66,7 +61,6 @@ persona: "Backend Developers"
 
 
 ```
-
 
 ### Get DNS Records
 

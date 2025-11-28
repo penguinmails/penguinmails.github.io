@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### Get SMTP Status
 
@@ -25,7 +23,6 @@ persona: "Backend Developers"
 **Purpose**: Summarized operational health for the tenant's sending.
 
 **Response**:
-
 
 ```json
 {
@@ -40,7 +37,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get SMTP Metrics
 
 **Method**: `GET`  
@@ -49,11 +45,9 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `window`: e.g., `7d`
 
 **Response**:
-
 
 ```json
 {
@@ -69,4 +63,3 @@ persona: "Backend Developers"
 
 
 ```
-

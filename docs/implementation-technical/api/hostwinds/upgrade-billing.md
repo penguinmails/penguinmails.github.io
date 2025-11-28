@@ -15,14 +15,11 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Pricing and Plan Information
-
 
 ### get_price_list (Get Available Resources with Prices)
 
 **Resource Prices Options Object**:
-
 
 ```json
 {
@@ -63,20 +60,15 @@ persona: "Documentation Users"
 
 **Use Cases**:
 
-
 - Populate `vps_instances.approximate_cost` field
-
 
 - Cost planning and budgeting
 
-
 - Upgrade path analysis
-
 
 - Pricing page generation
 
 ---
-
 
 ### get_billingcycle_prices (Get Billing Cycle Pricing)
 
@@ -90,7 +82,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Upgrade Workflow (Two-Step Process)
 
 > [!IMPORTANT]
@@ -98,7 +89,6 @@ persona: "Documentation Users"
 >
 > 1. `upgrade_instance` - Creates the upgrade order and invoice
 > 2. `upgrade_server` - Applies the upgrade after invoice payment
-
 
 ### Step 1: upgrade_instance (Create Upgrade Order/Invoice)
 
@@ -113,14 +103,11 @@ persona: "Documentation Users"
 
 **Parameters**:
 
-
 - `rid` - Resource ID from `get_price_list`
-
 
 - `ram`, `cpu`, `disk`, `bandwidth` - For custom plans only
 
 ---
-
 
 ### Step 2: upgrade_server (Apply Upgrade to Server)
 
@@ -135,9 +122,7 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Upgrade Validation and Confirmation
-
 
 ### check_upgrade_order (Check Existing Upgrade Order)
 
@@ -151,7 +136,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ### check_upgrade_reboot (Check if Upgrade Requires Reboot)
 
 | Spec | Detail |
@@ -164,7 +148,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ### confirm_upgrade (Confirm Instance Upgrade)
 
 | Spec | Detail |
@@ -176,7 +159,6 @@ persona: "Documentation Users"
 | **Notes** | This action should be run when the instance status is **RESIZED**, typically following a successful `upgrade_server` call, especially if disk, RAM, or CPU changes required server migration. |
 
 ---
-
 
 ### revert_upgrade (Revert Post-Resize Upgrade)
 
@@ -191,9 +173,7 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Billing Cycle Management
-
 
 ### change_billing_cycle (Change Subscription Period)
 
@@ -208,32 +188,23 @@ persona: "Documentation Users"
 
 **Valid Billing Cycles**:
 
-
 - `hourly` (if enabled)
-
 
 - `monthly`
 
-
 - `quarterly`
-
 
 - `semiannually`
 
-
 - `annually`
 
-
 - `biennially`
-
 
 - `triennially`
 
 ---
 
-
 ## Service Level Management
-
 
 ### upgrade_to_managed (Upgrade to Managed Service)
 
@@ -248,7 +219,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ### downgrade_to_unmanaged (Downgrade to Unmanaged)
 
 | Spec | Detail |
@@ -262,45 +232,33 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Integration with PenguinMails
-
 
 ### Cost Modeling Workflow
 
 **Baseline Configuration**:
 
-
 - Default plan: Hostwinds Unmanaged Linux VPS 1 CPU / 2 GB / 50 GB / 2 TB at **$9.99/month**
-
 
 - IP cost: **$4.99/month per dedicated IP**
 
 **Automated Cost Tracking**:
 
-
 1. Call `get_price_list` on instance creation
-
 
 2. Normalize pricing to monthly equivalent
 
-
 3. Populate `vps_instances.approximate_cost`
 
-
 4. Reconcile monthly against Hostwinds invoices
-
 
 5. Update on upgrades or billing cycle changes
 
 **Database Integration**:
 
-
 - `vps_instances.approximate_cost` - Populated from pricing APIs
 
-
 - `smtp_ip_addresses.approximate_cost` - $4.99/month baseline
-
 
 - Periodic reconciliation against actual invoices
 
@@ -308,9 +266,7 @@ See [Infrastructure Overview](/docs/business/implementation/infrastructure-overv
 
 ---
 
-
 ## Upgrade Workflow Example
-
 
 ```javascript
 // Step 1: Check for existing upgrade orders
@@ -353,68 +309,47 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 
 ---
 
-
 ## Best Practices
-
 
 ### Upgrade Planning
 
-
 - Always check for existing upgrade orders first
-
 
 - Verify invoice payment before applying upgrades
 
-
 - Check reboot requirements and schedule accordingly
-
 
 - Test upgrade path in staging environment
 
-
 ### Cost Management
-
 
 - Query pricing regularly to detect changes
 
-
 - Normalize all pricing to monthly equivalent
-
 
 - Reconcile modeled costs with actual invoices monthly
 
-
 - Document pricing assumptions and constants
-
 
 ### Billing Optimization
 
-
 - Analyze cost savings for annual vs monthly billing
-
 
 - Consider managed vs unmanaged based on team capacity
 
-
 - Monitor upgrade costs vs new instance costs
-
 
 - Track total cost of ownership including labor
 
 ---
 
-
 ## Related Documentation
-
 
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
 
-
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management) - Instance operations
 
-
 - [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) - Cost modeling details
-
 
 - [Database Migration Guide](/docs/implementation-technical/database-infrastructure/operations/database-migration-guide) - Cost field implementation
 

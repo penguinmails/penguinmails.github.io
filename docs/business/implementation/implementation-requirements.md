@@ -15,14 +15,11 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Server Configuration Requirements
-
 
 ### Minimum Server Specifications by Volume
 
 **1K-10K emails/month**:
-
 
 ```bash
 CPU: 1 vCPU (2.0+ GHz), RAM: 1-2GB, Storage: 25-50GB SSD, Bandwidth: 1-2TB/month
@@ -32,7 +29,6 @@ CPU: 1 vCPU (2.0+ GHz), RAM: 1-2GB, Storage: 25-50GB SSD, Bandwidth: 1-2TB/month
 
 **10K-100K emails/month**:
 
-
 ```bash
 CPU: 1-2 vCPUs (2.4+ GHz), RAM: 2-4GB, Storage: 50-80GB SSD, Bandwidth: 2-4TB/month
 
@@ -40,7 +36,6 @@ CPU: 1-2 vCPUs (2.4+ GHz), RAM: 2-4GB, Storage: 50-80GB SSD, Bandwidth: 2-4TB/mo
 ```
 
 **100K-1M emails/month**:
-
 
 ```bash
 CPU: 2-4 vCPUs (3.0+ GHz), RAM: 4-8GB, Storage: 100-160GB SSD, Bandwidth: 4-6TB/month
@@ -50,18 +45,15 @@ CPU: 2-4 vCPUs (3.0+ GHz), RAM: 4-8GB, Storage: 100-160GB SSD, Bandwidth: 4-6TB/
 
 **1M+ emails/month**:
 
-
 ```bash
 CPU: 4-8+ vCPUs (3.2+ GHz), RAM: 8-16GB+, Storage: 160-320GB+ SSD, Bandwidth: 6-8TB+
 
 
 ```
 
-
 ### Core Software Stack
 
 **Postfix SMTP Server**:
-
 
 ```bash
 
@@ -78,7 +70,6 @@ sudo postconf -e 'smtpd_tls_security_level = may'
 
 **Dovecot IMAP/POP3**:
 
-
 ```bash
 sudo apt-get install dovecot-imapd dovecot-pop3d
 sudo systemctl enable dovecot && sudo systemctl start dovecot
@@ -88,7 +79,6 @@ sudo systemctl enable dovecot && sudo systemctl start dovecot
 
 **Security Components**:
 
-
 ```bash
 sudo apt-get install spamassassin clamav amavisd-new fail2ban
 
@@ -97,14 +87,11 @@ sudo apt-get install spamassassin clamav amavisd-new fail2ban
 
 ---
 
-
 ## DNS and Authentication Configuration
-
 
 ### Domain Authentication
 
 **SPF Record**:
-
 
 ```dns
 example.com. IN TXT "v=spf1 include:_spf.google.com include:sendgrid.net ~all"
@@ -113,7 +100,6 @@ example.com. IN TXT "v=spf1 include:_spf.google.com include:sendgrid.net ~all"
 ```
 
 **DKIM Configuration**:
-
 
 ```bash
 sudo opendkim-genkey -t -s mail -d example.com
@@ -124,18 +110,15 @@ sudo mv mail.private /etc/postfix/dkim/mail
 
 **DMARC Policy**:
 
-
 ```dns
 _dmarc.example.com. IN TXT "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@example.com"
 
 
 ```
 
-
 ### Firewall and Security
 
 **UFW Configuration**:
-
 
 ```bash
 sudo ufw allow 25/tcp sudo ufw allow 587/tcp
@@ -146,7 +129,6 @@ sudo ufw allow 465/tcp sudo ufw allow 995/tcp
 ```
 
 **Fail2ban Setup**:
-
 
 ```bash
 sudo tee /etc/fail2ban/jail.local << EOF
@@ -159,27 +141,19 @@ EOF
 
 ---
 
-
 ## Performance Monitoring and Optimization
-
 
 ### Key Performance Indicators
 
-
 - **Queue Size**: <100 messages for healthy system
-
 
 - **Processing Rate**: 100+ messages/minute for active systems
 
-
 - **Delivery Time**: <5 minutes for 95% of messages
-
 
 - **Bounce Rate**: <1% for well-maintained lists
 
-
 ### Email Queue Management
-
 
 ```bash
 
@@ -192,9 +166,7 @@ postqueue -f                  # Force processing
 
 ```
 
-
 ### Database Optimization
-
 
 ```sql
 SET GLOBAL innodb_buffer_pool_size = 2147483648;  -- 2GB
@@ -206,21 +178,17 @@ CREATE INDEX idx_email ON users(email);
 
 ---
 
-
 ## Progressive Disclosure Navigation
 
 **For strategic overview:**
-
 
 - [Infrastructure Overview](infrastructure-overview:1) - Strategic planning framework
 
 **For ESP analysis:**
 
-
 - [ESP Technical Analysis](esp-technical-analysis:1) - Detailed provider specifications
 
 **For business context:**
-
 
 - [Cost Analysis Overview](cost-analysis-overview:1) - Infrastructure cost analysis
 

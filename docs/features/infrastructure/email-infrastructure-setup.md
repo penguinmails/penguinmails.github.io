@@ -33,60 +33,43 @@ related_api:
 
 **Quick Access**: This feature enables automated provisioning and configuration of professional email infrastructure in under 5 minutes.
 
-
 ## Overview
 
 Email Infrastructure Setup provides end-to-end automation for creating production-ready email sending infrastructure, including VPS provisioning, SMTP server installation, DNS configuration, and security hardening.
 
-
 ### Key Value Proposition
-
 
 - **Speed**: Professional email infrastructure ready in < 5 minutes
 
-
 - **Automation**: Zero manual server configuration required
-
 
 - **Security**: Built-in SSL, SPF, DKIM, DMARC configuration
 
-
 - **Compliance**: GDPR/CCPA-ready infrastructure from day one
-
 
 - **Scale**: Support for multi-tenant architecture with workspace isolation
 
 ---
 
-
 ## Level 1: Quick Setup Guide
-
 
 ### What You Get
 
 Professional email infrastructure includes:
 
-
 1. **VPS Server**: Dedicated or shared virtual private server via Hostwind
-
 
 2. **SMTP Server**: MailU SMTP server pre-configured and secured
 
-
 3. **DNS Records**: Automated SPF, DKIM, DMARC record setup
-
 
 4. **SSL Certificates**: Let's Encrypt SSL/TLS certificates auto-installed
 
-
 5. **Email Accounts**: Initial mailbox creation with authentication
-
 
 ### 5-Minute Setup Process
 
-
 #### Step 1: Domain Verification
-
 
 ```
 
@@ -107,17 +90,13 @@ Professional email infrastructure includes:
 
 **Required Information:**
 
-
 - Domain name (e.g., `yourdomain.com`)
 
-
 - DNS provider access (for record creation)
-
 
 #### Step 2: Infrastructure Provisioning
 
 Once domain is verified, click **"Launch Infrastructure"**:
-
 
 ```
 
@@ -133,23 +112,17 @@ Once domain is verified, click **"Launch Infrastructure"**:
 
 **What Happens Behind the Scenes:**
 
-
 - VPS created with Ubuntu LTS + optimized email settings
-
 
 - MailU installed with production configuration
 
-
 - Port 25, 465, 587, 993 opened and secured
 
-
 - Fail2ban installed for brute-force protection
-
 
 #### Step 3: DNS Configuration
 
 System displays required DNS records:
-
 
 ```
 
@@ -181,9 +154,7 @@ TXT Record (DMARC):
 
 **Automation Option:** For supported DNS providers (Cloudflare, Route53, etc.), click **"Auto-Configure DNS"** to apply all records automatically.
 
-
 #### Step 4: Create Email Account
-
 
 ```
 
@@ -204,11 +175,9 @@ TXT Record (DMARC):
 
 **Result:** Email account ready to send/receive in 30 seconds.
 
-
 #### Step 5: Verification & Testing
 
 System automatically runs verification:
-
 
 ```
 
@@ -224,67 +193,49 @@ System automatically runs verification:
 
 **Test Email:** Send test email to verify configuration.
 
-
 ### Success Criteria
 
 Infrastructure setup is complete when:
 
-
 - ✅ All DNS records validated
-
 
 - ✅ SMTP server responding on ports 25, 465, 587
 
-
 - ✅ SSL certificate valid
 
-
 - ✅ Test email delivered successfully
-
 
 - ✅ Deliverability score > 80%
 
 ---
 
-
 ## Level 2: Advanced Configuration
 
-
 ### Infrastructure Customization
-
 
 #### VPS Configuration Options
 
 **Server Sizing:**
 
-
 - **Starter**: 1 CPU, 2GB RAM (up to 5K emails/day)
-
 
 - **Professional**: 2 CPU, 4GB RAM (up to 25K emails/day)
 
-
 - **Business**: 4 CPU, 8GB RAM (up to 100K emails/day)
-
 
 - **Enterprise**: Custom sizing for high-volume needs
 
 **Server Location:**
 
-
 - Choose geographic region for optimal deliverability
-
 
 - Consider GDPR data residency requirements
 
-
 - Multi-region deployment available (Enterprise)
-
 
 #### SMTP Server Optimization
 
 **Performance Tuning:**
-
 
 ```yaml
 
@@ -309,26 +260,19 @@ defer_transports: true
 
 **Security Hardening:**
 
-
 - TLS 1.2+ enforcement
-
 
 - Strong cipher suite configuration
 
-
 - SMTP authentication required
-
 
 - IP-based access restrictions (optional)
 
-
 - Rate limiting per account
-
 
 #### DNS Best Practices
 
 **SPF Configuration Strategies:**
-
 
 ```
 
@@ -352,17 +296,13 @@ v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
 
 **DKIM Key Rotation:**
 
-
 - Rotate DKIM keys quarterly for security
 
-
 - Support for multiple simultaneous keys
-
 
 - Automated rotation available (Enterprise)
 
 **DMARC Policy Progression:**
-
 
 ```
 
@@ -384,66 +324,47 @@ v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com
 
 ```
 
-
 ### Multi-Workspace Infrastructure
 
 For agencies managing multiple clients:
 
 **Workspace Isolation Options:**
 
-
 1. **Shared VPS** (Cost-effective):
-
 
    - Multiple domains on single VPS
 
-
    - Separate DKIM keys per domain
-
 
    - Shared IP reputation
 
-
    - Best for: Startups, small agencies
-
 
 2. **Dedicated VPS per Workspace** (Recommended):
 
-
    - Complete isolation between clients
-
 
    - Independent IP reputation
 
-
    - Custom server configuration per workspace
-
 
    - Best for: Agencies, enterprise clients
 
-
 3. **IP Pooling** (Enterprise):
-
 
    - Multiple IPs per VPS
 
-
    - Intelligent IP rotation
-
 
    - Dedicated IPs for high-volume senders
 
-
    - Best for: High-volume sending
 
-
 ### Monitoring & Maintenance
-
 
 #### Health Checks
 
 System performs automated monitoring:
-
 
 ```
 
@@ -466,37 +387,27 @@ Daily:
 
 ```
 
-
 #### Alerting
 
 Automated alerts for:
 
-
 - SMTP service downtime
-
 
 - DNS record changes or failures
 
-
 - SSL certificate expiration (30, 7, 1 day warnings)
-
 
 - IP blacklisting
 
-
 - Deliverability score drop > 10%
-
 
 - Disk space > 80% full
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Architecture Overview
-
 
 ```
 
@@ -546,11 +457,9 @@ Automated alerts for:
 
 ```
 
-
 ### Database Schema
 
 Infrastructure state tracking:
-
 
 ```sql
 -- Infrastructure tracking
@@ -639,14 +548,11 @@ CREATE TABLE email_accounts (
 
 ```
 
-
 ### API Endpoints
-
 
 #### Infrastructure Provisioning
 
 **POST** `/api/infrastructure/provision`
-
 
 ```typescript
 interface ProvisionInfrastructureRequest {
@@ -689,7 +595,6 @@ interface ProvisionInfrastructureResponse {
 ```
 
 **Implementation:**
-
 
 ```typescript
 async function provisionInfrastructure(req: Request): Promise<Response> {
@@ -763,11 +668,9 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
 
 ```
 
-
 #### DNS Validation
 
 **POST** `/api/infrastructure/{id}/validate-dns`
-
 
 ```typescript
 async function validateDNS(infrastructureId: string): Promise<ValidationResult> {
@@ -807,12 +710,9 @@ async function validateDNS(infrastructureId: string): Promise<ValidationResult> 
 
 ```
 
-
 ### Integration Points
 
-
 #### Hostwind API Integration
-
 
 ```typescript
 class HostwindClient {
@@ -843,11 +743,9 @@ class HostwindClient {
 
 ```
 
-
 #### DNS Provider Integration
 
 Support for automated DNS configuration:
-
 
 ```typescript
 interface DNSProviderAdapter {
@@ -867,9 +765,7 @@ class Route53DNSAdapter implements DNSProviderAdapter {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Scheduled job: Health monitoring
@@ -912,57 +808,39 @@ cron.schedule('0 0 * * *', async () => {
 
 ---
 
-
 ## Related Documentation
-
 
 ### Planning & Product
 
-
 - **[Product Roadmap](../../roadmap/product-roadmap.md)** - Infrastructure timeline (Q4 2025)
-
 
 - **[Technical Roadmap](../../roadmap/technical-roadmap.md)** - Infrastructure considerations
 
-
 - **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Level 1 core feature
-
 
 ### Related Features
 
-
 - **[Hostwind Management](./hostwind-management.md)** - VPS monitoring and operations
-
 
 - **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Email account provisioning
 
-
 - **[Domain Management](../domains/domain-management.md)** - DNS and domain configuration
-
 
 - **[Security Features](../compliance/security-features.md)** - SSL, SPF, DKIM, DMARC details
 
-
 - **[Multi-Tenant Architecture](./multi-tenant-architecture.md)** - Isolation and workspace management
-
 
 - **[Vault SSH Management](./vault-ssh-management.md)** - SSH key storage and rotation in Vault
 
-
 - **[SMTP Credentials Vault Storage](./vault-smtp-credentials.md)** - Secure SMTP credential management
-
 
 ### Technical Specifications
 
-
 - **[Infrastructure API](../../implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
-
 
 - **[Architecture Overview](../../technical/architecture/overview.md)** - System architecture
 
-
 ### Implementation
-
 
 - **[Epic 5: Infrastructure Management](../../../tasks/epic-5-infrastructure-management/)** - Implementation tasks
 

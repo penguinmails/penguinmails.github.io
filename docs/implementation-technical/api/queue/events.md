@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### Publish System Event
 
@@ -25,7 +23,6 @@ persona: "Backend Developers"
 **Purpose**: Publish a system event for processing and notification generation.
 
 **Request**:
-
 
 ```json
 {
@@ -45,7 +42,6 @@ persona: "Backend Developers"
 
 **Response**:
 
-
 ```json
 {
   "success": true,
@@ -59,7 +55,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Domain-Specific Events
 
 **Method**: `POST`  
@@ -68,11 +63,8 @@ persona: "Backend Developers"
 
 **Supported Domains**:
 
-
 - `system-alerts`
 
-
 - `business-metrics`
-
 
 - `operational-updates`

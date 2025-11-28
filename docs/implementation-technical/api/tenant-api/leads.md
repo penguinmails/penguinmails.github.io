@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Leads
 
@@ -26,23 +24,17 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `workspace` (string, required): Workspace slug
-
 
 - `status` (string, optional): Filter by status (new, contacted, replied, converted)
 
-
 - `search` (string, optional): Search by email or name
 
-
 - `limit` (integer, optional): Default 50
-
 
 - `offset` (integer, optional): Default 0
 
 **Response**:
-
 
 ```json
 {
@@ -69,7 +61,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Create Lead
 
 **Method**: `POST`  
@@ -77,7 +68,6 @@ persona: "Backend Developers"
 **Purpose**: Manually add a new lead.
 
 **Request**:
-
 
 ```json
 {
@@ -91,7 +81,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Lead Details
 
 **Method**: `GET`  
@@ -99,7 +88,6 @@ persona: "Backend Developers"
 **Purpose**: Get full lead profile and activity history.
 
 **Response**:
-
 
 ```json
 {
@@ -124,7 +112,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Update Lead
 
 **Method**: `PATCH`  
@@ -132,7 +119,6 @@ persona: "Backend Developers"
 **Purpose**: Update lead information or status.
 
 **Request**:
-
 
 ```json
 {
@@ -144,4 +130,3 @@ persona: "Backend Developers"
 
 
 ```
-

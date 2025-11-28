@@ -9,7 +9,6 @@ persona: "Documentation Users"
 
 This diagram reflects the current OLTP schema defined in [`schema-guide`](schema-guide).
 
-
 ```mermaid
 ---
 config:

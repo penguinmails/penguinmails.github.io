@@ -7,7 +7,6 @@ persona: "Documentation Users"
 
 # OLTP Schema Guide - Operational Database
 
-
 ## Strategic Alignment
 
 **Strategic Alignment**: This OLTP schema guide supports our enterprise infrastructure framework by providing comprehensive database schemas, multi-tenant design principles, and performance optimization strategies for the PenguinMails operational database.
@@ -20,100 +19,71 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Table Naming Standards
 
 **OLTP Tier Naming Conventions:**
 
-
 - **Core Entities**: No prefix, plural nouns (`users`, `companies`, `campaigns`)
-
 
 - **Junction Tables**: Singular compound names (`tenant_users`, `campaign_sequence_steps`)
 
-
 - **Configuration Tables**: Descriptive names (`user_preferences`, `tenant_config`)
-
 
 - **System Tables**: Prefixed with table type (`system_config`, `feature_flags`)
 
 **Table Name Examples:**
 
-
 - `users` - User identity and profiles
-
 
 - `tenants` - Tenant organizations
 
-
 - `companies` - Tenant workspaces
-
 
 - `domains` - Email sending domains
 
-
 - `campaigns` - Campaign definitions
-
 
 - `leads` - Contact database
 
-
 - `templates` - Email templates
 
-
 - `plans` - Subscription plans
-
 
 - `subscriptions` - Active tenant subscriptions
 
 ---
 
-
 ## Overview
 
 The **OLTP (Online Transaction Processing) Database** is PenguinMails' primary operational database designed for fast transactional operations, real-time data access, and primary business logic execution.
 
-
 ### Purpose & Characteristics
-
 
 - **Primary Focus**: Fast queries, quick inserts, operational metadata
 
-
 - **Performance**: Optimized for high-frequency operations and small record sizes
-
 
 - **Architecture**: Normalized for data integrity, indexed for speed
 
-
 - **Multi-Tenant**: Row Level Security (RLS) for complete tenant isolation
-
 
 ### Performance Strategy
 
-
 - **Denormalized Fields**: `tenant_id` on operational tables for fast filtering
-
 
 - **Index Coverage**: Covering indexes for common query patterns
 
-
 - **Connection Pooling**: Aggressive pooling for high-throughput operations
-
 
 - **Partitioning**: Consider date-based partitioning for large operational tables
 
 ---
 
-
 ## Core Multi-Tenant Infrastructure
-
 
 ### **NileDB-Managed Tables** (Authentication & User Management)
 
-
 #### **users** - User Identity & Profile
-
 
 ```sql
 CREATE TABLE users (
@@ -132,9 +102,7 @@ CREATE TABLE users (
 
 ```
 
-
 #### **tenants** - Tenant Organization
-
 
 ```sql
 CREATE TABLE tenants (
@@ -149,9 +117,7 @@ CREATE TABLE tenants (
 
 ```
 
-
 #### **tenant_users** - Multi-Tenant User Associations
-
 
 ```sql
 CREATE TABLE tenant_users (
@@ -170,15 +136,11 @@ CREATE TABLE tenant_users (
 
 ---
 
-
 ## Business Logic Tables
-
 
 ### **Company & Workspace Management**
 
-
 #### **companies** - Tenant Workspaces (Marketing Access)
-
 
 ```sql
 CREATE TABLE companies (
@@ -198,12 +160,9 @@ CREATE TABLE companies (
 
 ```
 
-
 ### **Domain Management**
 
-
 #### **domains** - Email Sending Domains
-
 
 ```sql
 CREATE TABLE domains (
@@ -230,11 +189,9 @@ CREATE TABLE domains (
 
 ```
 
-
 #### **DNS Records JSON Structure** (dns_records JSONB)
 
 The `dns_records` JSONB field stores per-record DNS configuration with lifecycle management:
-
 
 ```json
 {
@@ -299,42 +256,29 @@ The `dns_records` JSONB field stores per-record DNS configuration with lifecycle
 
 **DNS Record Field Meanings**:
 
-
 - `record_type`: DNS record type (SPF, DKIM, DMARC, MX, A, AAAA, CNAME)
-
 
 - `name`: DNS record name (@ for root, subdomain for others)
 
-
 - `value`: Expected DNS record value
-
 
 - `verification_status`: Current verification state (pending, verified, failed, error)
 
-
 - `last_verified_at`: Timestamp of last successful verification
-
 
 - `verification_attempts`: Number of verification attempts
 
-
 - `verification_error`: Error message from last failed verification
-
 
 - `managed_by`: Who manages the record ("platform" or "mailu")
 
-
 - `secret_ref`: Vault reference for DKIM private keys (platform-managed only)
-
 
 - `needs_deployment`: Flag for Mailu sync jobs to deploy DKIM keys
 
-
 - `source`: Source of record creation ("ui", "platform", "api")
 
-
 #### **email_accounts** - Email Account Configuration
-
 
 ```sql
 CREATE TABLE email_accounts (
@@ -356,12 +300,9 @@ CREATE TABLE email_accounts (
 
 ```
 
-
 ### **Lead Management**
 
-
 #### **leads** - Contact Database
-
 
 ```sql
 CREATE TABLE leads (
@@ -379,12 +320,9 @@ CREATE TABLE leads (
 
 ```
 
-
 ### **Template Management**
 
-
 #### **templates** - Email Templates
-
 
 ```sql
 CREATE TABLE templates (
@@ -401,9 +339,7 @@ CREATE TABLE templates (
 
 ```
 
-
 #### **Template Organization**
-
 
 ```sql
 -- Template folders for organization (UUID → BIGINT optimization)
@@ -449,9 +385,7 @@ CREATE TABLE template_tags (
 
 ```
 
-
 #### Eta Template Rendering Storage
-
 
 ```sql
 CREATE TABLE email_templates (
@@ -469,7 +403,6 @@ CREATE TABLE email_templates (
 
 ```
 
-
 ```sql
 CREATE TABLE template_dictionaries (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -486,9 +419,7 @@ CREATE INDEX idx_template_dictionaries_tenant ON template_dictionaries(tenant_id
 
 ---
 
-
 ### Campaign Execution System (OLTP Metadata)
-
 
 #### **campaign_sequence_steps** - Campaign Execution Orchestration
 
@@ -496,15 +427,11 @@ CREATE INDEX idx_template_dictionaries_tenant ON template_dictionaries(tenant_id
 
 ---
 
-
 ## Campaign Management
-
 
 ### **Campaign Orchestration**
 
-
 #### **campaigns** - Campaign Definitions
-
 
 ```sql
 CREATE TABLE campaigns (
@@ -523,9 +450,7 @@ CREATE TABLE campaigns (
 
 ```
 
-
 #### **campaign_sequence_steps** - Individual Campaign Steps
-
 
 ```sql
 CREATE TABLE campaign_sequence_steps (
@@ -554,26 +479,19 @@ CREATE TABLE campaign_sequence_steps (
 
 **Step Types:**
 
-
 - **email**: Send email using template
 
-
 - **wait**: Delay before next step
-
 
 - **condition**: Conditional logic based on lead behavior
 
 ---
 
-
 ## Billing & Subscription Management
-
 
 ### **Subscription Plans**
 
-
 #### **plans** - Subscription Plan Definitions
-
 
 ```sql
 CREATE TABLE plans (
@@ -605,9 +523,7 @@ CREATE TABLE plans (
 
 ```
 
-
 #### **subscriptions** - Active Tenant Subscriptions
-
 
 ```sql
 CREATE TABLE subscriptions (
@@ -628,9 +544,7 @@ CREATE TABLE subscriptions (
 
 ```
 
-
 #### **subscription_addons** - Additional Features
-
 
 ```sql
 CREATE TABLE subscription_addons (
@@ -648,9 +562,7 @@ CREATE TABLE subscription_addons (
 
 ```
 
-
 #### **payments** - Payment Records
-
 
 ```sql
 CREATE TABLE payments (
@@ -673,15 +585,11 @@ CREATE TABLE payments (
 
 ---
 
-
 ## Infrastructure Management
-
 
 ### **VPS & IP Management**
 
-
 #### **vps_instances** - VPS Server Instances
-
 
 ```sql
 CREATE TABLE vps_instances (
@@ -705,9 +613,7 @@ CREATE TABLE vps_instances (
 
 **Business Justification**: The `approximate_cost` field enables business leaders to track infrastructure costs per tenant for cost optimization and profitability analysis, supporting executive decision-making for resource allocation and pricing strategy.
 
-
 #### **smtp_ip_addresses** - SMTP IP Addresses
-
 
 ```sql
 CREATE TABLE smtp_ip_addresses (
@@ -729,9 +635,7 @@ CREATE TABLE smtp_ip_addresses (
 
 **Business Justification**: The `approximate_cost` field supports deliverability cost analysis and email service ROI calculations, enabling business leaders to optimize IP allocation and understand the true cost of email deliverability solutions.
 
-
 #### **domain_ip_assignments** - Domain-to-IP Mappings
-
 
 ```sql
 CREATE TABLE domain_ip_assignments (
@@ -752,15 +656,11 @@ CREATE TABLE domain_ip_assignments (
 
 ---
 
-
 ## Staff & Permissions Management
-
 
 ### **Staff System**
 
-
 #### **staff_members** - Staff User Mapping
-
 
 ```sql
 CREATE TABLE staff_members (
@@ -774,9 +674,7 @@ CREATE TABLE staff_members (
 
 ```
 
-
 #### **staff_roles** - Role Definitions
-
 
 ```sql
 CREATE TABLE staff_roles (
@@ -789,9 +687,7 @@ CREATE TABLE staff_roles (
 
 ```
 
-
 #### **staff_role_permissions** - Role Permissions
-
 
 ```sql
 CREATE TABLE staff_role_permissions (
@@ -804,9 +700,7 @@ CREATE TABLE staff_role_permissions (
 
 ```
 
-
 #### **permissions** - Permission Definitions
-
 
 ```sql
 CREATE TABLE permissions (
@@ -822,15 +716,11 @@ CREATE TABLE permissions (
 
 ---
 
-
 ## System Configuration & Settings
-
 
 ### **Configuration & Settings**
 
-
 #### **system_config** - System-Wide Configuration
-
 
 ```sql
 CREATE TABLE system_config (
@@ -849,9 +739,7 @@ CREATE TABLE system_config (
 
 ```
 
-
 #### **feature_flags** - Feature Flag Management
-
 
 ```sql
 CREATE TABLE feature_flags (
@@ -867,9 +755,7 @@ CREATE TABLE feature_flags (
 
 ```
 
-
 #### **user_preferences** - User Preferences
-
 
 ```sql
 CREATE TABLE user_preferences (
@@ -889,9 +775,7 @@ CREATE TABLE user_preferences (
 
 ```
 
-
 #### **tenant_config** - Tenant Configuration
-
 
 ```sql
 CREATE TABLE tenant_config (
@@ -915,9 +799,7 @@ CREATE TABLE tenant_config (
 
 ```
 
-
 #### **tenant_policies** - Tenant Security Policies
-
 
 ```sql
 CREATE TABLE tenant_policies (
@@ -942,12 +824,9 @@ CREATE TABLE tenant_policies (
 
 ---
 
-
 ## Performance Indexes
 
-
 ### **Critical OLTP Indexes**
-
 
 ```sql
 -- Multi-tenant filtering
@@ -972,12 +851,9 @@ CREATE INDEX idx_domain_ip_assignments_domain ON domain_ip_assignments(domain_id
 
 ---
 
-
 ## Security & RLS Policies
 
-
 ### **Row Level Security Implementation**
-
 
 ```sql
 -- Enable RLS on all multi-tenant tables
@@ -1026,56 +902,39 @@ CREATE POLICY tenant_policies_isolation ON tenant_policies
 
 ---
 
-
 ## External Analytics Integration
-
 
 ### **Monitoring & Observability**
 
 The following infrastructure and monitoring concerns have been externalized to specialized analytics platforms for better observability and product insights:
 
-
 #### **Connection Pool Monitoring**
-
 
 - **External Events**: `connection_pool_metrics`, `pool_utilization`, `connection_leaks`
 
-
 - **Tracking**: Connection pool performance, utilization rates, leak detection
-
 
 - **Platform**: External analytics platform (PostHog, Segment, or similar)
 
-
 - **Benefits**: Better visualization of database performance trends, alerting capabilities
-
 
 #### **Security Event Monitoring**
 
-
 - **External Events**: `security_incidents`, `authentication_failures`, `suspicious_activity`
-
 
 - **Tracking**: Security events, audit trails, incident patterns
 
-
 - **Platform**: External analytics platform with security focus
-
 
 - **Benefits**: Centralized security analytics, threat detection, compliance reporting
 
-
 #### **Infrastructure Metrics**
-
 
 - **External Events**: `system_performance`, `error_rates`, `resource_utilization`
 
-
 - **Tracking**: Application performance, error rates, system health
 
-
 - **Platform**: Infrastructure monitoring platform
-
 
 - **Benefits**: Unified monitoring dashboard, proactive alerting
 
@@ -1083,109 +942,75 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 ---
 
-
 ## Business Impact & Technical Excellence
-
 
 ### Revenue & Performance Intelligence
 
-
 - **Unified Billing Analytics**: `billing_analytics` table centralizes all tenant usage tracking with period-based aggregation
-
 
 - **Enhanced Plan Flexibility**: Explicit limits in `plans` table support enterprise pricing models
 
-
 - **Subscription Lifecycle**: `pending_plan_id` enables seamless plan upgrades/downgrades at billing cycle end
-
 
 - **Separate Billing Contacts**: `billing_contact_user_id` allows different billing emails from tenant accounts
 
-
 ### Operational Excellence Achievements
-
 
 - **4-Tier Architecture**: Clear separation between OLTP operations, content storage, analytics, and job processing
 
-
 - **Multi-Tenant Security**: Row-level security with NileDB-managed authentication using ARRAY-type roles
-
 
 - **Infrastructure Intelligence**: `admin_system_events` provides comprehensive system monitoring and alerting
 
-
 - **Queue-Driven Processing**: Reliable job processing with retry logic and dead letter queues
-
 
 ### Technical Architecture Excellence
 
-
 - **Data Collection Strategy**:
-
 
   - **OLTP Layer**: Fast transactional operations for real-time business logic (users, campaigns, leads)
 
-
   - **Content Layer**: Heavy email storage with retention policies and compression
 
-
   - **Analytics Layer**: Aggregated metrics with OLAP optimization for dashboards
-
 
   - **Queue Layer**: Asynchronous processing with Redis + PostgreSQL hybrid storage
 
 ---
 
-
 ## Success Metrics & Validation
-
 
 ### Performance Targets
 
-
 - **OLTP Query Performance**: 60-80% improvement in campaign operations
-
 
 - **Content DB Throughput**: Handle 100K+ message analytics operations/hour
 
-
 - **Cross-Database Queries**: <500ms for campaign + message analytics
-
 
 - **Queue Integration**: <1 second for email to email_messages creation
 
 ---
 
-
 ## Related Documents
-
 
 ### Supporting Documentation
 
-
 - [Database Infrastructure](/docs/implementation-technical/database-infrastructure) - Database and infrastructure overview
-
 
 - [Architecture System](/docs/implementation-technical/architecture-system/architecture-overview) - System architecture decisions
 
-
 - [Development Guidelines](/docs/implementation-technical/development-guidelines) - Development standards
-
 
 - [Quality Assurance](/docs/business/quality-assurance) - Testing protocols and procedures
 
-
 ### Business Integration
-
 
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business alignment
 
-
 - [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
 
-
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
-
 
 - [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
 

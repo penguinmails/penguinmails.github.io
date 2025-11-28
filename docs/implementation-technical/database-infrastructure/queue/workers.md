@@ -19,48 +19,35 @@ related_docs:
 
 # Worker Processes
 
-
 ## Overview
 
 Worker processes consume jobs from Redis queues and execute the actual business logic. These stateless services provide horizontal scalability, fault tolerance, and comprehensive error handling for reliable job processing.
 
-
 ## Worker Architecture
-
 
 ### Core Design Principles
 
 **Stateless Design**:
 
-
 - Workers maintain no persistent state between jobs
-
 
 - All job data retrieved from Redis and PostgreSQL
 
-
 - Can be scaled up/down without data loss
-
 
 - Multiple workers can process same queue type
 
 **Fault Tolerance**:
 
-
 - Automatic job reassignment on worker failure
-
 
 - Timeout-based job recovery
 
-
 - Graceful shutdown with job completion
-
 
 - Dead letter queue for permanent failures
 
-
 ### Worker Lifecycle Management
-
 
 ```pseudo
 class QueueWorker {
@@ -127,12 +114,9 @@ class QueueWorker {
 
 ```
 
-
 ## Job Processing Workflow
 
-
 ### Core Processing Logic
-
 
 ```pseudo
 async function processJob(job: Job, queueName: string) {
@@ -173,9 +157,7 @@ async function processJob(job: Job, queueName: string) {
 
 ```
 
-
 ### Job Execution by Queue Type
-
 
 ```pseudo
 async function executeJobLogic(payload: JobPayload, queueName: string) {
@@ -206,12 +188,9 @@ async function executeJobLogic(payload: JobPayload, queueName: string) {
 
 ```
 
-
 ## Specialized Job Handlers
 
-
 ### Email Processing
-
 
 ```pseudo
 async function processIncomingEmail(payload) {
@@ -271,9 +250,7 @@ async function processIncomingEmail(payload) {
 
 ```
 
-
 ### Email Sending
-
 
 ```pseudo
 async function processEmailSending(payload) {
@@ -331,9 +308,7 @@ async function processEmailSending(payload) {
 
 ```
 
-
 ### Warmup Processing
-
 
 ```pseudo
 async function processWarmupJob(payload) {
@@ -368,9 +343,7 @@ async function processWarmupJob(payload) {
 
 ```
 
-
 ### Bounce Processing
-
 
 ```pseudo
 async function processBounceJob(payload) {
@@ -422,12 +395,9 @@ async function processBounceJob(payload) {
 
 ```
 
-
 ## Error Handling and Retry Logic
 
-
 ### Job Failure Handling
-
 
 ```pseudo
 async function handleJobFailure(job: Job, error: Error) {
@@ -470,9 +440,7 @@ async function handleJobFailure(job: Job, error: Error) {
 
 ```
 
-
 ### Exponential Backoff Calculation
-
 
 ```pseudo
 function calculateBackoffDelay(attemptNumber: number): number {
@@ -498,12 +466,9 @@ function calculateBackoffDelay(attemptNumber: number): number {
 
 ```
 
-
 ## Job Status Management
 
-
 ### Status Updates
-
 
 ```pseudo
 async function updateJobStatus(jobId: string, status: JobStatus, additionalData: any = {}) {
@@ -543,12 +508,9 @@ async function markJobCompleted(jobId: string, result: any) {
 
 ```
 
-
 ## Performance Optimization
 
-
 ### Batch Processing
-
 
 ```pseudo
 // Process multiple jobs in batch for efficiency
@@ -582,12 +544,9 @@ async function processBatch(jobs: Job[]) {
 
 ```
 
-
 ## Worker Scaling and Load Distribution
 
-
 ### Horizontal Scaling Strategy
-
 
 ```pseudo
 // Auto-scaling based on queue depth
@@ -626,9 +585,7 @@ function getQueueList(): string[] {
 
 ```
 
-
 ### Graceful Shutdown
-
 
 ```pseudo
 async function gracefulShutdown() {
@@ -658,12 +615,9 @@ async function gracefulShutdown() {
 
 ```
 
-
 ## Monitoring and Health Checks
 
-
 ### Worker Health Monitoring
-
 
 ```pseudo
 async function getWorkerHealth() {
@@ -689,26 +643,19 @@ function generateWorkerId(): string {
 
 ```
 
-
 ## Conclusion
 
 Worker processes provide:
 
-
 - **Reliable Job Processing**: Comprehensive error handling and retry logic
-
 
 - **Horizontal Scalability**: Stateless design supports unlimited worker instances
 
-
 - **Priority Handling**: Multi-queue consumption with proper priority ordering
-
 
 - **Fault Tolerance**: Graceful shutdown and failure recovery mechanisms
 
-
 - **Performance Optimization**: Batch processing and memory management
-
 
 - **Monitoring Integration**: Real-time health and performance metrics
 

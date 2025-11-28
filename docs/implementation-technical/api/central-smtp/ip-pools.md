@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List SMTP IPs
 
@@ -26,17 +24,13 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `status`: `active|warming|blocked|retired`
 
-
 - `pool`: pool identifier
-
 
 - `reputation_band`: `excellent|good|watch|bad`
 
 **Response**:
-
 
 ```json
 {
@@ -56,13 +50,11 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Single IP
 
 **Method**: `GET`  
 **URL**: `/api/v1/smtp/admin/ips/{ipId}`  
 **Purpose**: Detailed IP information.
-
 
 ### Update IP Metadata
 
@@ -71,7 +63,6 @@ persona: "Backend Developers"
 **Purpose**: Update IP status or pool assignment. **Restricted**.
 
 **Request**:
-
 
 ```json
 {
@@ -82,7 +73,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### List Pools
 
 **Method**: `GET`  
@@ -90,7 +80,6 @@ persona: "Backend Developers"
 **Purpose**: List all IP pools.
 
 **Response**:
-
 
 ```json
 {
@@ -109,13 +98,11 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Pool Details
 
 **Method**: `GET`  
 **URL**: `/api/v1/smtp/admin/pools/{poolId}`  
 **Purpose**: Detailed pool configuration and metrics.
-
 
 ### Update Pool Configuration
 

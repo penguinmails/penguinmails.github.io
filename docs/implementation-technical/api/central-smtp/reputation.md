@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### IP Health Summary
 
@@ -26,9 +24,7 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `window`: e.g., `24h`
-
 
 ### Pool Reputation Overview
 
@@ -37,6 +33,5 @@ persona: "Backend Developers"
 **Purpose**: Aggregate reputation metrics per pool.
 
 **Query Parameters**:
-
 
 - `window`: e.g., `7d`

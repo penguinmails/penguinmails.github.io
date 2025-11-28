@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Workspaces
 
@@ -25,7 +23,6 @@ persona: "Backend Developers"
 **Purpose**: List all workspaces the current user has access to.
 
 **Response**:
-
 
 ```json
 {
@@ -47,7 +44,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Create Workspace
 
 **Method**: `POST`  
@@ -55,7 +51,6 @@ persona: "Backend Developers"
 **Purpose**: Create a new workspace (Agency or Tenant).
 
 **Request**:
-
 
 ```json
 {
@@ -67,7 +62,6 @@ persona: "Backend Developers"
 ```
 
 **Response**:
-
 
 ```json
 {
@@ -82,7 +76,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Workspace Details
 
 **Method**: `GET`  
@@ -90,7 +83,6 @@ persona: "Backend Developers"
 **Purpose**: Get detailed information about a specific workspace.
 
 **Response**:
-
 
 ```json
 {
@@ -116,4 +108,3 @@ persona: "Backend Developers"
 
 
 ```
-

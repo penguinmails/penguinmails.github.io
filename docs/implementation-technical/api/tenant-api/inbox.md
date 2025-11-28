@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Threads
 
@@ -26,17 +24,13 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `workspace` (string, required): Workspace slug
 
-
 - `status` (string, optional): `open` (default), `archived`, `snoozed`
-
 
 - `limit` (integer, optional): Default 20
 
 **Response**:
-
 
 ```json
 {
@@ -60,7 +54,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Thread Details
 
 **Method**: `GET`  
@@ -68,7 +61,6 @@ persona: "Backend Developers"
 **Purpose**: Retrieve full conversation history for a thread.
 
 **Response**:
-
 
 ```json
 {
@@ -96,7 +88,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Reply to Thread
 
 **Method**: `POST`  
@@ -104,7 +95,6 @@ persona: "Backend Developers"
 **Purpose**: Send a reply to a thread.
 
 **Request**:
-
 
 ```json
 {
@@ -115,7 +105,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Update Thread Status
 
 **Method**: `PATCH`  
@@ -123,7 +112,6 @@ persona: "Backend Developers"
 **Purpose**: Archive, snooze, or mark as read.
 
 **Request**:
-
 
 ```json
 {
@@ -133,4 +121,3 @@ persona: "Backend Developers"
 
 
 ```
-

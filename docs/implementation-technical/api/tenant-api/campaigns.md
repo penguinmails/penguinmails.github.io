@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Campaigns
 
@@ -26,20 +24,15 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `workspace` (string, required): Workspace slug
-
 
 - `status` (string, optional): Filter by status (draft, active, paused, completed)
 
-
 - `limit` (integer, optional): Default 20
-
 
 - `offset` (integer, optional): Default 0
 
 **Response**:
-
 
 ```json
 {
@@ -68,7 +61,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Create Campaign
 
 **Method**: `POST`  
@@ -76,7 +68,6 @@ persona: "Backend Developers"
 **Purpose**: Create a new campaign draft.
 
 **Request**:
-
 
 ```json
 {
@@ -89,7 +80,6 @@ persona: "Backend Developers"
 ```
 
 **Response**:
-
 
 ```json
 {
@@ -104,7 +94,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Campaign Details
 
 **Method**: `GET`  
@@ -112,7 +101,6 @@ persona: "Backend Developers"
 **Purpose**: Get full details of a campaign, including sequence and settings.
 
 **Response**:
-
 
 ```json
 {
@@ -139,7 +127,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Update Campaign
 
 **Method**: `PATCH`  
@@ -147,7 +134,6 @@ persona: "Backend Developers"
 **Purpose**: Update campaign details. Only allowed if campaign is not 'completed'.
 
 **Request**:
-
 
 ```json
 {
@@ -160,7 +146,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Launch Campaign
 
 **Method**: `POST`  
@@ -169,7 +154,6 @@ persona: "Backend Developers"
 
 **Request**:
 
-
 ```json
 {
   "action": "start" // or "resume", "pause"
@@ -177,4 +161,3 @@ persona: "Backend Developers"
 
 
 ```
-

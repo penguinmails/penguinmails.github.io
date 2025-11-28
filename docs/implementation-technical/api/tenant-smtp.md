@@ -15,16 +15,13 @@ persona: "Backend Developers, Frontend Developers"
 
 ---
 
-
 ## Overview
 
 The Tenant SMTP API allows tenants to manage their sending domains and view their specific deliverability performance.
 
 ---
 
-
 ## Endpoint Categories
-
 
 ### 1. Domain Management
 
@@ -34,12 +31,9 @@ Manage sending domains and DNS verification.
 
 **Key Endpoints**:
 
-
 - `GET /api/v1/tenant/smtp/config` - View config
 
-
 - `POST /api/v1/tenant/smtp/domains` - Add domain
-
 
 ### 2. Health & Metrics
 
@@ -49,14 +43,11 @@ View sending status and performance metrics.
 
 **Key Endpoints**:
 
-
 - `GET /api/v1/tenant/smtp/status` - Operational status
-
 
 - `GET /api/v1/tenant/smtp/metrics` - Deliverability stats
 
 ---
-
 
 ## Authentication
 

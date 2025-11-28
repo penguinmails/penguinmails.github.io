@@ -15,15 +15,12 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Error Handling and Logging
-
 
 ### Critical: Check the `result` Field
 
 > [!CAUTION]
 > **HTTP 200 Does Not Mean Success**: Hostwinds API returns HTTP 200 for both successful and failed requests. Always check the `result` field in the response body.
-
 
 ```javascript
 const response = await fetch(HOSTWINDS_API_URL, {
@@ -51,11 +48,9 @@ if (response.status === 200) {
 
 ---
 
-
 ### Error Response Handling
 
 **Standard Error Format**:
-
 
 ```json
 [
@@ -72,59 +67,41 @@ if (response.status === 200) {
 
 **Error Handling Strategy**:
 
-
 1. **Prioritize the `result` and `message` Fields**:
-
 
    - Always check if `result === "error"`
 
-
    - Use the `message` field for human-readable debugging
-
 
    - Log the full error object for troubleshooting
 
-
 2. **Handling Proprietary Error Codes**:
-
 
    - Log the internal `ERROR` code for Hostwinds support reference
 
-
    - **Do not** use this code to drive automation logic
-
 
    - Error codes may change without notice
 
-
 3. **Client vs. Server Errors**:
-
 
    - **Client Data Errors**: Invalid input (e.g., "invalid serviceid", "Location Id is invalid")
 
-
      - **Do not retry** - Fix the input data
-
 
      - Log the error and alert developers
 
-
    - **Transient Errors**: Network issues or temporary server problems
-
 
      - **Implement exponential backoff**
 
-
      - **Retry up to 3 times**
-
 
      - Log retry attempts
 
 ---
 
-
 ### Logging Best Practices
-
 
 ```javascript
 class HostwindsAPILogger {
@@ -174,15 +151,12 @@ class HostwindsAPILogger {
 
 ---
 
-
 ## Workflow and State Management
-
 
 ### Service ID Validation
 
 > [!IMPORTANT]
 > **Always validate service IDs** before executing instance-specific operations.
-
 
 ```javascript
 async function safeInstanceOperation(serviceid, operation) {
@@ -207,30 +181,23 @@ async function safeInstanceOperation(serviceid, operation) {
 
 ---
 
-
 ### Asynchronous Operation Handling
 
 Many Hostwinds operations are asynchronous. The success response only means the task was **queued**, not completed.
 
 **Operations Requiring Polling**:
 
-
 - `add_instance` - Server creation
-
 
 - `recreate` - Server recreation
 
-
 - `reinstall_instance` - OS reinstall
 
-
 - `upgrade_server` - Resource upgrades
-
 
 - `regenerate_networking` - Network rebuild
 
 **Polling Strategy**:
-
 
 ```javascript
 async function pollInstanceStatus(serviceid, expectedStatus, options = {}) {
@@ -280,12 +247,10 @@ function sleep(ms) {
 
 ---
 
-
 ### Billing Workflow (Two-Step Process)
 
 > [!WARNING]
 > **Do not apply upgrades before invoice payment**. The two-step upgrade process requires invoice payment between steps.
-
 
 ```javascript
 async function upgradeInstanceWorkflow(serviceid, rid) {
@@ -323,9 +288,7 @@ async function upgradeInstanceWorkflow(serviceid, rid) {
 
 ---
 
-
 ## Security and Efficiency
-
 
 ### Secure Credential Storage
 
@@ -334,9 +297,7 @@ async function upgradeInstanceWorkflow(serviceid, rid) {
 
 **Recommended Approaches**:
 
-
 1. **Environment Variables**:
-
 
 ```javascript
 // .env file (never commit this)
@@ -351,9 +312,7 @@ if (!apiKey) {
 
 ```
 
-
 1. **Secrets Manager** (AWS, Azure, GCP):
-
 
 ```javascript
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager');
@@ -369,9 +328,7 @@ async function getHostwindsAPIKey() {
 
 ```
 
-
 1. **Encrypted Configuration**:
-
 
 ```javascript
 const crypto = require('crypto');
@@ -388,11 +345,9 @@ function decryptAPIKey(encryptedKey, masterKey) {
 
 ---
 
-
 ### Input Validation
 
 **Validate all inputs** before sending to Hostwinds API to avoid common errors.
-
 
 ```javascript
 class HostwindsInputValidator {
@@ -441,11 +396,9 @@ class HostwindsInputValidator {
 
 ---
 
-
 ### Rate Limiting
 
 **Implement rate limiting** to prevent hitting Hostwinds API limits and causing transient errors.
-
 
 ```javascript
 class RateLimiter {
@@ -488,12 +441,9 @@ async function callHostwindsAPI(action, params) {
 
 ---
 
-
 ## Retry and Resilience Patterns
 
-
 ### Exponential Backoff
-
 
 ```javascript
 async function exponentialBackoff(fn, options = {}) {
@@ -552,9 +502,7 @@ function isClientError(error) {
 
 ---
 
-
 ### Circuit Breaker Pattern
-
 
 ```javascript
 class CircuitBreaker {
@@ -606,12 +554,9 @@ class CircuitBreaker {
 
 ---
 
-
 ## Integration Patterns
 
-
 ### Complete Automation Example
-
 
 ```javascript
 class HostwindsAutomation {
@@ -697,57 +642,41 @@ class HostwindsAutomation {
 
 ---
 
-
 ## Monitoring and Observability
-
 
 ### Metrics to Track
 
 **API Performance**:
 
-
 - Request latency (p50, p95, p99)
-
 
 - Error rate by action
 
-
 - Retry rate
-
 
 - Circuit breaker state changes
 
 **Business Metrics**:
 
-
 - Instance creation success rate
-
 
 - Average provisioning time
 
-
 - Cost per instance
-
 
 - API call volume by action
 
 **Operational Metrics**:
 
-
 - Failed validations
-
 
 - Timeout rate
 
-
 - Rate limit hits
-
 
 - Polling duration
 
-
 ### Example Metrics Collection
-
 
 ```javascript
 class MetricsCollector {
@@ -796,21 +725,15 @@ class MetricsCollector {
 
 ---
 
-
 ## Related Documentation
-
 
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
 
-
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management ) - Instance operations
-
 
 - [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking ) - IP and network management
 
-
 - [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring ) - Monitoring and diagnostics
-
 
 - [Development Standards](/implementation-technical/development-guidelines/README.md - General development best practices
 

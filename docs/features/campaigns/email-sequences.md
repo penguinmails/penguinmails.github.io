@@ -29,45 +29,33 @@ related_tasks:
 
 **Quick Access**: Build sophisticated automated email journeys with conditional logic, behavioral triggers, and dynamic content adaptation.
 
-
 ## Overview
 
 Email Sequences are the engine behind automated relationship building. Unlike simple autoresponders, PenguinMails sequences are dynamic workflows that adapt based on recipient behavior. Whether it's a welcome series, a sales nurture flow, or a re-engagement loop, sequences ensure the right message reaches the right person at the right time.
 
-
 ### Key Capabilities
-
 
 - **Visual Workflow Builder**: Design complex sequences with a drag-and-drop interface
 
-
 - **Conditional Branching**: Route contacts based on opens, clicks, replies, or data changes
-
 
 - **Dynamic Delays**: Wait for specific times, days of the week, or until an event occurs
 
-
 - **Behavioral Triggers**: Start, stop, or jump to steps based on user actions
 
-
 - **A/B Testing per Step**: Optimize individual emails within a sequence
-
 
 - **Goal Tracking**: Define and track conversion goals for each sequence
 
 ---
 
-
 ## Level 1: Quick Start Guide
 
-
 ### Create Your First Sequence
-
 
 #### Step 1: Define the Trigger
 
 Every sequence starts with an entry point.
-
 
 ```
 
@@ -89,11 +77,9 @@ Sequence Settings:
 
 ```
 
-
 #### Step 2: Add Email Steps
 
 **Build a 3-Email Flow:**
-
 
 ```
 
@@ -130,11 +116,9 @@ Sequence Settings:
 
 ```
 
-
 #### Step 3: Configure Delays
 
 **Smart Waiting:**
-
 
 ```
 
@@ -154,11 +138,9 @@ Delay Settings (Step 2):
 
 ```
 
-
 #### Step 4: Activate
 
 **Launch Checklist:**
-
 
 ```
 
@@ -174,19 +156,15 @@ Delay Settings (Step 2):
 
 ---
 
-
 ## Level 2: Advanced Sequences
-
 
 ### Conditional Branching
 
 Create adaptive paths based on recipient engagement.
 
-
 #### Engagement-Based Logic
 
 **Scenario**: If they clicked the "Demo" link, fast-track them to sales. If not, nurture them with case studies.
-
 
 ```mermaid
 graph TD
@@ -200,7 +178,6 @@ graph TD
 ```
 
 **Configuration:**
-
 
 ```yaml
 step_config:
@@ -218,9 +195,7 @@ step_config:
 
 ```
 
-
 ### Dynamic Delays & Triggers
-
 
 #### "Wait Until" Logic
 
@@ -228,15 +203,11 @@ Instead of fixed time delays, wait for specific conditions.
 
 **Examples:**
 
-
 1. **Wait until Monday**: Ensure the next email hits the inbox at the start of the week.
-
 
 2. **Wait until Event**: Pause the sequence until the user logs in or visits a pricing page.
 
-
 3. **Wait until Field Update**: Wait until the "Company Size" field is enriched.
-
 
 ```yaml
 delay_config:
@@ -253,14 +224,11 @@ delay_config:
 
 ```
 
-
 ### Exit & Re-enrollment Rules
-
 
 #### Goal-Based Exits
 
 Stop the sequence immediately when the objective is met.
-
 
 ```
 
@@ -281,20 +249,15 @@ Goal Definition:
 
 ```
 
-
 #### Re-enrollment Settings
 
 Control if and when a contact can restart a sequence.
 
-
 - **Never**: One-time journey (e.g., Welcome Series).
-
 
 - **Always**: Transactional flows (e.g., Order Confirmation).
 
-
 - **After Delay**: Recurring flows (e.g., "It's been a while" re-engagement, allowed once every 90 days).
-
 
 ### Sequence Templates
 
@@ -302,23 +265,17 @@ Save complex workflows as reusable blueprints.
 
 **Standard Templates:**
 
-
 - **SaaS Trial**: Welcome -> Feature Highlight -> Case Study -> Expiry Warning -> Offer.
 
-
 - **Webinar Promo**: Invite -> Reminder (1 week) -> Reminder (1 day) -> Link (1 hour) -> Replay.
-
 
 - **Cold Outreach**: Value Prop -> Follow-up 1 -> Follow-up 2 -> Breakup.
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Sequences Table
@@ -412,11 +369,9 @@ CREATE INDEX idx_contact_sequences_execution ON contact_sequences(status, next_e
 
 ```
 
-
 ### Sequence Engine (TypeScript)
 
 The engine processes active enrollments, evaluates conditions, and executes steps.
-
 
 ```typescript
 // Core Engine Logic
@@ -503,36 +458,25 @@ class SequenceEngine {
 
 ```
 
-
 ### Background Jobs
-
 
 1. **`sequence-processor`**: Runs every minute. Queries `contact_sequences` for records where `next_execution_at <= NOW()` and `status = 'active'`. Executes the logic for the current step.
 
-
 2. **`trigger-listener`**: Listens for system events (e.g., `segment.contact_added`, `email.opened`). Checks if any active sequences have "Wait Until" steps waiting for this event or if any new sequences should be triggered.
-
 
 3. **`goal-monitor`**: Periodically or event-driven check to see if active contacts have met the exit goal conditions.
 
-
 ### API Endpoints
-
 
 - `POST /api/sequences`: Create a new sequence definition.
 
-
 - `GET /api/sequences/{id}`: Retrieve full sequence graph.
-
 
 - `PATCH /api/sequences/{id}`: Update configuration (versioned).
 
-
 - `POST /api/sequences/{id}/enroll`: Manually enroll a contact or segment.
 
-
 - `GET /api/sequences/{id}/analytics`: Get aggregate stats (conversion rates per step).
-
 
 - `POST /api/sequences/{id}/pause`: Pause all active enrollments.
 

@@ -26,43 +26,31 @@ related_tasks:
 
 **Quick Access**: Schedule campaigns with precision using timezone-aware scheduling, AI-powered send-time optimization, and calendar integration for maximum engagement.
 
-
 ## Overview
 
 Campaign Scheduling enables precise control over when your emails are sent, with intelligent features like timezone-aware delivery, send-time optimization based on recipient behavior, business hours enforcement, and calendar integration. Maximize engagement by reaching contacts at their optimal times.
 
-
 ### Key Capabilities
-
 
 - **Timezone-Aware Scheduling**: Send emails at the perfect local time for each recipient
 
-
 - **Send-Time Optimization**: AI-powered optimal send time based on historical engagement
-
 
 - **Business Hours Enforcement**: Automatically respect business hours and skip weekends
 
-
 - **Calendar Integration**: Sync with Google Calendar and Outlook for event-based campaigns
 
-
 - **Recurring Campaigns**: Set up daily, weekly, or monthly recurring schedules
-
 
 - **Batch Scheduling**: Schedule multiple campaigns at once with smart conflict resolution
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Schedule Your First Campaign
 
-
 #### Step 1: Basic Scheduling
-
 
 ```
 
@@ -84,11 +72,9 @@ Campaign Builder → Schedule Tab
 
 ```
 
-
 #### Step 2: Timezone Options
 
 **Single Timezone (Simple):**
-
 
 ```
 
@@ -111,7 +97,6 @@ Example:
 
 **Recipient Timezone (Smart):**
 
-
 ```
 
 Each contact receives email at their local time:
@@ -131,11 +116,9 @@ Example:
 
 ```
 
-
 #### Step 3: Business Hours
 
 **Enable Business Hours Protection:**
-
 
 ```
 
@@ -160,7 +143,6 @@ Example:
 
 **Result:**
 
-
 ```
 
 Scheduled: Saturday, Nov 23 at 3:00 PM
@@ -171,12 +153,9 @@ Actual Send: Monday, Nov 25 at 9:00 AM
 
 ```
 
-
 ### Recurring Campaigns
 
-
 #### Daily Newsletter
-
 
 ```
 
@@ -208,9 +187,7 @@ Preview:
 
 ```
 
-
 #### Weekly Report
-
 
 ```
 
@@ -238,11 +215,9 @@ Preview:
 
 ```
 
-
 ### Quick Schedule Templates
 
 **Pre-Built Schedule Patterns:**
-
 
 ```
 
@@ -261,17 +236,13 @@ Common Patterns:
 
 ---
 
-
 ## Level 2: Advanced Scheduling
 
-
 ### Send-Time Optimization
-
 
 #### AI-Powered Optimal Timing
 
 **How It Works:**
-
 
 ```
 
@@ -295,7 +266,6 @@ Result: Personalized send time for maximum engagement
 ```
 
 **Configuration:**
-
 
 ```yaml
 send_time_optimization:
@@ -329,7 +299,6 @@ send_time_optimization:
 
 **Example Results:**
 
-
 ```
 
 Contact A (Software Developer):
@@ -346,14 +315,11 @@ Contact C (No history):
 
 ```
 
-
 ### Advanced Timezone Handling
-
 
 #### Multi-Region Campaigns
 
 **Coordinate Across Timezones:**
-
 
 ```yaml
 timezone_strategy:
@@ -391,7 +357,6 @@ timezone_strategy:
 
 **Result:**
 
-
 ```
 
 Global Campaign Rollout:
@@ -408,11 +373,9 @@ All contacts receive at their local 9 AM
 
 ```
 
-
 #### Daylight Saving Time Handling
 
 **Automatic DST Adjustment:**
-
 
 ```yaml
 dst_handling:
@@ -433,7 +396,6 @@ dst_handling:
 
 **Example:**
 
-
 ```
 
 Campaign scheduled: 9:00 AM EST
@@ -447,14 +409,11 @@ System automatically adjusts to maintain 9:00 AM local time
 
 ```
 
-
 ### Calendar Integration
-
 
 #### Google Calendar Sync
 
 **Event-Based Campaigns:**
-
 
 ```yaml
 calendar_integration:
@@ -485,7 +444,6 @@ calendar_integration:
 
 **Example Workflow:**
 
-
 ```
 
 Google Calendar Event Created:
@@ -509,11 +467,9 @@ Automatic Campaign Triggers:
 
 ```
 
-
 #### Outlook Integration
 
 **Meeting-Based Automation:**
-
 
 ```yaml
 outlook_integration:
@@ -547,14 +503,11 @@ outlook_integration:
 
 ```
 
-
 ### Batch Scheduling
-
 
 #### Schedule Multiple Campaigns
 
 **Bulk Schedule Interface:**
-
 
 ```
 
@@ -591,11 +544,9 @@ Campaign 5: Nov 25, 5:00 PM
 
 ```
 
-
 #### Smart Conflict Resolution
 
 **Prevent Email Fatigue:**
-
 
 ```typescript
 interface ConflictResolution {
@@ -617,7 +568,6 @@ interface ConflictResolution {
 ```
 
 **Example:**
-
 
 ```
 
@@ -644,12 +594,9 @@ Nov 26: Campaign C (9 AM)
 
 ```
 
-
 ### Holiday and Blackout Dates
 
-
 #### Configure Blackout Periods
-
 
 ```yaml
 blackout_dates:
@@ -687,7 +634,6 @@ blackout_dates:
 
 **Custom Holiday Calendars:**
 
-
 ```
 
 Holiday Calendar: US Federal + Company
@@ -711,12 +657,9 @@ Holiday Calendar: US Federal + Company
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Campaign schedules
@@ -870,9 +813,7 @@ CREATE INDEX idx_contact_send_prefs_contact ON contact_send_preferences(contact_
 
 ```
 
-
 ### Scheduling Service
-
 
 ```typescript
 interface CampaignSchedule {
@@ -1120,9 +1061,7 @@ class CampaignSchedulingService {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Process scheduled campaigns every minute
@@ -1220,9 +1159,7 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Create campaign schedule
@@ -1302,36 +1239,25 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ---
 
-
 ## Related Documentation
-
 
 ### Campaign Features
 
-
 - **[Campaign Management](./campaign-management/overview.md)** - Core campaign creation and management
-
 
 - **[Email Sequences](./email-sequences.md)** - Multi-step automated sequences
 
-
 - **[A/B Testing](./ab-testing.md)** - Campaign optimization
-
 
 ### Analytics
 
-
 - **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
-
 
 - **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
 
-
 ### Technical
 
-
 - **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
-
 
 - **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
 

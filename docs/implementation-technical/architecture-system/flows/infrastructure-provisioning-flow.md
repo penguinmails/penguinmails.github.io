@@ -17,14 +17,11 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Infrastructure Provisioning Overview
 
 This flowchart shows the complete automated provisioning process from user request through infrastructure setup to monitoring and warm-up initiation.
 
-
 ## VPS, SMTP, and DNS Configuration Automation
-
 
 ```mermaid
 flowchart TD
@@ -76,138 +73,93 @@ flowchart TD
 
 ```
 
-
 ## Provisioning Process Stages
-
 
 ### **1. Authentication & Validation**
 
-
 - **User Authentication**: Verify user token and subscription status
-
 
 - **Tenant Validation**: Confirm tenant configuration and resource limits
 
-
 - **Quota Check**: Ensure available infrastructure capacity
-
 
 ### **2. VPS Provisioning**
 
-
 - **Hostwind API Call**: Request VPS instance with specified resources
-
 
 - **Resource Allocation**: CPU, RAM, storage based on subscription tier
 
-
 - **Geographic Selection**: Choose optimal datacenter for deliverability
-
 
 - **OS Installation**: Install base operating system and Docker
 
-
 ### **3. SMTP Server Setup**
-
 
 - **MailU Stack Deployment**: Deploy Postfix, Dovecot, SpamAssassin containers
 
-
 - **Container Orchestration**: Configure container networking and volumes
-
 
 - **Security Configuration**: Set up firewalls and access controls
 
-
 - **Performance Tuning**: Optimize for email delivery workloads
-
 
 ### **4. DNS Configuration**
 
-
 - **SPF Records**: Configure email sending authorization
-
 
 - **DKIM Keys**: Generate and configure DKIM signatures
 
-
 - **DMARC Policy**: Set up anti-spoofing protection
-
 
 - **MX Records**: Configure mail server routing
 
-
 ### **5. SSL Certificate Management**
-
 
 - **Certificate Generation**: Create SSL certificates for secure connections
 
-
 - **Certificate Installation**: Deploy certificates to SMTP servers
-
 
 - **Auto-renewal Setup**: Configure automated certificate renewal
 
-
 ### **6. Monitoring & Warm-up**
-
 
 - **Health Checks**: Set up continuous infrastructure monitoring
 
-
 - **Performance Monitoring**: Configure email delivery metrics tracking
-
 
 - **Warm-up Initiation**: Start automated email warm-up sequence
 
-
 - **Notification**: Alert user when infrastructure is ready
-
 
 ## Automation Features
 
-
 ### **Zero-Touch Provisioning**
-
 
 - **API-Driven**: All steps automated through provider APIs
 
-
 - **Configuration Management**: Automated Docker and service configuration
-
 
 - **Error Recovery**: Automatic rollback on provisioning failures
 
-
 - **Resource Cleanup**: Automatic cleanup of failed provisioning attempts
-
 
 ### **Performance Optimization**
 
-
 - **Geographic Distribution**: Automatic datacenter selection for optimal delivery
-
 
 - **Resource Scaling**: Dynamic resource allocation based on subscription tier
 
-
 - **Network Optimization**: Optimized networking for email delivery
-
 
 - **Security Hardening**: Automated security configuration and compliance
 
-
 ### **Monitoring Integration**
-
 
 - **Real-time Health**: Continuous monitoring of all infrastructure components
 
-
 - **Performance Metrics**: Email delivery performance tracking
 
-
 - **Automated Alerts**: Proactive alerting for infrastructure issues
-
 
 - **Integration Ready**: Monitoring data integrated with central analytics
 

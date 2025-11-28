@@ -29,43 +29,31 @@ related_tasks:
 
 **Quick Access**: Create targeted contact segments using behavioral data, demographics, and custom criteria for precise campaign targeting.
 
-
 ## Overview
 
 Contact Segmentation enables you to divide your contact database into meaningful groups based on shared characteristics, behaviors, or custom criteria. Send the right message to the right people at the right time.
 
-
 ### Key Capabilities
-
 
 - **Dynamic Segments**: Auto-updating lists based on rules
 
-
 - **Static Segments**: Manual, fixed contact lists
-
 
 - **Multi-Criteria Filtering**: Combine multiple conditions
 
-
 - **Behavioral Segmentation**: Based on email engagement
 
-
 - **Import/Export**: Bulk segment management
-
 
 - **Campaign Integration**: Direct segment-to-campaign assignment
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Your First Segment
 
-
 #### Step 1: Create Segment
-
 
 ```
 
@@ -78,9 +66,7 @@ Type: ○ Dynamic  ○ Static
 
 ```
 
-
 #### Step 2: Define Rules (Dynamic Segment)
-
 
 ```
 
@@ -94,9 +80,7 @@ Preview: 2,847 contacts match
 
 ```
 
-
 #### Step 3: Save & Use
-
 
 ```
 
@@ -111,14 +95,11 @@ Quick Actions:
 
 ```
 
-
 ### Common Segment Types
-
 
 #### By Engagement Level
 
 **Highly Engaged:**
-
 
 ```
 
@@ -138,7 +119,6 @@ Conditions:
 
 **Inactive Contacts:**
 
-
 ```
 
 Conditions:
@@ -157,7 +137,6 @@ Conditions:
 
 **Never Engaged:**
 
-
 ```
 
 Conditions:
@@ -174,11 +153,9 @@ Conditions:
 
 ```
 
-
 #### By Demographics
 
 **Location-Based:**
-
 
 ```
 
@@ -199,7 +176,6 @@ Conditions:
 
 **Company Size:**
 
-
 ```
 
 Conditions:
@@ -215,7 +191,6 @@ Conditions:
 
 **Industry:**
 
-
 ```
 
 Conditions:
@@ -229,11 +204,9 @@ Conditions:
 
 ```
 
-
 #### By Lifecycle Stage
 
 **New Leads (Last 7 Days):**
-
 
 ```
 
@@ -250,7 +223,6 @@ Conditions:
 
 **Trial Users:**
 
-
 ```
 
 Conditions:
@@ -266,7 +238,6 @@ Conditions:
 
 **Customers:**
 
-
 ```
 
 Conditions:
@@ -280,25 +251,19 @@ Conditions:
 
 ```
 
-
 ### Static Segments
 
 **When to Use:**
 
-
 - One-time campaigns (event invitations, announcements)
-
 
 - Manual contact selection
 
-
 - Imported lists from external sources
-
 
 - A/B test control groups
 
 **Creating Static Segment:**
-
 
 ```
 
@@ -319,17 +284,13 @@ Conditions:
 
 ---
 
-
 ## Level 2: Advanced Segmentation
 
-
 ### Complex Rule Logic
-
 
 #### AND/OR Combinations
 
 **Engaged OR High-Value:**
-
 
 ```
 
@@ -355,7 +316,6 @@ Group 2 (High-Value):
 ```
 
 **Advanced Multi-Condition:**
-
 
 ```
 
@@ -387,14 +347,11 @@ Match ALL:
 
 ```
 
-
 ### Behavioral Segmentation
-
 
 #### Email Engagement Patterns
 
 **Click-But-Never-Convert:**
-
 
 ```
 
@@ -414,7 +371,6 @@ Conditions:
 
 **Opens Mobile vs Desktop:**
 
-
 ```
 
 Conditions:
@@ -433,7 +389,6 @@ Conditions:
 
 **Time-Based Engagement:**
 
-
 ```
 
 Conditions:
@@ -447,11 +402,9 @@ Conditions:
 
 ```
 
-
 #### Campaign-Specific Behavior
 
 **Clicked Specific Link:**
-
 
 ```
 
@@ -470,7 +423,6 @@ Conditions:
 ```
 
 **Opened But Didn't Click:**
-
 
 ```
 
@@ -491,11 +443,9 @@ Conditions:
 
 ```
 
-
 ### Lead Score Integration
 
 **Score-Based Segments:**
-
 
 ```
 
@@ -530,11 +480,9 @@ Cold Leads (Score 0-49):
 
 ```
 
-
 ### Custom Field Segmentation
 
 **Multi-Select Custom Fields:**
-
 
 ```
 
@@ -550,7 +498,6 @@ Conditions:
 ```
 
 **Date-Based Custom Fields:**
-
 
 ```
 
@@ -575,7 +522,6 @@ Anniversary Outreach:
 
 **Numeric Range Custom Fields:**
 
-
 ```
 
 High-Value Cohort:
@@ -596,11 +542,9 @@ High-Value Cohort:
 
 ```
 
-
 ### Segment Exclusions
 
 **Exclude Other Segments:**
-
 
 ```
 
@@ -622,7 +566,6 @@ Exclude:
 
 **Suppress Based on Recent Activity:**
 
-
 ```
 
 Include:
@@ -641,11 +584,9 @@ Exclude:
 
 ```
 
-
 ### Segment Performance Tracking
 
 **View Segment Analytics:**
-
 
 ```
 
@@ -668,11 +609,9 @@ Trend:
 
 ```
 
-
 ### Segment A/B Testing
 
 **Test Segment Criteria:**
-
 
 ```
 
@@ -693,12 +632,9 @@ Action: Adjust scoring model
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Segments table
@@ -780,9 +716,7 @@ CREATE INDEX idx_segment_analytics_segment_date ON segment_analytics(segment_id,
 
 ```
 
-
 ### Segment Rules Engine
-
 
 ```typescript
 interface SegmentRule {
@@ -947,9 +881,7 @@ class SegmentEngine {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Recalculate dynamic segments
@@ -988,9 +920,7 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Create segment
@@ -1061,21 +991,15 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 ---
 
-
 ## Related Documentation
-
 
 - **[Leads Management](./leads-management.md)** - Contact database and management
 
-
 - **[Lead Scoring](./lead-scoring.md)** - Behavioral scoring system
-
 
 - **[Import/Export](./import-export.md)** - Bulk contact operations
 
-
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use segments in campaigns
-
 
 - **[Personalization System](../campaigns/personalization-system.md)** - Segment-specific content
 

@@ -15,11 +15,9 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Server Instance Object
 
 The `Server_Instance_Object` is returned by most server management endpoints:
-
 
 ```json
 {
@@ -78,9 +76,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Instance Creation and Retrieval
-
 
 ### add_instance (Create Server)
 
@@ -93,17 +89,13 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 **Notes**:
 
-
 - This is an asynchronous operation - the success response indicates the task was queued
 
-
 - Poll `get_instance` to check creation status
-
 
 - The response includes invoice payment confirmation
 
 ---
-
 
 ### get_instances (Retrieve All Servers)
 
@@ -116,14 +108,11 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 **Notes**:
 
-
 - Returns all instances for the authenticated account
-
 
 - Use this to validate `serviceid` before other operations
 
 ---
-
 
 ### get_instance (Retrieve Single Server)
 
@@ -136,19 +125,15 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 **Notes**:
 
-
 - Use for polling instance status after async operations
-
 
 - Check `status`, `vm_state`, and `task_state` fields
 
 ---
 
-
 ### get_instance_ids (Get List of Valid Instance IDs)
 
 **Instance Object**:
-
 
 ```json
 {
@@ -173,9 +158,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Instance Lifecycle Operations
-
 
 ### boot (Start Server)
 
@@ -188,7 +171,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ### reboot (Reboot Server)
 
 | Spec | Detail |
@@ -200,14 +182,11 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 **Notes**:
 
-
 - The `time` parameter allows scheduling the reboot
-
 
 - Required after password changes to take effect
 
 ---
-
 
 ### shutdown (Shut Down Instance)
 
@@ -220,7 +199,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Error Response** | **Code:** 200. **Content:** `[ { "result": "error", "action": "Shutdown", "message": "A valid serviceid is required." } ]` |
 
 ---
-
 
 ### terminate (Permanently Delete Server)
 
@@ -236,9 +214,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Instance Maintenance and Recovery
-
 
 ### recreate (Recreate Instance from Scratch)
 
@@ -253,7 +229,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ### reinstall_instance (Reinstall from Template)
 
 | Spec | Detail |
@@ -265,7 +240,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Notes** | The `template` field accepts complex IDs (`uuid`, `base_image_ref`). |
 
 ---
-
 
 ### repair_instance (Repair Instance)
 
@@ -280,7 +254,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ### rescue (Enter Rescue Mode)
 
 | Spec | Detail |
@@ -293,7 +266,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Notes** | **Reboots the server into a specialized repair/rescue environment.** |
 
 ---
-
 
 ### unrescue (Exit Rescue Mode)
 
@@ -308,9 +280,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Instance Configuration
-
 
 ### edit_instance (Edit Instance Server Name)
 
@@ -325,7 +295,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ### change_password (Change Instance Password)
 
 | Spec | Detail |
@@ -337,7 +306,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 | **Notes** | The server typically requires a **reboot** for the password change to take effect. |
 
 ---
-
 
 ### toggle_lock (Toggle Instance Lock)
 
@@ -351,17 +319,13 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 **Notes**:
 
-
 - Locked instances cannot be modified or deleted
-
 
 - Use to prevent accidental changes to production instances
 
 ---
 
-
 ## ISO and Special Installations
-
 
 ### finalize_iso (Finalize Instance Creation from ISO)
 
@@ -376,9 +340,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Instance Monitoring
-
 
 ### get_instance_maintenance (Get Maintenance Events)
 
@@ -392,7 +354,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ### check_serviceid (Validate Service ID)
 
 | Spec | Detail |
@@ -405,18 +366,13 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-
 ## Related Documentation
-
 
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
 
-
 - [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking) - IP and network management
 
-
 - [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing ) - Resource upgrades and billing
-
 
 - [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices ) - Error handling and workflows
 

@@ -19,19 +19,15 @@ related_docs:
 
 # Operations & Monitoring
 
-
 ## Overview
 
 Operations management covers deployment, monitoring, and maintenance of the queue system infrastructure. This includes container orchestration, health monitoring, performance tracking, and operational procedures for maintaining system reliability.
 
-
 ## Deployment Architecture
-
 
 ### Container Orchestration
 
 The queue system uses a multi-container architecture with distinct services for each component:
-
 
 ```yaml
 
@@ -121,12 +117,9 @@ volumes:
 
 ```
 
-
 ## Health Monitoring
 
-
 ### System Health Monitoring
-
 
 ```pseudo
 class QueueHealthMonitor {
@@ -165,12 +158,9 @@ class QueueHealthMonitor {
 
 ```
 
-
 ## Operational Procedures
 
-
 ### System Recovery Procedures
-
 
 ```pseudo
 class DisasterRecovery {
@@ -198,12 +188,9 @@ class DisasterRecovery {
 
 ```
 
-
 ## Performance Monitoring
 
-
 ### Key Performance Indicators
-
 
 ```pseudo
 class PerformanceMonitor {
@@ -222,12 +209,9 @@ class PerformanceMonitor {
 
 ```
 
-
 ## Scaling Operations
 
-
 ### Auto-scaling Configuration
-
 
 ```pseudo
 class AutoScaler {
@@ -262,26 +246,19 @@ class AutoScaler {
 
 ```
 
-
 ## Conclusion
 
 Operations management ensures:
 
-
 - **High Availability**: Comprehensive health monitoring and automatic failover
-
 
 - **Performance Optimization**: Real-time metrics and alerting for proactive management
 
-
 - **Scalability**: Auto-scaling based on workload patterns
-
 
 - **Reliability**: Robust backup and recovery procedures
 
-
 - **Maintainability**: Structured maintenance and operational procedures
-
 
 - **Observability**: Detailed logging and metrics for troubleshooting
 

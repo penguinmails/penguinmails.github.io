@@ -29,49 +29,35 @@ related_tasks:
 
 **Quick Access**: Automatically warm up new email accounts and domains with intelligent scheduling, gradual volume increases, and engagement simulation to build sender reputation.
 
-
 ## Overview
 
 Warmup Scheduling automates the process of establishing sender reputation for new email accounts and domains. The system gradually increases sending volume while simulating natural engagement patterns to avoid spam filters and build trust with email providers.
 
-
 ### Key Capabilities
-
 
 - **Automated Warmup Schedules**: Pre-configured ramp-up plans
 
-
 - **Gradual Volume Ramping**: Increase sends progressively over 4-8 weeks
-
 
 - **Domain & IP Warmup**: Separate strategies for domains and dedicated IPs
 
-
 - **Engagement Simulation**: Automated opens, clicks, and replies
-
 
 - **Progress Tracking**: Real-time warmup status and metrics
 
-
 - **Custom Schedules**: Tailor warmup plans to your needs
 
-
 - **Multi-Account Warmup**: Warm up multiple accounts simultaneously
-
 
 - **Safety Limits**: Automatic throttling to prevent reputation damage
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Start Your First Warmup
 
-
 #### Step 1: Select Email Account
-
 
 ```
 
@@ -93,9 +79,7 @@ Account Status:
 
 ```
 
-
 #### Step 2: Choose Warmup Plan
-
 
 ```
 
@@ -127,9 +111,7 @@ Select Warmup Plan:
 
 ```
 
-
 #### Step 3: Configure Settings
-
 
 ```
 
@@ -171,9 +153,7 @@ Safety Settings:
 
 ```
 
-
 #### Step 4: Warmup Running
-
 
 ```
 
@@ -205,12 +185,9 @@ Health Score: 95/100 ✓ Excellent
 
 ```
 
-
 ### Understanding Warmup Phases
 
-
 #### Phase 1: Foundation (Week 1-2)
-
 
 ```
 
@@ -242,9 +219,7 @@ Goals:
 
 ```
 
-
 #### Phase 2: Growth (Week 3-4)
-
 
 ```
 
@@ -276,9 +251,7 @@ Goals:
 
 ```
 
-
 #### Phase 3: Maturity (Week 5-6)
-
 
 ```
 
@@ -310,12 +283,9 @@ Goals:
 
 ```
 
-
 ### Quick Actions
 
-
 #### Pause Warmup
-
 
 ```
 
@@ -337,9 +307,7 @@ Resume Plan:
 
 ```
 
-
 #### Adjust Schedule
-
 
 ```
 
@@ -366,15 +334,11 @@ New Schedule:
 
 ---
 
-
 ## Level 2: Advanced Warmup Strategies
-
 
 ### Custom Warmup Schedules
 
-
 #### Create Custom Plan
-
 
 ```yaml
 custom_warmup_plan:
@@ -445,12 +409,9 @@ custom_warmup_plan:
 
 ```
 
-
 ### Domain vs IP Warmup
 
-
 #### Domain Warmup Strategy
-
 
 ```
 
@@ -513,9 +474,7 @@ Week 7-8: Stabilization
 
 ```
 
-
 #### Dedicated IP Warmup
-
 
 ```
 
@@ -570,12 +529,9 @@ Week 4-6: Full Volume
 
 ```
 
-
 ### Engagement Simulation
 
-
 #### Warmup Pool Network
-
 
 ```
 
@@ -626,9 +582,7 @@ Behavior Simulation:
 
 ```
 
-
 #### Custom Warmup List
-
 
 ```
 
@@ -666,12 +620,9 @@ Engagement Configuration:
 
 ```
 
-
 ### Multi-Account Warmup
 
-
 #### Bulk Warmup Management
-
 
 ```
 
@@ -697,12 +648,9 @@ Alerts:
 
 ```
 
-
 ### Warmup Analytics
 
-
 #### Progress Tracking
-
 
 ```
 
@@ -737,9 +685,7 @@ Trend: ↗ Improving
 
 ```
 
-
 #### Comparative Analysis
-
 
 ```
 
@@ -770,12 +716,9 @@ Recommendation:
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Warmup schedules
@@ -908,9 +851,7 @@ CREATE INDEX idx_warmup_events_schedule ON warmup_events(warmup_schedule_id, cre
 
 ```
 
-
 ### Warmup Service
-
 
 ```typescript
 interface WarmupConfig {
@@ -1160,9 +1101,7 @@ class WarmupService {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Daily warmup scheduler
@@ -1207,9 +1146,7 @@ cron.schedule('0 * * * *', async () => {
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Start warmup
@@ -1259,18 +1196,13 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 
 ---
 
-
 ## Related Documentation
-
 
 - **[Email Warmups](./email-warmups/overview.md)** - Overall warmup strategy
 
-
 - **[Reputation Monitoring](./reputation-monitoring.md)** - Track sender reputation
 
-
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
-
 
 - **[Email Infrastructure](../infrastructure/email-infrastructure-setup.md)** - SMTP setup
 

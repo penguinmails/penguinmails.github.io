@@ -9,43 +9,31 @@ persona: "New Contributors"
 
 # Getting Started - Developer Environment & Setup
 
-
 ## Welcome to PenguinMails
 
 Thank you for your interest in contributing to PenguinMails! We're excited to have you join our community of developers working to revolutionize email marketing through AI-powered analytics and personalization.
 
 **What You Can Contribute:**
 
-
 - Bug fixes and improvements
-
 
 - New features and enhancements
 
-
 - Documentation improvements
-
 
 - Test coverage additions
 
-
 - UI/UX improvements
-
 
 - Internationalization (i18n)
 
-
 - Analytics and reporting features
-
 
 - AI/ML integration improvements
 
-
 ## First-Time Contributor Setup
 
-
 ### 1. Fork and Clone the Repository
-
 
 ```bash
 
@@ -68,9 +56,7 @@ npm install
 
 ```
 
-
 ### 2. Environment Configuration
-
 
 ```bash
 
@@ -92,9 +78,7 @@ ANALYTICS_ENDPOINT=http://localhost:8080/analytics
 
 ```
 
-
 ### 3. Database Setup
-
 
 ```bash
 
@@ -120,9 +104,7 @@ npm run db:seed
 
 ```
 
-
 ### 4. Verify Installation
-
 
 ```bash
 
@@ -145,14 +127,11 @@ npm run type-check
 
 ```
 
-
 ## Development Environment Tools
-
 
 ### Recommended IDE Setup
 
 **VS Code Configuration:**
-
 
 ```json
 {
@@ -177,33 +156,23 @@ npm run type-check
 
 **Required Extensions:**
 
-
 - TypeScript
-
 
 - JavaScript
 
-
 - ESLint
-
 
 - Prettier
 
-
 - GitLens
-
 
 - Docker
 
-
 - REST Client
-
 
 - SQLite Viewer
 
-
 ### Development Tools Installation
-
 
 ```bash
 
@@ -220,9 +189,7 @@ npm install -g @typescript-eslint/cli prettier
 
 ```
 
-
 ## Understanding the Project Structure
-
 
 ```
 
@@ -253,38 +220,27 @@ penguinmails/
 
 ```
 
-
 ## Next Steps
 
 After setting up your environment:
 
-
 1. **Review the contribution process** in [`code-contribution.md`](code-contribution)
-
 
 2. **Understand our testing requirements** in [`testing-requirements.md`](testing-requirements)
 
-
 3. **Learn our coding standards** in [`code-standards.md`](code-standards)
-
 
 4. **Find an issue to work on** by checking our [GitHub Issues](https://github.com/penguinmails/platform/issues)
 
-
 5. **Join our community** by introducing yourself in our [GitHub Discussions](https://github.com/penguinmails/platform/discussions)
-
 
 ## Getting Help
 
-
 - **Documentation**: Check our [comprehensive documentation](https://docs.penguinmails.com)
-
 
 - **Community**: Join our [Discord server](https://discord.gg/penguinmails)
 
-
 - **Issues**: Use [GitHub Issues](https://github.com/penguinmails/platform/issues) for bugs and feature requests
-
 
 - **Discussions**: Use [GitHub Discussions](https://github.com/penguinmails/platform/discussions) for questions
 

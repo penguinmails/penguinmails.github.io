@@ -9,23 +9,17 @@ persona: "Documentation Users"
 
 This diagram visualizes the dedicated Notifications & System Events database as defined in:
 
-
 - [`schema-guide`](schema-guide)
 
 It is an operational tier:
 
-
 - Not OLAP.
-
 
 - Not Content DB.
 
-
 - Not external logging.
 
-
 - Optimized for fast reads/updates and bounded retention.
-
 
 ```mermaid
 ---

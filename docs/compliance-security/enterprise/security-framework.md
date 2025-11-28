@@ -9,7 +9,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ## **Strategic Alignment**
 
 **Strategic Alignment**: This security framework supports our enterprise compliance strategy by providing regulatory compliance and risk mitigation across all system components, establishing market leadership through comprehensive security architecture and advanced threat protection systems.
@@ -22,37 +21,27 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Overview
 
 This document outlines the security practices and protocols for the PenguinMails multi-tenant SaaS platform. While we leverage NileDB's authentication services, we maintain comprehensive security practices across all system components.
 
-
 ### Security Philosophy
-
 
 - **Defense in Depth**: Multiple layers of security controls
 
-
 - **Zero Trust**: Verify every access request regardless of origin
 
-
 - **Principle of Least Privilege**: Minimum necessary access for all users
-
 
 - **Security by Design**: Security considerations in all development phases
 
 ---
 
-
 ## Authentication & Authorization
-
 
 ### NileDB Authentication Integration
 
-
 #### Authentication Flow
-
 
 ```mermaid
 sequenceDiagram
@@ -71,36 +60,25 @@ sequenceDiagram
 
 ```
 
-
 #### Security Features
-
 
 - **Managed Authentication**: NileDB handles core authentication (users table)
 
-
 - **Session Management**: Fully handled by NileDB authentication system
-
 
 - **Email Verification**: ✅ IMPLEMENTED using Loop service + custom verification endpoint
 
-
 - **Password Reset**: Planned alongside email verification
-
 
 - **Multi-Factor Authentication**: Not implemented (planned under feature flag)
 
-
 - **Password Policies**: Configurable through tenant_policies table (not enforced)
-
 
 - **Account Lockout**: Not implemented - relies on password reset flow
 
-
 - **Failed Login Tracking**: No tracking implemented - users contact support
 
-
 #### Implementation Example
-
 
 ```javascript
 // Authentication middleware
@@ -139,14 +117,11 @@ const authenticateUser = async (req, res, next) => {
 
 ```
 
-
 ### Role-Based Access Control (RBAC)
-
 
 #### Permission Matrix
 
 Our 7-tier permission system provides granular access control:
-
 
 ```mermaid
 graph TD
@@ -179,7 +154,6 @@ graph TD
 
 ```
 
-
 #### Permission Levels Detail
 
 | Role | User Management | Billing | Email Config | Data Export | System Settings |
@@ -192,9 +166,7 @@ graph TD
 | **QA** | None | None | Test Config | Test Data | None |
 | **Blocked** | None | None | None | None | None |
 
-
 #### Implementation
-
 
 ```javascript
 // Permission checking middleware
@@ -236,9 +208,7 @@ app.get('/api/tenant/:tenantId/users',
 
 ```
 
-
 ## Row Level Security (RLS) Policies
-
 
 ### Complete RLS Policy Matrix
 
@@ -246,71 +216,49 @@ app.get('/api/tenant/:tenantId/users',
 
 **Current Implementation:**
 
-
 - **Q83**: Basic RLS example exists with NileDB tenant isolation enforcement
-
 
 - **Q84**: Staff bypass via super admin/admin privileges or internal dev tickets
 
-
 - **Q85**: Cross-tenant access policies for staff need documentation (immediate action required)
-
 
 - **Q86**: RLS testing procedures planned as part of feature implementation
 
-
 ### Staff Emergency Access Protocols
-
 
 #### Current Bypass Methods
 
-
 1. **Super Admin/Admin Privileges**
-
 
    - Users with super_admin or admin roles can access tenant data
 
-
    - All actions are logged for audit purposes
-
 
    - No additional approval required beyond role assignment
 
-
 2. **Internal Dev Ticket Process**
-
 
    - Staff can create internal tickets for temporary access
 
-
    - Dev team creates time-limited access for specific tasks
-
 
    - Full audit trail maintained for all temporary access
 
-
 #### Documentation Requirements (Q4 2025)
-
 
 - [ ] Formalize staff bypass procedures
 
-
 - [ ] Document cross-tenant access validation framework
-
 
 - [ ] Create RLS testing procedures as part of feature rollout
 
 ---
 
-
 ## Data Security
-
 
 ### Multi-Tenant Data Isolation
 
-
 #### Database Security
-
 
 ```sql
 -- Row Level Security Example
@@ -325,9 +273,7 @@ SET app.current_tenant_id = '12345';
 
 ```
 
-
 #### API Security
-
 
 ```javascript
 // Tenant context middleware
@@ -359,24 +305,17 @@ const setTenantContext = async (req, res, next) => {
 
 ```
 
-
 ### Data Encryption
-
 
 #### Encryption at Rest
 
-
 - **Database**: PostgreSQL TDE (Transparent Data Encryption)
-
 
 - **File Storage**: Encrypted backups and log files
 
-
 - **Configuration**: Encrypted environment variables
 
-
 #### Encryption in Transit
-
 
 ```javascript
 // HTTPS enforcement
@@ -403,9 +342,7 @@ app.use(helmet({
 
 ```
 
-
 #### API Key Management
-
 
 ```javascript
 // Secure API key handling
@@ -429,15 +366,11 @@ const apiKeyManager = {
 
 ---
 
-
 ## Infrastructure Security
-
 
 ### Network Security
 
-
 #### Firewall Configuration
-
 
 ```bash
 
@@ -468,24 +401,17 @@ ufw allow from 10.0.0.0/8 to any port 6379
 
 ```
 
-
 #### VPN Access
-
 
 - **Team Access**: VPN required for infrastructure management
 
-
 - **Database Access**: VPN-only access to production databases
-
 
 - **Monitoring**: VPN access to monitoring dashboards
 
-
 ### Server Security
 
-
 #### VPS Security Hardening
-
 
 ```bash
 
@@ -513,9 +439,7 @@ apt-get update && apt-get upgrade -y
 
 ```
 
-
 #### SSL/TLS Configuration
-
 
 ```nginx
 
@@ -547,15 +471,11 @@ server {
 
 ---
 
-
 ## Email Security
-
 
 ### SPF, DKIM, DMARC Configuration
 
-
 #### DNS Records
-
 
 ```dns
 
@@ -577,9 +497,7 @@ TXT _dmarc.penguinmails.com "v=DMARC1; p=quarantine; rua=mailto:dmarc@penguinmai
 
 ```
 
-
 #### Email Authentication
-
 
 ```javascript
 // Email sending with authentication headers
@@ -601,12 +519,9 @@ const sendEmail = async (emailData) => {
 
 ```
 
-
 ### Email Warm-up Security
 
-
 #### Reputation Management
-
 
 ```javascript
 // Safe warm-up algorithm
@@ -641,15 +556,11 @@ const emailWarmup = {
 
 ---
 
-
 ## Application Security
-
 
 ### Input Validation & Sanitization
 
-
 #### SQL Injection Prevention
-
 
 ```javascript
 // Parameterized queries
@@ -671,9 +582,7 @@ const campaignQuery = nileDB('campaigns')
 
 ```
 
-
 #### XSS Prevention
-
 
 ```javascript
 // Input sanitization
@@ -697,12 +606,9 @@ const escapeHTML = (unsafe) => {
 
 ```
 
-
 ### Rate Limiting
 
-
 #### API Rate Limiting
-
 
 ```javascript
 // Redis-based rate limiter
@@ -742,18 +648,13 @@ app.use('/api) => {
 
 ---
 
-
 ## Security Monitoring
-
 
 - All privileged staff roles (including super_admin, admin, support, and QA) operate under strict least-privilege policies, and every privileged action affecting tenant data, billing, authentication, or configuration MUST be logged with tenant context, resource identifiers, and sufficient metadata to satisfy SOC 2 and GDPR audit expectations.
 
-
 ### Logging & Auditing
 
-
 #### Security Event Logging
-
 
 ```javascript
 // Security event logger
@@ -818,9 +719,7 @@ const securityLogger = {
 
 ```
 
-
 #### Audit Trail
-
 
 ```javascript
 // Comprehensive audit logging
@@ -845,27 +744,19 @@ const auditLogger = {
 
 ```
 
-
 ### Incident Response
-
 
 #### Security Incident Types
 
-
 1. **Unauthorized Access**: Detected login from unusual locations
-
 
 2. **Data Breach**: Suspicious data access or extraction
 
-
 3. **System Compromise**: Malware or unauthorized system changes
-
 
 4. **Email Abuse**: Spam or phishing from our infrastructure
 
-
 #### Response Procedures
-
 
 ```mermaid
 flowchart TD
@@ -893,15 +784,11 @@ flowchart TD
 
 ---
 
-
 ## Compliance & Privacy
-
 
 ### GDPR Compliance
 
-
 #### Data Processing Rights
-
 
 ```javascript
 // GDPR compliance functions
@@ -936,9 +823,7 @@ const gdprCompliance = {
 
 ```
 
-
 ### Data Retention Policies
-
 
 #### Retention Schedule
 
@@ -952,101 +837,69 @@ const gdprCompliance = {
 
 ---
 
-
 ## Security Training & Awareness
-
 
 ### Team Security Practices
 
-
 #### Development Security
-
 
 - **Secure Coding Training**: Regular training on OWASP Top 10
 
-
 - **Code Review Process**: Security-focused code reviews
-
 
 - **Dependency Management**: Regular security updates and vulnerability scanning
 
-
 - **Environment Segregation**: Clear separation of dev/staging/production
-
 
 #### Access Management
 
-
 - **Principle of Least Privilege**: Minimum necessary access
-
 
 - **Regular Access Reviews**: Quarterly access audits
 
-
 - **Password Management**: Use of secure password managers
-
 
 - **MFA Enforcement**: Multi-factor authentication for all admin access
 
 ---
 
-
 ## Security Checklist
-
 
 ### Pre-Deployment Security
 
-
 - [ ] Environment variables secured
-
 
 - [ ] SSL/TLS certificates valid
 
-
 - [ ] Database connections encrypted
-
 
 - [ ] API endpoints protected
 
-
 - [ ] Rate limiting configured
-
 
 - [ ] Input validation implemented
 
-
 - [ ] Security headers set
-
 
 - [ ] Error handling secure
 
-
 - [ ] Logging configured
-
 
 - [ ] Backup encryption verified
 
-
 ### Ongoing Security Maintenance
-
 
 - [ ] Weekly security updates
 
-
 - [ ] Monthly vulnerability scans
-
 
 - [ ] Quarterly access reviews
 
-
 - [ ] Semi-annual penetration testing
-
 
 - [ ] Annual security training
 
-
 - [ ] Regular backup testing
-
 
 - [ ] Security incident drills
 
@@ -1056,15 +909,11 @@ const gdprCompliance = {
 
 **Related Documents**
 
-
 - [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
-
 
 - [Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix) - Database security strategy framework
 
-
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
-
 
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 

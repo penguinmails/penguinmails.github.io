@@ -13,11 +13,9 @@ roadmap_milestone: "MVP"
 
 # Tenant API Key System with Vault
 
-
 ## Overview
 
 The Tenant API Key System provides secure, self-service API key generation and management for programmatic access to PenguinMails. API keys enable tenants to send emails, manage contacts, and access analytics from their applications without requiring user authentication.
-
 
 ### Purpose
 
@@ -25,50 +23,35 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Solution:** Generate unique API keys per tenant with:
 
-
 - Secure storage in HashiCorp Vault (bcrypt hashing)
-
 
 - Fine-grained permission scopes (send_email, read_analytics, manage_contacts)
 
-
 - Tier-based rate limiting (Starter: 60/min, Pro: 300/min, Enterprise: 1000/min)
-
 
 - Usage tracking (requests, errors, last used timestamp)
 
-
 - Self-service management UI (create, view, regenerate, revoke)
-
 
 ### Key Features
 
-
 1. **Secure Key Generation** - Cryptographically secure API keys with format `pm_live_{32_random_chars}`
-
 
 2. **Vault Storage** - Keys hashed with bcrypt (12 salt rounds) and stored in Vault
 
-
 3. **Permission Scopes** - Granular permissions for different API operations
-
 
 4. **Rate Limiting** - Tier-based rate limits prevent abuse
 
-
 5. **Usage Tracking** - Monitor API key usage (requests, errors, last used)
 
-
 6. **Self-Service UI** - Tenants manage keys without support intervention
-
 
 7. **Audit Trail** - All key operations logged for security compliance
 
 ---
 
-
 ## User Workflows
-
 
 ### 1. Create API Key
 
@@ -76,67 +59,47 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Preconditions:**
 
-
 - User is authenticated and has API key management permissions
-
 
 - Tenant has active subscription
 
 **Steps:**
 
-
 1. Navigate to `/dashboard/settings/developers/api-keys`
-
 
 2. Click "Create API Key" button
 
-
 3. Enter API key name (e.g., "Production Server", "Staging Environment")
-
 
 4. Select permission scopes:
 
-
    - `send_email` - Send emails via API
-
 
    - `read_analytics` - Read campaign and email analytics
 
-
    - `manage_contacts` - Create, update, delete contacts
-
 
    - `manage_campaigns` - Create, update, delete campaigns
 
-
 5. Review rate limit for current subscription tier
-
 
 6. Click "Generate Key"
 
-
 7. **CRITICAL:** Copy API key immediately (shown only once)
 
-
 8. Store API key securely in application environment variables
-
 
 9. Test API key with sample request
 
 **Postconditions:**
 
-
 - API key created and stored in Vault (hashed)
-
 
 - API key displayed once in UI (never shown again)
 
-
 - Audit log entry created
 
-
 - User can authenticate API requests with new key
-
 
 ### 2. View API Keys
 
@@ -144,50 +107,35 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Steps:**
 
-
 1. Navigate to `/dashboard/settings/developers/api-keys`
-
 
 2. View list of all API keys with:
 
-
    - Key name
-
 
    - Masked key value (`pm_live_abc...xyz`)
 
-
    - Permission scopes (badges)
-
 
    - Created date
 
-
    - Last used timestamp
-
 
    - Request count
 
-
    - Error count
-
 
    - Status (Active, Revoked)
 
-
 3. Click "Copy" to copy masked key (for reference only)
-
 
 4. Click key row to view detailed usage statistics
 
 **Postconditions:**
 
-
 - User can see all API keys and their usage
 
-
 - Cannot view full API key value (security)
-
 
 ### 3. Regenerate API Key
 
@@ -195,49 +143,35 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Preconditions:**
 
-
 - API key exists and is active
-
 
 - User suspects key compromise or needs rotation
 
 **Steps:**
 
-
 1. Navigate to API key list
-
 
 2. Click "Regenerate" button for specific key
 
-
 3. Confirm regeneration (warning: old key will be revoked immediately)
-
 
 4. New API key generated and displayed once
 
-
 5. Copy new API key immediately
 
-
 6. Update application with new key
-
 
 7. Old key revoked (cannot be used for authentication)
 
 **Postconditions:**
 
-
 - New API key created with same permissions
-
 
 - Old API key revoked and marked inactive
 
-
 - Audit log entry created
 
-
 - Application must use new key
-
 
 ### 4. Revoke API Key
 
@@ -245,40 +179,29 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Preconditions:**
 
-
 - API key exists
-
 
 - User wants to permanently disable key
 
 **Steps:**
 
-
 1. Navigate to API key list
-
 
 2. Click "Revoke" button for specific key
 
-
 3. Confirm revocation (warning: cannot be undone)
 
-
 4. API key marked as revoked
-
 
 5. All subsequent API requests with this key return 401 Unauthorized
 
 **Postconditions:**
 
-
 - API key revoked and cannot be used
-
 
 - Audit log entry created
 
-
 - Key remains visible in UI (for audit purposes) but marked as "Revoked"
-
 
 ### 5. Monitor API Key Usage
 
@@ -286,52 +209,37 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Steps:**
 
-
 1. Navigate to API key list
-
 
 2. View usage metrics for each key:
 
-
    - Total requests (lifetime)
-
 
    - Error count (4xx, 5xx responses)
 
-
    - Last used timestamp
-
 
    - Rate limit status (requests remaining this minute)
 
-
 3. Click key row to view detailed usage chart:
-
 
    - Requests per day (last 30 days)
 
-
    - Error rate trend
 
-
    - Most common endpoints accessed
-
 
    - Geographic distribution of requests
 
 **Postconditions:**
 
-
 - User understands API key usage patterns
-
 
 - Can identify anomalies or abuse
 
 ---
 
-
 ## Technical Architecture
-
 
 ### API Key Format
 
@@ -341,17 +249,13 @@ The Tenant API Key System provides secure, self-service API key generation and m
 
 **Components:**
 
-
 - `pm` - PenguinMails prefix
 
-
 - `live` - Environment indicator (live, test)
-
 
 - `{32_random_chars}` - Cryptographically secure random string (base62: a-z, A-Z, 0-9)
 
 **Generation:**
-
 
 ```typescript
 import crypto from 'crypto';
@@ -370,13 +274,11 @@ function generateAPIKey(): string {
 
 ```
 
-
 ### Vault Secret Structure
 
 **Path:** `/api_keys/{tenant_id}/{key_id}`
 
 **Secret Fields:**
-
 
 ```json
 {
@@ -398,63 +300,45 @@ function generateAPIKey(): string {
 
 **Field Descriptions:**
 
-
 - `key_hash` - bcrypt hash of API key (salt rounds: 12)
-
 
 - `permissions` - Array of permission scopes
 
-
 - `rate_limit` - Requests per minute allowed (tier-based)
-
 
 - `created_at` - ISO 8601 timestamp of key creation
 
-
 - `last_used` - ISO 8601 timestamp of last API request
-
 
 - `request_count` - Total API requests made with this key
 
-
 - `error_count` - Total errors (4xx, 5xx responses)
-
 
 - `rotation_policy` - "on_demand" (manual regeneration only)
 
-
 - `status` - "active" or "revoked"
-
 
 - `name` - User-provided key name
 
-
 - `created_by` - User ID who created the key
-
 
 ### Bcrypt Hashing
 
 **Why bcrypt?**
 
-
 - Slow hashing algorithm (prevents brute force attacks)
 
-
 - Adaptive (can increase cost factor over time)
-
 
 - Industry standard for password/key hashing
 
 **Configuration:**
 
-
 - Salt rounds: 12 (2^12 = 4096 iterations)
-
 
 - Hashing time: ~250ms per key (acceptable for key generation)
 
 **Implementation:**
-
 
 ```typescript
 import bcrypt from 'bcrypt';
@@ -472,7 +356,6 @@ async function verifyAPIKey(apiKey: string, hash: string): Promise<boolean> {
 
 ```
 
-
 ### Permission Scopes
 
 | Scope | Description | API Endpoints |
@@ -488,17 +371,13 @@ async function verifyAPIKey(apiKey: string, hash: string): Promise<boolean> {
 
 **Scope Validation:**
 
-
 - Each API endpoint checks required scope
 
-
 - Returns 403 Forbidden if scope missing
-
 
 - Multiple scopes can be assigned to single key
 
 **Example:**
-
 
 ```typescript
 // API endpoint with scope validation
@@ -527,7 +406,6 @@ function requireScope(scope: string) {
 
 ```
 
-
 ### Rate Limiting
 
 **Tier-Based Limits:**
@@ -541,7 +419,6 @@ function requireScope(scope: string) {
 **Rate Limit Algorithm:** Token Bucket
 
 **Implementation:**
-
 
 ```typescript
 import Redis from 'ioredis';
@@ -581,7 +458,6 @@ async function checkRateLimit(
 
 **Rate Limit Headers:**
 
-
 ```
 
 X-RateLimit-Limit: 300
@@ -591,33 +467,25 @@ X-RateLimit-Reset: 1732618800
 
 ```
 
-
 ### Usage Tracking
 
 **Tracked Metrics:**
 
-
 - Total requests (lifetime)
-
 
 - Error count (4xx, 5xx responses)
 
-
 - Last used timestamp
-
 
 - Requests per day (last 30 days)
 
-
 - Most common endpoints
-
 
 - Geographic distribution (IP-based)
 
 **Storage:** PostgreSQL + Redis
 
 **Database Schema:**
-
 
 ```sql
 CREATE TABLE api_key_usage (
@@ -644,7 +512,6 @@ CREATE INDEX idx_api_key_usage_created_at
 
 **Usage Aggregation:**
 
-
 ```typescript
 async function getAPIKeyUsageStats(
   tenantId: string,
@@ -668,9 +535,7 @@ async function getAPIKeyUsageStats(
 
 ---
 
-
 ## API Endpoints
-
 
 ### 1. Create API Key
 
@@ -679,7 +544,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** Bearer token (user session)
 
 **Request Body:**
-
 
 ```json
 {
@@ -691,7 +555,6 @@ async function getAPIKeyUsageStats(
 ```
 
 **Response (201 Created):**
-
 
 ```json
 {
@@ -709,18 +572,13 @@ async function getAPIKeyUsageStats(
 
 **Error Responses:**
 
-
 - `400 Bad Request` - Invalid permissions or missing name
-
 
 - `401 Unauthorized` - Invalid or missing bearer token
 
-
 - `403 Forbidden` - User lacks API key management permission
 
-
 - `429 Too Many Requests` - Rate limit exceeded for key creation
-
 
 ### 2. List API Keys
 
@@ -729,7 +587,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** Bearer token (user session)
 
 **Response (200 OK):**
-
 
 ```json
 {
@@ -765,7 +622,6 @@ async function getAPIKeyUsageStats(
 
 ```
 
-
 ### 3. Get API Key Details
 
 **Endpoint:** `GET /api/v1/platform/api-keys/{key_id}`
@@ -773,7 +629,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** Bearer token (user session)
 
 **Response (200 OK):**
-
 
 ```json
 {
@@ -800,7 +655,6 @@ async function getAPIKeyUsageStats(
 
 ```
 
-
 ### 4. Regenerate API Key
 
 **Endpoint:** `POST /api/v1/platform/api-keys/{key_id}/regenerate`
@@ -808,7 +662,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** Bearer token (user session)
 
 **Response (200 OK):**
-
 
 ```json
 {
@@ -824,7 +677,6 @@ async function getAPIKeyUsageStats(
 
 ```
 
-
 ### 5. Revoke API Key
 
 **Endpoint:** `DELETE /api/v1/platform/api-keys/{key_id}`
@@ -832,7 +684,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** Bearer token (user session)
 
 **Response (200 OK):**
-
 
 ```json
 {
@@ -844,7 +695,6 @@ async function getAPIKeyUsageStats(
 
 ```
 
-
 ### 6. Authenticate with API Key
 
 **Endpoint:** Any API endpoint
@@ -852,7 +702,6 @@ async function getAPIKeyUsageStats(
 **Authentication:** `Authorization: Bearer {api_key}`
 
 **Example Request:**
-
 
 ```bash
 curl -X POST https://api.penguinmails.com/api/v1/emails/send \
@@ -869,20 +718,15 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Error Responses:**
 
-
 - `401 Unauthorized` - Invalid or missing API key
 
-
 - `403 Forbidden` - API key lacks required permission scope
-
 
 - `429 Too Many Requests` - Rate limit exceeded
 
 ---
 
-
 ## Frontend UI Specification
-
 
 ### Route: `/dashboard/settings/developers/api-keys`
 
@@ -892,43 +736,31 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Components:**
 
-
 #### 1. API Key List Table
 
 **Columns:**
 
-
 - Name (user-provided)
-
 
 - Key (masked: `pm_live_abc...xyz`)
 
-
 - Permissions (badges)
-
 
 - Rate Limit (requests/min)
 
-
 - Status (Active, Revoked)
 
-
 - Last Used (relative time: "2 hours ago")
-
 
 - Actions (Copy, Regenerate, Revoke)
 
 **Actions:**
 
-
 - **Copy:** Copy masked key to clipboard (for reference)
-
 
 - **Regenerate:** Open confirmation modal, generate new key
 
-
 - **Revoke:** Open confirmation modal, revoke key
-
 
 #### 2. Create API Key Button
 
@@ -938,23 +770,17 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Modal Fields:**
 
-
 - Name (text input, required)
 
-
 - Permissions (multi-select checkboxes)
-
 
 - Rate Limit (display only, based on subscription tier)
 
 **Modal Actions:**
 
-
 - Cancel (close modal)
 
-
 - Generate Key (create key, display once)
-
 
 #### 3. API Key Details Modal
 
@@ -962,36 +788,25 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Content:**
 
-
 - Key name
-
 
 - Masked key value
 
-
 - Permissions list
-
 
 - Rate limit
 
-
 - Created date
-
 
 - Last used timestamp
 
-
 - Usage chart (requests per day, last 30 days)
-
 
 - Error rate chart
 
-
 - Top endpoints table
 
-
 - Geographic distribution map
-
 
 #### 4. API Key Created Success Modal
 
@@ -999,36 +814,27 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Content:**
 
-
 - ⚠️ Warning: "Store this key securely. It will not be shown again."
-
 
 - API key value (full, copyable)
 
-
 - Copy button
 
-
 - Download as .env file button
-
 
 - Code examples (curl, Node.js, Python)
 
 **Actions:**
 
-
 - Copy Key (copy to clipboard)
 
-
 - Download .env (download as file)
-
 
 - Close (close modal, cannot reopen to view key)
 
 **Example Code Snippets:**
 
 **cURL:**
-
 
 ```bash
 curl -X POST https://api.penguinmails.com/api/v1/emails/send \
@@ -1040,7 +846,6 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 ```
 
 **Node.js:**
-
 
 ```javascript
 const axios = require('axios');
@@ -1061,7 +866,6 @@ axios.post('https://api.penguinmails.com/api/v1/emails/send', {
 ```
 
 **JavaScript/Node.js:**
-
 
 ```javascript
 const axios = require('axios');
@@ -1097,9 +901,7 @@ sendEmail();
 
 ---
 
-
 ## Security Considerations
-
 
 ### 1. API Key Storage
 
@@ -1109,32 +911,23 @@ sendEmail();
 
 **Implementation:**
 
-
 - Generate API key: `pm_live_{32_random_chars}`
-
 
 - Hash with bcrypt (salt rounds: 12)
 
-
 - Store hash in Vault, not plaintext key
 
-
 - Display plaintext key once to user
-
 
 - Verify API key by comparing hash on each request
 
 **Security Benefits:**
 
-
 - Database compromise doesn't expose API keys
-
 
 - Brute force attacks infeasible (bcrypt is slow)
 
-
 - Keys cannot be recovered from hash
-
 
 ### 2. API Key Transmission
 
@@ -1144,15 +937,11 @@ sendEmail();
 
 **Implementation:**
 
-
 - Redirect HTTP to HTTPS
-
 
 - Use HSTS header to enforce HTTPS
 
-
 - Reject API requests over HTTP
-
 
 ### 3. API Key Rotation
 
@@ -1162,20 +951,15 @@ sendEmail();
 
 **Implementation:**
 
-
 - User can regenerate key at any time
-
 
 - Old key immediately revoked
 
-
 - New key generated and displayed once
-
 
 - Audit log tracks all regenerations
 
 **Best Practice:** Rotate API keys every 90 days (recommended, not enforced)
-
 
 ### 4. Rate Limiting
 
@@ -1185,32 +969,23 @@ sendEmail();
 
 **Implementation:**
 
-
 - Starter: 60 requests/min
-
 
 - Pro: 300 requests/min
 
-
 - Enterprise: 1000 requests/min
 
-
 - Return 429 Too Many Requests when limit exceeded
-
 
 - Include rate limit headers in all responses
 
 **Security Benefits:**
 
-
 - Prevents API abuse
-
 
 - Protects infrastructure from overload
 
-
 - Encourages efficient API usage
-
 
 ### 5. Permission Scopes
 
@@ -1220,29 +995,21 @@ sendEmail();
 
 **Implementation:**
 
-
 - User selects required scopes during key creation
-
 
 - Each API endpoint checks required scope
 
-
 - Returns 403 Forbidden if scope missing
-
 
 - Principle of least privilege
 
 **Example Use Cases:**
 
-
 - **Send-only key:** Only `send_email` scope (for application sending emails)
-
 
 - **Read-only key:** Only `read_analytics` scope (for dashboard integrations)
 
-
 - **Full access key:** All scopes (for admin automation)
-
 
 ### 6. Audit Logging
 
@@ -1252,18 +1019,13 @@ sendEmail();
 
 **Logged Events:**
 
-
 - API key creation (who, when, permissions)
-
 
 - API key regeneration (who, when)
 
-
 - API key revocation (who, when)
 
-
 - API key authentication attempts (success, failure)
-
 
 - API requests (endpoint, status, response time)
 
@@ -1271,310 +1033,217 @@ sendEmail();
 
 ---
 
-
 ## API Key Best Practices
-
 
 ### For Developers
 
 **1. Store Keys Securely**
 
-
 - ✅ Store in environment variables (`.env` file)
-
 
 - ✅ Use secret management tools (AWS Secrets Manager, Vault)
 
-
 - ❌ Never commit keys to version control
 
-
 - ❌ Never hardcode keys in source code
-
 
 - ❌ Never share keys via email or chat
 
 **2. Use Minimal Permissions**
 
-
 - ✅ Create separate keys for different applications
 
-
 - ✅ Grant only required permission scopes
-
 
 - ❌ Don't use full-access keys for single-purpose applications
 
 **3. Rotate Keys Regularly**
 
-
 - ✅ Rotate keys every 90 days (recommended)
 
-
 - ✅ Rotate immediately if key compromised
-
 
 - ✅ Test new key before revoking old key
 
 **4. Monitor Usage**
 
-
 - ✅ Review API key usage regularly
 
-
 - ✅ Set up alerts for unusual activity
-
 
 - ✅ Investigate unexpected errors
 
 **5. Handle Errors Gracefully**
 
-
 - ✅ Implement exponential backoff for rate limit errors
-
 
 - ✅ Log authentication failures
 
-
 - ✅ Retry failed requests with backoff
-
 
 ### For PenguinMails Administrators
 
 **1. Enforce Security Policies**
 
-
 - ✅ Require HTTPS for all API requests
 
-
 - ✅ Implement rate limiting per tier
-
 
 - ✅ Monitor for suspicious activity
 
 **2. Audit Regularly**
 
-
 - ✅ Review audit logs weekly
 
-
 - ✅ Investigate anomalies
-
 
 - ✅ Revoke unused keys
 
 **3. Educate Users**
 
-
 - ✅ Provide security best practices documentation
 
-
 - ✅ Send reminders for key rotation
-
 
 - ✅ Offer security training
 
 ---
 
-
 ## Implementation Checklist
-
 
 ### Phase 1: Backend Infrastructure (Week 1)
 
-
 - [ ] Implement API key generation function (`generateAPIKey()`)
-
 
 - [ ] Implement bcrypt hashing (`hashAPIKey()`, `verifyAPIKey()`)
 
-
 - [ ] Create Vault secret structure (`/api_keys/{tenant_id}/{key_id}`)
-
 
 - [ ] Implement Vault write/read operations for API keys
 
-
 - [ ] Create database schema for API key metadata
-
 
 - [ ] Implement API key authentication middleware
 
-
 - [ ] Implement permission scope validation middleware
-
 
 - [ ] Implement rate limiting with Redis (token bucket algorithm)
 
-
 - [ ] Create audit logging for API key operations
-
 
 ### Phase 2: API Endpoints (Week 1-2)
 
-
 - [ ] `POST /api/v1/platform/api-keys` - Create API key
-
 
 - [ ] `GET /api/v1/platform/api-keys` - List API keys
 
-
 - [ ] `GET /api/v1/platform/api-keys/{key_id}` - Get API key details
-
 
 - [ ] `POST /api/v1/platform/api-keys/{key_id}/regenerate` - Regenerate API key
 
-
 - [ ] `DELETE /api/v1/platform/api-keys/{key_id}` - Revoke API key
-
 
 - [ ] Add API key authentication to all existing API endpoints
 
-
 - [ ] Add rate limit headers to all API responses
-
 
 - [ ] Implement usage tracking (requests, errors, last used)
 
-
 ### Phase 3: Frontend UI (Week 2)
-
 
 - [ ] Create `/dashboard/settings/developers/api-keys` route
 
-
 - [ ] Implement API key list table component
-
 
 - [ ] Implement "Create API Key" modal
 
-
 - [ ] Implement "API Key Created" success modal with code examples
-
 
 - [ ] Implement "Regenerate API Key" confirmation modal
 
-
 - [ ] Implement "Revoke API Key" confirmation modal
-
 
 - [ ] Implement API key details modal with usage charts
 
-
 - [ ] Add copy-to-clipboard functionality
-
 
 - [ ] Add download as .env file functionality
 
-
 - [ ] Implement usage charts (requests per day, error rate)
-
 
 ### Phase 4: Testing & Documentation (Week 2)
 
-
 - [ ] Unit tests for API key generation and hashing
-
 
 - [ ] Unit tests for permission scope validation
 
-
 - [ ] Unit tests for rate limiting logic
-
 
 - [ ] Integration tests for API key CRUD operations
 
-
 - [ ] Integration tests for API key authentication
-
 
 - [ ] Load tests for rate limiting under high traffic
 
-
 - [ ] Security tests for API key storage and transmission
-
 
 - [ ] Create API documentation with code examples
 
-
 - [ ] Create security best practices guide
-
 
 - [ ] Create troubleshooting guide
 
-
 ### Phase 5: Monitoring & Alerting (Week 2)
-
 
 - [ ] Set up monitoring for API key usage
 
-
 - [ ] Set up alerts for unusual activity (spike in errors, rate limit violations)
-
 
 - [ ] Set up alerts for authentication failures
 
-
 - [ ] Create dashboard for API key metrics
-
 
 - [ ] Implement automated key rotation reminders (90-day email)
 
 ---
 
-
 ## Compliance & Certifications
-
 
 ### SOC 2 Type II
 
 **Vault Integration Supports:**
 
-
 - **Security (CC6.1)** - API keys hashed with bcrypt, stored in Vault
-
 
 - **Security (CC6.6)** - Rate limiting prevents abuse
 
-
 - **Security (CC6.7)** - Audit logging tracks all API key operations
 
-
 - **Confidentiality (CC7.2)** - API keys transmitted over HTTPS only
-
 
 ### ISO 27001
 
 **Vault Integration Supports:**
 
-
 - **A.9.4.2 - Secure log-on procedures** - API key authentication
-
 
 - **A.9.4.3 - Password management system** - bcrypt hashing, Vault storage
 
-
 - **A.12.4.1 - Event logging** - Comprehensive audit trail
 
-
 - **A.14.2.5 - Secure system engineering principles** - Least privilege, rate limiting
-
 
 ### GDPR
 
 **Vault Integration Supports:**
 
-
 - **Article 32 - Security of Processing** - Encryption (HTTPS), access control (scopes)
-
 
 - **Article 25 - Data Protection by Design** - Secure by default (HTTPS, hashing, rate limiting)
 
 ---
 
-
 ## Roadmap
-
 
 ### MVP (Current)
 
@@ -1582,27 +1251,19 @@ sendEmail();
 
 **Features:**
 
-
 - ✅ API key generation with bcrypt hashing
-
 
 - ✅ Vault storage for API keys
 
-
 - ✅ Permission scopes (send_email, read_analytics, manage_contacts)
-
 
 - ✅ Tier-based rate limiting (60/300/1000 req/min)
 
-
 - ✅ Frontend UI for key management
-
 
 - ✅ Usage tracking (requests, errors, last used)
 
-
 - ✅ Audit logging
-
 
 - ✅ API documentation with code examples
 
@@ -1610,141 +1271,97 @@ sendEmail();
 
 **Priority:** P0 - Critical (blocks all programmatic integrations)
 
-
 ### Post-MVP (Q1 2026)
 
 **Features:**
 
-
 - IP whitelisting (restrict API key usage to specific IPs)
-
 
 - Webhook notifications for API key events (created, revoked, rate limit exceeded)
 
-
 - Advanced usage analytics (geographic distribution, endpoint popularity)
-
 
 - API key expiration dates (auto-revoke after X days)
 
-
 - Team-level API keys (shared across team members)
 
-
 - API key templates (pre-configured permission sets)
-
 
 ### Future (Q2 2026+)
 
 **Features:**
 
-
 - OAuth 2.0 support (alternative to API keys)
-
 
 - API key rotation policies (auto-rotate every 90 days)
 
-
 - API key usage quotas (max requests per month)
-
 
 - API key cost tracking (charge per API request)
 
-
 - API key analytics dashboard (real-time monitoring)
-
 
 - API key security scanning (detect compromised keys)
 
 ---
 
-
 ## Related Documentation
-
 
 ### Route Specifications
 
-
 - **[API Key Management Routes](/docs/design/routes/api-key-management)** - Complete UI route specifications
-
 
 - **[API Access Routes](/docs/design/routes/api-access)** - API key management interface
 
-
 - **[Settings Routes](/docs/design/routes/settings)** - General settings navigation
-
 
 ### Feature Documentation
 
-
 - **[API Access](/docs/features/integrations/api-access)** - General API access overview
-
 
 - **[Webhook System](/docs/features/integrations/webhook-system)** - Event notifications
 
-
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - VPS SSH key management
-
 
 - **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)** - SMTP credentials storage
 
-
 ### API Documentation
-
 
 - **[Platform API](/docs/implementation-technical/api/platform-api)** - Platform-level API endpoints
 
-
 - **[Tenant API](/docs/implementation-technical/api/tenant-api)** - Tenant-level API endpoints
-
 
 - **[API Reference](/docs/implementation-technical/api/README)** - Complete API documentation
 
-
 ### Architecture & Security
-
 
 - **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Comprehensive Vault architecture
 
-
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Enterprise security features
-
 
 - **[Security Monitoring](/docs/operations/security-monitoring)** - Security monitoring and alerting
 
-
 ### Planning & Review
-
 
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
 
-
 - **[Feature Completeness Review - Requirements](/.kiro/specs/feature-completeness-review/requirements.md)** - Requirements document
-
 
 - **[Feature Completeness Review - Design](/.kiro/specs/feature-completeness-review/design.md)** - Design document
 
-
 ### Implementation Tasks
-
 
 - **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
 
-
 - **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - API key system implementation
-
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
 
-
 ### External References
-
 
 - **[HashiCorp Vault Documentation](https://www.vaultproject.io/docs)** - Official Vault docs
 
-
 - **[bcrypt Documentation](https://github.com/kelektiv/node.bcrypt.js)** - Password hashing library
-
 
 - **[Token Bucket Algorithm](https://en.wikipedia.org/wiki/Token_bucket)** - Rate limiting algorithm
 

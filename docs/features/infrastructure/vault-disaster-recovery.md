@@ -10,44 +10,33 @@ keywords: ["vault", "disaster recovery", "backup", "restore", "high availability
 
 # Vault Disaster Recovery Procedures
 
-
 ## Overview
 
 This document provides comprehensive disaster recovery procedures for HashiCorp Vault, the centralized secrets management system for PenguinMails. It covers automated backup strategies, recovery workflows for various failure scenarios, high availability configuration, and monitoring/alerting for Vault health.
-
 
 ### Purpose
 
 Vault stores all critical secrets for the PenguinMails platform:
 
-
 - VPS SSH keys (admin and tenant access)
-
 
 - SMTP credentials (MailU admin passwords)
 
-
 - API keys (tenant programmatic access)
-
 
 - DKIM private keys (email signing)
 
 Loss of Vault data would be catastrophic, preventing:
 
-
 - VPS access and management
-
 
 - Email sending operations
 
-
 - API authentication
-
 
 - Infrastructure provisioning
 
 This document ensures rapid recovery from any Vault failure scenario with minimal data loss and service disruption.
-
 
 ### Recovery Objectives
 
@@ -58,45 +47,33 @@ This document ensures rapid recovery from any Vault failure scenario with minima
 | Vault Compromise | 2-4 hours | 24 hours (daily backups) | All tenants (API keys revoked) |
 | Complete Data Center Loss | 4-6 hours | 24 hours (daily backups) | All services affected |
 
-
 ## Automated Backup Strategy
-
 
 ### Backup Schedule
 
 **Daily Backups:**
 
-
 - **Frequency:** Every day at 02:00 UTC
-
 
 - **Retention:** 30 daily backups (rolling window)
 
-
 - **Storage:** Encrypted S3 bucket (or equivalent object storage)
 
-
 - **Encryption:** AES-256-GCM with separate encryption key
-
 
 - **Verification:** Automated integrity check after each backup
 
 **Monthly Backups:**
 
-
 - **Frequency:** First day of each month at 02:00 UTC
-
 
 - **Retention:** 12 monthly backups (1 year)
 
-
 - **Storage:** Same encrypted S3 bucket, separate prefix
-
 
 - **Purpose:** Long-term recovery and compliance
 
 **Backup Naming Convention:**
-
 
 ```
 
@@ -113,11 +90,9 @@ s3://penguinmails-vault-backups/
 
 ```
 
-
 ### Backup Process
 
 **Automated Backup Workflow:**
-
 
 ```mermaid
 sequenceDiagram
@@ -147,7 +122,6 @@ sequenceDiagram
 ```
 
 **Implementation:**
-
 
 ```typescript
 // Automated backup service (runs daily at 02:00 UTC)
@@ -269,11 +243,9 @@ async function encryptBackup(
 
 ```
 
-
 ### Backup Retention Policy
 
 **Automated Cleanup:**
-
 
 ```typescript
 // Clean up old backups (runs daily after backup)
@@ -324,11 +296,9 @@ async function cleanupOldBackups(): Promise<void> {
 
 ```
 
-
 ### Backup Verification
 
 **Weekly Restore Test:**
-
 
 ```typescript
 // Test backup restoration to staging environment (runs weekly)
@@ -387,16 +357,13 @@ async function testBackupRestoration(): Promise<void> {
 
 ```
 
-
 ## VPS Migration Workflow
-
 
 ### Scenario: Compromised or Failed VPS
 
 When a VPS is compromised or fails, secrets can be rapidly recovered from Vault to a new VPS without data loss.
 
 **Migration Process:**
-
 
 ```mermaid
 sequenceDiagram
@@ -425,7 +392,6 @@ sequenceDiagram
 ```
 
 **Implementation:**
-
 
 ```typescript
 // Migrate tenant to new VPS after compromise
@@ -557,13 +523,11 @@ async function migrateToNewVps(
 
 ```
 
-
 ### SMTP Credential Recovery
 
 **Specific SMTP Recovery Workflow:**
 
 When recovering SMTP credentials during VPS migration, follow these steps:
-
 
 ```typescript
 // Recover SMTP credentials to new VPS
@@ -612,18 +576,13 @@ async function recoverSmtpCredentialsToNewVps(
 
 **Reference:** See [SMTP Credentials Vault Storage](vault-smtp-credentials.md) for detailed SMTP disaster recovery scenarios including:
 
-
 - VPS failure recovery
-
 
 - Vault restoration
 
-
 - Credential compromise response
 
-
 ## Secret Recovery Procedures
-
 
 ### Quarterly Disaster Recovery Drills
 
@@ -633,68 +592,47 @@ async function recoverSmtpCredentialsToNewVps(
 
 **Drill Scenarios:**
 
-
 1. **Scenario 1: Vault Server Failure**
-
 
    - Simulate Vault server crash
 
-
    - Test automatic failover to standby node
-
 
    - Verify all services reconnect successfully
 
-
    - Measure actual RTO (target: < 30 minutes)
-
 
 2. **Scenario 2: Complete Vault Cluster Loss**
 
-
    - Simulate loss of all Vault nodes
-
 
    - Restore Vault from latest backup
 
-
    - Verify all secrets accessible
-
 
    - Measure actual RTO (target: < 2 hours)
 
-
 3. **Scenario 3: VPS Compromise**
-
 
    - Simulate VPS compromise for test tenant
 
-
    - Migrate to new VPS using Vault secrets
-
 
    - Verify email sending works
 
-
    - Measure actual RTO (target: < 1 hour)
-
 
 4. **Scenario 4: Credential Compromise**
 
-
    - Simulate SMTP credential leak
-
 
    - Execute emergency rotation workflow
 
-
    - Verify zero downtime
-
 
    - Measure rotation time (target: < 5 minutes)
 
 **Drill Execution:**
-
 
 ```typescript
 // Execute quarterly disaster recovery drill
@@ -803,31 +741,23 @@ async function drillVaultFailure(): Promise<DrillResult> {
 
 ```
 
-
 ## Vault Restoration from Backup
-
 
 ### Step-by-Step Runbook
 
 **Prerequisites:**
 
-
 - Access to S3 backup bucket
-
 
 - Backup encryption key
 
-
 - Vault unseal keys (3 of 5 required)
-
 
 - Root token or admin credentials
 
 **Restoration Steps:**
 
-
 #### Step 1: Provision New Vault Server
-
 
 ```bash
 
@@ -870,9 +800,7 @@ sudo systemctl start vault
 
 ```
 
-
 #### Step 2: Download Latest Backup
-
 
 ```bash
 
@@ -901,9 +829,7 @@ echo "Backup downloaded: /tmp/vault-backup.enc"
 
 ```
 
-
 #### Step 3: Decrypt Backup
-
 
 ```bash
 
@@ -935,9 +861,7 @@ echo "Backup decrypted: /tmp/vault-backup.snap"
 
 ```
 
-
 #### Step 4: Initialize Vault
-
 
 ```bash
 
@@ -973,9 +897,7 @@ vault operator init -key-shares=5 -key-threshold=3
 
 ```
 
-
 #### Step 5: Unseal Vault
-
 
 ```bash
 
@@ -997,9 +919,7 @@ vault status
 
 ```
 
-
 #### Step 6: Restore Snapshot
-
 
 ```bash
 
@@ -1021,9 +941,7 @@ vault status
 
 ```
 
-
 #### Step 7: Verify Secrets
-
 
 ```bash
 
@@ -1042,9 +960,7 @@ echo "Vault restoration completed successfully"
 
 ```
 
-
 #### Step 8: Update DNS and Services
-
 
 ```bash
 
@@ -1069,9 +985,7 @@ curl -H "X-Vault-Token: ${VAULT_TOKEN}" \
 
 ```
 
-
 #### Step 9: Cleanup
-
 
 ```bash
 
@@ -1089,9 +1003,7 @@ echo "Vault restored from backup: ${BACKUP_DATE}" >> /var/log/vault/restoration.
 
 ```
 
-
 ### Automated Restoration Script
-
 
 ```typescript
 // Automated Vault restoration from backup
@@ -1207,14 +1119,11 @@ async function decryptBackup(
 
 ```
 
-
 ## High Availability Setup
-
 
 ### 3-Node Vault Cluster
 
 **Architecture:**
-
 
 ```mermaid
 graph TB
@@ -1260,11 +1169,9 @@ graph TB
 
 ```
 
-
 ### Cluster Configuration
 
 **Vault Node Configuration:**
-
 
 ```hcl
 
@@ -1310,7 +1217,6 @@ ui = true
 
 **Load Balancer Configuration (HAProxy):**
 
-
 ```haproxy
 
 
@@ -1344,11 +1250,9 @@ backend vault_backend
 
 ```
 
-
 ### Automatic Failover
 
 **Failover Process:**
-
 
 ```mermaid
 sequenceDiagram
@@ -1373,7 +1277,6 @@ sequenceDiagram
 ```
 
 **Failover Implementation:**
-
 
 ```typescript
 // Monitor Vault cluster health
@@ -1436,37 +1339,27 @@ async function monitorVaultClusterHealth(): Promise<void> {
 
 ```
 
-
 ## Monitoring and Alerting
-
 
 ### Vault Health Monitoring
 
 **Metrics to Monitor:**
 
-
 1. **Seal Status** - Vault must be unsealed to serve requests
-
 
 2. **Leader Status** - One node must be active leader
 
-
 3. **Replication Lag** - Standby nodes must stay in sync
-
 
 4. **Request Latency** - Secret retrieval should be < 100ms
 
-
 5. **Error Rate** - Failed requests should be < 0.1%
 
-
 6. **Storage Usage** - PostgreSQL disk usage
-
 
 7. **Backup Status** - Daily backups must succeed
 
 **Monitoring Implementation:**
-
 
 ```typescript
 // Comprehensive Vault health monitoring
@@ -1615,7 +1508,6 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
 
 ```
 
-
 ### Alert Configuration
 
 **Alert Severity Levels:**
@@ -1628,7 +1520,6 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
 | **Low** | 24 hours | Email | Routine maintenance needed |
 
 **Alert Rules:**
-
 
 ```typescript
 // Alert configuration
@@ -1695,73 +1586,51 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
 
 ```
 
-
 ### Grafana Dashboard
 
 **Metrics to Display:**
 
-
 1. **Vault Status Panel**
-
 
    - Seal status (sealed/unsealed)
 
-
    - Leader status (active/standby)
-
 
    - Cluster size (3 nodes)
 
-
 2. **Performance Metrics**
-
 
    - Request rate (requests/second)
 
-
    - Request latency (p50, p95, p99)
-
 
    - Error rate (%)
 
-
 3. **Storage Metrics**
-
 
    - PostgreSQL disk usage (GB)
 
-
    - Secret count by path
-
 
    - Backup size (GB)
 
-
 4. **Replication Metrics**
-
 
    - Replication lag (seconds)
 
-
    - Standby node status
-
 
    - Last successful sync
 
-
 5. **Backup Metrics**
-
 
    - Last backup timestamp
 
-
    - Backup success rate (%)
-
 
    - Backup size trend
 
 **Prometheus Metrics:**
-
 
 ```yaml
 
@@ -1795,16 +1664,13 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
 
 ```
 
-
 ## Emergency Procedures for Vault Compromise
-
 
 ### Scenario: Vault Security Breach
 
 If Vault is compromised (unauthorized access detected), immediate action is required to protect all secrets.
 
 **Emergency Response Workflow:**
-
 
 ```mermaid
 sequenceDiagram
@@ -1833,9 +1699,7 @@ sequenceDiagram
 
 **Emergency Response Steps:**
 
-
 #### Step 1: Immediate Containment (< 5 minutes)
-
 
 ```bash
 
@@ -1866,9 +1730,7 @@ vault token revoke -mode=path auth/
 
 ```
 
-
 #### Step 2: Incident Assessment (5-15 minutes)
-
 
 ```typescript
 // Analyze audit logs to determine breach scope
@@ -1910,9 +1772,7 @@ async function assessVaultBreach(): Promise<BreachAssessment> {
 
 ```
 
-
 #### Step 3: Rotate Unseal Keys (15-30 minutes)
-
 
 ```bash
 
@@ -1937,9 +1797,7 @@ vault operator rekey -target=recovery <old-unseal-key-3>
 
 ```
 
-
 #### Step 4: Rotate All Secrets (30 minutes - 2 hours)
-
 
 ```typescript
 // Emergency rotation of all secrets
@@ -2004,9 +1862,7 @@ async function revokeAllApiKeys(
 
 ```
 
-
 #### Step 5: Notify Tenants (Immediate)
-
 
 ```typescript
 // Notify all affected tenants
@@ -2054,9 +1910,7 @@ async function notifyTenantsOfBreach(
 
 ```
 
-
 #### Step 6: Unseal Vault with New Keys (30-60 minutes)
-
 
 ```bash
 
@@ -2089,9 +1943,7 @@ vault token lookup
 
 ```
 
-
 #### Step 7: Post-Incident Review (1-2 days)
-
 
 ```typescript
 // Conduct post-incident review
@@ -2133,312 +1985,209 @@ async function conductPostIncidentReview(
 
 ```
 
-
 ## Implementation Checklist
-
 
 ### Phase 1: Automated Backup System (Week 1)
 
-
 - [ ] Configure S3 bucket for encrypted backups
-
 
 - [ ] Generate and securely store backup encryption key
 
-
 - [ ] Implement automated backup script (daily at 02:00 UTC)
-
 
 - [ ] Implement backup encryption (AES-256-GCM)
 
-
 - [ ] Implement backup verification (checksum validation)
-
 
 - [ ] Configure backup retention policy (30 daily, 12 monthly)
 
-
 - [ ] Test backup creation and upload to S3
-
 
 - [ ] Configure backup failure alerts
 
-
 ### Phase 2: Backup Restoration (Week 2)
-
 
 - [ ] Document step-by-step restoration runbook
 
-
 - [ ] Implement automated restoration script
-
 
 - [ ] Test backup decryption
 
-
 - [ ] Test Vault snapshot restoration
-
 
 - [ ] Verify secrets accessible after restoration
 
-
 - [ ] Conduct weekly restore test to staging
-
 
 - [ ] Measure actual RTO/RPO
 
-
 ### Phase 3: VPS Migration Workflow (Week 3)
-
 
 - [ ] Implement VPS migration script
 
-
 - [ ] Test secret recovery from Vault
-
 
 - [ ] Test SSH key installation on new VPS
 
-
 - [ ] Test SMTP credential recovery
-
 
 - [ ] Test DKIM key installation
 
-
 - [ ] Verify email sending after migration
-
 
 - [ ] Document VPS migration procedures
 
-
 - [ ] Conduct VPS migration drill
-
 
 ### Phase 4: High Availability Setup (Week 4-5)
 
-
 - [ ] Provision 3 Vault servers
-
 
 - [ ] Configure Raft consensus protocol
 
-
 - [ ] Set up PostgreSQL replication (primary + 2 replicas)
-
 
 - [ ] Configure load balancer (HAProxy/Nginx)
 
-
 - [ ] Test automatic failover
-
 
 - [ ] Configure health checks (every 5 seconds)
 
-
 - [ ] Verify audit logs replicate correctly
-
 
 - [ ] Measure failover time (target: < 30 seconds)
 
-
 ### Phase 5: Monitoring and Alerting (Week 5)
-
 
 - [ ] Implement Vault health monitoring script
 
-
 - [ ] Configure Prometheus metrics collection
-
 
 - [ ] Create Grafana dashboards
 
-
 - [ ] Configure alert rules (seal status, replication lag, backup status)
-
 
 - [ ] Set up alert notifications (email, Slack, PagerDuty)
 
-
 - [ ] Test alert delivery for each severity level
-
 
 - [ ] Document monitoring procedures
 
-
 ### Phase 6: Disaster Recovery Drills (Week 6)
-
 
 - [ ] Schedule quarterly DR drills
 
-
 - [ ] Document drill scenarios (vault failure, cluster loss, VPS compromise, credential compromise)
-
 
 - [ ] Implement drill execution scripts
 
-
 - [ ] Conduct first DR drill (vault server failure)
-
 
 - [ ] Generate drill report
 
-
 - [ ] Identify and fix issues found during drill
-
 
 - [ ] Update DR procedures based on lessons learned
 
-
 ### Phase 7: Emergency Response Procedures (Week 6)
-
 
 - [ ] Document Vault compromise response workflow
 
-
 - [ ] Implement emergency secret rotation script
-
 
 - [ ] Create tenant notification templates
 
-
 - [ ] Test emergency seal and unseal procedures
-
 
 - [ ] Test unseal key rotation
 
-
 - [ ] Document post-incident review process
-
 
 - [ ] Train team on emergency procedures
 
-
 ### Phase 8: SMTP Credential Recovery Integration (Week 7)
-
 
 - [ ] Integrate SMTP credential recovery into VPS migration workflow
 
-
 - [ ] Test SMTP credential decryption
-
 
 - [ ] Test MailU configuration with recovered credentials
 
-
 - [ ] Verify webmail access after recovery
-
 
 - [ ] Document SMTP-specific recovery procedures
 
-
 - [ ] Reference SMTP disaster recovery documentation
-
 
 - [ ] Conduct end-to-end SMTP recovery drill
 
-
 ## Related Documentation
-
 
 ### Route Specifications
 
-
 - **[Infrastructure SSH Access Routes](/docs/design/routes/infrastructure-ssh-access)** - SSH and secrets management UI
-
 
 - **[Admin Routes](/docs/design/routes/admin)** - Admin secrets management panel
 
-
 ### Feature Documentation
-
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation
 
-
 - **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)** - SMTP-specific disaster recovery
-
 
 - **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - API key storage and rotation
 
-
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - MailU configuration
-
 
 - **[Hostwind Management](/docs/features/infrastructure/hostwind-management)** - VPS provisioning workflow
 
-
 ### Operations Documentation
-
 
 - **[Incident Response](/docs/operations/incident-response)** - Security incident procedures
 
-
 - **[Security Monitoring](/docs/operations/security-monitoring)** - Monitoring and alerting
-
 
 - **[Operational Runbooks](/docs/operations/operational-runbooks)** - Operational procedures
 
-
 ### Architecture & Security
-
 
 - **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Complete Vault architecture
 
-
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation
-
 
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Security features
 
-
 ### Planning & Review
-
 
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
 
-
 - **[Feature Completeness Review Requirements](/.kiro/specs/feature-completeness-review/requirements.md)** - Review requirements
-
 
 - **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure roadmap
 
-
 ### Implementation Tasks
-
 
 - **[Task 11.7 - Vault Disaster Recovery](/.kiro/specs/feature-completeness-review/tasks.md#117-implement-vault-disaster-recovery-procedures)** - Disaster recovery implementation
 
-
 - **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
-
 
 - **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)** - SSH key storage
 
-
 - **[Task 11.5 - SMTP Credentials Vault Storage](/.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)** - SMTP credential management
-
 
 - **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - API key storage
 
-
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
-
 
 ### External Resources
 
-
 - **[HashiCorp Vault Documentation](https://www.vaultproject.io/docs)** - Official Vault docs
-
 
 - **[Vault Disaster Recovery](https://learn.hashicorp.com/tutorials/vault/disaster-recovery)** - DR tutorial
 
-
 - **[Vault High Availability](https://learn.hashicorp.com/tutorials/vault/ha-with-consul)** - HA setup
 
-
 - **[Vault Backup and Restore](https://www.vaultproject.io/docs/commands/operator/raft/snapshot)** - Backup commands
-
 
 - **[Vault Monitoring](https://www.vaultproject.io/docs/internals/telemetry)** - Monitoring guide
 

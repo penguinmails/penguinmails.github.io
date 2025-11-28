@@ -9,57 +9,39 @@ persona: "Technical Writers"
 
 # Documentation Contributions & Standards
 
-
 ## Documentation Standards
-
 
 ### Writing Guidelines
 
-
 #### Voice and Tone
-
 
 - **Clear and concise**: Avoid jargon, explain technical terms
 
-
 - **Action-oriented**: Focus on what users can accomplish
-
 
 - **Inclusive**: Use gender-neutral language
 
-
 - **Professional but approachable**: Friendly without being informal
-
 
 #### Structure Guidelines
 
-
 ### Page Structure
-
 
 1. **Title**: Clear, descriptive, action-oriented
 
-
 2. **Overview**: Brief description of what this documentation covers
-
 
 3. **Prerequisites**: What users need before starting
 
-
 4. **Step-by-step instructions**: Numbered, actionable steps
-
 
 5. **Examples**: Code samples, screenshots, real-world scenarios
 
-
 6. **Troubleshooting**: Common issues and solutions
-
 
 7. **Related topics**: Links to relevant documentation
 
-
 #### Code Examples
-
 
 ```typescript
 // ✅ Good: Complete, tested, well-commented example
@@ -95,9 +77,7 @@ const campaign = await client.campaigns.create({ name: 'test' });
 
 ```
 
-
 ## API Documentation
-
 
 ```markdown
 
@@ -145,7 +125,6 @@ Creates a new email campaign for sending to recipients.
 
 **Response**:
 
-
 ```json
 {
   "success": true,
@@ -166,17 +145,13 @@ Creates a new email campaign for sending to recipients.
 
 **Error Responses**:
 
-
 - `400 Bad Request`: Invalid request data
 
-
 - `401 Unauthorized`: Missing or invalid authentication
-
 
 - `409 Conflict`: Campaign name already exists
 
 **Example Usage**:
-
 
 ```typescript
 import { PenguinMailsClient, ValidationError, AuthenticationError } from '@penguinmails/sdk';
@@ -228,21 +203,15 @@ try {
 
 **Best Practices**:
 
-
 1. **Use descriptive names**: "Welcome Email Series" vs "Campaign 1"
-
 
 2. **Keep subjects under 100 characters** for better deliverability
 
-
 3. **Always include both HTML and text versions** for accessibility
-
 
 4. **Test with small recipient lists first** before sending to large audiences
 
-
 5. **Enable AI optimization** for better performance (when available)
-
 
 ```
 
@@ -313,12 +282,9 @@ if (response.ok) {
 
 ```
 
-
 ## Step 2: Create Your First Campaign
 
-
 ### Basic Campaign Structure
-
 
 ```typescript
 import { PenguinMailsClient } from '@penguinmails/sdk';
@@ -358,30 +324,21 @@ console.log(`Campaign created: ${campaign.id}`);
 
 ```
 
-
 ### Understanding Campaign States
-
 
 - **draft**: Campaign created but not sent
 
-
 - **scheduled**: Campaign set to send at future time
-
 
 - **sending**: Campaign currently being sent
 
-
 - **sent**: Campaign sending completed
-
 
 - **cancelled**: Campaign was cancelled before sending
 
-
 ## Step 3: Send and Monitor
 
-
 ### Send Campaign
-
 
 ```typescript
 // Send the campaign
@@ -395,9 +352,7 @@ console.log(`Current status: ${status}`);
 
 ```
 
-
 ### Monitor Performance
-
 
 ```typescript
 // Get campaign analytics
@@ -411,12 +366,9 @@ console.log(`Click rate: ${analytics.clickRate.toFixed(2)}%`);
 
 ```
 
-
 ## Step 4: Advanced Features
 
-
 ### AI Content Optimization
-
 
 ```typescript
 // Enable AI optimization
@@ -431,9 +383,7 @@ console.log(`AI optimization score: ${campaign.aiOptimization.improvementScore.t
 
 ```
 
-
 ### Personalization
-
 
 ```typescript
 // Advanced personalization
@@ -468,15 +418,11 @@ const content = {
 
 ```
 
-
 ## Troubleshooting
-
 
 ### Common Issues
 
-
 #### Authentication Errors
-
 
 ```typescript
 // 401: Invalid API key
@@ -492,9 +438,7 @@ if (response.status === 403) {
 
 ```
 
-
 #### Rate Limiting
-
 
 ```typescript
 // 429: Rate limit exceeded
@@ -507,9 +451,7 @@ if (response.status === 429) {
 
 ```
 
-
 #### Validation Errors
-
 
 ```typescript
 // 400: Invalid request data
@@ -525,41 +467,29 @@ try {
 
 ```
 
-
 ## Next Steps
 
 Congratulations! You've created and sent your first campaign with PenguinMails.
 
-
 ### Recommended Next Steps
-
 
 1. **Explore Analytics**: Learn about [advanced analytics features](.)
 
-
 2. **Set Up Webhooks**: Implement [real-time event tracking](.)
-
 
 3. **Optimize Performance**: Discover [AI optimization features](.)
 
-
 4. **Integrate with CRM**: Connect with your [existing tools](.)
-
 
 ### Additional Resources
 
-
 - [API Reference](.) - Complete API documentation
-
 
 - [SDK Documentation](.) - Language-specific guides
 
-
 - [Best Practices Guide](.) - Production deployment tips
 
-
 - [Community Forum](https://discord.gg/penguinmails) - Get help and share ideas
-
 
 ```
 
@@ -596,9 +526,7 @@ Congratulations! You've created and sent your first campaign with PenguinMails.
 
 ```
 
-
 #### Code Blocks
-
 
 ```markdown
 ```typescript
@@ -612,39 +540,27 @@ function exampleFunction(): void {
 
 Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and commands `npm run build`.
 
-
 #### Lists
-
 
 - Use bullet points for unordered lists
 
-
 - Use numbers for ordered lists
-
 
 - Nest lists with proper indentation (2 spaces)
 
-
 - Keep list items concise and actionable
-
 
 #### Links
 
-
 - [Internal links](relative-path) without .md extension
-
 
 - [External links](https://example.com) with descriptive text
 
-
 - [Email links](mailto:contact@example.com)
-
 
 - Use descriptive link text, not "click here"
 
-
 #### Tables
-
 
 ```markdown
 | Column 1 | Column 2 | Column 3 |
@@ -655,78 +571,53 @@ Inline code: Use backticks for `inline code`, file paths `/path/to/file`, and co
 
 ```
 
-
 #### Emphasis
-
 
 - **Bold**: `**bold text**` for important terms
 
-
 - *Italic*: `*italic text*` for subtle emphasis
-
 
 - `Code`: Backticks for code terms
 
-
 - ~~Strikethrough~~: For deprecated features
-
 
 ### Technical Writing Best Practices
 
-
 #### Clarity
-
 
 1. **Use active voice**: "Click the button" not "The button should be clicked"
 
-
 2. **Write in second person**: "You can" not "One can"
-
 
 3. **Be specific**: "Click the 'Submit' button" not "Click the button"
 
-
 4. **Avoid jargon**: Define technical terms on first use
-
 
 #### Organization
 
-
 1. **Start with overview**: What will users accomplish?
-
 
 2. **Prerequisites first**: What do users need before starting?
 
-
 3. **Step by step**: Numbered, actionable steps
-
 
 4. **Examples throughout**: Don't wait until the end
 
-
 5. **Troubleshooting**: Common issues and solutions
-
 
 #### Completeness
 
-
 1. **Cover edge cases**: What if something goes wrong?
-
 
 2. **Include error scenarios**: How to handle failures?
 
-
 3. **Cross-reference**: Link to related topics
-
 
 4. **Update regularly**: Keep documentation current
 
-
 ### Content Types
 
-
 #### API Documentation
-
 
 ```typescript
 // Type definitions for API responses
@@ -749,9 +640,7 @@ const campaign = await client.campaigns.create({
 
 ```
 
-
 #### User Guides
-
 
 ```markdown
 
@@ -781,9 +670,7 @@ const campaign = await client.campaigns.create({
 
 ```
 
-
 #### Troubleshooting Guides
-
 
 ```markdown
 
@@ -874,187 +761,127 @@ const campaign = await client.campaigns.create({
 
 ```
 
-
 ## Documentation Workflow
-
 
 ### Creating New Documentation
 
-
 1. **Research**: Understand the topic thoroughly
-
 
 2. **Outline**: Create structure and flow
 
-
 3. **Write first draft**: Focus on content, not perfection
-
 
 4. **Review**: Get feedback from team and users
 
-
 5. **Edit**: Improve clarity and accuracy
-
 
 6. **Test**: Verify all examples work
 
-
 7. **Publish**: Deploy with proper navigation
-
 
 8. **Monitor**: Track usage and feedback
 
-
 ### Updating Existing Documentation
-
 
 1. **Identify needs**: User feedback, API changes, feature updates
 
-
 2. **Review current**: Understand existing content and structure
-
 
 3. **Plan changes**: Determine scope and approach
 
-
 4. **Implement updates**: Make targeted improvements
-
 
 5. **Verify accuracy**: Test all examples and links
 
-
 6. **Update navigation**: Adjust cross-references and links
-
 
 ### Review Process
 
 **Self Review Checklist:**
 
-
 - [ ] Content is accurate and up-to-date
-
 
 - [ ] Examples are tested and working
 
-
 - [ ] Links are functional and correct
-
 
 - [ ] Grammar and spelling checked
 
-
 - [ ] Style guide compliance verified
-
 
 - [ ] Navigation and cross-references work
 
 **Peer Review:**
 
-
 - [ ] Technical accuracy validated
-
 
 - [ ] Clarity and comprehensibility assessed
 
-
 - [ ] User experience considerations addressed
-
 
 - [ ] Security and privacy implications reviewed
 
-
 ## Documentation Tools
-
 
 ### Markdown Extensions
 
-
 - **Front Matter**: YAML metadata for page properties
-
 
 - **Code Blocks**: Language-specific syntax highlighting
 
-
 - **Mermaid Diagrams**: Flowcharts and diagrams
-
 
 - **Mathematical Formulas**: LaTeX math notation support
 
-
 ### Screenshot Tools
-
 
 - Use consistent styling and branding
 
-
 - Include cursor highlights and annotations
-
 
 - Ensure screenshots are current and accurate
 
-
 - Optimize file sizes for web delivery
-
 
 ### Content Management
 
-
 - Version control for all documentation
-
 
 - Automated deployment pipelines
 
-
 - Search functionality for content discovery
-
 
 - Analytics for usage tracking
 
-
 ## Documentation Metrics
-
 
 ### Usage Analytics
 
-
 - Page views and unique visitors
-
 
 - Search terms and results
 
-
 - Time spent on pages
-
 
 - Exit rates and bounce rates
 
-
 ### Quality Metrics
-
 
 - User feedback scores
 
-
 - Support ticket reduction
-
 
 - Tutorial completion rates
 
-
 - Community engagement
-
 
 ### Improvement Indicators
 
-
 - Reduced support requests
-
 
 - Increased feature adoption
 
-
 - Better developer experience
-
 
 - Higher user satisfaction
 

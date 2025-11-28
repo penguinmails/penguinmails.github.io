@@ -9,14 +9,12 @@ persona: "Documentation Users"
 
 # Payment Processing Templates
 
-
 ## Monthly Payment Request Template
 
 **Freelancer Name:** ______________________________  
 **Payment Period:** ______________________________  
 **Request Date:** ______________________________  
 **Total Effort Points:** _________________________
-
 
 ### Completed Tasks Summary
 
@@ -26,7 +24,6 @@ persona: "Documentation Users"
 |         |                  |               |               |                  |                |
 |         |                  |               |               |                  |                |
 
-
 ### Payment Calculation
 
 **Total Effort Points:** ______________________________  
@@ -35,7 +32,6 @@ persona: "Documentation Users"
 **Less Adjustments:** ______________________________  
 **Final Amount:** ______________________________
 
-
 ### Documentation
 
 **Invoice Reference:** ______________________________  
@@ -43,13 +39,11 @@ persona: "Documentation Users"
 **Bank Details:** ______________________________  
 **Tax Information:** ______________________________
 
-
 ### Approval
 
 **Freelancer Signature:** _______________________ **Date:** __________  
 **Task Manager Approval:** _______________________ **Date:** __________  
 **Finance Approval:** _______________________ **Date:** __________
-
 
 ## Payment Adjustment Form Template
 
@@ -58,13 +52,11 @@ persona: "Documentation Users"
 **Original Payment ID:** __________________________  
 **Adjustment Date:** ______________________________
 
-
 ### Original Payment
 
 **Original Effort Points:** __________________________  
 **Original Amount:** ______________________________  
 **Original Approval Date:** ________________________
-
 
 ### Adjustment Details
 
@@ -73,13 +65,11 @@ persona: "Documentation Users"
 **Effort Point Adjustment:** __________________________  
 **Amount Adjustment:** ______________________________
 
-
 ### New Calculation
 
 **Adjusted Effort Points:** __________________________  
 **Adjusted Amount:** ______________________________  
 **Difference:** ______________________________
-
 
 ### Approval Process
 

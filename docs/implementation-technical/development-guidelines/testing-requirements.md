@@ -9,30 +9,21 @@ persona: "Quality Assurance"
 
 # Testing Requirements & Quality Standards
 
-
 ## Testing Standards
-
 
 ### Test Coverage Requirements
 
-
 - **Overall Coverage**: Minimum 80%
-
 
 - **Critical Paths**: Minimum 90%
 
-
 - **New Code**: Must maintain existing coverage percentage
-
 
 - **Business Logic**: 95% coverage required
 
-
 - **API Endpoints**: 100% coverage for request/response handling
 
-
 ### Test Organization
-
 
 ```
 
@@ -59,9 +50,7 @@ tests/
 
 ```
 
-
 ## Unit Testing Standards
-
 
 ```typescript
 // tests/unit/test-email-service.ts
@@ -244,9 +233,7 @@ interface EmailResult {
 
 ```
 
-
 ## Integration Testing Standards
-
 
 ```typescript
 // tests/integration/test-campaign-api.ts
@@ -626,9 +613,7 @@ async function updateCampaign(
 
 ```
 
-
 ## End-to-End Testing Standards
-
 
 ```typescript
 // tests/e2e/campaign-workflow.spec.ts
@@ -760,63 +745,43 @@ test.describe('Campaign Workflow E2E Tests', () => {
 
 ```
 
-
 ## Testing Best Practices
-
 
 ### Unit Testing Guidelines
 
-
 1. **Test Isolation**: Each test should be independent
-
 
 2. **Arrange-Act-Assert**: Clear test structure
 
-
 3. **Mock External Dependencies**: Use mocks for external services
-
 
 4. **Test Edge Cases**: Cover boundary conditions
 
-
 5. **Descriptive Test Names**: Test names should describe what is being tested
-
 
 ### Integration Testing Guidelines
 
-
 1. **Test Real Dependencies**: Use actual databases and services
-
 
 2. **Clean State**: Reset database state between tests
 
-
 3. **Error Handling**: Test failure scenarios
-
 
 4. **Performance**: Test response times and scalability
 
-
 ### E2E Testing Guidelines
-
 
 1. **User Journey Focus**: Test complete user workflows
 
-
 2. **Realistic Data**: Use realistic test data
-
 
 3. **Cross-Browser**: Test in multiple browsers
 
-
 4. **Mobile Testing**: Test mobile responsiveness
-
 
 5. **Performance**: Monitor page load times
 
-
 ### Test Data Management
-
 
 ```typescript
 // tests/fixtures/sample-campaigns.ts
@@ -1056,9 +1021,7 @@ export const validationTestCases = {
 
 ```
 
-
 ## Running Tests
-
 
 ```bash
 

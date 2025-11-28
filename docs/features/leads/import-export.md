@@ -26,62 +26,45 @@ related_tasks:
 
 **Quick Access**: Bulk import contacts from CSV/Excel files with intelligent field mapping, validation, and export capabilities for data portability.
 
-
 ## Overview
 
 Contact Import/Export enables you to efficiently manage large contact databases by importing from external sources and exporting for analysis, backups, or migration to other systems.
 
-
 ### Key Capabilities
-
 
 - **CSV/Excel Import**: Support for multiple file formats
 
-
 - **Intelligent Field Mapping**: Auto-detect and map columns
-
 
 - **Validation & Error Handling**: Catch issues before import
 
-
 - **Bulk Operations**: Update, add, or merge thousands of contacts
-
 
 - **Custom Field Support**: Import custom field data
 
-
 - **Export with Filters**: Export specific segments or entire lists
 
-
 - **Import History**: Track all imports with rollback capability
-
 
 - **Duplicate Detection**: Smart merging and conflict resolution
 
 ---
 
-
 ## Level 1: Quick Start Guide
 
-
 ### Your First Import
-
 
 #### Step 1: Prepare Your File
 
 **Supported Formats:**
 
-
 - CSV (Comma-separated values)
 
-
 - TSV (Tab-separated values)
-
 
 - Excel (.xlsx, .xls)
 
 **Recommended Columns:**
-
 
 ```csv
 email,first_name,last_name,company,phone,tags,custom_field_industry
@@ -93,12 +76,9 @@ jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
 
 **Required Field:**
 
-
 - `email` (must be unique)
 
-
 #### Step 2: Upload File
-
 
 ```
 
@@ -116,9 +96,7 @@ Preview:
 
 ```
 
-
 #### Step 3: Map Fields
-
 
 ```
 
@@ -142,9 +120,7 @@ Unmapped Columns:
 
 ```
 
-
 #### Step 4: Validation
-
 
 ```
 
@@ -169,9 +145,7 @@ Actions:
 
 ```
 
-
 #### Step 5: Configure Import
-
 
 ```
 
@@ -194,9 +168,7 @@ Segment:
 
 ```
 
-
 #### Step 6: Import Running
-
 
 ```
 
@@ -212,9 +184,7 @@ Estimated remaining: 00:00:45
 
 ```
 
-
 #### Step 7: Import Complete
-
 
 ```
 
@@ -233,12 +203,9 @@ Summary:
 
 ```
 
-
 ### Quick Export
 
-
 #### Export All Contacts
-
 
 ```
 
@@ -274,17 +241,13 @@ Fields:
 
 ---
 
-
 ## Level 2: Advanced Import/Export
 
-
 ### Advanced Import Options
-
 
 #### Field Mapping Strategies
 
 **Auto-Mapping Rules:**
-
 
 ```yaml
 auto_mapping:
@@ -326,7 +289,6 @@ auto_mapping:
 
 **Manual Mapping:**
 
-
 ```
 
 Custom Field Mapping:
@@ -347,7 +309,6 @@ CSV Column: "subscription_tier"
 ```
 
 **Transformation Rules:**
-
 
 ```yaml
 transformations:
@@ -370,11 +331,9 @@ transformations:
 
 ```
 
-
 #### Validation Rules
 
 **Email Validation:**
-
 
 ```yaml
 email_validation:
@@ -393,7 +352,6 @@ email_validation:
 ```
 
 **Duplicate Detection:**
-
 
 ```yaml
 duplicate_detection:
@@ -431,7 +389,6 @@ duplicate_detection:
 
 **Data Validation:**
 
-
 ```yaml
 field_validation:
   phone:
@@ -454,11 +411,9 @@ field_validation:
 
 ```
 
-
 #### Merge Strategies
 
 **Update Existing Contacts:**
-
 
 ```
 
@@ -484,7 +439,6 @@ Per-Field Strategy:
 
 **Conflict Resolution:**
 
-
 ```yaml
 conflict_resolution:
   email:
@@ -506,14 +460,11 @@ conflict_resolution:
 
 ```
 
-
 ### Advanced Export Options
-
 
 #### Filtered Exports
 
 **Export by Segment:**
-
 
 ```
 
@@ -533,7 +484,6 @@ Result: 1,247 contacts
 
 **Export by Date Range:**
 
-
 ```
 
 Export Contacts Added:
@@ -546,7 +496,6 @@ Export Contacts Added:
 ```
 
 **Export by Custom Criteria:**
-
 
 ```
 
@@ -561,9 +510,7 @@ Advanced Filter:
 
 ```
 
-
 #### Custom Field Selection
-
 
 ```
 
@@ -602,11 +549,9 @@ Segments:
 
 ```
 
-
 #### Export Formats
 
 **CSV Export:**
-
 
 ```csv
 email,first_name,last_name,company,phone,lead_score,tags,industry,created_at
@@ -616,7 +561,6 @@ john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-1
 ```
 
 **Excel Export (.xlsx):**
-
 
 ```
 
@@ -642,7 +586,6 @@ Features:
 
 **JSON Export:**
 
-
 ```json
 [
   {
@@ -666,12 +609,9 @@ Features:
 
 ```
 
-
 ### Import History & Rollback
 
-
 #### View Import History
-
 
 ```
 
@@ -690,9 +630,7 @@ Date                User           File               Status    Records
 
 ```
 
-
 #### Import Details
-
 
 ```
 
@@ -744,9 +682,7 @@ Segment Created:
 
 ```
 
-
 #### Rollback Import
-
 
 ```
 
@@ -777,11 +713,9 @@ Confirm rollback:
 
 ```
 
-
 ### Scheduled Imports
 
 **Automated CSV Import:**
-
 
 ```yaml
 scheduled_import:
@@ -817,7 +751,6 @@ scheduled_import:
 
 **API Import Automation:**
 
-
 ```typescript
 // Sync from external CRM daily
 cron.schedule('0 2 * * *', async () => {
@@ -836,12 +769,9 @@ cron.schedule('0 2 * * *', async () => {
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Import jobs tracking
@@ -948,9 +878,7 @@ CREATE INDEX idx_export_jobs_status ON export_jobs(status);
 
 ```
 
-
 ### Import Service
-
 
 ```typescript
 interface ImportOptions {
@@ -1308,9 +1236,7 @@ class ImportService {
 
 ```
 
-
 ### Export Service
-
 
 ```typescript
 interface ExportOptions {
@@ -1457,9 +1383,7 @@ class ExportService {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Process import jobs
@@ -1501,9 +1425,7 @@ cron.schedule('0 4 * * *', async () => {  // 4 AM daily
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Start import
@@ -1583,18 +1505,13 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
 
 ---
 
-
 ## Related Documentation
-
 
 - **[Leads Management](./leads-management.md)** - Contact database and management
 
-
 - **[Contact Segmentation](./contact-segmentation.md)** - Create segments from imported contacts
 
-
 - **[Lead Scoring](./lead-scoring.md)** - Score imported contacts automatically
-
 
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use imported contacts in campaigns
 

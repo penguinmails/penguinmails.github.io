@@ -2,13 +2,11 @@
 
 Subscription management, billing, invoicing, and payment processing.
 
-
 ## Purpose
 
 Handle all payment-related operations including subscriptions, billing, and invoices.
 
 ---
-
 
 ## MVP Status
 
@@ -16,33 +14,23 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 **What's Available Today:**
 
-
 - ✅ Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
-
 
 - ✅ Stripe Checkout integration for secure payment processing
 
-
 - ✅ Automatic subscription creation and management
-
 
 - ✅ Prorated upgrades and downgrades
 
-
 - ✅ Usage tracking (emails, users, workspaces, domains)
-
 
 - ✅ Automatic invoice generation via Stripe
 
-
 - ✅ Payment method updates via Stripe Customer Portal
-
 
 - ✅ Failed payment retry logic (Days 3, 5, 7, 14)
 
-
 - ✅ Subscription cancellation with 90-day grace period
-
 
 - ✅ MRR tracking and financial reporting
 
@@ -50,114 +38,77 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ---
 
-
 ## Missing MVP Features
-
 
 ### Critical Gaps (Q1 2026)
 
-
 1. **[P0] Plan Upgrade/Downgrade UI Flow** (3-5 days)
-
 
    - Plan comparison modal with feature differences
 
-
    - Proration preview before confirmation
-
 
    - Downgrade validation (usage vs new limits)
 
-
    - **Impact:** Core monetization feature - users must self-service plan changes
-
 
 2. **[P0] Usage Tracking Dashboard** (4-6 days)
 
-
    - Real-time progress bars with color-coded alerts
-
 
    - Historical usage charts (6-month trends)
 
-
    - CSV export functionality
-
 
    - **Impact:** Prevents service interruptions, drives upgrade conversions
 
-
 3. **[P1] Invoice Management System** (3-5 days)
-
 
    - Direct PDF download from PenguinMails UI
 
-
    - Invoice preview modal and search/filtering
-
 
    - Bulk download capability
 
-
    - **Impact:** Professional businesses expect self-service invoice management
-
 
 4. **[P1] Payment Method Management UI** (4-6 days)
 
-
    - In-app card updates using Stripe Elements
-
 
    - Multiple payment methods support
 
-
    - Payment method verification
-
 
    - **Impact:** Payment failures are major churn driver - easy updates critical
 
-
 5. **[P0] Failed Payment Recovery Flow** (2-3 days)
-
 
    - Dashboard banner with failure reason
 
-
    - One-click "Update Payment & Retry" button
-
 
    - Grace period countdown timer
 
-
    - **Impact:** Quick recovery prevents service interruption and churn
-
 
 6. **[P1] Subscription Cancellation Flow** (2-3 days)
 
-
    - Cancellation reason survey
-
 
    - Retention offer modal (discount, pause option)
 
-
    - Data export reminder
-
 
    - **Impact:** Graceful cancellation reduces negative sentiment
 
-
 7. **[P2] Budget Controls** (3-4 days)
-
 
    - Budget limit configuration
 
-
    - Alert thresholds (80%, 100%)
 
-
    - Overage handling options
-
 
    - **Impact:** Budget-conscious customers need spending controls
 
@@ -165,178 +116,126 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ---
 
-
 ## Features in This Category
-
 
 ### ✅ Available Now
 
-
 - **[Subscription Management](./subscription-management.md)** - Plan management and upgrades
-
 
 - **[Stripe Integration](./stripe-integration.md)** - Payment processing via Stripe
 
-
 - **[Billing Dashboard](./billing-dashboard.md)** - Usage and billing overview
-
 
 ### 🚧 In Progress (Q1 2026)
 
-
 - **Plan Upgrade/Downgrade UI** - Visual comparison and confirmation workflow
-
 
 - **Usage Tracking Dashboard** - Real-time monitoring with alerts
 
-
 - **Invoice Management** - Direct download and bulk operations
-
 
 - **Payment Method Management** - In-app card updates
 
-
 - **Failed Payment Recovery** - One-click retry workflow
-
 
 - **Cancellation Flow** - Feedback collection and retention offers
 
-
 - **Budget Controls** - Spending limits and alerts
-
 
 ### 🔜 Coming Soon (Q2-Q4 2026)
 
-
 - **Custom Pricing** - Enterprise contracts and volume discounts (Q2 2026)
-
 
 - **Multi-Currency Support** - EUR, GBP, CAD, AUD with local payment methods (Q3 2026)
 
-
 - **Advanced Analytics** - Usage forecasting and cost optimization (Q4 2026)
-
 
 - **Flexible Payment Options** - ACH, wire transfer, purchase orders (Q2 2026)
 
-
 - **Revenue Recognition** - Automated ASC 606 compliance (Q3 2026)
-
 
 - **Subscription Pause** - Temporary pause with reduced rates (Q4 2026)
 
-
 - **Referral Credits** - Referral program with account credits (Q3 2026)
-
 
 - **Advanced Dunning** - Smart retry logic and recovery campaigns (Q4 2026)
 
 ---
 
-
 ## Roadmap Summary
-
 
 ### Q1 2026: MVP Completion
 
 **Focus:** Complete critical user-facing billing features
 
-
 - Plan upgrade/downgrade UI with visual comparison
-
 
 - Real-time usage tracking dashboard
 
-
 - Invoice management with direct download
-
 
 - In-app payment method updates
 
-
 - Failed payment recovery workflow
 
-
 - Subscription cancellation with retention offers
-
 
 - Budget controls and spending limits
 
 **Effort:** 4-7 weeks  
 **Priority:** P0-P2 (MVP blockers)
 
-
 ### Q2 2026: Enterprise Features
 
 **Focus:** Custom pricing and enterprise billing
 
-
 - Custom pricing configuration per tenant
-
 
 - Volume discount tiers
 
-
 - Custom billing cycles (quarterly, annual)
-
 
 - Custom payment terms (Net 30, Net 60)
 
-
 - Contract management with renewals
-
 
 - Flexible payment options (ACH, wire transfer, PO)
 
 **Effort:** 4-5 weeks  
 **Priority:** P1-P2 (Enterprise expansion)
 
-
 ### Q3 2026: International & Advanced
 
 **Focus:** Multi-currency and advanced analytics
 
-
 - Multi-currency support (EUR, GBP, CAD, AUD)
-
 
 - Local payment methods (SEPA, iDEAL)
 
-
 - Currency-specific invoicing with local tax
-
 
 - Revenue recognition automation (ASC 606)
 
-
 - Referral credits and promotional discounts
-
 
 - Advanced usage analytics and forecasting
 
 **Effort:** 10-12 weeks  
 **Priority:** P1-P2 (International expansion)
 
-
 ### Q4 2026: Optimization & Retention
 
 **Focus:** Subscription flexibility and retention
 
-
 - Subscription pause with reduced rates
-
 
 - Advanced dunning management
 
-
 - Smart retry logic based on failure reason
-
 
 - Multi-channel dunning (email, SMS, in-app)
 
-
 - Payment recovery campaigns
-
 
 - Predictive churn prevention
 
@@ -345,9 +244,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ---
 
-
 ## Third-Party Dependencies
-
 
 ### Stripe (Payment Processing)
 
@@ -357,21 +254,15 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 **Current Usage:**
 
-
 - Stripe Checkout for payment collection
-
 
 - Subscription management and billing
 
-
 - Customer Portal for self-service
-
 
 - Webhook integration for real-time sync
 
-
 - Invoice generation and delivery
-
 
 ### Loop.so (Transactional Emails)
 
@@ -381,18 +272,13 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 **Current Usage:**
 
-
 - Payment failure notifications
-
 
 - Invoice delivery emails
 
-
 - Usage alert emails
 
-
 - Subscription change confirmations
-
 
 - Cancellation emails
 
@@ -401,63 +287,43 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ---
 
-
 ## Cross-References
-
 
 ### Route Specifications
 
-
 - **[Settings Routes](/docs/design/routes/settings.md)** - `/dashboard/settings/billing` UI specification
-
 
 - **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - `/dashboard/finance` for finance team
 
-
 ### Implementation Tasks
-
 
 - **[Epic 4: Billing, Plans & Subscriptions](/tasks/epic-4-billing-plans-subscriptions/)** - Implementation tasks
 
-
   - Milestone 1: Plans & Subscriptions Schema
-
 
   - Milestone 2: Stripe Checkout Integration
 
-
   - Milestone 3: Subscription State Synchronization
-
 
 ### API Documentation
 
-
 - **[Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions.md)** - Subscription management endpoints
-
 
 - **[Billing API](/docs/implementation-technical/api/platform-api/billing.md)** - Billing and payment endpoints
 
-
 ### User Journeys
-
 
 - **[Startup Founder Onboarding](/user-journeys/external-users/business-owner-journeys.md)** - Includes plan selection
 
-
 - **[Agency Owner Onboarding](/user-journeys/external-users/agency-owner-journeys.md)** - Multi-workspace billing
-
 
 ### Business Documentation
 
-
 - **[Pricing Strategy](/docs/business/strategy/pricing-strategy.md)** - Plan pricing and positioning
-
 
 - **[Financial Model](/docs/business/financial-analysis/financial-model.md)** - Revenue projections
 
-
 ### Detailed Roadmap
-
 
 - **[Billing & Subscriptions Roadmap](./roadmap.md)** - Complete feature timeline with quarterly breakdown
 

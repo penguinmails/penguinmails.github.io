@@ -15,7 +15,6 @@ category: "Payments"
 
 ---
 
-
 ## Overview
 
 The Billing Dashboard provides complete visibility into your PenguinMails subscription, usage, costs, and payment history - all in one place.
@@ -24,9 +23,7 @@ The Billing Dashboard provides complete visibility into your PenguinMails subscr
 
 ---
 
-
 ## Dashboard Overview
-
 
 ### At-a-Glance Summary
 
@@ -41,31 +38,23 @@ The Billing Dashboard provides complete visibility into your PenguinMails subscr
 
 **Quick Actions:**
 
-
 - [Change Plan] - Upgrade/downgrade
-
 
 - [Update Payment] - Modify payment method
 
-
 - [View Invoices] - Download past invoices
-
 
 - [Cancel Subscription] - End billing
 
 ---
 
-
 ## Level 1: Usage Tracking
-
 
 ### Real-Time Usage Metrics
 
 **Monitor usage against plan limits:**
 
-
 #### Email Sends
-
 
 ```text
 📧 Email Sends
@@ -80,21 +69,15 @@ Resets: December 24, 2025
 
 **Features:**
 
-
 - Progress bar visualization
-
 
 - Percentage used
 
-
 - Exact counts
-
 
 - Reset date
 
-
 #### Team Members
-
 
 ```text
 👥 Team Members
@@ -107,9 +90,7 @@ Available: 2 seats
 
 ```
 
-
 #### Workspaces
-
 
 ```text
 🗂️ Workspaces
@@ -122,9 +103,7 @@ Available: 3 workspaces
 
 ```
 
-
 #### Custom Domains
-
 
 ```text
 🌐 Custom Domains
@@ -139,48 +118,37 @@ Available: 10 domains
 
 ---
 
-
 ### Usage Alerts
 
 **Proactive notifications** when approaching limits.
 
 **Alert Thresholds:**
 
-
 - 🟡 **80% Used** - Warning email
-
 
 - 🟠 **90% Used** - Upgrade suggestion
 
-
 - 🔴 **95% Used** - Urgent action needed
-
 
 - ⛔ **100% Used** - Limit reached
 
 **Alert Actions:**
 
-
 - Email notification to billing admin
-
 
 - In-app notification
 
-
 - Dashboard banner
-
 
 - Recommended actions (upgrade, reduce usage)
 
 ---
-
 
 ### Usage History
 
 **Track usage trends over time.**
 
 **Monthly Usage Chart:**
-
 
 ```text
 Email Sends (Last 6 Months)
@@ -198,20 +166,15 @@ Email Sends (Last 6 Months)
 
 **Export Options:**
 
-
 - CSV download
 
-
 - PDF report
-
 
 - API access
 
 ---
 
-
 ## Level 2: Invoice Management
-
 
 ### Invoice List
 
@@ -225,31 +188,23 @@ Email Sends (Last 6 Months)
 
 **Invoice Details:**
 
-
 - Date issued
-
 
 - Unique invoice number
 
-
 - Line items (subscription, add-ons, taxes)
-
 
 - Total amount
 
-
 - Payment status
-
 
 - PDF download
 
 ---
 
-
 ### Invoice Contents
 
 **Standard invoice includes:**
-
 
 ```text
 INVOICE #INV-001234
@@ -284,28 +239,21 @@ Status: PAID
 
 **Features:**
 
-
 - Company billing information
-
 
 - Itemized charges
 
-
 - Tax breakdown
 
-
 - Payment method
-
 
 - Payment status
 
 ---
 
-
 ### Upcoming Invoice Preview
 
 **See next charge before it happens.**
-
 
 ```text
 🔮 Next Invoice Preview
@@ -330,28 +278,21 @@ Line Items:
 
 **Benefits:**
 
-
 - No billing surprises
-
 
 - Adjust plan before charge
 
-
 - Update payment method if needed
-
 
 - Verify pricing
 
 ---
 
-
 ## Level 3: Payment History
-
 
 ### Transaction Log
 
 **Complete payment history:**
-
 
 ```javascript
 GET /api/v1/billing/payments
@@ -380,89 +321,63 @@ Response:
 
 **Transaction Details:**
 
-
 - Payment date and time
-
 
 - Amount charged
 
-
 - Payment method used
-
 
 - Payment status (succeeded, failed, refunded)
 
-
 - Receipt link
-
 
 - Associated invoice
 
 ---
 
-
 ### Failed Payment Handling
 
 **What happens when payment fails:**
 
-
 1. **Immediate Notification**
-
 
    - Email to billing admin
 
-
    - In-app alert
-
 
    - Dashboard warning banner
 
-
 2. **Grace Period** (7 days)
-
 
    - Service continues
 
-
    - Automatic retry attempts
-
 
    - Update payment method anytime
 
-
 3. **Account Suspension** (Day 7)
-
 
    - Email sending disabled
 
-
    - Read-only access to data
-
 
    - Final retry attempt
 
-
 4. **Cancellation** (Day 14)
 
-
    - Subscription canceled
-
 
    - Free tier activated (90-day data retention)
 
 **Resolution:**
 
-
 - [Update Payment Method] button prominently displayed
 
-
 - [Retry Payment] manual retry option
-
 
 - Contact support for assistance
 
 ---
-
 
 ### Refunds
 
@@ -470,53 +385,39 @@ Response:
 
 **Eligible for Refund:**
 
-
 - ✅ Double-charged (full refund)
-
 
 - ✅ Billing error (full refund)
 
-
 - ✅ Service issue (prorated refund)
-
 
 - ✅ Within 7 days of charge (goodwill refund)
 
 **Not Eligible:**
 
-
 - ❌ Simply changed mind after 7 days
 
-
 - ❌ Service not used (non-usage doesn't qualify)
-
 
 - ❌ Annual plans mid-term (no partial refunds)
 
 **Request Refund:**
 
-
 1. Contact support: <billing@penguinmails.com>
-
 
 2. Provide invoice number and reason
 
-
 3. Review by billing team (1-2 business days)
-
 
 4. Refund processed (5-10 business days to card)
 
 ---
 
-
 ## Budget Management
-
 
 ### Spending Limits
 
 **Set maximum monthly spend:**
-
 
 ```text
 💰 Budget Controls
@@ -541,42 +442,31 @@ Action at 100%:
 
 **Budget Options:**
 
-
 - Set monthly maximum
-
 
 - Alert thresholds
 
-
 - Overage handling (alert, block, auto-upgrade)
-
 
 - Email notifications
 
 ---
 
-
 ### Cost Optimization Tips
 
 **Dashboard provides recommendations:**
 
-
 - 💡 **Switch to Annual** - Save 20% ($358/year savings)
-
 
 - 💡 **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
 
-
 - 💡 **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
-
 
 - 💡 **Optimize Send Frequency** - Reduce emails by segmentation
 
 ---
 
-
 ## Billing Administration
-
 
 ### Billing Contact
 
@@ -584,31 +474,23 @@ Action at 100%:
 
 **Primary Billing Contact:**
 
-
 - Receives all invoices
-
 
 - Payment failure notifications
 
-
 - Usage alerts
-
 
 - Subscription changes
 
 **Additional Contacts:**
 
-
 - CC on invoices (optional)
 
-
 - Separate finance team email
-
 
 - Multiple recipients supported
 
 **Configuration:**
-
 
 ```text
 Billing Contacts
@@ -626,11 +508,9 @@ cfo@acme.com [Remove]
 
 ---
 
-
 ### Company Billing Information
 
 **Tax and invoice details:**
-
 
 ```text
 Company Information
@@ -649,26 +529,19 @@ Billing Address:
 
 **Used For:**
 
-
 - Invoice generation
-
 
 - Tax calculation
 
-
 - Payment processing
-
 
 - Legal compliance
 
 ---
 
-
 ## API Access
 
-
 ### Billing API Endpoints
-
 
 ```javascript
 // Get Current Usage
@@ -697,27 +570,19 @@ PUT /api/v1/billing/company-info
 
 ---
 
-
 ## Related Documentation
-
 
 ### Payments
 
-
 - **[Subscription Management](./subscription-management.md)** - Plan upgrades and downgrades
-
 
 - **[Stripe Integration](./stripe-integration.md)** - Payment processing
 
-
 - **[Payments Overview](./README.md)** - All payment features
-
 
 ### Support
 
-
 - **[Billing FAQ](../../business/faq/billing-faq.md)** - Common billing questions
-
 
 - **[Contact Billing](mailto:billing@penguinmails.com)** - Billing support
 

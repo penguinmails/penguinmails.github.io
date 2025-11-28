@@ -32,40 +32,29 @@ related_tasks:
 
 **Quick Access**: Get new users productive in under 10 minutes with guided setup, interactive tutorials, and contextual help.
 
-
 ## Overview
 
 The Onboarding Experience provides a structured, interactive journey for new users from signup to their first successful email campaign, reducing time-to-value and improving activation rates.
 
-
 ### Key Components
-
 
 1. **Guided Setup Wizard**: Step-by-step infrastructure configuration
 
-
 2. **Interactive Checklist**: Track progress toward first campaign
-
 
 3. **Contextual Tooltips**: In-app guidance and feature discovery
 
-
 4. **Video Tutorials**: Quick how-to videos at key moments
 
-
 5. **Progress Tracking**: Visual progress indicators
-
 
 6. **Achievement Milestones**: Celebrate user progress
 
 ---
 
-
 ## Level 1: Onboarding Flow Overview
 
-
 ### New User Journey
-
 
 ```
 
@@ -80,28 +69,21 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 **Time to Complete**: 8-10 minutes
 
-
 ### Step-by-Step Walkthrough
-
 
 #### Step 1: Sign Up (1 min)
 
 **Fields:**
 
-
 - Email address
-
 
 - Password
 
-
 - Company name
-
 
 - User name
 
 **Welcome Screen:**
-
 
 ```
 
@@ -115,9 +97,7 @@ set up in under 10 minutes.
 
 ```
 
-
 #### Step 2: Create Workspace (1 min)
-
 
 ```
 
@@ -136,9 +116,7 @@ Example: "Main Company" or "Client: Acme Corp"
 
 **Tooltip:** "You can create unlimited workspaces. Start with one for now."
 
-
 #### Step 3: Add Domain (2 min)
-
 
 ```
 
@@ -158,15 +136,11 @@ Domain: [_______________]
 
 **If "Need help?" clicked:**
 
-
 - Show video: "What is a sending domain?"
-
 
 - Link to: Domain setup guide
 
-
 #### Step 4: Verify Domain (2 min)
-
 
 ```
 
@@ -189,18 +163,13 @@ OR
 
 **Auto-detection:**
 
-
 - System polls for DNS record every 10 seconds
-
 
 - Shows "Verifying..." animation
 
-
 - Auto-advances when verified
 
-
 #### Step 5: Set Up Payment (1 min)
-
 
 ```
 
@@ -227,7 +196,6 @@ Step 5 of 6: Choose Your Plan
 
 **After trial started:**
 
-
 ```
 
 ✓ Trial Started - 14 days remaining
@@ -240,9 +208,7 @@ Add payment method anytime in Settings.
 
 ```
 
-
 #### Step 6: Provision Infrastructure (2-3 min)
-
 
 ```
 
@@ -265,7 +231,6 @@ We're setting up your professional email infrastructure:
 
 **Complete:**
 
-
 ```
 
 🎉 Infrastructure Ready!
@@ -280,9 +245,7 @@ Next: Create your first email account
 
 ```
 
-
 #### Step 7: Create First Email Account (1 min)
-
 
 ```
 
@@ -296,9 +259,7 @@ Password: [Generate Secure Password]
 
 ```
 
-
 #### Step 8: Success & Next Steps (30 sec)
-
 
 ```
 
@@ -318,14 +279,11 @@ Quick Actions:
 
 ---
 
-
 ## Level 2: Advanced Onboarding Features
-
 
 ### Interactive Checklist
 
 Persistent checklist in sidebar:
-
 
 ```
 
@@ -346,23 +304,17 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **Features:**
 
-
 - Persists across sessions
-
 
 - Click items to jump to relevant page
 
-
 - Progress percentage updates in real-time
 
-
 - Dismissible after completion
-
 
 ### Contextual Tooltips
 
 **First-time visitor tooltips:**
-
 
 ```
 
@@ -377,18 +329,13 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **Smart triggering:**
 
-
 - Show on first page visit only
-
 
 - Don't show if user has interacted with feature
 
-
 - Allow dismissal (never show again)
 
-
 - Max 3 tooltips per page
-
 
 ### Interactive Tutorial Mode
 
@@ -396,23 +343,17 @@ Getting Started ━━━━━━━━○○○ 70%
 
 **Flow:**
 
-
 1. Dim entire UI
-
 
 2. Highlight specific element
 
-
 3. Show explanation overlay
 
-
 4. Guide through workflow
-
 
 5. Allow skipping or pausing
 
 **Example:**
-
 
 ```
 
@@ -427,39 +368,29 @@ Click here to create a new email campaign.
 
 ```
 
-
 ### Video Tutorials
 
 **Embedded at key moments:**
 
-
 - Domain setup: "How to add DNS records"
 
-
 - Email warmup: "Why warmup matters"
-
 
 - Campaign creation: "Your first campaign"
 
 **Format:**
 
-
 - 60-90 seconds each
-
 
 - Skippable
 
-
 - Closed captions
 
-
 - Hosted on CDN for fast loading
-
 
 ### Progress Milestones
 
 **Achievement notifications:**
-
 
 ```
 
@@ -475,35 +406,25 @@ Keep going!
 
 **Milestones:**
 
-
 - ✓ First workspace created
-
 
 - ✓ First domain verified
 
-
 - ✓ First email account created
-
 
 - ✓ First 10 contacts imported
 
-
 - ✓ First campaign created
-
 
 - ✓ First email sent
 
-
 - ✓ First email opened
 
-
 - ✓ First link clicked
-
 
 ### Personalized Recommendations
 
 Based on user behavior:
-
 
 ```
 
@@ -517,11 +438,9 @@ deliverability. It only takes 2 minutes.
 
 ```
 
-
 ### Team Onboarding
 
 For workspace invites:
-
 
 ```
 
@@ -541,12 +460,9 @@ Here's what you can do:
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Onboarding State Management
-
 
 ```typescript
 interface OnboardingState {
@@ -591,9 +507,7 @@ interface OnboardingChecklistItem {
 
 ```
 
-
 ### Database Schema
-
 
 ```sql
 CREATE TABLE user_onboarding (
@@ -640,9 +554,7 @@ CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at
 
 ```
 
-
 ### Onboarding Service
-
 
 ```typescript
 class OnboardingService {
@@ -743,9 +655,7 @@ class OnboardingService {
 
 ```
 
-
 ### Frontend Components
-
 
 ```tsx
 // Onboarding wizard
@@ -810,18 +720,13 @@ function OnboardingChecklist() {
 
 ---
 
-
 ## Related Documentation
-
 
 - **[User Management](./user-management.md)** - Authentication and registration
 
-
 - **[Email Infrastructure Setup](../infrastructure/email-infrastructure-setup.md)** - Infrastructure provisioning
 
-
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
-
 
 - **[Subscription Management](../payments/subscription-management.md)** - Payment and trials
 

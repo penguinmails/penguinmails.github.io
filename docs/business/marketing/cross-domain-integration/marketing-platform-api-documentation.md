@@ -7,7 +7,6 @@ persona: "Documentation Users"
 
 # Marketing Platform API Integration Documentation
 
-
 ## Overview
 
 This document provides comprehensive API documentation for marketing platform integrations with external business systems, enabling seamless data flow and coordination across organizational boundaries.
@@ -18,58 +17,41 @@ This document provides comprehensive API documentation for marketing platform in
 
 ---
 
-
 ## API Integration Architecture
-
 
 ### API Gateway Overview
 
 Marketing platform APIs integrate with external systems through a centralized API gateway providing:
 
-
 - **Authentication & Authorization:** OAuth 2.0, API keys, JWT tokens
-
 
 - **Rate Limiting:** Configurable limits per integration partner
 
-
 - **Data Transformation:** Format conversion and data mapping
-
 
 - **Error Handling:** Standardized error responses and retry logic
 
-
 - **Monitoring:** Comprehensive logging and performance tracking
-
 
 ### API Design Principles
 
-
 - **RESTful Design:** Consistent URL patterns and HTTP methods
-
 
 - **JSON Data Format:** Standardized request/response payloads
 
-
 - **Version Management:** Backward compatibility with versioned endpoints
 
-
 - **Comprehensive Documentation:** OpenAPI 3.0 specifications
-
 
 - **Security First:** End-to-end encryption and audit trails
 
 ---
 
-
 ## Authentication and Security
-
 
 ### Authentication Methods
 
-
 ## 1. OAuth 2.0 (Recommended)
-
 
 ```json
 {
@@ -84,7 +66,6 @@ Marketing platform APIs integrate with external systems through a centralized AP
 ```
 
 **2. API Key Authentication**
-
 
 ```json
 {
@@ -102,7 +83,6 @@ Marketing platform APIs integrate with external systems through a centralized AP
 
 **3. JWT Token Authentication**
 
-
 ```json
 {
   "auth_method": "jwt",
@@ -114,11 +94,9 @@ Marketing platform APIs integrate with external systems through a centralized AP
 
 ```
 
-
 ### Security Headers
 
 All API requests must include security headers:
-
 
 ```http
 Authorization: Bearer {access_token}
@@ -132,14 +110,11 @@ User-Agent: {integration_name}/{version}
 
 ---
 
-
 ## Core Marketing APIs
-
 
 ### Campaign Management API
 
 **Create Campaign**
-
 
 ```http
 POST /api/v1/campaigns
@@ -148,7 +123,6 @@ POST /api/v1/campaigns
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -186,7 +160,6 @@ POST /api/v1/campaigns
 
 **Response:**
 
-
 ```json
 {
   "campaign_id": "camp_789xyz",
@@ -204,7 +177,6 @@ POST /api/v1/campaigns
 
 **Get Campaign Performance**
 
-
 ```http
 GET /api/v1/campaigns/{campaign_id}/performance
 
@@ -212,7 +184,6 @@ GET /api/v1/campaigns/{campaign_id}/performance
 ```
 
 **Response:**
-
 
 ```json
 {
@@ -244,11 +215,9 @@ GET /api/v1/campaigns/{campaign_id}/performance
 
 ```
 
-
 ### Lead Management API
 
 **Capture Lead**
-
 
 ```http
 POST /api/v1/leads
@@ -257,7 +226,6 @@ POST /api/v1/leads
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -298,7 +266,6 @@ POST /api/v1/leads
 
 **Response:**
 
-
 ```json
 {
   "lead_id": "lead_456abc",
@@ -320,7 +287,6 @@ POST /api/v1/leads
 
 **Update Lead Status**
 
-
 ```http
 PATCH /api/v1/leads/{lead_id}
 
@@ -328,7 +294,6 @@ PATCH /api/v1/leads/{lead_id}
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -342,11 +307,9 @@ PATCH /api/v1/leads/{lead_id}
 
 ```
 
-
 ### Analytics and Reporting API
 
 **Get Campaign Analytics**
-
 
 ```http
 GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
@@ -355,7 +318,6 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
 ```
 
 **Response:**
-
 
 ```json
 {
@@ -400,15 +362,11 @@ GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
 
 ---
 
-
 ## Integration-Specific APIs
-
 
 ### CRM Integration API
 
-
 ### Salesforce Integration
-
 
 ```http
 POST /api/v1/integrations/crm/salesforce/sync
@@ -417,7 +375,6 @@ POST /api/v1/integrations/crm/salesforce/sync
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -438,9 +395,7 @@ POST /api/v1/integrations/crm/salesforce/sync
 
 ```
 
-
 ### HubSpot Integration
-
 
 ```http
 POST /api/v1/integrations/crm/hubspot/contacts
@@ -449,7 +404,6 @@ POST /api/v1/integrations/crm/hubspot/contacts
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -477,12 +431,9 @@ POST /api/v1/integrations/crm/hubspot/contacts
 
 ```
 
-
 ### Analytics Integration API
 
-
 ### Google Analytics Integration
-
 
 ```http
 POST /api/v1/integrations/analytics/google/track
@@ -491,7 +442,6 @@ POST /api/v1/integrations/analytics/google/track
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -510,7 +460,6 @@ POST /api/v1/integrations/analytics/google/track
 
 **Customer Data Platform Integration**
 
-
 ```http
 POST /api/v1/integrations/cdp/audience/update
 
@@ -518,7 +467,6 @@ POST /api/v1/integrations/cdp/audience/update
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -540,12 +488,9 @@ POST /api/v1/integrations/cdp/audience/update
 
 ```
 
-
 ### E-commerce Integration API
 
-
 ### Shopify Integration
-
 
 ```http
 POST /api/v1/integrations/ecommerce/shopify/customer-event
@@ -554,7 +499,6 @@ POST /api/v1/integrations/ecommerce/shopify/customer-event
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -582,9 +526,7 @@ POST /api/v1/integrations/ecommerce/shopify/customer-event
 
 ```
 
-
 ### WooCommerce Integration
-
 
 ```http
 POST /api/v1/integrations/ecommerce/woocommerce/order-update
@@ -593,7 +535,6 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -613,14 +554,11 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
 
 ---
 
-
 ## Webhook Integration API
-
 
 ### Webhook Configuration
 
 **Register Webhook Endpoint**
-
 
 ```http
 POST /api/v1/webhooks
@@ -629,7 +567,6 @@ POST /api/v1/webhooks
 ```
 
 **Request Body:**
-
 
 ```json
 {
@@ -649,7 +586,6 @@ POST /api/v1/webhooks
 ```
 
 **Webhook Payload Example:**
-
 
 ```json
 {
@@ -677,11 +613,9 @@ POST /api/v1/webhooks
 
 ```
 
-
 ### Webhook Security
 
 **Signature Verification:**
-
 
 ```javascript
 const crypto = require('crypto');
@@ -700,14 +634,11 @@ function verifyWebhookSignature(payload, signature, secret) {
 
 ---
 
-
 ## Rate Limiting and Quotas
-
 
 ### Rate Limit Headers
 
 All API responses include rate limiting information:
-
 
 ```http
 X-RateLimit-Limit: 1000
@@ -718,7 +649,6 @@ X-RateLimit-Window: 3600
 
 ```
 
-
 ### Rate Limit Tiers
 
 | Tier | Requests/Hour | Burst Limit | Cost/Month |
@@ -728,11 +658,9 @@ X-RateLimit-Window: 3600
 | Enterprise | 100,000 | 10,000 | $799 |
 | Custom | Unlimited | Unlimited | Custom |
 
-
 ### Rate Limit Management
 
 **Get Current Usage**
-
 
 ```http
 GET /api/v1/integrations/usage
@@ -741,7 +669,6 @@ GET /api/v1/integrations/usage
 ```
 
 **Response:**
-
 
 ```json
 {
@@ -764,12 +691,9 @@ GET /api/v1/integrations/usage
 
 ---
 
-
 ## Error Handling and Status Codes
 
-
 ### Standard Error Response
-
 
 ```json
 {
@@ -790,7 +714,6 @@ GET /api/v1/integrations/usage
 
 ```
 
-
 ### Common Error Codes
 
 | Code | HTTP Status | Description |
@@ -803,11 +726,9 @@ GET /api/v1/integrations/usage
 | `QUOTA_EXCEEDED` | 402 | API quota exceeded |
 | `INTERNAL_ERROR` | 500 | Server error |
 
-
 ### Retry Logic
 
 **Exponential Backoff:**
-
 
 ```json
 {
@@ -825,14 +746,11 @@ GET /api/v1/integrations/usage
 
 ---
 
-
 ## SDKs and Client Libraries
-
 
 ### JavaScript/TypeScript SDK
 
 **Installation:**
-
 
 ```bash
 npm install @marketing-platform/sdk
@@ -841,7 +759,6 @@ npm install @marketing-platform/sdk
 ```
 
 **Usage:**
-
 
 ```javascript
 import { MarketingPlatform } from '@marketing-platform/sdk';
@@ -871,7 +788,6 @@ await client.analytics.trackConversion({
 ```
 
 **CSS Integration for Email Templates:**
-
 
 ```css
 /* Marketing Platform Email Template Styles */
@@ -909,9 +825,7 @@ await client.analytics.trackConversion({
 
 ---
 
-
 ## Testing and Sandbox
-
 
 ### Sandbox Environment
 
@@ -919,37 +833,27 @@ await client.analytics.trackConversion({
 
 **Sandbox Features:**
 
-
 - Test data and simulated responses
-
 
 - No actual email delivery
 
-
 - Limited rate limits for testing
 
-
 - Reset capability for clean slate testing
-
 
 ### API Testing Tools
 
 **Postman Collection:**
 
-
 - Complete API endpoint collection
-
 
 - Pre-configured authentication
 
-
 - Example requests and responses
-
 
 - Environment variables for easy testing
 
 **OpenAPI Specification:**
-
 
 ```yaml
 openapi: 3.0.3
@@ -972,28 +876,21 @@ servers:
 
 ---
 
-
 ## Monitoring and Support
-
 
 ### API Monitoring
 
 **Performance Metrics:**
 
-
 - Response time monitoring
-
 
 - Error rate tracking
 
-
 - Success rate analytics
-
 
 - Usage pattern analysis
 
 **Real-time Alerts:**
-
 
 ```json
 {
@@ -1013,31 +910,23 @@ servers:
 
 ```
 
-
 ### Support and Documentation
 
 **Developer Portal:**
 
-
 - Interactive API documentation
-
 
 - Code examples and tutorials
 
-
 - Integration guides
-
 
 - Community forums
 
 **Support Channels:**
 
-
 - Email: <api-support@marketingplatform.com>
 
-
 - Slack: #api-developer-support
-
 
 - Status Page: <https://status.marketingplatform.com>
 

@@ -35,43 +35,31 @@ related_tasks:
 
 **Quick Access**: Create, schedule, and optimize sophisticated multi-step email campaigns with advanced sequencing, A/B testing, personalization, and comprehensive analytics.
 
-
 ## Overview
 
 Campaign Management is the core revenue-generating feature of PenguinMails, enabling sophisticated email marketing through multi-step sequences, conditional logic, A/B testing, and personalization at scale. Create campaigns in minutes, not hours, with intuitive drag-and-drop builders and pre-built templates.
 
-
 ### Key Capabilities
-
 
 - **Multi-Step Sequences**: Create up to 20-step email sequences with time delays and conditional branching
 
-
 - **Campaign Types**: One-time broadcasts, drip campaigns, triggered campaigns, and A/B tests
-
 
 - **Visual Builder**: Drag-and-drop campaign builder with real-time preview
 
-
 - **Template Integration**: Use pre-built templates or create custom designs
 
-
 - **Advanced Scheduling**: Timezone-aware scheduling with send-time optimization
-
 
 - **Comprehensive Analytics**: Track performance at campaign and step level
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Your First Campaign
 
-
 #### Step 1: Create a New Campaign
-
 
 ```
 
@@ -88,11 +76,9 @@ Campaign Setup:
 
 ```
 
-
 #### Step 2: Build Your Sequence
 
 **Simple 3-Email Welcome Sequence:**
-
 
 ```
 
@@ -106,7 +92,6 @@ Email 3: Special Offer (Send 5 days after signup)
 ```
 
 **Visual Builder:**
-
 
 ```
 
@@ -147,11 +132,9 @@ Email 3: Special Offer (Send 5 days after signup)
 
 ```
 
-
 #### Step 3: Configure Email Content
 
 **Email 1 Setup:**
-
 
 ```
 
@@ -177,11 +160,9 @@ Personalization:
 
 ```
 
-
 #### Step 4: Review and Launch
 
 **Pre-Launch Checklist:**
-
 
 ```
 
@@ -198,11 +179,9 @@ Campaign Review:
 
 ```
 
-
 #### Step 5: Monitor Performance
 
 **Campaign Dashboard:**
-
 
 ```
 
@@ -224,14 +203,11 @@ Email 3: 200 sent | 40% open | 15% click
 
 ```
 
-
 ### Campaign Types
-
 
 #### One-Time Broadcast
 
 Send a single email to your entire list or segment:
-
 
 ```
 
@@ -255,11 +231,9 @@ Best For: Time-sensitive announcements
 
 ```
 
-
 #### Drip Campaign
 
 Automated sequence delivered over time:
-
 
 ```
 
@@ -283,11 +257,9 @@ Best For: Relationship building
 
 ```
 
-
 #### Triggered Campaign
 
 Event-based campaigns that start automatically:
-
 
 ```
 
@@ -314,11 +286,9 @@ Best For: Behavioral automation
 
 ```
 
-
 #### A/B Test Campaign
 
 Compare variations to optimize performance:
-
 
 ```
 
@@ -344,17 +314,13 @@ Best For: Performance optimization
 
 ---
 
-
 ## Level 2: Advanced Configuration
 
-
 ### Multi-Step Sequences
-
 
 #### Complex Sequence Example
 
 **10-Step Lead Nurturing Campaign:**
-
 
 ```
 
@@ -387,11 +353,9 @@ Email 1: Introduction (Day 0)
 
 ```
 
-
 #### Conditional Branching
 
 **Branch Based on Engagement:**
-
 
 ```yaml
 sequence_step:
@@ -425,7 +389,6 @@ sequence_step:
 
 **Branch Based on Contact Attributes:**
 
-
 ```yaml
 sequence_step:
   conditions:
@@ -452,14 +415,11 @@ sequence_step:
 
 ```
 
-
 ### Advanced Scheduling
-
 
 #### Timezone-Aware Scheduling
 
 **Send at Optimal Local Time:**
-
 
 ```yaml
 campaign_schedule:
@@ -486,7 +446,6 @@ campaign_schedule:
 
 **Example:**
 
-
 ```
 
 Contact in New York (EST): Email sent at 9:00 AM EST
@@ -498,11 +457,9 @@ All contacts receive email at their local 9:00 AM
 
 ```
 
-
 #### Send-Time Optimization
 
 **AI-Powered Optimal Send Times:**
-
 
 ```yaml
 send_optimization:
@@ -533,7 +490,6 @@ send_optimization:
 
 **Results:**
 
-
 ```
 
 Contact A: Historically opens at 7:30 AM → Send at 7:15 AM
@@ -543,14 +499,11 @@ Contact C: No history → Send at industry benchmark (9:00 AM)
 
 ```
 
-
 ### Campaign Templates
-
 
 #### Pre-Built Campaign Templates
 
 **Welcome Series Template:**
-
 
 ```
 
@@ -571,7 +524,6 @@ Conversion Rate: 12-18% (industry average)
 
 **Lead Nurturing Template:**
 
-
 ```
 
 Template: "B2B Lead Nurturing"
@@ -588,11 +540,9 @@ Conversion Rate: 8-12% (industry average)
 
 ```
 
-
 #### Custom Template Creation
 
 **Save Campaign as Template:**
-
 
 ```
 
@@ -620,14 +570,11 @@ Template Configuration:
 
 ```
 
-
 ### Audience Segmentation Integration
-
 
 #### Dynamic Audience Selection
 
 **Segment-Based Campaigns:**
-
 
 ```yaml
 campaign_audience:
@@ -663,7 +610,6 @@ campaign_audience:
 
 **Example:**
 
-
 ```
 
 Day 1: 500 contacts match criteria → Enrolled
@@ -673,11 +619,9 @@ Day 5: 20 contacts no longer match → Removed from sequence
 
 ```
 
-
 #### Exclusion Rules
 
 **Prevent Over-Messaging:**
-
 
 ```yaml
 exclusion_rules:
@@ -705,14 +649,11 @@ exclusion_rules:
 
 ```
 
-
 ### Team Collaboration
-
 
 #### Campaign Approval Workflow
 
 **Enterprise Approval Process:**
-
 
 ```
 
@@ -736,7 +677,6 @@ Schedule & Launch
 ```
 
 **Approval Configuration:**
-
 
 ```yaml
 approval_workflow:
@@ -763,11 +703,9 @@ approval_workflow:
 
 ```
 
-
 #### Collaborative Editing
 
 **Real-Time Collaboration:**
-
 
 ```
 
@@ -788,12 +726,9 @@ Campaign Editor:
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Campaigns table
@@ -977,9 +912,7 @@ CREATE INDEX idx_campaign_approvals_status ON campaign_approvals(status);
 
 ```
 
-
 ### Campaign Execution Engine
-
 
 ```typescript
 interface Campaign {
@@ -1356,9 +1289,7 @@ class CampaignExecutionEngine {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Process campaign steps every 5 minutes
@@ -1426,9 +1357,7 @@ cron.schedule('0 * * * *', async () => {  // Every hour
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Create campaign
@@ -1558,45 +1487,31 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
 
 ---
 
-
 ## Related Documentation
-
 
 ### Campaign Features
 
-
 - **[A/B Testing](../ab-testing.md)** - Split testing for campaign optimization
-
 
 - **[Personalization System](../personalization-system.md)** - Dynamic email personalization
 
-
 - **[Template Management](../../templates/template-management.md)** - Email template library
-
 
 ### Audience Management
 
-
 - **[Contact Segmentation](../../leads/contact-segmentation.md)** - Audience targeting
-
 
 - **[Lead Scoring](../../leads/lead-scoring.md)** - Contact prioritization
 
-
 ### Analytics
-
 
 - **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
 
-
 - **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
-
 
 ### Technical
 
-
 - **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
-
 
 - **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
 

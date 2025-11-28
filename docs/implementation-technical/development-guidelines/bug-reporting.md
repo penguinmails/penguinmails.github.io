@@ -9,28 +9,21 @@ persona: "Quality Assurance"
 
 # Bug Reporting Guidelines & Triage Process
 
-
 ## Bug Report Guidelines
 
 Before reporting a bug, please:
 
-
 1. **Search existing issues** to avoid duplicates
-
 
 2. **Check documentation** for known limitations
 
-
 3. **Verify the bug** on the latest version
 
-
 4. **Prepare minimal reproduction** case
-
 
 ## Bug Report Template
 
 Use this template when creating bug reports:
-
 
 ```markdown
 
@@ -117,27 +110,19 @@ Add any other context about the problem here.
 
 ```
 
-
 ## Bug Triage Process
-
 
 ### Issue Classification
 
-
 - **Critical**: System down, security vulnerabilities, data loss
-
 
 - **High**: Major functionality broken, significant user impact
 
-
 - **Medium**: Functionality impaired but workaround available
-
 
 - **Low**: Minor issues, cosmetic problems, feature requests
 
-
 ### Triage Workflow
-
 
 ```mermaid
 graph TD
@@ -158,63 +143,45 @@ graph TD
 
 ```
 
-
 ### Bug Triage Checklist
 
 **Initial Assessment:**
 
-
 - [ ] Reproducible steps provided
-
 
 - [ ] Environment details complete
 
-
 - [ ] Expected vs actual behavior clear
 
-
 - [ ] Priority level assigned appropriately
-
 
 - [ ] Related issues linked
 
 **Technical Review:**
 
-
 - [ ] Bug confirmed reproducible
-
 
 - [ ] Root cause analysis performed
 
-
 - [ ] Fix approach defined
 
-
 - [ ] Testing strategy planned
-
 
 - [ ] Documentation update required
 
 **Assignment:**
 
-
 - [ ] Developer assigned based on expertise
-
 
 - [ ] Estimated effort provided
 
-
 - [ ] Target milestone/sprint identified
-
 
 - [ ] Dependencies identified
 
-
 ## Bug Fix Guidelines
 
-
 ### Root Cause Analysis
-
 
 ```typescript
 // bug-analysis/root-cause-analyzer.ts
@@ -418,9 +385,7 @@ async function analyzeBug(bugReport: BugReport): Promise<BugAnalysis> {
 
 ```
 
-
 ### Test-First Bug Fixing
-
 
 ```typescript
 // tests/unit/test-email-delivery-bug.ts
@@ -522,9 +487,7 @@ interface EmailRecipient {
 
 ```
 
-
 ### Bug Fix Implementation
-
 
 ```typescript
 // app/services/email-service.ts
@@ -641,14 +604,11 @@ async function demonstrateBugFix() {
 
 ```
 
-
 ## Common Bug Patterns
-
 
 ### Email Delivery Issues
 
 **Problem**: Emails not being sent to certain recipients
-
 
 ```typescript
 // services/bounce-handler.ts
@@ -784,7 +744,6 @@ async function demonstrateBounceHandling() {
 ```
 
 **Problem**: Campaign tracking not working
-
 
 ```typescript
 // services/email-tracking-service.ts
@@ -996,11 +955,9 @@ async function demonstrateEmailTracking() {
 
 ```
 
-
 ### API Issues
 
 **Problem**: Inconsistent error responses
-
 
 ```typescript
 // api/campaigns-controller.ts
@@ -1221,11 +1178,9 @@ const controller = new CampaignsController(campaignService);
 
 ```
 
-
 ### Database Issues
 
 **Problem**: N+1 query problem
-
 
 ```typescript
 // services/campaign-query-service.ts
@@ -1436,12 +1391,9 @@ async function demonstrateQueryOptimization() {
 
 ```
 
-
 ## Performance Bug Detection
 
-
 ### Memory Leaks
-
 
 ```typescript
 // utils/memory-profiler.ts
@@ -1735,9 +1687,7 @@ async function demonstrateMemoryMonitoring() {
 
 ```
 
-
 ### Database Performance
-
 
 ```sql
 -- Identify slow queries
@@ -1760,12 +1710,9 @@ WHERE tablename IN (SELECT tablename FROM pg_tables WHERE schemaname = 'public')
 
 ```
 
-
 ## Security Bug Patterns
 
-
 ### Input Validation
-
 
 ```typescript
 // validation/campaign-validator.ts
@@ -2128,118 +2075,81 @@ async function demonstrateValidation() {
 
 ```
 
-
 ## Bug Verification Checklist
 
 **Before marking as fixed:**
 
-
 - [ ] Bug reproduced in original environment
-
 
 - [ ] Fix applied successfully
 
-
 - [ ] Fix doesn't break existing functionality
-
 
 - [ ] Edge cases handled
 
-
 - [ ] Tests added to prevent regression
-
 
 - [ ] Documentation updated if needed
 
-
 - [ ] Security implications considered
 
-
 - [ ] Performance impact assessed
-
 
 - [ ] User communication prepared if needed
 
 **Regression Testing:**
 
-
 - [ ] All related functionality still works
-
 
 - [ ] No new bugs introduced
 
-
 - [ ] Performance maintained
-
 
 - [ ] Security measures intact
 
-
 - [ ] User experience preserved
-
 
 ## Bug Reporting Best Practices
 
-
 ### Good Bug Reports
-
 
 1. **Clear Title**: Summarize the issue in one line
 
-
 2. **Steps to Reproduce**: Provide exact steps
-
 
 3. **Expected vs Actual**: Clear distinction
 
-
 4. **Environment Details**: Complete system information
-
 
 5. **Screenshots**: Visual evidence when helpful
 
-
 6. **Error Logs**: Include relevant log entries
-
 
 7. **Minimal Case**: Reduce to simplest reproduction
 
-
 ### Information to Include
-
 
 - **Application State**: What was happening when bug occurred
 
-
 - **User Actions**: Exact sequence of actions taken
-
 
 - **Data**: Any specific data that triggered the bug
 
-
 - **Network**: Any network-related issues
-
 
 - **Browser/Client**: Client-specific details
 
-
 - **Frequency**: How often does this occur
-
 
 ### Information to Avoid
 
-
 - **Vague descriptions**: "It doesn't work"
-
 
 - **Multiple issues**: One bug report per issue
 
-
 - **Duplicate reports**: Check existing issues first
 
-
 - **Personal information**: Never include passwords, tokens, etc.
-
 
 - **Irrelevant details**: Focus on the bug, not your day
 

@@ -9,12 +9,9 @@ persona: "Developers"
 
 # Code Contribution Process & Standards
 
-
 ## Development Workflow
 
-
 ### 1. Create a Feature Branch
-
 
 ```bash
 
@@ -52,11 +49,9 @@ git checkout -b fix/bug-description
 
 ```
 
-
 ### 2. Make Changes
 
 Follow our coding standards and make incremental commits:
-
 
 ```bash
 
@@ -88,11 +83,9 @@ git push origin feature/your-feature-name
 
 ```
 
-
 ### 3. Create Pull Request
 
 **PR Template:**
-
 
 ```markdown
 
@@ -168,12 +161,9 @@ Any additional information or context.
 
 ```
 
-
 ## Contribution Types
 
-
 ### Bug Fixes
-
 
 ```typescript
 // services/email-service.ts - Bug fix implementation
@@ -302,9 +292,7 @@ interface EmailSendResult {
 
 ```
 
-
 ### Feature Additions
-
 
 ```typescript
 // Example: New AI-powered analytics feature
@@ -335,9 +323,7 @@ export class AIAnalyticsService {
 
 ```
 
-
 ### Documentation Improvements
-
 
 ```markdown
 
@@ -377,7 +363,6 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
 
 **Example Response:**
 
-
 ```json
 {
   "campaign_id": "camp_123",
@@ -399,7 +384,6 @@ curl -X GET "https://api.penguinmails.com/api/v1/analytics/campaigns/camp_123?pe
 
 
 ```
-
 
 ```
 
@@ -507,40 +491,29 @@ git log --oneline -5
 
 **Peer Review Guidelines:**
 
-
 - Reviewers should understand the problem being solved
-
 
 - Provide constructive feedback focusing on improvements
 
-
 - Ask questions when code is unclear
 
-
 - Suggest alternatives when suggesting changes
-
 
 - Acknowledge good patterns and clean code
 
 **Automated Checks:**
 
-
 - CI/CD pipeline validates all changes
-
 
 - Security scanning for vulnerabilities
 
-
 - Performance benchmarking for major changes
 
-
 - Documentation generation and validation
-
 
 ## Commit Message Guidelines
 
 Use conventional commits format:
-
 
 ```
 
@@ -555,32 +528,23 @@ Footer
 
 **Types:**
 
-
 - `feat`: New feature
-
 
 - `fix`: Bug fix
 
-
 - `docs`: Documentation changes
-
 
 - `style`: Code style changes (formatting, missing semi colons, etc)
 
-
 - `refactor`: Code restructuring without changing behavior
-
 
 - `perf`: Performance improvements
 
-
 - `test`: Adding or updating tests
-
 
 - `chore`: Maintenance tasks
 
 **Examples:**
-
 
 ```bash
 feat(ai): add email content optimization algorithm
@@ -609,63 +573,43 @@ Refs #789
 
 ```
 
-
 ## Pull Request Guidelines
-
 
 ### Before Submitting
 
-
 1. **Update your branch**: Ensure your branch is up to date with upstream
-
 
 2. **Run tests**: All tests must pass locally
 
-
 3. **Check linting**: Code must pass all linting checks
-
 
 4. **Update documentation**: Update relevant documentation
 
-
 5. **Add tests**: Include tests for new functionality
-
 
 6. **Self-review**: Review your own changes first
 
-
 ### PR Description Requirements
-
 
 - **Clear title**: Use conventional commit format
 
-
 - **Detailed description**: Explain what, why, and how
-
 
 - **Screenshots**: Include visual changes
 
-
 - **Testing**: Describe testing performed
-
 
 - **Breaking changes**: Highlight any breaking changes
 
-
 - **Related issues**: Link to relevant issues/PRs
-
 
 ### Review Timeline
 
-
 - **Initial review**: Within 24-48 hours
-
 
 - **Follow-up reviews**: Within 24 hours
 
-
 - **Final approval**: All reviewers must approve
-
 
 - **Merge**: Automated once all checks pass
 

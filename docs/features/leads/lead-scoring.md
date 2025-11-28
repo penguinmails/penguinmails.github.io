@@ -29,59 +29,43 @@ related_tasks:
 
 **Quick Access**: Automatically score leads based on engagement behavior, demographics, and custom criteria to identify your hottest prospects.
 
-
 ## Overview
 
 Lead Scoring assigns numeric values to contacts based on their actions, characteristics, and engagement patterns. Focus your efforts on high-value leads and personalize outreach based on interest level.
 
-
 ### Key Benefits
-
 
 - **Prioritization**: Focus on highest-potential leads
 
-
 - **Automation**: Auto-score based on behavior and attributes
-
 
 - **Segmentation**: Create score-based segments
 
-
 - **Sales Alignment**: Pass qualified leads to sales at threshold
-
 
 - **Personalization**: Tailor messaging by score range
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Understanding Lead Scores
 
 **Score Range**: 0-100
 
-
 - **0-25**: Cold/Unengaged
-
 
 - **26-50**: Warming Up
 
-
 - **51-75**: Interested/Engaged
-
 
 - **76-100**: Hot/Ready to Buy
 
 **Recalculation**: Real-time as contacts take actions
 
-
 ### Your First Scoring Model
 
-
 #### Default Scoring Rules
-
 
 ```
 
@@ -108,9 +92,7 @@ Time Decay:
 
 ```
 
-
 ### View Lead Scores
-
 
 ```
 
@@ -129,11 +111,9 @@ David Kim              68     1 week ago
 
 ```
 
-
 ### Use Scores in Campaigns
 
 **Score-Based Segments:**
-
 
 ```
 
@@ -151,17 +131,13 @@ Cold Leads (Score 0-50):
 
 ---
 
-
 ## Level 2: Advanced Scoring Configuration
 
-
 ### Custom Scoring Rules
-
 
 #### Behavioral Scoring
 
 **Engagement Actions**
-
 
 ```yaml
 email_actions:
@@ -199,7 +175,6 @@ email_actions:
 
 **Website Activity** (if integrated)
 
-
 ```yaml
 website_actions:
   visited_pricing_page:
@@ -226,7 +201,6 @@ website_actions:
 
 **Negative Actions**
 
-
 ```yaml
 negative_actions:
   unsubscribed:
@@ -252,11 +226,9 @@ negative_actions:
 
 ```
 
-
 #### Demographic Scoring
 
 **Firmographic Data**
-
 
 ```yaml
 company_attributes:
@@ -286,7 +258,6 @@ company_attributes:
 
 **Role-Based Scoring**
 
-
 ```yaml
 job_title_keywords:
   decision_makers:
@@ -311,7 +282,6 @@ job_title_keywords:
 
 **Geographic Scoring**
 
-
 ```yaml
 location:
   tier_1_markets:  # US, UK, Canada, Australia
@@ -326,11 +296,9 @@ location:
 
 ```
 
-
 ### Score Decay & Recency
 
 **Time-Based Decay:**
-
 
 ```yaml
 decay_rules:
@@ -351,7 +319,6 @@ decay_rules:
 
 **Recency Boosting:**
 
-
 ```yaml
 recency_multipliers:
   action_within_24h:
@@ -369,11 +336,9 @@ recency_multipliers:
 
 ```
 
-
 ### Multi-Dimensional Scoring
 
 **Separate Scores for Different Aspects:**
-
 
 ```yaml
 scoring_dimensions:
@@ -398,11 +363,9 @@ scoring_dimensions:
 
 ```
 
-
 ### Score-Based Automation
 
 **Auto-Segmentation:**
-
 
 ```
 
@@ -417,7 +380,6 @@ When lead score reaches 75:
 
 **Lead Lifecycle Stages:**
 
-
 ```
 
 Score 0-25:    Status = "Cold Lead"
@@ -430,7 +392,6 @@ Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 
 **CRM Sync:**
 
-
 ```
 
 When lead score >= 75:
@@ -442,11 +403,9 @@ When lead score >= 75:
 
 ```
 
-
 ### Score Analytics
 
 **Score Distribution:**
-
 
 ```
 
@@ -464,7 +423,6 @@ Median Score: 32
 ```
 
 **Score Trends:**
-
 
 ```
 
@@ -490,12 +448,9 @@ Top Scoring Actions:
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Lead scoring configuration
@@ -568,9 +523,7 @@ CREATE INDEX idx_score_events_type ON score_events(event_type);
 
 ```
 
-
 ### Scoring Engine
-
 
 ```typescript
 interface ScoringRule {
@@ -748,9 +701,7 @@ class LeadScoringEngine {
 
 ```
 
-
 ### Background Jobs
-
 
 ```typescript
 // Apply decay to all contacts daily
@@ -794,9 +745,7 @@ async function recalculateScoresForContact(contactId: string): Promise<void> {
 
 ```
 
-
 ### Event Listeners
-
 
 ```typescript
 // Listen for email events and update scores
@@ -833,18 +782,13 @@ eventEmitter.on('contact.updated', async (event) => {
 
 ---
 
-
 ## Related Documentation
-
 
 - **[Leads Management](./leads-management.md)** - Contact database
 
-
 - **[Contact Segmentation](./contact-segmentation.md)** - Score-based segments
 
-
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Score-based targeting
-
 
 - **[Analytics](../analytics/core-analytics/overview.md)** - Score analytics
 

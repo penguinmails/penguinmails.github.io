@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### System Notifications Feed
 
@@ -26,20 +24,15 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `scope`: `system` (default), `operational`, `business`, `alerts`
-
 
 - `priority`: `critical`, `high`, `medium`, `low`
 
-
 - `status`: `unread`, `reviewed`
-
 
 - `limit`: Default 25
 
 **Response**:
-
 
 ```json
 {
@@ -59,7 +52,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Mark Notification Reviewed
 
 **Method**: `POST`  
@@ -67,7 +59,6 @@ persona: "Backend Developers"
 **Purpose**: Mark a notification as reviewed.
 
 **Request**:
-
 
 ```json
 {
@@ -78,7 +69,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Bulk Review
 
 **Method**: `POST`  
@@ -86,7 +76,6 @@ persona: "Backend Developers"
 **Purpose**: Mark multiple notifications as reviewed.
 
 **Request**:
-
 
 ```json
 {
@@ -97,4 +86,3 @@ persona: "Backend Developers"
 
 
 ```
-

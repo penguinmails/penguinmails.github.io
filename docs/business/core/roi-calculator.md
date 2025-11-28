@@ -15,12 +15,9 @@ persona: "Documentation Users"
 
 ---
 
-
 ## Quick ROI Assessment
 
-
 ### Progressive Disclosure Flow
-
 
 ```mermaid
 graph TD
@@ -48,41 +45,31 @@ graph TD
 
 ```
 
-
 ### Current State vs. Optimized Infrastructure
 
 **Enter your current metrics below to calculate potential savings:**
 
-
 #### Input Variables
-
 
 - **Monthly Email Volume**: [10K / 100K / 1M+]
 
-
 - **Current Deliverability Rate**: [60% / 80% / 90% / 95%]
-
 
 - **Industry/Vertical**: [SaaS / IT Services / Agency / Professional Services / General B2B]
 
-
 - **Team Size**: [1-2 / 3-4 / 5+ people]
 
-
 - **Current Monthly Tool Stack Cost**: $[Enter current spend]
-
 
 - **Compliance Requirements**: [Basic / Standard / Enterprise]
 
 ---
-
 
 ## Cost Comparison Summary
 
 ![Monthly Cost Comparison](/docs/assets){: width="100%" }
 
 ![Total Cost of Ownership Comparison](/docs/assets){: width="100%" }
-
 
 ### Managed ESP vs Self-Hosted TCO Analysis
 
@@ -91,7 +78,6 @@ graph TD
 | **10K emails** | $65-$135 | $312-$424 | $2,124-$3,468 |
 | **100K emails** | $180-$350 | $830-$1,250 | $5,760-$12,840 |
 | **1M+ emails** | $1,400-$3,000 | $4,000-$6,400+ | $31,200-$57,600 |
-
 
 ### Provider Recommendations by Scale
 
@@ -103,9 +89,7 @@ graph TD
 
 ---
 
-
 ## Output Calculations
-
 
 ### Current Monthly Cost
 
@@ -115,7 +99,6 @@ graph TD
 **Compliance & Security:** $________
 **TOTAL CURRENT:** $________
 
-
 ### Alternative Monthly Cost
 
 **Managed ESP Plan:** $________
@@ -123,7 +106,6 @@ graph TD
 **Reduced Personnel:** $________
 **Compliance (built-in):** $________
 **TOTAL ALTERNATIVE:** $________
-
 
 ### ROI Analysis
 
@@ -134,9 +116,7 @@ graph TD
 
 ---
 
-
 ## Performance Impact Summary
-
 
 ### Deliverability Impact on Pipeline
 
@@ -153,47 +133,33 @@ graph TD
 
 ---
 
-
 ## Executive Decision Framework
-
 
 ### When to Choose Managed ESPs
 
-
 - Volume < 1M emails/month
-
 
 - Deliverability is business critical
 
-
 - No dedicated DevOps team
-
 
 - Need built-in compliance and security
 
-
 - Want predictable costs and support
-
 
 ### When to Consider Self-Hosted
 
-
 - Volume > 10M emails/month
-
 
 - Have 4-6+ email infrastructure engineers
 
-
 - Email is core product (not just marketing)
 
-
 - Need complete infrastructure control
-
 
 - Have complex custom requirements
 
 ---
-
 
 ## Implementation Timeline ROI
 
@@ -205,71 +171,51 @@ graph TD
 
 ---
 
-
 ## Scenario Planning Summary
-
 
 ### Best Case Scenario (Optimized)
 
-
 - **Deliverability**: 95%
 
-
 - **Provider**: Managed ESP
-
 
 - **Annual Savings**: $40,000-$57,600
 
-
 - **ROI**: 300-500%
-
 
 - **Payback**: 2-3 months
 
-
 ### Realistic Scenario (Average)
-
 
 - **Deliverability**: 80-90%
 
-
 - **Provider**: Managed ESP
-
 
 - **Annual Savings**: $15,000-$30,000
 
-
 - **ROI**: 150-300%
-
 
 - **Payback**: 3-6 months
 
 ---
 
-
 ## Progressive Disclosure Navigation
 
 **For strategic context:**
-
 
 - [Executive Summary](executive-summary) - Strategic findings and recommendations
 
 **For detailed analysis:**
 
-
 - [Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
 
-
 - [Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
-
 
 - [Competitive Analysis](competitive-analysis) - Provider selection matrix
 
 **For technical teams:**
 
-
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications
-
 
 - [Performance Benchmarks](/docs/business/performance) - Industry data and metrics
 

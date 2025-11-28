@@ -29,43 +29,31 @@ related_tasks:
 
 **Quick Access**: Scale your outreach volume safely by distributing sending load across multiple email accounts, domains, and IPs.
 
-
 ## Overview
 
 Inbox Rotation protects your sender reputation by ensuring no single email account exceeds safe sending limits. Instead of sending 500 emails from one address (high risk), PenguinMails automatically distributes them across 10 addresses (50 emails each, low risk). If an account's health score drops, it's automatically paused while others pick up the slack.
 
-
 ### Key Capabilities
-
 
 - **Rotation Pools**: Group accounts by purpose (e.g., "Sales Team", "Newsletter", "Cold Outreach")
 
-
 - **Smart Load Balancing**: Distribute volume based on account age, warmup status, and health score
-
 
 - **Auto-Pause & Recovery**: Automatically remove accounts with high bounce rates or low reputation
 
-
 - **Domain Diversity**: Rotate across different domains to prevent domain-wide blacklisting
 
-
 - **Volume Ramping**: Automatically increase limits as accounts mature
-
 
 - **Unified Analytics**: Track performance of the entire pool as a single entity
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Set Up Your First Rotation Pool
 
-
 #### Step 1: Create a Pool
-
 
 ```
 
@@ -88,11 +76,9 @@ Pool Configuration:
 
 ```
 
-
 #### Step 2: Add Accounts
 
 Select accounts to include in this rotation.
-
 
 ```
 
@@ -107,11 +93,9 @@ Available Accounts:
 
 ```
 
-
 #### Step 3: Assign to Campaign
 
 Link your campaign to the pool instead of a single sender.
-
 
 ```
 
@@ -128,11 +112,9 @@ Campaign Settings → Sender:
 
 ```
 
-
 #### Step 4: Monitor Health
 
 **Pool Dashboard:**
-
 
 ```
 
@@ -159,16 +141,13 @@ Account Performance:
 
 ---
 
-
 ## Level 2: Advanced Configuration
-
 
 ### Smart Rotation Logic
 
 Configure how the system selects the next sender.
 
 **Weighted by Health Score:**
-
 
 ```yaml
 rotation_strategy:
@@ -190,7 +169,6 @@ rotation_strategy:
 
 Ensure consecutive emails don't come from the same domain to avoid pattern detection.
 
-
 ```yaml
 diversity_rules:
   prevent_consecutive_domains: true
@@ -204,11 +182,9 @@ diversity_rules:
 
 ```
 
-
 ### Auto-Pause & Recovery Rules
 
 Protect accounts from burning out.
-
 
 ```yaml
 safety_rules:
@@ -249,11 +225,9 @@ safety_rules:
 
 ```
 
-
 ### Volume Ramping
 
 Automatically increase sending limits for new accounts.
-
 
 ```json
 {
@@ -271,12 +245,9 @@ Automatically increase sending limits for new accounts.
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Rotation Pools
@@ -352,11 +323,9 @@ CREATE INDEX idx_account_health_account ON account_health_logs(account_id);
 
 ```
 
-
 ### Rotation Algorithm (TypeScript)
 
 The core logic for selecting the next sender.
-
 
 ```typescript
 class RotationService {
@@ -435,11 +404,9 @@ class RotationService {
 
 ```
 
-
 ### Health Monitoring Service
 
 Runs periodically to update scores and trigger safety rules.
-
 
 ```typescript
 class HealthMonitor {
@@ -481,9 +448,7 @@ class HealthMonitor {
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Create Pool

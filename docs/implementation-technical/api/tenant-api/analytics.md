@@ -14,47 +14,35 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Overview
 
 The Analytics API provides comprehensive campaign performance metrics, engagement tracking, and deliverability analytics for tenant workspaces. All endpoints require workspace-level authentication and return data scoped to the authenticated workspace.
 
 **Key Capabilities:**
 
-
 - Real-time campaign performance metrics
-
 
 - Engagement tracking (opens, clicks, replies)
 
-
 - Deliverability analytics and inbox placement
-
 
 - Time-series data for trend analysis
 
-
 - Aggregated workspace-level metrics
-
 
 - Data export functionality
 
 **Technical Architecture:**
 
-
 - **OLAP Database**: PostgreSQL with TimescaleDB for time-series analytics data
 
-
 - **PostHog**: Event tracking, user behavior analytics, and operational monitoring
-
 
 - **Queue System**: PostgreSQL + Redis for background job processing (exports, reports)
 
 ---
 
-
 ## Endpoints
-
 
 ### Get Campaign Analytics
 
@@ -64,28 +52,21 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
-
 
 - `campaignId` (string, required) - Campaign identifier
 
 **Query Parameters:**
 
-
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d`, `custom` (default: `30d`)
-
 
 - `startDate` (ISO 8601, optional) - Start date for custom range
 
-
 - `endDate` (ISO 8601, optional) - End date for custom range
-
 
 - `groupBy` (string, optional) - Group results by: `day`, `week`, `month` (default: `day`)
 
 **Response:**
-
 
 ```json
 {
@@ -141,7 +122,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Get Workspace Analytics Overview
 
 **Method**: `GET`  
@@ -150,22 +130,17 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
 
-
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d`, `custom` (default: `30d`)
 
-
 - `startDate` (ISO 8601, optional) - Start date for custom range
-
 
 - `endDate` (ISO 8601, optional) - End date for custom range
 
 **Response:**
-
 
 ```json
 {
@@ -208,7 +183,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Get Deliverability Analytics
 
 **Method**: `GET`  
@@ -217,22 +191,17 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
 
-
 - `timeRange` (string, optional) - Time range filter: `7d`, `30d`, `90d` (default: `30d`)
 
-
 - `campaignId` (string, optional) - Filter by specific campaign
-
 
 - `domainId` (string, optional) - Filter by specific sending domain
 
 **Response:**
-
 
 ```json
 {
@@ -313,7 +282,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Get Engagement Heatmap
 
 **Method**: `GET`  
@@ -322,22 +290,17 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
 
 **Query Parameters:**
 
-
 - `timeRange` (string, optional) - Time range for analysis: `30d`, `90d` (default: `30d`)
 
-
 - `campaignId` (string, optional) - Filter by specific campaign
-
 
 - `timezone` (string, optional) - Timezone for hour calculations (default: workspace timezone)
 
 **Response:**
-
 
 ```json
 {
@@ -376,7 +339,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Compare Campaigns
 
 **Method**: `POST`  
@@ -385,11 +347,9 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
 
 **Request Body:**
-
 
 ```json
 {
@@ -402,7 +362,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 ```
 
 **Response:**
-
 
 ```json
 {
@@ -446,7 +405,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Export Analytics Data
 
 **Method**: `POST`  
@@ -455,11 +413,9 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
 
 **Request Body:**
-
 
 ```json
 {
@@ -474,7 +430,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 ```
 
 **Response:**
-
 
 ```json
 {
@@ -492,7 +447,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ### Get Export Status
 
 **Method**: `GET`  
@@ -501,14 +455,11 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Path Parameters:**
 
-
 - `workspaceId` (string, required) - Workspace identifier
-
 
 - `exportId` (string, required) - Export job identifier
 
 **Response:**
-
 
 ```json
 {
@@ -530,12 +481,9 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 ---
 
-
 ## Data Models
 
-
 ### Analytics Summary
-
 
 ```typescript
 interface AnalyticsSummary {
@@ -552,9 +500,7 @@ interface AnalyticsSummary {
 
 ```
 
-
 ### Analytics Rates
-
 
 ```typescript
 interface AnalyticsRates {
@@ -571,9 +517,7 @@ interface AnalyticsRates {
 
 ```
 
-
 ### Time Series Data Point
-
 
 ```typescript
 interface TimeSeriesDataPoint {
@@ -592,12 +536,9 @@ interface TimeSeriesDataPoint {
 
 ---
 
-
 ## Error Responses
 
-
 ### Campaign Not Found
-
 
 ```json
 {
@@ -611,9 +552,7 @@ interface TimeSeriesDataPoint {
 
 ```
 
-
 ### Invalid Time Range
-
 
 ```json
 {
@@ -627,9 +566,7 @@ interface TimeSeriesDataPoint {
 
 ```
 
-
 ### Export Failed
-
 
 ```json
 {
@@ -645,71 +582,49 @@ interface TimeSeriesDataPoint {
 
 ---
 
-
 ## Rate Limits
-
 
 - **Campaign Analytics**: 100 requests per minute per workspace
 
-
 - **Workspace Overview**: 60 requests per minute per workspace
 
-
 - **Deliverability Analytics**: 30 requests per minute per workspace
-
 
 - **Export Requests**: 10 requests per minute per workspace
 
 ---
 
-
 ## Related Documentation
-
 
 ### Feature Documentation
 
-
 - **[Analytics & Reporting Features](/docs/features/analytics/core-analytics/overview.md)** - Feature overview and capabilities
-
 
 - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Q1 2026 advanced analytics features
 
-
 - **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports and data export
-
 
 ### API Documentation
 
-
 - **[Campaign Management API](/docs/implementation-technical/api/tenant-api/campaigns.md)** - Campaign CRUD operations
-
 
 - **[Workspace API](/docs/implementation-technical/api/tenant-api/workspaces.md)** - Workspace management
 
-
 - **[Platform Analytics API](/docs/implementation-technical/api/platform-api/analytics.md)** - System-level analytics
-
 
 ### Frontend Routes
 
-
 - **[Workspace Campaigns Routes](/docs/design/routes/workspace-campaigns.md)** - Campaign dashboard with analytics
-
 
 - **[Platform Admin Routes](/docs/design/routes/platform-admin.md)** - Finance and system analytics
 
-
 ### Technical Architecture
-
 
 - **[OLAP Analytics Schema](/docs/implementation-technical/database-infrastructure/olap-analytics-schema-guide.md)** - Database architecture for analytics
 
-
 - **[Queue System](/docs/features/queue/background-jobs.md)** - Background job processing
 
-
 ### Implementation Planning
-
 
 - **[Analytics Feature Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Gap analysis, roadmap, and implementation priorities
 

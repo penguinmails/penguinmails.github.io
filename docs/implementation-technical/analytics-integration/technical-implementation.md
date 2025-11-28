@@ -6,24 +6,17 @@ description: "Technical specifications, code snippets, and architecture for the 
 
 # Analytics Implementation Details
 
-
 ## 1. Technical Stack (MVP)
-
 
 * **Frontend**: Next.js 15 (App Router) + TypeScript + Tailwind CSS
 
-
 * **Backend**: Node.js + TypeScript + Hapi/Koa
-
 
 * **Monorepo**: Turborepo for shared packages
 
-
 * **Post-MVP Migration Path**: TanStack Router or React Router 7 (to reduce cloud function costs)
 
-
 ### Turborepo Structure
-
 
 ```bash
 penguinmails/
@@ -70,7 +63,6 @@ penguinmails/
 
 ```
 
-
 ### Server Responsibilities
 
 | Server | Purpose | Port | Access |
@@ -81,12 +73,9 @@ penguinmails/
 | **queue-server** | Event processing & notifications | 4002 | Internal only |
 | **executive-api** | Analytics aggregation & BI | 4003 | Internal only (exec, ops, analysts) |
 
-
 ## 2. RBAC Implementation with Next.js 15
 
-
 ### Shared Type Definitions (`packages/types/src/rbac.ts`)
-
 
 ```typescript
 export type UserRole = 
@@ -114,9 +103,7 @@ export interface DashboardViewConfig {
 
 ```
 
-
 ### Next.js Middleware (`apps/web/middleware.ts`)
-
 
 ```typescript
 import { NextResponse } from 'next/server';
@@ -158,9 +145,7 @@ export const config = {
 
 ```
 
-
 ### Server Actions (BFF Pattern) (`apps/web/app/actions/analytics.ts`)
-
 
 ```typescript
 'use server';
@@ -213,9 +198,7 @@ export async function getCampaignAnalytics(campaignId: string) {
 
 ```
 
-
 ### Role-Based UI Rendering (`apps/web/app/dashboard/page.tsx`)
-
 
 ```typescript
 import { getSession } from '@penguinmails/auth';
@@ -245,9 +228,7 @@ export default async function DashboardPage() {
 
 ```
 
-
 ### Central API Server (Post-MVP Migration Target) (`apps/api/src/routes/analytics.ts`)
-
 
 ```typescript
 import Hapi from '@hapi/hapi';
@@ -270,12 +251,9 @@ export const analyticsRoutes: Hapi.ServerRoute[] = [
 
 ```
 
-
 ## 3. Navigation Implementation
 
-
 ### Global Navigation Structure
-
 
 ```typescript
 // Navigation items shown based on user roles
@@ -298,9 +276,7 @@ const AppNav = ({ userRoles }) => {
 
 ```
 
-
 ### Security Implementation
-
 
 ```typescript
 // Frontend: Route protection
@@ -322,4 +298,3 @@ router.get('/analytics/executive',
 
 
 ```
-

@@ -15,11 +15,9 @@ category: "Infrastructure"
 
 ---
 
-
 ## Overview
 
 PenguinMails is built on a **multi-tenant architecture** powered by NileDB, providing complete tenant isolation, scalable workspace management, and secure data partitioning - all built into the platform from day one.
-
 
 ### What is Multi-Tenancy?
 
@@ -27,29 +25,21 @@ PenguinMails is built on a **multi-tenant architecture** powered by NileDB, prov
 
 **Benefits:**
 
-
 - 🏢 **Complete Isolation** - Tenant data is fully separated
-
 
 - 🚀 **Scalability** - Add unlimited tenants without infrastructure changes
 
-
 - 💰 **Cost Efficiency** - Shared infrastructure reduces costs
 
-
 - 🔒 **Security** - Database-level tenant isolation
-
 
 - ⚡ **Performance** - Per-tenant query optimization
 
 ---
 
-
 ## Level 1: Core Concepts
 
-
 ### Tenant Hierarchy
-
 
 ```text
 Platform (PenguinMails)
@@ -69,89 +59,65 @@ Platform (PenguinMails)
 
 ```
 
-
 ### Tenant
 
 **Tenant = Company/Organization**
 
-
 - Highest level of data isolation
-
 
 - Maps to one paying customer
 
-
 - Has one subscription
 
-
 - Can have multiple users and workspaces
-
 
 - Complete separation from other tenants
 
 **Example Tenants:**
 
-
 - Acme Marketing Agency (Tenant ID: `tenant_abc123`)
 
-
 - Startup Inc (Tenant ID: `tenant_xyz789`)
-
 
 ### Users
 
 **Users = Team Members within a Tenant**
 
-
 - Belong to exactly one tenant
-
 
 - Have roles (Owner, Admin, Member)
 
-
 - Can access multiple workspaces within their tenant
-
 
 - Cannot see data from other tenants
 
 **User Roles:**
 
-
 - **Tenant Owner** - Full control, billing access
-
 
 - **Admin** - Manage users, workspaces, settings
 
-
 - **Member** - Access assigned workspaces only
-
 
 ### Workspaces
 
 **Workspaces = Projects, Clients, or Teams**
 
-
 - Organize work within a tenant
-
 
 - Optional sub-isolation for campaigns, contacts, domains
 
-
 - Multiple users can collaborate in one workspace
-
 
 - Example: "Client A Campaign", "Product Launch 2025"
 
 ---
 
-
 ## Level 2: Tenant Isolation
-
 
 ### Database-Level Isolation
 
 **NileDB provides native multi-tenancy:**
-
 
 ```sql
 -- Every table has tenant_id
@@ -172,40 +138,29 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
 
 **Automatic Tenant Context:**
 
-
 - All queries automatically scoped to current tenant
-
 
 - Impossible to accidentally query another tenant's data
 
-
 - Row-level security enforced at database level
 
-
 - No application-level filtering needed
-
 
 ### Authentication & Tenant Context
 
 **How tenant context is established:**
 
-
 1. **User logs in** with email/password
-
 
 2. **NileDB authenticates** and identifies tenant
 
-
 3. **Session includes tenant_id** in JWT token
 
-
 4. **All API requests** automatically scoped to that tenant
-
 
 5. **Database queries** filtered by tenant_id
 
 **Session Token:**
-
 
 ```javascript
 {
@@ -221,53 +176,39 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
 
 ---
 
-
 ### Data Isolation Guarantees
 
 **What's Isolated:**
 
-
 - ✅ **Campaigns** - Tenant A cannot see Tenant B's campaigns
-
 
 - ✅ **Contacts** - Complete contact list separation
 
-
 - ✅ **Templates** - Email templates not shared
-
 
 - ✅ **Analytics** - Performance data isolated
 
-
 - ✅ **Workspaces** - Workspace data tenant-scoped
 
-
 - ✅ **Domains** - Domain configurations isolated
-
 
 - ✅ **Users** - User accounts tenant-specific
 
 **What's Shared (Platform-Level):**
 
-
 - ⚙️ **Application Code** - Same codebase for all tenants
 
-
 - ⚙️ **Infrastructure** - Shared servers (with isolation)
-
 
 - ⚙️ **Global Suppression** - Platform-wide spam/abuse blocks
 
 ---
 
-
 ## Level 3: Technical Implementation
-
 
 ### Tenant Provisioning
 
 **Creating a new tenant:**
-
 
 ```javascript
 // POST /api/v1/tenants
@@ -298,9 +239,7 @@ Response:
 
 ```
 
-
 ### Tenant Database Schema
-
 
 ```sql
 -- Tenants Table (managed by NileDB)
@@ -346,11 +285,9 @@ CREATE TABLE workspace_members (
 
 ```
 
-
 ### Tenant-Scoped Queries
 
 **Application code example:**
-
 
 ```javascript
 // Get campaigns for current tenant
@@ -386,14 +323,11 @@ async function createCampaign(req, campaignData) {
 
 ---
 
-
 ## Workspace Management
-
 
 ### Creating Workspaces
 
 **Workspaces organize work within a tenant:**
-
 
 ```javascript
 // POST /api/v1/workspaces
@@ -419,11 +353,9 @@ Response:
 
 ```
 
-
 ### Workspace Access Control
 
 **Assign users to workspaces:**
-
 
 ```javascript
 // POST /api/v1/workspaces/{workspace_id}/members
@@ -440,76 +372,53 @@ Response:
 
 **Workspace Roles:**
 
-
 - **Admin** - Full control over workspace
 
-
 - **Member** - Create/edit campaigns, manage contacts
-
 
 - **Viewer** - Read-only access
 
 ---
 
-
 ## Multi-Tenant Security
-
 
 ### Security Features
 
-
 1. **Row-Level Security (RLS)**
-
 
    - Database enforces tenant isolation
 
-
    - Impossible to bypass tenant filters
-
 
    - Automatic on all queries
 
-
 2. **API Middleware**
-
 
    - Validates tenant_id from JWT
 
-
    - Ensures user belongs to tenant
-
 
    - Rejects cross-tenant requests
 
-
 3. **Tenant Switching Prevention**
-
 
    - Users cannot switch tenants
 
-
    - Must log out and log in to different account
-
 
    - No shared user accounts across tenants
 
-
 4. **Audit Logging**
-
 
    - All tenant actions logged
 
-
    - Cross-tenant access attempts flagged
 
-
    - Compliance and security monitoring
-
 
 ### Security Validation
 
 **Request flow:**
-
 
 ```text
 User Request
@@ -533,14 +442,11 @@ Return results (tenant-scoped only)
 
 ---
 
-
 ## Tenant Settings
-
 
 ### Per-Tenant Configuration
 
 **Customizable settings:**
-
 
 ```javascript
 {
@@ -568,143 +474,101 @@ Return results (tenant-scoped only)
 
 ```
 
-
 ### Tenant-Specific Features
 
 **Feature flags per tenant:**
 
-
 - **Beta Features** - Early access for specific tenants
-
 
 - **Custom Branding** - Enterprise tenant white-labeling
 
-
 - **API Rate Limits** - Per-tenant throttling
-
 
 - **Data Retention** - Custom retention policies
 
 ---
 
-
 ## Scalability
-
 
 ### Horizontal Scaling
 
 **Multi-tenancy enables:**
 
-
 - Add unlimited tenants without code changes
-
 
 - Database sharding (future) - partition tenants across DBs
 
-
 - Per-tenant performance optimization
-
 
 - Isolated tenant upgrades/migrations
 
 **Current Architecture:**
 
-
 - All tenants share one NileDB instance
 
-
 - Automatic query optimization per tenant
-
 
 - Connection pooling shared across tenants
 
 **Future Scaling (if needed):**
 
-
 - Shard large tenants to dedicated databases
 
-
 - Geo-distributed tenants (US/EU data centers)
-
 
 - Tenant-specific resource allocation
 
 ---
 
-
 ## Related Documentation
-
 
 ### Architecture
 
-
 - **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Infrastructure provisioning
-
 
 - **[Infrastructure Overview](./README.md)** - All infrastructure features
 
-
 ### Implementation
-
 
 - **[NileDB Documentation](../../implementation-technical/database-infrastructure/niledb.md)** - Database multi-tenancy details
 
-
 - **[Authentication](../../implementation-technical/security/authentication.md)** - Tenant-aware auth
-
 
 - **[API Architecture](../../implementation-technical/api/README.md)** - Multi-tenant API design
 
-
 ### Management
-
 
 - **[User Management](../enterprise/user-management.md)** - Team member management
 
-
 - **[Workspace Management](../../business/workspace-management.md)** - Workspace organization
 
-
 ### Tasks
-
 
 - **[Epic 3: Tenant Management](../../tasks/epic-3-tenant-company-management/)** - Implementation tasks
 
 ---
 
-
 ## Best Practices
-
 
 ### For Tenants (Customers)
 
-
 1. **Use Workspaces** - Organize by client, project, or team
-
 
 2. **Assign Roles Carefully** - Give minimum necessary permissions
 
-
 3. **Regular Audits** - Review workspace access quarterly
-
 
 4. **Naming Conventions** - Use consistent workspace naming
 
-
 ### For Developers
-
 
 1. **Always Use Tenant Context** - Never query without tenant_id
 
-
 2. **Validate Tenant Access** - Check tenant membership on every request
-
 
 3. **Test Isolation** - Verify tenant data separation in tests
 
-
 4. **Audit Logs** - Log all tenant-scoped operations
-
 
 5. **Never Hard-Code tenant_id** - Always from session/token
 

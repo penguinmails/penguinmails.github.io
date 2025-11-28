@@ -9,7 +9,6 @@ persona: "Documentation Users"
 
 # Customer Success - Marketing Systems Integration Map
 
-
 ## Overview
 
 This document provides comprehensive system integration maps showing data flows between Customer Success systems and Marketing domains, enabling cohesive customer lifecycle management across organizational boundaries.
@@ -20,20 +19,15 @@ This document provides comprehensive system integration maps showing data flows 
 
 ---
 
-
 ## Executive Summary
 
 Customer Success integrates with Marketing through well-defined data flows and API interfaces:
 
-
 - **Lifecycle Marketing:** Onboarding, adoption, milestone campaigns
-
 
 - **Retention Marketing:** Churn prevention, win-back automation
 
-
 - **Expansion Marketing:** Upsell/cross-sell opportunity campaigns
-
 
 - **Advocacy Marketing:** Success story amplification, reference programs
 
@@ -41,12 +35,9 @@ Customer Success integrates with Marketing through well-defined data flows and A
 
 ---
 
-
 ## Integration Architecture Overview
 
-
 ### Core Integration Framework
-
 
 ```markdown
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -62,29 +53,21 @@ Customer Success integrates with Marketing through well-defined data flows and A
 
 ```
 
-
 ### Integration Principles
-
 
 - **Health-Triggered Real-time:** Immediate campaign triggers from CS signals
 
-
 - **Event-Driven:** Loose coupling via customer milestone events
-
 
 - **API-First:** Comprehensive REST APIs with OpenAPI specs
 
-
 - **Security:** OAuth2, domain-scoped RBAC, full audit trails
-
 
 - **Resilience:** Circuit breakers, dead letter queues, alerting
 
 ---
 
-
 ## Customer Lifecycle Coordination
-
 
 ### Integration Scope
 
@@ -92,18 +75,13 @@ CS health signals trigger personalized lifecycle marketing automation.
 
 **Primary Systems:**
 
-
 - CS Health Engine, Success Milestones
-
 
 - Marketing Automation: Klaviyo, Marketo, HubSpot
 
-
 - Customer Segmentation, Personalization Engines
 
-
 ### Data Flow Architecture
-
 
 ```markdown
 CS Health Scores ──┐
@@ -115,11 +93,9 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 ```
 
-
 ### Key Integration Points
 
 **1. Onboarding/Adoption Campaigns**
-
 
 ```json
 {
@@ -136,7 +112,6 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 **2. Milestone Celebrations**
 
-
 ```json
 {
   "milestone_integration": {
@@ -152,7 +127,6 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 **3. Health-Based Segmentation**
 
-
 ```json
 {
   "segmentation_integration": {
@@ -166,11 +140,9 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 ```
 
-
 ### CS-Marketing APIs
 
 **Health Trigger API:**
-
 
 ```markdown
 POST /api/v1/cs-marketing/triggers/{customer_id}
@@ -198,26 +170,19 @@ GET /api/v1/cs-marketing/performance/{campaign_id}
 
 ```
 
-
 ### Integration Benefits
-
 
 - **Engagement Uplift:** 40% increase in lifecycle engagement
 
-
 - **Health Improvement:** 35% faster health score recovery
 
-
 - **Advocacy Growth:** 50% increase in reference customers
-
 
 - **Content Relevance:** 60% higher open/click rates
 
 ---
 
-
 ## Retention Marketing Integration
-
 
 ### Integration Scope
 
@@ -225,15 +190,11 @@ Proactive churn prevention through automated CS-triggered retention campaigns.
 
 **Primary Systems:**
 
-
 - CS Risk Engine, Intervention Playbooks
-
 
 - Marketing Win-back Automation, Loyalty Programs
 
-
 ### Data Flow Architecture
-
 
 ```markdown
 Risk Signals ──┐
@@ -245,12 +206,9 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 
 ```
 
-
 ### Key Integration Points
 
-
 ### 1. Churn Risk Automation
-
 
 ```json
 {
@@ -267,7 +225,6 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 
 **2. Win-back Sequences**
 
-
 ```json
 {
   "winback_integration": {
@@ -281,11 +238,9 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 
 ```
 
-
 ### CS-Retention APIs
 
 **Risk API:**
-
 
 ```markdown
 GET /api/v1/cs-retention/risk/{customer_id}
@@ -310,26 +265,19 @@ POST /api/v1/cs-retention/recovery
 
 ```
 
-
 ### Benefits
-
 
 - **Churn Reduction:** 45% lower churn rates
 
-
 - **Recovery Speed:** 50% faster account recovery
 
-
 - **Revenue Protection:** $2.3M annual protection
-
 
 - **Efficiency:** 70% automation of retention workflows
 
 ---
 
-
 ## Expansion Marketing Integration
-
 
 ### Integration Scope
 
@@ -337,15 +285,11 @@ CS success signals trigger targeted expansion marketing campaigns.
 
 **Primary Systems:**
 
-
 - CS Expansion Engine, Value Realization
-
 
 - Marketing Upsell Automation, ABM Platforms
 
-
 ### Data Flow Architecture
-
 
 ```markdown
 Success Signals ──┐
@@ -357,11 +301,9 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 
 ```
 
-
 ### Key Integration Points
 
 **1. Expansion Readiness**
-
 
 ```json
 {
@@ -378,7 +320,6 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 
 **2. Cross-sell Targeting**
 
-
 ```json
 {
   "crosssell_integration": {
@@ -392,11 +333,9 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 
 ```
 
-
 ### CS-Expansion APIs
 
 **Opportunity API:**
-
 
 ```markdown
 GET /api/v1/cs-expansion/opportunities/{customer_id}
@@ -421,29 +360,21 @@ POST /api/v1/cs-expansion/campaigns
 
 ```
 
-
 ### Benefits
-
 
 - **Expansion Revenue:** 55% growth in upsell revenue
 
-
 - **Win Rates:** 60% higher expansion close rates
 
-
 - **Pipeline Quality:** 80% qualified opportunities
-
 
 - **Timing Precision:** 90% optimal campaign timing
 
 ---
 
-
 ## Technical Implementation
 
-
 ### API Gateway Configuration
-
 
 ```yaml
 cs_marketing_gateway:
@@ -454,9 +385,7 @@ cs_marketing_gateway:
 
 ```
 
-
 ### Event Streaming
-
 
 ```yaml
 topics:
@@ -469,18 +398,13 @@ topics:
 
 ---
 
-
 ## Success Metrics
-
 
 - **Campaign Trigger Accuracy:** 95% health-signal precision
 
-
 - **Retention Impact:** 40% churn reduction attribution
 
-
 - **Expansion Conversion:** 50% uplift in close rates
-
 
 - **ROI:** 8x return on integrated campaigns
 
@@ -488,9 +412,7 @@ topics:
 
 **Related Documentation:**
 
-
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
-
 
 - [Marketing Systems Map](/docs/business/marketing/cross-domain-integration)
 

@@ -19,20 +19,15 @@ related_docs:
 
 # Queue System Best Practices
 
-
 ## Overview
 
 These best practices ensure optimal performance, reliability, and maintainability of the queue system. Following these guidelines will help prevent common issues and maximize system efficiency.
 
-
 ## Performance Optimization
-
 
 ### Job Design Principles
 
-
 ### Minimize Job Payload Size
-
 
 ```pseudo
 // GOOD: Minimal, essential data only
@@ -61,12 +56,9 @@ bad_job_payload = {
 
 ```
 
-
 ### Database Optimization
 
-
 ### Index Strategy
-
 
 ```pseudo
 -- Essential indexes for queue operations
@@ -88,15 +80,11 @@ ON jobs(status, updated_at DESC);
 
 ```
 
-
 ## Reliability Patterns
-
 
 ### Idempotent Job Processing
 
-
 ### Design for Idempotency
-
 
 ```pseudo
 // GOOD: Idempotent job design
@@ -141,12 +129,9 @@ async function sendWelcomeEmail(job) {
 
 ```
 
-
 ### Timeout Management
 
-
 ### Job Timeouts
-
 
 ```pseudo
 // Set appropriate timeouts for different job types
@@ -184,15 +169,11 @@ async function processJobWithTimeout(job) {
 
 ```
 
-
 ## Security Considerations
-
 
 ### Job Validation
 
-
 ### Input Validation
-
 
 ```pseudo
 function validateJobPayload(payload) {
@@ -215,15 +196,11 @@ function validateJobPayload(payload) {
 
 ```
 
-
 ## Monitoring and Observability
-
 
 ### Key Metrics
 
-
 ### Essential Metrics to Track
-
 
 ```pseudo
 class QueueMetrics {
@@ -255,15 +232,11 @@ class QueueMetrics {
 
 ```
 
-
 ## Error Handling
-
 
 ### Comprehensive Error Strategy
 
-
 ### Error Classification
-
 
 ```pseudo
 class JobErrorHandler {
@@ -303,15 +276,11 @@ class JobErrorHandler {
 
 ```
 
-
 ## Operational Excellence
-
 
 ### Deployment Best Practices
 
-
 ### Rolling Updates
-
 
 ```pseudo
 
@@ -331,7 +300,6 @@ spec:
 
 
 ```
-
 
 ## Conclusion
 

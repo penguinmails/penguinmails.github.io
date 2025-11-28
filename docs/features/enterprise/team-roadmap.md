@@ -15,7 +15,6 @@ category: "Enterprise"
 
 ---
 
-
 ## Overview
 
 This roadmap outlines the development timeline for team and workspace management features, from MVP completion through enterprise-grade collaboration capabilities.
@@ -26,63 +25,45 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ## Current State: Partially Complete
-
 
 ### What's Available Today
 
 **Team Management:**
 
-
 - ✅ Team member invitation system with email notifications
-
 
 - ✅ Role-based access control (Owner, Admin, Member)
 
-
 - ✅ View all team members with status and last login
-
 
 - ✅ Update user roles (promote/demote)
 
-
 - ✅ Remove team members from tenant
-
 
 - ✅ Workspace assignment during invitation
 
 **Multi-Tenant Architecture:**
 
-
 - ✅ Complete tenant isolation via NileDB Row-Level Security (RLS)
-
 
 - ✅ Tenant hierarchy (Platform → Tenant → Users → Workspaces)
 
-
 - ✅ Database-level tenant isolation (automatic tenant_id filtering)
-
 
 - ✅ Tenant provisioning (create tenant + owner + default workspace)
 
-
 - ✅ Tenant-scoped authentication (tenant_id in JWT)
-
 
 - ✅ Per-tenant configuration and settings
 
 **Workspace Management:**
 
-
 - ✅ Workspace creation and management
-
 
 - ✅ Workspace access control (Admin, Member, Viewer roles)
 
-
 - ✅ Workspace member assignment
-
 
 - ✅ Multi-workspace support for agencies
 
@@ -90,12 +71,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ## MVP Roadmap (Q1 2026)
 
-
 ### Total MVP Effort: 17-30 days (3.5-6 weeks)
-
 
 ### 1. [MVP - P1] Workspace Management Feature Documentation
 
@@ -107,42 +85,31 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document workspace creation flow with all configuration options
-
 
 - [ ] Document workspace list view with health scores and statistics
 
-
 - [ ] Document workspace settings (general, members, billing, danger zone)
-
 
 - [ ] Document workspace member management and role assignments
 
-
 - [ ] Document workspace deletion workflow and data handling
-
 
 - [ ] Include agency-specific use cases and examples
 
-
 - [ ] Add screenshots or wireframes of workspace UI
-
 
 - [ ] Cross-reference with multi-tenant architecture documentation
 
 **Dependencies:**
 
-
 - Multi-tenant architecture documentation (already exists)
-
 
 - Route specifications for workspace management (already exists)
 
 **Business Impact:** Enables agency customers to understand and use multi-workspace features effectively
 
 ---
-
 
 ### 2. [MVP - P1] Workspace Health Scoring System
 
@@ -154,45 +121,33 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document health score calculation algorithm with weighted factors
-
 
 - [ ] Implement background job for periodic health score calculation
 
-
 - [ ] Document health score factors (deliverability rate, engagement rate, bounce rate, complaint rate, sending volume)
-
 
 - [ ] Document color coding system (green 80-100, yellow 60-79, red 0-59)
 
-
 - [ ] Implement health score display in workspace list view
-
 
 - [ ] Document health score history and trending
 
-
 - [ ] Add health score alerts for declining workspaces
-
 
 - [ ] Create admin dashboard for monitoring workspace health
 
 **Dependencies:**
 
-
 - Analytics system for campaign metrics
 
-
 - Background job queue for score calculation
-
 
 - Workspace management UI
 
 **Business Impact:** Differentiator for agency-focused platform, enables proactive client management, prevents churn
 
 ---
-
 
 ### 3. [MVP - P1] Organization Settings & Branding Documentation
 
@@ -204,42 +159,31 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document company branding settings (name, logo upload, color scheme)
-
 
 - [ ] Document regional settings (timezone, date format, currency, language)
 
-
 - [ ] Document domain verification process for white-label agencies
-
 
 - [ ] Document organization contact information and billing details
 
-
 - [ ] Include branding guidelines (logo dimensions, file formats, size limits)
-
 
 - [ ] Document how branding appears in client-facing workspaces
 
-
 - [ ] Add examples for different organization types (agency, startup, enterprise)
-
 
 - [ ] Cross-reference with workspace settings and user preferences
 
 **Dependencies:**
 
-
 - Settings route specifications (already exists)
-
 
 - Domain management documentation
 
 **Business Impact:** Professional appearance for client-facing workspaces, required for international customers
 
 ---
-
 
 ### 4. [MVP - P1] RBAC Permission Matrix Documentation
 
@@ -251,45 +195,33 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Create permission matrix table showing all features and role access
-
 
 - [ ] Document Owner role permissions (full access, billing, team management)
 
-
 - [ ] Document Admin role permissions (team management, workspace management, no billing)
-
 
 - [ ] Document Member role permissions (campaign creation, limited settings)
 
-
 - [ ] Document workspace-level roles (Admin, Member, Viewer)
-
 
 - [ ] Clarify distinction between tenant-level and workspace-level roles
 
-
 - [ ] Document role inheritance and permission scoping
 
-
 - [ ] Include examples of common permission scenarios
-
 
 - [ ] Document permission checking behavior throughout application
 
 **Dependencies:**
 
-
 - User management documentation (already exists)
-
 
 - Multi-tenant architecture documentation
 
 **Business Impact:** Security requirement for enterprise customers, prevents unauthorized access, required for compliance
 
 ---
-
 
 ### 5. [MVP - P1] Team Member Removal Workflow Documentation
 
@@ -301,42 +233,31 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document team member removal UI flow with confirmation modal
-
 
 - [ ] Document confirmation requirement (type member name or email)
 
-
 - [ ] Document immediate session revocation mechanism
-
 
 - [ ] Document data handling for removed member's campaigns and leads
 
-
 - [ ] Document reassignment process for owned resources
-
 
 - [ ] Document notification email sent to removed member
 
-
 - [ ] Document audit log entry for removal action
-
 
 - [ ] Include security considerations and best practices
 
 **Dependencies:**
 
-
 - User management API documentation
-
 
 - Session management documentation
 
 **Business Impact:** Security requirement (immediate access revocation), common team management operation, required for compliance
 
 ---
-
 
 ### 6. [MVP - P1] Workspace Member Management Documentation
 
@@ -348,45 +269,33 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document distinction between tenant members and workspace members
-
 
 - [ ] Document workspace member invitation flow (invite existing tenant member or external user)
 
-
 - [ ] Document workspace-level roles (Admin, Member, Viewer)
-
 
 - [ ] Document workspace member permissions and access control
 
-
 - [ ] Document workspace member list view with role indicators
-
 
 - [ ] Document workspace member removal workflow
 
-
 - [ ] Document how workspace members differ from tenant members
-
 
 - [ ] Include agency use cases (assigning team to client workspace)
 
 **Dependencies:**
 
-
 - Multi-tenant architecture documentation
 
-
 - User management documentation
-
 
 - Workspace management documentation
 
 **Business Impact:** Core multi-tenant feature for agencies, required for proper data isolation, enables client collaboration
 
 ---
-
 
 ### 7. [MVP - P1] Workspace Deletion & Data Handling Documentation
 
@@ -398,38 +307,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Document workspace deletion UI flow with danger zone warning
-
 
 - [ ] Document confirmation requirement (type workspace name)
 
-
 - [ ] Document cascading delete behavior (campaigns, leads, domains, email accounts)
-
 
 - [ ] Document data retention policy (immediate deletion vs. soft delete with grace period)
 
-
 - [ ] Document what happens to workspace members after deletion
-
 
 - [ ] Document billing implications of workspace deletion
 
-
 - [ ] Document backup/export options before deletion
-
 
 - [ ] Include recovery options (if any) and time limits
 
 **Dependencies:**
 
-
 - Workspace management documentation
 
-
 - Data retention policy documentation
-
 
 - Billing system documentation
 
@@ -437,14 +335,11 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ## Post-MVP Roadmap (Q2 2026 - Q2 2027)
-
 
 ### Q2 2026: Advanced Permissions & Enterprise Billing
 
 **Total Effort:** 4-6 weeks
-
 
 #### 8. [Post-MVP - P2] Advanced Permissions System (Custom Roles)
 
@@ -456,38 +351,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement custom role creation UI with permission selection
-
 
 - [ ] Create permission matrix management interface
 
-
 - [ ] Implement role templates for common use cases (Client Manager, Campaign Creator, Auditor)
-
 
 - [ ] Implement role assignment and inheritance logic
 
-
 - [ ] Update permission checking throughout application
-
 
 - [ ] Implement role migration for existing users
 
-
 - [ ] Document custom role creation and management
-
 
 - [ ] Add role analytics and usage tracking
 
 **Dependencies:**
 
-
 - RBAC permission matrix (MVP)
 
-
 - User management system
-
 
 - Workspace management system
 
@@ -497,11 +381,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Q3 2026: Audit Logs & Bulk Management
 
 **Total Effort:** 5-7 weeks
-
 
 #### 9. [Post-MVP - P2] Audit Logs for Team Actions
 
@@ -513,38 +395,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement audit logging infrastructure with log storage and indexing
-
 
 - [ ] Create audit log viewer UI with search and filters
 
-
 - [ ] Implement audit log export functionality (CSV, JSON)
-
 
 - [ ] Document retention policy for audit data (90 days, 1 year, etc.)
 
-
 - [ ] Integrate audit logging with all team management endpoints
-
 
 - [ ] Implement real-time audit log streaming for security monitoring
 
-
 - [ ] Add audit log alerts for suspicious activity
-
 
 - [ ] Document compliance requirements (SOC 2, ISO 27001)
 
 **Dependencies:**
 
-
 - Log storage infrastructure (PostgreSQL or dedicated log service)
 
-
 - Search and indexing system
-
 
 - User management system
 
@@ -553,7 +424,6 @@ This roadmap outlines the development timeline for team and workspace management
 **Target Milestone:** Q3 2026
 
 ---
-
 
 #### 10. [Post-MVP - P3] Bulk User Management
 
@@ -565,35 +435,25 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement CSV import functionality for team member invitations
-
 
 - [ ] Create CSV export functionality for team member list
 
-
 - [ ] Implement bulk selection UI in team table
-
 
 - [ ] Implement batch processing for invitations with progress tracking
 
-
 - [ ] Implement error handling and validation for bulk operations
-
 
 - [ ] Add rollback mechanism for failed bulk operations
 
-
 - [ ] Document CSV format and required fields
-
 
 - [ ] Implement bulk role updates and workspace assignments
 
 **Dependencies:**
 
-
 - User management system
-
 
 - Background job queue for batch processing
 
@@ -603,11 +463,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Q4 2026: Analytics & Advanced Session Management
 
 **Total Effort:** 5-7 weeks
-
 
 #### 11. [Post-MVP - P3] Team Analytics & Activity Monitoring
 
@@ -619,38 +477,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement activity tracking infrastructure for all user actions
-
 
 - [ ] Create analytics data pipeline for aggregating team metrics
 
-
 - [ ] Build team analytics dashboard UI with charts and graphs
-
 
 - [ ] Implement per-user metrics calculation (campaigns created, emails sent, login frequency)
 
-
 - [ ] Implement workspace-level activity aggregation
-
 
 - [ ] Add export and reporting capabilities (PDF, CSV)
 
-
 - [ ] Implement team productivity insights and recommendations
-
 
 - [ ] Document analytics methodology and data retention
 
 **Dependencies:**
 
-
 - Analytics infrastructure
 
-
 - Activity tracking system
-
 
 - Data pipeline for aggregation
 
@@ -659,7 +506,6 @@ This roadmap outlines the development timeline for team and workspace management
 **Target Milestone:** Q4 2026
 
 ---
-
 
 #### 12. [Post-MVP - P2] Advanced Session Management
 
@@ -671,38 +517,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement device fingerprinting for session tracking
-
 
 - [ ] Implement geolocation tracking for login locations
 
-
 - [ ] Implement suspicious activity detection algorithm
-
 
 - [ ] Add email alerts for logins from new devices or locations
 
-
 - [ ] Implement concurrent session limit enforcement
-
 
 - [ ] Create enhanced session viewer UI with device and location info
 
-
 - [ ] Document security best practices for session management
-
 
 - [ ] Add session analytics and security monitoring dashboard
 
 **Dependencies:**
 
-
 - Session management system
 
-
 - Email notification system
-
 
 - Geolocation service
 
@@ -712,11 +547,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Q1 2027: User Groups & Onboarding
 
 **Total Effort:** 7-10 weeks
-
 
 #### 13. [Post-MVP - P3] User Groups & Teams Within Tenant
 
@@ -728,38 +561,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement group creation and management UI
-
 
 - [ ] Implement group membership management (add/remove users)
 
-
 - [ ] Implement group-based permission inheritance
-
 
 - [ ] Implement workspace access via groups (assign entire group to workspace)
 
-
 - [ ] Implement nested group support (optional)
-
 
 - [ ] Migrate existing individual permissions to group-based model
 
-
 - [ ] Document group management best practices
-
 
 - [ ] Add group analytics and usage tracking
 
 **Dependencies:**
 
-
 - User management system
 
-
 - RBAC permission system
-
 
 - Workspace management system
 
@@ -768,7 +590,6 @@ This roadmap outlines the development timeline for team and workspace management
 **Target Milestone:** Q1 2027
 
 ---
-
 
 #### 14. [Post-MVP - P3] Team Member Onboarding Workflows
 
@@ -780,38 +601,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement onboarding workflow builder with step configuration
-
 
 - [ ] Create guided tour system with interactive tooltips
 
-
 - [ ] Implement progressive feature access control based on onboarding completion
-
 
 - [ ] Add onboarding progress tracking and completion requirements
 
-
 - [ ] Create admin dashboard for monitoring onboarding metrics
-
 
 - [ ] Implement onboarding completion validation and certification
 
-
 - [ ] Document onboarding best practices and templates
-
 
 - [ ] Add onboarding analytics (time-to-productivity, completion rates)
 
 **Dependencies:**
 
-
 - User management system
 
-
 - Feature access control system
-
 
 - Analytics infrastructure
 
@@ -821,11 +631,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Q2 2027: Workspace Templates & Client Portal
 
 **Total Effort:** 6-10 weeks
-
 
 #### 15. [Post-MVP - P3] Workspace Templates
 
@@ -837,38 +645,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement template creation from existing workspace
-
 
 - [ ] Create template library UI with preview and selection
 
-
 - [ ] Implement template application during workspace creation
-
 
 - [ ] Implement template versioning and updates
 
-
 - [ ] Create industry-specific template gallery (SaaS, E-commerce, Agency)
-
 
 - [ ] Document template customization options
 
-
 - [ ] Implement template sharing across tenants (optional)
-
 
 - [ ] Add template analytics and usage tracking
 
 **Dependencies:**
 
-
 - Workspace management system
 
-
 - Campaign management system
-
 
 - Template management system
 
@@ -877,7 +674,6 @@ This roadmap outlines the development timeline for team and workspace management
 **Target Milestone:** Q2 2027
 
 ---
-
 
 #### 16. [Post-MVP - P3] External User Collaboration (Client Portal)
 
@@ -889,38 +685,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement external user authentication system separate from tenant authentication
-
 
 - [ ] Create client-specific permission model with read-only access
 
-
 - [ ] Build white-label client portal UI with agency branding
-
 
 - [ ] Implement limited feature access for external users (view campaigns, reports only)
 
-
 - [ ] Add client invitation and access management workflow
-
 
 - [ ] Implement separate billing model for external users (optional)
 
-
 - [ ] Document white-label configuration and branding options
-
 
 - [ ] Add client portal analytics and usage tracking
 
 **Dependencies:**
 
-
 - Authentication system
 
-
 - Workspace management system
-
 
 - White-label infrastructure
 
@@ -930,11 +715,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Q3 2027: Workspace Duplication
 
 **Total Effort:** 3-4 weeks
-
 
 #### 17. [Post-MVP - P3] Workspace Duplication
 
@@ -946,38 +729,27 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Acceptance Criteria:**
 
-
 - [ ] Implement workspace duplication logic with selective copying
-
 
 - [ ] Create duplication UI with options to choose what to copy
 
-
 - [ ] Implement reference resolution for domains and email accounts
-
 
 - [ ] Implement data sanitization to remove client-specific data
 
-
 - [ ] Add progress tracking for large workspace duplication
-
 
 - [ ] Implement validation and error handling for duplication
 
-
 - [ ] Document duplication limitations and best practices
-
 
 - [ ] Add duplication history and audit trail
 
 **Dependencies:**
 
-
 - Workspace management system
 
-
 - Campaign management system
-
 
 - Domain management system
 
@@ -987,9 +759,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ## Third-Party Dependencies
-
 
 ### NileDB - Multi-Tenant PostgreSQL Database
 
@@ -997,18 +767,13 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Current Usage:**
 
-
 - Complete tenant isolation via Row-Level Security (RLS)
-
 
 - Automatic `tenant_id` filtering on all database queries
 
-
 - Email/password authentication via NileDB SDK
 
-
 - Session management with JWT tokens (includes `tenant_id`)
-
 
 - Tenant provisioning and workspace management
 
@@ -1022,22 +787,17 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ### Loop.so - Transactional Email Service
 
 **Service Overview:** Transactional email service for team management-related emails
 
 **Current Usage:**
 
-
 - Team member invitation emails
-
 
 - Team member removal notifications
 
-
 - Role change notifications
-
 
 - Workspace assignment notifications
 
@@ -1049,12 +809,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Recommendation:**
 
-
 - MVP (0-6 months): Use Loop.so exclusively
 
-
 - Post-MVP (6-12 months): Build in-house system when volume reaches 50K emails/month
-
 
 - Scale (12+ months): Migrate fully to in-house system
 
@@ -1062,110 +819,75 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-
 ## Success Metrics
-
 
 ### Technical Metrics
 
-
 - Workspace creation success rate > 95%
-
 
 - Team invitation delivery rate > 99%
 
-
 - Permission check latency < 50ms
-
 
 - Audit log completeness > 99%
 
-
 ### Business Metrics
-
 
 - Agency customer retention improved by 20%
 
-
 - Support tickets reduced by 30%
-
 
 - Team collaboration efficiency increased by 25%
 
-
 - Enterprise customer acquisition enabled (Q2 2026)
-
 
 ### User Experience Metrics
 
-
 - Workspace setup time < 5 minutes
-
 
 - Team member onboarding time < 10 minutes
 
-
 - Permission clarity score > 90% (user surveys)
-
 
 - Workspace health monitoring adoption > 80%
 
 ---
 
-
 ## Cross-References
-
 
 ### Feature Documentation
 
-
 - **[User Management & Authentication](/docs/features/enterprise/user-management)** - Complete user and team management
-
 
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation and workspace architecture
 
-
 - **[Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)** - Authentication features timeline
-
 
 ### Route Specifications
 
-
 - **[Settings Routes](/docs/design/routes/settings)** - Team management, organization settings UI
-
 
 - **[Workspace Management Routes](/docs/design/routes/workspace-management)** - Workspace list, creation, settings UI
 
-
 - **[Platform Admin Routes](/docs/design/routes/platform-admin)** - Global user and tenant management
-
 
 ### API Documentation
 
-
 - **[Authentication API](/docs/implementation-technical/api/platform-api/authentication)** - User authentication endpoints
-
 
 - **[User Management API](/docs/implementation-technical/api/tenant-api/users)** - Team member management endpoints
 
-
 - **[Tenant API](/docs/implementation-technical/api/platform-api/tenants)** - Tenant provisioning and management
-
 
 ### Implementation Tasks
 
-
 - **[Epic 2: User Authentication & Profile](/tasks/epic-2-user-authentication-profile/)** - User management implementation
-
 
 - **[Epic 3: Tenant & Company Management](/tasks/epic-3-tenant-company-management/)** - Tenant and workspace implementation
 
-
 ### Roadmap
 
-
 - **[Product Roadmap](/docs/roadmap/product-roadmap)** - Overall product timeline
-
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 

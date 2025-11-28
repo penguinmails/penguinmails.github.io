@@ -9,12 +9,9 @@ persona: "Senior Developers"
 
 # Code Style & Quality Standards
 
-
 ## TypeScript Code Standards
 
-
 ### Style Guide Compliance
-
 
 ```typescript
 // ✅ Good: Clear, documented, well-structured code
@@ -160,9 +157,7 @@ function calc(x: number, y: number, z: number): EmailDeliveryScore {
 
 ```
 
-
 ### Documentation Standards
-
 
 ```typescript
 interface EmailCampaignAnalytics {
@@ -261,12 +256,9 @@ class EmailCampaignAnalyticsService {
 
 ```
 
-
 ## TypeScript Standards
 
-
 ### Interface and Type Definitions
-
 
 ```typescript
 // types/campaign.types.ts
@@ -426,9 +418,7 @@ export class ValidationError extends Error {
 
 ```
 
-
 ### Component Development Standards
-
 
 ```tsx
 // components/CampaignEditor.tsx
@@ -679,12 +669,9 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
 ```
 
-
 ## CSS Standards
 
-
 ### Design System Integration
-
 
 ```scss
 // styles/components/campaign-editor.scss
@@ -810,12 +797,9 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 
 ```
 
-
 ## Security Standards
 
-
 ### Input Validation
-
 
 ```typescript
 // Security-focused validation example
@@ -1028,9 +1012,7 @@ class SecureCampaignValidationService {
 
 ```
 
-
 ### Authentication & Authorization
-
 
 ```typescript
 // Secure authentication patterns
@@ -1116,12 +1098,9 @@ export function requirePermission(permission: string) {
 
 ```
 
-
 ## Performance Standards
 
-
 ### Database Optimization
-
 
 ```typescript
 // Optimized database queries with TypeScript
@@ -1292,9 +1271,7 @@ interface DatabaseService {
 
 ```
 
-
 ### Caching Strategy
-
 
 ```typescript
 // Efficient caching implementation with TypeScript
@@ -1485,114 +1462,77 @@ interface RedisClient {
 
 ```
 
-
 ## Code Review Checklist
-
 
 ### Before Submitting PR
 
-
 - [ ] Code follows style guidelines and passes linting
-
 
 - [ ] All functions/classes have proper docstrings
 
-
 - [ ] Complex logic includes inline comments
-
 
 - [ ] No hardcoded values or magic numbers
 
-
 - [ ] Error handling is comprehensive
-
 
 - [ ] Input validation is implemented
 
-
 - [ ] Security best practices followed
-
 
 - [ ] Performance considerations addressed
 
-
 - [ ] Tests are written and passing
-
 
 - [ ] Documentation is updated
 
-
 - [ ] No console.logs or debug statements
-
 
 - [ ] Dead code removed
 
-
 - [ ] Consistent naming conventions
-
 
 - [ ] File size reasonable (<500 lines)
 
-
 ### Security Review Points
-
 
 - [ ] User inputs are validated and sanitized
 
-
 - [ ] Authentication and authorization implemented
-
 
 - [ ] Sensitive data not logged or exposed
 
-
 - [ ] SQL injection prevention
-
 
 - [ ] XSS protection measures
 
-
 - [ ] CSRF protection where applicable
-
 
 - [ ] Rate limiting implemented
 
-
 - [ ] Secure headers set
-
 
 - [ ] Dependencies are up to date
 
-
 - [ ] No hardcoded secrets or keys
-
 
 ### Performance Review Points
 
-
 - [ ] Database queries are optimized
-
 
 - [ ] N+1 query problems avoided
 
-
 - [ ] Appropriate caching implemented
-
 
 - [ ] Large datasets are paginated
 
-
 - [ ] Image/media files are optimized
-
 
 - [ ] Bundle sizes are reasonable
 
-
 - [ ] Lazy loading where appropriate
 
-
 - [ ] Memory usage is efficient
-
 
 - [ ] API response times are acceptable
 

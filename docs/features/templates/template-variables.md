@@ -26,54 +26,39 @@ related_tasks:
 
 {% raw %}
 
-
 # Template Variables
 
 **Quick Access**: Personalize emails at scale with dynamic variables, conditional content, and merge tags that automatically populate with contact data.
-
 
 ## Overview
 
 Template Variables enable you to create dynamic, personalized email content that adapts to each recipient. Use merge tags to insert contact information, conditional logic to show/hide content, and default values to handle missing data gracefully.
 
-
 ### Key Capabilities
-
 
 - **Merge Tags**: Insert contact data with `{{variable_name}}`
 
-
 - **Default Values**: Fallback content when data is missing
-
 
 - **Conditional Blocks**: Show/hide content based on conditions
 
-
 - **Custom Variables**: Workspace-specific variables
-
 
 - **Dynamic Content**: Personalize images, links, and text
 
-
 - **Testing & Preview**: Test with sample data before sending
 
-
 - **Nested Variables**: Complex data structures
-
 
 - **Date Formatting**: Display dates in any format
 
 ---
 
-
 ## Level 1: Quick Start Guide
-
 
 ### Basic Merge Tags
 
-
 #### Standard Contact Fields
-
 
 ```
 
@@ -91,7 +76,6 @@ The {{workspace_name}} Team
 
 **Output Example:**
 
-
 ```
 
 Hi John,
@@ -106,9 +90,7 @@ The PenguinMails Team
 
 ```
 
-
 #### Available Standard Variables
-
 
 ```yaml
 Contact Information:
@@ -140,12 +122,9 @@ Workspace:
 
 ```
 
-
 ### Default Values
 
-
 #### Basic Syntax
-
 
 ```
 
@@ -158,7 +137,6 @@ Welcome to {{company | default: "our platform"}}!
 
 **When Data Exists:**
 
-
 ```
 
 Hi John,
@@ -169,7 +147,6 @@ Welcome to Acme Inc!
 
 **When Data Missing:**
 
-
 ```
 
 Hi there,
@@ -178,9 +155,7 @@ Welcome to our platform!
 
 ```
 
-
 #### Multiple Fallbacks
-
 
 ```
 
@@ -191,21 +166,15 @@ Welcome to our platform!
 
 **Fallback Chain:**
 
-
 1. Try `first_name`
-
 
 2. If empty, try `contact_name`
 
-
 3. If empty, use "Valued Customer"
-
 
 ### Conditional Content
 
-
 #### Simple If/Else
-
 
 ```
 
@@ -218,9 +187,7 @@ Welcome to our platform!
 
 ```
 
-
 #### If/Elsif/Else
-
 
 ```
 
@@ -237,9 +204,7 @@ Welcome to our platform!
 
 ```
 
-
 #### Checking for Empty Values
-
 
 ```
 
@@ -252,12 +217,9 @@ Welcome to our platform!
 
 ```
 
-
 ### Quick Examples
 
-
 #### Personalized Greeting
-
 
 ```
 
@@ -272,9 +234,7 @@ Thanks for being a valued customer!
 
 ```
 
-
 #### Location-Based Content
-
 
 ```
 
@@ -289,9 +249,7 @@ Thanks for being a valued customer!
 
 ```
 
-
 #### Account Type Messaging
-
 
 ```
 
@@ -309,15 +267,11 @@ Thanks for being a valued customer!
 
 ---
 
-
 ## Level 2: Advanced Variable Usage
-
 
 ### Custom Fields
 
-
 #### Accessing Custom Fields
-
 
 ```
 
@@ -333,9 +287,7 @@ Nested Custom Fields:
 
 ```
 
-
 #### Custom Field Examples
-
 
 ```
 
@@ -358,12 +310,9 @@ Company Size Targeting:
 
 ```
 
-
 ### Advanced Conditionals
 
-
 #### Multiple Conditions (AND)
-
 
 ```
 
@@ -375,9 +324,7 @@ Company Size Targeting:
 
 ```
 
-
 #### Multiple Conditions (OR)
-
 
 ```
 
@@ -388,9 +335,7 @@ Company Size Targeting:
 
 ```
 
-
 #### Complex Logic
-
 
 ```
 
@@ -407,9 +352,7 @@ Company Size Targeting:
 
 ```
 
-
 #### Comparison Operators
-
 
 ```yaml
 Equals:
@@ -439,12 +382,9 @@ Not Contains:
 
 ```
 
-
 ### Dynamic Links
 
-
 #### Personalized URLs
-
 
 ```
 
@@ -461,9 +401,7 @@ Personalized landing page:
 
 ```
 
-
 #### UTM Parameters
-
 
 ```
 
@@ -477,12 +415,9 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 ```
 
-
 ### Dynamic Images
 
-
 #### Personalized Images
-
 
 ```
 
@@ -495,9 +430,7 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 ```
 
-
 #### Conditional Images
-
 
 ```
 
@@ -512,12 +445,9 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 
 ```
 
-
 ### Date & Time Formatting
 
-
 #### Date Filters
-
 
 ```
 
@@ -540,9 +470,7 @@ Relative time:
 
 ```
 
-
 #### Date Calculations
-
 
 ```
 
@@ -557,12 +485,9 @@ Days remaining:
 
 ```
 
-
 ### Loops & Iterations
 
-
 #### Loop Through Lists
-
 
 ```
 
@@ -589,9 +514,7 @@ Your recent purchases:
 
 ```
 
-
 #### Loop with Conditionals
-
 
 ```
 
@@ -606,9 +529,7 @@ Your recent purchases:
 
 ```
 
-
 #### Loop Limits
-
 
 ```
 
@@ -621,12 +542,9 @@ Top 3 products:
 
 ```
 
-
 ### String Manipulation
 
-
 #### Text Filters
-
 
 ```
 
@@ -657,9 +575,7 @@ Strip HTML:
 
 ```
 
-
 #### String Operations
-
 
 ```
 
@@ -680,12 +596,9 @@ Split:
 
 ```
 
-
 ### Number Formatting
 
-
 #### Number Filters
-
 
 ```
 
@@ -711,9 +624,7 @@ Thousands separator:
 
 ```
 
-
 ### Math Operations
-
 
 ```
 
@@ -738,12 +649,9 @@ Division:
 
 ---
 
-
 ## Level 3: Technical Implementation
 
-
 ### Database Schema
-
 
 ```sql
 -- Template variables (workspace-level)
@@ -791,9 +699,7 @@ CREATE INDEX idx_variable_usage_template ON variable_usage(template_id);
 
 ```
 
-
 ### Variable Parser Service
-
 
 ```typescript
 interface VariableContext {
@@ -1093,9 +999,7 @@ class VariableParser {
 
 ```
 
-
 ### API Endpoints
-
 
 ```typescript
 // Parse template with test data
@@ -1162,18 +1066,13 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 
 ---
 
-
 ## Related Documentation
-
 
 - **[Template Editor](./template-editor.md)** - Visual template creation
 
-
 - **[Template Management](./template-management.md)** - Template organization
 
-
 - **[Personalization System](../campaigns/personalization-system.md)** - Advanced personalization
-
 
 - **[Leads Management](../leads/leads-management.md)** - Contact data source
 

@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Templates
 
@@ -26,17 +24,13 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `workspace` (string, required): Workspace slug
 
-
 - `limit` (integer, optional): Default 20
-
 
 - `offset` (integer, optional): Default 0
 
 **Response**:
-
 
 ```json
 {
@@ -61,7 +55,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Create Template
 
 **Method**: `POST`  
@@ -69,7 +62,6 @@ persona: "Backend Developers"
 **Purpose**: Create a new email template.
 
 **Request**:
-
 
 ```json
 {
@@ -84,7 +76,6 @@ persona: "Backend Developers"
 
 **Response**:
 
-
 ```json
 {
   "success": true,
@@ -98,7 +89,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Get Template Details
 
 **Method**: `GET`  
@@ -106,7 +96,6 @@ persona: "Backend Developers"
 **Purpose**: Retrieve full content of a template.
 
 **Response**:
-
 
 ```json
 {
@@ -123,7 +112,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Update Template
 
 **Method**: `PATCH`  
@@ -131,7 +119,6 @@ persona: "Backend Developers"
 **Purpose**: Update template content.
 
 **Request**:
-
 
 ```json
 {
@@ -141,7 +128,6 @@ persona: "Backend Developers"
 
 
 ```
-
 
 ### Delete Template
 

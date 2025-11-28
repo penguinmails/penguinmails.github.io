@@ -14,9 +14,7 @@ persona: "Backend Developers"
 
 ---
 
-
 ## Endpoints
-
 
 ### List Tenant Assignments
 
@@ -26,11 +24,9 @@ persona: "Backend Developers"
 
 **Query Parameters**:
 
-
 - `tenantId`: Filter by tenant
 
 **Response**:
-
 
 ```json
 {
@@ -48,7 +44,6 @@ persona: "Backend Developers"
 
 ```
 
-
 ### Set / Update Assignment
 
 **Method**: `PUT`  
@@ -56,7 +51,6 @@ persona: "Backend Developers"
 **Purpose**: Create or update a tenant's pool assignment.
 
 **Request**:
-
 
 ```json
 {
@@ -68,4 +62,3 @@ persona: "Backend Developers"
 
 
 ```
-
