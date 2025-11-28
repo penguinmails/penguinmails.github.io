@@ -481,7 +481,7 @@ SaaS organizations present unique operational challenges requiring specialized a
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 

@@ -12,7 +12,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 **Current State:** Partially Complete (Core features documented, 7 MVP gaps identified)
 
-**What's Available Today:**
+## What's Available Today
 
 - ✅ Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
 
@@ -252,7 +252,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 **Cost:** 2.9% + $0.30 per transaction (~$462/month at MVP)  
 **Replacement Plan:** Not recommended (PCI compliance complexity)
 
-**Current Usage:**
+## Current Usage
 
 - Stripe Checkout for payment collection
 
@@ -270,7 +270,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 **Cost:** $29/month (up to 50,000 emails)  
 **Replacement Plan:** In-house SMTP (Q3 2026)
 
-**Current Usage:**
+## Current Usage
 
 - Payment failure notifications
 

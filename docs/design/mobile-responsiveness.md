@@ -9,7 +9,7 @@ status: "DRAFT"
 
 # Mobile Responsiveness Guidelines
 
-**Ensuring a seamless experience across all devices.**
+## Ensuring a seamless experience across all devices
 
 ---
 

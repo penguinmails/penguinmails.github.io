@@ -30,7 +30,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Purpose:** Comprehensive analytics, logging, and monitoring platform
 
-**Usage:**
+## Usage
 
 - User behavior analytics and funnel analysis
 
@@ -58,7 +58,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Purpose:** Payment processing and financial analytics
 
-**Usage:**
+## Usage
 
 - Subscription management and billing
 
@@ -82,7 +82,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Purpose:** Scheduled report delivery via email
 
-**Usage:**
+## Usage
 
 - Send weekly/monthly analytics reports to users
 
@@ -116,7 +116,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Purpose:** Predictive analytics models and AI-powered insights
 
-**Usage:**
+## Usage
 
 - Send time optimization (per-contact predictions)
 
@@ -136,7 +136,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Alternative:** TensorFlow/PyTorch for self-hosted ML models if API costs become prohibitive at scale.
 
-**Dependencies:**
+## Dependencies
 
 - 30+ days of historical campaign data
 
@@ -158,7 +158,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Investigation Needed:** Evaluate scalable data processing solutions if current approach reaches performance limits. Solution selection will be based on specific requirements and performance benchmarks at time of need.
 
-**Investigation Triggers:**
+## Investigation Triggers
 
 - Analytics queries taking >5 seconds
 
@@ -182,7 +182,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Current Approach:** CSV/Excel/JSON export for external analysis
 
-**Potential Integrations:**
+## Potential Integrations
 
 - Snowflake
 
@@ -190,7 +190,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Redshift
 
-**Investigation Triggers:**
+## Investigation Triggers
 
 - 3+ enterprise customers requesting data warehouse integration
 
@@ -202,7 +202,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Approach:** Customer validation required before implementation
 
-**Dependencies:**
+## Dependencies
 
 - Large-scale data processing spike results
 
@@ -227,7 +227,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Cost Savings vs. Original Architecture
 
-**Current MVP:**
+## Current MVP
 
 - PostHog: $0 (free tier, 1M events/month)
 
@@ -239,7 +239,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Future Cost Optimization (Q3 2026)
 
-**Loop.so Replacement:**
+## Loop.so Replacement
 
 - Current: $29/month
 
@@ -261,7 +261,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Implementation:** OAuth-based connection with scheduled exports
 
-**Use Cases:**
+## Use Cases
 
 - Automated daily/weekly data exports
 
@@ -275,7 +275,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Purpose:** Export to external BI tools (Tableau, Power BI, Looker)
 
-**Formats Supported:**
+## Formats Supported
 
 - CSV (universal compatibility)
 
@@ -287,7 +287,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Status:** Supported via data export API
 
-**Use Cases:**
+## Use Cases
 
 - Custom dashboards in BI tools
 
@@ -303,7 +303,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Status:** Planned for Q2 2026 (customer-driven)
 
-**Use Cases:**
+## Use Cases
 
 - Revenue attribution across customer journey
 
@@ -311,7 +311,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Customer lifecycle analysis
 
-**Dependencies:**
+## Dependencies
 
 - Customer journey tracking system
 
@@ -325,7 +325,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### PostHog Integration
 
-**Implementation:**
+## Implementation
 
 - JavaScript SDK for frontend tracking
 
@@ -335,7 +335,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - API access for custom queries
 
-**Data Flow:**
+## Data Flow
 
 1. Application events → PostHog ingestion
 
@@ -343,7 +343,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 3. PostHog API → Custom reports and exports
 
-**Performance:**
+## Performance
 
 - Real-time event processing
 
@@ -355,7 +355,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Stripe Integration
 
-**Implementation:**
+## Implementation
 
 - Webhook endpoints for subscription events
 
@@ -363,7 +363,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Real-time MRR calculation
 
-**Events Tracked:**
+## Events Tracked
 
 - `customer.subscription.created`
 
@@ -375,7 +375,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - `invoice.payment_failed`
 
-**Data Synchronization:**
+## Data Synchronization
 
 - Real-time webhook processing
 
@@ -387,7 +387,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Loop.so Integration
 
-**Implementation:**
+## Implementation
 
 - API-based email sending
 
@@ -395,7 +395,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Delivery tracking and analytics
 
-**Report Types:**
+## Report Types
 
 - Weekly performance summaries
 
@@ -411,7 +411,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Data Privacy
 
-**PostHog:**
+## PostHog
 
 - GDPR compliant
 
@@ -421,7 +421,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Automatic PII scrubbing
 
-**Stripe:**
+## Stripe
 
 - PCI DSS Level 1 certified
 
@@ -431,7 +431,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Automatic data encryption
 
-**Loop.so:**
+## Loop.so
 
 - GDPR compliant
 
@@ -443,7 +443,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### API Security
 
-**Authentication:**
+## Authentication
 
 - API keys with role-based access control
 
@@ -451,7 +451,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Rate limiting and throttling
 
-**Data Encryption:**
+## Data Encryption
 
 - TLS 1.3 for all API communications
 
@@ -465,7 +465,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Loop.so → In-House SMTP (Q3 2026)
 
-**Rationale:**
+## Rationale
 
 - Cost savings: $29/month → $0
 
@@ -475,7 +475,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Eliminate third-party dependency
 
-**Migration Steps:**
+## Migration Steps
 
 1. Build central SMTP server for transactional emails
 
@@ -489,7 +489,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Complexity:** High (2-3 weeks)
 
-**Risk Mitigation:**
+## Risk Mitigation
 
 - Parallel running during migration
 
@@ -501,7 +501,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### PostHog Self-Hosting (Future)
 
-**Triggers for Self-Hosting:**
+## Triggers for Self-Hosting
 
 - Event volume exceeds free tier (1M events/month)
 
@@ -511,7 +511,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - Custom feature requirements
 
-**Benefits:**
+## Benefits
 
 - No usage-based costs
 
@@ -531,7 +531,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Risk Level:** Low
 
-**Mitigation:**
+## Mitigation
 
 - Self-hosting option available
 
@@ -547,7 +547,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Risk Level:** Low-Medium
 
-**Mitigation:**
+## Mitigation
 
 - Standard payment processing APIs
 
@@ -563,7 +563,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Risk Level:** Low
 
-**Mitigation:**
+## Mitigation
 
 - API-based integration (easy to swap)
 

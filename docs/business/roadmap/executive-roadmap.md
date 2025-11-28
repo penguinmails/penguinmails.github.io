@@ -289,7 +289,7 @@ This document provides executives with a clear view of feature delivery timeline
 
 - [ ] **Budget Controls** (P2 - 3-4 days): Budget limits, alert thresholds, overage handling options
 
-**Business Impact:**
+## Business Impact
 
 - **Revenue Protection**: 40% reduction in payment failure churn
 
@@ -596,7 +596,7 @@ This document provides executives with a clear view of feature delivery timeline
 
 - [ ] **Referral Credits & Promotional Discounts** (P2 - 2-3 weeks): Referral program, account credits, discount codes, analytics
 
-**Business Impact:**
+## Business Impact
 
 - **Enterprise Expansion**: Custom pricing unlocks $50K+ ARR deals
 
@@ -693,7 +693,7 @@ This document provides executives with a clear view of feature delivery timeline
 
 - [ ] **Advanced Dunning Management** (P2 - 3-4 weeks): Smart retry logic, multi-channel dunning, pre-expiration notifications, payment recovery campaigns
 
-**Business Impact:**
+## Business Impact
 
 - **Churn Reduction**: 50% reduction in involuntary churn through advanced dunning
 

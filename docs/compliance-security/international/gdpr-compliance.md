@@ -327,7 +327,7 @@ GDPR applies to any entity processing personal data of EU residents, regardless 
 
 ---
 
-**🌍 Official References:**
+## 🌍 Official References
 
 - [GDPR Full Text - EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 

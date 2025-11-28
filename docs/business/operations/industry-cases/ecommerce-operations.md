@@ -481,7 +481,7 @@ E-commerce organizations present unique operational challenges requiring special
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 

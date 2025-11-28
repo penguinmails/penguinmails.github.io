@@ -287,7 +287,7 @@ Customer retention represents the foundation of sustainable business growth, pro
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Retention Details](retention-detailed)
 

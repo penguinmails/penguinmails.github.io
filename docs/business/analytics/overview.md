@@ -345,13 +345,11 @@ Experiment Results
 ├── Completed: 12 this month
 ├── Success Rate: 75%
 └── Average Impact: +12% improvement
-
-
 ```
 
 #### **Strategic Business Intelligence**
 
-- **Product-Market Fit Score**: 72)
+- **Product-Market Fit Score**: 72
 
 - **Feature Satisfaction**: 4.3/5.0 average
 

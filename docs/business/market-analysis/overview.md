@@ -81,7 +81,7 @@ persona: "Documentation Users"
 
 ### Competitive Advantage Matrix
 
-**Primary Differentiators:**
+## Primary Differentiators
 
 1. **Multi-tenant Architecture**: Only platform designed specifically for agencies managing multiple client domains
 

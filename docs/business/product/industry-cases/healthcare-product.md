@@ -479,7 +479,7 @@ Healthcare organizations present unique product development challenges requiring
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Product Strategy Framework](/docs/business/strategy/overview)
 

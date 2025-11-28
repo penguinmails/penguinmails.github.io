@@ -206,7 +206,7 @@ Agencies and consulting firms face critical challenges in:
 
 ## Progressive Disclosure Navigation
 
-**For Agencies & Consulting Executive Decision Making (Level 2):**
+## For Agencies & Consulting Executive Decision Making (Level 2)
 
 - [ROI Calculator](/docs/business/core/roi-calculator) - Professional services-specific ROI calculations
 
@@ -214,7 +214,7 @@ Agencies and consulting firms face critical challenges in:
 
 - [Competitive Analysis](/docs/business/core/competitive-analysis) - Professional services provider comparison
 
-**For Technical Validation (Level 3):**
+## For Technical Validation (Level 3)
 
 - [Detailed Agencies & Consulting Analysis](/docs/business/customer-success/industry-cases/agencies-consulting-cs) - Complete professional services implementation deep dive
 

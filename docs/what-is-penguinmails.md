@@ -11,7 +11,7 @@ persona: "Documentation Users"
 
 ## The #1 Cold Email Infrastructure Platform
 
-**PenguinMails is the cold email infrastructure platform that agencies and B2B companies trust to deliver 95%+ inbox placement with complete compliance automation. Transform your outreach from guesswork to predictable results without technical complexity or regulatory risk.**
+## PenguinMails is the cold email infrastructure platform that agencies and B2B companies trust to deliver 95%+ inbox placement with complete compliance automation. Transform your outreach from guesswork to predictable results without technical complexity or regulatory risk
 
 ## Why PenguinMails Delivers Results When Others Fail
 
@@ -21,7 +21,7 @@ Unlike general email marketing platforms, PenguinMails is purpose-built for cold
 
 Most cold email campaigns fail not because of poor messaging, but because emails land in spam folders. Traditional email tools were built for newsletters and marketing, not cold outreach. They lack the specialized infrastructure, reputation management, and compliance automation that cold email success requires.
 
-**Our research shows:**
+## Our research shows
 
 - **20-40% of legitimate emails land in spam folders** due to poor infrastructure
 
@@ -48,7 +48,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ## The ROI of Better Deliverability
 
-**Cost of Poor Deliverability (10,000 Cold Emails):**
+## Cost of Poor Deliverability (10,000 Cold Emails)
 
 - **Before PenguinMails**: 60% deliverability = 6,000 successful deliveries
 
@@ -96,7 +96,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ### Key Value Pillars
 
-**Our strategic positioning is built on five core value pillars that deliver measurable business impact:**
+## Our strategic positioning is built on five core value pillars that deliver measurable business impact
 
 1. **Deliverability Excellence**: Industry-leading deliverability through automated infrastructure optimization
 
@@ -148,7 +148,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ## "Our legitimate emails keep landing in spam folders, killing our outreach campaigns"
 
-**The Impact:**
+## The Impact
 
 - **20-40% of emails landing in spam folders**
 
@@ -158,8 +158,9 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 - Lack of technical expertise to diagnose and fix issues
 
-**PenguinMails Solution:**
-**"Automated infrastructure optimization delivers 95%+ deliverability rates"**
+## PenguinMails Solution
+
+## "Automated infrastructure optimization delivers 95%+ deliverability rates"
 
 - **Intelligent Warm-up**: Automated sender reputation building with adaptive algorithms
 
@@ -177,7 +178,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ## "Managing email campaigns requires juggling 5+ different tools and platforms"
 
-**The Impact:**
+## The Impact
 
 - Separate tools for domains, mailboxes, warm-up, campaigns, analytics
 
@@ -187,8 +188,9 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 - High learning curve for team members
 
-**PenguinMails Solution:**
-**"Unified platform eliminates tool sprawl with integrated workflows"**
+## PenguinMails Solution
+
+## "Unified platform eliminates tool sprawl with integrated workflows"
 
 - **All-in-One Dashboard**: Complete email infrastructure management in single interface
 
@@ -204,7 +206,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ## "Email compliance is a legal minefield that could shut down our business"
 
-**The Impact:**
+## The Impact
 
 - Unclear requirements for GDPR, CAN-SPAM, and international regulations
 
@@ -214,8 +216,9 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 - Difficulty keeping up with evolving regulations
 
-**PenguinMails Solution:**
-**"Compliance-by-design eliminates regulatory risk and overhead"**
+## PenguinMails Solution
+
+## "Compliance-by-design eliminates regulatory risk and overhead"
 
 - **Automated Compliance Checking**: Real-time validation of email content and sending practices
 
@@ -231,7 +234,7 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 ## "We're dependent on developers for everything, slowing down our sales cycles"
 
-**The Impact:**
+## The Impact
 
 - Weeks-long delays for infrastructure setup and modifications
 
@@ -241,8 +244,9 @@ PenguinMails delivers the missing pieces that separate successful cold email cam
 
 - Technical complexity preventing non-technical team members from managing email
 
-**PenguinMails Solution:**
-**"Self-service infrastructure automation eliminates technical bottlenecks"**
+## PenguinMails Solution
+
+## "Self-service infrastructure automation eliminates technical bottlenecks"
 
 - **No-Code Setup**: Point-and-click infrastructure provisioning and configuration
 
@@ -434,7 +438,7 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 
 ### **Scaling Up**
 
-**Ideal for Startup Founders and Growing Teams**
+## Ideal for Startup Founders and Growing Teams
 
 1. **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Rotate between accounts to avoid detection
 
@@ -442,7 +446,7 @@ Ready to transform your cold email outreach? PenguinMails provides a comprehensi
 
 ### **Enterprise & Advanced**
 
-**Designed for Sales Directors and Large Teams**
+## Designed for Sales Directors and Large Teams
 
 1. **[Analytics](/docs/features/analytics/core-analytics/overview)** - Advanced performance tracking and insights
 
@@ -532,7 +536,7 @@ Ready to transform your cold email outreach? PenguinMails offers:
 
 - **Proven Results** - 95%+ deliverability guaranteed
 
-**[Start Your Free Trial](https://app.penguinmails.com)** or **[Schedule a Demo](https://calendly.com/penguinmails)**
+## [Start Your Free Trial](https://app.penguinmails.com)**or**[Schedule a Demo](https://calendly.com/penguinmails)
 
 ---
 

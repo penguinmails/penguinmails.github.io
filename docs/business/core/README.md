@@ -57,7 +57,7 @@ This directory contains the essential business documents that serve as the prima
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Industry Business Cases](/docs/business/industry-business-cases) - Vertical-specific analysis
 

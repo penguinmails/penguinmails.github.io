@@ -11,7 +11,7 @@ category: "Compliance"
 
 # GDPR Compliance
 
-**Ensure EU data protection compliance with built-in GDPR features.**
+## Ensure EU data protection compliance with built-in GDPR features
 
 ---
 
@@ -236,6 +236,7 @@ All sub-processors are GDPR-compliant and covered by Data Processing Agreements.
 #### Automated Retention Management
 
 ```yaml
+
 Retention Policies:
   Contact Data:
     Active contacts: Indefinite (while engaged)

@@ -9,7 +9,7 @@ status: "DRAFT"
 
 # Onboarding Flow Design
 
-**Design specification for the new user onboarding experience.**
+## Design specification for the new user onboarding experience
 
 ---
 

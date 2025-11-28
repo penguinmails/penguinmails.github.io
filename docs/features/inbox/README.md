@@ -74,7 +74,7 @@ Maximize deliverability by automatically rotating sending across multiple email 
 
 **Problem:** The current documentation proposes custom tables (`inbox_threads`, `inbox_messages`) without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
 
-**Required Investigation:**
+## Required Investigation
 
 - Can we extend Stalwart's schema with custom fields?
 
@@ -114,7 +114,7 @@ See the [Inbox Management Roadmap](./roadmap.md) for:
 
 - **Q3 2026**: International features (multi-language support, offline support)
 
-**Key Insights:**
+## Key Insights
 
 - 🚨 **Architecture unknown** - Cannot estimate MVP timeline until Stalwart spike complete
 

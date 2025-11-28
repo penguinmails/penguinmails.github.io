@@ -66,7 +66,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 ### MVP Gaps (Q1 2026)
 
-**Critical (P0) - Blocks programmatic integrations:**
+## Critical (P0) - Blocks programmatic integrations
 
 1. **API Key Management UI** (5-7 days) - Self-service API key creation, viewing, regeneration, revocation
 
@@ -74,7 +74,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 3. **API Documentation** (1 week) - OpenAPI/Swagger with interactive explorer and code examples
 
-**High Priority (P1) - Enables real-time integrations:**
+## High Priority (P1) - Enables real-time integrations
 
 1. **Webhook System Backend** (1-2 weeks) - Event delivery engine with retry logic and signature verification
 
@@ -104,7 +104,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 - Additional CRM integrations (Pipedrive, Zoho, Close.io)
 
-**Q4 2026+: Ecosystem Expansion**
+## Q4 2026+: Ecosystem Expansion
 
 - Integration Marketplace for third-party developers (8-12 weeks)
 

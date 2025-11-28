@@ -152,7 +152,7 @@ Each feature document is structured in **three progressive complexity levels**:
 
 - Custom implementations and APIs
 
-**Start shallow, dive deep when you need to.**
+## Start shallow, dive deep when you need to
 
 ---
 

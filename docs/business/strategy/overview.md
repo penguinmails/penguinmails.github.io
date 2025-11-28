@@ -404,21 +404,21 @@ Become the leading strategic oversight framework for email infrastructure decisi
 
 #### Post-MVP: Authentication Enhancements
 
-**Q1 2026 or Later:**
+## Q1 2026 or Later
 
 - **Two-Factor Authentication (2FA)**: NOT planned for MVP. Email/password sufficient for launch. Will be evaluated based on customer demand and NileDB 2FA capabilities assessment.
 
-**Q2 2026:**
+## Q2 2026
 
 - **Social Login (OAuth)**: Sign in with Google, GitHub, Microsoft using NileDB's built-in OAuth support
 
-**Q3 2026 or Later:**
+## Q3 2026 or Later
 
 - **Single Sign-On (SSO)**: SAML 2.0 for enterprise customers. ONLY if spike determines NileDB cannot support enterprise SSO requirements. Requires Q2 2026 spike to evaluate NileDB capabilities.
 
 #### Q4 2026-Q1 2027: Enterprise Features
 
-**Advanced Features:**
+## Advanced Features
 
 - Advanced RBAC (custom roles with 50+ permission points)
 
@@ -450,7 +450,7 @@ Become the leading strategic oversight framework for email infrastructure decisi
 
 ### Enterprise Market Entry Strategy
 
-**Target Segments:**
+## Target Segments
 
 - **Q1 2026**: SMB and startup customers (email/password authentication sufficient)
 
@@ -460,7 +460,7 @@ Become the leading strategic oversight framework for email infrastructure decisi
 
 - **Q4 2026-Q1 2027**: Enterprise customers (advanced RBAC, audit logs, compliance automation)
 
-**Revenue Impact:**
+## Revenue Impact
 
 - **Q1 2026**: $25K-75K MRR (SMB/startup segment)
 
@@ -717,9 +717,9 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 ### Critical Strategic Finding: Vault Integration
 
-**The most significant finding is that Vault integration emerged as a foundational security architecture that blocks multiple critical features across 5 feature areas.**
+## The most significant finding is that Vault integration emerged as a foundational security architecture that blocks multiple critical features across 5 feature areas
 
-**Strategic Impact:**
+## Strategic Impact
 
 - **Priority:** P0 - Critical (Must implement before MVP launch)
 
@@ -729,7 +729,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 - **Affected Areas:** Infrastructure Management, Integrations, Authentication, Email Operations, Compliance
 
-**Business Rationale:**
+## Business Rationale
 
 - Enables rapid VPS migration (abandon compromised VPS, restore secrets from Vault)
 
@@ -743,7 +743,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 **Strategic Shift:** Integration strategy evolved from vendor-specific integrations to an API-first approach during the review.
 
-**MVP Focus (Q1 2026):**
+## MVP Focus (Q1 2026)
 
 - Build general-purpose REST API that works with ANY external system
 
@@ -753,7 +753,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 - Defer vendor-specific integrations (Salesforce, HubSpot, Zapier) to Post-MVP
 
-**Business Benefits:**
+## Business Benefits
 
 - **Faster Time-to-Market:** 2-3 weeks vs. 20-30 days per vendor integration
 
@@ -763,7 +763,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 - **Customer Empowerment:** Technical customers build custom integrations immediately
 
-**Post-MVP (Q1-Q2 2026):**
+## Post-MVP (Q1-Q2 2026)
 
 - Salesforce/HubSpot CRM integrations (Q1 2026)
 
@@ -816,19 +816,19 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 ### Third-Party Dependencies Strategy
 
-**Accept Long-Term Dependencies:**
+## Accept Long-Term Dependencies
 
 - **Stripe:** Best-in-class payment platform, PCI compliance handled ($1,600/month at $50K MRR)
 
 - **NileDB:** Native multi-tenancy eliminates 6-8 weeks of custom RLS implementation ($200-500/month)
 
-**Planned Post-MVP Migrations:**
+## Planned Post-MVP Migrations
 
 - **Loop.so → MailU/Stalwart (Q3 2026):** Consolidate email infrastructure, operational simplicity ($348/year savings)
 
 - **HCP Vault → Self-hosted (Optional, Q3 2026):** Only at scale (500+ secrets), not cost-effective for small scale
 
-**MVP Monthly Costs:**
+## MVP Monthly Costs
 
 - Core operational costs: $151/month (Vault + Loop.so + VPS + DNS)
 
@@ -850,7 +850,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 ### Success Metrics & Launch Criteria
 
-**MVP Launch Criteria (Q1 2026):**
+## MVP Launch Criteria (Q1 2026)
 
 - All 15 P0 features implemented and tested
 
@@ -862,7 +862,7 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 - Security audit passed, GDPR/CAN-SPAM compliance verified
 
-**Growth Phase Metrics (Q2-Q3 2026):**
+## Growth Phase Metrics (Q2-Q3 2026)
 
 - 50+ developers using API within first month
 

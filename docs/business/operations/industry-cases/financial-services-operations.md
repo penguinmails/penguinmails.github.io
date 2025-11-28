@@ -481,7 +481,7 @@ Financial services organizations present unique operational challenges requiring
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 

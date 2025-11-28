@@ -23,7 +23,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Vision:** Achieve marketing competitive advantage through comprehensive intelligence gathering, analysis, and strategic positioning
 
-**Core Objectives:**
+## Core Objectives
 
 - **Intelligence Excellence:** Establish comprehensive competitive intelligence for strategic advantage
 
@@ -33,7 +33,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Opportunity Identification:** Proactive identification of market opportunities and threats
 
-**Competitive Benefits:**
+## Competitive Benefits
 
 - **Strategic Advantage:** Data-driven competitive advantage through intelligence excellence
 
@@ -47,7 +47,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Establish governance structure for competitive intelligence excellence and strategic application
 
-**Governance Structure:**
+## Governance Structure
 
 - **Intelligence Leadership:** Market Intelligence Director oversight of all competitive intelligence activities
 
@@ -65,9 +65,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Establish comprehensive market intelligence for strategic decision-making and positioning
 
-**Intelligence Categories:**
+## Intelligence Categories
 
-**Competitive Analysis Intelligence:**
+## Competitive Analysis Intelligence
 
 - **Competitor Profiling:** Comprehensive profiling of competitors and competitive capabilities
 
@@ -77,7 +77,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Positioning Analysis:** Competitive positioning analysis and optimization opportunities
 
-**Market Intelligence:**
+## Market Intelligence
 
 - **Market Trends:** Market trend analysis and forecasting for strategic planning
 
@@ -91,9 +91,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Establish systematic intelligence gathering and collection for comprehensive market analysis
 
-**Gathering Framework:**
+## Gathering Framework
 
-**Primary Intelligence Sources:**
+## Primary Intelligence Sources
 
 - **Competitor Monitoring:** Continuous monitoring of competitor activities and strategies
 
@@ -103,7 +103,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Customer Intelligence:** Customer feedback and competitive comparison analysis
 
-**Secondary Intelligence Sources:**
+## Secondary Intelligence Sources
 
 - **Industry Reports:** Industry report analysis and market intelligence gathering
 
@@ -121,9 +121,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Establish comprehensive competitor analysis for strategic positioning and advantage
 
-**Competitor Analysis Framework:**
+## Competitor Analysis Framework
 
-**Capability Analysis:**
+## Capability Analysis
 
 - **Marketing Capabilities:** Analysis of competitor marketing capabilities and strengths
 
@@ -133,7 +133,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Customer Analysis:** Analysis of competitor customer base and market share
 
-**Performance Analysis:**
+## Performance Analysis
 
 - **Market Performance:** Competitor market performance and positioning analysis
 
@@ -147,9 +147,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Analyze competitive positioning for strategic optimization and advantage
 
-**Positioning Analysis Framework:**
+## Positioning Analysis Framework
 
-**Market Positioning:**
+## Market Positioning
 
 - **Position Mapping:** Competitive position mapping and strategic space analysis
 
@@ -159,7 +159,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Brand Positioning:** Competitive brand positioning and perception analysis
 
-**Strategic Positioning:**
+## Strategic Positioning
 
 - **Market Strategy:** Analysis of competitor market strategies and approaches
 
@@ -177,9 +177,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Develop sustainable competitive advantages through intelligence-driven strategies
 
-**Advantage Development Framework:**
+## Advantage Development Framework
 
-**Capability Advantage:**
+## Capability Advantage
 
 - **Marketing Excellence:** Development of superior marketing capabilities and competencies
 
@@ -189,7 +189,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Brand Advantage:** Brand and reputation advantage enhancement
 
-**Strategic Advantage:**
+## Strategic Advantage
 
 - **Market Position:** Strategic market position development and maintenance
 
@@ -203,9 +203,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Develop proactive competitive response strategies based on intelligence analysis
 
-**Response Strategy Framework:**
+## Response Strategy Framework
 
-**Competitive Monitoring:**
+## Competitive Monitoring
 
 - **Real-time Monitoring:** Real-time competitive monitoring and intelligence gathering
 
@@ -215,7 +215,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Threat Assessment:** Competitive threat assessment and mitigation strategy
 
-**Strategic Response:**
+## Strategic Response
 
 - **Proactive Response:** Proactive competitive response based on intelligence insights
 
@@ -233,9 +233,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Identify and prioritize market opportunities through competitive intelligence
 
-**Opportunity Framework:**
+## Opportunity Framework
 
-**Market Opportunities:**
+## Market Opportunities
 
 - **Underserved Segments:** Identification of underserved market segments and opportunities
 
@@ -245,7 +245,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Channel Opportunities:** Identification of channel and distribution opportunities
 
-**Competitive Opportunities:**
+## Competitive Opportunities
 
 - **Competitor Weaknesses:** Analysis of competitor weaknesses and opportunity areas
 
@@ -261,7 +261,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 ### Intelligence Success Metrics
 
-**Competitive Intelligence KPIs:**
+## Competitive Intelligence KPIs
 
 - **Intelligence Accuracy:** 95% accuracy in competitive intelligence and market analysis
 
@@ -271,7 +271,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Market Position:** Improved market position through competitive intelligence
 
-**Strategic Impact Metrics:**
+## Strategic Impact Metrics
 
 - **Decision Quality:** 40% improvement in strategic decision quality through intelligence
 
@@ -285,9 +285,9 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 **Primary Objective:** Establish comprehensive intelligence communication for strategic decision-making
 
-**Reporting Framework:**
+## Reporting Framework
 
-**Executive Reporting:**
+## Executive Reporting
 
 - **Strategic Reports:** Executive-level strategic intelligence reports and insights
 
@@ -297,7 +297,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 - **Risk Reports:** Competitive risk reports and mitigation strategies
 
-**Operational Reporting:**
+## Operational Reporting
 
 - **Competitive Updates:** Regular competitive updates and intelligence briefings
 
@@ -309,7 +309,7 @@ This document provides a competitive intelligence summary focusing on competitiv
 
 ---
 
-**Intelligence Links:**
+## Intelligence Links
 
 - **Detailed Strategy**: `docs/business/marketing/strategy/detailed.md#competitive-framework`
 

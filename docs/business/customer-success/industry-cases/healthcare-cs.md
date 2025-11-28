@@ -401,7 +401,7 @@ Healthcare organizations present unique customer success challenges requiring sp
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

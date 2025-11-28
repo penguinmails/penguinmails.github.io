@@ -401,7 +401,7 @@ SaaS organizations require specialized customer success approaches focused on su
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

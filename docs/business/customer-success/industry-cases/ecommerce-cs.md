@@ -421,7 +421,7 @@ E-commerce organizations operate at high scale with complex customer lifecycle m
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

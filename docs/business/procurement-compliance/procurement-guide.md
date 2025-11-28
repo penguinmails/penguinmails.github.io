@@ -202,7 +202,7 @@ This guide is intentionally:
 
 ## Progressive Disclosure Navigation
 
-**For Executive Decision Making (Level 2):**
+## For Executive Decision Making (Level 2)
 
 - [Executive Summary](/docs/business/core) - Strategic findings and recommendations
 
@@ -212,7 +212,7 @@ This guide is intentionally:
 
 - [Security & Compliance](security-compliance) - Risk assessment and compliance overview
 
-**For Procurement & Legal Review (Level 3):**
+## For Procurement & Legal Review (Level 3)
 
 - [Detailed Procurement Guide](procurement-guide-detailed) - Complete enterprise evaluation framework
 
@@ -220,7 +220,7 @@ This guide is intentionally:
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications and requirements
 
-**For Industry-Specific Evaluation:**
+## For Industry-Specific Evaluation
 
 - [Healthcare Business Case](/docs/business/industry-business-cases) - Healthcare-specific requirements
 

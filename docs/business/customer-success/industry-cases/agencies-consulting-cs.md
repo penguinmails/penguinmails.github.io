@@ -401,7 +401,7 @@ Agencies and consulting firms operate in a relationship-driven, expertise-based 
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

@@ -379,7 +379,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 - Churn risk identification
 
-**AI Strategy Note:**
+## AI Strategy Note
 
 - **Consistent AI Provider**: PenguinMails uses Google Gemini AI across all features (analytics, inbox, campaigns) for cost-effectiveness and consistency
 
@@ -791,7 +791,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Current MVP Dependencies
 
-**PostHog - Product Analytics & Event Tracking**
+## PostHog - Product Analytics & Event Tracking
 
 - **Purpose**: User behavior analytics, event tracking, error monitoring
 
@@ -801,7 +801,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 - **Status**: Active (MVP)
 
-**Stripe - Payment Processing**
+## Stripe - Payment Processing
 
 - **Purpose**: MRR calculation and financial analytics
 
@@ -811,7 +811,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 - **Status**: Active
 
-**Loop.so - Transactional Email Service**
+## Loop.so - Transactional Email Service
 
 - **Purpose**: Scheduled report delivery via email
 

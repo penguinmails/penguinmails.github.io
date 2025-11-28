@@ -39,7 +39,7 @@ All core domain management features are production-ready:
 
 - **API Access** - Full programmatic domain management
 
-**No MVP-blocking gaps identified.**
+## No MVP-blocking gaps identified
 
 ## Post-MVP Roadmap
 
@@ -51,7 +51,7 @@ All core domain management features are production-ready:
 
 **Description:** Enable sending from subdomains with independent DKIM keys and reputation tracking for team segmentation and brand isolation.
 
-**Use Cases:**
+## Use Cases
 
 - Marketing team sends from `marketing.example.com`
 
@@ -61,7 +61,7 @@ All core domain management features are production-ready:
 
 - Each subdomain maintains independent reputation
 
-**Key Features:**
+## Key Features
 
 - Subdomain validation and verification
 
@@ -75,7 +75,7 @@ All core domain management features are production-ready:
 
 - API endpoints for subdomain operations
 
-**Business Impact:**
+## Business Impact
 
 - Unlocks enterprise tier pricing
 
@@ -87,7 +87,7 @@ All core domain management features are production-ready:
 
 **Effort:** 3-5 days
 
-**Dependencies:**
+## Dependencies
 
 - Domain verification system (✅ implemented)
 
@@ -103,7 +103,7 @@ All core domain management features are production-ready:
 
 **Description:** Bulk subdomain provisioning and DNS instruction templates for agencies managing many client domains.
 
-**Use Cases:**
+## Use Cases
 
 - Agency imports 50 client subdomains via CSV
 
@@ -113,7 +113,7 @@ All core domain management features are production-ready:
 
 - Team-based subdomain routing
 
-**Key Features:**
+## Key Features
 
 - CSV import for bulk subdomain creation (50+ at once)
 
@@ -127,7 +127,7 @@ All core domain management features are production-ready:
 
 - Subdomain-level access control (RBAC integration)
 
-**Business Impact:**
+## Business Impact
 
 - Increases agency customer retention
 
@@ -139,7 +139,7 @@ All core domain management features are production-ready:
 
 **Effort:** 5-7 days
 
-**Dependencies:**
+## Dependencies
 
 - Subdomain support (Q1 2026)
 
@@ -155,7 +155,7 @@ All core domain management features are production-ready:
 
 **Description:** Transfer domain metadata between workspaces within PenguinMails with full history preservation.
 
-**Use Cases:**
+## Use Cases
 
 - Agency transfers `client.com` metadata to client's own workspace
 
@@ -165,7 +165,7 @@ All core domain management features are production-ready:
 
 - Bulk migration of 10+ domains between workspaces
 
-**Key Features:**
+## Key Features
 
 - Domain transfer workflow (request → approve → transfer)
 
@@ -179,7 +179,7 @@ All core domain management features are production-ready:
 
 - Bulk transfer support (10+ domains)
 
-**Business Impact:**
+## Business Impact
 
 - Supports agency client offboarding
 
@@ -191,7 +191,7 @@ All core domain management features are production-ready:
 
 **Effort:** 5-7 days
 
-**Dependencies:**
+## Dependencies
 
 - Multi-tenant architecture (✅ implemented)
 
@@ -209,7 +209,7 @@ All core domain management features are production-ready:
 
 **Description:** Pre-configured DNS instruction templates with one-click copy for faster domain setup.
 
-**Use Cases:**
+## Use Cases
 
 - One-click copy of all DNS records to clipboard
 
@@ -219,7 +219,7 @@ All core domain management features are production-ready:
 
 - Error reduction through pre-configured templates
 
-**Key Features:**
+## Key Features
 
 - "Copy All DNS Records" button
 
@@ -233,7 +233,7 @@ All core domain management features are production-ready:
 
 - Template preview before applying
 
-**Business Impact:**
+## Business Impact
 
 - Improves user experience
 
@@ -245,7 +245,7 @@ All core domain management features are production-ready:
 
 **Effort:** 2-3 days
 
-**Dependencies:**
+## Dependencies
 
 - Domain management system (✅ implemented)
 
@@ -261,7 +261,7 @@ All core domain management features are production-ready:
 
 **Description:** Real-time DNS record validation with proactive alerts for common misconfigurations.
 
-**Use Cases:**
+## Use Cases
 
 - Instant feedback on DNS record correctness
 
@@ -271,7 +271,7 @@ All core domain management features are production-ready:
 
 - Clear troubleshooting guidance
 
-**Key Features:**
+## Key Features
 
 - Real-time DNS validation (instant feedback)
 
@@ -287,7 +287,7 @@ All core domain management features are production-ready:
 
 - Dashboard showing DNS health across all domains
 
-**Business Impact:**
+## Business Impact
 
 - Reduces support tickets
 
@@ -299,7 +299,7 @@ All core domain management features are production-ready:
 
 **Effort:** 5-7 days
 
-**Dependencies:**
+## Dependencies
 
 - Domain verification system (✅ implemented)
 
@@ -315,7 +315,7 @@ All core domain management features are production-ready:
 
 **Description:** Send from multiple geographic regions with region-specific DKIM selectors and IP pools for global reach and compliance.
 
-**Use Cases:**
+## Use Cases
 
 - Send from US, EU, and APAC regions with optimized routing
 
@@ -325,7 +325,7 @@ All core domain management features are production-ready:
 
 - Automatic failover to backup region
 
-**Key Features:**
+## Key Features
 
 - Multi-region domain configuration
 
@@ -341,7 +341,7 @@ All core domain management features are production-ready:
 
 - Multi-region analytics dashboard
 
-**Business Impact:**
+## Business Impact
 
 - Enables global enterprise customers
 
@@ -353,7 +353,7 @@ All core domain management features are production-ready:
 
 **Effort:** 10-14 days
 
-**Dependencies:**
+## Dependencies
 
 - Multi-region infrastructure (Post-MVP infrastructure work)
 
@@ -373,7 +373,7 @@ All core domain management features are production-ready:
 
 **Description:** Predictive analytics for domain reputation trends with proactive recommendations based on platform-wide patterns.
 
-**Use Cases:**
+## Use Cases
 
 - "Your domain reputation is trending down. Reduce sending volume by 20%."
 
@@ -383,7 +383,7 @@ All core domain management features are production-ready:
 
 - "Your bounce rate increased 15% this week. Review your lead list quality."
 
-**Key Features:**
+## Key Features
 
 - Reputation trend analysis (7-14 day predictions)
 
@@ -397,7 +397,7 @@ All core domain management features are production-ready:
 
 - Insights dashboard with trend predictions
 
-**Business Impact:**
+## Business Impact
 
 - Competitive differentiator for premium plans
 
@@ -409,7 +409,7 @@ All core domain management features are production-ready:
 
 **Effort:** 10-14 days
 
-**Dependencies:**
+## Dependencies
 
 - Domain reputation monitoring (✅ implemented)
 
@@ -445,31 +445,31 @@ All core domain management features are production-ready:
 
 ### Business Impact by Quarter
 
-**Q1 2026:**
+## Q1 2026
 
 - Unlocks enterprise tier pricing
 
 - Enables multi-brand organizations
 
-**Q2 2026:**
+## Q2 2026
 
 - Increases agency customer retention
 
 - Enables agencies to scale client management
 
-**Q3 2026:**
+## Q3 2026
 
 - Reduces support tickets
 
 - Improves deliverability monitoring
 
-**Q4 2026:**
+## Q4 2026
 
 - Enables global enterprise customers
 
 - Unlocks international markets
 
-**Q1 2027:**
+## Q1 2027
 
 - Competitive differentiator for premium plans
 

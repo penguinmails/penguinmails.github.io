@@ -481,7 +481,7 @@ Agency and consulting organizations present unique operational challenges requir
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Operations Strategy Framework](/docs/business/strategy/overview)
 

@@ -23,7 +23,7 @@ This document provides an operations framework summary for marketing teams, focu
 
 **Vision:** Establish marketing operations excellence through systematic automation, process optimization, and technology integration
 
-**Core Objectives:**
+## Core Objectives
 
 - **Workflow Automation:** Achieve 70% reduction in manual marketing workflows through automation
 
@@ -33,7 +33,7 @@ This document provides an operations framework summary for marketing teams, focu
 
 - **Performance Optimization:** Enable continuous marketing performance optimization and improvement
 
-**Operational Benefits:**
+## Operational Benefits
 
 - **Operational Efficiency:** 50% improvement in overall marketing operations efficiency
 
@@ -47,7 +47,7 @@ This document provides an operations framework summary for marketing teams, focu
 
 **Primary Objective:** Establish governance structure for marketing operations excellence and accountability
 
-**Governance Structure:**
+## Governance Structure
 
 - **Operations Leadership:** Marketing Operations Director oversight of all marketing operations
 
@@ -75,7 +75,7 @@ Marketing teams are primarily focused on B2B sales of subscription services to n
 
 Marketing teams require access to three categories of information for effective B2B sales execution:
 
-**Information Access:**
+## Information Access
 
 - Basic client data from `companies` table (required fields only)
 
@@ -83,7 +83,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Optional enrichment fields: industry, company size (when available, not guaranteed)
 
-**Analysis Capabilities:**
+## Analysis Capabilities
 
 - Lead scoring based on subscription status and usage patterns
 
@@ -93,7 +93,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Basic reporting on client health and engagement
 
-**Marketing Actions Support:**
+## Marketing Actions Support
 
 - Third-party automation tools for email campaigns and lead nurturing
 
@@ -111,9 +111,9 @@ Marketing teams require access to three categories of information for effective 
 
 **Primary Objective:** Establish practical workflow automation using third-party tools
 
-**Automation Categories:**
+## Automation Categories
 
-**Campaign Management Automation:**
+## Campaign Management Automation
 
 - Third-party tool automation for campaign creation and launch
 
@@ -123,7 +123,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Budget tracking and manual reallocation based on performance
 
-**Content Management Automation:**
+## Content Management Automation
 
 - Template-based content creation with approval workflows
 
@@ -133,7 +133,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Quality assurance integration with QA rules
 
-**Lead Management Automation:**
+## Lead Management Automation
 
 - Lead capture through CRM and marketing tool integrations
 
@@ -143,7 +143,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Lead handoff processes using integrated workflows
 
-**Analytics and Reporting Automation:**
+## Analytics and Reporting Automation
 
 - Data collection through third-party tool integrations
 
@@ -155,7 +155,7 @@ Marketing teams require access to three categories of information for effective 
 
 ### Automation Performance Standards
 
-**Technical Performance Requirements:**
+## Technical Performance Requirements
 
 - **Processing Speed:** Reliable performance within third-party tool constraints
 
@@ -165,7 +165,7 @@ Marketing teams require access to three categories of information for effective 
 
 - **Scalability:** Support for current marketing team size and growth projections
 
-**Business Performance Standards:**
+## Business Performance Standards
 
 - **Automation Coverage:** Practical automation using available third-party tools
 
@@ -183,9 +183,9 @@ Marketing teams require access to three categories of information for effective 
 
 **Primary Objective:** Establish practical integration using third-party tools and available APIs
 
-**Integration Architecture:**
+## Integration Architecture
 
-**Core Platform Integration:**
+## Core Platform Integration
 
 - CRM integration with marketing automation tools
 
@@ -195,7 +195,7 @@ Marketing teams require access to three categories of information for effective 
 
 - Content management through approved marketing platforms
 
-**Data Integration Requirements:**
+## Data Integration Requirements
 
 - **Practical Data Sync:** Monthly data synchronization cycles
 
@@ -205,7 +205,7 @@ Marketing teams require access to three categories of information for effective 
 
 - **Data Governance:** RBAC controls and audit logging for data access
 
-**API Integration Standards:**
+## API Integration Standards
 
 - **RESTful APIs:** API integration for selected third-party tools
 
@@ -227,7 +227,7 @@ Marketing teams currently handle client inquiries informally through direct comm
 
 A third-party ticket system will be integrated to provide:
 
-**Ticket Creation and Management:**
+## Ticket Creation and Management
 
 - Standardized ticket creation for client inquiries during sales processes
 
@@ -237,7 +237,7 @@ A third-party ticket system will be integrated to provide:
 
 - Knowledge base integration for common issue resolution
 
-**Communication Protocols:**
+## Communication Protocols
 
 - Defined escalation paths for critical client issues
 
@@ -247,7 +247,7 @@ A third-party ticket system will be integrated to provide:
 
 - Post-resolution follow-up procedures
 
-**Analytics and Reporting:**
+## Analytics and Reporting
 
 - Ticket volume and resolution time analytics
 
@@ -271,7 +271,7 @@ A third-party ticket system will be integrated to provide:
 
 ### Operations Success Metrics
 
-**Operational Performance KPIs:**
+## Operational Performance KPIs
 
 - **Automation Efficiency:** Measurable improvement in workflow efficiency using third-party tools
 
@@ -281,7 +281,7 @@ A third-party ticket system will be integrated to provide:
 
 - **Quality Assurance:** Significant reduction in quality issues through QA rules and templates
 
-**Business Impact Metrics:**
+## Business Impact Metrics
 
 - **Cost Efficiency:** Better cost management through third-party tool optimization
 
@@ -295,7 +295,7 @@ A third-party ticket system will be integrated to provide:
 
 **Primary Objective:** Establish systematic optimization methodology for continuous improvement
 
-**Optimization Process:**
+## Optimization Process
 
 1. **Performance Analysis:** Regular analysis of marketing operations performance
 
@@ -309,7 +309,7 @@ A third-party ticket system will be integrated to provide:
 
 ---
 
-**Operations Links:**
+## Operations Links
 
 - **Detailed Operations**: `docs/business/marketing/operations/detailed.md#operations-framework`
 

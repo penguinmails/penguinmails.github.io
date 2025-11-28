@@ -96,7 +96,6 @@ Visit our **[live documentation site](https://penguinmails.github.io)** and navi
 ```bash
 git clone https://github.com/penguinmails/penguinmails.github.io.git
 cd penguinmails.github.io
-
 ```
 
 #### 2. Launch the Docs
@@ -125,6 +124,7 @@ Option B Ruby/Jekyll
 Requires Ruby, Bundler, and the Jekyll gem installed locally.
 
 ```bash
+
 bundle install
 bundle exec jekyll serve --livereload
 
@@ -146,7 +146,7 @@ Detailed development instructions are available in our **[CONTRIBUTING.md](./CON
 
 ## Documentation Structure
 
-```txt
+```text
 docs/
  what-is-penguinmails.md                    # What is PenguinMails
  features-capabilities.md                   # Platform capabilities
@@ -187,8 +187,6 @@ docs/
  tasks/                                      # Project management
     project-management.md                  # Sprint planning
  finance-business-model.md                   # Business model
-
-
 ```
 
 ### Key Documentation Sections
@@ -364,6 +362,6 @@ PenguinMails is a trademark of PenguinMails, Inc.
 
 ---
 
-**Star this repository if you find it helpful!**
+## Star this repository if you find it helpful
 
 *For the latest updates and detailed technical information, visit our [full documentation site](https://penguinmails.github.io).*

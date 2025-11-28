@@ -216,7 +216,7 @@ keywords: ["executive oversight", "strategic framework", "revenue protection", "
 
 ## Progressive Disclosure Navigation
 
-**For strategic oversight framework:**
+## For strategic oversight framework
 
 - [Success Metrics](success-metrics:1) - Realistic KPIs for strategic oversight
 
@@ -224,7 +224,7 @@ keywords: ["executive oversight", "strategic framework", "revenue protection", "
 
 - [Competitive Analysis](competitive-analysis:1) - Market positioning and competitive intelligence
 
-**For implementation and monitoring:**
+## For implementation and monitoring
 
 - [Implementation Roadmap](implementation-roadmap:1) - Realistic implementation expectations
 
@@ -232,7 +232,7 @@ keywords: ["executive oversight", "strategic framework", "revenue protection", "
 
 - [Compliance Overview](compliance-overview:1) - Regulatory oversight for business leaders
 
-**For technical coordination:**
+## For technical coordination
 
 - [Business Leaders Technical Framework](technical-implementation) - Technical coordination guide
 

@@ -22,8 +22,6 @@ The Customer Success Framework provides a systematic approach to driving custome
 ```markdown
 Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
                        (Business Health × 0.25) + (Relationship Health × 0.15)
-
-
 ```
 
 #### Health Score Categories
@@ -36,7 +34,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 
 #### Health Monitoring Dimensions
 
-**Usage Health (35% weight)**
+## Usage Health (35% weight)
 
 - Daily/Weekly active user metrics
 
@@ -46,7 +44,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 
 - Time spent in platform and session quality
 
-**Engagement Health (25% weight)**
+## Engagement Health (25% weight)
 
 - Support ticket frequency and resolution time
 
@@ -56,7 +54,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 
 - Executive sponsor interaction frequency
 
-**Business Health (25% weight)**
+## Business Health (25% weight)
 
 - Achievement of customer-defined success metrics
 
@@ -66,7 +64,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 
 - Budget utilization and value demonstration
 
-**Relationship Health (15% weight)**
+## Relationship Health (15% weight)
 
 - Executive sponsor relationship strength
 
@@ -342,7 +340,7 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Strategy Overview](/docs/business/strategy/overview)
 

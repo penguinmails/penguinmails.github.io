@@ -32,7 +32,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Build comprehensive infrastructure monitoring dashboard for platform administrators
 
-**Features:**
+## Features
 
 - **Central SMTP Server Health:**
 
@@ -90,7 +90,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Critical for platform operations and reliability. Without monitoring, issues go undetected until customers complain. Required for maintaining 99.9% uptime SLA.
 
-**Dependencies:**
+## Dependencies
 
 - Prometheus + Grafana for metrics collection
 
@@ -110,7 +110,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Build comprehensive payment history and financial management tools for finance team and platform administrators
 
-**Features:**
+## Features
 
 - **Payment Transaction History:**
 
@@ -180,7 +180,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Critical for financial operations and customer support. Without payment history, finance team cannot reconcile revenue or resolve billing disputes. Required for monthly financial close.
 
-**Dependencies:**
+## Dependencies
 
 - Stripe API integration
 
@@ -200,7 +200,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Implement essential security features for user accounts
 
-**Features:**
+## Features
 
 - Account lockout after 5 failed login attempts (15-minute lockout)
 
@@ -220,7 +220,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Security is critical for trust and compliance. These are standard features in modern SaaS applications.
 
-**Dependencies:**
+## Dependencies
 
 - NileDB authentication system
 
@@ -240,7 +240,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Important Note:** This documentation is for **customer tenants** who use workspaces to manage multiple client companies. The PenguinMails internal tenant (platform admin) does NOT use workspace functionality - they use dedicated admin routes instead.
 
-**Features:**
+## Features
 
 - Document workspace health scoring algorithm and metrics
 
@@ -260,7 +260,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Workspace management is a core differentiator for agency customers. Documentation gaps block adoption.
 
-**Dependencies:**
+## Dependencies
 
 - Existing workspace implementation
 
@@ -274,7 +274,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Build guided setup wizard and interactive onboarding
 
-**Features:**
+## Features
 
 - Implement 7-step guided setup wizard (workspace, domain, payment, infrastructure, email account, complete)
 
@@ -294,7 +294,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Onboarding directly impacts activation and retention. Poor onboarding leads to churn.
 
-**Dependencies:**
+## Dependencies
 
 - User authentication system
 
@@ -314,7 +314,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Build platform administration tools for user and tenant management
 
-**Features:**
+## Features
 
 - Implement user audit trail system (log all user actions)
 
@@ -332,7 +332,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Required for platform operations and customer support.
 
-**Dependencies:**
+## Dependencies
 
 - User management system
 
@@ -348,7 +348,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Build user interface for viewing and managing active sessions
 
-**Features:**
+## Features
 
 - Display all active sessions (device, browser, IP address, last active)
 
@@ -364,7 +364,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Standard security feature in modern applications.
 
-**Dependencies:**
+## Dependencies
 
 - Session management backend (JWT tokens, Redis)
 
@@ -378,7 +378,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Document staff authentication flow and permission system
 
-**Features:**
+## Features
 
 - Document staff authentication architecture (NileDB auth + `staff_members` table)
 
@@ -398,7 +398,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Critical for platform operations and security. Staff need clear documentation on permission system.
 
-**Dependencies:**
+## Dependencies
 
 - Existing `staff_members`, `staff_roles`, `staff_role_permissions`, `permissions` tables
 
@@ -416,7 +416,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Note:** NOT planned for MVP. Future enhancement pending customer demand and NileDB 2FA capabilities assessment.
 
-**Features (if implemented):**
+## Features (if implemented)
 
 - Evaluate NileDB 2FA support or custom implementation approach
 
@@ -434,7 +434,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Security enhancement, not required for launch. Email/password sufficient for MVP.
 
-**Dependencies:**
+## Dependencies
 
 - User authentication system
 
@@ -456,7 +456,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Note:** NOT planned for MVP. Will use NileDB's native OAuth capabilities starting with Google.
 
-**Features:**
+## Features
 
 - Implement Google OAuth using NileDB SDK
 
@@ -472,7 +472,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Faster signup, reduced friction. Users prefer social login over creating new passwords.
 
-**Dependencies:**
+## Dependencies
 
 - User authentication system (NileDB)
 
@@ -502,7 +502,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 3. If custom SAML implementation is needed, evaluate architecture impact
 
-**Features (if spike determines custom implementation needed):**
+## Features (if spike determines custom implementation needed)
 
 - Complete NileDB SSO capabilities assessment spike
 
@@ -528,7 +528,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise customers (100+ users) require SSO for centralized identity management and compliance.
 
-**Dependencies:**
+## Dependencies
 
 - User authentication system (NileDB)
 
@@ -536,7 +536,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - NileDB SSO capabilities spike (Q2 2026)
 
-**Target:**
+## Target
 
 - Spike: Q2 2026
 
@@ -554,7 +554,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Custom role creation with granular permissions
 
-**Features:**
+## Features
 
 - Define 50+ permission points (create campaigns, send emails, view analytics, manage billing, etc.)
 
@@ -570,7 +570,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Large teams need fine-grained access control. Example: "Marketing Manager can create campaigns but not send without approval."
 
-**Dependencies:**
+## Dependencies
 
 - Basic RBAC (Owner/Admin/Member)
 
@@ -586,7 +586,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Fingerprint, Face ID, Touch ID for mobile and desktop
 
-**Features:**
+## Features
 
 - WebAuthn API integration
 
@@ -600,7 +600,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Mobile users prefer biometric login over typing passwords.
 
-**Dependencies:**
+## Dependencies
 
 - User authentication system
 
@@ -616,7 +616,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Enhanced session control and security
 
-**Features:**
+## Features
 
 - Concurrent session limits (max 5 devices, configurable)
 
@@ -632,7 +632,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise security teams need control over session policies.
 
-**Dependencies:**
+## Dependencies
 
 - Session management backend
 
@@ -650,7 +650,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Comprehensive activity logging for compliance and security
 
-**Features:**
+## Features
 
 - Track all user actions (who, what, when, where)
 
@@ -670,7 +670,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise customers need audit logs for compliance (SOC 2, GDPR). Security teams need forensic data for incident response.
 
-**Dependencies:**
+## Dependencies
 
 - User management system
 
@@ -688,7 +688,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** System health monitoring and SLA guarantees
 
-**Features:**
+## Features
 
 - Real-time deliverability monitoring dashboard
 
@@ -708,7 +708,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise customers require SLA guarantees and real-time monitoring. Operations teams need alerts for system issues.
 
-**Dependencies:**
+## Dependencies
 
 - Infrastructure monitoring system
 
@@ -724,7 +724,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Advanced team features for large organizations
 
-**Features:**
+## Features
 
 - Approval workflows (multi-level approval chains)
 
@@ -744,7 +744,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Large teams need collaboration tools and approval workflows.
 
-**Dependencies:**
+## Dependencies
 
 - Team management system
 
@@ -762,7 +762,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Automated compliance tools for GDPR, CCPA, HIPAA, SOC 2
 
-**Features:**
+## Features
 
 - Data export (GDPR right to access)
 
@@ -786,7 +786,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise customers need compliance automation for GDPR, HIPAA, SOC 2 certifications.
 
-**Dependencies:**
+## Dependencies
 
 - Audit logs
 
@@ -804,7 +804,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Premium support tiers for enterprise customers with guaranteed response times
 
-**Features:**
+## Features
 
 - Implement support ticketing system (Zendesk, Intercom, or custom)
 
@@ -832,7 +832,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Business Impact:** Enterprise customers (100+ users, $10K+ MRR) require guaranteed response times and dedicated support resources.
 
-**Dependencies:**
+## Dependencies
 
 - Customer base growth (need 50+ paying customers to justify dedicated support)
 
@@ -842,7 +842,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Target:** Q3 2026 (when 50+ paying customers)
 
-**Staffing Plan:**
+## Staffing Plan
 
 - **Q3 2026:** 2 support engineers (email + chat support)
 
@@ -850,7 +850,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - **Q1 2027:** 6 support engineers + 2 account managers + 1 support director
 
-**Cost Estimate:**
+## Cost Estimate
 
 - Infrastructure: $500-1,000/month (Zendesk, Intercom, phone system)
 
@@ -868,7 +868,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Description:** Investigate whether PenguinMails internal tenant (platform admin) should use workspace functionality
 
-**Context:**
+## Context
 
 - Workspaces are designed for customer tenants (agencies managing multiple client companies)
 
@@ -878,7 +878,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - Need to determine if platform admin needs workspace functionality at all
 
-**Questions to Answer:**
+## Questions to Answer
 
 1. Does platform admin need workspace functionality?
 
@@ -890,7 +890,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 5. What's the architectural impact of this decision?
 
-**Possible Outcomes:**
+## Possible Outcomes
 
 - **Option A:** Platform admin doesn't use workspaces - uses dedicated admin routes only (recommended for MVP)
 
@@ -898,7 +898,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - **Option C:** Platform admin uses workspaces for organizational structure
 
-**Dependencies:**
+## Dependencies
 
 - Workspace architecture documentation
 
@@ -912,7 +912,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 **Enterprise features** in PenguinMails provide the foundation for user authentication, team collaboration, and workspace management. The platform currently offers basic authentication (email/password via NileDB) and team management, with advanced enterprise features (SSO, MFA, audit logs, compliance automation) planned for Q4 2026-Q1 2027.
 
-**Key Milestones:**
+## Key Milestones
 
 - **Q1 2026:** MVP completion with critical platform admin monitoring, payment history, account security, onboarding, and workspace documentation
 
@@ -924,7 +924,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - **Q1 2027:** Audit logs, compliance automation, real-time monitoring, team collaboration, dedicated support
 
-**Critical Path:**
+## Critical Path
 
 1. **Platform Admin Monitoring (P0)** - Required for production operations
 

@@ -768,19 +768,19 @@ persona: "Documentation Users"
 
 ## Progressive Disclosure Navigation
 
-**For strategic context:**
+## For strategic context
 
 - [Executive Summary](/docs/business/core/executive-summary) - High-level strategic findings
 
 - [ROI Calculator](/docs/business/core/roi-calculator) - Cost-benefit analysis and planning
 
-**For operational implementation:**
+## For operational implementation
 
 - [Cost Comparisons](/docs/business/core/cost-comparisons) - Complete TCO analysis
 
 - [Personnel Analysis](/docs/business/financial-analysis/personnel-analysis) - Team structure and compliance roles
 
-**For technical teams:**
+## For technical teams
 
 - [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Complete technical compliance analysis
 

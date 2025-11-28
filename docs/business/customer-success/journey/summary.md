@@ -395,7 +395,7 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Journey Management Details](detailed)
 

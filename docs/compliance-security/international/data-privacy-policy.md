@@ -37,7 +37,7 @@ We comply with applicable data protection laws, including the General Data Prote
 
 We collect information you directly provide to us:
 
-**Account Information:**
+## Account Information
 
 - Name, email address, phone number
 
@@ -47,7 +47,7 @@ We collect information you directly provide to us:
 
 - Account preferences and settings
 
-**Campaign Data:**
+## Campaign Data
 
 - Email recipient lists and contact information
 
@@ -57,7 +57,7 @@ We collect information you directly provide to us:
 
 - Campaign performance metrics and analytics
 
-**Customer Support:**
+## Customer Support
 
 - Communications with our support team
 
@@ -69,7 +69,7 @@ We collect information you directly provide to us:
 
 When you use our Services, we automatically collect:
 
-**Usage Data:**
+## Usage Data
 
 - IP addresses, browser type, and device information
 
@@ -79,7 +79,7 @@ When you use our Services, we automatically collect:
 
 - System performance and error logs
 
-**Cookies and Tracking Technologies:**
+## Cookies and Tracking Technologies
 
 - Essential cookies for platform functionality
 
@@ -91,7 +91,7 @@ When you use our Services, we automatically collect:
 
 We may receive information from:
 
-**Email Service Providers:**
+## Email Service Providers
 
 - Delivery confirmations and bounce notifications
 
@@ -99,13 +99,13 @@ We may receive information from:
 
 - Email engagement metrics
 
-**Payment Processors:**
+## Payment Processors
 
 - Billing and transaction information
 
 - Account verification data
 
-**Business Partners:**
+## Business Partners
 
 - Referral information and partnership data
 
@@ -452,7 +452,7 @@ We comply with applicable privacy laws in other jurisdictions where we operate, 
 
 ---
 
-**This Privacy Policy is incorporated into our Terms of Service. By using PenguinMails, you acknowledge that you have read and understood this Privacy Policy.**
+## This Privacy Policy is incorporated into our Terms of Service. By using PenguinMails, you acknowledge that you have read and understood this Privacy Policy
 
 ## Last Reviewed: October 28, 2025
 

@@ -443,7 +443,7 @@ Financial services organizations operate in a highly regulated environment requi
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

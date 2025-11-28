@@ -61,7 +61,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Core Business Documents](/docs/business/core) - Performance justification for business case
 

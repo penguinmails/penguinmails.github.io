@@ -108,13 +108,13 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 #### Missing MVP Features (Q1 2026)
 
-**Priority P0 (MVP Blockers):**
+## Priority P0 (MVP Blockers)
 
 - **Real-Time Analytics Dashboard** - Dedicated `/dashboard/analytics` route with cross-campaign aggregation, workspace-level performance breakdown, and time-range selector (5-7 days)
 
 - **Deliverability Analytics Deep-Dive** - Provider-specific inbox placement tracking (Gmail, Yahoo, Outlook), bounce analysis with hard/soft classification, reputation monitoring, and blacklist alerts (5-7 days)
 
-**Priority P1 (MVP Important):**
+## Priority P1 (MVP Important)
 
 - **Engagement Heatmaps** - Visual day-of-week × hour-of-day engagement patterns with optimal send time recommendations and timezone adjustment (4-6 days)
 
@@ -124,7 +124,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 **Total MVP Effort**: 24-36 days (5-7 weeks)
 
-**Other Features:**
+## Other Features
 
 - **[Manual Reporting](./manual-reporting.md)** - Scheduled reports, CSV/Excel/PDF export (Active Q4 2025)
 

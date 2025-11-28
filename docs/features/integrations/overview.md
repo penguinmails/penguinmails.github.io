@@ -17,7 +17,7 @@ PenguinMails follows an API-first integration strategy, prioritizing a robust ge
 
 ### Why API-First?
 
-**Benefits:**
+## Benefits
 
 - **Flexibility**: Customers can integrate with ANY system, not just pre-built integrations
 
@@ -33,7 +33,7 @@ PenguinMails follows an API-first integration strategy, prioritizing a robust ge
 
 ### Integration Capabilities
 
-**MVP (Available Now):**
+## MVP (Available Now)
 
 - ✅ REST API with API key authentication
 
@@ -43,7 +43,7 @@ PenguinMails follows an API-first integration strategy, prioritizing a robust ge
 
 - ✅ Vault-based secrets management
 
-**Post-MVP (Q1-Q2 2026):**
+## Post-MVP (Q1-Q2 2026)
 
 - 🔜 Salesforce CRM integration
 
@@ -59,7 +59,7 @@ PenguinMails follows an API-first integration strategy, prioritizing a robust ge
 
 RESTful API for programmatic access to all PenguinMails functionality.
 
-**Key Features:**
+## Key Features
 
 - Bearer token authentication with API keys
 
@@ -81,7 +81,7 @@ RESTful API for programmatic access to all PenguinMails functionality.
 
 Real-time HTTP POST notifications for email and campaign events.
 
-**Key Features:**
+## Key Features
 
 - Event filtering by workspace, campaign, or custom criteria
 
@@ -103,7 +103,7 @@ Real-time HTTP POST notifications for email and campaign events.
 
 Bi-directional sync with major CRMs including Salesforce and HubSpot.
 
-**Key Features:**
+## Key Features
 
 - OAuth 2.0 authentication
 
@@ -125,7 +125,7 @@ Bi-directional sync with major CRMs including Salesforce and HubSpot.
 
 External Email Service Provider integration for specialized email delivery.
 
-**Key Features:**
+## Key Features
 
 - Supported ESPs: Postmark (transactional), Mailgun (bulk marketing)
 
@@ -151,7 +151,7 @@ HashiCorp Vault integration is a foundational security architecture that central
 
 **Status:** ✅ FULLY DOCUMENTED - Architecture and implementation workflows defined
 
-**Key Benefits:**
+## Key Benefits
 
 - **Enhanced Security:** Secrets never stored on VPS (VPS compromise doesn't expose secrets)
 
@@ -181,7 +181,7 @@ PenguinMails uses Vault to store four types of secrets:
 
 All secrets are organized hierarchically in Vault:
 
-```
+```bash
 
 vault/
 ├── vps/{tenant_id}/
@@ -203,7 +203,7 @@ vault/
 
 Store admin and tenant SSH keys in Vault during VPS provisioning, enabling secure access and rapid disaster recovery.
 
-**Features:**
+## Features
 
 - Dual SSH key system (admin + tenant) for separation of concerns
 
@@ -221,7 +221,7 @@ Store admin and tenant SSH keys in Vault during VPS provisioning, enabling secur
 
 Store SMTP admin credentials in Vault during MailU setup, enabling secure credential retrieval for troubleshooting.
 
-**Features:**
+## Features
 
 - AES-256-GCM encryption before Vault storage
 
@@ -239,7 +239,7 @@ Store SMTP admin credentials in Vault during MailU setup, enabling secure creden
 
 Generate unique API keys per tenant for programmatic email sending, stored securely in Vault with bcrypt hashing.
 
-**Features:**
+## Features
 
 - Unique API key format: `pm_live_{32_random_chars}`
 
@@ -259,7 +259,7 @@ Generate unique API keys per tenant for programmatic email sending, stored secur
 
 Enable rapid recovery from VPS compromise or Vault failure through automated backups and documented restoration procedures.
 
-**Features:**
+## Features
 
 - Automated daily Vault backups to S3 (encrypted)
 
@@ -288,7 +288,7 @@ Automated secret rotation policies ensure secrets are regularly updated:
 
 Vault access control policies define who can read/write which secrets:
 
-**Admin Access:**
+## Admin Access
 
 - Read/Write: All secrets across all tenants
 
@@ -296,7 +296,7 @@ Vault access control policies define who can read/write which secrets:
 
 - Authentication: Admin credentials + 2FA
 
-**Tenant Access:**
+## Tenant Access
 
 - Read: Own tenant secrets only
 
@@ -306,7 +306,7 @@ Vault access control policies define who can read/write which secrets:
 
 - Authentication: Tenant session token
 
-**System Access:**
+## System Access
 
 - Read: Secrets needed for automated operations
 
@@ -320,7 +320,7 @@ Vault access control policies define who can read/write which secrets:
 
 Vault integration supports compliance with industry standards:
 
-**SOC 2 Type II:**
+## SOC 2 Type II
 
 - CC6.1: Logical and physical access controls
 
@@ -330,7 +330,7 @@ Vault integration supports compliance with industry standards:
 
 - CC7.2: Detection of security events
 
-**ISO 27001:**
+## ISO 27001
 
 - A.9.4.1: Information access restriction
 
@@ -340,7 +340,7 @@ Vault integration supports compliance with industry standards:
 
 - A.12.4.2: Protection of log information
 
-**GDPR:**
+## GDPR
 
 - Article 32: Security of processing
 
@@ -401,7 +401,7 @@ Vault integration supports compliance with industry standards:
 
 ### MVP (Now)
 
-**P0 - Critical:**
+## P0 - Critical
 
 1. API Key Management System (1-2 weeks)
 
@@ -411,7 +411,7 @@ Vault integration supports compliance with industry standards:
 
 4. API Documentation (1 week)
 
-**P1 - High:**
+## P1 - High
 
 1. Webhook System Backend (1-2 weeks)
 

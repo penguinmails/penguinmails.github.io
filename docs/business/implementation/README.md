@@ -69,7 +69,7 @@ This directory contains detailed implementation guidance, technical requirements
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Core Business Documents](/docs/business/core) - Executive approval for implementation
 

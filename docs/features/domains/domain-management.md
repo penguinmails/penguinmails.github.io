@@ -11,7 +11,7 @@ category: "Domains"
 
 # Domain Management
 
-**Securely manage sending domains, verify ownership, and configure authentication protocols.**
+## Securely manage sending domains, verify ownership, and configure authentication protocols
 
 ---
 
@@ -77,7 +77,8 @@ Domain Management allows you to connect your own custom domains to PenguinMails 
 
 **What it is:** A policy that tells receivers what to do if SPF/DKIM fail.
 **Why it matters:** Protects your brand reputation.
-**Policies:**
+
+## Policies
 
 - `p=none`: Monitor mode (Recommended for starting).
 

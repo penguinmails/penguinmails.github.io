@@ -208,7 +208,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 ### Related Features
 
-**Foundation Features (Required for Automation):**
+## Foundation Features (Required for Automation)
 
 - [Campaign Management](/docs/features/campaigns/overview.md) - Basic email sequences (linear workflow foundation)
 
@@ -222,17 +222,17 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 - [Background Jobs](/docs/features/queue/background-jobs.md) - Queue infrastructure for action execution
 
-**Analytics & Tracking:**
+## Analytics & Tracking
 
 - [Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md) - Event tracking foundation for triggers
 
 - [Core Analytics](/docs/features/analytics/core-analytics.md) - Workflow performance metrics
 
-**Contact Management:**
+## Contact Management
 
 - [Lead Management](/docs/features/leads/overview.md) - Contact segmentation for triggers and conditions
 
-**Integrations:**
+## Integrations
 
 - [Webhook System](/docs/features/integrations/webhook-system.md) - External event triggers
 
@@ -248,7 +248,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 ### Technical Implementation
 
-**Routes & UI:**
+## Routes & UI
 
 - [Campaign Routes](/docs/design/routes/workspace-campaigns.md) - Current sequence implementation
 
@@ -256,7 +256,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Queue monitoring
 
-**APIs:**
+## APIs
 
 - [Campaign API](/docs/implementation-technical/api/tenant-api/campaigns) - Campaign management endpoints
 
@@ -266,7 +266,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadma
 
 - [Queue API](/docs/implementation-technical/api/queue) - Background job management
 
-**Implementation Tasks:**
+## Implementation Tasks
 
 - [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email sending infrastructure
 

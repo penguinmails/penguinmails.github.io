@@ -515,7 +515,7 @@ Agencies and consulting organizations operate on project-based business models r
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Product Strategy Framework](/docs/business/strategy/overview)
 

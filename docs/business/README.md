@@ -35,7 +35,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 ### Level 3: Deep Dive Analysis (Specialized Areas)
 
-**Specialized directories for detailed validation:**
+## Specialized directories for detailed validation
 
 #### Financial Analysis
 

@@ -17,9 +17,9 @@ This document provides ready-to-use templates, forms, and detailed implementatio
 
 For the complete freelancer agreement template, please visit our Google Docs template:
 
-**[Freelancer Agreement Template (Copy and Customize)](https://docs.google.com/document/d/15UFrNqx1kX0iJWSaHg_yYbR-8lpvIVuMka_DxHua_nU/edit?usp=sharing)**
+## [Freelancer Agreement Template (Copy and Customize)](https://docs.google.com/document/d/15UFrNqx1kX0iJWSaHg_yYbR-8lpvIVuMka_DxHua_nU/edit?usp=sharing)
 
-**Instructions:**
+## Instructions
 
 1. Click the link above to access the Google Docs template
 
@@ -27,7 +27,7 @@ For the complete freelancer agreement template, please visit our Google Docs tem
 
 3. Customize the agreement with your specific details
 
-**Key Sections to Pay Attention To:**
+## Key Sections to Pay Attention To
 
 ### ⚠️ Critical Delivery Terms
 
@@ -61,7 +61,7 @@ For the complete freelancer agreement template, please visit our Google Docs tem
 
 - Confidentiality obligations continue beyond agreement termination
 
-**For additional work regulations and guidelines, refer to our comprehensive documentation system.**
+## For additional work regulations and guidelines, refer to our comprehensive documentation system
 
 ## Task Assignment and Tracking Templates
 

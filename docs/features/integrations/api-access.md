@@ -11,7 +11,7 @@ category: "Integrations"
 
 # API Access
 
-**Programmatic access to PenguinMails features via a RESTful API.**
+## Programmatic access to PenguinMails features via a RESTful API
 
 ---
 
@@ -42,13 +42,15 @@ We use **Bearer Token** authentication.
 2. Include it in the `Authorization` header.
 
 ```bash
+
 curl -X GET https://api.penguinmails.com/v1/campaigns \
   -H "Authorization: Bearer pm_live_12345..."
 
 
-```
+```yaml
 
 ---
+
 
 ## Rate Limiting
 
@@ -60,106 +62,139 @@ Limits are applied per tenant based on your subscription plan.
 | **Professional** | 300 req/min | 500 |
 | **Business** | 1000 req/min | 2000 |
 
-**Headers:**
+## Headers:
+
 
 - `X-RateLimit-Limit`: Total requests allowed
 
+
 - `X-RateLimit-Remaining`: Requests left in window
+
 
 - `X-RateLimit-Reset`: Time until reset
 
 ---
 
+
 ## Core Endpoints
+
 
 ### Emails
 
-**Send a single email:**
+## Send a single email:
 
-```http
+
+```
+
 POST /emails/send
 {
-  "to": "user@example.com",
+  "to": "<user@example.com>",
   "template_id": "welcome-v1",
   "variables": { "name": "Alice" }
 }
 
+```sql
 
-```
 
 ### Contacts
 
-**Add or update a contact:**
-
-```http
-POST /contacts
-{
-  "email": "lead@example.com",
-  "attributes": { "source": "signup_form" }
-}
+## Add or update a contact:
 
 
 ```
 
+POST /contacts
+{
+  "email": "<lead@example.com>",
+  "attributes": { "source": "signup_form" }
+}
+
+```text
+
+
 ### Campaigns
 
-**List campaigns:**
+## List campaigns:
 
-```http
+
+```
+
 GET /campaigns?status=sent&limit=10
-
 
 ```
 
 ---
+
 
 ## SDKs & Libraries
 
 Official client libraries are coming soon:
 
+
 - Node.js (Q1 2026)
 
+
 - Python (Q1 2026)
+
 
 - PHP (Q2 2026)
 
 ---
 
+
 ## Related Documentation
+
 
 ### Route Specifications
 
+
 - **[API Access Routes](/docs/design/routes/api-access)** - API key management UI routes
+
 
 - **[API Key Management Routes](/docs/design/routes/api-key-management)** - Detailed API key interface
 
+
 - **[Webhook System Routes](/docs/design/routes/webhook-system)** - Webhook configuration routes
+
 
 ### Feature Documentation
 
+
 - **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Secure API key system with Vault
+
 
 - **[Webhook System](/docs/features/integrations/webhook-system)** - Real-time event notifications
 
+
 - **[ESP Integration](/docs/features/integrations/esp-integration)** - External ESP configuration
+
 
 ### API Documentation
 
+
 - **[API Reference](/docs/implementation-technical/api/README)** - Complete API documentation
+
 
 - **[Platform API](/docs/implementation-technical/api/platform-api)** - Platform-level endpoints
 
+
 - **[Tenant API](/docs/implementation-technical/api/tenant-api)** - Tenant-level endpoints
+
 
 ### Architecture & Security
 
+
 - **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Secrets management architecture
+
 
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Security features
 
+
 ### Implementation
 
+
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+
 
 - **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - Implementation task
 

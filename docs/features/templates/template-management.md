@@ -11,7 +11,7 @@ category: "Templates"
 
 # Template Management
 
-**Create, manage, and reuse beautiful email templates for your campaigns.**
+## Create, manage, and reuse beautiful email templates for your campaigns
 
 ---
 
@@ -63,7 +63,7 @@ The Template Management system allows you to design responsive email layouts, sa
 
 Inject dynamic data into your templates using Handlebars syntax.
 
-**Standard Variables:**
+## Standard Variables
 
 {% raw %}
 
@@ -77,7 +77,7 @@ Inject dynamic data into your templates using Handlebars syntax.
 
 - `{{unsubscribe_url}}`
 
-**Custom Fields:**
+## Custom Fields
 
 - `{{contact.custom.job_title}}`
 
@@ -91,6 +91,7 @@ Show or hide content based on data.
 {% raw %}
 
 ```handlebars
+
 {{#if contact.first_name}}
   Hi {{contact.first_name}},
 {{else}}
@@ -102,9 +103,10 @@ Show or hide content based on data.
 {{/if}}
 
 
-```
+```json
 
 {% endraw %}
+
 
 ### Loops
 
@@ -112,27 +114,32 @@ Iterate over lists (e.g., for e-commerce receipts).
 
 {% raw %}
 
-```handlebars
+
+```
+
 <ul>
   {{#each order_items}}
     <li>{{product_name}}: {{price}}</li>
   {{/each}}
 </ul>
 
-
-```
+```sql
 
 {% endraw %}
 
 ---
 
+
 ## Level 3: Technical Implementation
+
 
 ### Template Storage
 
 Templates are stored in the database with versioning.
 
-```sql
+
+```
+
 CREATE TABLE templates (
   id UUID PRIMARY KEY,
   tenant_id UUID,
@@ -143,14 +150,16 @@ CREATE TABLE templates (
   updated_at TIMESTAMP
 );
 
+```text
 
-```
 
 ### API Usage
 
-**Render a template:**
+## Render a template:
 
-```javascript
+
+```
+
 POST /api/v1/templates/{id}/render
 {
   "context": {
@@ -158,30 +167,35 @@ POST /api/v1/templates/{id}/render
   }
 }
 
+```sql
+
+## Create via API:
+
 
 ```
 
-**Create via API:**
-
-```javascript
 POST /api/v1/templates
 {
   "name": "Welcome Email v2",
   "html_content": "<html>...</html>"
 }
 
-
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaigns
 
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Using templates in campaigns
 
+
 ### Compliance
+
 
 - **[CAN-SPAM Compliance](../compliance/can-spam-compliance.md)** - Required footer elements
 

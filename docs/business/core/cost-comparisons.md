@@ -341,19 +341,19 @@ Savings: $600-1,074/month ($7,200-12,888)
 
 ## Progressive Disclosure Navigation
 
-**For strategic context:**
+## For strategic context
 
 - [Executive Summary](executive-summary:1) - High-level strategic findings
 
 - [ROI Calculator](roi-calculator:1) - Interactive cost-benefit analysis
 
-**For detailed provider analysis:**
+## For detailed provider analysis
 
 - [Competitive Analysis](competitive-analysis:1) - Side-by-side provider comparisons
 
 - [Provider Benchmarks](provider-benchmarks:1) - Detailed ESP pricing analysis
 
-**For technical teams:**
+## For technical teams
 
 - [Technical Infrastructure](technical-infrastructure:1) - VPS and ESP technical details
 

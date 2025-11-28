@@ -31,7 +31,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Requires 30+ days of historical data from MVP phase and ML infrastructure setup. Core analytics must be stable before adding predictive capabilities.
 
-**User Impact:**
+## User Impact
 
 - Automated send time optimization per contact
 
@@ -41,7 +41,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Churn risk identification for retention actions
 
-**Business Value:**
+## Business Value
 
 - Improve campaign ROI by 35% through AI optimization
 
@@ -53,7 +53,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Large (3-4 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Integrate Gemini AI API for predictive analytics
 
@@ -73,7 +73,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Add fallback handling for API failures
 
-**Dependencies:**
+## Dependencies
 
 - 30+ days of historical campaign data
 
@@ -95,7 +95,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Advanced feature for power users and agencies. Standard dashboards sufficient for MVP. Requires widget library development and dashboard persistence layer.
 
-**User Impact:**
+## User Impact
 
 - Create personalized analytics views
 
@@ -105,7 +105,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - White-label dashboards for client reporting
 
-**Business Value:**
+## Business Value
 
 - Increase platform stickiness through customization
 
@@ -117,7 +117,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Large (3-4 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create dashboard builder UI with drag-and-drop interface
 
@@ -135,7 +135,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Implement real-time widget updates
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -155,7 +155,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Requires ML models and extensive data analysis. Basic segmentation sufficient for MVP. Advanced segmentation enables sophisticated targeting strategies.
 
-**User Impact:**
+## User Impact
 
 - Analyze performance by industry, company size, job title
 
@@ -165,7 +165,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Get segment-specific optimization recommendations
 
-**Business Value:**
+## Business Value
 
 - Improve targeting precision and campaign ROI
 
@@ -177,7 +177,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Large (3-4 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create segment performance analysis view
 
@@ -195,7 +195,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Add segment export functionality
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -217,7 +217,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Complex feature requiring CRM integration and customer journey tracking. Basic ROI tracking sufficient for MVP. Enterprise customers need multi-touch attribution for accurate ROI calculation.
 
-**User Impact:**
+## User Impact
 
 - Understand complete customer journey
 
@@ -227,7 +227,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Calculate true campaign ROI
 
-**Business Value:**
+## Business Value
 
 - Accurate ROI calculation for enterprise customers
 
@@ -239,7 +239,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Large (4-5 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Build attribution engine supporting 5 attribution models
 
@@ -257,7 +257,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Add attribution export for external analysis
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -279,7 +279,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Current PostHog + manual database cleanup sufficient for MVP. Investigation needed when data volume or query complexity exceeds current capabilities.
 
-**User Impact:**
+## User Impact
 
 - Faster analytics queries (sub-second response times)
 
@@ -289,7 +289,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Custom aggregations beyond PostHog capabilities
 
-**Business Value:**
+## Business Value
 
 - Maintain performance as platform scales
 
@@ -301,7 +301,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Medium (2-3 weeks for spike + implementation)
 
-**Triggers for Investigation:**
+## Triggers for Investigation
 
 - Analytics queries taking >5 seconds
 
@@ -311,7 +311,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - PostHog limitations for custom aggregations
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Conduct spike to evaluate data processing needs and volume projections
 
@@ -329,7 +329,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Migrate complex analytics queries to optimized processing layer
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -349,7 +349,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** CSV/Excel/JSON export sufficient for MVP. Real-time data warehouse integration requires enterprise customer validation and infrastructure investment.
 
-**User Impact:**
+## User Impact
 
 - Stream analytics data to data warehouses in real-time
 
@@ -359,7 +359,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Synchronize data across enterprise infrastructure
 
-**Business Value:**
+## Business Value
 
 - Enable enterprise data integration workflows
 
@@ -371,7 +371,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Large (3-4 weeks)
 
-**Triggers for Investigation:**
+## Triggers for Investigation
 
 - 3+ enterprise customers requesting data warehouse integration
 
@@ -379,7 +379,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Compliance requirements for data residency
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Conduct spike to validate enterprise customer demand (3+ customers)
 
@@ -397,7 +397,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Provide client SDKs (JavaScript, Python)
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -417,7 +417,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Advanced analytics feature for mature products. Requires 6+ months of historical data. Basic retention metrics sufficient for MVP.
 
-**User Impact:**
+## User Impact
 
 - Analyze user retention by signup cohort
 
@@ -427,7 +427,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Identify churn patterns across cohorts
 
-**Business Value:**
+## Business Value
 
 - Understand customer lifecycle and retention
 
@@ -439,7 +439,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** Medium-Large (2-3 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create cohort analysis view with retention matrix
 
@@ -457,7 +457,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Add cohort export for external analysis
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -477,7 +477,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Why Post-MVP:** Cost optimization feature. Loop.so sufficient for MVP. In-house system requires SMTP infrastructure and template management development.
 
-**User Impact:**
+## User Impact
 
 - No user-facing changes (transparent migration)
 
@@ -485,7 +485,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - Potential for faster delivery with dedicated infrastructure
 
-**Business Value:**
+## Business Value
 
 - Cost savings: $29/month → $0
 
@@ -497,7 +497,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Complexity:** High (2-3 weeks)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Build central SMTP server for transactional emails
 
@@ -515,7 +515,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Monitor delivery rates and reputation
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics complete
 
@@ -559,7 +559,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 ### Implementation Roadmap
 
-**Q1 2026 - Enhanced Analytics Phase**
+## Q1 2026 - Enhanced Analytics Phase
 
 1. Predictive Analytics (Weeks 1-4)
 
@@ -567,13 +567,13 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 3. Advanced Segmentation Analytics (Weeks 9-12)
 
-**Q2 2026 - Advanced Analytics + Infrastructure Phase**
+## Q2 2026 - Advanced Analytics + Infrastructure Phase
 
 1. Multi-Touch Attribution (Weeks 1-5)
 
 2. Large-Scale Data Processing Investigation (Weeks 6-8, if triggered)
 
-**Q3 2026 - Enterprise Analytics Phase**
+## Q3 2026 - Enterprise Analytics Phase
 
 1. Enterprise Data Warehouse Integration (Weeks 1-4, if customer demand validated)
 
@@ -583,7 +583,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 ### Success Criteria
 
-**Enhanced Analytics Complete (Q1 2026) When:**
+## Enhanced Analytics Complete (Q1 2026) When
 
 - [ ] Predictive models achieve 80%+ accuracy
 
@@ -595,7 +595,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] User satisfaction with insights quality reaches 85%
 
-**Advanced Analytics Complete (Q2 2026) When:**
+## Advanced Analytics Complete (Q2 2026) When
 
 - [ ] Attribution engine supports 5 attribution models
 
@@ -603,7 +603,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Revenue attribution accuracy validated by finance team
 
-**Infrastructure Optimization Complete (Q2 2026) When:**
+## Infrastructure Optimization Complete (Q2 2026) When
 
 - [ ] Data processing spike completed with recommendations
 
@@ -611,7 +611,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 - [ ] Scalability plan documented for 10x data growth
 
-**Enterprise Analytics Complete (Q3 2026) When:**
+## Enterprise Analytics Complete (Q3 2026) When
 
 - [ ] Enterprise data warehouse integration supports 3+ warehouse platforms (if implemented)
 
@@ -629,7 +629,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Required For:** Predictive Analytics, Advanced Segmentation
 
-**Components:**
+## Components
 
 - Gemini AI API integration
 
@@ -652,7 +652,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Required For:** Multi-Touch Attribution
 
-**Components:**
+## Components
 
 - CRM API integration
 
@@ -666,7 +666,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Required For:** Performance optimization at scale
 
-**Components:**
+## Components
 
 - Investigation spike to evaluate scalable data processing solutions
 
@@ -682,7 +682,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 **Required For:** Enterprise customer data integration
 
-**Components:**
+## Components
 
 - Snowflake/BigQuery/Redshift connectors
 

@@ -317,7 +317,7 @@ Freelancers must provide effort estimates in story points before accepting any t
 
 Each sprint runs for 1–2 weeks, depending on scope.
 
-**Phases:**
+## Phases
 
 - **Planning**: Define sprint goals and prioritize tasks
 
@@ -327,7 +327,7 @@ Each sprint runs for 1–2 weeks, depending on scope.
 
 - **Retrospective**: Discuss what went well and how to improve in the next sprint
 
-**Task Status Workflow:**
+## Task Status Workflow
 
 - **Backlog** – Idea or future task
 
@@ -341,7 +341,7 @@ Each sprint runs for 1–2 weeks, depending on scope.
 
 - **Done** – Fully reviewed and accepted
 
-**Completion Rule:**
+## Completion Rule
 
 A task is considered done only if it meets acceptance criteria and has been verified by the Product Owner.
 

@@ -80,7 +80,7 @@ For detailed development setup and contribution procedures, please refer to our 
 
 ### 4. Tech Stack Compliance
 
-**Repository Tech Stack Requirements:**
+## Repository Tech Stack Requirements
 
 - **Language**: TypeScript (primary) or JavaScript for all code examples
 
@@ -94,10 +94,12 @@ For detailed development setup and contribution procedures, please refer to our 
 
 - **Framework**: Next.js 15 App Router (NO Pages Router, Remix)
 
-**Compliance Verification:**
+## Compliance Verification
+
 For tech stack compliance verification commands, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md#tech-stack-compliance-verification).
 
-**Code Example Standards:**
+## Code Example Standards
+
 For detailed code example templates and conversion patterns, see [CONTRIBUTING.md](./CONTRIBUTING.md#code-example-templates).
 
 ### 5. Code Quality Requirements

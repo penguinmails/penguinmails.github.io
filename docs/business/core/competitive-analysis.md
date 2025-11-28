@@ -195,19 +195,19 @@ For 100K email campaigns, provider selection affects deliverability:
 
 ## Progressive Disclosure Navigation
 
-**For strategic context:**
+## For strategic context
 
 - [Executive Summary](executive-summary) - Strategic findings and recommendations
 
 - [ROI Calculator](roi-calculator) - Cost-benefit analysis tool
 
-**For detailed analysis:**
+## For detailed analysis
 
 - [Detailed Provider Comparison](/docs/business/competitive-intelligence/overview) - Complete vendor analysis with migration costs
 
 - [Implementation Roadmap](/docs/business/implementation) - Migration and implementation planning
 
-**For technical teams:**
+## For technical teams
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications and setup
 

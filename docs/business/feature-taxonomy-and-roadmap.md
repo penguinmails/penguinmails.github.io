@@ -27,6 +27,7 @@ This document provides the central reference for understanding our feature class
 Our feature development follows a **progressive disclosure** approach, revealing capabilities in levels based on market validation, technical complexity, and business impact:
 
 ```markdown
+
 Level 1: CORE FEATURES (MVP Foundation)        → 2025 Q4
 Level 2: MVP FEATURES (Basic UX Requirements)  → 2025 Q4 - 2026 Q1
 Level 3: GROWTH FEATURES (Market Expansion)    → 2026 Q1 - Q3

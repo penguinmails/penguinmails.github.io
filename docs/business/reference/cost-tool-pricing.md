@@ -218,6 +218,7 @@ persona: "Documentation Users"
 ### Implementation Timeline and Costs
 
 ```mermaid
+
 gantt
     title Compliance Platform Implementation
     dateFormat YYYY-MM-DD
@@ -278,15 +279,15 @@ gantt
 
 ## Progressive Disclosure Navigation
 
-**For strategic overview:**
+## For strategic overview
 
 - [Cost Analysis Overview](cost-analysis-overview:1) - Strategic investment analysis
 
-**For implementation details:**
+## For implementation details
 
 - [Implementation Management](cost-implementation:1) - Implementation and ongoing costs
 
-**For business context:**
+## For business context
 
 - [Executive Summary](executive-summary:1) - Complete strategic analysis
 

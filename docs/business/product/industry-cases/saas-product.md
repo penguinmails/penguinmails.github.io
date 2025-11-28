@@ -477,7 +477,7 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Product Strategy Framework](/docs/business/strategy/overview)
 

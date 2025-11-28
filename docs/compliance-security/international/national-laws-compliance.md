@@ -342,7 +342,7 @@ version: "1.0"
 
 ---
 
-**Country-Specific References:**
+## Country-Specific References
 
 - [German TTDSG](https://www.gesetze-im-internet.de/ttdsg/)
 
@@ -355,7 +355,8 @@ version: "1.0"
 - [Dutch AP](https://autoriteitpersoonsgegevens.nl/en)
 
 **Document Classification:** Level 2 - Detailed Legal Analysis  
-**Related Documents:**
+
+## Related Documents
 
 - [European Compliance Overview](european-compliance-overview)
 

@@ -11,7 +11,7 @@ category: "Enterprise"
 
 # Team & Workspace Management Roadmap
 
-**Comprehensive timeline for team collaboration, workspace management, and multi-tenant features.**
+## Comprehensive timeline for team collaboration, workspace management, and multi-tenant features
 
 ---
 
@@ -29,7 +29,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ### What's Available Today
 
-**Team Management:**
+## Team Management
 
 - ✅ Team member invitation system with email notifications
 
@@ -43,7 +43,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - ✅ Workspace assignment during invitation
 
-**Multi-Tenant Architecture:**
+## Multi-Tenant Architecture
 
 - ✅ Complete tenant isolation via NileDB Row-Level Security (RLS)
 
@@ -57,7 +57,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - ✅ Per-tenant configuration and settings
 
-**Workspace Management:**
+## Workspace Management
 
 - ✅ Workspace creation and management
 
@@ -83,7 +83,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Create comprehensive feature documentation for workspace creation, management, and configuration capabilities.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document workspace creation flow with all configuration options
 
@@ -101,7 +101,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Cross-reference with multi-tenant architecture documentation
 
-**Dependencies:**
+## Dependencies
 
 - Multi-tenant architecture documentation (already exists)
 
@@ -119,7 +119,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Document and implement the workspace health scoring algorithm that calculates 0-100 health scores based on campaign performance, deliverability, and engagement metrics.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document health score calculation algorithm with weighted factors
 
@@ -137,7 +137,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Create admin dashboard for monitoring workspace health
 
-**Dependencies:**
+## Dependencies
 
 - Analytics system for campaign metrics
 
@@ -157,7 +157,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Consolidate and complete documentation for organization-level settings including company branding, regional preferences, and domain verification.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document company branding settings (name, logo upload, color scheme)
 
@@ -175,7 +175,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Cross-reference with workspace settings and user preferences
 
-**Dependencies:**
+## Dependencies
 
 - Settings route specifications (already exists)
 
@@ -193,7 +193,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Create comprehensive documentation of role-based access control permissions with detailed permission matrix for Owner, Admin, and Member roles.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create permission matrix table showing all features and role access
 
@@ -213,7 +213,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Document permission checking behavior throughout application
 
-**Dependencies:**
+## Dependencies
 
 - User management documentation (already exists)
 
@@ -231,7 +231,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Document the complete workflow for removing team members including confirmation requirements, session revocation, and data handling.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document team member removal UI flow with confirmation modal
 
@@ -249,7 +249,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Include security considerations and best practices
 
-**Dependencies:**
+## Dependencies
 
 - User management API documentation
 
@@ -267,7 +267,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Document workspace-specific member management separate from tenant-level team management, including workspace invitation flow and workspace-scoped permissions.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document distinction between tenant members and workspace members
 
@@ -285,7 +285,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Include agency use cases (assigning team to client workspace)
 
-**Dependencies:**
+## Dependencies
 
 - Multi-tenant architecture documentation
 
@@ -305,7 +305,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Document the workspace deletion process including confirmation requirements, data retention policy, and cascading effects on campaigns, leads, and domains.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Document workspace deletion UI flow with danger zone warning
 
@@ -323,7 +323,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Include recovery options (if any) and time limits
 
-**Dependencies:**
+## Dependencies
 
 - Workspace management documentation
 
@@ -349,7 +349,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement custom role creation with granular permission assignments beyond the standard Owner/Admin/Member roles.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement custom role creation UI with permission selection
 
@@ -367,7 +367,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add role analytics and usage tracking
 
-**Dependencies:**
+## Dependencies
 
 - RBAC permission matrix (MVP)
 
@@ -393,7 +393,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement comprehensive audit trail of all team management actions including user invitations, role changes, workspace access modifications, and settings updates.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement audit logging infrastructure with log storage and indexing
 
@@ -411,7 +411,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Document compliance requirements (SOC 2, ISO 27001)
 
-**Dependencies:**
+## Dependencies
 
 - Log storage infrastructure (PostgreSQL or dedicated log service)
 
@@ -433,7 +433,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement ability to invite, update, or remove multiple team members simultaneously through CSV import or bulk selection.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement CSV import functionality for team member invitations
 
@@ -451,7 +451,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Implement bulk role updates and workspace assignments
 
-**Dependencies:**
+## Dependencies
 
 - User management system
 
@@ -475,7 +475,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement analytics dashboard showing team member activity, usage patterns, and productivity metrics at tenant and workspace levels.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement activity tracking infrastructure for all user actions
 
@@ -493,7 +493,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Document analytics methodology and data retention
 
-**Dependencies:**
+## Dependencies
 
 - Analytics infrastructure
 
@@ -515,7 +515,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement enhanced session management with device tracking, location-based alerts, concurrent session limits, and forced logout capabilities.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement device fingerprinting for session tracking
 
@@ -533,7 +533,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add session analytics and security monitoring dashboard
 
-**Dependencies:**
+## Dependencies
 
 - Session management system
 
@@ -559,7 +559,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement logical groups of users within a tenant for easier permission management and workspace assignment.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement group creation and management UI
 
@@ -577,7 +577,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add group analytics and usage tracking
 
-**Dependencies:**
+## Dependencies
 
 - User management system
 
@@ -599,7 +599,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement automated onboarding workflows for new team members including guided tours, required training, and progressive feature access.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement onboarding workflow builder with step configuration
 
@@ -617,7 +617,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add onboarding analytics (time-to-productivity, completion rates)
 
-**Dependencies:**
+## Dependencies
 
 - User management system
 
@@ -643,7 +643,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement pre-configured workspace templates with default settings, campaigns, and configurations for common use cases.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement template creation from existing workspace
 
@@ -661,7 +661,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add template analytics and usage tracking
 
-**Dependencies:**
+## Dependencies
 
 - Workspace management system
 
@@ -683,7 +683,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement external user access allowing clients to access specific workspaces with limited permissions without full tenant membership.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement external user authentication system separate from tenant authentication
 
@@ -701,7 +701,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add client portal analytics and usage tracking
 
-**Dependencies:**
+## Dependencies
 
 - Authentication system
 
@@ -727,7 +727,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Description:** Implement workspace cloning functionality to duplicate an existing workspace with all settings, campaigns, templates, and configurations.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Implement workspace duplication logic with selective copying
 
@@ -745,7 +745,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 - [ ] Add duplication history and audit trail
 
-**Dependencies:**
+## Dependencies
 
 - Workspace management system
 
@@ -765,7 +765,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Service Overview:** Multi-tenant PostgreSQL database with native tenant isolation through Row-Level Security (RLS)
 
-**Current Usage:**
+## Current Usage
 
 - Complete tenant isolation via Row-Level Security (RLS)
 
@@ -791,7 +791,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Service Overview:** Transactional email service for team management-related emails
 
-**Current Usage:**
+## Current Usage
 
 - Team member invitation emails
 
@@ -807,7 +807,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 **Cost:** $29/month (up to 50K emails)
 
-**Recommendation:**
+## Recommendation
 
 - MVP (0-6 months): Use Loop.so exclusively
 

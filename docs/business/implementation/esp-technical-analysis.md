@@ -189,7 +189,7 @@ graph TD
 
 ### Use Case-Based Provider Strategy
 
-**Cold Email Campaigns**
+## Cold Email Campaigns
 
 - **Recommended Strategy**: Mailgun → SendGrid → Amazon SES
 
@@ -197,7 +197,7 @@ graph TD
 
 - **Not Recommended**: Postmark (transactional focus, limited cold email features)
 
-**Transactional Email Operations**
+## Transactional Email Operations
 
 - **Recommended Strategy**: Postmark → SendGrid → Mailgun
 
@@ -205,7 +205,7 @@ graph TD
 
 - **Best Performance**: Postmark for highest deliverability rates
 
-**High-Volume Marketing Campaigns**
+## High-Volume Marketing Campaigns
 
 - **Recommended Strategy**: Amazon SES → SendGrid → Mailgun
 
@@ -345,21 +345,21 @@ graph TD
 
 ## Progressive Disclosure Navigation
 
-**For strategic overview:**
+## For strategic overview
 
 - [Performance Overview](performance-overview:1) - Executive performance benchmarks and trends
 
-**For optimization techniques:**
+## For optimization techniques
 
 - [ESP Integration Implementation](/docs/technical/architecture/detailed-technical) - Complete TypeScript implementation
 
-**For business context:**
+## For business context
 
 - [ROI Calculator](roi-calculator:1) - Provider cost-benefit analysis
 
 - [Competitive Analysis](competitive-analysis:1) - Complete provider comparison
 
-**For cost analysis:**
+## For cost analysis
 
 - [Cost Analysis Overview](cost-analysis-overview:1) - Infrastructure investment strategy
 

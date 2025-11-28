@@ -43,7 +43,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 
 - **Predictive Optimization**: AI-powered recommendations for maximum deliverability
 
-**See our [Value Proposition](/docs/business/value-proposition) for detailed ROI analysis and competitive positioning.**
+## See our [Value Proposition](/docs/business/value-proposition) for detailed ROI analysis and competitive positioning
 
 ---
 
@@ -51,7 +51,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 
 ### **Level 1: Essential Warm-up Basics**
 
-**Simple steps to get started:**
+## Simple steps to get started
 
 1. **Create Email Account** - One-click account provisioning with automatic domain setup
 
@@ -63,7 +63,7 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 
 ### **Level 2: Advanced Configuration**
 
-**Professional warm-up strategies:**
+## Professional warm-up strategies
 
 - **Target Audience Analysis** - Automated send time optimization for your prospects
 
@@ -75,9 +75,10 @@ While competitors require manual warm-up management and offer no guarantees, Pen
 
 ### **Level 3: Technical Implementation**
 
-**Enterprise-grade warm-up system:**
+## Enterprise-grade warm-up system
 
-**Intelligent Automated Progression**
+## Intelligent Automated Progression
+
 Unlike manual warm-up processes that often fail, our system uses proven deliverability patterns refined through thousands of campaigns:
 
 **Days 1-3**: Build foundation with 5-10 emails/day
@@ -136,7 +137,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Instant Setup (5 Minutes)**
 
-**Quick start for immediate results:**
+## Quick start for immediate results
 
 1. **Create Email Account** - One-click account provisioning with automatic domain setup
 
@@ -212,7 +213,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Key Performance Indicators**
 
-**Essential metrics to track:**
+## Essential metrics to track
 
 - **Sender Score**: Target 70+ across all major providers
 
@@ -304,7 +305,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 | **Apollo/Outreach** | Generic warm-up | 50-60% success rate | Platform lock-in |
 | **Manual Solutions** | No automation | 30-50% success rate | No enterprise features |
 
-**Key Differentiators:**
+## Key Differentiators
 
 - **Smartlead/Warmbox**: Limited automation, basic monitoring, no enterprise features
 
@@ -351,7 +352,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Essential Warm-up**
 
-**Core features every user needs:**
+## Core features every user needs
 
 - **Progressive Volume Increase**: Gradual sending volume escalation
 
@@ -429,7 +430,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Essential Guidelines**
 
-**Key rules for successful warm-up:**
+## Key rules for successful warm-up
 
 - **Email Content Guidelines**: Use conversational, personal emails
 
@@ -523,7 +524,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Critical Mistakes**
 
-**Major errors that destroy deliverability:**
+## Major errors that destroy deliverability
 
 - **Sending Too Fast**: Starting with high volumes (100+ emails) immediately
 
@@ -611,7 +612,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 ### **Level 1: Common Issues**
 
-**Quick fixes for typical problems:**
+## Quick fixes for typical problems
 
 - **Low Sender Score**: Reduce sending volume temporarily
 

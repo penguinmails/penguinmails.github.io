@@ -11,7 +11,7 @@ category: "Leads"
 
 # Leads Management
 
-**Centralized contact management with powerful segmentation and enrichment capabilities.**
+## Centralized contact management with powerful segmentation and enrichment capabilities
 
 ---
 
@@ -37,7 +37,7 @@ Leads Management is the core of your audience strategy. It allows you to import,
 
 ### Adding Contacts
 
-**Methods:**
+## Methods
 
 1. **CSV Import**: Bulk upload via dashboard.
 
@@ -49,7 +49,7 @@ Leads Management is the core of your audience strategy. It allows you to import,
 
 ### Contact Profile
 
-**Standard Fields:**
+## Standard Fields
 
 - Email Address (Unique Identifier)
 
@@ -63,7 +63,8 @@ Leads Management is the core of your audience strategy. It allows you to import,
 
 - Status (Active, Unsubscribed, Bounced)
 
-**Custom Fields:**
+## Custom Fields
+
 Create fields specific to your business:
 
 - `Industry` (Text)
@@ -80,7 +81,7 @@ Create fields specific to your business:
 
 ### Static Lists
 
-**Manual collections of contacts.**
+## Manual collections of contacts
 
 - Example: "Conference Attendees 2025"
 
@@ -88,10 +89,11 @@ Create fields specific to your business:
 
 ### Smart Segments
 
-**Dynamic lists based on rules.**
+## Dynamic lists based on rules
+
 Automatically update as contact data changes.
 
-**Example Rules:**
+## Example Rules
 
 - `Industry` IS "Technology" AND `Location` IS "USA"
 
@@ -99,7 +101,7 @@ Automatically update as contact data changes.
 
 - `Lead Score` > 50
 
-**Use Cases:**
+## Use Cases
 
 - Re-engagement campaigns for inactive users
 
@@ -113,7 +115,7 @@ Automatically update as contact data changes.
 
 ### Lead Scoring
 
-**Assign points based on engagement:**
+## Assign points based on engagement
 
 | Action | Points |
 |--------|--------|
@@ -124,7 +126,7 @@ Automatically update as contact data changes.
 | Bounced | -50 |
 | Unsubscribed | Reset to 0 |
 
-**Score Tiers:**
+## Score Tiers
 
 - **Hot (50+)**: Ready for sales outreach
 
@@ -144,6 +146,7 @@ Automatically populate missing fields (Company Size, Location, Social Profiles) 
 ### Database Schema
 
 ```sql
+
 CREATE TABLE contacts (
   id UUID PRIMARY KEY,
   tenant_id UUID REFERENCES tenants(id),
@@ -167,15 +170,18 @@ CREATE TABLE lists (
 );
 
 
-```
+```text
+
 
 ### API Usage
 
-```javascript
+
+```
+
 // Add a contact
 POST /api/v1/contacts
 {
-  "email": "lead@example.com",
+  "email": "<lead@example.com>",
   "first_name": "Jane",
   "attributes": {
     "industry": "SaaS"
@@ -185,20 +191,25 @@ POST /api/v1/contacts
 // Search contacts
 GET /api/v1/contacts/search?query=industry:SaaS
 
-
 ```
 
 ---
 
+
 ## Related Documentation
+
 
 ### Campaigns
 
+
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Sending to lists
+
 
 ### Compliance
 
+
 - **[GDPR Compliance](../compliance/gdpr-compliance.md)** - Data rights
+
 
 - **[Unsubscribe Management](../compliance/unsubscribe-management.md)** - Opt-out handling
 

@@ -61,7 +61,7 @@ This directory contains quick reference guides, executive templates, detailed me
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Core Business Documents](/docs/business/core) - Main business case documents
 

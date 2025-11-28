@@ -383,19 +383,19 @@ persona: "Documentation Users"
 
 ## Progressive Disclosure Navigation
 
-**For strategic overview:**
+## For strategic overview
 
 - [Performance Overview](performance-overview:1) - Executive performance benchmarks and strategic goals
 
-**For technical implementation:**
+## For technical implementation
 
 - [Performance Optimization Implementation](/docs/technical/architecture/detailed-technical) - Complete TypeScript implementation
 
-**For provider analysis:**
+## For provider analysis
 
 - [Provider Performance Analysis](performance-provider-analysis:1) - ESP-specific optimization strategies
 
-**For business context:**
+## For business context
 
 - [ROI Calculator](roi-calculator:1) - Performance optimization cost-benefit analysis
 

@@ -16,7 +16,8 @@ Choose the path that matches your role and goals. Each path provides tailored gu
 ### **Are you a Customer?**
 
 → **[Customer Quick Setup Guide](/docs/implementation-technical/email-service/customer-quick-setup)**
-**Get started in 5 minutes, achieve 95% inbox placement in 21 days**
+
+## Get started in 5 minutes, achieve 95% inbox placement in 21 days
 
 Perfect for:
 
@@ -34,7 +35,8 @@ Perfect for:
 ### **Are you a Freelancer?**
 
 → **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)**
-**Master task requirements and delivery standards**
+
+## Master task requirements and delivery standards
 
 Perfect for:
 
@@ -52,7 +54,8 @@ Perfect for:
 ### **Are you a Developer?**
 
 → **[Developer Implementation Guide](/docs/implementation-technical/README)**
-**Build and integrate with PenguinMails infrastructure**
+
+## Build and integrate with PenguinMails infrastructure
 
 Perfect for:
 
@@ -75,8 +78,6 @@ Perfect for:
 
 ```text
 Quick Setup Overview → Customer Implementation → Campaign Launch
-
-
 ```
 
 1. **[Customer Quick Setup](/docs/implementation-technical/email-service/customer-quick-setup)** - 5-minute infrastructure setup
@@ -88,8 +89,8 @@ Quick Setup Overview → Customer Implementation → Campaign Launch
 ### **Freelancer Path** - Platform Contributors
 
 ```text
-Role Selection → Tailored Learning Path → Implementation → Success
 
+Role Selection → Tailored Learning Path → Implementation → Success
 
 ```
 
@@ -130,9 +131,7 @@ Role Selection → Tailored Learning Path → Implementation → Success
 ### **Developer Path** - Platform Builders
 
 ```text
-Developer Overview → Technical Implementation → System Architecture  
-
-
+Developer Overview → Technical Implementation → System Architecture
 ```
 
 1. **[Implementation Technical](/docs/implementation-technical/README)** - Development setup

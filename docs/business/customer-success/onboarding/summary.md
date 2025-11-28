@@ -395,7 +395,7 @@ Customer Onboarding represents the critical foundation period where new customer
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Onboarding Details](onboarding-detailed)
 

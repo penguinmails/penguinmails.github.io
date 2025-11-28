@@ -501,7 +501,7 @@ E-commerce organizations operate at high scale with complex customer lifecycle m
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Product Strategy Framework](/docs/business/strategy/overview)
 

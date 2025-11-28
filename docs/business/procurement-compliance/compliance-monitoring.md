@@ -327,19 +327,19 @@ persona: "Documentation Users"
 
 ## Progressive Disclosure Navigation
 
-**For executive overview:**
+## For executive overview
 
 - [Compliance Overview](compliance-overview:1) - Strategic compliance summary and risk assessment
 
-**For technical implementation:**
+## For technical implementation
 
 - [Email Compliance Implementation](/docs/technical/architecture/detailed-technical) - Complete TypeScript implementation
 
-**For risk management:**
+## For risk management
 
 - [Incident Response](compliance-incident-response:1) - Risk management and incident response
 
-**For business context:**
+## For business context
 
 - [Cost Analysis Overview](cost-analysis-overview:1) - Strategic compliance investment analysis
 

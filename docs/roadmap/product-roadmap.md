@@ -209,7 +209,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: Partially Complete
 
-**What's Available Today:**
+## What's Available Today
 
 - ✅ Automated VPS provisioning via Hostwind API
 
@@ -229,7 +229,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### MVP Gaps (Q1 2026)
 
-**Critical Missing Features:**
+## Critical Missing Features
 
 - **[P0] Infrastructure Backup & Recovery System** (2-3 weeks)
 
@@ -360,7 +360,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Vault Integration:**
+## Vault Integration
 
 - VPS SSH key storage (see [Vault SSH Keys](/docs/features/integrations/vault-ssh-keys.md))
 
@@ -370,7 +370,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery.md))
 
-**Infrastructure:**
+## Infrastructure
 
 - Multi-region infrastructure (Q2 2026) - Required for disaster recovery
 
@@ -378,7 +378,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - Backup success rate > 99%
 
@@ -388,7 +388,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Multi-region failover < 5 minutes
 
-**Business:**
+## Business
 
 - Support tickets reduced by 30%
 
@@ -412,7 +412,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: MVP-Complete
 
-**What's Available Today:**
+## What's Available Today
 
 - ✅ Complete domain verification workflow with multi-step wizard
 
@@ -525,7 +525,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Infrastructure:**
+## Infrastructure
 
 - HashiCorp Vault (already implemented) - DKIM key storage
 
@@ -533,7 +533,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Analytics infrastructure - Required for reputation prediction
 
-**Features:**
+## Features
 
 - Subdomain support (Q1 2026) - Prerequisite for bulk subdomain onboarding
 
@@ -541,7 +541,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - DNS verification success rate > 95%
 
@@ -551,7 +551,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Multi-region failover < 5 minutes
 
-**Business:**
+## Business
 
 - Enterprise customer acquisition enabled (Q1 2026)
 
@@ -576,7 +576,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State vs. Target
 
-**What Exists Today:**
+## What Exists Today
 
 - ✅ Basic campaign sequences (linear email flows)
 
@@ -584,7 +584,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - ✅ Campaign scheduling and manual triggers
 
-**What's Missing (MVP Scope):**
+## What's Missing (MVP Scope)
 
 - ❌ Visual workflow builder with drag-and-drop
 
@@ -632,7 +632,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Required Before Automation:**
+## Required Before Automation
 
 - Enhanced Analytics (Q1 2026) - Event tracking foundation
 
@@ -640,7 +640,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Contact Management - Segmentation and tagging
 
-**Enables Future Features:**
+## Enables Future Features
 
 - Lead Scoring - Automated scoring based on behavior
 
@@ -650,7 +650,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - Event processing latency < 5 seconds
 
@@ -660,7 +660,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Handle 1000+ events/second
 
-**Business:**
+## Business
 
 - 30% reduction in manual campaign management time
 
@@ -682,7 +682,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: Partially Complete
 
-**What's Available Today:**
+## What's Available Today
 
 - ✅ Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
 
@@ -708,7 +708,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### MVP Gaps (Q1 2026)
 
-**Critical Missing Features:**
+## Critical Missing Features
 
 - **[P0] Plan Upgrade/Downgrade UI Flow** (3-5 days)
 
@@ -897,7 +897,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Third-Party Services:**
+## Third-Party Services
 
 - **Stripe** - Payment processing, subscriptions, invoicing (fully integrated)
 
@@ -907,7 +907,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - **Accounting Systems** - QuickBooks, Xero, NetSuite (Q3 2026)
 
-**Infrastructure:**
+## Infrastructure
 
 - Usage tracking system (Q1 2026) - Required for budget controls
 
@@ -919,7 +919,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - Payment success rate > 95%
 
@@ -929,7 +929,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Usage tracking accuracy > 98%
 
-**Business:**
+## Business
 
 - Support tickets reduced by 30%
 
@@ -957,7 +957,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: Partially Complete
 
-**What's Available Today:**
+## What's Available Today
 
 - ✅ Real-time performance dashboards (campaign-level)
 
@@ -981,7 +981,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### MVP Gaps (Q1 2026)
 
-**Critical Missing Features:**
+## Critical Missing Features
 
 - **[P0] Real-Time Analytics Dashboard** (5-7 days)
 
@@ -1047,7 +1047,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Enhanced Analytics (Q1 2026)
 
-**Advanced Features:**
+## Advanced Features
 
 - **[P2] Predictive Analytics** (3-4 weeks)
 
@@ -1162,7 +1162,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Third-Party Services:**
+## Third-Party Services
 
 - **PostHog** - Product analytics, event tracking, error monitoring (Active MVP)
 
@@ -1172,7 +1172,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - **Gemini AI** - Predictive analytics models (Q1 2026)
 
-**Infrastructure:**
+## Infrastructure
 
 - Historical data (30+ days) - Required for predictive analytics
 
@@ -1184,7 +1184,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - Analytics dashboard load time < 2 seconds
 
@@ -1198,7 +1198,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Data accuracy > 90% with bot detection
 
-**Business:**
+## Business
 
 - Analytics dashboard adoption > 80% of active users
 
@@ -1229,7 +1229,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: Foundation Documented
 
-**What's Documented:**
+## What's Documented
 
 - ✅ API-first integration strategy defined
 
@@ -1251,7 +1251,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### MVP Implementation (Q1 2026)
 
-**Critical Features (P0) - Blocks programmatic integrations:**
+## Critical Features (P0) - Blocks programmatic integrations
 
 - **[P0] API Key Management System** (1-2 weeks)
 
@@ -1305,7 +1305,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
   - **Business Impact:** Developer enablement, reduces integration friction
 
-**High Priority (P1) - Enables real-time integrations:**
+## High Priority (P1) - Enables real-time integrations
 
 - **[P1] Webhook System Backend** (1-2 weeks)
 
@@ -1477,7 +1477,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Key Dependencies
 
-**Vault Integration:**
+## Vault Integration
 
 - HashiCorp Vault (HCP Vault: $22/month MVP, self-hosted Post-MVP)
 
@@ -1489,7 +1489,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Disaster recovery procedures (enables rapid recovery)
 
-**Third-Party Services:**
+## Third-Party Services
 
 - **Stripe** - Payment processing (fully integrated, no migration planned)
 
@@ -1501,7 +1501,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - **Mailgun** - Bulk marketing email delivery (active integration)
 
-**Infrastructure:**
+## Infrastructure
 
 - PostgreSQL database (API data storage)
 
@@ -1511,7 +1511,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - API key generation success rate > 99%
 
@@ -1521,7 +1521,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - CRM sync success rate > 95% (Post-MVP)
 
-**Business:**
+## Business
 
 - 50+ developers using API within first month (MVP)
 
@@ -1539,9 +1539,9 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### API-First Strategy Rationale
 
-**Why API-First Approach?**
+## Why API-First Approach?
 
-**Benefits:**
+## Benefits
 
 - **Flexibility**: Customers can integrate with ANY system, not just pre-built integrations
 
@@ -1555,7 +1555,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - **Reduced Risk**: Prove API works before investing in vendor partnerships
 
-**Customer Use Cases Enabled by General API:**
+## Customer Use Cases Enabled by General API
 
 - Custom CRM integrations (any CRM, not just Salesforce/HubSpot)
 
@@ -1567,7 +1567,8 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - Third-party app integrations (marketing tools, analytics platforms)
 
-**Customer Communication:**
+## Customer Communication
+
 "PenguinMails provides a powerful REST API and webhook system that enables integration with any external system. Build custom integrations with your CRM, analytics tools, or internal systems. Pre-built integrations with Salesforce, HubSpot, and Zapier coming in Q1-Q2 2026."
 
 **Detailed Roadmap:** [Integrations Roadmap](/docs/features/integrations/roadmap.md)
@@ -1584,7 +1585,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 ### Current State: Architecture Investigation Required
 
-**What's Documented:**
+## What's Documented
 
 - ✅ Complete unified inbox architecture with database schemas
 
@@ -1598,11 +1599,11 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - ✅ Background job architecture (sync-worker, intent-analyzer, cleanup-worker)
 
-**Critical Gap - Stalwart Integration:**
+## Critical Gap - Stalwart Integration
 
 The current documentation proposes custom tables (`inbox_threads`, `inbox_messages`, `inbox_tags`, `inbox_notes`) without investigating how they integrate with Stalwart Mail Server's existing PostgreSQL schema.
 
-**Required Investigation:**
+## Required Investigation
 
 - Can we extend Stalwart's schema with custom fields?
 
@@ -1811,7 +1812,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 ### Key Dependencies
 
-**Stalwart Integration:**
+## Stalwart Integration
 
 - All inbox development blocked by Stalwart spike (Q4 2025)
 
@@ -1819,7 +1820,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 - Proof-of-concept validates chosen approach
 
-**Infrastructure:**
+## Infrastructure
 
 - Content Database (attachments) - Already exists
 
@@ -1829,7 +1830,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 - Gemini AI API - Required for AI features (Q2 2026)
 
-**Features:**
+## Features
 
 - Lead Scoring - Required for lead context sidebar (Q2 2026)
 
@@ -1837,7 +1838,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 ### Success Metrics
 
-**Technical:**
+## Technical
 
 - Email threading accuracy > 95%
 
@@ -1851,7 +1852,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 - Sentiment analysis accuracy > 85%
 
-**Business:**
+## Business
 
 - Inbox adoption > 90% of active users
 
@@ -1869,7 +1870,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 **MVP (Q1 2026):** $0/month (no external dependencies)
 
-**Post-MVP (Q2-Q3 2026):**
+## Post-MVP (Q2-Q3 2026)
 
 - Gemini AI: $0-37.50/month (free tier covers early usage)
 
@@ -1877,7 +1878,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 
 - **Total:** $20-87.50/month
 
-**Long-term Optimization:**
+## Long-term Optimization
 
 - Train custom intent classification model (Q1 2027) to reduce AI costs by 80-90%
 
@@ -1892,6 +1893,7 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 We follow a **progressive enhancement** approach:
 
 ```text
+
 Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → Level 4: Enterprise → Level 5: Future
 
 

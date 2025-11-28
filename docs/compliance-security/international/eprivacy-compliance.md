@@ -321,7 +321,7 @@ version: "1.0"
 
 ---
 
-**Official References:**
+## Official References
 
 - [ePrivacy Directive Full Text - EUR-Lex](https://eur-lex.europa.eu/eli/dir/2002/58/oj)
 
@@ -334,7 +334,8 @@ version: "1.0"
 - [German TTDSG](https://www.gesetze-im-internet.de/ttdsg/)
 
 **Document Classification:** Level 2 - Detailed Legal Analysis  
-**Related Documents:**
+
+## Related Documents
 
 - [European Compliance Overview](european-compliance-overview)
 

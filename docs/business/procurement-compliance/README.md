@@ -73,7 +73,7 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Core Business Documents](/docs/business/core) - Executive business case for procurement justification
 

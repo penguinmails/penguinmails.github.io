@@ -11,9 +11,11 @@ persona: "Documentation Users"
 
 ## Monthly Performance Tracking Template
 
-**Freelancer Name:** ______________________________  
-**Month/Year:** ______________________________  
-**Reporting Period:** ___________________________
+## Freelancer Name:** ____________________________
+
+## Month/Year:** ____________________________
+
+## Reporting Period:** _________________________
 
 ### Task Performance Summary
 
@@ -25,21 +27,27 @@ persona: "Documentation Users"
 
 ### Performance Metrics
 
-**Total Effort Points Earned:** ______________________________  
-**On-Time Delivery Rate:** ______________________________  
-**Quality Approval Rate:** ______________________________  
-**Communication Responsiveness:** ___________________________
+## Total Effort Points Earned:** ____________________________
+
+## On-Time Delivery Rate:** ____________________________
+
+## Quality Approval Rate:** ____________________________
+
+## Communication Responsiveness:** _________________________
 
 ### Monthly Summary
 
-**Strengths:** ______________________________  
-**Areas for Improvement:** ______________________________  
-**Goals for Next Month:** ______________________________
+## Strengths:** ____________________________
+
+## Areas for Improvement:** ____________________________
+
+## Goals for Next Month:** ____________________________
 
 ### Approval Section
 
-**Freelancer Acknowledgment:** _______________________ **Date:** __________  
-**Task Manager Review:** _______________________ **Date:** __________
+## Freelancer Acknowledgment:** _______________________ **Date:** ________
+
+## Task Manager Review:** _______________________ **Date:** ________
 
 ---
 

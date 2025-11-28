@@ -219,7 +219,7 @@ Customer Success Automation enables scalable, efficient customer success deliver
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Operations Framework](/docs/business/operations/strategy/framework)
 

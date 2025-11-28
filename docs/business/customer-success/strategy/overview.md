@@ -159,7 +159,7 @@ Implement comprehensive health monitoring across multiple dimensions:
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/framework)
 

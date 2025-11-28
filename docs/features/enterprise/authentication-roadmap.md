@@ -11,7 +11,7 @@ category: "Enterprise"
 
 # Authentication & Security Roadmap
 
-**Strategic timeline for authentication and security feature development**
+## Strategic timeline for authentication and security feature development
 
 ---
 
@@ -42,7 +42,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Weak passwords are the #1 cause of account breaches. Client-side validation alone is insufficient.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - Server-side validation on signup, password reset, and password change
 
@@ -66,7 +66,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Prevents spam and abuse of the platform. Critical for maintaining sender reputation.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - Block unverified users from sending campaigns
 
@@ -90,7 +90,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Bot protection is essential for any SaaS platform. Without it, the platform is vulnerable to automated abuse.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - CAPTCHA on registration form
 
@@ -117,7 +117,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Description:** Complete email verification flow for new user signups using Loop.so transactional email service.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - ✅ Send verification email on signup
 
@@ -139,7 +139,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Description:** Complete password reset flow for users who forget their password. Flow must not reveal whether an email exists in the system.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - ✅ "Forgot Password" form on `/forgot-password` route
 
@@ -163,7 +163,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Description:** Allow authenticated users to change their password from settings. Requires current password for verification.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - ✅ "Change Password" section in `/dashboard/settings/profile`
 
@@ -192,7 +192,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Security vulnerability that could lead to account compromise. Enterprise customers expect this as baseline security.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - Lock account after 5 failed attempts within 15 minutes
 
@@ -218,7 +218,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Essential for security-conscious users and enterprise customers. Enables users to detect and respond to security incidents.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - "Login Activity" section in `/dashboard/settings/profile`
 
@@ -246,7 +246,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Security feature expected by users. API exists but unusable without UI.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - "Active Sessions" section in `/dashboard/settings/profile`
 
@@ -277,7 +277,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Critical for user retention when email addresses change (job changes, domain migrations).
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - "Change Email" section in `/dashboard/settings/profile`
 
@@ -305,7 +305,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Expected feature that significantly improves user experience. Users frustrated by frequent logouts may abandon the platform.
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - "Remember me" checkbox on `/login` form
 
@@ -329,7 +329,7 @@ This document provides a detailed roadmap for authentication and security featur
 **Total Effort:** 22-36 days (4-7 weeks)  
 **Target Completion:** Q1 2026
 
-**Priority Breakdown:**
+## Priority Breakdown
 
 - **P0 (Critical):** 6 features - Must have for security and compliance
 
@@ -351,7 +351,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Not required for initial launch - password + email verification sufficient for MVP. Enterprise feature that can be added when targeting larger customers.
 
-**Key Features:**
+## Key Features
 
 - TOTP-based 2FA with QR code setup
 
@@ -377,7 +377,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Email/password authentication sufficient for MVP. Can be added when focusing on conversion optimization.
 
-**Key Features:**
+## Key Features
 
 - "Sign in with Google" button
 
@@ -403,7 +403,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Enterprise feature not needed for initial SMB/startup customers. Can be added when targeting enterprise customers (typically $50K+ ARR).
 
-**Key Features:**
+## Key Features
 
 - SAML 2.0 support
 
@@ -431,7 +431,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Advanced feature not expected for MVP. Better suited for mobile app than web app.
 
-**Key Features:**
+## Key Features
 
 - WebAuthn / FIDO2 support
 
@@ -457,7 +457,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Enterprise feature not needed for SMB customers. Can be added when targeting enterprise customers with strict security requirements.
 
-**Key Features:**
+## Key Features
 
 - Conditional session policies (shorter timeout for remote networks)
 
@@ -479,7 +479,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Loop.so - Transactional Email Service
 
-**Current Usage:**
+## Current Usage
 
 - Email verification emails
 
@@ -497,7 +497,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Cloudflare Turnstile - CAPTCHA
 
-**Planned Usage:**
+## Planned Usage
 
 - CAPTCHA on signup
 
@@ -513,7 +513,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Have I Been Pwned API - Password Breach Database
 
-**Planned Usage:**
+## Planned Usage
 
 - Check passwords against breach database during signup and password change
 

@@ -33,7 +33,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 #### Metrics and Thresholds
 
-**Active User Engagement**
+## Active User Engagement
 
 - **Daily Active Users**: ≥70% of licensed users = 100 points, 50-69% = 70 points, <50% = 30 points
 
@@ -41,7 +41,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Monthly Active Users**: ≥95% of licensed users = 100 points, 85-94% = 70 points, <85% = 30 points
 
-**Feature Adoption Rates**
+## Feature Adoption Rates
 
 - **Core Features**: ≥80% adoption = 100 points, 60-79% = 70 points, <60% = 30 points
 
@@ -49,7 +49,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Integration Usage**: ≥3 active integrations = 100 points, 1-2 integrations = 70 points, 0 integrations = 30 points
 
-**Usage Quality Metrics**
+## Usage Quality Metrics
 
 - **Session Duration**: Average session ≥15 minutes = 100 points, 10-14 minutes = 70 points, <10 minutes = 30 points
 
@@ -65,7 +65,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 #### Metrics and Thresholds
 
-**Support Interaction Quality**
+## Support Interaction Quality
 
 - **Ticket Volume**: ≤2 tickets/month = 100 points, 3-5 tickets = 70 points, >5 tickets = 30 points
 
@@ -73,7 +73,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Ticket Severity**: 80% low/medium severity = 100 points, 60-79% = 70 points, <60% = 30 points
 
-**Training and Adoption Support**
+## Training and Adoption Support
 
 - **Training Completion**: ≥90% completion rate = 100 points, 70-89% = 70 points, <70% = 30 points
 
@@ -81,7 +81,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Community Participation**: ≥2 posts/replies/month = 100 points, 1 post/reply = 70 points, 0 activity = 30 points
 
-**Proactive Engagement**
+## Proactive Engagement
 
 - **Success Manager Interactions**: ≥4 interactions/month = 100 points, 2-3 interactions = 70 points, <2 interactions = 30 points
 
@@ -97,7 +97,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 #### Metrics and Thresholds
 
-**Success Metric Achievement**
+## Success Metric Achievement
 
 - **ROI Realization**: ≥100% of target ROI = 100 points, 80-99% = 70 points, <80% = 30 points
 
@@ -105,7 +105,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Efficiency Gains**: ≥20% efficiency improvement = 100 points, 10-19% = 70 points, <10% = 30 points
 
-**Financial Health**
+## Financial Health
 
 - **Payment History**: 100% on-time payments = 100 points, 95-99% on-time = 70 points, <95% = 30 points
 
@@ -113,7 +113,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Contract Value**: Renewal value maintained/growth = 100 points, 5-10% decline = 70 points, >10% decline = 30 points
 
-**Strategic Alignment**
+## Strategic Alignment
 
 - **Goal Alignment**: High alignment with company strategy = 100 points, Medium alignment = 70 points, Low alignment = 30 points
 
@@ -129,7 +129,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 #### Metrics and Thresholds
 
-**Stakeholder Relationships**
+## Stakeholder Relationships
 
 - **Executive Relationship**: C-level relationship established = 100 points, VP-level relationship = 70 points, Manager-level only = 30 points
 
@@ -137,7 +137,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **User Adoption**: High user satisfaction = 100 points, Moderate satisfaction = 70 points, Low satisfaction = 30 points
 
-**Advocacy and References**
+## Advocacy and References
 
 - **NPS Score**: ≥9 = 100 points, 7-8 = 70 points, ≤6 = 30 points
 
@@ -145,7 +145,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Case Study Participation**: Participated in case study = 100 points, Interested in participating = 70 points, Not interested = 30 points
 
-**Brand Perception**
+## Brand Perception
 
 - **Competitive Position**: Prefer us over competitors = 100 points, Neutral position = 70 points, Considering alternatives = 30 points
 
@@ -277,7 +277,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

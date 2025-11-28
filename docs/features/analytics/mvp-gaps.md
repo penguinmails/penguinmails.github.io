@@ -31,7 +31,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Current Gap:** Analytics are embedded in campaign views and admin routes, but no dedicated `/dashboard/analytics` route exists for centralized analytics access.
 
-**User Impact:**
+## User Impact
 
 - Users must navigate to individual campaigns to view performance
 
@@ -41,7 +41,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - Difficult to get holistic performance overview
 
-**Business Value:**
+## Business Value
 
 - Single source of truth for all analytics
 
@@ -53,7 +53,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Complexity:** Medium (5-7 days)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create `/dashboard/analytics` route with overview dashboard
 
@@ -71,7 +71,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Add loading states and error handling
 
-**Dependencies:**
+## Dependencies
 
 - Core analytics API endpoints
 
@@ -89,7 +89,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Current Gap:** Deliverability metrics exist but lack dedicated UI for deep analysis and provider-specific breakdowns.
 
-**User Impact:**
+## User Impact
 
 - Cannot diagnose deliverability issues effectively
 
@@ -99,7 +99,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - No proactive blacklist monitoring
 
-**Business Value:**
+## Business Value
 
 - Early detection of deliverability problems
 
@@ -111,7 +111,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Complexity:** Medium (5-7 days)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create `/dashboard/analytics/deliverability` route
 
@@ -129,7 +129,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Support export of deliverability data
 
-**Dependencies:**
+## Dependencies
 
 - Reputation monitoring service integration
 
@@ -149,7 +149,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Current Gap:** Timing metrics exist (average time to open/click) but no visual heatmap representation for pattern identification.
 
-**User Impact:**
+## User Impact
 
 - Cannot easily identify best days/times to send emails
 
@@ -159,7 +159,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - No data-driven send time recommendations
 
-**Business Value:**
+## Business Value
 
 - Visual identification of high-engagement time windows
 
@@ -171,7 +171,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Complexity:** Medium (4-6 days)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create engagement heatmap visualization component
 
@@ -189,7 +189,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Add tooltip showing exact engagement metrics on hover
 
-**Dependencies:**
+## Dependencies
 
 - Historical engagement data (minimum 30 days)
 
@@ -207,7 +207,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Current Gap:** Individual campaign analytics exist but no comparison view for identifying winners or analyzing A/B tests.
 
-**User Impact:**
+## User Impact
 
 - Cannot easily compare campaign performance
 
@@ -217,7 +217,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - No statistical significance testing for A/B tests
 
-**Business Value:**
+## Business Value
 
 - Identify best-performing campaigns and templates
 
@@ -229,7 +229,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Complexity:** Medium (5-7 days)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create `/dashboard/analytics/compare` route
 
@@ -247,7 +247,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Include percentage difference calculations between campaigns
 
-**Dependencies:**
+## Dependencies
 
 - Statistical significance calculation library
 
@@ -265,7 +265,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Current Gap:** Alerts mentioned in documentation but no UI for configuration or management.
 
-**User Impact:**
+## User Impact
 
 - Must manually check dashboards for issues
 
@@ -275,7 +275,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - Missed critical deliverability issues
 
-**Business Value:**
+## Business Value
 
 - Proactive issue detection and resolution
 
@@ -287,7 +287,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 **Complexity:** Medium (5-7 days)
 
-**Acceptance Criteria:**
+## Acceptance Criteria
 
 - [ ] Create `/dashboard/settings/alerts` route for alert configuration
 
@@ -305,7 +305,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Add alert priority levels (critical, warning, info)
 
-**Dependencies:**
+## Dependencies
 
 - Notification service (email via Loop.so, SMS via Twilio)
 
@@ -355,7 +355,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 ### Success Criteria
 
-**MVP Complete When:**
+## MVP Complete When
 
 - [ ] All 5 features implemented with acceptance criteria met
 

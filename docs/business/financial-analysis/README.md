@@ -61,7 +61,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 ---
 
-**Related Directories:**
+## Related Directories
 
 - [Core Business Documents](/docs/business/core) - Executive financial summaries
 

@@ -151,7 +151,7 @@ Management of the workspaces themselves.
 
 The sidebar changes based on the user's role and current context (Global vs. Workspace).
 
-**Global Context (Tenant/Agency Root):**
+## Global Context (Tenant/Agency Root)
 
 * Dashboard (Overview)
 
@@ -163,7 +163,7 @@ The sidebar changes based on the user's role and current context (Global vs. Wor
 
 * Settings
 
-**Workspace Context (Inside a Workspace):**
+## Workspace Context (Inside a Workspace)
 
 * *Back to Global Dashboard*
 
@@ -179,7 +179,7 @@ The sidebar changes based on the user's role and current context (Global vs. Wor
 
 * Settings (Workspace)
 
-**Super Admin View:**
+## Super Admin View
 
 * Dashboard (Executive Pulse)
 

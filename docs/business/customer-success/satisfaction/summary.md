@@ -249,7 +249,7 @@ Customer satisfaction represents the leading indicator of customer loyalty, rete
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

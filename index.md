@@ -13,7 +13,9 @@ description: "Welcome to PenguinMails - Enterprise Email Management Platform"
 {: .d-none }
 
 {: .highlight .px-4 .py-2 }
-**Welcome to PenguinMails documentation.**
+
+## Welcome to PenguinMails documentation
+
 PenguinMails handles your entire email operation - from VPS setup to campaign optimization - so you can focus on growing your business.
 
 [What we offer](/docs/what-is-penguinmails){: .btn .btn-blue .mr-4}
@@ -53,7 +55,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 - [📊 Performance Dashboard](/docs/business/performance/performance-dashboard) - *Executive dashboard*
 
-**Industry-Specific Deep Dives:**
+## Industry-Specific Deep Dives
 
 - [🏥 Healthcare Business Case](/docs/business/industry-business-cases/healthcare) - *HIPAA compliance & patient communications*
 
@@ -185,7 +187,8 @@ Navigate our product development timeline and feature pipeline
 ### Quick Assessment: Do you need PenguinMails?
 
 {: .highlight }
-**Answer these questions:**
+
+## Answer these questions
 
 1. **Volume**: Do you send 10K+ emails per month?
 
@@ -197,4 +200,4 @@ Navigate our product development timeline and feature pipeline
 
 5. **Resources**: Do you lack dedicated email infrastructure expertise?
 
-**If you answered "yes" to 2+ questions, PenguinMails can provide significant value.**
+## If you answered "yes" to 2+ questions, PenguinMails can provide significant value

@@ -17,7 +17,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 **MVP Completion:** 7 additional features required (10-14 weeks development)
 
-**Priority Focus:**
+## Priority Focus
 
 - **P0 (Critical):** Infrastructure Backup & Recovery System
 
@@ -39,7 +39,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **[Hostwind Management](./hostwind-management.md)** - VPS provisioning and IP monitoring
 
-**Current Capabilities:**
+## Current Capabilities
 
 - Automated VPS provisioning via Hostwind API
 
@@ -59,7 +59,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ### 🚧 MVP Gaps (Q1 2026)
 
-**Critical Missing Features:**
+## Critical Missing Features
 
 - **Backup & Recovery System** - Automated backups, point-in-time recovery, disaster recovery procedures
 
@@ -75,7 +75,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **Resource Usage History** - 90-day usage trends, capacity planning, anomaly detection
 
-**Why These Matter:**
+## Why These Matter
 
 - **Backup/Recovery:** Prevents data loss, required for compliance, blocks enterprise adoption
 
@@ -91,19 +91,19 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ### 🔜 Post-MVP Enhancements (Q2 2026+)
 
-**Q2 2026:**
+## Q2 2026
 
 - Multi-Region Infrastructure Deployment (US, EU, Asia)
 
 - Auto-Scaling Based on Load (vertical and horizontal)
 
-**Q3-Q4 2026:**
+## Q3-Q4 2026
 
 - Advanced Monitoring & Observability (distributed tracing, log aggregation)
 
 - Disaster Recovery & Business Continuity (automated failover, geo-redundant backups)
 
-**Q1 2027+:**
+## Q1 2027+
 
 - Alternative VPS Providers (AWS EC2, DigitalOcean, Linode)
 
@@ -119,7 +119,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 **CRITICAL:** Infrastructure provisioning depends on [Vault integration](/docs/features/integrations/overview.md#vault-integration) for secure secrets management.
 
-**Vault-Stored Secrets:**
+## Vault-Stored Secrets
 
 - **VPS SSH Keys:** Admin and tenant SSH keys for server access
 
@@ -127,7 +127,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **API Keys:** Tenant API keys for programmatic infrastructure management
 
-**Security Benefits:**
+## Security Benefits
 
 - No secrets stored in environment variables or VPS filesystems
 
@@ -137,7 +137,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - Disaster recovery through Vault backup
 
-**Related Features:**
+## Related Features
 
 - [VPS SSH Key Management](/docs/features/integrations/vault-ssh-keys.md) - Secure SSH access
 
@@ -153,25 +153,25 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 **Total Effort:** 10-14 weeks (2.5-3.5 months)
 
-**Phase 1 (Weeks 1-4):**
+## Phase 1 (Weeks 1-4)
 
 1. Infrastructure Backup & Recovery System (P0) - 2-3 weeks
 
 2. DNS Propagation Status & Troubleshooting (P2) - 3-5 days
 
-**Phase 2 (Weeks 5-8):**
+## Phase 2 (Weeks 5-8)
 
 1. Infrastructure Scaling UI with Resource Limits (P1) - 1-2 weeks
 
 2. IP Reputation Management User Controls (P1) - 1-2 weeks
 
-**Phase 3 (Weeks 9-12):**
+## Phase 3 (Weeks 9-12)
 
 1. Infrastructure Cost Tracking & Billing (P1) - 1-2 weeks
 
 2. Infrastructure Health Alerts & Notifications (P2) - 1-2 weeks
 
-**Phase 4 (Weeks 13-14):**
+## Phase 4 (Weeks 13-14)
 
 1. VPS Resource Usage History & Trends (P2) - 1 week
 

@@ -8,7 +8,7 @@ Manage domain configuration, DNS settings, and sender authentication separately 
 
 ## MVP Status
 
-**✅ Domain Management is MVP-Complete**
+## ✅ Domain Management is MVP-Complete
 
 All essential domain verification, DNS management, and authentication features are implemented and documented. The platform provides:
 

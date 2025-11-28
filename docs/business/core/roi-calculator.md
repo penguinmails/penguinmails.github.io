@@ -20,6 +20,7 @@ persona: "Documentation Users"
 ### Progressive Disclosure Flow
 
 ```mermaid
+
 graph TD
     A[Budget Decision] --> B{Volume Assessment}
     B -->|10K/month| C[Postmark<br/>$15-200]
@@ -47,7 +48,7 @@ graph TD
 
 ### Current State vs. Optimized Infrastructure
 
-**Enter your current metrics below to calculate potential savings:**
+## Enter your current metrics below to calculate potential savings
 
 #### Input Variables
 
@@ -93,26 +94,36 @@ graph TD
 
 ### Current Monthly Cost
 
-**Base Infrastructure Cost:** $________
-**Monitoring & Tools:** $________
-**Personnel (time × $100):** $________
-**Compliance & Security:** $________
-**TOTAL CURRENT:** $________
+## Base Infrastructure Cost:** $______
+
+## Monitoring & Tools:** $______
+
+## Personnel (time × $100):** $______
+
+## Compliance & Security:** $______
+
+## TOTAL CURRENT:** $______
 
 ### Alternative Monthly Cost
 
-**Managed ESP Plan:** $________
-**Additional Tools:** $________
-**Reduced Personnel:** $________
-**Compliance (built-in):** $________
-**TOTAL ALTERNATIVE:** $________
+## Managed ESP Plan:** $______
+
+## Additional Tools:** $______
+
+## Reduced Personnel:** $______
+
+## Compliance (built-in):** $______
+
+## TOTAL ALTERNATIVE:** $______
 
 ### ROI Analysis
 
-**Annual Cost Difference:** $________
+## Annual Cost Difference:** $______
+
 **ROI Percentage:** _______%
 **Payback Period:** _____ months
-**3-Year Net Benefit:** $________
+
+## 3-Year Net Benefit:** $______
 
 ---
 
@@ -120,7 +131,7 @@ graph TD
 
 ### Deliverability Impact on Pipeline
 
-**For 100K email campaigns at different deliverability rates:**
+## For 100K email campaigns at different deliverability rates
 
 | Deliverability Band | Delivered Emails | Expected Opens | Expected Replies | Expected Meetings |
 |-------------------|------------------|----------------|------------------|-------------------|
@@ -201,11 +212,11 @@ graph TD
 
 ## Progressive Disclosure Navigation
 
-**For strategic context:**
+## For strategic context
 
 - [Executive Summary](executive-summary) - Strategic findings and recommendations
 
-**For detailed analysis:**
+## For detailed analysis
 
 - [Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
 
@@ -213,7 +224,7 @@ graph TD
 
 - [Competitive Analysis](competitive-analysis) - Provider selection matrix
 
-**For technical teams:**
+## For technical teams
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications
 

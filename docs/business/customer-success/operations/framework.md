@@ -409,7 +409,7 @@ Customer Success Operations provides the systematic approach to managing custome
 
 ---
 
-**Related Documentation:**
+## Related Documentation
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 

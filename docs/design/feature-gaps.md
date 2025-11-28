@@ -49,7 +49,7 @@ Status: **Not Planned**
 
 - 7 instances across  route specifications
 
-**Replacement**: **Audit Trail Viewer**
+## Replacement**:**Audit Trail Viewer
 
 - Comprehensive user action history
 
@@ -119,7 +119,7 @@ Status: **Not Planned**
 
 - **Rationale:** SMTP credentials sufficient for MVP. OAuth email connections add convenience for Gmail/Outlook users.
 
-**Important Distinction:**
+## Important Distinction
 
 - **User Authentication OAuth** (2027 consideration) - How users log into PenguinMails
 

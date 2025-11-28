@@ -11,10 +11,13 @@ persona: "Documentation Users"
 
 ## Monthly Payment Request Template
 
-**Freelancer Name:** ______________________________  
-**Payment Period:** ______________________________  
-**Request Date:** ______________________________  
-**Total Effort Points:** _________________________
+## Freelancer Name:** ____________________________
+
+## Payment Period:** ____________________________
+
+## Request Date:** ____________________________
+
+## Total Effort Points:** _______________________
 
 ### Completed Tasks Summary
 
@@ -26,56 +29,77 @@ persona: "Documentation Users"
 
 ### Payment Calculation
 
-**Total Effort Points:** ______________________________  
-**Point Value Rate:** ______________________________  
-**Total Amount Due:** ______________________________  
-**Less Adjustments:** ______________________________  
-**Final Amount:** ______________________________
+## Total Effort Points:** ____________________________
+
+## Point Value Rate:** ____________________________
+
+## Total Amount Due:** ____________________________
+
+## Less Adjustments:** ____________________________
+
+## Final Amount:** ____________________________
 
 ### Documentation
 
-**Invoice Reference:** ______________________________  
+## Invoice Reference:** ____________________________
+
 **Payment Terms:** Net 30 days  
-**Bank Details:** ______________________________  
-**Tax Information:** ______________________________
+
+## Bank Details:** ____________________________
+
+## Tax Information:** ____________________________
 
 ### Approval
 
-**Freelancer Signature:** _______________________ **Date:** __________  
-**Task Manager Approval:** _______________________ **Date:** __________  
-**Finance Approval:** _______________________ **Date:** __________
+## Freelancer Signature:** _______________________ **Date:** ________
+
+## Task Manager Approval:** _______________________ **Date:** ________
+
+## Finance Approval:** _______________________ **Date:** ________
 
 ## Payment Adjustment Form Template
 
 **Adjustment ID:** [Generated ID]  
-**Freelancer Name:** ______________________________  
-**Original Payment ID:** __________________________  
-**Adjustment Date:** ______________________________
+
+## Freelancer Name:** ____________________________
+
+## Original Payment ID:** ________________________
+
+## Adjustment Date:** ____________________________
 
 ### Original Payment
 
-**Original Effort Points:** __________________________  
-**Original Amount:** ______________________________  
-**Original Approval Date:** ________________________
+## Original Effort Points:** ________________________
+
+## Original Amount:** ____________________________
+
+## Original Approval Date:** ______________________
 
 ### Adjustment Details
 
-**Reason for Adjustment:** __________________________  
+## Reason for Adjustment:** ________________________
+
 **Adjustment Type:** ☐ Increase ☐ Decrease ☐ Correction  
-**Effort Point Adjustment:** __________________________  
-**Amount Adjustment:** ______________________________
+
+## Effort Point Adjustment:** ________________________
+
+## Amount Adjustment:** ____________________________
 
 ### New Calculation
 
-**Adjusted Effort Points:** __________________________  
-**Adjusted Amount:** ______________________________  
-**Difference:** ______________________________
+## Adjusted Effort Points:** ________________________
+
+## Adjusted Amount:** ____________________________
+
+## Difference:** ____________________________
 
 ### Approval Process
 
-**Task Manager Review:** __________________________  
-**Finance Review:** ______________________________  
-**Final Approval:** __________________________ **Date:** __________
+## Task Manager Review:** ________________________
+
+## Finance Review:** ____________________________
+
+## Final Approval:** __________________________ **Date:** ________
 
 ---
 

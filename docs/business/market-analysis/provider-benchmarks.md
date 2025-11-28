@@ -42,7 +42,7 @@ persona: "Documentation Users"
 
 ### 10,000 emails/month Tier Analysis
 
-**The least cost-effective tier across all providers. Key considerations:**
+## The least cost-effective tier across all providers. Key considerations
 
 #### SendGrid Essentials 100K: $6.99 CPM
 
@@ -96,7 +96,7 @@ persona: "Documentation Users"
 
 ### 100,000 emails/month Tier Analysis
 
-**The most competitive tier for pricing comparisons. Key findings:**
+## The most competitive tier for pricing comparisons. Key findings
 
 #### SendGrid Essentials 100K: $0.35 CPM
 
@@ -150,7 +150,7 @@ persona: "Documentation Users"
 
 ### 1,000,000 emails/month Tier Analysis
 
-**Pricing dynamics shift dramatically at enterprise scale:**
+## Pricing dynamics shift dramatically at enterprise scale
 
 #### SendGrid Pro 300K: $0.25 CPM
 
@@ -210,7 +210,7 @@ Cold email senders often have unpredictable volume spikes. Understanding overage
 
 ### Overage Cost Examples
 
-**For a campaign that unexpectedly hits 120K emails (20K over base):**
+## For a campaign that unexpectedly hits 120K emails (20K over base)
 
 | Provider | Base Plan | Overage Cost | Total Cost | Effective CPM |
 |----------|-----------|--------------|------------|---------------|
@@ -447,7 +447,7 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 ### Industry Performance Benchmarks
 
-**Based on cold email industry averages:**
+## Based on cold email industry averages
 
 - **Open Rates**: 23.9%-27.7% (2024), declining from 36.0% (2023)
 
@@ -461,7 +461,7 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 ## Progressive Disclosure Navigation
 
-**For strategic context:**
+## For strategic context
 
 - Executive Summary - High-level strategic findings
 
@@ -469,13 +469,13 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 - Cost Comparisons - Complete TCO analysis
 
-**For operational implementation:**
+## For operational implementation
 
 - Competitive Analysis - Side-by-side provider comparisons
 
 - Implementation Roadmap - Migration and deployment planning
 
-**For technical teams:**
+## For technical teams
 
 - Technical Infrastructure - Technical specifications and setup
 
