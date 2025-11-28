@@ -1,0 +1,2 @@
+/tmp/validation-test-145898/bad/md_extension_site_absolute.md:- Bad link: [Features](/docs/features/README.md)
+/tmp/validation-test-145898/bad/md_extension_site_absolute.md:- Bad link: [Architecture](/docs/implementation-technical/architecture-system/flows/database-architecture-integration-flow.md)

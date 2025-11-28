@@ -1,0 +1,5 @@
+{
+  "timestamp": "2025-11-28T10:04:41-05:00",
+  "target_root": "docs",
+  "detection_method": "markdownlint",
+  "issues": {

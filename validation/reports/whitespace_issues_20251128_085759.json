@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-11-28T08:57:59-05:00",
+  "target_root": "validation/fixtures/whitespace/bad",
+  "issues": {
+    "trailing_whitespace": {
+      "description": "Lines with trailing whitespace",
+      "count": 4,
+      "intermediary_file": "validation/reports/instances/trailing_whitespace_20251128_085759.txt",
+      "files": [
+        {"file": "validation/fixtures/whitespace/bad/trailing_whitespace.md", "content": "description: \"This file has trailing whitespace issues\"  "},
+        {"file": "validation/fixtures/whitespace/bad/trailing_whitespace.md", "content": "# Trailing Whitespace  "},
+        {"file": "validation/fixtures/whitespace/bad/trailing_whitespace.md", "content": "This document has trailing whitespace at the end of some lines.  "},
+        {"file": "validation/fixtures/whitespace/bad/trailing_whitespace.md", "content": "This should be detected by markdownlint.  "}
+      ]
+    }
+  },
+  "total_issues": 4
+}

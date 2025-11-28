@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-11-28T04:33:25-05:00",
+  "target_root": "validation/fixtures/tech/good",
+  "issues": {
+    "python_blocks": {
+      "description": "Python code blocks (forbidden)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "ruby_blocks": {
+      "description": "Ruby code blocks (forbidden)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "php_blocks": {
+      "description": "PHP code blocks (forbidden)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "csharp_blocks": {
+      "description": "C# code blocks (forbidden)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "prisma_mentions": {
+      "description": "Prisma mentions (without Drizzle context)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "bullmq_mentions": {
+      "description": "BullMQ mentions (forbidden)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "mysql_mentions": {
+      "description": "MySQL mentions (without PostgreSQL context)",
+      "count": 0
+0,
+      "files": [
+      ]
+    }
+  },
+  "total_issues": 0
+}

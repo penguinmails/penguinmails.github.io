@@ -1,0 +1,1 @@
+/tmp/manual-test2-6857/bad/closing_fence_with_lang.md:15:closing_with_lang

@@ -1,0 +1,106 @@
+#!/bin/bash
+
+# Navigation Violations Detection Script
+# Usage: ./detect_navigation_violations.sh [target_directory]
+# Detects non-numeric nav_order
+
+set -e
+
+TARGET_ROOT="${1:-docs}"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+REPORT_DIR="validation/reports"
+REPORT_FILE="$REPORT_DIR/navigation_violations_${TIMESTAMP}.json"
+
+mkdir -p "$REPORT_DIR"
+
+total_issues=0
+
+# Color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "NAVIGATION VALIDATION"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "Target: $TARGET_ROOT"
+echo "Report: $REPORT_FILE"
+echo ""
+
+# Initialize JSON report
+echo "{" > "$REPORT_FILE"
+echo "  \"timestamp\": \"$(date -Iseconds)\"," >> "$REPORT_FILE"
+echo "  \"target_root\": \"$TARGET_ROOT\"," >> "$REPORT_FILE"
+echo "  \"issues\": {" >> "$REPORT_FILE"
+
+# Detect non-numeric nav_order
+# We use grep to find nav_order lines, then check if value is numeric
+# Regex: nav_order:\s*"?\d+"? is valid.
+# Anything else is invalid?
+# nav_order: 10 -> valid
+# nav_order: "10" -> valid
+# nav_order: ten -> invalid
+# nav_order: 10.5 -> invalid (usually integer)
+
+echo "Checking: Non-numeric nav_order..."
+
+# Find files with nav_order, extract value, check if numeric
+# grep -n outputs filename:line:content
+bad_nav_order=$(grep -r -n "nav_order:" "$TARGET_ROOT" --include="*.md" | while IFS=: read -r file line content; do
+    # Extract value after nav_order:
+    # Remove leading spaces and quotes
+    val=$(echo "$content" | sed 's/.*nav_order:[[:space:]]*"\?//' | sed 's/".*$//')
+    
+    # Check if value is a positive integer
+    if ! echo "$val" | grep -q "^[0-9]\+$"; then
+        echo "$file:$line:$val"
+    fi
+done)
+
+count=$(echo "$bad_nav_order" | grep -c ":" || true)
+
+echo "    \"non_numeric_nav_order\": {" >> "$REPORT_FILE"
+echo "      \"description\": \"nav_order must be a positive integer\"," >> "$REPORT_FILE"
+echo "      \"count\": $count," >> "$REPORT_FILE"
+echo "      \"files\": [" >> "$REPORT_FILE"
+
+if [ "$count" -gt 0 ]; then
+    first=true
+    while IFS=: read -r file line val; do
+        [ -z "$file" ] && continue
+        if [ "$first" = true ]; then
+            first=false
+        else
+            echo "," >> "$REPORT_FILE"
+        fi
+        echo -n "        {\"file\": \"$file\", \"line\": \"$line\", \"value\": \"$val\"}" >> "$REPORT_FILE"
+        echo -e "  ${RED}✗${NC} $file:$line (Value: $val)"
+    done <<< "$bad_nav_order"
+    echo "" >> "$REPORT_FILE"
+    total_issues=$((total_issues + count))
+else
+    echo -e "Checking: Non-numeric nav_order... ${GREEN}✓${NC} None found"
+fi
+
+echo "      ]" >> "$REPORT_FILE"
+echo "    }" >> "$REPORT_FILE"
+
+# Close JSON report
+echo "  }," >> "$REPORT_FILE"
+echo "  \"total_issues\": $total_issues" >> "$REPORT_FILE"
+echo "}" >> "$REPORT_FILE"
+
+echo ""
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "SUMMARY"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+if [ $total_issues -eq 0 ]; then
+    echo -e "${GREEN}✓${NC} All navigation checks passed!"
+    exit 0
+else
+    echo -e "${RED}✗${NC} Found $total_issues navigation violations"
+    echo "Report saved to: $REPORT_FILE"
+    exit 1
+fi

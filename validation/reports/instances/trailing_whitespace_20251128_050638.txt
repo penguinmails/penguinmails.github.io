@@ -1,0 +1,4 @@
+/tmp/validation-test-ws-148470/bad/trailing_whitespace.md:description: "This file has trailing whitespace issues"  
+/tmp/validation-test-ws-148470/bad/trailing_whitespace.md:# Trailing Whitespace  
+/tmp/validation-test-ws-148470/bad/trailing_whitespace.md:This document has trailing whitespace at the end of some lines.  
+/tmp/validation-test-ws-148470/bad/trailing_whitespace.md:This should be detected by markdownlint.  

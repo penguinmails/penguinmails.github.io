@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-11-28T04:13:51-05:00",
+  "target_root": "validation/fixtures/frontmatter/good",
+  "issues": {
+    "missing_title": {
+      "description": "Missing 'title' field",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "missing_description": {
+      "description": "Missing 'description' field",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "missing_level": {
+      "description": "Missing 'level' field",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "missing_persona": {
+      "description": "Missing 'persona' field",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "missing_date": {
+      "description": "Missing 'last_modified_date' field",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "keywords_in_body": {
+      "description": "Keywords in body (should be in frontmatter)",
+      "count": 0
+0,
+      "files": [
+      ]
+    }
+  },
+  "total_issues": 0
+}

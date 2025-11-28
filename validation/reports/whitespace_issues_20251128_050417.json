@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-28T05:04:17-05:00",
+  "target_root": "/tmp/validation-test-ws-145898/bad",
+  "issues": {
+    "trailing_whitespace": {
+      "description": "Lines with trailing whitespace",
+      "count": 0
+0,
+      "intermediary_file": "validation/reports/instances/trailing_whitespace_20251128_050417.txt",
+      "files": [
+      ]
+    }
+  },
+  "total_issues": 0
+}

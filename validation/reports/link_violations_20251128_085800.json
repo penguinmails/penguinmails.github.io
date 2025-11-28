@@ -1,0 +1,53 @@
+{
+  "timestamp": "2025-11-28T08:58:00-05:00",
+  "target_root": "/tmp/validation-test-12394/bad",
+  "issues": {
+    "tasks_links": {
+      "description": "Relative links to tasks/ folder",
+      "count": 1,
+      "files": [
+        {"file": "/tmp/validation-test-12394/bad/relative_tasks_link.md", "line": "- Bad link: [Task Example](../tasks/epic-1/task-001.md)"}
+      ]
+    },
+    "journeys_links": {
+      "description": "Relative links to user-journeys/ folder",
+      "count": 1,
+      "files": [
+        {"file": "/tmp/validation-test-12394/bad/relative_journeys_link.md", "line": "- Bad link: [Journey Example](../../user-journeys/developer/onboarding.md)"}
+      ]
+    },
+    "contributing_links": {
+      "description": "Links to CONTRIBUTING.md",
+      "count": 1,
+      "files": [
+        {"file": "/tmp/validation-test-12394/bad/contributing_link.md", "line": "- Bad link: [Contributing Guide](../CONTRIBUTING.md)"}
+      ]
+    },
+    "readme_links": {
+      "description": "Links to root README.md",
+      "count": 1,
+      "files": [
+        {"file": "/tmp/validation-test-12394/bad/relative_md_links.md", "line": "- Bad link: [Parent README](../README.md)"}
+      ]
+    },
+    "md_extensions": {
+      "description": "Site-absolute links with .md extension",
+      "count": 0
+0,
+      "intermediary_file": "validation/reports/instances/md_extension_links_20251128_085800.txt",
+      "files": [
+      ]
+    },
+    "relative_md_links": {
+      "description": "Relative .md links (./  or ../)",
+      "count": 0
+0,
+      "files": [
+      ]
+    },
+    "total": {
+      "count": 4
+    }
+  },
+  "total_issues": 4
+}
