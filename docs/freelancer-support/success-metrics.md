@@ -279,7 +279,7 @@ Platform capabilities support freelancer business growth:
 
 - Strategic consultation value and impact
 
-#### Improvement Planning
+### Improvement Planning
 
 - Performance gap identification and analysis
 

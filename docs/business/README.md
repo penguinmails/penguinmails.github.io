@@ -37,7 +37,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 ## Specialized directories for detailed validation
 
-#### Financial Analysis
+### Financial Analysis
 
 - **Location**: [`financial-analysis/`](financial-analysis)
 
