@@ -107,13 +107,11 @@ Show or hide content based on data.
 
 {% endraw %}
 
-
 ### Loops
 
 Iterate over lists (e.g., for e-commerce receipts).
 
 {% raw %}
-
 
 ```text
 
@@ -129,14 +127,11 @@ Iterate over lists (e.g., for e-commerce receipts).
 
 ---
 
-
 ## Level 3: Technical Implementation
-
 
 ### Template Storage
 
 Templates are stored in the database with versioning.
-
 
 ```text
 
@@ -152,11 +147,9 @@ CREATE TABLE templates (
 
 ```
 
-
 ### API Usage
 
-## Render a template:
-
+## Render a template
 
 ```text
 
@@ -169,8 +162,7 @@ POST /api/v1/templates/{id}/render
 
 ```
 
-## Create via API:
-
+## Create via API
 
 ```text
 
@@ -184,18 +176,13 @@ POST /api/v1/templates
 
 ---
 
-
 ## Related Documentation
-
 
 ### Campaigns
 
-
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Using templates in campaigns
 
-
 ### Compliance
-
 
 - **[CAN-SPAM Compliance](../compliance/can-spam-compliance.md)** - Required footer elements
 

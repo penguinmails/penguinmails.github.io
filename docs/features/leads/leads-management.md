@@ -172,9 +172,7 @@ CREATE TABLE lists (
 
 ```
 
-
 ### API Usage
-
 
 ```text
 
@@ -195,21 +193,15 @@ GET /api/v1/contacts/search?query=industry:SaaS
 
 ---
 
-
 ## Related Documentation
-
 
 ### Campaigns
 
-
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Sending to lists
-
 
 ### Compliance
 
-
 - **[GDPR Compliance](../compliance/gdpr-compliance.md)** - Data rights
-
 
 - **[Unsubscribe Management](../compliance/unsubscribe-management.md)** - Opt-out handling
 
