@@ -270,11 +270,11 @@ interface TenantSecretsSummary {
 
 ### Reference
 
-- [Infrastructure Routes](./infrastructure.md) - Other infrastructure routes
+- [Infrastructure Routes](/docs/design/routes/infrastructure) - Other infrastructure routes
 
-- [Settings Routes](./settings.md) - General settings routes
+- [Settings Routes](/docs/design/routes/settings) - General settings routes
 
-- [Admin Routes](./admin.md) - Admin panel routes
+- [Admin Routes](/docs/design/routes/admin) - Admin panel routes
 
 ---
 

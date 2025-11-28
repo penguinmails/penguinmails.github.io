@@ -258,3 +258,4 @@ For business development guidance, see [Freelancer Success Framework](/docs/free
 - [Quality Assurance Templates](/docs/operations/freelancer-management/templates/)
 
 - [Implementation Resources](/docs/freelancer-support/implementation-resources)
+

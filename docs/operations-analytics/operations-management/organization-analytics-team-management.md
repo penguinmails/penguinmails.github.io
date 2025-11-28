@@ -887,7 +887,7 @@ Navigate to specific organization and team areas:
 
 - **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
 
-- **[Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
 
 ---
 

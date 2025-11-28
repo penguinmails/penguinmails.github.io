@@ -953,7 +953,7 @@ Navigate to specific payment and financial areas:
 
 - **[Organization Analytics](.))** → Team and organization management
 
-- **[Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
 
 - **[Team Performance](/docs/operations-analytics/team-performance)** → Team coordination and development
 

@@ -735,24 +735,25 @@ This basic customer journey optimization framework establishes the foundation fo
 
 ### Planning
 
-- **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
 
-- **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Feature classification
+- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Feature classification
 
 ### Features
 
-- **[Analytics](../features/analytics.md)** - Performance tracking
+- **[Analytics](/docs/features/analytics)** - Performance tracking
 
-- **[Campaign Management](../features/campaign-management.md)** - Campaign workflows
+- **[Campaign Management](/docs/features/campaign-management)** - Campaign workflows
 
-- **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Deliverability optimization
+- **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Deliverability optimization
 
 ### Specifications
 
-- **[Analytics UI Patterns](../design/analytics-ui-patterns.md)** - Dashboard design
+- **[Analytics UI Patterns](/docs/design/analytics-ui-patterns)** - Dashboard design
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - View specifications
+- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - View specifications
 
 ### Implementation
 
 - **[Active Tasks](../../tasks/README.md)** - Development status
+

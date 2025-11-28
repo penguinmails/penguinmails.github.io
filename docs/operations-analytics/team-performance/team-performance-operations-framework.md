@@ -794,7 +794,7 @@ const supportTemplates = {
 
 - [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
 
-- [Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - Comprehensive KPI framework
+- [Metrics & KPIs](/docs/operations-analytics/analytics-performance/README) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
