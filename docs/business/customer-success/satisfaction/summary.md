@@ -255,9 +255,9 @@ Customer satisfaction represents the leading indicator of customer loyalty, rete
 
 - [Customer Health Scoring](/docs/business/analytics/overview)
 
-- [Retention Strategies](/docs/business/customer-success/retention/summary
+- [Retention Strategies](/docs/business/customer-success/retention/summary)
 
-- [Operations Framework](/docs/business/customer-success/operations/framework
+- [Operations Framework](/docs/business/customer-success/operations/framework)
 
 ---
 

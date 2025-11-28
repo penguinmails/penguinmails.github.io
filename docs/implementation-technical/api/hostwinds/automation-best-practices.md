@@ -735,7 +735,7 @@ class MetricsCollector {
 
 - [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring ) - Monitoring and diagnostics
 
-- [Development Standards](/implementation-technical/development-guidelines/README.md - General development best practices
+- [Development Standards](/docs/implementation-technical/development-guidelines/README) - General development best practices
 
 ---
 

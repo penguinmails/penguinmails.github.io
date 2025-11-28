@@ -863,9 +863,9 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Compliance & Security**
 
-- [Compliance Overview](/docs/compliance-security - Regulatory compliance
+- [Compliance Overview](/docs/compliance-security) - Regulatory compliance
 
-- [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security operations
 
 - [Data Privacy Policy](/docs/compliance-security/international)) - Privacy compliance
 

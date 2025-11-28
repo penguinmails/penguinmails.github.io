@@ -792,7 +792,7 @@ const supportTemplates = {
 
 - [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
 
-- [Organization Analytics](/do/operations-analytics/operations-management/README.md - Team and organization management
+- [Organization Analytics](/docs/operations-analytics/operations-management/README) - Team and organization management
 
 - [Metrics & KPIs](/docs/operations-analytics/analytics-performance/README) - Comprehensive KPI framework
 
@@ -822,9 +822,9 @@ const supportTemplates = {
 
 ### **Compliance & Security**
 
-- [Compliance Overview](/docs/compliance-security - Regulatory compliance
+- [Compliance Overview](/docs/compliance-security) - Regulatory compliance
 
-- [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security operations
 
 - [QA Security Testing](/docs/compliance-security/enterprise) - Security testing protocols
 
@@ -866,7 +866,7 @@ Navigate to specific team performance areas:
 
 - **[Sprint Retrospectives](.))** → Agile development practices
 
-- **[Organization Analytics](/do/operations-analytics/operations-management/README.md** → Team and organization management
+- **[Organization Analytics](/docs/operations-analytics/operations-management/README)** → Team and organization management
 
 ---
 

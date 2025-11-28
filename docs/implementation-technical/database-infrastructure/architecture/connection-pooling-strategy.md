@@ -553,7 +553,7 @@ Level 3: Enterprise Implementation
 
 ### **Operational References**
 
-- **[Infrastructure Operations Management](/do/operations-analytics/operations-management/README.md** - Central operational hub
+- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management/README)** - Central operational hub
 
 - **[Backup & Recovery Procedures](/docs/implementation-technical/database-infrastructure/operations/backup-recovery-procedures)** - Data protection during incidents
 

@@ -654,9 +654,9 @@ External Support:
 
 - **[Database Infrastructure Management](/docs/database-infrastructure)** - Database procedures and infrastructure
 
-- **[Connection Pooling Strategy](/database-infrastructure/README.md** - Pool configuration and optimization
+- **[Connection Pooling Strategy](/docs/implementation-technical/database-infrastructure/architecture/connection-pooling-strategy)** - Pool configuration and optimization
 
-- **[Backup & Recovery Procedures](/database-infrastructure/README.md** - Data protection and restoration
+- **[Backup & Recovery Procedures](/docs/implementation-technical/database-infrastructure/operations/backup-recovery-procedures)** - Data protection and restoration
 
 - **[Quality Assurance Testing Protocols](/docs/business/quality-assurance)** - Performance monitoring procedures
 
