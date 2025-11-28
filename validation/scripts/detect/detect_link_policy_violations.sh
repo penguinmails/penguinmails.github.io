@@ -54,7 +54,10 @@ detect_links() {
         files=$(grep -r "$pattern" "$TARGET_ROOT" --include="*.md" 2>/dev/null || echo "")
     fi
     
-    local count=$(echo "$files" | grep -c ":" || echo "0")
+    local count=0
+    if [ -n "$files" ]; then
+        count=$(echo "$files" | grep -c ":" 2>/dev/null || echo "0")
+    fi
     
     # Add to JSON report
     echo "    \"$issue_name\": {" >> "$REPORT_FILE"
@@ -144,8 +147,29 @@ else
 fi
 echo ""
 
-# Check for relative .md links
+# Check for relative .md links (general catch-all)
 detect_links "relative_md_links" "]\(\\.\\./.*\\.md\\|]\(\\./" "Relative .md links (./  or ../)" true
+
+# Additional edge case checks for better categorization
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "EDGE CASE DETECTION"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
+
+# Check for same-directory relative links (./file)
+detect_links "relative_same_dir" "]\(\\./[^/)]*)" "Relative same-directory links (./file)" true
+
+# Check for parent-directory relative links (../folder/file)
+detect_links "relative_parent_dir" "]\(\\.\\./[^)]*)" "Relative parent-directory links (../)" true
+
+# Check for complex relative paths (../../docs/)
+detect_links "relative_complex" "](../../docs/" "Complex relative paths (../../docs/)" false
+
+# Check for relative links with anchors
+detect_links "relative_with_anchors" "]\(\\./[^)]*#|]\(\\.\\./[^)]*#" "Relative links with anchors" true
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""
 
 # Close JSON report
 echo "    \"total\": {" >> "$REPORT_FILE"
