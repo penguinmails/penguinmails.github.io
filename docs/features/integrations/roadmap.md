@@ -160,7 +160,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](./api-access.md)
+- [Feature Documentation](/docs/features/integrations/api-access.md)
 
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md)
 
@@ -209,7 +209,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](./api-access.md)
+- [Feature Documentation](/docs/features/integrations/api-access.md)
 
 ---
 

@@ -357,21 +357,21 @@ Response:
 
 ### Payments
 
-- **[Subscription Management](./subscription-management.md)** - Plan details and management
+- **[Subscription Management](/docs/features/payments/subscription-management.md)** - Plan details and management
 
-- **[Billing Dashboard](./billing-dashboard.md)** - Usage and invoices
+- **[Billing Dashboard](/docs/features/payments/billing-dashboard.md)** - Usage and invoices
 
-- **[Payments Overview](./README.md)** - All payment features
+- **[Payments Overview](/docs/features/payments/README.md)** - All payment features
 
 ### Technical
 
-- **[Stripe API Documentation](../../implementation-technical/integration/stripe.md)** - Technical integration details
+- **[Stripe API Documentation](/docs/implementation-technical/integration/stripe.md)** - Technical integration details
 
-- **[Webhook Handling](../../implementation-technical/api/platform-api/webhooks.md)** - Webhook implementation
+- **[Webhook Handling](/docs/implementation-technical/api/platform-api/webhooks.md)** - Webhook implementation
 
 ### Support
 
-- **[Billing FAQ](../../business/faq/billing-faq.md)** - Common questions
+- **[Billing FAQ](/docs/business/faq/billing-faq.md)** - Common questions
 
 - **[Contact Support](mailto:support@penguinmails.com)** - Payment issues
 

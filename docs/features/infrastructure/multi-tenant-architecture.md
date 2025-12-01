@@ -524,27 +524,27 @@ Return results (tenant-scoped only)
 
 ### Architecture
 
-- **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Infrastructure provisioning
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - Infrastructure provisioning
 
-- **[Infrastructure Overview](./README.md)** - All infrastructure features
+- **[Infrastructure Overview](/docs/features/infrastructure/README.md)** - All infrastructure features
 
 ### Implementation
 
-- **[NileDB Documentation](../../implementation-technical/database-infrastructure/niledb.md)** - Database multi-tenancy details
+- **[NileDB Documentation](/docs/implementation-technical/database-infrastructure/niledb.md)** - Database multi-tenancy details
 
-- **[Authentication](../../implementation-technical/security/authentication.md)** - Tenant-aware auth
+- **[Authentication](/docs/implementation-technical/security/authentication.md)** - Tenant-aware auth
 
-- **[API Architecture](../../implementation-technical/api/README.md)** - Multi-tenant API design
+- **[API Architecture](/docs/implementation-technical/api/README.md)** - Multi-tenant API design
 
 ### Management
 
-- **[User Management](../enterprise/user-management.md)** - Team member management
+- **[User Management](/docs/features/enterprise/user-management.md)** - Team member management
 
-- **[Workspace Management](../../business/workspace-management.md)** - Workspace organization
+- **[Workspace Management](/docs/business/workspace-management.md)** - Workspace organization
 
 ### Tasks
 
-- **[Epic 3: Tenant Management](../../tasks/epic-3-tenant-company-management/)** - Implementation tasks
+- **[Epic 3: Tenant Management](/tasks/epic-3-tenant-company-management/)** - Implementation tasks
 
 ---
 

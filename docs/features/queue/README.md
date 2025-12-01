@@ -38,13 +38,13 @@ Background job processing, queue monitoring, and notifications.
 
 - Queue monitoring and metrics
 
-See [Queue Roadmap](./roadmap.md) for future enhancements.
+See [Queue Roadmap](/docs/features/queue/roadmap.md) for future enhancements.
 
 ## Features in This Category
 
 ### ✅ Available Now
 
-#### [Core Email Pipeline](./email-pipeline.md)
+#### [Core Email Pipeline](/docs/features/queue/email-pipeline.md)
 
 PostgreSQL + Redis queue system for high-throughput email processing.
 

@@ -207,13 +207,13 @@ CREATE TABLE ip_blacklist_events (
 
 ### Infrastructure
 
-- **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - User-facing mailbox setup
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - User-facing mailbox setup
 
-- **[Email Warmups](../../features/warmup/email-warmups/overview.md)** - Warmup logic applied to nodes
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** - Warmup logic applied to nodes
 
 ### Tasks
 
-- **[Epic 5: Infrastructure Management](../../tasks/epic-5-infrastructure-management/README.md)** - Development tasks
+- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/README.md)** - Development tasks
 
 ---
 

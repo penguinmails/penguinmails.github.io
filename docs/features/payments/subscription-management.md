@@ -580,21 +580,21 @@ Cancellation → Free Tier (90 days) → Data Deletion
 
 ### Billing & Payments
 
-- **[Stripe Integration](./stripe-integration.md)** - Payment processing details
+- **[Stripe Integration](/docs/features/payments/stripe-integration.md)** - Payment processing details
 
-- **[Billing Dashboard](./billing-dashboard.md)** - Invoice and usage management
+- **[Billing Dashboard](/docs/features/payments/billing-dashboard.md)** - Invoice and usage management
 
-- **[Payments Overview](./README.md)** - All payment features
+- **[Payments Overview](/docs/features/payments/README.md)** - All payment features
 
 ### Account Management
 
-- **[User Management](../enterprise/user-management.md)** - Team member management
+- **[User Management](/docs/features/enterprise/user-management.md)** - Team member management
 
-- **[Workspace Management](../../business/workspace-management.md)** - Workspace configuration
+- **[Workspace Management](/docs/business/workspace-management.md)** - Workspace configuration
 
 ### Support
 
-- **[Billing FAQ](../../business/faq/billing-faq.md)** - Common billing questions
+- **[Billing FAQ](/docs/business/faq/billing-faq.md)** - Common billing questions
 
 - **[Contact Sales](mailto:sales@penguinmails.com)** - Enterprise inquiries
 
