@@ -421,5 +421,5 @@ Customer Journey Management provides the systematic approach to understanding, o
 - **[Active Tasks](../../tasks/README.md)** - Development status
 
 ---
-### Level 1: Executive summary for customer journey management strategic decision-making
 
+### Level 1: Executive summary for customer journey management strategic decision-making
