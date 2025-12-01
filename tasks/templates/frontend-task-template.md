@@ -104,21 +104,21 @@ design_system: ""  # Link to docs/design/*.md (if applicable)
 
 ### Specifications
 
-- [Frontend Spec](../../docs/design/routes/[spec-name].md) - View specification
-- [API Spec](../../docs/implementation-technical/api/[spec-name].md) - Backend endpoints
-- [Feature Spec](../../docs/features/[feature-name].md) - Feature overview
+- [Frontend Spec](/docs/design/routes/[spec-name].md) - View specification
+- [API Spec](/docs/implementation-technical/api/[spec-name].md) - Backend endpoints
+- [Feature Spec](/docs/features/[feature-name].md) - Feature overview
 
 ### Design & Patterns
 
-- [Design System](../../docs/design/ui-library.md) - UI patterns and components
-- [Component Library](../../docs/design/component-library.md) - Component specifications
-- [Accessibility Guidelines](../../docs/design/accessibility.md) - Accessibility standards
+- [Design System](/docs/design/ui-library.md) - UI patterns and components
+- [Component Library](/docs/design/component-library.md) - Component specifications
+- [Accessibility Guidelines](/docs/design/accessibility.md) - Accessibility standards
 
 ### Implementation
 
-- [Frontend Routing Map](../../docs/design/frontend-routing-map.md) - Application routes
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
-- [Testing Guidelines](../../docs/implementation-technical/development-guidelines/testing-guidelines.md) - Testing standards
+- [Frontend Routing Map](/docs/design/frontend-routing-map.md) - Application routes
+- [Development Standards](/docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
+- [Testing Guidelines](/docs/implementation-technical/development-guidelines/testing-guidelines.md) - Testing standards
 
 ## Dependencies
 

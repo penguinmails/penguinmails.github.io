@@ -188,21 +188,21 @@ npm run [verify-script]
 
 ### Specifications
 
-- [Infrastructure Spec](../../docs/implementation-technical/[spec-name].md) - Detailed specification
-- [Architecture Overview](../../docs/technical/architecture/overview.md) - System architecture
-- [Integration Guide](../../docs/technical/integration/[integration-name].md) - Integration details
+- [Infrastructure Spec](/docs/implementation-technical/[spec-name].md) - Detailed specification
+- [Architecture Overview](/docs/technical/architecture/overview.md) - System architecture
+- [Integration Guide](/docs/technical/integration/[integration-name].md) - Integration details
 
 ### Implementation Guides
 
-- [Development Setup](../../docs/implementation-getting-started/development-setup.md) - Local setup guide
-- [Deployment Guide](../../docs/implementation-technical/deployment/[deployment-guide].md) - Deployment procedures
-- [Environment Variables](../../docs/implementation-technical/development-guidelines/environment-variables.md) - Env var standards
+- [Development Setup](/docs/implementation-getting-started/development-setup.md) - Local setup guide
+- [Deployment Guide](/docs/implementation-technical/deployment/[deployment-guide].md) - Deployment procedures
+- [Environment Variables](/docs/implementation-technical/development-guidelines/environment-variables.md) - Env var standards
 
 ### Operations
 
-- [Monitoring Guide](../../docs/operations/monitoring.md) - Monitoring and alerting
-- [Incident Response](../../docs/operations/incident-response.md) - Incident procedures
-- [Runbooks](../../docs/operations/runbooks/[component].md) - Operational runbooks
+- [Monitoring Guide](/docs/operations/monitoring.md) - Monitoring and alerting
+- [Incident Response](/docs/operations/incident-response.md) - Incident procedures
+- [Runbooks](/docs/operations/runbooks/[component].md) - Operational runbooks
 
 ## Dependencies
 

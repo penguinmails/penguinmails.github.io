@@ -53,8 +53,8 @@ This epic provides the infrastructure visibility layer required by the platform'
 
 Refer to the project-level documentation for implementation guidelines, architecture, and operations runbooks that apply to this epic:
 
-- [Technical Architecture — Overview](../docs/technical/architecture/overview)
-- [Development Standards (coding, linting, CI)](../docs/implementation-technical/development-guidelines/development-standards)
-- [Operations: Infrastructure Operations Management](../docs/operations-analytics/operations-management/infrastructure-operations-management)
-- [Security & Compliance Framework](../docs/compliance-security/enterprise/security-framework)
-- [Quick Setup / Getting Started](../docs/quick-setup)
+- [Technical Architecture — Overview](/docs/technical/architecture/overview)
+- [Development Standards (coding, linting, CI)](/docs/implementation-technical/development-guidelines/development-standards)
+- [Operations: Infrastructure Operations Management](/docs/operations-analytics/operations-management/infrastructure-operations-management)
+- [Security & Compliance Framework](/docs/compliance-security/enterprise/security-framework)
+- [Quick Setup / Getting Started](/docs/quick-setup)

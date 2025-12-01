@@ -217,10 +217,10 @@ However, **always keep**:
 ## Related Documentation
 
 - [Tasks README](../README.md) - Overview of task structure
-- [Feature Specifications](../../docs/features/README.md) - Feature approval workflow
-- [Frontend Routing Map](../../docs/design/frontend-routing-map.md) - All UI views
-- [API Documentation](../../docs/implementation-technical/api/README.md) - Backend endpoints
-- [Development Guidelines](../../docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
+- [Feature Specifications](/docs/features/README.md) - Feature approval workflow
+- [Frontend Routing Map](/docs/design/frontend-routing-map.md) - All UI views
+- [API Documentation](/docs/implementation-technical/api/README.md) - Backend endpoints
+- [Development Guidelines](/docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
 
 ---
 

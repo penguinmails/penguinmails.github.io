@@ -133,9 +133,9 @@ Following PenguinMails SOP, all tasks follow this standardized status progressio
 
 ## Related Documentation
 
-- [Roadmap & Development Priorities](../docs/quick-access/roadmap-development-priorities) - Overall project roadmap
-- [High-Level Architecture](../docs/quick-access/high-level-architecture) - System architecture
-- [Team Workflow](../docs/quick-access/team-workflow) - Development processes
+- [Roadmap & Development Priorities](/docs/quick-access/roadmap-development-priorities) - Overall project roadmap
+- [High-Level Architecture](/docs/quick-access/high-level-architecture) - System architecture
+- [Team Workflow](/docs/quick-access/team-workflow) - Development processes
 
 ## Contributing
 

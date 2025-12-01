@@ -170,21 +170,21 @@ interface [ResponseName] {
 
 ### Specifications
 
-- [API Spec](../../docs/implementation-technical/api/[spec-name].md) - Full API specification
-- [Feature Spec](../../docs/features/[feature-name].md) - Feature overview
-- [Database Schema](../../docs/implementation-technical/database-infrastructure/[schema-doc].md) - Database design
+- [API Spec](/docs/implementation-technical/api/[spec-name].md) - Full API specification
+- [Feature Spec](/docs/features/[feature-name].md) - Feature overview
+- [Database Schema](/docs/implementation-technical/database-infrastructure/[schema-doc].md) - Database design
 
 ### Architecture & Patterns
 
-- [API Architecture](../../docs/implementation-technical/api/README.md) - API design patterns
-- [Multi-Tenancy Guide](../../docs/technical/niledb/multi-tenancy-guide.md) - Multi-tenant patterns
-- [Authentication Guide](../../docs/technical/niledb/authentication.md) - Auth implementation
+- [API Architecture](/docs/implementation-technical/api/README.md) - API design patterns
+- [Multi-Tenancy Guide](/docs/technical/niledb/multi-tenancy-guide.md) - Multi-tenant patterns
+- [Authentication Guide](/docs/technical/niledb/authentication.md) - Auth implementation
 
 ### Implementation
 
-- [Development Standards](../../docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
-- [API Best Practices](../../docs/implementation-technical/development-guidelines/api-best-practices.md) - API guidelines
-- [Error Handling](../../docs/implementation-technical/development-guidelines/error-handling.md) - Error patterns
+- [Development Standards](/docs/implementation-technical/development-guidelines/development-standards.md) - Code standards
+- [API Best Practices](/docs/implementation-technical/development-guidelines/api-best-practices.md) - API guidelines
+- [Error Handling](/docs/implementation-technical/development-guidelines/error-handling.md) - Error patterns
 
 ## Dependencies
 
