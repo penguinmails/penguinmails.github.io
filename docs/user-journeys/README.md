@@ -268,9 +268,9 @@ level: "2"
 
 ### Implementation
 
-- **[Active Tasks](../../tasks/README.md)** - Journey improvements in progress
+- **[Active Tasks](/tasks/README.md)** - Journey improvements in progress
 
-- **[Analytics Views](../design/analytics-ui-patterns.md)** - Analytics patterns
+- **[Analytics Views](/docs/design/analytics-ui-patterns.md)** - Analytics patterns
 
 ---
 

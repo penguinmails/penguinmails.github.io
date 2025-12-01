@@ -245,61 +245,61 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Planning & Product
 
-- **[Product Roadmap](./product-roadmap.md)** - Feature timeline and business milestones
+- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Feature timeline and business milestones
 
-- **[Roadmap Overview](./README.md)** - Complete roadmap navigation hub
+- **[Roadmap Overview](/docs/roadmap/README.md)** - Complete roadmap navigation hub
 
-- **[Features Overview](../features/README.md)** - Detailed feature specifications
+- **[Features Overview](/docs/features/README.md)** - Detailed feature specifications
 
 ### Core Features
 
-- **[Analytics](../features/analytics/core-analytics/overview.md)** - Performance tracking and insights (Level 1-2)
+- **[Analytics](/docs/features/analytics/core-analytics/overview.md)** - Performance tracking and insights (Level 1-2)
 
-- **[Email Warmups](../features/warmup/email-warmups/overview.md)** - Email reputation management (Level 2)
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** - Email reputation management (Level 2)
 
-- **[Unified Inbox](../features/inbox/unified-inbox/overview.md)** - Centralized message management (Level 2-3)
+- **[Unified Inbox](/docs/features/inbox/unified-inbox/overview.md)** - Centralized message management (Level 2-3)
 
-- **[Free Mailbox Creation](../features/infrastructure/free-mailbox-creation/overview.md)** - Automated mailbox provisioning (Level 1)
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - Automated mailbox provisioning (Level 1)
 
-- **[Email Infrastructure Setup](../features/infrastructure/email-infrastructure-setup.md)** - VPS provisioning, SMTP, DNS automation (Level 1)
+- **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup.md)** - VPS provisioning, SMTP, DNS automation (Level 1)
 
-- **[Security Features](../features/compliance/security-features.md)** - SSL/TLS, encryption, access control (Level 1)
+- **[Security Features](/docs/features/compliance/security-features.md)** - SSL/TLS, encryption, access control (Level 1)
 
-- **[Inbox Rotation](../features/inbox/inbox-rotation/overview.md)** - Load balancing and deliverability (Level 2-3)
+- **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview.md)** - Load balancing and deliverability (Level 2-3)
 
 ### User Workflows
 
-- **[Marketing Journey](../user-journeys/marketing-journey.md)** - Marketing team workflows and adoption
+- **[Marketing Journey](/docs/user-journeys/marketing-journey.md)** - Marketing team workflows and adoption
 
-- **[Customer Success Journey](../user-journeys/customer-success-journey.md)** - Customer onboarding and success paths
+- **[Customer Success Journey](/docs/user-journeys/customer-success-journey.md)** - Customer onboarding and success paths
 
-- **[User Journeys Overview](../user-journeys/README.md)** - Complete journey documentation
+- **[User Journeys Overview](/docs/user-journeys/README.md)** - Complete journey documentation
 
 ### Technical Specifications
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - UI architecture and route specifications
+- **[Frontend Routing Map](/docs/design/frontend-routing-map.md)** - UI architecture and route specifications
 
-- **[API Architecture](../implementation-technical/api/README.md)** - Backend endpoint design and structure
+- **[API Architecture](/docs/implementation-technical/api/README.md)** - Backend endpoint design and structure
 
-- **[Design System](../design/ui-library.md)** - UI patterns and component library
+- **[Design System](/docs/design/ui-library.md)** - UI patterns and component library
 
-- **[Architecture Overview](../technical/architecture/overview.md)** - System architecture and technical design
+- **[Architecture Overview](/docs/technical/architecture/overview.md)** - System architecture and technical design
 
 ### Implementation & Tasks
 
-- **[Active Tasks](../../tasks/README.md)** - Current development work and task organization
+- **[Active Tasks](/tasks/README.md)** - Current development work and task organization
 
-- **[Task Templates](../../tasks/templates/README.md)** - Standardized task creation templates
+- **[Task Templates](/tasks/templates/README.md)** - Standardized task creation templates
 
-- **[Technical Architecture](../technical/architecture/detailed-technical/implementation-roadmap.md)** - Detailed technical implementation plan
+- **[Technical Architecture](/docs/technical/architecture/detailed-technical/implementation-roadmap.md)** - Detailed technical implementation plan
 
 ### Business Context
 
-- **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Feature classification framework
+- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap.md)** - Feature classification framework
 
-- **[ROI Calculator](../../business/core/roi-calculator.md)** - Financial planning and projections
+- **[ROI Calculator](/docs/business/core/roi-calculator.md)** - Financial planning and projections
 
-- **[Competitive Analysis](../../business/core/competitive-analysis.md)** - Market positioning and differentiation
+- **[Competitive Analysis](/docs/business/core/competitive-analysis.md)** - Market positioning and differentiation
 
 ---
 

@@ -48,7 +48,7 @@ Platform-wide analytics, performance tracking, and data-driven insights (not cam
 
 ### ✅ Available Now
 
-#### [Core Analytics](./core-analytics/overview.md)
+#### [Core Analytics](/docs/features/analytics/core-analytics/overview.md)
 
 Essential performance tracking and reporting with directional insights.
 
@@ -82,7 +82,7 @@ Essential performance tracking and reporting with directional insights.
 
 ### ⏳ In Development
 
-#### [Enhanced Analytics](./enhanced-analytics/overview.md)
+#### [Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)
 
 Advanced analytics with AI-powered insights and predictive modeling.
 
@@ -134,7 +134,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ## Other Features
 
-- **[Manual Reporting](./manual-reporting.md)** - Scheduled reports, CSV/Excel/PDF export (Active Q4 2025)
+- **[Manual Reporting](/docs/features/analytics/manual-reporting.md)** - Scheduled reports, CSV/Excel/PDF export (Active Q4 2025)
 
 - **Tenant Analytics** - Multi-tenant performance comparison (Planned Q2 2026)
 
@@ -144,7 +144,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### Roadmap & Planning
 
-- **[Analytics Roadmap](./roadmap.md)** - Detailed analytics timeline with quarterly breakdown (MVP Q1 2026, Enhanced Q1 2026, Advanced Q2-Q3 2026)
+- **[Analytics Roadmap](/docs/features/analytics/roadmap.md)** - Detailed analytics timeline with quarterly breakdown (MVP Q1 2026, Enhanced Q1 2026, Advanced Q2-Q3 2026)
 
 - **[Product Roadmap](/docs/roadmap/product-roadmap)** - Platform-wide feature timeline
 
@@ -204,4 +204,4 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README.md)

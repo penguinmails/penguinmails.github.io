@@ -281,7 +281,7 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 
 - **MD047**: Files must end with single newline
 
-For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
+For comprehensive linting guide, see [MARKDOWN_LINTING.md](/MARKDOWN_LINTING.md).
 
 ## Testing & Validation
 
@@ -358,9 +358,9 @@ A: Only the 5 main navigation files can have `nav_order` fields. Other pages are
 
 - **Issues**: [GitHub Issues](https://github.com/penguinmails/penguinmails.github.io/issues)
 
-- **Markdown linting**: [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md)
+- **Markdown linting**: [MARKDOWN_LINTING.md](/MARKDOWN_LINTING.md)
 
-- **AI agent guidelines**: [AGENTS.md](./AGENTS.md)
+- **AI agent guidelines**: [AGENTS.md](/AGENTS.md)
 
 ---
 

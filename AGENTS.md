@@ -4,7 +4,7 @@
 
 This document outlines the rules and guidelines for AI agents interacting with the PenguinMails repository. These guidelines ensure consistent, high-quality contributions while maintaining the integrity of our documentation and codebase.
 
-For detailed development setup and contribution procedures, please refer to our **[CONTRIBUTING.md](./CONTRIBUTING.md)** guide.
+For detailed development setup and contribution procedures, please refer to our **[CONTRIBUTING.md](/CONTRIBUTING.md)** guide.
 
 ## 🤖 Agent Interaction Rules
 
@@ -96,17 +96,17 @@ For detailed development setup and contribution procedures, please refer to our 
 
 ## Compliance Verification
 
-For tech stack compliance verification commands, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md#tech-stack-compliance-verification).
+For tech stack compliance verification commands, see [MARKDOWN_LINTING.md](/MARKDOWN_LINTING.md#tech-stack-compliance-verification).
 
 ## Code Example Standards
 
-For detailed code example templates and conversion patterns, see [CONTRIBUTING.md](./CONTRIBUTING.md#code-example-templates).
+For detailed code example templates and conversion patterns, see [CONTRIBUTING.md](/CONTRIBUTING.md#code-example-templates).
 
 ### 5. Code Quality Requirements
 
 - **Linting Compliance**: All code changes must pass linting requirements (.markdownlint.json)
 
-- **Markdown Linting**: Use Docker-based markdown linting as documented in [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md)
+- **Markdown Linting**: Use Docker-based markdown linting as documented in [MARKDOWN_LINTING.md](/MARKDOWN_LINTING.md)
 
 - **Formatting Standards**: Follow established formatting rules (Prettier configuration)
 

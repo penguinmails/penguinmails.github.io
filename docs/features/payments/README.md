@@ -120,11 +120,11 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### ✅ Available Now
 
-- **[Subscription Management](./subscription-management.md)** - Plan management and upgrades
+- **[Subscription Management](/docs/features/payments/subscription-management.md)** - Plan management and upgrades
 
-- **[Stripe Integration](./stripe-integration.md)** - Payment processing via Stripe
+- **[Stripe Integration](/docs/features/payments/stripe-integration.md)** - Payment processing via Stripe
 
-- **[Billing Dashboard](./billing-dashboard.md)** - Usage and billing overview
+- **[Billing Dashboard](/docs/features/payments/billing-dashboard.md)** - Usage and billing overview
 
 ### 🚧 In Progress (Q1 2026)
 
@@ -325,8 +325,8 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### Detailed Roadmap
 
-- **[Billing & Subscriptions Roadmap](./roadmap.md)** - Complete feature timeline with quarterly breakdown
+- **[Billing & Subscriptions Roadmap](/docs/features/payments/roadmap.md)** - Complete feature timeline with quarterly breakdown
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README.md)
