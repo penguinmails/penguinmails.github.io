@@ -1324,11 +1324,11 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Template Management](./template-management.md)** - Template organization and management
+- **[Template Management](/docs/features/templates/template-management.md)** - Template organization and management
 
-- **[Template Variables](./template-variables.md)** - Dynamic content and merge tags
+- **[Template Variables](/docs/features/templates/template-variables.md)** - Dynamic content and merge tags
 
-- **[Template Library](./template-library.md)** - Pre-built template collection
+- **[Template Library](/docs/features/templates/template-library.md)** - Pre-built template collection
 
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use templates in campaigns
 

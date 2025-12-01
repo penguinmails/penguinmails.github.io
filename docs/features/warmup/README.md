@@ -30,13 +30,13 @@ Automated email warmup, domain reputation building, and sender health monitoring
 
 - **Q3 2026**: Automated warmup scheduling, reputation monitoring (8-10 weeks)
 
-See [Warmup Roadmap](./roadmap.md) for detailed timeline.
+See [Warmup Roadmap](/docs/features/warmup/roadmap.md) for detailed timeline.
 
 ## Features in This Category
 
 ### ✅ Approved (High Priority)
 
-#### [Email Warmups](./email-warmups/overview.md)
+#### [Email Warmups](/docs/features/warmup/email-warmups/overview.md)
 
 Automated sender reputation building for 95%+ deliverability.
 
@@ -66,7 +66,7 @@ Automated sender reputation building for 95%+ deliverability.
 
 ### 🚧 In Development (Q3 2026)
 
-#### [Warmup Scheduling](./warmup-scheduling.md)
+#### [Warmup Scheduling](/docs/features/warmup/warmup-scheduling.md)
 
 Automated email warmup with gradual volume ramping and engagement simulation.
 
@@ -90,7 +90,7 @@ Automated email warmup with gradual volume ramping and engagement simulation.
 
 **Status**: PLANNED (Q3 2026) | **Priority**: High
 
-#### [Reputation Monitoring](./reputation-monitoring.md)
+#### [Reputation Monitoring](/docs/features/warmup/reputation-monitoring.md)
 
 Real-time sender reputation tracking and deliverability monitoring.
 
@@ -168,7 +168,7 @@ Advanced deliverability features for proactive reputation management.
 
 **Total Investment**: 15-19 weeks of development effort
 
-See [Warmup Roadmap](./roadmap.md) for complete timeline and feature details.
+See [Warmup Roadmap](/docs/features/warmup/roadmap.md) for complete timeline and feature details.
 
 ---
 

@@ -1068,13 +1068,13 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Template Editor](./template-editor.md)** - Visual template creation
+- **[Template Editor](/docs/features/templates/template-editor.md)** - Visual template creation
 
-- **[Template Management](./template-management.md)** - Template organization
+- **[Template Management](/docs/features/templates/template-management.md)** - Template organization
 
-- **[Personalization System](../campaigns/personalization-system.md)** - Advanced personalization
+- **[Personalization System](/docs/features/campaigns/personalization-system.md)** - Advanced personalization
 
-- **[Leads Management](../leads/leads-management.md)** - Contact data source
+- **[Leads Management](/docs/features/leads/leads-management.md)** - Contact data source
 
 ---
 

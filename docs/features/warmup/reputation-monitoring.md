@@ -1163,9 +1163,9 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Email Warmups](./email-warmups/overview.md)** - Overall warmup strategy overview
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** - Overall warmup strategy overview
 
-- **[Warmup Scheduling](./warmup-scheduling.md)** - Automated warmup
+- **[Warmup Scheduling](/docs/features/warmup/warmup-scheduling.md)** - Automated warmup
 
 - **[Domain Management](../domains/domain-management.md)** - Domain configuration
 

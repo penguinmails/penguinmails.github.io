@@ -784,9 +784,9 @@ eventEmitter.on('contact.updated', async (event) => {
 
 ## Related Documentation
 
-- **[Leads Management](./leads-management.md)** - Contact database
+- **[Leads Management](/docs/features/leads/leads-management.md)** - Contact database
 
-- **[Contact Segmentation](./contact-segmentation.md)** - Score-based segments
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation.md)** - Score-based segments
 
 - **[Campaign Management](../campaigns/campaign-management/overview.md)** - Score-based targeting
 
