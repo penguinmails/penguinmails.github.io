@@ -33,11 +33,11 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](./campaign-management.md)** - Core platform complete (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Core platform complete (Q1 2026)
 
-- ⏳ **[CRM Integration](./crm-integration.md)** - Integration infrastructure (Q1 2026)
+- ⏳ **[CRM Integration](/docs/features/integrations/crm-integration/overview.md)** - Integration infrastructure (Q1 2026)
 
-- ⏳ **[Workflow Automation](./workflow-automation.md)** - Automation infrastructure (Q2-Q3 2026)
+- ⏳ **[Workflow Automation](/docs/features/automation/workflow-automation/overview.md)** - Automation infrastructure (Q2-Q3 2026)
 
 - ⏳ Security audit - Required before enterprise launch
 

@@ -940,13 +940,13 @@ This document provides a detailed timeline for enterprise features development, 
 
 ## Related Documentation
 
-- [Enterprise Features Overview](./README.md) - Feature catalog and status
+- [Enterprise Features Overview](/docs/features/enterprise/README.md) - Feature catalog and status
 
-- [User Management & Authentication](./user-management.md) - Authentication details
+- [User Management & Authentication](/docs/features/enterprise/user-management.md) - Authentication details
 
-- [Authentication Roadmap](./authentication-roadmap.md) - Detailed authentication timeline
+- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap.md) - Detailed authentication timeline
 
-- [Team Management Roadmap](./team-roadmap.md) - Detailed team & workspace management timeline
+- [Team Management Roadmap](/docs/features/enterprise/team-roadmap.md) - Detailed team & workspace management timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 

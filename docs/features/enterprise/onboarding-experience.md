@@ -722,13 +722,13 @@ function OnboardingChecklist() {
 
 ## Related Documentation
 
-- **[User Management](./user-management.md)** - Authentication and registration
+- **[User Management](/docs/features/enterprise/user-management.md)** - Authentication and registration
 
-- **[Email Infrastructure Setup](../infrastructure/email-infrastructure-setup.md)** - Infrastructure provisioning
+- **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup.md)** - Infrastructure provisioning
 
-- **[Domain Management](../domains/domain-management.md)** - Domain configuration
+- **[Domain Management](/docs/features/domains/domain-management.md)** - Domain configuration
 
-- **[Subscription Management](../payments/subscription-management.md)** - Payment and trials
+- **[Subscription Management](/docs/features/payments/subscription-management.md)** - Payment and trials
 
 ---
 
