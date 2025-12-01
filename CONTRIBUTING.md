@@ -7,13 +7,9 @@ We welcome contributions to improve our documentation! This guide provides every
 ## For immediate contributions
 
 1. Fork this repository
-
 2. Create a feature branch: `git checkout -b feature/your-improvement`
-
 3. Make your changes
-
 4. Test locally (see setup below)
-
 5. Submit a pull request
 
 **Need help?** Check our [Support section](#support) or [open an issue](https://github.com/penguinmails/penguinmails.github.io/issues).
@@ -52,29 +48,28 @@ We welcome contributions to improve our documentation! This guide provides every
 
 1. **Clone the repository:**
 
-```bash
-git clone https://github.com/penguinmails/penguinmails.github.io.git
-cd penguinmails.github.io
-
-```
+   ```bash
+   git clone https://github.com/penguinmails/penguinmails.github.io.git
+   cd penguinmails.github.io
+   ```
 
 2. **Start development server:**
 
-```bash
+   ```bash
 
-# Build Docker image (one-time setup)
+   # Build Docker image (one-time setup)
 
-   docker build -t penguinmails-docs .
+      docker build -t penguinmails-docs .
 
-# Build static files (useful for CI/CD or testing built output)
+   # Build static files (useful for CI/CD or testing built output)
 
-   docker run --rm -v $PWD:/srv/jekyll -w /srv/jekyll penguinmails-docs jekyll build
+      docker run --rm -v $PWD:/srv/jekyll -w /srv/jekyll penguinmails-docs jekyll build
 
-# Development server with live reload (recommended for local editing)
+   # Development server with live reload (recommended for local editing)
 
-   docker run --rm -p 4000:4000 -v $PWD:/srv/jekyll penguinmails-docs
+      docker run --rm -p 4000:4000 -v $PWD:/srv/jekyll penguinmails-docs
 
-```
+   ```
 
    **Note:** The `jekyll build` command generates static files in `_site/`. Use `jekyll serve` for development with auto-reload at [http://localhost:4000](http://localhost:4000).
 
@@ -196,15 +191,10 @@ last_modified_date: "2025-11-26"
 ### Contribution Process
 
 1. **Fork the repository** from GitHub
-
 2. **Create a feature branch:** `git checkout -b feature/your-improvement`
-
 3. **Make your changes** following style guidelines
-
 4. **Test locally** using Docker setup
-
 5. **Run linting checks** to ensure quality
-
 6. **Submit a pull request** with clear description
 
 ### Commit Message Format
@@ -298,11 +288,8 @@ For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md
 ### Before Submitting
 
 1. **Local Testing**: Verify changes render correctly at <http://localhost:4000>
-
 2. **Link Validation**: Ensure all internal and external links work
-
 3. **Linting Compliance**: Run Docker-based markdown linting
-
 4. **Content Review**: Verify business value and technical accuracy
 
 ### Quality Standards
