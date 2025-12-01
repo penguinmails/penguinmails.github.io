@@ -6,7 +6,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Customer Journey Management Summary
 
 ## Executive Overview

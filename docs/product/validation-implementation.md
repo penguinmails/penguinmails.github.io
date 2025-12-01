@@ -4,7 +4,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Market Validation Implementation Guide
 
 ## Overview

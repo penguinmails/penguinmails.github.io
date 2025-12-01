@@ -847,25 +847,25 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Technical Architecture**
 
-- [Technical Architecture Overview](/docs/technical/architecture/overview)) - System design
+- [Technical Architecture Overview](/docs/technical/architecture/overview) - System design
 
-- [Infrastructure Operations](/docs/technical/architecture/detailed-technical)) - System management
+- [Infrastructure Operations](/docs/technical/architecture/detailed-technical) - System management
 
-- [Integration Guide](/docs/technical/architecture/detailed-technical)) - Analytics integrations
+- [Integration Guide](/docs/technical/architecture/detailed-technical) - Analytics integrations
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys)) - User flow documentation
+- [User Journeys Overview](/docs/user-journeys) - User flow documentation
 
-- [Onboarding Journey](/docs/user-journeys/detailed-journeys)) - User activation
+- [Onboarding Journey](/docs/user-journeys/detailed-journeys) - User activation
 
 - [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
 
 ### **Compliance & Security**
 
-- [Compliance Overview](/docs/compliance-security - Regulatory compliance
+- [Compliance Overview](/docs/compliance-security) - Regulatory compliance
 
-- [Security Framework](/do/compliance-security/enterprise/security-framework.md - Security operations
+- [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security operations
 
 - [Data Privacy Policy](/docs/compliance-security/international)) - Privacy compliance
 
@@ -887,7 +887,7 @@ Navigate to specific organization and team areas:
 
 - **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
 
-- **[Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
 
 ---
 

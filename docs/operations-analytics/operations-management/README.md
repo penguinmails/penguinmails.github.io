@@ -89,11 +89,11 @@ Operations management encompasses the day-to-day activities required to keep the
 
 ## Quick Links
 
-- [Infrastructure Operations Management](infrastructure-operations-management))
+- [Infrastructure Operations Management](/docs/operations-analytics/operations-management/infrastructure-operations-management)
 
-- [Incident Response Operations](incident-response-operations))
+- [Incident Response Operations](/docs/operations-analytics/operations-management/incident-response-operations)
 
-- [Environment & Release Management](environment-release-management))
+- [Environment & Release Management](/docs/operations-analytics/operations-management/environment-release-management)
 
 ## Related Documentation
 

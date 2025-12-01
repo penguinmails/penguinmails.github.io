@@ -43,13 +43,13 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 ## Integration Points
 
-- [Operations Analytics Overview](..)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
 
 - [Technical Operations](/docs/technical/operations) - Technical team coordination
 
-- [Business Strategy](/docs/business/strategy/overview)) - Strategic alignment
+- [Business Strategy](/docs/business/strategy/overview) - Strategic alignment
 
-- [User Experience](/docs/user-journeys)) - UX team collaboration
+- [User Experience](/docs/user-journeys) - UX team collaboration
 
 ---
 

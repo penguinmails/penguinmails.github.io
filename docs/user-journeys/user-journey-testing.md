@@ -307,21 +307,21 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 ### Planning
 
-- **[Product Roadmap](../roadmap/product-roadmap.md)** - Feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
 
-- **[User Journeys Hub](./README.md)** - All journeys
+- **[User Journeys Hub](/docs/user-journeys)** - All journeys
 
 ### Features
 
-- **[Free Mailbox Creation](../features/free-mailbox-creation.md)** - Onboarding feature
+- **[Free Mailbox Creation](/docs/features/free-mailbox-creation)** - Onboarding feature
 
-- **[Email Warm-ups](../features/email-warmups.md)** - Setup feature
+- **[Email Warm-ups](/docs/features/email-warmups)** - Setup feature
 
 ### Specifications
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - Navigation structure
+- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - Navigation structure
 
-- **[Design System](../design/README.md)** - UI components
+- **[Design System](/docs/design)** - UI components
 
 ### Implementation
 

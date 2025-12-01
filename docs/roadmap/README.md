@@ -6,7 +6,6 @@ level: "1"
 persona: "All Stakeholders"
 ---
 
-
 # 🗺️ Roadmap Overview
 
 ## Purpose
@@ -55,7 +54,6 @@ Start with **Roadmap Considerations** to understand our development philosophy, 
 
 Roadmap Overview → Roadmap Considerations → Feature Taxonomy → Implementation Roadmap
 
-
 ```
 
 ### For Technical Teams
@@ -68,7 +66,6 @@ Focus on the **Technical Roadmap** documents to understand infrastructure milest
 
 Roadmap Overview → Technical Implementation Roadmap → AI Features Roadmap
 
-
 ```
 
 ### For Product Managers
@@ -80,7 +77,6 @@ Review both product and technical roadmaps to understand the complete developmen
 ```text
 
 Roadmap Overview → Feature Taxonomy → Implementation Roadmap → Department Roadmaps
-
 
 ```
 
