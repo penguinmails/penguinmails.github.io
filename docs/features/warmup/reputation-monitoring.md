@@ -1167,9 +1167,9 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
 
 - **[Warmup Scheduling](/docs/features/warmup/warmup-scheduling.md)** - Automated warmup
 
-- **[Domain Management](../domains/domain-management.md)** - Domain configuration
+- **[Domain Management](/docs/features/domains/domain-management.md)** - Domain configuration
 
-- **[Security Features](../compliance/security-features.md)** - Authentication setup
+- **[Security Features](/docs/features/compliance/security-features.md)** - Authentication setup
 
 ---
 

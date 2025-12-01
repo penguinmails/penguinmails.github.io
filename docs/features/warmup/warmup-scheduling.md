@@ -1202,9 +1202,9 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 
 - **[Reputation Monitoring](/docs/features/warmup/reputation-monitoring.md)** - Track sender reputation
 
-- **[Domain Management](../domains/domain-management.md)** - Domain configuration
+- **[Domain Management](/docs/features/domains/domain-management.md)** - Domain configuration
 
-- **[Email Infrastructure](../infrastructure/email-infrastructure-setup.md)** - SMTP setup
+- **[Email Infrastructure](/docs/features/infrastructure/email-infrastructure-setup.md)** - SMTP setup
 
 ---
 

@@ -10,7 +10,7 @@ persona: "Documentation Users"
 
 Third-party system connections including CRM, webhooks, and external platforms.
 
-**[📖 Read Full Integrations Overview](./overview.md)** - Comprehensive guide to PenguinMails integration capabilities including API-first strategy, Vault secrets management, and implementation roadmap.
+**[📖 Read Full Integrations Overview](/docs/features/integrations/overview.md)** - Comprehensive guide to PenguinMails integration capabilities including API-first strategy, Vault secrets management, and implementation roadmap.
 
 ## MVP Status: API-First Approach
 
@@ -42,25 +42,25 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 ### ⏳ In Development (MVP - Q1 2026)
 
-- **[API Key Management](./vault-api-keys.md)** - Secure API key generation, Vault storage, permission scopes, rate limiting (P0 - Critical)
+- **[API Key Management](/docs/features/integrations/vault-api-keys.md)** - Secure API key generation, Vault storage, permission scopes, rate limiting (P0 - Critical)
 
-- **[REST API Endpoints](./api-access.md)** - Core API for contacts, campaigns, emails, analytics with OpenAPI documentation (P0 - Critical)
+- **[REST API Endpoints](/docs/features/integrations/api-access.md)** - Core API for contacts, campaigns, emails, analytics with OpenAPI documentation (P0 - Critical)
 
-- **[Webhook System](./webhook-system.md)** - Real-time event notifications with retry logic and signature verification (P1 - High)
+- **[Webhook System](/docs/features/integrations/webhook-system.md)** - Real-time event notifications with retry logic and signature verification (P1 - High)
 
 ### ✅ Available Now
 
-- **[API Access Documentation](./api-access.md)** - RESTful API specification for custom integrations
+- **[API Access Documentation](/docs/features/integrations/api-access.md)** - RESTful API specification for custom integrations
 
-- **[Vault API Keys Documentation](./vault-api-keys.md)** - Secure API key management architecture with Vault storage and bcrypt hashing
+- **[Vault API Keys Documentation](/docs/features/integrations/vault-api-keys.md)** - Secure API key management architecture with Vault storage and bcrypt hashing
 
-- **[ESP Integration](./esp-integration.md)** - External email service providers (Postmark, Mailgun) - Active integrations
+- **[ESP Integration](/docs/features/integrations/esp-integration.md)** - External email service providers (Postmark, Mailgun) - Active integrations
 
-- **[Webhook System Documentation](./webhook-system.md)** - Real-time event notification architecture
+- **[Webhook System Documentation](/docs/features/integrations/webhook-system.md)** - Real-time event notification architecture
 
 ### 🔜 Coming Soon (Post-MVP)
 
-- **[CRM Integration](./crm-integration/overview.md)** - Salesforce and HubSpot bi-directional sync (Q1 2026)
+- **[CRM Integration](/docs/features/integrations/crm-integration/overview.md)** - Salesforce and HubSpot bi-directional sync (Q1 2026)
 
 - **Zapier Integration** - Connect with 5,000+ apps via no-code automation (Q2 2026)
 
@@ -118,7 +118,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 - Real-Time Sync with sub-1-minute latency (6-8 weeks)
 
-**Detailed Roadmap**: [Integrations Roadmap](./roadmap.md)
+**Detailed Roadmap**: [Integrations Roadmap](/docs/features/integrations/roadmap.md)
 
 ## Vault Integration & Secrets Management
 
@@ -140,13 +140,13 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
 
-- [VPS SSH Key Management](../infrastructure/vault-ssh-management.md)
+- [VPS SSH Key Management](/docs/features/infrastructure/vault-ssh-management.md)
 
-- [SMTP Credentials Storage](../infrastructure/vault-smtp-credentials.md)
+- [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp-credentials.md)
 
-- [Tenant API Keys](./vault-api-keys.md)
+- [Tenant API Keys](/docs/features/integrations/vault-api-keys.md)
 
-- [Disaster Recovery Procedures](../infrastructure/vault-disaster-recovery.md)
+- [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery.md)
 
 ## Third-Party Dependencies
 
@@ -180,17 +180,17 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 **Related Features**:
 
-- [Authentication & Security](../enterprise/user-management.md) - API key authentication, OAuth flows
+- [Authentication & Security](/docs/features/enterprise/user-management.md) - API key authentication, OAuth flows
 
-- [Infrastructure Management](../infrastructure/README.md) - VPS provisioning, SSH key management, SMTP setup
+- [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning, SSH key management, SMTP setup
 
-- [Domain Management](../domains/README.md) - DKIM key storage in Vault
+- [Domain Management](/docs/features/domains/README.md) - DKIM key storage in Vault
 
-- [Email Operations](../campaigns/README.md) - Campaign API endpoints, webhook events
+- [Email Operations](/docs/features/campaigns/README.md) - Campaign API endpoints, webhook events
 
 **Implementation**:
 
-- [API Documentation](../../implementation-technical/api/README.md) - Technical API specifications
+- [API Documentation](/docs/implementation-technical/api/README.md) - Technical API specifications
 
 - [Vault Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Secrets management architecture
 
@@ -204,4 +204,4 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README.md)

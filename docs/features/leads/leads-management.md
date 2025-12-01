@@ -197,13 +197,13 @@ GET /api/v1/contacts/search?query=industry:SaaS
 
 ### Campaigns
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Sending to lists
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Sending to lists
 
 ### Compliance
 
-- **[GDPR Compliance](../compliance/gdpr-compliance.md)** - Data rights
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance.md)** - Data rights
 
-- **[Unsubscribe Management](../compliance/unsubscribe-management.md)** - Opt-out handling
+- **[Unsubscribe Management](/docs/features/compliance/unsubscribe-management.md)** - Opt-out handling
 
 ---
 

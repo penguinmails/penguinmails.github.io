@@ -21,7 +21,7 @@ Enterprise-grade security, compliance, and access control.
 
 ### ✅ Available Now
 
-- **[User Management](./user-management.md)** - Authentication, profiles, and team management
+- **[User Management](/docs/features/enterprise/user-management.md)** - Authentication, profiles, and team management
 
   - Email/password authentication via NileDB SDK
 
@@ -81,7 +81,7 @@ Enterprise-grade security, compliance, and access control.
 
 #### Q1 2027 (Enterprise Features)
 
-- **[Enterprise Features](./enterprise-features/overview.md)** - Complete enterprise security and compliance suite
+- **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview.md)** - Complete enterprise security and compliance suite
 
   - Audit logs and compliance reporting
 
@@ -129,7 +129,7 @@ Enterprise-grade security, compliance, and access control.
 
 ## Roadmap
 
-See **[Enterprise Features Roadmap](./roadmap.md)** for detailed timeline and quarterly breakdown.
+See **[Enterprise Features Roadmap](/docs/features/enterprise/roadmap.md)** for detailed timeline and quarterly breakdown.
 
 ## Related Documentation
 
@@ -145,13 +145,13 @@ See **[Enterprise Features Roadmap](./roadmap.md)** for detailed timeline and qu
 
 ### Feature Documentation
 
-- [User Management & Authentication](./user-management.md) - Authentication, profiles, team management
+- [User Management & Authentication](/docs/features/enterprise/user-management.md) - Authentication, profiles, team management
 
-- [Onboarding Experience](./onboarding-experience.md) - Guided setup wizard, interactive tutorials
+- [Onboarding Experience](/docs/features/enterprise/onboarding-experience.md) - Guided setup wizard, interactive tutorials
 
-- [Authentication Roadmap](./authentication-roadmap.md) - Detailed authentication timeline
+- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap.md) - Detailed authentication timeline
 
-- [Team Management Roadmap](./team-roadmap.md) - Detailed team & workspace management timeline
+- [Team Management Roadmap](/docs/features/enterprise/team-roadmap.md) - Detailed team & workspace management timeline
 
 ### Related Features
 
@@ -165,4 +165,4 @@ See **[Enterprise Features Roadmap](./roadmap.md)** for detailed timeline and qu
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README.md)

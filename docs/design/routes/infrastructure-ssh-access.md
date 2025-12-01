@@ -166,7 +166,7 @@ interface RotationEvent {
 
    - SMTP Credentials: Admin username, Last rotation, "View Credentials" button (requires re-authentication)
 
-     - See [SMTP Credentials Vault Storage](../../features/infrastructure/vault-smtp-credentials.md) for detailed credential viewing workflow
+     - See [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials.md) for detailed credential viewing workflow
 
    - API Keys: Count, Last created, Rate limit tier
 
@@ -256,9 +256,9 @@ interface TenantSecretsSummary {
 
 - [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Comprehensive Vault architecture
 
-- [Infrastructure Management Feature](../../features/infrastructure/vault-ssh-management.md) - SSH key management feature
+- [Infrastructure Management Feature](/docs/features/infrastructure/vault-ssh-management.md) - SSH key management feature
 
-- [SMTP Credentials Vault Storage](../../features/infrastructure/vault-smtp-credentials.md) - SMTP credentials management feature
+- [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials.md) - SMTP credentials management feature
 
 ### Implementation
 
@@ -266,7 +266,7 @@ interface TenantSecretsSummary {
 
 - [Task 11.5 - SMTP Credentials Vault Storage](../../.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)
 
-- [Epic 5: Infrastructure Management](../../tasks/epic-5-infrastructure-management/)
+- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)
 
 ### Reference
 

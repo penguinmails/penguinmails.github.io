@@ -758,7 +758,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Planning & Strategy
 
-- [Lead Management README](./README.md) - Feature area overview
+- [Lead Management README](/docs/features/leads/README.md) - Feature area overview
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
@@ -768,13 +768,13 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Feature Documentation
 
-- [Leads Management](./leads-management.md) - Core contact database
+- [Leads Management](/docs/features/leads/leads-management.md) - Core contact database
 
-- [Contact Segmentation](./contact-segmentation.md) - Dynamic and static segmentation
+- [Contact Segmentation](/docs/features/leads/contact-segmentation.md) - Dynamic and static segmentation
 
-- [Import/Export](./import-export.md) - Bulk contact operations
+- [Import/Export](/docs/features/leads/import-export.md) - Bulk contact operations
 
-- [Lead Scoring](./lead-scoring.md) - Behavioral and demographic scoring
+- [Lead Scoring](/docs/features/leads/lead-scoring.md) - Behavioral and demographic scoring
 
 ### Route Specifications
 

@@ -206,13 +206,13 @@ Internal admin tool to view:
 ### Architecture
 
 
-- **[Core Email Pipeline](./email-pipeline.md)** - High-level pipeline architecture
+- **[Core Email Pipeline](/docs/features/queue/email-pipeline.md)** - High-level pipeline architecture
 
 
 ### Tasks
 
 
-- **[Epic 6: Core Email Pipeline](../../tasks/epic-6-core-email-pipeline/README.md)** - Implementation tasks
+- **[Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/README.md)** - Implementation tasks
 
 ---
 
