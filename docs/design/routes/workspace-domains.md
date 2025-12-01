@@ -1,3 +1,11 @@
+---
+title: "Workspace Domains & Email Accounts Routes"
+description: "Sending domain and email account management for workspace infrastructure"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Workspace Domains & Email Accounts
 
 ## 1. Purpose & Context (The "Why")

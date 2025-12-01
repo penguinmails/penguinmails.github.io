@@ -1,3 +1,11 @@
+---
+title: "User Journey Testing Framework"
+description: "Comprehensive testing framework for validating user journey documentation, navigation paths, and progressive disclosure implementation."
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Technical Users"
+---
+
 # User Journey Testing Framework
 
 ## Overview

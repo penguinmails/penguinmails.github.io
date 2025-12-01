@@ -1,3 +1,11 @@
+---
+title: "Integrations"
+description: "Third-party system connections including CRM, webhooks, and external platforms"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 🔌 Integrations
 
 Third-party system connections including CRM, webhooks, and external platforms.

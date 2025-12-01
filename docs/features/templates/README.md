@@ -1,3 +1,11 @@
+---
+title: "Templates & Content"
+description: "Email templates, HTML editor, template tags, and personalization variables"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 📝 Templates & Content
 
 Email templates, HTML editor, template tags, and personalization variables.

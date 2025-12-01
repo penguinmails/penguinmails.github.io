@@ -1,3 +1,11 @@
+---
+title: "User Journey Testing Framework"
+description: "Scenario-based testing framework for validating freelancer onboarding documentation navigation paths and user experience."
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Technical Users"
+---
+
 # User Journey Testing Framework
 
 ## Overview

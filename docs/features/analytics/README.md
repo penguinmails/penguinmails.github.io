@@ -1,4 +1,12 @@
-# 📊 Analytics & Reporting
+---
+title: "Analytics & Reporting"
+description: "Platform-wide analytics, performance tracking, and data-driven insights"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
+# Analytics & Reporting
 
 Platform-wide analytics, performance tracking, and data-driven insights (not campaign-specific).
 

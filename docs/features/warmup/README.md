@@ -1,3 +1,11 @@
+---
+title: "Warmup & Reputation"
+description: "Automated email warmup, domain reputation building, and sender health monitoring"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 🔥 Warmup & Reputation
 
 Automated email warmup, domain reputation building, and sender health monitoring.

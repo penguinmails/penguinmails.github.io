@@ -1,3 +1,11 @@
+---
+title: "Settings & Organization Routes"
+description: "User profile, organization details, billing, and team access management"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Settings & Organization
 
 ## 1. Purpose & Context (The "Why")

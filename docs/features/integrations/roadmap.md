@@ -600,7 +600,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Change Data Capture (CDC) from PostgreSQL
 
-- Real-time event streaming (Kafka or Redis Streams)
+- Real-time event streaming (PostgreSQL + Redis Streams)
 
 - Sub-1-minute sync latency guarantee
 

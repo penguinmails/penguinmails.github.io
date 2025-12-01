@@ -411,7 +411,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 - Okta
 
-- Auth0
+- NileDB SDK
 
 - Azure AD
 

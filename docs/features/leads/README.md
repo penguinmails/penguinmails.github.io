@@ -1,3 +1,11 @@
+---
+title: "Leads & Lists"
+description: "Lead management, contact lists, and segmentation"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 👥 Leads & Lists
 
 Lead management, contact lists, and segmentation (scoped by tenant).

@@ -1,3 +1,11 @@
+---
+title: "Platform Administration Routes"
+description: "Internal admin tools for platform management, user support, and health monitoring"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Platform Administrators"
+---
+
 # Platform Administration (Internal)
 
 ## 1. Purpose & Context (The "Why")

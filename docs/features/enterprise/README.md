@@ -1,3 +1,11 @@
+---
+title: "Enterprise Features"
+description: "Enterprise-grade security, compliance, and access control"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 🏢 Enterprise Features
 
 Enterprise-grade security, compliance, and access control.

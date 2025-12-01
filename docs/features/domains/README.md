@@ -1,4 +1,12 @@
-# 🌐 Domain Management
+---
+title: "Domain Management"
+description: "Domain DNS management, sender authentication, and email infrastructure"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
+# Domain Management
 
 General domain DNS management, queries, mutations, and sender authentication.
 

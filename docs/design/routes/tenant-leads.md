@@ -1,3 +1,11 @@
+---
+title: "Tenant Leads Management Routes"
+description: "Centralized contacts/leads management across all workspaces in tenant account"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Tenant Leads (Global)
 
 ## 1. Purpose & Context (The "Why")

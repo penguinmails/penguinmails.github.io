@@ -1,3 +1,11 @@
+---
+title: "Core Application Structure"
+description: "Application shell structure, navigation patterns, and global state management"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Core Application Structure
 
 ## 1. Purpose & Context (The "Why")

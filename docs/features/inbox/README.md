@@ -1,3 +1,11 @@
+---
+title: "Inbox Management"
+description: "Email organization, response management, and conversation tracking"
+last_modified_date: "2025-12-02"
+level: "2"
+persona: "Documentation Users"
+---
+
 # 🗂️ Inbox Management
 
 Comprehensive email organization, response management, and conversation tracking capabilities.

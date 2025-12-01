@@ -152,30 +152,30 @@ interface PersonalizationEvent {
 ```typescript
 interface AnalyticsPipeline {
   event_ingestion: {
-    kafka_topic: 'marketing-events';
-    schema_validation: 'avro';
+    event_stream: 'postgresql_redis_streams';
+    schema_validation: 'jsonschema';
     partitioning: 'tenant_id';
     retention: '90_days';
   };
 
   stream_processing: {
-    framework: 'apache_flink';
-    processing_time: '<2_seconds';
+    framework: 'postgresql_pl_pgsql';
+    processing_time: '<5_seconds';
     windowing: '5_second_tumbling';
     aggregation: 'real_time';
   };
 
   analytics_generation: {
-    calculation_engine: 'spark_streaming';
+    calculation_engine: 'postgresql_window_functions';
     cache_strategy: 'redis';
     aggregation_levels: ['real_time', 'hourly', 'daily', 'weekly'];
   };
 
   storage_layers: {
-    raw_data: 'hdfs';
-    processed_data: 'elasticsearch';
+    raw_data: 'postgresql_jsonb';
+    processed_data: 'postgresql_materialized_views';
     aggregates: 'postgresql';
-    historical_data: 'data_warehouse';
+    historical_data: 'postgresql_partitioned_tables';
   };
 }
 
@@ -1177,8 +1177,8 @@ spec:
           value: "http://elasticsearch-service:9200"
 
 
-        - name: KAFKA_BROKERS
-          value: "kafka-service:9092"
+        - name: POSTGRESQL_EVENT_STREAM
+          value: "postgresql://analytics-service:5432/events"
 
 
 ```

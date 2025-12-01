@@ -1,3 +1,11 @@
+---
+title: "Workspace Management Routes"
+description: "Workspace creation and configuration for sub-tenants and agency clients"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Workspace Management
 
 ## 1. Purpose & Context (The "Why")

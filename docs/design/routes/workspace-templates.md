@@ -1,3 +1,11 @@
+---
+title: "Workspace Templates Routes"
+description: "Reusable email template management for workspace"
+last_modified_date: "2025-12-02"
+level: "3"
+persona: "Frontend Developers"
+---
+
 # Workspace Templates
 
 ## 1. Purpose & Context (The "Why")
