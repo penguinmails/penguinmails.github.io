@@ -265,24 +265,25 @@ This architecture enables the system to scale to thousands of tenants while main
 
 **📚 Additional Resources**:
 
-- [5-Tier Database Implementation Guide](5-tier-database-implementation-guide) - Detailed implementation patterns and operational procedures
+- [5-Tier Database Implementation Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-implementation-guide) - Detailed implementation patterns and operational procedures
 
-- [5-Tier Database Questions](5-tier-database-faq) - Exploratory questions for architectural validation
+- [5-Tier Database Questions](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-faq) - Exploratory questions for architectural validation
 
-- [Complete Database Infrastructure Overview](README) - Navigation and cross-references
+- [Complete Database Infrastructure Overview](/docs/implementation-technical/database-infrastructure/architecture/README) - Navigation and cross-references
 
 **Related Tier Documentation**:
 
-- [OLTP Database Documentation](oltp-database/) - Complete database schema with multi-tenant design
+- [OLTP Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/oltp-database/) - Complete database schema with multi-tenant design
 
-- [Content Database Documentation](content-database/README) - Complete schema design and data structures
+- [Content Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/content-database/README) - Complete schema design and data structures
 
-- [OLAP Analytics Documentation](olap-database/) - Complete warehouse schema and data structures
+- [OLAP Analytics Documentation](/docs/implementation-technical/database-infrastructure/architecture/olap-database/) - Complete warehouse schema and data structures
 
-- [Queue System Documentation](queue/) - Complete implementation guide and patterns
+- [Queue System Documentation](/docs/implementation-technical/database-infrastructure/architecture/queue/) - Complete implementation guide and patterns
 
-- [Notifications Documentation](notifications-database/) - Complete schema for notifications and system events
+- [Notifications Documentation](/docs/implementation-technical/database-infrastructure/architecture/notifications-database/) - Complete schema for notifications and system events
 
 - [External Analytics Logging](/docs/implementation-technical/database-infrastructure/operations/external-analytics-logging) - Complete guide to logging boundaries and integration patterns
 
 **Keywords**: database architecture, multi-tenant, 5-tier, OLTP, OLAP, content database, notifications, queue system, external logging, enterprise architecture, scalability, operational excellence
+

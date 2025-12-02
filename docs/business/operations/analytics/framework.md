@@ -543,9 +543,9 @@ The Operations Analytics Framework provides comprehensive operational performanc
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with analytics integration
 
-- [Performance Analytics Dashboard](.) - Executive analytics dashboard with real-time insights
+- [Performance Analytics Dashboard](/docs/business/operations/analytics) - Executive analytics dashboard with real-time insights
 
-- [Compliance Analytics Framework](.) - Compliance tracking and automated monitoring
+- [Compliance Analytics Framework](/docs/business/operations/analytics) - Compliance tracking and automated monitoring
 
 ## Next Steps
 
@@ -567,3 +567,4 @@ The Operations Analytics Framework provides comprehensive operational performanc
 **Expected Timeline:** 2-3 weeks for comprehensive operations analytics implementation
 **Business Value:** $2.2M+ annual operations analytics value delivery through systematic data-driven operations
 ---
+

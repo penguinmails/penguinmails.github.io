@@ -7,13 +7,13 @@ persona: "Database Architects"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Database Schema](database-schema) - Schema details"
+  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Schema details"
 ---
 
 
@@ -209,3 +209,4 @@ erDiagram
 
 
 ```
+

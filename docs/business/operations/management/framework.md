@@ -475,9 +475,9 @@ The Operations Management Framework provides comprehensive daily operations mana
 
 - [Operations Analytics Framework](/docs/business/analytics/overview) - Operations analytics with management integration
 
-- [Daily Operations Procedures](.) - Daily operations management and procedures
+- [Daily Operations Procedures](/docs/business/operations/management) - Daily operations management and procedures
 
-- [SOC Management Protocols](.) - Security operations center management and protocols
+- [SOC Management Protocols](/docs/business/operations/management) - Security operations center management and protocols
 
 ## Next Steps
 
@@ -499,3 +499,4 @@ The Operations Management Framework provides comprehensive daily operations mana
 **Expected Timeline:** 2-3 weeks for comprehensive operations management implementation
 **Business Value:** $2.8M+ annual operations management value delivery through systematic operational excellence
 ---
+

@@ -762,8 +762,9 @@ export class ConsentCache {
 **Document Classification:** Level 3 - Technical Implementation
 **Related Documents:**
 
-- [European Compliance Overview](european-compliance-overview)
+- [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
-- [GDPR Compliance Analysis](gdpr-compliance)
+- [GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance)
 
-- [Strategic Compliance Recommendations](strategic-compliance)
+- [Strategic Compliance Recommendations](/docs/compliance-security/international/strategic-compliance)
+

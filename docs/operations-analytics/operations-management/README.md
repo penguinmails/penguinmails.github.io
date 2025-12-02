@@ -97,7 +97,7 @@ Operations management encompasses the day-to-day activities required to keep the
 
 ## Related Documentation
 
-- [Operations Analytics Overview](.) - Main operations analytics framework
+- [Operations Analytics Overview](/docs/operations-analytics/operations-management) - Main operations analytics framework
 
 - [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring and analytics
 
@@ -109,3 +109,4 @@ Operations management encompasses the day-to-day activities required to keep the
 
 **Keywords**: operations management, infrastructure operations, incident response, release management, deployment pipelines, monitoring systems, enterprise operations
 ---
+

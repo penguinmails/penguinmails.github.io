@@ -646,29 +646,29 @@ Privacy Audit Events:
 
 ### Compliance
 
-- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection details
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - EU data protection details
 
-- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - US email law
 
-- **[Unsubscribe Management](./unsubscribe-management.md)** - Opt-out handling
+- **[Unsubscribe Management](/docs/features/compliance/unsubscribe-management)** - Opt-out handling
 
-- **[Compliance Overview](./README.md)** - All compliance features
+- **[Compliance Overview](/docs/features/compliance/README)** - All compliance features
 
 ### Security
 
-- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security architecture
+- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security architecture
 
-- **[Data Encryption](../../implementation-technical/security/data-encryption.md)** - Encryption technical details
+- **[Data Encryption](/docs/implementation-technical/security/data-encryption)** - Encryption technical details
 
-- **[Access Controls](../../implementation-technical/security/access-controls.md)** - RBAC implementation
+- **[Access Controls](/docs/implementation-technical/security/access-controls)** - RBAC implementation
 
 ### Legal
 
-- **[Privacy Policy](../../business/legal/privacy-policy.md)** - Official privacy policy
+- **[Privacy Policy](/docs/business/legal/privacy-policy)** - Official privacy policy
 
-- **[Terms of Service](../../business/legal/terms-of-service.md)** - User agreement
+- **[Terms of Service](/docs/business/legal/terms-of-service)** - User agreement
 
-- **[DPA Template](../../business/legal/dpa-template.md)** - Data processing agreement
+- **[DPA Template](/docs/business/legal/dpa-template)** - Data processing agreement
 
 ---
 
@@ -697,3 +697,4 @@ Privacy Audit Events:
 **Compliance:** GDPR, CCPA, PIPEDA, LGPD
 
 *Privacy is a fundamental right. PenguinMails is committed to protecting user privacy through technical excellence, transparency, and accountability.*
+

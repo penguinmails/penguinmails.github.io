@@ -440,11 +440,11 @@ This document provides a comprehensive analysis of all third-party service depen
 
 ### Internal Reviews
 
-- [Third-Party Dependencies Report (Findings)](.kiro/specs/feature-completeness-review/findings/third-party-dependencies.md) - Detailed analysis
+- [Third-Party Dependencies Report (Findings)](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/third-party-dependencies) - Detailed analysis
 
-- [Integrations Third-Party Dependencies](.kiro/specs/feature-completeness-review/findings/integrations-third-party-dependencies.md) - Integrations-specific analysis
+- [Integrations Third-Party Dependencies](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/integrations-third-party-dependencies) - Integrations-specific analysis
 
-- [Vault Integration Architecture](.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Vault architecture
+- [Vault Integration Architecture](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Vault architecture
 
 ### Feature Documentation
 
@@ -468,10 +468,11 @@ This document provides a comprehensive analysis of all third-party service depen
 
 - [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical dependencies
 
-- [Master Roadmap](.kiro/specs/feature-completeness-review/findings/master-roadmap.md) - Consolidated roadmap
+- [Master Roadmap](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/master-roadmap) - Consolidated roadmap
 
 ---
 
 **Review Cycle:** Quarterly (re-evaluate costs and alternatives)
 **Next Review:** February 2026
 **Maintained By:** Technical Architecture Team
+

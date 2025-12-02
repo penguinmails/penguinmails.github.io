@@ -289,9 +289,9 @@ Customer retention represents the foundation of sustainable business growth, pro
 
 ## Related Documentation
 
-- [Customer Retention Details](retention-detailed)
+- [Customer Retention Details](/docs/business/customer-success/retention/retention-detailed)
 
-- [Expansion Strategies](expansion-strategies)
+- [Expansion Strategies](/docs/business/customer-success/retention/expansion-strategies)
 
 - [Customer Health Scoring](/docs/business/analytics/overview)
 
@@ -300,3 +300,4 @@ Customer retention represents the foundation of sustainable business growth, pro
 ---
 
 ### Level 1: Executive summary for strategic retention decision-making
+

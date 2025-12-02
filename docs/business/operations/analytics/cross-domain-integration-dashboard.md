@@ -523,15 +523,15 @@ The Operations Cross-Domain Integration Performance Dashboard provides comprehen
 
 ## Related Integration Documents
 
-- [Operations Analytics Framework](.) - Operations analytics context and strategic alignment
+- [Operations Analytics Framework](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 
-- [Operations Executive Dashboard Framework](.) - Executive operations context and integration
+- [Operations Executive Dashboard Framework](/docs/business/operations/analytics) - Executive operations context and integration
 
-- [Operations Analytics Executive Dashboard](.) - Operations analytics with integration tracking
+- [Operations Analytics Executive Dashboard](/docs/business/operations/analytics) - Operations analytics with integration tracking
 
-- [Operations Success Metrics Dashboard](.) - Operations success tracking with integration
+- [Operations Success Metrics Dashboard](/docs/business/operations/analytics) - Operations success tracking with integration
 
-- [Operations ROI Business Impact Dashboard](.) - ROI business impact with integration analytics
+- [Operations ROI Business Impact Dashboard](/docs/business/operations/analytics) - ROI business impact with integration analytics
 
 ## Next Steps
 
@@ -550,3 +550,4 @@ The Operations Cross-Domain Integration Performance Dashboard provides comprehen
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 4-5 weeks for comprehensive cross-domain integration dashboard implementation
 ---
+

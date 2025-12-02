@@ -915,7 +915,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 
-- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Complete gap analysis
+- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Complete gap analysis
 
 ### Feature Documentation
 
@@ -944,3 +944,4 @@ This document outlines the detailed roadmap for analytics and reporting features
 **Last Updated**: November 26, 2025
 **Review Cycle**: Monthly
 **Next Review**: After MVP analytics dashboard implementation
+

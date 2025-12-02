@@ -7,25 +7,25 @@ persona: "Documentation Users"
 related_docs:
 
 
-  - "[Architecture](architecture) - Hybrid PostgreSQL + Redis design"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - Hybrid PostgreSQL + Redis design"
 
 
-  - "[Database Schema](database-schema) - Job tables and indexes"
+  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 
 
-  - "[Management](management) - Redis queues and migrator process"
+  - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis queues and migrator process"
 
 
-  - "[Workers](workers) - Background job processing"
+  - "[Workers](/docs/implementation-technical/database-infrastructure/queue/workers) - Background job processing"
 
 
-  - "[Operations](operations) - Deployment and health monitoring"
+  - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and health monitoring"
 
 
-  - "[Best Practices](best-practices) - Performance and reliability guidelines"
+  - "[Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices) - Performance and reliability guidelines"
 
 
-  - "[Entity Relationship Diagram](mermaid-er) - Database schema visualization"
+  - "[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Database schema visualization"
 ---
 
 
@@ -147,7 +147,7 @@ The PostgreSQL component provides:
 
 - Integration with analytics and reporting systems
 
-**See detailed documentation**: [Database Schema](database-schema)
+**See detailed documentation**: [Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema)
 
 ### 2. Redis Queue Structure (Fast Processing)
 
@@ -161,7 +161,7 @@ The Redis component provides:
 
 - Horizontal scaling capabilities
 
-**See detailed documentation**: [Management](management)
+**See detailed documentation**: [Management](/docs/implementation-technical/database-infrastructure/queue/management)
 
 ### 3. Queuer Process Implementation
 
@@ -175,7 +175,7 @@ The migrator service handles:
 
 - Error handling and retry logic
 
-**See detailed documentation**: [Management](management)
+**See detailed documentation**: [Management](/docs/implementation-technical/database-infrastructure/queue/management)
 
 ### 4. Worker Server Implementation
 
@@ -189,7 +189,7 @@ Worker processes provide:
 
 - Dead letter queue management
 
-**See detailed documentation**: [Workers](workers)
+**See detailed documentation**: [Workers](/docs/implementation-technical/database-infrastructure/queue/workers)
 
 ---
 
@@ -205,7 +205,7 @@ Worker processes provide:
 
 - **Health Monitoring**: Real-time system health tracking
 
-**See detailed documentation**: [Operations](operations)
+**See detailed documentation**: [Operations](/docs/implementation-technical/database-infrastructure/queue/operations)
 
 ---
 
@@ -241,7 +241,7 @@ Worker processes provide:
 
 - Comprehensive audit logging
 
-**See detailed documentation**: [Best Practices](best-practices)
+**See detailed documentation**: [Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices)
 
 ---
 
@@ -320,10 +320,11 @@ For detailed implementation guidance, refer to the specific component documentat
 
 **Related Documents:**
 
-- [Database Schema](database-schema) - Complete database schema with queue tables
+- [Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Complete database schema with queue tables
 
-- [Operations](operations) - Infrastructure setup and deployment
+- [Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Infrastructure setup and deployment
 
-- [Entity Relationship Diagram](mermaid-er) - Visual database schema
+- [Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual database schema
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, asynchronous processing
+

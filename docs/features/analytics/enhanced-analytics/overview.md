@@ -983,7 +983,7 @@ The system will automatically generate recommendations:
 
 ### Feature Completeness Review
 
-- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Comprehensive review including enhanced analytics roadmap items
+- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Comprehensive review including enhanced analytics roadmap items
 
 ### Related Features
 
@@ -996,6 +996,7 @@ The system will automatically generate recommendations:
 **Last Updated**: 2025-11-24
 **Owner**: Data Engineering + Backend Team
 **Status**: Planned - Q1 2026 enhancement to basic analytics
+
 
 
 

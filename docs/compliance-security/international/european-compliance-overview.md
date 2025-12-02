@@ -88,17 +88,17 @@ European data protection regulations present both significant compliance challen
 
 ### Level 2 - Detailed Compliance Analysis
 
-- **[GDPR Compliance Analysis](gdpr-compliance):** Complete analysis of GDPR requirements and implications
+- **[GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance):** Complete analysis of GDPR requirements and implications
 
-- **[ePrivacy Directive Compliance](eprivacy-compliance):** Electronic communications and marketing regulations
+- **[ePrivacy Directive Compliance](/docs/compliance-security/international/eprivacy-compliance):** Electronic communications and marketing regulations
 
-- **[National Laws Impact](national-laws-compliance):** Country-specific compliance variations
+- **[National Laws Impact](/docs/compliance-security/international/national-laws-compliance):** Country-specific compliance variations
 
 ### Level 3 - Implementation and Strategy
 
-- **[Technical Implementation Guide](technical-implementation):** Detailed technical architecture and security requirements
+- **[Technical Implementation Guide](/docs/compliance-security/international/technical-implementation):** Detailed technical architecture and security requirements
 
-- **[Strategic Compliance Recommendations](strategic-compliance):** Business strategy and market entry guidance
+- **[Strategic Compliance Recommendations](/docs/compliance-security/international/strategic-compliance):** Business strategy and market entry guidance
 
 ## Key Success Metrics
 
@@ -146,3 +146,4 @@ European data protection regulations present both significant compliance challen
 **Document Classification:** Level 1 - Strategic Overview
 **Last Modified:** November 19, 2025
 **Version Control:** 1.0 - Initial publication
+

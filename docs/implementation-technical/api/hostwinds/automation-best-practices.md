@@ -383,7 +383,7 @@ class HostwindsInputValidator {
   }
 
   static validateHostname(hostname) {
-    const hostnameRegex = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*$/i;
+    const hostnameRegex = /^[a-z0-9](/docs/implementation-technical/api/hostwinds/[a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9](/docs/implementation-technical/api/hostwinds/[a-z0-9-]{0,61}[a-z0-9])?)*$/i;
     if (!hostnameRegex.test(hostname)) {
       throw new Error(`Invalid hostname: ${hostname}`);
     }
@@ -740,3 +740,4 @@ class MetricsCollector {
 ---
 
 **Keywords**: Hostwinds automation, API best practices, error handling, retry logic, rate limiting, security, resilience patterns
+

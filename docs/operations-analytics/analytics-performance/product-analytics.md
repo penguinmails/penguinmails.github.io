@@ -567,11 +567,11 @@ Recommendations
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](.) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance) - Main operations framework
 
-- [User Analytics](.) - User behavior analysis
+- [User Analytics](/docs/operations-analytics/analytics-performance) - User behavior analysis
 
-- [Performance KPIs](.) - Comprehensive KPI framework
+- [Performance KPIs](/docs/operations-analytics/analytics-performance) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -611,9 +611,9 @@ Recommendations
 
 Navigate to specific product areas:
 
-- **[User Analytics](.)** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations-analytics/analytics-performance)** → User behavior and engagement analysis
 
-- **[Metrics & KPIs](.)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** → Comprehensive KPI framework
 
 - **[Team Performance](/docs/operations-analytics/team-performance)** → Team coordination and development
 
@@ -621,3 +621,4 @@ Navigate to specific product areas:
 
 **Keywords**: product analytics, feature adoption, A/B testing, product-market fit, feature lifecycle, roadmap prioritization, performance optimization, innovation metrics, UX analytics
 ---
+

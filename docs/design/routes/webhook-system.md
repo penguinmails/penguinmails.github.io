@@ -231,7 +231,7 @@ Each card displays:
 
 **Event Preview**:
 
-"You've selected 5 events. [View sample payloads →](#event-samples)"
+"You've selected 5 events. [View sample payloads →](/docs/design/routes/#event-samples)"
 
 #### Step 3: Event Filters (Optional)
 
@@ -356,7 +356,7 @@ Sending test event to https://yourapp.com/webhooks...
 
 - [View Webhook Details →](/dashboard/settings/webhooks/wh_abc123)
 
-- [View Code Examples →](#code-examples)
+- [View Code Examples →](/docs/design/routes/#code-examples)
 
 - [Test Webhook →](/dashboard/settings/webhooks/wh_abc123/test)
 
@@ -1077,3 +1077,4 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 **Target Release:** Q1 2026
 
 *Webhook system routes provide comprehensive tools for developers to receive real-time event notifications with secure delivery, retry logic, and detailed monitoring.*
+

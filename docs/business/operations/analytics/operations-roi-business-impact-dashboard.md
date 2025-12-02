@@ -521,15 +521,15 @@ The Operations ROI and Business Impact Dashboard provides comprehensive operatio
 
 ## Related ROI Documents
 
-- [Operations Analytics Framework](.) - Operations analytics context and strategic alignment
+- [Operations Analytics Framework](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 
-- [Operations Executive Dashboard Framework](.) - Executive operations context and ROI integration
+- [Operations Executive Dashboard Framework](/docs/business/operations/analytics) - Executive operations context and ROI integration
 
-- [Operations Analytics Executive Dashboard](.) - Operations analytics with ROI tracking
+- [Operations Analytics Executive Dashboard](/docs/business/operations/analytics) - Operations analytics with ROI tracking
 
-- [Operations Success Metrics Dashboard](.) - Operations success tracking with ROI integration
+- [Operations Success Metrics Dashboard](/docs/business/operations/analytics) - Operations success tracking with ROI integration
 
-- [Cross-Domain Integration Dashboard](.) - Cross-domain integration with ROI analytics
+- [Cross-Domain Integration Dashboard](/docs/business/operations/analytics) - Cross-domain integration with ROI analytics
 
 ## Next Steps
 
@@ -548,3 +548,4 @@ The Operations ROI and Business Impact Dashboard provides comprehensive operatio
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 4-5 weeks for comprehensive operations ROI business impact dashboard implementation
 ---
+

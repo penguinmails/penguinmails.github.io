@@ -728,7 +728,7 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 
 - **[Third-Party Dependencies](/docs/features/analytics/third-party-dependencies)** - External services and integrations
 
-- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Comprehensive review of current state, missing features, and roadmap
+- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Comprehensive review of current state, missing features, and roadmap
 
 ### Technical Implementation
 
@@ -737,3 +737,4 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 - **[Queue System](/docs/features/queue/background-jobs)** - Background job processing for reports
 
 ---
+

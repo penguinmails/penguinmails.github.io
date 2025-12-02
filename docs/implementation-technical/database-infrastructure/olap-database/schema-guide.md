@@ -326,7 +326,7 @@ This keeps the OLAP schema lean, focused, and maintainable.
 
 See ER diagram:
 
-- [`mermaid-er`](mermaid-er)
+- [`mermaid-er`](/docs/implementation-technical/database-infrastructure/olap-database/mermaid-er)
 
 Key relationships:
 
@@ -423,3 +423,4 @@ Notifications/system events, logs, and jobs:
 - Live in their respective tiers and feed OLAP only via intentional, aggregate pipelines when justified.
 
 Use this guide as the authoritative reference for what belongs in the OLAP warehouse.
+

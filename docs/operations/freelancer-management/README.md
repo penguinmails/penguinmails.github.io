@@ -69,7 +69,7 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 ### Level 2: Operational Framework
 
-- [Freelancer Operations Framework](framework)
+- [Freelancer Operations Framework](/docs/operations/freelancer-management/framework)
 
 - Detailed operational procedures and coordination protocols
 
@@ -77,7 +77,7 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 ### Level 3: Implementation Templates
 
-- [Freelancer Agreements and Templates](templates)
+- [Freelancer Agreements and Templates](/docs/operations/freelancer-management/templates)
 
 - Detailed procedures, forms, and operational templates
 
@@ -204,3 +204,4 @@ For unified standards that apply to both internal operations and external freela
 **Document Classification:** Level 1 - Strategic Overview
 **Business Value:** Comprehensive freelancer management framework ensuring operational excellence and quality assurance
 **Implementation Status:** Strategic framework ready for operational implementation
+

@@ -258,7 +258,7 @@ persona: "Frontend Developers"
 
 **User Story**: *"As an agency user working across multiple clients, I want seamless context switching, so I don't lose my workflow."*
 
-**Mechanism** (as described in [Core App Structure](core-app-structure)):
+**Mechanism** (as described in [Core App Structure](/docs/design/routes/core-app-structure)):
 
 - **Context Switcher in Sidebar**: Dropdown showing current workspace.
 
@@ -340,3 +340,4 @@ persona: "Frontend Developers"
 - **`RoleBadge`**: Reused in Team Settings and Admin Users.
 
 - **`Sparkline`**: Reused in Workspace Card and Dashboard.
+

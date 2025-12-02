@@ -7,13 +7,13 @@ persona: "Engineering Teams"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Operations](operations) - Deployment and monitoring"
+  - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and monitoring"
 ---
 
 
@@ -312,3 +312,4 @@ These best practices provide a foundation for building and operating a robust, s
 **Operations**: Proper deployment strategies, capacity planning, and error handling
 
 Following these guidelines will help ensure your queue system can handle production workloads reliably while remaining maintainable and observable.
+

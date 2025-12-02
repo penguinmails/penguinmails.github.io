@@ -7,13 +7,13 @@ persona: "Backend Engineers"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Management](management) - Redis and migrator details"
+  - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
 
 
@@ -660,3 +660,4 @@ Worker processes provide:
 - **Monitoring Integration**: Real-time health and performance metrics
 
 This architecture ensures robust, scalable job processing that can handle varying workloads while maintaining system reliability and performance.
+

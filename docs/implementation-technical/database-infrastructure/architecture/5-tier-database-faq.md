@@ -361,10 +361,11 @@ How would you design the system to meet various compliance requirements?
 
 **Related Documentation**:
 
-- [5-Tier Database Architecture Guide](5-tier-database-architecture-guide) - Core architectural concepts
+- [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Core architectural concepts
 
-- [5-Tier Database Implementation Guide](5-tier-database-implementation-guide) - Implementation patterns and practices
+- [5-Tier Database Implementation Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-implementation-guide) - Implementation patterns and practices
 
-- [Database Infrastructure Overview](README) - Complete ecosystem understanding
+- [Database Infrastructure Overview](/docs/implementation-technical/database-infrastructure/architecture/README) - Complete ecosystem understanding
 
 **Keywords**: architecture review, database design questions, implementation challenges, architectural decisions, system design, technical architecture
+

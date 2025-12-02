@@ -1131,13 +1131,13 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](.) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance) - Main operations framework
 
-- [User Analytics](.) - User behavior analysis
+- [User Analytics](/docs/operations-analytics/analytics-performance) - User behavior analysis
 
-- [Product Analytics](.) - Feature performance analysis
+- [Product Analytics](/docs/operations-analytics/analytics-performance) - Feature performance analysis
 
-- [Metrics & KPIs](.) - Comprehensive KPI framework
+- [Metrics & KPIs](/docs/operations-analytics/analytics-performance) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -1187,11 +1187,11 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 
 Navigate to specific analytics and campaign areas:
 
-- **[User Analytics](.)** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations-analytics/analytics-performance)** → User behavior and engagement analysis
 
-- **[Product Analytics](.)** → Feature performance and optimization
+- **[Product Analytics](/docs/operations-analytics/analytics-performance)** → Feature performance and optimization
 
-- **[Metrics & KPIs](.)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** → Comprehensive KPI framework
 
 - **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
 
@@ -1199,3 +1199,4 @@ Navigate to specific analytics and campaign areas:
 
 **Keywords**: user journey analytics, campaign performance, email marketing analytics, deliverability monitoring, engagement tracking, campaign optimization, journey mapping, performance analytics
 ---
+

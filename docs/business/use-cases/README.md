@@ -13,13 +13,13 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 
 ## Use Case Categories
 
-- [Agencies](agencies) - Agency-specific implementations and strategies
+- [Agencies](/docs/business/use-cases/agencies) - Agency-specific implementations and strategies
 
-- [Startups](startups) - Startup and small business use cases
+- [Startups](/docs/business/use-cases/startups) - Startup and small business use cases
 
-- [Enterprises](enterprises) - Large organization implementations
+- [Enterprises](/docs/business/use-cases/enterprises) - Large organization implementations
 
-- [Specific Industries](specific-industries) - Industry-specific use cases
+- [Specific Industries](/docs/business/use-cases/specific-industries) - Industry-specific use cases
 
 ## Use Case Framework
 
@@ -69,7 +69,7 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 
 - **Solution**: Advanced analytics with custom reporting templates
 
-→ [Detailed Agency Use Cases](agencies)
+→ [Detailed Agency Use Cases](/docs/business/use-cases/agencies)
 
 ## Startup Use Cases
 
@@ -97,7 +97,7 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 
 - **Solution**: Predictable pricing with auto-scaling capabilities
 
-→ [Detailed Startup Use Cases](startups)
+→ [Detailed Startup Use Cases](/docs/business/use-cases/startups)
 
 ## Enterprise Use Cases
 
@@ -125,7 +125,7 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 
 - **Solution**: Automated compliance management with detailed reporting
 
-→ [Detailed Enterprise Use Cases](enterprises)
+→ [Detailed Enterprise Use Cases](/docs/business/use-cases/enterprises)
 
 ## Industry-Specific Use Cases
 
@@ -169,7 +169,7 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 
 - Accounting firm client acquisition
 
-→ [Detailed Industry Use Cases](specific-industries)
+→ [Detailed Industry Use Cases](/docs/business/use-cases/specific-industries)
 
 ## Use Case Selection Guide
 
@@ -206,6 +206,7 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 - **200+ employees**: Full enterprise implementations
 
 ---
-*Previous: [Compliance & Security](compliance-security) | Next: [Getting Started](getting-started) →*
+*Previous: [Compliance & Security](/docs/business/use-cases/compliance-security) | Next: [Getting Started](/docs/business/use-cases/getting-started) →*
 
 ---
+

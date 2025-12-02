@@ -2153,5 +2153,6 @@ async function demonstrateValidation() {
 
 - **Irrelevant details**: Focus on the bug, not your day
 
-For testing requirements, see [`testing-requirements.md`](testing-requirements).
-For the contribution process, see [`code-contribution.md`](code-contribution).
+For testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
+For the contribution process, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
+

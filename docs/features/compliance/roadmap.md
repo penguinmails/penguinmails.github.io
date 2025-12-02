@@ -23,7 +23,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 **CRITICAL FINDING:** PenguinMails has exceptional compliance and security coverage for an MVP. After comprehensive gap analysis (November 26, 2025), **NO critical MVP gaps were identified**. All essential compliance and security features are documented and ready for launch.
 
-**Feature Completeness Review:** See [Compliance & Security Feature Review](.kiro/specs/feature-completeness-review/findings/compliance-security.md) for detailed gap analysis with 50+ cross-references to documentation, routes, APIs, and implementation tasks.
+**Feature Completeness Review:** See [Compliance & Security Feature Review](/docs/features/compliance/.kiro/specs/feature-completeness-review/findings/compliance-security) for detailed gap analysis with 50+ cross-references to documentation, routes, APIs, and implementation tasks.
 
 ### Current Status
 
@@ -1516,6 +1516,7 @@ Q2 2027: FedRAMP, Advanced DLP
 **Owner:** Security & Compliance Team
 
 *This roadmap is subject to change based on customer needs, regulatory requirements, and business priorities.*
+
 
 
 

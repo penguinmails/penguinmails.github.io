@@ -550,11 +550,12 @@ export function Button({
 
 - [Design System](/docs/design/design-system) - Complete design system overview
 
-- [Design Tokens](design-tokens) - Design token specifications
+- [Design Tokens](/docs/design/design-tokens) - Design token specifications
 
-- [Component Library](component-library) - Reusable component catalog
+- [Component Library](/docs/design/component-library) - Reusable component catalog
 
-- [UI Library](component-library) - Component usage guidelines and patterns
+- [UI Library](/docs/design/component-library) - Component usage guidelines and patterns
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---
+

@@ -945,7 +945,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 ### Architecture & Implementation
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
 - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
@@ -965,3 +965,4 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Integrations Team
+

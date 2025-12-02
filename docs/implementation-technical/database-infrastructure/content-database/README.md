@@ -15,11 +15,11 @@ This directory contains comprehensive documentation for the PenguinMails Content
 
 ### Core Components
 
-- **[Analysis](analysis)** - Current model analysis, gotchas, and refinement proposals
+- **[Analysis](/docs/implementation-technical/database-infrastructure/content-database/analysis)** - Current model analysis, gotchas, and refinement proposals
 
-- **[Schema Guide](schema-guide)** - Complete database schema and design principles
+- **[Schema Guide](/docs/implementation-technical/database-infrastructure/content-database/schema-guide)** - Complete database schema and design principles
 
-- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
+- **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/content-database/mermaid-er)** - Database schema visualization
 
 ### Design Principles
 
@@ -35,9 +35,9 @@ This directory contains comprehensive documentation for the PenguinMails Content
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Analysis](analysis) | Design analysis and improvement proposals | Technical architects |
-| [Schema Guide](schema-guide) | Complete database schema and implementation | Database engineers |
-| [Mermaid ER](mermaid-er) | Visual database schema representation | All technical stakeholders |
+| [Analysis](/docs/implementation-technical/database-infrastructure/content-database/analysis) | Design analysis and improvement proposals | Technical architects |
+| [Schema Guide](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) | Complete database schema and implementation | Database engineers |
+| [Mermaid ER](/docs/implementation-technical/database-infrastructure/content-database/mermaid-er) | Visual database schema representation | All technical stakeholders |
 
 ## Key Concepts
 
@@ -81,11 +81,11 @@ This design avoids:
 
 ## Getting Started
 
-1. Review [Analysis](analysis) for current state understanding and proposals
+1. Review [Analysis](/docs/implementation-technical/database-infrastructure/content-database/analysis) for current state understanding and proposals
 
-2. Consult [Schema Guide](schema-guide) for implementation details
+2. Consult [Schema Guide](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) for implementation details
 
-3. Reference [Mermaid ER](mermaid-er) for visual schema understanding
+3. Reference [Mermaid ER](/docs/implementation-technical/database-infrastructure/content-database/mermaid-er) for visual schema understanding
 
 4. Follow design principles for new development
 
@@ -102,3 +102,4 @@ This content database integrates with:
 - Backup systems for data durability and compliance
 
 For questions or support, contact the Engineering team.
+

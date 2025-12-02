@@ -24,13 +24,13 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### ✅ Available Now (Documented)
 
-- **[Leads Management](./leads-management.md)** - Contact storage and segmentation
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact storage and segmentation
 
-- **[Contact Segmentation](./contact-segmentation.md)** - Dynamic and static contact segmentation
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Dynamic and static contact segmentation
 
-- **[Lead Scoring](./lead-scoring.md)** - Engagement-based lead scoring system
+- **[Lead Scoring](/docs/features/leads/lead-scoring)** - Engagement-based lead scoring system
 
-- **[Import/Export](./import-export.md)** - Bulk contact import/export with field mapping
+- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact import/export with field mapping
 
 ### 🚧 MVP Implementation Required (Q1 2026)
 
@@ -68,7 +68,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Planning & Strategy
 
-- [Lead Management Roadmap](./roadmap.md) - Detailed timeline and quarterly breakdown
+- [Lead Management Roadmap](/docs/features/leads/roadmap) - Detailed timeline and quarterly breakdown
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
@@ -96,4 +96,5 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README)
+

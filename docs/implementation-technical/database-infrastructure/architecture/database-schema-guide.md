@@ -73,9 +73,9 @@ Key principles:
 
 Reference:
 
-- [`oltp-database/`](oltp-database/) - Complete OLTP database schema with multi-tenant design
+- [`oltp-database/`](/docs/implementation-technical/database-infrastructure/architecture/oltp-database/) - Complete OLTP database schema with multi-tenant design
 
-- [`oltp-database/mermaid-er`](oltp-database/mermaid-er) - Visual OLTP schema representation
+- [`oltp-database/mermaid-er`](/docs/implementation-technical/database-infrastructure/architecture/oltp-database/mermaid-er) - Visual OLTP schema representation
 
 ---
 
@@ -519,3 +519,4 @@ Overall:
   - Remains a lean analytical layer, safe to be non-critical in outages.
 
 Use this behavior model when designing failure handling and incident response flows across the stack.
+

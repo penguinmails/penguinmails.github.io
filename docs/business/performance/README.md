@@ -17,15 +17,15 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 ### 📊 Performance Documents
 
-- [**Performance Dashboard**](.) - Executive performance overview (≤200 lines)
+- [**Performance Dashboard**](/docs/business/performance) - Executive performance overview (≤200 lines)
 
-- [**Performance Overview**](.) - Strategic performance summary (≤200 lines)
+- [**Performance Overview**](/docs/business/performance) - Strategic performance summary (≤200 lines)
 
-- [**Performance Optimization**](.) - Performance improvement strategies (≤300 lines)
+- [**Performance Optimization**](/docs/business/performance) - Performance improvement strategies (≤300 lines)
 
-- [**Performance Benchmarks**](.) - Industry benchmarking analysis (≤300 lines)
+- [**Performance Benchmarks**](/docs/business/performance) - Industry benchmarking analysis (≤300 lines)
 
-- [**Performance Provider Analysis**](.) - ESP performance strategy (≤300 lines)
+- [**Performance Provider Analysis**](/docs/business/performance) - ESP performance strategy (≤300 lines)
 
 ### 🎯 Performance Analysis Path
 
@@ -74,3 +74,4 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 ---
 
 *This performance directory provides comprehensive tools and analysis for measuring, monitoring, and optimizing PenguinMails performance across all operational dimensions.*
+

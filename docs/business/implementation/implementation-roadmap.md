@@ -473,7 +473,7 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
         - Strategic consolidated, opinionated internal "Revenue Risk Overview" built on:
 
-          - Strategic PostHog business events and integrations delivered via [`BF-003`](tasks/user-stories-framework),
+          - Strategic PostHog business events and integrations delivered via [`BF-003`](/docs/business/implementation/tasks/user-stories-framework),
 
           - Strategic internal BI views and OLAP aggregates,
 
@@ -747,3 +747,4 @@ strategic implementation roadmap, strategic email infrastructure deployment, str
 
 *This strategic implementation framework is part of the comprehensive Progressive Disclosure Framework for Strategic Financial Documentation. Use alongside strategic executive summary and strategic competitive analysis for complete strategic planning.*
 ---
+

@@ -445,9 +445,9 @@ The Operations Strategy Framework provides comprehensive strategic operations pl
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Strategic operations management and coordination
 
-- [Security Operations Framework](.) - Strategic security operations and threat management
+- [Security Operations Framework](/docs/business/operations/strategy) - Strategic security operations and threat management
 
-- [Risk Management Framework](.) - Strategic risk management and mitigation
+- [Risk Management Framework](/docs/business/operations/strategy) - Strategic risk management and mitigation
 
 ## Next Steps
 
@@ -469,3 +469,4 @@ The Operations Strategy Framework provides comprehensive strategic operations pl
 **Expected Timeline:** 2-3 weeks for comprehensive operations strategy implementation
 **Business Value:** $2.5M+ annual operations strategy value delivery through systematic strategic planning
 ---
+

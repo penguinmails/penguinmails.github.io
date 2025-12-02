@@ -197,9 +197,9 @@ For 100K email campaigns, provider selection affects deliverability:
 
 ## For strategic context
 
-- [Executive Summary](executive-summary) - Strategic findings and recommendations
+- [Executive Summary](/docs/business/core/executive-summary) - Strategic findings and recommendations
 
-- [ROI Calculator](roi-calculator) - Cost-benefit analysis tool
+- [ROI Calculator](/docs/business/core/roi-calculator) - Cost-benefit analysis tool
 
 ## For detailed analysis
 
@@ -221,3 +221,4 @@ competitive analysis, provider comparison, ESP selection matrix, vendor comparis
 
 *This competitive analysis is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside ROI calculator and implementation roadmap for complete vendor selection process.*
 ---
+
