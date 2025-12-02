@@ -195,7 +195,7 @@ For unified standards that apply to both internal operations and external freela
 
 - **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/freelancer-support/quotation-guide)
 
-- [Shared Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines) - Common quality and conduct standards
+- [Shared Freelancer Standards](/docs/operations/freelancer-management/standards-and-guidelines) - Common quality and conduct standards
 
 - [Compliance Framework](/docs/compliance-security/) - Data protection and privacy requirements
 

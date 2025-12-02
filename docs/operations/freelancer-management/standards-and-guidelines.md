@@ -1,7 +1,7 @@
 ---
 title: "Shared Freelancer Standards and Guidelines"
 description: "Common professional standards, quality metrics, and communication protocols for freelancer operations"
-last_modified_date: "2025-11-19"
+last_modified_date: "2025-12-02"
 level: "2"
 persona: "Documentation Users"
 ---

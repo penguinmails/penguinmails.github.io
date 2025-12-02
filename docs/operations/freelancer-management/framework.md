@@ -467,7 +467,7 @@ While this framework focuses on operational management, we support freelancer su
 
 For unified standards that support both operational excellence and freelancer success:
 
-- [Shared Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines) - Common quality and conduct standards
+- [Shared Freelancer Standards](/docs/operations/freelancer-management/standards-and-guidelines) - Common quality and conduct standards
 
 - [Data Protection Requirements](/docs/compliance-security/) - Unified compliance framework
 
