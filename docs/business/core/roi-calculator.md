@@ -48,7 +48,7 @@ graph TD
 
 ### Current State vs. Optimized Infrastructure
 
-## Enter your current metrics below to calculate potential savings
+**Enter your current metrics below to calculate potential savings**
 
 #### Input Variables
 
@@ -233,6 +233,8 @@ graph TD
 ---
 
 ROI calculator, cost-benefit analysis, TCO analysis, email infrastructure ROI, managed ESP vs self-hosted, payback period, financial planning
+
+---
 
 ---
 
