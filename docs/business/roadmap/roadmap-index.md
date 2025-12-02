@@ -27,7 +27,7 @@ This document serves as the central hub for all roadmap information, providing r
 
 - [`Executive Roadmap`](/docs/business/roadmap/executive-roadmap) - Strategic investment and business impact
 
-- [`Roadmap Considerations`](/docs/roadmap-considerations) - Understanding our development approach
+- [`Roadmap Considerations`](/docs/operations/roadmap/roadmap-considerations) - Understanding our development approach
 
 **What You'll Find**:
 
@@ -333,7 +333,7 @@ This document serves as the central hub for all roadmap information, providing r
 
 ### Documentation Issues
 
-- **Roadmap Philosophy**: [`Roadmap Considerations`](/docs/roadmap-considerations)
+- **Roadmap Philosophy**: [`Roadmap Considerations`](/docs/operations/roadmap/roadmap-considerations)
 
 - **Implementation Questions**: [`Implementation Roadmap`](/docs/business/implementation)
 
@@ -360,6 +360,6 @@ This document serves as the central hub for all roadmap information, providing r
 **Document Classification:** Level 1 - Central Navigation Hub
 **Review Cycle:** Monthly roadmap updates and quarterly strategic review
 **Stakeholder Access:** All teams with role-specific sections
-**Roadmap Philosophy:** [`Roadmap Considerations`](/docs/roadmap-considerations)
+**Roadmap Philosophy:** [`Roadmap Considerations`](/docs/operations/roadmap/roadmap-considerations)
 
 This roadmap index provides central navigation and quick reference for all roadmap information, enabling informed decision-making across all teams and roles.

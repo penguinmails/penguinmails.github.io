@@ -32,13 +32,13 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 3. Experience level: "New Freelancers" selection
 
-4. Navigation to: [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)
+4. Navigation to: [Freelancer Onboarding Hub](/docs/operations/freelancer-management/onboarding/README)
 
-5. First step: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
+5. First step: [Task Clarity Essentials](/docs/operations/freelancer-management/onboarding/task-clarity-essentials)
 
-6. Next step: [Success Center](/docs/freelancer-support/README)
+6. Next step: [Success Center](/docs/operations/freelancer-management/support/README)
 
-7. Professional preparation: [Quotation Guide](/docs/freelancer-support/quotation-guide)
+7. Professional preparation: [Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide)
 
 8. Complete operations: [Operations Framework](/docs/operations/freelancer-management/framework)
 
@@ -74,11 +74,11 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 3. Experience level: "Experienced Freelancers" selection
 
-4. Focus on workflow differences: [Task Clarity Essentials - SOP Workflow](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow)
+4. Focus on workflow differences: [Task Clarity Essentials - SOP Workflow](/docs/operations/freelancer-management/onboarding/task-clarity-essentials#sop-workflow)
 
 5. Communication standards: [Operations Framework - Communication Protocols](/docs/operations/freelancer-management/framework#communication-protocols)
 
-6. Payment model adaptation: [Quotation Guide - Task-based Payment](/docs/freelancer-support/quotation-guide#task-based-payment-model)
+6. Payment model adaptation: [Quotation Guide - Task-based Payment](/docs/operations/freelancer-management/support/quotation-guide#task-based-payment-model)
 
 **Success Metrics**:
 
@@ -110,11 +110,11 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 3. Experience level: "Industry Specialists" selection
 
-4. Specialization focus: [Success Center - Industry Specialization](/docs/freelancer-support/README#industry-specialization)
+4. Specialization focus: [Success Center - Industry Specialization](/docs/operations/freelancer-management/support/README#industry-specialization)
 
-5. Premium positioning: [Task Clarity Essentials - Premium Task Standards](/docs/freelancer-onboarding/task-clarity-essentials)
+5. Premium positioning: [Task Clarity Essentials - Premium Task Standards](/docs/operations/freelancer-management/onboarding/task-clarity-essentials)
 
-6. High-value proposals: [Quotation Guide - Premium Services](/docs/freelancer-support/quotation-guide)
+6. High-value proposals: [Quotation Guide - Premium Services](/docs/operations/freelancer-management/support/quotation-guide)
 
 7. Leadership opportunities: [Operations Framework - Advanced Roles](/docs/operations/freelancer-management/framework)
 
@@ -142,7 +142,7 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 **Expected Journey**:
 
-1. Direct navigation to [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
+1. Direct navigation to [Task Clarity Essentials](/docs/operations/freelancer-management/onboarding/task-clarity-essentials)
 
 2. Quick reference for specific topic (Definition of Done, Story Points, etc.)
 
@@ -307,7 +307,7 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 ### Planning
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
 
 - **[User Journeys Hub](/docs/user-journeys)** - All journeys
 

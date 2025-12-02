@@ -50,7 +50,7 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 **Goal**: Enable users to create, launch, and optimize campaigns
 
-- **[Campaign Creation Journey](/docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
+- **[Campaign Creation Journey](/docs/operations/analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
 
 - **[Template Design](/docs/user-journeys/template-design-flow)** - *[To be created]*
 
@@ -252,7 +252,7 @@ level: "2"
 
 ### Planning
 
-- **[Roadmap](/docs/roadmap)** - When journeys will be improved
+- **[Roadmap](/docs/operations/roadmap)** - When journeys will be improved
 
 - **[Features](/docs/features)** - Features that support journeys
 

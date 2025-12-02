@@ -822,7 +822,7 @@ echo "Disaster recovery completed"
 
 ### **Operational References**
 
-- **[Infrastructure Operations Management](/docs/operations-analytics/operations-management)** - Central operational hub
+- **[Infrastructure Operations Management](/docs/operations/analytics/operations-management)** - Central operational hub
 
 - **[Connection Pooling Strategy](/docs/implementation-technical/database-infrastructure/architecture/connection-pooling-strategy)** - Pool management during recovery
 
@@ -836,7 +836,7 @@ echo "Disaster recovery completed"
 
 ### **Strategic Documentation**
 
-- **[Operations Analytics Overview](/docs/operations-analytics/overview)** - Main operations analytics framework
+- **[Operations Analytics Overview](/docs/operations/analytics/overview)** - Main operations analytics framework
 
 - **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic business alignment
 

@@ -910,7 +910,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Planning & Strategy
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Platform-wide feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Platform-wide feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 

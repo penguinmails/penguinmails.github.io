@@ -34,7 +34,7 @@ Perfect for:
 
 ### **Are you a Freelancer?**
 
-→ **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)**
+→ **[Freelancer Onboarding Hub](/docs/operations/freelancer-management/onboarding/README)**
 
 ## Master task requirements and delivery standards
 
@@ -96,35 +96,35 @@ Role Selection → Tailored Learning Path → Implementation → Success
 
 #### New Freelancers (Starting Your Journey)
 
-1. **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)** - Welcome and navigation
+1. **[Freelancer Onboarding Hub](/docs/operations/freelancer-management/onboarding/README)** - Welcome and navigation
 
-2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - DoD, Story Points, tools
+2. **[Task Clarity Essentials](/docs/operations/freelancer-management/onboarding/task-clarity-essentials)** - DoD, Story Points, tools
 
-3. **[Success Center Overview](/docs/freelancer-support/README)** - Build your practice
+3. **[Success Center Overview](/docs/operations/freelancer-management/support/README)** - Build your practice
 
-4. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional proposals
+4. **[Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide)** - Professional proposals
 
 5. **[Operations Framework](/docs/operations/freelancer-management/framework)** - Complete procedures
 
 #### Experienced Freelancers (Adapting to Our Model)
 
-1. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow)** - Our unique workflow approach
+1. **[Task Clarity Essentials](/docs/operations/freelancer-management/onboarding/task-clarity-essentials#sop-workflow)** - Our unique workflow approach
 
 2. **[Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols)** - Professional protocols
 
-3. **[Quotation Guide](/docs/freelancer-support/quotation-guide#task-based-payment-model)** - Task-based payment model
+3. **[Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide#task-based-payment-model)** - Task-based payment model
 
 4. **[Team Structure](/docs/operations/freelancer-management/framework#team-structure)** - Coordination protocols
 
 #### Industry Specialists (Premium Positioning)
 
-1. **[Success Center](/docs/freelancer-support/README#industry-specialization)** - Build specialization
+1. **[Success Center](/docs/operations/freelancer-management/support/README#industry-specialization)** - Build specialization
 
-2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - Master task standards
+2. **[Task Clarity Essentials](/docs/operations/freelancer-management/onboarding/task-clarity-essentials)** - Master task standards
 
-3. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - High-value service proposals
+3. **[Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide)** - High-value service proposals
 
-4. **[Premium Services Development](/docs/freelancer-support/premium-services)** - Advanced offerings
+4. **[Premium Services Development](/docs/operations/freelancer-management/support/premium-services)** - Advanced offerings
 
 5. **[Advanced Operations](/docs/operations/freelancer-management/framework)** - Leadership roles
 

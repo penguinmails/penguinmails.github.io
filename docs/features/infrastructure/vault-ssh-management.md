@@ -570,9 +570,9 @@ path "vps/*/tenant_ssh/*" {
 
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
-- **[Infrastructure Management Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure features roadmap
+- **[Infrastructure Management Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure features roadmap
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Overall technical roadmap
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Overall technical roadmap
 
 ### Implementation Tasks
 

@@ -853,11 +853,11 @@ Where:
 
 ### Operations & Analytics
 
-- [Operations Management Overview](/docs/operations-analytics/operations-management) - Operational cost management and analytics
+- [Operations Management Overview](/docs/operations/analytics/operations-management) - Operational cost management and analytics
 
-- [Payment Analytics & Financial Operations](/docs/operations-analytics/operations-management) - Financial operations and billing management
+- [Payment Analytics & Financial Operations](/docs/operations/analytics/operations-management) - Financial operations and billing management
 
-- [Infrastructure Operations Management](/docs/operations-analytics/operations-management) - Database and infrastructure operational procedures
+- [Infrastructure Operations Management](/docs/operations/analytics/operations-management) - Database and infrastructure operational procedures
 
 ### Technical Architecture
 

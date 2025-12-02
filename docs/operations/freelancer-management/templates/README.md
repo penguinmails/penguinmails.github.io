@@ -55,7 +55,7 @@ This hub provides quick access to all standardized templates required for freela
 
 - Google Docs agreement template available at [Freelancer Agreement Template](https://docs.google.com/document/d/15UFrNqx1kX0iJWSaHg_yYbR-8lpvIVuMka_DxHua_nU/edit?usp=sharing)
 
-- Shared standards in [Freelancer Standards](/docs/shared/freelancer-resources/standards-and-guidelines)
+- Shared standards in [Freelancer Standards](/docs/operations/freelancer-management/standards-and-guidelines)
 
 ---
 

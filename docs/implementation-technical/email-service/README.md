@@ -87,4 +87,4 @@ This section contains implementation guides specifically designed for email serv
 
 ---
 
-**Note**: This section is for customers using PenguinMails email services. Freelancers working on the PenguinMails platform should refer to [Freelancer Onboarding Hub](/docs/freelancer-onboarding/README) instead.
+**Note**: This section is for customers using PenguinMails email services. Freelancers working on the PenguinMails platform should refer to [Freelancer Onboarding Hub](/docs/operations/freelancer-management/onboarding/README) instead.

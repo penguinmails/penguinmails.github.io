@@ -508,7 +508,7 @@ Our pricing is designed around **cold email sending volume** and **feature acces
 
 - **[Architecture Overview](/docs/technical/architecture)** - Technical foundation
 
-- **[Key Performance Indicators](/docs/operations-analytics/analytics-performance)** - Success metrics
+- **[Key Performance Indicators](/docs/operations/analytics/analytics-performance)** - Success metrics
 
 ### **Training Materials**
 

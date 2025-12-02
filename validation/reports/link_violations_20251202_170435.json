@@ -1,0 +1,62 @@
+{
+  "timestamp": "2025-12-02T17:04:35-05:00",
+  "target_root": "docs",
+  "issues": {
+    "contributing_links": {
+      "description": "Links to CONTRIBUTING.md",
+      "count": 3,
+      "files": [
+        {"file": "docs/implementation-technical/development-guidelines/contribution-guide.md", "line": "**Documentation Development**: For documentation contribution guidelines, please refer to our **[CONTRIBUTING.md](https://github.com/penguinmails/penguinmails.github.io/blob/main/CONTRIBUTING.md)** guide which covers local development setup, content standards, and markdown linting procedures."},
+        {"file": "docs/implementation-technical/development-guidelines/documentation-contributions.md", "line": "- **[CONTRIBUTING.md](https://github.com/penguinmails/penguinmails.github.io/blob/main/CONTRIBUTING.md)** - Complete contribution guidelines including:"},
+        {"file": "docs/implementation-technical/development-guidelines/documentation-contributions.md", "line": "2. **Follow setup instructions** in [CONTRIBUTING.md](https://github.com/penguinmails/penguinmails.github.io/blob/main/CONTRIBUTING.md#development-setup)"}
+      ]
+    },
+    "readme_links": {
+      "description": "Links to root README.md",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "md_extensions": {
+      "description": "Site-absolute links with .md extension",
+      "count": 00,
+      "intermediary_file": "validation/reports/instances/md_extension_links_20251202_170435.txt",
+      "files": [
+      ]
+    },
+    "relative_md_links": {
+      "description": "Relative .md links (./  or ../)",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "relative_same_dir": {
+      "description": "Relative same-directory links (./file)",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "relative_parent_dir": {
+      "description": "Relative parent-directory links (../)",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "relative_complex": {
+      "description": "Complex relative paths (../../docs/)",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "relative_with_anchors": {
+      "description": "Relative links with anchors",
+      "count": 0,
+      "files": [
+      ]
+    },
+    "total": {
+      "count": 3
+    }
+  },
+  "total_issues": 3
+}

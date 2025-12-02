@@ -899,7 +899,7 @@ Response:
 
 ### Roadmap
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap#authentication--security)** - Authentication features timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap#authentication--security)** - Authentication features timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic authentication priorities
 

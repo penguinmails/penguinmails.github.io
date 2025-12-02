@@ -1017,11 +1017,11 @@ Comprehensive timeline for campaign management features from MVP launch through 
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical dependencies
+- [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical dependencies
 
 ---
 

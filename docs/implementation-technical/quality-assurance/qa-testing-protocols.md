@@ -441,7 +441,7 @@ Severity × User Impact × Business Value
 
 - [Infrastructure Documentation](/docs/implementation-technical/database-infrastructure) - Testing environment setup
 
-- [Sprint Retrospective Template](/docs/operations-analytics/team-performance) - Testing feedback integration
+- [Sprint Retrospective Template](/docs/operations/analytics/team-performance) - Testing feedback integration
 
 **Keywords**: quality assurance, testing protocols, automated testing, bug management, performance testing, security testing, accessibility testing, CI/CD integration, test automation, quality metrics
 ---

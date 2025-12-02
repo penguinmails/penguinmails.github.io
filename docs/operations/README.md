@@ -23,7 +23,7 @@ Comprehensive operations management framework providing strategic oversight, ope
 
 - **Freelancer Management**: [Freelancer Management Overview](/docs/operations/freelancer-management) - Strategic framework for external partnerships
 
-- **Operations Analytics**: [Operations Analytics Overview](/docs/operations-analytics/overview) - Performance monitoring and business intelligence
+- **Operations Analytics**: [Operations Analytics Overview](/docs/operations/analytics/overview) - Performance monitoring and business intelligence
 
 #### Strategic Implementation
 
@@ -49,7 +49,7 @@ Comprehensive operations management framework providing strategic oversight, ope
 
 - [Incident Response](/docs/operations/incident-response) - Crisis management and recovery protocols
 
-- [Operations Analytics](/docs/operations-analytics/overview) - Performance monitoring and optimization
+- [Operations Analytics](/docs/operations/analytics/overview) - Performance monitoring and optimization
 
 ### Level 3: Implementation Templates and Procedures
 
@@ -221,11 +221,11 @@ Comprehensive operations management framework providing strategic oversight, ope
 
 ### Analytics and Performance
 
-- [Operations Analytics](/docs/operations-analytics/overview)
+- [Operations Analytics](/docs/operations/analytics/overview)
 
 - [Business Intelligence](/docs/business/analytics/overview)
 
-- [Performance Monitoring](/docs/operations-analytics/analytics-performance)
+- [Performance Monitoring](/docs/operations/analytics/analytics-performance)
 
 ### Compliance and Security
 

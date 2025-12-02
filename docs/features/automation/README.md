@@ -202,7 +202,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Automation Roadmap](/docs/features/automation/roadmap) - Detailed implementation timeline
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
 
 - [Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap) - Feature classification
 

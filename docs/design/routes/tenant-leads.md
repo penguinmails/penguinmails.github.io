@@ -245,7 +245,7 @@
 
 **Related Documentation**:
 
-- [Lead Import Guide](/docs/freelancer-support/tutorials/lead-import)
+- [Lead Import Guide](/docs/operations/freelancer-management/support/tutorials/lead-import)
 
 - [CSV Format Requirements](/docs/technical/data-formats/csv-specs)
 
@@ -274,7 +274,7 @@
 
 - [Lead Management Roadmap](/docs/features/leads/roadmap) - Detailed timeline and quarterly breakdown
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 

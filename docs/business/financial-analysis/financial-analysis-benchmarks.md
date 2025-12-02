@@ -461,11 +461,11 @@ Strategic The Strategic B2B strategic cold strategic email strategic landscape s
 
 ### Strategic Operations & Strategic Analytics
 
-- [Strategic Operations Strategic Management Strategic Overview](/docs/operations-analytics/operations-management) - Strategic operational strategic cost strategic management and strategic analytics
+- [Strategic Operations Strategic Management Strategic Overview](/docs/operations/analytics/operations-management) - Strategic operational strategic cost strategic management and strategic analytics
 
-- [Strategic Payment Strategic Analytics & Strategic Financial Strategic Operations](/docs/operations-analytics/operations-management) - Strategic financial strategic operations and strategic billing strategic management
+- [Strategic Payment Strategic Analytics & Strategic Financial Strategic Operations](/docs/operations/analytics/operations-management) - Strategic financial strategic operations and strategic billing strategic management
 
-- [Strategic Infrastructure Strategic Operations Strategic Management](/docs/operations-analytics/operations-management) - Strategic database and strategic infrastructure strategic operational strategic procedures
+- [Strategic Infrastructure Strategic Operations Strategic Management](/docs/operations/analytics/operations-management) - Strategic database and strategic infrastructure strategic operational strategic procedures
 
 ### Strategic Technical Strategic Architecture
 

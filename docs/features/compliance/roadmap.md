@@ -1467,9 +1467,9 @@ Q2 2027: FedRAMP, Advanced DLP
 
 ### Business
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Overall product timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Overall product timeline
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Technical dependencies
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Technical dependencies
 
 ---
 

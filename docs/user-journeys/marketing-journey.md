@@ -734,7 +734,7 @@ This basic customer journey optimization framework establishes the foundation fo
 
 ### Planning
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
 
 - **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Feature classification
 

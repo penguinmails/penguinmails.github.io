@@ -1,1 +1,0 @@
-validation/fixtures/codefence/bad/closing_fence_with_lang.md:32:closing_with_lang

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-12-02T17:00:54-05:00",
+  "target_root": "docs",
+  "issues": {
+    "non_numeric_nav_order": {
+      "description": "nav_order must be a positive integer",
+      "count": 0,
+      "files": [
+      ]
+    }
+  },
+  "total_issues": 0
+}
