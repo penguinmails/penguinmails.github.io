@@ -19,13 +19,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Test multiline loop (debugging)
-        run: |
-          echo "Testing basic loop functionality:"
-          for i in 1 2 3 4 5; do
-            echo "::error::Test error number $i"
-          done
-          echo "Loop test complete"
+      - name: Test script execution (debugging)
+        run: bash validation/scripts/test_loop.sh
 
       - name: Check for .md extensions in /docs/ links
         id: check-md-extensions
