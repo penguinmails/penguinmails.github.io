@@ -1397,4 +1397,3 @@ Authorization: Bearer {admin_token}
 
 *This document provides comprehensive guidance for implementing secure SMTP credential storage in HashiCorp Vault with automated rotation, emergency reset, and disaster recovery capabilities.*
 
-

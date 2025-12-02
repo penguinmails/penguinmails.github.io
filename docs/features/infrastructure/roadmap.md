@@ -1,4 +1,4 @@
----
+﻿---
 title: "Infrastructure Management Roadmap"
 description: "Detailed timeline and implementation plan for infrastructure management features including backup/recovery, scaling, monitoring, and multi-region deployment"
 last_modified_date: "2025-11-26"
@@ -91,7 +91,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 2-3 weeks
 **Why MVP:** Prevents data loss, required for compliance, blocks enterprise adoption
 
-## Capabilities
+##### Capabilities
 
 - Automated daily backups of VPS system state
 
@@ -111,7 +111,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Prevents data loss from VPS failures, enables disaster recovery, provides compliance requirement for data retention
 
-## Implementation
+##### Implementation
 
 - Backup storage (S3 or equivalent)
 
@@ -127,7 +127,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 3-5 days
 **Why MVP:** Reduces setup failures, improves UX, quick win
 
-## Capabilities
+##### Capabilities
 
 - Real-time DNS propagation checker (query 10+ global nameservers)
 
@@ -147,7 +147,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Prevents campaign launches with incomplete DNS setup, reduces support tickets, provides clear guidance for fixing DNS issues
 
-## Implementation
+##### Implementation
 
 - DNS resolver integration (Google DNS, Cloudflare DNS, OpenDNS)
 
@@ -165,7 +165,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Prevents bottlenecks, enables growth, competitive standard feature
 
-## Capabilities
+##### Capabilities
 
 - Real-time resource usage dashboard (CPU, RAM, disk, bandwidth)
 
@@ -185,7 +185,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Prevents infrastructure bottlenecks from blocking campaigns, provides visibility into resource utilization, enables self-service scaling
 
-## Implementation
+##### Implementation
 
 - Resource monitoring dashboard UI
 
@@ -201,7 +201,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Critical for deliverability, reduces support burden, user self-service
 
-## Capabilities
+##### Capabilities
 
 - IP reputation dashboard with score breakdown
 
@@ -221,7 +221,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Empowers users to fix deliverability issues without support tickets, provides transparency into reputation scoring, enables faster recovery
 
-## Implementation
+##### Implementation
 
 - Reputation dashboard UI
 
@@ -239,7 +239,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Required for agencies, enables cost optimization, transparent pricing
 
-## Capabilities
+##### Capabilities
 
 - Real-time infrastructure cost tracking per workspace
 
@@ -259,7 +259,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Enables accurate client billing for agencies, provides cost visibility for budget planning, allows cost optimization
 
-## Implementation
+##### Implementation
 
 - Cost tracking database schema
 
@@ -275,7 +275,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Improves reliability, reduces MTTR, enterprise requirement
 
-## Capabilities
+##### Capabilities
 
 - Multi-channel alerting (email, SMS, webhook, in-app)
 
@@ -297,7 +297,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Prevents campaign failures from undetected infrastructure issues, reduces mean time to resolution, enables proactive maintenance
 
-## Implementation
+##### Implementation
 
 - Alert configuration UI
 
@@ -315,7 +315,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1 week
 **Why MVP:** Enables capacity planning, cost optimization, data-driven decisions
 
-## Capabilities
+##### Capabilities
 
 - 90-day resource usage history (CPU, RAM, disk, bandwidth)
 
@@ -335,7 +335,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **User Benefit:** Enables data-driven scaling decisions, prevents over-provisioning, identifies usage patterns for optimization
 
-## Implementation
+##### Implementation
 
 - Time-series database for historical data
 
@@ -363,7 +363,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 4-6 weeks
 **Target:** Q2 2026
 
-## Capabilities
+##### Capabilities
 
 - Multi-region VPS deployment (US East, US West, EU West, Asia Pacific)
 
@@ -389,7 +389,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **Why Post-MVP:** MVP can succeed with single-region deployment (US-based), adds significant infrastructure complexity, required primarily for enterprise customers
 
-## Dependencies
+##### Dependencies
 
 - Hostwind multi-region API or alternative VPS providers
 
@@ -407,7 +407,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 4-6 weeks
 **Target:** Q3 2026
 
-## Capabilities
+##### Capabilities
 
 - Automated vertical scaling (CPU, RAM, disk) based on thresholds
 
@@ -433,7 +433,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **Why Post-MVP:** Manual scaling sufficient for MVP with advance planning, adds complexity, most users have predictable patterns initially
 
-## Dependencies
+##### Dependencies
 
 - Advanced monitoring and metrics collection
 
@@ -451,7 +451,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 6-8 weeks
 **Target:** Q4 2026
 
-## Capabilities
+##### Capabilities
 
 - Automated failover to backup region (RTO < 15 minutes)
 
@@ -479,7 +479,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **Why Post-MVP:** MVP can tolerate occasional downtime, disaster recovery is expensive (requires duplicate infrastructure), enterprise feature
 
-## Dependencies
+##### Dependencies
 
 - Multi-region infrastructure (Q2 2026)
 
@@ -497,7 +497,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 6-8 weeks
 **Target:** Q1 2027
 
-## Capabilities
+##### Capabilities
 
 - Provider abstraction layer (unified API)
 
@@ -523,7 +523,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 **Why Post-MVP:** Hostwind integration sufficient for MVP, multiple provider support adds significant complexity, can be added based on demand
 
-## Dependencies
+##### Dependencies
 
 - Provider abstraction layer design
 

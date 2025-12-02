@@ -1,4 +1,4 @@
----
+﻿---
 title: "Billing & Subscriptions Roadmap"
 description: "Detailed timeline and quarterly breakdown for billing and subscription features"
 last_modified_date: "2025-11-26"
@@ -35,11 +35,11 @@ This document provides a detailed timeline for billing and subscription feature 
 **Effort:** Medium (3-5 days)
 **Timeline:** Week 1-2
 
-## Description
+##### Description
 
 Implement complete user interface for changing subscription plans with visual comparison, impact preview, and confirmation workflow. Users must be able to self-service plan changes without support intervention.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Plan comparison modal displays side-by-side feature comparison for all tiers
 
@@ -59,7 +59,7 @@ Implement complete user interface for changing subscription plans with visual co
 
 - [ ] Cancel button returns to billing settings without changes
 
-## Dependencies
+##### Dependencies
 
 - Subscription management API (Epic 4, Milestone 3)
 
@@ -69,7 +69,7 @@ Implement complete user interface for changing subscription plans with visual co
 
 - Email notification system (Loop.so)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -88,11 +88,11 @@ Implement complete user interface for changing subscription plans with visual co
 **Effort:** Medium (4-6 days)
 **Timeline:** Week 2-3
 
-## Description
+##### Description
 
 Build real-time usage monitoring dashboard with visual progress bars, color-coded alerts, and historical trend charts. Users need proactive awareness of usage limits to prevent service interruptions.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Progress bars display real-time usage percentages for emails, users, workspaces, domains
 
@@ -112,7 +112,7 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 
 - [ ] Tooltip shows exact numbers on hover (e.g., "45,000 / 50,000 emails")
 
-## Dependencies
+##### Dependencies
 
 - Usage tracking API (Epic 4, Milestone 1)
 
@@ -120,7 +120,7 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 
 - Chart library (e.g., Chart.js, Recharts)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -139,11 +139,11 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 **Effort:** Medium (3-5 days)
 **Timeline:** Week 3-4
 
-## Description
+##### Description
 
 Implement direct PDF invoice download, preview modal, search/filtering, and bulk download capabilities. Professional businesses expect self-service invoice management without relying on third-party portals.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Download invoice PDF directly from PenguinMails UI (not Stripe portal redirect)
 
@@ -163,7 +163,7 @@ Implement direct PDF invoice download, preview modal, search/filtering, and bulk
 
 - [ ] Sort by date, amount (ascending/descending)
 
-## Dependencies
+##### Dependencies
 
 - Stripe invoice API integration
 
@@ -171,7 +171,7 @@ Implement direct PDF invoice download, preview modal, search/filtering, and bulk
 
 - Email template system (Loop.so)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -190,11 +190,11 @@ Implement direct PDF invoice download, preview modal, search/filtering, and bulk
 **Effort:** Medium (4-6 days)
 **Timeline:** Week 4-5
 
-## Description
+##### Description
 
 Build in-app payment method management using Stripe Elements for seamless card updates without external redirects. Payment failures are a major churn driver - making updates easy is critical for retention.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Display current payment method with last 4 digits, brand (Visa, Mastercard), expiration date
 
@@ -214,7 +214,7 @@ Build in-app payment method management using Stripe Elements for seamless card u
 
 - [ ] Success confirmation after payment method update
 
-## Dependencies
+##### Dependencies
 
 - Stripe Elements integration
 
@@ -222,7 +222,7 @@ Build in-app payment method management using Stripe Elements for seamless card u
 
 - Payment method verification logic
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -241,11 +241,11 @@ Build in-app payment method management using Stripe Elements for seamless card u
 **Effort:** Small (2-3 days)
 **Timeline:** Week 5-6
 
-## Description
+##### Description
 
 Implement user-friendly workflow for recovering from failed payments with prominent dashboard banner, one-click retry, and clear failure reasons. Quick recovery prevents service interruption and reduces churn.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Dashboard banner shows failed payment alert (red, dismissible)
 
@@ -265,7 +265,7 @@ Implement user-friendly workflow for recovering from failed payments with promin
 
 - [ ] API integration: `POST /api/v1/billing/retry-payment`
 
-## Dependencies
+##### Dependencies
 
 - Stripe webhook integration (invoice.payment_failed event)
 
@@ -273,7 +273,7 @@ Implement user-friendly workflow for recovering from failed payments with promin
 
 - Email notification system (Loop.so)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard` (banner), `/dashboard/settings/billing`
 
@@ -292,11 +292,11 @@ Implement user-friendly workflow for recovering from failed payments with promin
 **Effort:** Small (2-3 days)
 **Timeline:** Week 6
 
-## Description
+##### Description
 
 Build user-friendly cancellation process with feedback collection, retention offers, and clear impact preview. Graceful cancellation reduces negative sentiment and enables win-back campaigns.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Cancellation reason survey with dropdown (too expensive, not using, missing features, other) + text field
 
@@ -316,7 +316,7 @@ Build user-friendly cancellation process with feedback collection, retention off
 
 - [ ] Cancellation effective date display (end of current billing period)
 
-## Dependencies
+##### Dependencies
 
 - Subscription cancellation API
 
@@ -326,7 +326,7 @@ Build user-friendly cancellation process with feedback collection, retention off
 
 - Retention offer logic
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -345,11 +345,11 @@ Build user-friendly cancellation process with feedback collection, retention off
 **Effort:** Medium (3-4 days)
 **Timeline:** Week 7
 
-## Description
+##### Description
 
 Implement budget limit configuration with alert thresholds and overage handling options. Budget-conscious customers (startups, agencies) need spending controls to manage costs and prevent surprise bills.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Budget limit input field with currency formatting
 
@@ -369,7 +369,7 @@ Implement budget limit configuration with alert thresholds and overage handling 
 
 - [ ] Budget history (last 6 months)
 
-## Dependencies
+##### Dependencies
 
 - Usage tracking system
 
@@ -377,7 +377,7 @@ Implement budget limit configuration with alert thresholds and overage handling 
 
 - Email notification system (Loop.so)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -387,7 +387,7 @@ Implement budget limit configuration with alert thresholds and overage handling 
 
 ---
 
-## Q2 2026: Enterprise Features
+##### Q2 2026: Enterprise Features
 
 **Focus:** Custom pricing and enterprise billing
 **Timeline:** April - June 2026
@@ -403,11 +403,11 @@ Implement budget limit configuration with alert thresholds and overage handling 
 **Effort:** Large (2-3 weeks)
 **Timeline:** Q2 2026
 
-## Description
+##### Description
 
 Build flexible pricing engine for enterprise customers with custom contracts, volume discounts, negotiated terms, and custom billing cycles. Enterprise segment requires pricing that matches their scale and procurement requirements.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Admin can configure custom pricing per tenant (override standard rates)
 
@@ -429,7 +429,7 @@ Build flexible pricing engine for enterprise customers with custom contracts, vo
 
 - [ ] Negotiated rate overrides per feature/add-on
 
-## Dependencies
+##### Dependencies
 
 - Admin dashboard for pricing configuration
 
@@ -439,7 +439,7 @@ Build flexible pricing engine for enterprise customers with custom contracts, vo
 
 - Enterprise tier features
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/admin/pricing` (new)
 
@@ -456,11 +456,11 @@ Build flexible pricing engine for enterprise customers with custom contracts, vo
 **Effort:** Medium (2-3 weeks)
 **Timeline:** Q2 2026
 
-## Description
+##### Description
 
 Add alternative payment methods including ACH, wire transfer, purchase orders, and installment plans. Enterprise customers require payment methods that match their procurement processes.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] ACH direct debit for US customers (Stripe ACH)
 
@@ -482,7 +482,7 @@ Add alternative payment methods including ACH, wire transfer, purchase orders, a
 
 - [ ] Payment status tracking: pending, processing, completed
 
-## Dependencies
+##### Dependencies
 
 - Stripe ACH/SEPA integration
 
@@ -490,7 +490,7 @@ Add alternative payment methods including ACH, wire transfer, purchase orders, a
 
 - Purchase order management
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`, `/dashboard/admin/payments`
 
@@ -500,7 +500,7 @@ Add alternative payment methods including ACH, wire transfer, purchase orders, a
 
 ---
 
-## Q3 2026: International & Advanced
+##### Q3 2026: International & Advanced
 
 **Focus:** Multi-currency and advanced analytics
 **Timeline:** July - September 2026
@@ -516,11 +516,11 @@ Add alternative payment methods including ACH, wire transfer, purchase orders, a
 **Effort:** Large (3-4 weeks)
 **Timeline:** Q3 2026
 
-## Description
+##### Description
 
 Implement multi-currency support with automatic conversion, local payment methods, and currency-specific invoicing. International expansion requires localized pricing and payment options to reduce friction.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Support EUR, GBP, CAD, AUD currencies (expandable)
 
@@ -542,7 +542,7 @@ Implement multi-currency support with automatic conversion, local payment method
 
 - [ ] Tax calculation per country (Stripe Tax integration)
 
-## Dependencies
+##### Dependencies
 
 - Stripe multi-currency configuration
 
@@ -552,7 +552,7 @@ Implement multi-currency support with automatic conversion, local payment method
 
 - Localization system
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -569,11 +569,11 @@ Implement multi-currency support with automatic conversion, local payment method
 **Effort:** Large (3-4 weeks)
 **Timeline:** Q3 2026
 
-## Description
+##### Description
 
 Implement automated revenue recognition, deferred revenue tracking, and advanced financial reports for accounting teams. Automated financial reporting reduces manual accounting work and ensures compliance with revenue recognition standards.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Automated revenue recognition (ASC 606 / IFRS 15 compliance)
 
@@ -595,7 +595,7 @@ Implement automated revenue recognition, deferred revenue tracking, and advanced
 
 - [ ] Board-ready financial summaries (one-page overview)
 
-## Dependencies
+##### Dependencies
 
 - Accounting system integration APIs
 
@@ -603,7 +603,7 @@ Implement automated revenue recognition, deferred revenue tracking, and advanced
 
 - Historical data for cohort analysis (12+ months)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/finance/reports` (new)
 
@@ -620,11 +620,11 @@ Implement automated revenue recognition, deferred revenue tracking, and advanced
 **Effort:** Medium (2-3 weeks)
 **Timeline:** Q3 2026
 
-## Description
+##### Description
 
 Build referral program with account credits and promotional discount management system. Referral rewards incentivize word-of-mouth growth and reduce customer acquisition costs.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Generate unique referral links per user
 
@@ -646,7 +646,7 @@ Build referral program with account credits and promotional discount management 
 
 - [ ] Partner-specific discount codes with tracking
 
-## Dependencies
+##### Dependencies
 
 - Referral tracking system
 
@@ -654,7 +654,7 @@ Build referral program with account credits and promotional discount management 
 
 - Discount code engine (Stripe Coupons)
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/referrals` (new), `/dashboard/settings/billing`
 
@@ -664,7 +664,7 @@ Build referral program with account credits and promotional discount management 
 
 ---
 
-## Q4 2026: Optimization & Retention
+##### Q4 2026: Optimization & Retention
 
 **Focus:** Subscription flexibility and retention
 **Timeline:** October - December 2026
@@ -680,11 +680,11 @@ Build referral program with account credits and promotional discount management 
 **Effort:** Large (3-4 weeks)
 **Timeline:** Q4 2026
 
-## Description
+##### Description
 
 Build predictive analytics for usage trends and cost forecasting with AI-powered recommendations. Proactive recommendations prevent service interruptions and optimize costs based on actual usage patterns.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Predict next month's usage based on historical trends (ML model)
 
@@ -706,7 +706,7 @@ Build predictive analytics for usage trends and cost forecasting with AI-powered
 
 - [ ] Visual charts: trend lines, forecast ranges, confidence intervals
 
-## Dependencies
+##### Dependencies
 
 - ML model for usage prediction (6+ months historical data)
 
@@ -714,7 +714,7 @@ Build predictive analytics for usage trends and cost forecasting with AI-powered
 
 - Historical usage data collection
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/analytics/usage` (new)
 
@@ -731,11 +731,11 @@ Build predictive analytics for usage trends and cost forecasting with AI-powered
 **Effort:** Medium (2-3 weeks)
 **Timeline:** Q4 2026
 
-## Description
+##### Description
 
 Allow customers to pause subscriptions temporarily or switch to seasonal plans for businesses with cyclical needs. Flexibility for seasonal businesses reduces churn and maintains customer relationships during slow periods.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Pause subscription for 1-3 months with date picker
 
@@ -757,7 +757,7 @@ Allow customers to pause subscriptions temporarily or switch to seasonal plans f
 
 - [ ] Pause reason collection (optional survey)
 
-## Dependencies
+##### Dependencies
 
 - Subscription pause logic
 
@@ -765,7 +765,7 @@ Allow customers to pause subscriptions temporarily or switch to seasonal plans f
 
 - Email notification system
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
@@ -782,11 +782,11 @@ Allow customers to pause subscriptions temporarily or switch to seasonal plans f
 **Effort:** Large (3-4 weeks)
 **Timeline:** Q4 2026
 
-## Description
+##### Description
 
 Advanced dunning workflows with smart retry logic, payment recovery campaigns, and automated communication. Proactive payment management reduces involuntary churn and improves revenue retention.
 
-## Acceptance Criteria
+##### Acceptance Criteria
 
 - [ ] Smart retry timing based on card type and failure reason
 
@@ -808,7 +808,7 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 - [ ] A/B testing for dunning messages
 
-## Dependencies
+##### Dependencies
 
 - Card updater service (Stripe)
 
@@ -816,7 +816,7 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 - Customer success platform integration
 
-## Cross-References
+##### Cross-References
 
 - Route: `/dashboard/settings/billing`, `/dashboard/admin/dunning`
 
@@ -833,7 +833,7 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 **Effort:** Spike (3-5 days) + Implementation (1-2 weeks)
 **Timeline:** Q3 2026
 
-## Description
+##### Description
 
 **IMPORTANT**: This feature requires a spike to validate approach before implementation.
 
@@ -852,7 +852,7 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 - Track trial end date via subscription's relationship to trial plan
 - No need for `trial_end_date` field on subscriptions (derived from `plan.duration` + `subscription.created`)
 
-## Spike Acceptance Criteria (3-5 days)
+##### Spike Acceptance Criteria (3-5 days)
 
 - [ ] Research trial implementation patterns (Stripe trials vs plan-based trials)
 - [ ] Evaluate impact on existing schema (minimal changes preferred)
@@ -862,7 +862,7 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 - [ ] Document recommended approach with pros/cons
 - [ ] Get stakeholder approval on approach
 
-## Implementation Acceptance Criteria (1-2 weeks, post-spike)
+##### Implementation Acceptance Criteria (1-2 weeks, post-spike)
 
 - [ ] Add trial plan type support to `plans` table
 - [ ] Trial plan creation UI for admins
@@ -875,20 +875,20 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 - [ ] Admin dashboard to monitor active trials
 - [ ] Trial conversion rate analytics
 
-## Dependencies
+##### Dependencies
 
 - Plans and subscriptions infrastructure (MVP)
 - Email notification system
 - Billing dashboard
 - Admin trial management UI
 
-## Why Post-MVP
+##### Why Post-MVP
 
 **MVP Scope**: No free tier, payment required during onboarding
 **Trial Use Cases**: Enterprise POC, partner demos, specific promotions
 **Complexity**: Requires spike to validate approach and avoid schema bloat
 
-## Cross-References
+##### Cross-References
 
 - Schema: [OLTP Plans Table](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
 - Feature: [Subscription Management](/docs/features/payments/subscription-management)
@@ -896,7 +896,7 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 
 ---
 
-## Success Metrics
+##### Success Metrics
 
 ### Technical Metrics
 

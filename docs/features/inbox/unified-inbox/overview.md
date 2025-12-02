@@ -1,4 +1,4 @@
----
+﻿---
 title: "Unified Inbox"
 description: "Centralized command center for managing responses across all email accounts with AI categorization and real-time sync"
 level: "2"

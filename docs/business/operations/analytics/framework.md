@@ -567,4 +567,3 @@ The Operations Analytics Framework provides comprehensive operational performanc
 **Business Value:** $2.2M+ annual operations analytics value delivery through systematic data-driven operations
 ---
 
-

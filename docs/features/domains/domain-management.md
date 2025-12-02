@@ -141,4 +141,3 @@ GET /api/v1/domains/{id}/dns
 
 *Proper domain authentication is the single most important factor in email deliverability.*
 
-
