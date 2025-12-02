@@ -19,98 +19,68 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Test multiline loop (debugging)
+        run: |
+          echo "Testing basic loop functionality:"
+          for i in 1 2 3 4 5; do
+            echo "::error::Test error number $i"
+          done
+          echo "Loop test complete"
+
       - name: Check for .md extensions in /docs/ links
         id: check-md-extensions
         run: |
-          echo "## Link Extension Check" >> $GITHUB_STEP_SUMMARY
           violations=$(find docs -name "*.md" -type f -exec grep -H -n '](/docs/.*\.md[)#]' {} \; 2>/dev/null || true)
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count links with .md extensions in docs/ folder"
-            # Output first 20 violations using process substitution to avoid subshell
-            while IFS=: read -r file line content; do
-              echo "::error file=$file,line=$line::$file:$line - Remove .md extension from link"
-            done < <(echo "$violations" | head -20)
-            if [ $count -gt 20 ]; then
-              echo "::error::... and $((count - 20)) more violations (see job summary for full list)"
-            fi
-            echo "❌ **FAILED**: Found $count links with .md extensions" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "$violations" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "$violations" | head -20 | while IFS=: read -r file line content; do
+              [ -z "$file" ] && continue
+              echo "::error file=$file,line=$line::$file:$line - Remove .md extension"
+            done
             exit 1
-          else
-            echo "✅ **PASSED**: No .md extensions in /docs/ links" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Check for relative .md links (./  or ../)
         id: check-relative-links
         run: |
-          echo "## Relative Link Check" >> $GITHUB_STEP_SUMMARY
           violations=$(find docs -name "*.md" -type f -exec grep -H -n -E ']\((\.\/|\.\.\/)' {} \; 2>/dev/null || true)
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links using ./ or ../ in docs/ folder"
-            # Output first 20 violations using process substitution
-            while IFS=: read -r file line content; do
-              echo "::error file=$file,line=$line::$file:$line - Use site-absolute links starting with /docs/"
-            done < <(echo "$violations" | head -20)
-            if [ $count -gt 20 ]; then
-              echo "::error::... and $((count - 20)) more violations (see job summary for full list)"
-            fi
-            echo "❌ **FAILED**: Found $count relative links" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "$violations" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
+            echo "$violations" | head -20 | while IFS=: read -r file line content; do
+              [ -z "$file" ] && continue
+              echo "::error file=$file,line=$line::$file:$line - Use site-absolute links"
+            done
             exit 1
-          else
-            echo "✅ **PASSED**: No relative links in docs/" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Check for relative CONTRIBUTING.md links
         id: check-contributing-links
         run: |
-          echo "## CONTRIBUTING.md Link Check" >> $GITHUB_STEP_SUMMARY
           violations=$(find docs -name "*.md" -type f -exec grep -H -n 'CONTRIBUTING\.md' {} \; 2>/dev/null | grep -v 'github.com' || true)
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count relative links to CONTRIBUTING.md in docs/ folder"
-            # Output all violations using process substitution
-            while IFS=: read -r file line content; do
-              echo "::error file=$file,line=$line::$file:$line - Use GitHub link instead of relative link"
-            done < <(echo "$violations")
-            echo "❌ **FAILED**: Found $count relative CONTRIBUTING.md links" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "$violations" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "💡 **Tip**: Use GitHub links like \`https://github.com/USER/REPO/blob/main/CONTRIBUTING.md\`" >> $GITHUB_STEP_SUMMARY
+            echo "::error::Found $count relative links to CONTRIBUTING.md"
+            echo "$violations" | while IFS=: read -r file line content; do
+              [ -z "$file" ] && continue
+              echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
+            done
             exit 1
-          else
-            echo "✅ **PASSED**: No relative CONTRIBUTING.md links" >> $GITHUB_STEP_SUMMARY
           fi
 
       - name: Check for relative README.md links
         id: check-readme-links
         run: |
-          echo "## README.md Link Check" >> $GITHUB_STEP_SUMMARY
           violations=$(find docs -name "*.md" -type f -exec grep -H -n -E ']\([./]*README\.md[)#]' {} \; 2>/dev/null | grep -v 'github.com' || true)
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count relative links to root README.md in docs/ folder"
-            # Output all violations using process substitution
-            while IFS=: read -r file line content; do
-              echo "::error file=$file,line=$line::$file:$line - Use GitHub link instead of relative link"
-            done < <(echo "$violations")
-            echo "❌ **FAILED**: Found $count relative README.md links" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "$violations" >> $GITHUB_STEP_SUMMARY
-            echo '```' >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "💡 **Tip**: Use GitHub links like \`https://github.com/USER/REPO/blob/main/README.md\`" >> $GITHUB_STEP_SUMMARY
+            echo "::error::Found $count relative links to README.md"
+            echo "$violations" | while IFS=: read -r file line content; do
+              [ -z "$file" ] && continue
+              echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
+            done
             exit 1
-          else
-            echo "✅ **PASSED**: No relative README.md links" >> $GITHUB_STEP_SUMMARY
           fi
 
   # Warning checks that don't block the build
