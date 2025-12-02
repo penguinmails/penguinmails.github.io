@@ -94,11 +94,14 @@ detect_links() {
 
 
 
-# Check for links to CONTRIBUTING.md
-detect_links "contributing_links" "](.*CONTRIBUTING" "Links to CONTRIBUTING.md" false
+# Check for relative links to CONTRIBUTING.md (exclude GitHub URLs)
+detect_links "contributing_links" "]\([^h][^t][^t][^p][^s].*CONTRIBUTING" "Relative links to CONTRIBUTING.md" true
 
-# Check for links to root README.md
-detect_links "readme_links" "](.*\\.\\./README\\|](/README" "Links to root README.md" false
+# Check for relative links to root README.md (exclude GitHub URLs and site-absolute links)
+detect_links "readme_links" "]\([^h][^t][^t][^p][^s].*README\\|]\(\\.*README" "Relative links to root README.md" true
+
+# Check for relative links to AGENTS.md (exclude GitHub URLs)
+detect_links "agents_links" "]\([^h][^t][^t][^p][^s].*AGENTS" "Relative links to AGENTS.md" true
 
 # Check for site-absolute links with .md extension
 echo "Checking: Site-absolute links with .md extension..."
