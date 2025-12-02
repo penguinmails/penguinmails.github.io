@@ -162,4 +162,4 @@ See the [Inbox Management Roadmap](./roadmap.md) for:
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](/docs/features/README.md)
