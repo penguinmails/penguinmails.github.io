@@ -74,7 +74,7 @@ graph TB
 
 #### Investment Tiers and Recommendations
 
-**Tier 1: Startups & Lean SMBs (Under 5K contacts)**
+##### Tier 1: Startups & Lean SMBs (Under 5K contacts)
 
 - **Investment Range**: $39–$180)
 
@@ -82,7 +82,7 @@ graph TB
 
 - **Key Value**: Essential compliance foundation at minimal cost
 
-**Tier 2: Growing B2B Teams (5K–25K contacts)**
+##### Tier 2: Growing B2B Teams (5K–25K contacts)
 
 - **Investment Range**: $400–$650)
 
@@ -90,7 +90,7 @@ graph TB
 
 - **Key Value**: Complete automation with professional monitoring
 
-**Tier 3: Mid-Market Enterprise (25K–100K contacts)**
+##### Tier 3: Mid-Market Enterprise (25K–100K contacts)
 
 - **Investment Range**: $1,200–$3,000)
 
@@ -98,7 +98,7 @@ graph TB
 
 - **Key Value**: Comprehensive framework with fractional DPO
 
-**Tier 4: Large Enterprise (100K+ contacts)**
+##### Tier 4: Large Enterprise (100K+ contacts)
 
 - **Investment Range**: $5,000–$10,000+)
 
@@ -136,7 +136,7 @@ graph LR
 
 ### Strategic ROI Examples
 
-**Example 1: Mid-Market B2B Company (25K contacts)**
+##### Example 1: Mid-Market B2B Company (25K contacts)
 
 - **Investment**: $3,400/month ($40,800)
 
@@ -150,7 +150,7 @@ graph LR
 
 - **Conservative ROI**: 100:1 to 1,000:1
 
-**Example 2: Startup (2K contacts)**
+##### Example 2: Startup (2K contacts)
 
 - **Investment**: $100/month ($1,200)
 
@@ -166,7 +166,7 @@ graph LR
 
 ### Compliance Investment Prioritization
 
-**Tier 1: Critical (Must-Have)**
+##### Tier 1: Critical (Must-Have)
 
 1. **CAN-SPAM compliance**: All US email marketing operations
 
@@ -176,7 +176,7 @@ graph LR
 
 4. **Basic consent management**: GDPR/CCPA minimum compliance
 
-**Tier 2: Important (Should-Have)**
+##### Tier 2: Important (Should-Have)
 
 1. **Advanced GDPR tools**: EU/UK operations
 
@@ -186,7 +186,7 @@ graph LR
 
 4. **Data Protection Officer**: Mid-market and enterprise
 
-**Tier 3: Beneficial (Could-Have)**
+##### Tier 3: Beneficial (Could-Have)
 
 1. **Advanced analytics**: Optimization and reporting
 

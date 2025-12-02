@@ -408,5 +408,3 @@ Customer Onboarding represents the critical foundation period where new customer
 ---
 
 ### Level 1: Executive summary for customer onboarding strategic planning and decision-making
-
-[System.Environment]::NewLine
