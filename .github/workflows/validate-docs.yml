@@ -27,8 +27,10 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count links with .md extensions in docs/ folder"
-            # Output first 20 violations
-            echo "$violations" | head -20 | awk -F: '{print "::error file="$1",line="$2"::"$1":"$2" - Remove .md extension from link"}'
+            # Output first 20 violations using process substitution to avoid subshell
+            while IFS=: read -r file line content; do
+              echo "::error file=$file,line=$line::$file:$line - Remove .md extension from link"
+            done < <(echo "$violations" | head -20)
             if [ $count -gt 20 ]; then
               echo "::error::... and $((count - 20)) more violations (see job summary for full list)"
             fi
@@ -49,8 +51,10 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links using ./ or ../ in docs/ folder"
-            # Output first 20 violations
-            echo "$violations" | head -20 | awk -F: '{print "::error file="$1",line="$2"::"$1":"$2" - Use site-absolute links starting with /docs/"}'
+            # Output first 20 violations using process substitution
+            while IFS=: read -r file line content; do
+              echo "::error file=$file,line=$line::$file:$line - Use site-absolute links starting with /docs/"
+            done < <(echo "$violations" | head -20)
             if [ $count -gt 20 ]; then
               echo "::error::... and $((count - 20)) more violations (see job summary for full list)"
             fi
@@ -71,8 +75,10 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links to CONTRIBUTING.md in docs/ folder"
-            # Output all violations (should be small number)
-            echo "$violations" | awk -F: '{print "::error file="$1",line="$2"::"$1":"$2" - Use GitHub link instead of relative link"}'
+            # Output all violations using process substitution
+            while IFS=: read -r file line content; do
+              echo "::error file=$file,line=$line::$file:$line - Use GitHub link instead of relative link"
+            done < <(echo "$violations")
             echo "❌ **FAILED**: Found $count relative CONTRIBUTING.md links" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "$violations" >> $GITHUB_STEP_SUMMARY
@@ -92,8 +98,10 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links to root README.md in docs/ folder"
-            # Output all violations
-            echo "$violations" | awk -F: '{print "::error file="$1",line="$2"::"$1":"$2" - Use GitHub link instead of relative link"}'
+            # Output all violations using process substitution
+            while IFS=: read -r file line content; do
+              echo "::error file=$file,line=$line::$file:$line - Use GitHub link instead of relative link"
+            done < <(echo "$violations")
             echo "❌ **FAILED**: Found $count relative README.md links" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             echo "$violations" >> $GITHUB_STEP_SUMMARY
