@@ -215,7 +215,7 @@ Company Address Setup:
 ```text
 
 If you no longer wish to receive these emails, you may
-[unsubscribe here](/docs/features/compliance/{{unsubscribe_url}})
+[unsubscribe here]({{unsubscribe_url}})
 
 
 ```

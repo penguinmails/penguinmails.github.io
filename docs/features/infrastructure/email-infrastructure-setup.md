@@ -842,7 +842,7 @@ cron.schedule('0 0 * * *', async () => {
 
 ### Implementation
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
+- **[Epic 5: Infrastructure Management](/docs/tasks/epic-5-infrastructure-management/)** - Implementation tasks
 
 ---
 

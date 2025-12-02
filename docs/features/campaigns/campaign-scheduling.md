@@ -1251,15 +1251,15 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ### Analytics
 
-- **[Core Analytics](/docs/analytics/core-analytics/overview)** - Performance tracking
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
 
-- **[Enhanced Analytics](/docs/analytics/enhanced-analytics/overview)** - Advanced insights
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
 ### Technical
 
-- **[Email Pipeline](/docs/queue/email-pipeline)** - Email sending infrastructure
+- **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[API Documentation](/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
+- **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---
 
