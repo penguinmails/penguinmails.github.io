@@ -18,9 +18,9 @@ This directory contains the product and technical roadmaps that define **what we
 
 ### Product Roadmap
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - *Consolidated feature timeline and development roadmap*
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - *Consolidated feature timeline and development roadmap*
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - *Infrastructure milestones and technical considerations*
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - *Infrastructure milestones and technical considerations*
 
 - **[Feature Taxonomy](/business/feature-taxonomy-and-roadmap)** - *Feature classification and progressive development framework*
 

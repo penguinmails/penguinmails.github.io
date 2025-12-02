@@ -1390,7 +1390,7 @@ Authorization: Bearer {admin_token}
 
 - **[Feature Completeness Review Requirements](/.kiro/specs/feature-completeness-review/requirements)** - Review requirements
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure roadmap
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure roadmap
 
 ### Implementation Tasks
 

@@ -190,7 +190,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - [Integration Strategy](/docs/.kiro/specs/feature-completeness-review/findings/integration-strategy) - API-first approach rationale
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Integration timeline and priorities
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Integration timeline and priorities
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic integration investments
 

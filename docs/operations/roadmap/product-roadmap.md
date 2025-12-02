@@ -2013,7 +2013,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Planning
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure and technical milestones
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure and technical milestones
 
 - **[Roadmap Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - Complete roadmap navigation hub
 

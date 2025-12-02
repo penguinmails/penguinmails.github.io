@@ -107,10 +107,11 @@ detect_links "readme_links" "](.*\\.\\./README\\|](/README" "Links to root READM
 # Check for site-absolute links with .md extension
 echo "Checking: Site-absolute links with .md extension..."
 md_ext_files=$(grep -rE "]\(/docs/.*\.md[)#]" "$TARGET_ROOT" --include="*.md" 2>/dev/null || echo "")
-md_ext_count=$(echo "$md_ext_files" | grep -c ":" || echo "0")
+md_ext_count=$(echo "$md_ext_files" | grep -c ":" 2>/dev/null || echo "0")
+md_ext_count=${md_ext_count//[^0-9]/}  # Remove any non-numeric characters
 
 # Save to intermediary file for fix script
-if [ $md_ext_count -gt 0 ]; then
+if [ "$md_ext_count" -gt 0 ] 2>/dev/null; then
     echo "$md_ext_files" > "$MD_EXTENSION_FILE"
     echo "Intermediary file created: $MD_EXTENSION_FILE"
 fi
@@ -121,7 +122,7 @@ echo "      \"count\": $md_ext_count," >> "$REPORT_FILE"
 echo "      \"intermediary_file\": \"$MD_EXTENSION_FILE\"," >> "$REPORT_FILE"
 echo "      \"files\": [" >> "$REPORT_FILE"
 
-if [ $md_ext_count -gt 0 ]; then
+if [ "$md_ext_count" -gt 0 ] 2>/dev/null; then
     first=true
     while IFS=: read -r file line; do
         [ -z "$file" ] && continue
@@ -140,7 +141,7 @@ fi
 echo "      ]" >> "$REPORT_FILE"
 echo "    }," >> "$REPORT_FILE"
 
-if [ $md_ext_count -eq 0 ]; then
+if [ "$md_ext_count" -eq 0 ] 2>/dev/null; then
     echo -e "  ${GREEN}✓${NC} No .md extensions found"
 else
     echo -e "  ${YELLOW}⚠${NC} Found $md_ext_count instances"

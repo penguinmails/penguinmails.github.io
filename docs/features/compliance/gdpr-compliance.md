@@ -402,7 +402,7 @@ Retention Policies:
 
 ### Business Context
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Compliance feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Compliance feature timeline
 
 - **[Legal Resources](/docs/business/legal/README)** - Legal documentation and templates
 

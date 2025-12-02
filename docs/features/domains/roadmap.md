@@ -537,11 +537,11 @@ These convenience features can be implemented if time permits, but are not block
 
 ### Planning & Strategy
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product direction
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Business-level roadmap
 
-- [Technical Roadmap](/docs/roadmap/technical-roadmap) - Technical infrastructure roadmap
+- [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical infrastructure roadmap
 
 ### Feature Documentation
 

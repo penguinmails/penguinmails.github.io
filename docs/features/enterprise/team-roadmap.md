@@ -887,7 +887,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ### Roadmap
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Overall product timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Overall product timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 

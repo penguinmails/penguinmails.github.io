@@ -773,7 +773,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing)** - Cost structure
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 

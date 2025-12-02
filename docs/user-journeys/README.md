@@ -252,7 +252,7 @@ level: "2"
 
 ### Planning
 
-- **[Roadmap](/docs/roadmap)** - When journeys will be improved
+- **[Roadmap](/docs/operations/roadmap)** - When journeys will be improved
 
 - **[Features](/docs/features)** - Features that support journeys
 

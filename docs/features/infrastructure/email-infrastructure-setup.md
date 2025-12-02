@@ -812,9 +812,9 @@ cron.schedule('0 0 * * *', async () => {
 
 ### Planning & Product
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Infrastructure timeline (Q4 2025)
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Infrastructure timeline (Q4 2025)
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure considerations
+- **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure considerations
 
 - **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Level 1 core feature
 

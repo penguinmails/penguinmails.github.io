@@ -307,7 +307,7 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 ### Planning
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
 
 - **[User Journeys Hub](/docs/user-journeys)** - All journeys
 

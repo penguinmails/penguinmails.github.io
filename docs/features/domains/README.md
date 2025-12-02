@@ -110,7 +110,7 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap) for detailed tim
 
 - [Domain Management Roadmap](/docs/features/domains/roadmap) - Post-MVP feature timeline
 
-- [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product direction
 
 ### Implementation & Technical
 
