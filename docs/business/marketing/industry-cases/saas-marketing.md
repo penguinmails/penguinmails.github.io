@@ -1,4 +1,4 @@
----
+﻿---
 title: "SaaS Marketing Framework: MVP vs Post-MVP Roadmap"
 description: "SaaS marketing framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Basic analytics, manual processes, 10% growth | **Post-MVP**: Advanced analytics, optimization, 15% growth"
 last_modified_date: "2025-11-17"
@@ -55,7 +55,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 #### MVP Awareness Stage
 
-## Customer Needs
+##### Customer Needs
 
 - Basic problem identification and solution awareness
 
@@ -65,7 +65,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 - Clear value proposition understanding
 
-## MVP Marketing Strategies
+##### MVP Marketing Strategies
 
 - **Content Marketing:** Basic problem-solution content and industry insights
 
@@ -77,7 +77,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 #### MVP Consideration Stage
 
-## Customer Needs
+##### Customer Needs
 
 - Basic product functionality understanding
 
@@ -87,7 +87,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 - Customer success stories and basic case studies
 
-## MVP Marketing Strategies
+##### MVP Marketing Strategies
 
 - **Product Demos:** Basic product demonstrations and trials
 
@@ -99,7 +99,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 #### MVP Conversion Stage
 
-## Customer Needs
+##### Customer Needs
 
 - Basic signup and onboarding process
 
@@ -109,7 +109,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 - Integration requirements and capabilities
 
-## MVP Marketing Strategies
+##### MVP Marketing Strategies
 
 - **Conversion Optimization:** Basic streamlined signup and onboarding flow
 
@@ -123,7 +123,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 #### MVP Onboarding and Adoption
 
-## Customer Needs
+##### Customer Needs
 
 - Basic time-to-value and initial success
 
@@ -133,7 +133,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 - Basic success milestone achievement
 
-## MVP Retention Strategies
+##### MVP Retention Strategies
 
 - **Customer Onboarding:** Basic structured onboarding programs
 
@@ -145,7 +145,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 #### MVP Expansion and Upsell
 
-## Customer Needs
+##### Customer Needs
 
 - Advanced features and capabilities
 
@@ -155,7 +155,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 - Basic ROI demonstration and business case
 
-## MVP Expansion Strategies
+##### MVP Expansion Strategies
 
 - **Basic Upselling:** Manual upgrades based on usage patterns
 
@@ -167,7 +167,7 @@ This document provides specialized marketing guidance for Software-as-a-Service 
 
 ---
 
-## MVP SaaS Campaign Examples
+##### MVP SaaS Campaign Examples
 
 ### MVP Campaign 1: Basic Product-Led Growth Funnel
 
@@ -308,7 +308,7 @@ MVP Account Targeting Framework:
 
 #### MVP Content Types by Customer Journey
 
-## MVP Problem-Solution Content
+##### MVP Problem-Solution Content
 
 - Basic industry pain point analysis and research reports
 
@@ -318,7 +318,7 @@ MVP Account Targeting Framework:
 
 - Basic implementation guides and best practices
 
-## MVP Product Education Content
+##### MVP Product Education Content
 
 - Basic feature tutorials and how-to guides
 
@@ -328,7 +328,7 @@ MVP Account Targeting Framework:
 
 - Basic webinar series and product introductions
 
-## MVP Thought Leadership Content
+##### MVP Thought Leadership Content
 
 - Basic industry trend analysis and predictions
 
@@ -378,7 +378,7 @@ MVP Account Targeting Framework:
 
 #### MVP Product Analytics Platform
 
-## MVP Requirements
+##### MVP Requirements
 
 - Basic user behavior tracking and segmentation
 
@@ -388,7 +388,7 @@ MVP Account Targeting Framework:
 
 - Basic A/B testing and experimentation framework
 
-## MVP Recommended Solutions
+##### MVP Recommended Solutions
 
 - Google Analytics (basic web analytics)
 
@@ -400,7 +400,7 @@ MVP Account Targeting Framework:
 
 #### MVP Marketing Automation Platform
 
-## MVP Requirements
+##### MVP Requirements
 
 - Basic lead scoring and qualification
 
@@ -410,7 +410,7 @@ MVP Account Targeting Framework:
 
 - Basic ROI attribution and campaign tracking
 
-## MVP SaaS-Specific Features
+##### MVP SaaS-Specific Features
 
 - **Trial User Nurturing:** Basic automated sequences for trial users
 
@@ -422,7 +422,7 @@ MVP Account Targeting Framework:
 
 #### MVP Customer Success Platform
 
-## MVP Requirements
+##### MVP Requirements
 
 - Basic customer health scoring and monitoring
 
@@ -432,7 +432,7 @@ MVP Account Targeting Framework:
 
 - Integration with basic product and sales data
 
-## MVP Customer Success Features
+##### MVP Customer Success Features
 
 - **Health Monitoring:** Basic usage, engagement, and satisfaction tracking
 
@@ -444,7 +444,7 @@ MVP Account Targeting Framework:
 
 ---
 
-## MVP SaaS Industry Challenges and Solutions
+##### MVP SaaS Industry Challenges and Solutions
 
 ### MVP Challenge 1: High Customer Acquisition Cost (CAC)
 
@@ -738,7 +738,7 @@ Payback Period = $400 / ($400 × 0.75) = 1.33 months
 
 - **Time to Value:** Advanced time to value under 30 days
 
-*See feature taxonomy: Core (2025) → MVP (2025-2026 Q1) → Growth (2026 Q1-Q3) → Enterprise (2026 Q4-2027) → Future (2027+)*
+##### See feature taxonomy: Core (2025) → MVP (2025-2026 Q1) → Growth (2026 Q1-Q3) → Enterprise (2026 Q4-2027) → Future (2027+)
 
 ---
 
