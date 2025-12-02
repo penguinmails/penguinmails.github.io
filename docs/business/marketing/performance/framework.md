@@ -51,7 +51,7 @@ This document defines the basic marketing performance framework for manual campa
 
 **Primary Objective:** Establish governance structure for performance marketing excellence and accountability
 
-##### Governance Structure
+#### Governance Structure
 
 - **Performance Leadership:** Performance Marketing Director oversight of all campaign performance
 
@@ -91,7 +91,7 @@ This document defines the basic marketing performance framework for manual campa
 
 ### 2.2 Performance Standards and KPIs
 
-##### Technical Performance Requirements
+#### Technical Performance Requirements
 
 - **Basic Attribution:** Simple attribution models for lead source tracking
 
@@ -153,7 +153,7 @@ This document defines the basic marketing performance framework for manual campa
 
 **Primary Objective:** Establish comprehensive performance analytics for optimization and insights
 
-##### Performance Analytics Categories
+#### Performance Analytics Categories
 
 ##### Campaign Performance Analytics
 
@@ -211,7 +211,7 @@ This document defines the basic marketing performance framework for manual campa
 
 **Primary Objective:** Analyze creative performance through systematic testing and manual insights
 
-##### Creative Analysis Framework
+#### Creative Analysis Framework
 
 ##### Basic A/B Testing
 

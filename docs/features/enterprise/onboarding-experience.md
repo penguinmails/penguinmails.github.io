@@ -706,5 +706,3 @@ function OnboardingChecklist() {
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Product Team
-
-

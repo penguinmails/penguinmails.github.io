@@ -887,5 +887,3 @@ class ConflictResolver {
 **Last Updated**: 2025-11-24
 **Owner**: Integrations Engineering Team
 **Status**: Planned - Q1 2026 key partnership feature
-
-

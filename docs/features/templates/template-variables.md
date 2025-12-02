@@ -1040,5 +1040,3 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 **Owner:** Templates Team
 
 {% endraw %}
-
-

@@ -299,5 +299,3 @@ These best practices provide a foundation for building and operating a robust, s
 **Operations**: Proper deployment strategies, capacity planning, and error handling
 
 Following these guidelines will help ensure your queue system can handle production workloads reliably while remaining maintainable and observable.
-
-

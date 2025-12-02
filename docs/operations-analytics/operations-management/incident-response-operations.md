@@ -652,5 +652,3 @@ interface IncidentMetrics {
 
 **Keywords**: incident response, security incidents, disaster recovery, business continuity, communication protocols, post-mortem analysis, compliance requirements
 ---
-
-

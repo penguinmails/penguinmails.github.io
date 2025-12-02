@@ -518,5 +518,3 @@ Overall:
   - Remains a lean analytical layer, safe to be non-critical in outages.
 
 Use this behavior model when designing failure handling and incident response flows across the stack.
-
-

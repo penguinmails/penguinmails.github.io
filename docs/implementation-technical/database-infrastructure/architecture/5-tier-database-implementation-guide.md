@@ -220,5 +220,3 @@ CREATE POLICY tenant_isolation ON campaigns
 - [Database Infrastructure Overview](/docs/implementation-technical/database-infrastructure/architecture/README) - Complete ecosystem
 
 **Keywords**: database implementation, cross-tier integration, operational patterns, performance optimization, deployment, monitoring
-
-

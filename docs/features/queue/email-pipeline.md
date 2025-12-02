@@ -212,5 +212,3 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 **Throughput:** Scalable to millions/hour
 
 *The Core Email Pipeline ensures that every email is delivered, tracked, and accounted for, regardless of volume.*
-
-

@@ -362,4 +362,3 @@ version: "1.0"
 - [GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance)
 
 - [ePrivacy Directive Compliance](/docs/compliance-security/international/eprivacy-compliance)
-

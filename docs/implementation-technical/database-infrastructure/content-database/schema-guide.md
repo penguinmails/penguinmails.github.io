@@ -36,7 +36,7 @@ For analytics and logging responsibilities, refer to:
 
 ## 1. Design Principles
 
-**âš ï¸ IMPORTANT: Stalwart Mail Server Integration**
+### âš ï¸ Important: Stalwart Mail Server Integration
 
 Before implementing the Content DB schema for email storage, we must investigate **Stalwart Mail Server's PostgreSQL schema** to determine the correct architecture:
 
@@ -449,5 +449,3 @@ This schema guide, alongside:
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 
 ---
-
-

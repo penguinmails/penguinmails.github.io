@@ -859,5 +859,3 @@ Navigate to specific team performance areas:
 
 **Keywords**: team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics
 ---
-
-

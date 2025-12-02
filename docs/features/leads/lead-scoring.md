@@ -104,7 +104,7 @@ David Kim              68     1 week ago
 
 ### Use Scores in Campaigns
 
-**Score-Based Segments:**
+#### Score-Based Segments
 
 ```text
 
@@ -127,7 +127,7 @@ Cold Leads (Score 0-50):
 
 #### Behavioral Scoring
 
-**Engagement Actions**
+##### Engagement Actions
 
 ```yaml
 email_actions:
@@ -162,7 +162,7 @@ email_actions:
 
 ```
 
-**Website Activity** (if integrated)
+##### Website Activity (if integrated)
 
 ```yaml
 website_actions:
@@ -187,7 +187,7 @@ website_actions:
 
 ```
 
-**Negative Actions**
+##### Negative Actions
 
 ```yaml
 negative_actions:
@@ -215,7 +215,7 @@ negative_actions:
 
 #### Demographic Scoring
 
-**Firmographic Data**
+##### Firmographic Data
 
 ```yaml
 company_attributes:
@@ -242,7 +242,7 @@ company_attributes:
 
 ```
 
-**Role-Based Scoring**
+##### Role-Based Scoring
 
 ```yaml
 job_title_keywords:
@@ -265,7 +265,7 @@ job_title_keywords:
 
 ```
 
-**Geographic Scoring**
+##### Geographic Scoring
 
 ```yaml
 location:
@@ -282,7 +282,7 @@ location:
 
 ### Score Decay & Recency
 
-**Time-Based Decay:**
+#### Time-Based Decay
 
 ```yaml
 decay_rules:
@@ -300,7 +300,7 @@ decay_rules:
 
 ```
 
-**Recency Boosting:**
+#### Recency Boosting
 
 ```yaml
 recency_multipliers:
@@ -320,7 +320,7 @@ recency_multipliers:
 
 ### Multi-Dimensional Scoring
 
-**Separate Scores for Different Aspects:**
+#### Separate Scores for Different Aspects
 
 ```yaml
 scoring_dimensions:
@@ -346,7 +346,7 @@ scoring_dimensions:
 
 ### Score-Based Automation
 
-**Auto-Segmentation:**
+#### Auto-Segmentation
 
 ```text
 
@@ -358,7 +358,7 @@ When lead score reaches 75:
 
 ```
 
-**Lead Lifecycle Stages:**
+#### Lead Lifecycle Stages
 
 ```text
 
@@ -369,7 +369,7 @@ Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 
 ```
 
-**CRM Sync:**
+#### CRM Sync
 
 ```text
 
@@ -767,5 +767,3 @@ eventEmitter.on('contact.updated', async (event) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
-
-

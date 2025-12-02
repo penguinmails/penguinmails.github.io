@@ -1188,5 +1188,3 @@ Navigate to specific analytics and campaign areas:
 
 **Keywords**: user journey analytics, campaign performance, email marketing analytics, deliverability monitoring, engagement tracking, campaign optimization, journey mapping, performance analytics
 ---
-
-

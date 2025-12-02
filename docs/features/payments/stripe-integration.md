@@ -490,5 +490,3 @@ stripe trigger checkout.session.completed
 **Compliance:** PCI DSS Level 1, SCA compliant
 
 *All payments are processed securely by Stripe. PenguinMails never stores credit card information.*
-
-

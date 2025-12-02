@@ -59,7 +59,7 @@ Platform (PenguinMails)
 
 ### Tenant
 
-**Tenant = Company/Organization**
+Tenant = Company/Organization.
 
 - Highest level of data isolation
 
@@ -71,15 +71,14 @@ Platform (PenguinMails)
 
 - Complete separation from other tenants
 
-**Example Tenants:**
+Example tenants:
 
 - Acme Marketing Agency (Tenant ID: `tenant_abc123`)
-
 - Startup Inc (Tenant ID: `tenant_xyz789`)
 
 ### Users
 
-**Users = Team Members within a Tenant**
+Users = Team Members within a Tenant.
 
 - Belong to exactly one tenant
 
@@ -89,7 +88,7 @@ Platform (PenguinMails)
 
 - Cannot see data from other tenants
 
-**User Roles:**
+User roles:
 
 - **Tenant Owner** - Full control, billing access
 
@@ -99,7 +98,7 @@ Platform (PenguinMails)
 
 ### Workspaces
 
-**Workspaces = Projects, Clients, or Teams**
+Workspaces = Projects, Clients, or Teams.
 
 - Organize work within a tenant
 
@@ -115,7 +114,7 @@ Platform (PenguinMails)
 
 ### Database-Level Isolation
 
-**NileDB provides native multi-tenancy:**
+NileDB provides native multi-tenancy:
 
 ```sql
 -- Every table has tenant_id
@@ -133,7 +132,7 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
 
 ```
 
-**Automatic Tenant Context:**
+Automatic tenant context:
 
 - All queries automatically scoped to current tenant
 
@@ -145,7 +144,7 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
 
 ### Authentication & Tenant Context
 
-**How tenant context is established:**
+How tenant context is established:
 
 1. **User logs in** with email/password
 
@@ -568,5 +567,3 @@ Return results (tenant-scoped only)
 **Isolation Level:** Database Row-Level Security (RLS)
 
 *Multi-tenancy is the foundation of PenguinMails' security and scalability. Complete tenant isolation ensures enterprise-grade data protection.*
-
-

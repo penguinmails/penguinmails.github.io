@@ -160,4 +160,3 @@ Official client libraries are coming soon:
 **Version:** v1
 
 *Build powerful email integrations with the PenguinMails API.*
-

@@ -98,5 +98,3 @@ This notifications database integrates with:
 - OLAP for optional aggregate reporting
 
 For questions or support, contact the Engineering team.
-
-

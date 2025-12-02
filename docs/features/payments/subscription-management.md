@@ -38,11 +38,13 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 #### ðŸŒ± Starter Plan
 
-**Perfect for small teams getting started**
+##### Perfect for small teams getting started
 
-**Pricing:** $49/month or $470/year (save $118)
+##### Pricing
 
-**Includes:**
+$49/month or $470/year (save $118)
+
+##### Includes
 
 - 10,000 emails/month
 
@@ -56,17 +58,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - Email support
 
-**Best For:** Freelancers, small agencies, startups
+##### Best For
+
+Freelancers, small agencies, startups
 
 ---
 
 #### ðŸš€ Professional Plan
 
-**Most Popular - For growing businesses**
+##### Most Popular - For growing businesses
 
-**Pricing:** $149/month or $1,430/year (save $358)
+##### Pricing
 
-**Includes:**
+$149/month or $1,430/year (save $358)
+
+##### Includes
 
 - 50,000 emails/month
 
@@ -84,17 +90,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - API access
 
-**Best For:** Growing agencies, marketing teams, SMBs
+##### Best For
+
+Growing agencies, marketing teams, SMBs
 
 ---
 
 #### ðŸ’¼ Business Plan
 
-**For established businesses with high volume**
+##### For established businesses with high volume
 
-**Pricing:** $399/month or $3,830/year (save $958)
+##### Pricing
 
-**Includes:**
+$399/month or $3,830/year (save $958)
+
+##### Includes
 
 - 200,000 emails/month
 
@@ -114,17 +124,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - Advanced automation
 
-**Best For:** Established agencies, enterprise marketing teams
+##### Best For
+
+Established agencies, enterprise marketing teams
 
 ---
 
 #### ðŸ¢ Enterprise Plan
 
-**Custom solutions for large organizations**
+##### Custom solutions for large organizations
 
-**Pricing:** Custom (Contact Sales)
+##### Pricing
 
-**Includes:**
+Custom (Contact Sales)
+
+##### Includes
 
 - Unlimited emails
 
@@ -600,5 +614,3 @@ Cancellation â†’ Free Tier (90 days) â†’ Data Deletion
 **Billing Cycle:** Monthly or Annual
 
 *Subscriptions can be modified or canceled at any time with no penalties or hidden fees.*
-
-

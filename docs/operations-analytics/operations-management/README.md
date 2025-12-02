@@ -108,5 +108,3 @@ Operations management encompasses the day-to-day activities required to keep the
 
 **Keywords**: operations management, infrastructure operations, incident response, release management, deployment pipelines, monitoring systems, enterprise operations
 ---
-
-

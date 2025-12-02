@@ -456,5 +456,3 @@ This schema design provides a robust foundation for job processing with:
 - **Flexibility**: JSONB payloads for diverse job types
 
 The schema supports both operational needs (job processing) and analytical needs (reporting and optimization) while maintaining data integrity and performance.
-
-

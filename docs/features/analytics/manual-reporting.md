@@ -802,9 +802,6 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
 - **[API Architecture](/docs/implementation-technical/api/README)** - Export API endpoints
 
 ---
-
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Analytics Team
-
-

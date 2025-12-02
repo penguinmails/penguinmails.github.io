@@ -156,7 +156,7 @@ Each card displays:
 
 #### Webhook Creation Form
 
-**Step 1: Basic Configuration**
+#### Step 1: Basic Configuration
 
 **Webhook Name**:
 
@@ -833,7 +833,7 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 
 #### Event Documentation
 
-**Example: email.opened Event**
+##### Example: email.opened Event
 
 **Event Type**: `email.opened`
 
@@ -1059,5 +1059,3 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 **Target Release:** Q1 2026
 
 *Webhook system routes provide comprehensive tools for developers to receive real-time event notifications with secure delivery, retry logic, and detailed monitoring.*
-
-

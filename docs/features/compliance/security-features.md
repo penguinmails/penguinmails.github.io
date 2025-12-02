@@ -911,5 +911,3 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Security Team
-
-

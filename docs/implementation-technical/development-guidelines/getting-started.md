@@ -222,5 +222,3 @@ After setting up your environment:
 - **Discussions**: Use [GitHub Discussions](https://github.com/penguinmails/platform/discussions) for questions
 
 Welcome to the PenguinMails community!
-
-

@@ -654,5 +654,3 @@ This document outlines the development roadmap for inbox management features, in
 **Last Updated**: November 26, 2025
 **Status**: Roadmap defined, awaiting Stalwart spike completion
 **Next Review**: After Stalwart spike (Q4 2025)
-
-

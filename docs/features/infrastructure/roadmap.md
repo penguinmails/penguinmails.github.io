@@ -127,7 +127,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 3-5 days
 **Why MVP:** Reduces setup failures, improves UX, quick win
 
-##### Capabilities
+#### Capabilities
 
 - Real-time DNS propagation checker (query 10+ global nameservers)
 
@@ -201,7 +201,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Critical for deliverability, reduces support burden, user self-service
 
-##### Capabilities
+#### Capabilities
 
 - IP reputation dashboard with score breakdown
 
@@ -275,7 +275,7 @@ This document provides a detailed roadmap for infrastructure management features
 **Effort:** 1-2 weeks
 **Why MVP:** Improves reliability, reduces MTTR, enterprise requirement
 
-##### Capabilities
+#### Capabilities
 
 - Multi-channel alerting (email, SMS, webhook, in-app)
 

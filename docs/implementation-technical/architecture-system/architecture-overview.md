@@ -156,7 +156,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 #### Core Services Architecture
 
-**User Management Service**
+##### User Management Service
 
 - User registration and authentication
 
@@ -166,7 +166,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 - Session management
 
-**Tenant Management Service**
+##### Tenant Management Service
 
 - Multi-tenant data isolation
 
@@ -176,7 +176,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 - Billing integration
 
-**Infrastructure Management Service**
+##### Infrastructure Management Service
 
 - VPS provisioning and configuration
 
@@ -186,7 +186,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 - IP pool management and routing
 
-**Campaign Management Service**
+##### Campaign Management Service
 
 - Email campaign creation and editing
 
@@ -196,7 +196,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 - Performance tracking and analytics
 
-**Email Processing Service**
+##### Email Processing Service
 
 - Email sending and delivery
 
@@ -210,7 +210,7 @@ PenguinMails is built on a **multi-tenant, microservices architecture** designed
 
 #### Email Infrastructure Specialization
 
-**VPS Management**
+##### VPS Management
 
 ```markdown
 Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → Warm-up → Ready for Campaigns
@@ -220,7 +220,7 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 ```
 
-**SMTP Server Stack**
+##### SMTP Server Stack
 
 - **MailU Postfix**: Reliable email sending with anti-spam features
 
@@ -242,7 +242,7 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 #### Database Architecture
 
-**Primary Database (PostgreSQL)**
+##### Primary Database (PostgreSQL)
 
 - **User Data**: Authentication, profiles, preferences
 
@@ -254,7 +254,7 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 - **Compliance Data**: Audit logs, consent records, unsubscribe lists
 
-**Cache Layer (Redis)**
+##### Cache Layer (Redis)
 
 - **Session Storage**: User sessions and authentication tokens
 
@@ -284,9 +284,15 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 #### VPS Provider Integration (Hostwind)
 
-**Purpose**: Automated VPS provisioning and management
-**Integration Method**: REST API with webhooks
-**Key Features**:
+##### Purpose
+
+Automated VPS provisioning and management
+
+##### Integration Method
+
+REST API with webhooks
+
+##### Key Features
 
 - Geographic IP distribution for optimal deliverability
 
@@ -298,9 +304,15 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 #### SMTP Provider Integration (MailU)
 
-**Purpose**: Specialized email infrastructure
-**Integration Method**: API and configuration automation
-**Key Features**:
+##### Purpose
+
+Specialized email infrastructure
+
+##### Integration Method
+
+API and configuration automation
+
+##### Key Features
 
 - Postfix SMTP server configuration
 
@@ -312,9 +324,15 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 #### Payment Processing (Stripe)
 
-**Purpose**: Subscription billing and payment processing
-**Integration Method**: Stripe API with webhooks
-**Key Features**:
+##### Purpose
+
+Subscription billing and payment processing
+
+##### Integration Method
+
+Stripe API with webhooks
+
+##### Key Features
 
 - Flexible subscription management
 
@@ -326,9 +344,15 @@ Customer Request → VPS Provisioning → SMTP Setup → DNS Configuration → W
 
 #### Authentication & Database (NileDB)
 
-**Purpose**: User authentication and data persistence
-**Integration Method**: Built-in NileDB services
-**Key Features**:
+##### Purpose
+
+User authentication and data persistence
+
+##### Integration Method
+
+Built-in NileDB services
+
+##### Key Features
 
 - Secure user authentication with JWT tokens
 
@@ -415,7 +439,7 @@ sequenceDiagram
 
 ### Tenant Isolation Strategy
 
-**Data Isolation**
+#### Data Isolation
 
 - Each tenant has dedicated database schemas
 
@@ -425,7 +449,7 @@ sequenceDiagram
 
 - Dedicated resource quotas and limits
 
-**Infrastructure Isolation**
+#### Infrastructure Isolation
 
 - Dedicated SMTP servers per tenant (enterprise tier)
 
@@ -435,7 +459,7 @@ sequenceDiagram
 
 - Isolated monitoring and alerting per tenant
 
-**Security Isolation**
+#### Security Isolation
 
 - Tenant-specific authentication domains
 
@@ -447,7 +471,7 @@ sequenceDiagram
 
 ### Tenant Scaling Model
 
-**Small Business Tier**
+#### Small Business Tier
 
 - Shared infrastructure with other small businesses
 
@@ -457,7 +481,7 @@ sequenceDiagram
 
 - Cost-effective pricing model
 
-**Enterprise Tier**
+#### Enterprise Tier
 
 - Dedicated infrastructure components
 
@@ -485,7 +509,7 @@ sequenceDiagram
 
 ### Scalability Approach
 
-**Horizontal Scaling**
+#### Horizontal Scaling
 
 - Microservices architecture supports independent scaling
 
@@ -495,7 +519,7 @@ sequenceDiagram
 
 - Load balancing across multiple instances
 
-**Vertical Scaling**
+#### Vertical Scaling
 
 - VPS instances scale CPU, memory, and storage
 
@@ -505,7 +529,7 @@ sequenceDiagram
 
 - Email infrastructure scales with sending volume
 
-**Geographic Scaling**
+#### Geographic Scaling
 
 - VPS instances distributed across geographic regions
 
@@ -521,7 +545,7 @@ sequenceDiagram
 
 ### Security Layers
 
-**1. Authentication & Authorization**
+#### 1. Authentication & Authorization
 
 - Multi-factor authentication support
 
@@ -531,7 +555,7 @@ sequenceDiagram
 
 - OAuth integration for enterprise SSO
 
-**2. Data Protection**
+#### 2. Data Protection
 
 - Encryption at rest (AES-256)
 
@@ -541,7 +565,7 @@ sequenceDiagram
 
 - Regular security audits and penetration testing
 
-**3. Infrastructure Security**
+#### 3. Infrastructure Security
 
 - Network firewalls and DDoS protection
 
@@ -551,7 +575,7 @@ sequenceDiagram
 
 - Incident response and forensics capabilities
 
-**4. Email Security**
+#### 4. Email Security
 
 - DKIM signing for email integrity
 
@@ -563,7 +587,7 @@ sequenceDiagram
 
 ### Compliance Framework
 
-**GDPR Compliance**
+#### GDPR Compliance
 
 - Data minimization and purpose limitation
 
@@ -573,7 +597,7 @@ sequenceDiagram
 
 - Consent management and audit trails
 
-**CAN-SPAM Compliance**
+#### CAN-SPAM Compliance
 
 - Automatic unsubscribe link inclusion
 
@@ -583,7 +607,7 @@ sequenceDiagram
 
 - Honor unsubscribe requests within 10 days
 
-**SOC 2 Preparation**
+#### SOC 2 Preparation
 
 - Security and availability controls
 
@@ -599,7 +623,7 @@ sequenceDiagram
 
 ### Application Monitoring
 
-**System Health Monitoring**
+#### System Health Monitoring
 
 - Real-time infrastructure health checks
 
@@ -609,7 +633,7 @@ sequenceDiagram
 
 - Capacity planning and scaling recommendations
 
-**Business Metrics Monitoring**
+#### Business Metrics Monitoring
 
 - Customer onboarding funnel analytics
 
@@ -619,7 +643,7 @@ sequenceDiagram
 
 - Customer satisfaction and support metrics
 
-**Security Monitoring**
+#### Security Monitoring
 
 - Failed login attempt tracking
 
@@ -631,7 +655,7 @@ sequenceDiagram
 
 ### Alert System
 
-**Critical Alerts** (Immediate Response)
+#### Critical Alerts (Immediate Response)
 
 - Infrastructure failures
 
@@ -641,7 +665,7 @@ sequenceDiagram
 
 - Compliance violations
 
-**Warning Alerts** (4-Hour Response)
+#### Warning Alerts (4-Hour Response)
 
 - Performance degradation
 
@@ -651,7 +675,7 @@ sequenceDiagram
 
 - Billing problems
 
-**Info Alerts** (24-Hour Response)
+#### Info Alerts (24-Hour Response)
 
 - System updates and maintenance
 
@@ -701,7 +725,7 @@ sequenceDiagram
 
 ### API Design Principles
 
-**RESTful APIs**
+#### RESTful APIs
 
 - Consistent URL patterns and HTTP methods
 
@@ -711,7 +735,7 @@ sequenceDiagram
 
 - API versioning for backward compatibility
 
-**Webhook System**
+#### Webhook System
 
 - Real-time event notifications
 
@@ -721,7 +745,7 @@ sequenceDiagram
 
 - Configurable webhook endpoints per tenant
 
-**Rate Limiting**
+#### Rate Limiting
 
 - API rate limiting to prevent abuse
 
@@ -803,7 +827,7 @@ sequenceDiagram
 
 ### Chosen Approach: Multi-tenant Shared Infrastructure
 
-**Why This Approach**:
+#### Why This Approach
 
 - Cost-effective for customers at all tiers
 
@@ -813,7 +837,7 @@ sequenceDiagram
 
 - Faster development and deployment cycles
 
-**Trade-offs Considered**:
+#### Trade-offs Considered
 
 - **Isolation vs. Cost**: Dedicated infrastructure provides better isolation but higher costs
 
@@ -823,19 +847,19 @@ sequenceDiagram
 
 ### Alternative Approaches Rejected
 
-**1. Dedicated Infrastructure per Customer**
+#### 1. Dedicated Infrastructure per Customer
 
 - **Rejected Because**: 10-50x higher infrastructure costs
 
 - **When It Makes Sense**: Enterprise customers requiring maximum isolation
 
-**2. Third-party Email Service Providers**
+#### 2. Third-party Email Service Providers
 
 - **Rejected Because**: Lack of infrastructure control and customization
 
 - **When It Makes Sense**: Customers with minimal technical requirements
 
-**3. Monolithic Architecture**
+#### 3. Monolithic Architecture
 
 - **Rejected Because**: Scaling and deployment complexity
 

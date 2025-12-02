@@ -63,7 +63,7 @@ echo "Review reports in validation/reports/baseline/"
 
 **Template for Review**:
 
-```markdown
+````markdown
 ## Baseline Validation Results
 
 **Date**: [DATE]
@@ -86,7 +86,7 @@ echo "Review reports in validation/reports/baseline/"
 - [Any observations]
 - [Any script adjustments needed]
 - [Any false positive patterns]
-```
+````
 
 ### Step 1.3: Test Fix Scripts (on copies)
 
@@ -127,7 +127,7 @@ rm -rf docs-test-backup
 
 Add a "Documentation Quality" section:
 
-```markdown
+````markdown
 ## Documentation Quality
 
 This project uses an automated validation pipeline to ensure documentation quality.
@@ -157,13 +157,13 @@ bash scripts/fix/fix_codefences.sh docs           # Fix closing fence languages
 
 See `/validation/README.md` for complete documentation.
 
-```
+````
 
 ### Step 2.2: Update CONTRIBUTING.md
 
 Add validation requirements:
 
-```markdown
+````markdown
 ## Documentation Standards
 
 All documentation must pass validation checks before merging.
@@ -171,24 +171,24 @@ All documentation must pass validation checks before merging.
 ### Before Submitting a PR
 
 1. Run validation on your changes:
-   ```bash
-   cd validation
-   bash scripts/detect/detect_frontmatter_issues.sh docs
-   bash scripts/detect/detect_link_policy_violations.sh docs
-   ```
+    ```bash
+    cd validation
+    bash scripts/detect/detect_frontmatter_issues.sh docs
+    bash scripts/detect/detect_link_policy_violations.sh docs
+    ```
 
 2. Fix any issues found (automated fixes available for some):
 
-   ```bash
-   bash scripts/fix/fix_whitespace.sh docs
-   bash scripts/fix/fix_link_extensions.sh docs
-   ```
+    ```bash
+    bash scripts/fix/fix_whitespace.sh docs
+    bash scripts/fix/fix_link_extensions.sh docs
+    ```
 
 3. Verify fixes:
 
-   ```bash
-   bash test_runner.sh  # Should pass 17/17 tests
-   ```
+    ```bash
+    bash test_runner.sh  # Should pass 17/17 tests
+    ```
 
 ### Common Issues
 
@@ -199,13 +199,13 @@ All documentation must pass validation checks before merging.
 
 See `/validation/README.md` for complete validation rules.
 
-```
+````
 
 ### Step 2.3: Create MARKDOWN_LINT.md
 
 Document all validation rules:
 
-```markdown
+````markdown
 # Markdown Linting Rules
 
 This document describes all validation rules enforced by the pipeline.
@@ -294,13 +294,13 @@ Forbidden:
 **Detection**: `detect_formatting_issues.sh`  
 **Fix**: Planned (automated fix script)
 
-```
+````
 
 ### Step 2.4: Update AGENTS.md
 
 Add validation guidelines for AI agents:
 
-```markdown
+````markdown
 ## Documentation Validation
 
 When creating or modifying documentation:
@@ -331,7 +331,7 @@ When creating or modifying documentation:
    bash test_runner.sh  # 17/17 tests should pass
    ```
 
-```
+````
 
 ## Phase 3: GitHub Actions Integration
 

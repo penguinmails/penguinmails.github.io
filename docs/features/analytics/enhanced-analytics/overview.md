@@ -938,9 +938,6 @@ The system will automatically generate recommendations:
 - **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Data export and scheduled reports
 
 ---
-
 **Last Updated**: 2025-11-24
 **Owner**: Data Engineering + Backend Team
 **Status**: Planned - Q1 2026 enhancement to basic analytics
-
-

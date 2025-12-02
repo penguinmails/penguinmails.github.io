@@ -91,5 +91,3 @@ This queue system integrates with:
 - Content storage systems
 
 For questions or support, contact the Engineering team.
-
-

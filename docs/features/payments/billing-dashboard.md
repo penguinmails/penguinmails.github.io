@@ -575,5 +575,3 @@ PUT /api/v1/billing/company-info
 **Data Retention:** Invoices retained for 7 years
 
 *The Billing Dashboard provides complete transparency into your PenguinMails costs and usage.*
-
-

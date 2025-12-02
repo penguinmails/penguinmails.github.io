@@ -136,7 +136,7 @@ graph LR
 
 ### Strategic ROI Examples
 
-##### Example 1: Mid-Market B2B Company (25K contacts)
+#### Example 1: Mid-Market B2B Company (25K contacts)
 
 - **Investment**: $3,400/month ($40,800)
 
@@ -166,7 +166,7 @@ graph LR
 
 ### Compliance Investment Prioritization
 
-##### Tier 1: Critical (Must-Have)
+#### Tier 1: Critical (Must-Have)
 
 1. **CAN-SPAM compliance**: All US email marketing operations
 

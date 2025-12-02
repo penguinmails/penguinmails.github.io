@@ -1118,5 +1118,3 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 **Owner:** Templates Team
 
 {% endraw %}
-
-

@@ -139,7 +139,7 @@ Authorization: Bearer pm_live_...
 
 ```
 
-**"View Full Docs" Link**
+- View full docs link
 
 **Manage Contacts**:
 
@@ -150,7 +150,7 @@ Authorization: Bearer pm_live_...
 
 ```
 
-**"View Full Docs" Link**
+- View full docs link
 
 **Get Analytics**:
 
@@ -161,7 +161,7 @@ Authorization: Bearer pm_live_...
 
 ```
 
-**"View Full Docs" Link**
+- View full docs link
 
 #### SDK Installation
 
@@ -287,7 +287,7 @@ Each card displays:
 
 **Key Creation Modal**:
 
-**Step 1: Basic Information**
+##### Step 1: Basic Information
 
 - **Key Name**: Input field (e.g., "Production App", "Staging Server").
 
@@ -301,7 +301,7 @@ Each card displays:
 
   - ○ Test (`pm_test_...`)
 
-**Step 2: Permissions**
+##### Step 2: Permissions
 
 **Permission Categories** (Expandable sections):
 
@@ -349,7 +349,7 @@ Each card displays:
 
 - **"Email Sending" Button**: Select email-related permissions only.
 
-**Step 3: Expiration (Optional)**
+##### Step 3: Expiration (Optional)
 
 - **Never Expire**: Radio button (default).
 
@@ -357,7 +357,7 @@ Each card displays:
 
   - Options: 30 days, 90 days, 1 year, Custom date.
 
-**Step 4: IP Restrictions (Optional)**
+##### Step 4: IP Restrictions (Optional)
 
 - **Allow All IPs**: Radio button (default).
 
@@ -452,7 +452,7 @@ curl -X GET https://api.penguinmails.com/v1/campaigns \
 
 #### Endpoint Documentation
 
-**Example: Send Email Endpoint**
+##### Example: Send Email Endpoint
 
 **Endpoint Header**:
 

@@ -106,5 +106,3 @@ This OLAP analytics database integrates with:
 - Compliance frameworks for audit requirements
 
 For questions or support, contact the Engineering team.
-
-

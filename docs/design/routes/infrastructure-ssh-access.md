@@ -279,7 +279,4 @@ interface TenantSecretsSummary {
 **Route Status:** BACKLOG
 **Priority:** HIGH (MVP dependency)
 **Estimated Effort:** Medium (5-7 days)
-
 *SSH access management is critical for tenant VPS access and infrastructure troubleshooting. Vault integration ensures secure credential storage and rotation.*
-
-

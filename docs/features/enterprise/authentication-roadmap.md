@@ -65,7 +65,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Prevents spam and abuse of the platform. Critical for maintaining sender reputation.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - Block unverified users from sending campaigns
 
@@ -89,7 +89,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Bot protection is essential for any SaaS platform. Without it, the platform is vulnerable to automated abuse.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - CAPTCHA on registration form
 
@@ -138,7 +138,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Description:** Complete password reset flow for users who forget their password. Flow must not reveal whether an email exists in the system.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - âœ… "Forgot Password" form on `/forgot-password` route
 
@@ -162,7 +162,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Description:** Allow authenticated users to change their password from settings. Requires current password for verification.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - âœ… "Change Password" section in `/dashboard/settings/profile`
 
@@ -217,7 +217,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Essential for security-conscious users and enterprise customers. Enables users to detect and respond to security incidents.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - "Login Activity" section in `/dashboard/settings/profile`
 
@@ -245,7 +245,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Security feature expected by users. API exists but unusable without UI.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - "Active Sessions" section in `/dashboard/settings/profile`
 
@@ -304,7 +304,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why MVP:** Expected feature that significantly improves user experience. Users frustrated by frequent logouts may abandon the platform.
 
-##### Acceptance Criteria
+#### Acceptance Criteria
 
 - "Remember me" checkbox on `/login` form
 
@@ -456,7 +456,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 **Why Post-MVP:** Enterprise feature not needed for SMB customers. Can be added when targeting enterprise customers with strict security requirements.
 
-##### Key Features
+#### Key Features
 
 - Conditional session policies (shorter timeout for remote networks)
 
@@ -695,4 +695,3 @@ This document provides a detailed roadmap for authentication and security featur
 ---
 
 *Authentication and security are foundational to platform trust. This roadmap ensures we build the right features at the right time, balancing security requirements with user experience and business needs.*
-

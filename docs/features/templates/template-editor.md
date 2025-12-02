@@ -1230,5 +1230,3 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q2 2026
 **Owner:** Templates Team
-
-

@@ -204,5 +204,3 @@ erDiagram
   jobs       ||--o{ job_logs : "job has logs"
 
 ```
-
-

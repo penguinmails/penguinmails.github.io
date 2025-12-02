@@ -433,5 +433,3 @@ Retention Policies:
 **Regulatory Changes:** Monitor EU data protection developments
 
 *PenguinMails is committed to maintaining GDPR compliance and protecting user privacy. This documentation is regularly updated to reflect current regulations and best practices.*
-
-

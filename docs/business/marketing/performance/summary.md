@@ -173,7 +173,7 @@ This document provides marketing performance optimization with clear separation 
 
 ### Post-MVP Creative Performance Optimization
 
-##### Post-MVP Creative Optimization Framework
+#### Post-MVP Creative Optimization Framework
 
 ##### Post-MVP A/B Testing Automation
 

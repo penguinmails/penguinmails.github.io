@@ -1490,5 +1490,3 @@ interface RedisClient {
 
 For comprehensive testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
 For the contribution workflow, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
-
-

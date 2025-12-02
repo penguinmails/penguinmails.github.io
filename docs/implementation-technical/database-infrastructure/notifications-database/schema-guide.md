@@ -393,5 +393,3 @@ See:
 for the visual ER representation of this schema.
 
 ---
-
-

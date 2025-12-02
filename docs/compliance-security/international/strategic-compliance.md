@@ -501,7 +501,7 @@ version: "1.0"
 
 ---
 
-## ðŸŒ Strategic References
+## Strategic References
 
 - [European Data Protection Board Guidelines](https://www.edpb.europa.eu/edpb_en)
 
@@ -516,4 +516,3 @@ version: "1.0"
 - [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
 - [Technical Implementation Guide](/docs/compliance-security/international/technical-implementation)
-

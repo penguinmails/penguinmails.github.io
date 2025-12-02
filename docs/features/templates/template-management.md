@@ -190,5 +190,3 @@ POST /api/v1/templates
 **Engine:** Handlebars.js
 
 *Great templates drive engagement. PenguinMails gives you the tools to look professional on every device.*
-
-

@@ -475,5 +475,3 @@ Notifications/system events, logs, and jobs:
 - Live in their respective tiers and feed OLAP only via intentional, aggregate pipelines when justified.
 
 Use this guide as the authoritative reference for what belongs in the OLAP warehouse.
-
-

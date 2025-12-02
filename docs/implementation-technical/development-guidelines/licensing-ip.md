@@ -1302,5 +1302,3 @@ Tech City, TC 12345
 
 For contribution process questions, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
 For community guidelines, see [`community-governance.md`](/docs/implementation-technical/development-guidelines/community-governance).
-
-

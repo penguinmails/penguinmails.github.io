@@ -81,5 +81,3 @@ This section follows the **Progressive Complexity Framework** with three distinc
 6. **Request**: Follow [`feature-requests.md`](/docs/implementation-technical/development-guidelines/feature-requests) for new features
 
 This modular approach ensures comprehensive coverage while maintaining document manageability and focused learning paths for different contributor experience levels.
-
-

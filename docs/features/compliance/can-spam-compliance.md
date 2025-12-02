@@ -184,7 +184,7 @@ Company Address Setup:
 
 #### PenguinMails Unsubscribe Features
 
-**One-Click Unsubscribe**
+##### One-Click Unsubscribe
 
 - **List-Unsubscribe header** - RFC 8058 compliant
 
@@ -194,7 +194,7 @@ Company Address Setup:
 
 - **Confirmation page** - User feedback on successful unsubscribe
 
-**Unsubscribe Link Placement**
+##### Unsubscribe Link Placement
 
 - **Footer placement** - Clear and prominent
 
@@ -204,7 +204,7 @@ Company Address Setup:
 
 - **Mobile-optimized** - Easy to tap on mobile devices
 
-**Example Unsubscribe Text:**
+##### Example Unsubscribe Text
 
 ```text
 
@@ -559,5 +559,3 @@ Before any campaign sends, PenguinMails automatically checks:
 **Applies To:** All commercial emails sent to US recipients
 
 *PenguinMails automates CAN-SPAM compliance but users are ultimately responsible for ensuring their email practices comply with all applicable laws.*
-
-

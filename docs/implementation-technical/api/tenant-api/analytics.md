@@ -617,5 +617,3 @@ interface TimeSeriesDataPoint {
 **Last Updated:** November 26, 2025
 **API Version:** v1
 **Status:** Active Development
-
-

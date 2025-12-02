@@ -736,4 +736,3 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 - **[Queue System](/docs/features/queue/background-jobs)** - Background job processing for reports
 
 ---
-

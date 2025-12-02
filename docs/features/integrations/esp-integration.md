@@ -94,7 +94,7 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 
 #### Postmark Setup
 
-**Step 1: Create Postmark Account**
+##### Step 1: Create Postmark Account
 
 1. Sign up at [postmarkapp.com](https://postmarkapp.com)
 
@@ -102,7 +102,7 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 
 3. Create a "Server" (sending environment)
 
-**Step 2: Get API Key**
+##### Step 2: Get API Key
 
 1. Go to **Servers** → **API Tokens**
 
@@ -110,7 +110,7 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 
 3. Save for PenguinMails configuration
 
-**Step 3: Configure in PenguinMails**
+##### Step 3: Configure in PenguinMails
 
 ```text
 Settings → Integrations → ESP Integration
@@ -126,7 +126,7 @@ Track Links: ☑ Yes
 
 ```
 
-**Step 4: Verify Domain**
+##### Step 4: Verify Domain
 
 1. Postmark provides DNS records (DKIM, Return-Path)
 
@@ -178,7 +178,7 @@ Track Links: ☑ Yes
 
 #### Mailgun Setup
 
-**Step 1: Create Mailgun Account**
+##### Step 1: Create Mailgun Account
 
 1. Sign up at [mailgun.com](https://www.mailgun.com)
 
@@ -186,7 +186,7 @@ Track Links: ☑ Yes
 
 3. Verify email and billing info
 
-**Step 2: Add Sending Domain**
+##### Step 2: Add Sending Domain
 
 1. Go to **Sending** → **Domains**
 
@@ -198,7 +198,7 @@ Track Links: ☑ Yes
 
 5. Wait for verification
 
-**Step 3: Get API Credentials**
+##### Step 3: Get API Credentials
 
 1. Go to **Settings** → **API Keys**
 
@@ -206,7 +206,7 @@ Track Links: ☑ Yes
 
 3. Note your **Domain Name**
 
-**Step 4: Configure in PenguinMails**
+##### Step 4: Configure in PenguinMails
 
 ```text
 Settings → Integrations → ESP Integration

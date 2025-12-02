@@ -221,7 +221,7 @@ Store admin and tenant SSH keys in Vault during VPS provisioning, enabling secur
 
 Store SMTP admin credentials in Vault during MailU setup, enabling secure credential retrieval for troubleshooting.
 
-##### Features
+#### Features
 
 - AES-256-GCM encryption before Vault storage
 
@@ -239,7 +239,7 @@ Store SMTP admin credentials in Vault during MailU setup, enabling secure creden
 
 Generate unique API keys per tenant for programmatic email sending, stored securely in Vault with bcrypt hashing.
 
-##### Features
+#### Features
 
 - Unique API key format: `pm_live_{32_random_chars}`
 
@@ -259,7 +259,7 @@ Generate unique API keys per tenant for programmatic email sending, stored secur
 
 Enable rapid recovery from VPS compromise or Vault failure through automated backups and documented restoration procedures.
 
-##### Features
+#### Features
 
 - Automated daily Vault backups to S3 (encrypted)
 

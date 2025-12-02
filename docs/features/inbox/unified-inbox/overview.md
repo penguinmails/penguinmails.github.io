@@ -190,7 +190,7 @@ Create custom views for different workflows.
 
 Standardize responses with dynamic templates.
 
-##### Template: "Booking Request"
+#### Template: "Booking Request"
 
 ```html
 Hi {{firstName}},
@@ -210,7 +210,7 @@ Best,
 
 Trigger actions based on inbox events.
 
-##### Rule: "Auto-CRM Sync"
+#### Rule: "Auto-CRM Sync"
 
 ```yaml
 trigger:

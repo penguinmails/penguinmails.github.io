@@ -377,7 +377,6 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 - **[Core Analytics Overview](/docs/features/analytics/core-analytics/overview)** - Current analytics capabilities
 
 - **[Enhanced Analytics Roadmap](/docs/features/analytics/enhanced-analytics/overview)** - Q1 2026 advanced features
-
 - **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and exports
 
 ### Route Specifications
@@ -395,4 +394,3 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Document Owner:** Product Team
 **Last Review:** November 26, 2025
 **Next Review:** After MVP implementation
-

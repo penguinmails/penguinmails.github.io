@@ -318,5 +318,3 @@ For detailed implementation guidance, refer to the specific component documentat
 - [Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual database schema
 
 **Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, asynchronous processing
-
-

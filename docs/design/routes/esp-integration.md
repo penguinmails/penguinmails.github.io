@@ -401,7 +401,7 @@ Email Type → Provider
 
 Each rule card contains:
 
-**Rule 1: Transactional Emails**
+##### Rule 1: Transactional Emails
 
 - **Email Type**: Dropdown
 

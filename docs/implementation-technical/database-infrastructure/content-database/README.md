@@ -101,5 +101,3 @@ This content database integrates with:
 - Backup systems for data durability and compliance
 
 For questions or support, contact the Engineering team.
-
-

@@ -1120,5 +1120,3 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q3 2026
 **Owner:** Deliverability Team
-
-

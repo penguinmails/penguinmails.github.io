@@ -705,7 +705,7 @@ interface RecoveryResponse {
 
 **Note**: Some privacy and security enhancements are scheduled for 2026 implementation based on infrastructure constraints and resource availability.
 
-**Related Documents**
+#### Related Documents
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Comprehensive security architecture
 

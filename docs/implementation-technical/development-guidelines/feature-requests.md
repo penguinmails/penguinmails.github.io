@@ -987,5 +987,3 @@ Each feature must include:
 
 For testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
 For code standards, see [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards).
-
-

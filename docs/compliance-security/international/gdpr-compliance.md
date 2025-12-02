@@ -326,7 +326,7 @@ GDPR applies to any entity processing personal data of EU residents, regardless 
 
 ---
 
-## ðŸŒ Official References
+## Official References
 
 - [GDPR Full Text - EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 
@@ -336,4 +336,3 @@ GDPR applies to any entity processing personal data of EU residents, regardless 
 
 **Document Classification:** Level 2 - Detailed Legal Analysis
 **Related Document:** [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
-

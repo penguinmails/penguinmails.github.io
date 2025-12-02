@@ -93,7 +93,7 @@ Performance Data ◄─── Metrics ──► Optimization Loop
 
 ### Key Integration Points
 
-##### 1. Workflow Orchestration
+#### 1. Workflow Orchestration
 
 ```json
 {
@@ -188,7 +188,7 @@ Performance Balance ◄─── Utilization ──► CS Optimization
 
 ### Key Integration Points
 
-##### 1. Capacity Forecasting
+#### 1. Capacity Forecasting
 
 ```json
 {
@@ -283,7 +283,7 @@ Improvement Cycle ◄─── Metrics ──► CS Refinement
 
 ### Key Integration Points
 
-##### 1. Real-time Monitoring
+#### 1. Real-time Monitoring
 
 ```json
 {

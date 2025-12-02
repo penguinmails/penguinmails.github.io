@@ -240,5 +240,3 @@ Operations management ensures:
 - **Observability**: Detailed logging and metrics for troubleshooting
 
 This operational framework provides the foundation for running a production-ready queue system that can handle varying workloads while maintaining system reliability and performance.
-
-

@@ -209,5 +209,3 @@ GET /api/v1/contacts/search?query=industry:SaaS
 **Capacity:** Unlimited contacts (billed by usage)
 
 *Clean data is the foundation of effective marketing. Use segmentation to send relevant content every time.*
-
-

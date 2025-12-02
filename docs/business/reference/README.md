@@ -73,4 +73,3 @@ This directory contains quick reference guides, executive templates, detailed me
 ---
 
 *This reference directory provides quick access to essential templates, methodology, and supporting materials to accelerate business analysis and decision-making.*
-

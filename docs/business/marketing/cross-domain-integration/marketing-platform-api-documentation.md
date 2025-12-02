@@ -65,7 +65,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
 
 ```
 
-**2. API Key Authentication**
+### 2. API Key Authentication
 
 ```json
 {
@@ -81,7 +81,7 @@ Marketing platform APIs integrate with external systems through a centralized AP
 
 ```
 
-**3. JWT Token Authentication**
+### 3. JWT Token Authentication
 
 ```json
 {
@@ -114,7 +114,7 @@ User-Agent: {integration_name}/{version}
 
 ### Campaign Management API
 
-**Create Campaign**
+### Create Campaign
 
 ```http
 POST /api/v1/campaigns
@@ -175,7 +175,7 @@ POST /api/v1/campaigns
 
 ```
 
-**Get Campaign Performance**
+### Get Campaign Performance
 
 ```http
 GET /api/v1/campaigns/{campaign_id}/performance
@@ -217,7 +217,7 @@ GET /api/v1/campaigns/{campaign_id}/performance
 
 ### Lead Management API
 
-**Capture Lead**
+### Capture Lead
 
 ```http
 POST /api/v1/leads
@@ -285,7 +285,7 @@ POST /api/v1/leads
 
 ```
 
-**Update Lead Status**
+### Update Lead Status
 
 ```http
 PATCH /api/v1/leads/{lead_id}
@@ -309,7 +309,7 @@ PATCH /api/v1/leads/{lead_id}
 
 ### Analytics and Reporting API
 
-**Get Campaign Analytics**
+### Get Campaign Analytics
 
 ```http
 GET /api/v1/analytics/campaigns?start_date=2025-01-01&end_date=2025-01-31
@@ -458,7 +458,7 @@ POST /api/v1/integrations/analytics/google/track
 
 ```
 
-**Customer Data Platform Integration**
+### Customer Data Platform Integration
 
 ```http
 POST /api/v1/integrations/cdp/audience/update
@@ -558,7 +558,7 @@ POST /api/v1/integrations/ecommerce/woocommerce/order-update
 
 ### Webhook Configuration
 
-**Register Webhook Endpoint**
+### Register Webhook Endpoint
 
 ```http
 POST /api/v1/webhooks
@@ -660,7 +660,7 @@ X-RateLimit-Window: 3600
 
 ### Rate Limit Management
 
-**Get Current Usage**
+### Get Current Usage
 
 ```http
 GET /api/v1/integrations/usage

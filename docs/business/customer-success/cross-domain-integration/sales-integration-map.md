@@ -93,7 +93,7 @@ Success Baseline ◄─── Validation ──► Pipeline Update
 
 ### Key Integration Points
 
-##### 1. Structured Handoff Package
+#### 1. Structured Handoff Package
 
 ```json
 {
@@ -191,7 +191,7 @@ Deal Progression ◄─── Qualification ──► CS Support
 
 ### Key Integration Points
 
-##### 1. Opportunity Identification
+#### 1. Opportunity Identification
 
 ```json
 {
@@ -289,7 +289,7 @@ Negotiation Support ◄─── Close Data ──► CS Update
 
 ### Key Integration Points
 
-##### 1. Risk Assessment
+#### 1. Risk Assessment
 
 ```json
 {

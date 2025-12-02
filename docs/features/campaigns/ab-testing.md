@@ -61,7 +61,7 @@ A/B Testing enables data-driven campaign optimization by testing variations of y
 
 #### Step 2: Configure Variations
 
-**Example: Subject Line Test**
+##### Example: Subject Line Test
 
 ```text
 
@@ -76,7 +76,7 @@ Subject: "Don't Miss Out: Half Price Sale Ends Tonight"
 
 ```
 
-**Test Parameters:**
+##### Test Parameters
 
 - Test sample size: 30% (10% per variant + 10% holdout)
 
@@ -267,7 +267,7 @@ confidence_threshold: 95%
 
 ### Statistical Significance
 
-**Confidence Scoring:**
+#### Confidence Scoring
 
 - System calculates statistical confidence for each variant
 
@@ -277,7 +277,7 @@ confidence_threshold: 95%
 
 - Extends test duration if needed to reach significance
 
-**Results Display:**
+#### Results Display
 
 ```text
 
@@ -294,7 +294,7 @@ Lift over control: +16.7%
 
 Test multiple elements in sequence:
 
-**Example: 3-Stage Test**
+#### Example: 3-Stage Test
 
 ```text
 
@@ -322,7 +322,7 @@ Combined lift: +45% vs. original
 
 ### Audience Segmentation in Tests
 
-**Test Different Segments Separately:**
+#### Test Different Segments Separately
 
 ```yaml
 test_groups:
@@ -747,5 +747,3 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
-
-

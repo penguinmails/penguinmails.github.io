@@ -218,7 +218,7 @@ Response:
 
 ### Form Fields
 
-##### 1. Name (required)
+#### 1. Name (required)
 
 - Type: Text input
 
@@ -228,7 +228,7 @@ Response:
 
 - Error: "Name is required" or "Name must be 1-50 characters"
 
-**2. Permissions (required)**
+#### 2. Permissions (required)
 
 - Type: Multi-select checkboxes
 
@@ -254,7 +254,7 @@ Response:
 
 - Error: "Select at least one permission"
 
-##### 3. Rate Limit (display only)
+#### 3. Rate Limit (display only)
 
 - Shows tier-based rate limit
 
@@ -351,7 +351,7 @@ Response (201 Created):
 
 ### UI Components
 
-**1. Warning Banner**
+#### 1. Warning Banner
 
 - Icon: âš ï¸ Warning icon
 
@@ -359,7 +359,7 @@ Response (201 Created):
 
 - Style: Yellow background, prominent
 
-**2. API Key Display**
+#### 2. API Key Display
 
 - Full API key value (plaintext)
 
@@ -369,13 +369,13 @@ Response (201 Created):
 
 - Select-all on click
 
-**3. Action Buttons**
+#### 3. Action Buttons
 
 - **Copy Key:** Copies API key to clipboard, shows toast
 
 - **Download .env:** Downloads file with `PENGUINMAILS_API_KEY=pm_live_...`
 
-**4. Code Examples**
+#### 4. Code Examples
 
 - Tabbed interface: cURL, Node.js, Python, PHP
 
@@ -385,7 +385,7 @@ Response (201 Created):
 
 - Pre-filled with actual API key
 
-**5. Footer Actions**
+#### 5. Footer Actions
 
 - **View Documentation:** Opens API docs in new tab
 
@@ -506,7 +506,7 @@ sendEmail();
 
 ### Tabs
 
-**1. Overview Tab**
+#### 1. Overview Tab
 
 - Key metadata (ID, masked key, permissions, rate limit, status)
 
@@ -516,7 +516,7 @@ sendEmail();
 
 - Actions (Regenerate, Revoke)
 
-**2. Usage Tab**
+#### 2. Usage Tab
 
 - Requests per day chart (last 30 days)
 
@@ -526,7 +526,7 @@ sendEmail();
 
 - Geographic distribution map (if available)
 
-**3. Security Tab**
+#### 3. Security Tab
 
 - Audit log (last 50 events)
 
@@ -954,5 +954,3 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 **Priority:** P0 - Critical
 
 *This route specification provides comprehensive UI/UX guidance for implementing the API key management interface. All implementation must reference the [Tenant API Key System feature documentation](/docs/features/integrations/vault-api-keys) for backend integration and security requirements.*
-
-

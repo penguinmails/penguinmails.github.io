@@ -149,7 +149,7 @@ Payback: 4 months
 
 - Net Risk-Adjusted Value: $570K annually
 
-**Campaign Optimization (CP-001)**
+#### Campaign Optimization (CP-001)
 
 - Confidence Level: 90%
 
@@ -161,7 +161,7 @@ Payback: 4 months
 
 ### Medium Confidence Investments (70-85% Success Rate)
 
-**Customer Journey Optimization (CJ-001)**
+#### Customer Journey Optimization (CJ-001)
 
 - Confidence Level: 80%
 
@@ -171,7 +171,7 @@ Payback: 4 months
 
 - Net Risk-Adjusted Value: $308K annually
 
-**Marketing Intelligence (MI-001)**
+#### Marketing Intelligence (MI-001)
 
 - Confidence Level: 75%
 
@@ -193,7 +193,7 @@ Payback: 4 months
 
 ### Year 1: Foundation and Quick Wins
 
-**Q1: Marketing Foundation (Months 1-3)**
+#### Q1: Marketing Foundation (Months 1-3)
 
 - Investment: $200K
 
@@ -201,7 +201,7 @@ Payback: 4 months
 
 - ROI: 75%
 
-**Q2: Campaign Optimization (Months 4-6)**
+#### Q2: Campaign Optimization (Months 4-6)
 
 - Additional Investment: $150K
 
@@ -209,7 +209,7 @@ Payback: 4 months
 
 - ROI: 150%
 
-**Q3: Customer Journey Foundation (Months 7-9)**
+#### Q3: Customer Journey Foundation (Months 7-9)
 
 - Additional Investment: $120K
 
@@ -217,7 +217,7 @@ Payback: 4 months
 
 - ROI: 400%
 
-**Q4: Intelligence and Automation (Months 10-12)**
+#### Q4: Intelligence and Automation (Months 10-12)
 
 - Additional Investment: $180K
 
@@ -310,4 +310,3 @@ Payback: 4 months
 
 This ROI summary demonstrates strong financial justification for the marketing technology investment, with $1.2M annual value delivery and 525% ROI providing compelling business case for implementation
 ---
-

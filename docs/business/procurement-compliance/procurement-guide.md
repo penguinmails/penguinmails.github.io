@@ -236,4 +236,3 @@ This guide is intentionally:
 
 *This procurement guide is part of the Progressive Disclosure Framework for Business Documentation. It provides executive assessment capabilities while enabling detailed technical and legal review.*
 ---
-

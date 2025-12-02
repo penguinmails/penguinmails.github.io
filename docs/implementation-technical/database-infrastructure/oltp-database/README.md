@@ -123,5 +123,3 @@ The [SQL Implementation Challenge](/docs/implementation-technical/database-infra
 - Discover architectural strengths and weaknesses through practice
 
 **Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security
-
-

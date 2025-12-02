@@ -218,5 +218,3 @@ CREATE TABLE ip_blacklist_events (
 **Automation:** Ansible + Node.js
 
 *Automated infrastructure management ensures high availability and consistent deliverability without manual intervention.*
-
-

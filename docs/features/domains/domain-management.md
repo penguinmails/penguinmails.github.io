@@ -140,4 +140,3 @@ GET /api/v1/domains/{id}/dns
 **Verification Time:** < 1 hour (TTL dependent)
 
 *Proper domain authentication is the single most important factor in email deliverability.*
-
