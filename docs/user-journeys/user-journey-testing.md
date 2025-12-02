@@ -326,4 +326,3 @@ We test navigation paths with users unfamiliar with current structure to identif
 ### Implementation
 
 - **[Active Tasks](/tasks/README)** - Development status
-

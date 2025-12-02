@@ -6,7 +6,6 @@ level: "1"
 persona: "Documentation Users"
 ---
 
-
 # Freelancer Onboarding Hub
 
 ## Welcome to PenguinMails Freelancer Program
@@ -211,7 +210,6 @@ Level 1: Overview (This page) → 5 minutes
 Level 2: Task Essentials (task-clarity-essentials) → 10 minutes
 Level 3: Operations Framework (/docs/operations/freelancer-management/framework) → 20 minutes
 
-
 ```
 
 ### Document Reading Order
@@ -388,4 +386,3 @@ We regularly update this documentation based on:
 **Business Value:** Clear onboarding pathway enabling new freelancers to understand requirements and succeed quickly
 **Implementation Status:** Ready for new freelancer onboarding
 **Target Audience:** New freelancers, experienced freelancers adapting to our model, industry specialists
-

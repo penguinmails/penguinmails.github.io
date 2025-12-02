@@ -6,7 +6,6 @@ level: "2"
 persona: "Product Designers & Developers"
 ---
 
-
 # Frontend Routing Map & Architecture
 
 **Purpose**: This document defines the complete routing structure for the PenguinMails frontend application (Next.js 15). It serves as the blueprint for navigation, access control, and page-level requirements.
@@ -232,4 +231,3 @@ All routes under `/dashboard` must be protected by Next.js middleware:
 * **App Layout**: Sidebar, Topbar, Auth Context.
 
 * **Admin Layout**: Distinct visual theme (e.g., red accent) for privileged context.
-

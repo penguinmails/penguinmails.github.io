@@ -6,7 +6,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Accessibility Guidelines
 
 ## Purpose
@@ -65,7 +64,6 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 <img src="logo.png" alt="Logo">
 <img src="chart.png"> <!-- Missing alt text -->
 
-
 ```
 
 ### Color and Contrast
@@ -89,7 +87,6 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
   outline: 2px solid hsl(199, 89%, 48%);
   outline-offset: 2px;
 }
-
 
 ```
 
@@ -140,7 +137,6 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
   </button>
 </div>
 
-
 ```
 
 ### Touch Targets
@@ -170,7 +166,6 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
     transition-duration: 0.01ms !important;
   }
 }
-
 
 ```
 
@@ -226,7 +221,6 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 <div class="error-message" role="alert" aria-live="polite">
   Please enter a valid email address
 </div>
-
 
 ```
 
@@ -298,7 +292,6 @@ export function Button({
   );
 }
 
-
 ```
 
 ### Accessibility Testing Checklist
@@ -369,7 +362,6 @@ export function Button({
   </tbody>
 </table>
 
-
 ```
 
 ### Modal Dialogs
@@ -391,7 +383,6 @@ export function Button({
   </div>
 </div>
 
-
 ```
 
 ### Progress Indicators
@@ -401,7 +392,6 @@ export function Button({
   <span class="sr-only">Sending emails: 75% complete</span>
   <div class="progress-bar" style="width: 75%"></div>
 </div>
-
 
 ```
 
@@ -558,4 +548,3 @@ export function Button({
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---
-

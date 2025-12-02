@@ -302,4 +302,3 @@ Each feature document is structured in **three progressive complexity levels**:
 ---
 
 *Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/roadmap/product-roadmap) →*
-

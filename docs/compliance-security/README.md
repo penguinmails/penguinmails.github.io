@@ -6,7 +6,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Compliance & Security
 
 Comprehensive compliance and security documentation for PenguinMails.
@@ -319,4 +318,3 @@ Global compliance and privacy frameworks:
 
 *Previous: [User Journeys](/docs/user-journeys) | Next: [Archive](/docs/archive) →*
 ---
-

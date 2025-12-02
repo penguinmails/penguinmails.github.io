@@ -8,7 +8,6 @@ nav_order: "2"
 persona: "Documentation Users"
 ---
 
-
 # Compliance & Security Overview
 
 ---
@@ -289,4 +288,3 @@ After comprehensive gap analysis of all compliance and security features:
 **Detailed Review:** See [Compliance & Security Feature Review](/docs/compliance-security/.kiro/specs/feature-completeness-review/findings/compliance-security) for complete gap analysis.
 
 ---
-
