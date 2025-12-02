@@ -22,65 +22,8 @@ jobs:
       - name: Test script execution (debugging)
         run: bash validation/scripts/test_loop.sh
 
-      - name: Check for .md extensions in /docs/ links
-        id: check-md-extensions
-        run: |
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n '](/docs/.*\.md[)#]' {} \; 2>/dev/null || true)
-          if [ -n "$violations" ]; then
-            count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count links with .md extensions in docs/ folder"
-            # Use here-string instead of pipe to avoid subshell
-            while IFS=: read -r file line content; do
-              [ -z "$file" ] && continue
-              echo "::error file=$file,line=$line::$file:$line - Remove .md extension"
-            done <<< "$(echo "$violations" | head -20)"
-            exit 1
-          fi
-
-      - name: Check for relative .md links (./  or ../)
-        id: check-relative-links
-        run: |
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n -E ']\((\.\/|\.\.\/)' {} \; 2>/dev/null || true)
-          if [ -n "$violations" ]; then
-            count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count relative links using ./ or ../ in docs/ folder"
-            # Use here-string instead of pipe to avoid subshell
-            while IFS=: read -r file line content; do
-              [ -z "$file" ] && continue
-              echo "::error file=$file,line=$line::$file:$line - Use site-absolute links"
-            done <<< "$(echo "$violations" | head -20)"
-            exit 1
-          fi
-
-      - name: Check for relative CONTRIBUTING.md links
-        id: check-contributing-links
-        run: |
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n 'CONTRIBUTING\.md' {} \; 2>/dev/null | grep -v 'github.com' || true)
-          if [ -n "$violations" ]; then
-            count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count relative links to CONTRIBUTING.md"
-            # Use here-string instead of pipe to avoid subshell
-            while IFS=: read -r file line content; do
-              [ -z "$file" ] && continue
-              echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
-            done <<< "$violations"
-            exit 1
-          fi
-
-      - name: Check for relative README.md links
-        id: check-readme-links
-        run: |
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n -E ']\([./]*README\.md[)#]' {} \; 2>/dev/null | grep -v 'github.com' || true)
-          if [ -n "$violations" ]; then
-            count=$(echo "$violations" | wc -l)
-            echo "::error::Found $count relative links to README.md"
-            # Use here-string instead of pipe to avoid subshell
-            while IFS=: read -r file line content; do
-              [ -z "$file" ] && continue
-              echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
-            done <<< "$violations"
-            exit 1
-          fi
+      - name: Run link policy validation
+        run: bash validation/scripts/detect/detect_link_policy_violations.sh docs
 
   # Warning checks that don't block the build
   warning-checks:
