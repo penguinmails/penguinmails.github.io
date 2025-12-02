@@ -46,7 +46,7 @@ Workflow automation, triggers, actions, and intelligent automation rules.
 
 ### ⏳ Planned for MVP (Q2-Q3 2026)
 
-#### [Workflow Automation](/docs/features/automation/workflow-automation/overview.md)
+#### [Workflow Automation](/docs/features/automation/workflow-automation/overview)
 
 Automated workflows with triggers and actions.
 
@@ -200,7 +200,7 @@ Enable workflows to trigger external apps via Zapier and receive Zapier triggers
 
 - **Q2 2027:** Workflow Templates Marketplace, Zapier Integration
 
-For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/features/automation/roadmap.md)
+For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/features/automation/roadmap)
 
 ---
 
@@ -208,7 +208,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ### Planning & Strategy
 
-- [Automation Roadmap](/docs/features/automation/roadmap.md) - Detailed implementation timeline
+- [Automation Roadmap](/docs/features/automation/roadmap) - Detailed implementation timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
@@ -282,4 +282,4 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ---
 
-[← Back to All Features](/docs/features/README.md)
+[← Back to All Features](/docs/features/README)

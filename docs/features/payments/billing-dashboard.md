@@ -574,15 +574,15 @@ PUT /api/v1/billing/company-info
 
 ### Payments
 
-- **[Subscription Management](/docs/features/payments/subscription-management.md)** - Plan upgrades and downgrades
+- **[Subscription Management](/docs/features/payments/subscription-management)** - Plan upgrades and downgrades
 
-- **[Stripe Integration](/docs/features/payments/stripe-integration.md)** - Payment processing
+- **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing
 
-- **[Payments Overview](/docs/features/payments/README.md)** - All payment features
+- **[Payments Overview](/docs/features/payments/README)** - All payment features
 
 ### Support
 
-- **[Billing FAQ](/docs/business/faq/billing-faq.md)** - Common billing questions
+- **[Billing FAQ](/docs/business/faq/billing-faq)** - Common billing questions
 
 - **[Contact Billing](mailto:billing@penguinmails.com)** - Billing support
 

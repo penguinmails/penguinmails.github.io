@@ -1243,23 +1243,23 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ### Campaign Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Core campaign creation and management
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Core campaign creation and management
 
-- **[Email Sequences](/docs/features/campaigns/email-sequences.md)** - Multi-step automated sequences
+- **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
 
-- **[A/B Testing](/docs/features/campaigns/ab-testing.md)** - Campaign optimization
+- **[A/B Testing](/docs/features/campaigns/ab-testing)** - Campaign optimization
 
 ### Analytics
 
-- **[Core Analytics](/docs/features/analytics/core-analytics/overview.md)** - Performance tracking
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
 
-- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Advanced insights
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
 ### Technical
 
-- **[Email Pipeline](/docs/features/queue/email-pipeline.md)** - Email sending infrastructure
+- **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
+- **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---
 

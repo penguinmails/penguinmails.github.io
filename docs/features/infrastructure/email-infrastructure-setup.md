@@ -812,33 +812,33 @@ cron.schedule('0 0 * * *', async () => {
 
 ### Planning & Product
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Infrastructure timeline (Q4 2025)
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Infrastructure timeline (Q4 2025)
 
-- **[Technical Roadmap](/docs/roadmap/technical-roadmap.md)** - Infrastructure considerations
+- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure considerations
 
-- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap.md)** - Level 1 core feature
+- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Level 1 core feature
 
 ### Related Features
 
-- **[Hostwind Management](/docs/features/infrastructure/hostwind-management.md)** - VPS monitoring and operations
+- **[Hostwind Management](/docs/features/infrastructure/hostwind-management)** - VPS monitoring and operations
 
-- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - Email account provisioning
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Email account provisioning
 
-- **[Domain Management](/docs/features/domains/domain-management.md)** - DNS and domain configuration
+- **[Domain Management](/docs/features/domains/domain-management)** - DNS and domain configuration
 
-- **[Security Features](/docs/features/compliance/security-features.md)** - SSL, SPF, DKIM, DMARC details
+- **[Security Features](/docs/features/compliance/security-features)** - SSL, SPF, DKIM, DMARC details
 
-- **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture.md)** - Isolation and workspace management
+- **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Isolation and workspace management
 
-- **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management.md)** - SSH key storage and rotation in Vault
+- **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation in Vault
 
-- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials.md)** - Secure SMTP credential management
+- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials)** - Secure SMTP credential management
 
 ### Technical Specifications
 
-- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
+- **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
 
-- **[Architecture Overview](/docs/technical/architecture/overview.md)** - System architecture
+- **[Architecture Overview](/docs/technical/architecture/overview)** - System architecture
 
 ### Implementation
 

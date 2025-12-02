@@ -784,13 +784,13 @@ eventEmitter.on('contact.updated', async (event) => {
 
 ## Related Documentation
 
-- **[Leads Management](/docs/features/leads/leads-management.md)** - Contact database
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact database
 
-- **[Contact Segmentation](/docs/features/leads/contact-segmentation.md)** - Score-based segments
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Score-based segments
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Score-based targeting
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Score-based targeting
 
-- **[Analytics](/docs/features/analytics/core-analytics/overview.md)** - Score analytics
+- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Score analytics
 
 ---
 

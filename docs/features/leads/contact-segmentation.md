@@ -993,15 +993,15 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Leads Management](/docs/features/leads/leads-management.md)** - Contact database and management
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact database and management
 
-- **[Lead Scoring](/docs/features/leads/lead-scoring.md)** - Behavioral scoring system
+- **[Lead Scoring](/docs/features/leads/lead-scoring)** - Behavioral scoring system
 
-- **[Import/Export](/docs/features/leads/import-export.md)** - Bulk contact operations
+- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact operations
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Use segments in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use segments in campaigns
 
-- **[Personalization System](/docs/features/campaigns/personalization-system.md)** - Segment-specific content
+- **[Personalization System](/docs/features/campaigns/personalization-system)** - Segment-specific content
 
 ---
 

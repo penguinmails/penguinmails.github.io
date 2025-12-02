@@ -913,11 +913,11 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Compliance
 
-- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance.md)** - Data protection and privacy
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - Data protection and privacy
 
-- **[Data Privacy](/docs/features/compliance/data-privacy.md)** - Privacy controls and policies
+- **[Data Privacy](/docs/features/compliance/data-privacy)** - Privacy controls and policies
 
-- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance.md)** - Email compliance
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - Email compliance
 
 ### Infrastructure
 

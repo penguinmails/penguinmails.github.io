@@ -8,7 +8,7 @@
 
 ### Infrastructure & Setup
 
-**[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - Professional accounts in <5 min
+**[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Professional accounts in <5 min
 
 - **Level 1**: Quick setup guide
 
@@ -18,7 +18,7 @@
 
 ### Campaign Execution
 
-**[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** - Build sender reputation for 95%+ deliverability
+**[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Build sender reputation for 95%+ deliverability
 
 - **Level 1**: Automated setup
 
@@ -26,7 +26,7 @@
 
 - **Level 3**: Predictive analytics
 
-**[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Multi-channel campaign orchestration
+**[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Multi-channel campaign orchestration
 
 - **Level 1**: Basic campaign creation
 
@@ -36,7 +36,7 @@
 
 ### Response Management
 
-**[Unified Inbox](/docs/features/inbox/unified-inbox/overview.md)** - Centralized response management
+**[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Centralized response management
 
 - **Level 1**: Basic inbox consolidation
 
@@ -44,7 +44,7 @@
 
 - **Level 3**: Team collaboration
 
-**[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview.md)** - Sustainable account scaling
+**[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Sustainable account scaling
 
 - **Level 1**: Basic rotation
 
@@ -54,7 +54,7 @@
 
 ### Performance Tracking
 
-**[Analytics](/docs/features/analytics/core-analytics/overview.md)** - Data-driven insights and optimization
+**[Analytics](/docs/features/analytics/core-analytics/overview)** - Data-driven insights and optimization
 
 - **Level 1**: Essential metrics
 
@@ -89,32 +89,32 @@
 
 ### For New Users
 
-1. Start with [Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)
+1. Start with [Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)
 
-2. Then [Email Warmups](/docs/features/warmup/email-warmups/overview.md)
+2. Then [Email Warmups](/docs/features/warmup/email-warmups/overview)
 
-3. Track performance with [Analytics](/docs/features/analytics/core-analytics/overview.md)
+3. Track performance with [Analytics](/docs/features/analytics/core-analytics/overview)
 
 ### For Scaling Teams
 
-1. Implement [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview.md)
+1. Implement [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)
 
-2. Use [Unified Inbox](/docs/features/inbox/unified-inbox/overview.md) for team coordination
+2. Use [Unified Inbox](/docs/features/inbox/unified-inbox/overview) for team coordination
 
-3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/overview.md) for advanced workflows
+3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/overview) for advanced workflows
 
 ### For Enterprise
 
-1. Enable [Enterprise Features](/docs/features/enterprise/enterprise-features/overview.md)
+1. Enable [Enterprise Features](/docs/features/enterprise/enterprise-features/overview)
 
-2. Connect with [CRM Integration](/docs/features/integrations/crm-integration/overview.md)
+2. Connect with [CRM Integration](/docs/features/integrations/crm-integration/overview)
 
-3. Automate with [Workflow Automation](/docs/features/automation/workflow-automation/overview.md)
+3. Automate with [Workflow Automation](/docs/features/automation/workflow-automation/overview)
 
 ---
 
-**Planning implementation?** → [Product Roadmap](/docs/roadmap/product-roadmap.md)
-**Need feature comparisons?** → [Feature Catalog](/docs/feature-overview.md)
+**Planning implementation?** → [Product Roadmap](/docs/roadmap/product-roadmap)
+**Need feature comparisons?** → [Feature Catalog](/docs/feature-overview)
 
 ---
 
@@ -158,13 +158,13 @@ Each feature document is structured in **three progressive complexity levels**:
 
 ## Integration with Other Documentation
 
-- **[Business Context](/docs/business/README.md)** - ROI analysis and business value
+- **[Business Context](/docs/business/README)** - ROI analysis and business value
 
-- **[Technical Architecture](/docs/technical/README.md)** - System design and infrastructure
+- **[Technical Architecture](/docs/technical/README)** - System design and infrastructure
 
-- **[User Journeys](/docs/user-journeys/README.md)** - Customer workflows and paths
+- **[User Journeys](/docs/user-journeys/README)** - Customer workflows and paths
 
-- **[Compliance & Security](/docs/compliance-security/README.md)** - Regulatory requirements
+- **[Compliance & Security](/docs/compliance-security/README)** - Regulatory requirements
 
 ---
 
@@ -174,30 +174,30 @@ Each feature document is structured in **three progressive complexity levels**:
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** | In Progress | 80% | Critical |
-| **[Analytics](/docs/features/analytics/core-analytics/overview.md)** | In Progress | 60% | High |
-| **[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** | Planned | 0% | High |
+| **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** | In Progress | 80% | Critical |
+| **[Analytics](/docs/features/analytics/core-analytics/overview)** | In Progress | 60% | High |
+| **[Email Warmups](/docs/features/warmup/email-warmups/overview)** | Planned | 0% | High |
 
 ### Q1 2026: Growth Phase
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Unified Inbox](/docs/features/inbox/unified-inbox/overview.md)** | Planned | 0% | High |
-| **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** | Planned | 0% | Critical |
-| **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** | Planned | 0% | Medium |
-| **[CRM Integration](/docs/features/integrations/crm-integration/overview.md)** | Planned | 0% | High |
+| **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** | Planned | 0% | High |
+| **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** | Planned | 0% | Critical |
+| **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** | Planned | 0% | Medium |
+| **[CRM Integration](/docs/features/integrations/crm-integration/overview)** | Planned | 0% | High |
 
 ### Q1-Q2 2026: Scale Optimization
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview.md)** | Planned | 0% | Medium |
+| **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** | Planned | 0% | Medium |
 
 ### Q2-Q3 2026: Advanced Automation
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Workflow Automation](/docs/features/automation/workflow-automation/overview.md)** | Planned | 0% | Medium |
+| **[Workflow Automation](/docs/features/automation/workflow-automation/overview)** | Planned | 0% | Medium |
 
 ---
 
@@ -295,10 +295,10 @@ Each feature document is structured in **three progressive complexity levels**:
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview.md)** | Planned | 0% | High |
+| **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** | Planned | 0% | High |
 
-**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/roadmap/product-roadmap.md)
+**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/roadmap/product-roadmap)
 
 ---
 
-*Previous: [Quick Setup Guide](/docs/quick-setup.md) | Next: [Product Roadmap](/docs/roadmap/product-roadmap.md) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/roadmap/product-roadmap) →*

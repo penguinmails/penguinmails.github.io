@@ -38,13 +38,13 @@ Background job processing, queue monitoring, and notifications.
 
 - Queue monitoring and metrics
 
-See [Queue Roadmap](/docs/features/queue/roadmap.md) for future enhancements.
+See [Queue Roadmap](/docs/features/queue/roadmap) for future enhancements.
 
 ## Features in This Category
 
 ### ✅ Available Now
 
-#### [Core Email Pipeline](/docs/features/queue/email-pipeline.md)
+#### [Core Email Pipeline](/docs/features/queue/email-pipeline)
 
 PostgreSQL + Redis queue system for high-throughput email processing.
 
@@ -72,7 +72,7 @@ PostgreSQL + Redis queue system for high-throughput email processing.
 
 **Status**: ACTIVE | **Priority**: Critical
 
-#### [Background Jobs](/docs/features/queue/background-jobs.md)
+#### [Background Jobs](/docs/features/queue/background-jobs)
 
 Job processing system for asynchronous tasks.
 
@@ -180,4 +180,4 @@ In-app and email notifications for users.
 
 ---
 
-[← Back to All Features](/docs/features/README.md)
+[← Back to All Features](/docs/features/README)

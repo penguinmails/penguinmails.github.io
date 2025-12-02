@@ -622,7 +622,7 @@ This document outlines the development roadmap for inbox management features, in
 
 - [Unified Inbox Overview](./unified-inbox/overview.md)
 
-- [Inbox Rotation Overview](/docs/features/inbox/inbox-rotation/overview.md)
+- [Inbox Rotation Overview](/docs/features/inbox/inbox-rotation/overview)
 
 ### Technical Documentation
 

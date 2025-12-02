@@ -40,13 +40,13 @@ Campaign creation, multi-channel orchestration, sequence management, and campaig
 
 **Total MVP Effort**: 30-45 days (6-9 weeks)
 
-See [Campaign Roadmap](/docs/features/campaigns/roadmap.md) for detailed timeline and quarterly breakdown.
+See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline and quarterly breakdown.
 
 ## Features in This Category
 
 ### 🚧 In Development (Q1 2026)
 
-#### [Campaign Management](/docs/features/campaigns/campaign-management/overview.md)
+#### [Campaign Management](/docs/features/campaigns/campaign-management/overview)
 
 Comprehensive email campaign management system with sequencing, A/B testing, and template management.
 
@@ -68,7 +68,7 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 
 **Status**: PLANNED (Q1 2026) | **Priority**: Critical
 
-#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling.md)
+#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling)
 
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 
@@ -96,7 +96,7 @@ Advanced scheduling with timezone handling, send-time optimization, and calendar
 
 **Status**: MVP in Q1 2026, Advanced features Q3-Q4 2026 | **Priority**: High
 
-#### [Email Sequences](/docs/features/campaigns/email-sequences.md)
+#### [Email Sequences](/docs/features/campaigns/email-sequences)
 
 Design and automate multi-step email sequences with conditional branching and triggers.
 
@@ -116,7 +116,7 @@ Design and automate multi-step email sequences with conditional branching and tr
 
 **Status**: PLANNED (Q1 2026) | **Priority**: High
 
-#### [A/B Testing](/docs/features/campaigns/ab-testing.md)
+#### [A/B Testing](/docs/features/campaigns/ab-testing)
 
 Split testing engine for optimizing subject lines, content, and send times.
 
@@ -310,4 +310,4 @@ See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 
 ---
 
-[← Back to All Features](/docs/features/README.md)
+[← Back to All Features](/docs/features/README)

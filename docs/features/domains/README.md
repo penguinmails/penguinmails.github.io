@@ -36,7 +36,7 @@ All essential domain verification, DNS management, and authentication features a
 
 - ✅ Full API access for programmatic management
 
-**No MVP-blocking gaps identified.** See [Domain Management Roadmap](/docs/features/domains/roadmap.md) for Post-MVP enhancements.
+**No MVP-blocking gaps identified.** See [Domain Management Roadmap](/docs/features/domains/roadmap) for Post-MVP enhancements.
 
 **Last Reviewed:** November 26, 2025 - Comprehensive feature completeness review confirmed MVP-ready status
 
@@ -44,7 +44,7 @@ All essential domain verification, DNS management, and authentication features a
 
 ### ✅ Available Now
 
-- **[Domain Management](/docs/features/domains/domain-management.md)** - Complete DNS verification and sender authentication
+- **[Domain Management](/docs/features/domains/domain-management)** - Complete DNS verification and sender authentication
 
   - Custom domain addition and verification
 
@@ -100,7 +100,7 @@ All essential domain verification, DNS management, and authentication features a
 
 ### 🔜 Post-MVP Enhancements
 
-See [Domain Management Roadmap](/docs/features/domains/roadmap.md) for detailed timeline and features:
+See [Domain Management Roadmap](/docs/features/domains/roadmap) for detailed timeline and features:
 
 - **Q1 2026:** Subdomain support with reputation isolation
 
@@ -116,7 +116,7 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap.md) for detailed 
 
 ### Planning & Strategy
 
-- [Domain Management Roadmap](/docs/features/domains/roadmap.md) - Post-MVP feature timeline
+- [Domain Management Roadmap](/docs/features/domains/roadmap) - Post-MVP feature timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product direction
 
@@ -144,8 +144,8 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap.md) for detailed 
 
 - Domain Management API - `POST /api/v1/domains`, `GET /api/v1/domains/{id}/dns`
 
-- See [Domain Management](/docs/features/domains/domain-management.md) for API examples
+- See [Domain Management](/docs/features/domains/domain-management) for API examples
 
 ---
 
-[← Back to All Features](/docs/features/README.md)
+[← Back to All Features](/docs/features/README)

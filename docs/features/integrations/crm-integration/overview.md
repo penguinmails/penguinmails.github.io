@@ -33,9 +33,9 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Need campaign data to sync (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Need campaign data to sync (Q1 2026)
 
-- ⏳ **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Engagement data for lead scoring (Q1 2026)
+- ⏳ **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Engagement data for lead scoring (Q1 2026)
 
 - ⏳ Webhook infrastructure - Planned
 
@@ -99,19 +99,19 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Feature Specification
 
-- **[CRM Integration Feature](/docs/features/integrations/crm-integration.md)** - Requirements (to be created)
+- **[CRM Integration Feature](/docs/features/integrations/crm-integration)** - Requirements (to be created)
 
 ### Technical Specifications
 
-- **[Frontend: CRM Settings](/docs/design/routes/dashboard-settings-integrations.md)** - UI specification
+- **[Frontend: CRM Settings](/docs/design/routes/dashboard-settings-integrations)** - UI specification
 
-- **[API: CRM Sync Endpoints](/docs/implementation-technical/api/platform-api/integrations.md)** - Backend API
+- **[API: CRM Sync Endpoints](/docs/implementation-technical/api/platform-api/integrations)** - Backend API
 
-- **[OAuth Flow](/docs/technical/architecture/oauth-implementation.md)** - Authentication architecture
+- **[OAuth Flow](/docs/technical/architecture/oauth-implementation)** - Authentication architecture
 
 ### User Workflows
 
-- **[Marketing Journey](/docs/user-journeys/marketing-journey.md)** - CRM sync in campaign workflow
+- **[Marketing Journey](/docs/user-journeys/marketing-journey)** - CRM sync in campaign workflow
 
 ### Implementation Tasks
 

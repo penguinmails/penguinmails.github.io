@@ -1198,13 +1198,13 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Email Warmups](/docs/features/warmup/email-warmups/overview.md)** - Overall warmup strategy
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Overall warmup strategy
 
-- **[Reputation Monitoring](/docs/features/warmup/reputation-monitoring.md)** - Track sender reputation
+- **[Reputation Monitoring](/docs/features/warmup/reputation-monitoring)** - Track sender reputation
 
-- **[Domain Management](/docs/features/domains/domain-management.md)** - Domain configuration
+- **[Domain Management](/docs/features/domains/domain-management)** - Domain configuration
 
-- **[Email Infrastructure](/docs/features/infrastructure/email-infrastructure-setup.md)** - SMTP setup
+- **[Email Infrastructure](/docs/features/infrastructure/email-infrastructure-setup)** - SMTP setup
 
 ---
 

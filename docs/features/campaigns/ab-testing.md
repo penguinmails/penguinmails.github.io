@@ -765,23 +765,23 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 
 ### Campaign Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Campaign creation and management
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation and management
 
-- **[Personalization System](/docs/features/campaigns/personalization-system.md)** - Dynamic email personalization
+- **[Personalization System](/docs/features/campaigns/personalization-system)** - Dynamic email personalization
 
-- **[Email Sequences](/docs/features/campaigns/email-sequences.md)** - Multi-step campaigns
+- **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step campaigns
 
 ### Analytics
 
-- **[Core Analytics](/docs/features/analytics/core-analytics/overview.md)** - Performance metrics
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance metrics
 
-- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview.md)** - Advanced metrics (Q1 2026)
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced metrics (Q1 2026)
 
 ### Technical
 
-- **[Email Pipeline](/docs/features/queue/email-pipeline.md)** - Email sending infrastructure
+- **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[API Architecture](/docs/implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
+- **[API Architecture](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---
 

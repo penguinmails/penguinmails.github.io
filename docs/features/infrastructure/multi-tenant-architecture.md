@@ -524,23 +524,23 @@ Return results (tenant-scoped only)
 
 ### Architecture
 
-- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview.md)** - Infrastructure provisioning
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Infrastructure provisioning
 
-- **[Infrastructure Overview](/docs/features/infrastructure/README.md)** - All infrastructure features
+- **[Infrastructure Overview](/docs/features/infrastructure/README)** - All infrastructure features
 
 ### Implementation
 
-- **[NileDB Documentation](/docs/implementation-technical/database-infrastructure/niledb.md)** - Database multi-tenancy details
+- **[NileDB Documentation](/docs/implementation-technical/database-infrastructure/niledb)** - Database multi-tenancy details
 
-- **[Authentication](/docs/implementation-technical/security/authentication.md)** - Tenant-aware auth
+- **[Authentication](/docs/implementation-technical/security/authentication)** - Tenant-aware auth
 
-- **[API Architecture](/docs/implementation-technical/api/README.md)** - Multi-tenant API design
+- **[API Architecture](/docs/implementation-technical/api/README)** - Multi-tenant API design
 
 ### Management
 
-- **[User Management](/docs/features/enterprise/user-management.md)** - Team member management
+- **[User Management](/docs/features/enterprise/user-management)** - Team member management
 
-- **[Workspace Management](/docs/business/workspace-management.md)** - Workspace organization
+- **[Workspace Management](/docs/business/workspace-management)** - Workspace organization
 
 ### Tasks
 

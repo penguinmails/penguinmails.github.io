@@ -33,9 +33,9 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 
 ### Required Before Starting
 
-- ⏳ **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics.md)** - Analytics for trigger conditions (Q1 2026)
+- ⏳ **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics)** - Analytics for trigger conditions (Q1 2026)
 
-- ⏳ **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Base campaign infrastructure (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Base campaign infrastructure (Q1 2026)
 
 - ⏳ Event tracking system - Planned
 

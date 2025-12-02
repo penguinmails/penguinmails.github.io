@@ -398,27 +398,27 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 ### Planning
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap.md)** - Feature timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Feature timeline
 
-- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap.md)** - Feature classification
+- **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Feature classification
 
 ### Features
 
-- **[Unified Inbox](/docs/features/unified-inbox.md)** - Response management
+- **[Unified Inbox](/docs/features/unified-inbox)** - Response management
 
-- **[Email Warm-ups](/docs/features/email-warmups.md)** - Account health
+- **[Email Warm-ups](/docs/features/email-warmups)** - Account health
 
-- **[Free Mailbox Creation](/docs/features/free-mailbox-creation.md)** - Onboarding
+- **[Free Mailbox Creation](/docs/features/free-mailbox-creation)** - Onboarding
 
 ### Specifications
 
-- **[Frontend Routing Map](/docs/design/frontend-routing-map.md)** - View specifications
+- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - View specifications
 
-- **[API Architecture](/docs/implementation-technical/api/README.md)** - Backend endpoints
+- **[API Architecture](/docs/implementation-technical/api/README)** - Backend endpoints
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README.md)** - Development status
+- **[Active Tasks](/tasks/README)** - Development status
 
 ---
 

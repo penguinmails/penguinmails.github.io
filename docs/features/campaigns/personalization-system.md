@@ -534,13 +534,13 @@ async function renderCached(templateId: string, context: any): Promise<string> {
 
 ## Related Documentation
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Create personalized campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Create personalized campaigns
 
-- **[A/B Testing](/docs/features/campaigns/ab-testing.md)** - Test personalized variants
+- **[A/B Testing](/docs/features/campaigns/ab-testing)** - Test personalized variants
 
-- **[Template Management](/docs/features/templates/template-management.md)** - Build reusable templates
+- **[Template Management](/docs/features/templates/template-management)** - Build reusable templates
 
-- **[Leads Management](/docs/features/leads/leads-management.md)** - Contact data and custom fields
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact data and custom fields
 
 ---
 

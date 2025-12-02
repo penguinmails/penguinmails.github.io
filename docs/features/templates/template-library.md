@@ -1218,13 +1218,13 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 
 ## Related Documentation
 
-- **[Template Editor](/docs/features/templates/template-editor.md)** - Customize library templates
+- **[Template Editor](/docs/features/templates/template-editor)** - Customize library templates
 
-- **[Template Variables](/docs/features/templates/template-variables.md)** - Personalize template content
+- **[Template Variables](/docs/features/templates/template-variables)** - Personalize template content
 
-- **[Template Management](/docs/features/templates/template-management.md)** - Organize your templates
+- **[Template Management](/docs/features/templates/template-management)** - Organize your templates
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview.md)** - Use templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use templates in campaigns
 
 ---
 

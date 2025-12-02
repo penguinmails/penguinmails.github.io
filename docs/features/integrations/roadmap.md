@@ -58,9 +58,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys.md)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys)
 
-- [Route Specification](/docs/design/routes/api-key-management.md)
+- [Route Specification](/docs/design/routes/api-key-management)
 
 - [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
 
@@ -107,9 +107,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Route Specification](/docs/design/routes/api-key-management.md)
+- [Route Specification](/docs/design/routes/api-key-management)
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys.md)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys)
 
 ---
 
@@ -160,7 +160,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/api-access.md)
+- [Feature Documentation](/docs/features/integrations/api-access)
 
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md)
 
@@ -209,7 +209,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/api-access.md)
+- [Feature Documentation](/docs/features/integrations/api-access)
 
 ---
 
@@ -252,9 +252,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/webhook-system.md)
+- [Feature Documentation](/docs/features/integrations/webhook-system)
 
-- [Route Specification](/docs/design/routes/webhook-system.md)
+- [Route Specification](/docs/design/routes/webhook-system)
 
 ---
 
@@ -299,9 +299,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Route Specification](/docs/design/routes/webhook-system.md)
+- [Route Specification](/docs/design/routes/webhook-system)
 
-- [Feature Documentation](/docs/features/integrations/webhook-system.md)
+- [Feature Documentation](/docs/features/integrations/webhook-system)
 
 ---
 
@@ -668,7 +668,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Audit logging for all SSH key access
 
 **Effort**: 1-2 weeks
-**Reference**: [VPS SSH Key Management](/docs/features/infrastructure/vault-ssh-management.md)
+**Reference**: [VPS SSH Key Management](/docs/features/infrastructure/vault-ssh-management)
 
 ---
 
@@ -696,7 +696,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Emergency credential reset workflow
 
 **Effort**: 1 week
-**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp-credentials.md)
+**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp-credentials)
 
 ---
 
@@ -724,7 +724,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Monitoring and alerting for Vault health
 
 **Effort**: 1-2 weeks
-**Reference**: [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery.md)
+**Reference**: [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery)
 
 ---
 
@@ -778,17 +778,17 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Related Features**:
 
-- [Authentication & Security](/docs/features/enterprise/user-management.md) - API key authentication, OAuth flows
+- [Authentication & Security](/docs/features/enterprise/user-management) - API key authentication, OAuth flows
 
-- [Infrastructure Management](/docs/features/infrastructure/README.md) - VPS provisioning, SSH key management, SMTP setup
+- [Infrastructure Management](/docs/features/infrastructure/README) - VPS provisioning, SSH key management, SMTP setup
 
-- [Domain Management](/docs/features/domains/README.md) - DKIM key storage in Vault
+- [Domain Management](/docs/features/domains/README) - DKIM key storage in Vault
 
-- [Email Operations](/docs/features/campaigns/README.md) - Campaign API endpoints, webhook events
+- [Email Operations](/docs/features/campaigns/README) - Campaign API endpoints, webhook events
 
 **Implementation**:
 
-- [API Documentation](/docs/implementation-technical/api/README.md) - Technical API specifications
+- [API Documentation](/docs/implementation-technical/api/README) - Technical API specifications
 
 - [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Secrets management architecture
 
@@ -796,9 +796,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md) - API-first approach rationale
 
-- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Integration timeline and priorities
+- [Product Roadmap](/docs/roadmap/product-roadmap) - Integration timeline and priorities
 
-- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic integration investments
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic integration investments
 
 ---
 
