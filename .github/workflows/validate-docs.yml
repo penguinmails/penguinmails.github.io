@@ -19,11 +19,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Test script execution (debugging)
-        run: bash validation/scripts/test_loop.sh
-
-      - name: Run link policy validation
-        run: bash validation/scripts/detect/detect_link_policy_violations.sh docs
+      - name: Run critical link policy validation
+        run: bash validation/detect/detect_link_policy_violations.sh docs
 
   # Warning checks that don't block the build
   warning-checks:
@@ -34,92 +31,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Check for links to tasks/ folder
-        id: check-tasks-links
-        run: |
-          echo "## Tasks Folder Link Check (Warning)" >> $GITHUB_STEP_SUMMARY
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n '](.*tasks/' {} \; 2>/dev/null || true)
-          if [ -n "$violations" ]; then
-            echo "::warning::Found links to tasks/ folder (will be moved inside docs in future)"
-            count=$(echo "$violations" | wc -l)
-            echo "⚠️ **WARNING**: Found $count links to tasks/ folder" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "These links will need to be updated when tasks/ is moved inside docs/" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "✅ No links to tasks/ folder" >> $GITHUB_STEP_SUMMARY
-          fi
+      - name: Run link warnings check (tasks/ and user-journeys/)
+        run: bash validation/detect/detect_link_warnings.sh docs
 
-      - name: Check for links to user-journeys/ folder
-        id: check-journeys-links
-        run: |
-          echo "## User Journeys Link Check (Warning)" >> $GITHUB_STEP_SUMMARY
-          violations=$(find docs -name "*.md" -type f -exec grep -H -n '](.*user-journeys/' {} \; 2>/dev/null || true)
-          if [ -n "$violations" ]; then
-            echo "::warning::Found links to user-journeys/ folder (will be moved inside docs in future)"
-            count=$(echo "$violations" | wc -l)
-            echo "⚠️ **WARNING**: Found $count links to user-journeys/ folder" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "These links will need to be updated when user-journeys/ is moved inside docs/" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "✅ No links to user-journeys/ folder" >> $GITHUB_STEP_SUMMARY
-          fi
+      - name: Run frontmatter validation
+        run: bash validation/detect/detect_frontmatter_issues.sh docs
 
-      - name: Check for missing frontmatter fields
-        id: check-frontmatter
-        run: |
-          echo "## Frontmatter Check (Warning)" >> $GITHUB_STEP_SUMMARY
-          
-          missing_title=$(find docs -name "*.md" -type f -exec grep -L "^title:" {} \; 2>/dev/null || true)
-          missing_description=$(find docs -name "*.md" -type f -exec grep -L "^description:" {} \; 2>/dev/null || true)
-          missing_level=$(find docs -name "*.md" -type f -exec grep -L "^level:" {} \; 2>/dev/null || true)
-          
-          title_count=$(echo "$missing_title" | grep -c . || echo "0")
-          desc_count=$(echo "$missing_description" | grep -c . || echo "0")
-          level_count=$(echo "$missing_level" | grep -c . || echo "0")
-          
-          if [ "$title_count" -gt 0 ] || [ "$desc_count" -gt 0 ] || [ "$level_count" -gt 0 ]; then
-            echo "::warning::Found files with missing frontmatter fields"
-            echo "⚠️ **WARNING**: Frontmatter issues found" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "- Missing title: $title_count files" >> $GITHUB_STEP_SUMMARY
-            echo "- Missing description: $desc_count files" >> $GITHUB_STEP_SUMMARY
-            echo "- Missing level: $level_count files" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "✅ All files have complete frontmatter" >> $GITHUB_STEP_SUMMARY
-          fi
+      - name: Run tech stack validation
+        run: bash validation/detect/detect_tech_stack_violations.sh docs
 
-      - name: Check for tech stack violations
-        id: check-tech-stack
-        run: |
-          echo "## Tech Stack Check (Warning)" >> $GITHUB_STEP_SUMMARY
-          
-          python_blocks=$(find docs -name "*.md" -type f -exec grep -H -n '^```python' {} \; 2>/dev/null || true)
-          ruby_blocks=$(find docs -name "*.md" -type f -exec grep -H -n '^```ruby' {} \; 2>/dev/null || true)
-          php_blocks=$(find docs -name "*.md" -type f -exec grep -H -n '^```php' {} \; 2>/dev/null || true)
-          
-          python_count=$(echo "$python_blocks" | grep -c : || echo "0")
-          ruby_count=$(echo "$ruby_blocks" | grep -c : || echo "0")
-          php_count=$(echo "$php_blocks" | grep -c : || echo "0")
-          
-          if [ "$python_count" -gt 0 ] || [ "$ruby_count" -gt 0 ] || [ "$php_count" -gt 0 ]; then
-            echo "::warning::Found forbidden code blocks"
-            echo "⚠️ **WARNING**: Forbidden code blocks found" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "- Python blocks: $python_count" >> $GITHUB_STEP_SUMMARY
-            echo "- Ruby blocks: $ruby_count" >> $GITHUB_STEP_SUMMARY
-            echo "- PHP blocks: $php_count" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-            echo "Use TypeScript or JavaScript instead" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "✅ No forbidden code blocks" >> $GITHUB_STEP_SUMMARY
-          fi
+      - name: Run formatting validation
+        run: bash validation/detect/detect_formatting_issues.sh docs
+
+      - name: Run navigation validation
+        run: bash validation/detect/detect_navigation_violations.sh docs
+
+      - name: Run content quality validation
+        run: bash validation/detect/detect_content_quality_issues.sh docs
 
       - name: Summary
         if: always()
         run: |
           echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✅ Critical checks: See 'Critical Link Validation' job" >> $GITHUB_STEP_SUMMARY
-          echo "⚠️ Warnings: Review findings above" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "For more details, see [validation documentation](https://github.com/${{ github.repository }}/blob/main/VERIFICATION.md)" >> $GITHUB_STEP_SUMMARY
+          echo "See individual steps above for details." >> $GITHUB_STEP_SUMMARY
