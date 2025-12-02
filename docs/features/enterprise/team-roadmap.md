@@ -425,7 +425,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-#### 10. [Post-MVP - P3] Bulk User Management
+### 10. [Post-MVP - P3] Bulk User Management
 
 **Timeline:** Q3 2026 (2-3 weeks)
 **Priority:** P3 (Enterprise Feature)
@@ -507,7 +507,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-#### 12. [Post-MVP - P2] Advanced Session Management
+### 12. [Post-MVP - P2] Advanced Session Management
 
 **Timeline:** Q4 2026 (2-3 weeks)
 **Priority:** P2 (Security Feature)
@@ -591,7 +591,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-#### 14. [Post-MVP - P3] Team Member Onboarding Workflows
+### 14. [Post-MVP - P3] Team Member Onboarding Workflows
 
 **Timeline:** Q1 2027 (3-4 weeks)
 **Priority:** P3 (User Experience Feature)
@@ -675,7 +675,7 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
-#### 16. [Post-MVP - P3] External User Collaboration (Client Portal)
+### 16. [Post-MVP - P3] External User Collaboration (Client Portal)
 
 **Timeline:** Q2 2027 (4-6 weeks)
 **Priority:** P3 (Agency Feature)

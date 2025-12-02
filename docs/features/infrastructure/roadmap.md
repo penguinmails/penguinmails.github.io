@@ -121,7 +121,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - Backup verification and testing
 
-#### 2. DNS Propagation Status & Troubleshooting
+### 2. DNS Propagation Status & Troubleshooting
 
 **Priority:** P2 (Medium)
 **Effort:** 3-5 days
@@ -195,7 +195,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - Cost calculation for scaling options
 
-#### 4. IP Reputation Management User Controls
+### 4. IP Reputation Management User Controls
 
 **Priority:** P1 (High)
 **Effort:** 1-2 weeks
@@ -269,7 +269,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - Stripe billing integration
 
-#### 6. Infrastructure Health Alerts & Notifications
+### 6. Infrastructure Health Alerts & Notifications
 
 **Priority:** P2 (Medium)
 **Effort:** 1-2 weeks

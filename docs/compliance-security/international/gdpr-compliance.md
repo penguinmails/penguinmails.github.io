@@ -337,4 +337,3 @@ GDPR applies to any entity processing personal data of EU residents, regardless 
 **Document Classification:** Level 2 - Detailed Legal Analysis
 **Related Document:** [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
-

@@ -149,7 +149,7 @@ All core domain management features are production-ready:
 
 ---
 
-#### 3. Workspace Domain Transfer (Metadata)
+### 3. Workspace Domain Transfer (Metadata)
 
 **Priority:** P2 (Medium - Agency Focus)
 
@@ -203,7 +203,7 @@ All core domain management features are production-ready:
 
 ---
 
-#### 4. DNS Instruction Presets & One-Click Copy
+### 4. DNS Instruction Presets & One-Click Copy
 
 **Priority:** P3 (Low - Convenience)
 
