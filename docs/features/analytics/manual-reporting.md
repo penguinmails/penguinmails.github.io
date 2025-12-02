@@ -836,7 +836,7 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
 
 ### Technical
 
-- **[API Architecture](../../implementation-technical/api/README.md)** - Export API endpoints
+- **[API Architecture](/docs/implementation-technical/api/README.md)** - Export API endpoints
 
 ---
 

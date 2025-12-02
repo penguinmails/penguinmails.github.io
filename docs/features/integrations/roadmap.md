@@ -796,9 +796,9 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md) - API-first approach rationale
 
-- [Product Roadmap](../../roadmap/product-roadmap.md) - Integration timeline and priorities
+- [Product Roadmap](/docs/roadmap/product-roadmap.md) - Integration timeline and priorities
 
-- [Executive Roadmap](../../business/roadmap/executive-roadmap.md) - Strategic integration investments
+- [Executive Roadmap](/docs/business/roadmap/executive-roadmap.md) - Strategic integration investments
 
 ---
 

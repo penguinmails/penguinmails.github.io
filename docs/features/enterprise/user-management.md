@@ -915,15 +915,15 @@ Response:
 
 - **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation and workspace architecture
 
-- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security overview
+- **[Security Framework](/docs/compliance-security/enterprise/security-framework.md)** - Security overview
 
 - **[Vault Integration](/docs/features/integrations/overview#vault-integration)** - Secure secrets management for API keys and credentials
 
 ### Implementation
 
-- **[NileDB Authentication](../../implementation-technical/database-infrastructure/niledb.md)** - Auth implementation
+- **[NileDB Authentication](/docs/implementation-technical/database-infrastructure/niledb.md)** - Auth implementation
 
-- **[API Authentication](../../implementation-technical/api/platform-api/authentication.md)** - API auth details
+- **[API Authentication](/docs/implementation-technical/api/platform-api/authentication.md)** - API auth details
 
 - **[Public & Authentication Routes](/docs/design/routes/public-auth)** - Login, signup, password reset UI
 
@@ -931,7 +931,7 @@ Response:
 
 ### Tasks
 
-- **[Epic 2: User Authentication](../../tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+- **[Epic 2: User Authentication](/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
 
 ### Roadmap
 

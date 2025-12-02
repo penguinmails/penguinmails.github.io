@@ -119,19 +119,19 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Technical Specifications
 
-- **[SSO Architecture](../../technical/architecture/sso-implementation.md)** - SSO system design
+- **[SSO Architecture](/docs/technical/architecture/sso-implementation.md)** - SSO system design
 
-- **[Security Framework](../../technical/security/security-framework.md)** - Security architecture
+- **[Security Framework](/docs/technical/security/security-framework.md)** - Security architecture
 
-- **[Compliance Tools](../../technical/compliance/compliance-automation.md)** - Compliance implementation
+- **[Compliance Tools](/docs/technical/compliance/compliance-automation.md)** - Compliance implementation
 
 ### User Workflows
 
-- **[Enterprise Admin Journey](../../user-journeys/enterprise-admin-journey.md)** - Admin workflows (to be created)
+- **[Enterprise Admin Journey](/docs/user-journeys/enterprise-admin-journey.md)** - Admin workflows (to be created)
 
 ### Implementation Tasks
 
-- **[Enterprise Features Epic](../../../tasks/enterprise/)** - Development tasks
+- **[Enterprise Features Epic](/tasks/enterprise/)** - Development tasks
 
 ## Technical Details
 

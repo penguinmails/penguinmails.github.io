@@ -838,11 +838,11 @@ cron.schedule('0 0 * * *', async () => {
 
 - **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure.md)** - API endpoints
 
-- **[Architecture Overview](../../technical/architecture/overview.md)** - System architecture
+- **[Architecture Overview](/docs/technical/architecture/overview.md)** - System architecture
 
 ### Implementation
 
-- **[Epic 5: Infrastructure Management](../../../tasks/epic-5-infrastructure-management/)** - Implementation tasks
+- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
 
 ---
 

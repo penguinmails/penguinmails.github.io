@@ -97,21 +97,21 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Technical Specifications
 
-- **[Frontend: Enhanced Dashboard](../../design/routes/dashboard-analytics.md)** - UI updates
+- **[Frontend: Enhanced Dashboard](/docs/design/routes/dashboard-analytics.md)** - UI updates
 
-- **[API: Advanced Analytics](../../implementation-technical/api/tenant-api/analytics.md)** - Enhanced endpoints
+- **[API: Advanced Analytics](/docs/implementation-technical/api/tenant-api/analytics.md)** - Enhanced endpoints
 
-- **[ML Pipeline](../../technical/architecture/ml-pipeline.md)** - Predictive modeling architecture
+- **[ML Pipeline](/docs/technical/architecture/ml-pipeline.md)** - Predictive modeling architecture
 
 ### User Workflows
 
-- **[Customer Success Journey](../../user-journeys/customer-success-journey.md)** - Analytics-driven optimization
+- **[Customer Success Journey](/docs/user-journeys/customer-success-journey.md)** - Analytics-driven optimization
 
-- **[Marketing Journey](../../user-journeys/marketing-journey.md)** - Data-driven campaign management
+- **[Marketing Journey](/docs/user-journeys/marketing-journey.md)** - Data-driven campaign management
 
 ### Implementation Tasks
 
-- **[Enhanced Analytics Epic](../../../tasks/analytics-enhanced/)** - Development tasks
+- **[Enhanced Analytics Epic](/tasks/analytics-enhanced/)** - Development tasks
 
 ## Technical Details
 
