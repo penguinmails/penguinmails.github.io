@@ -940,7 +940,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 ## Related Documentation
 
-- [Enterprise Features Overview](./README.md) - Feature catalog and status
+- [Enterprise Features Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature catalog and status
 
 - [User Management & Authentication](./user-management.md) - Authentication details
 

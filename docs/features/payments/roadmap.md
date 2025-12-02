@@ -890,7 +890,7 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 
 ## Cross-References
 
-- Schema: [OLTP Plans Table](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md)
+- Schema: [OLTP Plans Table](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
 - Feature: [Subscription Management](/docs/features/payments/subscription-management)
 - Business: [Pricing Strategy](/docs/business/strategy/pricing-strategy)
 

@@ -247,7 +247,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 - **[Product Roadmap](./product-roadmap.md)** - Feature timeline and business milestones
 
-- **[Roadmap Overview](./README.md)** - Complete roadmap navigation hub
+- **[Roadmap Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - Complete roadmap navigation hub
 
 - **[Features Overview](../features/README.md)** - Detailed feature specifications
 

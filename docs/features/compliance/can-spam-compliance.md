@@ -539,7 +539,7 @@ Before any campaign sends, PenguinMails automatically checks:
 
 - **[Data Privacy](./data-privacy.md)** - Privacy policies
 
-- **[Compliance Overview](./README.md)** - All compliance features
+- **[Compliance Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All compliance features
 
 ### Implementation
 

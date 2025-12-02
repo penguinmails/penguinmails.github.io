@@ -154,4 +154,4 @@ See the [Inbox Management Roadmap](./roadmap.md) for:
 
 ---
 
-[← Back to All Features](../README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

@@ -584,7 +584,7 @@ Cancellation → Free Tier (90 days) → Data Deletion
 
 - **[Billing Dashboard](./billing-dashboard.md)** - Invoice and usage management
 
-- **[Payments Overview](./README.md)** - All payment features
+- **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Account Management
 

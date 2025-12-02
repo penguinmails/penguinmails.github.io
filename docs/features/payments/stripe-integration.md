@@ -487,7 +487,7 @@ stripe trigger checkout.session.completed
 
 - **[Billing Dashboard](./billing-dashboard.md)** - Usage and invoices
 
-- **[Payments Overview](./README.md)** - All payment features
+- **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Technical
 

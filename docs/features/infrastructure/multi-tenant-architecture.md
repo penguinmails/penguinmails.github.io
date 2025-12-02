@@ -526,7 +526,7 @@ Return results (tenant-scoped only)
 
 - **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Infrastructure provisioning
 
-- **[Infrastructure Overview](./README.md)** - All infrastructure features
+- **[Infrastructure Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All infrastructure features
 
 ### Implementation
 

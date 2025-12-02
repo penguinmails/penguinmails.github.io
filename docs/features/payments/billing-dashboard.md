@@ -578,7 +578,7 @@ PUT /api/v1/billing/company-info
 
 - **[Stripe Integration](./stripe-integration.md)** - Payment processing
 
-- **[Payments Overview](./README.md)** - All payment features
+- **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Support
 

@@ -652,7 +652,7 @@ Privacy Audit Events:
 
 - **[Unsubscribe Management](./unsubscribe-management.md)** - Opt-out handling
 
-- **[Compliance Overview](./README.md)** - All compliance features
+- **[Compliance Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All compliance features
 
 ### Security
 

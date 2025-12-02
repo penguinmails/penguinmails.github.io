@@ -3,6 +3,7 @@
 [![Documentation Status](https://img.shields.io/badge/Documentation-Active-brightgreen.svg)](https://penguinmails.github.io)
 [![Built with Just the Docs](https://img.shields.io/badge/Built%20with-Just%20the%20Docs-blue.svg)](https://pmarsceill.github.io/just-the-docs/)
 [![Build Status](https://github.com/penguinmails/penguinmails.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/penguinmails/penguinmails.github.io/actions)
+[![Validation](https://github.com/penguinmails/penguinmails.github.io/actions/workflows/validate-docs.yml/badge.svg)](https://github.com/penguinmails/penguinmails.github.io/actions/workflows/validate-docs.yml)
 [![Contributors](https://img.shields.io/github/contributors/penguinmails/penguinmails.github.io.svg)](CONTRIBUTORS)
 [![GitHub Issues](https://img.shields.io/github/issues/penguinmails/penguinmails.github.io.svg)](https://github.com/penguinmails/penguinmails.github.io/issues)
 [![License](https://img.shields.io/github/license/penguinmails/penguinmails.github.io.svg)](LICENSE)
@@ -141,6 +142,15 @@ Detailed development instructions are available in our **[CONTRIBUTING.md](./CON
 - Git workflow and contribution process
 
 - Markdown linting and quality checks
+
+#### 4. Automated Validation
+
+All documentation changes are automatically validated through GitHub Actions:
+
+- **Critical Checks**: Link formatting, relative paths (must pass)
+- **Warning Checks**: Frontmatter completeness, tech stack compliance (review recommended)
+
+See [CONTRIBUTING.md](./CONTRIBUTING#github-actions-ci-validation) for details on running checks locally.
 
 ---
 

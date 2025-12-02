@@ -283,6 +283,62 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 
 For comprehensive linting guide, see [MARKDOWN_LINTING.md](./MARKDOWN_LINTING.md).
 
+## GitHub Actions CI Validation
+
+### Automated Checks
+
+All pull requests automatically run two types of validation:
+
+**Critical Checks (Fail Build)** - Must pass before merging:
+
+- Links with `.md` extensions in `/docs/` paths
+- Relative `.md` links using `./` or `../` inside `docs/`
+- Relative links to `CONTRIBUTING.md` or root `README.md` inside `docs/`
+
+**Warning Checks (Non-Blocking)** - Review recommended:
+
+- Links to `tasks/` and `user-journeys/` folders (future migration planned)
+- Missing frontmatter fields (title, description, level)
+- Tech stack violations (Python, Ruby, PHP code blocks)
+
+### Running Checks Locally
+
+Before pushing, you can run the same checks locally:
+
+```bash
+# Check for .md extensions in /docs/ links
+find docs -name "*.md" -type f -exec grep -H -n '](/docs/.*\.md[)#]' {} \; 2>/dev/null
+
+# Check for relative links
+find docs -name "*.md" -type f -exec grep -H -n -E ']\((\.\/|\.\.\/)' {} \; 2>/dev/null
+
+# Check for relative CONTRIBUTING.md links
+find docs -name "*.md" -type f -exec grep -H -n 'CONTRIBUTING\.md' {} \; 2>/dev/null | grep -v 'github.com'
+```
+
+### Fixing Common Issues
+
+**Issue**: Links with `.md` extensions
+
+```markdown
+❌ Wrong: [Link](/docs/features/analytics.md)
+✅ Correct: [Link](/docs/features/analytics)
+```
+
+**Issue**: Relative links inside docs/
+
+```markdown
+❌ Wrong: [Link](../overview.md)
+✅ Correct: [Link](/docs/features/overview)
+```
+
+**Issue**: Relative links to CONTRIBUTING.md
+
+```markdown
+❌ Wrong: [Contributing](../CONTRIBUTING.md)
+✅ Correct: [Contributing](https://github.com/penguinmails/penguinmails.github.io/blob/main/CONTRIBUTING.md)
+```
+
 ## Testing & Validation
 
 ### Before Submitting
