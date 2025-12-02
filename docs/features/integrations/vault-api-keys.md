@@ -1335,7 +1335,7 @@ sendEmail();
 
 ### Architecture & Security
 
-- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Comprehensive Vault architecture
+- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)** - Comprehensive Vault architecture
 
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Enterprise security features
 
@@ -1343,17 +1343,17 @@ sendEmail();
 
 ### Planning & Review
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
-- **[Feature Completeness Review - Requirements](/.kiro/specs/feature-completeness-review/requirements.md)** - Requirements document
+- **[Feature Completeness Review - Requirements](/.kiro/specs/feature-completeness-review/requirements)** - Requirements document
 
-- **[Feature Completeness Review - Design](/.kiro/specs/feature-completeness-review/design.md)** - Design document
+- **[Feature Completeness Review - Design](/.kiro/specs/feature-completeness-review/design)** - Design document
 
 ### Implementation Tasks
 
-- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
+- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks#113-document-vault-integration-architecture)** - Architecture documentation
 
-- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - API key system implementation
+- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks#116-implement-tenant-api-key-system-with-vault)** - API key system implementation
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
 
@@ -1373,4 +1373,5 @@ sendEmail();
 **Priority:** P0 - Critical
 **Next Review:** December 26, 2025
 
-*This feature documentation provides comprehensive guidance for implementing the Tenant API Key System with Vault integration. All implementation must reference the [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) for secret structure, access policies, and security requirements.*
+*This feature documentation provides comprehensive guidance for implementing the Tenant API Key System with Vault integration. All implementation must reference the [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) for secret structure, access policies, and security requirements.*
+

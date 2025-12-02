@@ -24,13 +24,13 @@ Email templates, HTML editor, template tags, and personalization variables.
 
 - **Q3 2026**: AI-powered template intelligence (6-7 weeks)
 
-See [Template Roadmap](./roadmap.md) for detailed timeline.
+See [Template Roadmap](/docs/features/templates/roadmap) for detailed timeline.
 
 ## Features in This Category
 
 ### ✅ Available Now
 
-#### [Template Management](./template-management.md)
+#### [Template Management](/docs/features/templates/template-management)
 
 Basic template creation and management with HTML editor.
 
@@ -52,7 +52,7 @@ Basic template creation and management with HTML editor.
 
 ### 🚧 In Development (Q2 2026)
 
-#### [Template Editor](./template-editor.md)
+#### [Template Editor](/docs/features/templates/template-editor)
 
 WYSIWYG drag-and-drop email template editor with advanced features.
 
@@ -76,7 +76,7 @@ WYSIWYG drag-and-drop email template editor with advanced features.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Library](./template-library.md)
+#### [Template Library](/docs/features/templates/template-library)
 
 Pre-built professional template collection with customization.
 
@@ -98,7 +98,7 @@ Pre-built professional template collection with customization.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Variables](./template-variables.md)
+#### [Template Variables](/docs/features/templates/template-variables)
 
 Advanced dynamic content with merge tags and conditionals.
 
@@ -174,7 +174,7 @@ AI-powered template features for optimization and accessibility.
 
 **Total Investment**: 18-22 weeks of development effort
 
-See [Template Roadmap](./roadmap.md) for complete timeline and feature details.
+See [Template Roadmap](/docs/features/templates/roadmap) for complete timeline and feature details.
 
 ---
 
@@ -203,3 +203,4 @@ See [Template Roadmap](./roadmap.md) for complete timeline and feature details.
 ---
 
 [← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+

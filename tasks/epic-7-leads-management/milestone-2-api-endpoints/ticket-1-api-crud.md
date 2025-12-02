@@ -1,12 +1,3 @@
----
-title: "Ticket: Create Contacts API"
-id: "LEADS-2.1"
-epic: "Epic 7"
-milestone: "2"
-priority: "High"
-status: "Selected for Development"
-story_points: 5
----
 
 # [LEADS-2.1] Create Contacts API
 

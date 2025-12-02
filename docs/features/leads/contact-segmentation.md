@@ -993,15 +993,15 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Leads Management](./leads-management.md)** - Contact database and management
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact database and management
 
-- **[Lead Scoring](./lead-scoring.md)** - Behavioral scoring system
+- **[Lead Scoring](/docs/features/leads/lead-scoring)** - Behavioral scoring system
 
-- **[Import/Export](./import-export.md)** - Bulk contact operations
+- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact operations
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use segments in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use segments in campaigns
 
-- **[Personalization System](../campaigns/personalization-system.md)** - Segment-specific content
+- **[Personalization System](/docs/features/campaigns/personalization-system)** - Segment-specific content
 
 ---
 
@@ -1009,3 +1009,4 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
+

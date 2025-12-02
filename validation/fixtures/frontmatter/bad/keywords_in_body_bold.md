@@ -1,10 +1,3 @@
----
-title: "Keywords in Body (Bold)"
-description: "This document has keywords in the body instead of frontmatter"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Keywords in Body
 

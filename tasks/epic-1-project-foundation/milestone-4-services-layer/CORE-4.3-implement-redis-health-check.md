@@ -1,10 +1,3 @@
----
-title: "CORE-4.3: Implement a Redis Health Check Endpoint"
-description: "Documentation for CORE-4.3: Implement a Redis Health Check Endpoint - CORE 4.3 Implement Redis Health Check"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-4.3: Implement a Redis Health Check Endpoint
 

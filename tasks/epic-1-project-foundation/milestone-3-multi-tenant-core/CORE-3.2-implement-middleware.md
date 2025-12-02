@@ -1,10 +1,3 @@
----
-title: "CORE-3.2: Implement Next.js Middleware for Route Protection"
-description: "Documentation for CORE-3.2: Implement Next.js Middleware for Route Protection - CORE 3.2 Implement Middleware"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-3.2: Implement Next.js Middleware for Route Protection
 

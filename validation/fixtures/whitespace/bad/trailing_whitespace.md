@@ -1,10 +1,3 @@
----
-title: "Trailing Whitespace"
-description: "This file has trailing whitespace issues"  
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Trailing Whitespace  
 

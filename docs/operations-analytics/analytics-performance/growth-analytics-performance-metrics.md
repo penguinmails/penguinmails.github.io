@@ -649,13 +649,13 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](.)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance)) - Main operations framework
 
-- [User Analytics](.)) - User behavior analysis
+- [User Analytics](/docs/operations-analytics/analytics-performance)) - User behavior analysis
 
-- [Product Analytics](.)) - Feature performance analysis
+- [Product Analytics](/docs/operations-analytics/analytics-performance)) - Feature performance analysis
 
-- [Metrics & KPIs](.)) - Comprehensive KPI framework
+- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -695,11 +695,11 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 Navigate to specific growth and analytics areas:
 
-- **[User Analytics](.))** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations-analytics/analytics-performance))** → User behavior and engagement analysis
 
-- **[Product Analytics](.))** → Feature performance and optimization
+- **[Product Analytics](/docs/operations-analytics/analytics-performance))** → Feature performance and optimization
 
-- **[Metrics & KPIs](.))** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
 
 - **[Team Performance](/docs/operations-analytics/team-performance))** → Team coordination and development
 
@@ -707,3 +707,4 @@ Navigate to specific growth and analytics areas:
 
 **Keywords**: growth analytics, acquisition tracking, expansion analysis, market penetration, growth efficiency, predictive modeling, channel optimization, sustainable scaling, cohort analysis
 ---
+

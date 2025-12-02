@@ -818,28 +818,29 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
 
 ### Feature Completeness Review
 
-- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Comprehensive review of analytics features and roadmap
+- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Comprehensive review of analytics features and roadmap
 
-- **[Third-Party Dependencies](./third-party-dependencies.md)** - External services and integrations
+- **[Third-Party Dependencies](/docs/features/analytics/third-party-dependencies)** - External services and integrations
 
 ### Analytics
 
-- **[Core Analytics](../analytics/core-analytics/overview.md)** - Dashboard and metrics
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Dashboard and metrics
 
-- **[Enhanced Analytics](../analytics/enhanced-analytics/overview.md)** - Advanced analytics (Q1 2026)
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced analytics (Q1 2026)
 
 ### Integration
 
-- **[API Access](../integrations/api-access.md)** - Programmatic data export
+- **[API Access](/docs/features/integrations/api-access)** - Programmatic data export
 
-- **[CRM Integration](../integrations/crm-integration/overview.md)** - External tool sync
+- **[CRM Integration](/docs/features/integrations/crm-integration/overview)** - External tool sync
 
 ### Technical
 
-- **[API Architecture](../../implementation-technical/api/README.md)** - Export API endpoints
+- **[API Architecture](/docs/implementation-technical/api/README)** - Export API endpoints
 
 ---
 
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Analytics Team
+

@@ -1,10 +1,3 @@
----
-title: "Relative Parent Directory Links"
-description: "Links using ../ prefix to parent directory"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Relative Parent Directory Links
 

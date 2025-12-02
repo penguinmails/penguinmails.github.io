@@ -20,13 +20,13 @@ persona: "Documentation Users"
 > Note: The KPI ranges and thresholds in this dashboard are reference bands derived from the same underlying analyses used across the Business Leaders corpus:
 >
 > - [Financial Analysis Benchmarks](/docs/business/performance/model/detailed-analysis)
-> - [Cost Comparisons](.)
-> - [Provider Benchmarks](.)
-> - [Competitive Analysis](.)
-> - [Performance Overview](.) - Executive performance benchmarks
-> - [Provider Performance Analysis](.) - ESP-specific strategies
-> - [Performance Optimization](.) - Technical optimization techniques
-> - [ROI Calculator](.)
+> - [Cost Comparisons](/docs/business/performance)
+> - [Provider Benchmarks](/docs/business/performance)
+> - [Competitive Analysis](/docs/business/performance)
+> - [Performance Overview](/docs/business/performance) - Executive performance benchmarks
+> - [Provider Performance Analysis](/docs/business/performance) - ESP-specific strategies
+> - [Performance Optimization](/docs/business/performance) - Technical optimization techniques
+> - [ROI Calculator](/docs/business/performance)
 > Use these as evidence-backed starting points and calibrate to your own baselines rather than treating them as arbitrary fixed guarantees.[^performance-dashboard-methodology]
 
 ### Dashboard Purpose and Scope
@@ -607,3 +607,4 @@ persona: "Documentation Users"
 
 *This performance dashboard framework is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside success metrics and implementation roadmap for complete business performance monitoring and optimization.*
 ---
+

@@ -1,12 +1,3 @@
----
-title: "Ticket: Define Contact Database Schema"
-id: "LEADS-1.1"
-epic: "Epic 7"
-milestone: "1"
-priority: "High"
-status: "Selected for Development"
-story_points: 3
----
 
 # [LEADS-1.1] Define Contact Database Schema
 

@@ -1,10 +1,3 @@
----
-title: "Approved Tech Stack"
-description: "This file uses only approved technologies"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Approved Tech Stack Example
 

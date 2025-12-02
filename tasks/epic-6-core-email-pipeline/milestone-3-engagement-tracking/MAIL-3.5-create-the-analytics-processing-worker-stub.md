@@ -1,10 +1,3 @@
----
-title: "MAIL-3.5: Create the Analytics Processing Worker (Stub)"
-description: "Documentation for MAIL-3.5: Create the Analytics Processing Worker (Stub) - MAIL 3.5 Create The Analytics Processing Worker Stub"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # MAIL-3.5: Create the Analytics Processing Worker (Stub)
 

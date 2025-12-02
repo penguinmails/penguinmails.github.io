@@ -1,10 +1,3 @@
----
-title: "Relative Links with Anchors"
-description: "Relative links with anchor fragments"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Relative Links with Anchors
 

@@ -17,15 +17,15 @@ This directory contains quick reference guides, executive templates, detailed me
 
 ### 📋 Reference Documents
 
-- [**Quick Reference: Cost-Benefit**](.) - Quick cost-benefit analysis guide (≤100 lines)
+- [**Quick Reference: Cost-Benefit**](/docs/business/reference) - Quick cost-benefit analysis guide (≤100 lines)
 
-- [**Quick Reference: Provider Selection**](.) - Vendor selection checklist (≤100 lines)
+- [**Quick Reference: Provider Selection**](/docs/business/reference) - Vendor selection checklist (≤100 lines)
 
-- [**Cost Tool Pricing**](.) - Pricing tool and calculator guidance (≤200 lines)
+- [**Cost Tool Pricing**](/docs/business/reference) - Pricing tool and calculator guidance (≤200 lines)
 
-- [**Executive Summary Template**](.) - Template for executive presentations (≤200 lines)
+- [**Executive Summary Template**](/docs/business/reference) - Template for executive presentations (≤200 lines)
 
-- [**Detailed Methodology**](.) - Comprehensive analysis methodology (≤300 lines)
+- [**Detailed Methodology**](/docs/business/reference) - Comprehensive analysis methodology (≤300 lines)
 
 ### 🎯 Reference Usage Path
 
@@ -74,3 +74,4 @@ This directory contains quick reference guides, executive templates, detailed me
 ---
 
 *This reference directory provides quick access to essential templates, methodology, and supporting materials to accelerate business analysis and decision-making.*
+

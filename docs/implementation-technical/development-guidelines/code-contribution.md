@@ -613,5 +613,6 @@ Refs #789
 
 - **Merge**: Automated once all checks pass
 
-For detailed testing requirements, see [`testing-requirements.md`](testing-requirements).
-For coding standards, see [`code-standards.md`](code-standards).
+For detailed testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
+For coding standards, see [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards).
+

@@ -1,10 +1,3 @@
----
-title: "Site-Absolute with .md Extension"
-description: "This file has site-absolute links with .md extension"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Site-Absolute Links with .md Extension
 

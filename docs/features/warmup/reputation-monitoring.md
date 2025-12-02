@@ -1163,13 +1163,13 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Email Warmups](./email-warmups/overview.md)** - Overall warmup strategy overview
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Overall warmup strategy overview
 
-- **[Warmup Scheduling](./warmup-scheduling.md)** - Automated warmup
+- **[Warmup Scheduling](/docs/features/warmup/warmup-scheduling)** - Automated warmup
 
-- **[Domain Management](../domains/domain-management.md)** - Domain configuration
+- **[Domain Management](/docs/features/domains/domain-management)** - Domain configuration
 
-- **[Security Features](../compliance/security-features.md)** - Authentication setup
+- **[Security Features](/docs/features/compliance/security-features)** - Authentication setup
 
 ---
 
@@ -1177,3 +1177,4 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q3 2026
 **Owner:** Deliverability Team
+

@@ -1,10 +1,3 @@
----
-title: "CORE-4.2: Create a Singleton Redis Service"
-description: "Documentation for CORE-4.2: Create a Singleton Redis Service - CORE 4.2 Create Redis Service"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-4.2: Create a Singleton Redis Service
 

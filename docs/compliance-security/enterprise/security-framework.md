@@ -212,7 +212,7 @@ app.get('/api/tenant/:tenantId/users',
 
 ### Complete RLS Policy Matrix
 
-*For comprehensive RLS policy documentation and implementation details, see [Row Level Security (RLS) Policies](#row-level-security-rls-policies)*
+*For comprehensive RLS policy documentation and implementation details, see [Row Level Security (RLS) Policies](/docs/compliance-security/enterprise/#row-level-security-rls-policies)*
 
 **Current Implementation:**
 
@@ -685,7 +685,7 @@ const securityLogger = {
 
 #### Enhanced Audit Logging (Q4 2025)
 
-*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Enhanced Audit Logging](#enhanced-audit-logging-q4-2025)*
+*For comprehensive audit schema with GDPR, CCPA, PIPEDA, and CASL compliance, see [Enhanced Audit Logging](/docs/compliance-security/enterprise/#enhanced-audit-logging-q4-2025)*
 
 **Current Enhancements Planned:**
 
@@ -918,3 +918,4 @@ const gdprCompliance = {
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 
 ---
+

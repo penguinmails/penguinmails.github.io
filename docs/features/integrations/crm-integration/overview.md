@@ -33,9 +33,9 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](./campaign-management.md)** - Need campaign data to sync (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
 
-- ⏳ **[Enhanced Analytics](./enhanced-analytics.md)** - Engagement data for lead scoring (Q1 2026)
+- ⏳ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
 
 - ⏳ Webhook infrastructure - Planned
 
@@ -99,23 +99,23 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Feature Specification
 
-- **[CRM Integration Feature](../../features/crm-integration.md)** - Requirements (to be created)
+- **[CRM Integration Feature](/docs/features/features/crm-integration)** - Requirements (to be created)
 
 ### Technical Specifications
 
-- **[Frontend: CRM Settings](../../design/routes/dashboard-settings-integrations.md)** - UI specification
+- **[Frontend: CRM Settings](/docs/features/design/routes/dashboard-settings-integrations)** - UI specification
 
-- **[API: CRM Sync Endpoints](../../implementation-technical/api/platform-api/integrations.md)** - Backend API
+- **[API: CRM Sync Endpoints](/docs/features/implementation-technical/api/platform-api/integrations)** - Backend API
 
-- **[OAuth Flow](../../technical/architecture/oauth-implementation.md)** - Authentication architecture
+- **[OAuth Flow](/docs/features/technical/architecture/oauth-implementation)** - Authentication architecture
 
 ### User Workflows
 
-- **[Marketing Journey](../../user-journeys/marketing-journey.md)** - CRM sync in campaign workflow
+- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - CRM sync in campaign workflow
 
 ### Implementation Tasks
 
-- **[CRM Integration Epic](../../../tasks/crm-integration/)** - Development tasks
+- **[CRM Integration Epic](/docs/tasks/crm-integration/)** - Development tasks
 
 ## Technical Details
 
@@ -960,3 +960,4 @@ class ConflictResolver {
 **Last Updated**: 2025-11-24
 **Owner**: Integrations Engineering Team
 **Status**: Planned - Q1 2026 key partnership feature
+

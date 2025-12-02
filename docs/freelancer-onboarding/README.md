@@ -6,7 +6,6 @@ level: "1"
 persona: "Documentation Users"
 ---
 
-
 # Freelancer Onboarding Hub
 
 ## Welcome to PenguinMails Freelancer Program
@@ -51,13 +50,13 @@ This onboarding hub is designed with three core principles:
 
 **New freelancers**: Begin your journey here for essential requirements and expectations.
 
-→ **[Task Clarity Essentials](task-clarity-essentials)** ← Your first stop for understanding how we define task completion, story points, and our workflow standards.
+→ **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** ← Your first stop for understanding how we define task completion, story points, and our workflow standards.
 
 ### What You'll Find Here
 
 #### Level 1: Getting Started (5 minutes)
 
-- **Task Requirements**: [Definition of Done, Story Points, Workflow](task-clarity-essentials)
+- **Task Requirements**: [Definition of Done, Story Points, Workflow](/docs/freelancer-onboarding/task-clarity-essentials)
 
 - **Essential Tools**: Jira, Discord, GitHub, Google Workspace setup
 
@@ -83,7 +82,7 @@ This onboarding hub is designed with three core principles:
 
 ### Step 1: Understand Task Standards (10 minutes)
 
-→ **[Task Clarity Essentials](task-clarity-essentials)
+→ **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
 Read this first. It covers Definition of Done, Story Points, SOP workflow, and tools overview.
 
 ### Step 2: Prepare Professional Proposal (15 minutes)
@@ -100,7 +99,7 @@ Understand detailed procedures, team structure, and communication protocols.
 
 ### If You're New to Freelancing (Recommended Path)
 
-1. **Start Here**: [Task Clarity Essentials](task-clarity-essentials) - Master task completion standards
+1. **Start Here**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) - Master task completion standards
 
 2. **Next**: [Success Center Overview](/docs/freelancer-support/README) - Build your freelance practice
 
@@ -110,11 +109,11 @@ Understand detailed procedures, team structure, and communication protocols.
 
 ### If You're an Experienced Freelancer (Quick Path)
 
-1. **Focus**: [Task Clarity Differences](task-clarity-essentials#sop-workflow) - Our unique workflow approach
+1. **Focus**: [Task Clarity Differences](/docs/freelancer-onboarding/task-clarity-essentials#sop-workflow) - Our unique workflow approach
 
-2. **Review**: [Communication Standards](task-clarity-essentials#communication-standards) - Professional protocols
+2. **Review**: [Communication Standards](/docs/freelancer-onboarding/task-clarity-essentials#communication-standards) - Professional protocols
 
-3. **Understand**: [2x Time Rule](task-clarity-essentials#delivery-enforcement) - Delivery enforcement policy
+3. **Understand**: [2x Time Rule](/docs/freelancer-onboarding/task-clarity-essentials#delivery-enforcement) - Delivery enforcement policy
 
 4. **Apply**: [Operations Framework](/docs/operations/freelancer-management/framework) - Team structure
 
@@ -122,7 +121,7 @@ Understand detailed procedures, team structure, and communication protocols.
 
 1. **Business Development**: [Success Center](/docs/freelancer-support/README) - Build specialization
 
-2. **Task Mastery**: [Task Clarity Essentials](task-clarity-essentials) - Premium task handling
+2. **Task Mastery**: [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) - Premium task handling
 
 3. **Proposal Excellence**: [Quotation Guide](/docs/freelancer-support/quotation-guide) - High-value services
 
@@ -134,7 +133,7 @@ Understand detailed procedures, team structure, and communication protocols.
 
 #### Phase 1: Foundation (Required)
 
-- [ ] Read [Task Clarity Essentials](task-clarity-essentials) completely
+- [ ] Read [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) completely
 
 - [ ] Understand Definition of Done requirements
 
@@ -176,7 +175,7 @@ Understand detailed procedures, team structure, and communication protocols.
 
 ### Before Starting
 
-- Read [Task Clarity Essentials](task-clarity-essentials) completely
+- Read [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) completely
 
 - Set up access to all required tools (Jira, Discord, GitHub, Google Workspace)
 
@@ -211,14 +210,13 @@ Level 1: Overview (This page) → 5 minutes
 Level 2: Task Essentials (task-clarity-essentials) → 10 minutes
 Level 3: Operations Framework (/docs/operations/freelancer-management/framework) → 20 minutes
 
-
 ```
 
 ### Document Reading Order
 
-1. **[Freelancer Onboarding Hub](README)** *(This page)* - Quick start and navigation
+1. **[Freelancer Onboarding Hub](/docs/freelancer-onboarding/README)** *(This page)* - Quick start and navigation
 
-2. **[Task Clarity Essentials](task-clarity-essentials)** - Essential task requirements
+2. **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - Essential task requirements
 
 3. **[Quotation Guide](/docs/freelancer-support/quotation-guide)** - Professional proposals
 
@@ -228,7 +226,7 @@ Level 3: Operations Framework (/docs/operations/freelancer-management/framework)
 
 ### Essential Documents
 
-- **[Task Clarity Essentials](task-clarity-essentials)** - DoD, Story Points, SOP workflow
+- **[Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)** - DoD, Story Points, SOP workflow
 
 - **[Professional Quotation Guide](/docs/freelancer-support/quotation-guide)** - Proposal preparation
 
@@ -334,7 +332,7 @@ These are the benchmarks we've designed this hub to achieve:
 
 Track your progress with these key milestones:
 
-- **Day 1**: Complete [Task Clarity Essentials](task-clarity-essentials) and tool setup
+- **Day 1**: Complete [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials) and tool setup
 
 - **Week 1**: Submit first professional quotation and complete first task
 
@@ -360,7 +358,7 @@ We regularly update this documentation based on:
 
 ### **Questions About Tasks?**
 
-- Start with [Task Clarity Essentials](task-clarity-essentials)
+- Start with [Task Clarity Essentials](/docs/freelancer-onboarding/task-clarity-essentials)
 
 - Check [Operations Framework](/docs/operations/freelancer-management/framework)
 

@@ -18,27 +18,27 @@ This directory contains the product and technical roadmaps that define **what we
 
 ### Product Roadmap
 
-- **[Product Roadmap](./product-roadmap.md)** - *Consolidated feature timeline and development roadmap*
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - *Consolidated feature timeline and development roadmap*
 
-- **[Technical Roadmap](./technical-roadmap.md)** - *Infrastructure milestones and technical considerations*
+- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - *Infrastructure milestones and technical considerations*
 
-- **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - *Feature classification and progressive development framework*
+- **[Feature Taxonomy](/business/feature-taxonomy-and-roadmap)** - *Feature classification and progressive development framework*
 
-- **[Implementation Roadmap](../../business/implementation/implementation-roadmap.md)** - *Executive timeline and delivery schedule*
+- **[Implementation Roadmap](/business/implementation/implementation-roadmap)** - *Executive timeline and delivery schedule*
 
 ### Technical Roadmap
 
-- **[AI Features Roadmap](../technical/architecture/detailed-technical/ai-features-roadmap.md)** - *AI/ML capabilities timeline*
+- **[AI Features Roadmap](/docs/technical/architecture/detailed-technical/ai-features-roadmap)** - *AI/ML capabilities timeline*
 
-- **[Technical Implementation Roadmap](../technical/architecture/detailed-technical/implementation-roadmap.md)** - *Infrastructure and technical milestones*
+- **[Technical Implementation Roadmap](/docs/technical/architecture/detailed-technical/implementation-roadmap)** - *Infrastructure and technical milestones*
 
 ### Department Roadmaps
 
-- **[Developer Operations Roadmap](../business/roadmap/developer-operations-roadmap.md)** - *DevOps and infrastructure priorities*
+- **[Developer Operations Roadmap](/docs/business/roadmap/developer-operations-roadmap)** - *DevOps and infrastructure priorities*
 
-- **[Executive Roadmap](../business/roadmap/executive-roadmap.md)** - *C-level strategic priorities*
+- **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - *C-level strategic priorities*
 
-- **[Marketing Roadmap](../business/roadmap/marketing-roadmap.md)** - *Marketing and GTM strategy*
+- **[Marketing Roadmap](/docs/business/roadmap/marketing-roadmap)** - *Marketing and GTM strategy*
 
 ---
 
@@ -112,43 +112,43 @@ Roadmaps are updated monthly with:
 
 ### Planning Documents
 
-- **[Features Overview](../features/README.md)** - Detailed feature specifications
+- **[Features Overview](/docs/features/README)** - Detailed feature specifications
 
-  - [Analytics](../features/analytics.md) - Performance tracking (Q4 2025-Q1 2026)
+  - [Analytics](/docs/features/analytics) - Performance tracking (Q4 2025-Q1 2026)
 
-  - [Email Warmups](../features/email-warmups.md) - Reputation management (Q1 2026)
+  - [Email Warmups](/docs/features/email-warmups) - Reputation management (Q1 2026)
 
-  - [Unified Inbox](../features/unified-inbox.md) - Message management (Q1-Q2 2026)
+  - [Unified Inbox](/docs/features/unified-inbox) - Message management (Q1-Q2 2026)
 
-- **[User Journeys](../user-journeys/README.md)** - Customer workflow maps
+- **[User Journeys](/docs/user-journeys/README)** - Customer workflow maps
 
-  - [Marketing Journey](../user-journeys/marketing-journey.md) - Marketing team workflows
+  - [Marketing Journey](/docs/user-journeys/marketing-journey) - Marketing team workflows
 
-  - [Customer Success Journey](../user-journeys/customer-success-journey.md) - Onboarding paths
+  - [Customer Success Journey](/docs/user-journeys/customer-success-journey) - Onboarding paths
 
 ### Specifications
 
-- **[Frontend Routing Map](../design/frontend-routing-map.md)** - UI view specifications
+- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - UI view specifications
 
-- **[API Architecture](../implementation-technical/api/README.md)** - Backend endpoint design
+- **[API Architecture](/docs/implementation-technical/api/README)** - Backend endpoint design
 
-- **[Design System](../design/ui-library.md)** - UI patterns and components
+- **[Design System](/docs/design/ui-library)** - UI patterns and components
 
 ### Implementation
 
-- **[Active Tasks](../../tasks/README.md)** - Current development work
+- **[Active Tasks](/tasks/README)** - Current development work
 
-- **[Task Templates](../../tasks/templates/README.md)** - Standardized task creation
+- **[Task Templates](/tasks/templates/README)** - Standardized task creation
 
-- **[Design System](../design/README.md)** - UI patterns and components
+- **[Design System](/docs/design/README)** - UI patterns and components
 
 ### Business Context
 
-- **[Feature Taxonomy](../../business/feature-taxonomy-and-roadmap.md)** - Feature classification
+- **[Feature Taxonomy](/business/feature-taxonomy-and-roadmap)** - Feature classification
 
-- **[Executive Roadmap](../../business/roadmap/executive-roadmap.md)** - Strategic priorities
+- **[Executive Roadmap](/business/roadmap/executive-roadmap)** - Strategic priorities
 
-- **[Marketing Roadmap](../../business/roadmap/marketing-roadmap.md)** - GTM strategy
+- **[Marketing Roadmap](/business/roadmap/marketing-roadmap)** - GTM strategy
 
 ---
 

@@ -1073,5 +1073,6 @@ npm run test:ci
 
 ```
 
-For code style and quality standards, see [`code-standards.md`](code-standards).
-For documentation testing requirements, see [`documentation-contributions.md`](documentation-contributions).
+For code style and quality standards, see [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards).
+For documentation testing requirements, see [`documentation-contributions.md`](/docs/implementation-technical/development-guidelines/documentation-contributions).
+

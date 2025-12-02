@@ -1,10 +1,3 @@
----
-title: "MAIL-2.1: Set Up Standalone Worker Project"
-description: "Documentation for MAIL-2.1: Set Up Standalone Worker Project - MAIL 2.1 Set Up Standalone Worker Project"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # MAIL-2.1: Set Up Standalone Worker Project
 

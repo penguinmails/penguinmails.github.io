@@ -913,32 +913,33 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Compliance
 
-- **[GDPR Compliance](./gdpr-compliance.md)** - Data protection and privacy
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - Data protection and privacy
 
-- **[Data Privacy](./data-privacy.md)** - Privacy controls and policies
+- **[Data Privacy](/docs/features/compliance/data-privacy)** - Privacy controls and policies
 
-- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - Email compliance
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - Email compliance
 
 ### Infrastructure
 
-- **[Email Infrastructure Setup](../infrastructure/email-infrastructure-setup.md)** - SPF, DKIM, DMARC setup
+- **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - SPF, DKIM, DMARC setup
 
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation
+- **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation
 
 ### Enterprise
 
-- **[User Management](../enterprise/user-management.md)** - Authentication and authorization
+- **[User Management](/docs/features/enterprise/user-management)** - Authentication and authorization
 
-- **[Enterprise Features](../enterprise/enterprise-features/overview.md)** - Advanced security (SSO, MFA)
+- **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** - Advanced security (SSO, MFA)
 
 ### Technical
 
-- **[Architecture Overview](../../technical/architecture/overview.md)** - Security architecture
+- **[Architecture Overview](/docs/technical/architecture/overview)** - Security architecture
 
-- **[Development Standards](../../implementation-technical/development-guidelines/development-standards.md)** - Secure coding practices
+- **[Development Standards](/docs/implementation-technical/development-guidelines/development-standards)** - Secure coding practices
 
 ---
 
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Security Team
+

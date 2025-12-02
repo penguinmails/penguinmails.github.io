@@ -521,13 +521,13 @@ The Operations Success Metrics Tracking Dashboard provides comprehensive operati
 
 ## Related Success Documents
 
-- [Operations Analytics Framework](.) - Operations analytics context and strategic alignment
+- [Operations Analytics Framework](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 
-- [Operations Executive Dashboard Framework](.) - Executive operations context and success integration
+- [Operations Executive Dashboard Framework](/docs/business/operations/analytics) - Executive operations context and success integration
 
-- [Operations Analytics Executive Dashboard](.) - Operations analytics with success tracking integration
+- [Operations Analytics Executive Dashboard](/docs/business/operations/analytics) - Operations analytics with success tracking integration
 
-- [Operations Cross-Domain Integration Dashboard](.) - Cross-domain integration with success tracking
+- [Operations Cross-Domain Integration Dashboard](/docs/business/operations/analytics) - Cross-domain integration with success tracking
 
 ## Next Steps
 
@@ -546,3 +546,4 @@ The Operations Success Metrics Tracking Dashboard provides comprehensive operati
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 3-4 weeks for comprehensive operations success metrics tracking dashboard implementation
 ---
+

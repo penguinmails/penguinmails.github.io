@@ -1,10 +1,3 @@
----
-title: "TEN-2.4: Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})"
-description: "Documentation for TEN-2.4: Create API Endpoint to Update a Company (PATCH /api/companies/{companyId}) - TEN 2.4 Update Company Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # TEN-2.4: Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})
 

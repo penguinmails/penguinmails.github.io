@@ -1,10 +1,3 @@
----
-title: "Epic 7: Leads & Contact Management"
-description: "Implementation of contact storage, segmentation, and lead management"
-last_modified_date: "2025-11-25"
-status: "Not Started"
-priority: "High"
----
 
 # Epic 7: Leads & Contact Management
 

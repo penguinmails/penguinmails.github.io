@@ -6,7 +6,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Compliance & Security
 
 Comprehensive compliance and security documentation for PenguinMails.
@@ -29,31 +28,31 @@ Comprehensive compliance and security documentation for PenguinMails.
 
 Complete security and compliance framework overview with strategic positioning and key metrics.
 
-### **[Detailed Compliance](detailed-compliance)**
+### **[Detailed Compliance](/docs/compliance-security/detailed-compliance)**
 
 Advanced compliance procedures and implementation guidance:
 
-- [Compliance Procedures](detailed-compliance) - Regulatory workflows and procedures
+- [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory workflows and procedures
 
-- [Accessibility Guidelines](detailed-compliance) - WCAG 2.1 AA compliance standards
+- [Accessibility Guidelines](/docs/compliance-security/detailed-compliance) - WCAG 2.1 AA compliance standards
 
-- [SOP Guidelines](detailed-compliance) - Standard operating procedures
+- [SOP Guidelines](/docs/compliance-security/detailed-compliance) - Standard operating procedures
 
-### **[Enterprise Security](enterprise)**
+### **[Enterprise Security](/docs/compliance-security/enterprise)**
 
 Advanced security architecture and implementation:
 
-- [Security Framework](enterprise) - Comprehensive security architecture
+- [Security Framework](/docs/compliance-security/enterprise) - Comprehensive security architecture
 
-- [Security & Privacy Integration](enterprise) - Unified security and privacy approach
+- [Security & Privacy Integration](/docs/compliance-security/enterprise) - Unified security and privacy approach
 
-- [Traffic Security Matrix](enterprise) - Database security strategy framework
+- [Traffic Security Matrix](/docs/compliance-security/enterprise) - Database security strategy framework
 
-### **[International Standards](international)**
+### **[International Standards](/docs/compliance-security/international)**
 
 Global compliance and privacy frameworks:
 
-- [Data Privacy Policy](international) - Customer-facing privacy standards
+- [Data Privacy Policy](/docs/compliance-security/international) - Customer-facing privacy standards
 
 - International compliance monitoring and reporting
 

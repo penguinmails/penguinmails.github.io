@@ -1,10 +1,3 @@
----
-title: "INFRA-2.3: Create a Scheduled Cron Job for Synchronization"
-description: "Documentation for INFRA-2.3: Create a Scheduled Cron Job for Synchronization - INFRA 2.3 Create A Scheduled Cron Job For Synchronization"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # INFRA-2.3: Create a Scheduled Cron Job for Synchronization
 

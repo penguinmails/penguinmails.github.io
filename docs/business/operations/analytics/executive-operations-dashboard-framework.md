@@ -469,11 +469,11 @@ The Operations Executive Dashboard Framework provides unified visibility into se
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with dashboard integration
 
-- [Operations Analytics Framework](.) - Operations analytics with dashboard framework integration
+- [Operations Analytics Framework](/docs/business/operations/analytics) - Operations analytics with dashboard framework integration
 
-- [Executive Operations Dashboard](.) - Executive operations dashboard with real-time insights
+- [Executive Operations Dashboard](/docs/business/operations/analytics) - Executive operations dashboard with real-time insights
 
-- [Operations Success Metrics Dashboard](.) - Operations success tracking and achievement monitoring
+- [Operations Success Metrics Dashboard](/docs/business/operations/analytics) - Operations success tracking and achievement monitoring
 
 ## Next Steps
 
@@ -492,3 +492,4 @@ The Operations Executive Dashboard Framework provides unified visibility into se
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 3-4 weeks for comprehensive operations executive dashboard implementation
 ---
+

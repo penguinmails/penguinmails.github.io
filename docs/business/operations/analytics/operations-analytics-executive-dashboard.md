@@ -521,13 +521,13 @@ The Operations Analytics Executive Dashboard provides comprehensive operational 
 
 ## Related Analytics Documents
 
-- [Operations Analytics Framework](.) - Operations analytics context and strategic alignment
+- [Operations Analytics Framework](/docs/business/operations/analytics) - Operations analytics context and strategic alignment
 
-- [Operations Executive Dashboard Framework](.) - Executive operations context and analytics integration
+- [Operations Executive Dashboard Framework](/docs/business/operations/analytics) - Executive operations context and analytics integration
 
-- [Operations Success Metrics Dashboard](.) - Operations success tracking with analytics integration
+- [Operations Success Metrics Dashboard](/docs/business/operations/analytics) - Operations success tracking with analytics integration
 
-- [Operations Cross-Domain Integration Dashboard](.) - Cross-domain integration with analytics tracking
+- [Operations Cross-Domain Integration Dashboard](/docs/business/operations/analytics) - Cross-domain integration with analytics tracking
 
 ## Next Steps
 
@@ -546,3 +546,4 @@ The Operations Analytics Executive Dashboard provides comprehensive operational 
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 3-4 weeks for comprehensive operations analytics executive dashboard implementation
 ---
+

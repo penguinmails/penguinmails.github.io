@@ -7,13 +7,13 @@ persona: "DevOps Engineers"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Workers](workers) - Background job processing"
+  - "[Workers](/docs/implementation-technical/database-infrastructure/queue/workers) - Background job processing"
 ---
 
 
@@ -263,3 +263,4 @@ Operations management ensures:
 - **Observability**: Detailed logging and metrics for troubleshooting
 
 This operational framework provides the foundation for running a production-ready queue system that can handle varying workloads while maintaining system reliability and performance.
+

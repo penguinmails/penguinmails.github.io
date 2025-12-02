@@ -1,10 +1,3 @@
----
-title: "Milestone 1: Project Initialization & Code Quality"
-description: "Documentation for Milestone 1: Project Initialization & Code Quality - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Milestone 1: Project Initialization & Code Quality
 

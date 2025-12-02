@@ -17,21 +17,21 @@ This directory contains detailed implementation guidance, technical requirements
 
 ### 🛠️ Implementation Documents
 
-- [**Implementation Roadmap**](.) - Phased deployment plan (≤200 lines)
+- [**Implementation Roadmap**](/docs/business/implementation) - Phased deployment plan (≤200 lines)
 
-- [**Implementation Summary**](.) - Executive implementation overview (≤200 lines)
+- [**Implementation Summary**](/docs/business/implementation) - Executive implementation overview (≤200 lines)
 
-- [**Implementation Requirements**](.) - Technical setup specifications (≤300 lines)
+- [**Implementation Requirements**](/docs/business/implementation) - Technical setup specifications (≤300 lines)
 
-- [**Infrastructure Overview**](.) - Strategic technical planning (≤200 lines)
+- [**Infrastructure Overview**](/docs/business/implementation) - Strategic technical planning (≤200 lines)
 
-- [**Technical Infrastructure**](.) - Detailed technical architecture (≤300 lines)
+- [**Technical Infrastructure**](/docs/business/implementation) - Detailed technical architecture (≤300 lines)
 
-- [**ESP Technical Analysis**](.) - ESP strategy assessment (≤300 lines)
+- [**ESP Technical Analysis**](/docs/business/implementation) - ESP strategy assessment (≤300 lines)
 
-- [**Success Metrics**](.) - Implementation KPIs and measurement (≤200 lines)
+- [**Success Metrics**](/docs/business/implementation) - Implementation KPIs and measurement (≤200 lines)
 
-- [**Visual Enhancement Strategy**](.) - UI)
+- [**Visual Enhancement Strategy**](/docs/business/implementation) - UI)
 
 ### 🎯 Implementation Path
 
@@ -82,3 +82,4 @@ This directory contains detailed implementation guidance, technical requirements
 ---
 
 *This implementation directory provides comprehensive technical guidance for successful PenguinMails deployment, from initial planning through go-live and optimization.*
+

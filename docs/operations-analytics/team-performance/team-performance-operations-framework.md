@@ -862,9 +862,9 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](.))** → Quality assurance procedures
+- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
 
-- **[Sprint Retrospectives](.))** → Agile development practices
+- **[Sprint Retrospectives](/docs/operations-analytics/team-performance))** → Agile development practices
 
 - **[Organization Analytics](/docs/operations-analytics/operations-management/README)** → Team and organization management
 
@@ -872,3 +872,4 @@ Navigate to specific team performance areas:
 
 **Keywords**: team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics
 ---
+

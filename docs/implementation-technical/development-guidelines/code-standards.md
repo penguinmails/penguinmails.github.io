@@ -1536,5 +1536,6 @@ interface RedisClient {
 
 - [ ] API response times are acceptable
 
-For comprehensive testing requirements, see [`testing-requirements.md`](testing-requirements).
-For the contribution workflow, see [`code-contribution.md`](code-contribution).
+For comprehensive testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
+For the contribution workflow, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
+

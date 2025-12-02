@@ -581,7 +581,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 - **[Third-Party Services (Platform-Wide)](/docs/technical/architecture/third-party-services)** - Comprehensive analysis of all platform dependencies
 
-- **[Third-Party Dependencies Report](/.kiro/specs/feature-completeness-review/findings/third-party-dependencies.md)** - Detailed dependency analysis with cost optimization strategies
+- **[Third-Party Dependencies Report](/.kiro/specs/feature-completeness-review/findings/third-party-dependencies)** - Detailed dependency analysis with cost optimization strategies
 
 ### Feature Documentation
 
@@ -597,7 +597,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 ### Implementation Review
 
-- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Complete gap analysis
+- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Complete gap analysis
 
 ### Technical Architecture
 
@@ -644,3 +644,4 @@ This document outlines all third-party services and integrations used by the Ana
 **Document Owner:** Technical Team
 **Last Review:** November 26, 2025
 **Next Review:** Q1 2026 (before Enhanced Analytics implementation)
+

@@ -1,10 +1,3 @@
----
-title: "BILL-2.3: Create API Endpoint for Stripe Checkout Session (POST /api/subscriptions/checkout)"
-description: "Documentation for BILL-2.3: Create API Endpoint for Stripe Checkout Session (POST /api/subscriptions/checkout) - BILL 2.3 Create Checkout Session Endp"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # BILL-2.3: Create API Endpoint for Stripe Checkout Session (POST /api/subscriptions/checkout)
 

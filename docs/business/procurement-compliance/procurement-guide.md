@@ -210,13 +210,13 @@ This guide is intentionally:
 
 - [Competitive Analysis](/docs/business/core) - Provider selection and comparison
 
-- [Security & Compliance](security-compliance) - Risk assessment and compliance overview
+- [Security & Compliance](/docs/business/procurement-compliance/security-compliance) - Risk assessment and compliance overview
 
 ## For Procurement & Legal Review (Level 3)
 
-- [Detailed Procurement Guide](procurement-guide-detailed) - Complete enterprise evaluation framework
+- [Detailed Procurement Guide](/docs/business/procurement-compliance/procurement-guide-detailed) - Complete enterprise evaluation framework
 
-- [Compliance Framework](compliance-framework) - Detailed regulatory analysis
+- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Detailed regulatory analysis
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications and requirements
 
@@ -236,3 +236,4 @@ This guide is intentionally:
 
 *This procurement guide is part of the Progressive Disclosure Framework for Business Documentation. It provides executive assessment capabilities while enabling detailed technical and legal review.*
 ---
+

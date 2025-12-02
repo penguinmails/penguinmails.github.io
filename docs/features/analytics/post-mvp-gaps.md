@@ -718,10 +718,11 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 ### Implementation Review
 
-- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Complete gap analysis with MVP and Post-MVP features
+- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Complete gap analysis with MVP and Post-MVP features
 
 ---
 
 **Document Owner:** Product Team
 **Last Review:** November 26, 2025
 **Next Review:** Q1 2026 (before Enhanced Analytics implementation)
+

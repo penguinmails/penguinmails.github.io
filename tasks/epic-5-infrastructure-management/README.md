@@ -1,10 +1,3 @@
----
-title: "Epic 5: Infrastructure Management & Virtualization (Hostwind)"
-description: "Documentation for Epic 5: Infrastructure Management & Virtualization (Hostwind) - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Epic 5: Infrastructure Management & Virtualization (Hostwind)
 

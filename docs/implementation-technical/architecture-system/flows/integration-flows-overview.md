@@ -23,7 +23,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Email Infrastructure Integration**
 
-**[Email Infrastructure Integration Flow](email-infrastructure-integration-flow)**
+**[Email Infrastructure Integration Flow](/docs/implementation-technical/architecture-system/flows/email-infrastructure-integration-flow)**
 
 - Central SMTP, Frontend, Queue, and Tenant SMTP integration
 
@@ -33,7 +33,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Email Processing Pipeline**
 
-**[Email Processing Pipeline Flow](email-processing-pipeline-flow)**
+**[Email Processing Pipeline Flow](/docs/implementation-technical/architecture-system/flows/email-processing-pipeline-flow)**
 
 - Complete email lifecycle from creation to delivery
 
@@ -43,7 +43,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Database Architecture Integration**
 
-**[Database Architecture Integration Flow](database-architecture-integration-flow)**
+**[Database Architecture Integration Flow](/docs/implementation-technical/architecture-system/flows/database-architecture-integration-flow)**
 
 - OLTP, Content Database, and OLAP Analytics integration
 
@@ -53,7 +53,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Infrastructure Provisioning**
 
-**[Infrastructure Provisioning Flow](infrastructure-provisioning-flow)**
+**[Infrastructure Provisioning Flow](/docs/implementation-technical/architecture-system/flows/infrastructure-provisioning-flow)**
 
 - Automated VPS, SMTP, DNS, and SSL provisioning
 
@@ -63,7 +63,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Email Delivery Tracking**
 
-**[Email Delivery Tracking Flow](email-delivery-tracking-flow)**
+**[Email Delivery Tracking Flow](/docs/implementation-technical/architecture-system/flows/email-delivery-tracking-flow)**
 
 - End-to-end email lifecycle with analytics
 
@@ -73,7 +73,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Multi-Tenant Data Isolation**
 
-**[Multi-Tenant Data Isolation Flow](multi-tenant-data-isolation-flow)**
+**[Multi-Tenant Data Isolation Flow](/docs/implementation-technical/architecture-system/flows/multi-tenant-data-isolation-flow)**
 
 - Tenant-specific data management
 
@@ -83,7 +83,7 @@ This overview provides navigation to all individual architecture integration flo
 
 ### **Real-Time Analytics Pipeline**
 
-**[Real-Time Analytics Pipeline Flow](realtime-analytics-pipeline-flow)**
+**[Real-Time Analytics Pipeline Flow](/docs/implementation-technical/architecture-system/flows/realtime-analytics-pipeline-flow)**
 
 - Event processing to business intelligence
 
@@ -218,3 +218,4 @@ This overview provides navigation to all individual architecture integration flo
 ---
 
 **Keywords**: architecture integration, system flows, component interaction, multi-tenant architecture, email processing, database architecture, infrastructure automation, analytics pipeline
+

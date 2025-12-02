@@ -1,10 +1,3 @@
----
-title: "Epic 2: User Authentication & Profile Management"
-description: "Documentation for Epic 2: User Authentication & Profile Management - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Epic 2: User Authentication & Profile Management
 

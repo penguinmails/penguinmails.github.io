@@ -477,9 +477,9 @@ The Operations Validation Framework provides comprehensive security validation p
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with validation coordination
 
-- [Security Validation Protocols](.) - Security validation and penetration testing
+- [Security Validation Protocols](/docs/business/operations/validation) - Security validation and penetration testing
 
-- [Compliance Validation Procedures](.) - Compliance validation and audit procedures
+- [Compliance Validation Procedures](/docs/business/operations/validation) - Compliance validation and audit procedures
 
 ## Next Steps
 
@@ -501,3 +501,4 @@ The Operations Validation Framework provides comprehensive security validation p
 **Expected Timeline:** 2-3 weeks for comprehensive operations validation implementation
 **Business Value:** $2.4M+ annual operations validation value delivery through systematic validation excellence
 ---
+

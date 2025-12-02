@@ -17,13 +17,13 @@ This directory contains the essential business documents that serve as the prima
 
 ### 📋 Entry Point Documents
 
-- [**Executive Summary**](.) - Comprehensive business case overview (158 lines)
+- [**Executive Summary**](/docs/business/core) - Comprehensive business case overview (158 lines)
 
-- [**Cost Comparisons**](.) - Financial comparison with alternatives (≤200 lines)
+- [**Cost Comparisons**](/docs/business/core) - Financial comparison with alternatives (≤200 lines)
 
-- [**Competitive Analysis**](.) - Market positioning and vendor comparison (≤200 lines)
+- [**Competitive Analysis**](/docs/business/core) - Market positioning and vendor comparison (≤200 lines)
 
-- [**ROI Calculator**](.) - Financial modeling and return calculations (≤200 lines)
+- [**ROI Calculator**](/docs/business/core) - Financial modeling and return calculations (≤200 lines)
 
 ### 🎯 Decision Path
 

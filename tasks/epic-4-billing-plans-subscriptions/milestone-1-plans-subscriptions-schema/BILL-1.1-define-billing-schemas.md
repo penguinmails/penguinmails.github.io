@@ -1,10 +1,3 @@
----
-title: "BILL-1.1: Define Drizzle Schemas for Billing"
-description: "Documentation for BILL-1.1: Define Drizzle Schemas for Billing - BILL 1.1 Define Billing Schemas"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # BILL-1.1: Define Drizzle Schemas for Billing
 

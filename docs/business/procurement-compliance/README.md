@@ -17,25 +17,25 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 ### 📋 Procurement & Compliance Documents
 
-- [**Procurement Guide**](.) - Enterprise evaluation framework (≤200 lines)
+- [**Procurement Guide**](/docs/business/procurement-compliance) - Enterprise evaluation framework (≤200 lines)
 
-- [**Procurement Guide Detailed**](.) - Complete procurement process (265 lines)
+- [**Procurement Guide Detailed**](/docs/business/procurement-compliance) - Complete procurement process (265 lines)
 
-- [**Compliance Overview**](.) - Executive compliance summary (≤200 lines)
+- [**Compliance Overview**](/docs/business/procurement-compliance) - Executive compliance summary (≤200 lines)
 
-- [**Security Compliance**](.) - Security and compliance summary (≤200 lines)
+- [**Security Compliance**](/docs/business/procurement-compliance) - Security and compliance summary (≤200 lines)
 
-- [**Security Compliance Detailed**](.) - Technical security framework (96 lines)
+- [**Security Compliance Detailed**](/docs/business/procurement-compliance) - Technical security framework (96 lines)
 
-- [**Compliance Framework**](.) - Complete compliance analysis (≤300 lines)
+- [**Compliance Framework**](/docs/business/procurement-compliance) - Complete compliance analysis (≤300 lines)
 
-- [**Compliance Costs**](.) - Compliance investment analysis (≤300 lines)
+- [**Compliance Costs**](/docs/business/procurement-compliance) - Compliance investment analysis (≤300 lines)
 
-- [**Compliance Implementation**](.) - Technical compliance systems (≤300 lines)
+- [**Compliance Implementation**](/docs/business/procurement-compliance) - Technical compliance systems (≤300 lines)
 
-- [**Compliance Incident Response**](.) - Incident management procedures (≤300 lines)
+- [**Compliance Incident Response**](/docs/business/procurement-compliance) - Incident management procedures (≤300 lines)
 
-- [**Compliance Monitoring**](.) - Ongoing compliance monitoring (≤300 lines)
+- [**Compliance Monitoring**](/docs/business/procurement-compliance) - Ongoing compliance monitoring (≤300 lines)
 
 ### 🎯 Enterprise Evaluation Path
 
@@ -86,3 +86,4 @@ This directory contains comprehensive procurement guidance, compliance framework
 ---
 
 *This procurement and compliance directory provides enterprise-ready frameworks for thorough vendor evaluation, contract negotiation, and ongoing compliance management.*
+

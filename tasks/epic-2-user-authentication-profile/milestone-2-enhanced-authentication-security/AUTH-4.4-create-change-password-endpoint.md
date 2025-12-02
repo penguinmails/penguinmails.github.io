@@ -1,10 +1,3 @@
----
-title: "AUTH-4.4: Create API Endpoint to Change Password (POST /api/users/me/change-password)"
-description: "Documentation for AUTH-4.4: Create API Endpoint to Change Password (POST /api/users/me/change-password) - AUTH 4.4 Create Change Password Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # AUTH-4.4: Create API Endpoint to Change Password (POST /api/users/me/change-password)
 

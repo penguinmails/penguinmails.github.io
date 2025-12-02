@@ -15,9 +15,9 @@ This directory contains comprehensive documentation for the PenguinMails OLAP An
 
 ### Core Components
 
-- **[Schema Guide](schema-guide)** - Complete analytics warehouse schema and design principles
+- **[Schema Guide](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide)** - Complete analytics warehouse schema and design principles
 
-- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
+- **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/olap-database/mermaid-er)** - Database schema visualization
 
 ### Design Principles
 
@@ -33,8 +33,8 @@ This directory contains comprehensive documentation for the PenguinMails OLAP An
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Schema Guide](schema-guide) | Complete OLAP schema and implementation | Data engineers |
-| [Mermaid ER](mermaid-er) | Visual database schema representation | All technical stakeholders |
+| [Schema Guide](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide) | Complete OLAP schema and implementation | Data engineers |
+| [Mermaid ER](/docs/implementation-technical/database-infrastructure/olap-database/mermaid-er) | Visual database schema representation | All technical stakeholders |
 
 ## Key Concepts
 
@@ -88,9 +88,9 @@ This design ensures:
 
 ## Getting Started
 
-1. Review [Schema Guide](schema-guide) for implementation details
+1. Review [Schema Guide](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide) for implementation details
 
-2. Reference [Mermaid ER](mermaid-er) for visual schema understanding
+2. Reference [Mermaid ER](/docs/implementation-technical/database-infrastructure/olap-database/mermaid-er) for visual schema understanding
 
 3. Follow design principles for new analytics development
 
@@ -107,3 +107,4 @@ This OLAP analytics database integrates with:
 - Compliance frameworks for audit requirements
 
 For questions or support, contact the Engineering team.
+

@@ -1507,13 +1507,13 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
 
 ## Related Documentation
 
-- **[Leads Management](./leads-management.md)** - Contact database and management
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact database and management
 
-- **[Contact Segmentation](./contact-segmentation.md)** - Create segments from imported contacts
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Create segments from imported contacts
 
-- **[Lead Scoring](./lead-scoring.md)** - Score imported contacts automatically
+- **[Lead Scoring](/docs/features/leads/lead-scoring)** - Score imported contacts automatically
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use imported contacts in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use imported contacts in campaigns
 
 ---
 
@@ -1521,3 +1521,4 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
+

@@ -397,7 +397,7 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 ## Related Documentation
 
-- [Customer Journey Management Details](detailed)
+- [Customer Journey Management Details](/docs/business/customer-success/journey/detailed)
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 
@@ -408,3 +408,4 @@ Customer Journey Management provides the systematic approach to understanding, o
 ---
 
 ### Level 1: Executive summary for customer journey management strategic decision-making
+

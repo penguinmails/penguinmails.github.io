@@ -29,19 +29,19 @@ Our platform supports your goal of market leadership through deliverability exce
 
 | Feature | Quick Start | Professional Setup | Enterprise Features | Primary Value |
 |---------|-------------|-------------------|-------------------|---------------|
-| **[Analytics](features/analytics/core-analytics/overview.md)** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
-| **[Warm-ups](features/warmup/email-warmups/overview.md)** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
-| **[Free Mailbox Creation](features/infrastructure/free-mailbox-creation/overview.md)** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
-| **[Unified Inbox](features/inbox/unified-inbox/overview.md)** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
-| **[Inbox Rotation](features/inbox/inbox-rotation/overview.md)** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
+| **[Analytics](/docs/features/analytics/core-analytics/overview)** | Basic dashboard | Advanced reporting | AI-powered insights | **150% response improvement** |
+| **[Warm-ups](/docs/features/warmup/email-warmups/overview)** | 5-minute setup | Advanced algorithms | Predictive optimization | **95%+ inbox placement** |
+| **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** | Instant accounts | Professional domains | Bulk automation | **<5min account creation** |
+| **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** | Basic organization | Smart filtering | Team collaboration | **Zero missed opportunities** |
+| **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** | Simple rotation | Smart algorithms | Enterprise scale | **95%+ sustained deliverability** |
 
 ### **Use Case Alignment**
 
-- **New Users**: Start with [Free Mailbox Creation](features/infrastructure/free-mailbox-creation/overview.md) → [Warm-ups](features/warmup/email-warmups/overview.md)
+- **New Users**: Start with [Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview) → [Warm-ups](/docs/features/warmup/email-warmups/overview)
 
-- **Growing Teams**: Add [Analytics](features/analytics/core-analytics/overview.md) → [Unified Inbox](features/inbox/unified-inbox/overview.md)
+- **Growing Teams**: Add [Analytics](/docs/features/analytics/core-analytics/overview) → [Unified Inbox](/docs/features/inbox/unified-inbox/overview)
 
-- **Enterprise Scale**: Implement [Inbox Rotation](features/inbox/inbox-rotation/overview.md) with full analytics suite
+- **Enterprise Scale**: Implement [Inbox Rotation](/docs/features/inbox/inbox-rotation/overview) with full analytics suite
 
 - **Agencies**: Full feature stack with white-label options for client management
 
@@ -53,7 +53,7 @@ Our platform supports your goal of market leadership through deliverability exce
 
 Start here for basic infrastructure and setup:
 
-#### **[Email Warm-ups](features/warmup/email-warmups/overview.md)** - *The #1 Success Factor*
+#### **[Email Warm-ups](/docs/features/warmup/email-warmups/overview)** - *The #1 Success Factor*
 
 - **Level 1**: 5-minute automated setup for immediate results
 
@@ -61,9 +61,9 @@ Start here for basic infrastructure and setup:
 
 - **Level 3**: Enterprise compliance and predictive analytics
 
-- **Quick Start**: [Create accounts](features/infrastructure/free-mailbox-creation/overview.md) → [Warm-up](features/warmup/email-warmups/overview.md) → Start campaigns
+- **Quick Start**: [Create accounts](/docs/features/infrastructure/free-mailbox-creation/overview) → [Warm-up](/docs/features/warmup/email-warmups/overview) → Start campaigns
 
-#### **[Free Mailbox Creation](features/infrastructure/free-mailbox-creation/overview.md)** - *Professional Infrastructure*
+#### **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - *Professional Infrastructure*
 
 - **Level 1**: Instant professional email accounts
 
@@ -77,7 +77,7 @@ Start here for basic infrastructure and setup:
 
 Scale your campaigns with data-driven insights:
 
-#### **[Analytics](features/analytics/core-analytics/overview.md)** - *Data-Driven Optimization*
+#### **[Analytics](/docs/features/analytics/core-analytics/overview)** - *Data-Driven Optimization*
 
 - **Level 1**: Essential metrics and performance tracking
 
@@ -87,7 +87,7 @@ Scale your campaigns with data-driven insights:
 
 - **Business Impact**: 150% response improvement through optimization
 
-#### **[Unified Inbox](features/inbox/unified-inbox/overview.md)** - *Response Management*
+#### **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - *Response Management*
 
 - **Level 1**: Centralized response monitoring
 
@@ -101,7 +101,7 @@ Scale your campaigns with data-driven insights:
 
 For enterprise-level operations and maximum efficiency:
 
-#### **[Inbox Rotation](features/inbox/inbox-rotation/overview.md)** - *Sustainable Scaling*
+#### **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - *Sustainable Scaling*
 
 - **Level 1**: Basic account protection and rotation
 
@@ -119,15 +119,15 @@ For enterprise-level operations and maximum efficiency:
 
 ## New User Journey
 
-1. **[Free Mailbox Creation](features/infrastructure/free-mailbox-creation/overview.md)** - Establish professional email infrastructure
+1. **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Establish professional email infrastructure
 
-2. **[Warm-ups](features/warmup/email-warmups/overview.md)** - Build sender reputation for 95%+ deliverability
+2. **[Warm-ups](/docs/features/warmup/email-warmups/overview)** - Build sender reputation for 95%+ deliverability
 
-3. **[Analytics](features/analytics/core-analytics/overview.md)** - Track performance and optimize campaigns
+3. **[Analytics](/docs/features/analytics/core-analytics/overview)** - Track performance and optimize campaigns
 
-4. **[Unified Inbox](features/inbox/unified-inbox/overview.md)** - Manage responses efficiently
+4. **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Manage responses efficiently
 
-5. **[Inbox Rotation](features/inbox/inbox-rotation/overview.md)** - Scale safely across multiple accounts
+5. **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Scale safely across multiple accounts
 
 ## Growth Stage Optimization
 
@@ -273,21 +273,21 @@ Ready to dive deeper? Each feature includes:
 
 ### **Business Context**
 
-- **[Value Proposition](business/value-proposition.md)** - Strategic positioning and ROI analysis
+- **[Value Proposition](/docs/business/value-proposition)** - Strategic positioning and ROI analysis
 
-- **[User Personas](business/user-personas.md)** - Target audience analysis
+- **[User Personas](/docs/business/user-personas)** - Target audience analysis
 
-- **[Technical Architecture](technical/architecture/overview.md)** - System design and integration
+- **[Technical Architecture](/docs/technical/architecture/overview)** - System design and integration
 
 ### **Technical Implementation**
 
-- **[Getting Started](getting-started.md)** - Complete onboarding process
+- **[Getting Started](/docs/getting-started)** - Complete onboarding process
 
-- **[Quick Setup](quick-setup.md)** - 5-minute rapid deployment
+- **[Quick Setup](/docs/quick-setup)** - 5-minute rapid deployment
 
-- **[Compliance & Security](compliance-security/README.md)** - Regulatory and security framework
+- **[Compliance & Security](/docs/compliance-security/README)** - Regulatory and security framework
 
 ---
 
-*Next: [Quick Setup Guide](quick-setup.md) →*
+*Next: [Quick Setup Guide](/docs/quick-setup) →*
 ---

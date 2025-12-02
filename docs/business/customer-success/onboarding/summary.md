@@ -397,7 +397,7 @@ Customer Onboarding represents the critical foundation period where new customer
 
 ## Related Documentation
 
-- [Customer Onboarding Details](onboarding-detailed)
+- [Customer Onboarding Details](/docs/business/customer-success/onboarding/onboarding-detailed)
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 
@@ -408,3 +408,4 @@ Customer Onboarding represents the critical foundation period where new customer
 ---
 
 ### Level 1: Executive summary for customer onboarding strategic planning and decision-making
+

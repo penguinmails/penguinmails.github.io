@@ -15,35 +15,35 @@ This directory contains comprehensive documentation for the PenguinMails Queue S
 
 ### Core Components
 
-- **[Main Guide](main)** - Complete overview and strategic alignment
+- **[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main)** - Complete overview and strategic alignment
 
-- **[Architecture](architecture)** - System design and component overview
+- **[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture)** - System design and component overview
 
-- **[Database Schema](database-schema)** - Job tables, relationships, and indexing
+- **[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema)** - Job tables, relationships, and indexing
 
-- **[Management](management)** - Redis queues and migrator processes
+- **[Management](/docs/implementation-technical/database-infrastructure/queue/management)** - Redis queues and migrator processes
 
-- **[Workers](workers)** - Background job processing and handlers
+- **[Workers](/docs/implementation-technical/database-infrastructure/queue/workers)** - Background job processing and handlers
 
-- **[Operations](operations)** - Deployment, monitoring, and maintenance
+- **[Operations](/docs/implementation-technical/database-infrastructure/queue/operations)** - Deployment, monitoring, and maintenance
 
-- **[Best Practices](best-practices)** - Performance, reliability, and security guidelines
+- **[Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices)** - Performance, reliability, and security guidelines
 
 ### Visual Documentation
 
-- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
+- **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er)** - Database schema visualization
 
 ## Quick Navigation
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Main Guide](main) | Strategic overview and implementation summary | All stakeholders |
-| [Architecture](architecture) | System design principles and components | Technical architects |
-| [Database Schema](database-schema) | Database design and optimization | Database architects |
-| [Management](management) | Redis configuration and job migration | System engineers |
-| [Workers](workers) | Job processing logic and error handling | Backend engineers |
-| [Operations](operations) | Deployment and monitoring procedures | DevOps engineers |
-| [Best Practices](best-practices) | Guidelines and recommendations | Engineering teams |
+| [Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) | Strategic overview and implementation summary | All stakeholders |
+| [Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) | System design principles and components | Technical architects |
+| [Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) | Database design and optimization | Database architects |
+| [Management](/docs/implementation-technical/database-infrastructure/queue/management) | Redis configuration and job migration | System engineers |
+| [Workers](/docs/implementation-technical/database-infrastructure/queue/workers) | Job processing logic and error handling | Backend engineers |
+| [Operations](/docs/implementation-technical/database-infrastructure/queue/operations) | Deployment and monitoring procedures | DevOps engineers |
+| [Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices) | Guidelines and recommendations | Engineering teams |
 
 ## Key Concepts
 
@@ -71,13 +71,13 @@ This directory contains comprehensive documentation for the PenguinMails Queue S
 
 ## Getting Started
 
-1. Start with the [Main Guide](main) for a complete overview
+1. Start with the [Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) for a complete overview
 
-2. Review [Architecture](architecture) for system design understanding
+2. Review [Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) for system design understanding
 
 3. Consult specific component docs for detailed implementation guidance
 
-4. Follow [Best Practices](best-practices) for production deployment
+4. Follow [Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices) for production deployment
 
 ## Integration
 
@@ -92,3 +92,4 @@ This queue system integrates with:
 - Content storage systems
 
 For questions or support, contact the Engineering team.
+

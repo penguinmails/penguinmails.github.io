@@ -784,13 +784,13 @@ eventEmitter.on('contact.updated', async (event) => {
 
 ## Related Documentation
 
-- **[Leads Management](./leads-management.md)** - Contact database
+- **[Leads Management](/docs/features/leads/leads-management)** - Contact database
 
-- **[Contact Segmentation](./contact-segmentation.md)** - Score-based segments
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Score-based segments
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Score-based targeting
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Score-based targeting
 
-- **[Analytics](../analytics/core-analytics/overview.md)** - Score analytics
+- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Score analytics
 
 ---
 
@@ -798,3 +798,4 @@ eventEmitter.on('contact.updated', async (event) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
+

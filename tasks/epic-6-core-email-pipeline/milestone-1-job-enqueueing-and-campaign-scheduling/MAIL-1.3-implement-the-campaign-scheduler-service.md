@@ -1,10 +1,3 @@
----
-title: "MAIL-1.3: Implement the Campaign Scheduler Service"
-description: "Documentation for MAIL-1.3: Implement the Campaign Scheduler Service - MAIL 1.3 Implement The Campaign Scheduler Service"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # MAIL-1.3: Implement the Campaign Scheduler Service
 

@@ -1,10 +1,3 @@
----
-title: "TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)"
-description: "Documentation for TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites) - TEN 3.2 Invite User Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)
 

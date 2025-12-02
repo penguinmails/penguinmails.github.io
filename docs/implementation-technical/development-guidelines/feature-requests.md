@@ -1044,5 +1044,6 @@ Each feature must include:
 
 - Low: Future consideration
 
-For testing requirements, see [`testing-requirements.md`](testing-requirements).
-For code standards, see [`code-standards.md`](code-standards).
+For testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
+For code standards, see [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards).
+

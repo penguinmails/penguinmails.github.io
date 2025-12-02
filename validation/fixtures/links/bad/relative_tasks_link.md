@@ -1,10 +1,3 @@
----
-title: "Relative Tasks Link Violation"
-description: "This file has a relative link to tasks folder"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Relative Tasks Link
 

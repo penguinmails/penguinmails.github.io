@@ -223,15 +223,15 @@ Security and compliance features are integrated into the core platform:
 
 ## For Technical Validation (Level 3)
 
-- [Detailed Security Framework](security-compliance-detailed) - Complete technical security analysis
+- [Detailed Security Framework](/docs/business/procurement-compliance/security-compliance-detailed) - Complete technical security analysis
 
-- [Compliance Framework](compliance-framework) - Complete regulatory analysis
+- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Complete regulatory analysis
 
 - [Security Framework (Enterprise)](/docs/compliance-security/enterprise) - Technical security controls
 
 ## For Procurement & Legal Review
 
-- [Procurement Guide](procurement-guide) - Enterprise evaluation framework
+- [Procurement Guide](/docs/business/procurement-compliance/procurement-guide) - Enterprise evaluation framework
 
 - [Industry-Specific Cases](/docs/business/industry-business-cases) - Sector-specific requirements
 
@@ -243,3 +243,4 @@ Security and compliance features are integrated into the core platform:
 
 *This security and compliance overview is part of the Progressive Disclosure Framework for Business Documentation. It provides executive-level understanding while routing technical teams to appropriate deep-dive documentation for detailed validation.*
 ---
+

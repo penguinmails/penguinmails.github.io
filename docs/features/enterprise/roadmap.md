@@ -942,11 +942,11 @@ This document provides a detailed timeline for enterprise features development, 
 
 - [Enterprise Features Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature catalog and status
 
-- [User Management & Authentication](./user-management.md) - Authentication details
+- [User Management & Authentication](/docs/features/enterprise/user-management) - Authentication details
 
-- [Authentication Roadmap](./authentication-roadmap.md) - Detailed authentication timeline
+- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) - Detailed authentication timeline
 
-- [Team Management Roadmap](./team-roadmap.md) - Detailed team & workspace management timeline
+- [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
@@ -957,3 +957,4 @@ This document provides a detailed timeline for enterprise features development, 
 **Last Updated:** November 27, 2025
 **Review Cycle:** Monthly
 **Next Review:** After MVP authentication features complete (Q1 2026)
+

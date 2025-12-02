@@ -130,11 +130,11 @@ GET /api/v1/domains/{id}/dns
 
 ### Compliance
 
-- **[CAN-SPAM Compliance](../compliance/can-spam-compliance.md)** - Legal requirements for senders
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - Legal requirements for senders
 
 ### Infrastructure
 
-- **[Email Warmups](../warmup/email-warmups/overview.md)** - Warming up new domains
+- **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Warming up new domains
 
 ---
 
@@ -142,3 +142,4 @@ GET /api/v1/domains/{id}/dns
 **Verification Time:** < 1 hour (TTL dependent)
 
 *Proper domain authentication is the single most important factor in email deliverability.*
+

@@ -6,7 +6,6 @@ level: "2"
 persona: "Documentation Users"
 ---
 
-
 # Business Documentation Hub - Progressive Disclosure Framework
 
 ## For Business Leaders, Executives, and Decision Makers
@@ -17,13 +16,13 @@ Welcome to the comprehensive Business Documentation Hub designed around progress
 
 ### Level 1: Entry / Orientation
 
-**Primary Entry**: [`index.md`](index) → Business Leaders section
+**Primary Entry**: [`index.md`](/docs/business/index) → Business Leaders section
 
 Access core entry points designed for rapid orientation and executive-level decision making.
 
 ### Level 2: Executive Decision Making (Surface Reading)
 
-**Directory**: [`core/`](core) - Executive business case documents
+**Directory**: [`core/`](/docs/business/core) - Executive business case documents
 
 - **Executive Summary**: Comprehensive business overview (158 lines)
 
@@ -39,7 +38,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 ### Financial Analysis
 
-- **Location**: [`financial-analysis/`](financial-analysis)
+- **Location**: [`financial-analysis/`](/docs/business/financial-analysis)
 
 - **Focus**: Deep financial modeling, benchmarking, cost analysis
 
@@ -49,7 +48,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 #### Procurement & Compliance
 
-- **Location**: [`procurement-compliance/`](procurement-compliance)
+- **Location**: [`procurement-compliance/`](/docs/business/procurement-compliance)
 
 - **Focus**: Enterprise procurement, compliance frameworks, security
 
@@ -59,7 +58,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 #### Implementation
 
-- **Location**: [`implementation/`](implementation)
+- **Location**: [`implementation/`](/docs/business/implementation)
 
 - **Focus**: Technical deployment, project management, infrastructure
 
@@ -69,7 +68,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 #### Performance Analysis
 
-- **Location**: [`performance/`](performance)
+- **Location**: [`performance/`](/docs/business/performance)
 
 - **Focus**: Metrics, optimization, benchmarking, dashboards
 
@@ -79,7 +78,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 #### Industry-Specific Cases
 
-- **Location**: [`industry-business-cases/`](industry-business-cases)
+- **Location**: [`industry-business-cases/`](/docs/business/industry-business-cases)
 
 - **Focus**: Vertical-specific analysis (healthcare, finance, e-commerce, etc.)
 
@@ -89,7 +88,7 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 #### Reference Materials
 
-- **Location**: [`reference/`](reference)
+- **Location**: [`reference/`](/docs/business/reference)
 
 - **Focus**: Templates, methodology, quick references
 
@@ -129,11 +128,11 @@ Access core entry points designed for rapid orientation and executive-level deci
 
 | User Type | Start Here | Go Deeper |
 |-----------|------------|-----------|
-| **C-Suite Executives** | [`core/executive-summary`](core) | [`procurement-compliance/`](procurement-compliance) |
-| **Finance Teams** | [`core/roi-calculator`](core) | [`financial-analysis/`](financial-analysis) |
-| **IT Directors** | [`core/executive-summary`](core) | [`implementation/`](implementation) |
-| **Procurement** | [`procurement-compliance/procurement-guide`](procurement-compliance) | [`procurement-compliance/compliance-framework`](procurement-compliance) |
-| **Operations** | [`performance/performance-dashboard`](performance) | [`performance/performance-benchmarks`](performance) |
+| **C-Suite Executives** | [`core/executive-summary`](/docs/business/core) | [`procurement-compliance/`](/docs/business/procurement-compliance) |
+| **Finance Teams** | [`core/roi-calculator`](/docs/business/core) | [`financial-analysis/`](/docs/business/financial-analysis) |
+| **IT Directors** | [`core/executive-summary`](/docs/business/core) | [`implementation/`](/docs/business/implementation) |
+| **Procurement** | [`procurement-compliance/procurement-guide`](/docs/business/procurement-compliance) | [`procurement-compliance/compliance-framework`](/docs/business/procurement-compliance) |
+| **Operations** | [`performance/performance-dashboard`](/docs/business/performance) | [`performance/performance-benchmarks`](/docs/business/performance) |
 
 ## Content Organization Principles
 

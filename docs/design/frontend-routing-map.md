@@ -6,7 +6,6 @@ level: "2"
 persona: "Product Designers & Developers"
 ---
 
-
 # Frontend Routing Map & Architecture
 
 **Purpose**: This document defines the complete routing structure for the PenguinMails frontend application (Next.js 15). It serves as the blueprint for navigation, access control, and page-level requirements.
@@ -31,7 +30,7 @@ persona: "Product Designers & Developers"
 
 ## 2. Route Reference Map
 
-### 2.1 [Public & Authentication Routes](routes/public-auth)
+### 2.1 [Public & Authentication Routes](/docs/design/routes/public-auth)
 
 | Path | Access | Purpose | Key Data/Components & Strategy |
 |---|---|---|---|
@@ -44,14 +43,14 @@ persona: "Product Designers & Developers"
 | `/status` | Public | System health status | **Revalidate: 60s**<br>Component status (API, SMTP), Incident history |
 | `/unauthorized` | Public | Access Denied page | Generic "403 Forbidden" message, "Back to Dashboard" button |
 
-### 2.2 [Core Application Routes](routes/core-app-structure)
+### 2.2 [Core Application Routes](/docs/design/routes/core-app-structure)
 
 | Path | Access | Purpose | Key Data/Components & Strategy |
 |---|---|---|---|
 | `/dashboard` | **All Authenticated** | Primary landing. Renders role-specific view. | **Server Component + Suspense**<br>**Super Admin**: Executive Pulse (Metrics)<br>**Admin**: Ops Watchtower (Queues/Logs)<br>**Tenant**: Campaign Stats, Recent Activity<br>**Agency**: Client Health Matrix |
 | `/dashboard/onboarding` | **Tenant** | Initial setup for new tenants. | **Wizard State (Client)**<br>1. Workspace Creation<br>2. Domain Setup<br>3. Email Account Setup<br>4. Payment/Plan |
 
-### 2.3 [Workspace: Campaigns](routes/workspace-campaigns)
+### 2.3 [Workspace: Campaigns](/docs/design/routes/workspace-campaigns)
 
 Scoped to a specific workspace (`/dashboard/workspaces/[slug]/...`).
 
@@ -64,7 +63,7 @@ Scoped to a specific workspace (`/dashboard/workspaces/[slug]/...`).
 | `/dashboard/workspaces/[slug]/campaigns/[id]/edit` | Agency, Tenant | Campaign Editor. | **Local State + Auto-Save**<br>Sequence builder, Subject line |
 | `/dashboard/workspaces/[slug]/campaigns/[id]/settings` | Agency, Tenant | Campaign configuration. | Schedule settings, Audience selection, Sender profile |
 
-### 2.4 [Workspace: Templates](routes/workspace-templates)
+### 2.4 [Workspace: Templates](/docs/design/routes/workspace-templates)
 
 Scoped to a specific workspace.
 
@@ -75,7 +74,7 @@ Scoped to a specific workspace.
 | `/dashboard/workspaces/[slug]/templates/[id]` | Agency, Tenant | Preview template details. | Template preview (Iframe), Usage stats |
 | `/dashboard/workspaces/[slug]/templates/[id]/edit` | Agency, Tenant | Edit template content. | **Auto-Save**<br>Editor, Tag management, Version history |
 
-### 2.5 [Workspace: Domains & Infrastructure](routes/workspace-domains)
+### 2.5 [Workspace: Domains & Infrastructure](/docs/design/routes/workspace-domains)
 
 Scoped to a specific workspace.
 
@@ -89,7 +88,7 @@ Scoped to a specific workspace.
 | `/dashboard/workspaces/[slug]/domains/[id]/emails/[emailId]` | Agency, Tenant | Email account status. | Health score, Sending limits, Daily stats |
 | `/dashboard/workspaces/[slug]/domains/[id]/emails/[emailId]/warmup` | Agency, Tenant | Warmup management. | Warmup progress graph, Ramp-up settings |
 
-### 2.6 [Tenant: Leads (Global)](routes/tenant-leads)
+### 2.6 [Tenant: Leads (Global)](/docs/design/routes/tenant-leads)
 
 Global to the tenant account.
 
@@ -101,7 +100,7 @@ Global to the tenant account.
 | `/dashboard/leads/segments` | Agency, Tenant | Manage lead segments. | List of segments, Segment builder (Rules engine) |
 | `/dashboard/leads/lists` | Agency, Tenant | Static lists management. | List of static lists, "Create List" |
 
-### 2.7 [Tenant: Unified Inbox](routes/tenant-inbox)
+### 2.7 [Tenant: Unified Inbox](/docs/design/routes/tenant-inbox)
 
 Aggregated from all workspaces.
 
@@ -111,7 +110,7 @@ Aggregated from all workspaces.
 | `/dashboard/inbox/[threadId]` | Agency, Tenant | Thread View. | **Optimistic UI**<br>Message history, Reply editor |
 | `/dashboard/inbox/[threadId]/reply` | Agency, Tenant | Send a reply. | Reply editor, Template selector, Attachment uploader |
 
-### 2.8 [Workspace Management](routes/workspace-management)
+### 2.8 [Workspace Management](/docs/design/routes/workspace-management)
 
 Management of the workspaces themselves.
 
@@ -121,7 +120,7 @@ Management of the workspaces themselves.
 | `/dashboard/workspaces/new` | Agency, Tenant | Create a new workspace. | Workspace details form, Plan selection |
 | `/dashboard/workspaces/[slug]/settings` | Agency, Tenant | Workspace configuration. | Branding settings, Billing settings, Member management |
 
-### 2.9 [Settings & Organization](routes/settings)
+### 2.9 [Settings & Organization](/docs/design/routes/settings)
 
 | Path | Access | Purpose | Key Data/Components & Strategy |
 |---|---|---|---|
@@ -131,7 +130,7 @@ Management of the workspaces themselves.
 | `/dashboard/settings/billing` | Admin, Owner | Subscription and payment. | Current plan, Invoices, Payment methods |
 | `/dashboard/settings/infrastructure` | Admin, Owner | Dedicated Infrastructure management. | **Snapshot on Load**<br>SMTP Server Health, IP Reputation |
 
-### 2.10 [Platform Administration (Internal Only)](routes/platform-admin)
+### 2.10 [Platform Administration (Internal Only)](/docs/design/routes/platform-admin)
 
 | Path | Access | Purpose | Key Data/Components & Strategy |
 |---|---|---|---|

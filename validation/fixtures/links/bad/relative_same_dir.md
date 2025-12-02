@@ -1,10 +1,3 @@
----
-title: "Relative Same Directory Links"
-description: "Links using ./ prefix to files in same directory"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Relative Same Directory Links
 

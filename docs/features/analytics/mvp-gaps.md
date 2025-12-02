@@ -389,10 +389,11 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 ### Implementation Review
 
-- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Complete gap analysis with post-MVP features
+- **[Analytics & Reporting Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Complete gap analysis with post-MVP features
 
 ---
 
 **Document Owner:** Product Team
 **Last Review:** November 26, 2025
 **Next Review:** After MVP implementation
+

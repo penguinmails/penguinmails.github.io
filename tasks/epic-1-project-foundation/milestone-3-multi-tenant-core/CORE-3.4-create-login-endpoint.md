@@ -1,10 +1,3 @@
----
-title: "CORE-3.4: Create Public API Endpoint for User Login"
-description: "Documentation for CORE-3.4: Create Public API Endpoint for User Login - CORE 3.4 Create Login Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-3.4: Create Public API Endpoint for User Login
 
