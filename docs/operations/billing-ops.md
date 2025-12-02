@@ -10,7 +10,7 @@ category: "Operations"
 
 # Billing Operations Guide
 
-**For Operations & Support Staff**
+## For Operations & Support Staff
 
 This guide outlines the standard procedures for handling billing inquiries, payment issues, and subscription management.
 
