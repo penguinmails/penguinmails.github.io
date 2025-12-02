@@ -254,7 +254,7 @@ interface TenantSecretsSummary {
 
 ### Planning
 
-- [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Comprehensive Vault architecture
+- [Vault Integration Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Comprehensive Vault architecture
 
 - [Infrastructure Management Feature](/docs/features/infrastructure/vault-ssh-management) - SSH key management feature
 
@@ -262,9 +262,9 @@ interface TenantSecretsSummary {
 
 ### Implementation
 
-- [Task 11.4 - VPS SSH Key Management](../../.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)
+- [Task 11.4 - VPS SSH Key Management](/docs/.kiro/specs/feature-completeness-review/tasks#114-implement-vps-ssh-key-management-with-vault)
 
-- [Task 11.5 - SMTP Credentials Vault Storage](../../.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)
+- [Task 11.5 - SMTP Credentials Vault Storage](/docs/.kiro/specs/feature-completeness-review/tasks#115-implement-smtp-credentials-vault-storage)
 
 - [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)
 
@@ -284,3 +284,5 @@ interface TenantSecretsSummary {
 **Estimated Effort:** Medium (5-7 days)
 
 *SSH access management is critical for tenant VPS access and infrastructure troubleshooting. Vault integration ensures secure credential storage and rotation.*
+
+

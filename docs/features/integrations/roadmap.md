@@ -62,7 +62,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Route Specification](/docs/design/routes/api-key-management)
 
-- [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
+- [Vault Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)
 
 ---
 
@@ -162,7 +162,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Feature Documentation](/docs/features/integrations/api-access)
 
-- [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md)
+- [Integration Strategy](/docs/.kiro/specs/feature-completeness-review/findings/integration-strategy)
 
 ---
 
@@ -640,7 +640,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - ✅ Monitoring and alerting configuration
 
-**Reference**: [Vault Integration Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
+**Reference**: [Vault Integration Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)
 
 ---
 
@@ -790,11 +790,11 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [API Documentation](/docs/implementation-technical/api/README) - Technical API specifications
 
-- [Vault Architecture](../../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Secrets management architecture
+- [Vault Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Secrets management architecture
 
 **Business Strategy**:
 
-- [Integration Strategy](../../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md) - API-first approach rationale
+- [Integration Strategy](/docs/.kiro/specs/feature-completeness-review/findings/integration-strategy) - API-first approach rationale
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Integration timeline and priorities
 
@@ -805,3 +805,5 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 **Last Updated**: 2025-11-26
 **Review Cycle**: Monthly roadmap updates, quarterly strategic review
 **Status**: Active planning and implementation
+
+

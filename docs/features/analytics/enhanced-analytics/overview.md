@@ -33,7 +33,7 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Required Before Starting
 
-- 🔄 **[Analytics](./analytics.md)** - Basic analytics must be complete (currently 60%)
+- 🔄 **[Analytics](/docs\features\analytics\enhanced-analytics/)** - Basic analytics must be complete (currently 60%)
 
 - ⏳ Historical data - Need 30+ days of campaign data
 
@@ -41,9 +41,9 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Blocks (Features Waiting on This)
 
-- **[Workflow Automation](./workflow-automation.md)** - Needs analytics for triggers
+- **[Workflow Automation](/docs\features\analytics\enhanced-analytics/)** - Needs analytics for triggers
 
-- **[CRM Integration](./crm-integration.md)** - Enhanced metrics for CRM sync
+- **[CRM Integration](/docs\features\analytics\enhanced-analytics/)** - Enhanced metrics for CRM sync
 
 ## Milestones
 
@@ -93,7 +93,7 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Feature Specification
 
-- **[Enhanced Analytics Feature](../../features/enhanced-analytics.md)** - Requirements (to be created)
+- **[Enhanced Analytics Feature](/docs/features/enhanced-analytics)** - Requirements (to be created)
 
 ### Technical Specifications
 
@@ -996,3 +996,6 @@ The system will automatically generate recommendations:
 **Last Updated**: 2025-11-24
 **Owner**: Data Engineering + Backend Team
 **Status**: Planned - Q1 2026 enhancement to basic analytics
+
+
+

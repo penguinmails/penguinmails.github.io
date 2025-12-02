@@ -184,7 +184,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 - **[Marketing Journey](/docs/user-journeys/marketing-journey)** - Data-driven campaign management
 
-- **[Business Owner Journeys](/user-journeys/external-users/business-owner-journeys.md)** - ROI tracking and performance monitoring
+- **[Business Owner Journeys](/user-journeys/external-users/business-owner-journeys)** - ROI tracking and performance monitoring
 
 ### Technical Architecture
 
@@ -205,3 +205,4 @@ Advanced analytics with AI-powered insights and predictive modeling.
 ---
 
 [← Back to All Features](/docs/features/README)
+

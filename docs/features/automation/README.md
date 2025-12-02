@@ -252,7 +252,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Marketing Team Journey](/docs/user-journeys/marketing-journey) - Automation in marketing workflow
 
-- [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys.md) - Multi-client automation
+- [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys) - Multi-client automation
 
 ### Technical Implementation
 
@@ -283,3 +283,4 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 ---
 
 [← Back to All Features](/docs/features/README)
+

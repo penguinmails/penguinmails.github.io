@@ -139,15 +139,15 @@ Ensure regulatory compliance and manage opt-outs, unsubscribes, and data privacy
 
 ### ✅ Available Now (MVP Ready)
 
-- **[Security Features](./security-features.md)** - SSL/TLS, SPF/DKIM/DMARC, encryption, access control, audit logging
+- **[Security Features](/docs\features\compliance/)** - SSL/TLS, SPF/DKIM/DMARC, encryption, access control, audit logging
 
-- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection compliance tools and data subject rights
+- **[GDPR Compliance](/docs\features\compliance/)** - EU data protection compliance tools and data subject rights
 
-- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law compliance and best practices
+- **[CAN-SPAM Compliance](/docs\features\compliance/)** - US email law compliance and best practices
 
-- **[Unsubscribe Management](./unsubscribe-management.md)** - Automated unsubscribe handling and suppression lists
+- **[Unsubscribe Management](/docs\features\compliance/)** - Automated unsubscribe handling and suppression lists
 
-- **[Data Privacy](./data-privacy.md)** - Privacy policy enforcement and data handling practices
+- **[Data Privacy](/docs\features\compliance/)** - Privacy policy enforcement and data handling practices
 
 ### 🔜 Post-MVP Enhancements (Q1-Q2 2026)
 
@@ -193,7 +193,7 @@ Ensure regulatory compliance and manage opt-outs, unsubscribes, and data privacy
 
 For detailed implementation timeline and planned enhancements:
 
-**[📋 Compliance & Security Roadmap](./roadmap.md)** - Complete timeline with quarterly milestones
+**[📋 Compliance & Security Roadmap](/docs\features\compliance/)** - Complete timeline with quarterly milestones
 
 ## Security Architecture
 
@@ -259,37 +259,37 @@ HashiCorp Vault integration is a foundational security dependency for:
 
 ### Enterprise Security
 
-- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Comprehensive security architecture
+- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Comprehensive security architecture
 
-- **[Security & Privacy Integration](../../compliance-security/enterprise/security-privacy-integration.md)** - Holistic data protection
+- **[Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration)** - Holistic data protection
 
-- **[Traffic Security Matrix](../../compliance-security/enterprise/traffic-security-matrix.md)** - Network traffic security
+- **[Traffic Security Matrix](/docs/compliance-security/enterprise/traffic-security-matrix)** - Network traffic security
 
 ### International Compliance
 
-- **[European Compliance Overview](../../compliance-security/international/european-compliance-overview.md)** - EU-specific requirements
+- **[European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)** - EU-specific requirements
 
-- **[ePrivacy Compliance](../../compliance-security/international/eprivacy-compliance.md)** - Cookie consent and tracking
+- **[ePrivacy Compliance](/docs/compliance-security/international/eprivacy-compliance)** - Cookie consent and tracking
 
-- **[National Laws Compliance](../../compliance-security/international/national-laws-compliance.md)** - Country-specific email laws
+- **[National Laws Compliance](/docs/compliance-security/international/national-laws-compliance)** - Country-specific email laws
 
 ### Authentication & Security Routes
 
-- **[Public & Authentication Routes](../../design/routes/public-auth.md)** - Login, register, password reset, email verification
+- **[Public & Authentication Routes](/docs/design/routes/public-auth)** - Login, register, password reset, email verification
 
-- **[Settings Routes](../../design/routes/settings.md)** - User profile with 2FA, organization settings, team management
+- **[Settings Routes](/docs/design/routes/settings)** - User profile with 2FA, organization settings, team management
 
-- **[API Key Management Routes](../../design/routes/api-key-management.md)** - Tenant API key creation and management with Vault
+- **[API Key Management Routes](/docs/design/routes/api-key-management)** - Tenant API key creation and management with Vault
 
-- **[Infrastructure SSH Access Routes](../../design/routes/infrastructure-ssh-access.md)** - SSH credential management
+- **[Infrastructure SSH Access Routes](/docs/design/routes/infrastructure-ssh-access)** - SSH credential management
 
 ### Technical Implementation
 
-- **[Audit Logging](../../implementation-technical/security/audit-logging.md)** - Audit log implementation
+- **[Audit Logging](/docs/implementation-technical/security/audit-logging)** - Audit log implementation
 
-- **[Data Encryption](../../implementation-technical/security/data-encryption.md)** - Encryption technical details
+- **[Data Encryption](/docs/implementation-technical/security/data-encryption)** - Encryption technical details
 
-- **[Access Controls](../../implementation-technical/security/access-controls.md)** - RBAC implementation
+- **[Access Controls](/docs/implementation-technical/security/access-controls)** - RBAC implementation
 
 ### Feature Reviews
 
@@ -304,3 +304,6 @@ HashiCorp Vault integration is a foundational security dependency for:
 **Last Updated:** November 26, 2025
 **Next Review:** Monthly
 **Owner:** Security & Compliance Team
+
+
+

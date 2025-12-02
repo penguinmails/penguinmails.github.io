@@ -313,9 +313,9 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ### User Journeys
 
-- **[Startup Founder Onboarding](/user-journeys/external-users/business-owner-journeys.md)** - Includes plan selection
+- **[Startup Founder Onboarding](/user-journeys/external-users/business-owner-journeys)** - Includes plan selection
 
-- **[Agency Owner Onboarding](/user-journeys/external-users/agency-owner-journeys.md)** - Multi-workspace billing
+- **[Agency Owner Onboarding](/user-journeys/external-users/agency-owner-journeys)** - Multi-workspace billing
 
 ### Business Documentation
 
@@ -330,3 +330,4 @@ Handle all payment-related operations including subscriptions, billing, and invo
 ---
 
 [← Back to All Features](/docs/features/README)
+

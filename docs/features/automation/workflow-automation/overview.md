@@ -103,23 +103,23 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 
 ### Feature Specification
 
-- **[Workflow Automation Feature](../../features/workflow-automation.md)** - Requirements (to be created)
+- **[Workflow Automation Feature](/docs/features/workflow-automation)** - Requirements (to be created)
 
 ### Technical Specifications
 
-- **[Frontend: Workflow Builder](../../design/routes/dashboard-automation.md)** - UI specification
+- **[Frontend: Workflow Builder](/docs/design/routes/dashboard-automation)** - UI specification
 
-- **[API: Automation Engine](../../implementation-technical/api/tenant-api/automation.md)** - Backend API
+- **[API: Automation Engine](/docs/implementation-technical/api/tenant-api/automation)** - Backend API
 
-- **[Rule Engine Architecture](../../technical/architecture/rule-engine.md)** - System design
+- **[Rule Engine Architecture](/docs/technical/architecture/rule-engine)** - System design
 
 ### User Workflows
 
-- **[Marketing Journey](../../user-journeys/marketing-journey.md)** - Automation in marketing workflow
+- **[Marketing Journey](/user-journeys/marketing-journey)** - Automation in marketing workflow
 
 ### Implementation Tasks
 
-- **[Workflow Automation Epic](../../../tasks/automation/)** - Development tasks
+- **[Workflow Automation Epic](/docs/tasks/automation/)** - Development tasks
 
 ## Technical Details
 
@@ -364,3 +364,6 @@ Trigger: Link clicked (pricing page)
 **Last Updated**: 2025-11-24
 **Owner**: Full-Stack + AI Engineering Teams
 **Status**: Planned - Q2-Q3 2026 advanced feature
+
+
+

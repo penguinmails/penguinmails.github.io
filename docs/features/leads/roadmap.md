@@ -507,7 +507,7 @@ Research spike to evaluate ROI and customer demand for third-party integrations 
 
 - **Customer Value**: Technical customers can build their own CRM integrations using API + webhooks (available now)
 
-**Cross-Reference**: See [Integrations Review](../../../.kiro/specs/feature-completeness-review/findings/integrations.md) for detailed CRM integration architecture and strategy.
+**Cross-Reference**: See [Integrations Review](/docs/.kiro/specs/feature-completeness-review/findings/integrations) for detailed CRM integration architecture and strategy.
 
 ---
 
@@ -622,7 +622,7 @@ Research spike to explore advanced lead analytics capabilities after 12+ months 
 
 **Rationale**: CRM integration is complex and time-consuming. API-first approach enables customers to build custom integrations immediately. Only invest in vendor-specific integrations if proven customer demand after 6-12 months.
 
-**Cross-Reference**: See [Integrations Review](../../../.kiro/specs/feature-completeness-review/findings/integrations.md) for detailed CRM integration architecture and strategy.
+**Cross-Reference**: See [Integrations Review](/docs/.kiro/specs/feature-completeness-review/findings/integrations) for detailed CRM integration architecture and strategy.
 
 ---
 
@@ -798,14 +798,16 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Related Review Findings
 
-- [Integrations Review](../../../.kiro/specs/feature-completeness-review/findings/integrations.md) - CRM integration strategy
+- [Integrations Review](/docs/.kiro/specs/feature-completeness-review/findings/integrations) - CRM integration strategy
 
-- [Email Operations Review](../../../.kiro/specs/feature-completeness-review/findings/email-operations.md) - Campaign targeting
+- [Email Operations Review](/docs/.kiro/specs/feature-completeness-review/findings/email-operations) - Campaign targeting
 
-- [Analytics Review](../../../.kiro/specs/feature-completeness-review/findings/analytics-reporting.md) - Contact engagement tracking
+- [Analytics Review](/docs/.kiro/specs/feature-completeness-review/findings/analytics-reporting) - Contact engagement tracking
 
 ---
 
 **Last Updated**: November 27, 2025
 **Review Cycle**: Monthly
 **Next Review**: After MVP implementation completion
+
+

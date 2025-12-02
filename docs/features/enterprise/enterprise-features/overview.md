@@ -115,7 +115,7 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Feature Specification
 
-- **[Enterprise Features Spec](../../features/enterprise-features.md)** - Requirements (to be created)
+- **[Enterprise Features Spec](/docs/features/enterprise-features)** - Requirements (to be created)
 
 ### Technical Specifications
 
@@ -410,3 +410,5 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 **Last Updated**: 2025-11-24
 **Owner**: Security + Compliance + Engineering Teams
 **Status**: Planned - Q4 2026-Q1 2027 enterprise readiness
+
+

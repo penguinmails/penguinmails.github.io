@@ -91,7 +91,7 @@ This document outlines the development roadmap for inbox management features, in
 
 - `tasks/spike-stalwart-database-schema-investigation.md`
 
-- [Unified Inbox Overview](./unified-inbox/overview.md)
+- [Unified Inbox Overview](/docs\features\inbox/)
 
 ---
 
@@ -620,7 +620,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ### Feature Documentation
 
-- [Unified Inbox Overview](./unified-inbox/overview.md)
+- [Unified Inbox Overview](/docs\features\inbox/)
 
 - [Inbox Rotation Overview](/docs/features/inbox/inbox-rotation/overview)
 
@@ -655,3 +655,4 @@ This document outlines the development roadmap for inbox management features, in
 **Last Updated**: November 26, 2025
 **Status**: Roadmap defined, awaiting Stalwart spike completion
 **Next Review**: After Stalwart spike (Q4 2025)
+

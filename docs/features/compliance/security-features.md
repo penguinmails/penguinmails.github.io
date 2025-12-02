@@ -921,24 +921,26 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Infrastructure
 
-- **[Email Infrastructure Setup](../infrastructure/email-infrastructure-setup.md)** - SPF, DKIM, DMARC setup
+- **[Email Infrastructure Setup](/docs/infrastructure/email-infrastructure-setup)** - SPF, DKIM, DMARC setup
 
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation
+- **[Multi-Tenant Architecture](/docs/infrastructure/multi-tenant-architecture)** - Tenant isolation
 
 ### Enterprise
 
-- **[User Management](../enterprise/user-management.md)** - Authentication and authorization
+- **[User Management](/docs/enterprise/user-management)** - Authentication and authorization
 
-- **[Enterprise Features](../enterprise/enterprise-features/overview.md)** - Advanced security (SSO, MFA)
+- **[Enterprise Features](/docs/enterprise/enterprise-features/overview)** - Advanced security (SSO, MFA)
 
 ### Technical
 
-- **[Architecture Overview](../../technical/architecture/overview.md)** - Security architecture
+- **[Architecture Overview](/docs/technical/architecture/overview)** - Security architecture
 
-- **[Development Standards](../../implementation-technical/development-guidelines/development-standards.md)** - Secure coding practices
+- **[Development Standards](/docs/implementation-technical/development-guidelines/development-standards)** - Secure coding practices
 
 ---
 
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Security Team
+
+

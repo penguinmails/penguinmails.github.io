@@ -138,7 +138,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 **Documentation**:
 
-- [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)
+- [Vault Integration Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)
 
 - [VPS SSH Key Management](/docs/features/infrastructure/vault-ssh-management)
 
@@ -174,7 +174,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - **Zapier** - 5,000+ app connections (Q2 2026)
 
-**Detailed Analysis**: [Third-Party Dependencies Report](../../.kiro/specs/feature-completeness-review/findings/integrations-third-party-dependencies.md)
+**Detailed Analysis**: [Third-Party Dependencies Report](/docs/.kiro/specs/feature-completeness-review/findings/integrations-third-party-dependencies)
 
 ## Cross-References
 
@@ -192,11 +192,11 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - [API Documentation](/docs/implementation-technical/api/README) - Technical API specifications
 
-- [Vault Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Secrets management architecture
+- [Vault Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Secrets management architecture
 
 **Business Strategy**:
 
-- [Integration Strategy](../../.kiro/specs/feature-completeness-review/findings/integration-strategy.md) - API-first approach rationale
+- [Integration Strategy](/docs/.kiro/specs/feature-completeness-review/findings/integration-strategy) - API-first approach rationale
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Integration timeline and priorities
 
@@ -205,3 +205,5 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 ---
 
 [← Back to All Features](/docs/features/README)
+
+

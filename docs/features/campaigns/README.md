@@ -144,7 +144,7 @@ Split testing engine for optimizing subject lines, content, and send times.
 
 **Status**: MVP in Q1 2026, Advanced features Q2 2026 | **Priority**: High
 
-#### [Personalization System](./personalization-system.md)
+#### [Personalization System](/docs\features\campaigns/)
 
 Advanced personalization engine for dynamic content insertion.
 
@@ -272,7 +272,7 @@ Advanced personalization engine for dynamic content insertion.
 
 - Advanced Analytics and Attribution (8-10 weeks)
 
-See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
+See [Campaign Roadmap](/docs\features\campaigns/) for complete timeline and feature details.
 
 ---
 
@@ -311,3 +311,4 @@ See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 ---
 
 [← Back to All Features](/docs/features/README)
+

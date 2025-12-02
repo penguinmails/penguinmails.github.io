@@ -913,7 +913,7 @@ Response:
 
 - **[Team Management Roadmap](/docs/features/enterprise/team-roadmap)** - Detailed team & workspace management timeline
 
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation and workspace architecture
+- **[Multi-Tenant Architecture](/docs/infrastructure/multi-tenant-architecture)** - Tenant isolation and workspace architecture
 
 - **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security overview
 
@@ -948,3 +948,5 @@ Response:
 **Next Milestone:** Q1 2026 - Complete MVP authentication features
 
 *Secure user authentication is the foundation of platform security. NileDB provides enterprise-grade authentication with tenant isolation built-in. For MVP and near-term releases, we continue using NileDB's email/password authentication. OAuth 2.0 and SSO (SAML, OpenID Connect) are planned for Q2-Q3 2026 to meet enterprise customer requirements.*
+
+

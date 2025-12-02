@@ -1451,27 +1451,27 @@ Q2 2027: FedRAMP, Advanced DLP
 
 ### Current Compliance
 
-- **[Security Features](./security-features.md)** - Current security infrastructure
+- **[Security Features](/docs\features\compliance/)** - Current security infrastructure
 
-- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection
+- **[GDPR Compliance](/docs\features\compliance/)** - EU data protection
 
-- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law
+- **[CAN-SPAM Compliance](/docs\features\compliance/)** - US email law
 
-- **[Data Privacy](./data-privacy.md)** - Privacy controls
+- **[Data Privacy](/docs\features\compliance/)** - Privacy controls
 
-- **[Unsubscribe Management](./unsubscribe-management.md)** - Opt-out handling
+- **[Unsubscribe Management](/docs\features\compliance/)** - Opt-out handling
 
 ### Architecture
 
-- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security architecture
+- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security architecture
 
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation
+- **[Multi-Tenant Architecture](/docs/infrastructure/multi-tenant-architecture)** - Tenant isolation
 
 ### Business
 
-- **[Product Roadmap](../../roadmap/product-roadmap.md)** - Overall product timeline
+- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Overall product timeline
 
-- **[Technical Roadmap](../../roadmap/technical-roadmap.md)** - Technical dependencies
+- **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Technical dependencies
 
 ---
 
@@ -1516,3 +1516,6 @@ Q2 2027: FedRAMP, Advanced DLP
 **Owner:** Security & Compliance Team
 
 *This roadmap is subject to change based on customer needs, regulatory requirements, and business priorities.*
+
+
+
