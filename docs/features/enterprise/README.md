@@ -1,4 +1,4 @@
-# 🏢 Enterprise Features
+﻿# ðŸ¢ Enterprise Features
 
 Enterprise-grade security, compliance, and access control.
 
@@ -11,7 +11,7 @@ Enterprise-grade security, compliance, and access control.
 
 ## Features in This Category
 
-### ✅ Available Now
+### âœ… Available Now
 
 - **[User Management](/docs/features/enterprise/user-management)** - Authentication, profiles, and team management
 
@@ -27,7 +27,7 @@ Enterprise-grade security, compliance, and access control.
 
   - Staff authentication system with secondary authorization layer
 
-### ⏳ In Development (Q1 2026)
+### â³ In Development (Q1 2026)
 
 #### Critical MVP Features (P0 - Production Blockers)
 
@@ -49,7 +49,7 @@ Enterprise-grade security, compliance, and access control.
 
 - **Staff Authentication System Documentation** - Document staff authentication flow, permission system, role management workflows (2-3 days)
 
-### 🔜 Coming Soon (Post-MVP)
+### ðŸ”œ Coming Soon (Post-MVP)
 
 #### Q1 2026 or Later
 
@@ -157,5 +157,6 @@ See **[Enterprise Features Roadmap](/docs/features/enterprise/roadmap)** for det
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+
 

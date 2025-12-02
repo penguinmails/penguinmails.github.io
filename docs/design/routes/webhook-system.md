@@ -1,4 +1,4 @@
----
+﻿---
 title: "Webhook System Routes"
 description: "Route specifications for custom webhook configuration and event management"
 last_modified_date: "2025-11-25"
@@ -7,7 +7,6 @@ persona: "Developers"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 ---
-
 
 # Webhook System Routes
 
@@ -137,7 +136,7 @@ Each card displays:
 
 **Info Banner**:
 
-"Looking for ESP webhooks (Postmark, Mailgun)? [Configure ESP webhooks →](/dashboard/settings/integrations/esp/webhooks)"
+"Looking for ESP webhooks (Postmark, Mailgun)? [Configure ESP webhooks â†’](/dashboard/settings/integrations/esp/webhooks)"
 
 **User Journey Context**: Regular monitoring (daily/weekly) to ensure webhook health.
 
@@ -181,9 +180,9 @@ Each card displays:
 
 - **Radio Buttons**:
 
-  - ○ Active (Start receiving events immediately)
+  - â—‹ Active (Start receiving events immediately)
 
-  - ○ Paused (Create but don't send events yet)
+  - â—‹ Paused (Create but don't send events yet)
 
 #### Step 2: Event Selection
 
@@ -191,35 +190,35 @@ Each card displays:
 
 **Email Events**:
 
-- ☑ **email.sent** - Email queued for sending
+- â˜‘ **email.sent** - Email queued for sending
 
-- ☑ **email.delivered** - Email successfully delivered
+- â˜‘ **email.delivered** - Email successfully delivered
 
-- ☑ **email.opened** - Recipient opened email
+- â˜‘ **email.opened** - Recipient opened email
 
-- ☑ **email.clicked** - Recipient clicked link
+- â˜‘ **email.clicked** - Recipient clicked link
 
-- ☑ **email.bounced** - Email bounced (hard or soft)
+- â˜‘ **email.bounced** - Email bounced (hard or soft)
 
-- ☐ **email.spam_reported** - Marked as spam
+- â˜ **email.spam_reported** - Marked as spam
 
-- ☐ **email.unsubscribed** - Recipient unsubscribed
+- â˜ **email.unsubscribed** - Recipient unsubscribed
 
 **Campaign Events**:
 
-- ☐ **campaign.launched** - Campaign started sending
+- â˜ **campaign.launched** - Campaign started sending
 
-- ☐ **campaign.completed** - Campaign finished
+- â˜ **campaign.completed** - Campaign finished
 
-- ☐ **campaign.paused** - Campaign paused by user
+- â˜ **campaign.paused** - Campaign paused by user
 
 **Contact Events**:
 
-- ☐ **contact.created** - New contact added
+- â˜ **contact.created** - New contact added
 
-- ☐ **contact.updated** - Contact information updated
+- â˜ **contact.updated** - Contact information updated
 
-- ☐ **contact.unsubscribed** - Contact unsubscribed from all
+- â˜ **contact.unsubscribed** - Contact unsubscribed from all
 
 **Quick Select Buttons**:
 
@@ -231,7 +230,7 @@ Each card displays:
 
 **Event Preview**:
 
-"You've selected 5 events. [View sample payloads →](/docs/design/routes/#event-samples)"
+"You've selected 5 events. [View sample payloads â†’](/docs/design/routes/#event-samples)"
 
 #### Step 3: Event Filters (Optional)
 
@@ -263,7 +262,6 @@ Each card displays:
   "campaign.type": "promotional",
   "email.opened_count": { "$gte": 3 }
 }
-
 
 ```
 
@@ -312,23 +310,21 @@ Each card displays:
 ```text
 Sending test event to https://yourapp.com/webhooks...
 
-✓ Test successful!
+âœ“ Test successful!
   Status: 200 OK
   Response Time: 142ms
   Response Body: "OK"
-
 
 ```
 
 **Or Error**:
 
 ```text
-✗ Test failed
+âœ— Test failed
   Status: 500 Internal Server Error
   Error: Connection timeout
 
 [Retry Test] [Save Anyway]
-
 
 ```
 
@@ -344,7 +340,7 @@ Sending test event to https://yourapp.com/webhooks...
 
 - **Secret Key**: `whsec_def456...` (shown once)
 
-- **Warning**: "⚠️ Save this secret key. You won't be able to see it again."
+- **Warning**: "âš ï¸ Save this secret key. You won't be able to see it again."
 
 **Copy Buttons**:
 
@@ -354,11 +350,11 @@ Sending test event to https://yourapp.com/webhooks...
 
 **Next Steps**:
 
-- [View Webhook Details →](/dashboard/settings/webhooks/wh_abc123)
+- [View Webhook Details â†’](/dashboard/settings/webhooks/wh_abc123)
 
-- [View Code Examples →](/docs/design/routes/#code-examples)
+- [View Code Examples â†’](/docs/design/routes/#code-examples)
 
-- [Test Webhook →](/dashboard/settings/webhooks/wh_abc123/test)
+- [Test Webhook â†’](/dashboard/settings/webhooks/wh_abc123/test)
 
 **User Journey Context**: One-time setup per integration, occasional updates for new event types.
 
@@ -422,7 +418,6 @@ Sending test event to https://yourapp.com/webhooks...
   "contact.tags": ["vip"]
 }
 
-
 ```
 
 **"Edit Filters" Link**: Navigate to edit page.
@@ -471,9 +466,9 @@ Sending test event to https://yourapp.com/webhooks...
 
 | Timestamp | Event Type | Status | Response Time | Actions |
 |-----------|------------|--------|---------------|---------|
-| 2:34 PM | email.opened | ✓ 200 OK | 142ms | View |
-| 2:33 PM | email.clicked | ✓ 200 OK | 156ms | View |
-| 2:30 PM | email.bounced | ✗ 500 Error | 5000ms | Retry |
+| 2:34 PM | email.opened | âœ“ 200 OK | 142ms | View |
+| 2:33 PM | email.clicked | âœ“ 200 OK | 156ms | View |
+| 2:30 PM | email.bounced | âœ— 500 Error | 5000ms | Retry |
 
 **Filters**:
 
@@ -541,9 +536,9 @@ Sending test event to https://yourapp.com/webhooks...
 
 | Timestamp | Event ID | Event Type | Status | Response Time | Attempt | Actions |
 |-----------|----------|------------|--------|---------------|---------|---------|
-| Nov 25, 2:34 PM | evt_abc123 | email.opened | ✓ 200 OK | 142ms | 1/1 | View |
-| Nov 25, 2:33 PM | evt_def456 | email.clicked | ✓ 200 OK | 156ms | 1/1 | View |
-| Nov 25, 2:30 PM | evt_ghi789 | email.bounced | ✗ 500 Error | 5000ms | 2/5 | Retry, View |
+| Nov 25, 2:34 PM | evt_abc123 | email.opened | âœ“ 200 OK | 142ms | 1/1 | View |
+| Nov 25, 2:33 PM | evt_def456 | email.clicked | âœ“ 200 OK | 156ms | 1/1 | View |
+| Nov 25, 2:30 PM | evt_ghi789 | email.bounced | âœ— 500 Error | 5000ms | 2/5 | Retry, View |
 
 **Expandable Rows**:
 
@@ -570,7 +565,6 @@ X-PenguinMails-Delivery-ID: del_xyz789
   }
 }
 
-
 ```
 
 **Response Details**:
@@ -581,7 +575,6 @@ Content-Type: text/plain
 Response Time: 142ms
 
 OK
-
 
 ```
 
@@ -646,9 +639,9 @@ OK
 
 - **Radio Buttons**:
 
-  - ○ Use Sample Data (default)
+  - â—‹ Use Sample Data (default)
 
-  - ○ Use Real Data from Campaign/Contact
+  - â—‹ Use Real Data from Campaign/Contact
 
 **If "Use Real Data" selected**:
 
@@ -682,7 +675,6 @@ OK
   }
 }
 
-
 ```
 
 **"Edit Payload" Button**: Opens JSON editor for custom payload.
@@ -695,8 +687,7 @@ OK
 
 ```text
 Sending test event to https://yourapp.com/webhooks...
-⏳ Waiting for response...
-
+â³ Waiting for response...
 
 ```
 
@@ -705,7 +696,7 @@ Sending test event to https://yourapp.com/webhooks...
 **Success**:
 
 ```text
-✓ Test successful!
+âœ“ Test successful!
 
 Request:
   POST https://yourapp.com/webhooks/penguinmails
@@ -718,29 +709,24 @@ Response:
 
 [View Full Request] [View Full Response]
 
-
 ```
 
 **Failure**:
 
 ```text
-✗ Test failed
+âœ— Test failed
 
 Error: Connection timeout after 5000ms
 
 Possible causes:
 
-
 - Endpoint is unreachable
 
-
 - Firewall blocking requests
-
 
 - Server not responding
 
 [Retry Test] [Edit Webhook] [View Troubleshooting Guide]
-
 
 ```
 
@@ -777,7 +763,6 @@ app.post('/webhooks/penguinmails', (req, res) => {
   res.status(200).send('OK');
 });
 
-
 ```
 
 **TypeScript/Node.js**:
@@ -813,7 +798,6 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
   console.log('Event:', req.body.type);
   return res.status(200).send('OK');
 });
-
 
 ```
 
@@ -884,7 +868,6 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
   }
 }
 
-
 ```
 
 **Example Payload**:
@@ -913,7 +896,6 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
     }
   }
 }
-
 
 ```
 
@@ -1004,7 +986,7 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 
 - **Rate Limit Exceeded**: Show "Too many webhook deliveries. Upgrade plan for higher limits."
 
-- **Webhook Auto-Paused**: Email notification + banner: "Webhook paused after 100 consecutive failures. [View details →]"
+- **Webhook Auto-Paused**: Email notification + banner: "Webhook paused after 100 consecutive failures. [View details â†’]"
 
 - **Duplicate Events**: Implement idempotency keys to prevent duplicate processing.
 
@@ -1077,4 +1059,5 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 **Target Release:** Q1 2026
 
 *Webhook system routes provide comprehensive tools for developers to receive real-time event notifications with secure delivery, retry logic, and detailed monitoring.*
+
 

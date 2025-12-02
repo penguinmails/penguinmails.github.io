@@ -1,4 +1,4 @@
----
+﻿---
 title: "Multi-Tenant Architecture"
 description: "Multi-tenant platform architecture and tenant isolation in PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Developers, System Architects"
 status: "ACTIVE"
 category: "Infrastructure"
 ---
-
 
 # Multi-Tenant Architecture
 
@@ -25,15 +24,15 @@ PenguinMails is built on a **multi-tenant architecture** powered by NileDB, prov
 
 **Benefits:**
 
-- 🏢 **Complete Isolation** - Tenant data is fully separated
+- ðŸ¢ **Complete Isolation** - Tenant data is fully separated
 
-- 🚀 **Scalability** - Add unlimited tenants without infrastructure changes
+- ðŸš€ **Scalability** - Add unlimited tenants without infrastructure changes
 
-- 💰 **Cost Efficiency** - Shared infrastructure reduces costs
+- ðŸ’° **Cost Efficiency** - Shared infrastructure reduces costs
 
-- 🔒 **Security** - Database-level tenant isolation
+- ðŸ”’ **Security** - Database-level tenant isolation
 
-- ⚡ **Performance** - Per-tenant query optimization
+- âš¡ **Performance** - Per-tenant query optimization
 
 ---
 
@@ -43,19 +42,18 @@ PenguinMails is built on a **multi-tenant architecture** powered by NileDB, prov
 
 ```text
 Platform (PenguinMails)
-  ├── Tenant (Company/Organization)
-  │   ├── Users (Team Members)
-  │   ├── Workspaces (Projects/Clients)
-  │   ├── Subscription (Billing)
-  │   └── Settings (Company-wide)
-  │       ├── Workspace 1
-  │       │   ├── Campaigns
-  │       │   ├── Domains
-  │       │   ├── Templates
-  │       │   └── Contacts
-  │       └── Workspace 2
-  │           └── ...
-
+  â”œâ”€â”€ Tenant (Company/Organization)
+  â”‚   â”œâ”€â”€ Users (Team Members)
+  â”‚   â”œâ”€â”€ Workspaces (Projects/Clients)
+  â”‚   â”œâ”€â”€ Subscription (Billing)
+  â”‚   â””â”€â”€ Settings (Company-wide)
+  â”‚       â”œâ”€â”€ Workspace 1
+  â”‚       â”‚   â”œâ”€â”€ Campaigns
+  â”‚       â”‚   â”œâ”€â”€ Domains
+  â”‚       â”‚   â”œâ”€â”€ Templates
+  â”‚       â”‚   â””â”€â”€ Contacts
+  â”‚       â””â”€â”€ Workspace 2
+  â”‚           â””â”€â”€ ...
 
 ```
 
@@ -133,7 +131,6 @@ CREATE TABLE campaigns (
 SELECT * FROM campaigns WHERE name = 'Welcome Series';
 -- Becomes: SELECT * FROM campaigns WHERE tenant_id = {current_tenant} AND name = 'Welcome Series';
 
-
 ```
 
 **Automatic Tenant Context:**
@@ -171,7 +168,6 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
   "workspaces": ["ws_1", "ws_2"]
 }
 
-
 ```
 
 ---
@@ -180,27 +176,27 @@ SELECT * FROM campaigns WHERE name = 'Welcome Series';
 
 **What's Isolated:**
 
-- ✅ **Campaigns** - Tenant A cannot see Tenant B's campaigns
+- âœ… **Campaigns** - Tenant A cannot see Tenant B's campaigns
 
-- ✅ **Contacts** - Complete contact list separation
+- âœ… **Contacts** - Complete contact list separation
 
-- ✅ **Templates** - Email templates not shared
+- âœ… **Templates** - Email templates not shared
 
-- ✅ **Analytics** - Performance data isolated
+- âœ… **Analytics** - Performance data isolated
 
-- ✅ **Workspaces** - Workspace data tenant-scoped
+- âœ… **Workspaces** - Workspace data tenant-scoped
 
-- ✅ **Domains** - Domain configurations isolated
+- âœ… **Domains** - Domain configurations isolated
 
-- ✅ **Users** - User accounts tenant-specific
+- âœ… **Users** - User accounts tenant-specific
 
 **What's Shared (Platform-Level):**
 
-- ⚙️ **Application Code** - Same codebase for all tenants
+- âš™ï¸ **Application Code** - Same codebase for all tenants
 
-- ⚙️ **Infrastructure** - Shared servers (with isolation)
+- âš™ï¸ **Infrastructure** - Shared servers (with isolation)
 
-- ⚙️ **Global Suppression** - Platform-wide spam/abuse blocks
+- âš™ï¸ **Global Suppression** - Platform-wide spam/abuse blocks
 
 ---
 
@@ -235,7 +231,6 @@ Response:
   "access_token": "eyJhbGc...",
   "onboarding_url": "/onboarding"
 }
-
 
 ```
 
@@ -282,7 +277,6 @@ CREATE TABLE workspace_members (
   PRIMARY KEY(workspace_id, user_id)
 );
 
-
 ```
 
 ### Tenant-Scoped Queries
@@ -318,7 +312,6 @@ async function createCampaign(req, campaignData) {
   return campaign;
 }
 
-
 ```
 
 ---
@@ -350,7 +343,6 @@ Response:
   ]
 }
 
-
 ```
 
 ### Workspace Access Control
@@ -366,7 +358,6 @@ Response:
 
 // User now has access to workspace
 // Can view/edit campaigns, contacts, templates in that workspace
-
 
 ```
 
@@ -422,21 +413,20 @@ Response:
 
 ```text
 User Request
-  ↓
+  â†“
 Extract JWT token
-  ↓
+  â†“
 Verify signature
-  ↓
+  â†“
 Extract tenant_id from token
-  ↓
+  â†“
 Validate user belongs to tenant
-  ↓
+  â†“
 Set tenant context for database
-  ↓
+  â†“
 Execute query (auto-filtered)
-  ↓
+  â†“
 Return results (tenant-scoped only)
-
 
 ```
 
@@ -470,7 +460,6 @@ Return results (tenant-scoped only)
     }
   }
 }
-
 
 ```
 
@@ -579,4 +568,5 @@ Return results (tenant-scoped only)
 **Isolation Level:** Database Row-Level Security (RLS)
 
 *Multi-tenancy is the foundation of PenguinMails' security and scalability. Complete tenant isolation ensures enterprise-grade data protection.*
+
 

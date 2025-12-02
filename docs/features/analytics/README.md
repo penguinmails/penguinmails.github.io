@@ -1,4 +1,4 @@
-# 📊 Analytics & Reporting
+﻿# ðŸ“Š Analytics & Reporting
 
 Platform-wide analytics, performance tracking, and data-driven insights (not campaign-specific).
 
@@ -8,29 +8,29 @@ Platform-wide analytics, performance tracking, and data-driven insights (not cam
 
 **What's Available Today**:
 
-- ✅ Real-time performance dashboards (campaign-level)
+- âœ… Real-time performance dashboards (campaign-level)
 
-- ✅ Deliverability metrics tracking (inbox placement, bounce rates)
+- âœ… Deliverability metrics tracking (inbox placement, bounce rates)
 
-- ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
+- âœ… Engagement tracking (opens, clicks - directional accuracy ~75%)
 
-- ✅ Manual reporting with CSV/Excel/PDF export
+- âœ… Manual reporting with CSV/Excel/PDF export
 
-- ✅ KPI framework with business metrics (MRR, CAC, LTV, NRR)
+- âœ… KPI framework with business metrics (MRR, CAC, LTV, NRR)
 
-- ✅ OLAP analytics systems for real-time data processing
+- âœ… OLAP analytics systems for real-time data processing
 
 **What's Missing (MVP)**:
 
-- ❌ Dedicated analytics dashboard route (`/dashboard/analytics`)
+- âŒ Dedicated analytics dashboard route (`/dashboard/analytics`)
 
-- ❌ Deliverability deep-dive with provider-specific insights
+- âŒ Deliverability deep-dive with provider-specific insights
 
-- ❌ Engagement heatmaps for send time optimization
+- âŒ Engagement heatmaps for send time optimization
 
-- ❌ Comparative analytics for campaign comparison
+- âŒ Comparative analytics for campaign comparison
 
-- ❌ Alert configuration UI for performance monitoring
+- âŒ Alert configuration UI for performance monitoring
 
 **Timeline**: MVP completion Q1 2026, Enhanced Analytics Q1 2026
 
@@ -38,7 +38,7 @@ Platform-wide analytics, performance tracking, and data-driven insights (not cam
 
 ## Features in This Category
 
-### ✅ Available Now
+### âœ… Available Now
 
 #### [Core Analytics](/docs/features/analytics/core-analytics/overview)
 
@@ -72,7 +72,7 @@ Essential performance tracking and reporting with directional insights.
 
 ---
 
-### ⏳ In Development
+### â³ In Development
 
 #### [Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)
 
@@ -104,7 +104,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-### 🔜 Coming Soon
+### ðŸ”œ Coming Soon
 
 #### Missing MVP Features (Q1 2026)
 
@@ -116,7 +116,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ## Priority P1 (MVP Important)
 
-- **Engagement Heatmaps** - Visual day-of-week × hour-of-day engagement patterns with optimal send time recommendations and timezone adjustment (4-6 days)
+- **Engagement Heatmaps** - Visual day-of-week Ã— hour-of-day engagement patterns with optimal send time recommendations and timezone adjustment (4-6 days)
 
 - **Comparative Analytics** - Side-by-side campaign comparison (2-5 campaigns), A/B test result analysis with statistical significance, and export capabilities (5-7 days)
 
@@ -196,5 +196,6 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+
 

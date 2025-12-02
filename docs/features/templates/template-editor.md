@@ -1,4 +1,4 @@
----
+﻿---
 title: "Template Editor"
 description: "Visual WYSIWYG email template editor with drag-and-drop, HTML/visual toggle, component library, and version control"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
 
-
   - templates/template-management
-
 
   - templates/template-variables
 
-
   - templates/template-library
-
 
   - campaigns/campaign-management/overview
 related_tasks:
 
-
   - epic-6-templates-content
 ---
-
 
 # Template Editor
 
@@ -61,18 +55,17 @@ The Template Editor is a comprehensive WYSIWYG (What You See Is What You Get) em
 
 ```text
 
-Templates → Create Template
+Templates â†’ Create Template
 
 Template Name: Welcome Email
 Description: New subscriber welcome message
 
 Starting Point:
-  ○ Blank Template
-  ● From Library (Recommended)
-  ○ Import HTML
+  â—‹ Blank Template
+  â— From Library (Recommended)
+  â—‹ Import HTML
 
-[Continue →]
-
+[Continue â†’]
 
 ```
 
@@ -87,17 +80,13 @@ Select a Template:
 
 Selected: Basic Email
 
-
   - Simple header with logo
 
-
   - Single column content area
-
 
   - Footer with social links
 
 [Use This Template]
-
 
 ```
 
@@ -105,30 +94,29 @@ Selected: Basic Email
 
 ```text
 
-┌─────────────────────────────────────────────────────────┐
-│ Template Editor: Welcome Email               [Save ▼]  │
-├─────────────────────────────────────────────────────────┤
-│ Components │ Preview                    │ Settings     │
-├───────────┼────────────────────────────┼──────────────┤
-│ Structure │                            │ Selected:    │
-│  □ Row    │    [LOGO]                  │ Text Block   │
-│  □ Column │                            │              │
-│           │    Welcome to PenguinMails │ Font: Inter  │
-│ Content   │                            │ Size: 24px   │
-│  📝 Text  │    We're excited to have   │ Color: #333  │
-│  🖼️ Image │    you on board!           │ Align: Left  │
-│  🔘 Button│                            │              │
-│  ➖ Divider│    [Get Started →]        │ [Link...]   │
-│           │                            │ [Style...]   │
-│ Layout    │    Follow us:              │              │
-│  📋 Header│    [f] [t] [in]           │              │
-│  🦶 Footer│                            │              │
-│  📱 Social│                            │              │
-└───────────┴────────────────────────────┴──────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Template Editor: Welcome Email               [Save â–¼]  â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ Components â”‚ Preview                    â”‚ Settings     â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ Structure â”‚                            â”‚ Selected:    â”‚
+â”‚  â–¡ Row    â”‚    [LOGO]                  â”‚ Text Block   â”‚
+â”‚  â–¡ Column â”‚                            â”‚              â”‚
+â”‚           â”‚    Welcome to PenguinMails â”‚ Font: Inter  â”‚
+â”‚ Content   â”‚                            â”‚ Size: 24px   â”‚
+â”‚  ðŸ“ Text  â”‚    We're excited to have   â”‚ Color: #333  â”‚
+â”‚  ðŸ–¼ï¸ Image â”‚    you on board!           â”‚ Align: Left  â”‚
+â”‚  ðŸ”˜ Buttonâ”‚                            â”‚              â”‚
+â”‚  âž– Dividerâ”‚    [Get Started â†’]        â”‚ [Link...]   â”‚
+â”‚           â”‚                            â”‚ [Style...]   â”‚
+â”‚ Layout    â”‚    Follow us:              â”‚              â”‚
+â”‚  ðŸ“‹ Headerâ”‚    [f] [t] [in]           â”‚              â”‚
+â”‚  ðŸ¦¶ Footerâ”‚                            â”‚              â”‚
+â”‚  ðŸ“± Socialâ”‚                            â”‚              â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Mode: [Visual] [HTML] [Preview]
-Device: [📱 Mobile] [📱 Tablet] [🖥️ Desktop]
-
+Device: [ðŸ“± Mobile] [ðŸ“± Tablet] [ðŸ–¥ï¸ Desktop]
 
 ```
 
@@ -136,17 +124,16 @@ Device: [📱 Mobile] [📱 Tablet] [🖥️ Desktop]
 
 ```text
 
-Drag "Button" from Components → Drop in Content Area
+Drag "Button" from Components â†’ Drop in Content Area
 
 Button Properties:
   Text: Get Started
   Link: https://app.penguinmails.com/onboarding
   Style: Primary (Blue)
   Alignment: Center
-  Full Width: ☐
+  Full Width: â˜
 
 [Apply]
-
 
 ```
 
@@ -168,8 +155,7 @@ Variables Available:
   {{email}}
   {{company}}
 
-[Insert Variable ▼]
-
+[Insert Variable â–¼]
 
 ```
 
@@ -177,26 +163,25 @@ Variables Available:
 
 ```text
 
-Switch to Mobile View: 📱
+Switch to Mobile View: ðŸ“±
 
 Preview:
-┌──────────┐
-│ [LOGO]   │
-│          │
-│ Welcome, │
-│ John!    │
-│          │
-│ We're    │
-│ excited..│
-│          │
-│[Get Start]│
-│          │
-│Follow us:│
-│ f t in  │
-└──────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ [LOGO]   â”‚
+â”‚          â”‚
+â”‚ Welcome, â”‚
+â”‚ John!    â”‚
+â”‚          â”‚
+â”‚ We're    â”‚
+â”‚ excited..â”‚
+â”‚          â”‚
+â”‚[Get Start]â”‚
+â”‚          â”‚
+â”‚Follow us:â”‚
+â”‚ f t in  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
-✓ Looks good on mobile
-
+âœ“ Looks good on mobile
 
 ```
 
@@ -204,17 +189,16 @@ Preview:
 
 ```text
 
-[Save ▼]
-  ● Save
-  ○ Save As...
-  ○ Save as Draft
+[Save â–¼]
+  â— Save
+  â—‹ Save As...
+  â—‹ Save as Draft
 
-✓ Template saved: "Welcome Email"
+âœ“ Template saved: "Welcome Email"
 Last saved: 2 seconds ago
 
 Actions:
   [Preview] [Test Send] [Use in Campaign]
-
 
 ```
 
@@ -229,14 +213,12 @@ Drag "Header" component to top:
 Header Settings:
   Logo: [Upload] (max 200kb)
 
-
     - Recommended: 600x200px
   Background Color: #ffffff
   Padding: 20px
   Alignment: Center
 
 [Apply]
-
 
 ```
 
@@ -247,20 +229,19 @@ Header Settings:
 Drag "Social" component:
 
 Social Media Links:
-  ☑ Facebook: https://facebook.com/yourpage
-  ☑ Twitter: https://twitter.com/yourhandle
-  ☑ LinkedIn: https://linkedin.com/company/yourcompany
-  ☐ Instagram
-  ☐ YouTube
+  â˜‘ Facebook: https://facebook.com/yourpage
+  â˜‘ Twitter: https://twitter.com/yourhandle
+  â˜‘ LinkedIn: https://linkedin.com/company/yourcompany
+  â˜ Instagram
+  â˜ YouTube
 
 Icon Style:
-  ● Round Color
-  ○ Square Color
-  ○ Round B&W
-  ○ Square B&W
+  â— Round Color
+  â—‹ Square Color
+  â—‹ Round B&W
+  â—‹ Square B&W
 
 [Apply]
-
 
 ```
 
@@ -271,9 +252,9 @@ Icon Style:
 Drag "Image" component:
 
 Image Source:
-  ○ Upload Image
-  ● Image URL
-  ○ From Asset Library
+  â—‹ Upload Image
+  â— Image URL
+  â—‹ From Asset Library
 
 URL: https://example.com/hero.jpg
 Alt Text: Product Hero Image
@@ -286,7 +267,6 @@ Link to:
   URL: https://example.com/product
 
 [Insert]
-
 
 ```
 
@@ -365,7 +345,6 @@ Link to:
 </body>
 </html>
 
-
 ```
 
 ### Component Library
@@ -377,12 +356,9 @@ row:
   description: "Container for columns"
   settings:
 
-
     - background_color
 
-
     - padding
-
 
     - full_width
 
@@ -390,21 +366,15 @@ column:
   description: "Content column (supports 1-4 columns)"
   layouts:
 
-
     - single: "100%"
-
 
     - two_equal: "50% | 50%"
 
-
     - two_third: "66% | 33%"
-
 
     - three_equal: "33% | 33% | 33%"
 
-
     - four_equal: "25% | 25% | 25% | 25%"
-
 
 ```
 
@@ -415,24 +385,17 @@ text_block:
   description: "Rich text editor"
   supports:
 
-
     - Bold, Italic, Underline
-
 
     - Headings (H1-H6)
 
-
     - Lists (ordered, unordered)
-
 
     - Links
 
-
     - Font family, size, color
 
-
     - Alignment
-
 
     - Line height, letter spacing
 
@@ -440,21 +403,15 @@ image:
   description: "Image with link"
   settings:
 
-
     - source: upload | url | asset_library
-
 
     - alt_text
 
-
     - width, height
-
 
     - alignment
 
-
     - link_url
-
 
     - border, padding
 
@@ -462,40 +419,28 @@ button:
   description: "Call-to-action button"
   styles:
 
-
     - primary: "#0066cc"
-
 
     - secondary: "#6c757d"
 
-
     - success: "#28a745"
 
-
     - danger: "#dc3545"
-
 
     - custom: "any color"
   settings:
 
-
     - text
-
 
     - link_url
 
-
     - style
-
 
     - alignment
 
-
     - full_width
 
-
     - border_radius
-
 
     - padding
 
@@ -503,18 +448,13 @@ divider:
   description: "Horizontal line separator"
   settings:
 
-
     - line_style: solid | dashed | dotted
-
 
     - color
 
-
     - thickness
 
-
     - width
-
 
     - padding
 
@@ -522,13 +462,11 @@ spacer:
   description: "Vertical spacing"
   settings:
 
-
     - height: 10px - 100px
 
 html:
   description: "Custom HTML block"
   usage: "For advanced users"
-
 
 ```
 
@@ -539,12 +477,9 @@ header:
   description: "Email header with logo and navigation"
   presets:
 
-
     - logo_centered
 
-
     - logo_left_menu_right
-
 
     - full_width_image
 
@@ -552,15 +487,11 @@ footer:
   description: "Email footer with legal and social"
   includes:
 
-
     - unsubscribe_link (required)
-
 
     - company_address
 
-
     - social_media_links
-
 
     - copyright_text
 
@@ -568,40 +499,28 @@ social:
   description: "Social media icons"
   platforms:
 
-
     - facebook
-
 
     - twitter
 
-
     - linkedin
-
 
     - instagram
 
-
     - youtube
-
 
     - tiktok
   styles:
 
-
     - round_color
-
 
     - square_color
 
-
     - round_bw
-
 
     - square_bw
 
-
     - icons_only
-
 
 ```
 
@@ -611,7 +530,7 @@ social:
 
 ```text
 
-Settings → Global Styles
+Settings â†’ Global Styles
 
 Typography:
   Default Font: Inter, Arial, Helvetica, sans-serif
@@ -636,7 +555,6 @@ Buttons:
   Padding: 15px 30px
   Font Weight: 600
 
-
 ```
 
 **Responsive Settings:**
@@ -652,8 +570,7 @@ mobile_overrides:
   padding: 20px  # Reduce padding
   button_full_width: true
   hide_images: optional
-  stack_columns: true  # 2-col → 1-col
-
+  stack_columns: true  # 2-col â†’ 1-col
 
 ```
 
@@ -666,26 +583,25 @@ mobile_overrides:
 Template: Welcome Email (v8)
 
 Version History:
-┌────────────────────────────────────────────────────┐
-│ v8 (Current) │ Nov 25, 2025 2:30 PM │ Sarah J.    │
-│ - Updated button style                             │
-│ [Viewing] [Restore] [Compare]                      │
-├────────────────────────────────────────────────────┤
-│ v7           │ Nov 24, 2025 4:15 PM │ Sarah J.    │
-│ - Added social media links                         │
-│ [View] [Restore] [Compare to v8]                   │
-├────────────────────────────────────────────────────┤
-│ v6           │ Nov 23, 2025 11:20 AM │ Michael C. │
-│ - Changed header background color                  │
-│ [View] [Restore] [Compare]                         │
-├────────────────────────────────────────────────────┤
-│ v5           │ Nov 22, 2025 3:45 PM │ Sarah J.    │
-│ - Initial draft                                    │
-│ [View] [Restore]                                   │
-└────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ v8 (Current) â”‚ Nov 25, 2025 2:30 PM â”‚ Sarah J.    â”‚
+â”‚ - Updated button style                             â”‚
+â”‚ [Viewing] [Restore] [Compare]                      â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ v7           â”‚ Nov 24, 2025 4:15 PM â”‚ Sarah J.    â”‚
+â”‚ - Added social media links                         â”‚
+â”‚ [View] [Restore] [Compare to v8]                   â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ v6           â”‚ Nov 23, 2025 11:20 AM â”‚ Michael C. â”‚
+â”‚ - Changed header background color                  â”‚
+â”‚ [View] [Restore] [Compare]                         â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ v5           â”‚ Nov 22, 2025 3:45 PM â”‚ Sarah J.    â”‚
+â”‚ - Initial draft                                    â”‚
+â”‚ [View] [Restore]                                   â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
-Auto-save: ✓ Enabled (every 30 seconds)
-
+Auto-save: âœ“ Enabled (every 30 seconds)
 
 ```
 
@@ -693,29 +609,25 @@ Auto-save: ✓ Enabled (every 30 seconds)
 
 ```text
 
-Version Comparison: v7 → v8
+Version Comparison: v7 â†’ v8
 
 Changes:
 
+  - Button style: Secondary â†’ Primary
 
-  - Button style: Secondary → Primary
+  - Button color: #6c757d â†’ #0066cc
 
-
-  - Button color: #6c757d → #0066cc
-
-
-  - Button text: "Learn More" → "Get Started"
+  - Button text: "Learn More" â†’ "Get Started"
 
 Side-by-Side View:
-┌──────────────┬──────────────┐
-│ v7           │ v8 (Current) │
-├──────────────┼──────────────┤
-│ [Learn More ▫]│ [Get Started]│
-│  (Gray)      │  (Blue)      │
-└──────────────┴──────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ v7           â”‚ v8 (Current) â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ [Learn More â–«]â”‚ [Get Started]â”‚
+â”‚  (Gray)      â”‚  (Blue)      â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 [Restore v7] [Keep v8] [Merge Changes]
-
 
 ```
 
@@ -741,15 +653,14 @@ Test Email:
   [Send Test Email]
 
 Email Client Preview:
-  ☑ Gmail (Desktop)
-  ☑ Gmail (Mobile)
-  ☑ Outlook (Desktop)
-  ☑ Outlook (Mobile)
-  ☑ Apple Mail
-  ☑ Yahoo Mail
+  â˜‘ Gmail (Desktop)
+  â˜‘ Gmail (Mobile)
+  â˜‘ Outlook (Desktop)
+  â˜‘ Outlook (Mobile)
+  â˜‘ Apple Mail
+  â˜‘ Yahoo Mail
 
   [Generate Previews] (uses Litmus/Email on Acid API)
-
 
 ```
 
@@ -759,50 +670,37 @@ Email Client Preview:
 
 Template Validation
 
-✓ Passed:
-
+âœ“ Passed:
 
   - Valid HTML structure
 
-
   - Mobile responsive
-
 
   - Unsubscribe link present
 
-
   - Alt text on images
-
 
   - No broken links
 
-
   - File size < 100kb
 
-⚠ Warnings:
-
+âš  Warnings:
 
   - Some email clients may not support web fonts
 
-
   - Image "hero.jpg" is 150kb (recommended < 100kb)
 
-✗ Errors:
-
+âœ— Errors:
 
   - None
 
-Spam Score: 2.1 / 10 (✓ Good)
-
+Spam Score: 2.1 / 10 (âœ“ Good)
 
   - Subject line length OK
 
-
   - No spammy words detected
 
-
   - Image-to-text ratio OK
-
 
 ```
 
@@ -812,23 +710,22 @@ Spam Score: 2.1 / 10 (✓ Good)
 
 ```text
 
-Template Editor → Comments
+Template Editor â†’ Comments
 
-💬 Sarah Johnson (2 hours ago)
+ðŸ’¬ Sarah Johnson (2 hours ago)
    "Can we make the button bigger?"
    On: Button Component
 
-   ↳ Michael Chen (1 hour ago)
+   â†³ Michael Chen (1 hour ago)
      "Increased padding to 20px 40px"
      [Mark Resolved]
 
-💬 Emily Davis (3 days ago)
+ðŸ’¬ Emily Davis (3 days ago)
    "Logo should be 250px wide for better visibility"
    On: Header Component
-   Status: ✓ Resolved
+   Status: âœ“ Resolved
 
 [Add Comment]
-
 
 ```
 
@@ -839,15 +736,14 @@ Template Editor → Comments
 Template Status: Pending Approval
 
 Workflow:
-  ✓ Created by: Sarah Johnson
-  ✓ Reviewed by: Michael Chen
-  ⏳ Awaiting approval: Emily Davis (Marketing Director)
+  âœ“ Created by: Sarah Johnson
+  âœ“ Reviewed by: Michael Chen
+  â³ Awaiting approval: Emily Davis (Marketing Director)
 
 Comments:
   Michael: "Looks good, approved for marketing review"
 
 [Request Changes] [Approve Template]
-
 
 ```
 
@@ -965,7 +861,6 @@ CREATE TABLE template_components (
 );
 
 CREATE INDEX idx_components_category ON template_components(category);
-
 
 ```
 
@@ -1210,7 +1105,6 @@ class TemplateEditorService {
   }
 }
 
-
 ```
 
 ### Auto-Save System
@@ -1257,7 +1151,6 @@ class AutoSaveManager {
     return this.unsavedChanges;
   }
 }
-
 
 ```
 
@@ -1317,7 +1210,6 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
   return res.json({ html });
 });
 
-
 ```
 
 ---
@@ -1338,4 +1230,5 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q2 2026
 **Owner:** Templates Team
+
 

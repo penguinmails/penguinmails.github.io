@@ -1,4 +1,4 @@
----
+﻿---
 title: "Reputation Monitoring"
 description: "Real-time sender reputation tracking, blacklist monitoring, domain health scores, deliverability alerts, and recovery recommendations"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
 
-
   - warmup/warmup-management
-
 
   - warmup/warmup-scheduling
 
-
   - domains/domain-management
-
 
   - compliance/security-features
 related_tasks:
 
-
   - epic-4-warmup-deliverability
 ---
-
 
 # Reputation Monitoring
 
@@ -63,29 +57,28 @@ Reputation Monitoring provides comprehensive visibility into your email sending 
 
 Reputation Dashboard
 
-Overall Health: 87/100 (Good) ✓
+Overall Health: 87/100 (Good) âœ“
 
 Domains (3):
-┌────────────────────────────────────────────────────┐
-│ penguinmails.com          92/100  ✓ Excellent     │
-│ marketing.penguinmails.com 85/100  ✓ Good         │
-│ sales.penguinmails.com    78/100  ⚠ Fair          │
-└────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ penguinmails.com          92/100  âœ“ Excellent     â”‚
+â”‚ marketing.penguinmails.com 85/100  âœ“ Good         â”‚
+â”‚ sales.penguinmails.com    78/100  âš  Fair          â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Email Accounts (5):
-  ✓ 4 Healthy
-  ⚠ 1 Warning
+  âœ“ 4 Healthy
+  âš  1 Warning
 
 Blacklists:
-  ✓ Clean (0/52 lists)
+  âœ“ Clean (0/52 lists)
   Last checked: 5 minutes ago
 
 Recent Alerts:
-  ⚠ sales.penguinmails.com: Bounce rate elevated (4.2%)
-  ℹ Warmup completed: support@penguinmails.com
+  âš  sales.penguinmails.com: Bounce rate elevated (4.2%)
+  â„¹ Warmup completed: support@penguinmails.com
 
 [View Details] [Run Full Scan] [Export Report]
-
 
 ```
 
@@ -94,34 +87,33 @@ Recent Alerts:
 ```text
 
 Domain: penguinmails.com
-Health Score: 92/100 (Excellent) ✓
+Health Score: 92/100 (Excellent) âœ“
 
 Reputation Metrics:
-  Sender Score: 95/100 ✓
-  Domain Authority: 88/100 ✓
-  IP Reputation: 90/100 ✓
+  Sender Score: 95/100 âœ“
+  Domain Authority: 88/100 âœ“
+  IP Reputation: 90/100 âœ“
 
 Authentication:
-  SPF: ✓ Pass
-  DKIM: ✓ Pass
-  DMARC: ✓ Pass (p=quarantine)
+  SPF: âœ“ Pass
+  DKIM: âœ“ Pass
+  DMARC: âœ“ Pass (p=quarantine)
 
 Deliverability:
-  Inbox Rate: 94% ✓
-  Spam Rate: 3% ✓
-  Bounce Rate: 1.8% ✓
+  Inbox Rate: 94% âœ“
+  Spam Rate: 3% âœ“
+  Bounce Rate: 1.8% âœ“
 
 Engagement:
   Open Rate: 28% (Industry avg: 21%)
   Click Rate: 4.2% (Industry avg: 2.8%)
 
 Blacklists:
-  ✓ Clean (0/52 lists)
+  âœ“ Clean (0/52 lists)
 
-Trend: ↗ Improving (+3 points this week)
+Trend: â†— Improving (+3 points this week)
 
 [View History] [Run Diagnostics] [Export Report]
-
 
 ```
 
@@ -133,33 +125,32 @@ Trend: ↗ Improving (+3 points this week)
 
 Blacklist Monitor
 
-Status: ✓ All Clear
+Status: âœ“ All Clear
 
 Checked Lists (52):
-  ✓ Spamhaus ZEN
-  ✓ Spamhaus DBL
-  ✓ Spamhaus PBL
-  ✓ Spamcop
-  ✓ SORBS
-  ✓ Barracuda
-  ✓ SURBL
-  ✓ URIBL
+  âœ“ Spamhaus ZEN
+  âœ“ Spamhaus DBL
+  âœ“ Spamhaus PBL
+  âœ“ Spamcop
+  âœ“ SORBS
+  âœ“ Barracuda
+  âœ“ SURBL
+  âœ“ URIBL
   ... and 44 more
 
 Last Scan: 5 minutes ago
 Next Scan: in 55 minutes
 
 Domains Monitored:
-  ✓ penguinmails.com
-  ✓ marketing.penguinmails.com
-  ✓ sales.penguinmails.com
+  âœ“ penguinmails.com
+  âœ“ marketing.penguinmails.com
+  âœ“ sales.penguinmails.com
 
 IPs Monitored:
-  ✓ 192.0.2.100 (Dedicated)
-  ✓ 192.0.2.101 (Dedicated)
+  âœ“ 192.0.2.100 (Dedicated)
+  âœ“ 192.0.2.101 (Dedicated)
 
 [Run Scan Now] [Configure Alerts]
-
 
 ```
 
@@ -167,7 +158,7 @@ IPs Monitored:
 
 ```text
 
-⚠ BLACKLIST ALERT
+âš  BLACKLIST ALERT
 
 Domain: sales.penguinmails.com
 Listed on: Spamcop
@@ -180,26 +171,21 @@ Details:
   Estimated Impact: Medium
 
 Immediate Actions Taken:
-  ✓ Paused sending from sales@penguinmails.com
-  ✓ Notified admin team
-  ✓ Created support ticket
+  âœ“ Paused sending from sales@penguinmails.com
+  âœ“ Notified admin team
+  âœ“ Created support ticket
 
 Recommended Actions:
 
-
   1. Review recent campaigns for spam triggers
-
 
   2. Check for compromised accounts
 
-
   3. Request delisting from Spamcop
-
 
   4. Implement stricter list hygiene
 
 [View Delisting Instructions] [Contact Support]
-
 
 ```
 
@@ -211,7 +197,7 @@ Recommended Actions:
 
 Active Alerts (2):
 
-⚠ High Bounce Rate
+âš  High Bounce Rate
   Domain: sales.penguinmails.com
   Current: 4.2% (Threshold: 3%)
   Detected: 1 hour ago
@@ -221,13 +207,12 @@ Active Alerts (2):
 
   [View Details] [Dismiss]
 
-ℹ Warmup Milestone
+â„¹ Warmup Milestone
   Account: support@penguinmails.com
   Status: Reached 50% of target volume
   Day: 21/42
 
   [View Progress]
-
 
 ```
 
@@ -240,27 +225,26 @@ Alert Settings
 Email Notifications:
   Send to: admin@penguinmails.com
 
-  ☑ Blacklist detections (Immediate)
-  ☑ High bounce rate (> 3%)
-  ☑ High spam rate (> 0.5%)
-  ☑ Low engagement (< 10% open rate)
-  ☑ Authentication failures
-  ☐ Daily summary reports
+  â˜‘ Blacklist detections (Immediate)
+  â˜‘ High bounce rate (> 3%)
+  â˜‘ High spam rate (> 0.5%)
+  â˜‘ Low engagement (< 10% open rate)
+  â˜‘ Authentication failures
+  â˜ Daily summary reports
 
 Slack Notifications:
   Webhook: https://hooks.slack.com/...
   Channel: #deliverability-alerts
 
-  ☑ Critical alerts only
-  ○ All alerts
+  â˜‘ Critical alerts only
+  â—‹ All alerts
 
 Auto-Actions:
-  ☑ Pause sending on blacklist detection
-  ☑ Pause sending on high bounce rate (> 5%)
-  ☑ Pause sending on spam complaints (> 0.1%)
+  â˜‘ Pause sending on blacklist detection
+  â˜‘ Pause sending on high bounce rate (> 5%)
+  â˜‘ Pause sending on spam complaints (> 0.1%)
 
 [Save Settings]
-
 
 ```
 
@@ -278,27 +262,26 @@ Sender Score: 95/100
 
 Components:
   Infrastructure (30 points):
-    SPF/DKIM/DMARC: 30/30 ✓
+    SPF/DKIM/DMARC: 30/30 âœ“
 
   Volume & Consistency (25 points):
-    Sending Pattern: 23/25 ✓
-    Volume Stability: 22/25 ✓
+    Sending Pattern: 23/25 âœ“
+    Volume Stability: 22/25 âœ“
 
   Engagement (25 points):
-    Open Rate: 20/25 ✓
-    Click Rate: 18/25 ✓
+    Open Rate: 20/25 âœ“
+    Click Rate: 18/25 âœ“
 
   Complaints (20 points):
-    Bounce Rate: 19/20 ✓
-    Spam Rate: 20/20 ✓
+    Bounce Rate: 19/20 âœ“
+    Spam Rate: 20/20 âœ“
 
 Compared to Industry:
   Your Score: 95/100
   Industry Avg: 72/100
   Top 10%: 88/100
 
-  You're in the top 5% ✓
-
+  You're in the top 5% âœ“
 
 ```
 
@@ -309,7 +292,7 @@ Compared to Industry:
 Reputation by Email Provider
 
 Gmail:
-  Reputation: Excellent ✓
+  Reputation: Excellent âœ“
   Inbox Rate: 96%
   Spam Rate: 2%
   Postmaster Tools: Connected
@@ -317,23 +300,22 @@ Gmail:
   IP Reputation: High
 
 Outlook/Microsoft:
-  Reputation: Good ✓
+  Reputation: Good âœ“
   Inbox Rate: 92%
   Spam Rate: 4%
   SNDS: Connected
   Junk Rate: Low
 
 Yahoo:
-  Reputation: Good ✓
+  Reputation: Good âœ“
   Inbox Rate: 90%
   Spam Rate: 5%
   Complaint Feedback Loop: Active
 
 Apple Mail:
-  Reputation: Excellent ✓
+  Reputation: Excellent âœ“
   Inbox Rate: 95%
   Estimated Spam Rate: 3%
-
 
 ```
 
@@ -346,26 +328,25 @@ Apple Mail:
 Blacklist Coverage (52 lists)
 
 IP-Based Lists (24):
-  ✓ Spamhaus ZEN
-  ✓ Spamhaus PBL
-  ✓ Spamcop
-  ✓ SORBS
-  ✓ Barracuda
+  âœ“ Spamhaus ZEN
+  âœ“ Spamhaus PBL
+  âœ“ Spamcop
+  âœ“ SORBS
+  âœ“ Barracuda
   ... and 19 more
 
 Domain-Based Lists (18):
-  ✓ Spamhaus DBL
-  ✓ SURBL
-  ✓ URIBL
-  ✓ Spamhaus DQS
+  âœ“ Spamhaus DBL
+  âœ“ SURBL
+  âœ“ URIBL
+  âœ“ Spamhaus DQS
   ... and 14 more
 
 Combined Lists (10):
-  ✓ Composite Blocking List (CBL)
-  ✓ PSBL
-  ✓ Invaluement
+  âœ“ Composite Blocking List (CBL)
+  âœ“ PSBL
+  âœ“ Invaluement
   ... and 7 more
-
 
 ```
 
@@ -381,49 +362,36 @@ Auto-Delist: 24 hours after last report
 
 Steps to Delist:
 
-
 1. Identify Root Cause
-   ☐ Review recent campaigns
-   ☐ Check for compromised accounts
-   ☐ Verify list quality
-
-
+   â˜ Review recent campaigns
+   â˜ Check for compromised accounts
+   â˜ Verify list quality
 
 2. Fix Issues
-   ☐ Remove problematic content
-   ☐ Clean email list
-   ☐ Secure compromised accounts
-
-
+   â˜ Remove problematic content
+   â˜ Clean email list
+   â˜ Secure compromised accounts
 
 3. Request Delisting
    URL: https://www.spamcop.net/bl.shtml
 
    Information Needed:
 
-
    - IP Address: 192.0.2.100
-
 
    - Listing ID: ABC123XYZ
 
-
    - Explanation of corrective actions
 
-
-
 4. Monitor Status
-   ☐ Check delisting status (every 4 hours)
-   ☐ Verify removal (may take 24-48 hours)
-
-
+   â˜ Check delisting status (every 4 hours)
+   â˜ Verify removal (may take 24-48 hours)
 
 5. Resume Sending
-   ☐ Gradually increase volume
-   ☐ Monitor reputation closely
+   â˜ Gradually increase volume
+   â˜ Monitor reputation closely
 
 [Copy Delisting Template] [Track Progress]
-
 
 ```
 
@@ -435,28 +403,27 @@ Steps to Delist:
 
 Domain Health: penguinmails.com (92/100)
 
-Authentication (25 points): 25/25 ✓
-  SPF: ✓ Pass (v=spf1 include:_spf.google.com ~all)
-  DKIM: ✓ Pass (2048-bit key)
-  DMARC: ✓ Pass (p=quarantine, pct=100)
-  BIMI: ✓ Configured
+Authentication (25 points): 25/25 âœ“
+  SPF: âœ“ Pass (v=spf1 include:_spf.google.com ~all)
+  DKIM: âœ“ Pass (2048-bit key)
+  DMARC: âœ“ Pass (p=quarantine, pct=100)
+  BIMI: âœ“ Configured
 
-Deliverability (30 points): 28/30 ✓
+Deliverability (30 points): 28/30 âœ“
   Inbox Rate: 94% (28/30)
-  Bounce Rate: 1.8% (✓)
-  Spam Rate: 3% (✓)
+  Bounce Rate: 1.8% (âœ“)
+  Spam Rate: 3% (âœ“)
 
-Engagement (25 points): 22/25 ✓
+Engagement (25 points): 22/25 âœ“
   Open Rate: 28% (18/25)
   Click Rate: 4.2% (4/25)
 
-Infrastructure (20 points): 17/20 ✓
-  DNS Configuration: ✓ Correct
-  SSL/TLS: ✓ Valid
-  Reverse DNS: ✓ Configured
-  Blacklists: ✓ Clean (20/20)
+Infrastructure (20 points): 17/20 âœ“
+  DNS Configuration: âœ“ Correct
+  SSL/TLS: âœ“ Valid
+  Reverse DNS: âœ“ Configured
+  Blacklists: âœ“ Clean (20/20)
   IP Reputation: 85/100 (-3 points)
-
 
 ```
 
@@ -467,27 +434,26 @@ Infrastructure (20 points): 17/20 ✓
 Reputation Trend: Last 30 Days
 
 Health Score:
-  Nov 1:  85 ████████████████░░░░
-  Nov 8:  87 █████████████████░░░
-  Nov 15: 89 ██████████████████░░
-  Nov 22: 91 ███████████████████░
-  Nov 25: 92 ███████████████████░
+  Nov 1:  85 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘
+  Nov 8:  87 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘
+  Nov 15: 89 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘
+  Nov 22: 91 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
+  Nov 25: 92 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
 
-  Trend: ↗ +7 points (30 days)
+  Trend: â†— +7 points (30 days)
 
 Inbox Rate:
-  Nov 1:  89% ██████████████████░░
-  Nov 8:  91% ███████████████████░
-  Nov 15: 92% ███████████████████░
-  Nov 22: 93% ███████████████████░
-  Nov 25: 94% ████████████████████
+  Nov 1:  89% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘
+  Nov 8:  91% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
+  Nov 15: 92% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
+  Nov 22: 93% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
+  Nov 25: 94% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
 
-  Trend: ↗ +5% (30 days)
+  Trend: â†— +5% (30 days)
 
 Engagement:
-  Open Rate: 24% → 28% (↗ +4%)
-  Click Rate: 3.8% → 4.2% (↗ +0.4%)
-
+  Open Rate: 24% â†’ 28% (â†— +4%)
+  Click Rate: 3.8% â†’ 4.2% (â†— +0.4%)
 
 ```
 
@@ -508,62 +474,48 @@ Recommended Actions:
 
 Priority 1: Immediate (Next 24 hours)
 
-
-  1. ☐ Pause all campaigns from this domain
+  1. â˜ Pause all campaigns from this domain
      Impact: Prevent further damage
      Effort: 5 minutes
 
-
-
-  2. ☐ Clean email list (remove hard bounces)
+  2. â˜ Clean email list (remove hard bounces)
      Impact: Reduce bounce rate by ~2%
      Effort: 30 minutes
 
-
-
-  3. ☐ Verify list source and acquisition method
+  3. â˜ Verify list source and acquisition method
      Impact: Identify root cause
      Effort: 1 hour
 
 Priority 2: Short-term (Next 7 days)
 
-
-  4. ☐ Implement double opt-in for new signups
+  4. â˜ Implement double opt-in for new signups
      Impact: Improve list quality long-term
      Effort: 2 hours
 
-
-
-  5. ☐ Re-engage inactive subscribers
+  5. â˜ Re-engage inactive subscribers
      Impact: Improve engagement metrics
      Effort: 4 hours
 
-
-
-  6. ☐ Reduce sending volume by 50%
+  6. â˜ Reduce sending volume by 50%
      Impact: Rebuild reputation gradually
      Effort: 15 minutes
 
 Priority 3: Long-term (Next 30 days)
 
-
-  7. ☐ Implement list hygiene automation
+  7. â˜ Implement list hygiene automation
      Impact: Maintain high list quality
      Effort: 8 hours
 
-
-
-  8. ☐ Set up engagement-based segmentation
+  8. â˜ Set up engagement-based segmentation
      Impact: Send only to engaged subscribers
      Effort: 4 hours
 
 Expected Outcome:
-  Week 1: Health score → 82/100
-  Week 2: Health score → 86/100
-  Week 4: Health score → 90/100
+  Week 1: Health score â†’ 82/100
+  Week 2: Health score â†’ 86/100
+  Week 4: Health score â†’ 90/100
 
 [Start Recovery Plan] [Customize Plan]
-
 
 ```
 
@@ -576,37 +528,36 @@ Auto-Remediation Rules
 Rule 1: High Bounce Rate
   Trigger: Bounce rate > 5%
   Actions:
-    ☑ Pause all sending
-    ☑ Send alert to admin
-    ☑ Create support ticket
-    ☑ Remove hard bounces from list
+    â˜‘ Pause all sending
+    â˜‘ Send alert to admin
+    â˜‘ Create support ticket
+    â˜‘ Remove hard bounces from list
 
 Rule 2: Blacklist Detection
   Trigger: Listed on any blacklist
   Actions:
-    ☑ Pause sending from affected domain/IP
-    ☑ Send immediate alert
-    ☑ Create delisting ticket
-    ☑ Notify deliverability team
+    â˜‘ Pause sending from affected domain/IP
+    â˜‘ Send immediate alert
+    â˜‘ Create delisting ticket
+    â˜‘ Notify deliverability team
 
 Rule 3: Spam Complaints
   Trigger: Spam rate > 0.1%
   Actions:
-    ☑ Pause campaign
-    ☑ Review content for spam triggers
-    ☑ Check list acquisition method
-    ☑ Send alert to sender
+    â˜‘ Pause campaign
+    â˜‘ Review content for spam triggers
+    â˜‘ Check list acquisition method
+    â˜‘ Send alert to sender
 
 Rule 4: Low Engagement
   Trigger: Open rate < 10% for 3 consecutive campaigns
   Actions:
-    ☐ Pause sending (optional)
-    ☑ Send warning to sender
-    ☑ Suggest list cleaning
-    ☑ Recommend re-engagement campaign
+    â˜ Pause sending (optional)
+    â˜‘ Send warning to sender
+    â˜‘ Suggest list cleaning
+    â˜‘ Recommend re-engagement campaign
 
 [Edit Rules] [Add Custom Rule]
-
 
 ```
 
@@ -619,37 +570,36 @@ Industry Benchmarks
 Your Performance vs Industry Average
 
 Inbox Rate:
-  You: 94% ████████████████████
-  Avg: 85% █████████████████░░░
-  Top: 97% ████████████████████
+  You: 94% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
+  Avg: 85% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘
+  Top: 97% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
 
-  You're 9% above average ✓
+  You're 9% above average âœ“
 
 Open Rate:
-  You: 28% ██████████████░░░░░░
-  Avg: 21% ███████████░░░░░░░░░
-  Top: 35% █████████████████░░░
+  You: 28% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘
+  Avg: 21% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Top: 35% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘
 
-  You're 7% above average ✓
+  You're 7% above average âœ“
 
 Click Rate:
-  You: 4.2% ████████░░░░░░░░░░░░
-  Avg: 2.8% ██████░░░░░░░░░░░░░░
-  Top: 6.5% █████████████░░░░░░░
+  You: 4.2% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Avg: 2.8% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Top: 6.5% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘
 
-  You're 1.4% above average ✓
+  You're 1.4% above average âœ“
 
 Bounce Rate:
-  You: 1.8% ████░░░░░░░░░░░░░░░░
-  Avg: 2.5% ██████░░░░░░░░░░░░░░
-  Top: 0.8% ██░░░░░░░░░░░░░░░░░░
+  You: 1.8% â–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Avg: 2.5% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Top: 0.8% â–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
 
-  You're 0.7% below average ✓
+  You're 0.7% below average âœ“
 
 Industry: SaaS
 Region: North America
 Company Size: 51-200 employees
-
 
 ```
 
@@ -785,7 +735,6 @@ CREATE TABLE reputation_history (
 );
 
 CREATE INDEX idx_reputation_history_domain ON reputation_history(domain_id, snapshot_date);
-
 
 ```
 
@@ -1059,7 +1008,6 @@ class ReputationMonitoringService {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -1104,7 +1052,6 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
     await service.checkReputationHealth(domain.id);
   }
 });
-
 
 ```
 
@@ -1156,7 +1103,6 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
   return res.json(alerts);
 });
 
-
 ```
 
 ---
@@ -1177,4 +1123,5 @@ app.get('/api/reputation/alerts', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q3 2026
 **Owner:** Deliverability Team
+
 

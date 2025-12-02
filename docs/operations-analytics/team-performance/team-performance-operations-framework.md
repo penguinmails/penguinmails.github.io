@@ -1,11 +1,10 @@
----
+﻿---
 title: "Team Performance & Operations Framework"
 description: "Comprehensive team performance, QA testing, and staff operations for enterprise-grade agile development, quality assurance, and operational excellence"
 last_modified_date: "2025-10-28"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Team Performance & Operations Framework
 
@@ -241,22 +240,17 @@ This framework provides a structured approach for conducting effective sprint re
 **Preconditions**: Clean database, valid email service
 **Steps**:
 
-
 1. Navigate to signup page
-
 
 2. Enter valid user details
 
-
 3. Submit registration form
-
 
 4. Check email verification
 **Expected Result**: User account created, verification email sent
 **Actual Result**: [Pass/Fail with details]
 **Environment**: [Browser, OS, Device]
 **Test Data**: [Sample user details]
-
 
 ```
 
@@ -312,7 +306,6 @@ describe('User Authentication', () => {
     await expect(page.locator('[data-testid="error-message"]')).toBeVisible();
   });
 });
-
 
 ```
 
@@ -395,18 +388,17 @@ describe('User Authentication', () => {
 #### **Current Design Implementation**
 
 ```markdown
-┌─────────────────────────────────────────────────────────────┐
-│                    STAFF OPERATIONS SYSTEM                  │
-├─────────────────────────────────────────────────────────────┤
-│  🟢 PRODUCTION READY          🔄 IN PROGRESS      📅 PLANNED │
-├─────────────────────────────────────────────────────────────┤
-│  • 4-Tier Staff Hierarchy    • Help Center Links   • Q4 2026 │
-│  • Role-Based Access Control • Email Support       • 2027    │
-│  • User Management           • Floating Button     • Full    │
-│  • Staff Member Management                    • Ticket     │
-│                                               • System     │
-└─────────────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                    STAFF OPERATIONS SYSTEM                  â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚  ðŸŸ¢ PRODUCTION READY          ðŸ”„ IN PROGRESS      ðŸ“… PLANNED â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚  â€¢ 4-Tier Staff Hierarchy    â€¢ Help Center Links   â€¢ Q4 2026 â”‚
+â”‚  â€¢ Role-Based Access Control â€¢ Email Support       â€¢ 2027    â”‚
+â”‚  â€¢ User Management           â€¢ Floating Button     â€¢ Full    â”‚
+â”‚  â€¢ Staff Member Management                    â€¢ Ticket     â”‚
+â”‚                                               â€¢ System     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -447,7 +439,6 @@ CREATE TABLE staff_role_permissions (
     permission_id INTEGER REFERENCES permissions(id),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-
 
 ```
 
@@ -539,7 +530,6 @@ async function checkStaffPermission(userId: string, permissionName: string) {
   ) || false;
 }
 
-
 ```
 
 ### **Help System Integration**
@@ -594,7 +584,6 @@ const helpLinks = [
   </DropdownMenuContent>
 </DropdownMenu>
 
-
 ```
 
 #### **Landing Page Support Button**
@@ -633,7 +622,6 @@ const SupportButton = () => {
     </div>
   );
 };
-
 
 ```
 
@@ -708,7 +696,6 @@ const supportTemplates = {
     `
   }
 };
-
 
 ```
 
@@ -862,14 +849,15 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
+- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** â†’ Quality assurance procedures
 
-- **[Sprint Retrospectives](/docs/operations-analytics/team-performance))** → Agile development practices
+- **[Sprint Retrospectives](/docs/operations-analytics/team-performance))** â†’ Agile development practices
 
-- **[Organization Analytics](/docs/operations-analytics/operations-management/README)** → Team and organization management
+- **[Organization Analytics](/docs/operations-analytics/operations-management/README)** â†’ Team and organization management
 
 ---
 
 **Keywords**: team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics
 ---
+
 

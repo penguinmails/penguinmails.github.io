@@ -1,4 +1,4 @@
----
+﻿---
 title: "Vault Disaster Recovery Procedures"
 description: "Comprehensive disaster recovery procedures for HashiCorp Vault including automated backups, VPS migration, secret recovery, and emergency response workflows"
 last_modified_date: "2025-11-26"
@@ -6,7 +6,6 @@ level: "3"
 persona: "Infrastructure Teams, Security Teams, Operations Teams"
 keywords: ["vault", "disaster recovery", "backup", "restore", "high availability", "failover", "incident response"]
 ---
-
 
 # Vault Disaster Recovery Procedures
 
@@ -78,15 +77,14 @@ This document ensures rapid recovery from any Vault failure scenario with minima
 ```text
 
 s3://penguinmails-vault-backups/
-├── daily/
-│   ├── 2025-11-26/vault-snapshot-20251126-020000.enc
-│   ├── 2025-11-25/vault-snapshot-20251125-020000.enc
-│   └── ...
-└── monthly/
-    ├── 2025-11/vault-snapshot-20251101-020000.enc
-    ├── 2025-10/vault-snapshot-20251001-020000.enc
-    └── ...
-
+â”œâ”€â”€ daily/
+â”‚   â”œâ”€â”€ 2025-11-26/vault-snapshot-20251126-020000.enc
+â”‚   â”œâ”€â”€ 2025-11-25/vault-snapshot-20251125-020000.enc
+â”‚   â””â”€â”€ ...
+â””â”€â”€ monthly/
+    â”œâ”€â”€ 2025-11/vault-snapshot-20251101-020000.enc
+    â”œâ”€â”€ 2025-10/vault-snapshot-20251001-020000.enc
+    â””â”€â”€ ...
 
 ```
 
@@ -117,7 +115,6 @@ sequenceDiagram
         BackupService->>Monitoring: Alert Admins
         BackupService->>Monitoring: Log Error Details
     end
-
 
 ```
 
@@ -240,7 +237,6 @@ async function encryptBackup(
   return Buffer.concat([iv, authTag, encrypted]);
 }
 
-
 ```
 
 ### Backup Retention Policy
@@ -292,7 +288,6 @@ async function cleanupOldBackups(): Promise<void> {
     }
   }
 }
-
 
 ```
 
@@ -354,7 +349,6 @@ async function testBackupRestoration(): Promise<void> {
   }
 }
 
-
 ```
 
 ## VPS Migration Workflow
@@ -387,7 +381,6 @@ sequenceDiagram
     Backend->>OldVPS: Destroy Instance
     Backend-->>Admin: Migration Complete
     Note over Admin,Backend: RTO: 1 hour, RPO: 0
-
 
 ```
 
@@ -520,7 +513,6 @@ async function migrateToNewVps(
   }
 }
 
-
 ```
 
 ### SMTP Credential Recovery
@@ -570,7 +562,6 @@ async function recoverSmtpCredentialsToNewVps(
     }
   });
 }
-
 
 ```
 
@@ -738,7 +729,6 @@ async function drillVaultFailure(): Promise<DrillResult> {
   };
 }
 
-
 ```
 
 ## Vault Restoration from Backup
@@ -761,16 +751,13 @@ async function drillVaultFailure(): Promise<DrillResult> {
 
 ```bash
 
-
 # Provision new server (if needed)
-
 
 # Install Vault
 
 wget https://releases.hashicorp.com/vault/1.15.0/vault_1.15.0_linux_amd64.zip
 unzip vault_1.15.0_linux_amd64.zip
 sudo mv vault /usr/local/bin/
-
 
 # Create Vault configuration
 
@@ -791,12 +778,10 @@ cluster_addr = "https://vault.penguinmails.com:8201"
 ui = true
 EOF
 
-
 # Start Vault service
 
 sudo systemctl enable vault
 sudo systemctl start vault
-
 
 ```
 
@@ -804,18 +789,15 @@ sudo systemctl start vault
 
 ```bash
 
-
 # Set backup date (or use latest)
 
 BACKUP_DATE=$(date +%Y-%m-%d)
-
 
 # Download encrypted backup from S3
 
 aws s3 cp \
   s3://penguinmails-vault-backups/daily/${BACKUP_DATE}/vault-snapshot-*.enc \
   /tmp/vault-backup.enc
-
 
 # Verify backup exists
 
@@ -826,19 +808,15 @@ fi
 
 echo "Backup downloaded: /tmp/vault-backup.enc"
 
-
 ```
 
 #### Step 3: Decrypt Backup
 
 ```bash
 
-
 # Decrypt backup with encryption key
 
-
 # (Encryption key should be stored securely, separate from backups)
-
 
 # Using OpenSSL
 
@@ -847,7 +825,6 @@ openssl enc -d -aes-256-gcm \
   -out /tmp/vault-backup.snap \
   -K ${BACKUP_ENCRYPTION_KEY} \
   -iv ${BACKUP_IV}
-
 
 # Verify decryption succeeded
 
@@ -858,42 +835,31 @@ fi
 
 echo "Backup decrypted: /tmp/vault-backup.snap"
 
-
 ```
 
 #### Step 4: Initialize Vault
 
 ```bash
 
-
 # Initialize Vault (if new server)
 
 vault operator init -key-shares=5 -key-threshold=3
 
-
 # IMPORTANT: Save unseal keys and root token securely!
-
 
 # Example output:
 
-
 # Unseal Key 1: abc123...
-
 
 # Unseal Key 2: def456...
 
-
 # Unseal Key 3: ghi789...
-
 
 # Unseal Key 4: jkl012...
 
-
 # Unseal Key 5: mno345...
 
-
 # Initial Root Token: s.xyz789...
-
 
 ```
 
@@ -901,21 +867,17 @@ vault operator init -key-shares=5 -key-threshold=3
 
 ```bash
 
-
 # Unseal Vault with 3 of 5 keys
 
 vault operator unseal <unseal-key-1>
 vault operator unseal <unseal-key-2>
 vault operator unseal <unseal-key-3>
 
-
 # Verify Vault is unsealed
 
 vault status
 
-
 # Output should show: Sealed: false
-
 
 ```
 
@@ -923,21 +885,17 @@ vault status
 
 ```bash
 
-
 # Login with root token
 
 vault login <root-token>
-
 
 # Restore snapshot
 
 vault operator raft snapshot restore /tmp/vault-backup.snap
 
-
 # Verify restoration
 
 vault status
-
 
 ```
 
@@ -945,18 +903,15 @@ vault status
 
 ```bash
 
-
 # Test secret retrieval
 
 vault kv get vps/test-tenant-id/admin_ssh
 vault kv get smtp/test-tenant-id/admin
 vault kv get api_keys/test-tenant-id/test-key-id
 
-
 # If secrets are accessible, restoration succeeded
 
 echo "Vault restoration completed successfully"
-
 
 ```
 
@@ -964,24 +919,19 @@ echo "Vault restoration completed successfully"
 
 ```bash
 
-
 # Update DNS to point to new Vault server
 
-
 # Update all services to use new Vault URL
-
 
 # Restart services to reconnect to Vault
 
 sudo systemctl restart penguinmails-backend
 sudo systemctl restart penguinmails-rotation-service
 
-
 # Verify services can access Vault
 
 curl -H "X-Vault-Token: ${VAULT_TOKEN}" \
   https://vault.penguinmails.com:8200/v1/sys/health
-
 
 ```
 
@@ -989,17 +939,14 @@ curl -H "X-Vault-Token: ${VAULT_TOKEN}" \
 
 ```bash
 
-
 # Delete local backup files
 
 rm /tmp/vault-backup.enc
 rm /tmp/vault-backup.snap
 
-
 # Log restoration event
 
 echo "Vault restored from backup: ${BACKUP_DATE}" >> /var/log/vault/restoration.log
-
 
 ```
 
@@ -1116,7 +1063,6 @@ async function decryptBackup(
   return decrypted;
 }
 
-
 ```
 
 ## High Availability Setup
@@ -1166,7 +1112,6 @@ graph TB
     style PG fill:#99ccff
     style S3 fill:#ff9999
 
-
 ```
 
 ### Cluster Configuration
@@ -1174,7 +1119,6 @@ graph TB
 **Vault Node Configuration:**
 
 ```hcl
-
 
 # /etc/vault/config.hcl (Node 1)
 
@@ -1191,7 +1135,6 @@ listener "tcp" {
 
 api_addr = "https://10.0.1.10:8200"
 cluster_addr = "https://10.0.1.10:8201"
-
 
 # Raft storage for HA
 
@@ -1212,13 +1155,11 @@ storage "raft" {
 
 ui = true
 
-
 ```
 
 **Load Balancer Configuration (HAProxy):**
 
 ```haproxy
-
 
 # /etc/haproxy/haproxy.cfg
 
@@ -1247,7 +1188,6 @@ backend vault_backend
     server vault-node-2 10.0.1.11:8200 check ssl verify none backup
     server vault-node-3 10.0.1.12:8200 check ssl verify none backup
 
-
 ```
 
 ### Automatic Failover
@@ -1272,7 +1212,6 @@ sequenceDiagram
     V2-->>LB: Return Secret
     LB-->>Client: Return Secret
     Note over Client,V3: Failover completed in < 30 seconds
-
 
 ```
 
@@ -1335,7 +1274,6 @@ async function monitorVaultClusterHealth(): Promise<void> {
     }
   }
 }
-
 
 ```
 
@@ -1505,7 +1443,6 @@ async function monitorVaultHealth(): Promise<VaultHealthStatus> {
   }
 }
 
-
 ```
 
 ### Alert Configuration
@@ -1583,7 +1520,6 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
   }
 }
 
-
 ```
 
 ### Grafana Dashboard
@@ -1634,33 +1570,23 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
 
 ```yaml
 
-
 # Vault metrics exposed at /v1/sys/metrics
-
 
 - vault_core_unsealed (gauge)
 
-
 - vault_core_leader (gauge)
-
 
 - vault_runtime_alloc_bytes (gauge)
 
-
 - vault_runtime_sys_bytes (gauge)
-
 
 - vault_core_handle_request_count (counter)
 
-
 - vault_core_handle_request_duration_seconds (histogram)
-
 
 - vault_replication_wal_last_wal (gauge)
 
-
 - vault_storage_backend_size_bytes (gauge)
-
 
 ```
 
@@ -1694,7 +1620,6 @@ sequenceDiagram
     Security->>Vault: Unseal with New Keys
     Note over Security,Tenants: RTO: 2-4 hours
 
-
 ```
 
 **Emergency Response Steps:**
@@ -1703,30 +1628,24 @@ sequenceDiagram
 
 ```bash
 
-
 # Seal Vault immediately to prevent further access
 
 vault operator seal
-
 
 # Verify Vault is sealed
 
 vault status
 
-
 # Output: Sealed: true
-
 
 # Disable all authentication methods temporarily
 
 vault auth disable approle
 vault auth disable jwt
 
-
 # Revoke all active tokens
 
 vault token revoke -mode=path auth/
-
 
 ```
 
@@ -1769,18 +1688,15 @@ async function assessVaultBreach(): Promise<BreachAssessment> {
   };
 }
 
-
 ```
 
 #### Step 3: Rotate Unseal Keys (15-30 minutes)
 
 ```bash
 
-
 # Generate new unseal keys
 
 vault operator rekey -init -key-shares=5 -key-threshold=3
-
 
 # Complete rekey process with existing unseal keys
 
@@ -1788,12 +1704,9 @@ vault operator rekey -target=recovery <old-unseal-key-1>
 vault operator rekey -target=recovery <old-unseal-key-2>
 vault operator rekey -target=recovery <old-unseal-key-3>
 
-
 # New unseal keys generated
 
-
 # IMPORTANT: Store new keys securely in separate locations
-
 
 ```
 
@@ -1859,7 +1772,6 @@ async function revokeAllApiKeys(
   });
 }
 
-
 ```
 
 #### Step 5: Notify Tenants (Immediate)
@@ -1880,20 +1792,15 @@ async function notifyTenantsOfBreach(
 
         As a precautionary measure, we have:
 
-
         - Rotated all SSH keys
 
-
         - Rotated all SMTP credentials
-
 
         - Revoked all API keys
 
         ACTION REQUIRED:
 
-
         - Regenerate your API keys in the dashboard
-
 
         - Update any applications using the old API keys
 
@@ -1907,13 +1814,11 @@ async function notifyTenantsOfBreach(
   }
 }
 
-
 ```
 
 #### Step 6: Unseal Vault with New Keys (30-60 minutes)
 
 ```bash
-
 
 # Unseal Vault with new unseal keys
 
@@ -1921,25 +1826,20 @@ vault operator unseal <new-unseal-key-1>
 vault operator unseal <new-unseal-key-2>
 vault operator unseal <new-unseal-key-3>
 
-
 # Verify Vault is unsealed
 
 vault status
 
-
 # Output: Sealed: false
-
 
 # Re-enable authentication methods
 
 vault auth enable approle
 vault auth enable jwt
 
-
 # Verify services can reconnect
 
 vault token lookup
-
 
 ```
 
@@ -1981,7 +1881,6 @@ async function conductPostIncidentReview(
 
   return report;
 }
-
 
 ```
 
@@ -2199,4 +2098,5 @@ async function conductPostIncidentReview(
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive disaster recovery procedures for HashiCorp Vault, ensuring rapid recovery from any failure scenario with minimal data loss and service disruption. All Vault-dependent features must reference this document for disaster recovery planning.*
+
 

@@ -1,9 +1,8 @@
----
+﻿---
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Marketing Quality Management: QA Rules and Automation
 
@@ -229,4 +228,5 @@ The QA rules defined in [`qa-rules`](/docs/business/marketing/qa-rules) are impl
 
 This quality management framework ensures consistent marketing quality and brand protection while working within realistic technical and resource constraints
 ---
+
 

@@ -1,11 +1,10 @@
----
+﻿---
 title: "OLAP Analytics Database Documentation"
 description: "OLAP Analytics Database Documentation - Overview and Navigation"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # OLAP Analytics Database Documentation
 
@@ -107,4 +106,5 @@ This OLAP analytics database integrates with:
 - Compliance frameworks for audit requirements
 
 For questions or support, contact the Engineering team.
+
 

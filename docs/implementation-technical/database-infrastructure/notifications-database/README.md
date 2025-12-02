@@ -1,11 +1,10 @@
----
+﻿---
 title: "Notifications Database Documentation"
 description: "Notifications Database Documentation - Overview and Navigation"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Notifications Database Documentation
 
@@ -99,4 +98,5 @@ This notifications database integrates with:
 - OLAP for optional aggregate reporting
 
 For questions or support, contact the Engineering team.
+
 

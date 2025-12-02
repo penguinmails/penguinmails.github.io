@@ -1,4 +1,4 @@
----
+﻿---
 title: "Template Variables"
 description: "Dynamic content insertion with merge tags, default values, conditional blocks, and personalization variables"
 level: "2"
@@ -7,19 +7,14 @@ roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
 
-
   - templates/template-editor
-
 
   - templates/template-management
 
-
   - campaigns/personalization-system
-
 
   - leads/leads-management
 related_tasks:
-
 
   - epic-6-templates-content
 ---
@@ -71,7 +66,6 @@ Your account email is: {{email}}
 Best regards,
 The {{workspace_name}} Team
 
-
 ```
 
 **Output Example:**
@@ -86,7 +80,6 @@ Your account email is: john@acme.com
 
 Best regards,
 The PenguinMails Team
-
 
 ```
 
@@ -119,7 +112,6 @@ Workspace:
   {{sender_name}}       # Sarah Johnson
   {{sender_email}}      # sarah@penguinmails.com
 
-
 ```
 
 ### Default Values
@@ -132,7 +124,6 @@ Hi {{first_name | default: "there"}},
 
 Welcome to {{company | default: "our platform"}}!
 
-
 ```
 
 **When Data Exists:**
@@ -141,7 +132,6 @@ Welcome to {{company | default: "our platform"}}!
 
 Hi John,
 Welcome to Acme Inc!
-
 
 ```
 
@@ -152,7 +142,6 @@ Welcome to Acme Inc!
 Hi there,
 Welcome to our platform!
 
-
 ```
 
 #### Multiple Fallbacks
@@ -160,7 +149,6 @@ Welcome to our platform!
 ```text
 
 {{first_name | default: {{contact_name}} | default: "Valued Customer"}}
-
 
 ```
 
@@ -184,7 +172,6 @@ Welcome to our platform!
   Check out our latest features...
 {% endif %}
 
-
 ```
 
 #### If/Elsif/Else
@@ -192,15 +179,14 @@ Welcome to our platform!
 ```text
 
 {% if lead_score >= 90 %}
-  🌟 Platinum Tier - Exclusive Access
+  ðŸŒŸ Platinum Tier - Exclusive Access
 {% elsif lead_score >= 75 %}
-  ⭐ Gold Tier - Premium Benefits
+  â­ Gold Tier - Premium Benefits
 {% elsif lead_score >= 50 %}
-  ✨ Silver Tier - Great Perks
+  âœ¨ Silver Tier - Great Perks
 {% else %}
-  👋 Welcome - Getting Started
+  ðŸ‘‹ Welcome - Getting Started
 {% endif %}
-
 
 ```
 
@@ -213,7 +199,6 @@ Welcome to our platform!
 {% else %}
   Tell us about your company!
 {% endif %}
-
 
 ```
 
@@ -231,7 +216,6 @@ Welcome to our platform!
 
 Thanks for being a valued customer!
 
-
 ```
 
 #### Location-Based Content
@@ -246,7 +230,6 @@ Thanks for being a valued customer!
   International shipping available!
 {% endif %}
 
-
 ```
 
 #### Account Type Messaging
@@ -255,13 +238,12 @@ Thanks for being a valued customer!
 
 {% if custom.account_type == "trial" %}
   Your trial expires in {{custom.trial_days_remaining}} days.
-  [Upgrade Now →]
+  [Upgrade Now â†’]
 {% elsif custom.account_type == "paid" %}
   Thanks for being a premium customer!
 {% else %}
-  [Start Your Free Trial →]
+  [Start Your Free Trial â†’]
 {% endif %}
-
 
 ```
 
@@ -283,7 +265,6 @@ Standard Syntax:
 Nested Custom Fields:
   {{custom.preferences.email_frequency}}
   {{custom.settings.notifications_enabled}}
-
 
 ```
 
@@ -307,7 +288,6 @@ Company Size Targeting:
     Starter plans for small teams
   {% endif %}
 
-
 ```
 
 ### Advanced Conditionals
@@ -318,9 +298,8 @@ Company Size Targeting:
 
 {% if lead_score >= 75 and custom.account_type == "trial" %}
   You're a highly engaged trial user!
-  [Upgrade to unlock premium features →]
+  [Upgrade to unlock premium features â†’]
 {% endif %}
-
 
 ```
 
@@ -332,7 +311,6 @@ Company Size Targeting:
   North American customers get free shipping!
 {% endif %}
 
-
 ```
 
 #### Complex Logic
@@ -340,7 +318,7 @@ Company Size Targeting:
 ```text
 
 {% if (lead_score >= 75 and custom.account_type == "trial") or custom.is_vip == true %}
-  🎁 Special offer just for you!
+  ðŸŽ Special offer just for you!
 
   {% if custom.account_type == "trial" %}
     Upgrade now and get 20% off your first year!
@@ -348,7 +326,6 @@ Company Size Targeting:
     Exclusive VIP discount: 15% off your next renewal!
   {% endif %}
 {% endif %}
-
 
 ```
 
@@ -379,7 +356,6 @@ Contains:
 Not Contains:
   {% if tags not_contains "unsubscribed" %}
 
-
 ```
 
 ### Dynamic Links
@@ -398,7 +374,6 @@ Personalized landing page:
   Get Started
 </a>
 
-
 ```
 
 #### UTM Parameters
@@ -411,7 +386,6 @@ Personalized landing page:
 
 Output:
 https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welcome_series&utm_content=john@example.com
-
 
 ```
 
@@ -427,7 +401,6 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 <img src="{{cdn_url}}/images/{{custom.industry}}-hero.jpg"
      alt="{{custom.industry}} Solutions">
 
-
 ```
 
 #### Conditional Images
@@ -441,7 +414,6 @@ https://example.com/offer?utm_source=email&utm_medium=campaign&utm_campaign=welc
 {% elsif lead_score >= 50 %}
   <img src="{{cdn_url}}/badges/silver.png" alt="Silver Member">
 {% endif %}
-
 
 ```
 
@@ -467,7 +439,6 @@ Relative time:
   {{last_activity | time_ago}}
   Output: 2 hours ago
 
-
 ```
 
 #### Date Calculations
@@ -482,7 +453,6 @@ Days remaining:
   {% assign days_left = trial_end_date | days_from_now %}
   {{days_left}} days left in your trial
 
-
 ```
 
 ### Loops & Iterations
@@ -495,22 +465,17 @@ Your recent purchases:
 
 {% for item in recent_purchases %}
 
-
   - {{item.name}} - ${{item.price}}
 {% endfor %}
 
 Output:
 Your recent purchases:
 
-
   - Widget Pro - $49.99
-
 
   - Gadget Plus - $29.99
 
-
   - Tool Kit - $79.99
-
 
 ```
 
@@ -520,12 +485,11 @@ Your recent purchases:
 
 {% for tag in tags %}
   {% if tag == "vip" %}
-    🌟 VIP Member
+    ðŸŒŸ VIP Member
   {% elsif tag == "enterprise" %}
-    🏢 Enterprise Customer
+    ðŸ¢ Enterprise Customer
   {% endif %}
 {% endfor %}
-
 
 ```
 
@@ -538,7 +502,6 @@ Top 3 products:
 {% for product in recommended_products limit: 3 %}
   {{forloop.index}}. {{product.name}} - ${{product.price}}
 {% endfor %}
-
 
 ```
 
@@ -572,7 +535,6 @@ Strip HTML:
   {{bio | strip_html}}
   Removes all HTML tags
 
-
 ```
 
 #### String Operations
@@ -593,7 +555,6 @@ Split:
   First: {{name_parts[0]}}
   Last: {{name_parts[1]}}
 
-
 ```
 
 ### Number Formatting
@@ -607,7 +568,7 @@ Currency:
   Output: $1,234.56
 
   {{revenue | currency: "EUR"}}
-  Output: €1,234.56
+  Output: â‚¬1,234.56
 
 Percentage:
   {{conversion_rate | percentage}}
@@ -620,7 +581,6 @@ Round:
 Thousands separator:
   {{subscribers | number_with_delimiter}}
   Output: 1,234,567
-
 
 ```
 
@@ -643,7 +603,6 @@ Multiplication:
 Division:
   {% assign monthly = annual_price | divided_by: 12 %}
   Monthly: ${{monthly}}
-
 
 ```
 
@@ -695,7 +654,6 @@ CREATE TABLE variable_usage (
 );
 
 CREATE INDEX idx_variable_usage_template ON variable_usage(template_id);
-
 
 ```
 
@@ -996,7 +954,6 @@ class VariableParser {
   }
 }
 
-
 ```
 
 ### API Endpoints
@@ -1061,7 +1018,6 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
   return res.json(variable);
 });
 
-
 ```
 
 ---
@@ -1084,4 +1040,5 @@ app.post('/api/templates/variables', authenticate, async (req, res) => {
 **Owner:** Templates Team
 
 {% endraw %}
+
 

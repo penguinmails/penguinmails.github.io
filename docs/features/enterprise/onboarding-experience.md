@@ -1,4 +1,4 @@
----
+﻿---
 title: "Onboarding Experience"
 description: "Guided setup wizard, interactive tutorials, and feature discovery to help users get started quickly"
 level: "2"
@@ -7,26 +7,19 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - enterprise/user-management
-
 
   - infrastructure/email-infrastructure-setup
 
-
   - domains/domain-management
-
 
   - payments/subscription-management
 related_tasks:
 
-
   - epic-2-user-authentication-profile
-
 
   - epic-3-tenant-company-management
 ---
-
 
 # Onboarding Experience
 
@@ -58,12 +51,9 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 ```text
 
+1. Sign Up â†’ 2. Workspace Setup â†’ 3. Domain Configuration â†’
 
-1. Sign Up → 2. Workspace Setup → 3. Domain Configuration →
-
-
-4. Payment → 5. First Email Account → 6. First Campaign → 7. Success!
-
+4. Payment â†’ 5. First Email Account â†’ 6. First Campaign â†’ 7. Success!
 
 ```
 
@@ -87,13 +77,12 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 ```text
 
-Welcome to PenguinMails! 🐧
+Welcome to PenguinMails! ðŸ§
 
 Let's get your professional email infrastructure
 set up in under 10 minutes.
 
 [Start Setup] [Skip Tour]
-
 
 ```
 
@@ -111,7 +100,6 @@ Example: "Main Company" or "Client: Acme Corp"
 
 [Continue]
 
-
 ```
 
 **Tooltip:** "You can create unlimited workspaces. Start with one for now."
@@ -127,10 +115,9 @@ This is the domain you'll send emails from
 
 Domain: [_______________]
 
-☐ I have access to DNS settings for this domain
+â˜ I have access to DNS settings for this domain
 
 [Continue] [Need help?]
-
 
 ```
 
@@ -158,7 +145,6 @@ OR
 
 [Auto-Configure with Cloudflare] [Auto-Configure with Route53]
 
-
 ```
 
 **Auto-detection:**
@@ -175,22 +161,21 @@ OR
 
 Step 5 of 6: Choose Your Plan
 
-○ Starter - $49/mo
+â—‹ Starter - $49/mo
   Up to 5,000 emails/month
   1 workspace
 
-● Professional - $99/mo  [RECOMMENDED]
+â— Professional - $99/mo  [RECOMMENDED]
   Up to 25,000 emails/month
   Unlimited workspaces
   Priority support
 
-○ Business - $249/mo
+â—‹ Business - $249/mo
   Up to 100,000 emails/month
   Everything in Professional
   Dedicated infrastructure
 
 [Start 14-Day Free Trial] No credit card required
-
 
 ```
 
@@ -198,13 +183,12 @@ Step 5 of 6: Choose Your Plan
 
 ```text
 
-✓ Trial Started - 14 days remaining
+âœ“ Trial Started - 14 days remaining
 
 You won't be charged until your trial ends.
 Add payment method anytime in Settings.
 
 [Continue to Infrastructure Setup]
-
 
 ```
 
@@ -216,14 +200,13 @@ Step 6 of 6: Launch Your Email Infrastructure
 
 We're setting up your professional email infrastructure:
 
-✓ VPS server provisioning
-⏳ Installing SMTP server (2 min remaining)
-○ Configuring DNS records
-○ Installing SSL certificates
-○ Creating your first email account
+âœ“ VPS server provisioning
+â³ Installing SMTP server (2 min remaining)
+â—‹ Configuring DNS records
+â—‹ Installing SSL certificates
+â—‹ Creating your first email account
 
 [Watch Setup Video] while you wait
-
 
 ```
 
@@ -233,7 +216,7 @@ We're setting up your professional email infrastructure:
 
 ```text
 
-🎉 Infrastructure Ready!
+ðŸŽ‰ Infrastructure Ready!
 
 Your email infrastructure is live at:
 mail.yourdomain.com
@@ -241,7 +224,6 @@ mail.yourdomain.com
 Next: Create your first email account
 
 [Create Email Account]
-
 
 ```
 
@@ -256,24 +238,22 @@ Password: [Generate Secure Password]
 
 [Create Account & Finish Setup]
 
-
 ```
 
 #### Step 8: Success & Next Steps (30 sec)
 
 ```text
 
-🎉 Congratulations! You're All Set
+ðŸŽ‰ Congratulations! You're All Set
 
 Your email infrastructure is ready to send.
 
 Quick Actions:
-☐ Create your first campaign
-☐ Import your contact list
-☐ Set up email warmup (recommended)
+â˜ Create your first campaign
+â˜ Import your contact list
+â˜ Set up email warmup (recommended)
 
 [Go to Dashboard] [Take the Product Tour]
-
 
 ```
 
@@ -287,18 +267,17 @@ Persistent checklist in sidebar:
 
 ```text
 
-Getting Started ━━━━━━━━○○○ 70%
+Getting Started â”â”â”â”â”â”â”â”â—‹â—‹â—‹ 70%
 
-✓ Create workspace
-✓ Add domain
-✓ Verify domain
-✓ Create email account
-⏳ Import contacts (20/100)
-○ Create first campaign
-○ Send first email
+âœ“ Create workspace
+âœ“ Add domain
+âœ“ Verify domain
+âœ“ Create email account
+â³ Import contacts (20/100)
+â—‹ Create first campaign
+â—‹ Send first email
 
 [Collapse]
-
 
 ```
 
@@ -323,7 +302,6 @@ Getting Started ━━━━━━━━○○○ 70%
     brand, or project.
 
     [Got It] [Learn More]
-
 
 ```
 
@@ -365,7 +343,6 @@ Click here to create a new email campaign.
 
 [Next] [Skip Tour]
 
-
 ```
 
 ### Video Tutorials
@@ -394,33 +371,32 @@ Click here to create a new email campaign.
 
 ```text
 
-🎊 Milestone Unlocked: First Email Sent!
+ðŸŽŠ Milestone Unlocked: First Email Sent!
 
 You've sent your first email through PenguinMails.
 Keep going!
 
 [View Campaign Analytics]
 
-
 ```
 
 **Milestones:**
 
-- ✓ First workspace created
+- âœ“ First workspace created
 
-- ✓ First domain verified
+- âœ“ First domain verified
 
-- ✓ First email account created
+- âœ“ First email account created
 
-- ✓ First 10 contacts imported
+- âœ“ First 10 contacts imported
 
-- ✓ First campaign created
+- âœ“ First campaign created
 
-- ✓ First email sent
+- âœ“ First email sent
 
-- ✓ First email opened
+- âœ“ First email opened
 
-- ✓ First link clicked
+- âœ“ First link clicked
 
 ### Personalized Recommendations
 
@@ -428,13 +404,12 @@ Based on user behavior:
 
 ```text
 
-👋 We noticed you haven't set up email warmup yet.
+ðŸ‘‹ We noticed you haven't set up email warmup yet.
 
 Warmup helps build sender reputation and improves
 deliverability. It only takes 2 minutes.
 
 [Set Up Warmup Now] [Remind Me Later]
-
 
 ```
 
@@ -449,12 +424,11 @@ Welcome to [Workspace Name]!
 You've been invited as a Workspace Member.
 Here's what you can do:
 
-✓ View campaigns
-✓ Create and edit templates
-○ Can't: Modify billing or infrastructure
+âœ“ View campaigns
+âœ“ Create and edit templates
+â—‹ Can't: Modify billing or infrastructure
 
 [View Permissions] [Explore Dashboard]
-
 
 ```
 
@@ -504,7 +478,6 @@ interface OnboardingChecklistItem {
   completedAt?: Date;
 }
 
-
 ```
 
 ### Database Schema
@@ -550,7 +523,6 @@ CREATE TABLE onboarding_events (
 );
 
 CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at);
-
 
 ```
 
@@ -652,7 +624,6 @@ class OnboardingService {
   }
 }
 
-
 ```
 
 ### Frontend Components
@@ -706,7 +677,7 @@ function OnboardingChecklist() {
         <ul>
           {checklist.map(item => (
             <li key={item.id} className={item.completed ? 'completed' : ''}>
-              {item.completed ? '✓' : '○'} {item.label}
+              {item.completed ? 'âœ“' : 'â—‹'} {item.label}
             </li>
           ))}
         </ul>
@@ -714,7 +685,6 @@ function OnboardingChecklist() {
     </aside>
   );
 }
-
 
 ```
 
@@ -736,4 +706,5 @@ function OnboardingChecklist() {
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Product Team
+
 

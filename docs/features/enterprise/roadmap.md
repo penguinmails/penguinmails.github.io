@@ -1,11 +1,10 @@
----
+﻿---
 title: "Enterprise Features Roadmap"
 description: "Detailed timeline and quarterly breakdown for enterprise features including authentication, team management, and platform administration"
 last_modified_date: "2025-11-27"
 level: "2"
 persona: "Product Teams, Engineering Teams"
 ---
-
 
 # Enterprise Features Roadmap
 
@@ -854,7 +853,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - Infrastructure: $500-1,000/month (Zendesk, Intercom, phone system)
 
-- Staffing: $200K-300K/year (2 engineers) → $800K-1.2M/year (full team by Q1 2027)
+- Staffing: $200K-300K/year (2 engineers) â†’ $800K-1.2M/year (full team by Q1 2027)
 
 ---
 
@@ -957,4 +956,5 @@ This document provides a detailed timeline for enterprise features development, 
 **Last Updated:** November 27, 2025
 **Review Cycle:** Monthly
 **Next Review:** After MVP authentication features complete (Q1 2026)
+
 

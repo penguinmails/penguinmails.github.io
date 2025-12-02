@@ -1,4 +1,4 @@
----
+﻿---
 title: "Vault SSH Key Management"
 description: "Secure SSH credential management for VPS infrastructure using HashiCorp Vault"
 last_modified_date: "2025-11-26"
@@ -9,7 +9,6 @@ priority: "HIGH"
 roadmap_milestone: "Q1_2026"
 keywords: ["vault", "ssh", "security", "infrastructure", "credentials", "rotation"]
 ---
-
 
 # Vault SSH Key Management
 
@@ -106,7 +105,6 @@ await auditLog.create({
 // Return key as downloadable file
 res.download('tenant-ssh-key.pem', privateKey);
 
-
 ```
 
 ### 3. Automated Key Rotation
@@ -124,23 +122,22 @@ res.download('tenant-ssh-key.pem', privateKey);
 ```text
 
 Cron job checks last_rotated timestamp
-  ↓
+  â†“
 If rotation due (current_date - last_rotated >= 90 days):
-  ↓
+  â†“
 Generate new RSA 4096-bit key pair
-  ↓
+  â†“
 Store new key in Vault with incremented version
-  ↓
+  â†“
 Add new public key to VPS authorized_keys
-  ↓
+  â†“
 Keep old key active for 24-hour grace period
-  ↓
+  â†“
 Remove old key from authorized_keys after grace period
-  ↓
+  â†“
 Send notification to tenant (email)
-  ↓
+  â†“
 Log rotation event in audit trail
-
 
 ```
 
@@ -182,16 +179,13 @@ Log rotation event in audit trail
 
 ```bash
 
-
 # SSH Connection Command
 
 ssh -i /path/to/private-key.pem tenant-{tenant_id}@{vps_ip}
 
-
 # Example
 
 ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
-
 
 ```
 
@@ -232,14 +226,13 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
   "status": "success"
 }
 
-
 ```
 
 ## User Workflows
 
 ### Tenant: Download SSH Key
 
-1. Navigate to Settings → Infrastructure → SSH Access
+1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
 
 2. View SSH credentials (VPS IP, username, port)
 
@@ -255,7 +248,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Tenant: Rotate SSH Key Manually
 
-1. Navigate to Settings → Infrastructure → SSH Access
+1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
 
 2. Click "Rotate SSH Key" button
 
@@ -273,7 +266,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Tenant: Revoke and Regenerate SSH Key
 
-1. Navigate to Settings → Infrastructure → SSH Access
+1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
 
 2. Click "Revoke SSH Access" button
 
@@ -291,7 +284,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Admin: Monitor SSH Key Health
 
-1. Navigate to Admin Panel → Secrets Management
+1. Navigate to Admin Panel â†’ Secrets Management
 
 2. View Vault health dashboard
 
@@ -312,19 +305,18 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 ```text
 
 vault/vps/{tenant_id}/
-├── admin_ssh/
-│   ├── private_key       # RSA 4096-bit private key
-│   ├── public_key        # RSA 4096-bit public key
-│   ├── created_at        # ISO 8601 timestamp
-│   ├── last_rotated      # ISO 8601 timestamp
-│   └── rotation_policy   # "90_days"
-└── tenant_ssh/
-    ├── private_key       # RSA 4096-bit private key
-    ├── public_key        # RSA 4096-bit public key
-    ├── created_at        # ISO 8601 timestamp
-    ├── last_rotated      # ISO 8601 timestamp
-    └── rotation_policy   # "90_days"
-
+â”œâ”€â”€ admin_ssh/
+â”‚   â”œâ”€â”€ private_key       # RSA 4096-bit private key
+â”‚   â”œâ”€â”€ public_key        # RSA 4096-bit public key
+â”‚   â”œâ”€â”€ created_at        # ISO 8601 timestamp
+â”‚   â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
+â”‚   â””â”€â”€ rotation_policy   # "90_days"
+â””â”€â”€ tenant_ssh/
+    â”œâ”€â”€ private_key       # RSA 4096-bit private key
+    â”œâ”€â”€ public_key        # RSA 4096-bit public key
+    â”œâ”€â”€ created_at        # ISO 8601 timestamp
+    â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
+    â””â”€â”€ rotation_policy   # "90_days"
 
 ```
 
@@ -371,7 +363,6 @@ Response: {
   newKeyFingerprint: string;
 }
 
-
 ```
 
 **Admin Endpoints:**
@@ -407,7 +398,6 @@ Response: {
   failedCount: number;
 }
 
-
 ```
 
 ### Access Control
@@ -416,13 +406,11 @@ Response: {
 
 ```hcl
 
-
 # Tenant read-only access to own SSH keys
 
 path "vps/{{identity.entity.metadata.tenant_id}}/tenant_ssh/*" {
   capabilities = ["read"]
 }
-
 
 # Admin full access to all SSH keys
 
@@ -434,7 +422,6 @@ path "vps/*/tenant_ssh/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 
-
 # Automation service update access for rotation
 
 path "vps/*/admin_ssh/*" {
@@ -444,7 +431,6 @@ path "vps/*/admin_ssh/*" {
 path "vps/*/tenant_ssh/*" {
   capabilities = ["read", "update"]
 }
-
 
 ```
 
@@ -612,4 +598,5 @@ path "vps/*/tenant_ssh/*" {
 **Estimated Effort:** Large (10-15 days)
 
 *Vault SSH Key Management is a foundational security feature that enables secure VPS access and rapid disaster recovery. This feature must be implemented before infrastructure provisioning can be considered production-ready.*
+
 

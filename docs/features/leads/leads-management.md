@@ -1,4 +1,4 @@
----
+﻿---
 title: "Leads Management"
 description: "Contact management, list segmentation, and lead scoring"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Marketers, Sales Teams"
 status: "ACTIVE"
 category: "Leads"
 ---
-
 
 # Leads Management
 
@@ -169,7 +168,6 @@ CREATE TABLE lists (
   type VARCHAR(20) -- 'static' or 'dynamic'
 );
 
-
 ```
 
 ### API Usage
@@ -211,4 +209,5 @@ GET /api/v1/contacts/search?query=industry:SaaS
 **Capacity:** Unlimited contacts (billed by usage)
 
 *Clean data is the foundation of effective marketing. Use segmentation to send relevant content every time.*
+
 

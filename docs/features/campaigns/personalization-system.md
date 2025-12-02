@@ -1,4 +1,4 @@
----
+﻿---
 title: "Personalization System"
 description: "Dynamic email personalization with merge tags, conditional content, and custom fields"
 level: "2"
@@ -7,26 +7,19 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - campaigns/campaign-management/overview
-
 
   - campaigns/ab-testing
 
-
   - templates/template-management
-
 
   - leads/leads-management
 related_tasks:
 
-
   - epic-6-core-email-pipeline
-
 
   - epic-7-leads-management
 ---
-
 
 # Personalization System
 
@@ -73,27 +66,19 @@ Best regards,
 
 ```shell
 
-
 - `{{firstName}}` - Contact's first name
-
 
 - `{{lastName}}` - Contact's last name
 
-
 - `{{email}}` - Email address
-
 
 - `{{company}}` - Company name
 
-
 - `{{jobTitle}}` - Job title
-
 
 - `{{city}}` - City
 
-
 - `{{state}}` - State/Province
-
 
 - `{{country}}` - Country
 
@@ -112,7 +97,6 @@ Provide defaults when data is missing:
 Hi {{firstName|there}},
 
 {{company|"Your company"}} could benefit from...
-
 
 ```
 
@@ -203,7 +187,6 @@ Adapt call-to-action based on contact status:
   <a href="{{signupLink}}">Get Started Free</a>
 {% endif %}
 
-
 ```
 
 ### Date-Based Personalization
@@ -248,10 +231,8 @@ you might also like:
 
 {% for product in relatedProducts %}
 
-
   - {{product.name}} - ${{product.price}}
 {% endfor %}
-
 
 ```
 
@@ -266,9 +247,8 @@ Adapt content by location:
 {% elsif country == "Canada" %}
   Free shipping on orders over CAD $75!
 {% elsif country == "United Kingdom" %}
-  Free shipping on orders over £40!
+  Free shipping on orders over Â£40!
 {% endif %}
-
 
 ```
 
@@ -280,7 +260,6 @@ Combine with A/B testing:
 
 Test A: Hi {{firstName}},
 Test B: Hi {{firstName}}, fellow {{customField.industry}} professional,
-
 
 ```
 
@@ -312,7 +291,6 @@ engine.registerFilter('currency', (amount: number, currency = 'USD') => {
     currency,
   }).format(amount);
 });
-
 
 ```
 
@@ -362,7 +340,6 @@ async function computeDynamicFields(contact: Contact): Promise<Record<string, an
     recommendedProducts: await this.getRecommendations(contact),
   };
 }
-
 
 ```
 
@@ -414,7 +391,6 @@ CREATE TABLE custom_field_definitions (
 
   UNIQUE(tenant_id, field_name)
 );
-
 
 ```
 
@@ -479,7 +455,6 @@ class PersonalizationValidator {
   }
 }
 
-
 ```
 
 {% endraw %}
@@ -527,7 +502,6 @@ async function renderCached(templateId: string, context: any): Promise<string> {
   return engine.render(compiled, context);
 }
 
-
 ```
 
 ---
@@ -548,4 +522,5 @@ async function renderCached(templateId: string, context: any): Promise<string> {
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+
 

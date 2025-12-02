@@ -1,11 +1,10 @@
----
+﻿---
 title: "Content Database ER Diagram"
 description: "Content Database ER Diagram (Mermaid)"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Content Database ER Diagram (Mermaid)
 
@@ -88,8 +87,8 @@ erDiagram
   %% These belong in external analytics/logging/observability systems
   %% as defined in ../operations/external-analytics-logging.md.
 
-
 ```
 
 ---
+
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Customer Journey Management Summary"
 description: "Executive summary of customer journey management strategies, lifecycle optimization, and customer experience enhancement"
 last_modified_date: "2025-11-15"

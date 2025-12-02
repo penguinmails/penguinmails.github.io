@@ -80,7 +80,7 @@ End-to-End Tests (5%): Complete business scenarios
 
 #### Test Scenarios
 
-**T1.1 Health-to-Campaign Trigger**
+##### T1.1 Health-to-Campaign Trigger
 
 ```markdown
 Pre-condition: Customer health drops to Yellow (65)
@@ -90,7 +90,7 @@ Validation: Campaign status = Active, Target = Test Customer
 
 ```
 
-**T1.2 Expansion Campaign Coordination**
+##### T1.2 Expansion Campaign Coordination
 
 ```markdown
 Pre-condition: CS expansion readiness >80
@@ -114,7 +114,7 @@ Validation: Lead score = CS-qualified, Lifecycle = Expansion
 
 #### Test Scenarios
 
-**T2.1 Expansion Opportunity Handoff**
+##### T2.1 Expansion Opportunity Handoff
 
 ```markdown
 Pre-condition: CS identifies expansion opportunity
@@ -124,7 +124,7 @@ Validation: Opportunity Stage = CS-Qualified, Evidence attached
 
 ```
 
-**T2.2 Renewal Probability Sync**
+##### T2.2 Renewal Probability Sync
 
 ```markdown
 Pre-condition: Health score = 45 (Red)
@@ -148,7 +148,7 @@ Validation: CRM renewal field reflects CS health weight
 
 #### Test Scenarios
 
-**T3.1 Feature Adoption Feedback Loop**
+##### T3.1 Feature Adoption Feedback Loop
 
 ```markdown
 Pre-condition: Low adoption detected (<30%)
@@ -158,7 +158,7 @@ Validation: Campaign delivered, Feedback captured in roadmap
 
 ```
 
-**T3.2 Beta Program Customer Selection**
+##### T3.2 Beta Program Customer Selection
 
 ```markdown
 Pre-condition: Healthy account with matching success profile
@@ -182,7 +182,7 @@ Validation: Invitation sent, Success support workflow activated
 
 #### Test Scenarios
 
-**T4.1 Revenue Attribution Calculation**
+##### T4.1 Revenue Attribution Calculation
 
 ```markdown
 Pre-condition: Successful CS-driven expansion ($10K ACV)
@@ -192,7 +192,7 @@ Validation: Finance dashboard reflects CS contribution
 
 ```
 
-**T4.2 Value Realization Tracking**
+##### T4.2 Value Realization Tracking
 
 ```markdown
 Pre-condition: Contract milestone achieved
@@ -216,7 +216,7 @@ Validation: Dashboard shows 85% value delivery
 
 #### Test Scenarios
 
-**T5.1 Workflow Capacity Testing**
+##### T5.1 Workflow Capacity Testing
 
 ```markdown
 Load Test: 1,000 simultaneous health score changes
@@ -226,7 +226,7 @@ Validation: No workflow failures, Resource utilization <80%
 
 ```
 
-**T5.2 Escalation Routing**
+##### T5.2 Escalation Routing
 
 ```markdown
 Pre-condition: Critical health drop + executive sponsor

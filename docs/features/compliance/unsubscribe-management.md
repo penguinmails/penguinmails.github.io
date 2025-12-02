@@ -1,4 +1,4 @@
----
+﻿---
 title: "Unsubscribe Management"
 description: "Automated unsubscribe handling and opt-out list management for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Marketing Teams, Operations"
 status: "ACTIVE"
 category: "Compliance"
 ---
-
 
 # Unsubscribe Management
 
@@ -58,18 +57,17 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 List-Unsubscribe: <https://penguinmails.com/unsubscribe/{{token}}>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
-
 ```
 
 **Benefits:**
 
-- ✅ Gmail/Outlook "Unsubscribe" button compatibility
+- âœ… Gmail/Outlook "Unsubscribe" button compatibility
 
-- ✅ Reduces spam complaints (users unsubscribe vs report spam)
+- âœ… Reduces spam complaints (users unsubscribe vs report spam)
 
-- ✅ Improves sender reputation
+- âœ… Improves sender reputation
 
-- ✅ Industry best practice
+- âœ… Industry best practice
 
 ### Global Suppression List
 
@@ -152,9 +150,8 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
     </a>
   </p>
 
-  <p><small>© {{current_year}} {{company.name}}. All rights reserved.</small></p>
+  <p><small>Â© {{current_year}} {{company.name}}. All rights reserved.</small></p>
 </footer>
-
 
 ```
 
@@ -174,15 +171,15 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 **Visibility Requirements:**
 
-- ✅ Clearly visible and readable
+- âœ… Clearly visible and readable
 
-- ✅ Font size minimum 10px
+- âœ… Font size minimum 10px
 
-- ✅ Contrasting color from background
+- âœ… Contrasting color from background
 
-- ✅ Positioned in footer (standard location)
+- âœ… Positioned in footer (standard location)
 
-- ✅ Mobile-optimized (large tap target)
+- âœ… Mobile-optimized (large tap target)
 
 ---
 
@@ -243,19 +240,18 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 ```text
 
 Unsubscribe Request Received
-  ↓
+  â†“
 Validate Token (prevent abuse)
-  ↓
+  â†“
 Remove from Active Campaigns (immediate)
-  ↓
+  â†“
 Add to Suppression List (permanent)
-  ↓
+  â†“
 Update User Preferences (if preference center)
-  ↓
+  â†“
 Send Confirmation (optional)
-  ↓
+  â†“
 Audit Log Entry (compliance record)
-
 
 ```
 
@@ -284,7 +280,6 @@ email,reason,date,source
 user@example.com,user_request,2025-11-24,manual
 spam@example.com,spam_complaint,2025-11-23,abuse_report
 
-
 ```
 
 **API Import**
@@ -302,7 +297,6 @@ Content-Type: application/json
     }
   ]
 }
-
 
 ```
 
@@ -448,7 +442,6 @@ Response:
   ]
 }
 
-
 ```
 
 #### Add to Suppression List
@@ -464,7 +457,6 @@ Content-Type: application/json
   "source": "api"
 }
 
-
 ```
 
 #### Check if Email Suppressed
@@ -479,7 +471,6 @@ Response:
   "reason": "user_request",
   "added_at": "2025-11-24T10:30:00Z"
 }
-
 
 ```
 
@@ -507,7 +498,6 @@ CREATE TABLE suppression_list (
 CREATE INDEX idx_suppression_email ON suppression_list(email);
 CREATE INDEX idx_suppression_tenant ON suppression_list(tenant_id);
 CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
-
 
 ```
 
@@ -541,7 +531,6 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
     "action_taken": "added_to_suppression"
   }
 }
-
 
 ```
 
@@ -601,11 +590,11 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 **Benchmarks:**
 
-- ✅ Good: < 0.2% unsubscribe rate
+- âœ… Good: < 0.2% unsubscribe rate
 
-- ⚠️ Concerning: 0.2% - 0.5% unsubscribe rate
+- âš ï¸ Concerning: 0.2% - 0.5% unsubscribe rate
 
-- ❌ Poor: > 0.5% unsubscribe rate
+- âŒ Poor: > 0.5% unsubscribe rate
 
 ---
 
@@ -635,4 +624,5 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 **Compliance:** CAN-SPAM, GDPR, CCPA, CASL
 
 *Proper unsubscribe management is critical for compliance, deliverability, and user trust. PenguinMails automates this process to ensure best-in-class opt-out handling.*
+
 

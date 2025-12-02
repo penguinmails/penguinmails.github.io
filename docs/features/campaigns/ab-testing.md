@@ -1,4 +1,4 @@
----
+﻿---
 title: "A/B Testing"
 description: "Split testing for email campaigns to optimize subject lines, content, sending times, and more"
 level: "2"
@@ -7,20 +7,15 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - campaigns/campaign-management/overview
 
-
   - campaigns/personalization-system
-
 
   - analytics/core-analytics/overview
 related_tasks:
 
-
   - epic-6-core-email-pipeline
 ---
-
 
 # A/B Testing
 
@@ -52,19 +47,15 @@ A/B Testing enables data-driven campaign optimization by testing variations of y
 
 ```text
 
-
-1. Navigate to Campaigns → Create New Campaign
-
+1. Navigate to Campaigns â†’ Create New Campaign
 
 2. Enable "A/B Testing" toggle
 
-
 3. Choose test type:
-   ☐ Subject Line
-   ☐ Email Content
-   ☐ Sender Name
-   ☐ Send Time
-
+   â˜ Subject Line
+   â˜ Email Content
+   â˜ Sender Name
+   â˜ Send Time
 
 ```
 
@@ -82,7 +73,6 @@ Subject: "Flash Sale: Save 50% Today Only"
 
 Variant C (optional):
 Subject: "Don't Miss Out: Half Price Sale Ends Tonight"
-
 
 ```
 
@@ -106,26 +96,19 @@ Total Audience: 10,000 contacts
 
 Test Phase:
 
-
   - Variant A: 1,000 contacts (10%)
-
 
   - Variant B: 1,000 contacts (10%)
 
-
   - Variant C: 1,000 contacts (10%)
-
 
   - Duration: 4 hours
 
 Winner Deployment:
 
-
   - Winning variant: 7,000 contacts (70%)
 
-
   - Sent after test completion
-
 
 ```
 
@@ -147,12 +130,11 @@ After 4 hours:
 
 Test Results:
   Variant A: 22% open rate
-  Variant B: 28% open rate ← WINNER (26% lift)
+  Variant B: 28% open rate â† WINNER (26% lift)
   Variant C: 24% open rate
 
 Winner selected: Variant B
 Deploying to remaining 7,000 contacts...
-
 
 ```
 
@@ -180,11 +162,10 @@ Control: "New Features Released"
 Test:    "{{firstName}}, Check Out What's New"
 
 Control: "Weekly Newsletter - November 25"
-Test:    "🎉 Your Weekly Insights Are Here"
+Test:    "ðŸŽ‰ Your Weekly Insights Are Here"
 
 Control: "Limited Time Offer Inside"
 Test:    "Last Chance: Offer Expires At Midnight"
-
 
 ```
 
@@ -213,7 +194,6 @@ Test:    Short email (200 words) with video
 Control: Text-based email
 Test:    Visual/image-heavy email
 
-
 ```
 
 #### Sender Name Testing
@@ -228,7 +208,6 @@ Test:    "Sarah from PenguinMails"
 Control: "marketing@company.com"
 Test:    "sarah.jones@company.com"
 
-
 ```
 
 #### Send Time Testing
@@ -240,7 +219,6 @@ Test:    "sarah.jones@company.com"
 Variant A: 9:00 AM Tuesday
 Variant B: 2:00 PM Tuesday
 Variant C: 6:00 PM Tuesday
-
 
 ```
 
@@ -258,33 +236,24 @@ Test up to 5 variants simultaneously:
 test_name: "Q1 Campaign Optimization"
 variants:
 
-
   - name: "Control"
     subject: "Quarterly Product Update"
     sample_size: 10%
-
-
 
   - name: "Personalized"
     subject: "{{firstName}}, See What's New This Quarter"
     sample_size: 10%
 
-
-
   - name: "Urgent"
     subject: "Don't Miss: Q1 Updates Inside"
     sample_size: 10%
-
-
 
   - name: "Question"
     subject: "Ready For Q1 Growth?"
     sample_size: 10%
 
-
-
   - name: "Emoji"
-    subject: "🚀 Q1 Innovation Launch"
+    subject: "ðŸš€ Q1 Innovation Launch"
     sample_size: 10%
 
 holdout:
@@ -293,7 +262,6 @@ holdout:
 test_duration: 6 hours
 win_criteria: open_rate
 confidence_threshold: 95%
-
 
 ```
 
@@ -319,7 +287,6 @@ Variant C: 22% open rate (Confidence: 99% - clear loser)
 
 Winner: Variant B with 96% confidence
 Lift over control: +16.7%
-
 
 ```
 
@@ -351,7 +318,6 @@ Final Optimized Email:
 
 Combined lift: +45% vs. original
 
-
 ```
 
 ### Audience Segmentation in Tests
@@ -361,17 +327,13 @@ Combined lift: +45% vs. original
 ```yaml
 test_groups:
 
-
   - segment: "Active Users"
     variants: [A, B]
     sample_size: 20%
 
-
-
   - segment: "Inactive Users"
     variants: [C, D]  # Different variations for different behavior
     sample_size: 20%
-
 
 ```
 
@@ -390,7 +352,6 @@ win_criteria:
 fallback:
   if_no_winner: send_control
   if_tie: highest_open_rate
-
 
 ```
 
@@ -526,7 +487,6 @@ CREATE TABLE ab_test_assignments (
 
   UNIQUE(ab_test_id, contact_id) -- One variant per contact per test
 );
-
 
 ```
 
@@ -718,7 +678,6 @@ class ABTestService {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -756,7 +715,6 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
   }
 });
 
-
 ```
 
 ---
@@ -789,4 +747,5 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+
 

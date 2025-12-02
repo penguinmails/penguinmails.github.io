@@ -1,11 +1,10 @@
----
+﻿---
 title: "User Analytics Framework"
 description: "Comprehensive user behavior analysis framework for enterprise-grade performance monitoring, engagement tracking, and conversion optimization"
 last_modified_date: "2025-10-28"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # User Analytics Framework
 
@@ -59,7 +58,6 @@ interface UserProfile {
   events: AnalyticsEvent[];
 }
 
-
 ```
 
 ### **Analytics Database Design**
@@ -87,7 +85,6 @@ CREATE TABLE user_properties (
     total_sessions INTEGER DEFAULT 0,
     total_events INTEGER DEFAULT 0
 );
-
 
 ```
 
@@ -140,7 +137,6 @@ interface ConversionFunnel {
   };
 }
 
-
 ```
 
 ---
@@ -150,13 +146,12 @@ interface ConversionFunnel {
 ### **Onboarding Funnel**
 
 ```markdown
-Visitor → Signup → Email Verification → Company Setup
-    ↓         ↓            ↓              ↓
+Visitor â†’ Signup â†’ Email Verification â†’ Company Setup
+    â†“         â†“            â†“              â†“
   100%     15-20%        85-90%         70-80%
-    ↓         ↓            ↓              ↓
-Team Setup → Stripe → IP Config → First Campaign
+    â†“         â†“            â†“              â†“
+Team Setup â†’ Stripe â†’ IP Config â†’ First Campaign
   90-95%   80-85%    75-80%       60-70%
-
 
 ```
 
@@ -192,7 +187,6 @@ graph TD
     M --> N[Recovery Email]
     N --> E
 
-
 ```
 
 ---
@@ -224,7 +218,6 @@ interface UserCohort {
   };
   lifecycle: 'trial' | 'active' | 'churned' | 'dormant';
 }
-
 
 ```
 
@@ -266,7 +259,6 @@ interface ExperimentVariant {
   conversionRate: number;
   sampleSize: number;
 }
-
 
 ```
 
@@ -314,7 +306,6 @@ const calculateCohortRetention = (
 
   return retention;
 };
-
 
 ```
 
@@ -418,7 +409,6 @@ interface CohortAnalysis {
   };
 }
 
-
 ```
 
 ---
@@ -463,17 +453,16 @@ interface CohortAnalysis {
 
 ```markdown
 User Overview
-├── Total Users: X (↑X% MoM)
-├── Active Users: X (↑X% MoM)
-├── Conversion Rate: X%
-└── Churn Rate: X%
+â”œâ”€â”€ Total Users: X (â†‘X% MoM)
+â”œâ”€â”€ Active Users: X (â†‘X% MoM)
+â”œâ”€â”€ Conversion Rate: X%
+â””â”€â”€ Churn Rate: X%
 
 Engagement Metrics
-├── Avg Session Duration: X minutes
-├── Pages per Session: X
-├── Feature Adoption: X%
-└── Support Tickets: X per user
-
+â”œâ”€â”€ Avg Session Duration: X minutes
+â”œâ”€â”€ Pages per Session: X
+â”œâ”€â”€ Feature Adoption: X%
+â””â”€â”€ Support Tickets: X per user
 
 ```
 
@@ -481,17 +470,16 @@ Engagement Metrics
 
 ```markdown
 Feature Usage
-├── Campaign Creation: X users
-├── Template Usage: X users
-├── Analytics Views: X sessions
-└── API Calls: X per user
+â”œâ”€â”€ Campaign Creation: X users
+â”œâ”€â”€ Template Usage: X users
+â”œâ”€â”€ Analytics Views: X sessions
+â””â”€â”€ API Calls: X per user
 
 User Flows
-├── Onboarding Completion: X%
-├── Time to First Campaign: X days
-├── Power User Rate: X%
-└── Feature Discovery Rate: X%
-
+â”œâ”€â”€ Onboarding Completion: X%
+â”œâ”€â”€ Time to First Campaign: X days
+â”œâ”€â”€ Power User Rate: X%
+â””â”€â”€ Feature Discovery Rate: X%
 
 ```
 
@@ -499,17 +487,16 @@ User Flows
 
 ```markdown
 Acquisition Funnel
-├── Visitors: X
-├── Signups: X (X% conversion)
-├── Activations: X (X% conversion)
-└── Paying Users: X (X% conversion)
+â”œâ”€â”€ Visitors: X
+â”œâ”€â”€ Signups: X (X% conversion)
+â”œâ”€â”€ Activations: X (X% conversion)
+â””â”€â”€ Paying Users: X (X% conversion)
 
 Campaign Performance
-├── Open Rates: X%
-├── Click Rates: X%
-├── Conversion Rates: X%
-└── ROI: X%
-
+â”œâ”€â”€ Open Rates: X%
+â”œâ”€â”€ Click Rates: X%
+â”œâ”€â”€ Conversion Rates: X%
+â””â”€â”€ ROI: X%
 
 ```
 
@@ -563,14 +550,15 @@ Campaign Performance
 
 Navigate to specific analytics areas:
 
-- **[Product Analytics](/docs/operations-analytics/analytics-performance)** → Feature adoption and product performance
+- **[Product Analytics](/docs/operations-analytics/analytics-performance)** â†’ Feature adoption and product performance
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** â†’ Comprehensive KPI framework
 
-- **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
+- **[Operations Management](/docs/operations-analytics/operations-management)** â†’ Operational procedures and workflows
 
 ---
 
 **Keywords**: user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization
 ---
+
 

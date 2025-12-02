@@ -1,4 +1,4 @@
----
+﻿---
 title: "Webhook System"
 description: "Event-driven integrations with real-time webhooks for email events, campaign triggers, and external system notifications"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - integrations/api-access
-
 
   - integrations/crm-integration/overview
 
-
   - queue/email-pipeline
-
 
   - campaigns/campaign-management/overview
 related_tasks:
 
-
   - epic-6-core-email-pipeline
 ---
-
 
 # Webhook System
 
@@ -57,8 +51,7 @@ The Webhook System enables external applications to receive instant notification
 
 ```text
 
-Dashboard → Settings → Integrations → Webhooks → Create Webhook
-
+Dashboard â†’ Settings â†’ Integrations â†’ Webhooks â†’ Create Webhook
 
 ```
 
@@ -72,8 +65,7 @@ Webhook Name: CRM Contact Sync
 Endpoint URL: https://yourapp.com/webhooks/penguinmails
 Description: Sync email engagement to CRM
 
-Status: ○ Active  ○ Paused
-
+Status: â—‹ Active  â—‹ Paused
 
 ```
 
@@ -84,24 +76,23 @@ Status: ○ Active  ○ Paused
 ```text
 
 Email Events:
-  ☑ email.sent
-  ☑ email.delivered
-  ☑ email.opened
-  ☑ email.clicked
-  ☑ email.bounced
-  ☑ email.spam_reported
-  ☑ email.unsubscribed
+  â˜‘ email.sent
+  â˜‘ email.delivered
+  â˜‘ email.opened
+  â˜‘ email.clicked
+  â˜‘ email.bounced
+  â˜‘ email.spam_reported
+  â˜‘ email.unsubscribed
 
 Campaign Events:
-  ☐ campaign.launched
-  ☐ campaign.completed
-  ☐ campaign.paused
+  â˜ campaign.launched
+  â˜ campaign.completed
+  â˜ campaign.paused
 
 Contact Events:
-  ☐ contact.created
-  ☐ contact.updated
-  ☐ contact.unsubscribed
-
+  â˜ contact.created
+  â˜ contact.updated
+  â˜ contact.unsubscribed
 
 ```
 
@@ -115,8 +106,7 @@ Test payload will be sent to:
 https://yourapp.com/webhooks/penguinmails
 
 Sending test event...
-✓ Test  successful! (Response: 200 OK)
-
+âœ“ Test  successful! (Response: 200 OK)
 
 ```
 
@@ -126,11 +116,10 @@ Sending test event...
 
 [Save Webhook]
 
-✓ Webhook created and activated
+âœ“ Webhook created and activated
 Secret Key: whsec_abc123... [Copy]
 
 Add this to your application for signature verification.
-
 
 ```
 
@@ -162,7 +151,6 @@ Add this to your application for signature verification.
     }
   }
 }
-
 
 ```
 
@@ -209,7 +197,6 @@ function verifySignature(payload, signature) {
   return crypto.timingSafeEqual(Buffer.from(digest), Buffer.from(signature));
 }
 
-
 ```
 
 ---
@@ -227,7 +214,6 @@ Event Filters:
   Workspaces: [Client A]
   Events: [email.opened, email.clicked]
 
-
 ```
 
 **Filter by campaign:**
@@ -237,7 +223,6 @@ Event Filters:
 Event Filters:
   Campaign ID: camp_xyz123
   Events: [All]
-
 
 ```
 
@@ -251,7 +236,6 @@ Event Filters:
     "campaign.type": "promotional"
   }
 }
-
 
 ```
 
@@ -270,15 +254,11 @@ If webhook delivery fails:
 
 After 5 failed attempts:
 
-
   - Mark webhook as "failing"
-
 
   - Send email notification to admin
 
-
   - Pause webhook after 100 consecutive failures
-
 
 ```
 
@@ -287,12 +267,11 @@ After 5 failed attempts:
 ```text
 
 Recent Deliveries:
-  ✓ email.opened     200 OK   Nov 25, 14:30
-  ✓ email.clicked    200 OK   Nov 25, 14:29
-  ✗ email.bounced    500 Error Nov 25, 14:28 [Retry #2]
+  âœ“ email.opened     200 OK   Nov 25, 14:30
+  âœ“ email.clicked    200 OK   Nov 25, 14:29
+  âœ— email.bounced    500 Error Nov 25, 14:28 [Retry #2]
 
 [View Failed Event] [Retry Now] [Disable Webhook]
-
 
 ```
 
@@ -310,18 +289,13 @@ Recent Deliveries:
 
 ```text
 
-
 1. PenguinMails generates HMAC-SHA256 signature
-
 
 2. Signature sent in X-PenguinMails-Signature header
 
-
 3. Your app recomputes signature with shared secret
 
-
 4. Compare signatures (use timing-safe comparison)
-
 
 ```
 
@@ -484,7 +458,6 @@ function standaloneVerify(payload, signature, secret) {
   }
 }
 
-
 ```
 
 ### Webhook Debugging
@@ -496,7 +469,7 @@ function standaloneVerify(payload, signature, secret) {
 Last 50 Webhook Deliveries:
 
 [Nov 25, 14:30:15] email.opened
-  → POST https://yourapp.com/webhooks
+  â†’ POST https://yourapp.com/webhooks
   Status: 200 OK
   Duration: 142ms
   [View Request] [View Response]
@@ -515,7 +488,6 @@ Response:
   Content-Type: text/plain
   Body: "OK"
 
-
 ```
 
 **Test Mode:**
@@ -525,20 +497,19 @@ Response:
 [Send Test Event]
 
 Choose test event type:
-  ○ email.opened
-  ○ email.clicked
-  ○ email.bounced
+  â—‹ email.opened
+  â—‹ email.clicked
+  â—‹ email.bounced
 
 Use real data from:
-  Campaign: [Select Campaign ▼]
-  Contact: [Select Contact ▼]
+  Campaign: [Select Campaign â–¼]
+  Contact: [Select Contact â–¼]
 
 OR
 
-  Use sample data ☑
+  Use sample data â˜‘
 
 [Send Test]
-
 
 ```
 
@@ -560,7 +531,6 @@ Found: 1,247 matching events
 [Replay All Events]
 
 Status: Replaying... (234 / 1,247)
-
 
 ```
 
@@ -650,7 +620,6 @@ CREATE TABLE webhook_events (
 );
 
 CREATE INDEX idx_webhook_events_tenant_type ON webhook_events(tenant_id, event_type, created_at);
-
 
 ```
 
@@ -781,7 +750,6 @@ class WebhookDeliveryService {
   }
 }
 
-
 ```
 
 ### Event Emission
@@ -819,7 +787,6 @@ async function handleEmailOpen(emailId: string): Promise<void> {
   // Deliver to webhooks
   await webhookDeliveryService.deliverEvent(event);
 }
-
 
 ```
 
@@ -877,7 +844,6 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
     return res.status(400).json({ error: error.message });
   }
 });
-
 
 ```
 
@@ -965,4 +931,5 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 **Status:** Planned - MVP Feature (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Integrations Team
+
 

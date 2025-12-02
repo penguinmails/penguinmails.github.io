@@ -1,4 +1,4 @@
----
+﻿---
 title: "Stripe Integration"
 description: "Stripe payment processing for secure subscription billing in PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Developers, Billing Administrators"
 status: "ACTIVE"
 category: "Payments"
 ---
-
 
 # Stripe Integration
 
@@ -41,19 +40,18 @@ PenguinMails uses [Stripe](https://stripe.com) as our payment processor to handl
 
 ```text
 User Signs Up
-  ↓
+  â†“
 Redirect to Stripe Checkout
-  ↓
+  â†“
 User Enters Payment Info (on Stripe's secure page)
-  ↓
+  â†“
 Stripe Processes Payment
-  ↓
+  â†“
 Stripe Sends Webhook to PenguinMails
-  ↓
+  â†“
 Subscription Activated
-  ↓
+  â†“
 User Redirected to Dashboard
-
 
 ```
 
@@ -93,7 +91,7 @@ User Redirected to Dashboard
 
 **All subscription state changes flow through webhooks:**
 
-- Stripe sends webhook → PenguinMails updates database
+- Stripe sends webhook â†’ PenguinMails updates database
 - Never poll Stripe API for subscription status
 - Real-time sync for all subscription lifecycle events
 - Automatic retry and idempotency handling
@@ -113,15 +111,15 @@ User Redirected to Dashboard
 
 #### Checkout Features
 
-- ✅ **Mobile-optimized** - Perfect on any device
+- âœ… **Mobile-optimized** - Perfect on any device
 
-- ✅ **Multiple payment methods** - Credit/debit cards,Apple Pay, Google Pay
+- âœ… **Multiple payment methods** - Credit/debit cards,Apple Pay, Google Pay
 
-- ✅ **Localized** - Available in 25+ languages
+- âœ… **Localized** - Available in 25+ languages
 
-- ✅ **Tax calculation** - Automatic tax computation
+- âœ… **Tax calculation** - Automatic tax computation
 
-- ✅ **Saved payment methods** - Quick checkout for returning users
+- âœ… **Saved payment methods** - Quick checkout for returning users
 
 #### Implementation
 
@@ -141,7 +139,6 @@ Response:
 {
   "checkout_url": "https://checkout.stripe.com/c/pay/cs_test_..."
 }
-
 
 ```
 
@@ -179,7 +176,6 @@ Response:
 {
   "portal_url": "https://billing.stripe.com/p/session/cs_..."
 }
-
 
 ```
 
@@ -233,7 +229,6 @@ Response:
 POST https://api.penguinmails.com/webhooks/stripe
 Header: stripe-signature: {signature}
 
-
 ```
 
 #### Handled Events
@@ -241,37 +236,27 @@ Header: stripe-signature: {signature}
 ```javascript
 // Subscription Events
 
-
 - customer.subscription.created
-
 
 - customer.subscription.updated
 
-
 - customer.subscription.deleted
-
 
 - customer.subscription.trial_will_end
 
 // Payment Events
 
-
 - invoice.paid
 
-
 - invoice.payment_failed
-
 
 - invoice.payment_action_required
 
 // Customer Events
 
-
 - customer.updated
 
-
 - customer.deleted
-
 
 ```
 
@@ -302,7 +287,6 @@ Header: stripe-signature: {signature}
 // 4. Send confirmation email
 // 5. Log event in audit trail
 
-
 ```
 
 ---
@@ -328,7 +312,6 @@ CREATE TABLE subscriptions (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
-
 
 ```
 
@@ -382,7 +365,6 @@ Response:
   ]
 }
 
-
 ```
 
 ---
@@ -413,17 +395,17 @@ NEXT_PUBLIC_APP_URL=https://app.penguinmails.com  # or http://localhost:3000 for
 
 - Sign up at [stripe.com](https://stripe.com)
 - Complete business verification (required for live mode)
-- Enable Customer Portal in Stripe Dashboard → Settings → Customer Portal
+- Enable Customer Portal in Stripe Dashboard â†’ Settings â†’ Customer Portal
 
 ## 2. Retrieve API Keys
 
-- Navigate to Stripe Dashboard → Developers → API keys
+- Navigate to Stripe Dashboard â†’ Developers â†’ API keys
 - Copy "Secret key" to `STRIPE_SECRET_KEY`
 - Copy "Publishable key" to `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 
 ## 3. Configure Webhooks
 
-- Go to Stripe Dashboard → Developers → Webhooks
+- Go to Stripe Dashboard â†’ Developers â†’ Webhooks
 - Click "Add endpoint"
 - Endpoint URL: `https://api.penguinmails.com/webhooks/stripe`
 - Select events to listen for:
@@ -459,13 +441,13 @@ stripe trigger checkout.session.completed
 
 **PenguinMails is PCI DSS compliant** by using Stripe.
 
-- ✅ **No card data stored** - Stripe handles all card info
+- âœ… **No card data stored** - Stripe handles all card info
 
-- ✅ **Tokenization** - Only store Stripe tokens
+- âœ… **Tokenization** - Only store Stripe tokens
 
-- ✅ **Secure transmission** - TLS 1.3 encryption
+- âœ… **Secure transmission** - TLS 1.3 encryption
 
-- ✅ **Annual audits** - Stripe maintains compliance
+- âœ… **Annual audits** - Stripe maintains compliance
 
 ### SCA (Strong Customer Authentication)
 
@@ -508,4 +490,5 @@ stripe trigger checkout.session.completed
 **Compliance:** PCI DSS Level 1, SCA compliant
 
 *All payments are processed securely by Stripe. PenguinMails never stores credit card information.*
+
 

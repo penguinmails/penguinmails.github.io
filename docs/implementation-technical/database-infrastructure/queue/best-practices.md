@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queue System Best Practices"
 description: "Queue System Best Practices - Performance and Reliability Guidelines"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "Engineering Teams"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and monitoring"
 ---
-
 
 # Queue System Best Practices
 
@@ -53,7 +49,6 @@ bad_job_payload = {
   user_data: full_user_profile_object
 }
 
-
 ```
 
 ### Database Optimization
@@ -76,7 +71,6 @@ WHERE status IN ('queued', 'migrated_to_redis');
 -- Status reporting and analytics
 CREATE INDEX idx_jobs_status_time
 ON jobs(status, updated_at DESC);
-
 
 ```
 
@@ -126,7 +120,6 @@ async function sendWelcomeEmail(job) {
   return { success: true, messageId: result.messageId }
 }
 
-
 ```
 
 ### Timeout Management
@@ -166,7 +159,6 @@ async function processJobWithTimeout(job) {
   }
 }
 
-
 ```
 
 ## Security Considerations
@@ -192,7 +184,6 @@ function validateJobPayload(payload) {
 
   return value
 }
-
 
 ```
 
@@ -229,7 +220,6 @@ class QueueMetrics {
   }
 }
 
-
 ```
 
 ## Error Handling
@@ -265,14 +255,13 @@ class JobErrorHandler {
       maxDelay
     )
 
-    // Add random jitter (±25%)
+    // Add random jitter (Â±25%)
     const jitter = exponentialDelay * 0.25
     const delay = exponentialDelay + (Math.random() - 0.5) * jitter * 2
 
     return Math.floor(delay)
   }
 }
-
 
 ```
 
@@ -283,7 +272,6 @@ class JobErrorHandler {
 ### Rolling Updates
 
 ```pseudo
-
 
 # Kubernetes rolling update strategy
 
@@ -298,7 +286,6 @@ spec:
       maxSurge: 1                    # Allow 1 extra worker during update
       maxUnavailable: 1              # Ensure at least N-1 workers available
 
-
 ```
 
 ## Conclusion
@@ -312,4 +299,5 @@ These best practices provide a foundation for building and operating a robust, s
 **Operations**: Proper deployment strategies, capacity planning, and error handling
 
 Following these guidelines will help ensure your queue system can handle production workloads reliably while remaining maintainable and observable.
+
 

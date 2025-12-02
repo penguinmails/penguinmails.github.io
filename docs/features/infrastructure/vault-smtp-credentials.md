@@ -1,4 +1,4 @@
----
+﻿---
 title: "SMTP Credentials Vault Storage"
 description: "Secure storage and management of MailU SMTP admin credentials in HashiCorp Vault with automated rotation and disaster recovery"
 last_modified_date: "2025-11-26"
@@ -6,7 +6,6 @@ level: "3"
 persona: "Infrastructure Teams, Security Teams"
 keywords: ["vault", "smtp", "credentials", "security", "mailu", "encryption", "rotation"]
 ---
-
 
 # SMTP Credentials Vault Storage
 
@@ -59,13 +58,12 @@ SMTP credentials are stored in Vault at the following path:
 ```text
 
 vault/smtp/{tenant_id}/admin/
-├── username          # MailU admin username
-├── password          # Encrypted password (AES-256-GCM)
-├── webmail_url       # MailU webmail URL (https://mail.example.com)
-├── created_at        # ISO 8601 timestamp
-├── last_rotated      # ISO 8601 timestamp
-└── rotation_policy   # "180_days"
-
+â”œâ”€â”€ username          # MailU admin username
+â”œâ”€â”€ password          # Encrypted password (AES-256-GCM)
+â”œâ”€â”€ webmail_url       # MailU webmail URL (https://mail.example.com)
+â”œâ”€â”€ created_at        # ISO 8601 timestamp
+â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
+â””â”€â”€ rotation_policy   # "180_days"
 
 ```
 
@@ -123,7 +121,6 @@ const authTag = cipher.getAuthTag();
 // Store: IV + authTag + encryptedPassword
 const storedValue = Buffer.concat([iv, authTag, encryptedPassword]).toString('base64');
 
-
 ```
 
 ## Credential Storage Workflow
@@ -151,7 +148,6 @@ sequenceDiagram
     Vault-->>Backend: Confirmation
     Backend->>Backend: Log Storage Event
     Backend-->>User: VPS Ready
-
 
 ```
 
@@ -246,7 +242,6 @@ sequenceDiagram
     UI->>Admin: Display Credentials (15-min timeout)
     Note over UI,Admin: Credentials auto-hidden after 15 minutes
 
-
 ```
 
 **Implementation:**
@@ -297,7 +292,6 @@ async function retrieveSmtpCredentials(
     expires_at: new Date(Date.now() + 15 * 60 * 1000) // 15 minutes
   };
 }
-
 
 ```
 
@@ -417,7 +411,6 @@ sequenceDiagram
         RotationService->>RotationService: Skip Rotation
     end
 
-
 ```
 
 **Implementation:**
@@ -489,7 +482,6 @@ async function rotateSmtpCredentials(tenantId: string): Promise<void> {
   await sendRotationCompletedNotification(tenantId);
 }
 
-
 ```
 
 ### Manual Rotation
@@ -535,7 +527,6 @@ async function manualRotateSmtpCredentials(
   });
 }
 
-
 ```
 
 **UI Component:**
@@ -552,7 +543,6 @@ async function manualRotateSmtpCredentials(
 >
   Rotate Credentials Now
 </Button>
-
 
 ```
 
@@ -587,7 +577,6 @@ sequenceDiagram
     Backend->>AuditLog: Log Emergency Reset
     Backend->>Notification: Alert Security Team
     Backend-->>Admin: Reset Complete
-
 
 ```
 
@@ -671,7 +660,6 @@ async function emergencyResetSmtpCredentials(
   };
 }
 
-
 ```
 
 **UI Component:**
@@ -691,7 +679,6 @@ async function emergencyResetSmtpCredentials(
 >
   Emergency Reset
 </Button>
-
 
 ```
 
@@ -735,7 +722,6 @@ interface SmtpCredentialAuditEvent {
   };
 }
 
-
 ```
 
 **Audit Log Query Examples:**
@@ -767,7 +753,6 @@ const adminOperations = await auditLog.query({
   order_by: 'timestamp DESC',
   limit: 100
 });
-
 
 ```
 
@@ -825,7 +810,6 @@ async function monitorSmtpCredentialAccess(): Promise<void> {
   }
 }
 
-
 ```
 
 ## Disaster Recovery Procedures
@@ -855,7 +839,6 @@ sequenceDiagram
     Backend->>Backend: Update DNS Records
     Backend-->>Admin: VPS Restored
     Note over Admin,Backend: RTO: 1 hour, RPO: 0 (no data loss)
-
 
 ```
 
@@ -898,7 +881,6 @@ async function recoverSmtpCredentialsToNewVps(
     }
   });
 }
-
 
 ```
 
@@ -961,7 +943,6 @@ async function restoreVaultFromBackup(
   });
 }
 
-
 ```
 
 **Recovery Time Objective (RTO):** 30 minutes
@@ -1021,7 +1002,6 @@ async function respondToCredentialCompromise(
   });
 }
 
-
 ```
 
 **Response Time:** Immediate (< 5 minutes)
@@ -1040,7 +1020,6 @@ GET /tenants/{tenant_id}/smtp-credentials
 Authorization: Bearer {admin_token}
 X-Reauth-Token: {reauth_token}
 
-
 ```
 
 **Response:**
@@ -1056,7 +1035,6 @@ X-Reauth-Token: {reauth_token}
   "expires_at": "2025-11-26T10:15:00Z"
 }
 
-
 ```
 
 #### Rotate SMTP Credentials
@@ -1070,7 +1048,6 @@ Content-Type: application/json
   "reason": "Manual rotation for security audit"
 }
 
-
 ```
 
 **Response:**
@@ -1081,7 +1058,6 @@ Content-Type: application/json
   "rotated_at": "2025-11-26T10:00:00Z",
   "next_rotation": "2026-05-26T10:00:00Z"
 }
-
 
 ```
 
@@ -1097,7 +1073,6 @@ Content-Type: application/json
   "reason": "Suspected credential compromise"
 }
 
-
 ```
 
 **Response:**
@@ -1112,7 +1087,6 @@ Content-Type: application/json
   "incident_id": "INC-2025-001"
 }
 
-
 ```
 
 #### Get Audit Trail
@@ -1120,7 +1094,6 @@ Content-Type: application/json
 ```http
 GET /tenants/{tenant_id}/smtp-credentials/audit
 Authorization: Bearer {admin_token}
-
 
 ```
 
@@ -1152,7 +1125,6 @@ Authorization: Bearer {admin_token}
   "page": 1,
   "per_page": 50
 }
-
 
 ```
 
@@ -1424,4 +1396,5 @@ Authorization: Bearer {admin_token}
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive guidance for implementing secure SMTP credential storage in HashiCorp Vault with automated rotation, emergency reset, and disaster recovery capabilities.*
+
 

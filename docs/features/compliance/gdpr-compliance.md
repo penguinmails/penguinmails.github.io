@@ -1,4 +1,4 @@
----
+﻿---
 title: "GDPR Compliance"
 description: "EU data protection compliance for PenguinMails - GDPR requirements and implementation"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Compliance Officers, Legal Teams"
 status: "ACTIVE"
 category: "Compliance"
 ---
-
 
 # GDPR Compliance
 
@@ -257,7 +256,6 @@ Retention Policies:
     Transaction records: 7 years (tax compliance)
     Card data: Never stored (Stripe handles)
 
-
 ```
 
 #### Retention Enforcement
@@ -435,4 +433,5 @@ Retention Policies:
 **Regulatory Changes:** Monitor EU data protection developments
 
 *PenguinMails is committed to maintaining GDPR compliance and protecting user privacy. This documentation is regularly updated to reflect current regulations and best practices.*
+
 

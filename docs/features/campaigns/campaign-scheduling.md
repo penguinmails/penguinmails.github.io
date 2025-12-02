@@ -1,4 +1,4 @@
----
+﻿---
 title: "Campaign Scheduling"
 description: "Advanced campaign scheduling with timezone handling, send-time optimization, and calendar integration"
 level: "2"
@@ -7,20 +7,15 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - campaigns/campaign-management/overview
 
-
   - campaigns/ab-testing
-
 
   - leads/contact-segmentation
 related_tasks:
 
-
   - epic-6-core-email-pipeline
 ---
-
 
 # Campaign Scheduling
 
@@ -54,21 +49,20 @@ Campaign Scheduling enables precise control over when your emails are sent, with
 
 ```text
 
-Campaign Builder → Schedule Tab
+Campaign Builder â†’ Schedule Tab
 
-┌─────────────────────────────────────────────────────┐
-│ When should this campaign be sent?                  │
-│                                                     │
-│ ○ Send immediately                                  │
-│ ● Schedule for later                                │
-│                                                     │
-│ Date: [Nov 26, 2025 ▼]                             │
-│ Time: [09:00 AM ▼]                                  │
-│ Timezone: [America/New_York ▼]                      │
-│                                                     │
-│ Preview: Sends on Monday, Nov 26 at 9:00 AM EST     │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ When should this campaign be sent?                  â”‚
+â”‚                                                     â”‚
+â”‚ â—‹ Send immediately                                  â”‚
+â”‚ â— Schedule for later                                â”‚
+â”‚                                                     â”‚
+â”‚ Date: [Nov 26, 2025 â–¼]                             â”‚
+â”‚ Time: [09:00 AM â–¼]                                  â”‚
+â”‚ Timezone: [America/New_York â–¼]                      â”‚
+â”‚                                                     â”‚
+â”‚ Preview: Sends on Monday, Nov 26 at 9:00 AM EST     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -83,15 +77,11 @@ All contacts receive email at:
 
 Example:
 
-
 - Contact in New York: 9:00 AM EST
-
 
 - Contact in Los Angeles: 6:00 AM PST
 
-
 - Contact in London: 2:00 PM GMT
-
 
 ```
 
@@ -104,15 +94,11 @@ Each contact receives email at their local time:
 
 Example:
 
-
 - Contact in New York: 9:00 AM EST
-
 
 - Contact in Los Angeles: 9:00 AM PST
 
-
 - Contact in London: 9:00 AM GMT
-
 
 ```
 
@@ -122,22 +108,21 @@ Example:
 
 ```text
 
-┌─────────────────────────────────────────────────────┐
-│ Business Hours Settings                             │
-│                                                     │
-│ ☑ Only send during business hours                   │
-│                                                     │
-│ Business Hours:                                     │
-│ Monday-Friday: 9:00 AM - 5:00 PM                    │
-│                                                     │
-│ ☑ Skip weekends                                     │
-│ ☑ Skip holidays (US calendar)                       │
-│                                                     │
-│ If outside business hours:                          │
-│ ● Delay until next business day                     │
-│ ○ Send anyway                                       │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Business Hours Settings                             â”‚
+â”‚                                                     â”‚
+â”‚ â˜‘ Only send during business hours                   â”‚
+â”‚                                                     â”‚
+â”‚ Business Hours:                                     â”‚
+â”‚ Monday-Friday: 9:00 AM - 5:00 PM                    â”‚
+â”‚                                                     â”‚
+â”‚ â˜‘ Skip weekends                                     â”‚
+â”‚ â˜‘ Skip holidays (US calendar)                       â”‚
+â”‚                                                     â”‚
+â”‚ If outside business hours:                          â”‚
+â”‚ â— Delay until next business day                     â”‚
+â”‚ â—‹ Send anyway                                       â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -150,7 +135,6 @@ Actual Send: Monday, Nov 25 at 9:00 AM
 
 (Delayed to next business day)
 
-
 ```
 
 ### Recurring Campaigns
@@ -160,30 +144,26 @@ Actual Send: Monday, Nov 25 at 9:00 AM
 ```text
 
 Recurrence Pattern:
-┌─────────────────────────────────────────────────────┐
-│ Frequency: ● Daily                                  │
-│                                                     │
-│ Send at: 8:00 AM                                    │
-│ Timezone: Recipient's local time                    │
-│                                                     │
-│ Days: ☑ Mon ☑ Tue ☑ Wed ☑ Thu ☑ Fri                │
-│       ☐ Sat ☐ Sun                                   │
-│                                                     │
-│ Start: Nov 25, 2025                                 │
-│ End: ○ Never  ● After 30 occurrences                │
-└─────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Frequency: â— Daily                                  â”‚
+â”‚                                                     â”‚
+â”‚ Send at: 8:00 AM                                    â”‚
+â”‚ Timezone: Recipient's local time                    â”‚
+â”‚                                                     â”‚
+â”‚ Days: â˜‘ Mon â˜‘ Tue â˜‘ Wed â˜‘ Thu â˜‘ Fri                â”‚
+â”‚       â˜ Sat â˜ Sun                                   â”‚
+â”‚                                                     â”‚
+â”‚ Start: Nov 25, 2025                                 â”‚
+â”‚ End: â—‹ Never  â— After 30 occurrences                â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Preview:
 
-
 - First send: Monday, Nov 25 at 8:00 AM
-
 
 - Next 5 sends: Nov 26, 27, 28, 29, Dec 2
 
-
 - Total sends: 30 (weekdays only)
-
 
 ```
 
@@ -192,26 +172,23 @@ Preview:
 ```text
 
 Recurrence Pattern:
-┌─────────────────────────────────────────────────────┐
-│ Frequency: ● Weekly                                 │
-│                                                     │
-│ Send every: [1] week(s) on:                         │
-│ ☐ Mon ☐ Tue ☐ Wed ☐ Thu ☑ Fri ☐ Sat ☐ Sun         │
-│                                                     │
-│ Send at: 10:00 AM EST                               │
-│                                                     │
-│ Start: Nov 29, 2025                                 │
-│ End: ○ Never  ● On date: Dec 31, 2025              │
-└─────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Frequency: â— Weekly                                 â”‚
+â”‚                                                     â”‚
+â”‚ Send every: [1] week(s) on:                         â”‚
+â”‚ â˜ Mon â˜ Tue â˜ Wed â˜ Thu â˜‘ Fri â˜ Sat â˜ Sun         â”‚
+â”‚                                                     â”‚
+â”‚ Send at: 10:00 AM EST                               â”‚
+â”‚                                                     â”‚
+â”‚ Start: Nov 29, 2025                                 â”‚
+â”‚ End: â—‹ Never  â— On date: Dec 31, 2025              â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Preview:
 
-
 - Sends every Friday at 10:00 AM
 
-
 - Next 3 sends: Nov 29, Dec 6, Dec 13
-
 
 ```
 
@@ -222,15 +199,14 @@ Preview:
 ```text
 
 Common Patterns:
-┌─────────────────────────────────────────────────────┐
-│ 📅 Morning Blast (9 AM, recipient timezone)         │
-│ 🌆 Afternoon Update (2 PM, recipient timezone)      │
-│ 📰 Daily Newsletter (8 AM, weekdays only)           │
-│ 📊 Weekly Report (Friday 10 AM)                     │
-│ 📅 Monthly Update (1st of month, 9 AM)              │
-│ 🎯 Optimal Time (AI-powered, per contact)           │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ“… Morning Blast (9 AM, recipient timezone)         â”‚
+â”‚ ðŸŒ† Afternoon Update (2 PM, recipient timezone)      â”‚
+â”‚ ðŸ“° Daily Newsletter (8 AM, weekdays only)           â”‚
+â”‚ ðŸ“Š Weekly Report (Friday 10 AM)                     â”‚
+â”‚ ðŸ“… Monthly Update (1st of month, 9 AM)              â”‚
+â”‚ ðŸŽ¯ Optimal Time (AI-powered, per contact)           â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -248,20 +224,15 @@ Common Patterns:
 
 For each contact, analyze:
 
-
 1. Historical open times (when they opened past emails)
-
 
 2. Historical click times (when they clicked links)
 
-
 3. Industry benchmarks (typical engagement times)
-
 
 4. Day-of-week patterns (best days for this contact)
 
 Result: Personalized send time for maximum engagement
-
 
 ```
 
@@ -274,15 +245,11 @@ send_time_optimization:
 
   data_sources:
 
-
     - historical_opens: weight 40%
-
 
     - historical_clicks: weight 30%
 
-
     - industry_benchmarks: weight 20%
-
 
     - day_patterns: weight 10%
 
@@ -293,7 +260,6 @@ send_time_optimization:
       start: "06:00"
       end: "20:00"
     respect_business_hours: true
-
 
 ```
 
@@ -311,7 +277,6 @@ Contact B (Executive):
 
 Contact C (No history):
   Fallback: Industry benchmark (9:00 AM)
-
 
 ```
 
@@ -335,23 +300,17 @@ timezone_strategy:
 
   regions:
 
-
     - name: "APAC"
       timezones: ["Pacific/Auckland", "Australia/Sydney", "Asia/Tokyo"]
       send_time: "09:00 local"
-
-
 
     - name: "EMEA"
       timezones: ["Europe/London", "Europe/Paris", "Europe/Moscow"]
       send_time: "09:00 local"
 
-
-
     - name: "Americas"
       timezones: ["America/New_York", "America/Chicago", "America/Los_Angeles"]
       send_time: "09:00 local"
-
 
 ```
 
@@ -360,16 +319,15 @@ timezone_strategy:
 ```text
 
 Global Campaign Rollout:
-09:00 NZDT (Auckland)    → Nov 25, 9:00 AM
-09:00 AEDT (Sydney)      → Nov 25, 9:00 AM (1 hr later)
-09:00 JST (Tokyo)        → Nov 25, 9:00 AM (2 hrs later)
-09:00 GMT (London)       → Nov 25, 9:00 AM (9 hrs later)
-09:00 EST (New York)     → Nov 25, 9:00 AM (14 hrs later)
-09:00 PST (Los Angeles)  → Nov 25, 9:00 AM (17 hrs later)
+09:00 NZDT (Auckland)    â†’ Nov 25, 9:00 AM
+09:00 AEDT (Sydney)      â†’ Nov 25, 9:00 AM (1 hr later)
+09:00 JST (Tokyo)        â†’ Nov 25, 9:00 AM (2 hrs later)
+09:00 GMT (London)       â†’ Nov 25, 9:00 AM (9 hrs later)
+09:00 EST (New York)     â†’ Nov 25, 9:00 AM (14 hrs later)
+09:00 PST (Los Angeles)  â†’ Nov 25, 9:00 AM (17 hrs later)
 
 Total rollout window: 17 hours
 All contacts receive at their local 9 AM
-
 
 ```
 
@@ -391,7 +349,6 @@ dst_handling:
       action: "advance_1_hour"
       reason: "Avoid duplicate sends"
 
-
 ```
 
 **Example:**
@@ -405,7 +362,6 @@ Before DST: 9:00 AM EST (UTC-5)
 After DST:  9:00 AM EDT (UTC-4)
 
 System automatically adjusts to maintain 9:00 AM local time
-
 
 ```
 
@@ -422,23 +378,17 @@ calendar_integration:
 
   trigger_rules:
 
-
     - event_type: "webinar"
       campaign_template: "webinar_reminder"
       send_before: "1 hour"
-
-
 
     - event_type: "meeting"
       campaign_template: "meeting_followup"
       send_after: "2 hours"
 
-
-
     - event_type: "product_launch"
       campaign_template: "launch_announcement"
       send_at: "event_start"
-
 
 ```
 
@@ -452,18 +402,13 @@ Google Calendar Event Created:
 
 Automatic Campaign Triggers:
 
-
   1. Reminder email: Dec 1 at 1:00 PM (1 hour before)
-
 
   2. Join link email: Dec 1 at 1:55 PM (5 min before)
 
-
   3. Follow-up email: Dec 1 at 4:00 PM (2 hours after)
 
-
   4. Recording email: Dec 2 at 9:00 AM (next day)
-
 
 ```
 
@@ -477,14 +422,11 @@ outlook_integration:
 
   sync_calendars:
 
-
     - "Sales Team Calendar"
-
 
     - "Marketing Events"
 
   automation_rules:
-
 
     - calendar: "Sales Team Calendar"
       event_contains: "Demo"
@@ -492,14 +434,11 @@ outlook_integration:
         send_campaign: "demo_followup"
         delay: "1 day"
 
-
-
     - calendar: "Marketing Events"
       event_contains: "Conference"
       action:
         send_campaign: "conference_recap"
         delay: "3 days"
-
 
 ```
 
@@ -512,27 +451,27 @@ outlook_integration:
 ```text
 
 Batch Scheduler:
-┌─────────────────────────────────────────────────────┐
-│ Selected Campaigns: 5                               │
-│                                                     │
-│ ☑ Welcome Series                                    │
-│ ☑ Product Update                                    │
-│ ☑ Feature Announcement                              │
-│ ☑ Customer Survey                                   │
-│ ☑ Re-engagement Campaign                            │
-│                                                     │
-│ Schedule Pattern:                                   │
-│ ● Stagger sends (recommended)                       │
-│   Interval: [2] hours between campaigns             │
-│   Start: Nov 25, 9:00 AM                            │
-│                                                     │
-│ ○ Send all at once                                  │
-│   Time: Nov 25, 9:00 AM                             │
-│                                                     │
-│ Conflict Resolution:                                │
-│ ● Skip contacts in multiple campaigns               │
-│ ○ Send to all (may receive multiple emails)         │
-└─────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Selected Campaigns: 5                               â”‚
+â”‚                                                     â”‚
+â”‚ â˜‘ Welcome Series                                    â”‚
+â”‚ â˜‘ Product Update                                    â”‚
+â”‚ â˜‘ Feature Announcement                              â”‚
+â”‚ â˜‘ Customer Survey                                   â”‚
+â”‚ â˜‘ Re-engagement Campaign                            â”‚
+â”‚                                                     â”‚
+â”‚ Schedule Pattern:                                   â”‚
+â”‚ â— Stagger sends (recommended)                       â”‚
+â”‚   Interval: [2] hours between campaigns             â”‚
+â”‚   Start: Nov 25, 9:00 AM                            â”‚
+â”‚                                                     â”‚
+â”‚ â—‹ Send all at once                                  â”‚
+â”‚   Time: Nov 25, 9:00 AM                             â”‚
+â”‚                                                     â”‚
+â”‚ Conflict Resolution:                                â”‚
+â”‚ â— Skip contacts in multiple campaigns               â”‚
+â”‚ â—‹ Send to all (may receive multiple emails)         â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Preview:
 Campaign 1: Nov 25, 9:00 AM
@@ -540,7 +479,6 @@ Campaign 2: Nov 25, 11:00 AM
 Campaign 3: Nov 25, 1:00 PM
 Campaign 4: Nov 25, 3:00 PM
 Campaign 5: Nov 25, 5:00 PM
-
 
 ```
 
@@ -564,7 +502,6 @@ interface ConflictResolution {
   };
 }
 
-
 ```
 
 **Example:**
@@ -573,24 +510,20 @@ interface ConflictResolution {
 
 Contact receives:
 
-
 - Campaign A (Priority: High) at 9:00 AM
 
-
 - Campaign B (Priority: Medium) scheduled 11:00 AM
-
 
 - Campaign C (Priority: Low) scheduled 2:00 PM
 
 Conflict Resolution:
-✓ Campaign A: Sent at 9:00 AM (high priority)
-⏸ Campaign B: Delayed to 1:00 PM (4hr minimum gap)
-⏸ Campaign C: Delayed to next day (max 2/day limit)
+âœ“ Campaign A: Sent at 9:00 AM (high priority)
+â¸ Campaign B: Delayed to 1:00 PM (4hr minimum gap)
+â¸ Campaign C: Delayed to next day (max 2/day limit)
 
 Result:
 Nov 25: Campaign A (9 AM), Campaign B (1 PM)
 Nov 26: Campaign C (9 AM)
-
 
 ```
 
@@ -602,19 +535,15 @@ Nov 26: Campaign C (9 AM)
 blackout_dates:
   # US Holidays
 
-
   - date: "2025-12-25"
     name: "Christmas Day"
     action: "delay_to_next_business_day"
-
-
 
   - date: "2025-01-01"
     name: "New Year's Day"
     action: "delay_to_next_business_day"
 
   # Company blackouts
-
 
   - date_range:
       start: "2025-12-24"
@@ -624,11 +553,9 @@ blackout_dates:
 
   # Industry events
 
-
   - date: "2025-11-28"
     name: "Black Friday"
     action: "allow"  # Override, send anyway
-
 
 ```
 
@@ -637,21 +564,20 @@ blackout_dates:
 ```text
 
 Holiday Calendar: US Federal + Company
-┌─────────────────────────────────────────────────────┐
-│ ☑ New Year's Day                                    │
-│ ☑ Martin Luther King Jr. Day                        │
-│ ☑ Presidents Day                                    │
-│ ☑ Memorial Day                                      │
-│ ☑ Independence Day                                  │
-│ ☑ Labor Day                                         │
-│ ☑ Thanksgiving                                      │
-│ ☑ Christmas                                         │
-│                                                     │
-│ Custom Dates:                                       │
-│ + Company Anniversary (June 15)                     │
-│ + Annual Conference (Oct 10-12)                     │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ â˜‘ New Year's Day                                    â”‚
+â”‚ â˜‘ Martin Luther King Jr. Day                        â”‚
+â”‚ â˜‘ Presidents Day                                    â”‚
+â”‚ â˜‘ Memorial Day                                      â”‚
+â”‚ â˜‘ Independence Day                                  â”‚
+â”‚ â˜‘ Labor Day                                         â”‚
+â”‚ â˜‘ Thanksgiving                                      â”‚
+â”‚ â˜‘ Christmas                                         â”‚
+â”‚                                                     â”‚
+â”‚ Custom Dates:                                       â”‚
+â”‚ + Company Anniversary (June 15)                     â”‚
+â”‚ + Annual Conference (Oct 10-12)                     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -810,7 +736,6 @@ CREATE TABLE contact_send_preferences (
 
 CREATE INDEX idx_contact_send_prefs_contact ON contact_send_preferences(contact_id);
 
-
 ```
 
 ### Scheduling Service
@@ -843,7 +768,6 @@ interface RecurrencePattern {
 
 class CampaignSchedulingService {
   /**
-
 
    * Calculate next send time for a campaign
    */
@@ -889,7 +813,6 @@ class CampaignSchedulingService {
 
   /**
 
-
    * Calculate optimal send time based on contact behavior
    */
   private async calculateOptimalSendTime(contact: Contact): Promise<Date> {
@@ -927,7 +850,6 @@ class CampaignSchedulingService {
 
   /**
 
-
    * Adjust send time for recipient's timezone
    */
   private adjustForRecipientTimezone(
@@ -946,7 +868,6 @@ class CampaignSchedulingService {
   }
 
   /**
-
 
    * Enforce business hours constraints
    */
@@ -989,7 +910,6 @@ class CampaignSchedulingService {
 
   /**
 
-
    * Check and handle blackout dates
    */
   private async checkBlackoutDates(
@@ -1017,7 +937,6 @@ class CampaignSchedulingService {
   }
 
   /**
-
 
    * Calculate next occurrence for recurring campaign
    */
@@ -1057,7 +976,6 @@ class CampaignSchedulingService {
     return nextSend;
   }
 }
-
 
 ```
 
@@ -1156,7 +1074,6 @@ cron.schedule('0 3 * * *', async () => {  // 3 AM daily
   logger.info('Contact send preferences updated');
 });
 
-
 ```
 
 ### API Endpoints
@@ -1234,7 +1151,6 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
   res.json({ previews });
 });
 
-
 ```
 
 ---
@@ -1267,4 +1183,5 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 **Status:** Planned - High Priority Q1 2026 Feature
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+
 

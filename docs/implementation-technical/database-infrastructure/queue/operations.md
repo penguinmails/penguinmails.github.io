@@ -1,4 +1,4 @@
----
+﻿---
 title: "Operations & Monitoring"
 description: "Operations & Monitoring - Deployment and Health Monitoring"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "DevOps Engineers"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Workers](/docs/implementation-technical/database-infrastructure/queue/workers) - Background job processing"
 ---
-
 
 # Operations & Monitoring
 
@@ -31,7 +27,6 @@ The queue system uses a multi-container architecture with distinct services for 
 
 ```yaml
 
-
 # docker-compose.queue.yml (Simplified Configuration)
 
 version: '3.8'
@@ -41,10 +36,8 @@ services:
     image: redis:7-alpine
     ports:
 
-
       - "6379:6379"
     volumes:
-
 
       - redis_data:/data
     command: >
@@ -64,19 +57,14 @@ services:
       dockerfile: Dockerfile.queuer
     environment:
 
-
       - DATABASE_URL=${DATABASE_URL}
 
-
       - REDIS_URL=redis://redis:6379
-
 
       - NODE_ENV=production
     depends_on:
 
-
       - redis
-
 
       - postgres
     restart: unless-stopped
@@ -89,22 +77,16 @@ services:
       dockerfile: Dockerfile.worker
     environment:
 
-
       - DATABASE_URL=${DATABASE_URL}
-
 
       - REDIS_URL=redis://redis:6379
 
-
       - NODE_ENV=production
-
 
       - WORKER_ID=${WORKER_ID}
     depends_on:
 
-
       - redis
-
 
       - postgres
     restart: unless-stopped
@@ -113,7 +95,6 @@ services:
 
 volumes:
   redis_data:
-
 
 ```
 
@@ -155,7 +136,6 @@ class QueueHealthMonitor {
   }
 }
 
-
 ```
 
 ## Operational Procedures
@@ -185,7 +165,6 @@ class DisasterRecovery {
   }
 }
 
-
 ```
 
 ## Performance Monitoring
@@ -205,7 +184,6 @@ class PerformanceMonitor {
     }
   }
 }
-
 
 ```
 
@@ -243,7 +221,6 @@ class AutoScaler {
   }
 }
 
-
 ```
 
 ## Conclusion
@@ -263,4 +240,5 @@ Operations management ensures:
 - **Observability**: Detailed logging and metrics for troubleshooting
 
 This operational framework provides the foundation for running a production-ready queue system that can handle varying workloads while maintaining system reliability and performance.
+
 

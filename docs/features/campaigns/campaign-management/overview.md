@@ -1,4 +1,4 @@
----
+﻿---
 title: "Campaign Management"
 description: "Create, schedule, and optimize multi-step email campaigns with advanced sequencing, A/B testing, and personalization"
 level: "2"
@@ -7,29 +7,21 @@ roadmap_timeline: "Q1 2026"
 priority: "Critical"
 related_features:
 
-
   - campaigns/ab-testing
-
 
   - campaigns/personalization-system
 
-
   - templates/template-management
 
-
   - leads/contact-segmentation
-
 
   - analytics/core-analytics/overview
 related_tasks:
 
-
   - epic-6-core-email-pipeline
-
 
   - epic-7-leads-management
 ---
-
 
 # Campaign Management
 
@@ -63,16 +55,15 @@ Campaign Management is the core revenue-generating feature of PenguinMails, enab
 
 ```text
 
-Dashboard → Campaigns → Create New Campaign
+Dashboard â†’ Campaigns â†’ Create New Campaign
 
 Campaign Setup:
-┌─────────────────────────────────────────────────────┐
-│ Campaign Name: "Welcome Series"                     │
-│ Campaign Type: ☑ Drip Campaign                      │
-│ Target Audience: Select segment (500 contacts)      │
-│ From Address: sales@yourcompany.com                 │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Campaign Name: "Welcome Series"                     â”‚
+â”‚ Campaign Type: â˜‘ Drip Campaign                      â”‚
+â”‚ Target Audience: Select segment (500 contacts)      â”‚
+â”‚ From Address: sales@yourcompany.com                 â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -83,11 +74,10 @@ Campaign Setup:
 ```text
 
 Email 1: Welcome Email (Send immediately)
-  ↓ Wait 2 days
+  â†“ Wait 2 days
 Email 2: Product Overview (Send 2 days after signup)
-  ↓ Wait 3 days
+  â†“ Wait 3 days
 Email 3: Special Offer (Send 5 days after signup)
-
 
 ```
 
@@ -95,40 +85,39 @@ Email 3: Special Offer (Send 5 days after signup)
 
 ```text
 
-┌──────────────────────────────────────────────────┐
-│ Sequence Builder                                 │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  [START]                                         │
-│     │                                            │
-│     ▼                                            │
-│  ┌─────────────────────┐                        │
-│  │ Email 1: Welcome    │                        │
-│  │ Subject: Welcome!   │                        │
-│  │ Template: Welcome   │                        │
-│  └─────────────────────┘                        │
-│     │                                            │
-│     │ ⏱ Wait 2 days                             │
-│     ▼                                            │
-│  ┌─────────────────────┐                        │
-│  │ Email 2: Overview   │                        │
-│  │ Subject: Features   │                        │
-│  │ Template: Product   │                        │
-│  └─────────────────────┘                        │
-│     │                                            │
-│     │ ⏱ Wait 3 days                             │
-│     ▼                                            │
-│  ┌─────────────────────┐                        │
-│  │ Email 3: Offer      │                        │
-│  │ Subject: 20% Off    │                        │
-│  │ Template: Promo     │                        │
-│  └─────────────────────┘                        │
-│     │                                            │
-│     ▼                                            │
-│  [END]                                           │
-│                                                  │
-└──────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Sequence Builder                                 â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚                                                  â”‚
+â”‚  [START]                                         â”‚
+â”‚     â”‚                                            â”‚
+â”‚     â–¼                                            â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                        â”‚
+â”‚  â”‚ Email 1: Welcome    â”‚                        â”‚
+â”‚  â”‚ Subject: Welcome!   â”‚                        â”‚
+â”‚  â”‚ Template: Welcome   â”‚                        â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                        â”‚
+â”‚     â”‚                                            â”‚
+â”‚     â”‚ â± Wait 2 days                             â”‚
+â”‚     â–¼                                            â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                        â”‚
+â”‚  â”‚ Email 2: Overview   â”‚                        â”‚
+â”‚  â”‚ Subject: Features   â”‚                        â”‚
+â”‚  â”‚ Template: Product   â”‚                        â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                        â”‚
+â”‚     â”‚                                            â”‚
+â”‚     â”‚ â± Wait 3 days                             â”‚
+â”‚     â–¼                                            â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”                        â”‚
+â”‚  â”‚ Email 3: Offer      â”‚                        â”‚
+â”‚  â”‚ Subject: 20% Off    â”‚                        â”‚
+â”‚  â”‚ Template: Promo     â”‚                        â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜                        â”‚
+â”‚     â”‚                                            â”‚
+â”‚     â–¼                                            â”‚
+â”‚  [END]                                           â”‚
+â”‚                                                  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -143,20 +132,16 @@ Preview Text: Thanks for signing up, {{firstName}}
 
 Template: Select from library or create new
 
-
   - Welcome Email Template
 
-
   - Getting Started Template
-
 
   - Custom Template
 
 Personalization:
-  ☑ Use contact first name
-  ☑ Include company name
-  ☑ Add custom fields
-
+  â˜‘ Use contact first name
+  â˜‘ Include company name
+  â˜‘ Add custom fields
 
 ```
 
@@ -167,15 +152,14 @@ Personalization:
 ```text
 
 Campaign Review:
-✓ Audience: 500 contacts selected
-✓ Sequence: 3 emails configured
-✓ Templates: All emails have content
-✓ Personalization: Variables validated
-✓ Schedule: Ready to launch
-✓ From Address: Verified and warmed
+âœ“ Audience: 500 contacts selected
+âœ“ Sequence: 3 emails configured
+âœ“ Templates: All emails have content
+âœ“ Personalization: Variables validated
+âœ“ Schedule: Ready to launch
+âœ“ From Address: Verified and warmed
 
 [Preview Campaign] [Send Test Email] [Launch Campaign]
-
 
 ```
 
@@ -189,17 +173,16 @@ Campaign: Welcome Series
 Status: Active | Started: Nov 25, 2025
 
 Overall Performance:
-┌─────────────────────────────────────────────────────┐
-│ Sent: 500 | Delivered: 485 (97%)                    │
-│ Opens: 242 (50%) | Clicks: 97 (20%)                 │
-│ Replies: 23 (4.7%) | Unsubscribes: 2 (0.4%)         │
-└─────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Sent: 500 | Delivered: 485 (97%)                    â”‚
+â”‚ Opens: 242 (50%) | Clicks: 97 (20%)                 â”‚
+â”‚ Replies: 23 (4.7%) | Unsubscribes: 2 (0.4%)         â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 Step Performance:
 Email 1: 500 sent | 50% open | 20% click
 Email 2: 350 sent | 45% open | 18% click
 Email 3: 200 sent | 40% open | 15% click
-
 
 ```
 
@@ -213,21 +196,16 @@ Send a single email to your entire list or segment:
 
 Use Cases:
 
-
 - Product announcements
-
 
 - Newsletter broadcasts
 
-
 - Event invitations
-
 
 - Special promotions
 
 Setup Time: 5 minutes
 Best For: Time-sensitive announcements
-
 
 ```
 
@@ -239,21 +217,16 @@ Automated sequence delivered over time:
 
 Use Cases:
 
-
 - Welcome series (3-5 emails)
-
 
 - Onboarding sequences (5-10 emails)
 
-
 - Educational content series
-
 
 - Lead nurturing campaigns
 
 Setup Time: 15-30 minutes
 Best For: Relationship building
-
 
 ```
 
@@ -265,24 +238,18 @@ Event-based campaigns that start automatically:
 
 Triggers:
 
-
 - Contact signup
-
 
 - Form submission
 
-
 - Purchase completion
 
-
 - Abandoned cart
-
 
 - Custom events
 
 Setup Time: 20-40 minutes
 Best For: Behavioral automation
-
 
 ```
 
@@ -294,21 +261,16 @@ Compare variations to optimize performance:
 
 Test Elements:
 
-
 - Subject lines
-
 
 - Email content
 
-
 - Send times
-
 
 - Sender names
 
 Setup Time: 10-20 minutes
 Best For: Performance optimization
-
 
 ```
 
@@ -325,31 +287,30 @@ Best For: Performance optimization
 ```text
 
 START
-  │
-  ▼
+  â”‚
+  â–¼
 Email 1: Introduction (Day 0)
-  │
-  ├─ Opened? ──YES──▶ Email 2A: Engaged Path (Day 2)
-  │                      │
-  └─ NO ──▶ Email 2B: Re-engagement (Day 3)
-                │
-                ▼
+  â”‚
+  â”œâ”€ Opened? â”€â”€YESâ”€â”€â–¶ Email 2A: Engaged Path (Day 2)
+  â”‚                      â”‚
+  â””â”€ NO â”€â”€â–¶ Email 2B: Re-engagement (Day 3)
+                â”‚
+                â–¼
             Email 3: Value Proposition (Day 5)
-                │
-                ├─ Clicked? ──YES──▶ Email 4A: Demo Offer (Day 7)
-                │                       │
-                └─ NO ──▶ Email 4B: Case Study (Day 8)
-                            │
-                            ▼
+                â”‚
+                â”œâ”€ Clicked? â”€â”€YESâ”€â”€â–¶ Email 4A: Demo Offer (Day 7)
+                â”‚                       â”‚
+                â””â”€ NO â”€â”€â–¶ Email 4B: Case Study (Day 8)
+                            â”‚
+                            â–¼
                         Email 5: Social Proof (Day 10)
-                            │
-                            ├─ Replied? ──YES──▶ [Move to Sales]
-                            │
-                            └─ NO ──▶ Email 6: Final Offer (Day 14)
-                                        │
-                                        ▼
+                            â”‚
+                            â”œâ”€ Replied? â”€â”€YESâ”€â”€â–¶ [Move to Sales]
+                            â”‚
+                            â””â”€ NO â”€â”€â–¶ Email 6: Final Offer (Day 14)
+                                        â”‚
+                                        â–¼
                                     [END or Re-engage]
-
 
 ```
 
@@ -364,26 +325,18 @@ sequence_step:
 
   conditions:
 
-
     - if: email_opened
       then: send_email("engaged_path")
 
-
-
     - if: email_clicked
       then: send_email("hot_lead_path")
-
-
 
     - if: email_not_opened
       wait: 1 day
       then: send_email("re_engagement")
 
-
-
     - if: email_replied
       then: exit_sequence("move_to_sales")
-
 
 ```
 
@@ -393,25 +346,17 @@ sequence_step:
 sequence_step:
   conditions:
 
-
     - if: contact.industry == "SaaS"
       then: send_email("saas_specific_content")
-
-
 
     - if: contact.company_size > 100
       then: send_email("enterprise_content")
 
-
-
     - if: contact.lead_score > 50
       then: send_email("high_value_offer")
 
-
-
     - else:
       then: send_email("standard_content")
-
 
 ```
 
@@ -429,18 +374,13 @@ campaign_schedule:
 
   rules:
 
-
     - if_timezone_unknown: use_fallback
-
 
     - respect_business_hours: true
 
-
     - skip_weekends: true
 
-
     - skip_holidays: true
-
 
 ```
 
@@ -453,7 +393,6 @@ Contact in Los Angeles (PST): Email sent at 9:00 AM PST
 Contact in London (GMT): Email sent at 9:00 AM GMT
 
 All contacts receive email at their local 9:00 AM
-
 
 ```
 
@@ -468,15 +407,11 @@ send_optimization:
 
   analysis:
 
-
     - historical_open_times
-
 
     - historical_click_times
 
-
     - industry_benchmarks
-
 
     - contact_behavior_patterns
 
@@ -485,17 +420,15 @@ send_optimization:
     end: "18:00"
     timezone: "recipient_local"
 
-
 ```
 
 **Results:**
 
 ```text
 
-Contact A: Historically opens at 7:30 AM → Send at 7:15 AM
-Contact B: Historically opens at 2:00 PM → Send at 1:45 PM
-Contact C: No history → Send at industry benchmark (9:00 AM)
-
+Contact A: Historically opens at 7:30 AM â†’ Send at 7:15 AM
+Contact B: Historically opens at 2:00 PM â†’ Send at 1:45 PM
+Contact C: No history â†’ Send at industry benchmark (9:00 AM)
 
 ```
 
@@ -519,7 +452,6 @@ Day 14: Success Story + Upgrade Offer
 
 Conversion Rate: 12-18% (industry average)
 
-
 ```
 
 **Lead Nurturing Template:**
@@ -537,7 +469,6 @@ Week 4: Conversion push (2 emails)
 
 Conversion Rate: 8-12% (industry average)
 
-
 ```
 
 #### Custom Template Creation
@@ -547,26 +478,25 @@ Conversion Rate: 8-12% (industry average)
 ```text
 
 Campaign Actions:
-  → Save as Template
+  â†’ Save as Template
 
 Template Configuration:
-┌─────────────────────────────────────────────────────┐
-│ Template Name: "Custom Onboarding"                  │
-│ Category: Onboarding                                │
-│ Tags: SaaS, B2B, Welcome                            │
-│ Description: 7-day onboarding for new users         │
-│                                                     │
-│ ☑ Include sequence structure                        │
-│ ☑ Include email templates                           │
-│ ☑ Include conditional logic                         │
-│ ☐ Include specific content (use placeholders)       │
-│                                                     │
-│ Sharing:                                            │
-│ ○ Private (only me)                                 │
-│ ● Team (all workspace members)                      │
-│ ○ Public (template library)                         │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Template Name: "Custom Onboarding"                  â”‚
+â”‚ Category: Onboarding                                â”‚
+â”‚ Tags: SaaS, B2B, Welcome                            â”‚
+â”‚ Description: 7-day onboarding for new users         â”‚
+â”‚                                                     â”‚
+â”‚ â˜‘ Include sequence structure                        â”‚
+â”‚ â˜‘ Include email templates                           â”‚
+â”‚ â˜‘ Include conditional logic                         â”‚
+â”‚ â˜ Include specific content (use placeholders)       â”‚
+â”‚                                                     â”‚
+â”‚ Sharing:                                            â”‚
+â”‚ â—‹ Private (only me)                                 â”‚
+â”‚ â— Team (all workspace members)                      â”‚
+â”‚ â—‹ Public (template library)                         â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -583,15 +513,11 @@ campaign_audience:
 
   criteria:
 
-
     - lead_score: "> 30"
-
 
     - last_activity: "< 30 days"
 
-
     - email_verified: true
-
 
     - unsubscribed: false
 
@@ -599,12 +525,9 @@ campaign_audience:
 
   enrollment_rules:
 
-
     - new_contacts: "auto_enroll"
 
-
     - exited_contacts: "remove_from_sequence"
-
 
 ```
 
@@ -612,10 +535,9 @@ campaign_audience:
 
 ```text
 
-Day 1: 500 contacts match criteria → Enrolled
-Day 5: 50 new contacts match → Auto-enrolled at step 1
-Day 5: 20 contacts no longer match → Removed from sequence
-
+Day 1: 500 contacts match criteria â†’ Enrolled
+Day 5: 50 new contacts match â†’ Auto-enrolled at step 1
+Day 5: 20 contacts no longer match â†’ Removed from sequence
 
 ```
 
@@ -626,26 +548,19 @@ Day 5: 20 contacts no longer match → Removed from sequence
 ```yaml
 exclusion_rules:
 
-
   - exclude_if: "in_other_campaign"
-
 
   - exclude_if: "received_email_last_24h"
 
-
   - exclude_if: "marked_as_customer"
-
 
   - exclude_if: "unsubscribed_from_category"
 
   priority_handling:
 
-
     - if_conflict: "pause_lower_priority"
 
-
     - resume_after: "higher_priority_complete"
-
 
 ```
 
@@ -658,21 +573,20 @@ exclusion_rules:
 ```text
 
 Campaign Creation:
-  ↓
+  â†“
 Draft Review (Creator)
-  ↓
+  â†“
 Submit for Approval
-  ↓
-Manager Review ──REJECT──▶ Back to Creator
-  │
+  â†“
+Manager Review â”€â”€REJECTâ”€â”€â–¶ Back to Creator
+  â”‚
   APPROVE
-  ↓
-Compliance Review ──REJECT──▶ Back to Creator
-  │
+  â†“
+Compliance Review â”€â”€REJECTâ”€â”€â–¶ Back to Creator
+  â”‚
   APPROVE
-  ↓
+  â†“
 Schedule & Launch
-
 
 ```
 
@@ -682,24 +596,19 @@ Schedule & Launch
 approval_workflow:
   required_approvers:
 
-
     - role: "campaign_manager"
       required: true
-
 
     - role: "compliance_officer"
       required: true
       conditions:
 
-
         - if: audience_size > 10000
-
 
         - if: contains_promotional_content
 
   approval_timeout: 48 hours
   timeout_action: "auto_reject"
-
 
 ```
 
@@ -710,17 +619,16 @@ approval_workflow:
 ```text
 
 Campaign Editor:
-┌─────────────────────────────────────────────────────┐
-│ 👤 Sarah (editing Email 2)                          │
-│ 👤 Mike (viewing sequence)                          │
-│ 👤 Lisa (editing Email 3)                           │
-│                                                     │
-│ Activity Feed:                                      │
-│ • Sarah updated subject line (2 min ago)            │
-│ • Mike added comment on Email 1 (5 min ago)         │
-│ • Lisa uploaded new template (10 min ago)           │
-└─────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ‘¤ Sarah (editing Email 2)                          â”‚
+â”‚ ðŸ‘¤ Mike (viewing sequence)                          â”‚
+â”‚ ðŸ‘¤ Lisa (editing Email 3)                           â”‚
+â”‚                                                     â”‚
+â”‚ Activity Feed:                                      â”‚
+â”‚ â€¢ Sarah updated subject line (2 min ago)            â”‚
+â”‚ â€¢ Mike added comment on Email 1 (5 min ago)         â”‚
+â”‚ â€¢ Lisa uploaded new template (10 min ago)           â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -909,7 +817,6 @@ CREATE TABLE campaign_approvals (
 CREATE INDEX idx_campaign_approvals_campaign ON campaign_approvals(campaign_id);
 CREATE INDEX idx_campaign_approvals_status ON campaign_approvals(status);
 
-
 ```
 
 ### Campaign Execution Engine
@@ -945,7 +852,6 @@ interface CampaignStep {
 class CampaignExecutionEngine {
   /**
 
-
    * Launch a campaign and enroll contacts
    */
   async launchCampaign(campaignId: string): Promise<void> {
@@ -975,7 +881,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Enroll contacts in campaign
    */
   private async enrollContacts(
@@ -1004,7 +909,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Process next steps for all contacts ready to receive emails
    */
   async processNextSteps(campaignId: string): Promise<void> {
@@ -1021,7 +925,6 @@ class CampaignExecutionEngine {
   }
 
   /**
-
 
    * Process a single step for a contact
    */
@@ -1050,7 +953,6 @@ class CampaignExecutionEngine {
   }
 
   /**
-
 
    * Send campaign email to contact
    */
@@ -1104,7 +1006,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Process wait step
    */
   private async processWaitStep(
@@ -1128,7 +1029,6 @@ class CampaignExecutionEngine {
   }
 
   /**
-
 
    * Process conditional step
    */
@@ -1169,7 +1069,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Evaluate conditional logic
    */
   private async evaluateCondition(
@@ -1207,7 +1106,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Calculate next send time based on strategy
    */
   private calculateNextSendTime(
@@ -1232,7 +1130,6 @@ class CampaignExecutionEngine {
   }
 
   /**
-
 
    * Calculate optimal send time based on contact behavior
    */
@@ -1260,7 +1157,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Render email content with personalization
    */
   private async renderEmailContent(
@@ -1273,7 +1169,6 @@ class CampaignExecutionEngine {
 
   /**
 
-
    * Get next step in sequence
    */
   private async getNextStep(
@@ -1285,7 +1180,6 @@ class CampaignExecutionEngine {
     });
   }
 }
-
 
 ```
 
@@ -1353,7 +1247,6 @@ cron.schedule('0 * * * *', async () => {  // Every hour
     }
   }
 });
-
 
 ```
 
@@ -1482,7 +1375,6 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
   res.json(cloned);
 });
 
-
 ```
 
 ---
@@ -1521,4 +1413,5 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
 **Status:** Planned - Critical Q1 2026 Feature
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+
 

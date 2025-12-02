@@ -1,4 +1,4 @@
----
+﻿---
 title: "Security Features"
 description: "Comprehensive security infrastructure including SSL/TLS, authentication, encryption, and compliance controls"
 level: "1"
@@ -7,29 +7,21 @@ roadmap_timeline: "Q4 2025"
 priority: "Critical"
 related_features:
 
-
   - compliance/gdpr-compliance
-
 
   - compliance/data-privacy
 
-
   - infrastructure/email-infrastructure-setup
 
-
   - domains/domain-management
-
 
   - enterprise/user-management
 related_tasks:
 
-
   - epic-1-project-foundation
-
 
   - epic-2-user-authentication-profile
 ---
-
 
 # Security Features
 
@@ -70,7 +62,6 @@ PenguinMails implements comprehensive security controls across all platform laye
 TXT Record: @ or yourdomain.com
 Value: v=spf1 ip4:YOUR_VPS_IP ~all
 
-
 ```
 
 **Best Practices:**
@@ -93,7 +84,6 @@ Value: v=spf1 ip4:YOUR_VPS_IP ~all
 
 TXT Record: default._domainkey.yourdomain.com
 Value: v=DKIM1; k=rsa; p=YOUR_PUBLIC_KEY
-
 
 ```
 
@@ -124,7 +114,6 @@ Value: v=DMARC1; p=quarantine; pct=10; rua=mailto:dmarc@yourdomain.com
 
 Phase 3 (Reject - after 90 days):
 Value: v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com
-
 
 ```
 
@@ -283,7 +272,6 @@ Port 993  (IMAPS)      - Secure IMAP
 Port 443  (HTTPS)      - Web traffic
 Port 22   (SSH)        - Admin access (restricted IPs only)
 
-
 ```
 
 **Blocked by Default:**
@@ -307,23 +295,17 @@ Port 22   (SSH)        - Admin access (restricted IPs only)
 ```typescript
 // API endpoints
 
-
 - 100 requests/minute per IP (anonymous)
 
-
 - 1000 requests/minute per authenticated user
-
 
 - 10,000 requests/minute per API key
 
 // SMTP
 
-
 - 50 connections/minute per IP
 
-
 - 500 emails/hour per account (configurable)
-
 
 ```
 
@@ -350,7 +332,6 @@ session: {
   secure: true,                       // HTTPS only
   sameSite: 'strict',                 // CSRF protection
 }
-
 
 ```
 
@@ -478,7 +459,6 @@ interface AuditLog {
   tags: string[];
 }
 
-
 ```
 
 #### Log Retention
@@ -512,7 +492,6 @@ X-XSS-Protection: 1; mode=block
 Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'
 Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: geolocation=(), microphone=(), camera=()
-
 
 ```
 
@@ -582,7 +561,6 @@ class User {
   }
 }
 
-
 ```
 
 #### Encryption Key Management
@@ -632,7 +610,6 @@ function decrypt(encryptedData: string): string {
   return decrypted;
 }
 
-
 ```
 
 ### SMTP Security Implementation
@@ -640,7 +617,6 @@ function decrypt(encryptedData: string): string {
 #### TLS Configuration
 
 ```nginx
-
 
 # Postfix configuration for secure SMTP
 
@@ -653,13 +629,11 @@ smtpd_tls_mandatory_ciphers = high
 smtpd_tls_mandatory_protocols = !SSLv2, !SSLv3, !TLSv1, !TLSv1.1
 smtpd_tls_auth_only = yes
 
-
 # Client TLS (outbound)
 
 smtp_tls_security_level = may
 smtp_tls_protocols = !SSLv2, !SSLv3, !TLSv1, !TLSv1.1
 smtp_tls_ciphers = high
-
 
 ```
 
@@ -710,7 +684,6 @@ async function generateDKIMKeys(domainId: string): Promise<DKIMKeyPair> {
   return { publicKey, privateKey };
 }
 
-
 ```
 
 ### API Security Middleware
@@ -751,7 +724,6 @@ export async function authenticate(
   }
 }
 
-
 ```
 
 #### Rate Limiting Middleware
@@ -790,7 +762,6 @@ export const authLimiter = rateLimit({
   message: 'Too many login attempts, please try again later',
 });
 
-
 ```
 
 #### Security Headers Middleware
@@ -821,7 +792,6 @@ export const securityHeaders = helmet({
     policy: 'strict-origin-when-cross-origin',
   },
 });
-
 
 ```
 
@@ -870,7 +840,6 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
   return null;
 }
 
-
 ```
 
 ---
@@ -879,19 +848,19 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Current Compliance
 
-- ✅ **GDPR Ready**: Data encryption, audit logs, right to deletion
+- âœ… **GDPR Ready**: Data encryption, audit logs, right to deletion
 
-- ✅ **CCPA Ready**: Data privacy controls, opt-out mechanisms
+- âœ… **CCPA Ready**: Data privacy controls, opt-out mechanisms
 
-- ✅ **CAN-SPAM**: Unsubscribe management, sender authentication
+- âœ… **CAN-SPAM**: Unsubscribe management, sender authentication
 
 ### In Progress
 
-- 🔄 **SOC 2 Type I** (Q2 2026)
+- ðŸ”„ **SOC 2 Type I** (Q2 2026)
 
-- 🔄 **ISO 27001** (Q3 2026)
+- ðŸ”„ **ISO 27001** (Q3 2026)
 
-- 🔄 **PCI DSS** (Q4 2026 - if handling card data directly)
+- ðŸ”„ **PCI DSS** (Q4 2026 - if handling card data directly)
 
 ### Security Best Practices
 
@@ -942,4 +911,5 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Security Team
+
 

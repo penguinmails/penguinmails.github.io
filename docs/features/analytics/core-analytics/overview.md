@@ -1,11 +1,10 @@
----
+﻿---
 title: "Analytics Overview"
 description: "Transform cold email into a predictable revenue channel with comprehensive analytics and directional insights"
 last_modified_date: "2025-11-17"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Optimize Campaigns for Maximum ROI with Comprehensive Analytics
 
@@ -183,7 +182,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Customer Acquisition Cost (CAC)**: Total marketing + sales spend / Number of new customers
 
-- **Customer Lifetime Value (LTV)**: Average revenue per user × customer lifespan
+- **Customer Lifetime Value (LTV)**: Average revenue per user Ã— customer lifespan
 
 ### **North Star & Core Business Metrics**
 
@@ -269,7 +268,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Target**: <$200 per customer, rolling 12-month average
 
-- **Customer Lifetime Value (LTV)**: Average revenue per user × customer lifespan
+- **Customer Lifetime Value (LTV)**: Average revenue per user Ã— customer lifespan
 
 - **Target**: >$2,000 per customer with 3:1 LTV/CAC ratio
 
@@ -377,7 +376,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Cohort Analysis**: Track customer lifecycle and retention
 
-- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](/docs/features/analytics/views-architecture)** → Visual design specifications for analytics dashboards
+- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](/docs/features/analytics/views-architecture)** â†’ Visual design specifications for analytics dashboards
 
 ## Enterprise Integration
 
@@ -737,4 +736,5 @@ Ready to optimize your cold email campaigns with comprehensive analytics and KPI
 - **[Queue System](/docs/features/queue/background-jobs)** - Background job processing for reports
 
 ---
+
 

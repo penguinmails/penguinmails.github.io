@@ -1,4 +1,4 @@
----
+﻿---
 title: "Infrastructure SSH Access Routes"
 description: "Route specifications for tenant SSH credential management and VPS access"
 last_modified_date: "2025-11-26"
@@ -8,7 +8,6 @@ status: "BACKLOG"
 priority: "HIGH"
 roadmap_milestone: "Q1_2026"
 ---
-
 
 # Infrastructure SSH Access Routes
 
@@ -110,7 +109,6 @@ interface RotationEvent {
   triggeredBy: 'automated' | 'manual';
   status: 'success' | 'failed';
 }
-
 
 ```
 
@@ -225,7 +223,6 @@ interface TenantSecretsSummary {
   dkimKeysCount: number;
 }
 
-
 ```
 
 **Security Considerations:**
@@ -244,11 +241,11 @@ interface TenantSecretsSummary {
 
 **Tenant Access:**
 
-- Settings → Infrastructure → SSH Access
+- Settings â†’ Infrastructure â†’ SSH Access
 
 **Admin Access:**
 
-- Admin Panel → Secrets Management
+- Admin Panel â†’ Secrets Management
 
 ## Related Documentation
 
@@ -284,4 +281,5 @@ interface TenantSecretsSummary {
 **Estimated Effort:** Medium (5-7 days)
 
 *SSH access management is critical for tenant VPS access and infrastructure troubleshooting. Vault integration ensures secure credential storage and rotation.*
+
 

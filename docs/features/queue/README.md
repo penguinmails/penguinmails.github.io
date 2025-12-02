@@ -1,4 +1,4 @@
-# ⚙️ Queue & Background Jobs
+﻿# âš™ï¸ Queue & Background Jobs
 
 Background job processing, queue monitoring, and notifications.
 
@@ -34,7 +34,7 @@ See [Queue Roadmap](/docs/features/queue/roadmap) for future enhancements.
 
 ## Features in This Category
 
-### ✅ Available Now
+### âœ… Available Now
 
 #### [Core Email Pipeline](/docs/features/queue/email-pipeline)
 
@@ -86,7 +86,7 @@ Job processing system for asynchronous tasks.
 
 **Status**: ACTIVE | **Priority**: Critical
 
-### 🔜 Future Enhancements
+### ðŸ”œ Future Enhancements
 
 #### Queue Monitoring Dashboard
 
@@ -172,5 +172,6 @@ In-app and email notifications for users.
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+
 

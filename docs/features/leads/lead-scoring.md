@@ -1,4 +1,4 @@
----
+﻿---
 title: "Lead Scoring"
 description: "Behavioral and demographic lead scoring to prioritize high-value contacts and personalize outreach"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - leads/leads-management
-
 
   - leads/contact-segmentation
 
-
   - campaigns/personalization-system
-
 
   - analytics/core-analytics/overview
 related_tasks:
 
-
   - epic-7-leads-management
 ---
-
 
 # Lead Scoring
 
@@ -70,25 +64,23 @@ Lead Scoring assigns numeric values to contacts based on their actions, characte
 ```text
 
 Email Engagement:
-  ✓ Email Opened: +5 points
-  ✓ Link Clicked: +10 points
-  ✓ Replied to Email: +15 points
+  âœ“ Email Opened: +5 points
+  âœ“ Link Clicked: +10 points
+  âœ“ Replied to Email: +15 points
 
 Negative Actions:
-  ✗ Email Bounced: -10 points
-  ✗ Marked as Spam: -50 points
-  ✗ Unsubscribed: -100 points (auto-set to 0)
+  âœ— Email Bounced: -10 points
+  âœ— Marked as Spam: -50 points
+  âœ— Unsubscribed: -100 points (auto-set to 0)
 
 Demographics:
-  ✓ Job Title (Decision Maker): +20 points
-  ✓ Company Size (51-200): +10 points
-  ✓ Company Size (200+): +15 points
+  âœ“ Job Title (Decision Maker): +20 points
+  âœ“ Company Size (51-200): +10 points
+  âœ“ Company Size (200+): +15 points
 
 Time Decay:
 
-
   - Score decreases 5% every 30 days of inactivity
-
 
 ```
 
@@ -96,18 +88,17 @@ Time Decay:
 
 ```text
 
-Contacts → View All
+Contacts â†’ View All
 
 Sort by: Lead Score (High to Low)
 
 Contact                Score  Last Activity
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
 Sarah Johnson          92     2 hours ago
 Michael Chen           87     1 day ago
 Emily Rodriguez        76     3 days ago
 David Kim              68     1 week ago
 ...
-
 
 ```
 
@@ -125,7 +116,6 @@ Warm Leads (Score 51-75):
 
 Cold Leads (Score 0-50):
   Campaign: "Getting Started Guide" (Nurture)
-
 
 ```
 
@@ -170,7 +160,6 @@ email_actions:
   forwarded_email:
     points: 12
 
-
 ```
 
 **Website Activity** (if integrated)
@@ -195,7 +184,6 @@ website_actions:
   time_on_site:
     gt_5_minutes: 5
     gt_15_minutes: 10
-
 
 ```
 
@@ -222,7 +210,6 @@ negative_actions:
 
   inactive_180_days:
     points: -50
-
 
 ```
 
@@ -253,7 +240,6 @@ company_attributes:
     10m_50m: 15
     50m_plus: 20
 
-
 ```
 
 **Role-Based Scoring**
@@ -277,7 +263,6 @@ job_title_keywords:
     coordinator: 3
     analyst: 5
 
-
 ```
 
 **Geographic Scoring**
@@ -292,7 +277,6 @@ location:
 
   tier_3_markets:  # Rest of world
     points: 0
-
 
 ```
 
@@ -314,7 +298,6 @@ decay_rules:
     after_60_days: 72  # -5% again
     after_90_days: 68
 
-
 ```
 
 **Recency Boosting:**
@@ -332,7 +315,6 @@ recency_multipliers:
 
   action_older_than_30d:
     multiplier: 0.5
-
 
 ```
 
@@ -360,7 +342,6 @@ scoring_dimensions:
   composite_score:  # Total 0-100
     formula: engagement + fit + intent
 
-
 ```
 
 ### Score-Based Automation
@@ -370,11 +351,10 @@ scoring_dimensions:
 ```text
 
 When lead score reaches 75:
-  → Add to "Hot Leads" segment
-  → Trigger "Sales Qualified Lead" workflow
-  → Notify sales team
-  → Send "Book a Demo" campaign
-
+  â†’ Add to "Hot Leads" segment
+  â†’ Trigger "Sales Qualified Lead" workflow
+  â†’ Notify sales team
+  â†’ Send "Book a Demo" campaign
 
 ```
 
@@ -387,7 +367,6 @@ Score 26-50:   Status = "Nurture"
 Score 51-75:   Status = "Marketing Qualified Lead (MQL)"
 Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 
-
 ```
 
 **CRM Sync:**
@@ -395,11 +374,10 @@ Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 ```text
 
 When lead score >= 75:
-  → Create lead in Salesforce
-  → Assign to sales rep (round-robin)
-  → Set priority = "High"
-  → Add to sales follow-up queue
-
+  â†’ Create lead in Salesforce
+  â†’ Assign to sales rep (round-robin)
+  â†’ Set priority = "High"
+  â†’ Add to sales follow-up queue
 
 ```
 
@@ -411,14 +389,13 @@ When lead score >= 75:
 
 Lead Score Distribution:
 
-0-25:  ████████████████ 45% (2,250 contacts)
-26-50: ██████████ 28% (1,400 contacts)
-51-75: ██████ 18% (900 contacts)
-76-100: ███ 9% (450 contacts)
+0-25:  â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ 45% (2,250 contacts)
+26-50: â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ 28% (1,400 contacts)
+51-75: â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ 18% (900 contacts)
+76-100: â–ˆâ–ˆâ–ˆ 9% (450 contacts)
 
 Average Score: 38
 Median Score: 32
-
 
 ```
 
@@ -434,15 +411,11 @@ No Change: 3,000 contacts
 
 Top Scoring Actions:
 
-
   1. Demo Requested: +60 pts (120 actions)
-
 
   2. Pricing Page Click: +25 pts (450 actions)
 
-
   3. Email Reply: +20 pts (230 actions)
-
 
 ```
 
@@ -519,7 +492,6 @@ CREATE TABLE score_events (
 
 CREATE INDEX idx_score_events_contact ON score_events(contact_id, created_at);
 CREATE INDEX idx_score_events_type ON score_events(event_type);
-
 
 ```
 
@@ -698,7 +670,6 @@ class LeadScoringEngine {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -742,7 +713,6 @@ async function recalculateScoresForContact(contactId: string): Promise<void> {
   );
 }
 
-
 ```
 
 ### Event Listeners
@@ -777,7 +747,6 @@ eventEmitter.on('contact.updated', async (event) => {
   await recalculateScoresForContact(event.contactId);
 });
 
-
 ```
 
 ---
@@ -798,4 +767,5 @@ eventEmitter.on('contact.updated', async (event) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
+
 

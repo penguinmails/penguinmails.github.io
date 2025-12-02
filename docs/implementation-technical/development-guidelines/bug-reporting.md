@@ -1,11 +1,10 @@
----
+﻿---
 title: "Bug Reporting Guidelines & Triage Process"
 description: "Bug reporting guidelines, triage processes, and structured bug resolution workflows"
 last_modified_date: "2025-11-24"
 level: "3"
 persona: "Quality Assurance"
 ---
-
 
 # Bug Reporting Guidelines & Triage Process
 
@@ -27,86 +26,63 @@ Use this template when creating bug reports:
 
 ```markdown
 
-
 ## Bug Description
 
 A clear and concise description of what the bug is.
-
 
 ## Reproduction Steps
 
 Steps to reproduce the behavior:
 
-
 1. Go to '...'
-
 
 2. Click on '....'
 
-
 3. Scroll down to '....'
 
-
 4. See error
-
 
 ## Expected Behavior
 
 A clear and concise description of what you expected to happen.
 
-
 ## Actual Behavior
 
 A clear and concise description of what actually happened.
 
-
 ## Environment
-
 
 - OS: [e.g. macOS Big Sur, Ubuntu 20.04, Windows 11]
 
-
 - Browser: [e.g. chrome, safari, firefox]
-
 
 - Version: [e.g. 91.0.4472.124]
 
-
 - Node.js Version: [e.g. 18.x.x]
 
-
 - PenguinMails Version: [e.g. 2.1.3]
-
 
 ## Screenshots
 
 If applicable, add screenshots to help explain your problem.
 
-
 ## Error Logs
 
 Paste relevant error messages or stack traces here
-
 
 ## Additional Context
 
 Add any other context about the problem here.
 
-
 ## Priority
-
 
 - [ ] Critical (system down, data loss)
 
-
 - [ ] High (major functionality broken)
-
 
 - [ ] Medium (functionality impaired)
 
-
 - [ ] Low (minor inconvenience)
-
 
 ```
 
@@ -139,7 +115,6 @@ graph TD
     J --> K[Merge & Deploy]
     K --> L[Close Issue]
     L --> M[Update Documentation]
-
 
 ```
 
@@ -382,7 +357,6 @@ async function analyzeBug(bugReport: BugReport): Promise<BugAnalysis> {
   return await analyzer.analyzeBugRootCause(bugReport);
 }
 
-
 ```
 
 ### Test-First Bug Fixing
@@ -483,7 +457,6 @@ interface EmailRecipient {
   email: string;
   name?: string;
 }
-
 
 ```
 
@@ -600,7 +573,6 @@ async function demonstrateBugFix() {
     console.error('Campaign failed:', error);
   }
 }
-
 
 ```
 
@@ -739,7 +711,6 @@ async function demonstrateBounceHandling() {
     await bounceHandler.handleEmailBounce(bounceData);
   }
 }
-
 
 ```
 
@@ -951,7 +922,6 @@ async function demonstrateEmailTracking() {
   const result2 = await trackingService.trackEmailOpen(duplicateData);
   console.log('Tracking result 2:', result2);
 }
-
 
 ```
 
@@ -1175,7 +1145,6 @@ const controller = new CampaignsController(campaignService);
 // app.post('/api/v1/campaigns', (req, res) => controller.createCampaign(req, res));
 // app.get('/api/v1/campaigns/:id', (req, res) => controller.getCampaign(req, res));
 
-
 ```
 
 ### Database Issues
@@ -1223,14 +1192,14 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
   constructor(private db: Database) {}
 
   async getCampaignsWithRecipients(userId: string): Promise<Campaign[]> {
-    // ❌ Bad: N+1 query problem - DO NOT USE
+    // âŒ Bad: N+1 query problem - DO NOT USE
     // const campaigns = await this.db.campaigns.where('userId', '=', userId).findMany();
     // for (const campaign of campaigns) {
     //   campaign.recipients = await this.db.recipients.where('campaignId', '=', campaign.id).findMany();
     // }
     // return campaigns;
 
-    // ✅ Good: Eager loading with single query
+    // âœ… Good: Eager loading with single query
     const query = this.db.campaigns
       .where('userId', '=', userId)
       .join('recipients', 'campaignId', 'id')
@@ -1324,7 +1293,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
   }
 
   async getCampaignsWithRecipientStats(userId: string): Promise<CampaignStats[]> {
-    // ✅ Good: Aggregate with single query using GROUP BY
+    // âœ… Good: Aggregate with single query using GROUP BY
     const query = this.db.campaigns
       .where('userId', '=', userId)
       .leftJoin('recipients', 'campaignId', 'id')
@@ -1350,7 +1319,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
     }));
   }
 
-  // ❌ Bad: Example of N+1 query (for educational purposes)
+  // âŒ Bad: Example of N+1 query (for educational purposes)
   async badGetCampaignsWithRecipients(userId: string): Promise<Campaign[]> {
     // This would cause N+1 problem - don't use this!
     const campaigns = await this.db.campaigns.where('userId', '=', userId).findMany();
@@ -1387,7 +1356,6 @@ async function demonstrateQueryOptimization() {
     console.log(`Campaign ${campaignWithRecipients?.id} has ${campaignWithRecipients?.recipients?.length} recipients`);
   }
 }
-
 
 ```
 
@@ -1684,7 +1652,6 @@ async function demonstrateMemoryMonitoring() {
   });
 }
 
-
 ```
 
 ### Database Performance
@@ -1706,7 +1673,6 @@ WHERE tablename IN (SELECT tablename FROM pg_tables WHERE schemaname = 'public')
     SELECT indexname FROM pg_indexes
     WHERE indexname LIKE '%' || attname || '%'
   );
-
 
 ```
 
@@ -2072,7 +2038,6 @@ async function demonstrateValidation() {
   console.log('HTML validation result:', result3);
 }
 
-
 ```
 
 ## Bug Verification Checklist
@@ -2155,4 +2120,5 @@ async function demonstrateValidation() {
 
 For testing requirements, see [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements).
 For the contribution process, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
+
 

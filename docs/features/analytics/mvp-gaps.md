@@ -1,11 +1,10 @@
----
+﻿---
 title: "Analytics MVP Gaps"
 description: "Missing MVP features for Analytics & Reporting with acceptance criteria and implementation roadmap"
 last_modified_date: "2025-11-26"
 level: "3"
 persona: "Product Teams, Developers"
 ---
-
 
 # Analytics & Reporting - Missing MVP Features
 
@@ -175,7 +174,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Create engagement heatmap visualization component
 
-- [ ] Show day-of-week × hour-of-day engagement grid (7 days × 24 hours)
+- [ ] Show day-of-week Ã— hour-of-day engagement grid (7 days Ã— 24 hours)
 
 - [ ] Color-code cells by engagement level (green = high, yellow = medium, red = low)
 
@@ -396,4 +395,5 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 **Document Owner:** Product Team
 **Last Review:** November 26, 2025
 **Next Review:** After MVP implementation
+
 

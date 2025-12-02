@@ -1,13 +1,12 @@
----
-title: "Database Schema Guide – 5-Tier Architecture"
-description: "Documentation for Database Schema Guide – 5-Tier Architecture - Database Schema Guide"
+﻿---
+title: "Database Schema Guide â€“ 5-Tier Architecture"
+description: "Documentation for Database Schema Guide â€“ 5-Tier Architecture - Database Schema Guide"
 last_modified_date: "2025-11-17"
 level: "2"
 persona: "Documentation Users"
 ---
 
-
-# Database Schema Guide – 5-Tier Architecture
+# Database Schema Guide â€“ 5-Tier Architecture
 
 This guide defines the canonical database tiering for PenguinMails.
 
@@ -39,7 +38,7 @@ For detailed per-tier guides, see:
 
 ---
 
-## 1. OLTP – Operational Core
+## 1. OLTP â€“ Operational Core
 
 Purpose:
 
@@ -79,7 +78,7 @@ Reference:
 
 ---
 
-## 2. Content Database – Heavy Content Storage
+## 2. Content Database â€“ Heavy Content Storage
 
 Purpose:
 
@@ -519,4 +518,5 @@ Overall:
   - Remains a lean analytical layer, safe to be non-critical in outages.
 
 Use this behavior model when designing failure handling and incident response flows across the stack.
+
 

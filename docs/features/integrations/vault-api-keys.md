@@ -1,4 +1,4 @@
----
+﻿---
 title: "Tenant API Key System with Vault"
 description: "Secure API key generation, storage, and management system using HashiCorp Vault for programmatic email sending and platform access"
 last_modified_date: "2025-11-26"
@@ -9,7 +9,6 @@ status: "PLANNED"
 priority: "P0 - Critical"
 roadmap_milestone: "MVP"
 ---
-
 
 # Tenant API Key System with Vault
 
@@ -271,7 +270,6 @@ function generateAPIKey(): string {
   return `pm_live_${base62}`;
 }
 
-
 ```
 
 ### Vault Secret Structure
@@ -294,7 +292,6 @@ function generateAPIKey(): string {
   "name": "Production Server",
   "created_by": "user_id_123"
 }
-
 
 ```
 
@@ -353,7 +350,6 @@ async function verifyAPIKey(apiKey: string, hash: string): Promise<boolean> {
   return await bcrypt.compare(apiKey, hash);
 }
 
-
 ```
 
 ### Permission Scopes
@@ -402,7 +398,6 @@ function requireScope(scope: string) {
     next();
   };
 }
-
 
 ```
 
@@ -453,7 +448,6 @@ async function checkRateLimit(
   };
 }
 
-
 ```
 
 **Rate Limit Headers:**
@@ -463,7 +457,6 @@ async function checkRateLimit(
 X-RateLimit-Limit: 300
 X-RateLimit-Remaining: 287
 X-RateLimit-Reset: 1732618800
-
 
 ```
 
@@ -507,7 +500,6 @@ CREATE INDEX idx_api_key_usage_tenant_key
 CREATE INDEX idx_api_key_usage_created_at
   ON api_key_usage(created_at DESC);
 
-
 ```
 
 **Usage Aggregation:**
@@ -530,7 +522,6 @@ async function getAPIKeyUsageStats(
   return stats.rows[0];
 }
 
-
 ```
 
 ---
@@ -551,7 +542,6 @@ async function getAPIKeyUsageStats(
   "permissions": ["send_email", "read_analytics", "manage_contacts"]
 }
 
-
 ```
 
 **Response (201 Created):**
@@ -566,7 +556,6 @@ async function getAPIKeyUsageStats(
   "created_at": "2025-11-26T10:00:00Z",
   "warning": "Store this key securely. It will not be shown again."
 }
-
 
 ```
 
@@ -619,7 +608,6 @@ async function getAPIKeyUsageStats(
   "total": 2
 }
 
-
 ```
 
 ### 3. Get API Key Details
@@ -652,7 +640,6 @@ async function getAPIKeyUsageStats(
   ]
 }
 
-
 ```
 
 ### 4. Regenerate API Key
@@ -674,7 +661,6 @@ async function getAPIKeyUsageStats(
   "warning": "Old key has been revoked. Update your application immediately."
 }
 
-
 ```
 
 ### 5. Revoke API Key
@@ -691,7 +677,6 @@ async function getAPIKeyUsageStats(
   "key_id": "550e8400-e29b-41d4-a716-446655440000",
   "revoked_at": "2025-11-26T16:30:00Z"
 }
-
 
 ```
 
@@ -712,7 +697,6 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
     "subject": "Test Email",
     "body": "Hello from PenguinMails API"
   }'
-
 
 ```
 
@@ -814,7 +798,7 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 
 **Content:**
 
-- ⚠️ Warning: "Store this key securely. It will not be shown again."
+- âš ï¸ Warning: "Store this key securely. It will not be shown again."
 
 - API key value (full, copyable)
 
@@ -842,7 +826,6 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
   -H "Content-Type: application/json" \
   -d '{"to": "user@example.com", "subject": "Test", "body": "Hello"}'
 
-
 ```
 
 **Node.js:**
@@ -861,7 +844,6 @@ axios.post('https://api.penguinmails.com/api/v1/emails/send', {
     'Authorization': `Bearer ${apiKey}`
   }
 });
-
 
 ```
 
@@ -895,7 +877,6 @@ async function sendEmail() {
 }
 
 sendEmail();
-
 
 ```
 
@@ -1039,73 +1020,73 @@ sendEmail();
 
 **1. Store Keys Securely**
 
-- ✅ Store in environment variables (`.env` file)
+- âœ… Store in environment variables (`.env` file)
 
-- ✅ Use secret management tools (AWS Secrets Manager, Vault)
+- âœ… Use secret management tools (AWS Secrets Manager, Vault)
 
-- ❌ Never commit keys to version control
+- âŒ Never commit keys to version control
 
-- ❌ Never hardcode keys in source code
+- âŒ Never hardcode keys in source code
 
-- ❌ Never share keys via email or chat
+- âŒ Never share keys via email or chat
 
 **2. Use Minimal Permissions**
 
-- ✅ Create separate keys for different applications
+- âœ… Create separate keys for different applications
 
-- ✅ Grant only required permission scopes
+- âœ… Grant only required permission scopes
 
-- ❌ Don't use full-access keys for single-purpose applications
+- âŒ Don't use full-access keys for single-purpose applications
 
 **3. Rotate Keys Regularly**
 
-- ✅ Rotate keys every 90 days (recommended)
+- âœ… Rotate keys every 90 days (recommended)
 
-- ✅ Rotate immediately if key compromised
+- âœ… Rotate immediately if key compromised
 
-- ✅ Test new key before revoking old key
+- âœ… Test new key before revoking old key
 
 **4. Monitor Usage**
 
-- ✅ Review API key usage regularly
+- âœ… Review API key usage regularly
 
-- ✅ Set up alerts for unusual activity
+- âœ… Set up alerts for unusual activity
 
-- ✅ Investigate unexpected errors
+- âœ… Investigate unexpected errors
 
 **5. Handle Errors Gracefully**
 
-- ✅ Implement exponential backoff for rate limit errors
+- âœ… Implement exponential backoff for rate limit errors
 
-- ✅ Log authentication failures
+- âœ… Log authentication failures
 
-- ✅ Retry failed requests with backoff
+- âœ… Retry failed requests with backoff
 
 ### For PenguinMails Administrators
 
 **1. Enforce Security Policies**
 
-- ✅ Require HTTPS for all API requests
+- âœ… Require HTTPS for all API requests
 
-- ✅ Implement rate limiting per tier
+- âœ… Implement rate limiting per tier
 
-- ✅ Monitor for suspicious activity
+- âœ… Monitor for suspicious activity
 
 **2. Audit Regularly**
 
-- ✅ Review audit logs weekly
+- âœ… Review audit logs weekly
 
-- ✅ Investigate anomalies
+- âœ… Investigate anomalies
 
-- ✅ Revoke unused keys
+- âœ… Revoke unused keys
 
 **3. Educate Users**
 
-- ✅ Provide security best practices documentation
+- âœ… Provide security best practices documentation
 
-- ✅ Send reminders for key rotation
+- âœ… Send reminders for key rotation
 
-- ✅ Offer security training
+- âœ… Offer security training
 
 ---
 
@@ -1251,21 +1232,21 @@ sendEmail();
 
 **Features:**
 
-- ✅ API key generation with bcrypt hashing
+- âœ… API key generation with bcrypt hashing
 
-- ✅ Vault storage for API keys
+- âœ… Vault storage for API keys
 
-- ✅ Permission scopes (send_email, read_analytics, manage_contacts)
+- âœ… Permission scopes (send_email, read_analytics, manage_contacts)
 
-- ✅ Tier-based rate limiting (60/300/1000 req/min)
+- âœ… Tier-based rate limiting (60/300/1000 req/min)
 
-- ✅ Frontend UI for key management
+- âœ… Frontend UI for key management
 
-- ✅ Usage tracking (requests, errors, last used)
+- âœ… Usage tracking (requests, errors, last used)
 
-- ✅ Audit logging
+- âœ… Audit logging
 
-- ✅ API documentation with code examples
+- âœ… API documentation with code examples
 
 **Timeline:** 2 weeks
 
@@ -1374,4 +1355,5 @@ sendEmail();
 **Next Review:** December 26, 2025
 
 *This feature documentation provides comprehensive guidance for implementing the Tenant API Key System with Vault integration. All implementation must reference the [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) for secret structure, access policies, and security requirements.*
+
 

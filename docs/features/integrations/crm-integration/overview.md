@@ -1,4 +1,4 @@
----
+﻿---
 title: "CRM Integration Roadmap"
 timeline: "Q1 2026"
 status: "planned"
@@ -7,7 +7,6 @@ completion: "0%"
 dependencies: ["campaign-management", "enhanced-analytics"]
 blocks: []
 ---
-
 
 # CRM Integration Roadmap
 
@@ -33,13 +32,13 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
+- â³ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
 
-- ⏳ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
+- â³ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
 
-- ⏳ Webhook infrastructure - Planned
+- â³ Webhook infrastructure - Planned
 
-- ⏳ OAuth 2.0 implementation - Planned
+- â³ OAuth 2.0 implementation - Planned
 
 ### Blocks (Features Waiting on This)
 
@@ -131,35 +130,25 @@ salesforce_oauth:
   token_endpoint: https://login.salesforce.com/services/oauth2/token
   scopes:
 
-
     - api  # Access to Salesforce APIs
 
-
     - refresh_token  # Offline access
-
 
     - full  # Full access to data
 
   flow:
 
-
     1. User clicks "Connect Salesforce"
-
 
     2. Redirect to Salesforce login
 
-
     3. User authorizes PenguinMails app
-
 
     4. Receive authorization code
 
-
     5. Exchange for access + refresh tokens
 
-
     6. Store encrypted tokens in database
-
 
 ```
 
@@ -170,24 +159,23 @@ salesforce_oauth:
 ```yaml
 salesforce_contact:
   standard_fields:
-    Email → email
-    FirstName → first_name
-    LastName → last_name
-    Company → company
-    Phone → phone
-    Title → job_title
-    MailingCity → city
-    MailingState → state
-    MailingCountry → country
-    LeadSource → lead_source
+    Email â†’ email
+    FirstName â†’ first_name
+    LastName â†’ last_name
+    Company â†’ company
+    Phone â†’ phone
+    Title â†’ job_title
+    MailingCity â†’ city
+    MailingState â†’ state
+    MailingCountry â†’ country
+    LeadSource â†’ lead_source
 
   custom_fields:
-    PenguinMails_Lead_Score__c → lead_score
-    PenguinMails_Last_Email_Opened__c → last_email_opened
-    PenguinMails_Total_Opens__c → total_opens
-    PenguinMails_Total_Clicks__c → total_clicks
-    PenguinMails_Unsubscribed__c → unsubscribed
-
+    PenguinMails_Lead_Score__c â†’ lead_score
+    PenguinMails_Last_Email_Opened__c â†’ last_email_opened
+    PenguinMails_Total_Opens__c â†’ total_opens
+    PenguinMails_Total_Clicks__c â†’ total_clicks
+    PenguinMails_Unsubscribed__c â†’ unsubscribed
 
 ```
 
@@ -196,22 +184,21 @@ salesforce_contact:
 ```yaml
 salesforce_lead:
   standard_fields:
-    Email → email
-    FirstName → first_name
-    LastName → last_name
-    Company → company
-    Phone → phone
-    Title → job_title
-    City → city
-    State → state
-    Country → country
-    Status → lead_status
-    Rating → lead_rating
+    Email â†’ email
+    FirstName â†’ first_name
+    LastName â†’ last_name
+    Company â†’ company
+    Phone â†’ phone
+    Title â†’ job_title
+    City â†’ city
+    State â†’ state
+    Country â†’ country
+    Status â†’ lead_status
+    Rating â†’ lead_rating
 
   custom_fields:
-    PenguinMails_Engagement_Score__c → engagement_score
-    PenguinMails_Last_Campaign__c → last_campaign_id
-
+    PenguinMails_Engagement_Score__c â†’ engagement_score
+    PenguinMails_Last_Campaign__c â†’ last_campaign_id
 
 ```
 
@@ -229,21 +216,15 @@ salesforce_task:
 
   activity_types:
 
-
     - Email Sent
-
 
     - Email Opened
 
-
     - Email Clicked
-
 
     - Email Replied
 
-
     - Email Bounced
-
 
 ```
 
@@ -258,23 +239,16 @@ sync_rules:
 
     penguinmails_to_salesforce:
 
-
       - on: email_sent
         action: create_task
-
-
 
       - on: email_opened
         action: update_custom_field
         field: PenguinMails_Last_Email_Opened__c
 
-
-
       - on: email_clicked
         action: increment_field
         field: PenguinMails_Total_Clicks__c
-
-
 
       - on: unsubscribed
         action: update_field
@@ -283,22 +257,16 @@ sync_rules:
 
     salesforce_to_penguinmails:
 
-
       - on: contact_created
         action: import_contact
         add_to_segment: "Salesforce Contacts"
-
-
 
       - on: contact_updated
         action: update_contact
         conflict_resolution: salesforce_wins
 
-
-
       - on: contact_deleted
         action: soft_delete_contact
-
 
 ```
 
@@ -351,7 +319,6 @@ class SalesforceService {
   }
 }
 
-
 ```
 
 #### 2. **HubSpot** (Priority 2)
@@ -364,35 +331,25 @@ hubspot_oauth:
   token_endpoint: https://api.hubapi.com/oauth/v1/token
   scopes:
 
-
     - contacts  # Read/write contacts
 
-
     - timeline  # Create timeline events
-
 
     - automation  # Trigger workflows
 
   flow:
 
-
     1. User clicks "Connect HubSpot"
-
 
     2. Redirect to HubSpot OAuth
 
-
     3. User selects HubSpot account
-
 
     4. Receive authorization code
 
-
     5. Exchange for access + refresh tokens
 
-
     6. Store encrypted tokens
-
 
 ```
 
@@ -403,24 +360,23 @@ hubspot_oauth:
 ```yaml
 hubspot_contact:
   standard_properties:
-    email → email
-    firstname → first_name
-    lastname → last_name
-    company → company
-    phone → phone
-    jobtitle → job_title
-    city → city
-    state → state
-    country → country
+    email â†’ email
+    firstname â†’ first_name
+    lastname â†’ last_name
+    company â†’ company
+    phone â†’ phone
+    jobtitle â†’ job_title
+    city â†’ city
+    state â†’ state
+    country â†’ country
 
   custom_properties:
-    penguinmails_lead_score → lead_score
-    penguinmails_last_email_opened → last_email_opened
-    penguinmails_total_opens → total_opens
-    penguinmails_total_clicks → total_clicks
-    penguinmails_unsubscribed → unsubscribed
-    penguinmails_last_campaign → last_campaign_id
-
+    penguinmails_lead_score â†’ lead_score
+    penguinmails_last_email_opened â†’ last_email_opened
+    penguinmails_total_opens â†’ total_opens
+    penguinmails_total_clicks â†’ total_clicks
+    penguinmails_unsubscribed â†’ unsubscribed
+    penguinmails_last_campaign â†’ last_campaign_id
 
 ```
 
@@ -429,12 +385,11 @@ hubspot_contact:
 ```yaml
 hubspot_company:
   properties:
-    name → company_name
-    domain → company_domain
-    industry → industry
-    numberofemployees → company_size
-    annualrevenue → annual_revenue
-
+    name â†’ company_name
+    domain â†’ company_domain
+    industry â†’ industry
+    numberofemployees â†’ company_size
+    annualrevenue â†’ annual_revenue
 
 ```
 
@@ -444,18 +399,13 @@ hubspot_company:
 hubspot_timeline_event:
   event_types:
 
-
     - email_sent
-
 
     - email_opened
 
-
     - email_clicked
 
-
     - email_replied
-
 
     - email_bounced
 
@@ -467,7 +417,6 @@ hubspot_timeline_event:
       campaign_name: campaign_name
       subject_line: subject
       action: action_type
-
 
 ```
 
@@ -481,25 +430,18 @@ sync_rules:
 
     penguinmails_to_hubspot:
 
-
       - on: email_sent
         action: create_timeline_event
         event_type: email_sent
-
-
 
       - on: email_opened
         action: update_property
         property: penguinmails_last_email_opened
 
-
-
       - on: email_clicked
         action: create_timeline_event
         event_type: email_clicked
         trigger_workflow: true  # Optional
-
-
 
       - on: high_engagement
         condition: lead_score >= 75
@@ -508,20 +450,14 @@ sync_rules:
 
     hubspot_to_penguinmails:
 
-
       - on: contact_created
         action: import_contact
-
-
 
       - on: contact_updated
         action: update_contact
 
-
-
       - on: list_membership_changed
         action: update_segments
-
 
 ```
 
@@ -580,7 +516,6 @@ class HubSpotService {
   }
 }
 
-
 ```
 
 ### Field Mapping & Sync Rules
@@ -591,15 +526,11 @@ class HubSpotService {
 field_mapping:
   mapping_types:
 
-
     - direct  # 1:1 field mapping
-
 
     - formula  # Calculated fields
 
-
     - conditional  # Based on conditions
-
 
     - aggregation  # Sum, count, etc.
 
@@ -625,7 +556,6 @@ field_mapping:
       crm_field: Total_Email_Engagement__c
       formula: "SUM(opens + clicks)"
       direction: to_crm
-
 
 ```
 
@@ -717,7 +647,6 @@ class CRMSyncService {
   }
 }
 
-
 ```
 
 #### Conflict Resolution
@@ -747,7 +676,6 @@ conflict_resolution_strategies:
       lead_score: penguinmails_wins
       company: newest_wins
       custom_fields: manual
-
 
 ```
 
@@ -815,7 +743,6 @@ class ConflictResolver {
     await db.contacts.update(localContact.id, updates);
   }
 }
-
 
 ```
 
@@ -905,17 +832,17 @@ class ConflictResolver {
 
 ### MVP (Q1 2026)
 
-- ✓ Salesforce integration (contacts, leads, activities)
+- âœ“ Salesforce integration (contacts, leads, activities)
 
-- ✓ HubSpot integration (contacts, companies, activities)
+- âœ“ HubSpot integration (contacts, companies, activities)
 
-- ✓ Bi-directional contact sync
+- âœ“ Bi-directional contact sync
 
-- ✓ Email activity logging
+- âœ“ Email activity logging
 
-- ✓ Basic field mapping
+- âœ“ Basic field mapping
 
-- ✓ OAuth authentication
+- âœ“ OAuth authentication
 
 ### Level 3 (Q2-Q3 2026)
 
@@ -960,4 +887,5 @@ class ConflictResolver {
 **Last Updated**: 2025-11-24
 **Owner**: Integrations Engineering Team
 **Status**: Planned - Q1 2026 key partnership feature
+
 

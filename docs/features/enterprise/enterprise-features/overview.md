@@ -1,4 +1,4 @@
----
+﻿---
 title: "Enterprise Features Roadmap"
 timeline: "Q4 2026 - Q1 2027"
 status: "planned"
@@ -7,7 +7,6 @@ completion: "0%"
 dependencies: ["campaign-management", "crm-integration", "workflow-automation"]
 blocks: []
 ---
-
 
 # Enterprise Features Roadmap
 
@@ -33,15 +32,15 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](/docs/features/enterprise/enterprise-features/campaign-management)** - Core platform complete (Q1 2026)
+- â³ **[Campaign Management](/docs/features/enterprise/enterprise-features/campaign-management)** - Core platform complete (Q1 2026)
 
-- ⏳ **[CRM Integration](/docs/features/enterprise/enterprise-features/crm-integration)** - Integration infrastructure (Q1 2026)
+- â³ **[CRM Integration](/docs/features/enterprise/enterprise-features/crm-integration)** - Integration infrastructure (Q1 2026)
 
-- ⏳ **[Workflow Automation](/docs/features/enterprise/enterprise-features/workflow-automation)** - Automation infrastructure (Q2-Q3 2026)
+- â³ **[Workflow Automation](/docs/features/enterprise/enterprise-features/workflow-automation)** - Automation infrastructure (Q2-Q3 2026)
 
-- ⏳ Security audit - Required before enterprise launch
+- â³ Security audit - Required before enterprise launch
 
-- ⏳ Compliance certification - SOC 2, GDPR, HIPAA research
+- â³ Compliance certification - SOC 2, GDPR, HIPAA research
 
 ### Blocks (Features Waiting on This)
 
@@ -410,4 +409,5 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 **Last Updated**: 2025-11-24
 **Owner**: Security + Compliance + Engineering Teams
 **Status**: Planned - Q4 2026-Q1 2027 enterprise readiness
+
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Domain Management"
 description: "Custom domain configuration, DNS verification, and sender authentication"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "IT Admins, Marketing Ops"
 status: "ACTIVE"
 category: "Domains"
 ---
-
 
 # Domain Management
 
@@ -121,7 +120,6 @@ POST /api/v1/domains
 // Get DNS records for verification
 GET /api/v1/domains/{id}/dns
 
-
 ```
 
 ---
@@ -142,4 +140,5 @@ GET /api/v1/domains/{id}/dns
 **Verification Time:** < 1 hour (TTL dependent)
 
 *Proper domain authentication is the single most important factor in email deliverability.*
+
 

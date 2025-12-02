@@ -1,4 +1,4 @@
----
+﻿---
 title: "Template Management"
 description: "Email template creation, HTML editing, and variable management"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Marketers, Designers"
 status: "ACTIVE"
 category: "Templates"
 ---
-
 
 # Template Management
 
@@ -102,7 +101,6 @@ Show or hide content based on data.
   <p>Thanks for being a VIP!</p>
 {{/if}}
 
-
 ```
 
 {% endraw %}
@@ -192,4 +190,5 @@ POST /api/v1/templates
 **Engine:** Handlebars.js
 
 *Great templates drive engagement. PenguinMails gives you the tools to look professional on every device.*
+
 

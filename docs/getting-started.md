@@ -1,11 +1,10 @@
----
+﻿---
 title: "Getting Started with PenguinMails"
 description: "Quick introduction to PenguinMails cold email infrastructure"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Getting Started with PenguinMails
 
@@ -57,15 +56,15 @@ Choose your entry point based on your experience level:
 
 ### Quick Start (5 Minutes)
 
-→ [Quick Setup Guide](/docs/quick-setup))
+â†’ [Quick Setup Guide](/docs/quick-setup))
 
 ### Feature Overview
 
-→ [Features Overview](/docs/feature-overview))
+â†’ [Features Overview](/docs/feature-overview))
 
 ### Deep Dive
 
-→ [Core Features Documentation](/docs/features)
+â†’ [Core Features Documentation](/docs/features)
 
 ## Migration Note
 
@@ -78,7 +77,8 @@ This content is being migrated and enhanced from existing documentation to provi
 - **Integration Strategy**: Structure from current docs, refer to canonical sections for comprehensive information
 
 ---
-*Next: [Quick Setup Guide](/docs/quick-setup)) →*
+*Next: [Quick Setup Guide](/docs/quick-setup)) â†’*
 
 ---
+
 

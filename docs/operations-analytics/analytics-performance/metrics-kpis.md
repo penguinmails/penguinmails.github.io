@@ -1,11 +1,10 @@
----
+﻿---
 title: "Metrics & KPIs Framework"
 description: "Comprehensive metrics and KPIs framework for enterprise-grade performance monitoring, business intelligence, and strategic decision-making"
 last_modified_date: "2025-11-10"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Metrics & KPIs Framework
 
@@ -87,7 +86,7 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 #### **Customer Lifetime Value (LTV)**
 
-- **Formula**: Average revenue per user × customer lifespan
+- **Formula**: Average revenue per user Ã— customer lifespan
 
 - **Target**: >$XXXX per customer
 
@@ -107,7 +106,7 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 #### **Annual Recurring Revenue (ARR)**
 
-- **Formula**: MRR × 12
+- **Formula**: MRR Ã— 12
 
 - **Target**: $XM by end of year 1
 
@@ -657,14 +656,15 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 Navigate to specific analytics areas:
 
-- **[User Analytics](/docs/operations-analytics/analytics-performance)** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations-analytics/analytics-performance)** â†’ User behavior and engagement analysis
 
-- **[Product Analytics](/docs/operations-analytics/analytics-performance)** → Feature performance and optimization
+- **[Product Analytics](/docs/operations-analytics/analytics-performance)** â†’ Feature performance and optimization
 
-- **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
+- **[Operations Management](/docs/operations-analytics/operations-management)** â†’ Operational procedures and workflows
 
 ---
 
 **Keywords**: metrics KPIs, performance monitoring, business intelligence, KPI management, operational excellence, system monitoring, business metrics, strategic analytics
 ---
+
 

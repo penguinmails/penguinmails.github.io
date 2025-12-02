@@ -1,4 +1,4 @@
----
+﻿---
 title: "Data Privacy"
 description: "Privacy policy enforcement and data handling practices for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Legal Teams, Privacy Officers"
 status: "ACTIVE"
 category: "Compliance"
 ---
-
 
 # Data Privacy
 
@@ -61,15 +60,15 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 #### Not Collected
 
-- ❌ Social Security Numbers
+- âŒ Social Security Numbers
 
-- ❌ Financial information (Stripe handles payments)
+- âŒ Financial information (Stripe handles payments)
 
-- ❌ Sensitive health data
+- âŒ Sensitive health data
 
-- ❌ Biometric data
+- âŒ Biometric data
 
-- ❌ Unnecessary tracking data
+- âŒ Unnecessary tracking data
 
 ---
 
@@ -129,7 +128,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Generated within 24 hours
 
-- Available via: Settings → Privacy → Export My Data
+- Available via: Settings â†’ Privacy â†’ Export My Data
 
 **Contact Data Export**
 
@@ -139,7 +138,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Includes all custom fields
 
-- Available via: Leads → Export
+- Available via: Leads â†’ Export
 
 #### Data Correction
 
@@ -163,21 +162,21 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 **What Gets Deleted:**
 
-- ✅ User profile and credentials
+- âœ… User profile and credentials
 
-- ✅ Contact lists and segmentation
+- âœ… Contact lists and segmentation
 
-- ✅ Campaign data and templates
+- âœ… Campaign data and templates
 
-- ✅ All personally identifiable information (PII)
+- âœ… All personally identifiable information (PII)
 
 **What's Retained (Legal/Compliance):**
 
-- ⚠️ Audit logs (7 years, anonymized)
+- âš ï¸ Audit logs (7 years, anonymized)
 
-- ⚠️ Transaction records (7 years for tax compliance)
+- âš ï¸ Transaction records (7 years for tax compliance)
 
-- ⚠️ Abuse/spam reports (perpetual, for platform security)
+- âš ï¸ Abuse/spam reports (perpetual, for platform security)
 
 ---
 
@@ -266,7 +265,6 @@ New User Defaults:
   session_timeout: 30 minutes
   mfa: recommended (not required)
 
-
 ```
 
 ---
@@ -289,7 +287,6 @@ Deleted Accounts:
   Hard Delete: Permanent after 30 days
   Audit Logs: 7 years (anonymized, compliance)
 
-
 ```
 
 **Contact Data**
@@ -307,7 +304,6 @@ Bounced:
   Hard bounce: Immediate suppression
   Soft bounce (3x): Suppression after 3 attempts
 
-
 ```
 
 **Campaign Data**
@@ -318,7 +314,6 @@ Campaigns:
   Email Content: 24 months
   Send Logs: 36 months
   Analytics: 12 months (aggregated indefinitely)
-
 
 ```
 
@@ -400,23 +395,23 @@ Campaigns:
 
 **When We Share Data:**
 
-- ✅ With user consent (integrations)
+- âœ… With user consent (integrations)
 
-- ✅ To provide requested services
+- âœ… To provide requested services
 
-- ✅ With sub-processors (listed above)
+- âœ… With sub-processors (listed above)
 
-- ✅ For legal compliance (subpoena, court order)
+- âœ… For legal compliance (subpoena, court order)
 
 **When We DON'T Share Data:**
 
-- ❌ Selling to third parties
+- âŒ Selling to third parties
 
-- ❌ Marketing to non-users
+- âŒ Marketing to non-users
 
-- ❌ Sharing with affiliates
+- âŒ Sharing with affiliates
 
-- ❌ Unrelated business purposes
+- âŒ Unrelated business purposes
 
 ---
 
@@ -484,7 +479,6 @@ CREATE TABLE contact_engagement (
   -- No PII stored here
 );
 
-
 ```
 
 #### Data Anonymization
@@ -501,7 +495,6 @@ SET
 WHERE
   created_at < NOW() - INTERVAL '90 days'
   AND anonymized = false;
-
 
 ```
 
@@ -523,7 +516,6 @@ Response:
   "download_url": null // available when complete
 }
 
-
 ```
 
 #### Delete User Account
@@ -544,7 +536,6 @@ Response:
   "permanent_deletion_date": "2025-12-24T10:30:00Z"
 }
 
-
 ```
 
 ---
@@ -556,33 +547,23 @@ Response:
 ```javascript
 Privacy Audit Events:
 
-
 - user.data_exported
-
 
 - user.data_deleted
 
-
 - user.consent_updated
-
 
 - contact.data_accessed
 
-
 - contact.data_exported
-
 
 - contact.data_deleted
 
-
 - privacy_policy.accepted
-
 
 - privacy_policy.updated
 
-
 - dpa.signed
-
 
 ```
 
@@ -697,4 +678,5 @@ Privacy Audit Events:
 **Compliance:** GDPR, CCPA, PIPEDA, LGPD
 
 *Privacy is a fundamental right. PenguinMails is committed to protecting user privacy through technical excellence, transparency, and accountability.*
+
 

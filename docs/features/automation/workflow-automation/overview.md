@@ -1,4 +1,4 @@
----
+﻿---
 title: "Workflow Automation Roadmap"
 timeline: "Q2-Q3 2026"
 status: "planned"
@@ -7,7 +7,6 @@ completion: "0%"
 dependencies: ["enhanced-analytics", "campaign-management"]
 blocks: []
 ---
-
 
 # Workflow Automation Roadmap
 
@@ -33,13 +32,13 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 
 ### Required Before Starting
 
-- ⏳ **[Enhanced Analytics](/docs/features/automation/workflow-automation/enhanced-analytics)** - Analytics for trigger conditions (Q1 2026)
+- â³ **[Enhanced Analytics](/docs/features/automation/workflow-automation/enhanced-analytics)** - Analytics for trigger conditions (Q1 2026)
 
-- ⏳ **[Campaign Management](/docs/features/automation/workflow-automation/campaign-management)** - Base campaign infrastructure (Q1 2026)
+- â³ **[Campaign Management](/docs/features/automation/workflow-automation/campaign-management)** - Base campaign infrastructure (Q1 2026)
 
-- ⏳ Event tracking system - Planned
+- â³ Event tracking system - Planned
 
-- ⏳ Rule engine framework - Research phase
+- â³ Rule engine framework - Research phase
 
 ### Blocks (Features Waiting on This)
 
@@ -170,13 +169,12 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 ```text
 
 Trigger: Contact added to list
-→ Wait 1 day
-→ Send welcome email
-→ If opened: Add tag "engaged"
-→ Wait 3 days
-→ Send value content email
-→ If clicked: Notify sales team
-
+â†’ Wait 1 day
+â†’ Send welcome email
+â†’ If opened: Add tag "engaged"
+â†’ Wait 3 days
+â†’ Send value content email
+â†’ If clicked: Notify sales team
 
 ```
 
@@ -185,11 +183,10 @@ Trigger: Contact added to list
 ```text
 
 Trigger: No engagement in 30 days
-→ Send re-engagement email
-→ If no open in 7 days: Try different subject line
-→ If still no open: Create sales task
-→ If opened: Add back to active nurture
-
+â†’ Send re-engagement email
+â†’ If no open in 7 days: Try different subject line
+â†’ If still no open: Create sales task
+â†’ If opened: Add back to active nurture
 
 ```
 
@@ -198,12 +195,11 @@ Trigger: No engagement in 30 days
 ```text
 
 Trigger: Link clicked (pricing page)
-→ Add tag "high-intent"
-→ Notify sales team
-→ Send case study email
-→ Wait 2 days
-→ If no reply: Send special offer
-
+â†’ Add tag "high-intent"
+â†’ Notify sales team
+â†’ Send case study email
+â†’ Wait 2 days
+â†’ If no reply: Send special offer
 
 ```
 
@@ -275,7 +271,7 @@ Trigger: Link clicked (pricing page)
 
 - Manual setup
 
-### Workflow Automation (Q2-Q3 2026) ✓
+### Workflow Automation (Q2-Q3 2026) âœ“
 
 - Multi-path conditional logic
 
@@ -364,4 +360,5 @@ Trigger: Link clicked (pricing page)
 **Last Updated**: 2025-11-24
 **Owner**: Full-Stack + AI Engineering Teams
 **Status**: Planned - Q2-Q3 2026 advanced feature
+
 

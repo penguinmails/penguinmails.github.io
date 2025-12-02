@@ -1,4 +1,4 @@
----
+﻿---
 title: "Email Infrastructure Setup"
 description: "Automated VPS provisioning, SMTP server setup, and DNS configuration for professional email infrastructure"
 level: "1"
@@ -7,27 +7,20 @@ roadmap_timeline: "Q4 2025"
 priority: "Critical"
 related_features:
 
-
   - infrastructure/hostwind-management
-
 
   - infrastructure/free-mailbox-creation
 
-
   - domains/domain-management
-
 
   - compliance/security-features
 related_tasks:
 
-
   - epic-5-infrastructure-management
 related_api:
 
-
   - implementation-technical/api/platform-api/infrastructure
 ---
-
 
 # Email Infrastructure Setup
 
@@ -73,18 +66,13 @@ Professional email infrastructure includes:
 
 ```text
 
-
 1. Add your domain to PenguinMails
-
 
 2. System generates DNS verification record
 
-
 3. Add TXT record to your DNS provider
 
-
 4. Click "Verify Domain" (usually instant)
-
 
 ```
 
@@ -101,12 +89,11 @@ Once domain is verified, click **"Launch Infrastructure"**:
 ```text
 
 [Automated Process - 2-3 minutes]
-✓ VPS server provisioned via Hostwind API
-✓ MailU SMTP server installed and configured
-✓ SSL certificates generated (Let's Encrypt)
-✓ Firewall rules configured
-✓ Initial system hardening applied
-
+âœ“ VPS server provisioned via Hostwind API
+âœ“ MailU SMTP server installed and configured
+âœ“ SSL certificates generated (Let's Encrypt)
+âœ“ Firewall rules configured
+âœ“ Initial system hardening applied
 
 ```
 
@@ -149,7 +136,6 @@ TXT Record (DMARC):
   Host: _dmarc
   Value: v=DMARC1; p=quarantine; rua=mailto:postmaster@yourdomain.com
 
-
 ```
 
 **Automation Option:** For supported DNS providers (Cloudflare, Route53, etc.), click **"Auto-Configure DNS"** to apply all records automatically.
@@ -158,18 +144,13 @@ TXT Record (DMARC):
 
 ```text
 
-
 1. Click "Create Email Account"
-
 
 2. Enter email address (e.g., sales@yourdomain.com)
 
-
 3. Set secure password (or auto-generate)
 
-
 4. Click "Create Account"
-
 
 ```
 
@@ -181,13 +162,12 @@ System automatically runs verification:
 
 ```text
 
-✓ SMTP connection test
-✓ SPF record validation
-✓ DKIM signature validation
-✓ DMARC policy check
-✓ SSL certificate validation
-✓ Deliverability score (initial)
-
+âœ“ SMTP connection test
+âœ“ SPF record validation
+âœ“ DKIM signature validation
+âœ“ DMARC policy check
+âœ“ SSL certificate validation
+âœ“ Deliverability score (initial)
 
 ```
 
@@ -197,15 +177,15 @@ System automatically runs verification:
 
 Infrastructure setup is complete when:
 
-- ✅ All DNS records validated
+- âœ… All DNS records validated
 
-- ✅ SMTP server responding on ports 25, 465, 587
+- âœ… SMTP server responding on ports 25, 465, 587
 
-- ✅ SSL certificate valid
+- âœ… SSL certificate valid
 
-- ✅ Test email delivered successfully
+- âœ… Test email delivered successfully
 
-- ✅ Deliverability score > 80%
+- âœ… Deliverability score > 80%
 
 ---
 
@@ -239,7 +219,6 @@ Infrastructure setup is complete when:
 
 ```yaml
 
-
 # Email sending limits
 
 max_connections: 50
@@ -248,13 +227,11 @@ connection_timeout: 300s
 retry_attempts: 3
 retry_delay: 60s
 
-
 # Queue configuration
 
 queue_lifetime: 5d
 bounce_queue_lifetime: 5d
 defer_transports: true
-
 
 ```
 
@@ -276,21 +253,17 @@ defer_transports: true
 
 ```text
 
-
 # Simple (single server)
 
 v=spf1 ip4:123.45.67.89 ~all
-
 
 # Multiple servers
 
 v=spf1 ip4:123.45.67.89 ip4:123.45.67.90 ~all
 
-
 # Include third-party (e.g., Postmark for transactional)
 
 v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
-
 
 ```
 
@@ -306,21 +279,17 @@ v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
 
 ```text
 
-
 # Phase 1: Monitor only
 
 v=DMARC1; p=none; rua=mailto:dmarc@yourdomain.com
-
 
 # Phase 2: Quarantine (after 30 days)
 
 v=DMARC1; p=quarantine; pct=10; rua=mailto:dmarc@yourdomain.com
 
-
 # Phase 3: Reject (after 90 days)
 
 v=DMARC1; p=reject; rua=mailto:dmarc@yourdomain.com
-
 
 ```
 
@@ -369,21 +338,20 @@ System performs automated monitoring:
 ```text
 
 Every 5 minutes:
-✓ SMTP service status
-✓ Queue size and processing rate
-✓ Disk space utilization
-✓ CPU and memory usage
+âœ“ SMTP service status
+âœ“ Queue size and processing rate
+âœ“ Disk space utilization
+âœ“ CPU and memory usage
 
 Every hour:
-✓ DNS record validation
-✓ SSL certificate expiration
-✓ IP reputation score
+âœ“ DNS record validation
+âœ“ SSL certificate expiration
+âœ“ IP reputation score
 
 Daily:
-✓ Email deliverability test
-✓ Spam trap detection
-✓ Blacklist monitoring
-
+âœ“ Email deliverability test
+âœ“ Spam trap detection
+âœ“ Blacklist monitoring
 
 ```
 
@@ -411,49 +379,48 @@ Automated alerts for:
 
 ```text
 
-┌─────────────────────────────────────────────────────────┐
-│                     PenguinMails Platform               │
-│                                                         │
-│  ┌──────────────────┐      ┌──────────────────┐       │
-│  │  Infrastructure  │──────│   Hostwind API   │       │
-│  │  Provisioning    │      │    Integration   │       │
-│  └──────────────────┘      └──────────────────┘       │
-│           │                         │                   │
-│           ▼                         ▼                   │
-│  ┌──────────────────────────────────────────┐          │
-│  │         VPS Management Service           │          │
-│  │  - Server lifecycle management           │          │
-│  │  - Configuration automation              │          │
-│  │  - Health monitoring                     │          │
-│  └──────────────────────────────────────────┘          │
-│           │                                              │
-│           ▼                                              │
-│  ┌──────────────────────────────────────────┐          │
-│  │          DNS Automation Service          │          │
-│  │  - Record generation                     │          │
-│  │  - Validation and monitoring             │          │
-│  └──────────────────────────────────────────┘          │
-└─────────────────────────────────────────────────────────┘
-                         │
-                         ▼
-        ┌────────────────────────────────┐
-        │      Hostwind VPS Instance     │
-        │                                │
-        │  ┌──────────────────────────┐ │
-        │  │   MailU SMTP Server      │ │
-        │  │   - Port 25, 465, 587    │ │
-        │  │   - TLS/SSL enabled      │ │
-        │  │   - Authentication       │ │
-        │  └──────────────────────────┘ │
-        │                                │
-        │  ┌──────────────────────────┐ │
-        │  │   Security Layer         │ │
-        │  │   - Firewall (UFW)       │ │
-        │  │   - Fail2ban             │ │
-        │  │   - Let's Encrypt SSL    │ │
-        │  └──────────────────────────┘ │
-        └────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                     PenguinMails Platform               â”‚
+â”‚                                                         â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”      â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”       â”‚
+â”‚  â”‚  Infrastructure  â”‚â”€â”€â”€â”€â”€â”€â”‚   Hostwind API   â”‚       â”‚
+â”‚  â”‚  Provisioning    â”‚      â”‚    Integration   â”‚       â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜      â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜       â”‚
+â”‚           â”‚                         â”‚                   â”‚
+â”‚           â–¼                         â–¼                   â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”          â”‚
+â”‚  â”‚         VPS Management Service           â”‚          â”‚
+â”‚  â”‚  - Server lifecycle management           â”‚          â”‚
+â”‚  â”‚  - Configuration automation              â”‚          â”‚
+â”‚  â”‚  - Health monitoring                     â”‚          â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜          â”‚
+â”‚           â”‚                                              â”‚
+â”‚           â–¼                                              â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”          â”‚
+â”‚  â”‚          DNS Automation Service          â”‚          â”‚
+â”‚  â”‚  - Record generation                     â”‚          â”‚
+â”‚  â”‚  - Validation and monitoring             â”‚          â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜          â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                         â”‚
+                         â–¼
+        â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+        â”‚      Hostwind VPS Instance     â”‚
+        â”‚                                â”‚
+        â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” â”‚
+        â”‚  â”‚   MailU SMTP Server      â”‚ â”‚
+        â”‚  â”‚   - Port 25, 465, 587    â”‚ â”‚
+        â”‚  â”‚   - TLS/SSL enabled      â”‚ â”‚
+        â”‚  â”‚   - Authentication       â”‚ â”‚
+        â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ â”‚
+        â”‚                                â”‚
+        â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” â”‚
+        â”‚  â”‚   Security Layer         â”‚ â”‚
+        â”‚  â”‚   - Firewall (UFW)       â”‚ â”‚
+        â”‚  â”‚   - Fail2ban             â”‚ â”‚
+        â”‚  â”‚   - Let's Encrypt SSL    â”‚ â”‚
+        â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ â”‚
+        â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -545,7 +512,6 @@ CREATE TABLE email_accounts (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
-
 ```
 
 ### API Endpoints
@@ -590,7 +556,6 @@ interface ProvisionInfrastructureResponse {
   dnsRecords: DNSRecord[];
   nextSteps: string[];
 }
-
 
 ```
 
@@ -665,7 +630,6 @@ async function provisionInfrastructure(req: Request): Promise<Response> {
   };
 }
 
-
 ```
 
 #### DNS Validation
@@ -707,7 +671,6 @@ async function validateDNS(infrastructureId: string): Promise<ValidationResult> 
   };
 }
 
-
 ```
 
 ### Integration Points
@@ -740,7 +703,6 @@ class HostwindClient {
   }
 }
 
-
 ```
 
 #### DNS Provider Integration
@@ -761,7 +723,6 @@ class CloudflareDNSAdapter implements DNSProviderAdapter {
 class Route53DNSAdapter implements DNSProviderAdapter {
   // Implementation for AWS Route53
 }
-
 
 ```
 
@@ -802,7 +763,6 @@ cron.schedule('0 0 * * *', async () => {
     await renewSSLCertificate(infra);
   }
 });
-
 
 ```
 
@@ -849,4 +809,5 @@ cron.schedule('0 0 * * *', async () => {
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Infrastructure Team
+
 

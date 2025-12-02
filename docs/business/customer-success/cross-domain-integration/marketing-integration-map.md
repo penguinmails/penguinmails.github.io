@@ -95,7 +95,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 ### Key Integration Points
 
-**1. Onboarding/Adoption Campaigns**
+#### 1. Onboarding/Adoption Campaigns
 
 ```json
 {
@@ -110,7 +110,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 ```
 
-**2. Milestone Celebrations**
+#### 2. Milestone Celebrations
 
 ```json
 {
@@ -125,7 +125,7 @@ Campaign Performance ◄─── Attribution ──► CS Insights
 
 ```
 
-**3. Health-Based Segmentation**
+#### 3. Health-Based Segmentation
 
 ```json
 {
@@ -223,7 +223,7 @@ Recovery Metrics ◄─── Performance ──► CS Optimization
 
 ```
 
-**2. Win-back Sequences**
+#### 2. Win-back Sequences
 
 ```json
 {
@@ -303,7 +303,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 
 ### Key Integration Points
 
-**1. Expansion Readiness**
+#### 1. Expansion Readiness
 
 ```json
 {
@@ -318,7 +318,7 @@ Conversion Data ◄─── Attribution ──► CS Pipeline
 
 ```
 
-**2. Cross-sell Targeting**
+#### 2. Cross-sell Targeting
 
 ```json
 {

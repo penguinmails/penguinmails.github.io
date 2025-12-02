@@ -1,11 +1,10 @@
----
+﻿---
 title: "Queue System Documentation"
 description: "Queue System Documentation - Overview and Navigation"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Queue System Documentation
 
@@ -92,4 +91,5 @@ This queue system integrates with:
 - Content storage systems
 
 For questions or support, contact the Engineering team.
+
 

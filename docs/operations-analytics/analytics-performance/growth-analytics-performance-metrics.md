@@ -1,11 +1,10 @@
----
+﻿---
 title: "Growth Analytics & Performance Metrics"
 description: "Comprehensive growth analytics and performance metrics for enterprise-grade acquisition tracking, market expansion, and sustainable scaling"
 last_modified_date: "2025-10-28"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Growth Analytics & Performance Metrics
 
@@ -66,7 +65,6 @@ const calculateConversionRates = (funnel: ConversionFunnel) => {
   };
 };
 
-
 ```
 
 ### **Channel Performance**
@@ -123,7 +121,6 @@ const trackFeatureAdoption = (feature: string, userBase: User[]) => {
   };
 };
 
-
 ```
 
 ### **Account Expansion**
@@ -171,7 +168,6 @@ const calculateMarketPenetration = (metrics: GeographicMetrics) => {
     growthEfficiency: metrics.growthRate / metrics.penetrationRate
   };
 };
-
 
 ```
 
@@ -233,7 +229,6 @@ const calculateGrowthAccounting = (accounting: GrowthAccounting) => {
     }
   };
 };
-
 
 ```
 
@@ -304,7 +299,6 @@ const projectGrowth = (model: GrowthModel): GrowthProjection => {
   };
 };
 
-
 ```
 
 ### **Leading Indicators**
@@ -363,7 +357,6 @@ const evaluateContentPerformance = (content: ContentMetrics) => {
     }
   };
 };
-
 
 ```
 
@@ -459,7 +452,6 @@ const optimizeResourceAllocation = (
   };
 };
 
-
 ```
 
 ### **Growth Scaling Strategy**
@@ -480,23 +472,22 @@ const optimizeResourceAllocation = (
 
 ```markdown
 Growth Overview
-├── Total Users: X (↑X% MoM)
-├── Monthly Revenue: $X (↑X% MoM)
-├── Net New MRR: $X (↑X% MoM)
-└── Growth Rate: X% MoM
+â”œâ”€â”€ Total Users: X (â†‘X% MoM)
+â”œâ”€â”€ Monthly Revenue: $X (â†‘X% MoM)
+â”œâ”€â”€ Net New MRR: $X (â†‘X% MoM)
+â””â”€â”€ Growth Rate: X% MoM
 
 Acquisition Performance
-├── CAC: $X
-├── LTV/CAC Ratio: X
-├── Payback Period: X months
-└── Blended CPA: $X
+â”œâ”€â”€ CAC: $X
+â”œâ”€â”€ LTV/CAC Ratio: X
+â”œâ”€â”€ Payback Period: X months
+â””â”€â”€ Blended CPA: $X
 
 Expansion Metrics
-├── Net Revenue Retention: X%
-├── Expansion Revenue: $X
-├── Upsell Rate: X%
-└── Cross-sell Rate: X%
-
+â”œâ”€â”€ Net Revenue Retention: X%
+â”œâ”€â”€ Expansion Revenue: $X
+â”œâ”€â”€ Upsell Rate: X%
+â””â”€â”€ Cross-sell Rate: X%
 
 ```
 
@@ -504,18 +495,17 @@ Expansion Metrics
 
 ```markdown
 Channel Overview
-├── Organic Search: X users ($X CAC)
-├── Paid Search: X users ($X CAC)
-├── Content Marketing: X users ($X CAC)
-├── Social Media: X users ($X CAC)
-└── Direct: X users ($X CAC)
+â”œâ”€â”€ Organic Search: X users ($X CAC)
+â”œâ”€â”€ Paid Search: X users ($X CAC)
+â”œâ”€â”€ Content Marketing: X users ($X CAC)
+â”œâ”€â”€ Social Media: X users ($X CAC)
+â””â”€â”€ Direct: X users ($X CAC)
 
 Channel Efficiency
-├── Best Performing: [Channel] (X% of users)
-├── Most Efficient: [Channel] ($X CAC)
-├── Highest Volume: [Channel] (X users)
-└── Best ROI: [Channel] (X:1 ratio)
-
+â”œâ”€â”€ Best Performing: [Channel] (X% of users)
+â”œâ”€â”€ Most Efficient: [Channel] ($X CAC)
+â”œâ”€â”€ Highest Volume: [Channel] (X users)
+â””â”€â”€ Best ROI: [Channel] (X:1 ratio)
 
 ```
 
@@ -523,17 +513,16 @@ Channel Efficiency
 
 ```markdown
 Growth Projections
-├── Next Month Users: X (±X%)
-├── Next Quarter Revenue: $X (±X%)
-├── Year-End Target: X users
-└── Confidence Level: High/Medium/Low
+â”œâ”€â”€ Next Month Users: X (Â±X%)
+â”œâ”€â”€ Next Quarter Revenue: $X (Â±X%)
+â”œâ”€â”€ Year-End Target: X users
+â””â”€â”€ Confidence Level: High/Medium/Low
 
 Risk Indicators
-├── Churn Acceleration: X%
-├── Market Saturation: X%
-├── Competitive Pressure: High/Medium/Low
-└── Economic Impact: Positive/Neutral/Negative
-
+â”œâ”€â”€ Churn Acceleration: X%
+â”œâ”€â”€ Market Saturation: X%
+â”œâ”€â”€ Competitive Pressure: High/Medium/Low
+â””â”€â”€ Economic Impact: Positive/Neutral/Negative
 
 ```
 
@@ -564,7 +553,6 @@ const analyzeCohorts = (cohorts: CohortMetrics[]) => {
     retentionCurve: generateRetentionCurve(cohort.retention)
   }));
 };
-
 
 ```
 
@@ -598,7 +586,6 @@ const calculateAttribution = (model: AttributionModel) => {
     timeDecay: calculateTimeDecayAttribution(model.touchpoints, totalValue)
   };
 };
-
 
 ```
 
@@ -639,7 +626,6 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
     recommendation: lift > 0 && confidence >= 95 ? 'Implement' : 'Keep control'
   };
 };
-
 
 ```
 
@@ -695,16 +681,17 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 Navigate to specific growth and analytics areas:
 
-- **[User Analytics](/docs/operations-analytics/analytics-performance))** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations-analytics/analytics-performance))** â†’ User behavior and engagement analysis
 
-- **[Product Analytics](/docs/operations-analytics/analytics-performance))** → Feature performance and optimization
+- **[Product Analytics](/docs/operations-analytics/analytics-performance))** â†’ Feature performance and optimization
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** â†’ Comprehensive KPI framework
 
-- **[Team Performance](/docs/operations-analytics/team-performance))** → Team coordination and development
+- **[Team Performance](/docs/operations-analytics/team-performance))** â†’ Team coordination and development
 
 ---
 
 **Keywords**: growth analytics, acquisition tracking, expansion analysis, market penetration, growth efficiency, predictive modeling, channel optimization, sustainable scaling, cohort analysis
 ---
+
 

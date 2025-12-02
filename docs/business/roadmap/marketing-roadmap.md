@@ -1,11 +1,10 @@
----
+﻿---
 title: "Marketing Roadmap: Feature Promises & Hype Marketing"
 description: "Marketing-focused view of features for sales promises, customer communication, and hype marketing"
 last_modified_date: "2025-11-17"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Marketing Roadmap: Feature Promises & Hype Marketing
 
@@ -555,4 +554,5 @@ This document provides marketing and sales teams with a clear understanding of w
 **Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](/docs/business/roadmap/feature-taxonomy-and-roadmap)
 
 This marketing roadmap enables confident sales conversations, effective hype marketing, and strategic customer communication aligned with actual development capabilities.
+
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Billing Dashboard"
 description: "Usage tracking, invoices, and billing management for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Billing Administrators, Finance Teams"
 status: "ACTIVE"
 category: "Payments"
 ---
-
 
 # Billing Dashboard
 
@@ -19,7 +18,7 @@ category: "Payments"
 
 The Billing Dashboard provides complete visibility into your PenguinMails subscription, usage, costs, and payment history - all in one place.
 
-**Access:** Settings → Billing
+**Access:** Settings â†’ Billing
 
 ---
 
@@ -57,13 +56,12 @@ The Billing Dashboard provides complete visibility into your PenguinMails subscr
 #### Email Sends
 
 ```text
-📧 Email Sends
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9%
+ðŸ“§ Email Sends
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 46.9%
 23,450 / 50,000 emails sent this month
 
 Remaining: 26,550 emails
 Resets: December 24, 2025
-
 
 ```
 
@@ -80,39 +78,36 @@ Resets: December 24, 2025
 #### Team Members
 
 ```text
-👥 Team Members
-━━━━━━━━━━━━━━━━━━━━ 60%
+ðŸ‘¥ Team Members
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 60%
 3 / 5 seats occupied
 
 Available: 2 seats
 [Invite Team Member]
-
 
 ```
 
 #### Workspaces
 
 ```text
-🗂️ Workspaces
-━━━━━━━━━━━━━━━━━━━━━━━ 70%
+ðŸ—‚ï¸ Workspaces
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 70%
 7 / 10 workspaces created
 
 Available: 3 workspaces
 [Create Workspace]
-
 
 ```
 
 #### Custom Domains
 
 ```text
-🌐 Custom Domains
-━━━━━━━━━━━━━━━ 33. 3%
+ðŸŒ Custom Domains
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 33. 3%
 5 / 15 domains configured
 
 Available: 10 domains
 [Add Domain]
-
 
 ```
 
@@ -124,13 +119,13 @@ Available: 10 domains
 
 **Alert Thresholds:**
 
-- 🟡 **80% Used** - Warning email
+- ðŸŸ¡ **80% Used** - Warning email
 
-- 🟠 **90% Used** - Upgrade suggestion
+- ðŸŸ  **90% Used** - Upgrade suggestion
 
-- 🔴 **95% Used** - Urgent action needed
+- ðŸ”´ **95% Used** - Urgent action needed
 
-- ⛔ **100% Used** - Limit reached
+- â›” **100% Used** - Limit reached
 
 **Alert Actions:**
 
@@ -153,14 +148,13 @@ Available: 10 domains
 ```text
 Email Sends (Last 6 Months)
 
-50k │                     ╭─●
-40k │                  ╭──╯
-30k │            ●─────╯
-20k │      ╭─────╯
-10k │ ●────╯
- 0k └─────────────────────────
+50k â”‚                     â•­â”€â—
+40k â”‚                  â•­â”€â”€â•¯
+30k â”‚            â—â”€â”€â”€â”€â”€â•¯
+20k â”‚      â•­â”€â”€â”€â”€â”€â•¯
+10k â”‚ â—â”€â”€â”€â”€â•¯
+ 0k â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     Jun Jul Aug Sep Oct Nov
-
 
 ```
 
@@ -220,20 +214,16 @@ Due: November 24, 2025 (paid)
 
 Line Items:
 
-
 - Professional Plan (Nov 24 - Dec 24)    $149.00
-
 
 - Additional Emails (10,000)              $10.00
 
-
 - Sales Tax (CA)                           $12.72
-                                         ────────
+                                         â”€â”€â”€â”€â”€â”€â”€â”€
                                   TOTAL: $171.72
 
-Payment Method: •••• 4242 (Visa)
+Payment Method: â€¢â€¢â€¢â€¢ 4242 (Visa)
 Status: PAID
-
 
 ```
 
@@ -256,23 +246,20 @@ Status: PAID
 **See next charge before it happens.**
 
 ```text
-🔮 Next Invoice Preview
+ðŸ”® Next Invoice Preview
 
 Billing Date: December 24, 2025
 Estimated Amount: $149.00
 
 Line Items:
 
-
 - Professional Plan (Monthly)             $149.00
 
-
 - Tax (estimated)                          $11.92
-                                         ────────
+                                         â”€â”€â”€â”€â”€â”€â”€â”€
                                   TOTAL: $160.92
 
 [Update Plan] [Update Payment Method]
-
 
 ```
 
@@ -315,7 +302,6 @@ Response:
   "total_count": 12,
   "page": 1
 }
-
 
 ```
 
@@ -385,21 +371,21 @@ Response:
 
 **Eligible for Refund:**
 
-- ✅ Double-charged (full refund)
+- âœ… Double-charged (full refund)
 
-- ✅ Billing error (full refund)
+- âœ… Billing error (full refund)
 
-- ✅ Service issue (prorated refund)
+- âœ… Service issue (prorated refund)
 
-- ✅ Within 7 days of charge (goodwill refund)
+- âœ… Within 7 days of charge (goodwill refund)
 
 **Not Eligible:**
 
-- ❌ Simply changed mind after 7 days
+- âŒ Simply changed mind after 7 days
 
-- ❌ Service not used (non-usage doesn't qualify)
+- âŒ Service not used (non-usage doesn't qualify)
 
-- ❌ Annual plans mid-term (no partial refunds)
+- âŒ Annual plans mid-term (no partial refunds)
 
 **Request Refund:**
 
@@ -420,23 +406,22 @@ Response:
 **Set maximum monthly spend:**
 
 ```text
-💰 Budget Controls
+ðŸ’° Budget Controls
 
 Monthly Budget: $200.00
 Current Month Spend: $159.00
 Remaining Budget: $41.00
 
-[●●●●●●●●●●●●●●●●●●●○○○○○○] 79.5%
+[â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—‹â—‹â—‹â—‹â—‹â—‹] 79.5%
 
 Alert When:
-☑ 80% of budget ($160.00)
-☑ 100% of budget ($200.00)
+â˜‘ 80% of budget ($160.00)
+â˜‘ 100% of budget ($200.00)
 
 Action at 100%:
-● Alert only
-○ Block overage charges
-○ Auto-upgrade to next tier
-
+â— Alert only
+â—‹ Block overage charges
+â—‹ Auto-upgrade to next tier
 
 ```
 
@@ -456,13 +441,13 @@ Action at 100%:
 
 **Dashboard provides recommendations:**
 
-- 💡 **Switch to Annual** - Save 20% ($358/year savings)
+- ðŸ’¡ **Switch to Annual** - Save 20% ($358/year savings)
 
-- 💡 **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
+- ðŸ’¡ **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
 
-- 💡 **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
+- ðŸ’¡ **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
 
-- 💡 **Optimize Send Frequency** - Reduce emails by segmentation
+- ðŸ’¡ **Optimize Send Frequency** - Reduce emails by segmentation
 
 ---
 
@@ -503,7 +488,6 @@ cfo@acme.com [Remove]
 
 [+ Add Recipient]
 
-
 ```
 
 ---
@@ -523,7 +507,6 @@ Billing Address:
   United States
 
 [Edit Information]
-
 
 ```
 
@@ -565,7 +548,6 @@ PUT /api/v1/billing/company-info
   "address": {...}
 }
 
-
 ```
 
 ---
@@ -593,4 +575,5 @@ PUT /api/v1/billing/company-info
 **Data Retention:** Invoices retained for 7 years
 
 *The Billing Dashboard provides complete transparency into your PenguinMails costs and usage.*
+
 
