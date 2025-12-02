@@ -613,21 +613,21 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 ### Compliance
 
-- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - EU data protection
+- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection
 
-- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - US email law
+- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law
 
-- **[Data Privacy](/docs/features/compliance/data-privacy)** - Privacy policies
+- **[Data Privacy](./data-privacy.md)** - Privacy policies
 
-- **[Compliance Overview](/docs/features/compliance/README)** - All compliance features
+- **[Compliance Overview](./README.md)** - All compliance features
 
 ### Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation
+- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Campaign creation
 
-- **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Reply management
+- **[Unified Inbox](../inbox/unified-inbox/overview.md)** - Reply management
 
-- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
+- **[Analytics](../analytics/core-analytics/overview.md)** - Performance tracking
 
 ---
 

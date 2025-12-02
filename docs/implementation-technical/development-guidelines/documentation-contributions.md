@@ -18,13 +18,13 @@ Welcome! This page provides essential information for contributing to the Pengui
 
 ### Essential Reading
 
-- **[CONTRIBUTING.md](/docs/CONTRIBUTING)** - Complete contribution guidelines including:
+- **[CONTRIBUTING.md](/CONTRIBUTING.md)** - Complete contribution guidelines including:
   - Development setup with Docker
   - Content standards and writing guidelines
   - Git workflow and commit standards
   - Testing and validation processes
 
-- **[AGENTS.md](/docs/AGENTS)** - AI agent interaction rules and documentation standards including:
+- **[AGENTS.md](/AGENTS.md)** - AI agent interaction rules and documentation standards including:
   - Markdown formatting requirements
   - Frontmatter specifications
   - Code quality standards
@@ -57,8 +57,8 @@ Welcome! This page provides essential information for contributing to the Pengui
 ## Getting Started
 
 1. **Fork the repository** from GitHub
-2. **Follow setup instructions** in [CONTRIBUTING.md](/CONTRIBUTING#development-setup)
-3. **Review documentation standards** in [AGENTS.md](/docs/AGENTS)
+2. **Follow setup instructions** in [CONTRIBUTING.md](/CONTRIBUTING.md#development-setup)
+3. **Review documentation standards** in [AGENTS.md](/AGENTS.md)
 4. **Test locally** using Docker before submitting changes
 
 ## Support and Resources
@@ -78,5 +78,3 @@ Welcome! This page provides essential information for contributing to the Pengui
 - ✅ Cross-references remain functional
 
 For detailed implementation guidance, refer to the linked repository files above.
-
-

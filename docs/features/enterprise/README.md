@@ -1,11 +1,3 @@
----
-title: "Enterprise Features"
-description: "Enterprise-grade security, compliance, and access control"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
 # 🏢 Enterprise Features
 
 Enterprise-grade security, compliance, and access control.
@@ -21,7 +13,7 @@ Enterprise-grade security, compliance, and access control.
 
 ### ✅ Available Now
 
-- **[User Management](/docs/features/enterprise/user-management)** - Authentication, profiles, and team management
+- **[User Management](./user-management.md)** - Authentication, profiles, and team management
 
   - Email/password authentication via NileDB SDK
 
@@ -81,7 +73,7 @@ Enterprise-grade security, compliance, and access control.
 
 #### Q1 2027 (Enterprise Features)
 
-- **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** - Complete enterprise security and compliance suite
+- **[Enterprise Features](./enterprise-features/overview.md)** - Complete enterprise security and compliance suite
 
   - Audit logs and compliance reporting
 
@@ -129,7 +121,7 @@ Enterprise-grade security, compliance, and access control.
 
 ## Roadmap
 
-See **[Enterprise Features Roadmap](/docs/features/enterprise/roadmap)** for detailed timeline and quarterly breakdown.
+See **[Enterprise Features Roadmap](./roadmap.md)** for detailed timeline and quarterly breakdown.
 
 ## Related Documentation
 
@@ -145,13 +137,13 @@ See **[Enterprise Features Roadmap](/docs/features/enterprise/roadmap)** for det
 
 ### Feature Documentation
 
-- [User Management & Authentication](/docs/features/enterprise/user-management) - Authentication, profiles, team management
+- [User Management & Authentication](./user-management.md) - Authentication, profiles, team management
 
-- [Onboarding Experience](/docs/features/enterprise/onboarding-experience) - Guided setup wizard, interactive tutorials
+- [Onboarding Experience](./onboarding-experience.md) - Guided setup wizard, interactive tutorials
 
-- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) - Detailed authentication timeline
+- [Authentication Roadmap](./authentication-roadmap.md) - Detailed authentication timeline
 
-- [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
+- [Team Management Roadmap](./team-roadmap.md) - Detailed team & workspace management timeline
 
 ### Related Features
 
@@ -165,4 +157,4 @@ See **[Enterprise Features Roadmap](/docs/features/enterprise/roadmap)** for det
 
 ---
 
-[← Back to All Features](/docs/features/README)
+[← Back to All Features](../README.md)

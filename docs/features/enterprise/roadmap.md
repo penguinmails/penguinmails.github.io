@@ -510,7 +510,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - If custom: Design alternative authentication architecture
 
-- If custom: SAML 2.0 integration (Okta, Azure AD, Google Workspace, OneLogin, NileDB SDK)
+- If custom: SAML 2.0 integration (Okta, Azure AD, Google Workspace, OneLogin, Auth0)
 
 - If custom: OpenID Connect support
 
@@ -940,13 +940,13 @@ This document provides a detailed timeline for enterprise features development, 
 
 ## Related Documentation
 
-- [Enterprise Features Overview](/docs/features/enterprise/README) - Feature catalog and status
+- [Enterprise Features Overview](./README.md) - Feature catalog and status
 
-- [User Management & Authentication](/docs/features/enterprise/user-management) - Authentication details
+- [User Management & Authentication](./user-management.md) - Authentication details
 
-- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) - Detailed authentication timeline
+- [Authentication Roadmap](./authentication-roadmap.md) - Detailed authentication timeline
 
-- [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
+- [Team Management Roadmap](./team-roadmap.md) - Detailed team & workspace management timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 

@@ -1,11 +1,3 @@
----
-title: "Inbox Management"
-description: "Email organization, response management, and conversation tracking"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
 # 🗂️ Inbox Management
 
 Comprehensive email organization, response management, and conversation tracking capabilities.
@@ -16,7 +8,7 @@ Comprehensive email organization, response management, and conversation tracking
 **Timeline:** Q4 2025 (Spike) → Q1 2026 (MVP) → Q2-Q3 2026 (AI & Analytics)
 **Priority:** Critical (Foundation feature for response management)
 
-**🚨 Critical Blocker:** Stalwart Mail Server database schema investigation must be completed before any inbox development can proceed. See [Roadmap](/docs\features\inbox/) for details.
+**🚨 Critical Blocker:** Stalwart Mail Server database schema investigation must be completed before any inbox development can proceed. See [Roadmap](./roadmap.md) for details.
 
 ---
 
@@ -24,7 +16,7 @@ Comprehensive email organization, response management, and conversation tracking
 
 ### ✅ Documented (Implementation Pending)
 
-#### [Unified Inbox](/docs\features\inbox/)
+#### [Unified Inbox](./unified-inbox/overview.md)
 
 Centralized command center for managing responses across all email accounts with AI categorization and real-time sync.
 
@@ -42,7 +34,7 @@ Centralized command center for managing responses across all email accounts with
 
 **Status**: Documented | **Priority**: Critical | **Timeline**: Q1 2026
 
-#### [Inbox Rotation](/docs\features\inbox/)
+#### [Inbox Rotation](./inbox-rotation/overview.md)
 
 Maximize deliverability by automatically rotating sending across multiple email accounts with smart health monitoring.
 
@@ -112,7 +104,7 @@ Once the Stalwart investigation is complete, the following MVP features need imp
 
 ## Roadmap
 
-See the [Inbox Management Roadmap](/docs\features\inbox/) for:
+See the [Inbox Management Roadmap](./roadmap.md) for:
 
 - **Q4 2025**: Stalwart database schema investigation (3-5 days spike) - **BLOCKER**
 
@@ -138,7 +130,7 @@ See the [Inbox Management Roadmap](/docs\features\inbox/) for:
 
 ### Planning & Design
 
-- [Inbox Management Roadmap](/docs\features\inbox/) - Detailed timeline and roadmap items
+- [Inbox Management Roadmap](./roadmap.md) - Detailed timeline and roadmap items
 
 - [Tenant Inbox Routes](/docs/design/routes/tenant-inbox) - UI specifications
 
@@ -162,5 +154,4 @@ See the [Inbox Management Roadmap](/docs\features\inbox/) for:
 
 ---
 
-[← Back to All Features](/docs/features/README)
-
+[← Back to All Features](../README.md)

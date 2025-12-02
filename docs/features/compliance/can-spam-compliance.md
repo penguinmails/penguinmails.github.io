@@ -533,21 +533,21 @@ Before any campaign sends, PenguinMails automatically checks:
 
 ### Compliance
 
-- **[GDPR Compliance](/docs\features\compliance/)** - EU data protection
+- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection
 
-- **[Unsubscribe Management](/docs\features\compliance/)** - Opt-out automation
+- **[Unsubscribe Management](./unsubscribe-management.md)** - Opt-out automation
 
-- **[Data Privacy](/docs\features\compliance/)** - Privacy policies
+- **[Data Privacy](./data-privacy.md)** - Privacy policies
 
-- **[Compliance Overview](/docs\features\compliance/)** - All compliance features
+- **[Compliance Overview](./README.md)** - All compliance features
 
 ### Implementation
 
-- **[Email Authentication](/docs/domains/sender-authentication)** - SPF, DKIM, DMARC
+- **[Email Authentication](../domains/sender-authentication.md)** - SPF, DKIM, DMARC
 
-- **[Campaign Management](/docs/campaigns/campaign-management/overview)** - Campaign creation
+- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Campaign creation
 
-- **[Template Editor](/docs/templates/template-editor)** - Email templates
+- **[Template Editor](../templates/template-editor.md)** - Email templates
 
 ---
 
@@ -574,6 +574,3 @@ Before any campaign sends, PenguinMails automatically checks:
 **Applies To:** All commercial emails sent to US recipients
 
 *PenguinMails automates CAN-SPAM compliance but users are ultimately responsible for ensuring their email practices comply with all applicable laws.*
-
-
-

@@ -31,13 +31,13 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ### ✅ Available Now
 
-- **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - VPS provisioning, SMTP setup, DNS automation
+- **[Email Infrastructure Setup](./email-infrastructure-setup.md)** - VPS provisioning, SMTP setup, DNS automation
 
-- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Automated VPS setup and configuration
+- **[Free Mailbox Creation](./free-mailbox-creation/overview.md)** - Automated VPS setup and configuration
 
-- **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Database isolation and tenant management
+- **[Multi-Tenant Architecture](./multi-tenant-architecture.md)** - Database isolation and tenant management
 
-- **[Hostwind Management](/docs/features/infrastructure/hostwind-management)** - VPS provisioning and IP monitoring
+- **[Hostwind Management](./hostwind-management.md)** - VPS provisioning and IP monitoring
 
 ## Current Capabilities
 
@@ -85,7 +85,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **Cost Tracking:** Required for agencies, enables cost optimization, transparent pricing
 
-**Detailed Gaps:** See [Infrastructure Roadmap](/docs/features/infrastructure/roadmap) for complete analysis
+**Detailed Gaps:** See [Infrastructure Roadmap](./roadmap.md) for complete analysis
 
 ---
 
@@ -111,7 +111,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - Advanced DNS Management (GeoDNS, DNSSEC, failover)
 
-**Detailed Timeline:** See [Infrastructure Roadmap](/docs/features/infrastructure/roadmap)
+**Detailed Timeline:** See [Infrastructure Roadmap](./roadmap.md)
 
 ---
 
@@ -187,7 +187,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **Q1 2027:** Alternative VPS Providers (6-8 weeks)
 
-**Complete Roadmap:** [Infrastructure Roadmap](/docs/features/infrastructure/roadmap)
+**Complete Roadmap:** [Infrastructure Roadmap](./roadmap.md)
 
 ---
 
@@ -221,4 +221,4 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ---
 
-[← Back to All Features](/docs/features/README)
+[← Back to All Features](../README.md)

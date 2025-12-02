@@ -384,27 +384,27 @@ Retention Policies:
 
 ### Compliance & Legal
 
-- **[CAN-SPAM Compliance](/docs\features\compliance/)** - US email law compliance
+- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law compliance
 
-- **[Unsubscribe Management](/docs\features\compliance/)** - Automated opt-out handling
+- **[Unsubscribe Management](./unsubscribe-management.md)** - Automated opt-out handling
 
-- **[Data Privacy](/docs\features\compliance/)** - Privacy policy and data handling
+- **[Data Privacy](./data-privacy.md)** - Privacy policy and data handling
 
-- **[Compliance Overview](/docs\features\compliance/)** - All compliance features
+- **[Compliance Overview](./README.md)** - All compliance features
 
 ### Technical Implementation
 
-- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security architecture
+- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security architecture
 
-- **[Audit Logging](/docs/implementation-technical/security/audit-logging)** - Audit log implementation
+- **[Audit Logging](../../implementation-technical/security/audit-logging.md)** - Audit log implementation
 
-- **[Data Encryption](/docs/implementation-technical/security/data-encryption)** - Encryption technical details
+- **[Data Encryption](../../implementation-technical/security/data-encryption.md)** - Encryption technical details
 
 ### Business Context
 
-- **[Product Roadmap](/docs/roadmap/product-roadmap)** - Compliance feature timeline
+- **[Product Roadmap](../../roadmap/product-roadmap.md)** - Compliance feature timeline
 
-- **[Legal Resources](/docs/business/legal/README)** - Legal documentation and templates
+- **[Legal Resources](../../business/legal/README.md)** - Legal documentation and templates
 
 ---
 
@@ -435,7 +435,3 @@ Retention Policies:
 **Regulatory Changes:** Monitor EU data protection developments
 
 *PenguinMails is committed to maintaining GDPR compliance and protecting user privacy. This documentation is regularly updated to reflect current regulations and best practices.*
-
-
-
-

@@ -646,29 +646,29 @@ Privacy Audit Events:
 
 ### Compliance
 
-- **[GDPR Compliance](/docs\features\compliance/)** - EU data protection details
+- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection details
 
-- **[CAN-SPAM Compliance](/docs\features\compliance/)** - US email law
+- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law
 
-- **[Unsubscribe Management](/docs\features\compliance/)** - Opt-out handling
+- **[Unsubscribe Management](./unsubscribe-management.md)** - Opt-out handling
 
-- **[Compliance Overview](/docs\features\compliance/)** - All compliance features
+- **[Compliance Overview](./README.md)** - All compliance features
 
 ### Security
 
-- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security architecture
+- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security architecture
 
-- **[Data Encryption](/docs/implementation-technical/security/data-encryption)** - Encryption technical details
+- **[Data Encryption](../../implementation-technical/security/data-encryption.md)** - Encryption technical details
 
-- **[Access Controls](/docs/implementation-technical/security/access-controls)** - RBAC implementation
+- **[Access Controls](../../implementation-technical/security/access-controls.md)** - RBAC implementation
 
 ### Legal
 
-- **[Privacy Policy](/docs/business/legal/privacy-policy)** - Official privacy policy
+- **[Privacy Policy](../../business/legal/privacy-policy.md)** - Official privacy policy
 
-- **[Terms of Service](/docs/business/legal/terms-of-service)** - User agreement
+- **[Terms of Service](../../business/legal/terms-of-service.md)** - User agreement
 
-- **[DPA Template](/docs/business/legal/dpa-template)** - Data processing agreement
+- **[DPA Template](../../business/legal/dpa-template.md)** - Data processing agreement
 
 ---
 
@@ -697,7 +697,3 @@ Privacy Audit Events:
 **Compliance:** GDPR, CCPA, PIPEDA, LGPD
 
 *Privacy is a fundamental right. PenguinMails is committed to protecting user privacy through technical excellence, transparency, and accountability.*
-
-
-
-

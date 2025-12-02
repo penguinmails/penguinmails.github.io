@@ -1,11 +1,3 @@
----
-title: "Campaign Management"
-description: "Campaign creation, multi-channel orchestration, sequence management, and campaign analytics"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
 # 📧 Campaign Management
 
 Campaign creation, multi-channel orchestration, sequence management, and campaign-level analytics.
@@ -40,13 +32,13 @@ Campaign creation, multi-channel orchestration, sequence management, and campaig
 
 **Total MVP Effort**: 30-45 days (6-9 weeks)
 
-See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline and quarterly breakdown.
+See [Campaign Roadmap](./roadmap.md) for detailed timeline and quarterly breakdown.
 
 ## Features in This Category
 
 ### 🚧 In Development (Q1 2026)
 
-#### [Campaign Management](/docs/features/campaigns/campaign-management/overview)
+#### [Campaign Management](./campaign-management/overview.md)
 
 Comprehensive email campaign management system with sequencing, A/B testing, and template management.
 
@@ -68,7 +60,7 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 
 **Status**: PLANNED (Q1 2026) | **Priority**: Critical
 
-#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling)
+#### [Campaign Scheduling](./campaign-scheduling.md)
 
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 
@@ -96,7 +88,7 @@ Advanced scheduling with timezone handling, send-time optimization, and calendar
 
 **Status**: MVP in Q1 2026, Advanced features Q3-Q4 2026 | **Priority**: High
 
-#### [Email Sequences](/docs/features/campaigns/email-sequences)
+#### [Email Sequences](./email-sequences.md)
 
 Design and automate multi-step email sequences with conditional branching and triggers.
 
@@ -116,7 +108,7 @@ Design and automate multi-step email sequences with conditional branching and tr
 
 **Status**: PLANNED (Q1 2026) | **Priority**: High
 
-#### [A/B Testing](/docs/features/campaigns/ab-testing)
+#### [A/B Testing](./ab-testing.md)
 
 Split testing engine for optimizing subject lines, content, and send times.
 
@@ -144,7 +136,7 @@ Split testing engine for optimizing subject lines, content, and send times.
 
 **Status**: MVP in Q1 2026, Advanced features Q2 2026 | **Priority**: High
 
-#### [Personalization System](/docs\features\campaigns/)
+#### [Personalization System](./personalization-system.md)
 
 Advanced personalization engine for dynamic content insertion.
 
@@ -272,7 +264,7 @@ Advanced personalization engine for dynamic content insertion.
 
 - Advanced Analytics and Attribution (8-10 weeks)
 
-See [Campaign Roadmap](/docs\features\campaigns/) for complete timeline and feature details.
+See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 
 ---
 
@@ -310,5 +302,4 @@ See [Campaign Roadmap](/docs\features\campaigns/) for complete timeline and feat
 
 ---
 
-[← Back to All Features](/docs/features/README)
-
+[← Back to All Features](../README.md)

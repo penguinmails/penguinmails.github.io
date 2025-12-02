@@ -1,12 +1,4 @@
----
-title: "Automation & Workflows"
-description: "Workflow automation, triggers, actions, and intelligent automation rules"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
-# Automation & Workflows
+# 🤖 Automation & Workflows
 
 Workflow automation, triggers, actions, and intelligent automation rules.
 
@@ -46,7 +38,7 @@ Workflow automation, triggers, actions, and intelligent automation rules.
 
 ### ⏳ Planned for MVP (Q2-Q3 2026)
 
-#### [Workflow Automation](/docs/features/automation/workflow-automation/overview)
+#### [Workflow Automation](./workflow-automation/overview.md)
 
 Automated workflows with triggers and actions.
 
@@ -200,7 +192,7 @@ Enable workflows to trigger external apps via Zapier and receive Zapier triggers
 
 - **Q2 2027:** Workflow Templates Marketplace, Zapier Integration
 
-For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/features/automation/roadmap)
+For detailed roadmap with acceptance criteria, see [Automation Roadmap](./roadmap.md)
 
 ---
 
@@ -208,7 +200,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ### Planning & Strategy
 
-- [Automation Roadmap](/docs/features/automation/roadmap) - Detailed implementation timeline
+- [Automation Roadmap](./roadmap.md) - Detailed implementation timeline
 
 - [Product Roadmap](/docs/roadmap/product-roadmap) - Overall product timeline
 
@@ -252,7 +244,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Marketing Team Journey](/docs/user-journeys/marketing-journey) - Automation in marketing workflow
 
-- [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys) - Multi-client automation
+- [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys.md) - Multi-client automation
 
 ### Technical Implementation
 
@@ -282,5 +274,4 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ---
 
-[← Back to All Features](/docs/features/README)
-
+[← Back to All Features](../README.md)

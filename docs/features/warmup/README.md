@@ -1,11 +1,3 @@
----
-title: "Warmup & Reputation"
-description: "Automated email warmup, domain reputation building, and sender health monitoring"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
 # 🔥 Warmup & Reputation
 
 Automated email warmup, domain reputation building, and sender health monitoring.
@@ -30,13 +22,13 @@ Automated email warmup, domain reputation building, and sender health monitoring
 
 - **Q3 2026**: Automated warmup scheduling, reputation monitoring (8-10 weeks)
 
-See [Warmup Roadmap](/docs/features/warmup/roadmap) for detailed timeline.
+See [Warmup Roadmap](./roadmap.md) for detailed timeline.
 
 ## Features in This Category
 
 ### ✅ Approved (High Priority)
 
-#### [Email Warmups](/docs/features/warmup/email-warmups/overview)
+#### [Email Warmups](./email-warmups/overview.md)
 
 Automated sender reputation building for 95%+ deliverability.
 
@@ -66,7 +58,7 @@ Automated sender reputation building for 95%+ deliverability.
 
 ### 🚧 In Development (Q3 2026)
 
-#### [Warmup Scheduling](/docs/features/warmup/warmup-scheduling)
+#### [Warmup Scheduling](./warmup-scheduling.md)
 
 Automated email warmup with gradual volume ramping and engagement simulation.
 
@@ -90,7 +82,7 @@ Automated email warmup with gradual volume ramping and engagement simulation.
 
 **Status**: PLANNED (Q3 2026) | **Priority**: High
 
-#### [Reputation Monitoring](/docs/features/warmup/reputation-monitoring)
+#### [Reputation Monitoring](./reputation-monitoring.md)
 
 Real-time sender reputation tracking and deliverability monitoring.
 
@@ -168,7 +160,7 @@ Advanced deliverability features for proactive reputation management.
 
 **Total Investment**: 15-19 weeks of development effort
 
-See [Warmup Roadmap](/docs/features/warmup/roadmap) for complete timeline and feature details.
+See [Warmup Roadmap](./roadmap.md) for complete timeline and feature details.
 
 ---
 
@@ -200,4 +192,4 @@ See [Warmup Roadmap](/docs/features/warmup/roadmap) for complete timeline and fe
 
 ---
 
-[← Back to All Features](/docs/features/README)
+[← Back to All Features](../README.md)

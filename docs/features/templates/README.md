@@ -1,11 +1,3 @@
----
-title: "Templates & Content"
-description: "Email templates, HTML editor, template tags, and personalization variables"
-last_modified_date: "2025-12-02"
-level: "2"
-persona: "Documentation Users"
----
-
 # 📝 Templates & Content
 
 Email templates, HTML editor, template tags, and personalization variables.
@@ -32,13 +24,13 @@ Email templates, HTML editor, template tags, and personalization variables.
 
 - **Q3 2026**: AI-powered template intelligence (6-7 weeks)
 
-See [Template Roadmap](/docs/features/templates/roadmap) for detailed timeline.
+See [Template Roadmap](./roadmap.md) for detailed timeline.
 
 ## Features in This Category
 
 ### ✅ Available Now
 
-#### [Template Management](/docs/features/templates/template-management)
+#### [Template Management](./template-management.md)
 
 Basic template creation and management with HTML editor.
 
@@ -60,7 +52,7 @@ Basic template creation and management with HTML editor.
 
 ### 🚧 In Development (Q2 2026)
 
-#### [Template Editor](/docs/features/templates/template-editor)
+#### [Template Editor](./template-editor.md)
 
 WYSIWYG drag-and-drop email template editor with advanced features.
 
@@ -84,7 +76,7 @@ WYSIWYG drag-and-drop email template editor with advanced features.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Library](/docs/features/templates/template-library)
+#### [Template Library](./template-library.md)
 
 Pre-built professional template collection with customization.
 
@@ -106,7 +98,7 @@ Pre-built professional template collection with customization.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Variables](/docs/features/templates/template-variables)
+#### [Template Variables](./template-variables.md)
 
 Advanced dynamic content with merge tags and conditionals.
 
@@ -182,7 +174,7 @@ AI-powered template features for optimization and accessibility.
 
 **Total Investment**: 18-22 weeks of development effort
 
-See [Template Roadmap](/docs/features/templates/roadmap) for complete timeline and feature details.
+See [Template Roadmap](./roadmap.md) for complete timeline and feature details.
 
 ---
 
@@ -210,4 +202,4 @@ See [Template Roadmap](/docs/features/templates/roadmap) for complete timeline a
 
 ---
 
-[← Back to All Features](/docs/features/README)
+[← Back to All Features](../README.md)
