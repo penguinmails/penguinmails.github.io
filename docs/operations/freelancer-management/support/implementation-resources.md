@@ -528,10 +528,10 @@ For comprehensive compliance requirements, see [Data Protection Guidelines](/doc
 **Implementation Status:** Ready for immediate use by independent consultants and freelancers
 **Cross-References:**
 
-- [Business Success Framework](/docs/freelancer-support/business-framework)
+- [Business Success Framework](/docs/operations/freelancer-management/support/business-framework)
 
 - [Internal Quality Standards](/docs/operations/freelancer-management/templates)
 
-- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics)
+- [Success Metrics and KPIs](/docs/operations/freelancer-management/support/success-metrics)
 
 - [Compliance Requirements](/docs/compliance-security)

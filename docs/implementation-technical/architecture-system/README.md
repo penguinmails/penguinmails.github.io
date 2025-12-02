@@ -223,11 +223,11 @@ This architectural documentation integrates with:
 
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business decisions
 
-- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Operations Management](/docs/operations/analytics/operations-management) - Operational procedures
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
 
-- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
+- [Analytics Performance](/docs/operations/analytics/analytics-performance) - Performance monitoring
 
 ---
 

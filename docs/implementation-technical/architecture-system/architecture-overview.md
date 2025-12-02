@@ -885,9 +885,9 @@ sequenceDiagram
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
 
-- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Operations Management](/docs/operations/analytics/operations-management) - Operational procedures
 
-- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
+- [Analytics Performance](/docs/operations/analytics/analytics-performance) - Performance monitoring
 
 ---
 

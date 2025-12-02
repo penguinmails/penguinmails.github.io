@@ -238,4 +238,4 @@ This comprehensive online template includes:
 **Document Classification:** Level 2 - Implementation Guidance
 **Business Value:** Streamlined quotation process ensuring quality freelancer selection and project success
 **Implementation Status:** Ready for freelancer onboarding and quotation submissions
-**Cross-Reference:** Integrated with [Freelancer Success Center](/docs/freelancer-support/README) and [Operations Framework](/docs/operations/freelancer-management/framework)
+**Cross-Reference:** Integrated with [Freelancer Success Center](/docs/operations/freelancer-management/support/README) and [Operations Framework](/docs/operations/freelancer-management/framework)

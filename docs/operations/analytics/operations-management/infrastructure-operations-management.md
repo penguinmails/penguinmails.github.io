@@ -672,9 +672,9 @@ External Support:
 
 - **[Business Strategy Overview](/docs/business/strategy/overview)** - Strategic business alignment
 
-- **[Operations Analytics Overview](/docs/operations-analytics)** - Main operations analytics framework
+- **[Operations Analytics Overview](/docs/operations/analytics)** - Main operations analytics framework
 
-- **[Analytics Performance](/docs/operations-analytics/analytics-performance)** - Performance monitoring and analytics
+- **[Analytics Performance](/docs/operations/analytics/analytics-performance)** - Performance monitoring and analytics
 
 ---
 

@@ -790,11 +790,11 @@ const supportTemplates = {
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics) - Main operations framework
 
-- [Organization Analytics](/docs/operations-analytics/operations-management/README) - Team and organization management
+- [Organization Analytics](/docs/operations/analytics/operations-management/README) - Team and organization management
 
-- [Metrics & KPIs](/docs/operations-analytics/analytics-performance/README) - Comprehensive KPI framework
+- [Metrics & KPIs](/docs/operations/analytics/analytics-performance/README) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -862,11 +862,11 @@ const supportTemplates = {
 
 Navigate to specific team performance areas:
 
-- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
+- **[QA Testing Protocols](/docs/operations/analytics/team-performance))** → Quality assurance procedures
 
-- **[Sprint Retrospectives](/docs/operations-analytics/team-performance))** → Agile development practices
+- **[Sprint Retrospectives](/docs/operations/analytics/team-performance))** → Agile development practices
 
-- **[Organization Analytics](/docs/operations-analytics/operations-management/README)** → Team and organization management
+- **[Organization Analytics](/docs/operations/analytics/operations-management/README)** → Team and organization management
 
 ---
 

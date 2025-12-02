@@ -241,7 +241,7 @@ Standards facilitate sustainable business growth:
 
 - Long-term client relationship building
 
-For business development guidance, see [Freelancer Success Framework](/docs/freelancer-support/business-framework)
+For business development guidance, see [Freelancer Success Framework](/docs/operations/freelancer-management/support/business-framework)
 
 ---
 
@@ -253,8 +253,8 @@ For business development guidance, see [Freelancer Success Framework](/docs/free
 
 - [Internal Operations Framework](/docs/operations/freelancer-management/framework)
 
-- [Freelancer Success Framework](/docs/freelancer-support/business-framework)
+- [Freelancer Success Framework](/docs/operations/freelancer-management/support/business-framework)
 
 - [Quality Assurance Templates](/docs/operations/freelancer-management/templates/)
 
-- [Implementation Resources](/docs/freelancer-support/implementation-resources)
+- [Implementation Resources](/docs/operations/freelancer-management/support/implementation-resources)

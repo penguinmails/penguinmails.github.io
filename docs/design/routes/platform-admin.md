@@ -8,7 +8,7 @@
 
   - [Internal Views](/docs/features/analytics/specs/internal-views)
 
-  - [Operations Analytics](/docs/operations-analytics/overview)
+  - [Operations Analytics](/docs/operations/analytics/overview)
 
 - **User Journey**: Support ticket → Admin looks up user → Reviews audit trail to debug.
 
@@ -241,7 +241,7 @@
 
 **Related Documentation**:
 
-- [Finance Processes](/docs/finance/reporting/mrr-calculation)
+- [Finance Processes](/docs/business/finance/reporting/mrr-calculation)
 
 - [Stripe Webhooks](/docs/technical/integrations/stripe)
 

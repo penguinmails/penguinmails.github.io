@@ -421,7 +421,7 @@ Personal data breach?
 
 - [Security Documentation](/docs/compliance-security/enterprise) - Security procedures and protocols
 
-- [Incident Response Plan](/docs/operations-analytics/operations-management/incident-response) - Detailed breach response procedures
+- [Incident Response Plan](/docs/operations/analytics/operations-management/incident-response) - Detailed breach response procedures
 
 - [Vendor Management Policy](/docs/compliance-security/international/vendor-management-policy) - Third-party vendor compliance
 

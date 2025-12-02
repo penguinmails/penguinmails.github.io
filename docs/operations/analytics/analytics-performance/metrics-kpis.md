@@ -609,11 +609,11 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 ### Operations & Analytics
 
-- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics/analytics-performance) - Main operations framework
 
-- [User Analytics](/docs/operations-analytics/analytics-performance) - User behavior analysis
+- [User Analytics](/docs/operations/analytics/analytics-performance) - User behavior analysis
 
-- [Product Analytics](/docs/operations-analytics/analytics-performance) - Feature performance analysis
+- [Product Analytics](/docs/operations/analytics/analytics-performance) - Feature performance analysis
 
 ### Business Strategy
 
@@ -657,11 +657,11 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 Navigate to specific analytics areas:
 
-- **[User Analytics](/docs/operations-analytics/analytics-performance)** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations/analytics/analytics-performance)** → User behavior and engagement analysis
 
-- **[Product Analytics](/docs/operations-analytics/analytics-performance)** → Feature performance and optimization
+- **[Product Analytics](/docs/operations/analytics/analytics-performance)** → Feature performance and optimization
 
-- **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
+- **[Operations Management](/docs/operations/analytics/operations-management)** → Operational procedures and workflows
 
 ---
 

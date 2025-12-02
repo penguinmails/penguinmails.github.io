@@ -187,11 +187,11 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 ## If you're reading Story Points
 
-- [Quotation Guide](/docs/freelancer-support/quotation-guide#task-based-payment-model) - How story points relate to payment
+- [Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide#task-based-payment-model) - How story points relate to payment
 
 - [Operations Framework](/docs/operations/freelancer-management/framework#estimation-standards) - Estimation best practices
 
-- [Freelancer Success Center](/docs/freelancer-support/README#service-package-development) - Business value of accurate estimates
+- [Freelancer Success Center](/docs/operations/freelancer-management/support/README#service-package-development) - Business value of accurate estimates
 
 ## If you're reading SOP Workflow
 
@@ -199,7 +199,7 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 - [Communication Standards](/docs/operations/freelancer-management/framework#communication-protocols) - Professional protocols
 
-- [Freelancer Support Hub](/docs/freelancer-support/README#professional-excellence-standards) - Quality and delivery standards
+- [Freelancer Support Hub](/docs/operations/freelancer-management/support/README#professional-excellence-standards) - Quality and delivery standards
 
 ## If you're reading Tools Overview
 
@@ -207,15 +207,15 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 - [Development Environment Setup](/docs/operations/freelancer-management/framework#development-environment) - Technical requirements
 
-- [Google Workspace Configuration](/docs/freelancer-support/implementation-resources#google-workspace-setup) - Tool-specific guidance
+- [Google Workspace Configuration](/docs/operations/freelancer-management/support/implementation-resources#google-workspace-setup) - Tool-specific guidance
 
 ### **Essential Reading by Experience Level**
 
 ## New to Freelancing
 
-- [Freelancer Success Center](/docs/freelancer-support/README) - Complete business development guide
+- [Freelancer Success Center](/docs/operations/freelancer-management/support/README) - Complete business development guide
 
-- [Quotation Guide](/docs/freelancer-support/quotation-guide) - Professional proposal preparation
+- [Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide) - Professional proposal preparation
 
 - [Operations Framework](/docs/operations/freelancer-management/framework) - Professional workflow procedures
 
@@ -229,9 +229,9 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 ## Industry Specialists
 
-- [Business Development Resources](/docs/freelancer-support/README#industry-specialization) - Specialization opportunities
+- [Business Development Resources](/docs/operations/freelancer-management/support/README#industry-specialization) - Specialization opportunities
 
-- [Premium Service Development](/docs/freelancer-support/README#scaling-success) - Advanced offerings
+- [Premium Service Development](/docs/operations/freelancer-management/support/README#scaling-success) - Advanced offerings
 
 - [Technical Standards](/docs/operations/freelancer-management/framework#code-infrastructure-standards) - Development practices
 
@@ -251,11 +251,11 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 **Step 4 Complete** (Tools Overview):
 
-→ **Next**: Move to [Freelancer Success Center](/docs/freelancer-support/README) for business development guidance
+→ **Next**: Move to [Freelancer Success Center](/docs/operations/freelancer-management/support/README) for business development guidance
 
 **Step 5 Complete** (Quick Start Checklist):
 
-→ **Next**: Proceed to [Quotation Guide](/docs/freelancer-support/quotation-guide) for professional proposal preparation
+→ **Next**: Proceed to [Quotation Guide](/docs/operations/freelancer-management/support/quotation-guide) for professional proposal preparation
 
 ### **Compliance and Standards**
 
@@ -267,11 +267,11 @@ Story points measure relative effort including complexity, uncertainty, and depe
 
 ### **Learning Enhancement Resources**
 
-- [Success Center: Business Development](/docs/freelancer-support/README#business-development-resources) - Build your practice
+- [Success Center: Business Development](/docs/operations/freelancer-management/support/README#business-development-resources) - Build your practice
 
-- [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and templates
+- [Implementation Resources](/docs/operations/freelancer-management/support/implementation-resources) - Practical tools and templates
 
-- [Success Metrics](/docs/freelancer-support/success-metrics) - Performance tracking and KPIs
+- [Success Metrics](/docs/operations/freelancer-management/support/success-metrics) - Performance tracking and KPIs
 
 ---
 

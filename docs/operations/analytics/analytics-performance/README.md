@@ -45,7 +45,7 @@ This section provides comprehensive analytics and performance monitoring framewo
 
 ## Integration Points
 
-- [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics) - Main operations framework
 
 - [Business Strategy](/docs/business/strategy/overview) - Strategic alignment
 

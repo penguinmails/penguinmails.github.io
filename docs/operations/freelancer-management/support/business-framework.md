@@ -351,8 +351,8 @@ For detailed quality standards, see [Implementation Templates](/docs/operations/
 
 - [Internal Operations Framework](/docs/operations/freelancer-management/framework)
 
-- [Implementation Resources](/docs/freelancer-support/implementation-resources)
+- [Implementation Resources](/docs/operations/freelancer-management/support/implementation-resources)
 
-- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics)
+- [Success Metrics and KPIs](/docs/operations/freelancer-management/support/success-metrics)
 
 - [Compliance Guidelines](/docs/compliance-security)

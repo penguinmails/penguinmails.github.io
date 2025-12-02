@@ -831,7 +831,7 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](/docs/operations-analytics)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics)) - Main operations framework
 
 - [User Analytics](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - User behavior analysis
 
@@ -871,11 +871,11 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Team Performance**
 
-- [Team Performance Overview](/docs/operations-analytics/team-performance) - Team coordination
+- [Team Performance Overview](/docs/operations/analytics/team-performance) - Team coordination
 
-- [QA Testing Protocols](/docs/operations-analytics/team-performance)) - Quality assurance
+- [QA Testing Protocols](/docs/operations/analytics/team-performance)) - Quality assurance
 
-- [Sprint Retrospectives](/docs/operations-analytics/team-performance)) - Agile development
+- [Sprint Retrospectives](/docs/operations/analytics/team-performance)) - Agile development
 
 ---
 
@@ -883,11 +883,11 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 Navigate to specific organization and team areas:
 
-- **[Staff Operations](/docs/operations-analytics/operations-management))** → Operational staff coordination
+- **[Staff Operations](/docs/operations/analytics/operations-management))** → Operational staff coordination
 
-- **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
+- **[QA Testing Protocols](/docs/operations/analytics/team-performance))** → Quality assurance procedures
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations/analytics/analytics-performance/README)** → Comprehensive KPI framework
 
 ---
 

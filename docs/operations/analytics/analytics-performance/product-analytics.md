@@ -567,11 +567,11 @@ Recommendations
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics/analytics-performance) - Main operations framework
 
-- [User Analytics](/docs/operations-analytics/analytics-performance) - User behavior analysis
+- [User Analytics](/docs/operations/analytics/analytics-performance) - User behavior analysis
 
-- [Performance KPIs](/docs/operations-analytics/analytics-performance) - Comprehensive KPI framework
+- [Performance KPIs](/docs/operations/analytics/analytics-performance) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -599,11 +599,11 @@ Recommendations
 
 ### **Team Performance**
 
-- [Team Performance Overview](/docs/operations-analytics/team-performance) - Team coordination
+- [Team Performance Overview](/docs/operations/analytics/team-performance) - Team coordination
 
-- [QA Testing Protocols](/docs/operations-analytics/team-performance) - Quality assurance procedures
+- [QA Testing Protocols](/docs/operations/analytics/team-performance) - Quality assurance procedures
 
-- [Sprint Retrospectives](/docs/operations-analytics/team-performance) - Agile development
+- [Sprint Retrospectives](/docs/operations/analytics/team-performance) - Agile development
 
 ---
 
@@ -611,11 +611,11 @@ Recommendations
 
 Navigate to specific product areas:
 
-- **[User Analytics](/docs/operations-analytics/analytics-performance)** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations/analytics/analytics-performance)** → User behavior and engagement analysis
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations/analytics/analytics-performance)** → Comprehensive KPI framework
 
-- **[Team Performance](/docs/operations-analytics/team-performance)** → Team coordination and development
+- **[Team Performance](/docs/operations/analytics/team-performance)** → Team coordination and development
 
 ---
 

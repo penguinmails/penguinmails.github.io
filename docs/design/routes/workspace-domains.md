@@ -148,7 +148,7 @@
 
 **Related Documentation**:
 
-- [Domain Setup Tutorial](/docs/freelancer-support/tutorials/domain-setup)
+- [Domain Setup Tutorial](/docs/operations/freelancer-management/support/tutorials/domain-setup)
 
 - [DNS Provider Guides](/docs/technical/infrastructure/dns-providers)
 

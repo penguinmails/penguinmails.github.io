@@ -453,15 +453,15 @@ A task is considered done only if it meets acceptance criteria and has been veri
 
 While this framework focuses on operational management, we support freelancer success through dedicated business development resources:
 
-- **Professional Quotation Guide**: [Step-by-step guidance for preparing quotations with Google Docs template](/docs/freelancer-support/quotation-guide)
+- **Professional Quotation Guide**: [Step-by-step guidance for preparing quotations with Google Docs template](/docs/operations/freelancer-management/support/quotation-guide)
 
-- **Business Success Framework**: [Comprehensive business development guidance](/docs/freelancer-support/business-framework)
+- **Business Success Framework**: [Comprehensive business development guidance](/docs/operations/freelancer-management/support/business-framework)
 
-- **Implementation Resources**: [Practical tools and templates for freelancer growth](/docs/freelancer-support/implementation-resources)
+- **Implementation Resources**: [Practical tools and templates for freelancer growth](/docs/operations/freelancer-management/support/implementation-resources)
 
-- **Success Metrics and KPIs**: [Performance tracking aligned with business objectives](/docs/freelancer-support/success-metrics)
+- **Success Metrics and KPIs**: [Performance tracking aligned with business objectives](/docs/operations/freelancer-management/support/success-metrics)
 
-- **Freelancer Success Center**: [Complete external support hub](/docs/freelancer-support/README)
+- **Freelancer Success Center**: [Complete external support hub](/docs/operations/freelancer-management/support/README)
 
 ### Shared Standards and Compliance
 

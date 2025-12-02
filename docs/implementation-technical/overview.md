@@ -199,9 +199,9 @@ This technical documentation integrates with:
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
 
-- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
+- [Analytics Performance](/docs/operations/analytics/analytics-performance) - Performance monitoring
 
-- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Operations Management](/docs/operations/analytics/operations-management) - Operational procedures
 
 ### Implementation Guides
 

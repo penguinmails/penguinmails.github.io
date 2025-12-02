@@ -951,9 +951,9 @@ interface QualityMetrics {
 
 ## Related Documents
 
-- [Infrastructure Operations Management](/docs/operations-analytics/operations-management/infrastructure-operations-management) - System architecture and deployment details
+- [Infrastructure Operations Management](/docs/operations/analytics/operations-management/infrastructure-operations-management) - System architecture and deployment details
 
-- [Incident Response Operations](/docs/operations-analytics/operations-management/incident-response-operations) - Incident handling procedures
+- [Incident Response Operations](/docs/operations/analytics/operations-management/incident-response-operations) - Incident handling procedures
 
 - [Security Documentation](/docs/compliance-security) - Security procedures and protocols
 

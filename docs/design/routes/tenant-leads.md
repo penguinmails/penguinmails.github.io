@@ -245,7 +245,7 @@
 
 **Related Documentation**:
 
-- [Lead Import Guide](/docs/freelancer-support/tutorials/lead-import)
+- [Lead Import Guide](/docs/operations/freelancer-management/support/tutorials/lead-import)
 
 - [CSV Format Requirements](/docs/technical/data-formats/csv-specs)
 

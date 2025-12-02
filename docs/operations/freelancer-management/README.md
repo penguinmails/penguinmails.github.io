@@ -85,9 +85,9 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 ### Specialized: Freelancer Success Resources
 
-- **Professional Quotation Guide**: [Step-by-step quotation preparation with Google Docs template](/docs/freelancer-support/quotation-guide)
+- **Professional Quotation Guide**: [Step-by-step quotation preparation with Google Docs template](/docs/operations/freelancer-management/support/quotation-guide)
 
-- [Freelancer Success Center](/docs/freelancer-support/README) - Complete external support hub
+- [Freelancer Success Center](/docs/operations/freelancer-management/support/README) - Complete external support hub
 
 - Comprehensive freelancer onboarding and business development resources
 
@@ -181,19 +181,19 @@ Strategic framework for managing freelancer relationships, ensuring operational 
 
 While this documentation focuses on internal operations management, we recognize the importance of supporting freelancer success. For **freelancer-focused business development guidance**, see:
 
-- [Freelancer Success Center](/docs/freelancer-support/README) - Comprehensive external support hub
+- [Freelancer Success Center](/docs/operations/freelancer-management/support/README) - Comprehensive external support hub
 
-- [Business Success Framework](/docs/freelancer-support/business-framework) - Strategic business development guidance
+- [Business Success Framework](/docs/operations/freelancer-management/support/business-framework) - Strategic business development guidance
 
-- [Implementation Resources](/docs/freelancer-support/implementation-resources) - Practical tools and templates
+- [Implementation Resources](/docs/operations/freelancer-management/support/implementation-resources) - Practical tools and templates
 
-- [Success Metrics and KPIs](/docs/freelancer-support/success-metrics) - Performance tracking for freelancer growth
+- [Success Metrics and KPIs](/docs/operations/freelancer-management/support/success-metrics) - Performance tracking for freelancer growth
 
 ### Shared Standards and Compliance
 
 For unified standards that apply to both internal operations and external freelancer success:
 
-- **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/freelancer-support/quotation-guide)
+- **Professional Quotation Process**: [Detailed guidance for freelancer quotations](/docs/operations/freelancer-management/support/quotation-guide)
 
 - [Shared Freelancer Standards](/docs/operations/freelancer-management/standards-and-guidelines) - Common quality and conduct standards
 

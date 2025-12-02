@@ -649,13 +649,13 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics/analytics-performance)) - Main operations framework
 
-- [User Analytics](/docs/operations-analytics/analytics-performance)) - User behavior analysis
+- [User Analytics](/docs/operations/analytics/analytics-performance)) - User behavior analysis
 
-- [Product Analytics](/docs/operations-analytics/analytics-performance)) - Feature performance analysis
+- [Product Analytics](/docs/operations/analytics/analytics-performance)) - Feature performance analysis
 
-- [Metrics & KPIs](/docs/operations-analytics/analytics-performance)) - Comprehensive KPI framework
+- [Metrics & KPIs](/docs/operations/analytics/analytics-performance)) - Comprehensive KPI framework
 
 ### **Business Strategy**
 
@@ -685,9 +685,9 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 ### **Operations Management**
 
-- [Organization Analytics](/docs/operations-analytics/operations-management/README) - Team and organization management
+- [Organization Analytics](/docs/operations/analytics/operations-management/README) - Team and organization management
 
-- [Team Performance](/docs/operations-analytics/team-performance)) - Team coordination and development
+- [Team Performance](/docs/operations/analytics/team-performance)) - Team coordination and development
 
 ---
 
@@ -695,13 +695,13 @@ const analyzeGrowthExperiment = (experiment: GrowthExperiment) => {
 
 Navigate to specific growth and analytics areas:
 
-- **[User Analytics](/docs/operations-analytics/analytics-performance))** → User behavior and engagement analysis
+- **[User Analytics](/docs/operations/analytics/analytics-performance))** → User behavior and engagement analysis
 
-- **[Product Analytics](/docs/operations-analytics/analytics-performance))** → Feature performance and optimization
+- **[Product Analytics](/docs/operations/analytics/analytics-performance))** → Feature performance and optimization
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance))** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations/analytics/analytics-performance))** → Comprehensive KPI framework
 
-- **[Team Performance](/docs/operations-analytics/team-performance))** → Team coordination and development
+- **[Team Performance](/docs/operations/analytics/team-performance))** → Team coordination and development
 
 ---
 

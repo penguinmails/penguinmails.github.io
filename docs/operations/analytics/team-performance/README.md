@@ -43,7 +43,7 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 ## Integration Points
 
-- [Operations Analytics Overview](/docs/operations-analytics) - Main operations framework
+- [Operations Analytics Overview](/docs/operations/analytics) - Main operations framework
 
 - [Technical Operations](/docs/technical/operations) - Technical team coordination
 

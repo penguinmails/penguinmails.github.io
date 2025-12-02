@@ -130,7 +130,7 @@
 
 - [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
 
-- [2FA Setup Guide](/docs/freelancer-support/tutorials/2fa-setup)
+- [2FA Setup Guide](/docs/operations/freelancer-management/support/tutorials/2fa-setup)
 
 **Technical Integration**:
 

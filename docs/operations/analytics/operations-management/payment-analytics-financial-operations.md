@@ -911,13 +911,13 @@ Billing Settings → Add Method → Card Form → 3DS Verification → Confirmat
 
 ### Operations & Analytics
 
-- [`docs/operations-analytics/overview`](/docs/operations-analytics) - Global operations analytics framework.
+- [`docs/operations-analytics/overview`](/docs/operations/analytics) - Global operations analytics framework.
 
-- [`docs/operations-analytics/analytics-performance/metrics-kpis`](/docs/operations-analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
+- [`docs/operations-analytics/analytics-performance/metrics-kpis`](/docs/operations/analytics/analytics-performance) - Core KPI definitions for revenue, churn, and billing performance.
 
-- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](/docs/operations-analytics/operations-management) - Team and organization management analytics.
+- [`docs/operations-analytics/operations-management/organization-analytics-team-management`](/docs/operations/analytics/operations-management) - Team and organization management analytics.
 
-- [`docs/operations-analytics/operations-management/environment-release-management`](/docs/operations-analytics/operations-management) - Environment and release operations impact on billing and reliability.
+- [`docs/operations-analytics/operations-management/environment-release-management`](/docs/operations/analytics/operations-management) - Environment and release operations impact on billing and reliability.
 
 ### Business Strategy
 
@@ -951,11 +951,11 @@ This section is authoritative; legacy content references should be treated as no
 
 Navigate to specific payment and financial areas:
 
-- **[Organization Analytics](/docs/operations-analytics/operations-management/organization-analytics-team-management)** → Team and organization management
+- **[Organization Analytics](/docs/operations/analytics/operations-management/organization-analytics-team-management)** → Team and organization management
 
-- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance/README)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations/analytics/analytics-performance/README)** → Comprehensive KPI framework
 
-- **[Team Performance](/docs/operations-analytics/team-performance)** → Team coordination and development
+- **[Team Performance](/docs/operations/analytics/team-performance)** → Team coordination and development
 
 ---
 

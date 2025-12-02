@@ -313,11 +313,11 @@ This clarification applies across all documentation where NileDB appears in the 
 
 - [Business Strategy Overview](/docs/business/strategy/overview) - Strategic business alignment
 
-- [Operations Management](/docs/operations-analytics/operations-management) - Operational procedures
+- [Operations Management](/docs/operations/analytics/operations-management) - Operational procedures
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Security architecture
 
-- [Analytics Performance](/docs/operations-analytics/analytics-performance) - Performance monitoring
+- [Analytics Performance](/docs/operations/analytics/analytics-performance) - Performance monitoring
 
 ---
 

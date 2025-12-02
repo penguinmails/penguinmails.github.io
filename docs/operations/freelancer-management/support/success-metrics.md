@@ -341,9 +341,9 @@ Platform capabilities support freelancer business growth:
 
 ## Cross-References
 
-- [Business Success Framework](/docs/freelancer-support/business-framework)
+- [Business Success Framework](/docs/operations/freelancer-management/support/business-framework)
 
-- [Implementation Resources](/docs/freelancer-support/implementation-resources)
+- [Implementation Resources](/docs/operations/freelancer-management/support/implementation-resources)
 
 - [Internal Operations Standards](/docs/operations/freelancer-management/framework)
 

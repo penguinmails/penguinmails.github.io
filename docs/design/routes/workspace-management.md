@@ -128,7 +128,7 @@
 
 **Related Documentation**:
 
-- [Workspace Setup Guide](/docs/freelancer-support/tutorials/workspace-creation)
+- [Workspace Setup Guide](/docs/operations/freelancer-management/support/tutorials/workspace-creation)
 
 **Technical Integration**:
 
@@ -192,7 +192,7 @@
 
 - [Team Management](/docs/business/collaboration/team-roles)
 
-- [Billing & Subscriptions](/docs/finance/pricing/overview)
+- [Billing & Subscriptions](/docs/business/finance/pricing/overview)
 
 **Technical Integration**:
 
@@ -242,7 +242,7 @@
 
 **Related Documentation**:
 
-- [Health Metrics](/docs/operations-analytics/metrics/workspace-health)
+- [Health Metrics](/docs/operations/analytics/metrics/workspace-health)
 
 ---
 
