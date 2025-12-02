@@ -1,10 +1,3 @@
----
-title: "Milestone 1 — Job Enqueueing and Campaign Scheduling"
-description: "Documentation for Milestone 1 — Job Enqueueing and Campaign Scheduling - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Milestone 1 — Job Enqueueing and Campaign Scheduling
 

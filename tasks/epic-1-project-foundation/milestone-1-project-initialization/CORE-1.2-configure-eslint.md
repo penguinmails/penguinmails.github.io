@@ -1,10 +1,3 @@
----
-title: "CORE-1.2: Configure ESLint for Code Linting"
-description: "Documentation for CORE-1.2: Configure ESLint for Code Linting - CORE 1.2 Configure Eslint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-1.2: Configure ESLint for Code Linting
 

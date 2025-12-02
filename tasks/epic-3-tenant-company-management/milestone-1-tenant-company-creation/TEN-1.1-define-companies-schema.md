@@ -1,10 +1,3 @@
----
-title: "TEN-1.1: Define Drizzle Schema for companies"
-description: "Documentation for TEN-1.1: Define Drizzle Schema for companies - TEN 1.1 Define Companies Schema"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # TEN-1.1: Define Drizzle Schema for companies
 

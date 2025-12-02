@@ -1,10 +1,3 @@
----
-title: "INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)"
-description: "Documentation for INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status) - INFRA 3.3 Create Api Endpoint Get Sync Status"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)
 

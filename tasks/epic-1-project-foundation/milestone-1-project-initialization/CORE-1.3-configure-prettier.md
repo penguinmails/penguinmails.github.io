@@ -1,10 +1,3 @@
----
-title: "CORE-1.3: Configure Prettier for Code Formatting"
-description: "Documentation for CORE-1.3: Configure Prettier for Code Formatting - CORE 1.3 Configure Prettier"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-1.3: Configure Prettier for Code Formatting
 

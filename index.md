@@ -1,11 +1,3 @@
----
-title: "Documentation Hub"
-layout: default
-nav_order: 1
-has_children: true
-has_toc: false
-description: "Welcome to PenguinMails - Enterprise Email Management Platform"
----
 
 
 # 🐧 PenguinMails

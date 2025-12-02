@@ -1,7 +1,3 @@
----
-title: "Huge File"
-description: "Too long"
----
 ]633;E;for i in {1..600}\x3b do echo "Line $i"\x3b done > validation/fixtures/content/bad/huge_file.md && sed -i '1i---\\ntitle: "Huge File"\\ndescription: "Too long"\\n---' validation/fixtures/content/bad/huge_file.md;fe68ed79-6d15-47f2-9c32-dbbaf83c3d30]633;CLine 1
 Line 2
 Line 3

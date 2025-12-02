@@ -1,10 +1,3 @@
----
-title: "BullMQ Mention (Forbidden)"
-description: "This file mentions BullMQ which is forbidden"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # BullMQ Reference
 

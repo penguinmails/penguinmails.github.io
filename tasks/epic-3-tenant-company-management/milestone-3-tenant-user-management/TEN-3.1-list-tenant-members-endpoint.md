@@ -1,10 +1,3 @@
----
-title: "TEN-3.1: Create API Endpoint to List Tenant Members (GET /api/tenants/users)"
-description: "Documentation for TEN-3.1: Create API Endpoint to List Tenant Members (GET /api/tenants/users) - TEN 3.1 List Tenant Members Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # TEN-3.1: Create API Endpoint to List Tenant Members (GET /api/tenants/users)
 

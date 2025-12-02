@@ -1,10 +1,3 @@
----
-title: "MAIL-1.2: Define Zod Schema for Job Payloads"
-description: "Documentation for MAIL-1.2: Define Zod Schema for Job Payloads - MAIL 1.2 Define Zod Schema For Job Payloads"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # MAIL-1.2: Define Zod Schema for Job Payloads
 

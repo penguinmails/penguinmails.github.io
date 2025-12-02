@@ -1,7 +1,3 @@
----
-title: "Good Formatting"
-description: "Proper blank lines"
----
 
 # Main Heading
 

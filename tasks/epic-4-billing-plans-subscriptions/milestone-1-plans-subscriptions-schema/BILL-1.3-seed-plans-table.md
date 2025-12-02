@@ -1,10 +1,3 @@
----
-title: "BILL-1.3: Seed the plans Table"
-description: "Documentation for BILL-1.3: Seed the plans Table - BILL 1.3 Seed Plans Table"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # BILL-1.3: Seed the plans Table
 

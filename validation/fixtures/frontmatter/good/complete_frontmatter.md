@@ -1,10 +1,3 @@
----
-title: "Complete Frontmatter Example"
-description: "This file has all required frontmatter fields for validation testing"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Complete Frontmatter Example
 

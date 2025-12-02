@@ -1,10 +1,3 @@
----
-title: "Milestone 2: Viewing and Managing Workspaces"
-description: "Documentation for Milestone 2: Viewing and Managing Workspaces - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Milestone 2: Viewing and Managing Workspaces
 

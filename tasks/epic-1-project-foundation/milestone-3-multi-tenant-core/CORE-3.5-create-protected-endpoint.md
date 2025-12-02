@@ -1,10 +1,3 @@
----
-title: "CORE-3.5: Create a Protected Endpoint to Verify User Context"
-description: "Documentation for CORE-3.5: Create a Protected Endpoint to Verify User Context - CORE 3.5 Create Protected Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # CORE-3.5: Create a Protected Endpoint to Verify User Context
 

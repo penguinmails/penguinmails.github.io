@@ -1,10 +1,3 @@
----
-title: "MAIL-2.5: Integrate Sending Logic and Database Logging"
-description: "Documentation for MAIL-2.5: Integrate Sending Logic and Database Logging - MAIL 2.5 Integrate Sending Logic And Database Logging"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # MAIL-2.5: Integrate Sending Logic and Database Logging
 

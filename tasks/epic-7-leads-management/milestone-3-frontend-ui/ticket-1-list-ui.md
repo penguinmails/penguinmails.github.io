@@ -1,12 +1,3 @@
----
-title: "Ticket: Build Contact List UI"
-id: "LEADS-3.1"
-epic: "Epic 7"
-milestone: "3"
-priority: "Medium"
-status: "Selected for Development"
-story_points: 5
----
 
 # [LEADS-3.1] Build Contact List UI
 

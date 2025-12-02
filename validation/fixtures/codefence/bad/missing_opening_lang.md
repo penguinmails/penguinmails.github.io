@@ -1,10 +1,3 @@
----
-title: "Missing Opening Language Tag"
-description: "This file has code blocks without language on opening fence"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Missing Opening Language Tag
 

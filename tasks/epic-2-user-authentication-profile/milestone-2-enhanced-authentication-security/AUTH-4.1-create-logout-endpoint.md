@@ -1,10 +1,3 @@
----
-title: "AUTH-4.1: Create API Endpoint for User Logout (POST /api/auth/logout)"
-description: "Documentation for AUTH-4.1: Create API Endpoint for User Logout (POST /api/auth/logout) - AUTH 4.1 Create Logout Endpoint"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # AUTH-4.1: Create API Endpoint for User Logout (POST /api/auth/logout)
 

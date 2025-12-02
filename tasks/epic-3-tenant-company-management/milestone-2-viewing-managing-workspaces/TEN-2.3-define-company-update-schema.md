@@ -1,10 +1,3 @@
----
-title: "TEN-2.3: Define Zod Schema for Company Updates"
-description: "Documentation for TEN-2.3: Define Zod Schema for Company Updates - TEN 2.3 Define Company Update Schema"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # TEN-2.3: Define Zod Schema for Company Updates
 

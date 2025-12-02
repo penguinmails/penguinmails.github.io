@@ -1,10 +1,3 @@
----
-title: "Forbidden Python Block"
-description: "This file contains a forbidden Python code block"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Python Code Block (Forbidden)
 

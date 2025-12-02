@@ -1,10 +1,3 @@
----
-title: "AUTH-3.4: Define Zod Schema for Profile Updates"
-description: "Documentation for AUTH-3.4: Define Zod Schema for Profile Updates - AUTH 3.4 Define Profile Update Schema"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # AUTH-3.4: Define Zod Schema for Profile Updates
 

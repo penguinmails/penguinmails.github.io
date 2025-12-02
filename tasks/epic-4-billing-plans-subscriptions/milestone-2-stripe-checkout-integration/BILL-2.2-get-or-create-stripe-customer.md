@@ -1,10 +1,3 @@
----
-title: "BILL-2.2: Implement \"Get or Create Stripe Customer\" Logic"
-description: "Documentation for BILL-2.2: Implement \\"Get or Create Stripe Customer\\" Logic - BILL 2.2 Get Or Create Stripe Customer"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # BILL-2.2: Implement "Get or Create Stripe Customer" Logic
 

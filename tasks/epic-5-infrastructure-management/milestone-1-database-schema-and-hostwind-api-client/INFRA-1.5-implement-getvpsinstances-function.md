@@ -1,10 +1,3 @@
----
-title: "INFRA-1.5: Implement getVpsInstances() Function in API Client"
-description: "Documentation for INFRA-1.5: Implement getVpsInstances() Function in API Client - INFRA 1.5 Implement Getvpsinstances Function"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # INFRA-1.5: Implement getVpsInstances() Function in API Client
 

@@ -1,10 +1,3 @@
----
-title: "AUTH-4.3: Implement \"Reset Password\" Endpoint"
-description: "Documentation for AUTH-4.3: Implement \\"Reset Password\\" Endpoint - AUTH 4.3 Implement Reset Password"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # AUTH-4.3: Implement "Reset Password" Endpoint
 

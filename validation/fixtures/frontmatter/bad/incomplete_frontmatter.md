@@ -1,10 +1,3 @@
----
-title: "Incomplete Frontmatter"
-description: "This document has incomplete frontmatter delimiters"
-last_modified_date: "2025-11-28"
-level: "2"
-persona: "developer"
----
 
 # Incomplete Frontmatter Test
 

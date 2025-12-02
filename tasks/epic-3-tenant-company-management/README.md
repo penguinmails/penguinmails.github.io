@@ -1,10 +1,3 @@
----
-title: "Epic 3: Tenant & Company (Workspace) Management"
-description: "Documentation for Epic 3: Tenant & Company (Workspace) Management - README"
-last_modified_date: "2025-11-19"
-level: 2
-persona: "Documentation Users"
----
 
 # Epic 3: Tenant & Company (Workspace) Management
 

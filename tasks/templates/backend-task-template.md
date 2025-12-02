@@ -1,24 +1,3 @@
----
-title: "[TICKET-ID]: [Brief Task Title]"
-description: "[One-line description of the task]"
-last_modified_date: "YYYY-MM-DD"
-level: 2
-persona: "Documentation Users"
-
-# Task Status & Assignment
-status: "NOT_STARTED"  # NOT_STARTED | IN_PROGRESS | READY_FOR_TESTING | BLOCKED | DONE
-assignee: ""
-priority: "MEDIUM"  # CRITICAL | HIGH | MEDIUM | LOW
-sprint: ""  # JIRA sprint ID or sprint name
-story_points: 0  # 1, 2, 3, 5, 8, 13
-
-# Specification Links
-feature: ""  # Link to docs/features/*.md
-frontend_spec: ""  # Link to docs/design/routes/*.md (if API serves frontend)
-api_spec: ""  # Link to docs/implementation-technical/api/*.md
-user_journey: ""  # Link to docs/user-journeys/*.md
-database_schema: ""  # Link to docs/implementation-technical/database-infrastructure/*.md
----
 
 # [TICKET-ID]: [Full Task Title]
 

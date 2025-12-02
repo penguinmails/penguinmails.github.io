@@ -1,7 +1,3 @@
----
-title: "Bad Formatting"
-description: "Missing blank lines"
----
 # No blank before this heading
 
 Text immediately before heading.
