@@ -155,19 +155,19 @@ graph TD
 
 ### Use Case-Based Provider Selection
 
-**Cold Email Campaigns**
+### Cold Email Campaigns
 
 - **Recommended**: Mailgun > SendGrid > Amazon SES
 
 - **Not Recommended**: Postmark (transactional focus)
 
-**Transactional Emails**
+### Transactional Emails
 
 - **Recommended**: Postmark > SendGrid > Mailgun
 
 - **Best Performance**: Postmark for highest deliverability
 
-**High-Volume Campaigns**
+### High-Volume Campaigns
 
 - **Recommended**: Amazon SES > SendGrid > Mailgun
 

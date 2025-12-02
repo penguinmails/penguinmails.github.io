@@ -288,4 +288,4 @@ Customer health scoring provides a quantitative measure of account health and ri
 - [Customer Retention Strategies](/docs/business/customer-success/retention)
 
 ---
-*Level 2: Analytics framework for customer health monitoring and proactive management*
+##### Level 2: Analytics framework for customer health monitoring and proactive management

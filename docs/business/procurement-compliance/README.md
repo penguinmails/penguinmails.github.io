@@ -85,5 +85,3 @@ This directory contains comprehensive procurement guidance, compliance framework
 ---
 
 *This procurement and compliance directory provides enterprise-ready frameworks for thorough vendor evaluation, contract negotiation, and ongoing compliance management.*
-
-

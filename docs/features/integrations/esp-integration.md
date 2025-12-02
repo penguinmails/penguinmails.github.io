@@ -659,4 +659,3 @@ Savings: $70/month vs all-Postmark
 **Coming Soon:** SendGrid, Amazon SES
 
 *ESP integration is optional but recommended for critical transactional emails and high-volume marketing campaigns.*
-

@@ -67,7 +67,7 @@ TOTAL: $4,092-6,394/month
 
 ```
 
-**Managed ESP Costs**
+### Managed ESP Costs
 
 ```markdown
 ESP Service: $15-750/month
@@ -79,7 +79,7 @@ TOTAL: $1,055-2,070/month
 
 ```
 
-**Annual Savings: $23,844-52,488**
+### Annual Savings: $23,844-52,488
 
 ---
 

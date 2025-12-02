@@ -67,7 +67,7 @@ This document establishes the comprehensive customer success automation framewor
 
 **Primary Objective:** Continuous automated customer health monitoring with predictive intelligence
 
-**Health Monitoring Components**
+##### Health Monitoring Components
 
 - **Multi-Factor Scoring Engine:** Real-time calculation of weighted health dimensions
 
@@ -135,7 +135,7 @@ Expansion Readiness > 80 → Sales Handoff Workflow
 
 **Primary Objective:** Behavioral marketing automation triggered by CS health signals
 
-##### Automated Flows
+#### Automated Flows
 
 - **Lifecycle Campaigns:** Onboarding/adoption campaigns based on health progression
 
@@ -149,7 +149,7 @@ Expansion Readiness > 80 → Sales Handoff Workflow
 
 **Primary Objective:** Seamless opportunity handoff and pipeline coordination
 
-##### Automated Processes
+#### Automated Processes
 
 - **Expansion Handoff:** Automatic sales opportunity creation from CS signals
 
@@ -163,7 +163,7 @@ Expansion Readiness > 80 → Sales Handoff Workflow
 
 **Primary Objective:** Product adoption automation and feedback loops
 
-##### Automated Capabilities
+#### Automated Capabilities
 
 - **Feature Adoption Triggers:** Automated adoption campaigns for low-usage features
 
@@ -177,7 +177,7 @@ Expansion Readiness > 80 → Sales Handoff Workflow
 
 **Primary Objective:** Revenue recognition and value realization automation
 
-##### Financial Workflows
+#### Financial Workflows
 
 - **Revenue Attribution:** Automatic CS revenue contribution calculation
 
@@ -191,7 +191,7 @@ Expansion Readiness > 80 → Sales Handoff Workflow
 
 **Primary Objective:** CS operational scalability through process automation
 
-##### Operational Automation
+#### Operational Automation
 
 - **Resource Allocation:** Automatic workload balancing and capacity planning
 
@@ -320,7 +320,7 @@ Core Platforms:
 
 **Primary Objective:** Self-improving automation through performance analytics
 
-##### Optimization Loops
+#### Optimization Loops
 
 - **A/B Testing:** Continuous workflow variant optimization
 

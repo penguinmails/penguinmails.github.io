@@ -242,5 +242,3 @@ Security and compliance features are integrated into the core platform:
 
 *This security and compliance overview is part of the Progressive Disclosure Framework for Business Documentation. It provides executive-level understanding while routing technical teams to appropriate deep-dive documentation for detailed validation.*
 ---
-
-
