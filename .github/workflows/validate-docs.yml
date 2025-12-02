@@ -34,10 +34,11 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count links with .md extensions in docs/ folder"
-            echo "$violations" | head -20 | while IFS=: read -r file line content; do
+            # Use here-string instead of pipe to avoid subshell
+            while IFS=: read -r file line content; do
               [ -z "$file" ] && continue
               echo "::error file=$file,line=$line::$file:$line - Remove .md extension"
-            done
+            done <<< "$(echo "$violations" | head -20)"
             exit 1
           fi
 
@@ -48,10 +49,11 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links using ./ or ../ in docs/ folder"
-            echo "$violations" | head -20 | while IFS=: read -r file line content; do
+            # Use here-string instead of pipe to avoid subshell
+            while IFS=: read -r file line content; do
               [ -z "$file" ] && continue
               echo "::error file=$file,line=$line::$file:$line - Use site-absolute links"
-            done
+            done <<< "$(echo "$violations" | head -20)"
             exit 1
           fi
 
@@ -62,10 +64,11 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links to CONTRIBUTING.md"
-            echo "$violations" | while IFS=: read -r file line content; do
+            # Use here-string instead of pipe to avoid subshell
+            while IFS=: read -r file line content; do
               [ -z "$file" ] && continue
               echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
-            done
+            done <<< "$violations"
             exit 1
           fi
 
@@ -76,10 +79,11 @@ jobs:
           if [ -n "$violations" ]; then
             count=$(echo "$violations" | wc -l)
             echo "::error::Found $count relative links to README.md"
-            echo "$violations" | while IFS=: read -r file line content; do
+            # Use here-string instead of pipe to avoid subshell
+            while IFS=: read -r file line content; do
               [ -z "$file" ] && continue
               echo "::error file=$file,line=$line::$file:$line - Use GitHub link"
-            done
+            done <<< "$violations"
             exit 1
           fi
 
