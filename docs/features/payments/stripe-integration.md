@@ -61,6 +61,52 @@ User Redirected to Dashboard
 
 ---
 
+## Integration Philosophy
+
+### Stripe Checkout - Hosted Payment Pages
+
+**PenguinMails uses Stripe Checkout** (not Stripe Elements) for all payment flows:
+
+- **PCI Compliance**: Hosted pages mean card data never touches our servers
+- **Mobile-Optimized**: Perfect experience on any device
+- **Localized**: Automatic translation and currency conversion
+- **Conversion-Optimized**: Stripe's best-converting checkout UI
+- **Lower Maintenance**: No custom payment form code to maintain
+
+### Dashboard-First Approach
+
+**Self-service via Stripe Customer Portal:**
+
+- Users manage subscriptions directly through Stripe's portal
+- Update payment methods without PenguinMails involvement
+- View billing history and download invoices
+- Cancel subscriptions with automatic sync
+
+**Benefits**:
+
+- Reduced support burden
+- Better UX (Stripe's specialized interface)
+- Automatic compliance updates
+- No custom billing UI to build
+
+### Webhooks as Source of Truth
+
+**All subscription state changes flow through webhooks:**
+
+- Stripe sends webhook → PenguinMails updates database
+- Never poll Stripe API for subscription status
+- Real-time sync for all subscription lifecycle events
+- Automatic retry and idempotency handling
+
+**Key Events**:
+
+- `checkout.session.completed`: Link Stripe subscription to tenant, update `stripe_customer_id`
+- `invoice.paid`: Record payment in `payments` table
+- `customer.subscription.updated`: Sync status, period end, cancellation flags
+- `customer.subscription.deleted`: Handle subscription end
+
+---
+
 ### Stripe Checkout
 
 **Hosted checkout page** for seamless payment experience.
@@ -266,22 +312,36 @@ Header: stripe-signature: {signature}
 **Database schema for subscription state:**
 
 ```sql
-CREATE TABLE tenant_subscriptions (
-  id UUID PRIMARY KEY,
-  tenant_id UUID REFERENCES tenants(id),
-  stripe_customer_id VARCHAR(255) UNIQUE,
-  stripe_subscription_id VARCHAR(255) UNIQUE,
-  plan_id VARCHAR(50),
-  status VARCHAR(20), -- active, past_due, canceled, etc.
-  current_period_start TIMESTAMP,
-  current_period_end TIMESTAMP,
-  cancel_at_period_end BOOLEAN DEFAULT false,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE subscriptions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tenant_id UUID REFERENCES tenants(id) ON DELETE CASCADE,
+    plan_id UUID REFERENCES plans(id),
+    pending_plan_id UUID REFERENCES plans(id),
+    status VARCHAR(50) CHECK (status IN ('active', 'past_due', 'canceled', 'unpaid')),
+    current_period_start TIMESTAMP WITH TIME ZONE,
+    current_period_end TIMESTAMP WITH TIME ZONE,
+    cancel_at_period_end BOOLEAN DEFAULT FALSE,
+    cancel_reason TEXT,  -- User-provided cancellation reason
+    cancel_date TIMESTAMP WITH TIME ZONE,  -- When cancellation was initiated
+    billing_contact_user_id UUID REFERENCES users(id),
+    stripe_subscription_id VARCHAR(255),
+    created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+    updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 
 ```
+
+**Key Fields**:
+
+- `stripe_subscription_id`: Links to Stripe subscription object
+- `status`: Synced from Stripe subscription status
+- `current_period_end`: Next billing date = `current_period_end + 1 day`
+- `cancel_at_period_end`: User canceled but active until period end
+- `cancel_reason`: For churn analysis ("Too expensive", "Missing features", etc.)
+- `cancel_date`: When cancellation was initiated
+
+**Note on Table Name**: The subscription table is called `subscriptions` (not `tenant_subscriptions` or `company_billing`), consistent with other OLTP tables.
 
 ---
 
@@ -323,6 +383,72 @@ Response:
 }
 
 
+```
+
+---
+
+---
+
+## Environment Configuration
+
+### Required Environment Variables
+
+**PenguinMails requires the following Stripe environment variables:**
+
+```bash
+# Stripe API Keys
+STRIPE_SECRET_KEY=sk_live_xxxxx...  # or sk_test_xxxxx for testing
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_live_xxxxx...  # or pk_test_xxxxx
+
+# Webhook Configuration
+STRIPE_WEBHOOK_SIGNING_SECRET=whsec_xxxxx...
+
+# Application URLs
+NEXT_PUBLIC_APP_URL=https://app.penguinmails.com  # or http://localhost:3000 for development
+```
+
+### Setup Steps
+
+## 1. Create Stripe Account
+
+- Sign up at [stripe.com](https://stripe.com)
+- Complete business verification (required for live mode)
+- Enable Customer Portal in Stripe Dashboard → Settings → Customer Portal
+
+## 2. Retrieve API Keys
+
+- Navigate to Stripe Dashboard → Developers → API keys
+- Copy "Secret key" to `STRIPE_SECRET_KEY`
+- Copy "Publishable key" to `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+
+## 3. Configure Webhooks
+
+- Go to Stripe Dashboard → Developers → Webhooks
+- Click "Add endpoint"
+- Endpoint URL: `https://api.penguinmails.com/webhooks/stripe`
+- Select events to listen for:
+  - `checkout.session.completed`
+  - `invoice.paid`
+  - `invoice.payment_failed`
+  - `customer.subscription.created`
+  - `customer.subscription.updated`
+  - `customer.subscription.deleted`
+- Copy "Signing secret" to `STRIPE_WEBHOOK_SIGNING_SECRET`
+
+## 4. Test Configuration
+
+```bash
+# Install Stripe CLI for local testing
+brew install stripe/stripe-cli/stripe
+
+# Login to Stripe
+stripe login
+
+# Forward webhooks to local development
+stripe listen --forward-to localhost:3000/api/webhooks/stripe
+
+# Test webhook delivery
+stripe trigger checkout.session.completed
 ```
 
 ---

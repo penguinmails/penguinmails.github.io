@@ -516,12 +516,120 @@ CREATE TABLE plans (
     price_yearly INTEGER,
     notes TEXT,  -- Additional plan details and notes
     is_active BOOLEAN DEFAULT TRUE,
+    stripe_product_id VARCHAR(255),  -- Stripe Product reference for dashboard/portal links
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
+-- Stripe Product integration index
+CREATE INDEX idx_plans_stripe_product
+    ON plans(stripe_product_id)
+    WHERE stripe_product_id IS NOT NULL;
+
 
 ```
+
+##### Stripe Product Integration
+
+The `stripe_product_id` field links PenguinMails plans to Stripe Products for billing management:
+
+**Purpose**:
+
+- Enables "View Plan in Stripe" or "Manage Subscription" redirects to Stripe Dashboard
+- Product ID remains stable even when prices change in Stripe
+- Links to Stripe Customer Portal for self-service billing
+
+**Why NOT storing `stripe_price_id`**:
+
+- Stripe manages all pricing via Checkout and Customer Portal
+- PenguinMails UI displays `price_monthly` and `price_yearly` from local database  
+- When user clicks "Subscribe" or "Change Plan", redirects to Stripe Checkout
+- Stripe handles price selection, proration calculations, and payment collection
+- **Single source of truth for prices**: Stripe
+
+**Admin Workflow**:
+
+1. Create Stripe Product via Stripe Dashboard
+2. Create Prices (monthly, yearly) for the Product in Stripe
+3. Copy Product ID into `plans.stripe_product_id` field
+4. Set `is_active = true` to make plan available for purchase
+
+##### Plan Lifecycle with `is_active`
+
+The `is_active` field provides flexible plan management for seasonal and exclusive offerings:
+
+**Active Plans** (`is_active = true`):
+
+- Visible in tenant purchase/upgrade options
+- Available for new subscriptions
+- Default state for standard plans
+
+**Inactive Plans** (`is_active = false`):
+
+- **Hidden** from purchase UI
+- **Existing subscribers can still renew** and maintain their subscription
+- Provides exclusive access to grandfathered customers
+
+**Use Cases**:
+
+- **Seasonal Plans**: "Black Friday 2025" - deactivate after November, reactivate next year
+- **Exclusive Plans**: "Founder Plan" - only for early adopters, inactive but renewable by existing customers
+- **A/B Test Plans**: Test new pricing tier, deactivate if underperforming
+- **Limited Offers**: "Summer Promo 2026" - activate for 3 months, then deactivate
+- **Grandfathered Pricing**: Lock in special pricing for loyal customers while hiding from new sign-ups
+
+**Benefits over "deprecated" flag**:
+
+- More flexible (can reactivate easily)
+- Supports temporary/seasonal plans naturally
+- Existing subscribers retain exclusive access
+- Simpler schema (reuses existing field)
+
+#### Plans Table - Stripe Product Integration
+
+**Stripe Product Mapping**:
+
+The `stripe_product_id` field links PenguinMails plans to Stripe Products for dashboard and customer portal integration:
+
+- **Purpose**: Enables "View Plan in Stripe" or "Manage Subscription" redirect links
+- **Stability**: Product ID remains stable even when prices change
+- **Workflow**: Admin creates Stripe Product, copies Product ID into `plans.stripe_product_id`
+
+**Why NOT storing `stripe_price_id`**:
+
+- Stripe manages pricing via Checkout and Customer Portal
+- PenguinMails UI displays `price_monthly`/`price_yearly` from local `plans` table
+- User clicks "Subscribe" → redirect to Stripe Checkout
+- Stripe handles price selection, proration, and payment collection
+- **Benefit**: Single source of truth for prices (Stripe)
+
+**Admin Workflow**:
+
+1. Create Stripe Product via Stripe Dashboard
+2. Create Prices (monthly, yearly) for the Product in Stripe
+3. Copy Product ID into `plans.stripe_product_id` field
+4. Set `is_active = true` to make plan available for purchase
+
+**Plan Lifecycle with `is_active`**:
+
+- `is_active = true`: Plan visible in purchase options
+- `is_active = false`: Plan hidden from purchase UI BUT existing subscribers can renew
+
+**Use Cases for Inactive Plans**:
+
+- **Seasonal Plans**: "Black Friday 2025" - deactivate after November, reactivate next year
+- **Exclusive Plans**: "Founder Plan" - only for early adopters, inactive but renewable for existing subscribers
+- **A/B Test Plans**: Test new tier, deactivate if underperforming
+- **Limited Offers**: "Summer Promo 2026" - activate for 3 months, then deactivate
+
+**Benefits**:
+
+- More flexible than "deprecated" (which implies permanent status)
+- Supports grandfathered pricing for loyal customers
+- Easy to reactivate seasonal plans
+- Existing subscribers retain access even when plan is inactive
+
+---
 
 #### **subscriptions** - Active Tenant Subscriptions
 
@@ -535,6 +643,8 @@ CREATE TABLE subscriptions (
     current_period_start TIMESTAMP WITH TIME ZONE,
     current_period_end TIMESTAMP WITH TIME ZONE,
     cancel_at_period_end BOOLEAN DEFAULT FALSE,
+    cancel_reason TEXT,  -- User-provided cancellation reason
+    cancel_date TIMESTAMP WITH TIME ZONE,  -- When cancellation was initiated
     billing_contact_user_id UUID REFERENCES users(id),
     stripe_subscription_id VARCHAR(255),
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),

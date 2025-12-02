@@ -39,7 +39,18 @@ status: "DRAFT"
 
   - [ ] Cold Outreach
 
-### 2. Workspace Setup
+### 2. Payment Selection (Mandatory)
+
+#### Screen: "Choose your Plan"
+
+- **Goal**: Secure commitment and payment method before platform access.
+- **Options**:
+  - **Pro Monthly**: $29/mo
+  - **Pro Yearly**: $290/yr (Save 2 months)
+- **Action**: "Subscribe & Continue" → Redirects to Stripe Checkout.
+- **Blocking Behavior**: User cannot proceed to Workspace Setup until payment is successful.
+
+### 3. Workspace Setup
 
 #### Screen: "Name your Workspace"
 

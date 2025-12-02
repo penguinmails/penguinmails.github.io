@@ -162,6 +162,46 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ---
 
+## Admin Capabilities
+
+### Plan Management
+
+- **Create/Edit Plans**: Define limits, pricing, and Stripe mapping via Admin Dashboard.
+- **Lifecycle Control**: Activate/Deactivate plans (seasonal offers, legacy tiers).
+- **Pricing Strategy**: Manage displayed pricing independent of Stripe charge logic.
+
+### Subscription Oversight
+
+- **View Tenant Subscriptions**: Monitor status, plan, and MRR.
+- **Cancel/Refund**: Admin controls for support cases.
+- **Manual Overrides**: Grant complimentary access or extended trials.
+
+---
+
+## Integration Philosophy
+
+### Stripe Checkout (Hosted)
+
+We use Stripe Checkout for all payment flows to ensure:
+
+- **PCI Compliance**: No card data touches our servers.
+- **Conversion**: Mobile-optimized, trusted UI.
+- **Maintenance**: Zero custom form code.
+
+### Dashboard-First
+
+Users manage their own billing via Stripe Customer Portal:
+
+- Update cards
+- Download invoices
+- Cancel subscriptions
+
+### Webhooks as Truth
+
+Database state is strictly driven by Stripe webhooks (`checkout.session.completed`, `customer.subscription.updated`), ensuring perfect sync with actual payment status.
+
+---
+
 ## Roadmap Summary
 
 ### Q1 2026: MVP Completion

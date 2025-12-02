@@ -24,6 +24,7 @@ erDiagram
   %% ==========================
 
   billing_analytics {
+    %% Usage aggregation for billing AND dashboard reporting
     bigint id PK
     text tenant_id
     text subscription_id
@@ -171,6 +172,8 @@ erDiagram
 
   %% - IDs like tenant_id, campaign_id, company_id, mailbox_id, lead_id are logical references
   %%   to OLTP entities, denormalized for warehouse flexibility (no cross-DB FKs).
+  %% - STRICT SEPARATION: No operational billing state (plans, payments) lives here.
+  %%   Only aggregated usage metrics and analytics events.
   %% - Only core analytics fact tables and the compliance-scope admin_audit_log are modeled here.
   %% - Notifications and live admin/system events are stored in the dedicated Notifications DB
   %%   (see notifications-database-schema-guide), not in OLAP.

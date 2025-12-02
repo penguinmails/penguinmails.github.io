@@ -41,6 +41,66 @@ For those concerns:
 
 ---
 
+## OLTP vs OLAP Separation of Concerns
+
+### What Lives in OLTP (Operational Billing)
+
+- ✅ Subscription records (`subscriptions`, `plans`, `payments`)
+- ✅ Stripe object references (`stripe_subscription_id`, `stripe_product_id`)
+- ✅ Current subscription state (`status`, `current_period_end`)
+- ✅ Billing lifecycle (`cancel_reason`, `cancel_date`)
+
+### What Lives in OLAP (Analytics)
+
+- ✅ Email campaign metrics (`campaign_analytics.sent`, `delivered`, `opened`)
+- ✅ Mailbox performance (`mailbox_analytics.health_score`)
+- ✅ Lead engagement (`lead_analytics.replied`)
+- ✅ Aggregated usage summaries (`billing_analytics.emails_sent`)
+
+### How Billing Uses Analytics
+
+**When billing needs analytics data** (e.g., usage-based billing checks):
+
+```typescript
+// ✅ CORRECT: Query OLAP from billing controller
+const usage = await olapClient.query(`
+  SELECT SUM(sent) as total_sent
+  FROM campaign_analytics
+  WHERE tenant_id = $1 
+    AND updated >= $2 
+    AND updated < $3
+`, [tenantId, periodStart, periodEnd]);
+
+if (usage.total_sent > currentPlan.max_emails_per_month) {
+  // Handle overage
+}
+```
+
+**Anti-pattern**:
+
+```typescript
+// ❌ WRONG: Don't duplicate analytics in billing tables
+// This violates separation of concerns and creates data redundancy
+```
+
+### `billing_analytics` Table Purpose
+
+**Clarification**: This table is **usage aggregation for all purposes**, not just billing.
+
+**Use cases**:
+
+- Billing usage summaries
+- Dashboard widgets (resource counts)
+- Executive reports (tenant growth)
+
+**NOT for**:
+
+- Detailed campaign metrics → Use `campaign_analytics`
+- Email deliverability insights → Use `mailbox_analytics`
+- Lead engagement scoring → Use `lead_analytics`
+
+---
+
 ## 1. Core Analytics Tables
 
 The OLAP warehouse contains the following canonical tables:

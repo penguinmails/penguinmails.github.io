@@ -11,6 +11,10 @@ persona: "Documentation Users"
 
 ## Daily Operations Procedures
 
+### Billing & Support
+
+- **Review Billing Ops Guide**: [Billing Operations Guide](/docs/operations/billing-ops) for payment workflows.
+
 ## System Health Monitoring Checklist
 
 - **Automated Health Checks**: Validate 15 core system health metrics every 15 minutes

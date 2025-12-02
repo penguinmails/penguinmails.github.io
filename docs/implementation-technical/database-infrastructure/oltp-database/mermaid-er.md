@@ -206,6 +206,7 @@ erDiagram
     int price_yearly
     text notes
     boolean is_active
+    varchar(255) stripe_product_id "NEW: Link to Stripe Product"
     timestamp created
     timestamp updated
   }
@@ -219,6 +220,8 @@ erDiagram
     timestamp current_period_start
     timestamp current_period_end
     boolean cancel_at_period_end
+    text cancel_reason "NEW: Churn analysis"
+    timestamp cancel_date "NEW: Cancellation timestamp"
     uuid billing_contact_user_id FK
     varchar(255) stripe_subscription_id
     timestamp created

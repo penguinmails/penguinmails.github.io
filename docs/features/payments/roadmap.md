@@ -826,6 +826,76 @@ Advanced dunning workflows with smart retry logic, payment recovery campaigns, a
 
 ---
 
+#### 16. [Post-MVP - Q3 2026] **SPIKE REQUIRED** Trial Plans Support
+
+**Epic:** Subscription Flexibility
+**Priority:** P2 (Medium)
+**Effort:** Spike (3-5 days) + Implementation (1-2 weeks)
+**Timeline:** Q3 2026
+
+## Description
+
+**IMPORTANT**: This feature requires a spike to validate approach before implementation.
+
+Add support for trial plans as a separate plan type (not a subscription field). Trials would be implemented as special plans with limited duration, allowing for enterprise trials, proof-of-concept periods, and limited-time access.
+
+**Key Decision**: Trial as a plan type vs trial as subscription property.
+
+**Proposed Approach** (requires validation):
+
+- Create `trial` plan type in `plans` table (e.g., `plan_type: 'trial'` or `is_trial: true`)
+- Trial plans have:
+  - Duration (e.g., 14 days, 30 days)
+  - Feature limits (similar to regular plans)
+  - Automatic expiration logic
+  - Conversion path to paid plan
+- Track trial end date via subscription's relationship to trial plan
+- No need for `trial_end_date` field on subscriptions (derived from `plan.duration` + `subscription.created`)
+
+## Spike Acceptance Criteria (3-5 days)
+
+- [ ] Research trial implementation patterns (Stripe trials vs plan-based trials)
+- [ ] Evaluate impact on existing schema (minimal changes preferred)
+- [ ] Design trial plan type structure and lifecycle
+- [ ] Define trial-to-paid conversion flow
+- [ ] Estimate implementation effort and risks
+- [ ] Document recommended approach with pros/cons
+- [ ] Get stakeholder approval on approach
+
+## Implementation Acceptance Criteria (1-2 weeks, post-spike)
+
+- [ ] Add trial plan type support to `plans` table
+- [ ] Trial plan creation UI for admins
+- [ ] Trial duration configuration (days or specific end date)
+- [ ] Automatic expiration after trial period
+- [ ] Trial-to-paid conversion flow (one-click upgrade)
+- [ ] Trial reminder emails (7 days before end, 1 day before end)
+- [ ] Usage tracking during trial period
+- [ ] Prevent multiple trials per tenant (abuse prevention)
+- [ ] Admin dashboard to monitor active trials
+- [ ] Trial conversion rate analytics
+
+## Dependencies
+
+- Plans and subscriptions infrastructure (MVP)
+- Email notification system
+- Billing dashboard
+- Admin trial management UI
+
+## Why Post-MVP
+
+**MVP Scope**: No free tier, payment required during onboarding
+**Trial Use Cases**: Enterprise POC, partner demos, specific promotions
+**Complexity**: Requires spike to validate approach and avoid schema bloat
+
+## Cross-References
+
+- Schema: [OLTP Plans Table](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md)
+- Feature: [Subscription Management](/docs/features/payments/subscription-management)
+- Business: [Pricing Strategy](/docs/business/strategy/pricing-strategy)
+
+---
+
 ## Success Metrics
 
 ### Technical Metrics
