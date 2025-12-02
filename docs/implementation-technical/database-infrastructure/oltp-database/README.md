@@ -15,11 +15,11 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 ### Core Components
 
-- **[Schema Guide](schema-guide)** - Complete OLTP database schema and design principles
+- **[Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)** - Complete OLTP database schema and design principles
 
-- **[Entity Relationship Diagram](mermaid-er)** - Database schema visualization
+- **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er)** - Database schema visualization
 
-- **[SQL Implementation Challenge](sql-implementation-guide)** - Hands-on exercises for building and testing OLTP architecture
+- **[SQL Implementation Challenge](/docs/implementation-technical/database-infrastructure/oltp-database/sql-implementation-guide)** - Hands-on exercises for building and testing OLTP architecture
 
 ### Design Principles
 
@@ -35,9 +35,9 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Schema Guide](schema-guide) | Complete OLTP schema and implementation | Database engineers |
-| [Mermaid ER](mermaid-er) | Visual database schema representation | All technical stakeholders |
-| [SQL Implementation Challenge](sql-implementation-guide) | Hands-on SQL exercises for developers | Backend developers |
+| [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) | Complete OLTP schema and implementation | Database engineers |
+| [Mermaid ER](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er) | Visual database schema representation | All technical stakeholders |
+| [SQL Implementation Challenge](/docs/implementation-technical/database-infrastructure/oltp-database/sql-implementation-guide) | Hands-on SQL exercises for developers | Backend developers |
 
 ## Key Concepts
 
@@ -87,11 +87,11 @@ This design ensures:
 
 ## Getting Started
 
-1. Review [Schema Guide](schema-guide) for implementation details
+1. Review [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) for implementation details
 
-2. Reference [Mermaid ER](mermaid-er) for visual schema understanding
+2. Reference [Mermaid ER](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er) for visual schema understanding
 
-3. Complete [SQL Implementation Challenge](sql-implementation-guide) for hands-on learning
+3. Complete [SQL Implementation Challenge](/docs/implementation-technical/database-infrastructure/oltp-database/sql-implementation-guide) for hands-on learning
 
 4. Follow design principles for new development
 
@@ -111,7 +111,7 @@ For questions or support, contact the Engineering team.
 
 ## Hands-On Learning
 
-The [SQL Implementation Challenge](sql-implementation-guide) provides interactive exercises to:
+The [SQL Implementation Challenge](/docs/implementation-technical/database-infrastructure/oltp-database/sql-implementation-guide) provides interactive exercises to:
 
 - Build and test OLTP schemas with realistic sample data
 
@@ -124,3 +124,4 @@ The [SQL Implementation Challenge](sql-implementation-guide) provides interactiv
 - Discover architectural strengths and weaknesses through practice
 
 **Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security
+

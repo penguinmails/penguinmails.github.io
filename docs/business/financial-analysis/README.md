@@ -17,15 +17,15 @@ This directory contains comprehensive financial analysis files that provide deep
 
 ### 📊 Deep Analysis Documents
 
-- [**Financial Analysis Benchmarks**](.) - Comprehensive industry benchmarks (≤300 lines)
+- [**Financial Analysis Benchmarks**](/docs/business/financial-analysis) - Comprehensive industry benchmarks (≤300 lines)
 
-- [**ROI Calculator Detailed**](.) - Advanced financial modeling tools (≤300 lines)
+- [**ROI Calculator Detailed**](/docs/business/financial-analysis) - Advanced financial modeling tools (≤300 lines)
 
-- [**Cost Analysis Overview**](.) - Strategic cost breakdown analysis (≤200 lines)
+- [**Cost Analysis Overview**](/docs/business/financial-analysis) - Strategic cost breakdown analysis (≤200 lines)
 
-- [**Cost Implementation**](.) - Implementation cost management (≤300 lines)
+- [**Cost Implementation**](/docs/business/financial-analysis) - Implementation cost management (≤300 lines)
 
-- [**Personnel Analysis**](.) - Workforce impact and cost analysis (≤300 lines)
+- [**Personnel Analysis**](/docs/business/financial-analysis) - Workforce impact and cost analysis (≤300 lines)
 
 ### 🎯 Financial Analysis Path
 
@@ -74,3 +74,4 @@ This directory contains comprehensive financial analysis files that provide deep
 ---
 
 *This financial analysis directory provides the deep financial modeling capabilities needed for comprehensive business justification and detailed cost planning.*
+

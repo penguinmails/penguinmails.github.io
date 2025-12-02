@@ -685,7 +685,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Review
 
-- **[Authentication & Security Review](/.kiro/specs/feature-completeness-review/findings/authentication-security.md)** - Complete feature gap analysis
+- **[Authentication & Security Review](/.kiro/specs/feature-completeness-review/findings/authentication-security)** - Complete feature gap analysis
 
 ---
 
@@ -696,3 +696,4 @@ This document provides a detailed roadmap for authentication and security featur
 ---
 
 *Authentication and security are foundational to platform trust. This roadmap ensures we build the right features at the right time, balancing security requirements with user experience and business needs.*
+

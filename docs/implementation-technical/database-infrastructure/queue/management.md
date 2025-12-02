@@ -7,13 +7,13 @@ persona: "System Engineers"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Database Schema](database-schema) - Job tables and indexes"
+  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 ---
 
 
@@ -626,3 +626,4 @@ The queue management system provides:
 - **Scalability**: Horizontal scaling through multiple workers and Redis clustering
 
 This architecture ensures efficient job processing while maintaining data durability and system reliability.
+

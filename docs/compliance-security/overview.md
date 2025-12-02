@@ -286,6 +286,7 @@ After comprehensive gap analysis of all compliance and security features:
 
 **Recommendation:** Platform is ready for launch from compliance and security perspective. Focus on Post-MVP enhancements after successful launch and customer feedback.
 
-**Detailed Review:** See [Compliance & Security Feature Review](.kiro/specs/feature-completeness-review/findings/compliance-security.md) for complete gap analysis.
+**Detailed Review:** See [Compliance & Security Feature Review](/docs/compliance-security/.kiro/specs/feature-completeness-review/findings/compliance-security) for complete gap analysis.
 
 ---
+

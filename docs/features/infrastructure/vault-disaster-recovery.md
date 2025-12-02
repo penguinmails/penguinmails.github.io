@@ -574,7 +574,7 @@ async function recoverSmtpCredentialsToNewVps(
 
 ```
 
-**Reference:** See [SMTP Credentials Vault Storage](vault-smtp-credentials.md) for detailed SMTP disaster recovery scenarios including:
+**Reference:** See [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials) for detailed SMTP disaster recovery scenarios including:
 
 - VPS failure recovery
 
@@ -2151,7 +2151,7 @@ async function conductPostIncidentReview(
 
 ### Architecture & Security
 
-- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Complete Vault architecture
+- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)** - Complete Vault architecture
 
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation
 
@@ -2159,23 +2159,23 @@ async function conductPostIncidentReview(
 
 ### Planning & Review
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
-- **[Feature Completeness Review Requirements](/.kiro/specs/feature-completeness-review/requirements.md)** - Review requirements
+- **[Feature Completeness Review Requirements](/.kiro/specs/feature-completeness-review/requirements)** - Review requirements
 
 - **[Technical Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure roadmap
 
 ### Implementation Tasks
 
-- **[Task 11.7 - Vault Disaster Recovery](/.kiro/specs/feature-completeness-review/tasks.md#117-implement-vault-disaster-recovery-procedures)** - Disaster recovery implementation
+- **[Task 11.7 - Vault Disaster Recovery](/.kiro/specs/feature-completeness-review/tasks#117-implement-vault-disaster-recovery-procedures)** - Disaster recovery implementation
 
-- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
+- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks#113-document-vault-integration-architecture)** - Architecture documentation
 
-- **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)** - SSH key storage
+- **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks#114-implement-vps-ssh-key-management-with-vault)** - SSH key storage
 
-- **[Task 11.5 - SMTP Credentials Vault Storage](/.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)** - SMTP credential management
+- **[Task 11.5 - SMTP Credentials Vault Storage](/.kiro/specs/feature-completeness-review/tasks#115-implement-smtp-credentials-vault-storage)** - SMTP credential management
 
-- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - API key storage
+- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks#116-implement-tenant-api-key-system-with-vault)** - API key storage
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
 
@@ -2199,3 +2199,4 @@ async function conductPostIncidentReview(
 **Next Review:** December 26, 2025
 
 *This document provides comprehensive disaster recovery procedures for HashiCorp Vault, ensuring rapid recovery from any failure scenario with minimal data loss and service disruption. All Vault-dependent features must reference this document for disaster recovery planning.*
+

@@ -543,7 +543,7 @@ This document provides marketing and sales teams with a clear understanding of w
 
 ### Sales Enablement
 
-- **Executive Roadmap**: [`Executive Roadmap`](executive-roadmap) for ROI discussions
+- **Executive Roadmap**: [`Executive Roadmap`](/docs/business/roadmap/executive-roadmap) for ROI discussions
 
 - **Feature Taxonomy**: [`Feature Taxonomy`](/docs/business/roadmap/feature-taxonomy-and-roadmap) for technical details
 
@@ -555,3 +555,4 @@ This document provides marketing and sales teams with a clear understanding of w
 **Central Taxonomy:** [`Feature Taxonomy and Roadmap Framework`](/docs/business/roadmap/feature-taxonomy-and-roadmap)
 
 This marketing roadmap enables confident sales conversations, effective hype marketing, and strategic customer communication aligned with actual development capabilities.
+

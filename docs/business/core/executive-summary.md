@@ -234,11 +234,12 @@ keywords: ["executive oversight", "strategic framework", "revenue protection", "
 
 ## For technical coordination
 
-- [Business Leaders Technical Framework](technical-implementation) - Technical coordination guide
+- [Business Leaders Technical Framework](/docs/business/core/technical-implementation) - Technical coordination guide
 
-- [Executive API Overview](implementation-technical/api) - Data access capabilities and constraints
+- [Executive API Overview](/docs/business/core/implementation-technical/api) - Data access capabilities and constraints
 
 ---
 
 *This executive summary is part of the comprehensive Progressive Disclosure Framework for Business Leaders Documentation. It provides strategic oversight guidance while respecting technical constraints and focusing on realistic business value delivery.*
 ---
+

@@ -519,11 +519,11 @@ Campaign Performance
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](.) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics/analytics-performance) - Main operations framework
 
-- [Performance KPIs](.) - Comprehensive KPI framework
+- [Performance KPIs](/docs/operations-analytics/analytics-performance) - Comprehensive KPI framework
 
-- [Product Analytics](.) - Feature performance analysis
+- [Product Analytics](/docs/operations-analytics/analytics-performance) - Feature performance analysis
 
 ### **Business Strategy**
 
@@ -563,9 +563,9 @@ Campaign Performance
 
 Navigate to specific analytics areas:
 
-- **[Product Analytics](.)** → Feature adoption and product performance
+- **[Product Analytics](/docs/operations-analytics/analytics-performance)** → Feature adoption and product performance
 
-- **[Metrics & KPIs](.)** → Comprehensive KPI framework
+- **[Metrics & KPIs](/docs/operations-analytics/analytics-performance)** → Comprehensive KPI framework
 
 - **[Operations Management](/docs/operations-analytics/operations-management)** → Operational procedures and workflows
 
@@ -573,3 +573,4 @@ Navigate to specific analytics areas:
 
 **Keywords**: user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization
 ---
+

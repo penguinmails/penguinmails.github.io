@@ -8,7 +8,7 @@ persona: "Documentation Users"
 # OLAP Analytics ER Diagram (Mermaid)
 
 This diagram reflects the OLAP/analytics schema defined in
-[`schema-guide`](schema-guide),
+[`schema-guide`](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide),
 modeled as the analytics tier separate from OLTP, Content DB, Notifications DB, and external logging.
 
 ```mermaid
@@ -179,3 +179,4 @@ erDiagram
   %%   (see notifications-database-schema-guide), not in OLAP.
   %% - Raw logs, infra metrics, rate limits, and detailed telemetry belong to the external
   %%   logging).
+

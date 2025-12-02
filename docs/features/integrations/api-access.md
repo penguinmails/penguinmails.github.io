@@ -145,15 +145,15 @@ Official client libraries are coming soon:
 
 ### Architecture & Security
 
-- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Secrets management architecture
+- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)** - Secrets management architecture
 
 - **[Enterprise Security](/docs/compliance-security/enterprise/overview)** - Security features
 
 ### Implementation
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
-- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks.md#116-implement-tenant-api-key-system-with-vault)** - Implementation task
+- **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks#116-implement-tenant-api-key-system-with-vault)** - Implementation task
 
 ---
 
@@ -161,3 +161,4 @@ Official client libraries are coming soon:
 **Version:** v1
 
 *Build powerful email integrations with the PenguinMails API.*
+

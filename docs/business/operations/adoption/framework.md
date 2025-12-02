@@ -475,9 +475,9 @@ The Operations Adoption Framework provides comprehensive security tool adoption 
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with adoption coordination
 
-- [Security Tool Adoption Guide](.) - Security tool adoption and user training
+- [Security Tool Adoption Guide](/docs/business/operations/adoption) - Security tool adoption and user training
 
-- [Change Management Protocols](.) - Change management and stakeholder engagement
+- [Change Management Protocols](/docs/business/operations/adoption) - Change management and stakeholder engagement
 
 ## Next Steps
 
@@ -499,3 +499,4 @@ The Operations Adoption Framework provides comprehensive security tool adoption 
 **Expected Timeline:** 2-3 weeks for comprehensive operations adoption implementation
 **Business Value:** $2.3M+ annual operations adoption value delivery through systematic adoption excellence
 ---
+

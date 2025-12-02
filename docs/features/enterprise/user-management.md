@@ -913,17 +913,17 @@ Response:
 
 - **[Team Management Roadmap](/docs/features/enterprise/team-roadmap)** - Detailed team & workspace management timeline
 
-- **[Multi-Tenant Architecture](../infrastructure/multi-tenant-architecture.md)** - Tenant isolation and workspace architecture
+- **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation and workspace architecture
 
-- **[Security Framework](../../compliance-security/enterprise/security-framework.md)** - Security overview
+- **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security overview
 
 - **[Vault Integration](/docs/features/integrations/overview#vault-integration)** - Secure secrets management for API keys and credentials
 
 ### Implementation
 
-- **[NileDB Authentication](../../implementation-technical/database-infrastructure/niledb.md)** - Auth implementation
+- **[NileDB Authentication](/docs/implementation-technical/database-infrastructure/niledb)** - Auth implementation
 
-- **[API Authentication](../../implementation-technical/api/platform-api/authentication.md)** - API auth details
+- **[API Authentication](/docs/implementation-technical/api/platform-api/authentication)** - API auth details
 
 - **[Public & Authentication Routes](/docs/design/routes/public-auth)** - Login, signup, password reset UI
 
@@ -931,7 +931,7 @@ Response:
 
 ### Tasks
 
-- **[Epic 2: User Authentication](../../tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+- **[Epic 2: User Authentication](/docs/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
 
 ### Roadmap
 
@@ -948,3 +948,4 @@ Response:
 **Next Milestone:** Q1 2026 - Complete MVP authentication features
 
 *Secure user authentication is the foundation of platform security. NileDB provides enterprise-grade authentication with tenant isolation built-in. For MVP and near-term releases, we continue using NileDB's email/password authentication. OAuth 2.0 and SSO (SAML, OpenID Connect) are planned for Q2-Q3 2026 to meet enterprise customer requirements.*
+

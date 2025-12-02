@@ -626,10 +626,11 @@ interface TimeSeriesDataPoint {
 
 ### Implementation Planning
 
-- **[Analytics Feature Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Gap analysis, roadmap, and implementation priorities
+- **[Analytics Feature Review](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Gap analysis, roadmap, and implementation priorities
 
 ---
 
 **Last Updated:** November 26, 2025
 **API Version:** v1
 **Status:** Active Development
+

@@ -214,7 +214,7 @@ graph TD
 
 ## For strategic context
 
-- [Executive Summary](executive-summary) - Strategic findings and recommendations
+- [Executive Summary](/docs/business/core/executive-summary) - Strategic findings and recommendations
 
 ## For detailed analysis
 
@@ -222,7 +222,7 @@ graph TD
 
 - [Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
 
-- [Competitive Analysis](competitive-analysis) - Provider selection matrix
+- [Competitive Analysis](/docs/business/core/competitive-analysis) - Provider selection matrix
 
 ## For technical teams
 
@@ -238,3 +238,4 @@ ROI calculator, cost-benefit analysis, TCO analysis, email infrastructure ROI, m
 
 *This ROI calculator is part of the comprehensive Progressive Disclosure Framework for Financial Documentation. Use alongside executive summary and detailed analysis for complete financial planning.*
 ---
+

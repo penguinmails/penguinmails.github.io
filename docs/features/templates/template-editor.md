@@ -1324,13 +1324,13 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 
 ## Related Documentation
 
-- **[Template Management](./template-management.md)** - Template organization and management
+- **[Template Management](/docs/features/templates/template-management)** - Template organization and management
 
-- **[Template Variables](./template-variables.md)** - Dynamic content and merge tags
+- **[Template Variables](/docs/features/templates/template-variables)** - Dynamic content and merge tags
 
-- **[Template Library](./template-library.md)** - Pre-built template collection
+- **[Template Library](/docs/features/templates/template-library)** - Pre-built template collection
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Use templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use templates in campaigns
 
 ---
 
@@ -1338,3 +1338,4 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q2 2026
 **Owner:** Templates Team
+

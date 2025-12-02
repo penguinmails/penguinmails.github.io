@@ -514,6 +514,7 @@ version: "1.0"
 
 ## Related Documents
 
-- [European Compliance Overview](european-compliance-overview)
+- [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
-- [Technical Implementation Guide](technical-implementation)
+- [Technical Implementation Guide](/docs/compliance-security/international/technical-implementation)
+

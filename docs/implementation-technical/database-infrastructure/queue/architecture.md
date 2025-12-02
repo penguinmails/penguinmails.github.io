@@ -7,13 +7,13 @@ persona: "Technical Architects"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Database Schema](database-schema) - Job tables and indexes"
+  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 
 
-  - "[Management](management) - Redis and migrator details"
+  - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
 
 
@@ -438,3 +438,4 @@ function handleSystemFailure() {
 This hybrid architecture provides the optimal balance of durability and performance for enterprise-grade job processing. The separation of concerns between PostgreSQL (durability) and Redis (performance) ensures system reliability while maintaining high throughput capabilities.
 
 The architecture supports horizontal scaling, comprehensive monitoring, and robust failure handling, making it suitable for mission-critical asynchronous operations.
+

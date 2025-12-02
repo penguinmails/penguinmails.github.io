@@ -520,13 +520,14 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 
 ## Related Documents
 
-- [Design System](design-system) - Complete design system overview
+- [Design System](/docs/design/design-system) - Complete design system overview
 
-- [Component Library](component-library) - Reusable component catalog
+- [Component Library](/docs/design/component-library) - Reusable component catalog
 
-- [Accessibility Guidelines](accessibility-guidelines) - Inclusive design standards
+- [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
 
-- [UI Library](component-library) - Component usage guidelines and patterns
+- [UI Library](/docs/design/component-library) - Component usage guidelines and patterns
 
 **Keywords**: design tokens, design system, color palette, typography, spacing, shadows, breakpoints, responsive design, accessibility
 ---
+

@@ -9,7 +9,7 @@ persona: "Documentation Users"
 
 This diagram visualizes the dedicated Notifications & System Events database as defined in:
 
-- [`schema-guide`](schema-guide)
+- [`schema-guide`](/docs/implementation-technical/database-infrastructure/notifications-database/schema-guide)
 
 It is an operational tier:
 
@@ -90,3 +90,4 @@ erDiagram
   %%
   %% - External logging / observability holds raw, high-volume telemetry.
 ---
+

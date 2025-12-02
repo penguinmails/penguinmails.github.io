@@ -624,7 +624,7 @@ Savings: $70/month vs all-Postmark
 
 ### Architecture & Implementation
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
 - **[Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/)** - Email pipeline tasks
 
@@ -659,3 +659,4 @@ Savings: $70/month vs all-Postmark
 **Coming Soon:** SendGrid, Amazon SES
 
 *ESP integration is optional but recommended for critical transactional emails and high-volume marketing campaigns.*
+

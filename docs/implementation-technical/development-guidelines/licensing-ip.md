@@ -1400,5 +1400,6 @@ Tech City, TC 12345
 **Email**: <urgent-legal@penguinmails.com>
 **Phone**: +1 (555) 999-0000 (24/7)
 
-For contribution process questions, see [`code-contribution.md`](code-contribution.md).
-For community guidelines, see [`community-governance.md`](community-governance.md).
+For contribution process questions, see [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution).
+For community guidelines, see [`community-governance.md`](/docs/implementation-technical/development-guidelines/community-governance).
+

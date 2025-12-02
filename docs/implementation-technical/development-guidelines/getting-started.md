@@ -224,11 +224,11 @@ penguinmails/
 
 After setting up your environment:
 
-1. **Review the contribution process** in [`code-contribution.md`](code-contribution)
+1. **Review the contribution process** in [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution)
 
-2. **Understand our testing requirements** in [`testing-requirements.md`](testing-requirements)
+2. **Understand our testing requirements** in [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements)
 
-3. **Learn our coding standards** in [`code-standards.md`](code-standards)
+3. **Learn our coding standards** in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards)
 
 4. **Find an issue to work on** by checking our [GitHub Issues](https://github.com/penguinmails/platform/issues)
 
@@ -245,3 +245,4 @@ After setting up your environment:
 - **Discussions**: Use [GitHub Discussions](https://github.com/penguinmails/platform/discussions) for questions
 
 Welcome to the PenguinMails community!
+

@@ -754,4 +754,5 @@ This basic customer journey optimization framework establishes the foundation fo
 
 ### Implementation
 
-- **[Active Tasks](../../tasks/README.md)** - Development status
+- **[Active Tasks](/tasks/README)** - Development status
+

@@ -392,7 +392,8 @@ To avoid scope creep:
 
 See:
 
-- [`mermaid-er`](mermaid-er)
+- [`mermaid-er`](/docs/implementation-technical/database-infrastructure/notifications-database/mermaid-er)
 for the visual ER representation of this schema.
 
 ---
+

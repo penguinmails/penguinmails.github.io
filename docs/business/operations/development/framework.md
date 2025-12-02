@@ -475,9 +475,9 @@ The Operations Development Framework provides comprehensive security tool develo
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with development coordination
 
-- [Security Tool Development Guide](.) - Security tool development and automation
+- [Security Tool Development Guide](/docs/business/operations/development) - Security tool development and automation
 
-- [Monitoring System Development Guide](.) - Monitoring system development and deployment
+- [Monitoring System Development Guide](/docs/business/operations/development) - Monitoring system development and deployment
 
 ## Next Steps
 
@@ -499,3 +499,4 @@ The Operations Development Framework provides comprehensive security tool develo
 **Expected Timeline:** 2-3 weeks for comprehensive operations development implementation
 **Business Value:** $2.6M+ annual operations development value delivery through systematic development excellence
 ---
+

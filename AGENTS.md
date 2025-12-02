@@ -1,3 +1,11 @@
+---
+title: "AI Agent Guidelines"
+description: "Rules and guidelines for AI agents interacting with the PenguinMails repository"
+last_modified_date: "2025-12-03"
+level: "1"
+persona: "AI Agents"
+---
+
 # AI Agent Guidelines for PenguinMails Repository
 
 ## Overview

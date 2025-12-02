@@ -32,13 +32,13 @@ Campaign creation, multi-channel orchestration, sequence management, and campaig
 
 **Total MVP Effort**: 30-45 days (6-9 weeks)
 
-See [Campaign Roadmap](./roadmap.md) for detailed timeline and quarterly breakdown.
+See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline and quarterly breakdown.
 
 ## Features in This Category
 
 ### 🚧 In Development (Q1 2026)
 
-#### [Campaign Management](./campaign-management/overview.md)
+#### [Campaign Management](/docs/features/campaigns/campaign-management/overview)
 
 Comprehensive email campaign management system with sequencing, A/B testing, and template management.
 
@@ -60,7 +60,7 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 
 **Status**: PLANNED (Q1 2026) | **Priority**: Critical
 
-#### [Campaign Scheduling](./campaign-scheduling.md)
+#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling)
 
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 
@@ -88,7 +88,7 @@ Advanced scheduling with timezone handling, send-time optimization, and calendar
 
 **Status**: MVP in Q1 2026, Advanced features Q3-Q4 2026 | **Priority**: High
 
-#### [Email Sequences](./email-sequences.md)
+#### [Email Sequences](/docs/features/campaigns/email-sequences)
 
 Design and automate multi-step email sequences with conditional branching and triggers.
 
@@ -108,7 +108,7 @@ Design and automate multi-step email sequences with conditional branching and tr
 
 **Status**: PLANNED (Q1 2026) | **Priority**: High
 
-#### [A/B Testing](./ab-testing.md)
+#### [A/B Testing](/docs/features/campaigns/ab-testing)
 
 Split testing engine for optimizing subject lines, content, and send times.
 
@@ -136,7 +136,7 @@ Split testing engine for optimizing subject lines, content, and send times.
 
 **Status**: MVP in Q1 2026, Advanced features Q2 2026 | **Priority**: High
 
-#### [Personalization System](./personalization-system.md)
+#### [Personalization System](/docs/features/campaigns/personalization-system)
 
 Advanced personalization engine for dynamic content insertion.
 
@@ -264,7 +264,7 @@ Advanced personalization engine for dynamic content insertion.
 
 - Advanced Analytics and Attribution (8-10 weeks)
 
-See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
+See [Campaign Roadmap](/docs/features/campaigns/roadmap) for complete timeline and feature details.
 
 ---
 
@@ -303,3 +303,4 @@ See [Campaign Roadmap](./roadmap.md) for complete timeline and feature details.
 ---
 
 [← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+

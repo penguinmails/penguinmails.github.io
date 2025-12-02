@@ -243,14 +243,14 @@ This comprehensive competitive intelligence framework provides strategic positio
 "We chose automated DNS configuration over manual setup because manual DNS errors cause deliverability failures for 60% of cold email campaigns, while our automated approach achieves 99.9% verification success rate."
 
 → [See Technical Details](/docs/technical-implementation/dns-storage-integration-guide)
-→ [Competitive Advantage](competitive-analysis#dns-automation)
+→ [Competitive Advantage](/docs/business/competitive-intelligence/competitive-analysis#dns-automation)
 
 ## VPS Infrastructure
 
 "We chose dedicated VPS over shared cloud infrastructure because cold email deliverability requires IP reputation control that shared infrastructure cannot provide."
 
 → [See Architecture Details](/docs/architecture)
-→ [Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure-limitations)
+→ [Why Shared Infrastructure Fails](/docs/business/competitive-intelligence/competitive-analysis#shared-infrastructure-limitations)
 
 ### **"Why We Avoided..." Language Pattern**
 
@@ -261,14 +261,14 @@ This comprehensive competitive intelligence framework provides strategic positio
 "We avoided shared infrastructure approaches because they create deliverability problems when one user's poor sending practices damage IP reputation for everyone using that infrastructure."
 
 **IMPACT:** 35-50% lower deliverability rates compared to dedicated infrastructure
-→ [See Why Shared Infrastructure Fails](competitive-analysis#shared-infrastructure)
+→ [See Why Shared Infrastructure Fails](/docs/business/competitive-intelligence/competitive-analysis#shared-infrastructure)
 
 ## Manual Compliance
 
 "We avoided manual compliance processes because they don't scale and create legal risk that could shut down campaigns or businesses."
 
 **IMPACT:** 90%+ reduction in compliance overhead through automation
-→ [See Compliance Automation Benefits](competitive-analysis#compliance-automation)
+→ [See Compliance Automation Benefits](/docs/business/competitive-intelligence/competitive-analysis#compliance-automation)
 
 ---
 
@@ -286,7 +286,7 @@ Unlike general email marketing platforms that were adapted for cold email, Pengu
 
 ###### Key Differentiator
 
-[See our competitive analysis](competitive-analysis) to understand why purpose-built infrastructure delivers 95%+ inbox placement vs. industry average of 60-70%.
+[See our competitive analysis](/docs/business/competitive-intelligence/competitive-analysis) to understand why purpose-built infrastructure delivers 95%+ inbox placement vs. industry average of 60-70%.
 
 #### **Architecture Overview Positioning**
 
@@ -303,7 +303,7 @@ We made specific architectural decisions that prioritize deliverability and comp
 - **Multi-Tenant by Design**: Unlike single-tenant platforms adapted for agencies
 
 → [See Complete Architecture](/docs/architecture/overview)
-→ [Why These Decisions Matter](competitive-analysis#architecture-decisions)
+→ [Why These Decisions Matter](/docs/business/competitive-intelligence/competitive-analysis#architecture-decisions)
 
 ---
 
@@ -495,3 +495,4 @@ We made specific architectural decisions that prioritize deliverability and comp
 
 *This competitive intelligence framework transforms PenguinMails documentation from feature-focused content into a strategic competitive advantage that clearly differentiates against known competitor weaknesses and articulates unique value propositions throughout the entire user journey.*
 ---
+

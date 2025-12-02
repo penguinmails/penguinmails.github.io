@@ -33,7 +33,7 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Required Before Starting
 
-- 🔄 **[Analytics](./analytics.md)** - Basic analytics must be complete (currently 60%)
+- 🔄 **[Analytics](/docs/features/analytics/enhanced-analytics/analytics)** - Basic analytics must be complete (currently 60%)
 
 - ⏳ Historical data - Need 30+ days of campaign data
 
@@ -41,9 +41,9 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Blocks (Features Waiting on This)
 
-- **[Workflow Automation](./workflow-automation.md)** - Needs analytics for triggers
+- **[Workflow Automation](/docs/features/analytics/enhanced-analytics/workflow-automation)** - Needs analytics for triggers
 
-- **[CRM Integration](./crm-integration.md)** - Enhanced metrics for CRM sync
+- **[CRM Integration](/docs/features/analytics/enhanced-analytics/crm-integration)** - Enhanced metrics for CRM sync
 
 ## Milestones
 
@@ -93,25 +93,25 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Feature Specification
 
-- **[Enhanced Analytics Feature](../../features/enhanced-analytics.md)** - Requirements (to be created)
+- **[Enhanced Analytics Feature](/docs/features/features/enhanced-analytics)** - Requirements (to be created)
 
 ### Technical Specifications
 
-- **[Frontend: Enhanced Dashboard](../../design/routes/dashboard-analytics.md)** - UI updates
+- **[Frontend: Enhanced Dashboard](/docs/features/design/routes/dashboard-analytics)** - UI updates
 
-- **[API: Advanced Analytics](../../implementation-technical/api/tenant-api/analytics.md)** - Enhanced endpoints
+- **[API: Advanced Analytics](/docs/features/implementation-technical/api/tenant-api/analytics)** - Enhanced endpoints
 
-- **[ML Pipeline](../../technical/architecture/ml-pipeline.md)** - Predictive modeling architecture
+- **[ML Pipeline](/docs/features/technical/architecture/ml-pipeline)** - Predictive modeling architecture
 
 ### User Workflows
 
-- **[Customer Success Journey](../../user-journeys/customer-success-journey.md)** - Analytics-driven optimization
+- **[Customer Success Journey](/docs/features/user-journeys/customer-success-journey)** - Analytics-driven optimization
 
-- **[Marketing Journey](../../user-journeys/marketing-journey.md)** - Data-driven campaign management
+- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - Data-driven campaign management
 
 ### Implementation Tasks
 
-- **[Enhanced Analytics Epic](../../../tasks/analytics-enhanced/)** - Development tasks
+- **[Enhanced Analytics Epic](/docs/tasks/analytics-enhanced/)** - Development tasks
 
 ## Technical Details
 
@@ -983,7 +983,7 @@ The system will automatically generate recommendations:
 
 ### Feature Completeness Review
 
-- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting.md)** - Comprehensive review including enhanced analytics roadmap items
+- **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Comprehensive review including enhanced analytics roadmap items
 
 ### Related Features
 
@@ -996,3 +996,4 @@ The system will automatically generate recommendations:
 **Last Updated**: 2025-11-24
 **Owner**: Data Engineering + Backend Team
 **Status**: Planned - Q1 2026 enhancement to basic analytics
+

@@ -180,11 +180,11 @@ POST /api/v1/templates
 
 ### Campaigns
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Using templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Using templates in campaigns
 
 ### Compliance
 
-- **[CAN-SPAM Compliance](../compliance/can-spam-compliance.md)** - Required footer elements
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - Required footer elements
 
 ---
 
@@ -192,3 +192,4 @@ POST /api/v1/templates
 **Engine:** Handlebars.js
 
 *Great templates drive engagement. PenguinMails gives you the tools to look professional on every device.*
+

@@ -166,7 +166,7 @@ interface RotationEvent {
 
    - SMTP Credentials: Admin username, Last rotation, "View Credentials" button (requires re-authentication)
 
-     - See [SMTP Credentials Vault Storage](../../features/infrastructure/vault-smtp-credentials.md) for detailed credential viewing workflow
+     - See [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials) for detailed credential viewing workflow
 
    - API Keys: Count, Last created, Rate limit tier
 
@@ -254,19 +254,19 @@ interface TenantSecretsSummary {
 
 ### Planning
 
-- [Vault Integration Architecture](../../.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md) - Comprehensive Vault architecture
+- [Vault Integration Architecture](/docs/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Comprehensive Vault architecture
 
-- [Infrastructure Management Feature](../../features/infrastructure/vault-ssh-management.md) - SSH key management feature
+- [Infrastructure Management Feature](/docs/features/infrastructure/vault-ssh-management) - SSH key management feature
 
-- [SMTP Credentials Vault Storage](../../features/infrastructure/vault-smtp-credentials.md) - SMTP credentials management feature
+- [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials management feature
 
 ### Implementation
 
-- [Task 11.4 - VPS SSH Key Management](../../.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)
+- [Task 11.4 - VPS SSH Key Management](/docs/.kiro/specs/feature-completeness-review/tasks#114-implement-vps-ssh-key-management-with-vault)
 
-- [Task 11.5 - SMTP Credentials Vault Storage](../../.kiro/specs/feature-completeness-review/tasks.md#115-implement-smtp-credentials-vault-storage)
+- [Task 11.5 - SMTP Credentials Vault Storage](/docs/.kiro/specs/feature-completeness-review/tasks#115-implement-smtp-credentials-vault-storage)
 
-- [Epic 5: Infrastructure Management](../../tasks/epic-5-infrastructure-management/)
+- [Epic 5: Infrastructure Management](/docs/tasks/epic-5-infrastructure-management/)
 
 ### Reference
 
@@ -284,3 +284,4 @@ interface TenantSecretsSummary {
 **Estimated Effort:** Medium (5-7 days)
 
 *SSH access management is critical for tenant VPS access and infrastructure troubleshooting. Vault integration ensures secure credential storage and rotation.*
+

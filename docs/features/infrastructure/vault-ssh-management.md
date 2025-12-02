@@ -572,7 +572,7 @@ path "vps/*/tenant_ssh/*" {
 
 ### Architecture & Security
 
-- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture.md)** - Comprehensive Vault architecture
+- **[Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)** - Comprehensive Vault architecture
 
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation
 
@@ -582,7 +582,7 @@ path "vps/*/tenant_ssh/*" {
 
 ### Planning & Review
 
-- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations.md)** - Integration completeness review
+- **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
 - **[Infrastructure Management Roadmap](/docs/roadmap/technical-roadmap)** - Infrastructure features roadmap
 
@@ -590,9 +590,9 @@ path "vps/*/tenant_ssh/*" {
 
 ### Implementation Tasks
 
-- **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks.md#114-implement-vps-ssh-key-management-with-vault)** - SSH key implementation
+- **[Task 11.4 - VPS SSH Key Management](/.kiro/specs/feature-completeness-review/tasks#114-implement-vps-ssh-key-management-with-vault)** - SSH key implementation
 
-- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks.md#113-document-vault-integration-architecture)** - Architecture documentation
+- **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks#113-document-vault-integration-architecture)** - Architecture documentation
 
 - **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
 
@@ -612,3 +612,4 @@ path "vps/*/tenant_ssh/*" {
 **Estimated Effort:** Large (10-15 days)
 
 *Vault SSH Key Management is a foundational security feature that enables secure VPS access and rapid disaster recovery. This feature must be implemented before infrastructure provisioning can be considered production-ready.*
+

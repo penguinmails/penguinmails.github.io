@@ -40,11 +40,11 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 - **[User Journey Testing](/docs/user-journeys/user-journey-testing)** - New user onboarding experience
 
-- **[Tenant Onboarding](./tenant-onboarding-flow.md)** - *[To be created]*
+- **[Tenant Onboarding](/docs/user-journeys/tenant-onboarding-flow)** - *[To be created]*
 
-- **[Workspace Setup](./workspace-setup-flow.md)** - *[To be created]*
+- **[Workspace Setup](/docs/user-journeys/workspace-setup-flow)** - *[To be created]*
 
-- **[Email Account Creation](./email-account-creation-flow.md)** - *[To be created]*
+- **[Email Account Creation](/docs/user-journeys/email-account-creation-flow)** - *[To be created]*
 
 ### Campaign Management
 
@@ -52,39 +52,39 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 - **[Campaign Creation Journey](/docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
 
-- **[Template Design](./template-design-flow.md)** - *[To be created]*
+- **[Template Design](/docs/user-journeys/template-design-flow)** - *[To be created]*
 
-- **[Campaign Launch](./campaign-launch-flow.md)** - *[To be created]*
+- **[Campaign Launch](/docs/user-journeys/campaign-launch-flow)** - *[To be created]*
 
 ### Analytics & Optimization
 
 **Goal**: Help users understand performance and optimize results
 
-- **[Analytics Review](./analytics-review-flow.md)** - *[To be created]*
+- **[Analytics Review](/docs/user-journeys/analytics-review-flow)** - *[To be created]*
 
-- **[Performance Optimization](./performance-optimization-flow.md)** - *[To be created]*
+- **[Performance Optimization](/docs/user-journeys/performance-optimization-flow)** - *[To be created]*
 
-- **[A/B Testing](./ab-testing-flow.md)** - *[To be created]*
+- **[A/B Testing](/docs/user-journeys/ab-testing-flow)** - *[To be created]*
 
 ### Team Collaboration
 
 **Goal**: Enable teams to work together effectively
 
-- **[User Invitation](./user-invitation-flow.md)** - *[To be created]*
+- **[User Invitation](/docs/user-journeys/user-invitation-flow)** - *[To be created]*
 
-- **[Role Management](./role-management-flow.md)** - *[To be created]*
+- **[Role Management](/docs/user-journeys/role-management-flow)** - *[To be created]*
 
-- **[Multi-Workspace Management](./multi-workspace-flow.md)** - *[To be created]*
+- **[Multi-Workspace Management](/docs/user-journeys/multi-workspace-flow)** - *[To be created]*
 
 ### Compliance & Security
 
 **Goal**: Ensure users can manage compliance and security requirements
 
-- **[GDPR Compliance](./gdpr-compliance-flow.md)** - *[To be created]*
+- **[GDPR Compliance](/docs/user-journeys/gdpr-compliance-flow)** - *[To be created]*
 
-- **[Data Export](./data-export-flow.md)** - *[To be created]*
+- **[Data Export](/docs/user-journeys/data-export-flow)** - *[To be created]*
 
-- **[Security Settings](./security-settings-flow.md)** - *[To be created]*
+- **[Security Settings](/docs/user-journeys/security-settings-flow)** - *[To be created]*
 
 ---
 
@@ -268,9 +268,9 @@ level: "2"
 
 ### Implementation
 
-- **[Active Tasks](../../tasks/README.md)** - Journey improvements in progress
+- **[Active Tasks](/tasks/README)** - Journey improvements in progress
 
-- **[Analytics Views](../design/analytics-ui-patterns.md)** - Analytics patterns
+- **[Analytics Views](/docs/design/analytics-ui-patterns)** - Analytics patterns
 
 ---
 
@@ -384,3 +384,4 @@ User Journeys Hub → Core Journeys → Success Metrics → Analytics
 ---
 
 *For questions about user journeys or to propose a new journey map, contact the Product Team.*
+

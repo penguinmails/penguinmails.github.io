@@ -613,21 +613,21 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 ### Compliance
 
-- **[GDPR Compliance](./gdpr-compliance.md)** - EU data protection
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - EU data protection
 
-- **[CAN-SPAM Compliance](./can-spam-compliance.md)** - US email law
+- **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - US email law
 
-- **[Data Privacy](./data-privacy.md)** - Privacy policies
+- **[Data Privacy](/docs/features/compliance/data-privacy)** - Privacy policies
 
 - **[Compliance Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All compliance features
 
 ### Features
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Campaign creation
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation
 
-- **[Unified Inbox](../inbox/unified-inbox/overview.md)** - Reply management
+- **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Reply management
 
-- **[Analytics](../analytics/core-analytics/overview.md)** - Performance tracking
+- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
 
 ---
 
@@ -635,3 +635,4 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 **Compliance:** CAN-SPAM, GDPR, CCPA, CASL
 
 *Proper unsubscribe management is critical for compliance, deliverability, and user trust. PenguinMails automates this process to ensure best-in-class opt-out handling.*
+

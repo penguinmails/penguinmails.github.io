@@ -197,13 +197,13 @@ GET /api/v1/contacts/search?query=industry:SaaS
 
 ### Campaigns
 
-- **[Campaign Management](../campaigns/campaign-management/overview.md)** - Sending to lists
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Sending to lists
 
 ### Compliance
 
-- **[GDPR Compliance](../compliance/gdpr-compliance.md)** - Data rights
+- **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - Data rights
 
-- **[Unsubscribe Management](../compliance/unsubscribe-management.md)** - Opt-out handling
+- **[Unsubscribe Management](/docs/features/compliance/unsubscribe-management)** - Opt-out handling
 
 ---
 
@@ -211,3 +211,4 @@ GET /api/v1/contacts/search?query=industry:SaaS
 **Capacity:** Unlimited contacts (billed by usage)
 
 *Clean data is the foundation of effective marketing. Use segmentation to send relevant content every time.*
+

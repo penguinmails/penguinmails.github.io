@@ -1491,29 +1491,29 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
 
 ### Campaign Features
 
-- **[A/B Testing](../ab-testing.md)** - Split testing for campaign optimization
+- **[A/B Testing](/docs/features/campaigns/ab-testing)** - Split testing for campaign optimization
 
-- **[Personalization System](../personalization-system.md)** - Dynamic email personalization
+- **[Personalization System](/docs/features/campaigns/personalization-system)** - Dynamic email personalization
 
-- **[Template Management](../../templates/template-management.md)** - Email template library
+- **[Template Management](/docs/features/templates/template-management)** - Email template library
 
 ### Audience Management
 
-- **[Contact Segmentation](../../leads/contact-segmentation.md)** - Audience targeting
+- **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Audience targeting
 
-- **[Lead Scoring](../../leads/lead-scoring.md)** - Contact prioritization
+- **[Lead Scoring](/docs/features/leads/lead-scoring)** - Contact prioritization
 
 ### Analytics
 
-- **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
+- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
 
-- **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
+- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
 ### Technical
 
-- **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
+- **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
+- **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---
 
@@ -1521,3 +1521,4 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
 **Status:** Planned - Critical Q1 2026 Feature
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+

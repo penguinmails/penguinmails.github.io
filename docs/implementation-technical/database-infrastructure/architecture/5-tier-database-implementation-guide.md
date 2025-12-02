@@ -9,7 +9,7 @@ keywords: ["database implementation", "5-tier", "cross-tier integration", "opera
 
 # 5-Tier Database Implementation Guide
 
-This guide provides detailed implementation guidance for the 5-tier database architecture, building upon the concepts outlined in the [5-Tier Database Architecture Guide](5-tier-database-architecture-guide).
+This guide provides detailed implementation guidance for the 5-tier database architecture, building upon the concepts outlined in the [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide).
 
 ## Cross-Tier Integration Patterns
 
@@ -216,14 +216,15 @@ CREATE POLICY tenant_isolation ON campaigns
 
 **Related Documentation**:
 
-- [5-Tier Database Architecture Guide](5-tier-database-architecture-guide) - Core architectural concepts
+- [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Core architectural concepts
 
-- [OLTP Database Documentation](oltp-database/) - Operational database implementation
+- [OLTP Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/oltp-database/) - Operational database implementation
 
-- [Content Database Documentation](content-database/README) - Content storage patterns
+- [Content Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/content-database/README) - Content storage patterns
 
-- [Queue System Documentation](queue/) - Background job processing
+- [Queue System Documentation](/docs/implementation-technical/database-infrastructure/architecture/queue/) - Background job processing
 
-- [Database Infrastructure Overview](README) - Complete ecosystem
+- [Database Infrastructure Overview](/docs/implementation-technical/database-infrastructure/architecture/README) - Complete ecosystem
 
 **Keywords**: database implementation, cross-tier integration, operational patterns, performance optimization, deployment, monitoring
+

@@ -232,13 +232,13 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 
 ### Features
 
-- **[Campaign Management](../../features/campaigns/campaign-management/overview.md)** - The source of most pipeline jobs
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - The source of most pipeline jobs
 
-- **[ESP Integration](../../features/integrations/esp-integration.md)** - External delivery gateways
+- **[ESP Integration](/docs/features/integrations/esp-integration)** - External delivery gateways
 
 ### Tasks
 
-- **[Epic 6: Core Email Pipeline](../../tasks/epic-6-core-email-pipeline/README.md)** - Development tasks
+- **[Epic 6: Core Email Pipeline](/docs/tasks/epic-6-core-email-pipeline/README)** - Development tasks
 
 ---
 
@@ -247,3 +247,4 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 **Throughput:** Scalable to millions/hour
 
 *The Core Email Pipeline ensures that every email is delivered, tracked, and accounted for, regardless of volume.*
+

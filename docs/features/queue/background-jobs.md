@@ -206,13 +206,13 @@ Internal admin tool to view:
 ### Architecture
 
 
-- **[Core Email Pipeline](./email-pipeline.md)** - High-level pipeline architecture
+- **[Core Email Pipeline](/docs/features/queue/email-pipeline)** - High-level pipeline architecture
 
 
 ### Tasks
 
 
-- **[Epic 6: Core Email Pipeline](../../tasks/epic-6-core-email-pipeline/README.md)** - Implementation tasks
+- **[Epic 6: Core Email Pipeline](/docs/tasks/epic-6-core-email-pipeline/README)** - Implementation tasks
 
 ---
 
@@ -220,3 +220,4 @@ Internal admin tool to view:
 **Queue Engine:** PostgreSQL + Redis
 
 *Background jobs allow PenguinMails to handle heavy workloads without blocking the user experience.*
+

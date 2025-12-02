@@ -483,21 +483,21 @@ stripe trigger checkout.session.completed
 
 ### Payments
 
-- **[Subscription Management](./subscription-management.md)** - Plan details and management
+- **[Subscription Management](/docs/features/payments/subscription-management)** - Plan details and management
 
-- **[Billing Dashboard](./billing-dashboard.md)** - Usage and invoices
+- **[Billing Dashboard](/docs/features/payments/billing-dashboard)** - Usage and invoices
 
 - **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Technical
 
-- **[Stripe API Documentation](../../implementation-technical/integration/stripe.md)** - Technical integration details
+- **[Stripe API Documentation](/docs/implementation-technical/integration/stripe)** - Technical integration details
 
-- **[Webhook Handling](../../implementation-technical/api/platform-api/webhooks.md)** - Webhook implementation
+- **[Webhook Handling](/docs/implementation-technical/api/platform-api/webhooks)** - Webhook implementation
 
 ### Support
 
-- **[Billing FAQ](../../business/faq/billing-faq.md)** - Common questions
+- **[Billing FAQ](/docs/business/faq/billing-faq)** - Common questions
 
 - **[Contact Support](mailto:support@penguinmails.com)** - Payment issues
 
@@ -508,3 +508,4 @@ stripe trigger checkout.session.completed
 **Compliance:** PCI DSS Level 1, SCA compliant
 
 *All payments are processed securely by Stripe. PenguinMails never stores credit card information.*
+

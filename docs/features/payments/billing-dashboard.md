@@ -574,15 +574,15 @@ PUT /api/v1/billing/company-info
 
 ### Payments
 
-- **[Subscription Management](./subscription-management.md)** - Plan upgrades and downgrades
+- **[Subscription Management](/docs/features/payments/subscription-management)** - Plan upgrades and downgrades
 
-- **[Stripe Integration](./stripe-integration.md)** - Payment processing
+- **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing
 
 - **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Support
 
-- **[Billing FAQ](../../business/faq/billing-faq.md)** - Common billing questions
+- **[Billing FAQ](/docs/business/faq/billing-faq)** - Common billing questions
 
 - **[Contact Billing](mailto:billing@penguinmails.com)** - Billing support
 
@@ -593,3 +593,4 @@ PUT /api/v1/billing/company-info
 **Data Retention:** Invoices retained for 7 years
 
 *The Billing Dashboard provides complete transparency into your PenguinMails costs and usage.*
+

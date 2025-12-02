@@ -7,13 +7,13 @@ persona: "Database Architects"
 related_docs:
 
 
-  - "[Main Guide](main) - Complete overview"
+  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
 
-  - "[Architecture](architecture) - System design principles"
+  - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
 
-  - "[Entity Relationship Diagram](mermaid-er) - Visual schema"
+  - "[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual schema"
 ---
 
 
@@ -472,3 +472,4 @@ This schema design provides a robust foundation for job processing with:
 - **Flexibility**: JSONB payloads for diverse job types
 
 The schema supports both operational needs (job processing) and analytical needs (reporting and optimization) while maintaining data integrity and performance.
+

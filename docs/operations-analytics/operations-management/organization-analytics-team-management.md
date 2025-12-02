@@ -831,13 +831,13 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### **Operations & Analytics**
 
-- [Operations Analytics Overview](..)) - Main operations framework
+- [Operations Analytics Overview](/docs/operations-analytics)) - Main operations framework
 
 - [User Analytics](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - User behavior analysis
 
 - [Metrics & KPIs](/docs/operations-analyti/operations-analytics/analytics-performance/README.md - Comprehensive KPI framework
 
-### **Business Strategy**
+# **Business Strategy**
 
 - [Business Strategy Overview](/docs/business/strategy/overview)) - Strategic alignment
 
@@ -883,7 +883,7 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 Navigate to specific organization and team areas:
 
-- **[Staff Operations](.))** → Operational staff coordination
+- **[Staff Operations](/docs/operations-analytics/operations-management))** → Operational staff coordination
 
 - **[QA Testing Protocols](/docs/operations-analytics/team-performance))** → Quality assurance procedures
 
@@ -893,3 +893,4 @@ Navigate to specific organization and team areas:
 
 **Keywords**: organization analytics, team management, role-based access control, multi-tenant analytics, team performance, collaboration metrics, organizational behavior, team coordination
 ---
+

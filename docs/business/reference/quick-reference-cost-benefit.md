@@ -335,5 +335,6 @@ Approve [Level 1/2/3] implementation for immediate ROI and risk mitigation.
 
 ---
 
-*This quick reference guide is part of the comprehensive Progressive Disclosure Framework for Business Leaders. For detailed analysis, see the [Executive Summary](executive-summary) and [ROI Calculator](roi-calculator).*
+*This quick reference guide is part of the comprehensive Progressive Disclosure Framework for Business Leaders. For detailed analysis, see the [Executive Summary](/docs/business/reference/executive-summary) and [ROI Calculator](/docs/business/reference/roi-calculator).*
 ---
+

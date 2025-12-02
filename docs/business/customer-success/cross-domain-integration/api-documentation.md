@@ -80,7 +80,7 @@ Response 200:
 
 ```
 
-**Full Spec:** [marketing-integration-map#cs-marketing-apis](marketing-integration-map)
+**Full Spec:** [marketing-integration-map#cs-marketing-apis](/docs/business/customer-success/cross-domain-integration/marketing-integration-map)
 
 ---
 
@@ -120,7 +120,7 @@ Response 200:
 
 ```
 
-**Full Spec:** [sales-integration-map#cs-sales-apis](sales-integration-map)
+**Full Spec:** [sales-integration-map#cs-sales-apis](/docs/business/customer-success/cross-domain-integration/sales-integration-map)
 
 ---
 
@@ -163,7 +163,7 @@ Response 201:
 
 ```
 
-**Full Spec:** [product-integration-map#cs-product-apis](product-integration-map)
+**Full Spec:** [product-integration-map#cs-product-apis](/docs/business/customer-success/cross-domain-integration/product-integration-map)
 
 ---
 
@@ -197,7 +197,7 @@ Request:
 
 ```
 
-**Full Spec:** [finance-integration-map#cs-finance-apis](finance-integration-map)
+**Full Spec:** [finance-integration-map#cs-finance-apis](/docs/business/customer-success/cross-domain-integration/finance-integration-map)
 
 ---
 
@@ -236,7 +236,7 @@ Response 200:
 
 ```
 
-**Full Spec:** [operations-integration-map#cs-operations-apis](operations-integration-map)
+**Full Spec:** [operations-integration-map#cs-operations-apis](/docs/business/customer-success/cross-domain-integration/operations-integration-map)
 
 ---
 
@@ -276,3 +276,4 @@ Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 - [Domain Maps](/docs/business/customer-success/cross-domain-integration)
 
 **Document Classification:** Level 3 - CS API Reference Documentation
+

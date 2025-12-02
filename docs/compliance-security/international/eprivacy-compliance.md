@@ -337,6 +337,7 @@ version: "1.0"
 
 ## Related Documents
 
-- [European Compliance Overview](european-compliance-overview)
+- [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
-- [GDPR Compliance Analysis](gdpr-compliance)
+- [GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance)
+

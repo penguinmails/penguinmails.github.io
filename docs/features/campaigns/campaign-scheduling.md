@@ -1243,23 +1243,23 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ### Campaign Features
 
-- **[Campaign Management](./campaign-management/overview.md)** - Core campaign creation and management
+- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Core campaign creation and management
 
-- **[Email Sequences](./email-sequences.md)** - Multi-step automated sequences
+- **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
 
-- **[A/B Testing](./ab-testing.md)** - Campaign optimization
+- **[A/B Testing](/docs/features/campaigns/ab-testing)** - Campaign optimization
 
 ### Analytics
 
-- **[Core Analytics](../../analytics/core-analytics/overview.md)** - Performance tracking
+- **[Core Analytics](/docs/analytics/core-analytics/overview)** - Performance tracking
 
-- **[Enhanced Analytics](../../analytics/enhanced-analytics/overview.md)** - Advanced insights
+- **[Enhanced Analytics](/docs/analytics/enhanced-analytics/overview)** - Advanced insights
 
 ### Technical
 
-- **[Email Pipeline](../../queue/email-pipeline.md)** - Email sending infrastructure
+- **[Email Pipeline](/docs/queue/email-pipeline)** - Email sending infrastructure
 
-- **[API Documentation](../../../implementation-technical/api/tenant-api/campaigns.md)** - Campaign APIs
+- **[API Documentation](/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---
 
@@ -1267,3 +1267,4 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 **Status:** Planned - High Priority Q1 2026 Feature
 **Target Release:** Q1 2026
 **Owner:** Campaigns Team
+

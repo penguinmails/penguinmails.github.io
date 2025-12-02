@@ -33,11 +33,11 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Required Before Starting
 
-- ⏳ **[Campaign Management](./campaign-management.md)** - Core platform complete (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/enterprise/enterprise-features/campaign-management)** - Core platform complete (Q1 2026)
 
-- ⏳ **[CRM Integration](./crm-integration.md)** - Integration infrastructure (Q1 2026)
+- ⏳ **[CRM Integration](/docs/features/enterprise/enterprise-features/crm-integration)** - Integration infrastructure (Q1 2026)
 
-- ⏳ **[Workflow Automation](./workflow-automation.md)** - Automation infrastructure (Q2-Q3 2026)
+- ⏳ **[Workflow Automation](/docs/features/enterprise/enterprise-features/workflow-automation)** - Automation infrastructure (Q2-Q3 2026)
 
 - ⏳ Security audit - Required before enterprise launch
 
@@ -115,23 +115,23 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Feature Specification
 
-- **[Enterprise Features Spec](../../features/enterprise-features.md)** - Requirements (to be created)
+- **[Enterprise Features Spec](/docs/features/features/enterprise-features)** - Requirements (to be created)
 
 ### Technical Specifications
 
-- **[SSO Architecture](../../technical/architecture/sso-implementation.md)** - SSO system design
+- **[SSO Architecture](/docs/features/technical/architecture/sso-implementation)** - SSO system design
 
-- **[Security Framework](../../technical/security/security-framework.md)** - Security architecture
+- **[Security Framework](/docs/features/technical/security/security-framework)** - Security architecture
 
-- **[Compliance Tools](../../technical/compliance/compliance-automation.md)** - Compliance implementation
+- **[Compliance Tools](/docs/features/technical/compliance/compliance-automation)** - Compliance implementation
 
 ### User Workflows
 
-- **[Enterprise Admin Journey](../../user-journeys/enterprise-admin-journey.md)** - Admin workflows (to be created)
+- **[Enterprise Admin Journey](/docs/features/user-journeys/enterprise-admin-journey)** - Admin workflows (to be created)
 
 ### Implementation Tasks
 
-- **[Enterprise Features Epic](../../../tasks/enterprise/)** - Development tasks
+- **[Enterprise Features Epic](/docs/tasks/enterprise/)** - Development tasks
 
 ## Technical Details
 
@@ -410,3 +410,4 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 **Last Updated**: 2025-11-24
 **Owner**: Security + Compliance + Engineering Teams
 **Status**: Planned - Q4 2026-Q1 2027 enterprise readiness
+

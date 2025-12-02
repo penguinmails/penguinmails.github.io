@@ -513,9 +513,9 @@ The Operations Process Standardization Framework provides comprehensive standard
 
 - [Operations Management Framework](/docs/business/operations/management/framework) - Operations management with standardization coordination
 
-- [Enhanced Operations Automation Framework](.) - Enhanced automation with standardization integration
+- [Enhanced Operations Automation Framework](/docs/business/operations/standardization) - Enhanced automation with standardization integration
 
-- [Operations Excellence Standards Framework](.) - Excellence standards with standardization coordination
+- [Operations Excellence Standards Framework](/docs/business/operations/standardization) - Excellence standards with standardization coordination
 
 ## Next Steps
 
@@ -537,3 +537,4 @@ The Operations Process Standardization Framework provides comprehensive standard
 **Expected Timeline:** 2-3 weeks for comprehensive operations standardization implementation
 **Business Value:** $3.2M+ annual operations standardization value delivery through systematic process excellence
 ---
+
