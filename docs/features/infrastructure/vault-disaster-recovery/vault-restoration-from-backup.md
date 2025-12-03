@@ -11,7 +11,7 @@ keywords: ["vault", "restoration", "backup", "snapshot", "runbook"]
 
 ## Step-by-Step Runbook
 
-**Prerequisites**
+## Prerequisites
 
 - Access to the encrypted S3 backup bucket
 - Backup encryption key material

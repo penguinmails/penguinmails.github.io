@@ -15,7 +15,7 @@ keywords: ["vault", "disaster recovery", "drills", "secrets", "resilience"]
 
 **Schedule:** Execute in January, April, July, and October. Record results for compliance audits.
 
-**Drill scenarios**
+## Drill scenarios
 
 1. **Vault server failure**
    - Simulate failure of the active Vault node

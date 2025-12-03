@@ -11,7 +11,7 @@ keywords: ["vault", "backup", "snapshot", "retention", "automation"]
 
 ## Backup Schedule
 
-**Daily backups**
+## Daily backups
 
 - **Frequency:** Every day at 02:00 UTC
 - **Retention:** 30 daily backups (rolling window)
@@ -19,14 +19,14 @@ keywords: ["vault", "backup", "snapshot", "retention", "automation"]
 - **Encryption:** AES-256-GCM with dedicated encryption key material
 - **Verification:** Automated integrity check after each backup completes
 
-**Monthly backups**
+## Monthly backups
 
 - **Frequency:** First day of each month at 02:00 UTC
 - **Retention:** 12 monthly backups (rolling twelve-month window)
 - **Storage:** Same encrypted S3 bucket under dedicated prefix
 - **Purpose:** Compliance-ready archival and long-term recovery
 
-**Backup naming convention**
+## Backup naming convention
 
 ```text
 s3://penguinmails-vault-backups/
@@ -42,7 +42,7 @@ s3://penguinmails-vault-backups/
 
 ## Backup Process
 
-**Automated workflow**
+## Automated workflow
 
 ```mermaid
 sequenceDiagram
@@ -69,7 +69,7 @@ sequenceDiagram
     end
 ```
 
-**Implementation**
+## Implementation
 
 ```typescript
 // Automated backup service (runs daily at 02:00 UTC)

@@ -83,7 +83,7 @@ storage "raft" {
 ui = true
 ```
 
-**Load balancer (HAProxy) routing**
+## Load balancer (HAProxy) routing
 
 ```haproxy
 # /etc/haproxy/haproxy.cfg
