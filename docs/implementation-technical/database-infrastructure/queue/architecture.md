@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queue System Architecture"
 description: "Queue System Architecture - Hybrid PostgreSQL + Redis Design"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "Technical Architects"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 
-
   - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
-
 
 # Queue System Architecture
 
@@ -68,24 +64,23 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 ### Component Overview
 
 ```text
-┌─────────────────────────────────────────────────────────────┐
-│                    Queue System Architecture                │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │ Next.js API  │    │ Queuer Proc  │    │ Worker Servers│  │
-│  │   Producer   │────│   Migrator   │────│   Consumer   │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
-│         │                   │                   │           │
-│         │                   │                   │           │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │ PostgreSQL   │    │   Redis      │    │ Job Processing│  │
-│  │Jobs & State  │    │ Fast Queues  │    │   Logic      │  │
-│  │  (Durable)   │    │ (Performance)│    │              │  │
-│  └──────────────┘    └──────────────┘    └──────────────┘  │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚                    Queue System Architecture                â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚                                                             â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚ Next.js API  â”‚    â”‚ Queuer Proc  â”‚    â”‚ Worker Serversâ”‚  â”‚
+â”‚  â”‚   Producer   â”‚â”€â”€â”€â”€â”‚   Migrator   â”‚â”€â”€â”€â”€â”‚   Consumer   â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚         â”‚                   â”‚                   â”‚           â”‚
+â”‚         â”‚                   â”‚                   â”‚           â”‚
+â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
+â”‚  â”‚ PostgreSQL   â”‚    â”‚   Redis      â”‚    â”‚ Job Processingâ”‚  â”‚
+â”‚  â”‚Jobs & State  â”‚    â”‚ Fast Queues  â”‚    â”‚   Logic      â”‚  â”‚
+â”‚  â”‚  (Durable)   â”‚    â”‚ (Performance)â”‚    â”‚              â”‚  â”‚
+â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
+â”‚                                                             â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 
 ```
 
@@ -119,7 +114,6 @@ function createJob(queueName, payload, priority) {
 
   return job
 }
-
 
 ```
 
@@ -178,7 +172,6 @@ function migrateJobToRedis(job) {
     attempt_count: job.attempt_count
   })
 }
-
 
 ```
 
@@ -249,7 +242,6 @@ function processJob(job, queueName, workerId) {
   }
 }
 
-
 ```
 
 ## Data Flow
@@ -279,7 +271,6 @@ graph LR
     style E fill:#fce4ec
     style F fill:#f3e5f5
 
-
 ```
 
 ### Priority Routing
@@ -292,7 +283,6 @@ function determineQueueName(priority, queueName) {
   if (priority <= 150) return queueName              // Normal
   return `${queueName}:low`                          // Background
 }
-
 
 ```
 
@@ -408,7 +398,6 @@ function handleSystemFailure() {
   resumeNormalOperations()
 }
 
-
 ```
 
 ## Integration Points
@@ -438,4 +427,3 @@ function handleSystemFailure() {
 This hybrid architecture provides the optimal balance of durability and performance for enterprise-grade job processing. The separation of concerns between PostgreSQL (durability) and Redis (performance) ensures system reliability while maintaining high throughput capabilities.
 
 The architecture supports horizontal scaling, comprehensive monitoring, and robust failure handling, making it suitable for mission-critical asynchronous operations.
-

@@ -120,11 +120,11 @@ Roadmaps are updated monthly with:
 
   - [Unified Inbox](/docs/features/unified-inbox) - Message management (Q1-Q2 2026)
 
-- **[User Journeys](/docs/user-journeys/README)** - Customer workflow maps
+- **User Journeys** - Customer workflow maps (internal journey references)
 
-  - [Marketing Journey](/docs/user-journeys/marketing-journey) - Marketing team workflows
+  - Marketing Journey - Marketing team workflows (internal journey reference)
 
-  - [Customer Success Journey](/docs/user-journeys/customer-success-journey) - Onboarding paths
+  - Customer Success Journey - Onboarding paths (internal journey reference)
 
 ### Specifications
 
@@ -136,9 +136,9 @@ Roadmaps are updated monthly with:
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README)** - Current development work
+- **Active Tasks** - Current development work (internal tracker reference)
 
-- **[Task Templates](/tasks/templates/README)** - Standardized task creation
+- **Task Templates** - Standardized task creation (internal template reference)
 
 - **[Design System](/docs/design/README)** - UI patterns and components
 

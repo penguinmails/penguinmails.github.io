@@ -1,4 +1,4 @@
----
+﻿---
 title: "Data Privacy"
 description: "Privacy policy enforcement and data handling practices for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -8,10 +8,9 @@ status: "ACTIVE"
 category: "Compliance"
 ---
 
-
 # Data Privacy
 
-**Privacy-first architecture and data handling practices to protect user data.**
+Privacy-first architecture and data handling practices to protect user data.
 
 ---
 
@@ -39,11 +38,11 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 ### Privacy-First Data Collection
 
-**Collect minimum necessary data** for email marketing functionality.
+Collect minimum necessary data for email marketing functionality.
 
 #### Required Data
 
-**For Registration:**
+##### For Registration
 
 - Email address (authentication)
 
@@ -51,7 +50,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Password (hashed, never stored in plain text)
 
-**For Campaigns:**
+##### For Campaigns
 
 - Contact email addresses
 
@@ -61,21 +60,21 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 #### Not Collected
 
-- ❌ Social Security Numbers
+- âŒ Social Security Numbers
 
-- ❌ Financial information (Stripe handles payments)
+- âŒ Financial information (Stripe handles payments)
 
-- ❌ Sensitive health data
+- âŒ Sensitive health data
 
-- ❌ Biometric data
+- âŒ Biometric data
 
-- ❌ Unnecessary tracking data
+- âŒ Unnecessary tracking data
 
 ---
 
 ### Transparent Privacy Policies
 
-**Clear, accessible privacy policies** that explain data practices.
+Clear, accessible privacy policies that explain data practices.
 
 #### Privacy Policy Available At
 
@@ -121,7 +120,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 #### Data Access
 
-**User Profile Data Export**
+##### User Profile Data Export
 
 - Download all personal data in JSON or CSV format
 
@@ -129,9 +128,9 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Generated within 24 hours
 
-- Available via: Settings → Privacy → Export My Data
+- Available via: Settings â†’ Privacy â†’ Export My Data
 
-**Contact Data Export**
+##### Contact Data Export
 
 - Export all contacts and lists
 
@@ -139,7 +138,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Includes all custom fields
 
-- Available via: Leads → Export
+- Available via: Leads â†’ Export
 
 #### Data Correction
 
@@ -161,23 +160,23 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - **Cascade delete** - Removes all associated data
 
-**What Gets Deleted:**
+##### What Gets Deleted
 
-- ✅ User profile and credentials
+- âœ… User profile and credentials
 
-- ✅ Contact lists and segmentation
+- âœ… Contact lists and segmentation
 
-- ✅ Campaign data and templates
+- âœ… Campaign data and templates
 
-- ✅ All personally identifiable information (PII)
+- âœ… All personally identifiable information (PII)
 
-**What's Retained (Legal/Compliance):**
+##### What's Retained (Legal/Compliance)
 
-- ⚠️ Audit logs (7 years, anonymized)
+- âš ï¸ Audit logs (7 years, anonymized)
 
-- ⚠️ Transaction records (7 years for tax compliance)
+- âš ï¸ Transaction records (7 years for tax compliance)
 
-- ⚠️ Abuse/spam reports (perpetual, for platform security)
+- âš ï¸ Abuse/spam reports (perpetual, for platform security)
 
 ---
 
@@ -187,7 +186,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 #### Encryption
 
-**Encryption at Rest**
+##### Encryption at Rest
 
 - **Database encryption** - PostgreSQL transparent data encryption
 
@@ -197,7 +196,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - **Key management** - Secure key storage and rotation
 
-**Encryption in Transit**
+##### Encryption in Transit
 
 - **TLS 1.3** - All connections encrypted (web, API)
 
@@ -223,11 +222,11 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 ### Privacy by Design & Default
 
-**Privacy considerations built into every feature** from the ground up.
+Privacy considerations built into every feature from the ground up.
 
 #### Design Principles
 
-**Proactive Not Reactive**
+##### Proactive Not Reactive
 
 - Privacy protections in place before data collected
 
@@ -235,7 +234,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Privacy impact assessments for high-risk processing
 
-**Privacy as Default**
+##### Privacy as Default
 
 - Most privacy-protective settings enabled by default
 
@@ -245,7 +244,7 @@ PenguinMails is built on a foundation of privacy-by-design principles, ensuring 
 
 - Minimal data collection by default
 
-**Privacy Embedded**
+##### Privacy Embedded
 
 - Not a bolt-on feature
 
@@ -266,18 +265,17 @@ New User Defaults:
   session_timeout: 30 minutes
   mfa: recommended (not required)
 
-
 ```
 
 ---
 
 ### Data Retention & Deletion
 
-**Automated data lifecycle management** ensures compliance with retention policies.
+Automated data lifecycle management ensures compliance with retention policies.
 
 #### Retention Policies
 
-**User Data**
+##### User Data
 
 ```yaml
 Active Users:
@@ -289,10 +287,9 @@ Deleted Accounts:
   Hard Delete: Permanent after 30 days
   Audit Logs: 7 years (anonymized, compliance)
 
-
 ```
 
-**Contact Data**
+##### Contact Data
 
 ```yaml
 Active Contacts:
@@ -307,10 +304,9 @@ Bounced:
   Hard bounce: Immediate suppression
   Soft bounce (3x): Suppression after 3 attempts
 
-
 ```
 
-**Campaign Data**
+##### Campaign Data
 
 ```yaml
 Campaigns:
@@ -319,12 +315,11 @@ Campaigns:
   Send Logs: 36 months
   Analytics: 12 months (aggregated indefinitely)
 
-
 ```
 
 #### Automated Deletion
 
-**Scheduled Jobs:**
+##### Scheduled Jobs
 
 - **Daily** - Remove expired soft-deleted accounts
 
@@ -338,11 +333,11 @@ Campaigns:
 
 ### Third-Party Data Sharing
 
-**Transparency about sub-processors** and when data is shared.
+Transparency about sub-processors and when data is shared.
 
 #### Sub-Processors (Services We Use)
 
-**Infrastructure**
+##### Infrastructure
 
 - **NileDB** - Multi-tenant PostgreSQL database
 
@@ -368,7 +363,7 @@ Campaigns:
 
   - Data: All application and database data
 
-**Payment Processing**
+##### Payment Processing
 
 - **Stripe** - Payment processor
 
@@ -378,7 +373,7 @@ Campaigns:
 
   - Data: Payment method, billing address (tokenized)
 
-**Email Delivery (Optional)**
+##### Email Delivery (Optional)
 
 - **Postmark** - Transactional email delivery
 
@@ -398,35 +393,35 @@ Campaigns:
 
 #### Data Sharing Controls
 
-**When We Share Data:**
+##### When We Share Data
 
-- ✅ With user consent (integrations)
+- âœ… With user consent (integrations)
 
-- ✅ To provide requested services
+- âœ… To provide requested services
 
-- ✅ With sub-processors (listed above)
+- âœ… With sub-processors (listed above)
 
-- ✅ For legal compliance (subpoena, court order)
+- âœ… For legal compliance (subpoena, court order)
 
-**When We DON'T Share Data:**
+##### When We Don't Share Data
 
-- ❌ Selling to third parties
+- âŒ Selling to third parties
 
-- ❌ Marketing to non-users
+- âŒ Marketing to non-users
 
-- ❌ Sharing with affiliates
+- âŒ Sharing with affiliates
 
-- ❌ Unrelated business purposes
+- âŒ Unrelated business purposes
 
 ---
 
 ### Privacy for Contacts
 
-**Respect privacy of your email contacts** (not just platform users).
+Respect privacy of your email contacts (not just platform users).
 
 #### Contact Privacy Rights
 
-**GDPR Rights for Contacts (EU residents):**
+##### GDPR Rights for Contacts (EU Residents)
 
 - Right to access data
 
@@ -438,7 +433,7 @@ Campaigns:
 
 - Right to object to processing
 
-**How Contacts Exercise Rights:**
+##### How Contacts Exercise Rights
 
 1. **Contact the tenant** - Email sender (your customer)
 
@@ -466,7 +461,7 @@ Campaigns:
 
 #### Pseudonymization
 
-**Separate PII from operational data** where possible.
+##### Separate PII from Operational Data
 
 ```sql
 -- Separate tables for PII vs operational data
@@ -484,12 +479,11 @@ CREATE TABLE contact_engagement (
   -- No PII stored here
 );
 
-
 ```
 
 #### Data Anonymization
 
-**Anonymize audit logs** after relevant retention period.
+##### Anonymize Audit Logs
 
 ```javascript
 // Anonymization Job (runs quarterly)
@@ -501,7 +495,6 @@ SET
 WHERE
   created_at < NOW() - INTERVAL '90 days'
   AND anonymized = false;
-
 
 ```
 
@@ -523,7 +516,6 @@ Response:
   "download_url": null // available when complete
 }
 
-
 ```
 
 #### Delete User Account
@@ -544,45 +536,34 @@ Response:
   "permanent_deletion_date": "2025-12-24T10:30:00Z"
 }
 
-
 ```
 
 ---
 
 ### Privacy Audit Logging
 
-**Comprehensive logging** of privacy-sensitive actions.
+Comprehensive logging of privacy-sensitive actions.
 
 ```javascript
 Privacy Audit Events:
 
-
 - user.data_exported
-
 
 - user.data_deleted
 
-
 - user.consent_updated
-
 
 - contact.data_accessed
 
-
 - contact.data_exported
-
 
 - contact.data_deleted
 
-
 - privacy_policy.accepted
-
 
 - privacy_policy.updated
 
-
 - dpa.signed
-
 
 ```
 
@@ -590,7 +571,7 @@ Privacy Audit Events:
 
 ## Privacy Impact Assessments (PIA)
 
-**Evaluate privacy risks** for new features and processing activities.
+Evaluate privacy risks for new features and processing activities.
 
 ### When PIA Required
 
@@ -697,4 +678,3 @@ Privacy Audit Events:
 **Compliance:** GDPR, CCPA, PIPEDA, LGPD
 
 *Privacy is a fundamental right. PenguinMails is committed to protecting user privacy through technical excellence, transparency, and accountability.*
-

@@ -1,4 +1,4 @@
----
+﻿---
 title: "User Management & Authentication"
 description: "User authentication, profile management, and account security in PenguinMails"
 last_modified_date: "2025-11-26"
@@ -7,7 +7,6 @@ persona: "All Users, Developers"
 status: "ACTIVE"
 category: "Enterprise"
 ---
-
 
 # User Management & Authentication
 
@@ -21,55 +20,55 @@ category: "Enterprise"
 
 **What's Available Today:**
 
-- ✅ Email/password signup and login
+- âœ… Email/password signup and login
 
-- ✅ Email verification flow
+- âœ… Email verification flow
 
-- ✅ Password reset flow
+- âœ… Password reset flow
 
-- ✅ Change password (authenticated)
+- âœ… Change password (authenticated)
 
-- ✅ JWT-based session management
+- âœ… JWT-based session management
 
-- ✅ Token refresh mechanism
+- âœ… Token refresh mechanism
 
-- ✅ Profile management (view/edit)
+- âœ… Profile management (view/edit)
 
-- ✅ Team member invitations
+- âœ… Team member invitations
 
-- ✅ Role-based access control (Owner/Admin/Member)
+- âœ… Role-based access control (Owner/Admin/Member)
 
-- ✅ Account deletion with grace period
+- âœ… Account deletion with grace period
 
 **Missing MVP Features (Q1 2026):**
 
-- ⏳ Account lockout / brute force protection
+- â³ Account lockout / brute force protection
 
-- ⏳ Session management UI (view/revoke active sessions)
+- â³ Session management UI (view/revoke active sessions)
 
-- ⏳ Email change verification flow UI
+- â³ Email change verification flow UI
 
-- ⏳ Password strength enforcement (server-side)
+- â³ Password strength enforcement (server-side)
 
-- ⏳ Login activity log
+- â³ Login activity log
 
-- ⏳ Unverified email restrictions
+- â³ Unverified email restrictions
 
-- ⏳ Remember me functionality
+- â³ Remember me functionality
 
-- ⏳ CAPTCHA for sensitive operations
+- â³ CAPTCHA for sensitive operations
 
 **Post-MVP Enhancements (2026+):**
 
-- 🔮 Two-factor authentication (2FA) - Q1 2026
+- ðŸ”® Two-factor authentication (2FA) - Q1 2026
 
-- 🔮 Social login (OAuth) - Q2 2026
+- ðŸ”® Social login (OAuth) - Q2 2026
 
-- 🔮 Single sign-on (SSO) for enterprise - Q3 2026
+- ðŸ”® Single sign-on (SSO) for enterprise - Q3 2026
 
-- 🔮 Biometric authentication - Q4 2026
+- ðŸ”® Biometric authentication - Q4 2026
 
-- 🔮 Advanced session management - Q4 2026
+- ðŸ”® Advanced session management - Q4 2026
 
 **Detailed Roadmap:** [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
 
@@ -81,17 +80,17 @@ PenguinMails provides enterprise-grade user authentication with email/password l
 
 ### Authentication Features
 
-- 🔐 **Secure Login** - Email/password authentication via NileDB SDK
+- ðŸ” **Secure Login** - Email/password authentication via NileDB SDK
 
-- 👤 **Profile Management** - Self-service profile editing
+- ðŸ‘¤ **Profile Management** - Self-service profile editing
 
-- 🔑 **Password Security** - Forgot/reset/change password workflows
+- ðŸ”‘ **Password Security** - Forgot/reset/change password workflows
 
-- 🚪 **Session Management** - Secure token-based sessions
+- ðŸšª **Session Management** - Secure token-based sessions
 
-- 👥 **Team Management** - Multi-user tenant support
+- ðŸ‘¥ **Team Management** - Multi-user tenant support
 
-- 📧 **Email Verification** - Confirmed email addresses only
+- ðŸ“§ **Email Verification** - Confirmed email addresses only
 
 ---
 
@@ -104,23 +103,17 @@ PenguinMails provides enterprise-grade user authentication with email/password l
 ```text
 Sign Up Form:
 
-
 - Email Address *
-
 
 - Full Name *
 
-
 - Password * (min 8 characters)
 
-
 - Company Name *
-
 
 - [ ] I agree to Terms of Service
 
 [Create Account]
-
 
 ```
 
@@ -159,7 +152,6 @@ Response:
   "verification_sent": true
 }
 
-
 ```
 
 ---
@@ -171,17 +163,13 @@ Response:
 ```text
 Login Form:
 
-
 - Email Address
 
-
 - Password
-
 
 - [x] Remember me (optional)
 
 [Login] | [Forgot Password?]
-
 
 ```
 
@@ -221,7 +209,6 @@ Response:
   "expires_in": 3600 // 1 hour
 }
 
-
 ```
 
 ---
@@ -244,7 +231,6 @@ Response:
 // 1. Invalidate access token
 // 2. Revoke refresh token
 // 3. Clear server-side session
-
 
 ```
 
@@ -278,7 +264,6 @@ https://app.penguinmails.com/verify-email?token=abc123
 
 This link expires in 24 hours.
 
-
 ```
 
 **Verification Flow:**
@@ -293,7 +278,6 @@ Response:
   "redirect_url": "/onboarding"
 }
 
-
 ```
 
 **Re-send Verification:**
@@ -303,7 +287,6 @@ POST /api/v1/auth/resend-verification
 {
   "email": "user@example.com"
 }
-
 
 ```
 
@@ -325,7 +308,6 @@ Enter your email address and we'll send you a link to reset your password.
 Email Address: _______________
 
 [Send Reset Link]
-
 
 ```
 
@@ -375,7 +357,6 @@ Response:
   "access_token": "eyJhbGc..." // Auto-login
 }
 
-
 ```
 
 ---
@@ -393,20 +374,19 @@ Confirm New Password: _______________
 
 [Update Password]
 
-
 ```
 
 **Password Requirements:**
 
-- ✅ Minimum 8 characters
+- âœ… Minimum 8 characters
 
-- ✅ At least one uppercase letter
+- âœ… At least one uppercase letter
 
-- ✅ At least one lowercase letter
+- âœ… At least one lowercase letter
 
-- ✅ At least one number
+- âœ… At least one number
 
-- ✅ At least one special character (optional but recommended)
+- âœ… At least one special character (optional but recommended)
 
 **API Endpoint:**
 
@@ -424,7 +404,6 @@ Response:
   "success": true,
   "message": "Password updated successfully"
 }
-
 
 ```
 
@@ -456,7 +435,6 @@ Response:
   }
 }
 
-
 ```
 
 ---
@@ -469,12 +447,11 @@ Response:
 Edit Profile
 
 Full Name: John Doe
-Email: user@example.com (verified ✓)
+Email: user@example.com (verified âœ“)
 Timezone: America/Los_Angeles
 Date Format: MM/DD/YYYY
 
 [Save Changes]
-
 
 ```
 
@@ -504,7 +481,6 @@ Response:
   }
 }
 
-
 ```
 
 **Changing Email:**
@@ -523,7 +499,6 @@ Response:
   "email_verification_sent": true,
   "message": "Verify your new email address"
 }
-
 
 ```
 
@@ -555,7 +530,6 @@ Response:
   }
 }
 
-
 ```
 
 ---
@@ -564,61 +538,61 @@ Response:
 
 ### MVP Status & Roadmap
 
-**Current Status: Partially Complete**
+#### Current Status: Partially Complete
 
 **What's Available Today:**
 
-- ✅ Team member invitation system
+- âœ… Team member invitation system
 
-- ✅ Role-based access control (Owner, Admin, Member)
+- âœ… Role-based access control (Owner, Admin, Member)
 
-- ✅ View all team members with status
+- âœ… View all team members with status
 
-- ✅ Update user roles
+- âœ… Update user roles
 
-- ✅ Remove team members from tenant
+- âœ… Remove team members from tenant
 
-- ✅ Workspace assignment during invitation
+- âœ… Workspace assignment during invitation
 
-- ✅ Multi-tenant architecture with complete data isolation
+- âœ… Multi-tenant architecture with complete data isolation
 
 **Missing MVP Features (Q1 2026):**
 
-- ⏳ Workspace management feature documentation (2-3 days)
+- â³ Workspace management feature documentation (2-3 days)
 
-- ⏳ Workspace health scoring system (3-5 days)
+- â³ Workspace health scoring system (3-5 days)
 
-- ⏳ Organization settings & branding documentation (2-3 days)
+- â³ Organization settings & branding documentation (2-3 days)
 
-- ⏳ RBAC permission matrix documentation (2-3 days)
+- â³ RBAC permission matrix documentation (2-3 days)
 
-- ⏳ Team member removal workflow documentation (1-2 days)
+- â³ Team member removal workflow documentation (1-2 days)
 
-- ⏳ Workspace member management documentation (3-5 days)
+- â³ Workspace member management documentation (3-5 days)
 
-- ⏳ Workspace deletion & data handling documentation (3-5 days)
+- â³ Workspace deletion & data handling documentation (3-5 days)
 
 **Post-MVP Enhancements (2026+):**
 
-- 🔮 Advanced permissions system (custom roles) - Q2 2026
+- ðŸ”® Advanced permissions system (custom roles) - Q2 2026
 
-- 🔮 Audit logs for team actions - Q3 2026
+- ðŸ”® Audit logs for team actions - Q3 2026
 
-- 🔮 Team analytics & activity monitoring - Q4 2026
+- ðŸ”® Team analytics & activity monitoring - Q4 2026
 
-- 🔮 Bulk user management - Q3 2026
+- ðŸ”® Bulk user management - Q3 2026
 
-- 🔮 User groups & teams within tenant - Q1 2027
+- ðŸ”® User groups & teams within tenant - Q1 2027
 
-- 🔮 Workspace templates - Q2 2027
+- ðŸ”® Workspace templates - Q2 2027
 
-- 🔮 Workspace duplication - Q3 2027
+- ðŸ”® Workspace duplication - Q3 2027
 
-- 🔮 Advanced session management - Q4 2026
+- ðŸ”® Advanced session management - Q4 2026
 
-- 🔮 Team member onboarding workflows - Q1 2027
+- ðŸ”® Team member onboarding workflows - Q1 2027
 
-- 🔮 External user collaboration (client portal) - Q2 2027
+- ðŸ”® External user collaboration (client portal) - Q2 2027
 
 **Detailed Roadmap:** [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
 
@@ -634,11 +608,10 @@ Response:
 Invite Team Member
 
 Email Address: _______________
-Role: [Admin ▼]
+Role: [Admin â–¼]
 Workspaces: [x] Client A  [ ] Client B
 
 [Send Invitation]
-
 
 ```
 
@@ -676,7 +649,6 @@ Response:
   "expires_at": "2025-12-01T10:00:00Z"
 }
 
-
 ```
 
 ---
@@ -712,7 +684,6 @@ Response:
   "total": 2
 }
 
-
 ```
 
 **Update User Role:**
@@ -722,7 +693,6 @@ PUT /api/v1/tenants/{tenant_id}/users/{user_id}
 {
   "role": "member" // Downgrade from admin
 }
-
 
 ```
 
@@ -734,7 +704,6 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
 // User removed from tenant
 // Loses access to all workspaces
 // Data ownership transferred to tenant owner
-
 
 ```
 
@@ -789,7 +758,6 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
   "signature": "..."
 }
 
-
 ```
 
 **Token Types:**
@@ -811,7 +779,6 @@ Response:
   "access_token": "eyJhbGciOiJI...", // New access token
   "expires_in": 3600
 }
-
 
 ```
 
@@ -853,7 +820,6 @@ Response:
 // Revoke session
 DELETE /api/v1/auth/sessions/{session_id}
 
-
 ```
 
 ---
@@ -863,14 +829,13 @@ DELETE /api/v1/auth/sessions/{session_id}
 **Delete user account:**
 
 ```text
-⚠️ Delete Account
+âš ï¸ Delete Account
 
 This will permanently delete your account and all associated data.
 
 Type "DELETE" to confirm: _______________
 
 [Delete My Account]
-
 
 ```
 
@@ -891,7 +856,6 @@ Response:
   "scheduled_deletion": "2025-12-24T10:00:00Z", // 30 days
   "message": "Account scheduled for deletion"
 }
-
 
 ```
 
@@ -931,7 +895,7 @@ Response:
 
 ### Tasks
 
-- **[Epic 2: User Authentication](/docs/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+- **Epic 2: User Authentication** - Internal task reference for implementation work
 
 ### Roadmap
 
@@ -948,4 +912,3 @@ Response:
 **Next Milestone:** Q1 2026 - Complete MVP authentication features
 
 *Secure user authentication is the foundation of platform security. NileDB provides enterprise-grade authentication with tenant isolation built-in. For MVP and near-term releases, we continue using NileDB's email/password authentication. OAuth 2.0 and SSO (SAML, OpenID Connect) are planned for Q2-Q3 2026 to meet enterprise customer requirements.*
-

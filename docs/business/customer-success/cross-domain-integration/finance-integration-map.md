@@ -95,7 +95,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
 
 ### Key Integration Points
 
-**1. Expansion Revenue Attribution**
+#### 1. Expansion Revenue Attribution
 
 ```json
 {
@@ -110,7 +110,7 @@ Reporting Ledger ◄─── Validation ──► CS Portfolio
 
 ```
 
-**2. Churn Prevention Value**
+#### 2. Churn Prevention Value
 
 ```json
 {
@@ -190,7 +190,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
 
 ### Key Integration Points
 
-**1. Contractual Value Delivery**
+#### 1. Contractual Value Delivery
 
 ```json
 {
@@ -205,7 +205,7 @@ Variance Alerts ◄─── Reconciliation ──► CS Action
 
 ```
 
-**2. ROI Calculation**
+#### 2. ROI Calculation
 
 ```json
 {
@@ -285,7 +285,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
 
 ### Key Integration Points
 
-**1. Renewal Probability**
+#### 1. Renewal Probability
 
 ```json
 {
@@ -300,7 +300,7 @@ Scenario Models ◄─── Validation ──► CS Confidence
 
 ```
 
-**2. Expansion Pipeline**
+#### 2. Expansion Pipeline
 
 ```json
 {

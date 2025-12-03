@@ -406,7 +406,7 @@ The current primary key strategy demonstrates excellent architectural judgment a
 
 For future table creation, use this matrix to ensure consistent and appropriate primary key selection across the system.
 
-**Related Documents**
+### Related Documents
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Comprehensive security architecture
 

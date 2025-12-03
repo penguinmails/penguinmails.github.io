@@ -1,11 +1,10 @@
----
+﻿---
 title: "OLAP Analytics Schema Guide"
 description: "Documentation for OLAP Analytics Schema Guide - Olap Analytics Schema Guide"
 last_modified_date: "2025-11-17"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # OLAP Analytics Schema Guide
 
@@ -45,24 +44,24 @@ For those concerns:
 
 ### What Lives in OLTP (Operational Billing)
 
-- ✅ Subscription records (`subscriptions`, `plans`, `payments`)
-- ✅ Stripe object references (`stripe_subscription_id`, `stripe_product_id`)
-- ✅ Current subscription state (`status`, `current_period_end`)
-- ✅ Billing lifecycle (`cancel_reason`, `cancel_date`)
+- âœ… Subscription records (`subscriptions`, `plans`, `payments`)
+- âœ… Stripe object references (`stripe_subscription_id`, `stripe_product_id`)
+- âœ… Current subscription state (`status`, `current_period_end`)
+- âœ… Billing lifecycle (`cancel_reason`, `cancel_date`)
 
 ### What Lives in OLAP (Analytics)
 
-- ✅ Email campaign metrics (`campaign_analytics.sent`, `delivered`, `opened`)
-- ✅ Mailbox performance (`mailbox_analytics.health_score`)
-- ✅ Lead engagement (`lead_analytics.replied`)
-- ✅ Aggregated usage summaries (`billing_analytics.emails_sent`)
+- âœ… Email campaign metrics (`campaign_analytics.sent`, `delivered`, `opened`)
+- âœ… Mailbox performance (`mailbox_analytics.health_score`)
+- âœ… Lead engagement (`lead_analytics.replied`)
+- âœ… Aggregated usage summaries (`billing_analytics.emails_sent`)
 
 ### How Billing Uses Analytics
 
 **When billing needs analytics data** (e.g., usage-based billing checks):
 
 ```typescript
-// ✅ CORRECT: Query OLAP from billing controller
+// âœ… CORRECT: Query OLAP from billing controller
 const usage = await olapClient.query(`
   SELECT SUM(sent) as total_sent
   FROM campaign_analytics
@@ -79,7 +78,7 @@ if (usage.total_sent > currentPlan.max_emails_per_month) {
 **Anti-pattern**:
 
 ```typescript
-// ❌ WRONG: Don't duplicate analytics in billing tables
+// âŒ WRONG: Don't duplicate analytics in billing tables
 // This violates separation of concerns and creates data redundancy
 ```
 
@@ -95,9 +94,9 @@ if (usage.total_sent > currentPlan.max_emails_per_month) {
 
 **NOT for**:
 
-- Detailed campaign metrics → Use `campaign_analytics`
-- Email deliverability insights → Use `mailbox_analytics`
-- Lead engagement scoring → Use `lead_analytics`
+- Detailed campaign metrics â†’ Use `campaign_analytics`
+- Email deliverability insights â†’ Use `mailbox_analytics`
+- Lead engagement scoring â†’ Use `lead_analytics`
 
 ---
 
@@ -142,7 +141,6 @@ CREATE TABLE billing_analytics (
 CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
     ON billing_analytics(tenant_id, period_start, period_end);
 
-
 ```
 
 Purpose:
@@ -171,7 +169,6 @@ CREATE TABLE campaign_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-
 
 ```
 
@@ -202,7 +199,6 @@ CREATE TABLE mailbox_analytics (
     updated TIMESTAMPTZ DEFAULT NOW()
 );
 
-
 ```
 
 Purpose:
@@ -228,7 +224,6 @@ CREATE TABLE lead_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-
 
 ```
 
@@ -257,7 +252,6 @@ CREATE TABLE warmup_analytics (
     updated TIMESTAMPTZ DEFAULT NOW()
 );
 
-
 ```
 
 Purpose:
@@ -283,7 +277,6 @@ CREATE TABLE sequence_step_analytics (
     billing_id BIGINT REFERENCES billing_analytics(id),
     updated TIMESTAMPTZ DEFAULT NOW()
 );
-
 
 ```
 
@@ -315,7 +308,6 @@ CREATE TABLE admin_audit_log (
     data_classification VARCHAR(20),
     retention_category VARCHAR(20)
 );
-
 
 ```
 
@@ -406,11 +398,11 @@ Key relationships:
 
     - sequence_step_analytics
 
-- campaign_analytics ↔ sequence_step_analytics:
+- campaign_analytics â†” sequence_step_analytics:
 
   - Per-campaign breakdown.
 
-- mailbox_analytics ↔ warmup_analytics:
+- mailbox_analytics â†” warmup_analytics:
 
   - Per-mailbox warmup tracking.
 
@@ -483,4 +475,3 @@ Notifications/system events, logs, and jobs:
 - Live in their respective tiers and feed OLAP only via intentional, aggregate pipelines when justified.
 
 Use this guide as the authoritative reference for what belongs in the OLAP warehouse.
-

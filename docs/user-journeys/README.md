@@ -19,9 +19,9 @@ This directory provides a comprehensive, organized approach to user journey docu
 
 ## Quick Access to User Journey Documentation
 
-🔗 **Access the complete user journey documentation**: [User Journeys Repository](/user-journeys/README)
+Access the complete user journey documentation within the root workspace user journeys directory (internal reference; not linked from the public docs site).
 
-The user journey documentation is maintained in the external `/user-journeys/` directory and includes:
+The user journey documentation is maintained in a separate user journeys workspace directory outside the published docs site and includes:
 
 ### User Type Classification
 
@@ -65,7 +65,7 @@ This documentation integrates with:
 
 ## Future Migration
 
-This placeholder file will be replaced with migrated content from the external `/user-journeys/` directory during the documentation consolidation project.
+This placeholder file will be replaced with migrated content from the internal user journeys workspace directory during the documentation consolidation project.
 
 **Keywords**: user journeys, user stories, user types, internal users, external stakeholders, customer users, methodology, templates, prioritization, use cases, onboarding
 

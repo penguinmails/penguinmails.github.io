@@ -51,7 +51,7 @@ This section provides comprehensive analytics and performance monitoring framewo
 
 - [Technical Architecture](/docs/technical/architecture/overview) - System infrastructure
 
-- [User Journeys](/docs/user-journeys) - User experience analytics
+- User Journeys - User experience analytics (internal journey reference)
 
 ---
 

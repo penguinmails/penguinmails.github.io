@@ -1,4 +1,4 @@
----
+﻿---
 title: "Hostwind Infrastructure Management"
 description: "Automated VPS provisioning, IP monitoring, and infrastructure scaling on Hostwind"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "DevOps, System Administrators"
 status: "ACTIVE"
 category: "Infrastructure"
 ---
-
 
 # Hostwind Infrastructure Management
 
@@ -61,7 +60,6 @@ graph LR
     C --> E[Decommissioned]
     D --> C
 
-
 ```
 
 1. **Provisioning**: API triggers VPS creation, installs dependencies, configures DNS.
@@ -91,7 +89,6 @@ PenguinMails uses the Hostwind API to programmatically create instances.
   "plan": "ssd-1", // 1 CPU, 1GB RAM
   "label": "node-us-east-045"
 }
-
 
 ```
 
@@ -133,7 +130,7 @@ The system continuously monitors the health and reputation of every sending IP.
 
 **Vertical & Horizontal Scaling:**
 
-- **Vertical**: Upgrade VPS plan (e.g., 1GB → 2GB RAM) via API if queue depth remains high.
+- **Vertical**: Upgrade VPS plan (e.g., 1GB â†’ 2GB RAM) via API if queue depth remains high.
 
 - **Horizontal**: Provision additional nodes when total system throughput reaches 80% capacity.
 
@@ -198,7 +195,6 @@ CREATE TABLE ip_blacklist_events (
   details TEXT
 );
 
-
 ```
 
 ---
@@ -213,7 +209,7 @@ CREATE TABLE ip_blacklist_events (
 
 ### Tasks
 
-- **[Epic 5: Infrastructure Management](/docs/tasks/epic-5-infrastructure-management/README)** - Development tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for development tasks
 
 ---
 
@@ -222,4 +218,3 @@ CREATE TABLE ip_blacklist_events (
 **Automation:** Ansible + Node.js
 
 *Automated infrastructure management ensures high availability and consistent deliverability without manual intervention.*
-

@@ -340,4 +340,3 @@ version: "1.0"
 - [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
 
 - [GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance)
-

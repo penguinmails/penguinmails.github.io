@@ -1,11 +1,10 @@
----
+﻿---
 title: "Content Database Schema Guide"
 description: "Documentation for Content Database Schema Guide - Content Database Schema Guide"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Content Database Schema Guide
 
@@ -37,7 +36,7 @@ For analytics and logging responsibilities, refer to:
 
 ## 1. Design Principles
 
-**⚠️ IMPORTANT: Stalwart Mail Server Integration**
+### âš ï¸ Important: Stalwart Mail Server Integration
 
 Before implementing the Content DB schema for email storage, we must investigate **Stalwart Mail Server's PostgreSQL schema** to determine the correct architecture:
 
@@ -182,7 +181,6 @@ CREATE INDEX idx_content_objects_hash
     ON content_objects(content_hash)
     WHERE content_hash IS NOT NULL;
 
-
 ```
 
 Notes:
@@ -218,7 +216,6 @@ CREATE TABLE attachments (
 
 CREATE INDEX idx_attachments_parent
     ON attachments(parent_storage_key);
-
 
 ```
 
@@ -392,7 +389,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
 ```
 
 JS/TS worker would:
@@ -439,9 +435,9 @@ Use this guide as the forward-looking contract:
 
   - Keep:
 
-    - Analytics → OLAP docs.
+    - Analytics â†’ OLAP docs.
 
-    - Product/behavioral/infrastructure logging → external analytics/logging doc.
+    - Product/behavioral/infrastructure logging â†’ external analytics/logging doc.
 
 This schema guide, alongside:
 
@@ -453,4 +449,3 @@ This schema guide, alongside:
 provides the coherent context and blueprint for future implementation of the Content DB tier.
 
 ---
-

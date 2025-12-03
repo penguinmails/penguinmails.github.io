@@ -1,4 +1,4 @@
----
+﻿---
 title: "Team Performance & Operations Framework"
 description: "Comprehensive team performance, QA testing, and staff operations for enterprise-grade agile development, quality assurance, and operational excellence"
 last_modified_date: "2025-10-28"
@@ -814,11 +814,11 @@ const supportTemplates = {
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-journeys/detailed-journeys) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### **Compliance & Security**
 
@@ -872,4 +872,3 @@ Navigate to specific team performance areas:
 
 **Keywords**: team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics
 ---
-

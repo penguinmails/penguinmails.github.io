@@ -1,4 +1,4 @@
----
+﻿---
 title: "ESP Integration Routes"
 description: "Route specifications for External Email Service Provider (ESP) configuration and management"
 last_modified_date: "2025-11-25"
@@ -401,7 +401,7 @@ Email Type → Provider
 
 Each rule card contains:
 
-**Rule 1: Transactional Emails**
+##### Rule 1: Transactional Emails
 
 - **Email Type**: Dropdown
 
@@ -894,9 +894,9 @@ Projected Annual Cost: $735.00
 
 ### User Journeys
 
-- **[Operations Team Journey](/user-journeys/internal-users/operations-journeys)** - ESP setup and monitoring workflows
+- **Operations Team Journey** - ESP setup and monitoring workflows (internal journey reference)
 
-- **[Developer Journey](/user-journeys/internal-users/technical-teams-journeys)** - API integration and webhook setup
+- **Developer Journey** - API integration and webhook setup (internal journey reference)
 
 ---
 

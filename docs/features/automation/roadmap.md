@@ -659,7 +659,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 ## Implementation Tasks
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email sending infrastructure (foundation for workflow actions)
+- Epic 6: Core Email Pipeline - Internal task reference for email sending infrastructure (foundation for workflow actions)
 
   - Milestone 1: Job enqueueing and campaign scheduling (time-based triggers)
 
@@ -667,7 +667,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
   - Milestone 3: Engagement tracking (event tracking foundation)
 
-- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Contact management for automation
+- Epic 7: Leads Management - Internal task reference for contact management in automation
 
   - Milestone 1: Contact schema (contact properties for conditions)
 

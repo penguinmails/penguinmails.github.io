@@ -1,4 +1,4 @@
----
+﻿---
 title: "Worker Processes"
 description: "Worker Processes - Background Job Processing"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "Backend Engineers"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
-
 
 # Worker Processes
 
@@ -111,7 +107,6 @@ class QueueWorker {
   }
 }
 
-
 ```
 
 ## Job Processing Workflow
@@ -154,7 +149,6 @@ async function processJob(job: Job, queueName: string) {
   }
 }
 
-
 ```
 
 ### Job Execution by Queue Type
@@ -184,7 +178,6 @@ async function executeJobLogic(payload: JobPayload, queueName: string) {
       throw new Error(`Unknown queue type: ${queueName}`)
   }
 }
-
 
 ```
 
@@ -247,7 +240,6 @@ async function processIncomingEmail(payload) {
   }
 }
 
-
 ```
 
 ### Email Sending
@@ -305,7 +297,6 @@ async function processEmailSending(payload) {
   }
 }
 
-
 ```
 
 ### Warmup Processing
@@ -339,7 +330,6 @@ async function processWarmupJob(payload) {
     throw new Error(`Warmup processing failed: ${error.message}`)
   }
 }
-
 
 ```
 
@@ -392,7 +382,6 @@ async function processBounceJob(payload) {
   }
 }
 
-
 ```
 
 ## Error Handling and Retry Logic
@@ -437,7 +426,6 @@ async function handleJobFailure(job: Job, error: Error) {
   }
 }
 
-
 ```
 
 ### Exponential Backoff Calculation
@@ -462,7 +450,6 @@ function calculateBackoffDelay(attemptNumber: number): number {
 // Attempt 7: 128s
 // Attempt 8: 256s
 // Attempt 9: 300s (max)
-
 
 ```
 
@@ -505,7 +492,6 @@ async function markJobCompleted(jobId: string, result: any) {
   })
 }
 
-
 ```
 
 ## Performance Optimization
@@ -540,7 +526,6 @@ async function processBatch(jobs: Job[]) {
 
   return results
 }
-
 
 ```
 
@@ -582,7 +567,6 @@ function getQueueList(): string[] {
   ]
 }
 
-
 ```
 
 ### Graceful Shutdown
@@ -612,7 +596,6 @@ async function gracefulShutdown() {
   process.exit(0)
 }
 
-
 ```
 
 ## Monitoring and Health Checks
@@ -640,7 +623,6 @@ function generateWorkerId(): string {
   return `worker-${hostname}-${pid}-${random}`
 }
 
-
 ```
 
 ## Conclusion
@@ -660,4 +642,3 @@ Worker processes provide:
 - **Monitoring Integration**: Real-time health and performance metrics
 
 This architecture ensures robust, scalable job processing that can handle varying workloads while maintaining system reliability and performance.
-

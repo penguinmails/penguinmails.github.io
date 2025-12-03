@@ -1,11 +1,10 @@
----
+﻿---
 title: "Analytics API"
 description: "Tenant API endpoints for campaign analytics, engagement tracking, and deliverability metrics"
 last_modified_date: "2025-11-26"
 level: "3"
 persona: "Backend Developers"
 ---
-
 
 # Analytics API
 
@@ -117,7 +116,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   }
 }
 
-
 ```
 
 ---
@@ -177,7 +175,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
     ]
   }
 }
-
 
 ```
 
@@ -277,7 +274,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   }
 }
 
-
 ```
 
 ---
@@ -334,7 +330,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   }
 }
 
-
 ```
 
 ---
@@ -357,7 +352,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   "time_range": "30d",
   "metrics": ["open_rate", "click_rate", "reply_rate", "delivery_rate"]
 }
-
 
 ```
 
@@ -400,7 +394,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   }
 }
 
-
 ```
 
 ---
@@ -426,7 +419,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   "include_time_series": true
 }
 
-
 ```
 
 **Response:**
@@ -441,7 +433,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
     "download_url": null
   }
 }
-
 
 ```
 
@@ -476,7 +467,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
   }
 }
 
-
 ```
 
 ---
@@ -497,7 +487,6 @@ interface AnalyticsSummary {
   unsubscribes: number;
 }
 
-
 ```
 
 ### Analytics Rates
@@ -514,7 +503,6 @@ interface AnalyticsRates {
   unsubscribe_rate: number;    // Percentage (0-100)
 }
 
-
 ```
 
 ### Time Series Data Point
@@ -530,7 +518,6 @@ interface TimeSeriesDataPoint {
   bounced?: number;
   spam_complaints?: number;
 }
-
 
 ```
 
@@ -549,7 +536,6 @@ interface TimeSeriesDataPoint {
   }
 }
 
-
 ```
 
 ### Invalid Time Range
@@ -563,7 +549,6 @@ interface TimeSeriesDataPoint {
   }
 }
 
-
 ```
 
 ### Export Failed
@@ -576,7 +561,6 @@ interface TimeSeriesDataPoint {
     "message": "Failed to generate export: insufficient data"
   }
 }
-
 
 ```
 
@@ -633,4 +617,3 @@ interface TimeSeriesDataPoint {
 **Last Updated:** November 26, 2025
 **API Version:** v1
 **Status:** Active Development
-

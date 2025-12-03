@@ -1,4 +1,4 @@
-# Hostwinds Automation Best Practices
+﻿# Hostwinds Automation Best Practices
 
 ---
 
@@ -28,13 +28,13 @@ const response = await fetch(HOSTWINDS_API_URL, {
   body: formData
 });
 
-// ❌ WRONG: Assuming 200 = success
+// âŒ WRONG: Assuming 200 = success
 if (response.status === 200) {
   const data = await response.json();
   // Process data...
 }
 
-// ✅ CORRECT: Check result field
+// âœ… CORRECT: Check result field
 if (response.status === 200) {
   const data = await response.json();
   if (data.result === 'error') {
@@ -42,7 +42,6 @@ if (response.status === 200) {
   }
   // Process successful data...
 }
-
 
 ```
 
@@ -61,7 +60,6 @@ if (response.status === 200) {
     "ERROR": "342432"  // Optional internal code
   }
 ]
-
 
 ```
 
@@ -146,7 +144,6 @@ class HostwindsAPILogger {
   }
 }
 
-
 ```
 
 ---
@@ -175,7 +172,6 @@ async function safeInstanceOperation(serviceid, operation) {
   // Step 3: Execute operation
   return await operation(serviceid);
 }
-
 
 ```
 
@@ -242,7 +238,6 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 ```
 
 ---
@@ -283,7 +278,6 @@ async function upgradeInstanceWorkflow(serviceid, rid) {
   console.log(`Upgrade completed successfully for service ${serviceid}`);
 }
 
-
 ```
 
 ---
@@ -309,7 +303,6 @@ if (!apiKey) {
   throw new Error('HOSTWINDS_API_KEY environment variable not set');
 }
 
-
 ```
 
 1. **Secrets Manager** (AWS, Azure, GCP):
@@ -325,7 +318,6 @@ async function getHostwindsAPIKey() {
   return JSON.parse(response.SecretString).apiKey;
 }
 
-
 ```
 
 1. **Encrypted Configuration**:
@@ -339,7 +331,6 @@ function decryptAPIKey(encryptedKey, masterKey) {
   decrypted += decipher.final('utf8');
   return decrypted;
 }
-
 
 ```
 
@@ -391,7 +382,6 @@ class HostwindsInputValidator {
   }
 }
 
-
 ```
 
 ---
@@ -435,7 +425,6 @@ async function callHostwindsAPI(action, params) {
     return await hostwindsAPI(action, params);
   });
 }
-
 
 ```
 
@@ -497,7 +486,6 @@ function isClientError(error) {
   );
 }
 
-
 ```
 
 ---
@@ -548,7 +536,6 @@ class CircuitBreaker {
     }
   }
 }
-
 
 ```
 
@@ -637,7 +624,6 @@ class HostwindsAutomation {
   }
 }
 
-
 ```
 
 ---
@@ -720,7 +706,6 @@ class MetricsCollector {
   }
 }
 
-
 ```
 
 ---
@@ -740,4 +725,3 @@ class MetricsCollector {
 ---
 
 **Keywords**: Hostwinds automation, API best practices, error handling, retry logic, rate limiting, security, resilience patterns
-

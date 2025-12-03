@@ -11,7 +11,7 @@ redirect_from: "/tasks/README"
 
 ## Overview
 
-🔗 **Access the complete development task documentation**: [Development Tasks Repository](/tasks/README)
+Access the complete development task documentation within the root workspace tasks directory (internal reference; not linked from the public docs site).
 
 This directory contains all development tasks, tickets, and epics for the PenguinMails project, including detailed implementation guidance, acceptance criteria, and project management workflows.
 
@@ -116,7 +116,7 @@ This task documentation integrates with:
 
 ## Future Migration
 
-This placeholder file will be replaced with migrated content from the external `/tasks/` directory during the documentation consolidation project.
+This placeholder file will be replaced with migrated content from the internal tasks workspace directory during the documentation consolidation project.
 
 **Keywords**: development tasks, epics, tickets, project management, implementation, acceptance criteria, story points, sprint planning
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Subscription Management"
 description: "Plan management, upgrades, downgrades, and subscription lifecyle for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Billing Administrators, Tenant Owners"
 status: "ACTIVE"
 category: "Payments"
 ---
-
 
 # Subscription Management
 
@@ -37,13 +36,15 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 ### Available Plans
 
-#### 🌱 Starter Plan
+#### ðŸŒ± Starter Plan
 
-**Perfect for small teams getting started**
+##### Perfect for small teams getting started
 
-**Pricing:** $49/month or $470/year (save $118)
+##### Pricing
 
-**Includes:**
+$49/month or $470/year (save $118)
+
+##### Includes
 
 - 10,000 emails/month
 
@@ -57,17 +58,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - Email support
 
-**Best For:** Freelancers, small agencies, startups
+##### Best For
+
+Freelancers, small agencies, startups
 
 ---
 
-#### 🚀 Professional Plan
+#### ðŸš€ Professional Plan
 
-**Most Popular - For growing businesses**
+##### Most Popular - For growing businesses
 
-**Pricing:** $149/month or $1,430/year (save $358)
+##### Pricing
 
-**Includes:**
+$149/month or $1,430/year (save $358)
+
+##### Includes
 
 - 50,000 emails/month
 
@@ -85,17 +90,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - API access
 
-**Best For:** Growing agencies, marketing teams, SMBs
+##### Best For
+
+Growing agencies, marketing teams, SMBs
 
 ---
 
-#### 💼 Business Plan
+#### ðŸ’¼ Business Plan
 
-**For established businesses with high volume**
+##### For established businesses with high volume
 
-**Pricing:** $399/month or $3,830/year (save $958)
+##### Pricing
 
-**Includes:**
+$399/month or $3,830/year (save $958)
+
+##### Includes
 
 - 200,000 emails/month
 
@@ -115,17 +124,21 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 - Advanced automation
 
-**Best For:** Established agencies, enterprise marketing teams
+##### Best For
+
+Established agencies, enterprise marketing teams
 
 ---
 
-#### 🏢 Enterprise Plan
+#### ðŸ¢ Enterprise Plan
 
-**Custom solutions for large organizations**
+##### Custom solutions for large organizations
 
-**Pricing:** Custom (Contact Sales)
+##### Pricing
 
-**Includes:**
+Custom (Contact Sales)
+
+##### Includes
 
 - Unlimited emails
 
@@ -175,7 +188,7 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 **Access your subscription details:**
 
-1. Navigate to **Settings** → **Billing**
+1. Navigate to **Settings** â†’ **Billing**
 
 2. View **Current Plan** section
 
@@ -203,7 +216,7 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 #### How to Upgrade
 
-1. Go to **Settings** → **Billing** → **Change Plan**
+1. Go to **Settings** â†’ **Billing** â†’ **Change Plan**
 
 2. Select higher-tier plan
 
@@ -220,24 +233,23 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 ```text
 Days remaining in period: 15 days
 Professional daily rate: $149 / 30 = $4.97/day
-Starter credit: $49 / 30 = $1.63/day × 15 = $24.50
-Upgrade cost: ($4.97 - $1.63) × 15 days = $50.10
+Starter credit: $49 / 30 = $1.63/day Ã— 15 = $24.50
+Upgrade cost: ($4.97 - $1.63) Ã— 15 days = $50.10
 
 Total charged today: $50.10
 Next billing (full month): $149.00
-
 
 ```
 
 **Benefits of Upgrading:**
 
-- ✅ Immediate access to higher limits
+- âœ… Immediate access to higher limits
 
-- ✅ Pro-rated billing (fair pricing)
+- âœ… Pro-rated billing (fair pricing)
 
-- ✅ Unlock advanced features instantly
+- âœ… Unlock advanced features instantly
 
-- ✅ No downtime or service interruption
+- âœ… No downtime or service interruption
 
 ---
 
@@ -247,7 +259,7 @@ Next billing (full month): $149.00
 
 #### How to Downgrade
 
-1. Go to **Settings** → **Billing** → **Change Plan**
+1. Go to **Settings** â†’ **Billing** â†’ **Change Plan**
 
 2. Select lower-tier plan
 
@@ -263,13 +275,13 @@ Next billing (full month): $149.00
 
 **What Happens When You Downgrade:**
 
-- ⚠️ **Usage Limits Reduced** - Next billing cycle
+- âš ï¸ **Usage Limits Reduced** - Next billing cycle
 
-- ⚠️ **Feature Access Lost** - Advanced features disabled
+- âš ï¸ **Feature Access Lost** - Advanced features disabled
 
-- ⚠️ **Data Retained** - No data loss, but access restricted
+- âš ï¸ **Data Retained** - No data loss, but access restricted
 
-- ⚠️ **Exceeded Limits** - Must remove excess before downgrade
+- âš ï¸ **Exceeded Limits** - Must remove excess before downgrade
 
 **Pre-Downgrade Checklist:**
 
@@ -301,7 +313,7 @@ Next billing (full month): $149.00
 
 #### How to Cancel
 
-1. Go to **Settings** → **Billing** → **Cancel Subscription**
+1. Go to **Settings** â†’ **Billing** â†’ **Cancel Subscription**
 
 2. Select **cancellation reason** (optional feedback)
 
@@ -315,23 +327,23 @@ Next billing (full month): $149.00
 
 **Immediate:**
 
-- ✅ Cancellation confirmed
+- âœ… Cancellation confirmed
 
-- ✅ No future charges
+- âœ… No future charges
 
-- ✅ Service continues until period end
+- âœ… Service continues until period end
 
-- ✅ Access to all features until expiration
+- âœ… Access to all features until expiration
 
 **At End of Billing Period:**
 
-- ⚠️ Account moved to **Free Tier** (read-only)
+- âš ï¸ Account moved to **Free Tier** (read-only)
 
-- ⚠️ No new emails can be sent
+- âš ï¸ No new emails can be sent
 
-- ⚠️ Data retained for 90 days (export available)
+- âš ï¸ Data retained for 90 days (export available)
 
-- ⚠️ After 90 days, data permanently deleted
+- âš ï¸ After 90 days, data permanently deleted
 
 **Free Tier (Canceled Accounts):**
 
@@ -351,7 +363,7 @@ Next billing (full month): $149.00
 
 1. Log in to account (even if canceled)
 
-2. Go to **Settings** → **Billing** → **Reactivate**
+2. Go to **Settings** â†’ **Billing** â†’ **Reactivate**
 
 3. Select plan (previous plan or different tier)
 
@@ -361,11 +373,11 @@ Next billing (full month): $149.00
 
 **Data Restoration:**
 
-- ✅ All data restored if within 90 days
+- âœ… All data restored if within 90 days
 
-- ✅ Full feature access immediately
+- âœ… Full feature access immediately
 
-- ✅ Billing starts today (no backdating)
+- âœ… Billing starts today (no backdating)
 
 ---
 
@@ -379,7 +391,7 @@ Next billing (full month): $149.00
 
 **From Monthly to Annual:**
 
-1. Go to **Settings** → **Billing** → **Switch to Annual**
+1. Go to **Settings** â†’ **Billing** â†’ **Switch to Annual**
 
 2. Review annual cost (20% discount applied)
 
@@ -393,15 +405,15 @@ Next billing (full month): $149.00
 
 - Prorated credit applied to annual payment
 
-- Example: 15 days left on monthly → $24.50 credit → reduces annual payment
+- Example: 15 days left on monthly â†’ $24.50 credit â†’ reduces annual payment
 
 **Benefits:**
 
-- 💰 20% cost savings
+- ðŸ’° 20% cost savings
 
-- 📆 Predictable yearly budgeting
+- ðŸ“† Predictable yearly budgeting
 
-- 🎁 Bonus features (priority support, extra sends)
+- ðŸŽ Bonus features (priority support, extra sends)
 
 #### Switching to Monthly Billing
 
@@ -433,11 +445,11 @@ Next billing (full month): $149.00
 
 **Usage Alerts:**
 
-- ⚠️ 80% of limit - Warning email
+- âš ï¸ 80% of limit - Warning email
 
-- ⚠️ 95% of limit - Urgent notification
+- âš ï¸ 95% of limit - Urgent notification
 
-- 🚫 100% of limit - Action required
+- ðŸš« 100% of limit - Action required
 
 #### Overage Handling
 
@@ -493,7 +505,6 @@ Response:
   }
 }
 
-
 ```
 
 #### Update Subscription
@@ -515,7 +526,6 @@ Response:
   "proration_amount": 250.00,
   "next_billing_date": "2026-11-24"
 }
-
 
 ```
 
@@ -545,21 +555,20 @@ Response:
 
 ```text
 Sign Up (Trial)
-  ↓
+  â†“
 Select Plan & Enter Payment
-  ↓
+  â†“
 Active Subscription
-  ↓
+  â†“
 Usage Monitoring
-  ↓
+  â†“
 Upgrade/Downgrade as Needed
-  ↓
+  â†“
 Renewal (Automatic)
 
 OR
 
-Cancellation → Free Tier (90 days) → Data Deletion
-
+Cancellation â†’ Free Tier (90 days) â†’ Data Deletion
 
 ```
 
@@ -605,4 +614,3 @@ Cancellation → Free Tier (90 days) → Data Deletion
 **Billing Cycle:** Monthly or Annual
 
 *Subscriptions can be modified or canceled at any time with no penalties or hidden fees.*
-

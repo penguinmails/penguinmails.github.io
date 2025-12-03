@@ -1,4 +1,4 @@
----
+﻿---
 title: "CAN-SPAM Compliance"
 description: "US email law compliance for PenguinMails - CAN-SPAM Act requirements"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Marketing Teams, Compliance Officers"
 status: "ACTIVE"
 category: "Compliance"
 ---
-
 
 # CAN-SPAM Compliance
 
@@ -41,13 +40,13 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 #### PenguinMails Implementation
 
-- ✅ **Verified sender addresses** - Only send from authenticated domains
+- âœ… **Verified sender addresses** - Only send from authenticated domains
 
-- ✅ **Accurate From name** - Clearly identifies your business
+- âœ… **Accurate From name** - Clearly identifies your business
 
-- ✅ **Valid Reply-To** - Monitored mailbox for replies
+- âœ… **Valid Reply-To** - Monitored mailbox for replies
 
-- ✅ **No spoofing** - SPF, DKIM, DMARC prevent header manipulation
+- âœ… **No spoofing** - SPF, DKIM, DMARC prevent header manipulation
 
 #### Setup Checklist
 
@@ -67,13 +66,13 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 #### Best Practices
 
-- ✅ **Honest subject lines** - Accurately describe email content
+- âœ… **Honest subject lines** - Accurately describe email content
 
-- ✅ **No clickbait** - Avoid misleading or sensational subjects
+- âœ… **No clickbait** - Avoid misleading or sensational subjects
 
-- ✅ **Match content** - Subject and email body should align
+- âœ… **Match content** - Subject and email body should align
 
-- ✅ **No fake urgency** - Don't create false sense of urgency
+- âœ… **No fake urgency** - Don't create false sense of urgency
 
 #### PenguinMails Features
 
@@ -123,7 +122,6 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 This is an advertisement from [Your Company Name]
 
-
 ```
 
 ---
@@ -134,11 +132,11 @@ This is an advertisement from [Your Company Name]
 
 #### Address Requirements
 
-- ✅ **Street address** - Valid postal delivery location
+- âœ… **Street address** - Valid postal delivery location
 
-- ✅ **P.O. Box** - Registered with USPS
+- âœ… **P.O. Box** - Registered with USPS
 
-- ✅ **Private mailbox** - At commercial mail receiving agency
+- âœ… **Private mailbox** - At commercial mail receiving agency
 
 #### PenguinMails Implementation
 
@@ -154,19 +152,15 @@ This is an advertisement from [Your Company Name]
 
 ```yaml
 Company Address Setup:
-  Location: Settings → Company Profile → Physical Address
+  Location: Settings â†’ Company Profile â†’ Physical Address
   Required Fields:
-
 
     - Street address
 
-
     - City, State, ZIP
-
 
     - Country
   Display: Automatically added to all commercial emails
-
 
 ```
 
@@ -178,19 +172,19 @@ Company Address Setup:
 
 #### Unsubscribe Requirements
 
-- ✅ **Conspicuous** - Easy to find and recognize
+- âœ… **Conspicuous** - Easy to find and recognize
 
-- ✅ **Easy to use** - Simple one-click or reply-to method
+- âœ… **Easy to use** - Simple one-click or reply-to method
 
-- ✅ **No login required** - Work without authentication
+- âœ… **No login required** - Work without authentication
 
-- ✅ **No fees** - Free to unsubscribe
+- âœ… **No fees** - Free to unsubscribe
 
-- ✅ **Include in every email** - All commercial messages
+- âœ… **Include in every email** - All commercial messages
 
 #### PenguinMails Unsubscribe Features
 
-**One-Click Unsubscribe**
+##### One-Click Unsubscribe
 
 - **List-Unsubscribe header** - RFC 8058 compliant
 
@@ -200,7 +194,7 @@ Company Address Setup:
 
 - **Confirmation page** - User feedback on successful unsubscribe
 
-**Unsubscribe Link Placement**
+##### Unsubscribe Link Placement
 
 - **Footer placement** - Clear and prominent
 
@@ -210,13 +204,12 @@ Company Address Setup:
 
 - **Mobile-optimized** - Easy to tap on mobile devices
 
-**Example Unsubscribe Text:**
+##### Example Unsubscribe Text
 
 ```text
 
 If you no longer wish to receive these emails, you may
 [unsubscribe here]({{unsubscribe_url}})
-
 
 ```
 
@@ -228,30 +221,29 @@ If you no longer wish to receive these emails, you may
 
 #### PenguinMails Compliance
 
-- ✅ **Instant opt-out** - Removed immediately (not 10 days)
+- âœ… **Instant opt-out** - Removed immediately (not 10 days)
 
-- ✅ **Automated processing** - No manual intervention needed
+- âœ… **Automated processing** - No manual intervention needed
 
-- ✅ **Suppression list** - Prevent re-adds
+- âœ… **Suppression list** - Prevent re-adds
 
-- ✅ **Global opt-out** - Applies across all campaigns
+- âœ… **Global opt-out** - Applies across all campaigns
 
-- ✅ **Permanent** - Cannot resubscribe without explicit consent
+- âœ… **Permanent** - Cannot resubscribe without explicit consent
 
 #### Unsubscribe Processing
 
 ```text
 
 User clicks unsubscribe
-  ↓
+  â†“
 Immediate removal from active campaigns
-  ↓
+  â†“
 Added to global suppression list
-  ↓
+  â†“
 Future sends automatically blocked
-  ↓
+  â†“
 Confirmation email sent (optional)
-
 
 ```
 
@@ -273,13 +265,13 @@ Confirmation email sent (optional)
 
 #### Responsibilities as PenguinMails User
 
-- ✅ **Monitor campaigns** - Review content before sending
+- âœ… **Monitor campaigns** - Review content before sending
 
-- ✅ **Verify compliance** - Ensure all requirements met
+- âœ… **Verify compliance** - Ensure all requirements met
 
-- ✅ **Audit third parties** - If using agencies or freelancers
+- âœ… **Audit third parties** - If using agencies or freelancers
 
-- ✅ **Maintain records** - Document compliance procedures
+- âœ… **Maintain records** - Document compliance procedures
 
 #### PenguinMails Accountability Features
 
@@ -301,15 +293,15 @@ Confirmation email sent (optional)
 
 Emails that facilitate an agreed-upon transaction or update about an ongoing relationship:
 
-- ✅ **Order confirmations** - Purchase receipts
+- âœ… **Order confirmations** - Purchase receipts
 
-- ✅ **Shipping notifications** - Delivery updates
+- âœ… **Shipping notifications** - Delivery updates
 
-- ✅ **Account alerts** - Password resets, security alerts
+- âœ… **Account alerts** - Password resets, security alerts
 
-- ✅ **Service updates** - Changes to terms, features
+- âœ… **Service updates** - Changes to terms, features
 
-- ✅ **Legal notices** - Privacy policy updates
+- âœ… **Legal notices** - Privacy policy updates
 
 **Rules for Transactional:**
 
@@ -325,13 +317,13 @@ Emails that facilitate an agreed-upon transaction or update about an ongoing rel
 
 Emails whose primary purpose is commercial advertisement:
 
-- ⚠️ **Promotional campaigns** - Sales, discounts, offers
+- âš ï¸ **Promotional campaigns** - Sales, discounts, offers
 
-- ⚠️ **Newsletter with ads** - Content + promotional material
+- âš ï¸ **Newsletter with ads** - Content + promotional material
 
-- ⚠️ **Product announcements** - New product launches
+- âš ï¸ **Product announcements** - New product launches
 
-- ⚠️ **Event invitations** - Webinars, conferences
+- âš ï¸ **Event invitations** - Webinars, conferences
 
 **Full CAN-SPAM compliance required:**
 
@@ -351,15 +343,11 @@ Emails whose primary purpose is commercial advertisement:
 Campaign Setup:
   Email Type:
 
+    - Commercial (default) â†’ Full CAN-SPAM requirements
 
-    - Commercial (default) → Full CAN-SPAM requirements
+    - Transactional â†’ Minimal requirements (best practice compliance)
 
-
-    - Transactional → Minimal requirements (best practice compliance)
-
-
-    - Administrative → Internal team communications
-
+    - Administrative â†’ Internal team communications
 
 ```
 
@@ -415,7 +403,6 @@ Retention Policy:
   Audit Logs: 7 years
   Campaign Analytics: 12 months
 
-
 ```
 
 ---
@@ -439,7 +426,6 @@ Retention Policy:
   </p>
 </footer>
 
-
 ```
 
 #### List-Unsubscribe Header
@@ -449,7 +435,6 @@ Retention Policy:
 List-Unsubscribe: <mailto:unsubscribe@penguinmails.com?subject=unsubscribe>,
                   <https://penguinmails.com/unsubscribe/{{campaign_id}}/{{contact_id}}>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
-
 
 ```
 
@@ -471,7 +456,7 @@ Before any campaign sends, PenguinMails automatically checks:
 
 - [ ] Commercial content identified
 
-**Validation fails?** → Campaign blocked until resolved
+**Validation fails?** â†’ Campaign blocked until resolved
 
 ---
 
@@ -574,4 +559,3 @@ Before any campaign sends, PenguinMails automatically checks:
 **Applies To:** All commercial emails sent to US recipients
 
 *PenguinMails automates CAN-SPAM compliance but users are ultimately responsible for ensuring their email practices comply with all applicable laws.*
-

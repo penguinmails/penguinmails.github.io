@@ -1,4 +1,4 @@
-# 👥 Leads & Lists
+﻿# ðŸ‘¥ Leads & Lists
 
 Lead management, contact lists, and segmentation (scoped by tenant).
 
@@ -22,7 +22,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ## Features in This Category
 
-### ✅ Available Now (Documented)
+### âœ… Available Now (Documented)
 
 - **[Leads Management](/docs/features/leads/leads-management)** - Contact storage and segmentation
 
@@ -32,13 +32,13 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **[Import/Export](/docs/features/leads/import-export)** - Bulk contact import/export with field mapping
 
-### 🚧 MVP Implementation Required (Q1 2026)
+### ðŸš§ MVP Implementation Required (Q1 2026)
 
 - **Contact Import/Export System** - Complete CSV/Excel import with validation and duplicate detection
 
 - **Basic Static Segmentation** - Manual lists for campaign targeting
 
-### 🔜 Post-MVP Enhancements (Q1-Q3 2026)
+### ðŸ”œ Post-MVP Enhancements (Q1-Q3 2026)
 
 - **Dynamic Contact Segmentation** (Q1 2026) - Rule-based filtering with filter builder UI
 
@@ -58,7 +58,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **Contact Notes & Tasks** (Q3 2026) - Sales follow-up and collaboration
 
-### 🔮 Future Research (Q3 2026+)
+### ðŸ”® Future Research (Q3 2026+)
 
 - **Third-Party Integrations Research Spike** (Q3-Q4 2026) - Evaluate CRM sync, lead enrichment, advanced email validation
 
@@ -84,7 +84,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Implementation Tasks
 
-- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Implementation task breakdown
+- Epic 7: Leads Management - Internal task reference for implementation sequencing
 
 ### Related Features
 
@@ -96,5 +96,4 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
-
+[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

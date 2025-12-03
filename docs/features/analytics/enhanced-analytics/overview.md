@@ -1,4 +1,4 @@
----
+﻿---
 title: "Enhanced Analytics Roadmap"
 timeline: "Q1 2026"
 status: "planned"
@@ -7,7 +7,6 @@ completion: "0%"
 dependencies: ["analytics"]
 blocks: ["workflow-automation", "crm-integration"]
 ---
-
 
 # Enhanced Analytics Roadmap
 
@@ -33,11 +32,11 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Required Before Starting
 
-- 🔄 **[Analytics](/docs/features/analytics/enhanced-analytics/analytics)** - Basic analytics must be complete (currently 60%)
+- ðŸ”„ **[Analytics](/docs/features/analytics/enhanced-analytics/analytics)** - Basic analytics must be complete (currently 60%)
 
-- ⏳ Historical data - Need 30+ days of campaign data
+- â³ Historical data - Need 30+ days of campaign data
 
-- ⏳ Machine learning infrastructure - Research phase
+- â³ Machine learning infrastructure - Research phase
 
 ### Blocks (Features Waiting on This)
 
@@ -59,7 +58,7 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 - [ ] **M2: Data Pipeline Enhancement** (Weeks 4-7)
 
-  - [ ] Improve data collection accuracy (75% → 90%)
+  - [ ] Improve data collection accuracy (75% â†’ 90%)
 
   - [ ] Historical data aggregation
 
@@ -105,13 +104,13 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### User Workflows
 
-- **[Customer Success Journey](/docs/features/user-journeys/customer-success-journey)** - Analytics-driven optimization
+- **Customer Success Journey** - Analytics-driven optimization (internal journey reference)
 
-- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - Data-driven campaign management
+- **Marketing Journey** - Data-driven campaign management (internal journey reference)
 
 ### Implementation Tasks
 
-- **[Enhanced Analytics Epic](/docs/tasks/analytics-enhanced/)** - Development tasks
+- **Enhanced Analytics Epic** - Internal task reference for development work
 
 ## Technical Details
 
@@ -147,7 +146,6 @@ deliverability_score:
       bounce_penalty: -10_per_percent
       spam_penalty: -50_per_percent
 
-
 ```
 
 **Engagement Velocity:**
@@ -168,7 +166,6 @@ engagement_velocity:
     negative: "Engagement declining"
     neutral: "Engagement stable"
 
-
 ```
 
 **Mailbox Health Index:**
@@ -179,21 +176,15 @@ mailbox_health_index:
 
   factors:
 
-
     - sending_volume_consistency
-
 
     - bounce_rate_trend
 
-
     - spam_complaint_trend
-
 
     - engagement_trend
 
-
     - blacklist_status
-
 
     - authentication_status
 
@@ -202,7 +193,6 @@ mailbox_health_index:
     75-89: "Good - Monitor closely"
     50-74: "Fair - Improvement needed"
     0-49: "Poor - Immediate action required"
-
 
 ```
 
@@ -220,28 +210,21 @@ campaign_performance_index:
   calculation:
     deliverability_component:
 
-
       - inbox_rate * 0.7
-
 
       - (1 - bounce_rate) * 0.3
 
     engagement_component:
 
-
       - open_rate * 0.5
 
-
       - click_rate * 0.3
-
 
       - reply_rate * 0.2
 
     conversion_component:
 
-
       - conversion_rate * 1.0
-
 
 ```
 
@@ -257,21 +240,15 @@ roi_tracking:
 
   attribution_models:
 
-
     - first_touch  # First campaign contact engaged with
-
 
     - last_touch  # Last campaign before conversion
 
-
     - linear  # Equal credit to all touchpoints
-
 
     - time_decay  # More credit to recent touchpoints
 
-
     - position_based  # 40% first, 40% last, 20% middle
-
 
 ```
 
@@ -334,7 +311,6 @@ class SendTimePredictor {
     };
   }
 }
-
 
 ```
 
@@ -412,7 +388,6 @@ class SubjectLinePredictor {
   }
 }
 
-
 ```
 
 {% endraw %}
@@ -459,7 +434,6 @@ class DeliverabilityPredictor {
     };
   }
 }
-
 
 ```
 
@@ -521,7 +495,6 @@ class ChurnPredictor {
     return actions;
   }
 }
-
 
 ```
 
@@ -605,7 +578,6 @@ class AIRecommendationEngine {
   }
 }
 
-
 ```
 
 ### Custom Dashboards
@@ -686,7 +658,6 @@ class CustomDashboardService {
   }
 }
 
-
 ```
 
 ### Advanced Segmentation
@@ -695,61 +666,42 @@ class CustomDashboardService {
 advanced_segmentation:
   behavioral_segments:
 
-
     - name: "Highly Engaged"
       criteria:
 
-
         - open_rate >= 50%
-
 
         - click_rate >= 10%
 
-
         - last_activity within 7 days
-
-
 
     - name: "At Risk"
       criteria:
 
-
         - open_rate < 10%
-
 
         - last_activity > 30 days
 
-
         - previous_open_rate >= 30%  # Was engaged
-
-
 
     - name: "Champions"
       criteria:
 
-
         - lead_score >= 90
 
-
         - conversion_count >= 3
-
 
         - avg_order_value >= $500
 
   predictive_segments:
 
-
     - name: "Likely to Convert"
       model: conversion_prediction
       threshold: 0.75
 
-
-
     - name: "Churn Risk"
       model: churn_prediction
       threshold: 0.60
-
-
 
     - name: "High Lifetime Value"
       model: ltv_prediction
@@ -757,20 +709,15 @@ advanced_segmentation:
 
   dynamic_segments:
 
-
     - name: "Recent Browsers"
       criteria:
 
-
         - website_visit within 24 hours
-
 
         - viewed_product = true
 
-
         - not_purchased = true
       refresh: real_time
-
 
 ```
 
@@ -851,7 +798,6 @@ class ROIAttributionService {
   }
 }
 
-
 ```
 
 ### Components
@@ -925,7 +871,7 @@ class ROIAttributionService {
 
 - Manual analysis
 
-### Enhanced Analytics (Q1 2026) ✓
+### Enhanced Analytics (Q1 2026) âœ“
 
 - 90% data accuracy
 
@@ -992,8 +938,6 @@ The system will automatically generate recommendations:
 - **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Data export and scheduled reports
 
 ---
-
 **Last Updated**: 2025-11-24
 **Owner**: Data Engineering + Backend Team
 **Status**: Planned - Q1 2026 enhancement to basic analytics
-

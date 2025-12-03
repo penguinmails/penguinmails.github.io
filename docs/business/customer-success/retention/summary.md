@@ -300,4 +300,3 @@ Customer retention represents the foundation of sustainable business growth, pro
 ---
 
 ### Level 1: Executive summary for strategic retention decision-making
-

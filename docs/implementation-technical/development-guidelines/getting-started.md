@@ -1,11 +1,10 @@
----
+﻿---
 title: "Getting Started - Developer Environment & Setup"
 description: "Environment setup, first-time contributor guidance, and project structure overview"
 last_modified_date: "2025-11-24"
 level: "1"
 persona: "New Contributors"
 ---
-
 
 # Getting Started - Developer Environment & Setup
 
@@ -37,22 +36,18 @@ Thank you for your interest in contributing to PenguinMails! We're excited to ha
 
 ```bash
 
-
 # Fork the repository on GitHub, then clone your fork
 
 git clone https://github.com/your-username/penguinmails.git
 cd penguinmails
 
-
 # Add the upstream repository as remote
 
 git remote add upstream https://github.com/penguinmails/platform.git
 
-
 # Install dependencies
 
 npm install
-
 
 ```
 
@@ -60,11 +55,9 @@ npm install
 
 ```bash
 
-
 # Copy environment template
 
 cp .env.example .env
-
 
 # Edit .env with your configuration
 
@@ -75,32 +68,25 @@ EMAIL_API_KEY=your-email-service-api-key
 AI_API_ENDPOINT=http://localhost:8000/api/v1
 ANALYTICS_ENDPOINT=http://localhost:8080/analytics
 
-
 ```
 
 ### 3. Database Setup
 
 ```bash
 
-
 # Set up database connection
-
 
 # Update DATABASE_URL in .env file
 
-
 # Example: postgresql://dev:dev@localhost:5432/penguinmails_dev
-
 
 # Run database migrations
 
 npm run db:migrate
 
-
 # Load sample data (optional)
 
 npm run db:seed
-
 
 ```
 
@@ -108,22 +94,18 @@ npm run db:seed
 
 ```bash
 
-
 # Run development server
 
 npm run dev
-
 
 # In another terminal, run tests
 
 npm test
 
-
 # Run linting
 
 npm run lint
 npm run type-check
-
 
 ```
 
@@ -151,7 +133,6 @@ npm run type-check
   }
 }
 
-
 ```
 
 **Required Extensions:**
@@ -176,16 +157,13 @@ npm run type-check
 
 ```bash
 
-
 # Install pre-commit hooks
 
 npm run install:hooks
 
-
 # Install additional development tools
 
 npm install -g @typescript-eslint/cli prettier
-
 
 ```
 
@@ -194,29 +172,28 @@ npm install -g @typescript-eslint/cli prettier
 ```text
 
 penguinmails/
-├── app/                          # Main application code
-│   ├── api/                      # REST API endpoints
-│   ├── core/                     # Core business logic
-│   ├── ai/                       # AI/ML features
-│   ├── analytics/                # Analytics and reporting
-│   ├── email/                    # Email processing
-│   ├── web/                      # Web interface
-│   └── mobile/                   # Mobile applications
-├── docs/                         # Documentation
-│   ├── api/                      # API documentation
-│   ├── user/                     # User documentation
-│   └── development/              # Developer documentation
-├── tests/                        # Test suites
-│   ├── unit/                     # Unit tests
-│   ├── integration/              # Integration tests
-│   └── e2e/                      # End-to-end tests
-├── scripts/                      # Development scripts
-├── migrations/                   # Database migrations
-├── package.json                  # Node.js dependencies and scripts
-├── tsconfig.json                # TypeScript configuration
-├── tailwind.config.js           # CSS framework configuration
-└── docker/                       # Docker configuration
-
+â”œâ”€â”€ app/                          # Main application code
+â”‚   â”œâ”€â”€ api/                      # REST API endpoints
+â”‚   â”œâ”€â”€ core/                     # Core business logic
+â”‚   â”œâ”€â”€ ai/                       # AI/ML features
+â”‚   â”œâ”€â”€ analytics/                # Analytics and reporting
+â”‚   â”œâ”€â”€ email/                    # Email processing
+â”‚   â”œâ”€â”€ web/                      # Web interface
+â”‚   â””â”€â”€ mobile/                   # Mobile applications
+â”œâ”€â”€ docs/                         # Documentation
+â”‚   â”œâ”€â”€ api/                      # API documentation
+â”‚   â”œâ”€â”€ user/                     # User documentation
+â”‚   â””â”€â”€ development/              # Developer documentation
+â”œâ”€â”€ tests/                        # Test suites
+â”‚   â”œâ”€â”€ unit/                     # Unit tests
+â”‚   â”œâ”€â”€ integration/              # Integration tests
+â”‚   â””â”€â”€ e2e/                      # End-to-end tests
+â”œâ”€â”€ scripts/                      # Development scripts
+â”œâ”€â”€ migrations/                   # Database migrations
+â”œâ”€â”€ package.json                  # Node.js dependencies and scripts
+â”œâ”€â”€ tsconfig.json                # TypeScript configuration
+â”œâ”€â”€ tailwind.config.js           # CSS framework configuration
+â””â”€â”€ docker/                       # Docker configuration
 
 ```
 
@@ -245,4 +222,3 @@ After setting up your environment:
 - **Discussions**: Use [GitHub Discussions](https://github.com/penguinmails/platform/discussions) for questions
 
 Welcome to the PenguinMails community!
-

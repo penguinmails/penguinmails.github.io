@@ -44,6 +44,8 @@ persona: "Documentation Users"
 
 ## The least cost-effective tier across all providers. Key considerations
 
+### Provider Options
+
 #### SendGrid Essentials 100K: $6.99 CPM
 
 - **Monthly Cost**: $70
@@ -98,6 +100,8 @@ persona: "Documentation Users"
 
 ## The most competitive tier for pricing comparisons. Key findings
 
+### Provider Options
+
 #### SendGrid Essentials 100K: $0.35 CPM
 
 - **Monthly Cost**: $350
@@ -151,6 +155,8 @@ persona: "Documentation Users"
 ### 1,000,000 emails/month Tier Analysis
 
 ## Pricing dynamics shift dramatically at enterprise scale
+
+### Provider Options
 
 #### SendGrid Pro 300K: $0.25 CPM
 

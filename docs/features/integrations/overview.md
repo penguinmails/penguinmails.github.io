@@ -1,4 +1,4 @@
----
+﻿---
 title: "Integrations Overview"
 description: "Comprehensive overview of PenguinMails integration capabilities including API access, webhooks, CRM integrations, and Vault-based secrets management"
 last_modified_date: "2025-11-26"
@@ -109,7 +109,7 @@ Bi-directional sync with major CRMs including Salesforce and HubSpot.
 
 - Field mapping (standard and custom fields)
 
-- Activity logging (tasks/timeline events)
+- Activity logging (internal timeline events)
 
 - Conflict resolution strategies
 
@@ -203,7 +203,7 @@ vault/
 
 Store admin and tenant SSH keys in Vault during VPS provisioning, enabling secure access and rapid disaster recovery.
 
-## Features
+##### Features
 
 - Dual SSH key system (admin + tenant) for separation of concerns
 
@@ -217,11 +217,11 @@ Store admin and tenant SSH keys in Vault during VPS provisioning, enabling secur
 
 **Documentation:** [Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)
 
-#### SMTP Credentials Storage
+### SMTP Credentials Storage
 
 Store SMTP admin credentials in Vault during MailU setup, enabling secure credential retrieval for troubleshooting.
 
-## Features
+#### Features
 
 - AES-256-GCM encryption before Vault storage
 
@@ -235,11 +235,11 @@ Store SMTP admin credentials in Vault during MailU setup, enabling secure creden
 
 **Documentation:** [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)
 
-#### Tenant API Key System
+### Tenant API Key System
 
 Generate unique API keys per tenant for programmatic email sending, stored securely in Vault with bcrypt hashing.
 
-## Features
+#### Features
 
 - Unique API key format: `pm_live_{32_random_chars}`
 
@@ -255,11 +255,11 @@ Generate unique API keys per tenant for programmatic email sending, stored secur
 
 **Documentation:** [Vault API Keys](/docs/features/integrations/vault-api-keys)
 
-#### Vault Disaster Recovery
+### Vault Disaster Recovery
 
 Enable rapid recovery from VPS compromise or Vault failure through automated backups and documented restoration procedures.
 
-## Features
+#### Features
 
 - Automated daily Vault backups to S3 (encrypted)
 
@@ -271,7 +271,7 @@ Enable rapid recovery from VPS compromise or Vault failure through automated bac
 
 - Vault high availability setup (3-node cluster for production)
 
-**Documentation:** [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery)
+**Documentation:** [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/)
 
 ### Rotation Policies
 
@@ -485,7 +485,7 @@ Vault integration supports compliance with industry standards:
 
 - [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
 
-- [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery) - Vault backup and recovery
+- [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/) - Vault backup and recovery
 
 - [Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup) - Infrastructure provisioning
 
@@ -501,9 +501,9 @@ Vault integration supports compliance with industry standards:
 
 ### Implementation Tasks
 
-- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/) - Infrastructure tasks
+- Epic 5: Infrastructure Management - Internal task reference for infrastructure work
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email pipeline tasks
+- Epic 6: Core Email Pipeline - Internal task reference for email pipeline work
 
 ### Business Documentation
 

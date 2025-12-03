@@ -907,7 +907,7 @@ const gdprCompliance = {
 
 *Security is everyone's responsibility. Report any security concerns immediately to the security team.*
 
-**Related Documents**
+#### Related Documents
 
 - [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
 
@@ -918,4 +918,3 @@ const gdprCompliance = {
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 
 ---
-

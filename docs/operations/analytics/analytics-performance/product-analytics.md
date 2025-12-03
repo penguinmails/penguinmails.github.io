@@ -1,4 +1,4 @@
----
+﻿---
 title: "Product Analytics Framework"
 description: "Comprehensive product performance analytics for enterprise-grade feature optimization, A/B testing, and product-market fit analysis"
 last_modified_date: "2025-10-28"
@@ -591,11 +591,11 @@ Recommendations
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### **Team Performance**
 
@@ -621,4 +621,3 @@ Navigate to specific product areas:
 
 **Keywords**: product analytics, feature adoption, A/B testing, product-market fit, feature lifecycle, roadmap prioritization, performance optimization, innovation metrics, UX analytics
 ---
-

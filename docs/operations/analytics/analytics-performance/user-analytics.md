@@ -1,4 +1,4 @@
----
+﻿---
 title: "User Analytics Framework"
 description: "Comprehensive user behavior analysis framework for enterprise-grade performance monitoring, engagement tracking, and conversion optimization"
 last_modified_date: "2025-10-28"
@@ -543,11 +543,11 @@ Campaign Performance
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### **Compliance & Security**
 
@@ -573,4 +573,3 @@ Navigate to specific analytics areas:
 
 **Keywords**: user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization
 ---
-

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Core Email Pipeline"
 description: "High-throughput email sending and processing pipeline architecture"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Backend Developers, Architects"
 status: "ACTIVE"
 category: "Queue"
 ---
-
 
 # Core Email Pipeline
 
@@ -51,67 +50,47 @@ graph TD
     H --> I
     I -->|Webhook| J[Analytics Processor]
 
-
 ```sql
-
 
 1. **Campaign Trigger**: User schedules a campaign or API triggers a send.
 
-
 2. **Job Creator**: Breaks campaign into individual email jobs.
-
 
 3. **Redis Queue**: Buffers jobs, managing priority and scheduling.
 
-
 4. **Worker Nodes**: Scalable fleet of workers processing jobs.
-
 
 5. **Content Engine**: Replaces variables (`{{name}}`) with actual data.
 
-
 6. **Routing Logic**: Decides delivery path (Internal vs. ESP).
 
-
 7. **Delivery**: Sends email.
-
 
 8. **Analytics**: Tracks delivery, opens, clicks via webhooks.
 
 ---
 
-
 ## Level 2: Queue Management
-
 
 ### Technology Stack
 
-
 - **Queue Engine**: PostgreSQL + Redis (Native queue implementation)
-
 
 - **Storage**: Redis (Persistent) + PostgreSQL (Job metadata)
 
-
 - **Workers**: Node.js microservices
-
 
 ### Queue Structure
 
 The pipeline uses multiple queues to manage priority and isolation:
 
-
 1. **`priority-high`**: Transactional emails (password resets, alerts). Processed immediately.
-
 
 2. **`campaign-standard`**: Bulk marketing emails. Standard priority.
 
-
 3. **`warmup`**: Automated warmup traffic. Lower priority.
 
-
 4. **`retry`**: Failed jobs waiting for retry.
-
 
 ### Throttling & Rate Limiting
 
@@ -121,52 +100,38 @@ Prevents overwhelming the database or external APIs.
 ## Per-Tenant Rate Limiting:
 Ensures fair usage among tenants.
 
-
 - *Starter Plan*: 10 emails/sec
-
 
 - *Business Plan*: 100 emails/sec
 
 ## Per-Node Throttling:
 Respects warmup limits for internal IPs.
 
-
 - *Day 1*: 50 emails/day
 
-
 - *Day 2*: 100 emails/day
-
 
 - ...
 
 ---
 
-
 ## Level 3: Technical Implementation
-
 
 ### Job Lifecycle
 
 A single email job (`EmailJob`) goes through these states:
 
-
 1. **Waiting**: In Redis, waiting for a worker.
-
 
 2. **Active**: Being processed by a worker.
 
-
 3. **Completed**: Successfully sent to upstream provider.
-
 
 4. **Failed**: Error occurred (e.g., timeout, API error).
 
-
 5. **Delayed**: Scheduled for future (e.g., "Send at 9 AM").
 
-
 ### Worker Logic
-
 
 ```
 
@@ -238,7 +203,7 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 
 ### Tasks
 
-- **[Epic 6: Core Email Pipeline](/docs/tasks/epic-6-core-email-pipeline/README)** - Development tasks
+- **Epic 6: Core Email Pipeline** - Internal task reference for development work
 
 ---
 
@@ -247,4 +212,3 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 **Throughput:** Scalable to millions/hour
 
 *The Core Email Pipeline ensures that every email is delivered, tracked, and accounted for, regardless of volume.*
-

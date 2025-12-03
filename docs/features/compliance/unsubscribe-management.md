@@ -1,4 +1,4 @@
----
+﻿---
 title: "Unsubscribe Management"
 description: "Automated unsubscribe handling and opt-out list management for PenguinMails"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Marketing Teams, Operations"
 status: "ACTIVE"
 category: "Compliance"
 ---
-
 
 # Unsubscribe Management
 
@@ -51,25 +50,24 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 
 #### Technical Implementation
 
-**List-Unsubscribe Header (RFC 8058)**
+##### List-Unsubscribe Header (RFC 8058)
 
 ```text
 
 List-Unsubscribe: <https://penguinmails.com/unsubscribe/{{token}}>
 List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
-
 ```
 
-**Benefits:**
+##### Benefits
 
-- ✅ Gmail/Outlook "Unsubscribe" button compatibility
+- âœ… Gmail/Outlook "Unsubscribe" button compatibility
 
-- ✅ Reduces spam complaints (users unsubscribe vs report spam)
+- âœ… Reduces spam complaints (users unsubscribe vs report spam)
 
-- ✅ Improves sender reputation
+- âœ… Improves sender reputation
 
-- ✅ Industry best practice
+- âœ… Industry best practice
 
 ### Global Suppression List
 
@@ -77,7 +75,7 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 #### Suppression Types
 
-**1. Global Suppression (Platform-Wide)**
+##### 1. Global Suppression (Platform-Wide)
 
 - Email address blocked across all tenants
 
@@ -87,7 +85,7 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 - Perpetual storage
 
-**2. Tenant Suppression (Company-Wide)**
+##### 2. Tenant Suppression (Company-Wide)
 
 - Email blocked for specific tenant/company
 
@@ -97,7 +95,7 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 - User preference respected
 
-**3. Workspace Suppression (Team-Specific)**
+##### 3. Workspace Suppression (Team-Specific)
 
 - Email blocked for specific workspace
 
@@ -107,7 +105,7 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 - Flexible opt-in/opt-out
 
-**4. Campaign-Type Suppression (Granular)**
+##### 4. Campaign-Type Suppression (Granular)
 
 - Opt-out of specific email types (newsletters, promotions, updates)
 
@@ -152,9 +150,8 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
     </a>
   </p>
 
-  <p><small>© {{current_year}} {{company.name}}. All rights reserved.</small></p>
+  <p><small>Â© {{current_year}} {{company.name}}. All rights reserved.</small></p>
 </footer>
-
 
 ```
 
@@ -174,15 +171,15 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 **Visibility Requirements:**
 
-- ✅ Clearly visible and readable
+- âœ… Clearly visible and readable
 
-- ✅ Font size minimum 10px
+- âœ… Font size minimum 10px
 
-- ✅ Contrasting color from background
+- âœ… Contrasting color from background
 
-- ✅ Positioned in footer (standard location)
+- âœ… Positioned in footer (standard location)
 
-- ✅ Mobile-optimized (large tap target)
+- âœ… Mobile-optimized (large tap target)
 
 ---
 
@@ -243,19 +240,18 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 ```text
 
 Unsubscribe Request Received
-  ↓
+  â†“
 Validate Token (prevent abuse)
-  ↓
+  â†“
 Remove from Active Campaigns (immediate)
-  ↓
+  â†“
 Add to Suppression List (permanent)
-  ↓
+  â†“
 Update User Preferences (if preference center)
-  ↓
+  â†“
 Send Confirmation (optional)
-  ↓
+  â†“
 Audit Log Entry (compliance record)
-
 
 ```
 
@@ -277,17 +273,16 @@ Audit Log Entry (compliance record)
 
 #### Import Sources
 
-**CSV Import**
+##### CSV Import
 
 ```csv
 email,reason,date,source
 user@example.com,user_request,2025-11-24,manual
 spam@example.com,spam_complaint,2025-11-23,abuse_report
 
-
 ```
 
-**API Import**
+##### API Import
 
 ```javascript
 POST /api/v1/suppression-list/bulk
@@ -303,7 +298,6 @@ Content-Type: application/json
   ]
 }
 
-
 ```
 
 ### CRM Integration
@@ -318,7 +312,7 @@ Content-Type: application/json
 
 #### Export Options
 
-**Suppression List Export**
+##### Suppression List Export
 
 - **CSV format** - Import into other systems
 
@@ -336,10 +330,11 @@ Content-Type: application/json
 
 #### Feedback Loop (FBL) Processing
 
-**What are Feedback Loops?**
+##### What are Feedback Loops?
+
 ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
-**PenguinMails FBL Integration:**
+##### PenguinMails FBL Integration
 
 1. ISP sends spam complaint to PenguinMails
 
@@ -351,7 +346,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 5. Complaint tracked for deliverability monitoring
 
-**Supported ISPs:**
+##### Supported ISPs
 
 - Gmail (via Google Postmaster)
 
@@ -363,7 +358,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 #### Bounce Handling
 
-**Hard Bounces** (permanent delivery failures)
+##### Hard Bounces (permanent delivery failures)
 
 - Invalid email addresses
 
@@ -371,9 +366,9 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 - Blocked by recipient server
 
-**Action:** Automatically suppress hard bounces after 1 failure
+Action: Automatically suppress hard bounces after 1 failure
 
-**Soft Bounces** (temporary delivery failures)
+##### Soft Bounces (temporary delivery failures)
 
 - Mailbox full
 
@@ -381,7 +376,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 - Email too large
 
-**Action:** Suppress after 3 consecutive soft bounces (configurable)
+Action: Suppress after 3 consecutive soft bounces (configurable)
 
 ---
 
@@ -391,7 +386,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 #### Admin Actions
 
-**Add to Suppression List**
+##### Add to Suppression List
 
 - Single email address
 
@@ -401,7 +396,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 - Optional expiration date
 
-**Remove from Suppression List**
+##### Remove from Suppression List
 
 - Requires user consent (documented)
 
@@ -411,7 +406,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 
 - Admin approval required (optional)
 
-**View Suppression History**
+##### View Suppression History
 
 - When added to suppression list
 
@@ -448,7 +443,6 @@ Response:
   ]
 }
 
-
 ```
 
 #### Add to Suppression List
@@ -464,7 +458,6 @@ Content-Type: application/json
   "source": "api"
 }
 
-
 ```
 
 #### Check if Email Suppressed
@@ -479,7 +472,6 @@ Response:
   "reason": "user_request",
   "added_at": "2025-11-24T10:30:00Z"
 }
-
 
 ```
 
@@ -507,7 +499,6 @@ CREATE TABLE suppression_list (
 CREATE INDEX idx_suppression_email ON suppression_list(email);
 CREATE INDEX idx_suppression_tenant ON suppression_list(tenant_id);
 CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
-
 
 ```
 
@@ -541,7 +532,6 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
     "action_taken": "added_to_suppression"
   }
 }
-
 
 ```
 
@@ -601,11 +591,11 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 **Benchmarks:**
 
-- ✅ Good: < 0.2% unsubscribe rate
+- âœ… Good: < 0.2% unsubscribe rate
 
-- ⚠️ Concerning: 0.2% - 0.5% unsubscribe rate
+- âš ï¸ Concerning: 0.2% - 0.5% unsubscribe rate
 
-- ❌ Poor: > 0.5% unsubscribe rate
+- âŒ Poor: > 0.5% unsubscribe rate
 
 ---
 
@@ -635,4 +625,3 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 **Compliance:** CAN-SPAM, GDPR, CCPA, CASL
 
 *Proper unsubscribe management is critical for compliance, deliverability, and user trust. PenguinMails automates this process to ensure best-in-class opt-out handling.*
-

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Contact Segmentation"
 description: "Dynamic contact segmentation with rule-based and manual list creation for targeted campaigns"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - leads/leads-management
-
 
   - leads/lead-scoring
 
-
   - campaigns/campaign-management/overview
-
 
   - campaigns/personalization-system
 related_tasks:
 
-
   - epic-7-leads-management
 ---
-
 
 # Contact Segmentation
 
@@ -57,12 +51,11 @@ Contact Segmentation enables you to divide your contact database into meaningful
 
 ```text
 
-Contacts → Segments → Create New Segment
+Contacts â†’ Segments â†’ Create New Segment
 
 Segment Name: Active Subscribers
 Description: Contacts who opened emails in last 30 days
-Type: ○ Dynamic  ○ Static
-
+Type: â—‹ Dynamic  â—‹ Static
 
 ```
 
@@ -71,12 +64,11 @@ Type: ○ Dynamic  ○ Static
 ```text
 
 Conditions (Match ALL):
-  ☑ Last Email Opened: within last 30 days
-  ☑ Subscription Status: Active
-  ☑ Unsubscribed: No
+  â˜‘ Last Email Opened: within last 30 days
+  â˜‘ Subscription Status: Active
+  â˜‘ Unsubscribed: No
 
 Preview: 2,847 contacts match
-
 
 ```
 
@@ -86,12 +78,11 @@ Preview: 2,847 contacts match
 
 [Save Segment]
 
-✓ Segment created: "Active Subscribers"
+âœ“ Segment created: "Active Subscribers"
   2,847 contacts
 
 Quick Actions:
   [Create Campaign] [Export List] [View Contacts]
-
 
 ```
 
@@ -105,15 +96,11 @@ Quick Actions:
 
 Conditions:
 
+  - Opened emails: â‰¥ 5 in last 30 days
 
-  - Opened emails: ≥ 5 in last 30 days
-
-
-  - Clicked links: ≥ 2 in last 30 days
-
+  - Clicked links: â‰¥ 2 in last 30 days
 
   - Last activity: Within 7 days
-
 
 ```
 
@@ -123,15 +110,11 @@ Conditions:
 
 Conditions:
 
-
   - Last opened: More than 90 days ago
-
 
   - Subscription status: Active
 
-
   - Unsubscribed: No
-
 
 ```
 
@@ -141,15 +124,11 @@ Conditions:
 
 Conditions:
 
-
   - Total opens: 0
-
 
   - Total clicks: 0
 
-
   - Date added: More than 30 days ago
-
 
 ```
 
@@ -161,16 +140,12 @@ Conditions:
 
 Conditions:
 
-
   - Country: United States
-
 
   - State: California
   OR
 
-
   - City: San Francisco
-
 
 ```
 
@@ -180,12 +155,9 @@ Conditions:
 
 Conditions:
 
-
   - Custom Field: company_size
 
-
   - Value: 51-200 employees
-
 
 ```
 
@@ -195,12 +167,9 @@ Conditions:
 
 Conditions:
 
-
   - Custom Field: industry
 
-
   - Value: SaaS, Technology, Software
-
 
 ```
 
@@ -212,12 +181,9 @@ Conditions:
 
 Conditions:
 
-
   - Date added: Within last 7 days
 
-
   - Emails sent: 0
-
 
 ```
 
@@ -227,12 +193,9 @@ Conditions:
 
 Conditions:
 
-
   - Custom Field: account_type = "trial"
 
-
   - Custom Field: trial_end_date: Within next 7 days
-
 
 ```
 
@@ -242,12 +205,9 @@ Conditions:
 
 Conditions:
 
-
   - Custom Field: account_type = "paid"
 
-
   - Custom Field: last_purchase_date: Within last 90 days
-
 
 ```
 
@@ -267,18 +227,13 @@ Conditions:
 
 ```text
 
-
 1. Select contacts manually from list
-
 
 2. Or import CSV file
 
-
 3. Name segment
 
-
 4. Save as static segment (won't auto-update)
-
 
 ```
 
@@ -298,20 +253,15 @@ Match ANY of these groups:
 
 Group 1 (Engaged):
 
+  - Opens: â‰¥ 3 in last 30 days
 
-  - Opens: ≥ 3 in last 30 days
-
-
-  - Clicks: ≥ 1 in last 30 days
+  - Clicks: â‰¥ 1 in last 30 days
 
 Group 2 (High-Value):
 
+  - Custom Field: lead_score â‰¥ 75
 
-  - Custom Field: lead_score ≥ 75
-
-
-  - Custom Field: customer_ltv ≥ $1,000
-
+  - Custom Field: customer_ltv â‰¥ $1,000
 
 ```
 
@@ -322,28 +272,21 @@ Group 2 (High-Value):
 Match ALL:
   Group 1 (Location):
 
-
     - Country: United States OR Canada
-
 
     - Timezone: PST, MST, CST, EST
 
   Group 2 (Engagement):
 
-
     - Last opened: Within 60 days
 
-
-    - Total clicks: ≥ 5
+    - Total clicks: â‰¥ 5
 
   Group 3 (Not):
 
-
     - Tag: does NOT include "unqualified"
 
-
-    - Custom Field: bounced ≠ true
-
+    - Custom Field: bounced â‰  true
 
 ```
 
@@ -357,15 +300,11 @@ Match ALL:
 
 Conditions:
 
-
-  - Total clicks: ≥ 10
-
+  - Total clicks: â‰¥ 10
 
   - Total conversions: 0
 
-
   - Last clicked: Within 30 days
-
 
 ```
 
@@ -375,15 +314,11 @@ Conditions:
 
 Conditions:
 
-
   - Last opened device: Mobile
 
-
-  - Open count (mobile): ≥ 5
-
+  - Open count (mobile): â‰¥ 5
 
   - Open count (desktop): 0
-
 
 ```
 
@@ -393,12 +328,9 @@ Conditions:
 
 Conditions:
 
-
   - Most common open time: 9am-12pm
 
-
   - Preferred day: Monday-Friday
-
 
 ```
 
@@ -410,15 +342,11 @@ Conditions:
 
 Conditions:
 
-
   - Campaign: "Product Launch Q4"
-
 
   - Clicked URL: contains "pricing"
 
-
   - Did NOT click URL: contains "demo"
-
 
 ```
 
@@ -428,18 +356,13 @@ Conditions:
 
 Conditions:
 
-
   - Campaign: "Feature Announcement"
-
 
   - Opened: Yes
 
-
   - Clicked any link: No
 
-
-  - Days since sent: ≥ 3
-
+  - Days since sent: â‰¥ 3
 
 ```
 
@@ -451,32 +374,24 @@ Conditions:
 
 Hot Leads (Score 80-100):
 
-
   - Lead Score: 80-100
 
-
   - Last activity: Within 14 days
-
 
   - Opened last email: Yes
 
 Warm Leads (Score 50-79):
 
-
   - Lead Score: 50-79
-
 
   - Last activity: Within 30 days
 
 Cold Leads (Score 0-49):
 
-
   - Lead Score: 0-49
   OR
 
-
   - Last activity: More than 60 days ago
-
 
 ```
 
@@ -488,12 +403,9 @@ Cold Leads (Score 0-49):
 
 Conditions:
 
-
   - Custom Field: interests
 
-
   - Contains ANY: "email marketing", "automation", "analytics"
-
 
 ```
 
@@ -503,20 +415,15 @@ Conditions:
 
 Trial Expiring Soon:
 
-
   - Custom Field: trial_end_date
-
 
   - Is between: today and 7 days from now
 
 Anniversary Outreach:
 
-
   - Custom Field: signup_date
 
-
   - Anniversary: this month
-
 
 ```
 
@@ -526,19 +433,13 @@ Anniversary Outreach:
 
 High-Value Cohort:
 
-
   - Custom Field: total_revenue
-
 
   - Is greater than: $5,000
 
-
-
   - Custom Field: lifetime_opens
 
-
   - Is greater than: 50
-
 
 ```
 
@@ -550,17 +451,13 @@ High-Value Cohort:
 
 Include:
 
-
   - Segment: "All Active Subscribers"
 
 Exclude:
 
-
   - Segment: "Recent Purchasers"
 
-
   - Segment: "Unengaged (90+ days)"
-
 
 ```
 
@@ -570,17 +467,13 @@ Exclude:
 
 Include:
 
-
   - All contacts in "Product Users"
 
 Exclude:
 
-
   - Received campaign: Within last 7 days
 
-
   - Campaign name: contains "Product"
-
 
 ```
 
@@ -600,12 +493,9 @@ Performance (Last 30 Days):
 
 Trend:
 
-
   - Segment size: +12% month-over-month
 
-
   - Engagement: +5% vs all contacts
-
 
 ```
 
@@ -626,7 +516,6 @@ Test Setup:
 
 Result: Segment A 2.3x higher conversion
 Action: Adjust scoring model
-
 
 ```
 
@@ -712,7 +601,6 @@ CREATE TABLE segment_analytics (
 );
 
 CREATE INDEX idx_segment_analytics_segment_date ON segment_analytics(segment_id, date);
-
 
 ```
 
@@ -878,7 +766,6 @@ class SegmentEngine {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -916,7 +803,6 @@ cron.schedule('0 2 * * *', async () => {  // 2 AM daily
     await calculateSegmentAnalytics(segment.id);
   }
 });
-
 
 ```
 
@@ -986,7 +872,6 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
   });
 });
 
-
 ```
 
 ---
@@ -1009,4 +894,3 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
-

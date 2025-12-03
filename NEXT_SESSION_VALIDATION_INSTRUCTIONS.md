@@ -2,93 +2,65 @@
 
 This repository now includes unit-style tests for our documentation validation commands. Continue in the next chat by following this guide.
 
-
 ## Overview
 
 We are validating each grep/awk-based rule with small, controlled fixtures before running the rules across the full `docs/` tree. This TDD-like approach ensures our regexes are accurate and minimize false positives/negatives.
 
 Project link policy reminder:
 
-
 - Use site-absolute links beginning with `/docs/`.
-
 
 - Avoid relative Markdown links inside `docs/` (no `./` or `../`).
 
-
 - Drop `.md` extensions when linking to routable docs.
-
 
 ## What’s Already Implemented
 
-
 - Frontmatter validations
-
 
   - Fixtures: `.kiro/tests/validation-fixtures/frontmatter/`
 
-
     - `good.md`, `missing_title.md`, `missing_description.md`, `missing_last_modified_date.md`, `missing_level.md`, `missing_persona.md`, `keywords_in_body_bold.md`, `keywords_in_body_plain.md`, `incomplete_frontmatter.md`
-
 
   - Runner: `.kiro/tests/test_frontmatter_validations.sh`
 
-
   - Verified rules:
-
 
     - Missing fields: `^title:`, `^description:`, `^last_modified_date:`, `^level:`, `^persona:`
 
-
     - Keywords in body: `^**Keywords**:` and `^Keywords:`
-
 
     - Incomplete frontmatter: odd number of `---` via `awk` per file
 
-
 - Link validations
-
 
   - Fixtures: `.kiro/tests/validation-fixtures/links/`
 
-
     - `tasks_link_relative.md`, `tasks_link_absolute.md`
-
 
     - `user_journeys_link_relative.md`, `user_journeys_link_absolute.md`
 
-
     - `contributing_link.md`, `readme_link_parent.md`, `readme_link_root_abs.md`
-
 
     - `md_extension_site_absolute.md`, `relative_links.md`
 
-
   - Runner: `.kiro/tests/test_link_validations.sh`
-
 
   - Verified rules:
 
-
     - Links to `tasks/` and `user-journeys/` (relative and absolute)
-
 
     - Links to `CONTRIBUTING` and root `README` (relative and absolute)
 
-
     - Site-absolute internal `.md` links: `](/docs/.*\.md)`
 
-
     - Relative `.md` links: `](\..*/.*\.md)`
-
 
     - Relative links using `./` or `../`: use `grep -E` with pattern `"\]\((\./|\.\./)"`
 
 All implemented tests currently pass.
 
-
 ## How to Run Existing Test Suites
-
 
 ```bash
 
@@ -361,7 +333,6 @@ Expected behavior with the current fixtures:
 
   - `Directories missing README.md hub pages` → 2 (`good/` and `violations/` have no `README.md`).
 
-
 ## Next Session: How to Continue
 
 In the next chat/session, continue from this setup by:
@@ -396,13 +367,11 @@ In the next chat/session, continue from this setup by:
 
 - Use the result as a high-level report, then rely on the `.kiro/tests` suites for precise rule-by-rule validation and regression protection.
 
-
 ## After All Tests Pass
 
 1) Run the validated commands across `docs/` to generate a real report.
 2) Propose targeted, automated fixes (backup first), such as removing `.md` from site-absolute `/docs/...` links.
 3) With approval, run Docker-based markdownlint:
-
 
 ```
 
@@ -414,17 +383,12 @@ docker run --rm -v $PWD:/md -w /md peterdavehello/markdownlint:latest \
 
 4) Re-run tests to ensure no regressions.
 
-
 ## Acceptance Criteria
-
 
 - Every test script passes (0 failures).
 
-
 - Regexes match the intended fixture files and avoid false positives.
 
-
 - Full-docs checks (after tests) align with our link policy and formatting rules.
-
 
 - Optional markdownlint produces either zero issues or a clear, actionable list.

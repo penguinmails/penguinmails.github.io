@@ -1,11 +1,10 @@
----
+﻿---
 title: "Content Database Documentation"
 description: "Content Database Documentation - Overview and Navigation"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Content Database Documentation
 
@@ -102,4 +101,3 @@ This content database integrates with:
 - Backup systems for data durability and compliance
 
 For questions or support, contact the Engineering team.
-

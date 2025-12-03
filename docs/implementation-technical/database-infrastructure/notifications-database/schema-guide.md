@@ -1,9 +1,8 @@
----
+﻿---
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Notifications & System Events Database Schema Guide
 
@@ -136,7 +135,6 @@ CREATE INDEX idx_notifications_unread
     ON notifications(user_id, tenant_id, is_read, created_at DESC)
     WHERE is_read = false;
 
-
 ```
 
 Semantics:
@@ -231,7 +229,6 @@ CREATE INDEX idx_admin_system_events_tenant
 CREATE INDEX idx_admin_system_events_severity
     ON admin_system_events(severity, created_at DESC);
 
-
 ```
 
 Semantics:
@@ -260,7 +257,7 @@ Lifecycle:
 
 - Retention:
 
-  - Keep for 90–365 days (configurable) to support:
+  - Keep for 90â€“365 days (configurable) to support:
 
     - Incident reviews.
 
@@ -396,4 +393,3 @@ See:
 for the visual ER representation of this schema.
 
 ---
-

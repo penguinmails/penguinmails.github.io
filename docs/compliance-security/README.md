@@ -254,7 +254,7 @@ Global compliance and privacy frameworks:
 
 - **Technical Implementation**: [Technical Documentation](/docs/technical)
 
-- **User Journeys**: [User Journey Documentation](/docs/user-journeys)
+- **User Journeys**: User Journey Documentation (internal journey reference)
 
 ---
 
@@ -316,5 +316,5 @@ Global compliance and privacy frameworks:
 
 *Security and privacy are fundamental to our service. This framework ensures we maintain the highest standards while supporting business growth and user trust.*
 
-*Previous: [User Journeys](/docs/user-journeys) | Next: [Archive](/docs/archive) →*
+*Previous: User Journeys (internal journey reference) | Next: [Archive](/docs/archive) →*
 ---

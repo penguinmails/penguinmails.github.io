@@ -1,4 +1,4 @@
----
+﻿---
 title: "Contact Import/Export"
 description: "Bulk import and export contacts with CSV/Excel support, field mapping, validation, and history tracking"
 level: "2"
@@ -7,20 +7,15 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-
   - leads/leads-management
 
-
   - leads/contact-segmentation
-
 
   - leads/lead-scoring
 related_tasks:
 
-
   - epic-7-leads-management
 ---
-
 
 # Contact Import/Export
 
@@ -71,7 +66,6 @@ email,first_name,last_name,company,phone,tags,custom_field_industry
 john@example.com,John,Doe,Acme Inc,555-1234,customer|vip,SaaS
 jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
 
-
 ```
 
 **Required Field:**
@@ -82,17 +76,16 @@ jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
 
 ```text
 
-Contacts → Import → Upload File
+Contacts â†’ Import â†’ Upload File
 
 [Choose File] contacts.csv (2.5 MB, 5,000 rows)
 
 Preview:
-  ✓ 5,000 rows detected
-  ✓ 8 columns found
-  ✓ Header row detected
+  âœ“ 5,000 rows detected
+  âœ“ 8 columns found
+  âœ“ Header row detected
 
-[Next: Map Fields →]
-
+[Next: Map Fields â†’]
 
 ```
 
@@ -102,21 +95,20 @@ Preview:
 
 Map Your Columns:
 
-CSV Column          →  PenguinMails Field
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-email               →  [Email Address] ✓
-first_name          →  [First Name] ✓
-last_name           →  [Last Name] ✓
-company             →  [Company] ✓
-phone               →  [Phone Number] ✓
-tags                →  [Tags] (comma/pipe separated)
-custom_field_industry → [Custom Field: Industry]
+CSV Column          â†’  PenguinMails Field
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+email               â†’  [Email Address] âœ“
+first_name          â†’  [First Name] âœ“
+last_name           â†’  [Last Name] âœ“
+company             â†’  [Company] âœ“
+phone               â†’  [Phone Number] âœ“
+tags                â†’  [Tags] (comma/pipe separated)
+custom_field_industry â†’ [Custom Field: Industry]
 
 Unmapped Columns:
   (none)
 
-[Next: Validation →]
-
+[Next: Validation â†’]
 
 ```
 
@@ -126,22 +118,21 @@ Unmapped Columns:
 
 Validation Results:
 
-✓ Valid Records: 4,892 (97.8%)
-⚠ Warnings: 95 (1.9%)
-✗ Errors: 13 (0.3%)
+âœ“ Valid Records: 4,892 (97.8%)
+âš  Warnings: 95 (1.9%)
+âœ— Errors: 13 (0.3%)
 
 Issues Found:
-  13 × Invalid email format
-  82 × Duplicate emails (will skip)
-  13 × Phone number format issues
+  13 Ã— Invalid email format
+  82 Ã— Duplicate emails (will skip)
+  13 Ã— Phone number format issues
 
 Actions:
-  ○ Import only valid records (4,892)
-  ○ Fix errors and re-upload
-  ○ Download error report
+  â—‹ Import only valid records (4,892)
+  â—‹ Fix errors and re-upload
+  â—‹ Download error report
 
 [Import Valid Records]
-
 
 ```
 
@@ -152,19 +143,18 @@ Actions:
 Import Options:
 
 Duplicate Handling:
-  ○ Skip duplicates (keep existing)
-  ● Update existing (merge new data)
-  ○ Create duplicates (allow)
+  â—‹ Skip duplicates (keep existing)
+  â— Update existing (merge new data)
+  â—‹ Create duplicates (allow)
 
 Tags:
-  ☑ Add tag: "imported_2025_11"
-  ☑ Add tag: "bulk_upload"
+  â˜‘ Add tag: "imported_2025_11"
+  â˜‘ Add tag: "bulk_upload"
 
 Segment:
-  ☑ Add to segment: Create new "November Import"
+  â˜‘ Add to segment: Create new "November Import"
 
 [Start Import]
-
 
 ```
 
@@ -174,13 +164,12 @@ Segment:
 
 Importing Contacts...
 
-Progress: ████████████░░░░ 75% (3,669 / 4,892)
+Progress: â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘ 75% (3,669 / 4,892)
 
 Elapsed: 00:02:14
 Estimated remaining: 00:00:45
 
 [View Live Progress]
-
 
 ```
 
@@ -188,7 +177,7 @@ Estimated remaining: 00:00:45
 
 ```text
 
-✓ Import Completed Successfully
+âœ“ Import Completed Successfully
 
 Summary:
   Total Rows: 5,000
@@ -200,7 +189,6 @@ Summary:
 
 [View Contacts] [Download Report] [Import History]
 
-
 ```
 
 ### Quick Export
@@ -209,33 +197,32 @@ Summary:
 
 ```text
 
-Contacts → Export
+Contacts â†’ Export
 
 Selection:
-  ● All Contacts (12,847)
-  ○ Current View/Filter (4,892)
-  ○ Selected Contacts (0)
-  ○ Specific Segment
+  â— All Contacts (12,847)
+  â—‹ Current View/Filter (4,892)
+  â—‹ Selected Contacts (0)
+  â—‹ Specific Segment
 
 Format:
-  ● CSV
-  ○ Excel (.xlsx)
-  ○ JSON
+  â— CSV
+  â—‹ Excel (.xlsx)
+  â—‹ JSON
 
 Fields:
-  ☑ Email
-  ☑ First Name
-  ☑ Last Name
-  ☑ Company
-  ☑ Tags
-  ☑ Lead Score
-  ☑ All Custom Fields
+  â˜‘ Email
+  â˜‘ First Name
+  â˜‘ Last Name
+  â˜‘ Company
+  â˜‘ Tags
+  â˜‘ Lead Score
+  â˜‘ All Custom Fields
 
 [Export]
 
-✓ Export ready: contacts_export_2025-11-25.csv (2.8 MB)
+âœ“ Export ready: contacts_export_2025-11-25.csv (2.8 MB)
 [Download]
-
 
 ```
 
@@ -253,37 +240,27 @@ Fields:
 auto_mapping:
   exact_match:
 
+    - email â†’ email
 
-    - email → email
+    - first_name â†’ firstName
 
+    - firstname â†’ firstName
 
-    - first_name → firstName
-
-
-    - firstname → firstName
-
-
-    - fname → firstName
+    - fname â†’ firstName
 
   fuzzy_match:
 
+    - company_name â†’ company (80% similarity)
 
-    - company_name → company (80% similarity)
+    - org â†’ company
 
-
-    - org → company
-
-
-    - organization → company
+    - organization â†’ company
 
   custom_field_detection:
 
-
     - pattern: custom_*, cf_*
 
-
     - create_if_missing: true
-
 
 ```
 
@@ -294,17 +271,16 @@ auto_mapping:
 Custom Field Mapping:
 
 CSV Column: "annual_revenue"
-  → Map to: [Create New Custom Field]
+  â†’ Map to: [Create New Custom Field]
      Field Name: annual_revenue
-     Field Type: ○ Text  ● Number  ○ Date  ○ Boolean
+     Field Type: â—‹ Text  â— Number  â—‹ Date  â—‹ Boolean
      Validation: Min: 0, Max: 1000000000
 
 CSV Column: "subscription_tier"
-  → Map to: [Create New Custom Field]
+  â†’ Map to: [Create New Custom Field]
      Field Name: subscription_tier
-     Field Type: ○ Text  ● Select  ○ Multi-Select
+     Field Type: â—‹ Text  â— Select  â—‹ Multi-Select
      Options: Free, Starter, Pro, Enterprise
-
 
 ```
 
@@ -313,7 +289,7 @@ CSV Column: "subscription_tier"
 ```yaml
 transformations:
   phone:
-    normalize: true  # (555) 123-4567 → +15551234567
+    normalize: true  # (555) 123-4567 â†’ +15551234567
     default_country: US
 
   tags:
@@ -326,8 +302,7 @@ transformations:
     timezone: "America/New_York"
 
   company:
-    title_case: true  # "acme inc" → "Acme Inc"
-
+    title_case: true  # "acme inc" â†’ "Acme Inc"
 
 ```
 
@@ -348,7 +323,6 @@ email_validation:
     disposable: warn
     role_based: accept
 
-
 ```
 
 **Duplicate Detection:**
@@ -357,14 +331,11 @@ email_validation:
 duplicate_detection:
   match_on:
 
-
     - email  # Primary key
 
   fuzzy_match:
 
-
     - first_name + last_name + company
-
 
     - phone
 
@@ -372,18 +343,13 @@ duplicate_detection:
 
   resolution_strategy:
 
-
     - skip_new
-
 
     - update_existing
 
-
     - merge_fields
 
-
     - create_new
-
 
 ```
 
@@ -408,7 +374,6 @@ field_validation:
     validate_type: true
     enforce_required: true
 
-
 ```
 
 #### Merge Strategies
@@ -420,10 +385,10 @@ field_validation:
 When duplicate email found:
 
 Strategy: Smart Merge
-  ○ Keep existing values (skip import)
-  ● Update with new values (overwrite)
-  ○ Merge non-empty values (fill blanks)
-  ○ Create duplicate contact
+  â—‹ Keep existing values (skip import)
+  â— Update with new values (overwrite)
+  â—‹ Merge non-empty values (fill blanks)
+  â—‹ Create duplicate contact
 
 Per-Field Strategy:
   Email: [Keep existing]
@@ -433,7 +398,6 @@ Per-Field Strategy:
   Tags: [Append (merge)]
   Custom Fields: [Update if blank]
   Lead Score: [Keep existing]
-
 
 ```
 
@@ -457,7 +421,6 @@ conflict_resolution:
   lead_score:
     action: keep_higher_value
 
-
 ```
 
 ### Advanced Export Options
@@ -472,13 +435,12 @@ Export Contacts
 
 Segment: Hot Leads (Score 75+)
 Filters:
-  ☑ Lead Score: 75-100
-  ☑ Last Activity: Within 30 days
-  ☑ Subscription: Active
-  ☑ Exclude: Bounced emails
+  â˜‘ Lead Score: 75-100
+  â˜‘ Last Activity: Within 30 days
+  â˜‘ Subscription: Active
+  â˜‘ Exclude: Bounced emails
 
 Result: 1,247 contacts
-
 
 ```
 
@@ -492,7 +454,6 @@ Export Contacts Added:
 
   Includes: 3,450 contacts
 
-
 ```
 
 **Export by Custom Criteria:**
@@ -501,12 +462,11 @@ Export Contacts Added:
 
 Advanced Filter:
   Country = "United States"
-  AND Company Size ≥ "51-200"
+  AND Company Size â‰¥ "51-200"
   AND Lead Score > 50
   AND Tags contains "enterprise"
 
   Result: 892 contacts
-
 
 ```
 
@@ -517,35 +477,34 @@ Advanced Filter:
 Select Fields to Export:
 
 Standard Fields:
-  ☑ Email
-  ☑ First Name
-  ☑ Last Name
-  ☑ Company
-  ☑ Phone
-  ☑ Created Date
-  ☑ Last Activity
-  ☑ Lead Score
-  ☑ Tags
-  ☐ Internal Notes
+  â˜‘ Email
+  â˜‘ First Name
+  â˜‘ Last Name
+  â˜‘ Company
+  â˜‘ Phone
+  â˜‘ Created Date
+  â˜‘ Last Activity
+  â˜‘ Lead Score
+  â˜‘ Tags
+  â˜ Internal Notes
 
 Custom Fields:
-  ☑ Industry
-  ☑ Company Size
-  ☑ Annual Revenue
-  ☐ Account Type
-  ☐ Trial End Date
+  â˜‘ Industry
+  â˜‘ Company Size
+  â˜‘ Annual Revenue
+  â˜ Account Type
+  â˜ Trial End Date
 
 Engagement Metrics:
-  ☑ Total Emails Sent
-  ☑ Total Opens
-  ☑ Total Clicks
-  ☑ Last Opened Date
-  ☐ Average Open Rate
-  ☐ Average Click Rate
+  â˜‘ Total Emails Sent
+  â˜‘ Total Opens
+  â˜‘ Total Clicks
+  â˜‘ Last Opened Date
+  â˜ Average Open Rate
+  â˜ Average Click Rate
 
 Segments:
-  ☑ Active Segments (comma-separated)
-
+  â˜‘ Active Segments (comma-separated)
 
 ```
 
@@ -557,7 +516,6 @@ Segments:
 email,first_name,last_name,company,phone,lead_score,tags,industry,created_at
 john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-15T14:30:00Z
 
-
 ```
 
 **Excel Export (.xlsx):**
@@ -566,21 +524,15 @@ john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-1
 
 Features:
 
-
   - Multiple sheets (Contacts, Custom Fields, Segments)
-
 
   - Formatted headers
 
-
   - Data validation
-
 
   - Freeze panes
 
-
   - Auto-filter enabled
-
 
 ```
 
@@ -606,7 +558,6 @@ Features:
   }
 ]
 
-
 ```
 
 ### Import History & Rollback
@@ -618,15 +569,14 @@ Features:
 Import History
 
 Date                User           File               Status    Records
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-2025-11-25 14:30   Sarah Johnson  contacts_nov.csv   ✓ Success  4,892
-2025-11-18 09:15   Michael Chen   leads_q4.xlsx      ✓ Success  2,341
-2025-11-10 16:45   Sarah Johnson  trial_users.csv    ⚠ Partial  1,450 / 1,500
-2025-11-03 11:20   Emily Davis    webinar_list.csv   ✗ Failed   0 / 850
-2025-10-28 13:00   Sarah Johnson  october_leads.csv  ✓ Success  3,210
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+2025-11-25 14:30   Sarah Johnson  contacts_nov.csv   âœ“ Success  4,892
+2025-11-18 09:15   Michael Chen   leads_q4.xlsx      âœ“ Success  2,341
+2025-11-10 16:45   Sarah Johnson  trial_users.csv    âš  Partial  1,450 / 1,500
+2025-11-03 11:20   Emily Davis    webinar_list.csv   âœ— Failed   0 / 850
+2025-10-28 13:00   Sarah Johnson  october_leads.csv  âœ“ Success  3,210
 
 [View Details] [Download Report] [Rollback]
-
 
 ```
 
@@ -644,41 +594,34 @@ Summary:
 
   Imported Successfully: 4,892 (97.8%)
 
-
     - New Contacts: 4,460
-
 
     - Updated Existing: 432
 
   Skipped (Errors): 13 (0.3%)
-
 
     - Invalid Email: 13
 
   Skipped (Duplicates): 95 (1.9%)
 
 Mapping:
-  email → Email Address
-  first_name → First Name
-  last_name → Last Name
-  company → Company
-  tags → Tags
+  email â†’ Email Address
+  first_name â†’ First Name
+  last_name â†’ Last Name
+  company â†’ Company
+  tags â†’ Tags
 
 Tags Added:
 
-
   - imported_2025_11
-
 
   - bulk_upload
 
 Segment Created:
 
-
   - "November Import" (4,892 contacts)
 
 [Download Error Report] [Rollback Import]
-
 
 ```
 
@@ -688,28 +631,23 @@ Segment Created:
 
 Rollback Import: contacts_nov.csv
 
-⚠ Warning: This will:
-
+âš  Warning: This will:
 
   - Delete 4,460 contacts created by this import
 
-
   - Restore 432 contacts to their previous state
 
-
   - Remove tags: imported_2025_11, bulk_upload
-
 
   - Delete segment: "November Import"
 
 This action CANNOT be undone.
 
 Confirm rollback:
-  ☐ I understand this will delete 4,460 contacts
-  ☐ I have exported a backup
+  â˜ I understand this will delete 4,460 contacts
+  â˜ I have exported a backup
 
 [Cancel] [Confirm Rollback]
-
 
 ```
 
@@ -746,7 +684,6 @@ scheduled_import:
     add_tag: "salesforce_sync"
     notification_email: admin@example.com
 
-
 ```
 
 **API Import Automation:**
@@ -763,7 +700,6 @@ cron.schedule('0 2 * * *', async () => {
     tags: ['crm_sync', `sync_${new Date().toISOString().split('T')[0]}`],
   });
 });
-
 
 ```
 
@@ -874,7 +810,6 @@ CREATE TABLE export_jobs (
 
 CREATE INDEX idx_export_jobs_tenant ON export_jobs(tenant_id);
 CREATE INDEX idx_export_jobs_status ON export_jobs(status);
-
 
 ```
 
@@ -1233,7 +1168,6 @@ class ImportService {
   }
 }
 
-
 ```
 
 ### Export Service
@@ -1380,7 +1314,6 @@ class ExportService {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -1421,7 +1354,6 @@ cron.schedule('0 4 * * *', async () => {  // 4 AM daily
     await db.exportJobs.delete(exportJob.id);
   }
 });
-
 
 ```
 
@@ -1500,7 +1432,6 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
   return res.json({ downloadUrl: signedUrl });
 });
 
-
 ```
 
 ---
@@ -1521,4 +1452,3 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q1 2026
 **Owner:** Leads Team
-

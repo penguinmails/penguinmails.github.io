@@ -307,9 +307,9 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 ### Planning
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
+- **Product Roadmap** - Feature timeline (see operations roadmap documentation)
 
-- **[User Journeys Hub](/docs/user-journeys)** - All journeys
+- **User Journeys Hub** - Internal hub for journey catalog
 
 ### Features
 
@@ -325,4 +325,4 @@ We test navigation paths with users unfamiliar with current structure to identif
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README)** - Development status
+- **Active Tasks** - Development status (internal tracker reference)

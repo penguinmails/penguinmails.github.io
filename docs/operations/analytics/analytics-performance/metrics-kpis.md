@@ -1,4 +1,4 @@
----
+﻿---
 title: "Metrics & KPIs Framework"
 description: "Comprehensive metrics and KPIs framework for enterprise-grade performance monitoring, business intelligence, and strategic decision-making"
 last_modified_date: "2025-11-10"
@@ -637,7 +637,7 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 ### User Experience
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
 - [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
 
@@ -667,4 +667,3 @@ Navigate to specific analytics areas:
 
 **Keywords**: metrics KPIs, performance monitoring, business intelligence, KPI management, operational excellence, system monitoring, business metrics, strategic analytics
 ---
-

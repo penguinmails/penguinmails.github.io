@@ -1,4 +1,4 @@
----
+﻿---
 title: "Warmup Scheduling"
 description: "Automated email warmup with gradual volume ramping, domain/IP strategies, engagement simulation, and progress tracking"
 level: "2"
@@ -7,23 +7,17 @@ roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
 
-
   - warmup/warmup-management
-
 
   - warmup/reputation-monitoring
 
-
   - domains/domain-management
-
 
   - infrastructure/email-infrastructure-setup
 related_tasks:
 
-
   - epic-4-warmup-deliverability
 ---
-
 
 # Warmup Scheduling
 
@@ -61,12 +55,12 @@ Warmup Scheduling automates the process of establishing sender reputation for ne
 
 ```text
 
-Warmup → Start New Warmup
+Warmup â†’ Start New Warmup
 
 Select Email Account:
-  ○ sarah@penguinmails.com (Connected 2 days ago)
-  ○ support@penguinmails.com (Connected 1 day ago)
-  ● sales@penguinmails.com (Connected today)
+  â—‹ sarah@penguinmails.com (Connected 2 days ago)
+  â—‹ support@penguinmails.com (Connected 1 day ago)
+  â— sales@penguinmails.com (Connected today)
 
 Account Status:
   Domain: penguinmails.com
@@ -74,8 +68,7 @@ Account Status:
   Age: New (0 days)
   Current Reputation: Unknown
 
-[Continue →]
-
+[Continue â†’]
 
 ```
 
@@ -85,29 +78,28 @@ Account Status:
 
 Select Warmup Plan:
 
-● Standard Warmup (Recommended)
+â— Standard Warmup (Recommended)
   Duration: 6 weeks
   Starting Volume: 10 emails/day
   Peak Volume: 500 emails/day
   Best for: Most use cases
 
-○ Aggressive Warmup
+â—‹ Aggressive Warmup
   Duration: 4 weeks
   Starting Volume: 20 emails/day
   Peak Volume: 1,000 emails/day
   Best for: Established domains, urgent needs
 
-○ Conservative Warmup
+â—‹ Conservative Warmup
   Duration: 8 weeks
   Starting Volume: 5 emails/day
   Peak Volume: 300 emails/day
   Best for: New domains, high-value reputation
 
-○ Custom Plan
+â—‹ Custom Plan
   Configure your own schedule
 
-[Continue →]
-
+[Continue â†’]
 
 ```
 
@@ -118,38 +110,32 @@ Select Warmup Plan:
 Warmup Configuration
 
 Engagement Simulation:
-  ☑ Simulate opens (70% open rate target)
-  ☑ Simulate clicks (15% click rate target)
-  ☑ Simulate replies (5% reply rate target)
-  ☐ Simulate forwards (2% forward rate)
+  â˜‘ Simulate opens (70% open rate target)
+  â˜‘ Simulate clicks (15% click rate target)
+  â˜‘ Simulate replies (5% reply rate target)
+  â˜ Simulate forwards (2% forward rate)
 
 Warmup Pool:
-  ● Use PenguinMails warmup network (Recommended)
-
+  â— Use PenguinMails warmup network (Recommended)
 
     - 10,000+ verified warmup accounts
 
-
     - Automatic engagement
-
 
     - Best deliverability
 
-  ○ Use custom warmup list
-
+  â—‹ Use custom warmup list
 
     - Upload your own contacts
-
 
     - Manual engagement required
 
 Safety Settings:
-  ☑ Auto-pause on bounce rate > 5%
-  ☑ Auto-pause on spam complaints > 0.1%
-  ☑ Daily send limit: 500 emails
+  â˜‘ Auto-pause on bounce rate > 5%
+  â˜‘ Auto-pause on spam complaints > 0.1%
+  â˜‘ Daily send limit: 500 emails
 
 [Start Warmup]
-
 
 ```
 
@@ -159,7 +145,7 @@ Safety Settings:
 
 Warmup Progress: sales@penguinmails.com
 
-Status: ✓ Active (Day 3 of 42)
+Status: âœ“ Active (Day 3 of 42)
 
 Today's Activity:
   Scheduled: 30 emails
@@ -170,7 +156,7 @@ Today's Activity:
   Replied: 2 emails (7%)
 
 Progress:
-  Week 1: ████░░░░░░░░░░░░░░░░ 21% (Day 3/7)
+  Week 1: â–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘ 21% (Day 3/7)
 
   Current Volume: 30/day
   Target Volume: 500/day
@@ -178,10 +164,9 @@ Progress:
 Next Milestone:
   Day 7: Increase to 50 emails/day
 
-Health Score: 95/100 ✓ Excellent
+Health Score: 95/100 âœ“ Excellent
 
 [View Details] [Pause Warmup] [Adjust Schedule]
-
 
 ```
 
@@ -193,29 +178,24 @@ Health Score: 95/100 ✓ Excellent
 
 Days 1-14: Building Initial Reputation
 
-Daily Volume: 10 → 100 emails/day
+Daily Volume: 10 â†’ 100 emails/day
 Focus: Establish sending pattern
 
 Activities:
 
-
   - Send to warmup pool only
-
 
   - High engagement simulation (70%+ opens)
 
-
   - Consistent sending times
-
 
   - Monitor bounce rates closely
 
 Goals:
-  ✓ Zero spam complaints
-  ✓ Bounce rate < 2%
-  ✓ Consistent delivery
-  ✓ Positive engagement signals
-
+  âœ“ Zero spam complaints
+  âœ“ Bounce rate < 2%
+  âœ“ Consistent delivery
+  âœ“ Positive engagement signals
 
 ```
 
@@ -225,29 +205,24 @@ Goals:
 
 Days 15-28: Scaling Volume
 
-Daily Volume: 100 → 300 emails/day
+Daily Volume: 100 â†’ 300 emails/day
 Focus: Gradual increase
 
 Activities:
 
-
   - Continue warmup pool (80%)
-
 
   - Introduce real contacts (20%)
 
-
   - Maintain high engagement
-
 
   - Monitor sender reputation
 
 Goals:
-  ✓ Maintain low bounce rate
-  ✓ Build domain reputation
-  ✓ Inbox placement > 90%
-  ✓ No blacklist appearances
-
+  âœ“ Maintain low bounce rate
+  âœ“ Build domain reputation
+  âœ“ Inbox placement > 90%
+  âœ“ No blacklist appearances
 
 ```
 
@@ -257,29 +232,24 @@ Goals:
 
 Days 29-42: Reaching Target Volume
 
-Daily Volume: 300 → 500 emails/day
+Daily Volume: 300 â†’ 500 emails/day
 Focus: Stabilize at target
 
 Activities:
 
-
   - Warmup pool (50%)
-
 
   - Real contacts (50%)
 
-
   - Natural engagement patterns
-
 
   - Full campaign readiness
 
 Goals:
-  ✓ Consistent inbox placement
-  ✓ Strong sender reputation
-  ✓ Ready for production campaigns
-  ✓ Established sending patterns
-
+  âœ“ Consistent inbox placement
+  âœ“ Strong sender reputation
+  âœ“ Ready for production campaigns
+  âœ“ Established sending patterns
 
 ```
 
@@ -292,18 +262,17 @@ Goals:
 Pause Warmup: sales@penguinmails.com
 
 Reason:
-  ○ Temporary hold (will resume)
-  ○ Reputation issue detected
-  ● Manual review needed
-  ○ Other
+  â—‹ Temporary hold (will resume)
+  â—‹ Reputation issue detected
+  â— Manual review needed
+  â—‹ Other
 
 Resume Plan:
-  ○ Resume from current day
-  ● Restart current week
-  ○ Restart from beginning
+  â—‹ Resume from current day
+  â— Restart current week
+  â—‹ Restart from beginning
 
 [Pause Warmup]
-
 
 ```
 
@@ -318,17 +287,16 @@ Current Volume: 100 emails/day
 Target Volume: 500 emails/day
 
 Adjustment:
-  ○ Speed up (reach target in 3 weeks)
-  ● Slow down (extend to 8 weeks total)
-  ○ Maintain current pace
+  â—‹ Speed up (reach target in 3 weeks)
+  â— Slow down (extend to 8 weeks total)
+  â—‹ Maintain current pace
 
 New Schedule:
-  Week 3-4: 100 → 150 emails/day
-  Week 5-6: 150 → 250 emails/day
-  Week 7-8: 250 → 500 emails/day
+  Week 3-4: 100 â†’ 150 emails/day
+  Week 5-6: 150 â†’ 250 emails/day
+  Week 7-8: 250 â†’ 500 emails/day
 
 [Apply Changes]
-
 
 ```
 
@@ -347,7 +315,6 @@ custom_warmup_plan:
 
   phases:
 
-
     - name: "Foundation"
       days: 1-14
       daily_volume:
@@ -364,8 +331,6 @@ custom_warmup_plan:
         warmup_pool: 100
         real_contacts: 0
 
-
-
     - name: "Growth"
       days: 15-35
       daily_volume:
@@ -381,8 +346,6 @@ custom_warmup_plan:
       pool_distribution:
         warmup_pool: 70
         real_contacts: 30
-
-
 
     - name: "Maturity"
       days: 36-56
@@ -406,7 +369,6 @@ custom_warmup_plan:
     max_daily_increase: 100
     pause_on_blacklist: true
 
-
 ```
 
 ### Domain vs IP Warmup
@@ -423,54 +385,39 @@ Focus: Build domain reputation
 
 Week 1-2: Foundation
 
-
   - Use shared IPs
-
 
   - Low volume (10-100/day)
 
-
   - High engagement simulation
-
 
   - SPF, DKIM, DMARC verification
 
 Week 3-4: Growth
 
-
   - Gradually increase volume
-
 
   - Monitor domain reputation
 
-
   - Check blacklist status
-
 
   - Maintain engagement
 
 Week 5-6: Scaling
 
-
   - Reach target volume
 
-
   - Mix warmup + real contacts
-
 
   - Monitor inbox placement
 
 Week 7-8: Stabilization
 
-
   - Consistent high volume
-
 
   - Production-ready
 
-
   - Ongoing monitoring
-
 
 ```
 
@@ -486,46 +433,33 @@ Focus: Build IP reputation
 
 Week 1: Start Slow
 
-
   - 50-200 emails/day
-
 
   - Use existing warm domain
 
-
   - High engagement only
-
 
   - Monitor IP reputation
 
 Week 2-3: Gradual Increase
 
-
   - 200-1,000 emails/day
-
 
   - Consistent sending times
 
-
   - Maintain engagement
-
 
   - Check IP blacklists
 
 Week 4-6: Full Volume
 
-
   - 1,000-5,000+ emails/day
-
 
   - Production campaigns
 
-
   - Ongoing monitoring
 
-
   - Reputation maintenance
-
 
 ```
 
@@ -540,45 +474,34 @@ PenguinMails Warmup Network
 Network Size: 12,847 active accounts
 Coverage: 50+ email providers
 
-
   - Gmail: 4,200 accounts
-
 
   - Outlook: 2,800 accounts
 
-
   - Yahoo: 1,500 accounts
 
-
   - Apple Mail: 1,200 accounts
-
 
   - Other: 3,147 accounts
 
 Engagement Patterns:
 
-
   - Opens: 65-80% (randomized timing)
-
 
   - Clicks: 12-20% (varied links)
 
-
   - Replies: 3-8% (automated responses)
 
-
   - Spam reports: 0%
-
 
   - Bounces: < 0.5%
 
 Behavior Simulation:
-  ☑ Random open times (not instant)
-  ☑ Varied click patterns
-  ☑ Natural reply delays (2-48 hours)
-  ☑ Different devices (mobile, desktop)
-  ☑ Geographic diversity
-
+  â˜‘ Random open times (not instant)
+  â˜‘ Varied click patterns
+  â˜‘ Natural reply delays (2-48 hours)
+  â˜‘ Different devices (mobile, desktop)
+  â˜‘ Geographic diversity
 
 ```
 
@@ -590,15 +513,11 @@ Upload Custom Warmup List
 
 Requirements:
 
-
   - Minimum 100 contacts
-
 
   - Valid email addresses
 
-
   - Willing to engage (opens, clicks, replies)
-
 
   - Low bounce/spam risk
 
@@ -614,9 +533,8 @@ Engagement Configuration:
 
 [Upload List]
 
-⚠ Note: Manual engagement required
+âš  Note: Manual engagement required
    You must coordinate with these contacts
-
 
 ```
 
@@ -631,20 +549,19 @@ Warmup Dashboard
 Active Warmups: 5
 
 Account                    Status    Day    Volume    Health
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-sales@penguinmails.com     ✓ Active  15/42  100/day   95/100
-support@penguinmails.com   ✓ Active  8/42   50/day    92/100
-hello@penguinmails.com     ⏸ Paused  22/42  200/day   78/100
-team@penguinmails.com      ✓ Active  35/42  400/day   88/100
-info@penguinmails.com      ⚠ Warning 12/42  80/day    65/100
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+sales@penguinmails.com     âœ“ Active  15/42  100/day   95/100
+support@penguinmails.com   âœ“ Active  8/42   50/day    92/100
+hello@penguinmails.com     â¸ Paused  22/42  200/day   78/100
+team@penguinmails.com      âœ“ Active  35/42  400/day   88/100
+info@penguinmails.com      âš  Warning 12/42  80/day    65/100
 
 Bulk Actions:
   [Pause All] [Resume All] [Export Report]
 
 Alerts:
-  ⚠ info@penguinmails.com: Bounce rate elevated (4.2%)
-  ℹ hello@penguinmails.com: Paused for manual review
-
+  âš  info@penguinmails.com: Bounce rate elevated (4.2%)
+  â„¹ hello@penguinmails.com: Paused for manual review
 
 ```
 
@@ -659,29 +576,28 @@ Warmup Analytics: sales@penguinmails.com
 Overall Progress: 36% (Day 15/42)
 
 Volume Progression:
-  Day 1:   10 emails ████░░░░░░░░░░░░░░░░
-  Day 5:   30 emails ████████░░░░░░░░░░░░
-  Day 10:  60 emails ████████████░░░░░░░░
-  Day 15: 100 emails ████████████████░░░░
-  Target: 500 emails ████████████████████
+  Day 1:   10 emails â–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Day 5:   30 emails â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Day 10:  60 emails â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘â–‘â–‘â–‘â–‘
+  Day 15: 100 emails â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘â–‘â–‘
+  Target: 500 emails â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
 
 Engagement Metrics:
-  Open Rate:  72% ✓ (Target: 70%)
-  Click Rate: 16% ✓ (Target: 15%)
-  Reply Rate:  6% ✓ (Target: 5%)
+  Open Rate:  72% âœ“ (Target: 70%)
+  Click Rate: 16% âœ“ (Target: 15%)
+  Reply Rate:  6% âœ“ (Target: 5%)
 
 Deliverability:
-  Inbox Rate: 94% ✓
-  Spam Rate:   3% ✓
-  Bounce Rate: 1.2% ✓
+  Inbox Rate: 94% âœ“
+  Spam Rate:   3% âœ“
+  Bounce Rate: 1.2% âœ“
 
 Reputation Score:
   Domain: 85/100 (Good)
   IP: 78/100 (Fair)
   Overall: 82/100 (Good)
 
-Trend: ↗ Improving
-
+Trend: â†— Improving
 
 ```
 
@@ -699,18 +615,14 @@ Account B: support@penguinmails.com
 
 Difference:
 
-
   - Account A: Faster ramp-up
 
-
   - Account B: More conservative
-
 
   - Both: On track for target
 
 Recommendation:
   Continue current pace for both accounts
-
 
 ```
 
@@ -847,7 +759,6 @@ CREATE TABLE warmup_events (
 );
 
 CREATE INDEX idx_warmup_events_schedule ON warmup_events(warmup_schedule_id, created_at);
-
 
 ```
 
@@ -1098,7 +1009,6 @@ class WarmupService {
   }
 }
 
-
 ```
 
 ### Background Jobs
@@ -1142,7 +1052,6 @@ cron.schedule('0 * * * *', async () => {
     await service.checkWarmupHealth(schedule.id);
   }
 });
-
 
 ```
 
@@ -1191,7 +1100,6 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
   return res.json({ success: true });
 });
 
-
 ```
 
 ---
@@ -1212,4 +1120,3 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
 **Status:** Planned - High Priority (Level 2)
 **Target Release:** Q3 2026
 **Owner:** Deliverability Team
-

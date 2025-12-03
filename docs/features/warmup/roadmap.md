@@ -495,7 +495,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 
 - [Domain Routes](/docs/design/routes/workspace-domains) - Warmup management route
 
-- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management) - Infrastructure setup
+- Epic 5: Infrastructure Management - Internal task reference for infrastructure setup
 
 ### Business Strategy
 

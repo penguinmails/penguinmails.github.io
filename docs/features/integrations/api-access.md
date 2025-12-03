@@ -1,4 +1,4 @@
----
+﻿---
 title: "API Access"
 description: "RESTful API access, authentication, and rate limiting"
 last_modified_date: "2025-11-24"
@@ -7,7 +7,6 @@ persona: "Developers"
 status: "ACTIVE"
 category: "Integrations"
 ---
-
 
 # API Access
 
@@ -37,7 +36,7 @@ The PenguinMails API allows developers to integrate email capabilities directly 
 
 We use **Bearer Token** authentication.
 
-1. Generate an API Key in **Settings → API Keys**.
+1. Generate an API Key in **Settings â†’ API Keys**.
 
 2. Include it in the `Authorization` header.
 
@@ -161,4 +160,3 @@ Official client libraries are coming soon:
 **Version:** v1
 
 *Build powerful email integrations with the PenguinMails API.*
-

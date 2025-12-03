@@ -347,7 +347,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ### Conservative Strategic Assessment
 
-**Process-driven approach with realistic constraints**
+#### Process-driven approach with realistic constraints
 
 - **Revenue Protection ROI**: 75-125%
 
@@ -361,7 +361,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ### Realistic Strategic Assessment
 
-**Effective process implementation with training**
+#### Effective process implementation with training
 
 - **Revenue Protection ROI**: 125-225%
 
@@ -375,7 +375,7 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ### Optimized Strategic Assessment
 
-**Comprehensive process integration and optimization**
+#### Comprehensive process integration and optimization
 
 - **Revenue Protection ROI**: 200-400%
 

@@ -276,4 +276,3 @@ Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 - [Domain Maps](/docs/business/customer-success/cross-domain-integration)
 
 **Document Classification:** Level 3 - CS API Reference Documentation
-

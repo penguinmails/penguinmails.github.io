@@ -1,4 +1,4 @@
----
+﻿---
 title: "User Journey Analytics & Campaign Performance"
 description: "Comprehensive user journey analytics and campaign performance monitoring for enterprise-grade email marketing operations and optimization"
 last_modified_date: "2025-10-28"
@@ -1159,11 +1159,11 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### **Compliance & Security**
 
@@ -1199,4 +1199,3 @@ Navigate to specific analytics and campaign areas:
 
 **Keywords**: user journey analytics, campaign performance, email marketing analytics, deliverability monitoring, engagement tracking, campaign optimization, journey mapping, performance analytics
 ---
-

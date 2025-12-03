@@ -209,4 +209,3 @@ Real-world examples and implementation scenarios for PenguinMails across differe
 *Previous: [Compliance & Security](/docs/business/use-cases/compliance-security) | Next: [Getting Started](/docs/business/use-cases/getting-started) →*
 
 ---
-

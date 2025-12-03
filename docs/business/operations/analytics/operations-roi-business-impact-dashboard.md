@@ -1,11 +1,10 @@
----
+﻿---
 title: "Operations ROI and Business Impact Dashboard: Financial Performance and Value Attribution"
 description: "Comprehensive operations ROI and business impact dashboard for financial performance tracking, value attribution, and strategic business optimization"
 last_modified_date: "2025-11-16"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Operations ROI and Business Impact Dashboard: Financial Performance and Value Attribution
 
@@ -548,4 +547,3 @@ The Operations ROI and Business Impact Dashboard provides comprehensive operatio
 **Implementation Priority:** Phase 5 - Executive Dashboards & Analytics
 **Expected Timeline:** 4-5 weeks for comprehensive operations ROI business impact dashboard implementation
 ---
-

@@ -351,4 +351,5 @@ Customer Health Score = (Usage Health × 0.35) + (Engagement Health × 0.25) +
 - [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
 
 ---
-*Level 2: Operational framework for customer success implementation*
+
+### Level 2: Operational framework for customer success implementation

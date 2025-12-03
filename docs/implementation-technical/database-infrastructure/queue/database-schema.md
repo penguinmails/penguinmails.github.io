@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queue Database Schema"
 description: "Queue Database Schema - Job Tables and Indexes"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "Database Architects"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual schema"
 ---
-
 
 # Queue Database Schema
 
@@ -37,7 +33,6 @@ TABLE job_queues {
   created: TIMESTAMP           // When queue was created
 }
 
-
 ```
 
 **Usage Patterns**:
@@ -56,7 +51,6 @@ job_queues data = [
   { name: "email-processing", default_priority: 75, is_active: true },
   { name: "analytics", default_priority: 150, is_active: true }
 ]
-
 
 ```
 
@@ -81,7 +75,6 @@ TABLE jobs {
   created: TIMESTAMP           // Job creation timestamp
   updated: TIMESTAMP           // Last update timestamp
 }
-
 
 ```
 
@@ -114,7 +107,6 @@ job examples = {
   }
 }
 
-
 ```
 
 ### Job Logs (Audit Trail)
@@ -133,7 +125,6 @@ TABLE job_logs {
   duration: INTERVAL           // Total time taken
   created: TIMESTAMP           // Log entry creation time
 }
-
 
 ```
 
@@ -164,7 +155,6 @@ TABLE analytics_jobs {
   created: TIMESTAMP           // Creation timestamp
 }
 
-
 ```
 
 ## Indexing Strategy
@@ -181,7 +171,6 @@ WHERE status = 'queued'
 -- Queue-specific migration
 INDEX idx_jobs_queue_migration ON jobs(queue_name, status, run_at, priority)
 WHERE status = 'queued'
-
 
 ```
 
@@ -204,7 +193,6 @@ INDEX idx_job_logs_worker ON job_logs(job_id, attempt_number, finished_at)
 
 -- Analytics job management
 INDEX idx_analytics_jobs_type_status ON analytics_jobs(job_type, status, queued_at)
-
 
 ```
 
@@ -229,7 +217,6 @@ SELECT * FROM jobs
 WHERE status = 'failed'
   AND updated_at >= NOW() - INTERVAL '24 hours'
 ORDER BY failed DESC
-
 
 ```
 
@@ -273,7 +260,6 @@ AVOID payload example = {
   api_keys: "secret-key-value"
 }
 
-
 ```
 
 ### Data Retention Strategy
@@ -290,7 +276,6 @@ retention policy = {
   completed_jobs: "6 months then archive",
   job_logs: "90 days then summarize"
 }
-
 
 ```
 
@@ -328,16 +313,15 @@ erDiagram
     timestamptz created
   }
 
-
 ```
 
 ### Foreign Key Constraints
 
 **Referential Integrity**:
 
-- `jobs.queue_name` → `job_queues.name`
+- `jobs.queue_name` â†’ `job_queues.name`
 
-- `job_logs.job_id` → `jobs.id`
+- `job_logs.job_id` â†’ `jobs.id`
 
 - Cascading deletes for data cleanup
 
@@ -472,4 +456,3 @@ This schema design provides a robust foundation for job processing with:
 - **Flexibility**: JSONB payloads for diverse job types
 
 The schema supports both operational needs (job processing) and analytical needs (reporting and optimization) while maintaining data integrity and performance.
-

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queue Management"
 description: "Queue Management - Redis Queues and Migrator Process"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "System Engineers"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 ---
-
 
 # Queue Management
 
@@ -32,7 +28,7 @@ Queues follow a consistent naming pattern for easy identification and priority r
 ```pseudo
 queue naming = {
   email_processing: {
-    high: "queue:email:processing:high",     // Priority ≤ 50
+    high: "queue:email:processing:high",     // Priority â‰¤ 50
     normal: "queue:email:processing",        // Priority 51-150
     low: "queue:email:processing:low"        // Priority > 150
   },
@@ -56,7 +52,6 @@ queue naming = {
   }
 }
 
-
 ```
 
 ### Priority Routing Logic
@@ -66,7 +61,7 @@ Jobs are automatically routed based on priority levels:
 ```pseudo
 function determineQueueName(priority, baseQueueName) {
   if (priority <= HIGH_PRIORITY_THRESHOLD) {
-    return `${baseQueueName}:high`    // Urgent jobs (≤ 50)
+    return `${baseQueueName}:high`    // Urgent jobs (â‰¤ 50)
   } else if (priority <= NORMAL_PRIORITY_THRESHOLD) {
     return baseQueueName             // Standard jobs (51-150)
   } else {
@@ -76,7 +71,6 @@ function determineQueueName(priority, baseQueueName) {
 
 HIGH_PRIORITY_THRESHOLD = 50
 NORMAL_PRIORITY_THRESHOLD = 150
-
 
 ```
 
@@ -114,7 +108,6 @@ emailJob = {
   max_attempts: 3
 }
 
-
 ```
 
 ### Job Metadata Tracking (Redis Hashes)
@@ -141,7 +134,6 @@ redis.hgetall("job:uuid-job-123") = {
   attempt_count: "1"
 }
 
-
 ```
 
 ### Recent Jobs Tracking (Redis Sets)
@@ -158,7 +150,6 @@ if redis.sismember(`recent_jobs:${queueName}`, jobId) {
   // Skip duplicate job
   return DUPLICATE
 }
-
 
 ```
 
@@ -256,7 +247,6 @@ class JobMigrator {
   }
 }
 
-
 ```
 
 ### Queue Depth Monitoring
@@ -291,7 +281,6 @@ async function monitorQueueDepths() {
 
   return depths
 }
-
 
 ```
 
@@ -332,7 +321,6 @@ async function workerJobRetrieval(workerId) {
     }
   }
 }
-
 
 ```
 
@@ -393,7 +381,6 @@ async function processJob(job, queueName, workerId) {
     await handleJobFailure(job, error)
   }
 }
-
 
 ```
 
@@ -458,7 +445,6 @@ async function handleJobFailure(job, error) {
   }
 }
 
-
 ```
 
 ### Dead Letter Queue Management
@@ -514,7 +500,6 @@ async function replayDeadLetterJob(jobId) {
   return { success: true, job_id: jobId }
 }
 
-
 ```
 
 ## Performance Optimization
@@ -540,7 +525,6 @@ async function batchMigrateJobs(jobs) {
   // Execute all operations in single round trip
   await pipeline.exec()
 }
-
 
 ```
 
@@ -570,7 +554,6 @@ async function optimizeRedisMemory() {
     await triggerMemoryCleanup()
   }
 }
-
 
 ```
 
@@ -608,7 +591,6 @@ async function checkRedisHealth() {
   }
 }
 
-
 ```
 
 ## Conclusion
@@ -626,4 +608,3 @@ The queue management system provides:
 - **Scalability**: Horizontal scaling through multiple workers and Redis clustering
 
 This architecture ensures efficient job processing while maintaining data durability and system reliability.
-

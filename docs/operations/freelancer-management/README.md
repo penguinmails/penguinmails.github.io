@@ -1,11 +1,10 @@
----
+﻿---
 title: "Freelancer Management Operations"
 description: "Strategic overview for freelancer management operations and coordination frameworks"
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
 ---
-
 
 # Freelancer Management Operations
 

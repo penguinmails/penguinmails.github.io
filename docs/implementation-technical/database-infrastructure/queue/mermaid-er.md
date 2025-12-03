@@ -1,4 +1,4 @@
----
+﻿---
 title: "Queue Database Entity Relationship Diagram"
 description: "Queue Database Entity Relationship Diagram - Database Schema Visualization"
 last_modified_date: "2025-11-19"
@@ -6,16 +6,12 @@ level: "2"
 persona: "Database Architects"
 related_docs:
 
-
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
 
-
   - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Schema details"
 ---
-
 
 # Queue Database Entity Relationship Diagram
 
@@ -207,6 +203,4 @@ erDiagram
   job_queues ||--o{ jobs : "queue contains jobs"
   jobs       ||--o{ job_logs : "job has logs"
 
-
 ```
-

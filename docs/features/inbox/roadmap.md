@@ -1,11 +1,10 @@
----
+﻿---
 title: "Inbox Management Roadmap"
 description: "Development roadmap for inbox management features including MVP gaps, Post-MVP enhancements, and AI-powered capabilities"
 last_modified_date: "2025-11-26"
 level: "2"
 persona: "Product Managers, Engineering Teams"
 ---
-
 
 # Inbox Management Roadmap
 
@@ -63,7 +62,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ## MVP Roadmap Items
 
-### 🚨 Critical Blocker
+### ðŸš¨ Critical Blocker
 
 #### 1. Stalwart Mail Server Database Schema Investigation
 
@@ -89,7 +88,7 @@ This document outlines the development roadmap for inbox management features, in
 
 **Related Documentation**:
 
-- `tasks/spike-stalwart-database-schema-investigation.md`
+- Stalwart database schema investigation spike (internal task reference)
 
 - [Unified Inbox Overview](/docs/features/inbox/unified-inbox/overview)
 
@@ -646,7 +645,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ### Implementation Tasks
 
-- `tasks/spike-stalwart-database-schema-investigation.md`
+- Stalwart database schema investigation spike (internal task reference)
 
 - Epic 8: Inbox Management
 
@@ -655,4 +654,3 @@ This document outlines the development roadmap for inbox management features, in
 **Last Updated**: November 26, 2025
 **Status**: Roadmap defined, awaiting Stalwart spike completion
 **Next Review**: After Stalwart spike (Q4 2025)
-

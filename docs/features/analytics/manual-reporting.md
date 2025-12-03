@@ -1,4 +1,4 @@
----
+﻿---
 title: "Manual Reporting & Data Export"
 description: "Scheduled reports, data export capabilities, and integration with external analytics tools"
 level: "1"
@@ -7,17 +7,13 @@ roadmap_timeline: "Q4 2025"
 priority: "High"
 related_features:
 
-
   - analytics/core-analytics/overview
-
 
   - analytics/enhanced-analytics/overview
 related_tasks:
 
-
   - epic-1-project-foundation
 ---
-
 
 # Manual Reporting & Data Export
 
@@ -49,8 +45,7 @@ Manual Reporting provides essential data export and report generation capabiliti
 
 ```text
 
-Dashboard → Analytics → Reports → Create New Report
-
+Dashboard â†’ Analytics â†’ Reports â†’ Create New Report
 
 ```
 
@@ -80,19 +75,19 @@ Dashboard → Analytics → Reports → Create New Report
 
 **Choose Metrics:**
 
-- ✅ Emails sent
+- âœ… Emails sent
 
-- ✅ Delivery rate
+- âœ… Delivery rate
 
-- ✅ Open rate (directional)
+- âœ… Open rate (directional)
 
-- ✅ Click rate (directional)
+- âœ… Click rate (directional)
 
-- ✅ Bounce rate
+- âœ… Bounce rate
 
-- ✅ Spam complaints
+- âœ… Spam complaints
 
-- ✅ Unsubscribes
+- âœ… Unsubscribes
 
 #### Step 3: Export or Schedule
 
@@ -126,15 +121,15 @@ Dashboard → Analytics → Reports → Create New Report
 
 **Available Exports:**
 
-- Campaign list → CSV/Excel
+- Campaign list â†’ CSV/Excel
 
-- Campaign metrics → CSV/Excel
+- Campaign metrics â†’ CSV/Excel
 
-- Email engagement data → CSV
+- Email engagement data â†’ CSV
 
-- Lead lists → CSV/Excel
+- Lead lists â†’ CSV/Excel
 
-- Domain health → CSV
+- Domain health â†’ CSV
 
 ---
 
@@ -155,27 +150,20 @@ timezone: "America/New_York"
 
 recipients:
 
-
   - team@company.com
-
 
   - manager@company.com
 
 format: pdf
 include:
 
-
   - summary_metrics
-
 
   - top_campaigns
 
-
   - deliverability_trends
 
-
   - weekly_comparison
-
 
 ```
 
@@ -203,27 +191,20 @@ time: "08:00"
 
 recipients:
 
-
   - executives@company.com
 
 format: pdf_executive
 include:
 
-
   - executive_summary
-
 
   - growth_metrics
 
-
   - workspace_breakdown
-
 
   - roi_analysis
 
-
   - month_over_month_trends
-
 
 ```
 
@@ -283,7 +264,6 @@ interface CampaignExport {
   emailsSentPerDay: number;
 }
 
-
 ```
 
 **Export Process:**
@@ -331,7 +311,6 @@ interface LeadExport {
   source: string;
 }
 
-
 ```
 
 ### Integration with External Tools
@@ -340,7 +319,7 @@ interface LeadExport {
 
 **Setup:**
 
-1. Go to Settings → Integrations → Google Sheets
+1. Go to Settings â†’ Integrations â†’ Google Sheets
 
 2. Click "Connect Google Account"
 
@@ -364,7 +343,6 @@ data:
   export_type: campaign_metrics
   date_range: yesterday
   append_mode: true  # Add new rows vs overwrite
-
 
 ```
 
@@ -405,7 +383,6 @@ const response = await fetch('/api/exports/create', {
 
 const { exportId, downloadUrl } = await response.json();
 
-
 ```
 
 ### Report Customization
@@ -422,18 +399,13 @@ description: "Monthly performance report for client review"
 
 sections:
 
-
   - type: summary_metrics
     metrics: [sent, delivered, opened, clicked]
-
-
 
   - type: chart
     chart_type: line
     metric: delivery_rate
     title: "Delivery Rate Trend"
-
-
 
   - type: table
     title: "Top 10 Campaigns"
@@ -441,14 +413,10 @@ sections:
     sort_by: clicks
     limit: 10
 
-
-
   - type: text
     content: |
       ## Executive Summary
       This month showed strong performance...
-
-
 
   - type: recommendations
     auto_generated: true
@@ -458,14 +426,13 @@ styling:
   primary_color: "#007bff"
   font: "Arial"
 
-
 ```
 
 **Using Templates:**
 
 1. Create template once
 
-2. Generate report from template → Select date range
+2. Generate report from template â†’ Select date range
 
 3. Report generated with latest data
 
@@ -564,7 +531,6 @@ CREATE TABLE export_jobs (
 
   created_at TIMESTAMP DEFAULT NOW()
 );
-
 
 ```
 
@@ -695,7 +661,6 @@ class ReportGenerator {
   }
 }
 
-
 ```
 
 ### Scheduled Report Runner
@@ -740,7 +705,6 @@ reportQueue.process('generate-report', async (job) => {
     });
   }
 });
-
 
 ```
 
@@ -809,7 +773,6 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
   });
 });
 
-
 ```
 
 ---
@@ -839,8 +802,6 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
 - **[API Architecture](/docs/implementation-technical/api/README)** - Export API endpoints
 
 ---
-
 **Last Updated:** November 25, 2025
 **Status:** Active - Core Feature (Level 1)
 **Owner:** Analytics Team
-

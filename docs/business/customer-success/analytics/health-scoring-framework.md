@@ -57,7 +57,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Data Processing**: Monthly data volume ≥500GB = 100 points, 100-499GB = 70 points, <100GB = 30 points
 
-#### Usage Health Calculation
+### Usage Health Calculation
 
 `Usage Health = (Active User Score × 0.4) + (Feature Adoption × 0.4) + (Usage Quality × 0.2)`
 
@@ -87,7 +87,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Executive Touchpoints**: ≥1 executive meeting/quarter = 100 points, 1 executive meeting/6 months = 70 points, <1 meeting/6 months = 30 points
 
-#### Engagement Health Calculation
+### Engagement Health Calculation
 
 `Engagement Health = (Support Quality × 0.4) + (Training Adoption × 0.3) + (Proactive Engagement × 0.3)`
 
@@ -121,7 +121,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Future Planning**: Clear expansion/renewal plans = 100 points, General future plans = 70 points, No clear plans = 30 points
 
-#### Business Health Calculation
+### Business Health Calculation
 
 `Business Health = (Success Achievement × 0.4) + (Financial Health × 0.3) + (Strategic Alignment × 0.3)`
 
@@ -151,7 +151,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - **Loyalty Indicators**: Long-term commitment signals = 100 points, Mixed signals = 70 points, Churn signals = 30 points
 
-#### Relationship Health Calculation
+### Relationship Health Calculation
 
 `Relationship Health = (Stakeholder Relationships × 0.5) + (Advocacy Indicators × 0.3) + (Brand Perception × 0.2)`
 
@@ -281,11 +281,12 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 
-- [Customer Journey Analytics](/docs/user-journeys)
+- Customer Journey Analytics (internal journey reference)
 
 - [Predictive Churn Analysis](/docs/business/customer-success/analytics/predictive-churn-analysis)
 
 - [Customer Retention Strategies](/docs/business/customer-success/retention)
 
 ---
-*Level 2: Analytics framework for customer health monitoring and proactive management*
+
+### Level 2: Analytics framework for customer health monitoring and proactive management
