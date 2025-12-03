@@ -271,7 +271,7 @@ Enable rapid recovery from VPS compromise or Vault failure through automated bac
 
 - Vault high availability setup (3-node cluster for production)
 
-**Documentation:** [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery)
+**Documentation:** [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/)
 
 ### Rotation Policies
 
@@ -485,7 +485,7 @@ Vault integration supports compliance with industry standards:
 
 - [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
 
-- [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery) - Vault backup and recovery
+- [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/) - Vault backup and recovery
 
 - [Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup) - Infrastructure provisioning
 

@@ -723,7 +723,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Monitoring and alerting for Vault health
 
 **Effort**: 1-2 weeks
-**Reference**: [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery)
+**Reference**: [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery/)
 
 ---
 

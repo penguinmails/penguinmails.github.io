@@ -138,7 +138,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - [Tenant API Keys](/docs/features/integrations/vault-api-keys)
 
-- [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery)
+- [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery/)
 
 ## Third-Party Dependencies
 

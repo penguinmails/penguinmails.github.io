@@ -1332,7 +1332,7 @@ Authorization: Bearer {admin_token}
 
 - **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Tenant API key system
 
-- **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery)** - Backup and recovery
+- **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/)** - Backup and recovery
 
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - MailU configuration
 

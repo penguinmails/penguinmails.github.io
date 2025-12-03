@@ -542,7 +542,7 @@ path "vps/*/tenant_ssh/*" {
 
 - **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)** - SMTP credentials storage
 
-- **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery)** - Backup and recovery
+- **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/)** - Backup and recovery
 
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - Infrastructure provisioning
 
