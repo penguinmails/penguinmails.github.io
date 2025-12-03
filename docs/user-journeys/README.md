@@ -1,386 +1,74 @@
 ---
-title: "User Journeys Hub"
-description: "Customer workflow maps and user experience documentation"
-last_modified_date: "2025-11-24"
-level: "1"
-persona: "All Stakeholders"
----
-
-# 🧭 User Journeys Hub
-
-## Purpose
-
-This directory contains comprehensive **user journey maps** that document how customers accomplish their goals using PenguinMails. These journeys inform feature development, UI design, and product strategy.
-
----
-
-## 🎯 What is a User Journey?
-
-A user journey maps the complete experience of a user accomplishing a specific goal, including:
-
-- **Steps taken** - Actions the user performs
-
-- **Views visited** - UI screens/pages encountered
-
-- **Data needed** - Information required at each step
-
-- **Pain points** - Friction or challenges
-
-- **Success criteria** - How we know the journey succeeded
-
-- **Moments of delight** - Opportunities to exceed expectations
-
----
-
-## 🗺️ Core User Journeys
-
-### Onboarding & Setup
-
-**Goal**: Get new users from signup to first successful campaign
-
-- **[User Journey Testing](/docs/user-journeys/user-journey-testing)** - New user onboarding experience
-
-- **[Tenant Onboarding](/docs/user-journeys/tenant-onboarding-flow)** - *[To be created]*
-
-- **[Workspace Setup](/docs/user-journeys/workspace-setup-flow)** - *[To be created]*
-
-- **[Email Account Creation](/docs/user-journeys/email-account-creation-flow)** - *[To be created]*
-
-### Campaign Management
-
-**Goal**: Enable users to create, launch, and optimize campaigns
-
-- **[Campaign Creation Journey](/docs/operations/analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
-
-- **[Template Design](/docs/user-journeys/template-design-flow)** - *[To be created]*
-
-- **[Campaign Launch](/docs/user-journeys/campaign-launch-flow)** - *[To be created]*
-
-### Analytics & Optimization
-
-**Goal**: Help users understand performance and optimize results
-
-- **[Analytics Review](/docs/user-journeys/analytics-review-flow)** - *[To be created]*
-
-- **[Performance Optimization](/docs/user-journeys/performance-optimization-flow)** - *[To be created]*
-
-- **[A/B Testing](/docs/user-journeys/ab-testing-flow)** - *[To be created]*
-
-### Team Collaboration
-
-**Goal**: Enable teams to work together effectively
-
-- **[User Invitation](/docs/user-journeys/user-invitation-flow)** - *[To be created]*
-
-- **[Role Management](/docs/user-journeys/role-management-flow)** - *[To be created]*
-
-- **[Multi-Workspace Management](/docs/user-journeys/multi-workspace-flow)** - *[To be created]*
-
-### Compliance & Security
-
-**Goal**: Ensure users can manage compliance and security requirements
-
-- **[GDPR Compliance](/docs/user-journeys/gdpr-compliance-flow)** - *[To be created]*
-
-- **[Data Export](/docs/user-journeys/data-export-flow)** - *[To be created]*
-
-- **[Security Settings](/docs/user-journeys/security-settings-flow)** - *[To be created]*
-
----
-
-## 👥 User Personas
-
-Our journeys are designed for distinct user personas:
-
-### Primary Personas
-
-1. **Agency Owner**
-
-   - Manages multiple client campaigns
-
-   - Needs white-label capabilities
-
-   - Focus: Efficiency and scalability
-
-2. **Startup Founder**
-
-   - First-time cold email user
-
-   - Limited technical expertise
-
-   - Focus: Quick setup and results
-
-3. **Growth Marketer**
-
-   - Experienced with email marketing
-
-   - Data-driven decision maker
-
-   - Focus: Analytics and optimization
-
-4. **Enterprise Admin**
-
-   - Manages large team
-
-   - Requires compliance and security
-
-   - Focus: Control and governance
-
----
-
-## 📋 User Journey Template
-
-When creating a new user journey document, include:
-
-```yaml
----
-title: "Journey Name"
-description: "Brief journey description"
-persona: "Primary user persona"
-complexity: LOW | MEDIUM | HIGH
-last_modified_date: "2025-11-24"
+title: "User Journeys & User Stories Documentation"
+description: "Comprehensive user journey documentation and user stories for PenguinMails platform users"
+last_modified_date: "2025-12-03"
 level: "2"
+persona: "Documentation Users"
+redirect_from: "/user-journeys/README"
 ---
 
-```
+# User Journeys & User Stories Documentation
 
-**Required Sections**:
+## Overview
 
-1. **Journey Overview**
+This directory provides a comprehensive, organized approach to user journey documentation and user stories for the PenguinMails platform. The documentation is structured around three distinct user types to eliminate confusion and provide clear, focused experiences.
 
-   - Goal of the journey
-
-   - Primary persona
-
-   - Success criteria
-
-2. **Journey Map**
-
-   - Step-by-step flow
-
-   - Screenshots/wireframes
-
-   - Decision points
-
-3. **Frontend Views**
-
-   - Links to `docs/design/routes/*.md`
-
-   - Key UI components
-
-   - Data requirements
-
-4. **Backend Requirements**
-
-   - API endpoints needed
-
-   - Links to `docs/implementation-technical/api/**/*.md`
-
-   - Data models
-
-5. **Pain Points**
-
-   - Current friction
-
-   - User complaints
-
-   - Opportunities for improvement
-
-6. **Metrics**
-
-   - How to measure success
-
-   - Key performance indicators
-
-   - Analytics events to track
-
-7. **Related Documentation**
-
-   - Features involved
-
-   - Frontend specs
-
-   - API specs
+**Purpose**: Transform scattered user journey documentation into a systematic, user-focused structure that supports product development, design, engineering, and marketing teams.
 
 ---
 
-## 🔄 Journey Mapping Process
+## Quick Access to User Journey Documentation
 
-### 1. Research Phase
+🔗 **Access the complete user journey documentation**: [User Journeys Repository](/user-journeys/README)
 
-- User interviews
+The user journey documentation is maintained in the external `/user-journeys/` directory and includes:
 
-- Analytics review
+### User Type Classification
 
-- Support ticket analysis
+- **Internal Platform Users** - Administrative users who manage the platform
+- **External Stakeholders** - Public-facing parties who assess company credibility  
+- **Real External Users (Customers)** - Actual product users and their organizations
 
-- Competitive analysis
+### Complete Documentation Structure
 
-### 2. Mapping Phase
+#### **User Type Specific Documentation**
 
-- Define user goal
+- Internal Platform Users - Platform administration workflows
+- External Stakeholders - Investment evaluation and due diligence  
+- Real External Users - Customer business scenarios and workflows
 
-- Map current state
+#### **User Stories Framework**
 
-- Identify pain points
+- Complete user story methodology
+- Story prioritization guidelines
+- Standardized story templates
 
-- Design future state
+#### **Use Cases Documentation**
 
-### 3. Validation Phase
-
-- User testing
-
-- Stakeholder review
-
-- Developer feasibility check
-
-- Iteration based on feedback
-
-### 4. Implementation
-
-- Create/update features
-
-- Design UI screens
-
-- Build API endpoints
-
-- Test end-to-end flow
+- Administrative and operational scenarios
+- External stakeholder interaction scenarios
+- Customer business scenarios and workflows
 
 ---
 
-## 🔗 Related Documentation
+## Integration with Development
 
-### Planning
+This documentation integrates with:
 
-- **[Roadmap](/docs/operations/roadmap)** - When journeys will be improved
-
-- **[Features](/docs/features)** - Features that support journeys
-
-### Specifications
-
-- **[Frontend Routing Map](/docs/design/frontend-routing-map)** - All views
-
-- **[Frontend Routes](/docs/design/routes/)** - Detailed view specs
-
-- **[API Architecture](/docs/implementation-technical/api)** - Backend endpoints
-
-- **[Design System](/docs/design)** - UI components
-
-### Implementation
-
-- **[Active Tasks](/tasks/README)** - Journey improvements in progress
-
-- **[Analytics Views](/docs/design/analytics-ui-patterns)** - Analytics patterns
+- **Product Development** - Feature planning and user requirements
+- **Design Teams** - User experience design patterns
+- **Engineering Teams** - Technical story development process
+- **Marketing Teams** - Customer messaging and materials
+- **Customer Success** - Customer implementation guidance
 
 ---
 
-## 🎯 Quick Navigation by Role
+## Future Migration
 
-### For Business Leaders
+This placeholder file will be replaced with migrated content from the external `/user-journeys/` directory during the documentation consolidation project.
 
-**Goal**: Understand customer experience
-
-```text
-
-User Journeys Hub → Core Journeys → Pain Points → Roadmap Priorities
-
-```
-
-### For Product Managers
-
-**Goal**: Design better user experiences
-
-```text
-
-User Journeys Hub → Journey Map → Features → Frontend Specs → API Specs
-
-```
-
-### For Developers
-
-**Goal**: Understand what to build and why
-
-```text
-
-User Journeys Hub → Specific Journey → Frontend Specs → API Specs → Tasks
-
-```
-
-### For Marketing/Ops
-
-**Goal**: Understand how customers use the platform
-
-```text
-
-User Journeys Hub → Core Journeys → Success Metrics → Analytics
-
-```
+**Keywords**: user journeys, user stories, user types, internal users, external stakeholders, customer users, methodology, templates, prioritization, use cases, onboarding
 
 ---
 
-## 📊 Journey Coverage
-
-### By Feature Area
-
-| Feature Area | Journeys Documented | Coverage |
-|--------------|---------------------|----------|
-| Onboarding | 1 | Low |
-| Campaign Management | 1 | Low |
-| Analytics | 0 | None |
-| Team Collaboration | 0 | None |
-| Compliance | 0 | None |
-
-### By Persona
-
-| Persona | Journeys Documented | Coverage |
-|---------|---------------------|----------|
-| Agency Owner | 1 | Low |
-| Startup Founder | 1 | Medium |
-| Growth Marketer | 1 | Low |
-| Enterprise Admin | 0 | None |
-
----
-
-## 📝 Migration Notes
-
-**Current State**: User journey documentation is scattered:
-
-- `business/customer-success/journey/` - Customer success journeys
-
-- `business/marketing/journey/` - Marketing journeys
-
-- `freelancer-onboarding/user-journey-testing.md` - Onboarding testing
-
-- `operations-analytics/analytics-performance/user-journey-analytics-campaigns.md` - Campaign analytics
-
-**Target State**: All journeys consolidated here with:
-
-- ✅ Consistent template
-
-- ✅ Clear persona mapping
-
-- ✅ Links to specs and features
-
-- ✅ Metrics and success criteria
-
-**Next Steps**:
-
-1. Migrate existing journey docs from `business/*/journey/`
-
-2. Create missing core journeys
-
-3. Add screenshots/wireframes
-
-4. Link to frontend/API specs
-
-5. Define success metrics
-
----
-
-**Last Updated**: 2025-11-24
-**Review Cycle**: Monthly
-**Owner**: Product Team
-
----
-
-*For questions about user journeys or to propose a new journey map, contact the Product Team.*
+*This documentation provides the comprehensive user journey framework that supports all aspects of product development, user experience design, and business operations.*

@@ -94,7 +94,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📋 Active Tasks](/tasks/README) - *Current development work and sprint tasks*
+- [📋 Active Tasks](/docs/tasks/README) - *Current development work and sprint tasks*
 
 - [💼 Freelancer Onboarding](/docs/freelancer-onboarding/README) - *Start here if you are a freelancer*
 
@@ -104,7 +104,7 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 - [✨ Features](/docs/feature-overview) - *Feature specifications to implement*
 
-- [🧭 User Journeys](/user-journeys/README) - *User workflows to support*
+- [🧭 User Journeys](/docs/user-journeys/README) - *User workflows to support*
 
 - [📚 Contributing Guide](/CONTRIBUTING) - *How to contribute to the project*
 
@@ -134,7 +134,7 @@ Navigate our product development timeline and feature pipeline
 
 {: .highlight .btn-group-vertical }
 
-- [🧭 User Journeys Hub](/user-journeys/README) - *How customers accomplish their goals*
+- [🧭 User Journeys Hub](/docs/user-journeys/README) - *How customers accomplish their goals*
 
 - [🛤️ Onboarding Flow](/docs/freelancer-onboarding/user-journey-testing) - *New user experience*
 
