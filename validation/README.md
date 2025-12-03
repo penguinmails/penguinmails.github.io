@@ -25,6 +25,16 @@ The CI pipeline runs these scripts individually:
    bash validation/detect/detect_content_quality_issues.sh
    ```
 
+### Run with JSON Reports
+
+By default, scripts output to stdout only. To generate JSON report files, use the `--report` flag:
+
+```bash
+# Generate JSON report in validation/reports/
+bash validation/detect/detect_frontmatter_issues.sh --report
+bash validation/detect/detect_frontmatter_issues.sh docs --report
+```
+
 ### Run Detection Scripts
 
 ```bash
@@ -89,6 +99,30 @@ Approved technologies:
 - **Queue**: Hybrid PostgreSQL + Redis
 
 Forbidden code blocks: `python`, `ruby`, `php`, `csharp`
+
+## File LOC Limits
+
+Documentation files must stay within defined line limits to ensure maintainability and readability:
+
+✅ **Thresholds**:
+
+- **README.md & overview.md**: 250 lines (navigation hubs should be concise)
+- **Guides & Feature docs**: 400 lines (`/guide/`, `/features/`)
+- **API & Reference docs**: 600 lines (`/api/`, `/reference/`, `/implementation-technical/`)
+- **Other documentation**: 500 lines (default)
+
+💡 **Rationale**:
+
+- Navigation hub files (README, overview) should guide users to detailed content, not contain it
+- Shorter files are easier to maintain, review, and keep up-to-date
+- Encourages proper content organization and information architecture
+- Technical/API documentation may require more detail, hence higher limits
+
+❌ **If file exceeds limit**:
+
+1. Split into multiple focused files
+2. Move detailed content to dedicated pages
+3. Keep overview/hub file as a navigation guide with links
 
 ## CI/CD Integration
 

@@ -9,12 +9,36 @@
 
 set -e
 
-TARGET_ROOT="${1:-docs}"
+# Parse arguments
+GENERATE_REPORT=false
+TARGET_ROOT=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --report|-r)
+            GENERATE_REPORT=true
+            shift
+            ;;
+        *)
+            TARGET_ROOT="$1"
+            shift
+            ;;
+    esac
+done
+
+# Set default target if not provided
+TARGET_ROOT="${TARGET_ROOT:-docs}"
+
+# Setup report file or redirect to /dev/null
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 REPORT_DIR="validation/reports"
-REPORT_FILE="$REPORT_DIR/formatting_issues_${TIMESTAMP}.json"
 
-mkdir -p "$REPORT_DIR"
+if [ "$GENERATE_REPORT" = true ]; then
+    REPORT_FILE="$REPORT_DIR/$(basename $0 .sh | sed 's/detect_//')_${TIMESTAMP}.json"
+    mkdir -p "$REPORT_DIR"
+else
+    REPORT_FILE="/dev/null"  # Redirect all report writes to /dev/null
+fi
 
 total_issues=0
 
@@ -28,7 +52,9 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "MARKDOWN FORMATTING VALIDATION (via markdownlint)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Target: $TARGET_ROOT"
-echo "Report: $REPORT_FILE"
+if [ "$GENERATE_REPORT" = true ]; then
+    echo "Report: $REPORT_FILE"
+fi
 echo ""
 
 # Run markdownlint and capture output
@@ -170,6 +196,8 @@ else
     echo "  - MD036 (emphasis as heading): $count_md036 (manual fix required)"
     echo "  - MD040 (code fence language): $count_md040 (automated fix available)"
     echo ""
-    echo "Report saved to: $REPORT_FILE"
+    if [ "$GENERATE_REPORT" = true ]; then
+        echo "Report saved to: $REPORT_FILE"
+    fi
     exit 1
 fi

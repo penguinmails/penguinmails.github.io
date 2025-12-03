@@ -6,13 +6,33 @@
 
 set -e
 
-TARGET_ROOT="${1:-docs}"
-TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-REPORT_DIR="validation/reports"
-REPORT_FILE="$REPORT_DIR/link_warnings_${TIMESTAMP}.json"
+# Parse arguments
+GENERATE_REPORT=false
+TARGET_ROOT=""
 
-# Create directories
-mkdir -p "$REPORT_DIR"
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --report|-r)
+            GENERATE_REPORT=true
+            shift
+            ;;
+        *)
+            TARGET_ROOT="$1"
+            shift
+            ;;
+    esac
+done
+
+# Set default target if not provided
+TARGET_ROOT="${TARGET_ROOT:-docs}"
+
+# Conditionally setup report
+if [ "$GENERATE_REPORT" = true ]; then
+    TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+    REPORT_DIR="validation/reports"
+    REPORT_FILE="$REPORT_DIR/link_warnings_${TIMESTAMP}.json"
+    mkdir -p "$REPORT_DIR"
+fi
 
 # Initialize counters
 total_issues=0
@@ -27,14 +47,18 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "LINK WARNINGS VALIDATION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Target: $TARGET_ROOT"
-echo "Report: $REPORT_FILE"
+if [ "$GENERATE_REPORT" = true ]; then
+    echo "Report: $REPORT_FILE"
+fi
 echo ""
 
 # Initialize JSON report
-echo "{" > "$REPORT_FILE"
-echo "  \"timestamp\": \"$(date -Iseconds)\"," >> "$REPORT_FILE"
-echo "  \"target_root\": \"$TARGET_ROOT\"," >> "$REPORT_FILE"
-echo "  \"issues\": {" >> "$REPORT_FILE"
+if [ "$GENERATE_REPORT" = true ]; then
+    echo "{" > "$REPORT_FILE"
+    echo "  \"timestamp\": \"$(date -Iseconds)\"," >> "$REPORT_FILE"
+    echo "  \"target_root\": \"$TARGET_ROOT\"," >> "$REPORT_FILE"
+    echo "  \"issues\": {" >> "$REPORT_FILE"
+fi
 
 # Function to detect link violations
 detect_links() {
@@ -52,29 +76,37 @@ detect_links() {
     fi
     
     # Add to JSON report
-    echo "    \"$issue_name\": {" >> "$REPORT_FILE"
-    echo "      \"description\": \"$description\"," >> "$REPORT_FILE"
-    echo "      \"count\": $count," >> "$REPORT_FILE"
-    echo "      \"files\": [" >> "$REPORT_FILE"
+    if [ "$GENERATE_REPORT" = true ]; then
+        echo "    \"$issue_name\": {" >> "$REPORT_FILE"
+        echo "      \"description\": \"$description\"," >> "$REPORT_FILE"
+        echo "      \"count\": $count," >> "$REPORT_FILE"
+        echo "      \"files\": [" >> "$REPORT_FILE"
+    fi
     
     if [ $count -gt 0 ]; then
         first=true
         while IFS=: read -r file line; do
             [ -z "$file" ] && continue
-            if [ "$first" = true ]; then
-                first=false
-            else
-                echo "," >> "$REPORT_FILE"
+            if [ "$GENERATE_REPORT" = true ]; then
+                if [ "$first" = true ]; then
+                    first=false
+                else
+                    echo "," >> "$REPORT_FILE"
+                fi
+                echo -n "        {\"file\": \"$file\", \"line\": \"$line\"}" >> "$REPORT_FILE"
             fi
-            echo -n "        {\"file\": \"$file\", \"line\": \"$line\"}" >> "$REPORT_FILE"
             echo -e "  ${YELLOW}⚠${NC} $file"
         done <<< "$files"
-        echo "" >> "$REPORT_FILE"
+        if [ "$GENERATE_REPORT" = true ]; then
+            echo "" >> "$REPORT_FILE"
+        fi
         total_issues=$((total_issues + count))
     fi
     
-    echo "      ]" >> "$REPORT_FILE"
-    echo "    }," >> "$REPORT_FILE"
+    if [ "$GENERATE_REPORT" = true ]; then
+        echo "      ]" >> "$REPORT_FILE"
+        echo "    }," >> "$REPORT_FILE"
+    fi
     
     if [ $count -eq 0 ]; then
         echo -e "  ${GREEN}✓${NC} No issues found"
@@ -91,12 +123,14 @@ detect_links "tasks_links" "](.*tasks/" "Links to tasks/ folder (should be avoid
 detect_links "journeys_links" "](.*user-journeys/" "Links to user-journeys/ folder (should be avoided)"
 
 # Close JSON report
-echo "    \"total\": {" >> "$REPORT_FILE"
-echo "      \"count\": $total_issues" >> "$REPORT_FILE"
-echo "    }" >> "$REPORT_FILE"
-echo "  }," >> "$REPORT_FILE"
-echo "  \"total_issues\": $total_issues" >> "$REPORT_FILE"
-echo "}" >> "$REPORT_FILE"
+if [ "$GENERATE_REPORT" = true ]; then
+    echo "    \"total\": {" >> "$REPORT_FILE"
+    echo "      \"count\": $total_issues" >> "$REPORT_FILE"
+    echo "    }" >> "$REPORT_FILE"
+    echo "  }," >> "$REPORT_FILE"
+    echo "  \"total_issues\": $total_issues" >> "$REPORT_FILE"
+    echo "}" >> "$REPORT_FILE"
+fi
 
 # Summary
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -108,6 +142,8 @@ if [ $total_issues -eq 0 ]; then
     exit 0
 else
     echo -e "${YELLOW}⚠${NC} Found $total_issues link warnings"
-    echo "Report saved to: $REPORT_FILE"
+    if [ "$GENERATE_REPORT" = true ]; then
+        echo "Report saved to: $REPORT_FILE"
+    fi
     exit 1
 fi
