@@ -120,7 +120,7 @@ Navigate our product development timeline and feature pipeline
 
 {: .highlight .btn-group-vertical }
 
-- [📅 Product Roadmap](/docs/roadmap/product-roadmap) - *Feature timeline and development phases*
+- [📅 Product Roadmap](/docs/operations/roadmap/product-roadmap) - *Feature timeline and development phases*
 
 - [🏗️ Implementation Roadmap](/docs/business/implementation/implementation-roadmap) - *Technical milestones and delivery schedule*
 
