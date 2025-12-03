@@ -6,12 +6,36 @@
 
 set -e
 
-TARGET_ROOT="${1:-docs}"
+# Parse arguments
+GENERATE_REPORT=false
+TARGET_ROOT=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --report|-r)
+            GENERATE_REPORT=true
+            shift
+            ;;
+        *)
+            TARGET_ROOT="$1"
+            shift
+            ;;
+    esac
+done
+
+# Set default target if not provided
+TARGET_ROOT="${TARGET_ROOT:-docs}"
+
+# Setup report file or redirect to /dev/null
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 REPORT_DIR="validation/reports"
-REPORT_FILE="$REPORT_DIR/navigation_violations_${TIMESTAMP}.json"
 
-mkdir -p "$REPORT_DIR"
+if [ "$GENERATE_REPORT" = true ]; then
+    REPORT_FILE="$REPORT_DIR/$(basename $0 .sh | sed 's/detect_//')_${TIMESTAMP}.json"
+    mkdir -p "$REPORT_DIR"
+else
+    REPORT_FILE="/dev/null"  # Redirect all report writes to /dev/null
+fi
 
 total_issues=0
 
@@ -25,7 +49,9 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "NAVIGATION VALIDATION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Target: $TARGET_ROOT"
-echo "Report: $REPORT_FILE"
+if [ "$GENERATE_REPORT" = true ]; then
+    echo "Report: $REPORT_FILE"
+fi
 echo ""
 
 # Initialize JSON report
@@ -101,6 +127,8 @@ if [ $total_issues -eq 0 ]; then
     exit 0
 else
     echo -e "${RED}✗${NC} Found $total_issues navigation violations"
-    echo "Report saved to: $REPORT_FILE"
+    if [ "$GENERATE_REPORT" = true ]; then
+        echo "Report saved to: $REPORT_FILE"
+    fi
     exit 1
 fi

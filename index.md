@@ -80,13 +80,13 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📈 Analytics & Performance](/docs/operations-analytics/analytics-performance/README) - *Performance monitoring*
+- [📈 Analytics & Performance](/docs/operations/analytics/analytics-performance/README) - *Performance monitoring*
 
-- [👥 User Analytics](/docs/operations-analytics/analytics-performance/user-analytics) - *Campaign insights*
+- [👥 User Analytics](/docs/operations/analytics/analytics-performance/user-analytics) - *Campaign insights*
 
-- [💹 Financial Operations](/docs/operations-analytics/operations-management/payment-analytics-financial-operations) - *Revenue tracking*
+- [💹 Financial Operations](/docs/operations/billing-ops) - *Revenue tracking*
 
-- [🏢 Operations Management](/docs/operations-analytics/operations-management/README) - *Process optimization*
+- [🏢 Operations Management](/docs/operations/README) - *Process optimization*
 
 ### 👨‍💻 For Developers & Contributors
 
@@ -94,19 +94,19 @@ Welcome to our help center. PenguinMails is purpose-built for cold email success
 
 {: .highlight .btn-group-vertical }
 
-- [📋 Active Tasks](/tasks/README) - *Current development work and sprint tasks*
+- [📋 Active Tasks](/docs/tasks/README) - *Current development work and sprint tasks*
 
-- [💼 Freelancer Onboarding](/docs/freelancer-onboarding/README) - *Start here if you are a freelancer*
+- [💼 Freelancer Onboarding](/docs/operations/freelancer-management/onboarding/README) - *Start here if you are a freelancer*
 
 - [🖥️ Frontend Specifications](/docs/design/frontend-routing-map) - *View routes and UI component specs*
 
-- [🔌 API Documentation](/docs/implementation-technical/api/README) - *Backend endpoints and schemas*
+- [🔌 API Documentation](/docs/implementation-technical/api) - *Backend endpoints and schemas*
 
 - [✨ Features](/docs/feature-overview) - *Feature specifications to implement*
 
-- [🧭 User Journeys](/user-journeys/README) - *User workflows to support*
+- [🧭 User Journeys](/docs/user-journeys/README) - *User workflows to support*
 
-- [📚 Contributing Guide](/CONTRIBUTING) - *How to contribute to the project*
+- [📚 Contributing Guide](https://github.com/penguinmails/penguinmails.github.io/blob/main/CONTRIBUTING.md) - *How to contribute to the project*
 
 ---
 
@@ -120,7 +120,7 @@ Navigate our product development timeline and feature pipeline
 
 {: .highlight .btn-group-vertical }
 
-- [📅 Product Roadmap](/docs/roadmap/product-roadmap) - *Feature timeline and development phases*
+- [📅 Product Roadmap](/docs/operations/roadmap/product-roadmap) - *Feature timeline and development phases*
 
 - [🏗️ Implementation Roadmap](/docs/business/implementation/implementation-roadmap) - *Technical milestones and delivery schedule*
 
@@ -134,11 +134,11 @@ Navigate our product development timeline and feature pipeline
 
 {: .highlight .btn-group-vertical }
 
-- [🧭 User Journeys Hub](/user-journeys/README) - *How customers accomplish their goals*
+- [🧭 User Journeys Hub](/docs/user-journeys/README) - *How customers accomplish their goals*
 
-- [🛤️ Onboarding Flow](/docs/freelancer-onboarding/user-journey-testing) - *New user experience*
+- [🛤️ Onboarding Flow](/docs/operations/freelancer-management/onboarding/user-journey-testing) - *New user experience*
 
-- [📧 Campaign Journey](/docs/operations-analytics/analytics-performance/user-journey-analytics-campaigns) - *Campaign creation workflow*
+- [📧 Campaign Journey](/docs/operations/analytics/analytics-performance/user-journey-analytics-campaigns) - *Campaign creation workflow*
 
 ### For Implementers & Developers
 
