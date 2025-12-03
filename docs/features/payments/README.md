@@ -337,7 +337,7 @@ Database state is strictly driven by Stripe webhooks (`checkout.session.complete
 
 ### Implementation Tasks
 
-- **[Epic 4: Billing, Plans & Subscriptions](/tasks/epic-4-billing-plans-subscriptions/)** - Implementation tasks
+- **Epic 4: Billing, Plans & Subscriptions** - Internal task reference for implementation sequencing
 
   - Milestone 1: Plans & Subscriptions Schema
 
@@ -353,9 +353,9 @@ Database state is strictly driven by Stripe webhooks (`checkout.session.complete
 
 ### User Journeys
 
-- **[Startup Founder Onboarding](/user-journeys/external-users/business-owner-journeys)** - Includes plan selection
+- **Startup Founder Onboarding** - Includes plan selection (internal journey reference)
 
-- **[Agency Owner Onboarding](/user-journeys/external-users/agency-owner-journeys)** - Multi-workspace billing
+- **Agency Owner Onboarding** - Multi-workspace billing (internal journey reference)
 
 ### Business Documentation
 

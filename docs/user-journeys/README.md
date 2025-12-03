@@ -38,53 +38,53 @@ A user journey maps the complete experience of a user accomplishing a specific g
 
 **Goal**: Get new users from signup to first successful campaign
 
-- **[User Journey Testing](/docs/user-journeys/user-journey-testing)** - New user onboarding experience
+- **User Journey Testing** - New user onboarding experience (internal journey reference)
 
-- **[Tenant Onboarding](/docs/user-journeys/tenant-onboarding-flow)** - *[To be created]*
+- **Tenant Onboarding** - *[To be created]* (internal journey reference)
 
-- **[Workspace Setup](/docs/user-journeys/workspace-setup-flow)** - *[To be created]*
+- **Workspace Setup** - *[To be created]* (internal journey reference)
 
-- **[Email Account Creation](/docs/user-journeys/email-account-creation-flow)** - *[To be created]*
+- **Email Account Creation** - *[To be created]* (internal journey reference)
 
 ### Campaign Management
 
 **Goal**: Enable users to create, launch, and optimize campaigns
 
-- **[Campaign Creation Journey](/docs/operations/analytics/analytics-performance/user-journey-analytics-campaigns)** - End-to-end campaign workflow
+- **Campaign Creation Journey** - End-to-end campaign workflow (internal analytics reference)
 
-- **[Template Design](/docs/user-journeys/template-design-flow)** - *[To be created]*
+- **Template Design** - *[To be created]* (internal journey reference)
 
-- **[Campaign Launch](/docs/user-journeys/campaign-launch-flow)** - *[To be created]*
+- **Campaign Launch** - *[To be created]* (internal journey reference)
 
 ### Analytics & Optimization
 
 **Goal**: Help users understand performance and optimize results
 
-- **[Analytics Review](/docs/user-journeys/analytics-review-flow)** - *[To be created]*
+- **Analytics Review** - *[To be created]* (internal journey reference)
 
-- **[Performance Optimization](/docs/user-journeys/performance-optimization-flow)** - *[To be created]*
+- **Performance Optimization** - *[To be created]* (internal journey reference)
 
-- **[A/B Testing](/docs/user-journeys/ab-testing-flow)** - *[To be created]*
+- **A/B Testing** - *[To be created]* (internal journey reference)
 
 ### Team Collaboration
 
 **Goal**: Enable teams to work together effectively
 
-- **[User Invitation](/docs/user-journeys/user-invitation-flow)** - *[To be created]*
+- **User Invitation** - *[To be created]* (internal journey reference)
 
-- **[Role Management](/docs/user-journeys/role-management-flow)** - *[To be created]*
+- **Role Management** - *[To be created]* (internal journey reference)
 
-- **[Multi-Workspace Management](/docs/user-journeys/multi-workspace-flow)** - *[To be created]*
+- **Multi-Workspace Management** - *[To be created]* (internal journey reference)
 
 ### Compliance & Security
 
 **Goal**: Ensure users can manage compliance and security requirements
 
-- **[GDPR Compliance](/docs/user-journeys/gdpr-compliance-flow)** - *[To be created]*
+- **GDPR Compliance** - *[To be created]* (internal journey reference)
 
-- **[Data Export](/docs/user-journeys/data-export-flow)** - *[To be created]*
+- **Data Export** - *[To be created]* (internal journey reference)
 
-- **[Security Settings](/docs/user-journeys/security-settings-flow)** - *[To be created]*
+- **Security Settings** - *[To be created]* (internal journey reference)
 
 ---
 
@@ -268,7 +268,7 @@ level: "2"
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README)** - Journey improvements in progress
+- **Active Tasks** - Journey improvements in progress (internal tracker reference)
 
 - **[Analytics Views](/docs/design/analytics-ui-patterns)** - Analytics patterns
 

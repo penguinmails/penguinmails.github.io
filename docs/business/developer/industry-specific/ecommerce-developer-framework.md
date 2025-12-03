@@ -106,7 +106,7 @@ persona: "Documentation Users"
 
 - Journey optimization compliance completed and optimized
 
-**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + [E-commerce Journey Framework](/docs/user-journeys)
+**Business Framework Integration**: [Developer Automation Framework](/docs/business/developer/automation) + E-commerce Journey Framework (internal journey reference)
 
 #### Optimization Point 1.2.3: E-commerce Platform Compliance Validation
 

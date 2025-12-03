@@ -855,11 +855,11 @@ Admin Access Loss → Support Ticket → Identity Verification → Staff Interve
 
 ### User Experience
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-journeys/detailed-journeys)) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### Compliance & Security
 

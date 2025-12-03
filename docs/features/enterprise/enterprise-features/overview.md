@@ -126,11 +126,11 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### User Workflows
 
-- **[Enterprise Admin Journey](/docs/features/user-journeys/enterprise-admin-journey)** - Admin workflows (to be created)
+- **Enterprise Admin Journey** - Admin workflows (to be created, internal journey reference)
 
 ### Implementation Tasks
 
-- **[Enterprise Features Epic](/docs/tasks/enterprise/)** - Development tasks
+- **Enterprise Features Epic** - Internal task reference for development work
 
 ## Technical Details
 

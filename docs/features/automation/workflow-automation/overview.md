@@ -114,11 +114,11 @@ Intelligent marketing automation platform with trigger-based workflows, conditio
 
 ### User Workflows
 
-- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - Automation in marketing workflow
+- **Marketing Journey** - Automation in marketing workflow (internal journey reference)
 
 ### Implementation Tasks
 
-- **[Workflow Automation Epic](/docs/tasks/automation/)** - Development tasks
+- **Workflow Automation Epic** - Internal task reference for development work
 
 ## Technical Details
 

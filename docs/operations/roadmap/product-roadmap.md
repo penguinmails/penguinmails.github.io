@@ -2035,11 +2035,11 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### User Workflows
 
-- **[Marketing Journey](/docs/user-journeys/marketing-journey)** - Marketing team workflows and adoption
+- **Marketing Journey** - Marketing team workflows and adoption (internal journey reference)
 
-- **[Customer Success Journey](/docs/user-journeys/customer-success-journey)** - Customer onboarding and success paths
+- **Customer Success Journey** - Customer onboarding and success paths (internal journey reference)
 
-- **[User Journeys Overview](/docs/user-journeys/README)** - Complete journey documentation
+- **User Journeys Overview** - Complete journey documentation (internal journey reference)
 
 ### Specifications
 
@@ -2049,9 +2049,9 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README)** - Current development work
+- **Active Tasks** - Current development work (internal tracker reference)
 
-- **[Task Templates](/tasks/templates/README)** - Standardized task creation
+- **Task Templates** - Standardized task creation (internal template reference)
 
 ### Business Context
 

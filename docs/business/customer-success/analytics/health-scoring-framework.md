@@ -281,7 +281,7 @@ Customer health scoring provides a quantitative measure of account health and ri
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 
-- [Customer Journey Analytics](/docs/user-journeys)
+- Customer Journey Analytics (internal journey reference)
 
 - [Predictive Churn Analysis](/docs/business/customer-success/analytics/predictive-churn-analysis)
 

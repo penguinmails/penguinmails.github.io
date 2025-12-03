@@ -84,7 +84,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Implementation Tasks
 
-- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Implementation task breakdown
+- Epic 7: Leads Management - Internal task reference for implementation sequencing
 
 ### Related Features
 

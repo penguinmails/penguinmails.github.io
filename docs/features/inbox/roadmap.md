@@ -88,7 +88,7 @@ This document outlines the development roadmap for inbox management features, in
 
 **Related Documentation**:
 
-- `tasks/spike-stalwart-database-schema-investigation.md`
+- Stalwart database schema investigation spike (internal task reference)
 
 - [Unified Inbox Overview](/docs/features/inbox/unified-inbox/overview)
 
@@ -645,7 +645,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ### Implementation Tasks
 
-- `tasks/spike-stalwart-database-schema-investigation.md`
+- Stalwart database schema investigation spike (internal task reference)
 
 - Epic 8: Inbox Management
 

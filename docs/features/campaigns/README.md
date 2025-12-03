@@ -286,7 +286,7 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for complete timeline a
 
 - [Email Pipeline](/docs/features/queue/email-pipeline) - Email sending infrastructure
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline) - Implementation tasks
+- Epic 6: Core Email Pipeline - Internal task reference for implementation work
 
 ### Route Specifications
 

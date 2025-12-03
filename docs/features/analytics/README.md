@@ -172,11 +172,11 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### User Journeys
 
-- **[Customer Success Journey](/docs/user-journeys/customer-success-journey)** - Analytics-driven optimization workflows
+- **Customer Success Journey** - Analytics-driven optimization workflows (internal journey reference)
 
-- **[Marketing Journey](/docs/user-journeys/marketing-journey)** - Data-driven campaign management
+- **Marketing Journey** - Data-driven campaign management (internal journey reference)
 
-- **[Business Owner Journeys](/user-journeys/external-users/business-owner-journeys)** - ROI tracking and performance monitoring
+- **Business Owner Journeys** - ROI tracking and performance monitoring (internal journey reference)
 
 ### Technical Architecture
 

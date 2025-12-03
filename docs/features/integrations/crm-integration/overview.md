@@ -110,11 +110,11 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### User Workflows
 
-- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - CRM sync in campaign workflow
+- **Marketing Journey** - CRM sync in campaign workflow (internal journey reference)
 
 ### Implementation Tasks
 
-- **[CRM Integration Epic](/docs/tasks/crm-integration/)** - Development tasks
+- **CRM Integration Epic** - Internal task reference for development tasks
 
 ## Technical Details
 

@@ -674,7 +674,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Tasks
 
-- **[Epic 2: User Authentication](/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+- **Epic 2: User Authentication** - Internal task reference for implementation tasks
 
 ### Roadmap
 

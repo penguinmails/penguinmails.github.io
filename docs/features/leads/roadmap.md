@@ -785,7 +785,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Implementation Tasks
 
-- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Implementation task breakdown
+- Epic 7: Leads Management - Internal task reference for implementation task breakdown
 
 ### Related Features
 

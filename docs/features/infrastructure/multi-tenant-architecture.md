@@ -532,7 +532,7 @@ Return results (tenant-scoped only)
 
 ### Tasks
 
-- **[Epic 3: Tenant Management](/docs/tasks/epic-3-tenant-company-management/)** - Implementation tasks
+- **Epic 3: Tenant Management** - Internal task reference for implementation tasks
 
 ---
 

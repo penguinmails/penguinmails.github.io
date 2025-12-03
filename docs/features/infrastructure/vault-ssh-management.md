@@ -580,7 +580,7 @@ path "vps/*/tenant_ssh/*" {
 
 - **[Task 11.3 - Vault Integration Architecture](/.kiro/specs/feature-completeness-review/tasks#113-document-vault-integration-architecture)** - Architecture documentation
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for infrastructure tasks
 
 ### External References
 

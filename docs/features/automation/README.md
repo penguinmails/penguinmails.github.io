@@ -242,9 +242,9 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ### User Journeys
 
-- [Marketing Team Journey](/docs/user-journeys/marketing-journey) - Automation in marketing workflow
+- Marketing Team Journey - Automation in marketing workflow (internal journey reference)
 
-- [Agency Owner Journey](/user-journeys/external-users/agency-owner-journeys) - Multi-client automation
+- Agency Owner Journey - Multi-client automation (internal journey reference)
 
 ### Technical Implementation
 
@@ -268,9 +268,9 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ## Implementation Tasks
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email sending infrastructure
+- Epic 6: Core Email Pipeline - Internal task reference for email sending infrastructure
 
-- [Epic 7: Leads Management](/tasks/epic-7-leads-management/) - Contact management
+- Epic 7: Leads Management - Internal task reference for contact management
 
 ---
 

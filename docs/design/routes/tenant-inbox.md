@@ -470,7 +470,7 @@ Once the Stalwart investigation is complete, the following features need impleme
 
 - [Unified Inbox Overview](/docs/features/inbox/unified-inbox/overview) - Feature specifications
 
-- [Stalwart Investigation Spike](/tasks/spike-stalwart-database-schema-investigation) - Architecture investigation task
+- Stalwart Investigation Spike - Internal task reference for architecture investigation
 
 ---
 

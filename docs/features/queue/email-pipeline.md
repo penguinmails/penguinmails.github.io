@@ -203,7 +203,7 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 
 ### Tasks
 
-- **[Epic 6: Core Email Pipeline](/docs/tasks/epic-6-core-email-pipeline/README)** - Development tasks
+- **Epic 6: Core Email Pipeline** - Internal task reference for development work
 
 ---
 

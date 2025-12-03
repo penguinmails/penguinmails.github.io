@@ -563,7 +563,7 @@ These convenience features can be implemented if time permits, but are not block
 
 - [Domain Routes](/docs/design/routes/workspace-domains) - UI specifications
 
-- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/) - Implementation tasks
+- Epic 5: Infrastructure Management - Internal task reference for implementation tasks
 
 ---
 

@@ -763,7 +763,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 ### Implementation
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for implementation tasks
 
 - **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
 

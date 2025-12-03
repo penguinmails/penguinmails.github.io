@@ -1336,7 +1336,7 @@ Audit log retention: 90 days (configurable)
 
 - **[Task 11.6 - Tenant API Key System](/.kiro/specs/feature-completeness-review/tasks#116-implement-tenant-api-key-system-with-vault)** - API key system implementation
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for infrastructure work
 
 ### External References
 

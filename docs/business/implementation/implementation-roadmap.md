@@ -472,7 +472,7 @@ Our strategic implementation framework emphasizes realistic scope management, di
 
         - Strategic consolidated, opinionated internal "Revenue Risk Overview" built on:
 
-          - Strategic PostHog business events and integrations delivered via [`BF-003`](/docs/business/implementation/tasks/user-stories-framework),
+          - Strategic PostHog business events and integrations delivered via internal reference `BF-003` (user stories framework),
 
           - Strategic internal BI views and OLAP aggregates,
 

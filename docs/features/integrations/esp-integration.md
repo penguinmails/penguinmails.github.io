@@ -626,13 +626,13 @@ Savings: $70/month vs all-Postmark
 
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
 
-- **[Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/)** - Email pipeline tasks
+- **Epic 6: Core Email Pipeline** - Internal task reference for email pipeline work
 
 ### User Journeys
 
-- **[Operations Team Journeys](/user-journeys/internal-users/operations-journeys)** - ESP setup workflows
+- **Operations Team Journeys** - ESP setup workflows (internal journey reference)
 
-- **[Technical Teams Journeys](/user-journeys/internal-users/technical-teams-journeys)** - API integration
+- **Technical Teams Journeys** - API integration (internal journey reference)
 
 ---
 

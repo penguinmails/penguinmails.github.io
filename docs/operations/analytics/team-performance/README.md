@@ -49,7 +49,7 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 - [Business Strategy](/docs/business/strategy/overview) - Strategic alignment
 
-- [User Experience](/docs/user-journeys) - UX team collaboration
+- User Experience - UX team collaboration (internal journey reference)
 
 ---
 

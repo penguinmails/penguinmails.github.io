@@ -894,9 +894,9 @@ Projected Annual Cost: $735.00
 
 ### User Journeys
 
-- **[Operations Team Journey](/user-journeys/internal-users/operations-journeys)** - ESP setup and monitoring workflows
+- **Operations Team Journey** - ESP setup and monitoring workflows (internal journey reference)
 
-- **[Developer Journey](/user-journeys/internal-users/technical-teams-journeys)** - API integration and webhook setup
+- **Developer Journey** - API integration and webhook setup (internal journey reference)
 
 ---
 

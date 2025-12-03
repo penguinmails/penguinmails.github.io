@@ -418,7 +418,7 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 ### Implementation
 
-- **[Active Tasks](/tasks/README)** - Development status
+- **Active Tasks** - Development status (internal tracker reference)
 
 ---
 

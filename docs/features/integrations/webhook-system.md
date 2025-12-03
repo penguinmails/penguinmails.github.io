@@ -917,13 +917,13 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 - **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign events
 
-- **[Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/)** - Email pipeline tasks
+- **Epic 6: Core Email Pipeline** - Internal task reference for email pipeline work
 
 ### User Journeys
 
-- **[Technical Teams Journeys](/user-journeys/internal-users/technical-teams-journeys)** - Developer workflows
+- **Technical Teams Journeys** - Developer workflows (internal journey reference)
 
-- **[Developer Onboarding](/user-journeys/external-users/onboarding-flows/developer-onboarding)** - Developer setup
+- **Developer Onboarding** - Developer setup (internal journey reference)
 
 ---
 

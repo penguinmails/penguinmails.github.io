@@ -109,7 +109,7 @@ Bi-directional sync with major CRMs including Salesforce and HubSpot.
 
 - Field mapping (standard and custom fields)
 
-- Activity logging (tasks/timeline events)
+- Activity logging (internal timeline events)
 
 - Conflict resolution strategies
 
@@ -501,9 +501,9 @@ Vault integration supports compliance with industry standards:
 
 ### Implementation Tasks
 
-- [Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/) - Infrastructure tasks
+- Epic 5: Infrastructure Management - Internal task reference for infrastructure work
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline/) - Email pipeline tasks
+- Epic 6: Core Email Pipeline - Internal task reference for email pipeline work
 
 ### Business Documentation
 

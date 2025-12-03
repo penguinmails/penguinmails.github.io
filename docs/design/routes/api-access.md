@@ -860,9 +860,9 @@ await client.emails.send({
 
 ### User Journeys
 
-- **[Developer Journey](/user-journeys/internal-users/technical-teams-journeys)** - API integration workflows
+- **Developer Journey** - API integration workflows (internal journey reference)
 
-- **[Integration Setup](/user-journeys/external-users/business-owner-journeys#api-integration)** - API setup for business users
+- **Integration Setup** - API setup for business users (internal journey reference)
 
 ---
 

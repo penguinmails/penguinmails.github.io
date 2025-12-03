@@ -881,9 +881,9 @@ This roadmap outlines the development timeline for team and workspace management
 
 ### Implementation Tasks
 
-- **[Epic 2: User Authentication & Profile](/tasks/epic-2-user-authentication-profile/)** - User management implementation
+- **Epic 2: User Authentication & Profile** - Internal task reference for user management implementation
 
-- **[Epic 3: Tenant & Company Management](/tasks/epic-3-tenant-company-management/)** - Tenant and workspace implementation
+- **Epic 3: Tenant & Company Management** - Internal task reference for tenant and workspace implementation
 
 ### Roadmap
 

@@ -1376,7 +1376,7 @@ Authorization: Bearer {admin_token}
 
 - **[Task 11.7 - Vault Disaster Recovery](/.kiro/specs/feature-completeness-review/tasks#117-implement-vault-disaster-recovery-procedures)** - Disaster recovery
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Infrastructure tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for infrastructure work
 
 ### External Resources
 

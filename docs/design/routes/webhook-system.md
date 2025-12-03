@@ -1048,9 +1048,9 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 
 ### User Journeys
 
-- **[Developer Journey](/user-journeys/internal-users/technical-teams-journeys)** - Webhook integration workflows
+- **Developer Journey** - Webhook integration workflows (internal journey reference)
 
-- **[Integration Setup](/user-journeys/external-users/business-owner-journeys#webhook-integration)** - Webhook setup for business users
+- **Integration Setup** - Webhook setup for business users (internal journey reference)
 
 ---
 

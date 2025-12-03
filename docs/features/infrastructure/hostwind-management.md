@@ -209,7 +209,7 @@ CREATE TABLE ip_blacklist_events (
 
 ### Tasks
 
-- **[Epic 5: Infrastructure Management](/docs/tasks/epic-5-infrastructure-management/README)** - Development tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for development tasks
 
 ---
 

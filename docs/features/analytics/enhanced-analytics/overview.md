@@ -104,13 +104,13 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### User Workflows
 
-- **[Customer Success Journey](/docs/features/user-journeys/customer-success-journey)** - Analytics-driven optimization
+- **Customer Success Journey** - Analytics-driven optimization (internal journey reference)
 
-- **[Marketing Journey](/docs/features/user-journeys/marketing-journey)** - Data-driven campaign management
+- **Marketing Journey** - Data-driven campaign management (internal journey reference)
 
 ### Implementation Tasks
 
-- **[Enhanced Analytics Epic](/docs/tasks/analytics-enhanced/)** - Development tasks
+- **Enhanced Analytics Epic** - Internal task reference for development work
 
 ## Technical Details
 

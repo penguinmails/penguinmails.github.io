@@ -263,7 +263,7 @@ interface TenantSecretsSummary {
 
 - [Task 11.5 - SMTP Credentials Vault Storage](/docs/.kiro/specs/feature-completeness-review/tasks#115-implement-smtp-credentials-vault-storage)
 
-- [Epic 5: Infrastructure Management](/docs/tasks/epic-5-infrastructure-management/)
+- Epic 5: Infrastructure Management - Internal task reference
 
 ### Reference
 

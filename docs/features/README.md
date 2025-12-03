@@ -162,7 +162,7 @@ Each feature document is structured in **three progressive complexity levels**:
 
 - **[Technical Architecture](/docs/technical/README)** - System design and infrastructure
 
-- **[User Journeys](/user-journeys/README)** - Customer workflows and paths
+- **User Journeys** - Customer workflows and paths (internal journey reference)
 
 - **[Compliance & Security](/docs/compliance-security/README)** - Regulatory requirements
 

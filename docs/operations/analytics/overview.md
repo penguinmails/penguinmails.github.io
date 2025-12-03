@@ -213,7 +213,7 @@ persona: "Documentation Users"
 
 ### **Strategic User Experience Integration**
 
-- [Strategic User Overview](/docs/user-journeys) - Strategic user experience flows and planning
+- Strategic User Overview - Strategic user experience flows and planning (internal journey reference)
 
 - [Strategic User Onboarding](/docs/user-experience-journeys/detailed-journeys) - Strategic user activation and planning
 

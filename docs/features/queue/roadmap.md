@@ -265,7 +265,7 @@ Timeline for queue system enhancements from current active state through future 
 
 - [Email Pipeline](/docs/features/queue/email-pipeline) - Email sending infrastructure
 
-- [Epic 6: Core Email Pipeline](/tasks/epic-6-core-email-pipeline) - Implementation tasks
+- Epic 6: Core Email Pipeline - Internal task reference for implementation work
 
 ### Business Strategy
 

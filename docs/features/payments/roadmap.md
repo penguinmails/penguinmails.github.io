@@ -77,7 +77,7 @@ Implement complete user interface for changing subscription plans with visual co
 
 - Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
-- Task: [Epic 4, Milestone 3](/tasks/epic-4-billing-plans-subscriptions/milestone-3-subscription-state-synchronization/)
+- Task Reference: Epic 4, Milestone 3 — internal subscription state synchronization work
 
 ---
 
@@ -128,7 +128,7 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 
 - Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
-- Task: [Epic 4, Milestone 1](/tasks/epic-4-billing-plans-subscriptions/milestone-1-plans-subscriptions-schema/)
+- Task Reference: Epic 4, Milestone 1 — internal plans and subscriptions schema work
 
 ---
 
@@ -334,7 +334,7 @@ Build user-friendly cancellation process with feedback collection, retention off
 
 - Feature: [Subscription Management](/docs/features/payments/subscription-management)
 
-- Task: [Epic 4, Milestone 3](/tasks/epic-4-billing-plans-subscriptions/milestone-3-subscription-state-synchronization/)
+- Task Reference: Epic 4, Milestone 3 — internal subscription state synchronization work
 
 ---
 
@@ -1054,7 +1054,7 @@ Add support for trial plans as a separate plan type (not a subscription field). 
 
 ### Implementation Tasks
 
-- **[Epic 4: Billing, Plans & Subscriptions](/tasks/epic-4-billing-plans-subscriptions/)** - Implementation tasks
+- **Epic 4: Billing, Plans & Subscriptions** - Internal task reference for implementation sequencing
 
   - Milestone 1: Plans & Subscriptions Schema
 

@@ -1159,11 +1159,11 @@ SMTP Connection Failure → Automatic Failover → Backup Server Activation → 
 
 ### **User Experience**
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
-- [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
+- Onboarding Journey - User activation (internal journey reference)
 
-- [User Interaction Patterns](/docs/user-experience-journeys/detailed-journeys) - UX optimization
+- User Interaction Patterns - UX optimization (internal journey reference)
 
 ### **Compliance & Security**
 

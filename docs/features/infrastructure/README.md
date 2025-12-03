@@ -204,7 +204,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ### Implementation
 
-- **[Epic 5: Infrastructure Management](/tasks/epic-5-infrastructure-management/)** - Implementation tasks
+- **Epic 5: Infrastructure Management** - Internal task reference for implementation work
 
 - **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
 

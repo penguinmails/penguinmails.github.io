@@ -401,7 +401,7 @@ Customer Onboarding represents the critical foundation period where new customer
 
 - [Customer Success Framework](/docs/business/strategy/overview)
 
-- [Customer Journey Management](/docs/user-journeys)
+- Customer Journey Management (internal journey reference)
 
 - [Customer Health Scoring](/docs/business/analytics/overview)
 

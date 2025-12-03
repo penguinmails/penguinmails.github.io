@@ -212,7 +212,7 @@ Internal admin tool to view:
 ### Tasks
 
 
-- **[Epic 6: Core Email Pipeline](/docs/tasks/epic-6-core-email-pipeline/README)** - Implementation tasks
+- **Epic 6: Core Email Pipeline** - Internal task reference for implementation tasks
 
 ---
 

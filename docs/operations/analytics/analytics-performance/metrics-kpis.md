@@ -637,7 +637,7 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 ### User Experience
 
-- [User Journeys Overview](/docs/user-journeys) - User flow documentation
+- User Journeys Overview - User flow documentation (internal journey reference)
 
 - [Onboarding Journey](/docs/user-experience-journeys/detailed-journeys) - User activation
 

@@ -895,7 +895,7 @@ Response:
 
 ### Tasks
 
-- **[Epic 2: User Authentication](/docs/tasks/epic-2-user-authentication-profile/)** - Implementation tasks
+- **Epic 2: User Authentication** - Internal task reference for implementation work
 
 ### Roadmap
 
