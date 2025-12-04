@@ -168,7 +168,26 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 - Post-split: `content_quality_issues_20251204_181420.json` (185 issues)
 
 **Remaining Backlog**: 184 overlong files
-- Next target: `executive-reporting-framework.md` (1884 lines)
+- Next target: `compliance/roadmap.md` (1516 lines)
+
+**Third Iteration**:
+- ✅ `executive-reporting-framework.md` (1884 lines) → Split into hub + 9 subpages
+  - Created `executive-reporting/overview.md` (93 lines) - Hub with navigation
+  - Created `executive-reporting/daily-briefing.md` (77 lines)
+  - Created `executive-reporting/weekly-report.md` (441 lines)
+  - Created `executive-reporting/monthly-review.md` (846 lines) - Still over 500, needs further split
+  - Created `executive-reporting/automation.md` (133 lines)
+  - Created `executive-reporting/integration.md` (59 lines)
+  - Created `executive-reporting/security.md` (75 lines)
+  - Created `executive-reporting/success-metrics.md` (95 lines)
+  - Created `executive-reporting/implementation.md` (103 lines)
+  - Created `executive-reporting/budget.md` (81 lines)
+  - Updated links in documentation
+
+**Reports Generated**:
+- Post-exec-split: `content_quality_issues_20251204_182030.json` (184 issues)
+
+**Note**: Monthly-review.md (846 lines) still exceeds 500-line limit and will need additional splitting in future iteration.
 
 **Second Iteration**:
 - ✅ `product-roadmap.md` (2100 lines) → Split into hub + 8 feature roadmaps
