@@ -283,6 +283,6 @@ Following Phase 3B standards, all designs start mobile-first:
 
 - [Design Tokens](/docs/design/design-tokens) - Design token specifications
 
-- [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
+- [UI Library](/docs/design/ui-library/overview) - Component usage guidelines and patterns
 
 ---

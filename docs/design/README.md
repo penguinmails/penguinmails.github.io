@@ -23,7 +23,7 @@ persona: "Designers & Developers"
 |------|---------|-------|
 | **[Design System](/docs/design/design-system)** | Core principles, philosophy, and high-level standards. | Foundation for all design decisions. |
 | **[Design Tokens](/docs/design/design-tokens)** | Primitive values (colors, spacing, typography). | Maps to CSS variables / Tailwind config. |
-| **[UI Library](/docs/design/ui-library)** | **High-level patterns** and tech stack recommendations. | "Use shadcn + react-hook-form + zod", "DataTable needs realtime + paginated variants" |
+| **[UI Library](/docs/design/ui-library/overview)** | **High-level patterns** and tech stack recommendations. | "Use shadcn + react-hook-form + zod", "DataTable needs realtime + paginated variants" |
 | **[Component Library](/docs/design/component-library)** | **Detailed component specs** showing how components apply guidelines. | How components use tokens, ensure mobile support, implement theming. |
 | **[Analytics UI Patterns](/docs/design/analytics-ui-patterns)** | **Visual patterns** for data display. | Data cards, charts, tables, and drill-down interaction patterns. |
 | **[Accessibility](/docs/design/accessibility-guidelines)** | WCAG 2.1 AA standards and testing checklists. | Enforced via linting and testing. |

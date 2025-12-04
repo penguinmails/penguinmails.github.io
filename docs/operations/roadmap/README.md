@@ -132,7 +132,7 @@ Roadmaps are updated monthly with:
 
 - **[API Architecture](/docs/implementation-technical/api/README)** - Backend endpoint design
 
-- **[Design System](/docs/design/ui-library)** - UI patterns and components
+- **[Design System](/docs/design/ui-library/overview)** - UI patterns and components
 
 ### Implementation
 
