@@ -251,7 +251,20 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 - Post-code-standards-split: `content_quality_issues_20251204_183054.json` (183 issues)
 
 **Remaining Backlog**: 182 files
-- Next target: `leads/import-export.md` (1454 lines)
+- Next target: `campaigns/campaign-management/overview.md` (1415 lines)
+
+**Seventh Iteration**:
+- ✅ `leads/import-export.md` (1454 lines) → Split into hub + 3 level-based guides
+  - Created `import-export/overview.md` (55 lines) - Hub with navigation
+  - Created `import-export/quick-start.md` (193 lines) - Level 1
+  - Created `import-export/advanced.md` (487 lines) - Level 2
+  - Created `import-export/technical.md` (757 lines) - Level 3 (still over 500)
+  - Updated links in documentation
+
+**Reports Generated**:
+- Post-import-export-split: `content_quality_issues_20251204_184038.json` (182 issues)
+
+**Note**: technical.md (757 lines) still exceeds 500-line limit and will need additional splitting in future iteration.
 
 **Sixth Iteration**:
 - ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains

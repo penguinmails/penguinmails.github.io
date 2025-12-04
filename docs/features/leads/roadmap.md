@@ -771,7 +771,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 - [Contact Segmentation](/docs/features/leads/contact-segmentation) - Dynamic and static segmentation
 
-- [Import/Export](/docs/features/leads/import-export) - Bulk contact operations
+- [Import/Export](/docs/features/leads/import-export/overview) - Bulk contact operations
 
 - [Lead Scoring](/docs/features/leads/lead-scoring) - Behavioral and demographic scoring
 

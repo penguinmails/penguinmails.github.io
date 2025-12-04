@@ -882,7 +882,7 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 - **[Lead Scoring](/docs/features/leads/lead-scoring)** - Behavioral scoring system
 
-- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact operations
+- **[Import/Export](/docs/features/leads/import-export/overview)** - Bulk contact operations
 
 - **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use segments in campaigns
 

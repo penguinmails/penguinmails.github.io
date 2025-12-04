@@ -30,7 +30,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **[Lead Scoring](/docs/features/leads/lead-scoring)** - Engagement-based lead scoring system
 
-- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact import/export with field mapping
+- **[Import/Export](/docs/features/leads/import-export/overview)** - Bulk contact import/export with field mapping
 
 ### ðŸš§ MVP Implementation Required (Q1 2026)
 
