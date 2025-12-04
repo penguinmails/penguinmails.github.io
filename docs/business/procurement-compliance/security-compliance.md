@@ -224,7 +224,7 @@ Security and compliance features are integrated into the core platform:
 
 - [Detailed Security Framework](/docs/business/procurement-compliance/security-compliance-detailed) - Complete technical security analysis
 
-- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Complete regulatory analysis
+- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework/overview) - Complete regulatory analysis
 
 - [Security Framework (Enterprise)](/docs/compliance-security/enterprise) - Technical security controls
 

@@ -250,8 +250,23 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-code-standards-split: `content_quality_issues_20251204_183054.json` (183 issues)
 
-**Remaining Backlog**: 183 files
-- Next target: `compliance-framework.md` (1491 lines)
+**Remaining Backlog**: 182 files
+- Next target: `leads/import-export.md` (1454 lines)
+
+**Sixth Iteration**:
+- ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains
+  - Created `compliance-framework/overview.md` (32 lines) - Hub with navigation
+  - Created `compliance-framework/regulatory-framework.md` (162 lines)
+  - Created `compliance-framework/technical-implementation.md` (459 lines)
+  - Created `compliance-framework/monitoring-reporting.md` (229 lines)
+  - Created `compliance-framework/maintenance-updates.md` (193 lines)
+  - Created `compliance-framework/training-awareness.md` (178 lines)
+  - Created `compliance-framework/incident-response.md` (160 lines)
+  - Created `compliance-framework/documentation.md` (170 lines)
+  - Updated links in documentation
+
+**Reports Generated**:
+- Post-compliance-framework-split: `content_quality_issues_20251204_183251.json` (182 issues)
 
 **Second Iteration**:
 - ✅ `product-roadmap.md` (2100 lines) → Split into hub + 8 feature roadmaps

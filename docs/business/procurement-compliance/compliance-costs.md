@@ -782,7 +782,7 @@ persona: "Documentation Users"
 
 ## For technical teams
 
-- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Complete technical compliance analysis
+- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework/overview) - Complete technical compliance analysis
 
 - [Technical Infrastructure](/docs/business/implementation/technical-infrastructure) - Technical compliance implementation
 
