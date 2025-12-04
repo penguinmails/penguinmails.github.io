@@ -772,7 +772,7 @@ cron.schedule('0 0 * * *', async () => {
 
 ### Planning & Product
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Infrastructure timeline (Q4 2025)
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Infrastructure timeline (Q4 2025)
 
 - **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure considerations
 

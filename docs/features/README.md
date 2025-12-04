@@ -113,7 +113,7 @@
 
 ---
 
-**Planning implementation?** → [Product Roadmap](/docs/operations/roadmap/product-roadmap)
+**Planning implementation?** → [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)
 **Need feature comparisons?** → [Feature Catalog](/docs/feature-overview)
 
 ---
@@ -297,8 +297,8 @@ Each feature document is structured in **three progressive complexity levels**:
 |---------|--------|----------|----------|
 | **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** | Planned | 0% | High |
 
-**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/operations/roadmap/product-roadmap)
+**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)
 
 ---
 
-*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/operations/roadmap/product-roadmap) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) →*

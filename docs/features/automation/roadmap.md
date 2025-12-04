@@ -585,7 +585,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 - [Automation Overview](/docs/features/automation/README) - Feature summary
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Infrastructure milestones
 

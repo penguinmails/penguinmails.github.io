@@ -507,7 +507,7 @@ Vault integration supports compliance with industry standards:
 
 ### Business Documentation
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Product strategy and timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Product strategy and timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical implementation roadmap
 

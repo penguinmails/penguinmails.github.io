@@ -759,7 +759,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 - [Lead Management README](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature area overview
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 

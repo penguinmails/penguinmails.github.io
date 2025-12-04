@@ -167,5 +167,21 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 - Initial: `content_quality_issues_20251204_180923.json` (186 issues)
 - Post-split: `content_quality_issues_20251204_181420.json` (185 issues)
 
-**Remaining Backlog**: 185 overlong files
-- Next target: `product-roadmap.md` (2100 lines)
+**Remaining Backlog**: 184 overlong files
+- Next target: `executive-reporting-framework.md` (1884 lines)
+
+**Second Iteration**:
+- ✅ `product-roadmap.md` (2100 lines) → Split into hub + 8 feature roadmaps
+  - Created `product-roadmap/overview.md` (219 lines) - Hub with feature navigation
+  - Created `product-roadmap/infrastructure.md` (214 lines)
+  - Created `product-roadmap/domain-management.md` (174 lines)
+  - Created `product-roadmap/automation-workflows.md` (118 lines)
+  - Created `product-roadmap/billing-subscriptions.md` (286 lines)
+  - Created `product-roadmap/analytics-reporting.md` (282 lines)
+  - Created `product-roadmap/integrations.md` (368 lines)
+  - Created `product-roadmap/inbox-management.md` (322 lines)
+  - Created `product-roadmap/development-milestones.md` (224 lines)
+  - Updated 20+ links across documentation
+
+**Reports Generated**:
+- Post-roadmap-split: `content_quality_issues_20251204_181736.json` (184 issues)

@@ -398,7 +398,7 @@ Customer Journey Management provides the systematic approach to understanding, o
 
 ### Planning
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Feature timeline
 
 - **[Feature Taxonomy](/business/feature-taxonomy-and-roadmap)** - Feature classification
 

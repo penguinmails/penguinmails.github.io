@@ -214,7 +214,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing)** - Cost structure
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 
