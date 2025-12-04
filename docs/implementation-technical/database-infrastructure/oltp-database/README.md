@@ -14,7 +14,7 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 ### Core Components
 
-- **[Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)** - Complete OLTP database schema and design principles
+- **[Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)** - Complete OLTP database schema and design principles
 
 - **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er)** - Database schema visualization
 
@@ -34,7 +34,7 @@ This directory contains comprehensive documentation for the PenguinMails OLTP (O
 
 | Document | Purpose | Target Audience |
 |----------|---------|----------------|
-| [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) | Complete OLTP schema and implementation | Database engineers |
+| [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview) | Complete OLTP schema and implementation | Database engineers |
 | [Mermaid ER](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er) | Visual database schema representation | All technical stakeholders |
 | [SQL Implementation Challenge](/docs/implementation-technical/database-infrastructure/oltp-database/sql-implementation-guide) | Hands-on SQL exercises for developers | Backend developers |
 
@@ -86,7 +86,7 @@ This design ensures:
 
 ## Getting Started
 
-1. Review [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) for implementation details
+1. Review [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview) for implementation details
 
 2. Reference [Mermaid ER](/docs/implementation-technical/database-infrastructure/oltp-database/mermaid-er) for visual schema understanding
 

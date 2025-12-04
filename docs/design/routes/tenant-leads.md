@@ -274,7 +274,7 @@
 
 - [Lead Management Roadmap](/docs/features/leads/roadmap) - Detailed timeline and quarterly breakdown
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
@@ -284,7 +284,7 @@
 
 - [Contact Segmentation](/docs/features/leads/contact-segmentation) - Dynamic and static segmentation
 
-- [Import/Export](/docs/features/leads/import-export) - Bulk contact operations
+- [Import/Export](/docs/features/leads/import-export/overview) - Bulk contact operations
 
 - [Lead Scoring](/docs/features/leads/lead-scoring) - Behavioral and demographic scoring
 
@@ -294,7 +294,7 @@
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Use segments in campaigns
 
 - [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 

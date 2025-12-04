@@ -429,7 +429,7 @@ E-commerce organizations operate at high scale with complex customer lifecycle m
 
 - [E-commerce Business Case](/docs/business/industry-business-cases)
 
-- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

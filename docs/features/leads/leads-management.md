@@ -195,7 +195,7 @@ GET /api/v1/contacts/search?query=industry:SaaS
 
 ### Campaigns
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Sending to lists
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Sending to lists
 
 ### Compliance
 

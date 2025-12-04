@@ -930,7 +930,7 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 
 ## Related Documents
 
-- [UI Library](/docs/design/ui-library) - Component usage guidelines and patterns
+- [UI Library](/docs/design/ui-library/overview) - Component usage guidelines and patterns
 
 - [Design System](/docs/design/design-system) - Complete design system overview
 

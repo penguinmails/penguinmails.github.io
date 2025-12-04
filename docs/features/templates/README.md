@@ -52,7 +52,7 @@ Basic template creation and management with HTML editor.
 
 ### ðŸš§ In Development (Q2 2026)
 
-#### [Template Editor](/docs/features/templates/template-editor)
+#### [Template Editor](/docs/features/templates/template-editor/overview)
 
 WYSIWYG drag-and-drop email template editor with advanced features.
 
@@ -76,7 +76,7 @@ WYSIWYG drag-and-drop email template editor with advanced features.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Library](/docs/features/templates/template-library)
+#### [Template Library](/docs/features/templates/library/overview)
 
 Pre-built professional template collection with customization.
 
@@ -196,7 +196,7 @@ See [Template Roadmap](/docs/features/templates/roadmap) for complete timeline a
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 

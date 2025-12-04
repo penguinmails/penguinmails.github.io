@@ -566,7 +566,7 @@ export function Button({
 
 - [Interaction Patterns](/docs/design/interaction-patterns) - User interaction frameworks
 
-- [UI Library](/docs/design/ui-library) - Component usage guidelines
+- [UI Library](/docs/design/ui-library/overview) - Component usage guidelines
 
 **Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---

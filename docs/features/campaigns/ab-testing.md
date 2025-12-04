@@ -723,7 +723,7 @@ cron.schedule('*/30 * * * *', async () => {  // Every 30 minutes
 
 ### Campaign Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation and management
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign creation and management
 
 - **[Personalization System](/docs/features/campaigns/personalization-system)** - Dynamic email personalization
 

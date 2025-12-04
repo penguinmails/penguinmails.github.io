@@ -269,7 +269,7 @@ Timeline for queue system enhancements from current active state through future 
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical dependencies
 

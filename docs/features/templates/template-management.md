@@ -178,7 +178,7 @@ POST /api/v1/templates
 
 ### Campaigns
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Using templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Using templates in campaigns
 
 ### Compliance
 

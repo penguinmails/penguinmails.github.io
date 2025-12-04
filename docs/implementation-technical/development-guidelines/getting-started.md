@@ -205,7 +205,7 @@ After setting up your environment:
 
 2. **Understand our testing requirements** in [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements)
 
-3. **Learn our coding standards** in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards)
+3. **Learn our coding standards** in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards/overview)
 
 4. **Find an issue to work on** by checking our [GitHub Issues](https://github.com/penguinmails/platform/issues)
 

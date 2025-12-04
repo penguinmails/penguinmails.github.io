@@ -613,7 +613,7 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 ### Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign creation
 
 - **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Reply management
 

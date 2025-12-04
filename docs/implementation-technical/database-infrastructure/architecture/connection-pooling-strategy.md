@@ -561,7 +561,7 @@ Level 3: Enterprise Implementation
 
 ### **Technical References**
 
-- **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)** - OLTP pool integration
+- **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)** - OLTP pool integration
 
 - **[Content Database Schema Guide](/docs/implementation-technical/database-infrastructure/content-database)** - Content pool optimization
 

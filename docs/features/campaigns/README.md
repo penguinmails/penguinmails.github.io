@@ -38,7 +38,7 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline a
 
 ### ðŸš§ In Development (Q1 2026)
 
-#### [Campaign Management](/docs/features/campaigns/campaign-management/overview)
+#### [Campaign Management](/docs/features/campaigns/campaign-management/hub)
 
 Comprehensive email campaign management system with sequencing, A/B testing, and template management.
 
@@ -60,7 +60,7 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 
 **Status**: PLANNED (Q1 2026) | **Priority**: Critical
 
-#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling)
+#### [Campaign Scheduling](/docs/features/campaigns/scheduling/overview)
 
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 
@@ -296,7 +296,7 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for complete timeline a
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 

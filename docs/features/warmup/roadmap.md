@@ -499,7 +499,7 @@ Comprehensive timeline for email warmup and reputation management features from 
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 

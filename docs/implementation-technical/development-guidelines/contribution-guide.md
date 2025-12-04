@@ -40,15 +40,15 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 ### **Level 3: Advanced Contribution**
 
-- [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards) - Enterprise development workflows, security protocols, and performance standards
+- [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards/overview) - Enterprise development workflows, security protocols, and performance standards
 
-- [`bug-reporting.md`](/docs/implementation-technical/development-guidelines/bug-reporting) - Bug reporting guidelines and triage processes
+- [`bug-reporting`](/docs/implementation-technical/development-guidelines/bug-reporting/overview) - Bug reporting guidelines and triage processes
 
 - [`feature-requests.md`](/docs/implementation-technical/development-guidelines/feature-requests) - Feature request process and development workflows
 
 - [`community-governance.md`](/docs/implementation-technical/development-guidelines/community-governance) - Community governance, recognition programs, and long-term contribution strategies
 
-- [`licensing-ip.md`](/docs/implementation-technical/development-guidelines/licensing-ip) - Licensing guidelines and intellectual property considerations
+- [`licensing-ip.md`](/docs/implementation-technical/development-guidelines/licensing-ip/overview) - Licensing guidelines and intellectual property considerations
 
 ---
 
@@ -62,7 +62,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 **Documentation**: Refer to [`documentation-contributions.md`](/docs/implementation-technical/development-guidelines/documentation-contributions) for writing and documentation standards.
 
-**Code Quality**: Review [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards) for coding conventions and best practices.
+**Code Quality**: Review [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards/overview) for coding conventions and best practices.
 
 ---
 
@@ -74,9 +74,9 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 3. **Quality**: Ensure compliance with [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements)
 
-4. **Review**: Adhere to standards in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards)
+4. **Review**: Adhere to standards in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards/overview)
 
-5. **Report**: Use [`bug-reporting.md`](/docs/implementation-technical/development-guidelines/bug-reporting) for issue tracking
+5. **Report**: Use [`bug-reporting`](/docs/implementation-technical/development-guidelines/bug-reporting/overview) for issue tracking
 
 6. **Request**: Follow [`feature-requests.md`](/docs/implementation-technical/development-guidelines/feature-requests) for new features
 

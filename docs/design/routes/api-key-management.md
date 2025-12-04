@@ -928,7 +928,7 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 
 ### Planning
 
-- [Feature Documentation - Tenant API Key System](/docs/features/integrations/vault-api-keys)
+- [Feature Documentation - Tenant API Key System](/docs/features/integrations/vault-api-keys/overview)
 
 - [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)
 
@@ -953,4 +953,4 @@ async function revokeAPIKey(keyId: string): Promise<void> {
 **Status:** PLANNED
 **Priority:** P0 - Critical
 
-*This route specification provides comprehensive UI/UX guidance for implementing the API key management interface. All implementation must reference the [Tenant API Key System feature documentation](/docs/features/integrations/vault-api-keys) for backend integration and security requirements.*
+*This route specification provides comprehensive UI/UX guidance for implementing the API key management interface. All implementation must reference the [Tenant API Key System feature documentation](/docs/features/integrations/vault-api-keys/overview) for backend integration and security requirements.*

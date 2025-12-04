@@ -233,7 +233,7 @@ Store SMTP admin credentials in Vault during MailU setup, enabling secure creden
 
 - Emergency credential reset workflow
 
-**Documentation:** [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)
+**Documentation:** [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview)
 
 ### Tenant API Key System
 
@@ -253,7 +253,7 @@ Generate unique API keys per tenant for programmatic email sending, stored secur
 
 - On-demand rotation (tenant-controlled)
 
-**Documentation:** [Vault API Keys](/docs/features/integrations/vault-api-keys)
+**Documentation:** [Vault API Keys](/docs/features/integrations/vault-api-keys/overview)
 
 ### Vault Disaster Recovery
 
@@ -471,7 +471,7 @@ Vault integration supports compliance with industry standards:
 
 - [API Access](/docs/features/integrations/api-access) - API access overview
 
-- [Vault API Keys](/docs/features/integrations/vault-api-keys) - Tenant API key system
+- [Vault API Keys](/docs/features/integrations/vault-api-keys/overview) - Tenant API key system
 
 - [Webhook System](/docs/features/integrations/webhook-system) - Webhook configuration
 
@@ -483,7 +483,7 @@ Vault integration supports compliance with industry standards:
 
 - [Vault SSH Management](/docs/features/infrastructure/vault-ssh-management) - VPS SSH key management
 
-- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
+- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview) - SMTP credentials storage
 
 - [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/) - Vault backup and recovery
 
@@ -507,7 +507,7 @@ Vault integration supports compliance with industry standards:
 
 ### Business Documentation
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Product strategy and timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Product strategy and timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical implementation roadmap
 

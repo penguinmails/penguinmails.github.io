@@ -271,7 +271,7 @@ Complete OpenAPI 3.0 spec available at: `/openapi/cs-cross-domain-v1.json`
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Domain Maps](/docs/business/customer-success/cross-domain-integration)
 

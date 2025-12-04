@@ -772,7 +772,7 @@ cron.schedule('0 0 * * *', async () => {
 
 ### Planning & Product
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Infrastructure timeline (Q4 2025)
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Infrastructure timeline (Q4 2025)
 
 - **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure considerations
 
@@ -792,7 +792,7 @@ cron.schedule('0 0 * * *', async () => {
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation in Vault
 
-- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials)** - Secure SMTP credential management
+- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp/overview)** - Secure SMTP credential management
 
 ### Technical Specifications
 

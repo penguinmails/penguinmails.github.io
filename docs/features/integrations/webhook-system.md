@@ -895,7 +895,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 - **[API Access](/docs/features/integrations/api-access)** - REST API and authentication
 
-- **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Secure API key system
+- **[Vault API Keys](/docs/features/integrations/vault-api-keys/overview)** - Secure API key system
 
 - **[ESP Integration](/docs/features/integrations/esp-integration)** - External ESP webhooks
 
@@ -915,7 +915,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign events
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign events
 
 - **Epic 6: Core Email Pipeline** - Internal task reference for email pipeline work
 

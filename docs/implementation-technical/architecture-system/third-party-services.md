@@ -463,7 +463,7 @@ This document provides a comprehensive analysis of all third-party service depen
 
 ### Roadmap
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Feature timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Feature timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical dependencies
 

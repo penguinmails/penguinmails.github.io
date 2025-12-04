@@ -389,7 +389,7 @@ topics:
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Product Systems Map](/docs/business/product/cross-domain-integration)
 

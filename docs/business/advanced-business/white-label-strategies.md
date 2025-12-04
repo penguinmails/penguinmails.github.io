@@ -1,7 +1,7 @@
 ---
 title: "White Label Business Strategies"
 description: "Advanced white-label business strategies for agencies based on comprehensive market analysis and revenue optimization frameworks"
-last_modified_date: "2025-11-19"
+last_modified_date: "2025-12-05"
 level: "2"
 persona: "Documentation Users"
 ---
@@ -225,175 +225,25 @@ persona: "Documentation Users"
 
 - **Client Base**: 25-50 clients migrated to white-label platform
 
-- **Average Revenue**: $200/month per client
+title: "White Label Business Strategies (Deprecated)"
+description: "Deprecated landing page retained to preserve historical links to the white-label strategy documentation"
+last_modified_date: "2025-12-04"
+level: "2"
+persona: "Documentation Users"
+keywords: ["white label", "agency strategy", "deprecated"]
 
-- **Monthly Revenue**: $5K-10K from white-label subscriptions
+## White Label Business Strategies (Deprecated)
 
-- **Annual Revenue**: $60K-120K from white-label model
+## Status
 
-- **Agency Margin**: $45K-90K after platform fees and revenue sharing
+This file is retained only to preserve historical links. The modular white-label strategy documentation now lives in the updated hub:
 
-#### **Year 3 Revenue Vision**
+- [White Label Strategy Hub](/docs/business/advanced-business/white-label-strategies/README)
 
-- **Client Base**: 75-150 clients on white-label platform
+## Next Steps
 
-- **Average Revenue**: $250
-
-- **Monthly Revenue**: $18.75K-37.5K from subscriptions
-
-- **Annual Revenue**: $225K-450K from white-label model
-
-- **Additional Services**: $50K-100K from consulting and optimization services
-
-### **Platform Revenue Model**
-
-#### **White-Label Revenue Sharing**
-
-- **Year 1 Target**: $100K-200K ARR from white-label revenue sharing
-
-- **Year 3 Target**: $2M-5M ARR from white-label network
-
-- **Margin Structure**: 85% gross margin on revenue sharing model
-
-- **Scaling Efficiency**: Minimal marginal cost per additional agency/client
-
-#### **Market Penetration Strategy**
-
-- **Phase 1**: 10-20 agencies in North America
-
-- **Phase 2**: 50-100 agencies across North America and Europe
-
-- **Phase 3**: 200-500 agencies globally with APAC expansion
-
-- **Market Share Target**: 5-10% of addressable agency market (agencies with 10+ clients)
-
----
-
-## Competitive Positioning & Differentiation
-
-### **vs. Traditional ESPs (SendGrid, Mailgun, Postmark)**
-
-| Feature | Our White-Label | Traditional ESPs |
-|---------|----------------|------------------|
-| **Multi-tenant Management** | Full compliance | Basic features only |
-| **Revenue Sharing** | Full compliance | Basic features only |
-| **Agency Branding** | Full compliance | Basic features only |
-| **Client Isolation** | Full compliance | Basic features only |
-| **Compliance Automation** | Full compliance | Basic features only |
-
-### **vs. Agency Management Tools**
-
-| Feature | Our White-Label | Agency Tools |
-|---------|----------------|--------------|
-| **Email Infrastructure** | Full compliance | Basic features only |
-| **Deliverability Optimization** | Full compliance | Basic features only |
-| **Compliance Management** | Full compliance | Basic features only |
-| **Client Onboarding** | Full compliance | Basic features only |
-| **Revenue Model** | Full compliance | Basic features only |
-
-### **Market Positioning Statement**
-
-"For agencies who want to offer enterprise-grade email infrastructure to their clients while maintaining brand control and capturing additional revenue, PenguinMails white-label is the only platform that combines multi-tenant architecture, compliance automation, and revenue sharing in one unified system."
-
----
-
-## Success Metrics & KPIs
-
-### **Agency Performance Metrics**
-
-- **Client Migration Rate**: 25-50% of agency client base within 6 months
-
-- **Client Retention**: >95% annual retention on white-label platform
-
-- **Revenue Per Client**: $200-300/month average with 6-10% annual growth
-
-- **Agency Satisfaction**: >90% NPS score from white-label agencies
-
-- **Platform Utilization**: 70%+ of agency team members actively using platform
-
-### **Platform Growth Metrics**
-
-- **Agency Acquisition**: 10-20 new agencies per quarter
-
-- **Client Acquisition**: 100-500 new clients per quarter through agencies
-
-- **Revenue Growth**: 20-30% quarter-over-quarter growth in white-label ARR
-
-- **Market Penetration**: 1-3% of addressable agency market by year 2
-
-- **Geographic Expansion**: 20% international revenue by year 2
-
-### **Client Success Metrics**
-
-- **Deliverability Improvement**: 3-5x improvement in inbox placement
-
-- **Compliance Score**: 100% compliance audit pass rate
-
-- **Client Satisfaction**: >90% client satisfaction with agency services
-
-- **ROI Achievement**: 10-20x ROI for clients through improved deliverability
-
-- **Time to Value**: <30 minutes for basic infrastructure setup
-
----
-
-## Risk Analysis & Mitigation
-
-### **Market Risks & Mitigation**
-
-#### **Competition from Well-Funded Players**
-
-- **Risk**: SendGrid, Mailgun launching agency-focused solutions
-
-- **Mitigation**: First-mover advantage in white-label revenue sharing model
-
-- **Defensive Strategy**: Patent protection for revenue sharing innovations
-
-- **Competitive Response**: Rapid feature development and strong agency relationships
-
-#### **Regulatory Changes**
-
-- **Risk**: New privacy laws affecting email marketing and agency operations
-
-- **Mitigation**: Compliance-first architecture with automated regulatory updates
-
-- **Proactive Strategy**: Industry thought leadership in compliance automation
-
-- **Market Opportunity**: First-mover advantage in compliance automation
-
-#### **Technology Disruption**
-
-- **Risk**: Major email providers changing deliverability algorithms
-
-- **Mitigation**: Continuous R&D investment in deliverability optimization
-
-- **Diversification**: Multi-provider infrastructure reduces single points of failure
-
-- **Innovation Focus**: AI-powered deliverability optimization
-
-### **Business Model Risks**
-
-#### **Agency Dependency**
-
-- **Risk**: Over-reliance on agency partners for client acquisition
-
-- **Mitigation**: Direct platform sales alongside white-label channel
-
-- **Portfolio Balance**: 60% white-label, 40% direct sales by year 2
-
-- **Agency Success**: Ensure agency success drives platform success
-
-#### **Revenue Concentration**
-
-- **Risk**: Top agencies representing >30% of white-label revenue
-
-- **Mitigation**: Diverse agency portfolio across multiple regions and sizes
-
-- **Scaling Strategy**: 100+ agencies by year 2 to reduce concentration risk
-
-- **Performance Standards**: Minimum performance metrics for agency partners
-
----
+- Update any external references to point at the new modular documentation.
+- Remove this deprecated shim once consumers have migrated to the hub.
 
 ## Implementation Roadmap
 

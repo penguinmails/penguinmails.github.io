@@ -174,7 +174,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 - **[Analytics Roadmap](/docs/features/analytics/roadmap)** - Detailed analytics timeline with quarterly breakdown (MVP Q1 2026, Enhanced Q1 2026, Advanced Q2-Q3 2026)
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Platform-wide feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Platform-wide feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 
@@ -198,7 +198,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### Related Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign-level analytics integration
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign-level analytics integration
 
 - **[Email Operations](/docs/features/campaigns/)** - Email sending and tracking
 

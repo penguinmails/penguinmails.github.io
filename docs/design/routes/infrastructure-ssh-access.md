@@ -164,7 +164,7 @@ interface RotationEvent {
 
    - SMTP Credentials: Admin username, Last rotation, "View Credentials" button (requires re-authentication)
 
-     - See [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials) for detailed credential viewing workflow
+     - See [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp/overview) for detailed credential viewing workflow
 
    - API Keys: Count, Last created, Rate limit tier
 
@@ -255,7 +255,7 @@ interface TenantSecretsSummary {
 
 - [Infrastructure Management Feature](/docs/features/infrastructure/vault-ssh-management) - SSH key management feature
 
-- [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials management feature
+- [SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp/overview) - SMTP credentials management feature
 
 ### Implementation
 

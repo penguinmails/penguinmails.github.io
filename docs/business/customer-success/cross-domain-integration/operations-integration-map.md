@@ -392,7 +392,7 @@ topics:
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Operations Systems Map](/docs/business/operations/cross-domain-integration/operations-systems-integration-map)
 

@@ -487,7 +487,7 @@ Healthcare organizations present unique product development challenges requiring
 
 - [Healthcare Customer Success Framework](/docs/business/customer-success/industry-cases)
 
-- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

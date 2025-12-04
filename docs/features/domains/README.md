@@ -110,7 +110,7 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap) for detailed tim
 
 - [Domain Management Roadmap](/docs/features/domains/roadmap) - Post-MVP feature timeline
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product direction
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product direction
 
 ### Implementation & Technical
 
@@ -128,7 +128,7 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap) for detailed tim
 
 - [Vault SSH Management](/docs/features/infrastructure/vault-ssh-management) - SSH key storage for VPS access
 
-- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
+- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview) - SMTP credentials storage
 
 - [Compliance & Security](/docs/compliance-security/overview) - Security architecture
 

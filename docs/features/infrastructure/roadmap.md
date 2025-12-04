@@ -637,7 +637,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials))
 
-- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys))
+- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys/overview))
 
 - Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery))
 
@@ -773,7 +773,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - **[Infrastructure Pricing](/docs/business/financial-analysis/infrastructure-pricing)** - Cost structure
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic priorities
 

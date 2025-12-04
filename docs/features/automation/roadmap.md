@@ -585,7 +585,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 - [Automation Overview](/docs/features/automation/README) - Feature summary
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Infrastructure milestones
 
@@ -605,7 +605,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 - [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/scheduling/overview) - Time-based triggers
 
 - [A/B Testing](/docs/features/campaigns/ab-testing) - Split testing in campaigns
 

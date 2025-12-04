@@ -18,7 +18,7 @@
 
   * `AuthLayout`: Specialized layout with split screen (Marketing visual left, Form right).
 
-  * `Form`: Use `react-hook-form` + `zod` for validation (see [UI Library](/docs/design/ui-library)).
+  * `Form`: Use `react-hook-form` + `zod` for validation (see [UI Library](/docs/design/ui-library/overview)).
 
   * `Button`: Primary variant for "Sign In"/"Register", Ghost variant for "Forgot Password".
 

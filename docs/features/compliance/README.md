@@ -192,7 +192,7 @@ Ensure regulatory compliance and manage opt-outs, unsubscribes, and data privacy
 
 For detailed implementation timeline and planned enhancements:
 
-**[ðŸ“‹ Compliance & Security Roadmap](/docs/features/compliance/roadmap)** - Complete timeline with quarterly milestones
+**[ðŸ“‹ Compliance & Security Roadmap](/docs/features/compliance/roadmap/overview)** - Complete timeline with quarterly milestones
 
 ## Security Architecture
 
