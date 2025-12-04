@@ -42,7 +42,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 - [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards) - Enterprise development workflows, security protocols, and performance standards
 
-- [`bug-reporting.md`](/docs/implementation-technical/development-guidelines/bug-reporting) - Bug reporting guidelines and triage processes
+- [`bug-reporting`](/docs/implementation-technical/development-guidelines/bug-reporting/overview) - Bug reporting guidelines and triage processes
 
 - [`feature-requests.md`](/docs/implementation-technical/development-guidelines/feature-requests) - Feature request process and development workflows
 
@@ -76,7 +76,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 4. **Review**: Adhere to standards in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards)
 
-5. **Report**: Use [`bug-reporting.md`](/docs/implementation-technical/development-guidelines/bug-reporting) for issue tracking
+5. **Report**: Use [`bug-reporting`](/docs/implementation-technical/development-guidelines/bug-reporting/overview) for issue tracking
 
 6. **Request**: Follow [`feature-requests.md`](/docs/implementation-technical/development-guidelines/feature-requests) for new features
 
