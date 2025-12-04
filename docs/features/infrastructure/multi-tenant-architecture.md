@@ -526,7 +526,7 @@ Return results (tenant-scoped only)
 
 ### Management
 
-- **[User Management](/docs/features/enterprise/user-management)** - Team member management
+- **[User Management](/docs/features/authentication/user-management)** - Team member management
 
 - **[Workspace Management](/docs/business/workspace-management)** - Workspace organization
 

@@ -777,7 +777,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Related Features**:
 
-- [Authentication & Security](/docs/features/enterprise/user-management) - API key authentication, OAuth flows
+- [Authentication & Security](/docs/features/authentication/user-management) - API key authentication, OAuth flows
 
 - [Infrastructure Management](/docs/features/infrastructure/README) - VPS provisioning, SSH key management, SMTP setup
 

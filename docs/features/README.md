@@ -81,7 +81,9 @@
 | [⚙️ Queue](/docs/features/queue/) | 2 | Background jobs and notifications |
 | [🔌 Integrations](/docs/features/integrations/) | 3 | CRM and third-party connections |
 | [🤖 Automation](/docs/features/automation/) | 1 | Workflow automation and triggers |
-| [🏢 Enterprise](/docs/features/enterprise/) | 2 | SSO, MFA, security features |
+| [🔐 Authentication](/docs/features/authentication/) | 3 | User auth, profiles, onboarding (tenant-facing) |
+| [👥 Teams](/docs/features/teams/) | 1 | Team & workspace management (tenant-facing) |
+| [🔧 Admin](/docs/features/admin/) | 4 | Platform administration (internal staff) |
 
 ---
 
@@ -105,7 +107,7 @@
 
 ### For Enterprise
 
-1. Enable [Enterprise Features](/docs/features/enterprise/enterprise-features/overview)
+1. Enable [Enterprise Features](/docs/features/admin/enterprise-features/overview)
 
 2. Connect with [CRM Integration](/docs/features/integrations/crm-integration/overview)
 
@@ -295,7 +297,7 @@ Each feature document is structured in **three progressive complexity levels**:
 
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
-| **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** | Planned | 0% | High |
+| **[Enterprise Features](/docs/features/admin/enterprise-features/overview)** | Planned | 0% | High |
 
 **For detailed dependency graphs and critical path** → [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)
 

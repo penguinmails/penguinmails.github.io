@@ -597,7 +597,7 @@ Cancellation â†’ Free Tier (90 days) â†’ Data Deletion
 
 ### Account Management
 
-- **[User Management](/docs/features/enterprise/user-management)** - Team member management
+- **[User Management](/docs/features/authentication/user-management)** - Team member management
 
 - **[Workspace Management](/docs/business/workspace-management)** - Workspace configuration
 

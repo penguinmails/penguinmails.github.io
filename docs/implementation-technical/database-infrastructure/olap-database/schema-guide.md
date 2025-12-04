@@ -120,7 +120,43 @@ The OLAP warehouse contains the following canonical tables:
 
 All other entities (notifications, system events, infra telemetry, etc.) are deliberately excluded or handled in other tiers.
 
-### 1.1 Billing Analytics
+### 1.1 Update Process & Data Freshness
+
+**OLAP tables are updated via queued batch jobs, NOT real-time:**
+
+**Aggregation Schedule:**
+
+- Daily batch jobs (typically 2 AM UTC)
+- Weekly rollup jobs (Sundays for week-over-week analytics)
+
+**Dependency Chain:**
+
+```mermaid
+graph LR
+    A[Email Events] --> B[mailbox_analytics]
+    A --> C[lead_analytics]
+    B --> D[campaign_analytics]
+    C --> D
+    D --> E[billing_analytics]
+    E --> F[sequence_step_analytics]
+```
+
+**Order of Operations:**
+
+1. Email-level events aggregated into `mailbox_analytics` and `lead_analytics`
+2. Campaign metrics calculated from mailbox/lead data → `campaign_analytics`
+3. Billing period summaries rolled up → `billing_analytics`
+4. Sequence step analytics linked to campaigns → `sequence_step_analytics`
+
+**Implications:**
+
+- Usage numbers may be 1-24 hours behind real-time activity
+- Always display `updated` timestamp on analytics dashboards
+- For real-time subscription status, query OLTP `subscriptions` table
+
+---
+
+### 1.2 Billing Analytics
 
 ```sql
 CREATE TABLE billing_analytics (
@@ -149,7 +185,7 @@ Purpose:
 
 - Drives billing, quotas, and revenue analytics.
 
-### 1.2 Campaign Analytics
+### 1.3 Campaign Analytics
 
 ```sql
 CREATE TABLE campaign_analytics (
@@ -176,7 +212,7 @@ Purpose:
 
 - Aggregated per-campaign performance for reporting and optimization.
 
-### 1.3 Mailbox Analytics
+### 1.4 Mailbox Analytics
 
 ```sql
 CREATE TABLE mailbox_analytics (
@@ -205,7 +241,7 @@ Purpose:
 
 - Mailbox-level deliverability, health, and warmup analytics.
 
-### 1.4 Lead Analytics
+### 1.5 Lead Analytics
 
 ```sql
 CREATE TABLE lead_analytics (
@@ -231,7 +267,7 @@ Purpose:
 
 - Per-lead engagement summaries to support scoring and segmentation.
 
-### 1.5 Warmup Analytics
+### 1.6 Warmup Analytics
 
 ```sql
 CREATE TABLE warmup_analytics (
@@ -258,7 +294,7 @@ Purpose:
 
 - Warmup performance and reputation metrics.
 
-### 1.6 Sequence Step Analytics
+### 1.7 Sequence Step Analytics
 
 ```sql
 CREATE TABLE sequence_step_analytics (

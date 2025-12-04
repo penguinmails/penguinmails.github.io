@@ -101,93 +101,76 @@ This document provides a detailed timeline for enterprise features development, 
 
 ---
 
-### 2. Payment History & Financial Management
+### 2. Payment & Billing Overview Dashboard
 
 **Priority:** P0 (MVP blocker for production launch)
-**Effort:** Large (10-15 days)
+**Effort:** Medium (5-7 days)
 **Status:** Not Started
 
-**Description:** Build comprehensive payment history and financial management tools for finance team and platform administrators
+**Description:** Build admin dashboard views for payment status monitoring and tenant billing overview using existing OLTP and OLAP data.
+
+**Three-Tier Data Approach:**
+
+- **OLTP (`subscriptions`, `payments`)**: Operational references, access control
+- **OLAP (`billing_analytics`)**: Usage aggregation, billing period metrics (updated via daily batch jobs)
+- **Stripe Dashboard**: Full payment details, invoices, refunds, retry logic
 
 ## Features
 
-- **Payment Transaction History:**
+- **Tenant Payment Section** (`/admin/tenants/{tenant_id}/payment`)
+  
+  - Display current subscription status (active, past_due, canceled)
+  - Show next billing date from `subscriptions.current_period_end`
+  - Last payment status (succeeded/failed) from `payments` table
+  - "View Subscription in Stripe" deep link
+  - "View Payment History in Stripe" deep link
 
-  - Complete list of all Stripe payments (successful/failed/refunded)
+- **Payments List View** (`/admin/finance/payments`)
+  
+  - List all tenant subscriptions with status indicators
+  - Calculate "due soon" from `current_period_end` (< 7 days)
+  - Filter by status (active, past_due, all)
+  - Search by tenant name
+  - Quick links: View Tenant Detail, Open in Stripe Dashboard
 
-  - Transaction details (amount, date, customer, invoice ID, payment method)
+- **Tenant Billing History** (`/admin/tenants/{tenant_id}/billing`)
+  
+  - Past subscription periods (OLTP `subscriptions` history)
+  - Usage per period (OLAP `billing_analytics`: emails_sent, domains_used, etc.)
+  - Plan name and billing dates
+  - "View Invoice in Stripe" link per period
+  - Display "Last updated" timestamp for OLAP usage data
 
-  - Search and filter by tenant, date range, status, amount
-
-  - Export to CSV for accounting reconciliation
-
-- **Invoice Management:**
-
-  - Display all invoices (paid/unpaid/overdue)
-
-  - Invoice details (line items, taxes, discounts)
-
-  - Download invoice PDFs
-
-  - Resend invoice emails to customers
-
-  - Manual invoice creation for custom deals
-
-- **Failed Payment Tracking:**
-
-  - List failed payments with retry status
-
-  - Failure reasons (card declined, insufficient funds, expired card)
-
-  - Automatic retry schedule (Stripe retry logic)
-
-  - Manual retry controls
-
-  - Customer notification status
-
-- **Refund Management:**
-
-  - Issue full and partial refunds
-
-  - Refund history with reasons
-
-  - Calculate refund impact on MRR
-
-- **Subscription Management:**
-
-  - Display all active subscriptions
-
-  - Subscription details (plan, billing cycle, next renewal)
-
-  - Cancel/pause subscription actions
-
-  - Apply discounts and coupons
-
-  - Manual plan upgrades/downgrades
-
-- **Revenue Analytics:**
-
-  - MRR breakdown by plan (Free/Pro/Enterprise)
-
+- **Revenue Analytics Dashboard** (OLAP `billing_analytics`)
+  
+  - MRR breakdown by plan tier
   - Revenue trends (daily/weekly/monthly charts)
+  - Active subscriptions count
+  - Churn rate and LTV calculations
+  - Usage aggregates (total emails sent across all tenants)
 
-  - Churn analysis (MRR lost per month)
+**What We DON'T Build:**
 
-  - Customer lifetime value (LTV)
+- ❌ Full payment transaction list (use Stripe Dashboard)
+- ❌ Invoice PDF rendering or storage (Stripe generates PDFs)
+- ❌ Manual invoice creation UI (use Stripe Dashboard)
+- ❌ Refund processing UI (use Stripe Dashboard with deep links)
+- ❌ Payment retry controls (Stripe handles retry logic automatically)
+- ❌ Card details or payment method management (use Stripe Customer Portal)
 
-  - Payment success rate
+**Data Presentation Philosophy:**
+> Present only the data in current OLTP/OLAP tables.  
+> Link to Stripe for operations requiring full payment details.  
+> Never duplicate Stripe functionality or overpromise beyond table capabilities.
 
-**Business Impact:** Critical for financial operations and customer support. Without payment history, finance team cannot reconcile revenue or resolve billing disputes. Required for monthly financial close.
+**Business Impact:** Essential for finance team to monitor subscription health and revenue metrics. Admin dashboard provides operational view while leveraging Stripe for detailed payment operations.
 
 ## Dependencies
 
-- Stripe API integration
-
-- Stripe webhook events (`invoice.paid`, `payment_failed`, `customer.subscription.deleted`)
-
-- Finance dashboard (existing MRR tracking)
-
-- Database tables: `subscriptions`, `invoices`, `payments`, `refunds`
+- OLTP database: `subscriptions`, `payments`, `plans`, `tenants`
+- OLAP database: `billing_analytics` with period usage aggregates (updated via daily batch jobs)
+- Stripe API integration (read-only for deep link generation)
+- Stripe Dashboard access for admin team (webhook-driven sync ensures accuracy)
 
 ---
 
@@ -941,11 +924,11 @@ This document provides a detailed timeline for enterprise features development, 
 
 - [Enterprise Features Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature catalog and status
 
-- [User Management & Authentication](/docs/features/enterprise/user-management) - Authentication details
+- [User Management & Authentication](/docs/features/authentication/user-management) - Authentication details
 
-- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) - Detailed authentication timeline
+- [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) - Detailed authentication timeline
 
-- [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
+- [Team Management Roadmap](/docs/features/teams/team-roadmap) - Detailed team & workspace management timeline
 
 - [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 

@@ -136,4 +136,4 @@ PenguinMails uses **Stripe** as the payment processor and source of truth for al
 ## Related Documentation
 
 - [Stripe Integration Details](/docs/features/payments/stripe-integration)
-- [Admin Route Specs](/docs/design/routes/platform-admin-plans)
+- [Admin Route Specs](/docs/design/routes/platform-admin#plan-management)

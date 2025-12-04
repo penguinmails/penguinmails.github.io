@@ -172,7 +172,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 **Related Features**:
 
-- [Authentication & Security](/docs/features/enterprise/user-management) - API key authentication, OAuth flows
+- [Authentication & Security](/docs/features/authentication/user-management) - API key authentication, OAuth flows
 
 - [Infrastructure Management](/docs/features/infrastructure/README) - VPS provisioning, SSH key management, SMTP setup
 

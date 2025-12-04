@@ -1,8 +1,44 @@
-﻿# ðŸ“Š Analytics & Reporting
+﻿# ðŸ“Š# 📊 Analytics & Reporting
 
-Platform-wide analytics, performance tracking, and data-driven insights (not campaign-specific).
+Platform-wide analytics, performance tracking, and data-driven insights.
 
-## Current Status
+## Analytics Overview
+
+PenguinMails provides **two types of analytics**:
+
+### 1. Tenant Analytics (Customer-Facing)
+
+**Target Users**: Tenant users (owner, manager, employee)  
+**Purpose**: Track email campaign performance, lead engagement, inbox activity  
+**Routes**: `/dashboard/workspaces/[slug]/analytics`, `/dashboard/workspaces/[slug]/campaigns/[id]`
+
+**Key Features**:
+
+- Campaign performance metrics (opens, clicks, deliverability)
+- Lead scoring and segmentation analytics
+- A/B testing results
+- ROI tracking and attribution
+
+**Documentation**: Documented in this README (sections below)
+
+### 2. Internal Analytics (PenguinMails Staff Only)
+
+**Target Users**: PenguinMails internal staff (super_admin, admin)  
+**Purpose**: Monitor platform health, track business metrics, support executive decision-making  
+**Routes**: `/dashboard/admin/*`, `/dashboard/finance`
+
+**Key Features**:
+
+- Platform-wide user behavior tracking
+- Revenue and financial analytics (MRR, churn, LTV)
+- System performance metrics
+- Tenant health scores
+
+**Documentation**: [Internal Analytics](/docs/features/analytics/internal-analytics/) and [Platform Admin](/docs/features/admin/)
+
+---
+
+## Current Status (Tenant Analytics)
 
 **Overall Completion**: 60% (Core Analytics in progress, Enhanced Analytics planned Q1 2026)
 

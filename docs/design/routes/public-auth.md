@@ -86,13 +86,13 @@
 **User Journey Context**: Daily entry point for active users. Must be fast (<2s load) and secure.
 
 > [!NOTE]
-> **Missing MVP Features**: Account lockout after 5 failed attempts, CAPTCHA after 3 failed attempts, "Remember me" functionality. See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
+> **Missing MVP Features**: Account lockout after 5 failed attempts, CAPTCHA after 3 failed attempts, "Remember me" functionality. See [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) for timeline.
 
 **Related Documentation**:
 
 * [Authentication Architecture](/docs/technical/architecture/detailed-technical/onboarding-authentication)
 
-* [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
+* [Authentication Roadmap](/docs/features/authentication/authentication-roadmap)
 
 * [Security Standards](/docs/compliance-security/enterprise/overview)
 
@@ -137,13 +137,13 @@
 **User Journey Context**: Critical conversion funnel. Optimize for speed (1-click SSO preferred).
 
 > [!NOTE]
-> **Missing MVP Features**: CAPTCHA on registration form, password strength enforcement (server-side), unverified email restrictions. See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
+> **Missing MVP Features**: CAPTCHA on registration form, password strength enforcement (server-side), unverified email restrictions. See [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) for timeline.
 
 **Related Documentation**:
 
 * [Onboarding Flow](/docs/technical/architecture/detailed-technical/onboarding-authentication)
 
-* [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
+* [Authentication Roadmap](/docs/features/authentication/authentication-roadmap)
 
 * [User Personas](/docs/business/user-personas/startup-founders)
 
@@ -168,7 +168,7 @@
 **User Journey Context**: Edge case, but critical for user retention.
 
 > [!NOTE]
-> **Missing MVP Features**: CAPTCHA after multiple requests, rate limiting (max 3 requests per hour). See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
+> **Missing MVP Features**: CAPTCHA after multiple requests, rate limiting (max 3 requests per hour). See [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) for timeline.
 
 **Technical Integration**:
 

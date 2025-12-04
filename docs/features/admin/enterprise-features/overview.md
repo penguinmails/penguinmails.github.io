@@ -32,15 +32,11 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Required Before Starting
 
-- â³ **[Campaign Management](/docs/features/enterprise/enterprise-features/campaign-management)** - Core platform complete (Q1 2026)
+- **Security audit** - Required before enterprise launch
 
-- â³ **[CRM Integration](/docs/features/enterprise/enterprise-features/crm-integration)** - Integration infrastructure (Q1 2026)
+- **Compliance certification** - SOC 2, GDPR, HIPAA research
 
-- â³ **[Workflow Automation](/docs/features/enterprise/enterprise-features/workflow-automation)** - Automation infrastructure (Q2-Q3 2026)
-
-- â³ Security audit - Required before enterprise launch
-
-- â³ Compliance certification - SOC 2, GDPR, HIPAA research
+**Note**: CRM integration and workflow automation features are separate roadmap items not required as dependencies for admin panel enhancements.
 
 ### Blocks (Features Waiting on This)
 
@@ -114,7 +110,8 @@ Enterprise-grade features including SSO (Single Sign-On), advanced security, rea
 
 ### Feature Specification
 
-- **[Enterprise Features Spec](/docs/features/features/enterprise-features)** - Requirements (to be created)
+- **[Admin Panel Features](/docs/features/admin/)** - Platform administration overview
+- **[Enterprise Roadmap](/docs/features/admin/enterprise-roadmap)** - Admin panel enhancement timeline
 
 ### Technical Specifications
 
