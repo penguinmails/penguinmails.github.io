@@ -1,26 +1,18 @@
----
 title: "Retention Playbooks"
 description: "Customer retention playbook templates"
-last_modified_date: "2025-12-04"
+last_modified_date: "2025-12-05"
 level: "2"
 keywords: "retention, playbooks, customer success"
+
+persona: "CS Teams"
 ---
 
+### Retention Review Checklist
 
-
-    - ROI measurement
-
-
-    - Process optimization
-
-
-    - Expansion opportunity identification
-
-
-    - Success story documentation
-
-
-```
+- ROI measurement
+- Process optimization
+- Expansion opportunity identification
+- Success story documentation
 
 ---
 

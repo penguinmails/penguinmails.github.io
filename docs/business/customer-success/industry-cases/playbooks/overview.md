@@ -1,19 +1,9 @@
----
-title: "CS Playbook Templates"
-description: "Customer success playbook templates"
-last_modified_date: "2025-12-04"
+title: "Industry-Specific Playbook Templates"
+description: "Phase 6 implementation delivering vertical playbook workflows for healthcare, financial services, e-commerce, agencies, and SaaS customer success operations"
+last_modified_date: "2025-12-05"
 level: "2"
 persona: "CS Teams"
 keywords: "playbooks, templates, customer success"
----
-
----
-title: "Industry-Specific Playbook Templates"
-description: "Phase 6 implementation providing vertical-specific process templates and workflows for healthcare, financial services, e-commerce, agencies/consulting, and SaaS customer success operations"
-last_modified_date: "2025-11-16"
-level: "2"
-persona: "Documentation Users"
----
 
 
 # Industry-Specific Playbook Templates

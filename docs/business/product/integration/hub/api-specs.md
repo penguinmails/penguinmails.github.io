@@ -1,11 +1,14 @@
 ---
 title: "API Specifications"
 description: "Integration API specifications"
-last_modified_date: "2025-12-04"
+last_modified_date: "2025-12-05"
 level: "3"
 keywords: "API, specifications, documentation"
+persona: "Product Teams"
 ---
 
+```ts
+interface ValidationResults {
   overallScore: number;
   componentScores: ValidationComponents;
   validationStatus: 'strong' | 'moderate' | 'weak' | 'needs_improvement';
@@ -263,7 +266,6 @@ async function demonstrateMarketValidation() {
     console.error('Market validation analysis failed:', error);
   }
 }
-
 
 ```
 

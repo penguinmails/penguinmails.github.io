@@ -1,11 +1,9 @@
----
 title: "Playbook Best Practices"
 description: "Best practices for playbook execution"
-last_modified_date: "2025-12-04"
+last_modified_date: "2025-12-05"
 level: "2"
 keywords: "best practices, execution, optimization"
----
-
+persona: "CS Teams"
 ---
 
 ## Implementation Guidelines

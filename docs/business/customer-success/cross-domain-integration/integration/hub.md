@@ -1,19 +1,9 @@
----
-title: "Cross-Domain Integration Overview"
-description: "Cross-domain integration framework"
-last_modified_date: "2025-12-04"
+title: "Customer Success Cross-Domain Integration Overview"
+description: "Comprehensive integration framework aligning Marketing, Sales, Product, Finance, and Operations for customer success outcomes"
+last_modified_date: "2025-12-05"
 level: "3"
 persona: "Integration Teams"
 keywords: "cross-domain, integration, APIs, systems"
----
-
----
-title: "Customer Success Cross-Domain Integration Overview"
-description: "Comprehensive integration framework for customer success coordination with Marketing, Sales, Product, Finance, and Operations domains including Phase 6 enhanced automation, analytics, and standardization"
-last_modified_date: "2025-11-16"
-level: "2"
-persona: "Documentation Users"
----
 
 
 # Customer Success Cross-Domain Integration Overview

@@ -1,19 +1,9 @@
----
-title: "Enhanced Automation Framework"
-description: "Advanced automation framework"
-last_modified_date: "2025-12-04"
+title: "Enhanced Product Automation Framework"
+description: "Phase 6B automation framework delivering rule-based product workflows, optimization triggers, and scalable efficiency improvements"
+last_modified_date: "2025-12-05"
 level: "3"
 persona: "Technical Teams"
 keywords: "automation, framework, workflow engine"
----
-
----
-title: "Enhanced Product Automation Framework"
-description: "Phase 6B enhancement providing rule-based workflow automation for product development processes, intelligent product optimization triggers, and scalable operational efficiency improvements"
-last_modified_date: "2025-11-16"
-level: "2"
-persona: "Documentation Users"
----
 
 
 # Enhanced Product Automation Framework
