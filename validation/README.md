@@ -277,6 +277,29 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-campaign-mgmt-split: `content_quality_issues_20251204_184158.json` (182 issues)
 
+**Ninth Iteration**:
+- ✅ `vault-smtp-credentials.md` (1398 lines) → Split into hub + 12 functional modules
+  - Created `vault-smtp/overview.md` (75 lines) - Hub with navigation
+  - Created `vault-smtp/architecture.md` (83 lines)
+  - Created `vault-smtp/storage-workflow.md` (87 lines)
+  - Created `vault-smtp/retrieval.md` (103 lines)
+  - Created `vault-smtp/viewing-ui.md` (80 lines)
+  - Created `vault-smtp/rotation.md` (189 lines)
+  - Created `vault-smtp/emergency-reset.md` (145 lines)
+  - Created `vault-smtp/audit-logging.md` (139 lines)
+  - Created `vault-smtp/disaster-recovery.md` (204 lines)
+  - Created `vault-smtp/api-endpoints.md` (130 lines)
+  - Created `vault-smtp/security.md` (75 lines)
+  - Created `vault-smtp/compliance.md` (49 lines)
+  - Created `vault-smtp/implementation.md` (171 lines)
+  - All under 210 lines
+  - Updated links in documentation
+
+**Reports Generated**:
+- Post-vault-smtp-split: `content_quality_issues_20251204_184324.json` (181 issues)
+
+**Remaining Backlog**: 181 files
+
 **Sixth Iteration**:
 - ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains
   - Created `compliance-framework/overview.md` (32 lines) - Hub with navigation

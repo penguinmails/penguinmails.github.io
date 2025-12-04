@@ -233,7 +233,7 @@ Store SMTP admin credentials in Vault during MailU setup, enabling secure creden
 
 - Emergency credential reset workflow
 
-**Documentation:** [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)
+**Documentation:** [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview)
 
 ### Tenant API Key System
 
@@ -483,7 +483,7 @@ Vault integration supports compliance with industry standards:
 
 - [Vault SSH Management](/docs/features/infrastructure/vault-ssh-management) - VPS SSH key management
 
-- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials) - SMTP credentials storage
+- [Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview) - SMTP credentials storage
 
 - [Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/) - Vault backup and recovery
 

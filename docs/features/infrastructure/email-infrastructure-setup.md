@@ -792,7 +792,7 @@ cron.schedule('0 0 * * *', async () => {
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation in Vault
 
-- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp-credentials)** - Secure SMTP credential management
+- **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp/overview)** - Secure SMTP credential management
 
 ### Technical Specifications
 

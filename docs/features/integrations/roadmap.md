@@ -695,7 +695,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Emergency credential reset workflow
 
 **Effort**: 1 week
-**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp-credentials)
+**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp/overview)
 
 ---
 

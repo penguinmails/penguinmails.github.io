@@ -1304,7 +1304,7 @@ Audit log retention: 90 days (configurable)
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - VPS SSH key management
 
-- **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)** - SMTP credentials storage
+- **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview)** - SMTP credentials storage
 
 ### API Documentation
 
