@@ -637,7 +637,7 @@ This document provides a detailed roadmap for infrastructure management features
 
 - SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials))
 
-- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys))
+- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys/overview))
 
 - Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery))
 

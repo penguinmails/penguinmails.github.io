@@ -121,7 +121,7 @@ Detailed feature roadmaps are organized by functional area:
 | **[Admin Platform Features](/docs/features/enterprise/roadmap#6-admin-platform-features)** | User audit trail, support access tracking, tenant plan management, feature flags, MRR tracking, Stripe webhooks | Q1 2026 (7-10 days) |
 | **[Session Management UI](/docs/features/enterprise/roadmap#7-session-management-ui)** | View/revoke active sessions, session activity timeline, suspicious activity alerts | Q1 2026 (3-5 days) |
 | **[Workspace Management Documentation](/docs/features/enterprise/roadmap#4-workspace-management-documentation)** | Comprehensive documentation for agency customers managing multiple client workspaces | Q1 2026 (5-7 days) |
-| **[API Key Management](/docs/features/integrations/vault-api-keys)** | Secure API key generation, Vault storage, permission scopes, rate limiting | Q1 2026 |
+| **[API Key Management](/docs/features/integrations/vault-api-keys/overview)** | Secure API key generation, Vault storage, permission scopes, rate limiting | Q1 2026 |
 | **[REST API Endpoints](/docs/features/integrations/api-access)** | Core API for contacts, campaigns, emails, analytics with OpenAPI documentation | Q1 2026 |
 | **[Webhook System](/docs/features/integrations/webhook-system)** | Real-time event notifications, retry logic, signature verification | Q1 2026 |
 | **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** | Email sequencing, campaign orchestration, multi-step sequences | Q1 2026 |

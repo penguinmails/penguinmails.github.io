@@ -176,7 +176,7 @@ keywords: "infrastructure, multi-region, disaster recovery, scaling"
 
 - SMTP credentials storage (see [Vault SMTP Credentials](/docs/features/integrations/vault-smtp-credentials))
 
-- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys))
+- API key management (see [Vault API Keys](/docs/features/integrations/vault-api-keys/overview))
 
 - Disaster recovery procedures (see [Vault Disaster Recovery](/docs/features/integrations/vault-disaster-recovery))
 

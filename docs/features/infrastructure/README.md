@@ -142,7 +142,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 - [SMTP Credentials Storage](/docs/features/integrations/vault-smtp-credentials) - Email server credentials
 
-- [API Key System](/docs/features/integrations/vault-api-keys) - Programmatic access
+- [API Key System](/docs/features/integrations/vault-api-keys/overview) - Programmatic access
 
 ---
 

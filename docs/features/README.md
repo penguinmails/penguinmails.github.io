@@ -279,7 +279,7 @@ Each feature document is structured in **three progressive complexity levels**:
 
 **Affected Features**:
 
-- [API Key Management](/docs/features/integrations/vault-api-keys) - Secure API access (Q1 2026)
+- [API Key Management](/docs/features/integrations/vault-api-keys/overview) - Secure API access (Q1 2026)
 
 - [Webhook System](/docs/features/integrations/webhook-system) - Real-time event notifications (Q1 2026)
 

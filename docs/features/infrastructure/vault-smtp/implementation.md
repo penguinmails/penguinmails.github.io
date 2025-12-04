@@ -103,7 +103,7 @@ keywords: "implementation, checklist, deployment, setup"
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation
 
-- **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Tenant API key system
+- **[Vault API Keys](/docs/features/integrations/vault-api-keys/overview)** - Tenant API key system
 
 - **[Vault Disaster Recovery](/docs/features/infrastructure/vault-disaster-recovery/)** - Backup and recovery
 

@@ -253,7 +253,7 @@ Generate unique API keys per tenant for programmatic email sending, stored secur
 
 - On-demand rotation (tenant-controlled)
 
-**Documentation:** [Vault API Keys](/docs/features/integrations/vault-api-keys)
+**Documentation:** [Vault API Keys](/docs/features/integrations/vault-api-keys/overview)
 
 ### Vault Disaster Recovery
 
@@ -471,7 +471,7 @@ Vault integration supports compliance with industry standards:
 
 - [API Access](/docs/features/integrations/api-access) - API access overview
 
-- [Vault API Keys](/docs/features/integrations/vault-api-keys) - Tenant API key system
+- [Vault API Keys](/docs/features/integrations/vault-api-keys/overview) - Tenant API key system
 
 - [Webhook System](/docs/features/integrations/webhook-system) - Webhook configuration
 

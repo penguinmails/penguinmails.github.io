@@ -538,7 +538,7 @@ path "vps/*/tenant_ssh/*" {
 
 ### Feature Documentation
 
-- **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Tenant API key system
+- **[Vault API Keys](/docs/features/integrations/vault-api-keys/overview)** - Tenant API key system
 
 - **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview)** - SMTP credentials storage
 

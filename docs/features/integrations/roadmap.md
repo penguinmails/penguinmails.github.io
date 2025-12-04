@@ -57,7 +57,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys/overview)
 
 - [Route Specification](/docs/design/routes/api-key-management)
 
@@ -108,7 +108,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Route Specification](/docs/design/routes/api-key-management)
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys/overview)
 
 ---
 

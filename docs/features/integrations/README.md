@@ -34,7 +34,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 ### â³ In Development (MVP - Q1 2026)
 
-- **[API Key Management](/docs/features/integrations/vault-api-keys)** - Secure API key generation, Vault storage, permission scopes, rate limiting (P0 - Critical)
+- **[API Key Management](/docs/features/integrations/vault-api-keys/overview)** - Secure API key generation, Vault storage, permission scopes, rate limiting (P0 - Critical)
 
 - **[REST API Endpoints](/docs/features/integrations/api-access)** - Core API for contacts, campaigns, emails, analytics with OpenAPI documentation (P0 - Critical)
 
@@ -44,7 +44,7 @@ Third-party system connections including CRM, webhooks, and external platforms.
 
 - **[API Access Documentation](/docs/features/integrations/api-access)** - RESTful API specification for custom integrations
 
-- **[Vault API Keys Documentation](/docs/features/integrations/vault-api-keys)** - Secure API key management architecture with Vault storage and bcrypt hashing
+- **[Vault API Keys Documentation](/docs/features/integrations/vault-api-keys/overview)** - Secure API key management architecture with Vault storage and bcrypt hashing
 
 - **[ESP Integration](/docs/features/integrations/esp-integration)** - External email service providers (Postmark, Mailgun) - Active integrations
 
@@ -136,7 +136,7 @@ PenguinMails uses HashiCorp Vault for centralized secrets management, providing 
 
 - [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp/overview)
 
-- [Tenant API Keys](/docs/features/integrations/vault-api-keys)
+- [Tenant API Keys](/docs/features/integrations/vault-api-keys/overview)
 
 - [Disaster Recovery Procedures](/docs/features/infrastructure/vault-disaster-recovery/)
 

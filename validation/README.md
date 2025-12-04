@@ -331,7 +331,24 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-standards-split: `content_quality_issues_20251204_185246.json` (179 issues)
 
-**Remaining Backlog**: 179 files
+**Remaining Backlog**: 178 files
+
+**Twelfth Iteration**:
+- ✅ `vault-api-keys.md` (1357 lines) → Split into hub + 9 functional modules
+  - Created `vault-api-keys/overview.md` (68 lines) - Hub
+  - Created `vault-api-keys/user-workflows.md` (197 lines)
+  - Created `vault-api-keys/architecture.md` (297 lines)
+  - Created `vault-api-keys/api-endpoints.md` (193 lines)
+  - Created `vault-api-keys/frontend-ui.md` (181 lines)
+  - Created `vault-api-keys/security.md` (141 lines)
+  - Created `vault-api-keys/best-practices.md` (85 lines)
+  - Created `vault-api-keys/implementation.md` (107 lines)
+  - Created `vault-api-keys/compliance.md` (45 lines)
+  - Created `vault-api-keys/roadmap.md` (140 lines)
+  - All under 300 lines
+
+**Reports Generated**:
+- Post-vault-api-keys-split: `content_quality_issues_20251204_185837.json` (178 issues)
 
 **Sixth Iteration**:
 - ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains
