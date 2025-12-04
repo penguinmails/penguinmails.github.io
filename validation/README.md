@@ -189,6 +189,23 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 
 **Note**: Monthly-review.md (846 lines) still exceeds 500-line limit and will need additional splitting in future iteration.
 
+**Fourth Iteration**:
+- ✅ `compliance/roadmap.md` (1516 lines) → Split into hub + 7 quarterly roadmaps
+  - Created `roadmap/overview.md` (88 lines) - Hub with quarterly navigation
+  - Created `roadmap/q4-2025.md` (95 lines) - MVP Foundation
+  - Created `roadmap/q1-2026.md` (75 lines) - Enhanced Security
+  - Created `roadmap/q2-2026.md` (94 lines) - Compliance Certifications
+  - Created `roadmap/q3-2026.md` (78 lines) - Enterprise Security
+  - Created `roadmap/q4-2026.md` (95 lines) - Advanced Authentication
+  - Created `roadmap/q1-2027.md` (85 lines) - Compliance Expansion
+  - Created `roadmap/q2-2027.md` (997 lines) - Government & Enterprise (still over 500)
+  - Updated links in README
+
+**Reports Generated**:
+- Post-compliance-split: `content_quality_issues_20251204_182300.json` (184 issues)
+
+**Note**: q2-2027.md (997 lines) still exceeds 500-line limit but is under 1000. Contains future vision and detailed roadmap items.
+
 **Second Iteration**:
 - ✅ `product-roadmap.md` (2100 lines) → Split into hub + 8 feature roadmaps
   - Created `product-roadmap/overview.md` (219 lines) - Hub with feature navigation
