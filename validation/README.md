@@ -266,6 +266,17 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 
 **Note**: technical.md (757 lines) still exceeds 500-line limit and will need additional splitting in future iteration.
 
+**Eighth Iteration**:
+- ✅ `campaigns/campaign-management/overview.md` (1415 lines) → Split into hub + 3 level-based guides
+  - Created `campaign-management/hub.md` (41 lines) - Hub with navigation
+  - Created `campaign-management/quick-start.md` (239 lines) - Level 1
+  - Created `campaign-management/advanced.md` (368 lines) - Level 2
+  - Created `campaign-management/technical.md` (789 lines) - Level 3 (still over 500)
+  - Updated links in documentation
+
+**Reports Generated**:
+- Post-campaign-mgmt-split: `content_quality_issues_20251204_184158.json` (182 issues)
+
 **Sixth Iteration**:
 - ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains
   - Created `compliance-framework/overview.md` (32 lines) - Hub with navigation

@@ -162,7 +162,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ### Related Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign-level analytics integration
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign-level analytics integration
 
 - **[Email Operations](/docs/features/campaigns/)** - Email sending and tracking
 

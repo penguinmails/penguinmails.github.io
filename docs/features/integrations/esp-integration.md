@@ -606,7 +606,7 @@ Savings: $70/month vs all-Postmark
 
 ### Email Infrastructure
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Creating campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Creating campaigns
 
 - **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Infrastructure warmup
 

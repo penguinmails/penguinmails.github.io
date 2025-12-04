@@ -124,7 +124,7 @@ Detailed feature roadmaps are organized by functional area:
 | **[API Key Management](/docs/features/integrations/vault-api-keys)** | Secure API key generation, Vault storage, permission scopes, rate limiting | Q1 2026 |
 | **[REST API Endpoints](/docs/features/integrations/api-access)** | Core API for contacts, campaigns, emails, analytics with OpenAPI documentation | Q1 2026 |
 | **[Webhook System](/docs/features/integrations/webhook-system)** | Real-time event notifications, retry logic, signature verification | Q1 2026 |
-| **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** | Email sequencing, campaign orchestration, multi-step sequences | Q1 2026 |
+| **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** | Email sequencing, campaign orchestration, multi-step sequences | Q1 2026 |
 | **[Bounce Handling System](/docs/features/campaigns/roadmap#1-mvp---p0-bounce-handling-system)** | Automated bounce detection, classification, contact suppression, reputation protection | Q1 2026 (5-7 days) |
 | **[Unsubscribe Management](/docs/features/campaigns/roadmap#2-mvp---p0-unsubscribe-management-system)** | One-click unsubscribe, List-Unsubscribe header, preference center, compliance | Q1 2026 (5-7 days) |
 | **[Spam Complaint Handling](/docs/features/campaigns/roadmap#5-mvp---p0-spam-complaint-handling)** | Feedback loop integration, automatic suppression, reputation protection | Q1 2026 (3-4 days) |

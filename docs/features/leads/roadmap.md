@@ -789,7 +789,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Use segments in campaigns
 
 - [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 

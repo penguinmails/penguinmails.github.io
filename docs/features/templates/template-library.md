@@ -1108,7 +1108,7 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 
 - **[Template Management](/docs/features/templates/template-management)** - Organize your templates
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use templates in campaigns
 
 ---
 

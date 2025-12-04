@@ -1222,7 +1222,7 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 
 - **[Template Library](/docs/features/templates/template-library)** - Pre-built template collection
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use templates in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use templates in campaigns
 
 ---
 

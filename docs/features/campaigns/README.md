@@ -38,7 +38,7 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline a
 
 ### ðŸš§ In Development (Q1 2026)
 
-#### [Campaign Management](/docs/features/campaigns/campaign-management/overview)
+#### [Campaign Management](/docs/features/campaigns/campaign-management/hub)
 
 Comprehensive email campaign management system with sequencing, A/B testing, and template management.
 

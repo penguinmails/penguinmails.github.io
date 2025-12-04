@@ -884,7 +884,7 @@ app.get('/api/segments/:id/contacts', authenticate, async (req, res) => {
 
 - **[Import/Export](/docs/features/leads/import-export/overview)** - Bulk contact operations
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Use segments in campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use segments in campaigns
 
 - **[Personalization System](/docs/features/campaigns/personalization-system)** - Segment-specific content
 

@@ -635,7 +635,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview)
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub)
 
 - [Lead Scoring](/docs/features/leads/lead-scoring)
 

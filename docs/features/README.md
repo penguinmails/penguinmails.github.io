@@ -26,7 +26,7 @@
 
 - **Level 3**: Predictive analytics
 
-**[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Multi-channel campaign orchestration
+**[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Multi-channel campaign orchestration
 
 - **Level 1**: Basic campaign creation
 
@@ -101,7 +101,7 @@
 
 2. Use [Unified Inbox](/docs/features/inbox/unified-inbox/overview) for team coordination
 
-3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/overview) for advanced workflows
+3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/hub) for advanced workflows
 
 ### For Enterprise
 
@@ -183,7 +183,7 @@ Each feature document is structured in **three progressive complexity levels**:
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
 | **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** | Planned | 0% | High |
-| **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** | Planned | 0% | Critical |
+| **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** | Planned | 0% | Critical |
 | **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** | Planned | 0% | Medium |
 | **[CRM Integration](/docs/features/integrations/crm-integration/overview)** | Planned | 0% | High |
 

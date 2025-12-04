@@ -88,7 +88,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Use segments in campaigns
 
 - [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 

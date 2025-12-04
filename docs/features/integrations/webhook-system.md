@@ -915,7 +915,7 @@ app.post('/api/webhooks/:id/test', authenticate, async (req, res) => {
 
 - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign events
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign events
 
 - **Epic 6: Core Email Pipeline** - Internal task reference for email pipeline work
 

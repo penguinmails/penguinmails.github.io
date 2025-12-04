@@ -1159,7 +1159,7 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
 
 ### Campaign Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Core campaign creation and management
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Core campaign creation and management
 
 - **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
 
