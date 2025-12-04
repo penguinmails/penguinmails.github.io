@@ -122,13 +122,13 @@
 > - Login Activity Log
 > - Password strength enforcement (server-side)
 >
-> See [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) for timeline.
+> See [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) for timeline.
 
 **Related Documentation**:
 
 - [Account Security](/docs/compliance-security/enterprise/overview)
 
-- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
+- [Authentication Roadmap](/docs/features/authentication/authentication-roadmap)
 
 - [2FA Setup Guide](/docs/operations/freelancer-management/support/tutorials/2fa-setup)
 
@@ -239,13 +239,13 @@
 > - Team member removal workflow documentation
 > - Workspace member management documentation
 >
-> See [Team Management Roadmap](/docs/features/enterprise/team-roadmap) for timeline.
+> See [Team Management Roadmap](/docs/features/teams/team-roadmap) for timeline.
 
 **Related Documentation**:
 
-- [Team Management & Authentication](/docs/features/enterprise/user-management)
+- [Team Management & Authentication](/docs/features/authentication/user-management)
 
-- [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
+- [Team Management Roadmap](/docs/features/teams/team-roadmap)
 
 - [Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)
 
