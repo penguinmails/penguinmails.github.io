@@ -1,7 +1,7 @@
 ---
 title: "Admin Plan Management"
-description: "Feature documentation for managing subscription plans and pricing in PenguinMails"
-last_modified_date: "2025-12-02"
+description: "Hub for managing subscription plans, pricing, and add-ons through Stripe Dashboard"
+last_modified_date: "2025-12-04"
 level: "2"
 persona: "Platform Administrators"
 status: "ACTIVE"
@@ -10,68 +10,86 @@ category: "Admin"
 
 # Admin Plan Management
 
-**Centralized control for subscription plans, pricing tiers, and feature limits.**
+**Manage subscription plans, pricing tiers, and add-ons directly through Stripe Dashboard.**
 
 ---
 
 ## Overview
 
-The Plan Management feature allows platform administrators to define and manage the subscription products available to PenguinMails tenants. It serves as the bridge between Stripe's billing engine and PenguinMails' internal feature gating logic.
+Plan Management enables platform administrators to control subscription products for PenguinMails tenants through the **Stripe Dashboard**. PenguinMails syncs plan data from Stripe and provides convenient links to Stripe for administration.
 
-### Key Capabilities
+### Stripe-First Approach
 
-- **Plan Definition**: Create and update plans with specific feature limits (e.g., "Pro Plan" with 50k emails/month).
-- **Stripe Mapping**: Link internal plans to Stripe Products for seamless checkout flows.
-- **Lifecycle Control**: Activate or deactivate plans to control their visibility in the purchase UI without affecting existing subscribers.
-- **Pricing Display**: Manage displayed pricing (monthly/yearly) for marketing and comparison tables.
-
----
-
-## User Stories
-
-### Product Manager
->
-> *"I want to launch a new 'Enterprise Starter' plan for Q4, so I can target mid-market customers."*
->
-> **Workflow**:
->
-> 1. Create Product & Price in Stripe Dashboard.
-> 2. Go to PenguinMails Admin > Plans > New.
-> 3. Enter details and paste Stripe Product ID.
-> 4. Set limits (e.g., 10 users, 5 domains).
-> 5. Set Status to "Active".
-
-### Operations Admin
->
-> *"I need to sunset the 'Legacy Basic' plan but keep it working for current customers."*
->
-> **Workflow**:
->
-> 1. Go to PenguinMails Admin > Plans.
-> 2. Find "Legacy Basic".
-> 3. Toggle Status to "Inactive".
-> 4. Result: New users can't see it; existing users continue billing normally.
+- **Source of Truth**: All plan creation, pricing, and product configuration happens in Stripe Dashboard
+- **Automatic Sync**: PenguinMails syncs plan metadata from Stripe to support feature gating
+- **Quick Access Links**: Direct navigation from PenguinMails admin UI to relevant Stripe Dashboard pages
+- **Feature Limits**: Configure tenant limits (emails/month, domains, users) after syncing from Stripe
 
 ---
 
-## Integration Architecture
+## Plan Management Features
 
-### Stripe Connection
+### [Creating Subscription Plans](./creating-plans.md)
 
-- **Source of Truth**: Stripe handles the actual billing, charging, and subscription state.
-- **Reference**: Plans in PenguinMails store a `stripe_product_id` to generate correct Checkout links.
-- **Pricing**: While Stripe controls the actual charge amount, PenguinMails stores `price_monthly` and `price_yearly` for display purposes (e.g., pricing tables).
+Launch new subscription tiers by creating products in Stripe Dashboard and configuring feature limits in PenguinMails.
 
-### Feature Gating
+**Key Topics**:
 
-- The `plans` table acts as the configuration source for tenant limits.
-- When a tenant subscribes, their `subscription` record links to a `plan`.
-- The application checks `subscription.plan.max_emails_per_month` to enforce usage limits.
+- Creating products in Stripe Dashboard
+- Syncing plans to PenguinMails
+- Configuring feature limits and tenant quotas
+- Best practices for naming and pricing
+
+---
+
+### [Managing Plan Lifecycle](./managing-plan-lifecycle.md)
+
+Control plan visibility and availability while preserving existing customer subscriptions.
+
+**Key Topics**:
+
+- Activating and deactivating plans
+- Archiving legacy plans
+- Updating plan pricing
+- Migrating customers between plans
+
+---
+
+### [Product Add-Ons](./product-add-ons.md)
+
+Create and manage additional purchasable features that extend base subscription plans.
+
+**Key Topics**:
+
+- Creating add-ons in Stripe (e.g., Private IP, Priority Support)
+- Pricing models (recurring, metered, one-time)
+- Add-on availability rules
+- Common add-on types and examples
+
+---
+
+## Quick Reference
+
+### Common Tasks
+
+| Task | Action |
+|------|--------|
+| Create new plan | Click "Manage Plans in Stripe" → Create Product → Sync to PenguinMails |
+| Archive old plan | Click "Manage in Stripe" → Archive Product → Auto-syncs to "Inactive" |
+| Update pricing | Add new Price in Stripe → Set as default → Archive old price |
+| Create add-on | Click "Create Add-On in Stripe" → Create Product → Sync → Configure availability |
+
+### Integration Points
+
+- **Stripe Connection**: Plans store `stripe_product_id` to generate correct Checkout links
+- **Feature Gating**: Application checks `subscription.plan.max_emails_per_month` to enforce limits
+- **Sync Behavior**: Automatic sync every 6 hours, or manual trigger via admin UI
 
 ---
 
 ## Related Documentation
 
-- **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical details on payment processing.
-- **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)**: Database structure for plans and subscriptions.
-- **[Admin Route Spec](/docs/design/routes/platform-admin#plan-management)**: UI specification for the management interface.
+- **[Finance Overview](/docs/features/admin/finance/overview.md)**: Revenue tracking and financial analytics
+- **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical payment processing details
+- **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for plans and subscriptions
+- **[Admin Route Spec](/docs/design/routes/platform-admin#plan-management)**: UI specification for management interface
