@@ -32,6 +32,9 @@
 
 | Route | Access | Purpose | State/Data Requirements |
 |---|---|---|---|
+| `/dashboard/admin/plans` | Super Admin | Plan Management | List all subscription plans (active & inactive). Actions: Create, Edit, Toggle Status. |
+| `/dashboard/admin/plans/new` | Super Admin | Create Plan | Form to define new plan limits and Stripe mapping. |
+| `/dashboard/admin/plans/[id]` | Super Admin | Edit Plan | Update plan details, limits, or status. |
 | `/dashboard/users` | Super Admin | Global Users | Searchable list of ALL users. Actions: Ban, Reset Password, **View Audit Trail**. |
 | `/dashboard/tenants` | Super Admin | Global Tenants | List of organizations. Plan overrides, Feature flags management. |
 | `/dashboard/finance` | Finance | Revenue Ops | Stripe sync status, MRR dashboard. |
@@ -40,6 +43,94 @@
 | `/admin/secrets` | Super Admin | Vault Secrets Management | Centralized secrets management for all tenants. Vault health monitoring, SSH keys, SMTP credentials, API keys, DKIM keys. Bulk rotation and audit log viewer. |
 
 ## 4. Detailed View Descriptions
+
+### `/dashboard/admin/plans` - Plan Management
+
+**User Story**: *\"As a product manager, I want to manage subscription plans and pricing without code changes, so I can launch new tiers for Black Friday.\"*
+
+**What You'll Find**:
+
+#### Plans Table
+
+- **Columns**: Name, Slug, Price (Monthly/Yearly), Stripe Product ID, Status (Active/Inactive), Subscribers, Actions.
+
+- **Status Indicators**:
+  - **Green**: Active (Publicly purchasable)
+  - **Grey**: Inactive (Hidden from new customers, but existing subscribers can renew)
+
+- **Actions**:
+  - **\"Create New Plan\" Button**: Navigates to plan creation form
+  - **Row Actions**: Edit plan details, Toggle active status
+
+**User Journey Context**: Product launches and pricing strategy management.
+
+**Related Documentation**:
+
+- [Plan Management Feature](/docs/features/admin/plan-management)
+- [Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
+- [Stripe Integration](/docs/features/payments/stripe-integration)
+
+**Technical Integration**:
+
+- **Stripe Product Sync**: Plans store `stripe_product_id` to generate checkout links
+- **Feature Gating**: Plans table defines tenant limits (max emails, max users, etc.)
+- **Cache Invalidation**: Updates trigger cache invalidation for public-facing pricing pages
+
+---
+
+### `/dashboard/admin/plans/[id]` - Edit Plan
+
+**User Story**: *\"As an admin, I want to update feature limits for the Pro plan or deactivate a seasonal plan.\"*
+
+**What You'll Find**:
+
+#### Plan Details Form
+
+- **General Info**:
+  - Name (e.g., "Pro Plan")
+  - Slug (e.g., "pro", used in URLs)
+  - Description (marketing copy)
+
+- **Stripe Mapping**:
+  - `stripe_product_id` (Required): Links to Stripe Product
+  - **Note**: Prices managed in Stripe, but displayed here for reference (`price_monthly`, `price_yearly`)
+
+- **Feature Limits**:
+  - Max Users per tenant
+  - Max Domains per tenant
+  - Max Campaigns/Month
+  - Max Emails/Month
+  - Storage Limit (GB)
+
+- **Feature Flags**:
+  - API Access enabled
+  - Priority Support
+  - White Label branding
+  - Advanced Analytics
+
+- **Lifecycle Control**:
+  - **Is Active Toggle**: Controls visibility in purchase UI (inactive plans hidden from new customers)
+
+**Validation Rules**:
+
+- `slug` must be unique across all plans
+- `stripe_product_id` format validation
+- Feature limits must be positive integers
+
+**User Journey Context**: Plan configuration and lifecycle management.
+
+**Related Documentation**:
+
+- [Subscription Management](/docs/features/payments/subscription-management)
+- [Feature Gating Implementation](/docs/implementation-technical/feature-gating)
+
+**Technical Integration**:
+
+- **Database**: `plans` table in OLTP database
+- **Cache Strategy**: Heavily cached for public pages, admin updates invalidate cache tags
+- **Webhooks**: Stripe product updates can sync back to PenguinMails
+
+---
 
 ### `/dashboard/users` - Global User Management
 

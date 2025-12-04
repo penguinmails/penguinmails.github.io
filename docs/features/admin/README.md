@@ -11,10 +11,15 @@ The PenguinMails admin panel provides operational tools for internal staff to ma
 
 ## Current Capabilities (MVP - Q1 2026)
 
-- **[Plan Management](/docs/features/admin/plan-management)** - Configure subscription plans and pricing
-- **Tenant Management** - Manage customer organizations
-- **System Monitoring** - Infrastructure health, queues, logs
-- **Vault Management** - Secure secrets management (SSH keys, SMTP credentials, API keys)
+- **[Plan Management](/docs/features/admin/plan-management/)** - Configure subscription plans and pricing
+- **[User Management](/docs/features/admin/user-management/)** - Global user lookup, audit trails, and account actions
+- **[Tenant Management](/docs/features/admin/tenant-management/)** - Manage customer organizations, plan overrides, and feature flags
+- **[Finance](/docs/features/admin/finance/)** - Revenue operations, MRR tracking, and Stripe sync monitoring
+- **[System Monitoring](/docs/features/admin/system-monitoring/)** - Infrastructure health, queue monitoring, and log viewer
+  - [Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring) - Background job management
+  - [Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring) - Service health and IP reputation
+  - [Log Viewer](/docs/features/admin/system-monitoring/log-viewer) - Centralized log search
+- **[Vault Management](/docs/features/admin/vault-management/)** - Secure secrets management (SSH keys, SMTP credentials, API keys, DKIM keys)
 
 ## Future Enhancements (Roadmap)
 
@@ -97,13 +102,28 @@ See **[Enterprise Features Roadmap](/docs/features/admin/enterprise-features/ove
 
 ### Route Specifications
 
-- [Platform Admin Routes](/docs/design/routes/platform-admin) - Admin panel UI specifications
-- [Platform Admin Plans Route](/docs/design/routes/platform-admin-plans) - Plan management UI
+- [Platform Admin Routes](/docs/design/routes/platform-admin) - Complete admin panel UI specifications
+- **Specific Route Sections**:
+  - [Plan Management](/docs/design/routes/platform-admin#dashboard-admin-plans) - Plan configuration UI
+  - [User Management](/docs/design/routes/platform-admin#dashboard-users) - Global user lookup and audit trails
+  - [Tenant Management](/docs/design/routes/platform-admin#dashboard-tenants) - Organization management UI
+  - [Finance Dashboard](/docs/design/routes/platform-admin#dashboard-finance) - Revenue operations UI
+  - [Queue Monitoring](/docs/design/routes/platform-admin#dashboard-system-queues) - Background job monitoring
+  - [Infrastructure Health](/docs/design/routes/platform-admin#dashboard-system-infrastructure) - Service health monitoring
+  - [Log Viewer](/docs/design/routes/platform-admin#dashboard-system-logs) - System log access
+  - [Vault Secrets](/docs/design/routes/platform-admin#admin-secrets) - Secrets management UI
 
 ### API Documentation
 
-- [Platform Admin API](/docs/implementation-technical/api/platform-api/admin) - Admin endpoints
-- [Platform Plans API](/docs/implementation-technical/api/platform-api/plans) - Plan management endpoints
+- **Platform Admin Endpoints**:
+  - [Admin Operations API](/docs/implementation-technical/api/platform-api/admin) - User and tenant management
+  - [Plans API](/docs/implementation-technical/api/platform-api/plans) - Subscription plan configuration
+  - [Finance API](/docs/implementation-technical/api/platform-api/finance) - MRR tracking and revenue operations
+  - [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring) - Queue, infrastructure, and logs
+  - [Vault Management API](/docs/implementation-technical/api/platform-api/vault) - Secrets management and rotation
+- **Related APIs**:
+  - [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) - Billing and subscription data
+  - [Analytics API](/docs/implementation-technical/api/platform-api/analytics) - System analytics
 
 ### Operations
 
