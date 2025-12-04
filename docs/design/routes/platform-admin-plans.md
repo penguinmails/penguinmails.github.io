@@ -4,7 +4,7 @@
 
 - **Goal**: Enable platform administrators to manage subscription plans, pricing, and feature limits without code changes.
 - **Feature References**:
-  - [Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
+  - [Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)
   - [Stripe Integration](/docs/features/payments/stripe-integration)
 - **User Journey**: Admin needs to launch a "Black Friday" plan → Creates Stripe Product → Adds Plan in Admin Dashboard → Sets as Active.
 

@@ -160,6 +160,6 @@ Decisions to split services will be driven by **performance metrics** and **oper
 
 **Related Documentation**:
 
-- [Database Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)
+- [Database Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)
 
 - [Queue System Implementation](/docs/implementation-technical/architecture/detailed-technical/queue-system-implementation)

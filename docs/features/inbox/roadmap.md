@@ -639,7 +639,7 @@ This document outlines the development roadmap for inbox management features, in
 
 - [Lead Scoring](/docs/features/leads/lead-scoring)
 
-- [Reputation Monitoring](/docs/features/warmup/reputation-monitoring)
+- [Reputation Monitoring](/docs/features/warmup/monitoring/overview)
 
 - [CRM Integration](/docs/features/integrations/crm-integration/overview)
 

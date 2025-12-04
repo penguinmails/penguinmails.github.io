@@ -82,7 +82,7 @@ Automated email warmup with gradual volume ramping and engagement simulation.
 
 **Status**: PLANNED (Q3 2026) | **Priority**: High
 
-#### [Reputation Monitoring](/docs/features/warmup/reputation-monitoring)
+#### [Reputation Monitoring](/docs/features/warmup/monitoring/overview)
 
 Real-time sender reputation tracking and deliverability monitoring.
 

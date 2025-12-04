@@ -348,6 +348,14 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-batch-2-split: `content_quality_issues_20251204_200953.json` (168 issues)
 
+**Twenty-First Iteration** (Batch 3):
+- ✅ `playbook-templates.md` (1147 lines) → Hub + 4 playbook modules
+- ✅ `schema-guide.md` (1130 lines) → Hub + 4 schema modules
+- ✅ `reputation-monitoring.md` (1125 lines) → Hub + 4 monitoring modules
+
+**Reports Generated**:
+- Post-batch-3-split: `content_quality_issues_20251204_201140.json` (165 issues)
+
 **Sixteenth Iteration**:
 - ✅ `licensing-ip.md` (1304 lines) → Split into hub + 8 modules
   - All under 310 lines
