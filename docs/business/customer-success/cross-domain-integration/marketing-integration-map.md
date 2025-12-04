@@ -412,7 +412,7 @@ topics:
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Marketing Systems Map](/docs/business/marketing/cross-domain-integration)
 

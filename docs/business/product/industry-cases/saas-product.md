@@ -485,7 +485,7 @@ Software-as-a-Service (SaaS) organizations operate on subscription-based models 
 
 - [SaaS Customer Success Framework](/docs/business/customer-success/industry-cases)
 
-- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

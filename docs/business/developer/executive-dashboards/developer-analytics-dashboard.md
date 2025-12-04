@@ -17,7 +17,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Analytics Teams, Developer Leadership, Executive Analytics Management
 **Business Impact Priority**: High - Real-time developer analytics and performance insights responsibility
-**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) | [Executive Analytics Framework](/docs/business/executive/analytics/framework)
+**Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub) | [Executive Analytics Framework](/docs/business/executive/analytics/framework)
 
 ## Executive Summary
 
@@ -124,7 +124,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 
 - API usage validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 #### Analysis Point 1.2.3: Developer Success Tracking Dashboards
 
@@ -251,7 +251,7 @@ The Developer Analytics Dashboard establishes comprehensive protocols for real-t
 
 - Opportunity tracking validation completed and verified
 
-**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview)
+**Business Framework Integration**: [Developer Analytics Framework](/docs/business/analytics/overview) + [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

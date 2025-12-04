@@ -417,7 +417,7 @@ Customer Success Operations provides the systematic approach to managing custome
 
 - [Customer Retention Strategies](/docs/business/customer-success/retention/summary)
 
-- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

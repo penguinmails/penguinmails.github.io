@@ -523,7 +523,7 @@ Agencies and consulting organizations operate on project-based business models r
 
 - [Agencies & Consulting Customer Success Framework](/docs/business/customer-success/industry-cases)
 
-- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

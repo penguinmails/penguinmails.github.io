@@ -409,7 +409,7 @@ Healthcare organizations present unique customer success challenges requiring sp
 
 - [Healthcare Business Case](/docs/business/industry-business-cases)
 
-- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 
