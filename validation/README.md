@@ -345,6 +345,13 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 - Post-licensing-ip-split: `content_quality_issues_20251204_193538.json` (175 issues)
 - Post-analytics-pipeline-split: `content_quality_issues_20251204_193620.json` (174 issues)
 
+**Eighteenth Iteration**:
+- ✅ `enhanced-analytics-dashboard.md` (1240 lines) → Split into hub + 9 modules
+  - All under 260 lines
+
+**Reports Generated**:
+- Post-analytics-dashboard-split: `content_quality_issues_20251204_193736.json` (173 issues)
+
 **Thirteenth Iteration**:
 - ✅ `customer-success/framework.md` (1352 lines) → Split into hub + 8 domain modules
   - All under 271 lines
