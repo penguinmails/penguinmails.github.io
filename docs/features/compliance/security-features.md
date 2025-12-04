@@ -896,9 +896,9 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Enterprise
 
-- **[User Management](/docs/features/enterprise/user-management)** - Authentication and authorization
+- **[User Management](/docs/features/authentication/user-management)** - Authentication and authorization
 
-- **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** - Advanced security (SSO, MFA)
+- **[Enterprise Features](/docs/features/admin/enterprise-features/overview)** - Advanced security (SSO, MFA)
 
 ### Technical
 

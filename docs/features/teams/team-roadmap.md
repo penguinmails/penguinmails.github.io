@@ -857,11 +857,11 @@ This roadmap outlines the development timeline for team and workspace management
 
 ### Feature Documentation
 
-- **[User Management & Authentication](/docs/features/enterprise/user-management)** - Complete user and team management
+- **[User Management & Authentication](/docs/features/authentication/user-management)** - Complete user and team management
 
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation and workspace architecture
 
-- **[Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)** - Authentication features timeline
+- **[Authentication Roadmap](/docs/features/authentication/authentication-roadmap)** - Authentication features timeline
 
 ### Route Specifications
 

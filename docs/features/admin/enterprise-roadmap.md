@@ -941,11 +941,11 @@ This document provides a detailed timeline for enterprise features development, 
 
 - [Enterprise Features Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature catalog and status
 
-- [User Management & Authentication](/docs/features/enterprise/user-management) - Authentication details
+- [User Management & Authentication](/docs/features/authentication/user-management) - Authentication details
 
-- [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap) - Detailed authentication timeline
+- [Authentication Roadmap](/docs/features/authentication/authentication-roadmap) - Detailed authentication timeline
 
-- [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
+- [Team Management Roadmap](/docs/features/teams/team-roadmap) - Detailed team & workspace management timeline
 
 - [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
 

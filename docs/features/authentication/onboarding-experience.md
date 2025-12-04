@@ -692,7 +692,7 @@ function OnboardingChecklist() {
 
 ## Related Documentation
 
-- **[User Management](/docs/features/enterprise/user-management)** - Authentication and registration
+- **[User Management](/docs/features/authentication/user-management)** - Authentication and registration
 
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - Infrastructure provisioning
 

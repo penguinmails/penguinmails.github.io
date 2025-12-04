@@ -70,7 +70,7 @@ category: "Enterprise"
 
 - ðŸ”® Advanced session management - Q4 2026
 
-**Detailed Roadmap:** [Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)
+**Detailed Roadmap:** [Authentication Roadmap](/docs/features/authentication/authentication-roadmap)
 
 ---
 
@@ -594,7 +594,7 @@ Response:
 
 - ðŸ”® External user collaboration (client portal) - Q2 2027
 
-**Detailed Roadmap:** [Team Management Roadmap](/docs/features/enterprise/team-roadmap)
+**Detailed Roadmap:** [Team Management Roadmap](/docs/features/teams/team-roadmap)
 
 ---
 
@@ -873,9 +873,9 @@ Response:
 
 ### Authentication & Security
 
-- **[Authentication Roadmap](/docs/features/enterprise/authentication-roadmap)** - Detailed authentication timeline and quarterly breakdown
+- **[Authentication Roadmap](/docs/features/authentication/authentication-roadmap)** - Detailed authentication timeline and quarterly breakdown
 
-- **[Team Management Roadmap](/docs/features/enterprise/team-roadmap)** - Detailed team & workspace management timeline
+- **[Team Management Roadmap](/docs/features/teams/team-roadmap)** - Detailed team & workspace management timeline
 
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Tenant isolation and workspace architecture
 

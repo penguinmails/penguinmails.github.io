@@ -656,7 +656,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### Feature Documentation
 
-- **[User Management & Authentication](/docs/features/enterprise/user-management)** - Current authentication features
+- **[User Management & Authentication](/docs/features/authentication/user-management)** - Current authentication features
 
 - **[Security Framework](/docs/compliance-security/enterprise/security-framework)** - Security overview
 
