@@ -298,7 +298,22 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-vault-smtp-split: `content_quality_issues_20251204_184324.json` (181 issues)
 
-**Remaining Backlog**: 181 files
+**Remaining Backlog**: 180 files
+
+**Tenth Iteration**:
+- ✅ `process-standardization-framework.md` (1386 lines) → Split into hub + 7 domain files
+  - Created `process-framework/overview.md` (43 lines) - Hub with navigation
+  - Created `process-framework/development-process.md` (336 lines)
+  - Created `process-framework/quality-assurance.md` (271 lines)
+  - Created `process-framework/governance.md` (271 lines)
+  - Created `process-framework/implementation.md` (208 lines)
+  - Created `process-framework/technology.md` (145 lines)
+  - Created `process-framework/success-metrics.md` (117 lines)
+  - Created `process-framework/roadmap.md` (89 lines)
+  - All under 340 lines
+
+**Reports Generated**:
+- Post-process-std-split: `content_quality_issues_20251204_185121.json` (180 issues)
 
 **Sixth Iteration**:
 - ✅ `compliance-framework.md` (1491 lines) → Split into hub + 7 compliance domains
