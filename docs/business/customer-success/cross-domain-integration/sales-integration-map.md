@@ -401,7 +401,7 @@ topics:
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Sales Systems Map](/docs/business/sales/cross-domain-integration)
 

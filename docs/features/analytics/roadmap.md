@@ -910,7 +910,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Planning & Strategy
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Platform-wide feature timeline
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Platform-wide feature timeline
 
 - **[Executive Roadmap](/docs/business/roadmap/executive-roadmap)** - Strategic feature delivery timeline
 
@@ -926,7 +926,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ### Related Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign-level analytics
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign-level analytics
 
 - **[Email Operations](/docs/features/campaigns/)** - Email sending and tracking
 

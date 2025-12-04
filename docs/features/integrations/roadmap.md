@@ -57,7 +57,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **References**:
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys/overview)
 
 - [Route Specification](/docs/design/routes/api-key-management)
 
@@ -108,7 +108,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Route Specification](/docs/design/routes/api-key-management)
 
-- [Feature Documentation](/docs/features/integrations/vault-api-keys)
+- [Feature Documentation](/docs/features/integrations/vault-api-keys/overview)
 
 ---
 
@@ -695,7 +695,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 - Emergency credential reset workflow
 
 **Effort**: 1 week
-**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp-credentials)
+**Reference**: [SMTP Credentials Storage](/docs/features/infrastructure/vault-smtp/overview)
 
 ---
 
@@ -795,7 +795,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - [Integration Strategy](/.kiro/specs/feature-completeness-review/findings/integration-strategy) - API-first approach rationale
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Integration timeline and priorities
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Integration timeline and priorities
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic integration investments
 

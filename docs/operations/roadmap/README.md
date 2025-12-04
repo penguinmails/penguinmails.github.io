@@ -18,7 +18,7 @@ This directory contains the product and technical roadmaps that define **what we
 
 ### Product Roadmap
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - *Consolidated feature timeline and development roadmap*
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - *Consolidated feature timeline and development roadmap*
 
 - **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - *Infrastructure milestones and technical considerations*
 
@@ -132,7 +132,7 @@ Roadmaps are updated monthly with:
 
 - **[API Architecture](/docs/implementation-technical/api/README)** - Backend endpoint design
 
-- **[Design System](/docs/design/ui-library)** - UI patterns and components
+- **[Design System](/docs/design/ui-library/overview)** - UI patterns and components
 
 ### Implementation
 

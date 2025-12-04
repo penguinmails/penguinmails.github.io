@@ -396,7 +396,7 @@ See enhanced dashboard framework: [`enhanced-performance-dashboard`](/docs/busin
 
 ## Executive Reporting Integration
 
-See executive reporting framework: [`executive-reporting-framework`](/docs/business/marketing/analytics/executive-reporting-framework)
+See executive reporting framework: [`executive-reporting-framework`](/docs/implementation-technical/business-intelligence/executive-reporting/overview)
 
 ## Intelligence Architecture
 

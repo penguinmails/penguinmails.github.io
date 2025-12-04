@@ -73,5 +73,5 @@ The Plan Management feature allows platform administrators to define and manage 
 ## Related Documentation
 
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical details on payment processing.
-- **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for plans and subscriptions.
+- **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview)**: Database structure for plans and subscriptions.
 - **[Admin Route Spec](/docs/design/routes/platform-admin-plans)**: UI specification for the management interface.

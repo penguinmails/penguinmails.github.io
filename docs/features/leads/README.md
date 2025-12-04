@@ -30,7 +30,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **[Lead Scoring](/docs/features/leads/lead-scoring)** - Engagement-based lead scoring system
 
-- **[Import/Export](/docs/features/leads/import-export)** - Bulk contact import/export with field mapping
+- **[Import/Export](/docs/features/leads/import-export/overview)** - Bulk contact import/export with field mapping
 
 ### ðŸš§ MVP Implementation Required (Q1 2026)
 
@@ -70,7 +70,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - [Lead Management Roadmap](/docs/features/leads/roadmap) - Detailed timeline and quarterly breakdown
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
@@ -88,7 +88,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Use segments in campaigns
 
 - [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 

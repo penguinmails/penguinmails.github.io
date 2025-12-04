@@ -394,7 +394,7 @@ topics:
 
 **Related Documentation:**
 
-- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/overview)
+- [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 - [Finance Systems Map](/docs/business/finance/cross-domain-integration)
 

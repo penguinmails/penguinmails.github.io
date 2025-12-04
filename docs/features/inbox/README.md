@@ -138,7 +138,7 @@ See the [Inbox Management Roadmap](/docs/features/inbox/roadmap) for:
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Campaigns generate inbox responses
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Campaigns generate inbox responses
 
 - [Lead Management](/docs/features/leads/leads-management) - Lead scoring and context
 

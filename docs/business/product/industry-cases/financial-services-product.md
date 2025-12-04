@@ -499,7 +499,7 @@ Financial services organizations operate in a highly regulated environment requi
 
 - [Financial Services Customer Success Framework](/docs/business/customer-success/industry-cases)
 
-- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

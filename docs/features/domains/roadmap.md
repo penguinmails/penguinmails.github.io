@@ -537,7 +537,7 @@ These convenience features can be implemented if time permits, but are not block
 
 ### Planning & Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product direction
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product direction
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Business-level roadmap
 

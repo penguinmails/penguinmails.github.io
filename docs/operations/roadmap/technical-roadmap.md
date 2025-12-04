@@ -245,7 +245,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Planning & Product
 
-- **[Product Roadmap](/docs/operations/roadmap/product-roadmap)** - Feature timeline and business milestones
+- **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Feature timeline and business milestones
 
 - **[Roadmap Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - Complete roadmap navigation hub
 
@@ -281,7 +281,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 - **[API Architecture](/docs/implementation-technical/api/README)** - Backend endpoint design and structure
 
-- **[Design System](/docs/design/ui-library)** - UI patterns and component library
+- **[Design System](/docs/design/ui-library/overview)** - UI patterns and component library
 
 - **[Architecture Overview](/docs/technical/architecture/overview)** - System architecture and technical design
 

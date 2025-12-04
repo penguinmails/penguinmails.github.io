@@ -17,8 +17,8 @@ keywords: ["vault", "reference", "documentation", "disaster recovery"]
 ## Feature Documentation
 
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)**
-- **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp-credentials)**
-- **[Vault API Keys](/docs/features/integrations/vault-api-keys)**
+- **[Vault SMTP Credentials](/docs/features/infrastructure/vault-smtp/overview)**
+- **[Vault API Keys](/docs/features/integrations/vault-api-keys/overview)**
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)**
 - **[Hostwind Management](/docs/features/infrastructure/hostwind-management)**
 

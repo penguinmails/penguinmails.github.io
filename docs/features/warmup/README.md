@@ -58,7 +58,7 @@ Automated sender reputation building for 95%+ deliverability.
 
 ### ðŸš§ In Development (Q3 2026)
 
-#### [Warmup Scheduling](/docs/features/warmup/warmup-scheduling)
+#### [Warmup Scheduling](/docs/features/warmup/scheduling/overview)
 
 Automated email warmup with gradual volume ramping and engagement simulation.
 
@@ -82,7 +82,7 @@ Automated email warmup with gradual volume ramping and engagement simulation.
 
 **Status**: PLANNED (Q3 2026) | **Priority**: High
 
-#### [Reputation Monitoring](/docs/features/warmup/reputation-monitoring)
+#### [Reputation Monitoring](/docs/features/warmup/monitoring/overview)
 
 Real-time sender reputation tracking and deliverability monitoring.
 
@@ -186,7 +186,7 @@ See [Warmup Roadmap](/docs/features/warmup/roadmap) for complete timeline and fe
 
 ### Business Strategy
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature planning
 

@@ -211,4 +211,4 @@ async function recoverSmtpCredentialsToNewVps(
 }
 ```
 
-**Reference:** Review [Vault SMTP Credential Storage](/docs/features/infrastructure/vault-smtp-credentials) for additional recovery actions covering cluster restoration and credential compromise investigations.
+**Reference:** Review [Vault SMTP Credential Storage](/docs/features/infrastructure/vault-smtp/overview) for additional recovery actions covering cluster restoration and credential compromise investigations.

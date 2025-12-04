@@ -202,7 +202,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Automation Roadmap](/docs/features/automation/roadmap) - Detailed implementation timeline
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap) - Feature classification
 
@@ -214,7 +214,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/scheduling/overview) - Time-based triggers
 
 - [Template Management](/docs/features/templates/template-management) - Email templates for automation actions
 

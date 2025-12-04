@@ -530,9 +530,9 @@ Before any campaign sends, PenguinMails automatically checks:
 
 - **[Email Authentication](/docs/features/domains/sender-authentication)** - SPF, DKIM, DMARC
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Campaign creation
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign creation
 
-- **[Template Editor](/docs/features/templates/template-editor)** - Email templates
+- **[Template Editor](/docs/features/templates/template-editor/overview)** - Email templates
 
 ---
 

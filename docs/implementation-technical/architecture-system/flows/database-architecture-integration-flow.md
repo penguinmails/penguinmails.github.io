@@ -236,7 +236,7 @@ graph LR
 
 - [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Comprehensive architecture overview
 
-- [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) - Operational database details
+- [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema/overview) - Operational database details
 
 - [Content Database Schema](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) - Content storage details
 

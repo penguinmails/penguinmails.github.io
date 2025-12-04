@@ -216,7 +216,7 @@ This guide is intentionally:
 
 - [Detailed Procurement Guide](/docs/business/procurement-compliance/procurement-guide-detailed) - Complete enterprise evaluation framework
 
-- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework) - Detailed regulatory analysis
+- [Compliance Framework](/docs/business/procurement-compliance/compliance-framework/overview) - Detailed regulatory analysis
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications and requirements
 

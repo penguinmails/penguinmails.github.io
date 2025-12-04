@@ -128,7 +128,7 @@ Official client libraries are coming soon:
 
 ### Feature Documentation
 
-- **[Vault API Keys](/docs/features/integrations/vault-api-keys)** - Secure API key system with Vault
+- **[Vault API Keys](/docs/features/integrations/vault-api-keys/overview)** - Secure API key system with Vault
 
 - **[Webhook System](/docs/features/integrations/webhook-system)** - Real-time event notifications
 

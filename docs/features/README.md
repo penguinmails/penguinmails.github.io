@@ -26,7 +26,7 @@
 
 - **Level 3**: Predictive analytics
 
-**[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Multi-channel campaign orchestration
+**[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Multi-channel campaign orchestration
 
 - **Level 1**: Basic campaign creation
 
@@ -101,7 +101,7 @@
 
 2. Use [Unified Inbox](/docs/features/inbox/unified-inbox/overview) for team coordination
 
-3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/overview) for advanced workflows
+3. Deploy [Campaign Management](/docs/features/campaigns/campaign-management/hub) for advanced workflows
 
 ### For Enterprise
 
@@ -113,7 +113,7 @@
 
 ---
 
-**Planning implementation?** → [Product Roadmap](/docs/operations/roadmap/product-roadmap)
+**Planning implementation?** → [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)
 **Need feature comparisons?** → [Feature Catalog](/docs/feature-overview)
 
 ---
@@ -183,7 +183,7 @@ Each feature document is structured in **three progressive complexity levels**:
 | Feature | Status | Progress | Priority |
 |---------|--------|----------|----------|
 | **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** | Planned | 0% | High |
-| **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** | Planned | 0% | Critical |
+| **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** | Planned | 0% | Critical |
 | **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** | Planned | 0% | Medium |
 | **[CRM Integration](/docs/features/integrations/crm-integration/overview)** | Planned | 0% | High |
 
@@ -279,7 +279,7 @@ Each feature document is structured in **three progressive complexity levels**:
 
 **Affected Features**:
 
-- [API Key Management](/docs/features/integrations/vault-api-keys) - Secure API access (Q1 2026)
+- [API Key Management](/docs/features/integrations/vault-api-keys/overview) - Secure API access (Q1 2026)
 
 - [Webhook System](/docs/features/integrations/webhook-system) - Real-time event notifications (Q1 2026)
 
@@ -297,8 +297,8 @@ Each feature document is structured in **three progressive complexity levels**:
 |---------|--------|----------|----------|
 | **[Enterprise Features](/docs/features/enterprise/enterprise-features/overview)** | Planned | 0% | High |
 
-**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/operations/roadmap/product-roadmap)
+**For detailed dependency graphs and critical path** → [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)
 
 ---
 
-*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/operations/roadmap/product-roadmap) →*
+*Previous: [Quick Setup Guide](/docs/quick-setup) | Next: [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) →*

@@ -508,7 +508,7 @@ async function renderCached(templateId: string, context: any): Promise<string> {
 
 ## Related Documentation
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Create personalized campaigns
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Create personalized campaigns
 
 - **[A/B Testing](/docs/features/campaigns/ab-testing)** - Test personalized variants
 

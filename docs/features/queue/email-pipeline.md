@@ -197,7 +197,7 @@ Jobs that fail all retries are moved to DLQ for manual inspection. This prevents
 
 ### Features
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - The source of most pipeline jobs
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - The source of most pipeline jobs
 
 - **[ESP Integration](/docs/features/integrations/esp-integration)** - External delivery gateways
 

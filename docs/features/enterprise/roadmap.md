@@ -947,7 +947,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - [Team Management Roadmap](/docs/features/enterprise/team-roadmap) - Detailed team & workspace management timeline
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic priorities
 

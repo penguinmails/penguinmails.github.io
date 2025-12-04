@@ -509,7 +509,7 @@ E-commerce organizations operate at high scale with complex customer lifecycle m
 
 - [E-commerce Customer Success Framework](/docs/business/customer-success/industry-cases)
 
-- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Product Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 

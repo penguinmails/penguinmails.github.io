@@ -759,7 +759,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 - [Lead Management README](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md) - Feature area overview
 
-- [Product Roadmap](/docs/operations/roadmap/product-roadmap) - Overall product timeline
+- [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Overall product timeline
 
 - [Executive Roadmap](/docs/business/roadmap/executive-roadmap) - Strategic feature delivery
 
@@ -771,7 +771,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 - [Contact Segmentation](/docs/features/leads/contact-segmentation) - Dynamic and static segmentation
 
-- [Import/Export](/docs/features/leads/import-export) - Bulk contact operations
+- [Import/Export](/docs/features/leads/import-export/overview) - Bulk contact operations
 
 - [Lead Scoring](/docs/features/leads/lead-scoring) - Behavioral and demographic scoring
 
@@ -789,7 +789,7 @@ Lead management MVP simplified to essential features only. Complex features (dyn
 
 ### Related Features
 
-- [Campaign Management](/docs/features/campaigns/campaign-management/overview) - Use segments in campaigns
+- [Campaign Management](/docs/features/campaigns/campaign-management/hub) - Use segments in campaigns
 
 - [Inbox Management](/docs/features/inbox/README) - Reply management linked to contacts
 

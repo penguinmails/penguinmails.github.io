@@ -777,7 +777,7 @@ Projected Annual Cost: $735.00
 
 - [Analytics Overview](/docs/features/analytics/core-analytics/overview)
 
-- [Deliverability Monitoring](/docs/features/warmup/reputation-monitoring)
+- [Deliverability Monitoring](/docs/features/warmup/monitoring/overview)
 
 **Technical Integration**:
 

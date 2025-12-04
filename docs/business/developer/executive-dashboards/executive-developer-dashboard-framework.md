@@ -17,7 +17,7 @@ persona: "Documentation Users"
 **Level**: Level 5 - Executive Dashboards and Analytics
 **Target Audience**: Executive Leadership, C-Level Executives, Developer Leadership
 **Business Impact Priority**: Critical - Executive visibility and developer performance responsibility
-**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive Dashboard Framework](/docs/business/executive/dashboard) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview)
+**Framework Integration**: [Developer Strategy Framework](/docs/business/strategy/overview) | [Developer Analytics Framework](/docs/business/analytics/overview) | [Developer Operations Framework](/docs/business/operations/strategy/framework) | [Executive Dashboard Framework](/docs/business/executive/dashboard) | [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ## Executive Summary
 
@@ -88,7 +88,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 
 - Cross-functional validation completed and verified
 
-**Business Framework Integration**: [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) + [Developer Analytics Framework](/docs/business/analytics/overview)
+**Business Framework Integration**: [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub) + [Developer Analytics Framework](/docs/business/analytics/overview)
 
 ### 1.2 Executive KPI Implementation
 
@@ -141,7 +141,7 @@ The Executive Developer Dashboard Framework establishes comprehensive protocols 
 
 - Integration success validation completed and verified
 
-**Business Framework Integration**: [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/overview) + [Developer Analytics Framework](/docs/business/analytics/overview)
+**Business Framework Integration**: [Developer Cross-Domain Integration Maps](/docs/business/customer-success/cross-domain-integration/integration/hub) + [Developer Analytics Framework](/docs/business/analytics/overview)
 
 ---
 

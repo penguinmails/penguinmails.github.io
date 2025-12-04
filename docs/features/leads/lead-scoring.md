@@ -757,7 +757,7 @@ eventEmitter.on('contact.updated', async (event) => {
 
 - **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Score-based segments
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/overview)** - Score-based targeting
+- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Score-based targeting
 
 - **[Analytics](/docs/features/analytics/core-analytics/overview)** - Score analytics
 

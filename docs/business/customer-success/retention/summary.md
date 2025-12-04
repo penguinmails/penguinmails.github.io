@@ -295,7 +295,7 @@ Customer retention represents the foundation of sustainable business growth, pro
 
 - [Customer Health Scoring](/docs/business/analytics/overview)
 
-- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/overview)
+- [Cross-Domain Integration](/docs/business/customer-success/cross-domain-integration/integration/hub)
 
 ---
 
