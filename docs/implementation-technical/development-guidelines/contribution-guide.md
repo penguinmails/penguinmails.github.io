@@ -48,7 +48,7 @@ This section follows the **Progressive Complexity Framework** with three distinc
 
 - [`community-governance.md`](/docs/implementation-technical/development-guidelines/community-governance) - Community governance, recognition programs, and long-term contribution strategies
 
-- [`licensing-ip.md`](/docs/implementation-technical/development-guidelines/licensing-ip) - Licensing guidelines and intellectual property considerations
+- [`licensing-ip.md`](/docs/implementation-technical/development-guidelines/licensing-ip/overview) - Licensing guidelines and intellectual property considerations
 
 ---
 

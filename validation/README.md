@@ -331,7 +331,19 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-standards-split: `content_quality_issues_20251204_185246.json` (179 issues)
 
-**Remaining Backlog**: 177 files
+**Remaining Backlog**: 174 files
+
+**Sixteenth Iteration**:
+- ✅ `licensing-ip.md` (1304 lines) → Split into hub + 8 modules
+  - All under 310 lines
+
+**Seventeenth Iteration**:
+- ✅ `marketing-analytics-pipeline.md` (1264 lines) → Split into hub + 5 parts
+  - All under 380 lines
+
+**Reports Generated**:
+- Post-licensing-ip-split: `content_quality_issues_20251204_193538.json` (175 issues)
+- Post-analytics-pipeline-split: `content_quality_issues_20251204_193620.json` (174 issues)
 
 **Thirteenth Iteration**:
 - ✅ `customer-success/framework.md` (1352 lines) → Split into hub + 8 domain modules
