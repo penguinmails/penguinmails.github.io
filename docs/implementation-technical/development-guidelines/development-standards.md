@@ -48,7 +48,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 **For detailed implementation guidance, refer to the specialized documents:**
 
-- **[Code Standards](/docs/implementation-technical/development-guidelines/code-standards)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization
+- **[Code Standards](/docs/implementation-technical/development-guidelines/code-standards/overview)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization
 
 - **[Code Contribution](/docs/implementation-technical/development-guidelines/code-contribution)** - Development workflow, pull request process, and collaboration guidelines
 
@@ -96,7 +96,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 - Comprehensive testing framework integration
 
-*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards) for detailed linting rules, pre-commit configurations, and code quality tools]*
+*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards/overview) for detailed linting rules, pre-commit configurations, and code quality tools]*
 
 ### Documentation Standards
 
@@ -106,7 +106,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 - OpenAPI 3.0 specifications for API documentation
 
-*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards) for documentation templates and examples]*
+*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards/overview) for documentation templates and examples]*
 
 ### Deployment & CI/CD
 
@@ -142,7 +142,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 - Security testing and dependency scanning
 
-*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards) for comprehensive security practices, authentication patterns, and testing requirements]*
+*[See Code Standards](/docs/implementation-technical/development-guidelines/code-standards/overview) for comprehensive security practices, authentication patterns, and testing requirements]*
 
 ### API Development Standards
 
@@ -186,7 +186,7 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 ### Primary Development Guides
 
-- **[Code Standards](/docs/implementation-technical/development-guidelines/code-standards)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization
+- **[Code Standards](/docs/implementation-technical/development-guidelines/code-standards/overview)** - Comprehensive coding standards, TypeScript/React guidelines, security practices, and performance optimization
 
 - **[Code Contribution](/docs/implementation-technical/development-guidelines/code-contribution)** - Development workflow, pull request process, and collaboration guidelines
 
