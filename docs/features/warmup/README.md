@@ -58,7 +58,7 @@ Automated sender reputation building for 95%+ deliverability.
 
 ### ðŸš§ In Development (Q3 2026)
 
-#### [Warmup Scheduling](/docs/features/warmup/warmup-scheduling)
+#### [Warmup Scheduling](/docs/features/warmup/scheduling/overview)
 
 Automated email warmup with gradual volume ramping and engagement simulation.
 

@@ -356,6 +356,14 @@ Legacy artifacts, test fixtures, and reports have been moved to `.roo/legacy-arc
 **Reports Generated**:
 - Post-batch-3-split: `content_quality_issues_20251204_201140.json` (165 issues)
 
+**Twenty-Second Iteration** (Batch 4):
+- ✅ `warmup-scheduling.md` (1122 lines) → Hub + 3 scheduling modules
+- ✅ `template-library.md` (1120 lines) → Hub + 3 library modules
+- ✅ `product-integration-hub.md` (1101 lines) → Hub + 3 integration modules
+
+**Reports Generated**:
+- Post-batch-4-split: `content_quality_issues_20251204_201306.json` (162 issues)
+
 **Sixteenth Iteration**:
 - ✅ `licensing-ip.md` (1304 lines) → Split into hub + 8 modules
   - All under 310 lines

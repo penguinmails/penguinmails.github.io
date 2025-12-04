@@ -76,7 +76,7 @@ WYSIWYG drag-and-drop email template editor with advanced features.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-#### [Template Library](/docs/features/templates/template-library)
+#### [Template Library](/docs/features/templates/library/overview)
 
 Pre-built professional template collection with customization.
 

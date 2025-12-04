@@ -12,7 +12,7 @@ keywords: "related docs, references, links"
 
 - **[Template Variables](/docs/features/templates/template-variables)** - Dynamic content and merge tags
 
-- **[Template Library](/docs/features/templates/template-library)** - Pre-built template collection
+- **[Template Library](/docs/features/templates/library/overview)** - Pre-built template collection
 
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use templates in campaigns
 
