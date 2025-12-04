@@ -392,27 +392,31 @@ This document provides a detailed roadmap for authentication and security featur
 
 ---
 
-### Q3 2026: Single Sign-On (SSO)
+### Q3 2026: Security Hardening & SSO Investigation
 
 **Priority:** Critical (for enterprise)
 **Effort:** 15-20 days
 **Target:** Q3 2026
 
-**Description:** Implement SAML and OIDC-based SSO for enterprise customers with identity providers (Okta, Azure AD, OneLogin).
+**Description:** Investigation and implementation of Single Sign-On (SAML/OIDC) and security hardening measures.
+
+**Primary Objectives:**
+
+1. **Improve NileDB Auth Shortcomings**: Address limitations such as unique origin/host constraints and lack of multi-provider support.
+2. **Stakeholder Trust**: Enhance enterprise confidence by implementing industry-standard security controls.
 
 **Why Post-MVP:** Enterprise feature not needed for initial SMB/startup customers. Can be added when targeting enterprise customers (typically $50K+ ARR).
 
 ## Key Features
 
 - SAML 2.0 support
-
 - OpenID Connect (OIDC) support
-
 - Just-in-Time (JIT) provisioning
-
 - SCIM provisioning (automatic user/group sync)
-
 - Custom SSO login URL per tenant
+- **Security Hardening**:
+  - IP whitelisting for admin access
+  - Advanced session management policies
 
 **Business Impact:** Unlocks enterprise segment ($50K+ ARR deals). Many large companies mandate SSO for all SaaS tools.
 

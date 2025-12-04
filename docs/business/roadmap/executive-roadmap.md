@@ -137,7 +137,7 @@ This document provides executives with a clear view of feature delivery timeline
 
   - **Business Impact**: Critical for platform operations and 99.9% uptime SLA. Without monitoring, issues go undetected until customers complain.
 
-- [ ] **Payment History & Financial Management** (P0 - 10-15 days): Transaction history, invoice management, failed payment tracking, refund management, subscription management, revenue analytics
+- [ ] **Subscription Status Dashboard** (P0 - 3-4 days): Subscription monitoring, Stripe webhook status, links to Stripe Dashboard for detailed analytics
 
   - **Business Impact**: Required for finance operations and customer support. Without payment history, finance team cannot reconcile revenue or resolve billing disputes.
 
@@ -151,7 +151,7 @@ This document provides executives with a clear view of feature delivery timeline
 
   - **Business Impact**: Onboarding directly impacts activation and retention. Poor onboarding leads to churn.
 
-- [ ] **Admin Platform Features** (P1 - 7-10 days): User audit trail, support access tracking, tenant plan management, feature flags, MRR tracking, Stripe webhooks
+- [ ] **Admin Platform Features** (P1 - 7-10 days): User audit trail, support access tracking, tenant plan management, feature flags, Stripe webhook monitoring
 
   - **Business Impact**: Required for platform operations and customer support.
 

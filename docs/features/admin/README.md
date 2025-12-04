@@ -14,7 +14,7 @@ The PenguinMails admin panel provides operational tools for internal staff to ma
 - **[Plan Management](/docs/features/admin/plan-management/)** - Configure subscription plans and pricing
 - **[User Management](/docs/features/admin/user-management/)** - Global user lookup, audit trails, and account actions
 - **[Tenant Management](/docs/features/admin/tenant-management/)** - Manage customer organizations, plan overrides, and feature flags
-- **[Finance](/docs/features/admin/finance/)** - Revenue operations, MRR tracking, and Stripe sync monitoring
+- **[Finance](/docs/features/admin/finance/)** - Subscription monitoring and Stripe Dashboard access
 - **[System Monitoring](/docs/features/admin/system-monitoring/)** - Infrastructure health, queue monitoring, and log viewer
   - [Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring) - Background job management
   - [Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring) - Service health and IP reputation
@@ -107,7 +107,7 @@ See **[Enterprise Features Roadmap](/docs/features/admin/enterprise-features/ove
   - [Plan Management](/docs/design/routes/platform-admin#dashboard-admin-plans) - Plan configuration UI
   - [User Management](/docs/design/routes/platform-admin#dashboard-users) - Global user lookup and audit trails
   - [Tenant Management](/docs/design/routes/platform-admin#dashboard-tenants) - Organization management UI
-  - [Finance Dashboard](/docs/design/routes/platform-admin#dashboard-finance) - Revenue operations UI
+  - [Finance Dashboard](/docs/design/routes/platform-admin#dashboard-finance) - Subscription overview UI
   - [Queue Monitoring](/docs/design/routes/platform-admin#dashboard-system-queues) - Background job monitoring
   - [Infrastructure Health](/docs/design/routes/platform-admin#dashboard-system-infrastructure) - Service health monitoring
   - [Log Viewer](/docs/design/routes/platform-admin#dashboard-system-logs) - System log access
@@ -118,7 +118,7 @@ See **[Enterprise Features Roadmap](/docs/features/admin/enterprise-features/ove
 - **Platform Admin Endpoints**:
   - [Admin Operations API](/docs/implementation-technical/api/platform-api/admin) - User and tenant management
   - [Plans API](/docs/implementation-technical/api/platform-api/plans) - Subscription plan configuration
-  - [Finance API](/docs/implementation-technical/api/platform-api/finance) - MRR tracking and revenue operations
+  - [Finance API](/docs/implementation-technical/api/platform-api/finance) - Subscription counts and Stripe sync status
   - [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring) - Queue, infrastructure, and logs
   - [Vault Management API](/docs/implementation-technical/api/platform-api/vault) - Secrets management and rotation
 - **Related APIs**:

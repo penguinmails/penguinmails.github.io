@@ -104,20 +104,20 @@ This document provides a detailed timeline for enterprise features development, 
 ### 2. Payment & Billing Overview Dashboard
 
 **Priority:** P0 (MVP blocker for production launch)
-**Effort:** Medium (5-7 days)
+**Effort:** Small (3-4 days)
 **Status:** Not Started
 
-**Description:** Build admin dashboard views for payment status monitoring and tenant billing overview using existing OLTP and OLAP data.
+**Description:** Build admin dashboard views for subscription status monitoring using existing OLTP data with links to Stripe Dashboard.
 
-**Three-Tier Data Approach:**
+**Stripe-First Data Approach:**
 
-- **OLTP (`subscriptions`, `payments`)**: Operational references, access control
-- **OLAP (`billing_analytics`)**: Usage aggregation, billing period metrics (updated via daily batch jobs)
-- **Stripe Dashboard**: Full payment details, invoices, refunds, retry logic
+- **OLTP (`subscriptions`, `payments`)**: Minimal operational references for access control
+- **Stripe Dashboard**: All detailed payment analytics, MRR tracking, invoices, and revenue reports
+- **Simple Aggregation**: Basic subscription counts only (no complex revenue calculations)
 
 ## Features
 
-- **Tenant Payment Section** (`/admin/tenants/{tenant_id}/payment`)
+- **Tenant Subscription Section** (`/admin/tenants/{tenant_id}/subscription`)
   
   - Display current subscription status (active, past_due, canceled)
   - Show next billing date from `subscriptions.current_period_end`
@@ -125,7 +125,7 @@ This document provides a detailed timeline for enterprise features development, 
   - "View Subscription in Stripe" deep link
   - "View Payment History in Stripe" deep link
 
-- **Payments List View** (`/admin/finance/payments`)
+- **Subscriptions List View** (`/admin/finance/subscriptions`)
   
   - List all tenant subscriptions with status indicators
   - Calculate "due soon" from `current_period_end` (< 7 days)
@@ -133,24 +133,19 @@ This document provides a detailed timeline for enterprise features development, 
   - Search by tenant name
   - Quick links: View Tenant Detail, Open in Stripe Dashboard
 
-- **Tenant Billing History** (`/admin/tenants/{tenant_id}/billing`)
+- **Subscription Summary** (`/dashboard/finance`)
   
-  - Past subscription periods (OLTP `subscriptions` history)
-  - Usage per period (OLAP `billing_analytics`: emails_sent, domains_used, etc.)
-  - Plan name and billing dates
-  - "View Invoice in Stripe" link per period
-  - Display "Last updated" timestamp for OLAP usage data
-
-- **Revenue Analytics Dashboard** (OLAP `billing_analytics`)
-  
-  - MRR breakdown by plan tier
-  - Revenue trends (daily/weekly/monthly charts)
-  - Active subscriptions count
-  - Churn rate and LTV calculations
-  - Usage aggregates (total emails sent across all tenants)
+  - Active subscription count
+  - Plan distribution (count per plan)
+  - Stripe webhook status (last received, health indicator)
+  - "View MRR in Stripe Dashboard" button
+  - "Open Stripe Dashboard" quick links
 
 **What We DON'T Build:**
 
+- ❌ MRR calculations or revenue analytics (use Stripe Dashboard)
+- ❌ Revenue trend charts or forecasting (use Stripe Dashboard)
+- ❌ Cohort analysis or LTV calculations (use Stripe Dashboard or Baremetrics/ChartMogul)
 - ❌ Full payment transaction list (use Stripe Dashboard)
 - ❌ Invoice PDF rendering or storage (Stripe generates PDFs)
 - ❌ Manual invoice creation UI (use Stripe Dashboard)
@@ -159,16 +154,15 @@ This document provides a detailed timeline for enterprise features development, 
 - ❌ Card details or payment method management (use Stripe Customer Portal)
 
 **Data Presentation Philosophy:**
-> Present only the data in current OLTP/OLAP tables.  
-> Link to Stripe for operations requiring full payment details.  
+> Present only basic subscription counts from OLTP `subscriptions` table.  
+> Link to Stripe Dashboard for all revenue analytics, MRR tracking, and payment details.  
 > Never duplicate Stripe functionality or overpromise beyond table capabilities.
 
-**Business Impact:** Essential for finance team to monitor subscription health and revenue metrics. Admin dashboard provides operational view while leveraging Stripe for detailed payment operations.
+**Business Impact:** Essential for admin team to monitor subscription health status. Stripe Dashboard provides complete financial operations and revenue analytics.
 
 ## Dependencies
 
 - OLTP database: `subscriptions`, `payments`, `plans`, `tenants`
-- OLAP database: `billing_analytics` with period usage aggregates (updated via daily batch jobs)
 - Stripe API integration (read-only for deep link generation)
 - Stripe Dashboard access for admin team (webhook-driven sync ensures accuracy)
 

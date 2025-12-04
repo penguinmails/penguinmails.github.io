@@ -515,7 +515,36 @@ Permissions-Policy: geolocation=(), microphone=(), camera=()
 
 ---
 
-## Level 3: Technical Implementation
+## Level 3: Enterprise Security Hardening
+
+### Network Security
+
+#### IP Whitelisting
+
+- **Admin Access**: Restrict platform admin access to specific corporate IPs/VPNs.
+- **API Access**: Tenant-level IP allowlists for API key usage.
+- **SMTP Relay**: Dedicated IP pools for high-volume senders.
+
+#### Advanced Protection
+
+- **DDoS Mitigation**: Enterprise-tier protection for high-availability requirements.
+- **WAF Rules**: Custom Web Application Firewall rules for specific tenant needs.
+
+### Advanced Encryption
+
+#### Key Management
+
+- **Customer-Managed Keys (CMEK)**: Allow enterprise tenants to manage their own encryption keys (BYOK).
+- **Hardware Security Modules (HSM)**: Integration for highest-assurance key storage.
+
+#### Data Isolation
+
+- **Tenant Encryption**: Unique encryption keys per tenant for strict data isolation.
+- **Encrypted Backups**: Tenant-specific encrypted backup storage.
+
+---
+
+## Level 4: Technical Implementation
 
 ### Database Encryption
 

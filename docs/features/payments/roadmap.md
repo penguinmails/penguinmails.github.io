@@ -132,54 +132,55 @@ Build real-time usage monitoring dashboard with visual progress bars, color-code
 
 ---
 
-#### 3. [MVP - P1] Invoice Generation and Delivery System
+#### 3. [MVP - P1] Invoice Access via Stripe
 
 **Epic:** Billing & Subscriptions
 **Priority:** P1 (High)
-**Effort:** Medium (3-5 days)
+**Effort:** Small (1-2 days)
 **Timeline:** Week 3-4
 
 ##### Description
 
-Implement direct PDF invoice download, preview modal, search/filtering, and bulk download capabilities. Professional businesses expect self-service invoice management without relying on third-party portals.
+Implement invoice list display with links to Stripe Customer Portal for PDF access and downloads. Professional businesses need easy invoice access without relying solely on Stripe emails.
 
 ##### Acceptance Criteria
 
-- [ ] Download invoice PDF directly from PenguinMails UI (not Stripe portal redirect)
+- [ ] Display invoice list from Stripe API (read-only)
 
-- [ ] Preview invoice in modal before download (shows itemized charges)
+- [ ] Show invoice details: date, amount, status (paid, pending, failed)
 
-- [ ] Search invoices by date range, amount, status (paid, pending, failed)
+- [ ] "View in Stripe" link per invoice opens Stripe Customer Portal
 
-- [ ] Bulk download multiple invoices as ZIP file
+- [ ] "Download from Stripe" button redirects to Stripe Customer Portal
 
-- [ ] Branded email template for invoice delivery (PenguinMails branding)
-
-- [ ] API endpoint: `GET /api/v1/billing/invoices/{id}/pdf`
-
-- [ ] Invoice list pagination (20 per page)
+- [ ] Search invoices by date range
 
 - [ ] Filter by status: All, Paid, Pending, Failed
 
 - [ ] Sort by date, amount (ascending/descending)
 
+- [ ] API endpoint: `GET /api/v1/billing/invoices` (list only, no PDF generation)
+
+- [ ] Stripe Customer Portal link for self-service invoice management
+
 ##### Dependencies
 
-- Stripe invoice API integration
+- Stripe API integration (read-only invoice list)
 
-- PDF generation library (or Stripe-hosted PDFs)
-
-- Email template system (Loop.so)
+- Stripe Customer Portal configuration
 
 ##### Cross-References
 
 - Route: `/dashboard/settings/billing`
 
-- API: `GET /api/v1/billing/invoices`, `GET /api/v1/billing/invoices/{id}/pdf`
+- API: `GET /api/v1/billing/invoices`
 
 - Feature: [Billing Dashboard](/docs/features/payments/billing-dashboard)
 
 - Integration: [Stripe Integration](/docs/features/payments/stripe-integration)
+
+> [!NOTE]
+> Invoice PDFs, bulk downloads, and custom branding are handled by Stripe Customer Portal. PenguinMails displays the list and provides easy access links.
 
 ---
 
@@ -562,54 +563,61 @@ Implement multi-currency support with automatic conversion, local payment method
 
 ---
 
-#### 12. [Post-MVP - Q3 2026] Revenue Recognition and Advanced Financial Reporting
+#### 12. [Out of Scope] Revenue Recognition and Advanced Financial Reporting
 
 **Epic:** Financial Operations
-**Priority:** P2 (Medium)
-**Effort:** Large (3-4 weeks)
-**Timeline:** Q3 2026
+**Priority:** P3 (Not Planned)
+**Effort:** N/A
+**Timeline:** Not Planned
 
 ##### Description
 
-Implement automated revenue recognition, deferred revenue tracking, and advanced financial reports for accounting teams. Automated financial reporting reduces manual accounting work and ensures compliance with revenue recognition standards.
+**NOT IMPLEMENTED**: Advanced financial reporting, MRR calculations, revenue recognition, and cohort analysis are handled by Stripe Dashboard and third-party analytics tools.
 
-##### Acceptance Criteria
+##### Recommended Approach
 
-- [ ] Automated revenue recognition (ASC 606 / IFRS 15 compliance)
+Use existing tools instead of building custom financial analytics:
 
-- [ ] Deferred revenue calculation and tracking
+**For Revenue Analytics:**
 
-- [ ] Revenue waterfall reports: new, expansion, contraction, churn
+- **Stripe Dashboard**: Built-in MRR tracking, revenue trends, and basic analytics
+- **Stripe Sigma**: Custom SQL queries on Stripe data for ad-hoc reporting
+- **Baremetrics**: SaaS metrics dashboard (MRR, ARR, churn, LTV, cohort analysis)
+- **ChartMogul**: Subscription analytics and revenue recognition
+- **ProfitWell**: Free MRR tracking and subscription metrics
 
-- [ ] Cohort retention analysis (monthly, quarterly)
+**For Accounting Integration:**
 
-- [ ] LTV (Lifetime Value) calculation per customer segment
+- **QuickBooks Online**: Stripe → QuickBooks sync via Stripe integration
+- **Xero**: Stripe → Xero sync via Stripe integration
+- **NetSuite**: Stripe → NetSuite connector
 
-- [ ] Churn prediction model with risk scores
+**For Revenue Recognition:**
 
-- [ ] ARR (Annual Recurring Revenue) and MRR dashboards
+- **Stripe Revenue Recognition**: ASC 606 / IFRS 15 compliant revenue recognition
+- **Maxio (Chargify)**: Advanced revenue recognition and deferred revenue
+- **Zuora**: Enterprise billing and revenue recognition platform
 
-- [ ] Export to accounting systems: QuickBooks, Xero, NetSuite
+##### Why Not Build This
 
-- [ ] Custom date range reports with CSV/PDF export
+Building comprehensive financial analytics requires:
 
-- [ ] Board-ready financial summaries (one-page overview)
+- Complex revenue recognition rules (ASC 606 / IFRS 15)
+- Deferred revenue calculations
+- Multi-currency handling
+- Tax compliance
+- Accounting system integrations
+- Ongoing maintenance for changing regulations
 
-##### Dependencies
+**Better approach**: Export Stripe data to specialized tools that already handle these complexities.
 
-- Accounting system integration APIs
+##### Data Export Path
 
-- Revenue recognition rules engine
+For custom analysis:
 
-- Historical data for cohort analysis (12+ months)
-
-##### Cross-References
-
-- Route: `/dashboard/finance/reports` (new)
-
-- Integration: QuickBooks API, Xero API, NetSuite API
-
-- Business: [Financial Model](/docs/business/financial-analysis/financial-model)
+1. Export data from Stripe API or Stripe Dashboard
+2. Import to analytics tool (Excel, Tableau, Looker, etc.)
+3. Use third-party SaaS metrics tools for automated reporting
 
 ---
 

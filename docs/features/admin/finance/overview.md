@@ -1,6 +1,6 @@
 ---
-title: "Revenue Operations"
-description: "Financial reporting, MRR tracking, and Stripe sync monitoring for PenguinMails finance team"
+title: "Finance Overview"
+description: "Hub for subscription monitoring and Stripe Dashboard access for financial analytics"
 last_modified_date: "2025-12-04"
 level: "2"
 persona: "Finance Team, CFO"
@@ -8,204 +8,205 @@ status: "ACTIVE"
 category: "Admin"
 ---
 
-# Revenue Operations
+# Finance Overview
 
-**Financial dashboards, MRR tracking, and revenue reconciliation for business intelligence.**
+**Basic subscription monitoring with links to Stripe Dashboard for detailed financial analytics.**
 
 ---
 
 ## Overview
 
-The Revenue Operations feature provides PenguinMails finance team with real-time visibility into recurring revenue, Stripe sync status, and financial reporting. It serves as the primary dashboard for monthly financial close, revenue forecasting, and payment reconciliation.
+The Finance features provide PenguinMails finance team with basic subscription monitoring and convenient access to **Stripe Dashboard** for detailed revenue analytics, MRR tracking, and invoice management.
 
-### Key Capabilities
+> [!IMPORTANT]
+> **Stripe-First Approach**: PenguinMails stores only minimal payment references for access control. All detailed financial analytics, MRR calculations, invoice management, and revenue reporting are accessed via Stripe Dashboard.
 
-- **MRR Dashboard**: Real-time Monthly Recurring Revenue tracking
-- **Stripe Sync Monitoring**: Webhook sync status and payment reconciliation
-- **Revenue Reporting**: Historical trends and growth metrics
-- **Financial Exports**: CSV and PDF reports for accounting systems
-- **Payment Monitoring**: Failed payment tracking and recovery
+### Key Philosophy
 
----
-
-## User Stories
-
-### Finance Admin
-
-> *"As a finance admin, I need to view our current MRR and growth trend for the monthly board report due tomorrow."*
->
-> **Workflow**:
->
-> 1. Navigate to `/dashboard/finance`
-> 2. View MRR headline metrics
-> 3. Review 12-month MRR trend chart
-> 4. Export MRR report as CSV
-> 5. Import into board presentation
-
-### Accounting Team
-
-> *"As an accountant, I need to reconcile today's payments with Stripe to close the books for the month."*
->
-> **Workflow**:
->
-> 1. Navigate to finance dashboard
-> 2. Check Stripe sync status
-> 3. Review "Last Sync" timestamp
-> 4. Identify any failed payments
-> 5. Export invoice summary as PDF
-> 6. Reconcile with Stripe dashboard
+- **Simple Counts**: PenguinMails provides basic subscription counts from OLTP database
+- **Stripe for Analytics**: MRR, ARR, churn, and revenue analytics handled by Stripe
+- **Quick Links**: Direct navigation to relevant Stripe Dashboard sections
+- **No Duplication**: Avoid maintaining redundant financial data
 
 ---
 
-## Feature Components
+## Finance Features
 
-### MRR Dashboard
+### [Subscription Monitoring](./subscription-monitoring.md)
 
-See [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards) for visual design.
+View active subscription counts and plan distribution for basic financial oversight.
 
-**Headline Metrics**:
+**Key Topics**:
 
-- **Current MRR**: Total monthly recurring revenue
-- **MRR Growth**: Month-over-month percentage change
-- **Active Subscriptions**: Count of paying customers
-- **Churn Rate**: Percentage of lost subscriptions
+- Active subscription counts (real-time from OLTP)
+- Plan distribution breakdown (Starter, Pro, Enterprise)
+- Simple queries for fast dashboard load
+- Links to Stripe for MRR and revenue analytics
 
-**MRR Trend Chart**:
+**Use Cases**:
 
-- Line chart showing 12-month MRR history
-- Drill-down by plan tier (Free, Pro, Enterprise)
-- Exportable data for analysis
+- Quick subscription count checks
+- Plan distribution analysis
+- Board reporting (total customer count)
 
-### Stripe Sync Status
+---
 
-**Health Indicators**:
+### [Stripe Webhook Status](./stripe-webhook-status.md)
 
-- **Last Sync**: Timestamp of most recent webhook sync
-- **Sync Status**: All invoices synced / Sync issues detected
-- **Failed Payments**: Count and links to details
-- **Manual Actions**: "Force Sync Now" button for troubleshooting
+Monitor webhook health to ensure subscription and payment data stays in sync with Stripe.
 
-**Sync Details**:
+**Key Topics**:
 
-- Webhook event history
-- Invoice processing status
-- Payment status reconciliation
-- Error logs and resolution
+- Webhook health indicators (Healthy, Delayed, Error)
+- Last webhook timestamp and event type
+- Failed payment count monitoring
+- Webhook troubleshooting
 
-### Financial Reports
+**Use Cases**:
 
-**Export Options**:
+- Verify sync health before reconciliation
+- Monitor failed payments
+- Investigate subscription sync issues
 
-- **MRR Report (CSV)**: Monthly breakdown by plan and tenant
-- **Invoice Summary (PDF)**: Detailed invoice listing
-- **Revenue Trend (CSV)**: Historical MRR data for forecasting
-- **Failed Payments (CSV)**: Outstanding payment issues
+---
 
-**Filters**:
+### [Stripe Dashboard Access](./stripe-dashboard-access.md)
 
-- Date range selection
-- Plan type (Free, Pro, Enterprise)
-- Subscription status (Active, Churned, Trial)
+Quick links to Stripe Dashboard for MRR analytics, invoice management, and revenue reporting.
+
+**Key Topics**:
+
+- Direct links to MRR analytics, invoices, customers
+- What's available in Stripe Dashboard
+- Export workflows (CSV, PDF)
+- Third-party integrations (QuickBooks, Baremetrics)
+
+**Use Cases**:
+
+- Access MRR trends for board reporting
+- Download invoices for accounting
+- Export revenue data for financial forecasting
+
+---
+
+## Quick Reference
+
+### Common Finance Tasks
+
+| Task | Feature | Action |
+|------|---------|--------|
+| Check subscription count | [Subscription Monitoring](./subscription-monitoring.md) | View finance dashboard |
+| Access MRR analytics | [Stripe Dashboard Access](./stripe-dashboard-access.md) | Click "View MRR in Stripe" |
+| Download invoices | [Stripe Dashboard Access](./stripe-dashboard-access.md) | Click "Download Invoices" |
+| Check webhook health | [Stripe Webhook Status](./stripe-webhook-status.md) | View webhook status panel |
+| Review failed payments | [Stripe Webhook Status](./stripe-webhook-status.md) | Click "View Failed Payments" |
+
+### What's in PenguinMails vs. Stripe
+
+| Data Type | PenguinMails | Stripe Dashboard |
+|-----------|--------------|------------------|
+| **Subscription Count** | ✅ Real-time count | ✅ Full customer list |
+| **Plan Distribution** | ✅ Basic breakdown | ✅ Detailed cohort analysis |
+| **MRR / ARR** | ❌ Use Stripe | ✅ Real-time dashboards |
+| **Churn Rate** | ❌ Use Stripe | ✅ Retention analytics |
+| **Invoices** | ❌ Use Stripe | ✅ Full invoice management |
+| **Payment Details** | ❌ Use Stripe | ✅ Transaction history |
+| **Revenue Forecasting** | ❌ Use Stripe | ✅ Projections and trends |
 
 ---
 
 ## Integration Architecture
 
-### Stripe Integration
+### Stripe Connection
 
-- **Webhooks**: Real-time payment event processing
-  - `invoice.paid` - Successful payment
-  - `invoice.payment_failed` - Failed payment
-  - `customer.subscription.created` - New subscription
-  - `customer.subscription.deleted` - Cancellation
-- **Sync Logic**: Idempotent webhook processing with retry
-- **Reconciliation**: Daily batch job to verify consistency
-
-### MRR Calculation
-
-**Formula**: Sum of all active subscriptions' monthly value
-
-**Data Sources**:
-
-- `subscriptions` table (OLTP)
-- Aggregated daily in OLAP for historical trends
-- Cached for 1 hour on dashboard
-
-**Normalization**:
-
-- Annual plans divided by 12 for monthly value
-- Pro-rated for mid-month starts/cancellations
+- **Webhooks**: Real-time subscription status updates via Stripe webhooks
+  - `invoice.paid` → Update subscription to `active`
+  - `invoice.payment_failed` → Flag subscription as `past_due`
+  - `customer.subscription.created` → Create local subscription reference
+  - `customer.subscription.deleted` → Mark subscription as `canceled`
+- **Sync Logic**: Idempotent webhook processing with automatic retry
+- **Status Flow**: Stripe is source of truth for all payment and subscription state
 
 ### Database Schema
 
-- **Subscriptions Table**: Current subscription state
-- **Invoices Table**: Historical payment records
-- **Webhook Events Table**: Stripe webhook audit trail
-- **MRR Snapshots Table** (OLAP): Daily MRR aggregates
+**OLTP Tables**:
+
+- `subscriptions`: Current subscription state (minimal references)
+- `plans`: Plan definitions and feature limits
+- `payments`: Payment references with `stripe_payment_intent_id`
+
+**What's NOT Stored**:
+
+- Invoice PDFs or line items (use Stripe)
+- Full payment transaction details (use Stripe)
+- MRR calculations or aggregates (use Stripe Dashboard)
+- Revenue forecasting data (use Stripe Dashboard)
+
+See [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) for details.
 
 ---
 
-## Technical Considerations
+## Best Practices
 
-### Performance
+### When to Use Finance Dashboard
 
-- **Dashboard Load**: <500ms with cached metrics
-- **MRR Calculation**: Pre-aggregated daily, not real-time
-- **Export Generation**: Async job for large datasets
+- Quick subscription count ("How many active customers?")
+- Basic plan distribution ("What's our plan mix?")
+- Webhook health check (before reconciliation)
+- Access point to Stripe Dashboard
+
+### When to Use Stripe Dashboard
+
+- MRR and ARR analytics
+- Revenue growth trends
+- Churn rate analysis
+- Invoice downloads
+- Payment transaction details
+- Financial forecasting
+- Accounting reconciliation
 
 ### Data Accuracy
 
-- **Stripe as Source of Truth**: All billing data originates from Stripe
-- **Reconciliation**: Daily automated checks for discrepancies
-- **Manual Sync**: Force sync for immediate reconciliation
-
-### Security
-
-- **Access Control**: Finance role required
-- **Sensitive Data**: Payment details not exposed in exports
-- **Audit Logging**: All financial data access logged
+- **Subscription Counts**: Real-time from OLTP database (<5 min cache)
+- **Stripe as Source of Truth**: All payment and revenue data authoritative in Stripe
+- **Webhook Sync**: Status updates within seconds of Stripe events
+- **Reconciliation**: If discrepancies exist, trust Stripe data
 
 ---
 
 ## Related Documentation
 
-### Route Specifications
+### Technical Implementation
 
-- [Platform Admin Routes - Finance](/docs/design/routes/platform-admin#dashboard-finance) - UI specification
+- **[Stripe Integration](/docs/features/payments/stripe-integration)**: Webhook processing and API integration
+- **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure
+- **[Finance API](/docs/implementation-technical/api/platform-api/finance)**: API endpoints for finance dashboard
 
-### API Documentation
+### Admin Features
 
-- [Finance API](/docs/implementation-technical/api/platform-api/finance) - MRR and revenue endpoints
-- [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) - Subscription data
+- **[Plan Management](/docs/features/admin/plan-management/overview.md)**: Create and manage subscription plans
+- **[Platform Admin Routes](/docs/design/routes/platform-admin#dashboard-finance)**: Finance dashboard UI specification
 
-### Related Features
+### Roadmap
 
-- [Stripe Integration](/docs/features/payments/stripe-integration) - Payment processing
-- [Subscription Management](/docs/features/payments/subscription-management) - Customer billing
-
-### Database Schema
-
-- [OLTP Database Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide) - Subscriptions and invoices
-- [OLAP Database Schema](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide) - MRR aggregates
+- **[Finance Roadmap](/docs/roadmap/feature-roadmaps/finance-roadmap.md)**: Planned enhancements and integrations
 
 ---
 
 ## Future Enhancements
 
-### Q1 2026
+All advanced financial analytics features will be handled by Stripe Dashboard and third-party integrations:
 
-- **Revenue Forecasting**: Predict MRR growth based on trends
-- **Cohort Analysis**: Revenue retention by signup cohort
-- **LTV Calculation**: Customer lifetime value metrics
+### Integration Options
 
-### Q2 2026
+- **Stripe Sigma**: SQL-based custom revenue reports
+- **QuickBooks/Xero**: Export Stripe data for accounting
+- **Baremetrics/ChartMogul**: Advanced SaaS metrics and MRR analytics
+- **Data Warehouses**: BigQuery, Snowflake integration for custom dashboards
 
-- **CFO Dashboard**: Executive-level financial KPIs
-- **Automated Reconciliation**: Alert on Stripe discrepancies
-- **Custom Reporting**: Ad-hoc financial queries
+### Potential Internal Features
 
-### Q3 2026
-
-- **Multi-Currency Support**: International revenue tracking
-- **Tax Reporting**: Sales tax and VAT breakdowns
-- **Financial Forecasting**: ML-based revenue predictions
+- **Enhanced Stripe Links**: Pre-filtered Stripe Dashboard URLs per tenant
+- **Webhook History**: Detailed webhook event log viewer in PenguinMails
+- **Subscription Alerts**: Automated notifications for subscription changes
+- **Embedded Charts**: Limited Stripe charts embedded via API (investigate feasibility)

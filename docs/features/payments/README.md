@@ -32,7 +32,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - âœ… Subscription cancellation with 90-day grace period
 
-- âœ… MRR tracking and financial reporting
+- ✅ Basic subscription status monitoring
 
 **Assessment:** Core billing infrastructure is functional, but critical user-facing features are missing. 7 MVP gaps block production readiness.
 

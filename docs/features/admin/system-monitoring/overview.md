@@ -166,6 +166,11 @@ See [Queue System Implementation](/docs/implementation-technical/architecture/de
 - **Predictive Alerting**: ML-based anomaly detection
 - **Custom Dashboards**: Per-team monitoring views
 
+### Monitoring & Compliance Spike
+
+- **Websocket Investigation**: Evaluate websocket architecture for real-time compliance alerts and monitoring updates.
+- **Stakeholder Requirements**: Gather detailed needs for automated compliance reporting and real-time dashboards.
+
 ### Q3 2026
 
 - **Cost Monitoring**: Infrastructure cost tracking per tenant

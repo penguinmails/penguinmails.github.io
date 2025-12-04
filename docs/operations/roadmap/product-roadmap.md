@@ -95,11 +95,11 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 | Feature Category | Description | Timeline |
 |------------------|-------------|----------|
 | **[Platform Infrastructure Monitoring](/docs/features/admin/enterprise-roadmap#1-platform-infrastructure-monitoring-dashboard)** | **P0 Critical**: Real-time SMTP health, server health, queue monitoring, infrastructure alerts, PagerDuty integration | Q1 2026 (10-15 days) |
-| **[Payment History & Financial Management](/docs/features/admin/enterprise-roadmap#2-payment-history--financial-management)** | **P0 Critical**: Transaction history, invoice management, failed payment tracking, refund management, subscription management, revenue analytics | Q1 2026 (10-15 days) |
+| **[Subscription Status Dashboard](/docs/features/admin/enterprise-roadmap#2-payment-history--financial-management)** | **P0 Critical**: Subscription monitoring, Stripe webhook status, links to Stripe Dashboard | Q1 2026 (3-4 days) |
 | **[Authentication MVP Completion](/docs/features/authentication/authentication-roadmap)** | Account lockout, session management UI, login activity log, password strength enforcement, CAPTCHA, email change flow, remember me | Q1 2026 (5-7 days) |
 | **[Two-Factor Authentication (2FA)](/docs/features/authentication/authentication-roadmap#q1-2026-two-factor-authentication)** | TOTP-based 2FA with authenticator apps, backup codes, organization-level enforcement (NOT MVP - pending customer demand) | Q1 2026 or later |
 | **[Onboarding Experience](/docs/features/admin/enterprise-roadmap#5-onboarding-experience-implementation)** | Guided setup wizard, interactive checklist, contextual tooltips, video tutorials, achievement milestones | Q1 2026 (10-15 days) |
-| **[Admin Platform Features](/docs/features/admin/enterprise-roadmap#6-admin-platform-features)** | User audit trail, support access tracking, tenant plan management, feature flags, MRR tracking, Stripe webhooks | Q1 2026 (7-10 days) |
+| **[Admin Platform Features](/docs/features/admin/enterprise-roadmap#6-admin-platform-features)** | User audit trail, support access tracking, tenant plan management, feature flags, Stripe webhook monitoring | Q1 2026 (7-10 days) |
 | **[Session Management UI](/docs/features/admin/enterprise-roadmap#7-session-management-ui)** | View/revoke active sessions, session activity timeline, suspicious activity alerts | Q1 2026 (3-5 days) |
 | **[Workspace Management Documentation](/docs/features/admin/enterprise-roadmap#4-workspace-management-documentation)** | Comprehensive documentation for agency customers managing multiple client workspaces | Q1 2026 (5-7 days) |
 | **[API Key Management](/docs/features/integrations/vault-api-keys)** | Secure API key generation, Vault storage, permission scopes, rate limiting | Q1 2026 |
@@ -701,7 +701,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 
 - ✅ Subscription cancellation with 90-day grace period
 
-- ✅ MRR tracking and financial reporting
+- ✅ Basic subscription status monitoring
 
 **Assessment:** Core billing infrastructure is functional, but critical user-facing features are missing. 7 MVP gaps block production readiness.
 

@@ -194,7 +194,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 - **[Tenant API - Analytics Endpoints](/docs/implementation-technical/api/tenant-api/analytics)** - Campaign metrics, engagement data, deliverability stats, export functionality
 
-- **[Platform API - System Analytics](/docs/implementation-technical/api/platform-api/analytics)** - MRR tracking, system health, operational metrics
+- **[Platform API - System Analytics](/docs/implementation-technical/api/platform-api/analytics)** - System health, operational metrics
 
 ### Related Features
 

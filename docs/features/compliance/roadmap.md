@@ -757,6 +757,19 @@ Q2 2027: FedRAMP, Advanced DLP
 **Dependencies:** Audit logging system, compliance data aggregation
 **Target:** Q2 2026 (April-May)
 
+#### 3.5 [P2] Compliance Monitoring Spike
+
+**Description:** Investigation into real-time compliance monitoring architecture.
+
+**Objectives:**
+
+- Evaluate websocket-based real-time alerts for compliance violations.
+- Gather stakeholder requirements for automated reporting.
+- Assess integration with existing logging infrastructure.
+
+**Effort:** Low (1 week)
+**Target:** Q2 2026
+
 ---
 
 #### 4. [P1] Automated Compliance Reporting

@@ -178,3 +178,10 @@ All admin actions are logged:
 - **Automated Risk Detection**: Flag suspicious user activity patterns
 - **Compliance Automation**: Automated GDPR request processing
 - **Support Ticket Integration**: Direct link from audit trail to support tickets
+
+### Team Collaboration Roadmap
+
+- **Advanced RBAC**: Granular permission sets beyond standard roles (currently handled by NileDB auth).
+- **Team Workspaces**: Isolated environments for different departments or teams.
+- **Approval Workflows**: Multi-step approval chains for sensitive actions (e.g., campaign sending).
+- **Shared Assets**: Collaborative template and list management within workspaces.

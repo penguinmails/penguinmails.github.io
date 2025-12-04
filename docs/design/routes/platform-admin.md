@@ -37,7 +37,7 @@
 | `/dashboard/admin/plans/[id]` | Super Admin | Edit Plan | Update plan details, limits, or status. |
 | `/dashboard/users` | Super Admin | Global Users | Searchable list of ALL users. Actions: Ban, Reset Password, **View Audit Trail**. |
 | `/dashboard/tenants` | Super Admin | Global Tenants | List of organizations. Plan overrides, Feature flags management. |
-| `/dashboard/finance` | Finance | Revenue Ops | Stripe sync status, MRR dashboard. |
+| `/dashboard/finance` | Finance | Subscription Overview | Subscription status, Stripe sync health. |
 | `/dashboard/system/queues` | Ops | Queue Health Monitor | Custom UI for hybrid PostgreSQL + Redis queue system. Job retry controls. |
 | `/dashboard/system/logs` | Ops | System Logs | Log viewer (Elasticsearch/ClickHouse interface). |
 | `/admin/secrets` | Super Admin | Vault Secrets Management | Centralized secrets management for all tenants. Vault health monitoring, SSH keys, SMTP credentials, API keys, DKIM keys. Bulk rotation and audit log viewer. |
@@ -278,57 +278,62 @@
 
 ---
 
-### `/dashboard/finance` - Revenue Operations
+### `/dashboard/finance` - Subscription Overview
 
-**User Story**: *"As a finance admin, I want to monitor Stripe sync status and MRR trends, so I can reconcile revenue and forecast growth."*
+**User Story**: *"As a finance admin, I want to monitor subscription status and access Stripe Dashboard for revenue analytics."*
 
 **What You'll Find**:
 
-#### MRR Dashboard (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards))
+#### Subscription Summary (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards))
 
-- **Headline Metrics**:
-
-  - **Current MRR**: $45,230.
-
-  - **MRR Growth**: +12% MoM.
+- **Basic Metrics**:
 
   - **Active Subscriptions**: 234.
 
-  - **Churn Rate**: 3.2%.
+  - **Plan Distribution**: Free (45), Pro (150), Enterprise (39).
 
-- **MRR Trend Chart**:
+  - **Stripe Dashboard Link**: "View MRR and Revenue Analytics in Stripe" button.
 
-  - **Line Chart**: Monthly MRR for last 12 months.
+- **Quick Links**:
 
-  - **Drill-down**: Click to see breakdown by plan.
+  - **Open Stripe Dashboard**: Opens Stripe revenue section in new tab.
 
-#### Stripe Sync Status
+  - **View All Subscriptions in Stripe**: Direct link to Stripe subscriptions list.
 
-- **Last Sync**: "5 minutes ago".
+#### Stripe Webhook Status
 
-- **Sync Health**:
+- **Last Webhook**: "5 minutes ago".
 
-  - All invoices synced.
+- **Webhook Health**:
 
-  - 3 failed payments (links to details).
+  - Healthy / Delayed / Error indicator.
 
-- **"Force Sync Now" Button**: Manually triggers webhook replay.
+  - Last event type: `invoice.paid`, `subscription.updated`, etc.
 
-#### Financial Reports
+  - Failed payments count: 3 subscriptions with payment issues.
 
-- **Export Buttons**:
+- **Stripe Links**:
 
-  - "Export MRR Report (CSV)".
+  - "View Payment Details in Stripe" button.
 
-  - "Export Invoice Summary (PDF)".
+  - "View Failed Payments in Stripe" link.
 
-- **Filters**:
+#### Stripe Dashboard Access
 
-  - Date range.
+- **Quick Actions**:
 
-  - Plan type.
+  - **"Open Stripe Dashboard"**: Opens Stripe in new tab.
 
-**User Journey Context**: Monthly financial close and ad-hoc analysis.
+  - **"View MRR Reports"**: Direct link to Stripe revenue section.
+
+  - **"Download Invoices"**: Link to Stripe invoice list.
+
+  - **"Export Revenue Data"**: Link to Stripe data export tools.
+
+> [!NOTE]
+> All detailed financial analytics (MRR trends, revenue forecasting, invoice management, payment history) are handled in Stripe Dashboard.
+
+**User Journey Context**: Monthly financial overview and Stripe integration monitoring.
 
 **Related Documentation**:
 
@@ -338,9 +343,11 @@
 
 **Technical Integration**:
 
-- **Stripe Webhook Events**: `invoice.paid`, `customer.subscription.deleted`, etc.
+- **Stripe API**: Read-only access for subscription list and webhook status
 
-- **MRR Calculation**: Aggregated from subscriptions table, cached daily.
+- **Subscription Count**: Simple query from `subscriptions` table (`status = 'active'`)
+
+- **No Complex Calculations**: MRR, revenue trends, and analytics handled by Stripe
 
 ---
 
