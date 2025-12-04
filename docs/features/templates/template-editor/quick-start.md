@@ -1,0 +1,233 @@
+---
+title: "Level 1: Quick Start Guide"
+description: "Quick start guide for template editor"
+last_modified_date: "2025-12-04"
+level: "1"
+keywords: "quick start, basics, getting started"
+---
+
+## Level 1: Quick Start Guide
+
+### Your First Template
+
+#### Step 1: Create New Template
+
+```text
+
+Templates â†’ Create Template
+
+Template Name: Welcome Email
+Description: New subscriber welcome message
+
+Starting Point:
+  â—‹ Blank Template
+  â— From Library (Recommended)
+  â—‹ Import HTML
+
+[Continue â†’]
+
+```
+
+#### Step 2: Choose Base Template
+
+```text
+
+Select a Template:
+
+[Basic Email]     [Newsletter]     [Promotional]
+[Transactional]   [Event]          [Product Launch]
+
+Selected: Basic Email
+
+  - Simple header with logo
+
+  - Single column content area
+
+  - Footer with social links
+
+[Use This Template]
+
+```
+
+#### Step 3: Visual Editor
+
+```text
+
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ Template Editor: Welcome Email               [Save â–¼]  â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ Components â”‚ Preview                    â”‚ Settings     â”‚
+â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
+â”‚ Structure â”‚                            â”‚ Selected:    â”‚
+â”‚  â–¡ Row    â”‚    [LOGO]                  â”‚ Text Block   â”‚
+â”‚  â–¡ Column â”‚                            â”‚              â”‚
+â”‚           â”‚    Welcome to PenguinMails â”‚ Font: Inter  â”‚
+â”‚ Content   â”‚                            â”‚ Size: 24px   â”‚
+â”‚  ðŸ“ Text  â”‚    We're excited to have   â”‚ Color: #333  â”‚
+â”‚  ðŸ–¼ï¸ Image â”‚    you on board!           â”‚ Align: Left  â”‚
+â”‚  ðŸ”˜ Buttonâ”‚                            â”‚              â”‚
+â”‚  âž– Dividerâ”‚    [Get Started â†’]        â”‚ [Link...]   â”‚
+â”‚           â”‚                            â”‚ [Style...]   â”‚
+â”‚ Layout    â”‚    Follow us:              â”‚              â”‚
+â”‚  ðŸ“‹ Headerâ”‚    [f] [t] [in]           â”‚              â”‚
+â”‚  ðŸ¦¶ Footerâ”‚                            â”‚              â”‚
+â”‚  ðŸ“± Socialâ”‚                            â”‚              â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+
+Mode: [Visual] [HTML] [Preview]
+Device: [ðŸ“± Mobile] [ðŸ“± Tablet] [ðŸ–¥ï¸ Desktop]
+
+```
+
+#### Step 4: Drag Components
+
+```text
+
+Drag "Button" from Components â†’ Drop in Content Area
+
+Button Properties:
+  Text: Get Started
+  Link: https://app.penguinmails.com/onboarding
+  Style: Primary (Blue)
+  Alignment: Center
+  Full Width: â˜
+
+[Apply]
+
+```
+
+#### Step 5: Edit Content
+
+```text
+
+Click on Text Block:
+
+"Welcome to PenguinMails"
+
+Replace with:
+
+"Welcome, {{first_name}}!"
+
+Variables Available:
+  {{first_name}}
+  {{last_name}}
+  {{email}}
+  {{company}}
+
+[Insert Variable â–¼]
+
+```
+
+#### Step 6: Mobile Preview
+
+```text
+
+Switch to Mobile View: ðŸ“±
+
+Preview:
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ [LOGO]   â”‚
+â”‚          â”‚
+â”‚ Welcome, â”‚
+â”‚ John!    â”‚
+â”‚          â”‚
+â”‚ We're    â”‚
+â”‚ excited..â”‚
+â”‚          â”‚
+â”‚[Get Start]â”‚
+â”‚          â”‚
+â”‚Follow us:â”‚
+â”‚ f t in  â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+
+âœ“ Looks good on mobile
+
+```
+
+#### Step 7: Save Template
+
+```text
+
+[Save â–¼]
+  â— Save
+  â—‹ Save As...
+  â—‹ Save as Draft
+
+âœ“ Template saved: "Welcome Email"
+Last saved: 2 seconds ago
+
+Actions:
+  [Preview] [Test Send] [Use in Campaign]
+
+```
+
+### Common Editing Tasks
+
+#### Add a Header
+
+```text
+
+Drag "Header" component to top:
+
+Header Settings:
+  Logo: [Upload] (max 200kb)
+
+    - Recommended: 600x200px
+  Background Color: #ffffff
+  Padding: 20px
+  Alignment: Center
+
+[Apply]
+
+```
+
+#### Add Social Media Links
+
+```text
+
+Drag "Social" component:
+
+Social Media Links:
+  â˜‘ Facebook: https://facebook.com/yourpage
+  â˜‘ Twitter: https://twitter.com/yourhandle
+  â˜‘ LinkedIn: https://linkedin.com/company/yourcompany
+  â˜ Instagram
+  â˜ YouTube
+
+Icon Style:
+  â— Round Color
+  â—‹ Square Color
+  â—‹ Round B&W
+  â—‹ Square B&W
+
+[Apply]
+
+```
+
+#### Insert Image
+
+```text
+
+Drag "Image" component:
+
+Image Source:
+  â—‹ Upload Image
+  â— Image URL
+  â—‹ From Asset Library
+
+URL: https://example.com/hero.jpg
+Alt Text: Product Hero Image
+
+Size:
+  Width: 600px (max email width)
+  Height: Auto
+
+Link to:
+  URL: https://example.com/product
+
+[Insert]
+
+```
+
+---
+

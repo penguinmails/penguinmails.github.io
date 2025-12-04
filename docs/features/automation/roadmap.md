@@ -605,7 +605,7 @@ This document provides a detailed implementation roadmap for the Automation & Wo
 
 - [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/scheduling/overview) - Time-based triggers
 
 - [A/B Testing](/docs/features/campaigns/ab-testing) - Split testing in campaigns
 

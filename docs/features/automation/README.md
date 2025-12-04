@@ -214,7 +214,7 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 - [Email Sequences](/docs/features/campaigns/email-sequences) - Campaign flows to be extended with branching
 
-- [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling) - Time-based triggers
+- [Campaign Scheduling](/docs/features/campaigns/scheduling/overview) - Time-based triggers
 
 - [Template Management](/docs/features/templates/template-management) - Email templates for automation actions
 

@@ -52,7 +52,7 @@ Basic template creation and management with HTML editor.
 
 ### ðŸš§ In Development (Q2 2026)
 
-#### [Template Editor](/docs/features/templates/template-editor)
+#### [Template Editor](/docs/features/templates/template-editor/overview)
 
 WYSIWYG drag-and-drop email template editor with advanced features.
 

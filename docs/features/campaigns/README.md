@@ -60,7 +60,7 @@ Comprehensive email campaign management system with sequencing, A/B testing, and
 
 **Status**: PLANNED (Q1 2026) | **Priority**: Critical
 
-#### [Campaign Scheduling](/docs/features/campaigns/campaign-scheduling)
+#### [Campaign Scheduling](/docs/features/campaigns/scheduling/overview)
 
 Advanced scheduling with timezone handling, send-time optimization, and calendar integration.
 

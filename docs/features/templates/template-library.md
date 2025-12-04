@@ -1102,7 +1102,7 @@ app.get('/api/template-library/:id/analytics', authenticate, async (req, res) =>
 
 ## Related Documentation
 
-- **[Template Editor](/docs/features/templates/template-editor)** - Customize library templates
+- **[Template Editor](/docs/features/templates/template-editor/overview)** - Customize library templates
 
 - **[Template Variables](/docs/features/templates/template-variables)** - Personalize template content
 
