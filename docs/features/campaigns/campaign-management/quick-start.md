@@ -12,6 +12,11 @@ keywords: "quick start, campaign creation, email editor, send campaigns"
 
 ### Your First Campaign
 
+#### Prerequisites
+
+- **Import Contacts**: Upload your CSV/JSON list (see [Import Guide](/docs/features/contacts/import))
+- **Verify Sender**: Ensure your From Address is verified
+
 #### Step 1: Create a New Campaign
 
 ```text

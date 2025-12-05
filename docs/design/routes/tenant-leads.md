@@ -233,6 +233,10 @@
 
   - **"Import" Button**: Starts background job for large lists.
 
+  - **Migration Tools**:
+    - "Importing from Mailchimp/ActiveCampaign?"
+    - **"Use Migration Wizard" Link**: Redirects to specialized migration flow.
+
 - **List Actions**:
 
   - **View Leads**: See all leads in this list.

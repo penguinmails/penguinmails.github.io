@@ -1,8 +1,8 @@
-﻿# Workspace Management
+﻿# Agency Client Workspaces
 
 ## 1. Purpose & Context (The "Why")
 
-- **Goal**: Create and configure workspaces (sub-tenants/clients). Crucial for Agencies.
+- **Goal**: Create and configure client workspaces. Crucial for Agencies managing multiple clients.
 
 - **Feature References**:
 
@@ -266,7 +266,7 @@
 
 **Related Documentation**:
 
-- [Multi-tenancy UX Patterns](/docs/design/ui-library#multi-tenancy)
+- [Agency Client Workspaces UX Patterns](/docs/design/ui-library#multi-tenancy)
 
 ## 5. Related API Endpoints
 

@@ -85,7 +85,7 @@ This document serves as the central hub for all roadmap information, providing r
 
 ## Quick Feature Availability Reference
 
-### Available NOW (Q4 2025)
+### Available NOW (Q1 2026)
 
 **Safe to Promise**: These features are production-ready
 
@@ -145,7 +145,7 @@ This document serves as the central hub for all roadmap information, providing r
 
 | Level | Timeline | Investment | Team Size | Expected MRR |
 |-------|----------|------------|-----------|--------------|
-| **Level 1 (Core)** | Q4 2025 | $50K-75K | 3-4 Engineers | $0 (Beta) |
+| **Level 1 (Core)** | Q1 2026 | $50K-75K | 3-4 Engineers | $0 (Beta) |
 | **Level 2 (MVP)** | Q1 2026 | $100K-150K | 4-5 Engineers | $25K-75K |
 | **Level 3 (Growth)** | Q2-Q3 2026 | $300K-500K | 6-8 Engineers | $150K-250K |
 | **Level 4 (Enterprise)** | Q4 2026-2027 | $500K-750K | 8-12 Engineers | $400K-600K |

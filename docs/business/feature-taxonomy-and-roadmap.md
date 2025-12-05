@@ -28,11 +28,11 @@ Our feature development follows a **progressive disclosure** approach, revealing
 
 ```markdown
 
-Level 1: CORE FEATURES (MVP Foundation)        → 2025 Q4
-Level 2: MVP FEATURES (Basic UX Requirements)  → 2025 Q4 - 2026 Q1
-Level 3: GROWTH FEATURES (Market Expansion)    → 2026 Q1 - Q3
-Level 4: ENTERPRISE FEATURES (Scale Features)  → 2026 Q4 - 2027
-Level 5: FUTURE FEATURES (Innovation Pipeline) → 2027+
+Level 1: CORE FEATURES (MVP Foundation)        → 2026 Q1
+Level 2: MVP FEATURES (Basic UX Requirements)  → 2026 Q2
+Level 3: GROWTH FEATURES (Market Expansion)    → 2026 Q3 - Q4
+Level 4: ENTERPRISE FEATURES (Scale Features)  → 2027 - 2028
+Level 5: FUTURE FEATURES (Innovation Pipeline) → 2028+
 
 
 ```
@@ -47,7 +47,7 @@ Essential infrastructure and basic functionality required for email infrastructu
 
 ### Scope Definition
 
-**Timeline**: 2025 Q4 (Months 1-2)
+**Timeline**: 2026 Q1 (Months 1-2)
 **Team Size**: 3-4 engineers
 **Investment**: $50K-75K development cost
 
@@ -57,7 +57,9 @@ Essential infrastructure and basic functionality required for email infrastructu
 
 - [ ] **Email Infrastructure Setup**: VPS provisioning, MailU SMTP setup, DNS automation
 
-- [ ] **Multi-Tenant User Management**: User registration, tenant creation, role-based access
+- [ ] **Agency Client Workspaces**: Client isolation, workspace management, role-based access
+- [ ] **Basic Automated Warmup**: Automated volume progression and reputation building (Shared IP)
+- [ ] **Smart Subdomain Setup**: Automated separation of marketing, transactional, and cold email subdomains
 
 - [ ] **Basic Security**: SSL certificates, SPF/DKIM authentication
 
@@ -107,7 +109,7 @@ Complete the minimum viable product experience with essential user workflows.
 
 ### Scope Definition
 
-**Timeline**: 2025 Q4 - 2026 Q1 (Months 3-6)
+**Timeline**: 2026 Q2 (Months 3-6)
 **Team Size**: 4-5 engineers
 **Investment**: $100K-150K development cost
 
@@ -120,6 +122,7 @@ Complete the minimum viable product experience with essential user workflows.
 - [ ] **Improved Dashboard**: Enhanced analytics with manual optimization recommendations
 
 - [ ] **User Onboarding**: Guided setup process and feature discovery
+- [ ] **Migration Tools**: CSV/JSON contact import and basic campaign state import
 
 #### Analytics Enhancement
 
@@ -165,7 +168,7 @@ Scale the platform for larger customer base and market expansion.
 
 ### Scope Definition
 
-**Timeline**: 2026 Q1 - Q3 (Months 7-18)
+**Timeline**: 2026 Q3 - Q4 (Months 7-18)
 **Team Size**: 6-8 engineers
 **Investment**: $300K-500K development cost
 
@@ -227,7 +230,7 @@ Enterprise-grade capabilities for large organizations and compliance requirement
 
 ### Scope Definition
 
-**Timeline**: 2026 Q4 - 2027 (Months 19-24)
+**Timeline**: 2027 - 2028 (Months 19-24)
 **Team Size**: 8-12 engineers
 **Investment**: $500K-750K development cost
 
@@ -247,13 +250,13 @@ Enterprise-grade capabilities for large organizations and compliance requirement
 
 #### Advanced Capabilities (2027+ Roadmap)
 
-- [ ] **Future Roadmap Consideration**: Advanced AI & ML capabilities planned for 2027+
+- [ ] **Future Roadmap Consideration**: Advanced AI & ML capabilities planned for 2028+
 
-- [ ] **Future Roadmap Consideration**: Native mobile applications planned for 2027+
+- [ ] **Future Roadmap Consideration**: Native mobile applications planned for 2028+
 
-- [ ] **Future Roadmap Consideration**: Mobile-first experience planned for 2027+
+- [ ] **Future Roadmap Consideration**: Mobile-first experience planned for 2028+
 
-- [ ] **Future Roadmap Consideration**: ML-driven optimization planned for 2027+
+- [ ] **Future Roadmap Consideration**: ML-driven optimization planned for 2028+
 
 ### Success Criteria
 
@@ -285,7 +288,7 @@ Next-generation capabilities and market leadership through innovation.
 
 ### Scope Definition
 
-**Timeline**: 2027+ (Month 25+)
+**Timeline**: 2028+ (Month 25+)
 **Team Size**: 10+ engineers + data science team
 **Investment**: $1M+ annual development investment
 

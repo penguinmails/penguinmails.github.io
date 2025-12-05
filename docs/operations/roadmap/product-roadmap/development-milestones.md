@@ -25,7 +25,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 | Level | Timeline | Investment | Team Size | Expected MRR |
 |-------|----------|------------|-----------|--------------|
-| **Level 1 (Core)** | Q4 2025 | $50K-75K | 3-4 Engineers | $0 (Beta) |
+| **Level 1 (Core)** | Q1 2026 | $50K-75K | 3-4 Engineers | $0 (Beta) |
 | **Level 2 (MVP)** | Q1 2026 | $100K-150K | 4-5 Engineers | $25K-75K |
 | **Level 3 (Growth)** | Q2-Q3 2026 | $300K-500K | 6-8 Engineers | $150K-250K |
 | **Level 4 (Enterprise)** | Q4 2026-2027 | $500K-750K | 8-12 Engineers | $400K-600K |
@@ -147,13 +147,13 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Core Features (Roadmap Items)
 
-- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking and insights (Q4 2025 - Q1 2026)
+- **[Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking and insights (Q1 2026 - Q2 2026)
 
 - **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Email reputation management (Q1 2026)
 
 - **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Centralized message management (Q1-Q2 2026)
 
-- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Automated mailbox provisioning (Q4 2025)
+- **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Automated mailbox provisioning (Q1 2026)
 
 - **[Inbox Rotation](/docs/features/inbox/inbox-rotation/overview)** - Load balancing and deliverability (Q2-Q3 2026)
 

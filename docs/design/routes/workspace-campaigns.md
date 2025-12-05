@@ -39,6 +39,7 @@
 | `/dashboard/workspaces/[slug]/campaigns/[id]` | Tenant | Campaign Dashboard | **Server Component**. Aggregated analytics view. Shows "Headline Metrics" cards top, "Engagement Trend" chart middle, "Lead Activity" table bottom. |
 | `/dashboard/workspaces/[slug]/campaigns/[id]/edit` | Tenant | Edit Campaign | **Client Component**. Tabbed interface: Sequence, Audience, Settings. Auto-saving form state. |
 | `/dashboard/workspaces/[slug]/campaigns/[id]/settings` | Tenant | Configuration | Form for Sending Window, Daily Limits, Tracking Options. |
+| `/dashboard/workspaces/[slug]/campaigns/import` | Tenant | Import Campaign | **Client Component**. File upload (JSON/CSV) or API connector (Mailchimp/Instantly) to migrate campaigns. |
 
 ## 4. Detailed View Descriptions
 
@@ -253,6 +254,38 @@
 **Technical Integration**:
 
 * **Background Jobs**: Changes trigger recalculation of sending schedule (background queue job).
+
+---
+
+### `/dashboard/workspaces/[slug]/campaigns/import` - Campaign Import (Migration)
+
+**User Story**: *"As a user migrating from another platform, I want to import my existing campaigns and contacts so I don't have to rebuild everything from scratch."*
+
+**What You'll Find**:
+
+* **Import Source Selection**:
+  * **File Upload**: JSON or CSV export from other tools.
+  * **Direct Integration** (Post-MVP): "Connect Mailchimp", "Connect Instantly".
+
+* **Mapping Wizard**:
+  * **Campaign Name**: Auto-filled from file.
+  * **Sequence Mapping**: Map email steps and delays.
+  * **Contact Mapping**: Map contact fields.
+
+* **Review & Import**:
+  * Summary of campaigns to be created.
+  * **"Start Import" Button**.
+
+**User Journey Context**: Critical for new user activation (Migration).
+
+**Related Documentation**:
+
+* [Migration Guide](/docs/operations/migration/overview)
+
+**Technical Integration**:
+
+* **Parsers**: Client-side parsing of common export formats.
+* **Bulk Create**: Transactional creation of Campaign + Sequence + Contacts.
 
 ## 5. Related API Endpoints
 

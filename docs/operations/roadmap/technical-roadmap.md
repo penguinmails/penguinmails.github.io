@@ -27,7 +27,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 #### Level 1-2: Focus on Core Value
 
-**Timeline**: Q4 2025 - Q1 2026
+**Timeline**: Q1 2026 - Q2 2026
 **Philosophy**: "Get the fundamentals right first"
 
 - **Email Infrastructure**: Reliable, automated setup and management
@@ -55,7 +55,7 @@ Level 1: Core Infrastructure → Level 2: MVP Features → Level 3: Growth → L
 
 ### Why These Timelines?
 
-#### MVP Timeline (Q4 2025 - Q1 2026)
+#### MVP Timeline (Q1 2026 - Q2 2026)
 
 - **Small Team**: 3-5 engineers building from scratch
 

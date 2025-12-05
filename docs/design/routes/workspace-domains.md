@@ -115,6 +115,9 @@
   - Validates format (no http://, no subdomains).
 
   - **Next Button**.
+  - **Smart Subdomain Suggestion**:
+    - "We recommend using a subdomain for cold email (e.g., `mail.example.com`)."
+    - **"Use Suggestion" Button**: Auto-fills input with `m.` or `mail.` prefix.
 
 - **Step 2: DNS Records**
 
@@ -400,7 +403,7 @@
 
 ### `/dashboard/workspaces/[slug]/domains/[id]/emails/[emailId]/warmup` - Warmup Management
 
-**User Story**: *"As a user warming up an email account, I want to track progress and adjust settings, so I can optimize deliverability."*
+**User Story**: *"As a user, I want to rely on automated warmup to build reputation without manual intervention, while retaining the ability to pause or adjust if needed."*
 
 **What You'll Find**:
 

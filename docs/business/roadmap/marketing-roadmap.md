@@ -21,7 +21,7 @@ This document provides marketing and sales teams with a clear understanding of w
 
 ## Sales-Ready Features: What You Can Promise TODAY
 
-### Available Now (Q4 2025) - GA READY
+### Available Now (Q1 2026) - GA READY
 
 **Safe to Promise**: These features are production-ready and can be confidently sold
 
@@ -477,7 +477,7 @@ This document provides marketing and sales teams with a clear understanding of w
 
 ## Pricing & Packaging Strategy
 
-### Current Pricing (Q4 2025)
+### Current Pricing (Q1 2026)
 
 **Infrastructure Focus**:
 
