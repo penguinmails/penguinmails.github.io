@@ -90,8 +90,8 @@ Buttons:
 [Save Preset]
 
 Apply to:
-  â˜‘ All new templates from library
-  â˜‘ Existing templates (bulk update)
+  ☑ All new templates from library
+  ☑ Existing templates (bulk update)
 
 ```
 
@@ -107,9 +107,9 @@ Current Header:
   [Logo Centered]
 
 Available Alternatives:
-  â—‹ Logo Left, Menu Right
-  â—‹ Full-Width Image Header
-  â—‹ Minimal Text Header
+  ○ Logo Left, Menu Right
+  ○ Full-Width Image Header
+  ○ Minimal Text Header
 
 [Swap Component]
 
@@ -117,9 +117,9 @@ Current Footer:
   [Social + Unsubscribe]
 
 Available Alternatives:
-  â—‹ Full Contact Info
-  â—‹ Minimal Unsubscribe Only
-  â—‹ Multi-Column Footer
+  ○ Full Contact Info
+  ○ Minimal Unsubscribe Only
+  ○ Multi-Column Footer
 
 [Swap Component]
 
@@ -136,17 +136,17 @@ Template: New User Welcome
 Sharing Settings:
 
 Share with:
-  â— All workspaces in this tenant
-  â—‹ Specific workspaces
-    â˜‘ Marketing Team
-    â˜‘ Sales Team
-    â˜ Support Team
-  â—‹ Make public (Template Library)
+  ● All workspaces in this tenant
+  ○ Specific workspaces
+    ☑ Marketing Team
+    ☑ Sales Team
+    ☐ Support Team
+  ○ Make public (Template Library)
 
 Permissions:
-  â˜‘ Can view
-  â˜‘ Can use (create copy)
-  â˜ Can edit (modify original)
+  ☑ Can view
+  ☑ Can use (create copy)
+  ☐ Can edit (modify original)
 
 [Share Template]
 
@@ -172,8 +172,8 @@ Preview Images:
   [Upload Tablet Preview] (optional)
 
 License:
-  â— Free for all users
-  â—‹ Premium (paid templates)
+  ● Free for all users
+  ○ Premium (paid templates)
 
 [Submit for Review]
 
@@ -358,21 +358,21 @@ Version History:
 v3.0 (Current) - Nov 2025
   âœ¨ New: Mobile-first redesign
   âœ¨ New: Dark mode support
-  ðŸ”§ Improved: Button accessibility
+  🔧 Improved: Button accessibility
 
 v2.1 - Aug 2025
-  ðŸ”§ Fixed: Outlook rendering issues
-  ðŸ”§ Improved: Load time optimization
+  🔧 Fixed: Outlook rendering issues
+  🔧 Improved: Load time optimization
 
 v2.0 - May 2025
   âœ¨ New: Social media component
   âœ¨ New: Video embed support
 
 v1.0 - Jan 2025
-  ðŸŽ‰ Initial release
+  🎉 Initial release
 
 Auto-Update:
-  â˜‘ Notify me of template updates
-  â˜ Auto-update my templates (not recommended)
+  ☑ Notify me of template updates
+  ☐ Auto-update my templates (not recommended)
 
 [Update to v3.0]

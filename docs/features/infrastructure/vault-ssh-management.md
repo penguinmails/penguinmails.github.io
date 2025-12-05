@@ -232,7 +232,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Tenant: Download SSH Key
 
-1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
+1. Navigate to Settings → Infrastructure → SSH Access
 
 2. View SSH credentials (VPS IP, username, port)
 
@@ -248,7 +248,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Tenant: Rotate SSH Key Manually
 
-1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
+1. Navigate to Settings → Infrastructure → SSH Access
 
 2. Click "Rotate SSH Key" button
 
@@ -266,7 +266,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Tenant: Revoke and Regenerate SSH Key
 
-1. Navigate to Settings â†’ Infrastructure â†’ SSH Access
+1. Navigate to Settings → Infrastructure → SSH Access
 
 2. Click "Revoke SSH Access" button
 
@@ -284,7 +284,7 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 
 ### Admin: Monitor SSH Key Health
 
-1. Navigate to Admin Panel â†’ Secrets Management
+1. Navigate to Admin Panel → Secrets Management
 
 2. View Vault health dashboard
 
@@ -305,18 +305,18 @@ ssh -i ~/Downloads/tenant-ssh-key.pem tenant-550e8400@192.168.1.100
 ```text
 
 vault/vps/{tenant_id}/
-â”œâ”€â”€ admin_ssh/
-â”‚   â”œâ”€â”€ private_key       # RSA 4096-bit private key
-â”‚   â”œâ”€â”€ public_key        # RSA 4096-bit public key
-â”‚   â”œâ”€â”€ created_at        # ISO 8601 timestamp
-â”‚   â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
-â”‚   â””â”€â”€ rotation_policy   # "90_days"
-â””â”€â”€ tenant_ssh/
-    â”œâ”€â”€ private_key       # RSA 4096-bit private key
-    â”œâ”€â”€ public_key        # RSA 4096-bit public key
-    â”œâ”€â”€ created_at        # ISO 8601 timestamp
-    â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
-    â””â”€â”€ rotation_policy   # "90_days"
+├── admin_ssh/
+│   ├── private_key       # RSA 4096-bit private key
+│   ├── public_key        # RSA 4096-bit public key
+│   ├── created_at        # ISO 8601 timestamp
+│   ├── last_rotated      # ISO 8601 timestamp
+│   └── rotation_policy   # "90_days"
+└── tenant_ssh/
+    ├── private_key       # RSA 4096-bit private key
+    ├── public_key        # RSA 4096-bit public key
+    ├── created_at        # ISO 8601 timestamp
+    ├── last_rotated      # ISO 8601 timestamp
+    └── rotation_policy   # "90_days"
 
 ```
 

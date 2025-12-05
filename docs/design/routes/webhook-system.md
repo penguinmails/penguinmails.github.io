@@ -136,7 +136,7 @@ Each card displays:
 
 **Info Banner**:
 
-"Looking for ESP webhooks (Postmark, Mailgun)? [Configure ESP webhooks â†’](/dashboard/settings/integrations/esp/webhooks)"
+"Looking for ESP webhooks (Postmark, Mailgun)? [Configure ESP webhooks →](/dashboard/settings/integrations/esp/webhooks)"
 
 **User Journey Context**: Regular monitoring (daily/weekly) to ensure webhook health.
 
@@ -180,9 +180,9 @@ Each card displays:
 
 - **Radio Buttons**:
 
-  - â—‹ Active (Start receiving events immediately)
+  - ○ Active (Start receiving events immediately)
 
-  - â—‹ Paused (Create but don't send events yet)
+  - ○ Paused (Create but don't send events yet)
 
 #### Step 2: Event Selection
 
@@ -190,35 +190,35 @@ Each card displays:
 
 **Email Events**:
 
-- â˜‘ **email.sent** - Email queued for sending
+- ☑ **email.sent** - Email queued for sending
 
-- â˜‘ **email.delivered** - Email successfully delivered
+- ☑ **email.delivered** - Email successfully delivered
 
-- â˜‘ **email.opened** - Recipient opened email
+- ☑ **email.opened** - Recipient opened email
 
-- â˜‘ **email.clicked** - Recipient clicked link
+- ☑ **email.clicked** - Recipient clicked link
 
-- â˜‘ **email.bounced** - Email bounced (hard or soft)
+- ☑ **email.bounced** - Email bounced (hard or soft)
 
-- â˜ **email.spam_reported** - Marked as spam
+- ☐ **email.spam_reported** - Marked as spam
 
-- â˜ **email.unsubscribed** - Recipient unsubscribed
+- ☐ **email.unsubscribed** - Recipient unsubscribed
 
 **Campaign Events**:
 
-- â˜ **campaign.launched** - Campaign started sending
+- ☐ **campaign.launched** - Campaign started sending
 
-- â˜ **campaign.completed** - Campaign finished
+- ☐ **campaign.completed** - Campaign finished
 
-- â˜ **campaign.paused** - Campaign paused by user
+- ☐ **campaign.paused** - Campaign paused by user
 
 **Contact Events**:
 
-- â˜ **contact.created** - New contact added
+- ☐ **contact.created** - New contact added
 
-- â˜ **contact.updated** - Contact information updated
+- ☐ **contact.updated** - Contact information updated
 
-- â˜ **contact.unsubscribed** - Contact unsubscribed from all
+- ☐ **contact.unsubscribed** - Contact unsubscribed from all
 
 **Quick Select Buttons**:
 
@@ -230,7 +230,7 @@ Each card displays:
 
 **Event Preview**:
 
-"You've selected 5 events. [View sample payloads â†’](/docs/design/routes/#event-samples)"
+"You've selected 5 events. [View sample payloads →](/docs/design/routes/#event-samples)"
 
 #### Step 3: Event Filters (Optional)
 
@@ -350,11 +350,11 @@ Sending test event to https://yourapp.com/webhooks...
 
 **Next Steps**:
 
-- [View Webhook Details â†’](/dashboard/settings/webhooks/wh_abc123)
+- [View Webhook Details →](/dashboard/settings/webhooks/wh_abc123)
 
-- [View Code Examples â†’](/docs/design/routes/#code-examples)
+- [View Code Examples →](/docs/design/routes/#code-examples)
 
-- [Test Webhook â†’](/dashboard/settings/webhooks/wh_abc123/test)
+- [Test Webhook →](/dashboard/settings/webhooks/wh_abc123/test)
 
 **User Journey Context**: One-time setup per integration, occasional updates for new event types.
 
@@ -639,9 +639,9 @@ OK
 
 - **Radio Buttons**:
 
-  - â—‹ Use Sample Data (default)
+  - ○ Use Sample Data (default)
 
-  - â—‹ Use Real Data from Campaign/Contact
+  - ○ Use Real Data from Campaign/Contact
 
 **If "Use Real Data" selected**:
 
@@ -687,7 +687,7 @@ OK
 
 ```text
 Sending test event to https://yourapp.com/webhooks...
-â³ Waiting for response...
+⏳ Waiting for response...
 
 ```
 
@@ -986,7 +986,7 @@ app.post('/webhooks/penguinmails', (req: Request, res: Response) => {
 
 - **Rate Limit Exceeded**: Show "Too many webhook deliveries. Upgrade plan for higher limits."
 
-- **Webhook Auto-Paused**: Email notification + banner: "Webhook paused after 100 consecutive failures. [View details â†’]"
+- **Webhook Auto-Paused**: Email notification + banner: "Webhook paused after 100 consecutive failures. [View details →]"
 
 - **Duplicate Events**: Implement idempotency keys to prevent duplicate processing.
 

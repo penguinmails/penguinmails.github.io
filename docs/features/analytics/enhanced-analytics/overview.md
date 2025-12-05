@@ -32,11 +32,11 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 ### Required Before Starting
 
-- ðŸ”„ **[Analytics](/docs/features/analytics/enhanced-analytics/analytics)** - Basic analytics must be complete (currently 60%)
+- 🔒 **[Analytics](/docs/features/analytics/enhanced-analytics/analytics)** - Basic analytics must be complete (currently 60%)
 
-- â³ Historical data - Need 30+ days of campaign data
+- ⏳ Historical data - Need 30+ days of campaign data
 
-- â³ Machine learning infrastructure - Research phase
+- ⏳ Machine learning infrastructure - Research phase
 
 ### Blocks (Features Waiting on This)
 
@@ -58,7 +58,7 @@ Advanced analytics capabilities building on basic analytics (Q4 2025). Adds pred
 
 - [ ] **M2: Data Pipeline Enhancement** (Weeks 4-7)
 
-  - [ ] Improve data collection accuracy (75% â†’ 90%)
+  - [ ] Improve data collection accuracy (75% → 90%)
 
   - [ ] Historical data aggregation
 

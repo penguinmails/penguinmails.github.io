@@ -319,9 +319,9 @@ erDiagram
 
 **Referential Integrity**:
 
-- `jobs.queue_name` â†’ `job_queues.name`
+- `jobs.queue_name` → `job_queues.name`
 
-- `job_logs.job_id` â†’ `jobs.id`
+- `job_logs.job_id` → `jobs.id`
 
 - Cascading deletes for data cleanup
 

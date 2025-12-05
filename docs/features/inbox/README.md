@@ -1,20 +1,20 @@
-﻿# ðŸ—‚ï¸ Inbox Management
+﻿# 📂 Inbox Management
 
 Comprehensive email organization, response management, and conversation tracking capabilities.
 
 ## Overview
 
 **Status:** Architecture Spike Required (Critical Blocker)
-**Timeline:** Q4 2025 (Spike) â†’ Q1 2026 (MVP) â†’ Q2-Q3 2026 (AI & Analytics)
+**Timeline:** Q4 2025 (Spike) → Q1 2026 (MVP) → Q2-Q3 2026 (AI & Analytics)
 **Priority:** Critical (Foundation feature for response management)
 
-**ðŸš¨ Critical Blocker:** Stalwart Mail Server database schema investigation must be completed before any inbox development can proceed. See [Roadmap](/docs/features/inbox/roadmap) for details.
+**🚨 Critical Blocker:** Stalwart Mail Server database schema investigation must be completed before any inbox development can proceed. See [Roadmap](/docs/features/inbox/roadmap) for details.
 
 ---
 
 ## Features in This Category
 
-### âœ… Documented (Implementation Pending)
+### ✅ Documented (Implementation Pending)
 
 #### [Unified Inbox](/docs/features/inbox/unified-inbox/overview)
 
@@ -58,17 +58,17 @@ Maximize deliverability by automatically rotating sending across multiple email 
 
 ### What's Documented
 
-- âœ… Complete unified inbox architecture with database schemas
+- ✅ Complete unified inbox architecture with database schemas
 
-- âœ… AI intent detection system design
+- ✅ AI intent detection system design
 
-- âœ… Inbox rotation algorithm with health monitoring
+- ✅ Inbox rotation algorithm with health monitoring
 
-- âœ… Route specifications for inbox UI
+- ✅ Route specifications for inbox UI
 
-- âœ… API endpoint specifications
+- ✅ API endpoint specifications
 
-- âœ… Background job architecture
+- ✅ Background job architecture
 
 ### Critical Gap: Stalwart Integration
 
@@ -116,13 +116,13 @@ See the [Inbox Management Roadmap](/docs/features/inbox/roadmap) for:
 
 ## Key Insights
 
-- ðŸš¨ **Architecture unknown** - Cannot estimate MVP timeline until Stalwart spike complete
+- 🚨 **Architecture unknown** - Cannot estimate MVP timeline until Stalwart spike complete
 
 - âš ï¸ **Proposed schema may be wrong** - Documentation needs update based on spike findings
 
-- âœ… **Some infrastructure exists** - Content DB (attachments), Notifications DB (alerts)
+- ✅ **Some infrastructure exists** - Content DB (attachments), Notifications DB (alerts)
 
-- ðŸŽ¯ **AI features ready** - Gemini AI integration planned for Post-MVP
+- 🎯 **AI features ready** - Gemini AI integration planned for Post-MVP
 
 ---
 
@@ -154,4 +154,4 @@ See the [Inbox Management Roadmap](/docs/features/inbox/roadmap) for:
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

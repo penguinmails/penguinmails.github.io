@@ -109,27 +109,27 @@ outlook_integration:
 ```text
 
 Batch Scheduler:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Selected Campaigns: 5                               â”‚
-â”‚                                                     â”‚
-â”‚ â˜‘ Welcome Series                                    â”‚
-â”‚ â˜‘ Product Update                                    â”‚
-â”‚ â˜‘ Feature Announcement                              â”‚
-â”‚ â˜‘ Customer Survey                                   â”‚
-â”‚ â˜‘ Re-engagement Campaign                            â”‚
-â”‚                                                     â”‚
-â”‚ Schedule Pattern:                                   â”‚
-â”‚ â— Stagger sends (recommended)                       â”‚
-â”‚   Interval: [2] hours between campaigns             â”‚
-â”‚   Start: Nov 25, 9:00 AM                            â”‚
-â”‚                                                     â”‚
-â”‚ â—‹ Send all at once                                  â”‚
-â”‚   Time: Nov 25, 9:00 AM                             â”‚
-â”‚                                                     â”‚
-â”‚ Conflict Resolution:                                â”‚
-â”‚ â— Skip contacts in multiple campaigns               â”‚
-â”‚ â—‹ Send to all (may receive multiple emails)         â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────┐
+│ Selected Campaigns: 5                               │
+│                                                     │
+│ ☑ Welcome Series                                    │
+│ ☑ Product Update                                    │
+│ ☑ Feature Announcement                              │
+│ ☑ Customer Survey                                   │
+│ ☑ Re-engagement Campaign                            │
+│                                                     │
+│ Schedule Pattern:                                   │
+│ ● Stagger sends (recommended)                       │
+│   Interval: [2] hours between campaigns             │
+│   Start: Nov 25, 9:00 AM                            │
+│                                                     │
+│ ○ Send all at once                                  │
+│   Time: Nov 25, 9:00 AM                             │
+│                                                     │
+│ Conflict Resolution:                                │
+│ ● Skip contacts in multiple campaigns               │
+│ ○ Send to all (may receive multiple emails)         │
+└─────────────────────────────────────────────────────┘
 
 Preview:
 Campaign 1: Nov 25, 9:00 AM
@@ -222,20 +222,20 @@ blackout_dates:
 ```text
 
 Holiday Calendar: US Federal + Company
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ â˜‘ New Year's Day                                    â”‚
-â”‚ â˜‘ Martin Luther King Jr. Day                        â”‚
-â”‚ â˜‘ Presidents Day                                    â”‚
-â”‚ â˜‘ Memorial Day                                      â”‚
-â”‚ â˜‘ Independence Day                                  â”‚
-â”‚ â˜‘ Labor Day                                         â”‚
-â”‚ â˜‘ Thanksgiving                                      â”‚
-â”‚ â˜‘ Christmas                                         â”‚
-â”‚                                                     â”‚
-â”‚ Custom Dates:                                       â”‚
-â”‚ + Company Anniversary (June 15)                     â”‚
-â”‚ + Annual Conference (Oct 10-12)                     â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────┐
+│ ☑ New Year's Day                                    │
+│ ☑ Martin Luther King Jr. Day                        │
+│ ☑ Presidents Day                                    │
+│ ☑ Memorial Day                                      │
+│ ☑ Independence Day                                  │
+│ ☑ Labor Day                                         │
+│ ☑ Thanksgiving                                      │
+│ ☑ Christmas                                         │
+│                                                     │
+│ Custom Dates:                                       │
+│ + Company Anniversary (June 15)                     │
+│ + Annual Conference (Oct 10-12)                     │
+└─────────────────────────────────────────────────────┘
 
 ```
 

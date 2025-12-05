@@ -435,9 +435,9 @@ Use this guide as the forward-looking contract:
 
   - Keep:
 
-    - Analytics â†’ OLAP docs.
+    - Analytics → OLAP docs.
 
-    - Product/behavioral/infrastructure logging â†’ external analytics/logging doc.
+    - Product/behavioral/infrastructure logging → external analytics/logging doc.
 
 This schema guide, alongside:
 

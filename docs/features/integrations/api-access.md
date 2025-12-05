@@ -36,7 +36,7 @@ The PenguinMails API allows developers to integrate email capabilities directly 
 
 We use **Bearer Token** authentication.
 
-1. Generate an API Key in **Settings â†’ API Keys**.
+1. Generate an API Key in **Settings → API Keys**.
 
 2. Include it in the `Authorization` header.
 

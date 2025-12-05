@@ -1,4 +1,4 @@
-﻿# ðŸ’³ Payments & Billing
+﻿# 💳 Payments & Billing
 
 Subscription management, billing, invoicing, and payment processing.
 
@@ -14,23 +14,23 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ## What's Available Today
 
-- âœ… Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
+- ✅ Multi-tier subscription plans (Starter, Professional, Business, Enterprise)
 
-- âœ… Stripe Checkout integration for secure payment processing
+- ✅ Stripe Checkout integration for secure payment processing
 
-- âœ… Automatic subscription creation and management
+- ✅ Automatic subscription creation and management
 
-- âœ… Prorated upgrades and downgrades
+- ✅ Prorated upgrades and downgrades
 
-- âœ… Usage tracking (emails, users, workspaces, domains)
+- ✅ Usage tracking (emails, users, workspaces, domains)
 
-- âœ… Automatic invoice generation via Stripe
+- ✅ Automatic invoice generation via Stripe
 
-- âœ… Payment method updates via Stripe Customer Portal
+- ✅ Payment method updates via Stripe Customer Portal
 
-- âœ… Failed payment retry logic (Days 3, 5, 7, 14)
+- ✅ Failed payment retry logic (Days 3, 5, 7, 14)
 
-- âœ… Subscription cancellation with 90-day grace period
+- ✅ Subscription cancellation with 90-day grace period
 
 - ✅ Basic subscription status monitoring
 
@@ -118,7 +118,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 ## Features in This Category
 
-### âœ… Available Now
+### ✅ Available Now
 
 - **[Subscription Management](/docs/features/payments/subscription-management)** - Plan management and upgrades
 
@@ -126,7 +126,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - **[Billing Dashboard](/docs/features/payments/billing-dashboard)** - Usage and billing overview
 
-### ðŸš§ In Progress (Q1 2026)
+### 🚧 In Progress (Q1 2026)
 
 - **Plan Upgrade/Downgrade UI** - Visual comparison and confirmation workflow
 
@@ -142,7 +142,7 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - **Budget Controls** - Spending limits and alerts
 
-### ðŸ”œ Coming Soon (Q2-Q4 2026)
+### �� Coming Soon (Q2-Q4 2026)
 
 - **Custom Pricing** - Enterprise contracts and volume discounts (Q2 2026)
 
@@ -369,4 +369,4 @@ Database state is strictly driven by Stripe webhooks (`checkout.session.complete
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

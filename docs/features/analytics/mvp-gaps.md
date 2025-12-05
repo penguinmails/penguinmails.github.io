@@ -174,7 +174,7 @@ This document identifies the missing MVP features for the Analytics & Reporting 
 
 - [ ] Create engagement heatmap visualization component
 
-- [ ] Show day-of-week Ã— hour-of-day engagement grid (7 days Ã— 24 hours)
+- [ ] Show day-of-week × hour-of-day engagement grid (7 days × 24 hours)
 
 - [ ] Color-code cells by engagement level (green = high, yellow = medium, red = low)
 

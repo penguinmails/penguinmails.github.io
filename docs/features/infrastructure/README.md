@@ -28,7 +28,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ## Features in This Category
 
-### âœ… Available Now
+### ✅ Available Now
 
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - VPS provisioning, SMTP setup, DNS automation
 
@@ -56,7 +56,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ---
 
-### ðŸš§ MVP Gaps (Q1 2026)
+### 🚧 MVP Gaps (Q1 2026)
 
 ## Critical Missing Features
 
@@ -88,7 +88,7 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ---
 
-### ðŸ”œ Post-MVP Enhancements (Q2 2026+)
+### �� Post-MVP Enhancements (Q2 2026+)
 
 ## Q2 2026
 
@@ -220,4 +220,4 @@ Automated VPS management, IP allocation, SMTP servers, and infrastructure provis
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

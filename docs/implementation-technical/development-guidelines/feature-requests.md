@@ -811,19 +811,19 @@ async function runAIOptimizationMigration() {
 ```text
 
 feature/
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ api/                    # API endpoints
-â”‚   â”œâ”€â”€ services/               # Business logic
-â”‚   â”œâ”€â”€ models/                 # Data models
-â”‚   â”œâ”€â”€ components/             # UI components
-â”‚   â””â”€â”€ utils/                  # Helper functions
-â”œâ”€â”€ tests/
-â”‚   â”œâ”€â”€ unit/                   # Unit tests
-â”‚   â”œâ”€â”€ integration/            # Integration tests
-â”‚   â””â”€â”€ e2e/                    # End-to-end tests
-â”œâ”€â”€ docs/                       # Feature documentation
-â”œâ”€â”€ migration/                  # Database migrations
-â””â”€â”€ scripts/                    # Setup/deployment scripts
+├── src/
+│   ├── api/                    # API endpoints
+│   ├── services/               # Business logic
+│   ├── models/                 # Data models
+│   ├── components/             # UI components
+│   └── utils/                  # Helper functions
+├── tests/
+│   ├── unit/                   # Unit tests
+│   ├── integration/            # Integration tests
+│   └── e2e/                    # End-to-end tests
+├── docs/                       # Feature documentation
+├── migration/                  # Database migrations
+└── scripts/                    # Setup/deployment scripts
 
 ```
 

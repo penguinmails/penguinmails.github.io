@@ -47,15 +47,15 @@ A/B Testing enables data-driven campaign optimization by testing variations of y
 
 ```text
 
-1. Navigate to Campaigns â†’ Create New Campaign
+1. Navigate to Campaigns → Create New Campaign
 
 2. Enable "A/B Testing" toggle
 
 3. Choose test type:
-   â˜ Subject Line
-   â˜ Email Content
-   â˜ Sender Name
-   â˜ Send Time
+   ☐ Subject Line
+   ☐ Email Content
+   ☐ Sender Name
+   ☐ Send Time
 
 ```
 
@@ -130,7 +130,7 @@ After 4 hours:
 
 Test Results:
   Variant A: 22% open rate
-  Variant B: 28% open rate â† WINNER (26% lift)
+  Variant B: 28% open rate ← WINNER (26% lift)
   Variant C: 24% open rate
 
 Winner selected: Variant B
@@ -162,7 +162,7 @@ Control: "New Features Released"
 Test:    "{{firstName}}, Check Out What's New"
 
 Control: "Weekly Newsletter - November 25"
-Test:    "ðŸŽ‰ Your Weekly Insights Are Here"
+Test:    "🎉 Your Weekly Insights Are Here"
 
 Control: "Limited Time Offer Inside"
 Test:    "Last Chance: Offer Expires At Midnight"
@@ -253,7 +253,7 @@ variants:
     sample_size: 10%
 
   - name: "Emoji"
-    subject: "ðŸš€ Q1 Innovation Launch"
+    subject: "🚀 Q1 Innovation Launch"
     sample_size: 10%
 
 holdout:

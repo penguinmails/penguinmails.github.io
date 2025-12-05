@@ -14,7 +14,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 ## Progressive Disclosure Flow
 
-### ðŸ“Š Performance Documents
+###  Performance Documents
 
 - [**Performance Dashboard**](/docs/business/performance) - Executive performance overview (â‰¤200 lines)
 
@@ -26,7 +26,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 - [**Performance Provider Analysis**](/docs/business/performance) - ESP performance strategy (â‰¤300 lines)
 
-### ðŸŽ¯ Performance Analysis Path
+### 🎯 Performance Analysis Path
 
 1. **Executive View**: Start with `performance-dashboard` for KPI overview
 
@@ -38,7 +38,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 5. **Provider Strategy**: Deep dive into `performance-provider-analysis` for ESP optimization
 
-### ðŸ“ˆ Performance Characteristics
+### 📈 Performance Characteristics
 
 - **Content Depth**: Performance analysis and optimization (200-300 lines per document)
 
@@ -46,9 +46,9 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 - **Target Audience**: Operations managers, performance analysts, optimization teams
 
-- **Progression**: Dashboard overview â†’ strategic analysis â†’ optimization strategies
+- **Progression**: Dashboard overview → strategic analysis → optimization strategies
 
-### ðŸ”§ Performance Focus Areas
+### 🔧 Performance Focus Areas
 
 - **Deliverability**: Inbox placement, sender reputation, authentication
 

@@ -14,17 +14,17 @@ keywords: "quick start, basics, getting started"
 
 ```text
 
-Templates â†’ Create Template
+Templates → Create Template
 
 Template Name: Welcome Email
 Description: New subscriber welcome message
 
 Starting Point:
-  â—‹ Blank Template
-  â— From Library (Recommended)
-  â—‹ Import HTML
+  ○ Blank Template
+  ● From Library (Recommended)
+  ○ Import HTML
 
-[Continue â†’]
+[Continue →]
 
 ```
 
@@ -53,29 +53,29 @@ Selected: Basic Email
 
 ```text
 
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Template Editor: Welcome Email               [Save â–¼]  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚ Components â”‚ Preview                    â”‚ Settings     â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚ Structure â”‚                            â”‚ Selected:    â”‚
-â”‚  â–¡ Row    â”‚    [LOGO]                  â”‚ Text Block   â”‚
-â”‚  â–¡ Column â”‚                            â”‚              â”‚
-â”‚           â”‚    Welcome to PenguinMails â”‚ Font: Inter  â”‚
-â”‚ Content   â”‚                            â”‚ Size: 24px   â”‚
-â”‚  ðŸ“ Text  â”‚    We're excited to have   â”‚ Color: #333  â”‚
-â”‚  ðŸ–¼ï¸ Image â”‚    you on board!           â”‚ Align: Left  â”‚
-â”‚  ðŸ”˜ Buttonâ”‚                            â”‚              â”‚
-â”‚  âž– Dividerâ”‚    [Get Started â†’]        â”‚ [Link...]   â”‚
-â”‚           â”‚                            â”‚ [Style...]   â”‚
-â”‚ Layout    â”‚    Follow us:              â”‚              â”‚
-â”‚  ðŸ“‹ Headerâ”‚    [f] [t] [in]           â”‚              â”‚
-â”‚  ðŸ¦¶ Footerâ”‚                            â”‚              â”‚
-â”‚  ðŸ“± Socialâ”‚                            â”‚              â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────────┐
+│ Template Editor: Welcome Email               [Save â–¼]  │
+├─────────────────────────────────────────────────────────┤
+│ Components │ Preview                    │ Settings     │
+├───────────┼────────────────────────────┼──────────────┤
+│ Structure │                            │ Selected:    │
+│  â–¡ Row    │    [LOGO]                  │ Text Block   │
+│  â–¡ Column │                            │              │
+│           │    Welcome to PenguinMails │ Font: Inter  │
+│ Content   │                            │ Size: 24px   │
+│  📝 Text  │    We're excited to have   │ Color: #333  │
+│  🖼️ Image │    you on board!           │ Align: Left  │
+│  🔘 Button│                            │              │
+│  âž– Divider│    [Get Started →]        │ [Link...]   │
+│           │                            │ [Style...]   │
+│ Layout    │    Follow us:              │              │
+│  🗺️ Header│    [f] [t] [in]           │              │
+│  🦶 Footer│                            │              │
+│  📱 Social│                            │              │
+└───────────┴────────────────────────────┴──────────────┘
 
 Mode: [Visual] [HTML] [Preview]
-Device: [ðŸ“± Mobile] [ðŸ“± Tablet] [ðŸ–¥ï¸ Desktop]
+Device: [📱 Mobile] [📱 Tablet] [🖥️ Desktop]
 
 ```
 
@@ -83,14 +83,14 @@ Device: [ðŸ“± Mobile] [ðŸ“± Tablet] [ðŸ–¥ï¸ Desktop]
 
 ```text
 
-Drag "Button" from Components â†’ Drop in Content Area
+Drag "Button" from Components → Drop in Content Area
 
 Button Properties:
   Text: Get Started
   Link: https://app.penguinmails.com/onboarding
   Style: Primary (Blue)
   Alignment: Center
-  Full Width: â˜
+  Full Width: ☐
 
 [Apply]
 
@@ -122,23 +122,23 @@ Variables Available:
 
 ```text
 
-Switch to Mobile View: ðŸ“±
+Switch to Mobile View: 📱
 
 Preview:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ [LOGO]   â”‚
-â”‚          â”‚
-â”‚ Welcome, â”‚
-â”‚ John!    â”‚
-â”‚          â”‚
-â”‚ We're    â”‚
-â”‚ excited..â”‚
-â”‚          â”‚
-â”‚[Get Start]â”‚
-â”‚          â”‚
-â”‚Follow us:â”‚
-â”‚ f t in  â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌──────────┐
+│ [LOGO]   │
+│          │
+│ Welcome, │
+│ John!    │
+│          │
+│ We're    │
+│ excited..│
+│          │
+│[Get Start]│
+│          │
+│Follow us:│
+│ f t in  │
+└──────────┘
 
 âœ“ Looks good on mobile
 
@@ -149,9 +149,9 @@ Preview:
 ```text
 
 [Save â–¼]
-  â— Save
-  â—‹ Save As...
-  â—‹ Save as Draft
+  ● Save
+  ○ Save As...
+  ○ Save as Draft
 
 âœ“ Template saved: "Welcome Email"
 Last saved: 2 seconds ago
@@ -188,17 +188,17 @@ Header Settings:
 Drag "Social" component:
 
 Social Media Links:
-  â˜‘ Facebook: https://facebook.com/yourpage
-  â˜‘ Twitter: https://twitter.com/yourhandle
-  â˜‘ LinkedIn: https://linkedin.com/company/yourcompany
-  â˜ Instagram
-  â˜ YouTube
+  ☑ Facebook: https://facebook.com/yourpage
+  ☑ Twitter: https://twitter.com/yourhandle
+  ☑ LinkedIn: https://linkedin.com/company/yourcompany
+  ☐ Instagram
+  ☐ YouTube
 
 Icon Style:
-  â— Round Color
-  â—‹ Square Color
-  â—‹ Round B&W
-  â—‹ Square B&W
+  ● Round Color
+  ○ Square Color
+  ○ Round B&W
+  ○ Square B&W
 
 [Apply]
 
@@ -211,9 +211,9 @@ Icon Style:
 Drag "Image" component:
 
 Image Source:
-  â—‹ Upload Image
-  â— Image URL
-  â—‹ From Asset Library
+  ○ Upload Image
+  ● Image URL
+  ○ From Asset Library
 
 URL: https://example.com/hero.jpg
 Alt Text: Product Hero Image

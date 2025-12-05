@@ -36,7 +36,7 @@ PenguinMails offers tiered subscription plans designed to scale with your busine
 
 ### Available Plans
 
-#### ðŸŒ± Starter Plan
+#### 🌱 Starter Plan
 
 ##### Perfect for small teams getting started
 
@@ -64,7 +64,7 @@ Freelancers, small agencies, startups
 
 ---
 
-#### ðŸš€ Professional Plan
+#### 🚀 Professional Plan
 
 ##### Most Popular - For growing businesses
 
@@ -96,7 +96,7 @@ Growing agencies, marketing teams, SMBs
 
 ---
 
-#### ðŸ’¼ Business Plan
+#### 💼 Business Plan
 
 ##### For established businesses with high volume
 
@@ -130,7 +130,7 @@ Established agencies, enterprise marketing teams
 
 ---
 
-#### ðŸ¢ Enterprise Plan
+#### 🏢 Enterprise Plan
 
 ##### Custom solutions for large organizations
 
@@ -188,7 +188,7 @@ Custom (Contact Sales)
 
 **Access your subscription details:**
 
-1. Navigate to **Settings** â†’ **Billing**
+1. Navigate to **Settings** → **Billing**
 
 2. View **Current Plan** section
 
@@ -216,7 +216,7 @@ Custom (Contact Sales)
 
 #### How to Upgrade
 
-1. Go to **Settings** â†’ **Billing** â†’ **Change Plan**
+1. Go to **Settings** → **Billing** → **Change Plan**
 
 2. Select higher-tier plan
 
@@ -233,8 +233,8 @@ Custom (Contact Sales)
 ```text
 Days remaining in period: 15 days
 Professional daily rate: $149 / 30 = $4.97/day
-Starter credit: $49 / 30 = $1.63/day Ã— 15 = $24.50
-Upgrade cost: ($4.97 - $1.63) Ã— 15 days = $50.10
+Starter credit: $49 / 30 = $1.63/day × 15 = $24.50
+Upgrade cost: ($4.97 - $1.63) × 15 days = $50.10
 
 Total charged today: $50.10
 Next billing (full month): $149.00
@@ -243,13 +243,13 @@ Next billing (full month): $149.00
 
 **Benefits of Upgrading:**
 
-- âœ… Immediate access to higher limits
+- ✅ Immediate access to higher limits
 
-- âœ… Pro-rated billing (fair pricing)
+- ✅ Pro-rated billing (fair pricing)
 
-- âœ… Unlock advanced features instantly
+- ✅ Unlock advanced features instantly
 
-- âœ… No downtime or service interruption
+- ✅ No downtime or service interruption
 
 ---
 
@@ -259,7 +259,7 @@ Next billing (full month): $149.00
 
 #### How to Downgrade
 
-1. Go to **Settings** â†’ **Billing** â†’ **Change Plan**
+1. Go to **Settings** → **Billing** → **Change Plan**
 
 2. Select lower-tier plan
 
@@ -313,7 +313,7 @@ Next billing (full month): $149.00
 
 #### How to Cancel
 
-1. Go to **Settings** â†’ **Billing** â†’ **Cancel Subscription**
+1. Go to **Settings** → **Billing** → **Cancel Subscription**
 
 2. Select **cancellation reason** (optional feedback)
 
@@ -327,13 +327,13 @@ Next billing (full month): $149.00
 
 **Immediate:**
 
-- âœ… Cancellation confirmed
+- ✅ Cancellation confirmed
 
-- âœ… No future charges
+- ✅ No future charges
 
-- âœ… Service continues until period end
+- ✅ Service continues until period end
 
-- âœ… Access to all features until expiration
+- ✅ Access to all features until expiration
 
 **At End of Billing Period:**
 
@@ -363,7 +363,7 @@ Next billing (full month): $149.00
 
 1. Log in to account (even if canceled)
 
-2. Go to **Settings** â†’ **Billing** â†’ **Reactivate**
+2. Go to **Settings** → **Billing** → **Reactivate**
 
 3. Select plan (previous plan or different tier)
 
@@ -373,11 +373,11 @@ Next billing (full month): $149.00
 
 **Data Restoration:**
 
-- âœ… All data restored if within 90 days
+- ✅ All data restored if within 90 days
 
-- âœ… Full feature access immediately
+- ✅ Full feature access immediately
 
-- âœ… Billing starts today (no backdating)
+- ✅ Billing starts today (no backdating)
 
 ---
 
@@ -391,7 +391,7 @@ Next billing (full month): $149.00
 
 **From Monthly to Annual:**
 
-1. Go to **Settings** â†’ **Billing** â†’ **Switch to Annual**
+1. Go to **Settings** → **Billing** → **Switch to Annual**
 
 2. Review annual cost (20% discount applied)
 
@@ -405,15 +405,15 @@ Next billing (full month): $149.00
 
 - Prorated credit applied to annual payment
 
-- Example: 15 days left on monthly â†’ $24.50 credit â†’ reduces annual payment
+- Example: 15 days left on monthly → $24.50 credit → reduces annual payment
 
 **Benefits:**
 
-- ðŸ’° 20% cost savings
+- 💰 20% cost savings
 
-- ðŸ“† Predictable yearly budgeting
+- 📆 Predictable yearly budgeting
 
-- ðŸŽ Bonus features (priority support, extra sends)
+- 🎁 Bonus features (priority support, extra sends)
 
 #### Switching to Monthly Billing
 
@@ -449,7 +449,7 @@ Next billing (full month): $149.00
 
 - âš ï¸ 95% of limit - Urgent notification
 
-- ðŸš« 100% of limit - Action required
+- 🚫 100% of limit - Action required
 
 #### Overage Handling
 
@@ -568,7 +568,7 @@ Renewal (Automatic)
 
 OR
 
-Cancellation â†’ Free Tier (90 days) â†’ Data Deletion
+Cancellation → Free Tier (90 days) → Data Deletion
 
 ```
 

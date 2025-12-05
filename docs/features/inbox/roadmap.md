@@ -62,7 +62,7 @@ This document outlines the development roadmap for inbox management features, in
 
 ## MVP Roadmap Items
 
-### ðŸš¨ Critical Blocker
+### 🚨 Critical Blocker
 
 #### 1. Stalwart Mail Server Database Schema Investigation
 

@@ -710,7 +710,7 @@ export class ConsentCache {
 ```
 
 ---
-**ðŸŒ Technical Standards References:**
+**🌍 Technical Standards References:**
 
 - [ISO 27001 Information Security](https://www.iso.org/isoiec-27001-information-security.html)
 

@@ -14,7 +14,7 @@ This directory contains quick reference guides, executive templates, detailed me
 
 ## Progressive Disclosure Flow
 
-### ðŸ“‹ Reference Documents
+### 🗺️ Reference Documents
 
 - [**Quick Reference: Cost-Benefit**](/docs/business/reference) - Quick cost-benefit analysis guide (â‰¤100 lines)
 
@@ -26,7 +26,7 @@ This directory contains quick reference guides, executive templates, detailed me
 
 - [**Detailed Methodology**](/docs/business/reference) - Comprehensive analysis methodology (â‰¤300 lines)
 
-### ðŸŽ¯ Reference Usage Path
+### 🎯 Reference Usage Path
 
 1. **Quick Analysis**: Use `quick-reference-cost-benefit` for rapid assessments
 
@@ -38,7 +38,7 @@ This directory contains quick reference guides, executive templates, detailed me
 
 5. **Deep Analysis**: Comprehensive methodology in `detailed-methodology`
 
-### ðŸ“‹ Reference Characteristics
+### 🗺️ Reference Characteristics
 
 - **Content Depth**: Concise reference materials (100-300 lines per document)
 
@@ -46,9 +46,9 @@ This directory contains quick reference guides, executive templates, detailed me
 
 - **Target Audience**: All business users requiring quick access to key information
 
-- **Progression**: Quick reference â†’ detailed methodology â†’ implementation
+- **Progression**: Quick reference → detailed methodology → implementation
 
-### ðŸ”§ Reference Types
+### 🔧 Reference Types
 
 - **Quick References**: Fast access to key information and checklists
 

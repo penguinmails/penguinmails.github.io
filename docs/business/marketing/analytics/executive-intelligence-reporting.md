@@ -166,7 +166,7 @@ This document establishes basic executive marketing reporting capabilities with 
 
 - Automated strategic recommendation engines (Level 4+)
 
-### See feature taxonomy: Core (2025) â†’ MVP (2025-2026 Q1) â†’ Growth (2026 Q1-Q3) â†’ Enterprise (2026 Q4-2027) â†’ Future (2027+)
+### See feature taxonomy: Core (2025) → MVP (2025-2026 Q1) → Growth (2026 Q1-Q3) → Enterprise (2026 Q4-2027) → Future (2027+)
 
 ---
 

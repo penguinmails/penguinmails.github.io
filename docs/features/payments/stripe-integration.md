@@ -91,7 +91,7 @@ User Redirected to Dashboard
 
 **All subscription state changes flow through webhooks:**
 
-- Stripe sends webhook â†’ PenguinMails updates database
+- Stripe sends webhook → PenguinMails updates database
 - Never poll Stripe API for subscription status
 - Real-time sync for all subscription lifecycle events
 - Automatic retry and idempotency handling
@@ -111,15 +111,15 @@ User Redirected to Dashboard
 
 #### Checkout Features
 
-- âœ… **Mobile-optimized** - Perfect on any device
+- ✅ **Mobile-optimized** - Perfect on any device
 
-- âœ… **Multiple payment methods** - Credit/debit cards,Apple Pay, Google Pay
+- ✅ **Multiple payment methods** - Credit/debit cards,Apple Pay, Google Pay
 
-- âœ… **Localized** - Available in 25+ languages
+- ✅ **Localized** - Available in 25+ languages
 
-- âœ… **Tax calculation** - Automatic tax computation
+- ✅ **Tax calculation** - Automatic tax computation
 
-- âœ… **Saved payment methods** - Quick checkout for returning users
+- ✅ **Saved payment methods** - Quick checkout for returning users
 
 #### Implementation
 
@@ -395,17 +395,17 @@ NEXT_PUBLIC_APP_URL=https://app.penguinmails.com  # or http://localhost:3000 for
 
 - Sign up at [stripe.com](https://stripe.com)
 - Complete business verification (required for live mode)
-- Enable Customer Portal in Stripe Dashboard â†’ Settings â†’ Customer Portal
+- Enable Customer Portal in Stripe Dashboard → Settings → Customer Portal
 
 ## 2. Retrieve API Keys
 
-- Navigate to Stripe Dashboard â†’ Developers â†’ API keys
+- Navigate to Stripe Dashboard → Developers → API keys
 - Copy "Secret key" to `STRIPE_SECRET_KEY`
 - Copy "Publishable key" to `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 
 ## 3. Configure Webhooks
 
-- Go to Stripe Dashboard â†’ Developers â†’ Webhooks
+- Go to Stripe Dashboard → Developers → Webhooks
 - Click "Add endpoint"
 - Endpoint URL: `https://api.penguinmails.com/webhooks/stripe`
 - Select events to listen for:
@@ -441,13 +441,13 @@ stripe trigger checkout.session.completed
 
 **PenguinMails is PCI DSS compliant** by using Stripe.
 
-- âœ… **No card data stored** - Stripe handles all card info
+- ✅ **No card data stored** - Stripe handles all card info
 
-- âœ… **Tokenization** - Only store Stripe tokens
+- ✅ **Tokenization** - Only store Stripe tokens
 
-- âœ… **Secure transmission** - TLS 1.3 encryption
+- ✅ **Secure transmission** - TLS 1.3 encryption
 
-- âœ… **Annual audits** - Stripe maintains compliance
+- ✅ **Annual audits** - Stripe maintains compliance
 
 ### SCA (Strong Customer Authentication)
 

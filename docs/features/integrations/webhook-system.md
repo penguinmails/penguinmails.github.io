@@ -51,7 +51,7 @@ The Webhook System enables external applications to receive instant notification
 
 ```text
 
-Dashboard â†’ Settings â†’ Integrations â†’ Webhooks â†’ Create Webhook
+Dashboard → Settings → Integrations → Webhooks → Create Webhook
 
 ```
 
@@ -65,7 +65,7 @@ Webhook Name: CRM Contact Sync
 Endpoint URL: https://yourapp.com/webhooks/penguinmails
 Description: Sync email engagement to CRM
 
-Status: â—‹ Active  â—‹ Paused
+Status: ○ Active  ○ Paused
 
 ```
 
@@ -76,23 +76,23 @@ Status: â—‹ Active  â—‹ Paused
 ```text
 
 Email Events:
-  â˜‘ email.sent
-  â˜‘ email.delivered
-  â˜‘ email.opened
-  â˜‘ email.clicked
-  â˜‘ email.bounced
-  â˜‘ email.spam_reported
-  â˜‘ email.unsubscribed
+  ☑ email.sent
+  ☑ email.delivered
+  ☑ email.opened
+  ☑ email.clicked
+  ☑ email.bounced
+  ☑ email.spam_reported
+  ☑ email.unsubscribed
 
 Campaign Events:
-  â˜ campaign.launched
-  â˜ campaign.completed
-  â˜ campaign.paused
+  ☐ campaign.launched
+  ☐ campaign.completed
+  ☐ campaign.paused
 
 Contact Events:
-  â˜ contact.created
-  â˜ contact.updated
-  â˜ contact.unsubscribed
+  ☐ contact.created
+  ☐ contact.updated
+  ☐ contact.unsubscribed
 
 ```
 
@@ -469,7 +469,7 @@ function standaloneVerify(payload, signature, secret) {
 Last 50 Webhook Deliveries:
 
 [Nov 25, 14:30:15] email.opened
-  â†’ POST https://yourapp.com/webhooks
+  → POST https://yourapp.com/webhooks
   Status: 200 OK
   Duration: 142ms
   [View Request] [View Response]
@@ -497,9 +497,9 @@ Response:
 [Send Test Event]
 
 Choose test event type:
-  â—‹ email.opened
-  â—‹ email.clicked
-  â—‹ email.bounced
+  ○ email.opened
+  ○ email.clicked
+  ○ email.bounced
 
 Use real data from:
   Campaign: [Select Campaign â–¼]
@@ -507,7 +507,7 @@ Use real data from:
 
 OR
 
-  Use sample data â˜‘
+  Use sample data ☑
 
 [Send Test]
 

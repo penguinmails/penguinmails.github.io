@@ -241,11 +241,11 @@ interface TenantSecretsSummary {
 
 **Tenant Access:**
 
-- Settings â†’ Infrastructure â†’ SSH Access
+- Settings → Infrastructure → SSH Access
 
 **Admin Access:**
 
-- Admin Panel â†’ Secrets Management
+- Admin Panel → Secrets Management
 
 ## Related Documentation
 

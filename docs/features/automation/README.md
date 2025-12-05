@@ -1,4 +1,4 @@
-﻿# ðŸ¤– Automation & Workflows
+﻿# 🤖 Automation & Workflows
 
 Workflow automation, triggers, actions, and intelligent automation rules.
 
@@ -10,33 +10,33 @@ Workflow automation, triggers, actions, and intelligent automation rules.
 
 ### What Exists Today
 
-- âœ… Basic campaign sequences (linear email flows)
+- ✅ Basic campaign sequences (linear email flows)
 
-- âœ… Time-based delays between emails
+- ✅ Time-based delays between emails
 
-- âœ… Campaign scheduling
+- ✅ Campaign scheduling
 
-- âœ… Manual campaign triggers
+- ✅ Manual campaign triggers
 
 ### What's Missing
 
-- âŒ Visual workflow builder
+- ❌ Visual workflow builder
 
-- âŒ Conditional logic and branching
+- ❌ Conditional logic and branching
 
-- âŒ Event-based triggers (beyond time)
+- ❌ Event-based triggers (beyond time)
 
-- âŒ Behavioral automation
+- ❌ Behavioral automation
 
-- âŒ Multi-path workflows
+- ❌ Multi-path workflows
 
-- âŒ AI-powered optimization
+- ❌ AI-powered optimization
 
-- âŒ Workflow templates
+- ❌ Workflow templates
 
 ## Features in This Category
 
-### â³ Planned for MVP (Q2-Q3 2026)
+### ⏳ Planned for MVP (Q2-Q3 2026)
 
 #### [Workflow Automation](/docs/features/automation/workflow-automation/overview)
 
@@ -70,7 +70,7 @@ Automated workflows with triggers and actions.
 
 ---
 
-### ðŸ”œ Post-MVP Features (2026-2027)
+### 🚀 Post-MVP Features (2026-2027)
 
 #### Advanced Conditional Logic (Q3 2026)
 
@@ -152,9 +152,9 @@ Enable workflows to trigger external apps via Zapier and receive Zapier triggers
 
 **Capabilities**:
 
-- Zapier webhook triggers (PenguinMails â†’ Zapier)
+- Zapier webhook triggers (PenguinMails → Zapier)
 
-- Zapier action endpoints (Zapier â†’ PenguinMails)
+- Zapier action endpoints (Zapier → PenguinMails)
 
 - API key authentication
 
@@ -274,4 +274,4 @@ For detailed roadmap with acceptance criteria, see [Automation Roadmap](/docs/fe
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

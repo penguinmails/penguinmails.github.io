@@ -179,13 +179,13 @@ Welcome to our platform!
 ```text
 
 {% if lead_score >= 90 %}
-  ðŸŒŸ Platinum Tier - Exclusive Access
+  🌟 Platinum Tier - Exclusive Access
 {% elsif lead_score >= 75 %}
   â­ Gold Tier - Premium Benefits
 {% elsif lead_score >= 50 %}
   âœ¨ Silver Tier - Great Perks
 {% else %}
-  ðŸ‘‹ Welcome - Getting Started
+  👋 Welcome - Getting Started
 {% endif %}
 
 ```
@@ -238,11 +238,11 @@ Thanks for being a valued customer!
 
 {% if custom.account_type == "trial" %}
   Your trial expires in {{custom.trial_days_remaining}} days.
-  [Upgrade Now â†’]
+  [Upgrade Now →]
 {% elsif custom.account_type == "paid" %}
   Thanks for being a premium customer!
 {% else %}
-  [Start Your Free Trial â†’]
+  [Start Your Free Trial →]
 {% endif %}
 
 ```
@@ -298,7 +298,7 @@ Company Size Targeting:
 
 {% if lead_score >= 75 and custom.account_type == "trial" %}
   You're a highly engaged trial user!
-  [Upgrade to unlock premium features â†’]
+  [Upgrade to unlock premium features →]
 {% endif %}
 
 ```
@@ -318,7 +318,7 @@ Company Size Targeting:
 ```text
 
 {% if (lead_score >= 75 and custom.account_type == "trial") or custom.is_vip == true %}
-  ðŸŽ Special offer just for you!
+  🎁 Special offer just for you!
 
   {% if custom.account_type == "trial" %}
     Upgrade now and get 20% off your first year!
@@ -485,9 +485,9 @@ Your recent purchases:
 
 {% for tag in tags %}
   {% if tag == "vip" %}
-    ðŸŒŸ VIP Member
+    🌟 VIP Member
   {% elsif tag == "enterprise" %}
-    ðŸ¢ Enterprise Customer
+    🏢 Enterprise Customer
   {% endif %}
 {% endfor %}
 

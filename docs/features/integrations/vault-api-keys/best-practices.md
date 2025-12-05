@@ -13,72 +13,72 @@ keywords: "best practices, guidelines, recommendations"
 
 #### 1. Store Keys Securely
 
-- âœ… Store in environment variables (`.env` file)
+- ✅ Store in environment variables (`.env` file)
 
-- âœ… Use secret management tools (AWS Secrets Manager, Vault)
+- ✅ Use secret management tools (AWS Secrets Manager, Vault)
 
-- âŒ Never commit keys to version control
+- ❌ Never commit keys to version control
 
-- âŒ Never hardcode keys in source code
+- ❌ Never hardcode keys in source code
 
-- âŒ Never share keys via email or chat
+- ❌ Never share keys via email or chat
 
 #### 2. Use Minimal Permissions
 
-- âœ… Create separate keys for different applications
+- ✅ Create separate keys for different applications
 
-- âœ… Grant only required permission scopes
+- ✅ Grant only required permission scopes
 
-- âŒ Don't use full-access keys for single-purpose applications
+- ❌ Don't use full-access keys for single-purpose applications
 
 #### 3. Rotate Keys Regularly
 
-- âœ… Rotate keys every 90 days (recommended)
+- ✅ Rotate keys every 90 days (recommended)
 
-- âœ… Rotate immediately if key compromised
+- ✅ Rotate immediately if key compromised
 
-- âœ… Test new key before revoking old key
+- ✅ Test new key before revoking old key
 
 #### 4. Monitor Usage
 
-- âœ… Review API key usage regularly
+- ✅ Review API key usage regularly
 
-- âœ… Set up alerts for unusual activity
+- ✅ Set up alerts for unusual activity
 
-- âœ… Investigate unexpected errors
+- ✅ Investigate unexpected errors
 
 #### 5. Handle Errors Gracefully
 
-- âœ… Implement exponential backoff for rate limit errors
+- ✅ Implement exponential backoff for rate limit errors
 
-- âœ… Log authentication failures
+- ✅ Log authentication failures
 
-- âœ… Retry failed requests with backoff
+- ✅ Retry failed requests with backoff
 
 ### For PenguinMails Administrators
 
 #### 1. Enforce Security Policies
 
-- âœ… Require HTTPS for all API requests
+- ✅ Require HTTPS for all API requests
 
-- âœ… Implement rate limiting per tier
+- ✅ Implement rate limiting per tier
 
-- âœ… Monitor for suspicious activity
+- ✅ Monitor for suspicious activity
 
 #### 2. Audit Regularly
 
-- âœ… Review audit logs weekly
+- ✅ Review audit logs weekly
 
-- âœ… Investigate anomalies
+- ✅ Investigate anomalies
 
-- âœ… Revoke unused keys
+- ✅ Revoke unused keys
 
 #### 3. Educate Users
 
-- âœ… Provide security best practices documentation
+- ✅ Provide security best practices documentation
 
-- âœ… Send reminders for key rotation
+- ✅ Send reminders for key rotation
 
-- âœ… Offer security training
+- ✅ Offer security training
 
 ---

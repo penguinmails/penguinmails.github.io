@@ -45,7 +45,7 @@ Manual Reporting provides essential data export and report generation capabiliti
 
 ```text
 
-Dashboard â†’ Analytics â†’ Reports â†’ Create New Report
+Dashboard → Analytics → Reports → Create New Report
 
 ```
 
@@ -75,19 +75,19 @@ Dashboard â†’ Analytics â†’ Reports â†’ Create New Report
 
 **Choose Metrics:**
 
-- âœ… Emails sent
+- ✅ Emails sent
 
-- âœ… Delivery rate
+- ✅ Delivery rate
 
-- âœ… Open rate (directional)
+- ✅ Open rate (directional)
 
-- âœ… Click rate (directional)
+- ✅ Click rate (directional)
 
-- âœ… Bounce rate
+- ✅ Bounce rate
 
-- âœ… Spam complaints
+- ✅ Spam complaints
 
-- âœ… Unsubscribes
+- ✅ Unsubscribes
 
 #### Step 3: Export or Schedule
 
@@ -121,15 +121,15 @@ Dashboard â†’ Analytics â†’ Reports â†’ Create New Report
 
 **Available Exports:**
 
-- Campaign list â†’ CSV/Excel
+- Campaign list → CSV/Excel
 
-- Campaign metrics â†’ CSV/Excel
+- Campaign metrics → CSV/Excel
 
-- Email engagement data â†’ CSV
+- Email engagement data → CSV
 
-- Lead lists â†’ CSV/Excel
+- Lead lists → CSV/Excel
 
-- Domain health â†’ CSV
+- Domain health → CSV
 
 ---
 
@@ -319,7 +319,7 @@ interface LeadExport {
 
 **Setup:**
 
-1. Go to Settings â†’ Integrations â†’ Google Sheets
+1. Go to Settings → Integrations → Google Sheets
 
 2. Click "Connect Google Account"
 
@@ -432,7 +432,7 @@ styling:
 
 1. Create template once
 
-2. Generate report from template â†’ Select date range
+2. Generate report from template → Select date range
 
 3. Report generated with latest data
 

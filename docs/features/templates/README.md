@@ -1,4 +1,4 @@
-﻿# ðŸ“ Templates & Content
+﻿# 📝 Templates & Content
 
 Email templates, HTML editor, template tags, and personalization variables.
 
@@ -28,7 +28,7 @@ See [Template Roadmap](/docs/features/templates/roadmap) for detailed timeline.
 
 ## Features in This Category
 
-### âœ… Available Now
+### ✅ Available Now
 
 #### [Template Management](/docs/features/templates/template-management)
 
@@ -50,7 +50,7 @@ Basic template creation and management with HTML editor.
 
 **Status**: ACTIVE | **Priority**: Critical
 
-### ðŸš§ In Development (Q2 2026)
+### 🚧 In Development (Q2 2026)
 
 #### [Template Editor](/docs/features/templates/template-editor/overview)
 
@@ -124,7 +124,7 @@ Advanced dynamic content with merge tags and conditionals.
 
 **Status**: PLANNED (Q2 2026) | **Priority**: High
 
-### ðŸ”® Future Enhancements (Q3 2026)
+### 🔮 Future Enhancements (Q3 2026)
 
 #### Advanced Template Intelligence
 
@@ -202,4 +202,4 @@ See [Template Roadmap](/docs/features/templates/roadmap) for complete timeline a
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

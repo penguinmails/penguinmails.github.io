@@ -54,14 +54,14 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
   constructor(private db: Database) {}
 
   async getCampaignsWithRecipients(userId: string): Promise<Campaign[]> {
-    // âŒ Bad: N+1 query problem - DO NOT USE
+    // ❌ Bad: N+1 query problem - DO NOT USE
     // const campaigns = await this.db.campaigns.where('userId', '=', userId).findMany();
     // for (const campaign of campaigns) {
     //   campaign.recipients = await this.db.recipients.where('campaignId', '=', campaign.id).findMany();
     // }
     // return campaigns;
 
-    // âœ… Good: Eager loading with single query
+    // ✅ Good: Eager loading with single query
     const query = this.db.campaigns
       .where('userId', '=', userId)
       .join('recipients', 'campaignId', 'id')
@@ -155,7 +155,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
   }
 
   async getCampaignsWithRecipientStats(userId: string): Promise<CampaignStats[]> {
-    // âœ… Good: Aggregate with single query using GROUP BY
+    // ✅ Good: Aggregate with single query using GROUP BY
     const query = this.db.campaigns
       .where('userId', '=', userId)
       .leftJoin('recipients', 'campaignId', 'id')
@@ -181,7 +181,7 @@ class CampaignQueryServiceImpl implements CampaignQueryService {
     }));
   }
 
-  // âŒ Bad: Example of N+1 query (for educational purposes)
+  // ❌ Bad: Example of N+1 query (for educational purposes)
   async badGetCampaignsWithRecipients(userId: string): Promise<Campaign[]> {
     // This would cause N+1 problem - don't use this!
     const campaigns = await this.db.campaigns.where('userId', '=', userId).findMany();

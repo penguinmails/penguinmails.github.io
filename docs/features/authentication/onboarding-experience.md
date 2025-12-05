@@ -51,9 +51,9 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 ```text
 
-1. Sign Up â†’ 2. Workspace Setup â†’ 3. Domain Configuration â†’
+1. Sign Up → 2. Workspace Setup → 3. Domain Configuration →
 
-4. Payment â†’ 5. First Email Account â†’ 6. First Campaign â†’ 7. Success!
+4. Payment → 5. First Email Account → 6. First Campaign → 7. Success!
 
 ```
 
@@ -77,7 +77,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 
 ```text
 
-Welcome to PenguinMails! ðŸ§
+Welcome to PenguinMails! 🐧
 
 Let's get your professional email infrastructure
 set up in under 10 minutes.
@@ -115,7 +115,7 @@ This is the domain you'll send emails from
 
 Domain: [_______________]
 
-â˜ I have access to DNS settings for this domain
+☐ I have access to DNS settings for this domain
 
 [Continue] [Need help?]
 
@@ -161,16 +161,16 @@ OR
 
 Step 5 of 6: Choose Your Plan
 
-â—‹ Starter - $49/mo
+○ Starter - $49/mo
   Up to 5,000 emails/month
   1 workspace
 
-â— Professional - $99/mo  [RECOMMENDED]
+● Professional - $99/mo  [RECOMMENDED]
   Up to 25,000 emails/month
   Unlimited workspaces
   Priority support
 
-â—‹ Business - $249/mo
+○ Business - $249/mo
   Up to 100,000 emails/month
   Everything in Professional
   Dedicated infrastructure
@@ -201,10 +201,10 @@ Step 6 of 6: Launch Your Email Infrastructure
 We're setting up your professional email infrastructure:
 
 âœ“ VPS server provisioning
-â³ Installing SMTP server (2 min remaining)
-â—‹ Configuring DNS records
-â—‹ Installing SSL certificates
-â—‹ Creating your first email account
+⏳ Installing SMTP server (2 min remaining)
+○ Configuring DNS records
+○ Installing SSL certificates
+○ Creating your first email account
 
 [Watch Setup Video] while you wait
 
@@ -216,7 +216,7 @@ We're setting up your professional email infrastructure:
 
 ```text
 
-ðŸŽ‰ Infrastructure Ready!
+🎉 Infrastructure Ready!
 
 Your email infrastructure is live at:
 mail.yourdomain.com
@@ -244,14 +244,14 @@ Password: [Generate Secure Password]
 
 ```text
 
-ðŸŽ‰ Congratulations! You're All Set
+🎉 Congratulations! You're All Set
 
 Your email infrastructure is ready to send.
 
 Quick Actions:
-â˜ Create your first campaign
-â˜ Import your contact list
-â˜ Set up email warmup (recommended)
+☐ Create your first campaign
+☐ Import your contact list
+☐ Set up email warmup (recommended)
 
 [Go to Dashboard] [Take the Product Tour]
 
@@ -267,15 +267,15 @@ Persistent checklist in sidebar:
 
 ```text
 
-Getting Started â”â”â”â”â”â”â”â”â—‹â—‹â—‹ 70%
+Getting Started ────────○○○ 70%
 
 âœ“ Create workspace
 âœ“ Add domain
 âœ“ Verify domain
 âœ“ Create email account
-â³ Import contacts (20/100)
-â—‹ Create first campaign
-â—‹ Send first email
+⏳ Import contacts (20/100)
+○ Create first campaign
+○ Send first email
 
 [Collapse]
 
@@ -371,7 +371,7 @@ Click here to create a new email campaign.
 
 ```text
 
-ðŸŽŠ Milestone Unlocked: First Email Sent!
+🎊 Milestone Unlocked: First Email Sent!
 
 You've sent your first email through PenguinMails.
 Keep going!
@@ -404,7 +404,7 @@ Based on user behavior:
 
 ```text
 
-ðŸ‘‹ We noticed you haven't set up email warmup yet.
+👋 We noticed you haven't set up email warmup yet.
 
 Warmup helps build sender reputation and improves
 deliverability. It only takes 2 minutes.
@@ -426,7 +426,7 @@ Here's what you can do:
 
 âœ“ View campaigns
 âœ“ Create and edit templates
-â—‹ Can't: Modify billing or infrastructure
+○ Can't: Modify billing or infrastructure
 
 [View Permissions] [Explore Dashboard]
 
@@ -677,7 +677,7 @@ function OnboardingChecklist() {
         <ul>
           {checklist.map(item => (
             <li key={item.id} className={item.completed ? 'completed' : ''}>
-              {item.completed ? 'âœ“' : 'â—‹'} {item.label}
+              {item.completed ? 'âœ“' : '○'} {item.label}
             </li>
           ))}
         </ul>

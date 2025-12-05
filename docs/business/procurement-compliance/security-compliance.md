@@ -208,7 +208,7 @@ Security and compliance features are integrated into the core platform:
 
 ---
 
-## ðŸ”— Progressive Disclosure Navigation
+## 📗 Progressive Disclosure Navigation
 
 ## For Executive Decision Making (Level 2)
 

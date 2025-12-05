@@ -24,15 +24,15 @@ PenguinMails is built on a **multi-tenant architecture** powered by NileDB, prov
 
 **Benefits:**
 
-- ðŸ¢ **Complete Isolation** - Tenant data is fully separated
+- 🏢 **Complete Isolation** - Tenant data is fully separated
 
-- ðŸš€ **Scalability** - Add unlimited tenants without infrastructure changes
+- 🚀 **Scalability** - Add unlimited tenants without infrastructure changes
 
-- ðŸ’° **Cost Efficiency** - Shared infrastructure reduces costs
+- 💰 **Cost Efficiency** - Shared infrastructure reduces costs
 
-- ðŸ”’ **Security** - Database-level tenant isolation
+- 🔒 **Security** - Database-level tenant isolation
 
-- âš¡ **Performance** - Per-tenant query optimization
+- ⚡ **Performance** - Per-tenant query optimization
 
 ---
 
@@ -42,18 +42,18 @@ PenguinMails is built on a **multi-tenant architecture** powered by NileDB, prov
 
 ```text
 Platform (PenguinMails)
-  â”œâ”€â”€ Tenant (Company/Organization)
-  â”‚   â”œâ”€â”€ Users (Team Members)
-  â”‚   â”œâ”€â”€ Workspaces (Projects/Clients)
-  â”‚   â”œâ”€â”€ Subscription (Billing)
-  â”‚   â””â”€â”€ Settings (Company-wide)
-  â”‚       â”œâ”€â”€ Workspace 1
-  â”‚       â”‚   â”œâ”€â”€ Campaigns
-  â”‚       â”‚   â”œâ”€â”€ Domains
-  â”‚       â”‚   â”œâ”€â”€ Templates
-  â”‚       â”‚   â””â”€â”€ Contacts
-  â”‚       â””â”€â”€ Workspace 2
-  â”‚           â””â”€â”€ ...
+  ├── Tenant (Company/Organization)
+  │   ├── Users (Team Members)
+  │   ├── Workspaces (Projects/Clients)
+  │   ├── Subscription (Billing)
+  │   └── Settings (Company-wide)
+  │       ├── Workspace 1
+  │       │   ├── Campaigns
+  │       │   ├── Domains
+  │       │   ├── Templates
+  │       │   └── Contacts
+  │       └── Workspace 2
+  │           └── ...
 
 ```
 
@@ -175,27 +175,27 @@ How tenant context is established:
 
 **What's Isolated:**
 
-- âœ… **Campaigns** - Tenant A cannot see Tenant B's campaigns
+- ✅ **Campaigns** - Tenant A cannot see Tenant B's campaigns
 
-- âœ… **Contacts** - Complete contact list separation
+- ✅ **Contacts** - Complete contact list separation
 
-- âœ… **Templates** - Email templates not shared
+- ✅ **Templates** - Email templates not shared
 
-- âœ… **Analytics** - Performance data isolated
+- ✅ **Analytics** - Performance data isolated
 
-- âœ… **Workspaces** - Workspace data tenant-scoped
+- ✅ **Workspaces** - Workspace data tenant-scoped
 
-- âœ… **Domains** - Domain configurations isolated
+- ✅ **Domains** - Domain configurations isolated
 
-- âœ… **Users** - User accounts tenant-specific
+- ✅ **Users** - User accounts tenant-specific
 
 **What's Shared (Platform-Level):**
 
-- âš™ï¸ **Application Code** - Same codebase for all tenants
+- ⚙️ **Application Code** - Same codebase for all tenants
 
-- âš™ï¸ **Infrastructure** - Shared servers (with isolation)
+- ⚙️ **Infrastructure** - Shared servers (with isolation)
 
-- âš™ï¸ **Global Suppression** - Platform-wide spam/abuse blocks
+- ⚙️ **Global Suppression** - Platform-wide spam/abuse blocks
 
 ---
 
@@ -412,19 +412,19 @@ Response:
 
 ```text
 User Request
-  â†“
+  ↓
 Extract JWT token
-  â†“
+  ↓
 Verify signature
-  â†“
+  ↓
 Extract tenant_id from token
-  â†“
+  ↓
 Validate user belongs to tenant
-  â†“
+  ↓
 Set tenant context for database
-  â†“
+  ↓
 Execute query (auto-filtered)
-  â†“
+  ↓
 Return results (tenant-scoped only)
 
 ```

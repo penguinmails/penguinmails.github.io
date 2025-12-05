@@ -224,10 +224,10 @@ persona: "Documentation Users"
 
 ### Conversion Metrics
 
-**Emails â†’ Opens**: [****]% | **Target**: >30% | **Status**: Critical/Warning/Excellent
-**Opens â†’ Replies**: [****]% | **Target**: >10% | **Status**: Critical/Warning/Excellent
-**Replies â†’ Meetings**: [****]% | **Target**: >50% | **Status**: Critical/Warning/Excellent
-**Meetings â†’ Opportunities**: [****]% | **Target**: >60% | **Status**: Critical/Warning/Excellent
+**Emails → Opens**: [****]% | **Target**: >30% | **Status**: Critical/Warning/Excellent
+**Opens → Replies**: [****]% | **Target**: >10% | **Status**: Critical/Warning/Excellent
+**Replies → Meetings**: [****]% | **Target**: >50% | **Status**: Critical/Warning/Excellent
+**Meetings → Opportunities**: [****]% | **Target**: >60% | **Status**: Critical/Warning/Excellent
 
 ### Revenue Attribution
 

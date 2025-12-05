@@ -44,24 +44,24 @@ For those concerns:
 
 ### What Lives in OLTP (Operational Billing)
 
-- âœ… Subscription records (`subscriptions`, `plans`, `payments`)
-- âœ… Stripe object references (`stripe_subscription_id`, `stripe_product_id`)
-- âœ… Current subscription state (`status`, `current_period_end`)
-- âœ… Billing lifecycle (`cancel_reason`, `cancel_date`)
+- ✅ Subscription records (`subscriptions`, `plans`, `payments`)
+- ✅ Stripe object references (`stripe_subscription_id`, `stripe_product_id`)
+- ✅ Current subscription state (`status`, `current_period_end`)
+- ✅ Billing lifecycle (`cancel_reason`, `cancel_date`)
 
 ### What Lives in OLAP (Analytics)
 
-- âœ… Email campaign metrics (`campaign_analytics.sent`, `delivered`, `opened`)
-- âœ… Mailbox performance (`mailbox_analytics.health_score`)
-- âœ… Lead engagement (`lead_analytics.replied`)
-- âœ… Aggregated usage summaries (`billing_analytics.emails_sent`)
+- ✅ Email campaign metrics (`campaign_analytics.sent`, `delivered`, `opened`)
+- ✅ Mailbox performance (`mailbox_analytics.health_score`)
+- ✅ Lead engagement (`lead_analytics.replied`)
+- ✅ Aggregated usage summaries (`billing_analytics.emails_sent`)
 
 ### How Billing Uses Analytics
 
 **When billing needs analytics data** (e.g., usage-based billing checks):
 
 ```typescript
-// âœ… CORRECT: Query OLAP from billing controller
+// ✅ CORRECT: Query OLAP from billing controller
 const usage = await olapClient.query(`
   SELECT SUM(sent) as total_sent
   FROM campaign_analytics
@@ -78,7 +78,7 @@ if (usage.total_sent > currentPlan.max_emails_per_month) {
 **Anti-pattern**:
 
 ```typescript
-// âŒ WRONG: Don't duplicate analytics in billing tables
+// ❌ WRONG: Don't duplicate analytics in billing tables
 // This violates separation of concerns and creates data redundancy
 ```
 
@@ -94,9 +94,9 @@ if (usage.total_sent > currentPlan.max_emails_per_month) {
 
 **NOT for**:
 
-- Detailed campaign metrics â†’ Use `campaign_analytics`
-- Email deliverability insights â†’ Use `mailbox_analytics`
-- Lead engagement scoring â†’ Use `lead_analytics`
+- Detailed campaign metrics → Use `campaign_analytics`
+- Email deliverability insights → Use `mailbox_analytics`
+- Lead engagement scoring → Use `lead_analytics`
 
 ---
 

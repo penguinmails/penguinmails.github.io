@@ -60,15 +60,15 @@ Collect minimum necessary data for email marketing functionality.
 
 #### Not Collected
 
-- âŒ Social Security Numbers
+- ❌ Social Security Numbers
 
-- âŒ Financial information (Stripe handles payments)
+- ❌ Financial information (Stripe handles payments)
 
-- âŒ Sensitive health data
+- ❌ Sensitive health data
 
-- âŒ Biometric data
+- ❌ Biometric data
 
-- âŒ Unnecessary tracking data
+- ❌ Unnecessary tracking data
 
 ---
 
@@ -128,7 +128,7 @@ Clear, accessible privacy policies that explain data practices.
 
 - Generated within 24 hours
 
-- Available via: Settings â†’ Privacy â†’ Export My Data
+- Available via: Settings → Privacy → Export My Data
 
 ##### Contact Data Export
 
@@ -138,7 +138,7 @@ Clear, accessible privacy policies that explain data practices.
 
 - Includes all custom fields
 
-- Available via: Leads â†’ Export
+- Available via: Leads → Export
 
 #### Data Correction
 
@@ -162,13 +162,13 @@ Clear, accessible privacy policies that explain data practices.
 
 ##### What Gets Deleted
 
-- âœ… User profile and credentials
+- ✅ User profile and credentials
 
-- âœ… Contact lists and segmentation
+- ✅ Contact lists and segmentation
 
-- âœ… Campaign data and templates
+- ✅ Campaign data and templates
 
-- âœ… All personally identifiable information (PII)
+- ✅ All personally identifiable information (PII)
 
 ##### What's Retained (Legal/Compliance)
 
@@ -395,23 +395,23 @@ Transparency about sub-processors and when data is shared.
 
 ##### When We Share Data
 
-- âœ… With user consent (integrations)
+- ✅ With user consent (integrations)
 
-- âœ… To provide requested services
+- ✅ To provide requested services
 
-- âœ… With sub-processors (listed above)
+- ✅ With sub-processors (listed above)
 
-- âœ… For legal compliance (subpoena, court order)
+- ✅ For legal compliance (subpoena, court order)
 
 ##### When We Don't Share Data
 
-- âŒ Selling to third parties
+- ❌ Selling to third parties
 
-- âŒ Marketing to non-users
+- ❌ Marketing to non-users
 
-- âŒ Sharing with affiliates
+- ❌ Sharing with affiliates
 
-- âŒ Unrelated business purposes
+- ❌ Unrelated business purposes
 
 ---
 

@@ -34,7 +34,7 @@ See [Queue Roadmap](/docs/features/queue/roadmap) for future enhancements.
 
 ## Features in This Category
 
-### âœ… Available Now
+### ✅ Available Now
 
 #### [Core Email Pipeline](/docs/features/queue/email-pipeline)
 
@@ -86,7 +86,7 @@ Job processing system for asynchronous tasks.
 
 **Status**: ACTIVE | **Priority**: Critical
 
-### ðŸ”œ Future Enhancements
+### �� Future Enhancements
 
 #### Queue Monitoring Dashboard
 
@@ -172,4 +172,4 @@ In-app and email notifications for users.
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

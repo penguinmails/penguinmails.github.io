@@ -15,21 +15,21 @@ keywords: "roadmap, future, enhancements"
 
 **Features:**
 
-- âœ… API key generation with bcrypt hashing
+- ✅ API key generation with bcrypt hashing
 
-- âœ… Vault storage for API keys
+- ✅ Vault storage for API keys
 
-- âœ… Permission scopes (send_email, read_analytics, manage_contacts)
+- ✅ Permission scopes (send_email, read_analytics, manage_contacts)
 
-- âœ… Tier-based rate limiting (60/300/1000 req/min)
+- ✅ Tier-based rate limiting (60/300/1000 req/min)
 
-- âœ… Frontend UI for key management
+- ✅ Frontend UI for key management
 
-- âœ… Usage tracking (requests, errors, last used)
+- ✅ Usage tracking (requests, errors, last used)
 
-- âœ… Audit logging
+- ✅ Audit logging
 
-- âœ… API documentation with code examples
+- ✅ API documentation with code examples
 
 **Timeline:** 2 weeks
 

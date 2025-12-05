@@ -14,7 +14,7 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 ## Progressive Disclosure Flow
 
-### ðŸ“‹ Procurement & Compliance Documents
+### 🗺️ Procurement & Compliance Documents
 
 - [**Procurement Guide**](/docs/business/procurement-compliance) - Enterprise evaluation framework (â‰¤200 lines)
 
@@ -36,7 +36,7 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 - [**Compliance Monitoring**](/docs/business/procurement-compliance) - Ongoing compliance monitoring (â‰¤300 lines)
 
-### ðŸŽ¯ Enterprise Evaluation Path
+### 🎯 Enterprise Evaluation Path
 
 1. **Procurement Start**: Begin with `procurement-guide` for evaluation framework
 
@@ -50,7 +50,7 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 6. **Ongoing Management**: Reference `compliance-monitoring` and `compliance-incident-response`
 
-### ðŸ¢ Enterprise Characteristics
+### 🏢 Enterprise Characteristics
 
 - **Content Depth**: Enterprise-focused (200-300 lines per document)
 
@@ -58,9 +58,9 @@ This directory contains comprehensive procurement guidance, compliance framework
 
 - **Target Audience**: Procurement, legal, compliance, and risk management teams
 
-- **Progression**: Executive overview â†’ detailed procedures â†’ technical implementation
+- **Progression**: Executive overview → detailed procedures → technical implementation
 
-### ðŸ”’ Compliance Coverage
+### 🔒 Compliance Coverage
 
 - **Regulatory Framework**: SOX, HIPAA, PCI DSS, GDPR compliance
 

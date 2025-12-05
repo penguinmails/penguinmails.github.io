@@ -877,19 +877,19 @@ async function checkBruteForce(event: AuditLog): Promise<SecurityAlert | null> {
 
 ### Current Compliance
 
-- âœ… **GDPR Ready**: Data encryption, audit logs, right to deletion
+- ✅ **GDPR Ready**: Data encryption, audit logs, right to deletion
 
-- âœ… **CCPA Ready**: Data privacy controls, opt-out mechanisms
+- ✅ **CCPA Ready**: Data privacy controls, opt-out mechanisms
 
-- âœ… **CAN-SPAM**: Unsubscribe management, sender authentication
+- ✅ **CAN-SPAM**: Unsubscribe management, sender authentication
 
 ### In Progress
 
-- ðŸ”„ **SOC 2 Type I** (Q2 2026)
+- 🔒 **SOC 2 Type I** (Q2 2026)
 
-- ðŸ”„ **ISO 27001** (Q3 2026)
+- 🔒 **ISO 27001** (Q3 2026)
 
-- ðŸ”„ **PCI DSS** (Q4 2026 - if handling card data directly)
+- 🔒 **PCI DSS** (Q4 2026 - if handling card data directly)
 
 ### Security Best Practices
 

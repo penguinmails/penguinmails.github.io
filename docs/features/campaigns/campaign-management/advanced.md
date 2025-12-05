@@ -19,28 +19,28 @@ keywords: "advanced campaigns, personalization, A/B testing, optimization"
 ```text
 
 START
-  â”‚
+  │
   â–¼
 Email 1: Introduction (Day 0)
-  â”‚
-  â”œâ”€ Opened? â”€â”€YESâ”€â”€â–¶ Email 2A: Engaged Path (Day 2)
-  â”‚                      â”‚
-  â””â”€ NO â”€â”€â–¶ Email 2B: Re-engagement (Day 3)
-                â”‚
+  │
+  ├─ Opened? ──YES──â–¶ Email 2A: Engaged Path (Day 2)
+  │                      │
+  └─ NO ──â–¶ Email 2B: Re-engagement (Day 3)
+                │
                 â–¼
             Email 3: Value Proposition (Day 5)
-                â”‚
-                â”œâ”€ Clicked? â”€â”€YESâ”€â”€â–¶ Email 4A: Demo Offer (Day 7)
-                â”‚                       â”‚
-                â””â”€ NO â”€â”€â–¶ Email 4B: Case Study (Day 8)
-                            â”‚
+                │
+                ├─ Clicked? ──YES──â–¶ Email 4A: Demo Offer (Day 7)
+                │                       │
+                └─ NO ──â–¶ Email 4B: Case Study (Day 8)
+                            │
                             â–¼
                         Email 5: Social Proof (Day 10)
-                            â”‚
-                            â”œâ”€ Replied? â”€â”€YESâ”€â”€â–¶ [Move to Sales]
-                            â”‚
-                            â””â”€ NO â”€â”€â–¶ Email 6: Final Offer (Day 14)
-                                        â”‚
+                            │
+                            ├─ Replied? ──YES──â–¶ [Move to Sales]
+                            │
+                            └─ NO ──â–¶ Email 6: Final Offer (Day 14)
+                                        │
                                         â–¼
                                     [END or Re-engage]
 
@@ -158,9 +158,9 @@ send_optimization:
 
 ```text
 
-Contact A: Historically opens at 7:30 AM â†’ Send at 7:15 AM
-Contact B: Historically opens at 2:00 PM â†’ Send at 1:45 PM
-Contact C: No history â†’ Send at industry benchmark (9:00 AM)
+Contact A: Historically opens at 7:30 AM → Send at 7:15 AM
+Contact B: Historically opens at 2:00 PM → Send at 1:45 PM
+Contact C: No history → Send at industry benchmark (9:00 AM)
 
 ```
 
@@ -210,25 +210,25 @@ Conversion Rate: 8-12% (industry average)
 ```text
 
 Campaign Actions:
-  â†’ Save as Template
+  → Save as Template
 
 Template Configuration:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ Template Name: "Custom Onboarding"                  â”‚
-â”‚ Category: Onboarding                                â”‚
-â”‚ Tags: SaaS, B2B, Welcome                            â”‚
-â”‚ Description: 7-day onboarding for new users         â”‚
-â”‚                                                     â”‚
-â”‚ â˜‘ Include sequence structure                        â”‚
-â”‚ â˜‘ Include email templates                           â”‚
-â”‚ â˜‘ Include conditional logic                         â”‚
-â”‚ â˜ Include specific content (use placeholders)       â”‚
-â”‚                                                     â”‚
-â”‚ Sharing:                                            â”‚
-â”‚ â—‹ Private (only me)                                 â”‚
-â”‚ â— Team (all workspace members)                      â”‚
-â”‚ â—‹ Public (template library)                         â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────┐
+│ Template Name: "Custom Onboarding"                  │
+│ Category: Onboarding                                │
+│ Tags: SaaS, B2B, Welcome                            │
+│ Description: 7-day onboarding for new users         │
+│                                                     │
+│ ☑ Include sequence structure                        │
+│ ☑ Include email templates                           │
+│ ☑ Include conditional logic                         │
+│ ☐ Include specific content (use placeholders)       │
+│                                                     │
+│ Sharing:                                            │
+│ ○ Private (only me)                                 │
+│ ● Team (all workspace members)                      │
+│ ○ Public (template library)                         │
+└─────────────────────────────────────────────────────┘
 
 ```
 
@@ -267,9 +267,9 @@ campaign_audience:
 
 ```text
 
-Day 1: 500 contacts match criteria â†’ Enrolled
-Day 5: 50 new contacts match â†’ Auto-enrolled at step 1
-Day 5: 20 contacts no longer match â†’ Removed from sequence
+Day 1: 500 contacts match criteria → Enrolled
+Day 5: 50 new contacts match → Auto-enrolled at step 1
+Day 5: 20 contacts no longer match → Removed from sequence
 
 ```
 
@@ -310,12 +310,12 @@ Draft Review (Creator)
   â†“
 Submit for Approval
   â†“
-Manager Review â”€â”€REJECTâ”€â”€â–¶ Back to Creator
-  â”‚
+Manager Review ──REJECT──â–¶ Back to Creator
+  │
   APPROVE
   â†“
-Compliance Review â”€â”€REJECTâ”€â”€â–¶ Back to Creator
-  â”‚
+Compliance Review ──REJECT──â–¶ Back to Creator
+  │
   APPROVE
   â†“
 Schedule & Launch
@@ -351,16 +351,16 @@ approval_workflow:
 ```text
 
 Campaign Editor:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ ðŸ‘¤ Sarah (editing Email 2)                          â”‚
-â”‚ ðŸ‘¤ Mike (viewing sequence)                          â”‚
-â”‚ ðŸ‘¤ Lisa (editing Email 3)                           â”‚
-â”‚                                                     â”‚
-â”‚ Activity Feed:                                      â”‚
-â”‚ â€¢ Sarah updated subject line (2 min ago)            â”‚
-â”‚ â€¢ Mike added comment on Email 1 (5 min ago)         â”‚
-â”‚ â€¢ Lisa uploaded new template (10 min ago)           â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────┐
+│ 👤 Sarah (editing Email 2)                          │
+│ 👤 Mike (viewing sequence)                          │
+│ 👤 Lisa (editing Email 3)                           │
+│                                                     │
+│ Activity Feed:                                      │
+│ â€¢ Sarah updated subject line (2 min ago)            │
+│ â€¢ Mike added comment on Email 1 (5 min ago)         │
+│ â€¢ Lisa uploaded new template (10 min ago)           │
+└─────────────────────────────────────────────────────┘
 
 ```
 

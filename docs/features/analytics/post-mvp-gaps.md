@@ -486,7 +486,7 @@ This document identifies the missing Post-MVP features for the Analytics & Repor
 
 ## Business Value
 
-- Cost savings: $29/month â†’ $0
+- Cost savings: $29/month → $0
 
 - Full control over delivery infrastructure
 

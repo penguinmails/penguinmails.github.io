@@ -14,7 +14,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Strategy**: Enable customers to build custom integrations immediately with excellent API design, then add pre-built vendor integrations (Salesforce, HubSpot, Zapier) on top of stable API foundation.
 
-**Timeline**: Q1 2026 (MVP) â†’ Q1-Q2 2026 (Vendor Integrations) â†’ Q3-Q4 2026 (Advanced Features)
+**Timeline**: Q1 2026 (MVP) → Q1-Q2 2026 (Vendor Integrations) → Q3-Q4 2026 (Advanced Features)
 
 ---
 
@@ -430,11 +430,11 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Example Zaps**:
 
-- Google Sheets â†’ PenguinMails (new row creates contact)
+- Google Sheets → PenguinMails (new row creates contact)
 
-- PenguinMails â†’ Slack (email replied sends Slack message)
+- PenguinMails → Slack (email replied sends Slack message)
 
-- Typeform â†’ PenguinMails (new submission creates contact and adds to segment)
+- Typeform → PenguinMails (new submission creates contact and adds to segment)
 
 ---
 
@@ -461,7 +461,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 - Tracking options (opens, clicks, delivery)
 
-- Routing rules builder (transactional â†’ Postmark, marketing â†’ Mailgun)
+- Routing rules builder (transactional → Postmark, marketing → Mailgun)
 
 - Webhook endpoint configuration for ESP events
 
@@ -618,26 +618,26 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Priority**: P0 - Critical
 **Complexity**: Medium (1 week)
-**Status**: âœ… Documented
+**Status**: ✅ Documented
 **Blocking**: Yes - Foundational architecture
 
 **Description**: Comprehensive Vault integration architecture documentation including secret structure, access policies, rotation procedures, and disaster recovery.
 
 **Deliverables**:
 
-- âœ… Vault secret structure definition
+- ✅ Vault secret structure definition
 
-- âœ… Access control policies (admin, tenant, system)
+- ✅ Access control policies (admin, tenant, system)
 
-- âœ… Secret rotation policies (SSH: 90 days, API keys: on-demand, SMTP: 180 days)
+- ✅ Secret rotation policies (SSH: 90 days, API keys: on-demand, SMTP: 180 days)
 
-- âœ… Backup and recovery procedures
+- ✅ Backup and recovery procedures
 
-- âœ… Vault initialization and unsealing procedures
+- ✅ Vault initialization and unsealing procedures
 
-- âœ… High availability setup (3-node cluster)
+- ✅ High availability setup (3-node cluster)
 
-- âœ… Monitoring and alerting configuration
+- ✅ Monitoring and alerting configuration
 
 **Reference**: [Vault Integration Architecture](/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture)
 
@@ -647,7 +647,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Priority**: P1 - High
 **Complexity**: Medium (1-2 weeks)
-**Status**: âœ… Documented, Implementation Pending
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: Partial - Enables tenant self-service
 
 **Description**: Store admin and tenant SSH keys in Vault during VPS provisioning with frontend UI for credential viewing.
@@ -675,7 +675,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Priority**: P1 - High
 **Complexity**: Medium (1 week)
-**Status**: âœ… Documented, Implementation Pending
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: Partial - Security best practice
 
 **Description**: Store SMTP admin credentials in Vault during MailU setup with secure retrieval for troubleshooting.
@@ -703,7 +703,7 @@ This document outlines the detailed implementation roadmap for PenguinMails inte
 
 **Priority**: P1 - High
 **Complexity**: Medium (1-2 weeks)
-**Status**: âœ… Documented, Implementation Pending
+**Status**: ✅ Documented, Implementation Pending
 **Blocking**: No - Can start with manual procedures
 
 **Description**: Automated Vault backup, disaster recovery procedures, and VPS migration workflow.

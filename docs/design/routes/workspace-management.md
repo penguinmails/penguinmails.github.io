@@ -8,7 +8,7 @@
 
   - [Agency Features](/docs/business/user-personas/agency-owners)
 
-- **User Journey**: Agency signs up â†’ Creates Workspace for "Client A" â†’ Invites Client A users.
+- **User Journey**: Agency signs up → Creates Workspace for "Client A" → Invites Client A users.
 
 ## 2. UI Patterns & Components (The "How")
 
@@ -58,11 +58,11 @@
 
     - **Health Score** (0-100):
 
-      - âœ… 90-100: Green "Healthy".
+      - ✅ 90-100: Green "Healthy".
 
       - âš ï¸ 70-89: Yellow "Needs Attention".
 
-      - âŒ <70: Red "Critical".
+      - ❌ <70: Red "Critical".
 
     - **Quick Stats**: "3 Active Campaigns", "1,200 Leads", "42% Open Rate".
 

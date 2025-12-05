@@ -1,4 +1,4 @@
-﻿# ðŸ“Š# 📊 Analytics & Reporting
+﻿# 📊 Analytics & Reporting
 
 Platform-wide analytics, performance tracking, and data-driven insights.
 
@@ -44,29 +44,29 @@ PenguinMails provides **two types of analytics**:
 
 **What's Available Today**:
 
-- âœ… Real-time performance dashboards (campaign-level)
+- ✅ Real-time performance dashboards (campaign-level)
 
-- âœ… Deliverability metrics tracking (inbox placement, bounce rates)
+- ✅ Deliverability metrics tracking (inbox placement, bounce rates)
 
-- âœ… Engagement tracking (opens, clicks - directional accuracy ~75%)
+- ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
 
-- âœ… Manual reporting with CSV/Excel/PDF export
+- ✅ Manual reporting with CSV/Excel/PDF export
 
-- âœ… KPI framework with business metrics (MRR, CAC, LTV, NRR)
+- ✅ KPI framework with business metrics (MRR, CAC, LTV, NRR)
 
-- âœ… OLAP analytics systems for real-time data processing
+- ✅ OLAP analytics systems for real-time data processing
 
 **What's Missing (MVP)**:
 
-- âŒ Dedicated analytics dashboard route (`/dashboard/analytics`)
+- ❌ Dedicated analytics dashboard route (`/dashboard/analytics`)
 
-- âŒ Deliverability deep-dive with provider-specific insights
+- ❌ Deliverability deep-dive with provider-specific insights
 
-- âŒ Engagement heatmaps for send time optimization
+- ❌ Engagement heatmaps for send time optimization
 
-- âŒ Comparative analytics for campaign comparison
+- ❌ Comparative analytics for campaign comparison
 
-- âŒ Alert configuration UI for performance monitoring
+- ❌ Alert configuration UI for performance monitoring
 
 **Timeline**: MVP completion Q1 2026, Enhanced Analytics Q1 2026
 
@@ -74,7 +74,7 @@ PenguinMails provides **two types of analytics**:
 
 ## Features in This Category
 
-### âœ… Available Now
+### ✅ Available Now
 
 #### [Core Analytics](/docs/features/analytics/core-analytics/overview)
 
@@ -108,7 +108,7 @@ Essential performance tracking and reporting with directional insights.
 
 ---
 
-### â³ In Development
+### ⏳ In Development
 
 #### [Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)
 
@@ -140,7 +140,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-### ðŸ”œ Coming Soon
+### 🔜 Coming Soon
 
 #### Missing MVP Features (Q1 2026)
 
@@ -152,7 +152,7 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ## Priority P1 (MVP Important)
 
-- **Engagement Heatmaps** - Visual day-of-week Ã— hour-of-day engagement patterns with optimal send time recommendations and timezone adjustment (4-6 days)
+- **Engagement Heatmaps** - Visual day-of-week × hour-of-day engagement patterns with optimal send time recommendations and timezone adjustment (4-6 days)
 
 - **Comparative Analytics** - Side-by-side campaign comparison (2-5 campaigns), A/B test result analysis with statistical significance, and export capabilities (5-7 days)
 
@@ -232,4 +232,4 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

@@ -32,39 +32,39 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 **Core Analytics (60% complete)**:
 
-- âœ… Real-time performance dashboards (campaign-level)
+- ✅ Real-time performance dashboards (campaign-level)
 
-- âœ… Deliverability metrics tracking (inbox placement, bounce rates)
+- ✅ Deliverability metrics tracking (inbox placement, bounce rates)
 
-- âœ… Engagement tracking (opens, clicks - directional accuracy ~75%)
+- ✅ Engagement tracking (opens, clicks - directional accuracy ~75%)
 
-- âœ… Manual reporting with CSV/Excel/PDF export
+- ✅ Manual reporting with CSV/Excel/PDF export
 
-- âœ… KPI framework with business metrics (MRR, CAC, LTV, NRR)
+- ✅ KPI framework with business metrics (MRR, CAC, LTV, NRR)
 
-- âœ… OLAP analytics systems for real-time data processing
+- ✅ OLAP analytics systems for real-time data processing
 
-- âœ… Scheduled reports (daily, weekly, monthly)
+- ✅ Scheduled reports (daily, weekly, monthly)
 
-- âœ… Google Sheets integration
+- ✅ Google Sheets integration
 
-- âœ… API-based programmatic export
+- ✅ API-based programmatic export
 
 ### Current Limitations
 
 **Missing MVP Features**:
 
-- âŒ No dedicated analytics dashboard route (`/dashboard/analytics`)
+- ❌ No dedicated analytics dashboard route (`/dashboard/analytics`)
 
-- âŒ Analytics embedded in campaign views only (no cross-campaign aggregation)
+- ❌ Analytics embedded in campaign views only (no cross-campaign aggregation)
 
-- âŒ No provider-specific deliverability breakdown (Gmail, Yahoo, Outlook)
+- ❌ No provider-specific deliverability breakdown (Gmail, Yahoo, Outlook)
 
-- âŒ No engagement heatmaps for send time optimization
+- ❌ No engagement heatmaps for send time optimization
 
-- âŒ No campaign comparison or A/B test analysis tools
+- ❌ No campaign comparison or A/B test analysis tools
 
-- âŒ No alert configuration UI for performance monitoring
+- ❌ No alert configuration UI for performance monitoring
 
 **Data Accuracy**:
 
@@ -182,7 +182,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 - [ ] Create engagement heatmap visualization component
 
-- [ ] Show day-of-week Ã— hour-of-day engagement grid (7 days Ã— 24 hours)
+- [ ] Show day-of-week × hour-of-day engagement grid (7 days × 24 hours)
 
 - [ ] Color-code cells by engagement level (green = high, yellow = medium, red = low)
 
@@ -776,7 +776,7 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 **Business Impact**:
 
-- Cost savings: $29/month â†’ $0
+- Cost savings: $29/month → $0
 
 - Full control over delivery
 

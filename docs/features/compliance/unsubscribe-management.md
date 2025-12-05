@@ -61,13 +61,13 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 ##### Benefits
 
-- âœ… Gmail/Outlook "Unsubscribe" button compatibility
+- ✅ Gmail/Outlook "Unsubscribe" button compatibility
 
-- âœ… Reduces spam complaints (users unsubscribe vs report spam)
+- ✅ Reduces spam complaints (users unsubscribe vs report spam)
 
-- âœ… Improves sender reputation
+- ✅ Improves sender reputation
 
-- âœ… Industry best practice
+- ✅ Industry best practice
 
 ### Global Suppression List
 
@@ -171,15 +171,15 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 **Visibility Requirements:**
 
-- âœ… Clearly visible and readable
+- ✅ Clearly visible and readable
 
-- âœ… Font size minimum 10px
+- ✅ Font size minimum 10px
 
-- âœ… Contrasting color from background
+- ✅ Contrasting color from background
 
-- âœ… Positioned in footer (standard location)
+- ✅ Positioned in footer (standard location)
 
-- âœ… Mobile-optimized (large tap target)
+- ✅ Mobile-optimized (large tap target)
 
 ---
 
@@ -591,11 +591,11 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 
 **Benchmarks:**
 
-- âœ… Good: < 0.2% unsubscribe rate
+- ✅ Good: < 0.2% unsubscribe rate
 
 - âš ï¸ Concerning: 0.2% - 0.5% unsubscribe rate
 
-- âŒ Poor: > 0.5% unsubscribe rate
+- ❌ Poor: > 0.5% unsubscribe rate
 
 ---
 

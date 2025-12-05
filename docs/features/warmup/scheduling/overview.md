@@ -65,12 +65,12 @@ Warmup Scheduling automates the process of establishing sender reputation for ne
 
 ```text
 
-Warmup â†’ Start New Warmup
+Warmup → Start New Warmup
 
 Select Email Account:
-  â—‹ sarah@penguinmails.com (Connected 2 days ago)
-  â—‹ support@penguinmails.com (Connected 1 day ago)
-  â— sales@penguinmails.com (Connected today)
+  ○ sarah@penguinmails.com (Connected 2 days ago)
+  ○ support@penguinmails.com (Connected 1 day ago)
+  ● sales@penguinmails.com (Connected today)
 
 Account Status:
   Domain: penguinmails.com
@@ -78,7 +78,7 @@ Account Status:
   Age: New (0 days)
   Current Reputation: Unknown
 
-[Continue â†’]
+[Continue →]
 
 ```
 
@@ -88,28 +88,28 @@ Account Status:
 
 Select Warmup Plan:
 
-â— Standard Warmup (Recommended)
+● Standard Warmup (Recommended)
   Duration: 6 weeks
   Starting Volume: 10 emails/day
   Peak Volume: 500 emails/day
   Best for: Most use cases
 
-â—‹ Aggressive Warmup
+○ Aggressive Warmup
   Duration: 4 weeks
   Starting Volume: 20 emails/day
   Peak Volume: 1,000 emails/day
   Best for: Established domains, urgent needs
 
-â—‹ Conservative Warmup
+○ Conservative Warmup
   Duration: 8 weeks
   Starting Volume: 5 emails/day
   Peak Volume: 300 emails/day
   Best for: New domains, high-value reputation
 
-â—‹ Custom Plan
+○ Custom Plan
   Configure your own schedule
 
-[Continue â†’]
+[Continue →]
 
 ```
 
@@ -120,13 +120,13 @@ Select Warmup Plan:
 Warmup Configuration
 
 Engagement Simulation:
-  â˜‘ Simulate opens (70% open rate target)
-  â˜‘ Simulate clicks (15% click rate target)
-  â˜‘ Simulate replies (5% reply rate target)
-  â˜ Simulate forwards (2% forward rate)
+  ☑ Simulate opens (70% open rate target)
+  ☑ Simulate clicks (15% click rate target)
+  ☑ Simulate replies (5% reply rate target)
+  ☐ Simulate forwards (2% forward rate)
 
 Warmup Pool:
-  â— Use PenguinMails warmup network (Recommended)
+  ● Use PenguinMails warmup network (Recommended)
 
     - 10,000+ verified warmup accounts
 
@@ -134,16 +134,16 @@ Warmup Pool:
 
     - Best deliverability
 
-  â—‹ Use custom warmup list
+  ○ Use custom warmup list
 
     - Upload your own contacts
 
     - Manual engagement required
 
 Safety Settings:
-  â˜‘ Auto-pause on bounce rate > 5%
-  â˜‘ Auto-pause on spam complaints > 0.1%
-  â˜‘ Daily send limit: 500 emails
+  ☑ Auto-pause on bounce rate > 5%
+  ☑ Auto-pause on spam complaints > 0.1%
+  ☑ Daily send limit: 500 emails
 
 [Start Warmup]
 
@@ -188,7 +188,7 @@ Health Score: 95/100 âœ“ Excellent
 
 Days 1-14: Building Initial Reputation
 
-Daily Volume: 10 â†’ 100 emails/day
+Daily Volume: 10 → 100 emails/day
 Focus: Establish sending pattern
 
 Activities:
@@ -215,7 +215,7 @@ Goals:
 
 Days 15-28: Scaling Volume
 
-Daily Volume: 100 â†’ 300 emails/day
+Daily Volume: 100 → 300 emails/day
 Focus: Gradual increase
 
 Activities:
@@ -242,7 +242,7 @@ Goals:
 
 Days 29-42: Reaching Target Volume
 
-Daily Volume: 300 â†’ 500 emails/day
+Daily Volume: 300 → 500 emails/day
 Focus: Stabilize at target
 
 Activities:
@@ -272,15 +272,15 @@ Goals:
 Pause Warmup: sales@penguinmails.com
 
 Reason:
-  â—‹ Temporary hold (will resume)
-  â—‹ Reputation issue detected
-  â— Manual review needed
-  â—‹ Other
+  ○ Temporary hold (will resume)
+  ○ Reputation issue detected
+  ● Manual review needed
+  ○ Other
 
 Resume Plan:
-  â—‹ Resume from current day
-  â— Restart current week
-  â—‹ Restart from beginning
+  ○ Resume from current day
+  ● Restart current week
+  ○ Restart from beginning
 
 [Pause Warmup]
 

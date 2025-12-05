@@ -693,7 +693,7 @@ Research spike to explore advanced lead analytics capabilities after 12+ months 
 
 ## Summary
 
-**Lead Management Status**: âœ… Comprehensive documentation, MVP simplified to core features
+**Lead Management Status**: ✅ Comprehensive documentation, MVP simplified to core features
 
 **Strengths**:
 
@@ -740,7 +740,7 @@ Research spike to explore advanced lead analytics capabilities after 12+ months 
 - Lead Analytics Improvements (P3, Q4 2027, Research Spike)
 
 **Total MVP Effort**: 3-5 weeks (reduced from 8-12 weeks)
-**Critical Path**: Import/Export â†’ Basic Static Lists
+**Critical Path**: Import/Export → Basic Static Lists
 
 **Recommendation**:
 Lead management MVP simplified to essential features only. Complex features (dynamic segmentation, lead scoring, activity timeline, bulk operations) moved to Post-MVP due to implementation complexity and unclear requirements. This allows faster time-to-market with core functionality:

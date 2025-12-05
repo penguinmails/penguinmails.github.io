@@ -172,28 +172,28 @@ npm install -g @typescript-eslint/cli prettier
 ```text
 
 penguinmails/
-â”œâ”€â”€ app/                          # Main application code
-â”‚   â”œâ”€â”€ api/                      # REST API endpoints
-â”‚   â”œâ”€â”€ core/                     # Core business logic
-â”‚   â”œâ”€â”€ ai/                       # AI/ML features
-â”‚   â”œâ”€â”€ analytics/                # Analytics and reporting
-â”‚   â”œâ”€â”€ email/                    # Email processing
-â”‚   â”œâ”€â”€ web/                      # Web interface
-â”‚   â””â”€â”€ mobile/                   # Mobile applications
-â”œâ”€â”€ docs/                         # Documentation
-â”‚   â”œâ”€â”€ api/                      # API documentation
-â”‚   â”œâ”€â”€ user/                     # User documentation
-â”‚   â””â”€â”€ development/              # Developer documentation
-â”œâ”€â”€ tests/                        # Test suites
-â”‚   â”œâ”€â”€ unit/                     # Unit tests
-â”‚   â”œâ”€â”€ integration/              # Integration tests
-â”‚   â””â”€â”€ e2e/                      # End-to-end tests
-â”œâ”€â”€ scripts/                      # Development scripts
-â”œâ”€â”€ migrations/                   # Database migrations
-â”œâ”€â”€ package.json                  # Node.js dependencies and scripts
-â”œâ”€â”€ tsconfig.json                # TypeScript configuration
-â”œâ”€â”€ tailwind.config.js           # CSS framework configuration
-â””â”€â”€ docker/                       # Docker configuration
+├── app/                          # Main application code
+│   ├── api/                      # REST API endpoints
+│   ├── core/                     # Core business logic
+│   ├── ai/                       # AI/ML features
+│   ├── analytics/                # Analytics and reporting
+│   ├── email/                    # Email processing
+│   ├── web/                      # Web interface
+│   └── mobile/                   # Mobile applications
+├── docs/                         # Documentation
+│   ├── api/                      # API documentation
+│   ├── user/                     # User documentation
+│   └── development/              # Developer documentation
+├── tests/                        # Test suites
+│   ├── unit/                     # Unit tests
+│   ├── integration/              # Integration tests
+│   └── e2e/                      # End-to-end tests
+├── scripts/                      # Development scripts
+├── migrations/                   # Database migrations
+├── package.json                  # Node.js dependencies and scripts
+├── tsconfig.json                # TypeScript configuration
+├── tailwind.config.js           # CSS framework configuration
+└── docker/                       # Docker configuration
 
 ```
 

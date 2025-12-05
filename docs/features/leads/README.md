@@ -1,4 +1,4 @@
-﻿# ðŸ‘¥ Leads & Lists
+﻿# 👥 Leads & Lists
 
 Lead management, contact lists, and segmentation (scoped by tenant).
 
@@ -22,7 +22,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ## Features in This Category
 
-### âœ… Available Now (Documented)
+### ✅ Available Now (Documented)
 
 - **[Leads Management](/docs/features/leads/leads-management)** - Contact storage and segmentation
 
@@ -32,13 +32,13 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **[Import/Export](/docs/features/leads/import-export/overview)** - Bulk contact import/export with field mapping
 
-### ðŸš§ MVP Implementation Required (Q1 2026)
+### 🚧 MVP Implementation Required (Q1 2026)
 
 - **Contact Import/Export System** - Complete CSV/Excel import with validation and duplicate detection
 
 - **Basic Static Segmentation** - Manual lists for campaign targeting
 
-### ðŸ”œ Post-MVP Enhancements (Q1-Q3 2026)
+### �� Post-MVP Enhancements (Q1-Q3 2026)
 
 - **Dynamic Contact Segmentation** (Q1 2026) - Rule-based filtering with filter builder UI
 
@@ -58,7 +58,7 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 - **Contact Notes & Tasks** (Q3 2026) - Sales follow-up and collaboration
 
-### ðŸ”® Future Research (Q3 2026+)
+### 🔮 Future Research (Q3 2026+)
 
 - **Third-Party Integrations Research Spike** (Q3-Q4 2026) - Evaluate CRM sync, lead enrichment, advanced email validation
 
@@ -96,4 +96,4 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

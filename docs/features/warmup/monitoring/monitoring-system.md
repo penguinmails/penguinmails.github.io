@@ -35,26 +35,26 @@ keywords: "monitoring, system, architecture"
 
 Reputation Dashboard
 
-Overall Health: 87/100 (Good) âœ“
+Overall Health: 87/100 (Good) ✅
 
 Domains (3):
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ penguinmails.com          92/100  âœ“ Excellent     â”‚
-â”‚ marketing.penguinmails.com 85/100  âœ“ Good         â”‚
-â”‚ sales.penguinmails.com    78/100  âš  Fair          â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────────────┐
+│ penguinmails.com          92/100  ✅ Excellent     │
+│ marketing.penguinmails.com 85/100  ✅ Good         │
+│ sales.penguinmails.com    78/100  ⚠ Fair          │
+└─────────────────────────────────────────────────────────────┘
 
 Email Accounts (5):
-  âœ“ 4 Healthy
-  âš  1 Warning
+  ✅ 4 Healthy
+  ⚠ 1 Warning
 
 Blacklists:
-  âœ“ Clean (0/52 lists)
+  ✅ Clean (0/52 lists)
   Last checked: 5 minutes ago
 
 Recent Alerts:
-  âš  sales.penguinmails.com: Bounce rate elevated (4.2%)
-  â„¹ Warmup completed: support@penguinmails.com
+  ⚠ sales.penguinmails.com: Bounce rate elevated (4.2%)
+  ✅ Warmup completed: support@penguinmails.com
 
 [View Details] [Run Full Scan] [Export Report]
 
@@ -65,29 +65,29 @@ Recent Alerts:
 ```text
 
 Domain: penguinmails.com
-Health Score: 92/100 (Excellent) âœ“
+Health Score: 92/100 (Excellent) ✅
 
 Reputation Metrics:
-  Sender Score: 95/100 âœ“
-  Domain Authority: 88/100 âœ“
-  IP Reputation: 90/100 âœ“
+  Sender Score: 95/100 ✅
+  Domain Authority: 88/100 ✅
+  IP Reputation: 90/100 ✅
 
 Authentication:
-  SPF: âœ“ Pass
-  DKIM: âœ“ Pass
-  DMARC: âœ“ Pass (p=quarantine)
+  SPF: ✅ Pass
+  DKIM: ✅ Pass
+  DMARC: ✅ Pass (p=quarantine)
 
 Deliverability:
-  Inbox Rate: 94% âœ“
-  Spam Rate: 3% âœ“
-  Bounce Rate: 1.8% âœ“
+  Inbox Rate: 94% ✅
+  Spam Rate: 3% ✅
+  Bounce Rate: 1.8% ✅
 
 Engagement:
   Open Rate: 28% (Industry avg: 21%)
   Click Rate: 4.2% (Industry avg: 2.8%)
 
 Blacklists:
-  âœ“ Clean (0/52 lists)
+  ✅ Clean (0/52 lists)
 
 Trend: â†— Improving (+3 points this week)
 
@@ -103,30 +103,30 @@ Trend: â†— Improving (+3 points this week)
 
 Blacklist Monitor
 
-Status: âœ“ All Clear
+Status: ✅ All Clear
 
 Checked Lists (52):
-  âœ“ Spamhaus ZEN
-  âœ“ Spamhaus DBL
-  âœ“ Spamhaus PBL
-  âœ“ Spamcop
-  âœ“ SORBS
-  âœ“ Barracuda
-  âœ“ SURBL
-  âœ“ URIBL
+  ✅ Spamhaus ZEN
+  ✅ Spamhaus DBL
+  ✅ Spamhaus PBL
+  ✅ Spamcop
+  ✅ SORBS
+  ✅ Barracuda
+  ✅ SURBL
+  ✅ URIBL
   ... and 44 more
 
 Last Scan: 5 minutes ago
 Next Scan: in 55 minutes
 
 Domains Monitored:
-  âœ“ penguinmails.com
-  âœ“ marketing.penguinmails.com
-  âœ“ sales.penguinmails.com
+  ✅ penguinmails.com
+  ✅ marketing.penguinmails.com
+  ✅ sales.penguinmails.com
 
 IPs Monitored:
-  âœ“ 192.0.2.100 (Dedicated)
-  âœ“ 192.0.2.101 (Dedicated)
+  ✅ 192.0.2.100 (Dedicated)
+  ✅ 192.0.2.101 (Dedicated)
 
 [Run Scan Now] [Configure Alerts]
 
@@ -136,7 +136,7 @@ IPs Monitored:
 
 ```text
 
-âš  BLACKLIST ALERT
+⚠ BLACKLIST ALERT
 
 Domain: sales.penguinmails.com
 Listed on: Spamcop
@@ -149,9 +149,9 @@ Details:
   Estimated Impact: Medium
 
 Immediate Actions Taken:
-  âœ“ Paused sending from sales@penguinmails.com
-  âœ“ Notified admin team
-  âœ“ Created support ticket
+  ✅ Paused sending from sales@penguinmails.com
+  ✅ Notified admin team
+  ✅ Created support ticket
 
 Recommended Actions:
 
@@ -175,7 +175,7 @@ Recommended Actions:
 
 Active Alerts (2):
 
-âš  High Bounce Rate
+⚠ High Bounce Rate
   Domain: sales.penguinmails.com
   Current: 4.2% (Threshold: 3%)
   Detected: 1 hour ago
@@ -185,7 +185,7 @@ Active Alerts (2):
 
   [View Details] [Dismiss]
 
-â„¹ Warmup Milestone
+✅ Warmup Milestone
   Account: support@penguinmails.com
   Status: Reached 50% of target volume
   Day: 21/42
@@ -203,24 +203,24 @@ Alert Settings
 Email Notifications:
   Send to: admin@penguinmails.com
 
-  â˜‘ Blacklist detections (Immediate)
-  â˜‘ High bounce rate (> 3%)
-  â˜‘ High spam rate (> 0.5%)
-  â˜‘ Low engagement (< 10% open rate)
-  â˜‘ Authentication failures
-  â˜ Daily summary reports
+  ☑ Blacklist detections (Immediate)
+  ☑ High bounce rate (> 3%)
+  ☑ High spam rate (> 0.5%)
+  ☑ Low engagement (< 10% open rate)
+  ☑ Authentication failures
+  ☐ Daily summary reports
 
 Slack Notifications:
   Webhook: https://hooks.slack.com/...
   Channel: #deliverability-alerts
 
-  â˜‘ Critical alerts only
-  â—‹ All alerts
+  ☑ Critical alerts only
+  ○ All alerts
 
 Auto-Actions:
-  â˜‘ Pause sending on blacklist detection
-  â˜‘ Pause sending on high bounce rate (> 5%)
-  â˜‘ Pause sending on spam complaints (> 0.1%)
+  ☑ Pause sending on blacklist detection
+  ☑ Pause sending on high bounce rate (> 5%)
+  ☑ Pause sending on spam complaints (> 0.1%)
 
 [Save Settings]
 
@@ -240,26 +240,26 @@ Sender Score: 95/100
 
 Components:
   Infrastructure (30 points):
-    SPF/DKIM/DMARC: 30/30 âœ“
+    SPF/DKIM/DMARC: 30/30 ✅
 
   Volume & Consistency (25 points):
-    Sending Pattern: 23/25 âœ“
-    Volume Stability: 22/25 âœ“
+    Sending Pattern: 23/25 ✅
+    Volume Stability: 22/25 ✅
 
   Engagement (25 points):
-    Open Rate: 20/25 âœ“
-    Click Rate: 18/25 âœ“
+    Open Rate: 20/25 ✅
+    Click Rate: 18/25 ✅
 
   Complaints (20 points):
-    Bounce Rate: 19/20 âœ“
-    Spam Rate: 20/20 âœ“
+    Bounce Rate: 19/20 ✅
+    Spam Rate: 20/20 ✅
 
 Compared to Industry:
   Your Score: 95/100
   Industry Avg: 72/100
   Top 10%: 88/100
 
-  You're in the top 5% âœ“
+  You're in the top 5% ✅
 
 ```
 
@@ -270,7 +270,7 @@ Compared to Industry:
 Reputation by Email Provider
 
 Gmail:
-  Reputation: Excellent âœ“
+  Reputation: Excellent ✅
   Inbox Rate: 96%
   Spam Rate: 2%
   Postmaster Tools: Connected
@@ -278,20 +278,20 @@ Gmail:
   IP Reputation: High
 
 Outlook/Microsoft:
-  Reputation: Good âœ“
+  Reputation: Good ✅
   Inbox Rate: 92%
   Spam Rate: 4%
   SNDS: Connected
   Junk Rate: Low
 
 Yahoo:
-  Reputation: Good âœ“
+  Reputation: Good ✅
   Inbox Rate: 90%
   Spam Rate: 5%
   Complaint Feedback Loop: Active
 
 Apple Mail:
-  Reputation: Excellent âœ“
+  Reputation: Excellent ✅
   Inbox Rate: 95%
   Estimated Spam Rate: 3%
 
@@ -306,23 +306,23 @@ Apple Mail:
 Blacklist Coverage (52 lists)
 
 IP-Based Lists (24):
-  âœ“ Spamhaus ZEN
-  âœ“ Spamhaus PBL
-  âœ“ Spamcop
-  âœ“ SORBS
-  âœ“ Barracuda
+  ✅ Spamhaus ZEN
+  ✅ Spamhaus PBL
+  ✅ Spamcop
+  ✅ SORBS
+  ✅ Barracuda
   ... and 19 more
 
 Domain-Based Lists (18):
-  âœ“ Spamhaus DBL
-  âœ“ SURBL
-  âœ“ URIBL
-  âœ“ Spamhaus DQS
+  ✅ Spamhaus DBL
+  ✅ SURBL
+  ✅ URIBL
+  ✅ Spamhaus DQS
   ... and 14 more
 
 Combined Lists (10):
-  âœ“ Composite Blocking List (CBL)
-  âœ“ PSBL
-  âœ“ Invaluement
+  ✅ Composite Blocking List (CBL)
+  ✅ PSBL
+  ✅ Invaluement
   ... and 7 more
 

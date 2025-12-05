@@ -130,7 +130,7 @@ The system continuously monitors the health and reputation of every sending IP.
 
 **Vertical & Horizontal Scaling:**
 
-- **Vertical**: Upgrade VPS plan (e.g., 1GB â†’ 2GB RAM) via API if queue depth remains high.
+- **Vertical**: Upgrade VPS plan (e.g., 1GB → 2GB RAM) via API if queue depth remains high.
 
 - **Horizontal**: Provision additional nodes when total system throughput reaches 80% capacity.
 

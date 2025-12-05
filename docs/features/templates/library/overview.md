@@ -55,19 +55,19 @@ The Template Library provides a curated collection of pre-built, responsive emai
 
 ```text
 
-Templates â†’ Library
+Templates → Library
 
 Categories:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚ ðŸŽ‰ Welcome Series (24 templates)                    â”‚
-â”‚ ðŸ“° Newsletters (18 templates)                       â”‚
-â”‚ ðŸŽ Promotional (32 templates)                       â”‚
-â”‚ ðŸ“§ Transactional (16 templates)                     â”‚
-â”‚ ðŸ“… Events & Webinars (12 templates)                 â”‚
-â”‚ ðŸŽ“ Educational (14 templates)                       â”‚
-â”‚ ðŸ’¼ B2B Sales (10 templates)                         â”‚
-â”‚ ðŸ›’ E-commerce (20 templates)                        â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌─────────────────────────────────────────────────────┐
+│ 🎉 Welcome Series (24 templates)                    │
+│ 📰 Newsletters (18 templates)                       │
+│ 🎁 Promotional (32 templates)                       │
+│ 📧 Transactional (16 templates)                     │
+│ ⏳ Events & Webinars (12 templates)                 │
+│ 🎓 Educational (14 templates)                       │
+│ 💼 B2B Sales (10 templates)                         │
+│ 🚒 E-commerce (20 templates)                        │
+└─────────────────────────────────────────────────────┘
 
 Filter by:
   Industry: [All â–¼] [SaaS] [E-commerce] [B2B] [Agency]
@@ -82,23 +82,23 @@ Sort by: [Most Popular â–¼] [Newest] [Highest Rated]
 ```text
 
 Welcome Email - Clean & Simple
-â˜…â˜…â˜…â˜…â˜… 4.8 (1,247 uses)
+★★★★★ 4.8 (1,247 uses)
 
 Preview:
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚         [YOUR LOGO]              â”‚
-â”‚                                  â”‚
-â”‚    Welcome to [Company]!         â”‚
-â”‚                                  â”‚
-â”‚    We're excited to have you     â”‚
-â”‚    on board. Here's what to      â”‚
-â”‚    do next...                    â”‚
-â”‚                                  â”‚
-â”‚    [Get Started â†’]               â”‚
-â”‚                                  â”‚
-â”‚    Need help? Contact us         â”‚
-â”‚    Follow us: [f] [t] [in]      â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+┌──────────────────────────────────┐
+│         [YOUR LOGO]              │
+│                                  │
+│    Welcome to [Company]!         │
+│                                  │
+│    We're excited to have you     │
+│    on board. Here's what to      │
+│    do next...                    │
+│                                  │
+│    [Get Started →]               │
+│                                  │
+│    Need help? Contact us         │
+│    Follow us: [f] [t] [in]      │
+└──────────────────────────────────┘
 
 Details:
   Category: Welcome Series
@@ -129,7 +129,7 @@ Save As:
   Description: Welcome email for new signups
   Workspace: [PenguinMails â–¼]
 
-[Continue â†’]
+[Continue →]
 
 ```
 
@@ -144,14 +144,14 @@ Logo:
   Current: [penguinmails-logo.png]
 
 Colors:
-  Primary Color: [#0066cc] ðŸŽ¨
-  Secondary Color: [#6c757d] ðŸŽ¨
-  Text Color: [#333333] ðŸŽ¨
-  Background: [#ffffff] ðŸŽ¨
+  Primary Color: [#0066cc] 🎨
+  Secondary Color: [#6c757d] 🎨
+  Text Color: [#333333] 🎨
+  Background: [#ffffff] 🎨
 
-  â˜‘ Apply to all buttons
-  â˜‘ Apply to all links
-  â˜‘ Apply to headers
+  ☑ Apply to all buttons
+  ☑ Apply to all links
+  ☑ Apply to headers
 
 Fonts:
   Heading Font: [Inter â–¼]
@@ -184,7 +184,7 @@ We're excited to have you on board. Here's what to do next:
 
 3. Create your first campaign
 
-[Get Started â†’]
+[Get Started →]
 
 Need help? Our support team is here for you.
 

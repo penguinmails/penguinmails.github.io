@@ -20,21 +20,21 @@ keywords: "field mapping, validation, error handling, data quality"
 auto_mapping:
   exact_match:
 
-    - email â†’ email
+    - email → email
 
-    - first_name â†’ firstName
+    - first_name → firstName
 
-    - firstname â†’ firstName
+    - firstname → firstName
 
-    - fname â†’ firstName
+    - fname → firstName
 
   fuzzy_match:
 
-    - company_name â†’ company (80% similarity)
+    - company_name → company (80% similarity)
 
-    - org â†’ company
+    - org → company
 
-    - organization â†’ company
+    - organization → company
 
   custom_field_detection:
 
@@ -51,15 +51,15 @@ auto_mapping:
 Custom Field Mapping:
 
 CSV Column: "annual_revenue"
-  â†’ Map to: [Create New Custom Field]
+  → Map to: [Create New Custom Field]
      Field Name: annual_revenue
-     Field Type: â—‹ Text  â— Number  â—‹ Date  â—‹ Boolean
+     Field Type: ○ Text  ● Number  ○ Date  ○ Boolean
      Validation: Min: 0, Max: 1000000000
 
 CSV Column: "subscription_tier"
-  â†’ Map to: [Create New Custom Field]
+  → Map to: [Create New Custom Field]
      Field Name: subscription_tier
-     Field Type: â—‹ Text  â— Select  â—‹ Multi-Select
+     Field Type: ○ Text  ● Select  ○ Multi-Select
      Options: Free, Starter, Pro, Enterprise
 
 ```
@@ -69,7 +69,7 @@ CSV Column: "subscription_tier"
 ```yaml
 transformations:
   phone:
-    normalize: true  # (555) 123-4567 â†’ +15551234567
+    normalize: true  # (555) 123-4567 → +15551234567
     default_country: US
 
   tags:
@@ -82,7 +82,7 @@ transformations:
     timezone: "America/New_York"
 
   company:
-    title_case: true  # "acme inc" â†’ "Acme Inc"
+    title_case: true  # "acme inc" → "Acme Inc"
 
 ```
 
@@ -165,10 +165,10 @@ field_validation:
 When duplicate email found:
 
 Strategy: Smart Merge
-  â—‹ Keep existing values (skip import)
-  â— Update with new values (overwrite)
-  â—‹ Merge non-empty values (fill blanks)
-  â—‹ Create duplicate contact
+  ○ Keep existing values (skip import)
+  ● Update with new values (overwrite)
+  ○ Merge non-empty values (fill blanks)
+  ○ Create duplicate contact
 
 Per-Field Strategy:
   Email: [Keep existing]
@@ -215,10 +215,10 @@ Export Contacts
 
 Segment: Hot Leads (Score 75+)
 Filters:
-  â˜‘ Lead Score: 75-100
-  â˜‘ Last Activity: Within 30 days
-  â˜‘ Subscription: Active
-  â˜‘ Exclude: Bounced emails
+  ☑ Lead Score: 75-100
+  ☑ Last Activity: Within 30 days
+  ☑ Subscription: Active
+  ☑ Exclude: Bounced emails
 
 Result: 1,247 contacts
 
@@ -257,34 +257,34 @@ Advanced Filter:
 Select Fields to Export:
 
 Standard Fields:
-  â˜‘ Email
-  â˜‘ First Name
-  â˜‘ Last Name
-  â˜‘ Company
-  â˜‘ Phone
-  â˜‘ Created Date
-  â˜‘ Last Activity
-  â˜‘ Lead Score
-  â˜‘ Tags
-  â˜ Internal Notes
+  ☑ Email
+  ☑ First Name
+  ☑ Last Name
+  ☑ Company
+  ☑ Phone
+  ☑ Created Date
+  ☑ Last Activity
+  ☑ Lead Score
+  ☑ Tags
+  ☐ Internal Notes
 
 Custom Fields:
-  â˜‘ Industry
-  â˜‘ Company Size
-  â˜‘ Annual Revenue
-  â˜ Account Type
-  â˜ Trial End Date
+  ☑ Industry
+  ☑ Company Size
+  ☑ Annual Revenue
+  ☐ Account Type
+  ☐ Trial End Date
 
 Engagement Metrics:
-  â˜‘ Total Emails Sent
-  â˜‘ Total Opens
-  â˜‘ Total Clicks
-  â˜‘ Last Opened Date
-  â˜ Average Open Rate
-  â˜ Average Click Rate
+  ☑ Total Emails Sent
+  ☑ Total Opens
+  ☑ Total Clicks
+  ☑ Last Opened Date
+  ☐ Average Open Rate
+  ☐ Average Click Rate
 
 Segments:
-  â˜‘ Active Segments (comma-separated)
+  ☑ Active Segments (comma-separated)
 
 ```
 
@@ -349,7 +349,7 @@ Features:
 Import History
 
 Date                User           File               Status    Records
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+───────────────────────────────────────────────────────────────────
 2025-11-25 14:30   Sarah Johnson  contacts_nov.csv   âœ“ Success  4,892
 2025-11-18 09:15   Michael Chen   leads_q4.xlsx      âœ“ Success  2,341
 2025-11-10 16:45   Sarah Johnson  trial_users.csv    âš  Partial  1,450 / 1,500
@@ -385,11 +385,11 @@ Summary:
   Skipped (Duplicates): 95 (1.9%)
 
 Mapping:
-  email â†’ Email Address
-  first_name â†’ First Name
-  last_name â†’ Last Name
-  company â†’ Company
-  tags â†’ Tags
+  email → Email Address
+  first_name → First Name
+  last_name → Last Name
+  company → Company
+  tags → Tags
 
 Tags Added:
 
@@ -424,8 +424,8 @@ Rollback Import: contacts_nov.csv
 This action CANNOT be undone.
 
 Confirm rollback:
-  â˜ I understand this will delete 4,460 contacts
-  â˜ I have exported a backup
+  ☐ I understand this will delete 4,460 contacts
+  ☐ I have exported a backup
 
 [Cancel] [Confirm Rollback]
 

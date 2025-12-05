@@ -830,7 +830,7 @@ This document provides a detailed timeline for enterprise features development, 
 
 - Infrastructure: $500-1,000/month (Zendesk, Intercom, phone system)
 
-- Staffing: $200K-300K/year (2 engineers) â†’ $800K-1.2M/year (full team by Q1 2027)
+- Staffing: $200K-300K/year (2 engineers) → $800K-1.2M/year (full team by Q1 2027)
 
 ---
 

@@ -16,12 +16,12 @@ SMTP credentials are stored in Vault at the following path:
 ```text
 
 vault/smtp/{tenant_id}/admin/
-â”œâ”€â”€ username          # MailU admin username
-â”œâ”€â”€ password          # Encrypted password (AES-256-GCM)
-â”œâ”€â”€ webmail_url       # MailU webmail URL (https://mail.example.com)
-â”œâ”€â”€ created_at        # ISO 8601 timestamp
-â”œâ”€â”€ last_rotated      # ISO 8601 timestamp
-â””â”€â”€ rotation_policy   # "180_days"
+├── username          # MailU admin username
+├── password          # Encrypted password (AES-256-GCM)
+├── webmail_url       # MailU webmail URL (https://mail.example.com)
+├── created_at        # ISO 8601 timestamp
+├── last_rotated      # ISO 8601 timestamp
+└── rotation_policy   # "180_days"
 
 ```
 

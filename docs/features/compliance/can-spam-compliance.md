@@ -40,13 +40,13 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 #### PenguinMails Implementation
 
-- âœ… **Verified sender addresses** - Only send from authenticated domains
+- ✅ **Verified sender addresses** - Only send from authenticated domains
 
-- âœ… **Accurate From name** - Clearly identifies your business
+- ✅ **Accurate From name** - Clearly identifies your business
 
-- âœ… **Valid Reply-To** - Monitored mailbox for replies
+- ✅ **Valid Reply-To** - Monitored mailbox for replies
 
-- âœ… **No spoofing** - SPF, DKIM, DMARC prevent header manipulation
+- ✅ **No spoofing** - SPF, DKIM, DMARC prevent header manipulation
 
 #### Setup Checklist
 
@@ -66,13 +66,13 @@ PenguinMails automates compliance to help you avoid these penalties.
 
 #### Best Practices
 
-- âœ… **Honest subject lines** - Accurately describe email content
+- ✅ **Honest subject lines** - Accurately describe email content
 
-- âœ… **No clickbait** - Avoid misleading or sensational subjects
+- ✅ **No clickbait** - Avoid misleading or sensational subjects
 
-- âœ… **Match content** - Subject and email body should align
+- ✅ **Match content** - Subject and email body should align
 
-- âœ… **No fake urgency** - Don't create false sense of urgency
+- ✅ **No fake urgency** - Don't create false sense of urgency
 
 #### PenguinMails Features
 
@@ -132,11 +132,11 @@ This is an advertisement from [Your Company Name]
 
 #### Address Requirements
 
-- âœ… **Street address** - Valid postal delivery location
+- ✅ **Street address** - Valid postal delivery location
 
-- âœ… **P.O. Box** - Registered with USPS
+- ✅ **P.O. Box** - Registered with USPS
 
-- âœ… **Private mailbox** - At commercial mail receiving agency
+- ✅ **Private mailbox** - At commercial mail receiving agency
 
 #### PenguinMails Implementation
 
@@ -152,7 +152,7 @@ This is an advertisement from [Your Company Name]
 
 ```yaml
 Company Address Setup:
-  Location: Settings â†’ Company Profile â†’ Physical Address
+  Location: Settings → Company Profile → Physical Address
   Required Fields:
 
     - Street address
@@ -172,15 +172,15 @@ Company Address Setup:
 
 #### Unsubscribe Requirements
 
-- âœ… **Conspicuous** - Easy to find and recognize
+- ✅ **Conspicuous** - Easy to find and recognize
 
-- âœ… **Easy to use** - Simple one-click or reply-to method
+- ✅ **Easy to use** - Simple one-click or reply-to method
 
-- âœ… **No login required** - Work without authentication
+- ✅ **No login required** - Work without authentication
 
-- âœ… **No fees** - Free to unsubscribe
+- ✅ **No fees** - Free to unsubscribe
 
-- âœ… **Include in every email** - All commercial messages
+- ✅ **Include in every email** - All commercial messages
 
 #### PenguinMails Unsubscribe Features
 
@@ -221,15 +221,15 @@ If you no longer wish to receive these emails, you may
 
 #### PenguinMails Compliance
 
-- âœ… **Instant opt-out** - Removed immediately (not 10 days)
+- ✅ **Instant opt-out** - Removed immediately (not 10 days)
 
-- âœ… **Automated processing** - No manual intervention needed
+- ✅ **Automated processing** - No manual intervention needed
 
-- âœ… **Suppression list** - Prevent re-adds
+- ✅ **Suppression list** - Prevent re-adds
 
-- âœ… **Global opt-out** - Applies across all campaigns
+- ✅ **Global opt-out** - Applies across all campaigns
 
-- âœ… **Permanent** - Cannot resubscribe without explicit consent
+- ✅ **Permanent** - Cannot resubscribe without explicit consent
 
 #### Unsubscribe Processing
 
@@ -265,13 +265,13 @@ Confirmation email sent (optional)
 
 #### Responsibilities as PenguinMails User
 
-- âœ… **Monitor campaigns** - Review content before sending
+- ✅ **Monitor campaigns** - Review content before sending
 
-- âœ… **Verify compliance** - Ensure all requirements met
+- ✅ **Verify compliance** - Ensure all requirements met
 
-- âœ… **Audit third parties** - If using agencies or freelancers
+- ✅ **Audit third parties** - If using agencies or freelancers
 
-- âœ… **Maintain records** - Document compliance procedures
+- ✅ **Maintain records** - Document compliance procedures
 
 #### PenguinMails Accountability Features
 
@@ -293,15 +293,15 @@ Confirmation email sent (optional)
 
 Emails that facilitate an agreed-upon transaction or update about an ongoing relationship:
 
-- âœ… **Order confirmations** - Purchase receipts
+- ✅ **Order confirmations** - Purchase receipts
 
-- âœ… **Shipping notifications** - Delivery updates
+- ✅ **Shipping notifications** - Delivery updates
 
-- âœ… **Account alerts** - Password resets, security alerts
+- ✅ **Account alerts** - Password resets, security alerts
 
-- âœ… **Service updates** - Changes to terms, features
+- ✅ **Service updates** - Changes to terms, features
 
-- âœ… **Legal notices** - Privacy policy updates
+- ✅ **Legal notices** - Privacy policy updates
 
 **Rules for Transactional:**
 
@@ -343,11 +343,11 @@ Emails whose primary purpose is commercial advertisement:
 Campaign Setup:
   Email Type:
 
-    - Commercial (default) â†’ Full CAN-SPAM requirements
+    - Commercial (default) → Full CAN-SPAM requirements
 
-    - Transactional â†’ Minimal requirements (best practice compliance)
+    - Transactional → Minimal requirements (best practice compliance)
 
-    - Administrative â†’ Internal team communications
+    - Administrative → Internal team communications
 
 ```
 
@@ -456,7 +456,7 @@ Before any campaign sends, PenguinMails automatically checks:
 
 - [ ] Commercial content identified
 
-**Validation fails?** â†’ Campaign blocked until resolved
+**Validation fails?** → Campaign blocked until resolved
 
 ---
 

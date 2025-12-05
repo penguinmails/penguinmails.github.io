@@ -27,24 +27,24 @@ persona: "Quality Assurance"
 ```text
 
 tests/
-â”œâ”€â”€ unit/                          # Unit tests
-â”‚   â”œâ”€â”€ test_email_service.py      # Service layer tests
-â”‚   â”œâ”€â”€ test_ai_optimizer.py       # AI component tests
-â”‚   â”œâ”€â”€ test_analytics_service.py  # Analytics tests
-â”‚   â””â”€â”€ test_models.py             # Model tests
-â”œâ”€â”€ integration/                   # Integration tests
-â”‚   â”œâ”€â”€ test_api_campaigns.py      # API endpoint tests
-â”‚   â”œâ”€â”€ test_database_operations.py# Database integration
-â”‚   â””â”€â”€ test_external_services.py  # External API integration
-â”œâ”€â”€ e2e/                          # End-to-end tests
-â”‚   â”œâ”€â”€ test_campaign_workflow.py  # User workflow tests
-â”‚   â”œâ”€â”€ test_analytics_dashboard.py# Dashboard tests
-â”‚   â””â”€â”€ test_mobile_experience.py  # Mobile experience tests
-â”œâ”€â”€ fixtures/                     # Test data
-â”‚   â”œâ”€â”€ sample_campaigns.json      # Sample campaign data
-â”‚   â”œâ”€â”€ user_profiles.json         # User profile data
-â”‚   â””â”€â”€ analytics_data.json        # Analytics test data
-â””â”€â”€ conftest.py                   # Pytest configuration
+├── unit/                          # Unit tests
+│   ├── test_email_service.py      # Service layer tests
+│   ├── test_ai_optimizer.py       # AI component tests
+│   ├── test_analytics_service.py  # Analytics tests
+│   └── test_models.py             # Model tests
+├── integration/                   # Integration tests
+│   ├── test_api_campaigns.py      # API endpoint tests
+│   ├── test_database_operations.py# Database integration
+│   └── test_external_services.py  # External API integration
+├── e2e/                          # End-to-end tests
+│   ├── test_campaign_workflow.py  # User workflow tests
+│   ├── test_analytics_dashboard.py# Dashboard tests
+│   └── test_mobile_experience.py  # Mobile experience tests
+├── fixtures/                     # Test data
+│   ├── sample_campaigns.json      # Sample campaign data
+│   ├── user_profiles.json         # User profile data
+│   └── analytics_data.json        # Analytics test data
+└── conftest.py                   # Pytest configuration
 
 ```
 

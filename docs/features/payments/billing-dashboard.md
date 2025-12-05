@@ -18,7 +18,7 @@ category: "Payments"
 
 The Billing Dashboard provides complete visibility into your PenguinMails subscription, usage, costs, and payment history - all in one place.
 
-**Access:** Settings â†’ Billing
+**Access:** Settings → Billing
 
 ---
 
@@ -56,8 +56,8 @@ The Billing Dashboard provides complete visibility into your PenguinMails subscr
 #### Email Sends
 
 ```text
-ðŸ“§ Email Sends
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 46.9%
+📧 Email Sends
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.9%
 23,450 / 50,000 emails sent this month
 
 Remaining: 26,550 emails
@@ -78,8 +78,8 @@ Resets: December 24, 2025
 #### Team Members
 
 ```text
-ðŸ‘¥ Team Members
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 60%
+👥 Team Members
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60%
 3 / 5 seats occupied
 
 Available: 2 seats
@@ -90,8 +90,8 @@ Available: 2 seats
 #### Workspaces
 
 ```text
-ðŸ—‚ï¸ Workspaces
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 70%
+🗂️ Workspaces
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 70%
 7 / 10 workspaces created
 
 Available: 3 workspaces
@@ -102,8 +102,8 @@ Available: 3 workspaces
 #### Custom Domains
 
 ```text
-ðŸŒ Custom Domains
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â” 33. 3%
+🌐 Custom Domains
+━━━━━━━━━━━━━━━━━ 33.3%
 5 / 15 domains configured
 
 Available: 10 domains
@@ -119,13 +119,13 @@ Available: 10 domains
 
 **Alert Thresholds:**
 
-- ðŸŸ¡ **80% Used** - Warning email
+- 🟡 **80% Used** - Warning email
 
-- ðŸŸ  **90% Used** - Upgrade suggestion
+- 🟠 **90% Used** - Upgrade suggestion
 
-- ðŸ”´ **95% Used** - Urgent action needed
+- 🔴 **95% Used** - Urgent action needed
 
-- â›” **100% Used** - Limit reached
+- ⛔ **100% Used** - Limit reached
 
 **Alert Actions:**
 
@@ -148,12 +148,12 @@ Available: 10 domains
 ```text
 Email Sends (Last 6 Months)
 
-50k â”‚                     â•­â”€â—
-40k â”‚                  â•­â”€â”€â•¯
-30k â”‚            â—â”€â”€â”€â”€â”€â•¯
-20k â”‚      â•­â”€â”€â”€â”€â”€â•¯
-10k â”‚ â—â”€â”€â”€â”€â•¯
- 0k â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+50k |                     ┍━●
+40k |                  ┍━━┯
+30k |            ●━━━━━━┯
+20k |      ┍━━━━━━┯
+10k | ●━━━━━┯
+ 0k └──────────────────────────────
     Jun Jul Aug Sep Oct Nov
 
 ```
@@ -219,10 +219,10 @@ Line Items:
 - Additional Emails (10,000)              $10.00
 
 - Sales Tax (CA)                           $12.72
-                                         â”€â”€â”€â”€â”€â”€â”€â”€
+                                         ────────
                                   TOTAL: $171.72
 
-Payment Method: â€¢â€¢â€¢â€¢ 4242 (Visa)
+Payment Method: •••• 4242 (Visa)
 Status: PAID
 
 ```
@@ -246,7 +246,7 @@ Status: PAID
 **See next charge before it happens.**
 
 ```text
-ðŸ”® Next Invoice Preview
+🧾 Next Invoice Preview
 
 Billing Date: December 24, 2025
 Estimated Amount: $149.00
@@ -256,7 +256,7 @@ Line Items:
 - Professional Plan (Monthly)             $149.00
 
 - Tax (estimated)                          $11.92
-                                         â”€â”€â”€â”€â”€â”€â”€â”€
+                                         ────────
                                   TOTAL: $160.92
 
 [Update Plan] [Update Payment Method]
@@ -371,21 +371,21 @@ Response:
 
 **Eligible for Refund:**
 
-- âœ… Double-charged (full refund)
+- ✅ Double-charged (full refund)
 
-- âœ… Billing error (full refund)
+- ✅ Billing error (full refund)
 
-- âœ… Service issue (prorated refund)
+- ✅ Service issue (prorated refund)
 
-- âœ… Within 7 days of charge (goodwill refund)
+- ✅ Within 7 days of charge (goodwill refund)
 
 **Not Eligible:**
 
-- âŒ Simply changed mind after 7 days
+- ❌ Simply changed mind after 7 days
 
-- âŒ Service not used (non-usage doesn't qualify)
+- ❌ Service not used (non-usage doesn't qualify)
 
-- âŒ Annual plans mid-term (no partial refunds)
+- ❌ Annual plans mid-term (no partial refunds)
 
 **Request Refund:**
 
@@ -406,22 +406,22 @@ Response:
 **Set maximum monthly spend:**
 
 ```text
-ðŸ’° Budget Controls
+💰 Budget Controls
 
 Monthly Budget: $200.00
 Current Month Spend: $159.00
 Remaining Budget: $41.00
 
-[â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—â—‹â—‹â—‹â—‹â—‹â—‹] 79.5%
+[●●●●●●●●●●●●●●●●●●●○○○○○○] 79.5%
 
 Alert When:
-â˜‘ 80% of budget ($160.00)
-â˜‘ 100% of budget ($200.00)
+☑ 80% of budget ($160.00)
+☑ 100% of budget ($200.00)
 
 Action at 100%:
-â— Alert only
-â—‹ Block overage charges
-â—‹ Auto-upgrade to next tier
+● Alert only
+○ Block overage charges
+○ Auto-upgrade to next tier
 
 ```
 
@@ -441,13 +441,13 @@ Action at 100%:
 
 **Dashboard provides recommendations:**
 
-- ðŸ’¡ **Switch to Annual** - Save 20% ($358/year savings)
+- 💡 **Switch to Annual** - Save 20% ($358/year savings)
 
-- ðŸ’¡ **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
+- 💡 **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
 
-- ðŸ’¡ **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
+- 💡 **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
 
-- ðŸ’¡ **Optimize Send Frequency** - Reduce emails by segmentation
+- 💡 **Optimize Send Frequency** - Reduce emails by segmentation
 
 ---
 

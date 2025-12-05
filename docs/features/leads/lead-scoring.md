@@ -88,12 +88,12 @@ Time Decay:
 
 ```text
 
-Contacts â†’ View All
+Contacts → View All
 
 Sort by: Lead Score (High to Low)
 
 Contact                Score  Last Activity
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+───────────────────────────────────────────
 Sarah Johnson          92     2 hours ago
 Michael Chen           87     1 day ago
 Emily Rodriguez        76     3 days ago
@@ -351,10 +351,10 @@ scoring_dimensions:
 ```text
 
 When lead score reaches 75:
-  â†’ Add to "Hot Leads" segment
-  â†’ Trigger "Sales Qualified Lead" workflow
-  â†’ Notify sales team
-  â†’ Send "Book a Demo" campaign
+  → Add to "Hot Leads" segment
+  → Trigger "Sales Qualified Lead" workflow
+  → Notify sales team
+  → Send "Book a Demo" campaign
 
 ```
 
@@ -374,10 +374,10 @@ Score 76-100:  Status = "Sales Qualified Lead (SQL)"
 ```text
 
 When lead score >= 75:
-  â†’ Create lead in Salesforce
-  â†’ Assign to sales rep (round-robin)
-  â†’ Set priority = "High"
-  â†’ Add to sales follow-up queue
+  → Create lead in Salesforce
+  → Assign to sales rep (round-robin)
+  → Set priority = "High"
+  → Add to sales follow-up queue
 
 ```
 

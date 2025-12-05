@@ -56,15 +56,15 @@ Choose your entry point based on your experience level:
 
 ### Quick Start (5 Minutes)
 
-â†’ [Quick Setup Guide](/docs/quick-setup))
+→ [Quick Setup Guide](/docs/quick-setup))
 
 ### Feature Overview
 
-â†’ [Features Overview](/docs/feature-overview))
+→ [Features Overview](/docs/feature-overview))
 
 ### Deep Dive
 
-â†’ [Core Features Documentation](/docs/features)
+→ [Core Features Documentation](/docs/features)
 
 ## Migration Note
 
@@ -77,6 +77,6 @@ This content is being migrated and enhanced from existing documentation to provi
 - **Integration Strategy**: Structure from current docs, refer to canonical sections for comprehensive information
 
 ---
-*Next: [Quick Setup Guide](/docs/quick-setup)) â†’*
+*Next: [Quick Setup Guide](/docs/quick-setup)) →*
 
 ---

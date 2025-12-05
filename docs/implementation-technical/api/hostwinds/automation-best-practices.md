@@ -28,13 +28,13 @@ const response = await fetch(HOSTWINDS_API_URL, {
   body: formData
 });
 
-// âŒ WRONG: Assuming 200 = success
+// ❌ WRONG: Assuming 200 = success
 if (response.status === 200) {
   const data = await response.json();
   // Process data...
 }
 
-// âœ… CORRECT: Check result field
+// ✅ CORRECT: Check result field
 if (response.status === 200) {
   const data = await response.json();
   if (data.result === 'error') {

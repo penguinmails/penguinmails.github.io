@@ -39,7 +39,7 @@ jane@example.com,Jane,Smith,Tech Corp,555-5678,lead,Technology
 
 ```text
 
-Contacts â†’ Import â†’ Upload File
+Contacts → Import → Upload File
 
 [Choose File] contacts.csv (2.5 MB, 5,000 rows)
 
@@ -48,7 +48,7 @@ Preview:
   âœ“ 8 columns found
   âœ“ Header row detected
 
-[Next: Map Fields â†’]
+[Next: Map Fields →]
 
 ```
 
@@ -58,20 +58,20 @@ Preview:
 
 Map Your Columns:
 
-CSV Column          â†’  PenguinMails Field
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-email               â†’  [Email Address] âœ“
-first_name          â†’  [First Name] âœ“
-last_name           â†’  [Last Name] âœ“
-company             â†’  [Company] âœ“
-phone               â†’  [Phone Number] âœ“
-tags                â†’  [Tags] (comma/pipe separated)
-custom_field_industry â†’ [Custom Field: Industry]
+CSV Column          →  PenguinMails Field
+─────────────────────────────────────────
+email               →  [Email Address] âœ“
+first_name          →  [First Name] âœ“
+last_name           →  [Last Name] âœ“
+company             →  [Company] âœ“
+phone               →  [Phone Number] âœ“
+tags                →  [Tags] (comma/pipe separated)
+custom_field_industry → [Custom Field: Industry]
 
 Unmapped Columns:
   (none)
 
-[Next: Validation â†’]
+[Next: Validation →]
 
 ```
 
@@ -86,14 +86,14 @@ Validation Results:
 âœ— Errors: 13 (0.3%)
 
 Issues Found:
-  13 Ã— Invalid email format
-  82 Ã— Duplicate emails (will skip)
-  13 Ã— Phone number format issues
+  13 × Invalid email format
+  82 × Duplicate emails (will skip)
+  13 × Phone number format issues
 
 Actions:
-  â—‹ Import only valid records (4,892)
-  â—‹ Fix errors and re-upload
-  â—‹ Download error report
+  ○ Import only valid records (4,892)
+  ○ Fix errors and re-upload
+  ○ Download error report
 
 [Import Valid Records]
 
@@ -106,16 +106,16 @@ Actions:
 Import Options:
 
 Duplicate Handling:
-  â—‹ Skip duplicates (keep existing)
-  â— Update existing (merge new data)
-  â—‹ Create duplicates (allow)
+  ○ Skip duplicates (keep existing)
+  ● Update existing (merge new data)
+  ○ Create duplicates (allow)
 
 Tags:
-  â˜‘ Add tag: "imported_2025_11"
-  â˜‘ Add tag: "bulk_upload"
+  ☑ Add tag: "imported_2025_11"
+  ☑ Add tag: "bulk_upload"
 
 Segment:
-  â˜‘ Add to segment: Create new "November Import"
+  ☑ Add to segment: Create new "November Import"
 
 [Start Import]
 
@@ -160,27 +160,27 @@ Summary:
 
 ```text
 
-Contacts â†’ Export
+Contacts → Export
 
 Selection:
-  â— All Contacts (12,847)
-  â—‹ Current View/Filter (4,892)
-  â—‹ Selected Contacts (0)
-  â—‹ Specific Segment
+  ● All Contacts (12,847)
+  ○ Current View/Filter (4,892)
+  ○ Selected Contacts (0)
+  ○ Specific Segment
 
 Format:
-  â— CSV
-  â—‹ Excel (.xlsx)
-  â—‹ JSON
+  ● CSV
+  ○ Excel (.xlsx)
+  ○ JSON
 
 Fields:
-  â˜‘ Email
-  â˜‘ First Name
-  â˜‘ Last Name
-  â˜‘ Company
-  â˜‘ Tags
-  â˜‘ Lead Score
-  â˜‘ All Custom Fields
+  ☑ Email
+  ☑ First Name
+  ☑ Last Name
+  ☑ Company
+  ☑ Tags
+  ☑ Lead Score
+  ☑ All Custom Fields
 
 [Export]
 

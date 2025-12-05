@@ -14,7 +14,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 ## Progressive Disclosure Flow
 
-### ðŸ“Š Deep Analysis Documents
+###  Deep Analysis Documents
 
 - [**Financial Analysis Benchmarks**](/docs/business/financial-analysis) - Comprehensive industry benchmarks (â‰¤300 lines)
 
@@ -26,7 +26,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 - [**Personnel Analysis**](/docs/business/financial-analysis) - Workforce impact and cost analysis (â‰¤300 lines)
 
-### ðŸŽ¯ Financial Analysis Path
+### 🎯 Financial Analysis Path
 
 1. **Surface Level**: Start with `../core/roi-calculator` for basic ROI
 
@@ -38,7 +38,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 5. **Personnel Impact**: Analyze workforce changes with `personnel-analysis`
 
-### ðŸ“ˆ Analysis Characteristics
+### 📈 Analysis Characteristics
 
 - **Content Depth**: Technical financial analysis (200-300 lines per document)
 
@@ -46,9 +46,9 @@ This directory contains comprehensive financial analysis files that provide deep
 
 - **Target Audience**: Finance professionals and analysts
 
-- **Progression**: Strategic overview â†’ detailed modeling â†’ technical implementation
+- **Progression**: Strategic overview → detailed modeling → technical implementation
 
-### ðŸ’¡ Financial Modeling Features
+### 💡 Financial Modeling Features
 
 - **Industry Benchmarks**: Comparative analysis with market standards
 

@@ -1,4 +1,4 @@
-﻿# ðŸ“§ Campaign Management
+﻿# 📧 Campaign Management
 
 Campaign creation, multi-channel orchestration, sequence management, and campaign-level analytics.
 
@@ -36,7 +36,7 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for detailed timeline a
 
 ## Features in This Category
 
-### ðŸš§ In Development (Q1 2026)
+### 🚧 In Development (Q1 2026)
 
 #### [Campaign Management](/docs/features/campaigns/campaign-management/hub)
 
@@ -302,4 +302,4 @@ See [Campaign Roadmap](/docs/features/campaigns/roadmap) for complete timeline a
 
 ---
 
-[â† Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)

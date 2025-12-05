@@ -14,7 +14,7 @@ keywords: "TypeScript, coding standards, style guide, best practices"
 ### Style Guide Compliance
 
 ```typescript
-// âœ… Good: Clear, documented, well-structured code
+// ✅ Good: Clear, documented, well-structured code
 interface EmailDeliveryScore {
   overallScore: number;
   confidence: number;
@@ -129,7 +129,7 @@ function calculateEmailDeliveryScore(
   };
 }
 
-// âŒ Bad: Poor documentation, unclear variable names, magic numbers
+// ❌ Bad: Poor documentation, unclear variable names, magic numbers
 function calc(x: number, y: number, z: number): EmailDeliveryScore {
   const s = x * 0.4 + y * 0.35 + z * 0.25;
   return {

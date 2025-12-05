@@ -93,7 +93,7 @@ This document outlines all third-party services and integrations used by the Ana
 
 **Status:** Active
 
-**Replacement Plan:** Q3 2026 - Migrate to in-house SMTP server for cost savings ($29/month â†’ $0)
+**Replacement Plan:** Q3 2026 - Migrate to in-house SMTP server for cost savings ($29/month → $0)
 
 **Migration Complexity:** High (2-3 weeks)
 
@@ -336,11 +336,11 @@ This document outlines all third-party services and integrations used by the Ana
 
 ## Data Flow
 
-1. Application events â†’ PostHog ingestion
+1. Application events → PostHog ingestion
 
-2. PostHog processing â†’ Analytics dashboards
+2. PostHog processing → Analytics dashboards
 
-3. PostHog API â†’ Custom reports and exports
+3. PostHog API → Custom reports and exports
 
 ## Performance
 
@@ -462,11 +462,11 @@ This document outlines all third-party services and integrations used by the Ana
 
 ## Migration & Replacement Plans
 
-### Loop.so â†’ In-House SMTP (Q3 2026)
+### Loop.so → In-House SMTP (Q3 2026)
 
 ## Rationale
 
-- Cost savings: $29/month â†’ $0
+- Cost savings: $29/month → $0
 
 - Full control over delivery infrastructure
 

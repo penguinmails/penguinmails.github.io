@@ -51,11 +51,11 @@ Contact Segmentation enables you to divide your contact database into meaningful
 
 ```text
 
-Contacts â†’ Segments â†’ Create New Segment
+Contacts → Segments → Create New Segment
 
 Segment Name: Active Subscribers
 Description: Contacts who opened emails in last 30 days
-Type: â—‹ Dynamic  â—‹ Static
+Type: ○ Dynamic  ○ Static
 
 ```
 
@@ -64,9 +64,9 @@ Type: â—‹ Dynamic  â—‹ Static
 ```text
 
 Conditions (Match ALL):
-  â˜‘ Last Email Opened: within last 30 days
-  â˜‘ Subscription Status: Active
-  â˜‘ Unsubscribed: No
+  ☑ Last Email Opened: within last 30 days
+  ☑ Subscription Status: Active
+  ☑ Unsubscribed: No
 
 Preview: 2,847 contacts match
 

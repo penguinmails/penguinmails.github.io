@@ -182,7 +182,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Customer Acquisition Cost (CAC)**: Total marketing + sales spend / Number of new customers
 
-- **Customer Lifetime Value (LTV)**: Average revenue per user Ã— customer lifespan
+- **Customer Lifetime Value (LTV)**: Average revenue per user × customer lifespan
 
 ### **North Star & Core Business Metrics**
 
@@ -268,7 +268,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Target**: <$200 per customer, rolling 12-month average
 
-- **Customer Lifetime Value (LTV)**: Average revenue per user Ã— customer lifespan
+- **Customer Lifetime Value (LTV)**: Average revenue per user × customer lifespan
 
 - **Target**: >$2,000 per customer with 3:1 LTV/CAC ratio
 
@@ -376,7 +376,7 @@ Unlike basic email analytics, our platform provides:
 
 - **Cohort Analysis**: Track customer lifecycle and retention
 
-- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](/docs/features/analytics/views-architecture)** â†’ Visual design specifications for analytics dashboards
+- **Advanced Segmentation**: Complex audience- **[Analytics Views Architecture](/docs/features/analytics/views-architecture)** → Visual design specifications for analytics dashboards
 
 ## Enterprise Integration
 

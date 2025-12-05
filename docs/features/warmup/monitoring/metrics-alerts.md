@@ -21,14 +21,14 @@ Auto-Delist: 24 hours after last report
 Steps to Delist:
 
 1. Identify Root Cause
-   â˜ Review recent campaigns
-   â˜ Check for compromised accounts
-   â˜ Verify list quality
+   ☐ Review recent campaigns
+   ☐ Check for compromised accounts
+   ☐ Verify list quality
 
 2. Fix Issues
-   â˜ Remove problematic content
-   â˜ Clean email list
-   â˜ Secure compromised accounts
+   ☐ Remove problematic content
+   ☐ Clean email list
+   ☐ Secure compromised accounts
 
 3. Request Delisting
    URL: https://www.spamcop.net/bl.shtml
@@ -42,12 +42,12 @@ Steps to Delist:
    - Explanation of corrective actions
 
 4. Monitor Status
-   â˜ Check delisting status (every 4 hours)
-   â˜ Verify removal (may take 24-48 hours)
+   ☐ Check delisting status (every 4 hours)
+   ☐ Verify removal (may take 24-48 hours)
 
 5. Resume Sending
-   â˜ Gradually increase volume
-   â˜ Monitor reputation closely
+   ☐ Gradually increase volume
+   ☐ Monitor reputation closely
 
 [Copy Delisting Template] [Track Progress]
 
@@ -98,7 +98,7 @@ Health Score:
   Nov 22: 91 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
   Nov 25: 92 â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
 
-  Trend: â†— +7 points (30 days)
+  Trend: ↑ +7 points (30 days)
 
 Inbox Rate:
   Nov 1:  89% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘â–‘
@@ -107,11 +107,11 @@ Inbox Rate:
   Nov 22: 93% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–‘
   Nov 25: 94% â–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆâ–ˆ
 
-  Trend: â†— +5% (30 days)
+  Trend: ↑ +5% (30 days)
 
 Engagement:
-  Open Rate: 24% â†’ 28% (â†— +4%)
-  Click Rate: 3.8% â†’ 4.2% (â†— +0.4%)
+  Open Rate: 24% → 28% (↑ +4%)
+  Click Rate: 3.8% → 4.2% (↑ +0.4%)
 
 ```
 
@@ -132,46 +132,46 @@ Recommended Actions:
 
 Priority 1: Immediate (Next 24 hours)
 
-  1. â˜ Pause all campaigns from this domain
+  1. ☐ Pause all campaigns from this domain
      Impact: Prevent further damage
      Effort: 5 minutes
 
-  2. â˜ Clean email list (remove hard bounces)
+  2. ☐ Clean email list (remove hard bounces)
      Impact: Reduce bounce rate by ~2%
      Effort: 30 minutes
 
-  3. â˜ Verify list source and acquisition method
+  3. ☐ Verify list source and acquisition method
      Impact: Identify root cause
      Effort: 1 hour
 
 Priority 2: Short-term (Next 7 days)
 
-  4. â˜ Implement double opt-in for new signups
+  4. ☐ Implement double opt-in for new signups
      Impact: Improve list quality long-term
      Effort: 2 hours
 
-  5. â˜ Re-engage inactive subscribers
+  5. ☐ Re-engage inactive subscribers
      Impact: Improve engagement metrics
      Effort: 4 hours
 
-  6. â˜ Reduce sending volume by 50%
+  6. ☐ Reduce sending volume by 50%
      Impact: Rebuild reputation gradually
      Effort: 15 minutes
 
 Priority 3: Long-term (Next 30 days)
 
-  7. â˜ Implement list hygiene automation
+  7. ☐ Implement list hygiene automation
      Impact: Maintain high list quality
      Effort: 8 hours
 
-  8. â˜ Set up engagement-based segmentation
+  8. ☐ Set up engagement-based segmentation
      Impact: Send only to engaged subscribers
      Effort: 4 hours
 
 Expected Outcome:
-  Week 1: Health score â†’ 82/100
-  Week 2: Health score â†’ 86/100
-  Week 4: Health score â†’ 90/100
+  Week 1: Health score → 82/100
+  Week 2: Health score → 86/100
+  Week 4: Health score → 90/100
 
 [Start Recovery Plan] [Customize Plan]
 
@@ -186,34 +186,34 @@ Auto-Remediation Rules
 Rule 1: High Bounce Rate
   Trigger: Bounce rate > 5%
   Actions:
-    â˜‘ Pause all sending
-    â˜‘ Send alert to admin
-    â˜‘ Create support ticket
-    â˜‘ Remove hard bounces from list
+    ☑ Pause all sending
+    ☑ Send alert to admin
+    ☑ Create support ticket
+    ☑ Remove hard bounces from list
 
 Rule 2: Blacklist Detection
   Trigger: Listed on any blacklist
   Actions:
-    â˜‘ Pause sending from affected domain/IP
-    â˜‘ Send immediate alert
-    â˜‘ Create delisting ticket
-    â˜‘ Notify deliverability team
+    ☑ Pause sending from affected domain/IP
+    ☑ Send immediate alert
+    ☑ Create delisting ticket
+    ☑ Notify deliverability team
 
 Rule 3: Spam Complaints
   Trigger: Spam rate > 0.1%
   Actions:
-    â˜‘ Pause campaign
-    â˜‘ Review content for spam triggers
-    â˜‘ Check list acquisition method
-    â˜‘ Send alert to sender
+    ☑ Pause campaign
+    ☑ Review content for spam triggers
+    ☑ Check list acquisition method
+    ☑ Send alert to sender
 
 Rule 4: Low Engagement
   Trigger: Open rate < 10% for 3 consecutive campaigns
   Actions:
-    â˜ Pause sending (optional)
-    â˜‘ Send warning to sender
-    â˜‘ Suggest list cleaning
-    â˜‘ Recommend re-engagement campaign
+    ☐ Pause sending (optional)
+    ☑ Send warning to sender
+    ☑ Suggest list cleaning
+    ☑ Recommend re-engagement campaign
 
 [Edit Rules] [Add Custom Rule]
 

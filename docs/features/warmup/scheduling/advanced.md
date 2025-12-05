@@ -15,14 +15,14 @@ Current Volume: 100 emails/day
 Target Volume: 500 emails/day
 
 Adjustment:
-  â—‹ Speed up (reach target in 3 weeks)
-  â— Slow down (extend to 8 weeks total)
-  â—‹ Maintain current pace
+  ○ Speed up (reach target in 3 weeks)
+  ● Slow down (extend to 8 weeks total)
+  ○ Maintain current pace
 
 New Schedule:
-  Week 3-4: 100 â†’ 150 emails/day
-  Week 5-6: 150 â†’ 250 emails/day
-  Week 7-8: 250 â†’ 500 emails/day
+  Week 3-4: 100 → 150 emails/day
+  Week 5-6: 150 → 250 emails/day
+  Week 7-8: 250 → 500 emails/day
 
 [Apply Changes]
 
@@ -225,11 +225,11 @@ Engagement Patterns:
   - Bounces: < 0.5%
 
 Behavior Simulation:
-  â˜‘ Random open times (not instant)
-  â˜‘ Varied click patterns
-  â˜‘ Natural reply delays (2-48 hours)
-  â˜‘ Different devices (mobile, desktop)
-  â˜‘ Geographic diversity
+  ☑ Random open times (not instant)
+  ☑ Varied click patterns
+  ☑ Natural reply delays (2-48 hours)
+  ☑ Different devices (mobile, desktop)
+  ☑ Geographic diversity
 
 ```
 
@@ -261,7 +261,7 @@ Engagement Configuration:
 
 [Upload List]
 
-âš  Note: Manual engagement required
+⚠ Note: Manual engagement required
    You must coordinate with these contacts
 
 ```
@@ -277,19 +277,19 @@ Warmup Dashboard
 Active Warmups: 5
 
 Account                    Status    Day    Volume    Health
-â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
-sales@penguinmails.com     âœ“ Active  15/42  100/day   95/100
-support@penguinmails.com   âœ“ Active  8/42   50/day    92/100
-hello@penguinmails.com     â¸ Paused  22/42  200/day   78/100
-team@penguinmails.com      âœ“ Active  35/42  400/day   88/100
-info@penguinmails.com      âš  Warning 12/42  80/day    65/100
+─────────────────────────────────────────────────────────────────────
+sales@penguinmails.com     ✅ Active  15/42  100/day   95/100
+support@penguinmails.com   ✅ Active  8/42   50/day    92/100
+hello@penguinmails.com     ⏸ Paused  22/42  200/day   78/100
+team@penguinmails.com      ✅ Active  35/42  400/day   88/100
+info@penguinmails.com      ⚠ Warning 12/42  80/day    65/100
 
 Bulk Actions:
   [Pause All] [Resume All] [Export Report]
 
 Alerts:
-  âš  info@penguinmails.com: Bounce rate elevated (4.2%)
-  â„¹ hello@penguinmails.com: Paused for manual review
+  ⚠ info@penguinmails.com: Bounce rate elevated (4.2%)
+  ⏰ hello@penguinmails.com: Paused for manual review
 
 ```
 

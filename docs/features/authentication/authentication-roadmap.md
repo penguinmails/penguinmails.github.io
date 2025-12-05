@@ -33,7 +33,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 1. Password Strength Enforcement
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 1-2 days
 **Priority:** P0
 
@@ -57,7 +57,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### 2. Unverified Email Restrictions
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 1-2 days
 **Priority:** P0
 
@@ -81,7 +81,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### 3. CAPTCHA for Sensitive Operations
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 2-3 days
 **Priority:** P0
 
@@ -110,7 +110,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 4. Email Verification System
 
-**Status:** âœ… Complete
+**Status:** ✅ Complete
 **Effort:** 3-5 days
 **Priority:** P0
 
@@ -118,21 +118,21 @@ This document provides a detailed roadmap for authentication and security featur
 
 ##### Acceptance Criteria
 
-- âœ… Send verification email on signup
+- ✅ Send verification email on signup
 
-- âœ… Generate secure verification token (24-hour expiration)
+- ✅ Generate secure verification token (24-hour expiration)
 
-- âœ… Verify token on `/verify-email` route
+- ✅ Verify token on `/verify-email` route
 
-- âœ… Provide "Resend verification email" option
+- ✅ Provide "Resend verification email" option
 
-- âœ… Show verification status in user profile
+- ✅ Show verification status in user profile
 
 ---
 
 ### 5. Password Reset Flow
 
-**Status:** âœ… Complete
+**Status:** ✅ Complete
 **Effort:** 3-5 days
 **Priority:** P0
 
@@ -140,23 +140,23 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### Acceptance Criteria
 
-- âœ… "Forgot Password" form on `/forgot-password` route
+- ✅ "Forgot Password" form on `/forgot-password` route
 
-- âœ… Send password reset email using Loop.so
+- ✅ Send password reset email using Loop.so
 
-- âœ… Generate secure reset token (1-hour expiration)
+- ✅ Generate secure reset token (1-hour expiration)
 
-- âœ… Validate token and allow password reset
+- ✅ Validate token and allow password reset
 
-- âœ… Auto-login after successful reset
+- ✅ Auto-login after successful reset
 
-- âœ… Invalidate all existing sessions after password reset
+- ✅ Invalidate all existing sessions after password reset
 
 ---
 
 ### 6. Change Password Functionality
 
-**Status:** âœ… Complete
+**Status:** ✅ Complete
 **Effort:** 1-2 days
 **Priority:** P0
 
@@ -164,15 +164,15 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### Acceptance Criteria
 
-- âœ… "Change Password" section in `/dashboard/settings/profile`
+- ✅ "Change Password" section in `/dashboard/settings/profile`
 
-- âœ… Validate current password before allowing change
+- ✅ Validate current password before allowing change
 
-- âœ… Enforce password strength requirements
+- ✅ Enforce password strength requirements
 
-- âœ… Send confirmation email after password change
+- ✅ Send confirmation email after password change
 
-- âœ… Invalidate all other sessions after password change
+- ✅ Invalidate all other sessions after password change
 
 ---
 
@@ -183,7 +183,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 7. Account Lockout / Brute Force Protection
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 3-5 days
 **Priority:** P0
 
@@ -209,7 +209,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### 8. Login Activity Log
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 3-4 days
 **Priority:** P1
 
@@ -237,7 +237,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### 9. Session Management UI
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 1-2 days
 **Priority:** P1
 
@@ -268,7 +268,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 #### 10. Email Change Verification Flow
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 2-3 days
 **Priority:** P1
 
@@ -296,7 +296,7 @@ This document provides a detailed roadmap for authentication and security featur
 
 ### 11. Remember Me Functionality
 
-**Status:** â³ Planned
+**Status:** ⏳ Planned
 **Effort:** 1-2 days
 **Priority:** P2
 

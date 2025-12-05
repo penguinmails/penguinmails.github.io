@@ -262,7 +262,7 @@ This architecture enables the system to scale to thousands of tenants while main
 
 ---
 
-**ðŸ“š Additional Resources**:
+**📚 Additional Resources**:
 
 - [5-Tier Database Implementation Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-implementation-guide) - Detailed implementation patterns and operational procedures
 

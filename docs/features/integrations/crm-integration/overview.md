@@ -32,13 +32,13 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 
 ### Required Before Starting
 
-- â³ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
+- ⏳ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
 
-- â³ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
+- ⏳ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
 
-- â³ Webhook infrastructure - Planned
+- ⏳ Webhook infrastructure - Planned
 
-- â³ OAuth 2.0 implementation - Planned
+- ⏳ OAuth 2.0 implementation - Planned
 
 ### Blocks (Features Waiting on This)
 
@@ -159,23 +159,23 @@ salesforce_oauth:
 ```yaml
 salesforce_contact:
   standard_fields:
-    Email â†’ email
-    FirstName â†’ first_name
-    LastName â†’ last_name
-    Company â†’ company
-    Phone â†’ phone
-    Title â†’ job_title
-    MailingCity â†’ city
-    MailingState â†’ state
-    MailingCountry â†’ country
-    LeadSource â†’ lead_source
+    Email → email
+    FirstName → first_name
+    LastName → last_name
+    Company → company
+    Phone → phone
+    Title → job_title
+    MailingCity → city
+    MailingState → state
+    MailingCountry → country
+    LeadSource → lead_source
 
   custom_fields:
-    PenguinMails_Lead_Score__c â†’ lead_score
-    PenguinMails_Last_Email_Opened__c â†’ last_email_opened
-    PenguinMails_Total_Opens__c â†’ total_opens
-    PenguinMails_Total_Clicks__c â†’ total_clicks
-    PenguinMails_Unsubscribed__c â†’ unsubscribed
+    PenguinMails_Lead_Score__c → lead_score
+    PenguinMails_Last_Email_Opened__c → last_email_opened
+    PenguinMails_Total_Opens__c → total_opens
+    PenguinMails_Total_Clicks__c → total_clicks
+    PenguinMails_Unsubscribed__c → unsubscribed
 
 ```
 
@@ -184,21 +184,21 @@ salesforce_contact:
 ```yaml
 salesforce_lead:
   standard_fields:
-    Email â†’ email
-    FirstName â†’ first_name
-    LastName â†’ last_name
-    Company â†’ company
-    Phone â†’ phone
-    Title â†’ job_title
-    City â†’ city
-    State â†’ state
-    Country â†’ country
-    Status â†’ lead_status
-    Rating â†’ lead_rating
+    Email → email
+    FirstName → first_name
+    LastName → last_name
+    Company → company
+    Phone → phone
+    Title → job_title
+    City → city
+    State → state
+    Country → country
+    Status → lead_status
+    Rating → lead_rating
 
   custom_fields:
-    PenguinMails_Engagement_Score__c â†’ engagement_score
-    PenguinMails_Last_Campaign__c â†’ last_campaign_id
+    PenguinMails_Engagement_Score__c → engagement_score
+    PenguinMails_Last_Campaign__c → last_campaign_id
 
 ```
 
@@ -360,23 +360,23 @@ hubspot_oauth:
 ```yaml
 hubspot_contact:
   standard_properties:
-    email â†’ email
-    firstname â†’ first_name
-    lastname â†’ last_name
-    company â†’ company
-    phone â†’ phone
-    jobtitle â†’ job_title
-    city â†’ city
-    state â†’ state
-    country â†’ country
+    email → email
+    firstname → first_name
+    lastname → last_name
+    company → company
+    phone → phone
+    jobtitle → job_title
+    city → city
+    state → state
+    country → country
 
   custom_properties:
-    penguinmails_lead_score â†’ lead_score
-    penguinmails_last_email_opened â†’ last_email_opened
-    penguinmails_total_opens â†’ total_opens
-    penguinmails_total_clicks â†’ total_clicks
-    penguinmails_unsubscribed â†’ unsubscribed
-    penguinmails_last_campaign â†’ last_campaign_id
+    penguinmails_lead_score → lead_score
+    penguinmails_last_email_opened → last_email_opened
+    penguinmails_total_opens → total_opens
+    penguinmails_total_clicks → total_clicks
+    penguinmails_unsubscribed → unsubscribed
+    penguinmails_last_campaign → last_campaign_id
 
 ```
 
@@ -385,11 +385,11 @@ hubspot_contact:
 ```yaml
 hubspot_company:
   properties:
-    name â†’ company_name
-    domain â†’ company_domain
-    industry â†’ industry
-    numberofemployees â†’ company_size
-    annualrevenue â†’ annual_revenue
+    name → company_name
+    domain → company_domain
+    industry → industry
+    numberofemployees → company_size
+    annualrevenue → annual_revenue
 
 ```
 

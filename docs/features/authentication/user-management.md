@@ -20,55 +20,55 @@ category: "Enterprise"
 
 **What's Available Today:**
 
-- âœ… Email/password signup and login
+- ✅ Email/password signup and login
 
-- âœ… Email verification flow
+- ✅ Email verification flow
 
-- âœ… Password reset flow
+- ✅ Password reset flow
 
-- âœ… Change password (authenticated)
+- ✅ Change password (authenticated)
 
-- âœ… JWT-based session management
+- ✅ JWT-based session management
 
-- âœ… Token refresh mechanism
+- ✅ Token refresh mechanism
 
-- âœ… Profile management (view/edit)
+- ✅ Profile management (view/edit)
 
-- âœ… Team member invitations
+- ✅ Team member invitations
 
-- âœ… Role-based access control (Owner/Admin/Member)
+- ✅ Role-based access control (Owner/Admin/Member)
 
-- âœ… Account deletion with grace period
+- ✅ Account deletion with grace period
 
 **Missing MVP Features (Q1 2026):**
 
-- â³ Account lockout / brute force protection
+- ⏳ Account lockout / brute force protection
 
-- â³ Session management UI (view/revoke active sessions)
+- ⏳ Session management UI (view/revoke active sessions)
 
-- â³ Email change verification flow UI
+- ⏳ Email change verification flow UI
 
-- â³ Password strength enforcement (server-side)
+- ⏳ Password strength enforcement (server-side)
 
-- â³ Login activity log
+- ⏳ Login activity log
 
-- â³ Unverified email restrictions
+- ⏳ Unverified email restrictions
 
-- â³ Remember me functionality
+- ⏳ Remember me functionality
 
-- â³ CAPTCHA for sensitive operations
+- ⏳ CAPTCHA for sensitive operations
 
 **Post-MVP Enhancements (2026+):**
 
-- ðŸ”® Two-factor authentication (2FA) - Q1 2026
+- 🛡️ Two-factor authentication (2FA) - Q1 2026
 
-- ðŸ”® Social login (OAuth) - Q2 2026
+- 🌐 Social login (OAuth) - Q2 2026
 
-- ðŸ”® Single sign-on (SSO) for enterprise - Q3 2026
+- 🔑 Single sign-on (SSO) for enterprise - Q3 2026
 
-- ðŸ”® Biometric authentication - Q4 2026
+- 🧬 Biometric authentication - Q4 2026
 
-- ðŸ”® Advanced session management - Q4 2026
+- 🕒 Advanced session management - Q4 2026
 
 **Detailed Roadmap:** [Authentication Roadmap](/docs/features/authentication/authentication-roadmap)
 
@@ -80,17 +80,17 @@ PenguinMails provides enterprise-grade user authentication with email/password l
 
 ### Authentication Features
 
-- ðŸ” **Secure Login** - Email/password authentication via NileDB SDK
+- 🔐 **Secure Login** - Email/password authentication via NileDB SDK
 
-- ðŸ‘¤ **Profile Management** - Self-service profile editing
+- 👤 **Profile Management** - Self-service profile editing
 
-- ðŸ”‘ **Password Security** - Forgot/reset/change password workflows
+- 🔑 **Password Security** - Forgot/reset/change password workflows
 
-- ðŸšª **Session Management** - Secure token-based sessions
+- 🛟 **Session Management** - Secure token-based sessions
 
-- ðŸ‘¥ **Team Management** - Multi-user tenant support
+- 👥 **Team Management** - Multi-user tenant support
 
-- ðŸ“§ **Email Verification** - Confirmed email addresses only
+- ✉️ **Email Verification** - Confirmed email addresses only
 
 ---
 
@@ -378,15 +378,15 @@ Confirm New Password: _______________
 
 **Password Requirements:**
 
-- âœ… Minimum 8 characters
+- ✅ Minimum 8 characters
 
-- âœ… At least one uppercase letter
+- ✅ At least one uppercase letter
 
-- âœ… At least one lowercase letter
+- ✅ At least one lowercase letter
 
-- âœ… At least one number
+- ✅ At least one number
 
-- âœ… At least one special character (optional but recommended)
+- ✅ At least one special character (optional but recommended)
 
 **API Endpoint:**
 
@@ -447,7 +447,7 @@ Response:
 Edit Profile
 
 Full Name: John Doe
-Email: user@example.com (verified âœ“)
+Email: user@example.com (verified ✓)
 Timezone: America/Los_Angeles
 Date Format: MM/DD/YYYY
 
@@ -542,57 +542,57 @@ Response:
 
 **What's Available Today:**
 
-- âœ… Team member invitation system
+- ✅ Team member invitation system
 
-- âœ… Role-based access control (Owner, Admin, Member)
+- ✅ Role-based access control (Owner, Admin, Member)
 
-- âœ… View all team members with status
+- ✅ View all team members with status
 
-- âœ… Update user roles
+- ✅ Update user roles
 
-- âœ… Remove team members from tenant
+- ✅ Remove team members from tenant
 
-- âœ… Workspace assignment during invitation
+- ✅ Workspace assignment during invitation
 
-- âœ… Multi-tenant architecture with complete data isolation
+- ✅ Multi-tenant architecture with complete data isolation
 
 **Missing MVP Features (Q1 2026):**
 
-- â³ Workspace management feature documentation (2-3 days)
+- ⏳ Workspace management feature documentation (2-3 days)
 
-- â³ Workspace health scoring system (3-5 days)
+- ⏳ Workspace health scoring system (3-5 days)
 
-- â³ Organization settings & branding documentation (2-3 days)
+- ⏳ Organization settings & branding documentation (2-3 days)
 
-- â³ RBAC permission matrix documentation (2-3 days)
+- ⏳ RBAC permission matrix documentation (2-3 days)
 
-- â³ Team member removal workflow documentation (1-2 days)
+- ⏳ Team member removal workflow documentation (1-2 days)
 
-- â³ Workspace member management documentation (3-5 days)
+- ⏳ Workspace member management documentation (3-5 days)
 
-- â³ Workspace deletion & data handling documentation (3-5 days)
+- ⏳ Workspace deletion & data handling documentation (3-5 days)
 
 **Post-MVP Enhancements (2026+):**
 
-- ðŸ”® Advanced permissions system (custom roles) - Q2 2026
+- 🛡️ Advanced permissions system (custom roles) - Q2 2026
 
-- ðŸ”® Audit logs for team actions - Q3 2026
+- 📜 Audit logs for team actions - Q3 2026
 
-- ðŸ”® Team analytics & activity monitoring - Q4 2026
+- 📊 Team analytics & activity monitoring - Q4 2026
 
-- ðŸ”® Bulk user management - Q3 2026
+- 📦 Bulk user management - Q3 2026
 
-- ðŸ”® User groups & teams within tenant - Q1 2027
+- 👥 User groups & teams within tenant - Q1 2027
 
-- ðŸ”® Workspace templates - Q2 2027
+- 🧩 Workspace templates - Q2 2027
 
-- ðŸ”® Workspace duplication - Q3 2027
+- 🌀 Workspace duplication - Q3 2027
 
-- ðŸ”® Advanced session management - Q4 2026
+- 🕒 Advanced session management - Q4 2026
 
-- ðŸ”® Team member onboarding workflows - Q1 2027
+- 🚀 Team member onboarding workflows - Q1 2027
 
-- ðŸ”® External user collaboration (client portal) - Q2 2027
+- 🤝 External user collaboration (client portal) - Q2 2027
 
 **Detailed Roadmap:** [Team Management Roadmap](/docs/features/teams/team-roadmap)
 
@@ -608,7 +608,7 @@ Response:
 Invite Team Member
 
 Email Address: _______________
-Role: [Admin â–¼]
+Role: [Admin ▼]
 Workspaces: [x] Client A  [ ] Client B
 
 [Send Invitation]
@@ -829,7 +829,7 @@ DELETE /api/v1/auth/sessions/{session_id}
 **Delete user account:**
 
 ```text
-âš ï¸ Delete Account
+⚠️ Delete Account
 
 This will permanently delete your account and all associated data.
 

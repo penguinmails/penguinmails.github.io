@@ -56,7 +56,7 @@ Monthly Email Volume: ______ emails
 Current Monthly Costs:
 â€¢ Infrastructure (VPS, servers): $______
 â€¢ Monitoring & Tools: $______
-â€¢ Personnel (time Ã— $100): $______
+â€¢ Personnel (time × $100): $______
 â€¢ Compliance & Security: $______
 â€¢ TOTAL CURRENT: $______/month
 
