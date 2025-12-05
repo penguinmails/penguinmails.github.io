@@ -84,8 +84,10 @@ Unlike manual warm-up processes that often fail, our system uses proven delivera
 **Days 1-3**: Build foundation with 5-10 emails/day
 **Days 4-7**: Establish patterns with 10-25 emails/day
 **Days 8-14**: Scale gradually with 25-50 emails/day
-**Days 15-21**: Optimize for full capacity with 50-100 emails/day
+**Days 15-21**: Optimize for full capacity (50-100 emails/day, subject to engagement)
 **Days 22+**: Achieve full sending capacity with 95%+ deliverability
+
+> **Note**: Volume limits are determined by engagement, not arbitrary numbers. See our [myths debunked guide](/guides/deliverability-myths-debunked#myth-3-30-emails-per-day-limit-is-universal) for details.
 
 ## Smart Monitoring & Protection
 
@@ -161,7 +163,7 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 
 - **Sending Schedule**: Choose optimal send times for your target audience
 
-- **Email Templates**: Use our proven warm-up email templates
+- **Email Templates**: Use our proven human-like warm-up templates (no "hey how are you" bots)
 
 - **Target List**: Upload contacts for warm-up sequence
 
@@ -531,6 +533,8 @@ For a deeper view of how reputation, cost, and monitoring are handled across the
 - **Poor Content Quality**: Sales-focused content during warm-up damages reputation
 
 - **Inconsistent Patterns**: Irregular sending patterns flag accounts as automated
+
+> **Learn More**: Read about the [top deliverability myths](/guides/deliverability-myths-debunked) that cause these mistakes.
 
 <details>
 <summary><strong>Level 2: Advanced Mistakes</strong></summary>

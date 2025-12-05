@@ -119,6 +119,7 @@ Campaign Review:
 âœ“ Personalization: Variables validated
 âœ“ Schedule: Ready to launch
 âœ“ From Address: Verified and warmed
+âœ“ Deliverability: [Myths Checked](/guides/deliverability-myths-debunked)
 
 [Preview Campaign] [Send Test Email] [Launch Campaign]
 

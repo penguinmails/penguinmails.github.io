@@ -79,6 +79,69 @@ For detailed development setup and contribution procedures, please refer to our 
 
 - **Date Accuracy**: Include accurate last_modified_date in frontmatter when possible
 
+### Documentation Writing Style
+
+**Goal**: Make documentation enjoyable and easy to parse by putting the main idea close to the start.
+
+**Core Structure**:
+
+1. Start with a simple phrase (easy to understand, no technical jargon)
+2. State the main idea clearly
+3. Add one or more supporting ideas
+4. Include optional references/links when helpful
+
+**Formatting Rules**:
+
+- Avoid emojis in content
+- Minimize bullet points (use prose instead)
+- Avoid excessive emphasis (bold, italic) that disrupts reading flow
+- Use bullet points only for lists of items, not for paragraph structure
+- Bold for key terms on first use, italic sparingly for emphasis
+
+**Writing Principles**:
+
+- Main idea comes first to capture reader interest
+- Simple language before technical terms
+- Flowing prose over fragmented lists
+- Natural reading rhythm
+- Clear, direct statements
+
+**Example - Before** (avoid this style):
+
+```markdown
+## ✅ Why Email Warmup Matters
+
+**Email warmup is critical!** Here's why:
+
+- 🚀 Builds sender reputation
+- 📊 Improves deliverability rates  
+- ⚡ Prevents spam folder placement
+- 🎯 Increases engagement over time
+
+**Important:** You *must* warm up for **at least 14 days** before sending cold emails!
+```
+
+**Example - After** (preferred style):
+
+```markdown
+## Why Email Warmup Matters
+
+Email warmup builds sender reputation gradually, similar to how a new credit card user establishes credit history. When you start sending emails from a new domain or inbox, receiving servers have no history to judge whether you're a legitimate sender or a spammer.
+
+The warmup process solves this by starting with low email volumes and gradually increasing over time. This pattern signals to Gmail, Outlook, and other providers that you're a real person, not an automated spam bot. Most domains need at least 14 days of warmup before sending cold emails.
+
+Without proper warmup, even perfectly written emails land in spam folders because the infrastructure lacks proven reputation. See our [infrastructure setup guide](/docs/features/infrastructure/email-infrastructure-setup) for implementation details.
+```
+
+**Key Differences**:
+
+- No emojis cluttering the content
+- Prose paragraphs instead of bullet points
+- Main idea in first sentence (what warmup does)
+- Supporting ideas flow naturally (why it works, timeline, consequences)
+- Minimal bold/italic (only "warmup process" for clarity)
+- Reference link at end, not interrupting flow
+
 ### 4. Tech Stack Compliance
 
 ## Repository Tech Stack Requirements

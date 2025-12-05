@@ -187,6 +187,8 @@ Infrastructure setup is complete when:
 
 - ✅ Deliverability score > 80%
 
+> **Important**: Infrastructure is just the first step. Perfect DNS records won't save you if your sending behavior is flagged. Read [Why SPF/DKIM Isn't Enough](/guides/deliverability-myths-debunked#myth-1-just-set-up-spfdkimdmarc-and-youre-good) to understand the full picture.
+
 ---
 
 ## Level 2: Advanced Configuration
