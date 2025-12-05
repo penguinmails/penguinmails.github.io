@@ -10,6 +10,10 @@
 
 Requires `Bearer Token` with `Super Admin` role.
 
+## Related Documentation
+
+- **UI Route**: [Platform Administration](/docs/design/routes/platform-admin) - Complete admin dashboard specifications including plan management views.
+
 ---
 
 ## Endpoints

@@ -585,9 +585,25 @@ Cancellation → Free Tier (90 days) → Data Deletion
 
 ---
 
+## One-Time Purchases (Post-MVP)
+
+> [!NOTE]
+> **Status: TBD (Q3 2026)**
+>
+> One-time purchases are planned for post-MVP. Potential use cases:
+>
+> - Custom integration setup fees
+> - Consulting and training packages
+> - One-time email credit top-ups
+> - Data migration services
+
+---
+
 ## Related Documentation
 
 ### Billing & Payments
+
+- **[Account Lifecycle](/docs/features/payments/account-lifecycle)** - Renewal, suspension, and decommission flows
 
 - **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing details
 

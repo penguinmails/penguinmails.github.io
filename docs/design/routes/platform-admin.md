@@ -827,6 +827,7 @@
 
 | Route | Related API | Description |
 |---|---|---|
+| `/dashboard/admin/plans` | [Plans API](/docs/implementation-technical/api/platform-api/plans) | `GET /api/v1/platform/admin/plans` (List), `POST` (Create), `PUT /{id}` (Update). |
 | `/users` | [Admin API](/docs/implementation-technical/api/platform-api/admin) | `GET /api/v1/platform/admin/users` (List), `GET .../audit` (Audit Trail). |
 | `/tenants` | [Admin API](/docs/implementation-technical/api/platform-api/admin) | `GET /api/v1/platform/admin/tenants` (List), `PATCH` (Overrides). |
 | `/finance` | [Subscriptions API](/docs/implementation-technical/api/platform-api/subscriptions) | `GET /api/v1/platform/subscriptions/mrr` (Revenue stats). |
@@ -842,6 +843,8 @@
   - **Real-time Dashboards (Queues/Logs)**: Client Components with polling (every 5s) or WebSocket.
 
 - **Caching**:
+
+  - **Plan Data**: Heavily cached for public-facing pages. Admin updates invalidate cache tags (`plans-list`, `plan-{slug}`).
 
   - **Aggregated Metrics (MRR)**: Cached for 1 hour.
 

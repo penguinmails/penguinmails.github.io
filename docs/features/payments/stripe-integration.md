@@ -291,6 +291,57 @@ Header: stripe-signature: {signature}
 
 ---
 
+### Post-Payment Infrastructure Provisioning
+
+**After successful payment, PenguinMails automatically provisions tenant infrastructure.**
+
+```mermaid
+flowchart LR
+    A[checkout.session.completed] --> B[Update OLTP]
+    B --> C[Queue: Provision VPS]
+    C --> D[Hostwind API]
+    D --> E[VPS Ready]
+    E --> F[Store SSH Keys in Vault]
+    F --> G[Notify Tenant]
+    G --> H[Tenant Dashboard: Infra Ready]
+```
+
+#### Provisioning Workflow
+
+**Triggered by:** `checkout.session.completed` webhook
+
+1. **OLTP Update**: Subscription status set to `active`, `stripe_customer_id` linked
+2. **Queue Job**: VPS provisioning job enqueued (async, background)
+3. **Hostwind API**: Create VPS with tenant configuration
+4. **Wait for IP**: Poll until public IP assigned (~2-5 minutes)
+5. **DNS Setup**: Configure A records and rDNS (PTR)
+6. **Vault Storage**: Store admin + tenant SSH keys in Vault
+7. **Email Notification**: Tenant notified that infrastructure is ready
+8. **Dashboard Access**: Infrastructure section unlocked in tenant dashboard
+
+#### What Tenants See
+
+**After payment confirmation:**
+
+- Dashboard shows "Infrastructure provisioning..." status
+- Email notification when VPS is ready (~5-10 minutes)
+- Infrastructure tab unlocked with:
+  - VPS IP address
+  - SSH access information (via Vault credentials viewer)
+  - Domain setup wizard
+  - SMTP configuration
+
+#### Error Handling
+
+If VPS provisioning fails:
+
+- Job retries 3 times with exponential backoff
+- Alert sent to operations team
+- Tenant sees "Provisioning delayed - we're on it" message
+- Manual intervention if all retries fail
+
+---
+
 ### Subscription Status Sync
 
 **Database schema for subscription state:**

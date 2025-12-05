@@ -122,6 +122,8 @@ Handle all payment-related operations including subscriptions, billing, and invo
 
 - **[Subscription Management](/docs/features/payments/subscription-management)** - Plan management and upgrades
 
+- **[Account Lifecycle](/docs/features/payments/account-lifecycle)** - Renewal, suspension, and decommission flows
+
 - **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing via Stripe
 
 - **[Billing Dashboard](/docs/features/payments/billing-dashboard)** - Usage and billing overview

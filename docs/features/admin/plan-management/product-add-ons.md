@@ -76,6 +76,24 @@ Add-ons are ideal for:
 - **Email Validation**: Real-time email validation on upload ($0.005/validation)
 - **Advanced Warmup**: AI-powered warmup scheduler ($15/month)
 
+#### Private IP Lifecycle
+
+**When Purchased:**
+
+- Dedicated IP assigned from PenguinMails IP pool
+- Domains can be configured to send from private IP
+- IP reputation isolated from other tenants
+
+**If Not Renewed:**
+
+- Private IP released back to pool
+- Domains automatically fall back to default shared VPS IP
+- Email sending continues without interruption
+- Deliverability may be affected (shared IP reputation)
+
+> [!NOTE]
+> Tenant receives email notification 7 days before IP add-on expires with option to renew.
+
 ### Capacity Add-Ons
 
 - **Extra Email Credits**: Additional sending volume beyond plan limit ($5 per 10k emails)
