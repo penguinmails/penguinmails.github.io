@@ -16,14 +16,15 @@ roadmap_timeline: "Q1 2026"
 priority: "High"
 related_features:
 
-  - campaigns/campaign-management/overview
+- campaigns/campaign-management/overview
 
-  - campaigns/ab-testing
+- campaigns/ab-testing
 
-  - leads/contact-segmentation
+- leads/contact-segmentation
 related_tasks:
 
-  - epic-6-core-email-pipeline
+- epic-6-core-email-pipeline
+
 ---
 
 # Campaign Scheduling

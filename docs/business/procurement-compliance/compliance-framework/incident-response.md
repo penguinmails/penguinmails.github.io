@@ -157,4 +157,3 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 5. **Monitoring Enhancement**: Increase security monitoring
 
 ---
-

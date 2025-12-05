@@ -23,6 +23,7 @@ related_tasks:
 Progressive disclosure levels for different user needs:
 
 ### Learning Levels
+
 - [Level 1: Quick Start Guide](/docs/features/leads/import-export/quick-start) - Basic import/export workflows
 - [Level 2: Advanced Import/Export](/docs/features/leads/import-export/advanced) - Field mapping, validation, and error handling
 - [Level 3: Technical Implementation](/docs/features/leads/import-export/technical) - API integration and batch processing
@@ -52,4 +53,3 @@ Contact Import/Export enables you to efficiently manage large contact databases 
 - **Duplicate Detection**: Smart merging and conflict resolution
 
 ---
-

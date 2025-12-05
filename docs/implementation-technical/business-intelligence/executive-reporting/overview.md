@@ -14,11 +14,13 @@ keywords: "executive reporting, business intelligence, KPIs, automated reports"
 This framework is organized into specialized report types and implementation guides:
 
 ### Report Specifications
+
 - [Daily Executive Briefing](/docs/implementation-technical/business-intelligence/executive-reporting/daily-briefing) - 3-5 minute daily summaries
 - [Weekly Performance Report](/docs/implementation-technical/business-intelligence/executive-reporting/weekly-report) - Weekly business health scorecards
 - [Monthly Strategic Review](/docs/implementation-technical/business-intelligence/executive-reporting/monthly-review) - Comprehensive monthly analysis
 
 ### Implementation Guides
+
 - [Automation & Distribution](/docs/implementation-technical/business-intelligence/executive-reporting/automation) - Report automation and delivery systems
 - [Integration Points](/docs/implementation-technical/business-intelligence/executive-reporting/integration) - System integration requirements
 - [Security & Compliance](/docs/implementation-technical/business-intelligence/executive-reporting/security) - Security and compliance measures
@@ -90,4 +92,3 @@ Executive Reporting System
 ```
 
 ---
-

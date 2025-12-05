@@ -72,4 +72,3 @@ keywords: "security, best practices, threat model, risk assessment"
    - Verify backup restoration
 
    - Document recovery procedures
-

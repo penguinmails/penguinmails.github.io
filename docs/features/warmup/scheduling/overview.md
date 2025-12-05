@@ -16,16 +16,17 @@ roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
 
-  - warmup/warmup-management
+- warmup/warmup-management
 
-  - warmup/reputation-monitoring
+- warmup/reputation-monitoring
 
-  - domains/domain-management
+- domains/domain-management
 
-  - infrastructure/email-infrastructure-setup
+- infrastructure/email-infrastructure-setup
 related_tasks:
 
-  - epic-4-warmup-deliverability
+- epic-4-warmup-deliverability
+
 ---
 
 # Warmup Scheduling
@@ -286,4 +287,3 @@ Resume Plan:
 ```
 
 #### Adjust Schedule
-

@@ -14,10 +14,12 @@ keywords: "UI library, components, design system, React"
 Component library organized by category:
 
 ### Foundation
+
 - [Tech Stack](/docs/design/ui-library/tech-stack) - Technology foundation
 - [Component Requirements](/docs/design/ui-library/requirements) - Core requirements
 
 ### Component Categories
+
 - [Layout Components](/docs/design/ui-library/layout) - Layout and structure
 - [Button Components](/docs/design/ui-library/buttons) - Button variants
 - [Form Components](/docs/design/ui-library/forms) - Form inputs and controls
@@ -27,6 +29,7 @@ Component library organized by category:
 - [Utility Components](/docs/design/ui-library/utility) - Utility components
 
 ### Guidelines & Patterns
+
 - [Development Guidelines](/docs/design/ui-library/guidelines) - Development standards
 - [Design Patterns](/docs/design/ui-library/patterns) - Design patterns
 - [Authentication Patterns](/docs/design/ui-library/auth-patterns) - Auth patterns
@@ -42,4 +45,3 @@ The UI Library defines **high-level patterns**, **tech stack recommendations**, 
 > **Note**: For detailed component specifications (props, token usage, accessibility), see [Component Library](/docs/design/component-library).
 
 ---
-

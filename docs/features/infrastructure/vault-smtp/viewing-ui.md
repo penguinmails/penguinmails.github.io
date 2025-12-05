@@ -77,4 +77,3 @@ keywords: "UI, web interface, credential viewing, security"
 - Warning banner: "Credentials expire in X minutes"
 
 - Audit trail visible to all admins
-

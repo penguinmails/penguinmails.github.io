@@ -159,4 +159,3 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 - Right to data portability and deletion
 
 ---
-

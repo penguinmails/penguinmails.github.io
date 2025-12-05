@@ -16,16 +16,17 @@ roadmap_timeline: "Q3 2026"
 priority: "High"
 related_features:
 
-  - warmup/warmup-management
+- warmup/warmup-management
 
-  - warmup/warmup-scheduling
+- warmup/warmup-scheduling
 
-  - domains/domain-management
+- domains/domain-management
 
-  - compliance/security-features
+- compliance/security-features
 related_tasks:
 
-  - epic-4-warmup-deliverability
+- epic-4-warmup-deliverability
+
 ---
 
 # Reputation Monitoring

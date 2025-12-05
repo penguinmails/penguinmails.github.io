@@ -127,4 +127,3 @@ Authorization: Bearer {admin_token}
 }
 
 ```
-

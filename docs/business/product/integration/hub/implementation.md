@@ -9,7 +9,6 @@ keywords: "implementation, setup, configuration"
     }
 }
 
-
 ```
 
 ### Product Analytics Integration

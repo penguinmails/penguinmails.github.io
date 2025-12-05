@@ -201,4 +201,3 @@ async function respondToCredentialCompromise(
 
 **Response Time:** Immediate (< 5 minutes)
 **Impact:** Zero downtime (MailU supports immediate password change)
-

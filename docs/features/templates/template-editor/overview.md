@@ -16,16 +16,17 @@ roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:
 
-  - templates/template-management
+- templates/template-management
 
-  - templates/template-variables
+- templates/template-variables
 
-  - templates/template-library
+- templates/template-library
 
-  - campaigns/campaign-management/overview
+- campaigns/campaign-management/overview
 related_tasks:
 
-  - epic-6-templates-content
+- epic-6-templates-content
+
 ---
 
 # Template Editor
@@ -55,4 +56,3 @@ The Template Editor is a comprehensive WYSIWYG (What You See Is What You Get) em
 - **Undo/Redo**: Full edit history
 
 ---
-

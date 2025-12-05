@@ -319,4 +319,3 @@ The current documentation proposes custom tables (`inbox_threads`, `inbox_messag
 **Detailed Roadmap:** [Inbox Management Roadmap](/docs/features/inbox/roadmap)
 
 ---
-

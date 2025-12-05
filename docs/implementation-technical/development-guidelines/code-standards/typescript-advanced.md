@@ -419,4 +419,3 @@ export const CampaignEditor: React.FC<CampaignEditorProps> = ({
 };
 
 ```
-

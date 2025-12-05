@@ -16,14 +16,15 @@ Comprehensive coding standards for enterprise development.
 Standards organized by technology and domain:
 
 ### Language Standards
+
 - [TypeScript Basics](/docs/implementation-technical/development-guidelines/code-standards/typescript-basics) - Fundamental TypeScript coding standards
 - [TypeScript Advanced](/docs/implementation-technical/development-guidelines/code-standards/typescript-advanced) - Advanced TypeScript patterns and practices
 - [CSS Standards](/docs/implementation-technical/development-guidelines/code-standards/css-standards) - CSS and styling conventions
 
 ### Quality Standards
+
 - [Security Standards](/docs/implementation-technical/development-guidelines/code-standards/security-standards) - Security protocols and best practices
 - [Performance Standards](/docs/implementation-technical/development-guidelines/code-standards/performance-standards) - Performance optimization guidelines
 - [Code Review Checklist](/docs/implementation-technical/development-guidelines/code-standards/code-review) - Comprehensive review criteria
 
 ---
-

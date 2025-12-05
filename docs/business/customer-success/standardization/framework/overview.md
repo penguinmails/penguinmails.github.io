@@ -14,16 +14,19 @@ keywords: "customer success, standardization, framework, operations"
 Framework organized by functional domain:
 
 ### Core Standards
+
 - [Documentation Standards](/docs/business/customer-success/standardization/framework/documentation-standards) - Documentation framework
 - [Process Standardization](/docs/business/customer-success/standardization/framework/process-standards) - Process standards
 - [Governance Framework](/docs/business/customer-success/standardization/framework/governance) - Governance and compliance
 
 ### Implementation
+
 - [Implementation Framework](/docs/business/customer-success/standardization/framework/implementation) - Implementation guidelines
 - [Cross-Domain Integration](/docs/business/customer-success/standardization/framework/cross-domain-integration) - Integration standards
 - [Technology Standards](/docs/business/customer-success/standardization/framework/technology) - Technology requirements
 
 ### Measurement
+
 - [Success Metrics](/docs/business/customer-success/standardization/framework/success-metrics) - KPIs and metrics
 - [Implementation Roadmap](/docs/business/customer-success/standardization/framework/roadmap) - Rollout plan
 
@@ -43,4 +46,3 @@ Framework organized by functional domain:
 The Standardization Framework Documentation provides comprehensive standards for business process documentation, quality assurance protocols, and governance frameworks. This framework ensures consistency, quality, and scalability across all Customer Success operations while maintaining operational excellence and regulatory compliance.
 
 ---
-

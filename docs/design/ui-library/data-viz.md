@@ -60,4 +60,3 @@ eventSource.onmessage = (event) => {
 ```
 
 ---
-

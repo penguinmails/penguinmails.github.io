@@ -5,7 +5,6 @@ level: "2"
 persona: "CS Teams"
 keywords: "playbooks, templates, customer success"
 
-
 # Industry-Specific Playbook Templates
 
 ## Executive Summary
@@ -26,4 +25,3 @@ Industry-Specific Playbook Templates provide standardized process workflows tail
 ## Healthcare Industry Playbook Template
 
 ### Compliance Framework
-

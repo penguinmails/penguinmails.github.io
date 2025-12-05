@@ -7,7 +7,7 @@ keywords: "journey mapping, visualization, user flows"
 ---
 
 
-  - List age and freshness
+- List age and freshness
 
 - **Cleanup Actions**:
 

@@ -190,4 +190,3 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 - `429 Too Many Requests` - Rate limit exceeded
 
 ---
-

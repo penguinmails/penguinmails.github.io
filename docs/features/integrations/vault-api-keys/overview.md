@@ -12,16 +12,19 @@ keywords: "vault, API keys, security, credential management, integration"
 Comprehensive guide organized by topic:
 
 ### Core Functionality
+
 - [User Workflows](/docs/features/integrations/vault-api-keys/user-workflows) - User workflows and operations
 - [Technical Architecture](/docs/features/integrations/vault-api-keys/architecture) - System architecture and design
 - [API Endpoints](/docs/features/integrations/vault-api-keys/api-endpoints) - API documentation
 
 ### User Interface & Security
+
 - [Frontend UI](/docs/features/integrations/vault-api-keys/frontend-ui) - UI specifications
 - [Security Considerations](/docs/features/integrations/vault-api-keys/security) - Security best practices
 - [Best Practices](/docs/features/integrations/vault-api-keys/best-practices) - API key management best practices
 
 ### Implementation
+
 - [Implementation Checklist](/docs/features/integrations/vault-api-keys/implementation) - Deployment guide
 - [Compliance](/docs/features/integrations/vault-api-keys/compliance) - Compliance requirements
 - [Roadmap](/docs/features/integrations/vault-api-keys/roadmap) - Future enhancements
@@ -65,4 +68,3 @@ The Tenant API Key System provides secure, self-service API key generation and m
 7. **Audit Trail** - All key operations logged for security compliance
 
 ---
-

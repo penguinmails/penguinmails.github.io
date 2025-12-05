@@ -40,7 +40,6 @@ CREATE TABLE template_tags (
     UNIQUE(template_id, tag_id)
 );
 
-
 ```
 
 #### Eta Template Rendering Storage

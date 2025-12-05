@@ -9,7 +9,6 @@ keywords: "weekly report, performance metrics, business health, trend analysis"
 
 # Weekly Performance Report
 
-
 ```
 
 #### Technical Implementation

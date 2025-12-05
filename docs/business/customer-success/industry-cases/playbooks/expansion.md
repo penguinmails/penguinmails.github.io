@@ -11,7 +11,6 @@ keywords: "expansion, upsell, customer growth"
 
     - Expansion planning
 
-
 ```
 
 ---
@@ -305,4 +304,3 @@ Customization Framework:
 
 
 ```
-

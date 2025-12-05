@@ -176,4 +176,3 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 ```
 
 ---
-

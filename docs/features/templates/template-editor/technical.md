@@ -470,4 +470,3 @@ app.post('/api/templates/:id/preview', authenticate, async (req, res) => {
 ```
 
 ---
-

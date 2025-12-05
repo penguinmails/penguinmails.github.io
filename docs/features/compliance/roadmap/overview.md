@@ -18,6 +18,7 @@ keywords: "compliance roadmap, security timeline, GDPR, SOC2, certifications"
 Quarterly implementation timeline organized by development phase:
 
 ### Quarterly Roadmaps
+
 - [Q4 2025 - MVP Foundation](/docs/features/compliance/roadmap/q4-2025) - Current foundation and core security
 - [Q1 2026 - Enhanced Security](/docs/features/compliance/roadmap/q1-2026) - Security enhancements and 2FA
 - [Q2 2026 - Compliance Certifications](/docs/features/compliance/roadmap/q2-2026) - SOC 2 and GDPR certifications
@@ -85,4 +86,3 @@ This roadmap outlines the implementation timeline for compliance certifications,
 **Recommendation:** Platform is ready for launch from compliance and security perspective. Focus on Post-MVP enhancements after successful launch and customer feedback.
 
 ---
-

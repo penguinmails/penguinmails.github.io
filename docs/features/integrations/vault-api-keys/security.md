@@ -138,4 +138,3 @@ Logged events:
 Audit log retention: 90 days (configurable)
 
 ---
-

@@ -14,11 +14,13 @@ keywords: "analytics pipeline, marketing analytics, data processing"
 Analytics pipeline organized by component:
 
 ### Core Architecture
+
 - [Part I: Pipeline Architecture](/docs/implementation-technical/marketing/analytics-integration/analytics-pipeline/architecture) - Core architecture
 - [Part II: Real-Time Processing](/docs/implementation-technical/marketing/analytics-integration/analytics-pipeline/realtime-processing) - Real-time analytics
 - [Part III: Performance Monitoring](/docs/implementation-technical/marketing/analytics-integration/analytics-pipeline/monitoring) - Monitoring and alerting
 
 ### Requirements & Implementation
+
 - [Part IV: Performance Requirements](/docs/implementation-technical/marketing/analytics-integration/analytics-pipeline/requirements) - Performance requirements
 - [Part V: Implementation](/docs/implementation-technical/marketing/analytics-integration/analytics-pipeline/implementation) - Deployment guide
 
@@ -33,4 +35,3 @@ This document defines the comprehensive marketing analytics pipeline architectur
 **Technical Focus:** <5 second latency analytics with 99.5% accuracy
 
 ---
-

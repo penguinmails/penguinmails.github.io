@@ -42,4 +42,3 @@ keywords: "compliance, certifications, regulations"
 - **Article 25 - Data Protection by Design** - Secure by default (HTTPS, hashing, rate limiting)
 
 ---
-

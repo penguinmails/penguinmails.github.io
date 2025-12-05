@@ -14,16 +14,19 @@ Secure credential storage and rotation with HashiCorp Vault integration.
 Comprehensive guide organized by functional area:
 
 ### Core Architecture
+
 - [Architecture](/docs/features/infrastructure/vault-smtp/architecture) - System architecture and design
 - [Storage Workflow](/docs/features/infrastructure/vault-smtp/storage-workflow) - Credential storage process
 - [Retrieval](/docs/features/infrastructure/vault-smtp/retrieval) - Credential retrieval mechanisms
 
 ### User Features
+
 - [Secure Viewing UI](/docs/features/infrastructure/vault-smtp/viewing-ui) - Web interface for viewing credentials
 - [Credential Rotation](/docs/features/infrastructure/vault-smtp/rotation) - Automated rotation procedures
 - [Emergency Reset](/docs/features/infrastructure/vault-smtp/emergency-reset) - Emergency credential reset
 
 ### Operations & Security
+
 - [Audit Logging](/docs/features/infrastructure/vault-smtp/audit-logging) - Audit trail and monitoring
 - [Disaster Recovery](/docs/features/infrastructure/vault-smtp/disaster-recovery) - Recovery procedures
 - [API Endpoints](/docs/features/infrastructure/vault-smtp/api-endpoints) - API documentation
@@ -72,4 +75,3 @@ Vault-based SMTP credential storage provides:
 4. **Emergency Reset** - Rapid credential reset in case of security incident
 
 5. **Compliance** - Audit trail supports SOC 2, ISO 27001, and GDPR requirements
-

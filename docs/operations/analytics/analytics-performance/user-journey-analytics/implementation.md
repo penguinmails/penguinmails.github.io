@@ -7,9 +7,9 @@ keywords: "implementation, best practices, setup"
 ---
 
 
-   - **Solution**: Check tracking pixel implementation, contact support
+- **Solution**: Check tracking pixel implementation, contact support
 
-   - **Prevention**: Verify tracking setup before launch
+- **Prevention**: Verify tracking setup before launch
 
 3. **Data Source Issues**:
 

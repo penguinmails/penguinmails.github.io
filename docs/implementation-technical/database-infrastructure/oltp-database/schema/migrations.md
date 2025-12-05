@@ -14,7 +14,6 @@ CREATE INDEX idx_tenant_users_user ON tenant_users(user_id);
 CREATE INDEX idx_smtp_ip_addresses_status ON smtp_ip_addresses(status);
 CREATE INDEX idx_domain_ip_assignments_domain ON domain_ip_assignments(domain_id);
 
-
 ```
 
 ---

@@ -70,4 +70,3 @@ This section incorporates best practices from:
 - Updated for current best practices as of 2025
 
 ```
-

@@ -186,4 +186,3 @@ async function manualRotateSmtpCredentials(
 </Button>
 
 ```
-

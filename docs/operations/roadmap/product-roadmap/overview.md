@@ -25,6 +25,7 @@ This document defines the product roadmap for PenguinMails, outlining **what we'
 Detailed feature roadmaps are organized by functional area:
 
 ### Feature Deep Dives
+
 - [Infrastructure Management](/docs/operations/roadmap/product-roadmap/infrastructure) - Multi-region deployment and disaster recovery
 - [Domain Management](/docs/operations/roadmap/product-roadmap/domain-management) - Domain verification and DNS automation
 - [Automation & Workflows](/docs/operations/roadmap/product-roadmap/automation-workflows) - Workflow builder and automation features
@@ -34,6 +35,7 @@ Detailed feature roadmaps are organized by functional area:
 - [Inbox Management](/docs/operations/roadmap/product-roadmap/inbox-management) - Email inbox and Stalwart integration
 
 ### Planning & Execution
+
 - [Development Milestones](/docs/operations/roadmap/product-roadmap/development-milestones) - Development levels, investment, and risk management
 
 ---
@@ -216,4 +218,3 @@ Detailed feature roadmaps are organized by functional area:
 | **[Workspace Duplication](/docs/features/enterprise/team-roadmap#17-post-mvp---p3-workspace-duplication)** | Clone workspaces with settings, campaigns, templates | Q3 2027 (3-4 weeks) |
 
 ---
-

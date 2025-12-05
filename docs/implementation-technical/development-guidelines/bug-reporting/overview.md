@@ -16,14 +16,17 @@ Comprehensive documentation for bug reporting, triage, and resolution workflows.
 This guide is organized into specialized sections for efficient navigation:
 
 ### Core Process
+
 - [Bug Fix Guidelines](/docs/implementation-technical/development-guidelines/bug-reporting/bug-fix-guidelines) - Root cause analysis and test-first bug fixing
 
 ### Bug Pattern Recognition
+
 - [Email Delivery Bugs](/docs/implementation-technical/development-guidelines/bug-reporting/email-delivery-bugs) - Common email delivery issues and solutions
 - [API Bugs](/docs/implementation-technical/development-guidelines/bug-reporting/api-bugs) - API-related bug patterns and fixes
 - [Database Bugs](/docs/implementation-technical/development-guidelines/bug-reporting/database-bugs) - Database performance and consistency issues
 
 ### Specialized Areas
+
 - [Performance Bugs](/docs/implementation-technical/development-guidelines/bug-reporting/performance-bugs) - Memory leaks and performance optimization
 - [Security Bugs](/docs/implementation-technical/development-guidelines/bug-reporting/security-bugs) - Security vulnerabilities and input validation
 - [Bug Verification](/docs/implementation-technical/development-guidelines/bug-reporting/bug-verification) - Testing checklists and best practices

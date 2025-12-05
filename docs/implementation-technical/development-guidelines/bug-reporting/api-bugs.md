@@ -230,4 +230,3 @@ const controller = new CampaignsController(campaignService);
 // app.get('/api/v1/campaigns/:id', (req, res) => controller.getCampaign(req, res));
 
 ```
-

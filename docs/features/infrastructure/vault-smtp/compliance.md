@@ -46,4 +46,3 @@ keywords: "compliance, regulatory, standards, certification"
 - **Article 33 - Breach Notification** - Audit trail, monitoring
 
 - **Article 25 - Data Protection by Design** - Encryption by default
-

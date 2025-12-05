@@ -13,6 +13,7 @@ keywords: "campaign management, email campaigns, campaign editor, scheduling"
 Progressive disclosure levels for different user needs:
 
 ### Learning Levels
+
 - [Level 1: Quick Start Guide](/docs/features/campaigns/campaign-management/quick-start) - Basic campaign workflows
 - [Level 2: Advanced Configuration](/docs/features/campaigns/campaign-management/advanced) - Advanced features and optimization
 - [Level 3: Technical Implementation](/docs/features/campaigns/campaign-management/technical) - API and technical details
@@ -38,4 +39,3 @@ Campaign Management is the core revenue-generating feature of PenguinMails, enab
 - **Comprehensive Analytics**: Track performance at campaign and step level
 
 ---
-

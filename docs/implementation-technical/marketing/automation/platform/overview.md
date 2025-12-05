@@ -14,11 +14,13 @@ keywords: "marketing automation, platform, architecture"
 Platform architecture organized by component:
 
 ### Core Components
+
 - [Part I: Workflow Engine](/docs/implementation-technical/marketing/automation/platform/workflow-engine) - Workflow architecture
 - [Part II: Lead Scoring](/docs/implementation-technical/marketing/automation/platform/lead-scoring) - Lead scoring and nurturing
 - [Part III: Integration Architecture](/docs/implementation-technical/marketing/automation/platform/integration) - Platform integration
 
 ### Operations
+
 - [Part IV: Performance Optimization](/docs/implementation-technical/marketing/automation/platform/performance) - Performance and monitoring
 - [Part V: Security](/docs/implementation-technical/marketing/automation/platform/security) - Security and compliance
 - [Part VI: Implementation](/docs/implementation-technical/marketing/automation/platform/implementation) - Deployment guide
@@ -34,4 +36,3 @@ This document defines the comprehensive marketing automation platform architectu
 **Technical Focus:** 50% automation efficiency improvement with visual workflow builder
 
 ---
-

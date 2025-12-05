@@ -185,7 +185,7 @@ class MarketingAPIImpl implements MarketingAPI {
         name: 'Product Launch Campaign',
         type: 'product_launch',
         startDate: new Date(),
-        endDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        endDate: new Date(Date.now() + 30 *24* 60 *60* 1000),
         status: 'draft'
       }
     ];
@@ -213,7 +213,7 @@ async function demonstrateLaunchCoordination() {
     const launchData: LaunchData = {
       productName: 'AI-Powered Analytics Dashboard',
       newFeatures: ['feature_1', 'feature_2', 'feature_3'],
-      launchDate: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000), // 45 days from now
+      launchDate: new Date(Date.now() + 45 *24* 60 *60* 1000), // 45 days from now
       targetAudience: ['enterprise_customers', 'power_users'],
       marketingChannels: ['email', 'social_media', 'webinars', 'content_marketing']
     };
@@ -228,7 +228,6 @@ async function demonstrateLaunchCoordination() {
     console.error('Launch coordination failed:', error);
   }
 }
-
 
 ```
 

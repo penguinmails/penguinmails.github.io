@@ -80,4 +80,3 @@ const authTag = cipher.getAuthTag();
 const storedValue = Buffer.concat([iv, authTag, encryptedPassword]).toString('base64');
 
 ```
-
