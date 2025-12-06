@@ -179,6 +179,10 @@
   - **Reset Password**: Sends reset email.
 
   - **Suspend Account**: Confirmation modal, reason required.
+  
+  - **Revoke All Sessions**: Immediate token invalidation (Security).
+
+  - **Change Role**: Promote/demote user (e.g., Member ↔ Admin).
 
   - **Delete Account** (GDPR): Hard delete, irreversible.
 
@@ -323,6 +327,8 @@
 - **Quick Actions**:
 
   - **"Open Stripe Dashboard"**: Opens Stripe in new tab.
+
+  - **"Force Sync Transaction"**: Input Invoice ID to pull latest status from Stripe.
 
   - **"View MRR Reports"**: Direct link to Stripe revenue section.
 
@@ -807,7 +813,7 @@
 
 ---
 
-### Admin-Specific UI Theme
+### Admin-Specific UI Theme (Future / Post-MVP)
 
 **User Story**: *"As an admin, I want a visually distinct interface, so I always know when I'm in admin mode and avoid accidental changes."*
 
@@ -856,7 +862,9 @@
 
 - **Access Control**:
 
-  - Strict RBAC checks on every data fetch (Super Admin vs Support vs Finance).
+  - **Strict RBAC**:
+    - Access guarded by `staff_members` table (distinct from tenant users).
+    - Checks on every data fetch (Super Admin vs Support vs Finance).
 
 ## 7. Edge Cases & Error Handling
 

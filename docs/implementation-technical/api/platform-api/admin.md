@@ -126,6 +126,52 @@ persona: "Backend Developers"
 }
 ```
 
+### Revoke User Sessions
+
+**Method**: `POST`
+**URL**: `/api/v1/platform/admin/users/{id}/revoke-sessions`
+**Purpose**: Immediately invalidate all active session tokens for a user (Security).
+
+**Response**:
+
+```json
+{
+  "success": true,
+  "data": {
+    "user_id": "usr_123",
+    "revoked_at": "2025-12-04T12:05:00Z",
+    "active_sessions_terminated": 3
+  }
+}
+```
+
+### Update User Role
+
+**Method**: `PATCH`
+**URL**: `/api/v1/platform/admin/users/{id}`
+**Purpose**: Update user role or permissions.
+
+**Request**:
+
+```json
+{
+  "role": "admin"
+}
+```
+
+**Response**:
+
+```json
+{
+  "success": true,
+  "data": {
+    "user_id": "usr_123",
+    "role": "admin",
+    "updated_at": "2025-12-04T12:10:00Z"
+  }
+}
+```
+
 ---
 
 ### Reset User Password

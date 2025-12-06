@@ -63,9 +63,14 @@ This documentation integrates with:
 
 ---
 
-## Future Migration
+## Internal User Journeys
 
-This placeholder file will be replaced with migrated content from the internal user journeys workspace directory during the documentation consolidation project.
+Detailed workflows and journeys for internal platform users:
+
+- [**Admin Journeys**](internal-users/admin-journeys.md) - Platform administration, user management, and security workflows
+- [**Operations Journeys**](internal-users/operations-journeys.md) - System monitoring, incident response, and maintenance
+- [**Technical Teams Journeys**](internal-users/technical-teams-journeys.md) - Development, deployment, and infrastructure management
+- [**Internal Tools Integration**](internal-users/internal-tools-integration.md) - Integration with third-party tools and internal systems
 
 **Keywords**: user journeys, user stories, user types, internal users, external stakeholders, customer users, methodology, templates, prioritization, use cases, onboarding
 

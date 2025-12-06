@@ -87,6 +87,36 @@ The Finance API provides endpoints for basic subscription monitoring and Stripe 
 
 ---
 
+### Force Sync Transaction
+
+**Method**: `POST`
+**URL**: `/api/v1/platform/finance/sync-transaction`
+**Purpose**: Manually trigger a sync for a specific transaction from Stripe (Reconciliation).
+
+**Request**:
+
+```json
+{
+  "invoice_id": "in_123abc",
+  "tenant_id": "tn_123"
+}
+```
+
+**Response**:
+
+```json
+{
+  "success": true,
+  "data": {
+    "sync_status": "completed",
+    "transaction_updated": true,
+    "stripe_status": "paid",
+    "local_status": "paid",
+    "synced_at": "2025-12-04T12:15:00Z"
+  }
+}
+```
+
 ## For MRR and Revenue Analytics
 
 Use Stripe directly for:

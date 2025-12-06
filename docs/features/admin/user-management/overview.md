@@ -22,7 +22,7 @@ The Global User Management feature provides PenguinMails internal staff with com
 
 - **Global User Search**: Search across all users by email, name, or user ID
 - **Comprehensive Audit Trails**: View complete user activity history for debugging and compliance
-- **Account Actions**: Suspend, delete, or reset passwords for user accounts
+- **Account Actions**: Suspend, delete, change role, or reset passwords for user accounts
 - **GDPR Compliance**: Support for data subject access requests and account deletion
 
 ---
@@ -89,9 +89,22 @@ The Global User Management feature provides PenguinMails internal staff with com
 
 - **View Details**: Full user profile with activity summary
 - **View Audit Trail**: Opens comprehensive audit viewer
+- **Change Role**: Promote or demote users (e.g., Member to Admin)
 - **Reset Password**: Sends password reset email
 - **Suspend Account**: Temporarily disable account access
 - **Delete Account**: GDPR-compliant hard delete (irreversible)
+
+### Change User Role
+
+**User Story**: *"As a support admin, I need to promote a user to 'Admin' so they can help manage their organization's billing."*
+
+**Workflow**:
+
+1. Navigate to User Details page
+2. Click **"Change Role"** in the actions menu
+3. Select new role from dropdown (Owner, Admin, Member)
+4. Confirm action
+5. **System Action**: Updates `tenant_users` table and invalidates user session to enforce new permissions immediately
 
 ---
 
@@ -100,6 +113,7 @@ The Global User Management feature provides PenguinMails internal staff with com
 ### Database Integration
 
 - **Users Table**: Primary source for user data (OLTP)
+- **Staff Members Table**: Separate table for internal platform admin users (security guard)
 - **Audit Log Table**: Stores all user actions with retention policy
 - **Search Index**: Elasticsearch for fast full-text search
 
@@ -109,6 +123,14 @@ The Global User Management feature provides PenguinMails internal staff with com
 - **admin**: View-only access to user data
 - **support**: Read-only access, no PII (personally identifiable information)
 - **qa**: Sandbox-only access
+
+> [!SECURITY]
+> **Staff Guard Architecture**:
+> Admin access is strictly authenticated against the `staff_members` table (see [Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide#staff-members---staff-user-mapping)).
+>
+> - **Middleware Check**: Every request to `/admin/*` or `/dashboard/admin/*` verifies the user exists in `staff_members` and has `is_active=true`.
+> - **Role Enforcement**: Staff roles (Super Admin, Support, etc.) are distinct from tenant roles and are enforced at the API gateway level.
+> - **Separation of Concerns**: Regular tenant users, even with "Owner" permissions, have NO access to these internal admin views.
 
 ### Audit Logging
 
