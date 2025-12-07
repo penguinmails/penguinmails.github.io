@@ -1,7 +1,7 @@
 ---
 title: "Internal Users: Admin Journeys"
 description: "Key user journeys for Platform Administrators managing the PenguinMails platform"
-last_modified_date: "2025-12-06"
+last_modified_date: "2025-12-07"
 level: "2"
 persona: "Platform Administrators"
 ---
@@ -63,10 +63,10 @@ This document outlines the key user journeys for Platform Administrators who man
 #### **Daily Operations**
 
 1. **Monitor User Activity** ([Audit Trail Viewer](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
-   - Review daily login metrics
+   - Review login activity via [PostHog](https://posthog.com/) analytics
    - Identify unusual access patterns
    - Monitor failed login attempts
-   - Check user engagement metrics
+   - Check engagement metrics via PostHog (see [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary#external-analytics-posthog))
 
 2. **Manage Permissions** ([Change Role](/docs/features/admin/user-management/overview.md#change-user-role))
    - Adjust access levels based on role changes
@@ -76,11 +76,12 @@ This document outlines the key user journeys for Platform Administrators who man
 
 #### **Advanced Management**
 
-1. **Bulk User Operations**
+1. **Bulk User Operations** *(Planned - Q2 2026)*
    - Mass user updates and migrations
    - Department restructuring and reassignments
    - Access policy updates across user groups
    - Data export and reporting
+   - See [User Management Future Enhancements](/docs/features/admin/user-management/overview.md#future-enhancements)
 
 2. **Compliance & Audit** ([Audit Trail](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Generate access reports for compliance
@@ -104,23 +105,24 @@ This document outlines the key user journeys for Platform Administrators who man
 
 2. **Feature Flag Management** ([Feature Flags Modal](/docs/design/routes/platform-admin.md#row-actions))
    - Enable/disable platform features
-   - Manage beta feature rollouts
-   - Configure A/B testing environments
-   - Control feature access by user segments
+   - Manage beta feature rollouts via [Tenant Management](/docs/features/admin/tenant-management/overview.md#feature-flags)
+   - Control feature access by user segments (percentage rollouts, allowlists)
+
+   > **Note:** A/B testing and advanced experimentation uses [PostHog](https://posthog.com/). Spike planned to review A/B needs and potential improvements beyond PostHog.
 
 #### **Ongoing Configuration**
 
-1. **Performance Optimization**
-   - Monitor system performance metrics
-   - Adjust resource allocation
-   - Optimize database configurations
-   - Manage caching strategies
+1. **Performance Monitoring** ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
+   - Monitor system performance via Prometheus/Grafana (see [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary#infrastructure-metrics-external))
+   - View queue health and job processing rates
+   - Check service availability and error rates
 
-2. **Integration Management**
-   - Configure third-party integrations
-   - Manage API access and keys
-   - Monitor integration health
-   - Update integration configurations
+   > **Note:** Resource allocation, database optimization, and caching are DevOps operations. See [Operations Runbooks](/docs/operations/incident-management/runbooks) for infrastructure tasks.
+
+2. **Integration Management** *(Roadmap - 2027)*
+   - Third-party integration management planned post-internal API stabilization
+   - Current: API keys managed via [Vault Management](/docs/features/admin/vault-management/overview.md)
+   - See [Enterprise Roadmap](/docs/features/admin/enterprise-roadmap.md) for planned integration features
 
 ---
 
@@ -170,11 +172,11 @@ This document outlines the key user journeys for Platform Administrators who man
    - Monitor resource utilization
    - Review error rates and performance
 
-2. **User Activity Analytics**
-   - Analyze user engagement metrics
-   - Review feature adoption rates
-   - Monitor customer satisfaction scores
-   - Track support ticket trends
+2. **User Activity Analytics** *(PostHog + OLAP)*
+   - Engagement metrics and feature adoption tracked via [PostHog](https://posthog.com/)
+   - Admin audit logs available in [OLAP admin_audit_log](/docs/implementation-technical/database-infrastructure/olap-database/schema-guide.md#admin-activity)
+   - Customer satisfaction and support ticket trends via external tools (Zendesk, Intercom)
+   - See [Enterprise Roadmap](/docs/features/admin/enterprise-roadmap.md) for enhanced analytics (Q1 2027)
 
 #### **Reporting & Insights**
 

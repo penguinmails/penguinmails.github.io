@@ -133,7 +133,10 @@ See [Analytics UI Patterns](/docs/design/analytics-ui-patterns) for visual desig
 
 ## Technical Integration
 
-### Monitoring Stack
+> [!NOTE]
+> For launch, **PostHog handles basic alerting**. The monitoring stack below is planned for the [2026 observability spike](/docs/operations/roadmap/observability-roadmap).
+
+### Monitoring Stack (2026 Spike)
 
 - **Prometheus**: Collects metrics from all services (15s interval)
 - **Grafana**: Visualizations and dashboards
@@ -149,11 +152,11 @@ See [Analytics UI Patterns](/docs/design/analytics-ui-patterns) for visual desig
 - **Update Frequency**: Every 2 hours
 - **Historical Tracking**: 90 days of reputation scores
 
-### Alerting
+### Alerting (2026 Spike)
 
-- **Alert Rules**: Defined in Prometheus
-- **Notification Channels**: PagerDuty, Slack, Email
-- **Escalation**: Auto-escalate if not acknowledged in 10 minutes
+- **Alert Rules**: Defined in Prometheus (planned)
+- **Notification Channels**: PostHog for launch; PagerDuty, Slack planned
+- **Escalation**: Auto-escalate if not acknowledged in 10 minutes (planned)
 
 ---
 
@@ -161,5 +164,5 @@ See [Analytics UI Patterns](/docs/design/analytics-ui-patterns) for visual desig
 
 - [Platform Admin Routes - Infrastructure](/docs/design/routes/platform-admin#dashboard-system-infrastructure)
 - [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring)
-- [Monitoring Setup](/docs/operations/monitoring/prometheus-grafana)
+- [Observability Roadmap](/docs/operations/roadmap/observability-roadmap) - 2026 spike planning
 - [Incident Response](/docs/operations/incident-management/runbooks)

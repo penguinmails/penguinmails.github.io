@@ -42,6 +42,10 @@ Track server health, IP reputation, and service availability.
 
 Search and analyze application logs for debugging and troubleshooting.
 
+### [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary)
+
+Reference guide for all available metrics, their sources, and update frequencies.
+
 ---
 
 ## User Stories
@@ -97,16 +101,22 @@ See [Queue System Implementation](/docs/implementation-technical/architecture/de
 
 ### Monitoring Stack
 
-- **Metrics Collection**: Prometheus for time-series data
-- **Visualization**: Grafana dashboards
-- **Historical Storage**: ClickHouse for long-term metrics
-- **Alerting**: PagerDuty for critical issues
+> [!NOTE]
+> For launch, **PostHog handles basic monitoring and alerting**. The tools below are planned for evaluation in a [2026 spike](/docs/operations/roadmap/observability-roadmap).
+
+- **Metrics Collection**: Prometheus for time-series data *(2026 Spike)*
+- **Visualization**: Grafana dashboards *(2026 Spike)*
+- **Historical Storage**: ClickHouse for long-term metrics *(2026 Spike)*
+- **Alerting**: PostHog for launch, PagerDuty integration planned
 
 ### Logging Infrastructure
 
-- **Centralized Logs**: Elasticsearch for aggregation
-- **Application Logs**: Structured JSON logging
-- **Error Tracking**: Sentry integration
+> [!NOTE]
+> For launch, use structured JSON logging to standard output. Centralized log aggregation is planned for the [2026 observability spike](/docs/operations/roadmap/observability-roadmap).
+
+- **Centralized Logs**: Elasticsearch for aggregation *(2026 Spike)*
+- **Application Logs**: Structured JSON logging ✅
+- **Error Tracking**: Sentry integration *(2026 Spike)*
 - **Retention**: 90 days for operational logs, 7 years for audit logs
 
 ---
