@@ -305,7 +305,7 @@ async function analyzeLogs(serviceid) {
 
 ### Integration with Monitoring Tools
 
-**Prometheus/Grafana**:
+**Prometheus/Grafana (Future/2026 Spike)**:
 
 ```yaml
 

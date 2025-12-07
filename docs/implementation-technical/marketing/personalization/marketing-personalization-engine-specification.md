@@ -21,7 +21,7 @@ This technical specification defines the implementation architecture for real-ti
 
 ### Core Personalization Pipeline
 
-**Customer Data Platform (CDP):** PostgreSQL + Redis for real-time event streaming, PostgreSQL batch processing, Elasticsearch for customer indexing, data privacy controls with field-level encryption
+**Customer Data Platform (CDP):** PostgreSQL + Redis for real-time event streaming, PostgreSQL batch processing, Elasticsearch for customer indexing (Future/2026 Spike), data privacy controls with field-level encryption
 
 **Real-Time Feature Store:** Redis for low-latency serving (<10ms), PostgreSQL for storage, PostgreSQL feature management, feature versioning with automated rollbacks
 
@@ -1057,7 +1057,7 @@ class PersonalizationPerformanceMonitor {
 
 ## Dependencies and Infrastructure
 
-**Required Services:** PostgreSQL + Redis for streaming, PostgreSQL for processing, Redis for storage, TensorFlow Serving for ML inference, Elasticsearch for search, Prometheus/Grafana for monitoring
+**Required Services:** PostgreSQL + Redis for streaming, PostgreSQL for processing, Redis for storage, TensorFlow Serving for ML inference, Elasticsearch for search (Future/2026 Spike), Prometheus/Grafana for monitoring (Future/2026 Spike)
 
 **Infrastructure:** Auto-scaling API servers (8-32 cores), GPU nodes for ML, high-memory instances (64GB+), Redis cluster, performance targets: <50ms decision latency, <10ms feature retrieval, 10,000+ decisions/second
 

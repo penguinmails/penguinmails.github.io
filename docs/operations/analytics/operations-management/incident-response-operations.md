@@ -162,7 +162,7 @@ interface MonitoringConfig {
   };
 
   applicationMonitoring: {
-    tools: ['Sentry', 'DataDog', 'New Relic'];
+    tools: ['Sentry', 'DataDog', 'New Relic']; // (Future/2026 Spike)
     alerts: [
       { type: 'error', pattern: '5xx', severity: 'high' },
       { type: 'performance', metric: 'apdex', threshold: 0.8, severity: 'medium' }

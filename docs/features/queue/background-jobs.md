@@ -186,7 +186,7 @@ Internal admin tool to view:
 
 - Job throughput
 
-## Metrics (Prometheus):
+## Metrics (Prometheus - 2026 Spike):
 
 
 - `jobs_completed_total`

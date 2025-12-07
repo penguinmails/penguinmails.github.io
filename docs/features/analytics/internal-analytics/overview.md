@@ -50,7 +50,7 @@ description: "Detailed widget and data requirements for Internal Command Center 
 
 * **Queue Health**: Job processing rates & backlogs (PostgreSQL + Redis Queue).
 
-* **Error Stream**: Real-time error logs (Sentry feed).
+* **Error Stream**: Real-time error logs (Sentry feed - Future Integration).
 
 * **Infrastructure Load**: CPU/Memory/Disk usage heatmaps.
 

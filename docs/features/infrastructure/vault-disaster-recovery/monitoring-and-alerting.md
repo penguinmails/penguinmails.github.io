@@ -228,7 +228,7 @@ async function evaluateAlertRules(health: VaultHealthStatus): Promise<void> {
 
 ## Grafana Dashboard Blueprint
 
-Track seal status, leadership, request performance, storage growth, replication lag, and backup freshness in Grafana. Query Vault's Prometheus metrics endpoint and annotate incidents when alerts fire.
+Track seal status, leadership, request performance, storage growth, replication lag, and backup freshness in Grafana *(2026 Spike)*. Query Vault's Prometheus metrics endpoint and annotate incidents when alerts fire.
 
 ```yaml
 # Vault metrics exposed at /v1/sys/metrics

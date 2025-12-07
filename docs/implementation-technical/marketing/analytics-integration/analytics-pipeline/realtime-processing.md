@@ -209,9 +209,9 @@ class MarketingBatchProcessor {
 
 ```
 
-#### 5.2 Elasticsearch Integration
+#### 5.2 Elasticsearch Integration (Future/2026 Spike)
 
-**Primary Objective:** Implement Elasticsearch for fast analytics querying and dashboard generation
+**Primary Objective:** Implement Elasticsearch for fast analytics querying and dashboard generation (Future/2026 Spike)
 
 **Elasticsearch Configuration:**
 

@@ -85,8 +85,8 @@ Infrastructure Components:
     - Backup and disaster recovery systems
   
   Monitoring & Observability:
-    - Prometheus and Grafana for system monitoring
-    - ELK stack for log aggregation and analysis
+    - Prometheus and Grafana for system monitoring (Future/2026 Spike)
+    - ELK stack for log aggregation and analysis (Future/2026 Spike)
     - Application performance monitoring (APM) setup
     - Alert management and escalation systems
 ```
@@ -104,7 +104,7 @@ Data Pipeline Components:
   Data Processing:
     - Data validation and quality assurance framework
     - ETL pipeline development with Apache Spark
-    - Real-time processing with Apache Flink
+    - Real-time processing with Apache Flink (Future/2026 Spike)
     - Data transformation and enrichment processes
   
   Data Storage:

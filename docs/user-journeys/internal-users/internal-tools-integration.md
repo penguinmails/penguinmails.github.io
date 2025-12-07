@@ -80,7 +80,7 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 #### **Project Tracking Workflow**
 
-1. **Issue Management**
+1. **Issue Management** ([Support Ticket Management](/docs/user-journeys/internal-users/operations-journeys.md#support-ticket-management))
    - Track customer-reported issues and feature requests
    - Monitor development progress and sprint completion
    - Coordinate cross-team collaboration on complex issues

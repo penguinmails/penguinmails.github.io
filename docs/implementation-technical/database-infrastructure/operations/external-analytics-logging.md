@@ -231,7 +231,7 @@ These are infra/operational concerns.
 
   - Collect metrics via:
 
-    - Observability stack (Prometheus, OpenTelemetry, etc.).
+    - Observability stack (Prometheus, OpenTelemetry, etc.) - Future/2026 Spike.
 
   - OLAP:
 

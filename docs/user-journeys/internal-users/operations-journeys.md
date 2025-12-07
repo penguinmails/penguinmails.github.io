@@ -46,7 +46,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 #### **Morning Operational Check**
 
 1. **System Health Review** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
-   - Log into operations dashboard
+   - Log into operations dashboard ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
    - Review overnight system status
    - Check critical alerts and notifications
    - Assess system performance metrics
@@ -73,6 +73,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 2. **Performance Tracking**
    - Monitor real-time performance metrics
+   - Monitor queue depths ([Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring.md))
    - Track system resource utilization
    - Review application performance indicators
    - Identify performance bottlenecks
@@ -114,7 +115,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Provide workarounds to affected users
 
 2. **Root Cause Investigation** ([Log Viewer](/docs/features/admin/system-monitoring/log-viewer.md))
-   - Analyze system logs and metrics
+   - Analyze system logs ([Log Viewer](/docs/features/admin/system-monitoring/log-viewer.md)) and metrics
    - Conduct detailed problem diagnosis
    - Identify underlying causes and contributing factors
    - Develop permanent solutions

@@ -94,8 +94,8 @@ const crmIntegration = {
 **Message Queue:** PostgreSQL + Redis for event streaming and workflow coordination
 **Database:** PostgreSQL for workflow metadata and execution logs
 **Cache:** Redis for workflow state management and rate limiting
-**Monitoring:** Prometheus + Grafana for metrics and alerting
-**Logging:** ELK Stack (Elasticsearch, Logstash, Kibana) for audit trails
+**Monitoring:** Prometheus + Grafana for metrics and alerting (Future/2026 Spike)
+**Logging:** ELK Stack (Elasticsearch, Logstash, Kibana) for audit trails (Future/2026 Spike)
 
 ### External Platform Dependencies
 

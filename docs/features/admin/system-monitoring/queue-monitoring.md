@@ -133,7 +133,7 @@ The Queue Monitoring feature provides operations engineers with comprehensive vi
 
 ### Monitoring
 
-- **Prometheus Metrics**: Queue depth, job duration, failure rate
+- **Prometheus Metrics**: Queue depth, job duration, failure rate *(2026 Spike)*
 - **Alerting**: PagerDuty alert if queue depth > 10,000 or failure rate > 5%
 
 ---

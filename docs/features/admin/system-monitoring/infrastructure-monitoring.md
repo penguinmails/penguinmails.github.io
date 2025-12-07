@@ -138,9 +138,9 @@ See [Analytics UI Patterns](/docs/design/analytics-ui-patterns) for visual desig
 
 ### Monitoring Stack (2026 Spike)
 
-- **Prometheus**: Collects metrics from all services (15s interval)
-- **Grafana**: Visualizations and dashboards
-- **ClickHouse**: Historical metric storage (1 year retention)
+- **Prometheus**: Collects metrics from all services (15s interval) *(2026 Spike)*
+- **Grafana**: Visualizations and dashboards *(2026 Spike)*
+- **ClickHouse**: Historical metric storage (1 year retention) *(2026 Spike)*
 - **PagerDuty**: Alert routing and escalation
 
 ### IP Reputation Monitoring
@@ -154,7 +154,7 @@ See [Analytics UI Patterns](/docs/design/analytics-ui-patterns) for visual desig
 
 ### Alerting (2026 Spike)
 
-- **Alert Rules**: Defined in Prometheus (planned)
+- **Alert Rules**: Defined in Prometheus *(2026 Spike)*
 - **Notification Channels**: PostHog for launch; PagerDuty, Slack planned
 - **Escalation**: Auto-escalate if not acknowledged in 10 minutes (planned)
 

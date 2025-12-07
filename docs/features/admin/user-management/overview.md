@@ -115,7 +115,7 @@ The Global User Management feature provides PenguinMails internal staff with com
 - **Users Table**: Primary source for user data (OLTP)
 - **Staff Members Table**: Separate table for internal platform admin users (security guard)
 - **Audit Log Table**: Stores all user actions with retention policy
-- **Search Index**: Elasticsearch for fast full-text search
+- **Search Index**: Elasticsearch for fast full-text search *(2026 Spike)*
 
 ### Access Control
 
@@ -147,7 +147,7 @@ All admin actions are logged:
 
 ### Performance
 
-- **Search**: Elasticsearch indexes ~10M users with <100ms response time
+- **Search**: Elasticsearch indexes ~10M users with <100ms response time *(2026 Spike)*
 - **Audit Trail**: Paginated with lazy loading for large activity histories
 - **Caching**: User metadata cached for 5 minutes to reduce database load
 

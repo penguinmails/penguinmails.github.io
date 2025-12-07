@@ -160,7 +160,7 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 
 - Provide retry mechanisms
 
-- Log errors to monitoring service (Sentry)
+- Log errors to monitoring service (Sentry) (Future/2026 Spike)
 
 **Example**:
 

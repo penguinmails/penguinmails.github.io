@@ -82,7 +82,7 @@ Job processing system for asynchronous tasks.
 
 - **Queue Monitoring**: Real-time dashboard
 
-- **Prometheus Metrics**: Integration for monitoring
+- **Prometheus Metrics**: Integration for monitoring *(2026 Spike)*
 
 **Status**: ACTIVE | **Priority**: Critical
 

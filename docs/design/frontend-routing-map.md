@@ -139,7 +139,7 @@ Management of the workspaces themselves.
 | `/dashboard/finance` | Internal (Finance) | Revenue and billing ops. | Stripe sync status, MRR breakdown, Refund tools |
 | `/dashboard/system/queues` | Internal (Ops) | Background job monitoring. | **Snapshot + Manual Refresh**<br>Hybrid PostgreSQL + Redis queue system (Jobs processing, Failed, Delayed) |
 | `/dashboard/system/infrastructure` | Internal (Ops) | Global Infrastructure Health. | **Snapshot on Load**<br>Problematic Nodes, IP Blacklist Monitor |
-| `/dashboard/system/logs` | Internal (Ops) | System logs and errors. | **Paginated History**<br>Log viewer, Error aggregation (Sentry feed) |
+| `/dashboard/system/logs` | Internal (Ops) | System logs and errors. | **Paginated History**<br>Log viewer, Error aggregation (Sentry feed) (Future/2026 Spike) |
 | `/dashboard/system/maintenance` | Internal (Ops) | Maintenance controls. | "Maintenance Mode" toggle, Cache clearing |
 
 ---

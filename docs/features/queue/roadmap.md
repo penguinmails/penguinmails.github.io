@@ -134,7 +134,7 @@ Timeline for queue system enhancements from current active state through future 
 
 - **Queue Monitoring**: Real-time dashboard (admin-only)
 
-- **Prometheus Metrics**: Integration for monitoring (`jobs_completed_total`, throughput, queue backlogs)
+- **Prometheus Metrics**: Integration for monitoring (`jobs_completed_total`, throughput, queue backlogs) *(2026 Spike)*
 
 **Success Metrics**:
 

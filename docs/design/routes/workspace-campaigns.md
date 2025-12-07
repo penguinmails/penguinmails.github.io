@@ -185,7 +185,7 @@
 
 **Technical Integration**:
 
-* **Aggregated Data**: Fetched from OLAP (ClickHouse) with daily refresh.
+* **Aggregated Data**: Fetched from OLAP (ClickHouse) with daily refresh (Future/2026 Spike).
 
 * **Caching**: ISR with 5-minute revalidation.
 

@@ -126,7 +126,7 @@ See [Queue System Implementation](/docs/implementation-technical/architecture/de
 ### Performance
 
 - **Real-Time Polling**: Queue dashboard updates every 5 seconds
-- **Log Search**: Elasticsearch indexes ~1TB logs with <1s query time
+- **Log Search**: Elasticsearch indexes ~1TB logs with <1s query time *(2026 Spike)*
 - **Dashboard Load**: <500ms with cached infrastructure metrics
 
 ### Scalability
@@ -144,6 +144,10 @@ See [Queue System Implementation](/docs/implementation-technical/architecture/de
 ---
 
 ## Related Documentation
+
+### Reference
+
+- [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary) - Definitions of all system metrics
 
 ### Route Specifications
 

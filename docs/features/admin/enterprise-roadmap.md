@@ -91,9 +91,9 @@ This document provides a detailed timeline for enterprise features development, 
 
 ## Dependencies
 
-- Prometheus + Grafana for metrics collection
+- Prometheus + Grafana for metrics collection *(2026 Spike)*
 
-- ClickHouse for historical metrics storage
+- ClickHouse for historical metrics storage *(2026 Spike)*
 
 - PagerDuty integration for alerting
 

@@ -256,7 +256,7 @@ Expandable row showing detailed secret information for each tenant.
 
 ### Monitoring
 
-- **Prometheus Metrics**: Vault health, seal status, request rate
+- **Prometheus Metrics**: Vault health, seal status, request rate *(2026 Spike)*
 - **Alerting**: PagerDuty for critical issues
   - Vault sealed unexpectedly
   - Backup failure >24 hours
@@ -270,7 +270,7 @@ Expandable row showing detailed secret information for each tenant.
 
 - **Secret Retrieval**: <100ms for cached secrets
 - **Rotation**: <5 minutes per tenant for full rotation
-- **Audit Query**: <1s for most queries (Elasticsearch backend)
+- **Audit Query**: <1s for most queries (Elasticsearch backend - 2026 Spike)
 
 ### Scalability
 

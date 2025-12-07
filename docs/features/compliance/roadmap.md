@@ -198,7 +198,7 @@ This roadmap outlines the implementation timeline for compliance certifications,
 
 - Compliance report generation (automated)
 
-- SIEM integration (Splunk, Datadog, Elastic)
+- SIEM integration (Splunk, Datadog, Elastic) (Future/2026 Spike)
 
 **Timeline:** Q1 2026 (February-March)
 

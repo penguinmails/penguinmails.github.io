@@ -372,7 +372,7 @@
 
 **Technical Integration**:
 
-- **Real-time Metrics**: Fetched from internal monitoring API (Prometheus/Grafana).
+- **Real-time Metrics**: Fetched from internal monitoring API (Prometheus/Grafana) (Future/2026 Spike).
 
 - **Blacklist Checks**: Daily cron job queries MXToolbox, Spamhaus APIs.
 

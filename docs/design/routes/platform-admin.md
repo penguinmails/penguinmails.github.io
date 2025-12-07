@@ -39,7 +39,7 @@
 | `/dashboard/tenants` | Super Admin | Global Tenants | List of organizations. Plan overrides, Feature flags management. |
 | `/dashboard/finance` | Finance | Subscription Overview | Subscription status, Stripe sync health. |
 | `/dashboard/system/queues` | Ops | Queue Health Monitor | Custom UI for hybrid PostgreSQL + Redis queue system. Job retry controls. |
-| `/dashboard/system/logs` | Ops | System Logs | Log viewer (Elasticsearch/ClickHouse interface). |
+| `/dashboard/system/logs` | Ops | System Logs | Log viewer (Elasticsearch/ClickHouse interface) (Future/2026 Spike). |
 | `/admin/secrets` | Super Admin | Vault Secrets Management | Centralized secrets management for all tenants. Vault health monitoring, SSH keys, SMTP credentials, API keys, DKIM keys. Bulk rotation and audit log viewer. |
 
 ## 4. Detailed View Descriptions
@@ -459,9 +459,8 @@
 
 **Technical Integration**:
 
-- **Prometheus + Grafana**: Metrics collection and visualization.
-
-- **ClickHouse**: Stores historical metrics.
+- **Prometheus + Grafana**: Metrics collection and visualization (Future/2026 Spike).
+- **ClickHouse**: Stores historical metrics (Future/2026 Spike).
 
 - **PagerDuty**: Alerts for critical issues.
 
@@ -515,9 +514,8 @@
 
 **Technical Integration**:
 
-- **Elasticsearch**: Centralized log aggregation.
-
-- **Sentry**: Error tracking and alerting (linked from error logs).
+- **Elasticsearch**: Centralized log aggregation (Future/2026 Spike).
+- **Sentry**: Error tracking and alerting (linked from error logs) (Future/2026 Spike).
 
 ---
 

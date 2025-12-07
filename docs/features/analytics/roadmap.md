@@ -738,7 +738,42 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ## Future Vision (Q4 2026-2027)
 
-### 13. [Post-MVP - P3] In-House Transactional Email System
+### 13. [Post-MVP - P3] A/B Testing & Experimentation Spike
+
+**Description**: Evaluate PostHog's limitations for advanced A/B testing (multi-variate, bandit algorithms) and determine need for dedicated tools or custom solutions.
+
+**Timeline**: Q2 2026 (1-2 weeks)
+**Priority**: P3 (Post-MVP)
+**Effort**: Medium
+
+**Triggers for Investigation**:
+
+- Marketing team requires multi-variate testing (MVT)
+- Need for bandit algorithms (auto-allocate traffic to winning variation)
+- PostHog feature flags/experiments become cost-prohibitive at scale
+
+**Acceptance Criteria**:
+
+- [ ] Conduct spike to evaluate PostHog's advanced experimentation features
+- [ ] Compare against dedicated tools (LaunchDarkly, Statsig, VWO)
+- [ ] Assess build vs. buy for custom bandit algorithms
+- [ ] Document cost analysis for scaling experiments
+- [ ] Create recommendation report
+
+**Dependencies**:
+
+- Core analytics complete
+- Marketing team requirements definition
+
+**Business Impact**:
+
+- Optimized conversion rates
+- Advanced experimentation capabilities
+- Cost-effective scaling of experimentation
+
+---
+
+### 14. [Post-MVP - P3] In-House Transactional Email System
 
 **Description**: Replace Loop.so with central SMTP server for transactional emails (report delivery)
 

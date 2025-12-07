@@ -323,7 +323,7 @@ Characteristics:
 
   - Centralized logging (ELK/Loki).
 
-  - Metrics/tracing (Prometheus/OpenTelemetry).
+  - Metrics/tracing (Prometheus/OpenTelemetry) - Future/2026 Spike.
 
 Key principles:
 

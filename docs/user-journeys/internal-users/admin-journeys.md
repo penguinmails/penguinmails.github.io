@@ -65,7 +65,7 @@ This document outlines the key user journeys for Platform Administrators who man
 1. **Monitor User Activity** ([Audit Trail Viewer](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Review login activity via [PostHog](https://posthog.com/) analytics
    - Identify unusual access patterns
-   - Monitor failed login attempts
+   - Monitor failed login attempts ([Audit Trail](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Check engagement metrics via PostHog (see [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary#external-analytics-posthog))
 
 2. **Manage Permissions** ([Change Role](/docs/features/admin/user-management/overview.md#change-user-role))
@@ -76,7 +76,7 @@ This document outlines the key user journeys for Platform Administrators who man
 
 #### **Advanced Management**
 
-1. **Bulk User Operations** *(Planned - Q2 2026)*
+1. **Bulk User Operations** *(Planned - Q3 2026)*
    - Mass user updates and migrations
    - Department restructuring and reassignments
    - Access policy updates across user groups
@@ -103,21 +103,21 @@ This document outlines the key user journeys for Platform Administrators who man
    - Establish deliverability settings
    - Configure [monitoring and alerting](/docs/features/admin/system-monitoring/overview.md)
 
-2. **Feature Flag Management** ([Feature Flags Modal](/docs/design/routes/platform-admin.md#row-actions))
+2. **Feature Flag Management** ([Tenant Management](/docs/design/routes/platform-admin.md#dashboard-tenants---tenant-organization-management))
    - Enable/disable platform features
    - Manage beta feature rollouts via [Tenant Management](/docs/features/admin/tenant-management/overview.md#feature-flags)
    - Control feature access by user segments (percentage rollouts, allowlists)
 
-   > **Note:** A/B testing and advanced experimentation uses [PostHog](https://posthog.com/). Spike planned to review A/B needs and potential improvements beyond PostHog.
+   > **Note:** A/B testing and advanced experimentation uses [PostHog](https://posthog.com/).
 
 #### **Ongoing Configuration**
 
 1. **Performance Monitoring** ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
-   - Monitor system performance via Prometheus/Grafana (see [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary#infrastructure-metrics-external))
+   - Monitor system performance via Prometheus/Grafana (planned for 2026 Spike; see [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary#infrastructure-metrics-external))
    - View queue health and job processing rates
    - Check service availability and error rates
 
-   > **Note:** Resource allocation, database optimization, and caching are DevOps operations. See [Operations Runbooks](/docs/operations/incident-management/runbooks) for infrastructure tasks.
+   > **Note:** Resource allocation, database optimization, and caching are DevOps operations and are Post-MVP for the Admin UI. See [Operations Runbooks](/docs/operations/incident-management/runbooks) for infrastructure tasks.
 
 2. **Integration Management** *(Roadmap - 2027)*
    - Third-party integration management planned post-internal API stabilization
@@ -166,7 +166,7 @@ This document outlines the key user journeys for Platform Administrators who man
 
 #### **Daily Monitoring**
 
-1. **System Health Dashboard** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
+1. **System Health Dashboard** ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
    - Review overall system status
    - Check critical service health
    - Monitor resource utilization
@@ -258,6 +258,8 @@ This document outlines the key user journeys for Platform Administrators who man
 - Coordinating with multiple internal teams for system updates
 
 ### **Success Metrics**
+
+> See [Metrics Glossary](/docs/features/admin/system-monitoring/metrics-glossary) for detailed definitions of success metrics.
 
 - **User Satisfaction**: Admin users rate experience positively
 - **Security Compliance**: 100% compliance with security policies

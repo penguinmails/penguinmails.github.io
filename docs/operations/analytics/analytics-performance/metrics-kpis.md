@@ -459,7 +459,7 @@ This document defines the key metrics and KPIs that drive PenguinMails' business
 
 #### Application Performance Monitoring (APM)
 
-- **Error Tracking**: Sentry for real-time error monitoring
+- **Error Tracking**: Sentry for real-time error monitoring (Future/2026 Spike)
 
 - **Performance Profiling**: Application response time analysis
 

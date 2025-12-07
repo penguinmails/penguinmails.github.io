@@ -153,7 +153,7 @@ The Log Viewer provides developers and operations engineers with centralized acc
 
 ## Technical Integration
 
-### Elasticsearch Backend
+### Elasticsearch Backend (2026 Spike)
 
 - **Cluster**: 3-node cluster for high availability
 - **Index Strategy**: Daily indices (e.g., `logs-2025-12-04`)
@@ -181,7 +181,7 @@ The Log Viewer provides developers and operations engineers with centralized acc
 }
 ```
 
-### Sentry Integration
+### Sentry Integration (2026 Spike)
 
 - **Error Tracking**: Errors automatically sent to Sentry
 - **Linked**: Log viewer shows Sentry issue link for errors
