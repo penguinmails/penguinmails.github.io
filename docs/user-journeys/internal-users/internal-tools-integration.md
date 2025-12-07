@@ -102,8 +102,8 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 2. **Release Management**
    - Track feature releases and deployment schedules
-   - Coordinate with operations teams on production deployments
-   - Monitor post-release performance and issue identification
+   - Coordinate with [operations teams](/docs/user-journeys/internal-users/operations-journeys.md) on production deployments
+   - Monitor [post-release performance](/docs/features/admin/system-monitoring/overview.md) and issue identification
    - Maintain release notes and customer communication updates
 
 #### **Cross-Team Collaboration**
@@ -118,6 +118,8 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 ### **Journey 3: CRM Integration & Customer Data Management**
 
+> **Feature Reference**: [User Management](/docs/features/admin/user-management/overview.md) | **Route**: [`/dashboard/users`](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management)
+
 #### **Customer Data Synchronization**
 
 1. **Lead Management**
@@ -126,7 +128,7 @@ This document outlines the user journeys for internal teams who integrate Pengui
    - Monitor lead progression through sales pipeline
    - Coordinate lead follow-up with sales teams
 
-2. **Customer Account Management**
+2. **Customer Account Management** ([Global User Search](/docs/features/admin/user-management/overview.md#global-user-search))
    - Sync customer information between PenguinMails and CRM
    - Track customer usage patterns and engagement metrics
    - Monitor customer satisfaction and support interactions
@@ -148,9 +150,9 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 #### **Reporting & Analytics**
 
-1. **Business Intelligence**
+1. **Business Intelligence** ([Finance Overview](/docs/features/admin/finance/overview.md))
    - Generate customer success and retention reports
-   - Track sales pipeline and revenue metrics
+   - Track sales pipeline and revenue metrics ([Stripe Dashboard](/docs/features/admin/finance/stripe-dashboard-access.md))
    - Monitor customer acquisition costs and lifetime value
    - Analyze customer behavior and engagement patterns
 
@@ -163,6 +165,8 @@ This document outlines the user journeys for internal teams who integrate Pengui
 ---
 
 ### **Journey 4: Analytics Platform Integration**
+
+> **Feature Reference**: [Internal Views](/docs/features/analytics/specs/internal-views) | **Route**: [`/dashboard/finance`](/docs/design/routes/platform-admin.md#dashboard-finance---subscription-overview)
 
 #### **Business Intelligence Workflow**
 
@@ -180,7 +184,7 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 #### **Performance Monitoring**
 
-1. **Real-Time Monitoring**
+1. **Real-Time Monitoring** ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
    - Monitor system performance and reliability metrics
    - Track user engagement and adoption rates
    - Monitor customer satisfaction and support metrics
@@ -264,7 +268,7 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 ### **Security & Compliance**
 
-1. **Access Management**
+1. **Access Management** ([User Management](/docs/features/admin/user-management/overview.md#access-control))
    - Implement role-based access controls
    - Maintain secure authentication and authorization
    - Monitor integration access and usage
@@ -351,11 +355,22 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`admin-journeys.md`](admin-journeys)
-- [`operations-journeys.md`](operations-journeys)
-- [`technical-teams-journeys.md`](technical-teams-journeys)
+**User Journeys**:
+
+- [Admin Journeys](admin-journeys.md)
+- [Operations Journeys](operations-journeys.md)
+- [Technical Teams Journeys](technical-teams-journeys.md)
+
+**Feature Documentation**:
+
+- [User Management](/docs/features/admin/user-management/overview.md) - User lookup and audit trails
+- [Finance Overview](/docs/features/admin/finance/overview.md) - Subscription monitoring
+- [System Monitoring](/docs/features/admin/system-monitoring/overview.md) - Infrastructure health
+- [Stripe Integration](/docs/features/payments/stripe-integration.md) - Payment integration
+
+**Route Specifications**:
+
+- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
 ---
 

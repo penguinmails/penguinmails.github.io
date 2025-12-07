@@ -41,29 +41,31 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ### **Journey 1: Daily Platform Monitoring**
 
+> **Feature Reference**: [System Monitoring](/docs/features/admin/system-monitoring/overview.md) | **Route**: [`/dashboard/system/infrastructure`](/docs/design/routes/platform-admin.md#dashboard-system-infrastructure---system-health-monitoring)
+
 #### **Morning Operational Check**
 
-1. **System Health Review**
+1. **System Health Review** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
    - Log into operations dashboard
    - Review overnight system status
    - Check critical alerts and notifications
    - Assess system performance metrics
 
-2. **Service Status Verification**
+2. **Service Status Verification** ([System Health Grid](/docs/design/routes/platform-admin.md#service-health-grid-see-analytics-ui-patternsdocsdesignanalytics-ui-patterns))
    - Verify all critical services are running
-   - Check database connectivity and performance
-   - Monitor API response times and error rates
+   - Check [database connectivity](/docs/implementation-technical/database-infrastructure/overview.md) and performance
+   - Monitor [API response times](/docs/features/admin/system-monitoring/infrastructure-monitoring.md) and error rates
    - Review email deliverability metrics
 
-3. **User Activity Analysis**
-   - Review user login patterns and trends
+3. **User Activity Analysis** ([Audit Trail](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
+   - Review [user login patterns](/docs/design/routes/platform-admin.md#audit-trail-viewer) and trends
    - Monitor system usage and peak load times
-   - Identify unusual activity or potential issues
+   - Identify [unusual activity](/docs/design/routes/platform-admin.md#suspicious-activity-alerts) or potential issues
    - Check customer support ticket volume
 
 #### **Real-Time Monitoring**
 
-1. **Alert Response**
+1. **Alert Response** ([Infrastructure Alerts](/docs/design/routes/platform-admin.md#infrastructure-alerts))
    - Receive and assess system alerts
    - Categorize alert severity and impact
    - Initiate appropriate response procedures
@@ -87,6 +89,8 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ### **Journey 2: Issue Resolution & Incident Management**
 
+> **Feature Reference**: [Log Viewer](/docs/features/admin/system-monitoring/log-viewer.md), [Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring.md) | **Route**: [`/dashboard/system/logs`](/docs/design/routes/platform-admin.md#dashboard-system-logs---system-log-viewer)
+
 #### **Issue Identification**
 
 1. **Problem Detection**
@@ -109,7 +113,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Coordinate with technical teams for complex issues
    - Provide workarounds to affected users
 
-2. **Root Cause Investigation**
+2. **Root Cause Investigation** ([Log Viewer](/docs/features/admin/system-monitoring/log-viewer.md))
    - Analyze system logs and metrics
    - Conduct detailed problem diagnosis
    - Identify underlying causes and contributing factors
@@ -121,15 +125,15 @@ This document outlines the key user journeys for Operations Staff who monitor, m
     - Update monitoring and alert thresholds
     - Document resolution details and lessons learned
 
-4. **Creative Scenario: Spam Spike Investigation**
+4. **Creative Scenario: Spam Spike Investigation** ([Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring.md))
     - **User Story**: "I see a spike in outgoing emails from a tenant, and I suspect a compromised account."
-    - **Action**: Navigate to Monitoring > Queue Health > Filter by Tenant ID.
+    - **Action**: Navigate to [Queue Health](/docs/design/routes/platform-admin.md#dashboard-system-queues---background-job-monitoring) > Filter by Tenant ID.
     - **Investigation**: Review email content samples (redacted) and recipient patterns.
     - **Mitigation**: If confirmed spam, click "Emergency Pause Queue" for that tenant and notify the tenant admin immediately via the "Security Alert" template.
 
-5. **Creative Scenario: Feature Flag Override**
+5. **Creative Scenario: Feature Flag Override** ([Tenant Management](/docs/design/routes/platform-admin.md#dashboard-tenants---tenant-organization-management))
     - **User Story**: "A tenant needs a beta feature disabled immediately because it's breaking their workflow."
-    - **Action**: Navigate to Tenant Management > Features > Locate "Beta: AI Composer".
+    - **Action**: Navigate to [Tenant Management](/docs/design/routes/platform-admin.md#row-actions) > Features > Locate "Beta: AI Composer".
     - **Override**: Toggle status to "Disabled" specifically for this tenant ID, overriding the global rollout percentage.
     - **Verification**: Ask the tenant to refresh their session and confirm the feature is gone.
 
@@ -151,9 +155,11 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ### **Journey 3: Customer Support Coordination**
 
+> **Feature Reference**: [User Management](/docs/features/admin/user-management/overview.md) | **Route**: [`/dashboard/users`](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management)
+
 #### **Support Ticket Management**
 
-1. **Ticket Processing**
+1. **Ticket Processing** ([Global User Search](/docs/features/admin/user-management/overview.md#global-user-search))
    - Review incoming support tickets
    - Categorize tickets by issue type and urgency
    - Assign tickets to appropriate team members
@@ -165,7 +171,7 @@ This document outlines the key user journeys for Operations Staff who monitor, m
    - Communicate escalation status to customers
    - Track resolution of escalated issues
 
-3. **Support Quality Assurance**
+3. **Support Quality Assurance** ([Audit Trail](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Review support ticket responses
    - Ensure consistent service quality
    - Monitor customer satisfaction with support
@@ -189,9 +195,11 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ### **Journey 4: Performance Optimization & Maintenance**
 
+> **Feature Reference**: [System Monitoring](/docs/features/admin/system-monitoring/overview.md) | **Route**: [`/dashboard/system/infrastructure`](/docs/design/routes/platform-admin.md#dashboard-system-infrastructure---system-health-monitoring)
+
 #### **Performance Analysis**
 
-1. **Metrics Review**
+1. **Metrics Review** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
    - Analyze performance trends and patterns
    - Identify performance bottlenecks and issues
    - Review resource utilization and capacity
@@ -349,10 +357,22 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`admin-journeys.md`](admin-journeys)
-- [`technical-teams-journeys.md`](technical-teams-journeys)
+**User Journeys**:
+
+- [Admin Journeys](admin-journeys.md)
+- [Technical Teams Journeys](technical-teams-journeys.md)
+- [Internal Tools Integration](internal-tools-integration.md)
+
+**Feature Documentation**:
+
+- [System Monitoring](/docs/features/admin/system-monitoring/overview.md) - Infrastructure health, queues, logs
+- [Log Viewer](/docs/features/admin/system-monitoring/log-viewer.md) - Search and analyze system logs
+- [Queue Monitoring](/docs/features/admin/system-monitoring/queue-monitoring.md) - Background job health
+- [Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md) - Server and service status
+
+**Route Specifications**:
+
+- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
 ---
 

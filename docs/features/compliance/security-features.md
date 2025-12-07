@@ -21,6 +21,8 @@ related_tasks:
   - epic-1-project-foundation
 
   - epic-2-user-authentication-profile
+
+
 ---
 
 # Security Features
@@ -369,7 +371,7 @@ session: {
 
 #### Two-Factor Authentication (2FA)
 
-**Status:** PLANNED (Level 4 - Enterprise Features)
+**Status:** [PLANNED](/docs/features/authentication/mfa-roadmap.md) (Level 4 - Enterprise Features)
 
 **Future Implementation:**
 

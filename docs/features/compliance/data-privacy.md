@@ -210,7 +210,7 @@ Clear, accessible privacy policies that explain data practices.
 
 - **Role-based access** - Users have minimum necessary permissions
 
-- **Multi-factor authentication** - Optional MFA for enhanced security
+- **Multi-factor authentication** - Optional MFA for enhanced security ([Planned](/docs/features/authentication/mfa-roadmap.md))
 
 - **Session management** - Automatic logout, secure session tokens
 
@@ -263,7 +263,7 @@ New User Defaults:
   marketing_emails: false
   third_party_integrations: disabled
   session_timeout: 30 minutes
-  mfa: recommended (not required)
+  mfa: recommended (not required) # Planned
 
 ```
 

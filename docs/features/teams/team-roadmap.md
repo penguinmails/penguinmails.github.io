@@ -591,6 +591,24 @@ This roadmap outlines the development timeline for team and workspace management
 
 ---
 
+#### 13.5. [Post-MVP - P3] Spike: Granular Role Granularity
+
+**Timeline:** Q1 2027 (1 week)
+**Priority:** P3 (Research)
+**Effort:** Small
+
+**Description:** Evaluate if the MVP role set (Super Admin, Admin, QA) needs to be expanded with more granular department/team associations.
+
+**Objectives:**
+
+- Assess feedback from early enterprise adopters regarding role limitations
+- Determine if "Department" or "Team" entities are needed as distinct permission scopes
+- Prototype "Team Association" model if demand exists
+
+**Target Milestone:** Q1 2027
+
+---
+
 ### 14. [Post-MVP - P3] Team Member Onboarding Workflows
 
 **Timeline:** Q1 2027 (3-4 weeks)

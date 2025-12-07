@@ -40,38 +40,39 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### **Journey 1: User Management & Access Control**
 
+> **Feature Reference**: [Global User Management](/docs/features/admin/user-management/overview.md) | **Route**: [`/dashboard/users`](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management)
+
 #### **Initial Setup**
 
 1. **Access Admin Dashboard**
-   - Log into administrative interface
-   - Navigate to user management section
+   - Log into administrative interface (authenticated via [`staff_members` table](/docs/features/admin/user-management/overview.md#access-control))
+   - Navigate to [user management section](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management)
    - Review current user base and access levels
 
-2. **Create New User Accounts**
+2. **Create New User Accounts** ([Administrative Actions](/docs/features/admin/user-management/overview.md#administrative-actions))
    - Set up internal team member accounts
-   - Configure role-based access permissions
-   - Establish department/team associations
-   - Set up multi-factor authentication
+   - Configure [role-based access permissions](/docs/features/admin/user-management/overview.md#access-control)
+   - Set up multi-factor authentication ([Planned](/docs/features/authentication/mfa-roadmap.md))
 
-3. **Onboard External Users**
+3. **Onboard External Users** ([Tenant Management](/docs/design/routes/platform-admin.md#dashboard-tenants---tenant-organization-management))
    - Process customer account approvals
    - Configure customer-specific settings
-   - Set up billing and subscription information
+   - Set up [billing and subscription](/docs/features/admin/finance/overview.md) information
    - Establish communication preferences
 
 #### **Daily Operations**
 
-1. **Monitor User Activity**
+1. **Monitor User Activity** ([Audit Trail Viewer](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Review daily login metrics
    - Identify unusual access patterns
    - Monitor failed login attempts
    - Check user engagement metrics
 
-2. **Manage Permissions**
+2. **Manage Permissions** ([Change Role](/docs/features/admin/user-management/overview.md#change-user-role))
    - Adjust access levels based on role changes
-   - Handle permission escalation requests
+   - Handle [permission escalation requests](/docs/design/routes/platform-admin.md#row-actions)
    - Review and audit access rights
-   - Process user deactivation requests
+   - Process [user deactivation](/docs/design/routes/platform-admin.md#row-actions) requests
 
 #### **Advanced Management**
 
@@ -81,9 +82,9 @@ This document outlines the key user journeys for Platform Administrators who man
    - Access policy updates across user groups
    - Data export and reporting
 
-2. **Compliance & Audit**
+2. **Compliance & Audit** ([Audit Trail](/docs/features/admin/user-management/overview.md#audit-trail-viewer))
    - Generate access reports for compliance
-   - Review user activity logs
+   - Review [user activity logs](/docs/design/routes/platform-admin.md#audit-trail-viewer)
    - Conduct permission audits
    - Document security incidents
 
@@ -91,15 +92,17 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### **Journey 2: System Configuration & Environment Management**
 
+> **Feature Reference**: [Tenant Management](/docs/features/admin/tenant-management) | **Route**: [`/dashboard/tenants`](/docs/design/routes/platform-admin.md#dashboard-tenants---tenant-organization-management)
+
 #### **Environment Setup**
 
 1. **Initial Platform Configuration**
    - Configure basic platform settings
    - Set up email domains and routing
    - Establish deliverability settings
-   - Configure monitoring and alerting
+   - Configure [monitoring and alerting](/docs/features/admin/system-monitoring/overview.md)
 
-2. **Feature Flag Management**
+2. **Feature Flag Management** ([Feature Flags Modal](/docs/design/routes/platform-admin.md#row-actions))
    - Enable/disable platform features
    - Manage beta feature rollouts
    - Configure A/B testing environments
@@ -123,26 +126,28 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### **Journey 3: Security & Compliance Management**
 
+> **Feature Reference**: [Vault Management](/docs/features/admin/vault-management) | **Route**: [`/admin/secrets`](/docs/design/routes/platform-admin.md#admin-secrets---vault-secrets-management)
+
 #### **Security Setup**
 
-1. **Access Control Implementation**
-   - Configure role-based access control (RBAC)
-   - Set up multi-factor authentication
+1. **Access Control Implementation** ([User Management Access Control](/docs/features/admin/user-management/overview.md#access-control))
+   - Configure [role-based access control (RBAC)](/docs/features/admin/user-management/overview.md#access-control)
+   - Set up multi-factor authentication ([Planned](/docs/features/authentication/mfa-roadmap.md))
    - Establish password policies
    - Configure session management
 
-2. **Data Protection**
+2. **Data Protection** ([Vault Secrets](/docs/design/routes/platform-admin.md#admin-secrets---vault-secrets-management))
    - Configure data encryption settings
    - Establish data retention policies
-   - Set up backup and recovery procedures
+   - Set up [backup and recovery](/docs/design/routes/platform-admin.md#vault-health-dashboard) procedures
    - Manage data classification
 
 #### **Ongoing Security Operations**
 
-1. **Threat Monitoring**
+1. **Threat Monitoring** ([Audit Log Viewer](/docs/design/routes/platform-admin.md#audit-log-viewer))
    - Review security alerts and notifications
-   - Investigate suspicious activities
-   - Monitor failed authentication attempts
+   - Investigate [suspicious activities](/docs/features/admin/user-management/overview.md#audit-trail-viewer)
+   - Monitor [failed authentication attempts](/docs/design/routes/platform-admin.md#suspicious-activity-alerts)
    - Track unusual system access patterns
 
 2. **Compliance Management**
@@ -155,9 +160,11 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### **Journey 4: Platform Monitoring & Analytics**
 
+> **Feature Reference**: [System Monitoring](/docs/features/admin/system-monitoring/overview.md) | **Routes**: [`/dashboard/system/infrastructure`](/docs/design/routes/platform-admin.md#dashboard-system-infrastructure---system-health-monitoring), [`/dashboard/system/logs`](/docs/design/routes/platform-admin.md#dashboard-system-logs---system-log-viewer)
+
 #### **Daily Monitoring**
 
-1. **System Health Dashboard**
+1. **System Health Dashboard** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
    - Review overall system status
    - Check critical service health
    - Monitor resource utilization
@@ -187,49 +194,53 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### **Journey 5: Staff & Role Management**
 
+> **Feature Reference**: [User Management](/docs/features/admin/user-management/overview.md) | **Route**: [`/dashboard/users`](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management)
+
 #### **Staff Offboarding**
 
-1. **Role Removal**
+1. **Role Removal** ([Change Role](/docs/features/admin/user-management/overview.md#change-user-role))
     - **User Story**: "I want to remove a penguinmails employee so I remove the roles."
-    - **Action**: Navigate to Staff Management > Select Employee > Edit Roles > Remove all assigned roles.
+    - **Action**: Navigate to [Staff Management](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management) > Select Employee > Edit Roles > Remove all assigned roles.
     - **System Effect**: Immediate invalidation of staff session tokens; user loses access to all admin routes.
     - **Verification**: Attempt to access admin dashboard with the user's credentials (should fail).
 
-2. **Emergency Access Revocation**
+2. **Emergency Access Revocation** ([Revoke All Sessions](/docs/design/routes/platform-admin.md#row-actions))
     - **User Story**: "A staff member's device was compromised, and I need to revoke access immediately."
-    - **Action**: Navigate to Staff Management > Select Employee > Click "Revoke All Sessions" > Click "Suspend Account".
+    - **Action**: Navigate to [Staff Management](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management) > Select Employee > Click "[Revoke All Sessions](/docs/design/routes/platform-admin.md#row-actions)" > Click "[Suspend Account](/docs/design/routes/platform-admin.md#row-actions)".
     - **System Effect**: All active sessions are terminated; account status set to 'Suspended'.
-    - **Follow-up**: Trigger security audit log review for the compromised user's recent activity.
+    - **Follow-up**: Trigger [security audit log review](/docs/design/routes/platform-admin.md#audit-trail-viewer) for the compromised user's recent activity.
 
-3. **Role Promotion/Demotion**
+3. **Role Promotion/Demotion** ([Change Role](/docs/features/admin/user-management/overview.md#change-user-role))
     - **User Story**: "A support agent has been promoted to a team lead and needs advanced user management permissions."
-    - **Action**: Navigate to Staff Management > Select Employee > Edit Roles > Add 'User Manager' role.
+    - **Action**: Navigate to [Staff Management](/docs/design/routes/platform-admin.md#dashboard-users---global-user-management) > Select Employee > [Edit Roles](/docs/features/admin/user-management/overview.md#change-user-role) > Add 'User Manager' role.
     - **System Effect**: User gains access to 'Ban User' and 'Bulk Edit' capabilities upon next login.
 
 ---
 
 ### **Journey 6: Financial Operations (Stripe-First)**
 
+> **Feature Reference**: [Finance Overview](/docs/features/admin/finance/overview.md) | **Route**: [`/dashboard/finance`](/docs/design/routes/platform-admin.md#dashboard-finance---subscription-overview)
+
 #### **Payment Dispute & Stop Requests**
 
-1. **Dispute Verification**
+1. **Dispute Verification** ([Tenant Billing](/docs/design/routes/platform-admin.md#dashboard-tenants---tenant-organization-management))
     - **User Story**: "I want to stop the payments for a specific tenant due to a legal dispute."
-    - **Action**: Navigate to Tenant Details > Billing > Review current subscription status.
+    - **Action**: Navigate to [Tenant Details](/docs/design/routes/platform-admin.md#row-actions) > Billing > Review current subscription status.
     - **Process**: Create a "Billing Dispute" ticket in Jira/Support System assigned to the Finance Team.
-    - **Finance Action**: Finance team pauses subscription directly in Stripe Dashboard.
-    - **System Effect**: Stripe webhook updates tenant status to 'Paused' in PenguinMails.
+    - **Finance Action**: Finance team pauses subscription directly in [Stripe Dashboard](/docs/features/admin/finance/stripe-dashboard-access.md).
+    - **System Effect**: [Stripe webhook](/docs/features/admin/finance/stripe-webhook-status.md) updates tenant status to 'Paused' in PenguinMails.
 
-2. **Payment Reconciliation**
+2. **Payment Reconciliation** ([Subscription Monitoring](/docs/features/admin/finance/subscription-monitoring.md))
     - **User Story**: "I had a payment in tenant side he shows the stripe invoice but we dont show on our side so I want to confirm."
-    - **Action**: Navigate to Finance Dashboard > Transaction Search > Enter Tenant ID.
-    - **Verification**: Click "View in Stripe" to compare local status with Stripe data.
+    - **Action**: Navigate to [Finance Dashboard](/docs/design/routes/platform-admin.md#dashboard-finance---subscription-overview) > Transaction Search > Enter Tenant ID.
+    - **Verification**: Click "[View in Stripe](/docs/features/admin/finance/stripe-dashboard-access.md)" to compare local status with Stripe data.
     - **Resolution**: If discrepancy found, escalate to Engineering via "Sync Issue" ticket (or use "Force Sync" if available).
 
 3. **Refund Request Processing**
     - **User Story**: "A customer was double-charged due to a glitch, and I need to request a refund."
-    - **Action**: Navigate to Tenant Details > Billing > Invoices > Verify duplicate charge.
+    - **Action**: Navigate to [Tenant Details](/docs/design/routes/platform-admin.md#row-actions) > Billing > Invoices > Verify duplicate charge.
     - **Process**: Create "Refund Request" ticket including Invoice ID and reason ("Duplicate Charge").
-    - **Finance Action**: Finance team issues refund in Stripe Dashboard.
+    - **Finance Action**: Finance team issues refund in [Stripe Dashboard](/docs/features/admin/finance/stripe-dashboard-access.md).
     - **Completion**: Support agent notifies customer once refund is confirmed in Stripe.
 
 ---
@@ -320,10 +331,23 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`technical-teams-journeys.md`](technical-teams-journeys)
-- [`operations-journeys.md`](operations-journeys)
+**User Journeys**:
+
+- [Operations Journeys](operations-journeys.md)
+- [Technical Teams Journeys](technical-teams-journeys.md)
+- [Internal Tools Integration](internal-tools-integration.md)
+
+**Feature Documentation**:
+
+- [Global User Management](/docs/features/admin/user-management/overview.md) - User lookup, audit trails, account actions
+- [Finance Overview](/docs/features/admin/finance/overview.md) - Subscription monitoring, Stripe access
+- [System Monitoring](/docs/features/admin/system-monitoring/overview.md) - Infrastructure health, queues, logs
+- [Plan Management](/docs/features/admin/plan-management/overview.md) - Subscription plans and pricing
+- [Vault Management](/docs/features/admin/vault-management) - Secrets and SSH key management
+
+**Route Specifications**:
+
+- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
 ---
 

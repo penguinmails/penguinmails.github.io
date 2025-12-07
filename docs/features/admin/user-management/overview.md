@@ -201,7 +201,7 @@ All admin actions are logged:
 - **Compliance Automation**: Automated GDPR request processing
 - **Support Ticket Integration**: Direct link from audit trail to support tickets
 
-### Team Collaboration Roadmap
+### Team Collaboration Roadmap (2027)
 
 - **Advanced RBAC**: Granular permission sets beyond standard roles (currently handled by NileDB auth).
 - **Team Workspaces**: Isolated environments for different departments or teams.

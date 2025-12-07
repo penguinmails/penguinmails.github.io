@@ -70,7 +70,7 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 2. **Implementation Planning**
    - Break down features into technical tasks
-   - Design database schemas and API structures
+   - Design [database schemas](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md) and API structures
    - Plan testing strategies and quality assurance
    - Coordinate with design and product teams
 
@@ -102,8 +102,8 @@ This document outlines the key user journeys for Technical Teams including Devel
    - Execute production deployment with monitoring
    - Verify system functionality post-deployment
 
-2. **Post-Deployment Monitoring**
-   - Monitor system performance and metrics
+2. **Post-Deployment Monitoring** ([System Monitoring](/docs/features/admin/system-monitoring/overview.md))
+   - Monitor [system performance](/docs/features/admin/system-monitoring/infrastructure-monitoring.md) and metrics
    - Track user adoption and error rates
    - Address any deployment-related issues
    - Document deployment outcomes and learnings
@@ -112,17 +112,19 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 ### **Journey 2: Infrastructure Management & DevOps**
 
+> **Feature Reference**: [System Monitoring](/docs/features/admin/system-monitoring/overview.md) | **Route**: [`/dashboard/system/infrastructure`](/docs/design/routes/platform-admin.md#dashboard-system-infrastructure---system-health-monitoring)
+
 #### **Infrastructure Planning**
 
 1. **Architecture Design**
    - Design scalable and reliable infrastructure
    - Plan capacity and resource allocation
    - Establish security and compliance requirements
-   - Design monitoring and alerting systems
+   - Design [monitoring and alerting systems](/docs/features/admin/system-monitoring/overview.md)
 
 2. **Environment Management**
    - Set up development, staging, and production environments
-   - Manage configuration and secrets
+   - Manage configuration and [secrets](/docs/design/routes/platform-admin.md#admin-secrets---vault-secrets-management)
    - Automate environment provisioning and updates
    - Maintain infrastructure documentation
 
@@ -142,9 +144,9 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 #### **System Reliability**
 
-1. **Monitoring & Observability**
+1. **Monitoring & Observability** ([Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring.md))
    - Implement comprehensive monitoring solutions
-   - Design alerting and notification systems
+   - Design [alerting and notification systems](/docs/features/admin/system-monitoring/overview.md)
    - Create dashboards for system health and performance
    - Establish service level objectives (SLOs)
 
@@ -157,6 +159,8 @@ This document outlines the key user journeys for Technical Teams including Devel
 ---
 
 ### **Journey 3: Security Operations & Compliance**
+
+> **Feature Reference**: [Vault Management](/docs/features/admin/vault-management) | **Route**: [`/admin/secrets`](/docs/design/routes/platform-admin.md#admin-secrets---vault-secrets-management)
 
 #### **Security Implementation**
 
@@ -188,13 +192,13 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 #### **Access Management**
 
-1. **Identity & Access Management**
+1. **Identity & Access Management** ([User Management](/docs/features/admin/user-management/overview.md))
    - Design and implement access control systems
    - Manage user authentication and authorization
    - Monitor access patterns and permissions
    - Maintain audit trails and compliance records
 
-2. **Secret Management**
+2. **Secret Management** ([Vault Secrets](/docs/design/routes/platform-admin.md#admin-secrets---vault-secrets-management))
    - Implement secure secret storage and rotation
    - Manage API keys, certificates, and credentials
    - Ensure secure access to production systems
@@ -203,6 +207,8 @@ This document outlines the key user journeys for Technical Teams including Devel
 ---
 
 ### **Journey 4: Data Engineering & Analytics**
+
+> **Technical Reference**: [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md) | [Database Architecture](/docs/implementation-technical/database-infrastructure/overview.md)
 
 #### **Data Pipeline Development**
 
@@ -365,10 +371,26 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`admin-journeys.md`](admin-journeys)
-- [`operations-journeys.md`](operations-journeys)
+**User Journeys**:
+
+- [Admin Journeys](admin-journeys.md)
+- [Operations Journeys](operations-journeys.md)
+- [Internal Tools Integration](internal-tools-integration.md)
+
+**Feature Documentation**:
+
+- [System Monitoring](/docs/features/admin/system-monitoring/overview.md) - Infrastructure health, queues, logs
+- [Vault Management](/docs/features/admin/vault-management) - Secrets and SSH key management
+- [User Management](/docs/features/admin/user-management/overview.md) - Access control and audit trails
+
+**Technical Documentation**:
+
+- [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide.md) - Database structure
+- [Database Architecture](/docs/implementation-technical/database-infrastructure/overview.md) - 5-tier database system
+
+**Route Specifications**:
+
+- [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
 ---
 
