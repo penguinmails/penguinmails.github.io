@@ -210,7 +210,7 @@ Clear, accessible privacy policies that explain data practices.
 
 - **Role-based access** - Users have minimum necessary permissions
 
-- **Multi-factor authentication** - Optional MFA for enhanced security ([Planned](/docs/features/authentication/mfa-roadmap.md))
+- **Multi-factor authentication** - Optional MFA for enhanced security ([Planned]())
 
 - **Session management** - Automatic logout, secure session tokens
 

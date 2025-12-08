@@ -169,7 +169,7 @@ Stripe uses **immutable prices**. You cannot edit the price of an existing Price
 
 ## Related Documentation
 
-- **[Creating Plans](./creating-plans.md)**: How to create new subscription plans
-- **[Product Add-Ons](./product-add-ons.md)**: Managing additional purchasable features
+- **[Creating Plans](/docs/features/admin/finance/creating-plans)**: How to create new subscription plans
+- **[Product Add-Ons](/docs/features/admin/finance/product-add-ons)**: Managing additional purchasable features
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical webhook handling
 - **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure

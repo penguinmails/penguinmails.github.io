@@ -229,7 +229,7 @@ Add-ons are ideal for:
 
 ## Related Documentation
 
-- **[Creating Plans](./creating-plans.md)**: How to create base subscription plans
-- **[Managing Plan Lifecycle](./managing-plan-lifecycle.md)**: Activating and archiving products
+- **[Creating Plans](/docs/features/admin/finance/creating-plans)**: How to create base subscription plans
+- **[Managing Plan Lifecycle](/docs/features/admin/finance/managing-plan-lifecycle)**: Activating and archiving products
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical payment processing
 - **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure

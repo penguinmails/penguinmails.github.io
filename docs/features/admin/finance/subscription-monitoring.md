@@ -238,7 +238,7 @@ From the subscription monitoring panel, finance admins can access:
 
 ## Related Documentation
 
-- **[Stripe Webhook Status](./stripe-webhook-status.md)**: Monitor webhook health and sync status
-- **[Stripe Dashboard Access](./stripe-dashboard-access.md)**: Quick links to Stripe analytics
+- **[Stripe Webhook Status](/docs/features/admin/finance/stripe-webhook-status)**: Monitor webhook health and sync status
+- **[Stripe Dashboard Access](/docs/features/admin/finance/stripe-dashboard-access)**: Quick links to Stripe analytics
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical webhook processing
 - **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Subscriptions table structure

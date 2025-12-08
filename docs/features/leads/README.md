@@ -96,4 +96,4 @@ Organize and manage leads/contacts with tenant-scoped lists and segmentation.
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main)

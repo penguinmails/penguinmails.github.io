@@ -26,15 +26,15 @@ Vault protects SSH keys, SMTP credentials, API tokens, and DKIM signing keys. Lo
 
 ## Navigation
 
-- [Automated backup strategy](./automated-backup-strategy.md)
-- [VPS migration workflow](./vps-migration-workflow.md)
-- [Secret recovery procedures](./secret-recovery-procedures.md)
-- [Vault restoration from backup](./vault-restoration-from-backup.md)
-- [High availability setup](./high-availability-setup.md)
-- [Monitoring and alerting](./monitoring-and-alerting.md)
-- [Emergency procedures for Vault compromise](./emergency-procedures-for-vault-compromise.md)
-- [Implementation checklist](./implementation-checklist.md)
-- [Related documentation](./related-documentation.md)
+- [Automated backup strategy](/docs/features/admin/finance/automated-backup-strategy)
+- [VPS migration workflow](/docs/features/admin/finance/vps-migration-workflow)
+- [Secret recovery procedures](/docs/features/admin/finance/secret-recovery-procedures)
+- [Vault restoration from backup](/docs/features/admin/finance/vault-restoration-from-backup)
+- [High availability setup](/docs/features/admin/finance/high-availability-setup)
+- [Monitoring and alerting](/docs/features/admin/finance/monitoring-and-alerting)
+- [Emergency procedures for Vault compromise](/docs/features/admin/finance/emergency-procedures-for-vault-compromise)
+- [Implementation checklist](/docs/features/admin/finance/implementation-checklist)
+- [Related documentation](/docs/features/admin/finance/related-documentation)
 
 ## Usage Guidance
 

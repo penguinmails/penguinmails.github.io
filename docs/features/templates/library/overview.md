@@ -423,4 +423,4 @@ The Template Library transforms email marketing efficiency by:
 
 ---
 
-**Next Steps**: Explore [Template Customization](/docs/features/templates/library/customization-guide.md) to learn how to personalize templates for your brand.
+**Next Steps**: Explore [Template Customization]() to learn how to personalize templates for your brand.

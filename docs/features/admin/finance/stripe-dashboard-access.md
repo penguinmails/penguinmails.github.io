@@ -353,13 +353,13 @@ From the PenguinMails finance dashboard, teams can access:
 
 ### Integration Roadmap
 
-See [Finance Roadmap](/docs/roadmap/feature-roadmaps/finance-roadmap.md) for planned enhancements.
+See [Finance Roadmap](/docs/roadmap/feature-roadmaps/finance-roadmap) for planned enhancements.
 
 ---
 
 ## Related Documentation
 
-- **[Subscription Monitoring](./subscription-monitoring.md)**: View active subscription counts
-- **[Stripe Webhook Status](./stripe-webhook-status.md)**: Monitor webhook health
+- **[Subscription Monitoring](/docs/features/admin/finance/subscription-monitoring)**: View active subscription counts
+- **[Stripe Webhook Status](/docs/features/admin/finance/stripe-webhook-status)**: Monitor webhook health
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical Stripe API details
 - **[Platform Admin Routes](/docs/design/routes/platform-admin#dashboard-finance)**: Finance dashboard UI spec

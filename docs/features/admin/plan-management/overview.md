@@ -29,7 +29,7 @@ Plan Management enables platform administrators to control subscription products
 
 ## Plan Management Features
 
-### [Creating Subscription Plans](./creating-plans.md)
+### [Creating Subscription Plans](/docs/features/admin/finance/creating-plans)
 
 Launch new subscription tiers by creating products in Stripe Dashboard and configuring feature limits in PenguinMails.
 
@@ -42,7 +42,7 @@ Launch new subscription tiers by creating products in Stripe Dashboard and confi
 
 ---
 
-### [Managing Plan Lifecycle](./managing-plan-lifecycle.md)
+### [Managing Plan Lifecycle](/docs/features/admin/finance/managing-plan-lifecycle)
 
 Control plan visibility and availability while preserving existing customer subscriptions.
 
@@ -55,7 +55,7 @@ Control plan visibility and availability while preserving existing customer subs
 
 ---
 
-### [Product Add-Ons](./product-add-ons.md)
+### [Product Add-Ons](/docs/features/admin/finance/product-add-ons)
 
 Create and manage additional purchasable features that extend base subscription plans.
 
@@ -89,7 +89,7 @@ Create and manage additional purchasable features that extend base subscription 
 
 ## Related Documentation
 
-- **[Finance Overview](/docs/features/admin/finance/overview.md)**: Revenue tracking and financial analytics
+- **[Finance Overview]()**: Revenue tracking and financial analytics
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical payment processing details
 - **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for plans and subscriptions
 - **[Admin Route Spec](/docs/design/routes/platform-admin#plan-management)**: UI specification for management interface

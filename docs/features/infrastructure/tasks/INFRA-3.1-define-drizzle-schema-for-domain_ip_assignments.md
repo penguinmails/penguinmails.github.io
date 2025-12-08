@@ -1,0 +1,41 @@
+
+# INFRA-3.1: Define Drizzle Schema for domain_ip_assignments
+
+**Ticket ID:** INFRA-3.1  
+**Milestone:** Milestone 3 - Internal API for Infrastructure Visibility  
+**Priority:** Medium  
+**Status:** Not Started
+
+## Description
+
+Create a schema to link domains and `smtp_ip_addresses`. Add the schema file `domain_ip_assignments.ts` and generate/apply a migration.
+
+## Acceptance Criteria
+
+1. [ ] `domain_ip_assignments.ts` schema file is created.
+2. [ ] A migration is generated and applied, creating the table.
+3. [ ] For testing, a row can be manually inserted linking a domain to an IP.
+
+## Notes
+
+- Ensure referential integrity to both `domains` (or equivalent) and `smtp_ip_addresses`.
+- Add indexes on `domain_id` and `smtp_ip_address_id` for fast lookups.
+
+## Dependencies
+
+- [INFRA-1.1](/docs/features/infrastructure/tasks/INFRA-1.1-define-drizzle-schemas-for-infrastructure) - SMTP IP addresses schema must be defined
+- [INFRA-1.2](/docs/features/infrastructure/tasks/INFRA-1.2-generate-and-apply-infrastructure-migrations) - Infrastructure tables must exist
+- [CORE-2.1](/docs/features/core/tasks/CORE-2.1-install-configure-drizzle) - Drizzle ORM must be configured
+- [CORE-2.2](/docs/features/core/tasks/CORE-2.2-define-initial-schemas) - Domains schema must be defined
+
+## Related documentation
+
+- [Technical Architecture — Overview](/docs/technical/architecture/overview)
+- [Development Standards (DB design & indexing)](/docs/implementation-technical/development-guidelines/development-standards)
+
+---
+
+## Cross-References
+
+- **Routes**: [infrastructure-ssh-access.md]()
+- **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

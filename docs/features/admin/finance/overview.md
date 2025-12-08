@@ -32,7 +32,7 @@ The Finance features provide PenguinMails finance team with basic subscription m
 
 ## Finance Features
 
-### [Subscription Monitoring](./subscription-monitoring.md)
+### [Subscription Monitoring](/docs/features/admin/finance/subscription-monitoring)
 
 View active subscription counts and plan distribution for basic financial oversight.
 
@@ -51,7 +51,7 @@ View active subscription counts and plan distribution for basic financial oversi
 
 ---
 
-### [Stripe Webhook Status](./stripe-webhook-status.md)
+### [Stripe Webhook Status](/docs/features/admin/finance/stripe-webhook-status)
 
 Monitor webhook health to ensure subscription and payment data stays in sync with Stripe.
 
@@ -70,7 +70,7 @@ Monitor webhook health to ensure subscription and payment data stays in sync wit
 
 ---
 
-### [Stripe Dashboard Access](./stripe-dashboard-access.md)
+### [Stripe Dashboard Access](/docs/features/admin/finance/stripe-dashboard-access)
 
 Quick links to Stripe Dashboard for MRR analytics, invoice management, and revenue reporting.
 
@@ -95,11 +95,11 @@ Quick links to Stripe Dashboard for MRR analytics, invoice management, and reven
 
 | Task | Feature | Action |
 |------|---------|--------|
-| Check subscription count | [Subscription Monitoring](./subscription-monitoring.md) | View finance dashboard |
-| Access MRR analytics | [Stripe Dashboard Access](./stripe-dashboard-access.md) | Click "View MRR in Stripe" |
-| Download invoices | [Stripe Dashboard Access](./stripe-dashboard-access.md) | Click "Download Invoices" |
-| Check webhook health | [Stripe Webhook Status](./stripe-webhook-status.md) | View webhook status panel |
-| Review failed payments | [Stripe Webhook Status](./stripe-webhook-status.md) | Click "View Failed Payments" |
+| Check subscription count | [Subscription Monitoring](/docs/features/admin/finance/subscription-monitoring) | View finance dashboard |
+| Access MRR analytics | [Stripe Dashboard Access](/docs/features/admin/finance/stripe-dashboard-access) | Click "View MRR in Stripe" |
+| Download invoices | [Stripe Dashboard Access](/docs/features/admin/finance/stripe-dashboard-access) | Click "Download Invoices" |
+| Check webhook health | [Stripe Webhook Status](/docs/features/admin/finance/stripe-webhook-status) | View webhook status panel |
+| Review failed payments | [Stripe Webhook Status](/docs/features/admin/finance/stripe-webhook-status) | Click "View Failed Payments" |
 
 ### What's in PenguinMails vs. Stripe
 
@@ -184,12 +184,12 @@ See [OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/o
 
 ### Admin Features
 
-- **[Plan Management](/docs/features/admin/plan-management/overview.md)**: Create and manage subscription plans
+- **[Plan Management](/docs/features/admin/plan-management/overview)**: Create and manage subscription plans
 - **[Platform Admin Routes](/docs/design/routes/platform-admin#dashboard-finance)**: Finance dashboard UI specification
 
 ### Roadmap
 
-- **[Finance Roadmap](/docs/roadmap/feature-roadmaps/finance-roadmap.md)**: Planned enhancements and integrations
+- **[Finance Roadmap](/docs/roadmap/feature-roadmaps/finance-roadmap)**: Planned enhancements and integrations
 
 ---
 

@@ -110,5 +110,5 @@ Future enhancements to support hardware keys and biometrics.
 
 ## Related Documentation
 
-* [Authentication Roadmap](/docs/features/authentication/authentication-roadmap.md)
-* [Security Features](/docs/features/compliance/security-features.md)
+* [Authentication Roadmap]()
+* [Security Features]()

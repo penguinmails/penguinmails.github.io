@@ -192,4 +192,4 @@ See [Warmup Roadmap](/docs/features/warmup/roadmap) for complete timeline and fe
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main)

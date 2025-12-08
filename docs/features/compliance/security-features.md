@@ -371,7 +371,7 @@ session: {
 
 #### Two-Factor Authentication (2FA)
 
-**Status:** [PLANNED](/docs/features/authentication/mfa-roadmap.md) (Level 4 - Enterprise Features)
+**Status:** [PLANNED]() (Level 4 - Enterprise Features)
 
 **Future Implementation:**
 

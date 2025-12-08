@@ -232,4 +232,4 @@ Advanced analytics with AI-powered insights and predictive modeling.
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main)

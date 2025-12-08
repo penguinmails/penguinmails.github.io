@@ -140,4 +140,4 @@ See [Domain Management Roadmap](/docs/features/domains/roadmap) for detailed tim
 
 ---
 
-[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main/docs/features/README.md)
+[← Back to All Features](https://github.com/penguinmails/penguinmails.github.io/blob/main)

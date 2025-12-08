@@ -125,7 +125,7 @@ All subscription plans for PenguinMails are created and managed directly in the 
 
 ## Related Documentation
 
-- **[Managing Plan Lifecycle](./managing-plan-lifecycle.md)**: Activating, deactivating, and archiving plans
-- **[Product Add-Ons](./product-add-ons.md)**: Creating additional purchasable features
+- **[Managing Plan Lifecycle](/docs/features/admin/finance/managing-plan-lifecycle)**: Activating, deactivating, and archiving plans
+- **[Product Add-Ons](/docs/features/admin/finance/product-add-ons)**: Creating additional purchasable features
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical details on payment processing
 - **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for plans

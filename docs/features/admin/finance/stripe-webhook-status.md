@@ -317,8 +317,8 @@ WHERE status = 'success';
 
 ## Related Documentation
 
-- **[Subscription Monitoring](./subscription-monitoring.md)**: View active subscription counts
-- **[Stripe Dashboard Access](./stripe-dashboard-access.md)**: Quick links to Stripe analytics
+- **[Subscription Monitoring](/docs/features/admin/finance/subscription-monitoring)**: View active subscription counts
+- **[Stripe Dashboard Access](/docs/features/admin/finance/stripe-dashboard-access)**: Quick links to Stripe analytics
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical webhook implementation
 - **[Finance API](/docs/implementation-technical/api/platform-api/finance)**: API endpoints including Force Sync
 - **[Platform Admin Routes - Finance](/docs/design/routes/platform-admin#dashboard-finance)**: Finance dashboard UI specification
