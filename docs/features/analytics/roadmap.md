@@ -941,6 +941,94 @@ This document outlines the detailed roadmap for analytics and reporting features
 
 ---
 
+## Analytics Improvement Spikes
+
+The following investigations are planned to address gaps identified in the API ↔ Schema cross-reference analysis:
+
+### Q2 2026: Inbox Placement Measurement Spike
+
+**Problem**: Current `estimated_inbox_placement_rate` is derived from `(sent - bounced - spam) / sent`. True inbox vs. spam folder distinction requires external seed list tools.
+
+**Investigation**:
+
+- Evaluate external seed list providers (GlockApps, 250ok, Validity)
+- Assess cost vs. accuracy trade-offs
+- Determine integration approach (API polling vs. webhook)
+
+**Outcome**: Recommendation report with implementation plan if validated.
+
+---
+
+### Q3 2026: Engagement Score Enhancement Spike
+
+**Problem**: Current engagement heatmap uses simplified 4-period time buckets (nighttime, early_morning, office_hours, evening). Finer granularity and audience-specific patterns would improve send time optimization.
+
+**Investigation**:
+
+- Evaluate hourly granularity data requirements
+- Assess audience segment-specific timing patterns
+- Determine storage and processing implications
+
+**Outcome**: Enhanced engagement heatmap with configurable granularity.
+
+---
+
+### Q4 2026: Provider-Level Deliverability Spike
+
+**Problem**: Per-provider analytics (Gmail, Outlook, Yahoo) not currently available. Would require parsing recipient email domains.
+
+**Investigation**:
+
+- Assess recipient domain parsing approach
+- Evaluate OLAP aggregation job modifications
+- Determine storage requirements for provider-level breakdowns
+
+**Outcome**: Provider column added to OLAP aggregation with per-provider deliverability metrics.
+
+---
+
+### Q1 2027: Email Timing Metrics Spike
+
+**Problem**: Metrics like `average_time_to_open_hours` require event-level timestamp logging not currently captured.
+
+**Investigation**:
+
+- Assess event logging infrastructure requirements
+- Evaluate storage implications for event timestamps
+- Determine privacy considerations
+
+**Outcome**: Event-level logging with time-to-open, time-to-click, time-to-reply calculations.
+
+---
+
+### Q1 2027: Real-Time Analytics Infrastructure Spike
+
+**Problem**: Current analytics are batch-updated daily (2 AM UTC). Real-time streaming would enable live campaign monitoring.
+
+**Investigation**:
+
+- Evaluate WebSocket/SSE infrastructure requirements
+- Assess OLTP vs. dedicated streaming database
+- Determine cost and complexity trade-offs
+
+**Outcome**: Real-time streaming for critical campaign metrics.
+
+---
+
+### 2027: Churn Rate Calculation Spike
+
+**Problem**: Churn rate requires period-over-period subscription snapshots not currently stored in OLAP.
+
+**Investigation**:
+
+- Design historical subscription snapshot schema
+- Evaluate daily snapshot storage requirements
+- Determine churn calculation formulas (weekly, monthly, annual)
+
+**Outcome**: Churn rate metrics derived from OLAP historical snapshots.
+
+---
+
 ## Related Documentation
 
 ### Planning & Strategy

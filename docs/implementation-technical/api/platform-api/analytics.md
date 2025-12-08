@@ -20,7 +20,10 @@ persona: "Backend Developers"
 
 **Method**: `GET`
 **URL**: `/api/v1/platform/system/overview`
-**Purpose**: Single entrypoint for executive and operational dashboards.
+**Purpose**: Return current server health status with database connectivity checks.
+
+> [!NOTE]
+> This endpoint returns the health of the **current API server instance**. It performs lightweight connection checks to OLTP and OLAP databases. For aggregate platform health and historical trends, see PostHog dashboards (2026+ integrated monitoring).
 
 **Response**:
 

@@ -233,10 +233,11 @@ persona: "Backend Developers"
 - `search`: Company name or owner email
 - `plan`: Filter by plan slug (free, pro, enterprise)
 - `status`: Filter by status (active, trial, churned)
-- `mrr_min` (optional): Minimum MRR filter
-- `mrr_max` (optional): Maximum MRR filter
 - `limit` (optional): Max results (default: 50, max: 100)
 - `offset` (optional): Pagination offset
+
+> [!NOTE]
+> For MRR filtering and revenue analytics, use the [Stripe Dashboard](https://dashboard.stripe.com/revenue).
 
 **Response**:
 

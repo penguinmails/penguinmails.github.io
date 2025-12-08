@@ -155,7 +155,7 @@ persona: "Backend Developers"
 
 **Method**: `GET`
 **URL**: `/api/v1/platform/subscriptions/analytics`
-**Purpose**: Aggregate subscription metrics for business intelligence.
+**Purpose**: Aggregate subscription counts by status for operational monitoring.
 
 **Query Parameters**:
 
@@ -171,11 +171,14 @@ persona: "Backend Developers"
     "metrics": {
       "total_subscriptions": 145,
       "active_subscriptions": 142,
-      "monthly_recurring_revenue": 12450.00,
-      "churn_rate": "2.1%"
+      "past_due_subscriptions": 2,
+      "canceled_subscriptions": 1
     }
   }
 }
-
-
 ```
+
+> [!NOTE]
+> **MRR and Churn Analytics**: For Monthly Recurring Revenue (MRR), churn rate, and revenue trends, use the [Stripe Dashboard](https://dashboard.stripe.com/revenue) or Stripe Sigma for custom queries.
+>
+> **Roadmap**: Enhanced churn calculation from historical OLAP snapshots is planned for 2027. See [Analytics Roadmap](/docs/features/analytics/roadmap).

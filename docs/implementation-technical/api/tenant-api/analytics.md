@@ -19,17 +19,20 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
 
 **Key Capabilities:**
 
-- Real-time campaign performance metrics
+- Campaign performance metrics (updated daily via OLAP batch jobs)
 
 - Engagement tracking (opens, clicks, replies)
 
-- Deliverability analytics and inbox placement
+- Deliverability analytics and inbox placement estimation
 
 - Time-series data for trend analysis
 
 - Aggregated workspace-level metrics
 
 - Data export functionality
+
+> [!NOTE]
+> **Data Freshness**: Analytics are updated via daily batch jobs (typically 2 AM UTC). For real-time subscription status, query OLTP directly. Real-time streaming analytics is planned for Q1 2027.
 
 **Technical Architecture:**
 
@@ -98,11 +101,6 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
       "spam_rate": 0.1,
       "unsubscribe_rate": 0.24
     },
-    "timing": {
-      "average_time_to_open_hours": 4.5,
-      "average_time_to_click_hours": 6.2,
-      "average_time_to_reply_hours": 12.8
-    },
     "time_series": [
       {
         "date": "2025-11-01",
@@ -115,8 +113,10 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
     ]
   }
 }
-
 ```
+
+> [!NOTE]
+> **Email Timing Metrics**: Metrics like `average_time_to_open_hours` require event-level timestamp logging which is not currently captured. This is planned for Q1 2027. See [Analytics Roadmap](/docs/features/analytics/roadmap).
 
 ---
 
@@ -210,34 +210,11 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
       "end": "2025-11-26T23:59:59Z"
     },
     "overall": {
-      "inbox_placement_rate": 95.5,
-      "spam_folder_rate": 2.5,
+      "estimated_inbox_placement_rate": 95.5,
+      "spam_rate": 2.5,
       "bounce_rate": 2.0,
-      "sender_reputation_score": 92
+      "health_score": 92
     },
-    "by_provider": [
-      {
-        "provider": "Gmail",
-        "emails_sent": 30000,
-        "inbox_placement_rate": 96.2,
-        "spam_folder_rate": 1.8,
-        "bounce_rate": 2.0
-      },
-      {
-        "provider": "Outlook",
-        "emails_sent": 20000,
-        "inbox_placement_rate": 94.5,
-        "spam_folder_rate": 3.5,
-        "bounce_rate": 2.0
-      },
-      {
-        "provider": "Yahoo",
-        "emails_sent": 15000,
-        "inbox_placement_rate": 95.0,
-        "spam_folder_rate": 3.0,
-        "bounce_rate": 2.0
-      }
-    ],
     "bounce_analysis": {
       "hard_bounces": 800,
       "soft_bounces": 700,
@@ -267,14 +244,23 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
       }
     ],
     "blacklist_status": {
-      "is_blacklisted": false,
-      "blacklists_checked": 15,
+      "any_ip_blacklisted": false,
+      "ips_checked": 3,
       "last_check": "2025-11-26T10:00:00Z"
     }
   }
 }
 
 ```
+
+> [!IMPORTANT]
+> **Deliverability Metrics Explained**:
+>
+> - `estimated_inbox_placement_rate`: Derived from `(sent - bounced - spam_complaints) / sent`. True inbox placement requires external seed list tools (planned Q2 2026 spike).
+> - `health_score`: Internal deliverability health (0-100) from OLAP `mailbox_analytics`. External reputation tools (Google Postmaster, Microsoft SNDS) integration is planned. See [Sender Reputation Feature](/docs/features/domains/sender-reputation).
+> - `blacklist_status`: Aggregated from per-IP checks in OLTP `smtp_ip_addresses.provider_blacklist_status`.
+>
+> **Provider-Level Breakdown**: Per-provider analytics (Gmail, Outlook, Yahoo) is **Post-MVP** (Q4 2026 spike). See [Analytics Roadmap](/docs/features/analytics/roadmap).
 
 ---
 
@@ -312,7 +298,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
     "heatmap": [
       {
         "day_of_week": "Monday",
-        "hour": 9,
+        "time_period": "office_hours",
         "emails_sent": 500,
         "emails_opened": 150,
         "open_rate": 30.0,
@@ -320,7 +306,7 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
       },
       {
         "day_of_week": "Tuesday",
-        "hour": 10,
+        "time_period": "office_hours",
         "emails_sent": 600,
         "emails_opened": 210,
         "open_rate": 35.0,
@@ -329,8 +315,19 @@ The Analytics API provides comprehensive campaign performance metrics, engagemen
     ]
   }
 }
-
 ```
+
+> [!NOTE]
+> **Engagement Score Formula**: `engagement_score = (opens × 0.3 + clicks × 0.4 + replies × 0.3) / sent × 100`
+>
+> **Time Periods** (MVP simplified granularity):
+>
+> - `nighttime`: 12 AM - 6 AM
+> - `early_morning`: 6 AM - 9 AM  
+> - `office_hours`: 9 AM - 5 PM
+> - `evening`: 5 PM - 12 AM
+>
+> **Roadmap**: Finer hourly granularity and audience-specific timing planned for Q3 2026 spike.
 
 ---
 
@@ -587,6 +584,10 @@ interface TimeSeriesDataPoint {
 - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Q1 2026 advanced analytics features
 
 - **[Manual Reporting](/docs/features/analytics/manual-reporting)** - Scheduled reports and data export
+
+- **[Sender Reputation](/docs/features/domains/sender-reputation)** - Health score and external reputation tools
+
+- **[Analytics Roadmap](/docs/features/analytics/roadmap)** - Planned improvements and spikes
 
 ### API Documentation
 
