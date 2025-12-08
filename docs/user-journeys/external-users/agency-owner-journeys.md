@@ -1,3 +1,11 @@
+---
+title: "External Users: Agency Owner Journeys"
+description: "Key user journeys for Marketing Agency Owners managing client campaigns and scaling operations"
+last_modified_date: "2025-12-08"
+level: "2"
+persona: "Marketing Agency Owners"
+---
+
 # External Users: Agency Owner Journeys
 
 ## Overview
@@ -55,6 +63,8 @@ This document outlines the key user journeys for marketing agency owners who use
 
 ### **Journey 1: Client Onboarding & Setup**
 
+> **Feature Reference**: [Workspace Management](/docs/features/teams/), [Domain Management](/docs/features/domains/domain-management.md) | **Route**: [`/dashboard/workspaces`](/docs/design/routes/workspace-management.md), [`/dashboard/workspaces/[slug]/domains`](/docs/design/routes/workspace-domains.md)
+
 #### **Initial Client Assessment**
 
 1. **Client Discovery**
@@ -87,6 +97,8 @@ This document outlines the key user journeys for marketing agency owners who use
 
 ### **Journey 2: Campaign Strategy & Development**
 
+> **Feature Reference**: [Campaign Management](/docs/features/campaigns/), [A/B Testing](/docs/features/campaigns/ab-testing.md) | **Route**: [`/dashboard/workspaces/[slug]/campaigns`](/docs/design/routes/workspace-campaigns.md)
+
 #### **Strategic Planning**
 
 1. **Campaign Planning**
@@ -118,6 +130,8 @@ This document outlines the key user journeys for marketing agency owners who use
 ---
 
 ### **Journey 3: Campaign Execution & Management**
+
+> **Feature Reference**: [Warmup System](/docs/features/warmup/), [Analytics](/docs/features/analytics/) | **Route**: [`/dashboard/workspaces/[slug]/domains/[id]/emails/[emailId]/warmup`](/docs/design/routes/workspace-domains.md#warmup-management)
 
 #### **Daily Campaign Operations**
 
@@ -152,6 +166,8 @@ This document outlines the key user journeys for marketing agency owners who use
 ---
 
 ### **Journey 4: Client Success & Growth**
+
+> **Feature Reference**: [Analytics](/docs/features/analytics/), [Inbox Rotation](/docs/features/inbox/inbox-rotation/) | **Route**: See [Analytics UI Patterns](/docs/design/analytics-ui-patterns.md)
 
 #### **Client Relationship Management**
 
@@ -315,10 +331,28 @@ This document outlines the key user journeys for marketing agency owners who use
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`freelancer-journeys.md`](freelancer-journeys)
-- [`business-owner-journeys.md`](business-owner-journeys)
+**User Journeys**:
+
+- [User Types Classification](../user-types-classification.md)
+- [Business Owner Journeys](business-owner-journeys.md)
+- [Freelancer Journeys](freelancer-journeys.md)
+- [Enterprise Team Journeys](enterprise-team-journeys.md)
+
+**Feature Documentation**:
+
+- [Workspace Management](/docs/features/teams/) - Multi-client workspace setup
+- [Domain Management](/docs/features/domains/domain-management.md) - Domain setup and DNS configuration
+- [Campaign Management](/docs/features/campaigns/) - Email campaign creation and management
+- [A/B Testing](/docs/features/campaigns/ab-testing.md) - Campaign optimization testing
+- [Warmup System](/docs/features/warmup/) - Email account warmup
+- [Analytics](/docs/features/analytics/) - Performance tracking and insights
+- [Inbox Rotation](/docs/features/inbox/inbox-rotation/) - Sending account rotation
+
+**Route Specifications**:
+
+- [Workspace Management](/docs/design/routes/workspace-management.md) - Workspace dashboard UI
+- [Workspace Domains](/docs/design/routes/workspace-domains.md) - Domain management UI
+- [Workspace Campaigns](/docs/design/routes/workspace-campaigns.md) - Campaign dashboard UI
 
 ---
 

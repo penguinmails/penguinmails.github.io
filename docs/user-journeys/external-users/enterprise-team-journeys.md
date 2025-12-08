@@ -1,3 +1,11 @@
+---
+title: "External Users: Enterprise Team Journeys"
+description: "Key user journeys for Enterprise Teams managing large-scale email operations and organizational structures"
+last_modified_date: "2025-12-08"
+level: "2"
+persona: "Enterprise Teams"
+---
+
 # External Users: Enterprise Team Journeys
 
 ## Overview
@@ -55,6 +63,8 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 
 ### **Journey 1: Enterprise Implementation & Setup**
 
+> **Feature Reference**: [Workspace Management](/docs/features/teams/), [API Access](/docs/features/integrations/) | **Route**: [`/dashboard/workspaces`](/docs/design/routes/workspace-management.md), [API Key Management](/docs/design/routes/api-key-management.md)
+
 #### **Organizational Assessment**
 
 1. **Organizational Analysis**
@@ -86,6 +96,8 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ---
 
 ### **Journey 2: Large-Scale Campaign Management**
+
+> **Feature Reference**: [Campaign Management](/docs/features/campaigns/), [Queue System](/docs/features/queue/) | **Route**: [`/dashboard/workspaces/[slug]/campaigns`](/docs/design/routes/workspace-campaigns.md)
 
 #### **Campaign Planning & Coordination**
 
@@ -119,6 +131,8 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 
 ### **Journey 3: Compliance & Governance**
 
+> **Feature Reference**: [Compliance](/docs/features/compliance/), [Authentication](/docs/features/authentication/) | **Route**: [Settings](/docs/design/routes/settings.md), [Public Auth](/docs/design/routes/public-auth.md)
+
 #### **Compliance Management**
 
 1. **Regulatory Compliance**
@@ -150,6 +164,8 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 ---
 
 ### **Journey 4: Cross-Department Coordination**
+
+> **Feature Reference**: [Analytics](/docs/features/analytics/), [Teams](/docs/features/teams/) | **Route**: See [Analytics UI Patterns](/docs/design/analytics-ui-patterns.md)
 
 #### **Departmental Integration**
 
@@ -345,10 +361,29 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`agency-owner-journeys.md`](agency-owner-journeys)
-- [`business-owner-journeys.md`](business-owner-journeys)
+**User Journeys**:
+
+- [User Types Classification](../user-types-classification.md)
+- [Business Owner Journeys](business-owner-journeys.md)
+- [Agency Owner Journeys](agency-owner-journeys.md)
+- [Freelancer Journeys](freelancer-journeys.md)
+
+**Feature Documentation**:
+
+- [Workspace Management](/docs/features/teams/) - Multi-workspace setup and permissions
+- [Campaign Management](/docs/features/campaigns/) - Email campaign creation and management
+- [Queue System](/docs/features/queue/) - High-volume email queue processing
+- [Compliance](/docs/features/compliance/) - GDPR, CAN-SPAM, and regulatory compliance
+- [Authentication](/docs/features/authentication/) - SSO and enterprise authentication
+- [Analytics](/docs/features/analytics/) - Performance tracking and insights
+- [API Integration](/docs/features/integrations/) - Enterprise system integrations
+
+**Route Specifications**:
+
+- [Workspace Management](/docs/design/routes/workspace-management.md) - Workspace dashboard UI
+- [Workspace Campaigns](/docs/design/routes/workspace-campaigns.md) - Campaign dashboard UI
+- [API Key Management](/docs/design/routes/api-key-management.md) - API configuration UI
+- [Settings](/docs/design/routes/settings.md) - Account and workspace settings UI
 
 ---
 

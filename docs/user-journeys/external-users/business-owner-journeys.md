@@ -1,3 +1,11 @@
+---
+title: "External Users: Business Owner Journeys"
+description: "Key user journeys for Business Owners managing email marketing, customer engagement, and sales outreach"
+last_modified_date: "2025-12-08"
+level: "2"
+persona: "Business Owners"
+---
+
 # External Users: Business Owner Journeys
 
 ## Overview
@@ -55,6 +63,8 @@ This document outlines the key user journeys for business owners who use Penguin
 
 ### **Journey 1: Business Setup & Initial Strategy**
 
+> **Feature Reference**: [Domain Management](/docs/features/domains/domain-management.md), [Workspace Setup](/docs/features/teams/) | **Route**: [`/dashboard/workspaces/[slug]/domains`](/docs/design/routes/workspace-domains.md)
+
 #### **Business Assessment**
 
 1. **Current State Analysis**
@@ -86,6 +96,8 @@ This document outlines the key user journeys for business owners who use Penguin
 ---
 
 ### **Journey 2: Customer Acquisition & Lead Generation**
+
+> **Feature Reference**: [Campaign Management](/docs/features/campaigns/), [Lead Management](/docs/features/leads/) | **Route**: [`/dashboard/workspaces/[slug]/campaigns`](/docs/design/routes/workspace-campaigns.md), [`/dashboard/workspaces/[slug]/leads`](/docs/design/routes/tenant-leads.md)
 
 #### **Lead Generation Campaigns**
 
@@ -119,6 +131,8 @@ This document outlines the key user journeys for business owners who use Penguin
 
 ### **Journey 3: Customer Engagement & Retention**
 
+> **Feature Reference**: [Email Sequences](/docs/features/campaigns/email-sequences.md), [Templates](/docs/features/templates/) | **Route**: [`/dashboard/workspaces/[slug]/templates`](/docs/design/routes/workspace-templates.md)
+
 #### **Customer Onboarding**
 
 1. **Welcome Sequences**
@@ -150,6 +164,8 @@ This document outlines the key user journeys for business owners who use Penguin
 ---
 
 ### **Journey 4: Business Growth & Optimization**
+
+> **Feature Reference**: [Analytics](/docs/features/analytics/), [A/B Testing](/docs/features/campaigns/ab-testing.md) | **Route**: See [Analytics UI Patterns](/docs/design/analytics-ui-patterns.md)
 
 #### **Performance Analysis**
 
@@ -345,10 +361,28 @@ This document outlines the key user journeys for business owners who use Penguin
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`agency-owner-journeys.md`](agency-owner-journeys)
-- [`freelancer-journeys.md`](freelancer-journeys)
+**User Journeys**:
+
+- [User Types Classification](../user-types-classification.md)
+- [Agency Owner Journeys](agency-owner-journeys.md)
+- [Freelancer Journeys](freelancer-journeys.md)
+- [Enterprise Team Journeys](enterprise-team-journeys.md)
+
+**Feature Documentation**:
+
+- [Domain Management](/docs/features/domains/domain-management.md) - Domain setup and DNS configuration
+- [Campaign Management](/docs/features/campaigns/) - Email campaign creation and management
+- [Email Sequences](/docs/features/campaigns/email-sequences.md) - Automated follow-up sequences
+- [Lead Management](/docs/features/leads/) - Lead import and segmentation
+- [Templates](/docs/features/templates/) - Email template library
+- [Analytics](/docs/features/analytics/) - Performance tracking and insights
+
+**Route Specifications**:
+
+- [Workspace Domains](/docs/design/routes/workspace-domains.md) - Domain management UI
+- [Workspace Campaigns](/docs/design/routes/workspace-campaigns.md) - Campaign dashboard UI
+- [Workspace Templates](/docs/design/routes/workspace-templates.md) - Template editor UI
+- [Tenant Leads](/docs/design/routes/tenant-leads.md) - Lead management UI
 
 ---
 

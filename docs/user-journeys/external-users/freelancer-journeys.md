@@ -1,3 +1,11 @@
+---
+title: "External Users: Freelancer Journeys"
+description: "Key user journeys for Freelance Consultants managing client campaigns and building consulting businesses"
+last_modified_date: "2025-12-08"
+level: "2"
+persona: "Freelance Consultants"
+---
+
 # External Users: Freelancer Journeys
 
 ## Overview
@@ -55,6 +63,8 @@ This document outlines the key user journeys for freelance consultants who use P
 
 ### **Journey 1: Business Setup & Client Acquisition**
 
+> **Feature Reference**: [Domain Management](/docs/features/domains/domain-management.md), [Templates](/docs/features/templates/) | **Route**: [`/dashboard/workspaces/[slug]/domains`](/docs/design/routes/workspace-domains.md), [`/dashboard/workspaces/[slug]/templates`](/docs/design/routes/workspace-templates.md)
+
 #### **Professional Setup**
 
 1. **Personal Branding**
@@ -86,6 +96,8 @@ This document outlines the key user journeys for freelance consultants who use P
 ---
 
 ### **Journey 2: Client Project Management**
+
+> **Feature Reference**: [Campaign Management](/docs/features/campaigns/), [Email Sequences](/docs/features/campaigns/email-sequences.md) | **Route**: [`/dashboard/workspaces/[slug]/campaigns`](/docs/design/routes/workspace-campaigns.md)
 
 #### **Strategy Development**
 
@@ -119,6 +131,8 @@ This document outlines the key user journeys for freelance consultants who use P
 
 ### **Journey 3: Client Relationship Management**
 
+> **Feature Reference**: [Analytics](/docs/features/analytics/) | **Route**: See [Analytics UI Patterns](/docs/design/analytics-ui-patterns.md)
+
 #### **Communication & Reporting**
 
 1. **Regular Communication**
@@ -150,6 +164,8 @@ This document outlines the key user journeys for freelance consultants who use P
 ---
 
 ### **Journey 4: Business Growth & Scaling**
+
+> **Feature Reference**: [Automation](/docs/features/automation/), [Lead Management](/docs/features/leads/) | **Route**: [`/dashboard/workspaces/[slug]/leads`](/docs/design/routes/tenant-leads.md)
 
 #### **Service Development**
 
@@ -345,10 +361,28 @@ This document outlines the key user journeys for freelance consultants who use P
 
 ### Related Documents
 
-- [`user-types-classification.md`](../user-types-classification)
-- [`user-stories/methodology.md`](../user-stories/methodology)
-- [`agency-owner-journeys.md`](agency-owner-journeys)
-- [`business-owner-journeys.md`](business-owner-journeys)
+**User Journeys**:
+
+- [User Types Classification](../user-types-classification.md)
+- [Business Owner Journeys](business-owner-journeys.md)
+- [Agency Owner Journeys](agency-owner-journeys.md)
+- [Enterprise Team Journeys](enterprise-team-journeys.md)
+
+**Feature Documentation**:
+
+- [Domain Management](/docs/features/domains/domain-management.md) - Domain setup and DNS configuration
+- [Campaign Management](/docs/features/campaigns/) - Email campaign creation and management
+- [Email Sequences](/docs/features/campaigns/email-sequences.md) - Automated follow-up sequences
+- [Templates](/docs/features/templates/) - Email template library
+- [Analytics](/docs/features/analytics/) - Performance tracking and insights
+- [Lead Management](/docs/features/leads/) - Lead import and segmentation
+
+**Route Specifications**:
+
+- [Workspace Domains](/docs/design/routes/workspace-domains.md) - Domain management UI
+- [Workspace Campaigns](/docs/design/routes/workspace-campaigns.md) - Campaign dashboard UI
+- [Workspace Templates](/docs/design/routes/workspace-templates.md) - Template editor UI
+- [Tenant Leads](/docs/design/routes/tenant-leads.md) - Lead management UI
 
 ---
 
