@@ -375,6 +375,11 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
+**Technical Documentation**:
+
+- [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring.md) - Health check and metrics endpoints
+- [Log Viewer API](/docs/implementation-technical/api/platform-api/system-monitoring.md#log-viewer) - Log search and retrieval endpoints
+
 ---
 
 **Keywords**: operations journeys, platform monitoring, issue resolution, incident management, customer support, performance optimization

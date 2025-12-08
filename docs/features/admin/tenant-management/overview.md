@@ -159,7 +159,7 @@ The Tenant Management feature enables PenguinMails internal staff to manage orga
 
 - **Search**: Elasticsearch for fast tenant lookup *(2026 Spike)*
 - **Caching**: Tenant metadata and flags cached for 5 minutes
-- **Pagination**: Offset-based for large tenant lists
+- **Pagination**: Offset-based for large tenant lists (enables "Jump to page X" navigation)
 
 ### Security
 

@@ -133,6 +133,31 @@ Displays the number of subscriptions with payment issues:
 
 ---
 
+## Manual Sync Tools
+
+### Force Sync Transaction
+
+**Purpose**: Manually pull the latest status of a specific invoice or subscription from Stripe when webhooks fail or are delayed. This ensures the local database reflects the authoritative state in Stripe.
+
+**User Story**:
+> *"As a finance admin, I see a customer claims they paid an invoice, but their subscription is still 'past_due' in PenguinMails. I need to force a sync to update their status immediately."*
+
+**Workflow**:
+
+1. **Locate ID**: Get the Invoice ID (e.g., `in_123abc`) or Subscription ID (e.g., `sub_456xyz`) from Stripe Dashboard.
+2. **Input ID**: Enter the ID into the "Force Sync Transaction" input field in the Finance Dashboard.
+3. **Trigger Sync**: Click **"Sync Now"**.
+4. **System Action**:
+   - Calls Stripe API (`invoices.retrieve` or `subscriptions.retrieve`)
+   - Updates local database record with latest status
+   - Logs the manual sync action
+5. **Result**: Subscription status updates to `active` immediately.
+
+> [!NOTE]
+> This tool respects the **Stripe-First** philosophy: it pulls data *from* Stripe to update PenguinMails. It does not push changes to Stripe.
+
+---
+
 ## Technical Implementation
 
 ### Webhook Processing
@@ -232,7 +257,7 @@ WHERE status = 'success';
 **Resolution**:
 
 1. Trust Stripe as source of truth
-2. Trigger manual sync (if implemented)
+2. **Trigger Manual Sync**: Use the [Force Sync Transaction](#manual-sync-tools) tool with the specific Invoice or Subscription ID
 3. Review recent webhook events in Stripe Dashboard
 4. Update local status to match Stripe status
 
@@ -295,4 +320,6 @@ WHERE status = 'success';
 - **[Subscription Monitoring](./subscription-monitoring.md)**: View active subscription counts
 - **[Stripe Dashboard Access](./stripe-dashboard-access.md)**: Quick links to Stripe analytics
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical webhook implementation
+- **[Finance API](/docs/implementation-technical/api/platform-api/finance)**: API endpoints including Force Sync
+- **[Platform Admin Routes - Finance](/docs/design/routes/platform-admin#dashboard-finance)**: Finance dashboard UI specification
 - **[OLTP Schema Guide](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for webhooks

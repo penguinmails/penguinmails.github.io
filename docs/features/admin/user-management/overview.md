@@ -72,7 +72,7 @@ The Global User Management feature provides PenguinMails internal staff with com
 - **Color Coding**:
   - Red: Suspended users
   - Orange: Churned users (expired plan)
-- **Sorting & Pagination**: Support for large datasets
+- **Sorting & Pagination**: Support for large datasets with offset-based pagination (enables "Jump to page X" navigation)
 
 ### Audit Trail Viewer
 
@@ -92,6 +92,7 @@ The Global User Management feature provides PenguinMails internal staff with com
 - **Change Role**: Promote or demote users (e.g., Member to Admin)
 - **Reset Password**: Sends password reset email
 - **Suspend Account**: Temporarily disable account access
+- **Revoke All Sessions**: Immediately invalidate all active session tokens (security action)
 - **Delete Account**: GDPR-compliant hard delete (irreversible)
 
 ### Change User Role
@@ -105,6 +106,28 @@ The Global User Management feature provides PenguinMails internal staff with com
 3. Select new role from dropdown (Owner, Admin, Member)
 4. Confirm action
 5. **System Action**: Updates `tenant_users` table and invalidates user session to enforce new permissions immediately
+
+### Revoke All Sessions
+
+**User Story**: *"As a security admin, I need to immediately terminate all active sessions for a compromised user account to prevent unauthorized access."*
+
+**Workflow**:
+
+1. Navigate to User Details page
+2. Click **"Revoke All Sessions"** in the actions menu
+3. Confirm action
+4. **System Action**: Immediately invalidates all active session tokens for the user
+5. **Result**: User is forced to re-authenticate on next request
+
+**Use Cases**:
+
+- Compromised account credentials
+- User reports device theft
+- Suspicious activity detected in audit trail
+- Forced logout after password reset
+- Security incident response
+
+**API Endpoint**: `POST /api/v1/platform/admin/users/{id}/revoke-sessions`
 
 ---
 

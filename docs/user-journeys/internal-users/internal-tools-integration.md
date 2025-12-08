@@ -372,6 +372,12 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
+**Technical Documentation**:
+
+- [Admin Operations API](/docs/implementation-technical/api/platform-api/admin.md) - User and Tenant management endpoints
+- [Finance API](/docs/implementation-technical/api/platform-api/finance.md) - Subscription and billing endpoints
+- [Stripe Integration](/docs/features/payments/stripe-integration.md) - Payment integration guide
+
 ---
 
 **Keywords**: internal tools integration, google workspace, jira, CRM, analytics, automation, data synchronization

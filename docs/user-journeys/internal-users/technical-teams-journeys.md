@@ -392,6 +392,12 @@ This document outlines the key user journeys for Technical Teams including Devel
 
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
+**API Documentation**:
+
+- [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring.md) - Health check and metrics endpoints
+- [Vault API](/docs/implementation-technical/api/platform-api/vault.md) - Secrets management endpoints
+- [Admin Operations API](/docs/implementation-technical/api/platform-api/admin.md) - User and Tenant management endpoints
+
 ---
 
 **Keywords**: technical teams, development, devops, security, data engineering, infrastructure, CI/CD, monitoring

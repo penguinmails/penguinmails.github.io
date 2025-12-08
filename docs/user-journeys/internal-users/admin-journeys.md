@@ -353,6 +353,13 @@ This document outlines the key user journeys for Platform Administrators who man
 
 - [Platform Admin Routes](/docs/design/routes/platform-admin.md) - Complete UI specification for admin dashboard
 
+**Technical Documentation**:
+
+- [Admin Operations API](/docs/implementation-technical/api/platform-api/admin.md) - User and Tenant management endpoints
+- [Finance API](/docs/implementation-technical/api/platform-api/finance.md) - Subscription and billing endpoints
+- [System Monitoring API](/docs/implementation-technical/api/platform-api/system-monitoring.md) - Health check and metrics endpoints
+- [Vault API](/docs/implementation-technical/api/platform-api/vault.md) - Secrets management endpoints
+
 ---
 
 **Keywords**: admin journeys, platform administration, user management, security, compliance, system configuration
