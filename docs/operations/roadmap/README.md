@@ -1,12 +1,15 @@
 ---
 title: "Roadmap Overview"
 description: "Product and technical development roadmap for PenguinMails"
-last_modified_date: "2025-11-24"
-level: "1"
+last_modified_date: "2025-12-09"
+level: "2"
 persona: "All Stakeholders"
 ---
 
 # 🗺️ Roadmap Overview
+
+> [!NOTE]
+> **Central Roadmap Hub**: For consolidated roadmap navigation, see the [Central Roadmap Hub](/docs/roadmap/README).
 
 ## Purpose
 

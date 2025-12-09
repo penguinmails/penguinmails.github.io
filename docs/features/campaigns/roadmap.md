@@ -1,11 +1,14 @@
 ---
 title: "Campaign Management Roadmap"
 description: "Detailed timeline and quarterly breakdown for campaign management features"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Business Leaders"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Campaign Management Roadmap
 

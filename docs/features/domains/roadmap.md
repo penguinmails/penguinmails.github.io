@@ -1,11 +1,14 @@
 ﻿---
 title: "Domain Management Roadmap"
 description: "Post-MVP enhancements for domain management features including subdomain support, bulk operations, and multi-region sending"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Technical Leaders"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Domain Management Roadmap
 

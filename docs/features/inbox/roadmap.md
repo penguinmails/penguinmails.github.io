@@ -1,10 +1,14 @@
 ﻿---
 title: "Inbox Management Roadmap"
 description: "Development roadmap for inbox management features including MVP gaps, Post-MVP enhancements, and AI-powered capabilities"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Managers, Engineering Teams"
+parent: "/docs/roadmap"
 ---
+
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Inbox Management Roadmap
 

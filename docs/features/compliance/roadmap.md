@@ -1,12 +1,16 @@
 ﻿---
 title: "Compliance & Security Roadmap"
 description: "Implementation timeline and planned enhancements for compliance and security features - MVP Complete, No Critical Gaps"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Managers, Compliance Officers"
 status: "ACTIVE"
 category: "Compliance"
+parent: "/docs/roadmap"
 ---
+
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Compliance & Security Roadmap
 

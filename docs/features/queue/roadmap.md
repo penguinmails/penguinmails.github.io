@@ -1,11 +1,14 @@
 ---
 title: "Queue & Background Jobs Roadmap"
 description: "Timeline for queue system enhancements and future capabilities"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Technical Teams"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Queue & Background Jobs Roadmap
 

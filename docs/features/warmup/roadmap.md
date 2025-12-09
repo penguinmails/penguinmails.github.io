@@ -1,11 +1,14 @@
 ---
 title: "Warmup & Reputation Roadmap"
 description: "Detailed timeline for email warmup and reputation management features"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Business Leaders"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Warmup & Reputation Roadmap
 

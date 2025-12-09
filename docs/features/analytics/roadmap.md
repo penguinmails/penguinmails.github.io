@@ -1,10 +1,14 @@
 ﻿---
 title: "Analytics & Reporting Roadmap"
 description: "Detailed analytics feature timeline with MVP and Post-MVP roadmap items"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Developers"
+parent: "/docs/roadmap"
 ---
+
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Analytics & Reporting Roadmap
 

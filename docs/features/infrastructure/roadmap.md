@@ -1,11 +1,14 @@
 ﻿---
 title: "Infrastructure Management Roadmap"
 description: "Detailed timeline and implementation plan for infrastructure management features including backup/recovery, scaling, monitoring, and multi-region deployment"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "3"
 persona: "Documentation Users"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Infrastructure Management Roadmap
 

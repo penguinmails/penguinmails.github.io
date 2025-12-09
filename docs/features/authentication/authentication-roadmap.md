@@ -1,12 +1,16 @@
 ﻿---
 title: "Authentication & Security Roadmap"
 description: "Detailed authentication feature timeline with quarterly breakdown and implementation priorities"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Managers, Developers, Security Teams"
 status: "ACTIVE"
 category: "Enterprise"
+parent: "/docs/roadmap"
 ---
+
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Authentication & Security Roadmap
 

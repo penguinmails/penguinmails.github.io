@@ -1,10 +1,14 @@
 ﻿---
 title: "Integrations Roadmap"
 description: "Detailed timeline and implementation plan for PenguinMails integration features including API-first strategy, Vault secrets management, and vendor-specific integrations"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Teams, Developers"
+parent: "/docs/roadmap"
 ---
+
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Integrations Roadmap
 

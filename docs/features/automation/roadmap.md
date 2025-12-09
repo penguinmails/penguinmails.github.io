@@ -1,11 +1,14 @@
 ---
 title: "Automation & Workflows Roadmap"
 description: "Detailed implementation roadmap for workflow automation features with MVP and Post-MVP milestones"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Team, Engineering Team"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Automation & Workflows Roadmap
 

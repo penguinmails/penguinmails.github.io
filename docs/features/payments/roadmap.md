@@ -1,11 +1,14 @@
 ﻿---
 title: "Billing & Subscriptions Roadmap"
 description: "Detailed timeline and quarterly breakdown for billing and subscription features"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Team, Development Team"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Billing & Subscriptions Roadmap
 

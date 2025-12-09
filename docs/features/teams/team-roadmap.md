@@ -1,13 +1,16 @@
 ﻿---
 title: "Team & Workspace Management Roadmap"
 description: "Detailed timeline and quarterly breakdown for team management, workspace management, and collaboration features"
-last_modified_date: "2025-11-26"
+last_modified_date: "2025-12-09"
 level: "2"
 persona: "Product Managers, Developers"
 status: "ACTIVE"
 category: "Enterprise"
+parent: "/docs/roadmap"
 ---
 
+> [!NOTE]
+> **Parent**: [Central Roadmap Hub](/docs/roadmap/README)
 
 # Team & Workspace Management Roadmap
 
