@@ -9,102 +9,88 @@ status: "DRAFT"
 
 # Onboarding Flow Design
 
-## Design specification for the new user onboarding experience
+**Updated:** January 4, 2026 - Simplified workspace-level tracking approach
 
----
+## Design Overview
 
-## Goals
+The onboarding experience has been redesigned to use **workspace-level tracking** with minimal database footprint. Instead of complex user-level progress tracking, completion is determined by actual workspace setup data.
 
-1. **Reduce Time to Value**: Get users sending their first email in < 5 minutes.
+## Key Principles
 
-2. **Configuration**: Set up essential workspace settings (Domain, Sender).
+1. **Data-Driven Completion**: Onboarding completion detected from actual workspace setup
+2. **Minimal Database Fields**: Only 3 fields stored long-term per workspace
+3. **Flexible UX**: Users can navigate freely without complex progress tracking
+4. **Analytics Integration**: Posthog events track onboarding lifecycle
 
-3. **Education**: Introduce key concepts (Campaigns, Contacts).
+## Completion Criteria
 
----
+Onboarding is considered complete when workspace has:
 
-## Flow Steps
+- ✅ At least one verified domain
+- ✅ At least one email account
+- ✅ At least one lead imported
+- ✅ At least one campaign created
 
-### 1. Welcome & Intent
+## User Experience Flow
 
-#### Screen: "Welcome to PenguinMails"
+### 1. Workspace Creation
 
-- **Goal**: Understand user persona.
+- User creates first workspace after signup
+- `onboarding_started_at` timestamp set
+- Posthog event: `onboarding_started`
 
-- **Question**: "What do you want to do first?"
+### 2. Setup Steps (Any Order)
 
-  - [ ] Send a Newsletter
+Users can complete these in any order:
 
-  - [ ] Set up Transactional Emails
+- **Domain Setup**: Add and verify sending domain
+- **Email Account**: Create first sending email address
+- **Contacts**: Import or add first leads
+- **Campaign**: Create first email campaign
 
-  - [ ] Cold Outreach
+### 3. Automatic Completion Detection
 
-### 2. Payment Selection (Mandatory)
-
-#### Screen: "Choose your Plan"
-
-- **Goal**: Secure commitment and payment method before platform access.
-- **Options**:
-  - **Pro Monthly**: $29/mo
-  - **Pro Yearly**: $290/yr (Save 2 months)
-- **Action**: "Subscribe & Continue" → Redirects to Stripe Checkout.
-- **Blocking Behavior**: User cannot proceed to Workspace Setup until payment is successful.
-
-### 3. Workspace Setup
-
-#### Screen: "Name your Workspace"
-
-- **Input**: Workspace Name (e.g., "Acme Marketing")
-
-- **Input**: Company Website
-
-- **Action**: Auto-fetch logo from website favicon.
-
-### 3. Domain Connection (Optional but Recommended)
-
-#### Screen: "Connect your Domain"
-
-- **Input**: Domain Name
-
-- **Display**: DNS Records to copy.
-
-- **Skip Option**: "I'll do this later" (Use shared domain for testing).
-
-### 4. Import Contacts
-
-#### Screen: "Add your Audience"
-
-- **Action**: Upload CSV or Manual Entry.
-
-- **Sample**: "Add me as a test contact" button.
-
-### 5. First Campaign
-
-#### Screen: "Create your first email"
-
-- **Action**: Select a template.
-
-- **Editor**: Simple text edit.
-
-- **Send**: Send test email to self.
-
----
+- System monitors workspace data
+- When all criteria met → `onboarding_completed_at` set
+- Posthog event: `onboarding_finished`
+- UI hides onboarding components
 
 ## UI Components
 
-- **Progress Bar**: "Step 2 of 5"
+### Onboarding Container
 
-- **Checklist**: "Setup Guide" widget in dashboard (persistent).
+- Shows progress based on actual workspace data
+- Quick action buttons for incomplete steps
+- Progress indicator: "X of 5 steps completed"
 
-- **Tooltips**: Contextual help on first hover.
+### Hide/Show Toggle
 
----
+- Power users can hide onboarding per workspace
+- Sets `hide_onboarding = true`
+- Respects user preference
+
+## Database Schema
+
+```sql
+ALTER TABLE companies ADD COLUMN onboarding_started_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE companies ADD COLUMN onboarding_completed_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE companies ADD COLUMN hide_onboarding BOOLEAN DEFAULT FALSE;
+```
+
+## Benefits
+
+✅ **Simple Implementation**: No complex progress tracking
+✅ **Accurate**: Based on actual user setup, not self-reported
+✅ **Flexible**: Users can skip steps or complete in any order
+✅ **Analytics-Ready**: Posthog integration for time tracking
+✅ **User Control**: Can hide onboarding when desired
 
 ## Success Metrics
 
-- **Activation Rate**: % of signups who send an email within 24 hours.
-
-- **Setup Completion**: % of users who verify a domain within 7 days.
+- **Time to First Value**: Duration from `onboarding_started_at` to `onboarding_completed_at`
+- **Completion Rate**: % of workspaces that complete onboarding within 7 days
+- **Step Completion**: Analytics on which setup steps take longest
+- **Drop-off Analysis**: Where users abandon onboarding process
 
 ---
 

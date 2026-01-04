@@ -80,6 +80,7 @@ The Onboarding Experience provides a structured, interactive journey for new use
 Welcome to PenguinMails! 🐧
 
 Let's get your professional email infrastructure
+
 set up in under 10 minutes.
 
 [Start Setup] [Skip Tour]
@@ -93,9 +94,11 @@ set up in under 10 minutes.
 Create Your First Workspace
 
 Workspaces help you organize campaigns by client,
+
 project, or brand.
 
 Workspace Name: [_______________]
+
 Example: "Main Company" or "Client: Acme Corp"
 
 [Continue]
@@ -111,6 +114,7 @@ Example: "Main Company" or "Client: Acme Corp"
 Step 3 of 6: Add Your Sending Domain
 
 This is the domain you'll send emails from
+
 (e.g., yourdomain.com)
 
 Domain: [_______________]
@@ -136,7 +140,9 @@ Step 4 of 6: Verify Domain Ownership
 Add this DNS record to verify you own this domain:
 
 TXT Record:
+
   Host: _penguinmails-verify
+
   Value: abc123xyz...
 
 [Copy Record] [I've Added the Record]
@@ -162,17 +168,25 @@ OR
 Step 5 of 6: Choose Your Plan
 
 ○ Starter - $49/mo
+
   Up to 5,000 emails/month
+
   1 workspace
 
 ● Professional - $99/mo  [RECOMMENDED]
+
   Up to 25,000 emails/month
+
   Unlimited workspaces
+
   Priority support
 
 ○ Business - $249/mo
+
   Up to 100,000 emails/month
+
   Everything in Professional
+
   Dedicated infrastructure
 
 [Start 14-Day Free Trial] No credit card required
@@ -183,9 +197,10 @@ Step 5 of 6: Choose Your Plan
 
 ```text
 
-âœ“ Trial Started - 14 days remaining
+✓ Trial Started - 14 days remaining
 
 You won't be charged until your trial ends.
+
 Add payment method anytime in Settings.
 
 [Continue to Infrastructure Setup]
@@ -200,10 +215,14 @@ Step 6 of 6: Launch Your Email Infrastructure
 
 We're setting up your professional email infrastructure:
 
-âœ“ VPS server provisioning
+✓ VPS server provisioning
+
 ⏳ Installing SMTP server (2 min remaining)
+
 ○ Configuring DNS records
+
 ○ Installing SSL certificates
+
 ○ Creating your first email account
 
 [Watch Setup Video] while you wait
@@ -219,6 +238,7 @@ We're setting up your professional email infrastructure:
 🎉 Infrastructure Ready!
 
 Your email infrastructure is live at:
+
 mail.yourdomain.com
 
 Next: Create your first email account
@@ -234,6 +254,7 @@ Next: Create your first email account
 Create Your First Sending Account
 
 Email Address: [___]@yourdomain.com
+
 Password: [Generate Secure Password]
 
 [Create Account & Finish Setup]
@@ -249,8 +270,11 @@ Password: [Generate Secure Password]
 Your email infrastructure is ready to send.
 
 Quick Actions:
+
 ☐ Create your first campaign
+
 ☐ Import your contact list
+
 ☐ Set up email warmup (recommended)
 
 [Go to Dashboard] [Take the Product Tour]
@@ -269,12 +293,18 @@ Persistent checklist in sidebar:
 
 Getting Started ────────○○○ 70%
 
-âœ“ Create workspace
-âœ“ Add domain
-âœ“ Verify domain
-âœ“ Create email account
+✓ Create workspace
+
+✓ Add domain
+
+✓ Verify domain
+
+✓ Create email account
+
 ⏳ Import contacts (20/100)
+
 ○ Create first campaign
+
 ○ Send first email
 
 [Collapse]
@@ -298,7 +328,9 @@ Getting Started ────────○○○ 70%
 ```text
 
 [i] Workspaces
+
     Organize your campaigns by client,
+
     brand, or project.
 
     [Got It] [Learn More]
@@ -374,6 +406,7 @@ Click here to create a new email campaign.
 🎊 Milestone Unlocked: First Email Sent!
 
 You've sent your first email through PenguinMails.
+
 Keep going!
 
 [View Campaign Analytics]
@@ -382,21 +415,21 @@ Keep going!
 
 **Milestones:**
 
-- âœ“ First workspace created
+- ✓ First workspace created
 
-- âœ“ First domain verified
+- ✓ First domain verified
 
-- âœ“ First email account created
+- ✓ First email account created
 
-- âœ“ First 10 contacts imported
+- ✓ First 10 contacts imported
 
-- âœ“ First campaign created
+- ✓ First campaign created
 
-- âœ“ First email sent
+- ✓ First email sent
 
-- âœ“ First email opened
+- ✓ First email opened
 
-- âœ“ First link clicked
+- ✓ First link clicked
 
 ### Personalized Recommendations
 
@@ -407,6 +440,7 @@ Based on user behavior:
 👋 We noticed you haven't set up email warmup yet.
 
 Warmup helps build sender reputation and improves
+
 deliverability. It only takes 2 minutes.
 
 [Set Up Warmup Now] [Remind Me Later]
@@ -422,10 +456,13 @@ For workspace invites:
 Welcome to [Workspace Name]!
 
 You've been invited as a Workspace Member.
+
 Here's what you can do:
 
-âœ“ View campaigns
-âœ“ Create and edit templates
+✓ View campaigns
+
+✓ Create and edit templates
+
 ○ Can't: Modify billing or infrastructure
 
 [View Permissions] [Explore Dashboard]
@@ -439,90 +476,87 @@ Here's what you can do:
 ### Onboarding State Management
 
 ```typescript
+// Simplified workspace-level onboarding state
 interface OnboardingState {
-  userId: string;
+  workspaceId: string;
   tenantId: string;
-
-  // Progress tracking
-  currentStep: number;
-  totalSteps: number;
-  completedSteps: string[];
-  startedAt: Date;
+  
+  // Status tracking (minimal footprint)
+  status: 'not_started' | 'in_progress' | 'completed' | 'skipped';
+  startedAt?: Date;
   completedAt?: Date;
-
-  // Checklist
-  checklistItems: OnboardingChecklistItem[];
-  checklistProgress: number; // 0-100
-
-  // User preferences
-  skipTutorials: boolean;
-  dismissedTooltips: string[];
-  watchedVideos: string[];
-
-  // Milestones
-  unlockedMilestones: string[];
-
-  // Metadata
-  lastActiveStep: string;
-  lastActivityAt: Date;
+  hideOnboarding: boolean;
 }
 
-interface OnboardingChecklistItem {
-  id: string;
-  label: string;
-  description: string;
-  completed: boolean;
-  required: boolean;
-  order: number;
-  actionUrl?: string;
-  completedAt?: Date;
+// Status inference logic
+function getOnboardingStatus(workspace: {
+  onboarding_started_at?: Date;
+  onboarding_completed_at?: Date;
+  hide_onboarding: boolean;
+}): OnboardingState['status'] {
+  if (workspace.hide_onboarding) return 'skipped';
+  if (workspace.onboarding_completed_at) return 'completed';
+  if (workspace.onboarding_started_at) return 'in_progress';
+  return 'not_started';
 }
 
+// Onboarding steps for analytics and completion detection
+type OnboardingStep = 
+  | 'domain_added'    // Domain added and verified
+  | 'mailbox_created' // Email account created
+  | 'warmup_started'  // Email warmup initiated
+  | 'leads_added'     // Contact list started
+  | 'campaign_created'; // First campaign created
+
+// Completion detection based on workspace data
+interface OnboardingCompletionCheck {
+  domainAdded: boolean;
+  mailboxCreated: boolean;
+  warmupStarted: boolean;
+  leadsAdded: boolean;
+  campaignCreated: boolean;
+  allCompleted: boolean;
+}
 ```
 
 ### Database Schema
 
 ```sql
-CREATE TABLE user_onboarding (
-  id UUID PRIMARY KEY,
-  user_id UUID NOT NULL REFERENCES users(id),
-  tenant_id UUID NOT NULL REFERENCES tenants(id),
+-- Workspace-level onboarding tracking (minimal footprint)
+ALTER TABLE companies ADD COLUMN onboarding_started_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE companies ADD COLUMN onboarding_completed_at TIMESTAMP WITH TIME ZONE;
+ALTER TABLE companies ADD COLUMN hide_onboarding BOOLEAN DEFAULT FALSE;
 
-  -- Progress
-  current_step INTEGER DEFAULT 1,
-  completed_steps TEXT[] DEFAULT '{}',
-  started_at TIMESTAMP DEFAULT NOW(),
-  completed_at TIMESTAMP,
+-- Onboarding completion detection function
+CREATE OR REPLACE FUNCTION is_onboarding_completed(workspace_id UUID)
+RETURNS BOOLEAN AS $
+BEGIN
+  RETURN (
+    EXISTS(SELECT 1 FROM domains d WHERE d.company_id = workspace_id AND d.verification_status = 'verified')
+    AND EXISTS(SELECT 1 FROM email_accounts ea JOIN domains d ON ea.domain_id = d.id WHERE d.company_id = workspace_id)
+    AND EXISTS(SELECT 1 FROM leads l WHERE l.company_id = workspace_id)
+    AND EXISTS(SELECT 1 FROM campaigns c WHERE c.company_id = workspace_id)
+  );
+END;
+$ LANGUAGE plpgsql;
 
-  -- Checklist
-  checklist_progress INTEGER DEFAULT 0,
-  checklist_items JSONB DEFAULT '[]',
+-- Auto-complete onboarding when all steps are done
+CREATE OR REPLACE FUNCTION auto_complete_onboarding()
+RETURNS TRIGGER AS $
+BEGIN
+  -- Check if workspace should be marked as onboarding completed
+  IF NEW.onboarding_completed_at IS NULL AND is_onboarding_completed(NEW.id) = TRUE THEN
+    NEW.onboarding_completed_at = NOW();
+  END IF;
+  
+  RETURN NEW;
+END;
+$ LANGUAGE plpgsql;
 
-  -- Preferences
-  skip_tutorials BOOLEAN DEFAULT FALSE,
-  dismissed_tooltips TEXT[] DEFAULT '{}',
-  watched_videos TEXT[] DEFAULT '{}',
-
-  -- Milestones
-  unlocked_milestones TEXT[] DEFAULT '{}',
-
-  -- Metadata
-  last_active_step VARCHAR(100),
-  last_activity_at TIMESTAMP DEFAULT NOW(),
-
-  UNIQUE(user_id)
-);
-
--- Onboarding analytics
-CREATE TABLE onboarding_events (
-  id UUID PRIMARY KEY,
-  user_id UUID NOT NULL,
-  event_type VARCHAR(100),
-  event_data JSONB,
-  created_at TIMESTAMP DEFAULT NOW()
-);
-
-CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at);
+CREATE TRIGGER companies_onboarding_auto_complete
+  BEFORE UPDATE ON companies
+  FOR EACH ROW
+  EXECUTE FUNCTION auto_complete_onboarding();
 
 ```
 
@@ -530,97 +564,110 @@ CREATE INDEX idx_onboarding_events_user ON onboarding_events(user_id, created_at
 
 ```typescript
 class OnboardingService {
-  async initializeOnboarding(userId: string, tenantId: string): Promise<OnboardingState> {
-    const checklist = this.generateChecklist(userId, tenantId);
-
-    const onboarding = await db.userOnboarding.create({
-      userId,
-      tenantId,
-      currentStep: 1,
-      checklistItems: checklist,
-      checklistProgress: 0,
-    });
-
-    await this.trackEvent(userId, 'onboarding_started');
-
-    return onboarding;
-  }
-
-  async completeStep(userId: string, step: string): Promise<void> {
-    const onboarding = await db.userOnboarding.findByUser(userId);
-
-    await db.userOnboarding.update(userId, {
-      completedSteps: [...onboarding.completedSteps, step],
-      lastActiveStep: step,
-      lastActivityAt: new Date(),
-    });
-
-    await this.trackEvent(userId, 'onboarding_step_completed', { step });
-
-    // Check for milestone unlocks
-    await this.checkMilestones(userId, step);
-
-    // Update checklist if applicable
-    await this.updateChecklist(userId, step);
-  }
-
-  async updateChecklist(userId: string, action: string): Promise<void> {
-    const onboarding = await db.userOnboarding.findByUser(userId);
-    const checklist = onboarding.checklistItems;
-
-    // Find matching checklist item
-    const item = checklist.find(i => i.id === action);
-    if (item && !item.completed) {
-      item.completed = true;
-      item.completedAt = new Date();
-
-      const progress = this.calculateProgress(checklist);
-
-      await db.userOnboarding.update(userId, {
-        checklistItems: checklist,
-        checklistProgress: progress,
+  // Initialize onboarding tracking for a workspace
+  async initializeOnboarding(workspaceId: string): Promise<OnboardingState> {
+    const workspace = await db.companies.findById(workspaceId);
+    
+    // Only set started_at if not already set
+    if (!workspace.onboarding_started_at) {
+      await db.companies.update(workspaceId, {
+        onboarding_started_at: new Date()
       });
-
-      // Check if onboarding complete
-      if (progress === 100) {
-        await this.completeOnboarding(userId);
-      }
     }
+
+    // Track analytics event
+    await this.trackEvent('onboarding_started', {
+      workspace_id: workspaceId,
+      timestamp: new Date().toISOString()
+    });
+
+    return this.getOnboardingState(workspaceId);
   }
 
-  private calculateProgress(checklist: OnboardingChecklistItem[]): number {
-    const total = checklist.filter(i => i.required).length;
-    const completed = checklist.filter(i => i.required && i.completed).length;
-    return Math.round((completed / total) * 100);
-  }
-
-  async checkMilestones(userId: string, event: string): Promise<void> {
-    const milestones = {
-      'workspace_created': 'first_workspace',
-      'domain_verified': 'first_domain',
-      'email_sent': 'first_email',
-      'email_opened': 'first_open',
+  // Get current onboarding state for a workspace
+  async getOnboardingState(workspaceId: string): Promise<OnboardingState> {
+    const workspace = await db.companies.findById(workspaceId);
+    
+    return {
+      workspaceId: workspace.id,
+      tenantId: workspace.tenant_id,
+      status: getOnboardingStatus(workspace),
+      startedAt: workspace.onboarding_started_at,
+      completedAt: workspace.onboarding_completed_at,
+      hideOnboarding: workspace.hide_onboarding
     };
-
-    const milestone = milestones[event];
-    if (milestone) {
-      await this.unlockMilestone(userId, milestone);
-    }
   }
 
-  async unlockMilestone(userId: string, milestone: string): Promise<void> {
-    await db.userOnboarding.update(userId, {
-      unlockedMilestones: db.raw('array_append(unlocked_milestones, ?)', [milestone]),
+  // Check if workspace should show onboarding
+  async shouldShowOnboarding(workspaceId: string): Promise<boolean> {
+    const state = await this.getOnboardingState(workspaceId);
+    
+    // Don't show if explicitly hidden
+    if (state.hideOnboarding) return false;
+    
+    // Don't show if completed
+    if (state.status === 'completed') return false;
+    
+    return true;
+  }
+
+  // Hide onboarding for a workspace (manual override)
+  async hideOnboarding(workspaceId: string, hidden: boolean = true): Promise<void> {
+    await db.companies.update(workspaceId, {
+      hide_onboarding: hidden
     });
 
-    await this.trackEvent(userId, 'milestone_unlocked', { milestone });
-
-    // Send notification
-    await notificationService.send({
-      userId,
-      type: 'milestone_unlocked',
-      data: { milestone },
+    await this.trackEvent('onboarding_hidden', {
+      workspace_id: workspaceId,
+      hidden,
+      timestamp: new Date().toISOString()
     });
+  }
+
+  // Track onboarding analytics events
+  private async trackEvent(eventType: string, eventData: Record<string, any>): Promise<void> {
+    // Send to Posthog for analytics
+    if (typeof posthog !== 'undefined') {
+      posthog.capture(eventType, eventData);
+    }
+    
+    // Could also send to internal analytics service
+    console.log(`Onboarding Event: ${eventType}`, eventData);
+  }
+
+  // Get completion status based on actual workspace data
+  async getCompletionStatus(workspaceId: string): Promise<OnboardingCompletionCheck> {
+    const result = await db.query(`
+      SELECT 
+        -- Domain added and verified
+        EXISTS(SELECT 1 FROM domains d WHERE d.company_id = $1 AND d.verification_status = 'verified') as domain_added,
+        
+        -- Email account created
+        EXISTS(SELECT 1 FROM email_accounts ea 
+               JOIN domains d ON ea.domain_id = d.id 
+               WHERE d.company_id = $1) as mailbox_created,
+        
+        -- Warmup started (has last_warmed timestamp)
+        EXISTS(SELECT 1 FROM email_accounts ea 
+               JOIN domains d ON ea.domain_id = d.id 
+               WHERE d.company_id = $1 AND ea.last_warmed IS NOT NULL) as warmup_started,
+        
+        -- Leads added
+        EXISTS(SELECT 1 FROM leads l WHERE l.company_id = $1) as leads_added,
+        
+        -- Campaign created
+        EXISTS(SELECT 1 FROM campaigns c WHERE c.company_id = $1) as campaign_created
+    `, [workspaceId]);
+
+    const row = result.rows[0];
+    return {
+      domainAdded: row.domain_added,
+      mailboxCreated: row.mailbox_created,
+      warmupStarted: row.warmup_started,
+      leadsAdded: row.leads_added,
+      campaignCreated: row.campaign_created,
+      allCompleted: row.domain_added && row.mailbox_created && row.leads_added && row.campaign_created
+    };
   }
 }
 
@@ -629,60 +676,171 @@ class OnboardingService {
 ### Frontend Components
 
 ```tsx
-// Onboarding wizard
-function OnboardingWizard() {
-  const { onboarding, completeStep } = useOnboarding();
+// React hook for onboarding state
+function useOnboarding(workspaceId: string) {
+  const [onboardingState, setOnboardingState] = useState<OnboardingState | null>(null);
+  const [completionStatus, setCompletionStatus] = useState<OnboardingCompletionCheck | null>(null);
 
-  const steps = [
-    { id: 'workspace', component: WorkspaceSetup },
-    { id: 'domain', component: DomainSetup },
-    { id: 'payment', component: PaymentSetup },
-    { id: 'infrastructure', component: InfrastructureSetup },
-    { id: 'email-account', component: EmailAccountSetup },
-    { id: 'complete', component: OnboardingComplete },
-  ];
+  // Load onboarding state
+  useEffect(() => {
+    const loadState = async () => {
+      const state = await onboardingService.getOnboardingState(workspaceId);
+      const completion = await onboardingService.getCompletionStatus(workspaceId);
+      setOnboardingState(state);
+      setCompletionStatus(completion);
+    };
+    loadState();
+  }, [workspaceId]);
 
-  const currentStepComponent = steps[onboarding.currentStep - 1]?.component;
+  return {
+    onboardingState,
+    completionStatus,
+    shouldShowOnboarding: onboardingState?.status !== 'completed' && !onboardingState?.hideOnboarding
+  };
+}
+
+// Onboarding container component
+function OnboardingContainer({ workspaceId }: { workspaceId: string }) {
+  const { onboardingState, shouldShowOnboarding } = useOnboarding(workspaceId);
+
+  if (!shouldShowOnboarding) {
+    return null; // Don't render onboarding UI
+  }
 
   return (
-    <div className="onboarding-wizard">
-      <ProgressBar
-        current={onboarding.currentStep}
-        total={steps.length}
-      />
-
-      {currentStepComponent && React.createElement(currentStepComponent, {
-        onComplete: () => completeStep(steps[onboarding.currentStep - 1].id),
-      })}
+    <div className="onboarding-container">
+      <OnboardingProgress workspaceId={workspaceId} />
+      <OnboardingSteps workspaceId={workspaceId} />
     </div>
   );
 }
 
-// Persistent checklist
-function OnboardingChecklist() {
-  const { checklist, progress } = useOnboarding();
-  const [collapsed, setCollapsed] = useState(false);
+// Progress indicator based on workspace data
+function OnboardingProgress({ workspaceId }: { workspaceId: string }) {
+  const { completionStatus } = useOnboarding(workspaceId);
 
-  if (progress === 100) return null; // Hide when complete
+  if (!completionStatus) return null;
+
+  const steps = [
+    { id: 'domain_added', label: 'Add Domain', completed: completionStatus.domainAdded },
+    { id: 'mailbox_created', label: 'Create Mailbox', completed: completionStatus.mailboxCreated },
+    { id: 'warmup_started', label: 'Start Warmup', completed: completionStatus.warmupStarted },
+    { id: 'leads_added', label: 'Add Contacts', completed: completionStatus.leadsAdded },
+    { id: 'campaign_created', label: 'Create Campaign', completed: completionStatus.campaignCreated }
+  ];
+
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progressPercent = (completedSteps / steps.length) * 100;
 
   return (
-    <aside className="onboarding-checklist">
-      <header onClick={() => setCollapsed(!collapsed)}>
+    <div className="onboarding-progress">
+      <div className="progress-header">
         <h3>Getting Started</h3>
-        <ProgressBar value={progress} />
-        <span>{progress}%</span>
-      </header>
+        <span>{completedSteps}/{steps.length} completed</span>
+      </div>
+      
+      <div className="progress-bar">
+        <div 
+          className="progress-fill" 
+          style={{ width: `${progressPercent}%` }}
+        />
+      </div>
+      
+      <ul className="steps-list">
+        {steps.map(step => (
+          <li key={step.id} className={step.completed ? 'completed' : ''}>
+            {step.completed ? '✓' : '○'} {step.label}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-      {!collapsed && (
-        <ul>
-          {checklist.map(item => (
-            <li key={item.id} className={item.completed ? 'completed' : ''}>
-              {item.completed ? 'âœ“' : '○'} {item.label}
-            </li>
-          ))}
-        </ul>
-      )}
-    </aside>
+// Quick action buttons for onboarding steps
+function OnboardingSteps({ workspaceId }: { workspaceId: string }) {
+  const { completionStatus } = useOnboarding(workspaceId);
+
+  if (!completionStatus) return null;
+
+  const quickActions = [
+    {
+      id: 'domain',
+      title: 'Add Your Domain',
+      description: 'Set up your sending domain to start email campaigns',
+      completed: completionStatus.domainAdded,
+      action: () => navigate('/domains/new')
+    },
+    {
+      id: 'mailbox',
+      title: 'Create Email Account',
+      description: 'Set up your first sending email address',
+      completed: completionStatus.mailboxCreated,
+      action: () => navigate('/email-accounts/new')
+    },
+    {
+      id: 'leads',
+      title: 'Import Contacts',
+      description: 'Add your first contacts to start emailing',
+      completed: completionStatus.leadsAdded,
+      action: () => navigate('/leads/import')
+    },
+    {
+      id: 'campaign',
+      title: 'Create Campaign',
+      description: 'Build your first email campaign',
+      completed: completionStatus.campaignCreated,
+      action: () => navigate('/campaigns/new')
+    }
+  ];
+
+  return (
+    <div className="onboarding-steps">
+      <h3>Complete Your Setup</h3>
+      <div className="steps-grid">
+        {quickActions.map(action => (
+          <div 
+            key={action.id} 
+            className={`step-card ${action.completed ? 'completed' : ''}`}
+            onClick={action.action}
+          >
+            <div className="step-icon">
+              {action.completed ? '✓' : '○'}
+            </div>
+            <h4>{action.title}</h4>
+            <p>{action.description}</p>
+            {!action.completed && (
+              <button className="btn-primary">Get Started</button>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Hide onboarding toggle (for power users)
+function OnboardingToggle({ workspaceId }: { workspaceId: string }) {
+  const { onboardingState } = useOnboarding(workspaceId);
+  
+  const handleToggle = async () => {
+    await onboardingService.hideOnboarding(
+      workspaceId, 
+      !onboardingState?.hideOnboarding
+    );
+  };
+
+  return (
+    <div className="onboarding-toggle">
+      <label>
+        <input
+          type="checkbox"
+          checked={onboardingState?.hideOnboarding || false}
+          onChange={handleToggle}
+        />
+        Hide onboarding guide for this workspace
+      </label>
+    </div>
   );
 }
 
@@ -702,7 +860,10 @@ function OnboardingChecklist() {
 
 ---
 
-**Last Updated:** November 25, 2025
+**Last Updated:** January 4, 2026
+
 **Status:** Planned - MVP Feature (Level 2)
+
 **Target Release:** Q1 2026
+
 **Owner:** Product Team

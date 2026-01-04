@@ -228,7 +228,7 @@ Response:
   "owner_user_id": "user_xyz789",
   "default_workspace_id": "ws_default",
   "access_token": "eyJhbGc...",
-  "onboarding_url": "/onboarding"
+  "onboarding_url": "/dashboard/onboarding"
 }
 
 ```

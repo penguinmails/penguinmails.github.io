@@ -1,7 +1,7 @@
 ---
 title: "Onboarding Experience Implementation"
-description: "Build guided setup wizard and interactive onboarding"
-last_modified_date: "2025-12-09"
+description: "Build workspace-level onboarding with data-driven completion tracking"
+last_modified_date: "2026-01-04"
 level: "3"
 persona: "Product Teams"
 parent: "/docs/roadmap/product/admin/README.md"

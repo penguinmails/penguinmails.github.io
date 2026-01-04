@@ -275,7 +275,7 @@ Response:
 {
   "success": true,
   "email_verified": true,
-  "redirect_url": "/onboarding"
+  "redirect_url": "/dashboard/onboarding"
 }
 
 ```

@@ -55,6 +55,9 @@ erDiagram
     varchar(255) workspace_name UK
     text logo_url
     varchar(20) status
+    timestamp onboarding_started_at
+    timestamp onboarding_completed_at
+    boolean hide_onboarding
     timestamp created
     timestamp updated
   }
