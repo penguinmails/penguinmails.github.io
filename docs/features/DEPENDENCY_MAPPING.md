@@ -5,6 +5,7 @@ This document provides an overview of how feature tasks reference core foundatio
 ## Overview
 
 All feature implementation tasks now include properly linked dependencies, making it easy to:
+
 - Navigate between related tasks
 - Understand implementation order
 - Track prerequisite requirements
