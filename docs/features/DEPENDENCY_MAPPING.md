@@ -16,6 +16,7 @@ All feature implementation tasks now include properly linked dependencies, makin
 The core foundation provides the base infrastructure that all features depend on:
 
 ### CORE-1.x: Project Setup
+
 - CORE-1.1 - Initialize Next.js 15 Project
 - CORE-1.2 - Configure ESLint
 - CORE-1.3 - Configure Prettier
@@ -23,12 +24,14 @@ The core foundation provides the base infrastructure that all features depend on
 - CORE-1.5 - Setup Environment Variables
 
 ### CORE-2.x: Database/ORM
+
 - CORE-2.1 - Install and Configure Drizzle ORM
 - CORE-2.2 - Define Initial Schemas (tenants, users, system_config)
 - CORE-2.3 - Generate First Migration
 - CORE-2.4 - Implement Migration Script
 
 ### CORE-3.x: Authentication (NileDB)
+
 - CORE-3.1 - Install and Configure NileDB Server SDK
 - CORE-3.2 - Implement Middleware
 - CORE-3.3 - Create Signup Endpoint
@@ -36,11 +39,13 @@ The core foundation provides the base infrastructure that all features depend on
 - CORE-3.5 - Create Protected Endpoint
 
 ### CORE-4.x: Services Layer
+
 - CORE-4.1 - Install Redis Client and Configure Connection
 - CORE-4.2 - Create Redis Service
 - CORE-4.3 - Implement Redis Health Check
 
 ### CORE-5.x: Validation
+
 - CORE-5.1 - Install Zod and Define Core Schemas
 - CORE-5.2 - Create Test Validation Endpoint
 
