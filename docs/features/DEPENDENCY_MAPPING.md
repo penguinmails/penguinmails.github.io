@@ -16,33 +16,33 @@ All feature implementation tasks now include properly linked dependencies, makin
 The core foundation provides the base infrastructure that all features depend on:
 
 ### CORE-1.x: Project Setup
-- [CORE-1.1](/docs/features/core/tasks/CORE-1.1-initialize-nextjs-project) - Initialize Next.js 15 Project
-- [CORE-1.2](/docs/features/core/tasks/CORE-1.2-configure-eslint) - Configure ESLint
-- [CORE-1.3](/docs/features/core/tasks/CORE-1.3-configure-prettier) - Configure Prettier
-- [CORE-1.4](/docs/features/core/tasks/CORE-1.4-implement-pre-commit-hooks) - Implement Pre-commit Hooks
-- [CORE-1.5](/docs/features/core/tasks/CORE-1.5-setup-environment-variables) - Setup Environment Variables
+- CORE-1.1 - Initialize Next.js 15 Project
+- CORE-1.2 - Configure ESLint
+- CORE-1.3 - Configure Prettier
+- CORE-1.4 - Implement Pre-commit Hooks
+- CORE-1.5 - Setup Environment Variables
 
 ### CORE-2.x: Database/ORM
-- [CORE-2.1](/docs/features/core/tasks/CORE-2.1-install-configure-drizzle) - Install and Configure Drizzle ORM
-- [CORE-2.2](/docs/features/core/tasks/CORE-2.2-define-initial-schemas) - Define Initial Schemas (tenants, users, system_config)
-- [CORE-2.3](/docs/features/core/tasks/CORE-2.3-generate-first-migration) - Generate First Migration
-- [CORE-2.4](/docs/features/core/tasks/CORE-2.4-implement-migration-script) - Implement Migration Script
+- CORE-2.1 - Install and Configure Drizzle ORM
+- CORE-2.2 - Define Initial Schemas (tenants, users, system_config)
+- CORE-2.3 - Generate First Migration
+- CORE-2.4 - Implement Migration Script
 
 ### CORE-3.x: Authentication (NileDB)
-- [CORE-3.1](/docs/features/authentication/tasks/CORE-3.1-install-configure-niledb) - Install and Configure NileDB Server SDK
-- [CORE-3.2](/docs/features/authentication/tasks/CORE-3.2-implement-middleware) - Implement Middleware
-- [CORE-3.3](/docs/features/authentication/tasks/CORE-3.3-create-signup-endpoint) - Create Signup Endpoint
-- [CORE-3.4](/docs/features/authentication/tasks/CORE-3.4-create-login-endpoint) - Create Login Endpoint
-- [CORE-3.5](/docs/features/authentication/tasks/CORE-3.5-create-protected-endpoint) - Create Protected Endpoint
+- CORE-3.1 - Install and Configure NileDB Server SDK
+- CORE-3.2 - Implement Middleware
+- CORE-3.3 - Create Signup Endpoint
+- CORE-3.4 - Create Login Endpoint
+- CORE-3.5 - Create Protected Endpoint
 
 ### CORE-4.x: Services Layer
-- [CORE-4.1](/docs/features/core/tasks/CORE-4.1-install-configure-redis) - Install Redis Client and Configure Connection
-- [CORE-4.2](/docs/features/core/tasks/CORE-4.2-create-redis-service) - Create Redis Service
-- [CORE-4.3](/docs/features/core/tasks/CORE-4.3-implement-redis-health-check) - Implement Redis Health Check
+- CORE-4.1 - Install Redis Client and Configure Connection
+- CORE-4.2 - Create Redis Service
+- CORE-4.3 - Implement Redis Health Check
 
 ### CORE-5.x: Validation
-- [CORE-5.1](/docs/features/core/tasks/CORE-5.1-install-zod-define-schemas) - Install Zod and Define Core Schemas
-- [CORE-5.2](/docs/features/core/tasks/CORE-5.2-create-test-validation-endpoint) - Create Test Validation Endpoint
+- CORE-5.1 - Install Zod and Define Core Schemas
+- CORE-5.2 - Create Test Validation Endpoint
 
 ## Feature Task Prefixes
 
@@ -65,8 +65,8 @@ Most feature tasks depend on core foundation tasks:
 ```markdown
 ## Dependencies
 
-- [CORE-2.1](/docs/features/core/tasks/CORE-2.1-install-configure-drizzle) - Drizzle ORM must be configured
-- [CORE-2.2](/docs/features/core/tasks/CORE-2.2-define-initial-schemas) - Initial schemas must be defined
+- CORE-2.1 - Drizzle ORM must be configured
+- CORE-2.2 - Initial schemas must be defined
 ```
 
 ### Pattern 2: Feature-Specific Dependencies
@@ -75,8 +75,8 @@ Tasks within a feature reference each other:
 ```markdown
 ## Dependencies
 
-- [TEN-1.1](/docs/features/teams/tasks/TEN-1.1-define-companies-schema) - Companies schema must be defined
-- [TEN-1.2](/docs/features/teams/tasks/TEN-1.2-generate-apply-migration) - Companies table must exist in database
+- TEN-1.1 - Companies schema must be defined
+- TEN-1.2 - Companies table must exist in database
 ```
 
 ### Pattern 3: Cross-Feature Dependencies
@@ -85,8 +85,8 @@ Some tasks depend on tasks from other features:
 ```markdown
 ## Dependencies
 
-- [CORE-3.2](/docs/features/authentication/tasks/CORE-3.2-implement-middleware) - Middleware must be implemented
-- [BILL-2.1](/docs/features/payments/tasks/BILL-2.1-install-configure-stripe) - Stripe SDK must be configured
+- CORE-3.2 - Middleware must be implemented
+- BILL-2.1 - Stripe SDK must be configured
 ```
 
 ## Common Dependency Chains
@@ -157,6 +157,6 @@ When adding new tasks:
 ## Related Documentation
 
 - [Core Foundation README](/docs/features/core/README) - Overview of core components
-- [Teams Tasks README](/docs/features/teams/tasks/README) - Teams feature implementation
-- [Payments Tasks README](/docs/features/payments/tasks/README) - Payments feature implementation
-- [Infrastructure Tasks README](/docs/features/infrastructure/tasks/README) - Infrastructure feature implementation
+- Teams Tasks README - Teams feature implementation
+- Payments Tasks README - Payments feature implementation
+- Infrastructure Tasks README - Infrastructure feature implementation

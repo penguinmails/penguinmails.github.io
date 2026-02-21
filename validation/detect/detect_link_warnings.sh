@@ -67,8 +67,12 @@ detect_links() {
     local description="$3"
     
     echo "Checking: $description..."
-    
-    local files=$(grep -r "$pattern" "$TARGET_ROOT" --include="*.md" 2>/dev/null || echo "")
+
+    # Exclude task and user-journey source docs from this warning check.
+    # These sections intentionally cross-reference task and journey files.
+    local files=$(grep -r "$pattern" "$TARGET_ROOT" --include="*.md" \
+        --exclude-dir="tasks" \
+        --exclude-dir="user-journeys" 2>/dev/null || echo "")
     
     local count=0
     if [ -n "$files" ]; then
