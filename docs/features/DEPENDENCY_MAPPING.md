@@ -17,6 +17,7 @@ The core foundation provides the base infrastructure that all features depend on
 
 ### CORE-1.x: Project Setup
 
+
 - CORE-1.1 - Initialize Next.js 15 Project
 - CORE-1.2 - Configure ESLint
 - CORE-1.3 - Configure Prettier
