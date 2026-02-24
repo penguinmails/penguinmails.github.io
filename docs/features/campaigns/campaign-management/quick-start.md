@@ -100,9 +100,7 @@ Preview Text: Thanks for signing up, {{firstName}}
 Template: Select from library or create new
 
   - Welcome Email Template
-
   - Getting Started Template
-
   - Custom Template
 
 Personalization:
@@ -165,11 +163,8 @@ Send a single email to your entire list or segment:
 Use Cases:
 
 - Product announcements
-
 - Newsletter broadcasts
-
 - Event invitations
-
 - Special promotions
 
 Setup Time: 5 minutes
@@ -186,11 +181,8 @@ Automated sequence delivered over time:
 Use Cases:
 
 - Welcome series (3-5 emails)
-
 - Onboarding sequences (5-10 emails)
-
 - Educational content series
-
 - Lead nurturing campaigns
 
 Setup Time: 15-30 minutes
@@ -207,13 +199,9 @@ Event-based campaigns that start automatically:
 Triggers:
 
 - Contact signup
-
 - Form submission
-
 - Purchase completion
-
 - Abandoned cart
-
 - Custom events
 
 Setup Time: 20-40 minutes
@@ -230,11 +218,8 @@ Compare variations to optimize performance:
 Test Elements:
 
 - Subject lines
-
 - Email content
-
 - Send times
-
 - Sender names
 
 Setup Time: 10-20 minutes

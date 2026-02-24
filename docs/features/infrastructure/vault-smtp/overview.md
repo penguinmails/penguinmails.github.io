@@ -46,33 +46,22 @@ This document describes the secure storage and management of MailU SMTP admin cr
 Traditional approaches to storing SMTP credentials create security vulnerabilities:
 
 - Credentials stored in ENV files on VPS are exposed if VPS is compromised
-
 - Manual credential rotation is error-prone and often neglected
-
 - No centralized audit trail for credential access
-
 - Difficult to recover credentials after VPS failure
 
 Vault-based SMTP credential storage provides:
 
 - **Centralized Storage** - Credentials stored in Vault, not on VPS
-
 - **Encryption at Rest** - AES-256-GCM encryption before Vault storage
-
 - **Automated Rotation** - 180-day rotation policy with zero downtime
-
 - **Audit Trail** - All credential access logged with timestamp and user
-
 - **Disaster Recovery** - Rapid credential recovery from Vault backups
 
 ### Key Benefits
 
 1. **VPS Compromise Protection** - If VPS is compromised, credentials can be rotated immediately
-
 2. **Zero-Downtime Rotation** - Automated rotation without service interruption
-
 3. **Admin Troubleshooting** - PenguinMails admins can retrieve credentials for support
-
 4. **Emergency Reset** - Rapid credential reset in case of security incident
-
 5. **Compliance** - Audit trail supports SOC 2, ISO 27001, and GDPR requirements

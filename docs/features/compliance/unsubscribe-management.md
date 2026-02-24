@@ -21,11 +21,8 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 ### Why Unsubscribe Management Matters
 
 - **Legal Compliance** - Required by CAN-SPAM, GDPR, and other regulations
-
 - **Sender Reputation** - Lower spam complaints improve deliverability
-
 - **User Experience** - Respect user preferences builds trust
-
 - **List Quality** - Keep engaged subscribers, remove inactive ones
 
 ---
@@ -39,13 +36,9 @@ PenguinMails provides enterprise-grade unsubscribe management with one-click uns
 #### How It Works
 
 1. **User clicks unsubscribe link** in email footer
-
 2. **Immediate processing** - removed from all active campaigns
-
 3. **Added to suppression list** - permanently blocked from future sends
-
 4. **Confirmation page** - user sees success message
-
 5. **Optional confirmation email** - receipt of unsubscribe request
 
 #### Technical Implementation
@@ -62,11 +55,8 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 ##### Benefits
 
 - ✅ Gmail/Outlook "Unsubscribe" button compatibility
-
 - ✅ Reduces spam complaints (users unsubscribe vs report spam)
-
 - ✅ Improves sender reputation
-
 - ✅ Industry best practice
 
 ### Global Suppression List
@@ -78,55 +68,38 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 ##### 1. Global Suppression (Platform-Wide)
 
 - Email address blocked across all tenants
-
 - Used for spam complaints and abuse reports
-
 - Cannot be overridden
-
 - Perpetual storage
 
 ##### 2. Tenant Suppression (Company-Wide)
 
 - Email blocked for specific tenant/company
-
 - Applies across all workspaces within tenant
-
 - Tenant admin can manage
-
 - User preference respected
 
 ##### 3. Workspace Suppression (Team-Specific)
 
 - Email blocked for specific workspace
-
 - User can still receive emails from other workspaces
-
 - Workspace admin controlled
-
 - Flexible opt-in/opt-out
 
 ##### 4. Campaign-Type Suppression (Granular)
 
 - Opt-out of specific email types (newsletters, promotions, updates)
-
 - Preference center allows granular control
-
 - User manages via self-service portal
-
 - Best practice for engagement
 
 #### Suppression List Features
 
 - **Import/Export** - CSV import of suppression lists
-
 - **Bulk Add** - Add multiple addresses at once
-
 - **Manual Add** - Add individual unsubscribes
-
 - **Never Expires** - Perpetual suppression
-
 - **Audit Trail** - Track when/why addresses added
-
 - **API Access** - Programmatic suppression management
 
 ---
@@ -160,25 +133,17 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 **Template Variables:**
 
 - `{{unsubscribe_url}}` - One-click unsubscribe (unique per recipient)
-
 - `{{preferences_url}}` - Email preference center
-
 - `{{company.name}}` - Company name from profile
-
 - `{{company.address}}` - Physical address (CAN-SPAM requirement)
-
 - `{{current_year}}` - Auto-updating year
 
 **Visibility Requirements:**
 
 - ✅ Clearly visible and readable
-
 - ✅ Font size minimum 10px
-
 - ✅ Contrasting color from background
-
 - ✅ Positioned in footer (standard location)
-
 - ✅ Mobile-optimized (large tap target)
 
 ---
@@ -192,39 +157,28 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 **Email Types:**
 
 - [ ] Newsletters (weekly updates)
-
 - [ ] Product Updates (new features)
-
 - [ ] Promotional Offers (sales, discounts)
-
 - [ ] Event Invitations (webinars, conferences)
-
 - [ ] Account Notifications (important updates)
 
 **Frequency:**
 
 - Daily
-
 - Weekly
-
 - Monthly
-
 - Only important updates
 
 **Format:**
 
 - HTML (rich formatting)
-
 - Plain Text (basic formatting)
 
 #### Benefits of Preference Center
 
 - **Reduce full unsubscribes** - users can reduce frequency vs opt-out entirely
-
 - **Improve engagement** - send only relevant content
-
 - **Better insights** - understand user preferences
-
 - **Compliance-friendly** - respect user choices
 
 ---
@@ -258,11 +212,8 @@ Audit Log Entry (compliance record)
 #### Processing Time Guarantee
 
 - **Immediate removal** - 0 seconds (not 10 days)
-
 - **Active campaigns** - Removed before next send
-
 - **Scheduled sends** - Excluded from queued emails
-
 - **Engagement tracking** - Unsubscribe timestamp recorded
 
 ---
@@ -303,11 +254,8 @@ Content-Type: application/json
 ### CRM Integration
 
 - Sync unsubscribes with Salesforce, HubSpot
-
 - Bi-directional sync (update both systems)
-
 - Real-time webhook updates
-
 - Scheduled sync jobs
 
 #### Export Options
@@ -315,11 +263,8 @@ Content-Type: application/json
 ##### Suppression List Export
 
 - **CSV format** - Import into other systems
-
 - **Full export** - All suppressed emails
-
 - **Date range** - Exports for specific period
-
 - **Reason filter** - Export by unsubscribe reason
 
 ---
@@ -337,23 +282,16 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 ##### PenguinMails FBL Integration
 
 1. ISP sends spam complaint to PenguinMails
-
 2. Email address automatically added to suppression list
-
 3. User removed from all active campaigns
-
 4. Tenant notified of complaint
-
 5. Complaint tracked for deliverability monitoring
 
 ##### Supported ISPs
 
 - Gmail (via Google Postmaster)
-
 - Outlook/Hotmail (via JMRP/SNDS)
-
 - Yahoo (via Complaint Feedback Loop)
-
 - AOL (via Feedback Loop)
 
 #### Bounce Handling
@@ -361,9 +299,7 @@ ISPs (Gmail, Yahoo, Outlook) report when users mark emails as spam.
 ##### Hard Bounces (permanent delivery failures)
 
 - Invalid email addresses
-
 - Non-existent domains
-
 - Blocked by recipient server
 
 Action: Automatically suppress hard bounces after 1 failure
@@ -371,9 +307,7 @@ Action: Automatically suppress hard bounces after 1 failure
 ##### Soft Bounces (temporary delivery failures)
 
 - Mailbox full
-
 - Server temporarily unavailable
-
 - Email too large
 
 Action: Suppress after 3 consecutive soft bounces (configurable)
@@ -389,31 +323,22 @@ Action: Suppress after 3 consecutive soft bounces (configurable)
 ##### Add to Suppression List
 
 - Single email address
-
 - Bulk CSV upload
-
 - Reason required (audit trail)
-
 - Optional expiration date
 
 ##### Remove from Suppression List
 
 - Requires user consent (documented)
-
 - Re-opt-in workflow recommended
-
 - Audit log entry created
-
 - Admin approval required (optional)
 
 ##### View Suppression History
 
 - When added to suppression list
-
 - Reason for suppression
-
 - Source of suppression
-
 - Admin who added (if manual)
 
 ---
@@ -542,33 +467,21 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 ### Unsubscribe Best Practices
 
 1. **Make it Easy** - One-click, no login required
-
 2. **Make it Visible** - Clear footer placement
-
 3. **Process Immediately** - Don't wait the full 10 days
-
 4. **Offer Alternatives** - Preference center before full unsubscribe
-
 5. **Respect Choices** - Never re-add without explicit consent
-
 6. **Monitor Rates** - Track unsubscribe and complaint rates
-
 7. **Use Feedback** - Understand why users unsubscribe
-
 8. **Keep Forever** - Never delete suppression records
 
 ### Reducing Unsubscribes
 
 - **Send Relevant Content** - Segment your audience
-
 - **Control Frequency** - Don't over-email
-
 - **Provide Value** - Quality over quantity
-
 - **Set Expectations** - Deliver what you promised
-
 - **Make it Personal** - Use personalization
-
 - **Test and Optimize** - A/B test content and timing
 
 ---
@@ -580,21 +493,15 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 **Key Metrics:**
 
 - **Unsubscribe Rate** - % of recipients who unsubscribe per campaign
-
 - **Spam Report Rate** - % of recipients who report spam
-
 - **Suppression List Growth** - Rate of suppression list additions
-
 - **Bounce Rate** - Hard/soft bounce percentage
-
 - **Re-engagement Rate** - Users who return after unsubscribing
 
 **Benchmarks:**
 
 - ✅ Good: < 0.2% unsubscribe rate
-
 - âš ï¸ Concerning: 0.2% - 0.5% unsubscribe rate
-
 - ❌ Poor: > 0.5% unsubscribe rate
 
 ---
@@ -604,19 +511,14 @@ CREATE INDEX idx_suppression_added_at ON suppression_list(added_at);
 ### Compliance
 
 - **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - EU data protection
-
 - **[CAN-SPAM Compliance](/docs/features/compliance/can-spam-compliance)** - US email law
-
 - **[Data Privacy](/docs/features/compliance/data-privacy)** - Privacy policies
-
 - **[Compliance Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All compliance features
 
 ### Features
 
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Campaign creation
-
 - **[Unified Inbox](/docs/features/inbox/unified-inbox/overview)** - Reply management
-
 - **[Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
 
 ---

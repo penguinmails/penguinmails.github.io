@@ -9,7 +9,6 @@ priority: "High"
 related_features:
 
   - analytics/core-analytics/overview
-
   - analytics/enhanced-analytics/overview
 related_tasks:
 
@@ -27,13 +26,9 @@ Manual Reporting provides essential data export and report generation capabiliti
 ### Key Capabilities
 
 - **Scheduled Reports**: Weekly/monthly automated reports via email
-
 - **Data Export**: CSV, Excel, PDF formats for all metrics
-
 - **External Tool Integration**: Export to Google Sheets, Excel, BI tools
-
 - **Custom Date Ranges**: Flexible reporting periods
-
 - **Multi-Tenant Support**: Workspace-level and tenant-level reports
 
 ---
@@ -55,39 +50,26 @@ Dashboard → Analytics → Reports → Create New Report
 **Choose Report Type:**
 
 - **Campaign Performance**: Metrics for specific campaigns
-
 - **Overall Performance**: Aggregated metrics across all campaigns
-
 - **Deliverability Report**: Bounce rates, spam complaints, unsubscribes
-
 - **Workspace Summary**: Per-workspace performance breakdown
-
 - **Domain Health**: Per-domain reputation and metrics
 
 **Select Date Range:**
 
 - Last 7 days
-
 - Last 30 days
-
 - Last 90 days
-
 - Custom range
 
 **Choose Metrics:**
 
 - ✅ Emails sent
-
 - ✅ Delivery rate
-
 - ✅ Open rate (directional)
-
 - ✅ Click rate (directional)
-
 - ✅ Bounce rate
-
 - ✅ Spam complaints
-
 - ✅ Unsubscribes
 
 #### Step 3: Export or Schedule
@@ -95,19 +77,14 @@ Dashboard → Analytics → Reports → Create New Report
 **Immediate Export:**
 
 - Click "Export Now"
-
 - Choose format: CSV, Excel, or PDF
-
 - Download file
 
 **Schedule Report:**
 
 - Set frequency: Daily, Weekly, Monthly
-
 - Choose delivery time
-
 - Add email recipients
-
 - Click "Create Schedule"
 
 ### Export Data from Dashboard
@@ -115,21 +92,15 @@ Dashboard → Analytics → Reports → Create New Report
 **Quick Export from Any View:**
 
 1. View any analytics dashboard
-
 2. Click "Export" button (top right)
-
 3. Choose format and click "Download"
 
 **Available Exports:**
 
 - Campaign list → CSV/Excel
-
 - Campaign metrics → CSV/Excel
-
 - Email engagement data → CSV
-
 - Lead lists → CSV/Excel
-
 - Domain health → CSV
 
 ---
@@ -152,18 +123,14 @@ timezone: "America/New_York"
 recipients:
 
   - team@company.com
-
   - manager@company.com
 
 format: pdf
 include:
 
   - summary_metrics
-
   - top_campaigns
-
   - deliverability_trends
-
   - weekly_comparison
 
 ```
@@ -171,13 +138,9 @@ include:
 **Delivered Report Includes:**
 
 - Executive summary with key metrics
-
 - Week-over-week comparison
-
 - Top/bottom performing campaigns
-
 - Deliverability trends chart
-
 - Action items and recommendations
 
 #### Monthly Executive Report
@@ -198,13 +161,9 @@ format: pdf_executive
 include:
 
   - executive_summary
-
   - growth_metrics
-
   - workspace_breakdown
-
   - roi_analysis
-
   - month_over_month_trends
 
 ```
@@ -212,13 +171,9 @@ include:
 **Delivered Report Includes:**
 
 - Month-over-month growth
-
 - Per-workspace performance
-
 - ROI metrics (emails sent vs opportunities created)
-
 - Strategic recommendations
-
 - Next month priorities
 
 ### Custom Data Exports
@@ -270,11 +225,8 @@ interface CampaignExport {
 **Export Process:**
 
 1. Select campaigns (individual or bulk)
-
 2. Choose fields to include
-
 3. Select format (CSV, Excel)
-
 4. Click "Export"
 
 #### Lead-Level Export
@@ -321,11 +273,8 @@ interface LeadExport {
 **Setup:**
 
 1. Go to Settings → Integrations → Google Sheets
-
 2. Click "Connect Google Account"
-
 3. Authorize PenguinMails
-
 4. Create auto-export rule
 
 **Auto-Export Configuration:**
@@ -354,11 +303,8 @@ data:
 **Export Formats:**
 
 - **CSV**: Universal format, compatible with all tools
-
 - **Excel (.xlsx)**: Formatted spreadsheets with charts
-
 - **JSON**: For custom integrations and APIs
-
 - **Parquet**: For big data tools (future)
 
 **API-Based Export:**
@@ -432,9 +378,7 @@ styling:
 **Using Templates:**
 
 1. Create template once
-
 2. Generate report from template → Select date range
-
 3. Report generated with latest data
 
 ---
@@ -783,19 +727,16 @@ app.get('/api/exports/:id', authenticate, async (req, res) => {
 ### Feature Completeness Review
 
 - **[Analytics & Reporting Gap Analysis](/.kiro/specs/feature-completeness-review/findings/analytics-reporting)** - Comprehensive review of analytics features and roadmap
-
 - **[Third-Party Dependencies](/docs/features/analytics/third-party-dependencies)** - External services and integrations
 
 ### Analytics
 
 - **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Dashboard and metrics
-
 - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced analytics (Q1 2026)
 
 ### Integration
 
 - **[API Access](/docs/features/integrations/api-access)** - Programmatic data export
-
 - **[CRM Integration](/docs/features/integrations/crm-integration/overview)** - External tool sync
 
 ### Technical

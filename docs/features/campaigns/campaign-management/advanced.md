@@ -108,11 +108,8 @@ campaign_schedule:
   rules:
 
     - if_timezone_unknown: use_fallback
-
     - respect_business_hours: true
-
     - skip_weekends: true
-
     - skip_holidays: true
 
 ```
@@ -141,11 +138,8 @@ send_optimization:
   analysis:
 
     - historical_open_times
-
     - historical_click_times
-
     - industry_benchmarks
-
     - contact_behavior_patterns
 
   optimization_window:
@@ -247,11 +241,8 @@ campaign_audience:
   criteria:
 
     - lead_score: "> 30"
-
     - last_activity: "< 30 days"
-
     - email_verified: true
-
     - unsubscribed: false
 
   refresh: "daily"  # Re-evaluate segment membership
@@ -259,7 +250,6 @@ campaign_audience:
   enrollment_rules:
 
     - new_contacts: "auto_enroll"
-
     - exited_contacts: "remove_from_sequence"
 
 ```
@@ -282,17 +272,13 @@ Day 5: 20 contacts no longer match → Removed from sequence
 exclusion_rules:
 
   - exclude_if: "in_other_campaign"
-
   - exclude_if: "received_email_last_24h"
-
   - exclude_if: "marked_as_customer"
-
   - exclude_if: "unsubscribed_from_category"
 
   priority_handling:
 
     - if_conflict: "pause_lower_priority"
-
     - resume_after: "higher_priority_complete"
 
 ```
@@ -337,7 +323,6 @@ approval_workflow:
       conditions:
 
         - if: audience_size > 10000
-
         - if: contains_promotional_content
 
   approval_timeout: 48 hours

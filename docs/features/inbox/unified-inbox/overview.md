@@ -10,14 +10,8 @@ related_features:
 
 
   - inbox/inbox-rotation
-
-
   - campaigns/campaign-management/overview
-
-
   - leads/lead-scoring
-
-
   - integrations/crm-integration/overview
 related_tasks:
 
@@ -37,15 +31,10 @@ The Unified Inbox consolidates emails from thousands of sender accounts into a s
 ### Key Capabilities
 
 - **Universal Aggregation**: Sync emails from Gmail, Outlook, SMTP/IMAP, and custom domains
-
 - **AI Intent Detection**: Automatically tag responses as Interested, Meeting Booked, Not Interested, etc.
-
 - **Thread Management**: View full conversation history across multiple sending accounts
-
 - **Real-Time Sync**: Bi-directional synchronization with provider mailboxes
-
 - **Team Collaboration**: Assign threads, add internal notes, and track response times
-
 - **CRM Sync**: Automatically push positive responses to your CRM
 
 ---
@@ -77,27 +66,21 @@ Views:
 **Scenario**: A prospect replies "Sounds interesting, send more info."
 
 1. **Click the thread**: Opens the conversation view.
-
 2. **Review Context**:
 
     - **Prospect**: John Doe (CEO at Acme Corp)
-
     - **Campaign**: "SaaS Outreach Q1"
-
     - **Sending Account**: `sarah@outreach-domain.com`
 
 3. **Reply**:
 
     - Type your response in the editor.
-
     - (Optional) Use a "More Info" template.
-
     - Click **Send**.
 
 4. **Update Status**:
 
     - AI may have auto-tagged as "Interested".
-
     - Change status to "Information Sent".
 
 #### Step 3: Assign to Team
@@ -105,11 +88,8 @@ Views:
 **Scenario**: A technical question requires engineering input.
 
 1. **Internal Note**: Click "Add Note" tab.
-
 2. **Mention**: "@mike can you answer this technical question?"
-
 3. **Assign**: Change owner from "Sarah" to "Mike".
-
 4. **Result**: Mike gets a notification and the thread appears in his "Assigned to Me" view.
 
 #### Step 4: Bulk Actions
@@ -117,11 +97,8 @@ Views:
 **Scenario**: Clear out 50 Out-of-Office replies.
 
 1. Select "OOO / Auto-reply" view.
-
 2. Click "Select All".
-
 3. Click "Archive".
-
 4. **Result**: Inbox zero for OOO messages.
 
 ---
@@ -514,9 +491,7 @@ router.patch('/api/inbox/threads/:id', async (req, res) => {
 ### Background Jobs
 
 1. **`sync-worker`**: Polls email providers for accounts that don't support webhooks (e.g., standard IMAP).
-
 2. **`intent-analyzer`**: Processes new inbound messages with an LLM to determine category (Interested, OOO, etc.) and sentiment.
-
 3. **`cleanup-worker`**: Archives old threads or deletes spam based on retention policies.
 
 ---

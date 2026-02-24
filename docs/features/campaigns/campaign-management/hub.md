@@ -28,15 +28,10 @@ Campaign Management is the core revenue-generating feature of PenguinMails, enab
 ### Key Capabilities
 
 - **Multi-Step Sequences**: Create up to 20-step email sequences with time delays and conditional branching
-
 - **Campaign Types**: One-time broadcasts, drip campaigns, triggered campaigns, and A/B tests
-
 - **Visual Builder**: Drag-and-drop campaign builder with real-time preview
-
 - **Template Integration**: Use pre-built templates or create custom designs
-
 - **Advanced Scheduling**: Timezone-aware scheduling with send-time optimization
-
 - **Comprehensive Analytics**: Track performance at campaign and step level
 
 ---

@@ -31,7 +31,6 @@ Authentication and user management features for PenguinMails tenant users. These
   - Contextual tooltips
   - Video tutorials
   - Achievement milestones
-
 - **Account Security Enhancements**
   - Account lockout protection
   - Session management UI

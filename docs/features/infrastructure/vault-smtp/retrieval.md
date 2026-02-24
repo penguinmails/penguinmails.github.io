@@ -17,11 +17,8 @@ PenguinMails administrators can retrieve SMTP credentials for troubleshooting pu
 **Access Requirements:**
 
 - Admin role with `support-team` Vault policy
-
 - Re-authentication required (password + 2FA)
-
 - Time-limited access (15-minute session)
-
 - All access logged in audit trail
 
 **Retrieval Workflow:**

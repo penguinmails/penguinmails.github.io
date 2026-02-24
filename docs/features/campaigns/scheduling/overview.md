@@ -17,9 +17,7 @@ priority: "High"
 related_features:
 
 - campaigns/campaign-management/overview
-
 - campaigns/ab-testing
-
 - leads/contact-segmentation
 related_tasks:
 

@@ -9,11 +9,8 @@ priority: "Critical"
 related_features:
 
   - infrastructure/hostwind-management
-
   - infrastructure/free-mailbox-creation
-
   - domains/domain-management
-
   - compliance/security-features
 related_tasks:
 
@@ -34,13 +31,9 @@ Email Infrastructure Setup provides end-to-end automation for creating productio
 ### Key Value Proposition
 
 - **Speed**: Professional email infrastructure ready in < 5 minutes
-
 - **Automation**: Zero manual server configuration required
-
 - **Security**: Built-in SSL, SPF, DKIM, DMARC configuration
-
 - **Compliance**: GDPR/CCPA-ready infrastructure from day one
-
 - **Scale**: Support for multi-tenant architecture with workspace isolation
 
 ---
@@ -52,13 +45,9 @@ Email Infrastructure Setup provides end-to-end automation for creating productio
 Professional email infrastructure includes:
 
 1. **VPS Server**: Dedicated or shared virtual private server via Hostwind
-
 2. **SMTP Server**: MailU SMTP server pre-configured and secured
-
 3. **DNS Records**: Automated SPF, DKIM, DMARC record setup
-
 4. **SSL Certificates**: Let's Encrypt SSL/TLS certificates auto-installed
-
 5. **Email Accounts**: Initial mailbox creation with authentication
 
 ### 5-Minute Setup Process
@@ -68,11 +57,8 @@ Professional email infrastructure includes:
 ```text
 
 1. Add your domain to PenguinMails
-
 2. System generates DNS verification record
-
 3. Add TXT record to your DNS provider
-
 4. Click "Verify Domain" (usually instant)
 
 ```
@@ -80,7 +66,6 @@ Professional email infrastructure includes:
 **Required Information:**
 
 - Domain name (e.g., `yourdomain.com`)
-
 - DNS provider access (for record creation)
 
 #### Step 2: Infrastructure Provisioning
@@ -101,11 +86,8 @@ Once domain is verified, click **"Launch Infrastructure"**:
 **What Happens Behind the Scenes:**
 
 - VPS created with Ubuntu LTS + optimized email settings
-
 - MailU installed with production configuration
-
 - Port 25, 465, 587, 993 opened and secured
-
 - Fail2ban installed for brute-force protection
 
 #### Step 3: DNS Configuration
@@ -146,11 +128,8 @@ TXT Record (DMARC):
 ```text
 
 1. Click "Create Email Account"
-
 2. Enter email address (e.g., sales@yourdomain.com)
-
 3. Set secure password (or auto-generate)
-
 4. Click "Create Account"
 
 ```
@@ -179,13 +158,9 @@ System automatically runs verification:
 Infrastructure setup is complete when:
 
 - ✅ All DNS records validated
-
 - ✅ SMTP server responding on ports 25, 465, 587
-
 - ✅ SSL certificate valid
-
 - ✅ Test email delivered successfully
-
 - ✅ Deliverability score > 80%
 
 > **Important**: Infrastructure is just the first step. Perfect DNS records won't save you if your sending behavior is flagged. Read [Why SPF/DKIM Isn't Enough](/guides/deliverability-myths-debunked#myth-1-just-set-up-spfdkimdmarc-and-youre-good) to understand the full picture.
@@ -201,19 +176,14 @@ Infrastructure setup is complete when:
 **Server Sizing:**
 
 - **Starter**: 1 CPU, 2GB RAM (up to 5K emails/day)
-
 - **Professional**: 2 CPU, 4GB RAM (up to 25K emails/day)
-
 - **Business**: 4 CPU, 8GB RAM (up to 100K emails/day)
-
 - **Enterprise**: Custom sizing for high-volume needs
 
 **Server Location:**
 
 - Choose geographic region for optimal deliverability
-
 - Consider GDPR data residency requirements
-
 - Multi-region deployment available (Enterprise)
 
 #### SMTP Server Optimization
@@ -241,13 +211,9 @@ defer_transports: true
 **Security Hardening:**
 
 - TLS 1.2+ enforcement
-
 - Strong cipher suite configuration
-
 - SMTP authentication required
-
 - IP-based access restrictions (optional)
-
 - Rate limiting per account
 
 #### DNS Best Practices
@@ -273,9 +239,7 @@ v=spf1 ip4:123.45.67.89 include:spf.postmarkapp.com ~all
 **DKIM Key Rotation:**
 
 - Rotate DKIM keys quarterly for security
-
 - Support for multiple simultaneous keys
-
 - Automated rotation available (Enterprise)
 
 **DMARC Policy Progression:**
@@ -305,31 +269,22 @@ For agencies managing multiple clients:
 1. **Shared VPS** (Cost-effective):
 
    - Multiple domains on single VPS
-
    - Separate DKIM keys per domain
-
    - Shared IP reputation
-
    - Best for: Startups, small agencies
 
 2. **Dedicated VPS per Workspace** (Recommended):
 
    - Complete isolation between clients
-
    - Independent IP reputation
-
    - Custom server configuration per workspace
-
    - Best for: Agencies, enterprise clients
 
 3. **IP Pooling** (Enterprise):
 
    - Multiple IPs per VPS
-
    - Intelligent IP rotation
-
    - Dedicated IPs for high-volume senders
-
    - Best for: High-volume sending
 
 ### Monitoring & Maintenance
@@ -363,15 +318,10 @@ Daily:
 Automated alerts for:
 
 - SMTP service downtime
-
 - DNS record changes or failures
-
 - SSL certificate expiration (30, 7, 1 day warnings)
-
 - IP blacklisting
-
 - Deliverability score drop > 10%
-
 - Disk space > 80% full
 
 ---
@@ -776,31 +726,22 @@ cron.schedule('0 0 * * *', async () => {
 ### Planning & Product
 
 - **[Product Roadmap](/docs/operations/roadmap/product-roadmap/overview)** - Infrastructure timeline (Q4 2025)
-
 - **[Technical Roadmap](/docs/operations/roadmap/technical-roadmap)** - Infrastructure considerations
-
 - **[Feature Taxonomy](/docs/business/feature-taxonomy-and-roadmap)** - Level 1 core feature
 
 ### Related Features
 
 - **[Hostwind Management](/docs/features/infrastructure/hostwind-management)** - VPS monitoring and operations
-
 - **[Free Mailbox Creation](/docs/features/infrastructure/free-mailbox-creation/overview)** - Email account provisioning
-
 - **[Domain Management](/docs/features/domains/domain-management)** - DNS and domain configuration
-
 - **[Security Features](/docs/features/compliance/security-features)** - SSL, SPF, DKIM, DMARC details
-
 - **[Multi-Tenant Architecture](/docs/features/infrastructure/multi-tenant-architecture)** - Isolation and workspace management
-
 - **[Vault SSH Management](/docs/features/infrastructure/vault-ssh-management)** - SSH key storage and rotation in Vault
-
 - **[SMTP Credentials Vault Storage](/docs/features/infrastructure/vault-smtp/overview)** - Secure SMTP credential management
 
 ### Technical Specifications
 
 - **[Infrastructure API](/docs/implementation-technical/api/platform-api/infrastructure)** - API endpoints
-
 - **[Architecture Overview](/docs/technical/architecture/overview)** - System architecture
 
 ### Implementation

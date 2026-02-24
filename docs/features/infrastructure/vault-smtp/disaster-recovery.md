@@ -90,11 +90,8 @@ If Vault itself fails, credentials can be restored from encrypted backups:
 **Backup Strategy:**
 
 - **Frequency:** Daily at 02:00 UTC
-
 - **Retention:** 30 daily backups, 12 monthly backups
-
 - **Storage:** Encrypted S3 bucket (AES-256-GCM)
-
 - **Encryption Key:** Stored separately from backups
 
 **Restoration Process:**

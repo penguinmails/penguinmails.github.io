@@ -759,27 +759,22 @@ router.post('/api/campaigns/:id/clone', async (req, res) => {
 ### Campaign Features
 
 - **[A/B Testing](/docs/features/campaigns/ab-testing)** - Split testing for campaign optimization
-
 - **[Personalization System](/docs/features/campaigns/personalization-system)** - Dynamic email personalization
-
 - **[Template Management](/docs/features/templates/template-management)** - Email template library
 
 ### Audience Management
 
 - **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Audience targeting
-
 - **[Lead Scoring](/docs/features/leads/lead-scoring)** - Contact prioritization
 
 ### Analytics
 
 - **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
-
 - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
 ### Technical
 
 - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
-
 - **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
 ---

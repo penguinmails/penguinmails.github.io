@@ -9,16 +9,12 @@ priority: "High"
 related_features:
 
   - enterprise/user-management
-
   - infrastructure/email-infrastructure-setup
-
   - domains/domain-management
-
   - payments/subscription-management
 related_tasks:
 
   - epic-2-user-authentication-profile
-
   - epic-3-tenant-company-management
 ---
 
@@ -33,15 +29,10 @@ The Onboarding Experience provides a structured, interactive journey for new use
 ### Key Components
 
 1. **Guided Setup Wizard**: Step-by-step infrastructure configuration
-
 2. **Interactive Checklist**: Track progress toward first campaign
-
 3. **Contextual Tooltips**: In-app guidance and feature discovery
-
 4. **Video Tutorials**: Quick how-to videos at key moments
-
 5. **Progress Tracking**: Visual progress indicators
-
 6. **Achievement Milestones**: Celebrate user progress
 
 ---
@@ -53,7 +44,6 @@ The Onboarding Experience provides a structured, interactive journey for new use
 ```text
 
 1. Sign Up → 2. Workspace Setup → 3. Domain Configuration →
-
 4. Payment → 5. First Email Account → 6. First Campaign → 7. Success!
 
 ```
@@ -67,11 +57,8 @@ The Onboarding Experience provides a structured, interactive journey for new use
 **Fields:**
 
 - Email address
-
 - Password
-
 - Company name
-
 - User name
 
 **Welcome Screen:**
@@ -129,7 +116,6 @@ Domain: [_______________]
 **If "Need help?" clicked:**
 
 - Show video: "What is a sending domain?"
-
 - Link to: Domain setup guide
 
 #### Step 4: Verify Domain (2 min)
@@ -157,9 +143,7 @@ OR
 **Auto-detection:**
 
 - System polls for DNS record every 10 seconds
-
 - Shows "Verifying..." animation
-
 - Auto-advances when verified
 
 #### Step 5: Set Up Payment (1 min)
@@ -315,11 +299,8 @@ Getting Started ────────○○○ 70%
 **Features:**
 
 - Persists across sessions
-
 - Click items to jump to relevant page
-
 - Progress percentage updates in real-time
-
 - Dismissible after completion
 
 ### Contextual Tooltips
@@ -341,11 +322,8 @@ Getting Started ────────○○○ 70%
 **Smart triggering:**
 
 - Show on first page visit only
-
 - Don't show if user has interacted with feature
-
 - Allow dismissal (never show again)
-
 - Max 3 tooltips per page
 
 ### Interactive Tutorial Mode
@@ -355,13 +333,9 @@ Getting Started ────────○○○ 70%
 **Flow:**
 
 1. Dim entire UI
-
 2. Highlight specific element
-
 3. Show explanation overlay
-
 4. Guide through workflow
-
 5. Allow skipping or pausing
 
 **Example:**
@@ -383,19 +357,14 @@ Click here to create a new email campaign.
 **Embedded at key moments:**
 
 - Domain setup: "How to add DNS records"
-
 - Email warmup: "Why warmup matters"
-
 - Campaign creation: "Your first campaign"
 
 **Format:**
 
 - 60-90 seconds each
-
 - Skippable
-
 - Closed captions
-
 - Hosted on CDN for fast loading
 
 ### Progress Milestones
@@ -417,19 +386,12 @@ Keep going!
 **Milestones:**
 
 - ✓ First workspace created
-
 - ✓ First domain verified
-
 - ✓ First email account created
-
 - ✓ First 10 contacts imported
-
 - ✓ First campaign created
-
 - ✓ First email sent
-
 - ✓ First email opened
-
 - ✓ First link clicked
 
 ### Personalized Recommendations
@@ -852,11 +814,8 @@ function OnboardingToggle({ workspaceId }: { workspaceId: string }) {
 ## Related Documentation
 
 - **[User Management](/docs/features/authentication/user-management)** - Authentication and registration
-
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - Infrastructure provisioning
-
 - **[Domain Management](/docs/features/domains/domain-management)** - Domain configuration
-
 - **[Subscription Management](/docs/features/payments/subscription-management)** - Payment and trials
 
 ---

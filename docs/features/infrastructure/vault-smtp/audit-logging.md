@@ -17,15 +17,10 @@ All SMTP credential operations are logged in the audit trail:
 **Event Types:**
 
 - `smtp_credentials_stored` - Initial credential storage during VPS provisioning
-
 - `smtp_credentials_accessed` - Admin retrieval for troubleshooting
-
 - `smtp_credentials_rotated` - Automated or manual rotation
-
 - `smtp_credentials_emergency_reset` - Emergency credential reset
-
 - `smtp_credentials_viewed` - Credential viewing in UI
-
 - `smtp_credentials_copied` - Copy to clipboard action
 
 **Audit Log Schema:**
@@ -89,11 +84,8 @@ Configure alerts for suspicious activity:
 **Alert Triggers:**
 
 - Multiple credential access attempts (>5 in 1 hour)
-
 - Credential access outside business hours (10pm-6am)
-
 - Emergency reset without incident ID
-
 - Failed authentication attempts (>3 in 5 minutes)
 
 **Alert Implementation:**

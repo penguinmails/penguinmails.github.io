@@ -113,21 +113,17 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
     ### Campaign Features
 
     - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Core campaign creation and management
-
     - **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
-
     - **[A/B Testing](/docs/features/campaigns/ab-testing)** - Campaign optimization
 
     ### Analytics
 
     - **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
-
     - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
     ### Technical
 
     - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
-
     - **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
     ---

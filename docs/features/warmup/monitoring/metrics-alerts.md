@@ -36,9 +36,7 @@ Steps to Delist:
    Information Needed:
 
    - IP Address: 192.0.2.100
-
    - Listing ID: ABC123XYZ
-
    - Explanation of corrective actions
 
 4. Monitor Status
