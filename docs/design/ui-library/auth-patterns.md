@@ -17,11 +17,8 @@ keywords: "authentication, authorization, security"
 **Requirements**:
 
 - Check authentication in Next.js middleware
-
 - Redirect to login if unauthenticated
-
 - Check role permissions for restricted routes
-
 - Store session in httpOnly cookies
 
 ### Role-Based UI Rendering

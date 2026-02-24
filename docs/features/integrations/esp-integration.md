@@ -20,11 +20,8 @@ category: "Integrations"
 While PenguinMails has built-in email sending capabilities via your own SMTP infrastructure, you can optionally integrate with premium ESPs like **Postmark** and **Mailgun** for:
 
 - Higher deliverability rates
-
 - Dedicated IP addresses
-
 - Advanced sending infrastructure
-
 - Specialized transactional or bulk email handling
 
 ### Supported ESPs
@@ -43,35 +40,24 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 **Built-in SMTP** (via Hostwind VPS):
 
 - ✅ Full control over infrastructure
-
 - ✅ No per-email costs
-
 - ✅ Custom configuration
-
 - ⚠️ Requires warmup and IP reputation management
-
 - ⚠️ Shared IP reputation risk
 
 **External ESP** (Postmark/Mailgun):
 
 - ✅ Pre-warmed infrastructure
-
 - ✅ Dedicated deliverability team
-
 - ✅ Advanced analytics and tracking
-
 - ✅ Better inbox placement rates
-
 - ⚠️ Per-email costs
-
 - ⚠️ Less direct control
 
 **Recommendation:** Use both for different purposes:
 
 - **Postmark** → Transactional emails (password resets, receipts, alerts)
-
 - **Mailgun** → Marketing campaigns (newsletters, promotions)
-
 - **Built-in SMTP** → High-volume cold outreach, custom scenarios
 
 ---
@@ -83,13 +69,9 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 #### When to Use Postmark
 
 - ✅ **Password resets** - Critical delivery required
-
 - ✅ **Account notifications** - Must reach inbox
-
 - ✅ **Order confirmations** - Transactional content
-
 - ✅ **Welcome emails** - First impression matters
-
 - ⚠️ NOT for bulk marketing (use Mailgun or built-in)
 
 #### Postmark Setup
@@ -97,17 +79,13 @@ While PenguinMails has built-in email sending capabilities via your own SMTP inf
 ##### Step 1: Create Postmark Account
 
 1. Sign up at [postmarkapp.com](https://postmarkapp.com)
-
 2. Verify your email
-
 3. Create a "Server" (sending environment)
 
 ##### Step 2: Get API Key
 
 1. Go to **Servers** → **API Tokens**
-
 2. Copy **Server API Token**
-
 3. Save for PenguinMails configuration
 
 ##### Step 3: Configure in PenguinMails
@@ -129,33 +107,23 @@ Track Links: ☑ Yes
 ##### Step 4: Verify Domain
 
 1. Postmark provides DNS records (DKIM, Return-Path)
-
 2. Add records to your DNS
-
 3. Wait for verification (~hour)
-
 4. Start sending!
 
 #### Postmark Features
 
 - **Fast delivery** - Sub-second sending
-
 - **Detailed analytics** - Open/click/bounce tracking
-
 - **Bounce categorization** - Hard vs soft bounces
-
 - **Spam analysis** - Why emails might be flagged
-
 - **Templates** - HTML templates with variables
-
 - **Webhooks** - Real-time delivery notifications
 
 **Pricing:**
 
 - $1.25 per 1,000 emails
-
 - First 100 emails/month free
-
 - Volume discounts available
 
 ---
@@ -167,13 +135,9 @@ Track Links: ☑ Yes
 #### When to Use Mailgun
 
 - ✅ **Marketing campaigns** - Newsletters, promotions
-
 - ✅ **High volume** - Thousands of emails per campaign
-
 - ✅ **Advanced segmentation** - A/B testing, targeting
-
 - ✅ **Email validation** - List cleaning and verification
-
 - ⚠️ NOT for transactional (use Postmark)
 
 #### Mailgun Setup
@@ -181,29 +145,21 @@ Track Links: ☑ Yes
 ##### Step 1: Create Mailgun Account
 
 1. Sign up at [mailgun.com](https://www.mailgun.com)
-
 2. Choose US or EU region data center
-
 3. Verify email and billing info
 
 ##### Step 2: Add Sending Domain
 
 1. Go to **Sending** → **Domains**
-
 2. Click **Add New Domain**
-
 3. Enter your domain (e.g., `mail.yourdomain.com`)
-
 4. Add provided DNS records (SPF, DKIM, CNAME)
-
 5. Wait for verification
 
 ##### Step 3: Get API Credentials
 
 1. Go to **Settings** → **API Keys**
-
 2. Copy **Private API Key**
-
 3. Note your **Domain Name**
 
 ##### Step 4: Configure in PenguinMails
@@ -227,23 +183,16 @@ Unsubscribe Handling: ☑ Automatic
 #### Mailgun Features
 
 - **Powerful API** - Full programmatic control
-
 - **Email validation** - Pre-send list verification
-
 - **A/B testing** - Test subject lines, content
-
 - **Scheduled sending** - Time-zone optimized delivery
-
 - **Tagging & segmentation** - Organize campaigns
-
 - **Route filtering** - Advanced email routing logic
 
 **Pricing:**
 
 - **Flex Plan:** $35/month base +$1/1,000 emails
-
 - **Foundation:** $55/month for 50k emails
-
 - **Volume discounts** for >100k emails/month
 
 ---
@@ -263,14 +212,8 @@ Transactional Emails:
 
 
     - Password Reset
-
-
     - Email Verification
-
-
     - Order Confirmation
-
-
     - Account Alerts
 
 Marketing Emails:
@@ -279,11 +222,7 @@ Marketing Emails:
 
 
     - Newsletters
-
-
     - Product Announcements
-
-
     - Promotional Campaigns
 
 Cold Outreach:
@@ -292,11 +231,7 @@ Cold Outreach:
 
 
     - Sales outreach
-
-
     - Lead generation
-
-
     - Custom campaigns
 
 
@@ -365,11 +300,8 @@ POST https://api.penguinmails.com/webhooks/mailgun
 **Webhook Configuration in PenguinMails:**
 
 1. ESPs automatically send events to PenguinMails
-
 2. Events update campaign analytics in real-time
-
 3. Bounce handling triggers suppression list updates
-
 4. Open/click tracking updates engagement metrics
 
 ---
@@ -453,14 +385,8 @@ Retry Logic:
 
 
   - Primary fails → Wait 30s → Retry
-
-
   - Primary fails again → Switch to Fallback
-
-
   - Fallback fails → Switch to Final Fallback
-
-
   - All fail → Queue for later retry
 
 
@@ -477,11 +403,7 @@ Priority Order:
 
 
 1. Postmark (transactional)
-
-
 2. Mailgun (marketing)
-
-
 3. Built-in SMTP (final fallback)
 
 Retry Attempts: 3
@@ -501,11 +423,8 @@ Retry Delay: 30 seconds
 **Strategy:**
 
 - **Free tier first** - Use Postmark's 100 free emails/month
-
 - **Volume tiers** - Route high-volume through cheapest provider
-
 - **Priority routing** - Critical emails through premium ESP
-
 - **Batch processing** - Combine sends to reduce API calls
 
 **Cost Comparison:**
@@ -521,8 +440,6 @@ Hybrid Approach:
 
 
 - 5,000 transactional via Postmark: $5
-
-
 - 95,000 marketing via Mailgun: $55 (Foundation)
 Total: $60/month
 
@@ -551,17 +468,11 @@ Savings: $70/month vs all-Postmark
 ### Deliverability Tips
 
 1. **Warm up gradually** - Start small, increase volume
-
 2. **Authenticate everything** - SPF, DKIM, DMARC for all domains
-
 3. **Monitor reputation** - Check ESP dashboards daily
-
 4. **Clean lists** - Remove bounces immediately
-
 5. **Segment sends** - Don't mix transactional + marketing
-
 6. **Test thoroughly** - Send tests before campaigns
-
 7. **Track metrics** - Monitor open, click, bounce rates
 
 ---
@@ -589,49 +500,37 @@ Savings: $70/month vs all-Postmark
 ### Route Specifications
 
 - **[ESP Integration Routes](/docs/design/routes/esp-integration)** - Complete ESP UI routes
-
 - **[Webhook System Routes](/docs/design/routes/webhook-system)** - Webhook configuration
-
 - **[Settings Routes](/docs/design/routes/settings)** - General settings navigation
 
 ### Feature Documentation
 
 - **[API Access](/docs/features/integrations/api-access)** - REST API and authentication
-
 - **[Webhook System](/docs/features/integrations/webhook-system)** - Event notifications
-
 - **[CRM Integration](/docs/features/integrations/crm-integration/overview)** - Salesforce, HubSpot integration
-
 - **[Integrations Overview](/docs/features/integrations/README)** - All third-party integrations
 
 ### Email Infrastructure
 
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Creating campaigns
-
 - **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Infrastructure warmup
-
 - **[Domain Management](/docs/features/domains/sender-authentication)** - SPF, DKIM, DMARC
-
 - **[Email Infrastructure Setup](/docs/features/infrastructure/email-infrastructure-setup)** - SMTP setup
 
 ### API Documentation
 
 - **[Tenant API](/docs/implementation-technical/api/tenant-api)** - ESP configuration endpoints
-
 - **[Platform API](/docs/implementation-technical/api/platform-api)** - Platform-level endpoints
-
 - **[API Reference](/docs/implementation-technical/api/README)** - Complete API documentation
 
 ### Architecture & Implementation
 
 - **[Integrations Review](/.kiro/specs/feature-completeness-review/findings/integrations)** - Integration completeness review
-
 - **Epic 6: Core Email Pipeline** - Internal task reference for email pipeline work
 
 ### User Journeys
 
 - **Operations Team Journeys** - ESP setup workflows (internal journey reference)
-
 - **Technical Teams Journeys** - API integration (internal journey reference)
 
 ---
@@ -641,15 +540,12 @@ Savings: $70/month vs all-Postmark
 ### ESP Documentation
 
 - **Postmark Docs** - <https://postmarkapp.com/developer>
-
 - **Mailgun Docs** - <https://documentation.mailgun.com>
 
 ### PenguinMails Support
 
 - **Help Center** - ESP integration guides
-
 - **Support Email** - <integrations@penguinmails.com>
-
 - **Community Forum** - ESP best practices
 
 ---

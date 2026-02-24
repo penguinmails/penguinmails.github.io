@@ -1,6 +1,8 @@
 ---
 title: "Contact Lifecycle Stages"
 description: "Track contact lifecycle stages (Lead, MQL, SQL, Customer)"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Contact Lifecycle Stages

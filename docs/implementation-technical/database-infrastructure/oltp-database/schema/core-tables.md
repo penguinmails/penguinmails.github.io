@@ -7,31 +7,20 @@ keywords: "tables, schema, core entities"
 ---
 
 - **Core Entities**: No prefix, plural nouns (`users`, `companies`, `campaigns`)
-
 - **Junction Tables**: Singular compound names (`tenant_users`, `campaign_sequence_steps`)
-
 - **Configuration Tables**: Descriptive names (`user_preferences`, `tenant_config`)
-
 - **System Tables**: Prefixed with table type (`system_config`, `feature_flags`)
 
 **Table Name Examples:**
 
 - `users` - User identity and profiles
-
 - `tenants` - Tenant organizations
-
 - `companies` - Tenant workspaces
-
 - `domains` - Email sending domains
-
 - `campaigns` - Campaign definitions
-
 - `leads` - Contact database
-
 - `templates` - Email templates
-
 - `plans` - Subscription plans
-
 - `subscriptions` - Active tenant subscriptions
 
 ---
@@ -43,21 +32,15 @@ The **OLTP (Online Transaction Processing) Database** is PenguinMails' primary o
 ### Purpose & Characteristics
 
 - **Primary Focus**: Fast queries, quick inserts, operational metadata
-
 - **Performance**: Optimized for high-frequency operations and small record sizes
-
 - **Architecture**: Normalized for data integrity, indexed for speed
-
 - **Multi-Tenant**: Row Level Security (RLS) for complete tenant isolation
 
 ### Performance Strategy
 
 - **Denormalized Fields**: `tenant_id` on operational tables for fast filtering
-
 - **Index Coverage**: Covering indexes for common query patterns
-
 - **Connection Pooling**: Aggressive pooling for high-throughput operations
-
 - **Partitioning**: Consider date-based partitioning for large operational tables
 
 ---
@@ -109,6 +92,7 @@ CREATE TABLE tenant_users (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     deleted TIMESTAMP WITH TIME ZONE,
+    suspended BOOLEAN DEFAULT FALSE, -- Temporary account suspension (distinct from deletion)
     roles TEXT[] DEFAULT '{}' "NileDB-managed ARRAY - mandatory for authentication",
     email TEXT,
     PRIMARY KEY (tenant_id, user_id)
@@ -240,25 +224,15 @@ The `dns_records` JSONB field stores per-record DNS configuration with lifecycle
 **DNS Record Field Meanings**:
 
 - `record_type`: DNS record type (SPF, DKIM, DMARC, MX, A, AAAA, CNAME)
-
 - `name`: DNS record name (@ for root, subdomain for others)
-
 - `value`: Expected DNS record value
-
 - `verification_status`: Current verification state (pending, verified, failed, error)
-
 - `last_verified_at`: Timestamp of last successful verification
-
 - `verification_attempts`: Number of verification attempts
-
 - `verification_error`: Error message from last failed verification
-
 - `managed_by`: Who manages the record ("platform" or "mailu")
-
 - `secret_ref`: Vault reference for DKIM private keys (platform-managed only)
-
 - `needs_deployment`: Flag for Mailu sync jobs to deploy DKIM keys
-
 - `source`: Source of record creation ("ui", "platform", "api")
 
 #### **email_accounts** - Email Account Configuration

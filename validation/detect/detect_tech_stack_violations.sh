@@ -68,14 +68,16 @@ detect_code_block() {
     echo "Checking: $description..."
     
     local files=$(grep -r "^\`\`\`$lang" "$TARGET_ROOT" --include="*.md" 2>/dev/null || echo "")
-    local count=$(echo "$files" | grep -c ":" || echo "0")
+    local count
+    count=$(echo "$files" | grep -c ":" 2>/dev/null) || count=0
+    count=$(echo "$count" | tr -d '[:space:]')
     
     echo "    \"${lang}_blocks\": {" >> "$REPORT_FILE"
     echo "      \"description\": \"$description\"," >> "$REPORT_FILE"
     echo "      \"count\": $count," >> "$REPORT_FILE"
     echo "      \"files\": [" >> "$REPORT_FILE"
     
-    if [ $count -gt 0 ]; then
+    if [ -n "$count" ] && [ "$count" -gt 0 ]; then
         first=true
         while IFS=: read -r file line; do
             [ -z "$file" ] && continue
@@ -94,7 +96,7 @@ detect_code_block() {
     echo "      ]" >> "$REPORT_FILE"
     echo "    }," >> "$REPORT_FILE"
     
-    if [ $count -eq 0 ]; then
+    if [ -n "$count" ] && [ "$count" -eq 0 ]; then
         echo -e "  ${GREEN}✓${NC} No $lang blocks found"
     else
         echo -e "  ${YELLOW}⚠${NC} Found $count $lang blocks"
@@ -113,15 +115,18 @@ echo "Checking: Forbidden tech mentions (prisma, bullmq, mysql)..."
 
 # Prisma mentions (exclude lines with drizzle)
 prisma_files=$(grep -ri "prisma" "$TARGET_ROOT" --include="*.md" 2>/dev/null | grep -vi "drizzle" || echo "")
-prisma_count=$(echo "$prisma_files" | grep -c ":" || echo "0")
+prisma_count=$(echo "$prisma_files" | grep -c ":" 2>/dev/null) || prisma_count=0
+prisma_count=$(echo "$prisma_count" | tr -d '[:space:]')
 
 # BullMQ mentions
 bullmq_files=$(grep -ri "bullmq" "$TARGET_ROOT" --include="*.md" 2>/dev/null || echo "")
-bullmq_count=$(echo "$bullmq_files" | grep -c ":" || echo "0")
+bullmq_count=$(echo "$bullmq_files" | grep -c ":" 2>/dev/null) || bullmq_count=0
+bullmq_count=$(echo "$bullmq_count" | tr -d '[:space:]')
 
 # MySQL mentions (exclude lines with postgresql)
 mysql_files=$(grep -ri "mysql" "$TARGET_ROOT" --include="*.md" 2>/dev/null | grep -vi "postgresql" || echo "")
-mysql_count=$(echo "$mysql_files" | grep -c ":" || echo "0")
+mysql_count=$(echo "$mysql_files" | grep -c ":" 2>/dev/null) || mysql_count=0
+mysql_count=$(echo "$mysql_count" | tr -d '[:space:]')
 
 # Add Prisma to report
 echo "    \"prisma_mentions\": {" >> "$REPORT_FILE"
@@ -129,7 +134,7 @@ echo "      \"description\": \"Prisma mentions (without Drizzle context)\"," >> 
 echo "      \"count\": $prisma_count," >> "$REPORT_FILE"
 echo "      \"files\": [" >> "$REPORT_FILE"
 
-if [ $prisma_count -gt 0 ]; then
+if [ -n "$prisma_count" ] && [ "$prisma_count" -gt 0 ]; then
     first=true
     while IFS=: read -r file line; do
         [ -z "$file" ] && continue
@@ -148,7 +153,7 @@ fi
 echo "      ]" >> "$REPORT_FILE"
 echo "    }," >> "$REPORT_FILE"
 
-if [ $prisma_count -eq 0 ]; then
+if [ -n "$prisma_count" ] && [ "$prisma_count" -eq 0 ]; then
     echo -e "  ${GREEN}✓${NC} No Prisma mentions"
 else
     echo -e "  ${YELLOW}⚠${NC} Found $prisma_count Prisma mentions"
@@ -160,7 +165,7 @@ echo "      \"description\": \"BullMQ mentions (forbidden)\"," >> "$REPORT_FILE"
 echo "      \"count\": $bullmq_count," >> "$REPORT_FILE"
 echo "      \"files\": [" >> "$REPORT_FILE"
 
-if [ $bullmq_count -gt 0 ]; then
+if [ -n "$bullmq_count" ] && [ "$bullmq_count" -gt 0 ]; then
     first=true
     while IFS=: read -r file line; do
         [ -z "$file" ] && continue
@@ -179,7 +184,7 @@ fi
 echo "      ]" >> "$REPORT_FILE"
 echo "    }," >> "$REPORT_FILE"
 
-if [ $bullmq_count -eq 0 ]; then
+if [ -n "$bullmq_count" ] && [ "$bullmq_count" -eq 0 ]; then
     echo -e "  ${GREEN}✓${NC} No BullMQ mentions"
 else
     echo -e "  ${YELLOW}⚠${NC} Found $bullmq_count BullMQ mentions"
@@ -191,7 +196,7 @@ echo "      \"description\": \"MySQL mentions (without PostgreSQL context)\"," >
 echo "      \"count\": $mysql_count," >> "$REPORT_FILE"
 echo "      \"files\": [" >> "$REPORT_FILE"
 
-if [ $mysql_count -gt 0 ]; then
+if [ -n "$mysql_count" ] && [ "$mysql_count" -gt 0 ]; then
     first=true
     while IFS=: read -r file line; do
         [ -z "$file" ] && continue
@@ -210,7 +215,7 @@ fi
 echo "      ]" >> "$REPORT_FILE"
 echo "    }" >> "$REPORT_FILE"
 
-if [ $mysql_count -eq 0 ]; then
+if [ -n "$mysql_count" ] && [ "$mysql_count" -eq 0 ]; then
     echo -e "  ${GREEN}✓${NC} No MySQL mentions"
 else
     echo -e "  ${YELLOW}⚠${NC} Found $mysql_count MySQL mentions"

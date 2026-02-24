@@ -1,6 +1,7 @@
 ---
 title: "GDPR Compliance Checklist for Cold Email [Free Download]"
 description: "A 20-point checklist to ensure your cold email campaigns are GDPR compliant. Includes a penalty risk calculator and real-world case studies."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "gdpr checklist, cold email compliance, gdpr fines, email marketing laws, legitimate interest"
@@ -63,31 +64,31 @@ How much could a violation cost you? Use this manual worksheet to estimate your 
 
 ### 1. Volume of Emails (Monthly)
 
-* < 1,000 emails: **1 point**
+- < 1,000 emails: **1 point**
 - 1,000 - 10,000 emails: **3 points**
 - 10,000+ emails: **5 points**
 
 ### 2. Sensitivity Factor
 
-* Generic B2B (<info@company.com>): **1 point**
+- Generic B2B (<info@company.com>): **1 point**
 - Personalized B2B (<firstname.lastname@company.com>): **3 points**
 - Personal (<name@gmail.com>): **10 points (High Risk)**
 
 ### 3. Revenue Tier
 
-* < $1M Annual Revenue: **1 point**
+- < $1M Annual Revenue: **1 point**
 - $1M - $10M Annual Revenue: **3 points**
 - $10M+ Annual Revenue: **5 points**
 
 ### 4. Visibility Factor
 
-* Unknown Brand: **1 point**
+- Unknown Brand: **1 point**
 - Known Industry Brand: **3 points**
 - Household Name: **5 points**
 
 ### Your Score
 
-* **0-5 Points**: Low Risk (Standard compliance checks needed)
+- **0-5 Points**: Low Risk (Standard compliance checks needed)
 - **6-12 Points**: Medium Risk (Audit recommended immediately)
 - **13+ Points**: High Risk (Legal consultation required)
 

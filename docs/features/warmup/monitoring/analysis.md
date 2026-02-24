@@ -44,7 +44,7 @@ CREATE TABLE reputation_history (
 
 CREATE INDEX idx_reputation_history_domain ON reputation_history(domain_id, snapshot_date);
 
-```
+```text
 
 ### Reputation Monitoring Service
 

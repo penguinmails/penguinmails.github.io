@@ -1,3 +1,10 @@
+---
+title: "External Users: Enterprise Onboarding Flow"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "enterprise onboarding, enterprise implementation, large-scale operations, enterprise security, cross-department coordination"
+---
 # External Users: Enterprise Onboarding Flow
 
 ## Overview
@@ -342,5 +349,3 @@ This document outlines the comprehensive onboarding journey for enterprise teams
 - [`agencies-onboarding.md`](agencies-onboarding)
 
 ---
-
-**Keywords**: enterprise onboarding, enterprise implementation, large-scale operations, enterprise security, cross-department coordination

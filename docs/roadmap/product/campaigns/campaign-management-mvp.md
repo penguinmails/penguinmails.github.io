@@ -1,6 +1,8 @@
 ---
 title: "Campaign Management MVP"
 description: "Basic campaign creation and sending flow"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Campaign Management MVP

@@ -1,3 +1,9 @@
+---
+title: "TEN-1.3: Define Zod Schema for Tenant & Company Creation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-1.3: Define Zod Schema for Tenant & Company Creation
 
@@ -113,5 +119,5 @@ Consider adding:
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

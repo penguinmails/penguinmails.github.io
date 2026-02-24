@@ -1,3 +1,9 @@
+---
+title: "INFRA-2.2: Implement Upsert Logic for smtp_ip_addresses"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-2.2: Implement "Upsert" Logic for smtp_ip_addresses
 
@@ -38,5 +44,5 @@ Create `syncSmtpIps(ipArray)` in `/lib/services/infra.service.ts` that accepts I
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

@@ -1,7 +1,7 @@
-﻿---
+---
 title: "OLAP Analytics Schema Guide"
 description: "Documentation for OLAP Analytics Schema Guide - Olap Analytics Schema Guide"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---
@@ -15,27 +15,20 @@ persona: "Documentation Users"
 **Scope**:
 
 - Aggregated metrics for campaigns, mailboxes, leads, warmups.
-
 - Billing and usage analytics.
-
 - Compliance-relevant audit summaries.
-
 - Long-term trend and BI queries.
 
 **Out of Scope**:
 
 - User-facing notifications.
-
 - Live system events/incidents.
-
 - Raw logs, infra metrics, rate limits, or queue/job internals.
-
 - Heavy content (email bodies, attachments).
 
 For those concerns:
 
 - Notifications & system events: see [`notifications-database-schema-guide`](/docs/implementation-technical/database-infrastructure)
-
 - External logging / observability: see [`external-analytics-logging`](/docs/implementation-technical/database-infrastructure)
 
 ---
@@ -105,17 +98,11 @@ if (usage.total_sent > currentPlan.max_emails_per_month) {
 The OLAP warehouse contains the following canonical tables:
 
 1. `billing_analytics`
-
 2. `campaign_analytics`
-
 3. `mailbox_analytics`
-
 4. `lead_analytics`
-
 5. `warmup_analytics`
-
 6. `sequence_step_analytics`
-
 7. `admin_audit_log` (compliance-focused only)
 
 All other entities (notifications, system events, infra telemetry, etc.) are deliberately excluded or handled in other tiers.
@@ -182,7 +169,6 @@ CREATE UNIQUE INDEX idx_billing_analytics_tenant_period
 Purpose:
 
 - Aggregated usage per tenant per period.
-
 - Drives billing, quotas, and revenue analytics.
 
 ### 1.3 Campaign Analytics
@@ -350,27 +336,18 @@ CREATE TABLE admin_audit_log (
 Purpose:
 
 - OLAP-resident, compliance-scope audit log for high-risk actions:
-
   - Permission/role changes.
-
   - Billing/subscription changes.
-
   - Tenant-wide configuration changes.
-
   - Sensitive export approvals.
-
 - Not a full technical log stream.
 
 Key constraints:
 
 - Do NOT store:
-
   - Raw performance metrics.
-
   - Low-risk UI events.
-
   - Full request/response payloads.
-
 - Those go to external logging (see external-analytics-logging).
 
 ---
@@ -380,30 +357,19 @@ Key constraints:
 The following are intentionally NOT present in OLAP (and must not be reintroduced):
 
 - admin_system_events:
-
   - Live/operational system events are owned by the Notifications DB:
-
     - See [`notifications-database-schema-guide`](/docs/implementation-technical/database-infrastructure)
-
   - OLAP may later define aggregates, but no admin_system_events base table exists here.
-
 - notifications:
-
   - Owned by Notifications DB, not OLAP.
-
 - analytics_connection_pools / analytics_pool_metrics /
   analytics_rate_limits / analytics_access_audit / analytics_export_controls:
 
   - Infra, config, or security telemetry concerns; moved to:
-
     - External logging/monitoring.
-
     - Appropriate operational stores.
-
 - Transactional email histories:
-
   - No generic transactional_emails fact table.
-
   - Operational behavior is via jobs + external logging; analytics only if/when explicitly required.
 
 This keeps the OLAP schema lean, focused, and maintainable.
@@ -419,33 +385,21 @@ See ER diagram:
 Key relationships:
 
 - billing_analytics:
-
   - Hub for per-tenant period metrics.
-
   - Linked to:
-
     - campaign_analytics
-
     - mailbox_analytics
-
     - lead_analytics
-
     - warmup_analytics
-
     - sequence_step_analytics
-
 - campaign_analytics â†” sequence_step_analytics:
-
   - Per-campaign breakdown.
-
 - mailbox_analytics â†” warmup_analytics:
-
   - Per-mailbox warmup tracking.
 
 Logical notes:
 
 - IDs like tenant_id, campaign_id, company_id, mailbox_id, lead_id are logical references to OLTP, denormalized for warehouse flexibility.
-
 - No foreign keys to operational schemas.
 
 ---
@@ -455,7 +409,6 @@ Logical notes:
 Apply RLS and access controls to all OLAP tables:
 
 - Enforce tenant isolation where OLAP is exposed to tenants.
-
 - Restrict admin_audit_log to authorized roles and necessary scopes.
 
 Detailed security and logging strategy:
@@ -471,25 +424,19 @@ We explicitly defer any OLAP-specific modeling of admin/system events.
 If future needs arise (not implemented now), consider:
 
 - Aggregated views, such as:
-
   - incidents_by_tenant_by_month
-
   - mean_time_to_resolve_by_severity
-
   - quota_breach_counts_over_time
 
 These would be:
 
 - Derived from the Notifications DB (`admin_system_events`) and/or external logs.
-
 - Implemented as clearly named aggregate tables/views.
-
 - Still respecting OLAP's "aggregated and lean" constraints.
 
 Currently:
 
 - No such OLAP tables are defined.
-
 - All admin/system event analytics are future/roadmap only.
 
 ---
@@ -499,11 +446,8 @@ Currently:
 OLAP is now clearly constrained to:
 
 - Business-critical aggregates.
-
 - Compliance-focused summaries (admin_audit_log).
-
 - No live notifications or system events.
-
 - No infra/config/telemetry storage.
 
 Notifications/system events, logs, and jobs:

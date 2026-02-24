@@ -1,3 +1,9 @@
+---
+title: "MAIL-1.4: Create a Cron Job to Run the Scheduler"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-1.4: Create a Cron Job to Run the Scheduler
 
@@ -31,5 +37,5 @@ Create a protected API route at `/api/cron/scheduler/route.ts`. This endpoint wi
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

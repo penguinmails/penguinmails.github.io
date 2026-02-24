@@ -1,3 +1,9 @@
+---
+title: "BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)
 
@@ -127,5 +133,5 @@ export async function GET() {
 
 ## Cross-References
 
-- **Routes**: [settings.md]()
-- **API**: [platform-api/subscriptions.md]()
+- **Routes**: [settings.md](/docs/design/routes/settings)
+- **API**: [platform-api/subscriptions.md](/docs/implementation-technical/api/platform-api/subscriptions)

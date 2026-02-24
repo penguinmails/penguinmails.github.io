@@ -1,3 +1,9 @@
+---
+title: "AUTH-3.2: Generate and Apply user_preferences Migration"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-3.2: Generate and Apply user_preferences Migration
 
@@ -68,7 +74,6 @@ The migration should include:
 
 ## Related Documentation
 
-
 ## Dependencies
 
 - [AUTH-3.1](/docs/features/authentication/tasks/AUTH-3.1-define-user-preferences-schema) - User preferences schema must be defined
@@ -89,5 +94,5 @@ The migration should include:
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

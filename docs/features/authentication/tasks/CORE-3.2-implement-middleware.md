@@ -1,3 +1,9 @@
+---
+title: "CORE-3.2: Implement Next.js Middleware for Route Protection"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-3.2: Implement Next.js Middleware for Route Protection
 
@@ -129,5 +135,5 @@ The following routes should be publicly accessible:
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

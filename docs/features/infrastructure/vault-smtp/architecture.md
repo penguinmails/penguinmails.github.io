@@ -2,6 +2,7 @@
 title: "Architecture"
 description: "System architecture and design for Vault SMTP credential management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "architecture, design, system design, Vault integration"
 ---
 
@@ -32,15 +33,10 @@ vault/smtp/{tenant_id}/admin/
 **Secret Fields:**
 
 - `username` - MailU admin username (typically `admin@domain.com`)
-
 - `password` - Encrypted password (AES-256-GCM with random IV)
-
 - `webmail_url` - Full URL to MailU webmail interface
-
 - `created_at` - Timestamp when credentials were first created
-
 - `last_rotated` - Timestamp of last password rotation
-
 - `rotation_policy` - Rotation frequency (`180_days`)
 
 ### Encryption Specification
@@ -50,11 +46,8 @@ vault/smtp/{tenant_id}/admin/
 **Key Derivation:**
 
 - Master encryption key stored in Vault's encryption backend
-
 - Per-tenant encryption keys derived using HKDF (HMAC-based Key Derivation Function)
-
 - Salt: Tenant ID + timestamp
-
 - Iterations: 100,000 (PBKDF2)
 
 **Encryption Process:**

@@ -2,6 +2,7 @@
 title: "Frontend UI Specification"
 description: "UI specifications for API key management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "UI, frontend, user interface"
 ---
 
@@ -22,25 +23,17 @@ keywords: "UI, frontend, user interface"
 **Columns:**
 
 - Name (user-provided)
-
 - Key (masked: `pm_live_abc...xyz`)
-
 - Permissions (badges)
-
 - Rate Limit (requests/min)
-
 - Status (Active, Revoked)
-
 - Last Used (relative time: "2 hours ago")
-
 - Actions (Copy, Regenerate, Revoke)
 
 **Actions:**
 
 - **Copy:** Copy masked key to clipboard (for reference)
-
 - **Regenerate:** Open confirmation modal, generate new key
-
 - **Revoke:** Open confirmation modal, revoke key
 
 #### 2. Create API Key Button
@@ -52,15 +45,12 @@ keywords: "UI, frontend, user interface"
 **Modal Fields:**
 
 - Name (text input, required)
-
 - Permissions (multi-select checkboxes)
-
 - Rate Limit (display only, based on subscription tier)
 
 **Modal Actions:**
 
 - Cancel (close modal)
-
 - Generate Key (create key, display once)
 
 #### 3. API Key Details Modal
@@ -70,23 +60,14 @@ keywords: "UI, frontend, user interface"
 **Content:**
 
 - Key name
-
 - Masked key value
-
 - Permissions list
-
 - Rate limit
-
 - Created date
-
 - Last used timestamp
-
 - Usage chart (requests per day, last 30 days)
-
 - Error rate chart
-
 - Top endpoints table
-
 - Geographic distribution map
 
 #### 4. API Key Created Success Modal
@@ -96,21 +77,15 @@ keywords: "UI, frontend, user interface"
 **Content:**
 
 - âš ï¸ Warning: "Store this key securely. It will not be shown again."
-
 - API key value (full, copyable)
-
 - Copy button
-
 - Download as .env file button
-
 - Code examples (curl, Node.js, Python)
 
 **Actions:**
 
 - Copy Key (copy to clipboard)
-
 - Download .env (download as file)
-
 - Close (close modal, cannot reopen to view key)
 
 **Example Code Snippets:**

@@ -2,6 +2,7 @@
 title: "API Endpoints"
 description: "API documentation for Vault SMTP credential operations"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "API, endpoints, REST API, integration"
 ---
 

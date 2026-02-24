@@ -1,3 +1,9 @@
+---
+title: "[LEADS-2.1] Create Contacts API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # [LEADS-2.1] Create Contacts API
 
@@ -78,5 +84,5 @@ export async function GET(req: Request) {
 
 ## Cross-References
 
-- **Routes**: [tenant-leads.md]()
+- **Routes**: [tenant-leads.md](/docs/design/routes/tenant-leads)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

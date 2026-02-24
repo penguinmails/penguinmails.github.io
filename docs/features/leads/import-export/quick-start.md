@@ -2,6 +2,7 @@
 title: "Level 1: Quick Start Guide"
 description: "Basic contact import and export workflows"
 level: "1"
+last_modified_date: "2026-02-24"
 persona: "Marketing Users"
 keywords: "quick start, import contacts, export contacts, CSV upload"
 ---
@@ -17,9 +18,7 @@ keywords: "quick start, import contacts, export contacts, CSV upload"
 **Supported Formats:**
 
 - CSV (Comma-separated values)
-
 - TSV (Tab-separated values)
-
 - Excel (.xlsx, .xls)
 
 **Recommended Columns:**

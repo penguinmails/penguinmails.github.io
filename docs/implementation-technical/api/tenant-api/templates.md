@@ -25,9 +25,7 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `workspace` (string, required): Workspace slug
-
 - `limit` (integer, optional): Default 20
-
 - `offset` (integer, optional): Default 0
 
 **Response**:

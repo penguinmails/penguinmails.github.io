@@ -1,7 +1,7 @@
-﻿---
-title: "Content Database ER Diagram"
+---
+title: "Content Database ER Diagram (Mermaid)"
 description: "Content Database ER Diagram (Mermaid)"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---
@@ -15,9 +15,7 @@ This diagram represents the canonical Content DB schema corresponding to:
 It is scoped strictly to heavy content storage (bodies, attachments) and intentionally excludes:
 
 - Analytics/OLAP tables
-
 - OLTP business entities
-
 - Generic logging/telemetry/infra metrics (see [External Analytics Logging](/docs/implementation-technical/database-infrastructure/content-database/README))
 
 ```mermaid

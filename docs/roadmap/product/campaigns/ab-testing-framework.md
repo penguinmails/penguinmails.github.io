@@ -1,6 +1,8 @@
 ---
 title: "A/B Testing Framework"
 description: "Split testing for subject lines and content"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # A/B Testing Framework

@@ -1,6 +1,7 @@
 ---
 title: "Agency Reseller Program: Business FAQ"
 description: "Answers to common business questions for agencies reselling PenguinMails infrastructure, including white-labeling, billing, and client ownership."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "agency reseller, white label, billing models, client management, agency faq"

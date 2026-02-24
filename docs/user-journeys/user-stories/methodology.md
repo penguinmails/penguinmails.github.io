@@ -1,3 +1,10 @@
+---
+title: "User Stories Methodology"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "user stories, methodology, templates, prioritization, validation, user types, business value"
+---
 # User Stories Methodology
 
 ## Overview
@@ -339,5 +346,3 @@ FOCUS AREAS:
 **Next Steps**: Use this methodology to create new user stories and migrate existing stories to the new format. Replace the previous overwhelming framework with this streamlined, systematic approach.
 
 ---
-
-**Keywords**: user stories, methodology, templates, prioritization, validation, user types, business value

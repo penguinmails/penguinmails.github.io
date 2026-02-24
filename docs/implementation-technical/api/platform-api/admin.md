@@ -25,9 +25,7 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `search`: Email or name
-
 - `role`: Filter by role
-
 - `tenant_id`: Filter by tenant
 
 **Response**:

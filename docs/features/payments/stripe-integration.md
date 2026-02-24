@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Stripe Integration"
 description: "Stripe payment processing for secure subscription billing in PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Developers, Billing Administrators"
 status: "ACTIVE"
@@ -21,15 +21,10 @@ PenguinMails uses [Stripe](https://stripe.com) as our payment processor to handl
 ### Why Stripe?
 
 - **Security** - PCI DSS Level 1 compliant (highest security standard)
-
 - **Global** - Supports 135+ currencies and payment methods
-
 - **Reliable** - 99.99% uptime SLA
-
 - **No Card Storage** - PenguinMails never stores card details
-
 - **Fraud Protection** - Advanced fraud detection built-in
-
 - **Developer-Friendly** - Robust API and webhooks
 
 ---
@@ -112,13 +107,9 @@ User Redirected to Dashboard
 #### Checkout Features
 
 - ✅ **Mobile-optimized** - Perfect on any device
-
 - ✅ **Multiple payment methods** - Credit/debit cards,Apple Pay, Google Pay
-
 - ✅ **Localized** - Available in 25+ languages
-
 - ✅ **Tax calculation** - Automatic tax computation
-
 - ✅ **Saved payment methods** - Quick checkout for returning users
 
 #### Implementation
@@ -151,15 +142,10 @@ Response:
 **Automatic subscription creation** via Stripe Checkout.
 
 1. User selects plan
-
 2. Redirected to Stripe Checkout
-
 3. Enters payment information
-
 4. Stripe creates subscription
-
 5. Webhook notifies PenguinMails
-
 6. Subscription activated in database
 
 ### Updating Payment Methods
@@ -182,11 +168,8 @@ Response:
 **Users can:**
 
 - Update payment method
-
 - View billing history
-
 - Download invoices
-
 - Update billing address
 
 ---
@@ -198,21 +181,15 @@ Response:
 #### Retry Schedule
 
 - **Day 0:** Payment fails, email notification sent
-
 - **Day 3:** First retry attempt
-
 - **Day 5:** Second retry attempt
-
 - **Day 7:** Third retry attempt, account suspended
-
 - **Day 14:** Final retry, subscription canceled if fails
 
 **User Actions:**
 
 - Update payment method anytime
-
 - Retry payment manually
-
 - Contact support for assistance
 
 ---
@@ -237,25 +214,19 @@ Header: stripe-signature: {signature}
 // Subscription Events
 
 - customer.subscription.created
-
 - customer.subscription.updated
-
 - customer.subscription.deleted
-
 - customer.subscription.trial_will_end
 
 // Payment Events
 
 - invoice.paid
-
 - invoice.payment_failed
-
 - invoice.payment_action_required
 
 // Customer Events
 
 - customer.updated
-
 - customer.deleted
 
 ```
@@ -386,11 +357,8 @@ CREATE TABLE subscriptions (
 **Automatic invoice generation** via Stripe.
 
 - **Auto-generated** - Every billing cycle
-
 - **Email delivery** - Sent to billing email
-
 - **PDF download** - Available in customer portal
-
 - **Itemized** - Subscription + usage charges + taxes
 
 ### Payment History
@@ -493,11 +461,8 @@ stripe trigger checkout.session.completed
 **PenguinMails is PCI DSS compliant** by using Stripe.
 
 - ✅ **No card data stored** - Stripe handles all card info
-
 - ✅ **Tokenization** - Only store Stripe tokens
-
 - ✅ **Secure transmission** - TLS 1.3 encryption
-
 - ✅ **Annual audits** - Stripe maintains compliance
 
 ### SCA (Strong Customer Authentication)
@@ -505,9 +470,7 @@ stripe trigger checkout.session.completed
 **European regulation compliance** for card payments.
 
 - **3D Secure** - Built into Stripe Checkout
-
 - **Automatic handling** - Stripe manages SCA requirements
-
 - **Fallback methods** - Alternative authentication if needed
 
 ---
@@ -517,21 +480,17 @@ stripe trigger checkout.session.completed
 ### Payments
 
 - **[Subscription Management](/docs/features/payments/subscription-management)** - Plan details and management
-
 - **[Billing Dashboard](/docs/features/payments/billing-dashboard)** - Usage and invoices
-
 - **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Technical
 
 - **[Stripe API Documentation](/docs/implementation-technical/integration/stripe)** - Technical integration details
-
 - **[Webhook Handling](/docs/implementation-technical/api/platform-api/webhooks)** - Webhook implementation
 
 ### Support
 
 - **[Billing FAQ](/docs/business/faq/billing-faq)** - Common questions
-
 - **[Contact Support](mailto:support@penguinmails.com)** - Payment issues
 
 ---

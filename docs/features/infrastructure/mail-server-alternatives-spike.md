@@ -1,3 +1,9 @@
+---
+title: "Spike: Mail Server Alternatives Investigation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Spike: Mail Server Alternatives Investigation
 
 **Priority:** P0 (Blocks Unified Inbox MVP)  
@@ -74,17 +80,14 @@ For each candidate:
   - How does it store emails?
   - What database backends are supported?
   - Multi-tenant support?
-
 - [ ] **Schema Extensibility:**
   - Can we add custom fields?
   - Can we add foreign keys to OLTP?
   - Will custom fields survive upgrades?
-
 - [ ] **Integration:**
   - API availability?
   - Webhook support?
   - IMAP/SMTP compliance?
-
 - [ ] **Performance:**
   - Indexing capabilities?
   - Query performance?
@@ -137,7 +140,7 @@ Based on evaluation, decide where inbox metadata lives:
 
 ## Related Documentation
 
-- **Routes**: [tenant-inbox.md]()
+- **Routes**: [tenant-inbox.md](/docs/design/routes/tenant-inbox.md)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)
 - **Features**: [inbox/](/docs/features/inbox/)
 

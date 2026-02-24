@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.1: Set Up Standalone Worker Project"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.1: Set Up Standalone Worker Project
 
@@ -31,5 +37,5 @@ Create a new Node.js/TypeScript project in a `/worker` sub-directory of the repo
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

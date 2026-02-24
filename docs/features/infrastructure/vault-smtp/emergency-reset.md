@@ -2,6 +2,7 @@
 title: "Emergency Credential Reset"
 description: "Emergency procedures for credential reset"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "emergency reset, credential recovery, incident response"
 ---
 

@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Getting Started - Developer Environment & Setup"
 description: "Environment setup, first-time contributor guidance, and project structure overview"
-last_modified_date: "2025-11-24"
-level: "1"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "New Contributors"
 ---
 
@@ -15,19 +15,12 @@ Thank you for your interest in contributing to PenguinMails! We're excited to ha
 **What You Can Contribute:**
 
 - Bug fixes and improvements
-
 - New features and enhancements
-
 - Documentation improvements
-
 - Test coverage additions
-
 - UI/UX improvements
-
 - Internationalization (i18n)
-
 - Analytics and reporting features
-
 - AI/ML integration improvements
 
 ## First-Time Contributor Setup
@@ -138,19 +131,12 @@ npm run type-check
 **Required Extensions:**
 
 - TypeScript
-
 - JavaScript
-
 - ESLint
-
 - Prettier
-
 - GitLens
-
 - Docker
-
 - REST Client
-
 - SQLite Viewer
 
 ### Development Tools Installation
@@ -202,23 +188,16 @@ penguinmails/
 After setting up your environment:
 
 1. **Review the contribution process** in [`code-contribution.md`](/docs/implementation-technical/development-guidelines/code-contribution)
-
 2. **Understand our testing requirements** in [`testing-requirements.md`](/docs/implementation-technical/development-guidelines/testing-requirements)
-
 3. **Learn our coding standards** in [`code-standards.md`](/docs/implementation-technical/development-guidelines/code-standards/overview)
-
 4. **Find an issue to work on** by checking our [GitHub Issues](https://github.com/penguinmails/platform/issues)
-
 5. **Join our community** by introducing yourself in our [GitHub Discussions](https://github.com/penguinmails/platform/discussions)
 
 ## Getting Help
 
 - **Documentation**: Check our [comprehensive documentation](https://docs.penguinmails.com)
-
 - **Community**: Join our [Discord server](https://discord.gg/penguinmails)
-
 - **Issues**: Use [GitHub Issues](https://github.com/penguinmails/platform/issues) for bugs and feature requests
-
 - **Discussions**: Use [GitHub Discussions](https://github.com/penguinmails/platform/discussions) for questions
 
 Welcome to the PenguinMails community!

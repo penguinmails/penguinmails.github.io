@@ -40,7 +40,7 @@ CREATE TABLE template_tags (
     UNIQUE(template_id, tag_id)
 );
 
-```
+```text
 
 #### Eta Template Rendering Storage
 
@@ -137,9 +137,7 @@ CREATE TABLE campaign_sequence_steps (
 **Step Types:**
 
 - **email**: Send email using template
-
 - **wait**: Delay before next step
-
 - **condition**: Conditional logic based on lead behavior
 
 ---

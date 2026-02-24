@@ -1,6 +1,8 @@
 ---
 title: "A/B Testing & Experimentation Spike"
 description: "Evaluate advanced experimentation capabilities"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # A/B Testing & Experimentation Spike

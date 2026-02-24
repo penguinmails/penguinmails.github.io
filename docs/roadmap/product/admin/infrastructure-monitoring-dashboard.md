@@ -1,6 +1,8 @@
 ---
 title: "Platform Infrastructure Monitoring Dashboard"
 description: "Comprehensive infrastructure monitoring dashboard for platform administrators"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Platform Infrastructure Monitoring Dashboard

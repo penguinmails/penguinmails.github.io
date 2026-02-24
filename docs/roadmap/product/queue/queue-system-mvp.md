@@ -1,6 +1,8 @@
 ---
 title: "Queue System MVP"
 description: "Basic Redis-backed queue for email delivery"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Queue System MVP
@@ -16,7 +18,7 @@ Basic Redis-backed queue for reliable email delivery with retry logic.
 
 **Acceptance Criteria**:
 
-- Redis-based job queue (BullMQ or similar)
+- Redis-based job queue (Redis worker queue implementation)
 - Job persistence (ensure no data loss on restart)
 - Basic retry logic (3 attempts with backoff)
 - Concurrency control (limit workers per queue)

@@ -13,33 +13,25 @@ Available Templates:
 1. Flash Sale
 
    - Urgency-focused
-
    - Countdown timer
-
    - Best for: Limited-time offers
 
 2. Product Launch
 
    - Product showcase
-
    - Feature highlights
-
    - Best for: New releases
 
 3. Seasonal Campaign
 
    - Holiday themes
-
    - Festive design
-
    - Best for: Holiday sales
 
 4. Discount Code
 
    - Code highlight
-
    - Simple redemption
-
    - Best for: Coupon campaigns
 
 ```
@@ -180,11 +172,8 @@ License:
 Review Process:
 
   1. Design quality check (1-2 days)
-
   2. Code validation
-
   3. Mobile responsiveness test
-
   4. Approval & publication
 
 ```
@@ -215,9 +204,7 @@ Compared to Category Average:
 Top Performing Variants:
 
   1. With video thumbnail: 48% open rate
-
   2. Personalized subject: 45% open rate
-
   3. Original: 42% open rate
 
 ```
@@ -258,41 +245,29 @@ SaaS Template Collection (24 templates)
 Onboarding:
 
   - Trial Start Welcome
-
   - Feature Activation
-
   - Onboarding Progress
-
   - Trial Expiring Soon
 
 Engagement:
 
   - Feature Announcement
-
   - Product Update
-
   - Tips & Best Practices
-
   - Case Study Showcase
 
 Conversion:
 
   - Trial to Paid
-
   - Upgrade Offer
-
   - Annual Plan Discount
-
   - Enterprise Inquiry
 
 Retention:
 
   - Re-engagement
-
   - Win-back Campaign
-
   - Renewal Reminder
-
   - Success Story
 
 ```
@@ -306,41 +281,29 @@ E-commerce Template Collection (20 templates)
 Transactional:
 
   - Order Confirmation
-
   - Shipping Notification
-
   - Delivery Confirmation
-
   - Return/Refund
 
 Marketing:
 
   - Abandoned Cart
-
   - Product Recommendations
-
   - Back in Stock
-
   - Price Drop Alert
 
 Seasonal:
 
   - Black Friday
-
   - Cyber Monday
-
   - Holiday Gift Guide
-
   - End of Season Sale
 
 Loyalty:
 
   - Birthday Discount
-
   - VIP Exclusive
-
   - Referral Program
-
   - Loyalty Points Update
 
 ```

@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.1: Define Drizzle Schemas for Infrastructure"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.1: Define Drizzle Schemas for Infrastructure
 
@@ -37,5 +43,5 @@ In the `/lib/db/schema` directory, create schema files for `vps_instances` and `
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

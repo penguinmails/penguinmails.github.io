@@ -367,8 +367,7 @@ Built with modern web technologies and best practices:
 
 ## License
 
-This documentation is licensed under the [Apache License 2.0](LICENSE).  
-PenguinMails is a trademark of PenguinMails, Inc.
+This documentation is licensed under the [MIT License](LICENSE).
 
 ---
 

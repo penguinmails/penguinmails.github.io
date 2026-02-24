@@ -1,6 +1,8 @@
 ---
 title: "Priority Queues"
 description: "VIP lane for transactional and high-priority emails"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Priority Queues

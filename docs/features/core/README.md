@@ -1,6 +1,8 @@
 ---
 title: "Core Foundation"
 description: "Shared foundation components: project setup, database, Redis, validation"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Core Foundation
@@ -18,22 +20,22 @@ Shared technical foundation that supports all other features.
 
 ## Tasks
 
-Implementation tasks for core components:
+Implementation tasks for core components are completed:
 
-- [Project Initialization](/docs/features/core/tasks/CORE-1.1-initialize-nextjs-project)
-- [ESLint Configuration](/docs/features/core/tasks/CORE-1.2-configure-eslint)
-- [Prettier Configuration](/docs/features/core/tasks/CORE-1.3-configure-prettier)
-- [Pre-commit Hooks](/docs/features/core/tasks/CORE-1.4-implement-pre-commit-hooks)
-- [Environment Variables](/docs/features/core/tasks/CORE-1.5-setup-environment-variables)
-- [Drizzle Installation](/docs/features/core/tasks/CORE-2.1-install-configure-drizzle)
-- [Initial Schemas](/docs/features/core/tasks/CORE-2.2-define-initial-schemas)
-- [First Migration](/docs/features/core/tasks/CORE-2.3-generate-first-migration)
-- [Migration Script](/docs/features/core/tasks/CORE-2.4-implement-migration-script)
-- [Redis Installation](/docs/features/core/tasks/CORE-4.1-install-configure-redis)
-- [Redis Service](/docs/features/core/tasks/CORE-4.2-create-redis-service)
-- [Redis Health Check](/docs/features/core/tasks/CORE-4.3-implement-redis-health-check)
-- [Zod Schemas](/docs/features/core/tasks/CORE-5.1-install-zod-define-schemas)
-- [Validation Endpoint](/docs/features/core/tasks/CORE-5.2-create-test-validation-endpoint)
+- [Project Initialization](/docs/features/core/tasks/CORE-1.1-initialize-nextjs-project) (Completed)
+- [ESLint Configuration](/docs/features/core/tasks/CORE-1.2-configure-eslint) (Completed)
+- [Prettier Configuration](/docs/features/core/tasks/CORE-1.3-configure-prettier) (Completed)
+- [Pre-commit Hooks](/docs/features/core/tasks/CORE-1.4-implement-pre-commit-hooks) (Completed)
+- [Environment Variables](/docs/features/core/tasks/CORE-1.5-setup-environment-variables) (Completed)
+- [Drizzle Installation](/docs/features/core/tasks/CORE-2.1-install-configure-drizzle) (Completed)
+- [Initial Schemas](/docs/features/core/tasks/CORE-2.2-define-initial-schemas) (Completed)
+- [First Migration](/docs/features/core/tasks/CORE-2.3-generate-first-migration) (Completed)
+- [Migration Script](/docs/features/core/tasks/CORE-2.4-implement-migration-script) (Completed)
+- [Redis Installation](/docs/features/core/tasks/CORE-4.1-install-configure-redis) (Completed)
+- [Redis Service](/docs/features/core/tasks/CORE-4.2-create-redis-service) (Completed)
+- [Redis Health Check](/docs/features/core/tasks/CORE-4.3-implement-redis-health-check) (Completed)
+- [Zod Schemas](/docs/features/core/tasks/CORE-5.1-install-zod-define-schemas) (Completed)
+- [Validation Endpoint](/docs/features/core/tasks/CORE-5.2-create-test-validation-endpoint) (Completed)
 
 ## Related Documentation
 

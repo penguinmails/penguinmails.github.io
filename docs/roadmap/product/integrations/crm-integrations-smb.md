@@ -1,6 +1,8 @@
 ---
 title: "SMB CRM Integrations"
 description: "Integrations for Pipedrive, Zoho CRM, and Close.io"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # SMB CRM Integrations

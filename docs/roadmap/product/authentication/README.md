@@ -1,6 +1,8 @@
 ---
 title: "Authentication & Security Roadmap"
 description: "Roadmap for user authentication, security, and compliance"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Authentication & Security Roadmap

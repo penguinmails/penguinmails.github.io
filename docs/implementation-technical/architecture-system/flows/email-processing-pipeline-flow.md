@@ -3,6 +3,7 @@ title: "Email Processing Pipeline Flow"
 description: "Complete email flow from client creation through queue processing to database state updates"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "email processing pipeline, queue system, asynchronous processing, real-time analytics, SMTP worker, fault tolerance"
 persona: "Documentation Users"
 ---
 
@@ -66,37 +67,27 @@ sequenceDiagram
 ### **1. Campaign Creation**
 
 - **Client Request**: User creates email campaign through dashboard
-
 - **Authentication**: API validates user token and permissions
-
 - **Data Storage**: Campaign definition stored in database with unique ID
-
 - **Job Queueing**: Email jobs created and added to processing queue
 
 ### **2. Queue Processing**
 
 - **Job Distribution**: Queue system distributes jobs to available SMTP workers
-
 - **SMTP Worker Processing**: Each worker processes individual email jobs
-
 - **MailU Integration**: Workers send emails through MailU SMTP stack
-
 - **Delivery Confirmation**: MailU confirms email delivery status
 
 ### **3. State Management**
 
 - **Database Updates**: Email status updated in database (pending → sent → delivered)
-
 - **Event Logging**: All interactions logged for analytics and audit trails
-
 - **Error Handling**: Failed deliveries trigger retry logic and error reporting
 
 ### **4. Real-Time Analytics**
 
 - **Event Processing**: Analytics engine processes email events (send, open, click, reply)
-
 - **Data Aggregation**: Campaign performance metrics aggregated and stored
-
 - **Live Updates**: Dashboard receives real-time updates via WebSocket
 
 ## Key Processing Features
@@ -104,27 +95,19 @@ sequenceDiagram
 ### **Asynchronous Architecture**
 
 - **Non-blocking Processing**: Campaign creation doesn't wait for email delivery
-
 - **Scalable Queue System**: Redis + PostgreSQL handles millions of email jobs
-
 - **Worker Scaling**: Horizontal scaling of SMTP workers based on queue load
 
 ### **Fault Tolerance**
 
 - **Retry Logic**: Automatic retry for temporary delivery failures
-
 - **Dead Letter Queue**: Failed jobs moved to separate queue for analysis
-
 - **Graceful Degradation**: System continues operating even with component failures
 
 ### **Real-Time Monitoring**
 
 - **Live Status Updates**: Campaign progress visible in real-time
-
 - **Performance Metrics**: Delivery rates, bounce rates, and engagement tracked
-
 - **Alert System**: Automatic alerts for delivery issues or performance problems
 
 ---
-
-**Keywords**: email processing pipeline, queue system, asynchronous processing, real-time analytics, SMTP worker, fault tolerance

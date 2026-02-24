@@ -1,3 +1,9 @@
+---
+title: "INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)
 
@@ -37,5 +43,5 @@ Create a protected GET API route at `/api/infrastructure/status/route.ts` which 
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

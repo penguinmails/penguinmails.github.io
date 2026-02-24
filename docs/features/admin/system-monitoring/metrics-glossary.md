@@ -3,6 +3,7 @@ title: "Metrics Glossary"
 description: "Reference guide for all available metrics in PenguinMails, their sources, and update frequencies"
 last_modified_date: "2025-12-07"
 level: "2"
+keywords: "metrics, analytics, OLAP, OLTP, PostHog, monitoring, KPIs"
 persona: "Operations Engineers, Data Analysts"
 status: "ACTIVE"
 category: "Admin"
@@ -164,5 +165,3 @@ To set realistic expectations, the following are **not currently tracked**:
 - [Infrastructure Monitoring](/docs/features/admin/system-monitoring/infrastructure-monitoring) - External tools
 
 ---
-
-**Keywords**: metrics, analytics, OLAP, OLTP, PostHog, monitoring, KPIs

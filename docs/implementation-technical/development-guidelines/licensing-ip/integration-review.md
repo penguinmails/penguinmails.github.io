@@ -13,13 +13,9 @@ keywords: "integration, review, third-party"
 ### Pre-Integration Checklist
 
 - [ ] License compatibility verified
-
 - [ ] Attribution requirements identified
-
 - [ ] Copyleft obligations assessed
-
 - [ ] Commercial use restrictions reviewed
-
 - [ ] Distribution requirements documented
 
 ### Common License Scenarios
@@ -29,11 +25,8 @@ keywords: "integration, review, third-party"
 **Requirements:**
 
 - Include Apache 2.0 license text
-
 - Provide attribution notice
-
 - Document modifications made
-
 - Include NOTICE file if provided
 
 **Example Integration:**
@@ -75,9 +68,7 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 **Requirements:**
 
 - Include MIT license attribution
-
 - Retain original copyright notice
-
 - Document usage context
 
 **Example Integration:**
@@ -100,7 +91,5 @@ async function integratedApacheFunction(): Promise<ApacheIntegrationResult> {
 **Process:**
 
 1. Legal review required
-
 2. Consider dual-licensing options
-
 3. Implement clean room reimplementation if possible

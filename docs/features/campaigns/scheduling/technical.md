@@ -44,7 +44,7 @@ CREATE TABLE contact_send_preferences (
 
 CREATE INDEX idx_contact_send_prefs_contact ON contact_send_preferences(contact_id);
 
-```
+```text
 
 ### Scheduling Service
 

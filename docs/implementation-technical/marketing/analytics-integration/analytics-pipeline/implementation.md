@@ -104,8 +104,6 @@ jobs:
 
 
     - uses: actions/checkout@v3
-
-
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
@@ -131,8 +129,6 @@ jobs:
 
 
     - uses: actions/checkout@v3
-
-
     - name: Build Docker image
       run: docker build -t company/marketing-analytics:${{ github.sha }} .
 

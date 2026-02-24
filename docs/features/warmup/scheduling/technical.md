@@ -118,7 +118,7 @@ CREATE TABLE warmup_events (
 
 CREATE INDEX idx_warmup_events_schedule ON warmup_events(warmup_schedule_id, created_at);
 
-```
+```text
 
 ### Warmup Service
 

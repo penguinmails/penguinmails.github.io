@@ -1,3 +1,10 @@
+---
+title: "User Stories Templates: External Stakeholders"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "stakeholder stories, investor relations, media relations, competitive intelligence, analyst relations"
+---
 # User Stories Templates: External Stakeholders
 
 ## Overview
@@ -362,6 +369,7 @@ DEFINITION OF DONE:
 ## Best Practices for Stakeholder Stories
 
 ### **Story Quality Checklist**
+
 - [ ] Clear stakeholder type and specific role identified
 - [ ] Business value and information needs clearly defined
 - [ ] Appropriate access level and confidentiality considerations addressed
@@ -369,6 +377,7 @@ DEFINITION OF DONE:
 - [ ] Stakeholder decision-making criteria incorporated
 
 ### **Stakeholder Story Guidelines**
+
 - **Professional Presentation**: All stakeholder interactions must meet professional standards
 - **Information Accuracy**: Ensure all shared information is accurate and current
 - **Confidentiality Protection**: Balance transparency with competitive advantage protection
@@ -376,6 +385,7 @@ DEFINITION OF DONE:
 - **Relationship Building**: Use stories to build long-term stakeholder relationships
 
 ### **Common Stakeholder Story Patterns**
+
 1. **Information Access**: Dashboards, reports, data room access
 2. **Professional Services**: Briefings, demos, consultations
 3. **Relationship Management**: Communication, feedback, engagement
@@ -384,12 +394,11 @@ DEFINITION OF DONE:
 
 ---
 
-**Related Documents**
+### Related Documents
+
 - [`../methodology.md`](../methodology)
 - [`../user-types-classification.md`](../user-types-classification)
 - [`internal-user-stories.md`](internal-user-stories)
 - [`customer-stories.md`](customer-stories)
 
 ---
-
-**Keywords**: stakeholder stories, investor relations, media relations, competitive intelligence, analyst relations

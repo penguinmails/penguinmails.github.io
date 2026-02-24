@@ -1,5 +1,11 @@
+---
+title: "Milestone 1 - Database Schema and Hostwind API Client"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
-# Milestone 1 — Database Schema and Hostwind API Client
+# Milestone 1 - Database Schema and Hostwind API Client
 
 **Goal:** Prepare the database to store infrastructure data and build a secure, reusable Hostwind API client.
 

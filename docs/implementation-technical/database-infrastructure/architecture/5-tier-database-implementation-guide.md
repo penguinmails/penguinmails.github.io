@@ -1,9 +1,11 @@
-﻿---
-last_modified_date: "2025-11-19"
+---
+title: "5-Tier Database Implementation Guide"
+description: ""
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "database implementation, cross-tier integration, operational patterns, performance optimization, deployment, monitoring"
 persona: "Backend Developers"
 description: "Implementation guide for the 5-tier database architecture system, including operational considerations, integration patterns, and deployment guidance"
-keywords: ["database implementation", "5-tier", "cross-tier integration", "operational patterns", "deployment", "performance optimization"]
 ---
 
 # 5-Tier Database Implementation Guide
@@ -55,11 +57,8 @@ async function sendEmail(emailData: EmailData) {
 ### Integration Best Practices
 
 1. **Opaque Storage Keys**: Always use opaque keys for cross-tier references
-
 2. **Transaction Management**: Implement proper transaction boundaries
-
 3. **Cleanup Mechanisms**: Add background jobs for orphaned data cleanup
-
 4. **Consistency Checks**: Regular verification of cross-tier data integrity
 
 ## Operational Considerations
@@ -123,23 +122,16 @@ const pools = {
 **Key Metrics to Monitor**:
 
 - Query response times per tier
-
 - Connection pool utilization
-
 - Queue depth and processing rates
-
 - Cross-tier consistency checks
-
 - Tenant-specific performance metrics
 
 **Critical Alerts**:
 
 - Any tier exceeding 80% capacity
-
 - Cross-tier consistency failures
-
 - Connection pool exhaustion
-
 - Queue job failures exceeding thresholds
 
 ## Getting Started
@@ -180,29 +172,19 @@ CREATE POLICY tenant_isolation ON campaigns
 ### Development Guidelines
 
 1. **Always specify tenant_id**: Every multi-tenant operation must include tenant isolation
-
 2. **Use opaque keys for content**: Never expose Content DB relationships directly
-
 3. **Implement consistency checks**: Add background jobs to verify cross-tier integrity
-
 4. **Monitor query performance**: Set up query performance monitoring per tier
-
 5. **Test failure scenarios**: Verify graceful degradation when any tier is unavailable
 
 ### Code Review Checklist
 
 - [ ] **Tier Assignment**: Is data stored in the appropriate tier?
-
 - [ ] **Tenant Isolation**: Does every query respect RLS policies?
-
 - [ ] **Cross-Tier References**: Are opaque keys used instead of foreign keys?
-
 - [ ] **Error Handling**: How does this fail when each tier is unavailable?
-
 - [ ] **Performance**: Are queries optimized for the target tier's access patterns?
-
 - [ ] **Monitoring**: Are appropriate metrics and logs emitted?
-
 - [ ] **Retention**: Is there a plan for data lifecycle management?
 
 ---
@@ -210,13 +192,7 @@ CREATE POLICY tenant_isolation ON campaigns
 **Related Documentation**:
 
 - [5-Tier Database Architecture Guide](/docs/implementation-technical/database-infrastructure/architecture/5-tier-database-architecture-guide) - Core architectural concepts
-
 - [OLTP Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/oltp-database/) - Operational database implementation
-
 - [Content Database Documentation](/docs/implementation-technical/database-infrastructure/architecture/content-database/README) - Content storage patterns
-
 - [Queue System Documentation](/docs/implementation-technical/database-infrastructure/architecture/queue/) - Background job processing
-
 - [Database Infrastructure Overview](/docs/implementation-technical/database-infrastructure/architecture/README) - Complete ecosystem
-
-**Keywords**: database implementation, cross-tier integration, operational patterns, performance optimization, deployment, monitoring

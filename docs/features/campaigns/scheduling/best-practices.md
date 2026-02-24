@@ -32,11 +32,8 @@ keywords: "best practices, optimization, tips"
   logger.info('Contact send preferences updated');
 });
 
-```
+    ### API Endpoints
 
-### API Endpoints
-
-```typescript
 // Create campaign schedule
 router.post('/api/campaigns/:id/schedule', async (req, res) => {
   const { scheduleType, scheduledDate, scheduledTime, timezone, recurrencePattern } = req.body;
@@ -109,35 +106,29 @@ router.post('/api/campaigns/:id/schedule/preview', async (req, res) => {
   res.json({ previews });
 });
 
-```
+    ---
 
----
+    ## Related Documentation
 
-## Related Documentation
+    ### Campaign Features
 
-### Campaign Features
+    - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Core campaign creation and management
+    - **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
+    - **[A/B Testing](/docs/features/campaigns/ab-testing)** - Campaign optimization
 
-- **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Core campaign creation and management
+    ### Analytics
 
-- **[Email Sequences](/docs/features/campaigns/email-sequences)** - Multi-step automated sequences
+    - **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
+    - **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
 
-- **[A/B Testing](/docs/features/campaigns/ab-testing)** - Campaign optimization
+    ### Technical
 
-### Analytics
+    - **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
+    - **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
 
-- **[Core Analytics](/docs/features/analytics/core-analytics/overview)** - Performance tracking
+    ---
 
-- **[Enhanced Analytics](/docs/features/analytics/enhanced-analytics/overview)** - Advanced insights
-
-### Technical
-
-- **[Email Pipeline](/docs/features/queue/email-pipeline)** - Email sending infrastructure
-
-- **[API Documentation](/docs/implementation-technical/api/tenant-api/campaigns)** - Campaign APIs
-
----
-
-**Last Updated:** November 25, 2025
-**Status:** Planned - High Priority Q1 2026 Feature
-**Target Release:** Q1 2026
-**Owner:** Campaigns Team
+    **Last Updated:** November 25, 2025
+    **Status:** Planned - High Priority Q1 2026 Feature
+    **Target Release:** Q1 2026
+    **Owner:** Campaigns Team

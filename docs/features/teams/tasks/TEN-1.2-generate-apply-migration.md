@@ -1,3 +1,9 @@
+---
+title: "TEN-1.2: Generate and Apply companies Migration"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-1.2: Generate and Apply companies Migration
 
@@ -69,7 +75,6 @@ The migration should include:
 
 ## Related Documentation
 
-
 ## Dependencies
 
 - [TEN-1.1](/docs/features/teams/tasks/TEN-1.1-define-companies-schema) - Companies schema must be defined
@@ -91,5 +96,5 @@ The migration should include:
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

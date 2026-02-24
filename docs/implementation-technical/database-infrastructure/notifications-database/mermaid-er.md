@@ -1,4 +1,6 @@
 ---
+title: "Notifications & System Events ER Diagram (Mermaid)"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
@@ -14,11 +16,8 @@ This diagram visualizes the dedicated Notifications & System Events database as 
 It is an operational tier:
 
 - Not OLAP.
-
 - Not Content DB.
-
 - Not external logging.
-
 - Optimized for fast reads/updates and bounded retention.
 
 ```mermaid

@@ -3,6 +3,7 @@ title: "Internal Users: Operations Journeys"
 description: "User journeys for Operations Staff monitoring and maintaining the platform"
 last_modified_date: "2025-12-06"
 level: "2"
+keywords: "operations journeys, platform monitoring, issue resolution, incident management, customer support, performance optimization"
 persona: "Operations Staff"
 ---
 
@@ -381,5 +382,3 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 - [Log Viewer API](/docs/implementation-technical/api/platform-api/system-monitoring.md#log-viewer) - Log search and retrieval endpoints
 
 ---
-
-**Keywords**: operations journeys, platform monitoring, issue resolution, incident management, customer support, performance optimization

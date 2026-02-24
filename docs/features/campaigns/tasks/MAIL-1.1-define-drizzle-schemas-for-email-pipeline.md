@@ -1,3 +1,9 @@
+---
+title: "MAIL-1.1: Define Drizzle Schemas for Email Pipeline"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-1.1: Define Drizzle Schemas for Email Pipeline
 
@@ -30,5 +36,5 @@ Create/finalize the Drizzle schemas for `campaigns`, `leads`, `templates`, `emai
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

@@ -3,6 +3,7 @@ title: "User Journeys & User Stories Documentation"
 description: "Comprehensive user journey documentation and user stories for PenguinMails platform users"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "user journeys, user stories, user types, internal users, external stakeholders, customer users, methodology, templates, prioritization, use cases, onboarding"
 persona: "Documentation Users"
 redirect_from: "/user-journeys/README"
 ---
@@ -313,8 +314,6 @@ Dependencies: [Other stories or features required]
 - **Continuous Improvement**: Regular review and enhancement of documentation
 
 ---
-
-**Keywords**: user journeys, user stories, user types, internal users, external stakeholders, customer users, methodology, templates, prioritization, use cases, onboarding
 
 ---
 

@@ -110,7 +110,6 @@ detect_issue() {
 detect_issue "missing_title" "^title:" "Missing 'title' field"
 detect_issue "missing_description" "^description:" "Missing 'description' field"
 detect_issue "missing_level" "^level:" "Missing 'level' field"
-detect_issue "missing_persona" "^persona:" "Missing 'persona' field"
 detect_issue "missing_date" "^last_modified_date:" "Missing 'last_modified_date' field"
 
 # Check for keywords in body (should be in frontmatter)

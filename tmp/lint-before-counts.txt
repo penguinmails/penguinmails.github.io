@@ -1,0 +1,10 @@
+     81 MD042/no-empty-links
+     79 MD012/no-multiple-blanks
+     21 MD022/blanks-around-headings
+     16 MD040/fenced-code-language
+     12 MD046/code-block-style
+     12 MD032/blanks-around-lists
+      5 MD001/heading-increment
+      3 MD036/no-emphasis-as-heading
+      3 MD029/ol-prefix
+      2 MD019/no-multiple-space-atx

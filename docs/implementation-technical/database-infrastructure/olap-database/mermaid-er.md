@@ -1,4 +1,6 @@
 ---
+title: "OLAP Analytics ER Diagram (Mermaid)"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"

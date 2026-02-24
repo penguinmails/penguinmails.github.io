@@ -1,3 +1,9 @@
+---
+title: "Leads Management Implementation Guide"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Leads Management Implementation Guide
 
 **Feature:** Leads & Contact Management
@@ -157,19 +163,12 @@ export async function POST(req: Request) {
 *Located at `components/contacts/contact-table.tsx`*
 
 - Use `@tanstack/react-table` for functionality.
-
 - Columns:
-
   - **Name**: Combine `firstName` + `lastName`
-
   - **Email**: Link to detail view
-
   - **Status**: Badge (Green for active, Red for bounced)
-
   - **Score**: Numeric value
-
   - **Added**: Date format
-
   - **Actions**: Edit / Delete dropdown
 
 ### Add Contact Modal
@@ -177,13 +176,9 @@ export async function POST(req: Request) {
 *Located at `components/contacts/add-contact-modal.tsx`*
 
 - Form fields:
-
   - Email (Required)
-
   - First Name
-
   - Last Name
-
   - Custom Attributes (Key/Value pair input)
 
 ---
@@ -191,11 +186,7 @@ export async function POST(req: Request) {
 ## 4. Next Steps
 
 1. **Database Schema**: Use the existing OLTP database schema (leads table is NileDB-managed)
-
 2. **Scaffold API**: Create the Drizzle ORM route handlers
-
 3. **Build UI**: Implement the leads list view and forms
-
 4. **Test**: Verify tenant isolation (User A cannot see User B's leads)
-
 5. **Generate Migrations**: Apply Drizzle migrations if needed for additional fields

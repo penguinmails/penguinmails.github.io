@@ -1,3 +1,9 @@
+---
+title: "CORE-3.5: Create a Protected Endpoint to Verify User Context"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-3.5: Create a Protected Endpoint to Verify User Context
 
@@ -151,5 +157,5 @@ export async function GET(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

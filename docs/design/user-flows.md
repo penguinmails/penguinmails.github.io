@@ -1,6 +1,7 @@
 ---
 title: "User Flows"
 description: "Key user journeys and system flows"
+level: "2"
 last_modified_date: "2025-12-02"
 type: "design"
 status: "DRAFT"

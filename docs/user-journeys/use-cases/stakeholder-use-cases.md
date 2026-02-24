@@ -1,3 +1,10 @@
+---
+title: "Use Cases: External Stakeholders"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "stakeholder use cases, investor relations, media relations, competitive intelligence, business development, relationship management"
+---
 # Use Cases: External Stakeholders
 
 ## Overview
@@ -451,5 +458,3 @@ This document outlines comprehensive use cases for External Stakeholders who int
 - [`external-stakeholders/competitor-analysis-journeys.md`](../external-stakeholders/competitor-analysis-journeys)
 
 ---
-
-**Keywords**: stakeholder use cases, investor relations, media relations, competitive intelligence, business development, relationship management

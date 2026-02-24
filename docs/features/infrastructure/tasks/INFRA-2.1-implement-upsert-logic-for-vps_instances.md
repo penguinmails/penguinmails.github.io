@@ -1,3 +1,9 @@
+---
+title: "INFRA-2.1: Implement Upsert Logic for vps_instances"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-2.1: Implement "Upsert" Logic for vps_instances
 
@@ -38,5 +44,5 @@ Create `/lib/services/infra.service.ts` (or appropriate services directory) with
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

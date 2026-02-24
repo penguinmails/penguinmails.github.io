@@ -1,6 +1,8 @@
 ---
 title: "Cohort Analysis"
 description: "Retention and lifecycle tracking by cohort"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Cohort Analysis

@@ -8,13 +8,9 @@ keywords: "scheduling features, calendar, timing"
 
 
 - **Send-Time Optimization**: AI-powered optimal send time based on historical engagement
-
 - **Business Hours Enforcement**: Automatically respect business hours and skip weekends
-
 - **Calendar Integration**: Sync with Google Calendar and Outlook for event-based campaigns
-
 - **Recurring Campaigns**: Set up daily, weekly, or monthly recurring schedules
-
 - **Batch Scheduling**: Schedule multiple campaigns at once with smart conflict resolution
 
 ---
@@ -56,9 +52,7 @@ All contacts receive email at:
 Example:
 
 - Contact in New York: 9:00 AM EST
-
 - Contact in Los Angeles: 6:00 AM PST
-
 - Contact in London: 2:00 PM GMT
 
 ```
@@ -73,9 +67,7 @@ Each contact receives email at their local time:
 Example:
 
 - Contact in New York: 9:00 AM EST
-
 - Contact in Los Angeles: 9:00 AM PST
-
 - Contact in London: 9:00 AM GMT
 
 ```
@@ -138,9 +130,7 @@ Recurrence Pattern:
 Preview:
 
 - First send: Monday, Nov 25 at 8:00 AM
-
 - Next 5 sends: Nov 26, 27, 28, 29, Dec 2
-
 - Total sends: 30 (weekdays only)
 
 ```
@@ -165,7 +155,6 @@ Recurrence Pattern:
 Preview:
 
 - Sends every Friday at 10:00 AM
-
 - Next 3 sends: Nov 29, Dec 6, Dec 13
 
 ```
@@ -203,11 +192,8 @@ Common Patterns:
 For each contact, analyze:
 
 1. Historical open times (when they opened past emails)
-
 2. Historical click times (when they clicked links)
-
 3. Industry benchmarks (typical engagement times)
-
 4. Day-of-week patterns (best days for this contact)
 
 Result: Personalized send time for maximum engagement
@@ -224,11 +210,8 @@ send_time_optimization:
   data_sources:
 
     - historical_opens: weight 40%
-
     - historical_clicks: weight 30%
-
     - industry_benchmarks: weight 20%
-
     - day_patterns: weight 10%
 
   constraints:

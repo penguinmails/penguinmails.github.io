@@ -1,3 +1,9 @@
+---
+title: "[LEADS-3.1] Build Contact List UI"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # [LEADS-3.1] Build Contact List UI
 
@@ -23,5 +29,5 @@ Create the frontend page for listing contacts with search, filtering, and pagina
 
 ## Cross-References
 
-- **Routes**: [tenant-leads.md]()
+- **Routes**: [tenant-leads.md](/docs/design/routes/tenant-leads)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

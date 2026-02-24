@@ -1,15 +1,13 @@
-﻿---
+---
 title: "Queue Database Schema"
 description: "Queue Database Schema - Job Tables and Indexes"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Database Architects"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual schema"
 ---
 
@@ -38,9 +36,7 @@ TABLE job_queues {
 **Usage Patterns**:
 
 - Queue discovery for new job types
-
 - Default priority management
-
 - Queue activation/deactivation
 
 **Example Data**:
@@ -81,13 +77,9 @@ TABLE jobs {
 **Status Values**:
 
 - `queued`: Job created, waiting for migration
-
 - `migrated_to_redis`: Job moved to Redis for processing
-
 - `running`: Currently being processed by worker
-
 - `completed`: Successfully finished
-
 - `failed`: Failed after max attempts
 
 **Data Patterns**:
@@ -131,11 +123,8 @@ TABLE job_logs {
 **Log Status Values**:
 
 - `attempting`: Worker started processing
-
 - `success`: Job completed successfully
-
 - `retry`: Job failed, retry scheduled
-
 - `failed`: Job failed permanently
 
 ### Analytics Jobs Tracking
@@ -177,9 +166,7 @@ WHERE status = 'queued'
 **Query Patterns Optimized**:
 
 - Find next job to migrate (by priority and creation time)
-
 - Get jobs for specific queue
-
 - Filter by status and timing constraints
 
 ### Audit and Analytics
@@ -227,21 +214,15 @@ ORDER BY failed DESC
 **What to Store**:
 
 - Minimal identifiers (UUIDs, references)
-
 - Small configuration data
-
 - Queue-specific parameters
-
 - Retry metadata
 
 **What NOT to Store**:
 
 - Large email bodies or attachments
-
 - High-PII data
-
 - Binary files or blobs
-
 - Full external API responses
 
 ```pseudo
@@ -320,17 +301,13 @@ erDiagram
 **Referential Integrity**:
 
 - `jobs.queue_name` → `job_queues.name`
-
 - `job_logs.job_id` → `jobs.id`
-
 - Cascading deletes for data cleanup
 
 **Constraint Benefits**:
 
 - Prevents orphaned records
-
 - Ensures data consistency
-
 - Simplifies cleanup operations
 
 ## Performance Considerations
@@ -340,21 +317,15 @@ erDiagram
 **Common Query Patterns**:
 
 1. **Job Migration**: Priority-ordered queued jobs
-
 2. **Status Reporting**: Jobs by status and timeframe
-
 3. **Worker Tracking**: Active jobs by worker
-
 4. **Failure Analysis**: Failed jobs with error details
 
 **Optimization Strategies**:
 
 - Composite indexes for multi-column queries
-
 - Partial indexes for status-filtered queries
-
 - JSONB indexes for payload queries
-
 - Timestamp indexes for time-based queries
 
 ### Scaling Patterns
@@ -362,17 +333,13 @@ erDiagram
 **Read Scaling**:
 
 - Read replicas for reporting queries
-
 - Connection pooling for efficiency
-
 - Query result caching for frequent lookups
 
 **Write Optimization**:
 
 - Batch inserts for new jobs
-
 - Efficient JSONB storage
-
 - Minimal logging during bulk operations
 
 ## Migration Considerations
@@ -382,17 +349,13 @@ erDiagram
 **Backward Compatibility**:
 
 - New columns with default values
-
 - Non-breaking schema changes
-
 - Data migration scripts for updates
 
 **Version Management**:
 
 - Schema version tracking
-
 - Migration history logging
-
 - Rollback procedures for failed migrations
 
 ### Data Migration
@@ -400,17 +363,13 @@ erDiagram
 **Initial Setup**:
 
 - Create base tables and indexes
-
 - Set up default queue configurations
-
 - Configure user permissions and access
 
 **Ongoing Maintenance**:
 
 - Archive old completed jobs
-
 - Clean up expired job logs
-
 - Optimize indexes based on usage patterns
 
 ## Integration Points
@@ -420,25 +379,19 @@ erDiagram
 **Email System Integration**:
 
 - References to email campaigns and templates
-
 - Link to email content storage
-
 - Integration with bounce and feedback systems
 
 **Analytics Pipeline Integration**:
 
 - Job completion metrics for reporting
-
 - Processing time analytics
-
 - Queue performance measurements
 
 **Monitoring System Integration**:
 
 - Real-time job status queries
-
 - Performance metrics collection
-
 - Alert threshold monitoring
 
 ## Conclusion
@@ -446,13 +399,9 @@ erDiagram
 This schema design provides a robust foundation for job processing with:
 
 - **Durability**: No job loss through PostgreSQL storage
-
 - **Performance**: Optimized indexes for common queries
-
 - **Auditability**: Comprehensive logging and tracking
-
 - **Scalability**: Designed for high-volume operations
-
 - **Flexibility**: JSONB payloads for diverse job types
 
 The schema supports both operational needs (job processing) and analytical needs (reporting and optimization) while maintaining data integrity and performance.

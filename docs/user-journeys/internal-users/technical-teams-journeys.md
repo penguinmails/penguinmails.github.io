@@ -3,6 +3,7 @@ title: "Internal Users: Technical Teams Journeys"
 description: "User journeys for Developers, DevOps, Security, and Data teams"
 last_modified_date: "2025-12-06"
 level: "2"
+keywords: "technical teams, development, devops, security, data engineering, infrastructure, CI/CD, monitoring"
 persona: "Technical Teams"
 ---
 
@@ -399,5 +400,3 @@ This document outlines the key user journeys for Technical Teams including Devel
 - [Admin Operations API](/docs/implementation-technical/api/platform-api/admin.md) - User and Tenant management endpoints
 
 ---
-
-**Keywords**: technical teams, development, devops, security, data engineering, infrastructure, CI/CD, monitoring

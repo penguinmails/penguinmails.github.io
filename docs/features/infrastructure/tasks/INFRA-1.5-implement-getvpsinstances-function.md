@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.5: Implement getVpsInstances() Function in API Client"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.5: Implement getVpsInstances() Function in API Client
 
@@ -35,5 +41,5 @@ Within the Hostwind client (`/lib/hostwind.ts`), implement `getVpsInstances()` t
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

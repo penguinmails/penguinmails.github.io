@@ -1,6 +1,8 @@
 ---
 title: "Template Variables (Advanced)"
 description: "Advanced logic, loops, and data structures"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Template Variables (Advanced)

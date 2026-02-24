@@ -9,12 +9,17 @@ set -e
 # Parse arguments
 GENERATE_REPORT=false
 TARGET_ROOT=""
+LIMIT=""
 
 while [[ $# -gt 0 ]]; do
     case $1 in
         --report|-r)
             GENERATE_REPORT=true
             shift
+            ;;
+        --limit|-l)
+            LIMIT="$2"
+            shift 2
             ;;
         *) TARGET_ROOT="$1"
             shift
@@ -24,6 +29,7 @@ done
 
 # Set default target if not provided
 TARGET_ROOT="${TARGET_ROOT:-docs}"
+EXCEPTIONS_FILE="validation/config/large_file_exceptions.txt"
 
 # Setup report file or redirect to /dev/null
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -48,9 +54,13 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "CONTENT QUALITY VALIDATION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Target: $TARGET_ROOT"
+if [ -n "$LIMIT" ]; then
+    echo "Limit: $LIMIT files"
+fi
 if [ "$GENERATE_REPORT" = true ]; then
     echo "Report: $REPORT_FILE"
 fi
+echo "Large file exceptions: $EXCEPTIONS_FILE"
 echo ""
 
 # Initialize JSON report
@@ -111,8 +121,39 @@ echo "    }," >> "$REPORT_FILE"
 # 2. Overlong Files (> 500 lines)
 echo "Checking: Overlong files (> 500 lines)..."
 
-# find files, count lines, filter
+# find files, count lines, filter, then apply explicit exceptions list
 overlong_files=$(find "$TARGET_ROOT" -name "*.md" -exec wc -l {} + | awk '$1 > 500 && $2 != "total" {print $2 ":" $1}')
+
+# Apply limit if specified
+if [ -n "$LIMIT" ]; then
+    overlong_files=$(echo "$overlong_files" | head -n "$LIMIT")
+fi
+
+if [ -f "$EXCEPTIONS_FILE" ]; then
+    tmp_overlong=$(mktemp)
+    tmp_filtered=$(mktemp)
+    printf '%s\n' "$overlong_files" > "$tmp_overlong"
+    awk '
+        BEGIN { FS=":" }
+        NR==FNR {
+            line=$0
+            gsub(/^[[:space:]]+|[[:space:]]+$/, "", line)
+            if (line != "" && line !~ /^#/) {
+                exceptions[line]=1
+            }
+            next
+        }
+        {
+            file=$1
+            sub("^\\./", "", file)
+            if (!(file in exceptions)) {
+                print $0
+            }
+        }
+    ' "$EXCEPTIONS_FILE" "$tmp_overlong" > "$tmp_filtered"
+    overlong_files=$(cat "$tmp_filtered")
+    rm -f "$tmp_overlong" "$tmp_filtered"
+fi
 count_overlong=$(echo "$overlong_files" | grep -c ":" || true)
 
 echo "    \"overlong_files\": {" >> "$REPORT_FILE"

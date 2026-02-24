@@ -9,18 +9,15 @@ keywords: "weekly report, performance metrics, business health, trend analysis"
 
 # Weekly Performance Report
 
-```
+```text
 
 #### Technical Implementation
 
 **Data Sources:**
 
 - PostHog `revenue_impact_event` (real-time monitoring)
-
 - `executive_business_summary` view (daily snapshots)
-
 - Deliverability API status checks
-
 - Cost tracking aggregation
 
 **Automation Pipeline:**
@@ -80,14 +77,14 @@ graph TD
 
 {% endraw %}
 
-### 2. Weekly Performance Report
+## 2. Weekly Performance Report
 
 **Frequency:** Every Monday at 8:00 AM EST
 **Recipients:** VPs, Directors, Business Unit Leaders
 **Delivery Method:** Email + PDF + Dashboard
 **Reading Time:** 15-20 minutes
 
-#### Content Structure
+### Content Structure
 
 **Business Performance Scorecard:**
 

@@ -1,16 +1,14 @@
-﻿---
+---
 title: "Queue System Architecture"
 description: "Queue System Architecture - Hybrid PostgreSQL + Redis Design"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Technical Architects"
 related_docs:
+- "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
+- "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
+- "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 
-  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
-  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
-
-  - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
 
 # Queue System Architecture
@@ -26,37 +24,25 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 ### PostgreSQL (Durable Layer)
 
 - Permanent job storage and state tracking
-
 - ACID compliance for data consistency
-
 - Complex queries for job management
-
 - Comprehensive audit trails
-
 - Integration with analytics systems
 
 ### Redis (Performance Layer)
 
 - Millisecond-latency job queues
-
 - Real-time job processing
-
 - Priority-based routing
-
 - Horizontal scaling support
-
 - Memory-efficient data structures
 
 ### Design Benefits
 
 1. **No Job Loss**: PostgreSQL ensures no jobs are lost during system failures
-
 2. **High Throughput**: Redis provides fast job processing for peak loads
-
 3. **Scalability**: Both systems scale independently
-
 4. **Reliability**: Comprehensive error handling and recovery mechanisms
-
 5. **Observability**: Complete job lifecycle tracking and monitoring
 
 ## System Components
@@ -89,9 +75,7 @@ The Queue System implements a hybrid architecture combining PostgreSQL for durab
 #### API Layer (Producer)
 
 - **Purpose**: Creates new jobs and submits them to the system
-
 - **Storage**: Initially stores jobs in PostgreSQL
-
 - **Priority**: High-priority jobs may bypass Redis migration
 
 ```pseudo
@@ -120,9 +104,7 @@ function createJob(queueName, payload, priority) {
 #### Queuer Process (Migrator)
 
 - **Purpose**: Migrates jobs from PostgreSQL to Redis for processing
-
 - **Frequency**: Runs continuously, checking every few seconds
-
 - **Strategy**: Priority-based batch migration
 
 ```pseudo
@@ -178,9 +160,7 @@ function migrateJobToRedis(job) {
 #### Worker Servers (Consumers)
 
 - **Purpose**: Process jobs from Redis queues
-
 - **Scaling**: Multiple workers can run concurrently
-
 - **Reliability**: Automatic retry with exponential backoff
 
 ```pseudo
@@ -249,11 +229,8 @@ function processJob(job, queueName, workerId) {
 ### Job Lifecycle
 
 1. **Creation**: Job created via API, stored in PostgreSQL
-
 2. **Migration**: Queuer process moves job to Redis queue
-
 3. **Processing**: Worker consumes job from Redis
-
 4. **Completion**: Job status updated in both systems
 
 ```mermaid
@@ -293,25 +270,19 @@ function determineQueueName(priority, queueName) {
 ### PostgreSQL Scaling
 
 - Read replicas for query distribution
-
 - Connection pooling for efficiency
-
 - Proper indexing for performance
 
 ### Redis Scaling
 
 - Redis Cluster for horizontal distribution
-
 - Memory optimization and eviction policies
-
 - Connection multiplexing
 
 ### Worker Scaling
 
 - Stateless worker design
-
 - Container orchestration (Kubernetes)
-
 - Auto-scaling based on queue depth
 
 ### Performance Optimization
@@ -319,25 +290,19 @@ function determineQueueName(priority, queueName) {
 ### Batch Operations
 
 - Migrate jobs in batches to reduce database load
-
 - Process multiple jobs per worker iteration
-
 - Bulk updates for status changes
 
 ### Memory Management
 
 - Redis memory limits and eviction policies
-
 - Connection pooling for database connections
-
 - Efficient serialization (JSON vs binary)
 
 ### Monitoring Integration
 
 - Real-time queue depth monitoring
-
 - Worker utilization tracking
-
 - Performance metrics collection
 
 ## Failure Handling
@@ -347,25 +312,19 @@ function determineQueueName(priority, queueName) {
 ### Database Failures
 
 - PostgreSQL read replicas for redundancy
-
 - Automatic failover mechanisms
-
 - Job recovery after database restoration
 
 ### Redis Failures
 
 - Redis persistence configuration
-
 - Queue backup and recovery procedures
-
 - Graceful degradation strategies
 
 ### Worker Failures
 
 - Automatic job reassignment
-
 - Timeout-based job recovery
-
 - Dead letter queue for failed jobs
 
 ### Recovery Procedures
@@ -405,21 +364,15 @@ function handleSystemFailure() {
 ### External Systems
 
 - **Email Processing**: Integration with sending/receiving systems
-
 - **Analytics**: Job metrics for business intelligence
-
 - **Monitoring**: Health checks and alerting
-
 - **Notifications**: System status communications
 
 ### Database Systems
 
 - **OLTP Operations**: Direct job state queries
-
 - **Content Storage**: Email content references
-
 - **Analytics Pipeline**: Job execution metrics
-
 - **Audit Systems**: Compliance and logging requirements
 
 ## Conclusion

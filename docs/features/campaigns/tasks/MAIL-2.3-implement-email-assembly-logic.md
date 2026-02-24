@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.3: Implement Email Assembly Logic"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.3: Implement Email Assembly Logic
 
@@ -30,5 +36,5 @@ Create a function `assembleEmail(jobPayload)` that queries the database for the 
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

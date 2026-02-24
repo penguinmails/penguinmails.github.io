@@ -42,13 +42,13 @@ Project link policy reminder:
 
     - `contributing_link.md`, `readme_link_parent.md`, `readme_link_root_abs.md`
 
-    - `md_extension_site_absolute.md`, `relative_links.md`
+    - `md_extension_site_absolute.md`, `relative_links.md`, `nested_non_root_links.md`
 
   - Runner: `.kiro/tests/test_link_validations.sh`
 
   - Verified rules:
 
-    - Links to `tasks/` and `user-journeys/` (relative and absolute)
+    - Root-scoped links to `tasks/` and `user-journeys/` (relative and absolute)
 
     - Links to `CONTRIBUTING` and root `README` (relative and absolute)
 
@@ -254,7 +254,7 @@ In addition to the `.kiro/tests`-based unit-style tests, we now have a lightweig
 
     - Valid frontmatter.
 
-    - Body contains a relative `tasks/` link (for the `Links to tasks/ folder` check).
+    - Body contains a root-scoped relative `tasks/` link (for the `Links to tasks/ folder` check).
 
   - `scripts/test-docs/violations/forbidden_python_block.md`
 
@@ -295,9 +295,9 @@ Expected behavior with the current fixtures:
 
 - Invalid external links
 
-  - `Links to tasks/ folder` → 1 (only `tasks_link_relative.md`).
+  - `Root-scoped links to tasks/ folder` → 1 (only `tasks_link_relative.md`).
 
-  - `Links to user-journeys/ folder` → 0.
+  - `Root-scoped links to user-journeys/ folder` → 0.
 
   - `Links to CONTRIBUTING.md` → 0.
 

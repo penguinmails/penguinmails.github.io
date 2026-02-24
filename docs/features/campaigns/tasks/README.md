@@ -1,5 +1,11 @@
+---
+title: "Milestone 1 - Job Enqueueing and Campaign Scheduling"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
-# Milestone 1 — Job Enqueueing and Campaign Scheduling
+# Milestone 1 - Job Enqueueing and Campaign Scheduling
 
 **Goal:** Create the producer side of the pipeline: logic to determine when emails should be sent and to push jobs into Redis.
 

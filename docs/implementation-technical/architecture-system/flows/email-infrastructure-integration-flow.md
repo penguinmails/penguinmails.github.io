@@ -3,6 +3,7 @@ title: "Email Infrastructure Integration Flow"
 description: "How Central SMTP, Frontend, Queue, and Tenant SMTP work together in the system architecture"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "email infrastructure, multi-tenant architecture, SMTP integration, queue processing, load balancing, infrastructure automation"
 persona: "Documentation Users"
 ---
 
@@ -98,33 +99,25 @@ graph TB
 ### **Client Layer**
 
 - **Web Frontend**: React-based dashboard for campaign management and monitoring
-
 - **API Client**: External integrations and mobile applications
 
 ### **Central Infrastructure**
 
 - **Central Frontend**: User management and authentication services
-
 - **Central API Gateway**: Routes requests, handles authentication, and manages rate limiting
-
 - **Central SMTP Pool**: Manages SMTP connections and load balancing across tenants
-
 - **Central Queue System**: Redis + PostgreSQL hybrid for job processing and state management
 
 ### **Tenant Infrastructure (Per Customer)**
 
 - **Tenant SMTP Server**: MailU stack with Postfix, Dovecot, and SpamAssassin
-
 - **Tenant Database**: PostgreSQL schema with row-level security for data isolation
-
 - **Tenant Queue**: Dedicated job processing for tenant-specific operations
 
 ### **External Services**
 
 - **MailU SMTP Stack**: Enterprise email delivery infrastructure
-
 - **Hostwind VPS**: Automated VPS provisioning and management
-
 - **DNS Providers**: SPF, DKIM, DMARC record management
 
 ## Key Integration Patterns
@@ -150,5 +143,3 @@ Central services coordinate with external providers (Hostwind, DNS) to automatic
 Real-time data synchronization between tenant databases and central systems enables consistent analytics and monitoring across the platform.
 
 ---
-
-**Keywords**: email infrastructure, multi-tenant architecture, SMTP integration, queue processing, load balancing, infrastructure automation

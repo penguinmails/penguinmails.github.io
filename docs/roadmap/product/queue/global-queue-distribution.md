@@ -1,6 +1,8 @@
 ---
 title: "Global Queue Distribution"
 description: "Multi-region queue processing"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Global Queue Distribution

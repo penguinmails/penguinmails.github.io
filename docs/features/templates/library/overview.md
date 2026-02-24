@@ -30,19 +30,12 @@ The Template Library provides a curated collection of pre-built, responsive emai
 ### Key Capabilities
 
 - **Pre-Built Templates**: 100+ professionally designed templates
-
 - **Multiple Categories**: Welcome, newsletter, promotional, transactional, event
-
 - **One-Click Customization**: Apply your brand colors and logo instantly
-
 - **Template Sharing**: Share templates across workspaces
-
 - **Template Analytics**: See which templates perform best
-
 - **Industry-Specific**: Templates tailored for SaaS, E-commerce, B2B
-
 - **Mobile-Optimized**: All templates responsive by default
-
 - **Regular Updates**: New templates added monthly
 
 ---
@@ -179,9 +172,7 @@ Hi {{first_name}},
 We're excited to have you on board. Here's what to do next:
 
 1. Complete your profile
-
 2. Invite your team
-
 3. Create your first campaign
 
 [Get Started →]
@@ -203,33 +194,25 @@ Available Templates:
 1. Clean & Simple Welcome
 
    - Minimalist design
-
    - Single CTA
-
    - Best for: SaaS, Apps
 
 2. Feature Showcase Welcome
 
    - Highlights 3-4 key features
-
    - Multiple CTAs
-
    - Best for: Complex products
 
 3. Onboarding Checklist
 
    - Step-by-step guide
-
    - Progress tracking
-
    - Best for: Multi-step onboarding
 
 4. Video Welcome
 
    - Embedded video thumbnail
-
    - Personal touch
-
    - Best for: High-touch sales
 
 ```
@@ -243,33 +226,25 @@ Available Templates:
 1. Single Article Focus
 
    - Hero image
-
    - One main story
-
    - Best for: Blog updates
 
 2. Multi-Story Digest
 
    - 3-5 article summaries
-
    - Grid layout
-
    - Best for: Weekly roundups
 
 3. Curated Links
 
    - List of resources
-
    - Minimal design
-
    - Best for: Industry news
 
 4. Image-Heavy Magazine
 
    - Large images
-
    - Editorial style
-
    - Best for: Visual content
 
 ```
@@ -283,33 +258,25 @@ Available Templates:
 1. Limited Time Offer
 
    - Countdown timer
-
    - Urgency messaging
-
    - Best for: Sales promotions
 
 2. Product Launch
 
    - Feature highlights
-
    - Multiple product images
-
    - Best for: New product announcements
 
 3. Discount Code
 
    - Prominent discount display
-
    - Copy-to-clipboard functionality
-
    - Best for: Coupon campaigns
 
 4. Buy One Get One
 
    - Clear offer structure
-
    - Product pairing suggestions
-
    - Best for: E-commerce promotions
 
 ```
@@ -323,33 +290,25 @@ Available Templates:
 1. Order Confirmation
 
    - Order details
-
    - Shipping information
-
    - Best for: E-commerce receipts
 
 2. Password Reset
 
    - Secure reset link
-
    - Account security tips
-
    - Best for: User account management
 
 3. Account Verification
 
    - Email verification link
-
    - Account benefits highlight
-
    - Best for: New user verification
 
 4. Delivery Notification
 
    - Tracking information
-
    - Delivery options
-
    - Best for: Shipping updates
 
 ```
@@ -363,33 +322,25 @@ Available Templates:
 1. Event Invitation
 
    - Event details
-
    - RSVP functionality
-
    - Best for: Event promotion
 
 2. Webinar Registration
 
    - Speaker information
-
    - Calendar integration
-
    - Best for: Online events
 
 3. Event Reminder
 
    - Countdown to event
-
    - Joining instructions
-
    - Best for: Event follow-up
 
 4. Post-Event Thank You
 
    - Event recap
-
    - Resources and recordings
-
    - Best for: Event follow-up
 
 ```
@@ -423,4 +374,4 @@ The Template Library transforms email marketing efficiency by:
 
 ---
 
-**Next Steps**: Explore [Template Customization]() to learn how to personalize templates for your brand.
+**Next Steps**: Explore [Template Customization](/docs/features/templates/library/customization-guide) to learn how to personalize templates for your brand.

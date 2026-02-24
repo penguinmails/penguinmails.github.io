@@ -1,6 +1,8 @@
 ---
 title: "Project Management for Technical Tasks"
 description: "Guide for organizing technical work using epics and milestones"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Project Management for Technical Tasks

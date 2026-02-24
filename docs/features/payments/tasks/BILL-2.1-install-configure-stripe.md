@@ -1,3 +1,9 @@
+---
+title: "BILL-2.1: Install and Configure Stripe Node.js SDK"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-2.1: Install and Configure Stripe Node.js SDK
 
@@ -96,5 +102,5 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 
 ## Cross-References
 
-- **Routes**: [settings.md]()
-- **API**: [platform-api/subscriptions.md]()
+- **Routes**: [settings.md](/docs/design/routes/settings)
+- **API**: [platform-api/subscriptions.md](/docs/implementation-technical/api/platform-api/subscriptions)

@@ -1,3 +1,9 @@
+---
+title: "CORE-3.1: Install and Configure NileDB Server SDK"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-3.1: Install and Configure NileDB Server SDK
 
@@ -95,5 +101,5 @@ export const nile = new Nile({
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

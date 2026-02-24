@@ -148,16 +148,22 @@ gtag('event', 'email_click', {
 
 ### Automated Data Collection
 
-```python
-def track_template_event(contact_id, template_id, event_type, metadata=None):
-    payload = {
-        'contact_id': contact_id,
-        'template_id': template_id,
-        'event_type': event_type,
-        'timestamp': datetime.utcnow().isoformat(),
-        'metadata': metadata or {}
-    }
-    return send_to_analytics(payload)
+```typescript
+function trackTemplateEvent(
+  contactId: string,
+  templateId: string,
+  eventType: string,
+  metadata: Record<string, unknown> = {}
+) {
+  const payload = {
+    contact_id: contactId,
+    template_id: templateId,
+    event_type: eventType,
+    timestamp: new Date().toISOString(),
+    metadata
+  };
+  return sendToAnalytics(payload);
+}
 ```
 
 ---

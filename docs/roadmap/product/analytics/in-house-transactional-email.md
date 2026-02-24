@@ -1,6 +1,8 @@
 ---
 title: "In-House Transactional Email System"
 description: "Central SMTP server for transactional emails"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # In-House Transactional Email System

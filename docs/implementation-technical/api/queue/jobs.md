@@ -52,7 +52,6 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `status`: `active`, `waiting`, `completed`, `failed`
-
 - `limit`: Default 20
 
 ### Get Job Details

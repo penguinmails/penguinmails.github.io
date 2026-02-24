@@ -1,3 +1,10 @@
+---
+title: "User Stories Prioritization Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "prioritization framework, user story prioritization, business value, user types, decision matrix, governance"
+---
 # User Stories Prioritization Framework
 
 ## Overview
@@ -436,5 +443,3 @@ This document provides a systematic framework for prioritizing user stories acro
 - [`validation-process.md`](validation-process)
 
 ---
-
-**Keywords**: prioritization framework, user story prioritization, business value, user types, decision matrix, governance

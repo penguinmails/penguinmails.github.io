@@ -1,3 +1,9 @@
+---
+title: "TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)
 
@@ -188,5 +194,5 @@ export async function POST(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

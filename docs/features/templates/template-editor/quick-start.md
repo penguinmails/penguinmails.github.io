@@ -40,9 +40,7 @@ Select a Template:
 Selected: Basic Email
 
   - Simple header with logo
-
   - Single column content area
-
   - Footer with social links
 
 [Use This Template]

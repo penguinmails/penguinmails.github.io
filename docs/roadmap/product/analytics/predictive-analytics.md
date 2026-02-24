@@ -1,6 +1,8 @@
 ---
 title: "Predictive Analytics"
 description: "AI-powered predictions for optimization"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Predictive Analytics

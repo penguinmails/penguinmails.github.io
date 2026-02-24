@@ -1,3 +1,9 @@
+---
+title: "BILL-1.1: Define Drizzle Schemas for Billing"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-1.1: Define Drizzle Schemas for Billing
 
@@ -154,5 +160,5 @@ export const tenantConfig = pgTable('tenant_config', {
 
 ## Cross-References
 
-- **Routes**: [settings.md]()
-- **API**: [platform-api/subscriptions.md]()
+- **Routes**: [settings.md](/docs/design/routes/settings.md)
+- **API**: [subscription-management.md](/docs/features/payments/subscription-management.md)

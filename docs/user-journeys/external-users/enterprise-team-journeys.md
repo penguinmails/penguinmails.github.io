@@ -3,6 +3,7 @@ title: "External Users: Enterprise Team Journeys"
 description: "Key user journeys for Enterprise Teams managing large-scale email operations and organizational structures"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "enterprise journeys, enterprise teams, large-scale operations, compliance, governance, cross-department coordination"
 persona: "Enterprise Teams"
 ---
 
@@ -386,5 +387,3 @@ This document outlines the key user journeys for enterprise teams who use Pengui
 - [Settings](/docs/design/routes/settings.md) - Account and workspace settings UI
 
 ---
-
-**Keywords**: enterprise journeys, enterprise teams, large-scale operations, compliance, governance, cross-department coordination

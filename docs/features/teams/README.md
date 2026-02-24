@@ -1,4 +1,10 @@
-# 👥 Team & Workspace Management
+---
+title: "Team & Workspace Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
+# Team & Workspace Management
 
 **Target Users**: Tenant administrators (owner, manager)  
 **Customer-Facing**: Yes - These features enable tenant organizations to manage teams and workspaces
@@ -61,4 +67,4 @@ See **[Team Management Roadmap](/docs/features/teams/team-roadmap)** for detaile
 
 ---
 
-[← Back to All Features]()
+[← Back to All Features](/docs/features/)

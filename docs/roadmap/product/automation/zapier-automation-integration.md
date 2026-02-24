@@ -1,6 +1,8 @@
 ---
 title: "Zapier Automation Integration"
 description: "Enable workflows to trigger external apps via Zapier"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Zapier Automation Integration

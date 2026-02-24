@@ -2,6 +2,7 @@
 title: "Level 2: Advanced Import/Export"
 description: "Field mapping, validation, and error handling"
 level: "2"
+last_modified_date: "2026-02-24"
 persona: "Marketing Operations"
 keywords: "field mapping, validation, error handling, data quality"
 ---
@@ -21,25 +22,19 @@ auto_mapping:
   exact_match:
 
     - email → email
-
     - first_name → firstName
-
     - firstname → firstName
-
     - fname → firstName
 
   fuzzy_match:
 
     - company_name → company (80% similarity)
-
     - org → company
-
     - organization → company
 
   custom_field_detection:
 
     - pattern: custom_*, cf_*
-
     - create_if_missing: true
 
 ```
@@ -116,7 +111,6 @@ duplicate_detection:
   fuzzy_match:
 
     - first_name + last_name + company
-
     - phone
 
   similarity_threshold: 85%  # 85% match = duplicate
@@ -124,11 +118,8 @@ duplicate_detection:
   resolution_strategy:
 
     - skip_new
-
     - update_existing
-
     - merge_fields
-
     - create_new
 
 ```
@@ -305,13 +296,9 @@ john@example.com,John,Doe,Acme Inc,+15551234567,87,"customer,vip",SaaS,2025-10-1
 Features:
 
   - Multiple sheets (Contacts, Custom Fields, Segments)
-
   - Formatted headers
-
   - Data validation
-
   - Freeze panes
-
   - Auto-filter enabled
 
 ```
@@ -375,7 +362,6 @@ Summary:
   Imported Successfully: 4,892 (97.8%)
 
     - New Contacts: 4,460
-
     - Updated Existing: 432
 
   Skipped (Errors): 13 (0.3%)
@@ -394,7 +380,6 @@ Mapping:
 Tags Added:
 
   - imported_2025_11
-
   - bulk_upload
 
 Segment Created:
@@ -414,11 +399,8 @@ Rollback Import: contacts_nov.csv
 âš  Warning: This will:
 
   - Delete 4,460 contacts created by this import
-
   - Restore 432 contacts to their previous state
-
   - Remove tags: imported_2025_11, bulk_upload
-
   - Delete segment: "November Import"
 
 This action CANNOT be undone.

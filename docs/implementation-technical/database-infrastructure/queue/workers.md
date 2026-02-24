@@ -1,15 +1,13 @@
-﻿---
+---
 title: "Worker Processes"
 description: "Worker Processes - Background Job Processing"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Backend Engineers"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
 
@@ -26,21 +24,15 @@ Worker processes consume jobs from Redis queues and execute the actual business 
 **Stateless Design**:
 
 - Workers maintain no persistent state between jobs
-
 - All job data retrieved from Redis and PostgreSQL
-
 - Can be scaled up/down without data loss
-
 - Multiple workers can process same queue type
 
 **Fault Tolerance**:
 
 - Automatic job reassignment on worker failure
-
 - Timeout-based job recovery
-
 - Graceful shutdown with job completion
-
 - Dead letter queue for permanent failures
 
 ### Worker Lifecycle Management
@@ -630,15 +622,10 @@ function generateWorkerId(): string {
 Worker processes provide:
 
 - **Reliable Job Processing**: Comprehensive error handling and retry logic
-
 - **Horizontal Scalability**: Stateless design supports unlimited worker instances
-
 - **Priority Handling**: Multi-queue consumption with proper priority ordering
-
 - **Fault Tolerance**: Graceful shutdown and failure recovery mechanisms
-
 - **Performance Optimization**: Batch processing and memory management
-
 - **Monitoring Integration**: Real-time health and performance metrics
 
 This architecture ensures robust, scalable job processing that can handle varying workloads while maintaining system reliability and performance.

@@ -1,3 +1,9 @@
+---
+title: "AUTH-4.4: Create API Endpoint to Change Password (POST /api/users/me/change-password)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-4.4: Create API Endpoint to Change Password (POST /api/users/me/change-password)
 
@@ -191,5 +197,5 @@ export async function POST(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

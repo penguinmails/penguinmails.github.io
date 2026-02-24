@@ -1,6 +1,8 @@
 ---
 title: "Real-Time Analytics Dashboard"
 description: "Dedicated analytics dashboard with comprehensive metrics"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Real-Time Analytics Dashboard

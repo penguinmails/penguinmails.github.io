@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Domain Management"
 description: "Custom domain configuration, DNS verification, and sender authentication"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "IT Admins, Marketing Ops"
 status: "ACTIVE"
@@ -21,13 +21,9 @@ Domain Management allows you to connect your own custom domains to PenguinMails 
 ### Key Features
 
 - **Custom Sending Domains** - Send from `marketing.yourbrand.com`
-
 - **Automated Verification** - DNS record checking
-
 - **Authentication Protocols** - SPF, DKIM, DMARC setup
-
 - **Link Tracking Domains** - Branded tracking links (CNAME)
-
 - **Multi-Domain Support** - Manage multiple domains per workspace
 
 ---
@@ -37,13 +33,9 @@ Domain Management allows you to connect your own custom domains to PenguinMails 
 ### The Setup Process
 
 1. **Add Domain**: Enter your domain name in the dashboard.
-
 2. **Get DNS Records**: PenguinMails generates required DNS records.
-
 3. **Update DNS**: Add these records to your domain registrar (GoDaddy, Namecheap, Cloudflare, etc.).
-
 4. **Verify**: Click "Verify" in PenguinMails.
-
 5. **Ready**: Once verified, you can send emails from this domain.
 
 ### Required DNS Records
@@ -80,9 +72,7 @@ Domain Management allows you to connect your own custom domains to PenguinMails 
 ## Policies
 
 - `p=none`: Monitor mode (Recommended for starting).
-
 - `p=quarantine`: Send failures to spam folder.
-
 - `p=reject`: Reject failures completely (Ultimate goal).
 
 ---
@@ -94,7 +84,6 @@ Domain Management allows you to connect your own custom domains to PenguinMails 
 By default, tracking links (opens/clicks) use a shared domain. For better deliverability, use a **Custom Tracking Domain**.
 
 - **Setup**: Create a CNAME record (e.g., `link.yourdomain.com`) pointing to our tracking server.
-
 - **SSL**: PenguinMails automatically provisions an SSL certificate (Let's Encrypt) for your tracking subdomain.
 
 ### Domain Reputation Monitoring
@@ -102,9 +91,7 @@ By default, tracking links (opens/clicks) use a shared domain. For better delive
 We continuously monitor your domain's health:
 
 - **Blacklist Checks**: Is your domain on URIBL or SURBL?
-
 - **Google Postmaster Tools**: Integration to track reputation with Gmail.
-
 - **DMARC Reports**: Analysis of DMARC reports to identify unauthorized senders.
 
 ### API Management

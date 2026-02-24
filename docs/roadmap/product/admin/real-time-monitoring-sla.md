@@ -1,6 +1,8 @@
 ---
 title: "Real-Time Monitoring & SLA"
 description: "SLA tracking and real-time performance monitoring"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Real-Time Monitoring & SLA

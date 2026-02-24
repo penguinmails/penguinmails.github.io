@@ -1,3 +1,9 @@
+---
+title: "MAIL-3.5: Create the Analytics Processing Worker (Stub)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-3.5: Create the Analytics Processing Worker (Stub)
 
@@ -29,5 +35,5 @@ In the `/worker` project, create a function that listens to the `queue:analytics
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

@@ -25,13 +25,9 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `workspace` (string, required): Workspace slug
-
 - `status` (string, optional): Filter by status (new, contacted, replied, converted)
-
 - `search` (string, optional): Search by email or name
-
 - `limit` (integer, optional): Default 50
-
 - `offset` (integer, optional): Default 0
 
 **Response**:

@@ -297,7 +297,7 @@ All pull requests automatically run two types of validation:
 
 **Warning Checks (Non-Blocking)** - Review recommended:
 
-- Links to `tasks/` and `user-journeys/` folders (future migration planned)
+- Root-scoped links to `tasks/` and `user-journeys/` (future migration planned)
 - Missing frontmatter fields (title, description, level)
 - Tech stack violations (Python, Ruby, PHP code blocks)
 

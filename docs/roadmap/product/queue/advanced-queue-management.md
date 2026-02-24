@@ -1,6 +1,8 @@
 ---
 title: "Advanced Queue Management"
 description: "Tools for managing active queues"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Advanced Queue Management

@@ -1,3 +1,10 @@
+---
+title: "External Stakeholders: Press & Media Journeys"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "press journeys, media coverage, journalism, content creation, story development, industry analysis"
+---
 # External Stakeholders: Press & Media Journeys
 
 ## Overview
@@ -352,5 +359,3 @@ This document outlines the key user journeys for press and media professionals w
 - [`competitor-analysis-journeys.md`](competitor-analysis-journeys)
 
 ---
-
-**Keywords**: press journeys, media coverage, journalism, content creation, story development, industry analysis

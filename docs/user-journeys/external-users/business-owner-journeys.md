@@ -3,6 +3,7 @@ title: "External Users: Business Owner Journeys"
 description: "Key user journeys for Business Owners managing email marketing, customer engagement, and sales outreach"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "business owner journeys, customer acquisition, business growth, email marketing strategy, ROI tracking"
 persona: "Business Owners"
 ---
 
@@ -385,5 +386,3 @@ This document outlines the key user journeys for business owners who use Penguin
 - [Tenant Leads](/docs/design/routes/tenant-leads.md) - Lead management UI
 
 ---
-
-**Keywords**: business owner journeys, customer acquisition, business growth, email marketing strategy, ROI tracking

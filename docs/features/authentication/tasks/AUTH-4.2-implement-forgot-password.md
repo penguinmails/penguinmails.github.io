@@ -1,3 +1,9 @@
+---
+title: "AUTH-4.2: Implement Forgot Password Request Endpoint"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-4.2: Implement "Forgot Password" Request Endpoint
 
@@ -140,5 +146,5 @@ export async function POST(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

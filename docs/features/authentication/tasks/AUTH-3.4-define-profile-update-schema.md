@@ -1,3 +1,9 @@
+---
+title: "AUTH-3.4: Define Zod Schema for Profile Updates"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-3.4: Define Zod Schema for Profile Updates
 
@@ -137,5 +143,5 @@ export type UpdateProfileInput = z.infer<typeof updateProfileSchema>;
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

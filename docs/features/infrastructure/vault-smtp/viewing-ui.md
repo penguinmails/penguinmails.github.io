@@ -2,6 +2,7 @@
 title: "Secure Credential Viewing UI"
 description: "Web interface for secure credential viewing"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "UI, web interface, credential viewing, security"
 ---
 
@@ -16,9 +17,7 @@ keywords: "UI, web interface, credential viewing, security"
 **Access Control:**
 
 - Requires `platform-admin` role
-
 - Requires re-authentication (password + 2FA)
-
 - Session expires after 15 minutes of inactivity
 
 **UI Components:**
@@ -69,11 +68,7 @@ keywords: "UI, web interface, credential viewing, security"
 **Security Features:**
 
 - Password initially masked (click to reveal)
-
 - Copy to clipboard with confirmation
-
 - Auto-hide credentials after 15 minutes
-
 - Warning banner: "Credentials expire in X minutes"
-
 - Audit trail visible to all admins

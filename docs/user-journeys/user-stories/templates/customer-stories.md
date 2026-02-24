@@ -1,3 +1,10 @@
+---
+title: "User Stories Templates: Real External Users (Customers)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "customer stories, business outcomes, customer success, marketing automation, ROI tracking, professional reporting"
+---
 # User Stories Templates: Real External Users (Customers)
 
 ## Overview
@@ -418,6 +425,7 @@ DEFINITION OF DONE:
 ## Best Practices for Customer Stories
 
 ### **Story Quality Checklist**
+
 - [ ] Clear customer role and business context identified
 - [ ] Business value and measurable outcomes defined
 - [ ] Customer pain points and current workflow understood
@@ -425,6 +433,7 @@ DEFINITION OF DONE:
 - [ ] Integration and technical constraints considered
 
 ### **Customer Story Guidelines**
+
 - **Customer-Centric Focus**: Always prioritize customer business value over technical features
 - **Business Outcome Orientation**: Link functionality to measurable business improvements
 - **Usability Priority**: Ensure solutions work for customers with varying technical expertise
@@ -432,6 +441,7 @@ DEFINITION OF DONE:
 - **Success Measurement**: Define clear success metrics from customer's perspective
 
 ### **Common Customer Story Patterns**
+
 1. **Core Functionality**: Essential features that deliver primary business value
 2. **Efficiency Improvement**: Features that save time and reduce manual effort
 3. **Business Growth**: Features that enable scaling and expansion
@@ -440,12 +450,11 @@ DEFINITION OF DONE:
 
 ---
 
-**Related Documents**
+### Related Documents
+
 - [`../methodology.md`](../methodology)
 - [`../user-types-classification.md`](../user-types-classification)
 - [`internal-user-stories.md`](internal-user-stories)
 - [`stakeholder-stories.md`](stakeholder-stories)
 
 ---
-
-**Keywords**: customer stories, business outcomes, customer success, marketing automation, ROI tracking, professional reporting

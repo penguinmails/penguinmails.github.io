@@ -1,6 +1,8 @@
 ---
 title: "Social Login (OAuth)"
 description: "Login with Google and GitHub"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Social Login (OAuth)

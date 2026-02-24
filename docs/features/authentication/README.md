@@ -1,4 +1,10 @@
-# 🔐 Authentication & User Management
+---
+title: "Authentication & User Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
+# Authentication & User Management
 
 **Target Users**: Tenant users (owner, manager, employee)  
 **Customer-Facing**: Yes - These features power tenant user authentication and profile management
@@ -25,7 +31,6 @@ Authentication and user management features for PenguinMails tenant users. These
   - Contextual tooltips
   - Video tutorials
   - Achievement milestones
-
 - **Account Security Enhancements**
   - Account lockout protection
   - Session management UI
@@ -69,4 +74,4 @@ See **[Authentication Roadmap](/docs/features/authentication/authentication-road
 
 ---
 
-[← Back to All Features]()
+[← Back to All Features](/docs/features/)

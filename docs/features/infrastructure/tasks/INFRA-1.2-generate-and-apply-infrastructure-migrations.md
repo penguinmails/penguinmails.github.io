@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.2: Generate and Apply Infrastructure Migrations"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.2: Generate and Apply Infrastructure Migrations
 
@@ -35,5 +41,5 @@ Use the Drizzle Kit CLI to generate a new migration that adds `vps_instances` an
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

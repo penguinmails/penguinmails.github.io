@@ -1,3 +1,9 @@
+---
+title: "INFRA-3.1: Define Drizzle Schema for domain_ip_assignments"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-3.1: Define Drizzle Schema for domain_ip_assignments
 
@@ -37,5 +43,5 @@ Create a schema to link domains and `smtp_ip_addresses`. Add the schema file `do
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

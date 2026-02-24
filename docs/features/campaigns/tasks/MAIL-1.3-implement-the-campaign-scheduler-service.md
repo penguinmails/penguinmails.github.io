@@ -1,3 +1,9 @@
+---
+title: "MAIL-1.3: Implement the Campaign Scheduler Service"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-1.3: Implement the Campaign Scheduler Service
 
@@ -31,5 +37,5 @@ In `/lib/services/scheduler.service.ts`, create a function `enqueueDueCampaigns(
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

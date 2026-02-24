@@ -1,3 +1,9 @@
+---
+title: "INFRA-2.3: Create a Scheduled Cron Job for Synchronization"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-2.3: Create a Scheduled Cron Job for Synchronization
 
@@ -37,5 +43,5 @@ Create a protected API route (e.g., `/api/cron/sync-infra/route.ts`) that extern
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

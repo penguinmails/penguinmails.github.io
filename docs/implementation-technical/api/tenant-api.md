@@ -32,9 +32,7 @@ Manage workspaces, client assignments, and workspace-specific settings.
 **Key Endpoints**:
 
 - `GET /api/v1/tenant/workspaces` - List accessible workspaces
-
 - `POST /api/v1/tenant/workspaces` - Create a new workspace
-
 - `GET /api/v1/tenant/workspaces/{slug}` - Get workspace details
 
 ### 2. Campaign Management
@@ -46,11 +44,8 @@ Create, configure, and manage email campaigns.
 **Key Endpoints**:
 
 - `GET /api/v1/tenant/campaigns` - List campaigns
-
 - `POST /api/v1/tenant/campaigns` - Create campaign
-
 - `PATCH /api/v1/tenant/campaigns/{id}` - Update campaign
-
 - `POST /api/v1/tenant/campaigns/{id}/send` - Launch campaign
 
 ### 3. Template Management
@@ -80,9 +75,7 @@ All endpoints require a valid session authenticated via **NileDB**.
 **Headers**:
 
 - `Authorization`: Bearer token (handled by Server Actions)
-
 - `x-tenant-id`: The active tenant context
-
 - `x-workspace-id`: (Optional) The active workspace context
 
 ---

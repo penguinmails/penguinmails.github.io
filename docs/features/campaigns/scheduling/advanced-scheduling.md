@@ -7,7 +7,7 @@ keywords: "advanced scheduling, automation, smart timing"
 ---
 
 
-```
+```text
 
 **Example:**
 
@@ -61,11 +61,8 @@ Google Calendar Event Created:
 Automatic Campaign Triggers:
 
   1. Reminder email: Dec 1 at 1:00 PM (1 hour before)
-
   2. Join link email: Dec 1 at 1:55 PM (5 min before)
-
   3. Follow-up email: Dec 1 at 4:00 PM (2 hours after)
-
   4. Recording email: Dec 2 at 9:00 AM (next day)
 
 ```
@@ -81,7 +78,6 @@ outlook_integration:
   sync_calendars:
 
     - "Sales Team Calendar"
-
     - "Marketing Events"
 
   automation_rules:
@@ -169,9 +165,7 @@ interface ConflictResolution {
 Contact receives:
 
 - Campaign A (Priority: High) at 9:00 AM
-
 - Campaign B (Priority: Medium) scheduled 11:00 AM
-
 - Campaign C (Priority: Low) scheduled 2:00 PM
 
 Conflict Resolution:

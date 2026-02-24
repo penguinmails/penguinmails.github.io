@@ -1,6 +1,8 @@
 ---
 title: "Third-Party Integrations Research Spike"
 description: "Evaluate ROI and customer demand for third-party integrations"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Third-Party Integrations Research Spike

@@ -9,7 +9,7 @@ keywords: "database debugging, SQL, query optimization, data consistency"
 
 # Database Bug Patterns
 
-### Database Issues
+## Database Issues
 
 **Problem**: N+1 query problem
 

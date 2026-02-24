@@ -114,37 +114,27 @@ Focus: Build domain reputation
 Week 1-2: Foundation
 
   - Use shared IPs
-
   - Low volume (10-100/day)
-
   - High engagement simulation
-
   - SPF, DKIM, DMARC verification
 
 Week 3-4: Growth
 
   - Gradually increase volume
-
   - Monitor domain reputation
-
   - Check blacklist status
-
   - Maintain engagement
 
 Week 5-6: Scaling
 
   - Reach target volume
-
   - Mix warmup + real contacts
-
   - Monitor inbox placement
 
 Week 7-8: Stabilization
 
   - Consistent high volume
-
   - Production-ready
-
   - Ongoing monitoring
 
 ```
@@ -162,31 +152,22 @@ Focus: Build IP reputation
 Week 1: Start Slow
 
   - 50-200 emails/day
-
   - Use existing warm domain
-
   - High engagement only
-
   - Monitor IP reputation
 
 Week 2-3: Gradual Increase
 
   - 200-1,000 emails/day
-
   - Consistent sending times
-
   - Maintain engagement
-
   - Check IP blacklists
 
 Week 4-6: Full Volume
 
   - 1,000-5,000+ emails/day
-
   - Production campaigns
-
   - Ongoing monitoring
-
   - Reputation maintenance
 
 ```
@@ -203,25 +184,17 @@ Network Size: 12,847 active accounts
 Coverage: 50+ email providers
 
   - Gmail: 4,200 accounts
-
   - Outlook: 2,800 accounts
-
   - Yahoo: 1,500 accounts
-
   - Apple Mail: 1,200 accounts
-
   - Other: 3,147 accounts
 
 Engagement Patterns:
 
   - Opens: 65-80% (randomized timing)
-
   - Clicks: 12-20% (varied links)
-
   - Replies: 3-8% (automated responses)
-
   - Spam reports: 0%
-
   - Bounces: < 0.5%
 
 Behavior Simulation:
@@ -242,11 +215,8 @@ Upload Custom Warmup List
 Requirements:
 
   - Minimum 100 contacts
-
   - Valid email addresses
-
   - Willing to engage (opens, clicks, replies)
-
   - Low bounce/spam risk
 
 Upload CSV:
@@ -344,9 +314,7 @@ Account B: support@penguinmails.com
 Difference:
 
   - Account A: Faster ramp-up
-
   - Account B: More conservative
-
   - Both: On track for target
 
 Recommendation:

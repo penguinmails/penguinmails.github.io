@@ -1,6 +1,8 @@
 ---
 title: "Serverless Functions"
 description: "Scalable compute for background tasks"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Serverless Functions

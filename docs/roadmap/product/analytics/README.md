@@ -1,6 +1,8 @@
 ---
 title: "Analytics & Reporting Roadmap"
 description: "Roadmap for analytics, reporting, and data insights"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Analytics & Reporting Roadmap

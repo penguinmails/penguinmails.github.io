@@ -1,6 +1,8 @@
 ---
 title: "Unverified Email Restrictions"
 description: "Limit access for unverified users"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Unverified Email Restrictions

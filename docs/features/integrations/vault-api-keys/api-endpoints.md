@@ -2,6 +2,7 @@
 title: "API Endpoints"
 description: "API documentation for key management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "API, endpoints, REST"
 ---
 
@@ -43,11 +44,8 @@ keywords: "API, endpoints, REST"
 **Error Responses:**
 
 - `400 Bad Request` - Invalid permissions or missing name
-
 - `401 Unauthorized` - Invalid or missing bearer token
-
 - `403 Forbidden` - User lacks API key management permission
-
 - `429 Too Many Requests` - Rate limit exceeded for key creation
 
 ### 2. List API Keys
@@ -184,9 +182,7 @@ curl -X POST https://api.penguinmails.com/api/v1/emails/send \
 **Error Responses:**
 
 - `401 Unauthorized` - Invalid or missing API key
-
 - `403 Forbidden` - API key lacks required permission scope
-
 - `429 Too Many Requests` - Rate limit exceeded
 
 ---

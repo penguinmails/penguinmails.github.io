@@ -17,21 +17,15 @@ keywords: "visualization, charts, graphs"
 **Requirements**:
 
 - Responsive charts (adapt to container width)
-
 - Accessible (ARIA labels, keyboard navigation)
-
 - Consistent color palette (use design tokens)
-
 - Interactive tooltips
 
 **Chart Types Needed**:
 
 - Line charts: Campaign performance over time
-
 - Bar charts: Comparative metrics
-
 - Pie/Donut charts: Distribution (open rate, click rate)
-
 - Area charts: Cumulative metrics
 
 ### Real-time Updates
@@ -41,9 +35,7 @@ keywords: "visualization, charts, graphs"
 **Use Cases**:
 
 - Live campaign sending status
-
 - Real-time analytics updates
-
 - Notification feed
 
 **Implementation**:

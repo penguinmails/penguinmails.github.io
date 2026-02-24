@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.4: Implement SMTP Sending with Nodemailer"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.4: Implement SMTP Sending with Nodemailer
 
@@ -31,5 +37,5 @@ Install `nodemailer`. Create a function `sendEmail(emailObject, smtpSettings)` t
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

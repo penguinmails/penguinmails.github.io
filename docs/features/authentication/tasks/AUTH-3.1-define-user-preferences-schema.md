@@ -1,3 +1,9 @@
+---
+title: "AUTH-3.1: Define Drizzle Schema for user_preferences"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-3.1: Define Drizzle Schema for user_preferences
 
@@ -107,5 +113,5 @@ export const userPreferences = pgTable('user_preferences', {
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

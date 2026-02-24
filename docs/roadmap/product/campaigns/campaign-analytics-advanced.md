@@ -1,6 +1,8 @@
 ---
 title: "Advanced Campaign Analytics"
 description: "Heatmaps, geo-tracking, and device statistics"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Advanced Campaign Analytics

@@ -37,21 +37,15 @@ persona: "Documentation Users"
 #### US-EU Wage Gap Analysis
 
 - **US salaries are 30-50% higher** across equivalent roles
-
 - **Marketing Operations Managers** show widest gap: $101K-124K US vs €54K-65K EU
-
 - **Specialization Premium**: Technical Email/Deliverability Specialists command higher compensation
-
 - **Compliance Importance**: Email-focused Privacy Officers earn significantly ($88K-119K US median)
 
 #### Role-Specific Considerations
 
 - **Email Marketing Specialists**: Wide range reflects skill variance in automation, copywriting, analytics
-
 - **Technical Email Specialists**: Higher compensation due to authentication, infrastructure, ISP relationship expertise
-
 - **SDR/Outreach Specialists**: Evaluate total compensation carefully—commission structures vary 20-60% variable
-
 - **Compliance Officers**: High median reflects regulatory pressure and business criticality
 
 ---
@@ -88,17 +82,13 @@ persona: "Documentation Users"
 #### Key Implementation Insights
 
 - **Automation Impact**: Small programs reduce hours by 20-30% through list automation and A/B testing
-
 - **Scaling Non-Linearity**: Time doesn't scale linearly with email volume; 10× volume increase requires only 3-5× additional time
-
 - **Benchmarking Considerations**: Initial setup (first 4-6 weeks) runs 15-25% higher as infrastructure is built and processes documented
 
 #### Efficiency Improvement by Scale
 
 - **Small Scale**: 20-30% efficiency gains from basic automation
-
 - **Medium Scale**: 30-40% efficiency gains from automation integration
-
 - **Large Scale**: 40-50% efficiency gains require significant infrastructure investment
 
 ---
@@ -154,49 +144,31 @@ persona: "Documentation Users"
 #### In-House Model (Recommended for Core Roles)
 
 - **Preferred for**: SDR/outreach roles where institutional knowledge and relationship building are critical
-
 - **Cost-effective at**: 0.5+ FTE utilization
-
 - **Benefits**:
-
   - Better brand alignment and message consistency
-
   - Institutional knowledge retention
-
   - Direct performance accountability
-
   - Scalable skill development
 
 #### Outsourced Model (Recommended for Specialized Roles)
 
 - **Preferred for**: Technical deliverability, compliance roles where peak utilization is low
-
 - **Cost-effective for**: Roles requiring specialized expertise without full-time commitment
-
 - **Benefits**:
-
   - Access to specialized expertise
-
   - Reduced fixed overhead
-
   - Flexible capacity management
-
   - Built-in compliance and audit trails
 
 #### Hybrid Model (Most Common for Mid-Market)
 
 - **Structure**: Dedicated SDRs in-house with fractional specialists
-
 - **Typical Split**: 70% in-house, 30% outsourced
-
 - **Benefits**:
-
   - Core relationship management in-house
-
   - Specialized expertise when needed
-
   - Cost-effective scaling
-
   - Risk mitigation
 
 ### Role-by-Role Sourcing Recommendations
@@ -218,31 +190,22 @@ persona: "Documentation Users"
 #### Email Marketing Specialist Productivity
 
 - **Campaign Development**: 3-5 campaigns (small), 5-8 campaigns (medium), 8-12 campaigns (large)
-
 - **Copy Output**: 2,000-3,000 words/week for campaign content
-
 - **A/B Testing**: 5-8 concurrent tests (small), 8-12 concurrent tests (medium), 15-20 concurrent tests (large)
-
 - **List Management**: 5,000-10K contacts (small), 25K-50K contacts (medium), 100K+ contacts (large)
 
 #### SDR/Outreach Specialist Productivity
 
 - **Daily Outreach Volume**: 50-100 emails (small), 100-200 emails (medium), 200-400 emails (large)
-
 - **Response Management**: 20-40 responses (small), 40-80 responses (medium), 80-160 responses (large)
-
 - **Meeting Booking Rate**: 3-5% of responses (1-2 meetings/day small, 3-4 meetings/day medium, 6-8 meetings)
-
 - **List Building**: 200-500 new contacts (small), 500-1,000 new contacts (medium), 1,000+ new contacts (large)
 
 #### Technical Email Specialist Productivity
 
 - **Domain Management**: 2-3 domains (small), 5-10 domains (medium), 15+ domains (large)
-
 - **Deliverability Optimization**: 10-15% improvement in deliverability metrics
-
 - **IP Warming**: 1-2 domains (small), 3-5 domains (medium), 8-12 domains (large)
-
 - **Infrastructure Monitoring**: Real-time monitoring for 50-100K emails/month per FTE
 
 ### Team Efficiency Metrics
@@ -258,9 +221,7 @@ persona: "Documentation Users"
 #### ROI Metrics
 
 - **Email Marketing ROI**: 3:1 to 8:1 for optimized campaigns
-
 - **SDR Productivity**: $50-150 cost per qualified lead
-
 - **Team Scaling**: 70-80% efficiency retention when adding team members
 
 ---
@@ -274,23 +235,16 @@ persona: "Documentation Users"
 **Required Skills**:
 
 - Campaign automation platforms (HubSpot, Marketo, etc.)
-
 - Email copywriting and design
-
 - A/B testing and analytics
-
 - List segmentation and management
-
 - Compliance knowledge (CAN-SPAM, GDPR)
 
 **Interview Process**:
 
 - Portfolio review (2-3 campaign examples)
-
 - Technical assessment (platform-specific tasks)
-
 - Scenario-based problem solving
-
 - Cultural fit and communication skills
 
 **Onboarding Timeline**: 4-6 weeks for full productivity
@@ -300,23 +254,16 @@ persona: "Documentation Users"
 **Required Skills**:
 
 - Cold email best practices
-
 - CRM and sales tools
-
 - List building and research
-
 - Follow-up sequence optimization
-
 - Basic compliance knowledge
 
 **Interview Process**:
 
 - Role-play cold outreach scenarios
-
 - Communication and persistence assessment
-
 - Tool proficiency demonstration
-
 - Goal-oriented mindset evaluation
 
 **Onboarding Timeline**: 2-4 weeks for basic productivity, 8-12 weeks for full optimization
@@ -326,23 +273,16 @@ persona: "Documentation Users"
 **Required Skills**:
 
 - Marketing automation platforms
-
 - Analytics and attribution modeling
-
 - Process optimization
-
 - Team coordination
-
 - Vendor management
 
 **Interview Process**:
 
 - Technical platform assessment
-
 - Process improvement case studies
-
 - Team leadership scenarios
-
 - Data-driven decision making examples
 
 **Onboarding Timeline**: 6-8 weeks for full productivity
@@ -354,43 +294,30 @@ persona: "Documentation Users"
 **SDR/Outreach Specialists**:
 
 - Base salary: 60-70% of total compensation
-
 - Variable/commission: 30-40% of total compensation
-
 - Commission structure: $50-150 per qualified meeting
-
 - Performance tiers: Accelerators at 100%, 125%, 150% of quota
 
 **Email Marketing Specialists**:
 
 - Base salary: 80-90% of total compensation
-
 - Performance bonus: 10-20% based on campaign performance
-
 - Metrics: Open rates, click rates, conversion rates
-
 - Team performance bonuses for collaboration
 
 **Marketing Operations Managers**:
 
 - Base salary: 85-95% of total compensation
-
 - Performance bonus: 5-15% based on operational efficiency
-
 - Metrics: Process improvements, cost savings, team productivity
-
 - Strategic project completion bonuses
 
 #### Benefits and Perks
 
 - **Email marketing tool access**: All major platforms
-
 - **Training budget**: $2,000-5,000/year per FTE
-
 - **Conference attendance**: 1-2 industry conferences/year
-
 - **Certification programs**: HubSpot, Google Analytics, etc.
-
 - **Flexible work arrangements**: Remote/hybrid options
 
 ---
@@ -406,9 +333,7 @@ persona: "Documentation Users"
 **Key Milestones**:
 
 - Consistent email delivery
-
 - Basic campaign automation
-
 - Initial performance optimization
 
 #### Stage 2: Optimization (10K-100K emails)
@@ -418,9 +343,7 @@ persona: "Documentation Users"
 **Key Milestones**:
 
 - Advanced A/B testing framework
-
 - Multi-campaign coordination
-
 - Performance analytics and optimization
 
 #### Stage 3: Scale (100K+ emails)
@@ -430,9 +353,7 @@ persona: "Documentation Users"
 **Key Milestones**:
 
 - Real-time optimization
-
 - Advanced deliverability management
-
 - Enterprise compliance and security
 
 ### Capacity Planning Metrics
@@ -440,9 +361,7 @@ persona: "Documentation Users"
 #### Volume-to-Team Ratio
 
 - **Small Scale**: 1 FTE per 10K-15K emails/month
-
 - **Medium Scale**: 1 FTE per 25K-50K emails/month
-
 - **Large Scale**: 1 FTE per 100K-200K emails/month
 
 #### Scaling Triggers

@@ -2,6 +2,7 @@
 title: "Disaster Recovery Procedures"
 description: "Recovery procedures for credential system failures"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "disaster recovery, backup, recovery procedures"
 ---
 
@@ -89,11 +90,8 @@ If Vault itself fails, credentials can be restored from encrypted backups:
 **Backup Strategy:**
 
 - **Frequency:** Daily at 02:00 UTC
-
 - **Retention:** 30 daily backups, 12 monthly backups
-
 - **Storage:** Encrypted S3 bucket (AES-256-GCM)
-
 - **Encryption Key:** Stored separately from backups
 
 **Restoration Process:**

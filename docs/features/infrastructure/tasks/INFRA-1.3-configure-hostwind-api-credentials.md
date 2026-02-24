@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.3: Configure Hostwind API Credentials"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.3: Configure Hostwind API Credentials
 
@@ -35,5 +41,5 @@ Add `HOSTWIND_API_KEY` to the environment variable configuration and update `.en
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

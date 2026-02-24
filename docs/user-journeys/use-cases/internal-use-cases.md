@@ -1,3 +1,10 @@
+---
+title: "Use Cases: Internal Platform Users"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "internal use cases, administrative workflows, operational procedures, business processes, platform management"
+---
 # Use Cases: Internal Platform Users
 
 ## Overview
@@ -465,5 +472,3 @@ This document outlines comprehensive use cases for Internal Platform Users who m
 - [`internal-users/technical-teams-journeys.md`](../internal-users/technical-teams-journeys)
 
 ---
-
-**Keywords**: internal use cases, administrative workflows, operational procedures, business processes, platform management

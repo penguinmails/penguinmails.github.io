@@ -1,10 +1,16 @@
+---
+title: "CORE-1.1: Initialize Next.js 15 Project"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.1: Initialize Next.js 15 Project
 
 **Ticket ID:** CORE-1.1  
 **Milestone:** 1 - Project Initialization & Code Quality  
 **Priority:** 🔴 Critical  
-**Status:** Not Started
+**Status:** Completed
 
 ## Description
 

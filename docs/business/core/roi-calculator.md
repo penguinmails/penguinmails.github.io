@@ -53,15 +53,10 @@ graph TD
 #### Input Variables
 
 - **Monthly Email Volume**: [10K / 100K / 1M+]
-
 - **Current Deliverability Rate**: [60% / 80% / 90% / 95%]
-
 - **Industry/Vertical**: [SaaS / IT Services / Agency / Professional Services / General B2B]
-
 - **Team Size**: [1-2 / 3-4 / 5+ people]
-
 - **Current Monthly Tool Stack Cost**: $[Enter current spend]
-
 - **Compliance Requirements**: [Basic / Standard / Enterprise]
 
 ---
@@ -149,25 +144,17 @@ graph TD
 ### When to Choose Managed ESPs
 
 - Volume < 1M emails/month
-
 - Deliverability is business critical
-
 - No dedicated DevOps team
-
 - Need built-in compliance and security
-
 - Want predictable costs and support
 
 ### When to Consider Self-Hosted
 
 - Volume > 10M emails/month
-
 - Have 4-6+ email infrastructure engineers
-
 - Email is core product (not just marketing)
-
 - Need complete infrastructure control
-
 - Have complex custom requirements
 
 ---
@@ -187,25 +174,17 @@ graph TD
 ### Best Case Scenario (Optimized)
 
 - **Deliverability**: 95%
-
 - **Provider**: Managed ESP
-
 - **Annual Savings**: $40,000-$57,600
-
 - **ROI**: 300-500%
-
 - **Payback**: 2-3 months
 
 ### Realistic Scenario (Average)
 
 - **Deliverability**: 80-90%
-
 - **Provider**: Managed ESP
-
 - **Annual Savings**: $15,000-$30,000
-
 - **ROI**: 150-300%
-
 - **Payback**: 3-6 months
 
 ---
@@ -219,15 +198,12 @@ graph TD
 ## For detailed analysis
 
 - [Detailed ROI Calculator](/docs/business/financial-analysis) - Complete cost-benefit analysis with detailed calculations
-
 - [Implementation Roadmap](/docs/business/implementation) - Resource planning and timeline
-
 - [Competitive Analysis](/docs/business/core/competitive-analysis) - Provider selection matrix
 
 ## For technical teams
 
 - [Technical Infrastructure](/docs/business/implementation) - Technical specifications
-
 - [Performance Benchmarks](/docs/business/performance) - Industry data and metrics
 
 ---

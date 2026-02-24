@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Content Database Documentation"
 description: "Content Database Documentation - Overview and Navigation"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---
@@ -15,19 +15,14 @@ This directory contains comprehensive documentation for the PenguinMails Content
 ### Core Components
 
 - **[Analysis](/docs/implementation-technical/database-infrastructure/content-database/analysis)** - Current model analysis, gotchas, and refinement proposals
-
 - **[Schema Guide](/docs/implementation-technical/database-infrastructure/content-database/schema-guide)** - Complete database schema and design principles
-
 - **[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/content-database/mermaid-er)** - Database schema visualization
 
 ### Design Principles
 
 - **Tier Separation**: Content DB is separate from OLTP, OLAP, and Queue systems
-
 - **Heavy Content Focus**: Email bodies, attachments, and long-term archives only
-
 - **No Cross-DB FKs**: Uses storage_key references without physical foreign key constraints
-
 - **External Analytics**: Logging and monitoring handled by external systems
 
 ## Quick Navigation
@@ -43,21 +38,15 @@ This directory contains comprehensive documentation for the PenguinMails Content
 ### Core Responsibilities
 
 - **Content Storage**: Email bodies, HTML content, headers, and attachments
-
 - **Tenant Isolation**: Complete data separation via tenant_id and RLS
-
 - **Retention Policies**: Configurable lifecycle management and compliance
-
 - **Storage Optimization**: Compression, deduplication, and archival strategies
 
 ### System Integration
 
 - **OLTP Integration**: References via storage_key without cross-DB foreign keys
-
 - **Queue Processing**: Content lifecycle managed through background workers
-
 - **External Analytics**: Access logging and metrics handled by external systems
-
 - **Backup & Recovery**: Content storage with robust backup procedures
 
 ## Architecture Overview
@@ -65,27 +54,20 @@ This directory contains comprehensive documentation for the PenguinMails Content
 The Content Database follows a lean, focused approach:
 
 - **content_objects**: Primary table for email/message bodies and metadata
-
 - **attachments**: Binary attachments linked to content objects
-
 - **Retention Systems**: Optional lifecycle policies and archival processes
 
 This design avoids:
 
 - Analytics and logging tables (handled by external systems)
-
 - Cross-database foreign key constraints
-
 - General-purpose monitoring or infrastructure metrics
 
 ## Getting Started
 
 1. Review [Analysis](/docs/implementation-technical/database-infrastructure/content-database/analysis) for current state understanding and proposals
-
 2. Consult [Schema Guide](/docs/implementation-technical/database-infrastructure/content-database/schema-guide) for implementation details
-
 3. Reference [Mermaid ER](/docs/implementation-technical/database-infrastructure/content-database/mermaid-er) for visual schema understanding
-
 4. Follow design principles for new development
 
 ## Integration
@@ -93,11 +75,8 @@ This design avoids:
 This content database integrates with:
 
 - OLTP system for message metadata and content references
-
 - Queue system for lifecycle management and processing
-
 - External analytics for access logging and performance monitoring
-
 - Backup systems for data durability and compliance
 
 For questions or support, contact the Engineering team.

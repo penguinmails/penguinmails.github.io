@@ -1,6 +1,8 @@
 ---
 title: "Infrastructure MVP Setup"
 description: "Core VPS, Database, and Mail Server setup"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Infrastructure MVP Setup

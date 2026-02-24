@@ -1,6 +1,8 @@
 ---
 title: "Disaster Recovery Automation"
 description: "Automated backup and restoration procedures"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Disaster Recovery Automation

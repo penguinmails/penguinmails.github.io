@@ -1,15 +1,13 @@
-﻿---
+---
 title: "Queue System Best Practices"
 description: "Queue System Best Practices - Performance and Reliability Guidelines"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Engineering Teams"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and monitoring"
 ---
 

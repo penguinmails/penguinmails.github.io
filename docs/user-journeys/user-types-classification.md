@@ -1,3 +1,10 @@
+---
+title: "User Types Classification Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "user types, internal users, external stakeholders, customer users, user classification, product development, user experience"
+---
 # User Types Classification Framework
 
 ## Overview
@@ -312,5 +319,3 @@ This document defines the three distinct user type categories for PenguinMails p
 **Next Steps**: Use this classification to organize all user journey documentation, create user-specific user stories, and align product development priorities with user type needs.
 
 ---
-
-**Keywords**: user types, internal users, external stakeholders, customer users, user classification, product development, user experience

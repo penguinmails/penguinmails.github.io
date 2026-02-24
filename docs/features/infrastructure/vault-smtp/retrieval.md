@@ -2,6 +2,7 @@
 title: "Credential Retrieval"
 description: "Mechanisms for retrieving SMTP credentials from Vault"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "retrieval, credential access, Vault API"
 ---
 
@@ -16,11 +17,8 @@ PenguinMails administrators can retrieve SMTP credentials for troubleshooting pu
 **Access Requirements:**
 
 - Admin role with `support-team` Vault policy
-
 - Re-authentication required (password + 2FA)
-
 - Time-limited access (15-minute session)
-
 - All access logged in audit trail
 
 **Retrieval Workflow:**

@@ -2,6 +2,7 @@
 title: "Campaign Management Overview"
 description: "Complete campaign creation, editing, and management with drag-and-drop editor, scheduling, and analytics"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "PARTIALLY_COMPLETE"
 keywords: "campaign management, email campaigns, campaign editor, scheduling"
 ---
@@ -27,15 +28,10 @@ Campaign Management is the core revenue-generating feature of PenguinMails, enab
 ### Key Capabilities
 
 - **Multi-Step Sequences**: Create up to 20-step email sequences with time delays and conditional branching
-
 - **Campaign Types**: One-time broadcasts, drip campaigns, triggered campaigns, and A/B tests
-
 - **Visual Builder**: Drag-and-drop campaign builder with real-time preview
-
 - **Template Integration**: Use pre-built templates or create custom designs
-
 - **Advanced Scheduling**: Timezone-aware scheduling with send-time optimization
-
 - **Comprehensive Analytics**: Track performance at campaign and step level
 
 ---

@@ -1,6 +1,8 @@
 ---
 title: "Enterprise Data Warehouse Integration"
 description: "Integration with Snowflake, BigQuery, Redshift"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Enterprise Data Warehouse Integration

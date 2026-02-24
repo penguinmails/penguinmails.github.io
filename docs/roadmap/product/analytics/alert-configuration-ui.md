@@ -1,6 +1,8 @@
 ---
 title: "Alert Configuration UI"
 description: "Performance alerts and notifications"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Alert Configuration UI

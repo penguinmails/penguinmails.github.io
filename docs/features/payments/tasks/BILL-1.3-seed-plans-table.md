@@ -1,3 +1,9 @@
+---
+title: "BILL-1.3: Seed the plans Table"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-1.3: Seed the plans Table
 
@@ -153,5 +159,5 @@ seedPlans()
 
 ## Cross-References
 
-- **Routes**: [settings.md]()
-- **API**: [platform-api/subscriptions.md]()
+- **Routes**: [settings.md](/docs/design/routes/settings)
+- **API**: [platform-api/subscriptions.md](/docs/implementation-technical/api/platform-api/subscriptions)

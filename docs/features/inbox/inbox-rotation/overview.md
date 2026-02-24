@@ -2,6 +2,7 @@
 title: "Inbox Rotation"
 description: "Maximize deliverability by automatically rotating sending across multiple email accounts with smart health monitoring"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "AVAILABLE"
 roadmap_timeline: "Q1 2026"
 priority: "High"
@@ -9,14 +10,8 @@ related_features:
 
 
   - inbox/unified-inbox/overview
-
-
   - warmup/reputation-monitoring
-
-
   - campaigns/campaign-management/overview
-
-
   - infrastructure/free-mailbox-creation/overview
 related_tasks:
 
@@ -36,15 +31,10 @@ Inbox Rotation protects your sender reputation by ensuring no single email accou
 ### Key Capabilities
 
 - **Rotation Pools**: Group accounts by purpose (e.g., "Sales Team", "Newsletter", "Cold Outreach")
-
 - **Smart Load Balancing**: Distribute volume based on account age, warmup status, and health score
-
 - **Auto-Pause & Recovery**: Automatically remove accounts with high bounce rates or low reputation
-
 - **Domain Diversity**: Rotate across different domains to prevent domain-wide blacklisting
-
 - **Volume Ramping**: Automatically increase limits as accounts mature
-
 - **Unified Analytics**: Track performance of the entire pool as a single entity
 
 ---
@@ -126,14 +116,8 @@ Account Performance:
 
 
 - sarah@company.com: 45 sent | 0 bounces
-
-
 - mike@company.com: 42 sent | 1 bounce
-
-
 - sales@company.net: 38 sent | 0 bounces
-
-
 - hello@company.io: 20 sent | 0 bounces
 
 

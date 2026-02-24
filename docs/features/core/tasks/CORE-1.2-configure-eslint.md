@@ -1,10 +1,16 @@
+---
+title: "CORE-1.2: Configure ESLint for Code Linting"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.2: Configure ESLint for Code Linting
 
 **Ticket ID:** CORE-1.2  
 **Milestone:** 1 - Project Initialization & Code Quality  
 **Priority:** 🔴 Critical  
-**Status:** Not Started
+**Status:** Completed
 
 ## Description
 

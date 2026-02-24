@@ -1,3 +1,9 @@
+---
+title: "INFRA-2.4: Implement Sync Status Tracking"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-2.4: Implement Sync Status Tracking
 
@@ -36,5 +42,5 @@ Enhance the cron job to record execution status in `system_config` with a key li
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

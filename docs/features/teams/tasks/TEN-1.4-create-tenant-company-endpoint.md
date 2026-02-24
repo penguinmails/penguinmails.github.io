@@ -1,3 +1,9 @@
+---
+title: "TEN-1.4: Create API Endpoint for Tenant & Company Creation (POST /api/tenants)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-1.4: Create API Endpoint for Tenant & Company Creation (POST /api/tenants)
 
@@ -216,5 +222,5 @@ export async function POST(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

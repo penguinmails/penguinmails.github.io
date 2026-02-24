@@ -2,6 +2,7 @@
 title: "Automated Credential Rotation"
 description: "Automated rotation procedures for SMTP credentials"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "rotation, automated rotation, credential renewal"
 ---
 
@@ -16,11 +17,8 @@ SMTP credentials are automatically rotated every 180 days to maintain security:
 **Rotation Schedule:**
 
 - **Frequency:** Every 180 days
-
 - **Trigger:** Automated cron job (daily check at 02:00 UTC)
-
 - **Downtime:** Zero (MailU supports immediate password change)
-
 - **Notification:** Email to admins 7 days before rotation
 
 **Rotation Workflow:**
@@ -132,9 +130,7 @@ Admins can manually trigger credential rotation at any time:
 **Use Cases:**
 
 - Security incident (suspected credential compromise)
-
 - Compliance requirement (immediate rotation)
-
 - Troubleshooting (reset to known state)
 
 **Manual Rotation Workflow:**

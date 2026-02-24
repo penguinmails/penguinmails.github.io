@@ -2,6 +2,7 @@
 title: "Technical Architecture"
 description: "System architecture for API key management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "architecture, design, system"
 ---
 
@@ -18,9 +19,7 @@ keywords: "architecture, design, system"
 **Components:**
 
 - `pm` - PenguinMails prefix
-
 - `live` - Environment indicator (live, test)
-
 - `{32_random_chars}` - Cryptographically secure random string (base62: a-z, A-Z, 0-9)
 
 **Generation:**
@@ -67,25 +66,15 @@ function generateAPIKey(): string {
 **Field Descriptions:**
 
 - `key_hash` - bcrypt hash of API key (salt rounds: 12)
-
 - `permissions` - Array of permission scopes
-
 - `rate_limit` - Requests per minute allowed (tier-based)
-
 - `created_at` - ISO 8601 timestamp of key creation
-
 - `last_used` - ISO 8601 timestamp of last API request
-
 - `request_count` - Total API requests made with this key
-
 - `error_count` - Total errors (4xx, 5xx responses)
-
 - `rotation_policy` - "on_demand" (manual regeneration only)
-
 - `status` - "active" or "revoked"
-
 - `name` - User-provided key name
-
 - `created_by` - User ID who created the key
 
 ### Bcrypt Hashing
@@ -93,15 +82,12 @@ function generateAPIKey(): string {
 **Why bcrypt?**
 
 - Slow hashing algorithm (prevents brute force attacks)
-
 - Adaptive (can increase cost factor over time)
-
 - Industry standard for password/key hashing
 
 **Configuration:**
 
 - Salt rounds: 12 (2^12 = 4096 iterations)
-
 - Hashing time: ~250ms per key (acceptable for key generation)
 
 **Implementation:**
@@ -137,9 +123,7 @@ async function verifyAPIKey(apiKey: string, hash: string): Promise<boolean> {
 **Scope Validation:**
 
 - Each API endpoint checks required scope
-
 - Returns 403 Forbidden if scope missing
-
 - Multiple scopes can be assigned to single key
 
 **Example:**
@@ -234,15 +218,10 @@ X-RateLimit-Reset: 1732618800
 **Tracked Metrics:**
 
 - Total requests (lifetime)
-
 - Error count (4xx, 5xx responses)
-
 - Last used timestamp
-
 - Requests per day (last 30 days)
-
 - Most common endpoints
-
 - Geographic distribution (IP-based)
 
 **Storage:** PostgreSQL + Redis

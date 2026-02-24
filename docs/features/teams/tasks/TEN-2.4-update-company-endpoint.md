@@ -1,3 +1,9 @@
+---
+title: "TEN-2.4: Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-2.4: Create API Endpoint to Update a Company (PATCH /api/companies/{companyId})
 
@@ -197,5 +203,5 @@ export async function PATCH(
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

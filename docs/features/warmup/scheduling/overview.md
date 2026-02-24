@@ -17,11 +17,8 @@ priority: "High"
 related_features:
 
 - warmup/warmup-management
-
 - warmup/reputation-monitoring
-
 - domains/domain-management
-
 - infrastructure/email-infrastructure-setup
 related_tasks:
 
@@ -40,19 +37,12 @@ Warmup Scheduling automates the process of establishing sender reputation for ne
 ### Key Capabilities
 
 - **Automated Warmup Schedules**: Pre-configured ramp-up plans
-
 - **Gradual Volume Ramping**: Increase sends progressively over 4-8 weeks
-
 - **Domain & IP Warmup**: Separate strategies for domains and dedicated IPs
-
 - **Engagement Simulation**: Automated opens, clicks, and replies
-
 - **Progress Tracking**: Real-time warmup status and metrics
-
 - **Custom Schedules**: Tailor warmup plans to your needs
-
 - **Multi-Account Warmup**: Warm up multiple accounts simultaneously
-
 - **Safety Limits**: Automatic throttling to prevent reputation damage
 
 ---
@@ -129,15 +119,12 @@ Warmup Pool:
   ● Use PenguinMails warmup network (Recommended)
 
     - 10,000+ verified warmup accounts
-
     - Automatic engagement
-
     - Best deliverability
 
   ○ Use custom warmup list
 
     - Upload your own contacts
-
     - Manual engagement required
 
 Safety Settings:
@@ -194,11 +181,8 @@ Focus: Establish sending pattern
 Activities:
 
   - Send to warmup pool only
-
   - High engagement simulation (70%+ opens)
-
   - Consistent sending times
-
   - Monitor bounce rates closely
 
 Goals:
@@ -221,11 +205,8 @@ Focus: Gradual increase
 Activities:
 
   - Continue warmup pool (80%)
-
   - Introduce real contacts (20%)
-
   - Maintain high engagement
-
   - Monitor sender reputation
 
 Goals:
@@ -248,11 +229,8 @@ Focus: Stabilize at target
 Activities:
 
   - Warmup pool (50%)
-
   - Real contacts (50%)
-
   - Natural engagement patterns
-
   - Full campaign readiness
 
 Goals:

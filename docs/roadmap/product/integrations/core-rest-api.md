@@ -1,6 +1,8 @@
 ---
 title: "Core REST API Endpoints"
 description: "Implement core REST API endpoints for contacts, campaigns, emails, and analytics"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Core REST API Endpoints

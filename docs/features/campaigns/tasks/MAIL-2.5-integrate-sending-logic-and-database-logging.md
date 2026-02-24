@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.5: Integrate Sending Logic and Database Logging"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.5: Integrate Sending Logic and Database Logging
 
@@ -30,5 +36,5 @@ Combine the worker main loop, email assembly, and SMTP sending. After successful
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)
