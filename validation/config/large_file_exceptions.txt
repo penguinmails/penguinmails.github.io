@@ -1,0 +1,4 @@
+# Large file exceptions — structured format
+# FORMAT: path | owner | justification | date_added | review_date | tracking_issue
+#
+# No exceptions currently defined.
