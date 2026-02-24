@@ -30,9 +30,7 @@ Sender reputation tracking provides visibility into email deliverability health 
   - Unsubscribe rate
   - Send volume trends
   - Historical deliverability patterns
-
 - **Per-Mailbox Tracking**: Health scores stored in OLAP `mailbox_analytics` table
-
 - **Reputation Trend**: Historical score data for trend visualization
 
 ### Post-MVP
@@ -40,7 +38,6 @@ Sender reputation tracking provides visibility into email deliverability health 
 - **External Tool Integration** (Q2 2026):
   - Google Postmaster API: Domain reputation, spam rate, authentication
   - Microsoft SNDS: IP reputation, trap hits, complaint rate
-
 - **Comparison View**:
   - Display internal health score alongside external scores
   - "Compare with external tools" toggle in UI
