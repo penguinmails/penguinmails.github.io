@@ -22,15 +22,10 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Core Requirements**:
 
 1. **Accurate Header Information**: No false or misleading headers
-
 2. **No Deceptive Subject Lines**: Subject line must reflect content
-
 3. **Clear Identification**: Must identify email as advertisement
-
 4. **Physical Address**: Include valid physical postal address
-
 5. **Honor Opt-Out**: Honor unsubscribe requests within 10 business days
-
 6. **Responsibility Assignment**: Sender must accept responsibility for compliance
 
 **Technical Implementation**:
@@ -65,29 +60,19 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Core Requirements for Email Marketing**:
 
 1. **Lawful Basis**: Must have valid legal basis for processing
-
 2. **Data Minimization**: Collect only necessary data
-
 3. **Purpose Limitation**: Use data only for specified purposes
-
 4. **Accuracy**: Maintain accurate and up-to-date data
-
 5. **Storage Limitation**: Retain data only as long as necessary
-
 6. **Integrity and Confidentiality**: Implement appropriate security
-
 7. **Accountability**: Demonstrate compliance with all principles
 
 **Email-Specific Requirements**:
 
 - **Consent**: Explicit opt-in consent for email processing
-
 - **Right to be Forgotten**: Ability to delete personal data
-
 - **Data Portability**: Ability to export personal data
-
 - **Notification of Breaches**: 72-hour notification requirement
-
 - **Data Processing Records**: Maintain detailed processing logs
 
 #### California Consumer Privacy Act (CCPA)
@@ -99,21 +84,15 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Core Requirements**:
 
 1. **Right to Know**: Consumers can request data collection disclosure
-
 2. **Right to Delete**: Consumers can request data deletion
-
 3. **Right to Opt-Out**: Consumers can opt-out of data sale
-
 4. **Right to Non-Discrimination**: Cannot discriminate against exercising rights
 
 **Email Marketing Implications**:
 
 - **Data Collection Notice**: Must disclose email collection practices
-
 - **Opt-Out Mechanisms**: Must provide clear opt-out options
-
 - **Data Processing Purpose**: Must disclose processing purposes
-
 - **Third-Party Sharing**: Must disclose data sharing practices
 
 #### PCI DSS v4.0 (Payment Card Industry)
@@ -125,11 +104,8 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Email Marketing Implications**:
 
 - **DMARC Compliance**: Mandatory by March 2025 for payment processing
-
 - **Data Encryption**: All payment-related email communications
-
 - **Access Control**: Restrict access to payment data
-
 - **Regular Security Testing**: Ongoing security assessments
 
 ### International Email Regulations
@@ -139,11 +115,8 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Key Requirements**:
 
 - Consent-based email marketing for Singapore residents
-
 - Data protection officer requirements for large organizations
-
 - Mandatory data breach notification
-
 - Cross-border data transfer restrictions
 
 #### Lei Geral de Proteção de Dados (LGPD) - Brazil
@@ -151,11 +124,8 @@ keywords: "CAN-SPAM, GDPR, CCPA, CASL, regulations"
 **Key Requirements**:
 
 - Similar to GDPR with Brazilian-specific requirements
-
 - Data protection officer requirement for large processors
-
 - Local data storage requirements for sensitive data
-
 - Right to data portability and deletion
 
 ---

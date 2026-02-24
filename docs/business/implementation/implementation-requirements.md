@@ -147,11 +147,8 @@ EOF
 ### Key Performance Indicators
 
 - **Queue Size**: <100 messages for healthy system
-
 - **Processing Rate**: 100+ messages/minute for active systems
-
 - **Delivery Time**: <5 minutes for 95% of messages
-
 - **Bounce Rate**: <1% for well-maintained lists
 
 ### Email Queue Management

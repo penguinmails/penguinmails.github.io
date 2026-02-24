@@ -49,11 +49,8 @@ v=spf1 include:_spf.google.com include:sendgrid.net include:mailgun.org ~all
 **Best Practices**:
 
 - Start with `v=spf1 ~all` during testing
-
 - Add authorized senders incrementally
-
 - Use `-all` (hard fail) only when confident
-
 - Monitor SPF check results in email headers
 
 #### DKIM (DomainKeys Identified Mail) Implementation
@@ -86,11 +83,8 @@ default._domainkey.example.com. IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQ
 **Configuration Process**:
 
 1. **Generate Key Pair**: RSA 2048-bit minimum
-
 2. **Publish Public Key**: In DNS as TXT record
-
 3. **Configure Email System**: Sign all outgoing emails
-
 4. **Test Implementation**: Verify DKIM signature in sent emails
 
 #### DMARC (Domain-based Message Authentication) Implementation
@@ -126,9 +120,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@example.c
 **Phased Implementation**:
 
 1. **Phase 1**: `p=none` for monitoring (1-2 weeks)
-
 2. **Phase 2**: `p=quarantine` for email routing (2-4 weeks)
-
 3. **Phase 3**: `p=reject` for complete enforcement (ongoing)
 
 #### DMARC Alignment Requirements
@@ -136,9 +128,7 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=none; rua=mailto:dmarc-reports@example.c
 **Email Marketing Specific**:
 
 - **SPF Alignment**: From domain must match sending domain
-
 - **DKIM Alignment**: Signing domain should match From domain
-
 - **Subdomain Considerations**: Separate DMARC for marketing subdomains
 
 **Example Alignment Setup**:
@@ -165,13 +155,9 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 **Technical Requirements**:
 
 1. **Granular Consent**: Specific consent for each processing purpose
-
 2. **Active Consent**: No pre-ticked boxes or implied consent
-
 3. **Withdrawal Mechanism**: Easy opt-out process
-
 4. **Consent Records**: Maintain detailed consent logs
-
 5. **Regular Consent Refresh**: Periodic consent renewal
 
 **Implementation Example**:
@@ -208,11 +194,8 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 **Technical Requirements**:
 
 1. **Sender Identification**: Clear identification in every email
-
 2. **Physical Address**: Valid postal address in footer
-
 3. **Unsubscribe Link**: Prominent and functional opt-out
-
 4. **Response Processing**: 10-business day unsubscribe processing
 
 **Implementation Example**:
@@ -245,17 +228,11 @@ _dmarc.example.com. IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example
 **Required Information**:
 
 - Categories of data subjects
-
 - Categories of personal data
-
 - Purposes of processing
-
 - Categories of recipients
-
 - International transfers
-
 - Retention periods
-
 - Security measures
 
 **Implementation Framework**:
@@ -309,13 +286,9 @@ class DataProcessingRecordManager implements DataProcessingRecord {
 **Technical Process**:
 
 1. **Data Request Handling**: Secure email/webform for requests
-
 2. **Identity Verification**: Verify requestor identity
-
 3. **Data Collection**: Gather all personal data from systems
-
 4. **Data Compilation**: Organize data in readable format
-
 5. **Secure Delivery**: Deliver data securely to requestor
 
 **Implementation Example**:
@@ -374,15 +347,10 @@ async function handleDataAccessRequest(request: DataAccessRequest): Promise<Data
 **Technical Process**:
 
 1. **Request Validation**: Verify requestor identity and authorization
-
 2. **Data Identification**: Locate all personal data across systems
-
 3. **Impact Assessment**: Evaluate deletion impact on services
-
 4. **Systematic Deletion**: Delete from all relevant systems
-
 5. **Verification**: Confirm complete deletion
-
 6. **Documentation**: Record deletion for audit compliance
 
 **Implementation Example**:
