@@ -9,12 +9,17 @@ set -e
 # Parse arguments
 GENERATE_REPORT=false
 TARGET_ROOT=""
+LIMIT=""
 
 while [[ $# -gt 0 ]]; do
     case $1 in
         --report|-r)
             GENERATE_REPORT=true
             shift
+            ;;
+        --limit|-l)
+            LIMIT="$2"
+            shift 2
             ;;
         *) TARGET_ROOT="$1"
             shift
@@ -49,6 +54,9 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo "CONTENT QUALITY VALIDATION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo "Target: $TARGET_ROOT"
+if [ -n "$LIMIT" ]; then
+    echo "Limit: $LIMIT files"
+fi
 if [ "$GENERATE_REPORT" = true ]; then
     echo "Report: $REPORT_FILE"
 fi
@@ -115,6 +123,11 @@ echo "Checking: Overlong files (> 500 lines)..."
 
 # find files, count lines, filter, then apply explicit exceptions list
 overlong_files=$(find "$TARGET_ROOT" -name "*.md" -exec wc -l {} + | awk '$1 > 500 && $2 != "total" {print $2 ":" $1}')
+
+# Apply limit if specified
+if [ -n "$LIMIT" ]; then
+    overlong_files=$(echo "$overlong_files" | head -n "$LIMIT")
+fi
 
 if [ -f "$EXCEPTIONS_FILE" ]; then
     tmp_overlong=$(mktemp)

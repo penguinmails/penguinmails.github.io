@@ -44,35 +44,42 @@ Before broad remediation, run a dedicated planning chat focused only on long-fil
 Topics that must be decided explicitly:
 
 1. Purpose of exceptions
+
 - What qualifies as a valid long-file exception (for example: canonical reference, generated schema map, operational runbook)?
 - Which cases are not valid and must be split?
 
-2. Governance model
+1. Governance model
+
 - Who can add/remove entries in `validation/config/large_file_exceptions.txt`?
 - What review/approval is required?
 - What is the review cadence (for example monthly)?
 
-3. Hard limits
+1. Hard limits
+
 - Maximum allowed exception count.
 - Optional absolute max line cap even for exceptions (for example 1200).
 - Whether exceptions expire unless re-approved.
 
-4. Required metadata per exception
+1. Required metadata per exception
+
 - Owning team/person.
 - Justification note.
 - Date added and next review date.
 - Link to tracking issue.
 
-5. Enforcement behavior
+1. Enforcement behavior
+
 - Should CI fail if exception list grows beyond threshold?
 - Should CI fail if an exception is missing metadata?
 - Should CI warn when non-exception files exceed 500 lines by large margins?
 
-6. Exit strategy
+1. Exit strategy
+
 - For each exception, define a target split plan and milestone.
 - Confirm whether exceptions are temporary vs permanent.
 
 Deliverable from that separate chat:
+
 - A finalized exceptions policy and maintenance workflow.
 - A decision on whether to keep plain text list format or migrate to structured YAML/JSON with metadata.
 
@@ -109,11 +116,13 @@ Cons: Requires strict tracking and batching discipline.
 ## Recommended Execution Plan
 
 1. Inventory and Prioritize
+
 - Generate sorted list of overlong files with line counts.
 - Group by directory and size band (`>1000`, `801-1000`, `501-800`).
 - Review `validation/config/large_file_exceptions.txt` and confirm each exception is still justified.
 
-2. Define Split Templates
+1. Define Split Templates
+
 - Standard child-page templates:
   - `overview.md`
   - `implementation.md`
@@ -122,19 +131,52 @@ Cons: Requires strict tracking and batching discipline.
   - `reference.md`
 - Define what content moves to each template.
 
-3. Batch Remediation
+1. Batch Remediation
+
 - Work in small batches (5-10 files per batch).
 - After each batch, run mandatory checks.
 - Fix links and frontmatter immediately before moving to next batch.
 
-4. Navigation and Cross-References
+1. Navigation and Cross-References
+
 - Ensure each parent page links to all new child pages.
 - Ensure child pages link back to parent hub when useful.
 - Validate no orphaned pages and no broken internal links.
 
-5. Stabilization
+1. Stabilization
+
 - Full check pass across all mandatory checks.
 - Final review of readability and progressive disclosure.
+
+## Progress Status (as of Feb 24, 2026)
+
+- **Batches 1-6**: COMPLETED.
+- **Files Modularized**: 14 major overlong files (including `lead-scoring.md`, `import-export/technical.md`, `email-infrastructure-setup.md`, etc.).
+- **Remaining Overlong Files**: ~62 files still exceed the 500-line limit.
+
+## Next Batch Inventory (Batch 7 Priority)
+
+| Lines | File Path |
+|-------|-----------|
+| 741 | `docs/operations/analytics/team-performance/team-performance-operations-framework.md` |
+| 741 | `docs/operations/analytics/operations-management/organization-analytics-team-management.md` |
+| 739 | `docs/features/infrastructure/free-mailbox-creation/overview.md` |
+| 737 | `docs/business/performance/performance-benchmarks.md` |
+| 736 | `docs/business/customer-success/analytics/analytics-dashboard/predictive-analytics.md` |
+| 735 | `docs/implementation-technical/architecture-system/architecture-overview.md` |
+| 719 | `docs/business/marketing/cross-domain-integration/marketing-systems-integration-map.md` |
+| 711 | `docs/compliance-security/international/technical-implementation.md` |
+| 708 | `docs/design/routes/esp-integration.md` |
+| 700 | `docs/business/strategy/overview.md` |
+
+## Hand-off: Next Session Instructions
+
+1. **Resume from Batch 7**: Start by modularizing the first 5 files in the table above.
+2. **Strategy**: Continue using the "Hub and Spoke" model (rewriting the parent as a hub and extracting detailed sections to a sub-directory).
+3. **Link Policy**: Ensure all new links are site-absolute (`/docs/...`) and avoid `.md` extensions for internal links.
+4. **Verification**: Run `detect_content_quality_issues.sh` after each batch to confirm zero violations and no frontmatter regressions.
+
+---
 
 ## Suggested Command Snippets
 
