@@ -4,3 +4,9 @@ _site
 .roo
 .kiro
 validation/reports
+node_modules
+.next
+dist
+out
+coverage
+.env.local
