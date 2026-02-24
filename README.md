@@ -368,6 +368,7 @@ Built with modern web technologies and best practices:
 ## License
 
 This documentation is licensed under the [MIT License](LICENSE).
+
 ---
 
 ## Star this repository if you find it helpful

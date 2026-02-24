@@ -17,7 +17,6 @@ The core foundation provides the base infrastructure that all features depend on
 
 ### CORE-1.x: Project Setup
 
-
 - CORE-1.1 - Initialize Next.js 15 Project
 - CORE-1.2 - Configure ESLint
 - CORE-1.3 - Configure Prettier
@@ -66,6 +65,7 @@ Each feature has its own task prefix for easy identification:
 ## Dependency Patterns
 
 ### Pattern 1: Core Dependencies
+
 Most feature tasks depend on core foundation tasks:
 
 ```markdown
@@ -76,6 +76,7 @@ Most feature tasks depend on core foundation tasks:
 ```
 
 ### Pattern 2: Feature-Specific Dependencies
+
 Tasks within a feature reference each other:
 
 ```markdown
@@ -86,6 +87,7 @@ Tasks within a feature reference each other:
 ```
 
 ### Pattern 3: Cross-Feature Dependencies
+
 Some tasks depend on tasks from other features:
 
 ```markdown
@@ -98,26 +100,33 @@ Some tasks depend on tasks from other features:
 ## Common Dependency Chains
 
 ### Database Schema Implementation
+
 1. CORE-2.1 (Drizzle ORM) → CORE-2.2 (Initial schemas) → Feature schema definition → Migration generation → Migration application
 
 ### API Endpoint Implementation
+
 1. CORE-1.1 (Next.js) → CORE-3.1 (NileDB) → CORE-3.2 (Middleware) → CORE-5.1 (Zod) → Feature endpoint
 
 ### Infrastructure Setup
+
 1. CORE-1.5 (Environment variables) → CORE-2.1 (Drizzle) → INFRA-1.1 (Infrastructure schemas) → INFRA-1.2 (Migrations)
 
 ## Implementation Order
 
 ### Phase 1: Foundation (Epic 1)
+
 Complete all CORE-1.x and CORE-2.x tasks first. These provide the base infrastructure.
 
 ### Phase 2: Authentication (Epic 2)
+
 Complete all CORE-3.x tasks. Authentication is required for most feature endpoints.
 
 ### Phase 3: Services & Validation (Epic 1 continued)
+
 Complete CORE-4.x and CORE-5.x tasks for caching and validation support.
 
 ### Phase 4: Feature Implementation
+
 With the foundation in place, implement feature-specific tasks in any order, respecting their internal dependencies.
 
 ## Verification
@@ -139,6 +148,7 @@ grep -r "^\- \*\*[A-Z]\+-" docs/features/*/tasks/*.md
 When adding new tasks:
 
 1. **Use the standard format**:
+
    ```markdown
    ## Dependencies
    
