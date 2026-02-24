@@ -1,12 +1,12 @@
 ---
-title: "âš–ï¸ Compliance & Regulations"
+title: "Compliance & Regulations"
 description: "GDPR, CAN-SPAM, security features, and regulatory compliance for PenguinMails - MVP Complete, No Critical Gaps"
 last_modified_date: "2026-02-24"
 level: "2"
 persona: "All Users"
 ---
 
-# âš–ï¸ Compliance & Regulations
+# Compliance & Regulations
 
 GDPR, CAN-SPAM, opt-out management, and regulatory compliance.
 

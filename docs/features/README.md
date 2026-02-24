@@ -1,10 +1,10 @@
 ---
-title: "✨ Core Features"
+title: "Core Features"
 description: ""
 last_modified_date: "2026-02-24"
 level: "2"
 ---
-# ✨ Core Features
+# Core Features
 
 **Quick access to PenguinMails' essential features.** Each feature uses **progressive reveal** - start with the overview and dive deeper as needed.
 
