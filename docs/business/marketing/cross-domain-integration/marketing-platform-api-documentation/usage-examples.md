@@ -1,6 +1,6 @@
 ---
 title: "Marketing Platform API - Usage Examples"
-description: "Implementation examples in Node.js, Python, and CSS for common integration scenarios."
+description: "Implementation examples in Node.js and CSS for common integration scenarios."
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"
@@ -34,18 +34,6 @@ await client.analytics.trackConversion({
   recipientId: 'recipient_123',
   revenue: 299.99
 });
-```
-
-### Python Integration
-
-```python
-import marketing_platform
-
-client = marketing_platform.Client(api_key='your_api_key')
-
-# Fetch campaign performance
-performance = client.campaigns.get_performance('camp_789xyz')
-print(f"Delivery Rate: {performance.rates.delivery_rate}%")
 ```
 
 ### CSS for Email Templates
