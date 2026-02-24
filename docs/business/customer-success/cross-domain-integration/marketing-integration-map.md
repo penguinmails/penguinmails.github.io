@@ -24,11 +24,8 @@ This document provides comprehensive system integration maps showing data flows 
 Customer Success integrates with Marketing through well-defined data flows and API interfaces:
 
 - **Lifecycle Marketing:** Onboarding, adoption, milestone campaigns
-
 - **Retention Marketing:** Churn prevention, win-back automation
-
 - **Expansion Marketing:** Upsell/cross-sell opportunity campaigns
-
 - **Advocacy Marketing:** Success story amplification, reference programs
 
 **Integration Value:** $1.2M annual value through coordinated retention/expansion revenue.
@@ -56,13 +53,9 @@ Customer Success integrates with Marketing through well-defined data flows and A
 ### Integration Principles
 
 - **Health-Triggered Real-time:** Immediate campaign triggers from CS signals
-
 - **Event-Driven:** Loose coupling via customer milestone events
-
 - **API-First:** Comprehensive REST APIs with OpenAPI specs
-
 - **Security:** OAuth2, domain-scoped RBAC, full audit trails
-
 - **Resilience:** Circuit breakers, dead letter queues, alerting
 
 ---
@@ -76,9 +69,7 @@ CS health signals trigger personalized lifecycle marketing automation.
 **Primary Systems:**
 
 - CS Health Engine, Success Milestones
-
 - Marketing Automation: Klaviyo, Marketo, HubSpot
-
 - Customer Segmentation, Personalization Engines
 
 ### Data Flow Architecture
@@ -149,22 +140,14 @@ POST /api/v1/cs-marketing/triggers/{customer_id}
 
 
 - Health score threshold breaches
-
-
 - Success milestone achievements
-
-
 - Campaign eligibility signals
 
 GET /api/v1/cs-marketing/performance/{campaign_id}
 
 
 - CS-attributed campaign results
-
-
 - Health impact correlation
-
-
 - ROI attribution breakdown
 
 
@@ -173,11 +156,8 @@ GET /api/v1/cs-marketing/performance/{campaign_id}
 ### Integration Benefits
 
 - **Engagement Uplift:** 40% increase in lifecycle engagement
-
 - **Health Improvement:** 35% faster health score recovery
-
 - **Advocacy Growth:** 50% increase in reference customers
-
 - **Content Relevance:** 60% higher open/click rates
 
 ---
@@ -191,7 +171,6 @@ Proactive churn prevention through automated CS-triggered retention campaigns.
 **Primary Systems:**
 
 - CS Risk Engine, Intervention Playbooks
-
 - Marketing Win-back Automation, Loyalty Programs
 
 ### Data Flow Architecture
@@ -247,19 +226,13 @@ GET /api/v1/cs-retention/risk/{customer_id}
 
 
 - Churn probability scores
-
-
 - Intervention recommendations
-
-
 - Expected revenue impact
 
 POST /api/v1/cs-retention/recovery
 
 
 - Campaign execution confirmation
-
-
 - Recovery trajectory tracking
 
 
@@ -268,11 +241,8 @@ POST /api/v1/cs-retention/recovery
 ### Benefits
 
 - **Churn Reduction:** 45% lower churn rates
-
 - **Recovery Speed:** 50% faster account recovery
-
 - **Revenue Protection:** $2.3M annual protection
-
 - **Efficiency:** 70% automation of retention workflows
 
 ---
@@ -286,7 +256,6 @@ CS success signals trigger targeted expansion marketing campaigns.
 **Primary Systems:**
 
 - CS Expansion Engine, Value Realization
-
 - Marketing Upsell Automation, ABM Platforms
 
 ### Data Flow Architecture
@@ -342,19 +311,13 @@ GET /api/v1/cs-expansion/opportunities/{customer_id}
 
 
 - Expansion readiness assessment
-
-
 - Value realization portfolio
-
-
 - Campaign targeting recommendations
 
 POST /api/v1/cs-expansion/campaigns
 
 
 - Triggers expansion sequences
-
-
 - Tracks conversion attribution
 
 
@@ -363,11 +326,8 @@ POST /api/v1/cs-expansion/campaigns
 ### Benefits
 
 - **Expansion Revenue:** 55% growth in upsell revenue
-
 - **Win Rates:** 60% higher expansion close rates
-
 - **Pipeline Quality:** 80% qualified opportunities
-
 - **Timing Precision:** 90% optimal campaign timing
 
 ---
@@ -401,11 +361,8 @@ topics:
 ## Success Metrics
 
 - **Campaign Trigger Accuracy:** 95% health-signal precision
-
 - **Retention Impact:** 40% churn reduction attribution
-
 - **Expansion Conversion:** 50% uplift in close rates
-
 - **ROI:** 8x return on integrated campaigns
 
 ---
@@ -413,7 +370,6 @@ topics:
 **Related Documentation:**
 
 - [CS Cross-Domain Overview](/docs/business/customer-success/cross-domain-integration/integration/hub)
-
 - [Marketing Systems Map](/docs/business/marketing/cross-domain-integration)
 
 **Document Classification:** Level 3 - CS-Marketing Integration Analysis
