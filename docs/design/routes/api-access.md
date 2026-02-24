@@ -12,33 +12,21 @@ persona: "Developers"
 ## 1. Purpose & Context (The "Why")
 
 - **Goal**: Enable developers to generate and manage API keys for programmatic access to PenguinMails.
-
 - **Feature References**:
-
   - [API Access](/docs/features/integrations/api-access)
-
   - [API Documentation](/docs/implementation-technical/api/README)
-
 - **User Journey**: Occasional access during integration setup and key rotation.
 
 ## 2. UI Patterns & Components (The "How")
 
 - **Core Components**:
-
   - `APIKeyCard`: Display API key with masked value and copy button.
-
   - `KeyGenerationModal`: Create new API key with name and permissions.
-
   - `RateLimitIndicator`: Real-time rate limit usage display.
-
   - `CodeSnippet`: Syntax-highlighted code examples.
-
   - `PermissionMatrix`: Visual permission selector for API keys.
-
   - `UsageChart`: API usage analytics over time.
-
 - **Analytics Patterns**: Request volume, endpoint usage, error rates.
-
 - **Layout**: Settings Layout with sidebar navigation.
 
 ## 3. Route Specifications
@@ -64,15 +52,11 @@ persona: "Developers"
 **Getting Started Card**:
 
 - **Title**: "Start Building with PenguinMails API"
-
 - **Steps**:
 
   1. Generate an API key
-
   2. Install SDK (optional)
-
   3. Make your first API call
-
   4. Set up webhooks (optional)
 
 **"Generate API Key" Button**: Opens key creation modal.
@@ -80,9 +64,7 @@ persona: "Developers"
 **Quick Links**:
 
 - [View API Documentation →](/dashboard/settings/developers/docs)
-
 - [Explore Code Examples →](/docs/design/routes/#code-examples)
-
 - [Configure Webhooks →](/dashboard/settings/integrations/esp/webhooks)
 
 #### Active API Keys
@@ -90,11 +72,8 @@ persona: "Developers"
 **API Keys Table** (Compact View):
 
 - Columns: Name, Key (masked), Created, Last Used, Actions.
-
 - **Key Display**: `pm_live_abc...xyz` (first 8 and last 3 chars visible).
-
 - **Copy Button**: Copy full key to clipboard.
-
 - **Actions**: View Details, Revoke.
 
 **Example Rows**:
@@ -113,13 +92,9 @@ persona: "Developers"
 **Current Usage Card**:
 
 - **Plan**: "Professional Plan"
-
 - **Rate Limit**: "300 requests/minute"
-
 - **Current Usage**: Progress bar showing "45 / 300 (15%)"
-
 - **Burst Capacity**: "500 requests"
-
 - **Reset Time**: "Resets in 42 seconds"
 
 **Upgrade Prompt** (if approaching limit):
@@ -198,7 +173,6 @@ composer require penguinmails/sdk
 **Related Documentation**:
 
 - [API Access Overview](/docs/features/integrations/api-access)
-
 - [API Reference](/docs/implementation-technical/api/README)
 
 ---
@@ -214,9 +188,7 @@ composer require penguinmails/sdk
 **Filter Bar**:
 
 - **Search**: Search by key name or ID.
-
 - **Status Filter**: All, Active, Revoked.
-
 - **Sort**: Created Date, Last Used, Name.
 
 **API Key Cards** (Detailed View):
@@ -226,59 +198,42 @@ Each card displays:
 **Key Name**: "Production App"
 
 - **Key ID**: `pm_live_abc123def456...`
-
 - **Copy Button**: Copy full key to clipboard.
-
 - **"Show Key" Toggle**: Reveal full key temporarily (requires re-authentication).
 
 **Status Badge**:
 
 - **Active** (Green): Currently valid.
-
 - **Revoked** (Red): No longer valid.
-
 - **Expired** (Gray): Past expiration date.
 
 **Metadata**:
 
 - **Created**: "November 1, 2025 at 3:45 PM"
-
 - **Created By**: "<john@company.com>"
-
 - **Last Used**: "2 hours ago"
-
 - **Expires**: "Never" or specific date.
 
 **Permissions** (Expandable):
 
 - ☑ **Read Campaigns**: View campaign data.
-
 - ☑ **Write Campaigns**: Create and modify campaigns.
-
 - ☑ **Read Contacts**: View contact lists.
-
 - ☑ **Write Contacts**: Add and update contacts.
-
 - ☑ **Send Emails**: Send transactional emails.
-
 - ☐ **Admin Access**: Full account access (dangerous).
 
 **Usage Stats**:
 
 - **Total Requests**: "12,345"
-
 - **Last 24 Hours**: "234 requests"
-
 - **Error Rate**: "0.5%"
 
 **Actions**:
 
 - **"Edit Permissions" Button**: Opens permission editor.
-
 - **"Rotate Key" Button**: Generates new key, revokes old one.
-
 - **"Revoke Key" Button**: Permanently disables key (confirmation required).
-
 - **"View Usage" Link**: Navigate to usage analytics for this key.
 
 #### Create New API Key
@@ -290,15 +245,10 @@ Each card displays:
 ##### Step 1: Basic Information
 
 - **Key Name**: Input field (e.g., "Production App", "Staging Server").
-
   - Help text: "Choose a descriptive name to identify this key."
-
 - **Description** (optional): Textarea for notes.
-
 - **Environment**: Radio buttons
-
   - ○ Production (`pm_live_...`)
-
   - ○ Test (`pm_test_...`)
 
 ##### Step 2: Permissions
@@ -308,63 +258,48 @@ Each card displays:
 **Campaigns**:
 
 - ☑ Read Campaigns
-
 - ☑ Write Campaigns
-
 - ☐ Delete Campaigns
 
 **Contacts**:
 
 - ☑ Read Contacts
-
 - ☑ Write Contacts
-
 - ☐ Delete Contacts
 
 **Analytics**:
 
 - ☑ Read Analytics
-
 - ☐ Export Data
 
 **Emails**:
 
 - ☑ Send Emails
-
 - ☐ Send Bulk Emails (requires approval)
 
 **Admin** (Dangerous):
 
 - ☐ Full Account Access
-
 - ☐ Manage API Keys
-
 - ☐ Manage Billing
 
 **Preset Templates**:
 
 - **"Read Only" Button**: Select all read permissions.
-
 - **"Full Access" Button**: Select all permissions.
-
 - **"Email Sending" Button**: Select email-related permissions only.
 
 ##### Step 3: Expiration (Optional)
 
 - **Never Expire**: Radio button (default).
-
 - **Expire After**: Radio button with date picker.
-
   - Options: 30 days, 90 days, 1 year, Custom date.
 
 ##### Step 4: IP Restrictions (Optional)
 
 - **Allow All IPs**: Radio button (default).
-
 - **Restrict to IPs**: Radio button with IP input.
-
   - Input: Comma-separated IP addresses or CIDR ranges.
-
   - Example: `203.0.113.0/24, 198.51.100.5`
 
 **"Generate API Key" Button**: Creates key and displays it.
@@ -374,7 +309,6 @@ Each card displays:
 **Success Modal**:
 
 - **Title**: "API Key Created Successfully"
-
 - **Warning**: "⚠️ Copy this key now. You won't be able to see it again."
 
 **Key Display**:
@@ -403,15 +337,12 @@ curl -X GET https://api.penguinmails.com/v1/campaigns \
 **Related Documentation**:
 
 - [API Authentication](/docs/features/integrations/api-access#authentication)
-
 - [Security Best Practices](/docs/compliance-security/enterprise/overview)
 
 **Technical Integration**:
 
 - **Key Generation**: Cryptographically secure random string (64 chars).
-
 - **Storage**: Hashed with bcrypt before storing in database.
-
 - **Validation**: Keys validated on every API request.
 
 ---
@@ -427,27 +358,16 @@ curl -X GET https://api.penguinmails.com/v1/campaigns \
 **Sidebar Navigation**:
 
 - **Getting Started**
-
   - Authentication
-
   - Rate Limiting
-
   - Error Handling
-
 - **Endpoints**
-
   - Emails
-
   - Campaigns
-
   - Contacts
-
   - Analytics
-
   - Webhooks
-
 - **SDKs & Libraries**
-
 - **Changelog**
 
 #### Endpoint Documentation
@@ -555,11 +475,8 @@ Content-Type: application/json
 **Interactive API Tester**:
 
 - **API Key**: Dropdown (select from your keys) or input field.
-
 - **Request Body**: JSON editor with syntax highlighting.
-
 - **"Send Request" Button**: Makes live API call.
-
 - **Response Display**: Shows status code, headers, and body.
 
 **Example**:
@@ -623,7 +540,6 @@ await client.emails.send({
 **Related Documentation**:
 
 - [Full API Reference](/docs/implementation-technical/api/README)
-
 - [Authentication Guide](/docs/features/integrations/api-access#authentication)
 
 ---
@@ -643,11 +559,8 @@ await client.emails.send({
 **Metrics Cards** (Top Row):
 
 - **Total Requests**: "12,345"
-
 - **Success Rate**: "99.5%"
-
 - **Average Response Time**: "145ms"
-
 - **Rate Limit Usage**: "15% of limit"
 
 #### Request Volume Chart
@@ -655,11 +568,8 @@ await client.emails.send({
 **Line Chart**: Requests over time.
 
 - **Y-Axis**: Number of requests.
-
 - **X-Axis**: Time.
-
 - **Lines**: Total, Success (200), Errors (4xx/5xx).
-
 - **Hover**: Shows exact values at each point.
 
 #### Endpoint Usage
@@ -680,11 +590,8 @@ await client.emails.send({
 **Error Breakdown** (Pie Chart):
 
 - 400 Bad Request: 45%
-
 - 401 Unauthorized: 30%
-
 - 429 Rate Limit: 15%
-
 - 500 Server Error: 10%
 
 **Recent Errors Table**:
@@ -702,15 +609,12 @@ await client.emails.send({
 **Rate Limit Usage Chart** (Line Chart):
 
 - Shows rate limit usage over time.
-
 - **Warning Line**: 80% of limit (yellow).
-
 - **Critical Line**: 95% of limit (red).
 
 **Rate Limit Events**:
 
 - "Rate limit exceeded 3 times in the last 24 hours"
-
 - "Peak usage: 285 / 300 requests/minute at 2:15 PM"
 
 **Recommendation**:
@@ -733,15 +637,12 @@ await client.emails.send({
 **Related Documentation**:
 
 - [Rate Limiting](/docs/features/integrations/api-access#rate-limiting)
-
 - [Error Handling](/docs/implementation-technical/api/README#error-handling)
 
 **Technical Integration**:
 
 - **Data Source**: API gateway logs aggregated in real-time.
-
 - **Caching**: Metrics cached for 1 minute.
-
 - **Alerts**: Email alerts for high error rates or rate limit issues.
 
 ---
@@ -759,9 +660,7 @@ await client.emails.send({
 **Quick Links**:
 
 - [Configure Postmark Webhooks →](/dashboard/settings/integrations/esp/webhooks#postmark)
-
 - [Configure Mailgun Webhooks →](/dashboard/settings/integrations/esp/webhooks#mailgun)
-
 - [View Webhook Documentation →](/docs/features/integrations/webhook-system)
 
 **User Journey Context**: Quick redirect to centralized webhook management.
@@ -777,39 +676,24 @@ await client.emails.send({
 ## 6. Data Strategy
 
 - **Fetching Method**:
-
   - **API Keys List**: Server Component (sensitive data).
-
   - **Usage Analytics**: Client Component with SWR for real-time updates.
-
   - **Documentation**: Static content with interactive examples.
-
 - **Caching**:
-
   - **API Keys**: No caching (always fresh).
-
   - **Usage Metrics**: Cached for 1 minute.
-
   - **Documentation**: Cached indefinitely (versioned).
-
 - **Security**:
-
   - **API Keys**: Never exposed in full after creation.
-
   - **Key Rotation**: Old key remains valid for 24 hours after rotation.
-
   - **Sudo Mode**: Require re-authentication for key creation/revocation.
 
 ## 7. Edge Cases & Error Handling
 
 - **Key Already Revoked**: Show "This key has already been revoked and cannot be used."
-
 - **Rate Limit Exceeded**: Show "Rate limit exceeded. Upgrade plan for higher limits. [View plans →]"
-
 - **Invalid Permissions**: Block API calls with "Insufficient permissions. Update key permissions in settings."
-
 - **Key Expiration**: Email notification 7 days before expiration. Show warning in dashboard.
-
 - **IP Restriction Violation**: Log security event, block request, alert admin.
 
 ## 8. Component Architecture
@@ -817,27 +701,18 @@ await client.emails.send({
 ### Page Components
 
 - **`DeveloperOverview`** (Server)
-
   - Features: Quick start, API keys summary, rate limit status.
-
 - **`APIKeyManager`** (Client)
-
   - Features: Key list, create/revoke keys, permission editor.
-
 - **`APIDocsBrowser`** (Client)
-
   - Features: Interactive documentation, code examples, API tester.
-
 - **`UsageAnalytics`** (Client)
-
   - Features: Request charts, error analysis, rate limit monitoring.
 
 ### Shared Components
 
 - **`APIKeyCard`**: Reused in overview and key management.
-
 - **`CodeSnippet`**: Reused across documentation and examples.
-
 - **`RateLimitIndicator`**: Reused in overview and usage analytics.
 
 ## 9. Related Documentation
@@ -845,23 +720,18 @@ await client.emails.send({
 ### Feature Documentation
 
 - **[API Access](/docs/features/integrations/api-access)** - API access overview and authentication
-
 - **[Webhook System](/docs/features/integrations/webhook-system)** - Webhook configuration and events
-
 - **[Rate Limiting](/docs/features/integrations/api-access#rate-limiting)** - Rate limit details
 
 ### Technical Documentation
 
 - **[API Reference](/docs/implementation-technical/api/README)** - Complete API documentation
-
 - **[Authentication](/docs/implementation-technical/api/platform-api/authentication)** - API authentication details
-
 - **[API Keys API](/docs/implementation-technical/api/platform-api/api-keys)** - API key management endpoints
 
 ### User Journeys
 
 - **Developer Journey** - API integration workflows (internal journey reference)
-
 - **Integration Setup** - API setup for business users (internal journey reference)
 
 ---

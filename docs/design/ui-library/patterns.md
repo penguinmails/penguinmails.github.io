@@ -15,9 +15,7 @@ keywords: "patterns, design, architecture"
 ### Mobile-First Approach
 
 - Base styles target mobile (< 640px)
-
 - Progressive enhancement for tablet (768px+) and desktop (1024px+)
-
 - Touch-friendly targets: minimum 44px × 44px
 
 **Breakpoints** (from design-tokens.md):
@@ -39,11 +37,8 @@ const breakpoints = {
 ### Light/Dark Mode
 
 - Use Tailwind's `dark:` variant
-
 - Store preference in localStorage
-
 - Respect system preference (`prefers-color-scheme`)
-
 - Smooth transitions between themes
 
 **Implementation Pattern**:
@@ -66,31 +61,22 @@ import { ThemeProvider } from 'next-themes';
 **When to Use Framer Motion**:
 
 - Page transitions
-
 - Complex multi-step animations
-
 - Gesture-based interactions (drag, swipe)
-
 - Orchestrated animations (stagger effects)
 
 **When to Use CSS Transitions**:
 
 - Hover states
-
 - Focus indicators
-
 - Simple show/hide animations
-
 - Color/opacity changes
 
 **Performance Guidelines**:
 
 - Respect `prefers-reduced-motion`
-
 - Animate `transform` and `opacity` only (GPU-accelerated)
-
 - Avoid animating `width`, `height`, `top`, `left`
-
 - Keep animations under 300ms for UI feedback
 
 **Example**:
@@ -128,11 +114,8 @@ import { motion } from 'framer-motion';
 **Requirements**:
 
 - Show skeleton UI while data loads
-
 - Use React Suspense for async components
-
 - Provide meaningful loading indicators
-
 - Avoid full-page spinners (use progressive loading)
 
 **Example**:
@@ -155,11 +138,8 @@ import { CampaignListSkeleton } from '@/components/skeletons';
 **Requirements**:
 
 - Catch errors at component boundaries
-
 - Show actionable error messages
-
 - Provide retry mechanisms
-
 - Log errors to monitoring service (Sentry) (Future/2026 Spike)
 
 **Example**:

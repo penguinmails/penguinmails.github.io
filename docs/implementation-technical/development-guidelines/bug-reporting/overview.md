@@ -36,11 +36,8 @@ This guide is organized into specialized sections for efficient navigation:
 Before reporting a bug, please:
 
 1. **Search existing issues** to avoid duplicates
-
 2. **Check documentation** for known limitations
-
 3. **Verify the bug** on the latest version
-
 4. **Prepare minimal reproduction** case
 
 ## Bug Report Template
@@ -58,11 +55,8 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 
 1. Go to '...'
-
 2. Click on '....'
-
 3. Scroll down to '....'
-
 4. See error
 
 ## Expected Behavior
@@ -76,13 +70,9 @@ A clear and concise description of what actually happened.
 ## Environment
 
 - OS: [e.g. macOS Big Sur, Ubuntu 20.04, Windows 11]
-
 - Browser: [e.g. chrome, safari, firefox]
-
 - Version: [e.g. 91.0.4472.124]
-
 - Node.js Version: [e.g. 18.x.x]
-
 - PenguinMails Version: [e.g. 2.1.3]
 
 ## Screenshots
@@ -100,11 +90,8 @@ Add any other context about the problem here.
 ## Priority
 
 - [ ] Critical (system down, data loss)
-
 - [ ] High (major functionality broken)
-
 - [ ] Medium (functionality impaired)
-
 - [ ] Low (minor inconvenience)
 
 ```
@@ -114,11 +101,8 @@ Add any other context about the problem here.
 ### Issue Classification
 
 - **Critical**: System down, security vulnerabilities, data loss
-
 - **High**: Major functionality broken, significant user impact
-
 - **Medium**: Functionality impaired but workaround available
-
 - **Low**: Minor issues, cosmetic problems, feature requests
 
 ### Triage Workflow
@@ -146,33 +130,22 @@ graph TD
 **Initial Assessment:**
 
 - [ ] Reproducible steps provided
-
 - [ ] Environment details complete
-
 - [ ] Expected vs actual behavior clear
-
 - [ ] Priority level assigned appropriately
-
 - [ ] Related issues linked
 
 **Technical Review:**
 
 - [ ] Bug confirmed reproducible
-
 - [ ] Root cause analysis performed
-
 - [ ] Fix approach defined
-
 - [ ] Testing strategy planned
-
 - [ ] Documentation update required
 
 **Assignment:**
 
 - [ ] Developer assigned based on expertise
-
 - [ ] Estimated effort provided
-
 - [ ] Target milestone/sprint identified
-
 - [ ] Dependencies identified

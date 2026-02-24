@@ -25,11 +25,8 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `scope`: `system` (default), `operational`, `business`, `alerts`
-
 - `priority`: `critical`, `high`, `medium`, `low`
-
 - `status`: `unread`, `reviewed`
-
 - `limit`: Default 25
 
 **Response**:

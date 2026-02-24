@@ -19,21 +19,15 @@ keywords: "trademark, branding, usage guidelines"
 ### Permitted Uses
 
 - **Documentation**: Proper attribution in project documentation
-
 - **Compatibility**: "Compatible with PenguinMails API"
-
 - **Integration**: "Integrates with PenguinMails platform"
-
 - **Endorsement**: "Official PenguinMails partner" (with agreement)
 
 ### Restricted Uses
 
 - **Domain names**: Cannot use "penguinmails" in domain names
-
 - **Product names**: Cannot name products "PenguinMails [Product]"
-
 - **Logos**: Cannot use PenguinMails logos without permission
-
 - **Misleading**: Cannot imply official endorsement
 
 ### Attribution Requirements

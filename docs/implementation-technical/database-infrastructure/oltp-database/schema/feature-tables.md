@@ -137,9 +137,7 @@ CREATE TABLE campaign_sequence_steps (
 **Step Types:**
 
 - **email**: Send email using template
-
 - **wait**: Delay before next step
-
 - **condition**: Conditional logic based on lead behavior
 
 ---

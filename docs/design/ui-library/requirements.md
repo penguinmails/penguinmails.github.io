@@ -17,17 +17,13 @@ keywords: "requirements, specifications, standards"
 1. **Realtime DataTable**
 
    - Live updates via WebSocket/Server-Sent Events
-
    - Use case: Campaign sending status, live analytics
-
    - Features: Auto-refresh, optimistic updates
 
 2. **Paginated DataTable**
 
    - Server-side pagination
-
    - Use case: Campaign history, recipient lists
-
    - Features: Sorting, filtering, search
 
 **Recommended Library**: `@tanstack/react-table` (headless, flexible)
@@ -39,11 +35,8 @@ keywords: "requirements, specifications, standards"
 **Requirements**:
 
 - All forms must use Zod schemas for validation
-
 - Error messages must be user-friendly
-
 - Support for multi-step forms (campaign creation wizard)
-
 - Auto-save drafts for long forms
 
 **Example Structure**:
@@ -70,21 +63,15 @@ const form = useForm({ resolver: zodResolver(schema) });
 **Requirements**:
 
 - Accessible (ARIA, keyboard navigation)
-
 - Backdrop click to close (configurable)
-
 - Escape key to close
-
 - Focus trap within modal
-
 - Sizes: sm, md, lg, xl, full
 
 **Use Cases**:
 
 - Confirmation dialogs (delete campaign)
-
 - Multi-step wizards (campaign setup)
-
 - Detail views (recipient details)
 
 ### Notifications
@@ -94,11 +81,8 @@ const form = useForm({ resolver: zodResolver(schema) });
 **Requirements**:
 
 - Position: top-right (default)
-
 - Auto-dismiss: 3s (success), 5s (error), manual (warning)
-
 - Action buttons for undo/retry
-
 - Stack multiple toasts
 
 **Example**:

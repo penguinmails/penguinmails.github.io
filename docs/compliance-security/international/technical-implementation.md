@@ -30,11 +30,8 @@ version: "1.0"
 #### PostgreSQL Migration Benefits
 
 - **Enhanced Security Features:** Row-level security, advanced encryption options
-
 - **GDPR Compliance:** Built-in features for data subject rights implementation
-
 - **Audit Capabilities:** Comprehensive logging and monitoring capabilities
-
 - **Scalability:** Enterprise-grade performance for large contact databases
 
 #### Encryption Implementation
@@ -66,9 +63,7 @@ $$ LANGUAGE plpgsql;
 #### Data Segmentation Strategy
 
 - **Consent Status Isolation:** Separate schemas for consent records and personal data
-
 - **Access Control Matrix:** Role-based access to different data categories
-
 - **Audit Trail Separation:** Independent logging system for compliance monitoring
 
 ### Consent Management System
@@ -535,23 +530,17 @@ services:
     environment:
 
       - NODE_ENV=production
-
       - DATABASE_URL=postgresql://user:pass@postgres:5432/penguinmails_gdpr
-
       - ENCRYPTION_KEY=${ENCRYPTION_KEY}
-
       - GDPR_COMPLIANCE_MODE=true
-
       - AUDIT_LOGGING=true
     volumes:
 
       - encrypted_data:/app/encrypted-data
-
       - audit_logs:/app/logs/audit
     depends_on:
 
       - postgres
-
       - redis
 
   postgres:
@@ -559,14 +548,11 @@ services:
     environment:
 
       - POSTGRES_DB=penguinmails_gdpr
-
       - POSTGRES_USER=gdpr_user
-
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     volumes:
 
       - postgres_data:/var/lib/postgresql/data
-
       - ./sql/init-gdpr.sql:/docker-entrypoint-initdb.d/init.sql
 
 volumes:
@@ -714,16 +700,12 @@ export class ConsentCache {
 **🌍 Technical Standards References:**
 
 - [ISO 27001 Information Security](https://www.iso.org/isoiec-27001-information-security.html)
-
 - [OWASP Security Guidelines](https://owasp.org/www-project-top-ten/)
-
 - [PostgreSQL Security Features](https://www.postgresql.org/docs/current/static/security.html)
 
 **Document Classification:** Level 3 - Technical Implementation
 **Related Documents:**
 
 - [European Compliance Overview](/docs/compliance-security/international/european-compliance-overview)
-
 - [GDPR Compliance Analysis](/docs/compliance-security/international/gdpr-compliance)
-
 - [Strategic Compliance Recommendations](/docs/compliance-security/international/strategic-compliance)

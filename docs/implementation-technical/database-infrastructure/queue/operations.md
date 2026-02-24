@@ -7,9 +7,7 @@ persona: "DevOps Engineers"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Workers](/docs/implementation-technical/database-infrastructure/queue/workers) - Background job processing"
 ---
 
@@ -58,14 +56,11 @@ services:
     environment:
 
       - DATABASE_URL=${DATABASE_URL}
-
       - REDIS_URL=redis://redis:6379
-
       - NODE_ENV=production
     depends_on:
 
       - redis
-
       - postgres
     restart: unless-stopped
     deploy:
@@ -78,16 +73,12 @@ services:
     environment:
 
       - DATABASE_URL=${DATABASE_URL}
-
       - REDIS_URL=redis://redis:6379
-
       - NODE_ENV=production
-
       - WORKER_ID=${WORKER_ID}
     depends_on:
 
       - redis
-
       - postgres
     restart: unless-stopped
     deploy:
@@ -228,15 +219,10 @@ class AutoScaler {
 Operations management ensures:
 
 - **High Availability**: Comprehensive health monitoring and automatic failover
-
 - **Performance Optimization**: Real-time metrics and alerting for proactive management
-
 - **Scalability**: Auto-scaling based on workload patterns
-
 - **Reliability**: Robust backup and recovery procedures
-
 - **Maintainability**: Structured maintenance and operational procedures
-
 - **Observability**: Detailed logging and metrics for troubleshooting
 
 This operational framework provides the foundation for running a production-ready queue system that can handle varying workloads while maintaining system reliability and performance.

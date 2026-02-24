@@ -11,11 +11,8 @@ last_modified_date: "2026-02-24"
 ## 1. Technical Stack (MVP)
 
 * **Frontend**: Next.js 15 (App Router) + TypeScript + Tailwind CSS
-
 * **Backend**: Node.js + TypeScript + Hapi/Koa
-
 * **Monorepo**: Turborepo for shared packages
-
 * **Post-MVP Migration Path**: TanStack Router or React Router 7 (to reduce cloud function costs)
 
 ### Turborepo Structure

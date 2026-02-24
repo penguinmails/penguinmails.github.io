@@ -33,27 +33,20 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **WCAG 2.1 Guidelines**
 
 - **Level A**: Basic accessibility requirements (minimum compliance)
-
 - **Level AA**: Enhanced accessibility requirements (target standard)
-
 - **Level AAA**: Highest accessibility requirements (aspirational)
 
 ### **Legal Requirements**
 
 - **ADA (Americans with Disabilities Act)**: US federal accessibility requirements
-
 - **Section 508**: US government website accessibility standards
-
 - **EN 301 549**: European accessibility requirements for ICT products
-
 - **AODA (Accessibility for Ontarians with Disabilities Act)**: Canadian provincial requirements
 
 ### **Industry Standards**
 
 - **WAI-ARIA 1.2**: Accessible Rich Internet Applications specification
-
 - **ISO 9241-171**: Ergonomics of human-system interaction - guidance on software accessibility
-
 - **BITV 2.0**: German federal government's accessibility standard
 
 ## 3. **Perceivable Guidelines**
@@ -61,11 +54,8 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Text Alternatives**
 
 - **All images must have alt text** describing the image's purpose or content
-
 - **Decorative images** use empty alt text (alt="")
-
 - **Complex images** (charts, graphs) include detailed descriptions
-
 - **Icons** use descriptive alt text or aria-label attributes
 
 ```html
@@ -86,11 +76,8 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Color and Contrast**
 
 - **Normal text**: 4.5:1 contrast ratio minimum
-
 - **Large text** (18pt+ or 14pt+ bold): 3:1 contrast ratio minimum
-
 - **UI components**: 3:1 contrast ratio minimum
-
 - **Focus indicators**: 3:1 contrast ratio against adjacent colors
 
 ```css
@@ -111,21 +98,15 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Audio and Video**
 
 - **Captions** for all video content
-
 - **Transcripts** for audio-only content
-
 - **Audio descriptions** for video content with important visual information
-
 - **Pause/stop controls** for auto-playing media
 
 ### **Structure and Semantics**
 
 - **Heading hierarchy**: H1 → H2 → H3 (no skipping levels)
-
 - **Semantic HTML**: Use proper elements (`<main>`, `<nav>`, `<article>`, etc.)
-
 - **Landmarks**: ARIA landmarks for screen reader navigation
-
 - **Lists**: Use proper `<ul>`, `<ol>`, `<dl>` elements
 
 ## 4. **Operable Guidelines**
@@ -133,11 +114,8 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Keyboard Navigation**
 
 - **All interactive elements** must be keyboard accessible
-
 - **Logical tab order** following reading order
-
 - **Keyboard shortcuts** don't interfere with screen readers
-
 - **No keyboard traps** (can't tab out of a component)
 
 ```html
@@ -161,19 +139,14 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Touch Targets**
 
 - **Minimum size**: 44px × 44px for touch targets
-
 - **Adequate spacing**: 8px minimum between interactive elements
-
 - **Touch gestures**: Support common gestures with alternatives
 
 ### **Timing and Movement**
 
 - **No auto-advancing** carousels or timed content without pause controls
-
 - **Adjustable timeouts**: At least 20 seconds, preferably 10 minutes
-
 - **Reduced motion**: Respect `prefers-reduced-motion` setting
-
 - **Pause animations** that last more than 5 seconds
 
 ```css
@@ -192,11 +165,8 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Error Prevention**
 
 - **Clear error messages** explaining what went wrong
-
 - **Suggestions for correction** when possible
-
 - **Confirmation** for destructive actions
-
 - **Undo functionality** where appropriate
 
 ## 5. **Understandable Guidelines**
@@ -204,31 +174,22 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Clear Language**
 
 - **Plain language** avoiding jargon and technical terms
-
 - **Consistent terminology** throughout the interface
-
 - **Progressive disclosure** of complex information
-
 - **Helpful error messages** with actionable guidance
 
 ### **Predictable Behavior**
 
 - **Consistent navigation** across all pages
-
 - **Expected interactions** following platform conventions
-
 - **Clear focus indicators** for keyboard navigation
-
 - **No unexpected context changes**
 
 ### **Input Assistance**
 
 - **Field labels** clearly associated with inputs
-
 - **Input formats** clearly specified (e.g., "MM/DD)
-
 - **Help text** available for complex fields
-
 - **Autocomplete** for repetitive inputs
 
 ```html
@@ -250,21 +211,15 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Compatible Technologies**
 
 - **Standards compliance**: Valid HTML5, CSS3, and JavaScript
-
 - **Progressive enhancement**: Core functionality works without JavaScript
-
 - **Cross-browser support**: Modern browsers with fallbacks
-
 - **API accessibility**: REST APIs designed for assistive technology
 
 ### **Assistive Technology Support**
 
 - **Screen readers**: JAWS, NVDA, VoiceOver, TalkBack
-
 - **Screen magnifiers**: ZoomText, built-in browser zoom
-
 - **Voice control**: Dragon NaturallySpeaking
-
 - **Alternative input**: Switch devices, head pointers
 
 ## 7. **Implementation Guidelines**
@@ -272,13 +227,9 @@ These guidelines ensure PenguinMails meets WCAG 2.1 AA standards and provides an
 ### **Development Process**
 
 1. **Accessibility-first design**: Consider accessibility in initial designs
-
 2. **Automated testing**: Run accessibility audits during development
-
 3. **Manual testing**: Include assistive technology testing
-
 4. **User testing**: Include users with disabilities in testing
-
 5. **Continuous monitoring**: Regular accessibility audits post-launch
 
 ### **Code Quality Standards**
@@ -321,43 +272,28 @@ export function Button({
 #### **Automated Testing**
 
 - [ ] Color contrast ratios meet WCAG standards
-
 - [ ] Alt text provided for all images
-
 - [ ] Form fields properly labeled
-
 - [ ] Heading hierarchy is correct
-
 - [ ] ARIA attributes used appropriately
-
 - [ ] Keyboard navigation works
-
 - [ ] Focus indicators are visible
 
 #### **Manual Testing**
 
 - [ ] Screen reader navigation works
-
 - [ ] Keyboard-only operation possible
-
 - [ ] Touch targets are adequate size
-
 - [ ] Error messages are helpful
-
 - [ ] Content makes sense when zoomed
-
 - [ ] Color is not the only way information is conveyed
 
 #### **Assistive Technology Testing**
 
 - [ ] Works with screen readers (NVDA, JAWS, VoiceOver)
-
 - [ ] Works with voice control software
-
 - [ ] Works with screen magnification
-
 - [ ] Works with high contrast modes
-
 - [ ] Works with reduced motion preferences
 
 ## 8. **Component-Specific Guidelines**
@@ -423,11 +359,8 @@ export function Button({
 ### **Custom Components**
 
 - **ARIA attributes**: Use appropriate ARIA roles and properties
-
 - **Keyboard support**: Custom components need keyboard event handlers
-
 - **Focus management**: Proper focus behavior for complex components
-
 - **Screen reader support**: Descriptive announcements and instructions
 
 ## 9. **Content Guidelines**
@@ -435,35 +368,24 @@ export function Button({
 ### **Writing for Accessibility**
 
 - **Clear headings** that describe section content
-
 - **Short paragraphs** (3-5 sentences maximum)
-
 - **Simple words** avoiding complex vocabulary
-
 - **Active voice** instead of passive voice
-
 - **Front-loaded content** (most important information first)
 
 ### **Visual Design Guidelines**
 
 - **Sufficient contrast** for all text and UI elements
-
 - **Meaningful icons** with text labels
-
 - **Consistent spacing** for visual hierarchy
-
 - **Clear focus indicators** that don't rely on color alone
-
 - **Readable fonts** at appropriate sizes
 
 ### **Multimedia Content**
 
 - **Audio content** requires transcripts
-
 - **Video content** requires captions and audio descriptions
-
 - **Animations** should be optional and respect user preferences
-
 - **Interactive content** should be operable by multiple input methods
 
 ## 10. **Tools and Resources**
@@ -471,33 +393,23 @@ export function Button({
 ### **Development Tools**
 
 - **axe DevTools**: Browser extension for accessibility testing
-
 - **WAVE**: Web accessibility evaluation tool
-
 - **Lighthouse**: Automated accessibility auditing
-
 - **Color Contrast Analyzer**: Contrast ratio checking
-
 - **NVDA**: Free screen reader for testing
 
 ### **Design Tools**
 
 - **Stark**: Contrast checking and simulation tools
-
 - **Color Oracle**: Color blindness simulation
-
 - **Accessibility Plugin for Figma**: Design-time accessibility checks
-
 - **Contrast Grid**: Contrast ratio visualization
 
 ### **Testing Environments**
 
 - **Screen Reader Testing**: NVDA (Windows), VoiceOver (macOS), TalkBack (Android)
-
 - **Keyboard Testing**: Full keyboard navigation testing
-
 - **Mobile Testing**: Touch target and gesture testing
-
 - **Cross-browser Testing**: Accessibility across different browsers
 
 ## 11. **Monitoring and Maintenance**
@@ -505,31 +417,22 @@ export function Button({
 ### **Accessibility Audits**
 
 - **Quarterly automated scans** of all pages
-
 - **Annual comprehensive audit** by external experts
-
 - **Continuous monitoring** of accessibility metrics
-
 - **User feedback integration** from accessibility issues
 
 ### **Performance Metrics**
 
 - **Accessibility score**: Lighthouse accessibility score > 90
-
 - **Issue resolution time**: Average time to fix accessibility issues < 48 hours
-
 - **User satisfaction**: Accessibility-related support ticket volume
-
 - **Compliance rate**: Percentage of components meeting accessibility standards
 
 ### **Training and Awareness**
 
 - **Developer training**: Accessibility fundamentals for all developers
-
 - **Designer training**: Inclusive design principles and techniques
-
 - **QA training**: Accessibility testing methodologies
-
 - **Stakeholder education**: Business case for accessibility
 
 ## 12. **Common Issues and Solutions**
@@ -564,11 +467,8 @@ export function Button({
 ## Related Documents
 
 - [Design System](/docs/design) - Complete design system overview
-
 - [Design Tokens](/docs/design/tokens) - Design token specifications
-
 - [Interaction Patterns](/docs/design/interaction-patterns) - User interaction frameworks
-
 - [UI Library](/docs/design/ui-library/overview) - Component usage guidelines
 
 ---

@@ -15,9 +15,7 @@ This diagram represents the canonical Content DB schema corresponding to:
 It is scoped strictly to heavy content storage (bodies, attachments) and intentionally excludes:
 
 - Analytics/OLAP tables
-
 - OLTP business entities
-
 - Generic logging/telemetry/infra metrics (see [External Analytics Logging](/docs/implementation-technical/database-infrastructure/content-database/README))
 
 ```mermaid

@@ -25,27 +25,20 @@ In addition to the copyright license granted above, I hereby grant to the Pengui
 **Patent Information:**
 
 - Patent Application/Number: [If applicable]
-
 - Patent Holder: [Contributor Name]
-
 - Effective Date: [Date of Contribution]
 
 **Scope of License:**
 
 - Use of the contributed code
-
 - Modification and distribution
-
 - Sublicensing to end users
-
 - Defense against patent claims
 
 **Limitations:**
 
 - License only applies to claims in patents owned by contributor
-
 - License terminates if contributor initiates patent litigation
-
 - No warranty of patent validity provided
 
 ```

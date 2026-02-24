@@ -41,11 +41,7 @@ Licensing and IP organized by topic:
 **Current License**: MIT License
 
 - **Commercial Use**: Permitted
-
 - **Modification**: Permitted
-
 - **Distribution**: Permitted
-
 - **Private Use**: Permitted
-
 - **Attribution**: Required

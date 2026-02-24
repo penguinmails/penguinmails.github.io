@@ -66,33 +66,23 @@ if (response.status === 200) {
 1. **Prioritize the `result` and `message` Fields**:
 
    - Always check if `result === "error"`
-
    - Use the `message` field for human-readable debugging
-
    - Log the full error object for troubleshooting
 
 2. **Handling Proprietary Error Codes**:
 
    - Log the internal `ERROR` code for Hostwinds support reference
-
    - **Do not** use this code to drive automation logic
-
    - Error codes may change without notice
 
 3. **Client vs. Server Errors**:
 
    - **Client Data Errors**: Invalid input (e.g., "invalid serviceid", "Location Id is invalid")
-
      - **Do not retry** - Fix the input data
-
      - Log the error and alert developers
-
    - **Transient Errors**: Network issues or temporary server problems
-
      - **Implement exponential backoff**
-
      - **Retry up to 3 times**
-
      - Log retry attempts
 
 ---
@@ -182,13 +172,9 @@ Many Hostwinds operations are asynchronous. The success response only means the 
 **Operations Requiring Polling**:
 
 - `add_instance` - Server creation
-
 - `recreate` - Server recreation
-
 - `reinstall_instance` - OS reinstall
-
 - `upgrade_server` - Resource upgrades
-
 - `regenerate_networking` - Network rebuild
 
 **Polling Strategy**:
@@ -633,31 +619,22 @@ class HostwindsAutomation {
 **API Performance**:
 
 - Request latency (p50, p95, p99)
-
 - Error rate by action
-
 - Retry rate
-
 - Circuit breaker state changes
 
 **Business Metrics**:
 
 - Instance creation success rate
-
 - Average provisioning time
-
 - Cost per instance
-
 - API call volume by action
 
 **Operational Metrics**:
 
 - Failed validations
-
 - Timeout rate
-
 - Rate limit hits
-
 - Polling duration
 
 ### Example Metrics Collection
@@ -711,13 +688,9 @@ class MetricsCollector {
 ## Related Documentation
 
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
-
 - [Hostwinds Server Management API](/docs/implementation-technical/api/hostwinds/server-management ) - Instance operations
-
 - [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking ) - IP and network management
-
 - [Hostwinds Monitoring API](/docs/implementation-technical/api/hostwinds/monitoring ) - Monitoring and diagnostics
-
 - [Development Standards](/docs/implementation-technical/development-guidelines/README) - General development best practices
 
 ---

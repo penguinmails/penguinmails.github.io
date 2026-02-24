@@ -28,17 +28,11 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ### Token Categories
 
 - **Color**: Brand colors, semantic colors, and neutral palettes
-
 - **Typography**: Font families, sizes, weights, and line heights
-
 - **Spacing**: Consistent spacing scale for margins, padding, and layout
-
 - **Sizing**: Component dimensions, icon sizes, and border radius
-
 - **Shadow**: Depth and elevation system
-
 - **Border**: Border widths, styles, and radius values
-
 - **Animation**: Motion design tokens for interactions
 
 ### Token Naming Convention
@@ -304,11 +298,8 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ### Spacing Usage Guidelines
 
 - **space-1 to space-3**: Small gaps, borders, icon spacing
-
 - **space-4 to space-6**: Component padding, form spacing
-
 - **space-8 to space-12**: Section spacing, card padding
-
 - **space-16+**: Large layouts, page sections
 
 ## Sizing Tokens
@@ -465,33 +456,23 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ### Token Usage Priority
 
 1. **Design Tokens**: Always use tokens instead of hard-coded values
-
 2. **Semantic Naming**: Use meaningful names that convey purpose
-
 3. **Platform Consistency**: Ensure tokens work across all platforms
-
 4. **Accessibility**: Verify all token combinations meet accessibility standards
 
 ### Token Modification Process
 
 1. **Impact Assessment**: Evaluate effects on existing components
-
 2. **Platform Testing**: Test across all supported platforms
-
 3. **Documentation Update**: Update design system documentation
-
 4. **Migration Plan**: Plan rollout and deprecation strategy
-
 5. **Communication**: Notify all stakeholders of changes
 
 ### Version Control
 
 - **Semantic Versioning**: Major.Minor.Patch for token changes
-
 - **Deprecation Notices**: Clear timeline for token removal
-
 - **Migration Tools**: Automated migration assistance
-
 - **Rollback Plan**: Ability to revert changes if needed
 
 ---
@@ -499,11 +480,8 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 ## Related Documents
 
 - [Design System](/docs/design/design-system) - Complete design system overview
-
 - [Component Library](/docs/design/component-library) - Reusable component catalog
-
 - [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
-
 - [UI Library](/docs/design/component-library) - Component usage guidelines and patterns
 
 ---

@@ -99,33 +99,25 @@ graph TB
 ### **Client Layer**
 
 - **Web Frontend**: React-based dashboard for campaign management and monitoring
-
 - **API Client**: External integrations and mobile applications
 
 ### **Central Infrastructure**
 
 - **Central Frontend**: User management and authentication services
-
 - **Central API Gateway**: Routes requests, handles authentication, and manages rate limiting
-
 - **Central SMTP Pool**: Manages SMTP connections and load balancing across tenants
-
 - **Central Queue System**: Redis + PostgreSQL hybrid for job processing and state management
 
 ### **Tenant Infrastructure (Per Customer)**
 
 - **Tenant SMTP Server**: MailU stack with Postfix, Dovecot, and SpamAssassin
-
 - **Tenant Database**: PostgreSQL schema with row-level security for data isolation
-
 - **Tenant Queue**: Dedicated job processing for tenant-specific operations
 
 ### **External Services**
 
 - **MailU SMTP Stack**: Enterprise email delivery infrastructure
-
 - **Hostwind VPS**: Automated VPS provisioning and management
-
 - **DNS Providers**: SPF, DKIM, DMARC record management
 
 ## Key Integration Patterns

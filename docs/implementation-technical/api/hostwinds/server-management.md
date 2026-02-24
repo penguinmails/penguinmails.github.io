@@ -97,9 +97,7 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 **Notes**:
 
 - This is an asynchronous operation - the success response indicates the task was queued
-
 - Poll `get_instance` to check creation status
-
 - The response includes invoice payment confirmation
 
 ---
@@ -116,7 +114,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 **Notes**:
 
 - Returns all instances for the authenticated account
-
 - Use this to validate `serviceid` before other operations
 
 ---
@@ -133,7 +130,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 **Notes**:
 
 - Use for polling instance status after async operations
-
 - Check `status`, `vm_state`, and `task_state` fields
 
 ---
@@ -190,7 +186,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 **Notes**:
 
 - The `time` parameter allows scheduling the reboot
-
 - Required after password changes to take effect
 
 ---
@@ -327,7 +322,6 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 **Notes**:
 
 - Locked instances cannot be modified or deleted
-
 - Use to prevent accidental changes to production instances
 
 ---
@@ -376,11 +370,8 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 ## Related Documentation
 
 - [Hostwinds API Overview](/docs/implementation-technical/api/hostwinds/overview) - Main API overview
-
 - [Hostwinds Networking API](/docs/implementation-technical/api/hostwinds/networking) - IP and network management
-
 - [Hostwinds Upgrade & Billing API](/docs/implementation-technical/api/hostwinds/upgrade-billing ) - Resource upgrades and billing
-
 - [Hostwinds Automation Best Practices](/docs/implementation-technical/api/hostwinds/automation-best-practices ) - Error handling and workflows
 
 ---

@@ -8,17 +8,11 @@ persona: "Documentation Users"
 related_docs:
 
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - Hybrid PostgreSQL + Redis design"
-
   - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
-
   - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis queues and migrator process"
-
   - "[Workers](/docs/implementation-technical/database-infrastructure/queue/workers) - Background job processing"
-
   - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and health monitoring"
-
   - "[Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices) - Performance and reliability guidelines"
-
   - "[Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Database schema visualization"
 ---
 
@@ -43,43 +37,30 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 ### 🎯 **Purpose & Characteristics**
 
 - **Primary Focus**: Job state management, retry logic, processing reliability
-
 - **Architecture**: Hybrid PostgreSQL + Redis for durability and performance
-
 - **Reliability**: Comprehensive logging, retry mechanisms, dead letter queues
-
 - **Scalability**: Redis for high-throughput operations, PostgreSQL for state tracking
 
 ### âš¡ **Performance Strategy**
 
 - **Redis Lists**: Fast job queues for immediate processing
-
 - **PostgreSQL State**: Durable job tracking and audit trails
-
 - **Priority Queues**: Multiple priority levels for different job types
-
 - **Retry Logic**: Exponential backoff and comprehensive error handling
 
 ### Key Features
 
 - **Asynchronous Processing**: Non-blocking email operations
-
 - **Retry Logic**: Automatic failure recovery with exponential backoff
-
 - **Monitoring**: Real-time queue health and job metrics
-
 - **Scalability**: Horizontal scaling through multiple worker instances
-
 - **Reliability**: Dead letter queues for failed jobs
 
 ### Architecture Components
 
 - **PostgreSQL**: Durable job state management
-
 - **Redis**: High-performance job queues
-
 - **Workers**: Background job processors
-
 - **Monitoring**: Queue health and performance metrics
 
 ---
@@ -89,13 +70,9 @@ The **Queue System** is PenguinMails' job processing and reliability layer desig
 ### Hybrid Architecture Benefits
 
 - **PostgreSQL**: Durable record of truth with comprehensive audit trail
-
 - **Redis**: High-performance job processing with millisecond latency
-
 - **Queuer Process**: Automated migration from PostgreSQL to Redis
-
 - **Worker Servers**: Horizontal scaling with multiple concurrent workers
-
 - **Priority Queues**: Separate queues for high/normal/low priority jobs
 
 ### Data Flow Overview
@@ -132,11 +109,8 @@ graph TD
 The PostgreSQL component provides:
 
 - Permanent job storage with full audit trail
-
 - Complex query capabilities for job management
-
 - ACID compliance for job state consistency
-
 - Integration with analytics and reporting systems
 
 **See detailed documentation**: [Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema)
@@ -146,11 +120,8 @@ The PostgreSQL component provides:
 The Redis component provides:
 
 - Millisecond-latency job queue operations
-
 - Priority-based queue routing
-
 - Real-time job tracking and monitoring
-
 - Horizontal scaling capabilities
 
 **See detailed documentation**: [Management](/docs/implementation-technical/database-infrastructure/queue/management)
@@ -160,11 +131,8 @@ The Redis component provides:
 The migrator service handles:
 
 - Automated job migration from PostgreSQL to Redis
-
 - Priority-based queue routing
-
 - Batch processing for efficiency
-
 - Error handling and retry logic
 
 **See detailed documentation**: [Management](/docs/implementation-technical/database-infrastructure/queue/management)
@@ -174,11 +142,8 @@ The migrator service handles:
 Worker processes provide:
 
 - Background job consumption from Redis queues
-
 - Job execution with comprehensive error handling
-
 - Automatic retry with exponential backoff
-
 - Dead letter queue management
 
 **See detailed documentation**: [Workers](/docs/implementation-technical/database-infrastructure/queue/workers)
@@ -190,11 +155,8 @@ Worker processes provide:
 ### Container Configuration
 
 - **Redis**: High-performance in-memory queue storage
-
 - **Queuer Process**: Automated job migration service
-
 - **Worker Servers**: Scalable background processing
-
 - **Health Monitoring**: Real-time system health tracking
 
 **See detailed documentation**: [Operations](/docs/implementation-technical/database-infrastructure/queue/operations)
@@ -206,31 +168,22 @@ Worker processes provide:
 ### Performance Optimization
 
 - Batch processing for efficiency
-
 - Connection pooling strategies
-
 - Queue depth monitoring
-
 - Resource limit management
 
 ### Reliability Patterns
 
 - Idempotent job processing
-
 - Proper timeout handling
-
 - Circuit breaker patterns
-
 - Graceful shutdown procedures
 
 ### Security Considerations
 
 - Job payload validation
-
 - Access control implementation
-
 - Data encryption strategies
-
 - Comprehensive audit logging
 
 **See detailed documentation**: [Best Practices](/docs/implementation-technical/database-infrastructure/queue/best-practices)
@@ -253,27 +206,18 @@ Worker processes provide:
 ### Job States
 
 - **queued**: Job created, waiting for processing
-
 - **migrated_to_redis**: Job moved to Redis queue
-
 - **running**: Currently being processed by worker
-
 - **completed**: Successfully finished
-
 - **failed**: Failed after max attempts
-
 - **retry_scheduled**: Scheduled for retry
 
 ### Monitoring Metrics
 
 - Queue depths by priority level
-
 - Worker utilization and throughput
-
 - Job processing times and success rates
-
 - Redis memory usage and performance
-
 - Database connection pool status
 
 ---
@@ -283,21 +227,15 @@ Worker processes provide:
 ### External Systems
 
 - **Email Processing Pipeline**: Integration with email sending/receiving systems
-
 - **Analytics Pipeline**: Job data feeds into OLAP systems
-
 - **Monitoring Systems**: Real-time health and performance metrics
-
 - **Notification System**: Alert integration for critical issues
 
 ### Database Integration
 
 - **OLTP Operations**: Direct job state management
-
 - **Content Storage**: Reference to email content and attachments
-
 - **Analytics Pipeline**: Job metrics for business intelligence
-
 - **Audit Trail**: Comprehensive logging for compliance
 
 ---
@@ -313,7 +251,5 @@ For detailed implementation guidance, refer to the specific component documentat
 **Related Documents:**
 
 - [Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Complete database schema with queue tables
-
 - [Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Infrastructure setup and deployment
-
 - [Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual database schema

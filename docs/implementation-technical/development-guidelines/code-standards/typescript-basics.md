@@ -44,35 +44,24 @@ interface CampaignMetrics {
  *
 
  * This function analyzes recipient engagement patterns, content quality,
-
  * technical deliverability factors, and historical performance to provide
-
  * a weighted delivery score.
 
  *
 
  * @param recipientEngagement - Historical engagement rate (0.0-1.0)
-
  * @param contentQuality - AI-evaluated content score (0.0-1.0)
-
  * @param technicalScore - Technical deliverability score (0.0-1.0)
-
  * @param historicalPerformance - Optional historical metrics for trend analysis
-
  * @returns Comprehensive delivery score with confidence interval
-
  * @throws {Error} If any score is outside valid range (0.0-1.0)
 
  *
 
  * @example
-
  * ```typescript
-
  * const score = calculateEmailDeliveryScore(0.85, 0.92, 0.88);
-
  * console.log(score.overallScore); // 0.88
-
  * ```
  */
 function calculateEmailDeliveryScore(
@@ -205,7 +194,6 @@ class EmailCampaignAnalyticsService {
    *
 
    * @param includeCalculated - Whether to include calculated rates
-
    * @returns Dictionary representation of analytics data
    */
   toDictionary(includeCalculated: boolean = true): Record<string, number | string> {

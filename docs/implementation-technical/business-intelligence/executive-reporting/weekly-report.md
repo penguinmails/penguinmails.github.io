@@ -16,11 +16,8 @@ keywords: "weekly report, performance metrics, business health, trend analysis"
 **Data Sources:**
 
 - PostHog `revenue_impact_event` (real-time monitoring)
-
 - `executive_business_summary` view (daily snapshots)
-
 - Deliverability API status checks
-
 - Cost tracking aggregation
 
 **Automation Pipeline:**

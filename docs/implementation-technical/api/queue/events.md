@@ -64,7 +64,5 @@ persona: "Backend Developers"
 **Supported Domains**:
 
 - `system-alerts`
-
 - `business-metrics`
-
 - `operational-updates`

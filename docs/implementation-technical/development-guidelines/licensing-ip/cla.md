@@ -23,19 +23,14 @@ By contributing to PenguinMails, you agree that your contributions will be licen
 By making a contribution to this project, I certify that:
 
 1. The contribution was created in whole or in part by me and I have the right to submit it under the MIT License.
-
 2. I understand and agree that this project and the contribution are public and that a record of the contribution is maintained indefinitely.
-
 3. I am granting the project a non-exclusive, royalty-free, irrevocable, perpetual license to use, reproduce, modify, and distribute the contribution.
 
 **Contact Information:**
 
 - Email: contributor@example.com
-
 - Name: [Your Full Name]
-
 - Address: [Your Address]
-
 - Phone: [Your Phone Number]
 
 **Signature:**

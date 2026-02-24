@@ -25,9 +25,7 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `status`: `active|warming|blocked|retired`
-
 - `pool`: pool identifier
-
 - `reputation_band`: `excellent|good|watch|bad`
 
 **Response**:

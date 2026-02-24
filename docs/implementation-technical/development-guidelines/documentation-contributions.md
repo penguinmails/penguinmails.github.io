@@ -23,7 +23,6 @@ Welcome! This page provides essential information for contributing to the Pengui
   - Content standards and writing guidelines
   - Git workflow and commit standards
   - Testing and validation processes
-
 - **[AGENTS.md](https://github.com/penguinmails/penguinmails.github.io/blob/main/AGENTS.md)** - AI agent interaction rules and documentation standards including:
   - Markdown formatting requirements
   - Frontmatter specifications

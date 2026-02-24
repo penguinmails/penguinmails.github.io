@@ -25,11 +25,8 @@ persona: "Backend Developers"
 **Query Parameters**:
 
 - `workspace` (string, required): Workspace slug
-
 - `status` (string, optional): Filter by status (draft, active, paused, completed)
-
 - `limit` (integer, optional): Default 20
-
 - `offset` (integer, optional): Default 0
 
 **Response**:

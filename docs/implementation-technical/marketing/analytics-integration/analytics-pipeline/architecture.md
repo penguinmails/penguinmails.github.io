@@ -131,11 +131,8 @@ interface PersonalizationEvent {
 **Technical Requirements:**
 
 - **Processing Latency:** <5 seconds from event capture to analytics availability
-
 - **Throughput:** Support for 10,000+ events per second
-
 - **Accuracy:** 99.5% data accuracy for all analytics calculations
-
 - **Availability:** 99.9% uptime for analytics pipeline
 
 **Data Pipeline Architecture:**

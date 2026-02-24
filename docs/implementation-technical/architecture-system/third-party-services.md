@@ -25,25 +25,19 @@ This document provides a comprehensive analysis of all third-party service depen
 **MVP Monthly Costs:**
 
 - **Core Operational:** $151/month (Vault + Loop.so + VPS + DNS)
-
 - **With Database:** $351/month (adds NileDB $200)
-
 - **With Payment Processing:** $1,951/month (adds Stripe $1,600 at $50K MRR)
 
 **Post-MVP Cost Optimization:**
 
 - **Potential Savings:** $612/year (Loop.so → MailU/Stalwart, HCP Vault → Self-hosted)
-
 - **Development Effort:** 4-6 weeks
-
 - **Recommendation:** Migrate Loop.so for operational simplicity, evaluate Vault migration only at scale
 
 **Vendor Lock-In Risk:** **Low to Medium**
 
 - All services have viable alternatives and clear migration paths
-
 - No service creates unacceptable vendor lock-in
-
 - Platform can migrate away from any service with moderate effort (1-8 weeks)
 
 ---
@@ -53,11 +47,8 @@ This document provides a comprehensive analysis of all third-party service depen
 ### Critical Infrastructure (P0)
 
 1. **HashiCorp Vault** - Secrets management ($22/month)
-
 2. **MailU/Stalwart** - Email infrastructure (Open source, $0)
-
 3. **Hostwind API** - VPS provisioning ($100/month for 10 VPS)
-
 4. **NileDB** - Multi-tenant PostgreSQL ($200/month)
 
 ### Payment Processing (P0)
@@ -67,7 +58,6 @@ This document provides a comprehensive analysis of all third-party service depen
 ### Email Services (P1)
 
 1. **Loop.so** - Transactional emails ($29/month)
-
 2. **Mailgun** - Bulk email sending (Optional, Post-MVP)
 
 ### DNS Management (P1)
@@ -97,9 +87,7 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - Self-Hosted Vault: $0/month (requires infrastructure and maintenance)
-
 - AWS Secrets Manager: $50-100/month
-
 - Azure Key Vault: $30-60/month
 
 **Recommendation:** HCP Vault for MVP (lowest operational overhead)
@@ -107,7 +95,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - MVP: HCP Vault ($22/month)
-
 - Post-MVP (Q3 2026): Evaluate self-hosted Vault if managing 500+ secrets
 
 **Vendor Lock-In:** Low (open source, can self-host)
@@ -115,11 +102,8 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Infrastructure Management (VPS SSH keys, SMTP credentials)
-
 - Integrations (Tenant API keys, ESP API keys)
-
 - Authentication & Security (OAuth tokens, session secrets)
-
 - Compliance & Security (SOC2/ISO 27001 requirements)
 
 ---
@@ -135,7 +119,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - MailU: Open source, comprehensive features, Postmark integration included
-
 - Stalwart: Open source, modern Rust-based, high performance
 
 **Recommendation:** Evaluate both for MVP (start with MailU)
@@ -143,7 +126,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - MVP: Deploy MailU on tenant VPS
-
 - Post-MVP (Q3 2026): Migrate transactional emails from Loop.so to MailU/Stalwart
 
 **Vendor Lock-In:** None (open source)
@@ -151,7 +133,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Email Operations (Campaign sending, email sequences)
-
 - Infrastructure Management (SMTP server setup)
 
 ---
@@ -167,11 +148,8 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - DigitalOcean: $6-48/month per droplet
-
 - Linode: $5-40/month per instance
-
 - AWS EC2: $3.50-100+/month per instance
-
 - Vultr: $2.50-40/month per instance
 
 **Recommendation:** Keep Hostwind for MVP, add alternatives Post-MVP
@@ -179,7 +157,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - MVP: Hostwind only
-
 - Post-MVP (Q2 2026): Add DigitalOcean and Linode as alternatives
 
 **Vendor Lock-In:** Low (standard VPS infrastructure)
@@ -187,7 +164,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Infrastructure Management (VPS provisioning, SSH key management)
-
 - Email Operations (SMTP server deployment)
 
 ---
@@ -209,7 +185,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - No migration planned (cost of custom RLS exceeds NileDB cost for 2-3 years)
-
 - Alternative: Migrate to standard PostgreSQL only if costs exceed $5,000/month
 
 **Vendor Lock-In:** Medium (can migrate to PostgreSQL with custom RLS - 8-12 weeks)
@@ -217,7 +192,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - All feature areas (core database infrastructure)
-
 - Team & Tenant Management (Multi-tenant architecture)
 
 ---
@@ -233,9 +207,7 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - PayPal/Braintree: 2.9% + $0.30 per transaction
-
 - Paddle: 5% + $0.50 per transaction (merchant of record)
-
 - Chargebee: 0.75% + $0-599/month
 
 **Recommendation:** Keep Stripe for MVP and long-term
@@ -243,7 +215,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - No migration planned (best-in-class payment platform)
-
 - Alternative: Evaluate Paddle for international expansion (handles VAT/tax)
 
 **Vendor Lock-In:** Medium (can migrate to PayPal/Braintree - 4-6 weeks)
@@ -251,7 +222,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Billing & Subscriptions (Payment processing, subscription management)
-
 - Team & Tenant Management (Subscription-based access control)
 
 ---
@@ -267,9 +237,7 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - Postmark: $1.25 per 1,000 emails (included in MailU)
-
 - SendGrid: $19.95/month (40K emails)
-
 - Amazon SES: $0.10 per 1,000 emails
 
 **Recommendation:** Use Loop.so for MVP, migrate to MailU/Stalwart Post-MVP
@@ -277,7 +245,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - MVP: Loop.so ($29/month)
-
 - Post-MVP (Q3 2026): Migrate to MailU/Stalwart SMTP (saves $348/year)
 
 **Vendor Lock-In:** Low (standard SMTP/API interfaces)
@@ -285,7 +252,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Authentication & Security (Password reset, email verification)
-
 - Team & Tenant Management (Team invitation emails)
 
 ---
@@ -301,9 +267,7 @@ This document provides a comprehensive analysis of all third-party service depen
 **Alternatives:**
 
 - AWS Route53: $0.50/zone/month + query fees
-
 - Google Cloud DNS: $0.20/zone/month + query fees
-
 - Namecheap DNS: Free with domain registration
 
 **Recommendation:** Cloudflare for MVP (free tier sufficient)
@@ -311,7 +275,6 @@ This document provides a comprehensive analysis of all third-party service depen
 **Migration Path:**
 
 - MVP: Cloudflare only (free tier)
-
 - Post-MVP (Q3 2026): Add Route53 as alternative for AWS customers
 
 **Vendor Lock-In:** Low (standard DNS API)
@@ -319,9 +282,7 @@ This document provides a comprehensive analysis of all third-party service depen
 **Affected Features:**
 
 - Domain Management (DNS record management)
-
 - Infrastructure Management (Domain verification)
-
 - Email Operations (Email authentication - DKIM, SPF, DMARC)
 
 ---
@@ -362,19 +323,14 @@ This document provides a comprehensive analysis of all third-party service depen
 ### Low Lock-In (1-3 weeks migration)
 
 - Loop.so (transactional emails)
-
 - MailU/Stalwart (email infrastructure)
-
 - Cloudflare DNS (DNS management)
-
 - Hostwind VPS (VPS provisioning)
 
 ### Medium Lock-In (3-8 weeks migration)
 
 - HashiCorp Vault (secrets management)
-
 - Stripe (payment processing)
-
 - NileDB (multi-tenant database)
 
 ### High Lock-In (8+ weeks migration)
@@ -392,21 +348,17 @@ This document provides a comprehensive analysis of all third-party service depen
 1. **Use Managed Services:** HCP Vault, Loop.so, Stripe, Hostwind, Cloudflare, NileDB
 
    - Reduces operational complexity
-
    - Accelerates time-to-market
-
    - Acceptable cost for MVP scale ($351/month operational)
 
 2. **Deploy Open Source Email:** MailU or Stalwart
 
    - Self-hosted on tenant VPS (no per-email costs)
-
    - Full control over cold email infrastructure
 
 3. **Accept Dependencies:** All services provide excellent value with low-medium lock-in risk
 
    - Focus on building product, not avoiding dependencies
-
    - Can optimize costs Post-MVP based on scale
 
 ### For Post-MVP (Q3-Q4 2026)
@@ -414,23 +366,18 @@ This document provides a comprehensive analysis of all third-party service depen
 1. **Migrate Transactional Emails** (Q3 2026)
 
    - Consolidate all email sending on MailU/Stalwart
-
    - Estimated savings: $348/year
-
    - Development effort: 2-3 weeks
 
 2. **Add Multi-Provider Support** (Q2 2026)
 
    - Add DigitalOcean, Linode for VPS provisioning
-
    - Increases reliability and customer choice
 
 3. **Evaluate Vault Migration** (Q3 2026)
 
    - Self-hosted Vault only if managing 500+ secrets
-
    - Estimated savings: $264/year
-
    - Only recommended at scale
 
 ---
@@ -440,33 +387,25 @@ This document provides a comprehensive analysis of all third-party service depen
 ### Internal Reviews
 
 - [Third-Party Dependencies Report (Findings)](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/third-party-dependencies) - Detailed analysis
-
 - [Integrations Third-Party Dependencies](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/integrations-third-party-dependencies) - Integrations-specific analysis
-
 - [Vault Integration Architecture](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/vault-integration-architecture) - Vault architecture
 
 ### Feature Documentation
 
 - [Infrastructure Features](/docs/features/infrastructure/README) - Infrastructure management
-
 - [Integration Features](/docs/features/integrations/README) - Third-party integrations
-
 - [Billing Features](/docs/features/payments/README) - Payment processing
 
 ### Technical Documentation
 
 - [Technical Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - System architecture
-
 - [Infrastructure Provisioning Flow](/docs/implementation-technical/architecture-system/flows/infrastructure-provisioning-flow) - VPS provisioning
-
 - [Email Infrastructure Integration](/docs/implementation-technical/architecture-system/flows/email-infrastructure-integration-flow) - Email setup
 
 ### Roadmap
 
 - [Product Roadmap](/docs/operations/roadmap/product-roadmap/overview) - Feature timeline
-
 - [Technical Roadmap](/docs/operations/roadmap/technical-roadmap) - Technical dependencies
-
 - [Master Roadmap](/docs/implementation-technical/architecture-system/.kiro/specs/feature-completeness-review/findings/master-roadmap) - Consolidated roadmap
 
 ---

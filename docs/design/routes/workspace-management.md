@@ -8,27 +8,18 @@ level: "2"
 ## 1. Purpose & Context (The "Why")
 
 - **Goal**: Create and configure client workspaces. Crucial for Agencies managing multiple clients.
-
 - **Feature References**:
-
   - [Agency Features](/docs/business/user-personas/agency-owners)
-
 - **User Journey**: Agency signs up → Creates Workspace for "Client A" → Invites Client A users.
 
 ## 2. UI Patterns & Components (The "How")
 
 - **Core Components**:
-
   - `CardGrid`: Visual list of workspaces with health status.
-
   - `Modal`: For "Create Workspace" flow.
-
   - `Tabs`: For Workspace Settings (General, Members, Billing).
-
 - **Analytics Patterns**:
-
   - `DataCard`: "Client Health" summary on the card (e.g., " 3 Active Campaigns").
-
 - **Layout**: Global Context.
 
 ## 3. Route Specifications
@@ -50,33 +41,19 @@ level: "2"
 **For Agencies (Multi-Workspace)**:
 
 - **Header Stats Row** (see [Analytics UI Patterns](/docs/design/analytics-ui-patterns#data-cards)):
-
   - **DataCards**: Total Clients, Active Campaigns (across all), Total Emails Sent (MTD), Aggregated Reply Rate.
-
 - **Workspace Grid**:
-
   - **Each Workspace Card Shows**:
-
     - **Client Logo** (uploaded or initials fallback).
-
     - **Workspace Name**.
-
     - **Health Score** (0-100):
-
       - ✅ 90-100: Green "Healthy".
-
       - âš ï¸ 70-89: Yellow "Needs Attention".
-
       - ❌ <70: Red "Critical".
-
     - **Quick Stats**: "3 Active Campaigns", "1,200 Leads", "42% Open Rate".
-
     - **"View Workspace" Button**: Navigates to `/dashboard/workspaces/[slug]`.
-
 - **Actions**:
-
   - **"+ New Workspace" Button** (top-right).
-
   - **Sort Dropdown**: By Name, Health Score, Campaign Count.
 
 **For Single-Tenant Users**:
@@ -88,13 +65,11 @@ level: "2"
 **Related Documentation**:
 
 - [Agency Owner Persona](/docs/business/user-personas/agency-owners)
-
 - [Multi-tenancy Architecture](/docs/technical/architecture/multi-tenancy)
 
 **Technical Integration**:
 
 - **Aggregated Metrics**: Fetched from OLAP database with 1-hour cache.
-
 - **Health Score Calculation**: Based on campaign activity, deliverability, reply rates.
 
 ---
@@ -106,27 +81,16 @@ level: "2"
 **What You'll Find**:
 
 - **Modal or Full-Page Form**:
-
   - **Workspace Name**: Input field ("e.g., Acme Corp").
-
   - **Logo Upload**: Drag-and-drop or file picker (optional).
-
   - **Subdomain/Slug**:
-
     - Auto-generated from name: "acme-corp".
-
     - Editable (with validation for uniqueness).
-
   - **Plan Selection** (if applicable):
-
     - Radio buttons: Starter, Pro, Enterprise.
-
     - Shows pricing and feature comparison.
-
 - **Actions**:
-
   - **"Create Workspace" Button**: Creates workspace and redirects to `/dashboard/workspaces/[new-slug]`.
-
   - **"Cancel" Button**: Closes modal.
 
 **User Journey Context**: Onboarding new clients. Must be fast (<1 minute to complete).
@@ -138,7 +102,6 @@ level: "2"
 **Technical Integration**:
 
 - **Async Creation**: Workspace provisioned via background job (creates DB schemas, default settings).
-
 - **Webhook**: Triggers notification to admin users.
 
 ---
@@ -154,41 +117,27 @@ level: "2"
 #### Tab 1: General
 
 - **Workspace Name**: Editable input.
-
 - **Logo**: Upload/change logo.
-
 - **Slug**: Display only (cannot change after creation).
-
 - **Danger Zone**:
-
   - **"Delete Workspace" Button**: Red button with confirmation modal.
-
     - Warning: "This will permanently delete all campaigns, leads, and data."
 
 #### Tab 2: Members
 
 - **Members Table**:
-
   - Columns: Name, Email, Role, Status, Actions.
-
   - **Roles**: Owner, Admin, Member.
-
   - **Status**: Active, Invited (pending).
-
 - **"Invite Member" Button**:
-
   - Opens modal with Email + Role selector.
-
   - Sends invitation email with magic link.
-
 - **Row Actions**: Change Role, Remove (cannot remove self).
 
 #### Tab 3: Billing (if workspace has separate billing)
 
 - **Current Plan**: Shows plan name and limits.
-
 - **"Upgrade Plan" Button**: Redirects to billing flow.
-
 - **Billing Contact**: Email for invoices.
 
 **User Journey Context**: Infrequent access for account maintenance.
@@ -196,15 +145,12 @@ level: "2"
 **Related Documentation**:
 
 - [Team Management](/docs/business/collaboration/team-roles)
-
 - [Billing & Subscriptions](/docs/business/finance/pricing/overview)
 
 **Technical Integration**:
 
 - **RBAC**: Only Owners/Admins can access this page.
-
 - **Stripe Integration** (if workspace billing):
-
   - Customer portal link for payment method updates.
 
 ---
@@ -218,31 +164,26 @@ level: "2"
 1. **Campaign Activity** (30%):
 
    - Active campaigns vs. total campaigns.
-
    - Recent campaign sends.
 
 2. **Deliverability** (40%):
 
    - Bounce rate < 5%.
-
    - Spam complaint rate < 0.1%.
 
 3. **Engagement** (20%):
 
    - Open rate > 20%.
-
    - Reply rate > 5%.
 
 4. **System Health** (10%):
 
    - DNS records verified.
-
    - Email accounts not blacklisted.
 
 **Display**:
 
 - Score shown on workspace card and in workspace dashboard header.
-
 - **Tooltip**: "Health Score factors: Deliverability, Engagement, Activity."
 
 **Related Documentation**:
@@ -258,15 +199,12 @@ level: "2"
 **Mechanism** (as described in [Core App Structure](/docs/design/routes/core-app-structure)):
 
 - **Context Switcher in Sidebar**: Dropdown showing current workspace.
-
 - **Quick Switch**: Click to change, updates URL and sidebar nav.
-
 - **Persistence**: Last workspace stored in localStorage.
 
 **Workspace-Specific State**:
 
 - Campaigns, Templates, Domains, Settings all scoped to selected workspace.
-
 - Global views (Inbox, Leads) aggregate across accessible workspaces.
 
 **Related Documentation**:
@@ -285,29 +223,19 @@ level: "2"
 ## 6. Data Strategy
 
 - **Fetching Method**:
-
   - **Workspace List**: Server Component.
-
   - **Aggregated Stats**: Fetched in parallel with list.
-
 - **Caching**:
-
   - **Workspace List**: Cached for 1 minute.
-
   - **Health Scores**: Cached for 1 hour (computed via background job).
-
 - **Optimistic Updates**:
-
   - "Create Workspace" adds card to grid immediately (with loading state while provisioning).
 
 ## 7. Edge Cases & Error Handling
 
 - **Slug Collision**: If auto-generated slug exists, append number (e.g., `acme-corp-1`).
-
 - **Creation Failure**: If background provisioning fails, show error on card and "Retry" action.
-
 - **Last Admin**: Cannot remove self if you are the only admin.
-
 - **Delete Workspace**: Requires typing workspace name to confirm (destructive action).
 
 ## 8. Component Architecture
@@ -315,25 +243,16 @@ level: "2"
 ### Page Components
 
 - **`WorkspaceGrid`** (Server)
-
   - Props: `workspaces: Workspace[]`
-
   - Sub-components: `WorkspaceCard` (with stats sparklines).
-
 - **`MemberInviteForm`** (Client)
-
   - Props: `workspaceId: string`
-
   - Features: Multi-email input, role selector.
-
 - **`SettingsForm`** (Client)
-
   - Props: `initialValues: WorkspaceSettings`
-
   - Features: Logo upload (Drag & Drop), dirty state tracking.
 
 ### Shared Components
 
 - **`RoleBadge`**: Reused in Team Settings and Admin Users.
-
 - **`Sparkline`**: Reused in Workspace Card and Dashboard.

@@ -42,14 +42,8 @@ Distribution Examples:
 
 
 - UUID (Security-focused): 75% of tables - User data, credentials, financial records
-
-
 - BIGINT (Analytics performance): 9% of tables - High-traffic analytics, logs
-
-
 - VARCHAR (External): 6% of tables - Stripe IDs, Hostwinds IDs, natural keys
-
-
 - Composite (Multi-tenant): 10% of tables - Tenant associations, junction tables
 
 
@@ -60,33 +54,23 @@ Distribution Examples:
 ### HIGH Security (Always UUID)
 
 - **User Credentials**: `users`, `staff_members`
-
 - **Financial Data**: `payments`, `subscriptions`, `subscription_addons`
-
 - **Authentication**: `tenant_users` (composite, but contains auth data)
-
 - **Audit Trails**: `job_audit`, `content_access_audit`
-
 - **External System IDs**: VARCHAR(255) for Stripe/Hostwinds
 
 ### MEDIUM Security (UUID Recommended)
 
 - **Business Operations**: `campaigns`, `templates`, `email_accounts`
-
 - **Infrastructure**: `vps_instances`, `smtp_ip_addresses`
-
 - **Content Storage**: `content_objects` (VARCHAR natural key), `attachments`
-
 - **System Configuration**: `tenant_config`, `tenant_policies`
 
 ### LOW Security (BIGINT Possible)
 
 - **Analytics**: All OLAP tables (`*_analytics`)
-
 - **Logs**: `job_logs`, `content_access_log`
-
 - **Junction Tables**: `template_folders`, `template_tags`
-
 - **Internal Metadata**: `folders`, `tags`
 
 ## Traffic Assessment
@@ -94,33 +78,25 @@ Distribution Examples:
 ### CRITICAL Traffic (>100K ops)
 
 - **Content Operations**: `content_objects`, `email_opens`
-
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `email_messages` (Content)
-
 - **Message Processing**: `campaign_sequence_steps` (OLTP), `content_inbox_message_refs` (Content)
-
 - **Message Processing**: `inbox_message_refs`, `email_clicks`
-
 - **Analytics**: OLAP tables during processing
 
 ### HIGH Traffic (10K-100K ops)
 
 - **Business Operations**: `campaigns`, `job_logs`
-
 - **Queue Processing**: `jobs`, `job_metrics`
-
 - **Content Access**: `content_access_log`
 
 ### MEDIUM Traffic (1K-10K ops)
 
 - **Configuration**: `user_preferences`, `tenant_config`
-
 - **Monitoring**: `queue_health`, `worker_performance`
 
 ### LOW Traffic (<1K ops)
 
 - **Static Data**: `plans`, `permissions`, `staff_roles`
-
 - **Administrative**: `system_config`, `feature_flags`
 
 ## Implementation Rules
@@ -183,23 +159,16 @@ CREATE TABLE transactional_emails (id UUID PRIMARY KEY, ...);
 ### When to Migrate (Rare)
 
 - **Security Escalation**: Low security table becomes user-facing
-
 - **Traffic Surge**: Low traffic table becomes high-traffic
-
 - **Business Requirements**: External system ID standardization
 
 ### Migration Strategy
 
 1. **Add New Column**: Add new PK column alongside old
-
 2. **Dual Writing**: Write to both old and new PK
-
 3. **Backfill Data**: Migrate existing data
-
 4. **Update References**: Update foreign key constraints
-
 5. **Remove Old Column**: Drop old PK column
-
 6. **Rollback Plan**: Maintain ability to revert
 
 ### Migration Example
@@ -227,35 +196,24 @@ ALTER TABLE low_security_table DROP COLUMN id_old;
 ### UUID Performance Characteristics
 
 - **Storage**: 16 bytes vs 8 bytes for BIGINT
-
 - **Indexing**: Slightly slower due to size
-
 - **Randomness**: Reduces index fragmentation
-
 - **Security**: Prevents enumeration attacks
-
 - **Global Uniqueness**: No collision risks
 
 ### BIGINT Performance Characteristics
 
 - **Storage**: 8 bytes (optimal)
-
 - **Indexing**: Faster lookups
-
 - **Sequential**: Better for range queries
-
 - **Readable**: Easier for debugging
-
 - **Collision Risk**: Minimal with proper sequences
 
 ### Real-World Benchmarks
 
 - **UUID Inserts**: ~5-10% slower than BIGINT
-
 - **UUID Queries**: ~2-5% slower than BIGINT
-
 - **Storage Overhead**: ~100% for UUID vs BIGINT
-
 - **Index Size**: ~25-30% larger for UUID
 
 ## Security Considerations
@@ -263,27 +221,20 @@ ALTER TABLE low_security_table DROP COLUMN id_old;
 ### Enumeration Protection
 
 - **URLs**: Avoid exposing sequential IDs in user-visible URLs
-
 - **API Endpoints**: UUID prevents guessing adjacent records
-
 - **Data Leakage**: Sequential IDs can reveal system usage patterns
 
 ### Attack Vectors Mitigated
 
 - **ID Enumeration**: UUID prevents guessing valid IDs
-
 - **Resource Discovery**: Random IDs hide data structure
-
 - **Rate Limiting Bypass**: Harder to enumerate valid targets
 
 ### When Enumeration Risk is Low
 
 - **Internal APIs**: Non-public endpoints
-
 - **Junction Tables**: Many-to-many relationship tables
-
 - **Audit Logs**: Historical data not user-accessible
-
 - **Analytics**: Aggregated data, not individual records
 
 ## Decision Tree for New Tables
@@ -319,11 +270,8 @@ Natural key available (name, external ID)?
 ### ✅ Perfectly Aligned Tables
 
 - **OLTP Security Tables**: UUID (75% of tables)
-
 - **OLAP Analytics Tables**: BIGINT (9% of tables)
-
 - **External System Tables**: VARCHAR (6% of tables)
-
 - **Multi-tenant Junctions**: Composite (10% of tables)
 
 ### 🔍 Potential Optimization Candidates
@@ -331,19 +279,14 @@ Natural key available (name, external ID)?
 #### LOW Security + LOW Traffic (Consider BIGINT)
 
 - `folders` - Internal organization only
-
 - `template_folders` - Junction table, internal
-
 - `template_tags` - Junction table, internal
-
 - `tags` - Internal tagging system
 
 #### MEDIUM Security + LOW Traffic (Keep UUID)
 
 - `user_preferences` - User data, keep secure
-
 - `tenant_config` - Configuration, maintain security
-
 - `feature_flags` - Operational control, keep secure
 
 ## Security Traffic Matrix Integration
@@ -351,19 +294,14 @@ Natural key available (name, external ID)?
 ### Traffic Assessment Matrix
 
 - **CRITICAL Traffic (>100K ops)**: `content_objects`, `inbox_message_refs`, `email_opens`
-
 - **HIGH Traffic (10K-100K ops)**: `campaigns`, `job_logs`, `content_access_log`
-
 - **MEDIUM Traffic (1K-10K ops)**: `user_preferences`, `tenant_config`, `queue_health`
 
 ### Infrastructure Protection Measures
 
 - **Rate Limiting**: API endpoints protected with Redis-based rate limiter (100 requests)
-
 - **Traffic Filtering**: UFW firewall rules with specific IP restrictions for SSH access
-
 - **DDoS Protection**: Cloudflare integration for traffic analysis and mitigation
-
 - **VPN Access**: Mandatory VPN for infrastructure management and database access
 
 ### Security Event Monitoring
@@ -411,9 +349,7 @@ For future table creation, use this matrix to ensure consistent and appropriate 
 ### Related Documents
 
 - [Security Framework](/docs/compliance-security/enterprise/security-framework) - Comprehensive security architecture
-
 - [Security & Privacy Integration](/docs/compliance-security/enterprise/security-privacy-integration) - Unified security and privacy approach
-
 - [Compliance Procedures](/docs/compliance-security/detailed-compliance) - Regulatory compliance workflows
 
 ---

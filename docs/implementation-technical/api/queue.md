@@ -42,7 +42,6 @@ Retrieve and manage system notifications.
 **Key Endpoints**:
 
 - `GET /api/v1/queue/notifications` - Notification feed
-
 - `POST /api/v1/queue/notifications/{id}/reviewed` - Mark reviewed
 
 ### 3. Job Management
@@ -62,5 +61,4 @@ Monitor and manage background jobs (Hybrid PostgreSQL + Redis).
 **Roles**:
 
 - Event Producers: `system:publish` scope
-
 - Notification Consumers: All user roles (scoped to their access level)

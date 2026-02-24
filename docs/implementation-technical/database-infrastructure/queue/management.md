@@ -7,9 +7,7 @@ persona: "System Engineers"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 ---
 
@@ -598,13 +596,9 @@ async function checkRedisHealth() {
 The queue management system provides:
 
 - **High Performance**: Redis-based queues with millisecond latency
-
 - **Priority Routing**: Automatic job routing based on priority levels
-
 - **Reliability**: Comprehensive error handling and retry mechanisms
-
 - **Monitoring**: Real-time queue health and performance tracking
-
 - **Scalability**: Horizontal scaling through multiple workers and Redis clustering
 
 This architecture ensures efficient job processing while maintaining data durability and system reliability.

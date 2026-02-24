@@ -7,9 +7,7 @@ persona: "Engineering Teams"
 related_docs:
 
   - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
-
   - "[Architecture](/docs/implementation-technical/database-infrastructure/queue/architecture) - System design principles"
-
   - "[Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Deployment and monitoring"
 ---
 
