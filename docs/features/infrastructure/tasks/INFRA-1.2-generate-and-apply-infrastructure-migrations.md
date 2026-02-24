@@ -41,5 +41,5 @@ Use the Drizzle Kit CLI to generate a new migration that adds `vps_instances` an
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

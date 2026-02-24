@@ -36,5 +36,5 @@ When assembling an email in the worker (MAIL-2.3), generate a secure JWT for eac
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

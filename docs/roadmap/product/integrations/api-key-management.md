@@ -59,4 +59,4 @@ Complete API key management system with Vault storage, backend key generation, a
 - PostgreSQL
 - Redis
 
-```
+```text

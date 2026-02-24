@@ -5,6 +5,7 @@ last_modified_date: "2026-02-24"
 level: "2"
 ---
 ﻿---
+
 title: "Analytics API"
 description: "Tenant API endpoints for campaign analytics, engagement tracking, and deliverability metrics"
 last_modified_date: "2025-11-26"

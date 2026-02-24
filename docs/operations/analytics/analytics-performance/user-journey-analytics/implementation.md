@@ -12,7 +12,7 @@ keywords: "implementation, best practices, setup"
 
 - **Prevention**: Verify tracking setup before launch
 
-3. **Data Source Issues**:
+1. **Data Source Issues**:
 
    - **Symptom**: Inconsistent data between sources
 

@@ -372,7 +372,7 @@ session: {
 
 #### Two-Factor Authentication (2FA)
 
-**Status:** [PLANNED]() (Level 4 - Enterprise Features)
+**Status:** PLANNED (Level 4 - Enterprise Features)
 
 **Future Implementation:**
 

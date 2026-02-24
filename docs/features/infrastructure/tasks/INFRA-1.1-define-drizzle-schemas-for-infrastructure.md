@@ -43,5 +43,5 @@ In the `/lib/db/schema` directory, create schema files for `vps_instances` and `
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

@@ -44,5 +44,5 @@ Create a protected GET API route at `/api/infrastructure/ips/route.ts`. The endp
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

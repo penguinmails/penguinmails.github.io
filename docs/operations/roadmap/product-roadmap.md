@@ -46,7 +46,7 @@ For specific feature roadmaps, please see:
 
   * **Business Impact:** Enterprise customers require alternative payment methods
 
-### Q3 2026: International & Advan
+## Q3 2026: International ### Q3 2026: International & Advan Advan
 
 * **[P1] Multi-Currency Support** (3-4 weeks)
 

@@ -361,4 +361,3 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 - [Database Migration Guide](/docs/implementation-technical/database-infrastructure/operations/database-migration-guide) - Cost field implementation
 
 ---
-

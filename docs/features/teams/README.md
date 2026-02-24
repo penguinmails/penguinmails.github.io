@@ -67,4 +67,4 @@ See **[Team Management Roadmap](/docs/features/teams/team-roadmap)** for detaile
 
 ---
 
-[← Back to All Features]()
+[← Back to All Features](/docs/features/)

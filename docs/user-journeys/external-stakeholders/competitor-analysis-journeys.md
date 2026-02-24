@@ -319,4 +319,3 @@ This document outlines the key user journeys for competitors who analyze Penguin
 - [`press-media-journeys.md`](press-media-journeys)
 
 ---
-

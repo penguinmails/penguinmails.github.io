@@ -445,7 +445,6 @@ This document provides a comprehensive framework for developing industry-specifi
 
 **Next Steps**: Use these templates to develop industry-specific business cases that address the unique needs and concerns of each vertical market.
 
-
 ---
 
 *This industry-specific business cases structure is part of the comprehensive Progressive Disclosure Framework for Business Leaders. It provides the framework for developing targeted business cases for specialized and regulated industries.*

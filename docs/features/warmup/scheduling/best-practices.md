@@ -17,13 +17,10 @@ keywords: "best practices, optimization, tips"
   }
 }
 
-```
+    ### Background Jobs
 
-### Background Jobs
-
-```typescript
 // Daily warmup scheduler
-cron.schedule('0 9 * * *', async () => {  // 9 AM daily
+    cron.schedule('daily_9am', async () => {  // 9 AM daily
   const activeSchedules = await db.warmupSchedules.findAll({
     where: { status: 'active' },
   });
@@ -49,7 +46,7 @@ cron.schedule('0 9 * * *', async () => {  // 9 AM daily
 });
 
 // Health check every hour
-cron.schedule('0 * * * *', async () => {
+    cron.schedule('hourly', async () => {
   const activeSchedules = await db.warmupSchedules.findAll({
     where: { status: 'active' },
   });
@@ -61,11 +58,8 @@ cron.schedule('0 * * * *', async () => {
   }
 });
 
-```
+    ### API Endpoints
 
-### API Endpoints
-
-```typescript
 // Start warmup
 app.post('/api/warmup/start', authenticate, async (req, res) => {
   const service = new WarmupService();
@@ -108,23 +102,21 @@ app.post('/api/warmup/:id/resume', authenticate, async (req, res) => {
   return res.json({ success: true });
 });
 
-```
+    ---
 
----
+    ## Related Documentation
 
-## Related Documentation
+    - **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Overall warmup strategy
 
-- **[Email Warmups](/docs/features/warmup/email-warmups/overview)** - Overall warmup strategy
+    - **[Reputation Monitoring](/docs/features/warmup/monitoring/overview)** - Track sender reputation
 
-- **[Reputation Monitoring](/docs/features/warmup/monitoring/overview)** - Track sender reputation
+    - **[Domain Management](/docs/features/domains/domain-management)** - Domain configuration
 
-- **[Domain Management](/docs/features/domains/domain-management)** - Domain configuration
+    - **[Email Infrastructure](/docs/features/infrastructure/email-infrastructure-setup)** - SMTP setup
 
-- **[Email Infrastructure](/docs/features/infrastructure/email-infrastructure-setup)** - SMTP setup
+    ---
 
----
-
-**Last Updated:** November 25, 2025
-**Status:** Planned - High Priority (Level 2)
-**Target Release:** Q3 2026
-**Owner:** Deliverability Team
+    **Last Updated:** November 25, 2025
+    **Status:** Planned - High Priority (Level 2)
+    **Target Release:** Q3 2026
+    **Owner:** Deliverability Team

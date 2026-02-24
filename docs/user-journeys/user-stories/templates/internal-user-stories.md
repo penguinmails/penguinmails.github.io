@@ -311,6 +311,7 @@ DEFINITION OF DONE:
 ## Best Practices for Internal User Stories
 
 ### **Story Quality Checklist**
+
 - [ ] Clear user type and role identification
 - [ ] Specific business value and measurable impact defined
 - [ ] Detailed acceptance criteria that are testable
@@ -319,6 +320,7 @@ DEFINITION OF DONE:
 - [ ] Definition of done comprehensive and actionable
 
 ### **Internal User Story Guidelines**
+
 - **Focus on Operational Efficiency**: Always emphasize operational improvements and efficiency gains
 - **Security and Compliance**: Ensure all stories address security and compliance requirements
 - **Integration Consideration**: Consider integration with existing internal tools and systems
@@ -326,6 +328,7 @@ DEFINITION OF DONE:
 - **Documentation Priority**: Include comprehensive documentation and training requirements
 
 ### **Common Internal User Story Patterns**
+
 1. **Management Stories**: User management, access control, configuration management
 2. **Monitoring Stories**: System monitoring, alerting, performance tracking
 3. **Integration Stories**: Tool integration, data synchronization, workflow automation
@@ -334,11 +337,11 @@ DEFINITION OF DONE:
 
 ---
 
-**Related Documents**
+### Related Documents
+
 - [`../methodology.md`](../methodology)
 - [`../user-types-classification.md`](../user-types-classification)
 - [`stakeholder-stories.md`](stakeholder-stories)
 - [`customer-stories.md`](customer-stories)
 
 ---
-

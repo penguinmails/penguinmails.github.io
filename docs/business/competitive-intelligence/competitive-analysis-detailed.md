@@ -206,7 +206,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ---
 
 ## Implementation Boundary: Competitive Deliverability Benchmarking (RP-007 Alignment)

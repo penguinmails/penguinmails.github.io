@@ -36,5 +36,5 @@ Create/finalize the Drizzle schemas for `campaigns`, `leads`, `templates`, `emai
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

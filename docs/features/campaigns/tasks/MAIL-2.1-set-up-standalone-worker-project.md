@@ -37,5 +37,5 @@ Create a new Node.js/TypeScript project in a `/worker` sub-directory of the repo
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

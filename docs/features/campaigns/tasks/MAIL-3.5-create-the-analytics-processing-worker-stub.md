@@ -35,5 +35,5 @@ In the `/worker` project, create a function that listens to the `queue:analytics
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

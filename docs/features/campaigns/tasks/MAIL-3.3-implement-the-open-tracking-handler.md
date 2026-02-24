@@ -36,5 +36,5 @@ For requests to `/api/track/open`, the endpoint will: 1) Verify the JWT, 2) Push
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

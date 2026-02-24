@@ -102,5 +102,5 @@ STRIPE_WEBHOOK_SECRET=whsec_xxxxx
 
 ## Cross-References
 
-- **Routes**: [settings.md]()
-- **API**: [platform-api/subscriptions.md]()
+- **Routes**: [settings.md](/docs/design/routes/settings)
+- **API**: [platform-api/subscriptions.md](/docs/implementation-technical/api/platform-api/subscriptions)

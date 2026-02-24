@@ -386,4 +386,3 @@ This document outlines the key user journeys for freelance consultants who use P
 - [Tenant Leads](/docs/design/routes/tenant-leads.md) - Lead management UI
 
 ---
-

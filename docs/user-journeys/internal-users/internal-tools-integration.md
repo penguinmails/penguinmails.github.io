@@ -380,4 +380,3 @@ This document outlines the user journeys for internal teams who integrate Pengui
 - [Stripe Integration](/docs/features/payments/stripe-integration.md) - Payment integration guide
 
 ---
-

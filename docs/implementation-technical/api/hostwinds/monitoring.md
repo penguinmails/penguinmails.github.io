@@ -434,4 +434,3 @@ scrape_configs:
 - [Architecture Overview](/docs/implementation-technical/architecture-system/architecture-overview) - System monitoring integration
 
 ---
-

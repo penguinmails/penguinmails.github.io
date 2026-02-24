@@ -37,5 +37,5 @@ Create a protected API route at `/api/cron/scheduler/route.ts`. This endpoint wi
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

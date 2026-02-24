@@ -5,6 +5,7 @@ last_modified_date: "2026-02-24"
 level: "2"
 ---
 ﻿---
+
 title: "Industry-Specific Platform Templates"
 grand_parent: "Process Automation and Standardization"
 has_children: "false"

@@ -84,5 +84,5 @@ export async function GET(req: Request) {
 
 ## Cross-References
 
-- **Routes**: [tenant-leads.md]()
+- **Routes**: [tenant-leads.md](/docs/design/routes/tenant-leads)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

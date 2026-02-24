@@ -55,7 +55,6 @@ keywords: "testing, QA, validation"
 
 ---
 
-
 ---
 
 > **Note**: The detailed component implementation code above (Layout Components, Button Components, Form Components, etc.) is legacy content that will be moved to `component-library.md`. This document focuses on high-level patterns and tech stack decisions.

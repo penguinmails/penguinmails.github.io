@@ -14,7 +14,7 @@ This directory contains comprehensive financial analysis files that provide deep
 
 ## Progressive Disclosure Flow
 
-###  Deep Analysis Documents
+### Deep Analysis Documents
 
 - [**Financial Analysis Benchmarks**](/docs/business/financial-analysis) - Comprehensive industry benchmarks (â‰¤300 lines)
 

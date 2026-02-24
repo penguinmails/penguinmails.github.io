@@ -37,5 +37,5 @@ In `/lib/services/scheduler.service.ts`, create a function `enqueueDueCampaigns(
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

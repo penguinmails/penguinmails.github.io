@@ -89,7 +89,7 @@ Create and manage additional purchasable features that extend base subscription 
 
 ## Related Documentation
 
-- **[Finance Overview]()**: Revenue tracking and financial analytics
+- **[Finance Overview](/docs/features/admin/finance/overview)**: Revenue tracking and financial analytics
 - **[Stripe Integration](/docs/features/payments/stripe-integration)**: Technical payment processing details
 - **[Billing Schema](/docs/implementation-technical/database-infrastructure/oltp-database/schema-guide)**: Database structure for plans and subscriptions
 - **[Admin Route Spec](/docs/design/routes/platform-admin#plan-management)**: UI specification for management interface

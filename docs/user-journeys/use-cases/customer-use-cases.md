@@ -512,4 +512,3 @@ This document outlines comprehensive use cases for Real External Users (Customer
 - [`external-users/enterprise-team-journeys.md`](../external-users/enterprise-team-journeys)
 
 ---
-

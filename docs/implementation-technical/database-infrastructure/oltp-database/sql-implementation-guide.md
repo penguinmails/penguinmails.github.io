@@ -498,4 +498,3 @@ Instead of theoretical feedback, provide:
 ---
 
 **The goal is understanding OLTP operational challenges through building. You'll grasp multi-tenant database design far better by implementing it than by discussing it theoretically.**
-

@@ -222,5 +222,5 @@ export async function POST(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [workspace-management.md]()
+- **Routes**: [workspace-management.md](/docs/design/routes/workspace-management)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

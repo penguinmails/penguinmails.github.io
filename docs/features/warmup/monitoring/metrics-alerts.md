@@ -6,7 +6,7 @@ level: "3"
 keywords: "metrics, alerts, monitoring"
 ---
 
-```
+```text
 
 #### Delisting Process
 

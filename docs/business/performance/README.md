@@ -14,7 +14,7 @@ This directory contains comprehensive performance analysis, benchmarking, optimi
 
 ## Progressive Disclosure Flow
 
-###  Performance Documents
+### Performance Documents
 
 - [**Performance Dashboard**](/docs/business/performance) - Executive performance overview (â‰¤200 lines)
 

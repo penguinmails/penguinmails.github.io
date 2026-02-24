@@ -345,7 +345,6 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 
 ---
 
-
 ---
 
 *This strategic incident response guide provides executive-level risk management guidance. Complete technical implementation details are available in the Progressive Disclosure Framework for Business Leaders.*

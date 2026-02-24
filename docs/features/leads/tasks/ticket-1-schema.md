@@ -61,5 +61,5 @@ export const contactListsTenantIdx = index('contact_lists_tenant_idx').on(contac
 
 ## Cross-References
 
-- **Routes**: [tenant-leads.md]()
+- **Routes**: [tenant-leads.md](/docs/design/routes/tenant-leads)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)

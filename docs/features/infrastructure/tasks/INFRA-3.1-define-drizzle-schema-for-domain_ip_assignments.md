@@ -43,5 +43,5 @@ Create a schema to link domains and `smtp_ip_addresses`. Add the schema file `do
 
 ## Cross-References
 
-- **Routes**: [infrastructure-ssh-access.md]()
+- **Routes**: [infrastructure-ssh-access.md](/docs/design/routes/infrastructure-ssh-access)
 - **API**: [hostwinds/](/docs/implementation-technical/api/hostwinds/)

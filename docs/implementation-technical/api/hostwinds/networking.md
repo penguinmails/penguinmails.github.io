@@ -375,4 +375,3 @@ The networking API integrates with PenguinMails database schema:
 - [Infrastructure Overview](/docs/business/implementation/infrastructure-overview) - IP cost modeling
 
 ---
-

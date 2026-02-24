@@ -9,7 +9,7 @@ keywords: "API debugging, REST API, error handling, API testing"
 
 # API Bug Patterns
 
-### API Issues
+## API Issues
 
 **Problem**: Inconsistent error responses
 

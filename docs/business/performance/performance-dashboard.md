@@ -599,7 +599,6 @@ persona: "Documentation Users"
 
 ---
 
-
 ---
 
 [^performance-dashboard-methodology]: Methodology and references: Dashboard targets (e.g., ROI bands, payback periods, deliverability and uptime thresholds, CPL) are derived from the cost, pricing, and performance models documented in [Financial Analysis Benchmarks](/docs/business/performance/model/detailed-analysis), [Cost Comparisons](/docs/business/performance), [Provider Benchmarks](/docs/business/performance), [Competitive Analysis](/docs/business/performance), and [Performance Benchmarks](/docs/business/performance), and are intended as instrumented monitoring thresholds. Organizations should compute their actual values using the [ROI Calculator](/docs/business/performance) and their internal baselines.

@@ -352,4 +352,3 @@ This document outlines the key user journeys for investors and venture capitalis
 - [`competitor-analysis-journeys.md`](competitor-analysis-journeys)
 
 ---
-

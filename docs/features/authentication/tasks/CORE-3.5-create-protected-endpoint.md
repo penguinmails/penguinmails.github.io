@@ -157,5 +157,5 @@ export async function GET(request: NextRequest) {
 
 ## Cross-References
 
-- **Routes**: [public-auth.md]()
+- **Routes**: [public-auth.md](/docs/design/routes/public-auth)
 - **API**: [platform-api/](/docs/implementation-technical/api/platform-api/)

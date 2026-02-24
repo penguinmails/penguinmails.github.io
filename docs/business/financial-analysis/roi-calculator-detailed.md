@@ -390,7 +390,6 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ---
 
-
 ---
 
 *This strategic ROI calculator is designed for business leaders who need practical investment analysis tools that respect technical constraints while providing meaningful strategic value. Use alongside executive summary and success metrics for complete strategic oversight framework.*

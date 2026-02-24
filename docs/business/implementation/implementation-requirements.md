@@ -195,7 +195,6 @@ CREATE INDEX idx_email ON users(email);
 
 ---
 
-
 ---
 
 *This implementation guide provides essential technical configuration requirements for email infrastructure deployment.*

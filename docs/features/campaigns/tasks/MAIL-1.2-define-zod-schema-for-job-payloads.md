@@ -35,5 +35,5 @@ In `/lib/schemas`, create a `jobs.schemas.ts` file. Define and export a Zod sche
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

@@ -7,7 +7,7 @@ keywords: "optimization, campaigns, conversion"
 ---
 
 
-2. **Partial Success Handling**:
+1. **Partial Success Handling**:
 
    - **Success Criteria**: 95%+ delivery rate acceptable
 
@@ -15,7 +15,7 @@ keywords: "optimization, campaigns, conversion"
 
    - **Reporting**: Detailed failure breakdown by category
 
-3. **Resource Management**:
+2. **Resource Management**:
 
    - **Queue Prioritization**: High-priority campaigns first
 

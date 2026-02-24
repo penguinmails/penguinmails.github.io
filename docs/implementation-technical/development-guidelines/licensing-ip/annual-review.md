@@ -70,7 +70,7 @@ keywords: "annual review, compliance, checklist"
 
 - Compliance training completion: 100%
 
-```
+```text
 
 ## Legal Contact Information
 

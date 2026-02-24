@@ -6,6 +6,7 @@ level: "2"
 keywords: "OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security"
 ---
 ﻿---
+
 title: "OLTP Database Documentation"
 description: "OLTP Database Documentation - Overview and Navigation"
 last_modified_date: "2025-11-20"
@@ -128,4 +129,3 @@ The [SQL Implementation Challenge](/docs/implementation-technical/database-infra
 - Performance test OLTP operations under load
 
 - Discover architectural strengths and weaknesses through practice
-

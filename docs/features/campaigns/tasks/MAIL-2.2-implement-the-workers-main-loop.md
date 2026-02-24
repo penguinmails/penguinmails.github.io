@@ -35,5 +35,5 @@ In the worker's entry point, implement an infinite loop that uses the Redis `BRP
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)

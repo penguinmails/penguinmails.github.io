@@ -362,4 +362,3 @@ This document outlines the key user journeys for Platform Administrators who man
 - [Vault API](/docs/implementation-technical/api/platform-api/vault.md) - Secrets management endpoints
 
 ---
-

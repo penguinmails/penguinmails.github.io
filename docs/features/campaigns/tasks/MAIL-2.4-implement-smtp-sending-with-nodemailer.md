@@ -37,5 +37,5 @@ Install `nodemailer`. Create a function `sendEmail(emailObject, smtpSettings)` t
 
 ## Cross-References
 
-- **Routes**: [workspace-campaigns.md]()
+- **Routes**: [workspace-campaigns.md](/docs/design/routes/workspace-campaigns)
 - **API**: [queue/](/docs/implementation-technical/api/queue/)
