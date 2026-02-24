@@ -44,6 +44,7 @@ erDiagram
     timestamp created
     timestamp updated
     timestamp deleted
+    boolean suspended "Temporary account suspension"
     text[] roles "NileDB-managed ARRAY - mandatory for authentication"
     text email
   }

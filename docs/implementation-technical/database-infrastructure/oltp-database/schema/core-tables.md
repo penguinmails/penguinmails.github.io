@@ -109,6 +109,7 @@ CREATE TABLE tenant_users (
     created TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     updated TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     deleted TIMESTAMP WITH TIME ZONE,
+    suspended BOOLEAN DEFAULT FALSE, -- Temporary account suspension (distinct from deletion)
     roles TEXT[] DEFAULT '{}' "NileDB-managed ARRAY - mandatory for authentication",
     email TEXT,
     PRIMARY KEY (tenant_id, user_id)

@@ -709,6 +709,64 @@ DELETE /api/v1/tenants/{tenant_id}/users/{user_id}
 
 ---
 
+#### Suspending Users
+
+**Temporarily suspend user access without deletion:**
+
+User suspension provides a reversible way to temporarily restrict a user's access to a tenant. Unlike deletion, suspension preserves the user's data and role assignments, allowing for quick restoration when needed.
+
+**Use Cases:**
+
+- Security concerns (suspected compromised account)
+- Temporary leave of absence
+- Investigation of policy violations
+- Payment/subscription issues
+
+**Suspend User:**
+
+```javascript
+POST /api/v1/tenants/{tenant_id}/users/{user_id}/suspend
+Authorization: Bearer {access_token}
+
+{
+  "reason": "Security investigation" // Optional: reason for suspension
+}
+
+Response:
+{
+  "user_id": "user_def456",
+  "status": "suspended",
+  "suspended_at": "2025-11-26T10:00:00Z",
+  "reason": "Security investigation"
+}
+```
+
+**Restore Suspended User:**
+
+```javascript
+POST /api/v1/tenants/{tenant_id}/users/{user_id}/restore
+Authorization: Bearer {access_token}
+
+Response:
+{
+  "user_id": "user_def456",
+  "status": "active",
+  "restored_at": "2025-11-27T14:30:00Z"
+}
+```
+
+**Behavior When Suspended:**
+
+- User cannot log in to the tenant
+- Existing sessions are invalidated
+- User retains their role and workspace assignments
+- User does not appear in active team member lists
+- Audit log records suspension and restoration events
+
+**Database Field:** The `suspended` boolean field in `tenant_users` table (default: `false`)
+
+---
+
 ### Workspace Management
 
 **Multi-workspace support for agencies:**
