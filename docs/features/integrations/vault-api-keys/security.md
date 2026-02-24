@@ -19,21 +19,15 @@ keywords: "security, best practices, threat model"
 **Implementation:**
 
 - Generate API key: `pm_live_{32_random_chars}`
-
 - Hash with bcrypt (salt rounds: 12)
-
 - Store hash in Vault, not plaintext key
-
 - Display plaintext key once to user
-
 - Verify API key by comparing hash on each request
 
 **Security Benefits:**
 
 - Database compromise doesn't expose API keys
-
 - Brute force attacks infeasible (bcrypt is slow)
-
 - Keys cannot be recovered from hash
 
 ### 2. API Key Transmission
@@ -45,9 +39,7 @@ keywords: "security, best practices, threat model"
 **Implementation:**
 
 - Redirect HTTP to HTTPS
-
 - Use HSTS header to enforce HTTPS
-
 - Reject API requests over HTTP
 
 ### 3. API Key Rotation
@@ -59,11 +51,8 @@ keywords: "security, best practices, threat model"
 **Implementation:**
 
 - User can regenerate key at any time
-
 - Old key immediately revoked
-
 - New key generated and displayed once
-
 - Audit log tracks all regenerations
 
 **Best Practice:** Rotate API keys every 90 days (recommended, not enforced)
@@ -77,21 +66,15 @@ keywords: "security, best practices, threat model"
 **Implementation:**
 
 - Starter: 60 requests/min
-
 - Pro: 300 requests/min
-
 - Enterprise: 1000 requests/min
-
 - Return 429 Too Many Requests when limit exceeded
-
 - Include rate limit headers in all responses
 
 **Security Benefits:**
 
 - Prevents API abuse
-
 - Protects infrastructure from overload
-
 - Encourages efficient API usage
 
 ### 5. Permission Scopes
@@ -103,19 +86,14 @@ keywords: "security, best practices, threat model"
 **Implementation:**
 
 - User selects required scopes during key creation
-
 - Each API endpoint checks required scope
-
 - Returns 403 Forbidden if scope missing
-
 - Principle of least privilege
 
 **Example Use Cases:**
 
 - **Send-only key:** Only `send_email` scope (for application sending emails)
-
 - **Read-only key:** Only `read_analytics` scope (for dashboard integrations)
-
 - **Full access key:** All scopes (for admin automation)
 
 ### 6. Audit Logging
@@ -127,13 +105,9 @@ keywords: "security, best practices, threat model"
 Logged events:
 
 - API key creation (who, when, permissions)
-
 - API key regeneration (who, when)
-
 - API key revocation (who, when)
-
 - API key authentication attempts (success, failure)
-
 - API requests (endpoint, status, response time)
 
 Audit log retention: 90 days (configurable)

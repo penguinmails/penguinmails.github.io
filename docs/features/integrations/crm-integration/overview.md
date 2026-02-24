@@ -22,13 +22,9 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 ## Timeline
 
 - **Target Quarter**: Q1 2026
-
 - **Start Date**: 2026-02-15
-
 - **Target Completion**: 2026-03-31
-
 - **Current Status**: Planned
-
 - **Next Milestone**: CRM API research and partnership
 
 ## Dependencies
@@ -36,11 +32,8 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 ### Required Before Starting
 
 - ⏳ **[Campaign Management](/docs/features/integrations/crm-integration/campaign-management)** - Need campaign data to sync (Q1 2026)
-
 - ⏳ **[Enhanced Analytics](/docs/features/integrations/crm-integration/enhanced-analytics)** - Engagement data for lead scoring (Q1 2026)
-
 - ⏳ Webhook infrastructure - Planned
-
 - ⏳ OAuth 2.0 implementation - Planned
 
 ### Blocks (Features Waiting on This)
@@ -50,51 +43,28 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 ## Milestones
 
 - [ ] **M1: Research & Partnership** (Weeks 1-2)
-
   - [ ] Salesforce API research and partnership application
-
   - [ ] HubSpot API research and app creation
-
   - [ ] Pipedrive API research
-
   - [ ] OAuth 2.0 flow design
-
   - [ ] Data mapping strategy
-
 - [ ] **M2: Salesforce Integration** (Weeks 3-5)
-
   - [ ] OAuth authentication
-
   - [ ] Contact sync (bi-directional)
-
   - [ ] Campaign activity logging
-
   - [ ] Lead scoring updates
-
   - [ ] Custom field mapping
-
 - [ ] **M3: HubSpot Integration** (Weeks 6-8)
-
   - [ ] OAuth authentication
-
   - [ ] Contact/company sync
-
   - [ ] Email activity tracking
-
   - [ ] Workflow integration
-
   - [ ] Custom property mapping
-
 - [ ] **M4: Additional CRMs & Testing** (Weeks 9-10)
-
   - [ ] Pipedrive integration (if time permits)
-
   - [ ] Integration testing with real CRM data
-
   - [ ] Sync reliability testing
-
   - [ ] User acceptance testing
-
   - [ ] Documentation and setup guides
 
 ## Related Documentation
@@ -106,9 +76,7 @@ Bi-directional integration with major CRM platforms (Salesforce, HubSpot, Pipedr
 ### Technical Specifications
 
 - **[Frontend: CRM Settings](/docs/features/design/routes/dashboard-settings-integrations)** - UI specification
-
 - **[API: CRM Sync Endpoints](/docs/features/implementation-technical/api/platform-api/integrations)** - Backend API
-
 - **[OAuth Flow](/docs/features/technical/architecture/oauth-implementation)** - Authentication architecture
 
 ### User Workflows
@@ -134,23 +102,16 @@ salesforce_oauth:
   scopes:
 
     - api  # Access to Salesforce APIs
-
     - refresh_token  # Offline access
-
     - full  # Full access to data
 
   flow:
 
     1. User clicks "Connect Salesforce"
-
     2. Redirect to Salesforce login
-
     3. User authorizes PenguinMails app
-
     4. Receive authorization code
-
     5. Exchange for access + refresh tokens
-
     6. Store encrypted tokens in database
 
 ```
@@ -220,13 +181,9 @@ salesforce_task:
   activity_types:
 
     - Email Sent
-
     - Email Opened
-
     - Email Clicked
-
     - Email Replied
-
     - Email Bounced
 
 ```
@@ -335,23 +292,16 @@ hubspot_oauth:
   scopes:
 
     - contacts  # Read/write contacts
-
     - timeline  # Create timeline events
-
     - automation  # Trigger workflows
 
   flow:
 
     1. User clicks "Connect HubSpot"
-
     2. Redirect to HubSpot OAuth
-
     3. User selects HubSpot account
-
     4. Receive authorization code
-
     5. Exchange for access + refresh tokens
-
     6. Store encrypted tokens
 
 ```
@@ -403,13 +353,9 @@ hubspot_timeline_event:
   event_types:
 
     - email_sent
-
     - email_opened
-
     - email_clicked
-
     - email_replied
-
     - email_bounced
 
   event_template:
@@ -530,11 +476,8 @@ field_mapping:
   mapping_types:
 
     - direct  # 1:1 field mapping
-
     - formula  # Calculated fields
-
     - conditional  # Based on conditions
-
     - aggregation  # Sum, count, etc.
 
   examples:
@@ -752,31 +695,20 @@ class ConflictResolver {
 ### Components
 
 - **Backend**: Node.js integration microservice
-
 - **OAuth**: Passport.js with OAuth 2.0 strategies
-
 - **Database**: PostgreSQL for integration credentials and mappings
-
 - **Queue**: Background job processing for batch syncs
-
 - **Webhooks**: Real-time event processing from CRMs
-
 - **Encryption**: AES-256 for credential storage
 
 ### Security
 
 - OAuth 2.0 for secure authentication
-
 - Encrypted credential storage (AES-256)
-
 - Scoped API permissions (minimal access)
-
 - Audit logging for all sync operations
-
 - GDPR compliance for data handling
-
 - Token rotation every 30 days
-
 - Webhook signature verification
 
 ## Risks & Mitigation
@@ -792,15 +724,10 @@ class ConflictResolver {
 ## Success Criteria
 
 - [ ] Salesforce integration working with 95% sync reliability
-
 - [ ] HubSpot integration working with 95% sync reliability
-
 - [ ] Real-time activity sync latency < 5 minutes
-
 - [ ] Batch sync completes within 1 hour for 10K contacts
-
 - [ ] Zero data loss during sync
-
 - [ ] 80% user satisfaction with integration features
 
 ## Integration Setup Flow
@@ -808,27 +735,18 @@ class ConflictResolver {
 ### User Experience
 
 1. **Connect**: Click "Connect Salesforce" in settings
-
 2. **Authenticate**: OAuth login to CRM
-
 3. **Configure**: Select objects to sync (Contacts, Leads, etc.)
-
 4. **Map Fields**: Map custom fields between systems
-
 5. **Activate**: Enable bi-directional sync
-
 6. **Monitor**: View sync status and activity logs
 
 ### Admin Controls
 
 - Enable/disable specific CRMs
-
 - Configure sync frequency
-
 - Map custom fields
-
 - View sync logs and errors
-
 - Disconnect and reconnect integrations
 
 ## Feature Breakdown
@@ -836,53 +754,35 @@ class ConflictResolver {
 ### MVP (Q1 2026)
 
 - âœ“ Salesforce integration (contacts, leads, activities)
-
 - âœ“ HubSpot integration (contacts, companies, activities)
-
 - âœ“ Bi-directional contact sync
-
 - âœ“ Email activity logging
-
 - âœ“ Basic field mapping
-
 - âœ“ OAuth authentication
 
 ### Level 3 (Q2-Q3 2026)
 
 - Advanced field mapping (formulas)
-
 - Workflow triggers
-
 - Custom object sync
-
 - Additional CRMs (Zoho, Close.io)
-
 - Bulk data import/export
 
 ### Enterprise (Q4 2026+)
 
 - Real-time sync (< 1 minute)
-
 - Advanced conflict resolution
-
 - Custom integration builder
-
 - Multi-CRM support per tenant
-
 - Advanced audit logging
 
 ## Metrics to Track
 
 - Sync success rate (target: 95%)
-
 - Sync latency (real-time events)
-
 - Batch sync duration
-
 - OAuth authentication success rate
-
 - Integration usage adoption
-
 - User satisfaction score
 
 ---
