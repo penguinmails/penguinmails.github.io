@@ -17,11 +17,8 @@ priority: "High"
 related_features:
 
 - templates/template-management
-
 - templates/template-variables
-
 - templates/template-library
-
 - campaigns/campaign-management/overview
 related_tasks:
 
@@ -40,19 +37,12 @@ The Template Editor is a comprehensive WYSIWYG (What You See Is What You Get) em
 ### Key Capabilities
 
 - **Drag-and-Drop Interface**: Build emails visually with pre-built components
-
 - **WYSIWYG Editing**: See exactly how your email will look
-
 - **HTML/Visual Mode Toggle**: Switch between visual and code editing
-
 - **Component Library**: Pre-designed buttons, headers, footers, images, text blocks
-
 - **Mobile Preview**: Real-time preview for desktop, tablet, and mobile
-
 - **Template Versioning**: Auto-save and version history
-
 - **Responsive Design**: Mobile-first, responsive by default
-
 - **Undo/Redo**: Full edit history
 
 ---

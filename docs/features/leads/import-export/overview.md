@@ -38,19 +38,12 @@ Contact Import/Export enables you to efficiently manage large contact databases 
 ### Key Capabilities
 
 - **CSV/Excel Import**: Support for multiple file formats
-
 - **Intelligent Field Mapping**: Auto-detect and map columns
-
 - **Validation & Error Handling**: Catch issues before import
-
 - **Bulk Operations**: Update, add, or merge thousands of contacts
-
 - **Custom Field Support**: Import custom field data
-
 - **Export with Filters**: Export specific segments or entire lists
-
 - **Import History**: Track all imports with rollback capability
-
 - **Duplicate Detection**: Smart merging and conflict resolution
 
 ---

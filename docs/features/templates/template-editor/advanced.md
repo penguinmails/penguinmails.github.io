@@ -91,9 +91,7 @@ row:
   settings:
 
     - background_color
-
     - padding
-
     - full_width
 
 column:
@@ -101,13 +99,9 @@ column:
   layouts:
 
     - single: "100%"
-
     - two_equal: "50% | 50%"
-
     - two_third: "66% | 33%"
-
     - three_equal: "33% | 33% | 33%"
-
     - four_equal: "25% | 25% | 25% | 25%"
 
 ```
@@ -120,17 +114,11 @@ text_block:
   supports:
 
     - Bold, Italic, Underline
-
     - Headings (H1-H6)
-
     - Lists (ordered, unordered)
-
     - Links
-
     - Font family, size, color
-
     - Alignment
-
     - Line height, letter spacing
 
 image:
@@ -138,15 +126,10 @@ image:
   settings:
 
     - source: upload | url | asset_library
-
     - alt_text
-
     - width, height
-
     - alignment
-
     - link_url
-
     - border, padding
 
 button:
@@ -154,28 +137,18 @@ button:
   styles:
 
     - primary: "#0066cc"
-
     - secondary: "#6c757d"
-
     - success: "#28a745"
-
     - danger: "#dc3545"
-
     - custom: "any color"
   settings:
 
     - text
-
     - link_url
-
     - style
-
     - alignment
-
     - full_width
-
     - border_radius
-
     - padding
 
 divider:
@@ -183,13 +156,9 @@ divider:
   settings:
 
     - line_style: solid | dashed | dotted
-
     - color
-
     - thickness
-
     - width
-
     - padding
 
 spacer:
@@ -212,9 +181,7 @@ header:
   presets:
 
     - logo_centered
-
     - logo_left_menu_right
-
     - full_width_image
 
 footer:
@@ -222,11 +189,8 @@ footer:
   includes:
 
     - unsubscribe_link (required)
-
     - company_address
-
     - social_media_links
-
     - copyright_text
 
 social:
@@ -234,26 +198,17 @@ social:
   platforms:
 
     - facebook
-
     - twitter
-
     - linkedin
-
     - instagram
-
     - youtube
-
     - tiktok
   styles:
 
     - round_color
-
     - square_color
-
     - round_bw
-
     - square_bw
-
     - icons_only
 
 ```
@@ -348,9 +303,7 @@ Version Comparison: v7 → v8
 Changes:
 
   - Button style: Secondary → Primary
-
   - Button color: #6c757d → #0066cc
-
   - Button text: "Learn More" → "Get Started"
 
 Side-by-Side View:
@@ -407,21 +360,15 @@ Template Validation
 âœ“ Passed:
 
   - Valid HTML structure
-
   - Mobile responsive
-
   - Unsubscribe link present
-
   - Alt text on images
-
   - No broken links
-
   - File size < 100kb
 
 âš  Warnings:
 
   - Some email clients may not support web fonts
-
   - Image "hero.jpg" is 150kb (recommended < 100kb)
 
 âœ— Errors:
@@ -431,9 +378,7 @@ Template Validation
 Spam Score: 2.1 / 10 (âœ“ Good)
 
   - Subject line length OK
-
   - No spammy words detected
-
   - Image-to-text ratio OK
 
 ```

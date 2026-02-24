@@ -21,13 +21,9 @@ Leads Management is the core of your audience strategy. It allows you to import,
 ### Key Features
 
 - **Contact Database** - Unified view of all leads
-
 - **Smart Lists** - Dynamic segmentation based on behavior
-
 - **Custom Fields** - Store any data point
-
 - **Lead Scoring** - Identify high-value prospects
-
 - **Import/Export** - CSV and API support
 
 ---
@@ -39,11 +35,8 @@ Leads Management is the core of your audience strategy. It allows you to import,
 ## Methods
 
 1. **CSV Import**: Bulk upload via dashboard.
-
 2. **Manual Entry**: Add one-by-one.
-
 3. **API**: Programmatic sync from CRM.
-
 4. **Forms**: Web forms on your landing pages.
 
 ### Contact Profile
@@ -51,15 +44,10 @@ Leads Management is the core of your audience strategy. It allows you to import,
 ## Standard Fields
 
 - Email Address (Unique Identifier)
-
 - First Name / Last Name
-
 - Company Name
-
 - Job Title
-
 - Phone Number
-
 - Status (Active, Unsubscribed, Bounced)
 
 ## Custom Fields
@@ -67,11 +55,8 @@ Leads Management is the core of your audience strategy. It allows you to import,
 Create fields specific to your business:
 
 - `Industry` (Text)
-
 - `Budget` (Number)
-
 - `Subscription Date` (Date)
-
 - `VIP Status` (Boolean)
 
 ---
@@ -83,7 +68,6 @@ Create fields specific to your business:
 ## Manual collections of contacts
 
 - Example: "Conference Attendees 2025"
-
 - Contacts are manually added or removed.
 
 ### Smart Segments
@@ -95,17 +79,13 @@ Automatically update as contact data changes.
 ## Example Rules
 
 - `Industry` IS "Technology" AND `Location` IS "USA"
-
 - `Last Opened Email` < 30 days ago
-
 - `Lead Score` > 50
 
 ## Use Cases
 
 - Re-engagement campaigns for inactive users
-
 - VIP offers for high-value leads
-
 - Industry-specific newsletters
 
 ---
@@ -128,9 +108,7 @@ Automatically update as contact data changes.
 ## Score Tiers
 
 - **Hot (50+)**: Ready for sales outreach
-
 - **Warm (20-49)**: Nurture with content
-
 - **Cold (<20)**: Awareness campaigns
 
 ### Data Enrichment (Future)
@@ -200,7 +178,6 @@ GET /api/v1/contacts/search?query=industry:SaaS
 ### Compliance
 
 - **[GDPR Compliance](/docs/features/compliance/gdpr-compliance)** - Data rights
-
 - **[Unsubscribe Management](/docs/features/compliance/unsubscribe-management)** - Opt-out handling
 
 ---

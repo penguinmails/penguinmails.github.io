@@ -9,11 +9,8 @@ priority: "High"
 related_features:
 
   - leads/leads-management
-
   - leads/contact-segmentation
-
   - campaigns/personalization-system
-
   - analytics/core-analytics/overview
 related_tasks:
 
@@ -31,13 +28,9 @@ Lead Scoring assigns numeric values to contacts based on their actions, characte
 ### Key Benefits
 
 - **Prioritization**: Focus on highest-potential leads
-
 - **Automation**: Auto-score based on behavior and attributes
-
 - **Segmentation**: Create score-based segments
-
 - **Sales Alignment**: Pass qualified leads to sales at threshold
-
 - **Personalization**: Tailor messaging by score range
 
 ---
@@ -49,11 +42,8 @@ Lead Scoring assigns numeric values to contacts based on their actions, characte
 **Score Range**: 0-100
 
 - **0-25**: Cold/Unengaged
-
 - **26-50**: Warming Up
-
 - **51-75**: Interested/Engaged
-
 - **76-100**: Hot/Ready to Buy
 
 **Recalculation**: Real-time as contacts take actions
@@ -413,9 +403,7 @@ No Change: 3,000 contacts
 Top Scoring Actions:
 
   1. Demo Requested: +60 pts (120 actions)
-
   2. Pricing Page Click: +25 pts (450 actions)
-
   3. Email Reply: +20 pts (230 actions)
 
 ```
@@ -755,11 +743,8 @@ eventEmitter.on('contact.updated', async (event) => {
 ## Related Documentation
 
 - **[Leads Management](/docs/features/leads/leads-management)** - Contact database
-
 - **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Score-based segments
-
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Score-based targeting
-
 - **[Analytics](/docs/features/analytics/core-analytics/overview)** - Score analytics
 
 ---

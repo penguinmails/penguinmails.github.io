@@ -38,11 +38,8 @@ The Billing Dashboard provides complete visibility into your PenguinMails subscr
 **Quick Actions:**
 
 - [Change Plan] - Upgrade/downgrade
-
 - [Update Payment] - Modify payment method
-
 - [View Invoices] - Download past invoices
-
 - [Cancel Subscription] - End billing
 
 ---
@@ -68,11 +65,8 @@ Resets: December 24, 2025
 **Features:**
 
 - Progress bar visualization
-
 - Percentage used
-
 - Exact counts
-
 - Reset date
 
 #### Team Members
@@ -120,21 +114,15 @@ Available: 10 domains
 **Alert Thresholds:**
 
 - 🟡 **80% Used** - Warning email
-
 - 🟠 **90% Used** - Upgrade suggestion
-
 - 🔴 **95% Used** - Urgent action needed
-
 - ⛔ **100% Used** - Limit reached
 
 **Alert Actions:**
 
 - Email notification to billing admin
-
 - In-app notification
-
 - Dashboard banner
-
 - Recommended actions (upgrade, reduce usage)
 
 ---
@@ -161,9 +149,7 @@ Email Sends (Last 6 Months)
 **Export Options:**
 
 - CSV download
-
 - PDF report
-
 - API access
 
 ---
@@ -183,15 +169,10 @@ Email Sends (Last 6 Months)
 **Invoice Details:**
 
 - Date issued
-
 - Unique invoice number
-
 - Line items (subscription, add-ons, taxes)
-
 - Total amount
-
 - Payment status
-
 - PDF download
 
 ---
@@ -215,9 +196,7 @@ Due: November 24, 2025 (paid)
 Line Items:
 
 - Professional Plan (Nov 24 - Dec 24)    $149.00
-
 - Additional Emails (10,000)              $10.00
-
 - Sales Tax (CA)                           $12.72
                                          ────────
                                   TOTAL: $171.72
@@ -230,13 +209,9 @@ Status: PAID
 **Features:**
 
 - Company billing information
-
 - Itemized charges
-
 - Tax breakdown
-
 - Payment method
-
 - Payment status
 
 ---
@@ -254,7 +229,6 @@ Estimated Amount: $149.00
 Line Items:
 
 - Professional Plan (Monthly)             $149.00
-
 - Tax (estimated)                          $11.92
                                          ────────
                                   TOTAL: $160.92
@@ -266,11 +240,8 @@ Line Items:
 **Benefits:**
 
 - No billing surprises
-
 - Adjust plan before charge
-
 - Update payment method if needed
-
 - Verify pricing
 
 ---
@@ -308,15 +279,10 @@ Response:
 **Transaction Details:**
 
 - Payment date and time
-
 - Amount charged
-
 - Payment method used
-
 - Payment status (succeeded, failed, refunded)
-
 - Receipt link
-
 - Associated invoice
 
 ---
@@ -328,39 +294,30 @@ Response:
 1. **Immediate Notification**
 
    - Email to billing admin
-
    - In-app alert
-
    - Dashboard warning banner
 
 2. **Grace Period** (7 days)
 
    - Service continues
-
    - Automatic retry attempts
-
    - Update payment method anytime
 
 3. **Account Suspension** (Day 7)
 
    - Email sending disabled
-
    - Read-only access to data
-
    - Final retry attempt
 
 4. **Cancellation** (Day 14)
 
    - Subscription canceled
-
    - Free tier activated (90-day data retention)
 
 **Resolution:**
 
 - [Update Payment Method] button prominently displayed
-
 - [Retry Payment] manual retry option
-
 - Contact support for assistance
 
 ---
@@ -372,29 +329,21 @@ Response:
 **Eligible for Refund:**
 
 - ✅ Double-charged (full refund)
-
 - ✅ Billing error (full refund)
-
 - ✅ Service issue (prorated refund)
-
 - ✅ Within 7 days of charge (goodwill refund)
 
 **Not Eligible:**
 
 - ❌ Simply changed mind after 7 days
-
 - ❌ Service not used (non-usage doesn't qualify)
-
 - ❌ Annual plans mid-term (no partial refunds)
 
 **Request Refund:**
 
 1. Contact support: <billing@penguinmails.com>
-
 2. Provide invoice number and reason
-
 3. Review by billing team (1-2 business days)
-
 4. Refund processed (5-10 business days to card)
 
 ---
@@ -428,11 +377,8 @@ Action at 100%:
 **Budget Options:**
 
 - Set monthly maximum
-
 - Alert thresholds
-
 - Overage handling (alert, block, auto-upgrade)
-
 - Email notifications
 
 ---
@@ -442,11 +388,8 @@ Action at 100%:
 **Dashboard provides recommendations:**
 
 - 💡 **Switch to Annual** - Save 20% ($358/year savings)
-
 - 💡 **Downgrade Unused Seats** - Remove 2 inactive users ($30/mo savings)
-
 - 💡 **Archive Old Workspaces** - Reduce workspace count (back to plan limit)
-
 - 💡 **Optimize Send Frequency** - Reduce emails by segmentation
 
 ---
@@ -460,19 +403,14 @@ Action at 100%:
 **Primary Billing Contact:**
 
 - Receives all invoices
-
 - Payment failure notifications
-
 - Usage alerts
-
 - Subscription changes
 
 **Additional Contacts:**
 
 - CC on invoices (optional)
-
 - Separate finance team email
-
 - Multiple recipients supported
 
 **Configuration:**
@@ -513,11 +451,8 @@ Billing Address:
 **Used For:**
 
 - Invoice generation
-
 - Tax calculation
-
 - Payment processing
-
 - Legal compliance
 
 ---
@@ -557,15 +492,12 @@ PUT /api/v1/billing/company-info
 ### Payments
 
 - **[Subscription Management](/docs/features/payments/subscription-management)** - Plan upgrades and downgrades
-
 - **[Stripe Integration](/docs/features/payments/stripe-integration)** - Payment processing
-
 - **[Payments Overview](https://github.com/penguinmails/penguinmails.github.io/blob/main/README.md)** - All payment features
 
 ### Support
 
 - **[Billing FAQ](/docs/business/faq/billing-faq)** - Common billing questions
-
 - **[Contact Billing](mailto:billing@penguinmails.com)** - Billing support
 
 ---

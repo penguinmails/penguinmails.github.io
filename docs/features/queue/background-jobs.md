@@ -55,17 +55,9 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
 
 
 1. Render HTML template.
-
-
 2. Check suppression list.
-
-
 3. Select sending provider (Internal/ESP).
-
-
 4. Send email.
-
-
 5. Update analytics.
 
 
@@ -87,14 +79,8 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
 
 
 1. Fetch target list/segment.
-
-
 2. Iterate through contacts.
-
-
 3. Create `email.send` jobs (batched).
-
-
 4. Update campaign status to "Sending".
 
 
@@ -117,17 +103,9 @@ PenguinMails relies heavily on asynchronous background processing to ensure the 
 
 
 1. Stream CSV file.
-
-
 2. Validate email format.
-
-
 3. Upsert contacts to database.
-
-
 4. Update list counts.
-
-
 5. Notify user of completion.
 
 ---
@@ -142,16 +120,12 @@ Workers are stateless Node.js processes.
 
 
 - **Email Workers**: High concurrency (50-100 per node). I/O bound.
-
-
 - **Import Workers**: Low concurrency (2-5 per node). CPU/Memory bound.
 
 ## Scaling Policy:
 
 
 - Scale up Email Workers when `queue_depth > 1000`.
-
-
 - Scale up Import Workers when `memory_usage > 80%`.
 
 
@@ -159,11 +133,7 @@ Workers are stateless Node.js processes.
 
 
 - **Graceful Shutdown**: Workers finish current job before stopping.
-
-
 - **Stalled Job Detection**: Redis automatically re-queues jobs if worker crashes.
-
-
 - **Idempotency**: Jobs are designed to be safe to run multiple times (e.g., checking status before sending).
 
 ---
@@ -176,25 +146,15 @@ Internal admin tool to view:
 
 
 - Active jobs
-
-
 - Waiting jobs
-
-
 - Failed jobs
-
-
 - Job throughput
 
 ## Metrics (Prometheus - 2026 Spike):
 
 
 - `jobs_completed_total`
-
-
 - `jobs_failed_total`
-
-
 - `job_duration_seconds`
 
 ---

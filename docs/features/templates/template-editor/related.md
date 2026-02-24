@@ -9,11 +9,8 @@ keywords: "related docs, references, links"
 ## Related Documentation
 
 - **[Template Management](/docs/features/templates/template-management)** - Template organization and management
-
 - **[Template Variables](/docs/features/templates/template-variables)** - Dynamic content and merge tags
-
 - **[Template Library](/docs/features/templates/library/overview)** - Pre-built template collection
-
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use templates in campaigns
 
 ---

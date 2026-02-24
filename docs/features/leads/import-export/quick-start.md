@@ -18,9 +18,7 @@ keywords: "quick start, import contacts, export contacts, CSV upload"
 **Supported Formats:**
 
 - CSV (Comma-separated values)
-
 - TSV (Tab-separated values)
-
 - Excel (.xlsx, .xls)
 
 **Recommended Columns:**

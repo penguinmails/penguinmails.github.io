@@ -743,11 +743,8 @@ app.get('/api/contacts/export/:jobId/download', authenticate, async (req, res) =
 ## Related Documentation
 
 - **[Leads Management](/docs/features/leads/leads-management)** - Contact database and management
-
 - **[Contact Segmentation](/docs/features/leads/contact-segmentation)** - Create segments from imported contacts
-
 - **[Lead Scoring](/docs/features/leads/lead-scoring)** - Score imported contacts automatically
-
 - **[Campaign Management](/docs/features/campaigns/campaign-management/hub)** - Use imported contacts in campaigns
 
 ---
