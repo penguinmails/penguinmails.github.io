@@ -3,6 +3,7 @@ title: "Agencies & Consulting Business Case - Executive Summary"
 description: "Agencies and consulting firms business case covering client communication management and confidentiality protection"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "agencies email infrastructure, consulting firm communications, client confidentiality, professional services, law firm communications, accounting firm security"
 persona: "Documentation Users"
 ---
 
@@ -224,7 +225,6 @@ Agencies and consulting firms face critical challenges in:
 
 ---
 
-**Keywords**: agencies email infrastructure, consulting firm communications, client confidentiality, professional services, law firm communications, accounting firm security
 
 ---
 

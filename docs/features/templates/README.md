@@ -1,4 +1,9 @@
-﻿# 📝 Templates & Content
+---
+title: "Templates & Content"
+description: "Manage email templates, HTML editor, template tags, and personalization variables."
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Email templates, HTML editor, template tags, and personalization variables.
 

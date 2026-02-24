@@ -1,4 +1,6 @@
 ---
+title: "Database Architecture Overview - Enterprise 4-Tier Design"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"

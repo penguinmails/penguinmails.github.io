@@ -3,6 +3,7 @@ title: "Infrastructure Provisioning Flow"
 description: "Automated VPS, SMTP, DNS, and SSL provisioning with error handling and rollback procedures"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "infrastructure provisioning, VPS automation, SMTP setup, DNS configuration, SSL management, monitoring, error handling, rollback procedures"
 persona: "Documentation Users"
 ---
 
@@ -164,5 +165,3 @@ flowchart TD
 - **Integration Ready**: Monitoring data integrated with central analytics
 
 ---
-
-**Keywords**: infrastructure provisioning, VPS automation, SMTP setup, DNS configuration, SSL management, monitoring, error handling, rollback procedures

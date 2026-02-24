@@ -1,4 +1,6 @@
 ---
+title: "Business Leaders Technical Framework: Strategic Coordination Guide"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"

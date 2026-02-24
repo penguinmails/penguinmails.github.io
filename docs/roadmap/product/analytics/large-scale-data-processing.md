@@ -1,6 +1,8 @@
 ---
 title: "Large-Scale Data Processing"
 description: "Infrastructure for massive data volumes"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Large-Scale Data Processing

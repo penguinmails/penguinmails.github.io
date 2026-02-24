@@ -1,8 +1,9 @@
-﻿---
+---
 title: "Queue System Implementation Guide"
 description: "Queue System Implementation Guide - Job Processing & Reliability Overview"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, asynchronous processing"
 persona: "Documentation Users"
 related_docs:
 
@@ -316,5 +317,3 @@ For detailed implementation guidance, refer to the specific component documentat
 - [Operations](/docs/implementation-technical/database-infrastructure/queue/operations) - Infrastructure setup and deployment
 
 - [Entity Relationship Diagram](/docs/implementation-technical/database-infrastructure/queue/mermaid-er) - Visual database schema
-
-**Keywords**: queue system, redis, postgresql, job processing, worker, migrator, dead letter queue, monitoring, asynchronous processing

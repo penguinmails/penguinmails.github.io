@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Data Privacy"
 description: "Privacy policy enforcement and data handling practices for PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Legal Teams, Privacy Officers"
 status: "ACTIVE"

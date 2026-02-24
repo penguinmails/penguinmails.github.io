@@ -1,6 +1,8 @@
 ---
 title: "Dynamic Rate Limiting"
 description: "Adaptive throttling based on provider feedback"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Dynamic Rate Limiting

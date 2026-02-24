@@ -1,7 +1,8 @@
-﻿---
+---
 title: "Email Infrastructure Setup"
 description: "Automated VPS provisioning, SMTP server setup, and DNS configuration for professional email infrastructure"
-level: "1"
+last_modified_date: "2026-02-24"
+level: "2"
 status: "ACTIVE"
 roadmap_timeline: "Q4 2025"
 priority: "Critical"

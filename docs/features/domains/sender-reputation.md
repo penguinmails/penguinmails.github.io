@@ -3,6 +3,7 @@ title: "Sender Reputation Tracking"
 description: "Domain and mailbox reputation monitoring with internal health scores and external tool integration"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "sender reputation, health score, deliverability, Google Postmaster, Microsoft SNDS, domain health"
 persona: "Product Teams, Email Administrators"
 status: "MVP"
 category: "Domains"
@@ -139,4 +140,3 @@ See [Workspace Domains Routes](/docs/design/routes/workspace-domains) for UI spe
 
 ---
 
-**Keywords**: sender reputation, health score, deliverability, Google Postmaster, Microsoft SNDS, domain health

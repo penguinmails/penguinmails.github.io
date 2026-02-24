@@ -1,3 +1,10 @@
+---
+title: "External Stakeholders: Competitor Analysis Journeys"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "competitor analysis, competitive intelligence, market positioning, strategic analysis, competitive strategy"
+---
 # External Stakeholders: Competitor Analysis Journeys
 
 ## Overview
@@ -313,4 +320,3 @@ This document outlines the key user journeys for competitors who analyze Penguin
 
 ---
 
-**Keywords**: competitor analysis, competitive intelligence, market positioning, strategic analysis, competitive strategy

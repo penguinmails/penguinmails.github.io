@@ -1,3 +1,9 @@
+---
+title: "Tenant Leads (Global)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Tenant Leads (Global)
 
 ## 1. Purpose & Context (The "Why")

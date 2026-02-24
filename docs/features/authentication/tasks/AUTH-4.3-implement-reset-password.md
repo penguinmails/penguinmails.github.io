@@ -1,3 +1,9 @@
+---
+title: "AUTH-4.3: Implement Reset Password Endpoint"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-4.3: Implement "Reset Password" Endpoint
 

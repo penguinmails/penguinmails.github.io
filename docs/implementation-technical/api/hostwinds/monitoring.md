@@ -1,3 +1,10 @@
+---
+title: "Hostwinds Monitoring and Diagnostics API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds monitoring, server diagnostics, performance metrics, log analysis, health checks, maintenance tracking"
+---
 # Hostwinds Monitoring and Diagnostics API
 
 ---
@@ -428,4 +435,3 @@ scrape_configs:
 
 ---
 
-**Keywords**: Hostwinds monitoring, server diagnostics, performance metrics, log analysis, health checks, maintenance tracking

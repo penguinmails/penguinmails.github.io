@@ -1,3 +1,10 @@
+---
+title: "User Stories Templates: Real External Users (Customers)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "customer stories, business outcomes, customer success, marketing automation, ROI tracking, professional reporting"
+---
 # User Stories Templates: Real External Users (Customers)
 
 ## Overview
@@ -448,4 +455,3 @@ DEFINITION OF DONE:
 
 ---
 
-**Keywords**: customer stories, business outcomes, customer success, marketing automation, ROI tracking, professional reporting

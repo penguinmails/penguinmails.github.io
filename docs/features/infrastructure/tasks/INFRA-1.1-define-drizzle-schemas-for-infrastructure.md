@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.1: Define Drizzle Schemas for Infrastructure"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.1: Define Drizzle Schemas for Infrastructure
 

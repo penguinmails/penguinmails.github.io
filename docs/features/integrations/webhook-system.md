@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Webhook System"
 description: "Event-driven integrations with real-time webhooks for email events, campaign triggers, and external system notifications"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

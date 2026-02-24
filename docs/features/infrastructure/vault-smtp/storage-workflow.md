@@ -2,6 +2,7 @@
 title: "Credential Storage Workflow"
 description: "Process for storing SMTP credentials in Vault"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "storage, workflow, credential storage, Vault"
 ---
 

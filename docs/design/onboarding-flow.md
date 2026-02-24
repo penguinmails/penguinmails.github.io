@@ -1,6 +1,7 @@
 ---
 title: "Onboarding Flow"
 description: "User onboarding experience design and flow"
+level: "2"
 last_modified_date: "2025-11-24"
 type: "design"
 status: "DRAFT"

@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Queue Database Schema"
 description: "Queue Database Schema - Job Tables and Indexes"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Database Architects"
 related_docs:

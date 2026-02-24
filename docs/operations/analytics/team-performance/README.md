@@ -3,6 +3,7 @@ title: "Team Performance"
 description: "Comprehensive team coordination frameworks and performance tracking systems"
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "team performance, sprint management, agile development, quality assurance, team coordination, professional development, performance metrics"
 persona: "Documentation Users"
 ---
 
@@ -53,5 +54,4 @@ This section provides comprehensive team coordination frameworks, performance tr
 
 ---
 
-**Keywords**: team performance, sprint management, agile development, quality assurance, team coordination, professional development, performance metrics
 ---

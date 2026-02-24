@@ -3,6 +3,7 @@ title: "Analytics & Performance"
 description: "Comprehensive analytics and performance monitoring frameworks for enterprise-grade business intelligence"
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "analytics performance, user behavior, product analytics, KPI monitoring, business intelligence, predictive analytics"
 persona: "Documentation Users"
 ---
 
@@ -55,5 +56,4 @@ This section provides comprehensive analytics and performance monitoring framewo
 
 ---
 
-**Keywords**: analytics performance, user behavior, product analytics, KPI monitoring, business intelligence, predictive analytics
 ---

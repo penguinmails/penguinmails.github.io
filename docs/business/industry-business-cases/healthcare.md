@@ -3,6 +3,7 @@ title: "Healthcare Industry Business Case - Executive Summary"
 description: "Healthcare-specific email infrastructure business case covering HIPAA considerations and patient communication requirements"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "healthcare email infrastructure, HIPAA compliance, patient communication, clinical trial management, medical device communications, healthcare ROI"
 persona: "Documentation Users"
 ---
 
@@ -265,7 +266,6 @@ Healthcare organizations struggle with:
 
 ---
 
-**Keywords**: healthcare email infrastructure, HIPAA compliance, patient communication, clinical trial management, medical device communications, healthcare ROI
 
 ---
 

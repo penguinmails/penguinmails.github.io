@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Operations ROI and Business Impact Dashboard: Financial Performance and Value Attribution"
-description: "Comprehensive operations ROI and business impact dashboard for financial performance tracking, value attribution, and strategic business optimization"
-last_modified_date: "2025-11-16"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Comprehensive operations ROI and business impact dashboard for financial performance tracking, value attribution, and strategic business optimization"
 persona: "Documentation Users"
 ---
 

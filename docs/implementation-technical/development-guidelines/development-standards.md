@@ -1,6 +1,9 @@
-﻿---
-last_modified_date: "2025-11-24"
+---
+title: "Development Standards - Enterprise Development Overview"
+description: ""
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "development standards overview, TypeScript, React, code quality, testing, security, accessibility, CI/CD, monitoring, best practices, enterprise development, DevOps, performance optimization"
 persona: "Documentation Users"
 ---
 
@@ -214,5 +217,4 @@ These enterprise development guidelines ensure consistent, maintainable, and sca
 
 *This development standards documentation serves as the central overview for PenguinMails' enterprise-grade development standards, providing clear navigation to specialized implementation guides for superior quality, security, and performance.*
 
-**Keywords**: development standards overview, TypeScript, React, code quality, testing, security, accessibility, CI/CD, monitoring, best practices, enterprise development, DevOps, performance optimization
 ---

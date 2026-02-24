@@ -1,6 +1,8 @@
 ---
 title: "Kubernetes Migration"
 description: "Migration to Kubernetes for container orchestration"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Kubernetes Migration

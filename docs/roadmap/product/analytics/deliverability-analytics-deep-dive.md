@@ -1,6 +1,8 @@
 ---
 title: "Deliverability Analytics Deep-Dive"
 description: "Inbox placement tracking and reputation monitoring"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Deliverability Analytics Deep-Dive

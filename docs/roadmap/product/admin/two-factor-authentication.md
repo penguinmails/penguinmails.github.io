@@ -1,6 +1,8 @@
 ---
 title: "Two-Factor Authentication (2FA)"
 description: "TOTP-based two-factor authentication"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Two-Factor Authentication (2FA)

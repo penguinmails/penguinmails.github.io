@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Marketing Competitive Intelligence: MVP vs Post-MVP Roadmap"
-description: "Competitive intelligence framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Manual analysis, basic monitoring, quarterly reporting | **Post-MVP**: AI-powered intelligence, real-time monitoring, predictive analytics"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Competitive intelligence framework with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Manual analysis, basic monitoring, quarterly reporting | **Post-MVP**: AI-powered intelligence, real-time monitoring, predictive analytics"
 persona: "Documentation Users"
 redirect_from: ""
 ---

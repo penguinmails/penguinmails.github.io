@@ -1,4 +1,6 @@
 ---
+title: "Marketing ROI Detailed: Financial Analysis with Scenarios and Risk Assessment"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
 persona: "Documentation Users"

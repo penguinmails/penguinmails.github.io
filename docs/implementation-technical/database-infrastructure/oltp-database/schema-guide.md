@@ -1,6 +1,9 @@
 ---
+title: "OLTP Schema Guide - Operational Database"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security"
 persona: "Documentation Users"
 ---
 
@@ -1241,5 +1244,4 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 ---
 
-**Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security
 ---

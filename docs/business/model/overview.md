@@ -3,6 +3,7 @@ title: "Business Model & Financial Framework"
 description: "Comprehensive business model and financial framework for CFOs, VPs, and Budget Owners with actionable insights for decision-making"
 last_modified_date: "2025-11-18"
 level: "2"
+keywords: "business model, financial framework, revenue streams, unit economics, market penetration, competitive advantage"
 persona: "Documentation Users"
 ---
 
@@ -356,7 +357,6 @@ PenguinMails operates a multi-sided platform business model with B2B SaaS subscr
 
 ---
 
-**Keywords**: business model, financial framework, revenue streams, unit economics, market penetration, competitive advantage
 
 ---
 

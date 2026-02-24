@@ -3,6 +3,7 @@ title: "Email Infrastructure Integration Flow"
 description: "How Central SMTP, Frontend, Queue, and Tenant SMTP work together in the system architecture"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "email infrastructure, multi-tenant architecture, SMTP integration, queue processing, load balancing, infrastructure automation"
 persona: "Documentation Users"
 ---
 
@@ -150,5 +151,3 @@ Central services coordinate with external providers (Hostwind, DNS) to automatic
 Real-time data synchronization between tenant databases and central systems enables consistent analytics and monitoring across the platform.
 
 ---
-
-**Keywords**: email infrastructure, multi-tenant architecture, SMTP integration, queue processing, load balancing, infrastructure automation

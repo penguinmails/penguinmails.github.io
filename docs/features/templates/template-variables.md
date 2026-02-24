@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Template Variables"
 description: "Dynamic content insertion with merge tags, default values, conditional blocks, and personalization variables"
+last_modified_date: "2026-02-24"
 level: "2"
-status: "PLANNED"
 roadmap_timeline: "Q2 2026"
 priority: "High"
 related_features:

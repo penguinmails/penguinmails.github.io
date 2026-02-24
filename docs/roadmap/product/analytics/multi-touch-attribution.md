@@ -1,6 +1,8 @@
 ---
 title: "Multi-Touch Attribution"
 description: "Advanced revenue attribution models"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Multi-Touch Attribution

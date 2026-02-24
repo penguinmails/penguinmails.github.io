@@ -2,6 +2,7 @@
 title: "Level 1: Quick Start Guide"
 description: "Basic campaign creation and management workflows"
 level: "1"
+last_modified_date: "2026-02-24"
 persona: "Marketing Users"
 keywords: "quick start, campaign creation, email editor, send campaigns"
 ---

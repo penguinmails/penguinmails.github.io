@@ -1,10 +1,11 @@
-﻿---
+---
 title: "E-commerce Developer Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
 grand_parent: "Industry-Specific Implementation"
 has_children: "false"
-last_modified_date: "2025-11-19"
 layout: "default"
-level: "2"
 nav_order: "3"
 parent: "Developer Industry-Specific Implementation"
 persona: "Documentation Users"

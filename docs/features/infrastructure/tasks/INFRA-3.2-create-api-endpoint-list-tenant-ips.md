@@ -1,3 +1,9 @@
+---
+title: "INFRA-3.2: Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-3.2: Create API Endpoint to List Tenant's Assigned IPs (GET /api/infrastructure/ips)
 

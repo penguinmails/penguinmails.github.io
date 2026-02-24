@@ -1,3 +1,9 @@
+---
+title: "INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-3.3: Create API Endpoint to Get Sync Status (GET /api/infrastructure/status)
 

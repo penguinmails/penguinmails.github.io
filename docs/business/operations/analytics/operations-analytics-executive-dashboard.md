@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Operations Analytics Executive Dashboard: Strategic KPIs and Performance Metrics"
-description: "Comprehensive executive analytics dashboard providing strategic KPIs, performance metrics, and data-driven insights for operations leadership decision-making"
-last_modified_date: "2025-11-16"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Comprehensive executive analytics dashboard providing strategic KPIs, performance metrics, and data-driven insights for operations leadership decision-making"
 persona: "Documentation Users"
 ---
 

@@ -1,3 +1,9 @@
+---
+title: "BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-1.4: Create API Endpoint to List Plans (GET /api/plans)
 

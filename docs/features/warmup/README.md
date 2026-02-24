@@ -1,4 +1,9 @@
-﻿# 🔥 Warmup & Reputation
+---
+title: "README"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Automated email warmup, domain reputation building, and sender health monitoring.
 

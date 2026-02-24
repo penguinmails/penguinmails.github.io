@@ -1,3 +1,9 @@
+---
+title: "🔐 Authentication & User Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # 🔐 Authentication & User Management
 
 **Target Users**: Tenant users (owner, manager, employee)  

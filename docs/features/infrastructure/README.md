@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Infrastructure & Provisioning"
 description: "VPS management, IP allocation, SMTP servers, and automated infrastructure provisioning for email delivery"
-last_modified_date: "2025-11-26"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---

@@ -3,6 +3,7 @@ title: "Compliance Implementation - Technical Implementation Summary"
 description: "Technical implementation summary for compliance systems and processes"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "compliance implementation, consent management, data subject rights, regulatory change, compliance training"
 persona: "Documentation Users"
 ---
 
@@ -335,7 +336,6 @@ persona: "Documentation Users"
 
 ---
 
-**Keywords**: compliance implementation, consent management, data subject rights, regulatory change, compliance training
 
 ---
 

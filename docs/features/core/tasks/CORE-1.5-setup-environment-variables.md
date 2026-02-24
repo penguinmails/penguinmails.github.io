@@ -1,3 +1,9 @@
+---
+title: "CORE-1.5: Set up Environment Variable Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.5: Set up Environment Variable Management
 

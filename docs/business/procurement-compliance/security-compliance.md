@@ -1,8 +1,9 @@
-﻿---
-title: "Security & Compliance Overview - Executive Summary"
-description: "High-level security and compliance summary for business leaders, CFOs, and procurement teams"
-last_modified_date: "2025-12-19"
+---
+title: "Security & Compliance Overview"
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "security overview, compliance framework, GDPR compliance, CAN-SPAM, CCPA, email security, data protection, risk management, audit readiness"
+description: "High-level security and compliance summary for business leaders, CFOs, and procurement teams"
 persona: "Documentation Users"
 ---
 
@@ -236,7 +237,6 @@ Security and compliance features are integrated into the core platform:
 
 ---
 
-**Keywords**: security overview, compliance framework, GDPR compliance, CAN-SPAM, CCPA, email security, data protection, risk management, audit readiness
 
 ---
 

@@ -3,6 +3,7 @@ title: "Testing Strategy"
 description: "Component testing strategy"
 last_modified_date: "2025-12-04"
 level: "3"
+keywords: "UI patterns, tech stack, Next.js 15, Tailwind CSS, shadcn/ui, react-hook-form, zod, lucide-react, design patterns, animation, responsive design, Framer Motion, testing"
 keywords: "testing, QA, validation"
 ---
 
@@ -54,7 +55,6 @@ keywords: "testing, QA, validation"
 
 ---
 
-**Keywords**: UI patterns, tech stack, Next.js 15, Tailwind CSS, shadcn/ui, react-hook-form, zod, lucide-react, design patterns, animation, responsive design, Framer Motion, testing
 
 ---
 

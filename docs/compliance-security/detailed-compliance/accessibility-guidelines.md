@@ -1,6 +1,9 @@
 ---
+title: "Accessibility Guidelines"
+description: ""
 last_modified_date: "2025-10-28"
 level: "2"
+keywords: "accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y"
 persona: "Documentation Users"
 ---
 
@@ -568,5 +571,4 @@ export function Button({
 
 - [UI Library](/docs/design/ui-library/overview) - Component usage guidelines
 
-**Keywords**: accessibility, WCAG, inclusive design, screen readers, keyboard navigation, color contrast, assistive technology, ARIA, a11y
 ---

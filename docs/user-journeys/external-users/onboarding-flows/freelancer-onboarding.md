@@ -1,3 +1,10 @@
+---
+title: "External Users: Freelancer Onboarding Flow"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "freelancer onboarding, cost optimization, client acquisition, professional development, consulting practice"
+---
 # External Users: Freelancer Onboarding Flow
 
 ## Overview
@@ -313,4 +320,3 @@ This document outlines the comprehensive onboarding journey for independent cons
 
 ---
 
-**Keywords**: freelancer onboarding, cost optimization, client acquisition, professional development, consulting practice

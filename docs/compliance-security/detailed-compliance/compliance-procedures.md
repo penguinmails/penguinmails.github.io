@@ -3,6 +3,7 @@ title: "Compliance Procedures"
 description: "Regulatory compliance procedures for GDPR, CCPA, CAN-SPAM, and international email marketing regulations"
 last_modified_date: "2025-10-28"
 level: "2"
+keywords: "GDPR compliance, CAN-SPAM, CCPA, data protection, privacy regulations, email compliance, regulatory compliance, data subject rights"
 persona: "Documentation Users"
 ---
 
@@ -427,5 +428,4 @@ Personal data breach?
 
 **Implementation Timeline**: Some compliance features are scheduled for 2026 based on infrastructure capacity and resource constraints.
 
-**Keywords**: GDPR compliance, CAN-SPAM, CCPA, data protection, privacy regulations, email compliance, regulatory compliance, data subject rights
 ---

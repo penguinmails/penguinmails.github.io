@@ -1,3 +1,9 @@
+---
+title: "Spike: Mail Server Alternatives Investigation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Spike: Mail Server Alternatives Investigation
 
 **Priority:** P0 (Blocks Unified Inbox MVP)  
@@ -137,7 +143,7 @@ Based on evaluation, decide where inbox metadata lives:
 
 ## Related Documentation
 
-- **Routes**: [tenant-inbox.md]()
+- **Routes**: [tenant-inbox.md](/docs/design/routes/tenant-inbox.md)
 - **API**: [tenant-api/](/docs/implementation-technical/api/tenant-api/)
 - **Features**: [inbox/](/docs/features/inbox/)
 

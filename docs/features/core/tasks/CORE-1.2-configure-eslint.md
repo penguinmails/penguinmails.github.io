@@ -1,3 +1,9 @@
+---
+title: "CORE-1.2: Configure ESLint for Code Linting"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.2: Configure ESLint for Code Linting
 

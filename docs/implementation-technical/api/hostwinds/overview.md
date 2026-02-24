@@ -1,3 +1,10 @@
+---
+title: "Hostwinds API Overview"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds API, VPS provisioning, infrastructure automation, IP management, cloud infrastructure, cost modeling, server management"
+---
 # Hostwinds API Overview
 
 ---
@@ -390,7 +397,6 @@ Recommendations for reliable, secure, and efficient automation.
 
 ---
 
-**Keywords**: Hostwinds API, VPS provisioning, infrastructure automation, IP management, cloud infrastructure, cost modeling, server management
 
 ---
 

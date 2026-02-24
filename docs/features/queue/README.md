@@ -1,6 +1,9 @@
-﻿# âš™ï¸ Queue & Background Jobs
-
-Background job processing, queue monitoring, and notifications.
+---
+title: "Queue & Background Jobs"
+description: "Background job processing, queue monitoring, and notifications."
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 ## MVP Status
 

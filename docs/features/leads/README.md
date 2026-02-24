@@ -1,4 +1,9 @@
-﻿# 👥 Leads & Lists
+---
+title: "Leads & Lists"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Lead management, contact lists, and segmentation (scoped by tenant).
 

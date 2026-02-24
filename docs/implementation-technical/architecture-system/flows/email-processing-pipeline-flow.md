@@ -3,6 +3,7 @@ title: "Email Processing Pipeline Flow"
 description: "Complete email flow from client creation through queue processing to database state updates"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "email processing pipeline, queue system, asynchronous processing, real-time analytics, SMTP worker, fault tolerance"
 persona: "Documentation Users"
 ---
 
@@ -126,5 +127,3 @@ sequenceDiagram
 - **Alert System**: Automatic alerts for delivery issues or performance problems
 
 ---
-
-**Keywords**: email processing pipeline, queue system, asynchronous processing, real-time analytics, SMTP worker, fault tolerance

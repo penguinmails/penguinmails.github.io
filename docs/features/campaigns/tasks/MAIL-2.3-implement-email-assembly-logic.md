@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.3: Implement Email Assembly Logic"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.3: Implement Email Assembly Logic
 

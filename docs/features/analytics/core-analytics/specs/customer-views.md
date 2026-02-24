@@ -1,6 +1,8 @@
 ---
 title: "Customer View Specifications"
 description: "Detailed widget and data requirements for Customer and Agency views"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 

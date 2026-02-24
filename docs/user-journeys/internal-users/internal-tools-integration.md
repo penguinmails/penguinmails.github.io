@@ -3,6 +3,7 @@ title: "Internal Users: Internal Tools Integration"
 description: "User journeys for internal teams integrating third-party tools"
 last_modified_date: "2025-12-06"
 level: "2"
+keywords: "internal tools integration, google workspace, jira, CRM, analytics, automation, data synchronization"
 persona: "Internal Teams"
 ---
 
@@ -380,4 +381,3 @@ This document outlines the user journeys for internal teams who integrate Pengui
 
 ---
 
-**Keywords**: internal tools integration, google workspace, jira, CRM, analytics, automation, data synchronization

@@ -1,3 +1,9 @@
+---
+title: "TEN-1.3: Define Zod Schema for Tenant & Company Creation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-1.3: Define Zod Schema for Tenant & Company Creation
 

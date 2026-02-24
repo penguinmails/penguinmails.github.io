@@ -1,6 +1,8 @@
 ---
 title: "Global Edge Network"
 description: "CDN and edge computing for low latency"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Global Edge Network

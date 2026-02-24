@@ -1,6 +1,8 @@
 ---
 title: "Queue System MVP"
 description: "Basic Redis-backed queue for email delivery"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Queue System MVP

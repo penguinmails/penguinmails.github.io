@@ -1,4 +1,9 @@
-﻿# 📧 Campaign Management
+---
+title: "Campaign Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Campaign creation, multi-channel orchestration, sequence management, and campaign-level analytics.
 

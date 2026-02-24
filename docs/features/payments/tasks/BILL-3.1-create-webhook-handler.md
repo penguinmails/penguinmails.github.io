@@ -1,3 +1,9 @@
+---
+title: "BILL-3.1: Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-3.1: Create Stripe Webhook Handler Endpoint (POST /api/webhooks/stripe)
 

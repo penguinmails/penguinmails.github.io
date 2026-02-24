@@ -1,3 +1,9 @@
+---
+title: "[LEADS-1.1] Define Contact Database Schema"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # [LEADS-1.1] Define Contact Database Schema
 

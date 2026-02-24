@@ -1,7 +1,7 @@
-﻿---
+---
 title: "OLAP Analytics Schema Guide"
 description: "Documentation for OLAP Analytics Schema Guide - Olap Analytics Schema Guide"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---

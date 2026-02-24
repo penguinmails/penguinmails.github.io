@@ -1,3 +1,10 @@
+---
+title: "User Stories Templates: External Stakeholders"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "stakeholder stories, investor relations, media relations, competitive intelligence, analyst relations"
+---
 # User Stories Templates: External Stakeholders
 
 ## Overview
@@ -392,4 +399,3 @@ DEFINITION OF DONE:
 
 ---
 
-**Keywords**: stakeholder stories, investor relations, media relations, competitive intelligence, analyst relations

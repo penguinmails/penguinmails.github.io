@@ -1,3 +1,9 @@
+---
+title: "MAIL-3.1: Implement Tracking Token Generation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-3.1: Implement Tracking Token Generation
 

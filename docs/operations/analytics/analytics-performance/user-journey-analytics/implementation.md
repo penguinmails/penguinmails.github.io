@@ -3,6 +3,7 @@ title: "Part IV: Implementation & Best Practices"
 description: "Implementation guide and best practices"
 last_modified_date: "2025-12-04"
 level: "3"
+keywords: "user journey analytics, campaign performance, email marketing analytics, deliverability monitoring, engagement tracking, campaign optimization, journey mapping, performance analytics"
 keywords: "implementation, best practices, setup"
 ---
 
@@ -205,5 +206,4 @@ Navigate to specific analytics and campaign areas:
 
 ---
 
-**Keywords**: user journey analytics, campaign performance, email marketing analytics, deliverability monitoring, engagement tracking, campaign optimization, journey mapping, performance analytics
 ---

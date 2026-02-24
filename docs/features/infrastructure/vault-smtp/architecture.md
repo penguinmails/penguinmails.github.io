@@ -2,6 +2,7 @@
 title: "Architecture"
 description: "System architecture and design for Vault SMTP credential management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "architecture, design, system design, Vault integration"
 ---
 

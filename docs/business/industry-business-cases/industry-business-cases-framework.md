@@ -3,6 +3,7 @@ title: "Industry-Specific Business Cases Structure"
 description: "Framework for industry-specific business cases and ROI analysis for regulated and specialized verticals"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "industry business cases, vertical market analysis, compliance frameworks, industry-specific ROI, healthcare compliance, financial services compliance, legal services compliance, e-commerce compliance, manufacturing compliance, education compliance"
 persona: "Documentation Users"
 ---
 
@@ -444,7 +445,6 @@ This document provides a comprehensive framework for developing industry-specifi
 
 **Next Steps**: Use these templates to develop industry-specific business cases that address the unique needs and concerns of each vertical market.
 
-**Keywords**: industry business cases, vertical market analysis, compliance frameworks, industry-specific ROI, healthcare compliance, financial services compliance, legal services compliance, e-commerce compliance, manufacturing compliance, education compliance
 
 ---
 

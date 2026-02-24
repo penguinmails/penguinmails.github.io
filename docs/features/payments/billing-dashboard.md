@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Billing Dashboard"
 description: "Usage tracking, invoices, and billing management for PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Billing Administrators, Finance Teams"
 status: "ACTIVE"

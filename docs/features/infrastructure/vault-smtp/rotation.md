@@ -2,6 +2,7 @@
 title: "Automated Credential Rotation"
 description: "Automated rotation procedures for SMTP credentials"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "rotation, automated rotation, credential renewal"
 ---
 

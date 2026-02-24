@@ -1,7 +1,7 @@
-﻿---
+---
 title: "User Management & Authentication"
 description: "User authentication, profile management, and account security in PenguinMails"
-last_modified_date: "2025-11-26"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "All Users, Developers"
 status: "ACTIVE"

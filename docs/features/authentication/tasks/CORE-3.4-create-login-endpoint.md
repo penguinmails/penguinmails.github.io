@@ -1,3 +1,9 @@
+---
+title: "CORE-3.4: Create Public API Endpoint for User Login"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-3.4: Create Public API Endpoint for User Login
 

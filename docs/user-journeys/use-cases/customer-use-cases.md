@@ -1,3 +1,10 @@
+---
+title: "Use Cases: Real External Users (Customers)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "customer use cases, business scenarios, revenue generation, customer success, operational workflows"
+---
 # Use Cases: Real External Users (Customers)
 
 ## Overview
@@ -506,4 +513,3 @@ This document outlines comprehensive use cases for Real External Users (Customer
 
 ---
 
-**Keywords**: customer use cases, business scenarios, revenue generation, customer success, operational workflows

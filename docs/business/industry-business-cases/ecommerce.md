@@ -3,6 +3,7 @@ title: "E-commerce & Retail Business Case - Executive Summary"
 description: "E-commerce and retail-specific email infrastructure business case covering customer communication optimization and marketing automation"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "e-commerce email infrastructure, retail marketing automation, cart abandonment recovery, customer retention, PCI DSS compliance, GDPR compliance, marketing ROI"
 persona: "Documentation Users"
 ---
 
@@ -272,7 +273,6 @@ E-commerce and retail organizations face critical challenges in:
 
 ---
 
-**Keywords**: e-commerce email infrastructure, retail marketing automation, cart abandonment recovery, customer retention, PCI DSS compliance, GDPR compliance, marketing ROI
 
 ---
 

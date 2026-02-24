@@ -1,7 +1,8 @@
-title: "Playbook Best Practices"
-description: "Best practices for playbook execution"
-last_modified_date: "2025-12-05"
+---
+title: "best-practices"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Best practices for playbook execution"
 keywords: "best practices, execution, optimization"
 persona: "CS Teams"
 ---

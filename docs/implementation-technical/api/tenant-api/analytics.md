@@ -1,3 +1,9 @@
+---
+title: "Analytics API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 ﻿---
 title: "Analytics API"
 description: "Tenant API endpoints for campaign analytics, engagement tracking, and deliverability metrics"

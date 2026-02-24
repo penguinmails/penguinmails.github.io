@@ -1,3 +1,9 @@
+---
+title: "integration"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 title: "Integration Points"
 description: "System integration points"
 last_modified_date: "2025-12-05"
@@ -280,5 +286,3 @@ Scalability Architecture:
 
 
     - Dead letter queue handling
-
-

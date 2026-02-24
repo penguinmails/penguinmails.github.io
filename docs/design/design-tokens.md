@@ -3,6 +3,7 @@ title: "Design Tokens"
 description: "Complete design token specifications for PenguinMails"
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "design tokens, design system, color palette, typography, spacing, shadows, breakpoints, responsive design, accessibility"
 persona: "Documentation Users"
 ---
 
@@ -505,5 +506,4 @@ Design tokens are the fundamental building blocks of PenguinMails design system.
 
 - [UI Library](/docs/design/component-library) - Component usage guidelines and patterns
 
-**Keywords**: design tokens, design system, color palette, typography, spacing, shadows, breakpoints, responsive design, accessibility
 ---

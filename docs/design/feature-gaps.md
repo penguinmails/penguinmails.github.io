@@ -1,3 +1,9 @@
+---
+title: "Feature Gaps & Roadmap Clarifications"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Feature Gaps & Roadmap Clarifications
 
 **Purpose**: This document tracks features referenced in route specifications that have been clarified, deferred to the roadmap, or addressed during the frontend routing validation process.

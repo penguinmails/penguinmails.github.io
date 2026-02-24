@@ -1,3 +1,9 @@
+---
+title: "CORE-4.2: Create a Singleton Redis Service"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-4.2: Create a Singleton Redis Service
 

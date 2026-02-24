@@ -1,3 +1,10 @@
+---
+title: "Hostwinds Upgrade, Billing, and Pricing API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds upgrades, billing cycles, pricing API, cost management, resource scaling, service levels"
+---
 # Hostwinds Upgrade, Billing, and Pricing API
 
 ---
@@ -355,4 +362,3 @@ await updateVPSCost(serviceid, targetPlan.monthly);
 
 ---
 
-**Keywords**: Hostwinds upgrades, billing cycles, pricing API, cost management, resource scaling, service levels

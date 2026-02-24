@@ -1,4 +1,9 @@
-﻿# 💳 Payments & Billing
+---
+title: "Payments & Billing"
+description: "Subscription management, billing, invoicing, and payment processing."
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Subscription management, billing, invoicing, and payment processing.
 

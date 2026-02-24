@@ -1,5 +1,7 @@
-﻿---
-last_modified_date: "2025-11-19"
+---
+title: "Marketing Performance Framework: Basic Campaign Management"
+description: ""
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---

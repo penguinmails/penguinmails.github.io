@@ -3,6 +3,7 @@ title: "Security & Privacy Integration Framework"
 description: "Unified security and privacy framework ensuring comprehensive data protection and regulatory compliance across all system components"
 last_modified_date: "2025-10-28"
 level: "2"
+keywords: "security policies, privacy procedures, data protection, compliance, risk management, incident response, access control, encryption, GDPR, CCPA"
 persona: "Documentation Users"
 ---
 
@@ -715,5 +716,4 @@ interface RecoveryResponse {
 
 - [Data Privacy Policy](/docs/compliance-security/international/data-privacy-policy) - Customer-facing privacy information
 
-**Keywords**: security policies, privacy procedures, data protection, compliance, risk management, incident response, access control, encryption, GDPR, CCPA
 ---

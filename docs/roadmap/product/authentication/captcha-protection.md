@@ -1,6 +1,8 @@
 ---
 title: "CAPTCHA Protection"
 description: "Bot prevention for sensitive forms"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # CAPTCHA Protection

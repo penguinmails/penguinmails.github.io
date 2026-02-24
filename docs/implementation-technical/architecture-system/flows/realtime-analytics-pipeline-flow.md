@@ -3,6 +3,7 @@ title: "Real-Time Analytics Pipeline Flow"
 description: "Event processing pipeline from email events through machine learning to business intelligence"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "real-time analytics, event processing, machine learning, business intelligence, predictive analytics, dashboard, ETL pipeline, data visualization"
 persona: "Documentation Users"
 ---
 
@@ -213,4 +214,3 @@ flowchart LR
 
 ---
 
-**Keywords**: real-time analytics, event processing, machine learning, business intelligence, predictive analytics, dashboard, ETL pipeline, data visualization

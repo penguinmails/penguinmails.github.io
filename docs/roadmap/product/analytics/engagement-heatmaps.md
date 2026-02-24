@@ -1,6 +1,8 @@
 ---
 title: "Engagement Heatmaps"
 description: "Visual heatmaps for send time optimization"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Engagement Heatmaps

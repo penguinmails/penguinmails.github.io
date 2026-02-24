@@ -3,6 +3,7 @@ title: "Compliance Documentation"
 description: "Required compliance documentation and record-keeping"
 last_modified_date: "2025-12-04"
 level: "3"
+keywords: "compliance framework, GDPR implementation, CCPA compliance, CAN-SPAM requirements, data protection, privacy compliance, email compliance, regulatory compliance"
 persona: "Compliance Officers"
 keywords: "documentation, record-keeping, DPA, compliance records"
 ---
@@ -162,7 +163,6 @@ keywords: "documentation, record-keeping, DPA, compliance records"
 
 ---
 
-**Keywords**: compliance framework, GDPR implementation, CCPA compliance, CAN-SPAM requirements, data protection, privacy compliance, email compliance, regulatory compliance
 
 ---
 

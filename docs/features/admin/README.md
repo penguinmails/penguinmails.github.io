@@ -1,3 +1,9 @@
+---
+title: "🔧 Platform Administration (Internal)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # 🔧 Platform Administration (Internal)
 
 **Target Users**: PenguinMails internal staff (super_admin, admin, support, qa)  

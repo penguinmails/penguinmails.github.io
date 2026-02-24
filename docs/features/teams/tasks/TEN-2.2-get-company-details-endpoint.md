@@ -1,3 +1,9 @@
+---
+title: "TEN-2.2: Create API Endpoint to Get Company Details (GET /api/companies/{companyId})"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-2.2: Create API Endpoint to Get Company Details (GET /api/companies/{companyId})
 

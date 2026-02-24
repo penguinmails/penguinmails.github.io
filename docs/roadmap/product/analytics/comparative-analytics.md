@@ -1,6 +1,8 @@
 ---
 title: "Comparative Analytics"
 description: "Campaign comparison and A/B test analysis"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Comparative Analytics

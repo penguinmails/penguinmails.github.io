@@ -2,6 +2,7 @@
 title: "Vault API Keys Management"
 description: "Secure API key storage, rotation, and management with HashiCorp Vault"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "vault, API keys, security, credential management, integration"
 ---
 

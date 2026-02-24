@@ -1,7 +1,7 @@
-﻿---
+---
 title: "GDPR Compliance"
 description: "EU data protection compliance for PenguinMails - GDPR requirements and implementation"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Compliance Officers, Legal Teams"
 status: "ACTIVE"

@@ -1,6 +1,7 @@
 ---
 title: "Mobile Responsiveness"
 description: "Mobile design guidelines and responsive behavior"
+level: "2"
 last_modified_date: "2025-11-24"
 type: "design"
 status: "DRAFT"

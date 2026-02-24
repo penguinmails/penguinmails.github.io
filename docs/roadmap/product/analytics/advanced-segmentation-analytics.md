@@ -1,6 +1,8 @@
 ---
 title: "Advanced Segmentation Analytics"
 description: "Behavioral and predictive segmentation"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Advanced Segmentation Analytics

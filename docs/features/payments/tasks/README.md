@@ -1,3 +1,9 @@
+---
+title: "Milestone 1: Plans and Subscriptions Schema Setup"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # Milestone 1: Plans and Subscriptions Schema Setup
 

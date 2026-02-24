@@ -1,3 +1,9 @@
+---
+title: "CORE-1.3: Configure Prettier for Code Formatting"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.3: Configure Prettier for Code Formatting
 

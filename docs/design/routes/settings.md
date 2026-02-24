@@ -1,3 +1,9 @@
+---
+title: "Settings & Organization"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Settings & Organization
 
 ## 1. Purpose & Context (The "Why")

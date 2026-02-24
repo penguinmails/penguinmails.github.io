@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Executive Quick Reference: Cost-Benefit Analysis"
-description: "One-page financial justification template for email infrastructure investment decisions"
-last_modified_date: "2025-12-19"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "One-page financial justification template for email infrastructure investment decisions"
 persona: "Documentation Users"
 ---
 

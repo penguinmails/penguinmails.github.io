@@ -1,6 +1,7 @@
 ---
 title: "GDPR Compliance Checklist for Cold Email [Free Download]"
 description: "A 20-point checklist to ensure your cold email campaigns are GDPR compliant. Includes a penalty risk calculator and real-world case studies."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "gdpr checklist, cold email compliance, gdpr fines, email marketing laws, legitimate interest"

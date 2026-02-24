@@ -3,6 +3,7 @@ title: "OLTP Database SQL Implementation Challenge"
 description: "Hands-on SQL implementation guide for OLTP database - build, test, and discover operational database architecture issues"
 last_modified_date: "2025-11-20"
 level: "2"
+keywords: "OLTP implementation, multi-tenant database, RLS performance, campaign orchestration, billing system integration, cross-tier data patterns"
 persona: "Backend Developers"
 ---
 
@@ -498,4 +499,3 @@ Instead of theoretical feedback, provide:
 
 **The goal is understanding OLTP operational challenges through building. You'll grasp multi-tenant database design far better by implementing it than by discussing it theoretically.**
 
-**Keywords**: OLTP implementation, multi-tenant database, RLS performance, campaign orchestration, billing system integration, cross-tier data patterns

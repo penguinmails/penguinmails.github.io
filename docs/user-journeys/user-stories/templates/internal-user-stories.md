@@ -1,3 +1,10 @@
+---
+title: "User Stories Templates: Internal Platform Users"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "internal user stories, platform administration, operational efficiency, security, compliance, monitoring"
+---
 # User Stories Templates: Internal Platform Users
 
 ## Overview
@@ -335,4 +342,3 @@ DEFINITION OF DONE:
 
 ---
 
-**Keywords**: internal user stories, platform administration, operational efficiency, security, compliance, monitoring

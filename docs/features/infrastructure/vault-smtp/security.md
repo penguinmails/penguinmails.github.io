@@ -2,6 +2,7 @@
 title: "Security Considerations"
 description: "Security best practices for credential management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "security, best practices, threat model, risk assessment"
 ---
 

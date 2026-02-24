@@ -3,9 +3,10 @@ title: "Schema Migrations"
 description: "Database migration strategies"
 last_modified_date: "2025-12-04"
 level: "3"
-keywords: "migrations, schema changes, versioning"
+keywords: "OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security, migrations, schema changes, versioning"
 ---
 
+```sql
 -- User and tenant management
 CREATE INDEX idx_tenant_users_tenant ON tenant_users(tenant_id);
 CREATE INDEX idx_tenant_users_user ON tenant_users(user_id);
@@ -183,5 +184,4 @@ The following infrastructure and monitoring concerns have been externalized to s
 
 ---
 
-**Keywords**: OLTP, operational database, transactional processing, multi-tenant, row level security, performance optimization, database schema, real-time operations, unified security
 ---

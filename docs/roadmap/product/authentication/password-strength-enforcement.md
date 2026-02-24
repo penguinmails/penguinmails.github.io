@@ -1,6 +1,8 @@
 ---
 title: "Password Strength Enforcement"
 description: "Strong password policies and breach checks"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Password Strength Enforcement

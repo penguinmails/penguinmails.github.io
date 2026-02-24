@@ -1,3 +1,9 @@
+---
+title: "CORE-3.1: Install and Configure NileDB Server SDK"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-3.1: Install and Configure NileDB Server SDK
 

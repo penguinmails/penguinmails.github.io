@@ -1,8 +1,9 @@
-﻿---
+---
 title: "Provider Performance Analysis - ESP Comparison"
-description: "ESP-specific performance analysis, deliverability comparison, and provider optimization strategies"
-last_modified_date: "2025-12-19"
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "ESP performance, provider analysis, deliverability comparison, email service provider, SendGrid, Mailgun, Postmark, Amazon SES"
+description: "ESP-specific performance analysis, deliverability comparison, and provider optimization strategies"
 persona: "Documentation Users"
 ---
 
@@ -615,7 +616,6 @@ async function demonstrateMultiProviderManagement() {
 
 ---
 
-**Keywords**: ESP performance, provider analysis, deliverability comparison, email service provider, SendGrid, Mailgun, Postmark, Amazon SES
 
 ---
 

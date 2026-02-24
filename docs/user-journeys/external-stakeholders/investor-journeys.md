@@ -1,3 +1,10 @@
+---
+title: "External Stakeholders: Investor Journeys"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "investor journeys, venture capital, due diligence, investment analysis, financial assessment, portfolio management"
+---
 # External Stakeholders: Investor Journeys
 
 ## Overview
@@ -346,4 +353,3 @@ This document outlines the key user journeys for investors and venture capitalis
 
 ---
 
-**Keywords**: investor journeys, venture capital, due diligence, investment analysis, financial assessment, portfolio management

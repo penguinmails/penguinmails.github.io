@@ -1,3 +1,9 @@
+---
+title: "Public & Authentication Routes"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Public & Authentication Routes
 
 ## 1. Purpose & Context (The "Why")

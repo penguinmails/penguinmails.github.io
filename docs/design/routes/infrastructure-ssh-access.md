@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Infrastructure SSH Access Routes"
 description: "Route specifications for tenant SSH credential management and VPS access"
-last_modified_date: "2025-11-26"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "Developers"
 status: "BACKLOG"
 priority: "HIGH"

@@ -3,6 +3,7 @@ title: "Strategic Planning Framework for Business Leaders"
 description: "Strategic oversight framework, directional insights, and process-driven planning for CFOs, VPs, and Budget Owners"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "strategic planning, framework, business leaders, oversight, directional insights, decision support"
 persona: "Documentation Users"
 ---
 
@@ -896,7 +897,6 @@ A comprehensive feature completeness review was conducted in November 2025, anal
 
 ---
 
-**Keywords**: strategic planning, framework, business leaders, oversight, directional insights, decision support
 
 ---
 

@@ -1,3 +1,10 @@
+---
+title: "External Users: Business Owner Onboarding Flow"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "business owner onboarding, business-focused email marketing, ROI tracking, business outcomes, simple implementation"
+---
 # External Users: Business Owner Onboarding Flow
 
 ## Overview
@@ -343,4 +350,3 @@ This document outlines the comprehensive onboarding journey for business owners 
 
 ---
 
-**Keywords**: business owner onboarding, business-focused email marketing, ROI tracking, business outcomes, simple implementation

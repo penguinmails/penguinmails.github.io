@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.4: Implement SMTP Sending with Nodemailer"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.4: Implement SMTP Sending with Nodemailer
 

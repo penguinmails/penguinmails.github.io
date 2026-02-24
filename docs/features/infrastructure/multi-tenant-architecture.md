@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Multi-Tenant Architecture"
 description: "Multi-tenant platform architecture and tenant isolation in PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Developers, System Architects"
 status: "ACTIVE"

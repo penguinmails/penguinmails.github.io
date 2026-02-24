@@ -3,6 +3,7 @@ title: "Compliance Incident Response - Strategic Risk Management"
 description: "Strategic incident response procedures for compliance violations and data breaches"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "incident response, data breach, security incident, breach notification, strategic risk management, compliance violations"
 persona: "Documentation Users"
 ---
 
@@ -344,7 +345,6 @@ We are writing to inform you of a personal data breach that occurred on [DATE].
 
 ---
 
-**Keywords**: incident response, data breach, security incident, breach notification, strategic risk management, compliance violations
 
 ---
 

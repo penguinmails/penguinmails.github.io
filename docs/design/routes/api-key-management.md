@@ -1,8 +1,8 @@
-﻿---
+---
 title: "API Key Management Routes"
 description: "Frontend route specifications for tenant API key creation, viewing, regeneration, and revocation with Vault integration"
-last_modified_date: "2025-11-26"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "Frontend Developers, Technical Teams"
 keywords: ["routes", "API keys", "Vault", "authentication", "UI", "frontend"]
 status: "PLANNED"

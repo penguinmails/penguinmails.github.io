@@ -1,3 +1,9 @@
+---
+title: "MAIL-3.3: Implement the Open Tracking Handler"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-3.3: Implement the Open Tracking Handler
 

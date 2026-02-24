@@ -2,6 +2,7 @@
 title: "Technical Architecture"
 description: "System architecture for API key management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "architecture, design, system"
 ---
 

@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Operations Process Standardization Framework"
-description: "Phase 6 implementation providing comprehensive standardized operational procedures, quality assurance standardization, cross-domain coordination standardization, and operations success measurement standardization for Operations Teams"
-last_modified_date: "2025-11-16"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Phase 6 implementation providing comprehensive standardized operational procedures, quality assurance standardization, cross-domain coordination standardization, and operations success measurement standardization for Operations Teams"
 persona: "Documentation Users"
 ---
 

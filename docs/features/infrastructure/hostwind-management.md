@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Hostwind Infrastructure Management"
 description: "Automated VPS provisioning, IP monitoring, and infrastructure scaling on Hostwind"
-last_modified_date: "2025-11-24"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "DevOps, System Administrators"
 status: "ACTIVE"
 category: "Infrastructure"

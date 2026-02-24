@@ -1,3 +1,9 @@
+---
+title: "TEN-3.3: Create API Endpoint to Remove a User (DELETE /api/tenants/users/{userId})"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-3.3: Create API Endpoint to Remove a User (DELETE /api/tenants/users/{userId})
 

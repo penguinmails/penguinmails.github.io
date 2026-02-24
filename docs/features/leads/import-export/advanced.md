@@ -2,6 +2,7 @@
 title: "Level 2: Advanced Import/Export"
 description: "Field mapping, validation, and error handling"
 level: "2"
+last_modified_date: "2026-02-24"
 persona: "Marketing Operations"
 keywords: "field mapping, validation, error handling, data quality"
 ---

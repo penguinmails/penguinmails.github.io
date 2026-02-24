@@ -1,3 +1,10 @@
+---
+title: "Growth Analytics & Performance Metrics"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "growth analytics, acquisition tracking, expansion analysis, market penetration, growth efficiency, predictive modeling, channel optimization, sustainable scaling, cohort analysis"
+---
 ﻿---
 title: "Growth Analytics & Performance Metrics"
 description: "Comprehensive growth analytics and performance metrics for enterprise-grade acquisition tracking, market expansion, and sustainable scaling"
@@ -705,5 +712,4 @@ Navigate to specific growth and analytics areas:
 
 ---
 
-**Keywords**: growth analytics, acquisition tracking, expansion analysis, market penetration, growth efficiency, predictive modeling, channel optimization, sustainable scaling, cohort analysis
 ---

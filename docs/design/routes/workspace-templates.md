@@ -1,3 +1,9 @@
+---
+title: "Workspace Templates"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Workspace Templates
 
 ## 1. Purpose & Context (The "Why")

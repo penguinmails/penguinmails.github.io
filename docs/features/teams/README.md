@@ -1,3 +1,9 @@
+---
+title: "👥 Team & Workspace Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # 👥 Team & Workspace Management
 
 **Target Users**: Tenant administrators (owner, manager)  

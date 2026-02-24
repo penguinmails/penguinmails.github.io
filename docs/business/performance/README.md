@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Performance Analysis - Level 3: Metrics and Optimization"
-description: "Documentation for Performance Analysis - Level 3: Metrics and Optimization - README"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Documentation for Performance Analysis - Level 3: Metrics and Optimization - README"
 persona: "Documentation Users"
 ---
 

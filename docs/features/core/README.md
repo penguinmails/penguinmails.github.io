@@ -1,6 +1,8 @@
 ---
 title: "Core Foundation"
 description: "Shared foundation components: project setup, database, Redis, validation"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Core Foundation

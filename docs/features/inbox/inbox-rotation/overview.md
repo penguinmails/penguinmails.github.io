@@ -2,6 +2,7 @@
 title: "Inbox Rotation"
 description: "Maximize deliverability by automatically rotating sending across multiple email accounts with smart health monitoring"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "AVAILABLE"
 roadmap_timeline: "Q1 2026"
 priority: "High"

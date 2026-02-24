@@ -1,3 +1,9 @@
+---
+title: "INFRA-3.1: Define Drizzle Schema for domain_ip_assignments"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-3.1: Define Drizzle Schema for domain_ip_assignments
 

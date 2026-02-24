@@ -3,6 +3,7 @@ title: "Component Library"
 description: "Complete catalog of reusable UI components for PenguinMails"
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "component library, reusable components, UI components, design system, React components, component catalog, component specifications"
 persona: "Documentation Users"
 ---
 
@@ -938,5 +939,4 @@ import { Chart as AnalyticsChart } from '@/components/data-display/Chart';
 
 - [Accessibility Guidelines](/docs/design/accessibility-guidelines) - Inclusive design standards
 
-**Keywords**: component library, reusable components, UI components, design system, React components, component catalog, component specifications
 ---

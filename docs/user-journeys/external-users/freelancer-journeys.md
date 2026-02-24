@@ -3,6 +3,7 @@ title: "External Users: Freelancer Journeys"
 description: "Key user journeys for Freelance Consultants managing client campaigns and building consulting businesses"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "freelancer journeys, independent consultant, client management, professional services, business development"
 persona: "Freelance Consultants"
 ---
 
@@ -386,4 +387,3 @@ This document outlines the key user journeys for freelance consultants who use P
 
 ---
 
-**Keywords**: freelancer journeys, independent consultant, client management, professional services, business development

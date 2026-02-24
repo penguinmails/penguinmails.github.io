@@ -1,8 +1,8 @@
-﻿---
+---
 title: "ESP Integration Routes"
 description: "Route specifications for External Email Service Provider (ESP) configuration and management"
-last_modified_date: "2025-11-25"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "Developers, Operations Teams"
 ---
 

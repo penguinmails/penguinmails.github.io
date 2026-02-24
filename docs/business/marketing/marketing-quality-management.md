@@ -1,5 +1,7 @@
-﻿---
-last_modified_date: "2025-11-19"
+---
+title: "Marketing Quality Management: QA Rules and Automation"
+description: ""
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---

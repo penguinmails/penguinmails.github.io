@@ -1,3 +1,10 @@
+---
+title: "Product Analytics Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "product analytics, feature adoption, A/B testing, product-market fit, feature lifecycle, roadmap prioritization, performance optimization, innovation metrics, UX analytics"
+---
 ﻿---
 title: "Product Analytics Framework"
 description: "Comprehensive product performance analytics for enterprise-grade feature optimization, A/B testing, and product-market fit analysis"
@@ -619,5 +626,4 @@ Navigate to specific product areas:
 
 ---
 
-**Keywords**: product analytics, feature adoption, A/B testing, product-market fit, feature lifecycle, roadmap prioritization, performance optimization, innovation metrics, UX analytics
 ---

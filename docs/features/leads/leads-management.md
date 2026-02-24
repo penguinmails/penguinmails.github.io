@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Leads Management"
 description: "Contact management, list segmentation, and lead scoring"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Marketers, Sales Teams"
 status: "ACTIVE"

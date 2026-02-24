@@ -2,6 +2,7 @@
 title: "Campaign Management Overview"
 description: "Complete campaign creation, editing, and management with drag-and-drop editor, scheduling, and analytics"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "PARTIALLY_COMPLETE"
 keywords: "campaign management, email campaigns, campaign editor, scheduling"
 ---

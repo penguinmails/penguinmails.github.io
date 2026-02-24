@@ -1,3 +1,9 @@
+---
+title: "TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-3.2: Create API Endpoint to Invite a User (POST /api/tenants/invites)
 

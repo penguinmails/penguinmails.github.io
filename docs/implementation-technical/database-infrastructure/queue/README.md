@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Queue System Documentation"
 description: "Queue System Documentation - Overview and Navigation"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Documentation Users"
 ---

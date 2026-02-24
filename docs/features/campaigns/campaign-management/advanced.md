@@ -2,6 +2,7 @@
 title: "Level 2: Advanced Configuration"
 description: "Advanced campaign features and optimization"
 level: "2"
+last_modified_date: "2026-02-24"
 persona: "Marketing Operations"
 keywords: "advanced campaigns, personalization, A/B testing, optimization"
 ---

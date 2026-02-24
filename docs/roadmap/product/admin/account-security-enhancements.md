@@ -1,6 +1,8 @@
 ---
 title: "Account Security Enhancements"
 description: "Account lockout, session management, and password strength policies"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Account Security Enhancements

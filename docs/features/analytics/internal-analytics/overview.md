@@ -1,6 +1,8 @@
 ---
 title: "Internal View Specifications"
 description: "Detailed widget and data requirements for Internal Command Center views"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 

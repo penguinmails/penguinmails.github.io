@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Personalization System"
 description: "Dynamic email personalization with merge tags, conditional content, and custom fields"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

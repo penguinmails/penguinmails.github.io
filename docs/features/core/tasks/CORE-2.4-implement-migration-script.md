@@ -1,3 +1,9 @@
+---
+title: "CORE-2.4: Implement Migration Application Script"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-2.4: Implement Migration Application Script
 

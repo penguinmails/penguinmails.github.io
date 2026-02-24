@@ -1,3 +1,9 @@
+---
+title: "CORE-1.4: Implement Pre-commit Hooks with Husky"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-1.4: Implement Pre-commit Hooks with Husky
 

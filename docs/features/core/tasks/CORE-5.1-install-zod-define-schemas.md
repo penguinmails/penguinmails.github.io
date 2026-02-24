@@ -1,3 +1,9 @@
+---
+title: "CORE-5.1: Install Zod and Define Core Schemas"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-5.1: Install Zod and Define Core Schemas
 

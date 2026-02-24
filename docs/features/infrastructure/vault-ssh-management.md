@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Vault SSH Key Management"
 description: "Secure SSH credential management for VPS infrastructure using HashiCorp Vault"
-last_modified_date: "2025-11-26"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Technical Teams, Operations"
 status: "BACKLOG"

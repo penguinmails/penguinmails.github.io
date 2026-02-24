@@ -2,6 +2,7 @@
 title: "Disaster Recovery Procedures"
 description: "Recovery procedures for credential system failures"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "disaster recovery, backup, recovery procedures"
 ---
 

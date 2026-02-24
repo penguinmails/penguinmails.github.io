@@ -2,6 +2,7 @@
 title: "Email Sequences"
 description: "Design and automate multi-step email sequences with conditional branching, triggers, and dynamic delays"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"

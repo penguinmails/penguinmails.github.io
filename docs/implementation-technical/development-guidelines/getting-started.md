@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Getting Started - Developer Environment & Setup"
 description: "Environment setup, first-time contributor guidance, and project structure overview"
-last_modified_date: "2025-11-24"
-level: "1"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "New Contributors"
 ---
 

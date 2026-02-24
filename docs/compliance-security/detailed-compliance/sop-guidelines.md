@@ -1,6 +1,9 @@
 ---
+title: "Compliance Excellence Framework"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "standard operating procedure, team workflow, sprint management, communication protocols, task management, quality assurance, operational excellence"
 persona: "Documentation Users"
 ---
 
@@ -158,5 +161,4 @@ Any updates or process changes will be communicated in the channel.
 
 * [Development Standards](/docs/implementation-technical/development-guidelines) - Code standards and development practices
 
-**Keywords**: standard operating procedure, team workflow, sprint management, communication protocols, task management, quality assurance, operational excellence
 ---

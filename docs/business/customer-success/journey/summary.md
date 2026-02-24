@@ -1,7 +1,8 @@
-﻿---
+---
 title: "Customer Journey Management Summary"
+last_modified_date: "2026-02-24"
+level: "2"
 description: "Executive summary of customer journey management strategies, lifecycle optimization, and customer experience enhancement"
-last_modified_date: "2025-11-15"
 level: "2"
 persona: "Documentation Users"
 ---

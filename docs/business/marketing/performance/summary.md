@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Marketing Performance Summary: MVP vs Post-MVP Roadmap"
-description: "Marketing performance optimization with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Manual optimization, 15% improvement, basic reporting | **Post-MVP**: AI optimization, 35% improvement, automated optimization"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Marketing performance optimization with clear MVP scope (2025) and Post-MVP roadmap (2026+) separation - **MVP**: Manual optimization, 15% improvement, basic reporting | **Post-MVP**: AI optimization, 35% improvement, automated optimization"
 persona: "Documentation Users"
 redirect_from: ""
 ---

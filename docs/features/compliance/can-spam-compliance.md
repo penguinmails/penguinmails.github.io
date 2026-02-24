@@ -1,7 +1,7 @@
-﻿---
+---
 title: "CAN-SPAM Compliance"
 description: "US email law compliance for PenguinMails - CAN-SPAM Act requirements"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Marketing Teams, Compliance Officers"
 status: "ACTIVE"

@@ -2,6 +2,7 @@
 title: "Vault SMTP Credentials Management"
 description: "Secure credential storage and rotation with HashiCorp Vault integration"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "vault, SMTP credentials, security, credential rotation, HashiCorp"
 ---
 

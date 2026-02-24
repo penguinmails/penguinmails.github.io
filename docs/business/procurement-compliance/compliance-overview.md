@@ -3,6 +3,7 @@ title: "Compliance Framework Overview - Strategic Oversight for Business Leaders
 description: "Strategic compliance framework overview for CFOs, VPs, and Budget Owners with process-driven oversight aligned with backbone constraints"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "strategic compliance strategic framework, strategic GDPR, strategic CCPA, strategic CAN-SPAM, strategic regulatory strategic compliance, strategic data strategic protection, strategic privacy strategic compliance, strategic business strategic leaders"
 persona: "Documentation Users"
 ---
 
@@ -333,7 +334,6 @@ Strategic Quarterly Compliance Strategic Assessment:
 
 ---
 
-**Keywords**: strategic compliance strategic framework, strategic GDPR, strategic CCPA, strategic CAN-SPAM, strategic regulatory strategic compliance, strategic data strategic protection, strategic privacy strategic compliance, strategic business strategic leaders
 
 ---
 

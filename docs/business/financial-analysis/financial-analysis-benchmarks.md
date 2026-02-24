@@ -3,6 +3,7 @@ title: "Financial Analysis Benchmarks - Strategic Planning Framework"
 description: "Strategic financial benchmarks for business leaders with process-driven analysis aligned with backbone constraints"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "financial analysis, infrastructure costs, VPS pricing, ESP comparison, TCO analysis, cost benchmarks, email infrastructure ROI, provider pricing"
 persona: "Documentation Users"
 ---
 
@@ -499,7 +500,6 @@ Strategic The Strategic B2B strategic cold strategic email strategic landscape s
 
 ---
 
-**Keywords**: financial analysis, infrastructure costs, VPS pricing, ESP comparison, TCO analysis, cost benchmarks, email infrastructure ROI, provider pricing
 
 ---
 

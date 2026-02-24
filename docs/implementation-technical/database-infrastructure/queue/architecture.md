@@ -1,16 +1,16 @@
-﻿---
+---
 title: "Queue System Architecture"
 description: "Queue System Architecture - Hybrid PostgreSQL + Redis Design"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Technical Architects"
 related_docs:
+- "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
 
-  - "[Main Guide](/docs/implementation-technical/database-infrastructure/queue/main) - Complete overview"
+- "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
 
-  - "[Database Schema](/docs/implementation-technical/database-infrastructure/queue/database-schema) - Job tables and indexes"
+- "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 
-  - "[Management](/docs/implementation-technical/database-infrastructure/queue/management) - Redis and migrator details"
 ---
 
 # Queue System Architecture

@@ -3,6 +3,7 @@ title: "External Users: Agency Owner Journeys"
 description: "Key user journeys for Marketing Agency Owners managing client campaigns and scaling operations"
 last_modified_date: "2025-12-08"
 level: "2"
+keywords: "agency owner journeys, marketing agency, client management, campaign optimization, deliverability, multi-client management"
 persona: "Marketing Agency Owners"
 ---
 
@@ -356,4 +357,3 @@ This document outlines the key user journeys for marketing agency owners who use
 
 ---
 
-**Keywords**: agency owner journeys, marketing agency, client management, campaign optimization, deliverability, multi-client management

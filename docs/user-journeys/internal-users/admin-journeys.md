@@ -3,6 +3,7 @@ title: "Internal Users: Admin Journeys"
 description: "Key user journeys for Platform Administrators managing the PenguinMails platform"
 last_modified_date: "2025-12-07"
 level: "2"
+keywords: "admin journeys, platform administration, user management, security, compliance, system configuration"
 persona: "Platform Administrators"
 ---
 
@@ -362,4 +363,3 @@ This document outlines the key user journeys for Platform Administrators who man
 
 ---
 
-**Keywords**: admin journeys, platform administration, user management, security, compliance, system configuration

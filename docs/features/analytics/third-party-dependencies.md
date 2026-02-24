@@ -1,8 +1,7 @@
-﻿---
-title: "Analytics Third-Party Dependencies"
+---
+title: "Analytics & Reporting - Third-Party Dependencies"
 description: "Third-party services and integrations used by the Analytics & Reporting system"
-last_modified_date: "2025-11-27"
-level: "3"
+last_modified_date: "2026-02-24"
 persona: "Technical Teams, Developers"
 ---
 

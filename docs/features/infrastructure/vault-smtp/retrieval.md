@@ -2,6 +2,7 @@
 title: "Credential Retrieval"
 description: "Mechanisms for retrieving SMTP credentials from Vault"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "retrieval, credential access, Vault API"
 ---
 

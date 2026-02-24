@@ -3,6 +3,7 @@ title: "Strategic ROI Calculator - Business Leaders Investment Analysis"
 description: "Process-driven ROI analysis framework for strategic infrastructure investments with backbone-aligned data access"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "strategic ROI calculator, business leaders investment, revenue protection, cost optimization, strategic decision support, process-driven analysis, backbone constraints"
 persona: "Documentation Users"
 ---
 
@@ -389,7 +390,6 @@ Payback Period: $______ / ($______ ) = ______ months
 
 ---
 
-**Keywords**: strategic ROI calculator, business leaders investment, revenue protection, cost optimization, strategic decision support, process-driven analysis, backbone constraints
 
 ---
 

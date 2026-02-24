@@ -1,6 +1,7 @@
 ---
 title: "The Safe Migration Guide: Moving to PenguinMails Without Losing Reputation"
 description: "A step-by-step guide to migrating from Instantly or Smartlead to PenguinMails while protecting your sender reputation and campaign continuity."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "migration guide, instantly alternative, smartlead alternative, switch email platforms, reputation protection"

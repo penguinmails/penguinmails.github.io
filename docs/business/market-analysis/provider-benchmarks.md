@@ -3,6 +3,7 @@ title: "Provider Benchmarks - Email Service Provider Detailed Pricing Analysis"
 description: "Comprehensive ESP pricing analysis with CPM calculations, overage pricing, and provider recommendation matrix"
 last_modified_date: "2025-11-10"
 level: "2"
+keywords: "provider benchmarks, ESP pricing, CPM analysis, overage pricing, dedicated IP analysis, email service provider comparison, cold email providers"
 persona: "Documentation Users"
 ---
 
@@ -489,7 +490,6 @@ Cold email requires detailed engagement tracking and bounce management for compl
 
 ---
 
-**Keywords**: provider benchmarks, ESP pricing, CPM analysis, overage pricing, dedicated IP analysis, email service provider comparison, cold email providers
 
 ---
 

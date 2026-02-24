@@ -3,6 +3,7 @@ title: "Performance Optimization - Strategic Implementation Guide"
 description: "Strategic implementation guide for performance optimization, A/B testing, and advanced optimization strategies"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "performance optimization, A/B testing, content optimization, deliverability improvement, strategic optimization"
 persona: "Documentation Users"
 ---
 
@@ -403,7 +404,6 @@ persona: "Documentation Users"
 
 ---
 
-**Keywords**: performance optimization, A/B testing, content optimization, deliverability improvement, strategic optimization
 
 ---
 

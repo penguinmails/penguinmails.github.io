@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Operations Management Framework"
-description: "Phase 1 implementation providing comprehensive daily operations management, security operations center management, compliance monitoring, and performance monitoring frameworks for Operations Teams"
-last_modified_date: "2025-11-16"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Phase 1 implementation providing comprehensive daily operations management, security operations center management, compliance monitoring, and performance monitoring frameworks for Operations Teams"
 persona: "Documentation Users"
 ---
 

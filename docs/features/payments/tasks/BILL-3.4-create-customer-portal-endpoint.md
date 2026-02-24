@@ -1,3 +1,9 @@
+---
+title: "BILL-3.4: Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-3.4: Create API Endpoint for Customer Portal (POST /api/subscriptions/portal)
 

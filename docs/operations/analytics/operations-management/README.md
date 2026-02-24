@@ -1,3 +1,10 @@
+---
+title: "Operations Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "operations management, infrastructure operations, incident response, release management, deployment pipelines, monitoring systems, enterprise operations"
+---
 ﻿---
 title: "Operations Management"
 description: "Comprehensive operations management documentation for enterprise-grade platform operations"
@@ -106,5 +113,4 @@ Operations management encompasses the day-to-day activities required to keep the
 
 ---
 
-**Keywords**: operations management, infrastructure operations, incident response, release management, deployment pipelines, monitoring systems, enterprise operations
 ---

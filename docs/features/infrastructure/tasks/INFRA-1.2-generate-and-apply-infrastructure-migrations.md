@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.2: Generate and Apply Infrastructure Migrations"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.2: Generate and Apply Infrastructure Migrations
 

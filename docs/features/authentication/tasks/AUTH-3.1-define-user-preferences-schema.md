@@ -1,3 +1,9 @@
+---
+title: "AUTH-3.1: Define Drizzle Schema for user_preferences"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-3.1: Define Drizzle Schema for user_preferences
 

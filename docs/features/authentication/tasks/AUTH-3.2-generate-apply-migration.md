@@ -1,3 +1,9 @@
+---
+title: "AUTH-3.2: Generate and Apply user_preferences Migration"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # AUTH-3.2: Generate and Apply user_preferences Migration
 

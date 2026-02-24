@@ -3,6 +3,7 @@ title: "Success Metrics - Business Leaders Strategic Oversight KPIs"
 description: "Realistic business outcome KPIs for strategic oversight, revenue protection, and cost optimization with backbone-aligned measurement"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "strategic KPIs, business leaders metrics, revenue protection tracking, cost optimization metrics, strategic decision support, directional insights, process-driven measurement"
 persona: "Documentation Users"
 ---
 
@@ -440,7 +441,6 @@ Strategic Decision Support Health:
 
 ---
 
-**Keywords**: strategic KPIs, business leaders metrics, revenue protection tracking, cost optimization metrics, strategic decision support, directional insights, process-driven measurement
 
 ---
 

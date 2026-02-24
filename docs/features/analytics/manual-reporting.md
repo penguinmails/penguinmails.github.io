@@ -1,7 +1,8 @@
-﻿---
+---
 title: "Manual Reporting & Data Export"
 description: "Scheduled reports, data export capabilities, and integration with external analytics tools"
-level: "1"
+last_modified_date: "2026-02-24"
+level: "2"
 status: "ACTIVE"
 roadmap_timeline: "Q4 2025"
 priority: "High"

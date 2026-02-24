@@ -3,6 +3,7 @@ title: "Multi-Tenant Data Isolation Flow"
 description: "Tenant-specific data management with row-level security and resource isolation"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "multi-tenant architecture, data isolation, row-level security, tenant management, resource isolation, compliance, audit trails"
 persona: "Documentation Users"
 ---
 
@@ -183,4 +184,3 @@ graph TB
 
 ---
 
-**Keywords**: multi-tenant architecture, data isolation, row-level security, tenant management, resource isolation, compliance, audit trails

@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Queue Management"
 description: "Queue Management - Redis Queues and Migrator Process"
-last_modified_date: "2025-11-19"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "System Engineers"
 related_docs:

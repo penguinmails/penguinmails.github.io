@@ -1,6 +1,8 @@
 ---
 title: "Custom Dashboard Builder"
 description: "Drag-and-drop dashboard builder"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Custom Dashboard Builder

@@ -1,3 +1,9 @@
+---
+title: "MAIL-2.1: Set Up Standalone Worker Project"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-2.1: Set Up Standalone Worker Project
 

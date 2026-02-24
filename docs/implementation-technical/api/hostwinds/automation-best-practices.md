@@ -1,11 +1,9 @@
-﻿# Hostwinds Automation Best Practices
-
 ---
-
 title: "Hostwinds API Automation Best Practices"
 description: "Best practices and recommendations for reliable, secure, and efficient Hostwinds API automation"
-last_modified_date: "2025-11-19"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds automation, API best practices, error handling, retry logic, rate limiting, security, resilience patterns"
 persona: "Documentation Users"
 ---
 
@@ -723,5 +721,3 @@ class MetricsCollector {
 - [Development Standards](/docs/implementation-technical/development-guidelines/README) - General development best practices
 
 ---
-
-**Keywords**: Hostwinds automation, API best practices, error handling, retry logic, rate limiting, security, resilience patterns

@@ -1,6 +1,8 @@
 ---
 title: "Biometric Authentication"
 description: "WebAuthn/Passkey support for passwordless login"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Biometric Authentication

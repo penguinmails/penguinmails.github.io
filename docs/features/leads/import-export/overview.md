@@ -2,6 +2,7 @@
 title: "Contact Import/Export"
 description: "Bulk import and export contacts with CSV/Excel support, field mapping, validation, and history tracking"
 level: "2"
+last_modified_date: "2026-02-24"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"
 priority: "High"

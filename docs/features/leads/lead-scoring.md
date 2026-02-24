@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Lead Scoring"
 description: "Behavioral and demographic lead scoring to prioritize high-value contacts and personalize outreach"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

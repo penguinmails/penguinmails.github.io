@@ -1,6 +1,8 @@
 ---
 title: "Queue Monitoring UI"
 description: "Dashboard for monitoring queue health and throughput"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Queue Monitoring UI

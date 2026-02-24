@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Operations Executive Dashboard Framework: Unified Cross-Domain Operations Visibility"
-description: "Comprehensive executive dashboard framework for operations performance, security monitoring, compliance tracking, and strategic decision support"
-last_modified_date: "2025-11-16"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Comprehensive executive dashboard framework for operations performance, security monitoring, compliance tracking, and strategic decision support"
 persona: "Documentation Users"
 ---
 

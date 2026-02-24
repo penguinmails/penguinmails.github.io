@@ -1,6 +1,7 @@
 ---
 title: "Beta User Guide: What to Expect"
 description: "Essential information for early adopters of PenguinMails, including known limitations, support channels, and roadmap transparency."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "beta guide, early access, known limitations, support, roadmap"

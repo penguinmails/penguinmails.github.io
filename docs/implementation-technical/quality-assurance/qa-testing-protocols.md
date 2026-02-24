@@ -1,6 +1,9 @@
 ---
+title: "QA Testing Protocols - Comprehensive Quality Assurance Framework"
+description: ""
 last_modified_date: "2025-11-19"
 level: "2"
+keywords: "quality assurance, testing protocols, automated testing, bug management, performance testing, security testing, accessibility testing, CI/CD integration, test automation, quality metrics"
 persona: "Documentation Users"
 ---
 
@@ -443,5 +446,4 @@ Severity × User Impact × Business Value
 
 - [Sprint Retrospective Template](/docs/operations/analytics/team-performance) - Testing feedback integration
 
-**Keywords**: quality assurance, testing protocols, automated testing, bug management, performance testing, security testing, accessibility testing, CI/CD integration, test automation, quality metrics
 ---

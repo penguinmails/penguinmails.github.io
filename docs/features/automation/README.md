@@ -1,4 +1,9 @@
-﻿# 🤖 Automation & Workflows
+---
+title: "Automation & Workflows"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Workflow automation, triggers, actions, and intelligent automation rules.
 

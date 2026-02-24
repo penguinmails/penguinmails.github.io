@@ -1,3 +1,9 @@
+---
+title: "Leads Management Implementation Guide"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Leads Management Implementation Guide
 
 **Feature:** Leads & Contact Management

@@ -1,8 +1,8 @@
-﻿---
+---
 title: "Financial Analysis - Level 3: Deep Financial Modeling"
-description: "Documentation for Financial Analysis - Level 3: Deep Financial Modeling - README"
-last_modified_date: "2025-11-17"
+last_modified_date: "2026-02-24"
 level: "2"
+description: "Documentation for Financial Analysis - Level 3: Deep Financial Modeling - README"
 persona: "Documentation Users"
 ---
 

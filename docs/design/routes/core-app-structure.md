@@ -1,3 +1,9 @@
+---
+title: "Core Application Structure"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 # Core Application Structure
 
 ## 1. Purpose & Context (The "Why")

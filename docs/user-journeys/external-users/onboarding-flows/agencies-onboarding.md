@@ -1,3 +1,10 @@
+---
+title: "External Users: Agency Onboarding Flow"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "agency onboarding, client setup, multi-client management, agency training, platform implementation"
+---
 # External Users: Agency Onboarding Flow
 
 ## Overview
@@ -286,4 +293,3 @@ This document outlines the comprehensive onboarding journey for marketing agency
 
 ---
 
-**Keywords**: agency onboarding, client setup, multi-client management, agency training, platform implementation

@@ -1,3 +1,9 @@
+---
+title: "CORE-2.1: Install and Configure Drizzle ORM"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-2.1: Install and Configure Drizzle ORM
 

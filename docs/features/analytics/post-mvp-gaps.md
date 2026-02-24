@@ -1,8 +1,8 @@
-﻿---
-title: "Analytics Post-MVP Gaps"
+---
+title: "Analytics & Reporting - Missing Post-MVP Features"
 description: "Missing Post-MVP features for Analytics & Reporting with roadmap and implementation timeline"
-last_modified_date: "2025-11-26"
-level: "3"
+last_modified_date: "2026-02-24"
+level: "2"
 persona: "Product Teams, Developers"
 ---
 

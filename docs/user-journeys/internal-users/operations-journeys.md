@@ -3,6 +3,7 @@ title: "Internal Users: Operations Journeys"
 description: "User journeys for Operations Staff monitoring and maintaining the platform"
 last_modified_date: "2025-12-06"
 level: "2"
+keywords: "operations journeys, platform monitoring, issue resolution, incident management, customer support, performance optimization"
 persona: "Operations Staff"
 ---
 
@@ -382,4 +383,3 @@ This document outlines the key user journeys for Operations Staff who monitor, m
 
 ---
 
-**Keywords**: operations journeys, platform monitoring, issue resolution, incident management, customer support, performance optimization

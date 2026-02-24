@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Onboarding Experience"
 description: "Guided setup wizard, interactive tutorials, and feature discovery to help users get started quickly"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

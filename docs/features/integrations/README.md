@@ -1,5 +1,9 @@
-﻿# 🔌 Integrations
-
+---
+title: "Integrations"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 Third-party system connections including CRM, webhooks, and external platforms.
 
 **[📖 Read Full Integrations Overview](/docs/features/integrations/overview)** - Comprehensive guide to PenguinMails integration capabilities including API-first strategy, Vault secrets management, and implementation roadmap.

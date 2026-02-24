@@ -1,6 +1,8 @@
 ---
 title: "Public & Stakeholder View Specifications"
 description: "Detailed widget and data requirements for Public Status and Investor views"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 

@@ -1,3 +1,10 @@
+---
+title: "Hostwinds Networking and IP Management API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds networking, IP management, reverse DNS, firewall configuration, SMTP IPs, network automation"
+---
 # Hostwinds Networking and IP Management API
 
 ---
@@ -369,4 +376,3 @@ The networking API integrates with PenguinMails database schema:
 
 ---
 
-**Keywords**: Hostwinds networking, IP management, reverse DNS, firewall configuration, SMTP IPs, network automation

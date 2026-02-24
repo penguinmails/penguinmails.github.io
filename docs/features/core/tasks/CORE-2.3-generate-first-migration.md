@@ -1,3 +1,9 @@
+---
+title: "CORE-2.3: Generate First Database Migration"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-2.3: Generate First Database Migration
 

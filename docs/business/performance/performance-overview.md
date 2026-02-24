@@ -3,6 +3,7 @@ title: "Performance Overview - Executive Benchmarks"
 description: "Executive-level performance benchmarks and strategic insights for B2B email marketing"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "performance benchmarks, email performance, deliverability optimization, industry benchmarks, B2B email metrics, performance analysis"
 persona: "Documentation Users"
 ---
 
@@ -255,7 +256,6 @@ graph TB
 
 ---
 
-**Keywords**: performance benchmarks, email performance, deliverability optimization, industry benchmarks, B2B email metrics, performance analysis
 
 ---
 

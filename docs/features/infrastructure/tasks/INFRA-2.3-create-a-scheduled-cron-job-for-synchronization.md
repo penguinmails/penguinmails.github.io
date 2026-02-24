@@ -1,3 +1,9 @@
+---
+title: "INFRA-2.3: Create a Scheduled Cron Job for Synchronization"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-2.3: Create a Scheduled Cron Job for Synchronization
 

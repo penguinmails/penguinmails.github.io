@@ -1,6 +1,8 @@
 ---
 title: "Analytics Implementation Details"
 description: "Technical specifications, code snippets, and architecture for the analytics views"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 

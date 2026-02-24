@@ -3,6 +3,7 @@ title: "Implementation Requirements - Server Configuration and Setup"
 description: "Technical server configuration, implementation requirements, and operational management procedures"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "server configuration, implementation requirements, email server setup, technical infrastructure"
 persona: "Documentation Users"
 ---
 
@@ -194,7 +195,6 @@ CREATE INDEX idx_email ON users(email);
 
 ---
 
-**Keywords**: server configuration, implementation requirements, email server setup, technical infrastructure
 
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Lead Analytics Improvements (Research Spike)"
 description: "Explore advanced lead analytics capabilities"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Lead Analytics Improvements (Research Spike)

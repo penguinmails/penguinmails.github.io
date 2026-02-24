@@ -1,4 +1,9 @@
-﻿# 📂 Inbox Management
+---
+title: "Inbox Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Comprehensive email organization, response management, and conversation tracking capabilities.
 

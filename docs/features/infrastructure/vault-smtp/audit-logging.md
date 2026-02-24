@@ -2,6 +2,7 @@
 title: "Audit Logging"
 description: "Audit trail and monitoring for credential access"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "audit logging, monitoring, compliance, security"
 ---
 

@@ -1,3 +1,10 @@
+---
+title: "External Stakeholders: Public Demo Journeys"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "public demos, demo delivery, stakeholder presentations, business demonstrations, platform showcases"
+---
 # External Stakeholders: Public Demo Journeys
 
 ## Overview
@@ -321,4 +328,3 @@ This document outlines the key user journeys for external stakeholders who parti
 
 ---
 
-**Keywords**: public demos, demo delivery, stakeholder presentations, business demonstrations, platform showcases

@@ -1,6 +1,7 @@
 ---
 title: "Why 95% of Email Deliverability Advice Is Worthless (And What Actually Works)"
 description: "Debunking common cold email myths about SPF/DKIM, subject lines, and warmup. Learn the real infrastructure secrets that drive 95%+ inbox placement."
+level: "2"
 last_modified_date: "2025-12-05"
 status: ACTIVE
 keywords: "email deliverability myths, cold email advice, spf dkim reality, email warmup truth, google workspace limits"

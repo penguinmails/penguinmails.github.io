@@ -1,3 +1,10 @@
+---
+title: "Hostwinds Server Management API"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "Hostwinds server management, VPS lifecycle, instance operations, server provisioning, rescue mode, instance maintenance"
+---
 # Hostwinds Server Management API
 
 ---
@@ -378,4 +385,3 @@ The `Server_Instance_Object` is returned by most server management endpoints:
 
 ---
 
-**Keywords**: Hostwinds server management, VPS lifecycle, instance operations, server provisioning, rescue mode, instance maintenance

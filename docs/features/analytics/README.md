@@ -1,4 +1,9 @@
-﻿# 📊 Analytics & Reporting
+---
+title: "Analytics & Reporting"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 Platform-wide analytics, performance tracking, and data-driven insights.
 

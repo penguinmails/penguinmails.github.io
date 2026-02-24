@@ -1,7 +1,8 @@
-﻿---
+---
 title: "Integrations Overview"
 description: "Comprehensive overview of PenguinMails integration capabilities including API access, webhooks, CRM integrations, and Vault-based secrets management"
-last_modified_date: "2025-11-26"
+description: ""
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Technical Teams, Developers"
 ---

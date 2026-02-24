@@ -3,6 +3,7 @@ title: "ESP Technical Analysis - Strategic Provider Assessment"
 description: "Strategic ESP provider analysis, performance comparison, and implementation requirements"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "ESP strategy, provider analysis, deliverability optimization, email service provider, SendGrid, Mailgun, Postmark, Amazon SES"
 persona: "Documentation Users"
 ---
 
@@ -365,7 +366,6 @@ graph TD
 
 ---
 
-**Keywords**: ESP strategy, provider analysis, deliverability optimization, email service provider, SendGrid, Mailgun, Postmark, Amazon SES
 
 ---
 

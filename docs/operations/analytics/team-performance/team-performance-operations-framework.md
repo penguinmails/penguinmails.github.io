@@ -1,3 +1,10 @@
+---
+title: "Team Performance & Operations Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics"
+---
 ﻿---
 title: "Team Performance & Operations Framework"
 description: "Comprehensive team performance, QA testing, and staff operations for enterprise-grade agile development, quality assurance, and operational excellence"
@@ -870,5 +877,4 @@ Navigate to specific team performance areas:
 
 ---
 
-**Keywords**: team performance, agile development, sprint retrospectives, QA testing, quality assurance, staff operations, team coordination, continuous improvement, performance metrics
 ---

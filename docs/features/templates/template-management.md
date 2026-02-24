@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Template Management"
 description: "Email template creation, HTML editing, and variable management"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Marketers, Designers"
 status: "ACTIVE"

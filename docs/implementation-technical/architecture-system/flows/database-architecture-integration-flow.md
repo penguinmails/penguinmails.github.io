@@ -3,6 +3,7 @@ title: "Database Architecture Integration Flow"
 description: "OLTP, Content Database, Notifications, Queue System, and OLAP Analytics integration with different query patterns"
 last_modified_date: "2025-11-27"
 level: "2"
+keywords: "database architecture, 5-tier, OLTP, OLAP, content database, notifications database, queue system, data integration, ETL pipeline, query optimization, multi-tenancy"
 persona: "Documentation Users"
 ---
 
@@ -247,5 +248,3 @@ graph LR
 - [OLAP Analytics Schema](/docs/implementation-technical/database-infrastructure/olap-database/) - Business intelligence details
 
 ---
-
-**Keywords**: database architecture, 5-tier, OLTP, OLAP, content database, notifications database, queue system, data integration, ETL pipeline, query optimization, multi-tenancy

@@ -1,3 +1,9 @@
+---
+title: "MAIL-3.4: Implement the Click Tracking Handler"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # MAIL-3.4: Implement the Click Tracking Handler
 

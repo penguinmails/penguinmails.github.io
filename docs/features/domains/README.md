@@ -1,4 +1,9 @@
-﻿# 🌐 Domain Management
+---
+title: "Domain Management"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 General domain DNS management, queries, mutations, and sender authentication.
 

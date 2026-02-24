@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Unified Inbox"
 description: "Centralized command center for managing responses across all email accounts with AI categorization and real-time sync"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "AVAILABLE"
 roadmap_timeline: "Q1 2026"

@@ -1,3 +1,9 @@
+---
+title: "CORE-5.2: Create a Test API Endpoint for Zod Validation"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # CORE-5.2: Create a Test API Endpoint for Zod Validation
 

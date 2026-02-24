@@ -1,6 +1,7 @@
-﻿---
+---
 title: "A/B Testing"
 description: "Split testing for email campaigns to optimize subject lines, content, sending times, and more"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

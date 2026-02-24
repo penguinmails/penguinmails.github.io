@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Unsubscribe Management"
 description: "Automated unsubscribe handling and opt-out list management for PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Marketing Teams, Operations"
 status: "ACTIVE"

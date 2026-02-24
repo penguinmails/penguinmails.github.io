@@ -1,6 +1,8 @@
 ---
 title: "Template Editor (WYSIWYG)"
 description: "Drag-and-drop components without HTML knowledge"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Template Editor (WYSIWYG)

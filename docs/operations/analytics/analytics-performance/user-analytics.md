@@ -1,3 +1,10 @@
+---
+title: "User Analytics Framework"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+keywords: "user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization"
+---
 ﻿---
 title: "User Analytics Framework"
 description: "Comprehensive user behavior analysis framework for enterprise-grade performance monitoring, engagement tracking, and conversion optimization"
@@ -571,5 +578,4 @@ Navigate to specific analytics areas:
 
 ---
 
-**Keywords**: user analytics, behavioral analysis, A/B testing, retention analysis, conversion optimization, user segmentation, cohort analysis, predictive modeling, user experience optimization
 ---

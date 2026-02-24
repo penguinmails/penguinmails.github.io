@@ -1,6 +1,7 @@
-﻿---
+---
 title: "Contact Segmentation"
 description: "Dynamic contact segmentation with rule-based and manual list creation for targeted campaigns"
+last_modified_date: "2026-02-24"
 level: "2"
 status: "PLANNED"
 roadmap_timeline: "Q1 2026"

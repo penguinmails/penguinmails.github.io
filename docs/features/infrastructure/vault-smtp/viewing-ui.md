@@ -2,6 +2,7 @@
 title: "Secure Credential Viewing UI"
 description: "Web interface for secure credential viewing"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "UI, web interface, credential viewing, security"
 ---
 

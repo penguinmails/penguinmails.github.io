@@ -1,5 +1,8 @@
-﻿---
+---
 title: "Workflow Automation Roadmap"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
 timeline: "Q2-Q3 2026"
 status: "planned"
 priority: "medium"

@@ -2,6 +2,7 @@
 title: "Frontend UI Specification"
 description: "UI specifications for API key management"
 level: "3"
+last_modified_date: "2026-02-24"
 keywords: "UI, frontend, user interface"
 ---
 

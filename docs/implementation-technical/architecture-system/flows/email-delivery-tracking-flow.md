@@ -3,6 +3,7 @@ title: "Email Delivery and Tracking Flow"
 description: "End-to-end email lifecycle with delivery tracking, opens, clicks, replies, and bounces"
 last_modified_date: "2025-11-17"
 level: "2"
+keywords: "email delivery tracking, engagement analytics, real-time monitoring, open tracking, click tracking, bounce handling, performance optimization"
 persona: "Documentation Users"
 ---
 
@@ -171,5 +172,3 @@ sequenceDiagram
 - **List Hygiene**: Bounce rate analysis and list cleaning suggestions
 
 ---
-
-**Keywords**: email delivery tracking, engagement analytics, real-time monitoring, open tracking, click tracking, bounce handling, performance optimization

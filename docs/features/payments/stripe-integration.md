@@ -1,7 +1,7 @@
-﻿---
+---
 title: "Stripe Integration"
 description: "Stripe payment processing for secure subscription billing in PenguinMails"
-last_modified_date: "2025-11-24"
+last_modified_date: "2026-02-24"
 level: "2"
 persona: "Developers, Billing Administrators"
 status: "ACTIVE"

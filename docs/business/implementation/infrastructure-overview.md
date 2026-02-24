@@ -3,6 +3,7 @@ title: "Infrastructure Overview - Strategic Technical Planning"
 description: "Strategic infrastructure planning with VPS specifications, ESP selection, and technical architecture decisions"
 last_modified_date: "2025-12-19"
 level: "2"
+keywords: "infrastructure planning, VPS selection, ESP architecture, technical decisions, cost optimization, performance planning"
 persona: "Documentation Users"
 ---
 
@@ -489,7 +490,6 @@ graph LR
 
 ---
 
-**Keywords**: infrastructure planning, VPS selection, ESP architecture, technical decisions, cost optimization, performance planning
 
 ---
 

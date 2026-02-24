@@ -2,6 +2,7 @@
 title: "Level 3: Technical Implementation"
 description: "API integration and batch processing implementation"
 level: "3"
+last_modified_date: "2026-02-24"
 persona: "Developers"
 keywords: "API, batch processing, integration, technical implementation"
 ---

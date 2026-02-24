@@ -1,3 +1,9 @@
+---
+title: "BILL-3.2: Implement Handler for checkout.session.completed Event"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # BILL-3.2: Implement Handler for checkout.session.completed Event
 

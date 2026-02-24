@@ -1,3 +1,9 @@
+---
+title: "TEN-1.4: Create API Endpoint for Tenant & Company Creation (POST /api/tenants)"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # TEN-1.4: Create API Endpoint for Tenant & Company Creation (POST /api/tenants)
 

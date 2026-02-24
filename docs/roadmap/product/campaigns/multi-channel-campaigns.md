@@ -1,6 +1,8 @@
 ---
 title: "Multi-Channel Campaigns"
 description: "Unified campaigns across Email, SMS, and Push"
+level: "2"
+last_modified_date: "2026-02-24"
 ---
 
 # Multi-Channel Campaigns

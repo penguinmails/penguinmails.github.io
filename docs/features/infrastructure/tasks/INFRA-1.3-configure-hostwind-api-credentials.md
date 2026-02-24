@@ -1,3 +1,9 @@
+---
+title: "INFRA-1.3: Configure Hostwind API Credentials"
+description: ""
+last_modified_date: "2026-02-24"
+level: "2"
+---
 
 # INFRA-1.3: Configure Hostwind API Credentials
 

@@ -1,8 +1,9 @@
-﻿---
-title: "Performance Dashboard - Executive Dashboard Templates"
-description: "Executive dashboard templates, review processes, and business monitoring frameworks for email infrastructure performance tracking"
-last_modified_date: "2025-11-10"
+---
+title: "Performance Dashboard: Executive Dashboard Templates"
+last_modified_date: "2026-02-24"
 level: "2"
+keywords: "executive dashboard, performance monitoring, business KPIs, real-time tracking, dashboard templates, business review process, performance metrics, executive reporting"
+description: "Executive dashboard templates, review processes, and business monitoring frameworks for email infrastructure performance tracking"
 persona: "Documentation Users"
 ---
 
@@ -598,7 +599,6 @@ persona: "Documentation Users"
 
 ---
 
-**Keywords**: executive dashboard, performance monitoring, business KPIs, real-time tracking, dashboard templates, business review process, performance metrics, executive reporting
 
 ---
 
