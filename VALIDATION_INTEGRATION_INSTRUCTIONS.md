@@ -231,7 +231,7 @@ persona: "developer"  # or "business", "operations", etc.
 
 1. Internal links must be site-absolute: `/docs/path/file`
 2. No `.md` extensions in links
-3. No relative links to `tasks/` or `user-journeys/`
+3. No root-scoped links to `tasks/` or `user-journeys/` (relative or absolute)
 4. No links to `CONTRIBUTING.md` or root `README.md`
 
 **Detection**: `detect_link_policy_violations.sh`  

@@ -2,7 +2,7 @@
 
 # Link Warnings Detection Script
 # Usage: ./detect_link_warnings.sh [target_directory]
-# Detects non-critical link issues (links to tasks/ and user-journeys/ folders)
+# Detects non-critical link issues (root-scoped links to tasks/ and user-journeys/)
 
 set -e
 
@@ -70,7 +70,7 @@ detect_links() {
 
     # Exclude task and user-journey source docs from this warning check.
     # These sections intentionally cross-reference task and journey files.
-    local files=$(grep -r "$pattern" "$TARGET_ROOT" --include="*.md" \
+    local files=$(grep -rE "$pattern" "$TARGET_ROOT" --include="*.md" \
         --exclude-dir="tasks" \
         --exclude-dir="user-journeys" 2>/dev/null || echo "")
     
@@ -120,11 +120,11 @@ detect_links() {
     echo ""
 }
 
-# Check for relative links to tasks/ folder
-detect_links "tasks_links" "](.*tasks/" "Links to tasks/ folder (should be avoided)"
+# Check for root-scoped links to tasks/ folder
+detect_links "tasks_links" "]\\((\\./|\\.\\./)*tasks/|]\\(/tasks/" "Root-scoped links to tasks/ folder (should be avoided)"
 
-# Check for relative links to user-journeys/ folder
-detect_links "journeys_links" "](.*user-journeys/" "Links to user-journeys/ folder (should be avoided)"
+# Check for root-scoped links to user-journeys/ folder
+detect_links "journeys_links" "]\\((\\./|\\.\\./)*user-journeys/|]\\(/user-journeys/" "Root-scoped links to user-journeys/ folder (should be avoided)"
 
 # Close JSON report
 if [ "$GENERATE_REPORT" = true ]; then
