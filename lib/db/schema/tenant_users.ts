@@ -1,7 +1,7 @@
 import { relations } from 'drizzle-orm';
 import { index, pgTable, primaryKey, text, timestamp, uuid } from 'drizzle-orm/pg-core';
-import { tenants } from '@/lib/db/schema/tenants';
-import { users } from '@/lib/db/schema/users';
+import { tenants } from './tenants';
+import { users } from './users';
 
 export const tenantUsers = pgTable(
   'tenant_users',

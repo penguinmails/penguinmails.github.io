@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit",
-    "db:generate": "drizzle-kit generate",
+    "db:generate": "drizzle-kit generate --config drizzle.config.ts",
     "db:migrate": "tsx scripts/migrate.ts",
     "prepare": "husky",
     "test:validation": "curl -s -X POST http://localhost:3000/api/test/validation -H \"Content-Type: application/json\" -d \"{\\\"email\\\":\\\"user@example.com\\\",\\\"password\\\":\\\"securepass123\\\",\\\"name\\\":\\\"User\\\"}\""
