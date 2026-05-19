@@ -1,3 +1,8 @@
+---
+title: "Product Documentation Hub"
+description: "Comprehensive overview of PenguinMails infrastructure, capabilities, and roadmap."
+last_modified_date: "YYYY-MM-DD"
+---
 # PenguinMails
 
 > Cold emails that land in the inbox. Not spam.
